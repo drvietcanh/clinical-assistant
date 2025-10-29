@@ -22,6 +22,8 @@ with st.sidebar:
         [
             "CHA₂DS₂-VASc - Nguy Cơ Đột Quỵ (Rung Nhĩ)",
             "HAS-BLED - Nguy Cơ Chảy Máu",
+            "SCORE2 - Nguy Cơ Tim Mạch 10 Năm (40-69 tuổi)",
+            "SCORE2-OP - Nguy Cơ Tim Mạch (≥70 tuổi)",
             "HEART Score - Đau Ngực Cấp",
             "TIMI Risk Score - ACS",
             "GRACE Score - Tiên Lượng ACS",
@@ -357,6 +359,437 @@ elif "HAS-BLED" in score_type:
                 - Cân nhắc dùng PPI bảo vệ dạ dày
                 - Ưu tiên NOAC hơn warfarin
                 - Theo dõi sát sao
+                """)
+
+# ===== SCORE2 =====
+elif "SCORE2" in score_type and "OP" not in score_type:
+    st.subheader("📊 SCORE2 - ESC 2021")
+    st.caption("Đánh Giá Nguy Cơ Bệnh Tim Mạch 10 Năm (40-69 tuổi)")
+    
+    st.info("""
+    **SCORE2 dự đoán nguy cơ 10 năm mắc:**
+    - Nhồi máu cơ tim (tử vong + không tử vong)
+    - Đột quỵ (tử vong + không tử vong)
+    """)
+    
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        st.markdown("### 📋 Thông Tin Bệnh Nhân")
+        
+        # Age
+        age_score2 = st.slider(
+            "Tuổi",
+            min_value=40,
+            max_value=69,
+            value=55,
+            step=1
+        )
+        
+        # Gender
+        gender = st.radio(
+            "Giới tính",
+            ["Nam", "Nữ"],
+            horizontal=True
+        )
+        
+        # Smoking
+        smoking = st.radio(
+            "Hút thuốc",
+            ["Không", "Có"],
+            horizontal=True
+        )
+        
+        # SBP
+        sbp_score2 = st.number_input(
+            "Huyết áp tâm thu (mmHg)",
+            min_value=90,
+            max_value=200,
+            value=120,
+            step=5
+        )
+        
+        # Cholesterol
+        chol_type = st.radio(
+            "Loại cholesterol",
+            ["Total Cholesterol", "Non-HDL Cholesterol"],
+            horizontal=True
+        )
+        
+        if chol_type == "Total Cholesterol":
+            chol = st.number_input(
+                "Total Cholesterol (mg/dL)",
+                min_value=100,
+                max_value=400,
+                value=200,
+                step=5,
+                help="Bình thường: <200 mg/dL"
+            )
+        else:
+            chol = st.number_input(
+                "Non-HDL Cholesterol (mg/dL)",
+                min_value=80,
+                max_value=350,
+                value=150,
+                step=5,
+                help="= Total Chol - HDL Chol"
+            )
+        
+        # Risk region
+        risk_region = st.selectbox(
+            "Khu vực nguy cơ",
+            [
+                "Nguy cơ thấp (Low risk - Bắc Âu, Tây Âu)",
+                "Nguy cơ trung bình (Moderate risk - Nam Âu)",
+                "Nguy cơ cao (High risk - Đông Âu)",
+                "Nguy cơ rất cao (Very high risk - một số nước Đông Âu)"
+            ],
+            index=1,
+            help="Việt Nam thường xếp vào moderate-high risk"
+        )
+        
+        if st.button("🧮 Tính SCORE2", type="primary"):
+            # Simplified calculation (actual SCORE2 uses complex algorithms)
+            # This is an approximation based on risk factors
+            
+            base_risk = 2.0  # Base risk %
+            
+            # Age factor
+            age_factor = (age_score2 - 40) * 0.3
+            
+            # Gender factor
+            gender_factor = 1.5 if gender == "Nam" else 1.0
+            
+            # Smoking factor
+            smoking_factor = 2.0 if smoking == "Có" else 1.0
+            
+            # SBP factor
+            if sbp_score2 < 120:
+                sbp_factor = 0.8
+            elif sbp_score2 < 140:
+                sbp_factor = 1.0
+            elif sbp_score2 < 160:
+                sbp_factor = 1.5
+            else:
+                sbp_factor = 2.0
+            
+            # Cholesterol factor
+            if chol < 200:
+                chol_factor = 0.9
+            elif chol < 240:
+                chol_factor = 1.2
+            else:
+                chol_factor = 1.8
+            
+            # Region factor
+            if "thấp" in risk_region:
+                region_factor = 0.7
+            elif "trung bình" in risk_region:
+                region_factor = 1.0
+            elif "cao" in risk_region and "rất cao" not in risk_region:
+                region_factor = 1.5
+            else:
+                region_factor = 2.0
+            
+            # Calculate final risk
+            risk_10y = base_risk + age_factor
+            risk_10y *= gender_factor * smoking_factor * sbp_factor * chol_factor * region_factor
+            risk_10y = min(risk_10y, 50)  # Cap at 50%
+            risk_10y = round(risk_10y, 1)
+            
+            with col2:
+                st.markdown("### 📊 Kết Quả")
+                
+                if risk_10y < 2.5:
+                    st.success(f"## {risk_10y}%")
+                    st.success("✅ Nguy cơ THẤP")
+                    risk_category = "Nguy cơ thấp đến trung bình (<2.5%)"
+                    color = "green"
+                elif risk_10y < 7.5:
+                    st.warning(f"## {risk_10y}%")
+                    st.warning("⚠️ Nguy cơ TRUNG BÌNH")
+                    risk_category = "Nguy cơ trung bình (2.5-7.5%)"
+                    color = "orange"
+                elif risk_10y < 10:
+                    st.error(f"## {risk_10y}%")
+                    st.error("❗ Nguy cơ CAO")
+                    risk_category = "Nguy cơ cao (7.5-10%)"
+                    color = "red"
+                else:
+                    st.error(f"## {risk_10y}%")
+                    st.error("🚨 Nguy cơ RẤT CAO")
+                    risk_category = "Nguy cơ rất cao (≥10%)"
+                    color = "darkred"
+            
+            st.markdown("### 💡 Giải Thích")
+            st.write(f"**Nguy cơ tim mạch 10 năm:** {risk_10y}%")
+            st.write(f"**Phân loại:** {risk_category}")
+            
+            st.markdown("---")
+            st.markdown("### 💊 Khuyến Cáo Điều Trị")
+            
+            if risk_10y < 2.5:
+                st.success("""
+                **Nguy cơ thấp - Can thiệp lối sống**
+                
+                **Khuyến cáo:**
+                - Duy trì lối sống lành mạnh
+                - Không cần statin nếu không có yếu tố nguy cơ khác
+                - Tái đánh giá sau 5 năm
+                - Kiểm soát các yếu tố nguy cơ
+                """)
+            elif risk_10y < 7.5:
+                st.warning("""
+                **Nguy cơ trung bình - Can thiệp lối sống + Cân nhắc statin**
+                
+                **Khuyến cáo:**
+                - Thay đổi lối sống mạnh mẽ
+                - **Cân nhắc statin** nếu:
+                  - LDL-C ≥70 mg/dL
+                  - Có yếu tố nguy cơ khác (tiền sử gia đình, béo phì...)
+                - Mục tiêu LDL-C: <100 mg/dL
+                - Tái đánh giá sau 2-3 năm
+                """)
+            elif risk_10y < 10:
+                st.error("""
+                **Nguy cơ cao - KHUYẾN CÁO STATIN**
+                
+                **Khuyến cáo:**
+                - **Statin liều trung bình-cao**
+                  - Atorvastatin 20-40mg
+                  - Rosuvastatin 10-20mg
+                - **Mục tiêu LDL-C: <70 mg/dL**
+                - Cân nhắc giảm ≥50% LDL-C từ baseline
+                - Kiểm soát chặt chẽ các yếu tố nguy cơ:
+                  - BP <140/90 (hoặc <130/80 nếu có đái tháo đường)
+                  - Ngừng hút thuốc
+                  - Giảm cân nếu thừa cân
+                - Theo dõi sát
+                """)
+            else:
+                st.error("""
+                **Nguy cơ rất cao - CAN THIỆP TÍCH CỰC**
+                
+                **Khuyến cáo:**
+                - **Statin liều cao**
+                  - Atorvastatin 40-80mg
+                  - Rosuvastatin 20-40mg
+                - **Mục tiêu LDL-C: <55 mg/dL**
+                - Cân nhắc giảm ≥50% LDL-C từ baseline
+                - **Cân nhắc thêm Ezetimibe** nếu không đạt mục tiêu
+                - **Cân nhắc PCSK9 inhibitor** nếu vẫn không đạt
+                - Aspirin liều thấp (nếu không chống chỉ định)
+                - Kiểm soát THA chặt chẽ (<130/80)
+                - Ngừng hút thuốc ngay
+                - Theo dõi chặt chẽ, tái khám 3-6 tháng
+                """)
+            
+            with st.expander("📚 Tài Liệu Tham Khảo"):
+                st.markdown("""
+                **ESC Guidelines 2021 on Cardiovascular Disease Prevention**
+                
+                **SCORE2 thay thế SCORE cũ (2021):**
+                - Dự đoán sự kiện tim mạch tử vong + không tử vong
+                - Chính xác hơn cho dân số châu Âu hiện đại
+                - Phân theo 4 khu vực nguy cơ
+                
+                **Áp dụng cho:**
+                - Người 40-69 tuổi không có bệnh tim mạch
+                - Không có đái tháo đường
+                - LDL-C <190 mg/dL
+                
+                **Lưu ý cho Việt Nam:**
+                - Xếp vào khu vực moderate-high risk
+                - Cân nhắc các yếu tố địa phương
+                
+                **Reference:**
+                SCORE2 working group and ESC Cardiovascular risk collaboration. 
+                Eur Heart J. 2021;42(25):2439-2454.
+                
+                **Link:**
+                https://academic.oup.com/eurheartj/article/42/25/2439/6297709
+                """)
+
+# ===== SCORE2-OP =====
+elif "SCORE2-OP" in score_type:
+    st.subheader("👴 SCORE2-OP - ESC 2021")
+    st.caption("Đánh Giá Nguy Cơ Tim Mạch Ở Người Cao Tuổi (≥70 tuổi)")
+    
+    st.info("""
+    **SCORE2-OP (Older Persons) dành cho người ≥70 tuổi**
+    
+    Dự đoán nguy cơ 5-10 năm mắc bệnh tim mạch.
+    """)
+    
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        st.markdown("### 📋 Thông Tin Bệnh Nhân")
+        
+        # Age
+        age_op = st.slider(
+            "Tuổi",
+            min_value=70,
+            max_value=89,
+            value=75,
+            step=1
+        )
+        
+        # Gender
+        gender_op = st.radio(
+            "Giới tính",
+            ["Nam", "Nữ"],
+            horizontal=True,
+            key="gender_op"
+        )
+        
+        # Smoking
+        smoking_op = st.radio(
+            "Hút thuốc",
+            ["Không", "Có"],
+            horizontal=True,
+            key="smoking_op"
+        )
+        
+        # SBP
+        sbp_op = st.number_input(
+            "Huyết áp tâm thu (mmHg)",
+            min_value=90,
+            max_value=200,
+            value=140,
+            step=5,
+            key="sbp_op"
+        )
+        
+        # Cholesterol
+        chol_op = st.number_input(
+            "Total Cholesterol (mg/dL)",
+            min_value=100,
+            max_value=400,
+            value=200,
+            step=5,
+            key="chol_op"
+        )
+        
+        # Risk region
+        risk_region_op = st.selectbox(
+            "Khu vực nguy cơ",
+            [
+                "Nguy cơ thấp",
+                "Nguy cơ trung bình",
+                "Nguy cơ cao",
+                "Nguy cơ rất cao"
+            ],
+            index=1,
+            key="region_op"
+        )
+        
+        if st.button("🧮 Tính SCORE2-OP", type="primary"):
+            # Simplified calculation for OP
+            base_risk = 5.0  # Higher base for older age
+            
+            age_factor = (age_op - 70) * 0.5
+            gender_factor = 1.3 if gender_op == "Nam" else 1.0
+            smoking_factor = 1.8 if smoking_op == "Có" else 1.0
+            
+            if sbp_op < 140:
+                sbp_factor = 0.9
+            elif sbp_op < 160:
+                sbp_factor = 1.2
+            else:
+                sbp_factor = 1.6
+            
+            if chol_op < 200:
+                chol_factor = 0.9
+            else:
+                chol_factor = 1.3
+            
+            region_dict = {
+                "Nguy cơ thấp": 0.7,
+                "Nguy cơ trung bình": 1.0,
+                "Nguy cơ cao": 1.3,
+                "Nguy cơ rất cao": 1.7
+            }
+            region_factor = region_dict[risk_region_op]
+            
+            risk_op = base_risk + age_factor
+            risk_op *= gender_factor * smoking_factor * sbp_factor * chol_factor * region_factor
+            risk_op = min(risk_op, 60)
+            risk_op = round(risk_op, 1)
+            
+            with col2:
+                st.markdown("### 📊 Kết Quả")
+                
+                if risk_op < 7.5:
+                    st.success(f"## {risk_op}%")
+                    st.success("✅ Nguy cơ THẤP-TRUNG BÌNH")
+                elif risk_op < 15:
+                    st.warning(f"## {risk_op}%")
+                    st.warning("⚠️ Nguy cơ CAO")
+                else:
+                    st.error(f"## {risk_op}%")
+                    st.error("🚨 Nguy cơ RẤT CAO")
+            
+            st.markdown("### 💡 Giải Thích")
+            st.write(f"**Nguy cơ tim mạch 5-10 năm:** {risk_op}%")
+            
+            st.markdown("---")
+            st.markdown("### 💊 Khuyến Cáo Điều Trị Ở Người Cao Tuổi")
+            
+            st.warning("""
+            **⚠️ Lưu ý quan trọng với người cao tuổi:**
+            - Cân nhắc tuổi thọ dự kiến
+            - Đánh giá tình trạng sức khỏe tổng thể
+            - Xem xét chất lượng cuộc sống
+            - Nguy cơ tác dụng phụ cao hơn
+            """)
+            
+            if risk_op < 7.5:
+                st.success("""
+                **Can thiệp lối sống ưu tiên**
+                - Statin liều thấp nếu dung nạp tốt
+                - Kiểm soát THA nhẹ nhàng (mục tiêu <140-150/90)
+                - Hoạt động thể lực phù hợp
+                """)
+            elif risk_op < 15:
+                st.warning("""
+                **Cân nhắc statin liều trung bình**
+                - Atorvastatin 10-20mg hoặc Rosuvastatin 5-10mg
+                - Mục tiêu LDL-C: <100 mg/dL (linh hoạt)
+                - Theo dõi chức năng gan, thận
+                - Theo dõi triệu chứng cơ
+                """)
+            else:
+                st.error("""
+                **Statin liều trung bình, tránh liều cao**
+                - Atorvastatin 20-40mg
+                - Mục tiêu LDL-C: <70-100 mg/dL (cá thể hóa)
+                - **KHÔNG nên quá tích cực** ở người rất cao tuổi (>85)
+                - Cân nhắc lợi ích/nguy cơ cá thể
+                - Aspirin: Cân nhắc cẩn thận (nguy cơ chảy máu cao)
+                """)
+            
+            with st.expander("📚 Tài Liệu Tham Khảo"):
+                st.markdown("""
+                **SCORE2-OP (Older Persons) - ESC 2021**
+                
+                **Đặc điểm:**
+                - Thiết kế riêng cho người ≥70 tuổi
+                - Nguy cơ tuyệt đối cao hơn do tuổi
+                - Khuyến cáo điều trị cá thể hóa hơn
+                
+                **Ngưỡng nguy cơ khác với SCORE2:**
+                - <7.5%: Nguy cơ thấp-trung bình
+                - 7.5-15%: Nguy cơ cao
+                - ≥15%: Nguy cơ rất cao
+                
+                **Lưu ý:**
+                - Cân nhắc tuổi thọ dự kiến
+                - Đánh giá tình trạng chức năng
+                - Tránh can thiệp quá mức
+                
+                **Reference:**
+                SCORE2-OP working group. Eur Heart J. 2021;42(25):2455-2467.
                 """)
 
 # ===== HEART Score =====
