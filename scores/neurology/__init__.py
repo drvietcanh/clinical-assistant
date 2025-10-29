@@ -6,14 +6,7 @@ All neurological assessment calculators organized by individual files
 from .gcs import render as render_gcs
 from .nihss import render as render_nihss
 from .ich_score import render as render_ich_score
-
-
-def render_hunt_hess():
-    """Hunt & Hess Scale Calculator - Placeholder"""
-    import streamlit as st
-    st.subheader("🧠 Hunt & Hess Scale")
-    st.caption("Phân Loại Xuất Huyết Dưới Nhện")
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 3")
+from .hunt_hess import render as render_hunt_hess
 
 
 def render_mrs():
@@ -37,7 +30,7 @@ def render_neurology_calculator(calculator_id):
         "GCS": render_gcs,
         "NIHSS": render_nihss,
         "ICH Score": render_ich_score,  # ✅ Implemented
-        "Hunt & Hess": render_hunt_hess,
+        "Hunt & Hess": render_hunt_hess,  # ✅ Implemented
         "mRS": render_mrs,
     }
     
