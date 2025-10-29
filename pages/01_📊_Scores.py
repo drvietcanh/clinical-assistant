@@ -1,5 +1,6 @@
 """
 Scores Module - Clinical Scoring Systems
+Organized by Specialty
 """
 
 import streamlit as st
@@ -11,37 +12,143 @@ st.set_page_config(page_title="Scores - Clinical Assistant", page_icon="📊", l
 
 # ========== HEADER ==========
 st.title("📊 Thang Điểm Lâm Sàng")
-st.markdown("Calculators cho các hệ thống đánh giá lâm sàng phổ biến")
+st.markdown("Calculators phân loại theo chuyên khoa")
 st.markdown("---")
+
+# ========== SCORING SYSTEMS ORGANIZED BY SPECIALTY ==========
+SCORES_BY_SPECIALTY = {
+    "🚨 Cấp Cứu & Hồi Sức (Emergency & Critical Care)": {
+        "qSOFA": {"name": "qSOFA - Quick SOFA", "desc": "Sàng lọc nhiễm trùng huyết", "status": "✅"},
+        "SOFA": {"name": "SOFA - Sequential Organ Failure Assessment", "desc": "Đánh giá suy cơ quan", "status": "🚧"},
+        "APACHE II": {"name": "APACHE II", "desc": "Dự đoán tử vong ICU", "status": "🚧"},
+        "SAPS II": {"name": "SAPS II - Simplified Acute Physiology Score", "desc": "Độ nặng bệnh nhân ICU", "status": "📋"},
+        "MODS": {"name": "MODS - Multiple Organ Dysfunction Score", "desc": "Rối loạn đa cơ quan", "status": "📋"},
+    },
+    
+    "❤️ Tim Mạch (Cardiology)": {
+        "CHA2DS2-VASc": {"name": "CHA₂DS₂-VASc", "desc": "Nguy cơ đột quỵ trong rung nhĩ", "status": "🚧"},
+        "HAS-BLED": {"name": "HAS-BLED", "desc": "Nguy cơ chảy máu khi dùng kháng đông", "status": "🚧"},
+        "TIMI Risk": {"name": "TIMI Risk Score", "desc": "Nguy cơ NSTEMI/STEMI", "status": "📋"},
+        "GRACE Score": {"name": "GRACE Score", "desc": "Tiên lượng ACS", "status": "📋"},
+        "HEART Score": {"name": "HEART Score", "desc": "Đau ngực cấp - nguy cơ ACS", "status": "📋"},
+        "Framingham": {"name": "Framingham Risk Score", "desc": "Nguy cơ tim mạch 10 năm", "status": "📋"},
+    },
+    
+    "🫁 Hô Hấp (Respiratory)": {
+        "CURB-65": {"name": "CURB-65", "desc": "Mức độ nặng viêm phổi", "status": "🚧"},
+        "PSI/PORT": {"name": "PSI/PORT Score", "desc": "Tiên lượng viêm phổi cộng đồng", "status": "📋"},
+        "SMART-COP": {"name": "SMART-COP", "desc": "Cần hỗ trợ hô hấp trong viêm phổi", "status": "📋"},
+        "BODE Index": {"name": "BODE Index", "desc": "Tiên lượng COPD", "status": "📋"},
+        "Wells PE": {"name": "Wells PE Score", "desc": "Nguy cơ th栓 tắc phổi", "status": "📋"},
+    },
+    
+    "🧠 Thần Kinh (Neurology)": {
+        "GCS": {"name": "GCS - Glasgow Coma Scale", "desc": "Mức độ ý thức", "status": "🚧"},
+        "NIHSS": {"name": "NIHSS - NIH Stroke Scale", "desc": "Mức độ nặng đột quỵ", "status": "📋"},
+        "ICH Score": {"name": "ICH Score", "desc": "Tiên lượng xuất huyết nội sọ", "status": "📋"},
+        "Hunt & Hess": {"name": "Hunt & Hess Scale", "desc": "Phân loại xuất huyết dưới nhện", "status": "📋"},
+        "mRS": {"name": "mRS - Modified Rankin Scale", "desc": "Mức độ khuyết tật sau đột quỵ", "status": "📋"},
+    },
+    
+    "🩸 Tiêu Hóa - Gan Mật (GI/Hepatology)": {
+        "Rockall Score": {"name": "Rockall Score", "desc": "Nguy cơ xuất huyết tiêu hóa trên", "status": "📋"},
+        "Glasgow-Blatchford": {"name": "Glasgow-Blatchford Score", "desc": "UGIB - cần can thiệp", "status": "📋"},
+        "Child-Pugh": {"name": "Child-Pugh Score", "desc": "Mức độ xơ gan", "status": "📋"},
+        "MELD": {"name": "MELD Score", "desc": "Tiên lượng bệnh gan mạn", "status": "📋"},
+        "MELD-Na": {"name": "MELD-Na", "desc": "MELD điều chỉnh theo Na", "status": "🚧"},
+        "Ranson": {"name": "Ranson Criteria", "desc": "Tiên lượng viêm tụy cấp", "status": "📋"},
+    },
+    
+    "🩺 Huyết Học & Đông Máu (Hematology)": {
+        "Wells DVT": {"name": "Wells DVT Score", "desc": "Nguy cơ huyết khối tĩnh mạch sâu", "status": "📋"},
+        "4Ts Score": {"name": "4Ts Score - HIT", "desc": "Giảm tiểu cầu do heparin", "status": "📋"},
+        "DIC Score": {"name": "DIC Score (ISTH)", "desc": "Đông máu rải rác trong lòng mạch", "status": "📋"},
+    },
+    
+    "🧪 Thận - Điện Giải (Nephrology)": {
+        "RIFLE": {"name": "RIFLE Criteria", "desc": "Phân loại AKI", "status": "📋"},
+        "AKIN": {"name": "AKIN Criteria", "desc": "Suy thận cấp", "status": "📋"},
+        "KDIGO": {"name": "KDIGO Staging", "desc": "Giai đoạn AKI", "status": "📋"},
+    },
+    
+    "🦴 Chấn Thương & Chỉnh Hình (Trauma/Orthopedics)": {
+        "ISS": {"name": "ISS - Injury Severity Score", "desc": "Mức độ nặng đa chấn thương", "status": "📋"},
+        "RTS": {"name": "RTS - Revised Trauma Score", "desc": "Tiên lượng chấn thương", "status": "📋"},
+        "NEXUS": {"name": "NEXUS C-Spine", "desc": "Cần chụp X-quang cột sống cổ", "status": "📋"},
+        "Canadian C-Spine": {"name": "Canadian C-Spine Rule", "desc": "Chỉ định chụp cột sống cổ", "status": "📋"},
+    },
+    
+    "👶 Nhi Khoa (Pediatrics)": {
+        "PEWS": {"name": "PEWS - Pediatric Early Warning Score", "desc": "Cảnh báo sớm nhi", "status": "📋"},
+        "APGAR": {"name": "APGAR Score", "desc": "Đánh giá trẻ sơ sinh", "status": "📋"},
+        "Pediatric GCS": {"name": "Pediatric GCS", "desc": "Ý thức trẻ em", "status": "📋"},
+    },
+    
+    "🤰 Sản Khoa (Obstetrics)": {
+        "Bishop Score": {"name": "Bishop Score", "desc": "Đánh giá cổ tử cung", "status": "📋"},
+        "Modified Bishop": {"name": "Modified Bishop Score", "desc": "Dự đoán chuyển dạ", "status": "📋"},
+    },
+}
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("Chọn Thang Điểm")
+    st.header("Chọn Chuyên Khoa")
     
-    score_type = st.selectbox(
-        "Calculator:",
-        [
-            "qSOFA - Quick SOFA",
-            "SOFA - Sequential Organ Failure Assessment",
-            "CHA₂DS₂-VASc - Stroke Risk in AF",
-            "HAS-BLED - Bleeding Risk",
-            "CURB-65 - Pneumonia Severity",
-            "GCS - Glasgow Coma Scale"
-        ]
+    specialty = st.selectbox(
+        "Chuyên khoa:",
+        list(SCORES_BY_SPECIALTY.keys()),
+        index=0  # Default: Emergency & Critical Care
     )
     
     st.markdown("---")
+    
+    st.subheader("Thang Điểm Có Sẵn")
+    
+    # Display scores for selected specialty
+    scores_in_specialty = SCORES_BY_SPECIALTY[specialty]
+    
+    score_options = []
+    for score_id, score_info in scores_in_specialty.items():
+        score_options.append(f"{score_info['status']} {score_info['name']}")
+    
+    selected_score_display = st.radio(
+        "Calculator:",
+        score_options,
+        label_visibility="collapsed"
+    )
+    
+    # Extract score_id from selection
+    selected_score_id = None
+    for score_id, score_info in scores_in_specialty.items():
+        if score_info['name'] in selected_score_display:
+            selected_score_id = score_id
+            break
+    
+    st.markdown("---")
     st.info("""
-    **Tất cả calculators dựa trên:**
-    - Guidelines quốc tế
-    - Evidence-based medicine
-    - Peer-reviewed publications
+    **Chú thích:**
+    - ✅ Hoàn thành
+    - 🚧 Đang phát triển
+    - 📋 Kế hoạch
     """)
+    
+    st.markdown("---")
+    st.caption(f"**{len([s for specialty_scores in SCORES_BY_SPECIALTY.values() for s in specialty_scores])}** calculators")
+    st.caption("**Evidence-based**")
 
 # ========== MAIN CONTENT ==========
 
+# Display specialty overview
+st.info(f"""
+**Chuyên khoa:** {specialty}
+
+**Số lượng calculators:** {len(scores_in_specialty)}
+
+**Đang xem:** {SCORES_BY_SPECIALTY[specialty][selected_score_id]['name'] if selected_score_id else 'Chọn calculator bên trái'}
+""")
+
 # ===== qSOFA =====
-if "qSOFA" in score_type:
+if selected_score_id == "qSOFA":
     st.subheader("🩺 qSOFA (Quick SOFA)")
     st.caption("Sepsis-3 Criteria for Sepsis Screening")
     
@@ -192,7 +299,7 @@ if "qSOFA" in score_type:
     """)
 
 # ===== SOFA =====
-elif "SOFA" in score_type:
+elif selected_score_id == "SOFA":
     st.subheader("🏥 SOFA Score")
     st.caption("Sequential Organ Failure Assessment")
     
@@ -226,7 +333,7 @@ elif "SOFA" in score_type:
     st.info("Full SOFA calculator coming soon...")
 
 # ===== CHA2DS2-VASc =====
-elif "CHA₂DS₂-VASc" in score_type:
+elif selected_score_id == "CHA2DS2-VASc":
     st.subheader("❤️ CHA₂DS₂-VASc Score")
     st.caption("Stroke Risk Stratification in Atrial Fibrillation")
     
@@ -247,25 +354,41 @@ elif "CHA₂DS₂-VASc" in score_type:
     """)
 
 # ===== HAS-BLED =====
-elif "HAS-BLED" in score_type:
+elif selected_score_id == "HAS-BLED":
     st.subheader("🩸 HAS-BLED Score")
     st.caption("Bleeding Risk in Anticoagulated Patients")
     
     st.warning("🚧 **Under Development** - Expected: Week 3")
 
 # ===== CURB-65 =====
-elif "CURB-65" in score_type:
+elif selected_score_id == "CURB-65":
     st.subheader("🫁 CURB-65")
     st.caption("Pneumonia Severity Assessment")
     
     st.warning("🚧 **Under Development** - Expected: Week 3")
 
 # ===== GCS =====
-elif "GCS" in score_type:
+elif selected_score_id == "GCS":
     st.subheader("🧠 Glasgow Coma Scale")
     st.caption("Level of Consciousness Assessment")
     
     st.warning("🚧 **Under Development** - Expected: Week 2")
+
+# ===== Default: Show all calculators in specialty =====
+else:
+    st.subheader(f"📋 Danh Sách Calculators - {specialty}")
+    
+    # Display as cards
+    for score_id, score_info in scores_in_specialty.items():
+        with st.expander(f"{score_info['status']} {score_info['name']}", expanded=False):
+            st.markdown(f"**Mô tả:** {score_info['desc']}")
+            
+            if score_info['status'] == "✅":
+                st.success("✅ Đã hoàn thành - Click để sử dụng")
+            elif score_info['status'] == "🚧":
+                st.warning("🚧 Đang phát triển - Sắp ra mắt")
+            else:
+                st.info("📋 Trong kế hoạch phát triển")
 
 # ========== FOOTER ==========
 st.markdown("---")
