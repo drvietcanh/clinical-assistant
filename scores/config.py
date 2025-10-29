@@ -24,7 +24,7 @@ SCORES_BY_SPECIALTY = {
     },
     
     "🫁 Hô Hấp (Respiratory)": {
-        "CURB-65": {"name": "CURB-65", "desc": "Mức độ nặng viêm phổi", "status": "🚧"},
+        "CURB-65": {"name": "CURB-65", "desc": "Mức độ nặng viêm phổi", "status": "✅"},
         "PSI/PORT": {"name": "PSI/PORT Score", "desc": "Tiên lượng viêm phổi cộng đồng", "status": "📋"},
         "SMART-COP": {"name": "SMART-COP", "desc": "Cần hỗ trợ hô hấp trong viêm phổi", "status": "📋"},
         "BODE Index": {"name": "BODE Index", "desc": "Tiên lượng COPD", "status": "📋"},
@@ -32,7 +32,7 @@ SCORES_BY_SPECIALTY = {
     },
     
     "🧠 Thần Kinh (Neurology)": {
-        "GCS": {"name": "GCS - Glasgow Coma Scale", "desc": "Mức độ ý thức", "status": "🚧"},
+        "GCS": {"name": "GCS - Glasgow Coma Scale", "desc": "Mức độ ý thức", "status": "✅"},
         "NIHSS": {"name": "NIHSS - NIH Stroke Scale", "desc": "Mức độ nặng đột quỵ", "status": "📋"},
         "ICH Score": {"name": "ICH Score", "desc": "Tiên lượng xuất huyết nội sọ", "status": "📋"},
         "Hunt & Hess": {"name": "Hunt & Hess Scale", "desc": "Phân loại xuất huyết dưới nhện", "status": "📋"},

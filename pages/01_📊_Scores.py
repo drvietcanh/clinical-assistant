@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scores.config import SCORES_BY_SPECIALTY
-from scores import cardiology, emergency
+from scores import cardiology, emergency, respiratory, neurology
 
 st.set_page_config(page_title="Scores - Clinical Assistant", page_icon="📊", layout="wide")
 
@@ -88,6 +88,14 @@ if "Cấp Cứu" in specialty:
 # Cardiology
 elif "Tim Mạch" in specialty:
     cardiology.render_cardiology_calculator(selected_score_id)
+
+# Respiratory
+elif "Hô Hấp" in specialty:
+    respiratory.render_respiratory_calculator(selected_score_id)
+
+# Neurology
+elif "Thần Kinh" in specialty:
+    neurology.render_neurology_calculator(selected_score_id)
 
 # Other specialties - show placeholder for now
 else:
