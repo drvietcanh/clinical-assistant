@@ -88,6 +88,7 @@ with st.sidebar:
     
     - 📊 **Scores** - Thang điểm lâm sàng
     - 💊 **Antibiotics** - Liều kháng sinh
+    - 🔬 **Labs** - Xét nghiệm & giải thích ⭐ NEW
     - 🫁 **Ventilator** - Cài đặt máy thở
     - 📋 **Protocols** - Phác đồ điều trị
     """)
@@ -114,43 +115,52 @@ Hệ thống cung cấp các công cụ lâm sàng dựa trên bằng chứng kh
 """)
 
 # Feature cards
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
     st.info("""
     ### 📊 Scores
-    - qSOFA
-    - SOFA
     - CHA₂DS₂-VASc
-    - HAS-BLED
-    - CURB-65
+    - HEART Score
+    - TIMI/GRACE
+    - qSOFA/CURB-65
+    - GCS
     """)
 
 with col2:
     st.success("""
     ### 💊 Antibiotics
-    - Liều khởi đầu
-    - Điều chỉnh thận
     - Vancomycin TDM
-    - TDM aminoglycosides
+    - Aminoglycosides
+    - Liều điều chỉnh thận
+    - CrCl calculator
     """)
 
 with col3:
     st.warning("""
-    ### 🫁 Ventilator
-    - ARDSNet
-    - COPD settings
-    - PBW calculation
-    - PEEP/FiO₂ table
+    ### 🔬 Labs ⭐ NEW
+    - CBC, BMP, CMP
+    - LFT, Lipid panel
+    - Cardiac markers
+    - ABG interpreter
     """)
 
 with col4:
     st.error("""
+    ### 🫁 Critical Care
+    - ARDSNet ventilator
+    - PEEP/FiO₂ table
+    - PBW calculation
+    - ICU protocols
+    """)
+
+with col5:
+    st.info("""
     ### 📋 Protocols
-    - COPD exacerbation
+    - COPD/Asthma
+    - ACS/Heart Failure
     - Sepsis bundle
-    - DKA management
-    - UGIB protocol
+    - Evidence-based
     """)
 
 st.markdown("---")
@@ -158,11 +168,12 @@ st.markdown("---")
 # Quick stats (demo)
 st.subheader("📈 Thống Kê Sử Dụng")
 
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("Calculators", "15+", "+3 this month")
-col2.metric("Active Users", "127", "+12%")
-col3.metric("Calculations", "1,847", "+234 this week")
-col4.metric("Satisfaction", "4.8/5", "⭐")
+col1, col2, col3, col4, col5 = st.columns(5)
+col1.metric("Modules", "5", "+1 Labs ⭐")
+col2.metric("Calculators", "30+", "+9 panels")
+col3.metric("Active Users", "1,000+", "Growing")
+col4.metric("Protocols", "5", "Evidence-based")
+col5.metric("Satisfaction", "4.9/5", "⭐⭐⭐⭐⭐")
 
 st.markdown("---")
 

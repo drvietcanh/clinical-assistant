@@ -15,12 +15,12 @@ SCORES_BY_SPECIALTY = {
     "❤️ Tim Mạch (Cardiology)": {
         "CHA2DS2-VASc": {"name": "CHA₂DS₂-VASc", "desc": "Nguy cơ đột quỵ trong rung nhĩ", "status": "✅"},
         "HAS-BLED": {"name": "HAS-BLED", "desc": "Nguy cơ chảy máu khi dùng kháng đông", "status": "✅"},
-        "SCORE2": {"name": "SCORE2", "desc": "Nguy cơ tim mạch 10 năm (40-69 tuổi)", "status": "✅"},
-        "SCORE2-OP": {"name": "SCORE2-OP", "desc": "Nguy cơ tim mạch (≥70 tuổi)", "status": "✅"},
-        "HEART Score": {"name": "HEART Score", "desc": "Đau ngực cấp - nguy cơ ACS", "status": "🚧"},
-        "TIMI Risk": {"name": "TIMI Risk Score", "desc": "Nguy cơ NSTEMI/STEMI", "status": "🚧"},
-        "GRACE Score": {"name": "GRACE Score", "desc": "Tiên lượng ACS", "status": "🚧"},
-        "Framingham": {"name": "Framingham Risk Score", "desc": "Nguy cơ tim mạch 10 năm", "status": "🚧"},
+        "SCORE2": {"name": "SCORE2", "desc": "Nguy cơ tim mạch 10 năm (40-69 tuổi)", "status": "🚧"},
+        "SCORE2-OP": {"name": "SCORE2-OP", "desc": "Nguy cơ tim mạch (≥70 tuổi)", "status": "🚧"},
+        "HEART Score": {"name": "HEART Score", "desc": "Đau ngực cấp - nguy cơ ACS", "status": "✅"},
+        "TIMI Risk": {"name": "TIMI Risk Score", "desc": "Nguy cơ NSTEMI/STEMI", "status": "✅"},
+        "GRACE Score": {"name": "GRACE Score", "desc": "Tiên lượng ACS", "status": "✅"},
+        "Framingham": {"name": "Framingham Risk Score", "desc": "Nguy cơ tim mạch 10 năm", "status": "✅"},
     },
     
     "🫁 Hô Hấp (Respiratory)": {

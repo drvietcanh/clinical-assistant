@@ -1,12 +1,12 @@
 """
-Antibiotic Dosing Calculators
-Independent calculator functions
+Creatinine Clearance Calculator
+Cockcroft-Gault Formula
 """
 
 import streamlit as st
 
 
-def render_crcl():
+def render():
     """Creatinine Clearance (CrCl) Calculator - Cockcroft-Gault"""
     st.subheader("🧮 Tính Độ Lọc Cầu Thận (CrCl)")
     st.caption("Công thức Cockcroft-Gault")
@@ -136,37 +136,3 @@ def render_crcl():
                 **Reference:** 
                 Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.
                 """)
-
-
-def render_vancomycin():
-    """Vancomycin Dosing Calculator"""
-    st.subheader("💉 Vancomycin - Tính Liều")
-    st.caption("Liều khởi đầu và theo dõi nồng độ thuốc")
-    
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 2")
-    
-    st.info("""
-    **Vancomycin TDM:**
-    - Loading dose
-    - Maintenance dose
-    - AUC/MIC targeting
-    - Trough level monitoring
-    - Dose adjustment
-    """)
-
-
-def render_aminoglycoside():
-    """Aminoglycoside Dosing Calculator"""
-    st.subheader("💊 Aminoglycoside - Tính Liều")
-    st.caption("Gentamicin, Tobramycin, Amikacin")
-    
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 2")
-    
-    st.info("""
-    **Aminoglycoside:**
-    - Once-daily dosing
-    - Extended-interval dosing
-    - Peak/Trough monitoring
-    - Hartford nomogram
-    """)
-

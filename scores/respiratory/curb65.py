@@ -1,12 +1,12 @@
 """
-Respiratory Scoring Systems
-All respiratory and pulmonary calculators
+CURB-65 Score
+Community-Acquired Pneumonia severity assessment
 """
 
 import streamlit as st
 
 
-def render_curb65():
+def render():
     """CURB-65 Score Calculator"""
     st.subheader("🫁 CURB-65")
     st.caption("Mức Độ Nặng Viêm Phổi Cộng Đồng")
@@ -213,59 +213,4 @@ def render_curb65():
                 - BTS Guidelines for CAP (2009)
                 - IDSA/ATS Guidelines (2019)
                 """)
-
-
-def render_psi_port():
-    """PSI/PORT Score Calculator"""
-    st.subheader("🫁 PSI/PORT Score")
-    st.caption("Pneumonia Severity Index - Tiên Lượng Viêm Phổi Cộng Đồng")
-    
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 2")
-
-
-def render_smartcop():
-    """SMART-COP Score Calculator"""
-    st.subheader("🫁 SMART-COP")
-    st.caption("Cần Hỗ Trợ Hô Hấp Trong Viêm Phổi")
-    
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 2")
-
-
-def render_bode():
-    """BODE Index Calculator"""
-    st.subheader("🫁 BODE Index")
-    st.caption("Tiên Lượng COPD")
-    
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 3")
-
-
-def render_wells_pe():
-    """Wells PE Score Calculator"""
-    st.subheader("🫁 Wells PE Score")
-    st.caption("Nguy Cơ Thuyên Tắc Phổi")
-    
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 3")
-
-
-# Router function
-def render_respiratory_calculator(calculator_id):
-    """
-    Route to the correct respiratory calculator based on ID
-    
-    Args:
-        calculator_id: The ID of the calculator to render
-    """
-    calculators = {
-        "CURB-65": render_curb65,
-        "PSI/PORT": render_psi_port,
-        "SMART-COP": render_smartcop,
-        "BODE Index": render_bode,
-        "Wells PE": render_wells_pe,
-    }
-    
-    calculator_func = calculators.get(calculator_id)
-    if calculator_func:
-        calculator_func()
-    else:
-        st.error(f"Calculator '{calculator_id}' not found!")
 

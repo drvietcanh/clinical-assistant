@@ -11,8 +11,8 @@
 ## 🌟 Tính Năng Chính
 
 ### 📊 **Thang Điểm Lâm Sàng (100+ Calculators)**
-- **Tim Mạch:** CHA₂DS₂-VASc, HAS-BLED, SCORE2, SCORE2-OP, HEART, TIMI, GRACE
-- **Cấp Cứu & Hồi Sức:** qSOFA, SOFA, APACHE II, SAPS II
+- **Tim Mạch:** CHA₂DS₂-VASc, HAS-BLED, SCORE2, SCORE2-OP, HEART, TIMI, GRACE, Framingham
+- **Cấp Cứu & Hồi Sức:** qSOFA, SOFA, APACHE II, SAPS II, MODS
 - **Hô Hấp:** CURB-65, PSI/PORT, Wells PE, BODE Index
 - **Thần Kinh:** GCS, NIHSS, ICH Score, Hunt & Hess, mRS
 - **Tiêu Hóa:** MELD, MELD-Na, Child-Pugh, Rockall, Glasgow-Blatchford
@@ -20,10 +20,20 @@
 - **Và nhiều chuyên khoa khác...**
 
 ### 💊 **Kháng Sinh - Tính Liều & TDM**
-- Tính CrCl (Cockcroft-Gault) với chuyển đổi đơn vị
+- Tính CrCl (Cockcroft-Gault) với chuyển đổi đơn vị (µmol/L ↔ mg/dL)
 - Vancomycin dosing & TDM
 - Aminoglycoside dosing
 - Tra cứu cơ sở dữ liệu kháng sinh
+
+### 🔬 **Labs - Xét Nghiệm & Giải Thích** ⭐ NEW
+- **CBC** - Complete Blood Count
+- **BMP/CMP** - Metabolic Panels
+- **LFT** - Liver Function Tests
+- **Lipid Panel** - Cholesterol, Triglycerides
+- **Cardiac Markers** - Troponin, BNP, CK-MB
+- **Coagulation** - PT/INR, aPTT
+- **Thyroid** - TSH, T3, T4
+- **ABG** - Arterial Blood Gas Interpreter
 
 ### 🫁 **Thở Máy - Hỗ Trợ Hô Hấp**
 - ARDSNet Tidal Volume Calculator
@@ -41,7 +51,34 @@
 
 ## 🚀 Quick Start
 
-### Cài Đặt
+### 🪟 Windows - Siêu Nhanh (Khuyến Nghị)
+
+**Cách 1: Double-click file .bat** ⚡
+```bash
+1. Double-click: quick-start.bat
+   → Chạy trực tiếp, nhanh nhất!
+
+2. Hoặc: run.bat
+   → Tự động kiểm tra & cài đặt dependencies
+
+3. Lần đầu tiên: setup.bat
+   → Tạo virtual environment & cài đặt
+```
+
+**Cách 2: Command Line**
+```bash
+# Clone repository
+git clone https://github.com/drvietcanh/clinical-assistant.git
+cd clinical-assistant
+
+# Chạy nhanh
+quick-start.bat
+
+# Hoặc với kiểm tra dependencies
+run.bat
+```
+
+### 🐧 Linux/Mac
 
 ```bash
 # Clone repository
@@ -50,15 +87,13 @@ cd clinical-assistant
 
 # Tạo virtual environment
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# hoặc
-venv\Scripts\activate  # Windows
+source venv/bin/activate
 
 # Cài đặt dependencies
 pip install -r requirements.txt
 
 # Chạy ứng dụng
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 ### Deploy lên Streamlit Cloud
@@ -76,33 +111,87 @@ streamlit run app.py
 
 ```
 medical/
-├── app.py                      # Main entry point
-├── pages/                      # Streamlit pages (routers)
+├── 📄 Core Files
+│   ├── app.py                      # Main entry point
+│   ├── requirements.txt            # Dependencies
+│   ├── quick-start.bat             # Quick launch (Windows) ⚡
+│   ├── run.bat                     # Run with checks (Windows)
+│   └── setup.bat                   # First-time setup (Windows)
+│
+├── 📁 Pages (Routers)
 │   ├── 01_📊_Scores.py
 │   ├── 02_💊_Antibiotics.py
 │   ├── 03_🫁_Ventilator.py
-│   └── 04_📋_Protocols.py
+│   ├── 04_📋_Protocols.py
+│   └── 05_🔬_Labs.py               # NEW! ⭐
 │
-├── scores/                     # Scores module (modular)
-│   ├── config.py
-│   ├── cardiology.py
-│   ├── emergency.py
-│   ├── respiratory.py
-│   └── neurology.py
+├── 📁 Scores Module (Modular by Specialty)
+│   ├── config.py                   # Central config
+│   ├── cardiology/                 # 8 calculators
+│   │   ├── cha2ds2vasc.py
+│   │   ├── hasbled.py
+│   │   ├── score2.py, score2_op.py
+│   │   ├── heart.py, timi.py, grace.py
+│   │   └── framingham.py
+│   ├── emergency/                  # 5 calculators
+│   │   ├── qsofa.py, sofa.py
+│   │   ├── apache2.py, saps2.py
+│   │   └── mods.py
+│   ├── respiratory/                # Respiratory scores
+│   │   └── curb65.py
+│   └── neurology/                  # Neurology scores
+│       └── gcs.py
 │
-├── antibiotics/                # Antibiotics module
-│   ├── calculators.py
-│   └── database.py
+├── 📁 Antibiotics Module
+│   ├── crcl.py                     # CrCl calculator
+│   ├── vancomycin.py               # Vancomycin dosing
+│   ├── aminoglycoside.py           # Aminoglycoside dosing
+│   └── database.py                 # Antibiotic lookup
 │
-├── ventilator/                 # Ventilator module
-│   ├── calculators.py
-│   └── tables.py
+├── 📁 Labs Module ⭐ NEW
+│   ├── cbc.py                      # Complete Blood Count
+│   ├── bmp.py, cmp.py              # Metabolic panels
+│   ├── lft.py                      # Liver Function Tests
+│   ├── lipid.py                    # Lipid panel
+│   ├── cardiac.py                  # Cardiac markers
+│   ├── coag.py                     # Coagulation
+│   ├── thyroid.py                  # Thyroid function
+│   ├── abg.py                      # ABG interpreter
+│   ├── converter.py                # Unit conversions
+│   └── normal_ranges.py            # Reference ranges
 │
-└── protocols/                  # Protocols module
-    ├── emergency.py
-    ├── respiratory.py
-    └── cardiology.py
+├── 📁 Ventilator Module
+│   ├── calculators.py              # ARDSNet, PBW
+│   └── tables.py                   # PEEP/FiO2
+│
+├── 📁 Protocols Module
+│   ├── emergency/
+│   │   └── sepsis.py
+│   ├── respiratory/
+│   │   ├── copd.py
+│   │   └── asthma.py
+│   └── cardiology/
+│       ├── acs.py
+│       └── heart_failure.py
+│
+├── 📁 Data
+│   ├── Antibiotics.csv
+│   ├── Scores.csv
+│   ├── Ventilator.csv
+│   ├── Protocols.csv
+│   └── Meta.csv
+│
+└── 📚 Documentation
+    ├── README.md                   # This file
+    ├── ARCHITECTURE.md             # Technical docs
+    └── QUICKSTART_STREAMLIT.md     # Quick start guide
 ```
+
+**Tổng:** 
+- **5 modules chính** (Scores, Antibiotics, Labs ⭐, Ventilator, Protocols)
+- **30+ calculators** implemented
+- **100% modular** - Easy to maintain & extend
+- **3 .bat files** cho Windows - Double-click to run! ⚡
 
 **→ Xem chi tiết:** [ARCHITECTURE.md](ARCHITECTURE.md)
 
@@ -138,32 +227,51 @@ medical/
 
 ## 📊 Tính Năng Nổi Bật
 
-### 🎯 **Đã Hoàn Thành (12 Calculators)**
+### 🎯 **Đã Hoàn Thành (30+ Tools)**
 
-1. **qSOFA** - Sàng lọc sepsis ✅
-2. **CHA₂DS₂-VASc** - Nguy cơ đột quỵ (Rung nhĩ) ✅
-3. **HAS-BLED** - Nguy cơ chảy máu ✅
-4. **SCORE2** - Nguy cơ tim mạch 10 năm (40-69 tuổi) ✅
-5. **SCORE2-OP** - Nguy cơ tim mạch (≥70 tuổi) ✅
-6. **CURB-65** - Mức độ nặng viêm phổi ✅
-7. **GCS** - Mức độ ý thức ✅
-8. **CrCl** - Độ lọc cầu thận (với unit conversion) ✅
-9. **ARDSNet** - Tidal volume calculator ✅
-10. **PEEP/FiO2 Table** - ARDSNet protocol ✅
-11. **Sepsis Bundle** - Sepsis 1-hour bundle ✅
+**Scores (14 calculators):**
+1. **qSOFA, SOFA** - Sepsis screening & severity ✅
+2. **APACHE II, SAPS II, MODS** - ICU severity scores ✅
+3. **CHA₂DS₂-VASc** - Stroke risk (AF) ✅
+4. **HAS-BLED** - Bleeding risk ✅
+5. **SCORE2, SCORE2-OP** - 10-year CV risk ✅
+6. **HEART, TIMI, GRACE** - ACS risk ✅
+7. **Framingham** - CV risk ✅
+8. **CURB-65** - Pneumonia severity ✅
+9. **GCS** - Consciousness level ✅
 
-### 🚧 **Đang Phát Triển (8 Calculators)**
+**Labs (9 panels):** ⭐ NEW
+- CBC, BMP, CMP, LFT, Lipid
+- Cardiac markers, Coagulation
+- Thyroid, ABG interpreter ✅
 
-- HEART Score, TIMI, GRACE, Framingham
-- Vancomycin, Aminoglycoside dosing
-- COPD, Asthma protocols
-- ACS, Heart Failure protocols
+**Antibiotics:**
+- CrCl calculator (with unit conversion) ✅
+- Vancomycin dosing ✅
+- Aminoglycoside dosing ✅
 
-### 📋 **Kế Hoạch (80+ Calculators)**
+**Ventilator:**
+- ARDSNet calculator ✅
+- PEEP/FiO2 tables ✅
 
-- Tất cả các specialty còn lại
-- Antibiotic database
-- Nhiều protocols hơn
+**Protocols:**
+- Sepsis bundle, COPD, Asthma ✅
+- ACS, Heart Failure ✅
+
+### 📋 **Kế Hoạch (70+ Calculators)**
+
+**Scores:**
+- NIHSS, ICH Score, Hunt & Hess, mRS (Neurology)
+- PSI/PORT, SMART-COP, BODE, Wells PE (Respiratory)
+- MELD, Child-Pugh, Rockall, Glasgow-Blatchford (GI)
+- RIFLE, AKIN, KDIGO (Nephrology)
+- Và nhiều specialty khác (Rheum, Endo, Derm, Onco...)
+
+**Others:**
+- Antibiotic database expansion
+- More protocols
+- Drug interaction checker
+- Clinical pathways
 
 ---
 

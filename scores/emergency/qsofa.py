@@ -1,12 +1,12 @@
 """
-Emergency & Critical Care Scoring Systems
-All emergency and ICU calculators
+qSOFA (Quick SOFA) Score
+Sepsis-3 screening tool
 """
 
 import streamlit as st
 
 
-def render_qsofa():
+def render():
     """qSOFA (Quick SOFA) Calculator"""
     st.subheader("🩺 qSOFA (Quick SOFA)")
     st.caption("Sepsis-3 Criteria for Sepsis Screening")
@@ -148,86 +148,4 @@ def render_qsofa():
     - Consider **Sepsis Bundle** protocol
     - Review **Antibiotic** selection
     """)
-
-
-def render_sofa():
-    """SOFA Score Calculator"""
-    st.subheader("🏥 SOFA Score")
-    st.caption("Sequential Organ Failure Assessment")
-    
-    st.warning("""
-    🚧 **Under Development**
-    
-    SOFA calculator đang được phát triển.
-    
-    **Dự kiến hoàn thành:** Week 2
-    
-    **Sẽ bao gồm:**
-    - Respiratory (PaO₂/FiO₂)
-    - Coagulation (Platelets)
-    - Liver (Bilirubin)
-    - Cardiovascular (MAP, Vasopressors)
-    - CNS (GCS)
-    - Renal (Creatinine, Urine output)
-    """)
-    
-    st.markdown("### Preview")
-    
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        pao2_fio2 = st.number_input("PaO₂/FiO₂ (mmHg)", value=350)
-    with col2:
-        platelets = st.number_input("Platelets (×10³/µL)", value=150)
-    with col3:
-        bilirubin = st.number_input("Bilirubin (mg/dL)", value=1.0, step=0.1)
-    
-    st.info("Full SOFA calculator coming soon...")
-
-
-def render_apache2():
-    """APACHE II Score Calculator"""
-    st.subheader("🏥 APACHE II")
-    st.caption("Acute Physiology and Chronic Health Evaluation II")
-    
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 3")
-
-
-def render_saps2():
-    """SAPS II Score Calculator"""
-    st.subheader("🏥 SAPS II")
-    st.caption("Simplified Acute Physiology Score II")
-    
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 4")
-
-
-def render_mods():
-    """MODS Score Calculator"""
-    st.subheader("🏥 MODS")
-    st.caption("Multiple Organ Dysfunction Score")
-    
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 4")
-
-
-# Router function
-def render_emergency_calculator(calculator_id):
-    """
-    Route to the correct emergency calculator based on ID
-    
-    Args:
-        calculator_id: The ID of the calculator to render
-    """
-    calculators = {
-        "qSOFA": render_qsofa,
-        "SOFA": render_sofa,
-        "APACHE II": render_apache2,
-        "SAPS II": render_saps2,
-        "MODS": render_mods,
-    }
-    
-    calculator_func = calculators.get(calculator_id)
-    if calculator_func:
-        calculator_func()
-    else:
-        st.error(f"Calculator '{calculator_id}' not found!")
 

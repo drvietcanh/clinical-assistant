@@ -1,12 +1,12 @@
 """
-Emergency Protocols
-Sepsis, shock, and critical care protocols
+Sepsis 1-Hour Bundle Protocol
+Surviving Sepsis Campaign 2021
 """
 
 import streamlit as st
 
 
-def render_sepsis():
+def render():
     """Sepsis 1-Hour Bundle Protocol"""
     st.subheader("🦠 Sepsis 1-Hour Bundle")
     st.caption("Surviving Sepsis Campaign 2021")
@@ -134,21 +134,4 @@ def render_sepsis():
         **Link:**
         https://www.sccm.org/SurvivingSepsisCampaign
         """)
-
-
-def render_shock():
-    """Shock Management Protocol"""
-    st.subheader("💔 Quản Lý Sốc")
-    st.caption("Phân Loại và Xử Trí Sốc")
-    
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 2")
-    
-    st.info("""
-    **Các loại sốc:**
-    - Sốc nhiễm trùng (Septic shock)
-    - Sốc giảm thể tích (Hypovolemic shock)
-    - Sốc tim (Cardiogenic shock)
-    - Sốc phân bố (Distributive shock)
-    - Sốc tắc nghẽn (Obstructive shock)
-    """)
 
