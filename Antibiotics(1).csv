@@ -1,7 +1,0 @@
-drug,indication,aware,adult_dose,renal_thr,renal_dose_lt_thr,route,notes,refs
-Cefepime (IV),HAP/VAP incl. Pseudomonas risk,Watch,2 g IV q8h,CrCl<=60: adjust,30–60: 2 g q24h; 11–29: 1 g q24h; <11: 500 mg q24h; HD: 1 g day1 then 500 mg q24h post-HD,IV,Monitor neurotoxicity,FDA label 07/2025
-Piperacillin–Tazobactam (IV),Nosocomial pneumonia (initial),Watch,4.5 g IV q6h + aminoglycoside if P. aeruginosa suspected,CrCl<=40: adjust,20–40: 3.375 g q6h; <20: 2.25 g q6–8h; HD: 2.25 g q8h +0.75 g post-HD,IV,De-escalate by culture,FDA label 2017+/2020
-Meropenem (IV),Complicated infections per label,Watch,1 g IV q8h (by indication),CrCl<=50: adjust,26–50: 1 g q12h; 10–25: 500 mg q12h; <10: 500 mg q24h,IV,Seizure risk; stewardship,FDA MERREM IV label
-Levofloxacin (PO/IV),"CAP/HAP, UTI/pyelo",Watch,500–750 mg q24h (per indication),CrCl<50: adjust,"Per label table (e.g., 750 mg q48h for some)",PO/IV,"QT prolongation, tendinopathy",FDA LEVAQUIN labels
-Amoxicillin–Clavulanate (PO),AECOPD (bacterial features),Access,875/125 mg q12h x 5–7d (verify local),Avoid 875 mg if CrCl<30; adjust,CrCl 10–30: 500/125 q12h; <10: 500/125 q24h,PO,Only when criteria per GOLD,GOLD 2025; WHO AWaRe 2023
-Vancomycin (IV) — AUC target,Serious MRSA infections,—,Per weight/renal; exposure monitoring,Adjust by AUC/renal,Target AUC24/MIC 400–600 (MIC=1),IV,Prefer AUC-guided monitoring,ASHP/IDSA/PIDS/SIDP 2020

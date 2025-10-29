@@ -1,4 +1,0 @@
-drug,indication,aware,adult_dose,renal_thr,renal_dose_lt_thr,route,notes,refs
-Cefepime (IV),HAP/VAP incl. Pseudomonas,Watch,2 g IV q8h,CrCl<=60: adjust,Table per label,IV,Monitor neurotoxicity,FDA label 07/2025
-Piperacillin–Tazobactam (IV),Nosocomial pneumonia (initial),Watch,4.5 g IV q6h + aminoglycoside if P. aeruginosa risk,CrCl<=40: adjust,Table per label,IV,De-escalate by culture,FDA label 2017+/2020
-Amoxicillin–Clavulanate (PO),AECOPD (bacterial features),Access,875/125 mg q12h x 5–7d (verify local),Avoid 875 mg if CrCl<30; adjust,See local label,PO,Only when criteria per GOLD,GOLD 2025; WHO AWaRe 2023
