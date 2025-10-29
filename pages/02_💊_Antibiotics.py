@@ -1,55 +1,56 @@
 """
-Antibiotics Module - Antibiotic Dosing Calculator
+Module Kháng Sinh - Tính Liều, Điều Chỉnh Thận, TDM
 """
 
 import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.set_page_config(page_title="Antibiotics - Clinical Assistant", page_icon="💊", layout="wide")
+st.set_page_config(page_title="Kháng Sinh - Clinical Assistant", page_icon="💊", layout="wide")
 
 # ========== HEADER ==========
-st.title("💊 Kháng Sinh - Antibiotic Dosing")
-st.markdown("Tính liều, điều chỉnh thận, và TDM guidelines")
+st.title("💊 Kháng Sinh - Tính Liều & TDM")
+st.markdown("Hướng dẫn liều dùng, điều chỉnh thận, theo dõi nồng độ thuốc")
 st.markdown("---")
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("Chọn Chức Năng")
+    st.header("⚙️ Chọn Công Cụ")
     
     function_type = st.selectbox(
-        "Tool:",
+        "Công cụ:",
         [
-            "🔍 Tra cứu liều kháng sinh",
-            "💉 Vancomycin Calculator",
-            "🧮 CrCl Calculator (Cockcroft-Gault)",
-            "💊 Aminoglycoside Dosing",
-            "📊 Database Lookup"
+            "🧮 Tính CrCl (Cockcroft-Gault)",
+            "💉 Vancomycin - Tính Liều",
+            "🔍 Tra Cứu Kháng Sinh",
+            "💊 Aminoglycoside - Tính Liều",
+            "📊 Cơ Sở Dữ Liệu"
         ]
     )
     
     st.markdown("---")
     st.info("""
-    **Dựa trên:**
-    - FDA Drug Labels
+    **📚 Căn cứ khoa học:**
+    - FDA Drug Labels (Mỹ)
     - IDSA/ATS Guidelines
-    - ASHP/IDSA TDM Guidelines
+    - ASHP/IDSA TDM 2020
+    - WHO AWaRe Classification
     """)
 
 # ========== MAIN CONTENT ==========
 
 # ===== CrCl Calculator =====
 if "CrCl" in function_type:
-    st.subheader("🧮 Creatinine Clearance Calculator")
-    st.caption("Cockcroft-Gault Formula")
+    st.subheader("🧮 Tính Độ Lọc Cầu Thận (CrCl)")
+    st.caption("Công thức Cockcroft-Gault")
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### Patient Parameters")
+        st.markdown("### 📋 Thông Số Bệnh Nhân")
         
         age = st.number_input(
-            "Age (years)",
+            "Tuổi (năm)",
             min_value=18,
             max_value=120,
             value=65,
@@ -57,71 +58,71 @@ if "CrCl" in function_type:
         )
         
         weight = st.number_input(
-            "Weight (kg)",
+            "Cân nặng (kg)",
             min_value=30.0,
             max_value=200.0,
             value=70.0,
             step=0.5,
-            help="Actual body weight"
+            help="Cân nặng thực tế"
         )
         
         scr = st.number_input(
-            "Serum Creatinine (mg/dL)",
+            "Creatinine máu (mg/dL)",
             min_value=0.1,
             max_value=15.0,
             value=1.0,
             step=0.1,
-            help="Normal: 0.7-1.2 mg/dL"
+            help="Bình thường: 0.7-1.2 mg/dL"
         )
         
         sex = st.radio(
-            "Sex",
-            ["Male", "Female"],
+            "Giới tính",
+            ["Nam", "Nữ"],
             horizontal=True
         )
         
-        if st.button("Calculate CrCl", type="primary"):
+        if st.button("🧮 Tính CrCl", type="primary"):
             # Cockcroft-Gault Formula
             crcl = ((140 - age) * weight) / (72 * scr)
-            if sex == "Female":
+            if sex == "Nữ":
                 crcl *= 0.85
             
             crcl = round(crcl, 1)
             
             with col2:
-                st.markdown("### Result")
+                st.markdown("### 📊 Kết Quả")
                 
                 # Display CrCl
                 if crcl >= 90:
-                    st.success(f"## {crcl} mL/min")
-                    st.success("✅ Normal kidney function")
-                    stage = "Normal (G1)"
+                    st.success(f"## {crcl} mL/phút")
+                    st.success("✅ Chức năng thận bình thường")
+                    stage = "Bình thường (G1)"
                 elif crcl >= 60:
-                    st.success(f"## {crcl} mL/min")
-                    st.info("Mild reduction")
-                    stage = "CKD Stage 2 (G2)"
+                    st.success(f"## {crcl} mL/phút")
+                    st.info("Giảm nhẹ")
+                    stage = "CKD Giai đoạn 2 (G2)"
                 elif crcl >= 30:
-                    st.warning(f"## {crcl} mL/min")
-                    st.warning("⚠️ Moderate reduction")
-                    stage = "CKD Stage 3 (G3)"
+                    st.warning(f"## {crcl} mL/phút")
+                    st.warning("⚠️ Giảm trung bình")
+                    stage = "CKD Giai đoạn 3 (G3)"
                 elif crcl >= 15:
-                    st.error(f"## {crcl} mL/min")
-                    st.error("❗ Severe reduction")
-                    stage = "CKD Stage 4 (G4)"
+                    st.error(f"## {crcl} mL/phút")
+                    st.error("❗ Giảm nặng")
+                    stage = "CKD Giai đoạn 4 (G4)"
                 else:
-                    st.error(f"## {crcl} mL/min")
-                    st.error("🚨 Kidney failure")
-                    stage = "CKD Stage 5 (G5)"
+                    st.error(f"## {crcl} mL/phút")
+                    st.error("🚨 Suy thận")
+                    stage = "CKD Giai đoạn 5 (G5)"
             
             # Detailed interpretation
-            st.markdown("### Interpretation")
-            st.write(f"**CKD Stage:** {stage}")
+            st.markdown("### 💡 Giải Thích")
+            st.write(f"**Giai đoạn CKD:** {stage}")
             
             st.markdown("""
-            **Dosing Implications:**
-            - Many antibiotics require dose adjustment
-            - Use hospital formulary guidelines
-            - Consider pharmacist consultation
+            **Ý nghĩa điều chỉnh liều:**
+            - Nhiều kháng sinh cần điều chỉnh liều
+            - Tham khảo hướng dẫn của bệnh viện
+            - Hội chẩn dược sĩ lâm sàng nếu cần
             """)
             
             # Formula
