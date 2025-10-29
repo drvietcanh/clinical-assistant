@@ -4,29 +4,7 @@ All neurological assessment calculators organized by individual files
 """
 
 from .gcs import render as render_gcs
-
-
-def render_nihss():
-    """NIHSS Score Calculator - Placeholder"""
-    import streamlit as st
-    st.subheader("🧠 NIHSS - NIH Stroke Scale")
-    st.caption("Mức Độ Nặng Đột Quỵ")
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 2")
-    st.info("""
-    **NIHSS đánh giá:**
-    - Level of consciousness
-    - Gaze
-    - Visual fields
-    - Facial palsy
-    - Motor arm/leg
-    - Ataxia
-    - Sensory
-    - Language
-    - Dysarthria
-    - Extinction/inattention
-    
-    **Tổng điểm:** 0-42
-    """)
+from .nihss import render as render_nihss
 
 
 def render_ich_score():
