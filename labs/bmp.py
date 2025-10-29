@@ -9,34 +9,134 @@ from .normal_ranges import get_normal_range, is_critical, interpret_value, ALL_R
 def render():
     """Basic Metabolic Panel"""
     st.subheader("🧪 BMP - Basic Metabolic Panel")
-    st.caption("Hóa Sinh Máu Cơ Bản")
+    st.caption("Hóa Sinh Máu Cơ Bản - Chuyển đổi đơn vị SI Units ↔ Conventional")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Enter Values")
+        st.markdown("#### 📝 Nhập Giá Trị")
         
-        na = st.number_input("Sodium - Na (mEq/L)", 100.0, 180.0, 140.0, 0.1, key="na")
-        k = st.number_input("Potassium - K (mEq/L)", 1.0, 10.0, 4.0, 0.1, key="k")
-        cl = st.number_input("Chloride - Cl (mEq/L)", 50.0, 150.0, 100.0, 0.1, key="cl")
-        co2 = st.number_input("CO2/Bicarbonate (mEq/L)", 5.0, 50.0, 25.0, 0.1, key="co2")
-        bun = st.number_input("BUN (mg/dL)", 0.0, 200.0, 15.0, 0.1, key="bun")
-        cr = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.01, key="cr")
-        glucose = st.number_input("Glucose (mg/dL)", 0.0, 600.0, 90.0, 1.0, key="glucose")
+        # Electrolytes (no conversion needed - same units)
+        na = st.number_input(
+            "Natri - Na (mEq/L = mmol/L)", 
+            100.0, 180.0, 140.0, 0.1, 
+            help="Bình thường: 136-145 mEq/L",
+            key="na"
+        )
+        k = st.number_input(
+            "Kali - K (mEq/L = mmol/L)", 
+            1.0, 10.0, 4.0, 0.1,
+            help="Bình thường: 3.5-5.0 mEq/L",
+            key="k"
+        )
+        cl = st.number_input(
+            "Clo - Cl (mEq/L = mmol/L)", 
+            50.0, 150.0, 100.0, 0.1,
+            help="Bình thường: 98-106 mEq/L",
+            key="cl"
+        )
+        co2 = st.number_input(
+            "CO2/Bicarbonate (mEq/L = mmol/L)", 
+            5.0, 50.0, 25.0, 0.1,
+            help="Bình thường: 23-29 mEq/L",
+            key="co2"
+        )
+        
+        # BUN with unit conversion
+        st.markdown("#### 🔄 BUN (Urea)")
+        bun_unit = st.radio(
+            "Đơn vị:",
+            ["mg/dL (Conventional)", "mmol/L (SI - Urea)"],
+            horizontal=True,
+            key="bun_unit"
+        )
+        
+        if "mg/dL" in bun_unit:
+            bun = st.number_input(
+                "BUN (mg/dL)", 
+                0.0, 200.0, 15.0, 0.5,
+                help="Bình thường: 7-20 mg/dL",
+                key="bun_mgdl"
+            )
+            st.caption(f"≈ {bun * 0.357:.1f} mmol/L (Urea)")
+        else:
+            bun_input = st.number_input(
+                "Urea (mmol/L)", 
+                0.0, 70.0, 5.4, 0.1,
+                help="Bình thường: 2.5-7.1 mmol/L",
+                key="bun_mmol"
+            )
+            bun = bun_input / 0.357  # Convert to mg/dL
+            st.caption(f"≈ {bun:.1f} mg/dL (BUN)")
+        
+        # Creatinine with unit conversion
+        st.markdown("#### 🔄 Creatinine")
+        cr_unit = st.radio(
+            "Đơn vị:",
+            ["µmol/L (SI - Mặc định)", "mg/dL (Conventional)"],
+            horizontal=True,
+            key="cr_unit_bmp"
+        )
+        
+        if "µmol/L" in cr_unit:
+            cr_input = st.number_input(
+                "Creatinine (µmol/L)", 
+                0.0, 1500.0, 88.0, 5.0,
+                help="Bình thường: 62-106 µmol/L (nam), 44-80 µmol/L (nữ)",
+                key="cr_umol_bmp"
+            )
+            cr = cr_input / 88.4  # Convert to mg/dL
+            st.caption(f"≈ {cr:.2f} mg/dL")
+        else:
+            cr = st.number_input(
+                "Creatinine (mg/dL)", 
+                0.0, 20.0, 1.0, 0.05,
+                help="Bình thường: 0.7-1.2 mg/dL (nam), 0.5-0.9 mg/dL (nữ)",
+                key="cr_mgdl_bmp"
+            )
+            st.caption(f"≈ {cr * 88.4:.1f} µmol/L")
+        
+        # Glucose with unit conversion
+        st.markdown("#### 🔄 Glucose")
+        glucose_unit = st.radio(
+            "Đơn vị:",
+            ["mmol/L (SI - Mặc định)", "mg/dL (Conventional)"],
+            horizontal=True,
+            key="glucose_unit"
+        )
+        
+        if "mmol/L" in glucose_unit:
+            glucose_input = st.number_input(
+                "Glucose (mmol/L)", 
+                0.0, 33.0, 5.0, 0.1,
+                help="Bình thường: 3.9-5.6 mmol/L (đói)",
+                key="glucose_mmol"
+            )
+            glucose = glucose_input * 18.0  # Convert to mg/dL
+            st.caption(f"≈ {glucose:.0f} mg/dL")
+        else:
+            glucose = st.number_input(
+                "Glucose (mg/dL)", 
+                0.0, 600.0, 90.0, 1.0,
+                help="Bình thường: 70-100 mg/dL (đói)",
+                key="glucose_mgdl"
+            )
+            st.caption(f"≈ {glucose/18.0:.1f} mmol/L")
         
         # Calculate BUN/Cr ratio
+        st.markdown("---")
         if cr > 0:
             bun_cr_ratio = bun / cr
-            st.info(f"**BUN/Cr ratio:** {bun_cr_ratio:.1f}")
+            st.info(f"**Tỷ lệ BUN/Cr:** {bun_cr_ratio:.1f}")
             if bun_cr_ratio > 20:
-                st.caption("⬆️ High ratio: Prerenal azotemia, GI bleeding, high protein diet")
+                st.caption("⬆️ Tăng cao: Thiểu năng thận tiền thận, chảy máu tiêu hóa, chế độ ăn giàu protein")
             elif bun_cr_ratio < 10:
-                st.caption("⬇️ Low ratio: Low protein diet, liver disease, SIADH")
+                st.caption("⬇️ Thấp: Chế độ ăn ít protein, bệnh gan, SIADH")
             else:
-                st.caption("✓ Normal ratio (10-20)")
+                st.caption("✓ Bình thường (10-20)")
     
     with col2:
-        st.markdown("#### Interpretation")
+        st.markdown("#### 📊 Giải Thích Kết Quả")
         
         results = {
             "Sodium": na,
@@ -52,9 +152,17 @@ def render():
             test_data = ALL_RANGES.get(test_name, {})
             interpretation = interpret_value(test_name, value)
             
-            if "CRITICALLY" in interpretation:
-                st.error(f"**{test_data.get('vn_name', test_name)}:** {value} - {interpretation}")
-            elif "Low" in interpretation or "High" in interpretation:
-                st.warning(f"**{test_data.get('vn_name', test_name)}:** {value} - {interpretation}")
+            # Translate interpretation to Vietnamese
+            interp_vn = interpretation
+            interp_vn = interp_vn.replace("CRITICALLY High", "CỰC KỲ CAO")
+            interp_vn = interp_vn.replace("CRITICALLY Low", "CỰC KỲ THẤP")
+            interp_vn = interp_vn.replace("High", "Cao")
+            interp_vn = interp_vn.replace("Low", "Thấp")
+            interp_vn = interp_vn.replace("Normal", "Bình thường")
+            
+            if "CỰC KỲ" in interp_vn:
+                st.error(f"**{test_data.get('vn_name', test_name)}:** {value} - {interp_vn} 🚨")
+            elif "Cao" in interp_vn or "Thấp" in interp_vn:
+                st.warning(f"**{test_data.get('vn_name', test_name)}:** {value} - {interp_vn}")
             else:
-                st.success(f"**{test_data.get('vn_name', test_name)}:** {value} - {interpretation}")
+                st.success(f"**{test_data.get('vn_name', test_name)}:** {value} - {interp_vn} ✓")

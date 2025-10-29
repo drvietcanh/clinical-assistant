@@ -9,15 +9,15 @@ from .normal_ranges import get_normal_range, is_critical, interpret_value, ALL_R
 def render():
     """Complete Blood Count"""
     st.subheader("🔬 CBC - Complete Blood Count")
-    st.caption("Toàn Bộ Tế Bào Máu")
+    st.caption("Công Thức Máu Toàn Phần - Đếm Tế Bào Máu")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Enter Values / Nhập Kết Quả")
+        st.markdown("#### 📝 Nhập Kết Quả")
         
-        gender = st.radio("Giới tính:", ["Male/Nam", "Female/Nữ"], key="cbc_gender")
-        gender_key = "male" if "Male" in gender else "female"
+        gender = st.radio("Giới tính:", ["Nam", "Nữ"], key="cbc_gender")
+        gender_key = "male" if "Nam" in gender else "female"
         
         # WBC
         wbc = st.number_input(

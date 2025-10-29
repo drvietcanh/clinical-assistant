@@ -9,18 +9,74 @@ from .normal_ranges import get_normal_range, is_critical, interpret_value, ALL_R
 def render():
     """Liver Function Tests"""
     st.subheader("🫀 LFT - Liver Function Tests")
-    st.caption("Chức Năng Gan")
+    st.caption("Chức Năng Gan - Chuyển đổi đơn vị Bilirubin µmol/L ↔ mg/dL")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Enter Values")
+        st.markdown("#### 📝 Nhập Giá Trị")
         
         alt = st.number_input("ALT/SGPT (U/L)", 0.0, 1000.0, 30.0, 1.0)
         ast = st.number_input("AST/SGOT (U/L)", 0.0, 1000.0, 25.0, 1.0)
         alp = st.number_input("ALP (U/L)", 0.0, 1000.0, 80.0, 1.0)
-        bili_t = st.number_input("Bilirubin Total (mg/dL)", 0.0, 30.0, 0.8, 0.1)
-        bili_d = st.number_input("Bilirubin Direct (mg/dL)", 0.0, 15.0, 0.2, 0.1)
+        
+        # Bilirubin with unit conversion
+        st.markdown("#### 🔄 Bilirubin")
+        bili_unit = st.radio(
+            "Đơn vị Bilirubin:",
+            ["µmol/L (SI - Mặc định)", "mg/dL (Conventional)"],
+            horizontal=True,
+            key="bili_unit"
+        )
+        
+        use_si_bili = "µmol/L" in bili_unit
+        
+        # Total Bilirubin
+        if use_si_bili:
+            bili_t_input = st.number_input(
+                "Bilirubin Total (µmol/L)",
+                0.0, 500.0, 13.7, 1.0,
+                help="Bình thường: 3-17 µmol/L",
+                key="bili_t_umol"
+            )
+            bili_t = bili_t_input / 17.1  # Convert to mg/dL
+            st.caption(f"≈ {bili_t:.2f} mg/dL")
+        else:
+            bili_t = st.number_input(
+                "Bilirubin Total (mg/dL)",
+                0.0, 30.0, 0.8, 0.1,
+                help="Bình thường: 0.2-1.0 mg/dL",
+                key="bili_t_mgdl"
+            )
+            st.caption(f"≈ {bili_t * 17.1:.1f} µmol/L")
+        
+        # Direct Bilirubin
+        if use_si_bili:
+            bili_d_input = st.number_input(
+                "Bilirubin Direct (µmol/L)",
+                0.0, 250.0, 3.4, 0.5,
+                help="Bình thường: 0-5 µmol/L",
+                key="bili_d_umol"
+            )
+            bili_d = bili_d_input / 17.1  # Convert to mg/dL
+            st.caption(f"≈ {bili_d:.2f} mg/dL")
+        else:
+            bili_d = st.number_input(
+                "Bilirubin Direct (mg/dL)",
+                0.0, 15.0, 0.2, 0.1,
+                help="Bình thường: 0-0.3 mg/dL",
+                key="bili_d_mgdl"
+            )
+            st.caption(f"≈ {bili_d * 17.1:.1f} µmol/L")
+        
+        # Calculate indirect bilirubin
+        bili_i = bili_t - bili_d
+        if use_si_bili:
+            st.info(f"**Bilirubin Indirect:** {bili_i * 17.1:.1f} µmol/L (≈ {bili_i:.2f} mg/dL)")
+        else:
+            st.info(f"**Bilirubin Indirect:** {bili_i:.2f} mg/dL (≈ {bili_i * 17.1:.1f} µmol/L)")
+        
+        st.markdown("---")
         albumin = st.number_input("Albumin (g/dL)", 0.0, 10.0, 4.0, 0.1, key="lft_alb")
         tp = st.number_input("Total Protein (g/dL)", 0.0, 15.0, 7.0, 0.1, key="lft_tp")
         
