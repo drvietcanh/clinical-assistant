@@ -51,9 +51,12 @@ ALL_CALCULATORS = {
     
     # Scores - Respiratory
     "curb65": {"name": "CURB-65", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
+    "psi_port": {"name": "PSI/PORT", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
+    "wells_pe": {"name": "Wells PE", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
     
     # Scores - Neurology
     "gcs": {"name": "GCS", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
+    "nihss": {"name": "NIHSS", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
     
     # Antibiotics/Drugs
     "crcl": {"name": "CrCl Calculator", "category": "Thuốc", "icon": "💊", "page": "Drugs"},
