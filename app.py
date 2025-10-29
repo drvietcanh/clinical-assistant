@@ -59,6 +59,7 @@ ALL_CALCULATORS = {
     "nihss": {"name": "NIHSS", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
     "ich_score": {"name": "ICH Score", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
     "hunt_hess": {"name": "Hunt & Hess", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
+    "mrs": {"name": "mRS", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
     
     # Antibiotics/Drugs
     "crcl": {"name": "CrCl Calculator", "category": "Thuốc", "icon": "💊", "page": "Drugs"},

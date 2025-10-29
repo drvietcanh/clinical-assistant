@@ -7,14 +7,7 @@ from .gcs import render as render_gcs
 from .nihss import render as render_nihss
 from .ich_score import render as render_ich_score
 from .hunt_hess import render as render_hunt_hess
-
-
-def render_mrs():
-    """Modified Rankin Scale Calculator - Placeholder"""
-    import streamlit as st
-    st.subheader("🧠 mRS - Modified Rankin Scale")
-    st.caption("Mức Độ Khuyết Tật Sau Đột Quỵ")
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 3")
+from .mrs import render as render_mrs
 
 
 def render_neurology_calculator(calculator_id):
@@ -29,9 +22,9 @@ def render_neurology_calculator(calculator_id):
     calculators = {
         "GCS": render_gcs,
         "NIHSS": render_nihss,
-        "ICH Score": render_ich_score,  # ✅ Implemented
-        "Hunt & Hess": render_hunt_hess,  # ✅ Implemented
-        "mRS": render_mrs,
+        "ICH Score": render_ich_score,
+        "Hunt & Hess": render_hunt_hess,
+        "mRS": render_mrs,  # ✅ ALL NEUROLOGY SCORES COMPLETE!
     }
     
     calculator_func = calculators.get(calculator_id)
