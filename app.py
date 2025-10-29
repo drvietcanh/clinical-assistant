@@ -57,6 +57,7 @@ ALL_CALCULATORS = {
     # Scores - Neurology
     "gcs": {"name": "GCS", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
     "nihss": {"name": "NIHSS", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
+    "ich_score": {"name": "ICH Score", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
     
     # Antibiotics/Drugs
     "crcl": {"name": "CrCl Calculator", "category": "Thuốc", "icon": "💊", "page": "Drugs"},
