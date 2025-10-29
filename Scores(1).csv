@@ -1,0 +1,14 @@
+score_id,name,input_key,label,type,unit,points_rule,ref
+sofa,SOFA,pafi,PaO2/FiO2,number,,CASE WHEN val>=400 THEN 0 WHEN val<400 AND val>=300 THEN 1 WHEN val<300 AND val>=200 THEN 2 WHEN val<200 AND val>=100 THEN 3 WHEN val<100 THEN 4 END,Sepsis-3; Merck Manual
+sofa,SOFA,plt,Platelets,number,x10^3/uL,CASE WHEN val>=150 THEN 0 WHEN val<150 AND val>=100 THEN 1 WHEN val<100 AND val>=50 THEN 2 WHEN val<50 AND val>=20 THEN 3 WHEN val<20 THEN 4 END,Sepsis-3; Merck Manual
+sofa,SOFA,tbil,Total bilirubin,number,mg/dL,CASE WHEN val<1.2 THEN 0 WHEN val>=1.2 AND val<2.0 THEN 1 WHEN val>=2.0 AND val<6.0 THEN 2 WHEN val>=6.0 AND val<12.0 THEN 3 WHEN val>=12.0 THEN 4 END,Sepsis-3; Merck Manual
+sofa,SOFA,cr,Creatinine,number,mg/dL,CASE WHEN val<1.2 THEN 0 WHEN val>=1.2 AND val<2.0 THEN 1 WHEN val>=2.0 AND val<3.5 THEN 2 WHEN val>=3.5 AND val<5.0 THEN 3 WHEN val>=5.0 THEN 4 END,Sepsis-3; Merck Manual
+sofa,SOFA,gcs,GCS,number,,CASE WHEN val=15 THEN 0 WHEN val>=13 AND val<=14 THEN 1 WHEN val>=10 AND val<=12 THEN 2 WHEN val>=6 AND val<=9 THEN 3 WHEN val<6 THEN 4 END,Sepsis-3; Merck Manual
+qsofa,qSOFA,rr,Respiratory rate,number,/min,CASE WHEN val>=22 THEN 1 ELSE 0 END,Sepsis-3
+qsofa,qSOFA,systolic_bp,Systolic BP,number,mmHg,CASE WHEN val<=100 THEN 1 ELSE 0 END,Sepsis-3
+qsofa,qSOFA,gcs,GCS,number,,CASE WHEN val<15 THEN 1 ELSE 0 END,Sepsis-3
+curb65,CURB-65,confusion,Confusion (AMT<8),boolean,,"IF(val,1,0)",BMJ 2003
+curb65,CURB-65,urea,Urea >7 mmol/L,boolean,,"IF(val,1,0)",BMJ 2003
+curb65,CURB-65,rr,RR ≥30/min,boolean,,"IF(val,1,0)",BMJ 2003
+curb65,CURB-65,bp,SBP<90 or DBP≤60,boolean,,"IF(val,1,0)",BMJ 2003
+curb65,CURB-65,age65,Age ≥65,boolean,,"IF(val,1,0)",BMJ 2003

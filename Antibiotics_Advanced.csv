@@ -1,0 +1,3 @@
+drug,indication,aware,adult_dose,renal_thr,renal_dose_lt_thr,pediatric,route,notes,refs
+"Meropenem (IV, extended infusion)",Severe ESBL/MDRO risk (site-specific),Watch,1–2 g IV q8h over 3h (institutional),CrCl<=50: adjust,Example: 1 g q12h EI (26–50); 500 mg q12h (10–25); verify local,Institutional,IV,EI optimizes %fT>MIC; **off-label** vs label 30-min infusion,Institutional stewardship protocols
+Vancomycin (IV) — AUC workflow,Serious MRSA infections,—,Initial per weight/renal; use AUC (Bayesian or 2-level),Adjust per AUC & renal,Target AUC24/MIC 400–600 (MIC=1),See guideline,IV,Prefer AUC-guided monitoring to reduce nephrotoxicity,ASHP/IDSA/PIDS/SIDP 2020

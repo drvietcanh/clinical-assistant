@@ -1,0 +1,24 @@
+<script>
+registerModule({
+  id:'scores',
+  title:'Scores',
+  mount: function(root){
+    const container = el('div',{}, el('div',{class:'card'}, el('h3',{},'qSOFA (demo)'),
+      el('div',{class:'input'}, el('label',{},'RR (/min)'), el('input',{id:'rr',type:'number',value:'22'})),
+      el('div',{class:'input'}, el('label',{},'SBP (mmHg)'), el('input',{id:'sbp',type:'number',value:'90'})),
+      el('div',{class:'input'}, el('label',{},'GCS'), el('input',{id:'gcs',type:'number',value:'14'})),
+      el('button',{class:'btn', onclick:()=>{
+        const payload = { rr:Number(rr.value), systolic_bp:Number(sbp.value), gcs:Number(gcs.value) };
+        google.script.run.withSuccessHandler(res=>{
+          out.textContent = 'qSOFA = ' + res.qSOFA + '  — ' + res.note;
+        }).api_scores_calc(payload);
+      }}, 'Compute'),
+      el('div',{id:'out',class:'small'})));
+    const rr = container.querySelector('#rr');
+    const sbp = container.querySelector('#sbp');
+    const gcs = container.querySelector('#gcs');
+    const out = container.querySelector('#out');
+    root.append(container);
+  }
+});
+</script>

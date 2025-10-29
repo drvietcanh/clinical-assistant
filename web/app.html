@@ -1,0 +1,11 @@
+<script>
+// shared helpers
+function el(tag, attrs={}, ...children){
+  const e = document.createElement(tag);
+  Object.entries(attrs).forEach(([k,v])=>{
+    if(k==='class') e.className=v; else if(k.startsWith('on')) e.addEventListener(k.slice(2), v); else e.setAttribute(k,v);
+  });
+  children.forEach(c=> e.append(c?.nodeType? c : String(c)));
+  return e;
+}
+</script>

@@ -1,0 +1,2 @@
+topic_id,title,summary_md,steps_json,red_flags_json,refs
+copd_exacerbation,COPD Exacerbation — Bundle,SpO2 88–92%; steroids; antibiotics when indicated.,"[{""step"": ""Oxygen"", ""details"": ""Titrate to 88–92%""}]","[""Acidosis"", ""Refractory hypoxemia""]",GOLD/AARC

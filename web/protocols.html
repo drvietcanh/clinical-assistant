@@ -1,0 +1,29 @@
+<script>
+registerModule({
+  id:'protocols',
+  title:'Protocols',
+  mount(root){
+    const list = el('div',{class:'list'});
+    const details = el('div',{class:'card'});
+    const wrap = el('div',{}, el('div',{class:'card'},
+      el('button',{class:'btn', onclick:()=>{
+        google.script.run.withSuccessHandler(rows=>{
+          list.innerHTML='';
+          rows.forEach(r=>{
+            const btn = el('a',{href:'#', class:'btn', onclick:(ev)=>{
+              ev.preventDefault();
+              google.script.run.withSuccessHandler(d=>{
+                details.innerHTML = '<h3>'+d.title+'</h3><p>'+d.summary_md+'</p>' +
+                  '<ol>'+(d.steps||[]).map(s=>'<li><b>'+s.step+':</b> '+s.details+'</li>').join('')+'</ol>'+
+                  '<p><b>Red flags:</b> '+(d.red_flags||[]).join('; ')+'</p><p class=small>Refs: '+(d.refs||'')+'</p>';
+              }).api_protocols_get(r.topic_id);
+            }}, r.title || r.topic_id);
+            list.append(el('div',{class:'card'}, btn));
+          });
+        }).api_protocols_list();
+      }}, 'Load list')),
+      list, details);
+    root.append(wrap);
+  }
+});
+</script>

@@ -1,0 +1,3 @@
+condition,vt_mlkg,peep_start,fio2_start,peep_table,notes,refs
+ARDS (invasive ventilation),4–6,5,0.3,ARDSNet_low & high PEEP/FiO2 tables; target SpO2 88–95% / PaO2 55–80,PBW-based VT; plateau ≤30 cmH2O; adjust FiO2/PEEP per ARDSNet tables; consider higher PEEP strategy per clinician judgement,NEJM 2000 ARMA trial; AHRQ LTVV Guide 2016; ARDSNet protocol cards (CU Anschutz 2025)
+"COPD (acute exacerbation, ventilated)",6–8,5,0.3,Titrate to SpO2 88–92%; avoid auto-PEEP; prolong expiratory time (I:E 1:3–1:4),Set low RR to allow full exhalation; monitor for dynamic hyperinflation; consider external PEEP ~80–90% intrinsic PEEP if needed,AARC 2022 oxygen CPG; GOLD 2024/2025; standard COPD ventilation principles (texts/guidelines)

@@ -1,0 +1,23 @@
+# Clinical Assistant - Streamlit Version
+# Requirements file for deployment
+
+# Core
+streamlit>=1.28.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data handling
+openpyxl>=3.1.0  # Excel file support (optional)
+
+# Optional: Google Sheets integration (if needed)
+# gspread>=5.11.0
+# oauth2client>=4.1.3
+
+# Optional: Plotting (for future visualizations)
+# plotly>=5.17.0
+# matplotlib>=3.7.0
+
+# Optional: AI integration (for future features)
+# google-generativeai>=0.3.0  # Gemini AI
+# openai>=1.0.0  # OpenAI GPT-4
+

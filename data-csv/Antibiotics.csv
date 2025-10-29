@@ -1,0 +1,2 @@
+drug,indication,aware,adult_dose,renal_thr,renal_dose_lt_thr,pediatric,route,notes,refs
+Cefepime (IV),HAP/VAP incl. Pseudomonas,Watch,2 g IV q8h,CrCl<=60: adjust,See label,See label,IV,Label-based,FDA label

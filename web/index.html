@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clinical Assistant — Basic SPA</title>
+    <?!= include('styles'); ?>
+  </head>
+  <body>
+    <header class="nav">
+      <a href="#/scores">Scores</a>
+      <a href="#/abx">Antibiotics</a>
+      <a href="#/vent">Vent</a>
+      <a href="#/protocols">Protocols</a>
+    </header>
+    <main id="app"></main>
+    <?!= include('app'); ?>
+    <?!= include('scores'); ?>
+    <?!= include('antibiotics'); ?>
+    <?!= include('vent'); ?>
+    <?!= include('protocols'); ?>
+  </body>
+</html>

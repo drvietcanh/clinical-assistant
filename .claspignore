@@ -1,0 +1,63 @@
+# Clasp ignore file
+# Files và folders không push lên Apps Script
+
+# Documentation
+*.md
+!appsscript.json
+docs/**
+
+# Data files (manage in Google Sheets instead)
+*.csv
+data-csv/**
+
+# Templates
+templates/**
+
+# Git
+.git/**
+.gitignore
+.gitattributes
+
+# Node
+node_modules/**
+package.json
+package-lock.json
+yarn.lock
+
+# IDE
+.vscode/**
+.idea/**
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/**
+
+# Build artifacts
+dist/**
+build/**
+.tmp/**
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Testing
+test/**
+tests/**
+__tests__/**
+*.test.js
+*.spec.js
+
+# Coverage
+coverage/**
+.nyc_output/**
+

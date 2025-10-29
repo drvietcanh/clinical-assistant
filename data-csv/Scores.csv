@@ -1,0 +1,4 @@
+score_id,name,input_key,label,type,unit,points_rule,ref
+qsofa,qSOFA,rr,Respiratory rate,number,/min,CASE WHEN val>=22 THEN 1 ELSE 0 END,Sepsis-3
+qsofa,qSOFA,systolic_bp,Systolic BP,number,mmHg,CASE WHEN val<=100 THEN 1 ELSE 0 END,Sepsis-3
+qsofa,qSOFA,gcs,GCS,number,,CASE WHEN val<15 THEN 1 ELSE 0 END,Sepsis-3

@@ -1,0 +1,36 @@
+# Streamlit Configuration
+# Clinical Assistant Theme
+
+[theme]
+# Primary color (buttons, links, accents)
+primaryColor = "#1976d2"
+
+# Background color
+backgroundColor = "#ffffff"
+
+# Secondary background (sidebar, widgets)
+secondaryBackgroundColor = "#f0f2f6"
+
+# Text color
+textColor = "#262730"
+
+# Font family
+font = "sans serif"
+
+[server]
+# Server settings
+headless = true
+port = 8501
+enableCORS = false
+enableXsrfProtection = true
+
+[browser]
+# Browser settings
+gatherUsageStats = false
+serverAddress = "localhost"
+
+[runner]
+# Performance settings
+magicEnabled = true
+fastReruns = true
+

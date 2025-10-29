@@ -1,0 +1,6 @@
+key,value,note
+Scores_VERSION,2025-10-29,SOFA/qSOFA + CURB-65
+Antibiotics_VERSION,2025-10-29,"cefepime, piptazo, meropenem, levofloxacin, amox-clav, vancomycin target"
+Ventilator_VERSION,2025-10-29,ARDS/COPD + PEEP-FiO2 tables
+Protocols_VERSION,2025-10-29,AECOPD + Sepsis (SSC 2021)
+Tables_VERSION,2025-10-29,PEEP-FiO2 low/high
