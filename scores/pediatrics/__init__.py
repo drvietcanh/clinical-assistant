@@ -4,6 +4,8 @@ Pediatric assessment calculators
 """
 
 from .apgar import render as render_apgar
+from .pews import render as render_pews
+from .pediatric_gcs import render as render_pediatric_gcs
 
 
 def render_pediatrics_calculator(calculator_id):
@@ -17,6 +19,8 @@ def render_pediatrics_calculator(calculator_id):
     
     calculators = {
         "APGAR": render_apgar,
+        "PEWS": render_pews,
+        "Pediatric GCS": render_pediatric_gcs,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -29,5 +33,7 @@ def render_pediatrics_calculator(calculator_id):
 __all__ = [
     'render_pediatrics_calculator',
     'render_apgar',
+    'render_pews',
+    'render_pediatric_gcs',
 ]
 

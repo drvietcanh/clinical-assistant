@@ -4,6 +4,7 @@ All ENT calculators organized by individual files
 """
 
 from .epworth import render as render_epworth
+from .stop_bang import render as render_stop_bang
 
 
 def render_ent_calculator(calculator_id):
@@ -17,6 +18,7 @@ def render_ent_calculator(calculator_id):
     
     calculators = {
         "Epworth": render_epworth,
+        "STOP-BANG": render_stop_bang,
     }
     
     calculator_func = calculators.get(calculator_id)

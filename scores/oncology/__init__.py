@@ -4,6 +4,7 @@ Cancer assessment calculators
 """
 
 from .ecog import render as render_ecog
+from .karnofsky import render as render_karnofsky
 
 
 def render_oncology_calculator(calculator_id):
@@ -17,6 +18,7 @@ def render_oncology_calculator(calculator_id):
     
     calculators = {
         "ECOG": render_ecog,
+        "Karnofsky": render_karnofsky,
     }
     
     calculator_func = calculators.get(calculator_id)

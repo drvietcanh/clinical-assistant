@@ -4,6 +4,8 @@ Infection assessment calculators
 """
 
 from .centor import render as render_centor
+from .sirs import render as render_sirs
+from .feverpain import render as render_feverpain
 
 
 def render_infectious_calculator(calculator_id):
@@ -17,6 +19,8 @@ def render_infectious_calculator(calculator_id):
     
     calculators = {
         "Centor": render_centor,
+        "SIRS": render_sirs,
+        "FeverPAIN": render_feverpain,
     }
     
     calculator_func = calculators.get(calculator_id)

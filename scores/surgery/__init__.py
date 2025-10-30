@@ -4,6 +4,8 @@ Surgical risk assessment calculators
 """
 
 from .asa import render as render_asa
+from .aldrete import render as render_aldrete
+from .mallampati import render as render_mallampati
 
 
 def render_surgery_calculator(calculator_id):
@@ -17,6 +19,8 @@ def render_surgery_calculator(calculator_id):
     
     calculators = {
         "ASA": render_asa,
+        "Aldrete Score": render_aldrete,
+        "Mallampati": render_mallampati,
     }
     
     calculator_func = calculators.get(calculator_id)

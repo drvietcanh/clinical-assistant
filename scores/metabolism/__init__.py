@@ -8,6 +8,7 @@ from .corrected_calcium import render as render_corrected_calcium
 from .fena import render as render_fena
 from .hba1c_eag import render as render_hba1c_eag
 from .winter_formula import render as render_winter_formula
+from .free_t4_index import render as render_free_t4_index
 
 
 def render_metabolism_calculator(calculator_id):
@@ -25,6 +26,7 @@ def render_metabolism_calculator(calculator_id):
         "FENa": render_fena,
         "HbA1c": render_hba1c_eag,
         "Winter Formula": render_winter_formula,
+        "Free T4 Index": render_free_t4_index,
     }
     
     calculator_func = calculators.get(calculator_id)

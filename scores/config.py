@@ -70,13 +70,13 @@ SCORES_BY_SPECIALTY = {
     
     "👂 Tai Mũi Họng (ENT)": {
         "Epworth": {"name": "Epworth Sleepiness Scale", "desc": "Đánh giá buồn ngủ ban ngày", "status": "✅"},
-        "STOP-BANG": {"name": "STOP-BANG Score", "desc": "Sàng lọc OSA", "status": "📋"},
+        "STOP-BANG": {"name": "STOP-BANG Score", "desc": "Sàng lọc OSA", "status": "✅"},
     },
     
     "👶 Nhi Khoa (Pediatrics)": {
-        "PEWS": {"name": "PEWS - Pediatric Early Warning Score", "desc": "Cảnh báo sớm nhi", "status": "📋"},
+        "PEWS": {"name": "PEWS - Pediatric Early Warning Score", "desc": "Cảnh báo sớm nhi", "status": "✅"},
         "APGAR": {"name": "APGAR Score", "desc": "Đánh giá trẻ sơ sinh", "status": "✅"},
-        "Pediatric GCS": {"name": "Pediatric GCS", "desc": "Ý thức trẻ em", "status": "📋"},
+        "Pediatric GCS": {"name": "Pediatric GCS", "desc": "Ý thức trẻ em", "status": "✅"},
     },
     
     "🤰 Sản Khoa (Obstetrics)": {
@@ -90,7 +90,7 @@ SCORES_BY_SPECIALTY = {
         "FENa": {"name": "FENa - Fractional Excretion of Sodium", "desc": "Phân biệt AKI tiền thận/thận", "status": "✅"},
         "HbA1c": {"name": "HbA1c - eAG Converter", "desc": "Chuyển đổi HbA1c sang đường huyết trung bình", "status": "✅"},
         "Winter Formula": {"name": "Winter Formula", "desc": "PCO2 dự đoán trong toan chuyển hóa", "status": "✅"},
-        "Free T4 Index": {"name": "Free T4 Index (FTI)", "desc": "Chỉ số T4 tự do", "status": "📋"},
+        "Free T4 Index": {"name": "Free T4 Index (FTI)", "desc": "Chỉ số T4 tự do", "status": "✅"},
     },
     
     "🦴 Thấp Khớp - Miễn Dịch (Rheumatology/Immunology)": {
