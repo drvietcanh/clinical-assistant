@@ -94,6 +94,8 @@ SCORES_BY_SPECIALTY = {
     },
     
     "💉 Nội Tiết - Chuyển Hóa (Endocrinology/Metabolism)": {
+        "CrCl": {"name": "CrCl - Cockcroft-Gault", "desc": "Độ thanh thải Creatinine - Điều chỉnh liều thuốc (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "BMI/IBW/BSA": {"name": "BMI | IBW | BSA", "desc": "Chỉ số cơ thể - BMI, Cân nặng lý tưởng, Diện tích da (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Osmolality": {"name": "Serum Osmolality & Gap", "desc": "Độ thẩm thấu - Nghi ngờ ngộ độc (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Anion Gap": {"name": "Anion Gap", "desc": "Khoảng trống anion - rối loạn acid-base", "status": "✅"},
         "Corrected Ca": {"name": "Corrected Calcium", "desc": "Canxi điều chỉnh theo albumin", "status": "✅"},

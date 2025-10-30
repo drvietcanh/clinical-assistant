@@ -10,6 +10,8 @@ from .hba1c_eag import render as render_hba1c_eag
 from .winter_formula import render as render_winter_formula
 from .free_t4_index import render as render_free_t4_index
 from .osmolality import render as render_osmolality
+from .crcl import render as render_crcl
+from .bmi_ibw_bsa import render as render_bmi_ibw_bsa
 
 
 def render_metabolism_calculator(calculator_id):
@@ -22,6 +24,8 @@ def render_metabolism_calculator(calculator_id):
     import streamlit as st
     
     calculators = {
+        "CrCl": render_crcl,
+        "BMI/IBW/BSA": render_bmi_ibw_bsa,
         "Osmolality": render_osmolality,
         "Anion Gap": render_anion_gap,
         "Corrected Ca": render_corrected_calcium,
