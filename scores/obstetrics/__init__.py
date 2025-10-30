@@ -5,6 +5,7 @@ All obstetrics calculators organized by individual files
 
 from .bishop import render as render_bishop
 from .modified_bishop import render as render_modified_bishop
+from .preeclampsia import render as render_preeclampsia
 
 
 def render_obstetrics_calculator(calculator_id):
@@ -17,6 +18,7 @@ def render_obstetrics_calculator(calculator_id):
     import streamlit as st
     
     calculators = {
+        "Preeclampsia": render_preeclampsia,
         "Bishop Score": render_bishop,
         "Modified Bishop": render_modified_bishop,
     }

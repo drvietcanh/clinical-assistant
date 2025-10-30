@@ -8,14 +8,7 @@ from .psi_port import render as render_psi_port
 from .wells_pe import render as render_wells_pe
 from .smartcop import render as render_smartcop
 from .bode import render as render_bode
-
-
-def render_bode():
-    """BODE Index Calculator - Placeholder"""
-    import streamlit as st
-    st.subheader("🫁 BODE Index")
-    st.caption("Tiên Lượng COPD")
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 4")
+from .perc import render as render_perc
 
 
 def render_respiratory_calculator(calculator_id):
@@ -33,6 +26,7 @@ def render_respiratory_calculator(calculator_id):
         "SMART-COP": render_smartcop,
         "BODE Index": render_bode,
         "Wells PE": render_wells_pe,
+        "PERC": render_perc,
     }
     
     calculator_func = calculators.get(calculator_id)

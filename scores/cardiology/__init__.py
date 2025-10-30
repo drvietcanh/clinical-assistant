@@ -12,6 +12,9 @@ from .timi import render as render_timi_risk
 from .grace import render as render_grace_score
 from .framingham import render as render_framingham
 from .qtc import render as render_qtc
+from .nyha import render as render_nyha
+from .killip import render as render_killip
+from .duke import render as render_duke
 
 
 def render_cardiology_calculator(calculator_id):
@@ -24,6 +27,9 @@ def render_cardiology_calculator(calculator_id):
     import streamlit as st
     
     calculators = {
+        "NYHA": render_nyha,
+        "Killip": render_killip,
+        "Duke": render_duke,
         "CHA2DS2-VASc": render_cha2ds2vasc,
         "HAS-BLED": render_hasbled,
         "SCORE2": render_score2,

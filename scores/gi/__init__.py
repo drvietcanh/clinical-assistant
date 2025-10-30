@@ -9,6 +9,7 @@ from .meld_na import render as render_meld_na
 from .ranson import render as render_ranson
 from .rockall import render as render_rockall
 from .glasgow_blatchford import render as render_glasgow_blatchford
+from .bisap import render as render_bisap
 
 
 def render_gi_calculator(calculator_id):
@@ -21,6 +22,7 @@ def render_gi_calculator(calculator_id):
     import streamlit as st
     
     calculators = {
+        "BISAP": render_bisap,
         "Child-Pugh": render_child_pugh,
         "MELD": render_meld,
         "MELD-Na": render_meld_na,

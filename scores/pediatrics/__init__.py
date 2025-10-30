@@ -6,6 +6,7 @@ Pediatric assessment calculators
 from .apgar import render as render_apgar
 from .pews import render as render_pews
 from .pediatric_gcs import render as render_pediatric_gcs
+from .westley_croup import render as render_westley_croup
 
 
 def render_pediatrics_calculator(calculator_id):
@@ -18,6 +19,7 @@ def render_pediatrics_calculator(calculator_id):
     import streamlit as st
     
     calculators = {
+        "Westley Croup": render_westley_croup,
         "APGAR": render_apgar,
         "PEWS": render_pews,
         "Pediatric GCS": render_pediatric_gcs,

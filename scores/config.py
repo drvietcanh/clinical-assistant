@@ -13,6 +13,9 @@ SCORES_BY_SPECIALTY = {
     },
     
     "❤️ Tim Mạch (Cardiology)": {
+        "NYHA": {"name": "NYHA Classification", "desc": "Phân loại chức năng suy tim (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "Killip": {"name": "Killip Classification", "desc": "Suy tim cấp trong AMI (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "Duke": {"name": "Duke Criteria", "desc": "Chẩn đoán viêm nội tâm mạc", "status": "✅"},
         "CHA2DS2-VASc": {"name": "CHA₂DS₂-VASc", "desc": "Nguy cơ đột quỵ trong rung nhĩ", "status": "✅"},
         "HAS-BLED": {"name": "HAS-BLED", "desc": "Nguy cơ chảy máu khi dùng kháng đông", "status": "✅"},
         "SCORE2": {"name": "SCORE2", "desc": "Nguy cơ tim mạch 10 năm (40-69 tuổi)", "status": "✅"},
@@ -25,6 +28,7 @@ SCORES_BY_SPECIALTY = {
     },
     
     "🫁 Hô Hấp (Respiratory)": {
+        "PERC": {"name": "PERC Rule", "desc": "Loại trừ PE không cần D-dimer (DÙNG HÀNG NGÀY)", "status": "✅"},
         "CURB-65": {"name": "CURB-65", "desc": "Mức độ nặng viêm phổi", "status": "✅"},
         "PSI/PORT": {"name": "PSI/PORT Score", "desc": "Tiên lượng viêm phổi cộng đồng", "status": "✅"},
         "Wells PE": {"name": "Wells PE Score", "desc": "Nguy cơ thuyên tắc phổi", "status": "✅"},
@@ -41,6 +45,7 @@ SCORES_BY_SPECIALTY = {
     },
     
     "🩸 Tiêu Hóa - Gan Mật (GI/Hepatology)": {
+        "BISAP": {"name": "BISAP Score", "desc": "Tiên lượng viêm tụy cấp (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Child-Pugh": {"name": "Child-Pugh Score", "desc": "Mức độ xơ gan", "status": "✅"},
         "MELD": {"name": "MELD Score", "desc": "Tiên lượng bệnh gan mạn & ghép gan", "status": "✅"},
         "Glasgow-Blatchford": {"name": "Glasgow-Blatchford Score", "desc": "UGIB - quyết định xuất viện", "status": "✅"},
@@ -50,12 +55,14 @@ SCORES_BY_SPECIALTY = {
     },
     
     "🩺 Huyết Học & Đông Máu (Hematology)": {
+        "Padua": {"name": "Padua Prediction Score", "desc": "Nguy cơ VTE - Chỉ định prophylaxis (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Wells DVT": {"name": "Wells DVT Score", "desc": "Nguy cơ huyết khối tĩnh mạch sâu", "status": "✅"},
         "4Ts Score": {"name": "4Ts Score - HIT", "desc": "Giảm tiểu cầu do heparin", "status": "✅"},
         "DIC Score": {"name": "DIC Score (ISTH)", "desc": "Đông máu rải rác trong lòng mạch", "status": "✅"},
     },
     
     "🧪 Thận - Điện Giải (Nephrology)": {
+        "eGFR": {"name": "eGFR - CKD-EPI & MDRD", "desc": "Tính tốc độ lọc cầu thận (DÙNG HÀNG NGÀY)", "status": "✅"},
         "KDIGO": {"name": "KDIGO Staging", "desc": "Giai đoạn AKI (Tiêu chuẩn hiện đại)", "status": "✅"},
         "RIFLE": {"name": "RIFLE Criteria", "desc": "Phân loại AKI (Historical)", "status": "✅"},
         "AKIN": {"name": "AKIN Criteria", "desc": "Suy thận cấp (Historical)", "status": "✅"},
@@ -74,17 +81,20 @@ SCORES_BY_SPECIALTY = {
     },
     
     "👶 Nhi Khoa (Pediatrics)": {
+        "Westley Croup": {"name": "Westley Croup Score", "desc": "Mức độ nặng croup (DÙNG HÀNG NGÀY)", "status": "✅"},
         "PEWS": {"name": "PEWS - Pediatric Early Warning Score", "desc": "Cảnh báo sớm nhi", "status": "✅"},
         "APGAR": {"name": "APGAR Score", "desc": "Đánh giá trẻ sơ sinh", "status": "✅"},
         "Pediatric GCS": {"name": "Pediatric GCS", "desc": "Ý thức trẻ em", "status": "✅"},
     },
     
     "🤰 Sản Khoa (Obstetrics)": {
+        "Preeclampsia": {"name": "Preeclampsia Severity", "desc": "Mức độ nặng tiền sản giật (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Bishop Score": {"name": "Bishop Score", "desc": "Đánh giá cổ tử cung", "status": "✅"},
         "Modified Bishop": {"name": "Modified Bishop Score", "desc": "Dự đoán chuyển dạ", "status": "✅"},
     },
     
     "💉 Nội Tiết - Chuyển Hóa (Endocrinology/Metabolism)": {
+        "Osmolality": {"name": "Serum Osmolality & Gap", "desc": "Độ thẩm thấu - Nghi ngờ ngộ độc (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Anion Gap": {"name": "Anion Gap", "desc": "Khoảng trống anion - rối loạn acid-base", "status": "✅"},
         "Corrected Ca": {"name": "Corrected Calcium", "desc": "Canxi điều chỉnh theo albumin", "status": "✅"},
         "FENa": {"name": "FENa - Fractional Excretion of Sodium", "desc": "Phân biệt AKI tiền thận/thận", "status": "✅"},

@@ -6,6 +6,7 @@ All hematology assessment calculators organized by individual files
 from .wells_dvt import render as render_wells_dvt
 from .four_ts import render as render_four_ts
 from .dic_score import render as render_dic_score
+from .padua import render as render_padua
 
 
 def render_hematology_calculator(calculator_id):
@@ -18,6 +19,7 @@ def render_hematology_calculator(calculator_id):
     import streamlit as st
 
     calculators = {
+        "Padua": render_padua,
         "Wells DVT": render_wells_dvt,
         "4Ts Score": render_four_ts,
         "DIC Score": render_dic_score,

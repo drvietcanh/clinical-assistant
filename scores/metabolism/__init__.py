@@ -9,6 +9,7 @@ from .fena import render as render_fena
 from .hba1c_eag import render as render_hba1c_eag
 from .winter_formula import render as render_winter_formula
 from .free_t4_index import render as render_free_t4_index
+from .osmolality import render as render_osmolality
 
 
 def render_metabolism_calculator(calculator_id):
@@ -21,6 +22,7 @@ def render_metabolism_calculator(calculator_id):
     import streamlit as st
     
     calculators = {
+        "Osmolality": render_osmolality,
         "Anion Gap": render_anion_gap,
         "Corrected Ca": render_corrected_calcium,
         "FENa": render_fena,
