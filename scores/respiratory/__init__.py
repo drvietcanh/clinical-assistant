@@ -7,6 +7,7 @@ from .curb65 import render as render_curb65
 from .psi_port import render as render_psi_port
 from .wells_pe import render as render_wells_pe
 from .smartcop import render as render_smartcop
+from .bode import render as render_bode
 
 
 def render_bode():

@@ -28,7 +28,7 @@ SCORES_BY_SPECIALTY = {
         "PSI/PORT": {"name": "PSI/PORT Score", "desc": "Tiên lượng viêm phổi cộng đồng", "status": "✅"},
         "Wells PE": {"name": "Wells PE Score", "desc": "Nguy cơ thuyên tắc phổi", "status": "✅"},
         "SMART-COP": {"name": "SMART-COP", "desc": "Cần hỗ trợ hô hấp trong viêm phổi", "status": "✅"},
-        "BODE Index": {"name": "BODE Index", "desc": "Tiên lượng COPD", "status": "📋"},
+        "BODE Index": {"name": "BODE Index", "desc": "Tiên lượng COPD", "status": "✅"},
     },
     
     "🧠 Thần Kinh (Neurology)": {
