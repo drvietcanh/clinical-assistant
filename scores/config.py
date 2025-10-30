@@ -45,8 +45,8 @@ SCORES_BY_SPECIALTY = {
         "MELD": {"name": "MELD Score", "desc": "Tiên lượng bệnh gan mạn & ghép gan", "status": "✅"},
         "Glasgow-Blatchford": {"name": "Glasgow-Blatchford Score", "desc": "UGIB - quyết định xuất viện", "status": "✅"},
         "Rockall Score": {"name": "Rockall Score", "desc": "UGIB - tiên lượng tử vong", "status": "✅"},
-        "MELD-Na": {"name": "MELD-Na", "desc": "MELD điều chỉnh theo Na", "status": "📋"},
-        "Ranson": {"name": "Ranson Criteria", "desc": "Tiên lượng viêm tụy cấp", "status": "📋"},
+        "MELD-Na": {"name": "MELD-Na", "desc": "MELD điều chỉnh theo Na", "status": "✅"},
+        "Ranson": {"name": "Ranson Criteria", "desc": "Tiên lượng viêm tụy cấp", "status": "✅"},
     },
     
     "🩺 Huyết Học & Đông Máu (Hematology)": {
@@ -147,11 +147,6 @@ SCORES_BY_SPECIALTY = {
     
     "👁️ Mắt (Ophthalmology)": {
         "Intraocular Pressure": {"name": "IOP Correction", "desc": "Điều chỉnh nhãn áp theo CCT", "status": "📋"},
-    },
-    
-    "👂 Tai Mũi Họng (ENT)": {
-        "Epworth": {"name": "Epworth Sleepiness Scale", "desc": "Mức độ buồn ngủ ban ngày", "status": "📋"},
-        "STOP-BANG": {"name": "STOP-BANG Questionnaire", "desc": "Sàng lọc ngưng thở khi ngủ", "status": "📋"},
     },
 }
 
