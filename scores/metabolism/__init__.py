@@ -6,6 +6,8 @@ Basic clinical calculations used daily
 from .anion_gap import render as render_anion_gap
 from .corrected_calcium import render as render_corrected_calcium
 from .fena import render as render_fena
+from .hba1c_eag import render as render_hba1c_eag
+from .winter_formula import render as render_winter_formula
 
 
 def render_metabolism_calculator(calculator_id):
@@ -21,6 +23,8 @@ def render_metabolism_calculator(calculator_id):
         "Anion Gap": render_anion_gap,
         "Corrected Ca": render_corrected_calcium,
         "FENa": render_fena,
+        "HbA1c": render_hba1c_eag,
+        "Winter Formula": render_winter_formula,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -35,5 +39,7 @@ __all__ = [
     'render_anion_gap',
     'render_corrected_calcium',
     'render_fena',
+    'render_hba1c_eag',
+    'render_winter_formula',
 ]
 

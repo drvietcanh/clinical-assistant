@@ -21,6 +21,7 @@ SCORES_BY_SPECIALTY = {
         "TIMI Risk": {"name": "TIMI Risk Score", "desc": "Nguy cơ NSTEMI/STEMI", "status": "✅"},
         "GRACE Score": {"name": "GRACE Score", "desc": "Tiên lượng ACS", "status": "✅"},
         "Framingham": {"name": "Framingham Risk Score", "desc": "Nguy cơ tim mạch 10 năm", "status": "✅"},
+        "Corrected QT": {"name": "QTc - Corrected QT Interval", "desc": "QT điều chỉnh theo nhịp tim", "status": "✅"},
     },
     
     "🫁 Hô Hấp (Respiratory)": {
@@ -82,9 +83,8 @@ SCORES_BY_SPECIALTY = {
         "Anion Gap": {"name": "Anion Gap", "desc": "Khoảng trống anion - rối loạn acid-base", "status": "✅"},
         "Corrected Ca": {"name": "Corrected Calcium", "desc": "Canxi điều chỉnh theo albumin", "status": "✅"},
         "FENa": {"name": "FENa - Fractional Excretion of Sodium", "desc": "Phân biệt AKI tiền thận/thận", "status": "✅"},
-        "HbA1c": {"name": "HbA1c - eAG Converter", "desc": "Chuyển đổi HbA1c sang đường huyết trung bình", "status": "📋"},
-        "Winter Formula": {"name": "Winter Formula", "desc": "PCO2 dự đoán trong toan chuyển hóa", "status": "📋"},
-        "Corrected QT": {"name": "QTc - Corrected QT Interval", "desc": "QT điều chỉnh theo nhịp tim", "status": "📋"},
+        "HbA1c": {"name": "HbA1c - eAG Converter", "desc": "Chuyển đổi HbA1c sang đường huyết trung bình", "status": "✅"},
+        "Winter Formula": {"name": "Winter Formula", "desc": "PCO2 dự đoán trong toan chuyển hóa", "status": "✅"},
         "Free T4 Index": {"name": "Free T4 Index (FTI)", "desc": "Chỉ số T4 tự do", "status": "📋"},
     },
     
@@ -115,15 +115,15 @@ SCORES_BY_SPECIALTY = {
     },
     
     "🎗️ Ung Thư (Oncology)": {
-        "ECOG": {"name": "ECOG Performance Status", "desc": "Trạng thái thể trạng bệnh nhân ung thư", "status": "📋"},
+        "ECOG": {"name": "ECOG Performance Status", "desc": "Trạng thái thể trạng bệnh nhân ung thư", "status": "✅"},
         "Karnofsky": {"name": "Karnofsky Performance Scale", "desc": "Thang đo thể trạng", "status": "📋"},
         "Palliative Performance": {"name": "PPS - Palliative Performance Scale", "desc": "Thể trạng chăm sóc giảm nhẹ", "status": "📋"},
         "CIPN Grading": {"name": "CIPN Grading", "desc": "Phân độ tổn thương thần kinh ngoại biên", "status": "📋"},
     },
     
     "🧠 Tâm Thần - Tâm Lý (Psychiatry/Psychology)": {
-        "PHQ-9": {"name": "PHQ-9 - Patient Health Questionnaire", "desc": "Sàng lọc trầm cảm", "status": "📋"},
-        "GAD-7": {"name": "GAD-7 - Generalized Anxiety Disorder", "desc": "Rối loạn lo âu lan tỏa", "status": "📋"},
+        "PHQ-9": {"name": "PHQ-9 - Patient Health Questionnaire", "desc": "Sàng lọc trầm cảm", "status": "✅"},
+        "GAD-7": {"name": "GAD-7 - Generalized Anxiety Disorder", "desc": "Rối loạn lo âu lan tỏa", "status": "✅"},
         "MMSE": {"name": "MMSE - Mini Mental State Exam", "desc": "Đánh giá nhận thức", "status": "📋"},
         "MoCA": {"name": "MoCA - Montreal Cognitive Assessment", "desc": "Đánh giá nhận thức Montreal", "status": "📋"},
         "CAM": {"name": "CAM - Confusion Assessment Method", "desc": "Đánh giá hôn mê lú lẫn", "status": "📋"},

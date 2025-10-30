@@ -11,6 +11,7 @@ from .heart import render as render_heart_score
 from .timi import render as render_timi_risk
 from .grace import render as render_grace_score
 from .framingham import render as render_framingham
+from .qtc import render as render_qtc
 
 
 def render_cardiology_calculator(calculator_id):
@@ -31,6 +32,7 @@ def render_cardiology_calculator(calculator_id):
         "TIMI Risk": render_timi_risk,
         "GRACE Score": render_grace_score,
         "Framingham": render_framingham,
+        "Corrected QT": render_qtc,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -50,5 +52,6 @@ __all__ = [
     'render_timi_risk',
     'render_grace_score',
     'render_framingham',
+    'render_qtc',
 ]
 
