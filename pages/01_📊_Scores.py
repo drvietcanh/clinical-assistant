@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scores.config import SCORES_BY_SPECIALTY
-from scores import cardiology, emergency, respiratory, neurology
+from scores import cardiology, emergency, respiratory, neurology, gi, metabolism, hematology, nephrology, trauma
 
 st.set_page_config(page_title="Scores - Clinical Assistant", page_icon="📊", layout="wide")
 
@@ -96,6 +96,26 @@ elif "Hô Hấp" in specialty:
 # Neurology
 elif "Thần Kinh" in specialty:
     neurology.render_neurology_calculator(selected_score_id)
+
+# GI/Hepatology
+elif "Tiêu Hóa" in specialty or "Gan" in specialty:
+    gi.render_gi_calculator(selected_score_id)
+
+# Metabolism/Endocrinology
+elif "Nội Tiết" in specialty or "Chuyển Hóa" in specialty:
+    metabolism.render_metabolism_calculator(selected_score_id)
+
+# Hematology
+elif "Huyết Học" in specialty or "Đông Máu" in specialty:
+    hematology.render_hematology_calculator(selected_score_id)
+
+# Nephrology
+elif "Thận" in specialty or "Điện Giải" in specialty:
+    nephrology.render_nephrology_calculator(selected_score_id)
+
+# Trauma
+elif "Chấn Thương" in specialty or "Chỉnh Hình" in specialty:
+    trauma.render_trauma_calculator(selected_score_id)
 
 # Other specialties - show placeholder for now
 else:

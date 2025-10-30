@@ -6,14 +6,7 @@ All respiratory and pulmonary calculators organized by individual files
 from .curb65 import render as render_curb65
 from .psi_port import render as render_psi_port
 from .wells_pe import render as render_wells_pe
-
-
-def render_smartcop():
-    """SMART-COP Score Calculator - Placeholder"""
-    import streamlit as st
-    st.subheader("🫁 SMART-COP")
-    st.caption("Cần Hỗ Trợ Hô Hấp Trong Viêm Phổi")
-    st.warning("🚧 **Đang phát triển** - Dự kiến hoàn thành: Tuần 3")
+from .smartcop import render as render_smartcop
 
 
 def render_bode():

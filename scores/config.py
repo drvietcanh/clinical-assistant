@@ -6,17 +6,17 @@ Defines available calculators organized by specialty
 SCORES_BY_SPECIALTY = {
     "🚨 Cấp Cứu & Hồi Sức (Emergency & Critical Care)": {
         "qSOFA": {"name": "qSOFA - Quick SOFA", "desc": "Sàng lọc nhiễm trùng huyết", "status": "✅"},
-        "SOFA": {"name": "SOFA - Sequential Organ Failure Assessment", "desc": "Đánh giá suy cơ quan", "status": "🚧"},
-        "APACHE II": {"name": "APACHE II", "desc": "Dự đoán tử vong ICU", "status": "🚧"},
-        "SAPS II": {"name": "SAPS II - Simplified Acute Physiology Score", "desc": "Độ nặng bệnh nhân ICU", "status": "📋"},
-        "MODS": {"name": "MODS - Multiple Organ Dysfunction Score", "desc": "Rối loạn đa cơ quan", "status": "📋"},
+        "SOFA": {"name": "SOFA - Sequential Organ Failure Assessment", "desc": "Đánh giá suy cơ quan", "status": "✅"},
+        "APACHE II": {"name": "APACHE II", "desc": "Dự đoán tử vong ICU", "status": "✅"},
+        "SAPS II": {"name": "SAPS II - Simplified Acute Physiology Score", "desc": "Độ nặng bệnh nhân ICU", "status": "✅"},
+        "MODS": {"name": "MODS - Multiple Organ Dysfunction Score", "desc": "Rối loạn đa cơ quan", "status": "✅"},
     },
     
     "❤️ Tim Mạch (Cardiology)": {
         "CHA2DS2-VASc": {"name": "CHA₂DS₂-VASc", "desc": "Nguy cơ đột quỵ trong rung nhĩ", "status": "✅"},
         "HAS-BLED": {"name": "HAS-BLED", "desc": "Nguy cơ chảy máu khi dùng kháng đông", "status": "✅"},
-        "SCORE2": {"name": "SCORE2", "desc": "Nguy cơ tim mạch 10 năm (40-69 tuổi)", "status": "🚧"},
-        "SCORE2-OP": {"name": "SCORE2-OP", "desc": "Nguy cơ tim mạch (≥70 tuổi)", "status": "🚧"},
+        "SCORE2": {"name": "SCORE2", "desc": "Nguy cơ tim mạch 10 năm (40-69 tuổi)", "status": "✅"},
+        "SCORE2-OP": {"name": "SCORE2-OP", "desc": "Nguy cơ tim mạch (≥70 tuổi)", "status": "✅"},
         "HEART Score": {"name": "HEART Score", "desc": "Đau ngực cấp - nguy cơ ACS", "status": "✅"},
         "TIMI Risk": {"name": "TIMI Risk Score", "desc": "Nguy cơ NSTEMI/STEMI", "status": "✅"},
         "GRACE Score": {"name": "GRACE Score", "desc": "Tiên lượng ACS", "status": "✅"},
@@ -27,7 +27,7 @@ SCORES_BY_SPECIALTY = {
         "CURB-65": {"name": "CURB-65", "desc": "Mức độ nặng viêm phổi", "status": "✅"},
         "PSI/PORT": {"name": "PSI/PORT Score", "desc": "Tiên lượng viêm phổi cộng đồng", "status": "✅"},
         "Wells PE": {"name": "Wells PE Score", "desc": "Nguy cơ thuyên tắc phổi", "status": "✅"},
-        "SMART-COP": {"name": "SMART-COP", "desc": "Cần hỗ trợ hô hấp trong viêm phổi", "status": "📋"},
+        "SMART-COP": {"name": "SMART-COP", "desc": "Cần hỗ trợ hô hấp trong viêm phổi", "status": "✅"},
         "BODE Index": {"name": "BODE Index", "desc": "Tiên lượng COPD", "status": "📋"},
     },
     
@@ -40,29 +40,29 @@ SCORES_BY_SPECIALTY = {
     },
     
     "🩸 Tiêu Hóa - Gan Mật (GI/Hepatology)": {
-        "Rockall Score": {"name": "Rockall Score", "desc": "Nguy cơ xuất huyết tiêu hóa trên", "status": "📋"},
-        "Glasgow-Blatchford": {"name": "Glasgow-Blatchford Score", "desc": "UGIB - cần can thiệp", "status": "📋"},
-        "Child-Pugh": {"name": "Child-Pugh Score", "desc": "Mức độ xơ gan", "status": "📋"},
-        "MELD": {"name": "MELD Score", "desc": "Tiên lượng bệnh gan mạn", "status": "📋"},
-        "MELD-Na": {"name": "MELD-Na", "desc": "MELD điều chỉnh theo Na", "status": "🚧"},
+        "Child-Pugh": {"name": "Child-Pugh Score", "desc": "Mức độ xơ gan", "status": "✅"},
+        "MELD": {"name": "MELD Score", "desc": "Tiên lượng bệnh gan mạn & ghép gan", "status": "✅"},
+        "Glasgow-Blatchford": {"name": "Glasgow-Blatchford Score", "desc": "UGIB - quyết định xuất viện", "status": "✅"},
+        "Rockall Score": {"name": "Rockall Score", "desc": "UGIB - tiên lượng tử vong", "status": "✅"},
+        "MELD-Na": {"name": "MELD-Na", "desc": "MELD điều chỉnh theo Na", "status": "📋"},
         "Ranson": {"name": "Ranson Criteria", "desc": "Tiên lượng viêm tụy cấp", "status": "📋"},
     },
     
     "🩺 Huyết Học & Đông Máu (Hematology)": {
-        "Wells DVT": {"name": "Wells DVT Score", "desc": "Nguy cơ huyết khối tĩnh mạch sâu", "status": "📋"},
-        "4Ts Score": {"name": "4Ts Score - HIT", "desc": "Giảm tiểu cầu do heparin", "status": "📋"},
-        "DIC Score": {"name": "DIC Score (ISTH)", "desc": "Đông máu rải rác trong lòng mạch", "status": "📋"},
+        "Wells DVT": {"name": "Wells DVT Score", "desc": "Nguy cơ huyết khối tĩnh mạch sâu", "status": "✅"},
+        "4Ts Score": {"name": "4Ts Score - HIT", "desc": "Giảm tiểu cầu do heparin", "status": "✅"},
+        "DIC Score": {"name": "DIC Score (ISTH)", "desc": "Đông máu rải rác trong lòng mạch", "status": "✅"},
     },
     
     "🧪 Thận - Điện Giải (Nephrology)": {
-        "RIFLE": {"name": "RIFLE Criteria", "desc": "Phân loại AKI", "status": "📋"},
-        "AKIN": {"name": "AKIN Criteria", "desc": "Suy thận cấp", "status": "📋"},
-        "KDIGO": {"name": "KDIGO Staging", "desc": "Giai đoạn AKI", "status": "📋"},
+        "KDIGO": {"name": "KDIGO Staging", "desc": "Giai đoạn AKI (Tiêu chuẩn hiện đại)", "status": "✅"},
+        "RIFLE": {"name": "RIFLE Criteria", "desc": "Phân loại AKI (Historical)", "status": "✅"},
+        "AKIN": {"name": "AKIN Criteria", "desc": "Suy thận cấp (Historical)", "status": "✅"},
     },
     
     "🦴 Chấn Thương & Chỉnh Hình (Trauma/Orthopedics)": {
-        "ISS": {"name": "ISS - Injury Severity Score", "desc": "Mức độ nặng đa chấn thương", "status": "📋"},
-        "RTS": {"name": "RTS - Revised Trauma Score", "desc": "Tiên lượng chấn thương", "status": "📋"},
+        "RTS": {"name": "RTS - Revised Trauma Score", "desc": "Tiên lượng chấn thương (sinh lý)", "status": "✅"},
+        "ISS": {"name": "ISS - Injury Severity Score", "desc": "Mức độ nặng đa chấn thương (giải phẫu)", "status": "✅"},
         "NEXUS": {"name": "NEXUS C-Spine", "desc": "Cần chụp X-quang cột sống cổ", "status": "📋"},
         "Canadian C-Spine": {"name": "Canadian C-Spine Rule", "desc": "Chỉ định chụp cột sống cổ", "status": "📋"},
     },
@@ -79,10 +79,10 @@ SCORES_BY_SPECIALTY = {
     },
     
     "💉 Nội Tiết - Chuyển Hóa (Endocrinology/Metabolism)": {
+        "Anion Gap": {"name": "Anion Gap", "desc": "Khoảng trống anion - rối loạn acid-base", "status": "✅"},
+        "Corrected Ca": {"name": "Corrected Calcium", "desc": "Canxi điều chỉnh theo albumin", "status": "✅"},
+        "FENa": {"name": "FENa - Fractional Excretion of Sodium", "desc": "Phân biệt AKI tiền thận/thận", "status": "✅"},
         "HbA1c": {"name": "HbA1c - eAG Converter", "desc": "Chuyển đổi HbA1c sang đường huyết trung bình", "status": "📋"},
-        "Corrected Ca": {"name": "Corrected Calcium", "desc": "Canxi điều chỉnh theo albumin", "status": "📋"},
-        "FENa": {"name": "FENa - Fractional Excretion of Sodium", "desc": "Phân biệt AKI tiền thận/thận", "status": "📋"},
-        "Anion Gap": {"name": "Anion Gap", "desc": "Khoảng trống anion - rối loạn acid-base", "status": "📋"},
         "Winter Formula": {"name": "Winter Formula", "desc": "PCO2 dự đoán trong toan chuyển hóa", "status": "📋"},
         "Corrected QT": {"name": "QTc - Corrected QT Interval", "desc": "QT điều chỉnh theo nhịp tim", "status": "📋"},
         "Free T4 Index": {"name": "Free T4 Index (FTI)", "desc": "Chỉ số T4 tự do", "status": "📋"},

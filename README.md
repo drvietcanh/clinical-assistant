@@ -10,13 +10,16 @@
 
 ## 🌟 Tính Năng Chính
 
-### 📊 **Thang Điểm Lâm Sàng (100+ Calculators)**
-- **Tim Mạch:** CHA₂DS₂-VASc, HAS-BLED, SCORE2, SCORE2-OP, HEART, TIMI, GRACE, Framingham
-- **Cấp Cứu & Hồi Sức:** qSOFA, SOFA, APACHE II, SAPS II, MODS
-- **Hô Hấp:** CURB-65, PSI/PORT, Wells PE, BODE Index
-- **Thần Kinh:** GCS, NIHSS, ICH Score, Hunt & Hess, mRS
-- **Tiêu Hóa:** MELD, MELD-Na, Child-Pugh, Rockall, Glasgow-Blatchford
-- **Thận:** RIFLE, AKIN, KDIGO
+### 📊 **Thang Điểm Lâm Sàng (50+ Calculators)**
+- **Tim Mạch (8):** CHA₂DS₂-VASc, HAS-BLED, SCORE2, SCORE2-OP, HEART, TIMI, GRACE, Framingham ✅
+- **Cấp Cứu & Hồi Sức (5):** qSOFA, SOFA, APACHE II, SAPS II, MODS ✅ ⭐ **MỚI HOÀN THÀNH**
+- **Hô Hấp (4):** CURB-65, PSI/PORT, Wells PE, SMART-COP ✅
+- **Thần Kinh (5):** GCS, NIHSS, ICH Score, Hunt & Hess, mRS ✅
+- **Tiêu Hóa - Gan Mật (4):** Child-Pugh, MELD, Glasgow-Blatchford, Rockall ✅
+- **Huyết Học (3):** Wells DVT, 4Ts Score (HIT), DIC Score (ISTH) ✅
+- **Thận (3):** KDIGO, RIFLE, AKIN (AKI staging) ✅
+- **Chấn Thương (2):** RTS, ISS ✅
+- **Chuyển Hóa (3):** Anion Gap, Corrected Calcium, FENa ✅
 - **Và nhiều chuyên khoa khác...**
 
 ### 💊 **Kháng Sinh - Tính Liều & TDM**
@@ -227,18 +230,27 @@ medical/
 
 ## 📊 Tính Năng Nổi Bật
 
-### 🎯 **Đã Hoàn Thành (30+ Tools)**
+### 🎯 **Đã Hoàn Thành (50+ Tools)**
 
-**Scores (14 calculators):**
-1. **qSOFA, SOFA** - Sepsis screening & severity ✅
-2. **APACHE II, SAPS II, MODS** - ICU severity scores ✅
-3. **CHA₂DS₂-VASc** - Stroke risk (AF) ✅
-4. **HAS-BLED** - Bleeding risk ✅
-5. **SCORE2, SCORE2-OP** - 10-year CV risk ✅
-6. **HEART, TIMI, GRACE** - ACS risk ✅
-7. **Framingham** - CV risk ✅
-8. **CURB-65** - Pneumonia severity ✅
-9. **GCS** - Consciousness level ✅
+**Scores (50+ calculators):** ⭐ **CẬP NHẬT MỚI**
+
+**Cardiology (8/8):** CHA₂DS₂-VASc, HAS-BLED, SCORE2 ⭐, SCORE2-OP ⭐, HEART, TIMI, GRACE, Framingham ✅
+
+**Emergency & Critical Care (5/5):** qSOFA, SOFA ⭐, APACHE II ⭐, SAPS II ⭐, MODS ⭐ ✅ **HOÀN THIỆN 100%**
+
+**Respiratory (4/4):** CURB-65, PSI/PORT, Wells PE, SMART-COP ✅
+
+**Neurology (5/5):** GCS, NIHSS, ICH Score, Hunt & Hess, mRS ✅
+
+**GI/Hepatology (4/6):** Child-Pugh, MELD, Glasgow-Blatchford, Rockall ✅
+
+**Hematology (3/3):** Wells DVT, 4Ts Score (HIT), DIC Score (ISTH) ✅
+
+**Nephrology (3/3):** KDIGO, RIFLE, AKIN (AKI staging systems) ✅
+
+**Trauma (2/4):** RTS (Revised Trauma Score), ISS (Injury Severity Score) ✅
+
+**Metabolism (3/7):** Anion Gap, Corrected Calcium, FENa ✅
 
 **Labs (9 panels):** ⭐ NEW
 - CBC, BMP, CMP, LFT, Lipid
@@ -258,20 +270,26 @@ medical/
 - Sepsis bundle, COPD, Asthma ✅
 - ACS, Heart Failure ✅
 
-### 📋 **Kế Hoạch (70+ Calculators)**
+### 📋 **Kế Hoạch Phát Triển (60+ Calculators)**
 
-**Scores:**
-- NIHSS, ICH Score, Hunt & Hess, mRS (Neurology)
-- PSI/PORT, SMART-COP, BODE, Wells PE (Respiratory)
-- MELD, Child-Pugh, Rockall, Glasgow-Blatchford (GI)
-- RIFLE, AKIN, KDIGO (Nephrology)
-- Và nhiều specialty khác (Rheum, Endo, Derm, Onco...)
+**Scores cần bổ sung:**
+- **Pediatrics:** PEWS, APGAR, Pediatric GCS
+- **Obstetrics:** Bishop Score, Modified Bishop
+- **Rheumatology:** DAS28, CDAI, SDAI, ACR Criteria, SLEDAI
+- **Psychiatry:** PHQ-9, GAD-7, MMSE, MoCA, CAM, CIWA-Ar, COWS
+- **Surgery:** ASA, P-POSSUM, RCRI, Caprini, Aldrete, Mallampati
+- **Infectious Disease:** SIRS, Pitt Bacteremia, MASCC, Centor, FeverPAIN
+- **Dermatology:** PASI, SCORAD, DLQI, Burn TBSA, Parkland
+- **Oncology:** ECOG, Karnofsky, Palliative Performance, CIPN
+- **ENT:** Epworth, STOP-BANG
+- **Và nhiều specialty khác...**
 
-**Others:**
-- Antibiotic database expansion
-- More protocols
+**Tính năng khác:**
+- Unit tests cho các công thức
+- Antibiotic database mở rộng
 - Drug interaction checker
 - Clinical pathways
+- Export/Print results
 
 ---
 
