@@ -3,6 +3,12 @@ Dermatology Scoring Systems
 Skin disease calculators
 """
 
+from .pasi import render as render_pasi
+from .scorad import render as render_scorad
+from .dlqi import render as render_dlqi
+from .burn_tbsa import render as render_burn_tbsa
+from .parkland import render as render_parkland
+
 
 def render_dermatology_calculator(calculator_id):
     """
@@ -14,7 +20,11 @@ def render_dermatology_calculator(calculator_id):
     import streamlit as st
     
     calculators = {
-        # Will add calculators here
+        "PASI": render_pasi,
+        "SCORAD": render_scorad,
+        "DLQI": render_dlqi,
+        "Burn TBSA": render_burn_tbsa,
+        "Parkland Formula": render_parkland,
     }
     
     calculator_func = calculators.get(calculator_id)
