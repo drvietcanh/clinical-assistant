@@ -10,16 +10,18 @@
 
 ## 🌟 Tính Năng Chính
 
-### 📊 **Thang Điểm Lâm Sàng (50+ Calculators)**
-- **Tim Mạch (8):** CHA₂DS₂-VASc, HAS-BLED, SCORE2, SCORE2-OP, HEART, TIMI, GRACE, Framingham ✅
-- **Cấp Cứu & Hồi Sức (5):** qSOFA, SOFA, APACHE II, SAPS II, MODS ✅ ⭐ **MỚI HOÀN THÀNH**
-- **Hô Hấp (4):** CURB-65, PSI/PORT, Wells PE, SMART-COP ✅
+### 📊 **Thang Điểm Lâm Sàng (60+ Calculators)** ⭐ **CẬP NHẬT MỚI**
+- **Tim Mạch (9):** CHA₂DS₂-VASc, HAS-BLED, SCORE2, SCORE2-OP, HEART, TIMI, GRACE, Framingham, **QTc** ✅
+- **Cấp Cứu & Hồi Sức (5):** qSOFA, SOFA, APACHE II, SAPS II, MODS ✅
+- **Hô Hấp (5):** CURB-65, PSI/PORT, Wells PE, SMART-COP, **BODE Index** ✅
 - **Thần Kinh (5):** GCS, NIHSS, ICH Score, Hunt & Hess, mRS ✅
 - **Tiêu Hóa - Gan Mật (4):** Child-Pugh, MELD, Glasgow-Blatchford, Rockall ✅
 - **Huyết Học (3):** Wells DVT, 4Ts Score (HIT), DIC Score (ISTH) ✅
 - **Thận (3):** KDIGO, RIFLE, AKIN (AKI staging) ✅
 - **Chấn Thương (2):** RTS, ISS ✅
-- **Chuyển Hóa (3):** Anion Gap, Corrected Calcium, FENa ✅
+- **Chuyển Hóa (5):** Anion Gap, Corrected Calcium, FENa, **HbA1c-eAG**, **Winter Formula** ✅
+- **Tâm Thần - Tâm Lý (2):** **PHQ-9**, **GAD-7** ✅ ⭐ **MỚI**
+- **Ung Thư (1):** **ECOG Performance Status** ✅ ⭐ **MỚI**
 - **Và nhiều chuyên khoa khác...**
 
 ### 💊 **Kháng Sinh - Tính Liều & TDM**
@@ -230,27 +232,31 @@ medical/
 
 ## 📊 Tính Năng Nổi Bật
 
-### 🎯 **Đã Hoàn Thành (50+ Tools)**
+### 🎯 **Đã Hoàn Thành (60+ Tools)** ⭐ **CẬP NHẬT MỚI**
 
-**Scores (50+ calculators):** ⭐ **CẬP NHẬT MỚI**
+**Scores (60+ calculators):** ⭐ **CẬP NHẬT MỚI**
 
-**Cardiology (8/8):** CHA₂DS₂-VASc, HAS-BLED, SCORE2 ⭐, SCORE2-OP ⭐, HEART, TIMI, GRACE, Framingham ✅
+**Cardiology (9/9):** CHA₂DS₂-VASc, HAS-BLED, SCORE2, SCORE2-OP, HEART, TIMI, GRACE, Framingham, **QTc** ✅
 
-**Emergency & Critical Care (5/5):** qSOFA, SOFA ⭐, APACHE II ⭐, SAPS II ⭐, MODS ⭐ ✅ **HOÀN THIỆN 100%**
+**Emergency & Critical Care (5/5):** qSOFA, SOFA, APACHE II, SAPS II, MODS ✅ **HOÀN THIỆN 100%**
 
-**Respiratory (4/4):** CURB-65, PSI/PORT, Wells PE, SMART-COP ✅
+**Respiratory (5/5):** CURB-65, PSI/PORT, Wells PE, SMART-COP, **BODE Index** ✅ **HOÀN THIỆN 100%**
 
-**Neurology (5/5):** GCS, NIHSS, ICH Score, Hunt & Hess, mRS ✅
+**Neurology (5/5):** GCS, NIHSS, ICH Score, Hunt & Hess, mRS ✅ **HOÀN THIỆN 100%**
 
 **GI/Hepatology (4/6):** Child-Pugh, MELD, Glasgow-Blatchford, Rockall ✅
 
-**Hematology (3/3):** Wells DVT, 4Ts Score (HIT), DIC Score (ISTH) ✅
+**Hematology (3/3):** Wells DVT, 4Ts Score (HIT), DIC Score (ISTH) ✅ **HOÀN THIỆN 100%**
 
-**Nephrology (3/3):** KDIGO, RIFLE, AKIN (AKI staging systems) ✅
+**Nephrology (3/3):** KDIGO, RIFLE, AKIN (AKI staging systems) ✅ **HOÀN THIỆN 100%**
 
 **Trauma (2/4):** RTS (Revised Trauma Score), ISS (Injury Severity Score) ✅
 
-**Metabolism (3/7):** Anion Gap, Corrected Calcium, FENa ✅
+**Metabolism (5/7):** Anion Gap, Corrected Calcium, FENa, **HbA1c-eAG Converter**, **Winter Formula** ✅
+
+**Psychiatry/Psychology (2/7):** **PHQ-9** (Depression), **GAD-7** (Anxiety) ✅ ⭐ **MỚI HOÀN THÀNH**
+
+**Oncology (1/4):** **ECOG Performance Status** ✅ ⭐ **MỚI HOÀN THÀNH**
 
 **Labs (9 panels):** ⭐ NEW
 - CBC, BMP, CMP, LFT, Lipid
@@ -273,14 +279,16 @@ medical/
 ### 📋 **Kế Hoạch Phát Triển (60+ Calculators)**
 
 **Scores cần bổ sung:**
+- **GI/Hepatology:** MELD-Na, Ranson Criteria
 - **Pediatrics:** PEWS, APGAR, Pediatric GCS
 - **Obstetrics:** Bishop Score, Modified Bishop
+- **Trauma:** NEXUS C-Spine, Canadian C-Spine Rule
 - **Rheumatology:** DAS28, CDAI, SDAI, ACR Criteria, SLEDAI
-- **Psychiatry:** PHQ-9, GAD-7, MMSE, MoCA, CAM, CIWA-Ar, COWS
+- **Psychiatry:** MMSE, MoCA, CAM, CIWA-Ar, COWS (**PHQ-9, GAD-7** ✅)
 - **Surgery:** ASA, P-POSSUM, RCRI, Caprini, Aldrete, Mallampati
 - **Infectious Disease:** SIRS, Pitt Bacteremia, MASCC, Centor, FeverPAIN
 - **Dermatology:** PASI, SCORAD, DLQI, Burn TBSA, Parkland
-- **Oncology:** ECOG, Karnofsky, Palliative Performance, CIPN
+- **Oncology:** Karnofsky, Palliative Performance, CIPN (**ECOG** ✅)
 - **ENT:** Epworth, STOP-BANG
 - **Và nhiều specialty khác...**
 
@@ -386,4 +394,4 @@ MIT License - Xem [LICENSE](LICENSE) để biết thêm chi tiết.
 
 **Made with ❤️ for healthcare professionals**
 
-**Last Updated:** 2025-10-29
+**Last Updated:** 2025-10-30
