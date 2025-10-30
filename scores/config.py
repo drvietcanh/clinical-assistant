@@ -68,6 +68,11 @@ SCORES_BY_SPECIALTY = {
         "Canadian C-Spine": {"name": "Canadian C-Spine Rule", "desc": "Chỉ định chụp cột sống cổ", "status": "✅"},
     },
     
+    "👂 Tai Mũi Họng (ENT)": {
+        "Epworth": {"name": "Epworth Sleepiness Scale", "desc": "Đánh giá buồn ngủ ban ngày", "status": "✅"},
+        "STOP-BANG": {"name": "STOP-BANG Score", "desc": "Sàng lọc OSA", "status": "📋"},
+    },
+    
     "👶 Nhi Khoa (Pediatrics)": {
         "PEWS": {"name": "PEWS - Pediatric Early Warning Score", "desc": "Cảnh báo sớm nhi", "status": "📋"},
         "APGAR": {"name": "APGAR Score", "desc": "Đánh giá trẻ sơ sinh", "status": "✅"},
@@ -75,8 +80,8 @@ SCORES_BY_SPECIALTY = {
     },
     
     "🤰 Sản Khoa (Obstetrics)": {
-        "Bishop Score": {"name": "Bishop Score", "desc": "Đánh giá cổ tử cung", "status": "📋"},
-        "Modified Bishop": {"name": "Modified Bishop Score", "desc": "Dự đoán chuyển dạ", "status": "📋"},
+        "Bishop Score": {"name": "Bishop Score", "desc": "Đánh giá cổ tử cung", "status": "✅"},
+        "Modified Bishop": {"name": "Modified Bishop Score", "desc": "Dự đoán chuyển dạ", "status": "✅"},
     },
     
     "💉 Nội Tiết - Chuyển Hóa (Endocrinology/Metabolism)": {
