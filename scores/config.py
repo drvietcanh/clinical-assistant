@@ -102,7 +102,7 @@ SCORES_BY_SPECIALTY = {
         "SIRS": {"name": "SIRS - Systemic Inflammatory Response", "desc": "Hội chứng đáp ứng viêm toàn thân", "status": "📋"},
         "Pitt Bacteremia": {"name": "Pitt Bacteremia Score", "desc": "Tiên lượng nhiễm khuẩn huyết", "status": "📋"},
         "MASCC": {"name": "MASCC Risk Index", "desc": "Nguy cơ sốt giảm bạch cầu hạt", "status": "📋"},
-        "Centor": {"name": "Centor Score", "desc": "Viêm họng do liên cầu", "status": "📋"},
+        "Centor": {"name": "Centor Score", "desc": "Viêm họng do liên cầu", "status": "✅"},
         "FeverPAIN": {"name": "FeverPAIN Score", "desc": "Viêm amidan - cần kháng sinh", "status": "📋"},
     },
     
