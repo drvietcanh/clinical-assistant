@@ -70,7 +70,7 @@ SCORES_BY_SPECIALTY = {
     
     "👶 Nhi Khoa (Pediatrics)": {
         "PEWS": {"name": "PEWS - Pediatric Early Warning Score", "desc": "Cảnh báo sớm nhi", "status": "📋"},
-        "APGAR": {"name": "APGAR Score", "desc": "Đánh giá trẻ sơ sinh", "status": "📋"},
+        "APGAR": {"name": "APGAR Score", "desc": "Đánh giá trẻ sơ sinh", "status": "✅"},
         "Pediatric GCS": {"name": "Pediatric GCS", "desc": "Ý thức trẻ em", "status": "📋"},
     },
     
@@ -132,7 +132,7 @@ SCORES_BY_SPECIALTY = {
     },
     
     "🔪 Phẫu Thuật & Gây Mê (Surgery/Anesthesia)": {
-        "ASA": {"name": "ASA Physical Status", "desc": "Phân loại nguy cơ phẫu thuật", "status": "📋"},
+        "ASA": {"name": "ASA Physical Status", "desc": "Phân loại nguy cơ phẫu thuật", "status": "✅"},
         "P-POSSUM": {"name": "P-POSSUM Score", "desc": "Nguy cơ tử vong phẫu thuật", "status": "📋"},
         "RCRI": {"name": "RCRI - Revised Cardiac Risk Index", "desc": "Nguy cơ tim mạch phẫu thuật", "status": "📋"},
         "Caprini": {"name": "Caprini VTE Risk Score", "desc": "Nguy cơ huyết khối sau phẫu thuật", "status": "📋"},

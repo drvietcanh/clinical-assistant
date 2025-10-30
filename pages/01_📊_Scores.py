@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scores.config import SCORES_BY_SPECIALTY
-from scores import cardiology, emergency, respiratory, neurology, gi, metabolism, hematology, nephrology, trauma, psychiatry, oncology
+from scores import cardiology, emergency, respiratory, neurology, gi, metabolism, hematology, nephrology, trauma, psychiatry, oncology, surgery, pediatrics
 
 st.set_page_config(page_title="Scores - Clinical Assistant", page_icon="📊", layout="wide")
 
@@ -124,6 +124,14 @@ elif "Tâm Thần" in specialty or "Tâm Lý" in specialty:
 # Oncology
 elif "Ung Thư" in specialty:
     oncology.render_oncology_calculator(selected_score_id)
+
+# Surgery
+elif "Phẫu Thuật" in specialty or "Gây Mê" in specialty:
+    surgery.render_surgery_calculator(selected_score_id)
+
+# Pediatrics
+elif "Nhi Khoa" in specialty:
+    pediatrics.render_pediatrics_calculator(selected_score_id)
 
 # Other specialties - show placeholder for now
 else:
