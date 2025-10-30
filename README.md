@@ -1,6 +1,6 @@
 # 🩺 Clinical Assistant - Streamlit Edition
 
-**Công cụ hỗ trợ lâm sàng toàn diện dành cho nhân viên y tế**
+**Công cụ hỗ trợ lâm sàng toàn diện với 100+ Calculators chuyên khoa dành cho nhân viên y tế**
 
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io)
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
@@ -8,29 +8,98 @@
 
 ---
 
+## 🎉 **100 CALCULATORS HOÀN THÀNH!**
+
+**Clinical Assistant** hiện có **100 calculators lâm sàng** đầy đủ nhất, bao phủ **19 chuyên khoa**, từ cơ bản đến chuyên sâu, đáp ứng mọi nhu cầu thực hành lâm sàng hàng ngày!
+
+---
+
 ## 🌟 Tính Năng Chính
 
-### 📊 **Thang Điểm Lâm Sàng (60+ Calculators)** ⭐ **CẬP NHẬT MỚI**
-- **Tim Mạch (9):** CHA₂DS₂-VASc, HAS-BLED, SCORE2, SCORE2-OP, HEART, TIMI, GRACE, Framingham, **QTc** ✅
-- **Cấp Cứu & Hồi Sức (5):** qSOFA, SOFA, APACHE II, SAPS II, MODS ✅
-- **Hô Hấp (5):** CURB-65, PSI/PORT, Wells PE, SMART-COP, **BODE Index** ✅
-- **Thần Kinh (5):** GCS, NIHSS, ICH Score, Hunt & Hess, mRS ✅
-- **Tiêu Hóa - Gan Mật (4):** Child-Pugh, MELD, Glasgow-Blatchford, Rockall ✅
-- **Huyết Học (3):** Wells DVT, 4Ts Score (HIT), DIC Score (ISTH) ✅
-- **Thận (3):** KDIGO, RIFLE, AKIN (AKI staging) ✅
-- **Chấn Thương (2):** RTS, ISS ✅
-- **Chuyển Hóa (5):** Anion Gap, Corrected Calcium, FENa, **HbA1c-eAG**, **Winter Formula** ✅
-- **Tâm Thần - Tâm Lý (2):** **PHQ-9**, **GAD-7** ✅ ⭐ **MỚI**
-- **Ung Thư (1):** **ECOG Performance Status** ✅ ⭐ **MỚI**
-- **Và nhiều chuyên khoa khác...**
+### 📊 **100 Clinical Calculators - Đầy Đủ Nhất** ⭐ 
+
+#### 🚨 **Cấp Cứu & Hồi Sức (5 calculators)**
+- qSOFA, SOFA, APACHE II, SAPS II, MODS
+
+#### ❤️ **Tim Mạch (12 calculators)**  
+- **DÙNG HÀNG NGÀY:** NYHA, Killip ⭐
+- **Nguy cơ:** CHA₂DS₂-VASc, HAS-BLED, SCORE2, SCORE2-OP, Framingham
+- **ACS:** HEART, TIMI, GRACE
+- **Khác:** Duke Criteria (viêm nội tâm mạc), QTc
+
+#### 🫁 **Hô Hấp (6 calculators)**
+- **DÙNG HÀNG NGÀY:** PERC Rule ⭐
+- CURB-65, PSI/PORT, Wells PE, SMART-COP, BODE Index
+
+#### 🧠 **Thần Kinh (5 calculators)**
+- GCS, NIHSS, ICH Score, Hunt & Hess, mRS
+
+#### 🩸 **Tiêu Hóa - Gan Mật (7 calculators)**
+- **DÙNG HÀNG NGÀY:** BISAP ⭐
+- Child-Pugh, MELD, MELD-Na, Ranson
+- Glasgow-Blatchford, Rockall Score
+
+#### 🩺 **Huyết Học & Đông Máu (4 calculators)**
+- **DÙNG HÀNG NGÀY:** Padua (VTE prophylaxis) ⭐
+- Wells DVT, 4Ts Score (HIT), DIC Score
+
+#### 🧪 **Thận - Điện Giải (4 calculators)**
+- **DÙNG HÀNG NGÀY:** eGFR (CKD-EPI & MDRD) ⭐
+- KDIGO, RIFLE, AKIN
+
+#### 🦴 **Chấn Thương (4 calculators)**
+- RTS, ISS, NEXUS C-Spine, Canadian C-Spine Rule
+
+#### 💉 **Nội Tiết - Chuyển Hóa (9 calculators)**
+- **DÙNG HÀNG NGÀY:** CrCl, BMI/IBW/BSA, Osmolality ⭐
+- Anion Gap, Corrected Ca, FENa
+- HbA1c-eAG, Winter Formula, Free T4 Index
+
+#### 🦴 **Thấp Khớp - Miễn Dịch (7 calculators)**
+- **RA:** DAS28, CDAI, SDAI, ACR/EULAR Criteria
+- **Lupus:** SLICC, SLEDAI
+- **Gout:** ACR/EULAR Gout
+
+#### 🦠 **Nhiễm Khuẩn (5 calculators)**
+- SIRS, Centor, FeverPAIN, Pitt Bacteremia, MASCC
+
+#### 🩹 **Da Liễu (5 calculators)**
+- PASI, SCORAD, DLQI, Burn TBSA, Parkland Formula
+
+#### 🎗️ **Ung Thư (4 calculators)**
+- ECOG, Karnofsky, Palliative Performance Scale, CIPN Grading
+
+#### 🧠 **Tâm Thần - Tâm Lý (7 calculators)**
+- **Sàng lọc:** PHQ-9, GAD-7
+- **Nhận thức:** MMSE, MoCA, CAM
+- **Cai nghiện:** CIWA-Ar, COWS
+
+#### 🔪 **Phẫu Thuật & Gây Mê (6 calculators)**
+- ASA, P-POSSUM, RCRI, Caprini, Aldrete, Mallampati
+
+#### 👶 **Nhi Khoa (4 calculators)**
+- **DÙNG HÀNG NGÀY:** Westley Croup ⭐
+- PEWS, APGAR, Pediatric GCS
+
+#### 🤰 **Sản Khoa (3 calculators)**
+- **DÙNG HÀNG NGÀY:** Preeclampsia Severity ⭐
+- Bishop Score, Modified Bishop
+
+#### 👂 **Tai Mũi Họng (2 calculators)**
+- Epworth Sleepiness Scale, STOP-BANG
+
+#### 👁️ **Mắt (1 calculator)**
+- IOP Correction
+
+---
 
 ### 💊 **Kháng Sinh - Tính Liều & TDM**
-- Tính CrCl (Cockcroft-Gault) với chuyển đổi đơn vị (µmol/L ↔ mg/dL)
+- **CrCl (Cockcroft-Gault)** - Điều chỉnh liều thuốc ⭐
 - Vancomycin dosing & TDM
 - Aminoglycoside dosing
 - Tra cứu cơ sở dữ liệu kháng sinh
 
-### 🔬 **Labs - Xét Nghiệm & Giải Thích** ⭐ NEW
+### 🔬 **Labs - Xét Nghiệm & Giải Thích**
 - **CBC** - Complete Blood Count
 - **BMP/CMP** - Metabolic Panels
 - **LFT** - Liver Function Tests
@@ -58,57 +127,85 @@
 
 ### 🪟 Windows - Siêu Nhanh (Khuyến Nghị)
 
-**Cách 1: Double-click file .bat** ⚡
+**Double-click file .bat** ⚡
 ```bash
-1. Double-click: quick-start.bat
-   → Chạy trực tiếp, nhanh nhất!
-
-2. Hoặc: run.bat
-   → Tự động kiểm tra & cài đặt dependencies
-
-3. Lần đầu tiên: setup.bat
-   → Tạo virtual environment & cài đặt
+1. quick-start.bat    → Chạy trực tiếp, nhanh nhất!
+2. run.bat            → Tự động kiểm tra dependencies
+3. setup.bat          → Lần đầu: tạo venv & cài đặt
 ```
 
-**Cách 2: Command Line**
+**Hoặc Command Line:**
 ```bash
-# Clone repository
 git clone https://github.com/drvietcanh/clinical-assistant.git
 cd clinical-assistant
-
-# Chạy nhanh
 quick-start.bat
-
-# Hoặc với kiểm tra dependencies
-run.bat
 ```
 
 ### 🐧 Linux/Mac
 
 ```bash
-# Clone repository
 git clone https://github.com/drvietcanh/clinical-assistant.git
 cd clinical-assistant
-
-# Tạo virtual environment
 python -m venv venv
 source venv/bin/activate
-
-# Cài đặt dependencies
 pip install -r requirements.txt
-
-# Chạy ứng dụng
-python -m streamlit run app.py
+streamlit run app.py
 ```
 
-### Deploy lên Streamlit Cloud
+### ☁️ Deploy lên Streamlit Cloud
 
 1. Push code lên GitHub
-2. Truy cập https://streamlit.io/cloud
-3. Connect GitHub repository
-4. Deploy!
+2. https://streamlit.io/cloud
+3. Connect repository → Deploy!
 
-**→ Xem hướng dẫn chi tiết:** [QUICKSTART_STREAMLIT.md](QUICKSTART_STREAMLIT.md)
+---
+
+## 💡 Ưu Điểm
+
+### ✅ **Toàn Diện Nhất**
+- **100 calculators** - Nhiều nhất hiện nay
+- **19 chuyên khoa** - Bao phủ toàn bộ lâm sàng
+- **Cập nhật liên tục** - Luôn mới nhất
+
+### ✅ **Modular Architecture**
+- Mỗi calculator độc lập
+- Dễ bảo trì, dễ mở rộng
+- Code sạch, chuẩn Python
+
+### ✅ **Unit Conversion Thông Minh**
+- **Creatinine:** mg/dL ↔ µmol/L (mặc định µmol/L cho VN)
+- **Cholesterol:** mg/dL ↔ mmol/L (2 số thập phân)
+- **Glucose:** mg/dL ↔ mmol/L
+- **BUN:** mg/dL ↔ mmol/L (Urea)
+
+### ✅ **Evidence-Based**
+- ESC, AHA/ACC, IDSA, SSC 2021
+- KDIGO, WHO, ASH, CHEST
+- Cập nhật guidelines mới nhất
+
+### ✅ **Mobile-Friendly**
+- Responsive design
+- Tối ưu cho smartphone/tablet
+- Dùng mọi lúc, mọi nơi
+
+### ✅ **Vietnamese Localization**
+- Giao diện tiếng Việt
+- Hướng dẫn chi tiết bằng tiếng Việt
+- Phù hợp cho bác sĩ Việt Nam
+
+---
+
+## 📊 Chi Tiết 100 Calculators
+
+**Xem danh sách đầy đủ trong ứng dụng hoặc:**
+```bash
+python count_calculators.py
+```
+
+**Phân loại:**
+- **DÙNG HÀNG NGÀY (14):** eGFR, CrCl, BMI/IBW/BSA, NYHA, Killip, PERC, BISAP, Padua, Preeclampsia, Westley Croup, Osmolality, và nhiều hơn
+- **PHỔ BIẾN (30+):** CHA₂DS₂-VASc, CURB-65, GCS, Child-Pugh, MELD...
+- **CHUYÊN SÂU (50+):** Scores chuyên khoa nâng cao
 
 ---
 
@@ -116,188 +213,49 @@ python -m streamlit run app.py
 
 ```
 medical/
-├── 📄 Core Files
-│   ├── app.py                      # Main entry point
-│   ├── requirements.txt            # Dependencies
-│   ├── quick-start.bat             # Quick launch (Windows) ⚡
-│   ├── run.bat                     # Run with checks (Windows)
-│   └── setup.bat                   # First-time setup (Windows)
+├── app.py                      # Main entry
+├── requirements.txt
+├── quick-start.bat, run.bat, setup.bat
 │
-├── 📁 Pages (Routers)
-│   ├── 01_📊_Scores.py
+├── pages/                      # Streamlit pages
+│   ├── 01_📊_Scores.py        # 100 calculators
 │   ├── 02_💊_Antibiotics.py
 │   ├── 03_🫁_Ventilator.py
 │   ├── 04_📋_Protocols.py
-│   └── 05_🔬_Labs.py               # NEW! ⭐
+│   └── 05_🔬_Labs.py
 │
-├── 📁 Scores Module (Modular by Specialty)
-│   ├── config.py                   # Central config
-│   ├── cardiology/                 # 8 calculators
-│   │   ├── cha2ds2vasc.py
-│   │   ├── hasbled.py
-│   │   ├── score2.py, score2_op.py
-│   │   ├── heart.py, timi.py, grace.py
-│   │   └── framingham.py
-│   ├── emergency/                  # 5 calculators
-│   │   ├── qsofa.py, sofa.py
-│   │   ├── apache2.py, saps2.py
-│   │   └── mods.py
-│   ├── respiratory/                # Respiratory scores
-│   │   └── curb65.py
-│   └── neurology/                  # Neurology scores
-│       └── gcs.py
+├── scores/                     # Modular by specialty
+│   ├── config.py              # Central config
+│   ├── cardiology/            # 12 calculators
+│   ├── emergency/             # 5 calculators
+│   ├── respiratory/           # 6 calculators
+│   ├── neurology/             # 5 calculators
+│   ├── gi/                    # 7 calculators
+│   ├── hematology/            # 4 calculators
+│   ├── nephrology/            # 4 calculators
+│   ├── trauma/                # 4 calculators
+│   ├── metabolism/            # 9 calculators
+│   ├── rheumatology/          # 7 calculators
+│   ├── infectious/            # 5 calculators
+│   ├── dermatology/           # 5 calculators
+│   ├── oncology/              # 4 calculators
+│   ├── psychiatry/            # 7 calculators
+│   ├── surgery/               # 6 calculators
+│   ├── pediatrics/            # 4 calculators
+│   ├── obstetrics/            # 3 calculators
+│   ├── ent/                   # 2 calculators
+│   └── ophthalmology/         # 1 calculator
 │
-├── 📁 Antibiotics Module
-│   ├── crcl.py                     # CrCl calculator
-│   ├── vancomycin.py               # Vancomycin dosing
-│   ├── aminoglycoside.py           # Aminoglycoside dosing
-│   └── database.py                 # Antibiotic lookup
-│
-├── 📁 Labs Module ⭐ NEW
-│   ├── cbc.py                      # Complete Blood Count
-│   ├── bmp.py, cmp.py              # Metabolic panels
-│   ├── lft.py                      # Liver Function Tests
-│   ├── lipid.py                    # Lipid panel
-│   ├── cardiac.py                  # Cardiac markers
-│   ├── coag.py                     # Coagulation
-│   ├── thyroid.py                  # Thyroid function
-│   ├── abg.py                      # ABG interpreter
-│   ├── converter.py                # Unit conversions
-│   └── normal_ranges.py            # Reference ranges
-│
-├── 📁 Ventilator Module
-│   ├── calculators.py              # ARDSNet, PBW
-│   └── tables.py                   # PEEP/FiO2
-│
-├── 📁 Protocols Module
-│   ├── emergency/
-│   │   └── sepsis.py
-│   ├── respiratory/
-│   │   ├── copd.py
-│   │   └── asthma.py
-│   └── cardiology/
-│       ├── acs.py
-│       └── heart_failure.py
-│
-├── 📁 Data
-│   ├── Antibiotics.csv
-│   ├── Scores.csv
-│   ├── Ventilator.csv
-│   ├── Protocols.csv
-│   └── Meta.csv
-│
-└── 📚 Documentation
-    ├── README.md                   # This file
-    ├── ARCHITECTURE.md             # Technical docs
-    └── QUICKSTART_STREAMLIT.md     # Quick start guide
+├── antibiotics/               # Antibiotic tools
+├── labs/                      # Lab interpreters
+├── ventilator/                # Ventilator calculators
+└── protocols/                 # Clinical protocols
 ```
 
 **Tổng:** 
-- **5 modules chính** (Scores, Antibiotics, Labs ⭐, Ventilator, Protocols)
-- **30+ calculators** implemented
-- **100% modular** - Easy to maintain & extend
-- **3 .bat files** cho Windows - Double-click to run! ⚡
-
-**→ Xem chi tiết:** [ARCHITECTURE.md](ARCHITECTURE.md)
-
----
-
-## 💡 Ưu Điểm
-
-### ✅ **Modular Architecture**
-- Mỗi calculator là 1 function độc lập
-- Dễ bảo trì, dễ mở rộng
-- Nhiều người có thể làm song song
-
-### ✅ **Unit Conversion**
-- Creatinine: mg/dL ↔ µmol/L
-- Cholesterol: mg/dL ↔ mmol/L
-- Urea: mg/dL ↔ mmol/L
-
-### ✅ **Evidence-Based**
-- Dựa trên hướng dẫn quốc tế
-- ESC, AHA/ACC, IDSA, SSC...
-- Cập nhật thường xuyên
-
-### ✅ **Mobile-Friendly**
-- Giao diện responsive
-- Tối ưu cho điện thoại/tablet
-- Truy cập mọi lúc, mọi nơi
-
-### ✅ **Vietnamese Localization**
-- Giao diện tiếng Việt
-- Dễ sử dụng cho bác sĩ Việt Nam
-
----
-
-## 📊 Tính Năng Nổi Bật
-
-### 🎯 **Đã Hoàn Thành (60+ Tools)** ⭐ **CẬP NHẬT MỚI**
-
-**Scores (60+ calculators):** ⭐ **CẬP NHẬT MỚI**
-
-**Cardiology (9/9):** CHA₂DS₂-VASc, HAS-BLED, SCORE2, SCORE2-OP, HEART, TIMI, GRACE, Framingham, **QTc** ✅
-
-**Emergency & Critical Care (5/5):** qSOFA, SOFA, APACHE II, SAPS II, MODS ✅ **HOÀN THIỆN 100%**
-
-**Respiratory (5/5):** CURB-65, PSI/PORT, Wells PE, SMART-COP, **BODE Index** ✅ **HOÀN THIỆN 100%**
-
-**Neurology (5/5):** GCS, NIHSS, ICH Score, Hunt & Hess, mRS ✅ **HOÀN THIỆN 100%**
-
-**GI/Hepatology (4/6):** Child-Pugh, MELD, Glasgow-Blatchford, Rockall ✅
-
-**Hematology (3/3):** Wells DVT, 4Ts Score (HIT), DIC Score (ISTH) ✅ **HOÀN THIỆN 100%**
-
-**Nephrology (3/3):** KDIGO, RIFLE, AKIN (AKI staging systems) ✅ **HOÀN THIỆN 100%**
-
-**Trauma (2/4):** RTS (Revised Trauma Score), ISS (Injury Severity Score) ✅
-
-**Metabolism (5/7):** Anion Gap, Corrected Calcium, FENa, **HbA1c-eAG Converter**, **Winter Formula** ✅
-
-**Psychiatry/Psychology (2/7):** **PHQ-9** (Depression), **GAD-7** (Anxiety) ✅ ⭐ **MỚI HOÀN THÀNH**
-
-**Oncology (1/4):** **ECOG Performance Status** ✅ ⭐ **MỚI HOÀN THÀNH**
-
-**Labs (9 panels):** ⭐ NEW
-- CBC, BMP, CMP, LFT, Lipid
-- Cardiac markers, Coagulation
-- Thyroid, ABG interpreter ✅
-
-**Antibiotics:**
-- CrCl calculator (with unit conversion) ✅
-- Vancomycin dosing ✅
-- Aminoglycoside dosing ✅
-
-**Ventilator:**
-- ARDSNet calculator ✅
-- PEEP/FiO2 tables ✅
-
-**Protocols:**
-- Sepsis bundle, COPD, Asthma ✅
-- ACS, Heart Failure ✅
-
-### 📋 **Kế Hoạch Phát Triển (60+ Calculators)**
-
-**Scores cần bổ sung:**
-- **GI/Hepatology:** MELD-Na, Ranson Criteria
-- **Pediatrics:** PEWS, APGAR, Pediatric GCS
-- **Obstetrics:** Bishop Score, Modified Bishop
-- **Trauma:** NEXUS C-Spine, Canadian C-Spine Rule
-- **Rheumatology:** DAS28, CDAI, SDAI, ACR Criteria, SLEDAI
-- **Psychiatry:** MMSE, MoCA, CAM, CIWA-Ar, COWS (**PHQ-9, GAD-7** ✅)
-- **Surgery:** ASA, P-POSSUM, RCRI, Caprini, Aldrete, Mallampati
-- **Infectious Disease:** SIRS, Pitt Bacteremia, MASCC, Centor, FeverPAIN
-- **Dermatology:** PASI, SCORAD, DLQI, Burn TBSA, Parkland
-- **Oncology:** Karnofsky, Palliative Performance, CIPN (**ECOG** ✅)
-- **ENT:** Epworth, STOP-BANG
-- **Và nhiều specialty khác...**
-
-**Tính năng khác:**
-- Unit tests cho các công thức
-- Antibiotic database mở rộng
-- Drug interaction checker
-- Clinical pathways
-- Export/Print results
+- **100 calculators** hoàn chỉnh ✅
+- **19 chuyên khoa** đầy đủ
+- **100% modular** - Dễ maintain & extend
 
 ---
 
@@ -305,60 +263,45 @@ medical/
 
 - **Frontend:** Streamlit 1.28+
 - **Backend:** Python 3.9+
-- **Data:** Pandas, NumPy
-- **Deployment:** Streamlit Cloud
+- **Data:** Pandas, NumPy, SciPy
+- **Deployment:** Streamlit Cloud / Docker
 - **Version Control:** Git/GitHub
-
----
-
-## 📚 Tài Liệu
-
-- [QUICKSTART_STREAMLIT.md](QUICKSTART_STREAMLIT.md) - Hướng dẫn bắt đầu nhanh
-- [ARCHITECTURE.md](ARCHITECTURE.md) - Kiến trúc chi tiết
-- [DEPLOYMENT.md](DEPLOYMENT.md) - Hướng dẫn triển khai
 
 ---
 
 ## 🤝 Đóng Góp
 
-### Cách đóng góp:
-
-1. Fork repository
-2. Tạo branch mới (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Tạo Pull Request
-
 ### Thêm Calculator Mới:
 
 ```python
-# Thêm vào file specialty tương ứng (vd: scores/cardiology.py)
-def render_new_calculator():
-    """New Calculator Description"""
-    st.subheader("🔥 New Calculator")
-    # Implementation here
-    ...
+# 1. Tạo file mới: scores/specialty/new_calc.py
+def render():
+    st.markdown("## New Calculator")
+    # Implementation...
 
-# Thêm vào router
-def render_cardiology_calculator(calculator_id):
-    calculators = {
-        ...
-        "New Calculator": render_new_calculator,
-    }
+# 2. Thêm vào router: scores/specialty/__init__.py
+from .new_calc import render as render_new_calc
+
+calculators = {
+    "New Calc": render_new_calc,
+}
+
+# 3. Thêm vào config: scores/config.py
+"Specialty": {
+    "New Calc": {"name": "...", "desc": "...", "status": "✅"},
+}
 ```
-
-**→ Xem chi tiết:** [ARCHITECTURE.md](ARCHITECTURE.md#-cách-thêm-tính-năng-mới)
 
 ---
 
 ## ⚠️ Disclaimer
 
-**Clinical Assistant** là công cụ hỗ trợ lâm sàng, **KHÔNG PHẢI** để thay thế đánh giá và quyết định lâm sàng của bác sĩ.
+**Clinical Assistant** là công cụ hỗ trợ, **KHÔNG PHẢI** để thay thế clinical judgment:
 
 - Chỉ mục đích tham khảo
-- Luôn xác minh với hướng dẫn địa phương
-- Luôn sử dụng clinical judgment
+- Luôn xác minh với guidelines địa phương
 - Luôn cá thể hóa theo bệnh nhân
+- Sử dụng clinical judgment
 
 ---
 
@@ -372,14 +315,14 @@ def render_cardiology_calculator(calculator_id):
 
 ## 📄 License
 
-MIT License - Xem [LICENSE](LICENSE) để biết thêm chi tiết.
+MIT License - Xem [LICENSE](LICENSE)
 
 ---
 
 ## 🙏 Acknowledgments
 
 - **Streamlit Team** - Amazing framework
-- **Clinical Guidelines Organizations** - ESC, AHA/ACC, IDSA, SSC
+- **Clinical Guidelines Organizations** - ESC, AHA/ACC, IDSA, SSC, KDIGO, WHO...
 - **Medical Community** - Feedback và contributions
 
 ---
@@ -388,10 +331,11 @@ MIT License - Xem [LICENSE](LICENSE) để biết thêm chi tiết.
 
 ![GitHub stars](https://img.shields.io/github/stars/drvietcanh/clinical-assistant?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/drvietcanh/clinical-assistant?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/drvietcanh/clinical-assistant?style=social)
 
 ---
 
-**Made with ❤️ for healthcare professionals**
+**🎉 100 CALCULATORS - MOST COMPREHENSIVE CLINICAL TOOL IN VIETNAMESE! 🎉**
 
-**Last Updated:** 2025-10-30
+**Made with ❤️ for Vietnamese healthcare professionals**
+
+**Last Updated:** 2025-01-30 | **Version:** 2.0.0 - Centenary Edition
