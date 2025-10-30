@@ -64,8 +64,8 @@ SCORES_BY_SPECIALTY = {
     "🦴 Chấn Thương & Chỉnh Hình (Trauma/Orthopedics)": {
         "RTS": {"name": "RTS - Revised Trauma Score", "desc": "Tiên lượng chấn thương (sinh lý)", "status": "✅"},
         "ISS": {"name": "ISS - Injury Severity Score", "desc": "Mức độ nặng đa chấn thương (giải phẫu)", "status": "✅"},
-        "NEXUS": {"name": "NEXUS C-Spine", "desc": "Cần chụp X-quang cột sống cổ", "status": "📋"},
-        "Canadian C-Spine": {"name": "Canadian C-Spine Rule", "desc": "Chỉ định chụp cột sống cổ", "status": "📋"},
+        "NEXUS": {"name": "NEXUS C-Spine", "desc": "Cần chụp X-quang cột sống cổ", "status": "✅"},
+        "Canadian C-Spine": {"name": "Canadian C-Spine Rule", "desc": "Chỉ định chụp cột sống cổ", "status": "✅"},
     },
     
     "👶 Nhi Khoa (Pediatrics)": {
