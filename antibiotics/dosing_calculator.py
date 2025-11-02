@@ -280,9 +280,121 @@ def check_warnings(antibiotic_name, crcl, age, is_pregnant=False, is_breastfeedi
     return warnings
 
 
-def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, indication="standard"):
+def calculate_icu_adjustment(antibiotic_name, albumin_gdl=None, shock_type=None, is_icu=False, crcl=None):
     """
-    Calculate adjusted antibiotic dose based on renal function
+    Calculate ICU-specific dose adjustments based on:
+    - Albumin level (protein binding)
+    - Shock state (Vd changes, ARC)
+    
+    Args:
+        antibiotic_name: Name of antibiotic
+        albumin_gdl: Albumin level in g/dL (normal: 3.5-5.0)
+        shock_type: Type of shock ("septic", "cardiogenic", "distributive", "hypovolemic", None)
+        is_icu: Boolean if patient is in ICU
+        crcl: Creatinine clearance (for ARC detection)
+    
+    Returns:
+        dict with adjustment factors and recommendations
+    """
+    if antibiotic_name not in ANTIBIOTICS_DATABASE:
+        return {'adjustment_factor': 1.0, 'recommendations': []}
+    
+    ab_data = ANTIBIOTICS_DATABASE[antibiotic_name]
+    
+    # Get protein binding info (default values based on antibiotic class)
+    protein_binding_percent = ab_data.get('protein_binding_percent', 0)
+    
+    # Known protein binding values for common antibiotics
+    protein_binding_db = {
+        "Ceftriaxone": 90,  # 85-95 average
+        "Cefazolin": 85,  # 80-90 average
+        "Ertapenem": 95,
+        "Teicoplanin": 90,
+        "Piperacillin-Tazobactam": 30,
+        "Meropenem": 2,
+        "Imipenem-Cilastatin": 20,
+        "Vancomycin": 40,  # 30-50 average
+        "Gentamicin": 5,  # 0-10 average
+        "Amikacin": 5,  # 0-10 average
+        "Tobramycin": 5,
+        "Ciprofloxacin": 30,  # 20-40 average
+        "Levofloxacin": 31,  # 24-38 average
+        "Linezolid": 31,
+        "Daptomycin": 92,  # 90-93 average
+        "Cefepime": 20,
+        "Ceftazidime": 10,
+        "Cefotaxime": 35,
+        "Aztreonam": 56,
+        "Colistin": 50,
+    }
+    
+    if antibiotic_name in protein_binding_db:
+        protein_binding_percent = protein_binding_db[antibiotic_name]
+        if isinstance(protein_binding_percent, (list, tuple)):
+            protein_binding_percent = sum(protein_binding_percent) / len(protein_binding_percent)
+    
+    adjustment_factor = 1.0
+    recommendations = []
+    
+    # Albumin adjustment (hypoalbuminemia)
+    if albumin_gdl is not None:
+        if albumin_gdl < 3.0:
+            # Significant hypoalbuminemia
+            if protein_binding_percent > 80:
+                # High protein binding - significant impact
+                # Increase dose by 25-50% due to increased free fraction and Vd
+                adjustment_factor *= 1.5
+                recommendations.append(f"🚨 Albumin rất thấp ({albumin_gdl:.1f} g/dL) + liên kết protein cao ({protein_binding_percent}%) → Tăng liều 50%")
+            elif protein_binding_percent > 50:
+                # Moderate binding
+                adjustment_factor *= 1.25
+                recommendations.append(f"⚠️ Albumin thấp ({albumin_gdl:.1f} g/dL) + liên kết protein trung bình ({protein_binding_percent}%) → Tăng liều 25%")
+            else:
+                # Low binding - minimal impact
+                recommendations.append(f"ℹ️ Albumin thấp nhưng liên kết protein thấp ({protein_binding_percent}%) → Ảnh hưởng tối thiểu")
+        elif albumin_gdl < 3.5:
+            # Mild hypoalbuminemia
+            if protein_binding_percent > 80:
+                adjustment_factor *= 1.25
+                recommendations.append(f"⚠️ Albumin giảm nhẹ ({albumin_gdl:.1f} g/dL) + liên kết protein cao → Tăng liều 25%")
+    
+    # Shock adjustment
+    if shock_type:
+        if shock_type == "septic":
+            # Septic shock: increased Vd, ARC, capillary leak
+            adjustment_factor *= 1.5  # Increase dose by 50%
+            recommendations.append("🚨 Sốc nhiễm khuẩn: Tăng Vd, ARC, rò rỉ mao mạch → Tăng liều 50%, cân nhắc loading dose")
+        elif shock_type == "distributive":
+            # Similar to septic
+            adjustment_factor *= 1.5
+            recommendations.append("🚨 Sốc phân bố: Tăng Vd → Tăng liều 50%")
+        elif shock_type == "cardiogenic":
+            # Cardiogenic shock: reduced perfusion but may still need higher dose
+            adjustment_factor *= 1.25
+            recommendations.append("⚠️ Sốc tim: Giảm tưới máu nhưng vẫn có thể cần tăng liều 25%")
+        elif shock_type == "hypovolemic":
+            # Hypovolemic: less dramatic Vd changes
+            adjustment_factor *= 1.15
+            recommendations.append("⚠️ Sốc giảm thể tích: Tăng liều nhẹ 15%")
+    
+    # ARC (Augmented Renal Clearance) - common in ICU
+    if is_icu and crcl is not None:
+        if crcl > 130:  # Very high CrCl suggests ARC
+            adjustment_factor *= 1.25
+            recommendations.append(f"⚠️ ARC (CrCl = {crcl:.0f} mL/min) → Tăng liều 25% hoặc rút ngắn interval")
+    
+    return {
+        'adjustment_factor': adjustment_factor,
+        'recommendations': recommendations,
+        'protein_binding': protein_binding_percent,
+        'albumin': albumin_gdl
+    }
+
+
+def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, indication="standard", 
+                            albumin_gdl=None, shock_type=None, is_icu=False):
+    """
+    Calculate adjusted antibiotic dose based on renal function AND ICU factors
     
     Args:
         antibiotic_name: Name of antibiotic from database
@@ -290,6 +402,9 @@ def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, in
         egfr: eGFR (optional, for reference)
         base_dose: Base dose if not in database (e.g., custom dosing)
         indication: Type of infection (standard, severe, meningitis, etc.)
+        albumin_gdl: Albumin level in g/dL (for ICU adjustment)
+        shock_type: Type of shock ("septic", "cardiogenic", "distributive", "hypovolemic", None)
+        is_icu: Boolean if patient is in ICU
     
     Returns:
         dict with adjusted dose information
@@ -329,9 +444,26 @@ def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, in
     else:
         adjustment_text = "Tham khảo hướng dẫn cụ thể"
     
+    # ICU-specific adjustments
+    icu_adjustment = calculate_icu_adjustment(antibiotic_name, albumin_gdl, shock_type, is_icu, crcl)
+    icu_factor = icu_adjustment['adjustment_factor']
+    icu_recommendations = icu_adjustment['recommendations']
+    
+    # Combine adjustments
+    if icu_factor > 1.0:
+        if "Tăng liều" in adjustment_text or "Giảm liều" in adjustment_text:
+            # Modify existing adjustment
+            adjustment_text = f"{adjustment_text} + Điều chỉnh ICU (x{icu_factor:.2f})"
+        else:
+            adjustment_text = f"{adjustment_text} + ICU: Tăng liều (x{icu_factor:.2f})"
+    
     # Additional notes
     notes = dosage.get('notes', '')
     monitoring = ab_data.get('monitoring', '')
+    
+    # Add ICU-specific monitoring if applicable
+    if is_icu:
+        monitoring = f"{monitoring}\n📊 ICU: Monitor nồng độ thuốc, cân nhắc TDM" if monitoring else "📊 ICU: Monitor nồng độ thuốc, cân nhắc TDM"
     
     return {
         "antibiotic": antibiotic_name,
@@ -341,6 +473,9 @@ def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, in
         "egfr": egfr,
         "adjustment": adjustment_text,
         "recommended_dose": adjustment_text,
+        "icu_factor": icu_factor,
+        "icu_recommendations": icu_recommendations,
+        "protein_binding": icu_adjustment.get('protein_binding', 0),
         "notes": notes,
         "monitoring": monitoring,
         "full_renal_guide": renal_adj
@@ -419,10 +554,46 @@ def render_dosing_calculator():
         
         # Special conditions
         st.markdown("#### 🏥 Tình Trạng Đặc Biệt")
+        is_icu = st.checkbox("🏥 Bệnh nhân ICU", key="dosing_icu", help="Tự động điều chỉnh cho ICU: ARC, Vd changes")
         is_hemodialysis = st.checkbox("💉 Đang lọc máu (Hemodialysis)", key="dosing_hd")
         is_peritoneal_dialysis = st.checkbox("💉 Đang lọc màng bụng (Peritoneal Dialysis)", key="dosing_pd")
         is_pregnant = st.checkbox("🤰 Có thai", key="dosing_pregnant")
         is_breastfeeding = st.checkbox("🤱 Đang cho con bú", key="dosing_breastfeeding")
+        
+        # ICU-specific inputs
+        if is_icu:
+            st.markdown("#### 🔴 Thông Số ICU")
+            shock_type = st.selectbox(
+                "Loại shock:",
+                ["Không có", "Sốc nhiễm khuẩn (Septic)", "Sốc tim (Cardiogenic)", "Sốc phân bố (Distributive)", "Sốc giảm thể tích (Hypovolemic)"],
+                key="dosing_shock_type"
+            )
+            shock_type_map = {
+                "Không có": None,
+                "Sốc nhiễm khuẩn (Septic)": "septic",
+                "Sốc tim (Cardiogenic)": "cardiogenic",
+                "Sốc phân bố (Distributive)": "distributive",
+                "Sốc giảm thể tích (Hypovolemic)": "hypovolemic"
+            }
+            shock_type_code = shock_type_map.get(shock_type, None)
+            
+            albumin_gdl = st.number_input(
+                "Albumin (g/dL)",
+                min_value=1.0,
+                max_value=5.5,
+                value=3.5,
+                step=0.1,
+                key="dosing_albumin",
+                help="Bình thường: 3.5-5.0 g/dL. <3.0 g/dL: ảnh hưởng liều kháng sinh liên kết protein cao"
+            )
+            
+            if albumin_gdl < 3.0:
+                st.warning(f"🚨 Albumin rất thấp ({albumin_gdl:.1f} g/dL) - Cần điều chỉnh liều kháng sinh liên kết protein cao!")
+            elif albumin_gdl < 3.5:
+                st.info(f"⚠️ Albumin giảm ({albumin_gdl:.1f} g/dL)")
+        else:
+            shock_type_code = None
+            albumin_gdl = None
     
     with col2:
         sex = st.radio(
@@ -599,7 +770,10 @@ def render_dosing_calculator():
             selected_ab,
             crcl,
             egfr,
-            indication=indication_code
+            indication=indication_code,
+            albumin_gdl=albumin_gdl if is_icu else None,
+            shock_type=shock_type_code if is_icu else None,
+            is_icu=is_icu
         )
         
         if "error" in result:
@@ -713,6 +887,30 @@ def render_dosing_calculator():
                 # Dosing schedule example
                 if detailed_dose.get('interval_hours'):
                     st.info(f"📅 **Lịch dùng:** {detailed_dose['calculated_dose_mg']:.0f} mg mỗi {detailed_dose['interval_hours']:.0f} giờ")
+            
+            # ICU-specific adjustments display
+            if is_icu and result.get('icu_recommendations'):
+                st.markdown("---")
+                st.markdown("### 🏥 Điều Chỉnh Cho ICU:")
+                
+                col1, col2 = st.columns(2)
+                with col1:
+                    if result.get('protein_binding', 0) > 0:
+                        st.metric("Liên kết protein", f"{result['protein_binding']:.0f}%")
+                    if albumin_gdl:
+                        st.metric("Albumin", f"{albumin_gdl:.1f} g/dL")
+                
+                with col2:
+                    if result.get('icu_factor', 1.0) > 1.0:
+                        st.metric("Hệ số điều chỉnh ICU", f"x {result['icu_factor']:.2f}")
+                
+                for rec in result['icu_recommendations']:
+                    if "🚨" in rec:
+                        st.error(rec)
+                    elif "⚠️" in rec:
+                        st.warning(rec)
+                    else:
+                        st.info(rec)
             
             # Warnings and alerts
             st.markdown("---")
