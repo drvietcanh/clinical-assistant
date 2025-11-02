@@ -402,7 +402,7 @@ def render():
         | **Huyết học** Platelets (×10³/μL) | >120 | 81-120 | 51-80 | 21-50 | ≤20 |
         | **Thần kinh** GCS | 15 | 13-14 | 10-12 | 7-9 | ≤6 |
         
-        \* PAR (Pressure-Adjusted Heart Rate) = HR × CVP / MAP  
+        * PAR (Pressure-Adjusted Heart Rate) = HR × CVP / MAP  
         Simplified: HR / MAP
         
         ### Ưu Điểm MODS

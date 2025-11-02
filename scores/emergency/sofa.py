@@ -540,8 +540,8 @@ def render():
         | **Thần kinh** GCS | 15 | 13-14 | 10-12 | 6-9 | 3-5 |
         | **Thận** Cr (mg/dL) hoặc UO | <1.2 | 1.2-1.9 | 2.0-3.4 | 3.5-4.9 hoặc <500 mL/d | ≥5.0 hoặc <200 mL/d |
         
-        \* Dopamine liều (mcg/kg/min)  
-        \*\* Epinephrine/Norepinephrine liều (mcg/kg/min)
+        * Dopamine liều (mcg/kg/min)  
+        ** Epinephrine/Norepinephrine liều (mcg/kg/min)
         
         ### Sepsis-3 Definitions
         

@@ -51,6 +51,15 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
+# Handle automatic navigation from lookup page
+if 'show_vancomycin_calc' in st.session_state and st.session_state['show_vancomycin_calc']:
+    function_type = "💉 Vancomycin - Tính Liều"
+    st.session_state['show_vancomycin_calc'] = False
+
+if 'show_aminoglycoside_calc' in st.session_state and st.session_state['show_aminoglycoside_calc']:
+    function_type = "💊 Aminoglycoside - Tính Liều"
+    st.session_state['show_aminoglycoside_calc'] = False
+
 # Route to appropriate function
 if "CrCl" in function_type:
     render_crcl()
