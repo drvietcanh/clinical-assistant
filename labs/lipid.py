@@ -32,80 +32,88 @@ def render():
         if use_si:
             chol_input = st.number_input(
                 "Total Cholesterol (mmol/L)",
-                0.0, 15.0, 4.65, 0.1,
+                0.0, 15.0, 4.7, 0.1,
+                format="%.1f",
                 help="Bình thường: <5.2 mmol/L",
                 key="chol_mmol"
             )
             chol = chol_input * 38.67  # Convert to mg/dL for calculations
-            st.caption(f"≈ {chol:.1f} mg/dL")
+            st.caption(f"≈ {chol:.0f} mg/dL")
         else:
             chol = st.number_input(
                 "Total Cholesterol (mg/dL)",
                 0.0, 500.0, 180.0, 1.0,
+                format="%.0f",
                 help="Bình thường: <200 mg/dL",
                 key="chol_mgdl"
             )
-            st.caption(f"≈ {chol/38.67:.2f} mmol/L")
+            st.caption(f"≈ {chol/38.67:.1f} mmol/L")
         
         # LDL
         st.markdown("**LDL Cholesterol**")
         if use_si:
             ldl_input = st.number_input(
                 "LDL Cholesterol (mmol/L)",
-                0.0, 10.0, 2.59, 0.1,
+                0.0, 10.0, 2.6, 0.1,
+                format="%.1f",
                 help="Mục tiêu: <2.6 mmol/L",
                 key="ldl_mmol"
             )
             ldl = ldl_input * 38.67
-            st.caption(f"≈ {ldl:.1f} mg/dL")
+            st.caption(f"≈ {ldl:.0f} mg/dL")
         else:
             ldl = st.number_input(
                 "LDL Cholesterol (mg/dL)",
                 0.0, 300.0, 100.0, 1.0,
+                format="%.0f",
                 help="Mục tiêu: <100 mg/dL",
                 key="ldl_mgdl"
             )
-            st.caption(f"≈ {ldl/38.67:.2f} mmol/L")
+            st.caption(f"≈ {ldl/38.67:.1f} mmol/L")
         
         # HDL
         st.markdown("**HDL Cholesterol**")
         if use_si:
             hdl_input = st.number_input(
                 "HDL Cholesterol (mmol/L)",
-                0.0, 5.0, 1.29, 0.1,
+                0.0, 5.0, 1.3, 0.1,
+                format="%.1f",
                 help="Nam >1.0, Nữ >1.3 mmol/L",
                 key="hdl_mmol"
             )
             hdl = hdl_input * 38.67
-            st.caption(f"≈ {hdl:.1f} mg/dL")
+            st.caption(f"≈ {hdl:.0f} mg/dL")
         else:
             hdl = st.number_input(
                 "HDL Cholesterol (mg/dL)",
                 0.0, 150.0, 50.0, 1.0,
+                format="%.0f",
                 help="Nam >40, Nữ >50 mg/dL",
                 key="hdl_mgdl"
             )
-            st.caption(f"≈ {hdl/38.67:.2f} mmol/L")
+            st.caption(f"≈ {hdl/38.67:.1f} mmol/L")
         
         # Triglycerides
         st.markdown("**Triglycerides**")
         if use_si:
             tg_input = st.number_input(
                 "Triglycerides (mmol/L)",
-                0.0, 15.0, 1.35, 0.1,
+                0.0, 15.0, 1.4, 0.1,
+                format="%.1f",
                 help="Bình thường: <1.7 mmol/L",
                 key="tg_mmol"
             )
             tg = tg_input * 88.57  # Convert to mg/dL for calculations
-            st.caption(f"≈ {tg:.1f} mg/dL")
+            st.caption(f"≈ {tg:.0f} mg/dL")
         else:
             tg = st.number_input(
                 "Triglycerides (mg/dL)",
                 0.0, 1000.0, 120.0, 1.0,
+                format="%.0f",
                 help="Bình thường: <150 mg/dL",
                 key="tg_mgdl"
             )
-            st.caption(f"≈ {tg/88.57:.2f} mmol/L")
+            st.caption(f"≈ {tg/88.57:.1f} mmol/L")
         
         # Calculate ratios
         if hdl > 0:

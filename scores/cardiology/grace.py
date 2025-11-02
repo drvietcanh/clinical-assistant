@@ -79,17 +79,18 @@ def render():
             scr_mgdl = scr_umol / 88.4
         
         # Killip class
+        killip_options = [
+            "I - Không suy tim",
+            "II - S3 hoặc ran ẩm phổi",
+            "III - Phù phổi cấp",
+            "IV - Shock tim"
+        ]
         killip = st.selectbox(
             "**Killip Class**",
-            [
-                "I - Không suy tim",
-                "II - S3 hoặc ran ẩm phổi",
-                "III - Phù phổi cấp",
-                "IV - Shock tim"
-            ],
+            killip_options,
             key="grace_killip"
         )
-        killip_class = int(killip[0])
+        killip_class = killip_options.index(killip) + 1  # Index 0-3 → Class 1-4
         
         # Cardiac arrest
         cardiac_arrest = st.checkbox(

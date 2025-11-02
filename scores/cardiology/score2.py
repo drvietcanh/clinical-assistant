@@ -288,23 +288,26 @@ def render():
         if chol_unit == "mmol/L":
             total_chol_input = st.number_input(
                 "Total Cholesterol (mmol/L)",
-                2.0, 15.0, 5.0, 0.1
+                2.0, 15.0, 5.0, 0.1,
+                format="%.1f"
             )
             total_chol = total_chol_input
         else:
             total_chol_input = st.number_input(
                 "Total Cholesterol (mg/dL)",
-                80.0, 600.0, 200.0, 1.0
+                80.0, 600.0, 200.0, 1.0,
+                format="%.0f"
             )
             total_chol = total_chol_input / 38.67  # Convert to mmol/L
         
-        st.caption(f"💡 Chuyển đổi: {total_chol:.2f} mmol/L = {total_chol * 38.67:.0f} mg/dL")
+        st.caption(f"💡 Chuyển đổi: {total_chol:.1f} mmol/L = {total_chol * 38.67:.0f} mg/dL")
     
     with col4:
         if chol_unit == "mmol/L":
             hdl_chol_input = st.number_input(
                 "HDL Cholesterol (mmol/L)",
                 0.5, 4.0, 1.3, 0.1,
+                format="%.1f",
                 help="Nếu không có, sẽ ước tính"
             )
             hdl_chol = hdl_chol_input
@@ -312,11 +315,12 @@ def render():
             hdl_chol_input = st.number_input(
                 "HDL Cholesterol (mg/dL)",
                 20.0, 150.0, 50.0, 1.0,
+                format="%.0f",
                 help="Nếu không có, sẽ ước tính"
             )
             hdl_chol = hdl_chol_input / 38.67  # Convert to mmol/L
         
-        st.caption(f"💡 Chuyển đổi: {hdl_chol:.2f} mmol/L = {hdl_chol * 38.67:.0f} mg/dL")
+        st.caption(f"💡 Chuyển đổi: {hdl_chol:.1f} mmol/L = {hdl_chol * 38.67:.0f} mg/dL")
     
     st.divider()
     

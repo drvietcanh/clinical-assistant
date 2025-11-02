@@ -53,6 +53,7 @@ def render():
                 max_value=400,
                 value=200,
                 step=5,
+                format="%.0f",
                 key="fram_chol_mgdl"
             )
         else:
@@ -62,6 +63,7 @@ def render():
                 max_value=10.0,
                 value=5.2,
                 step=0.1,
+                format="%.1f",
                 key="fram_chol_mmol"
             )
             total_chol = chol_mmol * 38.67
@@ -75,6 +77,7 @@ def render():
                 max_value=100,
                 value=50,
                 step=5,
+                format="%.0f",
                 key="fram_hdl_mgdl"
             )
         else:
@@ -84,6 +87,7 @@ def render():
                 max_value=2.5,
                 value=1.3,
                 step=0.1,
+                format="%.1f",
                 key="fram_hdl_mmol"
             )
             hdl = hdl_mmol * 38.67

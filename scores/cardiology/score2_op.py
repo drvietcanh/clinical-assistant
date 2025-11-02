@@ -308,17 +308,17 @@ def render():
     
     with col3:
         if chol_unit == "mmol/L":
-            total_chol = st.number_input("Total Cholesterol (mmol/L)", 2.0, 15.0, 5.5, 0.1)
+            total_chol = st.number_input("Total Cholesterol (mmol/L)", 2.0, 15.0, 5.5, 0.1, format="%.1f")
         else:
-            total_chol_mg = st.number_input("Total Cholesterol (mg/dL)", 80.0, 600.0, 210.0, 1.0)
+            total_chol_mg = st.number_input("Total Cholesterol (mg/dL)", 80.0, 600.0, 210.0, 1.0, format="%.0f")
             total_chol = total_chol_mg / 38.67
         st.caption(f"= {total_chol * 38.67:.0f} mg/dL")
     
     with col4:
         if chol_unit == "mmol/L":
-            hdl_chol = st.number_input("HDL Cholesterol (mmol/L)", 0.5, 4.0, 1.4, 0.1)
+            hdl_chol = st.number_input("HDL Cholesterol (mmol/L)", 0.5, 4.0, 1.4, 0.1, format="%.1f")
         else:
-            hdl_chol_mg = st.number_input("HDL Cholesterol (mg/dL)", 20.0, 150.0, 55.0, 1.0)
+            hdl_chol_mg = st.number_input("HDL Cholesterol (mg/dL)", 20.0, 150.0, 55.0, 1.0, format="%.0f")
             hdl_chol = hdl_chol_mg / 38.67
         st.caption(f"= {hdl_chol * 38.67:.0f} mg/dL")
     
