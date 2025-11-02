@@ -128,23 +128,13 @@ def render():
         
         cr_unit = st.radio(
             "Đơn vị:",
-            ["mg/dL", "µmol/L (SI)"],
+            ["µmol/L (SI)", "mg/dL"],
             horizontal=True,
+            index=0,
             key="cr_meld"
         )
         
-        if "mg/dL" in cr_unit:
-            cr = st.number_input(
-                "Creatinine (mg/dL):",
-                min_value=0.1,
-                max_value=15.0,
-                value=1.0,
-                step=0.1,
-                help="Bình thường: 0.7-1.3 mg/dL"
-            )
-            cr_mgdl = cr
-            st.caption(f"≈ {cr * 88.4:.0f} µmol/L")
-        else:
+        if "µmol/L" in cr_unit:
             cr = st.number_input(
                 "Creatinine (µmol/L):",
                 min_value=0.0,
@@ -155,6 +145,17 @@ def render():
             )
             cr_mgdl = cr / 88.4
             st.caption(f"≈ {cr_mgdl:.1f} mg/dL")
+        else:  # mg/dL
+            cr = st.number_input(
+                "Creatinine (mg/dL):",
+                min_value=0.1,
+                max_value=15.0,
+                value=1.0,
+                step=0.1,
+                help="Bình thường: 0.7-1.3 mg/dL"
+            )
+            cr_mgdl = cr
+            st.caption(f"≈ {cr * 88.4:.0f} µmol/L")
         
         # 4. Dialysis
         st.markdown("#### 4. Lọc Máu")

@@ -83,21 +83,13 @@ def render():
         st.markdown("#### Creatinine Máu")
         scr_unit = st.radio(
             "Đơn vị:",
-            ["mg/dL", "µmol/L"],
+            ["µmol/L", "mg/dL"],
             horizontal=True,
+            index=0,
             key="ag_scr_unit"
         )
         
-        if scr_unit == "mg/dL":
-            scr_mgdl = st.number_input(
-                "Creatinine (mg/dL)",
-                min_value=0.1,
-                max_value=15.0,
-                value=1.0,
-                step=0.1,
-                key="ag_scr_mgdl"
-            )
-        else:
+        if scr_unit == "µmol/L":
             scr_umol = st.number_input(
                 "Creatinine (µmol/L)",
                 min_value=10.0,
@@ -107,6 +99,17 @@ def render():
                 key="ag_scr_umol"
             )
             scr_mgdl = scr_umol / 88.4
+            st.caption(f"≈ {scr_mgdl:.2f} mg/dL")
+        else:  # mg/dL
+            scr_mgdl = st.number_input(
+                "Creatinine (mg/dL)",
+                min_value=0.1,
+                max_value=15.0,
+                value=1.0,
+                step=0.1,
+                key="ag_scr_mgdl"
+            )
+            st.caption(f"≈ {scr_mgdl * 88.4:.0f} µmol/L")
         
         # Calculate CrCl using IBW
         crcl = ((140 - age) * dosing_weight) / (72 * scr_mgdl)

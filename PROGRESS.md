@@ -1,8 +1,9 @@
 # 📊 Clinical Assistant - Progress Tracking
 
 **Last Updated:** 2025-01-30  
-**Session Token Usage:** ~60k/90k  
-**Status:** ✅ Active Development
+**Session Token Usage:** ~75k/90k  
+**Status:** ⚠️ Warning - Approaching Limit  
+**Action:** Commit & push before continuing
 
 ---
 

@@ -37,23 +37,13 @@ def render():
         st.markdown("#### Creatinine Máu")
         scr_unit = st.radio(
             "Đơn vị:",
-            ["mg/dL", "µmol/L"],
+            ["µmol/L", "mg/dL"],
             horizontal=True,
+            index=0,
             key="scr_unit_crcl"
         )
         
-        if scr_unit == "mg/dL":
-            scr_input = st.number_input(
-                "Creatinine (mg/dL)",
-                min_value=0.1,
-                max_value=15.0,
-                value=1.0,
-                step=0.1,
-                help="Bình thường: 0.7-1.2 mg/dL",
-                key="scr_mgdl"
-            )
-            scr_mgdl = scr_input
-        else:  # µmol/L
+        if scr_unit == "µmol/L":
             scr_input = st.number_input(
                 "Creatinine (µmol/L)",
                 min_value=10.0,
@@ -64,12 +54,19 @@ def render():
                 key="scr_umol"
             )
             scr_mgdl = scr_input / 88.4  # Convert to mg/dL
-        
-        # Display converted value
-        if scr_unit == "µmol/L":
             st.caption(f"≈ {scr_mgdl:.2f} mg/dL")
-        else:
-            st.caption(f"≈ {scr_mgdl * 88.4:.1f} µmol/L")
+        else:  # mg/dL
+            scr_input = st.number_input(
+                "Creatinine (mg/dL)",
+                min_value=0.1,
+                max_value=15.0,
+                value=1.0,
+                step=0.1,
+                help="Bình thường: 0.7-1.2 mg/dL",
+                key="scr_mgdl"
+            )
+            scr_mgdl = scr_input
+            st.caption(f"≈ {scr_input * 88.4:.0f} µmol/L")
         
         sex = st.radio(
             "Giới tính",
