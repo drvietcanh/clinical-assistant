@@ -63,9 +63,9 @@ with st.sidebar:
     st.info("""
     **Chọn module bên trái** để bắt đầu:
     
-    - 📊 **Scores** - Thang điểm lâm sàng
-    - 💊 **Antibiotics** - Liều kháng sinh
-    - 🔬 **Labs** - Xét nghiệm & giải thích ⭐ NEW
+    - 📊 **Scores** - Thang điểm lâm sàng (110 calculators)
+    - 💊 **Antibiotics** - Liều kháng sinh & TDM
+    - 🔬 **Labs & Calculators** - Xét nghiệm + Tính toán ⭐ INTEGRATED
     - 🫁 **Ventilator** - Cài đặt máy thở
     - 📋 **Protocols** - Phác đồ điều trị
     """)
@@ -121,10 +121,10 @@ modules = [
     {
         "icon": "🔬",
         "title": "Labs",
-        "desc": "9 panels<br/>Unit conversion",
+        "desc": "9 panels + Calculators<br/>Integrated workflow",
         "color": "linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
         "border": "#ff9800",
-        "page": "pages/05_🔬_Labs.py",
+        "page": "pages/05_🔬_Labs_and_Calculators.py",
         "key": "quick_labs"
     },
     {
