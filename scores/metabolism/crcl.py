@@ -435,6 +435,23 @@ def render():
             - 💊 **Điều chỉnh liều thuốc:** Ưu tiên CrCl
             - 🏥 **Phân loại CKD:** Ưu tiên eGFR
             - ⚠️ **Nếu khác biệt lớn:** Cân nhắc cân nặng, tình trạng dinh dưỡng
+            
+            ---
+            
+            ### 📖 Giải Thích Chuyên Sâu
+            
+            **CrCl (Creatinine Clearance - Độ Thanh Thải Creatinine):**
+            - **Định nghĩa:** CrCl là thể tích huyết tương được thanh thải creatinine trong một phút, thể hiện khả năng lọc của thận
+            - **Đơn vị:** mL/min (KHÔNG chuẩn hóa theo BSA)
+            - **Công thức Cockcroft-Gault:** CrCl = [(140 - tuổi) × cân nặng] / (72 × SCr)
+            - **Ưu điểm:** Đơn giản, nhanh, được dùng trong hầu hết hướng dẫn điều chỉnh liều
+            - **Nhược điểm:** Đánh giá quá cao ở béo phì, quá thấp ở suy dinh dưỡng
+            
+            **eGFR (estimated GFR - Tốc Độ Lọc Cầu Thận Ước Tính):**
+            - **Định nghĩa:** eGFR là giá trị ước tính GFR dựa trên các công thức (CKD-EPI, MDRD)
+            - **Đơn vị:** mL/min/1.73m² (chuẩn hóa theo BSA)
+            - **Ưu điểm:** Chuẩn hóa cho phép so sánh giữa các bệnh nhân, tốt cho phân loại CKD
+            - **Nhược điểm:** Cần chuyển đổi sang GFR tuyệt đối để điều chỉnh liều thuốc
             """)
         
         # References

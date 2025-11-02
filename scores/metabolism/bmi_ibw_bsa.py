@@ -425,10 +425,177 @@ def render():
                *Lancet.* 2004;363(9403):157-63.
             """)
     
-    # Quick reference
+    # Quick reference with detailed explanations
+    st.markdown("---")
+    with st.expander("📖 Giải Thích Chuyên Sâu Các Thuật Ngữ", expanded=False):
+        st.markdown("""
+        ### 📏 BMI (Body Mass Index - Chỉ Số Khối Cơ Thể)
+        
+        **Định nghĩa:** BMI là chỉ số đo lường mối quan hệ giữa cân nặng và chiều cao, được sử dụng để đánh giá tình trạng dinh dưỡng và phân loại mức độ béo phì/gầy.
+        
+        **Công thức:** BMI = Cân nặng (kg) / [Chiều cao (m)]²
+        
+        **Phân loại (WHO - Người Châu Âu/Châu Mỹ):**
+        - < 18.5 kg/m²: **Gầy** (Underweight)
+        - 18.5-24.9 kg/m²: **Bình thường** (Normal)
+        - 25.0-29.9 kg/m²: **Thừa cân** (Overweight)
+        - 30.0-34.9 kg/m²: **Béo phì độ I** (Obesity Class I)
+        - 35.0-39.9 kg/m²: **Béo phì độ II** (Obesity Class II)
+        - ≥ 40.0 kg/m²: **Béo phì độ III (béo phì bệnh lý)** (Obesity Class III/Morbid)
+        
+        **Phân loại (Khuyến cáo Châu Á):**
+        - < 18.5 kg/m²: **Gầy**
+        - 18.5-22.9 kg/m²: **Bình thường**
+        - 23.0-24.9 kg/m²: **Thừa cân**
+        - 25.0-29.9 kg/m²: **Béo phì độ I**
+        - ≥ 30.0 kg/m²: **Béo phì độ II**
+        
+        **Tại sao có sự khác biệt?**
+        - Người Châu Á có tỷ lệ mỡ cơ thể cao hơn ở cùng mức BMI
+        - Nguy cơ đái tháo đường và bệnh tim mạch tăng ở mức BMI thấp hơn
+        - WHO khuyến cáo giảm ngưỡng BMI cho người Châu Á
+        
+        **Ứng dụng lâm sàng:**
+        - ✅ Sàng lọc béo phì và suy dinh dưỡng trong cộng đồng
+        - ✅ Đánh giá nguy cơ bệnh tim mạch, đái tháo đường
+        - ✅ Theo dõi hiệu quả điều trị giảm cân/tăng cân
+        - ⚠️ **Hạn chế:** BMI không phân biệt mỡ và cơ → Vận động viên có BMI cao nhưng không béo phì
+        
+        ---
+        
+        ### 🎯 IBW (Ideal Body Weight - Cân Nặng Lý Tưởng)
+        
+        **Định nghĩa:** IBW là cân nặng lý tưởng dựa trên giới tính và chiều cao, được tính toán để đạt được tỷ lệ mỡ cơ thể tối ưu và giảm nguy cơ bệnh tật.
+        
+        **Công thức Devine (1974):**
+        - **Nam:** IBW = 50 kg + 0.91 × (chiều cao cm - 152.4 cm)
+        - **Nữ:** IBW = 45.5 kg + 0.91 × (chiều cao cm - 152.4 cm)
+        
+        **Lịch sử:** Công thức này được phát triển ban đầu để tính liều gentamicin, sau đó được áp dụng rộng rãi cho nhiều loại thuốc.
+        
+        **Cơ sở khoa học:**
+        - Dựa trên dữ liệu từ quần thể người Mỹ trung bình
+        - Giả định tỷ lệ mỡ cơ thể 15-20% (nam) và 20-25% (nữ)
+        - Phù hợp với chiều cao 152-183 cm
+        
+        **Ứng dụng lâm sàng:**
+        - ✅ **Tính liều thuốc:** Aminoglycosides (gentamicin, tobramycin, amikacin), Theophylline, Digoxin
+        - ✅ **Dinh dưỡng:** Tính nhu cầu calo, protein cho bệnh nhân
+        - ✅ **Phẫu thuật:** Ước tính rủi ro gây mê
+        - ⚠️ **Hạn chế:** Không chính xác cho bệnh nhân béo phì nặng hoặc gầy mức độ cao
+        
+        **Ví dụ:**
+        - Nam, cao 170 cm: IBW = 50 + 0.91 × (170 - 152.4) = **66.1 kg**
+        - Nữ, cao 160 cm: IBW = 45.5 + 0.91 × (160 - 152.4) = **52.4 kg**
+        
+        ---
+        
+        ### 📐 BSA (Body Surface Area - Diện Tích Bề Mặt Cơ Thể)
+        
+        **Định nghĩa:** BSA là diện tích bề mặt ngoài của cơ thể, được tính bằng mét vuông (m²). Chỉ số này quan trọng vì nhiều quá trình sinh lý (như trao đổi chất, thải thuốc) tỷ lệ với BSA chứ không phải cân nặng.
+        
+        **Công thức Mosteller (1987) - ⭐ Khuyến nghị:**
+        ```
+        BSA = √[(Cân nặng kg × Chiều cao cm) / 3600]
+        ```
+        
+        **Công thức Du Bois (1916) - Công thức cổ điển:**
+        ```
+        BSA = 0.007184 × (Cân nặng kg)^0.425 × (Chiều cao cm)^0.725
+        ```
+        
+        **Tại sao BSA quan trọng?**
+        - **Trao đổi chất:** Tỷ lệ với BSA, không phải cân nặng
+        - **Lưu lượng tim:** Cardiac Index = Cardiac Output / BSA
+        - **Chức năng thận:** GFR thường được chuẩn hóa theo BSA 1.73 m²
+        - **Liều hóa trị:** Nhiều thuốc được tính theo BSA (mg/m²)
+        
+        **Chuẩn hóa BSA 1.73 m²:**
+        - Đây là BSA trung bình của một người trưởng thành (nam, 70 kg, 170 cm)
+        - eGFR thường được báo cáo dưới dạng mL/min/1.73m²
+        - Cho phép so sánh chức năng thận giữa các bệnh nhân có kích thước khác nhau
+        
+        **Ứng dụng lâm sàng:**
+        - ✅ **Liều hóa trị:** Hầu hết thuốc hóa trị (carboplatin, doxorubicin, v.v.)
+        - ✅ **Chỉ số tim:** Cardiac Index = CO/BSA (bình thường: 2.5-4.0 L/min/m²)
+        - ✅ **Chuẩn hóa eGFR:** Chuyển đổi eGFR chuẩn hóa → GFR tuyệt đối
+        - ✅ **Tính liều một số kháng sinh:** Một số thuốc dùng BSA thay vì cân nặng
+        
+        **Chuyển đổi eGFR:**
+        ```
+        GFR tuyệt đối (mL/min) = eGFR (mL/min/1.73m²) × (BSA thực tế / 1.73)
+        ```
+        
+        **Ví dụ:**
+        - Bệnh nhân: 60 kg, 165 cm
+        - BSA (Mosteller) = √[(60 × 165) / 3600] = **1.66 m²**
+        - eGFR = 60 mL/min/1.73m²
+        - GFR tuyệt đối = 60 × (1.66 / 1.73) = **57.6 mL/min**
+        
+        ---
+        
+        ### ⚖️ ABW (Adjusted Body Weight - Cân Nặng Điều Chỉnh)
+        
+        **Định nghĩa:** ABW là cân nặng được điều chỉnh từ IBW và cân nặng thực tế, được sử dụng để tính liều thuốc ở bệnh nhân béo phì. ABW phản ánh thực tế rằng ở người béo phì, mỡ không tham gia vào phân bố và thải trừ thuốc như cơ và các mô khác.
+        
+        **Công thức:**
+        ```
+        ABW = IBW + 0.4 × (Cân nặng thực tế - IBW)
+        ```
+        
+        **Hệ số 0.4 nghĩa là gì?**
+        - Chỉ 40% khối lượng mỡ thừa được tính vào ABW
+        - Dựa trên nghiên cứu về phân bố và thải trừ thuốc ở người béo phì
+        - Phản ánh: Mỡ có ít máu tưới, ít tham gia vào quá trình chuyển hóa thuốc
+        
+        **Khi nào dùng ABW?**
+        - ✅ BMI > 30 kg/m² (béo phì)
+        - ✅ Cân nặng > 130% IBW
+        - ✅ Tính liều: Vancomycin, một số aminoglycosides, CrCl
+        - ⚠️ Không dùng cho: Theophylline, Digoxin (dùng IBW)
+        
+        **Tại sao cần ABW?**
+        - **Dùng cân nặng thực tế:** → Quá liều (mỡ không phân bố thuốc)
+        - **Dùng IBW:** → Thiếu liều (không đủ hiệu quả)
+        - **Dùng ABW:** → Liều tối ưu (cân bằng giữa hiệu quả và an toàn)
+        
+        **Ví dụ:**
+        - Bệnh nhân: Nam, 170 cm, 100 kg (BMI = 34.6, béo phì)
+        - IBW = 50 + 0.91 × (170 - 152.4) = 66.1 kg
+        - ABW = 66.1 + 0.4 × (100 - 66.1) = **79.6 kg**
+        - Liều vancomycin: Dùng ABW = 79.6 kg (không dùng 100 kg hay 66.1 kg)
+        
+        **Thuốc cần ABW:**
+        - **Vancomycin:** ✅ Bắt buộc dùng ABW khi béo phì
+        - **Aminoglycosides:** Một số nghiên cứu khuyến cáo ABW
+        - **Cockcroft-Gault (CrCl):** Nên dùng ABW thay vì cân nặng thực tế
+        
+        **Thuốc KHÔNG dùng ABW (dùng IBW):**
+        - Theophylline
+        - Digoxin
+        - Một số thuốc tim mạch khác
+        
+        ---
+        
+        ### 📊 So Sánh Tổng Hợp
+        
+        | Chỉ số | Đơn vị | Mục đích | Khi nào dùng |
+        |:-------|:-------|:---------|:-------------|
+        | **BMI** | kg/m² | Sàng lọc béo phì | Đánh giá tình trạng dinh dưỡng, nguy cơ bệnh tật |
+        | **IBW** | kg | Tính liều thuốc cơ bản | Aminoglycosides, Theophylline, Digoxin (người bình thường) |
+        | **BSA** | m² | Tính liều hóa trị, chuẩn hóa eGFR | Hóa trị, Cardiac Index, chuyển đổi eGFR |
+        | **ABW** | kg | Tính liều ở béo phì | Vancomycin, CrCl, một số aminoglycosides (BMI > 30) |
+        
+        **Quy tắc vàng:**
+        1. **Người bình thường (BMI 18.5-25):** Dùng cân nặng thực tế hoặc IBW
+        2. **Béo phì (BMI > 30):** Dùng ABW cho hầu hết thuốc
+        3. **Liều hóa trị:** Luôn dùng BSA
+        4. **Điều chỉnh liều thận:** Dùng GFR tuyệt đối (từ eGFR × BSA/1.73) hoặc CrCl với ABW
+        """)
+    
     st.markdown("---")
     st.info("""
-    💡 **Điểm quan trọng:**
+    💡 **Điểm quan trọng (Tóm tắt):**
     
     **BMI (Body Mass Index):**
     - Bình thường: 18.5-24.9 kg/m² (Châu Á: 18.5-22.9)
