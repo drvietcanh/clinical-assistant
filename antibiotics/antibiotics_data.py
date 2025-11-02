@@ -1488,5 +1488,373 @@ ANTIBIOTICS_DATABASE = {
         "aware_classification": "ACCESS",
         "pregnancy": "C"
     },
+    
+    # ========== BETA-LACTAMS - Penicillin + Beta-lactamase inhibitor ==========
+    "Amoxicillin-Clavulanate": {
+        "group": "Beta-lactam - Penicillin + Beta-lactamase inhibitor",
+        "vietnamese_name": "Amoxicillin-Clavulanate, Augmentin, Amoclav",
+        "administration": ["IV", "PO"],
+        "indications": [
+            "Viêm phổi cộng đồng",
+            "Nhiễm khuẩn đường tiết niệu",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn ổ bụng",
+            "Nhiễm khuẩn răng miệng"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin",
+            "Tiền sử viêm gan do amoxicillin-clavulanate",
+            "Viêm gan đang hoạt động"
+        ],
+        "dosage": {
+            "adult_iv": "1.2g (1g amoxicillin + 0.2g clavulanate) IV mỗi 8 giờ",
+            "adult_iv_severe": "2.2g IV mỗi 8 giờ hoặc 1.2g IV mỗi 6 giờ",
+            "adult_po": "875/125mg PO x 2 lần/ngày hoặc 500/125mg PO x 3 lần/ngày",
+            "pediatric_iv": "30mg/kg (theo amoxicillin) IV mỗi 8 giờ",
+            "pediatric_po": "25-45mg/kg (theo amoxicillin) PO x 2-3 lần/ngày",
+            "notes": "Augmentin. Clavulanate bảo vệ amoxicillin khỏi beta-lactamase. Phổ rộng"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "15_30": "Giảm liều 50%",
+            "under_15": "Giảm liều mạnh hoặc lọc máu"
+        },
+        "side_effects": [
+            "Tiêu chảy (10-15%)",
+            "Phát ban",
+            "Viêm gan (hiếm, do clavulanate)",
+            "Nhiễm nấm Candida",
+            "Buồn nôn, nôn"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ amoxicillin",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Allopurinol: tăng nguy cơ phát ban"
+        ],
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    "Ampicillin-Sulbactam": {
+        "group": "Beta-lactam - Penicillin + Beta-lactamase inhibitor",
+        "vietnamese_name": "Ampicillin-Sulbactam, Unasyn, Ampicillin-Sulbactam",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Nhiễm khuẩn ổ bụng",
+            "Nhiễm khuẩn da và mô mềm",
+            "Viêm phổi",
+            "Nhiễm khuẩn do vi khuẩn kỵ khí",
+            "Nhiễm khuẩn bệnh viện"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin",
+            "Nhiễm mononucleosis (tăng phát ban)"
+        ],
+        "dosage": {
+            "adult_standard": "1.5g (1g ampicillin + 0.5g sulbactam) IV/IM mỗi 6-8 giờ",
+            "adult_severe": "3g IV mỗi 6 giờ",
+            "adult_im": "1.5g IM mỗi 6-8 giờ",
+            "pediatric": "100-200mg/kg/ngày (theo ampicillin) chia 4 lần",
+            "notes": "Sulbactam bảo vệ ampicillin. Tốt chống vi khuẩn kỵ khí"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "1.5g mỗi 12 giờ",
+            "15_30": "1.5g mỗi 24 giờ",
+            "under_15": "1.5g mỗi 24 giờ hoặc lọc máu"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Phát ban (đặc biệt nhiễm mononucleosis)",
+            "Nhiễm nấm Candida",
+            "Viêm tĩnh mạch"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Allopurinol: tăng nguy cơ phát ban"
+        ],
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    # ========== CARBAPENEMS - Imipenem-Cilastatin ==========
+    "Imipenem-Cilastatin": {
+        "group": "Beta-lactam - Carbapenem",
+        "vietnamese_name": "Imipenem-Cilastatin, Primaxin, Tienam",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn bệnh viện nặng",
+            "Nhiễm khuẩn đa kháng",
+            "Nhiễm khuẩn ổ bụng phức tạp",
+            "Nhiễm khuẩn do vi khuẩn kỵ khí",
+            "Viêm phổi bệnh viện"
+        ],
+        "contraindications": [
+            "Dị ứng carbapenem",
+            "Dị ứng penicillin nặng (phản ứng chéo 50%)"
+        ],
+        "dosage": {
+            "adult_standard": "500mg-1g IV mỗi 6-8 giờ",
+            "adult_severe": "1g IV mỗi 6-8 giờ hoặc 500mg IV mỗi 6 giờ",
+            "adult_pseudomonas": "1g IV mỗi 6-8 giờ",
+            "pediatric": "60-100mg/kg/ngày chia 4 lần (max 4g/ngày)",
+            "notes": "Cilastatin bảo vệ imipenem khỏi bị phân hủy bởi dehydropeptidase. Phổ rộng nhất, nguy cơ co giật cao"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "500mg mỗi 8-12 giờ",
+            "15_30": "500mg mỗi 12 giờ",
+            "under_15": "250-500mg mỗi 12-24 giờ hoặc lọc máu"
+        },
+        "side_effects": [
+            "Co giật (2-4%, đặc biệt suy thận, liều cao)",
+            "Tiêu chảy",
+            "Buồn nôn, nôn",
+            "Phát ban",
+            "Giảm bạch cầu (hiếm)"
+        ],
+        "interactions": [
+            "Valproic acid: giảm nồng độ valproic acid",
+            "Ganciclovir: tăng nguy cơ co giật",
+            "Probenecid: không dùng (cilastatin đã ức chế enzyme)"
+        ],
+        "monitoring": "Cảnh báo: Co giật - giảm liều hoặc đổi thuốc nếu có",
+        "aware_classification": "WATCH",
+        "pregnancy": "C"
+    },
+    
+    # ========== LINCOSAMIDES ==========
+    "Clindamycin": {
+        "group": "Lincosamide",
+        "vietnamese_name": "Clindamycin, Cleocin, Clindamycin",
+        "administration": ["IV", "IM", "PO"],
+        "indications": [
+            "Nhiễm khuẩn do vi khuẩn kỵ khí",
+            "Nhiễm khuẩn da và mô mềm",
+            "Viêm phổi do vi khuẩn kỵ khí",
+            "Viêm nội tâm mạc do vi khuẩn kỵ khí",
+            "Nhiễm khuẩn răng miệng",
+            "Viêm mô tế bào"
+        ],
+        "contraindications": [
+            "Dị ứng clindamycin",
+            "Viêm đại tràng giả mạc trước đây"
+        ],
+        "dosage": {
+            "adult_iv": "600-900mg IV mỗi 8 giờ",
+            "adult_iv_severe": "900mg IV mỗi 8 giờ hoặc 600mg IV mỗi 6 giờ",
+            "adult_im": "600mg IM mỗi 12 giờ",
+            "adult_po": "150-450mg PO x 3-4 lần/ngày",
+            "pediatric_iv": "20-40mg/kg/ngày chia 3-4 lần (max 4.5g/ngày)",
+            "pediatric_po": "10-25mg/kg/ngày chia 3-4 lần",
+            "notes": "Tốt chống vi khuẩn kỵ khí, đặc biệt Bacteroides. Nguy cơ viêm đại tràng giả mạc (C. difficile)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "15_30": "Không đổi",
+            "under_15": "Không đổi (thải qua gan)"
+        },
+        "side_effects": [
+            "Viêm đại tràng giả mạc (C. difficile) - nguy hiểm",
+            "Tiêu chảy",
+            "Phát ban",
+            "Viêm tĩnh mạch (IV)",
+            "Đau tại chỗ tiêm (IM)"
+        ],
+        "interactions": [
+            "Neuromuscular blocking agents: tăng tê liệt",
+            "Erythromycin: đối kháng (không dùng chung)"
+        ],
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    # ========== MACROLIDES - Erythromycin IV ==========
+    "Erythromycin": {
+        "group": "Macrolide",
+        "vietnamese_name": "Erythromycin, Erythromycin, Erythrocin",
+        "administration": ["IV", "PO"],
+        "indications": [
+            "Nhiễm khuẩn do Chlamydia, Mycoplasma, Legionella",
+            "Nhiễm khuẩn đường hô hấp",
+            "Viêm phổi cộng đồng",
+            "Nhiễm khuẩn da và mô mềm",
+            "Viêm nội tâm mạc do Streptococcus"
+        ],
+        "contraindications": [
+            "Dị ứng erythromycin",
+            "Rối loạn nhịp tim (QT kéo dài)",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_iv": "1-4g IV chia 4 lần/ngày",
+            "adult_iv_standard": "500mg-1g IV mỗi 6 giờ",
+            "adult_po": "250-500mg PO x 2-4 lần/ngày",
+            "pediatric_iv": "20-50mg/kg/ngày chia 4 lần",
+            "pediatric_po": "30-50mg/kg/ngày chia 3-4 lần",
+            "notes": "Macrolide đầu tiên. Nguy cơ viêm tĩnh mạch cao (IV), QT kéo dài, tương tác nhiều"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "15_30": "Không đổi",
+            "under_15": "Không đổi (thải qua gan)"
+        },
+        "side_effects": [
+            "Viêm tĩnh mạch (IV - rất thường gặp)",
+            "QT kéo dài, rối loạn nhịp tim",
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Rối loạn thính giác (liều cao)"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Cyclosporine: tăng nồng độ cyclosporine",
+            "Digoxin: tăng nồng độ digoxin",
+            "Theophylline: tăng nồng độ theophylline",
+            "Statins: tăng nguy cơ tiêu cơ vân"
+        ],
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    # ========== OXAZOLIDINONES ==========
+    "Linezolid": {
+        "group": "Oxazolidinone",
+        "vietnamese_name": "Linezolid, Zyvox, Linezolid",
+        "administration": ["IV", "PO"],
+        "indications": [
+            "Nhiễm khuẩn do MRSA (da, mô mềm, phổi)",
+            "Nhiễm khuẩn do VRE",
+            "Viêm phổi bệnh viện do MRSA",
+            "Nhiễm khuẩn da và mô mềm do MRSA"
+        ],
+        "contraindications": [
+            "Dị ứng linezolid",
+            "Dùng MAOIs (cách 2 tuần)",
+            "Hội chứng serotonin (khi dùng SSRI/SNRI)"
+        ],
+        "dosage": {
+            "adult_iv": "600mg IV mỗi 12 giờ",
+            "adult_po": "600mg PO x 2 lần/ngày",
+            "adult_severe": "600mg IV mỗi 12 giờ (không tăng liều)",
+            "pediatric_iv": "10mg/kg IV mỗi 8-12 giờ (max 600mg/liều)",
+            "pediatric_po": "10mg/kg PO x 2 lần/ngày (max 600mg/liều)",
+            "notes": "Thuốc mới, đắt tiền. Chống MRSA/VRE. CẢNH BÁO: Nguy cơ ức chế tủy xương (giảm tiểu cầu) - không dùng >28 ngày"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "15_30": "Không đổi",
+            "under_15": "Không đổi (thải qua gan)"
+        },
+        "side_effects": [
+            "Giảm tiểu cầu (15-30% nếu dùng >14 ngày)",
+            "Giảm bạch cầu (hiếm)",
+            "Viêm dây thần kinh ngoại vi (dùng kéo dài)",
+            "Tăng lactate máu (hiếm nhưng nặng)",
+            "Buồn nôn, nôn"
+        ],
+        "interactions": [
+            "SSRI/SNRI: hội chứng serotonin",
+            "MAOIs: nguy hiểm",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Tyramine-rich foods: tăng huyết áp"
+        ],
+        "monitoring": "Bắt buộc: Huyết đồ 2 lần/tuần, lactate máu nếu có triệu chứng, ngừng nếu giảm tiểu cầu",
+        "aware_classification": "RESERVE",
+        "pregnancy": "C"
+    },
+    
+    # ========== STREPTOGRAMINS ==========
+    "Quinupristin-Dalfopristin": {
+        "group": "Streptogramin",
+        "vietnamese_name": "Quinupristin-Dalfopristin, Synercid, Quinupristin-Dalfopristin",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn do VRE (Enterococcus faecium)",
+            "Nhiễm khuẩn da và mô mềm do MRSA",
+            "Nhiễm khuẩn do MRSA khi vancomycin thất bại"
+        ],
+        "contraindications": [
+            "Dị ứng streptogramin",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_standard": "7.5mg/kg IV mỗi 8-12 giờ",
+            "adult_severe": "7.5mg/kg IV mỗi 8 giờ",
+            "pediatric": "7.5mg/kg IV mỗi 8-12 giờ",
+            "notes": "Thuốc mới, đắt tiền. Chỉ hoạt động chống Enterococcus faecium (VRE), không hoạt động chống E. faecalis. Phải truyền qua central line"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "15_30": "Không đổi",
+            "under_15": "Không đổi (thải qua gan)"
+        },
+        "side_effects": [
+            "Viêm tĩnh mạch (thường gặp - phải dùng central line)",
+            "Đau khớp, đau cơ (arthralgia, myalgia)",
+            "Phát ban",
+            "Tăng bilirubin, transaminase",
+            "Buồn nôn, nôn"
+        ],
+        "interactions": [
+            "Cyclosporine: tăng nồng độ cyclosporine",
+            "CYP3A4 substrates: tăng nồng độ"
+        ],
+        "aware_classification": "RESERVE",
+        "pregnancy": "B"
+    },
+    
+    # ========== POLYPEPTIDES - Colistin ==========
+    "Colistin": {
+        "group": "Polypeptide",
+        "vietnamese_name": "Colistin, Colistin, Colistimethate",
+        "administration": ["IV", "IM", "Inhalation"],
+        "indications": [
+            "Nhiễm khuẩn do MDR/XDR Gram âm (Pseudomonas, Acinetobacter)",
+            "Viêm phổi bệnh viện do MDR",
+            "Nhiễm khuẩn huyết do MDR",
+            "Khi không còn lựa chọn khác"
+        ],
+        "contraindications": [
+            "Dị ứng colistin",
+            "Bệnh nhược cơ (myasthenia gravis)",
+            "Suy thận nặng (phải điều chỉnh liều chặt chẽ)"
+        ],
+        "dosage": {
+            "adult_iv_load": "6-9 triệu đơn vị (MU) IV loading, sau đó",
+            "adult_iv_maintenance": "4.5-6 MU IV mỗi 12 giờ (theo CrCl)",
+            "adult_iv_cmg": "2.5-5mg/kg (theo colistin base) IV mỗi 12 giờ",
+            "adult_inhalation": "75-150mg (1-2 MU) x 2-3 lần/ngày",
+            "pediatric_iv": "5mg/kg/ngày (theo colistin base) chia 2-3 lần",
+            "notes": "Thuốc độc, chỉ dùng cuối cùng khi không còn lựa chọn. Phải tính liều theo CBA (colistin base activity) hoặc MU. Monitor độc thận/độc thần kinh chặt chẽ"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "15_30": "Giảm liều 50-75%",
+            "under_15": "Giảm liều mạnh hoặc tránh"
+        },
+        "side_effects": [
+            "Độc thận (30-50%) - nguy hiểm",
+            "Độc thần kinh (paresthesia, rối loạn cảm giác, yếu cơ)",
+            "Co giật (hiếm)",
+            "Suy hô hấp (neuromuscular blockade)",
+            "Viêm tĩnh mạch"
+        ],
+        "interactions": [
+            "Aminoglycosides: tăng độc thận",
+            "Neuromuscular blocking agents: tăng tê liệt",
+            "Diuretics: tăng độc thận"
+        ],
+        "monitoring": "Bắt buộc: Creatinine hàng ngày, xét nghiệm thần kinh, cân nhắc TDM",
+        "aware_classification": "RESERVE",
+        "pregnancy": "C"
+    },
 }
 
