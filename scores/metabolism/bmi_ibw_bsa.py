@@ -95,10 +95,10 @@ def render():
         
         weight = st.number_input(
             "Cân nặng (kg)",
-            min_value=20.0,
-            max_value=300.0,
-            value=70.0,
-            step=0.5,
+            min_value=20,
+            max_value=300,
+            value=70,
+            step=1,
             help="Cân nặng hiện tại"
         )
     
@@ -197,7 +197,7 @@ def render():
             st.metric(
                 "IBW",
                 f"{ibw:.1f} kg",
-                delta=f"{weight - ibw:+.1f} kg so với actual",
+                delta=f"{weight - ibw:+.0f} kg so với actual",
                 help="Ideal Body Weight (Devine)"
             )
         
@@ -214,8 +214,8 @@ def render():
             st.info(f"""
             **Adjusted Body Weight (ABW):** {abw:.1f} kg
             
-            - Cân nặng thực tế **{weight:.1f} kg** cao hơn IBW **{ibw:.1f} kg**
-            - ABW = {ibw:.1f} + 0.4 × ({weight:.1f} - {ibw:.1f}) = **{abw:.1f} kg**
+            - Cân nặng thực tế **{weight:.0f} kg** cao hơn IBW **{ibw:.1f} kg**
+            - ABW = {ibw:.1f} + 0.4 × ({weight:.0f} - {ibw:.1f}) = **{abw:.1f} kg**
             - Dùng ABW cho: CrCl (béo phì), một số thuốc
             """)
         
@@ -229,8 +229,8 @@ def render():
         **1. BMI (Body Mass Index):**
         ```
         BMI = Cân nặng / Chiều cao²
-        BMI = {weight} / ({height_m:.2f})²
-        BMI = {weight} / {height_m**2:.2f}
+        BMI = {weight:.0f} / ({height_m:.2f})²
+        BMI = {weight:.0f} / {height_m**2:.2f}
         BMI = {bmi:.1f} kg/m²
         ```
         
@@ -246,8 +246,8 @@ def render():
         **3. BSA (Body Surface Area - Mosteller):**
         ```
         BSA = √[(Cân nặng × Chiều cao) / 3600]
-        BSA = √[({weight} × {height_cm}) / 3600]
-        BSA = √[{weight * height_cm} / 3600]
+        BSA = √[({weight:.0f} × {height_cm}) / 3600]
+        BSA = √[{weight * height_cm:.0f} / 3600]
         BSA = √{(weight * height_cm) / 3600:.2f}
         BSA = {bsa_mosteller:.2f} m²
         ```
@@ -284,7 +284,7 @@ def render():
             
             **Thông tin:**
             - Chiều cao: {height_cm} cm
-            - Cân nặng: {weight} kg
+            - Cân nặng: {weight:.0f} kg
             - BMI: {bmi:.1f}
             - IBW: {ibw:.1f} kg
             - BSA: {bsa_mosteller:.2f} m²
@@ -294,7 +294,7 @@ def render():
             
             ### 1. Điều chỉnh liều thuốc:
             
-            **Dựa trên cân nặng THỰC TẾ ({weight} kg):**
+            **Dựa trên cân nặng THỰC TẾ ({weight:.0f} kg):**
             - Heparin, LMWH
             - Propofol, Succinylcholine
             - Hầu hết thuốc gây mê
@@ -363,9 +363,9 @@ def render():
                 
                 **Để đạt BMI 18.5-24.9 (bình thường):**
                 
-                - **Cân nặng mục tiêu:** {target_weight_low:.1f} - {target_weight_high:.1f} kg
-                - **Cân nặng hiện tại:** {weight:.1f} kg
-                - **Cần {"tăng" if weight < target_weight_low else "giảm"}:** {abs(weight - (target_weight_low if weight < target_weight_low else target_weight_high)):.1f} kg
+                - **Cân nặng mục tiêu:** {target_weight_low:.0f} - {target_weight_high:.0f} kg
+                - **Cân nặng hiện tại:** {weight:.0f} kg
+                - **Cần {"tăng" if weight < target_weight_low else "giảm"}:** {abs(weight - (target_weight_low if weight < target_weight_low else target_weight_high)):.0f} kg
                 
                 ---
                 

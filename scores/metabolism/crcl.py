@@ -95,10 +95,10 @@ def render():
         
         weight = st.number_input(
             "Cân nặng (kg)",
-            min_value=20.0,
-            max_value=300.0,
-            value=70.0,
-            step=0.5,
+            min_value=20,
+            max_value=300,
+            value=70,
+            step=1,
             help="Cân nặng thực tế của bệnh nhân"
         )
     
@@ -120,7 +120,7 @@ def render():
                 step=1.0,
                 help="Bình thường: Nam 62-106, Nữ 44-80 µmol/L"
             )
-            st.caption(f"💡 = {creatinine / 88.4:.2f} mg/dL")
+            st.caption(f"💡 = {creatinine / 88.4:.1f} mg/dL")
         else:
             creatinine = st.number_input(
                 "Creatinine (mg/dL)",
@@ -163,7 +163,7 @@ def render():
         **Tính toán:**
         - IBW (Ideal Body Weight): **{ibw:.1f} kg**
         - ABW (Adjusted Body Weight): **{abw:.1f} kg**
-        - Sẽ dùng ABW thay vì cân nặng thực tế
+        - Sẽ dùng ABW thay vì cân nặng thực tế ({weight:.0f} kg)
         """)
         
         weight_to_use = abw
@@ -229,8 +229,8 @@ def render():
         st.markdown(f"""
         **Công thức Cockcroft-Gault:**
         ```
-        CrCl = [(140 - {age}) × {weight_to_use:.1f}] / (72 × {creatinine_mg:.2f})
-        CrCl = [{140 - age} × {weight_to_use:.1f}] / {72 * creatinine_mg:.2f}
+        CrCl = [(140 - {age}) × {weight_to_use:.0f}] / (72 × {creatinine_mg:.1f})
+        CrCl = [{140 - age} × {weight_to_use:.0f}] / {72 * creatinine_mg:.1f}
         CrCl = {((140 - age) * weight_to_use) / (72 * creatinine_mg):.1f} mL/min
         ```
         """)
