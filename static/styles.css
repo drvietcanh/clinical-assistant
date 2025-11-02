@@ -1,0 +1,44 @@
+/* Clinical Assistant - Custom Styles */
+
+/* Main title */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 0;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0;
+}
+
+/* Card-like containers */
+.stAlert {
+    border-radius: 10px;
+}
+
+/* Metrics */
+[data-testid="stMetricValue"] {
+    font-size: 2rem;
+}
+
+/* Buttons */
+.stButton>button {
+    width: 100%;
+    border-radius: 5px;
+    height: 3em;
+    font-weight: 600;
+}
+
+/* Hide Streamlit branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #f0f2f6;
+}
+

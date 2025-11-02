@@ -5,6 +5,7 @@ All emergency and ICU calculators organized by individual files
 
 from .qsofa import render as render_qsofa
 from .sofa import render as render_sofa
+from .sofa2 import render as render_sofa2
 from .apache2 import render as render_apache2
 from .saps2 import render as render_saps2
 from .mods import render as render_mods
@@ -22,6 +23,7 @@ def render_emergency_calculator(calculator_id):
     calculators = {
         "qSOFA": render_qsofa,
         "SOFA": render_sofa,
+        "SOFA-2 (2025)": render_sofa2,
         "APACHE II": render_apache2,
         "SAPS II": render_saps2,
         "MODS": render_mods,
@@ -38,6 +40,7 @@ __all__ = [
     'render_emergency_calculator',
     'render_qsofa',
     'render_sofa',
+    'render_sofa2',
     'render_apache2',
     'render_saps2',
     'render_mods',
