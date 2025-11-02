@@ -276,7 +276,7 @@ def render():
     
     # Renal
     st.markdown("#### 2️⃣ Thận")
-    creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1)
+    creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
     st.caption("💡 μmol/L ÷ 88.4 = mg/dL")
     
     st.divider()

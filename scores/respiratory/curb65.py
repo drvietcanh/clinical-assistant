@@ -25,37 +25,37 @@ def render():
         st.markdown("#### **U** - Urea")
         urea_unit = st.radio(
             "Đơn vị:",
-            ["mg/dL", "mmol/L"],
+            ["mmol/L", "mg/dL"],
             horizontal=True,
+            index=0,
             key="urea_unit_curb65"
         )
         
-        if urea_unit == "mg/dL":
-            urea_input = st.number_input(
-                "Urea (mg/dL)",
-                min_value=0.0,
-                max_value=200.0,
-                value=20.0,
-                step=1.0,
-                help="BUN (Blood Urea Nitrogen)",
-                key="urea_mgdl"
-            )
-            urea_mmol = urea_input / 2.8  # Convert to mmol/L
-        else:
+        if urea_unit == "mmol/L":
             urea_input = st.number_input(
                 "Urea (mmol/L)",
                 min_value=0.0,
                 max_value=70.0,
                 value=7.0,
                 step=0.5,
+                format="%.1f",
+                help="Bình thường: 2.5-7.1 mmol/L",
                 key="urea_mmol"
             )
             urea_mmol = urea_input
-        
-        # Display converted value
-        if urea_unit == "mmol/L":
             st.caption(f"≈ {urea_mmol * 2.8:.1f} mg/dL")
         else:
+            urea_input = st.number_input(
+                "Urea (mg/dL)",
+                min_value=0.0,
+                max_value=200.0,
+                value=20.0,
+                step=1.0,
+                format="%.0f",
+                help="BUN (Blood Urea Nitrogen)",
+                key="urea_mgdl"
+            )
+            urea_mmol = urea_input / 2.8  # Convert to mmol/L
             st.caption(f"≈ {urea_mmol:.1f} mmol/L")
         
         urea_high = urea_mmol > 7.0  # >7 mmol/L (>20 mg/dL)

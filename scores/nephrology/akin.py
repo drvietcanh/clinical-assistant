@@ -131,9 +131,9 @@ def render():
     
     with col1:
         st.markdown("#### Creatinine")
-        scr_baseline = st.number_input("SCr Baseline (mg/dL)", 0.0, 20.0, 1.0, 0.1)
-        scr_current = st.number_input("SCr Hiện Tại (mg/dL)", 0.0, 20.0, 1.5, 0.1)
-        scr_increase_48h = st.number_input("SCr Tăng trong 48h (mg/dL)", 0.0, 10.0, 0.0, 0.1)
+        scr_baseline = st.number_input("SCr Baseline (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
+        scr_current = st.number_input("SCr Hiện Tại (mg/dL)", 0.0, 20.0, 1.5, 0.1, format="%.1f")
+        scr_increase_48h = st.number_input("SCr Tăng trong 48h (mg/dL)", 0.0, 10.0, 0.0, 0.1, format="%.1f")
         on_rrt = st.checkbox("Đang chạy thận (RRT)")
     
     with col2:

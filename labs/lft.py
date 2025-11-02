@@ -92,7 +92,7 @@ def render():
                 st.caption("✓ Ratio 1-2")
     
     with col2:
-        st.markdown("#### Interpretation")
+        st.markdown("#### 📊 Giải Thích")
         
         results = {
             "ALT": alt,
@@ -117,22 +117,22 @@ def render():
     
     # Patterns
     st.markdown("---")
-    with st.expander("📊 Common LFT Patterns"):
+    with st.expander("📊 Các Mẫu LFT Thường Gặp"):
         st.markdown("""
-        **Hepatocellular Pattern (ALT, AST ⬆️⬆️):**
-        - Viral hepatitis (A, B, C)
-        - Drug-induced (acetaminophen, statins)
-        - Ischemic hepatitis
-        - Autoimmune hepatitis
+        **Mẫu Tổn Thương Tế Bào Gan (ALT, AST ⬆️⬆️):**
+        - Viêm gan virus (A, B, C)
+        - Do thuốc (acetaminophen, statin)
+        - Viêm gan thiếu máu cục bộ
+        - Viêm gan tự miễn
         
-        **Cholestatic Pattern (ALP, Bilirubin ⬆️⬆️):**
-        - Bile duct obstruction
-        - Primary biliary cholangitis
-        - Drugs (antibiotics, steroids)
-        - Infiltrative diseases
+        **Mẫu Ứ Mật (ALP, Bilirubin ⬆️⬆️):**
+        - Tắc đường mật
+        - Xơ đường mật nguyên phát
+        - Do thuốc (kháng sinh, steroid)
+        - Bệnh thâm nhiễm
         
-        **Mixed Pattern (All elevated):**
-        - Sepsis
-        - CHF with liver congestion
-        - Cirrhosis
+        **Mẫu Hỗn Hợp (Tất cả tăng cao):**
+        - Nhiễm khuẩn huyết
+        - Suy tim với ứ đọng gan
+        - Xơ gan
         """)

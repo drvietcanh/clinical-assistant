@@ -181,10 +181,11 @@ def render():
                 max_value=1000.0,
                 value=88.0,
                 step=1.0,
+                format="%.1f",
                 help="Giá trị bình thường: 60-110 µmol/L"
             )
             creatinine = round(cre_input / 88.4, 2)  # Convert to mg/dL
-            st.caption(f"≈ {creatinine} mg/dL")
+            st.caption(f"≈ {creatinine:.1f} mg/dL")
         else:
             creatinine = st.number_input(
                 "Creatinine (mg/dL):",
@@ -192,9 +193,10 @@ def render():
                 max_value=15.0,
                 value=1.0,
                 step=0.1,
+                format="%.1f",
                 help="Giá trị bình thường: 0.7-1.3 mg/dL"
             )
-            st.caption(f"≈ {round(creatinine * 88.4, 1)} µmol/L")
+            st.caption(f"≈ {round(creatinine * 88.4, 1):.0f} µmol/L")
         
         st.markdown("---")
         

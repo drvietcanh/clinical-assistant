@@ -46,6 +46,7 @@ def render():
             max_value=180.0,
             value=140.0,
             step=1.0,
+            format="%.1f",
             help="Bình thường: 135-145 mEq/L"
         )
         
@@ -65,6 +66,7 @@ def render():
                 max_value=20.0,
                 value=1.5,
                 step=0.1,
+                format="%.1f",
                 help="Bình thường: 0.7-1.3 mg/dL"
             )
             p_cr_mgdl = p_cr
@@ -76,6 +78,7 @@ def render():
                 max_value=1800.0,
                 value=133.0,
                 step=5.0,
+                format="%.1f",
                 help="Bình thường: 62-115 µmol/L"
             )
             p_cr_mgdl = p_cr / 88.4
@@ -91,6 +94,7 @@ def render():
             max_value=300.0,
             value=20.0,
             step=1.0,
+            format="%.1f",
             help="Random urine sample"
         )
         
@@ -110,6 +114,7 @@ def render():
                 max_value=500.0,
                 value=50.0,
                 step=5.0,
+                format="%.1f",
                 help="Varies widely"
             )
             u_cr_mgdl = u_cr
@@ -121,6 +126,7 @@ def render():
                 max_value=50.0,
                 value=4.4,
                 step=0.5,
+                format="%.1f",
                 help="Varies widely"
             )
             u_cr_mgdl = u_cr * 11.3

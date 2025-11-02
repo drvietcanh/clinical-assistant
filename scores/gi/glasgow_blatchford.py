@@ -112,33 +112,36 @@ def render():
         st.markdown("#### 1. Urea (BUN)")
         bun_unit = st.radio(
             "Đơn vị:",
-            ["mg/dL", "mmol/L (SI)"],
+            ["mmol/L (SI)", "mg/dL"],
             horizontal=True,
+            index=0,
             key="bun_gbs"
         )
         
-        if "mg/dL" in bun_unit:
+        if "mmol/L" in bun_unit:
+            bun_mmol = st.number_input(
+                "BUN (mmol/L):",
+                min_value=0.0,
+                max_value=70.0,
+                value=5.0,
+                step=0.1,
+                format="%.1f",
+                help="Bình thường: 2.5-7.1 mmol/L"
+            )
+            bun_mgdl = bun_mmol * 2.8
+            st.caption(f"≈ {bun_mgdl:.1f} mg/dL")
+        else:
             bun = st.number_input(
                 "BUN (mg/dL):",
                 min_value=0.0,
                 max_value=200.0,
                 value=15.0,
                 step=1.0,
+                format="%.0f",
                 help="Bình thường: 7-20 mg/dL"
             )
             bun_mgdl = bun
             st.caption(f"≈ {bun / 2.8:.1f} mmol/L")
-        else:
-            bun = st.number_input(
-                "Urea (mmol/L):",
-                min_value=0.0,
-                max_value=70.0,
-                value=5.0,
-                step=0.5,
-                help="Bình thường: 2.5-7.1 mmol/L"
-            )
-            bun_mgdl = bun * 2.8
-            st.caption(f"≈ {bun_mgdl:.0f} mg/dL")
         
         # Hemoglobin
         st.markdown("#### 2. Hemoglobin")

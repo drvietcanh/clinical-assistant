@@ -430,6 +430,7 @@ def render():
             max_value=20.0,
             value=1.0,
             step=0.1,
+            format="%.1f",
             help="Creatinine cơ bản (trước khi bệnh). Nếu không biết, ước tính từ GFR = 75 mL/min"
         )
     
@@ -440,6 +441,7 @@ def render():
             max_value=20.0,
             value=1.5,
             step=0.1,
+            format="%.1f",
             help="Creatinine hiện tại của bệnh nhân"
         )
     
@@ -450,6 +452,7 @@ def render():
             max_value=10.0,
             value=0.0,
             step=0.1,
+            format="%.1f",
             help="Mức tăng creatinine trong 48 giờ qua"
         )
     

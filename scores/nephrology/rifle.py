@@ -122,8 +122,8 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        scr_baseline = st.number_input("SCr Baseline (mg/dL)", 0.0, 20.0, 1.0, 0.1)
-        scr_current = st.number_input("SCr Hiện Tại (mg/dL)", 0.0, 20.0, 1.5, 0.1)
+        scr_baseline = st.number_input("SCr Baseline (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
+        scr_current = st.number_input("SCr Hiện Tại (mg/dL)", 0.0, 20.0, 1.5, 0.1, format="%.1f")
         gfr_decrease_percent = st.number_input("GFR Giảm (%)", 0.0, 100.0, 0.0, 1.0)
     
     with col2:

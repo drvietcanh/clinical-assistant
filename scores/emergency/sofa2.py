@@ -624,7 +624,7 @@ def render():
     
     col5, col6 = st.columns(2)
     with col5:
-        creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1)
+        creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
         st.caption("💡 μmol/L ÷ 88.4 = mg/dL")
     with col6:
         urine_output = st.number_input("Nước tiểu 24h (mL)", 0.0, 5000.0, 1500.0, 10.0)

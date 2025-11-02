@@ -320,6 +320,7 @@ def render():
                 max_value=2000.0,
                 value=88.0,
                 step=1.0,
+                format="%.1f",
                 help="Bình thường: Nam 62-106, Nữ 44-80 µmol/L"
             )
             st.caption(f"💡 = {creatinine / 88.4:.1f} mg/dL")
@@ -330,6 +331,7 @@ def render():
                 max_value=25.0,
                 value=1.0,
                 step=0.1,
+                format="%.1f",
                 help="Bình thường: Nam 0.7-1.2, Nữ 0.5-0.9 mg/dL"
             )
             st.caption(f"💡 = {creatinine * 88.4:.0f} µmol/L")
@@ -746,10 +748,172 @@ def render():
                and kidney function estimating equations. Am J Kidney Dis. 2009;54(1):33-42.
             """)
     
-    # Quick guide
+    # Quick guide with detailed explanations
+    st.markdown("---")
+    with st.expander("📖 Giải Thích Chuyên Sâu Các Thuật Ngữ", expanded=False):
+        st.markdown("""
+        ### 🧪 eGFR (estimated Glomerular Filtration Rate - Tốc Độ Lọc Cầu Thận Ước Tính)
+        
+        **Định nghĩa:** eGFR là giá trị ước tính tốc độ lọc cầu thận (GFR) dựa trên các công thức tính toán, không cần đo trực tiếp. GFR là thể tích huyết tương được lọc qua cầu thận trong một đơn vị thời gian (thường là mL/min).
+        
+        **Đơn vị:**
+        - **eGFR chuẩn hóa:** mL/min/1.73m² (chuẩn hóa theo BSA 1.73 m²)
+        - **GFR tuyệt đối:** mL/min (không chuẩn hóa)
+        
+        **Tại sao chuẩn hóa theo BSA 1.73 m²?**
+        - Cho phép so sánh chức năng thận giữa các bệnh nhân có kích thước khác nhau
+        - 1.73 m² là BSA trung bình của người trưởng thành (nam, 70 kg, 170 cm)
+        - Giúp phân loại CKD chính xác hơn, không bị ảnh hưởng bởi cân nặng
+        
+        **Các công thức eGFR:**
+        
+        **1. CKD-EPI (2009) - ⭐ Khuyến nghị hàng đầu:**
+        - Phát triển bởi Chronic Kidney Disease Epidemiology Collaboration
+        - Chính xác hơn MDRD, đặc biệt ở eGFR > 60 mL/min/1.73m²
+        - Được KDIGO, FDA, và nhiều hướng dẫn quốc tế khuyến cáo
+        - Công thức phức tạp, dựa trên: Creatinine, tuổi, giới tính, chủng tộc
+        
+        **2. MDRD (1999) - Công thức cũ:**
+        - Modification of Diet in Renal Disease Study
+        - Chính xác ở eGFR < 60, nhưng kém chính xác ở eGFR cao
+        - Vẫn được một số lab sử dụng, nhưng đang dần thay thế bởi CKD-EPI
+        
+        **3. Cystatin C-based eGFR (2012):**
+        - Dựa trên Cystatin C (protein ổn định hơn Creatinine)
+        - Không bị ảnh hưởng bởi khối cơ, dinh dưỡng
+        - Tốt cho: Người gầy, suy dinh dưỡng, bệnh nhân có khối cơ bất thường
+        
+        **Khi nào dùng eGFR?**
+        - ✅ **Chẩn đoán và phân loại CKD:** Theo KDIGO Guidelines
+        - ✅ **Theo dõi tiến triển bệnh thận mạn:** So sánh giữa các thời điểm
+        - ✅ **Nghiên cứu và báo cáo:** Dữ liệu chuẩn hóa dễ so sánh
+        - ⚠️ **KHÔNG dùng trực tiếp cho điều chỉnh liều thuốc:** Cần chuyển sang GFR tuyệt đối
+        
+        ---
+        
+        ### 🩸 CrCl (Creatinine Clearance - Độ Thanh Thải Creatinine)
+        
+        **Định nghĩa:** CrCl là tốc độ thải trừ creatinine từ máu qua thận, được tính bằng công thức Cockcroft-Gault hoặc đo trực tiếp từ nước tiểu 24 giờ.
+        
+        **Công thức Cockcroft-Gault (1976):**
+        ```
+        CrCl (nam) = [(140 - tuổi) × cân nặng (kg)] / (72 × SCr mg/dL)
+        CrCl (nữ) = CrCl (nam) × 0.85
+        ```
+        
+        **Đơn vị:** mL/min (KHÔNG chuẩn hóa theo BSA)
+        
+        **Ưu điểm:**
+        - Đơn giản, dễ tính toán tại giường bệnh
+        - Được sử dụng trong hầu hết hướng dẫn điều chỉnh liều thuốc
+        - Tốt cho bệnh nhân có cân nặng bình thường
+        
+        **Nhược điểm:**
+        - Đánh giá quá cao ở bệnh nhân béo phì (mỡ không sản xuất creatinine)
+        - Đánh giá quá thấp ở bệnh nhân suy dinh dưỡng (khối cơ giảm)
+        - Kém chính xác ở người cao tuổi, bệnh nhân có khối cơ bất thường
+        
+        **Khi nào dùng CrCl?**
+        - ✅ **Điều chỉnh liều thuốc:** Hầu hết hướng dẫn dựa trên CrCl
+        - ✅ **Béo phì:** Cockcroft-Gault với ABW (Adjusted Body Weight)
+        - ✅ **Tính toán nhanh:** Không cần BSA
+        
+        ---
+        
+        ### 🔄 GFR Tuyệt Đối vs eGFR Chuẩn Hóa
+        
+        **eGFR chuẩn hóa (mL/min/1.73m²):**
+        - Đã được điều chỉnh để bệnh nhân có BSA = 1.73 m²
+        - Dùng cho: Chẩn đoán CKD, phân loại giai đoạn
+        - **Ví dụ:** eGFR = 60 mL/min/1.73m² → CKD G3a
+        
+        **GFR tuyệt đối (mL/min):**
+        - Giá trị thực tế, không điều chỉnh theo BSA
+        - Dùng cho: Điều chỉnh liều thuốc
+        - **Tính từ eGFR:** GFR tuyệt đối = eGFR × (BSA thực tế / 1.73)
+        
+        **Ví dụ cụ thể:**
+        - Bệnh nhân A: 50 kg, 160 cm, BSA = 1.50 m²
+        - eGFR = 60 mL/min/1.73m²
+        - GFR tuyệt đối = 60 × (1.50 / 1.73) = **52.0 mL/min**
+        
+        - Bệnh nhân B: 90 kg, 180 cm, BSA = 2.10 m²
+        - eGFR = 60 mL/min/1.73m²
+        - GFR tuyệt đối = 60 × (2.10 / 1.73) = **72.8 mL/min**
+        
+        → Cùng eGFR nhưng GFR tuyệt đối khác nhau → Liều thuốc khác nhau!
+        
+        ---
+        
+        ### 🦴 CKD (Chronic Kidney Disease - Bệnh Thận Mạn)
+        
+        **Định nghĩa:** CKD là tình trạng tổn thương thận hoặc giảm GFR kéo dài ≥ 3 tháng, ảnh hưởng đến sức khỏe.
+        
+        **Tiêu chuẩn chẩn đoán (KDIGO 2012):**
+        1. **Tổn thương thận:** Albumin niệu, bất thường hình ảnh học, hoặc bệnh lý mô học
+        2. **Giảm GFR:** eGFR < 60 mL/min/1.73m²
+        3. **Kéo dài ≥ 3 tháng**
+        
+        **Phân loại CKD theo GFR (KDIGO):**
+        | Giai đoạn | eGFR (mL/min/1.73m²) | Mô tả |
+        |:----------|:---------------------|:------|
+        | G1 | ≥ 90 | Chức năng thận bình thường hoặc cao |
+        | G2 | 60-89 | Giảm nhẹ |
+        | G3a | 45-59 | Giảm nhẹ-trung bình |
+        | G3b | 30-44 | Giảm trung bình-nặng |
+        | G4 | 15-29 | Giảm nặng |
+        | G5 | < 15 hoặc lọc máu | Suy thận giai đoạn cuối (ESRD) |
+        
+        **Ý nghĩa lâm sàng:**
+        - **G1-G2:** Theo dõi, kiểm soát yếu tố nguy cơ
+        - **G3a-G3b:** Điều chỉnh liều thuốc, hội chẩn chuyên khoa
+        - **G4:** Chuẩn bị lọc máu, tư vấn ghép thận
+        - **G5:** Cần lọc máu hoặc ghép thận
+        
+        ---
+        
+        ### 📋 Khi Nào Dùng Cái Gì?
+        
+        | Mục đích | Dùng gì? | Đơn vị | Giải thích |
+        |:---------|:---------|:-------|:-----------|
+        | **Chẩn đoán CKD** | eGFR CKD-EPI (chuẩn hóa) | mL/min/1.73m² | Phân loại theo KDIGO |
+        | **Điều chỉnh liều thuốc** | CrCl hoặc GFR tuyệt đối | mL/min | FDA, Micromedex khuyến cáo |
+        | **Béo phì (BMI > 30)** | Cockcroft-Gault + ABW | mL/min | ABW chính xác hơn cân nặng thực tế |
+        | **Người gầy/Suy dinh dưỡng** | Cystatin C eGFR | mL/min/1.73m² | Ít bị ảnh hưởng bởi khối cơ |
+        | **ICU/AKI** | Đo CrCl 24h hoặc Jelliffe | mL/min | Cr biến động, không dùng eGFR |
+        | **Người già** | CKD-EPI 2021 | mL/min/1.73m² | Chính xác hơn ở người cao tuổi |
+        
+        ---
+        
+        ### ⚠️ Lưu Ý Quan Trọng
+        
+        **1. Chẩn đoán CKD:**
+        - ✅ Dùng **eGFR chuẩn hóa** (mL/min/1.73m²)
+        - ✅ Công thức **CKD-EPI** (khuyến cáo nhất)
+        - ❌ KHÔNG dùng CrCl để phân loại CKD
+        
+        **2. Điều chỉnh liều thuốc:**
+        - ✅ Dùng **GFR tuyệt đối** (mL/min) hoặc **CrCl**
+        - ✅ Chuyển đổi: GFR tuyệt đối = eGFR × (BSA / 1.73)
+        - ✅ Béo phì: Dùng **Cockcroft-Gault với ABW**
+        - ⚠️ Luôn tra cứu liều chính xác cho từng thuốc cụ thể
+        
+        **3. Bệnh nhân đặc biệt:**
+        - **Béo phì:** Cockcroft-Gault + ABW
+        - **Gầy/Suy dinh dưỡng:** Cân nhắc Cystatin C eGFR
+        - **Cụt chi:** Điều chỉnh BSA
+        - **Bệnh nhân lọc máu:** KHÔNG tính eGFR
+        - **Bệnh nhân thận nhân tạo chu kỳ:** Đo CrCl 24h
+        
+        **4. Hội chẩn chuyên khoa:**
+        - eGFR < 30 mL/min/1.73m² → Hội chẩn thận học
+        - eGFR < 45 mL/min/1.73m² + có triệu chứng → Hội chẩn thận học
+        - Điều chỉnh liều thuốc phức tạp → Hội chẩn dược sĩ
+        """)
+    
     st.markdown("---")
     st.info("""
-    💡 **Điểm quan trọng:**
+    💡 **Điểm quan trọng (Tóm tắt):**
     
     **1. Chẩn đoán CKD:** Dùng eGFR chuẩn hóa (CKD-EPI)
     

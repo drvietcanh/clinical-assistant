@@ -64,33 +64,35 @@ def render():
     with col1:
         bun_unit = st.radio(
             "Đơn vị BUN",
-            options=["mg/dL", "mmol/L"],
+            options=["mmol/L", "mg/dL"],
             index=0,
             horizontal=True
         )
         
-        if bun_unit == "mg/dL":
+        if bun_unit == "mmol/L":
+            bun_mmol = st.number_input(
+                "BUN (mmol/L)",
+                min_value=0.0,
+                max_value=70.0,
+                value=5.4,
+                step=0.1,
+                format="%.1f",
+                help="Bình thường: 2.5-7.1 mmol/L"
+            )
+            bun = bun_mmol * 2.8
+            st.caption(f"💡 = {bun:.1f} mg/dL")
+        else:
             bun = st.number_input(
                 "BUN (mg/dL)",
                 min_value=0.0,
                 max_value=200.0,
                 value=20.0,
                 step=1.0,
+                format="%.0f",
                 help="Bình thường: 7-20 mg/dL"
             )
             bun_mmol = bun / 2.8
             st.caption(f"💡 = {bun_mmol:.1f} mmol/L")
-        else:
-            bun_mmol = st.number_input(
-                "BUN (mmol/L)",
-                min_value=0.0,
-                max_value=70.0,
-                value=7.0,
-                step=0.5,
-                help="Bình thường: 2.5-7.1 mmol/L"
-            )
-            bun = bun_mmol * 2.8
-            st.caption(f"💡 = {bun:.1f} mg/dL")
     
     with col2:
         bun_positive = bun > 25

@@ -5,6 +5,7 @@ Defines available calculators organized by specialty
 
 SCORES_BY_SPECIALTY = {
     "🚨 Cấp Cứu & Hồi Sức (Emergency & Critical Care)": {
+        "NEWS2": {"name": "NEWS2 - National Early Warning Score 2", "desc": "Hệ thống cảnh báo sớm cho bệnh nhân nội trú (DÙNG HÀNG NGÀY)", "status": "✅"},
         "qSOFA": {"name": "qSOFA - Quick SOFA", "desc": "Sàng lọc nhiễm trùng huyết", "status": "✅"},
         "SOFA": {"name": "SOFA - Sequential Organ Failure Assessment", "desc": "Đánh giá suy cơ quan", "status": "✅"},
         "SOFA-2 (2025)": {"name": "SOFA-2 (2025) ⭐", "desc": "SOFA cập nhật 2025 - HFNC, ECMO, RRT, vasopressor mới", "status": "✅"},
@@ -14,6 +15,7 @@ SCORES_BY_SPECIALTY = {
     },
     
     "❤️ Tim Mạch (Cardiology)": {
+        "ASCVD Risk": {"name": "ASCVD Risk Calculator ⭐", "desc": "Nguy cơ tim mạch 10 năm - ACC/AHA Pooled Cohort Equations (THAY THẾ FRAMINGHAM)", "status": "✅"},
         "NYHA": {"name": "NYHA Classification", "desc": "Phân loại chức năng suy tim (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Killip": {"name": "Killip Classification", "desc": "Suy tim cấp trong AMI (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Duke": {"name": "Duke Criteria", "desc": "Chẩn đoán viêm nội tâm mạc", "status": "✅"},
@@ -24,7 +26,7 @@ SCORES_BY_SPECIALTY = {
         "HEART Score": {"name": "HEART Score", "desc": "Đau ngực cấp - nguy cơ ACS", "status": "✅"},
         "TIMI Risk": {"name": "TIMI Risk Score", "desc": "Nguy cơ NSTEMI/STEMI", "status": "✅"},
         "GRACE Score": {"name": "GRACE Score", "desc": "Tiên lượng ACS", "status": "✅"},
-        "Framingham": {"name": "Framingham Risk Score", "desc": "Nguy cơ tim mạch 10 năm", "status": "✅"},
+        "Framingham": {"name": "Framingham Risk Score", "desc": "Nguy cơ tim mạch 10 năm (Historical)", "status": "✅"},
         "Corrected QT": {"name": "QTc - Corrected QT Interval", "desc": "QT điều chỉnh theo nhịp tim", "status": "✅"},
     },
     

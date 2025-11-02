@@ -141,6 +141,7 @@ def render():
                 max_value=1500.0,
                 value=88.0,
                 step=5.0,
+                format="%.1f",
                 help="Bình thường: 62-115 µmol/L"
             )
             cr_mgdl = cr / 88.4
@@ -152,6 +153,7 @@ def render():
                 max_value=15.0,
                 value=1.0,
                 step=0.1,
+                format="%.1f",
                 help="Bình thường: 0.7-1.3 mg/dL"
             )
             cr_mgdl = cr

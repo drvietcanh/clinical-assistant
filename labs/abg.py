@@ -14,7 +14,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Enter Values")
+        st.markdown("#### 📝 Nhập Giá Trị")
         
         ph = st.number_input("pH", 6.8, 7.8, 7.40, 0.01)
         pco2 = st.number_input("PaCO₂ (mmHg)", 10.0, 100.0, 40.0, 0.1, format="%.1f")
@@ -23,59 +23,59 @@ def render():
         fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 21.0, 1.0)
     
     with col2:
-        st.markdown("#### Interpretation")
+        st.markdown("#### 📊 Giải Thích")
         
         # pH
         if 7.35 <= ph <= 7.45:
-            st.success(f"**pH:** {ph} - Normal ✓")
+            st.success(f"**pH:** {ph} - Bình thường ✓")
         elif ph < 7.35:
-            st.error(f"**pH:** {ph} - ACIDEMIA ⚠️")
+            st.error(f"**pH:** {ph} - TOAN MÁU ⚠️")
         else:
-            st.error(f"**pH:** {ph} - ALKALEMIA ⚠️")
+            st.error(f"**pH:** {ph} - KIỀM MÁU ⚠️")
         
         # PaCO2
         if 35 <= pco2 <= 45:
-            st.success(f"**PaCO₂:** {pco2} - Normal ✓")
+            st.success(f"**PaCO₂:** {pco2:.1f} - Bình thường ✓")
         elif pco2 < 35:
-            st.warning(f"**PaCO₂:** {pco2} - Low (respiratory alkalosis)")
+            st.warning(f"**PaCO₂:** {pco2:.1f} - Thấp (kiềm hô hấp)")
         else:
-            st.warning(f"**PaCO₂:** {pco2} - High (respiratory acidosis)")
+            st.warning(f"**PaCO₂:** {pco2:.1f} - Cao (toan hô hấp)")
         
         # HCO3
         if 22 <= hco3 <= 26:
-            st.success(f"**HCO₃:** {hco3} - Normal ✓")
+            st.success(f"**HCO₃:** {hco3:.1f} - Bình thường ✓")
         elif hco3 < 22:
-            st.warning(f"**HCO₃:** {hco3} - Low (metabolic acidosis)")
+            st.warning(f"**HCO₃:** {hco3:.1f} - Thấp (toan chuyển hóa)")
         else:
-            st.warning(f"**HCO₃:** {hco3} - High (metabolic alkalosis)")
+            st.warning(f"**HCO₃:** {hco3:.1f} - Cao (kiềm chuyển hóa)")
         
         # PaO2/FiO2 ratio
         pf_ratio = po2 / (fio2 / 100)
-        st.info(f"**P/F ratio:** {pf_ratio:.0f}")
+        st.info(f"**Tỷ lệ P/F:** {pf_ratio:.0f}")
         if pf_ratio >= 400:
-            st.success("Normal oxygenation ✓")
+            st.success("Oxy hóa bình thường ✓")
         elif pf_ratio >= 300:
-            st.warning("Mild hypoxemia")
+            st.warning("Thiếu oxy nhẹ")
         elif pf_ratio >= 200:
-            st.warning("Moderate hypoxemia (Mild ARDS)")
+            st.warning("Thiếu oxy trung bình (ARDS nhẹ)")
         elif pf_ratio >= 100:
-            st.error("Severe hypoxemia (Moderate ARDS)")
+            st.error("Thiếu oxy nặng (ARDS trung bình)")
         else:
-            st.error("Very severe hypoxemia (Severe ARDS)")
+            st.error("Thiếu oxy rất nặng (ARDS nặng)")
         
         # Acid-base disorder
         st.markdown("---")
-        st.markdown("**Acid-Base Disorder:**")
+        st.markdown("**Rối Loạn Acid-Base:**")
         
         if ph < 7.35:
             if pco2 > 45:
-                st.error("**Respiratory Acidosis**")
+                st.error("**Toan Hô Hấp**")
             if hco3 < 22:
-                st.error("**Metabolic Acidosis**")
+                st.error("**Toan Chuyển Hóa**")
         elif ph > 7.45:
             if pco2 < 35:
-                st.error("**Respiratory Alkalosis**")
+                st.error("**Kiềm Hô Hấp**")
             if hco3 > 26:
-                st.error("**Metabolic Alkalosis**")
+                st.error("**Kiềm Chuyển Hóa**")
         else:
-            st.success("**Normal or Compensated**")
+            st.success("**Bình Thường hoặc Đã Bù**")

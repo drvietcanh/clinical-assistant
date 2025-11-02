@@ -302,7 +302,7 @@ def render():
     # Cholesterol
     st.markdown("#### 🔬 Cholesterol")
     
-    chol_unit = st.radio("Đơn vị", ["mmol/L", "mg/dL"], horizontal=True)
+    chol_unit = st.radio("Đơn vị", ["mmol/L", "mg/dL"], horizontal=True, index=0)
     
     col3, col4 = st.columns(2)
     

@@ -118,6 +118,7 @@ def render():
                 max_value=2000.0,
                 value=100.0,
                 step=1.0,
+                format="%.1f",
                 help="Bình thường: Nam 62-106, Nữ 44-80 µmol/L"
             )
             st.caption(f"💡 = {creatinine / 88.4:.1f} mg/dL")
@@ -128,6 +129,7 @@ def render():
                 max_value=25.0,
                 value=1.0,
                 step=0.1,
+                format="%.1f",
                 help="Bình thường: Nam 0.7-1.2, Nữ 0.5-0.9 mg/dL"
             )
             st.caption(f"💡 = {creatinine * 88.4:.0f} µmol/L")

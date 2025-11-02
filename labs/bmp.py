@@ -56,16 +56,7 @@ def render():
             key="bun_unit"
         )
         
-        if "mg/dL" in bun_unit:
-            bun = st.number_input(
-                "BUN (mg/dL)", 
-                0.0, 200.0, 15.0, 0.5,
-                format="%.1f",
-                help="Bình thường: 7-20 mg/dL",
-                key="bun_mgdl"
-            )
-            st.caption(f"≈ {bun * 0.357:.1f} mmol/L (Urea)")
-        else:
+        if "mmol/L" in bun_unit:
             bun_input = st.number_input(
                 "Urea (mmol/L)", 
                 0.0, 70.0, 5.4, 0.1,
@@ -75,6 +66,15 @@ def render():
             )
             bun = bun_input / 0.357  # Convert to mg/dL
             st.caption(f"≈ {bun:.1f} mg/dL (BUN)")
+        else:
+            bun = st.number_input(
+                "BUN (mg/dL)", 
+                0.0, 200.0, 15.0, 0.5,
+                format="%.1f",
+                help="Bình thường: 7-20 mg/dL",
+                key="bun_mgdl"
+            )
+            st.caption(f"≈ {bun * 0.357:.1f} mmol/L (Urea)")
         
         # Creatinine with unit conversion
         st.markdown("#### 🔄 Creatinine")
@@ -89,15 +89,17 @@ def render():
             cr_input = st.number_input(
                 "Creatinine (µmol/L)", 
                 0.0, 1500.0, 88.0, 5.0,
+                format="%.1f",
                 help="Bình thường: 62-106 µmol/L (nam), 44-80 µmol/L (nữ)",
                 key="cr_umol_bmp"
             )
             cr = cr_input / 88.4  # Convert to mg/dL
-            st.caption(f"≈ {cr:.2f} mg/dL")
+            st.caption(f"≈ {cr:.1f} mg/dL")
         else:
             cr = st.number_input(
                 "Creatinine (mg/dL)", 
                 0.0, 20.0, 1.0, 0.05,
+                format="%.1f",
                 help="Bình thường: 0.7-1.2 mg/dL (nam), 0.5-0.9 mg/dL (nữ)",
                 key="cr_mgdl_bmp"
             )

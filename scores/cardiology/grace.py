@@ -53,30 +53,33 @@ def render():
         st.markdown("**Creatinine máu**")
         scr_unit = st.radio(
             "Đơn vị:",
-            ["mg/dL", "µmol/L"],
+            ["µmol/L", "mg/dL"],
             horizontal=True,
+            index=0,
             key="grace_scr_unit"
         )
         
-        if scr_unit == "mg/dL":
-            scr_mgdl = st.number_input(
-                "Creatinine (mg/dL)",
-                min_value=0.1,
-                max_value=15.0,
-                value=1.0,
-                step=0.1,
-                key="grace_scr_mgdl"
-            )
-        else:
+        if scr_unit == "µmol/L":
             scr_umol = st.number_input(
                 "Creatinine (µmol/L)",
                 min_value=10.0,
                 max_value=1500.0,
                 value=88.0,
                 step=5.0,
+                format="%.1f",
                 key="grace_scr_umol"
             )
             scr_mgdl = scr_umol / 88.4
+        else:
+            scr_mgdl = st.number_input(
+                "Creatinine (mg/dL)",
+                min_value=0.1,
+                max_value=15.0,
+                value=1.0,
+                step=0.1,
+                format="%.1f",
+                key="grace_scr_mgdl"
+            )
         
         # Killip class
         killip_options = [

@@ -279,6 +279,7 @@ def render():
         "Đơn vị cholesterol",
         ["mmol/L", "mg/dL"],
         horizontal=True,
+        index=0,
         help="mmol/L (đơn vị quốc tế) hoặc mg/dL (đơn vị Mỹ)"
     )
     

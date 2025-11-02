@@ -3,6 +3,7 @@ Cardiology Scoring Systems
 All cardiac risk calculators organized by individual files
 """
 
+from .ascvd import render as render_ascvd
 from .cha2ds2vasc import render as render_cha2ds2vasc
 from .hasbled import render as render_hasbled
 from .score2 import render as render_score2
@@ -27,6 +28,7 @@ def render_cardiology_calculator(calculator_id):
     import streamlit as st
     
     calculators = {
+        "ASCVD Risk": render_ascvd,
         "NYHA": render_nyha,
         "Killip": render_killip,
         "Duke": render_duke,
@@ -50,6 +52,7 @@ def render_cardiology_calculator(calculator_id):
 
 __all__ = [
     'render_cardiology_calculator',
+    'render_ascvd',
     'render_cha2ds2vasc',
     'render_hasbled',
     'render_score2',

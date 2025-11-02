@@ -110,13 +110,13 @@ elif "ABG" in lab_panel:
 st.markdown("---")
 
 st.warning("""
-**⚠️ Important Notes:**
-- Reference ranges may vary by laboratory
-- Always compare with your local lab's ranges
-- Critical values require immediate clinical correlation
-- This tool is for reference only - not a substitute for clinical judgment
+**⚠️ Lưu Ý Quan Trọng:**
+- Khoảng giá trị tham chiếu có thể khác nhau giữa các phòng xét nghiệm
+- Luôn so sánh với khoảng giá trị của phòng xét nghiệm địa phương bạn
+- Giá trị nguy kịch cần đối chiếu lâm sàng ngay lập tức
+- Công cụ này chỉ để tham khảo - không thay thế cho phán đoán lâm sàng
 """)
 
-st.caption("📊 Lab values based on standard reference ranges from major clinical laboratories")
-st.caption("🗂️ Modular architecture - Easy to add new panels")
+st.caption("📊 Giá trị lab dựa trên khoảng tham chiếu chuẩn từ các phòng xét nghiệm lâm sàng lớn")
+st.caption("🗂️ Kiến trúc mô-đun - Dễ dàng thêm panel mới")
 

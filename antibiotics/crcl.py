@@ -50,11 +50,12 @@ def render():
                 max_value=1500.0,
                 value=88.0,
                 step=5.0,
+                format="%.1f",
                 help="Bình thường: 62-106 µmol/L",
                 key="scr_umol"
             )
             scr_mgdl = scr_input / 88.4  # Convert to mg/dL
-            st.caption(f"≈ {scr_mgdl:.2f} mg/dL")
+            st.caption(f"≈ {scr_mgdl:.1f} mg/dL")
         else:  # mg/dL
             scr_input = st.number_input(
                 "Creatinine (mg/dL)",
@@ -62,6 +63,7 @@ def render():
                 max_value=15.0,
                 value=1.0,
                 step=0.1,
+                format="%.1f",
                 help="Bình thường: 0.7-1.2 mg/dL",
                 key="scr_mgdl"
             )

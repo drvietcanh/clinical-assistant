@@ -5,12 +5,19 @@
 
 ---
 
-## ✅ Đã Hoàn Thành (Session 2 - 2025-01-31)
+## ✅ Đã Hoàn Thành
 
+### **Session 2 - 2025-01-31**
 1. ✅ **Đăng ký tất cả calculators** - 67 calculators mới
 2. ✅ **Bổ sung 6 kháng sinh** - Nafcillin, Ceftizoxime, Cefotetan, Cefoxitin, Tedizolid, Telavancin, Ceftobiprole
 3. ✅ **So sánh & Lộ trình** - COMPREHENSIVE_ROADMAP_VN.md
 4. ✅ **UI/UX cải thiện** - Modern design system, enhanced search, favorites
+
+### **Session 3 - 2025-01-31**
+1. ✅ **Chuẩn hóa đơn vị** - mmol/L/µmol/L đứng trước, mg/dL sau, format 1 số thập phân
+2. ✅ **Việt hóa** - Dịch tất cả text tiếng Anh trong labs module
+3. ✅ **Giải thích chi tiết** - Thêm giải thích chuyên sâu cho BMI, IBW, BSA, eGFR, CrCl, CKD
+4. ✅ **Sửa lỗi** - Fix lỗi Killip class parsing trong grace.py
 
 ---
 

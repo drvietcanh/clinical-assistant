@@ -257,7 +257,7 @@ def render():
     with col9:
         sodium = st.number_input("Sodium (mEq/L)", 80.0, 200.0, 140.0, 1.0)
         potassium = st.number_input("Potassium (mEq/L)", 1.5, 10.0, 4.0, 0.1)
-        creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1)
+        creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
         has_arf = st.checkbox("**Suy thận cấp (ARF)** - nhân đôi điểm Cr")
     
     with col10:

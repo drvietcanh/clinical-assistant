@@ -621,6 +621,7 @@ def render_dosing_calculator():
                 max_value=1500.0,
                 value=88.0,
                 step=5.0,
+                format="%.1f",
                 key="dosing_scr_umol"
             )
             scr_mgdl = scr_value / 88.4
@@ -632,6 +633,7 @@ def render_dosing_calculator():
                 max_value=15.0,
                 value=1.0,
                 step=0.1,
+                format="%.1f",
                 key="dosing_scr_mgdl"
             )
             st.caption(f"≈ {scr_mgdl * 88.4:.0f} µmol/L")

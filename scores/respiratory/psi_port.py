@@ -135,6 +135,7 @@ def render():
             "Đơn vị:",
             ["mmol/L (SI - Mặc định)", "mg/dL"],
             horizontal=True,
+            index=0,
             key="bun_unit_psi"
         )
         
@@ -145,6 +146,7 @@ def render():
                 max_value=70.0,
                 value=5.0,
                 step=0.5,
+                format="%.1f",
                 help="Bình thường: 2.5-7.1 mmol/L",
                 key="bun_mmol"
             )
@@ -157,6 +159,7 @@ def render():
                 max_value=200.0,
                 value=15.0,
                 step=1.0,
+                format="%.0f",
                 help="Bình thường: 7-20 mg/dL",
                 key="bun_mgdl"
             )
@@ -178,6 +181,7 @@ def render():
             "Đơn vị:",
             ["mmol/L (SI - Mặc định)", "mg/dL"],
             horizontal=True,
+            index=0,
             key="glucose_unit_psi"
         )
         
@@ -188,6 +192,7 @@ def render():
                 max_value=33.0,
                 value=5.5,
                 step=0.1,
+                format="%.1f",
                 help="Bình thường: 3.9-5.6 mmol/L",
                 key="glucose_mmol"
             )
@@ -199,6 +204,7 @@ def render():
                 min_value=0.0,
                 max_value=600.0,
                 value=100.0,
+                format="%.0f",
                 step=5.0,
                 help="Bình thường: 70-100 mg/dL",
                 key="glucose_mgdl"

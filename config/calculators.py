@@ -5,6 +5,7 @@ All available calculators in the Clinical Assistant system
 
 ALL_CALCULATORS = {
     # Scores - Cardiology
+    "ascvd": {"name": "ASCVD Risk Calculator", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
     "nyha": {"name": "NYHA Classification", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
     "killip": {"name": "Killip Classification", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
     "duke": {"name": "Duke Criteria", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
@@ -19,6 +20,7 @@ ALL_CALCULATORS = {
     "qtc": {"name": "QTc - Corrected QT Interval", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
     
     # Scores - Emergency
+    "news2": {"name": "NEWS2", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "qsofa": {"name": "qSOFA", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "sofa": {"name": "SOFA", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "sofa2": {"name": "SOFA-2 (2025)", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},

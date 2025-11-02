@@ -3,7 +3,7 @@
 **Last Updated:** 2025-01-31  
 **Session Token Usage:** Fresh session  
 **Status:** ✅ Active  
-**Action:** ✅ Calculator registration completed, continuing with antibiotics
+**Action:** ✅ Unit standardization and localization completed
 
 ---
 
@@ -12,7 +12,9 @@
 1. ✅ **SOFA-2 (2025) Implementation** - COMPLETED
 2. ✅ **Code Optimization Analysis** - COMPLETED
 3. ✅ **Register All Calculators** - COMPLETED (Session 2)
-4. ⏳ **Add Missing Antibiotics Data** - IN PROGRESS
+4. ✅ **Add Missing Antibiotics Data** - COMPLETED
+5. ✅ **Unit Standardization** - COMPLETED (Session 3)
+6. ✅ **Localization** - COMPLETED (Session 3)
 
 ---
 
@@ -121,18 +123,44 @@
 
 ---
 
+## ✅ Completed Tasks (Session 3 - 2025-01-31)
+
+### **Unit Standardization & Localization - COMPLETED**
+**Status:** ✅ COMPLETED  
+**Time Taken:** ~2 hours
+
+**Tasks Completed:**
+- ✅ Standardized all unit radios: mmol/L/µmol/L first (index=0), mg/dL second
+- ✅ Added format="%.1f" for all SI unit inputs (mmol/L, µmol/L)
+- ✅ Added format="%.0f" for mg/dL inputs
+- ✅ Fixed logic error in grace.py (Killip class parsing)
+- ✅ Localized all English text in labs module
+- ✅ Added detailed Vietnamese explanations for medical terms (BMI, IBW, BSA, eGFR, CrCl, CKD)
+- ✅ Updated 27 files across antibiotics, labs, scores modules
+
+**Files Updated:**
+- All creatinine inputs: 15 files
+- All glucose inputs: 4 files  
+- All urea/BUN inputs: 6 files
+- All cholesterol inputs: 2 files
+- Localization: 5 files
+
+**Result:** Consistent unit preferences, better UX, fully localized
+- **Status:** ✅ COMPLETED
+- **Commit:** `feat: standardize units (SI first), localize labs module, add detailed explanations`
+
+---
+
 ## ⏳ In Progress
 
-### **Next Steps - UI/UX Improvements**
+### **Next Steps - Critical Scores**
 **Status:** READY TO START  
 **Priority:** P0 (This Week)  
-**Estimated Time:** 2-3 days
+**Estimated Time:** 1-2 days
 
 **Tasks:**
-- [ ] Redesign homepage with modern cards
-- [ ] Enhance global search
-- [ ] Improve Favorites/Recently Used
-- [ ] Add export functionality
+- [ ] NEWS2 Score implementation
+- [ ] ASCVD Risk Calculator implementation
 
 ---
 
@@ -375,7 +403,7 @@
 
 ---
 
-**Last Commit:** 2025-01-30  
-**Next Session:** Continue calculator registration  
+**Last Commit:** 2025-01-31  
+**Next Session:** Implement NEWS2 Score & ASCVD Calculator  
 **Status:** ✅ On Track
 
