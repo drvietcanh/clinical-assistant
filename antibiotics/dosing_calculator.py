@@ -583,6 +583,7 @@ def render_dosing_calculator():
                 max_value=5.5,
                 value=3.5,
                 step=0.1,
+                format="%.1f",
                 key="dosing_albumin",
                 help="Bình thường: 3.5-5.0 g/dL. <3.0 g/dL: ảnh hưởng liều kháng sinh liên kết protein cao"
             )

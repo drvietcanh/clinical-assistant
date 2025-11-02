@@ -149,6 +149,7 @@ def render():
             max_value=50.0,
             value=12.0,
             step=0.5,
+            format="%.1f",
             help="Bicarbonate (bình thường: 22-28 mmol/L)"
         )
     
@@ -159,6 +160,7 @@ def render():
             max_value=100.0,
             value=28.0,
             step=0.5,
+            format="%.1f",
             help="PCO2 đo được từ khí máu (bình thường: 35-45 mmHg)"
         )
         

@@ -19,25 +19,29 @@ def render():
         # Electrolytes (no conversion needed - same units)
         na = st.number_input(
             "Natri - Na (mEq/L = mmol/L)", 
-            100.0, 180.0, 140.0, 0.1, 
+            100.0, 180.0, 140.0, 0.1,
+            format="%.1f",
             help="Bình thường: 136-145 mEq/L",
             key="na"
         )
         k = st.number_input(
             "Kali - K (mEq/L = mmol/L)", 
             1.0, 10.0, 4.0, 0.1,
+            format="%.1f",
             help="Bình thường: 3.5-5.0 mEq/L",
             key="k"
         )
         cl = st.number_input(
             "Clo - Cl (mEq/L = mmol/L)", 
             50.0, 150.0, 100.0, 0.1,
+            format="%.1f",
             help="Bình thường: 98-106 mEq/L",
             key="cl"
         )
         co2 = st.number_input(
             "CO2/Bicarbonate (mEq/L = mmol/L)", 
             5.0, 50.0, 25.0, 0.1,
+            format="%.1f",
             help="Bình thường: 23-29 mEq/L",
             key="co2"
         )
@@ -46,7 +50,8 @@ def render():
         st.markdown("#### 🔄 BUN (Urea)")
         bun_unit = st.radio(
             "Đơn vị:",
-            ["mg/dL (Conventional)", "mmol/L (SI - Urea)"],
+            ["mmol/L (SI - Urea)", "mg/dL (Conventional)"],
+            index=0,
             horizontal=True,
             key="bun_unit"
         )
@@ -55,6 +60,7 @@ def render():
             bun = st.number_input(
                 "BUN (mg/dL)", 
                 0.0, 200.0, 15.0, 0.5,
+                format="%.1f",
                 help="Bình thường: 7-20 mg/dL",
                 key="bun_mgdl"
             )
@@ -63,6 +69,7 @@ def render():
             bun_input = st.number_input(
                 "Urea (mmol/L)", 
                 0.0, 70.0, 5.4, 0.1,
+                format="%.1f",
                 help="Bình thường: 2.5-7.1 mmol/L",
                 key="bun_mmol"
             )
@@ -109,6 +116,7 @@ def render():
             glucose_input = st.number_input(
                 "Glucose (mmol/L)", 
                 0.0, 33.0, 5.0, 0.1,
+                format="%.1f",
                 help="Bình thường: 3.9-5.6 mmol/L (đói)",
                 key="glucose_mmol"
             )
@@ -118,6 +126,7 @@ def render():
             glucose = st.number_input(
                 "Glucose (mg/dL)", 
                 0.0, 600.0, 90.0, 1.0,
+                format="%.0f",
                 help="Bình thường: 70-100 mg/dL (đói)",
                 key="glucose_mgdl"
             )

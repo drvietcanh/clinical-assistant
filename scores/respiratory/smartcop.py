@@ -95,6 +95,7 @@ def render():
             max_value=60.0,
             value=35.0,
             step=0.5,
+            format="%.1f",
             help="Albumin <35 g/L = 1 điểm"
         )
         if albumin < 35:

@@ -245,7 +245,7 @@ def render():
     with col7:
         pao2 = st.number_input("PaO₂ (mmHg)", 0.0, 700.0, 100.0, 1.0)
     with col8:
-        paco2 = st.number_input("PaCO₂ (mmHg)", 0.0, 150.0, 40.0, 1.0)
+        paco2 = st.number_input("PaCO₂ (mmHg)", 0.0, 150.0, 40.0, 1.0, format="%.1f")
     
     ph = st.number_input("pH", 6.5, 8.0, 7.40, 0.01)
     

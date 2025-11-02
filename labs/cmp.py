@@ -22,7 +22,7 @@ def render():
         col1, col2 = st.columns(2)
         
         with col1:
-            albumin = st.number_input("Albumin (g/dL)", 0.0, 10.0, 4.0, 0.1)
+            albumin = st.number_input("Albumin (g/dL)", 0.0, 10.0, 4.0, 0.1, format="%.1f")
             total_protein = st.number_input("Total Protein (g/dL)", 0.0, 15.0, 7.0, 0.1)
             calcium = st.number_input("Calcium (mg/dL)", 0.0, 20.0, 9.5, 0.1)
         

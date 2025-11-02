@@ -47,6 +47,7 @@ def render():
             max_value=180.0,
             value=140.0,
             step=1.0,
+            format="%.1f",
             help="Bình thường: 135-145 mmol/L"
         )
         
@@ -64,6 +65,7 @@ def render():
                 max_value=50.0,
                 value=5.0,
                 step=0.1,
+                format="%.1f",
                 help="Bình thường: 3.9-6.1 mmol/L"
             )
             glucose_mg = glucose_mmol * 18
@@ -75,6 +77,7 @@ def render():
                 max_value=900.0,
                 value=90.0,
                 step=5.0,
+                format="%.0f",
                 help="Bình thường: 70-110 mg/dL"
             )
             glucose_mmol = glucose_mg / 18
@@ -95,6 +98,7 @@ def render():
                 max_value=100.0,
                 value=5.0,
                 step=0.5,
+                format="%.1f",
                 help="Bình thường: 2.5-7.1 mmol/L"
             )
             bun_mg = urea_mmol * 2.8
@@ -106,6 +110,7 @@ def render():
                 max_value=300.0,
                 value=14.0,
                 step=1.0,
+                format="%.0f",
                 help="Bình thường: 7-20 mg/dL"
             )
             urea_mmol = bun_mg / 2.8

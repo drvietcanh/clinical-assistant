@@ -17,9 +17,9 @@ def render():
         st.markdown("#### Enter Values")
         
         ph = st.number_input("pH", 6.8, 7.8, 7.40, 0.01)
-        pco2 = st.number_input("PaCO₂ (mmHg)", 10.0, 100.0, 40.0, 0.1)
+        pco2 = st.number_input("PaCO₂ (mmHg)", 10.0, 100.0, 40.0, 0.1, format="%.1f")
         po2 = st.number_input("PaO₂ (mmHg)", 30.0, 600.0, 95.0, 1.0)
-        hco3 = st.number_input("HCO₃ (mEq/L)", 5.0, 50.0, 24.0, 0.1)
+        hco3 = st.number_input("HCO₃ (mEq/L)", 5.0, 50.0, 24.0, 0.1, format="%.1f")
         fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 21.0, 1.0)
     
     with col2:

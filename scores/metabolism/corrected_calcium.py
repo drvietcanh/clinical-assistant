@@ -81,6 +81,7 @@ def render():
             max_value=6.0,
             value=4.0,
             step=0.1,
+            format="%.1f",
             help="Bình thường: 3.5-5.5 g/dL"
         )
         st.caption(f"≈ {albumin * 10:.0f} g/L")

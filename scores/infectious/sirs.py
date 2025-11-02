@@ -175,6 +175,7 @@ def render():
                 max_value=100.0,
                 value=40.0,
                 step=0.5,
+                format="%.1f",
                 help="Áp lực CO₂ động mạch"
             )
             

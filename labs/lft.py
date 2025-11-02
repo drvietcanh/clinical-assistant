@@ -77,7 +77,7 @@ def render():
             st.info(f"**Bilirubin Indirect:** {bili_i:.2f} mg/dL (≈ {bili_i * 17.1:.1f} µmol/L)")
         
         st.markdown("---")
-        albumin = st.number_input("Albumin (g/dL)", 0.0, 10.0, 4.0, 0.1, key="lft_alb")
+        albumin = st.number_input("Albumin (g/dL)", 0.0, 10.0, 4.0, 0.1, format="%.1f", key="lft_alb")
         tp = st.number_input("Total Protein (g/dL)", 0.0, 15.0, 7.0, 0.1, key="lft_tp")
         
         # Calculate ratios

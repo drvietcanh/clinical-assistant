@@ -44,6 +44,7 @@ def render():
             max_value=180.0,
             value=140.0,
             step=1.0,
+            format="%.1f",
             help="Bình thường: 135-145 mEq/L"
         )
         
@@ -54,6 +55,7 @@ def render():
             max_value=130.0,
             value=105.0,
             step=1.0,
+            format="%.1f",
             help="Bình thường: 98-107 mEq/L"
         )
         
@@ -64,6 +66,7 @@ def render():
             max_value=50.0,
             value=24.0,
             step=1.0,
+            format="%.1f",
             help="Bình thường: 22-28 mEq/L"
         )
         
@@ -87,6 +90,7 @@ def render():
                 max_value=6.0,
                 value=4.0,
                 step=0.1,
+                format="%.1f",
                 help="Bình thường: 3.5-5.5 g/dL"
             )
         

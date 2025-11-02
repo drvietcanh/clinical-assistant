@@ -137,6 +137,7 @@ def render():
                 max_value=20.0,
                 value=7.0,
                 step=0.1,
+                format="%.1f",
                 help="Nhập giá trị HbA1c từ 3% đến 20%"
             )
         
