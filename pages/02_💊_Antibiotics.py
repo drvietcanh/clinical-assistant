@@ -42,6 +42,16 @@ with st.sidebar:
     
     st.markdown("---")
     st.info("""
+    **💡 Về CrCl:**
+    - Cockcroft-Gault: Ưu tiên cho điều chỉnh liều thuốc
+    - Đơn vị: mL/min (không chuẩn hóa)
+    - Dùng trong hầu hết hướng dẫn điều chỉnh liều
+    
+    **🧮 eGFR/GFR:** Xem tại trang Calculators
+    """)
+    
+    st.markdown("---")
+    st.info("""
     **📚 Căn cứ khoa học:**
     - FDA Drug Labels (Mỹ)
     - IDSA/ATS Guidelines

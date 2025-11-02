@@ -243,27 +243,74 @@ def render_antibiotic_lookup():
         if results:
             st.success(f"Tìm thấy **{len(results)}** kết quả cho '{search_query}'")
             
-            # Display results
+            # Display results as beautiful cards
             for ab_name, ab_data in results:
-                with st.expander(f"💊 {ab_name} - {ab_data.get('vietnamese_name', '')}", expanded=(len(results) == 1)):
-                    display_antibiotic_info(ab_name, ab_data)
-                    
-                    # Quick links to dosing calculators
-                    if ab_name == "Vancomycin":
-                        st.markdown("---")
-                        if st.button(f"🧮 Tính liều Vancomycin", key=f"calc_{ab_name}"):
+                # Create a card for each result
+                vn_name = ab_data.get('vietnamese_name', '').split(',')[0] if ab_data.get('vietnamese_name') else ''
+                admin = ab_data.get('administration', [])
+                aware = ab_data.get('aware_classification', '')
+                has_calc = ab_name in ["Vancomycin", "Gentamicin", "Amikacin"]
+                
+                # Admin icons
+                admin_icons = {"IV": "💉", "IM": "💊", "PO": "🍽️", "Inhalation": "🌬️"}
+                admin_str = " ".join([admin_icons.get(a, "") + " " + a for a in admin])
+                
+                # AWaRe badge
+                aware_colors = {
+                    "ACCESS": "#4CAF50",
+                    "WATCH": "#FF9800",
+                    "RESERVE": "#F44336"
+                }
+                aware_badge = ""
+                if aware:
+                    badge_color = aware_colors.get(aware, "#999")
+                    aware_badge = f'<span style="background-color: {badge_color}; color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8em; font-weight: bold; margin-left: 10px;">{aware}</span>'
+                
+                # Header card
+                st.markdown(f"""
+                <div style='
+                    background: linear-gradient(135deg, #0EA5E9 0%, #0288D1 100%);
+                    color: white;
+                    padding: 20px;
+                    border-radius: 15px;
+                    margin: 20px 0;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                '>
+                    <h2 style='margin: 0; color: white; display: inline-block;'>💊 {ab_name}</h2>
+                    {aware_badge}
+                    {f"<p style='margin: 10px 0 5px 0; color: rgba(255,255,255,0.9); font-size: 1.1em;'>{vn_name}</p>" if vn_name else ""}
+                    <p style='margin: 5px 0 0 0; color: rgba(255,255,255,0.8); font-size: 0.95em;'>{admin_str}</p>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # Display full info
+                display_antibiotic_info(ab_name, ab_data)
+                
+                # Quick links to dosing calculators
+                if ab_name == "Vancomycin":
+                    st.markdown("---")
+                    col1, col2, col3 = st.columns([1, 2, 1])
+                    with col2:
+                        if st.button(f"🧮 Tính liều Vancomycin", key=f"calc_{ab_name}", use_container_width=True, type="primary"):
                             st.session_state['show_vancomycin_calc'] = True
-                    
-                    elif ab_name in ["Gentamicin", "Amikacin"]:
-                        st.markdown("---")
-                        if st.button(f"🧮 Tính liều Aminoglycoside", key=f"calc_{ab_name}"):
+                            st.rerun()
+                
+                elif ab_name in ["Gentamicin", "Amikacin"]:
+                    st.markdown("---")
+                    col1, col2, col3 = st.columns([1, 2, 1])
+                    with col2:
+                        if st.button(f"🧮 Tính liều Aminoglycoside", key=f"calc_{ab_name}", use_container_width=True, type="primary"):
                             st.session_state['show_aminoglycoside_calc'] = True
+                            st.rerun()
+                
+                if len(results) > 1 and ab_name != results[-1][0]:
+                    st.markdown("<hr style='margin: 30px 0; border: none; border-top: 2px solid #e0e0e0;'>", unsafe_allow_html=True)
         else:
             st.warning(f"Không tìm thấy kháng sinh nào cho '{search_query}'")
             st.info("💡 Thử tìm kiếm với: tên thuốc, biệt dược, hoặc chỉ định (ví dụ: MRSA, Sepsis)")
     
     else:
-        # Show quick access categories
+        # Show quick access categories with beautiful cards
         st.markdown("### 📚 Kháng Sinh Theo Nhóm:")
         
         # Group antibiotics by category
@@ -272,21 +319,102 @@ def render_antibiotic_lookup():
             group = ab_data.get('group', 'Khác')
             if group not in groups:
                 groups[group] = []
-            groups[group].append(ab_name)
+            groups[group].append((ab_name, ab_data))
         
-        # Display in columns
-        cols = st.columns(3)
-        col_idx = 0
+        # Group colors for visual distinction
+        group_colors = {
+            "Beta-lactam - Penicillin": "#E3F2FD",
+            "Beta-lactam - Aminopenicillin": "#E1F5FE",
+            "Beta-lactam - Penicillin + Beta-lactamase inhibitor": "#E0F2F1",
+            "Beta-lactam - Extended-spectrum Penicillin + Inhibitor": "#F3E5F5",
+            "Beta-lactam - Cephalosporin thế hệ 1": "#FFF3E0",
+            "Beta-lactam - Cephalosporin thế hệ 3": "#FFE0B2",
+            "Beta-lactam - Cephalosporin thế hệ 4": "#FFCCBC",
+            "Beta-lactam - Carbapenem": "#F8BBD0",
+            "Aminoglycoside": "#C5E1A5",
+            "Glycopeptide": "#BBDEFB",
+            "Fluoroquinolone": "#FFCDD2",
+            "Macrolide": "#D1C4E9",
+            "Lincosamide": "#DCEDC8",
+            "Nitroimidazole": "#FFE082",
+            "Oxazolidinone": "#F48FB1",
+            "Polymyxin": "#90CAF9",
+        }
         
-        for group, ab_list in groups.items():
-            with cols[col_idx % 3]:
-                st.markdown(f"#### {group}")
-                for ab_name in sorted(ab_list):
-                    if st.button(ab_name, key=f"quick_{ab_name}", use_container_width=True):
+        # AWaRe badge colors
+        aware_colors = {
+            "ACCESS": "#4CAF50",
+            "WATCH": "#FF9800",
+            "RESERVE": "#F44336"
+        }
+        
+        # Display groups with beautiful cards
+        for group, ab_list in sorted(groups.items()):
+            group_bg = group_colors.get(group, "#F5F5F5")
+            
+            st.markdown(f"""
+            <div style='background-color: {group_bg}; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 5px solid #0EA5E9;'>
+                <h4 style='margin: 0; color: #1976D2;'>{group}</h4>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Display antibiotics as cards in grid
+            num_cols = 3
+            cols = st.columns(num_cols)
+            
+            for idx, (ab_name, ab_data) in enumerate(sorted(ab_list, key=lambda x: x[0])):
+                with cols[idx % num_cols]:
+                    # Get antibiotic data
+                    vn_name = ab_data.get('vietnamese_name', '').split(',')[0] if ab_data.get('vietnamese_name') else ''
+                    admin = ab_data.get('administration', [])
+                    aware = ab_data.get('aware_classification', '')
+                    has_calc = ab_name in ["Vancomycin", "Gentamicin", "Amikacin"]
+                    
+                    # Admin icons
+                    admin_icons = {"IV": "💉", "IM": "💊", "PO": "🍽️", "Inhalation": "🌬️"}
+                    admin_str = " ".join([admin_icons.get(a, "") for a in admin[:2]])
+                    
+                    # AWaRe badge
+                    aware_badge = ""
+                    if aware:
+                        badge_color = aware_colors.get(aware, "#999")
+                        aware_badge = f'<span style="background-color: {badge_color}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.7em; font-weight: bold;">{aware}</span>'
+                    
+                    # Calculator badge
+                    calc_badge = ""
+                    if has_calc:
+                        calc_badge = '<span style="background-color: #9C27B0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.7em; font-weight: bold;">🧮 Tính liều</span>'
+                    
+                    # Card HTML
+                    card_html = f"""
+                    <div style='
+                        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+                        border: 2px solid #e0e0e0;
+                        border-radius: 12px;
+                        padding: 15px;
+                        margin: 10px 0;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    '
+                    onmouseover="this.style.borderColor='#0EA5E9'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';"
+                    onmouseout="this.style.borderColor='#e0e0e0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)';">
+                        <h4 style='margin: 0 0 8px 0; color: #1976D2; font-size: 1.1em;'>{ab_name}</h4>
+                        {f"<p style='margin: 5px 0; color: #666; font-size: 0.9em;'>{vn_name}</p>" if vn_name else ""}
+                        <p style='margin: 8px 0; font-size: 0.85em; color: #888;'>{admin_str}</p>
+                        <div style='margin-top: 10px; display: flex; gap: 5px; flex-wrap: wrap;'>
+                            {aware_badge}
+                            {calc_badge}
+                        </div>
+                    </div>
+                    """
+                    
+                    st.markdown(card_html, unsafe_allow_html=True)
+                    
+                    # Button to view details
+                    if st.button(f"📖 Xem chi tiết", key=f"view_{ab_name}", use_container_width=True):
                         st.session_state['selected_antibiotic'] = ab_name
                         st.rerun()
-            
-            col_idx += 1
         
         # Show selected antibiotic if any
         if 'selected_antibiotic' in st.session_state:
