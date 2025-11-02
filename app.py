@@ -99,65 +99,68 @@ st.markdown("### 🚀 Truy Cập Nhanh Modules")
 
 col1, col2, col3, col4, col5 = st.columns(5)
 
-with col1:
-    with st.container():
-        st.markdown("""
-        <div style="text-align: center; padding: 20px; background-color: #e3f2fd; border-radius: 10px;">
-            <h2>📊</h2>
-            <h4>Scores</h4>
-            <p style="font-size: 0.85em;">34 calculators<br/>8 specialties</p>
-        </div>
-        """, unsafe_allow_html=True)
-        if st.button("📊 Mở Scores", key="quick_scores", use_container_width=True):
-            st.switch_page("pages/01_📊_Scores.py")
+modules = [
+    {
+        "icon": "📊",
+        "title": "Scores",
+        "desc": "110 calculators<br/>19 specialties",
+        "color": "linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)",
+        "border": "#1976d2",
+        "page": "pages/01_📊_Scores.py",
+        "key": "quick_scores"
+    },
+    {
+        "icon": "💊",
+        "title": "Drugs",
+        "desc": "57 antibiotics<br/>TDM & Dosing",
+        "color": "linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
+        "border": "#4caf50",
+        "page": "pages/02_💊_Antibiotics.py",
+        "key": "quick_drugs"
+    },
+    {
+        "icon": "🔬",
+        "title": "Labs",
+        "desc": "9 panels<br/>Unit conversion",
+        "color": "linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
+        "border": "#ff9800",
+        "page": "pages/05_🔬_Labs.py",
+        "key": "quick_labs"
+    },
+    {
+        "icon": "🫁",
+        "title": "Ventilator",
+        "desc": "ARDSNet<br/>PEEP/FiO₂",
+        "color": "linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)",
+        "border": "#e91e63",
+        "page": "pages/03_🫁_Ventilator.py",
+        "key": "quick_vent"
+    },
+    {
+        "icon": "📋",
+        "title": "Protocols",
+        "desc": "5 protocols<br/>Evidence-based",
+        "color": "linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
+        "border": "#9c27b0",
+        "page": "pages/04_📋_Protocols.py",
+        "key": "quick_protocols"
+    }
+]
 
-with col2:
-    with st.container():
-        st.markdown("""
-        <div style="text-align: center; padding: 20px; background-color: #e8f5e9; border-radius: 10px;">
-            <h2>💊</h2>
-            <h4>Drugs</h4>
-            <p style="font-size: 0.85em;">TDM & Dosing<br/>3 calculators</p>
+columns = [col1, col2, col3, col4, col5]
+for idx, (col, module) in enumerate(zip(columns, modules)):
+    with col:
+        st.markdown(f"""
+        <div class="module-card" style="background: {module['color']}; border: 2px solid {module['border']}; text-align: center;">
+            <div>
+                <div class="module-icon">{module['icon']}</div>
+                <div class="module-title">{module['title']}</div>
+                <div class="module-desc">{module['desc']}</div>
+            </div>
         </div>
         """, unsafe_allow_html=True)
-        if st.button("💊 Mở Drugs", key="quick_drugs", use_container_width=True):
-            st.switch_page("pages/02_💊_Antibiotics.py")
-
-with col3:
-    with st.container():
-        st.markdown("""
-        <div style="text-align: center; padding: 20px; background-color: #fff3e0; border-radius: 10px;">
-            <h2>🔬</h2>
-            <h4>Labs</h4>
-            <p style="font-size: 0.85em;">9 panels<br/>Unit conversion</p>
-        </div>
-        """, unsafe_allow_html=True)
-        if st.button("🔬 Mở Labs", key="quick_labs", use_container_width=True):
-            st.switch_page("pages/05_🔬_Labs.py")
-
-with col4:
-    with st.container():
-        st.markdown("""
-        <div style="text-align: center; padding: 20px; background-color: #fce4ec; border-radius: 10px;">
-            <h2>🫁</h2>
-            <h4>Ventilator</h4>
-            <p style="font-size: 0.85em;">ARDSNet<br/>PEEP/FiO₂</p>
-        </div>
-        """, unsafe_allow_html=True)
-        if st.button("🫁 Mở Ventilator", key="quick_vent", use_container_width=True):
-            st.switch_page("pages/03_🫁_Ventilator.py")
-
-with col5:
-    with st.container():
-        st.markdown("""
-        <div style="text-align: center; padding: 20px; background-color: #f3e5f5; border-radius: 10px;">
-            <h2>📋</h2>
-            <h4>Protocols</h4>
-            <p style="font-size: 0.85em;">5 protocols<br/>Evidence-based</p>
-        </div>
-        """, unsafe_allow_html=True)
-        if st.button("📋 Mở Protocols", key="quick_protocols", use_container_width=True):
-            st.switch_page("pages/04_📋_Protocols.py")
+        if st.button(f"{module['icon']} Mở {module['title']}", key=module['key'], use_container_width=True):
+            st.switch_page(module['page'])
 
 st.markdown("---")
 
