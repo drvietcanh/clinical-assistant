@@ -2293,5 +2293,282 @@ ANTIBIOTICS_DATABASE = {
         "aware_classification": "WATCH",
         "pregnancy": "C"
     },
+    
+    # ========== BETA-LACTAMS - CEPHALOSPORINS (Additional) ==========
+    "Cefoperazone": {
+        "group": "Beta-lactam - Cephalosporin (3rd gen)",
+        "vietnamese_name": "Cefoperazone, Cefobid, Cefobact",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Nhiễm khuẩn đường tiết niệu",
+            "Nhiễm khuẩn đường hô hấp",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn ổ bụng (phối hợp metronidazole)",
+            "Nhiễm khuẩn do P. aeruginosa"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/penicillin",
+            "Tiền sử sốc phản vệ beta-lactam"
+        ],
+        "dosage": {
+            "adult_iv": "2g IV mỗi 8-12 giờ (4-6g/ngày)",
+            "adult_im": "1-2g IM mỗi 12 giờ",
+            "pediatric_iv": "50-200mg/kg/ngày chia 2-4 lần",
+            "severe_iv": "3-4g IV mỗi 8 giờ (9-12g/ngày)",
+            "notes": "Bài tiết qua mật cao - ưu điểm trong nhiễm khuẩn đường mật"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "15_30": "Giảm liều 50%",
+            "under_15": "1-2g mỗi 12 giờ (không cần điều chỉnh nhiều do bài tiết mật)"
+        },
+        "side_effects": [
+            "Rối loạn đông máu (hypoprothrombinemia) - bổ sung vitamin K",
+            "Tiêu chảy",
+            "Phản ứng dị ứng",
+            "Viêm tĩnh mạch",
+            "Phản ứng disulfiram nếu uống rượu"
+        ],
+        "interactions": [
+            "Rượu: phản ứng giống disulfiram (đỏ mặt, nôn, tim đập nhanh)",
+            "Warfarin: tăng nguy cơ chảy máu (cần theo dõi PT/INR)",
+            "Heparin: tăng nguy cơ chảy máu"
+        ],
+        "monitoring": "PT/INR, đông máu trong điều trị dài ngày",
+        "aware_classification": "WATCH",
+        "pregnancy": "B"
+    },
+    
+    "Cefoperazone-Sulbactam": {
+        "group": "Beta-lactam - Cephalosporin + Beta-lactamase inhibitor",
+        "vietnamese_name": "Cefoperazone-Sulbactam, Sulperazone, Cefazone-S",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Nhiễm khuẩn bệnh viện (HAP, VAP)",
+            "Nhiễm khuẩn ổ bụng",
+            "Nhiễm khuẩn đường tiết niệu phức tạp",
+            "Nhiễm khuẩn do vi khuẩn kháng beta-lactamase",
+            "Nhiễm khuẩn do P. aeruginosa"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/penicillin",
+            "Sốc phản vệ beta-lactam"
+        ],
+        "dosage": {
+            "adult_iv": "2g-1g (Cefoperazone-Sulbactam) IV mỗi 8-12 giờ",
+            "adult_im": "1g-0.5g IM mỗi 12 giờ",
+            "pediatric_iv": "40-80mg/kg/ngày (tính theo Cefoperazone) chia 2-3 lần",
+            "severe_iv": "3g-1.5g IV mỗi 8 giờ",
+            "notes": "Tỷ lệ 2:1 (Cefoperazone:Sulbactam), phổ rộng hơn Cefoperazone đơn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "15_30": "Giảm liều 50%",
+            "under_15": "1g-0.5g mỗi 12 giờ"
+        },
+        "side_effects": [
+            "Rối loạn đông máu (giống Cefoperazone)",
+            "Tiêu chảy",
+            "Phản ứng dị ứng",
+            "Viêm tĩnh mạch"
+        ],
+        "interactions": [
+            "Rượu: phản ứng disulfiram",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Vitamin K: bổ sung nếu điều trị dài ngày"
+        ],
+        "monitoring": "PT/INR, đông máu",
+        "aware_classification": "WATCH",
+        "pregnancy": "B"
+    },
+    
+    # ========== BETA-LACTAMS - PENICILLINS (Anti-staphylococcal) ==========
+    "Oxacillin": {
+        "group": "Beta-lactam - Penicillin (Anti-staphylococcal)",
+        "vietnamese_name": "Oxacillin, Prostaphlin, Oxapen",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Nhiễm khuẩn do MSSA (Methicillin-Sensitive S. aureus)",
+            "Viêm tủy xương do tụ cầu",
+            "Viêm nội tâm mạc do tụ cầu",
+            "Nhiễm khuẩn da và mô mềm do tụ cầu",
+            "Viêm phổi do tụ cầu"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin",
+            "Nhiễm khuẩn do MRSA (cần vancomycin/daptomycin)",
+            "Nhiễm khuẩn do beta-hemolytic streptococci nhạy cảm (ưu tiên penicillin G)"
+        ],
+        "dosage": {
+            "adult_iv": "1-2g IV mỗi 4-6 giờ (4-12g/ngày)",
+            "adult_im": "500mg-1g IM mỗi 4-6 giờ",
+            "pediatric_iv": "100-200mg/kg/ngày chia 4-6 lần",
+            "meningitis_iv": "2g IV mỗi 4 giờ",
+            "endocarditis_iv": "2g IV mỗi 4 giờ",
+            "notes": "Không kháng MRSA - chỉ dùng cho MSSA. Liều cao cần truyền chậm (1-2 giờ)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25%",
+            "15_30": "Giảm liều 50%",
+            "under_15": "1g mỗi 8 giờ"
+        },
+        "side_effects": [
+            "Viêm tĩnh mạch (thường gặp)",
+            "Tăng transaminase, vàng da (hiếm)",
+            "Viêm thận kẽ (hiếm)",
+            "Giảm bạch cầu, giảm tiểu cầu",
+            "Phản ứng dị ứng"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ oxacillin",
+            "Warfarin: có thể tăng tác dụng"
+        ],
+        "monitoring": "LFT (AST/ALT), công thức máu nếu điều trị dài ngày",
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    "Flucloxacillin": {
+        "group": "Beta-lactam - Penicillin (Anti-staphylococcal)",
+        "vietnamese_name": "Flucloxacillin, Floxapen, Fluclocid",
+        "administration": ["IV", "IM", "PO"],
+        "indications": [
+            "Nhiễm khuẩn do MSSA",
+            "Viêm tủy xương do tụ cầu",
+            "Nhiễm khuẩn da và mô mềm",
+            "Viêm phổi do tụ cầu"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin",
+            "MRSA (không hiệu quả)"
+        ],
+        "dosage": {
+            "adult_iv": "1-2g IV mỗi 6 giờ",
+            "adult_im": "500mg-1g IM mỗi 6 giờ",
+            "adult_po": "250-500mg PO mỗi 6 giờ",
+            "pediatric_iv": "50-100mg/kg/ngày chia 4 lần",
+            "pediatric_po": "25-50mg/kg/ngày chia 4 lần",
+            "notes": "Hấp thu tốt qua đường uống, thường dùng để điều trị ngoại trú"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25%",
+            "15_30": "Giảm liều 50%",
+            "under_15": "500mg mỗi 8 giờ (IV/IM), 250mg PO mỗi 8 giờ"
+        },
+        "side_effects": [
+            "Tiêu chảy (đường uống)",
+            "Viêm tĩnh mạch (IV)",
+            "Tăng transaminase",
+            "Phản ứng dị ứng"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ",
+            "Oral contraceptives: giảm hiệu quả"
+        ],
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    # ========== CARBAPENEMS (Additional) ==========
+    "Doripenem": {
+        "group": "Beta-lactam - Carbapenem",
+        "vietnamese_name": "Doripenem, Doribax",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn ổ bụng phức tạp",
+            "Nhiễm khuẩn đường tiết niệu phức tạp",
+            "Viêm phổi bệnh viện (HAP)",
+            "Nhiễm khuẩn do ESBL-producing Enterobacteriaceae",
+            "Nhiễm khuẩn do P. aeruginosa"
+        ],
+        "contraindications": [
+            "Dị ứng carbapenem/penicillin",
+            "Sốc phản vệ beta-lactam"
+        ],
+        "dosage": {
+            "adult_iv": "500mg IV mỗi 8 giờ (1.5g/ngày)",
+            "severe_iv": "1g IV mỗi 8 giờ (3g/ngày)",
+            "pediatric_iv": "Không khuyến cáo cho trẻ <18 tuổi",
+            "notes": "Truyền IV trong 1-4 giờ (truyền chậm hơn Meropenem). Phổ rộng nhưng ít tác dụng phụ hơn Imipenem"
+        },
+        "renal_adjustment": {
+            "normal": "500mg mỗi 8 giờ",
+            "30_60": "250mg mỗi 8 giờ",
+            "15_30": "250mg mỗi 12 giờ",
+            "under_15": "250mg mỗi 24 giờ hoặc lọc máu"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Đau đầu",
+            "Buồn nôn",
+            "Phát ban",
+            "Co giật (hiếm, ít hơn Imipenem)"
+        ],
+        "interactions": [
+            "Valproic acid: giảm nồng độ valproic acid đáng kể",
+            "Probenecid: tăng nồng độ doripenem"
+        ],
+        "monitoring": "Theo dõi co giật ở bệnh nhân có nguy cơ",
+        "aware_classification": "RESERVE",
+        "pregnancy": "B"
+    },
+    
+    # ========== OTHER ANTIBIOTICS ==========
+    "Rifampin": {
+        "group": "Rifamycin - Anti-tuberculosis/Anti-staphylococcal",
+        "vietnamese_name": "Rifampin, Rifampicin, Rimactan",
+        "administration": ["IV", "PO"],
+        "indications": [
+            "Lao (TB) - phác đồ chuẩn (kết hợp)",
+            "Nhiễm khuẩn do MSSA/MRSA - liệu pháp kết hợp",
+            "Nhiễm khuẩn do S. epidermidis (prosthetic devices)",
+            "Prophylaxis viêm màng não do H. influenzae, N. meningitidis",
+            "Brucellosis (kết hợp doxycycline)"
+        ],
+        "contraindications": [
+            "Dị ứng rifampin/rifamycin",
+            "Viêm gan cấp",
+            "Suy gan nặng",
+            "Dùng đơn độc (dễ kháng thuốc)"
+        ],
+        "dosage": {
+            "adult_iv": "600mg IV mỗi 12-24 giờ",
+            "adult_po": "600mg PO mỗi 24 giờ (nên uống lúc đói)",
+            "pediatric_iv": "10-20mg/kg/ngày (tối đa 600mg) chia 1-2 lần",
+            "pediatric_po": "10-20mg/kg/ngày (tối đa 600mg) 1 lần/ngày",
+            "tb_po": "600mg PO mỗi 24 giờ (phối hợp với isoniazid, pyrazinamide, ethambutol)",
+            "mrsa_po": "600mg PO mỗi 12 giờ (phối hợp vancomycin/daptomycin)",
+            "notes": "Nước tiểu, mồ hôi, nước bọt, nước mắt màu đỏ cam. Uống lúc đói để hấp thu tốt nhất"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "15_30": "Giảm liều 25-50% nếu suy gan kèm theo",
+            "under_15": "Giảm liều 25-50% nếu suy gan kèm theo"
+        },
+        "side_effects": [
+            "Đỏ da, nước tiểu màu đỏ cam (bình thường)",
+            "Viêm gan (tăng transaminase)",
+            "Giảm tiểu cầu",
+            "Giảm bạch cầu",
+            "Phản ứng quá mẫn (sốt, phát ban)",
+            "Phản ứng giống cúm",
+            "Tiêu chảy, buồn nôn"
+        ],
+        "interactions": [
+            "Warfarin: giảm tác dụng (tăng CYP450)",
+            "Oral contraceptives: giảm hiệu quả",
+            "HIV protease inhibitors: giảm nồng độ",
+            "Nhiều thuốc khác: rifampin là chất cảm ứng mạnh CYP450"
+        ],
+        "monitoring": "LFT (AST/ALT, bilirubin), công thức máu, nước tiểu màu đỏ cam là bình thường",
+        "aware_classification": "WATCH",
+        "pregnancy": "C - An toàn cho TB (phối hợp với isoniazid, pyrazinamide)",
+        "notes": "Chất cảm ứng mạnh CYP450 - tương tác với nhiều thuốc. Màu đỏ cam nước tiểu là bình thường"
+    },
 }
 

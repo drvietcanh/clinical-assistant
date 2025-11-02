@@ -253,6 +253,7 @@ def render_multi_comparison():
         
         # Dosing convenience
         convenience_scores = {}
+        convenience_details = {}  # Store detailed info for each antibiotic
         for ab_name in selected_antibiotics:
             detailed = calculate_detailed_dose(ab_name, weight, ibw, abw, crcl, indication_code, is_pediatric=False)
             if detailed and detailed.get('interval_hours'):
@@ -267,8 +268,15 @@ def render_multi_comparison():
                 else:
                     score = 2
                 convenience_scores[ab_name] = score
+                convenience_details[ab_name] = detailed  # Store detailed info
         
         if convenience_scores:
             best_convenient = max(convenience_scores.items(), key=lambda x: x[1])
-            st.info(f"💡 **Dùng tiện nhất:** {best_convenient[0]} (mỗi {detailed['interval_hours']:.0f} giờ)")
+            best_ab_name = best_convenient[0]
+            best_detailed = convenience_details.get(best_ab_name)
+            if best_detailed and best_detailed.get('interval_hours'):
+                interval = best_detailed['interval_hours']
+                st.info(f"💡 **Dùng tiện nhất:** {best_ab_name} (mỗi {interval:.0f} giờ)")
+            else:
+                st.info(f"💡 **Dùng tiện nhất:** {best_ab_name}")
 
