@@ -1856,5 +1856,442 @@ ANTIBIOTICS_DATABASE = {
         "aware_classification": "RESERVE",
         "pregnancy": "C"
     },
+    
+    # ========== AMINOGLYCOSIDES - Tobramycin ==========
+    "Tobramycin": {
+        "group": "Aminoglycoside",
+        "vietnamese_name": "Tobramycin, Nebcin, Tobramycin",
+        "administration": ["IV", "IM", "Inhalation"],
+        "indications": [
+            "Nhiễm khuẩn do Pseudomonas aeruginosa",
+            "Nhiễm khuẩn đường tiết niệu",
+            "Nhiễm khuẩn da và mô mềm",
+            "Viêm phổi do P. aeruginosa",
+            "Nhiễm khuẩn huyết do Gram âm"
+        ],
+        "contraindications": [
+            "Dị ứng aminoglycoside",
+            "Nhược cơ nặng",
+            "Suy thận nặng (thận trọng, monitor)"
+        ],
+        "dosage": {
+            "adult_iv_standard": "5-7mg/kg IV mỗi 24 giờ (extended-interval)",
+            "adult_iv_traditional": "1-1.7mg/kg IV mỗi 8 giờ",
+            "adult_inhalation": "300mg x 2 lần/ngày (cho P. aeruginosa trong CF)",
+            "pediatric_iv": "5-7mg/kg IV mỗi 24 giờ",
+            "notes": "Tốt hơn Gentamicin chống P. aeruginosa. Extended-interval dosing khuyến cáo"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Rút ngắn interval hoặc giảm liều",
+            "15_30": "Rút ngắn interval hoặc giảm liều 50%",
+            "under_15": "Dùng liều thấp với interval dài hoặc tránh"
+        },
+        "side_effects": [
+            "Độc tai (irreversible)",
+            "Độc thận (reversible)",
+            "Chóng mặt, mất thăng bằng",
+            "Tê bì (neuromuscular blockade - liều cao)"
+        ],
+        "interactions": [
+            "Vancomycin: tăng độc thận",
+            "Furosemide: tăng độc tai",
+            "Neuromuscular blocking agents: tăng tê liệt"
+        ],
+        "monitoring": "Bắt buộc: Peak/Trough, Creatinine, thính giác",
+        "aware_classification": "WATCH",
+        "pregnancy": "D"
+    },
+    
+    # ========== GLYCOPEPTIDES - Teicoplanin ==========
+    "Teicoplanin": {
+        "group": "Glycopeptide",
+        "vietnamese_name": "Teicoplanin, Targocid, Teicoplanin",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Nhiễm khuẩn do MRSA (da, mô mềm)",
+            "Viêm nội tâm mạc do MRSA",
+            "Nhiễm khuẩn do Enterococcus",
+            "Nhiễm khuẩn xương khớp do MRSA",
+            "Nhiễm khuẩn bệnh viện do MRSA"
+        ],
+        "contraindications": [
+            "Dị ứng teicoplanin",
+            "Suy thận nặng (phải điều chỉnh liều)"
+        ],
+        "dosage": {
+            "adult_iv_load": "6mg/kg IV x 2-3 lần (loading, mỗi 12 giờ)",
+            "adult_iv_maintenance": "6mg/kg IV x 1 lần/ngày",
+            "adult_iv_severe": "12mg/kg IV x 1 lần/ngày",
+            "adult_im": "6mg/kg IM x 1 lần/ngày",
+            "pediatric_iv": "10mg/kg IV x 2 lần đầu, sau đó 6mg/kg x 1 lần/ngày",
+            "notes": "Glycopeptide, liên kết protein 90%. Ít độc thận hơn Vancomycin. Có thể tiêm IM"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50% hoặc mỗi 48h",
+            "15_30": "Giảm liều 75% hoặc mỗi 72h",
+            "under_15": "Liều thấp mỗi 72-96h hoặc lọc máu"
+        },
+        "side_effects": [
+            "Độc thận (ít hơn Vancomycin)",
+            "Độc tai (ít hơn Vancomycin)",
+            "Thrombocytopenia (hiếm)",
+            "Phản ứng tại chỗ tiêm (IM)"
+        ],
+        "interactions": [
+            "Aminoglycosides: tăng độc thận",
+            "Furosemide: tăng độc tai"
+        ],
+        "monitoring": "Monitor nồng độ trough (15-30 mg/L), creatinine",
+        "aware_classification": "RESERVE",
+        "pregnancy": "C"
+    },
+    
+    # ========== CEPHALOSPORINS - Cephalexin ==========
+    "Cephalexin": {
+        "group": "Beta-lactam - Cephalosporin thế hệ 1",
+        "vietnamese_name": "Cephalexin, Keflex, Cephalexin",
+        "administration": ["PO"],
+        "indications": [
+            "Nhiễm khuẩn đường tiết niệu",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn đường hô hấp",
+            "Nhiễm khuẩn răng miệng"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin (phản ứng chéo với penicillin)",
+            "Sốc phản vệ với beta-lactam"
+        ],
+        "dosage": {
+            "adult_po": "250-500mg PO x 4 lần/ngày",
+            "adult_severe": "500mg-1g PO x 4 lần/ngày",
+            "pediatric_po": "25-50mg/kg/ngày chia 4 lần",
+            "notes": "Cephalosporin PO thông dụng nhất. Không có dạng IV"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "15_30": "Giảm liều 50%",
+            "under_15": "Giảm liều mạnh hoặc tránh"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Phát ban",
+            "Buồn nôn",
+            "Nhiễm nấm Candida"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    # ========== CEPHALOSPORINS - Cefadroxil ==========
+    "Cefadroxil": {
+        "group": "Beta-lactam - Cephalosporin thế hệ 1",
+        "vietnamese_name": "Cefadroxil, Cefadroxil, Duricef",
+        "administration": ["PO"],
+        "indications": [
+            "Nhiễm khuẩn đường tiết niệu",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn đường hô hấp"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin",
+            "Sốc phản vệ với beta-lactam"
+        ],
+        "dosage": {
+            "adult_po": "1-2g PO x 1-2 lần/ngày",
+            "pediatric_po": "30mg/kg/ngày chia 2 lần",
+            "notes": "Dùng 1-2 lần/ngày (thuận tiện hơn Cephalexin)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "15_30": "Giảm liều 50%",
+            "under_15": "Giảm liều mạnh"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Phát ban",
+            "Buồn nôn"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ"
+        ],
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    # ========== MACROLIDES - Clarithromycin ==========
+    "Clarithromycin": {
+        "group": "Macrolide",
+        "vietnamese_name": "Clarithromycin, Klacid, Clarithromycin",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm khuẩn do Chlamydia, Mycoplasma, Legionella",
+            "Nhiễm khuẩn đường hô hấp",
+            "Helicobacter pylori (kết hợp)",
+            "Viêm phổi cộng đồng",
+            "Nhiễm khuẩn da và mô mềm"
+        ],
+        "contraindications": [
+            "Dị ứng clarithromycin",
+            "Rối loạn nhịp tim (QT kéo dài)",
+            "Dùng với statin mạnh (tăng nguy cơ tiêu cơ vân)"
+        ],
+        "dosage": {
+            "adult_po": "250-500mg PO x 2 lần/ngày",
+            "adult_po_extended": "500mg PO x 2 lần/ngày (XL formulation)",
+            "adult_iv": "500mg IV x 2 lần/ngày",
+            "pediatric_po": "7.5-15mg/kg/ngày chia 2 lần",
+            "notes": "Macrolide thế hệ 2. Tốt hơn Erythromycin, ít tương tác hơn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50% (250mg x 2 lần/ngày)",
+            "15_30": "Giảm liều 50%",
+            "under_15": "Giảm liều mạnh hoặc tránh"
+        },
+        "side_effects": [
+            "QT kéo dài, rối loạn nhịp tim",
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Rối loạn vị giác"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Statins (đặc biệt Simvastatin, Lovastatin): tăng nguy cơ tiêu cơ vân",
+            "Digoxin: tăng nồng độ digoxin",
+            "Theophylline: tăng nồng độ theophylline"
+        ],
+        "aware_classification": "ACCESS",
+        "pregnancy": "C"
+    },
+    
+    # ========== TETRACYCLINES - Minocycline ==========
+    "Minocycline": {
+        "group": "Tetracycline",
+        "vietnamese_name": "Minocycline, Minocycline, Minocin",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm khuẩn do Chlamydia, Mycoplasma",
+            "Viêm phổi không điển hình",
+            "Mụn trứng cá (liều thấp)",
+            "Nhiễm khuẩn da và mô mềm",
+            "Bệnh lây truyền qua đường tình dục"
+        ],
+        "contraindications": [
+            "Trẻ em < 8 tuổi (ảnh hưởng răng và xương)",
+            "Có thai (ảnh hưởng xương thai nhi)",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_po": "100mg PO x 2 lần/ngày",
+            "adult_iv": "200mg IV x 1 lần/ngày hoặc 100mg IV x 2 lần/ngày",
+            "adult_acne": "50-100mg PO x 1-2 lần/ngày",
+            "pediatric_po": "4mg/kg/ngày chia 2 lần (≥8 tuổi)",
+            "notes": "Tetracycline, tốt hơn Doxycycline về CNS penetration"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi (thải qua gan)",
+            "15_30": "Không đổi (thải qua gan)",
+            "under_15": "Không đổi (thải qua gan)"
+        },
+        "side_effects": [
+            "Rối loạn tiền đình (chóng mặt, mất thăng bằng)",
+            "Tăng áp lực nội sọ (pseudotumor cerebri)",
+            "Phản ứng quá mẫn (DRESS, SJS)",
+            "Ảnh hưởng răng và xương (trẻ em, thai nhi)"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Oral contraceptives: giảm hiệu quả",
+            "Antacids, Ca2+, Fe2+: giảm hấp thu"
+        ],
+        "aware_classification": "ACCESS",
+        "pregnancy": "D"
+    },
+    
+    # ========== POLYMYXINS - Polymyxin B ==========
+    "Polymyxin B": {
+        "group": "Polymyxin",
+        "vietnamese_name": "Polymyxin B, Polymyxin B",
+        "administration": ["IV", "IM", "Topical"],
+        "indications": [
+            "Nhiễm khuẩn do MDR/XDR Gram âm (cuối cùng)",
+            "P. aeruginosa, Acinetobacter MDR",
+            "Klebsiella MDR (KPC)",
+            "Khi không còn lựa chọn khác"
+        ],
+        "contraindications": [
+            "Dị ứng polymyxin",
+            "Nhược cơ (myasthenia gravis)",
+            "Suy thận nặng (thận trọng)"
+        ],
+        "dosage": {
+            "adult_iv": "15,000-25,000 đơn vị/kg/ngày chia 2 lần",
+            "adult_iv_standard": "2.5mg/kg/ngày (theo colistin base) chia 2 lần",
+            "adult_topical": "Dùng ngoài da, không dùng toàn thân",
+            "notes": "Rất độc. Chỉ dùng khi không còn lựa chọn. Đơn vị: 1mg ≈ 10,000 đơn vị"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "15_30": "Giảm liều 50-75%",
+            "under_15": "Giảm liều mạnh hoặc tránh"
+        },
+        "side_effects": [
+            "Độc thận (30-50%)",
+            "Độc thần kinh (paresthesia, rối loạn cảm giác)",
+            "Co giật",
+            "Suy hô hấp (neuromuscular blockade)"
+        ],
+        "interactions": [
+            "Aminoglycosides: tăng độc thận",
+            "Neuromuscular blocking agents: tăng tê liệt",
+            "Diuretics: tăng độc thận"
+        ],
+        "monitoring": "Bắt buộc: Creatinine hàng ngày, xét nghiệm thần kinh",
+        "aware_classification": "RESERVE",
+        "pregnancy": "C"
+    },
+    
+    # ========== BETA-LACTAMS - Ceftolozane-Tazobactam ==========
+    "Ceftolozane-Tazobactam": {
+        "group": "Beta-lactam - Cephalosporin + Beta-lactamase inhibitor",
+        "vietnamese_name": "Ceftolozane-Tazobactam, Zerbaxa, Ceftolozane-Tazobactam",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn bệnh viện do P. aeruginosa MDR",
+            "Viêm phổi bệnh viện",
+            "Nhiễm khuẩn ổ bụng phức tạp",
+            "Nhiễm khuẩn đường tiết niệu phức tạp"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin",
+            "Dị ứng penicillin nặng (phản ứng chéo)"
+        ],
+        "dosage": {
+            "adult_standard": "1.5g (1g ceftolozane + 0.5g tazobactam) IV mỗi 8 giờ",
+            "adult_renal_30_50": "750mg IV mỗi 8 giờ",
+            "adult_renal_15_30": "375mg IV mỗi 8 giờ",
+            "adult_renal_under_15": "Loading 750mg, sau đó 375mg mỗi 8 giờ",
+            "pediatric": "30mg/kg (theo ceftolozane) IV mỗi 8 giờ",
+            "notes": "Thuốc mới, rất tốt chống P. aeruginosa. Đắt tiền. Cần điều chỉnh liều theo CrCl"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "15_30": "Giảm liều 75%",
+            "under_15": "Giảm liều mạnh hoặc lọc máu"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Buồn nôn, nôn",
+            "Phát ban",
+            "Tăng transaminase"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ"
+        ],
+        "aware_classification": "RESERVE",
+        "pregnancy": "B"
+    },
+    
+    # ========== CARBAPENEMS - Meropenem-Vaborbactam ==========
+    "Meropenem-Vaborbactam": {
+        "group": "Beta-lactam - Carbapenem + Beta-lactamase inhibitor",
+        "vietnamese_name": "Meropenem-Vaborbactam, Vabomere, Meropenem-Vaborbactam",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn do CRE (Carbapenem-resistant Enterobacteriaceae)",
+            "Viêm phổi bệnh viện do KPC",
+            "Nhiễm khuẩn huyết do CRE",
+            "Nhiễm khuẩn phức tạp ổ bụng"
+        ],
+        "contraindications": [
+            "Dị ứng carbapenem",
+            "Dị ứng penicillin nặng"
+        ],
+        "dosage": {
+            "adult_standard": "4g (2g meropenem + 2g vaborbactam) IV mỗi 8 giờ",
+            "adult_renal_30_50": "2g IV mỗi 8 giờ",
+            "adult_renal_15_30": "2g IV mỗi 12 giờ",
+            "adult_renal_under_15": "1g IV mỗi 12 giờ",
+            "notes": "Thuốc mới, đắt tiền. Chỉ dùng khi CRE được xác nhận hoặc nghi ngờ cao"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "15_30": "Giảm liều 50% và tăng interval",
+            "under_15": "Giảm liều mạnh hoặc lọc máu"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Buồn nôn, nôn",
+            "Phát ban",
+            "Co giật (hiếm, nếu suy thận)"
+        ],
+        "interactions": [
+            "Valproic acid: giảm nồng độ valproic acid",
+            "Probenecid: không dùng"
+        ],
+        "aware_classification": "RESERVE",
+        "pregnancy": "C"
+    },
+    
+    # ========== CEPHALOSPORINS - Ceftazidime-Avibactam (đã có, kiểm tra lại) ==========
+    # Đã có trong database, không cần thêm lại
+    
+    # ========== FLUOROQUINOLONES - Moxifloxacin ==========
+    "Moxifloxacin": {
+        "group": "Fluoroquinolone",
+        "vietnamese_name": "Moxifloxacin, Avelox, Moxifloxacin",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Viêm phổi cộng đồng",
+            "Viêm phổi bệnh viện",
+            "Nhiễm khuẩn da và mô mềm",
+            "Viêm xoang",
+            "Nhiễm khuẩn ổ bụng phức tạp"
+        ],
+        "contraindications": [
+            "Dị ứng quinolone",
+            "QT kéo dài, rối loạn nhịp tim",
+            "Trẻ em < 18 tuổi (ảnh hưởng sụn)",
+            "Có thai, cho con bú"
+        ],
+        "dosage": {
+            "adult_iv": "400mg IV x 1 lần/ngày",
+            "adult_po": "400mg PO x 1 lần/ngày",
+            "notes": "Quinolone thế hệ 4. Phổ rộng, bao gồm vi khuẩn kỵ khí. QT kéo dài nguy hiểm"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi (thải qua gan)",
+            "15_30": "Không đổi (thải qua gan)",
+            "under_15": "Không đổi (thải qua gan)"
+        },
+        "side_effects": [
+            "QT kéo dài, rối loạn nhịp tim (torsades de pointes)",
+            "Tendinitis, đứt gân",
+            "Rối loạn thần kinh trung ương",
+            "Phản ứng quá mẫn",
+            "Tăng nguy cơ viêm đại tràng giả mạc"
+        ],
+        "interactions": [
+            "QT-prolonging drugs: tăng nguy cơ rối loạn nhịp",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Antacids, multivitamins: giảm hấp thu"
+        ],
+        "monitoring": "ECG trước và trong điều trị, QT interval",
+        "aware_classification": "WATCH",
+        "pregnancy": "C"
+    },
 }
 
