@@ -6,6 +6,7 @@ Tích hợp database kháng sinh với công cụ tra cứu và tính liều
 import streamlit as st
 import pandas as pd
 from .antibiotics_data import ANTIBIOTICS_DATABASE
+from .dosing_calculator import calculate_adjusted_dose, get_renal_category
 
 
 def search_antibiotics(query):
@@ -286,22 +287,61 @@ def render_antibiotic_lookup():
                 # Display full info
                 display_antibiotic_info(ab_name, ab_data)
                 
-                # Quick links to dosing calculators
+                # Quick dosing calculator integration
+                st.markdown("---")
+                st.markdown("### 🧮 Tính Liều Theo eGFR/CrCl")
+                
+                # Get patient info if available from session state, otherwise use defaults
+                patient_crcl = st.session_state.get('patient_crcl', None)
+                patient_egfr = st.session_state.get('patient_egfr', None)
+                
+                if patient_crcl is not None:
+                    st.info(f"**CrCl đã tính:** {patient_crcl:.1f} mL/min | **eGFR:** {patient_egfr:.1f} mL/min/1.73m²" if patient_egfr else f"**CrCl đã tính:** {patient_crcl:.1f} mL/min")
+                
+                    if st.button(f"🧮 Tính liều {ab_name} cho CrCl = {patient_crcl:.1f} mL/min", use_container_width=True, type="primary", key=f"quick_calc_{ab_name}"):
+                        renal_category = get_renal_category(patient_crcl, patient_egfr)
+                        result = calculate_adjusted_dose(ab_name, patient_crcl, patient_egfr, indication="standard")
+                        
+                        if "error" not in result:
+                            st.markdown("---")
+                            st.markdown("#### 📊 Kết Quả Tính Liều:")
+                            st.success(f"**Điều chỉnh liều:** {result['adjustment']}")
+                            
+                            if result.get('full_renal_guide'):
+                                st.markdown("**Bảng điều chỉnh đầy đủ:**")
+                                renal_guide = result['full_renal_guide']
+                                renal_info = []
+                                if 'normal' in renal_guide:
+                                    renal_info.append(f"✅ CrCl ≥ 60: {renal_guide['normal']}")
+                                if '30_60' in renal_guide:
+                                    renal_info.append(f"⚠️ CrCl 30-59: {renal_guide['30_60']}")
+                                if '15_30' in renal_guide:
+                                    renal_info.append(f"🔴 CrCl 15-29: {renal_guide['15_30']}")
+                                if 'under_15' in renal_guide:
+                                    renal_info.append(f"🚨 CrCl < 15: {renal_guide['under_15']}")
+                                
+                                for info in renal_info:
+                                    st.markdown(f"- {info}")
+                
+                # Special calculators (Vancomycin, Aminoglycoside)
                 if ab_name == "Vancomycin":
                     st.markdown("---")
                     col1, col2, col3 = st.columns([1, 2, 1])
                     with col2:
-                        if st.button(f"🧮 Tính liều Vancomycin", key=f"calc_{ab_name}", use_container_width=True, type="primary"):
+                        if st.button(f"🧮 Tính liều Vancomycin (TDM)", key=f"calc_{ab_name}", use_container_width=True, type="secondary"):
                             st.session_state['show_vancomycin_calc'] = True
                             st.rerun()
                 
-                elif ab_name in ["Gentamicin", "Amikacin"]:
+                elif ab_name in ["Gentamicin", "Amikacin", "Tobramycin"]:
                     st.markdown("---")
                     col1, col2, col3 = st.columns([1, 2, 1])
                     with col2:
-                        if st.button(f"🧮 Tính liều Aminoglycoside", key=f"calc_{ab_name}", use_container_width=True, type="primary"):
+                        if st.button(f"🧮 Tính liều Aminoglycoside (Extended-Interval)", key=f"calc_{ab_name}", use_container_width=True, type="secondary"):
                             st.session_state['show_aminoglycoside_calc'] = True
                             st.rerun()
+                
+                else:
+                    st.info("💡 Sử dụng công cụ **'Tính Liều Theo eGFR/CrCl'** ở menu để tính liều tự động với thông số bệnh nhân cụ thể")
                 
                 if len(results) > 1 and ab_name != results[-1][0]:
                     st.markdown("<hr style='margin: 30px 0; border: none; border-top: 2px solid #e0e0e0;'>", unsafe_allow_html=True)
@@ -436,21 +476,29 @@ def render_antibiotic_lookup():
 
 
 def render_database():
-    """Antibiotic Database Viewer - Full list"""
+    """Antibiotic Database Viewer - Full list (now integrated with lookup)"""
     
     ab_count = len(ANTIBIOTICS_DATABASE)
-    st.markdown(f"""
-    <h2 style='text-align: center; color: #0EA5E9;'>📊 Cơ Sở Dữ Liệu Kháng Sinh</h2>
-    <p style='text-align: center;'><em>Danh sách đầy đủ {ab_count} kháng sinh tiêm truyền thông dụng</em></p>
-    """, unsafe_allow_html=True)
-    st.info(f"""
-    **Cơ sở dữ liệu bao gồm:**
-    - ✅ {ab_count} kháng sinh tiêm truyền (IV/IM) thông dụng
-    - ✅ Tên biệt dược tại Việt Nam
-    - ✅ Liều dùng chi tiết theo từng tình huống
-    - ✅ Điều chỉnh theo chức năng thận/gan
-    - ✅ Dựa trên guidelines quốc tế (IDSA, ASHP, WHO AWaRe)
-    """)
+    
+    # Tabs for search vs full list
+    tab1, tab2 = st.tabs(["🔍 Tra Cứu", "📊 Danh Sách Đầy Đủ"])
+    
+    with tab1:
+        render_antibiotic_lookup()
+    
+    with tab2:
+        st.markdown(f"""
+        <h2 style='text-align: center; color: #0EA5E9;'>📊 Cơ Sở Dữ Liệu Kháng Sinh</h2>
+        <p style='text-align: center;'><em>Danh sách đầy đủ {ab_count} kháng sinh tiêm truyền thông dụng</em></p>
+        """, unsafe_allow_html=True)
+        st.info(f"""
+        **Cơ sở dữ liệu bao gồm:**
+        - ✅ {ab_count} kháng sinh tiêm truyền (IV/IM) thông dụng
+        - ✅ Tên biệt dược tại Việt Nam
+        - ✅ Liều dùng chi tiết theo từng tình huống
+        - ✅ Điều chỉnh theo chức năng thận/gan
+        - ✅ Dựa trên guidelines quốc tế (IDSA, ASHP, WHO AWaRe)
+        """)
     
     st.markdown("---")
     

@@ -15,7 +15,8 @@ from antibiotics import (
     render_vancomycin,
     render_aminoglycoside,
     render_antibiotic_lookup,
-    render_database
+    render_database,
+    render_dosing_calculator
 )
 
 st.set_page_config(page_title="Kháng Sinh - Clinical Assistant", page_icon="💊", layout="wide")
@@ -32,11 +33,11 @@ with st.sidebar:
     function_type = st.selectbox(
         "Công cụ:",
         [
+            "🧮 Tính Liều Theo eGFR/CrCl",
             "🧮 Tính CrCl (Cockcroft-Gault)",
             "💉 Vancomycin - Tính Liều",
             "💊 Aminoglycoside - Tính Liều",
-            "🔍 Tra Cứu Kháng Sinh",
-            "📊 Cơ Sở Dữ Liệu"
+            "🔍 Tra Cứu & Dữ Liệu Kháng Sinh"
         ]
     )
     
@@ -71,7 +72,10 @@ if 'show_aminoglycoside_calc' in st.session_state and st.session_state['show_ami
     st.session_state['show_aminoglycoside_calc'] = False
 
 # Route to appropriate function
-if "CrCl" in function_type:
+if "Tính Liều Theo eGFR" in function_type:
+    render_dosing_calculator()
+
+elif "CrCl" in function_type and "eGFR" not in function_type:
     render_crcl()
 
 elif "Vancomycin" in function_type:
@@ -80,10 +84,7 @@ elif "Vancomycin" in function_type:
 elif "Aminoglycoside" in function_type:
     render_aminoglycoside()
 
-elif "Tra Cứu" in function_type:
-    render_antibiotic_lookup()
-
-elif "Cơ Sở Dữ Liệu" in function_type:
+elif "Tra Cứu" in function_type or "Dữ Liệu" in function_type:
     render_database()
 
 # ========== FOOTER ==========
