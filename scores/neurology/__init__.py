@@ -8,6 +8,7 @@ from .nihss import render as render_nihss
 from .ich_score import render as render_ich_score
 from .hunt_hess import render as render_hunt_hess
 from .mrs import render as render_mrs
+from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
 def render_neurology_calculator(calculator_id):
@@ -17,8 +18,6 @@ def render_neurology_calculator(calculator_id):
     Args:
         calculator_id: The ID of the calculator to render
     """
-    import streamlit as st
-    
     calculators = {
         "GCS": render_gcs,
         "NIHSS": render_nihss,
@@ -29,9 +28,9 @@ def render_neurology_calculator(calculator_id):
     
     calculator_func = calculators.get(calculator_id)
     if calculator_func:
-        calculator_func()
+        safe_render_calculator(calculator_func, calculator_id)
     else:
-        st.error(f"Calculator '{calculator_id}' not found!")
+        raise CalculatorNotFoundError(f"Calculator '{calculator_id}' not found in neurology module")
 
 
 __all__ = [

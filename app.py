@@ -13,6 +13,7 @@ from pathlib import Path
 # Import configuration
 from config.calculators import ALL_CALCULATORS
 from config.app_config import get_module_list_for_navigation, APP_CONFIG
+from config.theme import get_module_style
 
 # Import UI components
 from components.search import render_search

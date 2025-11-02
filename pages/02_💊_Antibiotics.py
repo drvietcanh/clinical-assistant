@@ -12,6 +12,7 @@ from antibiotics import (
     render_dosing_calculator,
     render_multi_comparison
 )
+from drugs import render_interaction_checker
 
 # Standard page setup
 setup_page(
@@ -29,7 +30,8 @@ with st.sidebar:
         [
             "🧮 Tính Liều Theo eGFR/CrCl",
             "🔬 So Sánh Nhiều Kháng Sinh",
-            "🔍 Tra Cứu & Dữ Liệu Kháng Sinh"
+            "🔍 Tra Cứu & Dữ Liệu Kháng Sinh",
+            "🔍 Kiểm Tra Tương Tác Thuốc"
         ]
     )
     
@@ -53,6 +55,9 @@ elif "So Sánh Nhiều" in function_type:
 
 elif "Tra Cứu" in function_type or "Dữ Liệu" in function_type:
     render_database()
+
+elif "Tương Tác" in function_type:
+    render_interaction_checker()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

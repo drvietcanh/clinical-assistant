@@ -11,6 +11,7 @@ from ventilator import (
     render_initial_settings,
     render_peep_fio2_table
 )
+from critical_care import render_fluid_calculator, render_vasopressor_guide
 
 # Standard page setup
 setup_page(
@@ -28,7 +29,9 @@ with st.sidebar:
         [
             "🫁 ARDSNet - Tidal Volume",
             "⚙️ Cài Đặt Ban Đầu",
-            "📊 Bảng PEEP/FiO2"
+            "📊 Bảng PEEP/FiO2",
+            "💧 Tính Toán Dịch Truyền",
+            "💉 Hướng Dẫn Vasopressor"
         ]
     )
     
@@ -52,6 +55,12 @@ elif "Cài Đặt Ban Đầu" in function_type:
 
 elif "PEEP/FiO2" in function_type:
     render_peep_fio2_table()
+
+elif "Dịch Truyền" in function_type:
+    render_fluid_calculator()
+
+elif "Vasopressor" in function_type:
+    render_vasopressor_guide()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

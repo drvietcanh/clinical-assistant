@@ -7,6 +7,7 @@ from .kdigo import render as render_kdigo
 from .rifle import render as render_rifle
 from .akin import render as render_akin
 from .egfr import render as render_egfr
+from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
 def render_nephrology_calculator(calculator_id):
@@ -16,8 +17,6 @@ def render_nephrology_calculator(calculator_id):
     Args:
         calculator_id: The ID of the calculator to render
     """
-    import streamlit as st
-    
     calculators = {
         "KDIGO": render_kdigo,
         "RIFLE": render_rifle,
@@ -27,9 +26,9 @@ def render_nephrology_calculator(calculator_id):
 
     calculator_func = calculators.get(calculator_id)
     if calculator_func:
-        calculator_func()
+        safe_render_calculator(calculator_func, calculator_id)
     else:
-        st.error(f"Calculator '{calculator_id}' not found!")
+        raise CalculatorNotFoundError(f"Calculator '{calculator_id}' not found in nephrology module")
 
 
 __all__ = [

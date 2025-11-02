@@ -5,18 +5,17 @@ Manage and display favorite calculators
 
 import streamlit as st
 from config.calculators import ALL_CALCULATORS
+from utils.state import add_to_favorites as add_fav, remove_from_favorites as remove_fav
 
 
 def add_to_favorites(calc_id):
     """Add calculator to favorites"""
-    if calc_id not in st.session_state.favorites:
-        st.session_state.favorites.append(calc_id)
+    add_fav(calc_id)
 
 
 def remove_from_favorites(calc_id):
     """Remove calculator from favorites"""
-    if calc_id in st.session_state.favorites:
-        st.session_state.favorites.remove(calc_id)
+    remove_fav(calc_id)
 
 
 def render_favorites():

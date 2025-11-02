@@ -10,6 +10,7 @@ from .ranson import render as render_ranson
 from .rockall import render as render_rockall
 from .glasgow_blatchford import render as render_glasgow_blatchford
 from .bisap import render as render_bisap
+from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
 def render_gi_calculator(calculator_id):
@@ -19,8 +20,6 @@ def render_gi_calculator(calculator_id):
     Args:
         calculator_id: The ID of the calculator to render
     """
-    import streamlit as st
-    
     calculators = {
         "BISAP": render_bisap,
         "Child-Pugh": render_child_pugh,
@@ -33,9 +32,9 @@ def render_gi_calculator(calculator_id):
     
     calculator_func = calculators.get(calculator_id)
     if calculator_func:
-        calculator_func()
+        safe_render_calculator(calculator_func, calculator_id)
     else:
-        st.error(f"Calculator '{calculator_id}' not found!")
+        raise CalculatorNotFoundError(f"Calculator '{calculator_id}' not found in GI module")
 
 
 __all__ = [

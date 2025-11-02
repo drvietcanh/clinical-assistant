@@ -12,6 +12,7 @@ from .free_t4_index import render as render_free_t4_index
 from .osmolality import render as render_osmolality
 from .crcl import render as render_crcl
 from .bmi_ibw_bsa import render as render_bmi_ibw_bsa
+from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
 def render_metabolism_calculator(calculator_id):
@@ -21,8 +22,6 @@ def render_metabolism_calculator(calculator_id):
     Args:
         calculator_id: The ID of the calculator to render
     """
-    import streamlit as st
-    
     calculators = {
         "CrCl": render_crcl,
         "BMI/IBW/BSA": render_bmi_ibw_bsa,
@@ -37,9 +36,9 @@ def render_metabolism_calculator(calculator_id):
     
     calculator_func = calculators.get(calculator_id)
     if calculator_func:
-        calculator_func()
+        safe_render_calculator(calculator_func, calculator_id)
     else:
-        st.error(f"Calculator '{calculator_id}' not found!")
+        raise CalculatorNotFoundError(f"Calculator '{calculator_id}' not found in metabolism module")
 
 
 __all__ = [

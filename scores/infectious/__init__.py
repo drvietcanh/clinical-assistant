@@ -8,6 +8,7 @@ from .sirs import render as render_sirs
 from .feverpain import render as render_feverpain
 from .pitt_bacteremia import render as render_pitt
 from .mascc import render as render_mascc
+from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
 def render_infectious_calculator(calculator_id):
@@ -17,8 +18,6 @@ def render_infectious_calculator(calculator_id):
     Args:
         calculator_id: The ID of the calculator to render
     """
-    import streamlit as st
-    
     calculators = {
         "Centor": render_centor,
         "SIRS": render_sirs,
@@ -29,9 +28,9 @@ def render_infectious_calculator(calculator_id):
     
     calculator_func = calculators.get(calculator_id)
     if calculator_func:
-        calculator_func()
+        safe_render_calculator(calculator_func, calculator_id)
     else:
-        st.error(f"Calculator '{calculator_id}' not found!")
+        raise CalculatorNotFoundError(f"Calculator '{calculator_id}' not found in infectious module")
 
 
 __all__ = [

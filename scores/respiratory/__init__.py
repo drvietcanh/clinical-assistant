@@ -9,6 +9,7 @@ from .wells_pe import render as render_wells_pe
 from .smartcop import render as render_smartcop
 from .bode import render as render_bode
 from .perc import render as render_perc
+from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
 def render_respiratory_calculator(calculator_id):
@@ -18,8 +19,6 @@ def render_respiratory_calculator(calculator_id):
     Args:
         calculator_id: The ID of the calculator to render
     """
-    import streamlit as st
-    
     calculators = {
         "CURB-65": render_curb65,
         "PSI/PORT": render_psi_port,
@@ -31,9 +30,9 @@ def render_respiratory_calculator(calculator_id):
     
     calculator_func = calculators.get(calculator_id)
     if calculator_func:
-        calculator_func()
+        safe_render_calculator(calculator_func, calculator_id)
     else:
-        st.error(f"Calculator '{calculator_id}' not found!")
+        raise CalculatorNotFoundError(f"Calculator '{calculator_id}' not found in respiratory module")
 
 
 __all__ = [
