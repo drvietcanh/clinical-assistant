@@ -1,7 +1,7 @@
 """
 Clinical Calculators - Common Formulas
 Tập trung các công thức tính toán thông dụng hàng ngày
-BMI, BSA, CrCl, eGFR, và các công thức khác
+BMI, BSA, eGFR, và các công thức khác
 """
 
 import streamlit as st
@@ -13,7 +13,6 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 # Import calculators
 from scores.metabolism.bmi_ibw_bsa import render as render_bmi_ibw_bsa
-from scores.metabolism.crcl import render as render_crcl
 from scores.metabolism.osmolality import render as render_osmolality
 from scores.metabolism.anion_gap import render as render_anion_gap
 from scores.metabolism.corrected_calcium import render as render_corrected_calcium
@@ -42,7 +41,6 @@ with st.sidebar:
         "Calculator:",
         [
             "📏 BMI | IBW | BSA",
-            "🧪 CrCl (Cockcroft-Gault)",
             "🧪 eGFR/GFR Calculator",
             "💧 Osmolality & Gap",
             "⚖️ Anion Gap",
@@ -62,7 +60,6 @@ with st.sidebar:
     - BMI, IBW, BSA
     
     **Chức năng thận:**
-    - CrCl (điều chỉnh liều)
     - eGFR (chẩn đoán CKD)
     
     **Xét nghiệm:**
@@ -79,9 +76,6 @@ with st.sidebar:
 # Route to appropriate calculator
 if "BMI" in calculator_type or "IBW" in calculator_type or "BSA" in calculator_type:
     render_bmi_ibw_bsa()
-
-elif "CrCl" in calculator_type:
-    render_crcl()
 
 elif "eGFR" in calculator_type or "GFR" in calculator_type:
     render_egfr()

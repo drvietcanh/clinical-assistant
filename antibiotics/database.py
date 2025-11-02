@@ -225,18 +225,6 @@ def render_antibiotic_lookup():
         
         if selected_ab:
             display_antibiotic_info(selected_ab, ANTIBIOTICS_DATABASE[selected_ab])
-            # Add link to dosing calculator if available
-            if selected_ab == "Vancomycin":
-                st.markdown("---")
-                if st.button("🧮 Mở công cụ tính liều Vancomycin", use_container_width=True):
-                    st.session_state['vancomycin_calc'] = True
-                    st.rerun()
-            
-            elif selected_ab in ["Gentamicin", "Amikacin"]:
-                st.markdown("---")
-                if st.button("🧮 Mở công cụ tính liều Aminoglycoside", use_container_width=True):
-                    st.session_state['aminoglycoside_calc'] = True
-                    st.rerun()
     
     elif search_query:
         results = search_antibiotics(search_query)
@@ -323,25 +311,8 @@ def render_antibiotic_lookup():
                                 for info in renal_info:
                                     st.markdown(f"- {info}")
                 
-                # Special calculators (Vancomycin, Aminoglycoside)
-                if ab_name == "Vancomycin":
-                    st.markdown("---")
-                    col1, col2, col3 = st.columns([1, 2, 1])
-                    with col2:
-                        if st.button(f"🧮 Tính liều Vancomycin (TDM)", key=f"calc_{ab_name}", use_container_width=True, type="secondary"):
-                            st.session_state['show_vancomycin_calc'] = True
-                            st.rerun()
-                
-                elif ab_name in ["Gentamicin", "Amikacin", "Tobramycin"]:
-                    st.markdown("---")
-                    col1, col2, col3 = st.columns([1, 2, 1])
-                    with col2:
-                        if st.button(f"🧮 Tính liều Aminoglycoside (Extended-Interval)", key=f"calc_{ab_name}", use_container_width=True, type="secondary"):
-                            st.session_state['show_aminoglycoside_calc'] = True
-                            st.rerun()
-                
-                else:
-                    st.info("💡 Sử dụng công cụ **'Tính Liều Theo eGFR/CrCl'** ở menu để tính liều tự động với thông số bệnh nhân cụ thể")
+                # Universal dosing calculator info
+                st.info("💡 Sử dụng công cụ **'🧮 Tính Liều Theo eGFR/CrCl'** ở menu để tính liều tự động với thông số bệnh nhân cụ thể")
                 
                 if len(results) > 1 and ab_name != results[-1][0]:
                     st.markdown("<hr style='margin: 30px 0; border: none; border-top: 2px solid #e0e0e0;'>", unsafe_allow_html=True)
@@ -463,16 +434,6 @@ def render_antibiotic_lookup():
                 st.markdown("---")
                 display_antibiotic_info(selected, ANTIBIOTICS_DATABASE[selected])
                 
-                # Quick links
-                if selected == "Vancomycin":
-                    st.markdown("---")
-                    if st.button("🧮 Tính liều Vancomycin", use_container_width=True):
-                        st.session_state['show_vancomycin_calc'] = True
-                
-                elif selected in ["Gentamicin", "Amikacin"]:
-                    st.markdown("---")
-                    if st.button("🧮 Tính liều Aminoglycoside", use_container_width=True):
-                        st.session_state['show_aminoglycoside_calc'] = True
 
 
 def render_database():
@@ -492,7 +453,7 @@ def render_database():
         <p style='text-align: center;'><em>Danh sách đầy đủ {ab_count} kháng sinh tiêm truyền thông dụng</em></p>
         """, unsafe_allow_html=True)
         st.info(f"""
-        **Cơ sở dữ liệu bao gồm:**
+    **Cơ sở dữ liệu bao gồm:**
         - ✅ {ab_count} kháng sinh tiêm truyền (IV/IM) thông dụng
         - ✅ Tên biệt dược tại Việt Nam
         - ✅ Liều dùng chi tiết theo từng tình huống
@@ -579,13 +540,3 @@ def render_database():
         st.markdown("---")
         display_antibiotic_info(selected, filtered_ab[selected])
         
-        # Quick links to calculators
-        if selected == "Vancomycin":
-            st.markdown("---")
-            if st.button("🧮 Mở công cụ tính liều Vancomycin", use_container_width=True):
-                st.session_state['show_vancomycin_calc'] = True
-        
-        elif selected in ["Gentamicin", "Amikacin"]:
-            st.markdown("---")
-            if st.button("🧮 Mở công cụ tính liều Aminoglycoside", use_container_width=True):
-                st.session_state['show_aminoglycoside_calc'] = True

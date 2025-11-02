@@ -35,11 +35,6 @@ ALL_CALCULATORS = {
     "hunt_hess": {"name": "Hunt & Hess", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
     "mrs": {"name": "mRS", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
     
-    # Antibiotics/Drugs
-    "crcl": {"name": "CrCl Calculator", "category": "Thuốc", "icon": "💊", "page": "Drugs"},
-    "vancomycin": {"name": "Vancomycin Dosing", "category": "Thuốc", "icon": "💊", "page": "Drugs"},
-    "aminoglycoside": {"name": "Aminoglycoside", "category": "Thuốc", "icon": "💊", "page": "Drugs"},
-    
     # Labs
     "cbc": {"name": "CBC", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
     "bmp": {"name": "BMP", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
