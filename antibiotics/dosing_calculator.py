@@ -58,38 +58,84 @@ def parse_dosage_text(dosage_text):
     """
     Parse dosage text to extract mg/kg, interval, etc.
     Returns dict with parsed components
+    Enhanced parsing with more patterns
     """
     import re
     result = {
         'dose_per_kg': None,
         'total_dose': None,
+        'dose_min': None,
+        'dose_max': None,
         'interval_hours': None,
         'frequency': None,
         'route': None
     }
     
-    # Look for mg/kg pattern
-    mg_kg_match = re.search(r'(\d+(?:\.\d+)?)\s*mg/kg', dosage_text, re.IGNORECASE)
+    # Look for mg/kg pattern (can be range: "15-20mg/kg")
+    mg_kg_match = re.search(r'(\d+(?:\.\d+)?)(?:\s*-\s*(\d+(?:\.\d+)?))?\s*mg/kg', dosage_text, re.IGNORECASE)
     if mg_kg_match:
         result['dose_per_kg'] = float(mg_kg_match.group(1))
+        if mg_kg_match.group(2):  # Has range
+            result['dose_max'] = float(mg_kg_match.group(2))
     
-    # Look for total dose (g or mg)
-    total_match = re.search(r'(\d+(?:\.\d+)?)\s*(g|mg)', dosage_text, re.IGNORECASE)
-    if total_match:
-        value = float(total_match.group(1))
-        unit = total_match.group(2).lower()
-        result['total_dose'] = value * 1000 if unit == 'g' else value
+    # Look for total dose (g or mg) - can be range
+    # Pattern: "1-2g", "500mg-1g", "1g"
+    total_range_match = re.search(r'(\d+(?:\.\d+)?)\s*(g|mg)\s*(?:-|đến|to)\s*(\d+(?:\.\d+)?)\s*(g|mg)', dosage_text, re.IGNORECASE)
+    if total_range_match:
+        val1 = float(total_range_match.group(1))
+        unit1 = total_range_match.group(2).lower()
+        val2 = float(total_range_match.group(3))
+        unit2 = total_range_match.group(4).lower()
+        
+        val1_mg = val1 * 1000 if unit1 == 'g' else val1
+        val2_mg = val2 * 1000 if unit2 == 'g' else val2
+        
+        result['dose_min'] = min(val1_mg, val2_mg)
+        result['total_dose'] = max(val1_mg, val2_mg)
+        result['dose_max'] = max(val1_mg, val2_mg)
+    else:
+        total_match = re.search(r'(\d+(?:\.\d+)?)\s*(g|mg)', dosage_text, re.IGNORECASE)
+        if total_match:
+            value = float(total_match.group(1))
+            unit = total_match.group(2).lower()
+            result['total_dose'] = value * 1000 if unit == 'g' else value
     
-    # Look for interval
-    interval_match = re.search(r'mỗi\s*(\d+)\s*(?:giờ|h)', dosage_text, re.IGNORECASE)
+    # Look for interval (multiple patterns)
+    # "mỗi 8 giờ", "mỗi 8h", "q8h", "mỗi 8-12 giờ"
+    interval_match = re.search(r'(?:mỗi|q)\s*(\d+)(?:\s*-\s*(\d+))?\s*(?:giờ|h|hours)', dosage_text, re.IGNORECASE)
     if interval_match:
-        result['interval_hours'] = int(interval_match.group(1))
+        interval = int(interval_match.group(1))
+        if interval_match.group(2):  # Has range
+            interval_max = int(interval_match.group(2))
+            result['interval_hours'] = (interval + interval_max) / 2  # Average
+        else:
+            result['interval_hours'] = interval
     
     # Look for frequency
-    freq_match = re.search(r'(\d+)\s*lần/ngày', dosage_text, re.IGNORECASE)
+    # "2 lần/ngày", "x 2 lần/ngày", "bid", "tid", "qid"
+    freq_match = re.search(r'(?:x\s*)?(\d+)\s*lần/ngày', dosage_text, re.IGNORECASE)
     if freq_match:
         result['frequency'] = int(freq_match.group(1))
         result['interval_hours'] = 24 / result['frequency']
+    else:
+        # Check for bid/tid/qid
+        if re.search(r'\bbid\b', dosage_text, re.IGNORECASE):
+            result['frequency'] = 2
+            result['interval_hours'] = 12
+        elif re.search(r'\btid\b', dosage_text, re.IGNORECASE):
+            result['frequency'] = 3
+            result['interval_hours'] = 8
+        elif re.search(r'\bqid\b', dosage_text, re.IGNORECASE):
+            result['frequency'] = 4
+            result['interval_hours'] = 6
+    
+    # Detect route
+    if re.search(r'\bIV\b', dosage_text, re.IGNORECASE):
+        result['route'] = 'IV'
+    elif re.search(r'\bIM\b', dosage_text, re.IGNORECASE):
+        result['route'] = 'IM'
+    elif re.search(r'\bPO\b', dosage_text, re.IGNORECASE):
+        result['route'] = 'PO'
     
     return result
 
@@ -127,12 +173,35 @@ def calculate_detailed_dose(antibiotic_name, weight_kg, ibw, abw, crcl, indicati
     parsed = parse_dosage_text(base_text)
     
     # Calculate actual dose
-    dosing_weight = abw if (calculate_bmi(weight_kg, 170) > 30) else weight_kg  # Simplified, should use actual height
+    # Need height for BMI calculation - using a default for now if not provided
+    # In actual use, height should be passed as parameter
+    try:
+        # Try to calculate BMI if height available (would need to pass height parameter)
+        # For now, use simplified logic
+        is_obese_simple = weight_kg > ibw * 1.25
+        dosing_weight = abw if is_obese_simple else weight_kg
+    except:
+        dosing_weight = weight_kg
     
     if parsed['dose_per_kg']:
         calculated_dose_mg = parsed['dose_per_kg'] * dosing_weight
+        # If there's a max dose, use the average or max depending on indication
+        if parsed.get('dose_max'):
+            max_dose = parsed['dose_max'] * dosing_weight
+            if indication == "severe" or indication == "meningitis":
+                # Use higher dose for severe infections
+                calculated_dose_mg = max_dose
+            else:
+                # Use average for standard
+                calculated_dose_mg = (calculated_dose_mg + max_dose) / 2
     elif parsed['total_dose']:
         calculated_dose_mg = parsed['total_dose']
+        # If there's a range, choose based on indication
+        if parsed.get('dose_min'):
+            if indication == "severe" or indication == "meningitis":
+                calculated_dose_mg = parsed.get('dose_max', parsed['total_dose'])
+            else:
+                calculated_dose_mg = (parsed['dose_min'] + parsed['total_dose']) / 2
     else:
         calculated_dose_mg = None
     

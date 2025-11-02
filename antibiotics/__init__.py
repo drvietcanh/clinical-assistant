@@ -8,6 +8,7 @@ from .vancomycin import render as render_vancomycin
 from .aminoglycoside import render as render_aminoglycoside
 from .database import render_antibiotic_lookup, render_database
 from .dosing_calculator import render_dosing_calculator
+from .multi_dosing_comparison import render_multi_comparison
 
 __all__ = [
     'render_crcl',
@@ -16,5 +17,6 @@ __all__ = [
     'render_antibiotic_lookup',
     'render_database',
     'render_dosing_calculator',
+    'render_multi_comparison',
 ]
 

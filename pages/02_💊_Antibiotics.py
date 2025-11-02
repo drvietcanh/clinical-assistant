@@ -16,7 +16,8 @@ from antibiotics import (
     render_aminoglycoside,
     render_antibiotic_lookup,
     render_database,
-    render_dosing_calculator
+    render_dosing_calculator,
+    render_multi_comparison
 )
 
 st.set_page_config(page_title="Kháng Sinh - Clinical Assistant", page_icon="💊", layout="wide")
@@ -34,6 +35,7 @@ with st.sidebar:
         "Công cụ:",
         [
             "🧮 Tính Liều Theo eGFR/CrCl",
+            "🔬 So Sánh Nhiều Kháng Sinh",
             "🧮 Tính CrCl (Cockcroft-Gault)",
             "💉 Vancomycin - Tính Liều",
             "💊 Aminoglycoside - Tính Liều",
@@ -74,6 +76,9 @@ if 'show_aminoglycoside_calc' in st.session_state and st.session_state['show_ami
 # Route to appropriate function
 if "Tính Liều Theo eGFR" in function_type:
     render_dosing_calculator()
+
+elif "So Sánh Nhiều" in function_type:
+    render_multi_comparison()
 
 elif "CrCl" in function_type and "eGFR" not in function_type:
     render_crcl()
