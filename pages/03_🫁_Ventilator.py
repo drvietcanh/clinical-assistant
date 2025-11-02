@@ -4,11 +4,7 @@ Main Router - Imports from ventilator module
 """
 
 import streamlit as st
-import sys
-from pathlib import Path
-
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+from utils.page_helper import setup_page, render_standard_footer
 
 from ventilator import (
     render_ardsnet,
@@ -16,12 +12,12 @@ from ventilator import (
     render_peep_fio2_table
 )
 
-st.set_page_config(page_title="Thở Máy - Clinical Assistant", page_icon="🫁", layout="wide")
-
-# ========== HEADER ==========
-st.title("🫁 Thở Máy - Hỗ Trợ Hô Hấp")
-st.markdown("Công cụ tính toán và hướng dẫn cài đặt máy thở")
-st.markdown("---")
+# Standard page setup
+setup_page(
+    page_title="Thở Máy",
+    page_icon="🫁",
+    description="Công cụ tính toán và hướng dẫn cài đặt máy thở"
+)
 
 # ========== SIDEBAR ==========
 with st.sidebar:
@@ -58,7 +54,4 @@ elif "PEEP/FiO2" in function_type:
     render_peep_fio2_table()
 
 # ========== FOOTER ==========
-st.markdown("---")
-st.caption("🫁 Dữ liệu dựa trên ARDSNet và các hướng dẫn quốc tế")
-st.caption("⚠️ Luôn cá thể hóa theo tình trạng lâm sàng bệnh nhân")
-st.caption("🗂️ Modular architecture - Easy to maintain and expand")
+render_standard_footer(disclaimer=False)

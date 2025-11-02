@@ -6,21 +6,17 @@ Imports calculators from individual specialty modules
 """
 
 import streamlit as st
-import sys
-from pathlib import Path
-
-# Add parent directory to path to import scores module
-sys.path.insert(0, str(Path(__file__).parent.parent))
+from utils.page_helper import setup_page, render_standard_footer
 
 from scores.config import SCORES_BY_SPECIALTY
 from scores import cardiology, emergency, respiratory, neurology, gi, metabolism, hematology, nephrology, trauma, psychiatry, oncology, surgery, pediatrics, infectious, ent, obstetrics, dermatology, rheumatology, ophthalmology
 
-st.set_page_config(page_title="Scores - Clinical Assistant", page_icon="📊", layout="wide")
-
-# ========== HEADER ==========
-st.title("📊 Thang Điểm Lâm Sàng")
-st.markdown("Calculators phân loại theo chuyên khoa")
-st.markdown("---")
+# Standard page setup
+setup_page(
+    page_title="Thang Điểm Lâm Sàng",
+    page_icon="📊",
+    description="Calculators phân loại theo chuyên khoa"
+)
 
 # ========== SIDEBAR ==========
 with st.sidebar:
@@ -178,7 +174,4 @@ else:
     """)
 
 # ========== FOOTER ==========
-st.markdown("---")
-st.caption("📚 All scores based on international guidelines and peer-reviewed literature")
-st.caption("⚠️ For reference only - Always use clinical judgment")
-st.caption("🗂️ Modular architecture for easy maintenance and expansion")
+render_standard_footer(disclaimer=False)

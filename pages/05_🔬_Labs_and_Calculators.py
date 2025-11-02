@@ -4,11 +4,7 @@ Main Router - Lab panels, reference ranges, and clinical calculators
 """
 
 import streamlit as st
-import sys
-from pathlib import Path
-
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+from utils.page_helper import setup_page, render_standard_footer
 
 # Import lab panels
 from labs import (
@@ -34,16 +30,12 @@ from scores.metabolism.winter_formula import render as render_winter_formula
 from scores.metabolism.free_t4_index import render as render_free_t4_index
 from scores.nephrology.egfr import render as render_egfr
 
-st.set_page_config(
-    page_title="Labs & Calculators - Clinical Assistant", 
-    page_icon="🔬", 
-    layout="wide"
+# Standard page setup
+setup_page(
+    page_title="Labs & Calculators",
+    page_icon="🔬",
+    description="Tra cứu giá trị xét nghiệm, giải thích kết quả và tính toán công thức lâm sàng"
 )
-
-# ========== HEADER ==========
-st.title("🔬 Labs & Calculators")
-st.markdown("Tra cứu giá trị xét nghiệm, giải thích kết quả và tính toán công thức lâm sàng")
-st.markdown("---")
 
 # ========== SIDEBAR ==========
 with st.sidebar:
@@ -292,17 +284,13 @@ else:  # Calculators
         render_free_t4_index()
 
 # ========== FOOTER ==========
-st.markdown("---")
+render_standard_footer(disclaimer=True)
 
+# Additional lab-specific warning
 st.warning("""
-**⚠️ Lưu Ý Quan Trọng:**
+**⚠️ Lưu Ý Quan Trọng về Lab:**
 - Khoảng giá trị tham chiếu có thể khác nhau giữa các phòng xét nghiệm
 - Luôn so sánh với khoảng giá trị của phòng xét nghiệm địa phương bạn
 - Giá trị nguy kịch cần đối chiếu lâm sàng ngay lập tức
-- Công cụ này chỉ để tham khảo - không thay thế cho phán đoán lâm sàng
 """)
-
-st.caption("📊 Giá trị lab dựa trên khoảng tham chiếu chuẩn từ các phòng xét nghiệm lâm sàng lớn")
-st.caption("🧮 Calculators dựa trên công thức đã được chứng minh lâm sàng")
-st.caption("🗂️ Kiến trúc mô-đun - Dễ dàng thêm panel và calculator mới")
 

@@ -4,11 +4,7 @@ Main Router - Imports from antibiotics module
 """
 
 import streamlit as st
-import sys
-from pathlib import Path
-
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+from utils.page_helper import setup_page, render_standard_footer
 
 from antibiotics import (
     render_antibiotic_lookup,
@@ -17,12 +13,12 @@ from antibiotics import (
     render_multi_comparison
 )
 
-st.set_page_config(page_title="Kháng Sinh - Clinical Assistant", page_icon="💊", layout="wide")
-
-# ========== HEADER ==========
-st.title("💊 Kháng Sinh - Tính Liều & TDM")
-st.markdown("Hướng dẫn liều dùng, điều chỉnh thận, theo dõi nồng độ thuốc")
-st.markdown("---")
+# Standard page setup
+setup_page(
+    page_title="Kháng Sinh",
+    page_icon="💊",
+    description="Hướng dẫn liều dùng, điều chỉnh thận, theo dõi nồng độ thuốc"
+)
 
 # ========== SIDEBAR ==========
 with st.sidebar:
@@ -59,7 +55,4 @@ elif "Tra Cứu" in function_type or "Dữ Liệu" in function_type:
     render_database()
 
 # ========== FOOTER ==========
-st.markdown("---")
-st.caption("💊 Dữ liệu dựa trên hướng dẫn quốc tế và các nghiên cứu lâm sàng")
-st.caption("⚠️ Chỉ mục đích tham khảo - Luôn xác minh với hướng dẫn địa phương")
-st.caption("🗂️ Modular architecture - Easy to maintain and expand")
+render_standard_footer(disclaimer=False)

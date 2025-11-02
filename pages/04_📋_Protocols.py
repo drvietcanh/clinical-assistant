@@ -4,11 +4,7 @@ Main Router - Imports from protocols module
 """
 
 import streamlit as st
-import sys
-from pathlib import Path
-
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+from utils.page_helper import setup_page, render_standard_footer
 
 from protocols import (
     render_sepsis,
@@ -19,12 +15,12 @@ from protocols import (
     render_hf
 )
 
-st.set_page_config(page_title="Phác Đồ - Clinical Assistant", page_icon="📋", layout="wide")
-
-# ========== HEADER ==========
-st.title("📋 Phác Đồ Điều Trị")
-st.markdown("Các phác đồ điều trị chuẩn theo hướng dẫn quốc tế")
-st.markdown("---")
+# Standard page setup
+setup_page(
+    page_title="Phác Đồ Điều Trị",
+    page_icon="📋",
+    description="Các phác đồ điều trị chuẩn theo hướng dẫn quốc tế"
+)
 
 # ========== SIDEBAR ==========
 with st.sidebar:
@@ -108,7 +104,4 @@ elif "Suy Tim" in protocol:
     render_hf()
 
 # ========== FOOTER ==========
-st.markdown("---")
-st.caption("📋 Phác đồ dựa trên hướng dẫn quốc tế mới nhất")
-st.caption("⚠️ Luôn cá thể hóa theo tình trạng bệnh nhân và hướng dẫn địa phương")
-st.caption("🗂️ Modular architecture - Easy to maintain and expand")
+render_standard_footer(disclaimer=False)
