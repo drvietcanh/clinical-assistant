@@ -2570,5 +2570,331 @@ ANTIBIOTICS_DATABASE = {
         "pregnancy": "C - An toàn cho TB (phối hợp với isoniazid, pyrazinamide)",
         "notes": "Chất cảm ứng mạnh CYP450 - tương tác với nhiều thuốc. Màu đỏ cam nước tiểu là bình thường"
     },
+    
+    # ========== BETA-LACTAMS - PENICILLINS (Anti-staphylococcal) ==========
+    "Nafcillin": {
+        "group": "Beta-lactam - Penicillin (Anti-staphylococcal)",
+        "vietnamese_name": "Nafcillin, Unipen, Nafcil",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn do MSSA (Methicillin-Sensitive S. aureus)",
+            "Viêm nội tâm mạc do tụ cầu",
+            "Viêm tủy xương do tụ cầu",
+            "Viêm phổi do tụ cầu",
+            "Nhiễm khuẩn da và mô mềm do tụ cầu"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin/nafcillin",
+            "Sốc phản vệ với beta-lactam",
+            "Nhiễm MRSA (cần vancomycin/daptomycin)"
+        ],
+        "dosage": {
+            "adult_iv": "1-2g IV mỗi 4-6 giờ (4-12g/ngày)",
+            "adult_iv_severe": "2g IV mỗi 4 giờ (12g/ngày) - viêm nội tâm mạc, nhiễm khuẩn nặng",
+            "pediatric_iv": "50-200mg/kg/ngày chia 4-6 lần (tối đa 12g/ngày)",
+            "meningitis_iv": "200-300mg/kg/ngày chia 4-6 lần",
+            "notes": "Ưu tiên cho MSSA. Không dùng cho MRSA. Pha trong nước muối sinh lý hoặc D5W"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi (bài tiết chủ yếu qua gan)",
+            "15_30": "Không đổi (bài tiết chủ yếu qua gan)",
+            "under_15": "Không đổi (bài tiết chủ yếu qua gan)"
+        },
+        "side_effects": [
+            "Viêm tĩnh mạch (phải dùng đường truyền lớn, pha loãng)",
+            "Tăng bạch cầu ái toan",
+            "Rối loạn chức năng gan (tăng transaminase)",
+            "Giảm bạch cầu trung tính",
+            "Phản ứng dị ứng"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ nafcillin",
+            "Warfarin: giảm hiệu quả (cảm ứng CYP450)",
+            "Oral contraceptives: giảm hiệu quả"
+        ],
+        "monitoring": "Công thức máu, LFT, dấu hiệu viêm tĩnh mạch",
+        "aware_classification": "WATCH",
+        "pregnancy": "B"
+    },
+    
+    # ========== BETA-LACTAMS - CEPHALOSPORINS (3rd Generation) ==========
+    "Ceftizoxime": {
+        "group": "Beta-lactam - Cephalosporin (3rd Generation)",
+        "vietnamese_name": "Ceftizoxime, Cefizox",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Nhiễm khuẩn đường tiết niệu phức tạp",
+            "Nhiễm khuẩn đường hô hấp dưới",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn ổ bụng (phối hợp metronidazole)",
+            "Nhiễm khuẩn phụ khoa"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/penicillin",
+            "Sốc phản vệ beta-lactam"
+        ],
+        "dosage": {
+            "adult_iv": "1-2g IV mỗi 8-12 giờ (2-4g/ngày)",
+            "adult_im": "1-2g IM mỗi 8-12 giờ",
+            "pediatric_iv": "50-150mg/kg/ngày chia 3-4 lần (tối đa 6g/ngày)",
+            "adult_iv_severe": "2g IV mỗi 8 giờ (6g/ngày)",
+            "notes": "Phổ hoạt động tương tự ceftriaxone, nhưng không có tác dụng kéo dài"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "1-2g mỗi 12 giờ",
+            "15_30": "0.5-1g mỗi 12 giờ",
+            "under_15": "0.5-1g mỗi 24 giờ hoặc lọc máu"
+        },
+        "side_effects": [
+            "Phản ứng dị ứng",
+            "Tiêu chảy",
+            "Viêm tĩnh mạch",
+            "Rối loạn chức năng gan nhẹ"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ ceftizoxime",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "monitoring": "LFT, công thức máu",
+        "aware_classification": "WATCH",
+        "pregnancy": "B"
+    },
+    
+    # ========== BETA-LACTAMS - CEPHAMYCINS ==========
+    "Cefotetan": {
+        "group": "Beta-lactam - Cephamycin",
+        "vietnamese_name": "Cefotetan, Cefotan",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Nhiễm khuẩn ổ bụng (phẫu thuật)",
+            "Nhiễm khuẩn phụ khoa",
+            "Nhiễm khuẩn đường tiết niệu phức tạp",
+            "Phẫu thuật đại tràng (prophylaxis)",
+            "Nhiễm khuẩn do vi khuẩn kỵ khí + gram âm"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/penicillin",
+            "Sốc phản vệ beta-lactam",
+            "Phụ nữ có thai (chống chỉ định)"
+        ],
+        "dosage": {
+            "adult_iv": "1-2g IV mỗi 12 giờ (2-4g/ngày)",
+            "adult_im": "1-2g IM mỗi 12 giờ",
+            "prophylaxis_iv": "1-2g IV trước phẫu thuật",
+            "adult_iv_severe": "2g IV mỗi 12 giờ (4g/ngày)",
+            "notes": "Phổ rộng bao gồm kỵ khí. Có disulfiram-like effect. Chống chỉ định thai kỳ"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "1-2g mỗi 24 giờ",
+            "15_30": "1-2g mỗi 24 giờ",
+            "under_15": "0.5-1g mỗi 24 giờ hoặc lọc máu"
+        },
+        "side_effects": [
+            "Phản ứng disulfiram (rượu)",
+            "Rối loạn đông máu (hypoprothrombinemia)",
+            "Tiêu chảy",
+            "Phản ứng dị ứng",
+            "Viêm tĩnh mạch"
+        ],
+        "interactions": [
+            "Rượu: phản ứng disulfiram (đỏ mặt, nôn, tim đập nhanh)",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Vitamin K: cần bổ sung trong điều trị dài ngày"
+        ],
+        "monitoring": "PT/INR, dấu hiệu chảy máu",
+        "aware_classification": "WATCH",
+        "pregnancy": "X - Chống chỉ định trong thai kỳ (gây quái thai trong thí nghiệm)",
+        "notes": "Chống chỉ định thai kỳ. Phản ứng disulfiram với rượu. Phổ kỵ khí tốt"
+    },
+    
+    "Cefoxitin": {
+        "group": "Beta-lactam - Cephamycin",
+        "vietnamese_name": "Cefoxitin, Mefoxin",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Nhiễm khuẩn ổ bụng",
+            "Nhiễm khuẩn phụ khoa",
+            "Viêm nội mạc tử cung",
+            "Nhiễm khuẩn đường tiết niệu phức tạp",
+            "Nhiễm khuẩn da và mô mềm có kỵ khí",
+            "Phẫu thuật đại tràng (prophylaxis)"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/penicillin",
+            "Sốc phản vệ beta-lactam"
+        ],
+        "dosage": {
+            "adult_iv": "1-2g IV mỗi 6-8 giờ (3-8g/ngày)",
+            "adult_im": "1-2g IM mỗi 6-8 giờ",
+            "prophylaxis_iv": "1-2g IV trước phẫu thuật",
+            "adult_iv_severe": "2g IV mỗi 6 giờ (8g/ngày)",
+            "pediatric_iv": "80-160mg/kg/ngày chia 4-6 lần (tối đa 12g/ngày)",
+            "notes": "Phổ rộng bao gồm kỵ khí. Tương tự cefotetan nhưng an toàn hơn trong thai kỳ"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "1-2g mỗi 8-12 giờ",
+            "15_30": "1-2g mỗi 12 giờ",
+            "under_15": "0.5-1g mỗi 12-24 giờ hoặc lọc máu"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Phản ứng dị ứng",
+            "Viêm tĩnh mạch",
+            "Rối loạn chức năng gan nhẹ"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ cefoxitin",
+            "Warfarin: tăng nguy cơ chảy máu (ít hơn cefotetan)"
+        ],
+        "monitoring": "LFT, công thức máu",
+        "aware_classification": "WATCH",
+        "pregnancy": "B"
+    },
+    
+    # ========== OXAZOLIDINONES ==========
+    "Tedizolid": {
+        "group": "Oxazolidinone",
+        "vietnamese_name": "Tedizolid, Sivextro",
+        "administration": ["IV", "PO"],
+        "indications": [
+            "Nhiễm khuẩn da và mô mềm do vi khuẩn gram dương",
+            "MRSA (Methicillin-Resistant S. aureus)",
+            "VRE (Vancomycin-Resistant Enterococcus)",
+            "Nhiễm khuẩn do Streptococcus",
+            "Thay thế Linezolid (tác dụng tương tự, ít tác dụng phụ hơn)"
+        ],
+        "contraindications": [
+            "Dị ứng tedizolid/linezolid",
+            "Dùng MAO inhibitors trong vòng 14 ngày",
+            "Serotonin syndrome risk với SSRI"
+        ],
+        "dosage": {
+            "adult_iv": "200mg IV mỗi 24 giờ (liều cố định)",
+            "adult_po": "200mg PO mỗi 24 giờ (liều cố định)",
+            "pediatric_iv": "6mg/kg/ngày IV (tối đa 200mg) mỗi 24 giờ",
+            "pediatric_po": "6mg/kg/ngày PO (tối đa 200mg) mỗi 24 giờ",
+            "notes": "Liều cố định, không cần điều chỉnh theo cân nặng/thận. IV và PO tương đương sinh học"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi (liều cố định)",
+            "15_30": "Không đổi (liều cố định)",
+            "under_15": "Không đổi (liều cố định, có thể dùng)"
+        },
+        "side_effects": [
+            "Ức chế tủy xương (giảm bạch cầu, tiểu cầu) - ít hơn Linezolid",
+            "Viêm dây thần kinh thị giác",
+            "Ức chế MAO (tương tác với tyramine)",
+            "Tiêu chảy, buồn nôn",
+            "Đau đầu"
+        ],
+        "interactions": [
+            "MAO inhibitors: chống chỉ định (serotonin syndrome)",
+            "SSRI/SNRI: tăng nguy cơ serotonin syndrome",
+            "Tyramine (thức ăn lên men): tăng huyết áp",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "monitoring": "Công thức máu (WBC, platelet), thị lực, dấu hiệu serotonin syndrome",
+        "aware_classification": "RESERVE",
+        "pregnancy": "C - Dữ liệu hạn chế, cân nhắc lợi ích/nguy cơ",
+        "notes": "Thay thế Linezolid với ưu điểm: liều cố định, ít tác dụng phụ tủy xương hơn, dùng 1 lần/ngày"
+    },
+    
+    # ========== GLYCOPEPTIDES ==========
+    "Telavancin": {
+        "group": "Glycopeptide",
+        "vietnamese_name": "Telavancin, Vibativ",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn da và mô mềm phức tạp do vi khuẩn gram dương",
+            "MRSA (Methicillin-Resistant S. aureus)",
+            "Viêm phổi bệnh viện do MRSA",
+            "VRE (Vancomycin-Resistant Enterococcus) - một số chủng",
+            "Nhiễm khuẩn do S. aureus kháng vancomycin"
+        ],
+        "contraindications": [
+            "Dị ứng telavancin/glycopeptide",
+            "Phụ nữ có thai (nguy cơ dị tật)",
+            "Suy thận nặng (CrCl < 30 ml/min)",
+            "Lactation (nguy cơ cho trẻ sơ sinh)"
+        ],
+        "dosage": {
+            "adult_iv": "10mg/kg IV mỗi 24 giờ (liều đầu tiên: 10mg/kg, liều duy trì: 7.5mg/kg nếu CrCl 30-50)",
+            "adult_iv_severe": "10mg/kg IV mỗi 24 giờ",
+            "notes": "Dùng trong 7-14 ngày. Pha trong D5W. Truyền trong 60 phút"
+        },
+        "renal_adjustment": {
+            "normal": "10mg/kg mỗi 24 giờ",
+            "30_60": "7.5mg/kg mỗi 24 giờ (giảm liều)",
+            "15_30": "10mg/kg mỗi 48 giờ",
+            "under_15": "Chống chỉ định (nguy cơ độc tính thận cao)"
+        },
+        "side_effects": [
+            "Độc tính thận (tăng creatinine, suy thận cấp)",
+            "Foam trong nước tiểu (do chất tẩy, không nguy hiểm)",
+            "Rối loạn vị giác (vị kim loại)",
+            "Buồn nôn, nôn",
+            "Đau đầu",
+            "Phản ứng tại chỗ tiêm (viêm tĩnh mạch)"
+        ],
+        "interactions": [
+            "Thuốc độc thận: tăng nguy cơ suy thận (aminoglycoside, NSAID)",
+            "Thuốc kéo dài QT: tăng nguy cơ rối loạn nhịp (cần theo dõi ECG)",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "monitoring": "Creatinine hàng ngày, GFR, ECG (QT interval), công thức máu",
+        "aware_classification": "RESERVE",
+        "pregnancy": "C - Chống chỉ định trong thai kỳ (gây dị tật trong thí nghiệm động vật)",
+        "notes": "Dùng khi vancomycin/daptomycin thất bại hoặc không dung nạp. Độc tính thận cao, cần theo dõi chặt chẽ. Chống chỉ định thai kỳ"
+    },
+    
+    # ========== BETA-LACTAMS - CEPHALOSPORINS (5th Generation) ==========
+    "Ceftobiprole": {
+        "group": "Beta-lactam - Cephalosporin (5th Generation)",
+        "vietnamese_name": "Ceftobiprole, Zevtera, Mabelio",
+        "administration": ["IV"],
+        "indications": [
+            "Viêm phổi bệnh viện (HAP)",
+            "Viêm phổi thở máy (VAP)",
+            "Nhiễm khuẩn da và mô mềm phức tạp",
+            "MRSA (Methicillin-Resistant S. aureus)",
+            "Nhiễm khuẩn do P. aeruginosa",
+            "Nhiễm khuẩn do vi khuẩn gram dương và gram âm"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/penicillin",
+            "Sốc phản vệ beta-lactam"
+        ],
+        "dosage": {
+            "adult_iv": "500mg IV mỗi 8 giờ (truyền trong 2 giờ)",
+            "adult_iv_severe": "500mg IV mỗi 8 giờ",
+            "notes": "Phổ rộng bao gồm MRSA và P. aeruginosa. Phải truyền trong 2 giờ (không bolus)"
+        },
+        "renal_adjustment": {
+            "normal": "500mg mỗi 8 giờ",
+            "30_60": "500mg mỗi 12 giờ",
+            "15_30": "250mg mỗi 12 giờ",
+            "under_15": "250mg mỗi 24 giờ hoặc lọc máu (liều sau lọc máu)"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Buồn nôn, nôn",
+            "Phản ứng dị ứng",
+            "Rối loạn vị giác",
+            "Viêm tĩnh mạch"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ ceftobiprole",
+            "Warfarin: tăng nguy cơ chảy máu (theo dõi PT/INR)"
+        ],
+        "monitoring": "LFT, công thức máu, dấu hiệu nhiễm trùng",
+        "aware_classification": "RESERVE",
+        "pregnancy": "B - Dữ liệu hạn chế nhưng không thấy nguy cơ rõ ràng",
+        "notes": "Cephalosporin thế hệ 5, phổ rộng bao gồm MRSA và P. aeruginosa. Phải truyền trong 2 giờ (không bolus)"
+    },
 }
 
