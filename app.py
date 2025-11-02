@@ -12,6 +12,7 @@ from pathlib import Path
 
 # Import configuration
 from config.calculators import ALL_CALCULATORS
+from config.app_config import get_module_list_for_navigation, APP_CONFIG
 
 # Import UI components
 from components.search import render_search
@@ -73,8 +74,8 @@ with st.sidebar:
     st.markdown("---")
     
     # Version info & Stats
-    st.caption("**Version:** 2.1.0 🔥")
-    st.caption("**Updated:** 2025-01-30")
+    st.caption(f"**Version:** {APP_CONFIG['version']} 🔥")
+    st.caption(f"**Updated:** {APP_CONFIG['last_updated']}")
     st.caption(f"**Calculators:** {len(ALL_CALCULATORS)}")
     st.caption(f"**Favorites:** {len(st.session_state.favorites)}")
     
@@ -99,59 +100,20 @@ st.markdown("### 🚀 Truy Cập Nhanh Modules")
 
 col1, col2, col3, col4, col5 = st.columns(5)
 
-modules = [
-    {
-        "icon": "📊",
-        "title": "Scores",
-        "desc": "110 calculators<br/>19 specialties",
-        "color": "linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)",
-        "border": "#1976d2",
-        "page": "pages/01_📊_Scores.py",
-        "key": "quick_scores"
-    },
-    {
-        "icon": "💊",
-        "title": "Drugs",
-        "desc": "57 antibiotics<br/>TDM & Dosing",
-        "color": "linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
-        "border": "#4caf50",
-        "page": "pages/02_💊_Antibiotics.py",
-        "key": "quick_drugs"
-    },
-    {
-        "icon": "🔬",
-        "title": "Labs",
-        "desc": "9 panels + Calculators<br/>Integrated workflow",
-        "color": "linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
-        "border": "#ff9800",
-        "page": "pages/05_🔬_Labs_and_Calculators.py",
-        "key": "quick_labs"
-    },
-    {
-        "icon": "🫁",
-        "title": "Ventilator",
-        "desc": "ARDSNet<br/>PEEP/FiO₂",
-        "color": "linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)",
-        "border": "#e91e63",
-        "page": "pages/03_🫁_Ventilator.py",
-        "key": "quick_vent"
-    },
-    {
-        "icon": "📋",
-        "title": "Protocols",
-        "desc": "5 protocols<br/>Evidence-based",
-        "color": "linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
-        "border": "#9c27b0",
-        "page": "pages/04_📋_Protocols.py",
-        "key": "quick_protocols"
-    }
-]
+# Get modules from unified config
+modules = get_module_list_for_navigation()
 
 columns = [col1, col2, col3, col4, col5]
 for idx, (col, module) in enumerate(zip(columns, modules)):
     with col:
+        # Get style from theme (fallback to module config if theme not available)
+        module_id = module.get('id', module['key'].replace('quick_', ''))
+        style = get_module_style(module_id)
+        gradient = style.get('gradient', module.get('color', style['gradient']))
+        border = style.get('border', module.get('border', style['border']))
+        
         st.markdown(f"""
-        <div class="module-card" style="background: {module['color']}; border: 2px solid {module['border']}; text-align: center;">
+        <div class="module-card" style="background: {gradient}; border: 2px solid {border}; text-align: center;">
             <div>
                 <div class="module-icon">{module['icon']}</div>
                 <div class="module-title">{module['title']}</div>

@@ -43,11 +43,15 @@ def render_cardiology_calculator(calculator_id):
         "Corrected QT": render_qtc,
     }
     
+    from utils.errors import safe_render_calculator, CalculatorNotFoundError
+    
     calculator_func = calculators.get(calculator_id)
     if calculator_func:
-        calculator_func()
+        safe_render_calculator(calculator_func, calculator_id)
     else:
-        st.error(f"Calculator '{calculator_id}' not found!")
+        handle_error = CalculatorNotFoundError(f"Calculator '{calculator_id}' not found in cardiology module")
+        from utils.errors import handle_calculator_error
+        handle_calculator_error(handle_error, calculator_id)
 
 
 __all__ = [
