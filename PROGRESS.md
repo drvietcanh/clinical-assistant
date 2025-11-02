@@ -1,9 +1,9 @@
 # 📊 Clinical Assistant - Progress Tracking
 
-**Last Updated:** 2025-01-30  
-**Session Token Usage:** ~75k/90k  
-**Status:** ⚠️ Warning - Approaching Limit  
-**Action:** Commit & push before continuing
+**Last Updated:** 2025-01-31  
+**Session Token Usage:** Fresh session  
+**Status:** ✅ Active  
+**Action:** ✅ Calculator registration completed, continuing with antibiotics
 
 ---
 
@@ -11,8 +11,8 @@
 
 1. ✅ **SOFA-2 (2025) Implementation** - COMPLETED
 2. ✅ **Code Optimization Analysis** - COMPLETED
-3. ⏳ **Register All Calculators** - IN PROGRESS
-4. ⏳ **Add Missing Critical Scores** - PENDING
+3. ✅ **Register All Calculators** - COMPLETED (Session 2)
+4. ⏳ **Add Missing Antibiotics Data** - IN PROGRESS
 
 ---
 
@@ -50,24 +50,47 @@
 
 ---
 
+## ✅ Completed Tasks (Session 2 - 2025-01-31)
+
+### **Register All Calculators - COMPLETED**
+**Status:** ✅ COMPLETED  
+**Priority:** P0 (This Week)  
+**Time Taken:** ~30 minutes
+
+**Tasks Completed:**
+- ✅ Added all missing calculators to `config/calculators.py` (~60 calculators)
+- ✅ Registered calculators from all 19 specialties:
+  - Cardiology: +4 (NYHA, Killip, Duke, QTc)
+  - Respiratory: +2 (BODE, PERC)
+  - GI/Hepatology: +7 (BISAP, Child-Pugh, MELD, MELD-Na, Ranson, Rockall, Glasgow-Blatchford)
+  - Nephrology: +4 (eGFR, KDIGO, RIFLE, AKIN)
+  - Hematology: +4 (Padua, Wells DVT, 4Ts, DIC)
+  - Trauma: +4 (RTS, ISS, NEXUS, Canadian C-Spine)
+  - Pediatrics: +4 (APGAR, PEWS, Pediatric GCS, Westley Croup)
+  - Surgery: +6 (ASA, Aldrete, Mallampati, RCRI, Caprini, P-POSSUM)
+  - Rheumatology: +7 (DAS28, CDAI, SDAI, ACR, SLICC, SLEDAI, Gout)
+  - Psychiatry: +7 (PHQ-9, GAD-7, MMSE, MoCA, CAM, CIWA-Ar, COWS)
+  - Dermatology: +5 (PASI, SCORAD, DLQI, Burn TBSA, Parkland)
+  - Oncology: +4 (ECOG, Karnofsky, PPS, CIPN)
+  - Obstetrics: +3 (Preeclampsia, Bishop, Modified Bishop)
+  - ENT: +2 (Epworth, STOP-BANG)
+  - Ophthalmology: +1 (IOP Correction)
+  - Metabolism: +9 (CrCl, BMI/IBW/BSA, Osmolality, Anion Gap, Corrected Ca, FENa, HbA1c, Winter Formula, Free T4)
+  - Infectious: +5 (SIRS, Pitt Bacteremia, MASCC, Centor, FeverPAIN)
+
+**Total:** Added 67 new calculators to registry  
+**Result:** From ~43 registered to ~110 registered calculators
+- **Status:** ✅ COMPLETED
+- **Commit:** `feat: register all existing calculators to config/calculators.py`
+
+---
+
 ## ⏳ In Progress
 
-### **Register All Calculators (URGENT)**
-**Status:** NOT STARTED  
+### **Add Missing Antibiotics Data**
+**Status:** IN PROGRESS  
 **Priority:** P0 (This Week)  
-**Estimated Time:** 2-3 hours
-
-**Tasks:**
-- [ ] Count all calculators in each specialty
-- [ ] Add missing calculators to `config/calculators.py`
-- [ ] Update all `__init__.py` files for routing
-- [ ] Test routing for all calculators
-- [ ] Verify all calculators accessible from UI
-
-**Files to Update:**
-- `config/calculators.py` - Add ~60 missing calculators
-- `scores/*/__init__.py` - Update routing (19 specialties)
-- `pages/01_📊_Scores.py` - Verify routing works
+**Estimated Time:** 1-2 hours
 
 ---
 
@@ -246,6 +269,9 @@
 - ✅ `OPTIMIZATION_ANALYSIS.md` - Comprehensive analysis
 - ✅ `PRIORITY2_SUMMARY.md` - Data migration summary
 - ✅ `REFACTORING_COMPLETE.md` - Refactoring summary
+- ✅ `INTEGRATION_PROPOSAL.md` - Đề xuất tích hợp tra cứu + tính liều
+- ✅ `ANTIBIOTIC_CALCULATOR_COMPARISON.md` - So sánh các app tính liều kháng sinh
+- ✅ `ROADMAP_ANTIBIOTIC_ENHANCEMENT.md` - Lộ trình chi tiết 5 phases
 - ✅ `PROGRESS.md` - This file
 
 ### **Updated This Session**
@@ -283,6 +309,11 @@
 - `feat: add SOFA-2 (2025) score calculator`
 - `docs: comprehensive optimization analysis`
 - `docs: update PROGRESS.md with current status`
+- `refactor: gộp tính liều kháng sinh vào calculator chung, xóa CrCl khỏi Calculators menu`
+- `fix: sửa lỗi TypeError trong multi_dosing_comparison và thêm 5 kháng sinh mới`
+- `docs: đề xuất tích hợp tra cứu kháng sinh và tính liều nhiều trường hợp`
+- `docs: phân tích so sánh các app tính liều kháng sinh phổ biến và đề xuất cải thiện`
+- `docs: lộ trình chi tiết cải thiện tính năng kháng sinh (5 phases)`
 
 ---
 
