@@ -539,12 +539,19 @@ def render():
         ```
         """)
         
+        # Save to session state for antibiotic dosing calculator
+        st.session_state['patient_crcl'] = crcl
+        st.session_state['patient_egfr'] = egfr_ckd_epi
+        st.session_state['gfr_absolute'] = dosing_gfr
+        
         # Dosing recommendations
         if dosing_gfr >= 60:
             st.success("""
             ✅ **GFR ≥ 60 mL/min - Chức năng thận gần bình thường**
             
             **Hầu hết các thuốc:** Dùng liều bình thường, không cần điều chỉnh.
+            
+            💡 **CrCl/eGFR đã được lưu** - Có thể sử dụng trong Antibiotic Dosing Calculator
             """)
         elif dosing_gfr >= 30:
             st.warning(f"""
