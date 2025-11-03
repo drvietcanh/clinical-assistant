@@ -283,17 +283,17 @@ def render_drug_database():
     # Search section with autocomplete
     st.markdown("### 🔍 Tìm kiếm thuốc")
     
-    # Handle selected suggestion from buttons BEFORE rendering text_input
+    # Handle selected suggestion from buttons - use value parameter to update
+    initial_value = ""
     if 'drug_search_selected' in st.session_state:
-        selected_value = st.session_state.pop('drug_search_selected')
-        # Set the search input in session state BEFORE widget creation
-        st.session_state['drug_search_input'] = selected_value
+        initial_value = st.session_state.pop('drug_search_selected')
     
     col1, col2 = st.columns([3, 1])
     
     with col1:
         search_query = st.text_input(
             "Nhập tên thuốc, nhóm, hoặc chỉ định",
+            value=initial_value if initial_value else "",
             key="drug_search_input",
             placeholder="Ví dụ: Metformin, Omeprazole, tăng huyết áp..."
         )
