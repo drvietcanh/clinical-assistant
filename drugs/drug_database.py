@@ -111,7 +111,32 @@ DRUG_DATABASE = {
             "Diuretics: tăng nguy cơ hạ huyết áp",
             "NSAID: giảm hiệu quả"
         ],
-        "pregnancy": "D"
+        "pregnancy": "D",
+        "mechanism_of_action": "Enalapril là prodrug, chuyển hóa thành enalaprilat (hoạt chất) trong gan. Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ",
+            "Huyết áp",
+            "Ho khan (tác dụng phụ thường gặp)",
+            "Dấu hiệu phù mạch (sưng mặt, lưỡi, họng - cấp cứu)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp (2.5-5mg), tăng dần",
+            "Có thể dùng 1-2 lần/ngày (khác với captopril 2-3 lần/ngày)",
+            "Theo dõi sát creatinine khi bắt đầu (có thể tăng nhẹ)",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Ngừng ngay nếu có phù mạch (có thể nguy hiểm tính mạng)",
+            "Ít tác dụng phụ hơn captopril, nhưng vẫn có thể gây ho khan"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Enalapril: 11 giờ; Enalaprilat: 30-35 giờ (dài)",
+            "onset": "1 giờ (PO), 15 phút (enalaprilat IV)",
+            "duration": "12-24 giờ",
+            "protein_binding": "50-60%",
+            "clearance": "Thận (60%), một phần qua gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng"
     },
     
     "Lisinopril": {
@@ -147,7 +172,32 @@ DRUG_DATABASE = {
             "Kali: tăng kali máu",
             "NSAID: giảm hiệu quả"
         ],
-        "pregnancy": "D"
+        "pregnancy": "D",
+        "mechanism_of_action": "Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp. Không phải prodrug (khác với enalapril), tác dụng trực tiếp",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ",
+            "Huyết áp",
+            "Ho khan (tác dụng phụ thường gặp)",
+            "Dấu hiệu phù mạch (sưng mặt, lưỡi, họng - cấp cứu)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp (5-10mg), tăng dần",
+            "Ưu điểm: dùng 1 lần/ngày (compliance tốt hơn)",
+            "Không phải prodrug nên tác dụng nhanh hơn enalapril",
+            "Theo dõi sát creatinine khi bắt đầu (có thể tăng nhẹ)",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Ngừng ngay nếu có phù mạch (có thể nguy hiểm tính mạng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12 giờ (dài)",
+            "onset": "1 giờ",
+            "duration": "24 giờ (dài nhất trong các ACE inhibitor)",
+            "protein_binding": "25%",
+            "clearance": "Thận (100%), không chuyển hóa qua gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng"
     },
     
     # ARBs
@@ -185,7 +235,31 @@ DRUG_DATABASE = {
             "Kali: tăng kali máu",
             "NSAID: giảm hiệu quả"
         ],
-        "pregnancy": "D"
+        "pregnancy": "D",
+        "mechanism_of_action": "Losartan là prodrug, chuyển hóa thành EXP-3174 (hoạt chất) trong gan. Ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ (ít hơn ACE inhibitor)",
+            "Huyết áp",
+            "Ít phải theo dõi ho khan (không gây ho như ACE inhibitor)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp (25-50mg), tăng dần",
+            "Ưu điểm: ít gây ho hơn ACE inhibitor (thay thế tốt cho bệnh nhân không dung nạp ACE inhibitor)",
+            "Vẫn có thể gây tăng kali máu và suy thận cấp (nhưng ít hơn ACE inhibitor)",
+            "Theo dõi sát creatinine khi bắt đầu",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Ngừng ngay nếu có phù mạch (hiếm hơn ACE inhibitor nhưng vẫn có thể xảy ra)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Losartan: 2 giờ; EXP-3174 (active): 6-9 giờ",
+            "onset": "1 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "98.7%",
+            "clearance": "Gan (chuyển hóa), thận (EXP-3174)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi"
     },
     
     # Beta-blockers
@@ -702,7 +776,34 @@ DRUG_DATABASE = {
             "Verapamil: tăng nồng độ digoxin",
             "Quinine: tăng nồng độ digoxin"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Ức chế Na+/K+-ATPase ở màng tế bào cơ tim, tăng nồng độ Na+ nội bào, kích thích Na+/Ca2+ exchanger, tăng Ca2+ nội bào → tăng lực co bóp cơ tim (inotropy dương). Ở nút AV: tăng trương lực phế vị, giảm dẫn truyền AV (làm chậm tần số thất trong AF)",
+        "monitoring": [
+            "Nồng độ digoxin trong máu (BẮT BUỘC): Mục tiêu 0.8-2 ng/mL (1.0-2.6 nmol/L)",
+            "Đo nồng độ ít nhất 6-8 giờ sau liều (sau khi phân bố)",
+            "Điện giải: K+, Mg2+ (quan trọng - hạ K+, hạ Mg2+ → tăng nguy cơ ngộ độc)",
+            "Creatinine, eGFR (digoxin thải qua thận)",
+            "ECG: nhịp tim, block AV, rối loạn nhịp",
+            "Triệu chứng ngộ độc: buồn nôn, nôn, rối loạn thị giác (nhìn vàng xanh), rối loạn nhịp"
+        ],
+        "precautions": [
+            "LUÔN theo dõi nồng độ trong máu (therapeutic window hẹp)",
+            "Hạ K+ và hạ Mg2+ làm tăng nguy cơ ngộ độc mạnh → phải bù điện giải trước",
+            "Giảm liều ở suy thận (half-life tăng từ 36h lên 4-6 ngày)",
+            "Ở người già: dùng liều thấp hơn (0.0625-0.125mg/ngày)",
+            "Tránh loading dose nhanh ở suy thận (nguy cơ ngộ độc)",
+            "Nhiều thuốc tương tác làm tăng nồng độ: amiodarone, verapamil, diltiazem, quinidine, macrolides, cyclosporine",
+            "Ngộ độc digoxin có thể đe dọa tính mạng → cần điều trị ngay (Digibind/digoxin immune fab)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "36-48 giờ (bình thường), 4-6 ngày (suy thận)",
+            "onset": "1-2 giờ (PO), 5-30 phút (IV)",
+            "duration": "3-4 ngày (vì half-life dài)",
+            "protein_binding": "20-25%",
+            "clearance": "Thận (75-80%), không chuyển hóa"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: ổn định",
+        "black_box_warnings": "Không dùng trong WPW với AF (có thể gây nhịp nhanh thất nguy hiểm). Ngộ độc digoxin có thể gây rối loạn nhịp đe dọa tính mạng và tử vong"
     },
     
     # Anticoagulants
@@ -862,7 +963,31 @@ DRUG_DATABASE = {
             "Aspirin: tăng nguy cơ chảy máu (nhưng có chỉ định)",
             "Warfarin: tăng nguy cơ chảy máu"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Clopidogrel là prodrug, chuyển hóa thành chất chuyển hóa hoạt tính bởi CYP2C19 (và các CYP khác). Ức chế không hồi phục thụ thể P2Y12 trên tiểu cầu, ngăn chặn kích hoạt tiểu cầu bởi ADP, giảm kết tập tiểu cầu",
+        "monitoring": [
+            "Dấu hiệu chảy máu (chảy máu chân răng, chảy máu mũi, vết bầm tím, phân đen, nôn ra máu)",
+            "Công thức máu nếu nghi ngờ giảm tiểu cầu",
+            "Xét nghiệm chức năng tiểu cầu (nếu cần - để đánh giá hiệu quả)",
+            "Lưu ý: Một số bệnh nhân có thể kháng clopidogrel do đa hình CYP2C19"
+        ],
+        "precautions": [
+            "Tránh dùng với PPIs mạnh (omeprazole, esomeprazole) - giảm hiệu quả do ức chế CYP2C19",
+            "Có thể dùng với pantoprazole, lansoprazole (ít ức chế CYP2C19 hơn)",
+            "Dùng kèm aspirin sau ACS/stent: DAPT 12 tháng (hoặc theo hướng dẫn)",
+            "Ngừng 5-7 ngày trước phẫu thuật lớn (nếu có thể)",
+            "Không ngừng đột ngột sau stent (nguy cơ huyết khối stent)",
+            "Một số bệnh nhân kháng clopidogrel: xem xét thay bằng ticagrelor hoặc prasugrel"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Clopidogrel: 6 giờ; Metabolite hoạt tính: 30 phút (nhưng tác dụng kéo dài do ức chế không hồi phục)",
+            "onset": "2-8 giờ (sau loading dose 300-600mg)",
+            "duration": "5-10 ngày (cho đến khi tiểu cầu mới được tạo ra)",
+            "protein_binding": "98%",
+            "clearance": "Gan (chuyển hóa qua CYP2C19, CYP3A4, CYP2B6, CYP1A2)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Không ngừng clopidogrel sớm sau đặt stent (đặc biệt drug-eluting stent) - nguy cơ huyết khối stent và tử vong do tim. Chảy máu có thể đe dọa tính mạng"
     },
     
     # Statins
@@ -1120,7 +1245,37 @@ DRUG_DATABASE = {
             "Corticosteroid: tăng đường huyết",
             "Rượu: tăng nguy cơ hạ đường huyết"
         ],
-        "pregnancy": "B - An toàn, điều chỉnh liều theo thai kỳ"
+        "pregnancy": "B - An toàn, điều chỉnh liều theo thai kỳ",
+        "mechanism_of_action": "Insulin là hormone tự nhiên được tiết ra từ tế bào beta tuyến tụy. Gắn với thụ thể insulin, kích hoạt các tín hiệu nội bào, tăng vận chuyển glucose vào tế bào, kích thích tổng hợp glycogen, protein, lipid, và ức chế sản xuất glucose ở gan. Giảm đường huyết bằng cách tăng sử dụng glucose và giảm sản xuất glucose",
+        "monitoring": [
+            "Đường huyết (glucose) thường xuyên: Trước bữa ăn, 2 giờ sau bữa ăn, trước khi ngủ",
+            "HbA1c mỗi 3 tháng (mục tiêu <7% hoặc theo cá thể hóa)",
+            "Dấu hiệu hạ đường huyết: Run rẩy, đổ mồ hôi, nhịp tim nhanh, đói, nhầm lẫn, co giật, hôn mê",
+            "Dấu hiệu tăng đường huyết: Khát nhiều, tiểu nhiều, mệt mỏi, mờ mắt",
+            "Cân nặng (insulin có thể gây tăng cân)",
+            "Chức năng thận (giảm clearance insulin ở suy thận)",
+            "Kiểm tra vị trí tiêm (tránh lipodystrophy)"
+        ],
+        "precautions": [
+            "LUÔN có glucagon và glucose sẵn để điều trị hạ đường huyết",
+            "Điều chỉnh liều theo đường huyết, bữa ăn, hoạt động thể chất",
+            "Xoay vị trí tiêm (bụng, đùi, cánh tay, mông)",
+            "Bảo quản đúng cách: Insulin đang dùng có thể để ở nhiệt độ phòng, chưa mở phải để tủ lạnh",
+            "Không được làm đông lạnh insulin",
+            "Giảm liều ở suy thận (giảm clearance)",
+            "Tăng liều trong bệnh nặng, stress, nhiễm trùng",
+            "Dạy bệnh nhân nhận biết và xử trí hạ đường huyết",
+            "Trong thai kỳ: tăng nhu cầu insulin, điều chỉnh thường xuyên"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Rapid-acting (lispro, aspart): 1 giờ; Short-acting (regular): 2-4 giờ; Intermediate (NPH): 8-12 giờ; Long-acting (glargine, detemir): 12-24 giờ; Ultra-long (degludec): 42 giờ",
+            "onset": "Rapid: 15 phút; Short: 30-60 phút; Intermediate: 1-3 giờ; Long: 1-2 giờ",
+            "duration": "Rapid: 3-5 giờ; Short: 6-8 giờ; Intermediate: 12-16 giờ; Long: 18-24 giờ; Ultra-long: >42 giờ",
+            "protein_binding": "Không (peptide hormone)",
+            "clearance": "Gan (50-60%), thận (30-40%), một phần bị phân hủy bởi insulinase"
+        },
+        "storage": "Chưa mở: Tủ lạnh (2-8°C), không đông lạnh. Đang dùng: Nhiệt độ phòng (<30°C), tránh ánh sáng, tránh nhiệt độ cao. Dùng trong vòng 28-30 ngày sau khi mở",
+        "black_box_warnings": "Hạ đường huyết có thể đe dọa tính mạng. Cần theo dõi đường huyết thường xuyên và có sẵn glucose/glucagon để điều trị hạ đường huyết. Không được dùng chung ống tiêm insulin"
     },
     
     "Empagliflozin": {
@@ -1812,7 +1967,33 @@ DRUG_DATABASE = {
             "Aspirin: tăng nguy cơ chảy máu dạ dày",
             "Methotrexate: tăng độc tính methotrexate"
         ],
-        "pregnancy": "C - D trong 3 tháng cuối"
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": "Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin, thromboxane, và prostacyclin. Prostaglandin tham gia vào quá trình đau, viêm, sốt, bảo vệ niêm mạc dạ dày, và điều hòa thận",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày (phân đen, nôn ra máu, đau bụng)",
+            "Creatinine, BUN nếu dùng lâu dài hoặc bệnh nhân có nguy cơ",
+            "Huyết áp (NSAID có thể tăng huyết áp)",
+            "Chức năng gan (transaminase) nếu dùng lâu dài",
+            "Dấu hiệu suy tim (giữ nước, phù)"
+        ],
+        "precautions": [
+            "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày",
+            "Cân nhắc dùng PPI hoặc misoprostol nếu có nguy cơ loét dạ dày",
+            "Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp",
+            "Tránh dùng với ACE inhibitor/ARB (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm)",
+            "Ngừng trước phẫu thuật 5-7 ngày (tăng nguy cơ chảy máu)",
+            "Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-4 giờ",
+            "onset": "30-60 phút",
+            "duration": "4-6 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa qua CYP2C9, CYP2C8), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ"
     },
     
     "Tramadol": {
@@ -4642,7 +4823,40 @@ DRUG_DATABASE = {
             "Vaccine sống: chống chỉ định",
             "Rifampin: giảm nồng độ prednisone"
         ],
-        "pregnancy": "C - Thận trọng"
+        "pregnancy": "C - Thận trọng",
+        "mechanism_of_action": "Prednisone là corticosteroid tổng hợp, chuyển hóa thành prednisolone (hoạt chất) trong gan. Gắn với thụ thể glucocorticoid trong tế bào, điều hòa biểu hiện gen, ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, TNF-α, prostaglandin), giảm di chuyển bạch cầu đến vị trí viêm, ức chế chức năng miễn dịch",
+        "monitoring": [
+            "Đường huyết (corticosteroid gây tăng đường huyết)",
+            "Huyết áp (có thể tăng huyết áp)",
+            "Điện giải: K+, Na+ (mất kali, giữ natri)",
+            "Cân nặng (giữ nước, tăng cân)",
+            "Dấu hiệu nhiễm trùng (ức chế miễn dịch)",
+            "Dấu hiệu loét dạ dày (đau bụng, phân đen)",
+            "Mật độ xương nếu dùng lâu dài (loãng xương)",
+            "Chức năng thượng thận nếu dùng lâu dài (ACTH, cortisol)",
+            "Mắt: đục thủy tinh thể, tăng nhãn áp"
+        ],
+        "precautions": [
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "GIẢM LIỀU DẦN DẦN khi ngừng (tránh suy thượng thận cấp) - không được ngừng đột ngột",
+            "Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể",
+            "Bổ sung canxi, vitamin D nếu dùng lâu dài (phòng loãng xương)",
+            "Cân nhắc bổ sung kali nếu dùng lâu dài",
+            "Tránh vaccine sống khi đang dùng corticosteroid",
+            "Tăng liều trong stress (phẫu thuật, nhiễm trùng nặng)",
+            "Giảm liều khi có nhiễm trùng (nếu có thể)",
+            "Theo dõi đường huyết ở bệnh nhân đái tháo đường",
+            "Dạy bệnh nhân không tự ý ngừng thuốc"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Prednisone: 3-4 giờ; Prednisolone (active): 2-3 giờ",
+            "onset": "1-2 giờ",
+            "duration": "18-36 giờ (tác dụng sinh học kéo dài hơn half-life)",
+            "protein_binding": "70-90% (prednisolone)",
+            "clearance": "Gan (chuyển hóa prednisone → prednisolone), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Không ngừng đột ngột sau khi dùng lâu dài - có thể gây suy thượng thận cấp đe dọa tính mạng. Corticosteroid có thể gây ức chế miễn dịch, tăng nguy cơ nhiễm trùng nặng, và che dấu triệu chứng nhiễm trùng"
     },
     
     # ========== ONCOLOGY ==========
