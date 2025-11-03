@@ -4,6 +4,10 @@ Sepsis, shock, and critical care protocols organized by individual files
 """
 
 from .sepsis import render as render_sepsis
+from .stroke import render as render_stroke
+from .gi_bleeding import render as render_gi_bleeding
+from .dka import render as render_dka
+from .electrolytes import render as render_electrolytes
 
 
 def render_shock():
@@ -25,5 +29,9 @@ def render_shock():
 __all__ = [
     'render_sepsis',
     'render_shock',
+    'render_stroke',
+    'render_gi_bleeding',
+    'render_dka',
+    'render_electrolytes',
 ]
 

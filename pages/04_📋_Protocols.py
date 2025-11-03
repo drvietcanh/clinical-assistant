@@ -9,10 +9,15 @@ from utils.page_helper import setup_page, render_standard_footer
 from protocols import (
     render_sepsis,
     render_shock,
+    render_stroke,
+    render_gi_bleeding,
+    render_dka,
+    render_electrolytes,
     render_copd,
     render_asthma,
     render_acs,
-    render_hf
+    render_hf,
+    render_aki
 )
 
 # Standard page setup
@@ -31,7 +36,8 @@ with st.sidebar:
         [
             "🚨 Cấp Cứu (Emergency)",
             "🫁 Hô Hấp (Respiratory)",
-            "❤️ Tim Mạch (Cardiology)"
+            "❤️ Tim Mạch (Cardiology)",
+            "🧪 Thận (Nephrology)"
         ]
     )
     
@@ -43,7 +49,11 @@ with st.sidebar:
             "Phác đồ:",
             [
                 "🦠 Sepsis 1-Hour Bundle",
-                "💔 Quản Lý Sốc"
+                "💔 Quản Lý Sốc",
+                "🧠 Stroke Management",
+                "🩸 GI Bleeding",
+                "🍭 DKA Protocol",
+                "⚡ Electrolyte Emergency"
             ],
             label_visibility="collapsed"
         )
@@ -62,6 +72,14 @@ with st.sidebar:
             [
                 "💔 ACS - Hội Chứng Vành Cấp",
                 "💔 Suy Tim Cấp"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Thận" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "🧪 AKI Management"
             ],
             label_visibility="collapsed"
         )
@@ -102,6 +120,21 @@ elif "ACS" in protocol:
 
 elif "Suy Tim" in protocol:
     render_hf()
+
+elif "Stroke" in protocol:
+    render_stroke()
+
+elif "GI Bleeding" in protocol or "GI" in protocol:
+    render_gi_bleeding()
+
+elif "DKA" in protocol:
+    render_dka()
+
+elif "Electrolyte" in protocol:
+    render_electrolytes()
+
+elif "AKI" in protocol:
+    render_aki()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)
