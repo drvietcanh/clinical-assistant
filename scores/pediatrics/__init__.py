@@ -7,6 +7,8 @@ from .apgar import render as render_apgar
 from .pews import render as render_pews
 from .pediatric_gcs import render as render_pediatric_gcs
 from .westley_croup import render as render_westley_croup
+from .pelod2 import render as render_pelod2
+from .prism3 import render as render_prism3
 
 
 def render_pediatrics_calculator(calculator_id):
@@ -23,6 +25,8 @@ def render_pediatrics_calculator(calculator_id):
         "APGAR": render_apgar,
         "PEWS": render_pews,
         "Pediatric GCS": render_pediatric_gcs,
+        "PELOD-2": render_pelod2,
+        "PRISM III": render_prism3,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -37,5 +41,7 @@ __all__ = [
     'render_apgar',
     'render_pews',
     'render_pediatric_gcs',
+    'render_pelod2',
+    'render_prism3',
 ]
 

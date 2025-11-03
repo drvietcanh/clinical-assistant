@@ -88,6 +88,8 @@ SCORES_BY_SPECIALTY = {
         "PEWS": {"name": "PEWS - Pediatric Early Warning Score", "desc": "Cảnh báo sớm nhi", "status": "✅"},
         "APGAR": {"name": "APGAR Score", "desc": "Đánh giá trẻ sơ sinh", "status": "✅"},
         "Pediatric GCS": {"name": "Pediatric GCS", "desc": "Ý thức trẻ em", "status": "✅"},
+        "PELOD-2": {"name": "PELOD-2 - Pediatric Logistic Organ Dysfunction", "desc": "Suy đa cơ quan ICU nhi", "status": "✅"},
+        "PRISM III": {"name": "PRISM III - Pediatric Risk of Mortality", "desc": "Nguy cơ tử vong ICU nhi", "status": "✅"},
     },
     
     "🤰 Sản Khoa (Obstetrics)": {
