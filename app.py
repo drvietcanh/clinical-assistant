@@ -3,8 +3,8 @@ Clinical Assistant - Streamlit Version
 Main application file - Refactored with modular components
 
 Author: Clinical IT Team
-Version: 2.1.0
-Date: 2025-01-30
+Version: 2.2.0
+Date: 2025-11-03
 """
 
 import streamlit as st
@@ -92,10 +92,13 @@ with st.sidebar:
     **Chọn module bên trái** để bắt đầu:
     
     - 📊 **Scores** - Thang điểm lâm sàng (110 calculators)
-    - 💊 **Antibiotics** - Liều kháng sinh & TDM
+    - 💊 **Antibiotics** - Liều kháng sinh & điều chỉnh thận
+    - 💊 **Tra Cứu Thuốc** - Database thuốc, tương tác, IV
+    - 📊 **TDM** - Theo dõi nồng độ thuốc (5 thuốc)
     - 🔬 **Labs & Calculators** - Xét nghiệm + Tính toán ⭐ INTEGRATED
     - 🫁 **Ventilator** - Cài đặt máy thở
     - 📋 **Protocols** - Phác đồ điều trị
+    - 🩺 **Diagnosis** - Chẩn đoán phân biệt (DDx)
     """)
     
     st.markdown("---")

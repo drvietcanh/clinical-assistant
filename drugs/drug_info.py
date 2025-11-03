@@ -7,6 +7,12 @@ import streamlit as st
 import pandas as pd
 from .drug_database import DRUG_DATABASE
 
+# Check if drug is antibiotic
+try:
+    from antibiotics.antibiotics_data import ANTIBIOTICS_DATABASE
+except ImportError:
+    ANTIBIOTICS_DATABASE = {}
+
 
 def render_compact_drug_card(drug_name, drug_data, key_prefix=""):
     """Render a compact drug card in list view"""
@@ -197,6 +203,30 @@ def display_drug_info(drug_name, drug_data):
             }
             desc = preg_descriptions.get(preg, "")
             st.markdown(f"### 🤰 **An toàn thai kỳ:** {preg} - {desc}")
+        
+        # Integration: Tính liều theo CrCl (for antibiotics)
+        is_antibiotic = drug_name in ANTIBIOTICS_DATABASE
+        
+        if is_antibiotic:
+            st.markdown("---")
+            st.markdown("### 🧮 Tính Liều Theo CrCl/eGFR")
+            
+            col1, col2 = st.columns([2, 1])
+            with col1:
+                st.info(f"""
+                **💡 Tính liều tự động cho {drug_name}:**
+                - Dựa trên chức năng thận (CrCl/eGFR)
+                - Hỗ trợ HD, PD, béo phì, trẻ em
+                - Tính liều chi tiết và cảnh báo tự động
+                """)
+            with col2:
+                if st.button("🧮 Tính Liều Theo CrCl", key=f"calc_dose_{drug_name}", use_container_width=True, type="primary"):
+                    # Set session state to switch to calculator with preset
+                    st.session_state['preset_antibiotic_name'] = drug_name
+                    st.session_state['switch_to_dosing_calculator'] = True
+                    st.rerun()
+            
+            st.caption("💡 Click nút trên để mở calculator với thuốc này đã được chọn sẵn")
 
 
 def render_drug_database():

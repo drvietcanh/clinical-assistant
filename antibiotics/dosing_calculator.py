@@ -871,11 +871,23 @@ def render_dosing_calculator():
     
     all_antibiotics = sorted(list(ANTIBIOTICS_DATABASE.keys()))
     
+    # Check for preset antibiotic from drug detail view
+    preset_antibiotic = st.session_state.get('preset_antibiotic_name', None)
+    preset_index = 0
+    if preset_antibiotic and preset_antibiotic in all_antibiotics:
+        preset_index = all_antibiotics.index(preset_antibiotic)
+        # Show preset info
+        st.success(f"✅ **Đã chọn sẵn:** {preset_antibiotic} (từ tra cứu thuốc)")
+        # Clear the preset after showing
+        if 'preset_antibiotic_name' in st.session_state:
+            del st.session_state['preset_antibiotic_name']
+    
     col1, col2 = st.columns(2)
     with col1:
         selected_ab = st.selectbox(
             "Kháng sinh:",
             all_antibiotics,
+            index=preset_index,
             format_func=lambda x: x,
             key="dosing_antibiotic"
         )

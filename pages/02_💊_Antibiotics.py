@@ -9,29 +9,14 @@ from utils.page_helper import setup_page, render_standard_footer
 from antibiotics import (
     render_antibiotic_lookup,
     render_database,
-    render_dosing_calculator,
     render_multi_comparison
-)
-from drugs import (
-    render_interaction_checker, 
-    render_drug_database, 
-    render_iv_compatibility_checker,
-    render_visual_comparison,
-    render_dosing_schedule_generator
-)
-from drugs.tdm import (
-    render_digoxin_tdm,
-    render_phenytoin_tdm,
-    render_lithium_tdm,
-    render_theophylline_tdm,
-    render_immunosuppressants_tdm
 )
 
 # Standard page setup
 setup_page(
     page_title="Kháng Sinh",
     page_icon="💊",
-    description="Hướng dẫn liều dùng, điều chỉnh thận, theo dõi nồng độ thuốc"
+    description="Tra cứu kháng sinh, so sánh liều dùng và chỉ định"
 )
 
 # ========== SIDEBAR ==========
@@ -41,19 +26,8 @@ with st.sidebar:
     function_type = st.selectbox(
         "Công cụ:",
         [
-            "🧮 Tính Liều Theo eGFR/CrCl",
             "🔬 So Sánh Nhiều Kháng Sinh",
-            "🔍 Tra Cứu & Dữ Liệu Kháng Sinh",
-            "💊 Tra Cứu Thuốc (Tất Cả)",
-            "📊 So Sánh Thuốc Trực Quan",
-            "📅 Tạo Lịch Trình Liều Dùng",
-            "💉 Kiểm Tra Tương Thích IV",
-            "🔍 Kiểm Tra Tương Tác Thuốc",
-            "📊 TDM - Digoxin",
-            "📊 TDM - Phenytoin",
-            "📊 TDM - Lithium",
-            "📊 TDM - Theophylline",
-            "📊 TDM - Tacrolimus/Cyclosporine"
+            "🔍 Tra Cứu & Dữ Liệu Kháng Sinh"
         ]
     )
     
@@ -64,49 +38,20 @@ with st.sidebar:
     - IDSA/ATS Guidelines
     - ASHP/IDSA TDM 2020
     - WHO AWaRe Classification
+    
+    **💡 Tính liều theo thận:**
+    Xem module "💊 Tra Cứu Thuốc" → 
+    "🧮 Tính Liều Theo eGFR/CrCl"
     """)
 
 # ========== MAIN CONTENT ==========
 
 # Route to appropriate function
-if "Tính Liều Theo eGFR" in function_type or "CrCl" in function_type:
-    render_dosing_calculator()
-
-elif "So Sánh Nhiều" in function_type:
+if "So Sánh Nhiều" in function_type:
     render_multi_comparison()
 
 elif "Tra Cứu" in function_type and "Dữ Liệu" in function_type:
     render_database()
-
-elif "Tra Cứu Thuốc" in function_type:
-    render_drug_database()
-
-elif "So Sánh Thuốc Trực Quan" in function_type:
-    render_visual_comparison()
-
-elif "Lịch Trình Liều Dùng" in function_type:
-    render_dosing_schedule_generator()
-
-elif "Tương Thích IV" in function_type:
-    render_iv_compatibility_checker()
-
-elif "Tương Tác" in function_type:
-    render_interaction_checker()
-
-elif "TDM - Digoxin" in function_type:
-    render_digoxin_tdm()
-
-elif "TDM - Phenytoin" in function_type:
-    render_phenytoin_tdm()
-
-elif "TDM - Lithium" in function_type:
-    render_lithium_tdm()
-
-elif "TDM - Theophylline" in function_type:
-    render_theophylline_tdm()
-
-elif "TDM - Tacrolimus" in function_type or "TDM - Cyclosporine" in function_type:
-    render_immunosuppressants_tdm()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

@@ -35,7 +35,7 @@ class ModuleInfo:
 # Unified configuration
 APP_CONFIG = {
     "version": "2.2.0",
-    "last_updated": "2025-01-31",
+    "last_updated": "2025-11-03",
     
     "pages": {
         "scores": ModuleInfo(
@@ -52,7 +52,7 @@ APP_CONFIG = {
             title="Kháng Sinh",
             icon="💊",
             page_path="pages/02_💊_Antibiotics.py",
-            description="57 antibiotics, TDM & Dosing",
+            description="Tra cứu & so sánh kháng sinh",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
         ),
@@ -91,6 +91,24 @@ APP_CONFIG = {
             description="DDx Generator, Clinical decision support",
             color="linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)",
             border="#f44336"
+        ),
+        "drug_database": ModuleInfo(
+            id="drug_database",
+            title="Tra Cứu Thuốc",
+            icon="💊",
+            page_path="pages/07_💊_Drug_Database.py",
+            description="Database thuốc, tính liều theo thận, tương tác, IV",
+            color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
+            border="#0288d1"
+        ),
+        "tdm": ModuleInfo(
+            id="tdm",
+            title="TDM - Theo Dõi Nồng Độ",
+            icon="📊",
+            page_path="pages/08_📊_TDM.py",
+            description="Tính toán và theo dõi nồng độ thuốc (5 thuốc)",
+            color="linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%)",
+            border="#7b1fa2"
         ),
     },
     
