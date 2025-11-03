@@ -283,6 +283,12 @@ def render_drug_database():
     # Search section with autocomplete
     st.markdown("### 🔍 Tìm kiếm thuốc")
     
+    # Handle selected suggestion from buttons BEFORE rendering text_input
+    if 'drug_search_selected' in st.session_state:
+        selected_value = st.session_state.pop('drug_search_selected')
+        # Set the search input in session state BEFORE widget creation
+        st.session_state['drug_search_input'] = selected_value
+    
     col1, col2 = st.columns([3, 1])
     
     with col1:
@@ -307,7 +313,8 @@ def render_drug_database():
                     # Sanitize suggestion for key
                     safe_suggestion_key = f"suggest_{str(suggestion).replace(' ', '_').replace('-', '_').replace('/', '_')}"
                     if st.button(f"💊 {suggestion}", key=safe_suggestion_key, use_container_width=True):
-                        st.session_state.drug_search_input = str(suggestion)
+                        # Store selected value and rerun
+                        st.session_state['drug_search_selected'] = str(suggestion)
                         st.rerun()
     
     # Recent searches
@@ -320,7 +327,8 @@ def render_drug_database():
                 # Sanitize recent_query for key
                 safe_recent_key = f"recent_{str(recent_query).replace(' ', '_').replace('-', '_').replace('/', '_')}"
                 if st.button(f"↩️ {recent_query}", key=safe_recent_key, use_container_width=True):
-                    st.session_state.drug_search_input = str(recent_query)
+                    # Store selected value and rerun
+                    st.session_state['drug_search_selected'] = str(recent_query)
                     st.rerun()
     
     # Popular drugs
@@ -332,7 +340,8 @@ def render_drug_database():
             # Sanitize popular_drug for key
             safe_popular_key = f"popular_{str(popular_drug).replace(' ', '_').replace('-', '_').replace('/', '_')}"
             if st.button(f"⭐ {popular_drug}", key=safe_popular_key, use_container_width=True):
-                st.session_state.drug_search_input = str(popular_drug)
+                # Store selected value and rerun
+                st.session_state['drug_search_selected'] = str(popular_drug)
                 st.rerun()
     
     st.markdown("---")
