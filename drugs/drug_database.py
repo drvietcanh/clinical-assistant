@@ -1245,6 +1245,1114 @@ DRUG_DATABASE = {
         ],
         "pregnancy": "A - Khuyến nghị dùng trong thai kỳ"
     },
+    
+    # ========== ANTIPLATELETS (ADDITIONAL) ==========
+    
+    "Ticagrelor": {
+        "group": "Cardiovascular - Antiplatelet (P2Y12 Inhibitor)",
+        "vietnamese_name": "Ticagrelor, Brilinta",
+        "administration": ["PO"],
+        "indications": [
+            "Hội chứng mạch vành cấp",
+            "Sau đặt stent",
+            "Sau nhồi máu cơ tim",
+            "Phòng ngừa đột quỵ/TIA"
+        ],
+        "contraindications": [
+            "Chảy máu đang hoạt động",
+            "Xuất huyết nội sọ",
+            "Suy gan nặng",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_loading": "180mg x 1 lần",
+            "adult_maintenance": "90mg x 2 lần/ngày",
+            "notes": "Dùng kèm aspirin 75-100mg/ngày (dual antiplatelet therapy). Dùng với thức ăn để giảm dyspnea"
+        },
+        "side_effects": [
+            "Chảy máu",
+            "Khó thở (dyspnea) - phổ biến nhưng thường nhẹ",
+            "Chóng mặt",
+            "Nhức đầu"
+        ],
+        "interactions": [
+            "Aspirin: dùng kèm (nhưng liều aspirin >100mg/ngày có thể giảm hiệu quả)",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Strong CYP3A4 inhibitors: tăng nồng độ (tránh dùng)"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Prasugrel": {
+        "group": "Cardiovascular - Antiplatelet (P2Y12 Inhibitor)",
+        "vietnamese_name": "Prasugrel, Effient",
+        "administration": ["PO"],
+        "indications": [
+            "Hội chứng mạch vành cấp cần PCI",
+            "Sau đặt stent"
+        ],
+        "contraindications": [
+            "Chảy máu đang hoạt động",
+            "Tiền sử TIA/đột quỵ",
+            "Tuổi ≥75 (trừ nguy cơ cao)",
+            "Cân nặng <60kg (trừ nguy cơ cao)"
+        ],
+        "dosage": {
+            "adult_loading": "60mg x 1 lần",
+            "adult_maintenance": "10mg x 1 lần/ngày (5mg nếu <60kg hoặc ≥75 tuổi)",
+            "notes": "Mạnh hơn clopidogrel, nguy cơ chảy máu cao hơn"
+        },
+        "side_effects": [
+            "Chảy máu (nhiều hơn clopidogrel)",
+            "Chảy máu lớn (hiếm nhưng nguy hiểm)",
+            "Thrombotic thrombocytopenic purpura (TTP) - hiếm"
+        ],
+        "interactions": [
+            "Aspirin: dùng kèm (dual antiplatelet therapy)",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Ticlopidine": {
+        "group": "Cardiovascular - Antiplatelet",
+        "vietnamese_name": "Ticlopidine, Ticlid",
+        "administration": ["PO"],
+        "indications": [
+            "Phòng ngừa đột quỵ sau TIA",
+            "Phòng ngừa huyết khối sau stent (ít dùng, thay bằng clopidogrel)"
+        ],
+        "contraindications": [
+            "Giảm bạch cầu/giảm tiểu cầu",
+            "Chảy máu đang hoạt động",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_standard": "250mg x 2 lần/ngày",
+            "notes": "Ít dùng do nguy cơ giảm bạch cầu/tiểu cầu. Clopidogrel thay thế tốt hơn"
+        },
+        "side_effects": [
+            "Giảm bạch cầu (nguy hiểm - cần theo dõi)",
+            "Giảm tiểu cầu",
+            "Ban xuất huyết giảm tiểu cầu huyết khối (TTP)",
+            "Chảy máu",
+            "Rối loạn tiêu hóa"
+        ],
+        "interactions": [
+            "Aspirin: tăng nguy cơ chảy máu",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Antacids: giảm hấp thu"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Dipyridamole": {
+        "group": "Cardiovascular - Antiplatelet",
+        "vietnamese_name": "Dipyridamole, Persantine",
+        "administration": ["PO"],
+        "indications": [
+            "Phòng ngừa đột quỵ/TIA (kết hợp với aspirin)",
+            "Phòng ngừa huyết khối sau phẫu thuật van tim"
+        ],
+        "contraindications": [
+            "Nhồi máu cơ tim cấp",
+            "Co thắt mạch vành (vasospasm)"
+        ],
+        "dosage": {
+            "adult_standard": "200mg x 2 lần/ngày (với aspirin)",
+            "adult_modified_release": "200mg x 2 lần/ngày",
+            "notes": "Thường dùng kết hợp với aspirin 25mg x 2 lần/ngày"
+        },
+        "side_effects": [
+            "Nhức đầu (phổ biến)",
+            "Chóng mặt",
+            "Đau bụng",
+            "Chảy máu",
+            "Tim đập nhanh"
+        ],
+        "interactions": [
+            "Aspirin: dùng kèm để tăng hiệu quả",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "pregnancy": "B"
+    },
+    
+    # ========== ANTIDEPRESSANTS (ADDITIONAL) ==========
+    
+    "Sertraline": {
+        "group": "Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)",
+        "vietnamese_name": "Sertraline, Zoloft",
+        "administration": ["PO"],
+        "indications": [
+            "Trầm cảm",
+            "Rối loạn lo âu",
+            "Rối loạn ám ảnh cưỡng chế (OCD)",
+            "Rối loạn stress sau sang chấn (PTSD)",
+            "Rối loạn hoảng sợ"
+        ],
+        "contraindications": [
+            "Dùng MAO inhibitor",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_depression": "50mg x 1 lần/ngày, tăng đến 50-200mg/ngày",
+            "adult_ocd": "50-200mg/ngày",
+            "adult_max": "200mg/ngày",
+            "notes": "Khởi đầu 25-50mg/ngày, tăng dần. Uống buổi sáng hoặc tối"
+        },
+        "side_effects": [
+            "Buồn nôn",
+            "Tiêu chảy",
+            "Mất ngủ",
+            "Giảm ham muốn tình dục",
+            "Nhức đầu",
+            "Khô miệng",
+            "Hội chứng serotonin (với thuốc khác)"
+        ],
+        "interactions": [
+            "MAO inhibitor: chống chỉ định",
+            "Warfarin: có thể tăng tác dụng chống đông",
+            "Tramadol: tăng nguy cơ co giật",
+            "Triptans: tăng nguy cơ hội chứng serotonin"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Citalopram": {
+        "group": "Psychiatry - SSRI",
+        "vietnamese_name": "Citalopram, Celexa",
+        "administration": ["PO"],
+        "indications": [
+            "Trầm cảm",
+            "Rối loạn lo âu"
+        ],
+        "contraindications": [
+            "Dùng MAO inhibitor",
+            "QT prolongation",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_standard": "20mg x 1 lần/ngày, tăng đến 20-40mg/ngày",
+            "adult_max": "40mg/ngày (20mg nếu >60 tuổi)",
+            "notes": "Giới hạn 40mg/ngày do nguy cơ QT prolongation. Người già: max 20mg/ngày"
+        },
+        "side_effects": [
+            "Buồn nôn",
+            "Mất ngủ",
+            "Nhức đầu",
+            "QT prolongation (liều cao)",
+            "Giảm ham muốn tình dục"
+        ],
+        "interactions": [
+            "MAO inhibitor: chống chỉ định",
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
+            "Warfarin: có thể tăng tác dụng"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Escitalopram": {
+        "group": "Psychiatry - SSRI",
+        "vietnamese_name": "Escitalopram, Lexapro",
+        "administration": ["PO"],
+        "indications": [
+            "Trầm cảm",
+            "Rối loạn lo âu tổng quát (GAD)",
+            "Rối loạn hoảng sợ"
+        ],
+        "contraindications": [
+            "Dùng MAO inhibitor",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_standard": "10mg x 1 lần/ngày, tăng đến 10-20mg/ngày",
+            "adult_max": "20mg/ngày",
+            "notes": "Là S-enantiomer của citalopram, ít tác dụng phụ hơn"
+        },
+        "side_effects": [
+            "Buồn nôn",
+            "Mất ngủ",
+            "Nhức đầu",
+            "Giảm ham muốn tình dục",
+            "Ít tác dụng phụ hơn citalopram"
+        ],
+        "interactions": [
+            "MAO inhibitor: chống chỉ định",
+            "Warfarin: có thể tăng tác dụng",
+            "Tramadol: tăng nguy cơ co giật"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Venlafaxine": {
+        "group": "Psychiatry - SNRI (Serotonin-Norepinephrine Reuptake Inhibitor)",
+        "vietnamese_name": "Venlafaxine, Effexor",
+        "administration": ["PO"],
+        "indications": [
+            "Trầm cảm",
+            "Rối loạn lo âu tổng quát (GAD)",
+            "Rối loạn hoảng sợ",
+            "Rối loạn lo âu xã hội"
+        ],
+        "contraindications": [
+            "Dùng MAO inhibitor",
+            "Tăng huyết áp không kiểm soát",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_standard": "37.5-75mg x 2 lần/ngày (immediate) hoặc 75-150mg x 1 lần/ngày (extended release)",
+            "adult_max": "225mg/ngày (immediate) hoặc 225mg/ngày (extended release)",
+            "notes": "Extended release: uống 1 lần/ngày, thuận tiện hơn"
+        },
+        "side_effects": [
+            "Buồn nôn",
+            "Tăng huyết áp (liều cao)",
+            "Mất ngủ",
+            "Chóng mặt",
+            "Giảm ham muốn tình dục",
+            "Tăng nhịp tim",
+            "Khó chịu khi ngừng (withdrawal)"
+        ],
+        "interactions": [
+            "MAO inhibitor: chống chỉ định",
+            "Warfarin: có thể tăng tác dụng",
+            "Tramadol: tăng nguy cơ co giật và hội chứng serotonin"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Amitriptyline": {
+        "group": "Psychiatry - Tricyclic Antidepressant (TCA)",
+        "vietnamese_name": "Amitriptyline, Elavil",
+        "administration": ["PO"],
+        "indications": [
+            "Trầm cảm",
+            "Đau thần kinh (neuropathic pain)",
+            "Migraine phòng ngừa",
+            "Rối loạn giấc ngủ",
+            "Đau cơ xơ hóa"
+        ],
+        "contraindications": [
+            "Dùng MAO inhibitor",
+            "Nhồi máu cơ tim gần đây",
+            "Block nhĩ thất độ 2-3",
+            "Rối loạn nhịp tim",
+            "Suy tim nặng"
+        ],
+        "dosage": {
+            "adult_depression": "25-75mg x 1 lần/ngày buổi tối, tăng đến 50-150mg/ngày",
+            "adult_neuropathic": "10-25mg buổi tối, tăng đến 25-100mg/ngày",
+            "adult_max": "150-300mg/ngày",
+            "notes": "Dùng buổi tối để tránh buồn ngủ ban ngày. Nguy cơ quá liều cao"
+        },
+        "side_effects": [
+            "Buồn ngủ (phổ biến)",
+            "Khô miệng",
+            "Táo bón",
+            "Rối loạn nhịp tim",
+            "Hạ huyết áp tư thế",
+            "Nhìn mờ",
+            "Tăng cân",
+            "Nguy cơ quá liều (cardiotoxic)"
+        ],
+        "interactions": [
+            "MAO inhibitor: chống chỉ định (nguy hiểm)",
+            "Quinidine: tăng nồng độ amitriptyline",
+            "Cimetidine: tăng nồng độ",
+            "Alcohol: tăng tác dụng an thần",
+            "Sympathomimetics: tăng nguy cơ tăng huyết áp"
+        ],
+        "pregnancy": "C - D trong 3 tháng đầu"
+    },
+    
+    # ========== ANTICONVULSANTS ==========
+    
+    "Phenytoin": {
+        "group": "Neurology - Anticonvulsant",
+        "vietnamese_name": "Phenytoin, Dilantin",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Động kinh (tổng quát, cục bộ)",
+            "Status epilepticus",
+            "Đau dây thần kinh sinh ba",
+            "Rối loạn nhịp tim (hiếm)"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Suy gan nặng",
+            "Block nhĩ thất",
+            "Hội chứng bệnh lympho"
+        ],
+        "dosage": {
+            "adult_po": "100mg x 3 lần/ngày, tăng đến 200-400mg/ngày",
+            "adult_iv_loading": "15-20mg/kg IV (tối đa 1.5g)",
+            "adult_iv_maintenance": "100mg IV mỗi 6-8 giờ sau loading",
+            "status_epilepticus": "15-20mg/kg IV x 1 lần",
+            "notes": "Theo dõi nồng độ trong máu (mục tiêu 10-20 mcg/mL). Non-linear kinetics"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25%",
+            "under_30": "Giảm liều 50%"
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa",
+            "Nystagmus (liều cao)",
+            "Ataxia (liều cao)",
+            "Ban da (có thể nặng - SJS/TEN)",
+            "Hạ bạch cầu",
+            "Tăng men gan",
+            "Loãng xương (dùng lâu dài)",
+            "Tăng acid uric",
+            "Rối loạn chức năng nhận thức"
+        ],
+        "interactions": [
+            "Warfarin: giảm tác dụng warfarin (cảm ứng enzyme)",
+            "Oral contraceptives: giảm hiệu quả",
+            "Folic acid: giảm nồng độ phenytoin",
+            "Many drugs: cảm ứng CYP450, giảm nồng độ nhiều thuốc"
+        ],
+        "pregnancy": "D - Nguy cơ dị tật thai nhi"
+    },
+    
+    "Valproate": {
+        "group": "Neurology - Anticonvulsant",
+        "vietnamese_name": "Valproate, Valproic Acid, Depakote",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Động kinh (nhiều loại)",
+            "Rối loạn lưỡng cực",
+            "Migraine phòng ngừa",
+            "Status epilepticus"
+        ],
+        "contraindications": [
+            "Bệnh gan hoạt động",
+            "Rối loạn chuyển hóa chu trình urea",
+            "Suy gan nặng",
+            "Có thai (cho rối loạn lưỡng cực)"
+        ],
+        "dosage": {
+            "adult_po": "250-500mg x 2-3 lần/ngày, tăng đến 1000-3000mg/ngày",
+            "adult_iv": "15-20mg/kg IV x 1 lần, sau đó 5-10mg/kg mỗi 6 giờ",
+            "adult_max": "60mg/kg/ngày (không quá 3000mg/ngày)",
+            "notes": "Theo dõi nồng độ (mục tiêu 50-100 mcg/mL), chức năng gan, tiểu cầu"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn",
+            "Tăng cân",
+            "Rụng tóc",
+            "Tăng men gan",
+            "Viêm tụy (hiếm nhưng nguy hiểm)",
+            "Thiếu tiểu cầu",
+            "Dị tật thai nhi (neural tube defects)",
+            "Loãng xương (dùng lâu dài)",
+            "Tăng ammonia máu"
+        ],
+        "interactions": [
+            "Phenytoin/Carbamazepine: giảm nồng độ valproate",
+            "Lamotrigine: tăng nồng độ lamotrigine",
+            "Aspirin: tăng nồng độ valproate",
+            "Warfarin: có thể tăng tác dụng"
+        ],
+        "pregnancy": "D - Nguy cơ dị tật thai nhi cao (neural tube defects)"
+    },
+    
+    "Levetiracetam": {
+        "group": "Neurology - Anticonvulsant",
+        "vietnamese_name": "Levetiracetam, Keppra",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Động kinh cục bộ",
+            "Động kinh tổng quát",
+            "Status epilepticus (IV)"
+        ],
+        "contraindications": [
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_po": "500-1000mg x 2 lần/ngày, tăng đến 1000-3000mg/ngày",
+            "adult_iv": "500-1000mg IV mỗi 12 giờ",
+            "adult_max": "3000mg/ngày",
+            "notes": "Ít tương tác thuốc, an toàn cho trẻ em và người già"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "50_80": "Giảm liều 25%",
+            "30_50": "Giảm liều 50%",
+            "under_30": "Giảm liều 75%"
+        },
+        "side_effects": [
+            "Buồn ngủ",
+            "Chóng mặt",
+            "Kích động, hành vi bất thường",
+            "Nhức đầu",
+            "Mệt mỏi",
+            "Ít tác dụng phụ hơn các anticonvulsants khác"
+        ],
+        "interactions": [
+            "Ít tương tác - không cảm ứng hoặc ức chế CYP450"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Lamotrigine": {
+        "group": "Neurology - Anticonvulsant",
+        "vietnamese_name": "Lamotrigine, Lamictal",
+        "administration": ["PO"],
+        "indications": [
+            "Động kinh cục bộ",
+            "Động kinh tổng quát",
+            "Rối loạn lưỡng cực (phòng ngừa tái phát trầm cảm)"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Ban da nặng trước đây (SJS/TEN)"
+        ],
+        "dosage": {
+            "adult_epilepsy": "25mg x 2 lần/ngày x 2 tuần, tăng đến 100-200mg x 2 lần/ngày",
+            "adult_bipolar": "25mg/ngày, tăng chậm đến 100-200mg/ngày",
+            "adult_max": "400mg/ngày",
+            "notes": "Tăng liều rất chậm để tránh ban da. Nếu dùng với valproate: giảm liều 50%"
+        },
+        "side_effects": [
+            "Ban da (có thể nặng - SJS/TEN, đặc biệt khi tăng liều nhanh)",
+            "Nhức đầu",
+            "Chóng mặt",
+            "Buồn nôn",
+            "Mất ngủ",
+            "Rối loạn thị giác"
+        ],
+        "interactions": [
+            "Valproate: tăng nồng độ lamotrigine (giảm liều lamotrigine 50%)",
+            "Carbamazepine: giảm nồng độ lamotrigine",
+            "Oral contraceptives: giảm nồng độ lamotrigine (tăng liều)"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Gabapentin": {
+        "group": "Neurology - Anticonvulsant (Alpha-2-delta ligand)",
+        "vietnamese_name": "Gabapentin, Neurontin",
+        "administration": ["PO"],
+        "indications": [
+            "Động kinh cục bộ",
+            "Đau thần kinh (postherpetic neuralgia, diabetic neuropathy)",
+            "Rối loạn lo âu",
+            "Hội chứng chân không yên"
+        ],
+        "contraindications": [
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_epilepsy": "300mg x 3 lần/ngày, tăng đến 900-1800mg/ngày",
+            "adult_neuropathic": "300mg x 3 lần/ngày, tăng đến 1800-3600mg/ngày",
+            "adult_max": "3600mg/ngày (chia 3 lần)",
+            "notes": "Hấp thu giảm khi tăng liều. Uống cách xa antacids 2 giờ"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "300mg x 2 lần/ngày",
+            "15_30": "300mg x 1 lần/ngày",
+            "under_15": "300mg cách ngày"
+        },
+        "side_effects": [
+            "Buồn ngủ",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Phù ngoại biên",
+            "Tăng cân",
+            "Nhìn mờ",
+            "Suy giảm trí nhớ"
+        ],
+        "interactions": [
+            "Antacids: giảm hấp thu (cách xa 2 giờ)",
+            "Morphine: tăng tác dụng an thần",
+            "Ít tương tác khác"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Pregabalin": {
+        "group": "Neurology - Anticonvulsant (Alpha-2-delta ligand)",
+        "vietnamese_name": "Pregabalin, Lyrica",
+        "administration": ["PO"],
+        "indications": [
+            "Đau thần kinh (postherpetic neuralgia, diabetic neuropathy)",
+            "Đau cơ xơ hóa",
+            "Động kinh cục bộ",
+            "Rối loạn lo âu tổng quát"
+        ],
+        "contraindications": [
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_neuropathic": "75mg x 2 lần/ngày, tăng đến 150-300mg x 2 lần/ngày",
+            "adult_epilepsy": "75mg x 2 lần/ngày, tăng đến 150-600mg/ngày",
+            "adult_max": "600mg/ngày",
+            "notes": "Mạnh hơn gabapentin, hấp thu tốt hơn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "15_30": "Giảm liều 75%",
+            "under_15": "Giảm liều 90%"
+        },
+        "side_effects": [
+            "Buồn ngủ",
+            "Chóng mặt",
+            "Phù ngoại biên",
+            "Tăng cân",
+            "Nhìn mờ",
+            "Suy giảm trí nhớ",
+            "Nguy cơ lạm dụng (controlled substance)"
+        ],
+        "interactions": [
+            "Morphine: tăng tác dụng an thần",
+            "Alcohol: tăng tác dụng an thần",
+            "Ít tương tác khác"
+        ],
+        "pregnancy": "C"
+    },
+    
+    # ========== ANTIHISTAMINES ==========
+    
+    "Loratadine": {
+        "group": "Allergy - Antihistamine (H1 Antagonist, 2nd generation)",
+        "vietnamese_name": "Loratadine, Clarityne",
+        "administration": ["PO"],
+        "indications": [
+            "Dị ứng (allergic rhinitis)",
+            "Mề đay (urticaria)",
+            "Dị ứng thức ăn",
+            "Dị ứng da"
+        ],
+        "contraindications": [
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_standard": "10mg x 1 lần/ngày",
+            "adult_max": "10mg x 2 lần/ngày",
+            "pediatric": "5mg x 1 lần/ngày (2-12 tuổi)",
+            "notes": "Non-sedating, ít tác dụng phụ"
+        },
+        "side_effects": [
+            "Buồn ngủ (ít hơn 1st generation)",
+            "Khô miệng (hiếm)",
+            "Nhức đầu (hiếm)",
+            "Ít tác dụng phụ hơn antihistamine 1st generation"
+        ],
+        "interactions": [
+            "Ít tương tác",
+            "Erythromycin/Ketoconazole: tăng nồng độ (nhưng thường không cần điều chỉnh)"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Cetirizine": {
+        "group": "Allergy - Antihistamine (H1 Antagonist, 2nd generation)",
+        "vietnamese_name": "Cetirizine, Zyrtec",
+        "administration": ["PO"],
+        "indications": [
+            "Dị ứng (allergic rhinitis)",
+            "Mề đay (urticaria)",
+            "Dị ứng mắt",
+            "Dị ứng da"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Suy thận nặng"
+        ],
+        "dosage": {
+            "adult_standard": "10mg x 1 lần/ngày",
+            "adult_max": "10mg x 2 lần/ngày",
+            "pediatric": "5mg x 1 lần/ngày (2-6 tuổi), 10mg/ngày (6-12 tuổi)",
+            "notes": "Non-sedating, an toàn cho trẻ em"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "5mg x 1 lần/ngày",
+            "under_30": "5mg cách ngày"
+        },
+        "side_effects": [
+            "Buồn ngủ (ít, 10-15% người)",
+            "Khô miệng",
+            "Nhức đầu",
+            "Mệt mỏi"
+        ],
+        "interactions": [
+            "Ít tương tác",
+            "Alcohol: có thể tăng buồn ngủ"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Fexofenadine": {
+        "group": "Allergy - Antihistamine (H1 Antagonist, 2nd generation)",
+        "vietnamese_name": "Fexofenadine, Allegra",
+        "administration": ["PO"],
+        "indications": [
+            "Dị ứng (allergic rhinitis)",
+            "Mề đay (urticaria)",
+            "Dị ứng da"
+        ],
+        "contraindications": [
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_standard": "180mg x 1 lần/ngày hoặc 60mg x 2 lần/ngày",
+            "adult_max": "180mg x 2 lần/ngày",
+            "pediatric": "30mg x 2 lần/ngày (6-11 tuổi)",
+            "notes": "Non-sedating, ít buồn ngủ nhất"
+        },
+        "side_effects": [
+            "Rất ít tác dụng phụ",
+            "Buồn ngủ rất hiếm",
+            "Nhức đầu (hiếm)",
+            "Mệt mỏi (hiếm)"
+        ],
+        "interactions": [
+            "Fruit juices (apple, orange, grapefruit): giảm hấp thu (cách xa 1-2 giờ)",
+            "Antacids: giảm hấp thu (cách xa 2 giờ)"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Desloratadine": {
+        "group": "Allergy - Antihistamine (H1 Antagonist, 2nd generation)",
+        "vietnamese_name": "Desloratadine, Aerius",
+        "administration": ["PO"],
+        "indications": [
+            "Dị ứng (allergic rhinitis)",
+            "Mề đay (urticaria)",
+            "Dị ứng da"
+        ],
+        "contraindications": [
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_standard": "5mg x 1 lần/ngày",
+            "adult_max": "5mg x 2 lần/ngày",
+            "pediatric": "2.5mg x 1 lần/ngày (6-11 tuổi)",
+            "notes": "Là metabolite của loratadine, mạnh hơn và tác dụng dài hơn"
+        },
+        "side_effects": [
+            "Buồn ngủ (rất hiếm)",
+            "Khô miệng",
+            "Nhức đầu",
+            "Ít tác dụng phụ"
+        ],
+        "interactions": [
+            "Ít tương tác"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Levocetirizine": {
+        "group": "Allergy - Antihistamine (H1 Antagonist, 2nd generation)",
+        "vietnamese_name": "Levocetirizine, Xyzal",
+        "administration": ["PO"],
+        "indications": [
+            "Dị ứng (allergic rhinitis)",
+            "Mề đay (urticaria)",
+            "Dị ứng da"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Suy thận nặng"
+        ],
+        "dosage": {
+            "adult_standard": "5mg x 1 lần/ngày buổi tối",
+            "adult_max": "5mg x 2 lần/ngày",
+            "pediatric": "2.5mg x 1 lần/ngày (6-12 tuổi)",
+            "notes": "Là R-enantiomer của cetirizine, mạnh hơn cetirizine"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "5mg cách ngày",
+            "under_30": "5mg mỗi 3 ngày"
+        },
+        "side_effects": [
+            "Buồn ngủ (ít hơn cetirizine)",
+            "Nhức đầu",
+            "Mệt mỏi",
+            "Khô miệng"
+        ],
+        "interactions": [
+            "Ít tương tác",
+            "Alcohol: có thể tăng buồn ngủ"
+        ],
+        "pregnancy": "B"
+    },
+    
+    # ========== CORTICOSTEROIDS (ADDITIONAL) ==========
+    
+    "Dexamethasone": {
+        "group": "Endocrinology - Corticosteroid",
+        "vietnamese_name": "Dexamethasone, Decadron",
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Viêm khớp dạng thấp",
+            "Hen phế quản",
+            "Phù não",
+            "Nôn do hóa trị",
+            "Chấn thương tủy sống",
+            "Viêm màng não do vi khuẩn (kết hợp kháng sinh)",
+            "COVID-19 (nặng)"
+        ],
+        "contraindications": [
+            "Nhiễm nấm hệ thống không điều trị",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_antiinflammatory": "0.75-9mg/ngày chia 2-4 lần",
+            "adult_edema": "10mg IV x 1 lần, sau đó 4mg IV mỗi 6 giờ",
+            "adult_chemotherapy_nausea": "8-20mg x 1 lần trước hóa trị",
+            "adult_covid19": "6mg x 1 lần/ngày (IV hoặc PO) x 10 ngày",
+            "notes": "Tác dụng dài, ức chế mạnh. Không dùng cho nhiễm nấm không điều trị"
+        },
+        "side_effects": [
+            "Tăng đường huyết",
+            "Tăng huyết áp",
+            "Loãng xương",
+            "Ức chế miễn dịch",
+            "Tăng cân",
+            "Loét dạ dày",
+            "Rối loạn tâm thần",
+            "Phù",
+            "Khó ngủ"
+        ],
+        "interactions": [
+            "Warfarin: thay đổi tác dụng chống đông",
+            "NSAID: tăng nguy cơ loét dạ dày",
+            "Insulin/OAD: tăng đường huyết",
+            "Vaccines: giảm hiệu quả vaccine"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Methylprednisolone": {
+        "group": "Endocrinology - Corticosteroid",
+        "vietnamese_name": "Methylprednisolone, Medrol",
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Viêm khớp dạng thấp",
+            "Hen phế quản",
+            "Bệnh tự miễn",
+            "Sốc phản vệ (kết hợp)",
+            "Chấn thương tủy sống",
+            "Đợt cấp bệnh đa xơ cứng"
+        ],
+        "contraindications": [
+            "Nhiễm nấm hệ thống không điều trị",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_po": "4-48mg/ngày chia 1-4 lần",
+            "adult_iv_pulse": "250-1000mg IV x 1 lần/ngày x 3-5 ngày",
+            "adult_iv_standard": "40-125mg IV mỗi 6-12 giờ",
+            "spinal_cord_injury": "30mg/kg IV x 1 lần, sau đó 5.4mg/kg/giờ x 23 giờ",
+            "notes": "IV pulse therapy cho bệnh nặng. Giảm dần liều khi ngừng"
+        },
+        "side_effects": [
+            "Tăng đường huyết",
+            "Tăng huyết áp",
+            "Loãng xương",
+            "Ức chế miễn dịch",
+            "Tăng cân",
+            "Loét dạ dày",
+            "Rối loạn tâm thần"
+        ],
+        "interactions": [
+            "Warfarin: thay đổi tác dụng chống đông",
+            "NSAID: tăng nguy cơ loét dạ dày",
+            "Ketoconazole: tăng nồng độ methylprednisolone"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Hydrocortisone": {
+        "group": "Endocrinology - Corticosteroid",
+        "vietnamese_name": "Hydrocortisone, Cortef",
+        "administration": ["PO", "IV", "IM", "Topical"],
+        "indications": [
+            "Suy thượng thận",
+            "Phản ứng dị ứng nặng",
+            "Sốc phản vệ (kết hợp)",
+            "Viêm khớp",
+            "Bệnh Addison",
+            "Phù não"
+        ],
+        "contraindications": [
+            "Nhiễm nấm hệ thống không điều trị",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_replacement": "15-25mg/ngày (20mg buổi sáng, 10mg buổi tối)",
+            "adult_stress": "50-100mg IV mỗi 6-8 giờ",
+            "adult_shock": "100mg IV x 1 lần, sau đó 50-100mg mỗi 6 giờ",
+            "adult_antiinflammatory": "20-240mg/ngày",
+            "notes": "Glucocorticoid tự nhiên, tác dụng ngắn"
+        },
+        "side_effects": [
+            "Tăng đường huyết",
+            "Tăng huyết áp",
+            "Giữ natri, phù",
+            "Loét dạ dày",
+            "Ức chế miễn dịch"
+        ],
+        "interactions": [
+            "Warfarin: thay đổi tác dụng chống đông",
+            "NSAID: tăng nguy cơ loét dạ dày"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Betamethasone": {
+        "group": "Endocrinology - Corticosteroid",
+        "vietnamese_name": "Betamethasone, Celestone",
+        "administration": ["PO", "IV", "IM", "Topical"],
+        "indications": [
+            "Viêm khớp dạng thấp",
+            "Hen phế quản",
+            "Bệnh tự miễn",
+            "Viêm da",
+            "Thúc đẩy trưởng thành phổi thai nhi (IM)"
+        ],
+        "contraindications": [
+            "Nhiễm nấm hệ thống không điều trị",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_po": "0.6-7.2mg/ngày chia 1-4 lần",
+            "adult_im": "0.5-9mg IM",
+            "fetal_lung_maturation": "12mg IM x 2 lần cách 24 giờ (cho mẹ)",
+            "notes": "Tác dụng dài, ức chế mạnh"
+        },
+        "side_effects": [
+            "Tăng đường huyết",
+            "Tăng huyết áp",
+            "Loãng xương",
+            "Ức chế miễn dịch",
+            "Tăng cân",
+            "Loét dạ dày"
+        ],
+        "interactions": [
+            "Warfarin: thay đổi tác dụng chống đông",
+            "NSAID: tăng nguy cơ loét dạ dày"
+        ],
+        "pregnancy": "C"
+    },
+    
+    # ========== ANTIVIRALS ==========
+    
+    "Acyclovir": {
+        "group": "Infectious Disease - Antiviral",
+        "vietnamese_name": "Acyclovir, Zovirax",
+        "administration": ["PO", "IV", "Topical"],
+        "indications": [
+            "Herpes simplex (HSV)",
+            "Herpes zoster (shingles)",
+            "Viêm não do HSV",
+            "Nhiễm HSV ở người suy giảm miễn dịch"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Suy thận nặng (IV)"
+        ],
+        "dosage": {
+            "adult_herpes_simplex": "200mg x 5 lần/ngày x 7-10 ngày",
+            "adult_shingles": "800mg x 5 lần/ngày x 7-10 ngày",
+            "adult_iv": "5-10mg/kg IV mỗi 8 giờ",
+            "adult_encephalitis": "10mg/kg IV mỗi 8 giờ x 14-21 ngày",
+            "notes": "Uống nhiều nước. Truyền IV chậm (1 giờ) để tránh độc thận"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Giảm liều 75%"
+        },
+        "side_effects": [
+            "Buồn nôn",
+            "Đau đầu",
+            "Độc thận (IV, liều cao)",
+            "Rối loạn thần kinh (IV)",
+            "Viêm tĩnh mạch (IV)",
+            "Ban da"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ acyclovir",
+            "Nephrotoxic drugs: tăng nguy cơ độc thận"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Valacyclovir": {
+        "group": "Infectious Disease - Antiviral",
+        "vietnamese_name": "Valacyclovir, Valtrex",
+        "administration": ["PO"],
+        "indications": [
+            "Herpes simplex (HSV)",
+            "Herpes zoster (shingles)",
+            "Phòng ngừa tái phát HSV",
+            "Phòng ngừa CMV sau ghép tạng"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Suy thận nặng"
+        ],
+        "dosage": {
+            "adult_herpes_simplex": "500mg x 2 lần/ngày x 7-10 ngày",
+            "adult_shingles": "1g x 3 lần/ngày x 7 ngày",
+            "adult_prophylaxis": "500mg-1g x 1 lần/ngày",
+            "adult_max": "3g/ngày",
+            "notes": "Prodrug của acyclovir, hấp thu tốt hơn, uống ít lần hơn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Giảm liều 75%"
+        },
+        "side_effects": [
+            "Buồn nôn",
+            "Đau đầu",
+            "Độc thận (liều cao)",
+            "Ít tác dụng phụ hơn acyclovir"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ",
+            "Cimetidine: tăng nồng độ"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Oseltamivir": {
+        "group": "Infectious Disease - Antiviral (Neuraminidase Inhibitor)",
+        "vietnamese_name": "Oseltamivir, Tamiflu",
+        "administration": ["PO"],
+        "indications": [
+            "Cúm A và B (treatment)",
+            "Phòng ngừa cúm",
+            "Cúm ở người suy giảm miễn dịch"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Suy thận nặng (thận trọng)"
+        ],
+        "dosage": {
+            "adult_treatment": "75mg x 2 lần/ngày x 5 ngày",
+            "adult_prophylaxis": "75mg x 1 lần/ngày x 10 ngày (sau tiếp xúc) hoặc x 6 tuần (mùa cúm)",
+            "adult_max": "150mg x 2 lần/ngày (suy giảm miễn dịch)",
+            "notes": "Bắt đầu trong 48 giờ đầu triệu chứng. Hiệu quả nhất trong 24 giờ đầu"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "75mg x 1 lần/ngày (treatment), 75mg cách ngày (prophylaxis)",
+            "under_30": "75mg x 1 lần/ngày (treatment), 75mg cách 2 ngày (prophylaxis)"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn",
+            "Đau đầu",
+            "Tiêu chảy",
+            "Rối loạn tâm thần (hiếm, ở trẻ em)",
+            "Co giật (hiếm)"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ oseltamivir",
+            "Ít tương tác khác"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Ganciclovir": {
+        "group": "Infectious Disease - Antiviral",
+        "vietnamese_name": "Ganciclovir, Cytovene",
+        "administration": ["IV", "PO"],
+        "indications": [
+            "Nhiễm CMV ở người suy giảm miễn dịch",
+            "Phòng ngừa CMV sau ghép tạng",
+            "Viêm võng mạc do CMV",
+            "CMV bẩm sinh"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Suy thận nặng",
+            "Có thai",
+            "Giảm bạch cầu <500",
+            "Giảm tiểu cầu <25,000"
+        ],
+        "dosage": {
+            "adult_iv_induction": "5mg/kg IV mỗi 12 giờ x 14-21 ngày",
+            "adult_iv_maintenance": "5mg/kg IV x 1 lần/ngày hoặc 6mg/kg x 5 lần/tuần",
+            "adult_po": "1g x 3 lần/ngày (sau IV induction)",
+            "notes": "Theo dõi bạch cầu, tiểu cầu, chức năng thận. Rất độc với tủy xương"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "50_80": "Giảm liều 50%",
+            "25_50": "Giảm liều 75%",
+            "under_25": "Giảm liều 90%"
+        },
+        "side_effects": [
+            "Giảm bạch cầu (phổ biến, nặng)",
+            "Giảm tiểu cầu",
+            "Giảm hồng cầu",
+            "Độc thận",
+            "Độc thần kinh",
+            "Sốt",
+            "Ban da",
+            "Rất độc - chỉ dùng khi cần thiết"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ ganciclovir",
+            "Zidovudine: tăng độc tính tủy xương",
+            "Mycophenolate: tăng nồng độ ganciclovir"
+        ],
+        "pregnancy": "C - D (với CMV)"
+    },
+    
+    "Ribavirin": {
+        "group": "Infectious Disease - Antiviral",
+        "vietnamese_name": "Ribavirin, Rebetol",
+        "administration": ["PO", "IV", "Inhalation"],
+        "indications": [
+            "Viêm gan C (kết hợp với interferon)",
+            "Viêm gan C (kết hợp với sofosbuvir)",
+            "Sốt Lassa (IV)",
+            "RSV ở trẻ sơ sinh (inhalation)"
+        ],
+        "contraindications": [
+            "Có thai (nam và nữ)",
+            "Suy thận nặng",
+            "Bệnh tim nặng",
+            "Thiếu máu nặng",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_hcv": "800-1200mg/ngày chia 2 lần (tùy genotype và trọng lượng)",
+            "adult_hcv_sofosbuvir": "1000mg/ngày (nếu >75kg) hoặc 800mg/ngày (<75kg)",
+            "adult_iv": "30-35mg/kg x 1 lần (loading), sau đó 15-20mg/kg mỗi 6 giờ",
+            "notes": "Rất độc. Nam và nữ phải dùng biện pháp tránh thai 6 tháng sau khi ngừng"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Không dùng"
+        },
+        "side_effects": [
+            "Thiếu máu (phổ biến, có thể nặng)",
+            "Giảm bạch cầu",
+            "Dị tật thai nhi (nam và nữ - chống chỉ định tuyệt đối nếu có thai)",
+            "Rối loạn tâm thần",
+            "Rối loạn hô hấp (inhalation)",
+            "Rất độc"
+        ],
+        "interactions": [
+            "Zidovudine: tăng độc tính",
+            "Didanosine: tăng độc tính",
+            "Azathioprine: tăng độc tính"
+        ],
+        "pregnancy": "X - Chống chỉ định tuyệt đối"
+    },
 }
 
 # Drug groups for filtering
@@ -1254,7 +2362,7 @@ DRUG_GROUPS = {
         "Metoprolol", "Propranolol", "Amlodipine",
         "Furosemide", "Hydrochlorothiazide",
         "Amiodarone", "Digoxin",
-        "Warfarin", "Aspirin", "Clopidogrel",
+        "Warfarin", "Aspirin", "Clopidogrel", "Ticagrelor", "Prasugrel", "Ticlopidine", "Dipyridamole",
         "Atorvastatin", "Simvastatin"
     ],
     "Diabetes": [
@@ -1271,7 +2379,11 @@ DRUG_GROUPS = {
         "Salbutamol"
     ],
     "Neurology/Psychiatry": [
-        "Carbamazepine", "Fluoxetine"
+        "Carbamazepine", "Fluoxetine", "Sertraline", "Citalopram", "Escitalopram", "Venlafaxine", "Amitriptyline",
+        "Phenytoin", "Valproate", "Levetiracetam", "Lamotrigine", "Gabapentin", "Pregabalin"
+    ],
+    "Allergy": [
+        "Loratadine", "Cetirizine", "Fexofenadine", "Desloratadine", "Levocetirizine"
     ],
     "Other": [
         "Allopurinol", "Prednisolone", "Folic Acid"
