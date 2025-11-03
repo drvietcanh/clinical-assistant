@@ -19,6 +19,13 @@ from drugs import (
     render_visual_comparison,
     render_dosing_schedule_generator
 )
+from drugs.tdm import (
+    render_digoxin_tdm,
+    render_phenytoin_tdm,
+    render_lithium_tdm,
+    render_theophylline_tdm,
+    render_immunosuppressants_tdm
+)
 
 # Standard page setup
 setup_page(
@@ -41,7 +48,12 @@ with st.sidebar:
             "📊 So Sánh Thuốc Trực Quan",
             "📅 Tạo Lịch Trình Liều Dùng",
             "💉 Kiểm Tra Tương Thích IV",
-            "🔍 Kiểm Tra Tương Tác Thuốc"
+            "🔍 Kiểm Tra Tương Tác Thuốc",
+            "📊 TDM - Digoxin",
+            "📊 TDM - Phenytoin",
+            "📊 TDM - Lithium",
+            "📊 TDM - Theophylline",
+            "📊 TDM - Tacrolimus/Cyclosporine"
         ]
     )
     
@@ -80,6 +92,21 @@ elif "Tương Thích IV" in function_type:
 
 elif "Tương Tác" in function_type:
     render_interaction_checker()
+
+elif "TDM - Digoxin" in function_type:
+    render_digoxin_tdm()
+
+elif "TDM - Phenytoin" in function_type:
+    render_phenytoin_tdm()
+
+elif "TDM - Lithium" in function_type:
+    render_lithium_tdm()
+
+elif "TDM - Theophylline" in function_type:
+    render_theophylline_tdm()
+
+elif "TDM - Tacrolimus" in function_type or "TDM - Cyclosporine" in function_type:
+    render_immunosuppressants_tdm()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)
