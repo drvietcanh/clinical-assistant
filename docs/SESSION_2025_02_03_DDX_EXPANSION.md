@@ -204,5 +204,5 @@ This expansion:
 
 **Version:** 2.13.0 (DDx Expansion)  
 **Status:** ✅ Complete and production-ready  
-**Commit:** Will be committed with this documentation
+**Commit:** cc9dda2 - feat: Expand DDx Generator from 6 to 14 scenarios with 60 total diagnoses
 
