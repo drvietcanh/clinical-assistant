@@ -33,7 +33,7 @@ with st.sidebar:
         st.session_state['switch_to_dosing_calculator'] = False
         # Set function_type directly via rerun (will be handled in routing)
         if 'drug_db_function_type' not in st.session_state:
-            st.session_state['drug_db_function_type'] = "🧮 Tính Liều Theo eGFR/CrCl (Kháng Sinh)"
+            st.session_state['drug_db_function_type'] = str("🧮 Tính Liều Theo eGFR/CrCl (Kháng Sinh)")
     
     # Use saved function_type or default
     saved_function_type = st.session_state.get('drug_db_function_type', None)
@@ -60,8 +60,10 @@ with st.sidebar:
         key="drug_db_function_selector"
     )
     
-    # Save current selection
-    st.session_state['drug_db_function_type'] = function_type
+    # Save current selection (ensure it's a string to avoid serialization issues)
+    # Note: function_type may contain emoji, but Streamlit should handle string values
+    if function_type:
+        st.session_state['drug_db_function_type'] = str(function_type)
     
     st.markdown("---")
     st.info("""

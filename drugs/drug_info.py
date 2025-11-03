@@ -71,10 +71,14 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix=""):
     col1, col2 = st.columns([1, 3])
     
     with col1:
-        view_key = f"{key_prefix}view_{drug_name}"
+        # Sanitize drug_name for key (remove special characters that might cause issues)
+        safe_drug_name = str(drug_name).replace(" ", "_").replace("-", "_").replace("/", "_")
+        view_key = f"{key_prefix}view_{safe_drug_name}" if key_prefix else f"view_{safe_drug_name}"
+        
         if st.button("📖 Xem chi tiết", key=view_key, use_container_width=True):
-            st.session_state[f"{key_prefix}selected_drug"] = drug_name
-            st.session_state[f"{key_prefix}show_detail"] = True
+            # Use consistent keys without key_prefix for main selection
+            st.session_state["selected_drug"] = str(drug_name)  # Ensure it's a string
+            st.session_state["show_detail"] = True
             st.rerun()
     
     with col2:
@@ -220,7 +224,9 @@ def display_drug_info(drug_name, drug_data):
                 - Tính liều chi tiết và cảnh báo tự động
                 """)
             with col2:
-                if st.button("🧮 Tính Liều Theo CrCl", key=f"calc_dose_{drug_name}", use_container_width=True, type="primary"):
+                # Sanitize drug_name for button key
+                safe_calc_key = f"calc_dose_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                if st.button("🧮 Tính Liều Theo CrCl", key=safe_calc_key, use_container_width=True, type="primary"):
                     # Set session state to switch to calculator with preset
                     st.session_state['preset_antibiotic_name'] = drug_name
                     st.session_state['switch_to_dosing_calculator'] = True
@@ -298,8 +304,10 @@ def render_drug_database():
             suggestion_cols = st.columns(min(5, len(suggestions)))
             for idx, suggestion in enumerate(suggestions[:5]):
                 with suggestion_cols[idx]:
-                    if st.button(f"💊 {suggestion}", key=f"suggest_{suggestion}", use_container_width=True):
-                        st.session_state.drug_search_input = suggestion
+                    # Sanitize suggestion for key
+                    safe_suggestion_key = f"suggest_{str(suggestion).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                    if st.button(f"💊 {suggestion}", key=safe_suggestion_key, use_container_width=True):
+                        st.session_state.drug_search_input = str(suggestion)
                         st.rerun()
     
     # Recent searches
@@ -309,8 +317,10 @@ def render_drug_database():
         recent_cols = st.columns(min(len(recent), 5))
         for idx, recent_query in enumerate(recent[:5]):
             with recent_cols[idx]:
-                if st.button(f"↩️ {recent_query}", key=f"recent_{recent_query}", use_container_width=True):
-                    st.session_state.drug_search_input = recent_query
+                # Sanitize recent_query for key
+                safe_recent_key = f"recent_{str(recent_query).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                if st.button(f"↩️ {recent_query}", key=safe_recent_key, use_container_width=True):
+                    st.session_state.drug_search_input = str(recent_query)
                     st.rerun()
     
     # Popular drugs
@@ -319,8 +329,10 @@ def render_drug_database():
     popular_cols = st.columns(min(len(popular), 5))
     for idx, popular_drug in enumerate(popular[:5]):
         with popular_cols[idx]:
-            if st.button(f"⭐ {popular_drug}", key=f"popular_{popular_drug}", use_container_width=True):
-                st.session_state.drug_search_input = popular_drug
+            # Sanitize popular_drug for key
+            safe_popular_key = f"popular_{str(popular_drug).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+            if st.button(f"⭐ {popular_drug}", key=safe_popular_key, use_container_width=True):
+                st.session_state.drug_search_input = str(popular_drug)
                 st.rerun()
     
     st.markdown("---")
@@ -337,11 +349,17 @@ def render_drug_database():
                     render_compact_drug_card(drug_name, drug_data)
                     
                     # Show detail if selected
-                    if st.session_state.get(f"selected_drug") == drug_name and st.session_state.get(f"show_detail"):
+                    selected_key = "selected_drug"
+                    show_detail_key = "show_detail"
+                    if st.session_state.get(selected_key) == drug_name and st.session_state.get(show_detail_key, False):
                         display_drug_info(drug_name, drug_data)
-                        if st.button("✖️ Đóng", key=f"close_{drug_name}"):
-                            st.session_state[f"selected_drug"] = None
-                            st.session_state[f"show_detail"] = False
+                        # Sanitize drug_name for button key
+                        safe_close_key = f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                        if st.button("✖️ Đóng", key=safe_close_key):
+                            if selected_key in st.session_state:
+                                del st.session_state[selected_key]
+                            if show_detail_key in st.session_state:
+                                st.session_state[show_detail_key] = False
                             st.rerun()
             else:
                 st.warning("Không tìm thấy thuốc nào. Thử tìm kiếm với từ khóa khác.")
@@ -370,10 +388,16 @@ def render_drug_database():
             render_compact_drug_card(drug_name, drug_data)
             
             # Show detail if selected
-            if st.session_state.get(f"selected_drug") == drug_name and st.session_state.get(f"show_detail"):
+            selected_key = "selected_drug"
+            show_detail_key = "show_detail"
+            if st.session_state.get(selected_key) == drug_name and st.session_state.get(show_detail_key, False):
                 display_drug_info(drug_name, drug_data)
-                if st.button("✖️ Đóng", key=f"close_{drug_name}"):
-                    st.session_state[f"selected_drug"] = None
-                    st.session_state[f"show_detail"] = False
+                # Sanitize drug_name for button key
+                safe_close_key = f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                if st.button("✖️ Đóng", key=safe_close_key):
+                    if selected_key in st.session_state:
+                        del st.session_state[selected_key]
+                    if show_detail_key in st.session_state:
+                        st.session_state[show_detail_key] = False
                     st.rerun()
 

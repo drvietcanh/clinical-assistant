@@ -509,7 +509,58 @@ def calculate_icu_adjustment(antibiotic_name, albumin_gdl=None, shock_type=None,
     }
 
 
-def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, indication="standard", 
+def calculate_crcl(age, weight_kg, scr_mgdl, sex, use_abw=False, abw=None):
+    """
+    Calculate CrCl using Cockcroft-Gault formula
+    
+    Args:
+        age: Age in years
+        weight_kg: Weight in kg (actual or ABW if use_abw=True)
+        scr_mgdl: Serum creatinine in mg/dL
+        sex: "Nam" or "Nữ"
+        use_abw: Whether to use Adjusted Body Weight
+        abw: Adjusted Body Weight if use_abw=True
+    
+    Returns:
+        CrCl in mL/min
+    """
+    dosing_weight = abw if use_abw and abw else weight_kg
+    
+    if sex == "Nam":
+        crcl = ((140 - age) * dosing_weight) / (72 * scr_mgdl)
+    else:
+        crcl = ((140 - age) * dosing_weight) / (72 * scr_mgdl) * 0.85
+    
+    return round(crcl, 1)
+
+
+def calculate_egfr_simplified(age, scr_mgdl, sex):
+    """
+    Calculate eGFR using simplified CKD-EPI formula
+    
+    Args:
+        age: Age in years
+        scr_mgdl: Serum creatinine in mg/dL
+        sex: "Nam" or "Nữ"
+    
+    Returns:
+        eGFR in mL/min/1.73m²
+    """
+    if sex == "Nam":
+        if scr_mgdl <= 0.9:
+            egfr = 141 * ((scr_mgdl / 0.9) ** -0.411) * (0.993 ** age)
+        else:
+            egfr = 141 * ((scr_mgdl / 0.9) ** -1.209) * (0.993 ** age)
+    else:
+        if scr_mgdl <= 0.7:
+            egfr = 144 * ((scr_mgdl / 0.7) ** -0.329) * (0.993 ** age)
+        else:
+            egfr = 144 * ((scr_mgdl / 0.7) ** -1.209) * (0.993 ** age)
+    
+    return round(egfr, 1)
+
+
+def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, indication="standard",
                             albumin_gdl=None, shock_type=None, is_icu=False):
     """
     Calculate adjusted antibiotic dose based on renal function AND ICU factors
@@ -601,201 +652,40 @@ def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, in
 
 
 def render_dosing_calculator():
-    """Universal antibiotic dosing calculator interface"""
+    """Universal antibiotic dosing calculator interface - REFACTORED to use UI components"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🧮 Tính Liều Kháng Sinh Theo eGFR/CrCl</h2>
-    <p style='text-align: center;'><em>Công cụ tính liều tự động cho tất cả kháng sinh dựa trên chức năng thận</em></p>
-    """, unsafe_allow_html=True)
+    # Import UI components
+    from .dosing_ui import (
+        render_header,
+        render_patient_inputs,
+        render_weight_metrics,
+        render_renal_metrics,
+        render_antibiotic_selection,
+        check_imported_values,
+        render_dosage_results,
+        render_warnings_section
+    )
     
-    st.info("""
-    **Công cụ này (Enhanced):**
-    - ✅ Tự động tính liều dựa trên CrCl/eGFR
-    - ✅ Áp dụng cho tất cả kháng sinh trong database
-    - ✅ Hỗ trợ bệnh nhân đặc biệt (HD, PD, béo phì, trẻ em)
-    - ✅ Tính liều chi tiết (mg/kg, interval, infusion time)
-    - ✅ Cảnh báo tự động (tích lũy, độc tính, tương tác)
-    - ✅ Tích hợp với eGFR calculator
-    """)
+    # Render header
+    render_header()
     
-    st.markdown("---")
+    # Check for imported values
+    use_imported, imported_crcl, imported_egfr, imported_gfr_absolute = check_imported_values()
     
-    # Check for imported values from eGFR calculator
-    imported_crcl = st.session_state.get('patient_crcl', None)
-    imported_egfr = st.session_state.get('patient_egfr', None)
-    imported_gfr_absolute = st.session_state.get('gfr_absolute', None)
-    
-    if imported_crcl is not None or imported_egfr is not None:
-        st.success(f"✅ **Đã import từ eGFR Calculator:** CrCl = {imported_crcl:.1f} mL/min | eGFR = {imported_egfr:.1f} mL/min/1.73m²" if imported_crcl and imported_egfr else f"✅ **Đã import:** eGFR = {imported_egfr:.1f} mL/min/1.73m²")
-        use_imported = st.checkbox("Sử dụng giá trị đã import", value=True, key="use_imported")
-        st.markdown("---")
-    else:
-        use_imported = False
-    
-    # Patient information
-    st.markdown("### 📋 Thông Số Bệnh Nhân")
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        # Age - support pediatric
-        age = st.number_input(
-            "Tuổi (năm)",
-            min_value=0,
-            max_value=120,
-            value=65,
-            step=1,
-            key="dosing_age",
-            help="Nhập 0-17 cho trẻ em (tự động dùng liều pediatric)"
-        )
-        is_pediatric = age < 18
-        if is_pediatric:
-            st.info(f"👶 **Trẻ em:** Tự động áp dụng liều pediatric")
-        
-        weight = st.number_input(
-            "Cân nặng (kg)",
-            min_value=10.0,
-            max_value=200.0,
-            value=70.0,
-            step=1.0,
-            key="dosing_weight"
-        )
-        
-        height = st.number_input(
-            "Chiều cao (cm)",
-            min_value=50,
-            max_value=220,
-            value=170,
-            step=1,
-            key="dosing_height"
-        )
-        
-        # Special conditions
-        st.markdown("#### 🏥 Tình Trạng Đặc Biệt")
-        is_icu = st.checkbox("🏥 Bệnh nhân ICU", key="dosing_icu", help="Tự động điều chỉnh cho ICU: ARC, Vd changes")
-        
-        # Enhanced HD/PD selection
-        dialysis_type = st.radio(
-            "Tình trạng thận đặc biệt:",
-            ["Không có", "Lọc máu ngắt quãng (HD)", "Lọc máu liên tục (CRRT/CVVH)", "Lọc màng bụng (PD)"],
-            key="dialysis_type",
-            help="Chọn loại lọc máu để có hướng dẫn liều cụ thể"
-        )
-        is_hemodialysis = dialysis_type == "Lọc máu ngắt quãng (HD)"
-        is_continuous_hd = dialysis_type == "Lọc máu liên tục (CRRT/CVVH)"
-        is_peritoneal_dialysis = dialysis_type == "Lọc màng bụng (PD)"
-        
-        if is_hemodialysis:
-            hd_schedule = st.selectbox(
-                "Lịch lọc máu:",
-                ["3 lần/tuần", "Hàng ngày", "Khác"],
-                key="hd_schedule",
-                help="Thời gian lọc máu ảnh hưởng đến thời điểm cho thuốc"
-            )
-        
-        is_pregnant = st.checkbox("🤰 Có thai", key="dosing_pregnant")
-        is_breastfeeding = st.checkbox("🤱 Đang cho con bú", key="dosing_breastfeeding")
-        
-        # ICU-specific inputs
-        if is_icu:
-            st.markdown("#### 🔴 Thông Số ICU")
-            shock_type = st.selectbox(
-                "Loại shock:",
-                ["Không có", "Sốc nhiễm khuẩn (Septic)", "Sốc tim (Cardiogenic)", "Sốc phân bố (Distributive)", "Sốc giảm thể tích (Hypovolemic)"],
-                key="dosing_shock_type"
-            )
-            shock_type_map = {
-                "Không có": None,
-                "Sốc nhiễm khuẩn (Septic)": "septic",
-                "Sốc tim (Cardiogenic)": "cardiogenic",
-                "Sốc phân bố (Distributive)": "distributive",
-                "Sốc giảm thể tích (Hypovolemic)": "hypovolemic"
-            }
-            shock_type_code = shock_type_map.get(shock_type, None)
-            
-            albumin_gdl = st.number_input(
-                "Albumin (g/dL)",
-                min_value=1.0,
-                max_value=5.5,
-                value=3.5,
-                step=0.1,
-                format="%.1f",
-                key="dosing_albumin",
-                help="Bình thường: 3.5-5.0 g/dL. <3.0 g/dL: ảnh hưởng liều kháng sinh liên kết protein cao"
-            )
-            
-            if albumin_gdl < 3.0:
-                st.warning(f"🚨 Albumin rất thấp ({albumin_gdl:.1f} g/dL) - Cần điều chỉnh liều kháng sinh liên kết protein cao!")
-            elif albumin_gdl < 3.5:
-                st.info(f"⚠️ Albumin giảm ({albumin_gdl:.1f} g/dL)")
-        else:
-            shock_type_code = None
-            albumin_gdl = None
-    
-    with col2:
-        sex = st.radio(
-            "Giới tính",
-            ["Nam", "Nữ"],
-            horizontal=True,
-            key="dosing_sex"
-        )
-        
-        # Creatinine
-        st.markdown("#### Creatinine Máu")
-        scr_unit = st.radio(
-            "Đơn vị:",
-            ["µmol/L", "mg/dL"],
-            horizontal=True,
-            index=0,
-            key="dosing_scr_unit"
-        )
-        
-        if scr_unit == "µmol/L":
-            scr_value = st.number_input(
-                "Creatinine (µmol/L)",
-                min_value=10.0,
-                max_value=1500.0,
-                value=88.0,
-                step=5.0,
-                format="%.1f",
-                key="dosing_scr_umol"
-            )
-            scr_mgdl = scr_value / 88.4
-            st.caption(f"≈ {scr_mgdl:.1f} mg/dL")
-        else:
-            scr_mgdl = st.number_input(
-                "Creatinine (mg/dL)",
-                min_value=0.1,
-                max_value=15.0,
-                value=1.0,
-                step=0.1,
-                format="%.1f",
-                key="dosing_scr_mgdl"
-            )
-            st.caption(f"≈ {scr_mgdl * 88.4:.0f} µmol/L")
+    # Get patient inputs
+    patient_data = render_patient_inputs()
     
     st.markdown("---")
     
     # Calculate IBW, ABW, BMI
-    ibw = calculate_ibw(height, sex)
-    bmi = calculate_bmi(weight, height)
-    is_obese = bmi > 30 or weight > ibw * 1.25
-    abw = calculate_abw(weight, ibw) if is_obese else weight
+    ibw = patient_data['ibw']
+    bmi = patient_data['bmi']
+    is_obese = patient_data['is_obese']
+    abw = patient_data['abw']
+    weight = patient_data['weight']
     
-    # Display weight info
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        st.metric("Cân nặng thực", f"{weight:.1f} kg")
-    with col2:
-        st.metric("IBW", f"{ibw:.1f} kg")
-    with col3:
-        st.metric("BMI", f"{bmi:.1f}", help="< 18.5: Gầy | 18.5-25: Bình thường | > 30: Béo phì")
-    with col4:
-        if is_obese:
-            st.metric("ABW", f"{abw:.1f} kg", help="Adjusted Body Weight - dùng cho tính liều")
-            st.caption("⚠️ Béo phì: Sẽ dùng ABW")
-        else:
-            st.metric("Dosing Weight", f"{weight:.1f} kg")
+    # Display weight metrics
+    render_weight_metrics(weight, ibw, bmi, is_obese, abw)
     
     st.markdown("---")
     
@@ -805,131 +695,55 @@ def render_dosing_calculator():
         st.info(f"📥 Sử dụng CrCl đã import: {crcl:.1f} mL/min")
     else:
         # Calculate with appropriate weight
-        dosing_weight_crcl = abw if is_obese else weight
-        
-        if sex == "Nam":
-            crcl = ((140 - age) * dosing_weight_crcl) / (72 * scr_mgdl)
-        else:
-            crcl = ((140 - age) * dosing_weight_crcl) / (72 * scr_mgdl) * 0.85
-        
-        crcl = round(crcl, 1)
+        crcl = calculate_crcl(
+            patient_data['age'],
+            abw if is_obese else weight,
+            patient_data['scr_mgdl'],
+            patient_data['sex'],
+            use_abw=is_obese,
+            abw=abw
+        )
     
     # Calculate eGFR (use imported if available)
     if use_imported and imported_egfr:
         egfr = imported_egfr
         st.info(f"📥 Sử dụng eGFR đã import: {egfr:.1f} mL/min/1.73m²")
     else:
-        # Calculate eGFR (simplified CKD-EPI)
-        if sex == "Nam":
-            if scr_mgdl <= 0.9:
-                egfr = 141 * ((scr_mgdl / 0.9) ** -0.411) * (0.993 ** age)
-            else:
-                egfr = 141 * ((scr_mgdl / 0.9) ** -1.209) * (0.993 ** age)
-        else:
-            if scr_mgdl <= 0.7:
-                egfr = 144 * ((scr_mgdl / 0.7) ** -0.329) * (0.993 ** age)
-            else:
-                egfr = 144 * ((scr_mgdl / 0.7) ** -1.209) * (0.993 ** age)
-        
-        egfr = round(egfr, 1)
+        egfr = calculate_egfr_simplified(
+            patient_data['age'],
+            patient_data['scr_mgdl'],
+            patient_data['sex']
+        )
     
-    # Display renal function
-    col1, col2 = st.columns(2)
-    with col1:
-        st.metric("CrCl (Cockcroft-Gault)", f"{crcl:.1f} mL/min", help="Ưu tiên dùng cho điều chỉnh liều thuốc")
-    with col2:
-        st.metric("eGFR (CKD-EPI)", f"{egfr:.1f} mL/min/1.73m²", help="Dùng cho phân loại CKD")
+    # Get renal category
+    renal_category = get_renal_category(
+        crcl, egfr,
+        patient_data['is_hemodialysis'],
+        patient_data['is_continuous_hd'],
+        patient_data['is_peritoneal_dialysis']
+    )
     
-    # Renal function category (with special conditions)
-    renal_category = get_renal_category(crcl, egfr, is_hemodialysis, is_continuous_hd if 'is_continuous_hd' in locals() else False, is_peritoneal_dialysis)
-    category_labels = {
-        'normal': '✅ Bình thường (CrCl ≥ 60)',
-        '30_60': '⚠️ Suy thận nhẹ-vừa (CrCl 30-59)',
-        '15_30': '🔴 Suy thận nặng (CrCl 15-29)',
-        'under_15': '🚨 Suy thận rất nặng (CrCl < 15)',
-        'hemodialysis': '💉 Đang lọc máu ngắt quãng (HD)',
-        'continuous_hd': '💉 Đang lọc máu liên tục (CRRT/CVVH)',
-        'peritoneal_dialysis': '💉 Đang lọc màng bụng (PD)'
-    }
-    
-    category_colors = {
-        'normal': '🟢',
-        '30_60': '🟡',
-        '15_30': '🟠',
-        'under_15': '🔴',
-        'hemodialysis': '🔵',
-        'continuous_hd': '🔵',
-        'peritoneal_dialysis': '🔵'
-    }
-    
-    st.info(f"{category_colors.get(renal_category, '')} **{category_labels.get(renal_category, 'Chưa xác định')}**")
+    # Display renal metrics
+    render_renal_metrics(crcl, egfr, renal_category)
     
     st.markdown("---")
     
     # Antibiotic selection
-    st.markdown("### 💊 Chọn Kháng Sinh")
-    
-    all_antibiotics = sorted(list(ANTIBIOTICS_DATABASE.keys()))
-    
-    # Check for preset antibiotic from drug detail view
-    preset_antibiotic = st.session_state.get('preset_antibiotic_name', None)
-    preset_index = 0
-    if preset_antibiotic and preset_antibiotic in all_antibiotics:
-        preset_index = all_antibiotics.index(preset_antibiotic)
-        # Show preset info
-        st.success(f"✅ **Đã chọn sẵn:** {preset_antibiotic} (từ tra cứu thuốc)")
-        # Clear the preset after showing
-        if 'preset_antibiotic_name' in st.session_state:
-            del st.session_state['preset_antibiotic_name']
-    
-    col1, col2 = st.columns(2)
-    with col1:
-        selected_ab = st.selectbox(
-            "Kháng sinh:",
-            all_antibiotics,
-            index=preset_index,
-            format_func=lambda x: x,
-            key="dosing_antibiotic"
-        )
-    
-    with col2:
-        indication = st.selectbox(
-            "Chỉ định:",
-            ["Chuẩn", "Nhiễm khuẩn nặng", "Viêm màng não", "Viêm nội tâm mạc"],
-            key="dosing_indication"
-        )
-    
-    # Other drugs (for interaction checking)
-    st.markdown("#### 💊 Thuốc Đang Dùng (Để Kiểm Tra Tương Tác)")
-    other_drugs_input = st.text_input(
-        "Nhập tên thuốc (cách nhau bằng dấu phẩy):",
-        placeholder="Ví dụ: Gentamicin, Furosemide, Warfarin",
-        key="other_drugs"
-    )
-    other_drugs = [d.strip() for d in other_drugs_input.split(",")] if other_drugs_input else []
-    
-    indication_map = {
-        "Chuẩn": "standard",
-        "Nhiễm khuẩn nặng": "severe",
-        "Viêm màng não": "meningitis",
-        "Viêm nội tâm mạc": "endocarditis"
-    }
-    
-    indication_code = indication_map.get(indication, "standard")
+    selected_ab, indication_code, other_drugs = render_antibiotic_selection()
     
     st.markdown("---")
     
-    # Calculate dose
+    # Calculate dose button
     if st.button("🧮 Tính Liều", type="primary", use_container_width=True):
-        # Update renal category with dialysis type
+        # Calculate adjusted dose
         result = calculate_adjusted_dose(
             selected_ab,
             crcl,
             egfr,
             indication=indication_code,
-            albumin_gdl=albumin_gdl if is_icu else None,
-            shock_type=shock_type_code if is_icu else None,
-            is_icu=is_icu
+            albumin_gdl=patient_data['albumin_gdl'] if patient_data['is_icu'] else None,
+            shock_type=patient_data['shock_type'] if patient_data['is_icu'] else None,
+            is_icu=patient_data['is_icu']
         )
         
         if "error" in result:
@@ -938,268 +752,47 @@ def render_dosing_calculator():
         else:
             ab_data = ANTIBIOTICS_DATABASE[selected_ab]
             
-            # Display antibiotic info
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, #0EA5E9 0%, #0288D1 100%); color: white; padding: 20px; border-radius: 15px; margin: 20px 0;'>
-                <h2 style='margin: 0; color: white;'>💊 {selected_ab}</h2>
-                {f"<p style='margin: 10px 0 0 0; color: rgba(255,255,255,0.9);'>{ab_data.get('vietnamese_name', '')}</p>" if ab_data.get('vietnamese_name') else ""}
-            </div>
-            """, unsafe_allow_html=True)
-            
-            # Base dose
-            st.markdown("### 📊 Liều Chuẩn (Chức năng thận bình thường):")
-            st.info(f"**{result['base_dose']}**")
-            
-            if result.get('notes'):
-                st.caption(f"💡 {result['notes']}")
-            
-            st.markdown("---")
-            
-            # Renal adjustment
-            st.markdown("### 🫘 Điều Chỉnh Theo Chức Năng Thận:")
-            
-            col1, col2 = st.columns([1, 2])
-            
-            with col1:
-                st.markdown(f"""
-                **CrCl hiện tại:** {crcl:.1f} mL/min
-                
-                **Phân loại:** {category_labels.get(renal_category, 'Chưa xác định')}
-                """)
-            
-            with col2:
-                st.success(f"""
-                **Khuyến cáo điều chỉnh:**
-                
-                {result['adjustment']}
-                """)
-            
-            # Full renal adjustment table
-            st.markdown("---")
-            st.markdown("### 📋 Bảng Điều Chỉnh Đầy Đủ:")
-            
-            renal_guide = result.get('full_renal_guide', {})
-            if renal_guide:
-                renal_table = {
-                    "Chức năng thận": [],
-                    "CrCl (mL/min)": [],
-                    "Điều chỉnh liều": []
-                }
-                
-                if 'normal' in renal_guide:
-                    renal_table["Chức năng thận"].append("Bình thường")
-                    renal_table["CrCl (mL/min)"].append("≥ 60")
-                    renal_table["Điều chỉnh liều"].append(renal_guide['normal'])
-                
-                if '30_60' in renal_guide:
-                    renal_table["Chức năng thận"].append("Suy thận nhẹ-vừa")
-                    renal_table["CrCl (mL/min)"].append("30-59")
-                    renal_table["Điều chỉnh liều"].append(renal_guide['30_60'])
-                
-                if '15_30' in renal_guide:
-                    renal_table["Chức năng thận"].append("Suy thận nặng")
-                    renal_table["CrCl (mL/min)"].append("15-29")
-                    renal_table["Điều chỉnh liều"].append(renal_guide['15_30'])
-                
-                if 'under_15' in renal_guide:
-                    renal_table["Chức năng thận"].append("Suy thận rất nặng")
-                    renal_table["CrCl (mL/min)"].append("< 15")
-                    renal_table["Điều chỉnh liều"].append(renal_guide['under_15'])
-                
-                if 'hemodialysis' in renal_guide:
-                    renal_table["Chức năng thận"].append("Lọc máu")
-                    renal_table["CrCl (mL/min)"].append("HD")
-                    renal_table["Điều chỉnh liều"].append(renal_guide['hemodialysis'])
-                
-                import pandas as pd
-                df_renal = pd.DataFrame(renal_table)
-                st.dataframe(df_renal, use_container_width=True, hide_index=True)
-            
-            # Detailed dose calculation
-            st.markdown("---")
-            st.markdown("### 💉 Tính Liều Chi Tiết:")
-            
-            detailed_dose = calculate_detailed_dose(
-                selected_ab, weight, ibw, abw, crcl, 
-                indication=indication_code, 
-                is_pediatric=is_pediatric,
-                height_cm=height
+            # Render dosage results
+            render_dosage_results(
+                result,
+                selected_ab,
+                ab_data,
+                crcl,
+                renal_category,
+                patient_data,
+                indication_code
             )
             
-            if detailed_dose and detailed_dose.get('calculated_dose_mg'):
-                col1, col2, col3, col4 = st.columns(4)
-                
-                with col1:
-                    st.metric("Liều tính được", f"{detailed_dose['calculated_dose_mg']:.0f} mg")
-                    if detailed_dose.get('parsed', {}).get('dose_per_kg'):
-                        dose_per_kg = detailed_dose['calculated_dose_mg'] / detailed_dose['dosing_weight_kg']
-                        st.caption(f"≈ {dose_per_kg:.1f} mg/kg")
-                
-                with col2:
-                    if detailed_dose.get('interval_hours'):
-                        st.metric("Khoảng cách", f"{detailed_dose['interval_hours']:.0f} giờ")
-                    else:
-                        st.metric("Khoảng cách", "Theo hướng dẫn")
-                
-                with col3:
-                    st.metric("Trọng lượng dùng", f"{detailed_dose['dosing_weight_kg']:.1f} kg")
-                    if is_obese:
-                        st.caption("ABW")
-                    elif is_malnourished:
-                        st.caption("Cân nhắc IBW")
-                
-                with col4:
-                    if detailed_dose.get('frequency'):
-                        st.metric("Tần suất", f"{detailed_dose['frequency']:.0f} lần/ngày")
-                    else:
-                        st.metric("Tần suất", "Theo interval")
-                
-                # Infusion details (if IV)
-                if detailed_dose.get('infusion_details'):
-                    infusion = detailed_dose['infusion_details']
-                    st.markdown("---")
-                    st.markdown("#### 💉 Hướng Dẫn Pha & Truyền (IV):")
-                    
-                    col1, col2, col3 = st.columns(3)
-                    with col1:
-                        st.info(f"""
-                        **Thể tích pha:**
-                        {infusion['volume_ml']:.0f} mL NS/D5W
-                        
-                        **Nồng độ:**
-                        {infusion['concentration_mg_ml']:.2f} mg/mL
-                        """)
-                    
-                    with col2:
-                        st.info(f"""
-                        **Thời gian truyền:**
-                        {infusion['infusion_time_minutes']:.0f} phút
-                        ({infusion['infusion_time_hours']:.1f} giờ)
-                        """)
-                    
-                    with col3:
-                        rate_ml_per_hour = infusion['volume_ml'] / infusion['infusion_time_hours']
-                        st.info(f"""
-                        **Tốc độ truyền:**
-                        {rate_ml_per_hour:.0f} mL/giờ
-                        ({rate_ml_per_hour/60:.1f} mL/phút)
-                        """)
-                
-                # Dosing schedule example
-                if detailed_dose.get('interval_hours'):
-                    schedule_text = f"📅 **Lịch dùng:** {detailed_dose['calculated_dose_mg']:.0f} mg mỗi {detailed_dose['interval_hours']:.0f} giờ"
-                    if detailed_dose.get('infusion_details'):
-                        schedule_text += f" (truyền {detailed_dose['infusion_details']['infusion_time_minutes']:.0f} phút)"
-                    st.info(schedule_text)
-            
-            # ICU-specific adjustments display
-            if is_icu and result.get('icu_recommendations'):
-                st.markdown("---")
-                st.markdown("### 🏥 Điều Chỉnh Cho ICU:")
-                
-                col1, col2 = st.columns(2)
-                with col1:
-                    if result.get('protein_binding', 0) > 0:
-                        st.metric("Liên kết protein", f"{result['protein_binding']:.0f}%")
-                    if albumin_gdl:
-                        st.metric("Albumin", f"{albumin_gdl:.1f} g/dL")
-                
-                with col2:
-                    if result.get('icu_factor', 1.0) > 1.0:
-                        st.metric("Hệ số điều chỉnh ICU", f"x {result['icu_factor']:.2f}")
-                
-                for rec in result['icu_recommendations']:
-                    if "🚨" in rec:
-                        st.error(rec)
-                    elif "⚠️" in rec:
-                        st.warning(rec)
-                    else:
-                        st.info(rec)
-            
-            # Warnings and alerts
-            st.markdown("---")
-            st.markdown("### ⚠️ Cảnh Báo & Khuyến Cáo:")
-            
-            warnings = check_warnings(
-                selected_ab, crcl, age, 
-                is_pregnant=is_pregnant,
-                is_breastfeeding=is_breastfeeding,
-                other_drugs=other_drugs
+            # Render warnings
+            render_warnings_section(
+                selected_ab,
+                crcl,
+                patient_data['age'],
+                patient_data['is_pregnant'],
+                patient_data['is_breastfeeding'],
+                other_drugs
             )
-            
-            if warnings:
-                for warning in warnings:
-                    if warning['level'] == 'high':
-                        st.error(f"{warning['icon']} **{warning['message']}**")
-                    elif warning['level'] == 'medium':
-                        st.warning(f"{warning['icon']} **{warning['message']}**")
-                    else:
-                        st.info(f"{warning['icon']} **{warning['message']}**")
-            else:
-                st.success("✅ Không có cảnh báo đặc biệt cho trường hợp này")
-            
-            # Enhanced special population guidance
-            if is_hemodialysis:
-                st.markdown("---")
-                st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Máu Ngắt Quãng:")
-                
-                if 'hd_schedule' in locals():
-                    hd_freq_text = f"Lịch HD: {hd_schedule}"
-                else:
-                    hd_freq_text = "Lịch HD: 3 lần/tuần"
-                
-                st.warning(f"""
-                **{hd_freq_text}**
-                
-                **Thời điểm cho thuốc:**
-                - Cho thuốc **SAU** khi lọc máu (nếu có thể) để tránh bị lọc bỏ
-                - Một số kháng sinh cần liều bổ sung **TRƯỚC** HD (ví dụ: Vancomycin)
-                - Tra cứu hướng dẫn cụ thể cho từng kháng sinh
-                
-                **Lưu ý:**
-                - CrCl trong HD ≈ 0, cần dùng liều cho suy thận rất nặng hoặc liều bổ sung
-                - Monitor nồng độ thuốc nếu có thể
-                """)
-            
-            if is_continuous_hd:
-                st.markdown("---")
-                st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Máu Liên Tục (CRRT/CVVH):")
-                st.warning(f"""
-                **CRRT/CVVH:**
-                - Liều thường cao hơn HD ngắt quãng do thời gian lọc liên tục
-                - Cần tính liều dựa trên clearance của CRRT
-                - Một số kháng sinh cần tăng liều: Vancomycin, Piperacillin-Tazobactam
-                - Tra cứu hướng dẫn cụ thể cho từng kháng sinh
-                """)
-            
-            if is_peritoneal_dialysis:
-                st.markdown("---")
-                st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Màng Bụng (PD):")
-                st.info(f"""
-                **Lọc màng bụng:**
-                - Một số kháng sinh có thể cho vào dịch lọc màng bụng (IP - intraperitoneal)
-                - Cần điều chỉnh liều khác với HD ngắt quãng
-                - Thường dùng liều cho suy thận nặng
-                - Tra cứu hướng dẫn cụ thể cho từng kháng sinh
-                """)
-            
-            # Monitoring
-            if result.get('monitoring'):
-                st.markdown("---")
-                st.warning(f"**📊 Theo dõi:** {result['monitoring']}")
-            
-            # Side effects reminder
-            if ab_data.get('side_effects'):
-                st.markdown("---")
-                with st.expander("⚠️ Tác dụng phụ quan trọng"):
-                    for se in ab_data['side_effects'][:5]:  # Show top 5
-                        st.markdown(f"- {se}")
-            
-            # Link to full antibiotic info
-            st.markdown("---")
-            st.info("💡 **Xem thông tin đầy đủ:** Tra cứu kháng sinh này để xem chỉ định, chống chỉ định, tương tác thuốc chi tiết")
     
     # Integration with eGFR calculator
+    st.markdown("---")
+    
+    # Link to database view
+    col1, col2 = st.columns(2)
+    with col1:
+        st.info("""
+        **🔗 Tích hợp với eGFR Calculator:**
+        - Tính eGFR/GFR đầy đủ với nhiều công thức tại trang **Calculators** → **eGFR/GFR Calculator**
+        - Tự động chuyển đổi giữa eGFR chuẩn hóa và GFR tuyệt đối
+        - Hỗ trợ tính BSA và điều chỉnh cho bệnh nhân béo phì/gầy
+        """)
+    
+    with col2:
+        st.info("""
+        **📖 Tra Cứu Kháng Sinh:**
+        - Xem thông tin đầy đủ về kháng sinh đã chọn
+        - Tính liều nhanh ngay trong trang tra cứu
+        - Dùng **"🔍 Tra Cứu & Dữ Liệu Kháng Sinh"** ở menu
+        """)
     st.markdown("---")
     
     # Link to database view

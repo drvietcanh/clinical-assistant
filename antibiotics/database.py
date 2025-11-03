@@ -158,54 +158,93 @@ def filter_antibiotics(group_filter="Tất cả", route_filter="Tất cả", awa
     return filtered
 
 
+def _escape_html(text):
+    """Escape HTML special characters to prevent rendering issues"""
+    if not text:
+        return ""
+    return (str(text)
+            .replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace('"', "&quot;")
+            .replace("'", "&#x27;"))
+
+
 def render_compact_antibiotic_card(ab_name, ab_data, key_prefix=""):
-    """Render a compact card for antibiotic list view"""
+    """Render an enhanced compact card for antibiotic list view with modern UI"""
+    import html
+    
     vn_name = ab_data.get('vietnamese_name', '').split(',')[0] if ab_data.get('vietnamese_name') else ''
     admin = ab_data.get('administration', [])
     aware = ab_data.get('aware_classification', '')
-    has_calc = ab_name in ["Vancomycin", "Gentamicin", "Amikacin"]
+    # Check if has dosing calculator (from any antibiotics with dosing support)
+    has_calc = ab_data.get('has_dosing_calculator', False) or ab_name in ["Vancomycin", "Gentamicin", "Amikacin", "Tobramycin"]
     group = ab_data.get('group', 'Khác')
+    indications = ab_data.get('indications', [])
     
-    # Admin icons
+    # Escape all text to prevent HTML rendering issues
+    ab_name_escaped = html.escape(ab_name)
+    vn_name_escaped = html.escape(vn_name) if vn_name else ""
+    group_escaped = html.escape(group)
+    
+    # Admin icons with labels
     admin_icons = {"IV": "💉", "IM": "💊", "PO": "🍽️", "Inhalation": "🌬️"}
-    admin_str = " ".join([admin_icons.get(a, "") for a in admin[:3]])
+    admin_display = []
+    for a in admin[:3]:
+        icon = admin_icons.get(a, "")
+        admin_display.append(f"{icon} {a}" if icon else a)
+    admin_str = " • ".join(admin_display) if admin_display else "N/A"
+    admin_str_escaped = html.escape(admin_str)
     
-    # AWaRe badge
+    # AWaRe badge with tooltip
     aware_colors = {
-        "ACCESS": "#4CAF50",
-        "WATCH": "#FF9800",
-        "RESERVE": "#F44336"
+        "ACCESS": {"bg": "#4CAF50", "icon": "🟢"},
+        "WATCH": {"bg": "#FF9800", "icon": "🟡"},
+        "RESERVE": {"bg": "#F44336", "icon": "🔴"}
     }
     aware_badge = ""
-    if aware:
-        badge_color = aware_colors.get(aware, "#999")
-        aware_badge = f'<span style="background-color: {badge_color}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; margin-left: 8px;">{aware}</span>'
+    if aware and aware in aware_colors:
+        badge_info = aware_colors[aware]
+        aware_badge = f'''<span style="background-color: {badge_info["bg"]}; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.75em; font-weight: bold; margin-left: 8px; display: inline-flex; align-items: center; gap: 4px;" title="WHO AWaRe: {aware}">{badge_info["icon"]} {aware}</span>'''
     
     # Calculator badge
     calc_badge = ""
     if has_calc:
-        calc_badge = '<span style="background-color: #9C27B0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold;">🧮</span>'
+        calc_badge = '<span style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.75em; font-weight: bold; margin-left: 6px; display: inline-flex; align-items: center; gap: 4px;" title="Có máy tính liều dùng">🧮 Tính liều</span>'
     
-    # Compact card
+    # Check if favorite
+    favorites = st.session_state.get('antibiotic_favorites', [])
+    is_favorite = ab_name in favorites
+    favorite_icon = "⭐" if is_favorite else "☆"
+    
+    # Enhanced card with hover effect and better styling
     card_html = f"""
     <div style='
-        background: white;
+        background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
         border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        padding: 12px 15px;
-        margin: 8px 0;
-        transition: all 0.2s;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    '>
-        <div style='display: flex; justify-content: space-between; align-items: start;'>
-            <div style='flex: 1;'>
-                <div style='display: flex; align-items: center; margin-bottom: 6px;'>
-                    <strong style='color: #1976D2; font-size: 1.05em; margin-right: 8px;'>{ab_name}</strong>
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin: 10px 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        cursor: pointer;
+    ' onmouseover="this.style.boxShadow='0 4px 12px rgba(25,118,210,0.15)'; this.style.transform='translateY(-2px)'; this.style.borderColor='#1976D2';" 
+       onmouseout="this.style.boxShadow='0 2px 4px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)'; this.style.borderColor='#e0e0e0';">
+        <div style='display: flex; justify-content: space-between; align-items: start; gap: 12px;'>
+            <div style='flex: 1; min-width: 0;'>
+                <div style='display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 8px; gap: 6px;'>
+                    <strong style='color: #1976D2; font-size: 1.15em; margin-right: 4px; font-weight: 600;'>{ab_name_escaped}</strong>
                     {aware_badge}
                     {calc_badge}
+                    <span style='color: #999; font-size: 0.85em; margin-left: auto; cursor: pointer;' title="Yêu thích" id="fav_{key_prefix}_{ab_name_escaped}">{favorite_icon}</span>
                 </div>
-                {f"<div style='color: #666; font-size: 0.9em; margin-bottom: 4px;'>{vn_name}</div>" if vn_name else ""}
-                <div style='color: #888; font-size: 0.85em;'>{admin_str} | {group}</div>
+                {f"<div style='color: #666; font-size: 0.9em; margin-bottom: 6px; font-style: italic;'>{vn_name_escaped}</div>" if vn_name else ""}
+                <div style='color: #888; font-size: 0.88em; line-height: 1.5;'>
+                    <span style='font-weight: 500;'>{admin_str_escaped}</span>
+                    <span style='color: #ccc; margin: 0 8px;'>|</span>
+                    <span style='color: #666;'>{group_escaped}</span>
+                </div>
+                {f"<div style='color: #999; font-size: 0.8em; margin-top: 6px; line-height: 1.4;'><span style='color: #666;'>💡 </span>{html.escape(indications[0] if indications else '')}</div>" if indications else ""}
             </div>
         </div>
     </div>
@@ -213,12 +252,47 @@ def render_compact_antibiotic_card(ab_name, ab_data, key_prefix=""):
     
     st.markdown(card_html, unsafe_allow_html=True)
     
-    # Button row
-    col1, col2 = st.columns([1, 3])
+    # Button row with enhanced actions
+    col1, col2, col3 = st.columns([2, 2, 1])
+    
+    # Sanitize ab_name for keys (remove special characters that might cause issues)
+    safe_ab_name = str(ab_name).replace(" ", "_").replace("-", "_").replace("/", "_")
+    
     with col1:
-        if st.button("📖 Chi tiết", key=f"{key_prefix}detail_{ab_name}", use_container_width=True):
-            st.session_state['view_antibiotic'] = ab_name
+        detail_key = f"{key_prefix}detail_{safe_ab_name}" if key_prefix else f"detail_{safe_ab_name}"
+        if st.button("📖 Chi tiết", key=detail_key, use_container_width=True, type="primary"):
+            st.session_state['view_antibiotic'] = str(ab_name)  # Ensure it's a string
+            # Track recently viewed
+            if 'recently_viewed_antibiotics' not in st.session_state:
+                st.session_state.recently_viewed_antibiotics = []
+            recent = st.session_state.recently_viewed_antibiotics
+            if ab_name in recent:
+                recent.remove(ab_name)
+            recent.insert(0, ab_name)
+            st.session_state.recently_viewed_antibiotics = recent[:10]
             st.rerun()
+    
+    with col2:
+        if has_calc:
+            calc_key = f"{key_prefix}calc_{safe_ab_name}" if key_prefix else f"calc_{safe_ab_name}"
+            if st.button("🧮 Tính liều", key=calc_key, use_container_width=True):
+                st.session_state['view_antibiotic'] = str(ab_name)  # Ensure it's a string
+                st.session_state['auto_open_dosing'] = True
+                st.rerun()
+    
+    with col3:
+        # Favorite toggle
+        fav_key = f"{key_prefix}fav_{safe_ab_name}" if key_prefix else f"fav_{safe_ab_name}"
+        if is_favorite:
+            if st.button("⭐", key=fav_key, use_container_width=True, help="Bỏ yêu thích"):
+                favorites.remove(ab_name)
+                st.session_state.antibiotic_favorites = favorites
+                st.rerun()
+        else:
+            if st.button("☆", key=fav_key, use_container_width=True, help="Thêm yêu thích"):
+                favorites.append(ab_name)
+                st.session_state.antibiotic_favorites = favorites
+                st.rerun()
     
     return ab_name
 
@@ -422,30 +496,65 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
 
 
 def display_antibiotic_info(ab_name, ab_data):
-    """Display detailed antibiotic information in expandable format"""
+    """Display detailed antibiotic information with export and quick actions"""
     
+    # Initialize favorites if not exists
+    if 'antibiotic_favorites' not in st.session_state:
+        st.session_state.antibiotic_favorites = []
+    
+    favorites = st.session_state.antibiotic_favorites
+    is_favorite = ab_name in favorites
+    
+    # Quick Actions Toolbar
+    col_actions = st.columns([1, 1, 1, 1, 1, 5])
+    with col_actions[0]:
+        # Sanitize ab_name for keys
+        safe_detail_name = str(ab_name).replace(" ", "_").replace("-", "_").replace("/", "_")
+        
+        if is_favorite:
+            if st.button("⭐", key=f"fav_detail_{safe_detail_name}", help="Bỏ yêu thích"):
+                favorites.remove(ab_name)
+                st.session_state.antibiotic_favorites = favorites
+                st.rerun()
+        else:
+            if st.button("☆", key=f"fav_detail_{safe_detail_name}", help="Thêm yêu thích"):
+                favorites.append(ab_name)
+                st.session_state.antibiotic_favorites = favorites
+                st.rerun()
+    
+    with col_actions[4]:
+        # Export button - will show expander below
+        show_export = st.button("📤 Export", key=f"export_btn_{safe_detail_name}", help="Xuất thông tin")
+    
+    # Main content in expander
     with st.expander(f"💊 **{ab_name}** - Thông tin chi tiết", expanded=True):
-        # Header info
+        # Header info with modern card
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 12px; margin-bottom: 15px;'>
+            <div style='display: flex; justify-content: space-between; align-items: start;'>
+        """, unsafe_allow_html=True)
+        
         col1, col2 = st.columns([2, 1])
         
         with col1:
             if 'vietnamese_name' in ab_data:
-                st.markdown(f"**Tên biệt dược:** {ab_data['vietnamese_name']}")
+                st.markdown(f"**🏷️ Tên biệt dược:** {ab_data['vietnamese_name']}")
             
             if 'group' in ab_data:
-                st.markdown(f"**Nhóm:** {ab_data['group']}")
+                st.markdown(f"**📦 Nhóm:** {ab_data['group']}")
         
         with col2:
             if 'administration' in ab_data:
                 admin_icons = {"IV": "💉", "IM": "💊", "PO": "🍽️", "Inhalation": "🌬️"}
                 admin_display = " / ".join([f"{admin_icons.get(route, '')} {route}" for route in ab_data['administration']])
-                st.markdown(f"**Đường dùng:** {admin_display}")
+                st.markdown(f"**💉 Đường dùng:** {admin_display}")
             
             if 'aware_classification' in ab_data:
                 aware_colors = {"ACCESS": "🟢", "WATCH": "🟡", "RESERVE": "🔴"}
                 aware_name = ab_data['aware_classification']
-                st.markdown(f"**AWaRe:** {aware_colors.get(aware_name, '')} {aware_name}")
+                st.markdown(f"**🌐 AWaRe:** {aware_colors.get(aware_name, '')} {aware_name}")
         
+        st.markdown("</div>", unsafe_allow_html=True)
         st.markdown("---")
         
         # Indications
@@ -543,11 +652,145 @@ def display_antibiotic_info(ab_name, ab_data):
         
         # Integrated Quick Dosing Calculator
         st.markdown("---")
+        
+        # Auto-open dosing if requested
+        auto_open = st.session_state.get('auto_open_dosing', False)
+        if auto_open:
+            st.session_state['auto_open_dosing'] = False
+        
         render_quick_dosing_calculator(ab_name, ab_data, key_prefix=f"info_{ab_name}_")
+        
+        # Export section
+        if show_export:
+            st.markdown("---")
+            _render_antibiotic_export(ab_name, ab_data)
+
+
+def _render_antibiotic_export(ab_name, ab_data):
+    """Render export section for antibiotic information"""
+    from datetime import datetime
+    import html
+    
+    lines = []
+    lines.append("=" * 70)
+    lines.append(f"THÔNG TIN KHÁNG SINH - {ab_name}")
+    lines.append("=" * 70)
+    lines.append(f"Ngày xuất: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    lines.append("-" * 70)
+    
+    # Basic info
+    lines.append(f"\n📋 THÔNG TIN CƠ BẢN:")
+    if 'vietnamese_name' in ab_data:
+        lines.append(f"  Tên biệt dược: {ab_data['vietnamese_name']}")
+    if 'group' in ab_data:
+        lines.append(f"  Nhóm: {ab_data['group']}")
+    if 'administration' in ab_data:
+        lines.append(f"  Đường dùng: {', '.join(ab_data['administration'])}")
+    if 'aware_classification' in ab_data:
+        lines.append(f"  AWaRe: {ab_data['aware_classification']}")
+    
+    # Indications
+    if 'indications' in ab_data:
+        lines.append(f"\n📋 CHỈ ĐỊNH:")
+        for ind in ab_data['indications']:
+            lines.append(f"  • {ind}")
+    
+    # Contraindications
+    if 'contraindications' in ab_data:
+        lines.append(f"\n⛔ CHỐNG CHỈ ĐỊNH:")
+        for contr in ab_data['contraindications']:
+            lines.append(f"  • {contr}")
+    
+    # Dosage
+    if 'dosage' in ab_data:
+        lines.append(f"\n💉 LIỀU DÙNG:")
+        dosage = ab_data['dosage']
+        if 'adult_iv' in dosage:
+            lines.append(f"  IV: {dosage['adult_iv']}")
+        if 'adult_im' in dosage:
+            lines.append(f"  IM: {dosage['adult_im']}")
+        if 'adult_po' in dosage:
+            lines.append(f"  PO: {dosage['adult_po']}")
+        if 'adult_standard' in dosage:
+            lines.append(f"  Liều chuẩn: {dosage['adult_standard']}")
+        if 'adult_severe' in dosage:
+            lines.append(f"  Nhiễm khuẩn nặng: {dosage['adult_severe']}")
+        if 'pediatric_iv' in dosage:
+            lines.append(f"  Trẻ em (IV): {dosage['pediatric_iv']}")
+    
+    # Renal adjustment
+    if 'renal_adjustment' in ab_data:
+        lines.append(f"\n🫘 ĐIỀU CHỈNH THEO CHỨC NĂNG THẬN:")
+        renal = ab_data['renal_adjustment']
+        if 'normal' in renal:
+            lines.append(f"  CrCl ≥ 60: {renal['normal']}")
+        if '30_60' in renal:
+            lines.append(f"  CrCl 30-60: {renal['30_60']}")
+        if '15_30' in renal:
+            lines.append(f"  CrCl 15-30: {renal['15_30']}")
+        if 'under_15' in renal:
+            lines.append(f"  CrCl < 15: {renal['under_15']}")
+    
+    # Side effects
+    if 'side_effects' in ab_data:
+        lines.append(f"\n⚠️ TÁC DỤNG PHỤ:")
+        for se in ab_data['side_effects']:
+            lines.append(f"  • {se}")
+    
+    # Monitoring
+    if 'monitoring' in ab_data:
+        lines.append(f"\n📊 THEO DÕI: {ab_data['monitoring']}")
+    
+    # Interactions
+    if 'interactions' in ab_data:
+        lines.append(f"\n🔗 TƯƠNG TÁC THUỐC:")
+        for inter in ab_data['interactions']:
+            lines.append(f"  • {inter}")
+    
+    # Pregnancy
+    if 'pregnancy' in ab_data:
+        lines.append(f"\n🤰 AN TOÀN THAI KỲ: {ab_data['pregnancy']}")
+    
+    lines.append("\n" + "=" * 70)
+    lines.append("⚠️ Lưu ý: Thông tin chỉ mang tính tham khảo")
+    lines.append("   Không thay thế đánh giá lâm sàng của bác sĩ")
+    lines.append("=" * 70)
+    
+    export_text = "\n".join(lines)
+    
+    with st.expander("📤 Export Thông Tin", expanded=True):
+        st.markdown("**Preview:**")
+        st.code(export_text, language="text")
+        st.markdown("---")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.code(export_text, language="text")
+            st.success("✅ Chọn và copy text từ khung trên để copy vào clipboard")
+        
+        with col2:
+            # Sanitize ab_name for filename and key
+            safe_filename = str(ab_name).replace(' ', '_').replace('-', '_').replace('/', '_')
+            safe_download_key = f"download_{safe_filename}"
+            filename = f"antibiotic_{safe_filename}"
+            st.download_button(
+                label="💾 Download TXT",
+                data=export_text,
+                file_name=f"{filename}.txt",
+                mime="text/plain",
+                use_container_width=True,
+                key=safe_download_key
+            )
 
 
 def render_database():
     """Unified Antibiotic Database - Search, Browse, Detail View, and Integrated Dosing Calculator"""
+    
+    # Initialize session state
+    if 'antibiotic_favorites' not in st.session_state:
+        st.session_state.antibiotic_favorites = []
+    if 'recently_viewed_antibiotics' not in st.session_state:
+        st.session_state.recently_viewed_antibiotics = []
     
     ab_count = len(ANTIBIOTICS_DATABASE)
     
@@ -569,8 +812,10 @@ def render_database():
     </div>
     """, unsafe_allow_html=True)
     
-    # Quick info
-    with st.expander("ℹ️ Thông tin về database", expanded=False):
+    # Quick info and tabs
+    tab_info, tab_favorites, tab_recent = st.tabs(["ℹ️ Database", "⭐ Yêu thích", "🕐 Gần đây"])
+    
+    with tab_info:
         st.info(f"""
         **Cơ sở dữ liệu bao gồm:**
         - ✅ {ab_count} kháng sinh tiêm truyền (IV/IM) thông dụng tại Việt Nam
@@ -582,41 +827,77 @@ def render_database():
         - ✅ Dựa trên guidelines: IDSA, ASHP, WHO AWaRe 2023
         """)
     
+    with tab_favorites:
+        favorites = st.session_state.antibiotic_favorites
+        if favorites:
+            st.success(f"Bạn có **{len(favorites)}** kháng sinh yêu thích")
+            st.markdown("---")
+            for ab_name in favorites:
+                if ab_name in ANTIBIOTICS_DATABASE:
+                    render_compact_antibiotic_card(ab_name, ANTIBIOTICS_DATABASE[ab_name], key_prefix=f"fav_{ab_name}_")
+                    st.markdown("<br>", unsafe_allow_html=True)
+        else:
+            st.info("💡 Chưa có kháng sinh yêu thích. Nhấn ☆ trên card để thêm vào danh sách yêu thích!")
+    
+    with tab_recent:
+        recent = st.session_state.recently_viewed_antibiotics
+        if recent:
+            st.success(f"Đã xem **{len(recent)}** kháng sinh gần đây")
+            st.markdown("---")
+            for ab_name in recent:
+                if ab_name in ANTIBIOTICS_DATABASE:
+                    render_compact_antibiotic_card(ab_name, ANTIBIOTICS_DATABASE[ab_name], key_prefix=f"recent_{ab_name}_")
+                    st.markdown("<br>", unsafe_allow_html=True)
+        else:
+            st.info("💡 Chưa có kháng sinh nào được xem gần đây")
+    
     st.markdown("---")
     
     # ========== SEARCH & FILTER SECTION ==========
     st.markdown("### 🔍 Tìm Kiếm")
     
-    # Enhanced search with autocomplete suggestions
-    search_query = st.text_input(
-        "🔍 Tìm kiếm kháng sinh:",
-        placeholder="Nhập tên thuốc, biệt dược, nhóm, hoặc chỉ định...",
-        key="ab_search_main",
-        help="Tìm kiếm theo tên kháng sinh, tên biệt dược, nhóm thuốc, hoặc chỉ định lâm sàng"
-    )
+    # Enhanced search with better UI
+    col_search, col_clear = st.columns([5, 1])
     
-    # Show autocomplete suggestions
+    with col_search:
+        search_query = st.text_input(
+            "🔍 Tìm kiếm kháng sinh:",
+            placeholder="Nhập tên thuốc, biệt dược, nhóm, hoặc chỉ định...",
+            key="ab_search_main",
+            help="Tìm kiếm theo tên kháng sinh, tên biệt dược, nhóm thuốc, hoặc chỉ định lâm sàng",
+            label_visibility="collapsed"
+        )
+    
+    with col_clear:
+        if st.button("🗑️", help="Xóa tìm kiếm", use_container_width=True):
+            st.session_state.ab_search_main = ""
+            st.rerun()
+    
+    # Show autocomplete suggestions in a nicer format
     if search_query and len(search_query) >= 1:
         suggestions = get_antibiotic_autocomplete_suggestions(search_query, max_suggestions=5)
         if suggestions:
-            st.caption("💡 **Gợi ý:**")
+            st.markdown("**💡 Gợi ý tìm kiếm:**")
             suggestion_cols = st.columns(min(5, len(suggestions)))
             for idx, suggestion in enumerate(suggestions):
                 with suggestion_cols[idx]:
-                    if st.button(suggestion, key=f"autocomplete_{suggestion}", use_container_width=True):
+                    if st.button(f"💊 {suggestion}", key=f"autocomplete_{suggestion}", use_container_width=True):
                         st.session_state.ab_search_main = suggestion
+                        add_to_recent_searches(suggestion)
                         st.rerun()
+            st.markdown("<br>", unsafe_allow_html=True)
     
-    # Recent searches
+    # Recent searches (when no query)
     recent_searches = get_recent_searches()
     if recent_searches and not search_query:
-        st.caption("🕐 **Tìm kiếm gần đây:**")
+        st.markdown("**🕐 Tìm kiếm gần đây:**")
         recent_cols = st.columns(min(5, len(recent_searches)))
         for idx, recent in enumerate(recent_searches[:5]):
             with recent_cols[idx]:
-                if st.button(f"↩️ {recent}", key=f"recent_{recent}", use_container_width=True):
+                if st.button(f"↩️ {recent}", key=f"recent_search_{recent}", use_container_width=True):
                     st.session_state.ab_search_main = recent
                     st.rerun()
+        st.markdown("<br>", unsafe_allow_html=True)
     
     # View mode selector
     view_mode = st.radio(
@@ -698,8 +979,10 @@ def render_database():
                     sugg_cols = st.columns(min(5, len(suggestions)))
                     for idx, suggestion in enumerate(suggestions):
                         with sugg_cols[idx]:
-                            if st.button(suggestion, key=f"sugg_{suggestion}", use_container_width=True):
-                                st.session_state.ab_search_main = suggestion
+                            # Sanitize suggestion for key
+                            safe_sugg_key = f"sugg_{str(suggestion).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                            if st.button(suggestion, key=safe_sugg_key, use_container_width=True):
+                                st.session_state.ab_search_main = str(suggestion)
                                 st.rerun()
                 else:
                     st.info("💡 **Gợi ý:** Thử tìm với tên thuốc, biệt dược, nhóm thuốc (ví dụ: Beta-lactam), hoặc chỉ định (ví dụ: MRSA, Sepsis, UTI)")
@@ -715,8 +998,10 @@ def render_database():
             for col, ab_name in zip(cols, popular):
                 if ab_name in ANTIBIOTICS_DATABASE:
                     with col:
-                        if st.button(f"💊 {ab_name}", key=f"quick_{ab_name}", use_container_width=True):
-                            st.session_state['view_antibiotic'] = ab_name
+                        # Sanitize ab_name for key
+                        safe_quick_name = str(ab_name).replace(" ", "_").replace("-", "_").replace("/", "_")
+                        if st.button(f"💊 {ab_name}", key=f"quick_{safe_quick_name}", use_container_width=True):
+                            st.session_state['view_antibiotic'] = str(ab_name)
                             add_to_recent_searches(ab_name)
                             st.rerun()
     

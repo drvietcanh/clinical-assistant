@@ -133,7 +133,7 @@ ANTIBIOTICS_DATABASE = {
     
     "Amoxicillin-Clavulanate": {
         "group": "Beta-lactam - Penicillin + Beta-lactamase inhibitor",
-        "vietnamese_name": "Amoxicillin-Clavulanate, Augmentin, Amoxiclav, Clavophar",
+        "vietnamese_name": "Amoxicillin-Clavulanate, Augmentin, Amoxiclav, Clavophar, Augpen, Clavamed, Clavox, Clavunate",
         "administration": ["IV", "PO"],
         "indications": [
             "Nhiễm khuẩn đường hô hấp trên/dưới",
@@ -176,7 +176,7 @@ ANTIBIOTICS_DATABASE = {
     
     "Piperacillin-Tazobactam": {
         "group": "Beta-lactam - Extended-spectrum Penicillin + Inhibitor",
-        "vietnamese_name": "Piperacillin-Tazobactam, Tazocin, Pip-Taz",
+        "vietnamese_name": "Piperacillin-Tazobactam, Tazocin, Pip-Taz, Zosyn, Pip-Tazo, Tazactam, Piprazid",
         "administration": ["IV"],
         "indications": [
             "Nhiễm khuẩn bệnh viện nặng (HAP, VAP)",
@@ -192,9 +192,11 @@ ANTIBIOTICS_DATABASE = {
         "dosage": {
             "adult_standard": "4.5g (4g piperacillin + 0.5g tazobactam) IV mỗi 8 giờ",
             "adult_severe": "4.5g IV mỗi 6 giờ (18g/ngày)",
-            "adult_sepsis": "4.5g IV mỗi 6 giờ + thuốc khác",
+            "adult_extended": "4.5g IV mỗi 8 giờ (extended infusion 4 giờ) - IDSA 2024 HAP/VAP guidelines",
+            "adult_sepsis": "4.5g IV mỗi 6 giờ hoặc extended infusion 4.5g mỗi 8 giờ",
+            "adult_hap_vap": "4.5g IV mỗi 6 giờ hoặc 4.5g extended infusion mỗi 8 giờ - IDSA 2024",
             "pediatric": "112.5mg/kg (theo piperacillin) IV mỗi 8 giờ",
-            "notes": "Thường dùng kết hợp với aminoglycoside trong nhiễm khuẩn nghi ngờ Pseudomonas"
+            "notes": "IDSA 2024 HAP/VAP: Extended infusion (4h) tối ưu hơn bolus trong nhiễm khuẩn nặng. Thường dùng kết hợp với aminoglycoside trong nhiễm khuẩn nghi ngờ Pseudomonas"
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -264,15 +266,20 @@ ANTIBIOTICS_DATABASE = {
     
     "Ceftriaxone": {
         "group": "Beta-lactam - Cephalosporin thế hệ 3",
-        "vietnamese_name": "Ceftriaxone, Rocephin, Oritaxim",
+        "vietnamese_name": "Ceftriaxone, Rocephin, Oritaxim, Cefaxone, Triaxone, Ceftri, Rophin",
         "administration": ["IV", "IM"],
         "indications": [
             "Nhiễm khuẩn huyết",
             "Viêm màng não",
-            "Viêm phổi cộng đồng",
-            "Nhiễm khuẩn phức tạp",
-            "Bệnh lậu",
-            "Bệnh Lyme"
+            "Viêm phổi cộng đồng (CAP)",
+            "Viêm phổi bệnh viện (HAP) - nhẹ đến trung bình",
+            "Nhiễm khuẩn da và mô mềm phức tạp",
+            "Nhiễm khuẩn đường tiết niệu phức tạp",
+            "Viêm xương tủy",
+            "Nhiễm khuẩn ổ bụng (phối hợp metronidazole)",
+            "Bệnh lậu (Neisseria gonorrhoeae)",
+            "Bệnh Lyme (Borrelia burgdorferi)",
+            "Sốt thương hàn (Salmonella typhi)"
         ],
         "contraindications": [
             "Dị ứng cephalosporin",
@@ -313,7 +320,7 @@ ANTIBIOTICS_DATABASE = {
     
     "Ceftazidime": {
         "group": "Beta-lactam - Cephalosporin thế hệ 3",
-        "vietnamese_name": "Ceftazidime, Fortum, Tazidime",
+        "vietnamese_name": "Ceftazidime, Fortum, Tazidime, Cefpime, Fortaz, Ceftaz",
         "administration": ["IV", "IM"],
         "indications": [
             "Nhiễm khuẩn do Pseudomonas aeruginosa",
@@ -355,7 +362,7 @@ ANTIBIOTICS_DATABASE = {
     
     "Cefepime": {
         "group": "Beta-lactam - Cephalosporin thế hệ 4",
-        "vietnamese_name": "Cefepime, Maxipime, Cefepim",
+        "vietnamese_name": "Cefepime, Maxipime, Cefepim, Maxipim, Cefomax, Cepime, Cefepimax, Cepim",
         "administration": ["IV", "IM"],
         "indications": [
             "Nhiễm khuẩn bệnh viện",
@@ -398,15 +405,18 @@ ANTIBIOTICS_DATABASE = {
     # ========== CARBAPENEMS ==========
     "Meropenem": {
         "group": "Beta-lactam - Carbapenem",
-        "vietnamese_name": "Meropenem, Meronem, Meropen",
+        "vietnamese_name": "Meropenem, Meronem, Meropen, Merrem, Mero, Meronam, Meropen, Mepenem",
         "administration": ["IV"],
         "indications": [
             "Nhiễm khuẩn bệnh viện nặng",
-            "Viêm phổi bệnh viện (HAP, VAP)",
+            "Viêm phổi bệnh viện (HAP, VAP) - IDSA 2024",
             "Nhiễm khuẩn ổ bụng phức tạp",
+            "Nhiễm khuẩn da và mô mềm phức tạp",
             "Viêm màng não do vi khuẩn",
-            "Nhiễm khuẩn đa kháng",
-            "Nhiễm khuẩn do ESBL-producing bacteria"
+            "Nhiễm khuẩn đa kháng (MDR)",
+            "Nhiễm khuẩn do ESBL-producing bacteria",
+            "Nhiễm khuẩn do Pseudomonas aeruginosa (liều cao)",
+            "Sốc nhiễm khuẩn (empiric therapy)"
         ],
         "contraindications": [
             "Dị ứng carbapenem",
@@ -415,11 +425,13 @@ ANTIBIOTICS_DATABASE = {
         "dosage": {
             "adult_standard": "1g IV mỗi 8 giờ",
             "adult_severe": "1g IV mỗi 8 giờ hoặc 2g IV mỗi 8 giờ (nhiễm khuẩn rất nặng)",
+            "adult_extended": "1g IV mỗi 8 giờ (extended infusion 3 giờ) - IDSA 2024 cho nhiễm khuẩn nặng/Pseudomonas",
             "adult_meningitis": "2g IV mỗi 8 giờ",
-            "adult_pseudomonas": "2g IV mỗi 8 giờ",
+            "adult_pseudomonas": "2g IV mỗi 8 giờ (extended infusion 3h) - IDSA 2024",
+            "adult_hap_vap": "1g IV mỗi 8 giờ hoặc extended infusion - IDSA 2024 HAP/VAP",
             "pediatric": "60mg/kg/ngày chia 3 lần (max 2g/liều)",
             "pediatric_meningitis": "120mg/kg/ngày chia 3 lần (max 2g/liều)",
-            "notes": "Infusion 30 phút hoặc bolus 5-20 phút. Phổ rộng nhất trong carbapenem"
+            "notes": "IDSA 2024: Extended infusion (3h) tối ưu PK/PD, đặc biệt cho Pseudomonas và nhiễm khuẩn nặng. Standard infusion 30 phút hoặc bolus 5-20 phút. Phổ rộng nhất trong carbapenem"
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -493,7 +505,7 @@ ANTIBIOTICS_DATABASE = {
     # ========== AMINOGLYCOSIDES ==========
     "Gentamicin": {
         "group": "Aminoglycoside",
-        "vietnamese_name": "Gentamicin, Gentamycin, Garamycin",
+        "vietnamese_name": "Gentamicin, Garamycin, Genticyn, Gentas, Gentamycin, Gentin, Genoptic, Genta",
         "administration": ["IV", "IM"],
         "indications": [
             "Nhiễm khuẩn huyết nghi ngờ Gram âm",
@@ -540,7 +552,7 @@ ANTIBIOTICS_DATABASE = {
     
     "Amikacin": {
         "group": "Aminoglycoside",
-        "vietnamese_name": "Amikacin, Amikacin, Amikin",
+        "vietnamese_name": "Amikacin, Amikin, Amikacine, Biklin, Likacin, Amikabiotic, Amikacyn, Amik",
         "administration": ["IV", "IM"],
         "indications": [
             "Nhiễm khuẩn đa kháng (MDR)",
@@ -586,7 +598,7 @@ ANTIBIOTICS_DATABASE = {
     # ========== GLYCOPEPTIDES ==========
     "Vancomycin": {
         "group": "Glycopeptide",
-        "vietnamese_name": "Vancomycin, Vancomycin, Vancocin",
+        "vietnamese_name": "Vancomycin, Vancocin, Vancomax, Vancoled, Vancoplus, Vanco, Vancocid",
         "administration": ["IV", "PO"],
         "indications": [
             "Nhiễm khuẩn do MRSA",
@@ -601,11 +613,14 @@ ANTIBIOTICS_DATABASE = {
         ],
         "dosage": {
             "adult_iv_standard": "15-20mg/kg IV mỗi 8-12 giờ (dựa trên CrCl)",
-            "adult_iv_load": "20-25mg/kg IV x 1 liều đầu (loading dose)",
-            "adult_iv_obese": "Dựa trên ABW, thường 20-25mg/kg",
+            "adult_iv_load": "25-30mg/kg IV x 1 liều đầu (loading dose) - IDSA 2024",
+            "adult_iv_obese": "Dựa trên ABW, thường 20-25mg/kg (max 2g liều thường)",
+            "adult_iv_extended": "15-20mg/kg IV mỗi 12 giờ (extended infusion 3-4h) - tối ưu PK/PD",
+            "adult_iv_severe": "20mg/kg IV mỗi 8 giờ (sepsis, endocarditis)",
             "adult_po_cdiff": "125-500mg PO x 4 lần/ngày",
             "pediatric_iv": "40-60mg/kg/ngày chia 4 lần hoặc 15mg/kg mỗi 6 giờ",
-            "notes": "Phải truyền tĩnh mạch chậm (≥60 phút) để tránh Red Man Syndrome. Monitor Trough level!"
+            "pediatric_load": "20-25mg/kg IV x 1 liều đầu",
+            "notes": "IDSA 2024: Loading dose 25-30mg/kg cho nhiễm khuẩn nặng. Phải truyền tĩnh mạch chậm (≥60 phút) để tránh Red Man Syndrome. Trough target: 10-20 mg/L (15-20 cho nhiễm khuẩn nặng, viêm màng não)"
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -627,15 +642,16 @@ ANTIBIOTICS_DATABASE = {
             "Furosemide: tăng độc tai",
             "Anesthetic agents: tăng nguy cơ hạ huyết áp"
         ],
-        "monitoring": "Bắt buộc: Trough level (mục tiêu 10-20 mg/L), Creatinine, thính giác",
+        "monitoring": "Bắt buộc: Trough level (mục tiêu 10-20 mg/L, 15-20 cho nhiễm khuẩn nặng) - IDSA 2024. Đo sau liều thứ 4. Creatinine hàng ngày, thính giác (nếu dùng dài ngày)",
         "aware_classification": "WATCH",
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "guidelines": "IDSA 2024: Loading dose 25-30mg/kg. Extended infusion 3-4h tối ưu PK/PD. Trough 15-20 mg/L cho nhiễm khuẩn nặng, viêm màng não"
     },
     
     # ========== FLUOROQUINOLONES ==========
     "Ciprofloxacin": {
         "group": "Fluoroquinolone",
-        "vietnamese_name": "Ciprofloxacin, Cipro, Ciprobay",
+        "vietnamese_name": "Ciprofloxacin, Cipro, Ciprobay, Ciproflox, Ciproxin, Ciprox, Cifran, Flox",
         "administration": ["IV", "PO"],
         "indications": [
             "Nhiễm khuẩn đường tiết niệu",
@@ -682,7 +698,7 @@ ANTIBIOTICS_DATABASE = {
     
     "Levofloxacin": {
         "group": "Fluoroquinolone",
-        "vietnamese_name": "Levofloxacin, Levaquin, Tavanic",
+        "vietnamese_name": "Levofloxacin, Levaquin, Tavanic, Levotab, Levoxin, Levo, Levox, Loxof",
         "administration": ["IV", "PO"],
         "indications": [
             "Viêm phổi cộng đồng",
@@ -728,7 +744,7 @@ ANTIBIOTICS_DATABASE = {
     # ========== MACROLIDES ==========
     "Azithromycin": {
         "group": "Macrolide",
-        "vietnamese_name": "Azithromycin, Zithromax, Azitro",
+        "vietnamese_name": "Azithromycin, Zithromax, Azitro, Azicine, Azyth, Azimycin, Azithrocin, Azomax",
         "administration": ["IV", "PO"],
         "indications": [
             "Viêm phổi cộng đồng",
@@ -776,7 +792,7 @@ ANTIBIOTICS_DATABASE = {
     # ========== LINCOSAMIDES ==========
     "Clindamycin": {
         "group": "Lincosamide",
-        "vietnamese_name": "Clindamycin, Dalacin, Clindamycin",
+        "vietnamese_name": "Clindamycin, Dalacin C, Clindacin, Cleocin, Clinacin, Clinadamycin, Clindatab, Dala C",
         "administration": ["IV", "IM", "PO"],
         "indications": [
             "Nhiễm khuẩn do vi khuẩn kỵ khí",
@@ -821,7 +837,7 @@ ANTIBIOTICS_DATABASE = {
     # ========== METRONIDAZOLE ==========
     "Metronidazole": {
         "group": "Nitroimidazole",
-        "vietnamese_name": "Metronidazole, Flagyl, Metronidazol",
+        "vietnamese_name": "Metronidazole, Flagyl, Metronidazol, Metrogyl, Trichopol, Metronid, Metro, Flagyl, Klion",
         "administration": ["IV", "PO"],
         "indications": [
             "Nhiễm khuẩn do vi khuẩn kỵ khí",
@@ -1001,7 +1017,7 @@ ANTIBIOTICS_DATABASE = {
     # ========== CEPHALOSPORINS - Thế hệ 3 - Ceftazidime-Avibactam ==========
     "Ceftazidime-Avibactam": {
         "group": "Beta-lactam - Cephalosporin + Beta-lactamase inhibitor",
-        "vietnamese_name": "Ceftazidime-Avibactam, Avycaz, Zavicefta",
+        "vietnamese_name": "Ceftazidime-Avibactam, Avycaz, Zavicefta, Avibactam, Zavi, Ceftaz-Avi",
         "administration": ["IV"],
         "indications": [
             "Nhiễm khuẩn do vi khuẩn đa kháng (MDR/XDR)",
@@ -1044,7 +1060,7 @@ ANTIBIOTICS_DATABASE = {
     # ========== CARBAPENEMS - Ertapenem ==========
     "Ertapenem": {
         "group": "Beta-lactam - Carbapenem",
-        "vietnamese_name": "Ertapenem, Invanz, Ertapenem",
+        "vietnamese_name": "Ertapenem, Invanz, Ertapen, Ertax, Ertam, Invance, Ertaz",
         "administration": ["IV", "IM"],
         "indications": [
             "Nhiễm khuẩn ổ bụng phức tạp",
@@ -2342,7 +2358,7 @@ ANTIBIOTICS_DATABASE = {
     
     "Cefoperazone-Sulbactam": {
         "group": "Beta-lactam - Cephalosporin + Beta-lactamase inhibitor",
-        "vietnamese_name": "Cefoperazone-Sulbactam, Sulperazone, Cefazone-S",
+        "vietnamese_name": "Cefoperazone-Sulbactam, Sulperazone, Cefazone-S, Sulzone, Cefpera-S, Sulcef, Cefoperazone-Sul",
         "administration": ["IV", "IM"],
         "indications": [
             "Nhiễm khuẩn bệnh viện (HAP, VAP)",
@@ -2895,6 +2911,295 @@ ANTIBIOTICS_DATABASE = {
         "aware_classification": "RESERVE",
         "pregnancy": "B - Dữ liệu hạn chế nhưng không thấy nguy cơ rõ ràng",
         "notes": "Cephalosporin thế hệ 5, phổ rộng bao gồm MRSA và P. aeruginosa. Phải truyền trong 2 giờ (không bolus)"
+    },
+    
+    # ========== CEPHALOSPORINS - ORAL (Phổ biến tại VN) ==========
+    "Cefixime": {
+        "group": "Beta-lactam - Cephalosporin thế hệ 3 (Oral)",
+        "vietnamese_name": "Cefixime, Suprax, Cefix, Cefim, Fixime, Cefspan, Cefixoral, Cefixon",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm phổi cộng đồng nhẹ-trung bình",
+            "Viêm tai giữa",
+            "Viêm họng/amidan do liên cầu",
+            "Nhiễm khuẩn đường tiết niệu không biến chứng",
+            "Bệnh lậu không biến chứng",
+            "Nhiễm khuẩn đường hô hấp trên"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/penicillin",
+            "Sốc phản vệ beta-lactam",
+            "Trẻ sơ sinh < 6 tháng"
+        ],
+        "dosage": {
+            "adult_standard": "400mg PO x 1 lần/ngày hoặc 200mg PO x 2 lần/ngày",
+            "adult_severe": "400mg PO x 2 lần/ngày",
+            "adult_gonorrhea": "400mg PO x 1 liều",
+            "pediatric_standard": "8mg/kg/ngày chia 1-2 lần (max 400mg/ngày)",
+            "pediatric_otitis": "8-16mg/kg/ngày chia 1-2 lần",
+            "notes": "Dùng với thức ăn hoặc không, hấp thu tốt. Phổ rộng hơn cephalexin"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25% hoặc dùng mỗi 12-24h",
+            "15_30": "Giảm liều 50%",
+            "under_15": "200mg mỗi 24 giờ"
+        },
+        "side_effects": [
+            "Tiêu chảy (10-20%)",
+            "Buồn nôn, nôn",
+            "Đau bụng",
+            "Phát ban",
+            "Nhức đầu"
+        ],
+        "interactions": [
+            "Antacids: giảm hấp thu (cách 2 giờ)",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Probenecid: tăng nồng độ"
+        ],
+        "monitoring": "LFT, công thức máu (nếu dùng dài ngày)",
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    "Cefdinir": {
+        "group": "Beta-lactam - Cephalosporin thế hệ 3 (Oral)",
+        "vietnamese_name": "Cefdinir, Omnicef, Cefdin, Cednir, Cefd, Cefdine, Cefdix, Cefdinex",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm phổi cộng đồng nhẹ-trung bình",
+            "Viêm tai giữa",
+            "Viêm xoang cấp",
+            "Viêm họng/amidan do liên cầu",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn đường tiết niệu không biến chứng"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/penicillin",
+            "Trẻ sơ sinh < 6 tháng"
+        ],
+        "dosage": {
+            "adult_standard": "300mg PO x 2 lần/ngày hoặc 600mg PO x 1 lần/ngày",
+            "adult_otitis_sinus": "300mg PO x 2 lần/ngày",
+            "pediatric_standard": "14mg/kg/ngày chia 1-2 lần (max 600mg/ngày)",
+            "pediatric_otitis": "14mg/kg/ngày chia 2 lần (max 300mg/liều)",
+            "notes": "Hấp thu tốt, không bị ảnh hưởng bởi thức ăn. Phổ rộng bao gồm H. influenzae"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "300mg mỗi 24 giờ",
+            "15_30": "300mg mỗi 24 giờ",
+            "under_15": "300mg mỗi 24-48 giờ"
+        },
+        "side_effects": [
+            "Tiêu chảy (3-8%)",
+            "Buồn nôn",
+            "Đau đầu",
+            "Phát ban",
+            "Nhiễm nấm âm đạo (phụ nữ)"
+        ],
+        "interactions": [
+            "Sắt: giảm hấp thu (cách 2 giờ)",
+            "Antacids: giảm hấp thu (cách 2 giờ)",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "monitoring": "LFT nếu dùng dài ngày",
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    "Cefaclor": {
+        "group": "Beta-lactam - Cephalosporin thế hệ 2 (Oral)",
+        "vietnamese_name": "Cefaclor, Ceclor, Cefaclor, Cefador, Cefalor, Ceclor, Cefac, Cefaclorin",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm phổi cộng đồng nhẹ",
+            "Viêm tai giữa",
+            "Viêm xoang cấp",
+            "Viêm họng/amidan",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn đường tiết niệu"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/penicillin"
+        ],
+        "dosage": {
+            "adult_standard": "250-500mg PO x 3 lần/ngày",
+            "adult_severe": "500mg PO x 3 lần/ngày",
+            "pediatric_standard": "20-40mg/kg/ngày chia 3 lần (max 1g/ngày)",
+            "pediatric_otitis": "40mg/kg/ngày chia 3 lần",
+            "notes": "Cephalosporin thế hệ 2, phổ trung bình. Dùng với thức ăn để giảm khó chịu dạ dày"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "15_30": "Giảm liều 50%",
+            "under_15": "250mg mỗi 12-24 giờ"
+        },
+        "side_effects": [
+            "Tiêu chảy (2-3%)",
+            "Buồn nôn, nôn",
+            "Phát ban",
+            "Nhức đầu",
+            "Rối loạn chức năng gan (hiếm)"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "monitoring": "LFT nếu có triệu chứng",
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    # ========== PENICILLINS - ORAL (Phổ biến tại VN) ==========
+    "Amoxicillin": {
+        "group": "Beta-lactam - Aminopenicillin (Oral)",
+        "vietnamese_name": "Amoxicillin, Amoxil, Trimox, Amox, Amoxi, Amoxicil, Amoxipen, Amoxi-Cap",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm phổi cộng đồng nhẹ",
+            "Viêm tai giữa",
+            "Viêm xoang cấp",
+            "Viêm họng/amidan do liên cầu",
+            "Nhiễm khuẩn đường tiết niệu không biến chứng",
+            "Nhiễm H. pylori (kết hợp)",
+            "Phòng viêm nội tâm mạc"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin",
+            "Sốc phản vệ với beta-lactam",
+            "Nhiễm trùng do beta-lactamase (dùng amoxicillin-clavulanate)"
+        ],
+        "dosage": {
+            "adult_standard": "250-500mg PO x 3 lần/ngày hoặc 500-875mg PO x 2 lần/ngày",
+            "adult_severe": "875-1000mg PO x 2 lần/ngày",
+            "adult_hpylori": "1g PO x 2 lần/ngày (kết hợp clarithromycin, PPI)",
+            "pediatric_standard": "25-50mg/kg/ngày chia 3 lần (max 3g/ngày)",
+            "pediatric_otitis": "80-90mg/kg/ngày chia 2-3 lần (max 3g/ngày)",
+            "notes": "Phổ rộng hơn penicillin G. Dùng với thức ăn hoặc không. Hấp thu tốt (90%)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "15_30": "Giảm liều 50%",
+            "under_15": "500mg mỗi 12-24 giờ"
+        },
+        "side_effects": [
+            "Tiêu chảy (5-10%)",
+            "Buồn nôn, nôn",
+            "Phát ban (đặc biệt trong bệnh tăng bạch cầu đơn nhân)",
+            "Viêm đại tràng giả mạc (hiếm)",
+            "Phản ứng dị ứng"
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ",
+            "Allopurinol: tăng nguy cơ phát ban",
+            "Oral contraceptives: giảm hiệu quả",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "monitoring": "LFT, công thức máu nếu dùng dài ngày",
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
+    },
+    
+    # ========== MACROLIDES - ORAL (Phổ biến tại VN) ==========
+    "Clarithromycin": {
+        "group": "Macrolide",
+        "vietnamese_name": "Clarithromycin, Klacid, Clamycin, Claridar, Clari, Klari, Clarit, Clarixin",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Viêm phổi cộng đồng",
+            "Viêm xoang cấp",
+            "Nhiễm H. pylori (kết hợp)",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm Chlamydia, Mycoplasma",
+            "Viêm phổi do Legionella"
+        ],
+        "contraindications": [
+            "Dị ứng macrolide",
+            "Rối loạn nhịp tim nặng (QT kéo dài)",
+            "Dùng đồng thời với terfenadine, astemizole, cisapride"
+        ],
+        "dosage": {
+            "adult_po_standard": "250-500mg PO x 2 lần/ngày",
+            "adult_po_severe": "500mg PO x 2 lần/ngày",
+            "adult_po_hpylori": "500mg PO x 2 lần/ngày (kết hợp amoxicillin, PPI)",
+            "adult_iv": "500mg IV x 2 lần/ngày",
+            "pediatric_po": "15mg/kg/ngày chia 2 lần (max 1g/ngày)",
+            "notes": "Tương tác nhiều thuốc. Uống với thức ăn hoặc không. Có dạng giải phóng kéo dài (XL)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50% (CrCl <30)",
+            "15_30": "250mg PO x 2 lần/ngày hoặc 500mg x 1 lần/ngày",
+            "under_15": "250mg PO x 1 lần/ngày"
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa (tiêu chảy, buồn nôn, vị kim loại)",
+            "Rối loạn nhịp tim (QT kéo dài)",
+            "Nhức đầu",
+            "Rối loạn chức năng gan",
+            "Giảm bạch cầu (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu (theo dõi INR)",
+            "Statins: tăng nguy cơ tiêu cơ vân",
+            "Digoxin: tăng nồng độ",
+            "Cyclosporine, tacrolimus: tăng nồng độ",
+            "Rifampin: giảm nồng độ clarithromycin"
+        ],
+        "monitoring": "ECG (QT interval) nếu có bệnh tim, LFT, công thức máu",
+        "aware_classification": "WATCH",
+        "pregnancy": "C"
+    },
+    
+    # ========== CEPHALOSPORINS - ORAL Bổ Sung ==========
+    "Cefpodoxime": {
+        "group": "Beta-lactam - Cephalosporin thế hệ 3 (Oral)",
+        "vietnamese_name": "Cefpodoxime, Vantin, Cefpodox, Podoxime, Cefpomax, Cefpod, Cefpodoxine",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm phổi cộng đồng nhẹ-trung bình",
+            "Viêm tai giữa",
+            "Viêm xoang cấp",
+            "Nhiễm khuẩn đường tiết niệu không biến chứng",
+            "Nhiễm khuẩn da và mô mềm",
+            "Viêm họng/amidan do liên cầu"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/penicillin",
+            "Trẻ sơ sinh < 2 tháng"
+        ],
+        "dosage": {
+            "adult_standard": "200mg PO x 2 lần/ngày",
+            "adult_severe": "400mg PO x 2 lần/ngày",
+            "adult_uti": "100mg PO x 2 lần/ngày",
+            "pediatric_standard": "10mg/kg/ngày chia 2 lần (max 400mg/ngày)",
+            "pediatric_otitis": "10mg/kg/ngày chia 2 lần (max 400mg/ngày)",
+            "notes": "Dùng với thức ăn để tăng hấp thu. Phổ rộng bao gồm H. influenzae, Moraxella"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "15_30": "Giảm liều 50%",
+            "under_15": "100mg mỗi 24 giờ"
+        },
+        "side_effects": [
+            "Tiêu chảy (7-15%)",
+            "Buồn nôn, nôn",
+            "Đau bụng",
+            "Phát ban",
+            "Nhức đầu"
+        ],
+        "interactions": [
+            "Antacids: giảm hấp thu (cách 2 giờ)",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Probenecid: tăng nồng độ"
+        ],
+        "monitoring": "LFT nếu dùng dài ngày",
+        "aware_classification": "ACCESS",
+        "pregnancy": "B"
     },
 }
 
