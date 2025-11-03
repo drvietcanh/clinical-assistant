@@ -272,6 +272,191 @@ DRUG_DATABASE = {
         "pregnancy": "C"
     },
     
+    "Nifedipine": {
+        "group": "Cardiovascular - Calcium Channel Blocker (Dihydropyridine)",
+        "vietnamese_name": "Nifedipine, Adalat",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Đau thắt ngực",
+            "Raynaud's phenomenon",
+            "Co thắt mạch vành"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Sốc tim",
+            "Suy tim nặng",
+            "Hẹp van động mạch chủ nặng"
+        ],
+        "dosage": {
+            "adult_htn_immediate": "10-20mg x 3 lần/ngày",
+            "adult_htn_extended": "30-90mg x 1 lần/ngày (XL/retard)",
+            "adult_angina": "10-20mg x 3 lần/ngày",
+            "notes": "Tránh dùng immediate-release cho tăng huyết áp (nguy cơ hạ HA đột ngột). Ưu tiên extended-release"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Phù chân",
+            "Đỏ mặt",
+            "Nhức đầu",
+            "Chóng mặt",
+            "Tim đập nhanh (phản ứng)",
+            "Hạ huyết áp đột ngột (immediate-release)"
+        ],
+        "interactions": [
+            "Grapefruit juice: tăng nồng độ",
+            "Beta-blocker: có thể gây block nhĩ thất",
+            "Digoxin: tăng nồng độ digoxin"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Diltiazem": {
+        "group": "Cardiovascular - Calcium Channel Blocker (Non-dihydropyridine)",
+        "vietnamese_name": "Diltiazem, Cardizem",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Tăng huyết áp",
+            "Đau thắt ngực",
+            "Rối loạn nhịp tim trên thất (SVT)",
+            "Rung nhĩ",
+            "Nhịp nhanh trên thất"
+        ],
+        "contraindications": [
+            "Block nhĩ thất độ 2-3",
+            "Suy tim nặng",
+            "Sick sinus syndrome",
+            "Hạ huyết áp nặng",
+            "Hội chứng Wolff-Parkinson-White với rung nhĩ"
+        ],
+        "dosage": {
+            "adult_htn": "120-360mg/ngày chia 1-3 lần",
+            "adult_htn_extended": "180-360mg x 1 lần/ngày (CD/XR)",
+            "adult_angina": "120-360mg/ngày chia 1-3 lần",
+            "adult_svt_iv": "0.25mg/kg IV bolus, có thể lặp 0.35mg/kg sau 15 phút",
+            "adult_svt_iv_continuous": "5-15mg/giờ truyền liên tục",
+            "notes": "Non-dihydropyridine, có tác dụng ức chế dẫn truyền nhĩ thất"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều 50%",
+            "under_30": "Thận trọng, giảm liều 50%"
+        },
+        "side_effects": [
+            "Nhịp tim chậm",
+            "Block nhĩ thất",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Phù chân (ít hơn dihydropyridine)",
+            "Táo bón"
+        ],
+        "interactions": [
+            "Beta-blocker: tăng nguy cơ block nhĩ thất, nhịp chậm",
+            "Digoxin: tăng nồng độ digoxin",
+            "Simvastatin: tăng nồng độ simvastatin",
+            "Cyclosporine: tăng nồng độ cyclosporine"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Verapamil": {
+        "group": "Cardiovascular - Calcium Channel Blocker (Non-dihydropyridine)",
+        "vietnamese_name": "Verapamil, Isoptin",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Tăng huyết áp",
+            "Đau thắt ngực",
+            "Rối loạn nhịp tim trên thất",
+            "Rung nhĩ",
+            "Nhịp nhanh trên thất",
+            "Migraine phòng ngừa"
+        ],
+        "contraindications": [
+            "Block nhĩ thất độ 2-3",
+            "Suy tim nặng",
+            "Sick sinus syndrome",
+            "Hạ huyết áp nặng",
+            "Hội chứng Wolff-Parkinson-White với rung nhĩ"
+        ],
+        "dosage": {
+            "adult_htn": "80-320mg x 2-3 lần/ngày",
+            "adult_htn_extended": "120-480mg x 1 lần/ngày (SR)",
+            "adult_angina": "80-160mg x 3 lần/ngày",
+            "adult_migraine": "80-160mg x 3 lần/ngày",
+            "adult_svt_iv": "2.5-5mg IV bolus, có thể lặp 5-10mg sau 15-30 phút",
+            "notes": "Mạnh hơn diltiazem trong ức chế dẫn truyền nhĩ thất"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50%"
+        },
+        "side_effects": [
+            "Nhịp tim chậm",
+            "Block nhĩ thất",
+            "Táo bón (thường gặp)",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Phù chân (ít)"
+        ],
+        "interactions": [
+            "Beta-blocker: tăng nguy cơ block nhĩ thất, suy tim",
+            "Digoxin: tăng nồng độ digoxin đáng kể",
+            "Simvastatin: tăng nồng độ simvastatin",
+            "Theophylline: tăng nồng độ theophylline",
+            "Carbamazepine: tăng nồng độ carbamazepine"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Isosorbide mononitrate": {
+        "group": "Cardiovascular - Nitrate",
+        "vietnamese_name": "Isosorbide mononitrate, Imdur",
+        "administration": ["PO"],
+        "indications": [
+            "Đau thắt ngực (phòng ngừa)",
+            "Suy tim (giảm tiền gánh)",
+            "Đau thắt ngực ổn định"
+        ],
+        "contraindications": [
+            "Dị ứng nitrate",
+            "Hạ huyết áp nặng",
+            "Shock",
+            "Dùng sildenafil/tadalafil/vardenafil (trong 24-48h)",
+            "Tăng áp lực nội sọ",
+            "Thiếu máu nặng"
+        ],
+        "dosage": {
+            "adult_angina_immediate": "10-20mg x 2-3 lần/ngày",
+            "adult_angina_extended": "30-120mg x 1 lần/ngày (buổi sáng)",
+            "adult_heart_failure": "10-40mg x 2-3 lần/ngày",
+            "notes": "Tolerance với nitrate nếu dùng liên tục. Cần khoảng nghỉ nitrate-free 10-14h mỗi ngày"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Nhức đầu (thường gặp, giảm sau vài ngày)",
+            "Hạ huyết áp",
+            "Chóng mặt",
+            "Đỏ mặt",
+            "Nhịp tim nhanh phản ứng",
+            "Ngất (hiếm)"
+        ],
+        "interactions": [
+            "Sildenafil/Tadalafil/Vardenafil: hạ huyết áp nguy hiểm - chống chỉ định",
+            "Rượu: tăng tác dụng hạ huyết áp",
+            "Thuốc hạ huyết áp khác: tăng tác dụng"
+        ],
+        "pregnancy": "C"
+    },
+    
     # Diuretics
     "Furosemide": {
         "group": "Cardiovascular - Loop Diuretic",
@@ -756,6 +941,203 @@ DRUG_DATABASE = {
         "pregnancy": "B - An toàn, điều chỉnh liều theo thai kỳ"
     },
     
+    "Empagliflozin": {
+        "group": "Diabetes - SGLT2 Inhibitor",
+        "vietnamese_name": "Empagliflozin, Jardiance",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2",
+            "Suy tim với phân suất tống máu giảm (HFrEF)",
+            "Bệnh thận mạn tính (CKD) ở bệnh nhân đái tháo đường",
+            "Giảm nguy cơ tim mạch"
+        ],
+        "contraindications": [
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton do đái tháo đường",
+            "Suy thận nặng (eGFR <20)",
+            "Đang lọc máu",
+            "Nhiễm trùng đường tiết niệu tái phát"
+        ],
+        "dosage": {
+            "adult_type2_dm": "10-25mg x 1 lần/ngày",
+            "adult_heart_failure": "10mg x 1 lần/ngày",
+            "adult_ckd": "10mg x 1 lần/ngày (eGFR ≥20)",
+            "notes": "Uống bất kỳ lúc nào, không cần ăn. Giảm đường huyết nhẹ"
+        },
+        "renal_adjustment": {
+            "normal": "10-25mg/ngày",
+            "30_60": "10mg/ngày (eGFR ≥30)",
+            "under_30": "Không dùng nếu eGFR <20"
+        },
+        "side_effects": [
+            "Nhiễm trùng đường tiết niệu",
+            "Nhiễm trùng đường sinh dục (nấm âm đạo, viêm quy đầu)",
+            "Mất nước, hạ huyết áp",
+            "Nhiễm toan ceton (hiếm)",
+            "Gãy xương tăng nhẹ",
+            "Hoại thư Fournier (hiếm nhưng nguy hiểm)"
+        ],
+        "interactions": [
+            "Insulin/Sulfonylurea: tăng nguy cơ hạ đường huyết",
+            "Diuretics: tăng nguy cơ mất nước",
+            "Digoxin: tăng nhẹ nồng độ digoxin"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Dapagliflozin": {
+        "group": "Diabetes - SGLT2 Inhibitor",
+        "vietnamese_name": "Dapagliflozin, Forxiga",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2",
+            "Suy tim với phân suất tống máu giảm (HFrEF)",
+            "Bệnh thận mạn tính (CKD) ở bệnh nhân đái tháo đường"
+        ],
+        "contraindications": [
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton",
+            "Suy thận nặng (eGFR <25)",
+            "Đang lọc máu",
+            "Nhiễm trùng đường tiết niệu tái phát"
+        ],
+        "dosage": {
+            "adult_type2_dm": "5-10mg x 1 lần/ngày",
+            "adult_heart_failure": "10mg x 1 lần/ngày",
+            "adult_ckd": "10mg x 1 lần/ngày (eGFR ≥25)",
+            "notes": "Uống bất kỳ lúc nào"
+        },
+        "renal_adjustment": {
+            "normal": "5-10mg/ngày",
+            "30_60": "10mg/ngày (eGFR ≥25)",
+            "under_30": "Không dùng nếu eGFR <25"
+        },
+        "side_effects": [
+            "Nhiễm trùng đường tiết niệu",
+            "Nhiễm trùng đường sinh dục",
+            "Mất nước",
+            "Nhiễm toan ceton (hiếm)"
+        ],
+        "interactions": [
+            "Insulin/Sulfonylurea: tăng nguy cơ hạ đường huyết",
+            "Diuretics: mất nước"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Sitagliptin": {
+        "group": "Diabetes - DPP-4 Inhibitor",
+        "vietnamese_name": "Sitagliptin, Januvia",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2"
+        ],
+        "contraindications": [
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton",
+            "Dị ứng sitagliptin",
+            "Suy thận nặng (CrCl <30)"
+        ],
+        "dosage": {
+            "adult_normal_renal": "100mg x 1 lần/ngày",
+            "adult_moderate_renal": "50mg x 1 lần/ngày (CrCl 30-50)",
+            "adult_severe_renal": "25mg x 1 lần/ngày (CrCl <30)",
+            "notes": "Uống bất kỳ lúc nào. Ít gây hạ đường huyết"
+        },
+        "renal_adjustment": {
+            "normal": "100mg/ngày",
+            "30_60": "50mg/ngày (CrCl 30-50)",
+            "under_30": "25mg/ngày (CrCl <30)"
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Nhiễm trùng đường hô hấp trên",
+            "Viêm tụy cấp (hiếm nhưng nguy hiểm)",
+            "Đau khớp nghiêm trọng (hiếm)",
+            "Suy tim (tăng nhẹ nguy cơ)"
+        ],
+        "interactions": [
+            "Insulin/Sulfonylurea: có thể tăng nguy cơ hạ đường huyết",
+            "Digoxin: tăng nhẹ nồng độ digoxin"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Vildagliptin": {
+        "group": "Diabetes - DPP-4 Inhibitor",
+        "vietnamese_name": "Vildagliptin, Galvus",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2"
+        ],
+        "contraindications": [
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_standard": "50mg x 2 lần/ngày (sáng và tối)",
+            "adult_metformin_combination": "50mg x 2 lần/ngày",
+            "notes": "Uống với bữa ăn. Ít gây hạ đường huyết"
+        },
+        "renal_adjustment": {
+            "normal": "50mg x 2 lần/ngày",
+            "30_60": "50mg x 2 lần/ngày",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Chóng mặt",
+            "Nhiễm trùng đường hô hấp",
+            "Viêm tụy cấp (hiếm)",
+            "Đau khớp (hiếm)"
+        ],
+        "interactions": [
+            "Insulin/Sulfonylurea: có thể tăng nguy cơ hạ đường huyết"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Pioglitazone": {
+        "group": "Diabetes - Thiazolidinedione (TZD)",
+        "vietnamese_name": "Pioglitazone, Actos",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2"
+        ],
+        "contraindications": [
+            "Đái tháo đường type 1",
+            "Suy tim (NYHA class III-IV)",
+            "Bệnh gan nặng",
+            "Ung thư bàng quang",
+            "Gãy xương (phụ nữ có nguy cơ)"
+        ],
+        "dosage": {
+            "adult_start": "15-30mg x 1 lần/ngày",
+            "adult_usual": "15-45mg x 1 lần/ngày",
+            "adult_max": "45mg/ngày",
+            "notes": "Uống bất kỳ lúc nào. Tác dụng chậm (2-4 tuần). Gây giữ nước"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Giữ nước, phù (tăng nguy cơ suy tim)",
+            "Tăng cân",
+            "Gãy xương (phụ nữ có nguy cơ tăng)",
+            "Thiếu máu",
+            "Tăng LDL cholesterol",
+            "Ung thư bàng quang (tăng nhẹ nguy cơ)"
+        ],
+        "interactions": [
+            "Insulin: tăng nguy cơ suy tim, phù",
+            "Digoxin: có thể tăng nồng độ digoxin"
+        ],
+        "pregnancy": "C"
+    },
+    
     # ========== GASTROINTESTINAL ==========
     
     "Omeprazole": {
@@ -919,6 +1301,220 @@ DRUG_DATABASE = {
         "pregnancy": "C"
     },
     
+    "Domperidone": {
+        "group": "Gastrointestinal - Prokinetic, Antiemetic",
+        "vietnamese_name": "Domperidone, Motilium",
+        "administration": ["PO"],
+        "indications": [
+            "Buồn nôn, nôn",
+            "Liệt dạ dày (gastroparesis)",
+            "Ợ nóng",
+            "Trào ngược dạ dày thực quản"
+        ],
+        "contraindications": [
+            "Dị ứng domperidone",
+            "Chảy máu dạ dày",
+            "Tắc ruột cơ học",
+            "Prolactinoma",
+            "Dùng với các thuốc QT kéo dài"
+        ],
+        "dosage": {
+            "adult_nausea": "10-20mg x 3-4 lần/ngày, uống trước bữa ăn",
+            "adult_gastroparesis": "10mg x 3-4 lần/ngày trước bữa ăn",
+            "adult_max": "80mg/ngày",
+            "notes": "Không qua hàng rào máu-não nên ít tác dụng phụ thần kinh hơn metoclopramide"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Thận trọng, giảm liều 50%"
+        },
+        "side_effects": [
+            "Rối loạn kinh nguyệt",
+            "Tăng prolactin",
+            "Đau vú",
+            "Chảy sữa (galactorrhea)",
+            "QT kéo dài (liều cao)",
+            "Nhức đầu"
+        ],
+        "interactions": [
+            "QT kéo dài: tránh dùng với thuốc QT kéo dài (amiodarone, quinolone)",
+            "Ketoconazole: tăng nồng độ domperidone",
+            "Erythromycin: tăng nồng độ domperidone"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Ondansetron": {
+        "group": "Gastrointestinal - Antiemetic (5-HT3 Antagonist)",
+        "vietnamese_name": "Ondansetron, Zofran",
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Buồn nôn, nôn sau hóa trị",
+            "Buồn nôn, nôn sau phẫu thuật",
+            "Buồn nôn, nôn do xạ trị",
+            "Buồn nôn, nôn do nhiều nguyên nhân"
+        ],
+        "contraindications": [
+            "Dị ứng ondansetron",
+            "QT kéo dài",
+            "Dùng với apomorphine"
+        ],
+        "dosage": {
+            "adult_po": "8mg x 2-3 lần/ngày",
+            "adult_iv_im": "4-8mg x 2-3 lần/ngày",
+            "adult_chemotherapy": "8mg IV trước hóa trị, sau đó 8mg PO x 2 lần/ngày x 3 ngày",
+            "adult_surgery": "4mg IV trước khi gây mê",
+            "notes": "Rất hiệu quả cho buồn nôn do hóa trị và phẫu thuật"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "QT kéo dài",
+            "Nhức đầu",
+            "Chóng mặt",
+            "Táo bón",
+            "Mệt mỏi"
+        ],
+        "interactions": [
+            "Apomorphine: chống chỉ định",
+            "Thuốc QT kéo dài: tăng nguy cơ loạn nhịp",
+            "CYP2D6 inhibitors: tăng nồng độ ondansetron"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Lansoprazole": {
+        "group": "Gastrointestinal - Proton Pump Inhibitor (PPI)",
+        "vietnamese_name": "Lansoprazole, Prevacid",
+        "administration": ["PO"],
+        "indications": [
+            "Loét dạ dày tá tràng",
+            "Trào ngược dạ dày thực quản (GERD)",
+            "Hội chứng Zollinger-Ellison",
+            "Tiệt trừ H. pylori (kết hợp)"
+        ],
+        "contraindications": [
+            "Dị ứng lansoprazole/PPI"
+        ],
+        "dosage": {
+            "adult_ulcer": "15-30mg x 1 lần/ngày",
+            "adult_gerd": "15-30mg x 1 lần/ngày",
+            "adult_h_pylori": "30mg x 2 lần/ngày (với amoxicillin + clarithromycin)",
+            "notes": "Uống trước bữa ăn 30 phút. Viên tan trong miệng không cần nước"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Đau đầu",
+            "Tiêu chảy",
+            "Đau bụng",
+            "Tăng nguy cơ nhiễm trùng (Clostridium difficile)",
+            "Loãng xương (dùng lâu dài)",
+            "Thiếu vitamin B12 (dùng lâu dài)",
+            "Thiếu magie (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: tăng nhẹ nguy cơ chảy máu",
+            "Digoxin: tăng nhẹ nồng độ digoxin",
+            "Ketoconazole/Itraconazole: giảm hấp thu (giảm acid dạ dày)",
+            "Methotrexate: tăng nồng độ methotrexate"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Esomeprazole": {
+        "group": "Gastrointestinal - Proton Pump Inhibitor (PPI)",
+        "vietnamese_name": "Esomeprazole, Nexium",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Loét dạ dày tá tràng",
+            "Trào ngược dạ dày thực quản (GERD)",
+            "Hội chứng Zollinger-Ellison",
+            "Tiệt trừ H. pylori (kết hợp)",
+            "Loét do NSAID (dự phòng)"
+        ],
+        "contraindications": [
+            "Dị ứng esomeprazole/PPI"
+        ],
+        "dosage": {
+            "adult_po": "20-40mg x 1 lần/ngày",
+            "adult_iv": "20-40mg x 1 lần/ngày",
+            "adult_h_pylori": "20mg x 2 lần/ngày (với amoxicillin + clarithromycin)",
+            "adult_gerd_healing": "40mg x 1 lần/ngày x 4-8 tuần",
+            "notes": "Enantiomer của omeprazole (S-omeprazole). Uống trước bữa ăn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Đau đầu",
+            "Tiêu chảy",
+            "Đau bụng",
+            "Tăng nguy cơ nhiễm trùng (C. difficile)",
+            "Loãng xương (dùng lâu dài)",
+            "Thiếu vitamin B12 (dùng lâu dài)",
+            "Thiếu magie (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: tăng nhẹ nguy cơ chảy máu",
+            "Ketoconazole/Itraconazole: giảm hấp thu",
+            "Clopidogrel: có thể giảm hiệu quả (controversial)",
+            "Methotrexate: tăng nồng độ methotrexate"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Sucralfate": {
+        "group": "Gastrointestinal - Mucosal Protectant",
+        "vietnamese_name": "Sucralfate, Carafate",
+        "administration": ["PO"],
+        "indications": [
+            "Loét dạ dày tá tràng",
+            "Viêm dạ dày",
+            "Trào ngược dạ dày thực quản",
+            "Loét do stress"
+        ],
+        "contraindications": [
+            "Dị ứng sucralfate",
+            "Suy thận nặng (tăng nguy cơ tích tụ nhôm)"
+        ],
+        "dosage": {
+            "adult_ulcer": "1g x 4 lần/ngày (trước bữa ăn và trước khi ngủ) hoặc 2g x 2 lần/ngày",
+            "adult_maintenance": "1g x 2 lần/ngày",
+            "notes": "Uống khi bụng đói (1 giờ trước bữa ăn). Không dùng với PPI, H2 blocker, antacid (cách 2 giờ)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Tránh dùng (tích tụ nhôm)"
+        },
+        "side_effects": [
+            "Táo bón",
+            "Khô miệng",
+            "Buồn nôn",
+            "Đầy hơi",
+            "Tích tụ nhôm (suy thận)"
+        ],
+        "interactions": [
+            "PPI/H2 blocker/Antacid: giảm hiệu quả - cách 2 giờ",
+            "Warfarin: có thể tăng tác dụng chống đông",
+            "Phenytoin: giảm hấp thu phenytoin",
+            "Digoxin: giảm hấp thu digoxin",
+            "Quinolone: giảm hấp thu quinolone",
+            "Thyroxine: giảm hấp thu thyroxine"
+        ],
+        "pregnancy": "B"
+    },
+    
     # ========== ANALGESICS ==========
     
     "Paracetamol": {
@@ -1030,6 +1626,252 @@ DRUG_DATABASE = {
         "pregnancy": "C"
     },
     
+    "Naproxen": {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Naproxen, Naprosyn",
+        "administration": ["PO"],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp xương khớp",
+            "Viêm cột sống dính khớp",
+            "Đau bụng kinh",
+            "Đau đầu do căng thẳng",
+            "Gout cấp"
+        ],
+        "contraindications": [
+            "Loét dạ dày tá tràng đang hoạt động",
+            "Suy thận nặng",
+            "Suy gan nặng",
+            "Có thai (3 tháng cuối)",
+            "Dị ứng NSAID/aspirin",
+            "Suy tim nặng"
+        ],
+        "dosage": {
+            "adult_pain": "250-500mg x 2 lần/ngày (tối đa 1.25g/ngày)",
+            "adult_arthritis": "250-500mg x 2 lần/ngày (tối đa 1.5g/ngày)",
+            "adult_dysmenorrhea": "500mg ngay khi có triệu chứng, sau đó 250mg mỗi 6-8 giờ",
+            "adult_gout": "750mg ngay, sau đó 250mg mỗi 8 giờ",
+            "notes": "Tác dụng kéo dài hơn ibuprofen. Uống với thức ăn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng"
+        },
+        "side_effects": [
+            "Chảy máu dạ dày",
+            "Suy thận",
+            "Tăng huyết áp",
+            "Phù",
+            "Đau đầu",
+            "Ban da",
+            "Nhạy cảm với ánh sáng"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Aspirin: giảm hiệu quả naproxen",
+            "Lithium: tăng nồng độ lithium",
+            "Methotrexate: tăng độc tính methotrexate"
+        ],
+        "pregnancy": "C - D trong 3 tháng cuối"
+    },
+    
+    "Diclofenac": {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Diclofenac, Voltaren",
+        "administration": ["PO", "IM", "Topical"],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp xương khớp",
+            "Đau sau phẫu thuật",
+            "Đau do chấn thương",
+            "Viêm gân (topical)"
+        ],
+        "contraindications": [
+            "Loét dạ dày tá tràng đang hoạt động",
+            "Suy thận nặng",
+            "Suy gan nặng",
+            "Có thai (3 tháng cuối)",
+            "Dị ứng NSAID/aspirin",
+            "Suy tim nặng"
+        ],
+        "dosage": {
+            "adult_po": "50mg x 2-3 lần/ngày hoặc 75-100mg x 1 lần/ngày (extended release)",
+            "adult_im": "75mg IM x 1-2 lần/ngày (tối đa 3 ngày)",
+            "adult_topical": "Bôi 2-4g x 3-4 lần/ngày",
+            "notes": "Hiệu quả cao nhưng nguy cơ tác dụng phụ cao"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng"
+        },
+        "side_effects": [
+            "Chảy máu dạ dày (cao hơn các NSAID khác)",
+            "Suy thận",
+            "Tăng huyết áp",
+            "Phù",
+            "Tăng men gan",
+            "Đau đầu",
+            "Ban da"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Digoxin: tăng nồng độ digoxin",
+            "Methotrexate: tăng độc tính methotrexate"
+        ],
+        "pregnancy": "C - D trong 3 tháng cuối"
+    },
+    
+    "Morphine": {
+        "group": "Analgesic - Opioid Agonist (Strong)",
+        "vietnamese_name": "Morphine",
+        "administration": ["PO", "IV", "IM", "SC"],
+        "indications": [
+            "Đau nặng (ung thư, sau phẫu thuật)",
+            "Đau cấp tính nặng",
+            "Đau mạn tính nặng",
+            "Khó thở do suy tim",
+            "Cơn đau do hồi sức"
+        ],
+        "contraindications": [
+            "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+            "Suy hô hấp nặng",
+            "Hen phế quản nặng",
+            "Tắc ruột cơ học",
+            "Tăng áp lực nội sọ",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_po_immediate": "10-30mg mỗi 4 giờ khi cần",
+            "adult_po_extended": "15-30mg x 2 lần/ngày (MS Contin)",
+            "adult_iv": "2.5-5mg IV mỗi 3-4 giờ hoặc 0.8-10mg/giờ truyền liên tục",
+            "adult_im_sc": "5-15mg mỗi 4 giờ",
+            "elderly": "Giảm liều 25-50%",
+            "notes": "Thuốc chuẩn vàng cho đau nặng. Theo dõi hô hấp chặt chẽ"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50-75%, tăng khoảng cách liều"
+        },
+        "side_effects": [
+            "Ức chế hô hấp (nguy hiểm)",
+            "Buồn nôn, nôn",
+            "Táo bón (rất thường gặp)",
+            "Ngứa",
+            "Buồn ngủ, lú lẫn",
+            "Co đồng tử (miosis)",
+            "Hạ huyết áp",
+            "Ức chế tiết ADH (SIADH)",
+            "Nguy cơ nghiện, lệ thuộc"
+        ],
+        "interactions": [
+            "Thuốc an thần/Benzodiazepine: tăng nguy cơ ức chế hô hấp",
+            "MAO inhibitor: nguy hiểm - tránh dùng",
+            "Rượu: tăng nguy cơ ức chế hô hấp",
+            "Cimetidine: tăng nồng độ morphine"
+        ],
+        "pregnancy": "C - D trong 3 tháng cuối (gây hội chứng cai ở trẻ sơ sinh)"
+    },
+    
+    "Codeine": {
+        "group": "Analgesic - Opioid Agonist (Weak)",
+        "vietnamese_name": "Codeine",
+        "administration": ["PO"],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Ho không hiệu quả (chỉ định hạn chế)",
+            "Đau sau phẫu thuật nhỏ"
+        ],
+        "contraindications": [
+            "Ngộ độc cấp tính opioid",
+            "Suy hô hấp nặng",
+            "Hen phế quản nặng",
+            "Tắc ruột cơ học",
+            "Trẻ em <12 tuổi (ho)",
+            "Trẻ em <18 tuổi sau cắt amidan/VA"
+        ],
+        "dosage": {
+            "adult_pain": "15-60mg mỗi 4-6 giờ (tối đa 360mg/ngày)",
+            "adult_cough": "10-20mg mỗi 4-6 giờ (tối đa 120mg/ngày)",
+            "notes": "Prodrug của morphine, cần CYP2D6 để chuyển hóa. Một số người không có enzyme → không hiệu quả"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng hoặc giảm liều 50%"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn",
+            "Táo bón",
+            "Buồn ngủ",
+            "Chóng mặt",
+            "Ức chế hô hấp (liều cao)",
+            "Ngứa",
+            "Nguy cơ nghiện"
+        ],
+        "interactions": [
+            "Thuốc an thần: tăng tác dụng an thần",
+            "Rượu: tăng nguy cơ ức chế hô hấp",
+            "CYP2D6 inhibitors: giảm hiệu quả",
+            "Quinidine: giảm chuyển hóa thành morphine"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Sumatriptan": {
+        "group": "Analgesic - Antimigraine (5-HT1 Receptor Agonist)",
+        "vietnamese_name": "Sumatriptan, Imitrex",
+        "administration": ["PO", "SC", "Nasal"],
+        "indications": [
+            "Migraine có tiền triệu (aura) hoặc không",
+            "Cluster headache"
+        ],
+        "contraindications": [
+            "Bệnh mạch vành",
+            "Nhồi máu cơ tim",
+            "Đau thắt ngực không ổn định",
+            "Đột quỵ, TIA",
+            "Bệnh mạch máu ngoại biên",
+            "Tăng huyết áp không kiểm soát",
+            "Dùng MAO inhibitor trong 14 ngày",
+            "Dùng ergotamine trong 24 giờ"
+        ],
+        "dosage": {
+            "adult_po": "25-100mg, có thể lặp sau 2 giờ (tối đa 200mg/ngày)",
+            "adult_sc": "6mg SC, có thể lặp sau 1 giờ (tối đa 12mg/ngày)",
+            "adult_nasal": "5-20mg xịt mũi, có thể lặp sau 2 giờ (tối đa 40mg/ngày)",
+            "notes": "Dùng ngay khi có triệu chứng migraine. Không dùng để phòng ngừa"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Cảm giác nóng, đỏ, ngứa (SC injection)",
+            "Đau ngực, khó thở (tương tự đau thắt ngực)",
+            "Nhức đầu",
+            "Chóng mặt",
+            "Buồn nôn",
+            "Co thắt cơ",
+            "Yếu, mệt mỏi",
+            "Nguy cơ đau tim (hiếm nhưng nguy hiểm)"
+        ],
+        "interactions": [
+            "Ergotamine/Dihydroergotamine: chống chỉ định (trong 24 giờ)",
+            "MAO inhibitor: chống chỉ định (trong 14 ngày)",
+            "SSRI/SNRI: tăng nguy cơ hội chứng serotonin",
+            "Thuốc ức chế CYP2D6: tăng nồng độ sumatriptan"
+        ],
+        "pregnancy": "C"
+    },
+    
     # ========== RESPIRATORY ==========
     
     "Salbutamol": {
@@ -1061,6 +1903,202 @@ DRUG_DATABASE = {
         ],
         "interactions": [
             "Beta-blocker: đối kháng tác dụng (tránh dùng)"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Salmeterol": {
+        "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)",
+        "vietnamese_name": "Salmeterol, Serevent",
+        "administration": ["Inhalation"],
+        "indications": [
+            "Hen phế quản (phòng ngừa, phải dùng với ICS)",
+            "COPD (phòng ngừa)",
+            "Co thắt phế quản ban đêm",
+            "Dự phòng co thắt do vận động"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Nhịp tim nhanh nặng",
+            "Hen phế quản cấp (không dùng đơn độc)"
+        ],
+        "dosage": {
+            "adult_inhalation": "50mcg x 2 lần/ngày (sáng và tối)",
+            "notes": "PHẢI dùng kết hợp với ICS. Không dùng đơn độc cho hen. Tác dụng kéo dài 12 giờ"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Tim đập nhanh",
+            "Run cơ",
+            "Đau đầu",
+            "Co thắt phế quản nghịch lý (hiếm)",
+            "Loạn nhịp tim (hiếm)"
+        ],
+        "interactions": [
+            "Beta-blocker: đối kháng tác dụng",
+            "Theophylline: tăng tác dụng phụ"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Ipratropium": {
+        "group": "Respiratory - Anticholinergic (Short-acting)",
+        "vietnamese_name": "Ipratropium, Atrovent",
+        "administration": ["Inhalation", "Nebulizer"],
+        "indications": [
+            "COPD (cắt cơn và phòng ngừa)",
+            "Hen phế quản (kết hợp với SABA)",
+            "Co thắt phế quản",
+            "Chảy nước mũi (dạng xịt mũi)"
+        ],
+        "contraindications": [
+            "Dị ứng atropine/ipratropium",
+            "Glaucoma góc đóng",
+            "Tăng nhãn áp"
+        ],
+        "dosage": {
+            "adult_inhalation": "1-2 puffs (20-40mcg) mỗi 6-8 giờ",
+            "adult_nebulizer": "250-500mcg mỗi 6-8 giờ",
+            "adult_max": "12 puffs/ngày hoặc 3 lần nebulizer/ngày",
+            "notes": "Tác dụng sau 15-30 phút, kéo dài 4-6 giờ. An toàn hơn beta-agonist cho bệnh nhân tim mạch"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Khô miệng",
+            "Đắng miệng",
+            "Ho",
+            "Kích ứng mắt (nếu vào mắt)",
+            "Tăng nhãn áp (nếu vào mắt)",
+            "Bí tiểu (hiếm)"
+        ],
+        "interactions": [
+            "Anticholinergic khác: tăng tác dụng phụ",
+            "Beta-agonist: hiệp đồng tốt"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Tiotropium": {
+        "group": "Respiratory - Anticholinergic (Long-acting)",
+        "vietnamese_name": "Tiotropium, Spiriva",
+        "administration": ["Inhalation (HandiHaler hoặc Respimat)"],
+        "indications": [
+            "COPD (phòng ngừa)",
+            "Hen phế quản (kết hợp với ICS, nếu không kiểm soát)"
+        ],
+        "contraindications": [
+            "Dị ứng atropine/tiotropium",
+            "Glaucoma góc đóng",
+            "Tăng nhãn áp",
+            "Phì đại tuyến tiền liệt nặng"
+        ],
+        "dosage": {
+            "adult_handihaler": "18mcg x 1 lần/ngày",
+            "adult_respimat": "5mcg x 2 lần/ngày (sáng và tối)",
+            "notes": "Tác dụng kéo dài 24 giờ. Dùng 1 lần/ngày với HandiHaler"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Tránh dùng (thải qua thận)"
+        },
+        "side_effects": [
+            "Khô miệng (thường gặp)",
+            "Ho",
+            "Nhiễm trùng đường hô hấp trên",
+            "Táo bón",
+            "Bí tiểu",
+            "Kích ứng mắt (nếu vào mắt)"
+        ],
+        "interactions": [
+            "Anticholinergic khác: tăng tác dụng phụ",
+            "Beta-agonist: hiệp đồng"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Budesonide inhaled": {
+        "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+        "vietnamese_name": "Budesonide, Pulmicort",
+        "administration": ["Inhalation", "Nebulizer"],
+        "indications": [
+            "Hen phế quản (kiểm soát, phòng ngừa)",
+            "COPD (nếu có nhiều đợt cấp)",
+            "Viêm phế quản co thắt"
+        ],
+        "contraindications": [
+            "Nhiễm trùng đường hô hấp nặng chưa điều trị",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_inhalation_low": "200-400mcg x 2 lần/ngày",
+            "adult_inhalation_medium": "400-800mcg x 2 lần/ngày",
+            "adult_inhalation_high": "800-1600mcg x 2 lần/ngày",
+            "adult_nebulizer": "0.5-1mg x 2 lần/ngày",
+            "notes": "Súc miệng sau khi dùng để tránh nấm miệng. Không dùng cho cắt cơn cấp"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Nấm miệng (candidiasis)",
+            "Khàn tiếng",
+            "Ho",
+            "Khô miệng",
+            "Tác dụng toàn thân (liều cao)",
+            "Ức chế trục hạ đồi-tuyến yên-thượng thận (liều cao)"
+        ],
+        "interactions": [
+            "Ritonavir: tăng nồng độ budesonide (tránh dùng)",
+            "Ketoconazole/Itraconazole: tăng nồng độ"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Fluticasone inhaled": {
+        "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+        "vietnamese_name": "Fluticasone, Flixotide",
+        "administration": ["Inhalation"],
+        "indications": [
+            "Hen phế quản (kiểm soát, phòng ngừa)",
+            "COPD (kết hợp với LABA nếu nhiều đợt cấp)"
+        ],
+        "contraindications": [
+            "Nhiễm trùng đường hô hấp nặng",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_inhalation_low": "100-250mcg x 2 lần/ngày",
+            "adult_inhalation_medium": "250-500mcg x 2 lần/ngày",
+            "adult_inhalation_high": "500-1000mcg x 2 lần/ngày",
+            "notes": "Súc miệng sau khi dùng. Thường dùng kết hợp với LABA (Salmeterol)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Nấm miệng",
+            "Khàn tiếng",
+            "Ho",
+            "Kích ứng cổ họng",
+            "Tác dụng toàn thân (liều cao)",
+            "Chậm phát triển ở trẻ em (liều cao)"
+        ],
+        "interactions": [
+            "Ritonavir: tăng đáng kể nồng độ fluticasone - tránh dùng",
+            "Ketoconazole: tăng nồng độ"
         ],
         "pregnancy": "C"
     },
@@ -2353,30 +3391,1060 @@ DRUG_DATABASE = {
         ],
         "pregnancy": "X - Chống chỉ định tuyệt đối"
     },
+    
+    # ========== ANTIFUNGALS ==========
+    
+    "Fluconazole": {
+        "group": "Infectious Disease - Antifungal (Azole)",
+        "vietnamese_name": "Fluconazole, Diflucan",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm nấm Candida (oral, esophageal, vaginal, systemic)",
+            "Nhiễm nấm Cryptococcus",
+            "Nhiễm nấm Coccidioidomycosis",
+            "Dự phòng nhiễm nấm ở bệnh nhân suy giảm miễn dịch"
+        ],
+        "contraindications": [
+            "Dị ứng fluconazole/azole",
+            "Có thai (3 tháng đầu)",
+            "Dùng terfenadine/astemizole với liều fluconazole ≥400mg/ngày"
+        ],
+        "dosage": {
+            "adult_candidiasis_oral": "150mg x 1 lần (đơn liều) hoặc 50-100mg x 1 lần/ngày x 7-14 ngày",
+            "adult_candidiasis_esophageal": "100-200mg x 1 lần/ngày x 14-21 ngày",
+            "adult_candidiasis_vaginal": "150mg x 1 lần (đơn liều)",
+            "adult_cryptococcal_meningitis": "400mg ngày đầu, sau đó 200-400mg x 1 lần/ngày",
+            "adult_prophylaxis": "50-400mg x 1 lần/ngày",
+            "notes": "Thải qua thận, cần điều chỉnh liều khi suy thận"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Giảm liều 50-75%"
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Ban da",
+            "Tăng men gan",
+            "Rụng tóc",
+            "QT kéo dài (liều cao)"
+        ],
+        "interactions": [
+            "Warfarin: tăng tác dụng chống đông",
+            "Phenytoin: tăng nồng độ phenytoin",
+            "Cyclosporine: tăng nồng độ cyclosporine",
+            "Sulfonylurea: tăng nguy cơ hạ đường huyết",
+            "Rifampin: giảm nồng độ fluconazole"
+        ],
+        "pregnancy": "C - D trong 3 tháng đầu"
+    },
+    
+    "Itraconazole": {
+        "group": "Infectious Disease - Antifungal (Azole)",
+        "vietnamese_name": "Itraconazole, Sporanox",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm nấm Aspergillosis",
+            "Nhiễm nấm Blastomycosis",
+            "Nhiễm nấm Histoplasmosis",
+            "Nhiễm nấm Candidiasis (oral, esophageal)",
+            "Onychomycosis (nấm móng)"
+        ],
+        "contraindications": [
+            "Dị ứng itraconazole/azole",
+            "Có thai",
+            "Suy tim sung huyết",
+            "Dùng với thuốc chuyển hóa CYP3A4 (xem interactions)"
+        ],
+        "dosage": {
+            "adult_systemic": "200mg x 1-2 lần/ngày (PO)",
+            "adult_aspergillosis": "200mg x 3 lần/ngày x 3 ngày, sau đó 200mg x 1-2 lần/ngày",
+            "adult_onychomycosis": "200mg x 2 lần/ngày x 1 tuần mỗi tháng (x 3-4 tháng)",
+            "adult_vaginal_candidiasis": "200mg x 2 lần/ngày x 1 ngày",
+            "notes": "Uống với thức ăn để tăng hấp thu. Capsule cần acid dạ dày"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng (IV không dùng nếu CrCl <30)",
+            "under_30": "Tránh dùng IV"
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Tăng men gan (hiếm suy gan)",
+            "Phù, suy tim",
+            "Rụng tóc",
+            "Ban da"
+        ],
+        "interactions": [
+            "CYP3A4 substrates: tăng đáng kể nồng độ (simvastatin, lovastatin, midazolam, triazolam, quinidine)",
+            "Rifampin: giảm nồng độ itraconazole",
+            "Warfarin: tăng tác dụng chống đông",
+            "Digoxin: tăng nồng độ digoxin",
+            "Phenytoin: tăng nồng độ phenytoin"
+        ],
+        "pregnancy": "C - D (chống chỉ định)"
+    },
+    
+    "Voriconazole": {
+        "group": "Infectious Disease - Antifungal (Azole, 2nd generation)",
+        "vietnamese_name": "Voriconazole, Vfend",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm nấm Aspergillosis invasive",
+            "Nhiễm nấm Candida (invasive, kháng fluconazole)",
+            "Nhiễm nấm Fusarium",
+            "Nhiễm nấm Scedosporium",
+            "Nhiễm nấm Seedosporium"
+        ],
+        "contraindications": [
+            "Dị ứng voriconazole",
+            "Có thai",
+            "Dùng rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine"
+        ],
+        "dosage": {
+            "adult_po_loading": "400mg x 2 lần/ngày x 2 ngày đầu",
+            "adult_po_maintenance": "200mg x 2 lần/ngày",
+            "adult_iv_loading": "6mg/kg x 2 lần/ngày x 2 ngày đầu",
+            "adult_iv_maintenance": "4mg/kg x 2 lần/ngày",
+            "notes": "Theo dõi nồng độ trong máu. Nguy cơ cao với rối loạn chuyển hóa CYP2C19"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "IV: thay đổi chất pha (không dùng cyclodextrin)",
+            "under_30": "IV: thay đổi chất pha. PO: không đổi"
+        },
+        "side_effects": [
+            "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng - thường thoáng qua)",
+            "Ban da (phản ứng quang hóa)",
+            "Tăng men gan, suy gan",
+            "Hallucination",
+            "QT kéo dài",
+            "Nhức đầu",
+            "Buồn nôn"
+        ],
+        "interactions": [
+            "Rifampin/Rifabutin: giảm nồng độ voriconazole - tránh dùng",
+            "Carbamazepine/Phenobarbital: giảm nồng độ voriconazole - tránh dùng",
+            "Warfarin: tăng tác dụng chống đông",
+            "Cyclosporine/Tacrolimus: tăng nồng độ",
+            "Phenytoin: giảm nồng độ voriconazole",
+            "Omeprazole: tăng nồng độ omeprazole"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "Nystatin": {
+        "group": "Infectious Disease - Antifungal (Polyene)",
+        "vietnamese_name": "Nystatin, Mycostatin",
+        "administration": ["PO (suspension, tablet)", "Topical"],
+        "indications": [
+            "Nhiễm nấm Candida miệng (oral candidiasis/thrush)",
+            "Nhiễm nấm Candida thực quản",
+            "Nhiễm nấm Candida da (topical)",
+            "Nhiễm nấm Candida âm đạo (topical)"
+        ],
+        "contraindications": [
+            "Dị ứng nystatin"
+        ],
+        "dosage": {
+            "adult_oral_suspension": "400,000-600,000 đơn vị x 4 lần/ngày",
+            "adult_oral_tablet": "500,000-1,000,000 đơn vị x 4 lần/ngày",
+            "adult_topical": "Bôi 2-3 lần/ngày",
+            "notes": "Không hấp thu qua đường tiêu hóa. Chỉ tác dụng tại chỗ. Súc miệng và nuốt (suspension)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn (hiếm, PO)",
+            "Tiêu chảy (hiếm, PO)",
+            "Kích ứng da (hiếm, topical)",
+            "Dị ứng (hiếm)"
+        ],
+        "interactions": [
+            "Rất ít tương tác (không hấp thu hệ thống)"
+        ],
+        "pregnancy": "C - An toàn (không hấp thu)"
+    },
+    
+    # ========== ANTIBIOTICS (COMMON) ==========
+    
+    "Azithromycin": {
+        "group": "Infectious Disease - Macrolide Antibiotic",
+        "vietnamese_name": "Azithromycin, Zithromax",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm trùng đường hô hấp trên (viêm họng, viêm xoang)",
+            "Nhiễm trùng đường hô hấp dưới (viêm phổi, viêm phế quản)",
+            "Nhiễm trùng da và mô mềm",
+            "Chlamydia",
+            "Nhiễm trùng đường tiết niệu không biến chứng"
+        ],
+        "contraindications": [
+            "Dị ứng azithromycin/macrolide",
+            "QT kéo dài",
+            "Rối loạn nhịp tim"
+        ],
+        "dosage": {
+            "adult_respiratory": "500mg x 1 lần/ngày x 3 ngày hoặc 500mg ngày đầu, sau đó 250mg x 1 lần/ngày x 4 ngày",
+            "adult_chlamydia": "1g x 1 lần (đơn liều)",
+            "adult_iv": "500mg x 1 lần/ngày IV",
+            "notes": "Tác dụng kéo dài, uống ít lần hơn erythromycin"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn, tiêu chảy",
+            "Đau bụng",
+            "QT kéo dài",
+            "Loạn nhịp tim (torsades de pointes)",
+            "Rối loạn thính giác (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Digoxin: tăng nồng độ digoxin",
+            "Cyclosporine: tăng nồng độ cyclosporine",
+            "Thuốc QT kéo dài: tăng nguy cơ loạn nhịp"
+        ],
+        "pregnancy": "B"
+    },
+    
+    "Clarithromycin": {
+        "group": "Infectious Disease - Macrolide Antibiotic",
+        "vietnamese_name": "Clarithromycin, Klacid",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm trùng đường hô hấp (viêm phổi, viêm phế quản)",
+            "Nhiễm trùng da và mô mềm",
+            "Tiệt trừ H. pylori (kết hợp)",
+            "Mycobacterium avium complex (MAC)"
+        ],
+        "contraindications": [
+            "Dị ứng clarithromycin/macrolide",
+            "QT kéo dài",
+            "Dùng pimozide, terfenadine, astemizole"
+        ],
+        "dosage": {
+            "adult_respiratory": "250-500mg x 2 lần/ngày x 7-14 ngày",
+            "adult_h_pylori": "500mg x 2 lần/ngày (với amoxicillin + PPI)",
+            "adult_mac": "500mg x 2 lần/ngày",
+            "notes": "Mạnh hơn azithromycin nhưng nhiều tương tác hơn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Giảm liều 50-75%"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Vị kim loại trong miệng",
+            "QT kéo dài",
+            "Rối loạn thính giác (hiếm)"
+        ],
+        "interactions": [
+            "CYP3A4 substrates: tăng đáng kể nồng độ (simvastatin, lovastatin, midazolam)",
+            "Warfarin: tăng tác dụng chống đông",
+            "Digoxin: tăng nồng độ digoxin",
+            "Theophylline: tăng nồng độ theophylline"
+        ],
+        "pregnancy": "C"
+    },
+    
+    "Ciprofloxacin": {
+        "group": "Infectious Disease - Fluoroquinolone Antibiotic",
+        "vietnamese_name": "Ciprofloxacin, Cipro",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm trùng đường tiết niệu (UTI)",
+            "Nhiễm trùng đường hô hấp",
+            "Nhiễm trùng da và mô mềm",
+            "Nhiễm trùng xương và khớp",
+            "Nhiễm trùng ổ bụng",
+            "Tiêu chảy do vi khuẩn"
+        ],
+        "contraindications": [
+            "Dị ứng ciprofloxacin/quinolone",
+            "Có thai",
+            "Trẻ em <18 tuổi (trừ chỉ định đặc biệt)",
+            "QT kéo dài"
+        ],
+        "dosage": {
+            "adult_uti": "250-500mg x 2 lần/ngày x 3-7 ngày",
+            "adult_respiratory": "500-750mg x 2 lần/ngày",
+            "adult_complicated": "400mg IV x 2 lần/ngày",
+            "notes": "Tránh dùng với antacid, sắt, sucralfate (cách 2 giờ)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50%"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Đứt gân Achilles (hiếm nhưng nguy hiểm)",
+            "QT kéo dài",
+            "Rối loạn thần kinh (co giật, lú lẫn)",
+            "Phản ứng quang hóa",
+            "Viêm khớp (trẻ em)"
+        ],
+        "interactions": [
+            "Antacid/Sắt/Sucralfate: giảm hấp thu - cách 2 giờ",
+            "Warfarin: tăng tác dụng chống đông",
+            "Theophylline: tăng nồng độ theophylline",
+            "Cyclosporine: tăng nồng độ cyclosporine"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "Doxycycline": {
+        "group": "Infectious Disease - Tetracycline Antibiotic",
+        "vietnamese_name": "Doxycycline, Vibramycin",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm trùng đường hô hấp",
+            "Nhiễm trùng da (mụn trứng cá)",
+            "Chlamydia",
+            "Lyme disease",
+            "Sốt rét phòng ngừa",
+            "Rickettsia",
+            "Mycoplasma"
+        ],
+        "contraindications": [
+            "Dị ứng doxycycline/tetracycline",
+            "Có thai (3 tháng cuối)",
+            "Trẻ em <8 tuổi (gây vàng răng)"
+        ],
+        "dosage": {
+            "adult_respiratory": "100mg x 2 lần/ngày x 7-14 ngày",
+            "adult_chlamydia": "100mg x 2 lần/ngày x 7 ngày",
+            "adult_acne": "50-100mg x 1-2 lần/ngày",
+            "adult_malaria_prophylaxis": "100mg x 1 lần/ngày",
+            "notes": "Uống với nhiều nước, tránh nằm ngay sau khi uống. Tránh nắng"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn",
+            "Loét thực quản (nếu không uống đủ nước)",
+            "Phản ứng quang hóa (nhạy cảm ánh sáng)",
+            "Vàng răng (trẻ em, có thai)",
+            "Tăng áp lực nội sọ (hiếm)",
+            "Độc gan (liều cao)"
+        ],
+        "interactions": [
+            "Antacid/Sắt/Calcium: giảm hấp thu - cách 2 giờ",
+            "Warfarin: tăng tác dụng chống đông",
+            "Digoxin: tăng nồng độ digoxin",
+            "Phenytoin/Carbamazepine: giảm nồng độ doxycycline"
+        ],
+        "pregnancy": "D - Chống chỉ định trong 3 tháng cuối"
+    },
+    
+    "Metronidazole": {
+        "group": "Infectious Disease - Nitroimidazole Antibiotic",
+        "vietnamese_name": "Metronidazole, Flagyl",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm khuẩn kỵ khí",
+            "Giardia",
+            "Trichomonas",
+            "Amebiasis",
+            "Bacterial vaginosis",
+            "H. pylori (kết hợp)",
+            "C. difficile colitis"
+        ],
+        "contraindications": [
+            "Dị ứng metronidazole",
+            "Có thai (3 tháng đầu)",
+            "Dùng disulfiram trong 14 ngày"
+        ],
+        "dosage": {
+            "adult_anaerobic": "500mg x 3 lần/ngày PO hoặc 500mg mỗi 6-8 giờ IV",
+            "adult_giardia": "250mg x 3 lần/ngày x 7 ngày",
+            "adult_trichomonas": "2g x 1 lần hoặc 500mg x 2 lần/ngày x 7 ngày",
+            "adult_c_diff": "500mg x 3 lần/ngày x 10-14 ngày",
+            "adult_h_pylori": "500mg x 2 lần/ngày (với amoxicillin + PPI)",
+            "notes": "TRÁNH RƯỢU (phản ứng disulfiram-like). Uống với thức ăn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Giảm liều 50%"
+        },
+        "side_effects": [
+            "Vị kim loại trong miệng",
+            "Buồn nôn, nôn",
+            "Đau đầu",
+            "Phản ứng với rượu (nôn, đỏ mặt, nhịp tim nhanh)",
+            "Co giật (liều cao)",
+            "Bệnh thần kinh ngoại biên (dùng lâu dài)",
+            "Ban da"
+        ],
+        "interactions": [
+            "Rượu: phản ứng disulfiram-like (nôn, đỏ mặt) - TRÁNH",
+            "Warfarin: tăng tác dụng chống đông",
+            "Lithium: tăng nồng độ lithium",
+            "Phenytoin: tăng nồng độ phenytoin",
+            "Disulfiram: chống chỉ định"
+        ],
+        "pregnancy": "B - D trong 3 tháng đầu"
+    },
+    
+    # ========== VITAMINS/SUPPLEMENTS ==========
+    
+    "Vitamin D": {
+        "group": "Vitamins/Supplements - Vitamin D",
+        "vietnamese_name": "Vitamin D, Cholecalciferol (D3), Ergocalciferol (D2)",
+        "administration": ["PO"],
+        "indications": [
+            "Thiếu vitamin D",
+            "Còi xương",
+            "Loãng xương (kết hợp với calcium)",
+            "Dự phòng thiếu vitamin D",
+            "Suy giảm chức năng thận (cần dạng hoạt hóa)"
+        ],
+        "contraindications": [
+            "Tăng calci máu",
+            "Tăng calci niệu",
+            "Sỏi thận calci",
+            "Quá liều vitamin D"
+        ],
+        "dosage": {
+            "adult_deficiency": "1,000-2,000 IU x 1 lần/ngày hoặc 50,000 IU x 1 lần/tuần x 8 tuần",
+            "adult_maintenance": "600-800 IU x 1 lần/ngày",
+            "adult_deficiency_severe": "50,000 IU x 1 lần/tuần x 8 tuần, sau đó 1,500-2,000 IU/ngày",
+            "adult_osteoporosis": "800-1,200 IU/ngày (kết hợp với calcium)",
+            "notes": "D3 (cholecalciferol) hiệu quả hơn D2. Theo dõi nồng độ 25(OH)D trong máu"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Có thể cần dạng hoạt hóa (calcitriol)",
+            "under_30": "Dùng calcitriol (dạng hoạt hóa) thay vì vitamin D thường"
+        },
+        "side_effects": [
+            "Tăng calci máu (quá liều)",
+            "Tăng calci niệu",
+            "Sỏi thận",
+            "Buồn nôn, nôn (liều cao)",
+            "Táo bón"
+        ],
+        "interactions": [
+            "Calcium: tăng hấp thu calcium",
+            "Thiazide diuretics: tăng nguy cơ tăng calci máu",
+            "Corticosteroid: giảm hấp thu vitamin D",
+            "Cholestyramine: giảm hấp thu vitamin D"
+        ],
+        "pregnancy": "A - An toàn, cần thiết cho thai kỳ"
+    },
+    
+    "Vitamin B12": {
+        "group": "Vitamins/Supplements - Vitamin B12",
+        "vietnamese_name": "Vitamin B12, Cyanocobalamin, Methylcobalamin",
+        "administration": ["PO", "IM", "SC"],
+        "indications": [
+            "Thiếu vitamin B12",
+            "Thiếu máu hồng cầu to",
+            "Bệnh thần kinh do thiếu B12",
+            "Dự phòng thiếu B12",
+            "Sau phẫu thuật cắt dạ dày"
+        ],
+        "contraindications": [
+            "Dị ứng vitamin B12/cobalt",
+            "Leber's disease (thoái hóa thần kinh thị giác di truyền)"
+        ],
+        "dosage": {
+            "adult_po": "1,000-2,000mcg x 1 lần/ngày",
+            "adult_im_loading": "1,000mcg IM mỗi ngày x 1 tuần, sau đó mỗi tuần x 4 tuần",
+            "adult_im_maintenance": "1,000mcg IM mỗi tháng",
+            "adult_deficiency_severe": "1,000mcg IM mỗi ngày x 1-2 tuần, sau đó mỗi tuần x 4 tuần",
+            "notes": "IM cho thiếu máu nặng. PO cho thiếu nhẹ hoặc dự phòng"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Phản ứng tại chỗ tiêm (IM)",
+            "Ban da (hiếm)",
+            "Phản ứng dị ứng (hiếm)",
+            "Tăng đông máu (liều rất cao)"
+        ],
+        "interactions": [
+            "Acid folic: che dấu thiếu B12",
+            "Chloramphenicol: giảm đáp ứng với B12",
+            "Metformin: giảm nồng độ B12 (dùng lâu dài)",
+            "PPI/H2 blocker: giảm hấp thu B12"
+        ],
+        "pregnancy": "A - An toàn, cần thiết"
+    },
+    
+    "Folic acid": {
+        "group": "Vitamins/Supplements - Folate",
+        "vietnamese_name": "Folic acid, Folate, Vitamin B9",
+        "administration": ["PO"],
+        "indications": [
+            "Thiếu acid folic",
+            "Thiếu máu hồng cầu to do thiếu folate",
+            "Dự phòng dị tật ống thần kinh (có thai)",
+            "Dự phòng thiếu máu",
+            "Điều trị methotrexate độc tính"
+        ],
+        "contraindications": [
+            "Dị ứng acid folic",
+            "Ung thư (trừ khi điều trị thiếu máu do hóa trị)"
+        ],
+        "dosage": {
+            "adult_deficiency": "1-5mg x 1 lần/ngày",
+            "adult_pregnancy": "400-800mcg x 1 lần/ngày (bắt đầu trước khi có thai)",
+            "adult_maintenance": "400mcg x 1 lần/ngày",
+            "adult_methotrexate": "1-5mg x 1 lần/ngày (sau khi dùng methotrexate)",
+            "notes": "Uống trước khi có thai ít nhất 1 tháng để dự phòng dị tật ống thần kinh"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Rất ít tác dụng phụ",
+            "Ban da (hiếm)",
+            "Phản ứng dị ứng (hiếm)"
+        ],
+        "interactions": [
+            "Methotrexate: giảm hiệu quả methotrexate (trừ khi dùng để điều trị độc tính)",
+            "Phenytoin: giảm nồng độ phenytoin",
+            "Chloramphenicol: giảm đáp ứng với acid folic",
+            "Sulfasalazine: giảm hấp thu acid folic"
+        ],
+        "pregnancy": "A - An toàn, cần thiết (dự phòng dị tật ống thần kinh)"
+    },
+    
+    "Iron": {
+        "group": "Vitamins/Supplements - Iron",
+        "vietnamese_name": "Iron, Ferrous sulfate, Ferrous fumarate, Ferrous gluconate",
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Thiếu máu thiếu sắt",
+            "Dự phòng thiếu sắt",
+            "Có thai (dự phòng)",
+            "Chảy máu mạn tính",
+            "Sau phẫu thuật"
+        ],
+        "contraindications": [
+            "Thừa sắt (hemochromatosis)",
+            "Thiếu máu không do thiếu sắt",
+            "Viêm loét dạ dày tá tràng nặng",
+            "Viêm ruột"
+        ],
+        "dosage": {
+            "adult_po_ferrous_sulfate": "325mg (65mg sắt nguyên tố) x 1-3 lần/ngày",
+            "adult_po_ferrous_fumarate": "200mg (66mg sắt nguyên tố) x 2-3 lần/ngày",
+            "adult_po_ferrous_gluconate": "300mg (35mg sắt nguyên tố) x 3 lần/ngày",
+            "adult_pregnancy": "30-60mg sắt nguyên tố/ngày",
+            "adult_iv": "100-200mg IV mỗi ngày hoặc theo phác đồ",
+            "notes": "Uống khi bụng đói (1 giờ trước bữa ăn) để tăng hấp thu. Uống với vitamin C"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng (tăng nguy cơ tích tụ sắt)"
+        },
+        "side_effects": [
+            "Táo bón",
+            "Phân đen (không nguy hiểm)",
+            "Buồn nôn, nôn",
+            "Đau bụng",
+            "Tiêu chảy",
+            "Kích ứng dạ dày",
+            "Phản ứng dị ứng (IV)",
+            "Quá tải sắt (dùng lâu dài, liều cao)"
+        ],
+        "interactions": [
+            "Antacid/PPI/H2 blocker: giảm hấp thu sắt",
+            "Tetracycline/Quinolone: giảm hấp thu cả hai",
+            "Thyroxine: giảm hấp thu thyroxine",
+            "Chloramphenicol: giảm đáp ứng với sắt",
+            "Vitamin C: tăng hấp thu sắt"
+        ],
+        "pregnancy": "A - An toàn, cần thiết"
+    },
+    
+    "Calcium": {
+        "group": "Vitamins/Supplements - Calcium",
+        "vietnamese_name": "Calcium, Calcium carbonate, Calcium citrate",
+        "administration": ["PO"],
+        "indications": [
+            "Thiếu calci",
+            "Loãng xương (kết hợp với vitamin D)",
+            "Hạ calci máu",
+            "Dự phòng loãng xương",
+            "Có thai, cho con bú"
+        ],
+        "contraindications": [
+            "Tăng calci máu",
+            "Tăng calci niệu",
+            "Sỏi thận calci",
+            "Suy thận nặng",
+            "Suy tim (calcium carbonate)"
+        ],
+        "dosage": {
+            "adult_daily_requirement": "1,000-1,200mg nguyên tố calci/ngày",
+            "adult_calcium_carbonate": "500-1,000mg x 2-3 lần/ngày (40% nguyên tố calci)",
+            "adult_calcium_citrate": "500-1,000mg x 2-3 lần/ngày (21% nguyên tố calci)",
+            "adult_hypocalcemia": "1-2g nguyên tố calci/ngày chia 2-3 lần",
+            "adult_osteoporosis": "1,000-1,200mg nguyên tố calci/ngày (với vitamin D)",
+            "notes": "Calcium citrate hấp thu tốt hơn, không cần acid dạ dày. Uống với thức ăn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng hoặc giảm liều (tăng nguy cơ tăng calci máu)"
+        },
+        "side_effects": [
+            "Táo bón",
+            "Đầy hơi",
+            "Buồn nôn",
+            "Tăng calci máu (quá liều)",
+            "Sỏi thận (quá liều)",
+            "Giảm hấp thu sắt, kẽm"
+        ],
+        "interactions": [
+            "Sắt: giảm hấp thu sắt - cách 2 giờ",
+            "Tetracycline/Quinolone: giảm hấp thu kháng sinh - cách 2 giờ",
+            "Thyroxine: giảm hấp thu thyroxine - cách 4 giờ",
+            "Digoxin: tăng nguy cơ loạn nhịp",
+            "Thiazide diuretics: tăng nguy cơ tăng calci máu",
+            "Vitamin D: tăng hấp thu calci"
+        ],
+        "pregnancy": "A - An toàn, cần thiết"
+    },
+    
+    # ========== ANTI-INFECTIVES (OTHER) ==========
+    
+    "Chloroquine": {
+        "group": "Infectious Disease - Antimalarial",
+        "vietnamese_name": "Chloroquine, Aralen",
+        "administration": ["PO"],
+        "indications": [
+            "Sốt rét (phòng ngừa và điều trị)",
+            "Amebiasis ngoài gan",
+            "Lupus ban đỏ hệ thống",
+            "Viêm khớp dạng thấp"
+        ],
+        "contraindications": [
+            "Dị ứng chloroquine/4-aminoquinoline",
+            "Bệnh võng mạc",
+            "Bệnh gan nặng",
+            "Bệnh thận nặng",
+            "Rối loạn tạo máu"
+        ],
+        "dosage": {
+            "adult_malaria_treatment": "600mg base (1g phosphate) ngày đầu, sau đó 300mg base (500mg phosphate) sau 6-8 giờ, sau đó 300mg base/ngày x 2 ngày",
+            "adult_malaria_prophylaxis": "300mg base (500mg phosphate) x 1 lần/tuần, bắt đầu 1-2 tuần trước khi đi, tiếp tục trong khi ở và 4 tuần sau khi về",
+            "adult_lupus": "200-400mg base/ngày",
+            "notes": "Rất độc cho võng mạc nếu dùng lâu dài. Theo dõi mắt định kỳ"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Tránh dùng"
+        },
+        "side_effects": [
+            "Độc võng mạc (dùng lâu dài, không hồi phục)",
+            "Rối loạn thị giác",
+            "Ban da, rụng tóc",
+            "Rối loạn tạo máu",
+            "Rối loạn tim mạc (liều cao)",
+            "Co giật (quá liều)",
+            "Độc gan"
+        ],
+        "interactions": [
+            "Digoxin: tăng nồng độ digoxin",
+            "Cimetidine: tăng nồng độ chloroquine",
+            "Ampicillin: giảm hấp thu ampicillin",
+            "Kaolin: giảm hấp thu chloroquine"
+        ],
+        "pregnancy": "C - Thận trọng, nhưng có thể dùng cho sốt rét"
+    },
+    
+    "Artesunate": {
+        "group": "Infectious Disease - Antimalarial (Artemisinin)",
+        "vietnamese_name": "Artesunate",
+        "administration": ["PO", "IV", "IM", "Rectal"],
+        "indications": [
+            "Sốt rét nặng (severe malaria)",
+            "Sốt rét kháng chloroquine",
+            "Sốt rét sốt rét P. falciparum",
+            "Điều trị kết hợp sốt rét (ACT)"
+        ],
+        "contraindications": [
+            "Dị ứng artesunate/artemisinin",
+            "3 tháng đầu thai kỳ (trừ sốt rét nặng)",
+            "Dùng đơn độc (phải dùng kết hợp)"
+        ],
+        "dosage": {
+            "adult_severe_iv": "2.4mg/kg IV ngay, sau đó 1.2mg/kg sau 12 và 24 giờ, sau đó mỗi ngày",
+            "adult_po": "200mg ngày đầu, sau đó 100mg x 1 lần/ngày x 5 ngày (với artemether-lumefantrine)",
+            "adult_act": "Theo phác đồ ACT (artesunate + amodiaquine/ mefloquine/piperaquine)",
+            "notes": "PHẢI dùng kết hợp với thuốc sốt rét khác (ACT). Không dùng đơn độc"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Chóng mặt",
+            "Buồn nôn",
+            "Rối loạn tiêu hóa",
+            "Nhịp tim chậm (hiếm)",
+            "Độc tính thần kinh (dùng lâu dài, liều cao - hiếm)"
+        ],
+        "interactions": [
+            "Thuốc sốt rét khác: dùng kết hợp (ACT protocol)",
+            "Warfarin: có thể tăng tác dụng chống đông",
+            "CYP2A6 substrates: có thể tăng nồng độ"
+        ],
+        "pregnancy": "D - Tránh trong 3 tháng đầu (trừ sốt rét nặng)"
+    },
+    
+    "Albendazole": {
+        "group": "Infectious Disease - Anthelmintic",
+        "vietnamese_name": "Albendazole, Albenza",
+        "administration": ["PO"],
+        "indications": [
+            "Giun sán (giun đũa, giun móc, giun tóc, giun kim)",
+            "Sán dây",
+            "Sán lá gan",
+            "Hydatid disease (Echinococcus)",
+            "Neurocysticercosis"
+        ],
+        "contraindications": [
+            "Dị ứng albendazole/benzimidazole",
+            "Có thai",
+            "Suy gan nặng",
+            "Giảm bạch cầu"
+        ],
+        "dosage": {
+            "adult_intestinal_worms": "400mg x 1 lần (đơn liều) hoặc 400mg x 2 lần/ngày x 3 ngày",
+            "adult_echinococcus": "400mg x 2 lần/ngày x 28 ngày (có thể lặp lại)",
+            "adult_neurocysticercosis": "400mg x 2 lần/ngày x 8-30 ngày",
+            "adult_hydatid": "10-15mg/kg/ngày x 28 ngày",
+            "notes": "Uống với thức ăn béo để tăng hấp thu. Uống kèm corticosteroid cho neurocysticercosis"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Đau đầu",
+            "Buồn nôn, nôn",
+            "Đau bụng",
+            "Tiêu chảy",
+            "Giảm bạch cầu",
+            "Tăng men gan",
+            "Ban da",
+            "Rụng tóc (dùng lâu dài)"
+        ],
+        "interactions": [
+            "Dexamethasone: tăng nồng độ albendazole",
+            "Praziquantel: tăng nồng độ albendazole",
+            "Cimetidine: tăng nồng độ albendazole",
+            "Phenytoin/Carbamazepine: giảm nồng độ albendazole"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "Mebendazole": {
+        "group": "Infectious Disease - Anthelmintic",
+        "vietnamese_name": "Mebendazole, Vermox",
+        "administration": ["PO"],
+        "indications": [
+            "Giun sán (giun đũa, giun móc, giun tóc, giun kim)",
+            "Sán dây",
+            "Trichinosis"
+        ],
+        "contraindications": [
+            "Dị ứng mebendazole/benzimidazole",
+            "Có thai",
+            "Trẻ em <1 tuổi"
+        ],
+        "dosage": {
+            "adult_intestinal_worms": "100mg x 2 lần/ngày x 3 ngày",
+            "adult_pinworm": "100mg x 1 lần (đơn liều), lặp lại sau 2-3 tuần",
+            "adult_whipworm": "100mg x 2 lần/ngày x 3 ngày",
+            "adult_tapeworm": "100mg x 2 lần/ngày x 3 ngày",
+            "notes": "Uống với thức ăn hoặc không đều được. Không hấp thu tốt nên ít tác dụng phụ hệ thống"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Đau bụng",
+            "Tiêu chảy",
+            "Buồn nôn",
+            "Ban da",
+            "Giảm bạch cầu (dùng lâu dài, liều cao)",
+            "Độc gan (hiếm)"
+        ],
+        "interactions": [
+            "Cimetidine: có thể tăng nồng độ mebendazole",
+            "Carbamazepine/Phenytoin: có thể giảm nồng độ mebendazole"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    # ========== ENDOCRINOLOGY ==========
+    
+    "Levothyroxine": {
+        "group": "Endocrinology - Thyroid Hormone",
+        "vietnamese_name": "Levothyroxine, Synthroid, Euthyrox, Thyroxine",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Suy giáp (hypothyroidism)",
+            "Suy giáp bẩm sinh",
+            "Bướu cổ (goiter)",
+            "Myxedema coma (IV)",
+            "Ức chế TSH sau điều trị ung thư tuyến giáp"
+        ],
+        "contraindications": [
+            "Cường giáp không điều trị",
+            "Nhồi máu cơ tim cấp",
+            "Viêm cơ tim cấp",
+            "Dị ứng levothyroxine"
+        ],
+        "dosage": {
+            "adult_start": "25-50mcg x 1 lần/ngày (sáng đói, trước ăn 30-60 phút)",
+            "adult_usual": "75-150mcg x 1 lần/ngày",
+            "adult_elderly": "Bắt đầu 12.5-25mcg/ngày, tăng dần",
+            "adult_cardiac": "Bắt đầu 12.5-25mcg/ngày",
+            "adult_myxedema_coma": "200-500mcg IV x 1 lần, sau đó 50-100mcg/ngày",
+            "notes": "Uống sáng đói, cách xa thức ăn, thuốc khác ít nhất 30-60 phút"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Dấu hiệu cường giáp (quá liều): tim đập nhanh, lo âu, mất ngủ, đổ mồ hôi",
+            "Đau ngực",
+            "Nhức đầu",
+            "Rối loạn kinh nguyệt",
+            "Rụng tóc (tạm thời)",
+            "Loạn nhịp tim (quá liều)"
+        ],
+        "interactions": [
+            "Calcium/Sắt/Antacid: giảm hấp thu - cách 4 giờ",
+            "Cholestyramine: giảm hấp thu - cách 4 giờ",
+            "Warfarin: tăng tác dụng chống đông (điều chỉnh liều warfarin)",
+            "Digoxin: có thể cần tăng liều digoxin",
+            "Insulin/Oral hypoglycemics: có thể cần điều chỉnh liều",
+            "Estrogen: có thể cần tăng liều levothyroxine"
+        ],
+        "pregnancy": "A - An toàn, cần thiết cho thai kỳ"
+    },
+    
+    "Methimazole": {
+        "group": "Endocrinology - Antithyroid (Thionamide)",
+        "vietnamese_name": "Methimazole, Tapazole",
+        "administration": ["PO"],
+        "indications": [
+            "Cường giáp (hyperthyroidism)",
+            "Bệnh Graves",
+            "Bướu cổ độc (toxic goiter)",
+            "Chuẩn bị trước phẫu thuật tuyến giáp",
+            "Điều trị cường giáp trước phóng xạ iod"
+        ],
+        "contraindications": [
+            "Dị ứng methimazole",
+            "Có thai (3 tháng đầu - dùng PTU)",
+            "Đang cho con bú (ưu tiên PTU)",
+            "Giảm bạch cầu nặng"
+        ],
+        "dosage": {
+            "adult_mild": "15-30mg/ngày chia 1-3 lần",
+            "adult_moderate": "30-45mg/ngày chia 2-3 lần",
+            "adult_severe": "40-60mg/ngày chia 2-3 lần",
+            "adult_maintenance": "5-15mg/ngày chia 1-2 lần",
+            "notes": "Khởi đầu với liều cao, giảm dần khi đạt bình giáp. Điều trị 12-18 tháng"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Giảm bạch cầu, giảm tiểu cầu (nguy hiểm - theo dõi công thức máu)",
+            "Phát ban",
+            "Ngứa",
+            "Đau khớp",
+            "Rối loạn vị giác",
+            "Độc gan (hiếm nhưng nguy hiểm)",
+            "Agranulocytosis (mất bạch cầu - hiếm nhưng nguy hiểm)"
+        ],
+        "interactions": [
+            "Warfarin: có thể cần giảm liều warfarin (khi đạt bình giáp)",
+            "Digoxin: có thể cần giảm liều digoxin"
+        ],
+        "pregnancy": "D - Tránh trong 3 tháng đầu (dùng PTU). Thận trọng sau đó"
+    },
+    
+    "Propylthiouracil": {
+        "group": "Endocrinology - Antithyroid (Thionamide)",
+        "vietnamese_name": "Propylthiouracil, PTU",
+        "administration": ["PO"],
+        "indications": [
+            "Cường giáp (hyperthyroidism)",
+            "Bệnh Graves",
+            "Bướu cổ độc",
+            "Có thai (3 tháng đầu - ưu tiên hơn methimazole)",
+            "Cường giáp cấp (thyroid storm)"
+        ],
+        "contraindications": [
+            "Dị ứng propylthiouracil",
+            "Giảm bạch cầu nặng",
+            "Đang cho con bú (có thể dùng)"
+        ],
+        "dosage": {
+            "adult_mild": "100-150mg x 3 lần/ngày",
+            "adult_moderate": "150-200mg x 3 lần/ngày",
+            "adult_severe": "200-300mg x 3-4 lần/ngày",
+            "adult_storm": "200-300mg x 4 lần/ngày",
+            "adult_maintenance": "50-150mg/ngày chia 1-3 lần",
+            "notes": "Ưu tiên hơn methimazole trong 3 tháng đầu thai kỳ. Nhiều tác dụng phụ gan hơn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Độc gan (cao hơn methimazole, có thể suy gan cấp)",
+            "Giảm bạch cầu, agranulocytosis",
+            "Phát ban",
+            "Ngứa",
+            "Đau khớp",
+            "Vasculitis (hiếm)",
+            "Lupus-like syndrome (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: có thể cần giảm liều warfarin",
+            "Digoxin: có thể cần giảm liều digoxin"
+        ],
+        "pregnancy": "D - An toàn hơn methimazole trong 3 tháng đầu, nhưng vẫn thận trọng"
+    },
+    
+    "Prednisone": {
+        "group": "Endocrinology - Corticosteroid (Glucocorticoid)",
+        "vietnamese_name": "Prednisone, Deltasone",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm khớp dạng thấp",
+            "Hen phế quản nặng",
+            "COPD đợt cấp",
+            "Lupus ban đỏ hệ thống",
+            "Viêm mạch máu",
+            "Bệnh viêm ruột",
+            "Dị ứng nặng",
+            "Ung thư (kết hợp hóa trị)",
+            "Ức chế miễn dịch",
+            "Suy thượng thận"
+        ],
+        "contraindications": [
+            "Nhiễm trùng nặng chưa điều trị",
+            "Nhiễm nấm hệ thống",
+            "Loét dạ dày tá tràng đang hoạt động",
+            "Suy tim nặng",
+            "Tăng huyết áp không kiểm soát"
+        ],
+        "dosage": {
+            "adult_antiinflammatory": "5-60mg/ngày chia 1-4 lần",
+            "adult_immunosuppression": "1-2mg/kg/ngày",
+            "adult_asthma_exacerbation": "40-60mg/ngày x 5-7 ngày",
+            "adult_copd_exacerbation": "30-40mg/ngày x 10-14 ngày",
+            "adult_rheumatoid": "5-10mg/ngày",
+            "adult_adrenal_insufficiency": "5-7.5mg/ngày",
+            "notes": "Giảm liều dần dần khi ngừng (tránh suy thượng thận). Uống với thức ăn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Tăng đường huyết",
+            "Tăng huyết áp",
+            "Loãng xương",
+            "Hoại tử xương",
+            "Loét dạ dày",
+            "Tăng cân",
+            "Giữ nước",
+            "Yếu cơ",
+            "Ức chế miễn dịch (tăng nguy cơ nhiễm trùng)",
+            "Ức chế trục hạ đồi-tuyến yên-thượng thận",
+            "Đục thủy tinh thể",
+            "Tăng nhãn áp"
+        ],
+        "interactions": [
+            "Warfarin: tăng/giảm tác dụng chống đông (thay đổi)",
+            "Insulin/Oral hypoglycemics: tăng đường huyết - cần điều chỉnh",
+            "Thuốc hạ huyết áp: giảm hiệu quả",
+            "Diuretics: tăng mất kali",
+            "NSAID: tăng nguy cơ loét dạ dày",
+            "Vaccine sống: chống chỉ định",
+            "Rifampin: giảm nồng độ prednisone"
+        ],
+        "pregnancy": "C - Thận trọng"
+    },
 }
 
 # Drug groups for filtering
 DRUG_GROUPS = {
     "Cardiovascular": [
         "Captopril", "Enalapril", "Lisinopril", "Losartan",
-        "Metoprolol", "Propranolol", "Amlodipine",
+        "Metoprolol", "Propranolol", "Amlodipine", "Nifedipine", "Diltiazem", "Verapamil",
         "Furosemide", "Hydrochlorothiazide",
         "Amiodarone", "Digoxin",
         "Warfarin", "Aspirin", "Clopidogrel", "Ticagrelor", "Prasugrel", "Ticlopidine", "Dipyridamole",
-        "Atorvastatin", "Simvastatin"
+        "Atorvastatin", "Simvastatin",
+        "Isosorbide mononitrate"
     ],
     "Diabetes": [
-        "Metformin", "Glibenclamide", "Gliclazide", "Insulin"
+        "Metformin", "Glibenclamide", "Gliclazide", "Insulin",
+        "Empagliflozin", "Dapagliflozin", "Sitagliptin", "Vildagliptin", "Pioglitazone"
     ],
     "Gastrointestinal": [
         "Omeprazole", "Pantoprazole", "Ranitidine",
-        "Metoclopramide", "Loperamide"
+        "Metoclopramide", "Loperamide",
+        "Domperidone", "Ondansetron", "Lansoprazole", "Esomeprazole", "Sucralfate"
     ],
     "Analgesics": [
-        "Paracetamol", "Ibuprofen", "Tramadol"
+        "Paracetamol", "Ibuprofen", "Tramadol",
+        "Naproxen", "Diclofenac", "Morphine", "Codeine", "Sumatriptan"
     ],
     "Respiratory": [
-        "Salbutamol"
+        "Salbutamol", "Salmeterol", "Ipratropium", "Tiotropium",
+        "Budesonide inhaled", "Fluticasone inhaled"
     ],
     "Neurology/Psychiatry": [
         "Carbamazepine", "Fluoxetine", "Sertraline", "Citalopram", "Escitalopram", "Venlafaxine", "Amitriptyline",
@@ -2385,8 +4453,17 @@ DRUG_GROUPS = {
     "Allergy": [
         "Loratadine", "Cetirizine", "Fexofenadine", "Desloratadine", "Levocetirizine"
     ],
+    "Vitamins/Supplements": [
+        "Vitamin D", "Vitamin B12", "Folic acid", "Iron", "Calcium"
+    ],
+    "Anti-infectives": [
+        "Chloroquine", "Artesunate", "Albendazole", "Mebendazole"
+    ],
+    "Endocrinology": [
+        "Levothyroxine", "Methimazole", "Propylthiouracil", "Prednisone"
+    ],
     "Other": [
-        "Allopurinol", "Prednisolone", "Folic Acid"
+        "Allopurinol", "Prednisolone"
     ]
 }
 

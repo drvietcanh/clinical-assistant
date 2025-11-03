@@ -1,15 +1,30 @@
 # 📊 Clinical Assistant - Progress & Tasks
 
-**Last Updated:** 2025-02-02 (Session 10)  
-**Status:** ✅ Active - Drug Database Expansion In Progress  
-**Version:** 2.6.0  
-**Current Focus:** Expanding Drug Database to 150+ drugs
+**Last Updated:** 2025-02-02 (Session 11)  
+**Status:** ✅ Active - Drug Database Expansion Complete  
+**Version:** 2.7.0  
+**Current Focus:** Drug Database expanded to 109 drugs
 
 ---
 
 ## 🎯 Current Session Summary
 
-### **Session 10 - 2025-02-02** (Drug Database Expansion - Subtasks)
+### **Session 11 - 2025-02-02** (Drug Database Expansion - Batch 2)
+- ✅ **Subtask 2a** - Added 4 Cardiovascular drugs (Nifedipine, Diltiazem, Verapamil, Isosorbide mononitrate)
+- ✅ **Subtask 2b** - Added 5 Diabetes drugs (Empagliflozin, Dapagliflozin, Sitagliptin, Vildagliptin, Pioglitazone)
+- ✅ **Subtask 2c** - Added 5 Respiratory drugs (Salmeterol, Ipratropium, Tiotropium, Budesonide inhaled, Fluticasone inhaled)
+- ✅ **Subtask 2d** - Added 5 Analgesics (Naproxen, Diclofenac, Morphine, Codeine, Sumatriptan)
+- ✅ **Subtask 2e** - Added 4 Antifungals (Fluconazole, Itraconazole, Voriconazole, Nystatin)
+- ✅ **Subtask 2f** - Added 5 Gastrointestinal drugs (Domperidone, Ondansetron, Lansoprazole, Esomeprazole, Sucralfate)
+- ✅ **Subtask 2g** - Added 5 Antibiotics (Azithromycin, Clarithromycin, Ciprofloxacin, Doxycycline, Metronidazole)
+- ✅ **Subtask 2h** - Added 5 Vitamins/Supplements (Vitamin D, B12, Folic acid, Iron, Calcium)
+- ✅ **Subtask 2i** - Added 4 Anti-infectives (Chloroquine, Artesunate, Albendazole, Mebendazole)
+- ✅ **Subtask 2j** - Added 4 Endocrinology drugs (Levothyroxine, Methimazole, Propylthiouracil, Prednisone)
+
+**Total Added:** 46 new drugs  
+**Current Database:** 109 drugs (from 69 → 109)
+
+### **Session 10 - 2025-02-02** (Drug Database Expansion - Batch 1)
 - ✅ **Subtask 1a** - Added 4 Antiplatelets (Ticagrelor, Prasugrel, Ticlopidine, Dipyridamole)
 - ✅ **Subtask 1b** - Added 5 Antidepressants (Sertraline, Citalopram, Escitalopram, Venlafaxine, Amitriptyline)
 - ✅ **Subtask 1c** - Added 6 Anticonvulsants (Phenytoin, Valproate, Levetiracetam, Lamotrigine, Gabapentin, Pregabalin)
@@ -18,7 +33,7 @@
 - ✅ **Subtask 1f** - Added 5 Antivirals (Acyclovir, Valacyclovir, Oseltamivir, Ganciclovir, Ribavirin)
 
 **Total Added:** 29 new drugs  
-**Current Database:** ~69 drugs (from ~40)
+**Previous Database:** ~69 drugs
 
 ### **Session 9 - 2025-02-02** (Drug Database Expansion)
 - ✅ **Drug Database** - 100+ thuốc phổ biến với đầy đủ thông tin
