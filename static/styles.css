@@ -1,6 +1,6 @@
 /* Clinical Assistant - Modern Design System */
 
-/* Color Scheme */
+/* Light Mode (Default) */
 :root {
     --primary: #1976d2;
     --primary-dark: #1565c0;
@@ -15,6 +15,35 @@
     --border: #e0e0e0;
     --shadow: rgba(0, 0, 0, 0.1);
     --shadow-hover: rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --primary: #64b5f6;
+    --primary-dark: #42a5f5;
+    --success: #81c784;
+    --warning: #ffb74d;
+    --error: #e57373;
+    --info: #64b5f6;
+    --background: #121212;
+    --card-bg: #1e1e1e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --border: #333333;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow-hover: rgba(0, 0, 0, 0.5);
+}
+
+/* Apply theme to body */
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main app container */
+.main {
+    background-color: var(--background);
 }
 
 /* Main title */
@@ -175,8 +204,13 @@ div[data-baseweb="notification"] {
 
 /* Sidebar */
 [data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+    background-color: var(--card-bg);
     border-right: 1px solid var(--border);
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] [data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #1e1e1e 0%, #2a2a2a 100%);
 }
 
 /* Hide Streamlit branding */
@@ -219,7 +253,52 @@ header[data-testid="stHeader"] {visibility: hidden;}
 
 /* Smooth transitions */
 * {
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Streamlit elements dark mode */
+[data-theme="dark"] .stTextInput>div>div>input {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .stSelectbox>div>div {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .stExpander {
+    background-color: var(--card-bg);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] [data-testid="stHeader"] {
+    background-color: var(--card-bg);
 }
 
 /* Mobile responsive */

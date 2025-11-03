@@ -976,10 +976,22 @@ def render_dosing_calculator():
     
     # Integration with eGFR calculator
     st.markdown("---")
-    st.info("""
-    **🔗 Tích hợp với eGFR Calculator:**
-    - Tính eGFR/GFR đầy đủ với nhiều công thức tại trang **Calculators** → **eGFR/GFR Calculator**
-    - Tự động chuyển đổi giữa eGFR chuẩn hóa và GFR tuyệt đối
-    - Hỗ trợ tính BSA và điều chỉnh cho bệnh nhân béo phì/gầy
-    """)
+    
+    # Link to database view
+    col1, col2 = st.columns(2)
+    with col1:
+        st.info("""
+        **🔗 Tích hợp với eGFR Calculator:**
+        - Tính eGFR/GFR đầy đủ với nhiều công thức tại trang **Calculators** → **eGFR/GFR Calculator**
+        - Tự động chuyển đổi giữa eGFR chuẩn hóa và GFR tuyệt đối
+        - Hỗ trợ tính BSA và điều chỉnh cho bệnh nhân béo phì/gầy
+        """)
+    
+    with col2:
+        st.info("""
+        **📖 Tra Cứu Kháng Sinh:**
+        - Xem thông tin đầy đủ về kháng sinh đã chọn
+        - Tính liều nhanh ngay trong trang tra cứu
+        - Dùng **"🔍 Tra Cứu & Dữ Liệu Kháng Sinh"** ở menu
+        """)
 

@@ -39,11 +39,35 @@ if 'recently_used' not in st.session_state:
 if 'total_calculations' not in st.session_state:
     st.session_state.total_calculations = 0
 
+# ========== DARK MODE STATE ==========
+if 'dark_mode' not in st.session_state:
+    st.session_state.dark_mode = False
+
 # ========== LOAD CUSTOM CSS ==========
 css_file = Path(__file__).parent / "static" / "styles.css"
 if css_file.exists():
     with open(css_file, "r", encoding="utf-8") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# Apply dark mode
+if st.session_state.dark_mode:
+    st.markdown(
+        """
+        <script>
+        document.documentElement.setAttribute('data-theme', 'dark');
+        </script>
+        """,
+        unsafe_allow_html=True
+    )
+else:
+    st.markdown(
+        """
+        <script>
+        document.documentElement.setAttribute('data-theme', 'light');
+        </script>
+        """,
+        unsafe_allow_html=True
+    )
 
 # ========== HEADER ==========
 col1, col2 = st.columns([3, 1])
@@ -53,9 +77,11 @@ with col1:
     st.markdown('<p class="subtitle">Hệ thống công cụ hỗ trợ lâm sàng toàn diện</p>', unsafe_allow_html=True)
 
 with col2:
-    # Placeholder for hospital logo
-    # st.image("assets/logo.png", width=150)
-    pass
+    # Dark mode toggle
+    dark_mode_label = "🌙 Dark" if not st.session_state.dark_mode else "☀️ Light"
+    if st.button(dark_mode_label, key="dark_mode_toggle"):
+        st.session_state.dark_mode = not st.session_state.dark_mode
+        st.rerun()
 
 st.markdown("---")
 
