@@ -208,6 +208,57 @@ def display_drug_info(drug_name, drug_data):
             desc = preg_descriptions.get(preg, "")
             st.markdown(f"### 🤰 **An toàn thai kỳ:** {preg} - {desc}")
         
+        # Black Box Warnings (nếu có)
+        if 'black_box_warnings' in drug_data:
+            st.markdown("---")
+            st.error(f"### ⚠️ **CẢNH BÁO ĐEN (Black Box Warning):**\n\n{drug_data['black_box_warnings']}")
+        
+        # Mechanism of Action
+        if 'mechanism_of_action' in drug_data:
+            st.markdown("---")
+            st.markdown("### 🔬 Cơ chế tác động:")
+            st.info(drug_data['mechanism_of_action'])
+        
+        # Monitoring
+        if 'monitoring' in drug_data:
+            st.markdown("---")
+            st.markdown("### 📊 Theo dõi (Monitoring):")
+            for mon in drug_data['monitoring']:
+                st.markdown(f"- {mon}")
+        
+        # Precautions
+        if 'precautions' in drug_data:
+            st.markdown("---")
+            st.markdown("### ⚠️ Thận trọng:")
+            for prec in drug_data['precautions']:
+                st.markdown(f"- {prec}")
+        
+        # Pharmacokinetics
+        if 'pharmacokinetics' in drug_data:
+            st.markdown("---")
+            st.markdown("### 📈 Dược động học (Pharmacokinetics):")
+            pk = drug_data['pharmacokinetics']
+            pk_data = []
+            if 'half_life' in pk:
+                pk_data.append({"Thông số": "Thời gian bán hủy", "Giá trị": pk['half_life']})
+            if 'onset' in pk:
+                pk_data.append({"Thông số": "Thời gian bắt đầu tác dụng", "Giá trị": pk['onset']})
+            if 'duration' in pk:
+                pk_data.append({"Thông số": "Thời gian tác dụng", "Giá trị": pk['duration']})
+            if 'protein_binding' in pk:
+                pk_data.append({"Thông số": "Gắn protein", "Giá trị": pk['protein_binding']})
+            if 'clearance' in pk:
+                pk_data.append({"Thông số": "Thanh thải", "Giá trị": pk['clearance']})
+            
+            if pk_data:
+                st.dataframe(pd.DataFrame(pk_data), use_container_width=True, hide_index=True)
+        
+        # Storage
+        if 'storage' in drug_data:
+            st.markdown("---")
+            st.markdown("### 📦 Bảo quản:")
+            st.info(drug_data['storage'])
+        
         # Integration: Tính liều theo CrCl (for antibiotics)
         is_antibiotic = drug_name in ANTIBIOTICS_DATABASE
         

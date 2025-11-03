@@ -48,7 +48,32 @@ DRUG_DATABASE = {
             "NSAID: giảm hiệu quả, tăng nguy cơ suy thận",
             "Lithium: tăng nồng độ lithium"
         ],
-        "pregnancy": "D - Chống chỉ định trong thai kỳ"
+        "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "mechanism_of_action": "Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ",
+            "Huyết áp",
+            "Ho khan (tác dụng phụ thường gặp)",
+            "Dấu hiệu phù mạch (sưng mặt, lưỡi, họng - cấp cứu)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp, tăng dần",
+            "Uống 1 giờ trước bữa ăn (giảm hấp thu nếu dùng với thức ăn)",
+            "Theo dõi sát creatinine khi bắt đầu (có thể tăng nhẹ)",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Ngừng ngay nếu có phù mạch (có thể nguy hiểm tính mạng)",
+            "Ho khan có thể kéo dài, thường tự hết khi ngừng thuốc"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 giờ (ngắn)",
+            "onset": "15-30 phút",
+            "duration": "6-12 giờ",
+            "protein_binding": "25-30%",
+            "clearance": "Thận (50-75%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng"
     },
     
     "Enalapril": {
@@ -199,7 +224,28 @@ DRUG_DATABASE = {
             "Insulin: che dấu triệu chứng hạ đường huyết",
             "NSAID: giảm hiệu quả"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Ức chế thụ thể beta-1 chọn lọc, giảm nhịp tim, lực co bóp cơ tim, và dẫn truyền nhĩ thất",
+        "monitoring": [
+            "Huyết áp, nhịp tim mỗi lần khám",
+            "ECG nếu có triệu chứng block nhĩ thất",
+            "Đường huyết ở bệnh nhân đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+            "Chức năng gan, thận định kỳ"
+        ],
+        "precautions": [
+            "Không ngừng đột ngột (có thể gây cơn tăng huyết áp phản hồi)",
+            "Giảm liều từ từ khi ngừng",
+            "Thận trọng với bệnh nhân hen/COPD (có thể gây co thắt phế quản)",
+            "Theo dõi suy tim mới xuất hiện"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-7 giờ (tartrate), 3-4 giờ (succinate)",
+            "onset": "1-2 giờ (PO), 15 phút (IV)",
+            "duration": "6-12 giờ (tartrate), 24 giờ (succinate)",
+            "protein_binding": "12%",
+            "clearance": "Gan (CYP2D6)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm"
     },
     
     "Propranolol": {
@@ -269,7 +315,28 @@ DRUG_DATABASE = {
             "Simvastatin: tăng nồng độ simvastatin",
             "Grapefruit juice: tăng nồng độ"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Ức chế dòng calci vào tế bào cơ trơn mạch máu, gây giãn mạch, giảm kháng lực mạch máu ngoại biên",
+        "monitoring": [
+            "Huyết áp mỗi lần khám",
+            "Nhịp tim (có thể tăng nhẹ phản ứng)",
+            "Phù chân (dấu hiệu tác dụng phụ)",
+            "Chức năng gan định kỳ"
+        ],
+        "precautions": [
+            "Phù chân thường gặp, thường không nghiêm trọng nhưng có thể khó chịu",
+            "Tránh grapefruit juice (tăng nồng độ)",
+            "Có thể dùng với thức ăn hoặc không",
+            "Tác dụng chậm, đạt đỉnh sau 6-12 giờ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "30-50 giờ (rất dài)",
+            "onset": "2-4 giờ",
+            "duration": "24 giờ",
+            "protein_binding": ">93%",
+            "clearance": "Gan (CYP3A4)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm"
     },
     
     "Nifedipine": {
@@ -495,7 +562,30 @@ DRUG_DATABASE = {
             "NSAID: giảm hiệu quả",
             "Lithium: tăng nồng độ lithium"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Ức chế đồng vận chuyển Na-K-2Cl ở quai Henle, tăng thải natri, kali, clo, và nước",
+        "monitoring": [
+            "Điện giải (K, Na, Cl) trước điều trị và định kỳ",
+            "Cân bằng dịch vào-ra, cân nặng",
+            "Creatinine, BUN",
+            "Acid uric nếu dùng lâu dài",
+            "Thính giác nếu IV liều cao hoặc suy thận"
+        ],
+        "precautions": [
+            "Theo dõi sát điện giải, đặc biệt kali",
+            "Bù kali nếu cần",
+            "Tránh dùng quá liều (gây mất nước, suy thận)",
+            "Thận trọng với bệnh nhân suy thận (có thể cần liều cao hơn)",
+            "Tránh dùng IV liều cao ở bệnh nhân suy thận (nguy cơ điếc)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 giờ (PO), 1 giờ (IV)",
+            "onset": "30-60 phút (PO), 5 phút (IV)",
+            "duration": "6-8 giờ",
+            "protein_binding": ">98%",
+            "clearance": "Thận (50%) và gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng"
     },
     
     "Hydrochlorothiazide": {
@@ -651,7 +741,31 @@ DRUG_DATABASE = {
             "Vitamin K: giảm tác dụng",
             "Nhiều thuốc khác (xem interaction checker)"
         ],
-        "pregnancy": "X - Chống chỉ định (trừ trường hợp đặc biệt)"
+        "pregnancy": "X - Chống chỉ định (trừ trường hợp đặc biệt)",
+        "mechanism_of_action": "Ức chế enzyme vitamin K epoxide reductase, giảm tổng hợp các yếu tố đông máu phụ thuộc vitamin K (II, VII, IX, X)",
+        "monitoring": [
+            "INR mỗi 1-4 tuần khi ổn định, thường xuyên hơn khi mới bắt đầu hoặc thay đổi liều",
+            "INR mỗi 2-3 ngày trong tuần đầu",
+            "Công thức máu (Hct, Hb) nếu nghi ngờ chảy máu",
+            "Theo dõi dấu hiệu chảy máu (chảy máu chân răng, chảy máu mũi, vết bầm tím)"
+        ],
+        "precautions": [
+            "Uống cùng thời điểm mỗi ngày",
+            "Tránh thay đổi đột ngột chế độ ăn (vitamin K)",
+            "Giữ chế độ ăn ổn định vitamin K",
+            "Tránh rượu (tăng nguy cơ chảy máu)",
+            "Thông báo bác sĩ trước khi phẫu thuật",
+            "Theo dõi hoại tử da (ngày 3-10, thường ở bệnh nhân thiếu protein C)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "40 giờ (dài)",
+            "onset": "24-72 giờ",
+            "duration": "2-5 ngày sau khi ngừng",
+            "protein_binding": "99%",
+            "clearance": "Gan (CYP2C9, CYP1A2)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng",
+        "black_box_warnings": "Chảy máu nặng có thể dẫn đến tử vong. Cần theo dõi INR chặt chẽ. Hoại tử da hiếm nhưng nguy hiểm"
     },
     
     # Antiplatelets
@@ -690,7 +804,30 @@ DRUG_DATABASE = {
             "NSAID khác: tăng nguy cơ chảy máu dạ dày",
             "ACE inhibitor: giảm hiệu quả hạ huyết áp"
         ],
-        "pregnancy": "C - D trong 3 tháng cuối"
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": "Ức chế không hồi phục enzyme cyclooxygenase (COX-1), ức chế kết tập tiểu cầu và tổng hợp prostaglandin. Với liều cao: giảm đau, hạ sốt, kháng viêm",
+        "monitoring": [
+            "Dấu hiệu chảy máu (phân đen, nôn ra máu, chảy máu chân răng)",
+            "Hemoglobin nếu nghi ngờ chảy máu",
+            "Chức năng thận nếu dùng lâu dài",
+            "Ù tai nếu dùng liều cao (dấu hiệu độc tính)"
+        ],
+        "precautions": [
+            "Dùng với thức ăn hoặc sau ăn để giảm kích ứng dạ dày",
+            "Cân nhắc dùng PPI nếu có nguy cơ loét dạ dày",
+            "Ngừng 5-7 ngày trước phẫu thuật lớn (nếu có thể)",
+            "Không dùng cho trẻ <12 tuổi (hội chứng Reye)",
+            "Không dùng với rượu (tăng nguy cơ chảy máu dạ dày)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (liều thấp), 15-20 giờ (liều cao)",
+            "onset": "30 phút",
+            "duration": "7-10 ngày (tiểu cầu, liều thấp), 4-6 giờ (giảm đau)",
+            "protein_binding": "50-80%",
+            "clearance": "Gan (thủy phân) và thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Tăng nguy cơ chảy máu, đặc biệt chảy máu dạ dày ruột. Nguy cơ tăng ở người già và dùng chung với thuốc khác"
     },
     
     "Clopidogrel": {
@@ -762,7 +899,29 @@ DRUG_DATABASE = {
             "Grapefruit juice: tăng nồng độ (với liều cao)",
             "Cyclosporine: tăng nguy cơ tiêu cơ vân"
         ],
-        "pregnancy": "X"
+        "pregnancy": "X",
+        "mechanism_of_action": "Ức chế HMG-CoA reductase, enzyme chính trong tổng hợp cholesterol, dẫn đến giảm LDL-cholesterol và tăng HDL-cholesterol",
+        "monitoring": [
+            "Lipid profile (LDL, HDL, TG) sau 6-8 tuần, sau đó mỗi 3-6 tháng",
+            "AST/ALT trước điều trị, sau 12 tuần, sau đó mỗi 6-12 tháng",
+            "CK nếu có đau cơ, yếu cơ",
+            "HbA1c/đường huyết (statin có thể tăng đường huyết)"
+        ],
+        "precautions": [
+            "Kiểm tra CK nếu đau cơ hoặc yếu cơ (ngừng nếu CK >10 lần ULN)",
+            "Ngừng nếu ALT >3 lần ULN",
+            "Thận trọng với bệnh nhân đái tháo đường (có thể tăng đường huyết)",
+            "Tránh grapefruit juice với liều cao"
+        ],
+        "pharmacokinetics": {
+            "half_life": "14 giờ",
+            "onset": "1-2 tuần",
+            "duration": "24 giờ",
+            "protein_binding": ">98%",
+            "clearance": "Gan (CYP3A4)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Tiêu cơ vân - có thể gây suy thận cấp và tử vong. Nguy cơ tăng khi dùng chung với thuốc khác hoặc liều cao"
     },
     
     "Simvastatin": {
@@ -840,7 +999,30 @@ DRUG_DATABASE = {
             "Rượu: tăng nguy cơ nhiễm toan lactic",
             "Furosemide: có thể tăng nồng độ metformin"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Ức chế sản xuất glucose ở gan, tăng nhạy cảm với insulin ở mô ngoại vi, giảm hấp thu glucose ở ruột",
+        "monitoring": [
+            "HbA1c mỗi 3 tháng",
+            "Đường huyết đói và sau ăn",
+            "Creatinine, eGFR mỗi 3-6 tháng",
+            "Vitamin B12 mỗi 1-2 năm",
+            "Lactate nếu nghi ngờ nhiễm toan lactic (đau cơ, khó thở, đau bụng)"
+        ],
+        "precautions": [
+            "Ngừng 48h trước và sau khi dùng thuốc cản quang",
+            "Theo dõi nhiễm toan lactic ở bệnh nhân suy tim, suy gan, suy thận",
+            "Bổ sung vitamin B12 nếu dùng lâu dài",
+            "Tránh rượu (tăng nguy cơ nhiễm toan lactic)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6.2 giờ",
+            "onset": "1-2 giờ",
+            "duration": "10-12 giờ",
+            "protein_binding": "Minimal",
+            "clearance": "Thận (chủ yếu)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Nhiễm toan lactic - có thể tử vong. Nguy cơ cao ở suy thận, suy tim, suy gan, nhiễm trùng nặng"
     },
     
     "Glibenclamide": {
@@ -1176,7 +1358,31 @@ DRUG_DATABASE = {
             "Phenytoin: tăng nồng độ phenytoin",
             "Methotrexate: tăng nồng độ methotrexate"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Ức chế không hồi phục H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, giảm tiết acid dạ dày",
+        "monitoring": [
+            "Triệu chứng cải thiện (đau dạ dày, ợ chua)",
+            "Vitamin B12 mỗi 1-2 năm nếu dùng lâu dài",
+            "Magnesium nếu có triệu chứng (chuột rút, yếu cơ) hoặc dùng lâu dài",
+            "Mật độ xương nếu dùng lâu dài, liều cao (phụ nữ >50 tuổi)",
+            "Theo dõi nhiễm C. difficile nếu có tiêu chảy"
+        ],
+        "precautions": [
+            "Uống 30 phút trước bữa ăn (để tối đa hóa hiệu quả)",
+            "Không nhai/cắn viên bao tan trong ruột",
+            "Dùng liều thấp nhất có hiệu quả, thời gian ngắn nhất",
+            "Cân nhắc giảm liều hoặc ngừng sau 4-8 tuần nếu có thể",
+            "Bổ sung vitamin B12 nếu dùng lâu dài",
+            "Bổ sung magnesium nếu thiếu"
+        ],
+        "pharmacokinetics": {
+            "half_life": "0.5-1 giờ (ngắn), nhưng tác dụng kéo dài do ức chế không hồi phục",
+            "onset": "1-3 giờ",
+            "duration": "24 giờ (một liều)",
+            "protein_binding": "95%",
+            "clearance": "Gan (CYP2C19, CYP3A4)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm"
     },
     
     "Pantoprazole": {
@@ -1545,7 +1751,29 @@ DRUG_DATABASE = {
             "Warfarin: có thể tăng nguy cơ chảy máu (liều cao, dùng lâu)",
             "Rượu: tăng nguy cơ độc tính gan"
         ],
-        "pregnancy": "B - An toàn trong thai kỳ"
+        "pregnancy": "B - An toàn trong thai kỳ",
+        "mechanism_of_action": "Ức chế cyclooxygenase ở hệ thần kinh trung ương, giảm tổng hợp prostaglandin, từ đó giảm đau và hạ sốt. Ít tác dụng kháng viêm so với NSAID",
+        "monitoring": [
+            "ALT/AST nếu nghi ngờ quá liều hoặc bệnh nhân có nguy cơ",
+            "INR nếu dùng với warfarin liều cao kéo dài",
+            "Dấu hiệu độc tính gan: buồn nôn, nôn, đau bụng, vàng da (xuất hiện sau 24-48h)"
+        ],
+        "precautions": [
+            "Không vượt quá 4g/ngày ở người lớn",
+            "Giảm liều ở bệnh nhân suy gan",
+            "Tránh rượu khi dùng (tăng nguy cơ độc tính gan)",
+            "Kiểm tra các thuốc khác có chứa paracetamol (tránh quá liều)",
+            "Nếu quá liều, điều trị ngay với N-acetylcysteine"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ",
+            "onset": "30 phút (PO), 15 phút (IV)",
+            "duration": "4-6 giờ",
+            "protein_binding": "20-30%",
+            "clearance": "Gan (chủ yếu qua glucuronidation và sulfation, một phần qua CYP2E1 tạo NAPQI - chất độc)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Quá liều có thể gây độc tính gan nghiêm trọng, suy gan, tử vong. Liều >150mg/kg hoặc >10g ở người lớn có thể gây độc tính. Điều trị ngay với N-acetylcysteine nếu quá liều"
     },
     
     "Ibuprofen": {
@@ -5753,6 +5981,437 @@ DRUG_GROUPS = {
     ]
 }
 
-# Total count
+# ========== ADDITIONAL COMMON DRUGS (Batch 1) - Added to DRUG_DATABASE ==========
+
+DRUG_DATABASE.update({
+
+# Antibiotics
+"Piperacillin-tazobactam": {
+    "group": "Antibiotic - Penicillin/Beta-lactamase Inhibitor",
+    "vietnamese_name": "Piperacillin-tazobactam, Tazocin, Zosyn",
+    "administration": ["IV"],
+    "indications": [
+        "Nhiễm khuẩn nặng (bệnh viện)",
+        "Nhiễm khuẩn ổ bụng",
+        "Nhiễm khuẩn da và mô mềm",
+        "Viêm phổi bệnh viện",
+        "Nhiễm khuẩn đường tiết niệu phức tạp",
+        "Nhiễm khuẩn huyết"
+    ],
+    "contraindications": [
+        "Dị ứng penicillin",
+        "Dị ứng beta-lactam"
+    ],
+    "dosage": {
+        "adult_standard": "4.5g IV mỗi 8 giờ",
+        "adult_severe": "4.5g IV mỗi 6 giờ",
+        "adult_nosocomial_pneumonia": "4.5g IV mỗi 6 giờ",
+        "notes": "Liều tối đa: 18g/ngày. Pha trong 50-150ml NS hoặc D5W, truyền trong 30 phút"
+    },
+    "renal_adjustment": {
+        "normal": "Không đổi",
+        "30_60": "4.5g IV mỗi 8 giờ",
+        "under_30": "2.25g IV mỗi 8 giờ",
+        "hemodialysis": "2.25g IV mỗi 8 giờ (sau lọc máu)"
+    },
+    "side_effects": [
+        "Tiêu chảy",
+        "Buồn nôn, nôn",
+        "Phát ban",
+        "Tăng men gan",
+        "Giảm tiểu cầu (hiếm)",
+        "Giảm bạch cầu (hiếm)"
+    ],
+    "interactions": [
+        "Warfarin: có thể tăng INR",
+        "Aminoglycosides: không pha chung, truyền riêng"
+    ],
+    "pregnancy": "B"
+},
+
+"Meropenem": {
+    "group": "Antibiotic - Carbapenem",
+    "vietnamese_name": "Meropenem, Meronem",
+    "administration": ["IV"],
+    "indications": [
+        "Nhiễm khuẩn nặng đa kháng",
+        "Nhiễm khuẩn bệnh viện",
+        "Viêm màng não",
+        "Nhiễm khuẩn ổ bụng",
+        "Nhiễm khuẩn huyết"
+    ],
+    "contraindications": [
+        "Dị ứng carbapenem",
+        "Dị ứng beta-lactam nặng"
+    ],
+    "dosage": {
+        "adult_standard": "1g IV mỗi 8 giờ",
+        "adult_severe": "1g IV mỗi 6 giờ hoặc 2g IV mỗi 8 giờ",
+        "adult_meningitis": "2g IV mỗi 8 giờ",
+        "notes": "Truyền trong 15-30 phút. Phổ rộng, dự phòng kháng penicillinase"
+    },
+    "renal_adjustment": {
+        "normal": "Không đổi",
+        "30_60": "1g IV mỗi 12 giờ",
+        "under_30": "500mg-1g IV mỗi 12 giờ",
+        "hemodialysis": "500mg-1g IV mỗi 12 giờ (sau lọc máu)"
+    },
+    "side_effects": [
+        "Tiêu chảy",
+        "Phát ban",
+        "Co giật (liều cao, suy thận)",
+        "Tăng men gan",
+        "Viêm tĩnh mạch tại chỗ tiêm"
+    ],
+    "interactions": [
+        "Valproate: giảm nồng độ valproate (có thể gây co giật)",
+        "Probenecid: tăng nồng độ meropenem"
+    ],
+    "pregnancy": "B"
+},
+
+"Clindamycin": {
+    "group": "Antibiotic - Lincosamide",
+    "vietnamese_name": "Clindamycin, Dalacin",
+    "administration": ["PO", "IV", "IM"],
+    "indications": [
+        "Nhiễm khuẩn kỵ khí",
+        "Nhiễm khuẩn da và mô mềm",
+        "Viêm phổi do vi khuẩn",
+        "Nhiễm khuẩn răng miệng",
+        "Sốt do chuột cắn"
+    ],
+    "contraindications": [
+        "Dị ứng clindamycin",
+        "Viêm đại tràng giả mạc trước đây"
+    ],
+    "dosage": {
+        "adult_po": "150-450mg x 3-4 lần/ngày",
+        "adult_iv": "600-900mg IV mỗi 8 giờ",
+        "adult_severe": "900mg IV mỗi 8 giờ",
+        "notes": "Có thể gây viêm đại tràng giả mạc (C. difficile). Dùng với thức ăn"
+    },
+    "renal_adjustment": {
+        "normal": "Không đổi",
+        "30_60": "Không đổi",
+        "under_30": "Không đổi (không thải qua thận)"
+    },
+    "side_effects": [
+        "Tiêu chảy (phổ biến)",
+        "Viêm đại tràng giả mạc (C. difficile - nghiêm trọng)",
+        "Buồn nôn, nôn",
+        "Phát ban",
+        "Rối loạn vị giác"
+    ],
+    "interactions": [
+        "Erythromycin: đối kháng",
+        "Neuromuscular blockers: tăng tác dụng"
+    ],
+    "pregnancy": "B"
+},
+
+"Trimethoprim-sulfamethoxazole": {
+    "group": "Antibiotic - Sulfonamide",
+    "vietnamese_name": "Trimethoprim-sulfamethoxazole, Bactrim, Septra, Cotrimoxazole",
+    "administration": ["PO", "IV"],
+    "indications": [
+        "Nhiễm khuẩn đường tiết niệu",
+        "Viêm phổi do Pneumocystis jirovecii (PJP)",
+        "Nhiễm khuẩn do Toxoplasma",
+        "Nhiễm khuẩn do MRSA",
+        "Nhiễm khuẩn đường hô hấp"
+    ],
+    "contraindications": [
+        "Dị ứng sulfonamide",
+        "Suy thận nặng (CrCl <15)",
+        "Suy gan nặng",
+        "Thiếu máu do thiếu folate",
+        "Có thai (gần sinh)"
+    ],
+    "dosage": {
+        "adult_uti": "160/800mg (DS) x 2 lần/ngày",
+        "adult_pjp": "160/800mg (DS) x 3-4 lần/ngày",
+        "adult_pjp_iv": "15-20mg/kg (TMP) IV mỗi 6-8 giờ",
+        "notes": "Tỷ lệ TMP:SMX = 1:5. Dùng với nhiều nước"
+    },
+    "renal_adjustment": {
+        "normal": "Không đổi",
+        "30_60": "Giảm liều 50%",
+        "under_30": "Tránh dùng nếu CrCl <15"
+    },
+    "side_effects": [
+        "Phát ban (thường gặp)",
+        "Tăng kali máu",
+        "Giảm bạch cầu",
+        "Thiếu máu",
+        "Tăng creatinine (giả, không phản ánh suy thận)",
+        "Độc tính da (SJS/TEN - hiếm nhưng nguy hiểm)"
+    ],
+    "interactions": [
+        "Warfarin: tăng tác dụng",
+        "Phenytoin: tăng nồng độ phenytoin",
+        "ACE inhibitor: tăng kali máu",
+        "Methotrexate: tăng độc tính"
+    ],
+    "pregnancy": "C - D gần sinh"
+},
+
+# Cardiovascular
+"Spironolactone": {
+    "group": "Cardiovascular - Aldosterone Antagonist (Potassium-sparing Diuretic)",
+    "vietnamese_name": "Spironolactone, Aldactone",
+    "administration": ["PO"],
+    "indications": [
+        "Suy tim (NYHA class II-IV)",
+        "Xơ gan với cổ trướng",
+        "Hội chứng Conn (tăng aldosterone)",
+        "Tăng huyết áp (liều thấp)"
+    ],
+    "contraindications": [
+        "Tăng kali máu",
+        "Suy thận nặng (CrCl <30)",
+        "Vô niệu",
+        "Bệnh Addison"
+    ],
+    "dosage": {
+        "adult_heart_failure": "12.5-25mg x 1 lần/ngày, tăng đến 25-50mg x 1 lần/ngày",
+        "adult_ascites": "100-400mg/ngày chia 1-2 lần",
+        "adult_htn": "25-100mg/ngày chia 1-2 lần",
+        "notes": "Khởi đầu với liều thấp. Theo dõi kali máu"
+    },
+    "renal_adjustment": {
+        "normal": "Không đổi",
+        "30_60": "Thận trọng",
+        "under_30": "Chống chỉ định"
+    },
+    "side_effects": [
+        "Tăng kali máu",
+        "Vú to ở nam (gynecomastia)",
+        "Rối loạn kinh nguyệt",
+        "Buồn nôn",
+        "Chóng mặt"
+    ],
+    "interactions": [
+        "ACE inhibitor/ARB: tăng kali máu đáng kể",
+        "Kali bổ sung: tăng kali máu",
+        "Digoxin: tăng nồng độ digoxin"
+    ],
+    "pregnancy": "D"
+},
+
+"Atenolol": {
+    "group": "Cardiovascular - Beta-blocker (Selective)",
+    "vietnamese_name": "Atenolol, Tenormin",
+    "administration": ["PO"],
+    "indications": [
+        "Tăng huyết áp",
+        "Đau thắt ngực",
+        "Sau nhồi máu cơ tim",
+        "Rối loạn nhịp tim"
+    ],
+    "contraindications": [
+        "Hen phế quản nặng",
+        "Block nhĩ thất độ 2-3",
+        "Suy tim cấp không bù",
+        "Nhịp tim chậm nặng"
+    ],
+    "dosage": {
+        "adult_htn": "25-100mg x 1 lần/ngày",
+        "adult_angina": "50-100mg x 1 lần/ngày",
+        "adult_post_mi": "50-100mg x 1 lần/ngày",
+        "notes": "Uống 1 lần/ngày. Chọn lọc beta-1"
+    },
+    "renal_adjustment": {
+        "normal": "Không đổi",
+        "30_60": "Giảm liều 50%",
+        "under_30": "Giảm liều 75%, hoặc dùng mỗi 2 ngày"
+    },
+    "side_effects": [
+        "Mệt mỏi",
+        "Lạnh tay chân",
+        "Nhịp tim chậm",
+        "Rối loạn giấc ngủ",
+        "Khó thở ở bệnh nhân hen/COPD"
+    ],
+    "interactions": [
+        "Verapamil/Diltiazem: tăng nguy cơ block nhĩ thất",
+        "Insulin: che dấu triệu chứng hạ đường huyết"
+    ],
+    "pregnancy": "D"
+},
+
+"Bisoprolol": {
+    "group": "Cardiovascular - Beta-blocker (Selective)",
+    "vietnamese_name": "Bisoprolol, Concor",
+    "administration": ["PO"],
+    "indications": [
+        "Tăng huyết áp",
+        "Suy tim (NYHA class II-IV)",
+        "Đau thắt ngực"
+    ],
+    "contraindications": [
+        "Hen phế quản nặng",
+        "Block nhĩ thất độ 2-3",
+        "Suy tim cấp không bù",
+        "Nhịp tim chậm nặng (<60 bpm)"
+    ],
+    "dosage": {
+        "adult_htn": "2.5-10mg x 1 lần/ngày",
+        "adult_heart_failure": "1.25mg x 1 lần/ngày, tăng dần đến 10mg x 1 lần/ngày",
+        "adult_angina": "5-10mg x 1 lần/ngày",
+        "notes": "Uống 1 lần/ngày. Có bằng chứng giảm tỷ lệ tử vong trong suy tim"
+    },
+    "renal_adjustment": {
+        "normal": "Không đổi",
+        "30_60": "Thận trọng, có thể giảm liều",
+        "under_30": "Thận trọng, giảm liều"
+    },
+    "side_effects": [
+        "Mệt mỏi",
+        "Lạnh tay chân",
+        "Nhịp tim chậm",
+        "Chóng mặt",
+        "Khó thở ở bệnh nhân hen/COPD"
+    ],
+    "interactions": [
+        "Verapamil/Diltiazem: tăng nguy cơ block nhĩ thất",
+        "Insulin: che dấu triệu chứng hạ đường huyết"
+    ],
+    "pregnancy": "C"
+},
+
+"Carvedilol": {
+    "group": "Cardiovascular - Beta-blocker (Non-selective with Alpha-blocking)",
+    "vietnamese_name": "Carvedilol, Dilatrend",
+    "administration": ["PO"],
+    "indications": [
+        "Suy tim (NYHA class II-IV)",
+        "Tăng huyết áp",
+        "Sau nhồi máu cơ tim"
+    ],
+    "contraindications": [
+        "Hen phế quản nặng",
+        "Block nhĩ thất độ 2-3",
+        "Suy tim cấp không bù",
+        "Nhịp tim chậm nặng",
+        "Suy gan nặng"
+    ],
+    "dosage": {
+        "adult_heart_failure": "3.125mg x 2 lần/ngày, tăng dần mỗi 2 tuần đến 25mg x 2 lần/ngày",
+        "adult_htn": "6.25-25mg x 2 lần/ngày",
+        "adult_post_mi": "6.25-25mg x 2 lần/ngày",
+        "notes": "Có bằng chứng giảm tỷ lệ tử vong trong suy tim. Có tác dụng giãn mạch"
+    },
+    "renal_adjustment": {
+        "normal": "Không đổi",
+        "30_60": "Thận trọng",
+        "under_30": "Thận trọng"
+    },
+    "side_effects": [
+        "Mệt mỏi",
+        "Chóng mặt",
+        "Hạ huyết áp",
+        "Nhịp tim chậm",
+        "Phù chân (ít)"
+    ],
+    "interactions": [
+        "Digoxin: tăng nồng độ digoxin",
+        "Insulin: che dấu triệu chứng hạ đường huyết",
+        "CYP2D6 inhibitors: tăng nồng độ carvedilol"
+    ],
+    "pregnancy": "C"
+},
+
+# Respiratory
+"Montelukast": {
+    "group": "Respiratory - Leukotriene Receptor Antagonist",
+    "vietnamese_name": "Montelukast, Singulair",
+    "administration": ["PO"],
+    "indications": [
+        "Hen phế quản (phòng ngừa)",
+        "Viêm mũi dị ứng",
+        "Co thắt phế quản do gắng sức"
+    ],
+    "contraindications": [
+        "Dị ứng montelukast"
+    ],
+    "dosage": {
+        "adult": "10mg x 1 lần/ngày (buổi tối)",
+        "pediatric_6_14": "5mg x 1 lần/ngày",
+        "pediatric_2_5": "4mg x 1 lần/ngày",
+        "notes": "Uống buổi tối, có thể uống với hoặc không thức ăn"
+    },
+    "side_effects": [
+        "Nhức đầu",
+        "Buồn nôn",
+        "Tiêu chảy",
+        "Rối loạn giấc ngủ",
+        "Thay đổi tâm trạng (hiếm)",
+        "Phản ứng tâm thần (rất hiếm)"
+    ],
+    "interactions": [
+        "Phenobarbital: giảm nồng độ montelukast",
+        "Rifampin: giảm nồng độ montelukast"
+    ],
+    "pregnancy": "B"
+},
+
+# GI - Thay Pantoprazole (đã có) bằng Levofloxacin
+"Levofloxacin": {
+    "group": "Antibiotic - Fluoroquinolone",
+    "vietnamese_name": "Levofloxacin, Tavanic",
+    "administration": ["PO", "IV"],
+    "indications": [
+        "Viêm phổi cộng đồng",
+        "Nhiễm khuẩn đường tiết niệu phức tạp",
+        "Nhiễm khuẩn da và mô mềm",
+        "Viêm xoang",
+        "Viêm tuyến tiền liệt do vi khuẩn"
+    ],
+    "contraindications": [
+        "Dị ứng fluoroquinolone",
+        "Trẻ em <18 tuổi (trừ trường hợp đặc biệt)",
+        "Có thai"
+    ],
+    "dosage": {
+        "adult_po": "500-750mg x 1 lần/ngày",
+        "adult_iv": "500-750mg IV x 1 lần/ngày",
+        "adult_pneumonia": "500-750mg x 1 lần/ngày x 7-14 ngày",
+        "notes": "Uống với nhiều nước. Tránh antacid, sắt trong 2 giờ"
+    },
+    "renal_adjustment": {
+        "normal": "Không đổi",
+        "30_60": "Giảm liều 50%",
+        "under_30": "250-500mg x 1 lần/ngày"
+    },
+    "side_effects": [
+        "Rối loạn tiêu hóa",
+        "Nhức đầu",
+        "Rối loạn giấc ngủ",
+        "Rối loạn gân (viêm gân, đứt gân)",
+        "QT kéo dài",
+        "Hạ đường huyết (hiếm)"
+    ],
+    "interactions": [
+        "Antacid/Sắt: giảm hấp thu",
+        "Warfarin: tăng nguy cơ chảy máu",
+        "Corticosteroid: tăng nguy cơ đứt gân"
+    ],
+    "pregnancy": "C"
+}
+
+})
+
+# Update DRUG_GROUPS
+DRUG_GROUPS["Antibiotics"] = DRUG_GROUPS.get("Antibiotics", []) + [
+    "Piperacillin-tazobactam", "Meropenem", "Clindamycin", "Trimethoprim-sulfamethoxazole"
+]
+DRUG_GROUPS["Cardiovascular"] = DRUG_GROUPS.get("Cardiovascular", []) + [
+    "Spironolactone", "Atenolol", "Bisoprolol", "Carvedilol"
+]
+DRUG_GROUPS["Respiratory"] = DRUG_GROUPS.get("Respiratory", []) + ["Montelukast"]
+DRUG_GROUPS["Antibiotics"] = DRUG_GROUPS.get("Antibiotics", []) + ["Levofloxacin"]
+
+# Update total count
 TOTAL_DRUGS = len(DRUG_DATABASE)
 
