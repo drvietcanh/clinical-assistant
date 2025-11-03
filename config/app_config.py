@@ -83,6 +83,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
             border="#ff9800"
         ),
+        "diagnosis": ModuleInfo(
+            id="diagnosis",
+            title="Chẩn Đoán Phân Biệt",
+            icon="🩺",
+            page_path="pages/06_🩺_Diagnosis.py",
+            description="DDx Generator, Clinical decision support",
+            color="linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)",
+            border="#f44336"
+        ),
     },
     
     "navigation": {
