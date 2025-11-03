@@ -523,3 +523,4 @@ def render_fluid_calculator():
     - Tuân thủ hướng dẫn địa phương và quy định bệnh viện
     """)
 
+

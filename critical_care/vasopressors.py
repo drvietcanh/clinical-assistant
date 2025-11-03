@@ -281,3 +281,4 @@ def render_vasopressor_guide():
     - Dùng đường truyền tĩnh mạch trung tâm khi có thể
     """)
 
+

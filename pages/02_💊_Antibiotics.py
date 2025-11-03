@@ -12,7 +12,13 @@ from antibiotics import (
     render_dosing_calculator,
     render_multi_comparison
 )
-from drugs import render_interaction_checker
+from drugs import (
+    render_interaction_checker, 
+    render_drug_database, 
+    render_iv_compatibility_checker,
+    render_visual_comparison,
+    render_dosing_schedule_generator
+)
 
 # Standard page setup
 setup_page(
@@ -31,6 +37,10 @@ with st.sidebar:
             "🧮 Tính Liều Theo eGFR/CrCl",
             "🔬 So Sánh Nhiều Kháng Sinh",
             "🔍 Tra Cứu & Dữ Liệu Kháng Sinh",
+            "💊 Tra Cứu Thuốc (Tất Cả)",
+            "📊 So Sánh Thuốc Trực Quan",
+            "📅 Tạo Lịch Trình Liều Dùng",
+            "💉 Kiểm Tra Tương Thích IV",
             "🔍 Kiểm Tra Tương Tác Thuốc"
         ]
     )
@@ -53,8 +63,20 @@ if "Tính Liều Theo eGFR" in function_type or "CrCl" in function_type:
 elif "So Sánh Nhiều" in function_type:
     render_multi_comparison()
 
-elif "Tra Cứu" in function_type or "Dữ Liệu" in function_type:
+elif "Tra Cứu" in function_type and "Dữ Liệu" in function_type:
     render_database()
+
+elif "Tra Cứu Thuốc" in function_type:
+    render_drug_database()
+
+elif "So Sánh Thuốc Trực Quan" in function_type:
+    render_visual_comparison()
+
+elif "Lịch Trình Liều Dùng" in function_type:
+    render_dosing_schedule_generator()
+
+elif "Tương Thích IV" in function_type:
+    render_iv_compatibility_checker()
 
 elif "Tương Tác" in function_type:
     render_interaction_checker()
