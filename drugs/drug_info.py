@@ -243,7 +243,6 @@ def render_drug_database():
         get_drug_autocomplete_suggestions,
         get_recent_searches,
         add_recent_search,
-        get_popular_drugs,
         search_by_group
     )
     from .drug_database import DRUG_GROUPS
@@ -283,17 +282,18 @@ def render_drug_database():
     # Search section with autocomplete
     st.markdown("### 🔍 Tìm kiếm thuốc")
     
-    # Handle selected suggestion from buttons - use value parameter to update
-    initial_value = ""
+    # Handle selected suggestion from buttons - trigger automatic search
     if 'drug_search_selected' in st.session_state:
-        initial_value = st.session_state.pop('drug_search_selected')
+        selected_value = st.session_state.pop('drug_search_selected')
+        st.info(f"🔍 Đang tìm: **{selected_value}**")
+        # Store in session state to trigger search below without widget update
+        st.session_state['_auto_search_trigger'] = selected_value
     
     col1, col2 = st.columns([3, 1])
     
     with col1:
         search_query = st.text_input(
             "Nhập tên thuốc, nhóm, hoặc chỉ định",
-            value=initial_value if initial_value else "",
             key="drug_search_input",
             placeholder="Ví dụ: Metformin, Omeprazole, tăng huyết áp..."
         )
@@ -331,26 +331,22 @@ def render_drug_database():
                     st.session_state['drug_search_selected'] = str(recent_query)
                     st.rerun()
     
-    # Popular drugs
-    popular = get_popular_drugs()
-    st.markdown("**Thuốc phổ biến:**")
-    popular_cols = st.columns(min(len(popular), 5))
-    for idx, popular_drug in enumerate(popular[:5]):
-        with popular_cols[idx]:
-            # Sanitize popular_drug for key
-            safe_popular_key = f"popular_{str(popular_drug).replace(' ', '_').replace('-', '_').replace('/', '_')}"
-            if st.button(f"⭐ {popular_drug}", key=safe_popular_key, use_container_width=True):
-                # Store selected value and rerun
-                st.session_state['drug_search_selected'] = str(popular_drug)
-                st.rerun()
-    
     st.markdown("---")
     
+    # Handle auto-triggered search from button selections
+    # Use auto_search_query if triggered, otherwise use search_query from widget
+    auto_search_query = None
+    if '_auto_search_trigger' in st.session_state:
+        auto_search_query = st.session_state.pop('_auto_search_trigger')
+    
     # Search results or browse by group
-    if search_query or search_button:
-        if search_query:
-            add_recent_search(search_query)
-            results = search_drugs(search_query)
+    # Use auto_search_query if available, otherwise use search_query
+    effective_query = auto_search_query if auto_search_query else search_query
+    
+    if effective_query or search_button:
+        if effective_query:
+            add_recent_search(effective_query)
+            results = search_drugs(effective_query)
             
             if results:
                 st.markdown(f"### 📊 Kết quả tìm kiếm ({len(results)} thuốc)")
