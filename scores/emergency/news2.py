@@ -450,6 +450,47 @@ def render():
             }
             st.table(summary_data)
             
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            
+            # Prepare inputs for export
+            inputs_dict = {
+                "Respiratory Rate": f"{resp_rate} /phút",
+                "SpO₂": f"{spo2}%",
+                "Systolic BP": f"{systolic_bp} mmHg",
+                "Pulse Rate": f"{pulse_rate} /phút",
+                "Consciousness": consciousness,
+                "Temperature": f"{temperature:.1f} {temp_unit}",
+                "Supplemental Oxygen": "Có" if use_supplemental_oxygen else "Không",
+                "Type 2 RF": "Có" if has_type2_rf else "Không"
+            }
+            
+            # Prepare results for export
+            results_dict = {
+                "NEWS2 Score": f"{result['total_score']} điểm",
+                "Risk Level": result['risk_level'],
+                "Category": result['category'],
+                "Action Plan": result['action_plan'],
+                "Subscores": {
+                    "Respiration": result['subscores']['respiration'],
+                    "Oxygen Saturation": result['subscores']['oxygen_saturation'],
+                    "Blood Pressure": result['subscores']['blood_pressure'],
+                    "Pulse Rate": result['subscores']['pulse_rate'],
+                    "Consciousness": result['subscores']['consciousness'],
+                    "Temperature": result['subscores']['temperature'],
+                    "Supplemental Oxygen": result['subscores']['supplemental_oxygen']
+                }
+            }
+            
+            render_export_section(
+                title=f"NEWS2 = {result['total_score']} điểm",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="NEWS2 Score",
+                filename="news2_result"
+            )
+            
             with st.expander("📚 Tham khảo lâm sàng"):
                 st.markdown("""
                 **NEWS2 (National Early Warning Score 2)**

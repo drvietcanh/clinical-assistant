@@ -541,6 +541,42 @@ def render():
         ```
         """)
         
+        # Export section
+        st.markdown("---")
+        from components.export import render_export_section
+        
+        # Prepare inputs for export
+        inputs_dict = {
+            "Age": f"{age} tuổi",
+            "Gender": "Nam" if gender == "male" else "Nữ",
+            "Height": f"{height_cm} cm",
+            "Weight": f"{weight_kg} kg" + (f" (ABW: {abw:.1f} kg)" if use_abw else ""),
+            "Creatinine": f"{creatinine:.1f} {creatinine_unit} ({creatinine_mg:.2f} mg/dL)",
+            "Race": "Châu Phi / Da đen" if race == "black" else "Khác",
+            "BSA Formula": bsa_name,
+            "Used ABW": "Có" if use_abw else "Không"
+        }
+        
+        # Prepare results for export
+        results_dict = {
+            "eGFR (CKD-EPI)": f"{egfr_ckd_epi:.1f} mL/min/1.73m²",
+            "eGFR (MDRD)": f"{egfr_mdrd:.1f} mL/min/1.73m²",
+            "CrCl (Cockcroft-Gault)": f"{crcl:.1f} mL/min",
+            "GFR Absolute (CKD-EPI)": f"{gfr_absolute_ckd_epi:.1f} mL/min",
+            "GFR Absolute (MDRD)": f"{gfr_absolute_mdrd:.1f} mL/min",
+            "BSA": f"{bsa:.2f} m²",
+            "CKD Stage": interpretation['stage'],
+            "Recommendation": recommended
+        }
+        
+        render_export_section(
+            title=f"eGFR = {egfr_ckd_epi:.1f} mL/min/1.73m² ({interpretation['stage']})",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="eGFR Calculator",
+            filename="egfr_result"
+        )
+        
         # Save to session state for antibiotic dosing calculator
         st.session_state['patient_crcl'] = crcl
         st.session_state['patient_egfr'] = egfr_ckd_epi

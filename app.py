@@ -122,33 +122,47 @@ render_favorites()
 # 3. Recently Used
 render_recently_used()
 
-# 4. Quick Access Modules
+# 4. Quick Access Modules - Enhanced with beautiful cards
 st.markdown("### 🚀 Truy Cập Nhanh Modules")
-
-col1, col2, col3, col4, col5 = st.columns(5)
+st.caption("Chọn module để bắt đầu tính toán")
 
 # Get modules from unified config
 modules = get_module_list_for_navigation()
 
-columns = [col1, col2, col3, col4, col5]
-for idx, (col, module) in enumerate(zip(columns, modules)):
+# Use responsive columns (5 on desktop, fewer on mobile)
+num_cols = min(5, len(modules))
+cols = st.columns(num_cols)
+
+for idx, (col, module) in enumerate(zip(cols, modules)):
     with col:
-        # Get style from theme (fallback to module config if theme not available)
+        # Get style from theme
         module_id = module.get('id', module['key'].replace('quick_', ''))
         style = get_module_style(module_id)
         gradient = style.get('gradient', module.get('color', style['gradient']))
         border = style.get('border', module.get('border', style['border']))
         
-        st.markdown(f"""
-        <div class="module-card" style="background: {gradient}; border: 2px solid {border}; text-align: center;">
-            <div>
-                <div class="module-icon">{module['icon']}</div>
-                <div class="module-title">{module['title']}</div>
-                <div class="module-desc">{module['desc']}</div>
-            </div>
+        # Enhanced card with hover effect
+        card_html = f"""
+        <div class="module-card" 
+             style="background: {gradient}; 
+                    border: 2px solid {border}; 
+                    text-align: center; 
+                    padding: 1.5rem; 
+                    border-radius: 12px; 
+                    margin: 0.5rem 0; 
+                    cursor: pointer; 
+                    transition: all 0.3s ease;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+             onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+            <div class="module-icon" style="font-size: 3rem; margin-bottom: 0.5rem;">{module['icon']}</div>
+            <div class="module-title" style="font-weight: bold; font-size: 1.1rem; margin-bottom: 0.5rem; color: #212121;">{module['title']}</div>
+            <div class="module-desc" style="font-size: 0.85rem; color: #666; line-height: 1.4;">{module['desc']}</div>
         </div>
-        """, unsafe_allow_html=True)
-        if st.button(f"{module['icon']} Mở {module['title']}", key=module['key'], use_container_width=True):
+        """
+        st.markdown(card_html, unsafe_allow_html=True)
+        
+        if st.button(f"▶️ Mở {module['title']}", key=module['key'], use_container_width=True, type="primary"):
             st.switch_page(module['page'])
 
 st.markdown("---")

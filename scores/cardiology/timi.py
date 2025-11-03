@@ -191,6 +191,37 @@ def render():
                 - Chuẩn bị PCI/CABG
                 """)
             
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            
+            # Prepare inputs for export
+            inputs_dict = {
+                "Age ≥65": "Có" if age >= 65 else "Không",
+                "≥3 CAD Risk Factors": "Có" if risk_factors >= 3 else "Không",
+                "Known CAD": "Có" if known_cad else "Không",
+                "Aspirin in Past 7 Days": "Có" if aspirin else "Không",
+                "Severe Angina": "Có" if severe_angina else "Không",
+                "ST Deviation": "Có" if st_deviation else "Không",
+                "Positive Cardiac Marker": "Có" if positive_marker else "Không"
+            }
+            
+            # Prepare results for export
+            results_dict = {
+                "TIMI Score": f"{score} điểm",
+                "Risk Level": risk_level.upper(),
+                "14-Day Event Risk": risk_data.get(score, ">65%"),
+                "Details": "\n".join(details) if details else "Không có yếu tố nguy cơ"
+            }
+            
+            render_export_section(
+                title=f"TIMI = {score} điểm",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="TIMI Risk Score",
+                filename="timi_result"
+            )
+            
             with st.expander("📚 Tài Liệu Tham Khảo"):
                 st.markdown("""
                 **TIMI Risk Score for UA/NSTEMI**

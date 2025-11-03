@@ -152,33 +152,47 @@ def get_all_categories() -> List[str]:
 
 def render_search():
     """Render enhanced search bar with fuzzy matching, filters, and suggestions"""
-    # Header
-    st.markdown("### 🔍 Tìm Kiếm Nhanh")
-    st.caption("Tìm kiếm trong tất cả calculators, xét nghiệm, và protocols")
+    # Header with better styling
+    st.markdown("""
+    <div style="margin-bottom: 1rem;">
+        <h2 style="margin-bottom: 0.5rem;">🔍 Tìm Kiếm Toàn Cục</h2>
+        <p style="color: #666; font-size: 0.9rem; margin: 0;">Tìm kiếm trong tất cả calculators, xét nghiệm, và protocols. Nhấn <kbd>Ctrl+K</kbd> để focus</p>
+    </div>
+    """, unsafe_allow_html=True)
     
-    # Search controls
-    col_search, col_filter = st.columns([4, 1])
+    # Search controls with better layout
+    col_search, col_filter, col_clear = st.columns([5, 1.5, 0.8])
     
     with col_search:
         search_query = st.text_input(
             "🔎 Nhập từ khóa...",
             placeholder="Ví dụ: CHA2DS2VASc, troponin, sepsis, SOFA...",
-            help="Gõ tên calculator, chuyên khoa, hoặc từ khóa bất kỳ",
+            help="Gõ tên calculator, chuyên khoa, hoặc từ khóa bất kỳ. Hỗ trợ fuzzy matching!",
             key="search_box",
             label_visibility="collapsed"
         )
+        
+        # Track search history
+        if search_query:
+            from utils.state import add_to_search_history
+            add_to_search_history(search_query)
     
     with col_filter:
         # Category filter
         all_categories = ["Tất cả"] + get_all_categories()
         selected_category = st.selectbox(
-            "Lọc theo:",
+            "Lọc:",
             all_categories,
             index=0,
             key="search_category_filter",
             label_visibility="collapsed"
         )
         category_filter = None if selected_category == "Tất cả" else selected_category
+    
+    with col_clear:
+        if st.button("🗑️", help="Xóa tìm kiếm", use_container_width=True):
+            st.session_state.search_box = ""
+            st.rerun()
     
     # Search options
     with st.expander("⚙️ Tùy chọn tìm kiếm", expanded=False):
@@ -250,11 +264,23 @@ def render_search():
                 - Tắt "Tìm kiếm mờ" nếu đang bật
                 """)
     else:
-        # Show popular searches and suggestions when no query
-        popular_searches = ["SOFA", "CHA2DS2VASc", "APACHE", "NEWS2", "ASCVD"]
-        
+        # Show popular searches and search history when no query
         st.info("💡 **Mẹo tìm kiếm:** Gõ tên calculator (ví dụ: SOFA, CHA2DS2VASc) hoặc chuyên khoa (ví dụ: tim mạch, cấp cứu)")
         
+        # Show search history if available
+        search_history = st.session_state.get('search_history', [])
+        if search_history:
+            st.markdown("**🕐 Lịch sử tìm kiếm:**")
+            hist_cols = st.columns(min(5, len(search_history)))
+            for idx, hist_query in enumerate(search_history[:5]):
+                with hist_cols[idx]:
+                    if st.button(f"↩️ {hist_query}", key=f"hist_{idx}", use_container_width=True):
+                        st.session_state.search_box = hist_query
+                        st.rerun()
+            st.markdown("---")
+        
+        # Popular searches
+        popular_searches = ["SOFA", "CHA2DS2VASc", "APACHE", "NEWS2", "ASCVD"]
         st.markdown("**🔝 Tìm kiếm phổ biến:**")
         pop_cols = st.columns(5)
         for idx, pop_search in enumerate(popular_searches):

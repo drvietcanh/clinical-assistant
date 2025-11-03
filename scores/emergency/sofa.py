@@ -517,6 +517,45 @@ def render():
         # Save to session state
         st.session_state['sofa_result'] = result
         
+        # Export section
+        st.markdown("---")
+        from components.export import render_export_section
+        
+        # Prepare inputs for export
+        inputs_dict = {
+            "PaO₂/FiO₂": f"{pao2_fio2:.0f}",
+            "Platelets": f"{platelets:.0f} ×10³/μL",
+            "Bilirubin": f"{bilirubin:.2f} mg/dL",
+            "MAP": f"{map_value:.0f} mmHg",
+            "Vasopressor": f"{vasopressor_type} ({vasopressor_dose:.2f} mcg/kg/min)" if use_vasopressor else "Không",
+            "GCS": f"{gcs}",
+            "Creatinine": f"{creatinine:.2f} mg/dL",
+            "Urine Output": f"{urine_output:.0f} mL/24h"
+        }
+        
+        # Prepare results for export
+        results_dict = {
+            "SOFA Score": f"{result['total_score']} điểm",
+            "Interpretation": result['interpretation'],
+            "Mortality Risk": result['mortality'],
+            "Subscores": {
+                "Respiratory": result['subscores']['respiratory'],
+                "Coagulation": result['subscores']['coagulation'],
+                "Liver": result['subscores']['liver'],
+                "Cardiovascular": result['subscores']['cardiovascular'],
+                "CNS": result['subscores']['cns'],
+                "Renal": result['subscores']['renal']
+            }
+        }
+        
+        render_export_section(
+            title=f"SOFA Score = {result['total_score']} điểm",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="SOFA Score",
+            filename="sofa_score_result"
+        )
+        
         # Warning
         st.warning("""
         ⚠️ **Lưu Ý Y Khoa:**

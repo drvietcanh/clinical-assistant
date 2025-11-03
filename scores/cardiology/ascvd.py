@@ -482,6 +482,38 @@ def render():
                     st.markdown(f"**Đái tháo đường:** {'Có' if diabetes else 'Không'}")
                     st.markdown(f"**Hút thuốc:** {'Có' if smoker else 'Không'}")
                 
+                # Export section
+                st.markdown("---")
+                from components.export import render_export_section
+                
+                # Prepare inputs for export
+                inputs_dict = {
+                    "Age": f"{age} tuổi",
+                    "Gender": sex,
+                    "Race": race,
+                    "Total Cholesterol": f"{tc_mgdl:.0f} mg/dL",
+                    "HDL": f"{hdl_mgdl:.0f} mg/dL",
+                    "Systolic BP": f"{sbp} mmHg",
+                    "BP Treatment": "Có" if bp_treated else "Không",
+                    "Diabetes": "Có" if diabetes else "Không",
+                    "Smoker": "Có" if smoker else "Không"
+                }
+                
+                # Prepare results for export
+                results_dict = {
+                    "10-Year ASCVD Risk": f"{risk_percent:.1f}%",
+                    "Risk Category": category_vn,
+                    "Recommendations": "\n".join(result['recommendations'])
+                }
+                
+                render_export_section(
+                    title=f"ASCVD Risk = {risk_percent:.1f}%",
+                    inputs=inputs_dict,
+                    results=results_dict,
+                    calculator_name="ASCVD Risk Calculator",
+                    filename="ascvd_result"
+                )
+                
                 with st.expander("📚 Tham khảo lâm sàng"):
                     st.markdown("""
                     **ASCVD Risk Calculator - Pooled Cohort Equations**

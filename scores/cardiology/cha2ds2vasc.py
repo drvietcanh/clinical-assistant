@@ -151,6 +151,37 @@ def render():
                 - Thai kỳ
                 """)
             
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            
+            # Prepare inputs for export
+            inputs_dict = {
+                "CHF": "Có" if chf else "Không",
+                "Hypertension": "Có" if htn else "Không",
+                "Age Group": age_group,
+                "Diabetes": "Có" if dm else "Không",
+                "Stroke/TIA": "Có" if stroke else "Không",
+                "Vascular Disease": "Có" if vasc else "Không",
+                "Sex": sex
+            }
+            
+            # Prepare results for export
+            results_dict = {
+                "CHA₂DS₂-VASc Score": f"{score} điểm",
+                "Stroke Risk": risk,
+                "Risk Level": "THẤP" if score == 0 else "TRUNG BÌNH" if score == 1 else "CAO",
+                "Details": "\n".join(details) if details else "Không có yếu tố nguy cơ"
+            }
+            
+            render_export_section(
+                title=f"CHA₂DS₂-VASc = {score} điểm",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="CHA₂DS₂-VASc Score",
+                filename="cha2ds2vasc_result"
+            )
+            
             with st.expander("📚 Tài Liệu Tham Khảo"):
                 st.markdown("""
                 **ESC Guidelines 2020 - Atrial Fibrillation**

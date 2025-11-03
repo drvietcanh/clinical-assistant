@@ -512,6 +512,35 @@ def render():
                 (Nhưng không hoàn toàn tương ứng)
                 """)
             
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            
+            # Prepare inputs for export
+            inputs_dict = {
+                "Bilirubin": f"{bili_mgdl:.1f} mg/dL",
+                "INR": f"{inr:.2f}",
+                "Creatinine": f"{cr_mgdl:.1f} mg/dL",
+                "On Dialysis": "Có" if dialysis else "Không"
+            }
+            
+            # Prepare results for export
+            results_dict = {
+                "MELD Score": f"{meld_score}",
+                "Severity": severity,
+                "3-Month Mortality": mortality_3m,
+                "1-Year Mortality": mortality_1yr,
+                "Transplant Priority": transplant_priority
+            }
+            
+            render_export_section(
+                title=f"MELD = {meld_score}",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="MELD Score",
+                filename="meld_result"
+            )
+            
             with st.expander("📚 Tài Liệu Tham Khảo"):
                 st.markdown("""
                 **Primary Reference:**

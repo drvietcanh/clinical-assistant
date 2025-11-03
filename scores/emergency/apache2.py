@@ -362,6 +362,50 @@ def render():
             - Thảo luận với gia đình về mục tiêu điều trị
             """)
         
+        # Export section
+        st.markdown("---")
+        from components.export import render_export_section
+        
+        # Prepare inputs for export
+        inputs_dict = {
+            "Age": f"{age} tuổi",
+            "Temperature": f"{temperature:.1f}°C",
+            "MAP": f"{map_val:.0f} mmHg",
+            "Heart Rate": f"{heart_rate:.0f} /min",
+            "Respiratory Rate": f"{respiratory_rate:.0f} /min",
+            "FiO₂": f"{fio2:.0f}%",
+            "PaO₂": f"{pao2:.0f} mmHg",
+            "PaCO₂": f"{paco2:.0f} mmHg",
+            "pH": f"{ph:.2f}",
+            "Sodium": f"{sodium:.0f} mEq/L",
+            "Potassium": f"{potassium:.1f} mEq/L",
+            "Creatinine": f"{creatinine:.1f} mg/dL",
+            "Has ARF": "Có" if params['has_arf'] else "Không",
+            "Hematocrit": f"{hematocrit:.1f}%",
+            "WBC": f"{wbc:.1f} ×10³/μL",
+            "GCS": f"{gcs}",
+            "Chronic Health": chronic_health
+        }
+        
+        # Prepare results for export
+        results_dict = {
+            "APACHE II Score": f"{result['total_score']} điểm",
+            "Predicted Mortality": f"{result['predicted_mortality']:.1f}%",
+            "Mortality Range": result['mortality_range'],
+            "Interpretation": result['interpretation'],
+            "APS": f"{result['aps']}/60 điểm",
+            "Age Points": f"{result['age_points']}/6 điểm",
+            "Chronic Health Points": f"{result['chronic_points']}/5 điểm"
+        }
+        
+        render_export_section(
+            title=f"APACHE II = {result['total_score']} điểm",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="APACHE II Score",
+            filename="apache2_result"
+        )
+        
         st.warning("""
         ⚠️ **Lưu Ý:**
         - APACHE II chỉ là ước tính, không chính xác 100%

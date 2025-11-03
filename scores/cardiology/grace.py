@@ -315,6 +315,39 @@ def render():
                 - Hội chẩn đa chuyên khoa
                 """)
             
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            
+            # Prepare inputs for export
+            inputs_dict = {
+                "Age": f"{age} tuổi",
+                "Heart Rate": f"{hr} /min",
+                "Systolic BP": f"{sbp} mmHg",
+                "Creatinine": f"{scr_mgdl:.2f} mg/dL",
+                "Killip Class": f"{killip_class}",
+                "Cardiac Arrest": "Có" if cardiac_arrest else "Không",
+                "ST Deviation": "Có" if st_deviation else "Không",
+                "Elevated Enzymes": "Có" if enzymes else "Không"
+            }
+            
+            # Prepare results for export
+            results_dict = {
+                "GRACE Score": f"{points} điểm",
+                "Risk Category": risk_category.upper(),
+                "Hospital Mortality": hospital_mort,
+                "6-Month Mortality": six_month_mort,
+                "Details": "\n".join(details)
+            }
+            
+            render_export_section(
+                title=f"GRACE = {points} điểm",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="GRACE Score",
+                filename="grace_result"
+            )
+            
             with st.expander("📚 Tài Liệu Tham Khảo"):
                 st.markdown("""
                 **GRACE (Global Registry of Acute Coronary Events) Risk Score**

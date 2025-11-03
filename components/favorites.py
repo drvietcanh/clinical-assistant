@@ -33,38 +33,29 @@ def render_favorites():
             if calc_id in ALL_CALCULATORS:
                 calc_info = ALL_CALCULATORS[calc_id]
                 with cols[idx % num_cols]:
-                    st.markdown(f"""
-                    <div class="favorite-card">
-                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                            <span style="font-size: 1.5rem;">{calc_info['icon']}</span>
-                            <strong style="font-size: 0.95rem; color: #212121;">{calc_info['name']}</strong>
-                        </div>
-                        <div style="font-size: 0.8rem; color: #757575;">
-                            {calc_info['category']}
-                        </div>
-                    </div>
-                    """, unsafe_allow_html=True)
-                    
-                    col_remove, col_open = st.columns([1, 3])
-                    with col_remove:
-                        if st.button("🗑️", key=f"remove_fav_{calc_id}", help="Xóa khỏi yêu thích"):
-                            remove_from_favorites(calc_id)
-                            st.success("Đã xóa khỏi yêu thích")
-                            st.rerun()
-                    
-                    with col_open:
-                        if st.button("▶️ Mở", key=f"open_fav_{calc_id}", type="primary", use_container_width=True):
-                            from .recently_used import add_to_recently_used
-                            add_to_recently_used(calc_id)
-                            st.switch_page(calc_info['page'])
+                    # Use calculator card component for consistency
+                    from .ui.cards import render_calculator_card
+                    render_calculator_card(
+                        calc_id=calc_id,
+                        name=calc_info['name'],
+                        category=calc_info.get('category', ''),
+                        icon=calc_info.get('icon', '📊'),
+                        page=calc_info.get('page', 'Scores'),
+                        is_favorite=True,
+                        is_recent=False,
+                        show_favorite_button=True,
+                        show_open_button=True
+                    )
         
         if num_favs > 12:
-            st.caption(f"... và {num_favs - 12} calculator khác")
+            st.info(f"💡 Có thêm **{num_favs - 12}** calculator khác trong danh sách yêu thích")
     else:
         st.info("""
         **💡 Chưa có calculator yêu thích**
         
         Nhấn **⭐** khi tìm kiếm hoặc xem calculator để thêm vào danh sách yêu thích!
+        
+        Favorites giúp bạn truy cập nhanh các calculator thường dùng nhất.
         """)
     
     st.markdown("---")

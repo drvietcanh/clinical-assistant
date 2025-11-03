@@ -383,6 +383,34 @@ def render():
                 | **SGLT2i** | Liều chuẩn | **❌ CHỐNG CHỈ ĐỊNH** | - |
                 """)
         
+        # Export section
+        st.markdown("---")
+        from components.export import render_export_section
+        
+        # Prepare inputs for export
+        inputs_dict = {
+            "Age": f"{age} tuổi",
+            "Gender": "Nam" if gender == "male" else "Nữ",
+            "Weight": f"{weight_to_use:.1f} kg" + (f" (ABW, từ {weight:.1f} kg)" if use_adjusted else ""),
+            "Creatinine": f"{creatinine:.2f} {creatinine_unit}",
+            "Used Adjusted Weight": "Có" if use_adjusted else "Không"
+        }
+        
+        # Prepare results for export
+        results_dict = {
+            "CrCl": f"{crcl:.1f} mL/min",
+            "Kidney Function": stage,
+            "CKD Stage": "G1/G2" if crcl >= 60 else "G3a" if crcl >= 45 else "G3b" if crcl >= 30 else "G4" if crcl >= 15 else "G5"
+        }
+        
+        render_export_section(
+            title=f"CrCl = {crcl:.1f} mL/min",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="Creatinine Clearance (Cockcroft-Gault)",
+            filename="crcl_result"
+        )
+        
         # Comparison with eGFR
         with st.expander("🔄 So sánh CrCl vs eGFR"):
             # Calculate eGFR for comparison

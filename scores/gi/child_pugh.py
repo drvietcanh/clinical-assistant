@@ -527,6 +527,38 @@ def render():
             """)
         
         # References
+        # Export section
+        st.markdown("---")
+        from components.export import render_export_section
+        
+        # Prepare inputs for export
+        inputs_dict = {
+            "Bilirubin": f"{bili_mgdl:.1f} mg/dL",
+            "Albumin": f"{albumin:.1f} g/dL",
+            "INR": f"{inr:.2f}",
+            "Ascites": ascites,
+            "Encephalopathy": encephalopathy
+        }
+        
+        # Prepare results for export
+        results_dict = {
+            "Child-Pugh Score": f"{total_score}/15",
+            "Child-Pugh Class": cp_class,
+            "Severity": severity,
+            "1-Year Survival": survival_1yr,
+            "2-Year Survival": survival_2yr,
+            "Surgical Mortality": periop_mortality,
+            "Score Breakdown": score_breakdown
+        }
+        
+        render_export_section(
+            title=f"Child-Pugh Class {cp_class} ({total_score} điểm)",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="Child-Pugh Score",
+            filename="child_pugh_result"
+        )
+        
         with st.expander("📚 Tài Liệu Tham Khảo"):
             st.markdown("""
             **Primary Reference:**
