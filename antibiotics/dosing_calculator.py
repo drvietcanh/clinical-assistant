@@ -30,12 +30,14 @@ def calculate_bmi(weight_kg, height_cm):
     return weight_kg / (height_m ** 2)
 
 
-def get_renal_category(crcl, egfr=None, is_hemodialysis=False, is_peritoneal_dialysis=False):
+def get_renal_category(crcl, egfr=None, is_hemodialysis=False, is_continuous_hd=False, is_peritoneal_dialysis=False):
     """
     Determine renal function category based on CrCl or eGFR
     
-    Returns: 'normal', '30_60', '15_30', 'under_15', 'hemodialysis', 'peritoneal_dialysis'
+    Returns: 'normal', '30_60', '15_30', 'under_15', 'hemodialysis', 'continuous_hd', 'peritoneal_dialysis'
     """
+    if is_continuous_hd:
+        return 'continuous_hd'
     if is_hemodialysis:
         return 'hemodialysis'
     if is_peritoneal_dialysis:
@@ -140,9 +142,52 @@ def parse_dosage_text(dosage_text):
     return result
 
 
-def calculate_detailed_dose(antibiotic_name, weight_kg, ibw, abw, crcl, indication="standard", is_pediatric=False):
+def calculate_infusion_details(calculated_dose_mg, antibiotic_name, route="IV"):
     """
-    Calculate detailed dose (mg, interval, infusion time)
+    Calculate infusion time and concentration
+    Returns: dict with infusion_time_minutes, volume_ml, concentration_mg_ml
+    """
+    # Default infusion parameters by antibiotic
+    infusion_params = {
+        "Vancomycin": {"time_min": 60, "max_conc_mg_ml": 5, "max_rate_mg_min": 10},
+        "Gentamicin": {"time_min": 30, "max_conc_mg_ml": 10, "max_rate_mg_min": 20},
+        "Tobramycin": {"time_min": 30, "max_conc_mg_ml": 10, "max_rate_mg_min": 20},
+        "Amikacin": {"time_min": 30, "max_conc_mg_ml": 5, "max_rate_mg_min": 20},
+        "Piperacillin-Tazobactam": {"time_min": 30, "max_conc_mg_ml": 10, "max_rate_mg_min": 30},
+        "Meropenem": {"time_min": 30, "max_conc_mg_ml": 20, "max_rate_mg_min": 50},
+        "Imipenem-Cilastatin": {"time_min": 30, "max_conc_mg_ml": 5, "max_rate_mg_min": 25},
+        "Ceftriaxone": {"time_min": 30, "max_conc_mg_ml": 40, "max_rate_mg_min": 50},
+        "Cefepime": {"time_min": 30, "max_conc_mg_ml": 40, "max_rate_mg_min": 50},
+    }
+    
+    # Get parameters for this antibiotic (or defaults)
+    params = infusion_params.get(antibiotic_name, {"time_min": 30, "max_conc_mg_ml": 10, "max_rate_mg_min": 20})
+    
+    # Calculate concentration (try to use reasonable volume)
+    volume_ml = max(50, calculated_dose_mg / params["max_conc_mg_ml"] * 2)  # Use 2x max to be safe
+    volume_ml = round(volume_ml / 50) * 50  # Round to nearest 50ml
+    concentration_mg_ml = calculated_dose_mg / volume_ml
+    
+    # Ensure concentration doesn't exceed max
+    if concentration_mg_ml > params["max_conc_mg_ml"]:
+        volume_ml = round(calculated_dose_mg / params["max_conc_mg_ml"] / 10) * 10  # Round to nearest 10ml
+        concentration_mg_ml = calculated_dose_mg / volume_ml
+    
+    # Calculate infusion time based on rate
+    infusion_time_minutes = max(params["time_min"], (calculated_dose_mg / params["max_rate_mg_min"]))
+    infusion_time_minutes = round(infusion_time_minutes / 5) * 5  # Round to nearest 5 minutes
+    
+    return {
+        "infusion_time_minutes": infusion_time_minutes,
+        "volume_ml": volume_ml,
+        "concentration_mg_ml": concentration_mg_ml,
+        "infusion_time_hours": infusion_time_minutes / 60
+    }
+
+
+def calculate_detailed_dose(antibiotic_name, weight_kg, ibw, abw, crcl, indication="standard", is_pediatric=False, height_cm=None):
+    """
+    Calculate detailed dose (mg, interval, infusion time, concentration)
     """
     if antibiotic_name not in ANTIBIOTICS_DATABASE:
         return None
@@ -205,11 +250,17 @@ def calculate_detailed_dose(antibiotic_name, weight_kg, ibw, abw, crcl, indicati
     else:
         calculated_dose_mg = None
     
+    # Calculate infusion details if IV
+    infusion_details = None
+    if parsed.get('route') == 'IV' and calculated_dose_mg:
+        infusion_details = calculate_infusion_details(calculated_dose_mg, antibiotic_name, route='IV')
+    
     return {
         'calculated_dose_mg': calculated_dose_mg,
         'dosing_weight_kg': dosing_weight,
         'interval_hours': parsed['interval_hours'],
         'frequency': parsed['frequency'],
+        'infusion_details': infusion_details,
         'parsed': parsed
     }
 
@@ -245,35 +296,102 @@ def check_warnings(antibiotic_name, crcl, age, is_pregnant=False, is_breastfeedi
                 'icon': '🚨'
             })
     
-    # Check pregnancy/breastfeeding
+    # Enhanced pregnancy/breastfeeding checks with category display
     pregnancy_category = ab_data.get('pregnancy', '')
+    pregnancy_info = {
+        'A': {'level': 'low', 'message': 'An toàn cho thai kỳ'},
+        'B': {'level': 'low', 'message': 'An toàn, dùng được trong thai kỳ'},
+        'C': {'level': 'medium', 'message': 'Thận trọng: Cân nhắc lợi ích/nguy cơ'},
+        'D': {'level': 'high', 'message': 'Có bằng chứng nguy cơ, chỉ dùng nếu lợi ích > nguy cơ'},
+        'X': {'level': 'high', 'message': 'CHỐNG CHỈ ĐỊNH trong thai kỳ'}
+    }
+    
     if is_pregnant:
         if pregnancy_category in ['D', 'X']:
             warnings.append({
                 'level': 'high',
-                'message': f'🚨 KHÔNG AN TOÀN CHO THAI: Pregnancy category {pregnancy_category}. Tìm kháng sinh thay thế.',
+                'message': f'🚨 KHÔNG AN TOÀN CHO THAI: Pregnancy category {pregnancy_category} - {pregnancy_info.get(pregnancy_category, {}).get("message", "")}. Tìm kháng sinh thay thế.',
                 'icon': '🚨'
             })
         elif pregnancy_category == 'C':
             warnings.append({
                 'level': 'medium',
-                'message': '⚠️ Thận trọng khi có thai: Pregnancy category C. Cân nhắc lợi ích/nguy cơ.',
+                'message': f'⚠️ Thận trọng khi có thai: Pregnancy category C - {pregnancy_info.get("C", {}).get("message", "")}. Cân nhắc lợi ích/nguy cơ.',
                 'icon': '⚠️'
             })
+        elif pregnancy_category in ['A', 'B']:
+            warnings.append({
+                'level': 'low',
+                'message': f'✅ Pregnancy category {pregnancy_category}: {pregnancy_info.get(pregnancy_category, {}).get("message", "")}',
+                'icon': '✅'
+            })
     
-    # Check age restrictions (pediatric)
-    if age < 8 and antibiotic_name == "Doxycycline":
-        warnings.append({
-            'level': 'high',
-            'message': '🚨 CHỐNG CHỈ ĐỊNH: Doxycycline không dùng cho trẻ < 8 tuổi (ảnh hưởng răng và xương).',
-            'icon': '🚨'
-        })
+    # Breastfeeding check
+    if is_breastfeeding:
+        # Most antibiotics are compatible with breastfeeding, but some need caution
+        if antibiotic_name in ["Tetracycline", "Doxycycline"]:
+            warnings.append({
+                'level': 'medium',
+                'message': '⚠️ Doxycycline/Tetracycline: Có thể ảnh hưởng răng xương trẻ nhỏ. Thận trọng khi cho con bú.',
+                'icon': '⚠️'
+            })
+        elif antibiotic_name in ["Chloramphenicol"]:
+            warnings.append({
+                'level': 'high',
+                'message': '🚨 Chloramphenicol: Tránh dùng khi cho con bú (nguy cơ gray baby syndrome).',
+                'icon': '🚨'
+            })
+        else:
+            # Most antibiotics are safe
+            warnings.append({
+                'level': 'low',
+                'message': '✅ Hầu hết kháng sinh an toàn khi cho con bú. Tra cứu thông tin cụ thể.',
+                'icon': 'ℹ️'
+            })
+    
+    # Enhanced age restrictions (pediatric with specific ages)
+    if age < 18:
+        if antibiotic_name == "Doxycycline" and age < 8:
+            warnings.append({
+                'level': 'high',
+                'message': '🚨 CHỐNG CHỈ ĐỊNH: Doxycycline không dùng cho trẻ < 8 tuổi (ảnh hưởng răng và xương).',
+                'icon': '🚨'
+            })
+        
+        if antibiotic_name == "Tetracycline" and age < 8:
+            warnings.append({
+                'level': 'high',
+                'message': '🚨 CHỐNG CHỈ ĐỊNH: Tetracycline không dùng cho trẻ < 8 tuổi.',
+                'icon': '🚨'
+            })
+        
+        if antibiotic_name == "Ciprofloxacin" and age < 18:
+            warnings.append({
+                'level': 'medium',
+                'message': '⚠️ Ciprofloxacin: Tránh dùng cho trẻ < 18 tuổi (trừ trường hợp đặc biệt). Ảnh hưởng xương và sụn.',
+                'icon': '⚠️'
+            })
+        
+        if antibiotic_name == "Levofloxacin" and age < 18:
+            warnings.append({
+                'level': 'medium',
+                'message': '⚠️ Levofloxacin: Tránh dùng cho trẻ < 18 tuổi (trừ trường hợp đặc biệt).',
+                'icon': '⚠️'
+            })
     
     # Check for ototoxicity in elderly
     if age >= 65 and antibiotic_name in ["Gentamicin", "Amikacin", "Tobramycin"]:
         warnings.append({
             'level': 'medium',
             'message': '⚠️ Thận trọng độc tai ở người già. Monitor thính lực.',
+            'icon': '⚠️'
+        })
+    
+    # Check for nephrotoxicity risk
+    if age >= 65 and antibiotic_name in ["Vancomycin", "Colistin"]:
+        warnings.append({
+            'level': 'medium',
+            'message': '⚠️ Thận trọng độc thận ở người già. Monitor creatinine thường xuyên.',
             'icon': '⚠️'
         })
     
@@ -555,8 +673,26 @@ def render_dosing_calculator():
         # Special conditions
         st.markdown("#### 🏥 Tình Trạng Đặc Biệt")
         is_icu = st.checkbox("🏥 Bệnh nhân ICU", key="dosing_icu", help="Tự động điều chỉnh cho ICU: ARC, Vd changes")
-        is_hemodialysis = st.checkbox("💉 Đang lọc máu (Hemodialysis)", key="dosing_hd")
-        is_peritoneal_dialysis = st.checkbox("💉 Đang lọc màng bụng (Peritoneal Dialysis)", key="dosing_pd")
+        
+        # Enhanced HD/PD selection
+        dialysis_type = st.radio(
+            "Tình trạng thận đặc biệt:",
+            ["Không có", "Lọc máu ngắt quãng (HD)", "Lọc máu liên tục (CRRT/CVVH)", "Lọc màng bụng (PD)"],
+            key="dialysis_type",
+            help="Chọn loại lọc máu để có hướng dẫn liều cụ thể"
+        )
+        is_hemodialysis = dialysis_type == "Lọc máu ngắt quãng (HD)"
+        is_continuous_hd = dialysis_type == "Lọc máu liên tục (CRRT/CVVH)"
+        is_peritoneal_dialysis = dialysis_type == "Lọc màng bụng (PD)"
+        
+        if is_hemodialysis:
+            hd_schedule = st.selectbox(
+                "Lịch lọc máu:",
+                ["3 lần/tuần", "Hàng ngày", "Khác"],
+                key="hd_schedule",
+                help="Thời gian lọc máu ảnh hưởng đến thời điểm cho thuốc"
+            )
+        
         is_pregnant = st.checkbox("🤰 Có thai", key="dosing_pregnant")
         is_breastfeeding = st.checkbox("🤱 Đang cho con bú", key="dosing_breastfeeding")
         
@@ -705,13 +841,15 @@ def render_dosing_calculator():
         st.metric("eGFR (CKD-EPI)", f"{egfr:.1f} mL/min/1.73m²", help="Dùng cho phân loại CKD")
     
     # Renal function category (with special conditions)
-    renal_category = get_renal_category(crcl, egfr, is_hemodialysis, is_peritoneal_dialysis)
+    renal_category = get_renal_category(crcl, egfr, is_hemodialysis, is_continuous_hd if 'is_continuous_hd' in locals() else False, is_peritoneal_dialysis)
     category_labels = {
         'normal': '✅ Bình thường (CrCl ≥ 60)',
         '30_60': '⚠️ Suy thận nhẹ-vừa (CrCl 30-59)',
         '15_30': '🔴 Suy thận nặng (CrCl 15-29)',
         'under_15': '🚨 Suy thận rất nặng (CrCl < 15)',
-        'hemodialysis': '💉 Đang lọc máu'
+        'hemodialysis': '💉 Đang lọc máu ngắt quãng (HD)',
+        'continuous_hd': '💉 Đang lọc máu liên tục (CRRT/CVVH)',
+        'peritoneal_dialysis': '💉 Đang lọc màng bụng (PD)'
     }
     
     category_colors = {
@@ -719,7 +857,9 @@ def render_dosing_calculator():
         '30_60': '🟡',
         '15_30': '🟠',
         'under_15': '🔴',
-        'hemodialysis': '🔵'
+        'hemodialysis': '🔵',
+        'continuous_hd': '🔵',
+        'peritoneal_dialysis': '🔵'
     }
     
     st.info(f"{category_colors.get(renal_category, '')} **{category_labels.get(renal_category, 'Chưa xác định')}**")
@@ -769,6 +909,7 @@ def render_dosing_calculator():
     
     # Calculate dose
     if st.button("🧮 Tính Liều", type="primary", use_container_width=True):
+        # Update renal category with dialysis type
         result = calculate_adjusted_dose(
             selected_ab,
             crcl,
@@ -869,14 +1010,18 @@ def render_dosing_calculator():
             detailed_dose = calculate_detailed_dose(
                 selected_ab, weight, ibw, abw, crcl, 
                 indication=indication_code, 
-                is_pediatric=is_pediatric
+                is_pediatric=is_pediatric,
+                height_cm=height
             )
             
             if detailed_dose and detailed_dose.get('calculated_dose_mg'):
-                col1, col2, col3 = st.columns(3)
+                col1, col2, col3, col4 = st.columns(4)
                 
                 with col1:
                     st.metric("Liều tính được", f"{detailed_dose['calculated_dose_mg']:.0f} mg")
+                    if detailed_dose.get('parsed', {}).get('dose_per_kg'):
+                        dose_per_kg = detailed_dose['calculated_dose_mg'] / detailed_dose['dosing_weight_kg']
+                        st.caption(f"≈ {dose_per_kg:.1f} mg/kg")
                 
                 with col2:
                     if detailed_dose.get('interval_hours'):
@@ -886,10 +1031,54 @@ def render_dosing_calculator():
                 
                 with col3:
                     st.metric("Trọng lượng dùng", f"{detailed_dose['dosing_weight_kg']:.1f} kg")
+                    if is_obese:
+                        st.caption("ABW")
+                    elif is_malnourished:
+                        st.caption("Cân nhắc IBW")
+                
+                with col4:
+                    if detailed_dose.get('frequency'):
+                        st.metric("Tần suất", f"{detailed_dose['frequency']:.0f} lần/ngày")
+                    else:
+                        st.metric("Tần suất", "Theo interval")
+                
+                # Infusion details (if IV)
+                if detailed_dose.get('infusion_details'):
+                    infusion = detailed_dose['infusion_details']
+                    st.markdown("---")
+                    st.markdown("#### 💉 Hướng Dẫn Pha & Truyền (IV):")
+                    
+                    col1, col2, col3 = st.columns(3)
+                    with col1:
+                        st.info(f"""
+                        **Thể tích pha:**
+                        {infusion['volume_ml']:.0f} mL NS/D5W
+                        
+                        **Nồng độ:**
+                        {infusion['concentration_mg_ml']:.2f} mg/mL
+                        """)
+                    
+                    with col2:
+                        st.info(f"""
+                        **Thời gian truyền:**
+                        {infusion['infusion_time_minutes']:.0f} phút
+                        ({infusion['infusion_time_hours']:.1f} giờ)
+                        """)
+                    
+                    with col3:
+                        rate_ml_per_hour = infusion['volume_ml'] / infusion['infusion_time_hours']
+                        st.info(f"""
+                        **Tốc độ truyền:**
+                        {rate_ml_per_hour:.0f} mL/giờ
+                        ({rate_ml_per_hour/60:.1f} mL/phút)
+                        """)
                 
                 # Dosing schedule example
                 if detailed_dose.get('interval_hours'):
-                    st.info(f"📅 **Lịch dùng:** {detailed_dose['calculated_dose_mg']:.0f} mg mỗi {detailed_dose['interval_hours']:.0f} giờ")
+                    schedule_text = f"📅 **Lịch dùng:** {detailed_dose['calculated_dose_mg']:.0f} mg mỗi {detailed_dose['interval_hours']:.0f} giờ"
+                    if detailed_dose.get('infusion_details'):
+                        schedule_text += f" (truyền {detailed_dose['infusion_details']['infusion_time_minutes']:.0f} phút)"
+                    st.info(schedule_text)
             
             # ICU-specific adjustments display
             if is_icu and result.get('icu_recommendations'):
@@ -937,25 +1126,49 @@ def render_dosing_calculator():
             else:
                 st.success("✅ Không có cảnh báo đặc biệt cho trường hợp này")
             
-            # Special population guidance
+            # Enhanced special population guidance
             if is_hemodialysis:
                 st.markdown("---")
-                st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Máu:")
-                st.info("""
+                st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Máu Ngắt Quãng:")
+                
+                if 'hd_schedule' in locals():
+                    hd_freq_text = f"Lịch HD: {hd_schedule}"
+                else:
+                    hd_freq_text = "Lịch HD: 3 lần/tuần"
+                
+                st.warning(f"""
+                **{hd_freq_text}**
+                
                 **Thời điểm cho thuốc:**
-                - Cho thuốc **SAU** khi lọc máu (nếu có thể)
-                - Một số kháng sinh cần liều bổ sung trước HD
+                - Cho thuốc **SAU** khi lọc máu (nếu có thể) để tránh bị lọc bỏ
+                - Một số kháng sinh cần liều bổ sung **TRƯỚC** HD (ví dụ: Vancomycin)
+                - Tra cứu hướng dẫn cụ thể cho từng kháng sinh
+                
+                **Lưu ý:**
+                - CrCl trong HD ≈ 0, cần dùng liều cho suy thận rất nặng hoặc liều bổ sung
+                - Monitor nồng độ thuốc nếu có thể
+                """)
+            
+            if is_continuous_hd:
+                st.markdown("---")
+                st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Máu Liên Tục (CRRT/CVVH):")
+                st.warning(f"""
+                **CRRT/CVVH:**
+                - Liều thường cao hơn HD ngắt quãng do thời gian lọc liên tục
+                - Cần tính liều dựa trên clearance của CRRT
+                - Một số kháng sinh cần tăng liều: Vancomycin, Piperacillin-Tazobactam
                 - Tra cứu hướng dẫn cụ thể cho từng kháng sinh
                 """)
             
             if is_peritoneal_dialysis:
                 st.markdown("---")
-                st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Màng Bụng:")
-                st.info("""
-                **Lưu ý:**
-                - Một số kháng sinh có thể cho vào dịch lọc màng bụng
-                - Cần điều chỉnh liều khác với HD
-                - Tra cứu hướng dẫn cụ thể
+                st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Màng Bụng (PD):")
+                st.info(f"""
+                **Lọc màng bụng:**
+                - Một số kháng sinh có thể cho vào dịch lọc màng bụng (IP - intraperitoneal)
+                - Cần điều chỉnh liều khác với HD ngắt quãng
+                - Thường dùng liều cho suy thận nặng
+                - Tra cứu hướng dẫn cụ thể cho từng kháng sinh
                 """)
             
             # Monitoring

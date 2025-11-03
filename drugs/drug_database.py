@@ -4416,17 +4416,1282 @@ DRUG_DATABASE = {
         ],
         "pregnancy": "C - Thận trọng"
     },
+    
+    # ========== ONCOLOGY ==========
+    
+    "Cisplatin": {
+        "group": "Oncology - Platinum Compound",
+        "vietnamese_name": "Cisplatin, Platinol",
+        "administration": ["IV"],
+        "indications": [
+            "Ung thư phổi (NSCLC, SCLC)",
+            "Ung thư đầu cổ",
+            "Ung thư tinh hoàn",
+            "Ung thư buồng trứng",
+            "Ung thư bàng quang",
+            "Ung thư cổ tử cung"
+        ],
+        "contraindications": [
+            "Dị ứng cisplatin",
+            "Suy thận nặng (CrCl <60)",
+            "Giảm thính lực",
+            "Giảm bạch cầu/tiểu cầu nặng",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_standard": "50-100mg/m² IV mỗi 3-4 tuần",
+            "adult_weekly": "20-30mg/m² IV mỗi tuần",
+            "adult_daily": "15-20mg/m² IV x 5 ngày (mỗi 3-4 tuần)",
+            "notes": "Truyền với nước muối sinh lý (NaCl 0.9%), cần pre-hydration và post-hydration"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Không dùng hoặc giảm liều 50-75%"
+        },
+        "side_effects": [
+            "Độc thận (phổ biến và nghiêm trọng - cần hydration)",
+            "Nôn mửa nặng (thường xảy ra)",
+            "Giảm thính lực (có thể vĩnh viễn)",
+            "Độc thần kinh ngoại biên (tê bì, dị cảm)",
+            "Giảm bạch cầu, tiểu cầu (myelosuppression)",
+            "Rụng tóc",
+            "Hạ magne máu (phổ biến)",
+            "Độc tim (hiếm)"
+        ],
+        "interactions": [
+            "Aminoglycosides: tăng độc thận",
+            "Furosemide: tăng độc thận",
+            "Phenytoin: giảm nồng độ phenytoin",
+            "Thuốc độc thận khác: tránh dùng đồng thời"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "Carboplatin": {
+        "group": "Oncology - Platinum Compound",
+        "vietnamese_name": "Carboplatin, Paraplatin",
+        "administration": ["IV"],
+        "indications": [
+            "Ung thư buồng trứng",
+            "Ung thư phổi (NSCLC)",
+            "Ung thư đầu cổ",
+            "Ung thư cổ tử cung",
+            "Ung thư tinh hoàn"
+        ],
+        "contraindications": [
+            "Dị ứng carboplatin hoặc platinum compounds",
+            "Giảm bạch cầu/tiểu cầu nặng",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_calvert": "AUC 4-6 mg/mL x min IV (tính theo GFR)",
+            "adult_fixed": "300-400mg/m² IV mỗi 4 tuần",
+            "adult_weekly": "100mg/m² IV mỗi tuần",
+            "notes": "Dùng công thức Calvert: Dose (mg) = AUC x (GFR + 25). Ít độc thận hơn cisplatin"
+        },
+        "renal_adjustment": {
+            "normal": "Tính theo GFR trong công thức Calvert",
+            "30_60": "Giảm AUC hoặc liều 25-50%",
+            "under_30": "Thận trọng, giảm liều đáng kể"
+        },
+        "side_effects": [
+            "Giảm bạch cầu, tiểu cầu (myelosuppression - phổ biến hơn cisplatin)",
+            "Nôn mửa (ít hơn cisplatin)",
+            "Độc thận (ít hơn cisplatin nhưng vẫn có)",
+            "Rụng tóc (ít)",
+            "Độc thần kinh (ít hơn cisplatin)",
+            "Phản ứng dị ứng (hiếm)",
+            "Hạ magne máu"
+        ],
+        "interactions": [
+            "Aminoglycosides: tăng độc thận",
+            "Thuốc độc thận: tránh dùng đồng thời",
+            "Phenytoin: giảm nồng độ phenytoin"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "Oxaliplatin": {
+        "group": "Oncology - Platinum Compound",
+        "vietnamese_name": "Oxaliplatin, Eloxatin",
+        "administration": ["IV"],
+        "indications": [
+            "Ung thư đại trực tràng (adjuvant và metastatic)",
+            "Ung thư dạ dày",
+            "Ung thư tụy"
+        ],
+        "contraindications": [
+            "Dị ứng oxaliplatin hoặc platinum compounds",
+            "Giảm bạch cầu/tiểu cầu nặng",
+            "Suy thận nặng (CrCl <30)",
+            "Suy gan nặng",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_folfox": "85mg/m² IV mỗi 2 tuần (phối hợp với 5-FU và leucovorin)",
+            "adult_single": "85-130mg/m² IV mỗi 2-3 tuần",
+            "notes": "Truyền 2-6 giờ. Tránh lạnh (độc lạnh - cold-induced neuropathy)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, có thể giảm liều",
+            "under_30": "Thận trọng, giảm liều 25-50%"
+        },
+        "side_effects": [
+            "Độc lạnh (cold-induced neuropathy - tê, cảm giác như bị điện giật khi tiếp xúc lạnh)",
+            "Độc thần kinh ngoại biên (tê bì, mất cảm giác)",
+            "Nôn mửa",
+            "Tiêu chảy",
+            "Giảm bạch cầu, tiểu cầu",
+            "Phản ứng dị ứng (hiếm)",
+            "Độc gan (tăng transaminase)"
+        ],
+        "interactions": [
+            "Thuốc độc thận: thận trọng",
+            "Phenytoin: có thể giảm nồng độ phenytoin"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "5-Fluorouracil": {
+        "group": "Oncology - Antimetabolite",
+        "vietnamese_name": "5-Fluorouracil, 5-FU, Fluorouracil",
+        "administration": ["IV"],
+        "indications": [
+            "Ung thư đại trực tràng (adjuvant và metastatic)",
+            "Ung thư dạ dày",
+            "Ung thư đầu cổ",
+            "Ung thư tụy",
+            "Ung thư vú",
+            "Ung thư da (topical)"
+        ],
+        "contraindications": [
+            "Dị ứng 5-FU",
+            "Thiếu hụt DPD (dihydropyrimidine dehydrogenase)",
+            "Giảm bạch cầu/tiểu cầu nặng",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_bolus": "400-600mg/m² IV bolus ngày 1, sau đó 400-600mg/m²/ngày x 4 ngày (mỗi 4 tuần)",
+            "adult_infusion": "1000mg/m²/ngày IV infusion x 4-5 ngày (mỗi 4 tuần)",
+            "adult_weekly": "500-600mg/m² IV mỗi tuần",
+            "adult_topical": "5% cream bôi 2 lần/ngày",
+            "notes": "Phối hợp với leucovorin để tăng hiệu quả. Cần test DPD nếu có thể"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, có thể giảm liều 25%",
+            "under_30": "Thận trọng, giảm liều 25-50%"
+        },
+        "side_effects": [
+            "Loét miệng (stomatitis - phổ biến)",
+            "Tiêu chảy (phổ biến, có thể nặng)",
+            "Giảm bạch cầu, tiểu cầu (myelosuppression)",
+            "Ban da",
+            "Rụng tóc",
+            "Độc tim (hiếm nhưng nguy hiểm)",
+            "Rối loạn thần kinh (hiếm)",
+            "Tăng bilirubin"
+        ],
+        "interactions": [
+            "Leucovorin: tăng hiệu quả và độc tính",
+            "Methotrexate: tăng độc tính",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Phenytoin: tăng nồng độ phenytoin"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "Methotrexate": {
+        "group": "Oncology - Antimetabolite (Antifolate)",
+        "vietnamese_name": "Methotrexate, MTX, Amethopterin",
+        "administration": ["PO", "IV", "IM", "SC", "IT"],
+        "indications": [
+            "Bệnh bạch cầu cấp (leukemia)",
+            "U lympho (lymphoma)",
+            "U nguyên bào nuôi (choriocarcinoma)",
+            "Ung thư đầu cổ",
+            "Ung thư phổi",
+            "Viêm khớp dạng thấp (liều thấp)",
+            "Vẩy nến (liều thấp)"
+        ],
+        "contraindications": [
+            "Dị ứng methotrexate",
+            "Suy thận nặng",
+            "Suy gan nặng",
+            "Giảm bạch cầu/tiểu cầu nặng",
+            "Loét dạ dày tá tràng hoạt động",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_cancer_high": "50-250mg/m² IV (cần folinic acid rescue)",
+            "adult_cancer_moderate": "10-50mg/m² IV/IM/PO",
+            "adult_ra_psoriasis": "7.5-25mg PO x 1 lần/tuần",
+            "adult_it": "12-15mg IT (theo dõi chặt chẽ)",
+            "notes": "Liều cao (>50mg/m²) cần folinic acid rescue sau 24 giờ. Uống nhiều nước"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Không dùng hoặc giảm liều đáng kể, theo dõi sát"
+        },
+        "side_effects": [
+            "Giảm bạch cầu, tiểu cầu, thiếu máu (myelosuppression - nghiêm trọng)",
+            "Loét miệng (stomatitis)",
+            "Tiêu chảy",
+            "Độc gan (tăng transaminase, xơ gan)",
+            "Độc phổi (viêm phổi kẽ - hiếm nhưng nguy hiểm)",
+            "Độc thận (với liều cao)",
+            "Rụng tóc",
+            "Phát ban"
+        ],
+        "interactions": [
+            "Probenecid: tăng độc tính methotrexate",
+            "NSAID: tăng độc tính",
+            "Penicillin: tăng độc tính",
+            "Trimethoprim-Sulfamethoxazole: tăng độc tính",
+            "Folinic acid: giải độc (rescue therapy)"
+        ],
+        "pregnancy": "X - Chống chỉ định tuyệt đối"
+    },
+    
+    "Cyclophosphamide": {
+        "group": "Oncology - Alkylating Agent",
+        "vietnamese_name": "Cyclophosphamide, Endoxan, Cytoxan",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "U lympho (lymphoma)",
+            "Bệnh bạch cầu",
+            "Ung thư vú",
+            "Ung thư buồng trứng",
+            "Bệnh tự miễn (lupus, vasculitis, liều thấp)"
+        ],
+        "contraindications": [
+            "Dị ứng cyclophosphamide",
+            "Giảm bạch cầu/tiểu cầu nặng",
+            "Suy thận nặng",
+            "Suy gan nặng",
+            "Viêm bàng quang chảy máu",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_cancer_high": "500-1000mg/m² IV mỗi 3-4 tuần",
+            "adult_cancer_moderate": "50-200mg/m² PO/IV mỗi ngày",
+            "adult_autoimmune": "1-2mg/kg PO mỗi ngày hoặc 500-750mg/m² IV mỗi tháng",
+            "notes": "Uống nhiều nước (2-3L/ngày) để phòng viêm bàng quang. Có thể dùng mesna để bảo vệ"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Thận trọng, giảm liều đáng kể"
+        },
+        "side_effects": [
+            "Viêm bàng quang chảy máu (hemorrhagic cystitis - phổ biến, nguy hiểm)",
+            "Giảm bạch cầu, tiểu cầu (myelosuppression)",
+            "Buồn nôn, nôn",
+            "Rụng tóc",
+            "Vô sinh (nam và nữ)",
+            "Ung thư thứ phát (hiếm)",
+            "Độc tim (với liều cao)",
+            "Hội chứng lysis khối u"
+        ],
+        "interactions": [
+            "Allopurinol: tăng độc tính",
+            "Phenobarbital: tăng chuyển hóa",
+            "Succinylcholine: kéo dài tác dụng",
+            "Mesna: bảo vệ chống viêm bàng quang"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "Ifosfamide": {
+        "group": "Oncology - Alkylating Agent",
+        "vietnamese_name": "Ifosfamide, Ifex",
+        "administration": ["IV"],
+        "indications": [
+            "Ung thư tinh hoàn",
+            "U lympho",
+            "Sarcoma mô mềm",
+            "Ung thư xương",
+            "Ung thư phổi (một số loại)"
+        ],
+        "contraindications": [
+            "Dị ứng ifosfamide",
+            "Suy thận nặng",
+            "Giảm bạch cầu/tiểu cầu nặng",
+            "Viêm bàng quang chảy máu",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_standard": "1200-2000mg/m² IV x 3-5 ngày (mỗi 3-4 tuần)",
+            "adult_high": "3000-5000mg/m² IV x 1-3 ngày (với mesna)",
+            "notes": "Luôn dùng kèm mesna để bảo vệ bàng quang. Uống nhiều nước"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều 25-50%",
+            "under_30": "Thận trọng, giảm liều đáng kể"
+        },
+        "side_effects": [
+            "Viêm bàng quang chảy máu (nguy hiểm - cần mesna)",
+            "Độc thần kinh trung ương (lú lẫn, co giật - với liều cao)",
+            "Giảm bạch cầu, tiểu cầu",
+            "Buồn nôn, nôn",
+            "Rụng tóc",
+            "Độc thận",
+            "Vô sinh"
+        ],
+        "interactions": [
+            "Mesna: bảo vệ chống viêm bàng quang (bắt buộc)",
+            "Phenobarbital: tăng chuyển hóa",
+            "Cisplatin: tăng độc thận"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "Doxorubicin": {
+        "group": "Oncology - Anthracycline",
+        "vietnamese_name": "Doxorubicin, Adriamycin",
+        "administration": ["IV"],
+        "indications": [
+            "Ung thư vú",
+            "U lympho",
+            "Bệnh bạch cầu",
+            "Sarcoma mô mềm",
+            "Ung thư buồng trứng",
+            "Ung thư phổi (SCLC)"
+        ],
+        "contraindications": [
+            "Dị ứng doxorubicin",
+            "Suy tim nặng",
+            "Bệnh tim tiềm ẩn",
+            "Giảm bạch cầu/tiểu cầu nặng",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_standard": "60-75mg/m² IV mỗi 3 tuần",
+            "adult_weekly": "20-30mg/m² IV mỗi tuần",
+            "adult_cardiac_risk": "Giảm liều hoặc dùng liposomal doxorubicin",
+            "notes": "Tổng liều tích lũy tối đa: 450-550mg/m² (nguy cơ độc tim). Dùng phác đồ 3 tuần"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, có thể giảm liều",
+            "under_30": "Thận trọng, giảm liều"
+        },
+        "side_effects": [
+            "Độc tim (suy tim, rối loạn nhịp - tích lũy, không hồi phục)",
+            "Giảm bạch cầu, tiểu cầu (myelosuppression)",
+            "Rụng tóc (phổ biến)",
+            "Buồn nôn, nôn",
+            "Loét miệng",
+            "Da đỏ, đau khi truyền (extravasation - nguy hiểm)",
+            "Nước tiểu đỏ (bình thường, không phải máu)",
+            "Vô sinh"
+        ],
+        "interactions": [
+            "Cyclophosphamide: tăng độc tim",
+            "Trastuzumab: tăng độc tim",
+            "Paclitaxel: có thể tăng độc tính",
+            "Các anthracyclines khác: tăng độc tim"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "Granisetron": {
+        "group": "Oncology - Anti-emetic (5-HT3 Antagonist)",
+        "vietnamese_name": "Granisetron, Kytril",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Phòng và điều trị nôn do hóa trị",
+            "Phòng nôn sau phẫu thuật",
+            "Nôn do xạ trị"
+        ],
+        "contraindications": [
+            "Dị ứng granisetron hoặc 5-HT3 antagonists"
+        ],
+        "dosage": {
+            "adult_iv": "1mg IV x 1 lần trước hóa trị hoặc 0.01mg/kg IV",
+            "adult_po": "1-2mg PO x 1 lần trước hóa trị, có thể lặp lại sau 12 giờ",
+            "adult_prevention": "1-2mg PO x 1-2 lần/ngày",
+            "notes": "Có thể dùng 30 phút - 1 giờ trước hóa trị"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Đau đầu (phổ biến)",
+            "Táo bón",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Tăng transaminase (hiếm)",
+            "QT kéo dài (hiếm)"
+        ],
+        "interactions": [
+            "Apomorphine: chống chỉ định (tăng tác dụng)",
+            "Các 5-HT3 antagonists khác: không nên dùng đồng thời"
+        ],
+        "pregnancy": "B - Thận trọng"
+    },
+    
+    "Palonosetron": {
+        "group": "Oncology - Anti-emetic (5-HT3 Antagonist)",
+        "vietnamese_name": "Palonosetron, Aloxi",
+        "administration": ["IV"],
+        "indications": [
+            "Phòng nôn do hóa trị (ngắn và trung hạn)",
+            "Phòng nôn sau phẫu thuật"
+        ],
+        "contraindications": [
+            "Dị ứng palonosetron hoặc 5-HT3 antagonists"
+        ],
+        "dosage": {
+            "adult_chemotherapy": "0.25mg IV x 1 lần trước hóa trị",
+            "adult_surgery": "0.075mg IV x 1 lần trước gây mê",
+            "notes": "Tác dụng dài (48-72 giờ), chỉ cần 1 liều"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Đau đầu",
+            "Táo bón",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "QT kéo dài (hiếm)"
+        ],
+        "interactions": [
+            "Apomorphine: chống chỉ định"
+        ],
+        "pregnancy": "B - Thận trọng"
+    },
+    
+    # ========== PEDIATRIC-SPECIFIC ==========
+    
+    "Amoxicillin-clavulanate": {
+        "group": "Antibiotic - Beta-lactam (Penicillin + Beta-lactamase inhibitor)",
+        "vietnamese_name": "Amoxicillin-clavulanate, Augmentin, Amoclav",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm khuẩn đường hô hấp trên/dưới",
+            "Nhiễm khuẩn đường tiết niệu",
+            "Nhiễm khuẩn da mô mềm",
+            "Nhiễm khuẩn răng miệng",
+            "Nhiễm khuẩn tai mũi họng (trẻ em)"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin",
+            "Viêm gan do amoxicillin-clavulanate trước đây",
+            "Dị ứng beta-lactam"
+        ],
+        "dosage": {
+            "adult_po": "875/125mg x 2 lần/ngày hoặc 500/125mg x 3 lần/ngày",
+            "pediatric_po_suspension": "20-40mg amoxicillin/kg/ngày chia 2-3 lần (tối đa 875mg/125mg)",
+            "pediatric_po_tablet": "25-45mg amoxicillin/kg/ngày chia 2 lần (trên 40kg: dùng liều người lớn)",
+            "adult_iv": "1000/200mg IV mỗi 8 giờ",
+            "pediatric_iv": "90mg amoxicillin/kg/ngày chia 3 lần (tối đa 1000/200mg mỗi 8 giờ)",
+            "notes": "Có dạng suspension cho trẻ em. Uống với thức ăn để giảm tiêu chảy"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều hoặc tăng khoảng cách",
+            "under_30": "Liều thấp hơn, khoảng cách dài hơn"
+        },
+        "side_effects": [
+            "Tiêu chảy (phổ biến)",
+            "Buồn nôn",
+            "Phát ban",
+            "Viêm gan (hiếm nhưng nguy hiểm)",
+            "Nhiễm trùng nấm Candida"
+        ],
+        "interactions": [
+            "Warfarin: tăng INR",
+            "Methotrexate: tăng độc tính methotrexate",
+            "Allopurinol: tăng nguy cơ phát ban",
+            "Thuốc tránh thai: có thể giảm hiệu quả"
+        ],
+        "pregnancy": "B - An toàn"
+    },
+    
+    "Paracetamol": {
+        "group": "Analgesic/Antipyretic",
+        "vietnamese_name": "Paracetamol, Acetaminophen, Tylenol, Efferalgan",
+        "administration": ["PO", "IV", "PR"],
+        "indications": [
+            "Sốt",
+            "Đau nhẹ đến trung bình",
+            "Đau đầu",
+            "Đau cơ",
+            "Đau răng"
+        ],
+        "contraindications": [
+            "Dị ứng paracetamol",
+            "Suy gan nặng",
+            "Bệnh gan tiến triển"
+        ],
+        "dosage": {
+            "adult_po": "500-1000mg x 3-4 lần/ngày (tối đa 4g/ngày)",
+            "adult_iv": "1000mg IV mỗi 6 giờ (tối đa 4g/ngày)",
+            "pediatric_po": "10-15mg/kg x 3-4 lần/ngày (tối đa 60mg/kg/ngày)",
+            "pediatric_iv": "15mg/kg IV mỗi 6 giờ (tối đa 60mg/kg/ngày)",
+            "pediatric_pr": "15-20mg/kg PR mỗi 6 giờ (khi không uống được)",
+            "notes": "Liều tối đa: Người lớn 4g/ngày, Trẻ em 60mg/kg/ngày. Quá liều gây độc gan nghiêm trọng"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Khoảng cách 6-8 giờ"
+        },
+        "side_effects": [
+            "Hiếm khi có tác dụng phụ ở liều điều trị",
+            "Độc gan (với liều quá cao - >150mg/kg)",
+            "Phát ban (hiếm)",
+            "Giảm bạch cầu (rất hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu (với liều cao kéo dài)",
+            "Isoniazid: tăng nguy cơ độc gan",
+            "Alcohol: tăng nguy cơ độc gan",
+            "Phenytoin/Carbamazepine: tăng nguy cơ độc gan"
+        ],
+        "pregnancy": "C - An toàn (dùng được trong thai kỳ)"
+    },
+    
+    "Ibuprofen": {
+        "group": "Analgesic/Antipyretic/NSAID",
+        "vietnamese_name": "Ibuprofen, Brufen, Advil",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Sốt",
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp",
+            "Đau bụng kinh",
+            "Đau đầu"
+        ],
+        "contraindications": [
+            "Dị ứng NSAID",
+            "Loét dạ dày tá tràng hoạt động",
+            "Suy thận nặng",
+            "Suy tim nặng",
+            "Có thai (3 tháng cuối)",
+            "Trẻ em <6 tháng"
+        ],
+        "dosage": {
+            "adult_po": "200-400mg x 3-4 lần/ngày (tối đa 2.4g/ngày)",
+            "adult_iv": "400-800mg IV mỗi 6 giờ",
+            "pediatric_po": "5-10mg/kg x 3-4 lần/ngày (tối đa 40mg/kg/ngày)",
+            "pediatric_suspension": "Có dạng suspension 100mg/5ml cho trẻ em",
+            "notes": "Uống với thức ăn để giảm kích ứng dạ dày. Không dùng quá 10 ngày không có chỉ định"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Không dùng hoặc giảm liều đáng kể"
+        },
+        "side_effects": [
+            "Kích ứng dạ dày",
+            "Đau đầu",
+            "Chóng mặt",
+            "Tăng nguy cơ tim mạch (với dùng lâu dài)",
+            "Suy thận cấp (hiếm)",
+            "Phát ban"
+        ],
+        "interactions": [
+            "Aspirin: có thể giảm hiệu quả aspirin",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Lithium: tăng nồng độ lithium",
+            "Methotrexate: tăng độc tính",
+            "ACE inhibitors: giảm hiệu quả"
+        ],
+        "pregnancy": "C - Tránh dùng trong 3 tháng cuối (D)"
+    },
+    
+    "Salbutamol": {
+        "group": "Respiratory - Beta-2 Agonist (Short-acting)",
+        "vietnamese_name": "Salbutamol, Albuterol, Ventolin, Salbutamol",
+        "administration": ["INH", "IV", "PO", "NEB"],
+        "indications": [
+            "Hen phế quản",
+            "COPD",
+            "Co thắt phế quản",
+            "Phòng co thắt phế quản do gắng sức",
+            "Cấp cứu hen (nebulizer/IV)"
+        ],
+        "contraindications": [
+            "Dị ứng salbutamol",
+            "Nhịp tim nhanh nặng",
+            "Rối loạn nhịp tim nặng",
+            "Cường giáp"
+        ],
+        "dosage": {
+            "adult_inh": "1-2 puff (100-200mcg) x 4 lần/ngày hoặc khi cần (tối đa 8-12 puff/ngày)",
+            "adult_neb": "2.5-5mg nebulizer mỗi 4-6 giờ",
+            "adult_iv": "5mcg/kg IV bolus, sau đó 0.5-5mcg/kg/phút",
+            "pediatric_inh": "1-2 puff (100-200mcg) x 4 lần/ngày (trên 4 tuổi)",
+            "pediatric_neb": "0.15mg/kg (tối thiểu 1.25mg) nebulizer mỗi 4-6 giờ",
+            "pediatric_po_syrup": "0.1-0.15mg/kg x 3 lần/ngày (tối đa 2-4mg x 3 lần/ngày)",
+            "notes": "Có dạng syrup và nebulizer cho trẻ em. Dùng khi cần cho cơn cấp"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Run tay (phổ biến)",
+            "Tim đập nhanh",
+            "Đánh trống ngực",
+            "Đau đầu",
+            "Chóng mặt",
+            "Hạ kali máu (với liều cao)",
+            "Kích động"
+        ],
+        "interactions": [
+            "Beta-blockers: đối kháng tác dụng",
+            "Digoxin: có thể tăng nguy cơ loạn nhịp",
+            "Diuretics: tăng nguy cơ hạ kali máu",
+            "MAOIs: thận trọng"
+        ],
+        "pregnancy": "C - An toàn"
+    },
+    
+    "Budesonide": {
+        "group": "Respiratory - Corticosteroid (Inhaled)",
+        "vietnamese_name": "Budesonide inhaled, Pulmicort",
+        "administration": ["INH", "NEB"],
+        "indications": [
+            "Hen phế quản (duy trì)",
+            "COPD",
+            "Viêm mũi dị ứng",
+            "Hen phế quản (trẻ em)"
+        ],
+        "contraindications": [
+            "Dị ứng budesonide",
+            "Nhiễm trùng đường hô hấp không điều trị"
+        ],
+        "dosage": {
+            "adult_inh": "200-800mcg x 2 lần/ngày",
+            "adult_neb": "0.5-1mg nebulizer x 2 lần/ngày",
+            "pediatric_inh": "100-400mcg x 2 lần/ngày (theo tuổi)",
+            "pediatric_neb": "0.25-0.5mg nebulizer x 2 lần/ngày",
+            "notes": "Súc miệng sau khi dùng để tránh nấm miệng. Có dạng nebulizer cho trẻ em"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Nấm miệng (candida - phổ biến nếu không súc miệng)",
+            "Khàn tiếng",
+            "Ho",
+            "Kích ứng họng",
+            "Tác dụng toàn thân (hiếm với liều thường)"
+        ],
+        "interactions": [
+            "Ketoconazole/Itraconazole: tăng nồng độ budesonide",
+            "Ritonavir: tăng nồng độ budesonide"
+        ],
+        "pregnancy": "C - An toàn"
+    },
+    
+    "Amoxicillin suspension": {
+        "group": "Antibiotic - Beta-lactam (Penicillin)",
+        "vietnamese_name": "Amoxicillin suspension, Amoxicillin sirô",
+        "administration": ["PO"],
+        "indications": [
+            "Nhiễm khuẩn đường hô hấp",
+            "Nhiễm khuẩn tai mũi họng",
+            "Nhiễm khuẩn đường tiết niệu",
+            "Nhiễm khuẩn da mô mềm",
+            "Helicobacter pylori (phối hợp)"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin",
+            "Dị ứng beta-lactam"
+        ],
+        "dosage": {
+            "pediatric_otitis": "80-90mg/kg/ngày chia 2 lần (10 ngày)",
+            "pediatric_pneumonia": "80-100mg/kg/ngày chia 3-4 lần",
+            "pediatric_uti": "25-50mg/kg/ngày chia 3 lần",
+            "pediatric_suspension_common": "20-40mg/kg/ngày chia 2-3 lần",
+            "notes": "Có dạng suspension 125mg/5ml, 250mg/5ml cho trẻ em. Uống với hoặc không thức ăn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều hoặc tăng khoảng cách",
+            "under_30": "Liều thấp hơn, khoảng cách dài hơn"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Buồn nôn",
+            "Phát ban",
+            "Nhiễm trùng nấm Candida",
+            "Giảm bạch cầu (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: tăng INR",
+            "Methotrexate: tăng độc tính",
+            "Allopurinol: tăng nguy cơ phát ban",
+            "Thuốc tránh thai: có thể giảm hiệu quả"
+        ],
+        "pregnancy": "B - An toàn"
+    },
+    
+    # ========== EMERGENCY / ACLS ==========
+    
+    "Epinephrine": {
+        "group": "Emergency - Catecholamine (Alpha & Beta Agonist)",
+        "vietnamese_name": "Epinephrine, Adrenaline",
+        "administration": ["IV", "IM", "SC", "INH", "IT"],
+        "indications": [
+            "Ngừng tim (cardiac arrest)",
+            "Sốc phản vệ (anaphylaxis)",
+            "Sốc (shock)",
+            "Cơn hen nặng (IV/nebulizer)",
+            "Co thắt thanh quản"
+        ],
+        "contraindications": [
+            "Không có trong cấp cứu ngừng tim",
+            "Sốc phản vệ: không có chống chỉ định tuyệt đối"
+        ],
+        "dosage": {
+            "adult_cardiac_arrest_iv": "1mg IV mỗi 3-5 phút (hoặc 0.1mg/kg)",
+            "adult_cardiac_arrest_it": "2-2.5mg IT",
+            "adult_anaphylaxis_im": "0.3-0.5mg IM (0.3-0.5ml 1:1000) ở đùi ngoài",
+            "adult_anaphylaxis_iv": "0.1-0.25mg IV bolus (pha 1mg trong 10ml = 0.1mg/ml)",
+            "adult_shock": "0.1-2mcg/kg/phút IV infusion",
+            "pediatric_cardiac_arrest": "0.01mg/kg (0.1ml/kg 1:10000) IV/IT mỗi 3-5 phút",
+            "pediatric_anaphylaxis_im": "0.01mg/kg IM (0.01ml/kg 1:1000) ở đùi ngoài (tối đa 0.5mg)",
+            "notes": "1:1000 = 1mg/ml (dùng IM/SC), 1:10000 = 0.1mg/ml (dùng IV). Đùi ngoài cho anaphylaxis"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Tim đập nhanh",
+            "Tăng huyết áp",
+            "Lo lắng, run tay",
+            "Đau đầu",
+            "Nhồi máu cơ tim (với liều cao)",
+            "Rối loạn nhịp tim",
+            "Hoại tử (nếu tiêm ngoài mạch)"
+        ],
+        "interactions": [
+            "Beta-blockers: đối kháng tác dụng",
+            "MAOIs: tăng tác dụng",
+            "Tricyclic antidepressants: tăng tác dụng",
+            "Digoxin: tăng nguy cơ loạn nhịp"
+        ],
+        "pregnancy": "C - An toàn trong cấp cứu"
+    },
+    
+    "Atropine": {
+        "group": "Emergency - Anticholinergic",
+        "vietnamese_name": "Atropine",
+        "administration": ["IV", "IM", "IO", "IT"],
+        "indications": [
+            "Nhịp tim chậm có triệu chứng",
+            "Block nhĩ thất",
+            "Quá liều organophosphate",
+            "Chuẩn bị phẫu thuật (giảm tiết)",
+            "Ngừng tim với nhịp chậm/PEA"
+        ],
+        "contraindications": [
+            "Glaucoma góc đóng",
+            "Tắc nghẽn đường tiểu",
+            "Nhịp tim nhanh",
+            "Sốt"
+        ],
+        "dosage": {
+            "adult_bradycardia": "0.5-1mg IV mỗi 3-5 phút (tối đa 3mg)",
+            "adult_cardiac_arrest": "1mg IV/IT, lặp lại mỗi 3-5 phút",
+            "adult_organophosphate": "2-5mg IV, lặp lại đến khi đạt tác dụng",
+            "pediatric_bradycardia": "0.02mg/kg IV (tối thiểu 0.1mg, tối đa 0.5mg)",
+            "pediatric_cardiac_arrest": "0.02mg/kg IV/IT (tối thiểu 0.1mg)",
+            "notes": "Liều tối thiểu người lớn 0.5mg để tránh nhịp tim chậm nghịch lý"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Nhịp tim nhanh",
+            "Khô miệng",
+            "Giãn đồng tử",
+            "Táo bón",
+            "Bí tiểu",
+            "Lú lẫn (người già)",
+            "Tăng nhãn áp"
+        ],
+        "interactions": [
+            "Các anticholinergics khác: tăng tác dụng",
+            "Digoxin: có thể tăng nồng độ digoxin"
+        ],
+        "pregnancy": "C - An toàn"
+    },
+    
+    "Amiodarone": {
+        "group": "Emergency - Antiarrhythmic (Class III)",
+        "vietnamese_name": "Amiodarone, Cordarone",
+        "administration": ["IV", "PO"],
+        "indications": [
+            "Rung thất / Nhịp nhanh thất không có mạch (cardiac arrest)",
+            "Rối loạn nhịp thất",
+            "Rung nhĩ / Cuồng nhĩ",
+            "Nhịp nhanh trên thất"
+        ],
+        "contraindications": [
+            "Dị ứng amiodarone",
+            "Block nhĩ thất độ 2-3 (không có máy tạo nhịp)",
+            "Nhịp tim chậm nặng",
+            "Cường giáp",
+            "Bệnh phổi nặng",
+            "Có thai (3 tháng đầu)"
+        ],
+        "dosage": {
+            "adult_cardiac_arrest_vfvt": "300mg IV bolus, sau đó 150mg IV, có thể lặp lại",
+            "adult_vt_with_pulse": "150mg IV trong 10 phút, sau đó 1mg/phút x 6 giờ, sau đó 0.5mg/phút",
+            "adult_po_loading": "800-1600mg/ngày chia 2 lần x 1-2 tuần",
+            "adult_po_maintenance": "200-400mg/ngày x 1 lần",
+            "pediatric_arrest": "5mg/kg IV bolus",
+            "notes": "Tác dụng kéo dài. Theo dõi chức năng phổi, gan, tuyến giáp"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Độc phổi (viêm phổi kẽ - nghiêm trọng)",
+            "Độc gan (tăng transaminase)",
+            "Rối loạn chức năng tuyến giáp (cường/ức chế)",
+            "Rối loạn nhịp tim (hiếm)",
+            "Độc thần kinh (viêm dây thần kinh)",
+            "Phát ban (nhạy cảm ánh sáng)",
+            "Tăng transaminase"
+        ],
+        "interactions": [
+            "Digoxin: tăng nồng độ digoxin",
+            "Warfarin: tăng INR",
+            "Phenytoin: tăng nồng độ phenytoin",
+            "Beta-blockers: tăng nguy cơ nhịp chậm",
+            "Statins: tăng nguy cơ độc cơ"
+        ],
+        "pregnancy": "D - Tránh dùng"
+    },
+    
+    "Lidocaine": {
+        "group": "Emergency - Local Anesthetic / Antiarrhythmic (Class IB)",
+        "vietnamese_name": "Lidocaine, Xylocaine",
+        "administration": ["IV", "IO", "IT"],
+        "indications": [
+            "Rung thất / Nhịp nhanh thất không có mạch (khi không có amiodarone)",
+            "Rối loạn nhịp thất",
+            "Gây tê tại chỗ",
+            "Gây tê vùng"
+        ],
+        "contraindications": [
+            "Dị ứng lidocaine",
+            "Block nhĩ thất độ 2-3 (không có máy tạo nhịp)",
+            "Hội chứng Adams-Stokes",
+            "Rối loạn nhịp nặng"
+        ],
+        "dosage": {
+            "adult_cardiac_arrest": "1-1.5mg/kg IV bolus, lặp lại 0.5-0.75mg/kg mỗi 5-10 phút (tối đa 3mg/kg)",
+            "adult_vt_with_pulse": "1-1.5mg/kg IV bolus, sau đó 1-4mg/phút IV infusion",
+            "pediatric_arrest": "1mg/kg IV/IO bolus",
+            "pediatric_infusion": "20-50mcg/kg/phút IV",
+            "notes": "Giảm liều ở suy tim, suy gan, người già. Theo dõi co giật, độc thần kinh"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Độc thần kinh trung ương (co giật, lú lẫn, ngừng thở - với liều cao)",
+            "Rối loạn nhịp tim",
+            "Hạ huyết áp",
+            "Phản ứng dị ứng (hiếm)"
+        ],
+        "interactions": [
+            "Beta-blockers: giảm chuyển hóa lidocaine",
+            "Cimetidine: tăng nồng độ lidocaine",
+            "Phenytoin: tăng độc tính"
+        ],
+        "pregnancy": "B - An toàn"
+    },
+    
+    "Adenosine": {
+        "group": "Emergency - Antiarrhythmic",
+        "vietnamese_name": "Adenosine",
+        "administration": ["IV", "IO"],
+        "indications": [
+            "Nhịp nhanh trên thất (SVT) - cấp cứu",
+            "Chẩn đoán rối loạn nhịp",
+            "Cuồng nhĩ"
+        ],
+        "contraindications": [
+            "Block nhĩ thất độ 2-3 (không có máy tạo nhịp)",
+            "Hội chứng sick sinus",
+            "Hen phế quản nặng",
+            "Dị ứng adenosine"
+        ],
+        "dosage": {
+            "adult_svt_first": "6mg IV bolus nhanh (1-2 giây) + flush nhanh 20ml NS",
+            "adult_svt_second": "12mg IV nếu không đáp ứng (có thể lặp lại 1 lần)",
+            "adult_max": "12mg (tối đa)",
+            "pediatric_svt_first": "0.1mg/kg IV (tối đa 6mg)",
+            "pediatric_svt_second": "0.2mg/kg IV nếu không đáp ứng (tối đa 12mg)",
+            "notes": "Phải tiêm bolus nhanh (1-2 giây) và flush ngay 20ml. Có thể gây ngừng tim tạm thời"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Ngừng tim tạm thời (thường <10 giây - bình thường)",
+            "Cảm giác khó chịu ở ngực",
+            "Khó thở",
+            "Đỏ mặt",
+            "Chóng mặt",
+            "Loạn nhịp (thoáng qua)"
+        ],
+        "interactions": [
+            "Theophylline/Caffeine: đối kháng tác dụng",
+            "Dipyridamole: tăng tác dụng",
+            "Carbamazepine: tăng tác dụng"
+        ],
+        "pregnancy": "C - An toàn"
+    },
+    
+    "Naloxone": {
+        "group": "Emergency - Opioid Antagonist",
+        "vietnamese_name": "Naloxone, Narcan",
+        "administration": ["IV", "IM", "SC", "INH", "IO"],
+        "indications": [
+            "Quá liều opioid (nghiện)",
+            "Ngộ độc opioid",
+            "Đảo ngược tác dụng opioid sau phẫu thuật",
+            "Đảo ngược tác dụng opioid trong ICU"
+        ],
+        "contraindications": [
+            "Dị ứng naloxone"
+        ],
+        "dosage": {
+            "adult_overdose": "0.4-2mg IV/IM/SC, lặp lại mỗi 2-3 phút đến khi đáp ứng",
+            "adult_reversal": "0.04-0.4mg IV titrate đến khi đáp ứng",
+            "adult_infusion": "0.25-6.25mcg/kg/giờ IV (nếu cần duy trì)",
+            "pediatric_overdose": "0.01mg/kg IV/IM/IO, lặp lại đến khi đáp ứng",
+            "pediatric_infusion": "2.5-10mcg/kg/giờ IV",
+            "notes": "Tác dụng ngắn (20-90 phút), có thể cần lặp lại hoặc infusion. Theo dõi hội chứng cai"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Hội chứng cai opioid (nếu bệnh nhân nghiện)",
+            "Hạ huyết áp",
+            "Rối loạn nhịp tim",
+            "Co giật (hiếm)",
+            "Phù phổi (hiếm)"
+        ],
+        "interactions": [
+            "Opioids: đảo ngược tác dụng"
+        ],
+        "pregnancy": "C - An toàn"
+    },
+    
+    "Flumazenil": {
+        "group": "Emergency - Benzodiazepine Antagonist",
+        "vietnamese_name": "Flumazenil, Anexate",
+        "administration": ["IV"],
+        "indications": [
+            "Quá liều benzodiazepine",
+            "Đảo ngược tác dụng benzodiazepine sau phẫu thuật",
+            "Quá liều zolpidem/zopiclone"
+        ],
+        "contraindications": [
+            "Dị ứng flumazenil",
+            "Động kinh (đang điều trị với benzodiazepine)",
+            "Quá liều tricyclic antidepressants",
+            "Phụ thuộc benzodiazepine lâu dài"
+        ],
+        "dosage": {
+            "adult_overdose": "0.2mg IV, lặp lại 0.2mg mỗi 1 phút đến khi đáp ứng (tối đa 1mg)",
+            "adult_reversal": "0.1-0.2mg IV titrate đến khi đáp ứng",
+            "pediatric": "0.01mg/kg IV (tối đa 0.2mg), lặp lại đến khi đáp ứng",
+            "notes": "Tác dụng ngắn (30-60 phút), có thể cần lặp lại. Nguy cơ co giật ở bệnh nhân động kinh"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Co giật (nguy hiểm ở bệnh nhân động kinh)",
+            "Hội chứng cai benzodiazepine",
+            "Buồn nôn, nôn",
+            "Chóng mặt",
+            "Lo lắng",
+            "Rối loạn nhịp tim"
+        ],
+        "interactions": [
+            "Benzodiazepines: đảo ngược tác dụng",
+            "Tricyclic antidepressants: tăng nguy cơ co giật"
+        ],
+        "pregnancy": "C - Thận trọng"
+    },
+    
+    # ========== GAP FILLING ==========
+    
+    "Rosuvastatin": {
+        "group": "Cardiovascular - Statin (HMG-CoA Reductase Inhibitor)",
+        "vietnamese_name": "Rosuvastatin, Crestor",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng cholesterol máu",
+            "Phòng ngừa biến cố tim mạch",
+            "Hội chứng chuyển hóa"
+        ],
+        "contraindications": [
+            "Dị ứng rosuvastatin",
+            "Bệnh gan hoạt động",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_start": "5-10mg x 1 lần/ngày (tối)",
+            "adult_usual": "10-20mg x 1 lần/ngày",
+            "adult_max": "40mg x 1 lần/ngày",
+            "notes": "Uống với hoặc không thức ăn. Mạnh hơn atorvastatin ở liều tương đương"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Bắt đầu với 5mg/ngày"
+        },
+        "side_effects": [
+            "Đau cơ, yếu cơ",
+            "Tăng transaminase",
+            "Tiêu cơ vân (hiếm nhưng nguy hiểm)",
+            "Đau đầu",
+            "Táo bón",
+            "Đái tháo đường (nguy cơ tăng nhẹ)"
+        ],
+        "interactions": [
+            "Cyclosporine: tăng nguy cơ độc tính",
+            "Gemfibrozil: tăng nguy cơ độc cơ",
+            "Warfarin: tăng INR",
+            "Rifampin: giảm nồng độ rosuvastatin"
+        ],
+        "pregnancy": "X - Chống chỉ định"
+    },
+    
+    "Enalaprilat": {
+        "group": "Cardiovascular - ACE Inhibitor (IV)",
+        "vietnamese_name": "Enalaprilat, Enalapril IV",
+        "administration": ["IV"],
+        "indications": [
+            "Tăng huyết áp cấp cứu",
+            "Suy tim cấp",
+            "Khi không uống được"
+        ],
+        "contraindications": [
+            "Dị ứng ACE inhibitor",
+            "Có thai",
+            "Hẹp động mạch thận 2 bên"
+        ],
+        "dosage": {
+            "adult_htn": "0.625-1.25mg IV mỗi 6 giờ",
+            "adult_heart_failure": "0.625mg IV mỗi 6 giờ, tăng dần đến 1.25mg mỗi 6 giờ",
+            "notes": "Khởi đầu với liều thấp, theo dõi huyết áp"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25%",
+            "under_30": "Thận trọng, giảm liều 50%"
+        },
+        "side_effects": [
+            "Hạ huyết áp (phổ biến)",
+            "Ho khan",
+            "Tăng kali máu",
+            "Phù mạch",
+            "Suy thận cấp"
+        ],
+        "interactions": [
+            "Kali: tăng kali máu",
+            "Diuretics: tăng nguy cơ hạ huyết áp",
+            "NSAID: giảm hiệu quả"
+        ],
+        "pregnancy": "D - Chống chỉ định"
+    },
+    
+    "Ceftriaxone": {
+        "group": "Antibiotic - Cephalosporin (3rd Generation)",
+        "vietnamese_name": "Ceftriaxone, Rocephin",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Nhiễm khuẩn nặng",
+            "Viêm màng não",
+            "Nhiễm khuẩn bệnh viện",
+            "Nhiễm khuẩn đường tiết niệu",
+            "Viêm phổi"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin hoặc penicillin (thận trọng)",
+            "Trẻ sơ sinh <28 ngày với Ca IV"
+        ],
+        "dosage": {
+            "adult_standard": "1-2g IV/IM mỗi 24 giờ",
+            "adult_severe": "2-4g IV mỗi 24 giờ",
+            "adult_meningitis": "2g IV mỗi 12 giờ",
+            "pediatric_standard": "50-75mg/kg IV/IM mỗi 24 giờ (tối đa 2g)",
+            "pediatric_meningitis": "80-100mg/kg IV mỗi 12-24 giờ (tối đa 4g/ngày)",
+            "notes": "Thời gian bán hủy dài, dùng 1 lần/ngày. Có thể gây kết tủa với Ca ở trẻ sơ sinh"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi (thải qua mật)",
+            "under_30": "Giảm liều nếu CrCl <10 và suy gan"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Phát ban",
+            "Tăng transaminase",
+            "Viêm túi mật (hiếm)",
+            "Giảm bạch cầu (hiếm)",
+            "Sỏi mật (với liều cao dài ngày)"
+        ],
+        "interactions": [
+            "Warfarin: tăng INR",
+            "Calcium IV: kết tủa (trẻ sơ sinh)",
+            "Probenecid: tăng nồng độ ceftriaxone"
+        ],
+        "pregnancy": "B - An toàn"
+    },
+    
+    "Ciprofloxacin": {
+        "group": "Antibiotic - Fluoroquinolone",
+        "vietnamese_name": "Ciprofloxacin, Cipro",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm khuẩn đường tiết niệu",
+            "Nhiễm khuẩn đường tiêu hóa",
+            "Nhiễm khuẩn da mô mềm",
+            "Nhiễm khuẩn xương khớp",
+            "Viêm phổi (một số loại)"
+        ],
+        "contraindications": [
+            "Dị ứng fluoroquinolone",
+            "Có thai",
+            "Trẻ em <18 tuổi (trừ trường hợp đặc biệt)",
+            "QT kéo dài"
+        ],
+        "dosage": {
+            "adult_uti": "250-500mg PO x 2 lần/ngày",
+            "adult_uti_complicated": "500-750mg PO x 2 lần/ngày",
+            "adult_iv": "200-400mg IV mỗi 12 giờ",
+            "adult_severe": "400mg IV mỗi 8 giờ",
+            "notes": "Uống cách xa antacid 2 giờ. Không dùng với sữa"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50-75%"
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa",
+            "Đau gân, viêm gân (có thể đứt gân)",
+            "QT kéo dài",
+            "Co giật (hiếm)",
+            "Nhạy cảm ánh sáng",
+            "Rối loạn tâm thần (hiếm)"
+        ],
+        "interactions": [
+            "Antacid: giảm hấp thu",
+            "Warfarin: tăng INR",
+            "Theophylline: tăng nồng độ theophylline",
+            "Probenecid: tăng nồng độ ciprofloxacin"
+        ],
+        "pregnancy": "C - Tránh dùng"
+    },
+    
+    "Metoclopramide": {
+        "group": "Gastrointestinal - Prokinetic / Anti-emetic",
+        "vietnamese_name": "Metoclopramide, Primperan, Reglan",
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Buồn nôn, nôn",
+            "Liệt dạ dày (gastroparesis)",
+            "Trào ngược dạ dày thực quản",
+            "Chậm làm rỗng dạ dày"
+        ],
+        "contraindications": [
+            "Dị ứng metoclopramide",
+            "Xuất huyết tiêu hóa",
+            "Tắc ruột",
+            "Pheochromocytoma",
+            "Động kinh"
+        ],
+        "dosage": {
+            "adult_po": "10mg x 3-4 lần/ngày (trước ăn 30 phút)",
+            "adult_iv_im": "10mg IV/IM x 3-4 lần/ngày",
+            "adult_severe": "10-20mg IV mỗi 6-8 giờ",
+            "pediatric": "0.1-0.15mg/kg PO/IV x 3-4 lần/ngày",
+            "notes": "Không dùng >12 tuần. Nguy cơ rối loạn vận động ngoại tháp"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50-75%"
+        },
+        "side_effects": [
+            "Rối loạn vận động ngoại tháp (dystonia, akathisia - phổ biến)",
+            "Buồn ngủ",
+            "Chóng mặt",
+            "Rối loạn vận động muộn (tardive dyskinesia - hiếm nhưng không hồi phục)",
+            "Tăng prolactin",
+            "Rối loạn nhịp tim"
+        ],
+        "interactions": [
+            "Phenothiazines: tăng nguy cơ rối loạn vận động",
+            "Anticholinergics: đối kháng tác dụng",
+            "Dopamine antagonists: tăng tác dụng"
+        ],
+        "pregnancy": "B - An toàn (tránh dùng trong 3 tháng đầu)"
+    },
 }
 
 # Drug groups for filtering
 DRUG_GROUPS = {
     "Cardiovascular": [
-        "Captopril", "Enalapril", "Lisinopril", "Losartan",
+        "Captopril", "Enalapril", "Enalaprilat", "Lisinopril", "Losartan",
         "Metoprolol", "Propranolol", "Amlodipine", "Nifedipine", "Diltiazem", "Verapamil",
         "Furosemide", "Hydrochlorothiazide",
         "Amiodarone", "Digoxin",
         "Warfarin", "Aspirin", "Clopidogrel", "Ticagrelor", "Prasugrel", "Ticlopidine", "Dipyridamole",
-        "Atorvastatin", "Simvastatin",
+        "Atorvastatin", "Simvastatin", "Rosuvastatin",
         "Isosorbide mononitrate"
     ],
     "Diabetes": [
@@ -4437,6 +5702,27 @@ DRUG_GROUPS = {
         "Omeprazole", "Pantoprazole", "Ranitidine",
         "Metoclopramide", "Loperamide",
         "Domperidone", "Ondansetron", "Lansoprazole", "Esomeprazole", "Sucralfate"
+    ],
+    "Oncology": [
+        "Cisplatin", "Carboplatin", "Oxaliplatin",
+        "5-Fluorouracil", "Methotrexate",
+        "Cyclophosphamide", "Ifosfamide",
+        "Doxorubicin",
+        "Granisetron", "Palonosetron"
+    ],
+    "Emergency": [
+        "Epinephrine", "Atropine",
+        "Amiodarone", "Lidocaine", "Adenosine",
+        "Naloxone", "Flumazenil"
+    ],
+    "Antibiotics": [
+        "Amoxicillin-clavulanate", "Amoxicillin suspension",
+        "Ceftriaxone", "Ciprofloxacin"
+    ],
+    "Pediatric": [
+        "Amoxicillin-clavulanate", "Amoxicillin suspension",
+        "Paracetamol", "Ibuprofen",
+        "Salbutamol", "Budesonide"
     ],
     "Analgesics": [
         "Paracetamol", "Ibuprofen", "Tramadol",
