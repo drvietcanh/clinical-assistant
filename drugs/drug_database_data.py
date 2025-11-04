@@ -1557,7 +1557,39 @@ DRUG_DATABASE = {
             "Diuretics: tăng nguy cơ mất nước",
             "Digoxin: tăng nhẹ nồng độ digoxin"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Empagliflozin là chất ức chế chọn lọc sodium-glucose cotransporter 2 (SGLT2) ở ống lượn gần của thận. SGLT2 chịu trách nhiệm tái hấp thu 90% glucose từ nước tiểu. Bằng cách ức chế SGLT2, empagliflozin ngăn chặn tái hấp thu glucose, làm tăng bài tiết glucose qua nước tiểu (glucosuria), từ đó giảm đường huyết. Cơ chế này không phụ thuộc vào insulin, giúp giảm đường huyết mà không tăng nguy cơ hạ đường huyết (trừ khi dùng với insulin hoặc sulfonylurea). Ngoài ra, empagliflozin có lợi ích tim mạch và thận: giảm thể tích tuần hoàn, giảm huyết áp, giảm albumin niệu, và cải thiện kết cục tim mạch ở bệnh nhân suy tim và bệnh thận mạn. Các nghiên cứu EMPA-REG OUTCOME, EMPEROR-Reduced, và EMPEROR-Preserved đã chứng minh lợi ích tim mạch và thận.",
+        "monitoring": [
+            "Đường huyết (HbA1c, glucose máu) - đánh giá hiệu quả giảm đường huyết",
+            "Chức năng thận (eGFR, creatinine) - không dùng nếu eGFR <20",
+            "Nhiễm trùng đường tiết niệu (UTI) - triệu chứng, cấy nước tiểu nếu cần",
+            "Nhiễm trùng đường sinh dục (nấm âm đạo, viêm quy đầu) - đặc biệt ở phụ nữ",
+            "Dấu hiệu mất nước, hạ huyết áp (đặc biệt ở người cao tuổi, dùng diuretics)",
+            "Nhiễm toan ceton (DKA) - glucose máu, ketone, pH máu nếu có triệu chứng",
+            "Hoại thư Fournier (nhiễm trùng vùng sinh dục nặng) - hiếm nhưng nguy hiểm",
+            "Gãy xương (đặc biệt ở người cao tuổi)"
+        ],
+        "precautions": [
+            "Không dùng cho đái tháo đường type 1 (tăng nguy cơ nhiễm toan ceton)",
+            "Không dùng nếu eGFR <20 (empagliflozin) hoặc <25 (dapagliflozin) - không hiệu quả",
+            "Tăng nguy cơ nhiễm trùng đường tiết niệu và đường sinh dục - vệ sinh tốt, uống nhiều nước",
+            "Nguy cơ nhiễm toan ceton (DKA) - đặc biệt ở bệnh nhân type 1, phẫu thuật, bệnh cấp tính, nhịn ăn",
+            "Nguy cơ mất nước, hạ huyết áp - đặc biệt ở người cao tuổi, dùng diuretics, suy tim",
+            "Tăng nguy cơ hạ đường huyết khi dùng với insulin hoặc sulfonylurea - có thể cần giảm liều",
+            "Hoại thư Fournier - hiếm nhưng nguy hiểm, cần chú ý vệ sinh vùng sinh dục",
+            "Uống nhiều nước để giảm nguy cơ nhiễm trùng",
+            "Có thể dùng bất kỳ lúc nào, không cần ăn",
+            "Lợi ích tim mạch và thận độc lập với tác dụng giảm đường huyết"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12.4 giờ",
+            "onset": "1 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "86.2%",
+            "clearance": "Gan: chuyển hóa qua glucuronidation (phần lớn). Thận: bài tiết một phần nguyên dạng và metabolites. Không cần điều chỉnh liều ở suy gan, nhưng không dùng nếu eGFR <20."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": None
     },
     
     "Dapagliflozin": {
@@ -1597,7 +1629,38 @@ DRUG_DATABASE = {
             "Insulin/Sulfonylurea: tăng nguy cơ hạ đường huyết",
             "Diuretics: mất nước"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Dapagliflozin là chất ức chế chọn lọc sodium-glucose cotransporter 2 (SGLT2) ở ống lượn gần của thận. SGLT2 chịu trách nhiệm tái hấp thu 90% glucose từ nước tiểu. Bằng cách ức chế SGLT2, dapagliflozin ngăn chặn tái hấp thu glucose, làm tăng bài tiết glucose qua nước tiểu (glucosuria), từ đó giảm đường huyết. Cơ chế này không phụ thuộc vào insulin, giúp giảm đường huyết mà không tăng nguy cơ hạ đường huyết (trừ khi dùng với insulin hoặc sulfonylurea). Dapagliflozin có lợi ích tim mạch và thận: giảm thể tích tuần hoàn, giảm huyết áp, giảm albumin niệu, và cải thiện kết cục tim mạch ở bệnh nhân suy tim và bệnh thận mạn. Các nghiên cứu DECLARE-TIMI 58 và DAPA-HF đã chứng minh lợi ích tim mạch và thận.",
+        "monitoring": [
+            "Đường huyết (HbA1c, glucose máu) - đánh giá hiệu quả giảm đường huyết",
+            "Chức năng thận (eGFR, creatinine) - không dùng nếu eGFR <25",
+            "Nhiễm trùng đường tiết niệu (UTI) - triệu chứng, cấy nước tiểu nếu cần",
+            "Nhiễm trùng đường sinh dục (nấm âm đạo, viêm quy đầu) - đặc biệt ở phụ nữ",
+            "Dấu hiệu mất nước, hạ huyết áp (đặc biệt ở người cao tuổi, dùng diuretics)",
+            "Nhiễm toan ceton (DKA) - glucose máu, ketone, pH máu nếu có triệu chứng",
+            "Hoại thư Fournier (nhiễm trùng vùng sinh dục nặng) - hiếm nhưng nguy hiểm"
+        ],
+        "precautions": [
+            "Không dùng cho đái tháo đường type 1 (tăng nguy cơ nhiễm toan ceton)",
+            "Không dùng nếu eGFR <25 - không hiệu quả",
+            "Tăng nguy cơ nhiễm trùng đường tiết niệu và đường sinh dục - vệ sinh tốt, uống nhiều nước",
+            "Nguy cơ nhiễm toan ceton (DKA) - đặc biệt ở bệnh nhân type 1, phẫu thuật, bệnh cấp tính, nhịn ăn",
+            "Nguy cơ mất nước, hạ huyết áp - đặc biệt ở người cao tuổi, dùng diuretics, suy tim",
+            "Tăng nguy cơ hạ đường huyết khi dùng với insulin hoặc sulfonylurea - có thể cần giảm liều",
+            "Hoại thư Fournier - hiếm nhưng nguy hiểm, cần chú ý vệ sinh vùng sinh dục",
+            "Uống nhiều nước để giảm nguy cơ nhiễm trùng",
+            "Có thể dùng bất kỳ lúc nào, không cần ăn",
+            "Lợi ích tim mạch và thận độc lập với tác dụng giảm đường huyết"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12.9 giờ",
+            "onset": "1 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "91%",
+            "clearance": "Gan: chuyển hóa qua glucuronidation (phần lớn). Thận: bài tiết một phần nguyên dạng và metabolites. Không cần điều chỉnh liều ở suy gan, nhưng không dùng nếu eGFR <25."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": None
     },
     
     "Sitagliptin": {
@@ -1635,7 +1698,38 @@ DRUG_DATABASE = {
             "Insulin/Sulfonylurea: có thể tăng nguy cơ hạ đường huyết",
             "Digoxin: tăng nhẹ nồng độ digoxin"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Sitagliptin là chất ức chế chọn lọc dipeptidyl peptidase-4 (DPP-4), enzyme chịu trách nhiệm phân hủy incretin hormones (GLP-1 và GIP). Bằng cách ức chế DPP-4, sitagliptin làm tăng nồng độ GLP-1 và GIP, các hormone được tiết ra từ ruột non sau khi ăn. GLP-1 và GIP kích thích tiết insulin từ tế bào beta tuyến tụy phụ thuộc vào glucose (chỉ tiết khi đường huyết cao), đồng thời ức chế tiết glucagon từ tế bào alpha tuyến tụy. Điều này dẫn đến giảm đường huyết sau ăn và giảm sản xuất glucose từ gan. Cơ chế này phụ thuộc vào glucose nên ít gây hạ đường huyết so với sulfonylurea. Sitagliptin cũng làm chậm làm rỗng dạ dày và có thể giảm cảm giác thèm ăn nhẹ.",
+        "monitoring": [
+            "Đường huyết (HbA1c, glucose máu) - đánh giá hiệu quả giảm đường huyết",
+            "Chức năng thận (creatinine, CrCl) - cần điều chỉnh liều: CrCl 30-50 → 50mg/ngày, CrCl <30 → 25mg/ngày",
+            "Triệu chứng viêm tụy cấp (đau bụng nặng, buồn nôn, nôn) - hiếm nhưng nguy hiểm",
+            "Đau khớp nghiêm trọng - hiếm, cần ngừng thuốc nếu xảy ra",
+            "Triệu chứng suy tim (khó thở, phù) - tăng nhẹ nguy cơ suy tim",
+            "Dấu hiệu phản ứng dị ứng (phát ban, phù mạch) - hiếm",
+            "Tác dụng phụ (nhức đầu, nhiễm trùng đường hô hấp trên)"
+        ],
+        "precautions": [
+            "Không dùng cho đái tháo đường type 1 (không hiệu quả)",
+            "Cần điều chỉnh liều ở suy thận: CrCl 30-50 → 50mg/ngày, CrCl <30 → 25mg/ngày",
+            "Nguy cơ viêm tụy cấp - hiếm nhưng nguy hiểm, ngừng ngay nếu có đau bụng nặng",
+            "Nguy cơ đau khớp nghiêm trọng - hiếm, ngừng thuốc nếu xảy ra",
+            "Tăng nhẹ nguy cơ suy tim - thận trọng ở bệnh nhân có tiền sử suy tim",
+            "Tăng nguy cơ hạ đường huyết khi dùng với insulin hoặc sulfonylurea",
+            "Ít gây hạ đường huyết khi dùng đơn độc (do cơ chế phụ thuộc glucose)",
+            "Có thể dùng bất kỳ lúc nào, không cần ăn",
+            "An toàn trong thai kỳ (category B)",
+            "Tương tác nhẹ với digoxin - có thể tăng nồng độ digoxin"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12.4 giờ",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "38%",
+            "clearance": "Thận: bài tiết chủ yếu qua thận (79% nguyên dạng, không chuyển hóa). Gan: ít chuyển hóa. Cần điều chỉnh liều ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": None
     },
     
     "Vildagliptin": {
@@ -3655,7 +3749,37 @@ DRUG_DATABASE = {
             "Warfarin: tăng nguy cơ chảy máu",
             "Strong CYP3A4 inhibitors: tăng nồng độ (tránh dùng)"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Ticagrelor là chất ức chế P2Y12 receptor chọn lọc, đối kháng có thể đảo ngược (reversible) với P2Y12 receptor trên tiểu cầu. P2Y12 receptor là một thụ thể adenosine diphosphate (ADP) quan trọng trong quá trình hoạt hóa và kết tập tiểu cầu. Khác với clopidogrel và prasugrel (irreversible inhibitors), ticagrelor gắn trực tiếp với P2Y12 receptor mà không cần chuyển hóa thành metabolite hoạt động, và có thể đảo ngược (reversible). Ticagrelor ức chế kết tập tiểu cầu do ADP, giảm nguy cơ huyết khối trong hội chứng mạch vành cấp và sau can thiệp mạch vành. Ticagrelor cũng ức chế tái hấp thu adenosine (adenosine reuptake inhibitor), làm tăng nồng độ adenosine ngoại bào, có thể gây khó thở (dyspnea) và bradycardia. Tác dụng khởi phát nhanh hơn clopidogrel và hiệu quả hơn trong một số nghiên cứu.",
+        "monitoring": [
+            "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu tại vị trí tiêm)",
+            "Chảy máu lớn (xuất huyết tiêu hóa, xuất huyết nội sọ, chảy máu sau phẫu thuật)",
+            "Khó thở (dyspnea) - phổ biến (10-20%) nhưng thường nhẹ, có thể do ức chế tái hấp thu adenosine",
+            "Nhịp tim chậm (bradycardia) - do tăng adenosine",
+            "Chức năng gan nếu có triệu chứng (hiếm)",
+            "Tương tác với strong CYP3A4 inhibitors (ketoconazole, clarithromycin) - tăng nồng độ"
+        ],
+        "precautions": [
+            "Dùng kèm với aspirin 75-100mg/ngày (dual antiplatelet therapy - DAPT) - không dùng aspirin >100mg/ngày (có thể giảm hiệu quả)",
+            "Không ngừng đột ngột (tăng nguy cơ huyết khối)",
+            "Khó thở (dyspnea) - phổ biến nhưng thường nhẹ, có thể giảm khi dùng với thức ăn, thường tự khỏi",
+            "Nguy cơ chảy máu cao - không dùng nếu có chảy máu đang hoạt động, xuất huyết nội sọ",
+            "Tránh dùng với strong CYP3A4 inhibitors (ketoconazole, itraconazole, clarithromycin, ritonavir) - tăng nồng độ",
+            "Tránh dùng với strong CYP3A4 inducers (rifampin, carbamazepine, phenytoin) - giảm nồng độ",
+            "Dùng với thức ăn để giảm dyspnea và tăng hấp thu",
+            "Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình",
+            "Thận trọng ở bệnh nhân có tiền sử nhịp tim chậm hoặc block nhĩ thất",
+            "Thời gian DAPT thường 12 tháng sau ACS hoặc đặt stent, có thể kéo dài ở một số bệnh nhân nguy cơ cao"
+        ],
+        "pharmacokinetics": {
+            "half_life": "7-9 giờ (ticagrelor), 8-12 giờ (metabolite hoạt động)",
+            "onset": "30 phút - 2 giờ (nhanh hơn clopidogrel)",
+            "duration": "12 giờ (cần dùng 2 lần/ngày do reversible binding)",
+            "protein_binding": ">99%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4 thành metabolite hoạt động. Thận: bài tiết một phần. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": "Nguy cơ chảy máu nghiêm trọng, có thể gây tử vong. Không dùng ở bệnh nhân có xuất huyết nội sọ đang hoạt động, chảy máu đang hoạt động. Không dùng aspirin >100mg/ngày vì có thể giảm hiệu quả của ticagrelor."
     },
     
     "Prasugrel": {
@@ -3686,7 +3810,36 @@ DRUG_DATABASE = {
             "Aspirin: dùng kèm (dual antiplatelet therapy)",
             "Warfarin: tăng nguy cơ chảy máu"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Prasugrel là chất ức chế P2Y12 receptor, đối kháng không thể đảo ngược (irreversible) với P2Y12 receptor trên tiểu cầu. P2Y12 receptor là một thụ thể adenosine diphosphate (ADP) quan trọng trong quá trình hoạt hóa và kết tập tiểu cầu. Prasugrel là một prodrug, được chuyển hóa nhanh chóng qua CYP3A4 và CYP2B6 thành metabolite hoạt động. Metabolite hoạt động gắn không thể đảo ngược với P2Y12 receptor, ức chế kết tập tiểu cầu do ADP. Prasugrel mạnh hơn và có tác dụng nhanh hơn clopidogrel, với ít biến thể di truyền (genetic variation) hơn. Prasugrel giảm nguy cơ huyết khối trong hội chứng mạch vành cấp cần can thiệp mạch vành (PCI), nhưng tăng nguy cơ chảy máu lớn so với clopidogrel, đặc biệt ở bệnh nhân có tiền sử TIA/đột quỵ hoặc tuổi ≥75.",
+        "monitoring": [
+            "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu tại vị trí tiêm)",
+            "Chảy máu lớn (xuất huyết tiêu hóa, xuất huyết nội sọ, chảy máu sau phẫu thuật) - nguy cơ cao hơn clopidogrel",
+            "Thrombotic thrombocytopenic purpura (TTP) - hiếm nhưng nguy hiểm (sốt, thiếu máu, giảm tiểu cầu, rối loạn thần kinh)",
+            "Chức năng gan nếu có triệu chứng (hiếm)",
+            "Công thức máu (tiểu cầu) nếu có dấu hiệu chảy máu"
+        ],
+        "precautions": [
+            "Dùng kèm với aspirin 75-100mg/ngày (dual antiplatelet therapy - DAPT)",
+            "Không dùng ở bệnh nhân có tiền sử TIA hoặc đột quỵ - tăng nguy cơ chảy máu nội sọ",
+            "Thận trọng ở bệnh nhân ≥75 tuổi - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
+            "Thận trọng ở bệnh nhân <60kg - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
+            "Nguy cơ chảy máu cao hơn clopidogrel - không dùng nếu có chảy máu đang hoạt động",
+            "Không ngừng đột ngột (tăng nguy cơ huyết khối)",
+            "Không dùng ở bệnh nhân có nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây)",
+            "Thời gian DAPT thường 12 tháng sau ACS với PCI, có thể kéo dài ở một số bệnh nhân nguy cơ cao",
+            "Mạnh hơn clopidogrel - giảm nguy cơ huyết khối nhưng tăng nguy cơ chảy máu",
+            "Liều khởi đầu: 60mg loading dose, sau đó 10mg/ngày (5mg nếu <60kg hoặc ≥75 tuổi)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "7 giờ",
+            "onset": "30 phút - 1 giờ (nhanh hơn clopidogrel)",
+            "duration": "7-10 ngày (do irreversible binding - tiểu cầu mới không bị ảnh hưởng)",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Gan: chuyển hóa nhanh qua CYP3A4 và CYP2B6 thành metabolite hoạt động (không cần chuyển hóa qua CYP2C19 như clopidogrel). Thận: bài tiết một phần. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": "Nguy cơ chảy máu nghiêm trọng, có thể gây tử vong. Không dùng ở bệnh nhân có tiền sử TIA hoặc đột quỵ - tăng nguy cơ chảy máu nội sọ. Không dùng ở bệnh nhân có chảy máu đang hoạt động. Thận trọng ở bệnh nhân ≥75 tuổi, <60kg, hoặc có nguy cơ chảy máu cao."
     },
     
     "Ticlopidine": {
@@ -4469,7 +4622,32 @@ DRUG_DATABASE = {
             "Ít tương tác",
             "Erythromycin/Ketoconazole: tăng nồng độ (nhưng thường không cần điều chỉnh)"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Loratadine là antihistamine thế hệ thứ hai, đối kháng chọn lọc và có ái lực cao với thụ thể H1 ở ngoại biên. Khác với antihistamine thế hệ thứ nhất (diphenhydramine, chlorpheniramine), loratadine ít qua hàng rào máu-não nên ít gây buồn ngủ và tác dụng phụ anticholinergic. Loratadine ức chế phóng thích histamine từ mast cells và basophils, ngăn chặn tác dụng của histamine trên các thụ thể H1 ở mạch máu, cơ trơn phế quản, và các mô khác. Điều này làm giảm các triệu chứng dị ứng như ngứa, chảy nước mũi, hắt hơi, và mề đay. Loratadine cũng có tác dụng kháng viêm nhẹ do ức chế phóng thích các chất trung gian gây viêm.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng dị ứng)",
+            "Tác dụng phụ (buồn ngủ, khô miệng) - hiếm với loratadine",
+            "Chức năng gan nếu dùng lâu dài hoặc có triệu chứng (hiếm)",
+            "Tương tác với erythromycin, ketoconazole (có thể tăng nồng độ nhưng thường không cần điều chỉnh)"
+        ],
+        "precautions": [
+            "Non-sedating nhưng một số người vẫn có thể buồn ngủ nhẹ",
+            "Có thể dùng với thức ăn hoặc không (hấp thu tốt)",
+            "Thận trọng với bệnh nhân suy gan (metabolite qua CYP3A4 và CYP2D6)",
+            "Có thể dùng cho trẻ em từ 2 tuổi trở lên",
+            "An toàn trong thai kỳ (category B)",
+            "Ít tương tác thuốc, an toàn cho hầu hết bệnh nhân",
+            "Tác dụng kéo dài 24 giờ nên chỉ cần dùng 1 lần/ngày"
+        ],
+        "pharmacokinetics": {
+            "half_life": "8-28 giờ (desloratadine - metabolite hoạt động có half-life dài hơn)",
+            "onset": "1-3 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "97-99%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4 và CYP2D6 thành desloratadine (metabolite hoạt động, mạnh hơn loratadine). Thận: bài tiết một phần nguyên dạng và metabolites."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng syrup: bảo quản ở nhiệt độ phòng, đậy kín sau khi dùng.",
+        "black_box_warnings": None
     },
     
     "Cetirizine": {
@@ -4507,7 +4685,34 @@ DRUG_DATABASE = {
             "Ít tương tác",
             "Alcohol: có thể tăng buồn ngủ"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Cetirizine là metabolite của hydroxyzine, là antihistamine thế hệ thứ hai, đối kháng chọn lọc và có ái lực cao với thụ thể H1 ở ngoại biên. Cetirizine ít qua hàng rào máu-não (do là zwitterion ở pH sinh lý) nên ít gây buồn ngủ hơn so với antihistamine thế hệ thứ nhất, nhưng vẫn có thể gây buồn ngủ ở một số người (10-15%). Cetirizine ức chế phóng thích histamine từ mast cells và basophils, ngăn chặn tác dụng của histamine trên các thụ thể H1. Ngoài ra, cetirizine có tác dụng kháng viêm nhẹ do ức chế phóng thích các chất trung gian gây viêm và ức chế chemotaxis của eosinophils. Tác dụng tốt cho cả allergic rhinitis và urticaria.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng dị ứng)",
+            "Buồn ngủ (10-15% người dùng, mặc dù là thế hệ thứ hai)",
+            "Chức năng thận (creatinine) - cần điều chỉnh liều ở suy thận",
+            "Tác dụng phụ (khô miệng, nhức đầu, mệt mỏi)",
+            "Tương tác với alcohol (có thể tăng buồn ngủ)"
+        ],
+        "precautions": [
+            "Có thể gây buồn ngủ ở một số người (10-15%) - thận trọng khi lái xe hoặc vận hành máy móc",
+            "Cần điều chỉnh liều ở suy thận: CrCl 30-60 → 5mg/ngày, CrCl <30 → 5mg cách ngày",
+            "Có thể dùng với thức ăn hoặc không",
+            "An toàn cho trẻ em từ 2 tuổi trở lên",
+            "An toàn trong thai kỳ (category B)",
+            "Tránh dùng với alcohol (tăng buồn ngủ)",
+            "Ít tương tác thuốc, an toàn cho hầu hết bệnh nhân",
+            "Tác dụng kéo dài 24 giờ nên chỉ cần dùng 1 lần/ngày"
+        ],
+        "pharmacokinetics": {
+            "half_life": "8-10 giờ",
+            "onset": "1 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "93%",
+            "clearance": "Thận: bài tiết chủ yếu qua thận (60-70% nguyên dạng, không chuyển hóa). Gan: ít chuyển hóa. Cần điều chỉnh liều ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng syrup: bảo quản ở nhiệt độ phòng, đậy kín sau khi dùng.",
+        "black_box_warnings": None
     },
     
     "Fexofenadine": {
@@ -4538,7 +4743,34 @@ DRUG_DATABASE = {
             "Fruit juices (apple, orange, grapefruit): giảm hấp thu (cách xa 1-2 giờ)",
             "Antacids: giảm hấp thu (cách xa 2 giờ)"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Fexofenadine là metabolite hoạt động của terfenadine, là antihistamine thế hệ thứ hai, đối kháng chọn lọc và có ái lực cao với thụ thể H1 ở ngoại biên. Fexofenadine gần như không qua hàng rào máu-não (do là carboxylate anion ở pH sinh lý) nên không gây buồn ngủ và không có tác dụng anticholinergic. Fexofenadine ức chế phóng thích histamine từ mast cells và basophils, ngăn chặn tác dụng của histamine trên các thụ thể H1. Fexofenadine được coi là non-sedating nhất trong các antihistamine thế hệ thứ hai, phù hợp cho bệnh nhân cần tỉnh táo hoàn toàn. Tác dụng tốt cho cả allergic rhinitis và urticaria.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng dị ứng)",
+            "Tác dụng phụ (rất hiếm: nhức đầu, mệt mỏi)",
+            "Tương tác với fruit juices và antacids (giảm hấp thu)",
+            "Chức năng thận nếu dùng lâu dài (mặc dù không cần điều chỉnh liều)"
+        ],
+        "precautions": [
+            "Non-sedating nhất - không gây buồn ngủ, an toàn khi lái xe",
+            "Không dùng với fruit juices (táo, cam, bưởi) - giảm hấp thu đáng kể, cách xa 1-2 giờ",
+            "Không dùng với antacids - giảm hấp thu, cách xa 2 giờ",
+            "Uống với nước lọc, không dùng với thức ăn có acid (có thể giảm hấp thu)",
+            "Có thể dùng cho trẻ em từ 6 tuổi trở lên",
+            "Thận trọng trong thai kỳ (category C) - cân nhắc lợi ích/nguy cơ",
+            "Ít tương tác thuốc, an toàn cho hầu hết bệnh nhân",
+            "Không cần điều chỉnh liều ở suy thận hoặc suy gan",
+            "Tác dụng kéo dài 24 giờ nên chỉ cần dùng 1-2 lần/ngày tùy liều"
+        ],
+        "pharmacokinetics": {
+            "half_life": "14.4 giờ",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "60-70%",
+            "clearance": "Thận: bài tiết chủ yếu qua thận (80% nguyên dạng, 11% metabolites). Gan: ít chuyển hóa. Không cần điều chỉnh liều ở suy thận hoặc suy gan (mặc dù có thể tích lũy nhẹ ở suy thận nặng)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng viên nén tan nhanh: bảo quản trong bao bì kín, tránh ẩm.",
+        "black_box_warnings": None
     },
     
     "Desloratadine": {
