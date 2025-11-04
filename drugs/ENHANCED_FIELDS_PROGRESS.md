@@ -254,8 +254,9 @@ python check_enhanced_fields.py
 - ✅ Bổ sung 5 thuốc cuối cùng: Calcium, Vitamin D, Budesonide, Enalaprilat, Amoxicillin suspension
 - ✅ Phase 2 đang tiến hành: Bổ sung 8 fields tùy chọn
   - ✅ **HOÀN THÀNH NHÓM 1** (10/10 thuốc - 100%): Paracetamol, Ibuprofen, Salbutamol, Adenosine, Acyclovir, Valacyclovir, Methylprednisolone, Fluconazole, Ciprofloxacin, Levofloxacin
-  - ✅ Tổng số đã hoàn thành: 10/141 thuốc (7%)
-  - ⏳ Còn lại: 131 thuốc
+  - ✅ **HOÀN THÀNH NHÓM 2** (6/6 thuốc - 100%): Valproate, Lamotrigine, Amitriptyline, Cisplatin, Carboplatin, Cyclophosphamide
+  - ✅ Tổng số đã hoàn thành: 16/141 thuốc (11%)
+  - ⏳ Còn lại: 125 thuốc
   - 📋 Kế hoạch chi tiết: Xem `drugs/PHASE2_PLAN.md`
   - 📊 Script theo dõi: `track_phase2_progress.py`
 

@@ -4454,7 +4454,143 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa qua CYP2D6, CYP2C19, CYP1A2), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. Quá liều có thể gây rối loạn nhịp tim nghiêm trọng, block nhĩ thất, co giật, hôn mê, tử vong. Chống chỉ định với MAO inhibitor"
+        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. Quá liều có thể gây rối loạn nhịp tim nghiêm trọng, block nhĩ thất, co giật, hôn mê, tử vong. Chống chỉ định với MAO inhibitor",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors (phenelzine, tranylcypromine, selegiline)",
+                    "mechanism": "Ức chế chuyển hóa catecholamines, tăng nồng độ serotonin và norepinephrine",
+                    "effect": "Hội chứng serotonin, tăng huyết áp nghiêm trọng, sốt cao, co giật, tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng MAO inhibitor ít nhất 14 ngày trước khi bắt đầu amitriptyline."
+                },
+                {
+                    "drug": "Quinidine, Cimetidine",
+                    "mechanism": "Ức chế CYP2D6, giảm chuyển hóa amitriptyline",
+                    "effect": "Tăng nồng độ amitriptyline, tăng nguy cơ độc tính (rối loạn nhịp, block nhĩ thất)",
+                    "management": "Giảm liều amitriptyline 50%. Theo dõi ECG. Thận trọng."
+                },
+                {
+                    "drug": "Sympathomimetics (epinephrine, norepinephrine)",
+                    "mechanism": "Tăng tác dụng alpha-adrenergic",
+                    "effect": "Tăng huyết áp nghiêm trọng, rối loạn nhịp tim",
+                    "management": "Tránh dùng. Nếu cần, dùng liều thấp và theo dõi huyết áp chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Alcohol",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng an thần, suy hô hấp, nguy cơ quá liều",
+                    "management": "Tránh rượu. Cảnh báo bệnh nhân về nguy cơ."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể ức chế chuyển hóa warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Anticholinergics (atropine, benztropine)",
+                    "mechanism": "Tăng tác dụng kháng cholinergic",
+                    "effect": "Tăng khô miệng, táo bón, bí tiểu, nhìn mờ, lú lẫn",
+                    "management": "Thận trọng. Giảm liều hoặc tránh dùng cùng."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Phenytoin, Carbamazepine",
+                    "mechanism": "Cảm ứng enzyme chuyển hóa",
+                    "effect": "Giảm nồng độ amitriptyline",
+                    "management": "Tăng liều amitriptyline nếu cần"
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "Nhồi máu cơ tim gần đây (<6 tháng)",
+                "Block nhĩ thất độ 2-3",
+                "Rối loạn nhịp tim nặng",
+                "Suy tim nặng (NYHA class IV)",
+                "Dị ứng amitriptyline hoặc TCA"
+            ],
+            "relative": [
+                "Bệnh tim (thiếu máu cơ tim, suy tim nhẹ-trung bình) - thận trọng, theo dõi ECG",
+                "Block nhĩ thất độ 1 - thận trọng",
+                "Tăng nhãn áp (glaucoma) - tăng nguy cơ",
+                "Bí tiểu - tăng nguy cơ",
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử",
+                "Có ý định tự tử - chỉ kê đơn số lượng ít"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Có nguy cơ dị tật thai nhi (dị tật tim, dị tật chi) khi dùng trong 3 tháng đầu, đặc biệt liều cao. Có thể gây hội chứng cai ở trẻ sơ sinh (kích động, khó thở, run, co giật) nếu dùng gần ngày sinh. Theo dõi trẻ sơ sinh sau sinh. Nguy cơ rối loạn phát triển thần kinh thấp.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Amitriptyline bài tiết vào sữa mẹ ở nồng độ thấp (<5% liều mẹ). Nồng độ trong máu trẻ bú mẹ thường rất thấp. Có thể gây buồn ngủ, bú kém ở trẻ. Ít báo cáo về tác dụng phụ nghiêm trọng.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu buồn ngủ, bú kém, táo bón ở trẻ. Nếu trẻ có dấu hiệu bất thường, cân nhắc ngừng cho con bú hoặc giảm liều."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi hoặc giảm liều nhẹ",
+            "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ",
+            "notes": "Amitriptyline chuyển hóa ở gan qua CYP2D6, CYP2C19, CYP1A2. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính. Tuy nhiên, ít gây độc gan trực tiếp."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Giai đoạn sớm: Buồn ngủ, lú lẫn, chóng mặt, nhìn mờ",
+                "Giai đoạn nặng: Rối loạn nhịp tim (nhịp nhanh, rung nhĩ, block nhĩ thất), hạ huyết áp hoặc tăng huyết áp",
+                "Co giật, hôn mê",
+                "Suy hô hấp",
+                "Triệu chứng kháng cholinergic: khô miệng, bí tiểu, nhịp tim nhanh, sốt",
+                "Tử vong do rối loạn nhịp tim hoặc suy hô hấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Có thể dùng sodium bicarbonate cho rối loạn nhịp",
+            "treatment": [
+                "Hỗ trợ hô hấp và tuần hoàn ngay lập tức (quan trọng nhất)",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ (thận trọng nếu đã hôn mê)",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ECG liên tục - rối loạn nhịp là nguy hiểm nhất",
+                "Điều trị rối loạn nhịp: Sodium bicarbonate (1-2 mEq/kg IV bolus) để điều chỉnh QT kéo dài và block nhĩ thất",
+                "Điều trị co giật: Benzodiazepines (lorazepam, diazepam)",
+                "Điều trị hạ huyết áp: Truyền dịch, vận mạch nếu cần",
+                "Theo dõi điện giải, đường huyết",
+                "Lọc máu (hemodialysis) KHÔNG hiệu quả do protein binding cao",
+                "Theo dõi ít nhất 24-48 giờ (do half-life dài)"
+            ],
+            "monitoring": "ECG liên tục (rối loạn nhịp), huyết áp, nhịp tim, ý thức, hô hấp, điện giải, đường huyết, nhiệt độ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm kích ứng dạ dày",
+                "timing": "Dùng buổi tối (1 lần/ngày) để tránh buồn ngủ ban ngày. Có thể chia 2-3 lần nếu liều cao hoặc tác dụng phụ nhiều"
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Elavil (amitriptyline)",
+                "UpToDate - Amitriptyline: Drug information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
+                "American Psychiatric Association guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     # ========== ANTICONVULSANTS ==========
@@ -4617,7 +4753,143 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa qua glucuronidation, beta-oxidation, CYP450), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nang: không làm lạnh",
-        "black_box_warnings": "Viêm gan nặng có thể gây tử vong - nguy cơ cao nhất ở trẻ em <2 tuổi, dùng nhiều thuốc chống động kinh, bệnh gan. Viêm tụy có thể gây tử vong. Dị tật thai nhi (neural tube defects) - chống chỉ định trong thai kỳ cho rối loạn lưỡng cực. Giảm tiểu cầu có thể gây chảy máu"
+        "black_box_warnings": "Viêm gan nặng có thể gây tử vong - nguy cơ cao nhất ở trẻ em <2 tuổi, dùng nhiều thuốc chống động kinh, bệnh gan. Viêm tụy có thể gây tử vong. Dị tật thai nhi (neural tube defects) - chống chỉ định trong thai kỳ cho rối loạn lưỡng cực. Giảm tiểu cầu có thể gây chảy máu",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Lamotrigine",
+                    "mechanism": "Valproate ức chế glucuronidation của lamotrigine, tăng nồng độ lamotrigine",
+                    "effect": "Tăng nguy cơ ban da nghiêm trọng (SJS/TEN) với lamotrigine",
+                    "management": "Giảm liều khởi đầu lamotrigine 50% khi dùng với valproate. Theo dõi sát dấu hiệu ban da."
+                },
+                {
+                    "drug": "Aspirin (liều cao)",
+                    "mechanism": "Aspirin ức chế chuyển hóa valproate và tăng protein binding",
+                    "effect": "Tăng nồng độ valproate, tăng nguy cơ độc tính",
+                    "management": "Tránh dùng aspirin liều cao. Thận trọng khi dùng cùng, theo dõi nồng độ valproate."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Valproate có thể ức chế CYP2C9, tăng nồng độ warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Phenytoin, Carbamazepine",
+                    "mechanism": "Cảm ứng enzyme chuyển hóa valproate",
+                    "effect": "Giảm nồng độ valproate",
+                    "management": "Tăng liều valproate nếu cần. Theo dõi nồng độ valproate và điều chỉnh liều."
+                },
+                {
+                    "drug": "Phenobarbital",
+                    "mechanism": "Cảm ứng enzyme, tăng chuyển hóa valproate",
+                    "effect": "Giảm nồng độ valproate",
+                    "management": "Tăng liều valproate nếu cần. Theo dõi nồng độ."
+                },
+                {
+                    "drug": "Rifampin",
+                    "mechanism": "Cảm ứng CYP450, tăng chuyển hóa valproate",
+                    "effect": "Giảm nồng độ valproate đáng kể",
+                    "management": "Tăng liều valproate. Theo dõi nồng độ và điều chỉnh liều."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Metronidazole",
+                    "mechanism": "Có thể ức chế chuyển hóa valproate",
+                    "effect": "Tăng nhẹ nồng độ valproate",
+                    "management": "Theo dõi nồng độ nếu dùng lâu dài"
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Bệnh gan hoạt động (viêm gan cấp hoặc mạn)",
+                "Rối loạn chuyển hóa chu trình urea (urea cycle disorders)",
+                "Suy gan nặng (Child-Pugh C)",
+                "Có thai (cho rối loạn lưỡng cực) - nguy cơ dị tật thai nhi cao",
+                "Dị ứng valproate"
+            ],
+            "relative": [
+                "Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều, theo dõi chặt chẽ",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Thiếu hụt tiểu cầu - tăng nguy cơ chảy máu",
+                "Rối loạn đông máu - thận trọng",
+                "Có thai (cho động kinh) - chỉ dùng nếu lợi ích > nguy cơ, bổ sung acid folic",
+                "Trẻ em <2 tuổi - tăng nguy cơ viêm gan nặng",
+                "Dùng nhiều thuốc chống động kinh - tăng nguy cơ độc tính"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ cho rối loạn lưỡng cực do nguy cơ dị tật thai nhi cao (neural tube defects 1-2%, dị tật tim, dị tật mặt, dị tật chi). Với động kinh, chỉ dùng nếu lợi ích > nguy cơ. Bổ sung acid folic 4-5mg/ngày trước và trong thai kỳ (giảm nguy cơ neural tube defects). Theo dõi nồng độ valproate trong thai kỳ (giảm do tăng clearance). Nguy cơ rối loạn phát triển thần kinh ở trẻ (IQ thấp hơn, tự kỷ, ADHD).",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Valproate bài tiết vào sữa mẹ ở nồng độ thấp (1-10% liều mẹ). Nồng độ trong máu trẻ bú mẹ thường <5% nồng độ mẹ. Ít báo cáo về tác dụng phụ ở trẻ bú mẹ. Tuy nhiên, cần theo dõi trẻ về dấu hiệu buồn ngủ, tăng cân chậm, tăng men gan.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu buồn ngủ, tăng cân chậm, vàng da ở trẻ. Nếu trẻ có dấu hiệu bất thường, cân nhắc ngừng cho con bú hoặc giảm liều."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Giảm liều 25-50%. Theo dõi chức năng gan mỗi 3 tháng",
+            "moderate": "Giảm liều 50%. Theo dõi chức năng gan mỗi 1-2 tháng. Tránh dùng nếu có thể",
+            "severe": "Không dùng (chống chỉ định). Nếu bắt buộc, dùng liều rất thấp dưới sự giám sát chặt chẽ, theo dõi chức năng gan hàng tuần",
+            "notes": "Valproate chuyển hóa ở gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính gan. Nguy cơ viêm gan nặng cao nhất ở trẻ em <2 tuổi và bệnh nhân dùng nhiều thuốc chống động kinh. Theo dõi ALT/AST, bilirubin định kỳ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, tiêu chảy",
+                "An thần, lú lẫn, hôn mê",
+                "Rối loạn nhịp tim, block nhĩ thất",
+                "Tăng ammonia máu (lú lẫn, hôn mê)",
+                "Hạ huyết áp",
+                "Suy hô hấp",
+                "Độc gan (tăng ALT/AST, vàng da)",
+                "Giảm tiểu cầu, chảy máu"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ (không dùng sau khi đã hôn mê)",
+                "Theo dõi nồng độ valproate trong máu",
+                "Điều trị hạ huyết áp: truyền dịch, vận mạch nếu cần",
+                "Điều trị tăng ammonia: L-carnitine (100mg/kg/ngày IV hoặc PO), có thể dùng L-arginine",
+                "Lọc máu (hemodialysis) nếu nồng độ >850 mcg/mL hoặc có triệu chứng nặng (hiệu quả do protein binding thấp ở liều cao)",
+                "Theo dõi chức năng gan, tiểu cầu, ammonia máu",
+                "Điều trị hỗ trợ: chống nôn, truyền dịch, theo dõi điện giải"
+            ],
+            "monitoring": "Nồng độ valproate trong máu, ALT/AST, bilirubin, tiểu cầu, ammonia máu, điện giải, ECG, huyết áp, nhịp tim, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn",
+                "timing": "Chia 2-3 lần/ngày (do half-life ngắn). Có thể dùng cùng bữa ăn để giảm kích ứng dạ dày"
+            },
+            "iv": {
+                "reconstitution": "Pha với D5W hoặc NS để nồng độ 1-4mg/mL. Không pha với các dung dịch khác",
+                "infusion_rate": "Truyền 15-20mg/kg trong 60 phút (không quá 20mg/phút)",
+                "compatibility": ["D5W", "NS", "Ringer's lactate"],
+                "incompatibility": ["Không pha với các thuốc khác trong cùng chai"],
+                "notes": "Truyền chậm để tránh kích ứng. Theo dõi huyết áp, nhịp tim trong khi truyền. Có thể gây kích ứng tĩnh mạch."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Depakote (valproate sodium)",
+                "UpToDate - Valproate: Drug information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
+                "Epilepsia - ILAE treatment guidelines",
+                "American Academy of Neurology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Levetiracetam": {
@@ -4753,7 +5025,115 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa qua glucuronidation, không qua CYP450), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Nguy cơ ban da nghiêm trọng (Stevens-Johnson syndrome, toxic epidermal necrolysis) - có thể gây tử vong. Nguy cơ tăng khi tăng liều nhanh, dùng với valproate, hoặc vi phạm phác đồ tăng liều. Ngừng ngay nếu có ban da, đặc biệt kèm sốt, mệt mỏi, đau khớp"
+        "black_box_warnings": "Nguy cơ ban da nghiêm trọng (Stevens-Johnson syndrome, toxic epidermal necrolysis) - có thể gây tử vong. Nguy cơ tăng khi tăng liều nhanh, dùng với valproate, hoặc vi phạm phác đồ tăng liều. Ngừng ngay nếu có ban da, đặc biệt kèm sốt, mệt mỏi, đau khớp",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Valproate",
+                    "mechanism": "Valproate ức chế glucuronidation của lamotrigine, tăng nồng độ lamotrigine đáng kể",
+                    "effect": "Tăng nguy cơ ban da nghiêm trọng (SJS/TEN) - nguy cơ cao nhất khi dùng cùng valproate",
+                    "management": "Giảm liều khởi đầu lamotrigine 50% khi dùng với valproate. Tăng liều rất chậm. Theo dõi sát dấu hiệu ban da."
+                },
+                {
+                    "drug": "Oral contraceptives (estrogen)",
+                    "mechanism": "Estrogen cảm ứng glucuronidation, tăng chuyển hóa lamotrigine",
+                    "effect": "Giảm nồng độ lamotrigine 40-50%, có thể gây mất kiểm soát động kinh",
+                    "management": "Tăng liều lamotrigine khi dùng OCP. Giảm liều khi ngừng OCP. Theo dõi nồng độ và điều chỉnh liều."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Carbamazepine, Phenytoin, Phenobarbital",
+                    "mechanism": "Cảm ứng glucuronidation, tăng chuyển hóa lamotrigine",
+                    "effect": "Giảm nồng độ lamotrigine",
+                    "management": "Tăng liều lamotrigine nếu cần. Theo dõi nồng độ và điều chỉnh liều."
+                },
+                {
+                    "drug": "Rifampin",
+                    "mechanism": "Cảm ứng glucuronidation mạnh",
+                    "effect": "Giảm nồng độ lamotrigine đáng kể",
+                    "management": "Tăng liều lamotrigine. Theo dõi nồng độ và điều chỉnh liều."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng lamotrigine",
+                "Ban da nặng trước đây (SJS/TEN) với lamotrigine",
+                "Tăng liều quá nhanh (vi phạm phác đồ tăng liều)"
+            ],
+            "relative": [
+                "Dùng với valproate - giảm liều khởi đầu 50%",
+                "Trẻ em <16 tuổi - tăng nguy cơ ban da",
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Dùng với oral contraceptives - tăng liều lamotrigine"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Nguy cơ dị tật thai nhi thấp hơn valproate và carbamazepine. Tuy nhiên, vẫn có nguy cơ dị tật (cleft palate, dị tật tim). Nồng độ lamotrigine giảm trong thai kỳ (tăng clearance), có thể cần tăng liều. Theo dõi nồng độ lamotrigine trong thai kỳ. Nguy cơ rối loạn phát triển thần kinh thấp hơn valproate.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Lamotrigine bài tiết vào sữa mẹ ở nồng độ đáng kể (40-50% liều mẹ). Nồng độ trong máu trẻ bú mẹ có thể đạt 20-30% nồng độ mẹ. Có thể gây tác dụng phụ ở trẻ (ban da, buồn ngủ). Cần theo dõi trẻ sát.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu ban da, buồn ngủ, bú kém ở trẻ. Nếu trẻ có dấu hiệu bất thường, cân nhắc ngừng cho con bú hoặc giảm liều."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi hoặc giảm liều nhẹ",
+            "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan",
+            "severe": "Giảm liều 50-75% hoặc tránh dùng. Theo dõi chức năng gan chặt chẽ",
+            "notes": "Lamotrigine chuyển hóa ở gan qua glucuronidation. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy. Tuy nhiên, ít gây độc gan hơn valproate."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ban da (có thể tiến triển thành SJS/TEN)",
+                "Buồn nôn, nôn",
+                "Chóng mặt, nhức đầu",
+                "Lú lẫn, co giật",
+                "Rung nhĩ",
+                "Hôn mê (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi sát dấu hiệu ban da (SJS/TEN) - nguy hiểm nhất",
+                "Điều trị hỗ trợ: chống nôn, truyền dịch, theo dõi điện giải",
+                "Theo dõi ECG nếu có triệu chứng tim mạch",
+                "Điều trị co giật nếu có",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần"
+            ],
+            "monitoring": "Dấu hiệu ban da (SJS/TEN), ECG, ý thức, dấu hiệu co giật, điện giải"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn",
+                "timing": "Chia 2 lần/ngày (do half-life dài). Có thể dùng cùng bữa ăn để giảm kích ứng dạ dày"
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lamictal (lamotrigine)",
+                "UpToDate - Lamotrigine: Drug information",
+                "Epilepsia - ILAE treatment guidelines",
+                "American Academy of Neurology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Gabapentin": {
@@ -8172,7 +8552,137 @@ DRUG_DATABASE = {
             "clearance": "Thận (chủ yếu, thải trừ qua nước tiểu), một phần gắn với mô (half-life dài)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch pha: bảo quản ở nhiệt độ phòng, dùng trong 20 giờ. Không đông lạnh",
-        "black_box_warnings": "Độc thận có thể nghiêm trọng và tích lũy - cần hydration đầy đủ và theo dõi chức năng thận. Giảm thính lực có thể vĩnh viễn. Độc thần kinh ngoại biên có thể tiến triển. Myelosuppression có thể nặng. Chống chỉ định trong thai kỳ"
+        "black_box_warnings": "Độc thận có thể nghiêm trọng và tích lũy - cần hydration đầy đủ và theo dõi chức năng thận. Giảm thính lực có thể vĩnh viễn. Độc thần kinh ngoại biên có thể tiến triển. Myelosuppression có thể nặng. Chống chỉ định trong thai kỳ",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Aminoglycosides (gentamicin, tobramycin, amikacin)",
+                    "mechanism": "Tăng độc thận tích lũy",
+                    "effect": "Tăng nguy cơ suy thận cấp, độc thận nặng",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận chặt chẽ."
+                },
+                {
+                    "drug": "Furosemide, Thiazides",
+                    "mechanism": "Tăng độc thận",
+                    "effect": "Tăng nguy cơ suy thận cấp",
+                    "management": "Tránh dùng cùng. Nếu cần lợi tiểu, dùng mannitol hoặc theo dõi chặt chẽ."
+                },
+                {
+                    "drug": "Thuốc độc thận khác (vancomycin, amphotericin B)",
+                    "mechanism": "Tăng độc thận tích lũy",
+                    "effect": "Tăng nguy cơ suy thận cấp",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Cisplatin có thể giảm hấp thu phenytoin",
+                    "effect": "Giảm nồng độ phenytoin, tăng nguy cơ co giật",
+                    "management": "Theo dõi nồng độ phenytoin. Tăng liều phenytoin nếu cần."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể tăng nguy cơ chảy máu",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Nephrotoxic drugs (NSAIDs, ACE inhibitors)",
+                    "mechanism": "Tăng độc thận",
+                    "effect": "Tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi chức năng thận."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Suy thận nặng (CrCl <60)",
+                "Giảm thính lực nặng",
+                "Có thai",
+                "Đang cho con bú",
+                "Dị ứng cisplatin hoặc platinum compounds",
+                "Giảm bạch cầu/tiểu cầu nặng"
+            ],
+            "relative": [
+                "Suy thận nhẹ đến trung bình (CrCl 30-60) - giảm liều 25-50%",
+                "Giảm thính lực nhẹ - theo dõi sát",
+                "Suy gan nặng - thận trọng",
+                "Bệnh tim - tăng nguy cơ độc tim",
+                "Người cao tuổi - tăng nguy cơ độc tính",
+                "Đã dùng cisplatin trước đây - tích lũy độc tính"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Cisplatin gây dị tật thai nhi, chậm phát triển, tử vong thai nhi. Cần test thai trước khi điều trị. Sử dụng biện pháp tránh thai hiệu quả trong và sau điều trị (ít nhất 6 tháng).",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Cisplatin bài tiết vào sữa mẹ. Không an toàn cho trẻ bú mẹ. Có thể gây độc tính nghiêm trọng ở trẻ.",
+                "recommendation": "Không dùng khi cho con bú. Ngừng cho con bú hoặc ngừng điều trị."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi hoặc giảm liều nhẹ",
+            "severe": "Thận trọng, có thể giảm liều",
+            "notes": "Cisplatin chủ yếu thải trừ qua thận, không phụ thuộc nhiều vào chức năng gan. Tuy nhiên, suy gan có thể ảnh hưởng đến chuyển hóa và protein binding."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Suy thận cấp nặng (tăng creatinine, BUN, giảm lượng nước tiểu)",
+                "Giảm thính lực nặng, điếc",
+                "Độc thần kinh ngoại biên nặng (tê bì, mất cảm giác)",
+                "Myelosuppression nặng (giảm bạch cầu, tiểu cầu)",
+                "Nôn mửa nặng",
+                "Hạ magne máu nặng",
+                "Độc tim (rối loạn nhịp, suy tim)",
+                "Suy hô hấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Ngừng truyền ngay lập tức",
+                "Hydration đầy đủ và mạnh (2-3L NS) để tăng thải trừ",
+                "Theo dõi chức năng thận chặt chẽ (creatinine, BUN, lượng nước tiểu)",
+                "Điều trị suy thận cấp: Truyền dịch, mannitol, furosemide (thận trọng)",
+                "Lọc máu (hemodialysis) nếu suy thận nặng (hiệu quả hạn chế do gắn với protein)",
+                "Bổ sung magne nếu hạ magne máu",
+                "Điều trị myelosuppression: G-CSF, truyền máu/tiểu cầu nếu cần",
+                "Điều trị nôn mửa: Antiemetics mạnh (ondansetron, aprepitant)",
+                "Theo dõi thính lực (audiometry)",
+                "Điều trị hỗ trợ: Chống nhiễm trùng, chống chảy máu"
+            ],
+            "monitoring": "Creatinine, BUN, lượng nước tiểu, công thức máu, thính lực, dấu hiệu độc thần kinh, magne máu, ECG, huyết áp"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "N/A",
+                "timing": "N/A"
+            },
+            "iv": {
+                "reconstitution": "Pha với NS 0.9% để nồng độ 0.5-1mg/mL. Không dùng D5W (không ổn định)",
+                "infusion_rate": "Truyền 50-100mg/m² trong 1-2 giờ. Không quá 100mg/phút",
+                "compatibility": ["NS 0.9%"],
+                "incompatibility": ["D5W", "Dung dịch chứa clorua", "Các thuốc khác"],
+                "notes": "PHẢI có pre-hydration (1-2L NS trước) và post-hydration (1-2L NS sau) để giảm độc thận. Truyền với NS 0.9% để tăng thải trừ. Theo dõi lượng nước tiểu (đảm bảo >100ml/giờ)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Platinol (cisplatin)",
+                "UpToDate - Cisplatin: Drug information",
+                "NCCN Guidelines - Cancer treatment",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Carboplatin": {
@@ -8250,7 +8760,117 @@ DRUG_DATABASE = {
             "clearance": "Thận (chủ yếu, thải trừ nhanh hơn cisplatin)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch pha: bảo quản ở nhiệt độ phòng, dùng trong 8 giờ. Không đông lạnh",
-        "black_box_warnings": "Myelosuppression có thể nặng (giảm bạch cầu, tiểu cầu) - theo dõi chặt chẽ. Nhiễm trùng và chảy máu có thể xảy ra. Chống chỉ định trong thai kỳ"
+        "black_box_warnings": "Myelosuppression có thể nặng (giảm bạch cầu, tiểu cầu) - theo dõi chặt chẽ. Nhiễm trùng và chảy máu có thể xảy ra. Chống chỉ định trong thai kỳ",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Aminoglycosides",
+                    "mechanism": "Tăng độc thận",
+                    "effect": "Tăng nguy cơ suy thận cấp",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận chặt chẽ."
+                },
+                {
+                    "drug": "Thuốc độc thận khác",
+                    "mechanism": "Tăng độc thận tích lũy",
+                    "effect": "Tăng nguy cơ suy thận cấp",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Carboplatin có thể giảm nồng độ phenytoin",
+                    "effect": "Giảm nồng độ phenytoin, tăng nguy cơ co giật",
+                    "management": "Theo dõi nồng độ phenytoin. Tăng liều phenytoin nếu cần."
+                },
+                {
+                    "drug": "Nephrotoxic drugs (NSAIDs, ACE inhibitors)",
+                    "mechanism": "Tăng độc thận",
+                    "effect": "Tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi chức năng thận."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Có thai",
+                "Đang cho con bú",
+                "Dị ứng carboplatin hoặc platinum compounds",
+                "Giảm bạch cầu/tiểu cầu nặng"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <30) - giảm liều đáng kể, điều chỉnh công thức Calvert",
+                "Suy gan nặng - thận trọng",
+                "Người cao tuổi - tăng nguy cơ myelosuppression",
+                "Đã dùng platinum compounds trước đây - tăng nguy cơ phản ứng dị ứng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Carboplatin gây dị tật thai nhi, chậm phát triển, tử vong thai nhi. Cần test thai trước khi điều trị. Sử dụng biện pháp tránh thai hiệu quả trong và sau điều trị (ít nhất 6 tháng).",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Carboplatin bài tiết vào sữa mẹ. Không an toàn cho trẻ bú mẹ. Có thể gây độc tính nghiêm trọng ở trẻ.",
+                "recommendation": "Không dùng khi cho con bú. Ngừng cho con bú hoặc ngừng điều trị."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi hoặc giảm liều nhẹ",
+            "severe": "Thận trọng, có thể giảm liều",
+            "notes": "Carboplatin chủ yếu thải trừ qua thận, không phụ thuộc nhiều vào chức năng gan. Liều được tính theo GFR (công thức Calvert)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Myelosuppression nặng (giảm bạch cầu, tiểu cầu, thiếu máu)",
+                "Nhiễm trùng (do giảm bạch cầu)",
+                "Chảy máu (do giảm tiểu cầu)",
+                "Suy thận cấp (ít hơn cisplatin nhưng vẫn có)",
+                "Nôn mửa",
+                "Hạ magne máu"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Ngừng truyền ngay lập tức",
+                "Theo dõi công thức máu chặt chẽ (myelosuppression là độc tính chính)",
+                "Điều trị myelosuppression: G-CSF nếu giảm bạch cầu nặng, truyền tiểu cầu nếu giảm tiểu cầu nặng, truyền máu nếu thiếu máu",
+                "Điều trị nhiễm trùng: Kháng sinh phổ rộng nếu có nhiễm trùng",
+                "Điều trị chảy máu: Truyền tiểu cầu, hỗ trợ đông máu",
+                "Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)",
+                "Bổ sung magne nếu hạ magne máu",
+                "Điều trị nôn mửa: Antiemetics (ondansetron, aprepitant)",
+                "Hydration đầy đủ để tăng thải trừ"
+            ],
+            "monitoring": "Công thức máu (CBC), chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, magne máu"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "N/A",
+                "timing": "N/A"
+            },
+            "iv": {
+                "reconstitution": "Pha với D5W hoặc NS để nồng độ 0.5-2mg/mL",
+                "infusion_rate": "Truyền trong 15-60 phút. Tốc độ phụ thuộc liều và phác đồ",
+                "compatibility": ["D5W", "NS"],
+                "incompatibility": ["Các thuốc khác"],
+                "notes": "Dùng công thức Calvert để tính liều: Dose (mg) = AUC x (GFR + 25). Ít cần hydration như cisplatin nhưng vẫn nên truyền dịch đầy đủ. Theo dõi công thức máu chặt chẽ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Paraplatin (carboplatin)",
+                "UpToDate - Carboplatin: Drug information",
+                "NCCN Guidelines - Cancer treatment",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Oxaliplatin": {
@@ -8577,7 +9197,131 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa thành chất hoạt động qua CYP2B6, CYP3A4), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nang: bảo quản ở nhiệt độ phòng. Dung dịch IV: bảo quản ở nhiệt độ phòng, dùng trong 24 giờ. Không đông lạnh",
-        "black_box_warnings": "Viêm bàng quang chảy máu có thể nghiêm trọng - cần uống nhiều nước (2-3L/ngày) và dùng mesna khi cần. Myelosuppression có thể nặng, dẫn đến nhiễm trùng và chảy máu. Có thể gây vô sinh vĩnh viễn. Có thể gây ung thư thứ phát. Chống chỉ định trong thai kỳ"
+        "black_box_warnings": "Viêm bàng quang chảy máu có thể nghiêm trọng - cần uống nhiều nước (2-3L/ngày) và dùng mesna khi cần. Myelosuppression có thể nặng, dẫn đến nhiễm trùng và chảy máu. Có thể gây vô sinh vĩnh viễn. Có thể gây ung thư thứ phát. Chống chỉ định trong thai kỳ",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Allopurinol",
+                    "mechanism": "Tăng độc tính của cyclophosphamide",
+                    "effect": "Tăng nguy cơ độc tính, đặc biệt myelosuppression",
+                    "management": "Thận trọng. Giảm liều cyclophosphamide hoặc ngừng allopurinol nếu có thể."
+                },
+                {
+                    "drug": "Phenobarbital, Rifampin",
+                    "mechanism": "Cảm ứng CYP450, tăng chuyển hóa cyclophosphamide",
+                    "effect": "Tăng chuyển hóa thành chất hoạt động, tăng độc tính",
+                    "management": "Thận trọng. Theo dõi độc tính chặt chẽ. Có thể cần điều chỉnh liều."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Succinylcholine",
+                    "mechanism": "Cyclophosphamide ức chế cholinesterase",
+                    "effect": "Kéo dài tác dụng succinylcholine",
+                    "management": "Thận trọng khi gây mê. Giảm liều succinylcholine hoặc dùng thuốc khác."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể tăng nguy cơ chảy máu",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Mesna",
+                    "mechanism": "Bảo vệ chống viêm bàng quang",
+                    "effect": "Giảm nguy cơ viêm bàng quang chảy máu",
+                    "management": "Dùng kèm khi dùng liều cao. Liều: 20% liều cyclophosphamide."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Viêm bàng quang chảy máu hoạt động",
+                "Có thai",
+                "Đang cho con bú",
+                "Dị ứng cyclophosphamide",
+                "Giảm bạch cầu/tiểu cầu nặng"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <30) - giảm liều đáng kể",
+                "Suy gan nặng - thận trọng (cần gan để chuyển hóa thành chất hoạt động)",
+                "Nhiễm trùng hoạt động - tăng nguy cơ",
+                "Bệnh tim - tăng nguy cơ độc tim",
+                "Người cao tuổi - tăng nguy cơ độc tính",
+                "Đã dùng cyclophosphamide trước đây - tích lũy độc tính"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Cyclophosphamide gây dị tật thai nhi, chậm phát triển, tử vong thai nhi. Cần test thai trước khi điều trị. Sử dụng biện pháp tránh thai hiệu quả trong và sau điều trị (ít nhất 6-12 tháng). Có thể gây vô sinh vĩnh viễn (nam và nữ).",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Cyclophosphamide bài tiết vào sữa mẹ. Không an toàn cho trẻ bú mẹ. Có thể gây độc tính nghiêm trọng, myelosuppression ở trẻ.",
+                "recommendation": "Không dùng khi cho con bú. Ngừng cho con bú hoặc ngừng điều trị."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể giảm liều nhẹ",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ",
+            "notes": "Cyclophosphamide là prodrug, cần gan để chuyển hóa thành chất hoạt động (phosphoramide mustard). Suy gan làm giảm chuyển hóa, giảm hiệu quả. Tuy nhiên, suy gan nặng có thể làm giảm clearance, tăng độc tính."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Viêm bàng quang chảy máu nặng (tiểu máu, đau bụng dưới)",
+                "Myelosuppression nặng (giảm bạch cầu, tiểu cầu, thiếu máu)",
+                "Nhiễm trùng nặng (do giảm bạch cầu)",
+                "Chảy máu (do giảm tiểu cầu)",
+                "Hội chứng lysis khối u (tăng uric acid, kali, phosphate)",
+                "Độc tim (rối loạn nhịp, suy tim)",
+                "Suy thận cấp",
+                "Suy hô hấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Mesna không phải antidote nhưng có thể giúp bảo vệ bàng quang",
+            "treatment": [
+                "Ngừng thuốc ngay lập tức",
+                "UỐNG NHIỀU NƯỚC (3-4L/ngày) hoặc truyền dịch đầy đủ để phòng viêm bàng quang",
+                "Mesna ngay lập tức (20% liều cyclophosphamide) nếu chưa dùng, sau đó mỗi 4 giờ",
+                "Theo dõi sát nước tiểu (dấu hiệu viêm bàng quang chảy máu)",
+                "Điều trị viêm bàng quang: Mesna, truyền dịch, có thể cần đặt catheter",
+                "Theo dõi công thức máu chặt chẽ",
+                "Điều trị myelosuppression: G-CSF, truyền máu/tiểu cầu nếu cần",
+                "Điều trị nhiễm trùng: Kháng sinh phổ rộng",
+                "Điều trị hội chứng lysis khối u: Allopurinol, hydration, rasburicase nếu cần",
+                "Theo dõi chức năng thận, điện giải",
+                "Điều trị hỗ trợ: Chống nôn, truyền dịch, theo dõi tim mạch"
+            ],
+            "monitoring": "Nước tiểu (hematuria), công thức máu (CBC), chức năng thận, uric acid, kali, phosphate, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, ECG"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": ["Mesna (bảo vệ bàng quang, không phải antidote)"]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm kích ứng dạ dày",
+                "timing": "Uống nhiều nước (2-3L/ngày) trước, trong và sau khi uống để phòng viêm bàng quang. Uống vào buổi sáng để tăng lượng nước tiểu ban ngày."
+            },
+            "iv": {
+                "reconstitution": "Pha với D5W hoặc NS để nồng độ 1-20mg/mL",
+                "infusion_rate": "Truyền trong 30-60 phút. Tốc độ phụ thuộc liều",
+                "compatibility": ["D5W", "NS"],
+                "incompatibility": ["Các thuốc khác"],
+                "notes": "UỐNG NHIỀU NƯỚC (2-3L/ngày) trước, trong và sau truyền để phòng viêm bàng quang. Dùng mesna khi dùng liều cao (20% liều cyclophosphamide, dùng trước, 4 giờ, và 8 giờ sau). Theo dõi lượng nước tiểu (đảm bảo >2L/ngày)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cytoxan (cyclophosphamide)",
+                "UpToDate - Cyclophosphamide: Drug information",
+                "NCCN Guidelines - Cancer treatment",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Ifosfamide": {

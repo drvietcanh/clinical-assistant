@@ -32,14 +32,14 @@
 - ✅ Ciprofloxacin
 - ✅ Levofloxacin
 
-### Nhóm 2 - Thuốc Có Nguy Cơ Cao (Ưu tiên cao)
-**Số lượng:** 6 thuốc
-- ⏳ Valproate
-- ⏳ Lamotrigine
-- ⏳ Amitriptyline
-- ⏳ Cisplatin
-- ⏳ Carboplatin
-- ⏳ Cyclophosphamide
+### Nhóm 2 - Thuốc Có Nguy Cơ Cao (Ưu tiên cao) ✅ HOÀN THÀNH
+**Số lượng:** 6 thuốc (100%)
+- ✅ Valproate
+- ✅ Lamotrigine
+- ✅ Amitriptyline
+- ✅ Cisplatin
+- ✅ Carboplatin
+- ✅ Cyclophosphamide
 
 ### Nhóm 3 - Antidepressants & Antihistamines (Ưu tiên trung bình)
 **Số lượng:** 7 thuốc
@@ -133,10 +133,11 @@
 
 ### ✅ Hoàn thành
 - **Nhóm 1 - HOÀN THÀNH 100% (10/10 thuốc):** Paracetamol, Ibuprofen, Salbutamol, Adenosine, Acyclovir, Valacyclovir, Methylprednisolone, Fluconazole, Ciprofloxacin, Levofloxacin
-- **Tổng số:** 10/141 thuốc (7%)
+- **Nhóm 2 - HOÀN THÀNH 100% (6/6 thuốc):** Valproate, Lamotrigine, Amitriptyline, Cisplatin, Carboplatin, Cyclophosphamide
+- **Tổng số:** 16/141 thuốc (11%)
 
 ### ⏳ Đang làm
-- Tiếp theo: Nhóm 2 - Thuốc Có Nguy Cơ Cao
+- Tiếp theo: Nhóm 3 - Antidepressants & Antihistamines
 
 ### 📋 Kế hoạch tiếp theo
 1. ✅ Nhóm 1 (10/10 thuốc) - HOÀN THÀNH
