@@ -5351,7 +5351,160 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa qua CYP3A4), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dung dịch IV: bảo quản theo hướng dẫn nhà sản xuất",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Ketoconazole, Itraconazole (Azole antifungals)",
+                    "mechanism": "Azole antifungals ức chế CYP3A4, làm giảm chuyển hóa methylprednisolone, tăng nồng độ và tác dụng.",
+                    "effect": "Tăng nồng độ methylprednisolone, tăng tác dụng và tác dụng phụ (Cushing, tăng đường huyết, ức chế miễn dịch)",
+                    "management": "Giảm liều methylprednisolone 25-50% khi dùng với azole antifungals. Theo dõi đường huyết, dấu hiệu Cushing."
+                },
+                {
+                    "drug": "Rifampin, Rifabutin",
+                    "mechanism": "Rifampin cảm ứng CYP3A4, làm tăng chuyển hóa methylprednisolone, giảm nồng độ và hiệu quả.",
+                    "effect": "Giảm nồng độ methylprednisolone, giảm hiệu quả điều trị",
+                    "management": "Tăng liều methylprednisolone 25-50% khi dùng với rifampin. Theo dõi đáp ứng điều trị."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Corticosteroid có thể thay đổi chuyển hóa warfarin và ảnh hưởng đến đông máu.",
+                    "effect": "Thay đổi INR (có thể tăng hoặc giảm), tăng nguy cơ chảy máu hoặc huyết khối",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng methylprednisolone. Điều chỉnh liều warfarin nếu cần."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "NSAID (Ibuprofen, Naproxen, Diclofenac)",
+                    "mechanism": "Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.",
+                    "effect": "Tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa nghiêm trọng",
+                    "management": "Cân nhắc dùng PPI hoặc misoprostol. Tránh dùng đồng thời nếu có thể. Theo dõi dấu hiệu chảy máu dạ dày."
+                },
+                {
+                    "drug": "Phenytoin, Phenobarbital, Carbamazepine",
+                    "mechanism": "Cảm ứng enzyme chuyển hóa, tăng chuyển hóa methylprednisolone.",
+                    "effect": "Giảm nồng độ methylprednisolone, giảm hiệu quả",
+                    "management": "Tăng liều methylprednisolone. Theo dõi đáp ứng điều trị."
+                },
+                {
+                    "drug": "Cyclosporine, Tacrolimus",
+                    "mechanism": "Cả hai đều ức chế miễn dịch, tác dụng cộng dồn. Có thể ảnh hưởng đến chuyển hóa.",
+                    "effect": "Tăng ức chế miễn dịch, tăng nguy cơ nhiễm trùng, tăng nguy cơ độc tính",
+                    "management": "Giảm liều cả hai thuốc. Theo dõi chức năng thận, dấu hiệu nhiễm trùng."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Diuretics (Thiazide, Furosemide)",
+                    "mechanism": "Corticosteroid gây giữ natri, có thể đối kháng tác dụng lợi tiểu.",
+                    "effect": "Giảm hiệu quả lợi tiểu, có thể gây giữ nước",
+                    "management": "Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Nhiễm nấm hệ thống không điều trị (cryptococcosis, histoplasmosis, coccidioidomycosis) - corticosteroid làm nặng nhiễm nấm",
+                "Dị ứng methylprednisolone hoặc các corticosteroid khác",
+                "Nhiễm virus hoạt động (herpes simplex keratitis, varicella zoster lan tỏa) - trừ khi chỉ định đặc biệt"
+            ],
+            "relative": [
+                "Nhiễm trùng đang hoạt động - có thể làm nặng, che dấu triệu chứng",
+                "Đái tháo đường - tăng đường huyết, cần theo dõi và điều chỉnh",
+                "Tăng huyết áp - có thể tăng huyết áp, giữ nước",
+                "Suy tim - giữ nước, có thể làm nặng",
+                "Loãng xương - tăng nguy cơ gãy xương",
+                "Loét dạ dày tá tràng - tăng nguy cơ loét",
+                "Rối loạn tâm thần - có thể làm nặng",
+                "Glaucoma - có thể tăng nhãn áp",
+                "Có thai - có thể ảnh hưởng đến thai nhi",
+                "Suy gan - có thể giảm chuyển hóa",
+                "Suy thận - không cần điều chỉnh liều nhưng thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Methylprednisolone là thuốc phân loại C. Corticosteroid có thể đi qua nhau thai và có thể ảnh hưởng đến thai nhi. Dùng lâu dài hoặc liều cao trong thai kỳ có thể gây ức chế thượng thận ở trẻ sơ sinh, chậm phát triển, tăng nguy cơ sứt môi/vòm miệng (khi dùng trong tam cá nguyệt đầu), và các tác dụng phụ khác. Tuy nhiên, corticosteroid được sử dụng trong thai kỳ để điều trị một số bệnh tự miễn và hen phế quản. Nên dùng liều thấp nhất hiệu quả và thời gian ngắn nhất có thể. Tránh dùng liều cao kéo dài trong thai kỳ nếu có thể.",
+            "lactation": {
+                "safety": "Compatible (với dùng ngắn hạn)",
+                "details": "Methylprednisolone bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ với liều thường dùng. Với liều cao hoặc kéo dài, có thể ảnh hưởng đến trẻ sơ sinh.",
+                "recommendation": "Có thể dùng khi cho con bú với liều điều trị tiêu chuẩn. Dùng liều thấp nhất hiệu quả và thời gian ngắn nhất có thể. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Methylprednisolone chuyển hóa qua gan nhưng không phụ thuộc nhiều vào chức năng gan.",
+            "moderate": "Thận trọng, có thể cần giảm liều nhẹ. Chuyển hóa có thể giảm ở suy gan trung bình.",
+            "severe": "Thận trọng, có thể cần giảm liều. Chuyển hóa có thể giảm đáng kể ở suy gan nặng, tăng thời gian bán thải.",
+            "notes": "Methylprednisolone chuyển hóa chủ yếu qua gan (CYP3A4). Suy gan nặng có thể làm giảm chuyển hóa, tăng thời gian bán thải, tăng nồng độ và tác dụng. Theo dõi tác dụng phụ chặt chẽ ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng Cushing: Tăng cân, mặt tròn, tích mỡ, bướu trâu, vết rạn da, tăng huyết áp",
+                "Triệu chứng chuyển hóa: Tăng đường huyết nghiêm trọng, toan chuyển hóa, hạ kali máu",
+                "Triệu chứng tiêu hóa: Loét dạ dày, xuất huyết tiêu hóa, thủng dạ dày",
+                "Triệu chứng thần kinh: Kích động, loạn thần, trầm cảm, co giật, hôn mê",
+                "Triệu chứng miễn dịch: Nhiễm trùng nghiêm trọng (do ức chế miễn dịch), che dấu triệu chứng nhiễm trùng",
+                "Triệu chứng tim mạch: Suy tim, phù, giữ nước, tăng huyết áp nặng",
+                "Triệu chứng nghiêm trọng: Suy thượng thận cấp (khi ngừng đột ngột sau dùng lâu dài), sốc, tử vong"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay methylprednisolone nếu có thể (nhưng KHÔNG ngừng đột ngột nếu đã dùng >2 tuần - phải giảm dần)",
+                "Nếu ngừng đột ngột sau dùng lâu dài:",
+                "  - Bắt đầu lại corticosteroid ngay (hydrocortisone 100mg IV mỗi 6-8 giờ)",
+                "  - Giảm dần liều theo thời gian",
+                "Điều trị tăng đường huyết:",
+                "  - Theo dõi đường huyết thường xuyên",
+                "  - Insulin nếu cần",
+                "  - Điều chỉnh liều đái tháo đường",
+                "Điều trị loét dạ dày/xuất huyết tiêu hóa:",
+                "  - PPI (omeprazole, pantoprazole)",
+                "  - Truyền máu nếu cần",
+                "  - Nội soi dạ dày nếu nghi ngờ thủng",
+                "Điều trị rối loạn tâm thần:",
+                "  - An thần nếu kích động, loạn thần",
+                "  - Antipsychotic nếu cần",
+                "  - Theo dõi thần kinh chặt chẽ",
+                "Điều trị nhiễm trùng:",
+                "  - Kháng sinh nếu có nhiễm trùng",
+                "  - Theo dõi dấu hiệu nhiễm trùng (có thể che dấu)",
+                "Điều chỉnh điện giải:",
+                "  - Bổ sung kali nếu hạ kali máu",
+                "  - Điều chỉnh natri nếu cần",
+                "Hỗ trợ huyết động:",
+                "  - Truyền dịch nếu cần",
+                "  - Thuốc vận mạch nếu sốc",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2, đường huyết"
+            ],
+            "monitoring": "Theo dõi đường huyết, điện giải, dấu hiệu sinh tồn, dấu hiệu nhiễm trùng, dấu hiệu loét dạ dày, tâm thần trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng. Nếu ngừng đột ngột sau dùng lâu dài, theo dõi dấu hiệu suy thượng thận cấp trong ít nhất 1-2 tuần."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày. Có thể uống với nước đầy đủ.",
+                "timing": "Uống 1-4 lần/ngày tùy chỉ định. Có thể uống buổi sáng (để giảm ảnh hưởng đến giấc ngủ) hoặc chia đều trong ngày. Với liều cao, chia nhiều lần. Với liều thấp, có thể uống 1 lần buổi sáng."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 1-5mg/ml. Pha 125mg trong 50ml dịch = 2.5mg/ml. Pha 500mg trong 100ml dịch = 5mg/ml. Pha 1g trong 250ml dịch = 4mg/ml.",
+                "infusion_rate": "Truyền trong 15-60 phút tùy liều. Liều thấp (40-125mg): truyền trong 15-30 phút. Liều cao (250-1000mg): truyền trong 30-60 phút. Không truyền quá nhanh. Tốc độ: 50ml/30 phút = ~1.7ml/phút. 100ml/60 phút = ~1.7ml/phút.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": ["Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha. Tránh pha với thuốc có tính kiềm hoặc axit."],
+                "notes": "IV pulse therapy (250-1000mg) chỉ dùng cho bệnh nặng, cần theo dõi sát. Theo dõi đường huyết, huyết áp, điện giải trong quá trình truyền. Có thể gây kích ứng tĩnh mạch - thay đổi vị trí tiêm nếu cần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Methylprednisolone (Medrol)",
+                "UpToDate - Methylprednisolone: Drug Information",
+                "Medscape - Methylprednisolone Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Methylprednisolone Monograph",
+                "Micromedex - Methylprednisolone Drug Information",
+                "Endocrine Society Guidelines - Corticosteroid Use"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     
     "Hydrocortisone": {
@@ -5563,7 +5716,132 @@ DRUG_DATABASE = {
             "clearance": "Thận (chủ yếu qua lọc cầu thận và bài tiết ống thận), không chuyển hóa đáng kể"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Dung dịch IV: bảo quản ở 2-8°C, pha xong dùng trong 24 giờ",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết ống thận của acyclovir, làm giảm thải trừ và tăng nồng độ acyclovir trong máu.",
+                    "effect": "Tăng nồng độ acyclovir, tăng thời gian bán thải, tăng nguy cơ độc tính (độc thận, rối loạn thần kinh)",
+                    "management": "Giảm liều acyclovir 25-50% khi dùng với probenecid. Theo dõi chức năng thận và dấu hiệu độc tính chặt chẽ."
+                },
+                {
+                    "drug": "Thuốc độc thận (Aminoglycosides, Vancomycin, Amphotericin B, Cisplatin)",
+                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn làm tăng nguy cơ suy thận cấp.",
+                    "effect": "Tăng nguy cơ suy thận cấp, độc thận nghiêm trọng, tăng creatinine",
+                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi creatinine, BUN, lượng nước tiểu chặt chẽ. Duy trì đủ dịch. Có thể cần giảm liều cả hai thuốc."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Cimetidine có thể ức chế bài tiết ống thận của acyclovir (nhẹ).",
+                    "effect": "Tăng nhẹ nồng độ acyclovir",
+                    "management": "Theo dõi chức năng thận. Không cần điều chỉnh liều thường quy."
+                },
+                {
+                    "drug": "Zidovudine (AZT)",
+                    "mechanism": "Cả hai đều có thể gây độc thận và giảm bạch cầu, tác dụng cộng dồn.",
+                    "effect": "Tăng nguy cơ độc thận, giảm bạch cầu",
+                    "management": "Theo dõi chức năng thận và công thức máu. Thận trọng khi dùng đồng thời."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Mycophenolate",
+                    "mechanism": "Cả hai đều có thể gây độc thận, tác dụng cộng dồn nhẹ.",
+                    "effect": "Tăng nguy cơ độc thận (nhẹ)",
+                    "management": "Theo dõi chức năng thận. Không cần điều chỉnh liều thường quy."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng acyclovir hoặc valacyclovir",
+                "Suy thận nặng (CrCl <10 ml/min) khi dùng IV - chống chỉ định tuyệt đối với IV",
+                "Rối loạn thần kinh nặng không kiểm soát (khi dùng IV)"
+            ],
+            "relative": [
+                "Suy thận nhẹ đến trung bình (CrCl 10-50) - giảm liều đáng kể, theo dõi chặt chẽ",
+                "Suy thận nặng (CrCl <10) khi dùng PO - giảm liều 75%, theo dõi chặt chẽ",
+                "Mất nước - tăng nguy cơ độc thận, cần bù dịch đầy đủ",
+                "Dùng với thuốc độc thận - tăng nguy cơ suy thận cấp",
+                "Người cao tuổi - tăng nguy cơ độc thận, có thể cần giảm liều",
+                "Bệnh thần kinh - tăng nguy cơ rối loạn thần kinh khi dùng IV"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Acyclovir là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh, nhưng không có nghiên cứu đầy đủ trên phụ nữ có thai. Acyclovir được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm HSV và có vẻ an toàn. Nhiễm HSV có thể gây nguy hiểm cho thai nhi (nhiễm HSV ở trẻ sơ sinh, viêm não). Acyclovir có thể được dùng khi lợi ích vượt quá nguy cơ. Dạng uống được ưu tiên hơn dạng IV để giảm nguy cơ độc tính. Tránh dùng liều cao IV trong thai kỳ nếu có thể.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Acyclovir bài tiết vào sữa mẹ ở nồng độ thấp (tương đương nồng độ trong máu mẹ). Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Hấp thu qua đường tiêu hóa của trẻ sơ sinh thấp.",
+                "recommendation": "Có thể dùng khi cho con bú. Dạng uống được ưu tiên. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Acyclovir không chuyển hóa qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Acyclovir không chuyển hóa qua gan.",
+            "notes": "Acyclovir không chuyển hóa qua gan, thải trừ chủ yếu qua thận (lọc cầu thận và bài tiết ống thận). Không cần điều chỉnh liều ở bệnh nhân suy gan. Tuy nhiên, suy gan có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng độc thận: Tăng creatinine, BUN, giảm lượng nước tiểu, phù, suy thận cấp",
+                "Triệu chứng thần kinh: Lú lẫn, co giật, ảo giác, rối loạn ý thức, hôn mê (với IV liều cao)",
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, đau bụng",
+                "Triệu chứng tại chỗ: Viêm tĩnh mạch, đau tại chỗ tiêm (IV)",
+                "Triệu chứng nghiêm trọng: Suy thận cấp, rối loạn thần kinh nặng, hôn mê"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay acyclovir",
+                "Bù dịch đầy đủ: Truyền dịch để tăng thải trừ qua thận và giảm nguy cơ kết tinh ở thận",
+                "Theo dõi chức năng thận: Creatinine, BUN, lượng nước tiểu",
+                "Điều trị suy thận cấp nếu có:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải",
+                "  - Lọc máu nếu cần (hemodialysis có thể loại bỏ acyclovir)",
+                "Điều trị rối loạn thần kinh nếu có:",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "  - Điều trị co giật: Benzodiazepine",
+                "  - Theo dõi thần kinh chặt chẽ",
+                "Điều trị viêm tĩnh mạch: Chườm ấm, thay đổi vị trí tiêm",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis có thể loại bỏ acyclovir nếu suy thận nặng"
+            ],
+            "monitoring": "Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu), dấu hiệu thần kinh, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có suy thận cấp hoặc rối loạn thần kinh."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ (ít nhất 1-2 ly nước) để giảm nguy cơ kết tinh ở thận.",
+                "timing": "Uống 3-5 lần/ngày tùy chỉ định (herpes simplex: 5 lần/ngày, shingles: 5 lần/ngày). Cách đều trong ngày. Có thể uống với hoặc sau bữa ăn để giảm buồn nôn."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 7mg/ml (tối đa). Pha 500mg trong 100ml dịch = 5mg/ml. Pha 1g trong 250ml dịch = 4mg/ml. Pha 10mg/kg trong 100ml dịch cho liều tiêu chuẩn.",
+                "infusion_rate": "TRUYỀN CHẬM trong 1 giờ (ít nhất 1 giờ). KHÔNG được truyền nhanh - sẽ tăng nguy cơ độc thận. Tốc độ: 100ml/giờ = ~1.7ml/phút. Ví dụ: 500mg/100ml = 100ml/giờ. 1g/250ml = 250ml/giờ (4.2ml/phút).",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "Ringer's Lactate"],
+                "incompatibility": ["Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha. Tránh pha với thuốc có tính kiềm hoặc độc thận."],
+                "notes": "QUAN TRỌNG: 1) Truyền CHẬM trong 1 giờ, 2) Duy trì đủ dịch (tối thiểu 1-2L/ngày), 3) Theo dõi creatinine, BUN, 4) Điều chỉnh liều theo CrCl. Nếu truyền nhanh → tăng nguy cơ độc thận. Liều: 5-10mg/kg mỗi 8 giờ."
+            },
+            "topical": {
+                "application": "Rửa sạch và lau khô vùng da bị tổn thương. Bôi một lớp mỏng lên vùng tổn thương 5-6 lần/ngày trong 7-10 ngày. Dùng găng tay hoặc dụng cụ khi bôi để tránh lây lan virus. Rửa tay sau khi bôi."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Acyclovir (Zovirax)",
+                "UpToDate - Acyclovir: Drug Information",
+                "Medscape - Acyclovir Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Acyclovir Monograph",
+                "Micromedex - Acyclovir Drug Information",
+                "IDSA Guidelines - Herpes Simplex Virus Infections"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     
     "Valacyclovir": {
@@ -5625,7 +5903,126 @@ DRUG_DATABASE = {
             "clearance": "Chuyển thành acyclovir, sau đó thải qua thận (tương tự acyclovir)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết ống thận của acyclovir (sau khi valacyclovir chuyển thành acyclovir), làm giảm thải trừ và tăng nồng độ acyclovir trong máu.",
+                    "effect": "Tăng nồng độ acyclovir, tăng thời gian bán thải, tăng nguy cơ độc tính (độc thận)",
+                    "management": "Giảm liều valacyclovir 25-50% khi dùng với probenecid. Theo dõi chức năng thận và dấu hiệu độc tính chặt chẽ."
+                },
+                {
+                    "drug": "Thuốc độc thận (Aminoglycosides, Vancomycin, Amphotericin B, Cisplatin)",
+                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn làm tăng nguy cơ suy thận cấp.",
+                    "effect": "Tăng nguy cơ suy thận cấp, độc thận nghiêm trọng, tăng creatinine",
+                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi creatinine, BUN, lượng nước tiểu chặt chẽ. Duy trì đủ dịch. Có thể cần giảm liều cả hai thuốc."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Cimetidine có thể ức chế bài tiết ống thận của acyclovir (nhẹ).",
+                    "effect": "Tăng nhẹ nồng độ acyclovir",
+                    "management": "Theo dõi chức năng thận. Không cần điều chỉnh liều thường quy."
+                },
+                {
+                    "drug": "Zidovudine (AZT)",
+                    "mechanism": "Cả hai đều có thể gây độc thận và giảm bạch cầu, tác dụng cộng dồn.",
+                    "effect": "Tăng nguy cơ độc thận, giảm bạch cầu",
+                    "management": "Theo dõi chức năng thận và công thức máu. Thận trọng khi dùng đồng thời."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Mycophenolate",
+                    "mechanism": "Cả hai đều có thể gây độc thận, tác dụng cộng dồn nhẹ.",
+                    "effect": "Tăng nguy cơ độc thận (nhẹ)",
+                    "management": "Theo dõi chức năng thận. Không cần điều chỉnh liều thường quy."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng valacyclovir, acyclovir hoặc các thành phần",
+                "Suy thận nặng (CrCl <10 ml/min) - chống chỉ định với liều cao (1g x 3 lần/ngày)",
+                "Bệnh nhân suy giảm miễn dịch nặng với suy thận (tăng nguy cơ hội chứng tan máu-ure huyết)"
+            ],
+            "relative": [
+                "Suy thận nhẹ đến trung bình (CrCl 10-50) - giảm liều đáng kể, theo dõi chặt chẽ",
+                "Suy thận nặng (CrCl <10) với liều thấp - giảm liều 75%, theo dõi chặt chẽ",
+                "Mất nước - tăng nguy cơ độc thận, cần bù dịch đầy đủ",
+                "Dùng với thuốc độc thận - tăng nguy cơ suy thận cấp",
+                "Người cao tuổi - tăng nguy cơ độc thận, có thể cần giảm liều",
+                "Bệnh nhân suy giảm miễn dịch (HIV, ghép tạng) - tăng nguy cơ hội chứng tan máu-ure huyết với liều cao"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Valacyclovir là thuốc phân loại B (tương tự acyclovir). Valacyclovir là prodrug của acyclovir, chuyển thành acyclovir trong cơ thể. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh, nhưng không có nghiên cứu đầy đủ trên phụ nữ có thai. Valacyclovir được sử dụng trong thai kỳ để điều trị nhiễm HSV và có vẻ an toàn. Nhiễm HSV có thể gây nguy hiểm cho thai nhi (nhiễm HSV ở trẻ sơ sinh, viêm não). Valacyclovir có thể được dùng khi lợi ích vượt quá nguy cơ. Ưu điểm: dùng ít lần hơn acyclovir, compliance tốt hơn.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Valacyclovir chuyển thành acyclovir trong cơ thể. Acyclovir bài tiết vào sữa mẹ ở nồng độ thấp (tương đương nồng độ trong máu mẹ). Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Hấp thu qua đường tiêu hóa của trẻ sơ sinh thấp.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Valacyclovir chuyển hóa thành acyclovir (chủ yếu qua gan), nhưng acyclovir thải trừ qua thận.",
+            "moderate": "Không cần điều chỉnh liều. Chuyển hóa có thể giảm nhẹ nhưng không đáng kể.",
+            "severe": "Thận trọng, có thể cần giảm liều nhẹ. Chuyển hóa có thể giảm ở suy gan nặng.",
+            "notes": "Valacyclovir chuyển hóa thành acyclovir bởi valacyclovir hydrolase (chủ yếu ở gan và ruột). Suy gan có thể làm giảm chuyển hóa valacyclovir, nhưng acyclovir thải trừ qua thận nên ít ảnh hưởng. Tuy nhiên, suy gan có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng độc thận: Tăng creatinine, BUN, giảm lượng nước tiểu, phù, suy thận cấp",
+                "Triệu chứng thần kinh: Lú lẫn, co giật, ảo giác, rối loạn ý thức (hiếm, với liều rất cao)",
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, đau bụng, tiêu chảy",
+                "Hội chứng tan máu-ure huyết (TTP/HUS) - hiếm nhưng nghiêm trọng, đặc biệt ở bệnh nhân suy giảm miễn dịch với liều cao",
+                "Triệu chứng nghiêm trọng: Suy thận cấp, TTP/HUS, rối loạn thần kinh nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay valacyclovir",
+                "Bù dịch đầy đủ: Truyền dịch để tăng thải trừ qua thận và giảm nguy cơ kết tinh ở thận",
+                "Theo dõi chức năng thận: Creatinine, BUN, lượng nước tiểu",
+                "Điều trị suy thận cấp nếu có:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải",
+                "  - Lọc máu nếu cần (hemodialysis có thể loại bỏ acyclovir)",
+                "Điều trị rối loạn thần kinh nếu có:",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "  - Điều trị co giật: Benzodiazepine",
+                "  - Theo dõi thần kinh chặt chẽ",
+                "Điều trị TTP/HUS nếu có:",
+                "  - Plasmapheresis",
+                "  - Truyền máu nếu cần",
+                "  - Điều trị hỗ trợ",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis có thể loại bỏ acyclovir nếu suy thận nặng"
+            ],
+            "monitoring": "Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu), công thức máu (nếu nghi ngờ TTP/HUS), dấu hiệu thần kinh, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có suy thận cấp, TTP/HUS hoặc rối loạn thần kinh."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ (ít nhất 1-2 ly nước) để giảm nguy cơ kết tinh ở thận. Uống với thức ăn có thể giảm buồn nôn.",
+                "timing": "Uống 1-3 lần/ngày tùy chỉ định (herpes simplex: 2 lần/ngày, shingles: 3 lần/ngày, prophylaxis: 1 lần/ngày). Cách đều trong ngày. Có thể uống với hoặc sau bữa ăn để giảm buồn nôn. Ưu điểm: dùng ít lần hơn acyclovir (2-3 lần/ngày thay vì 5 lần/ngày), compliance tốt hơn."
+            },
+            "iv": None
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Valacyclovir (Valtrex)",
+                "UpToDate - Valacyclovir: Drug Information",
+                "Medscape - Valacyclovir Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Valacyclovir Monograph",
+                "Micromedex - Valacyclovir Drug Information",
+                "IDSA Guidelines - Herpes Simplex Virus Infections"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     
     "Oseltamivir": {
@@ -5931,7 +6328,155 @@ DRUG_DATABASE = {
             "clearance": "Thận (chủ yếu, 80% thải nguyên dạng qua nước tiểu), gan (chuyển hóa ít)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Dung dịch IV: bảo quản theo hướng dẫn nhà sản xuất",
-        "black_box_warnings": "Chống chỉ định trong 3 tháng đầu thai kỳ - có thể gây dị tật thai nhi. QT kéo dài có thể xảy ra ở liều cao"
+        "black_box_warnings": "Chống chỉ định trong 3 tháng đầu thai kỳ - có thể gây dị tật thai nhi. QT kéo dài có thể xảy ra ở liều cao",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Fluconazole ức chế CYP2C9, làm giảm chuyển hóa warfarin, tăng nồng độ warfarin.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu nghiêm trọng",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng fluconazole. Giảm liều warfarin 25-50% khi bắt đầu fluconazole. Điều chỉnh liều warfarin theo INR."
+                },
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Fluconazole ức chế CYP2C9 và CYP2C19, làm giảm chuyển hóa phenytoin. Phenytoin cảm ứng CYP450, có thể giảm nồng độ fluconazole.",
+                    "effect": "Tăng nồng độ phenytoin, tăng độc tính phenytoin (chóng mặt, rung giật, ataxia). Giảm nồng độ fluconazole.",
+                    "management": "Theo dõi nồng độ phenytoin. Giảm liều phenytoin khi bắt đầu fluconazole. Tăng liều fluconazole nếu cần. Theo dõi dấu hiệu độc tính phenytoin."
+                },
+                {
+                    "drug": "Cyclosporine, Tacrolimus",
+                    "mechanism": "Fluconazole ức chế CYP3A4, làm giảm chuyển hóa cyclosporine và tacrolimus.",
+                    "effect": "Tăng nồng độ cyclosporine/tacrolimus, tăng độc tính (độc thận, tăng huyết áp, độc thần kinh)",
+                    "management": "Giảm liều cyclosporine/tacrolimus 25-50% khi bắt đầu fluconazole. Theo dõi nồng độ cyclosporine/tacrolimus, chức năng thận. Điều chỉnh liều theo nồng độ."
+                },
+                {
+                    "drug": "Rifampin",
+                    "mechanism": "Rifampin cảm ứng CYP450, làm tăng chuyển hóa fluconazole.",
+                    "effect": "Giảm nồng độ fluconazole, giảm hiệu quả điều trị",
+                    "management": "Tăng liều fluconazole 50-100% khi dùng với rifampin. Theo dõi đáp ứng điều trị."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Sulfonylurea (Glibenclamide, Gliclazide)",
+                    "mechanism": "Fluconazole ức chế CYP2C9, làm giảm chuyển hóa sulfonylurea.",
+                    "effect": "Tăng nồng độ sulfonylurea, tăng nguy cơ hạ đường huyết",
+                    "management": "Theo dõi đường huyết chặt chẽ. Giảm liều sulfonylurea khi bắt đầu fluconazole. Điều chỉnh liều theo đường huyết."
+                },
+                {
+                    "drug": "Statins (Atorvastatin, Simvastatin)",
+                    "mechanism": "Fluconazole ức chế CYP3A4, làm giảm chuyển hóa statins (đặc biệt simvastatin, atorvastatin).",
+                    "effect": "Tăng nồng độ statin, tăng nguy cơ độc cơ (myopathy, rhabdomyolysis)",
+                    "management": "Giảm liều statin hoặc tạm ngừng khi dùng fluconazole. Theo dõi CK, dấu hiệu đau cơ. Dùng pravastatin hoặc rosuvastatin (ít chuyển hóa qua CYP3A4) nếu có thể."
+                },
+                {
+                    "drug": "Benzodiazepine (Midazolam, Triazolam)",
+                    "mechanism": "Fluconazole ức chế CYP3A4, làm giảm chuyển hóa benzodiazepine.",
+                    "effect": "Tăng nồng độ benzodiazepine, tăng tác dụng an thần, kéo dài thời gian tác dụng",
+                    "management": "Giảm liều benzodiazepine. Theo dõi dấu hiệu an thần quá mức."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Theophylline",
+                    "mechanism": "Fluconazole có thể ảnh hưởng nhẹ đến chuyển hóa theophylline.",
+                    "effect": "Tăng nhẹ nồng độ theophylline",
+                    "management": "Theo dõi nồng độ theophylline. Không cần điều chỉnh liều thường quy."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng fluconazole hoặc các azole antifungals khác",
+                "Có thai (3 tháng đầu) - chống chỉ định tuyệt đối, có thể gây dị tật thai nhi",
+                "Dùng terfenadine hoặc astemizole với liều fluconazole ≥400mg/ngày - tăng nguy cơ QT kéo dài, loạn nhịp tim nghiêm trọng"
+            ],
+            "relative": [
+                "Có thai (tam cá nguyệt 2-3) - thận trọng, chỉ dùng khi thực sự cần thiết",
+                "Suy thận nặng (CrCl <30) - giảm liều đáng kể, theo dõi chặt chẽ",
+                "Suy gan - thận trọng, có thể giảm chuyển hóa",
+                "QT kéo dài hoặc loạn nhịp tim - tăng nguy cơ QT kéo dài với liều cao",
+                "Dùng với warfarin - tăng nguy cơ chảy máu, cần theo dõi INR",
+                "Dùng với cyclosporine/tacrolimus - tăng độc tính, cần giảm liều",
+                "Dùng với statins - tăng nguy cơ độc cơ",
+                "Dùng với phenytoin - tăng độc tính phenytoin"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C (tam cá nguyệt 2-3), D (tam cá nguyệt đầu)",
+            "pregnancy_details": "Tam cá nguyệt đầu: Thuốc phân loại D - CHỐNG CHỈ ĐỊNH. Các nghiên cứu trên động vật cho thấy fluconazole liều cao có thể gây dị tật thai nhi (dị tật xương, sứt môi/vòm miệng). Có báo cáo về dị tật bẩm sinh ở người khi dùng liều cao trong tam cá nguyệt đầu. Tam cá nguyệt 2-3: Thuốc phân loại C. Có thể dùng khi lợi ích vượt quá nguy cơ, nhưng nên tránh nếu không cần thiết. Nhiễm nấm có thể gây nguy hiểm cho thai nhi. Dùng liều thấp nhất hiệu quả.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Fluconazole bài tiết vào sữa mẹ ở nồng độ thấp (tương đương nồng độ trong máu mẹ). Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Hấp thu qua đường tiêu hóa của trẻ sơ sinh thấp.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Fluconazole chuyển hóa ít qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Thận trọng, có thể cần giảm liều nhẹ. Chuyển hóa có thể giảm ở suy gan trung bình.",
+            "severe": "Thận trọng, có thể cần giảm liều. Chuyển hóa có thể giảm đáng kể ở suy gan nặng, nhưng thải trừ chủ yếu qua thận nên ít ảnh hưởng.",
+            "notes": "Fluconazole chuyển hóa ít qua gan (chủ yếu qua CYP2C9, CYP2C19), thải trừ chủ yếu qua thận (80% nguyên dạng). Suy gan có thể giảm chuyển hóa nhẹ nhưng không đáng kể. Tuy nhiên, suy gan có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng",
+                "Triệu chứng thần kinh: Đau đầu, chóng mặt, lú lẫn, co giật (hiếm)",
+                "Triệu chứng gan: Tăng men gan, vàng da, suy gan (hiếm nhưng nghiêm trọng)",
+                "Triệu chứng tim mạch: QT kéo dài, loạn nhịp tim (với liều cao ≥400mg/ngày)",
+                "Triệu chứng da: Phát ban, hội chứng Stevens-Johnson (hiếm nhưng nghiêm trọng)",
+                "Triệu chứng nghiêm trọng: Suy gan, rối loạn nhịp tim, hội chứng Stevens-Johnson"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay fluconazole",
+                "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2, ECG",
+                "Điều trị triệu chứng tiêu hóa:",
+                "  - Chống nôn nếu cần",
+                "  - Truyền dịch nếu mất nước",
+                "  - Theo dõi điện giải",
+                "Điều trị tăng men gan/suy gan nếu có:",
+                "  - Theo dõi ALT, AST, bilirubin",
+                "  - Điều trị hỗ trợ gan",
+                "  - Nếu suy gan nặng: điều trị suy gan",
+                "Điều trị QT kéo dài/loạn nhịp nếu có:",
+                "  - Theo dõi ECG liên tục",
+                "  - Điều trị loạn nhịp nếu cần",
+                "Điều trị hội chứng Stevens-Johnson nếu có:",
+                "  - Chuyển khoa da liễu/bỏng",
+                "  - Điều trị hỗ trợ",
+                "  - Kháng sinh nếu có nhiễm trùng",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, ECG, chức năng gan (ALT, AST, bilirubin), dấu hiệu da trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (suy gan, loạn nhịp, hội chứng Stevens-Johnson)."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không phụ thuộc vào thức ăn. Có thể uống với nước đầy đủ.",
+                "timing": "Uống 1 lần/ngày (do half-life dài 30 giờ). Có thể uống bất kỳ thời điểm nào trong ngày. Cách đều 24 giờ. Với liều cao (≥400mg), có thể chia 2 lần/ngày."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 2mg/ml (tối đa). Pha 200mg trong 100ml dịch = 2mg/ml. Pha 400mg trong 200ml dịch = 2mg/ml.",
+                "infusion_rate": "Truyền trong 1-2 giờ. Không truyền quá nhanh. Tốc độ: 100ml/giờ = ~1.7ml/phút. 200ml/2 giờ = ~1.7ml/phút.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": ["Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha."],
+                "notes": "Theo dõi chức năng gan, thận trong quá trình truyền. Có thể gây kích ứng tĩnh mạch - thay đổi vị trí tiêm nếu cần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Fluconazole (Diflucan)",
+                "UpToDate - Fluconazole: Drug Information",
+                "Medscape - Fluconazole Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Fluconazole Monograph",
+                "Micromedex - Fluconazole Drug Information",
+                "IDSA Guidelines - Antifungal Therapy"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     
     "Itraconazole": {
@@ -8660,7 +9205,144 @@ DRUG_DATABASE = {
             "clearance": "Gan: chuyển hóa qua CYP2C9 và CYP2C8 thành hydroxy và carboxy metabolites (không hoạt động). Thận: bài tiết <1% nguyên dạng, chủ yếu là metabolites. Thời gian bán thải tăng ở suy thận và suy gan."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi pha.",
-        "black_box_warnings": "Tăng nguy cơ biến cố tim mạch nghiêm trọng (nhồi máu cơ tim, đột quỵ) có thể xảy ra sớm và tăng nguy cơ tử vong. Nguy cơ tăng ở bệnh nhân có bệnh tim mạch hoặc các yếu tố nguy cơ tim mạch. NSAID tăng nguy cơ xuất huyết tiêu hóa, loét, thủng dạ dày có thể gây tử vong. Nguy cơ tăng ở người cao tuổi, tiền sử loét, dùng corticosteroid, aspirin, rượu, hút thuốc. Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm)."
+        "black_box_warnings": "Tăng nguy cơ biến cố tim mạch nghiêm trọng (nhồi máu cơ tim, đột quỵ) có thể xảy ra sớm và tăng nguy cơ tử vong. Nguy cơ tăng ở bệnh nhân có bệnh tim mạch hoặc các yếu tố nguy cơ tim mạch. NSAID tăng nguy cơ xuất huyết tiêu hóa, loét, thủng dạ dày có thể gây tử vong. Nguy cơ tăng ở người cao tuổi, tiền sử loét, dùng corticosteroid, aspirin, rượu, hút thuốc. Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Ibuprofen ức chế kết tập tiểu cầu và có thể tăng nguy cơ chảy máu. Có thể ảnh hưởng đến chuyển hóa warfarin.",
+                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng, tăng INR",
+                    "management": "Theo dõi INR chặt chẽ. Tránh dùng đồng thời nếu có thể. Nếu cần dùng, giảm liều ibuprofen và theo dõi dấu hiệu chảy máu."
+                },
+                {
+                    "drug": "ACE Inhibitors, ARB",
+                    "mechanism": "NSAID giảm tổng hợp prostaglandin, làm giảm tác dụng giãn mạch của ACE inhibitor/ARB. Có thể gây giữ natri và nước.",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp, tăng kali máu",
+                    "management": "Tránh dùng đồng thời nếu có thể. Nếu cần, theo dõi creatinine, BUN, kali máu. Cân nhắc dùng liều thấp NSAID và thời gian ngắn."
+                },
+                {
+                    "drug": "Aspirin (liều thấp tim mạch)",
+                    "mechanism": "Ibuprofen có thể cạnh tranh với aspirin tại vị trí gắn COX-1, làm giảm tác dụng ức chế kết tập tiểu cầu của aspirin.",
+                    "effect": "Giảm hiệu quả bảo vệ tim mạch của aspirin",
+                    "management": "Nếu dùng aspirin liều thấp để bảo vệ tim mạch, dùng ibuprofen ít nhất 30 phút sau aspirin hoặc 8 giờ trước aspirin. Hoặc cân nhắc dùng NSAID khác không ức chế COX-1."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "NSAID giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate trong máu.",
+                    "effect": "Tăng độc tính methotrexate (giảm bạch cầu, suy tủy xương, độc gan)",
+                    "management": "Tránh dùng với liều cao methotrexate. Nếu dùng liều thấp, theo dõi công thức máu, chức năng gan. Có thể cần giảm liều methotrexate."
+                },
+                {
+                    "drug": "Lithium",
+                    "mechanism": "NSAID giảm thải trừ lithium qua thận, tăng nồng độ lithium.",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính lithium",
+                    "management": "Theo dõi nồng độ lithium trong máu. Có thể cần giảm liều lithium khi bắt đầu dùng ibuprofen."
+                },
+                {
+                    "drug": "Corticosteroid",
+                    "mechanism": "Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.",
+                    "effect": "Tăng nguy cơ xuất huyết tiêu hóa, loét dạ dày",
+                    "management": "Cân nhắc dùng PPI hoặc misoprostol. Theo dõi dấu hiệu chảy máu dạ dày."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Furosemide, Thiazide",
+                    "mechanism": "NSAID giảm tác dụng lợi tiểu, có thể gây giữ natri và nước.",
+                    "effect": "Giảm hiệu quả lợi tiểu, có thể gây phù",
+                    "management": "Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng NSAID hoặc aspirin (quá mẫn cảm, phản ứng dị ứng nghiêm trọng)",
+                "Loét dạ dày tá tràng hoạt động",
+                "Xuất huyết tiêu hóa đang hoạt động",
+                "Suy thận nặng (CrCl <30 ml/min) hoặc đang lọc máu",
+                "Suy gan nặng (Child-Pugh C)",
+                "Suy tim nặng (NYHA class IV)",
+                "Có thai (3 tháng cuối) - đóng ống động mạch sớm",
+                "Trẻ em <6 tháng tuổi"
+            ],
+            "relative": [
+                "Suy thận nhẹ đến trung bình (CrCl 30-60) - thận trọng, giảm liều",
+                "Suy gan nhẹ đến trung bình (Child-Pugh A-B) - thận trọng, giảm liều",
+                "Suy tim nhẹ đến trung bình (NYHA class II-III) - có thể làm nặng",
+                "Tăng huyết áp không kiểm soát - có thể tăng huyết áp",
+                "Tiền sử loét dạ dày - tăng nguy cơ loét",
+                "Bệnh tim mạch hoặc yếu tố nguy cơ tim mạch - tăng nguy cơ biến cố tim mạch",
+                "Hen suyễn - có thể gây co thắt phế quản (đặc biệt ở bệnh nhân nhạy cảm với aspirin)",
+                "Người cao tuổi (>65) - tăng nguy cơ tác dụng phụ",
+                "Có thai (1-2 tam cá nguyệt đầu) - thận trọng, chỉ dùng khi thực sự cần thiết"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C (1-2 tam cá nguyệt), D (3 tam cá nguyệt cuối)",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Thuốc phân loại C. Có thể dùng khi lợi ích vượt quá nguy cơ, nhưng nên tránh nếu không cần thiết. Một số nghiên cứu gợi ý tăng nguy cơ dị tật tim và thành bụng khi dùng trong tam cá nguyệt đầu. Tam cá nguyệt 3: Thuốc phân loại D - CHỐNG CHỈ ĐỊNH. NSAID ức chế tổng hợp prostaglandin, có thể gây đóng ống động mạch sớm ở thai nhi, thiểu ối, suy thận thai nhi, tăng nguy cơ chảy máu ở mẹ và con. Không dùng từ tuần 30 trở đi.",
+            "lactation": {
+                "safety": "Compatible (với dùng ngắn hạn)",
+                "details": "Ibuprofen bài tiết vào sữa mẹ ở nồng độ rất thấp (<0.6% liều mẹ). Nồng độ trong sữa mẹ thấp và thời gian bán thải ngắn (2-4 giờ). Không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú với liều điều trị tiêu chuẩn. Dùng liều thấp nhất hiệu quả và thời gian ngắn nhất có thể. Theo dõi trẻ sơ sinh nếu dùng lâu dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan nếu dùng lâu dài.",
+            "moderate": "Thận trọng, giảm liều 25-50%. Tối đa 1.2g/ngày. Theo dõi ALT, AST thường xuyên.",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp (600-800mg/ngày) dưới sự giám sát chặt chẽ. Theo dõi ALT, AST, bilirubin thường xuyên. Chuyển hóa qua gan có thể giảm ở suy gan nặng.",
+            "notes": "Ibuprofen chuyển hóa chủ yếu qua gan (CYP2C9, CYP2C8). Suy gan có thể làm giảm chuyển hóa, tăng thời gian bán thải. Thận trọng ở bệnh nhân nghiện rượu hoặc viêm gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng sớm (1-4 giờ): Buồn nôn, nôn, đau bụng, chóng mặt, buồn ngủ, đau đầu",
+                "Triệu chứng muộn (4-24 giờ): Chảy máu dạ dày, suy thận cấp, rối loạn điện giải, toan chuyển hóa",
+                "Triệu chứng nghiêm trọng: Hạ huyết áp, sốc, suy hô hấp, co giật, hôn mê (hiếm)",
+                "Triệu chứng tim mạch: Rối loạn nhịp tim, suy tim cấp (với liều rất cao)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Đánh giá nguy cơ: Liều >100mg/kg (trẻ em) hoặc >7.5g (người lớn) = nguy cơ cao",
+                "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Điều trị hỗ trợ: Truyền dịch, điều chỉnh điện giải, điều trị toan chuyển hóa nếu có",
+                "Theo dõi chức năng thận: Creatinine, BUN, nước tiểu",
+                "Theo dõi chức năng gan: ALT, AST, bilirubin",
+                "Theo dõi dấu hiệu chảy máu: Công thức máu, INR, PTT nếu có",
+                "Điều trị xuất huyết tiêu hóa nếu có: PPI, truyền máu nếu cần",
+                "Điều trị suy thận cấp nếu có: Điều chỉnh dịch, lọc máu nếu cần",
+                "Hỗ trợ hô hấp nếu có suy hô hấp",
+                "Điều trị co giật nếu có: Benzodiazepine"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, chức năng gan, công thức máu, dấu hiệu chảy máu trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày. Có thể uống với nước đầy đủ.",
+                "timing": "Uống 3-4 lần/ngày, cách đều. Có thể uống với hoặc sau bữa ăn. Không uống khi đói."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 4mg/ml (tối đa). Pha 800mg trong 200ml dịch = 4mg/ml. Pha 400mg trong 100ml dịch = 4mg/ml.",
+                "infusion_rate": "Truyền trong 30 phút. Không truyền quá nhanh. Tốc độ: 400mg/100ml = 200ml/30 phút = ~6.7ml/phút. 800mg/200ml = 200ml/30 phút = ~6.7ml/phút.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "Lactated Ringer"],
+                "incompatibility": ["Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha."],
+                "notes": "Không dùng cho trẻ em <12 tuổi qua đường IV. Theo dõi dấu hiệu phản ứng dị ứng và tác dụng phụ trong quá trình truyền."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ibuprofen (Advil, Motrin)",
+                "UpToDate - Ibuprofen: Drug Information",
+                "Medscape - Ibuprofen Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Ibuprofen Monograph",
+                "Micromedex - Ibuprofen Drug Information"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     
     "Salbutamol": {
@@ -8740,7 +9422,137 @@ DRUG_DATABASE = {
             "clearance": "Gan: chuyển hóa qua sulfation và glucuronidation. Thận: bài tiết một phần nguyên dạng và metabolites. Dạng hít: tác dụng tại chỗ, hấp thu toàn thân ít. PO: hấp thu tốt nhưng tác dụng chậm hơn và nhiều tác dụng phụ hơn."
         },
         "storage": "Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh đông lạnh. Kiểm tra xem có còn thuốc (lắc, nghe tiếng). Nebulizer solution: bảo quản ở nhiệt độ phòng, tránh ánh sáng, dùng trong vòng 1 tháng sau khi mở. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi pha. Syrup: bảo quản ở nhiệt độ phòng, đậy kín sau khi dùng.",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Beta-blockers (không chọn lọc: Propranolol, Nadolol)",
+                    "mechanism": "Beta-blockers đối kháng tác dụng beta-2 của salbutamol, có thể gây co thắt phế quản nặng và làm giảm hiệu quả điều trị hen.",
+                    "effect": "Đối kháng tác dụng giãn phế quản, có thể gây co thắt phế quản nặng, suy hô hấp",
+                    "management": "TRÁNH DÙNG với beta-blocker không chọn lọc. Nếu bệnh nhân cần beta-blocker, dùng beta-blocker chọn lọc beta-1 (atenolol, metoprolol) với thận trọng. Theo dõi chặt chẽ đáp ứng phế quản."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Salbutamol có thể gây hạ kali máu và tăng nhịp tim, tăng nguy cơ độc tính digoxin và loạn nhịp tim.",
+                    "effect": "Tăng nguy cơ loạn nhịp tim, tăng độc tính digoxin (đặc biệt khi hạ kali máu)",
+                    "management": "Theo dõi nồng độ digoxin và kali máu. Theo dõi ECG nếu có triệu chứng. Có thể cần điều chỉnh liều digoxin."
+                },
+                {
+                    "drug": "Diuretics (Furosemide, Thiazide)",
+                    "mechanism": "Cả hai đều có thể gây hạ kali máu, tăng nguy cơ hạ kali máu nghiêm trọng.",
+                    "effect": "Tăng nguy cơ hạ kali máu nghiêm trọng, loạn nhịp tim, yếu cơ",
+                    "management": "Theo dõi kali máu thường xuyên, đặc biệt khi dùng liều cao salbutamol. Bổ sung kali nếu cần."
+                },
+                {
+                    "drug": "MAOIs (Phenelzine, Tranylcypromine)",
+                    "mechanism": "MAOIs ức chế chuyển hóa catecholamine, có thể tăng tác dụng và tác dụng phụ của salbutamol.",
+                    "effect": "Tăng tác dụng tim mạch, tăng huyết áp, tăng nguy cơ loạn nhịp",
+                    "management": "Thận trọng, dùng liều thấp salbutamol. Theo dõi huyết áp và nhịp tim chặt chẽ."
+                },
+                {
+                    "drug": "Theophylline",
+                    "mechanism": "Cả hai đều kích thích beta-adrenergic, có thể tăng tác dụng phụ và độc tính.",
+                    "effect": "Tăng tác dụng phụ (run, tim đập nhanh, loạn nhịp), tăng nguy cơ độc tính theophylline",
+                    "management": "Theo dõi nồng độ theophylline. Theo dõi nhịp tim và triệu chứng. Có thể cần giảm liều theophylline."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Tricyclic Antidepressants (TCA)",
+                    "mechanism": "TCA tăng nhạy cảm với catecholamine, có thể tăng tác dụng tim mạch.",
+                    "effect": "Tăng nhịp tim, tăng huyết áp (nhẹ)",
+                    "management": "Theo dõi nhịp tim và huyết áp. Không cần điều chỉnh liều thường quy."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng salbutamol hoặc các thành phần trong chế phẩm",
+                "Nhịp tim nhanh nặng không kiểm soát (>120 bpm ở người lớn, >150 bpm ở trẻ em)",
+                "Rối loạn nhịp tim nặng (rung nhĩ, rung thất không kiểm soát)",
+                "Cường giáp không điều trị (tăng nhạy cảm với catecholamine)"
+            ],
+            "relative": [
+                "Bệnh tim mạch (suy tim, bệnh mạch vành) - thận trọng, theo dõi chặt chẽ",
+                "Tăng huyết áp không kiểm soát - có thể tăng huyết áp",
+                "Loạn nhịp tim nhẹ - có thể làm nặng",
+                "Đái tháo đường - có thể tăng đường huyết",
+                "Hạ kali máu - có thể làm nặng",
+                "Cường giáp đang điều trị - thận trọng",
+                "Dùng với digoxin - tăng nguy cơ loạn nhịp",
+                "Dùng với MAOIs - tăng tác dụng tim mạch"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Salbutamol là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Salbutamol được sử dụng rộng rãi trong thai kỳ để điều trị hen và có vẻ an toàn. Hen phế quản không kiểm soát có thể gây nguy hiểm cho cả mẹ và thai nhi (thiếu oxy, suy thai). Salbutamol có thể được dùng khi lợi ích vượt quá nguy cơ. Dạng hít được ưu tiên hơn dạng uống hoặc IV để giảm tác dụng toàn thân. Tránh dùng liều cao kéo dài trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Salbutamol bài tiết vào sữa mẹ ở nồng độ rất thấp. Dạng hít có hấp thu toàn thân tối thiểu, nồng độ trong sữa mẹ rất thấp. Không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Dạng uống và IV có hấp thu toàn thân nhiều hơn nhưng vẫn an toàn.",
+                "recommendation": "Có thể dùng khi cho con bú. Dạng hít được ưu tiên. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Salbutamol chuyển hóa qua gan nhưng không phụ thuộc nhiều vào chức năng gan.",
+            "moderate": "Không cần điều chỉnh liều. Theo dõi tác dụng phụ nếu có.",
+            "severe": "Thận trọng, có thể cần giảm liều. Theo dõi tác dụng phụ chặt chẽ. Chuyển hóa có thể giảm ở suy gan nặng.",
+            "notes": "Salbutamol chuyển hóa chủ yếu qua gan (sulfation, glucuronidation). Suy gan nặng có thể làm giảm chuyển hóa, tăng thời gian bán thải, nhưng ít khi cần điều chỉnh liều vì dạng hít có tác dụng tại chỗ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tim mạch: Nhịp tim nhanh (>120-150 bpm), đánh trống ngực, loạn nhịp tim, đau ngực, tăng huyết áp",
+                "Triệu chứng thần kinh: Run cơ nặng, kích động, lo âu, mất ngủ, đau đầu, chóng mặt",
+                "Triệu chứng chuyển hóa: Hạ kali máu (do kích thích beta-2 → tăng kali vào tế bào), tăng đường huyết, toan chuyển hóa (hiếm)",
+                "Triệu chứng hô hấp: Co thắt phế quản nghịch lý (hiếm nhưng nguy hiểm - khó thở nặng hơn), suy hô hấp",
+                "Triệu chứng nghiêm trọng: Rung nhĩ, rung thất, sốc, suy tim cấp (với liều rất cao)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Beta-blocker chọn lọc có thể đối kháng tác dụng nhưng thận trọng vì có thể gây co thắt phế quản.",
+            "treatment": [
+                "Ngừng ngay salbutamol",
+                "Theo dõi dấu hiệu sinh tồn: Nhịp tim, huyết áp, nhịp thở, SpO2, ECG",
+                "Điều trị hỗ trợ: Nghỉ ngơi, trấn an, hỗ trợ hô hấp nếu cần",
+                "Điều chỉnh điện giải: Bổ sung kali nếu hạ kali máu (theo dõi kali máu)",
+                "Điều trị loạn nhịp: Nếu có rối loạn nhịp tim nghiêm trọng, cân nhắc dùng beta-blocker chọn lọc beta-1 (atenolol, metoprolol) với thận trọng (có thể gây co thắt phế quản)",
+                "Điều trị hạ huyết áp nếu có: Truyền dịch, nếu cần dùng thuốc vận mạch (thận trọng với thuốc kích thích beta)",
+                "Theo dõi đường huyết: Điều chỉnh nếu tăng đường huyết",
+                "Điều trị co thắt phế quản nghịch lý: Ngừng salbutamol, dùng ipratropium hoặc corticosteroid",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, ECG, kali máu, đường huyết trong ít nhất 4-6 giờ. Theo dõi lâu hơn nếu có biến chứng tim mạch hoặc loạn nhịp."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ.",
+                "timing": "Uống 3-4 lần/ngày, cách đều. Có thể uống trước hoặc sau bữa ăn. Lưu ý: Dạng uống có nhiều tác dụng phụ hơn dạng hít, nên ưu tiên dạng hít khi có thể."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 1-5mcg/ml. Pha 1mg (1ml) trong 100ml dịch = 10mcg/ml. Pha 5mg (5ml) trong 500ml dịch = 10mcg/ml.",
+                "infusion_rate": "Bolus: 5mcg/kg IV trong 1-2 phút. Truyền liên tục: 0.5-5mcg/kg/phút. Bắt đầu với liều thấp, tăng dần theo đáp ứng. Tốc độ: Ví dụ 70kg, 1mcg/kg/phút = 70mcg/phút = 4.2mg/giờ. Pha 5mg trong 500ml = 10mcg/ml → 70mcg/phút = 7ml/phút = 420ml/giờ.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": ["Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha. Tránh pha với thuốc có tính kiềm."],
+                "notes": "Chỉ dùng IV trong cấp cứu hen nặng. Theo dõi chặt chẽ nhịp tim, huyết áp, ECG. Dùng liều thấp nhất hiệu quả. Có thể gây hạ kali máu với liều cao - theo dõi kali máu."
+            },
+            "inhalation": {
+                "technique": "MDI: Lắc kỹ, thở ra hết, đặt ống ngậm vào miệng, bắt đầu hít vào chậm và sâu, bấm thuốc, tiếp tục hít vào đến khi đầy phổi, giữ hơi 10 giây, thở ra chậm. Đợi 30-60 giây trước khi bấm lần thứ 2. Spacer: Dùng với MDI để tăng hiệu quả và giảm tác dụng phụ (đặc biệt ở trẻ em và người cao tuổi).",
+                "nebulizer": "Pha 2.5-5mg trong 2-4ml NS hoặc nước cất. Thở bình thường qua mask hoặc ống ngậm. Thời gian: 5-15 phút. Rửa miệng sau khi dùng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Albuterol (Salbutamol)",
+                "GINA 2023 Guidelines - Global Initiative for Asthma",
+                "UpToDate - Albuterol: Drug Information",
+                "Medscape - Albuterol Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Albuterol Monograph",
+                "Micromedex - Albuterol Drug Information"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, GINA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     
     "Budesonide": {
@@ -9184,7 +9996,140 @@ DRUG_DATABASE = {
             "clearance": "Bắt giữ nhanh bởi tế bào hồng cầu và nội mô, chuyển hóa thành inosine và adenosine monophosphate"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh. Bảo vệ khỏi ánh sáng",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Theophylline, Caffeine",
+                    "mechanism": "Theophylline và caffeine là chất đối kháng adenosine receptor, ức chế tác dụng của adenosine.",
+                    "effect": "Giảm hoặc mất hiệu quả điều trị SVT, có thể cần liều cao hơn hoặc không đáp ứng",
+                    "management": "Tránh dùng adenosine nếu bệnh nhân đang dùng theophylline hoặc uống caffeine gần đây. Nếu cần, có thể cần liều cao hơn (12mg) hoặc dùng phương pháp khác (adenosine không hiệu quả)."
+                },
+                {
+                    "drug": "Dipyridamole",
+                    "mechanism": "Dipyridamole ức chế bắt giữ adenosine bởi tế bào, tăng nồng độ và thời gian tác dụng của adenosine.",
+                    "effect": "Tăng tác dụng và thời gian tác dụng của adenosine, tăng nguy cơ tác dụng phụ (ngừng tim kéo dài, block AV)",
+                    "management": "GIẢM LIỀU adenosine xuống 50-75% (1.5-3mg thay vì 6mg). Theo dõi chặt chẽ ECG. Chuẩn bị sẵn thiết bị hồi sức."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Carbamazepine",
+                    "mechanism": "Carbamazepine có thể tăng tác dụng của adenosine (cơ chế không rõ ràng, có thể liên quan đến bắt giữ adenosine).",
+                    "effect": "Tăng tác dụng và thời gian tác dụng của adenosine, tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng, có thể cần giảm liều adenosine. Theo dõi chặt chẽ ECG."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Digoxin có thể tăng độ nhạy cảm của nút AV với adenosine.",
+                    "effect": "Tăng nguy cơ block AV, ngừng tim kéo dài",
+                    "management": "Thận trọng, theo dõi ECG chặt chẽ. Có thể cần giảm liều adenosine."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Beta-blockers",
+                    "mechanism": "Beta-blockers có thể tăng độ nhạy cảm của nút AV với adenosine.",
+                    "effect": "Tăng nguy cơ block AV (nhẹ)",
+                    "management": "Theo dõi ECG. Không cần điều chỉnh liều thường quy."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Block nhĩ thất độ 2-3 (AV block) không có máy tạo nhịp",
+                "Hội chứng sick sinus (sick sinus syndrome) không có máy tạo nhịp",
+                "Hen phế quản nặng hoặc co thắt phế quản nặng",
+                "Dị ứng adenosine",
+                "Rung nhĩ/rung thất (không phải chỉ định)"
+            ],
+            "relative": [
+                "Block AV độ 1 - thận trọng, có thể làm nặng",
+                "Hen phế quản nhẹ đến trung bình - thận trọng, có thể gây co thắt phế quản",
+                "Suy tim - thận trọng, có thể gây ngừng tim kéo dài",
+                "Suy thận nặng - không cần điều chỉnh liều nhưng thận trọng",
+                "Dùng với dipyridamole - giảm liều 50-75%",
+                "Dùng với theophylline/caffeine - có thể không hiệu quả",
+                "Nhịp tim chậm (<50 bpm) - thận trọng, có thể gây ngừng tim"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Adenosine là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Adenosine có thời gian bán thải cực ngắn (<10 giây) và tác dụng thoáng qua, nên ít có khả năng ảnh hưởng đến thai nhi. Được sử dụng trong cấp cứu để điều trị SVT ở phụ nữ có thai và có vẻ an toàn. SVT có thể gây nguy hiểm cho cả mẹ và thai nhi (giảm tưới máu, thiếu oxy). Adenosine có thể được dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong cấp cứu.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Adenosine có thời gian bán thải cực ngắn (<10 giây), nên không có khả năng bài tiết vào sữa mẹ ở nồng độ đáng kể. Tác dụng thoáng qua và bị bắt giữ nhanh bởi tế bào. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Adenosine có tác dụng cực ngắn và không bài tiết vào sữa mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Adenosine không chuyển hóa qua gan, bị bắt giữ bởi tế bào máu.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Adenosine không chuyển hóa qua gan.",
+            "notes": "Adenosine không chuyển hóa qua gan, bị bắt giữ nhanh bởi tế bào hồng cầu và nội mô, chuyển hóa thành inosine. Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ngừng tim tạm thời kéo dài (>10-30 giây) - có thể tiến triển thành ngừng tim thực sự",
+                "Block AV độ 2-3 kéo dài - có thể gây nhịp chậm nặng, suy tim",
+                "Rung nhĩ/rung thất - hiếm nhưng nguy hiểm",
+                "Co thắt phế quản nặng - khó thở, suy hô hấp",
+                "Sốc phản vệ - phát ban, phù mạch, sốc (hiếm)",
+                "Tụt huyết áp nặng",
+                "Nhịp chậm nặng (<30-40 bpm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Theophylline hoặc aminophylline có thể đối kháng tác dụng adenosine (nếu có block AV kéo dài).",
+            "treatment": [
+                "Ngừng ngay adenosine nếu đang truyền (nếu có)",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Theo dõi ECG liên tục: Nhịp tim, block AV, loạn nhịp",
+                "Nếu ngừng tim tạm thời <10 giây: Quan sát, thường tự hồi phục",
+                "Nếu ngừng tim kéo dài >10-30 giây hoặc block AV độ 2-3:",
+                "  - Hỗ trợ hô hấp, thở oxy",
+                "  - Nếu nhịp chậm nặng: Atropine 0.5-1mg IV (nếu không có block AV)",
+                "  - Nếu block AV kéo dài: Theophylline 100-200mg IV hoặc aminophylline (đối kháng adenosine)",
+                "  - Nếu ngừng tim thực sự: CPR, defibrillation nếu cần",
+                "Nếu co thắt phế quản: Salbutamol dạng hít hoặc IV, corticosteroid nếu cần",
+                "Nếu sốc phản vệ: Epinephrine, diphenhydramine, corticosteroid",
+                "Hỗ trợ huyết động: Truyền dịch, thuốc vận mạch nếu cần",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2 trong ít nhất 30-60 phút"
+            ],
+            "monitoring": "Theo dõi ECG liên tục, dấu hiệu sinh tồn trong ít nhất 30-60 phút sau khi dùng. Theo dõi lâu hơn nếu có biến chứng (block AV, ngừng tim, co thắt phế quản)."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Theophylline / Aminophylline",
+                    "mechanism": "Đối kháng adenosine receptors, đảo ngược tác dụng block AV của adenosine",
+                    "indication": "Block AV kéo dài sau khi dùng adenosine",
+                    "dose": "Theophylline 100-200mg IV hoặc Aminophylline 5-6mg/kg IV"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Dùng trực tiếp từ lọ, không cần pha. Có thể pha trong NS nếu cần nhưng thường dùng trực tiếp.",
+                "infusion_rate": "BOLUS NHANH: Tiêm trực tiếp vào tĩnh mạch lớn (tĩnh mạch ngoại biên lớn hoặc tĩnh mạch trung tâm) trong 1-2 giây. SAU ĐÓ NGAY LẬP TỨC flush 20ml NS nhanh để đẩy thuốc vào tim trước khi bị bắt giữ bởi tế bào máu. KHÔNG được tiêm chậm hoặc truyền - sẽ không hiệu quả.",
+                "compatibility": ["NS (0.9% NaCl) - để flush"],
+                "incompatibility": ["Không trộn với các thuốc khác. Tiêm bolus riêng biệt."],
+                "notes": "QUAN TRỌNG: 1) Tiêm bolus NHANH (1-2 giây) vào tĩnh mạch lớn, 2) Flush NGAY 20ml NS nhanh, 3) Theo dõi ECG liên tục, 4) Chuẩn bị sẵn thiết bị hồi sức. Nếu tiêm chậm → thuốc bị bắt giữ → không hiệu quả. Liều đầu: 6mg, nếu không đáp ứng: 12mg (tối đa)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Adenosine",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "UpToDate - Adenosine: Drug Information",
+                "Medscape - Adenosine Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Adenosine Monograph",
+                "Micromedex - Adenosine Drug Information"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     
     "Naloxone": {
@@ -9628,7 +10573,154 @@ DRUG_DATABASE = {
             "clearance": "Chủ yếu qua thận (40-60% bài tiết nguyên dạng), một phần qua gan (CYP1A2). Cần điều chỉnh liều ở suy thận (CrCl <30)."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín, tránh ẩm. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha. Dung dịch đã pha: bảo quản ở nhiệt độ phòng, dùng trong vòng 24 giờ.",
-        "black_box_warnings": "Tăng nguy cơ viêm gân và đứt gân ở mọi lứa tuổi. Nguy cơ tăng ở bệnh nhân > 60 tuổi, dùng corticosteroid, ghép cơ quan. Nguy cơ tổn thương thần kinh ngoại biên không hồi phục. Nguy cơ tác dụng phụ nghiêm trọng về gân, cơ, khớp, và thần kinh có thể xảy ra cùng lúc. Nguy cơ làm nặng bệnh nhược cơ. Tăng nguy cơ rối loạn tâm thần và hành vi tự sát. Chỉ dùng khi không có lựa chọn khác."
+        "black_box_warnings": "Tăng nguy cơ viêm gân và đứt gân ở mọi lứa tuổi. Nguy cơ tăng ở bệnh nhân > 60 tuổi, dùng corticosteroid, ghép cơ quan. Nguy cơ tổn thương thần kinh ngoại biên không hồi phục. Nguy cơ tác dụng phụ nghiêm trọng về gân, cơ, khớp, và thần kinh có thể xảy ra cùng lúc. Nguy cơ làm nặng bệnh nhược cơ. Tăng nguy cơ rối loạn tâm thần và hành vi tự sát. Chỉ dùng khi không có lựa chọn khác.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Antacids (Aluminum, Magnesium), Sucralfate, Sắt, Kẽm, Canxi",
+                    "mechanism": "Cation (Al3+, Mg2+, Fe2+, Zn2+, Ca2+) tạo phức hợp không hòa tan với ciprofloxacin, giảm hấp thu.",
+                    "effect": "Giảm hấp thu ciprofloxacin, giảm nồng độ trong máu, giảm hiệu quả điều trị",
+                    "management": "Cách ít nhất 2 giờ (tốt nhất 4 giờ) trước hoặc sau khi uống ciprofloxacin. Không uống cùng lúc."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Ciprofloxacin ức chế CYP2C9, làm giảm chuyển hóa warfarin, tăng nồng độ warfarin.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu nghiêm trọng",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng ciprofloxacin. Giảm liều warfarin khi bắt đầu ciprofloxacin. Điều chỉnh liều warfarin theo INR."
+                },
+                {
+                    "drug": "Theophylline",
+                    "mechanism": "Ciprofloxacin ức chế CYP1A2, làm giảm chuyển hóa theophylline, tăng nồng độ theophylline.",
+                    "effect": "Tăng nồng độ theophylline, tăng độc tính theophylline (buồn nôn, nôn, co giật, rối loạn nhịp tim)",
+                    "management": "Giảm liều theophylline 25-50% khi bắt đầu ciprofloxacin. Theo dõi nồng độ theophylline. Theo dõi dấu hiệu độc tính."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết ống thận của ciprofloxacin, tăng nồng độ.",
+                    "effect": "Tăng nồng độ ciprofloxacin, tăng tác dụng phụ",
+                    "management": "Theo dõi tác dụng phụ. Có thể cần giảm liều ciprofloxacin."
+                },
+                {
+                    "drug": "NSAID (Ibuprofen, Naproxen)",
+                    "mechanism": "Cả hai đều có thể gây co giật, tác dụng cộng dồn.",
+                    "effect": "Tăng nguy cơ co giật",
+                    "management": "Tránh dùng đồng thời nếu có thể. Thận trọng ở bệnh nhân có tiền sử co giật."
+                },
+                {
+                    "drug": "Corticosteroid",
+                    "mechanism": "Cả hai đều tăng nguy cơ đứt gân, tác dụng cộng dồn.",
+                    "effect": "Tăng nguy cơ viêm gân, đứt gân",
+                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ dấu hiệu đau, sưng gân. Ngừng ngay nếu có đau gân."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Sulfonylurea (Glibenclamide, Gliclazide)",
+                    "mechanism": "Ciprofloxacin có thể gây hạ đường huyết.",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Theo dõi đường huyết. Điều chỉnh liều sulfonylurea nếu cần."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng ciprofloxacin hoặc các fluoroquinolone khác",
+                "Có thai - chống chỉ định tuyệt đối, nguy cơ tổn thương sụn thai nhi",
+                "Trẻ em < 18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác) - nguy cơ tổn thương sụn, viêm khớp",
+                "QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ loạn nhịp tim nghiêm trọng",
+                "Bệnh nhược cơ nặng - có thể làm nặng bệnh"
+            ],
+            "relative": [
+                "Bệnh nhân > 60 tuổi - tăng nguy cơ đứt gân, viêm gân",
+                "Dùng corticosteroid - tăng nguy cơ đứt gân",
+                "Ghép cơ quan - tăng nguy cơ đứt gân",
+                "Tiền sử co giật - tăng nguy cơ co giật",
+                "Suy thận nặng (CrCl <30) - giảm liều đáng kể",
+                "Suy gan - thận trọng, có thể giảm chuyển hóa",
+                "Dùng với warfarin - tăng nguy cơ chảy máu",
+                "Dùng với theophylline - tăng độc tính theophylline",
+                "Hoạt động thể lực nặng - tăng nguy cơ đứt gân"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Ciprofloxacin là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể gây tổn thương sụn ở khớp ở thai nhi. Có báo cáo về tổn thương sụn ở trẻ em khi dùng trong thai kỳ. CHỐNG CHỈ ĐỊNH trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn khác. Nhiễm trùng nặng có thể gây nguy hiểm cho thai nhi, nhưng nên dùng kháng sinh khác nếu có thể.",
+            "lactation": {
+                "safety": "Compatible (với thận trọng)",
+                "details": "Ciprofloxacin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Tuy nhiên, fluoroquinolone có thể gây tổn thương sụn ở trẻ sơ sinh.",
+                "recommendation": "Có thể dùng khi cho con bú với thận trọng. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh. Tránh dùng nếu có lựa chọn khác."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Ciprofloxacin chuyển hóa một phần qua gan nhưng không phụ thuộc nhiều vào chức năng gan.",
+            "moderate": "Không cần điều chỉnh liều. Thận trọng nếu có suy thận kèm theo.",
+            "severe": "Thận trọng, có thể cần giảm liều nhẹ. Chuyển hóa có thể giảm ở suy gan nặng, nhưng thải trừ chủ yếu qua thận nên ít ảnh hưởng.",
+            "notes": "Ciprofloxacin chuyển hóa một phần qua gan (CYP1A2), thải trừ chủ yếu qua thận (40-60% nguyên dạng). Suy gan có thể giảm chuyển hóa nhẹ nhưng không đáng kể. Tuy nhiên, suy gan có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng",
+                "Triệu chứng thần kinh: Co giật, kích động, lo âu, mất ngủ, trầm cảm, rối loạn tâm thần, hành vi tự sát",
+                "Triệu chứng gân: Đau gân, viêm gân, đứt gân (đặc biệt gân Achilles)",
+                "Triệu chứng tim mạch: QT kéo dài, rối loạn nhịp tim, có thể gây tử vong",
+                "Triệu chứng chuyển hóa: Hạ hoặc tăng đường huyết",
+                "Triệu chứng nghiêm trọng: Tổn thương thần kinh ngoại biên không hồi phục, rối loạn nhịp tim nghiêm trọng, đứt gân"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay ciprofloxacin",
+                "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2, ECG",
+                "Điều trị co giật nếu có:",
+                "  - Benzodiazepine (diazepam, lorazepam)",
+                "  - Theo dõi thần kinh chặt chẽ",
+                "Điều trị rối loạn nhịp tim nếu có:",
+                "  - Theo dõi ECG liên tục",
+                "  - Điều trị loạn nhịp nếu cần",
+                "Điều trị đau gân nếu có:",
+                "  - Ngừng ngay ciprofloxacin",
+                "  - Nghỉ ngơi, không vận động",
+                "  - Chườm lạnh",
+                "  - Thuốc giảm đau nếu cần",
+                "Điều trị hạ đường huyết nếu có:",
+                "  - Truyền glucose",
+                "  - Theo dõi đường huyết",
+                "Điều trị triệu chứng tiêu hóa:",
+                "  - Chống nôn nếu cần",
+                "  - Truyền dịch nếu mất nước",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, ECG, dấu hiệu thần kinh, dấu hiệu gân, đường huyết trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (loạn nhịp, co giật, đứt gân)."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ (ít nhất 1-2 ly nước) để tránh kết tinh trong nước tiểu. KHÔNG uống với sữa hoặc sản phẩm sữa (giảm hấp thu).",
+                "timing": "Uống 2 lần/ngày (q12h), cách đều 12 giờ. Cách ít nhất 2 giờ (tốt nhất 4 giờ) trước hoặc sau khi uống antacid, sucralfate, sắt, kẽm, canxi. Không uống cùng lúc với các cation này."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 1-2mg/ml (tối đa). Pha 200mg trong 100ml dịch = 2mg/ml. Pha 400mg trong 200ml dịch = 2mg/ml.",
+                "infusion_rate": "Truyền trong 60 phút (ít nhất 60 phút). Không truyền quá nhanh. Tốc độ: 100ml/60 phút = ~1.7ml/phút. 200ml/60 phút = ~3.3ml/phút.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": ["Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha. Tránh pha với cation (Al3+, Mg2+, Ca2+)."],
+                "notes": "Theo dõi chức năng thận, dấu hiệu gân, thần kinh trong quá trình truyền. Có thể gây kích ứng tĩnh mạch - thay đổi vị trí tiêm nếu cần. Liều: 200-400mg mỗi 12 giờ (q12h), hoặc 400mg mỗi 8 giờ (q8h) cho Pseudomonas hoặc nhiễm trùng nặng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ciprofloxacin (Cipro)",
+                "UpToDate - Ciprofloxacin: Drug Information",
+                "Medscape - Ciprofloxacin Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Ciprofloxacin Monograph",
+                "Micromedex - Ciprofloxacin Drug Information",
+                "IDSA Guidelines - Antimicrobial Therapy"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     
 }
@@ -10422,7 +11514,125 @@ DRUG_DATABASE.update({
         "clearance": "Thận (chủ yếu, 80-90% thải nguyên dạng qua nước tiểu), gan (chuyển hóa ít)"
     },
     "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dung dịch IV: bảo quản theo hướng dẫn nhà sản xuất",
-    "black_box_warnings": "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles) - có thể xảy ra bất cứ lúc nào, kể cả sau khi ngừng thuốc. Ngừng ngay nếu có đau, sưng gân. Nguy cơ tăng ở > 60 tuổi, dùng corticosteroid, ghép tạng. QT kéo dài có thể gây rối loạn nhịp tim nghiêm trọng"
+    "black_box_warnings": "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles) - có thể xảy ra bất cứ lúc nào, kể cả sau khi ngừng thuốc. Ngừng ngay nếu có đau, sưng gân. Nguy cơ tăng ở > 60 tuổi, dùng corticosteroid, ghép tạng. QT kéo dài có thể gây rối loạn nhịp tim nghiêm trọng",
+    "drug_interactions": {
+        "major": [
+            {
+                "drug": "Antacids (Aluminum, Magnesium), Sucralfate, Sắt, Kẽm",
+                "mechanism": "Cation (Al3+, Mg2+, Fe2+, Zn2+) tạo phức hợp không hòa tan với levofloxacin, giảm hấp thu.",
+                "effect": "Giảm hấp thu levofloxacin, giảm nồng độ trong máu, giảm hiệu quả điều trị",
+                "management": "Cách ít nhất 2 giờ (tốt nhất 4 giờ) trước hoặc sau khi uống levofloxacin. Không uống cùng lúc."
+            },
+            {
+                "drug": "Warfarin",
+                "mechanism": "Levofloxacin có thể ảnh hưởng đến chuyển hóa warfarin.",
+                "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng levofloxacin. Điều chỉnh liều warfarin nếu cần."
+            }
+        ],
+        "moderate": [
+            {
+                "drug": "Corticosteroid",
+                "mechanism": "Cả hai đều tăng nguy cơ đứt gân, tác dụng cộng dồn.",
+                "effect": "Tăng nguy cơ viêm gân, đứt gân",
+                "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ dấu hiệu đau, sưng gân. Ngừng ngay nếu có đau gân."
+            },
+            {
+                "drug": "NSAID",
+                "mechanism": "Cả hai đều có thể gây co giật, tác dụng cộng dồn.",
+                "effect": "Tăng nguy cơ co giật",
+                "management": "Tránh dùng đồng thời nếu có thể. Thận trọng ở bệnh nhân có tiền sử co giật."
+            },
+            {
+                "drug": "Sulfonylurea",
+                "mechanism": "Levofloxacin có thể gây hạ đường huyết.",
+                "effect": "Tăng nguy cơ hạ đường huyết",
+                "management": "Theo dõi đường huyết. Điều chỉnh liều sulfonylurea nếu cần."
+            }
+        ],
+        "minor": []
+    },
+    "contraindications": {
+        "absolute": [
+            "Dị ứng levofloxacin hoặc các fluoroquinolone khác",
+            "Có thai - chống chỉ định tuyệt đối, nguy cơ tổn thương sụn thai nhi",
+            "Trẻ em < 18 tuổi (trừ trường hợp đặc biệt) - nguy cơ tổn thương sụn, viêm khớp",
+            "QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ loạn nhịp tim nghiêm trọng"
+        ],
+        "relative": [
+            "Bệnh nhân > 60 tuổi - tăng nguy cơ đứt gân, viêm gân",
+            "Dùng corticosteroid - tăng nguy cơ đứt gân",
+            "Ghép cơ quan - tăng nguy cơ đứt gân",
+            "Tiền sử co giật - tăng nguy cơ co giật",
+            "Suy thận nặng (CrCl <30) - giảm liều đáng kể",
+            "Dùng với warfarin - tăng nguy cơ chảy máu",
+            "Hoạt động thể lực nặng - tăng nguy cơ đứt gân"
+        ]
+    },
+    "pregnancy_lactation": {
+        "fda_category": "C",
+        "pregnancy_details": "Levofloxacin là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể gây tổn thương sụn ở khớp ở thai nhi. Có báo cáo về tổn thương sụn ở trẻ em khi dùng trong thai kỳ. CHỐNG CHỈ ĐỊNH trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn khác. Nhiễm trùng nặng có thể gây nguy hiểm cho thai nhi, nhưng nên dùng kháng sinh khác nếu có thể.",
+        "lactation": {
+            "safety": "Compatible (với thận trọng)",
+            "details": "Levofloxacin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Tuy nhiên, fluoroquinolone có thể gây tổn thương sụn ở trẻ sơ sinh.",
+            "recommendation": "Có thể dùng khi cho con bú với thận trọng. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh. Tránh dùng nếu có lựa chọn khác."
+        }
+    },
+    "hepatic_adjustment": {
+        "mild": "Không cần điều chỉnh liều. Levofloxacin chuyển hóa ít qua gan, thải trừ chủ yếu qua thận.",
+        "moderate": "Không cần điều chỉnh liều. Thận trọng nếu có suy thận kèm theo.",
+        "severe": "Thận trọng, có thể cần giảm liều nhẹ. Chuyển hóa có thể giảm ở suy gan nặng, nhưng thải trừ chủ yếu qua thận nên ít ảnh hưởng.",
+        "notes": "Levofloxacin chuyển hóa ít qua gan, thải trừ chủ yếu qua thận (80-90% nguyên dạng). Suy gan có thể giảm chuyển hóa nhẹ nhưng không đáng kể. Tuy nhiên, suy gan có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
+    },
+    "overdose_management": {
+        "symptoms": [
+            "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng",
+            "Triệu chứng thần kinh: Co giật, kích động, lo âu, mất ngủ, trầm cảm, rối loạn tâm thần",
+            "Triệu chứng gân: Đau gân, viêm gân, đứt gân (đặc biệt gân Achilles)",
+            "Triệu chứng tim mạch: QT kéo dài, rối loạn nhịp tim, có thể gây tử vong",
+            "Triệu chứng chuyển hóa: Hạ hoặc tăng đường huyết",
+            "Triệu chứng nghiêm trọng: Rối loạn nhịp tim nghiêm trọng, đứt gân"
+        ],
+        "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+        "treatment": [
+            "Ngừng ngay levofloxacin",
+            "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)",
+            "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2, ECG",
+            "Điều trị co giật nếu có: Benzodiazepine, theo dõi thần kinh chặt chẽ",
+            "Điều trị rối loạn nhịp tim nếu có: Theo dõi ECG liên tục, điều trị loạn nhịp nếu cần",
+            "Điều trị đau gân nếu có: Ngừng ngay, nghỉ ngơi, chườm lạnh, thuốc giảm đau nếu cần",
+            "Điều trị hạ đường huyết nếu có: Truyền glucose, theo dõi đường huyết",
+            "Điều trị triệu chứng tiêu hóa: Chống nôn nếu cần, truyền dịch nếu mất nước"
+        ],
+        "monitoring": "Theo dõi dấu hiệu sinh tồn, ECG, dấu hiệu thần kinh, dấu hiệu gân, đường huyết trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng."
+    },
+    "reversal_agents": None,
+    "administration_instructions": {
+        "oral": {
+            "with_food": "Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ (ít nhất 1-2 ly nước) để tránh kết tinh trong nước tiểu.",
+            "timing": "Uống 1 lần/ngày (q24h), cùng một thời điểm mỗi ngày. Cách ít nhất 2 giờ (tốt nhất 4 giờ) trước hoặc sau khi uống antacid, sucralfate, sắt, kẽm. Không uống cùng lúc với các cation này. Ưu điểm: dùng 1 lần/ngày, compliance tốt hơn ciprofloxacin."
+        },
+        "iv": {
+            "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 5mg/ml (tối đa). Pha 500mg trong 100ml dịch = 5mg/ml. Pha 750mg trong 150ml dịch = 5mg/ml.",
+            "infusion_rate": "Truyền trong 60 phút (ít nhất 60 phút). Không truyền quá nhanh. Tốc độ: 100ml/60 phút = ~1.7ml/phút. 150ml/60 phút = ~2.5ml/phút.",
+            "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+            "incompatibility": ["Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha. Tránh pha với cation (Al3+, Mg2+, Ca2+)."],
+            "notes": "Theo dõi chức năng thận, dấu hiệu gân, thần kinh trong quá trình truyền. Có thể gây kích ứng tĩnh mạch - thay đổi vị trí tiêm nếu cần. Liều: 500-750mg x 1 lần/ngày (q24h)."
+        }
+    },
+    "references": {
+        "primary_sources": [
+            "FDA Drug Label - Levofloxacin (Tavanic)",
+            "UpToDate - Levofloxacin: Drug Information",
+            "Medscape - Levofloxacin Drug Reference",
+            "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+            "Lexicomp Online - Levofloxacin Monograph",
+            "Micromedex - Levofloxacin Drug Information",
+            "IDSA Guidelines - Antimicrobial Therapy"
+        ],
+        "last_updated": "2024-12-19",
+        "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+    }
 }
 
 })

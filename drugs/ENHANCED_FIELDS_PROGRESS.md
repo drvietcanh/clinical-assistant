@@ -252,8 +252,10 @@ python check_enhanced_fields.py
 **Cập nhật lần cuối:** 2024-12-19 
 - ✅ HOÀN THÀNH Phase 1: Tất cả 141 thuốc đã có đủ 6 fields cơ bản
 - ✅ Bổ sung 5 thuốc cuối cùng: Calcium, Vitamin D, Budesonide, Enalaprilat, Amoxicillin suspension
-- ✅ Bắt đầu Phase 2: Bổ sung 8 fields tùy chọn
-  - ✅ Hoàn thành: Paracetamol (1/141) - có đầy đủ 14 fields
+- ✅ Phase 2 đang tiến hành: Bổ sung 8 fields tùy chọn
+  - ✅ **HOÀN THÀNH NHÓM 1** (10/10 thuốc - 100%): Paracetamol, Ibuprofen, Salbutamol, Adenosine, Acyclovir, Valacyclovir, Methylprednisolone, Fluconazole, Ciprofloxacin, Levofloxacin
+  - ✅ Tổng số đã hoàn thành: 10/141 thuốc (7%)
+  - ⏳ Còn lại: 131 thuốc
   - 📋 Kế hoạch chi tiết: Xem `drugs/PHASE2_PLAN.md`
   - 📊 Script theo dõi: `track_phase2_progress.py`
 
@@ -269,8 +271,10 @@ python check_enhanced_fields.py
 ### Tiếp Tục
 - ✅ **HOÀN THÀNH:** Tất cả 141 thuốc đã có đủ 6 fields cơ bản!
 - 📋 **Phase 2 đang tiến hành:** Bổ sung 8 fields tùy chọn cho tất cả 141 thuốc
-  - ✅ Hoàn thành: Paracetamol (1/141)
-  - ⏳ Còn lại: 140 thuốc
+  - ✅ **HOÀN THÀNH NHÓM 1** (10/10 thuốc): Paracetamol, Ibuprofen, Salbutamol, Adenosine, Acyclovir, Valacyclovir, Methylprednisolone, Fluconazole, Ciprofloxacin, Levofloxacin
+  - ✅ Tổng số đã hoàn thành: 10/141 thuốc (7%)
+  - ⏳ Còn lại: 131 thuốc
   - 📋 Kế hoạch chi tiết: Xem `drugs/PHASE2_PLAN.md`
   - 📊 Theo dõi tiến trình: `python track_phase2_progress.py`
+- 📋 Tiếp theo: Nhóm 2 - Thuốc Có Nguy Cơ Cao (Valproate, Lamotrigine, Amitriptyline, Cisplatin, Carboplatin, Cyclophosphamide)
 - 📋 Sau khi hoàn thành Phase 2 → tiến hành refactor module

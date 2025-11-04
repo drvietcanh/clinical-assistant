@@ -19,18 +19,18 @@
 
 ## Kế Hoạch Phân Nhóm
 
-### Nhóm 1 - Thuốc Cấp Cứu & Thường Dùng (Ưu tiên cao nhất)
-**Số lượng:** 10 thuốc
-- ✅ Paracetamol (đã hoàn thành)
-- ⏳ Ibuprofen
-- ⏳ Salbutamol
-- ⏳ Adenosine
-- ⏳ Acyclovir
-- ⏳ Valacyclovir
-- ⏳ Methylprednisolone
-- ⏳ Fluconazole
-- ⏳ Ciprofloxacin
-- ⏳ Levofloxacin
+### Nhóm 1 - Thuốc Cấp Cứu & Thường Dùng (Ưu tiên cao nhất) ✅ HOÀN THÀNH
+**Số lượng:** 10 thuốc (100%)
+- ✅ Paracetamol
+- ✅ Ibuprofen
+- ✅ Salbutamol
+- ✅ Adenosine
+- ✅ Acyclovir
+- ✅ Valacyclovir
+- ✅ Methylprednisolone
+- ✅ Fluconazole
+- ✅ Ciprofloxacin
+- ✅ Levofloxacin
 
 ### Nhóm 2 - Thuốc Có Nguy Cơ Cao (Ưu tiên cao)
 **Số lượng:** 6 thuốc
@@ -132,14 +132,15 @@
 ## Tiến Trình
 
 ### ✅ Hoàn thành
-- Paracetamol (1/141)
+- **Nhóm 1 - HOÀN THÀNH 100% (10/10 thuốc):** Paracetamol, Ibuprofen, Salbutamol, Adenosine, Acyclovir, Valacyclovir, Methylprednisolone, Fluconazole, Ciprofloxacin, Levofloxacin
+- **Tổng số:** 10/141 thuốc (7%)
 
 ### ⏳ Đang làm
-- Nhóm 1: Thuốc cấp cứu & thường dùng
+- Tiếp theo: Nhóm 2 - Thuốc Có Nguy Cơ Cao
 
 ### 📋 Kế hoạch tiếp theo
-1. Nhóm 1 (9 thuốc còn lại)
-2. Nhóm 2 (6 thuốc)
+1. ✅ Nhóm 1 (10/10 thuốc) - HOÀN THÀNH
+2. ⏳ Nhóm 2 (6 thuốc): Valproate, Lamotrigine, Amitriptyline, Cisplatin, Carboplatin, Cyclophosphamide
 3. Nhóm 3 (7 thuốc)
 4. Nhóm 4 (8 thuốc)
 5. Các nhóm tiếp theo...
