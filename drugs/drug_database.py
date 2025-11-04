@@ -318,10 +318,11 @@ DRUG_DATABASE = {
             "duration": "6-12 giờ (tartrate), 24 giờ (succinate)",
             "protein_binding": "12%",
             "clearance": "Gan (CYP2D6)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm"
+                },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Không ngừng đột ngột - có thể gây tăng huyết áp phản hồi, đau thắt ngực, nhồi máu cơ tim. Giảm liều từ từ trong 1-2 tuần. Suy tim cấp có thể xảy ra nếu dùng ở bệnh nhân suy tim không bù trừ"
     },
-    
+
     "Propranolol": {
         "group": "Cardiovascular - Beta-blocker (non-selective)",
         "vietnamese_name": "Propranolol, Inderal",
@@ -353,12 +354,37 @@ DRUG_DATABASE = {
             "Co thắt phế quản",
             "Giảm libido"
         ],
-        "interactions": [
-            "Verapamil: tăng nguy cơ block nhĩ thất",
-            "Insulin: che dấu triệu chứng hạ đường huyết"
-        ],
-        "pregnancy": "C"
-    },
+                  "interactions": [
+              "Verapamil: tăng nguy cơ block nhĩ thất",
+              "Insulin: che dấu triệu chứng hạ đường huyết"
+          ],
+          "pregnancy": "C",
+          "mechanism_of_action": "Non-selective beta-adrenergic receptor blocker (beta1 và beta2). Ức chế tác dụng của catecholamines (epinephrine, norepinephrine), giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp, giảm nhu cầu oxy cơ tim. Ức chế renin-angiotensin system. Có tác dụng chống loạn nhịp (class II antiarrhythmic).",
+          "monitoring": [
+              "Nhịp tim và huyết áp (trước và sau khi bắt đầu)",
+              "Dấu hiệu suy tim (khó thở, phù, tăng cân)",
+              "Chức năng phổi (nếu có bệnh phổi tắc nghẽn)",
+              "Đường huyết (đặc biệt ở bệnh nhân đái tháo đường - che dấu triệu chứng hạ đường huyết)",
+              "Triệu chứng mệt mỏi, lạnh tay chân, rối loạn cương dương"
+          ],
+          "precautions": [
+              "KHÔNG được ngừng đột ngột (có thể gây rebound hypertension, đau thắt ngực nặng, nhồi máu cơ tim). Phải giảm liều dần trong 1-2 tuần",
+              "Thận trọng ở bệnh nhân hen phế quản/COPD (có thể gây co thắt phế quản nặng)",
+              "Tránh dùng trong suy tim cấp, block AV độ 2-3, nhịp tim chậm <50 bpm",
+              "Thận trọng ở bệnh nhân đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+              "Có thể gây mệt mỏi, giảm khả năng tập luyện",
+              "Thận trọng khi dùng với verapamil/diltiazem (tăng nguy cơ block AV, suy tim)"
+          ],
+          "pharmacokinetics": {
+              "half_life": "3-5 giờ (ngắn), nhưng tác dụng kéo dài hơn do tác dụng trên receptor",
+              "onset": "1-2 giờ (PO)",
+              "duration": "6-12 giờ",
+              "protein_binding": "90-95%",
+              "clearance": "Gan (extensive first-pass metabolism), CYP2D6, CYP1A2"
+          },
+          "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+          "black_box_warnings": "KHÔNG được ngừng đột ngột ở bệnh nhân đau thắt ngực - có thể gây đau thắt ngực nặng, nhồi máu cơ tim, rối loạn nhịp tim nặng. Phải giảm liều dần dần trong 1-2 tuần"
+      },
     
     # Calcium Channel Blockers
     "Amlodipine": {
@@ -409,10 +435,11 @@ DRUG_DATABASE = {
             "duration": "24 giờ",
             "protein_binding": ">93%",
             "clearance": "Gan (CYP3A4)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm"
+                },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Không có black box warning cụ thể. Thận trọng với bệnh nhân suy tim mất bù, hẹp van động mạch chủ nặng. Phù ngoại biên có thể xảy ra và thường không phản ánh suy tim"
     },
-    
+
     "Nifedipine": {
         "group": "Cardiovascular - Calcium Channel Blocker (Dihydropyridine)",
         "vietnamese_name": "Nifedipine, Adalat",
@@ -658,10 +685,11 @@ DRUG_DATABASE = {
             "duration": "6-8 giờ",
             "protein_binding": ">98%",
             "clearance": "Thận (50%) và gan"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng"
+                },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng",
+        "black_box_warnings": "Có thể gây mất nước và rối loạn điện giải nghiêm trọng. Điếc có thể xảy ra với liều IV cao hoặc dùng nhanh. Hạ kali máu có thể làm tăng nguy cơ ngộ độc digoxin và rối loạn nhịp tim"
     },
-    
+
     "Hydrochlorothiazide": {
         "group": "Cardiovascular - Thiazide Diuretic",
         "vietnamese_name": "Hydrochlorothiazide, HCTZ",
@@ -688,13 +716,41 @@ DRUG_DATABASE = {
             "Tăng acid uric",
             "Tăng cholesterol"
         ],
-        "interactions": [
-            "Digoxin: tăng nguy cơ ngộ độc digoxin",
-            "Lithium: tăng nồng độ lithium",
-            "NSAID: giảm hiệu quả"
-        ],
-        "pregnancy": "C"
-    },
+                  "interactions": [
+              "Digoxin: tăng nguy cơ ngộ độc digoxin",
+              "Lithium: tăng nồng độ lithium",
+              "NSAID: giảm hiệu quả"
+          ],
+          "pregnancy": "C",
+          "mechanism_of_action": "Thiazide diuretic. Ức chế Na+/Cl- cotransporter ở đoạn xa của ống thận (distal convoluted tubule), tăng bài tiết Na+, Cl-, và nước, gây lợi tiểu. Giảm thể tích máu và giảm huyết áp. Tăng bài tiết K+, Mg2+, nhưng giữ lại Ca2+ (khác với loop diuretics).",
+          "monitoring": [
+              "Kali máu (mỗi 1-3 tháng, đặc biệt khi bắt đầu) - HCTZ gây hạ kali máu",
+              "Natri máu - có thể gây hạ natri máu, đặc biệt ở người già",
+              "Creatinine, BUN - có thể tăng nhẹ (không phải suy thận thật)",
+              "Đường huyết - có thể tăng đường huyết, đặc biệt ở bệnh nhân đái tháo đường",
+              "Acid uric - HCTZ gây tăng acid uric, có thể gây gout",
+              "Lipid máu - có thể tăng cholesterol, triglycerides nhẹ",
+              "Canxi máu - HCTZ có thể gây tăng canxi máu nhẹ (do giữ lại Ca2+)"
+          ],
+          "precautions": [
+              "Liều thấp (12.5-25mg/ngày) đủ cho tăng huyết áp, ít tác dụng phụ hơn liều cao",
+              "Thường cần bổ sung kali hoặc dùng với kali-sparing diuretic (spironolactone, amiloride)",
+              "Thận trọng ở người già (tăng nguy cơ hạ natri máu)",
+              "Thận trọng ở bệnh nhân đái tháo đường (tăng đường huyết)",
+              "Thận trọng ở bệnh nhân gout (tăng acid uric)",
+              "Tránh dùng với lithium (tăng nguy cơ độc tính lithium)",
+              "Dị ứng sulfonamide - không dùng nếu dị ứng"
+          ],
+          "pharmacokinetics": {
+              "half_life": "6-15 giờ",
+              "onset": "2 giờ (PO)",
+              "duration": "6-12 giờ",
+              "protein_binding": "40-70%",
+              "clearance": "Thận (không chuyển hóa, thải nguyên dạng)"
+          },
+          "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+          "black_box_warnings": ""
+      },
     
     # Antiarrhythmics
     "Amiodarone": {
@@ -733,10 +789,39 @@ DRUG_DATABASE = {
             "Warfarin: tăng tác dụng chống đông",
             "Statins: tăng nguy cơ tiêu cơ vân"
         ],
-        "pregnancy": "D"
-    },
-    
-    "Digoxin": {
+        "pregnancy": "D",
+        "mechanism_of_action": "Class III antiarrhythmic (chủ yếu) với tác dụng bổ sung class I, II, IV. Chủ yếu ức chế kênh K+ (delayed rectifier), kéo dài phase 3 của action potential, kéo dài QT interval. Cũng có tác dụng ức chế Na+ channels (class I), chẹn beta (class II), và chẹn Ca2+ (class IV). Rất hiệu quả cho rối loạn nhịp nhưng có nhiều tác dụng phụ.",
+        "monitoring": [
+            "ECG: QT interval (kéo dài QT là bình thường, nhưng QT >500ms hoặc tăng >60ms nguy hiểm)",
+            "Chức năng phổi: X-quang phổi, PFT (6 tháng/lần), đặc biệt chú ý dấu hiệu viêm phổi mô kẽ",
+            "Chức năng gan: ALT, AST, bilirubin (mỗi 3-6 tháng)",
+            "Chức năng tuyến giáp: TSH, FT4, FT3 (mỗi 6 tháng) - có thể gây cường giáp hoặc suy giáp",
+            "Khám mắt: Soi đáy mắt (mỗi 6-12 tháng) - có thể gây viêm giác mạc, đục thủy tinh thể",
+            "Da: Dấu hiệu nhạy cảm ánh sáng, xám da (blue-gray discoloration)",
+            "Electrolytes: K+, Mg2+ (phải đảm bảo bình thường trước khi dùng)"
+        ],
+        "precautions": [
+            "CẦN LOADING DOSE (thường 800-1600mg/ngày trong 1-2 tuần) trước khi dùng liều duy trì",
+            "Tác dụng phụ nhiều và nghiêm trọng - chỉ dùng cho rối loạn nhịp đe dọa tính mạng hoặc không đáp ứng với thuốc khác",
+            "Bắt buộc monitor chức năng phổi, gan, tuyến giáp, mắt định kỳ",
+            "Tương tác thuốc rất nhiều - kiểm tra kỹ trước khi dùng",
+            "Tránh dùng ở phụ nữ có thai (category D)",
+            "Thời gian bán hủy rất dài (50-60 ngày) - tác dụng phụ có thể kéo dài sau khi ngừng",
+            "Phải đảm bảo K+ và Mg2+ bình thường (giảm K+/Mg2+ tăng nguy cơ torsades de pointes)",
+            "Tránh ánh nắng mặt trời (nhạy cảm ánh sáng nặng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "50-60 ngày (RẤT DÀI - do tích lũy trong mô mỡ)",
+            "onset": "1-3 tuần (do loading period)",
+            "duration": "Rất lâu sau khi ngừng (do half-life dài)",
+            "protein_binding": "96%",
+            "clearance": "Gan (CYP3A4, CYP2C8), thải qua phân và nước tiểu (chậm)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây tử vong do viêm phổi mô kẽ, suy gan, rối loạn nhịp tim nặng. Chỉ dùng cho rối loạn nhịp đe dọa tính mạng không đáp ứng với thuốc khác. Phải monitor chức năng phổi, gan, tuyến giáp định kỳ. Chống chỉ định trong thai kỳ"
+      },
+      
+      "Digoxin": {
         "group": "Cardiovascular - Cardiac Glycoside",
         "vietnamese_name": "Digoxin, Lanoxin",
         "administration": ["PO", "IV"],
@@ -1072,14 +1157,41 @@ DRUG_DATABASE = {
             "Tiêu cơ vân",
             "Tăng men gan"
         ],
-        "interactions": [
-            "Amiodarone: giảm liều simvastatin xuống tối đa 20mg/ngày",
-            "Verapamil: giảm liều simvastatin",
-            "Grapefruit juice: tăng nồng độ"
-        ],
-        "pregnancy": "X"
-    },
-    
+                  "interactions": [
+              "Amiodarone: giảm liều simvastatin xuống tối đa 20mg/ngày",
+              "Verapamil: giảm liều simvastatin",
+              "Grapefruit juice: tăng nồng độ"
+          ],
+          "pregnancy": "X",
+          "mechanism_of_action": "HMG-CoA reductase inhibitor (statin). Ức chế enzyme HMG-CoA reductase - enzyme quan trọng trong tổng hợp cholesterol ở gan. Giảm sản xuất cholesterol nội sinh, tăng biểu hiện LDL receptor ở gan, giảm LDL cholesterol. Cũng có tác dụng chống viêm, ổn định mảng xơ vữa (pleiotropic effects).",
+          "monitoring": [
+              "Lipid panel: Cholesterol toàn phần, LDL, HDL, triglycerides (sau 4-8 tuần, sau đó mỗi 3-6 tháng)",
+              "Chức năng gan: ALT, AST (trước khi bắt đầu, sau 12 tuần, sau đó mỗi 6-12 tháng hoặc khi có triệu chứng)",
+              "CK (creatine kinase) - nếu có đau cơ, yếu cơ (để phát hiện tiêu cơ vân)",
+              "Glucose/HbA1c - statins có thể tăng đường huyết nhẹ",
+              "Dấu hiệu đau cơ, yếu cơ, nước tiểu sẫm màu (dấu hiệu tiêu cơ vân)"
+          ],
+          "precautions": [
+              "Uống buổi tối (cholesterol được tổng hợp nhiều vào ban đêm)",
+              "TRÁNH grapefruit juice (ức chế CYP3A4, tăng nồng độ, tăng nguy cơ tác dụng phụ)",
+              "Kiểm tra CK nếu có đau cơ/yếu cơ - ngừng ngay nếu CK >10x ULN hoặc có dấu hiệu tiêu cơ vân",
+              "Thận trọng với liều cao (>40mg/ngày) - tăng nguy cơ tiêu cơ vân",
+              "Giảm liều khi dùng với amiodarone, verapamil, diltiazem, macrolides, azole antifungals (tương tác CYP3A4)",
+              "CHỐNG CHỈ ĐỊNH trong thai kỳ và cho con bú (category X)",
+              "Thận trọng ở bệnh nhân có bệnh gan - kiểm tra ALT/AST trước khi bắt đầu",
+              "Có thể tăng đường huyết nhẹ (đặc biệt ở bệnh nhân đái tháo đường)"
+          ],
+          "pharmacokinetics": {
+              "half_life": "2-3 giờ (ngắn), nhưng tác dụng kéo dài do ức chế enzyme)",
+              "onset": "1-2 tuần (giảm LDL)",
+              "duration": "Kéo dài sau khi ngừng",
+              "protein_binding": "95%",
+              "clearance": "Gan (CYP3A4) - extensive first-pass metabolism"
+          },
+          "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+          "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ - có thể gây dị tật thai nhi. Phụ nữ trong độ tuổi sinh đẻ phải dùng biện pháp tránh thai hiệu quả. Tiêu cơ vân có thể gây suy thận cấp và tử vong - ngừng ngay nếu có đau cơ, yếu cơ, nước tiểu sẫm màu"
+      },
+          
     # ========== DIABETES ==========
     
     "Metformin": {
@@ -1206,13 +1318,41 @@ DRUG_DATABASE = {
             "Tăng cân",
             "Ban da"
         ],
-        "interactions": [
-            "Tương tự sulfonylurea khác"
-        ],
-        "pregnancy": "C"
-    },
-    
-    "Insulin": {
+                  "interactions": [
+              "Tương tự sulfonylurea khác"
+          ],
+          "pregnancy": "C",
+          "mechanism_of_action": "Sulfonylurea thế hệ 2. Kích thích tế bào beta tuyến tụy tiết insulin bằng cách đóng kênh KATP (ATP-sensitive K+ channel), làm khử cực màng tế bào, mở kênh Ca2+, và giải phóng insulin. Chỉ hoạt động khi còn chức năng tế bào beta. Gliclazide ưu điểm: thời gian bán hủy ngắn hơn, ít nguy cơ hạ đường huyết hơn glibenclamide.",
+          "monitoring": [
+              "Đường huyết: HbA1c (mỗi 3 tháng), đường huyết đói, đường huyết sau ăn",
+              "Dấu hiệu hạ đường huyết: run, vã mồ hôi, nhịp tim nhanh, lú lẫn, co giật",
+              "Cân nặng - sulfonylureas có thể gây tăng cân",
+              "Chức năng thận: creatinine, eGFR (suy thận tăng nguy cơ hạ đường huyết)",
+              "Chức năng gan: ALT, AST (nếu có bệnh gan)"
+          ],
+          "precautions": [
+              "Uống với thức ăn hoặc trước bữa ăn để tránh hạ đường huyết",
+              "KHÔNG dùng ở đái tháo đường type 1 hoặc nhiễm toan ceton",
+              "Thận trọng ở bệnh nhân suy thận - tăng nguy cơ hạ đường huyết (có thể cần giảm liều hoặc tránh dùng)",
+              "Thận trọng ở bệnh nhân suy gan - tăng nguy cơ hạ đường huyết",
+              "Hạ đường huyết là tác dụng phụ phổ biến nhất - bệnh nhân cần biết dấu hiệu và cách xử trí",
+              "Tránh bỏ bữa - tăng nguy cơ hạ đường huyết",
+              "Tránh rượu - tăng nguy cơ hạ đường huyết",
+              "Có thể tăng cân - cần tư vấn chế độ ăn và tập luyện",
+              "Gliclazide ưu điểm: thời gian bán hủy ngắn hơn, ít hạ đường huyết hơn glibenclamide"
+          ],
+          "pharmacokinetics": {
+              "half_life": "10-12 giờ (ngắn hơn glibenclamide)",
+              "onset": "30-60 phút (PO)",
+              "duration": "12-24 giờ",
+              "protein_binding": "85-95%",
+              "clearance": "Gan (CYP2C9), thận (metabolites)"
+          },
+          "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+          "black_box_warnings": "Hạ đường huyết có thể gây nguy hiểm tính mạng, đặc biệt ở bệnh nhân suy thận, suy gan, người già. Bệnh nhân cần biết dấu hiệu và cách xử trí hạ đường huyết"
+      },
+      
+      "Insulin": {
         "group": "Diabetes - Insulin",
         "vietnamese_name": "Insulin",
         "administration": ["SC", "IV"],
@@ -1536,10 +1676,11 @@ DRUG_DATABASE = {
             "duration": "24 giờ (một liều)",
             "protein_binding": "95%",
             "clearance": "Gan (CYP2C19, CYP3A4)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm"
+                },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Có thể tăng nguy cơ gãy xương hông, cổ tay, cột sống khi dùng lâu dài (≥1 năm) và liều cao. Giảm hiệu quả clopidogrel khi dùng đồng thời. Nguy cơ nhiễm C. difficile tăng. Giảm hấp thu vitamin B12 và magnesium khi dùng lâu dài"
     },
-    
+
     "Pantoprazole": {
         "group": "Gastrointestinal - Proton Pump Inhibitor",
         "vietnamese_name": "Pantoprazole, Pantoloc",
@@ -1562,13 +1703,39 @@ DRUG_DATABASE = {
             "Tiêu chảy",
             "Tương tự omeprazole"
         ],
-        "interactions": [
-            "Ít tương tác hơn omeprazole"
-        ],
-        "pregnancy": "B"
-    },
-    
-    "Ranitidine": {
+                  "interactions": [
+              "Ít tương tác hơn omeprazole"
+          ],
+          "pregnancy": "B",
+          "mechanism_of_action": "Proton pump inhibitor (PPI). Ức chế H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, giảm tiết acid dạ dày mạnh và kéo dài. Khác với H2 blockers, PPI ức chế bước cuối cùng của quá trình tiết acid, nên hiệu quả hơn. Pantoprazole ít tương tác với CYP450 hơn omeprazole.",
+          "monitoring": [
+              "Đáp ứng lâm sàng: giảm triệu chứng đau, ợ nóng",
+              "Mg2+ máu (nếu dùng kéo dài >3 tháng) - PPI có thể gây hạ magie máu",
+              "Vitamin B12 (nếu dùng kéo dài >2 năm) - PPI giảm hấp thu B12",
+              "Dấu hiệu nhiễm trùng: PPI tăng nguy cơ viêm phổi, C. difficile colitis",
+              "Loãng xương: PPI dùng kéo dài có thể tăng nguy cơ gãy xương (cần monitor nếu >1 năm)"
+          ],
+          "precautions": [
+              "Uống 30-60 phút TRƯỚC bữa ăn (để PPI hoạt động khi proton pump được kích hoạt)",
+              "KHÔNG được nhai hoặc nghiền viên bao tan trong ruột (enteric-coated)",
+              "Pantoprazole ưu điểm: ít tương tác với CYP450 hơn omeprazole, ít ảnh hưởng đến clopidogrel hơn",
+              "Dùng ngắn hạn khi có thể - tránh dùng kéo dài không cần thiết",
+              "Thận trọng ở bệnh nhân loãng xương (PPI dùng kéo dài có thể tăng nguy cơ gãy xương)",
+              "Thận trọng ở bệnh nhân suy thận (không cần chỉnh liều nhưng monitor)",
+              "Tăng nguy cơ viêm phổi, C. difficile colitis (đặc biệt ở người già, suy giảm miễn dịch)"
+          ],
+          "pharmacokinetics": {
+              "half_life": "1 giờ (ngắn), nhưng tác dụng kéo dài 24h do ức chế không thuận nghịch proton pump",
+              "onset": "1-3 ngày (tác dụng đầy đủ)",
+              "duration": "24 giờ (mặc dù half-life ngắn)",
+              "protein_binding": "98%",
+              "clearance": "Gan (CYP2C19, CYP3A4) - ít tương tác hơn omeprazole"
+          },
+          "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+          "black_box_warnings": ""
+      },
+      
+      "Ranitidine": {
         "group": "Gastrointestinal - H2 Receptor Antagonist",
         "vietnamese_name": "Ranitidine, Zantac",
         "administration": ["PO", "IV"],
@@ -1628,10 +1795,41 @@ DRUG_DATABASE = {
             "SSRI/SNRI: tăng nguy cơ hội chứng serotonin",
             "Antipsychotics: tăng nguy cơ rối loạn vận động"
         ],
-        "pregnancy": "B"
-    },
-    
-    "Loperamide": {
+        "pregnancy": "B",
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50-75%"
+        },
+        "mechanism_of_action": "Dopamine D2 receptor antagonist và 5-HT3 receptor antagonist. Ức chế dopamine ở chemoreceptor trigger zone (CTZ), giảm buồn nôn, nôn. Tăng co bóp dạ dày, tăng trương lực cơ thắt môn vị, tăng nhu động ruột (prokinetic effect). Cũng ức chế 5-HT3 receptor (giống ondansetron).",
+        "monitoring": [
+            "Dấu hiệu rối loạn vận động: dystonia, parkinsonism, akathisia (xuất hiện sớm, có thể điều trị)",
+            "Rối loạn vận động muộn (tardive dyskinesia) - nếu dùng >12 tuần (có thể không hồi phục)",
+            "Dấu hiệu hội chứng serotonin: kích động, tăng thân nhiệt, tăng phản xạ (nếu dùng với SSRI/SNRI)",
+            "Đáp ứng lâm sàng: giảm buồn nôn, nôn; tăng nhu động dạ dày"
+        ],
+        "precautions": [
+            "KHÔNG dùng quá 12 tuần - tăng nguy cơ rối loạn vận động muộn (tardive dyskinesia) có thể không hồi phục",
+            "Thận trọng ở trẻ em và thanh niên - tăng nguy cơ rối loạn vận động (dystonia, parkinsonism)",
+            "Tránh dùng ở bệnh nhân Parkinson, dystonia - làm nặng triệu chứng",
+            "Thận trọng khi dùng với SSRI/SNRI - tăng nguy cơ hội chứng serotonin",
+            "Thận trọng khi dùng với antipsychotics - tăng nguy cơ rối loạn vận động",
+            "Tránh dùng với anticholinergics - đối kháng tác dụng prokinetic",
+            "CHỐNG CHỈ ĐỊNH trong tắc ruột, xuất huyết tiêu hóa",
+            "Có thể gây buồn ngủ - tránh lái xe, vận hành máy móc"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5-6 giờ",
+            "onset": "1-3 phút (IV), 30-60 phút (PO)",
+            "duration": "1-2 giờ",
+            "protein_binding": "30%",
+            "clearance": "Gan (CYP2D6), thận (30% thải nguyên dạng)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Rối loạn vận động muộn (tardive dyskinesia) có thể phát triển và trở thành không hồi phục. Nguy cơ tăng với thời gian điều trị và tổng liều. Ngừng ngay nếu có dấu hiệu rối loạn vận động. KHÔNG dùng quá 12 tuần"
+      },
+      
+      "Loperamide": {
         "group": "Gastrointestinal - Antidiarrheal",
         "vietnamese_name": "Loperamide, Imodium",
         "administration": ["PO"],
@@ -2615,15 +2813,42 @@ DRUG_DATABASE = {
             "Đau đầu",
             "Tăng men gan"
         ],
-        "interactions": [
-            "Azathioprine/6-mercaptopurine: tăng độc tính (giảm liều azathioprine 75%)",
-            "Ampicillin/Amoxicillin: tăng nguy cơ ban da",
-            "Warfarin: tăng tác dụng chống đông"
-        ],
-        "pregnancy": "C"
-    },
-    
-    "Prednisolone": {
+                  "interactions": [
+              "Azathioprine/6-mercaptopurine: tăng độc tính (giảm liều azathioprine 75%)",
+              "Ampicillin/Amoxicillin: tăng nguy cơ ban da",
+              "Warfarin: tăng tác dụng chống đông"
+          ],
+          "pregnancy": "C",
+          "mechanism_of_action": "Xanthine oxidase inhibitor. Ức chế enzyme xanthine oxidase, enzyme chuyển hypoxanthine thành xanthine và xanthine thành acid uric. Giảm sản xuất acid uric, giảm nồng độ acid uric trong máu và nước tiểu. Được dùng để điều trị gout mạn tính và phòng ngừa tăng acid uric máu (ví dụ trong hóa trị).",
+          "monitoring": [
+              "Nồng độ acid uric máu (mục tiêu <6 mg/dL)",
+              "Chức năng thận: creatinine, BUN (thải qua thận)",
+              "Chức năng gan: ALT, AST (có thể gây tăng men gan)",
+              "Dấu hiệu ban da (QUAN TRỌNG - có thể tiến triển thành SJS/TEN nếu nặng)",
+              "Triệu chứng gout cấp (có thể xảy ra khi bắt đầu điều trị - cần dùng colchicine dự phòng)"
+          ],
+          "precautions": [
+              "KHỞI ĐẦU với liều thấp (100mg/ngày), tăng dần mỗi 1-2 tuần để tránh cơn gout cấp",
+              "Dùng kèm colchicine hoặc NSAID khi bắt đầu để dự phòng cơn gout cấp (1-2 tháng đầu)",
+              "NGỪNG NGAY nếu có ban da - có thể tiến triển thành SJS/TEN (đe dọa tính mạng)",
+              "Tránh dùng với ampicillin/amoxicillin (tăng nguy cơ ban da nặng)",
+              "Thận trọng khi dùng với azathioprine/6-mercaptopurine (tăng độc tính - cần giảm liều 75%)",
+              "Thận trọng khi dùng với warfarin (tăng tác dụng chống đông - theo dõi INR)",
+              "Thận trọng ở bệnh nhân suy thận (giảm liều)",
+              "Uống với nhiều nước để tránh sỏi thận"
+          ],
+          "pharmacokinetics": {
+              "half_life": "1-2 giờ (allopurinol), 15-18 giờ (metabolite oxypurinol - hoạt chất)",
+              "onset": "1-2 tuần (giảm acid uric máu)",
+              "duration": "24 giờ (uống 1 lần/ngày)",
+              "protein_binding": "Rất ít",
+              "clearance": "Thận (chủ yếu, allopurinol và oxypurinol thải qua nước tiểu). Cần giảm liều ở suy thận"
+          },
+          "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+          "black_box_warnings": "Có thể gây phản ứng da nghiêm trọng (ban da, SJS, TEN) đe dọa tính mạng. Ngừng ngay nếu có ban da. Nguy cơ tăng ở bệnh nhân suy thận, dùng đồng thời với ampicillin/amoxicillin, hoặc có tiền sử dị ứng allopurinol"
+      },
+      
+      "Prednisolone": {
         "group": "Endocrinology - Corticosteroid",
         "vietnamese_name": "Prednisolone",
         "administration": ["PO"],
@@ -4018,16 +4243,41 @@ DRUG_DATABASE = {
             "Loạn nhịp tim (torsades de pointes)",
             "Rối loạn thính giác (hiếm)"
         ],
-        "interactions": [
-            "Warfarin: tăng nguy cơ chảy máu",
-            "Digoxin: tăng nồng độ digoxin",
-            "Cyclosporine: tăng nồng độ cyclosporine",
-            "Thuốc QT kéo dài: tăng nguy cơ loạn nhịp"
-        ],
-        "pregnancy": "B"
-    },
-    
-    "Clarithromycin": {
+                  "interactions": [
+              "Warfarin: tăng nguy cơ chảy máu",
+              "Digoxin: tăng nồng độ digoxin",
+              "Cyclosporine: tăng nồng độ cyclosporine",
+              "Thuốc QT kéo dài: tăng nguy cơ loạn nhịp"
+          ],
+          "pregnancy": "B",
+          "mechanism_of_action": "Macrolide antibiotic. Ức chế tổng hợp protein vi khuẩn bằng cách gắn vào 50S ribosomal subunit, ức chế peptide chain elongation. Phổ tác dụng: Gram-positive (Streptococcus, Staphylococcus), một số Gram-negative (Haemophilus influenzae), atypical pathogens (Mycoplasma, Chlamydia, Legionella). Có tác dụng kéo dài do thời gian bán hủy dài (68 giờ), cho phép phác đồ ngắn (3-5 ngày).",
+          "monitoring": [
+              "ECG: QT interval (có thể gây QT kéo dài, đặc biệt ở bệnh nhân có yếu tố nguy cơ)",
+              "Triệu chứng rối loạn nhịp tim (torsades de pointes - hiếm nhưng nguy hiểm)",
+              "Chức năng gan: ALT, AST (hiếm gây độc gan)",
+              "Triệu chứng tiêu hóa: buồn nôn, nôn, tiêu chảy (phổ biến)",
+              "Rối loạn thính giác (hiếm, thường ở liều cao hoặc dùng lâu dài)"
+          ],
+          "precautions": [
+              "Tránh dùng ở bệnh nhân QT kéo dài hoặc có yếu tố nguy cơ (suy tim, hạ kali máu, hạ magie máu, dùng thuốc QT kéo dài khác)",
+              "Thận trọng khi dùng với warfarin (tăng nguy cơ chảy máu - theo dõi INR)",
+              "Thận trọng khi dùng với digoxin (tăng nồng độ digoxin - theo dõi nồng độ)",
+              "Thận trọng khi dùng với cyclosporine (tăng nồng độ cyclosporine)",
+              "Có thể gây tiêu chảy (phổ biến) - có thể dẫn đến C. difficile colitis nếu nặng",
+              "Thận trọng ở bệnh nhân suy gan nặng"
+          ],
+          "pharmacokinetics": {
+              "half_life": "68 giờ (RẤT DÀI - cho phép phác đồ ngắn 3-5 ngày)",
+              "onset": "2-3 giờ (PO), 1 giờ (IV)",
+              "duration": "5-7 ngày sau liều cuối (do half-life dài)",
+              "protein_binding": "7-50% (thay đổi theo nồng độ)",
+              "clearance": "Chủ yếu qua phân (không đổi), một phần qua gan. Không phụ thuộc vào chức năng thận (không cần điều chỉnh liều ở suy thận)"
+          },
+          "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Bảo quản suspension trong tủ lạnh sau khi pha",
+          "black_box_warnings": "Có thể gây QT kéo dài và torsades de pointes, đặc biệt ở bệnh nhân có yếu tố nguy cơ (suy tim, hạ kali máu, hạ magie máu, nhịp tim chậm, dùng thuốc QT kéo dài khác). Tránh dùng ở bệnh nhân QT kéo dài"
+      },
+      
+      "Clarithromycin": {
         "group": "Infectious Disease - Macrolide Antibiotic",
         "vietnamese_name": "Clarithromycin, Klacid",
         "administration": ["PO", "IV"],
@@ -5686,59 +5936,37 @@ DRUG_DATABASE = {
             "Các anticholinergics khác: tăng tác dụng",
             "Digoxin: có thể tăng nồng độ digoxin"
         ],
-        "pregnancy": "C - An toàn"
+        "pregnancy": "C - An toàn",
+        "mechanism_of_action": "Anticholinergic (antimuscarinic). Kháng chọn lọc thụ thể muscarinic acetylcholine (M1-M5), ức chế tác dụng của acetylcholine. Tăng nhịp tim (ức chế vagal tone), giảm tiết (nước bọt, mồ hôi, dịch tiêu hóa, phế quản), giãn đồng tử và giảm co thắt cơ trơn (phế quản, ruột, bàng quang). Được dùng trong emergency để điều trị nhịp tim chậm có triệu chứng, block nhĩ thất, và như một chất giải độc trong quá liều organophosphate.",
+        "monitoring": [
+            "Nhịp tim (ECG monitoring - mục tiêu tăng nhịp tim)",
+            "Dấu hiệu kháng cholinergic quá mức: khô miệng nặng, giãn đồng tử, bí tiểu, lú lẫn",
+            "Nhãn áp (nếu có nguy cơ glaucoma)",
+            "Triệu chứng nhịp tim chậm nghịch lý (paradoxical bradycardia) - có thể xảy ra với liều <0.5mg ở người lớn",
+            "Phản ứng quá mức (nhịp tim nhanh, đánh trống ngực)"
+        ],
+        "precautions": [
+            "QUAN TRỌNG: Liều tối thiểu người lớn 0.5mg để tránh nhịp tim chậm nghịch lý (liều thấp có thể kích thích trung tâm vagal)",
+            "CHỐNG CHỈ ĐỊNH tuyệt đối: Glaucoma góc đóng (có thể gây tăng nhãn áp đe dọa thị giác)",
+            "CHỐNG CHỈ ĐỊNH: Tắc nghẽn đường tiểu (có thể làm nặng thêm bí tiểu)",
+            "CHỐNG CHỈ ĐỊNH: Nhịp tim nhanh (có thể làm tăng nhịp tim hơn nữa)",
+            "Thận trọng ở người già (tăng nguy cơ lú lẫn, bí tiểu)",
+            "Thận trọng ở bệnh nhân sốt (có thể làm tăng nhiệt độ do giảm tiết mồ hôi)",
+            "Thận trọng khi dùng với các anticholinergics khác (tăng tác dụng phụ)",
+            "Trong quá liều organophosphate: dùng liều cao hơn nhiều (2-5mg), có thể cần lặp lại nhiều lần cho đến khi đạt tác dụng (đồng tử co lại, giảm tiết)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-4 giờ (người lớn), 10-20 giờ (trẻ em)",
+            "onset": "Vài phút (IV), 15-30 phút (IM)",
+            "duration": "4-6 giờ (tác dụng lâm sàng)",
+            "protein_binding": "50%",
+            "clearance": "Thận (50-90% thải qua nước tiểu dưới dạng không đổi), gan (metabolite). Thời gian bán hủy dài hơn ở trẻ em"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch tiêm: bảo quản trong tủ mát (2-8°C) nếu có chỉ định, nhưng thường ổn định ở nhiệt độ phòng",
+        "black_box_warnings": None
     },
     
-    "Amiodarone": {
-        "group": "Emergency - Antiarrhythmic (Class III)",
-        "vietnamese_name": "Amiodarone, Cordarone",
-        "administration": ["IV", "PO"],
-        "indications": [
-            "Rung thất / Nhịp nhanh thất không có mạch (cardiac arrest)",
-            "Rối loạn nhịp thất",
-            "Rung nhĩ / Cuồng nhĩ",
-            "Nhịp nhanh trên thất"
-        ],
-        "contraindications": [
-            "Dị ứng amiodarone",
-            "Block nhĩ thất độ 2-3 (không có máy tạo nhịp)",
-            "Nhịp tim chậm nặng",
-            "Cường giáp",
-            "Bệnh phổi nặng",
-            "Có thai (3 tháng đầu)"
-        ],
-        "dosage": {
-            "adult_cardiac_arrest_vfvt": "300mg IV bolus, sau đó 150mg IV, có thể lặp lại",
-            "adult_vt_with_pulse": "150mg IV trong 10 phút, sau đó 1mg/phút x 6 giờ, sau đó 0.5mg/phút",
-            "adult_po_loading": "800-1600mg/ngày chia 2 lần x 1-2 tuần",
-            "adult_po_maintenance": "200-400mg/ngày x 1 lần",
-            "pediatric_arrest": "5mg/kg IV bolus",
-            "notes": "Tác dụng kéo dài. Theo dõi chức năng phổi, gan, tuyến giáp"
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi"
-        },
-        "side_effects": [
-            "Độc phổi (viêm phổi kẽ - nghiêm trọng)",
-            "Độc gan (tăng transaminase)",
-            "Rối loạn chức năng tuyến giáp (cường/ức chế)",
-            "Rối loạn nhịp tim (hiếm)",
-            "Độc thần kinh (viêm dây thần kinh)",
-            "Phát ban (nhạy cảm ánh sáng)",
-            "Tăng transaminase"
-        ],
-        "interactions": [
-            "Digoxin: tăng nồng độ digoxin",
-            "Warfarin: tăng INR",
-            "Phenytoin: tăng nồng độ phenytoin",
-            "Beta-blockers: tăng nguy cơ nhịp chậm",
-            "Statins: tăng nguy cơ độc cơ"
-        ],
-        "pregnancy": "D - Tránh dùng"
-    },
-    
+
     "Lidocaine": {
         "group": "Emergency - Local Anesthetic / Antiarrhythmic (Class IB)",
         "vietnamese_name": "Lidocaine, Xylocaine",
@@ -6079,50 +6307,6 @@ DRUG_DATABASE = {
         "pregnancy": "C - Tránh dùng"
     },
     
-    "Metoclopramide": {
-        "group": "Gastrointestinal - Prokinetic / Anti-emetic",
-        "vietnamese_name": "Metoclopramide, Primperan, Reglan",
-        "administration": ["PO", "IV", "IM"],
-        "indications": [
-            "Buồn nôn, nôn",
-            "Liệt dạ dày (gastroparesis)",
-            "Trào ngược dạ dày thực quản",
-            "Chậm làm rỗng dạ dày"
-        ],
-        "contraindications": [
-            "Dị ứng metoclopramide",
-            "Xuất huyết tiêu hóa",
-            "Tắc ruột",
-            "Pheochromocytoma",
-            "Động kinh"
-        ],
-        "dosage": {
-            "adult_po": "10mg x 3-4 lần/ngày (trước ăn 30 phút)",
-            "adult_iv_im": "10mg IV/IM x 3-4 lần/ngày",
-            "adult_severe": "10-20mg IV mỗi 6-8 giờ",
-            "pediatric": "0.1-0.15mg/kg PO/IV x 3-4 lần/ngày",
-            "notes": "Không dùng >12 tuần. Nguy cơ rối loạn vận động ngoại tháp"
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Giảm liều 25-50%",
-            "under_30": "Giảm liều 50-75%"
-        },
-        "side_effects": [
-            "Rối loạn vận động ngoại tháp (dystonia, akathisia - phổ biến)",
-            "Buồn ngủ",
-            "Chóng mặt",
-            "Rối loạn vận động muộn (tardive dyskinesia - hiếm nhưng không hồi phục)",
-            "Tăng prolactin",
-            "Rối loạn nhịp tim"
-        ],
-        "interactions": [
-            "Phenothiazines: tăng nguy cơ rối loạn vận động",
-            "Anticholinergics: đối kháng tác dụng",
-            "Dopamine antagonists: tăng tác dụng"
-        ],
-        "pregnancy": "B - An toàn (tránh dùng trong 3 tháng đầu)"
-    },
 }
 
 # Drug groups for filtering
@@ -6447,12 +6631,37 @@ DRUG_DATABASE.update({
         "Rối loạn giấc ngủ",
         "Khó thở ở bệnh nhân hen/COPD"
     ],
-    "interactions": [
-        "Verapamil/Diltiazem: tăng nguy cơ block nhĩ thất",
-        "Insulin: che dấu triệu chứng hạ đường huyết"
-    ],
-    "pregnancy": "D"
-},
+          "interactions": [
+          "Verapamil/Diltiazem: tăng nguy cơ block nhĩ thất",
+          "Insulin: che dấu triệu chứng hạ đường huyết"
+      ],
+      "pregnancy": "D",
+      "mechanism_of_action": "Selective beta-1 adrenergic receptor blocker. Ức chế tác dụng của catecholamines (epinephrine, norepinephrine) trên beta-1 receptors ở tim, giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp, giảm nhu cầu oxy cơ tim. Chọn lọc beta-1 hơn metoprolol, ít tác dụng trên beta-2 (ít gây co thắt phế quản hơn propranolol). Thải chủ yếu qua thận (khác với metoprolol - thải qua gan).",
+      "monitoring": [
+          "Nhịp tim và huyết áp (trước và sau khi bắt đầu)",
+          "Chức năng thận: creatinine, BUN (thải chủ yếu qua thận - cần điều chỉnh liều)",
+          "Dấu hiệu suy tim (khó thở, phù, tăng cân)",
+          "Đường huyết (ở bệnh nhân đái tháo đường - che dấu triệu chứng hạ đường huyết)",
+          "Triệu chứng mệt mỏi, lạnh tay chân"
+      ],
+      "precautions": [
+          "KHÔNG được ngừng đột ngột (có thể gây rebound hypertension, đau thắt ngực nặng). Phải giảm liều dần trong 1-2 tuần",
+          "Thải chủ yếu qua thận - cần giảm liều ở bệnh nhân suy thận (CrCl <30: giảm 75% hoặc dùng mỗi 2 ngày)",
+          "Thận trọng ở bệnh nhân hen phế quản/COPD (mặc dù chọn lọc beta-1, vẫn có thể gây co thắt phế quản ở liều cao)",
+          "Tránh dùng trong suy tim cấp không bù, block AV độ 2-3, nhịp tim chậm <50 bpm",
+          "Thận trọng ở bệnh nhân đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+          "Thận trọng khi dùng với verapamil/diltiazem (tăng nguy cơ block AV, suy tim)"
+      ],
+      "pharmacokinetics": {
+          "half_life": "6-7 giờ (dài hơn metoprolol)",
+          "onset": "1 giờ (PO)",
+          "duration": "24 giờ (uống 1 lần/ngày)",
+          "protein_binding": "5-15% (thấp, ít protein binding)",
+          "clearance": "Thận (chủ yếu, 85-100% thải nguyên dạng qua nước tiểu). Không chuyển hóa qua gan"
+      },
+      "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+      "black_box_warnings": "KHÔNG được ngừng đột ngột ở bệnh nhân đau thắt ngực hoặc sau nhồi máu cơ tim - có thể gây đau thắt ngực nặng, nhồi máu cơ tim, rối loạn nhịp tim nặng. Phải giảm liều dần dần trong 1-2 tuần"
+  },
 
 "Bisoprolol": {
     "group": "Cardiovascular - Beta-blocker (Selective)",
@@ -6487,14 +6696,39 @@ DRUG_DATABASE.update({
         "Chóng mặt",
         "Khó thở ở bệnh nhân hen/COPD"
     ],
-    "interactions": [
-        "Verapamil/Diltiazem: tăng nguy cơ block nhĩ thất",
-        "Insulin: che dấu triệu chứng hạ đường huyết"
-    ],
-    "pregnancy": "C"
-},
-
-"Carvedilol": {
+          "interactions": [
+          "Verapamil/Diltiazem: tăng nguy cơ block nhĩ thất",
+          "Insulin: che dấu triệu chứng hạ đường huyết"
+      ],
+      "pregnancy": "C",
+      "mechanism_of_action": "Selective beta-1 adrenergic receptor blocker. Ức chế tác dụng của catecholamines trên beta-1 receptors ở tim, giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp. Có bằng chứng mạnh làm giảm tỷ lệ tử vong và nhập viện trong suy tim mạn tính (NYHA class II-IV). Thải qua cả thận và gan (50-50%).",
+      "monitoring": [
+          "Nhịp tim và huyết áp (trước và sau khi bắt đầu, đặc biệt ở bệnh nhân suy tim)",
+          "Dấu hiệu suy tim: khó thở, phù, tăng cân, giảm khả năng gắng sức",
+          "Chức năng thận và gan (thải qua cả hai)",
+          "Đường huyết (ở bệnh nhân đái tháo đường)",
+          "Triệu chứng mệt mỏi, chóng mặt, lạnh tay chân"
+      ],
+      "precautions": [
+          "KHÔNG được ngừng đột ngột (có thể gây rebound hypertension, đau thắt ngực nặng, suy tim nặng). Phải giảm liều dần trong 1-2 tuần",
+          "Khởi đầu với liều thấp (1.25mg/ngày) ở bệnh nhân suy tim, tăng dần mỗi 2-4 tuần",
+          "Thận trọng ở bệnh nhân hen phế quản/COPD (mặc dù chọn lọc beta-1, vẫn có thể gây co thắt phế quản)",
+          "Tránh dùng trong suy tim cấp không bù, block AV độ 2-3, nhịp tim chậm <60 bpm",
+          "Thận trọng ở bệnh nhân suy thận hoặc suy gan nặng",
+          "Thận trọng khi dùng với verapamil/diltiazem (tăng nguy cơ block AV, suy tim)"
+      ],
+      "pharmacokinetics": {
+          "half_life": "9-12 giờ (dài, cho phép uống 1 lần/ngày)",
+          "onset": "1-2 giờ (PO)",
+          "duration": "24 giờ",
+          "protein_binding": "30%",
+          "clearance": "Thận (50%) và gan (50%) - chuyển hóa qua CYP3A4 và CYP2D6"
+      },
+      "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+      "black_box_warnings": "KHÔNG được ngừng đột ngột ở bệnh nhân đau thắt ngực hoặc suy tim - có thể gây đau thắt ngực nặng, nhồi máu cơ tim, suy tim nặng. Phải giảm liều dần dần trong 1-2 tuần"
+  },
+  
+  "Carvedilol": {
     "group": "Cardiovascular - Beta-blocker (Non-selective with Alpha-blocking)",
     "vietnamese_name": "Carvedilol, Dilatrend",
     "administration": ["PO"],
@@ -6528,13 +6762,40 @@ DRUG_DATABASE.update({
         "Nhịp tim chậm",
         "Phù chân (ít)"
     ],
-    "interactions": [
-        "Digoxin: tăng nồng độ digoxin",
-        "Insulin: che dấu triệu chứng hạ đường huyết",
-        "CYP2D6 inhibitors: tăng nồng độ carvedilol"
-    ],
-    "pregnancy": "C"
-},
+          "interactions": [
+          "Digoxin: tăng nồng độ digoxin",
+          "Insulin: che dấu triệu chứng hạ đường huyết",
+          "CYP2D6 inhibitors: tăng nồng độ carvedilol"
+      ],
+      "pregnancy": "C",
+      "mechanism_of_action": "Non-selective beta-adrenergic receptor blocker (beta1 và beta2) kết hợp với alpha-1 adrenergic receptor blocker. Ức chế beta receptors làm giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp. Block alpha-1 receptors gây giãn mạch, giảm hậu gánh, cải thiện tuần hoàn. Có bằng chứng mạnh làm giảm tỷ lệ tử vong và nhập viện trong suy tim mạn tính (NYHA class II-IV).",
+      "monitoring": [
+          "Nhịp tim và huyết áp (trước và sau khi bắt đầu, đặc biệt ở bệnh nhân suy tim - có thể gây hạ huyết áp)",
+          "Dấu hiệu suy tim: khó thở, phù, tăng cân, giảm khả năng gắng sức",
+          "Chức năng gan (chống chỉ định trong suy gan nặng)",
+          "Đường huyết (ở bệnh nhân đái tháo đường)",
+          "Triệu chứng mệt mỏi, chóng mặt, hạ huyết áp, phù chân"
+      ],
+      "precautions": [
+          "KHÔNG được ngừng đột ngột (có thể gây rebound hypertension, đau thắt ngực nặng, suy tim nặng). Phải giảm liều dần trong 1-2 tuần",
+          "Khởi đầu với liều rất thấp (3.125mg x 2 lần/ngày) ở bệnh nhân suy tim, tăng dần mỗi 2 tuần",
+          "CHỐNG CHỈ ĐỊNH trong suy gan nặng",
+          "Thận trọng ở bệnh nhân hen phế quản/COPD (non-selective, có thể gây co thắt phế quản nặng)",
+          "Tránh dùng trong suy tim cấp không bù, block AV độ 2-3, nhịp tim chậm <60 bpm",
+          "Có thể gây hạ huyết áp nặng (do tác dụng alpha-blocking) - theo dõi sát khi bắt đầu",
+          "Thận trọng khi dùng với digoxin (tăng nồng độ digoxin)",
+          "Thận trọng với CYP2D6 inhibitors (tăng nồng độ carvedilol)"
+      ],
+      "pharmacokinetics": {
+          "half_life": "7-10 giờ",
+          "onset": "1-2 giờ (PO)",
+          "duration": "12-24 giờ (uống 2 lần/ngày)",
+          "protein_binding": "98% (rất cao)",
+          "clearance": "Gan (chủ yếu, chuyển hóa qua CYP2D6, CYP2C9, CYP3A4). Thải qua phân và nước tiểu"
+      },
+      "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+      "black_box_warnings": "KHÔNG được ngừng đột ngột ở bệnh nhân đau thắt ngực hoặc suy tim - có thể gây đau thắt ngực nặng, nhồi máu cơ tim, suy tim nặng. Phải giảm liều dần dần trong 1-2 tuần"
+  },
 
 # Respiratory
 "Montelukast": {
