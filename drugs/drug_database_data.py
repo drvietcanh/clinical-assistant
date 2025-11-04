@@ -5301,7 +5301,38 @@ DRUG_DATABASE = {
             "Probenecid: tăng nồng độ oseltamivir",
             "Ít tương tác khác"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Oseltamivir là thuốc kháng virus cúm, thuộc nhóm chất ức chế neuraminidase. Oseltamivir phosphate là tiền thuốc (prodrug), được chuyển hóa trong gan thành oseltamivir carboxylate (chất hoạt động). Oseltamivir carboxylate ức chế enzyme neuraminidase của virus cúm A và B, enzyme này có vai trò quan trọng trong việc giải phóng các hạt virus mới từ tế bào chủ và lan truyền virus trong đường hô hấp. Bằng cách ức chế neuraminidase, oseltamivir ngăn chặn sự giải phóng virus, làm giảm lan truyền virus và giảm thời gian bệnh. Oseltamivir hiệu quả với cả cúm A và cúm B, nhưng hiệu quả nhất khi bắt đầu điều trị trong vòng 48 giờ đầu (tốt nhất là 24 giờ đầu) sau khi xuất hiện triệu chứng.",
+        "monitoring": [
+            "Triệu chứng cúm (sốt, ho, đau họng, đau cơ) - đánh giá đáp ứng điều trị",
+            "Dấu hiệu biến chứng (viêm phổi, suy hô hấp, nhiễm trùng thứ phát)",
+            "Tác dụng phụ (buồn nôn, nôn, đau đầu, tiêu chảy) - thường nhẹ",
+            "Rối loạn tâm thần ở trẻ em (kích động, lú lẫn, hành vi bất thường) - hiếm nhưng cần theo dõi",
+            "Co giật - hiếm, đặc biệt ở trẻ em",
+            "Chức năng thận (creatinine) - điều chỉnh liều ở suy thận",
+            "Tương tác với probenecid (tăng nồng độ oseltamivir)"
+        ],
+        "precautions": [
+            "Bắt đầu điều trị càng sớm càng tốt - hiệu quả nhất trong vòng 48 giờ đầu (tốt nhất là 24 giờ đầu) sau khi xuất hiện triệu chứng",
+            "Điều chỉnh liều ở suy thận: CrCl 30-60: 75mg x 1 lần/ngày (treatment), 75mg cách ngày (prophylaxis); CrCl <30: 75mg x 1 lần/ngày (treatment), 75mg cách 2 ngày (prophylaxis)",
+            "Uống với thức ăn để giảm buồn nôn, nôn",
+            "Rối loạn tâm thần ở trẻ em - hiếm nhưng có thể nghiêm trọng, cần theo dõi chặt chẽ",
+            "Thận trọng ở bệnh nhân suy thận nặng - cần điều chỉnh liều",
+            "Probenecid tăng nồng độ oseltamivir - có thể cần điều chỉnh liều",
+            "Hiệu quả phòng ngừa: dùng 75mg x 1 lần/ngày x 10 ngày sau tiếp xúc hoặc x 6 tuần trong mùa cúm",
+            "Liều cao hơn (150mg x 2 lần/ngày) có thể cần ở bệnh nhân suy giảm miễn dịch",
+            "Không thay thế vaccine cúm - vaccine vẫn là biện pháp phòng ngừa chính",
+            "Kháng thuốc có thể xảy ra - theo dõi đáp ứng điều trị"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-3 giờ (oseltamivir), 6-10 giờ (oseltamivir carboxylate - chất hoạt động)",
+            "onset": "24-48 giờ (giảm triệu chứng)",
+            "duration": "5 ngày (treatment), 10 ngày - 6 tuần (prophylaxis)",
+            "protein_binding": "3% (oseltamivir carboxylate)",
+            "clearance": "Gan: chuyển hóa oseltamivir thành oseltamivir carboxylate (chất hoạt động) qua esterase. Thận: bài tiết chủ yếu qua thận (oseltamivir carboxylate bài tiết nguyên dạng). Cần điều chỉnh liều ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng, dùng trong vòng 10 ngày sau khi pha hoặc 17 ngày nếu bảo quản trong tủ lạnh.",
+        "black_box_warnings": None
     },
     
     "Ganciclovir": {
@@ -5714,7 +5745,37 @@ DRUG_DATABASE = {
             "Digoxin: tăng nồng độ digoxin",
             "Theophylline: tăng nồng độ theophylline"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Clarithromycin là kháng sinh macrolide bán tổng hợp, thuộc nhóm azalide. Ức chế tổng hợp protein của vi khuẩn bằng cách gắn vào tiểu đơn vị 50S của ribosome vi khuẩn, ngăn chặn quá trình dịch mã (translocation) và kéo dài chuỗi peptide. Dẫn đến ngừng tổng hợp protein và ức chế sự phát triển của vi khuẩn. Clarithromycin có phổ kháng khuẩn rộng: Gram-dương (Streptococcus pneumoniae, Staphylococcus aureus - không phải MRSA), một số Gram-âm (H. influenzae, Moraxella catarrhalis), và vi khuẩn không điển hình (Mycoplasma pneumoniae, Chlamydia pneumoniae, Legionella pneumophila). Clarithromycin cũng có tác dụng với Helicobacter pylori và một số vi khuẩn không điển hình khác. Mạnh hơn azithromycin nhưng có nhiều tương tác thuốc hơn do ức chế CYP3A4.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng) để đánh giá đáp ứng điều trị",
+            "Cấy máu và cấy từ vị trí nhiễm trùng (nếu có) để xác định vi khuẩn và độ nhạy cảm",
+            "ECG - QT kéo dài (đặc biệt ở bệnh nhân có nguy cơ, dùng với thuốc kéo dài QT khác)",
+            "Rối loạn thính giác (giảm thính lực, ù tai) - hiếm nhưng có thể không hồi phục",
+            "Chức năng gan (ALT, AST) nếu dùng lâu dài hoặc có triệu chứng",
+            "Chức năng thận (creatinine) - điều chỉnh liều ở suy thận",
+            "Tương tác với CYP3A4 substrates (simvastatin, lovastatin, midazolam, warfarin, digoxin, theophylline) - theo dõi tác dụng phụ và nồng độ nếu có"
+        ],
+        "precautions": [
+            "QT kéo dài - không dùng với các thuốc kéo dài QT khác (amiodarone, sotalol, antipsychotics), bệnh nhân có tiền sử rối loạn nhịp",
+            "Không dùng với pimozide, terfenadine, astemizole (tăng nguy cơ loạn nhịp nghiêm trọng)",
+            "Nhiều tương tác thuốc do ức chế CYP3A4 - tăng nồng độ simvastatin, lovastatin (nguy cơ tiêu cơ vân), midazolam, warfarin (tăng INR), digoxin (tăng nồng độ), theophylline (tăng nồng độ)",
+            "Giảm liều ở suy thận (CrCl <30: giảm 50-75%)",
+            "Uống với thức ăn để giảm buồn nôn, nôn",
+            "Rối loạn thính giác - ngừng ngay nếu có giảm thính lực, ù tai (có thể không hồi phục)",
+            "Vị kim loại trong miệng - tác dụng phụ phổ biến, thường tự khỏi",
+            "Thận trọng ở bệnh nhân có bệnh gan (metabolite qua gan)",
+            "Dùng đủ liều và đủ thời gian để tránh kháng thuốc"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-7 giờ (tăng ở suy thận)",
+            "onset": "2-4 giờ",
+            "duration": "q12h (dùng 2 lần/ngày)",
+            "protein_binding": "70%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4 thành 14-hydroxyclarithromycin (metabolite hoạt động, mạnh hơn với H. influenzae). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều ở suy thận (CrCl <30)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng, dùng trong vòng 14 ngày sau khi pha. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi pha.",
+        "black_box_warnings": "Tăng nguy cơ tử vong do tim mạch ở bệnh nhân có bệnh tim mạch. Không dùng ở bệnh nhân có QT kéo dài, loạn nhịp tim, hoặc dùng với các thuốc kéo dài QT. Tăng nguy cơ tiêu cơ vân khi dùng với simvastatin, lovastatin."
     },
     
     "Ciprofloxacin": {
@@ -8683,7 +8744,41 @@ DRUG_DATABASE.update({
         "ACE inhibitor: tăng kali máu",
         "Methotrexate: tăng độc tính"
     ],
-    "pregnancy": "C - D gần sinh"
+    "pregnancy": "C - D gần sinh",
+    "mechanism_of_action": "Trimethoprim-sulfamethoxazole (TMP-SMX, cotrimoxazole) là kháng sinh kết hợp với tác dụng hiệp đồng (synergistic). Sulfamethoxazole (SMX) là sulfonamide ức chế tổng hợp acid folic ở vi khuẩn bằng cách ức chế enzyme dihydropteroate synthase, ngăn chặn tổng hợp dihydrofolic acid. Trimethoprim (TMP) ức chế enzyme dihydrofolate reductase, ngăn chặn chuyển đổi dihydrofolic acid thành tetrahydrofolic acid, một cofactor cần thiết cho tổng hợp DNA, RNA, và protein. Cả hai chất cùng ức chế con đường tổng hợp acid folic ở hai bước khác nhau, tạo ra tác dụng hiệp đồng mạnh. Tỷ lệ TMP:SMX = 1:5 (160mg TMP : 800mg SMX). Phổ kháng khuẩn: Gram-dương (một số Staphylococcus, Streptococcus), Gram-âm (Enterobacteriaceae, H. influenzae), và một số vi khuẩn không điển hình (Pneumocystis jirovecii, Toxoplasma gondii, Nocardia).",
+    "monitoring": [
+        "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng) để đánh giá đáp ứng điều trị",
+        "Cấy máu và cấy từ vị trí nhiễm trùng (nếu có) để xác định vi khuẩn và độ nhạy cảm",
+        "Điện giải (natri, kali) - tăng kali máu (đặc biệt ở người cao tuổi, suy thận, dùng ACE inhibitor/ARB)",
+        "Công thức máu (CBC) - giảm bạch cầu, thiếu máu, giảm tiểu cầu (do thiếu folate)",
+        "Creatinine - tăng creatinine giả (do ức chế bài tiết creatinine ở ống thận, không phản ánh suy thận thực sự)",
+        "Chức năng gan (ALT, AST) - hiếm viêm gan nặng",
+        "Dấu hiệu phản ứng dị ứng (phát ban, sốt) - có thể tiến triển thành SJS/TEN",
+        "Dấu hiệu SJS/TEN (Stevens-Johnson syndrome, toxic epidermal necrolysis) - phát ban, mụn nước, bong da",
+        "Tương tác với warfarin (tăng INR), phenytoin (tăng nồng độ), methotrexate (tăng độc tính)"
+    ],
+    "precautions": [
+        "Phản ứng dị ứng - nguy cơ cao với sulfonamide, đặc biệt SJS/TEN (hiếm nhưng nguy hiểm, có thể tử vong)",
+        "NGỪNG NGAY nếu có phát ban, sốt, mụn nước, bong da - có thể là SJS/TEN",
+        "Tăng kali máu - đặc biệt ở người cao tuổi, suy thận, dùng ACE inhibitor/ARB, trimethoprim",
+        "Không dùng nếu CrCl <15 (tăng nguy cơ tác dụng phụ, không hiệu quả)",
+        "Tăng creatinine giả - không phản ánh suy thận thực sự, do ức chế bài tiết creatinine",
+        "Thiếu máu, giảm bạch cầu - do ức chế tổng hợp folate, đặc biệt ở bệnh nhân thiếu folate",
+        "Không dùng gần sinh (trong 3 tháng cuối thai kỳ) - nguy cơ kernicterus ở trẻ sơ sinh",
+        "Uống nhiều nước để tránh kết tinh trong nước tiểu (sulfamethoxazole)",
+        "Tương tác với nhiều thuốc: warfarin (tăng INR), phenytoin (tăng nồng độ), methotrexate (tăng độc tính), ACE inhibitor/ARB (tăng kali)",
+        "Thận trọng ở bệnh nhân suy gan (chuyển hóa qua gan)",
+        "Dùng với thức ăn để giảm kích ứng dạ dày"
+    ],
+    "pharmacokinetics": {
+        "half_life": "8-10 giờ (TMP), 10-12 giờ (SMX)",
+        "onset": "2-4 giờ",
+        "duration": "q12h (PO), q6-8h (IV cho PJP)",
+        "protein_binding": "44% (TMP), 70% (SMX)",
+        "clearance": "Gan: chuyển hóa một phần. Thận: bài tiết chủ yếu qua thận (TMP và SMX). Cần điều chỉnh liều ở suy thận (CrCl <30: giảm 50%, CrCl <15: tránh dùng)."
+    },
+    "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi pha, dùng trong vòng 6 giờ sau khi pha.",
+    "black_box_warnings": "Nguy cơ phản ứng dị ứng nghiêm trọng, bao gồm SJS/TEN, có thể gây tử vong. Nguy cơ tăng ở bệnh nhân có tiền sử dị ứng sulfonamide. Ngừng ngay nếu có phát ban, sốt, mụn nước, bong da."
 },
 
 # Cardiovascular
