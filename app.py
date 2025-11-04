@@ -97,6 +97,7 @@ with st.sidebar:
     - 📊 **TDM** - Theo dõi nồng độ thuốc (5 thuốc)
     - 🔬 **Labs & Calculators** - Xét nghiệm + Tính toán ⭐ INTEGRATED
     - 🫁 **Ventilator** - Cài đặt máy thở
+    - 🫁 **Critical Care** - Hồi sức (Fluids, Vasopressors, Transfusion, Sedation) ⭐ NEW
     - 📋 **Protocols** - Phác đồ điều trị
     - 🩺 **Diagnosis** - Chẩn đoán phân biệt (DDx)
     """)

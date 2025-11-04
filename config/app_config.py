@@ -110,6 +110,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%)",
             border="#7b1fa2"
         ),
+        "critical_care": ModuleInfo(
+            id="critical_care",
+            title="Hồi Sức",
+            icon="🫁",
+            page_path="pages/09_🫁_Critical_Care.py",
+            description="Fluids, Vasopressors, Transfusion, Sedation",
+            color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
+            border="#ff6f00"
+        ),
     },
     
     "navigation": {

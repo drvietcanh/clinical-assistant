@@ -480,7 +480,40 @@ DRUG_DATABASE = {
             "Beta-blocker: có thể gây block nhĩ thất",
             "Digoxin: tăng nồng độ digoxin"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Dihydropyridine calcium channel blocker. Ức chế kênh calci L-type voltage-gated trong màng tế bào cơ trơn mạch máu, ngăn cản dòng calci vào trong tế bào, dẫn đến giãn mạch. Giãn mạch ngoại vi → giảm sức cản mạch máu hệ thống → giảm huyết áp. Giãn mạch vành → tăng tưới máu vành. Ít ảnh hưởng đến tim (không giảm co bóp, không làm chậm nhịp như verapamil/diltiazem). Được dùng trong tăng huyết áp, đau thắt ngực, và co thắt mạch vành.",
+        "monitoring": [
+            "Huyết áp (theo dõi chặt chẽ khi bắt đầu điều trị)",
+            "Nhịp tim (có thể tăng phản xạ do giãn mạch)",
+            "Dấu hiệu phù ngoại vi (mắt cá chân, cẳng chân) - tác dụng phụ thường gặp",
+            "Đau thắt ngực (nếu dùng cho đau thắt ngực)",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Dấu hiệu quá liều (hạ huyết áp nặng, nhịp tim nhanh)",
+            "Dấu hiệu thiếu máu cục bộ (đau chân khi đi bộ) - hiếm"
+        ],
+        "precautions": [
+            "Dạng tác dụng nhanh (immediate-release) KHÔNG được dùng để điều trị tăng huyết áp hoặc đau thắt ngực (nguy cơ nhồi máu cơ tim, đột quỵ) - chỉ dùng extended-release",
+            "Dạng extended-release: không nghiền, không nhai (phá hủy lớp bọc)",
+            "Nguy cơ phù ngoại vi (mắt cá chân, cẳng chân) - thường gặp, không nguy hiểm nhưng khó chịu",
+            "Có thể gây nhịp tim nhanh phản xạ (do giãn mạch) - thận trọng ở bệnh nhân đau thắt ngực",
+            "Hạ huyết áp tư thế đứng - đứng dậy chậm",
+            "Thận trọng ở suy gan (giảm chuyển hóa)",
+            "Tương tác với nhiều thuốc: tăng nồng độ với CYP3A4 inhibitors (ketoconazole, erythromycin), giảm với inducers",
+            "Tránh bưởi chùm (grapefruit) - ức chế CYP3A4 → tăng nồng độ",
+            "Không dùng trong hẹp van động mạch chủ nặng (có thể gây suy tim)",
+            "Uống với thức ăn hoặc không (tùy dạng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 giờ (immediate-release), 17 giờ (extended-release)",
+            "onset": "20 phút (immediate-release), 2-6 giờ (extended-release)",
+            "duration": "6-8 giờ (immediate-release), 24 giờ (extended-release)",
+            "protein_binding": "92-98%",
+            "metabolism": "Gan (CYP3A4) - chuyển hóa mạnh",
+            "clearance": "Chủ yếu qua gan, cần điều chỉnh ở suy gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén extended-release: không nghiền, không nhai.",
+        "black_box_warnings": "Dạng immediate-release KHÔNG được dùng để điều trị tăng huyết áp hoặc đau thắt ngực - có thể làm tăng nguy cơ nhồi máu cơ tim và tử vong. Chỉ dùng dạng extended-release cho các chỉ định này."
+
     },
     
     "Diltiazem": {
@@ -528,7 +561,39 @@ DRUG_DATABASE = {
             "Simvastatin: tăng nồng độ simvastatin",
             "Cyclosporine: tăng nồng độ cyclosporine"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Non-dihydropyridine calcium channel blocker (benzothiazepine). Ức chế kênh calci L-type trong cả màng tế bào cơ trơn mạch máu và màng tế bào cơ tim. Giãn mạch ngoại vi → giảm huyết áp. Ức chế dẫn truyền nhĩ thất và làm chậm nhịp tim → giảm nhịp tim. Giảm co bóp cơ tim nhẹ. Giãn mạch vành → tăng tưới máu vành. Được dùng trong tăng huyết áp, đau thắt ngực, rối loạn nhịp trên thất (như rung nhĩ), và kiểm soát nhịp tim.",
+        "monitoring": [
+            "Huyết áp và nhịp tim",
+            "ECG (theo dõi block nhĩ thất, nhịp tim chậm)",
+            "Dấu hiệu block nhĩ thất (nhịp tim chậm, chóng mặt, ngất) - đặc biệt quan trọng",
+            "Dấu hiệu suy tim (khó thở, phù) - có thể làm nặng suy tim",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Dấu hiệu quá liều (block nhĩ thất nặng, nhịp tim chậm nặng, hạ huyết áp)"
+        ],
+        "precautions": [
+            "KHÔNG dùng ở block nhĩ thất độ 2-3 hoặc sick sinus syndrome (trừ khi có máy tạo nhịp)",
+            "KHÔNG dùng ở suy tim nặng (có thể làm nặng suy tim do giảm co bóp)",
+            "Thận trọng ở suy gan (giảm chuyển hóa → tích lũy)",
+            "Tương tác với nhiều thuốc: tăng nồng độ với CYP3A4 inhibitors, giảm với inducers",
+            "Tránh bưởi chùm (grapefruit) - ức chế CYP3A4 → tăng nồng độ",
+            "Tương tác với beta-blockers → tăng nguy cơ block nhĩ thất, nhịp tim chậm",
+            "Tương tác với digoxin → tăng nồng độ digoxin (theo dõi nồng độ digoxin)",
+            "Giảm liều ở suy gan",
+            "Dạng extended-release: không nghiền, không nhai",
+            "Uống với thức ăn hoặc không (tùy dạng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-4.5 giờ (immediate-release), 5-10 giờ (extended-release)",
+            "onset": "30-60 phút (PO)",
+            "duration": "6-8 giờ (immediate-release), 12-24 giờ (extended-release)",
+            "protein_binding": "70-80%",
+            "metabolism": "Gan (CYP3A4, CYP2D6) - chuyển hóa mạnh",
+            "clearance": "Chủ yếu qua gan, cần điều chỉnh ở suy gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén extended-release: không nghiền, không nhai.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, block nhĩ thất và nhịp tim chậm có thể nặng, đặc biệt khi dùng với beta-blockers. Suy tim có thể nặng lên. Không dùng ở block nhĩ thất độ 2-3 hoặc sick sinus syndrome (trừ khi có máy tạo nhịp)."
+
     },
     
     "Verapamil": {
@@ -578,7 +643,40 @@ DRUG_DATABASE = {
             "Theophylline: tăng nồng độ theophylline",
             "Carbamazepine: tăng nồng độ carbamazepine"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Non-dihydropyridine calcium channel blocker (phenylalkylamine). Ức chế kênh calci L-type trong cả màng tế bào cơ trơn mạch máu và màng tế bào cơ tim. Giãn mạch ngoại vi → giảm huyết áp. Ức chế dẫn truyền nhĩ thất và làm chậm nhịp tim → giảm nhịp tim. Giảm co bóp cơ tim. Giãn mạch vành → tăng tưới máu vành. Được dùng trong tăng huyết áp, đau thắt ngực, rối loạn nhịp trên thất (như rung nhĩ), và migraine. Tương tự diltiazem nhưng mạnh hơn về ức chế co bóp.",
+        "monitoring": [
+            "Huyết áp và nhịp tim",
+            "ECG (theo dõi block nhĩ thất, nhịp tim chậm)",
+            "Dấu hiệu block nhĩ thất (nhịp tim chậm, chóng mặt, ngất) - đặc biệt quan trọng",
+            "Dấu hiệu suy tim (khó thở, phù) - có thể làm nặng suy tim",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Dấu hiệu quá liều (block nhĩ thất nặng, nhịp tim chậm nặng, hạ huyết áp)"
+        ],
+        "precautions": [
+            "KHÔNG dùng ở block nhĩ thất độ 2-3 hoặc sick sinus syndrome (trừ khi có máy tạo nhịp)",
+            "KHÔNG dùng ở suy tim nặng (có thể làm nặng suy tim do giảm co bóp)",
+            "Thận trọng ở suy gan (giảm chuyển hóa → tích lũy)",
+            "Tương tác với nhiều thuốc: tăng nồng độ với CYP3A4 inhibitors, giảm với inducers",
+            "Tránh bưởi chùm (grapefruit) - ức chế CYP3A4 → tăng nồng độ",
+            "Tương tác với beta-blockers → tăng nguy cơ block nhĩ thất, nhịp tim chậm",
+            "Tương tác với digoxin → tăng nồng độ digoxin (theo dõi nồng độ digoxin)",
+            "Tương tác với statin → tăng nguy cơ tiêu cơ vân",
+            "Giảm liều ở suy gan",
+            "Dạng extended-release: không nghiền, không nhai",
+            "Uống với thức ăn hoặc không (tùy dạng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-7 giờ (immediate-release), 12 giờ (extended-release)",
+            "onset": "1-2 giờ (PO)",
+            "duration": "6-8 giờ (immediate-release), 24 giờ (extended-release)",
+            "protein_binding": "90%",
+            "metabolism": "Gan (CYP3A4) - chuyển hóa mạnh",
+            "clearance": "Chủ yếu qua gan, cần điều chỉnh ở suy gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén extended-release: không nghiền, không nhai.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, block nhĩ thất và nhịp tim chậm có thể nặng, đặc biệt khi dùng với beta-blockers. Suy tim có thể nặng lên. Không dùng ở block nhĩ thất độ 2-3 hoặc sick sinus syndrome (trừ khi có máy tạo nhịp)."
+
     },
     
     "Isosorbide mononitrate": {
@@ -1943,7 +2041,36 @@ DRUG_DATABASE = {
             "Thuốc QT kéo dài: tăng nguy cơ loạn nhịp",
             "CYP2D6 inhibitors: tăng nồng độ ondansetron"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "5-HT3 (serotonin) receptor antagonist. Ức chế chọn lọc receptor 5-HT3 ở ngoại vi (dây thần kinh phế vị) và trung ương (chemoreceptor trigger zone trong area postrema). Ngăn cản tác dụng của serotonin, dẫn đến giảm nôn và buồn nôn. Được dùng trong dự phòng và điều trị nôn do hóa trị, xạ trị, và sau phẫu thuật. Hiệu quả hơn metoclopramide và không gây tác dụng phụ ngoại tháp như metoclopramide.",
+        "monitoring": [
+            "Tần suất nôn và buồn nôn",
+            "ECG (QT kéo dài - nguy cơ rối loạn nhịp tim, đặc biệt ở liều cao)",
+            "Điện giải (kali, magie) - hạ kali, hạ magie tăng nguy cơ QT kéo dài",
+            "Dấu hiệu tắc ruột (ondansetron có thể che dấu triệu chứng)",
+            "Chức năng gan (ALT, AST) - hiếm tăng men gan"
+        ],
+        "precautions": [
+            "QT kéo dài → không dùng ở bệnh nhân có QT kéo dài, rối loạn nhịp tim, hoặc dùng các thuốc kéo dài QT khác",
+            "Nguy cơ tăng ở liều cao (> 16mg đơn liều), hạ kali, hạ magie, suy gan",
+            "Có thể che dấu triệu chứng tắc ruột - thận trọng ở bệnh nhân có nguy cơ",
+            "Giảm liều ở suy gan nặng (giảm chuyển hóa)",
+            "Liều thường: 4-8mg (PO/IV), có thể lặp lại mỗi 8 giờ",
+            "Liều tối đa: 32mg/ngày (để giảm nguy cơ QT kéo dài)",
+            "Có thể dùng trước hóa trị/xạ trị để dự phòng",
+            "An toàn trong thai kỳ (category B)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-6 giờ (bình thường), kéo dài ở suy gan",
+            "onset": "30 phút (PO), ngay lập tức (IV)",
+            "duration": "4-8 giờ",
+            "protein_binding": "70-76%",
+            "metabolism": "Gan (CYP1A2, CYP2D6, CYP3A4) - chuyển hóa mạnh",
+            "clearance": "Chủ yếu qua gan, cần điều chỉnh ở suy gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Dung dịch tiêm: bảo quản ở nhiệt độ phòng, tránh ánh sáng.",
+        "black_box_warnings": "Nguy cơ QT kéo dài, có thể gây rối loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Nguy cơ tăng ở liều cao, hạ kali, hạ magie, suy gan, hoặc dùng với các thuốc kéo dài QT khác. Không dùng vượt quá liều khuyến cáo."
+
     },
     
     "Lansoprazole": {
@@ -2230,7 +2357,42 @@ DRUG_DATABASE = {
             "Thuốc an thần: tăng tác dụng an thần",
             "Quinidine: tăng nồng độ tramadol"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Opioid tổng hợp, tác dụng kép. Vừa là opioid mu-receptor agonist (yếu hơn morphine) vừa ức chế tái hấp thu serotonin và norepinephrine. Giảm đau thông qua cả hai cơ chế. Độc tính opioid thấp hơn morphine nhưng vẫn có nguy cơ ức chế hô hấp và nghiện. Được dùng trong đau vừa đến nặng. Có nguy cơ co giật, đặc biệt khi dùng liều cao hoặc với các thuốc làm giảm ngưỡng co giật.",
+        "monitoring": [
+            "Mức độ đau (thang điểm đau)",
+            "Nhịp thở và độ bão hòa oxy (SpO2) - nguy cơ ức chế hô hấp",
+            "Mức độ ý thức",
+            "Co giật (nguy cơ tăng ở liều cao, dùng với SSRI/SNRI, hoặc bệnh nhân có tiền sử co giật)",
+            "Hội chứng serotonin (khi dùng với SSRI/SNRI: kích động, sốt, run, cứng cơ)",
+            "Dấu hiệu nghiện/lệ thuộc",
+            "Chức năng thận (điều chỉnh liều ở suy thận nặng)",
+            "Chức năng gan (giảm liều ở suy gan nặng)"
+        ],
+        "precautions": [
+            "Nguy cơ co giật - tăng ở: liều cao (>400mg/ngày), dùng với SSRI/SNRI, MAOI, tricyclic antidepressant, bệnh nhân có tiền sử co giật",
+            "KHÔNG dùng với MAOI (nguy cơ hội chứng serotonin nặng, có thể tử vong)",
+            "Thận trọng với SSRI/SNRI (nguy cơ hội chứng serotonin và co giật)",
+            "Nguy cơ ức chế hô hấp - thấp hơn morphine nhưng vẫn có",
+            "Không dùng với rượu, benzodiazepine, thuốc an thần (tăng nguy cơ ức chế hô hấp)",
+            "Nguy cơ nghiện/lệ thuộc - chỉ dùng khi thực sự cần thiết, không dùng kéo dài",
+            "Giảm liều ở suy thận nặng (CrCl < 30)",
+            "Giảm liều ở suy gan nặng (giảm chuyển hóa)",
+            "Liều tối đa: 400mg/ngày (để giảm nguy cơ co giật)",
+            "Người cao tuổi: giảm liều (tăng nhạy cảm)",
+            "Không dùng cho trẻ em < 12 tuổi (nguy cơ ức chế hô hấp)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6 giờ (tramadol), 7 giờ (active metabolite O-desmethyltramadol)",
+            "onset": "1 giờ (PO)",
+            "duration": "4-6 giờ",
+            "protein_binding": "20%",
+            "metabolism": "Gan (CYP2D6, CYP3A4) → active metabolite O-desmethyltramadol",
+            "clearance": "Chủ yếu qua thận, cần điều chỉnh ở suy thận nặng"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Viên nén: tránh ẩm, để xa tầm tay trẻ em.",
+        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt khi dùng với benzodiazepine, rượu, hoặc thuốc an thần khác. Nguy cơ co giật tăng ở liều cao và khi dùng với SSRI/SNRI. Nguy cơ hội chứng serotonin khi dùng với MAOI hoặc SSRI/SNRI, có thể tử vong."
+
     },
     
     "Naproxen": {
@@ -2383,7 +2545,39 @@ DRUG_DATABASE = {
             "Rượu: tăng nguy cơ ức chế hô hấp",
             "Cimetidine: tăng nồng độ morphine"
         ],
-        "pregnancy": "C - D trong 3 tháng cuối (gây hội chứng cai ở trẻ sơ sinh)"
+        "pregnancy": "C - D trong 3 tháng cuối (gây hội chứng cai ở trẻ sơ sinh)",
+        "mechanism_of_action": "Opioid mu-receptor agonist mạnh. Gắn với mu-opioid receptors trong hệ thần kinh trung ương và ngoại vi, kích hoạt tín hiệu G-protein, dẫn đến giảm dẫn truyền đau, giảm nhận thức đau, an thần, và ức chế hô hấp. Tăng ngưỡng đau, giảm đáp ứng cảm xúc với đau. Tác động lên brainstem → giảm trung tâm hô hấp. Tác động lên đường tiêu hóa → giảm nhu động ruột, tăng trương lực cơ thắt.",
+        "monitoring": [
+            "Nhịp thở và độ bão hòa oxy (SpO2) liên tục - quan trọng nhất",
+            "Mức độ đau (thang điểm đau)",
+            "Mức độ ý thức (dấu hiệu quá liều: giảm ý thức, thở chậm)",
+            "Huyết áp và nhịp tim (có thể gây hạ huyết áp, nhịp tim chậm)",
+            "Co đồng tử (miosis) - dấu hiệu đặc trưng của opioid",
+            "Dấu hiệu táo bón (rất thường gặp, cần dự phòng)",
+            "Dấu hiệu nghiện/lệ thuộc (nếu dùng kéo dài)",
+            "Chức năng thận (tích lũy ở suy thận do tích tụ active metabolite)"
+        ],
+        "precautions": [
+            "Nguy cơ ức chế hô hấp NẶNG - đặc biệt ở liều đầu tiên, người cao tuổi, suy thận, suy gan",
+            "Khởi đầu với liều thấp, tăng dần theo đáp ứng",
+            "Cần có naloxone sẵn sàng để đảo ngược nếu quá liều",
+            "Tránh dùng với benzodiazepine, rượu, thuốc an thần (tăng nguy cơ ức chế hô hấp nặng)",
+            "Dự phòng táo bón từ đầu (dùng thuốc nhuận tràng)",
+            "Thận trọng ở suy thận (tích lũy active metabolite morphine-6-glucuronide - có thể gây ức chế hô hấp kéo dài)",
+            "Thận trọng ở suy gan (giảm chuyển hóa)",
+            "Nguy cơ nghiện/lệ thuộc nếu dùng kéo dài - cần đánh giá định kỳ",
+            "Không dùng trong tăng áp lực nội sọ (tăng CO2 → tăng áp lực nội sọ)",
+            "Không dùng trong tắc ruột cơ học (tăng trương lực cơ thắt)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-4 giờ",
+            "onset": "IV: 5-10 phút; IM: 15-30 phút; PO: 30-60 phút",
+            "duration": "3-7 giờ (IV), 4-7 giờ (IM), 3-6 giờ (PO)",
+            "metabolism": "Gan: glucuronidation → morphine-3-glucuronide (không hoạt động) và morphine-6-glucuronide (hoạt động mạnh hơn, tích lũy ở suy thận)",
+            "clearance": "Chủ yếu qua thận (morphine-6-glucuronide tích lũy ở suy thận)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để xa tầm tay trẻ em (nguy cơ quá liều).",
+        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt khi dùng với benzodiazepine hoặc rượu. Morphine có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng trong 3 tháng cuối thai kỳ."
     },
     
     "Codeine": {
@@ -2747,7 +2941,42 @@ DRUG_DATABASE = {
             "Warfarin: giảm tác dụng warfarin",
             "Oral contraceptives: giảm hiệu quả"
         ],
-        "pregnancy": "D"
+        "pregnancy": "D",
+        "mechanism_of_action": "Thuốc chống co giật và ổn định tâm trạng. Ức chế kênh natri voltage-gated trong màng tế bào thần kinh, ngăn cản sự lan truyền của các xung động bất thường. Cũng có thể ức chế giải phóng glutamate và điều hòa dòng calci. Tự cảm ứng enzyme (auto-induction) - tăng chuyển hóa của chính nó và các thuốc khác. Được dùng trong điều trị co giật cục bộ, co giật toàn thể, đau dây thần kinh sinh ba (trigeminal neuralgia), và rối loạn lưỡng cực. Có nhiều tương tác thuốc do cảm ứng enzyme.",
+        "monitoring": [
+            "Nồng độ carbamazepine trong máu (therapeutic range: 4-12 mcg/ml) - QUAN TRỌNG",
+            "Tần suất và mức độ co giật",
+            "Dấu hiệu độc tính (chóng mặt, ataxia, lú lẫn, buồn nôn)",
+            "Công thức máu (giảm bạch cầu, giảm tiểu cầu, thiếu máu bất sản - nguy hiểm)",
+            "Dấu hiệu hội chứng Stevens-Johnson (phát ban nặng) - nguy hiểm",
+            "Chức năng gan (ALT, AST) - có thể tăng men gan, hiếm viêm gan",
+            "Nồng độ natri (hạ natri máu - thường gặp)",
+            "Chức năng thận"
+        ],
+        "precautions": [
+            "Tuân thủ chặt chẽ liều và lịch dùng",
+            "KHÔNG được ngừng đột ngột (nguy cơ co giật)",
+            "Nồng độ trong máu cần được theo dõi định kỳ",
+            "Nguy cơ giảm bạch cầu, giảm tiểu cầu, thiếu máu bất sản (nguy hiểm) - theo dõi công thức máu",
+            "Nguy cơ hội chứng Stevens-Johnson - ngừng ngay nếu có phát ban",
+            "Hạ natri máu thường gặp - theo dõi natri",
+            "Tự cảm ứng enzyme → liều cần tăng dần theo thời gian",
+            "Tương tác với nhiều thuốc: giảm hiệu quả thuốc tránh thai, warfarin, và các thuốc khác (do cảm ứng enzyme)",
+            "Tương tác với nhiều thuốc: tăng nồng độ với erythromycin, cimetidine (do ức chế enzyme)",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Thận trọng ở suy gan"
+        ],
+        "pharmacokinetics": {
+            "half_life": "25-65 giờ (bình thường), giảm xuống 12-17 giờ sau khi tự cảm ứng enzyme",
+            "onset": "Vài giờ đến vài ngày",
+            "duration": "Dài (phụ thuộc liều)",
+            "protein_binding": "75%",
+            "metabolism": "Gan (CYP3A4) - tự cảm ứng enzyme, cũng cảm ứng các enzyme khác",
+            "clearance": "Gan, bị ảnh hưởng bởi tự cảm ứng và các thuốc tương tác"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
+        "black_box_warnings": "Nguy cơ hội chứng Stevens-Johnson và hoại tử thượng bì nhiễm độc (TEN), có thể tử vong. Nguy cơ thiếu máu bất sản và giảm bạch cầu nghiêm trọng. Ngừng ngay nếu có phát ban hoặc dấu hiệu giảm bạch cầu. Nguy cơ tự sát và hành vi tự sát. Ngừng đột ngột có thể gây co giật."
+
     },
     
     "Fluoxetine": {
@@ -2885,7 +3114,43 @@ DRUG_DATABASE = {
             "Insulin/OAD: tăng đường huyết",
             "Vaccines: giảm hiệu quả vaccine"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Glucocorticoid tổng hợp, tác dụng trung bình. Gắn với glucocorticoid receptor trong tế bào, điều hòa biểu hiện gen, ức chế tổng hợp các cytokine gây viêm (TNF-α, IL-1, IL-6), giảm di chuyển bạch cầu đến vị trí viêm, ức chế phospholipase A2 → giảm prostaglandin và leukotriene. Có tác dụng mineralocorticoid nhẹ (ít hơn hydrocortisone). Ức chế miễn dịch. Được dùng trong nhiều tình trạng viêm và tự miễn. Tác dụng tương tự prednisone nhưng prednisolone là dạng hoạt động (không cần chuyển hóa ở gan).",
+        "monitoring": [
+            "Đường huyết (tăng đường huyết, đặc biệt ở bệnh nhân đái tháo đường)",
+            "Huyết áp (tăng huyết áp)",
+            "Điện giải (natri, kali)",
+            "Dấu hiệu nhiễm trùng (ức chế miễn dịch)",
+            "Dạ dày (dấu hiệu loét, xuất huyết)",
+            "Tâm thần (rối loạn tâm thần, mất ngủ, kích động)",
+            "Xương (loãng xương nếu dùng kéo dài)",
+            "Mắt (tăng nhãn áp, đục thủy tinh thể)",
+            "Chức năng thượng thận (ức chế trục HPA nếu dùng kéo dài)"
+        ],
+        "precautions": [
+            "KHÔNG được ngừng đột ngột nếu dùng > 1 tuần (có thể gây suy thượng thận cấp - nguy hiểm tính mạng)",
+            "Phải giảm liều dần dần (tapering) nếu dùng > 1 tuần",
+            "Ức chế miễn dịch - tăng nguy cơ nhiễm trùng, đặc biệt nhiễm nấm, lao",
+            "Không dùng trong nhiễm nấm hệ thống không điều trị",
+            "Thận trọng ở bệnh nhân đái tháo đường (tăng đường huyết)",
+            "Thận trọng ở bệnh nhân loét dạ dày (tăng nguy cơ)",
+            "Thận trọng ở bệnh nhân tăng huyết áp",
+            "Dùng với thức ăn để giảm kích ứng dạ dày",
+            "Dự phòng loãng xương nếu dùng kéo dài (bổ sung calcium, vitamin D)",
+            "Theo dõi dấu hiệu nhiễm trùng (ức chế miễn dịch có thể che dấu triệu chứng)",
+            "Liều thay thế: 5-7.5mg/ngày, liều chống viêm: 20-60mg/ngày"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (ngắn, nhưng tác dụng kéo dài hơn do tác động gen)",
+            "onset": "1-2 giờ (PO)",
+            "duration": "18-36 giờ",
+            "protein_binding": "90-95%",
+            "metabolism": "Gan (CYP3A4) - prednisolone là dạng hoạt động (khác prednisone)",
+            "clearance": "Gan, không cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, ngừng đột ngột sau khi dùng kéo dài có thể gây suy thượng thận cấp, có thể tử vong. Ức chế miễn dịch mạnh có thể làm nặng nhiễm trùng hoặc gây nhiễm trùng cơ hội."
+
     },
     
     "Folic Acid": {
@@ -3284,7 +3549,45 @@ DRUG_DATABASE = {
             "Folic acid: giảm nồng độ phenytoin",
             "Many drugs: cảm ứng CYP450, giảm nồng độ nhiều thuốc"
         ],
-        "pregnancy": "D - Nguy cơ dị tật thai nhi"
+        "pregnancy": "D - Nguy cơ dị tật thai nhi",
+        "mechanism_of_action": "Thuốc chống co giật, ổn định màng tế bào. Ức chế kênh natri voltage-gated trong màng tế bào thần kinh, ngăn cản sự lan truyền của các xung động bất thường. Chỉ tác động lên các tế bào đang hoạt động mạnh (như trong co giật), không ảnh hưởng đến hoạt động bình thường. Điều hòa dòng calci và có thể ức chế giải phóng glutamate. Được dùng trong điều trị co giật cục bộ, co giật toàn thể, và status epilepticus. Cũng được dùng trong rối loạn nhịp tim (nhưng ít dùng hơn).",
+        "monitoring": [
+            "Nồng độ phenytoin trong máu (therapeutic range: 10-20 mcg/ml, free: 1-2 mcg/ml) - QUAN TRỌNG",
+            "Tần suất và mức độ co giật",
+            "Dấu hiệu độc tính (nystagmus ở >20 mcg/ml, ataxia ở >30 mcg/ml, lú lẫn ở >40 mcg/ml)",
+            "Chức năng gan (ALT, AST, bilirubin) - có thể tăng men gan, hiếm viêm gan nặng",
+            "Công thức máu (giảm bạch cầu, giảm tiểu cầu, thiếu máu megaloblastic do thiếu folate)",
+            "Nồng độ folate và vitamin D (phenytoin làm giảm)",
+            "Chức năng thận (creatinine)",
+            "Dấu hiệu hội chứng Stevens-Johnson (phát ban nặng) - nguy hiểm",
+            "Răng và nướu (tăng sản nướu)",
+            "Xương (loãng xương do giảm vitamin D)"
+        ],
+        "precautions": [
+            "Tuân thủ chặt chẽ liều và lịch dùng - bỏ liều có thể gây co giật",
+            "KHÔNG được ngừng đột ngột (nguy cơ status epilepticus)",
+            "Nồng độ trong máu cần được theo dõi định kỳ - có mối quan hệ không tuyến tính (saturable kinetics)",
+            "Liều tăng nhỏ có thể làm nồng độ tăng rất nhiều ở liều cao (Michaelis-Menten kinetics)",
+            "Tương tác với nhiều thuốc: giảm hiệu quả thuốc tránh thai, warfarin (cả hai đều tăng hoặc giảm tùy thuốc)",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không nghiền viên nang hoặc viên nén (giảm hấp thu)",
+            "Bổ sung folate và vitamin D khi dùng kéo dài",
+            "Nguy cơ hội chứng Stevens-Johnson - ngừng ngay nếu có phát ban",
+            "Thận trọng ở suy gan (giảm chuyển hóa)",
+            "Liều IV: truyền chậm (không quá 50mg/phút) để tránh hạ huyết áp, rối loạn nhịp",
+            "Không pha trong D5W (kết tủa), chỉ dùng NS"
+        ],
+        "pharmacokinetics": {
+            "half_life": "22 giờ (bình thường), dài hơn ở liều cao (saturable kinetics)",
+            "onset": "30-60 phút (PO), 15-30 phút (IV)",
+            "duration": "Dài (phụ thuộc liều)",
+            "protein_binding": "90% (rất cao), chỉ free phenytoin mới hoạt động",
+            "metabolism": "Gan (CYP2C9, CYP2C19) - chuyển hóa mạnh",
+            "clearance": "Gan, có thể bị ảnh hưởng bởi tình trạng dinh dưỡng, tuổi tác"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dung dịch IV: bảo quản ở nhiệt độ phòng, không đông lạnh, chỉ dùng NS để pha.",
+        "black_box_warnings": "Nguy cơ hội chứng Stevens-Johnson và hoại tử thượng bì nhiễm độc (TEN), có thể tử vong. Ngừng ngay nếu có phát ban. Nguy cơ tự sát và hành vi tự sát. Giảm bạch cầu, giảm tiểu cầu có thể nặng. Ngừng đột ngột có thể gây status epilepticus."
+
     },
     
     "Valproate": {
@@ -3364,7 +3667,41 @@ DRUG_DATABASE = {
         "interactions": [
             "Ít tương tác - không cảm ứng hoặc ức chế CYP450"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Thuốc chống co giật thế hệ mới, cơ chế chưa hoàn toàn rõ ràng. Gắn với protein SV2A (synaptic vesicle protein 2A) trong tế bào thần kinh, ức chế giải phóng chất dẫn truyền thần kinh từ túi synap, giảm hoạt động bất thường của tế bào thần kinh. Không ức chế kênh natri hoặc calci như các thuốc chống co giật cổ điển. Có phổ rộng: hiệu quả với co giật cục bộ và co giật toàn thể. Được dùng như thuốc bổ trợ hoặc đơn trị liệu. Ít tương tác thuốc hơn phenytoin.",
+        "monitoring": [
+            "Tần suất và mức độ co giật",
+            "Tâm thần (kích động, lo âu, trầm cảm, suy nghĩ tự sát) - tác dụng phụ thần kinh tâm thần quan trọng",
+            "Dấu hiệu hành vi bất thường (thay đổi tâm trạng, kích động)",
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều ở suy thận",
+            "Công thức máu (hiếm giảm bạch cầu, giảm tiểu cầu)",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Mệt mỏi, chóng mặt (thường gặp)",
+            "Dấu hiệu nhiễm trùng (hiếm giảm bạch cầu)"
+        ],
+        "precautions": [
+            "Tác dụng phụ thần kinh tâm thần: kích động, lo âu, trầm cảm, suy nghĩ tự sát - theo dõi sát, đặc biệt ở trẻ em và thanh thiếu niên",
+            "Nguy cơ hành vi tự sát - cảnh báo bệnh nhân và gia đình",
+            "KHÔNG được ngừng đột ngột (nguy cơ co giật)",
+            "Phải điều chỉnh liều ở suy thận (giảm liều và tăng khoảng cách liều)",
+            "Khởi đầu với liều thấp, tăng dần để giảm tác dụng phụ",
+            "Có thể gây mệt mỏi, chóng mặt - thận trọng khi lái xe, vận hành máy móc",
+            "Tương tác thuốc ít hơn các thuốc chống co giật cổ điển (không ức chế CYP450)",
+            "Có thể dùng với hoặc không có thức ăn",
+            "Thận trọng ở bệnh nhân có tiền sử bệnh tâm thần",
+            "Giảm liều ở người cao tuổi (nếu có suy thận)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6-8 giờ (bình thường), 10-11 giờ (suy thận nặng)",
+            "onset": "Nhanh (vài giờ đến vài ngày)",
+            "duration": "Dài (phụ thuộc liều)",
+            "protein_binding": "< 10% (rất thấp)",
+            "metabolism": "Enzyme huyết tương (không qua CYP450) - ít tương tác",
+            "clearance": "Chủ yếu qua thận (66% bài tiết nguyên dạng), cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Viên nén: tránh ẩm.",
+        "black_box_warnings": "Nguy cơ hành vi tự sát và ý tưởng tự sát. Cảnh báo bệnh nhân và gia đình về các dấu hiệu kích động, lo âu, trầm cảm, thay đổi tâm trạng, và hành vi bất thường. Ngừng đột ngột có thể gây co giật."
+
     },
     
     "Lamotrigine": {
@@ -3699,7 +4036,42 @@ DRUG_DATABASE = {
             "Insulin/OAD: tăng đường huyết",
             "Vaccines: giảm hiệu quả vaccine"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Glucocorticoid tổng hợp tác dụng dài và mạnh (tương đương 25-30mg hydrocortisone). Gắn với glucocorticoid receptor trong tế bào, điều hòa biểu hiện gen, ức chế tổng hợp các cytokine gây viêm (TNF-α, IL-1, IL-6), giảm di chuyển bạch cầu đến vị trí viêm, ức chế phospholipase A2 → giảm prostaglandin và leukotriene. Ức chế miễn dịch mạnh. Tác dụng chống viêm và ức chế miễn dịch mạnh hơn hydrocortisone. Thời gian bán thải dài (36-72 giờ) do ít gắn với protein hơn hydrocortisone.",
+        "monitoring": [
+            "Đường huyết (tăng đường huyết, đặc biệt ở bệnh nhân đái tháo đường)",
+            "Huyết áp (tăng huyết áp)",
+            "Dấu hiệu nhiễm trùng (ức chế miễn dịch)",
+            "Điện giải (hạ kali, giữ natri)",
+            "Tâm thần (rối loạn tâm thần, mất ngủ, kích động)",
+            "Dạ dày (dấu hiệu loét, xuất huyết)",
+            "Xương (loãng xương nếu dùng kéo dài)",
+            "Mắt (tăng nhãn áp, đục thủy tinh thể)",
+            "Chức năng thượng thận (ức chế trục HPA nếu dùng kéo dài)"
+        ],
+        "precautions": [
+            "KHÔNG được ngừng đột ngột nếu dùng > 1 tuần (có thể gây suy thượng thận cấp - nguy hiểm tính mạng)",
+            "Phải giảm liều dần dần (tapering) nếu dùng > 1 tuần",
+            "Ức chế miễn dịch mạnh - tăng nguy cơ nhiễm trùng, đặc biệt nhiễm nấm, lao",
+            "Không dùng trong nhiễm nấm hệ thống không điều trị (có thể làm nặng)",
+            "Thận trọng ở bệnh nhân đái tháo đường (tăng đường huyết)",
+            "Thận trọng ở bệnh nhân loét dạ dày (tăng nguy cơ)",
+            "Thận trọng ở bệnh nhân tăng huyết áp (có thể tăng huyết áp)",
+            "Dùng với thức ăn để giảm kích ứng dạ dày",
+            "Dự phòng loãng xương nếu dùng kéo dài (bổ sung calcium, vitamin D)",
+            "Theo dõi dấu hiệu nhiễm trùng (ức chế miễn dịch có thể che dấu triệu chứng)",
+            "Thời gian bán thải dài → ức chế trục HPA lâu hơn hydrocortisone"
+        ],
+        "pharmacokinetics": {
+            "half_life": "36-72 giờ (rất dài)",
+            "onset": "1-2 giờ (PO/IV)",
+            "duration": "36-72 giờ",
+            "protein_binding": "77% (thấp hơn hydrocortisone)",
+            "metabolism": "Gan (CYP3A4)",
+            "clearance": "Gan, không cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, ngừng đột ngột sau khi dùng kéo dài có thể gây suy thượng thận cấp, có thể tử vong. Ức chế miễn dịch mạnh có thể làm nặng nhiễm trùng hoặc gây nhiễm trùng cơ hội."
     },
     
     "Methylprednisolone": {
@@ -3776,7 +4148,40 @@ DRUG_DATABASE = {
             "Warfarin: thay đổi tác dụng chống đông",
             "NSAID: tăng nguy cơ loét dạ dày"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Glucocorticoid tự nhiên (cortisol), tác dụng ngắn. Gắn với glucocorticoid receptor trong tế bào, điều hòa biểu hiện gen, ức chế tổng hợp các cytokine gây viêm (TNF-α, IL-1, IL-6), giảm di chuyển bạch cầu đến vị trí viêm, ức chế phospholipase A2. Có tác dụng mineralocorticoid (giữ natri, thải kali) - mạnh hơn dexamethasone. Được dùng trong suy thượng thận để thay thế cortisol thiếu hụt. Tác dụng chống viêm và ức chế miễn dịch yếu hơn dexamethasone nhưng có tác dụng mineralocorticoid.",
+        "monitoring": [
+            "Đường huyết (tăng đường huyết)",
+            "Huyết áp (tăng huyết áp, đặc biệt do giữ natri)",
+            "Điện giải (natri, kali - giữ natri, thải kali)",
+            "Dấu hiệu nhiễm trùng (ức chế miễn dịch)",
+            "Dạ dày (dấu hiệu loét, xuất huyết)",
+            "Dấu hiệu suy thượng thận nếu ngừng đột ngột (mệt mỏi, hạ huyết áp, hạ natri máu)",
+            "Dấu hiệu Cushing nếu dùng liều cao kéo dài",
+            "Xương (loãng xương nếu dùng kéo dài)"
+        ],
+        "precautions": [
+            "Trong suy thượng thận: KHÔNG được quên liều hoặc ngừng đột ngột (có thể gây suy thượng thận cấp - nguy hiểm tính mạng)",
+            "Tăng liều trong stress (phẫu thuật, nhiễm trùng nặng) - cần tăng gấp 2-3 lần liều thay thế",
+            "Giữ natri mạnh hơn dexamethasone → cần theo dõi natri, kali",
+            "Không dùng trong nhiễm nấm hệ thống không điều trị",
+            "Thận trọng ở bệnh nhân suy tim (giữ natri → phù)",
+            "Thận trọng ở bệnh nhân tăng huyết áp (giữ natri → tăng huyết áp)",
+            "Thận trọng ở bệnh nhân đái tháo đường (tăng đường huyết)",
+            "Dùng với thức ăn để giảm kích ứng dạ dày",
+            "Thời gian bán thải ngắn → cần chia liều trong ngày (2-3 lần/ngày) cho thay thế",
+            "Trong stress dosing: dùng liều cao IV mỗi 6-8 giờ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "8-12 giờ",
+            "onset": "IV: 1 giờ; PO: 1-2 giờ",
+            "duration": "8-12 giờ",
+            "protein_binding": "90-95% (cao)",
+            "metabolism": "Gan (CYP3A4)",
+            "clearance": "Gan, không cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng bột pha tiêm: bảo quản ở nhiệt độ phòng, tránh ánh sáng.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, trong suy thượng thận, quên liều hoặc ngừng đột ngột có thể gây suy thượng thận cấp, có thể tử vong. Trong stress, không tăng liều có thể dẫn đến suy thượng thận cấp."
     },
     
     "Betamethasone": {
@@ -3812,7 +4217,42 @@ DRUG_DATABASE = {
             "Warfarin: thay đổi tác dụng chống đông",
             "NSAID: tăng nguy cơ loét dạ dày"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Glucocorticoid tổng hợp tác dụng dài và mạnh (tương đương 25-30mg hydrocortisone, mạnh hơn dexamethasone một chút). Gắn với glucocorticoid receptor trong tế bào, điều hòa biểu hiện gen, ức chế tổng hợp các cytokine gây viêm (TNF-α, IL-1, IL-6), giảm di chuyển bạch cầu đến vị trí viêm. Ức chế miễn dịch mạnh. Có tác dụng mineralocorticoid tối thiểu (ít hơn hydrocortisone và dexamethasone). Được dùng trong nhiều tình trạng viêm và tự miễn. Thường dùng để thúc đẩy trưởng thành phổi ở thai nhi (khi có nguy cơ sinh non).",
+        "monitoring": [
+            "Đường huyết (tăng đường huyết)",
+            "Huyết áp (tăng huyết áp)",
+            "Điện giải (natri, kali)",
+            "Dấu hiệu nhiễm trùng (ức chế miễn dịch)",
+            "Dạ dày (dấu hiệu loét)",
+            "Tâm thần (rối loạn tâm thần)",
+            "Xương (loãng xương nếu dùng kéo dài)",
+            "Mắt (tăng nhãn áp, đục thủy tinh thể)",
+            "Trong thai kỳ: theo dõi thai nhi nếu dùng để thúc đẩy trưởng thành phổi"
+        ],
+        "precautions": [
+            "KHÔNG được ngừng đột ngột nếu dùng > 1 tuần (có thể gây suy thượng thận cấp)",
+            "Phải giảm liều dần dần (tapering) nếu dùng > 1 tuần",
+            "Ức chế miễn dịch mạnh - tăng nguy cơ nhiễm trùng",
+            "Không dùng trong nhiễm nấm hệ thống không điều trị",
+            "Thận trọng ở bệnh nhân đái tháo đường (tăng đường huyết)",
+            "Thận trọng ở bệnh nhân loét dạ dày",
+            "Dùng với thức ăn để giảm kích ứng dạ dày",
+            "Dự phòng loãng xương nếu dùng kéo dài",
+            "Trong thai kỳ: có thể dùng để thúc đẩy trưởng thành phổi (24-34 tuần) nhưng thận trọng",
+            "Theo dõi dấu hiệu nhiễm trùng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "36-54 giờ (rất dài)",
+            "onset": "1-2 giờ (PO/IM)",
+            "duration": "36-54 giờ",
+            "protein_binding": "64% (thấp hơn hydrocortisone)",
+            "metabolism": "Gan (CYP3A4)",
+            "clearance": "Gan, không cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, ngừng đột ngột sau khi dùng kéo dài có thể gây suy thượng thận cấp, có thể tử vong. Ức chế miễn dịch mạnh có thể làm nặng nhiễm trùng."
+
     },
     
     # ========== ANTIVIRALS ==========
@@ -4363,7 +4803,42 @@ DRUG_DATABASE = {
             "Theophylline: tăng nồng độ theophylline",
             "Cyclosporine: tăng nồng độ cyclosporine"
         ],
-        "pregnancy": "D - Chống chỉ định"
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Fluoroquinolone kháng sinh phổ rộng. Ức chế DNA gyrase (ở vi khuẩn Gram-âm) và topoisomerase IV (ở vi khuẩn Gram-dương), enzyme cần thiết cho sao chép và sửa chữa DNA. Dẫn đến tổn thương DNA và chết tế bào vi khuẩn. Phổ kháng khuẩn: Gram-âm mạnh (Enterobacteriaceae, Pseudomonas aeruginosa, H. influenzae, Neisseria), một số Gram-dương (không phải MRSA), và một số vi khuẩn không điển hình (Legionella, Mycoplasma). Kháng thuốc phát triển nhanh nếu dùng không đúng.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Tendon (gân) - đau, sưng, đứt gân (đặc biệt gân Achilles)",
+            "Thần kinh trung ương (co giật, kích động, mất ngủ, lo âu, trầm cảm)",
+            "Tim mạch (QT kéo dài, rối loạn nhịp tim)",
+            "Đường huyết (tăng hoặc hạ đường huyết - đặc biệt với sulfonylurea)",
+            "Chức năng thận (creatinine) - điều chỉnh liều ở suy thận",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan nặng"
+        ],
+        "precautions": [
+            "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles) - có thể xảy ra bất cứ lúc nào, kể cả sau khi ngừng thuốc",
+            "Nguy cơ tăng ở: > 60 tuổi, dùng corticosteroid, ghép thận, ghép tim, phổi, hoạt động thể lực",
+            "NGỪNG NGAY nếu có đau, sưng gân",
+            "QT kéo dài → không dùng với các thuốc kéo dài QT khác, bệnh nhân có tiền sử rối loạn nhịp",
+            "Co giật → không dùng ở bệnh nhân có tiền sử co giật, tránh dùng với NSAID",
+            "Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp, dùng kem chống nắng",
+            "Tương tác với nhiều thuốc: giảm hấp thu với antacid, sucralfate, sắt, kẽm (cách 2 giờ)",
+            "Hạ đường huyết → thận trọng với sulfonylurea",
+            "Không dùng cho trẻ em < 18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác) - nguy cơ tổn thương sụn",
+            "Tránh dùng với sữa, sản phẩm sữa (giảm hấp thu)",
+            "Uống nhiều nước để tránh kết tinh trong nước tiểu"
+        ],
+        "pharmacokinetics": {
+            "half_life": "4 giờ (bình thường), 5-7 giờ (suy thận)",
+            "onset": "1-2 giờ (PO), ngay lập tức (IV)",
+            "duration": "q12h (PO/IV), q8h cho Pseudomonas",
+            "protein_binding": "20-40%",
+            "metabolism": "Gan (CYP1A2) - một phần",
+            "clearance": "Chủ yếu qua thận (40-60% bài tiết nguyên dạng), cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
+        "black_box_warnings": "Tăng nguy cơ viêm gân và đứt gân ở mọi lứa tuổi. Nguy cơ tăng ở bệnh nhân > 60 tuổi, dùng corticosteroid, ghép cơ quan. Nguy cơ tổn thương thần kinh ngoại biên không hồi phục. Nguy cơ tác dụng phụ nghiêm trọng về gân, cơ, khớp, và thần kinh có thể xảy ra cùng lúc. Nguy cơ làm nặng bệnh nhược cơ. Tăng nguy cơ rối loạn tâm thần và hành vi tự sát."
+
     },
     
     "Doxycycline": {
@@ -4410,7 +4885,40 @@ DRUG_DATABASE = {
             "Digoxin: tăng nồng độ digoxin",
             "Phenytoin/Carbamazepine: giảm nồng độ doxycycline"
         ],
-        "pregnancy": "D - Chống chỉ định trong 3 tháng cuối"
+        "pregnancy": "D - Chống chỉ định trong 3 tháng cuối",
+        "mechanism_of_action": "Tetracycline kháng sinh phổ rộng. Ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 30S của ribosome, ngăn cản gắn aminoacyl-tRNA. Phổ kháng khuẩn: Gram-dương, Gram-âm, vi khuẩn không điển hình (Chlamydia, Mycoplasma, Rickettsia, Borrelia), và một số ký sinh trùng (Plasmodium). Không hiệu quả với Pseudomonas hoặc Proteus. Đặc biệt hiệu quả với vi khuẩn không điển hình và được dùng trong nhiễm trùng đường hô hấp, Lyme disease, và sốt rét.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Dạ dày-ruột (buồn nôn, nôn, tiêu chảy, viêm thực quản)",
+            "Da (tăng độ nhạy cảm với ánh sáng, phát ban)",
+            "Răng và xương (ở trẻ em < 8 tuổi: ố vàng răng vĩnh viễn, chậm phát triển xương)",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan, tăng áp lực nội sọ giả (ở phụ nữ)",
+            "Thận (không tích lũy ở suy thận, nhưng theo dõi)"
+        ],
+        "precautions": [
+            "KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - gây ố vàng răng vĩnh viễn, chậm phát triển xương",
+            "Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp, dùng kem chống nắng, mặc quần áo che phủ",
+            "Uống với nhiều nước (ít nhất 200ml) và ở tư thế đứng để tránh viêm thực quản (đau khi nuốt, khó nuốt)",
+            "KHÔNG uống nằm ngửa hoặc trước khi ngủ",
+            "Tương tác với nhiều thuốc và thực phẩm: giảm hấp thu với antacid, sắt, canxi, magie, kẽm, sữa (cách 2 giờ)",
+            "Tương tác với warfarin → tăng nguy cơ chảy máu (theo dõi INR)",
+            "Tương tác với thuốc tránh thai → giảm hiệu quả (dùng biện pháp tránh thai khác)",
+            "Tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị) - đặc biệt ở phụ nữ, ngừng nếu có",
+            "Không dùng trong 3 tháng cuối thai kỳ (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)",
+            "Uống với thức ăn để giảm kích ứng dạ dày (nhưng giảm hấp thu một phần)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "18-22 giờ (dài)",
+            "onset": "1-2 giờ (PO), ngay lập tức (IV)",
+            "duration": "q12h hoặc q24h (PO/IV)",
+            "protein_binding": "80-90%",
+            "metabolism": "Gan (một phần), bài tiết một phần nguyên dạng",
+            "clearance": "Gan và thận, KHÔNG tích lũy ở suy thận (khác với tetracycline cũ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nang: tránh ẩm. Bảo quản tốt hơn các tetracycline cũ (ít bị hỏng).",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, ố vàng răng vĩnh viễn ở trẻ em < 8 tuổi là không hồi phục. Tăng áp lực nội sọ giả có thể gây mù. Viêm thực quản có thể nghiêm trọng."
+
     },
     
     "Metronidazole": {
@@ -4460,7 +4968,40 @@ DRUG_DATABASE = {
             "Phenytoin: tăng nồng độ phenytoin",
             "Disulfiram: chống chỉ định"
         ],
-        "pregnancy": "B - D trong 3 tháng đầu"
+        "pregnancy": "B - D trong 3 tháng đầu",
+        "mechanism_of_action": "Nitroimidazole kháng sinh/kháng ký sinh trùng. Sau khi vào tế bào vi khuẩn/ký sinh trùng, bị khử bởi ferredoxin (có trong vi khuẩn kỵ khí và ký sinh trùng) → tạo ra các gốc tự do độc hại phá hủy DNA. Chỉ hoạt động với vi khuẩn kỵ khí (Bacteroides, Clostridium, giardia) và ký sinh trùng (Trichomonas, Giardia, Entamoeba). KHÔNG hoạt động với vi khuẩn hiếu khí. Đặc biệt hiệu quả với kỵ khí và được dùng trong nhiễm trùng bụng, nhiễm trùng phụ khoa, và nhiễm C. difficile.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Thần kinh (dị cảm, co giật, viêm dây thần kinh ngoại biên, chóng mặt, mất điều hòa)",
+            "Dạ dày-ruột (buồn nôn, nôn, tiêu chảy, vị kim loại)",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Số lượng bạch cầu (hiếm giảm bạch cầu)",
+            "Phản ứng Disulfiram-like nếu uống rượu (buồn nôn, nôn, đỏ bừng, nhịp tim nhanh)"
+        ],
+        "precautions": [
+            "TUYỆT ĐỐI KHÔNG uống rượu trong và ít nhất 3 ngày sau khi ngừng thuốc - gây phản ứng Disulfiram-like nặng (buồn nôn, nôn, đỏ bừng, nhịp tim nhanh, hạ huyết áp)",
+            "Nguy cơ tổn thương thần kinh ngoại biên và trung ương (dị cảm, co giật, viêm dây thần kinh) - tăng ở dùng kéo dài, liều cao, suy gan",
+            "Ngừng nếu có dấu hiệu tổn thương thần kinh",
+            "Không dùng cho nhiễm trùng do vi khuẩn hiếu khí (không hiệu quả)",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Vị kim loại rất thường gặp - không phải tác dụng phụ nghiêm trọng nhưng khó chịu",
+            "Có thể làm nước tiểu sẫm màu (vô hại)",
+            "Thận trọng ở suy gan (giảm chuyển hóa → tăng nguy cơ tác dụng phụ thần kinh)",
+            "Không dùng trong 3 tháng đầu thai kỳ (nguy cơ dị tật) - chỉ dùng khi thực sự cần thiết",
+            "Pha trong NS, D5W, hoặc LR, truyền IV trong 30-60 phút"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6-8 giờ (bình thường), 9-15 giờ (suy gan)",
+            "onset": "1-2 giờ (PO), ngay lập tức (IV)",
+            "duration": "q8h (PO/IV), q12h cho C. difficile (PO)",
+            "protein_binding": "< 20%",
+            "metabolism": "Gan (CYP450) - chuyển hóa mạnh",
+            "clearance": "Chủ yếu qua gan (60-80%), cần điều chỉnh ở suy gan nặng"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ánh sáng. Viên nén: tránh ẩm. Dung dịch pha tiêm: sau khi pha, bảo quản ở nhiệt độ phòng 24 giờ, tránh ánh sáng.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, phản ứng Disulfiram-like với rượu có thể nặng. Tổn thương thần kinh có thể không hồi phục. Nguy cơ dị tật thai nhi nếu dùng trong 3 tháng đầu thai kỳ."
+
     },
     
     # ========== VITAMINS/SUPPLEMENTS ==========
@@ -4920,7 +5461,42 @@ DRUG_DATABASE = {
             "Insulin/Oral hypoglycemics: có thể cần điều chỉnh liều",
             "Estrogen: có thể cần tăng liều levothyroxine"
         ],
-        "pregnancy": "A - An toàn, cần thiết cho thai kỳ"
+        "pregnancy": "A - An toàn, cần thiết cho thai kỳ",
+        "mechanism_of_action": "Hormone tuyến giáp tổng hợp (T4, thyroxine). Bổ sung hoặc thay thế hormone tuyến giáp thiếu hụt. Trong tế bào, T4 được chuyển đổi thành T3 (triiodothyronine) - dạng hoạt động. T3 gắn với thyroid hormone receptor trong nhân tế bào, điều hòa biểu hiện gen, tăng chuyển hóa cơ bản, tăng nhịp tim, tăng nhiệt độ cơ thể, tăng nhu động ruột, và tăng phát triển tế bào. Được dùng trong suy giáp (hypothyroidism), bướu cổ, và sau phẫu thuật cắt tuyến giáp.",
+        "monitoring": [
+            "TSH (thyroid stimulating hormone) - mục tiêu: bình thường hóa TSH, kiểm tra mỗi 6-8 tuần khi điều chỉnh liều",
+            "Free T4 (FT4) - mục tiêu: trong khoảng bình thường",
+            "T3 (nếu cần, trong một số trường hợp)",
+            "Nhịp tim và huyết áp (tăng ở quá liều)",
+            "Dấu hiệu cường giáp (run, đổ mồ hôi, mất ngủ, nhịp tim nhanh, sụt cân) - dấu hiệu quá liều",
+            "Dấu hiệu suy giáp (mệt mỏi, tăng cân, nhịp tim chậm, táo bón, lạnh) - dấu hiệu thiếu liều",
+            "Xương (loãng xương nếu quá liều kéo dài)",
+            "Tim mạch (rối loạn nhịp tim, đau thắt ngực ở bệnh nhân bệnh mạch vành nếu quá liều)"
+        ],
+        "precautions": [
+            "PHẢI uống vào buổi sáng, khi đói, 30-60 phút trước khi ăn (thức ăn giảm hấp thu 40-60%)",
+            "KHÔNG uống cùng với: sắt, canxi, antacid, sucralfate, cholestyramine (cách ít nhất 4 giờ)",
+            "Bắt đầu với liều thấp, tăng dần dựa trên TSH",
+            "Ở bệnh nhân bệnh mạch vành hoặc người cao tuổi: bắt đầu với liều rất thấp, tăng chậm",
+            "Không được ngừng đột ngột (trừ khi có chỉ định)",
+            "Liều thay thế: 1.6-1.8 mcg/kg/ngày",
+            "TSH mục tiêu: 0.5-2.5 mIU/L (tùy tuổi và tình trạng)",
+            "Khi điều chỉnh liều: kiểm tra TSH sau 6-8 tuần (TSH thay đổi chậm)",
+            "Quá liều có thể gây cường giáp, rối loạn nhịp tim, đau thắt ngực ở bệnh nhân bệnh mạch vành",
+            "Thận trọng ở phụ nữ có thai (nhu cầu tăng 25-50%)",
+            "Không dùng để giảm cân (nguy hiểm)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "7 ngày (rất dài)",
+            "onset": "3-5 ngày",
+            "duration": "Dài (nhiều ngày)",
+            "protein_binding": "99.97% (rất cao, gắn với TBG, transthyretin, albumin)",
+            "metabolism": "Gan và các mô ngoại vi (deiodination thành T3)",
+            "clearance": "Chủ yếu qua gan, một phần qua thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
+        "black_box_warnings": "Không được dùng để giảm cân ở bệnh nhân bình giáp. Quá liều có thể gây cường giáp, rối loạn nhịp tim, và đau thắt ngực ở bệnh nhân bệnh mạch vành. Ở bệnh nhân bệnh mạch vành, phải bắt đầu với liều thấp và tăng chậm."
+
     },
     
     "Methimazole": {
@@ -5350,7 +5926,43 @@ DRUG_DATABASE = {
             "Trimethoprim-Sulfamethoxazole: tăng độc tính",
             "Folinic acid: giải độc (rescue therapy)"
         ],
-        "pregnancy": "X - Chống chỉ định tuyệt đối"
+        "pregnancy": "X - Chống chỉ định tuyệt đối",
+        "mechanism_of_action": "Antimetabolite, folic acid antagonist. Ức chế enzyme dihydrofolate reductase (DHFR), ngăn cản chuyển đổi dihydrofolate thành tetrahydrofolate (THF). THF cần thiết cho tổng hợp purine và thymidine (DNA, RNA). Ức chế tổng hợp DNA và RNA → ức chế sự phát triển và phân chia tế bào. Tác động mạnh lên tế bào phân chia nhanh (tế bào ung thư, tế bào miễn dịch, tế bào niêm mạc, tế bào tủy xương). Được dùng trong điều trị ung thư (liều cao), viêm khớp dạng thấp, vảy nến (liều thấp), và các bệnh tự miễn khác.",
+        "monitoring": [
+            "Công thức máu (WBC, platelet, hemoglobin) - giảm bạch cầu, giảm tiểu cầu, thiếu máu - QUAN TRỌNG",
+            "Chức năng gan (ALT, AST, bilirubin, albumin) - độc tính gan, xơ gan",
+            "Chức năng thận (creatinine, eGFR) - độc tính thận",
+            "X-quang phổi (xơ phổi - hiếm nhưng nguy hiểm)",
+            "Nồng độ methotrexate trong máu (nếu dùng liều cao)",
+            "Dấu hiệu nhiễm trùng (do giảm bạch cầu)",
+            "Dấu hiệu chảy máu (do giảm tiểu cầu)",
+            "Dấu hiệu độc tính niêm mạc (loét miệng, tiêu chảy)"
+        ],
+        "precautions": [
+            "Độc tính nghiêm trọng - phải theo dõi chặt chẽ",
+            "PHẢI dùng folic acid để giảm độc tính (5-10mg/tuần, không dùng cùng ngày với methotrexate)",
+            "Giảm bạch cầu, giảm tiểu cầu, thiếu máu - theo dõi công thức máu mỗi 1-4 tuần",
+            "Độc tính gan - có thể gây xơ gan, kiểm tra chức năng gan định kỳ",
+            "Độc tính thận - uống nhiều nước, kiểm tra chức năng thận",
+            "Không dùng ở suy thận nặng",
+            "Không dùng ở suy gan",
+            "Tương tác với NSAID, aspirin → tăng nồng độ methotrexate, tăng độc tính",
+            "Tương tác với trimethoprim-sulfamethoxazole → tăng độc tính",
+            "Không dùng ở phụ nữ có thai (gây dị tật thai nhi) - dùng biện pháp tránh thai",
+            "Liều thấp (viêm khớp, vảy nến): 7.5-25mg/tuần, liều cao (ung thư): 100mg/m² trở lên",
+            "Ngừng nếu có dấu hiệu độc tính nghiêm trọng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-10 giờ (liều thấp), 8-15 giờ (liều cao)",
+            "onset": "Vài giờ đến vài ngày",
+            "duration": "Dài (nhiều ngày, tích lũy)",
+            "protein_binding": "50-60%",
+            "metabolism": "Một phần trong gan, một phần bị polyglutamylation trong tế bào (tích lũy)",
+            "clearance": "Chủ yếu qua thận (80-90%), cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Dung dịch tiêm: bảo quản ở nhiệt độ phòng, tránh ánh sáng.",
+        "black_box_warnings": "Độc tính nghiêm trọng, có thể tử vong. Giảm bạch cầu, giảm tiểu cầu, và thiếu máu có thể nặng. Độc tính gan có thể gây xơ gan. Độc tính thận có thể gây suy thận cấp. Phải theo dõi công thức máu và chức năng gan, thận định kỳ. Không dùng ở phụ nữ có thai (gây dị tật thai nhi)."
+
     },
     
     "Cyclophosphamide": {
@@ -5615,7 +6227,37 @@ DRUG_DATABASE = {
             "Allopurinol: tăng nguy cơ phát ban",
             "Thuốc tránh thai: có thể giảm hiệu quả"
         ],
-        "pregnancy": "B - An toàn"
+        "pregnancy": "B - An toàn",
+        "mechanism_of_action": "Amoxicillin: aminopenicillin phổ rộng, ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs). Clavulanate: beta-lactamase inhibitor, bảo vệ amoxicillin khỏi bị phân hủy bởi beta-lactamase. Kết hợp này mở rộng phổ kháng khuẩn, đặc biệt hiệu quả với H. influenzae, E. coli, và một số kỵ khí. Clavulanate không có hoạt tính kháng khuẩn riêng. Được dùng rộng rãi trong nhiễm trùng đường hô hấp, tiết niệu, da và mô mềm.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Chức năng gan (ALT, AST) - tăng men gan (thường nhất thời), hiếm viêm gan (đặc biệt với clavulanate)",
+            "Dấu hiệu nhiễm C. difficile",
+            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV)",
+            "Chức năng thận (creatinine) - hiếm viêm thận kẽ"
+        ],
+        "precautions": [
+            "Không dùng ở bệnh nhân dị ứng penicillins (phản ứng chéo cao)",
+            "Nguy cơ viêm gan (đặc biệt do clavulanate) - thường nhất thời, hiếm nặng, tăng ở nam giới, dùng kéo dài",
+            "Theo dõi men gan, ngừng nếu tăng nặng",
+            "Phát ban thường gặp, đặc biệt ở bệnh nhân nhiễm virus (EBV, CMV) - không phải dị ứng thật",
+            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy",
+            "Uống với thức ăn để giảm kích ứng dạ dày và tăng hấp thu",
+            "Dùng đúng liều và đủ thời gian để tránh kháng thuốc",
+            "Không dùng cho nhiễm trùng do Pseudomonas hoặc Enterococcus kháng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1 giờ (amoxicillin và clavulanate)",
+            "onset": "1-2 giờ (PO)",
+            "duration": "q8h hoặc q12h tùy công thức",
+            "protein_binding": "17-20% (amoxicillin), 22-30% (clavulanate)",
+            "metabolism": "Một phần trong gan",
+            "clearance": "Chủ yếu qua thận, cần điều chỉnh thận ở suy thận nặng"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Sau khi pha (suspension): bảo quản trong tủ lạnh 10 ngày, sau đó vứt bỏ.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ viêm gan (đặc biệt do clavulanate) có thể nặng, đặc biệt ở nam giới và dùng kéo dài. Phát ban thường gặp và có thể nhầm với dị ứng."
+
     },
     
     "Paracetamol": {
@@ -5890,7 +6532,34 @@ DRUG_DATABASE = {
             "Tricyclic antidepressants: tăng tác dụng",
             "Digoxin: tăng nguy cơ loạn nhịp"
         ],
-        "pregnancy": "C - An toàn trong cấp cứu"
+        "pregnancy": "C - An toàn trong cấp cứu",
+        "mechanism_of_action": "Non-selective alpha và beta-adrenergic receptor agonist. Kích thích alpha-1 receptors → co mạch ngoại vi, tăng huyết áp. Kích thích beta-1 receptors → tăng nhịp tim, tăng co bóp cơ tim, tăng cung lượng tim. Kích thích beta-2 receptors → giãn phế quản, giãn mạch cơ xương. Trong ngừng tim: tăng áp lực tưới máu vành, tăng khả năng khử rung thành công.",
+        "monitoring": [
+            "Nhịp tim và huyết áp liên tục",
+            "Điện tâm đồ (ECG) - theo dõi rối loạn nhịp",
+            "Lactate máu (trong shock)",
+            "Đường huyết (tăng đường huyết)",
+            "Dấu hiệu thiếu máu cục bộ (đau ngực, thay đổi ST)",
+            "Tổn thương mô tại chỗ tiêm (hoại tử nếu tiêm ngoài mạch)"
+        ],
+        "precautions": [
+            "TUYỆT ĐỐI KHÔNG tiêm ngoài mạch (có thể gây hoại tử)",
+            "Pha loãng đúng nồng độ: 1:1000 (1mg/ml) cho IM/SC, 1:10000 (0.1mg/ml) cho IV",
+            "Trong anaphylaxis: tiêm IM ở đùi ngoài (hấp thu nhanh hơn cánh tay)",
+            "Theo dõi sát trong 20 phút đầu (nguy cơ rối loạn nhịp, tăng huyết áp)",
+            "Thận trọng ở bệnh nhân bệnh mạch vành (có thể gây nhồi máu cơ tim)",
+            "Tránh dùng với thuốc chẹn beta (có thể gây tăng huyết áp nặng do không đối kháng alpha)",
+            "Tiêm IV chậm, pha loãng để tránh tăng huyết áp đột ngột"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 phút (rất ngắn)",
+            "onset": "IV: ngay lập tức; IM: 5-10 phút",
+            "duration": "3-10 phút (IV), 10-30 phút (IM)",
+            "metabolism": "MAO và COMT trong gan và mô",
+            "clearance": "Rất nhanh, bị bất hoạt bởi enzyme"
+        },
+        "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh. Kiểm tra màu sắc trước dùng (hóa nâu = hỏng).",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, tiêm ngoài mạch có thể gây hoại tử mô. Liều cao có thể gây nhồi máu cơ tim, đột quỵ, hoặc tử vong."
     },
     
     "Atropine": {
@@ -6006,7 +6675,39 @@ DRUG_DATABASE = {
             "Cimetidine: tăng nồng độ lidocaine",
             "Phenytoin: tăng độc tính"
         ],
-        "pregnancy": "B - An toàn"
+        "pregnancy": "B - An toàn",
+        "mechanism_of_action": "Thuốc gây tê tại chỗ nhóm amide và thuốc chống loạn nhịp class IB. Ức chế kênh natri voltage-gated trong màng tế bào thần kinh và tế bào cơ tim, ngăn cản khử cực và dẫn truyền xung động thần kinh. Ở tim: ức chế dẫn truyền trong các tế bào có thời gian khử cực dài (tâm thất), giảm tự động tính, giảm nguy cơ rối loạn nhịp thất. Tác dụng nhanh, thời gian bán thải ngắn. Được dùng trong gây tê tại chỗ, giảm đau tại chỗ, và điều trị rối loạn nhịp thất.",
+        "monitoring": [
+            "ECG liên tục (theo dõi rối loạn nhịp)",
+            "Huyết áp và nhịp tim",
+            "Dấu hiệu độc tính thần kinh trung ương (chóng mặt, ù tai, co giật, mất ý thức) - dấu hiệu đầu tiên của quá liều",
+            "Dấu hiệu độc tính tim mạch (block nhĩ thất, nhịp tim chậm, rung thất) - dấu hiệu muộn, nguy hiểm",
+            "Nồng độ lidocaine trong máu (nếu dùng kéo dài hoặc liều cao)",
+            "Chức năng gan (lidocaine chuyển hóa mạnh ở gan)",
+            "Dấu hiệu phản ứng dị ứng (hiếm)"
+        ],
+        "precautions": [
+            "Độc tính thần kinh trung ương là dấu hiệu CẢNH BÁO SỚM - ngừng ngay nếu có chóng mặt, ù tai, co giật",
+            "Độc tính tim mạch có thể xảy ra sau độc tính thần kinh - nguy hiểm tính mạng",
+            "PHẢI điều chỉnh liều ở suy gan (giảm chuyển hóa → tích lũy → độc tính)",
+            "Thận trọng ở suy tim (giảm phân bố → tăng nồng độ)",
+            "Không dùng ở block nhĩ thất độ 2-3 hoặc block nhánh nếu không có máy tạo nhịp",
+            "Liều gây tê tại chỗ: tuân thủ liều tối đa (không quá 4.5mg/kg không có epinephrine, 7mg/kg có epinephrine)",
+            "Tiêm IV chậm (không quá 25-50mg/phút) để tránh độc tính",
+            "Cần có sẵn thuốc chống co giật (benzodiazepine) và thiết bị hồi sức",
+            "Giảm liều ở người cao tuổi (giảm chuyển hóa)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1.5-2 giờ (bình thường), 3-5 giờ (suy gan)",
+            "onset": "Ngay lập tức (IV), 2-5 phút (gây tê tại chỗ)",
+            "duration": "10-20 phút (IV), 1-3 giờ (gây tê tại chỗ)",
+            "protein_binding": "60-80%",
+            "metabolism": "Gan (CYP3A4, CYP1A2) - chuyển hóa mạnh thành active metabolites",
+            "clearance": "Chủ yếu qua gan, cần điều chỉnh ở suy gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch: tránh đông lạnh.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, độc tính tim mạch có thể gây block nhĩ thất, rung thất, và tử vong, đặc biệt ở suy gan hoặc quá liều. Độc tính thần kinh trung ương (co giật) là dấu hiệu cảnh báo sớm."
+
     },
     
     "Adenosine": {
@@ -6089,7 +6790,34 @@ DRUG_DATABASE = {
         "interactions": [
             "Opioids: đảo ngược tác dụng"
         ],
-        "pregnancy": "C - An toàn"
+        "pregnancy": "C - An toàn",
+        "mechanism_of_action": "Opioid receptor antagonist cạnh tranh. Gắn với ái lực cao vào mu-opioid receptor (và kappa, delta receptors), đẩy opioid ra khỏi receptor, đảo ngược hoàn toàn tác dụng của opioid (ức chế hô hấp, an thần, giảm đau, miosis). Tác dụng rất nhanh (1-2 phút IV), nhưng thời gian tác dụng ngắn (30-90 phút) do bị chuyển hóa nhanh, trong khi nhiều opioid có thời gian tác dụng dài hơn → cần lặp lại liều hoặc dùng infusion.",
+        "monitoring": [
+            "Độ bão hòa oxy (SpO2) và nhịp thở liên tục",
+            "Mức độ ý thức (GCS)",
+            "Dấu hiệu hội chứng cai opioid (kích động, vã mồ hôi, tăng huyết áp, nhịp tim nhanh)",
+            "Huyết áp và nhịp tim",
+            "Dấu hiệu tái ngộ độc opioid (thở chậm lại, giảm ý thức) - đặc biệt quan trọng nếu opioid có thời gian tác dụng dài hơn naloxone",
+            "Co giật (hiếm nhưng nguy hiểm)"
+        ],
+        "precautions": [
+            "Thời gian tác dụng NGẮN (30-90 phút) - opioid có thể tác dụng trở lại sau khi naloxone hết tác dụng",
+            "Theo dõi sát ít nhất 2-4 giờ sau khi dùng naloxone (nguy cơ tái ngộ độc)",
+            "Ở bệnh nhân nghiện opioid: naloxone có thể gây hội chứng cai nặng (kích động, nôn, tăng huyết áp) - cần chuẩn bị xử trí",
+            "Không dùng quá liều (tăng nguy cơ hội chứng cai nặng, không tăng hiệu quả)",
+            "Nếu cần duy trì: dùng infusion thay vì bolus lặp lại",
+            "Thận trọng ở bệnh nhân có tiền sử co giật (có thể gây co giật)",
+            "Dùng liều thấp (0.04-0.4mg) khi đảo ngược tác dụng opioid sau phẫu thuật để tránh đảo ngược hoàn toàn giảm đau"
+        ],
+        "pharmacokinetics": {
+            "half_life": "30-90 phút (ngắn)",
+            "onset": "1-2 phút (IV), 2-5 phút (IM)",
+            "duration": "30-90 phút (tùy liều)",
+            "metabolism": "Gan (glucuronidation)",
+            "clearance": "Gan, thời gian bán thải ngắn hơn nhiều so với hầu hết opioid"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Có thể bảo quản ở nhiệt độ 2-8°C.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, thời gian tác dụng ngắn có thể dẫn đến tái ngộ độc opioid nếu không theo dõi đúng. Hội chứng cai opioid có thể nguy hiểm ở bệnh nhân nghiện."
     },
     
     "Flumazenil": {
@@ -6130,7 +6858,39 @@ DRUG_DATABASE = {
             "Benzodiazepines: đảo ngược tác dụng",
             "Tricyclic antidepressants: tăng nguy cơ co giật"
         ],
-        "pregnancy": "C - Thận trọng"
+        "pregnancy": "C - Thận trọng",
+        "mechanism_of_action": "Benzodiazepine receptor antagonist cạnh tranh. Gắn với ái lực cao vào benzodiazepine receptor (một phần của GABA-A receptor complex), đẩy benzodiazepine ra khỏi receptor, đảo ngược tác dụng của benzodiazepine (an thần, ức chế hô hấp, giảm trương lực cơ, mất trí nhớ). Tác dụng rất nhanh (1-2 phút IV), nhưng thời gian tác dụng ngắn (45-90 phút) do bị chuyển hóa nhanh, trong khi nhiều benzodiazepine có thời gian tác dụng dài hơn → cần theo dõi sát, có thể cần lặp lại liều.",
+        "monitoring": [
+            "Mức độ ý thức (GCS) liên tục",
+            "Nhịp thở và độ bão hòa oxy (SpO2)",
+            "Dấu hiệu tái an thần/tái ức chế hô hấp (quan trọng - flumazenil hết tác dụng trước benzodiazepine)",
+            "Dấu hiệu hội chứng cai benzodiazepine (kích động, run, co giật) - đặc biệt ở bệnh nhân nghiện",
+            "Huyết áp và nhịp tim",
+            "Co giật (nguy cơ ở bệnh nhân có tiền sử co giật, dùng benzodiazepine để chống co giật)",
+            "Rối loạn nhịp tim (hiếm)"
+        ],
+        "precautions": [
+            "Thời gian tác dụng NGẮN (45-90 phút) - benzodiazepine có thể tác dụng trở lại sau khi flumazenil hết",
+            "Theo dõi sát ít nhất 2-4 giờ sau khi dùng (nguy cơ tái an thần, tái ức chế hô hấp)",
+            "Ở bệnh nhân nghiện benzodiazepine: có thể gây hội chứng cai nặng (kích động, run, co giật) - cần chuẩn bị xử trí",
+            "KHÔNG dùng ở bệnh nhân dùng benzodiazepine để chống co giật (có thể gây co giật nặng)",
+            "KHÔNG dùng ở ngộ độc tricyclic antidepressant (có thể gây co giật, rối loạn nhịp)",
+            "Khởi đầu với liều thấp (0.2mg), tăng dần nếu cần",
+            "Không dùng quá liều (không tăng hiệu quả, tăng nguy cơ tác dụng phụ)",
+            "Nếu cần duy trì: có thể dùng infusion, nhưng thường không khuyến cáo",
+            "Thận trọng ở bệnh nhân có tiền sử co giật"
+        ],
+        "pharmacokinetics": {
+            "half_life": "41-79 phút (ngắn)",
+            "onset": "1-2 phút (IV)",
+            "duration": "45-90 phút (tùy liều)",
+            "protein_binding": "50%",
+            "metabolism": "Gan (glucuronidation)",
+            "clearance": "Gan, thời gian bán thải ngắn hơn nhiều so với hầu hết benzodiazepine"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, thời gian tác dụng ngắn có thể dẫn đến tái an thần và tái ức chế hô hấp nếu không theo dõi đúng. Hội chứng cai benzodiazepine có thể nguy hiểm ở bệnh nhân nghiện. Nguy cơ co giật ở bệnh nhân có tiền sử co giật hoặc ngộ độc tricyclic antidepressant."
+
     },
     
     # ========== GAP FILLING ==========
@@ -6175,7 +6935,39 @@ DRUG_DATABASE = {
             "Warfarin: tăng INR",
             "Rifampin: giảm nồng độ rosuvastatin"
         ],
-        "pregnancy": "X - Chống chỉ định"
+        "pregnancy": "X - Chống chỉ định",
+        "mechanism_of_action": "Statin (HMG-CoA reductase inhibitor). Ức chế không chọn lọc enzyme HMG-CoA reductase trong gan, enzyme chính trong tổng hợp cholesterol. Giảm tổng hợp cholesterol nội sinh → tăng số lượng LDL receptors trên bề mặt tế bào gan → tăng thanh thải LDL từ máu. Giảm LDL cholesterol, giảm triglyceride, tăng nhẹ HDL cholesterol. Có tác dụng chống viêm và ổn định mảng xơ vữa (pleiotropic effects). Được dùng trong tăng cholesterol máu, dự phòng biến cố tim mạch (nhồi máu cơ tim, đột quỵ).",
+        "monitoring": [
+            "Lipid profile (LDL, HDL, triglyceride, total cholesterol) - kiểm tra 4-12 tuần sau khi bắt đầu, sau đó định kỳ",
+            "Chức năng gan (ALT, AST) - tăng men gan (thường nhất thời), hiếm viêm gan",
+            "CK (creatine kinase) - tăng CK, dấu hiệu tiêu cơ vân (myopathy, rhabdomyolysis)",
+            "Dấu hiệu tiêu cơ vân (đau cơ, yếu cơ, nước tiểu sẫm màu) - nguy hiểm",
+            "Đường huyết (có thể tăng nhẹ đường huyết)",
+            "HbA1c (tăng nguy cơ đái tháo đường type 2)"
+        ],
+        "precautions": [
+            "Nguy cơ tiêu cơ vân (myopathy, rhabdomyolysis) - nguy hiểm, có thể gây suy thận cấp",
+            "Nguy cơ tăng ở: liều cao, suy thận, suy gan, người cao tuổi, dùng với fibrate, niacin, cyclosporine, diltiazem, verapamil",
+            "NGỪNG NGAY nếu có đau cơ, yếu cơ, CK tăng > 10 lần ULN, hoặc dấu hiệu tiêu cơ vân",
+            "Nguy cơ tăng men gan - kiểm tra ALT/AST trước khi bắt đầu, sau 12 tuần, và định kỳ",
+            "Tăng nguy cơ đái tháo đường type 2 (nhẹ)",
+            "Không dùng trong thai kỳ (gây dị tật thai nhi) - dùng biện pháp tránh thai",
+            "Không dùng ở suy gan hoạt động",
+            "Tương tác với nhiều thuốc: cyclosporine, gemfibrozil, diltiazem, verapamil → tăng nguy cơ tiêu cơ vân",
+            "Liều khởi đầu thường: 10-20mg/ngày, liều tối đa: 40mg/ngày",
+            "Uống với hoặc không có thức ăn"
+        ],
+        "pharmacokinetics": {
+            "half_life": "19 giờ (dài)",
+            "onset": "1-2 tuần (giảm LDL)",
+            "duration": "Dài (nhiều ngày)",
+            "protein_binding": "88%",
+            "metabolism": "Gan (CYP2C9, CYP2C19) - chuyển hóa yếu, ít tương tác hơn các statin khác",
+            "clearance": "Chủ yếu qua gan (90%), một phần qua thận (10%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
+        "black_box_warnings": "Nguy cơ tiêu cơ vân (rhabdomyolysis), có thể gây suy thận cấp và tử vong. Nguy cơ tăng ở liều cao, suy thận, và dùng với một số thuốc. Ngừng ngay nếu có đau cơ, yếu cơ, hoặc dấu hiệu tiêu cơ vân. Không dùng trong thai kỳ."
+
     },
     
     "Enalaprilat": {
@@ -6258,7 +7050,40 @@ DRUG_DATABASE = {
             "Calcium IV: kết tủa (trẻ sơ sinh)",
             "Probenecid: tăng nồng độ ceftriaxone"
         ],
-        "pregnancy": "B - An toàn"
+        "pregnancy": "B - An toàn",
+        "mechanism_of_action": "Cephalosporin thế hệ 3, phổ rộng. Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs). Phổ kháng khuẩn: Gram-dương (một số), Gram-âm mạnh (Enterobacteriaceae, Neisseria, H. influenzae), và một số kỵ khí. Kháng được nhiều beta-lactamase do có cấu trúc vòng beta-lactam bền vững. Không hiệu quả với Pseudomonas aeruginosa, Enterococcus, hoặc MRSA. Thời gian bán thải dài (6-9 giờ) → chỉ cần tiêm 1 lần/ngày.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC, CRP)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Chức năng gan (ALT, AST, bilirubin) - có thể tăng, hiếm sỏi mật",
+            "Sỏi mật (ceftriaxone-calcium complex) - đặc biệt ở trẻ em, dùng liều cao",
+            "Chức năng thận (creatinine) - không cần điều chỉnh thận nhưng theo dõi",
+            "Dấu hiệu nhiễm C. difficile",
+            "Co giật (hiếm, nhưng có thể ở suy thận nặng)",
+            "Phản ứng tại chỗ tiêm (đau, viêm tĩnh mạch)"
+        ],
+        "precautions": [
+            "KHÔNG dùng ở trẻ sơ sinh < 28 ngày tuổi nếu đang dùng calci IV (nguy cơ kết tủa ceftriaxone-calcium trong phổi, thận) - có thể tử vong",
+            "Nguy cơ sỏi mật (ceftriaxone-calcium complex) - đặc biệt ở trẻ em, dùng liều cao, dùng kéo dài",
+            "Không dùng ở bệnh nhân dị ứng penicillins hoặc cephalosporins (phản ứng chéo ~5-10%)",
+            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy",
+            "Có thể gây tăng bilirubin (nhất thời, do đẩy bilirubin khỏi albumin)",
+            "Pha trong NS, D5W, hoặc LR, tiêm IV hoặc IM",
+            "Tiêm IM: pha với lidocaine 1% để giảm đau",
+            "Không pha trộn với các thuốc khác (tương kỵ với nhiều thuốc, đặc biệt vancomycin, calcium)",
+            "Thời gian bán thải dài → chỉ cần 1 lần/ngày (trừ viêm màng não: q12h)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6-9 giờ (rất dài cho cephalosporin)",
+            "onset": "Ngay lập tức sau khi tiêm IV",
+            "duration": "24 giờ (liều 1-2g q24h), 12 giờ (viêm màng não: 2g q12h)",
+            "protein_binding": "85-95% (rất cao)",
+            "metabolism": "Không chuyển hóa, bài tiết nguyên dạng",
+            "clearance": "40% qua thận, 60% qua mật (độc nhất trong cephalosporin) → không cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 10 ngày. Không đông lạnh.",
+        "black_box_warnings": "KHÔNG dùng ở trẻ sơ sinh < 28 ngày tuổi nếu đang dùng calci IV - có thể gây kết tủa ceftriaxone-calcium trong phổi, thận, có thể tử vong. Tránh dùng calci IV trong 48 giờ sau liều ceftriaxone cuối cùng ở trẻ sơ sinh."
+
     },
     
     "Ciprofloxacin": {
@@ -6424,7 +7249,41 @@ DRUG_DATABASE.update({
         "Warfarin: có thể tăng INR",
         "Aminoglycosides: không pha chung, truyền riêng"
     ],
-    "pregnancy": "B"
+    "pregnancy": "B",
+        "mechanism_of_action": "Piperacillin: penicillin phổ rộng, ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs). Tazobactam: beta-lactamase inhibitor, bảo vệ piperacillin khỏi bị phân hủy bởi beta-lactamase (TEM, SHV, OXA). Kết hợp này mở rộng phổ kháng khuẩn, đặc biệt hiệu quả với Pseudomonas aeruginosa, Enterobacteriaceae (bao gồm một số ESBL), và kỵ khí. Tazobactam không có hoạt tính kháng khuẩn riêng, chỉ có tác dụng bảo vệ.",
+        "monitoring": [
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều theo thận",
+            "Điện giải (natri - mỗi 4.5g chứa 2.79 mEq natri, kali - có thể tăng)",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, CRP)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Dấu hiệu nhiễm C. difficile",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Thời gian prothrombin/PT (hiếm giảm prothrombin)",
+            "Số lượng tiểu cầu (hiếm giảm tiểu cầu)",
+            "Đường huyết (có thể tăng hoặc giảm)"
+        ],
+        "precautions": [
+            "Phải điều chỉnh liều theo chức năng thận (eGFR) - đặc biệt quan trọng",
+            "Hàm lượng natri cao (2.79 mEq/4.5g) - thận trọng ở suy tim, tăng huyết áp, phù",
+            "Không dùng ở bệnh nhân dị ứng penicillins (phản ứng chéo cao)",
+            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy",
+            "Có thể gây giảm prothrombin → tăng nguy cơ chảy máu, đặc biệt ở suy thận, suy gan, dùng kéo dài",
+            "Theo dõi nhiễm nấm thứ phát khi dùng kéo dài",
+            "Pha trong NS hoặc D5W, truyền IV trong 30 phút (liều chuẩn) hoặc 3-4 giờ (liều cao/extended infusion)",
+            "Extended infusion (3-4 giờ) được khuyến cáo cho Pseudomonas aeruginosa để tối ưu hóa pharmacokinetics/pharmacodynamics (PK/PD)",
+            "Không pha trộn với vancomycin (tạo kết tủa)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "0.7-1.2 giờ (piperacillin), 0.7-1 giờ (tazobactam)",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "Liều 4.5g q6h hoặc q8h, extended infusion q8h",
+            "protein_binding": "30% (piperacillin), 20-30% (tazobactam)",
+            "metabolism": "Piperacillin: thủy phân một phần, tazobactam: thủy phân",
+            "clearance": "Chủ yếu qua thận (68% piperacillin, 80% tazobactam bài tiết nguyên dạng), cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày. Không đông lạnh.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, hàm lượng natri cao có thể gây vấn đề ở bệnh nhân suy tim hoặc cần hạn chế natri. Giảm prothrombin có thể gây chảy máu nặng."
+
 },
 
 "Meropenem": {
@@ -6465,7 +7324,38 @@ DRUG_DATABASE.update({
         "Valproate: giảm nồng độ valproate (có thể gây co giật)",
         "Probenecid: tăng nồng độ meropenem"
     ],
-    "pregnancy": "B"
+    "pregnancy": "B",
+        "mechanism_of_action": "Carbapenem kháng sinh beta-lactam. Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs), đặc biệt PBP-2, dẫn đến ly giải tế bào vi khuẩn. Phổ kháng khuẩn rộng, bao phủ cả vi khuẩn Gram-dương, Gram-âm, và kỵ khí. Kháng được nhiều beta-lactamase do có cấu trúc vòng beta-lactam bền vững. Đặc biệt hiệu quả với Enterobacteriaceae (bao gồm ESBL-producing), Pseudomonas aeruginosa, và kỵ khí.",
+        "monitoring": [
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều theo thận",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, CRP, procalcitonin)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng để đánh giá đáp ứng",
+            "Dấu hiệu nhiễm trùng thứ phát (nấm, C. difficile)",
+            "Co giật (nguy cơ tăng ở suy thận, bệnh thần kinh trung ương)",
+            "Chức năng gan (ALT, AST) - hiếm nhưng có thể tăng",
+            "Số lượng tiểu cầu (hiếm giảm tiểu cầu)"
+        ],
+        "precautions": [
+            "Phải điều chỉnh liều theo chức năng thận (eGFR) - giảm liều và tăng khoảng cách liều",
+            "Nguy cơ co giật tăng ở: suy thận nặng (CrCl < 25), bệnh thần kinh trung ương, tiền sử co giật",
+            "Không dùng ở bệnh nhân dị ứng penicillins hoặc cephalosporins (phản ứng chéo ~1%)",
+            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy, phân lỏng",
+            "Có thể gây kháng thuốc nếu dùng không đúng chỉ định - chỉ dùng khi thực sự cần",
+            "Theo dõi nhiễm nấm thứ phát (đặc biệt Candida) khi dùng kéo dài",
+            "Pha trong dung dịch NS hoặc D5W, truyền IV trong 15-30 phút",
+            "Không pha trộn với các thuốc khác (có thể tương kỵ)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1 giờ (bình thường), 1.5-2.5 giờ (suy thận)",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "Liều 1g q8h đạt nồng độ hiệu quả",
+            "protein_binding": "2% (rất thấp)",
+            "metabolism": "Thủy phân trong gan (40%), không qua CYP450",
+            "clearance": "Chủ yếu qua thận (70% bài tiết nguyên dạng), cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 2-4 giờ, hoặc trong tủ lạnh 24 giờ. Không đông lạnh.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ co giật tăng ở suy thận nặng và bệnh nhân có tiền sử co giật. Kháng thuốc có thể phát triển nếu dùng không đúng chỉ định."
+
 },
 
 "Clindamycin": {
@@ -6505,7 +7395,39 @@ DRUG_DATABASE.update({
         "Erythromycin: đối kháng",
         "Neuromuscular blockers: tăng tác dụng"
     ],
-    "pregnancy": "B"
+    "pregnancy": "B",
+        "mechanism_of_action": "Lincosamide kháng sinh. Ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 50S của ribosome, ngăn cản quá trình dịch mã. Phổ kháng khuẩn: Gram-dương mạnh (Staphylococcus, Streptococcus, bao gồm một số MRSA), kỵ khí (Bacteroides, Clostridium), và một số vi khuẩn không điển hình. Không hiệu quả với Enterobacteriaceae (Gram-âm). Đặc biệt hiệu quả với kỵ khí và được dùng trong nhiễm trùng răng miệng, xương, và mô mềm.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Dấu hiệu nhiễm C. difficile (tiêu chảy, đau bụng) - nguy cơ CAO",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Số lượng bạch cầu (hiếm giảm bạch cầu, giảm bạch cầu trung tính)",
+            "Phản ứng tại chỗ tiêm (viêm tĩnh mạch, đau)",
+            "Phát ban (hiếm hội chứng Stevens-Johnson)"
+        ],
+        "precautions": [
+            "Nguy cơ nhiễm C. difficile CAO - đây là một trong những kháng sinh có nguy cơ cao nhất",
+            "NGỪNG NGAY nếu có tiêu chảy, đau bụng - có thể là C. difficile",
+            "Không dùng cho điều trị dự phòng (trừ một số trường hợp đặc biệt) để giảm nguy cơ C. difficile",
+            "Theo dõi sát dấu hiệu nhiễm C. difficile trong và sau khi dùng",
+            "Có thể gây giảm bạch cầu trung tính (hiếm nhưng nguy hiểm)",
+            "Tương kỵ với nhiều thuốc - không pha trộn",
+            "Pha trong NS hoặc D5W, truyền IV trong ít nhất 10-60 phút (tùy liều)",
+            "Không dùng cho nhiễm trùng do vi khuẩn Gram-âm (không hiệu quả)",
+            "Uống với nước đầy đủ để giảm kích ứng thực quản"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ",
+            "onset": "30-60 phút (PO), ngay lập tức (IV)",
+            "duration": "q6h hoặc q8h (PO/IV)",
+            "protein_binding": "90-95% (rất cao)",
+            "metabolism": "Gan (CYP3A4) - một phần",
+            "clearance": "Gan và thận, không cần điều chỉnh thận nhưng thận trọng ở suy gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C). Viên nang: tránh ẩm. Dung dịch pha tiêm: sau khi pha, bảo quản ở nhiệt độ phòng 24 giờ.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ nhiễm C. difficile rất cao, có thể gây viêm đại tràng giả mạc nặng, có thể tử vong. Ngừng ngay nếu có tiêu chảy."
+
 },
 
 "Trimethoprim-sulfamethoxazole": {
@@ -6594,7 +7516,38 @@ DRUG_DATABASE.update({
         "Kali bổ sung: tăng kali máu",
         "Digoxin: tăng nồng độ digoxin"
     ],
-    "pregnancy": "D"
+    "pregnancy": "D",
+        "mechanism_of_action": "Potassium-sparing diuretic, aldosterone antagonist. Đối kháng cạnh tranh với aldosterone tại mineralocorticoid receptor trong ống lượn xa và ống góp. Ngăn cản tác dụng của aldosterone (tái hấp thu natri, bài tiết kali). Dẫn đến tăng bài tiết natri và nước, giữ kali (không gây hạ kali). Có tác dụng chống androgen nhẹ (gây tác dụng phụ ở nam giới). Được dùng trong suy tim (giảm tử vong), xơ gan với cổ trướng, hội chứng Conn (cường aldosterone nguyên phát), và tăng huyết áp. Thường dùng kết hợp với loop diuretic hoặc thiazide để tránh hạ kali.",
+        "monitoring": [
+            "Điện giải (natri, kali) - tăng kali máu là tác dụng phụ chính (nguy hiểm)",
+            "Chức năng thận (creatinine, eGFR) - không dùng nếu eGFR < 30",
+            "Huyết áp",
+            "Cân nặng và dấu hiệu phù",
+            "Tác dụng phụ nội tiết (ở nam: vú to, rối loạn cương dương; ở nữ: rối loạn kinh nguyệt)",
+            "Dấu hiệu quá liều (tăng kali nặng: yếu cơ, rối loạn nhịp tim)"
+        ],
+        "precautions": [
+            "Tăng kali MÁU là tác dụng phụ chính - KHÔNG dùng nếu kali > 5 mEq/L hoặc eGFR < 30",
+            "KHÔNG dùng với kali bổ sung hoặc các thuốc tăng kali khác (ACE inhibitor, ARB, trimethoprim) trừ khi được giám sát chặt chẽ",
+            "Theo dõi kali thường xuyên, đặc biệt khi bắt đầu điều trị và tăng liều",
+            "Tác dụng phụ nội tiết: vú to ở nam giới (gynecomastia), rối loạn cương dương, rối loạn kinh nguyệt ở nữ",
+            "Liều thường: 25-100mg/ngày (PO), liều cao hơn cho hội chứng Conn",
+            "Tác dụng chậm (vài ngày đến vài tuần)",
+            "Không dùng ở suy thận nặng (eGFR < 30) hoặc tăng kali máu",
+            "Thận trọng ở người cao tuổi (tăng nguy cơ tăng kali)",
+            "Uống với thức ăn để tăng hấp thu"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10-35 giờ (dài)",
+            "onset": "Vài ngày",
+            "duration": "2-3 ngày sau khi ngừng",
+            "protein_binding": "> 90%",
+            "metabolism": "Gan (chuyển đổi thành active metabolites: canrenone)",
+            "clearance": "Chủ yếu qua thận và gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, tăng kali máu có thể gây rối loạn nhịp tim nghiêm trọng, có thể tử vong, đặc biệt ở bệnh nhân suy thận hoặc dùng với các thuốc tăng kali khác. Phải theo dõi kali thường xuyên."
+
 },
 
 "Atenolol": {
