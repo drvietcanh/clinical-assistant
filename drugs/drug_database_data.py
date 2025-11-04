@@ -720,7 +720,40 @@ DRUG_DATABASE = {
             "Rượu: tăng tác dụng hạ huyết áp",
             "Thuốc hạ huyết áp khác: tăng tác dụng"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Isosorbide mononitrate là thuốc nitrate, được chuyển hóa thành nitric oxide (NO) trong tế bào cơ trơn mạch máu. NO kích hoạt guanylate cyclase, làm tăng cGMP (cyclic guanosine monophosphate), dẫn đến thư giãn cơ trơn mạch máu. Isosorbide mononitrate chủ yếu giãn tĩnh mạch (giảm tiền gánh), giảm áp lực đổ đầy thất trái, giảm thể tích tâm thất, và giảm nhu cầu oxy của cơ tim. Giãn động mạch nhẹ (giảm hậu gánh) cũng xảy ra. Kết quả: giảm đau thắt ngực, giảm triệu chứng suy tim, và cải thiện khả năng gắng sức. Isosorbide mononitrate là dẫn xuất mononitrate của isosorbide dinitrate, có thời gian bán thải dài hơn và ít tolerance hơn. Tuy nhiên, tolerance với nitrate vẫn xảy ra nếu dùng liên tục, cần khoảng nghỉ nitrate-free 10-14 giờ mỗi ngày.",
+        "monitoring": [
+            "Huyết áp - hạ huyết áp là tác dụng phụ phổ biến, đặc biệt khi đứng (hạ huyết áp tư thế)",
+            "Nhịp tim - nhịp tim nhanh phản ứng có thể xảy ra (do hạ huyết áp)",
+            "Triệu chứng đau thắt ngực - đánh giá hiệu quả phòng ngừa",
+            "Triệu chứng suy tim - đánh giá hiệu quả giảm tiền gánh",
+            "Nhức đầu - tác dụng phụ phổ biến nhất, thường giảm sau vài ngày",
+            "Dấu hiệu tolerance - giảm hiệu quả sau vài tuần dùng liên tục (cần khoảng nghỉ nitrate-free)",
+            "Tương tác với sildenafil, tadalafil, vardenafil (chống chỉ định - hạ huyết áp nguy hiểm)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH với sildenafil, tadalafil, vardenafil trong 24-48 giờ - hạ huyết áp nguy hiểm, có thể gây tử vong",
+            "Tolerance với nitrate - nếu dùng liên tục, hiệu quả giảm sau vài tuần, cần khoảng nghỉ nitrate-free 10-14 giờ mỗi ngày",
+            "Dạng extended release - dùng 1 lần/ngày vào buổi sáng để có khoảng nghỉ nitrate-free tự nhiên",
+            "Dạng immediate release - dùng 2-3 lần/ngày, đảm bảo khoảng nghỉ 10-14 giờ giữa các liều cuối và liều đầu ngày hôm sau",
+            "Hạ huyết áp - phổ biến, đặc biệt khi đứng (hạ huyết áp tư thế), tránh đứng dậy đột ngột",
+            "Nhức đầu - tác dụng phụ phổ biến nhất, thường tự khỏi sau vài ngày, có thể dùng acetaminophen",
+            "Không dùng nếu hạ huyết áp nặng, shock, tăng áp lực nội sọ, thiếu máu nặng",
+            "Tránh rượu - tăng tác dụng hạ huyết áp",
+            "Thận trọng khi dùng với các thuốc hạ huyết áp khác (tăng tác dụng)",
+            "Ngừng đột ngột - có thể gây rebound angina (tăng nguy cơ đau thắt ngực), giảm liều dần dần",
+            "Dùng với thức ăn hoặc không (không ảnh hưởng hấp thu)",
+            "Không nghiền hoặc nhai dạng extended release (phải uống nguyên viên)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "4-5 giờ (immediate release), 8-10 giờ (extended release)",
+            "onset": "15-30 phút (immediate release), 30-60 phút (extended release)",
+            "duration": "6-8 giờ (immediate release), 12-24 giờ (extended release)",
+            "protein_binding": "<5%",
+            "clearance": "Gan: chuyển hóa thành isosorbide và các metabolites không hoạt động. Thận: bài tiết một phần metabolites. Không cần điều chỉnh liều ở suy thận hoặc suy gan."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng extended release: bảo quản tương tự, không nghiền hoặc nhai.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với sildenafil, tadalafil, vardenafil trong 24-48 giờ. Kết hợp có thể gây hạ huyết áp nghiêm trọng, có thể gây tử vong. Nguy cơ hạ huyết áp nặng, ngất, nhồi máu cơ tim, đột quỵ."
     },
     
     # Diuretics
@@ -5575,7 +5608,44 @@ DRUG_DATABASE = {
             "Zidovudine: tăng độc tính tủy xương",
             "Mycophenolate: tăng nồng độ ganciclovir"
         ],
-        "pregnancy": "C - D (với CMV)"
+        "pregnancy": "C - D (với CMV)",
+        "mechanism_of_action": "Ganciclovir là thuốc kháng virus, là nucleotide analog của guanosine, tương tự acyclovir nhưng có hiệu quả mạnh hơn với cytomegalovirus (CMV). Sau khi vào tế bào nhiễm CMV, ganciclovir được phosphoryl hóa bởi virus UL97 kinase thành ganciclovir monophosphate, sau đó được phosphoryl hóa tiếp bởi enzyme tế bào thành ganciclovir triphosphate (GCV-TP). GCV-TP ức chế cạnh tranh DNA polymerase của CMV, gây chấm dứt chuỗi DNA và ngăn chặn sự nhân lên của virus. Ganciclovir có hiệu quả với CMV (acyclovir không hiệu quả) và HSV, VZV. Tuy nhiên, ganciclovir cũng được phosphoryl hóa ở tế bào người (ở mức độ thấp hơn), dẫn đến độc tính cao hơn acyclovir, đặc biệt độc với tủy xương (giảm bạch cầu, tiểu cầu, hồng cầu nghiêm trọng). Ganciclovir chỉ dùng khi thực sự cần thiết (CMV nặng ở người suy giảm miễn dịch).",
+        "monitoring": [
+            "Công thức máu (CBC) - QUAN TRỌNG: giảm bạch cầu, tiểu cầu, hồng cầu là tác dụng phụ phổ biến và nghiêm trọng (2-3 lần/tuần khi dùng IV)",
+            "Bạch cầu - giảm bạch cầu nặng phổ biến, ngừng nếu <500/mm³",
+            "Tiểu cầu - giảm tiểu cầu phổ biến, ngừng nếu <25,000/mm³",
+            "Hồng cầu - thiếu máu có thể xảy ra",
+            "Chức năng thận (creatinine, BUN) - độc thận có thể xảy ra, điều chỉnh liều ở suy thận",
+            "Dấu hiệu độc thần kinh (lú lẫn, co giật, ảo giác, rối loạn tâm thần) - hiếm nhưng có thể nghiêm trọng",
+            "Dấu hiệu nhiễm trùng (sốt, nhiễm trùng) - do giảm bạch cầu",
+            "Dấu hiệu chảy máu (chảy máu, bầm tím) - do giảm tiểu cầu",
+            "Tương tác với probenecid (tăng nồng độ), zidovudine (tăng độc tính tủy xương), mycophenolate (tăng nồng độ ganciclovir)"
+        ],
+        "precautions": [
+            "RẤT ĐỘC - chỉ dùng khi thực sự cần thiết (CMV nặng ở người suy giảm miễn dịch)",
+            "CHỐNG CHỈ ĐỊNH nếu bạch cầu <500/mm³ hoặc tiểu cầu <25,000/mm³",
+            "Giảm bạch cầu, tiểu cầu, hồng cầu - tác dụng phụ phổ biến và nghiêm trọng, cần theo dõi chặt chẽ CBC (2-3 lần/tuần khi dùng IV)",
+            "Ngừng ngay nếu bạch cầu <500/mm³ hoặc tiểu cầu <25,000/mm³",
+            "Có thể cần dùng G-CSF (filgrastim) để tăng bạch cầu, hoặc truyền tiểu cầu",
+            "Điều chỉnh liều ở suy thận QUAN TRỌNG: CrCl 50-80: giảm liều 50%; CrCl 25-50: giảm liều 75%; CrCl <25: giảm liều 90%",
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi, ung thư ở động vật (category D với CMV)",
+            "Độc thần kinh - hiếm nhưng có thể nghiêm trọng (lú lẫn, co giật, ảo giác), cần theo dõi",
+            "Độc thận - theo dõi chức năng thận, điều chỉnh liều",
+            "Tránh dùng với zidovudine (tăng độc tính tủy xương)",
+            "Thận trọng với probenecid (tăng nồng độ ganciclovir), mycophenolate (tăng nồng độ ganciclovir)",
+            "Truyền IV chậm (trong 1 giờ) để giảm độc tính",
+            "Duy trì đủ dịch để giảm độc thận",
+            "Dùng đủ liều và đủ thời gian (induction 14-21 ngày, sau đó maintenance)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2.5-3.5 giờ (IV), 3-4 giờ (PO)",
+            "onset": "Nhanh sau khi vào tế bào",
+            "duration": "Ngắn (cần dùng nhiều lần/ngày)",
+            "protein_binding": "1-2% (không gắn protein)",
+            "clearance": "Thận: bài tiết chủ yếu qua thận (90% nguyên dạng, không chuyển hóa). Hấp thu PO kém (6-9% bioavailability). Cần điều chỉnh liều ở suy thận (tỷ lệ với CrCl)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dung dịch IV: bảo quản ở 2-8°C, pha xong dùng trong 24 giờ. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": "RẤT ĐỘC với tủy xương - giảm bạch cầu, tiểu cầu, hồng cầu nghiêm trọng phổ biến. CHỐNG CHỈ ĐỊNH nếu bạch cầu <500/mm³ hoặc tiểu cầu <25,000/mm³. Theo dõi CBC 2-3 lần/tuần khi dùng IV. CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi, ung thư ở động vật (category D với CMV). Chỉ dùng khi thực sự cần thiết. Nguy cơ độc thần kinh (lú lẫn, co giật, ảo giác)."
     },
     
     "Ribavirin": {
@@ -5745,7 +5815,39 @@ DRUG_DATABASE = {
             "Digoxin: tăng nồng độ digoxin",
             "Phenytoin: tăng nồng độ phenytoin"
         ],
-        "pregnancy": "C - D (chống chỉ định)"
+        "pregnancy": "C - D (chống chỉ định)",
+        "mechanism_of_action": "Itraconazole là thuốc chống nấm phổ rộng thuộc nhóm triazole, ức chế enzyme lanosterol 14-alpha-demethylase (CYP51) của nấm. Enzyme này có vai trò quan trọng trong tổng hợp ergosterol, một thành phần chính của màng tế bào nấm. Bằng cách ức chế tổng hợp ergosterol, itraconazole làm thay đổi tính thấm màng tế bào nấm, dẫn đến ức chế sự phát triển và gây chết tế bào nấm. Itraconazole có phổ kháng nấm rộng: nấm men (Candida, Cryptococcus), nấm sợi (Aspergillus, Blastomyces, Histoplasma, Coccidioides), và dermatophytes (Trichophyton, Microsporum). Itraconazole cũng ức chế CYP3A4 ở gan, dẫn đến nhiều tương tác thuốc quan trọng. Hấp thu phụ thuộc vào pH dạ dày (cần acid dạ dày), tăng khi uống với thức ăn.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng nhiễm nấm, cải thiện lâm sàng)",
+            "Chức năng gan (ALT, AST, bilirubin) - tăng men gan phổ biến, suy gan hiếm nhưng có thể nghiêm trọng",
+            "Dấu hiệu suy tim (phù, khó thở, tăng cân) - itraconazole có thể gây suy tim, đặc biệt ở liều cao",
+            "Tương tác với CYP3A4 substrates (simvastatin, lovastatin - nguy cơ tiêu cơ vân; midazolam, triazolam - tăng an thần; quinidine - tăng nguy cơ loạn nhịp)",
+            "Warfarin (tăng INR), digoxin (tăng nồng độ, nguy cơ độc tính), phenytoin (tăng nồng độ)",
+            "Rifampin (giảm nồng độ itraconazole, có thể giảm hiệu quả)",
+            "Dấu hiệu phản ứng dị ứng (phát ban, sốt)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH ở bệnh nhân suy tim sung huyết - itraconazole có thể gây suy tim, đặc biệt ở liều cao",
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D)",
+            "Uống với thức ăn hoặc thức uống có acid (cola) để tăng hấp thu (cần acid dạ dày)",
+            "Tránh dùng với PPI, H2 blocker, antacid (giảm acid dạ dày → giảm hấp thu)",
+            "Nhiều tương tác thuốc do ức chế CYP3A4 - tăng nồng độ simvastatin, lovastatin (nguy cơ tiêu cơ vân), midazolam, triazolam (tăng an thần), quinidine (tăng nguy cơ loạn nhịp), warfarin (tăng INR), digoxin (tăng nồng độ), phenytoin (tăng nồng độ)",
+            "Tránh dùng với rifampin (giảm nồng độ itraconazole, có thể giảm hiệu quả)",
+            "Tăng men gan - phổ biến, theo dõi chức năng gan, ngừng nếu có suy gan",
+            "Suy tim - ngừng ngay nếu có dấu hiệu suy tim (phù, khó thở)",
+            "Không dùng IV nếu CrCl <30 (chứa cyclodextrin, tích lũy ở suy thận)",
+            "Dùng đủ liều và đủ thời gian để tránh tái phát",
+            "Thận trọng ở bệnh nhân có bệnh gan (chuyển hóa qua gan)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "21 giờ (itraconazole), 12 giờ (hydroxy-itraconazole - metabolite hoạt động)",
+            "onset": "Vài ngày đến vài tuần (tác dụng chống nấm)",
+            "duration": "24 giờ (dùng 1-2 lần/ngày)",
+            "protein_binding": "99.8% (gắn chặt với albumin)",
+            "clearance": "Gan: chuyển hóa qua CYP3A4 thành hydroxy-itraconazole (metabolite hoạt động, mạnh hơn itraconazole). Thận: bài tiết một phần metabolites. Hấp thu phụ thuộc vào pH dạ dày (cần acid dạ dày), tăng khi uống với thức ăn. IV chứa cyclodextrin, tích lũy ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén/capsule: bảo quản trong bao bì kín. Dạng solution: bảo quản ở nhiệt độ phòng, không làm lạnh. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở bệnh nhân suy tim sung huyết hoặc có tiền sử suy tim. Itraconazole có thể gây suy tim, đặc biệt ở liều cao. CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D). Nhiều tương tác thuốc nghiêm trọng do ức chế CYP3A4 - tăng nguy cơ tiêu cơ vân với simvastatin/lovastatin, tăng an thần với midazolam/triazolam, tăng nguy cơ loạn nhịp với quinidine."
     },
     
     "Voriconazole": {
@@ -5793,7 +5895,42 @@ DRUG_DATABASE = {
             "Phenytoin: giảm nồng độ voriconazole",
             "Omeprazole: tăng nồng độ omeprazole"
         ],
-        "pregnancy": "D - Chống chỉ định"
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Voriconazole là thuốc chống nấm phổ rộng thuộc nhóm triazole thế hệ thứ hai, ức chế enzyme lanosterol 14-alpha-demethylase (CYP51) của nấm. Enzyme này có vai trò quan trọng trong tổng hợp ergosterol, một thành phần chính của màng tế bào nấm. Bằng cách ức chế tổng hợp ergosterol, voriconazole làm thay đổi tính thấm màng tế bào nấm, dẫn đến ức chế sự phát triển và gây chết tế bào nấm. Voriconazole có phổ kháng nấm rộng hơn fluconazole: nấm men (Candida, bao gồm cả kháng fluconazole), nấm sợi (Aspergillus, Fusarium, Scedosporium), và một số nấm kháng thuốc khác. Voriconazole được coi là thuốc điều trị đầu tay cho nhiễm nấm Aspergillus invasive. Voriconazole ức chế CYP2C19, CYP2C9, và CYP3A4 ở gan, dẫn đến nhiều tương tác thuốc. Chuyển hóa phụ thuộc vào CYP2C19 (polymorphism), cần theo dõi nồng độ trong máu.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng nhiễm nấm, cải thiện lâm sàng)",
+            "Nồng độ voriconazole trong máu (therapeutic drug monitoring - TDM) - QUAN TRỌNG, đặc biệt ở bệnh nhân suy gan, suy thận, hoặc có rối loạn chuyển hóa CYP2C19",
+            "Chức năng gan (ALT, AST, bilirubin) - tăng men gan phổ biến, suy gan có thể nghiêm trọng",
+            "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng, nhìn thấy ánh sáng bất thường) - thường thoáng qua, xuất hiện 30 phút sau liều, kéo dài 30 phút",
+            "Dấu hiệu phản ứng quang hóa (ban da, phồng rộp) - tránh ánh nắng trực tiếp",
+            "ECG - QT kéo dài (nguy cơ loạn nhịp)",
+            "Hallucination - hiếm nhưng có thể xảy ra",
+            "Tương tác với rifampin, rifabutin, carbamazepine, phenobarbital (giảm nồng độ voriconazole), warfarin (tăng INR), cyclosporine, tacrolimus (tăng nồng độ), phenytoin (giảm nồng độ voriconazole)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D)",
+            "CHỐNG CHỈ ĐỊNH với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine (giảm nồng độ voriconazole hoặc tăng nguy cơ độc tính)",
+            "Theo dõi nồng độ trong máu (TDM) - QUAN TRỌNG, đặc biệt ở bệnh nhân suy gan, suy thận, hoặc có rối loạn chuyển hóa CYP2C19 (poor metabolizer có nồng độ cao, extensive metabolizer có nồng độ thấp)",
+            "Liều khởi đầu (loading dose) QUAN TRỌNG - PO: 400mg x 2 lần/ngày x 2 ngày đầu, IV: 6mg/kg x 2 lần/ngày x 2 ngày đầu",
+            "Rối loạn thị giác - thường thoáng qua, xuất hiện 30 phút sau liều, kéo dài 30 phút, thường tự khỏi, không cần ngừng thuốc",
+            "Tránh ánh nắng trực tiếp - nguy cơ phản ứng quang hóa (ban da, phồng rộp), dùng kem chống nắng, mặc quần áo che",
+            "Tăng men gan, suy gan - theo dõi chức năng gan, ngừng nếu có suy gan",
+            "QT kéo dài - không dùng với các thuốc kéo dài QT khác, bệnh nhân có tiền sử rối loạn nhịp",
+            "Hallucination - hiếm nhưng có thể xảy ra, cần theo dõi",
+            "Nhiều tương tác thuốc do ức chế CYP - tăng nồng độ warfarin (tăng INR), cyclosporine, tacrolimus (tăng nồng độ, nguy cơ độc tính), omeprazole (tăng nồng độ)",
+            "Phenytoin giảm nồng độ voriconazole - có thể cần tăng liều voriconazole",
+            "IV chứa cyclodextrin - không dùng ở suy thận nặng (CrCl <50), tích lũy cyclodextrin",
+            "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu như itraconazole)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6 giờ (bình thường), tăng ở poor CYP2C19 metabolizers",
+            "onset": "Vài ngày đến vài tuần (tác dụng chống nấm)",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "58%",
+            "clearance": "Gan: chuyển hóa qua CYP2C19 (chính), CYP2C9, và CYP3A4. Chuyển hóa phụ thuộc vào polymorphism CYP2C19 (poor metabolizer có nồng độ cao, extensive metabolizer có nồng độ thấp). Thận: bài tiết một phần metabolites. IV chứa cyclodextrin, tích lũy ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha, dùng trong vòng 24 giờ sau khi pha.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D). Nguy cơ suy gan nghiêm trọng, có thể gây tử vong. Theo dõi chức năng gan trước và trong khi điều trị. Ngừng ngay nếu có suy gan. Nguy cơ QT kéo dài và rối loạn nhịp tim. Theo dõi ECG nếu có nguy cơ. Nguy cơ rối loạn thị giác (thường thoáng qua). CHỐNG CHỈ ĐỊNH với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine."
     },
     
     "Nystatin": {

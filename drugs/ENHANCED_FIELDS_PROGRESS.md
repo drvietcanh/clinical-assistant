@@ -36,8 +36,8 @@
 ## Tổng Quan
 
 **Tổng số thuốc:** 141  
-**Đã có enhanced fields (6 fields cơ bản):** 108 ✅ (+32 từ các phiên này)  
-**Chưa có enhanced fields:** 33  
+**Đã có enhanced fields (6 fields cơ bản):** 112 ✅ (+36 từ các phiên này)  
+**Chưa có enhanced fields:** 29  
 **Mục tiêu:** Bổ sung đầy đủ 14 fields cho tất cả 141 thuốc
 
 ### Tiến Trình Gần Đây (2024-12-19)
@@ -49,7 +49,11 @@
 - ✅ **Nhóm 4 - Respiratory & Neurology**: 7 thuốc
   - **Budesonide inhaled, Montelukast, Fluticasone inhaled** (respiratory)
   - **Gabapentin, Pregabalin, Glibenclamide** (neurology/diabetes)
-  - **Venlafaxine** (psychiatry/SNRI) (mới bổ sung)
+  - **Venlafaxine** (psychiatry/SNRI)
+- ✅ **Nhóm 5 - Antifungal & Antiviral & Cardiovascular**: 4 thuốc
+  - **Itraconazole, Voriconazole** (antifungal)
+  - **Ganciclovir** (antiviral)
+  - **Isosorbide mononitrate** (cardiovascular) (mới bổ sung)
 - ✅ **Nhóm 2 - Thuốc Có Nguy Cơ Cao**: 6 thuốc
   - Valproate, Lamotrigine, Amitriptyline, Cisplatin, Carboplatin, Cyclophosphamide
 - ✅ **Nhóm 3 - Antidepressants**: 4 thuốc
@@ -75,9 +79,9 @@
 13. `administration_instructions` - Hướng dẫn dùng chi tiết
 14. `references` - Tài liệu tham khảo
 
-## Danh Sách Thuốc Đã Có Enhanced Fields (108 thuốc)
+## Danh Sách Thuốc Đã Có Enhanced Fields (112 thuốc)
 
-### ✅ Mới Bổ Sung (32 thuốc - 2024-12-19)
+### ✅ Mới Bổ Sung (36 thuốc - 2024-12-19)
 - **Emergency/Cấp Cứu**: Adenosine
 - **Antiviral**: Acyclovir, Valacyclovir
 - **Corticosteroid**: Methylprednisolone
@@ -93,6 +97,9 @@
 - **Neurology**: **Gabapentin, Pregabalin** (mới bổ sung)
 - **Diabetes**: **Glibenclamide** (mới bổ sung)
 - **Psychiatry (SNRI)**: **Venlafaxine** (mới bổ sung)
+- **Antifungal**: **Itraconazole, Voriconazole** (mới bổ sung)
+- **Antiviral**: **Ganciclovir** (mới bổ sung)
+- **Cardiovascular (Nitrate)**: **Isosorbide mononitrate** (mới bổ sung)
 - **Neurology**: Valproate, Lamotrigine
 - **Psychiatry**: Amitriptyline, Fluoxetine, Sertraline, Citalopram, Escitalopram
 - **Oncology**: Cisplatin, Carboplatin, Cyclophosphamide
@@ -224,7 +231,7 @@ python check_enhanced_fields.py
 
 ---
 
-**Cập nhật lần cuối:** 2024-12-19 (đã thêm Paracetamol, Ibuprofen, Salbutamol, Ciprofloxacin, Clarithromycin, Oseltamivir, Trimethoprim-sulfamethoxazole, Budesonide inhaled, Montelukast, Fluticasone inhaled, Gabapentin, Pregabalin, Glibenclamide, Venlafaxine)
+**Cập nhật lần cuối:** 2024-12-19 (đã thêm Paracetamol, Ibuprofen, Salbutamol, Ciprofloxacin, Clarithromycin, Oseltamivir, Trimethoprim-sulfamethoxazole, Budesonide inhaled, Montelukast, Fluticasone inhaled, Gabapentin, Pregabalin, Glibenclamide, Venlafaxine, Itraconazole, Voriconazole, Ganciclovir, Isosorbide mononitrate)
 
 ---
 
@@ -236,6 +243,6 @@ python check_enhanced_fields.py
 - 📋 Đã có kế hoạch tách module: Xem `MODULE_REFACTORING_PLAN.md`
 
 ### Tiếp Tục
-- Còn 33 thuốc cần bổ sung enhanced fields
+- Còn 29 thuốc cần bổ sung enhanced fields
 - Ưu tiên: Antihistamines (Loratadine, Cetirizine, Fexofenadine), Antidiabetics (Empagliflozin, Dapagliflozin, Sitagliptin), Anticoagulants (Ticagrelor, Prasugrel)
 - Sau khi hoàn thành tất cả → tiến hành refactor module
