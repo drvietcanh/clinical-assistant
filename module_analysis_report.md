@@ -11,14 +11,14 @@
 ## 🔴 CẦN TÁCH NGAY (CRITICAL)
 
 ### drugs\drug_database_data.py
-- **Dòng:** 8735 (code: 8495)
+- **Dòng:** 9548 (code: 9308)
 - **Classes:** 0
 - **Functions:** 0
-- **Data dict:** Có (~479 entries)
+- **Data dict:** Có (~505 entries)
 - **Gợi ý:**
-  - ⚠️  CRITICAL: File quá dài (8735 dòng) - Nên tách ngay!
-  - 📝 Code thực tế: 8495 dòng (không tính comment)
-  - 📊 Có data dictionary lớn (~479 entries) - Nên tách data ra file riêng
+  - ⚠️  CRITICAL: File quá dài (9548 dòng) - Nên tách ngay!
+  - 📝 Code thực tế: 9308 dòng (không tính comment)
+  - 📊 Có data dictionary lớn (~505 entries) - Nên tách data ra file riêng
   - 💡 Đề xuất: Tách data dictionary ra file riêng (.data.py)
 
 **💡 Đề xuất tách:**
@@ -237,7 +237,7 @@
 
 | File | Dòng | Code | Classes | Functions | Data Dict |
 |------|------|------|---------|-----------|-----------|
-| drugs\drug_database_data.py | 8735 | 8495 | 0 | 0 | ✅ (~479) |
+| drugs\drug_database_data.py | 9548 | 9308 | 0 | 0 | ✅ (~505) |
 | antibiotics\antibiotics_data_data.py | 3206 | 3077 | 0 | 0 | ✅ (~210) |
 | diagnosis\ddx_data_data.py | 1360 | 1328 | 0 | 0 | ✅ (~360) |
 | drugs\enhanced_fields_schema_data.py | 887 | 773 | 0 | 3 | ✅ (~52) |

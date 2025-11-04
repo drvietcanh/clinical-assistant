@@ -1831,7 +1831,33 @@ DRUG_DATABASE = {
         "interactions": [
             "Insulin/Sulfonylurea: có thể tăng nguy cơ hạ đường huyết"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Vildagliptin là DPP-4 (dipeptidyl peptidase-4) inhibitor, ức chế enzyme DPP-4 phân hủy incretin hormones (GLP-1 và GIP). Khi DPP-4 bị ức chế, nồng độ GLP-1 và GIP tăng, kích thích tế bào beta tụy tiết insulin (glucose-dependent) và ức chế tế bào alpha tụy tiết glucagon. Kết quả là tăng tiết insulin và giảm glucagon, giảm đường huyết sau ăn và đường huyết đói. Vildagliptin chỉ hoạt động khi đường huyết cao, nên ít gây hạ đường huyết hơn so với sulfonylurea",
+        "monitoring": [
+            "HbA1c mỗi 3 tháng",
+            "Đường huyết đói và sau ăn",
+            "Chức năng gan (ALT, AST) trước và trong điều trị (nguy cơ viêm tụy cấp)",
+            "Dấu hiệu viêm tụy cấp (đau bụng, nôn - hiếm nhưng nguy hiểm)",
+            "Chức năng thận (creatinine, eGFR) định kỳ"
+        ],
+        "precautions": [
+            "Uống với bữa ăn (tăng hấp thu)",
+            "Ít gây hạ đường huyết hơn sulfonylurea (glucose-dependent)",
+            "Có thể dùng kết hợp với metformin, sulfonylurea, hoặc insulin",
+            "Ngừng ngay nếu có dấu hiệu viêm tụy cấp (hiếm nhưng nguy hiểm)",
+            "Có thể dùng trong thai kỳ (category C)",
+            "Thận trọng nếu suy thận nặng (CrCl <30)",
+            "Có thể tăng nguy cơ hạ đường huyết khi dùng với insulin/sulfonylurea"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (ngắn)",
+            "onset": "2-4 tuần (giảm HbA1c)",
+            "duration": "12-24 giờ",
+            "protein_binding": "9%",
+            "clearance": "Thận (thải trừ chủ yếu), gan (chuyển hóa)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Có thể gây viêm tụy cấp hiếm nhưng nguy hiểm. Ngừng ngay nếu có dấu hiệu viêm tụy cấp (đau bụng, nôn)"
     },
     
     "Pioglitazone": {
@@ -1871,7 +1897,39 @@ DRUG_DATABASE = {
             "Insulin: tăng nguy cơ suy tim, phù",
             "Digoxin: có thể tăng nồng độ digoxin"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Pioglitazone là thiazolidinedione (TZD), hoạt động như agonist của PPAR-gamma (peroxisome proliferator-activated receptor gamma). Khi gắn vào PPAR-gamma trong nhân tế bào, pioglitazone kích hoạt phiên mã các gen liên quan đến chuyển hóa glucose và lipid, tăng nhạy cảm với insulin ở mô ngoại vi (cơ, mỡ, gan). Thuốc giảm đề kháng insulin, tăng sử dụng glucose ở mô ngoại vi, giảm sản xuất glucose ở gan, và giảm giải phóng acid béo tự do từ mô mỡ. Tác dụng chậm (2-4 tuần), và có thể gây giữ nước, tăng cân",
+        "monitoring": [
+            "HbA1c mỗi 3 tháng",
+            "Đường huyết đói",
+            "Chức năng gan (ALT, AST) trước và trong 12 tháng đầu (nguy cơ độc gan)",
+            "Dấu hiệu suy tim (khó thở, phù, tăng cân) - đặc biệt khi dùng với insulin",
+            "Dấu hiệu gãy xương (đặc biệt ở phụ nữ)",
+            "Công thức máu (thiếu máu)",
+            "Lipid (LDL cholesterol có thể tăng)",
+            "Ung thư bàng quang (tăng nhẹ nguy cơ - cần theo dõi)"
+        ],
+        "precautions": [
+            "Không dùng nếu suy tim (NYHA class III-IV)",
+            "Ngừng ngay nếu có dấu hiệu suy tim",
+            "Tránh dùng với insulin nếu có thể (tăng nguy cơ suy tim, phù)",
+            "Tác dụng chậm (2-4 tuần) - cần kiên nhẫn",
+            "Có thể gây giữ nước và phù (tăng nguy cơ suy tim)",
+            "Có thể gây tăng cân",
+            "Tăng nguy cơ gãy xương ở phụ nữ (cần theo dõi)",
+            "Tăng nhẹ nguy cơ ung thư bàng quang (cần theo dõi)",
+            "Ngừng nếu ALT >3x ULN (nguy cơ độc gan)",
+            "Có thể dùng trong thai kỳ (category C)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "16-24 giờ (dài)",
+            "onset": "2-4 tuần (giảm HbA1c)",
+            "duration": "24 giờ",
+            "protein_binding": ">99%",
+            "clearance": "Gan (chuyển hóa qua CYP2C8, CYP3A4), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Có thể gây suy tim hoặc làm trầm trọng suy tim hiện có. Không dùng nếu suy tim (NYHA class III-IV). Ngừng ngay nếu có dấu hiệu suy tim. Có thể gây độc gan - ngừng nếu ALT >3x ULN"
     },
     
     # ========== GASTROINTESTINAL ==========
@@ -2533,59 +2591,6 @@ DRUG_DATABASE = {
     
     # ========== ANALGESICS ==========
     
-    "Paracetamol": {
-        "group": "Analgesic - Acetaminophen",
-        "vietnamese_name": "Paracetamol, Acetaminophen, Panadol",
-        "administration": ["PO", "IV", "Rectal"],
-        "indications": [
-            "Đau nhẹ đến trung bình",
-            "Sốt",
-            "Đau sau phẫu thuật"
-        ],
-        "contraindications": [
-            "Suy gan nặng",
-            "Dị ứng"
-        ],
-        "dosage": {
-            "adult_po": "500-1000mg mỗi 4-6 giờ (tối đa 4g/ngày)",
-            "adult_iv": "1000mg mỗi 4-6 giờ (tối đa 4g/ngày)",
-            "adult_rectal": "500mg mỗi 4-6 giờ",
-            "notes": "Không vượt quá 4g/ngày để tránh độc tính gan"
-        },
-        "side_effects": [
-            "Hiếm khi có tác dụng phụ (nếu dùng đúng liều)",
-            "Độc tính gan (quá liều)",
-            "Phản ứng dị ứng (hiếm)"
-        ],
-        "interactions": [
-            "Warfarin: có thể tăng nguy cơ chảy máu (liều cao, dùng lâu)",
-            "Rượu: tăng nguy cơ độc tính gan"
-        ],
-        "pregnancy": "B - An toàn trong thai kỳ",
-        "mechanism_of_action": "Ức chế cyclooxygenase ở hệ thần kinh trung ương, giảm tổng hợp prostaglandin, từ đó giảm đau và hạ sốt. Ít tác dụng kháng viêm so với NSAID",
-        "monitoring": [
-            "ALT/AST nếu nghi ngờ quá liều hoặc bệnh nhân có nguy cơ",
-            "INR nếu dùng với warfarin liều cao kéo dài",
-            "Dấu hiệu độc tính gan: buồn nôn, nôn, đau bụng, vàng da (xuất hiện sau 24-48h)"
-        ],
-        "precautions": [
-            "Không vượt quá 4g/ngày ở người lớn",
-            "Giảm liều ở bệnh nhân suy gan",
-            "Tránh rượu khi dùng (tăng nguy cơ độc tính gan)",
-            "Kiểm tra các thuốc khác có chứa paracetamol (tránh quá liều)",
-            "Nếu quá liều, điều trị ngay với N-acetylcysteine"
-        ],
-        "pharmacokinetics": {
-            "half_life": "2-3 giờ",
-            "onset": "30 phút (PO), 15 phút (IV)",
-            "duration": "4-6 giờ",
-            "protein_binding": "20-30%",
-            "clearance": "Gan (chủ yếu qua glucuronidation và sulfation, một phần qua CYP2E1 tạo NAPQI - chất độc)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Quá liều có thể gây độc tính gan nghiêm trọng, suy gan, tử vong. Liều >150mg/kg hoặc >10g ở người lớn có thể gây độc tính. Điều trị ngay với N-acetylcysteine nếu quá liều"
-    },
-    
     "Ibuprofen": {
         "group": "Analgesic - NSAID",
         "vietnamese_name": "Ibuprofen, Brufen",
@@ -2964,7 +2969,7 @@ DRUG_DATABASE = {
             "half_life": "2-4 giờ",
             "onset": "IV: 5-10 phút; IM: 15-30 phút; PO: 30-60 phút",
             "duration": "3-7 giờ (IV), 4-7 giờ (IM), 3-6 giờ (PO)",
-            "metabolism": "Gan: glucuronidation → morphine-3-glucuronide (không hoạt động) và morphine-6-glucuronide (hoạt động mạnh hơn, tích lũy ở suy thận)",
+            "protein_binding": "20-35%",
             "clearance": "Chủ yếu qua thận (morphine-6-glucuronide tích lũy ở suy thận)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để xa tầm tay trẻ em (nguy cơ quá liều).",
@@ -3841,7 +3846,34 @@ DRUG_DATABASE = {
             "Methotrexate: giảm hiệu quả methotrexate (nhưng dùng để giảm độc tính)",
             "Phenytoin: giảm nồng độ phenytoin"
         ],
-        "pregnancy": "A - Khuyến nghị dùng trong thai kỳ"
+        "pregnancy": "A - Khuyến nghị dùng trong thai kỳ",
+        "mechanism_of_action": "Folic acid (folate, vitamin B9) là coenzyme cần thiết cho tổng hợp DNA và RNA, đặc biệt quan trọng trong quá trình phân chia tế bào. Folic acid được chuyển đổi thành tetrahydrofolate (THF), tham gia vào các phản ứng methyl transfer, tổng hợp purine và pyrimidine (các nucleotide của DNA/RNA). Folic acid cần thiết cho sự phát triển bình thường của ống thần kinh trong thai kỳ (tuần 3-4), giúp ngăn ngừa dị tật ống thần kinh (spina bifida, anencephaly). Thiếu folic acid gây thiếu máu hồng cầu to do giảm tổng hợp DNA, dẫn đến tế bào hồng cầu chưa trưởng thành. Folic acid cũng được dùng để giảm độc tính của methotrexate (methotrexate ức chế dihydrofolate reductase, folic acid bổ sung folate).",
+        "monitoring": [
+            "Hemoglobin, MCV (mean corpuscular volume) - theo dõi đáp ứng điều trị thiếu máu",
+            "Nồng độ folate trong máu (nếu cần)",
+            "Nồng độ vitamin B12 (thiếu B12 có thể che dấu bởi folic acid)",
+            "Đáp ứng điều trị (giảm triệu chứng thiếu máu)",
+            "Dấu hiệu dị ứng (hiếm)"
+        ],
+        "precautions": [
+            "Dùng kèm vitamin B12 khi thiếu máu (folic acid có thể che dấu thiếu B12, dẫn đến tổn thương thần kinh)",
+            "Với thiếu máu: luôn kiểm tra B12 trước khi dùng folic acid",
+            "Dự phòng dị tật ống thần kinh: bắt đầu trước khi có thai 1 tháng, tiếp tục trong 3 tháng đầu",
+            "Với methotrexate: dùng 24 giờ sau methotrexate (không dùng cùng lúc)",
+            "Liều cao (>1mg/ngày) có thể che dấu thiếu B12",
+            "An toàn trong thai kỳ và cho con bú",
+            "Hiếm khi có tác dụng phụ",
+            "Thận trọng ở bệnh nhân ung thư (folic acid có thể kích thích tế bào ung thư)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (vitamin)",
+            "onset": "Vài ngày đến vài tuần (tác dụng tích tụ)",
+            "duration": "Phụ thuộc vào dự trữ trong cơ thể",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Thận (thải trừ qua nước tiểu), một phần dự trữ trong gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None
     },
     
     # ========== ANTIPLATELETS (ADDITIONAL) ==========
@@ -4000,7 +4032,35 @@ DRUG_DATABASE = {
             "Warfarin: tăng nguy cơ chảy máu",
             "Antacids: giảm hấp thu"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Ticlopidine là thienopyridine, ức chế P2Y12 receptor trên tiểu cầu, ngăn chặn kích hoạt tiểu cầu bởi ADP. Thuốc ức chế aggregation tiểu cầu và giải phóng các chất tiểu cầu, làm giảm hình thành huyết khối. Ticlopidine là prodrug, chuyển hóa trong gan thành chất hoạt động. Thuốc ức chế mạnh hơn clopidogrel nhưng có nhiều tác dụng phụ nghiêm trọng, đặc biệt giảm bạch cầu và giảm tiểu cầu, nên ít dùng, thay bằng clopidogrel. Thường dùng để phòng ngừa đột quỵ sau TIA, nhưng hiện tại clopidogrel là lựa chọn ưu tiên.",
+        "monitoring": [
+            "Công thức máu (CBC) - mỗi 2 tuần trong 3 tháng đầu (nguy cơ giảm bạch cầu cao nhất)",
+            "Bạch cầu (WBC) - nếu <3500/μL: ngừng ngay",
+            "Tiểu cầu - nếu <100,000/μL: ngừng ngay",
+            "Dấu hiệu nhiễm trùng (sốt, đau họng) - dấu hiệu giảm bạch cầu",
+            "Dấu hiệu chảy máu (xuất huyết, chảy máu chân răng)",
+            "Dấu hiệu TTP (sốt, thiếu máu, giảm tiểu cầu, rối loạn thần kinh) - cấp cứu"
+        ],
+        "precautions": [
+            "Ít dùng do nguy cơ giảm bạch cầu/tiểu cầu cao - clopidogrel thay thế tốt hơn",
+            "Theo dõi sát công thức máu mỗi 2 tuần trong 3 tháng đầu (nguy cơ cao nhất)",
+            "Ngừng ngay nếu giảm bạch cầu <3500/μL hoặc giảm tiểu cầu <100,000/μL",
+            "Nguy cơ TTP (thrombotic thrombocytopenic purpura) - cấp cứu, có thể tử vong",
+            "Thận trọng ở bệnh nhân suy gan (giảm chuyển hóa)",
+            "Tránh dùng với aspirin và warfarin (tăng nguy cơ chảy máu)",
+            "Có thể gây rối loạn tiêu hóa (buồn nôn, tiêu chảy)",
+            "Ngừng 10-14 ngày trước phẫu thuật lớn"
+        ],
+        "pharmacokinetics": {
+            "half_life": "4-5 ngày (rất dài)",
+            "onset": "3-5 ngày (tác dụng tích tụ)",
+            "duration": "7-10 ngày sau khi ngừng (do half-life dài)",
+            "protein_binding": "98%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Nguy cơ giảm bạch cầu và giảm tiểu cầu nghiêm trọng, đe dọa tính mạng. Nguy cơ TTP (thrombotic thrombocytopenic purpura) có thể tử vong. Cần theo dõi công thức máu thường xuyên"
     },
     
     "Dipyridamole": {
@@ -4031,7 +4091,34 @@ DRUG_DATABASE = {
             "Aspirin: dùng kèm để tăng hiệu quả",
             "Warfarin: tăng nguy cơ chảy máu"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Dipyridamole ức chế phosphodiesterase và adenosine deaminase, làm tăng nồng độ cAMP và adenosine trong tiểu cầu, ức chế aggregation tiểu cầu. Thuốc cũng ức chế tái hấp thu adenosine, làm giãn mạch vành. Dipyridamole thường dùng kết hợp với aspirin để phòng ngừa đột quỵ/TIA sau stroke hoặc TIA. Thuốc có tác dụng chống đông và giãn mạch, nhưng có thể gây nhức đầu do giãn mạch. Thường dùng dạng modified-release để giảm tác dụng phụ.",
+        "monitoring": [
+            "Dấu hiệu chảy máu (xuất huyết, chảy máu chân răng, chảy máu cam)",
+            "Nhức đầu (tác dụng phụ phổ biến, có thể giảm khi dùng liều thấp hơn)",
+            "Huyết áp (có thể giảm nhẹ do giãn mạch)",
+            "Nhịp tim (có thể tăng nhẹ)",
+            "Đáp ứng điều trị (giảm nguy cơ đột quỵ/TIA)"
+        ],
+        "precautions": [
+            "Thường dùng kết hợp với aspirin 25mg x 2 lần/ngày để tăng hiệu quả",
+            "Nhức đầu là tác dụng phụ phổ biến (có thể giảm khi dùng liều thấp hơn hoặc dạng modified-release)",
+            "Tránh dùng trong nhồi máu cơ tim cấp (có thể làm nặng thêm)",
+            "Thận trọng ở bệnh nhân co thắt mạch vành (vasospasm)",
+            "Tránh dùng với warfarin (tăng nguy cơ chảy máu)",
+            "Có thể gây chóng mặt, đau bụng",
+            "Ngừng 5-7 ngày trước phẫu thuật lớn",
+            "Thận trọng ở bệnh nhân hạ huyết áp"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10-12 giờ",
+            "onset": "2-4 giờ",
+            "duration": "12-24 giờ",
+            "protein_binding": "91-99%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None
     },
     
     # ========== ANTIDEPRESSANTS (ADDITIONAL) ==========
@@ -5029,7 +5116,29 @@ DRUG_DATABASE = {
         "interactions": [
             "Ít tương tác"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Desloratadine là antihistamine thế hệ 2, là metabolite hoạt động của loratadine. Thuốc ức chế chọn lọc receptor H1 ngoại vi, ngăn cản histamine gắn vào receptor và gây các phản ứng dị ứng (ngứa, hắt hơi, chảy nước mũi, nổi mề đay). Desloratadine không qua hàng rào máu-não (BBB) nên ít gây buồn ngủ hơn so với antihistamine thế hệ 1. Thuốc cũng có tác dụng ức chế giải phóng các chất trung gian gây viêm từ tế bào mast và basophil",
+        "monitoring": [
+            "Dấu hiệu phản ứng dị ứng (nếu có)",
+            "Dấu hiệu buồn ngủ (rất hiếm nhưng cần theo dõi khi lái xe)",
+            "Chức năng gan nếu dùng lâu dài"
+        ],
+        "precautions": [
+            "Ít tác dụng phụ, ít gây buồn ngủ hơn antihistamine thế hệ 1",
+            "Có thể dùng trong thai kỳ (category C)",
+            "Dùng được ở trẻ em từ 6 tháng tuổi",
+            "Ít tương tác với các thuốc khác",
+            "Có thể dùng với thức ăn hoặc không"
+        ],
+        "pharmacokinetics": {
+            "half_life": "27 giờ (dài)",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "82-87%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": None
     },
     
     "Levocetirizine": {
@@ -5066,7 +5175,31 @@ DRUG_DATABASE = {
             "Ít tương tác",
             "Alcohol: có thể tăng buồn ngủ"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Levocetirizine là R-enantiomer của cetirizine, là antihistamine thế hệ 2. Thuốc ức chế chọn lọc receptor H1 ngoại vi, ngăn cản histamine gắn vào receptor và gây các phản ứng dị ứng. Levocetirizine mạnh hơn và tác dụng dài hơn so với cetirizine (racemic mixture). Thuốc không qua hàng rào máu-não (BBB) nên ít gây buồn ngủ hơn so với antihistamine thế hệ 1. Thuốc cũng có tác dụng ức chế giải phóng các chất trung gian gây viêm từ tế bào mast",
+        "monitoring": [
+            "Dấu hiệu phản ứng dị ứng (nếu có)",
+            "Dấu hiệu buồn ngủ (ít hơn cetirizine nhưng cần theo dõi khi lái xe)",
+            "Chức năng thận nếu suy thận (cần điều chỉnh liều)",
+            "Chức năng gan nếu dùng lâu dài"
+        ],
+        "precautions": [
+            "Giảm liều nếu suy thận (CrCl 30-60: 5mg cách ngày, <30: 5mg mỗi 3 ngày)",
+            "Ít gây buồn ngủ hơn cetirizine",
+            "Có thể dùng trong thai kỳ (category B)",
+            "Dùng được ở trẻ em từ 6 tuổi",
+            "Tránh rượu (có thể tăng buồn ngủ)",
+            "Có thể dùng với thức ăn hoặc không"
+        ],
+        "pharmacokinetics": {
+            "half_life": "8 giờ",
+            "onset": "1 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "91%",
+            "clearance": "Thận (thải trừ chủ yếu - 85%), gan (chuyển hóa - 15%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": None
     },
     
     # ========== CORTICOSTEROIDS (ADDITIONAL) ==========
@@ -5689,7 +5822,38 @@ DRUG_DATABASE = {
             "Didanosine: tăng độc tính",
             "Azathioprine: tăng độc tính"
         ],
-        "pregnancy": "X - Chống chỉ định tuyệt đối"
+        "pregnancy": "X - Chống chỉ định tuyệt đối",
+        "mechanism_of_action": "Ribavirin là nucleoside analog (guanosine), ức chế tổng hợp RNA và DNA của virus. Thuốc được phosphoryl hóa trong tế bào thành ribavirin triphosphate, ức chế RNA polymerase của virus, gây đột biến và ngăn chặn sao chép virus. Ribavirin cũng ức chế inosine monophosphate dehydrogenase (IMPDH), làm giảm GTP nội bào, ảnh hưởng đến tổng hợp RNA virus. Thuốc có tác dụng phổ rộng trên nhiều virus RNA, đặc biệt hiệu quả trong điều trị viêm gan C khi kết hợp với interferon hoặc sofosbuvir. Ribavirin rất độc, gây thiếu máu, dị tật thai nhi, và các tác dụng phụ nghiêm trọng khác.",
+        "monitoring": [
+            "Công thức máu (CBC) - theo dõi thiếu máu, giảm bạch cầu, giảm tiểu cầu - mỗi 2-4 tuần",
+            "Hemoglobin (Hb) - mục tiêu: giữ >10g/dL, nếu <8.5g/dL cần giảm liều hoặc ngừng",
+            "Chức năng thận (creatinine, BUN) - trước khi bắt đầu và định kỳ",
+            "Chức năng gan (ALT, AST, bilirubin) - theo dõi đáp ứng điều trị HCV",
+            "Tâm thần (trầm cảm, rối loạn tâm thần) - đặc biệt khi dùng với interferon",
+            "Dấu hiệu quá liều (thiếu máu nặng, mệt mỏi)",
+            "Xét nghiệm thai (nam và nữ) - trước khi bắt đầu và định kỳ"
+        ],
+        "precautions": [
+            "Rất độc - chỉ dùng khi thật sự cần thiết",
+            "Chống chỉ định tuyệt đối trong thai kỳ (nam và nữ) - gây dị tật thai nhi nghiêm trọng",
+            "Nam và nữ phải dùng biện pháp tránh thai hiệu quả trong và 6 tháng sau khi ngừng",
+            "Kiểm tra thai trước khi bắt đầu điều trị (nam và nữ)",
+            "Không dùng nếu CrCl <50 (suy thận nặng)",
+            "Giảm liều 50% nếu CrCl 30-50",
+            "Thận trọng ở bệnh nhân bệnh tim (nguy cơ thiếu máu)",
+            "Theo dõi sát hemoglobin - nếu <8.5g/dL: giảm liều hoặc ngừng",
+            "Có thể cần truyền máu nếu thiếu máu nặng",
+            "Thận trọng ở bệnh nhân có tiền sử rối loạn tâm thần (đặc biệt khi dùng với interferon)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "298 giờ (12.4 ngày) - rất dài, tích tụ trong tế bào",
+            "onset": "2-4 giờ",
+            "duration": "Rất dài do half-life dài",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Thận (chủ yếu), một phần qua gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định tuyệt đối trong thai kỳ (nam và nữ) - gây dị tật thai nhi và tử vong thai nhi. Có thể gây thiếu máu nặng, đe dọa tính mạng. Có thể gây rối loạn tâm thần nghiêm trọng"
     },
     
     # ========== ANTIFUNGALS ==========
@@ -5966,7 +6130,34 @@ DRUG_DATABASE = {
         "interactions": [
             "Rất ít tương tác (không hấp thu hệ thống)"
         ],
-        "pregnancy": "C - An toàn (không hấp thu)"
+        "pregnancy": "C - An toàn (không hấp thu)",
+        "mechanism_of_action": "Nystatin là polyene antifungal, gắn với ergosterol trong màng tế bào nấm, tạo lỗ thủng trong màng, làm rò rỉ các ion và chất dinh dưỡng, dẫn đến chết tế bào nấm. Thuốc có ái lực cao với ergosterol (có trong nấm) nhưng không gắn với cholesterol (có trong tế bào người), nên an toàn cho tế bào người. Nystatin không hấp thu qua đường tiêu hóa hoặc qua da, nên chỉ tác dụng tại chỗ. Thuốc hiệu quả trên Candida species, đặc biệt Candida albicans, thường dùng cho nhiễm nấm miệng, thực quản, và da.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng, giảm mảng trắng trong miệng)",
+            "Dấu hiệu dị ứng (ban da, kích ứng)",
+            "Triệu chứng tiêu hóa (buồn nôn, tiêu chảy) - hiếm",
+            "Tái nhiễm (nếu điều trị không đủ hoặc yếu tố nguy cơ vẫn còn)"
+        ],
+        "precautions": [
+            "Suspension: súc miệng kỹ, giữ trong miệng vài phút, sau đó nuốt (cho nhiễm nấm thực quản)",
+            "Tablet: ngậm trong miệng cho tan (cho nhiễm nấm miệng)",
+            "Topical: bôi đều, rửa sạch tay sau khi bôi",
+            "Tiếp tục điều trị 48 giờ sau khi hết triệu chứng",
+            "Với nhiễm nấm miệng: điều trị 7-14 ngày",
+            "Với nhiễm nấm thực quản: điều trị 14-21 ngày",
+            "An toàn trong thai kỳ và cho con bú (không hấp thu)",
+            "Rất ít tác dụng phụ do không hấp thu hệ thống",
+            "Thận trọng ở bệnh nhân có vết thương mở rộng (topical)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (không hấp thu)",
+            "onset": "Tác dụng tại chỗ ngay lập tức",
+            "duration": "Tác dụng tại chỗ trong vài giờ",
+            "protein_binding": "Không áp dụng (không vào máu)",
+            "clearance": "Không hấp thu, thải trừ qua phân (PO) hoặc rửa trôi (topical)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh, lắc kỹ trước khi dùng (suspension)",
+        "black_box_warnings": None
     },
     
     # ========== ANTIBIOTICS (COMMON) ==========
@@ -6400,7 +6591,41 @@ DRUG_DATABASE = {
             "Corticosteroid: giảm hấp thu vitamin D",
             "Cholestyramine: giảm hấp thu vitamin D"
         ],
-        "pregnancy": "A - An toàn, cần thiết cho thai kỳ"
+        "pregnancy": "A - An toàn, cần thiết cho thai kỳ",
+        "mechanism_of_action": "Vitamin D là hormone steroid quan trọng cho chuyển hóa calcium và phosphate. Có 2 dạng chính: D2 (ergocalciferol, từ thực vật) và D3 (cholecalciferol, từ ánh sáng mặt trời và động vật). Vitamin D được chuyển hóa thành 25(OH)D ở gan (calcidiol), sau đó thành 1,25(OH)2D (calcitriol) ở thận - đây là dạng hoạt động. Calcitriol gắn với vitamin D receptor (VDR) trong tế bào, kích hoạt biểu hiện gen, dẫn đến: tăng hấp thu calcium và phosphate ở ruột, tăng tái hấp thu calcium ở thận, và tăng giải phóng calcium từ xương (với PTH). Vitamin D cũng có vai trò trong hệ miễn dịch, tăng trưởng tế bào, và điều hòa hormone. Thiếu vitamin D gây còi xương (trẻ em), nhuyễn xương (người lớn), và loãng xương. Vitamin D được tổng hợp ở da nhờ ánh sáng UVB từ mặt trời, hoặc được hấp thu từ thức ăn/bổ sung.",
+        "monitoring": [
+            "Nồng độ 25(OH)D trong máu (mục tiêu: 30-50 ng/mL hoặc 75-125 nmol/L) - xét nghiệm chính để đánh giá tình trạng vitamin D",
+            "Nồng độ calcium trong máu (tăng calci máu có thể xảy ra với quá liều vitamin D)",
+            "Nồng độ phosphate trong máu",
+            "Nồng độ PTH (parathyroid hormone) - tăng khi thiếu vitamin D",
+            "24h calcium niệu (tăng calci niệu có thể xảy ra với quá liều)",
+            "Creatinine và eGFR - theo dõi chức năng thận",
+            "Dấu hiệu lâm sàng tăng calci máu: buồn nôn, nôn, táo bón, yếu cơ, rối loạn tâm thần, sỏi thận (nếu quá liều)",
+            "DEXA scan (mật độ xương) nếu dùng để điều trị loãng xương",
+            "Theo dõi đáp ứng điều trị: giảm triệu chứng còi xương/nhuyễn xương, cải thiện mật độ xương"
+        ],
+        "precautions": [
+            "D3 (cholecalciferol) hiệu quả hơn D2 (ergocalciferol) - nên chọn D3 nếu có thể",
+            "Kết hợp với calcium để tăng hiệu quả (đặc biệt trong điều trị loãng xương)",
+            "Theo dõi nồng độ 25(OH)D định kỳ để điều chỉnh liều (tránh thiếu hoặc quá liều)",
+            "Thận trọng ở bệnh nhân suy thận - có thể cần dùng calcitriol (dạng hoạt hóa) thay vì vitamin D thường",
+            "Thận trọng ở bệnh nhân có tiền sử sỏi thận calci (tăng calci niệu)",
+            "Thận trọng ở bệnh nhân tăng calci máu hoặc tăng calci niệu",
+            "Thận trọng với thiazide diuretics (tăng nguy cơ tăng calci máu)",
+            "Tránh quá liều - có thể gây tăng calci máu nghiêm trọng, sỏi thận, suy thận",
+            "Uống nhiều nước để giảm nguy cơ sỏi thận",
+            "Corticosteroid và cholestyramine có thể giảm hấp thu vitamin D",
+            "Dùng với thức ăn có chất béo để tăng hấp thu (vitamin D tan trong dầu)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "25(OH)D: 2-3 tuần (dài). 1,25(OH)2D: 4-6 giờ (ngắn)",
+            "onset": "Bắt đầu tác dụng sau vài ngày đến vài tuần",
+            "duration": "Liên tục khi dùng đều đặn, tác dụng kéo dài do tích lũy",
+            "protein_binding": "25(OH)D: gắn với vitamin D-binding protein (DBP). 1,25(OH)2D: gắn với DBP và albumin",
+            "clearance": "Gan: chuyển hóa 25(OH)D thành các metabolites không hoạt động. Thận: chuyển hóa 25(OH)D thành 1,25(OH)2D (dưới tác dụng của PTH), và bài tiết các metabolites. Tích lũy trong mô mỡ (dự trữ dài hạn)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để nơi khô ráo, tránh xa tầm tay trẻ em. Một số dạng có thể bảo quản trong tủ lạnh (xem hướng dẫn trên nhãn).",
+        "black_box_warnings": None
     },
     
     "Vitamin B12": {
@@ -6442,7 +6667,35 @@ DRUG_DATABASE = {
             "Metformin: giảm nồng độ B12 (dùng lâu dài)",
             "PPI/H2 blocker: giảm hấp thu B12"
         ],
-        "pregnancy": "A - An toàn, cần thiết"
+        "pregnancy": "A - An toàn, cần thiết",
+        "mechanism_of_action": "Vitamin B12 (cobalamin) là coenzyme cần thiết cho tổng hợp DNA, methyl transfer, và chuyển hóa homocysteine thành methionine. Vitamin B12 kết hợp với folic acid để tổng hợp DNA, đặc biệt quan trọng cho sự phát triển tế bào hồng cầu. Thiếu B12 gây thiếu máu hồng cầu to (megaloblastic anemia) và tổn thương thần kinh (neuropathy, dementia, myelopathy). Vitamin B12 được hấp thu qua đường tiêu hóa nhờ intrinsic factor (từ dạ dày), sau đó dự trữ trong gan. Thiếu B12 thường do thiếu intrinsic factor (pernicious anemia, cắt dạ dày), thiếu hấp thu (bệnh Crohn, cắt ruột), hoặc thiếu trong chế độ ăn (ăn chay). Vitamin B12 có 2 dạng: cyanocobalamin (tổng hợp) và methylcobalamin (tự nhiên).",
+        "monitoring": [
+            "Hemoglobin, MCV (mean corpuscular volume) - theo dõi đáp ứng điều trị thiếu máu",
+            "Nồng độ B12 trong máu (mục tiêu: >300 pg/mL)",
+            "Methylmalonic acid (MMA) - tăng khi thiếu B12",
+            "Homocysteine - tăng khi thiếu B12",
+            "Dấu hiệu tổn thương thần kinh (tê bì, yếu chân tay, mất trí nhớ)",
+            "Đáp ứng điều trị (giảm triệu chứng thiếu máu và thần kinh)"
+        ],
+        "precautions": [
+            "IM cho thiếu máu nặng hoặc thiếu hấp thu (nhanh hơn, hiệu quả hơn PO)",
+            "PO cho thiếu nhẹ hoặc dự phòng (cần liều cao hơn)",
+            "Thiếu B12 có thể che dấu bởi folic acid - luôn kiểm tra B12 khi thiếu máu",
+            "Thiếu B12 không điều trị có thể gây tổn thương thần kinh vĩnh viễn",
+            "An toàn trong thai kỳ và cho con bú",
+            "Thận trọng ở bệnh nhân Leber's disease (thoái hóa thần kinh thị giác)",
+            "Theo dõi đáp ứng điều trị (tăng hemoglobin, giảm triệu chứng thần kinh)",
+            "Dùng kèm folic acid khi thiếu máu (nhưng không thay thế B12)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6 ngày (dự trữ trong gan)",
+            "onset": "Vài ngày đến vài tuần (tác dụng tích tụ)",
+            "duration": "Dự trữ trong gan kéo dài 3-5 năm",
+            "protein_binding": "Gắn với transcobalamin",
+            "clearance": "Dự trữ trong gan, thải trừ qua mật và nước tiểu"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng, tránh nhiệt độ cao",
+        "black_box_warnings": None
     },
     
     "Folic acid": {
@@ -6483,7 +6736,34 @@ DRUG_DATABASE = {
             "Chloramphenicol: giảm đáp ứng với acid folic",
             "Sulfasalazine: giảm hấp thu acid folic"
         ],
-        "pregnancy": "A - An toàn, cần thiết (dự phòng dị tật ống thần kinh)"
+        "pregnancy": "A - An toàn, cần thiết (dự phòng dị tật ống thần kinh)",
+        "mechanism_of_action": "Folic acid (folate, vitamin B9) là coenzyme cần thiết cho tổng hợp DNA và RNA, đặc biệt quan trọng trong quá trình phân chia tế bào. Folic acid được chuyển đổi thành tetrahydrofolate (THF), tham gia vào các phản ứng methyl transfer, tổng hợp purine và pyrimidine (các nucleotide của DNA/RNA). Folic acid cần thiết cho sự phát triển bình thường của ống thần kinh trong thai kỳ (tuần 3-4), giúp ngăn ngừa dị tật ống thần kinh (spina bifida, anencephaly). Thiếu folic acid gây thiếu máu hồng cầu to do giảm tổng hợp DNA, dẫn đến tế bào hồng cầu chưa trưởng thành. Folic acid cũng được dùng để giảm độc tính của methotrexate (methotrexate ức chế dihydrofolate reductase, folic acid bổ sung folate).",
+        "monitoring": [
+            "Hemoglobin, MCV (mean corpuscular volume) - theo dõi đáp ứng điều trị thiếu máu",
+            "Nồng độ folate trong máu (nếu cần)",
+            "Nồng độ vitamin B12 (thiếu B12 có thể che dấu bởi folic acid)",
+            "Đáp ứng điều trị (giảm triệu chứng thiếu máu)",
+            "Dấu hiệu dị ứng (hiếm)"
+        ],
+        "precautions": [
+            "Dùng kèm vitamin B12 khi thiếu máu (folic acid có thể che dấu thiếu B12, dẫn đến tổn thương thần kinh)",
+            "Với thiếu máu: luôn kiểm tra B12 trước khi dùng folic acid",
+            "Dự phòng dị tật ống thần kinh: bắt đầu trước khi có thai 1 tháng, tiếp tục trong 3 tháng đầu",
+            "Với methotrexate: dùng 24 giờ sau methotrexate (không dùng cùng lúc)",
+            "Liều cao (>1mg/ngày) có thể che dấu thiếu B12",
+            "An toàn trong thai kỳ và cho con bú",
+            "Hiếm khi có tác dụng phụ",
+            "Thận trọng ở bệnh nhân ung thư (folic acid có thể kích thích tế bào ung thư)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (vitamin)",
+            "onset": "Vài ngày đến vài tuần (tác dụng tích tụ)",
+            "duration": "Phụ thuộc vào dự trữ trong cơ thể",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Thận (thải trừ qua nước tiểu), một phần dự trữ trong gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None
     },
     
     "Iron": {
@@ -6533,7 +6813,37 @@ DRUG_DATABASE = {
             "Chloramphenicol: giảm đáp ứng với sắt",
             "Vitamin C: tăng hấp thu sắt"
         ],
-        "pregnancy": "A - An toàn, cần thiết"
+        "pregnancy": "A - An toàn, cần thiết",
+        "mechanism_of_action": "Sắt (iron) là nguyên tố vi lượng cần thiết cho tổng hợp hemoglobin, myoglobin, và các enzyme chứa sắt. Sắt được hấp thu ở tá tràng và phần trên ruột non, chuyển hóa thành ferritin (dự trữ) và transferrin (vận chuyển). Sắt tham gia vào chuỗi hô hấp tế bào, tổng hợp DNA, và nhiều phản ứng enzyme. Thiếu sắt gây thiếu máu thiếu sắt (iron deficiency anemia), đặc trưng bởi hồng cầu nhỏ, nhược sắc (microcytic, hypochromic). Sắt có nhiều dạng: ferrous sulfate (65mg sắt nguyên tố/325mg), ferrous fumarate (66mg sắt nguyên tố/200mg), ferrous gluconate (35mg sắt nguyên tố/300mg). Hấp thu sắt tăng khi bụng đói và khi dùng với vitamin C.",
+        "monitoring": [
+            "Hemoglobin (Hb) - mục tiêu: tăng 1-2g/dL mỗi tháng",
+            "Ferritin - dự trữ sắt (mục tiêu: >50 ng/mL)",
+            "TIBC (total iron binding capacity), transferrin saturation",
+            "MCV (mean corpuscular volume) - tăng khi điều trị thành công",
+            "Đáp ứng điều trị (giảm mệt mỏi, tăng năng lượng)",
+            "Dấu hiệu quá tải sắt (nếu dùng lâu dài, liều cao)"
+        ],
+        "precautions": [
+            "Uống khi bụng đói (1 giờ trước bữa ăn) để tăng hấp thu (có thể gây kích ứng dạ dày)",
+            "Nếu kích ứng dạ dày: uống với thức ăn (giảm hấp thu 50%)",
+            "Uống với vitamin C (tăng hấp thu sắt)",
+            "Tránh uống với antacid, PPI, H2 blocker (giảm hấp thu)",
+            "Cách xa tetracycline, quinolone ít nhất 2 giờ (giảm hấp thu cả hai)",
+            "Phân đen là bình thường (không phải chảy máu)",
+            "Táo bón là tác dụng phụ phổ biến (uống nhiều nước, ăn nhiều chất xơ)",
+            "Thận trọng ở bệnh nhân hemochromatosis (thừa sắt)",
+            "IV cho thiếu máu nặng hoặc không dung nạp PO (có thể gây phản ứng dị ứng nặng)",
+            "Tiếp tục điều trị 3-6 tháng sau khi hemoglobin bình thường (để bổ sung dự trữ)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (khoáng chất)",
+            "onset": "Vài ngày đến vài tuần (tác dụng tích tụ)",
+            "duration": "Phụ thuộc vào dự trữ trong cơ thể",
+            "protein_binding": "Gắn với transferrin (vận chuyển) và ferritin (dự trữ)",
+            "clearance": "Dự trữ trong gan, lách, tủy xương; thải trừ qua phân, mồ hôi, nước tiểu (ít)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Quá tải sắt có thể gây tổn thương gan, tim, và các cơ quan khác. Tránh dùng ở bệnh nhân hemochromatosis"
     },
     
     "Calcium": {
@@ -6583,7 +6893,39 @@ DRUG_DATABASE = {
             "Thiazide diuretics: tăng nguy cơ tăng calci máu",
             "Vitamin D: tăng hấp thu calci"
         ],
-        "pregnancy": "A - An toàn, cần thiết"
+        "pregnancy": "A - An toàn, cần thiết",
+        "mechanism_of_action": "Calcium là khoáng chất thiết yếu cho nhiều chức năng sinh học. Trong xương: calcium là thành phần chính của hydroxyapatite, tạo cấu trúc và độ bền của xương. Trong máu: calcium ion (Ca2+) tham gia vào quá trình đông máu (cần thiết cho cascade đông máu), co cơ (bao gồm cơ tim và cơ trơn), dẫn truyền thần kinh, và giải phóng hormone. Calcium được hấp thu ở ruột non (chủ yếu ở tá tràng) nhờ vitamin D (calcitriol) và parathyroid hormone (PTH). Hấp thu phụ thuộc vào dạng muối: calcium citrate hấp thu tốt hơn calcium carbonate vì không cần acid dạ dày. Nồng độ calcium trong máu được điều hòa chặt chẽ bởi PTH, calcitonin, và vitamin D thông qua hấp thu ở ruột, tái hấp thu ở thận, và giải phóng từ xương.",
+        "monitoring": [
+            "Nồng độ calcium trong máu (ionized calcium hoặc total calcium với albumin) - theo dõi tăng calci máu",
+            "Nồng độ phosphate trong máu (tăng calci máu có thể kèm hạ phosphate)",
+            "Creatinine và eGFR - theo dõi chức năng thận (quan trọng vì tăng calci máu có thể gây suy thận)",
+            "Nồng độ PTH (parathyroid hormone) nếu có triệu chứng tăng calci máu",
+            "25(OH)D và 1,25(OH)2D nếu nghi ngờ liên quan đến vitamin D",
+            "Dấu hiệu lâm sàng tăng calci máu: buồn nôn, nôn, táo bón, yếu cơ, rối loạn tâm thần, sỏi thận",
+            "DEXA scan (mật độ xương) nếu dùng để điều trị loãng xương",
+            "Sỏi thận (siêu âm) nếu có triệu chứng hoặc dùng liều cao"
+        ],
+        "precautions": [
+            "Uống với thức ăn để tăng hấp thu và giảm tác dụng phụ",
+            "Chia liều (không uống quá 500-600mg nguyên tố calci mỗi lần) để tăng hấp thu",
+            "Calcium citrate hấp thu tốt hơn calcium carbonate, đặc biệt ở người già hoặc dùng PPI (không cần acid dạ dày)",
+            "Cách xa các thuốc khác ít nhất 2 giờ: sắt, tetracycline, quinolone, thyroxine (giảm hấp thu)",
+            "Thận trọng ở bệnh nhân suy thận (tăng nguy cơ tăng calci máu, sỏi thận)",
+            "Thận trọng ở bệnh nhân có tiền sử sỏi thận calci (tăng calci niệu)",
+            "Thận trọng ở bệnh nhân suy tim (calcium carbonate có thể gây đầy hơi, táo bón)",
+            "Kết hợp với vitamin D để tăng hấp thu và hiệu quả (đặc biệt trong điều trị loãng xương)",
+            "Uống nhiều nước để giảm nguy cơ sỏi thận",
+            "Theo dõi triệu chứng tăng calci máu: buồn nôn, nôn, táo bón, yếu cơ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (calcium là khoáng chất, không có half-life như thuốc)",
+            "onset": "Bắt đầu tác dụng sau vài giờ đến vài ngày",
+            "duration": "Liên tục khi dùng đều đặn",
+            "protein_binding": "Khoảng 40-50% calcium trong máu gắn với albumin, phần còn lại là ionized (Ca2+) - dạng hoạt động",
+            "clearance": "Thận: bài tiết qua nước tiểu (tái hấp thu ở ống thận dưới tác dụng của PTH). Xương: lưu trữ dài hạn. Ruột: bài tiết qua phân (phần không hấp thu)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Để nơi khô ráo, tránh xa tầm tay trẻ em.",
+        "black_box_warnings": None
     },
     
     # ========== ANTI-INFECTIVES (OTHER) ==========
@@ -6631,7 +6973,36 @@ DRUG_DATABASE = {
             "Ampicillin: giảm hấp thu ampicillin",
             "Kaolin: giảm hấp thu chloroquine"
         ],
-        "pregnancy": "C - Thận trọng, nhưng có thể dùng cho sốt rét"
+        "pregnancy": "C - Thận trọng, nhưng có thể dùng cho sốt rét",
+        "mechanism_of_action": "Chloroquine là 4-aminoquinoline, ức chế polymerase của ký sinh trùng sốt rét, ngăn cản tổng hợp DNA và RNA. Thuốc tích lũy trong lysosome của ký sinh trùng, tăng pH và ức chế tiêu hóa hemoglobin. Đối với sốt rét, chloroquine diệt thể vô tính trong hồng cầu. Đối với bệnh tự miễn (lupus, RA), chloroquine ức chế hoạt động của tế bào miễn dịch và giảm sản xuất cytokine viêm",
+        "monitoring": [
+            "Khám mắt định kỳ mỗi 6-12 tháng nếu dùng lâu dài (theo dõi độc võng mạc)",
+            "Thị trường (visual field) mỗi 6-12 tháng nếu dùng lâu dài",
+            "Chức năng gan (ALT, AST) định kỳ",
+            "Công thức máu toàn phần (CBC) định kỳ",
+            "Điện tâm đồ nếu dùng liều cao (theo dõi rối loạn nhịp)",
+            "Dấu hiệu rối loạn thị giác (nhìn mờ, ám điểm)",
+            "Dấu hiệu độc võng mạc (không hồi phục nếu phát hiện muộn)"
+        ],
+        "precautions": [
+            "Rất độc cho võng mạc nếu dùng lâu dài - cần khám mắt định kỳ",
+            "Ngừng ngay nếu có dấu hiệu độc võng mạc (nhìn mờ, ám điểm)",
+            "Giảm liều 50% nếu suy thận (CrCl 30-60)",
+            "Tránh dùng nếu suy thận nặng (CrCl <30)",
+            "Có thể dùng trong thai kỳ cho sốt rét (category C)",
+            "Tránh dùng với kaolin (giảm hấp thu)",
+            "Tương tác với digoxin (tăng nồng độ digoxin)",
+            "Có thể gây rối loạn nhịp tim nếu dùng liều cao (cần theo dõi ECG)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "20-60 ngày (rất dài, tích lũy)",
+            "onset": "2-3 giờ (sốt rét), 4-8 tuần (lupus/RA)",
+            "duration": "7-14 ngày (sốt rét), kéo dài (lupus/RA)",
+            "protein_binding": "55%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ - chậm)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây độc võng mạc nặng và không hồi phục nếu dùng lâu dài. Cần khám mắt định kỳ mỗi 6-12 tháng khi dùng lâu dài. Ngừng ngay nếu có dấu hiệu độc võng mạc"
     },
     
     "Artesunate": {
@@ -6673,7 +7044,35 @@ DRUG_DATABASE = {
             "Warfarin: có thể tăng tác dụng chống đông",
             "CYP2A6 substrates: có thể tăng nồng độ"
         ],
-        "pregnancy": "D - Tránh trong 3 tháng đầu (trừ sốt rét nặng)"
+        "pregnancy": "D - Tránh trong 3 tháng đầu (trừ sốt rét nặng)",
+        "mechanism_of_action": "Artesunate là dẫn xuất artemisinin (sesquiterpene lactone), chuyển hóa thành dihydroartemisinin (hoạt chất). Tác động nhanh và mạnh lên ký sinh trùng sốt rét bằng cách tạo ra các gốc tự do (free radicals) trong hồng cầu bị nhiễm, gây stress oxy hóa và phá vỡ màng tế bào ký sinh trùng. Artesunate diệt cả thể vô tính và thể giao tử (gametocyte), đặc biệt hiệu quả với P. falciparum kháng chloroquine. Thuốc có tác dụng nhanh (fast-acting), giảm số lượng ký sinh trùng trong 24-48 giờ",
+        "monitoring": [
+            "Theo dõi sốt và triệu chứng sốt rét (giảm nhanh trong 24-48 giờ)",
+            "Ký sinh trùng trong máu (parasitemia) mỗi 6-12 giờ trong sốt rét nặng",
+            "Chức năng gan (ALT, AST) nếu dùng lâu dài",
+            "Dấu hiệu rối loạn nhịp tim (nhịp chậm - hiếm)",
+            "Dấu hiệu độc tính thần kinh nếu dùng lâu dài, liều cao (hiếm)",
+            "Đường huyết nếu dùng IV (có thể gây hạ đường huyết)"
+        ],
+        "precautions": [
+            "PHẢI dùng kết hợp với thuốc sốt rét khác (ACT protocol) - không dùng đơn độc",
+            "Tránh dùng trong 3 tháng đầu thai kỳ (trừ sốt rét nặng - cân nhắc lợi ích/nguy cơ)",
+            "Dùng đúng phác đồ ACT để tránh kháng thuốc",
+            "Không dùng đơn độc (dễ gây kháng thuốc)",
+            "Có thể gây hạ đường huyết nếu dùng IV (theo dõi)",
+            "Có thể gây nhịp tim chậm (hiếm - theo dõi ECG nếu có triệu chứng)",
+            "Có thể tương tác với warfarin (tăng tác dụng chống đông)",
+            "Dùng kết hợp với amodiaquine, mefloquine, hoặc piperaquine theo phác đồ ACT"
+        ],
+        "pharmacokinetics": {
+            "half_life": "45 phút (artesunate), 1-2 giờ (dihydroartemisinin)",
+            "onset": "1-2 giờ (giảm sốt, triệu chứng)",
+            "duration": "4-6 giờ (ngắn)",
+            "protein_binding": "Moderate",
+            "clearance": "Gan (chuyển hóa nhanh qua CYP2A6, esterase), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để tủ lạnh (2-8°C) nếu yêu cầu",
+        "black_box_warnings": "KHÔNG được dùng đơn độc - phải dùng kết hợp với thuốc sốt rét khác theo phác đồ ACT để tránh kháng thuốc. Tránh dùng trong 3 tháng đầu thai kỳ trừ sốt rét nặng (cân nhắc lợi ích/nguy cơ)"
     },
     
     "Albendazole": {
@@ -6721,7 +7120,34 @@ DRUG_DATABASE = {
             "Cimetidine: tăng nồng độ albendazole",
             "Phenytoin/Carbamazepine: giảm nồng độ albendazole"
         ],
-        "pregnancy": "D - Chống chỉ định"
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Albendazole là benzimidazole carbamate, ức chế tubulin polymerization trong tế bào ký sinh trùng, gây mất microtubule, phá vỡ cấu trúc tế bào và chức năng của ký sinh trùng. Thuốc ngăn chặn vận chuyển glucose và các chất dinh dưỡng khác trong tế bào ký sinh trùng, dẫn đến mất năng lượng và chết. Albendazole có tác dụng phổ rộng trên nhiều loại giun sán, bao gồm giun đũa, giun móc, giun tóc, giun kim, sán dây, và sán lá gan. Đặc biệt hiệu quả trong điều trị hydatid disease và neurocysticercosis do tác dụng hệ thống tốt hơn mebendazole.",
+        "monitoring": [
+            "Công thức máu (CBC) - theo dõi giảm bạch cầu, đặc biệt khi dùng lâu dài",
+            "Chức năng gan (ALT, AST, bilirubin) - theo dõi độc tính gan",
+            "Triệu chứng lâm sàng (đau đầu, buồn nôn, đau bụng)",
+            "Đáp ứng điều trị (xét nghiệm phân sau điều trị)",
+            "Dấu hiệu nhiễm độc (rụng tóc, ban da) khi dùng lâu dài"
+        ],
+        "precautions": [
+            "Uống với thức ăn béo để tăng hấp thu (tăng nồng độ trong máu 5 lần)",
+            "Dùng kèm corticosteroid (dexamethasone) cho neurocysticercosis để giảm phản ứng viêm",
+            "Theo dõi chức năng gan thường xuyên khi dùng lâu dài (hydatid disease, neurocysticercosis)",
+            "Tránh dùng trong thai kỳ (gây dị tật thai nhi)",
+            "Kiểm tra thai trước khi bắt đầu điều trị",
+            "Dùng biện pháp tránh thai hiệu quả trong và sau điều trị",
+            "Thận trọng ở bệnh nhân suy gan",
+            "Theo dõi công thức máu khi dùng lâu dài (nguy cơ giảm bạch cầu)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "8-12 giờ (albendazole sulfoxide - chất chuyển hóa hoạt động)",
+            "onset": "2-4 giờ",
+            "duration": "24-48 giờ",
+            "protein_binding": "70%",
+            "clearance": "Gan (chuyển hóa thành albendazole sulfoxide), thải trừ qua mật và nước tiểu"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Cần kiểm tra thai trước khi bắt đầu điều trị"
     },
     
     "Mebendazole": {
@@ -6762,7 +7188,34 @@ DRUG_DATABASE = {
             "Cimetidine: có thể tăng nồng độ mebendazole",
             "Carbamazepine/Phenytoin: có thể giảm nồng độ mebendazole"
         ],
-        "pregnancy": "D - Chống chỉ định"
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Mebendazole là benzimidazole carbamate, ức chế tubulin polymerization trong tế bào ký sinh trùng, gây mất microtubule và phá vỡ cấu trúc tế bào. Thuốc ngăn chặn vận chuyển glucose và các chất dinh dưỡng trong tế bào ký sinh trùng, dẫn đến mất năng lượng và chết. Khác với albendazole, mebendazole hấp thu kém qua đường tiêu hóa (<5%), nên chủ yếu tác dụng tại chỗ trong ruột, ít tác dụng phụ hệ thống. Thuốc hiệu quả trên giun đũa, giun móc, giun tóc, giun kim, và sán dây. Thường dùng cho nhiễm giun đường ruột đơn giản, ít dùng cho nhiễm nấm hệ thống.",
+        "monitoring": [
+            "Triệu chứng lâm sàng (đau bụng, tiêu chảy, buồn nôn)",
+            "Đáp ứng điều trị (xét nghiệm phân sau 2-3 tuần)",
+            "Công thức máu (nếu dùng lâu dài, liều cao) - theo dõi giảm bạch cầu",
+            "Chức năng gan (nếu dùng lâu dài, liều cao)",
+            "Dấu hiệu dị ứng (ban da)"
+        ],
+        "precautions": [
+            "Có thể uống với thức ăn hoặc không (không ảnh hưởng nhiều do hấp thu kém)",
+            "Không hấp thu tốt nên ít tác dụng phụ hệ thống (ưu điểm so với albendazole)",
+            "Phù hợp cho nhiễm giun đường ruột đơn giản",
+            "Lặp lại liều sau 2-3 tuần cho giun kim (để diệt ấu trùng mới nở)",
+            "Tránh dùng trong thai kỳ (gây dị tật thai nhi)",
+            "Không dùng cho trẻ em <1 tuổi",
+            "Thận trọng ở bệnh nhân suy gan nặng",
+            "Theo dõi công thức máu nếu dùng lâu dài hoặc liều cao"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-9 giờ (rất thay đổi do hấp thu kém)",
+            "onset": "2-4 giờ",
+            "duration": "24-48 giờ",
+            "protein_binding": "90-95%",
+            "clearance": "Hấp thu kém (<5%), chủ yếu thải trừ qua phân, một phần qua nước tiểu"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi"
     },
     
     # ========== ENDOCRINOLOGY ==========
@@ -6893,7 +7346,33 @@ DRUG_DATABASE = {
             "Warfarin: có thể cần giảm liều warfarin (khi đạt bình giáp)",
             "Digoxin: có thể cần giảm liều digoxin"
         ],
-        "pregnancy": "D - Tránh trong 3 tháng đầu (dùng PTU). Thận trọng sau đó"
+        "pregnancy": "D - Tránh trong 3 tháng đầu (dùng PTU). Thận trọng sau đó",
+        "mechanism_of_action": "Ức chế enzyme thyroid peroxidase (TPO), ngăn cản quá trình iod hóa tyrosine và ghép nối các iodotyrosine để tạo thành T3 và T4. Methimazole ức chế cả quá trình tổng hợp và giải phóng hormone tuyến giáp, dẫn đến giảm nồng độ T3 và T4 trong máu, giảm triệu chứng cường giáp",
+        "monitoring": [
+            "Công thức máu toàn phần (CBC) mỗi tuần trong 3 tháng đầu, sau đó mỗi tháng (theo dõi agranulocytosis)",
+            "Chức năng gan (ALT, AST, bilirubin) mỗi 1-2 tháng",
+            "TSH, FT3, FT4 mỗi 4-6 tuần khi điều chỉnh liều, sau đó mỗi 3-6 tháng",
+            "Dấu hiệu nhiễm trùng (sốt, viêm họng - có thể là dấu hiệu agranulocytosis)",
+            "Dấu hiệu độc gan (vàng da, mệt mỏi, đau bụng)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều cao (30-60mg/ngày), giảm dần khi đạt bình giáp",
+            "Ngừng ngay nếu có sốt, viêm họng (dấu hiệu agranulocytosis - cấp cứu)",
+            "Ngừng ngay nếu có dấu hiệu độc gan (vàng da, tăng ALT/AST)",
+            "Tránh dùng trong 3 tháng đầu thai kỳ (dùng PTU thay thế)",
+            "Có thể dùng trong cho con bú nhưng ưu tiên PTU",
+            "Theo dõi sát công thức máu, đặc biệt trong 3 tháng đầu",
+            "Có thể gây dị tật thai nhi nếu dùng trong thai kỳ (teratogenic)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "4-6 giờ (ngắn)",
+            "onset": "1-2 tuần (giảm T3/T4)",
+            "duration": "12-24 giờ (tác dụng kéo dài do tích lũy trong tuyến giáp)",
+            "protein_binding": "Minimal",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây agranulocytosis (mất bạch cầu) - nguy hiểm tính mạng. Bệnh nhân cần được hướng dẫn ngừng thuốc và đến bệnh viện ngay nếu có sốt, viêm họng. Có thể gây dị tật thai nhi nếu dùng trong thai kỳ"
     },
     
     "Propylthiouracil": {
@@ -6938,7 +7417,35 @@ DRUG_DATABASE = {
             "Warfarin: có thể cần giảm liều warfarin",
             "Digoxin: có thể cần giảm liều digoxin"
         ],
-        "pregnancy": "D - An toàn hơn methimazole trong 3 tháng đầu, nhưng vẫn thận trọng"
+        "pregnancy": "D - An toàn hơn methimazole trong 3 tháng đầu, nhưng vẫn thận trọng",
+        "mechanism_of_action": "Ức chế enzyme thyroid peroxidase (TPO), ngăn cản quá trình iod hóa tyrosine và ghép nối các iodotyrosine để tạo thành T3 và T4. Propylthiouracil còn ức chế chuyển đổi T4 thành T3 ở mô ngoại vi (ức chế 5'-deiodinase), giảm nhanh T3 hơn so với methimazole. Dẫn đến giảm nồng độ T3 và T4, giảm triệu chứng cường giáp",
+        "monitoring": [
+            "Công thức máu toàn phần (CBC) mỗi tuần trong 3 tháng đầu, sau đó mỗi tháng (theo dõi agranulocytosis)",
+            "Chức năng gan (ALT, AST, bilirubin) mỗi 1-2 tháng (nguy cơ độc gan cao hơn methimazole)",
+            "TSH, FT3, FT4 mỗi 4-6 tuần khi điều chỉnh liều, sau đó mỗi 3-6 tháng",
+            "Dấu hiệu nhiễm trùng (sốt, viêm họng - có thể là dấu hiệu agranulocytosis)",
+            "Dấu hiệu độc gan (vàng da, mệt mỏi, đau bụng, suy gan cấp)",
+            "Dấu hiệu vasculitis (phát ban, đau khớp, tổn thương da)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều cao (600-900mg/ngày chia 3-4 lần), giảm dần khi đạt bình giáp",
+            "Ngừng ngay nếu có sốt, viêm họng (dấu hiệu agranulocytosis - cấp cứu)",
+            "Ngừng ngay nếu có dấu hiệu độc gan (vàng da, tăng ALT/AST, suy gan cấp)",
+            "Ưu tiên hơn methimazole trong 3 tháng đầu thai kỳ (ít nguy cơ dị tật hơn)",
+            "Có thể dùng trong cho con bú (an toàn hơn methimazole)",
+            "Theo dõi sát chức năng gan (nguy cơ độc gan cao hơn methimazole)",
+            "Cần dùng nhiều lần/ngày (3-4 lần) do thời gian bán thải ngắn",
+            "Có thể gây vasculitis và lupus-like syndrome (hiếm)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-2 giờ (rất ngắn)",
+            "onset": "1-2 tuần (giảm T3/T4)",
+            "duration": "6-8 giờ (ngắn hơn methimazole)",
+            "protein_binding": "Minimal",
+            "clearance": "Gan (chuyển hóa chủ yếu), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây suy gan cấp nặng và tử vong. Theo dõi sát chức năng gan và ngừng ngay nếu có dấu hiệu độc gan. Có thể gây agranulocytosis (mất bạch cầu) - nguy hiểm tính mạng"
     },
     
     "Prednisone": {
@@ -7241,7 +7748,36 @@ DRUG_DATABASE = {
             "Thuốc độc thận: thận trọng",
             "Phenytoin: có thể giảm nồng độ phenytoin"
         ],
-        "pregnancy": "D - Chống chỉ định"
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Oxaliplatin là platinum compound, tạo ra các phức hợp platinum-DNA (cross-links), gây đứt gãy DNA và ngăn cản quá trình sao chép và phiên mã DNA. Thuốc tác động chủ yếu lên tế bào đang phân chia nhanh, gây độc tế bào và chết tế bào ung thư. Oxaliplatin có cơ chế tương tự cisplatin và carboplatin nhưng có độc tính khác biệt (độc lạnh, độc thần kinh ngoại biên). Thuốc hiệu quả với ung thư đại trực tràng, đặc biệt khi dùng kết hợp với 5-FU và leucovorin (FOLFOX protocol)",
+        "monitoring": [
+            "Công thức máu toàn phần (CBC) trước mỗi chu kỳ",
+            "Chức năng thận (creatinine, eGFR) trước mỗi chu kỳ",
+            "Chức năng gan (ALT, AST) trước mỗi chu kỳ",
+            "Dấu hiệu độc lạnh (tê, cảm giác như bị điện giật khi tiếp xúc lạnh) - phổ biến",
+            "Dấu hiệu độc thần kinh ngoại biên (tê bì, mất cảm giác) - tích lũy",
+            "Dấu hiệu phản ứng dị ứng (phát ban, khó thở) - hiếm",
+            "Theo dõi extravasation khi truyền"
+        ],
+        "precautions": [
+            "Tránh tiếp xúc với lạnh trong 3-7 ngày sau truyền (tránh độc lạnh)",
+            "Không uống nước lạnh, không chạm vào đồ vật lạnh",
+            "Mặc ấm, đeo găng tay, tất để tránh lạnh",
+            "Theo dõi độc thần kinh ngoại biên (có thể tích lũy và kéo dài)",
+            "Giảm liều hoặc ngừng nếu độc thần kinh nặng",
+            "Giảm liều 25-50% nếu suy thận (CrCl <30-60)",
+            "Truyền trong 2-6 giờ",
+            "Có thể gây phản ứng dị ứng (hiếm - cần theo dõi)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "40 giờ (dài)",
+            "onset": "1-2 tuần (tác dụng lâm sàng)",
+            "duration": "Kéo dài (tích lũy)",
+            "protein_binding": ">90%",
+            "clearance": "Thận (thải trừ chủ yếu), không chuyển hóa"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu",
+        "black_box_warnings": "Có thể gây độc lạnh nặng (cold-induced neuropathy) - tránh tiếp xúc với lạnh trong 3-7 ngày sau truyền. Có thể gây độc thần kinh ngoại biên tích lũy và kéo dài"
     },
     
     "5-Fluorouracil": {
@@ -7291,7 +7827,36 @@ DRUG_DATABASE = {
             "Warfarin: tăng nguy cơ chảy máu",
             "Phenytoin: tăng nồng độ phenytoin"
         ],
-        "pregnancy": "D - Chống chỉ định"
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "5-Fluorouracil (5-FU) là antimetabolite, chuyển hóa thành 5-fluorodeoxyuridine monophosphate (FdUMP) và 5-fluorouridine triphosphate (FUTP). FdUMP ức chế enzyme thymidylate synthase (TS), ngăn cản tổng hợp thymidine (thành phần DNA), dẫn đến thiếu hụt DNA và gây chết tế bào. FUTP tích hợp vào RNA, gây rối loạn tổng hợp protein. Thuốc tác động chủ yếu lên tế bào đang phân chia nhanh (ung thư), gây độc tế bào. Hiệu quả tăng khi dùng kèm leucovorin (folinic acid) do tăng ức chế TS",
+        "monitoring": [
+            "Công thức máu toàn phần (CBC) trước mỗi chu kỳ và giữa các chu kỳ (theo dõi giảm bạch cầu, tiểu cầu)",
+            "Chức năng gan (ALT, AST, bilirubin) trước và trong điều trị",
+            "Dấu hiệu loét miệng (stomatitis) - phổ biến, có thể nặng",
+            "Dấu hiệu tiêu chảy - phổ biến, có thể nặng (cần điều trị sớm)",
+            "Dấu hiệu độc tim (đau ngực, khó thở, rối loạn nhịp) - hiếm nhưng nguy hiểm",
+            "Test DPD (dihydropyrimidine dehydrogenase) trước điều trị nếu có thể (thiếu hụt DPD gây độc tính nặng)",
+            "Dấu hiệu nhiễm trùng (sốt, ớn lạnh) do giảm bạch cầu"
+        ],
+        "precautions": [
+            "Test DPD trước điều trị nếu có thể (thiếu hụt DPD gây độc tính nặng, có thể tử vong)",
+            "Giảm liều hoặc ngừng nếu có loét miệng nặng hoặc tiêu chảy nặng",
+            "Dùng kèm leucovorin để tăng hiệu quả (nhưng cũng tăng độc tính)",
+            "Theo dõi sát công thức máu (nguy cơ giảm bạch cầu, tiểu cầu cao)",
+            "Tránh dùng nếu thiếu hụt DPD nặng",
+            "Có thể gây độc tim (hiếm - cần theo dõi triệu chứng)",
+            "Tương tác với warfarin (tăng nguy cơ chảy máu)",
+            "Giảm liều 25-50% nếu suy thận"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10-20 phút (ngắn)",
+            "onset": "1-2 tuần (tác dụng lâm sàng)",
+            "duration": "4-6 giờ (tác dụng sinh học)",
+            "protein_binding": "Minimal",
+            "clearance": "Gan (chuyển hóa qua DPD - dihydropyrimidine dehydrogenase), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu",
+        "black_box_warnings": "Thiếu hụt DPD (dihydropyrimidine dehydrogenase) có thể gây độc tính nặng và tử vong. Nên test DPD trước điều trị nếu có thể. Theo dõi sát độc tính và ngừng ngay nếu có dấu hiệu độc tính nặng"
     },
     
     "Methotrexate": {
@@ -7513,7 +8078,38 @@ DRUG_DATABASE = {
             "Phenobarbital: tăng chuyển hóa",
             "Cisplatin: tăng độc thận"
         ],
-        "pregnancy": "D - Chống chỉ định"
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Ifosfamide là alkylating agent (nitrogen mustard), chuyển hóa trong gan thành các chất hoạt động (4-hydroxyifosfamide, aldophosphamide, isophosphoramide mustard). Các chất này gắn vào DNA, tạo ra cross-links DNA-DNA và DNA-protein, gây đứt gãy DNA và ngăn cản quá trình sao chép DNA. Thuốc tác động chủ yếu lên tế bào đang phân chia nhanh, gây độc tế bào và chết tế bào ung thư. Acrolein (sản phẩm chuyển hóa) gây độc bàng quang (hemorrhagic cystitis), cần dùng kèm mesna để bảo vệ",
+        "monitoring": [
+            "Công thức máu toàn phần (CBC) trước mỗi chu kỳ và giữa các chu kỳ",
+            "Chức năng thận (creatinine, eGFR) trước mỗi chu kỳ",
+            "Chức năng gan (ALT, AST, bilirubin) trước mỗi chu kỳ",
+            "Nước tiểu (hematuria, proteinuria) - theo dõi viêm bàng quang chảy máu",
+            "Dấu hiệu viêm bàng quang chảy máu (đái máu, đau bụng dưới) - nguy hiểm",
+            "Dấu hiệu độc thần kinh trung ương (lú lẫn, co giật, hôn mê) - với liều cao",
+            "Điện giải (Na, K) nếu có độc thần kinh trung ương",
+            "Theo dõi lượng nước tiểu (đảm bảo >100ml/giờ)"
+        ],
+        "precautions": [
+            "LUÔN dùng kèm mesna để bảo vệ bàng quang (bắt buộc)",
+            "Uống nhiều nước và truyền dịch đầy đủ (đảm bảo >2L/ngày)",
+            "Theo dõi sát nước tiểu (dấu hiệu viêm bàng quang chảy máu)",
+            "Ngừng ngay nếu có viêm bàng quang chảy máu nặng",
+            "Có thể gây độc thần kinh trung ương với liều cao (lú lẫn, co giật - cần điều trị)",
+            "Giảm liều 25-50% nếu suy thận (CrCl 30-60)",
+            "Tránh dùng với các thuốc độc thận (cisplatin)",
+            "Có thể gây vô sinh (cần tư vấn trước điều trị)",
+            "Mesna phải được dùng đúng liều và thời điểm (trước, trong, và sau ifosfamide)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-15 giờ (tùy thuộc vào liều)",
+            "onset": "1-2 tuần (tác dụng lâm sàng)",
+            "duration": "Kéo dài (tích lũy)",
+            "protein_binding": "<20%",
+            "clearance": "Gan (chuyển hóa chủ yếu qua CYP2B6, CYP3A4), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu",
+        "black_box_warnings": "Có thể gây viêm bàng quang chảy máu nặng và nguy hiểm tính mạng. LUÔN phải dùng kèm mesna để bảo vệ bàng quang. Có thể gây độc thần kinh trung ương nặng (lú lẫn, co giật, hôn mê) với liều cao"
     },
     
     "Doxorubicin": {
@@ -7563,7 +8159,37 @@ DRUG_DATABASE = {
             "Paclitaxel: có thể tăng độc tính",
             "Các anthracyclines khác: tăng độc tim"
         ],
-        "pregnancy": "D - Chống chỉ định"
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Doxorubicin là anthracycline, gắn vào DNA và ức chế enzyme topoisomerase II, ngăn cản quá trình sửa chữa DNA và gây đứt gãy DNA. Thuốc tạo ra các gốc tự do (free radicals) gây stress oxy hóa, tổn thương màng tế bào và DNA. Doxorubicin tích lũy trong ty thể, gây tổn thương ty thể và dẫn đến độc tim (cardiotoxicity). Thuốc tác động chủ yếu lên tế bào đang phân chia nhanh, gây độc tế bào và chết tế bào ung thư. Độc tim là do tích lũy liều (dose-dependent) và có thể không hồi phục",
+        "monitoring": [
+            "Chức năng tim trước mỗi chu kỳ (echo, MUGA scan - đo EF)",
+            "Điện tâm đồ (ECG) trước và trong điều trị",
+            "Tổng liều tích lũy (tối đa 450-550mg/m² để tránh độc tim)",
+            "Công thức máu toàn phần (CBC) trước mỗi chu kỳ",
+            "Chức năng gan (ALT, AST, bilirubin) trước mỗi chu kỳ",
+            "Dấu hiệu suy tim (khó thở, phù, mệt mỏi) - có thể xảy ra muộn",
+            "Theo dõi extravasation khi truyền (da đỏ, đau - nguy hiểm)",
+            "Nước tiểu đỏ (bình thường, không phải máu)"
+        ],
+        "precautions": [
+            "Theo dõi chặt chẽ tổng liều tích lũy (tối đa 450-550mg/m²)",
+            "Đo EF trước mỗi chu kỳ nếu có nguy cơ độc tim cao",
+            "Ngừng nếu EF giảm >10-15% hoặc có dấu hiệu suy tim",
+            "Tránh extravasation khi truyền (có thể gây hoại tử da)",
+            "Có thể dùng liposomal doxorubicin để giảm độc tim",
+            "Tránh dùng với các thuốc khác gây độc tim (cyclophosphamide, trastuzumab)",
+            "Độc tim có thể xảy ra muộn (sau nhiều năm) - cần theo dõi lâu dài",
+            "Có thể gây vô sinh (cần tư vấn trước điều trị)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "20-48 giờ (dài)",
+            "onset": "1-2 tuần (tác dụng lâm sàng)",
+            "duration": "Kéo dài (tích lũy trong mô)",
+            "protein_binding": ">90%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ - chậm)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu. Bảo vệ khỏi ánh sáng",
+        "black_box_warnings": "Có thể gây độc tim nặng và suy tim không hồi phục. Tổng liều tích lũy tối đa: 450-550mg/m². Theo dõi chức năng tim trước mỗi chu kỳ. Độc tim có thể xảy ra muộn (sau nhiều năm)"
     },
     
     "Granisetron": {
@@ -7601,7 +8227,33 @@ DRUG_DATABASE = {
             "Apomorphine: chống chỉ định (tăng tác dụng)",
             "Các 5-HT3 antagonists khác: không nên dùng đồng thời"
         ],
-        "pregnancy": "B - Thận trọng"
+        "pregnancy": "B - Thận trọng",
+        "mechanism_of_action": "Granisetron là 5-HT3 receptor antagonist, ức chế chọn lọc receptor serotonin type 3 (5-HT3) ở cả ngoại vi (dây thần kinh phế vị trong ruột) và trung ương (vùng chemoreceptor trigger zone - CTZ). Thuốc ngăn cản serotonin gắn vào receptor 5-HT3, giảm kích thích gây nôn từ hóa trị và xạ trị. Granisetron có ái lực cao với receptor 5-HT3 và tác dụng kéo dài, hiệu quả trong phòng và điều trị nôn do hóa trị, đặc biệt với các thuốc gây nôn mạnh (cisplatin, doxorubicin)",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm nôn, buồn nôn)",
+            "Dấu hiệu đau đầu (phổ biến)",
+            "Dấu hiệu táo bón (phổ biến)",
+            "Điện tâm đồ (ECG) nếu có nguy cơ QT kéo dài (hiếm)",
+            "Chức năng gan nếu dùng lâu dài (tăng transaminase - hiếm)"
+        ],
+        "precautions": [
+            "Dùng 30 phút - 1 giờ trước hóa trị để đạt hiệu quả tối đa",
+            "Có thể dùng IV hoặc PO",
+            "Có thể dùng kết hợp với corticosteroid (dexamethasone) để tăng hiệu quả",
+            "Tránh dùng với apomorphine (chống chỉ định)",
+            "Không nên dùng đồng thời với các 5-HT3 antagonists khác",
+            "Có thể gây QT kéo dài (hiếm - cần theo dõi nếu có nguy cơ)",
+            "Có thể dùng trong thai kỳ (category B - thận trọng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-5 giờ (IV), 6-9 giờ (PO)",
+            "onset": "1-3 phút (IV), 30-60 phút (PO)",
+            "duration": "24 giờ",
+            "protein_binding": "65%",
+            "clearance": "Gan (chuyển hóa qua CYP3A4), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu",
+        "black_box_warnings": None
     },
     
     "Palonosetron": {
@@ -7635,7 +8287,33 @@ DRUG_DATABASE = {
         "interactions": [
             "Apomorphine: chống chỉ định"
         ],
-        "pregnancy": "B - Thận trọng"
+        "pregnancy": "B - Thận trọng",
+        "mechanism_of_action": "Palonosetron là 5-HT3 receptor antagonist thế hệ 2, ức chế chọn lọc receptor serotonin type 3 (5-HT3) ở cả ngoại vi và trung ương. Palonosetron có ái lực cao hơn và thời gian bán thải dài hơn so với các 5-HT3 antagonists thế hệ 1 (ondansetron, granisetron), cho phép dùng 1 liều duy nhất để phòng nôn trong 48-72 giờ. Thuốc ngăn cản serotonin gắn vào receptor 5-HT3, giảm kích thích gây nôn từ hóa trị. Palonosetron đặc biệt hiệu quả với hóa trị gây nôn trung hạn (delayed nausea)",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm nôn, buồn nôn)",
+            "Dấu hiệu đau đầu (phổ biến)",
+            "Dấu hiệu táo bón (phổ biến)",
+            "Điện tâm đồ (ECG) nếu có nguy cơ QT kéo dài (hiếm)",
+            "Chức năng gan nếu dùng lâu dài"
+        ],
+        "precautions": [
+            "Dùng 30 phút trước hóa trị để đạt hiệu quả tối đa",
+            "Chỉ cần dùng 1 liều (tác dụng kéo dài 48-72 giờ)",
+            "Có thể dùng kết hợp với corticosteroid (dexamethasone) để tăng hiệu quả",
+            "Tránh dùng với apomorphine (chống chỉ định)",
+            "Có thể gây QT kéo dài (hiếm - cần theo dõi nếu có nguy cơ)",
+            "Có thể dùng trong thai kỳ (category B - thận trọng)",
+            "Tác dụng dài hơn so với ondansetron và granisetron"
+        ],
+        "pharmacokinetics": {
+            "half_life": "40 giờ (rất dài)",
+            "onset": "5 phút (IV)",
+            "duration": "48-72 giờ (rất dài)",
+            "protein_binding": "62%",
+            "clearance": "Gan (chuyển hóa qua CYP2D6, CYP3A4), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu",
+        "black_box_warnings": None
     },
     
     # ========== PEDIATRIC-SPECIFIC ==========
@@ -7782,7 +8460,127 @@ DRUG_DATABASE = {
             "clearance": "Gan: chủ yếu qua glucuronidation (40-60%) và sulfation (20-40%), một phần nhỏ qua CYP2E1 tạo NAPQI (chất độc). Thận: <5% bài tiết nguyên dạng. Ở quá liều, con đường CYP2E1 tăng → tăng NAPQI → vượt quá glutathione → độc gan"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dung dịch: tránh đông lạnh. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi dùng.",
-        "black_box_warnings": "Quá liều có thể gây độc tính gan nghiêm trọng, suy gan cấp, tử vong. Liều >150mg/kg ở trẻ em hoặc >10g ở người lớn có thể gây độc tính gan. Triệu chứng ban đầu có thể nhẹ (buồn nôn, nôn) nhưng tổn thương gan xảy ra sau 24-48 giờ. Điều trị ngay với N-acetylcysteine nếu quá liều (hiệu quả nhất trong vòng 8 giờ đầu). Không dùng quá 4g/ngày ở người lớn."
+        "black_box_warnings": "Quá liều có thể gây độc tính gan nghiêm trọng, suy gan cấp, tử vong. Liều >150mg/kg ở trẻ em hoặc >10g ở người lớn có thể gây độc tính gan. Triệu chứng ban đầu có thể nhẹ (buồn nôn, nôn) nhưng tổn thương gan xảy ra sau 24-48 giờ. Điều trị ngay với N-acetylcysteine nếu quá liều (hiệu quả nhất trong vòng 8 giờ đầu). Không dùng quá 4g/ngày ở người lớn.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Paracetamol liều cao kéo dài có thể ức chế CYP2C9, tăng nồng độ warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên nếu dùng paracetamol liều cao (>2g/ngày) kéo dài. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Rượu (Ethanol)",
+                    "mechanism": "Rượu kích hoạt CYP2E1, tăng chuyển hóa paracetamol thành NAPQI (chất độc)",
+                    "effect": "Tăng nguy cơ độc tính gan nghiêm trọng, đặc biệt ở liều paracetamol >4g/ngày",
+                    "management": "Tránh rượu hoặc giảm liều paracetamol khi uống rượu. Thận trọng ở bệnh nhân nghiện rượu."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Isoniazid",
+                    "mechanism": "Tăng chuyển hóa qua CYP2E1",
+                    "effect": "Tăng nguy cơ độc tính gan",
+                    "management": "Thận trọng, giảm liều paracetamol, theo dõi ALT/AST"
+                },
+                {
+                    "drug": "Phenytoin, Carbamazepine",
+                    "mechanism": "Cảm ứng enzyme chuyển hóa",
+                    "effect": "Tăng nguy cơ độc tính gan",
+                    "management": "Thận trọng, giảm liều paracetamol"
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Metoclopramide",
+                    "mechanism": "Tăng nhu động dạ dày",
+                    "effect": "Tăng hấp thu paracetamol (nhẹ)",
+                    "management": "Không cần điều chỉnh liều"
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Suy gan nặng (Child-Pugh C)",
+                "Dị ứng paracetamol",
+                "Quá liều paracetamol (đang trong quá trình điều trị)"
+            ],
+            "relative": [
+                "Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều",
+                "Nghiện rượu - giảm liều tối đa 2g/ngày",
+                "Suy thận nặng (CrCl <30) - giảm liều hoặc tăng khoảng cách",
+                "Thiếu hụt G6PD (hiếm gây thiếu máu tan máu)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "An toàn trong thai kỳ. Paracetamol là thuốc giảm đau/hạ sốt được lựa chọn đầu tiên trong thai kỳ. Không có bằng chứng về dị tật bẩm sinh. Có thể dùng ở tất cả các tam cá nguyệt. Tuy nhiên, một số nghiên cứu quan sát gợi ý mối liên hệ có thể có với ADHD và tự kỷ ở trẻ khi dùng lâu dài trong thai kỳ, nhưng chứng cứ chưa rõ ràng.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Paracetamol bài tiết vào sữa mẹ ở nồng độ thấp (<1% liều mẹ). An toàn cho trẻ bú mẹ. Nồng độ trong sữa mẹ rất thấp, không có tác dụng phụ đáng kể ở trẻ.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú. Dùng liều thường dùng (500-1000mg mỗi 4-6 giờ)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Giảm liều tối đa 2-3g/ngày, chia 3-4 lần",
+            "moderate": "Giảm liều tối đa 2g/ngày, chia 3-4 lần. Theo dõi ALT/AST",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp (1-1.5g/ngày) dưới sự giám sát chặt chẽ. Theo dõi ALT/AST thường xuyên",
+            "notes": "Paracetamol chuyển hóa ở gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính. Đặc biệt thận trọng ở bệnh nhân nghiện rượu."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Giai đoạn 1 (0-24h): Buồn nôn, nôn, đau bụng, chán ăn, mệt mỏi. Bệnh nhân có thể không có triệu chứng rõ ràng",
+                "Giai đoạn 2 (24-48h): Giảm triệu chứng (giai đoạn 'yên lặng'), nhưng ALT/AST bắt đầu tăng",
+                "Giai đoạn 3 (48-72h): Tăng ALT/AST đỉnh, vàng da, suy gan, rối loạn đông máu, bệnh não gan, có thể tử vong",
+                "Giai đoạn 4 (4-14 ngày): Hồi phục (nếu sống sót) hoặc tử vong"
+            ],
+            "antidote": "N-acetylcysteine (NAC) - hiệu quả nếu dùng trong vòng 8-10 giờ sau quá liều, tốt nhất trong 4-6 giờ",
+            "treatment": [
+                "Đánh giá nguy cơ: Liều >150mg/kg (trẻ em) hoặc >10g (người lớn) hoặc >200mg/kg (người lớn có nguy cơ) = nguy cơ cao",
+                "Đo nồng độ paracetamol trong máu 4 giờ sau khi uống (hoặc ngay khi đến viện nếu >4 giờ)",
+                "Sử dụng đồ thị Rumack-Matthew để quyết định điều trị: Nếu nồng độ trên đường 'điều trị' → dùng NAC",
+                "NAC protocol: IV hoặc PO. IV: 150mg/kg trong 15 phút, sau đó 50mg/kg trong 4 giờ, sau đó 100mg/kg trong 16 giờ. PO: 140mg/kg, sau đó 70mg/kg mỗi 4 giờ x 17 liều",
+                "Theo dõi ALT/AST, INR, bilirubin, glucose, lactate, creatinine thường xuyên",
+                "Điều trị hỗ trợ: Truyền dịch, điều chỉnh đường huyết, điều chỉnh rối loạn đông máu, xem xét ghép gan nếu suy gan nặng"
+            ],
+            "monitoring": "Nồng độ paracetamol trong máu, ALT/AST mỗi 12-24 giờ, INR, bilirubin, glucose, lactate, creatinine, dấu hiệu bệnh não gan, tiên lượng (King's College Criteria cho ghép gan)"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "N-acetylcysteine (NAC)",
+                    "indication": "Quá liều paracetamol",
+                    "dose": "IV: 150mg/kg trong 15 phút, sau đó 50mg/kg trong 4 giờ, sau đó 100mg/kg trong 16 giờ. PO: 140mg/kg, sau đó 70mg/kg mỗi 4 giờ x 17 liều",
+                    "mechanism": "Bổ sung glutathione, liên kết với NAPQI (chất độc), giải độc gan",
+                    "notes": "Hiệu quả nhất nếu dùng trong vòng 8-10 giờ sau quá liều, tốt nhất trong 4-6 giờ. Vẫn có thể có lợi sau 24 giờ nếu có suy gan."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ",
+                "timing": "Mỗi 4-6 giờ khi cần. Không quá 4g/ngày (người lớn) hoặc 60mg/kg/ngày (trẻ em). Có thể dùng trước khi đi ngủ nếu cần giảm đau/giảm sốt ban đêm."
+            },
+            "iv": {
+                "reconstitution": "Pha trong D5W hoặc NS. Nồng độ cuối: 1mg/ml (tối đa 10mg/ml). Dùng ngay sau khi pha.",
+                "infusion_rate": "Truyền trong 15 phút",
+                "compatibility": ["D5W", "NS", "LR"],
+                "incompatibility": ["Không pha trộn với các thuốc khác"],
+                "notes": "Dùng cho bệnh nhân không uống được hoặc cần tác dụng nhanh. Liều tương đương PO."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Acetaminophen",
+                "UpToDate - Acetaminophen poisoning",
+                "Rumack-Matthew nomogram",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics",
+                "King's College Criteria for liver transplantation in acute liver failure"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - RCTs và guidelines dựa trên chứng cứ"
+        }
     },
     
     "Ibuprofen": {
@@ -7982,7 +8780,38 @@ DRUG_DATABASE = {
             "Ketoconazole/Itraconazole: tăng nồng độ budesonide",
             "Ritonavir: tăng nồng độ budesonide"
         ],
-        "pregnancy": "C - An toàn"
+        "pregnancy": "C - An toàn",
+        "mechanism_of_action": "Budesonide là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Budesonide gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản, và tăng số lượng beta-2 receptors. Budesonide có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Tuy nhiên, một phần nhỏ vẫn được hấp thu và có thể gây tác dụng toàn thân ở liều cao. Budesonide được chuyển hóa nhanh ở gan (first-pass metabolism cao) nên tác dụng toàn thân ít hơn so với corticosteroid uống.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)",
+            "Nấm miệng (candidiasis) - kiểm tra lưỡi, miệng, đặc biệt nếu không súc miệng sau khi dùng",
+            "Khàn tiếng, ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến",
+            "Tác dụng toàn thân (chỉ ở liều cao): ức chế trục HPA, chậm phát triển ở trẻ em, loãng xương, tăng huyết áp",
+            "Chức năng gan nếu có triệu chứng (hiếm)",
+            "Tương tác với ritonavir, ketoconazole, itraconazole (tăng nồng độ budesonide)"
+        ],
+        "precautions": [
+            "Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG",
+            "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, budesonide là thuốc duy trì",
+            "Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì",
+            "Không ngừng đột ngột - giảm liều dần dần",
+            "Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>1600mcg/ngày)",
+            "Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước",
+            "Tránh dùng với ritonavir (tăng đáng kể nồng độ budesonide, tăng nguy cơ ức chế HPA)",
+            "Thận trọng với ketoconazole, itraconazole (tăng nồng độ budesonide)",
+            "Theo dõi chậm phát triển ở trẻ em nếu dùng liều cao",
+            "Có thể dùng cho trẻ em (có dạng nebulizer)",
+            "Dùng đều đặn hàng ngày, không phải khi cần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (trong phổi), 4-6 giờ (toàn thân sau hấp thu)",
+            "onset": "Vài giờ đến vài ngày (tác dụng kháng viêm)",
+            "duration": "12-24 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "88-90%",
+            "clearance": "Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~85-90% bị chuyển hóa). Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản)."
+        },
+        "storage": "Dạng hít (MDI/DPI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Nebulizer suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng, dùng trong vòng 2 giờ sau khi mở gói. Bảo quản trong tủ lạnh nếu không dùng ngay (2-8°C), để nhiệt độ phòng trước khi dùng.",
+        "black_box_warnings": None
     },
     
     "Amoxicillin suspension": {
@@ -8025,7 +8854,41 @@ DRUG_DATABASE = {
             "Allopurinol: tăng nguy cơ phát ban",
             "Thuốc tránh thai: có thể giảm hiệu quả"
         ],
-        "pregnancy": "B - An toàn"
+        "pregnancy": "B - An toàn",
+        "mechanism_of_action": "Amoxicillin là aminopenicillin (beta-lactam antibiotic), ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs) trên màng tế bào vi khuẩn. Amoxicillin là chất tương tự penicillin nhưng có nhóm amin, giúp tăng khả năng xuyên qua màng ngoài của vi khuẩn Gram-âm và tăng phổ kháng khuẩn. Amoxicillin ức chế enzyme transpeptidase, ngăn chặn liên kết chéo giữa các chuỗi peptidoglycan trong thành tế bào vi khuẩn, dẫn đến làm suy yếu và vỡ thành tế bào khi vi khuẩn phân chia. Amoxicillin có phổ kháng khuẩn rộng: Gram-dương (Streptococcus, Enterococcus, một số Staphylococcus không kháng penicillinase), Gram-âm (H. influenzae, E. coli, Proteus mirabilis, Salmonella, Shigella), và một số kỵ khí. Không hiệu quả với vi khuẩn tiết beta-lactamase (cần kết hợp với clavulanate). Dạng suspension phù hợp cho trẻ em, dễ uống và hấp thu tốt.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng: sốt, WBC, CRP (theo dõi đáp ứng điều trị)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng (nếu có) để đánh giá hiệu quả",
+            "Dấu hiệu dị ứng: phát ban, mề đay, khó thở, sốc phản vệ (đặc biệt ở lần đầu tiên dùng)",
+            "Tiêu chảy (phổ biến, có thể là nhiễm C. difficile nếu nặng)",
+            "Chức năng thận (creatinine) nếu dùng liều cao hoặc suy thận",
+            "Dấu hiệu nhiễm C. difficile: tiêu chảy nặng, đau bụng, sốt (cần ngừng và điều trị)",
+            "Chức năng gan (ALT, AST) nếu có triệu chứng (hiếm)",
+            "Công thức máu (giảm bạch cầu, thiếu máu hiếm)",
+            "INR nếu dùng với warfarin (tăng nguy cơ chảy máu)"
+        ],
+        "precautions": [
+            "Không dùng ở bệnh nhân dị ứng penicillin hoặc beta-lactam (phản ứng chéo với cephalosporin ~5-10%)",
+            "Lắc kỹ suspension trước khi dùng (thuốc lắng xuống đáy)",
+            "Có thể uống với hoặc không thức ăn (hấp thu tốt)",
+            "Dùng đủ liều và đủ thời gian (thường 7-10 ngày) để tránh kháng thuốc",
+            "Thận trọng ở bệnh nhân suy thận (giảm liều hoặc tăng khoảng cách)",
+            "Thận trọng ở bệnh nhân có tiền sử nhiễm C. difficile (tăng nguy cơ tái phát)",
+            "Thận trọng với allopurinol (tăng nguy cơ phát ban)",
+            "Thận trọng với methotrexate (amoxicillin làm giảm thải trừ methotrexate, tăng độc tính)",
+            "Có thể giảm hiệu quả thuốc tránh thai (dùng biện pháp dự phòng)",
+            "Theo dõi tiêu chảy - nếu nặng hoặc kéo dài, có thể là nhiễm C. difficile",
+            "Dùng đúng liều theo cân nặng ở trẻ em (tính theo mg/kg)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-1.5 giờ",
+            "onset": "1-2 giờ (đạt nồng độ đỉnh trong máu)",
+            "duration": "6-8 giờ (dùng 2-3 lần/ngày)",
+            "protein_binding": "20%",
+            "clearance": "Thận: bài tiết chủ yếu qua nước tiểu (không thay đổi, 60-70% trong 6-8 giờ). Một phần nhỏ qua mật. Hấp thu tốt qua đường uống (75-90%), không bị ảnh hưởng bởi thức ăn. Dạng suspension hấp thu tương tự viên nén."
+        },
+        "storage": "Bảo quản suspension ở nhiệt độ phòng (15-30°C) hoặc trong tủ lạnh (2-8°C) - theo hướng dẫn trên nhãn. Lắc kỹ trước khi dùng. Sau khi pha (nếu là bột pha nước): bảo quản trong tủ lạnh (2-8°C), dùng trong vòng 7-14 ngày (theo hướng dẫn). Tránh đông lạnh. Để nơi khô ráo, tránh ánh sáng trực tiếp, tránh xa tầm tay trẻ em.",
+        "black_box_warnings": None
     },
     
     # ========== EMERGENCY / ACLS ==========
@@ -8098,8 +8961,8 @@ DRUG_DATABASE = {
             "half_life": "2-3 phút (rất ngắn)",
             "onset": "IV: ngay lập tức; IM: 5-10 phút",
             "duration": "3-10 phút (IV), 10-30 phút (IM)",
-            "metabolism": "MAO và COMT trong gan và mô",
-            "clearance": "Rất nhanh, bị bất hoạt bởi enzyme"
+            "protein_binding": "Không đáng kể (catecholamine)",
+            "clearance": "Rất nhanh, bị bất hoạt bởi enzyme (MAO và COMT trong gan và mô)"
         },
         "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh. Kiểm tra màu sắc trước dùng (hóa nâu = hỏng).",
         "black_box_warnings": "Không có black box warning. Tuy nhiên, tiêm ngoài mạch có thể gây hoại tử mô. Liều cao có thể gây nhồi máu cơ tim, đột quỵ, hoặc tử vong."
@@ -8383,8 +9246,8 @@ DRUG_DATABASE = {
             "half_life": "30-90 phút (ngắn)",
             "onset": "1-2 phút (IV), 2-5 phút (IM)",
             "duration": "30-90 phút (tùy liều)",
-            "metabolism": "Gan (glucuronidation)",
-            "clearance": "Gan, thời gian bán thải ngắn hơn nhiều so với hầu hết opioid"
+            "protein_binding": "45%",
+            "clearance": "Gan (glucuronidation), thời gian bán thải ngắn hơn nhiều so với hầu hết opioid"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Có thể bảo quản ở nhiệt độ 2-8°C.",
         "black_box_warnings": "Không có black box warning. Tuy nhiên, thời gian tác dụng ngắn có thể dẫn đến tái ngộ độc opioid nếu không theo dõi đúng. Hội chứng cai opioid có thể nguy hiểm ở bệnh nhân nghiện."
@@ -8576,7 +9439,39 @@ DRUG_DATABASE = {
             "Diuretics: tăng nguy cơ hạ huyết áp",
             "NSAID: giảm hiệu quả"
         ],
-        "pregnancy": "D - Chống chỉ định"
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Enalaprilat là dạng hoạt chất của enalapril (enalapril là prodrug, chuyển hóa thành enalaprilat trong gan). Enalaprilat ức chế angiotensin converting enzyme (ACE), enzyme chuyển angiotensin I thành angiotensin II. Angiotensin II là chất co mạch mạnh và kích thích tiết aldosterone. Bằng cách ức chế ACE, enalaprilat giảm nồng độ angiotensin II, dẫn đến: giãn mạch (giảm sức cản mạch máu ngoại biên), giảm aldosterone (giảm tái hấp thu natri và nước ở thận, tăng bài tiết kali), giảm tiền gánh và hậu gánh tim, và giảm huyết áp. Enalaprilat cũng ức chế phân hủy bradykinin (chất giãn mạch), có thể góp phần vào tác dụng hạ huyết áp nhưng cũng gây ho khan (tác dụng phụ). Dạng IV tác dụng nhanh hơn enalapril uống, phù hợp cho cấp cứu tăng huyết áp và suy tim cấp.",
+        "monitoring": [
+            "Huyết áp liên tục (đặc biệt trong 30-60 phút đầu sau liều đầu tiên) - nguy cơ hạ huyết áp đột ngột",
+            "Kali máu (tăng kali máu do giảm aldosterone) - theo dõi định kỳ",
+            "Creatinine và eGFR (suy thận cấp có thể xảy ra, đặc biệt ở bệnh nhân hẹp động mạch thận)",
+            "Dấu hiệu phù mạch (angioedema): sưng mặt, môi, lưỡi, họng - cấp cứu, cần ngừng ngay",
+            "Dấu hiệu ho khan (tác dụng phụ phổ biến, có thể dai dẳng)",
+            "Nhịp tim và ECG (đặc biệt nếu có tiền sử rối loạn nhịp)",
+            "Dấu hiệu suy tim: khó thở, phù, tăng cân"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp (0.625mg) và theo dõi huyết áp sát trong 30-60 phút đầu",
+            "Nguy cơ hạ huyết áp đột ngột cao hơn so với enalapril uống (tác dụng nhanh hơn)",
+            "Thận trọng ở bệnh nhân đang dùng diuretics (tăng nguy cơ hạ huyết áp) - có thể tạm ngừng diuretic trước khi bắt đầu",
+            "Thận trọng ở bệnh nhân hẹp động mạch thận (có thể gây suy thận cấp)",
+            "Thận trọng ở bệnh nhân suy thận (giảm liều, theo dõi creatinine)",
+            "Thận trọng ở bệnh nhân đang dùng kali hoặc kali-sparing diuretics (tăng nguy cơ tăng kali máu)",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Theo dõi phù mạch (angioedema) - có thể xảy ra ngay sau liều đầu tiên hoặc sau vài giờ",
+            "Chuyển sang enalapril uống khi bệnh nhân có thể uống được",
+            "Không dùng trong thai kỳ (chống chỉ định tuyệt đối - gây dị tật thai nhi)",
+            "Thận trọng ở bệnh nhân có tiền sử phù mạch với ACE inhibitor khác"
+        ],
+        "pharmacokinetics": {
+            "half_life": "11 giờ (enalaprilat, dài hơn enalapril)",
+            "onset": "15 phút (IV, nhanh hơn enalapril uống)",
+            "duration": "6 giờ (tiêm mỗi 6 giờ)",
+            "protein_binding": "50-60%",
+            "clearance": "Thận: bài tiết chủ yếu qua nước tiểu (không cần chuyển hóa như enalapril). Thời gian bán thải dài (11 giờ) so với enalapril (1 giờ) vì enalaprilat là chất chuyển hóa cuối cùng."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Sau khi pha: dùng ngay, không bảo quản lâu. Theo hướng dẫn của nhà sản xuất về thời gian sử dụng sau khi pha.",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây tổn thương thai nhi và tử vong khi dùng trong tam cá nguyệt thứ hai và thứ ba. Phù mạch (angioedema) có thể xảy ra bất cứ lúc nào, có thể đe dọa tính mạng, cần ngừng ngay và điều trị cấp cứu."
     },
     
     "Ceftriaxone": {
