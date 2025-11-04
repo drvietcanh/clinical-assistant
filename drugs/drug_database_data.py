@@ -7130,7 +7130,33 @@ DRUG_DATABASE = {
             "Alcohol: tăng nguy cơ độc gan",
             "Phenytoin/Carbamazepine: tăng nguy cơ độc gan"
         ],
-        "pregnancy": "C - An toàn (dùng được trong thai kỳ)"
+        "pregnancy": "C - An toàn (dùng được trong thai kỳ)",
+        "mechanism_of_action": "Paracetamol ức chế cyclooxygenase (COX) chủ yếu ở hệ thần kinh trung ương, làm giảm tổng hợp prostaglandin E2 trong vùng dưới đồi, từ đó giảm đau và hạ sốt. Khác với NSAID, paracetamol ít tác dụng kháng viêm ở ngoại biên vì không ức chế COX hiệu quả ở mô ngoại biên. Cơ chế chính xác vẫn chưa hoàn toàn rõ ràng, nhưng có thể liên quan đến ức chế COX-2 ở hệ thần kinh trung ương hoặc tác dụng qua con đường cannabinoid. Quan trọng: Ở liều quá cao, chuyển hóa qua CYP2E1 tạo NAPQI (N-acetyl-p-benzoquinone imine) - chất độc gây tổn thương gan nặng.",
+        "monitoring": [
+            "ALT/AST nếu nghi ngờ quá liều hoặc bệnh nhân có nguy cơ (suy gan, uống rượu, dùng isoniazid)",
+            "INR nếu dùng với warfarin liều cao kéo dài (tăng nguy cơ chảy máu)",
+            "Dấu hiệu độc tính gan: buồn nôn, nôn, đau bụng, vàng da (xuất hiện sau 24-48h sau quá liều)",
+            "Nồng độ paracetamol trong máu nếu quá liều (đồ thị Rumack-Matthew để quyết định điều trị N-acetylcysteine)",
+            "Đường huyết (hạ đường huyết có thể xảy ra trong quá liều)"
+        ],
+        "precautions": [
+            "Không vượt quá 4g/ngày ở người lớn, 60mg/kg/ngày ở trẻ em để tránh độc tính gan",
+            "Giảm liều ở bệnh nhân suy gan, suy thận nặng (khoảng cách liều 6-8 giờ)",
+            "Tránh rượu khi dùng (rượu tăng CYP2E1 → tăng sản xuất NAPQI độc)",
+            "Kiểm tra các thuốc kết hợp có chứa paracetamol (tránh quá liều không chủ ý)",
+            "Thận trọng với bệnh nhân suy dinh dưỡng, nhịn ăn (giảm glutathione → tăng nguy cơ độc tính)",
+            "Nếu quá liều, điều trị ngay với N-acetylcysteine (hiệu quả nhất trong vòng 8 giờ đầu)",
+            "Thận trọng với bệnh nhân dùng isoniazid, phenytoin, carbamazepine (tăng nguy cơ độc gan)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (bình thường), 4-8 giờ (quá liều)",
+            "onset": "30-60 phút (PO), 15-30 phút (IV), 60 phút (PR)",
+            "duration": "4-6 giờ",
+            "protein_binding": "10-25%",
+            "clearance": "Gan: chủ yếu qua glucuronidation (40-60%) và sulfation (20-40%), một phần nhỏ qua CYP2E1 tạo NAPQI (chất độc). Thận: <5% bài tiết nguyên dạng. Ở quá liều, con đường CYP2E1 tăng → tăng NAPQI → vượt quá glutathione → độc gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dung dịch: tránh đông lạnh. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi dùng.",
+        "black_box_warnings": "Quá liều có thể gây độc tính gan nghiêm trọng, suy gan cấp, tử vong. Liều >150mg/kg ở trẻ em hoặc >10g ở người lớn có thể gây độc tính gan. Triệu chứng ban đầu có thể nhẹ (buồn nôn, nôn) nhưng tổn thương gan xảy ra sau 24-48 giờ. Điều trị ngay với N-acetylcysteine nếu quá liều (hiệu quả nhất trong vòng 8 giờ đầu). Không dùng quá 4g/ngày ở người lớn."
     },
     
     "Ibuprofen": {
@@ -7179,7 +7205,38 @@ DRUG_DATABASE = {
             "Methotrexate: tăng độc tính",
             "ACE inhibitors: giảm hiệu quả"
         ],
-        "pregnancy": "C - Tránh dùng trong 3 tháng cuối (D)"
+        "pregnancy": "C - Tránh dùng trong 3 tháng cuối (D)",
+        "mechanism_of_action": "Ibuprofen ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), làm giảm tổng hợp prostaglandin, thromboxane A2, và prostacyclin từ acid arachidonic. Prostaglandin tham gia vào quá trình viêm, đau, sốt, và điều hòa thận. Thromboxane A2 gây kết tập tiểu cầu và co mạch. Ức chế COX-1 làm giảm prostaglandin bảo vệ niêm mạc dạ dày và ảnh hưởng đến chức năng thận. Ức chế COX-2 chủ yếu giảm viêm và đau. Ibuprofen là NSAID không chọn lọc, có tác dụng kháng viêm, giảm đau, và hạ sốt. Tác dụng kháng viêm mạnh hơn paracetamol nhưng có nhiều tác dụng phụ hơn, đặc biệt là kích ứng dạ dày và ảnh hưởng đến thận.",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày (phân đen, nôn ra máu, đau bụng, thiếu máu)",
+            "Creatinine, BUN nếu dùng lâu dài hoặc bệnh nhân có nguy cơ suy thận (tuổi cao, tiểu đường, tăng huyết áp)",
+            "Huyết áp (NSAID có thể tăng huyết áp, đặc biệt ở bệnh nhân tăng huyết áp đang điều trị)",
+            "Chức năng gan (ALT, AST) nếu dùng lâu dài hoặc có triệu chứng",
+            "Dấu hiệu suy tim (giữ nước, phù, khó thở) - NSAID có thể làm nặng suy tim",
+            "INR nếu dùng với warfarin (tăng nguy cơ chảy máu)",
+            "Triệu chứng tim mạch (đau ngực, khó thở) - tăng nguy cơ tim mạch với dùng lâu dài"
+        ],
+        "precautions": [
+            "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày",
+            "Cân nhắc dùng PPI (omeprazole, pantoprazole) hoặc misoprostol nếu có nguy cơ loét dạ dày (tuổi >65, tiền sử loét, dùng corticosteroid, dùng aspirin)",
+            "Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp (làm nặng bệnh)",
+            "Tránh dùng với ACE inhibitor/ARB (giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp)",
+            "Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm, tăng nguy cơ chảy máu ở mẹ và con)",
+            "Dùng liều thấp nhất hiệu quả và thời gian ngắn nhất có thể",
+            "Thận trọng ở bệnh nhân >65 tuổi (tăng nguy cơ tác dụng phụ)",
+            "Tránh dùng với aspirin liều thấp (có thể giảm hiệu quả bảo vệ tim mạch của aspirin)",
+            "Thận trọng với bệnh nhân hen suyễn (có thể gây co thắt phế quản)",
+            "Không dùng quá 10 ngày cho đau hoặc sốt mà không có chỉ định rõ ràng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-4 giờ",
+            "onset": "30-60 phút (PO), 15-30 phút (IV)",
+            "duration": "4-6 giờ",
+            "protein_binding": ">99% (gắn chặt với albumin)",
+            "clearance": "Gan: chuyển hóa qua CYP2C9 và CYP2C8 thành hydroxy và carboxy metabolites (không hoạt động). Thận: bài tiết <1% nguyên dạng, chủ yếu là metabolites. Thời gian bán thải tăng ở suy thận và suy gan."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi pha.",
+        "black_box_warnings": "Tăng nguy cơ biến cố tim mạch nghiêm trọng (nhồi máu cơ tim, đột quỵ) có thể xảy ra sớm và tăng nguy cơ tử vong. Nguy cơ tăng ở bệnh nhân có bệnh tim mạch hoặc các yếu tố nguy cơ tim mạch. NSAID tăng nguy cơ xuất huyết tiêu hóa, loét, thủng dạ dày có thể gây tử vong. Nguy cơ tăng ở người cao tuổi, tiền sử loét, dùng corticosteroid, aspirin, rượu, hút thuốc. Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm)."
     },
     
     "Salbutamol": {
@@ -7228,7 +7285,38 @@ DRUG_DATABASE = {
             "Diuretics: tăng nguy cơ hạ kali máu",
             "MAOIs: thận trọng"
         ],
-        "pregnancy": "C - An toàn"
+        "pregnancy": "C - An toàn",
+        "mechanism_of_action": "Salbutamol (albuterol) là chất chủ vận beta-2 adrenergic receptors chọn lọc, kích thích beta-2 receptors ở cơ trơn phế quản. Khi gắn vào beta-2 receptor, kích hoạt adenylate cyclase → tăng cAMP trong tế bào → hoạt hóa protein kinase A → phosphoryl hóa các protein → giãn cơ trơn phế quản. Salbutamol chọn lọc beta-2 hơn beta-1 (tỷ lệ ~10:1), nhưng vẫn có tác dụng tim mạch ở liều cao do kích thích beta-1 receptors. Ngoài ra, salbutamol ức chế phóng thích các chất trung gian gây viêm từ mast cells và giảm phù nề niêm mạc phế quản. Tác dụng nhanh (5-15 phút với dạng hít), ngắn (4-6 giờ), phù hợp cho cắt cơn hen cấp tính.",
+        "monitoring": [
+            "Nhịp tim, huyết áp (đặc biệt khi dùng IV hoặc liều cao) - có thể gây nhịp tim nhanh, tăng huyết áp",
+            "Kali máu nếu dùng liều cao hoặc kéo dài (hạ kali máu do kích thích beta-2 → tăng kali vào tế bào)",
+            "Đáp ứng phế quản (peak flow, FEV1, triệu chứng lâm sàng) để đánh giá hiệu quả",
+            "Dấu hiệu quá liều: nhịp tim nhanh >120 bpm, run cơ nặng, loạn nhịp, đau ngực, khó thở nặng hơn",
+            "Dấu hiệu nghịch lý: co thắt phế quản nặng hơn (hiếm nhưng nguy hiểm - cần ngừng ngay)",
+            "Đường huyết nếu dùng liều cao (có thể tăng đường huyết do kích thích beta-2)",
+            "Tần suất sử dụng (nếu cần dùng >4 lần/ngày → cần đánh giá lại điều trị và tăng ICS)"
+        ],
+        "precautions": [
+            "Chỉ dùng khi cần (PRN) cho cắt cơn - không dùng thường xuyên như thuốc duy trì",
+            "Nếu cần dùng >4 lần/ngày hoặc >8-12 puff/ngày → cần đánh giá lại điều trị và tăng liều ICS (inhaled corticosteroid)",
+            "Tránh dùng với beta-blocker không chọn lọc (propranolol) - đối kháng tác dụng, có thể gây co thắt phế quản nặng",
+            "Thận trọng ở bệnh nhân tim mạch, tăng huyết áp, loạn nhịp (tăng nguy cơ tác dụng tim mạch)",
+            "Dùng liều thấp nhất hiệu quả để giảm tác dụng phụ (run, tim đập nhanh)",
+            "Rửa miệng sau khi dùng dạng hít để giảm kích ứng và tránh nấm miệng (nếu dùng với ICS)",
+            "Nếu không đáp ứng hoặc cần dùng thường xuyên → cần đánh giá lại chẩn đoán và điều trị",
+            "Thận trọng với bệnh nhân cường giáp (tăng nhạy cảm với catecholamine)",
+            "Thận trọng với bệnh nhân dùng digoxin (tăng nguy cơ loạn nhịp)",
+            "Dùng liều cao có thể gây hạ kali máu - thận trọng với diuretics"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-7 giờ (dạng hít), 2-4 giờ (IV), 3.8 giờ (PO)",
+            "onset": "5-15 phút (dạng hít), 2-5 phút (IV), 30 phút (PO)",
+            "duration": "4-6 giờ (dạng hít), 4-6 giờ (IV), 4-6 giờ (PO)",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Gan: chuyển hóa qua sulfation và glucuronidation. Thận: bài tiết một phần nguyên dạng và metabolites. Dạng hít: tác dụng tại chỗ, hấp thu toàn thân ít. PO: hấp thu tốt nhưng tác dụng chậm hơn và nhiều tác dụng phụ hơn."
+        },
+        "storage": "Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh đông lạnh. Kiểm tra xem có còn thuốc (lắc, nghe tiếng). Nebulizer solution: bảo quản ở nhiệt độ phòng, tránh ánh sáng, dùng trong vòng 1 tháng sau khi mở. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi pha. Syrup: bảo quản ở nhiệt độ phòng, đậy kín sau khi dùng.",
+        "black_box_warnings": None
     },
     
     "Budesonide": {
@@ -7985,7 +8073,41 @@ DRUG_DATABASE = {
             "Theophylline: tăng nồng độ theophylline",
             "Probenecid: tăng nồng độ ciprofloxacin"
         ],
-        "pregnancy": "C - Tránh dùng"
+        "pregnancy": "C - Tránh dùng",
+        "mechanism_of_action": "Ciprofloxacin là fluoroquinolone kháng sinh phổ rộng thuộc thế hệ thứ hai. Ức chế DNA gyrase (topoisomerase II) ở vi khuẩn Gram-âm và topoisomerase IV ở vi khuẩn Gram-dương, các enzyme cần thiết cho quá trình sao chép, phiên mã, sửa chữa, và tái tổ hợp DNA. Dẫn đến tổn thương DNA không thể sửa chữa và chết tế bào vi khuẩn. Phổ kháng khuẩn: Gram-âm mạnh (Enterobacteriaceae, Pseudomonas aeruginosa, H. influenzae, Neisseria, Moraxella), một số Gram-dương (không phải MRSA), và một số vi khuẩn không điển hình (Legionella, Mycoplasma, Chlamydia). Kháng thuốc phát triển nhanh nếu dùng không đúng hoặc không đủ liều.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng) để đánh giá đáp ứng điều trị",
+            "Cấy máu và cấy từ vị trí nhiễm trùng (nếu có) để xác định vi khuẩn và độ nhạy cảm",
+            "Tendon (gân) - đau, sưng, đứt gân (đặc biệt gân Achilles) - có thể xảy ra bất cứ lúc nào, kể cả sau khi ngừng thuốc",
+            "Thần kinh trung ương (co giật, kích động, mất ngủ, lo âu, trầm cảm, rối loạn tâm thần)",
+            "Tim mạch (ECG - QT kéo dài, rối loạn nhịp tim) - đặc biệt ở bệnh nhân có nguy cơ",
+            "Đường huyết (tăng hoặc hạ đường huyết - đặc biệt với sulfonylurea)",
+            "Chức năng thận (creatinine, BUN) - điều chỉnh liều ở suy thận",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan nặng"
+        ],
+        "precautions": [
+            "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles) - có thể xảy ra bất cứ lúc nào, kể cả sau khi ngừng thuốc",
+            "Nguy cơ tăng ở: > 60 tuổi, dùng corticosteroid, ghép thận, ghép tim, ghép phổi, hoạt động thể lực",
+            "NGỪNG NGAY nếu có đau, sưng gân - nghỉ ngơi, không vận động",
+            "QT kéo dài → không dùng với các thuốc kéo dài QT khác (amiodarone, sotalol, antipsychotics), bệnh nhân có tiền sử rối loạn nhịp",
+            "Co giật → không dùng ở bệnh nhân có tiền sử co giật, tránh dùng với NSAID (tăng nguy cơ)",
+            "Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp, dùng kem chống nắng, mặc quần áo che",
+            "Tương tác với nhiều thuốc: giảm hấp thu với antacid, sucralfate, sắt, kẽm, canxi (cách ít nhất 2 giờ)",
+            "Hạ đường huyết → thận trọng với sulfonylurea (glibenclamide, gliclazide)",
+            "Không dùng cho trẻ em < 18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác) - nguy cơ tổn thương sụn, viêm khớp",
+            "Tránh dùng với sữa, sản phẩm sữa (giảm hấp thu)",
+            "Uống nhiều nước để tránh kết tinh trong nước tiểu",
+            "Không dùng trong thai kỳ (nguy cơ tổn thương sụn thai nhi)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "4 giờ (bình thường), 5-7 giờ (suy thận nặng)",
+            "onset": "1-2 giờ (PO), ngay lập tức (IV)",
+            "duration": "q12h (PO/IV), q8h cho Pseudomonas hoặc nhiễm trùng nặng",
+            "protein_binding": "20-40%",
+            "clearance": "Chủ yếu qua thận (40-60% bài tiết nguyên dạng), một phần qua gan (CYP1A2). Cần điều chỉnh liều ở suy thận (CrCl <30)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín, tránh ẩm. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha. Dung dịch đã pha: bảo quản ở nhiệt độ phòng, dùng trong vòng 24 giờ.",
+        "black_box_warnings": "Tăng nguy cơ viêm gân và đứt gân ở mọi lứa tuổi. Nguy cơ tăng ở bệnh nhân > 60 tuổi, dùng corticosteroid, ghép cơ quan. Nguy cơ tổn thương thần kinh ngoại biên không hồi phục. Nguy cơ tác dụng phụ nghiêm trọng về gân, cơ, khớp, và thần kinh có thể xảy ra cùng lúc. Nguy cơ làm nặng bệnh nhược cơ. Tăng nguy cơ rối loạn tâm thần và hành vi tự sát. Chỉ dùng khi không có lựa chọn khác."
     },
     
 }

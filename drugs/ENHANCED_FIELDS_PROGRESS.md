@@ -36,13 +36,14 @@
 ## Tổng Quan
 
 **Tổng số thuốc:** 141  
-**Đã có enhanced fields (6 fields cơ bản):** 86 ✅ (+16 từ phiên này)  
-**Chưa có enhanced fields:** 55  
+**Đã có enhanced fields (6 fields cơ bản):** 90 ✅ (+20 từ các phiên này)  
+**Chưa có enhanced fields:** 51  
 **Mục tiêu:** Bổ sung đầy đủ 14 fields cho tất cả 141 thuốc
 
 ### Tiến Trình Gần Đây (2024-12-19)
-- ✅ **Nhóm 1 - Thuốc Cấp Cứu & Thường Dùng**: 6 thuốc
+- ✅ **Nhóm 1 - Thuốc Cấp Cứu & Thường Dùng**: 10 thuốc
   - Adenosine, Acyclovir, Methylprednisolone, Valacyclovir, Fluconazole, Levofloxacin
+  - **Paracetamol, Ibuprofen, Salbutamol, Ciprofloxacin** (mới bổ sung)
 - ✅ **Nhóm 2 - Thuốc Có Nguy Cơ Cao**: 6 thuốc
   - Valproate, Lamotrigine, Amitriptyline, Cisplatin, Carboplatin, Cyclophosphamide
 - ✅ **Nhóm 3 - Antidepressants**: 4 thuốc
@@ -68,14 +69,17 @@
 13. `administration_instructions` - Hướng dẫn dùng chi tiết
 14. `references` - Tài liệu tham khảo
 
-## Danh Sách Thuốc Đã Có Enhanced Fields (86 thuốc)
+## Danh Sách Thuốc Đã Có Enhanced Fields (90 thuốc)
 
-### ✅ Mới Bổ Sung (16 thuốc)
+### ✅ Mới Bổ Sung (20 thuốc - 2024-12-19)
 - **Emergency/Cấp Cứu**: Adenosine
 - **Antiviral**: Acyclovir, Valacyclovir
 - **Corticosteroid**: Methylprednisolone
 - **Antifungal**: Fluconazole
 - **Antibiotics**: Levofloxacin
+- **Analgesics/Antipyretics**: **Paracetamol, Ibuprofen** (mới bổ sung)
+- **Respiratory**: **Salbutamol** (mới bổ sung)
+- **Antibiotics (Fluoroquinolone)**: **Ciprofloxacin** (mới bổ sung)
 - **Neurology**: Valproate, Lamotrigine
 - **Psychiatry**: Amitriptyline, Fluoxetine, Sertraline, Citalopram, Escitalopram
 - **Oncology**: Cisplatin, Carboplatin, Cyclophosphamide
@@ -207,7 +211,7 @@ python check_enhanced_fields.py
 
 ---
 
-**Cập nhật lần cuối:** 2024-12-19
+**Cập nhật lần cuối:** 2024-12-19 (đã thêm Paracetamol, Ibuprofen, Salbutamol, Ciprofloxacin)
 
 ---
 
@@ -219,6 +223,6 @@ python check_enhanced_fields.py
 - 📋 Đã có kế hoạch tách module: Xem `MODULE_REFACTORING_PLAN.md`
 
 ### Tiếp Tục
-- Còn 55 thuốc cần bổ sung enhanced fields
-- Ưu tiên: Antihistamines, Antidiabetics, Anticoagulants
+- Còn 51 thuốc cần bổ sung enhanced fields
+- Ưu tiên: Antihistamines (Loratadine, Cetirizine, Fexofenadine), Antidiabetics (Empagliflozin, Dapagliflozin, Sitagliptin), Anticoagulants (Ticagrelor, Prasugrel)
 - Sau khi hoàn thành tất cả → tiến hành refactor module
