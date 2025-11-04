@@ -3469,7 +3469,38 @@ DRUG_DATABASE = {
             "Ritonavir: tăng đáng kể nồng độ fluticasone - tránh dùng",
             "Ketoconazole: tăng nồng độ"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Fluticasone là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Fluticasone gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản, và tăng số lượng beta-2 receptors. Fluticasone có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Tuy nhiên, một phần nhỏ vẫn được hấp thu và có thể gây tác dụng toàn thân ở liều cao. Fluticasone được chuyển hóa nhanh ở gan (first-pass metabolism cao) nhưng thời gian bán thải dài hơn budesonide. Thường dùng kết hợp với LABA (long-acting beta-2 agonist) như salmeterol trong dạng fixed-dose combination.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)",
+            "Nấm miệng (candidiasis) - kiểm tra lưỡi, miệng, đặc biệt nếu không súc miệng sau khi dùng",
+            "Khàn tiếng, ho, kích ứng cổ họng - tác dụng phụ tại chỗ phổ biến",
+            "Tác dụng toàn thân (chỉ ở liều cao): ức chế trục HPA, chậm phát triển ở trẻ em, loãng xương, tăng huyết áp",
+            "Chức năng gan nếu có triệu chứng (hiếm)",
+            "Tương tác với ritonavir (tăng đáng kể nồng độ), ketoconazole (tăng nồng độ)"
+        ],
+        "precautions": [
+            "Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG",
+            "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, fluticasone là thuốc duy trì",
+            "Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì",
+            "Không ngừng đột ngột - giảm liều dần dần",
+            "Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>1000mcg/ngày)",
+            "Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước",
+            "TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ fluticasone, tăng nguy cơ ức chế HPA nghiêm trọng, có thể gây hội chứng Cushing)",
+            "Thận trọng với ketoconazole, itraconazole (tăng nồng độ fluticasone)",
+            "Theo dõi chậm phát triển ở trẻ em nếu dùng liều cao",
+            "Thường dùng kết hợp với LABA (salmeterol) trong dạng fixed-dose combination (Seretide/Advair)",
+            "Dùng đều đặn hàng ngày, không phải khi cần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "7-8 giờ (trong phổi), 13-17 giờ (toàn thân sau hấp thu)",
+            "onset": "Vài giờ đến vài ngày (tác dụng kháng viêm)",
+            "duration": "12-24 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "91%",
+            "clearance": "Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~99% bị chuyển hóa). Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản). Thời gian bán thải dài hơn budesonide."
+        },
+        "storage": "Dạng hít (MDI/DPI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Kiểm tra xem có còn thuốc (lắc, nghe tiếng). Dạng fixed-dose combination với salmeterol: bảo quản tương tự.",
+        "black_box_warnings": "TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ fluticasone, tăng nguy cơ ức chế trục HPA nghiêm trọng, có thể gây hội chứng Cushing, suy thượng thận). Nguy cơ chậm phát triển ở trẻ em với liều cao."
     },
     
     # ========== NEUROLOGY/PSYCHIATRY ==========
@@ -4196,7 +4227,40 @@ DRUG_DATABASE = {
             "Warfarin: có thể tăng tác dụng",
             "Tramadol: tăng nguy cơ co giật và hội chứng serotonin"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Venlafaxine là thuốc chống trầm cảm thuộc nhóm SNRI (serotonin-norepinephrine reuptake inhibitor), ức chế tái hấp thu serotonin và norepinephrine ở synap thần kinh. Ở liều thấp (<75mg/ngày), venlafaxine chủ yếu ức chế tái hấp thu serotonin (giống SSRI). Ở liều trung bình (75-225mg/ngày), venlafaxine ức chế cả serotonin và norepinephrine. Ở liều cao (>225mg/ngày), venlafaxine cũng có thể ức chế tái hấp thu dopamine nhẹ. Bằng cách ức chế tái hấp thu, venlafaxine làm tăng nồng độ serotonin và norepinephrine trong synap, dẫn đến tăng hoạt động của các chất dẫn truyền thần kinh này và cải thiện triệu chứng trầm cảm và lo âu. Venlafaxine có tác dụng mạnh hơn SSRI trong một số trường hợp, đặc biệt trầm cảm nặng và kháng trị. Tác dụng phụ chính: tăng huyết áp ở liều cao do ức chế norepinephrine. Venlafaxine có dạng extended release (ER) cho phép dùng 1 lần/ngày.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng trầm cảm, lo âu) - đánh giá sau 2-4 tuần",
+            "Huyết áp - tăng huyết áp ở liều cao (>150mg/ngày), đặc biệt ở bệnh nhân có tăng huyết áp",
+            "Nhịp tim - tăng nhịp tim có thể xảy ra",
+            "Dấu hiệu hội chứng serotonin (sốt, kích động, run, nhịp tim nhanh, co giật) - đặc biệt khi dùng với tramadol, MAO inhibitor",
+            "Dấu hiệu withdrawal (khó chịu, buồn nôn, chóng mặt, lo âu, mất ngủ) - khi ngừng đột ngột",
+            "Tác dụng phụ (buồn nôn, mất ngủ, chóng mặt, giảm ham muốn tình dục)",
+            "Tương tác với MAO inhibitor (chống chỉ định), warfarin (tăng INR), tramadol (tăng nguy cơ co giật và hội chứng serotonin)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH với MAO inhibitor - phải ngừng MAO inhibitor ít nhất 14 ngày trước khi bắt đầu venlafaxine (nguy cơ hội chứng serotonin nghiêm trọng)",
+            "Không ngừng đột ngột - giảm liều dần dần trong ít nhất 2 tuần (nguy cơ withdrawal syndrome: khó chịu, buồn nôn, chóng mặt, lo âu, mất ngủ)",
+            "Tăng huyết áp - nguy cơ tăng ở liều cao (>150mg/ngày), đặc biệt ở bệnh nhân có tăng huyết áp, cần theo dõi huyết áp",
+            "Tăng nhịp tim - có thể xảy ra, thận trọng ở bệnh nhân có bệnh tim",
+            "Nguy cơ hội chứng serotonin - đặc biệt khi dùng với tramadol, triptans, MAO inhibitor, SSRI",
+            "Tăng nguy cơ tự sát - đặc biệt ở trẻ em, thanh thiếu niên, và người trẻ tuổi (<25 tuổi) trong vài tuần đầu",
+            "Buồn nôn - tác dụng phụ phổ biến nhất, thường tự khỏi sau vài tuần, có thể giảm bằng cách uống với thức ăn",
+            "Mất ngủ - có thể xảy ra, cân nhắc dùng vào buổi sáng",
+            "Giảm ham muốn tình dục - tác dụng phụ phổ biến, có thể kéo dài",
+            "Dạng extended release (ER) - uống 1 lần/ngày, thuận tiện hơn, ít tác dụng phụ hơn",
+            "Dùng với thức ăn để giảm buồn nôn",
+            "Thận trọng ở bệnh nhân có bệnh gan, suy thận (có thể cần giảm liều)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5 giờ (venlafaxine), 11 giờ (desvenlafaxine - metabolite hoạt động)",
+            "onset": "2-4 tuần (tác dụng chống trầm cảm)",
+            "duration": "12-24 giờ (dùng 1-2 lần/ngày)",
+            "protein_binding": "27-30%",
+            "clearance": "Gan: chuyển hóa qua CYP2D6 thành desvenlafaxine (metabolite hoạt động, mạnh hơn venlafaxine). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều ở suy thận và suy gan nặng."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng extended release: bảo quản tương tự, không nghiền hoặc nhai (phải uống nguyên viên).",
+        "black_box_warnings": "Nguy cơ tự sát và hành vi tự sát ở trẻ em, thanh thiếu niên, và người trẻ tuổi (<25 tuổi) với các thuốc chống trầm cảm. Nguy cơ tăng trong vài tháng đầu điều trị và khi tăng liều. Theo dõi chặt chẽ dấu hiệu tự sát, thay đổi hành vi, lo âu, kích động, mất ngủ, hoặc các triệu chứng mới hoặc nặng hơn. Nguy cơ hội chứng serotonin khi dùng với MAO inhibitor, tramadol, triptans."
     },
     
     "Amitriptyline": {
@@ -4686,7 +4750,41 @@ DRUG_DATABASE = {
             "Alcohol: tăng tác dụng an thần",
             "Ít tương tác khác"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Pregabalin là thuốc chống động kinh và giảm đau thần kinh, là dẫn xuất của gabapentin nhưng có cấu trúc tối ưu hơn. Pregabalin gắn vào tiểu đơn vị alpha-2-delta của kênh canxi phụ thuộc điện thế (voltage-gated calcium channels) ở các terminal thần kinh, với ái lực cao hơn gabapentin. Điều này làm giảm dòng canxi vào tế bào, giảm phóng thích các chất dẫn truyền thần kinh (glutamate, noradrenaline, substance P, CGRP) từ các terminal thần kinh. Dẫn đến giảm kích thích quá mức và giảm đau thần kinh. Khác với gabapentin, pregabalin có hấp thu tuyến tính (không bão hòa), dược động học dự đoán được, và hiệu quả mạnh hơn. Pregabalin có tác dụng chống động kinh, giảm đau thần kinh (đặc biệt đau sau zona, đau thần kinh do tiểu đường), đau cơ xơ hóa, và rối loạn lo âu. Pregabalin là controlled substance (có nguy cơ lạm dụng, nghiện).",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm cơn động kinh, giảm đau thần kinh, giảm lo âu)",
+            "Tác dụng phụ thần kinh (buồn ngủ, chóng mặt, mệt mỏi, nhìn mờ, suy giảm trí nhớ) - đặc biệt khi bắt đầu hoặc tăng liều",
+            "Phù ngoại biên (tay, chân) - có thể nặng",
+            "Tăng cân - theo dõi cân nặng",
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều ở suy thận (quan trọng)",
+            "Dấu hiệu lạm dụng, nghiện - pregabalin là controlled substance (nguy cơ lệ thuộc, nghiện)",
+            "Tương tác với morphine (tăng tác dụng an thần), alcohol (tăng tác dụng an thần)"
+        ],
+        "precautions": [
+            "Điều chỉnh liều ở suy thận QUAN TRỌNG: CrCl 30-60: giảm liều 50%; CrCl 15-30: giảm liều 75%; CrCl <15: giảm liều 90%",
+            "Nguy cơ lạm dụng, nghiện - pregabalin là controlled substance (Schedule V), có thể gây lệ thuộc, nghiện",
+            "Không ngừng đột ngột - giảm liều dần dần trong ít nhất 1 tuần (tăng nguy cơ co giật, hội chứng cai, mất ngủ, lo âu)",
+            "Tăng liều dần dần để giảm tác dụng phụ (bắt đầu với 75mg x 2 lần/ngày)",
+            "Buồn ngủ, chóng mặt, mệt mỏi - phổ biến, thường tự khỏi sau vài tuần, tránh lái xe hoặc vận hành máy móc",
+            "Phù ngoại biên - có thể nặng, cần theo dõi, có thể cần giảm liều hoặc ngừng",
+            "Tăng cân - theo dõi, có thể cần điều chỉnh chế độ ăn",
+            "Thận trọng ở bệnh nhân có tiền sử lạm dụng thuốc, nghiện (nguy cơ cao)",
+            "Thận trọng với bệnh nhân suy giảm chức năng thận (giảm thải trừ)",
+            "Tương tác với morphine - tăng tác dụng an thần, thận trọng khi dùng chung",
+            "Tránh rượu - tăng tác dụng an thần, tăng nguy cơ suy hô hấp",
+            "Có thể gây suy giảm trí nhớ, nhìn mờ - thận trọng ở người cao tuổi",
+            "Hấp thu tốt hơn gabapentin (không bão hòa), hiệu quả mạnh hơn, dùng 2 lần/ngày"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6 giờ (bình thường), tăng ở suy thận (tỷ lệ với eGFR)",
+            "onset": "Vài giờ đến vài ngày",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "<1% (không gắn protein)",
+            "clearance": "Thận: bài tiết chủ yếu qua thận (90% nguyên dạng, không chuyển hóa). Không chuyển hóa ở gan. Hấp thu tuyến tính (không bão hòa như gabapentin), dự đoán được. Thời gian bán thải tăng ở suy thận (tỷ lệ với eGFR)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén/capsule: bảo quản trong bao bì kín. Controlled substance - cần bảo quản an toàn, tránh tiếp cận không được phép.",
+        "black_box_warnings": "Nguy cơ suy hô hấp nghiêm trọng, có thể gây tử vong, khi dùng với các thuốc ức chế hệ thần kinh trung ương (opioids, benzodiazepines). Nguy cơ tăng ở bệnh nhân có bệnh hô hấp, người cao tuổi. Theo dõi chặt chẽ dấu hiệu suy hô hấp. Nguy cơ lạm dụng, nghiện - pregabalin là controlled substance (Schedule V), có thể gây lệ thuộc, nghiện. Không ngừng đột ngột - tăng nguy cơ co giật, hội chứng cai. Nguy cơ tác dụng phụ thần kinh nghiêm trọng (buồn ngủ, chóng mặt, mệt mỏi) có thể ảnh hưởng đến khả năng lái xe và vận hành máy móc."
     },
     
     # ========== ANTIHISTAMINES ==========
