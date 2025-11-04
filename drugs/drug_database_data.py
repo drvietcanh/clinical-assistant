@@ -1391,7 +1391,41 @@ DRUG_DATABASE = {
             "Rượu: tăng nguy cơ hạ đường huyết",
             "Beta-blocker: che dấu triệu chứng hạ đường huyết"
         ],
-        "pregnancy": "C - Tránh dùng trong thai kỳ"
+        "pregnancy": "C - Tránh dùng trong thai kỳ",
+        "mechanism_of_action": "Glibenclamide (glyburide) là thuốc sulfonylurea thế hệ thứ hai, kích thích tế bào beta tuyến tụy tiết insulin. Glibenclamide gắn vào SUR1 (sulfonylurea receptor 1) trên kênh KATP (ATP-sensitive K+ channel) ở màng tế bào beta, làm đóng kênh KATP. Điều này ngăn chặn dòng kali ra ngoài, làm khử cực màng tế bào (depolarization), mở kênh canxi phụ thuộc điện thế, tăng dòng canxi vào tế bào, và kích thích giải phóng insulin từ các hạt tiết. Glibenclamide chỉ hoạt động khi còn chức năng tế bào beta (cần có insulin nội sinh). Glibenclamide có tác dụng mạnh và thời gian bán thải dài, dẫn đến nguy cơ hạ đường huyết cao hơn các sulfonylurea khác, đặc biệt ở người cao tuổi và suy thận. Glibenclamide cũng có thể làm giảm đề kháng insulin ngoại vi và giảm sản xuất glucose ở gan.",
+        "monitoring": [
+            "Đường huyết: HbA1c (mỗi 3 tháng), đường huyết đói, đường huyết sau ăn - đánh giá hiệu quả",
+            "Dấu hiệu hạ đường huyết: run, vã mồ hôi, nhịp tim nhanh, đói, lú lẫn, co giật, hôn mê - QUAN TRỌNG",
+            "Đường huyết khi nghi ngờ hạ đường huyết - đo ngay",
+            "Cân nặng - sulfonylureas có thể gây tăng cân",
+            "Chức năng thận (creatinine, eGFR) - suy thận tăng nguy cơ hạ đường huyết (tăng thời gian bán thải)",
+            "Chức năng gan (ALT, AST) - nếu có bệnh gan (tăng nguy cơ hạ đường huyết)",
+            "Tương tác với warfarin (tăng INR), rượu (tăng nguy cơ hạ đường huyết), beta-blocker (che dấu triệu chứng hạ đường huyết)"
+        ],
+        "precautions": [
+            "Hạ đường huyết là tác dụng phụ phổ biến nhất và nghiêm trọng - bệnh nhân cần biết dấu hiệu và cách xử trí (uống nước đường, nước ngọt, hoặc glucose)",
+            "Nguy cơ hạ đường huyết cao hơn các sulfonylurea khác do thời gian bán thải dài",
+            "Nguy cơ tăng ở: người cao tuổi, suy thận, suy gan, bỏ bữa, uống rượu, tập luyện quá mức",
+            "KHÔNG dùng ở đái tháo đường type 1 hoặc nhiễm toan ceton (không có insulin nội sinh)",
+            "Thận trọng ở bệnh nhân suy thận - tăng nguy cơ hạ đường huyết (có thể cần giảm liều hoặc tránh dùng)",
+            "Thận trọng ở bệnh nhân suy gan - tăng nguy cơ hạ đường huyết",
+            "Uống với thức ăn hoặc trước bữa ăn để tránh hạ đường huyết",
+            "Tránh bỏ bữa - tăng nguy cơ hạ đường huyết",
+            "Tránh rượu - tăng nguy cơ hạ đường huyết (có thể gây hạ đường huyết kéo dài)",
+            "Beta-blocker có thể che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run) - chỉ còn vã mồ hôi, lú lẫn",
+            "Có thể tăng cân - cần tư vấn chế độ ăn và tập luyện",
+            "Không dùng trong thai kỳ (có thể gây hạ đường huyết ở trẻ sơ sinh)",
+            "Bắt đầu với liều thấp (2.5-5mg/ngày) và tăng dần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10 giờ (bình thường), tăng ở suy thận",
+            "onset": "2-4 giờ",
+            "duration": "16-24 giờ (dùng 1-2 lần/ngày)",
+            "protein_binding": "99% (gắn chặt với albumin)",
+            "clearance": "Gan: chuyển hóa qua CYP2C9 và CYP3A4 thành metabolites không hoạt động. Thận: bài tiết một phần nguyên dạng và metabolites. Thời gian bán thải tăng ở suy thận (tăng nguy cơ hạ đường huyết)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng, có thể gây tử vong. Nguy cơ tăng ở người cao tuổi, suy thận, suy gan, bỏ bữa, uống rượu. Bệnh nhân cần biết dấu hiệu và cách xử trí hạ đường huyết. Không dùng ở đái tháo đường type 1 hoặc nhiễm toan ceton."
     },
     
     "Gliclazide": {
@@ -3366,7 +3400,38 @@ DRUG_DATABASE = {
             "Ritonavir: tăng nồng độ budesonide (tránh dùng)",
             "Ketoconazole/Itraconazole: tăng nồng độ"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Budesonide là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Budesonide gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản, và tăng số lượng beta-2 receptors. Budesonide có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Tuy nhiên, một phần nhỏ vẫn được hấp thu và có thể gây tác dụng toàn thân ở liều cao. Budesonide được chuyển hóa nhanh ở gan (first-pass metabolism cao) nên tác dụng toàn thân ít hơn so với corticosteroid uống.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)",
+            "Nấm miệng (candidiasis) - kiểm tra lưỡi, miệng, đặc biệt nếu không súc miệng sau khi dùng",
+            "Khàn tiếng, ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến",
+            "Tác dụng toàn thân (chỉ ở liều cao): ức chế trục HPA, chậm phát triển ở trẻ em, loãng xương, tăng huyết áp",
+            "Chức năng gan nếu có triệu chứng (hiếm)",
+            "Tương tác với ritonavir, ketoconazole, itraconazole (tăng nồng độ budesonide)"
+        ],
+        "precautions": [
+            "Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG",
+            "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, budesonide là thuốc duy trì",
+            "Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì",
+            "Không ngừng đột ngột - giảm liều dần dần",
+            "Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>1600mcg/ngày)",
+            "Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước",
+            "Tránh dùng với ritonavir (tăng đáng kể nồng độ budesonide, tăng nguy cơ ức chế HPA)",
+            "Thận trọng với ketoconazole, itraconazole (tăng nồng độ budesonide)",
+            "Theo dõi chậm phát triển ở trẻ em nếu dùng liều cao",
+            "Có thể dùng cho trẻ em (có dạng nebulizer)",
+            "Dùng đều đặn hàng ngày, không phải khi cần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (trong phổi), 4-6 giờ (toàn thân sau hấp thu)",
+            "onset": "Vài giờ đến vài ngày (tác dụng kháng viêm)",
+            "duration": "12-24 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "88-90%",
+            "clearance": "Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~85-90% bị chuyển hóa). Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản)."
+        },
+        "storage": "Dạng hít (MDI/DPI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Nebulizer suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng, dùng trong vòng 2 giờ sau khi mở gói. Bảo quản trong tủ lạnh nếu không dùng ngay (2-8°C), để nhiệt độ phòng trước khi dùng.",
+        "black_box_warnings": None
     },
     
     "Fluticasone inhaled": {
@@ -4546,7 +4611,40 @@ DRUG_DATABASE = {
             "Morphine: tăng tác dụng an thần",
             "Ít tương tác khác"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Gabapentin là thuốc chống động kinh và giảm đau thần kinh, có cấu trúc tương tự như GABA (gamma-aminobutyric acid) nhưng không gắn trực tiếp vào GABA receptors. Cơ chế chính xác chưa hoàn toàn rõ ràng, nhưng gabapentin gắn vào tiểu đơn vị alpha-2-delta của kênh canxi phụ thuộc điện thế (voltage-gated calcium channels) ở các terminal thần kinh. Điều này làm giảm dòng canxi vào tế bào, giảm phóng thích các chất dẫn truyền thần kinh (glutamate, noradrenaline, substance P) từ các terminal thần kinh. Dẫn đến giảm kích thích quá mức và giảm đau thần kinh. Gabapentin không ảnh hưởng đến GABA receptors, GABA uptake, hoặc GABA transaminase. Gabapentin có tác dụng chống động kinh, giảm đau thần kinh (đặc biệt đau sau zona, đau thần kinh do tiểu đường), và có thể có tác dụng an thần, giảm lo âu. Hấp thu giảm khi tăng liều do cơ chế vận chuyển bão hòa.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm cơn động kinh, giảm đau thần kinh, giảm lo âu)",
+            "Tác dụng phụ thần kinh (buồn ngủ, chóng mặt, mệt mỏi, nhìn mờ, suy giảm trí nhớ) - đặc biệt khi bắt đầu hoặc tăng liều",
+            "Phù ngoại biên (tay, chân) - có thể nặng",
+            "Tăng cân - theo dõi cân nặng",
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều ở suy thận (quan trọng)",
+            "Dấu hiệu lệ thuộc, nghiện (hiếm nhưng có thể xảy ra)",
+            "Tương tác với antacids (giảm hấp thu), morphine (tăng tác dụng an thần)"
+        ],
+        "precautions": [
+            "Điều chỉnh liều ở suy thận QUAN TRỌNG: CrCl 30-60: 300mg x 2 lần/ngày; CrCl 15-30: 300mg x 1 lần/ngày; CrCl <15: 300mg cách ngày",
+            "Hấp thu giảm khi tăng liều do cơ chế vận chuyển bão hòa - không tăng liều quá nhanh",
+            "Uống cách xa antacids ít nhất 2 giờ (giảm hấp thu)",
+            "Tăng liều dần dần để giảm tác dụng phụ (bắt đầu với 300mg x 3 lần/ngày)",
+            "Buồn ngủ, chóng mặt, mệt mỏi - phổ biến, thường tự khỏi sau vài tuần, tránh lái xe hoặc vận hành máy móc",
+            "Phù ngoại biên - có thể nặng, cần theo dõi, có thể cần giảm liều hoặc ngừng",
+            "Tăng cân - theo dõi, có thể cần điều chỉnh chế độ ăn",
+            "Không ngừng đột ngột - giảm liều dần dần (tăng nguy cơ co giật, hội chứng cai)",
+            "Thận trọng ở bệnh nhân có tiền sử lệ thuộc thuốc (có thể gây lệ thuộc, nghiện)",
+            "Thận trọng với bệnh nhân suy giảm chức năng thận (giảm thải trừ)",
+            "Tương tác với morphine - tăng tác dụng an thần, thận trọng khi dùng chung",
+            "Có thể gây suy giảm trí nhớ, nhìn mờ - thận trọng ở người cao tuổi"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5-7 giờ (bình thường), tăng ở suy thận (tỷ lệ với eGFR)",
+            "onset": "Vài giờ đến vài ngày",
+            "duration": "8-12 giờ (dùng 3 lần/ngày)",
+            "protein_binding": "<3% (không gắn protein)",
+            "clearance": "Thận: bài tiết chủ yếu qua thận (100% nguyên dạng, không chuyển hóa). Không chuyển hóa ở gan. Hấp thu giảm khi tăng liều do cơ chế vận chuyển L-amino acid bão hòa ở ruột. Thời gian bán thải tăng ở suy thận (tỷ lệ với eGFR)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén/capsule: bảo quản trong bao bì kín. Dạng suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng.",
+        "black_box_warnings": "Nguy cơ suy hô hấp nghiêm trọng, có thể gây tử vong, khi dùng với các thuốc ức chế hệ thần kinh trung ương (opioids, benzodiazepines). Nguy cơ tăng ở bệnh nhân có bệnh hô hấp, người cao tuổi. Theo dõi chặt chẽ dấu hiệu suy hô hấp. Nguy cơ tác dụng phụ thần kinh nghiêm trọng (buồn ngủ, chóng mặt, mệt mỏi) có thể ảnh hưởng đến khả năng lái xe và vận hành máy móc."
     },
     
     "Pregabalin": {
@@ -9086,7 +9184,38 @@ DRUG_DATABASE.update({
         "Phenobarbital: giảm nồng độ montelukast",
         "Rifampin: giảm nồng độ montelukast"
     ],
-    "pregnancy": "B"
+    "pregnancy": "B",
+    "mechanism_of_action": "Montelukast là chất đối kháng chọn lọc thụ thể leukotriene D4 (LTD4), thuộc nhóm leukotriene receptor antagonist (LTRA). Leukotriene là các chất trung gian gây viêm được tổng hợp từ acid arachidonic qua con đường 5-lipoxygenase. Leukotriene D4 gắn vào CysLT1 receptor trên cơ trơn phế quản, mạch máu, và các tế bào viêm, gây co thắt phế quản, tăng tính thấm mạch máu, phù nề, và tăng tiết chất nhầy. Montelukast ức chế LTD4 gắn vào CysLT1 receptor, ngăn chặn các tác dụng này, từ đó giảm co thắt phế quản, giảm viêm, và giảm triệu chứng hen. Montelukast có tác dụng phòng ngừa hen, đặc biệt hen do dị ứng và hen do gắng sức. Không dùng cho cắt cơn cấp. Tác dụng phát huy sau vài giờ đến vài ngày, dùng hàng ngày để duy trì.",
+    "monitoring": [
+        "Đáp ứng điều trị (giảm triệu chứng hen, giảm tần suất cơn cấp, giảm nhu cầu dùng SABA)",
+        "Rối loạn tâm thần (thay đổi tâm trạng, lo âu, trầm cảm, hành vi bất thường, ý nghĩ tự sát) - hiếm nhưng nghiêm trọng, đặc biệt ở trẻ em và thanh thiếu niên",
+        "Rối loạn giấc ngủ (mất ngủ, ác mộng)",
+        "Nhức đầu, buồn nôn, tiêu chảy - tác dụng phụ phổ biến nhưng thường nhẹ",
+        "Chức năng gan nếu có triệu chứng (hiếm)",
+        "Tương tác với phenobarbital, rifampin (giảm nồng độ montelukast)"
+    ],
+    "precautions": [
+        "Rối loạn tâm thần - nguy cơ thay đổi tâm trạng, lo âu, trầm cảm, hành vi bất thường, ý nghĩ tự sát, đặc biệt ở trẻ em và thanh thiếu niên",
+        "NGỪNG NGAY và liên hệ bác sĩ nếu có thay đổi tâm trạng, hành vi bất thường, ý nghĩ tự sát",
+        "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, montelukast là thuốc phòng ngừa",
+        "Tác dụng phát huy sau vài giờ đến vài ngày - không mong đợi tác dụng tức thì",
+        "Dùng hàng ngày, tốt nhất vào buổi tối, có thể uống với hoặc không thức ăn",
+        "Không thay thế ICS (inhaled corticosteroid) - có thể dùng kết hợp với ICS",
+        "Hiệu quả với hen do dị ứng và hen do gắng sức",
+        "Thận trọng với phenobarbital, rifampin (giảm nồng độ montelukast, có thể giảm hiệu quả)",
+        "An toàn trong thai kỳ (category B)",
+        "Có thể dùng cho trẻ em từ 2 tuổi trở lên (liều điều chỉnh theo tuổi)",
+        "Theo dõi chặt chẽ ở trẻ em và thanh thiếu niên về rối loạn tâm thần"
+    ],
+    "pharmacokinetics": {
+        "half_life": "2.7-5.5 giờ",
+        "onset": "Vài giờ đến vài ngày (tác dụng phòng ngừa)",
+        "duration": "24 giờ (dùng 1 lần/ngày)",
+        "protein_binding": ">99%",
+        "clearance": "Gan: chuyển hóa qua CYP2C8, CYP3A4, và CYP2C9 thành metabolites không hoạt động. Thận: bài tiết một phần nguyên dạng và metabolites. Tương tác với CYP inducers (phenobarbital, rifampin) có thể giảm nồng độ."
+    },
+    "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén/capsule: bảo quản trong bao bì kín. Dạng nhai: bảo quản ở nhiệt độ phòng, tránh ẩm. Dạng bột: bảo quản ở nhiệt độ phòng, pha với nước, thức ăn mềm, hoặc sữa công thức trước khi dùng.",
+    "black_box_warnings": "Nguy cơ rối loạn tâm thần nghiêm trọng, bao gồm thay đổi tâm trạng, lo âu, trầm cảm, hành vi bất thường, và ý nghĩ tự sát. Nguy cơ tăng ở trẻ em và thanh thiếu niên. Ngừng ngay và liên hệ bác sĩ nếu có thay đổi tâm trạng, hành vi bất thường, hoặc ý nghĩ tự sát."
 },
 
 # GI - Thay Pantoprazole (đã có) bằng Levofloxacin

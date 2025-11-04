@@ -36,8 +36,8 @@
 ## Tổng Quan
 
 **Tổng số thuốc:** 141  
-**Đã có enhanced fields (6 fields cơ bản):** 101 ✅ (+25 từ các phiên này)  
-**Chưa có enhanced fields:** 40  
+**Đã có enhanced fields (6 fields cơ bản):** 105 ✅ (+29 từ các phiên này)  
+**Chưa có enhanced fields:** 36  
 **Mục tiêu:** Bổ sung đầy đủ 14 fields cho tất cả 141 thuốc
 
 ### Tiến Trình Gần Đây (2024-12-19)
@@ -46,6 +46,9 @@
   - **Paracetamol, Ibuprofen, Salbutamol, Ciprofloxacin** (mới bổ sung)
 - ✅ **Nhóm 3 - Kháng sinh & Antiviral**: 3 thuốc
   - **Clarithromycin, Oseltamivir, Trimethoprim-sulfamethoxazole** (mới bổ sung)
+- ✅ **Nhóm 4 - Respiratory & Neurology**: 4 thuốc
+  - **Budesonide inhaled, Montelukast** (respiratory)
+  - **Gabapentin, Glibenclamide** (neurology/diabetes) (mới bổ sung)
 - ✅ **Nhóm 2 - Thuốc Có Nguy Cơ Cao**: 6 thuốc
   - Valproate, Lamotrigine, Amitriptyline, Cisplatin, Carboplatin, Cyclophosphamide
 - ✅ **Nhóm 3 - Antidepressants**: 4 thuốc
@@ -71,9 +74,9 @@
 13. `administration_instructions` - Hướng dẫn dùng chi tiết
 14. `references` - Tài liệu tham khảo
 
-## Danh Sách Thuốc Đã Có Enhanced Fields (101 thuốc)
+## Danh Sách Thuốc Đã Có Enhanced Fields (105 thuốc)
 
-### ✅ Mới Bổ Sung (25 thuốc - 2024-12-19)
+### ✅ Mới Bổ Sung (29 thuốc - 2024-12-19)
 - **Emergency/Cấp Cứu**: Adenosine
 - **Antiviral**: Acyclovir, Valacyclovir
 - **Corticosteroid**: Methylprednisolone
@@ -85,6 +88,9 @@
 - **Antibiotics (Macrolide)**: **Clarithromycin** (mới bổ sung)
 - **Antibiotics (Sulfonamide)**: **Trimethoprim-sulfamethoxazole** (mới bổ sung)
 - **Antiviral**: **Oseltamivir** (mới bổ sung)
+- **Respiratory**: **Budesonide inhaled, Montelukast** (mới bổ sung)
+- **Neurology**: **Gabapentin** (mới bổ sung)
+- **Diabetes**: **Glibenclamide** (mới bổ sung)
 - **Neurology**: Valproate, Lamotrigine
 - **Psychiatry**: Amitriptyline, Fluoxetine, Sertraline, Citalopram, Escitalopram
 - **Oncology**: Cisplatin, Carboplatin, Cyclophosphamide
@@ -216,7 +222,7 @@ python check_enhanced_fields.py
 
 ---
 
-**Cập nhật lần cuối:** 2024-12-19 (đã thêm Paracetamol, Ibuprofen, Salbutamol, Ciprofloxacin, Clarithromycin, Oseltamivir, Trimethoprim-sulfamethoxazole)
+**Cập nhật lần cuối:** 2024-12-19 (đã thêm Paracetamol, Ibuprofen, Salbutamol, Ciprofloxacin, Clarithromycin, Oseltamivir, Trimethoprim-sulfamethoxazole, Budesonide inhaled, Montelukast, Gabapentin, Glibenclamide)
 
 ---
 
@@ -228,6 +234,6 @@ python check_enhanced_fields.py
 - 📋 Đã có kế hoạch tách module: Xem `MODULE_REFACTORING_PLAN.md`
 
 ### Tiếp Tục
-- Còn 40 thuốc cần bổ sung enhanced fields
+- Còn 36 thuốc cần bổ sung enhanced fields
 - Ưu tiên: Antihistamines (Loratadine, Cetirizine, Fexofenadine), Antidiabetics (Empagliflozin, Dapagliflozin, Sitagliptin), Anticoagulants (Ticagrelor, Prasugrel)
 - Sau khi hoàn thành tất cả → tiến hành refactor module
