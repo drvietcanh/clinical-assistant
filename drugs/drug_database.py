@@ -1858,7 +1858,33 @@ DRUG_DATABASE = {
         "interactions": [
             "Warfarin: có thể tăng tác dụng (ít hơn cimetidine)"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "H2 (histamine-2) receptor antagonist. Ức chế histamine tại H2 receptors ở tế bào thành dạ dày, giảm tiết acid dạ dày (giảm acid kích thích và một phần acid cơ bản). Yếu hơn PPI (proton pump inhibitor) nhưng rẻ hơn. Tác dụng ngắn hơn PPI (cần dùng 2 lần/ngày). Ức chế nhẹ một số enzyme CYP450 (ít hơn cimetidine).",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm đau, triệu chứng GERD)",
+            "Chức năng gan (transaminase) - có thể tăng men gan (hiếm)",
+            "Dấu hiệu nhiễm C. difficile (tiêu chảy nặng, đau bụng) - tăng nguy cơ nhẹ",
+            "INR nếu dùng với warfarin (tăng nguy cơ chảy máu nhẹ)"
+        ],
+        "precautions": [
+            "Uống với thức ăn hoặc trước bữa ăn (tăng hiệu quả)",
+            "Yếu hơn PPI - cân nhắc dùng PPI nếu không đáp ứng",
+            "Thận trọng ở suy thận (giảm liều)",
+            "Thận trọng ở suy gan (giảm liều)",
+            "Cân nhắc ngừng sau 4-8 tuần nếu không cần thiết (giảm nguy cơ tác dụng phụ)",
+            "Một số sản phẩm đã bị thu hồi do NDMA (chất gây ung thư) - kiểm tra nguồn gốc sản phẩm",
+            "Không dùng với các thuốc cần acid để hấp thu (ketoconazole, itraconazole, iron salts) - cách 2 giờ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ",
+            "onset": "1-3 giờ",
+            "duration": "8-12 giờ",
+            "protein_binding": "15%",
+            "metabolism": "Gan (chuyển hóa qua CYP450, một phần), thận (thải trừ)",
+            "clearance": "Gan (chuyển hóa), thận (30-50% thải nguyên dạng)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Kiểm tra nguồn gốc sản phẩm (một số sản phẩm đã bị thu hồi do NDMA).",
+        "black_box_warnings": "Một số sản phẩm ranitidine đã bị thu hồi do chứa NDMA (N-nitrosodimethylamine) - chất gây ung thư. NDMA có thể tích lũy trong sản phẩm theo thời gian, đặc biệt ở nhiệt độ cao. Kiểm tra nguồn gốc sản phẩm và cân nhắc dùng thuốc khác (PPI, famotidine) nếu có thể."
     },
     
     "Metoclopramide": {
@@ -1955,7 +1981,37 @@ DRUG_DATABASE = {
         "interactions": [
             "Opioids: tăng tác dụng (ít dùng chung)"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Opioid mu-receptor agonist ở ruột (peripheral opioid). Ức chế acetylcholine và prostaglandin ở cơ trơn ruột, giảm nhu động ruột, tăng trương lực cơ thắt hậu môn, tăng hấp thu nước từ phân. Tác dụng chống tiêu chảy. Không qua hàng rào máu-não đáng kể ở liều điều trị → ít tác dụng phụ thần kinh và ít nguy cơ nghiện hơn opioid hệ thống. Tuy nhiên, liều cao có thể qua hàng rào máu-não và gây tác dụng opioid hệ thống.",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm tần suất đi ngoài, cải thiện tính chất phân)",
+            "Dấu hiệu quá liều: ức chế hô hấp, giảm ý thức, co đồng tử (miosis)",
+            "Dấu hiệu táo bón nặng (có thể gây tắc ruột giả)",
+            "Dấu hiệu nhiễm khuẩn (nếu giữ vi khuẩn trong ruột quá lâu)",
+            "Dấu hiệu viêm đại tràng giả mạc (tiêu chảy nặng, đau bụng, sốt) - nguy cơ nếu dùng với kháng sinh"
+        ],
+        "precautions": [
+            "Chỉ dùng cho tiêu chảy không nhiễm khuẩn hoặc đã điều trị nhiễm khuẩn",
+            "Không dùng quá 48 giờ nếu không cải thiện (cần đánh giá lại nguyên nhân)",
+            "Không dùng cho tiêu chảy nhiễm khuẩn nặng (có thể giữ vi khuẩn trong ruột)",
+            "Không dùng cho viêm đại tràng giả mạc (có thể làm nặng thêm)",
+            "Không dùng cho trẻ em <2 tuổi (nguy cơ ức chế hô hấp)",
+            "Không vượt quá 16mg/ngày (tăng nguy cơ tác dụng phụ hệ thống)",
+            "Ngừng ngay nếu có dấu hiệu quá liều (ức chế hô hấp, giảm ý thức)",
+            "Thận trọng ở bệnh nhân suy gan (giảm chuyển hóa)",
+            "Thận trọng ở bệnh nhân suy thận (tích lũy)",
+            "Nếu dùng với kháng sinh → tăng nguy cơ viêm đại tràng giả mạc"
+        ],
+        "pharmacokinetics": {
+            "half_life": "7-14 giờ",
+            "onset": "1-2 giờ",
+            "duration": "4-6 giờ",
+            "protein_binding": "97%",
+            "metabolism": "Gan (chuyển hóa qua CYP3A4, CYP2C8)",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để xa tầm tay trẻ em (nguy cơ quá liều).",
+        "black_box_warnings": "Liều cao có thể gây ức chế hô hấp nặng, có thể tử vong, đặc biệt ở trẻ em. Không dùng quá liều khuyến cáo (16mg/ngày). Không dùng cho trẻ em <2 tuổi. Không dùng cho tiêu chảy nhiễm khuẩn nặng - có thể giữ vi khuẩn trong ruột và làm nặng bệnh. Ngừng ngay nếu có dấu hiệu quá liều."
     },
     
     "Domperidone": {
@@ -1999,7 +2055,36 @@ DRUG_DATABASE = {
             "Ketoconazole: tăng nồng độ domperidone",
             "Erythromycin: tăng nồng độ domperidone"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Dopamine D2 receptor antagonist ở ngoại vi (ruột và chemoreceptor trigger zone). Ức chế dopamine → tăng nhu động dạ dày và ruột, tăng trương lực cơ thắt dưới thực quản, tăng tốc độ làm rỗng dạ dày. Có tác dụng chống nôn do ức chế dopamine ở chemoreceptor trigger zone. KHÔNG qua hàng rào máu-não (do bị P-glycoprotein đẩy ra) → ít tác dụng phụ thần kinh hơn metoclopramide (không gây mê sảng, parkinsonism). Tăng prolactin do ức chế dopamine ở tuyến yên (dopamine ức chế tiết prolactin).",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm buồn nôn, nôn, cải thiện làm rỗng dạ dày)",
+            "ECG nếu dùng liều cao hoặc kéo dài (nguy cơ QT kéo dài)",
+            "Dấu hiệu tăng prolactin: rối loạn kinh nguyệt, chảy sữa, đau vú",
+            "Dấu hiệu QT kéo dài: loạn nhịp tim, chóng mặt, ngất",
+            "Dấu hiệu tác dụng phụ thần kinh (hiếm nhưng có thể xảy ra nếu tích lũy)"
+        ],
+        "precautions": [
+            "Uống trước bữa ăn 15-30 phút (tăng hiệu quả)",
+            "Không vượt quá 80mg/ngày (tăng nguy cơ QT kéo dài)",
+            "Tránh dùng với các thuốc kéo dài QT (amiodarone, quinolone, macrolide) - tăng nguy cơ loạn nhịp",
+            "Thận trọng ở suy thận (giảm liều)",
+            "Thận trọng ở suy gan (giảm liều)",
+            "Theo dõi dấu hiệu tăng prolactin (rối loạn kinh nguyệt, chảy sữa)",
+            "Ngừng nếu có dấu hiệu QT kéo dài hoặc loạn nhịp",
+            "Ít tác dụng phụ thần kinh hơn metoclopramide (không qua hàng rào máu-não)",
+            "Không dùng trong prolactinoma (tăng prolactin có thể làm tăng kích thước u)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "7-9 giờ",
+            "onset": "30-60 phút",
+            "duration": "4-8 giờ",
+            "protein_binding": "91-93%",
+            "metabolism": "Gan (chuyển hóa qua CYP3A4), CYP1A2",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Nguy cơ QT kéo dài và loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Nguy cơ tăng ở liều cao (>80mg/ngày), suy thận, suy gan, hoặc dùng với các thuốc kéo dài QT. Không vượt quá 80mg/ngày. Tránh dùng với các thuốc kéo dài QT."
     },
     
     "Ondansetron": {
@@ -2112,7 +2197,35 @@ DRUG_DATABASE = {
             "Ketoconazole/Itraconazole: giảm hấp thu (giảm acid dạ dày)",
             "Methotrexate: tăng nồng độ methotrexate"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Ức chế không hồi phục enzyme H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, ức chế bước cuối cùng trong quá trình tiết acid dạ dày. Ức chế cả acid kích thích và acid cơ bản. Cần chuyển hóa ở gan thành dạng hoạt động (sulfenamide). Tác dụng mạnh hơn H2 blocker. Thời gian bán thải ngắn nhưng tác dụng kéo dài do ức chế không hồi phục enzyme.",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm đau, triệu chứng GERD)",
+            "Magie máu nếu dùng lâu dài (>1 năm) - có thể giảm magie",
+            "Vitamin B12 nếu dùng lâu dài (>2 năm) - có thể thiếu B12",
+            "Mật độ xương (DEXA scan) nếu dùng lâu dài và có nguy cơ loãng xương",
+            "Dấu hiệu nhiễm C. difficile (tiêu chảy nặng, đau bụng) - tăng nguy cơ",
+            "Chức năng thận (nếu dùng lâu dài với nguy cơ suy thận)"
+        ],
+        "precautions": [
+            "Uống trước bữa ăn 30 phút (tăng hiệu quả)",
+            "Viên tan trong miệng: đặt trên lưỡi, để tan tự nhiên, không cần nước",
+            "Không nghiền hoặc nhai viên (bao tan trong ruột)",
+            "Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể",
+            "Cân nhắc ngừng sau 4-8 tuần nếu không cần thiết (giảm nguy cơ tác dụng phụ)",
+            "Cân nhắc dùng liều cách ngày hoặc ngắt quãng nếu dùng lâu dài",
+            "Thận trọng ở bệnh nhân suy gan nặng (giảm liều)",
+            "Không dùng với các thuốc cần acid để hấp thu (ketoconazole, itraconazole, iron salts)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-2 giờ (ngắn, nhưng tác dụng kéo dài do ức chế không hồi phục)",
+            "onset": "1-3 giờ",
+            "duration": "24 giờ (một lần/ngày)",
+            "protein_binding": "97%",
+            "clearance": "Gan (chuyển hóa qua CYP2C19, CYP3A4), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên tan trong miệng: bảo quản trong bao bì gốc, tránh ẩm.",
+        "black_box_warnings": "Dùng lâu dài (>1 năm) có thể tăng nguy cơ loãng xương, gãy xương hông, cổ tay, cột sống. Dùng lâu dài có thể tăng nguy cơ thiếu vitamin B12. Tăng nguy cơ nhiễm C. difficile."
     },
     
     "Esomeprazole": {
@@ -2156,7 +2269,36 @@ DRUG_DATABASE = {
             "Clopidogrel: có thể giảm hiệu quả (controversial)",
             "Methotrexate: tăng nồng độ methotrexate"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Enantiomer S của omeprazole. Ức chế không hồi phục enzyme H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, ức chế bước cuối cùng trong quá trình tiết acid dạ dày. Chuyển hóa qua CYP2C19 ít hơn omeprazole (racemic) → hiệu quả tốt hơn và ổn định hơn. Ức chế cả acid kích thích và acid cơ bản. Tác dụng mạnh hơn và ổn định hơn omeprazole do ít chuyển hóa qua CYP2C19.",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm đau, triệu chứng GERD)",
+            "Magie máu nếu dùng lâu dài (>1 năm) - có thể giảm magie",
+            "Vitamin B12 nếu dùng lâu dài (>2 năm) - có thể thiếu B12",
+            "Mật độ xương (DEXA scan) nếu dùng lâu dài và có nguy cơ loãng xương",
+            "Dấu hiệu nhiễm C. difficile (tiêu chảy nặng, đau bụng) - tăng nguy cơ",
+            "INR nếu dùng với warfarin (tăng nguy cơ chảy máu)",
+            "Chức năng thận (nếu dùng lâu dài với nguy cơ suy thận)"
+        ],
+        "precautions": [
+            "Uống trước bữa ăn 30 phút (tăng hiệu quả)",
+            "Không nghiền hoặc nhai viên (bao tan trong ruột)",
+            "Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể",
+            "Cân nhắc ngừng sau 4-8 tuần nếu không cần thiết (giảm nguy cơ tác dụng phụ)",
+            "Cân nhắc dùng liều cách ngày hoặc ngắt quãng nếu dùng lâu dài",
+            "Thận trọng ở bệnh nhân suy gan nặng (giảm liều)",
+            "Không dùng với các thuốc cần acid để hấp thu (ketoconazole, itraconazole, iron salts)",
+            "Cân nhắc tương tác với clopidogrel (có thể giảm hiệu quả - controversial, cân nhắc dùng PPI khác)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-1.5 giờ (ngắn, nhưng tác dụng kéo dài do ức chế không hồi phục)",
+            "onset": "1-3 giờ",
+            "duration": "24 giờ (một lần/ngày)",
+            "protein_binding": "97%",
+            "clearance": "Gan (chuyển hóa qua CYP2C19 ít hơn omeprazole, CYP3A4), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên bao tan trong ruột: không nghiền hoặc nhai.",
+        "black_box_warnings": "Dùng lâu dài (>1 năm) có thể tăng nguy cơ loãng xương, gãy xương hông, cổ tay, cột sống. Dùng lâu dài có thể tăng nguy cơ thiếu vitamin B12. Tăng nguy cơ nhiễm C. difficile."
     },
     
     "Sucralfate": {
@@ -2198,7 +2340,34 @@ DRUG_DATABASE = {
             "Quinolone: giảm hấp thu quinolone",
             "Thyroxine: giảm hấp thu thyroxine"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Phức hợp sucrose-aluminum. Tạo lớp phủ bảo vệ trên vết loét dạ dày tá tràng. Phản ứng với acid dạ dày tạo thành gel dính, bám chặt vào vết loét, tạo hàng rào bảo vệ khỏi acid, pepsin, và muối mật. Kích thích tổng hợp prostaglandin, tăng tiết chất nhầy, tăng tái tạo niêm mạc. Cũng có thể hấp phụ pepsin và muối mật. Không giảm tiết acid như PPI/H2 blocker mà bảo vệ niêm mạc trực tiếp.",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm đau, lành vết loét)",
+            "Dấu hiệu tích tụ nhôm: rối loạn thần kinh, xương yếu (nếu dùng lâu dài ở suy thận)",
+            "Chức năng thận (creatinine, BUN) - đặc biệt nếu dùng lâu dài",
+            "INR nếu dùng với warfarin (có thể tăng tác dụng chống đông)",
+            "Dấu hiệu táo bón nặng (tác dụng phụ thường gặp)"
+        ],
+        "precautions": [
+            "Uống khi bụng đói (1 giờ trước bữa ăn) - cần acid dạ dày để tạo gel",
+            "Không dùng với PPI, H2 blocker, antacid - cách 2 giờ (chúng làm giảm acid → giảm hiệu quả sucralfate)",
+            "Không dùng với các thuốc khác - cách 2 giờ (sucralfate có thể giảm hấp thu)",
+            "Thận trọng ở suy thận (CrCl 30-60) - giảm liều",
+            "Tránh dùng ở suy thận nặng (CrCl <30) - tích tụ nhôm có thể gây độc",
+            "Có thể gây táo bón - dùng thuốc nhuận tràng nếu cần",
+            "Không nghiền hoặc nhai viên (giảm hiệu quả)",
+            "Dùng đủ 4-8 tuần để lành vết loét hoàn toàn"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (tác dụng tại chỗ, không hấp thu)",
+            "onset": "1-2 giờ",
+            "duration": "6 giờ (lớp phủ bảo vệ)",
+            "protein_binding": "Không áp dụng (không hấp thu)",
+            "clearance": "Không hấp thu đáng kể, thải qua phân. Nhôm có thể tích tụ ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Tránh dùng ở suy thận nặng (CrCl <30) - tích tụ nhôm có thể gây độc thần kinh, xương yếu, thiếu máu. Không dùng với PPI/H2 blocker/antacid đồng thời - cách 2 giờ để đảm bảo hiệu quả."
     },
     
     # ========== ANALGESICS ==========
@@ -2444,7 +2613,37 @@ DRUG_DATABASE = {
             "Lithium: tăng nồng độ lithium",
             "Methotrexate: tăng độc tính methotrexate"
         ],
-        "pregnancy": "C - D trong 3 tháng cuối"
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": "Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin, thromboxane, và prostacyclin. Prostaglandin tham gia vào quá trình đau, viêm, sốt, bảo vệ niêm mạc dạ dày, và điều hòa thận. Tác dụng kháng viêm và giảm đau mạnh hơn ibuprofen. Thời gian bán thải dài hơn ibuprofen (12-17 giờ) → tác dụng kéo dài hơn, có thể dùng 2 lần/ngày.",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày (phân đen, nôn ra máu, đau bụng)",
+            "Creatinine, BUN nếu dùng lâu dài hoặc bệnh nhân có nguy cơ",
+            "Huyết áp (NSAID có thể tăng huyết áp)",
+            "Chức năng gan (transaminase) nếu dùng lâu dài",
+            "Dấu hiệu suy tim (giữ nước, phù)",
+            "Lithium máu nếu dùng với lithium",
+            "Nhạy cảm với ánh sáng (ban da khi tiếp xúc ánh nắng)"
+        ],
+        "precautions": [
+            "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày",
+            "Cân nhắc dùng PPI hoặc misoprostol nếu có nguy cơ loét dạ dày",
+            "Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp",
+            "Tránh dùng với ACE inhibitor/ARB (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm)",
+            "Ngừng trước phẫu thuật 5-7 ngày (tăng nguy cơ chảy máu)",
+            "Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể",
+            "Tránh tiếp xúc ánh nắng quá nhiều (nhạy cảm với ánh sáng)",
+            "Thời gian bán thải dài → tích lũy ở bệnh nhân suy thận, suy gan"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12-17 giờ (dài hơn ibuprofen)",
+            "onset": "30-60 phút",
+            "duration": "8-12 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa qua CYP2C9, CYP1A2), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp",
+        "black_box_warnings": "Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ, đặc biệt khi dùng lâu dài hoặc liều cao."
     },
     
     "Diclofenac": {
@@ -2493,7 +2692,38 @@ DRUG_DATABASE = {
             "Digoxin: tăng nồng độ digoxin",
             "Methotrexate: tăng độc tính methotrexate"
         ],
-        "pregnancy": "C - D trong 3 tháng cuối"
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": "Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), ưu tiên COX-2 hơn một số NSAID khác. Giảm tổng hợp prostaglandin, thromboxane, và prostacyclin. Prostaglandin tham gia vào quá trình đau, viêm, sốt, bảo vệ niêm mạc dạ dày, và điều hòa thận. Tác dụng kháng viêm và giảm đau mạnh. Có nhiều dạng: uống, tiêm bắp, bôi tại chỗ. Dạng bôi tại chỗ có ít tác dụng phụ hệ thống hơn.",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày (phân đen, nôn ra máu, đau bụng) - nguy cơ cao hơn các NSAID khác",
+            "Creatinine, BUN nếu dùng lâu dài hoặc bệnh nhân có nguy cơ",
+            "Huyết áp (NSAID có thể tăng huyết áp)",
+            "Chức năng gan (ALT, AST) - diclofenac có nguy cơ tăng men gan cao hơn",
+            "Dấu hiệu suy tim (giữ nước, phù)",
+            "Lithium máu nếu dùng với lithium",
+            "Cyclosporine levels nếu dùng với cyclosporine"
+        ],
+        "precautions": [
+            "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày",
+            "Cân nhắc dùng PPI hoặc misoprostol nếu có nguy cơ loét dạ dày (nguy cơ cao)",
+            "Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp",
+            "Tránh dùng với ACE inhibitor/ARB (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm)",
+            "Ngừng trước phẫu thuật 5-7 ngày (tăng nguy cơ chảy máu)",
+            "Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể",
+            "Dạng bôi tại chỗ: ít tác dụng phụ hệ thống, phù hợp cho đau cục bộ",
+            "IM: chỉ dùng tối đa 3 ngày, không dùng lâu dài",
+            "Theo dõi chức năng gan chặt chẽ (nguy cơ tăng men gan)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-2 giờ (ngắn), nhưng tác dụng kéo dài do tích lũy trong dịch khớp",
+            "onset": "30-60 phút (PO), 10-15 phút (IM)",
+            "duration": "8-12 giờ",
+            "protein_binding": "99.7%",
+            "clearance": "Gan (chuyển hóa qua CYP2C9, CYP3A4), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng bôi: bảo quản ở nhiệt độ phòng, không làm lạnh.",
+        "black_box_warnings": "Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ, đặc biệt khi dùng lâu dài hoặc liều cao. Diclofenac có nguy cơ tăng men gan và chảy máu dạ dày cao hơn một số NSAID khác."
     },
     
     "Morphine": {
@@ -2600,7 +2830,7 @@ DRUG_DATABASE = {
         "dosage": {
             "adult_pain": "15-60mg mỗi 4-6 giờ (tối đa 360mg/ngày)",
             "adult_cough": "10-20mg mỗi 4-6 giờ (tối đa 120mg/ngày)",
-            "notes": "Prodrug của morphine, cần CYP2D6 để chuyển hóa. Một số người không có enzyme → không hiệu quả"
+            "notes": "Prodrug của morphine, cần CYP2D6 để chuyển hóa. Một số người không có enzyme (poor metabolizers) → không hiệu quả. Ultra-rapid metabolizers → nguy cơ quá liều"
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -2622,7 +2852,41 @@ DRUG_DATABASE = {
             "CYP2D6 inhibitors: giảm hiệu quả",
             "Quinidine: giảm chuyển hóa thành morphine"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Prodrug của morphine. Codeine tự thân không có tác dụng giảm đau, cần chuyển hóa qua enzyme CYP2D6 ở gan để tạo thành morphine (active metabolite). Morphine gắn với mu-opioid receptors, ức chế dẫn truyền đau, tăng ngưỡng đau, giảm đáp ứng với kích thích đau. Tác dụng yếu hơn morphine trực tiếp. Có tác dụng chống ho do ức chế trung tâm ho. Hiệu quả phụ thuộc vào genotype CYP2D6 (poor metabolizers → không hiệu quả, ultra-rapid metabolizers → nguy cơ quá liều).",
+        "monitoring": [
+            "Mức độ đau (thang điểm đau) - đánh giá hiệu quả",
+            "Mức độ ý thức (dấu hiệu quá liều: giảm ý thức, thở chậm) - đặc biệt ở ultra-rapid metabolizers",
+            "Huyết áp và nhịp tim (có thể gây hạ huyết áp, nhịp tim chậm)",
+            "Dấu hiệu táo bón (rất thường gặp, cần dự phòng)",
+            "Dấu hiệu nghiện/lệ thuộc (nếu dùng kéo dài)",
+            "Chức năng thận (tích lũy ở suy thận)",
+            "Đáp ứng với thuốc (nếu không hiệu quả có thể do poor metabolizer)"
+        ],
+        "precautions": [
+            "Nguy cơ ức chế hô hấp - đặc biệt ở ultra-rapid metabolizers (tạo nhiều morphine) hoặc dùng liều cao",
+            "Khởi đầu với liều thấp, tăng dần theo đáp ứng",
+            "Tránh dùng với benzodiazepine, rượu, thuốc an thần (tăng nguy cơ ức chế hô hấp)",
+            "Dự phòng táo bón từ đầu (dùng thuốc nhuận tràng)",
+            "Thận trọng ở suy thận (tích lũy)",
+            "Thận trọng ở suy gan (giảm chuyển hóa)",
+            "Nguy cơ nghiện/lệ thuộc nếu dùng kéo dài - cần đánh giá định kỳ",
+            "Không dùng trong tăng áp lực nội sọ",
+            "Không dùng trong tắc ruột cơ học",
+            "Nếu không hiệu quả → có thể do poor CYP2D6 metabolizer, cân nhắc dùng opioid khác",
+            "Trẻ em <12 tuổi: không dùng cho ho (nguy cơ ức chế hô hấp)",
+            "Trẻ em <18 tuổi sau cắt amidan/VA: chống chỉ định (nguy cơ ức chế hô hấp nghiêm trọng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2.5-4 giờ",
+            "onset": "30-60 phút",
+            "duration": "4-6 giờ",
+            "protein_binding": "7-25%",
+            "metabolism": "Gan: chuyển hóa qua CYP2D6 thành morphine (10% codeine → morphine), CYP3A4 thành norcodeine (không hoạt động)",
+            "clearance": "Chủ yếu qua thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để xa tầm tay trẻ em (nguy cơ quá liều).",
+        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt ở ultra-rapid metabolizers (tạo nhiều morphine) hoặc khi dùng với benzodiazepine/rượu. Trẻ em <12 tuổi: không dùng cho ho. Trẻ em <18 tuổi sau cắt amidan/VA: chống chỉ định (nguy cơ ức chế hô hấp nghiêm trọng, có thể tử vong)."
     },
     
     "Sumatriptan": {
@@ -2670,7 +2934,38 @@ DRUG_DATABASE = {
             "SSRI/SNRI: tăng nguy cơ hội chứng serotonin",
             "Thuốc ức chế CYP2D6: tăng nồng độ sumatriptan"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "5-HT1B/1D receptor agonist (selective serotonin receptor agonist, triptan). Kích thích 5-HT1B receptors ở mạch máu não → co mạch (giảm giãn mạch trong migraine). Kích thích 5-HT1D receptors → ức chế phóng thích chất trung gian gây viêm (CGRP, substance P) từ dây thần kinh trigeminal. Giảm đau migraine thông qua cả hai cơ chế: co mạch và ức chế viêm thần kinh. Tác dụng nhanh (10-30 phút SC, 30-60 phút PO).",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm đau migraine, triệu chứng)",
+            "Dấu hiệu co mạch: đau ngực, khó thở, đau cổ, hàm (có thể giống đau thắt ngực)",
+            "Dấu hiệu bệnh mạch vành: đau ngực, khó thở, đau lan (nguy hiểm)",
+            "Huyết áp (có thể tăng nhẹ)",
+            "Dấu hiệu hội chứng serotonin: kích động, tăng thân nhiệt, tăng phản xạ (nếu dùng với SSRI/SNRI)",
+            "Dấu hiệu quá liều: co mạch nặng, thiếu máu cục bộ"
+        ],
+        "precautions": [
+            "Dùng ngay khi có triệu chứng migraine (không chờ đến khi đau nặng)",
+            "Không dùng để phòng ngừa - chỉ dùng để cắt cơn",
+            "CHỐNG CHỈ ĐỊNH trong bệnh mạch vành, nhồi máu cơ tim, đột quỵ, TIA, bệnh mạch máu ngoại biên",
+            "CHỐNG CHỈ ĐỊNH trong tăng huyết áp không kiểm soát",
+            "Không dùng với ergotamine/dihydroergotamine trong 24 giờ - tăng nguy cơ co mạch nặng",
+            "Không dùng với MAO inhibitor trong 14 ngày - tăng nguy cơ tác dụng phụ",
+            "Thận trọng khi dùng với SSRI/SNRI - tăng nguy cơ hội chứng serotonin",
+            "Nếu đau ngực, khó thở → ngừng ngay và đánh giá",
+            "Không vượt quá liều tối đa (200mg/ngày PO, 12mg/ngày SC, 40mg/ngày nasal)",
+            "Nếu không đáp ứng sau 2 liều → không dùng thêm, đánh giá lại chẩn đoán"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 giờ",
+            "onset": "SC: 10-15 phút; PO: 30-60 phút; Nasal: 15-30 phút",
+            "duration": "2-4 giờ",
+            "protein_binding": "14-21%",
+            "metabolism": "Gan (chuyển hóa qua MAO-A, một phần qua CYP2D6)",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng SC: bảo quản trong tủ lạnh, để ở nhiệt độ phòng trước khi dùng.",
+        "black_box_warnings": "Nguy cơ co mạch nghiêm trọng, có thể gây nhồi máu cơ tim, đột quỵ, thiếu máu cục bộ, có thể tử vong. CHỐNG CHỈ ĐỊNH trong bệnh mạch vành, nhồi máu cơ tim, đột quỵ, TIA, bệnh mạch máu ngoại biên, tăng huyết áp không kiểm soát. Không dùng với ergotamine trong 24 giờ. Nếu có đau ngực, khó thở → ngừng ngay và đánh giá."
     },
     
     # ========== RESPIRATORY ==========
@@ -2705,7 +3000,33 @@ DRUG_DATABASE = {
         "interactions": [
             "Beta-blocker: đối kháng tác dụng (tránh dùng)"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Kích thích beta-2 adrenergic receptors ở cơ trơn phế quản, kích hoạt adenylate cyclase → tăng cAMP → giãn cơ trơn phế quản. Tác dụng nhanh, ngắn (4-6 giờ). Chọn lọc beta-2 hơn beta-1 nhưng vẫn có tác dụng tim mạch ở liều cao. Giảm phóng thích chất trung gian gây viêm từ mast cells.",
+        "monitoring": [
+            "Nhịp tim, huyết áp (đặc biệt khi dùng IV hoặc liều cao)",
+            "Kali máu nếu dùng liều cao hoặc kéo dài",
+            "Đáp ứng phế quản (peak flow, FEV1)",
+            "Dấu hiệu quá liều: nhịp tim nhanh >120 bpm, run cơ nặng, loạn nhịp",
+            "Dấu hiệu nghịch lý: co thắt phế quản nặng hơn (hiếm nhưng nguy hiểm)"
+        ],
+        "precautions": [
+            "Chỉ dùng khi cần (PRN) cho cắt cơn - không dùng thường xuyên",
+            "Nếu cần dùng >4 lần/ngày → cần đánh giá lại điều trị và tăng ICS",
+            "Tránh dùng với beta-blocker (đối kháng tác dụng)",
+            "Thận trọng ở bệnh nhân tim mạch, tăng huyết áp, loạn nhịp (tăng nguy cơ tác dụng tim mạch)",
+            "Dùng liều thấp nhất hiệu quả để giảm tác dụng phụ",
+            "Rửa miệng sau khi dùng dạng hít để giảm kích ứng và nấm miệng",
+            "Nếu không đáp ứng → cần đánh giá lại chẩn đoán và điều trị"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-7 giờ (hít), 2-4 giờ (IV)",
+            "onset": "5-15 phút (hít), 2-5 phút (IV)",
+            "duration": "4-6 giờ",
+            "protein_binding": "10%",
+            "clearance": "Gan (chuyển hóa qua sulfation, một phần qua CYP450), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. Kiểm tra hạn sử dụng định kỳ.",
+        "black_box_warnings": "Không dùng đơn độc cho hen phế quản mạn tính - phải kết hợp với corticosteroid dạng hít. Dùng quá mức (>4 lần/ngày) có thể gây tăng nguy cơ tử vong do hen. Nếu cần dùng thường xuyên → cần đánh giá lại và tăng điều trị kiểm soát."
     },
     
     "Salmeterol": {
@@ -2743,7 +3064,35 @@ DRUG_DATABASE = {
             "Beta-blocker: đối kháng tác dụng",
             "Theophylline: tăng tác dụng phụ"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Kích thích beta-2 adrenergic receptors ở cơ trơn phế quản, kích hoạt adenylate cyclase → tăng cAMP → giãn cơ trơn phế quản. Tác dụng dài (12 giờ) do liên kết chặt với receptor, giải phóng chậm. Chọn lọc beta-2 hơn beta-1 nhưng vẫn có tác dụng tim mạch. Giảm phóng thích chất trung gian gây viêm từ mast cells. Dùng để phòng ngừa, không dùng để cắt cơn (tác dụng chậm).",
+        "monitoring": [
+            "Nhịp tim, huyết áp (đặc biệt khi bắt đầu điều trị)",
+            "Đáp ứng phế quản (peak flow, FEV1) - đánh giá hiệu quả phòng ngừa",
+            "Dấu hiệu quá liều: nhịp tim nhanh >120 bpm, run cơ nặng, loạn nhịp",
+            "Dấu hiệu nghịch lý: co thắt phế quản nặng hơn (hiếm nhưng nguy hiểm)",
+            "Tần suất dùng SABA (nếu tăng → cần đánh giá lại điều trị)"
+        ],
+        "precautions": [
+            "PHẢI dùng kết hợp với ICS (inhaled corticosteroid) - không bao giờ dùng đơn độc cho hen phế quản",
+            "Không dùng để cắt cơn (tác dụng chậm, không hiệu quả) - cần có SABA để cắt cơn",
+            "Không dùng đơn độc cho hen phế quản cấp - nguy cơ tăng tử vong",
+            "Tránh dùng với beta-blocker (đối kháng tác dụng)",
+            "Thận trọng ở bệnh nhân tim mạch, tăng huyết áp, loạn nhịp (tăng nguy cơ tác dụng tim mạch)",
+            "Dùng đều đặn 2 lần/ngày (sáng và tối) để phòng ngừa",
+            "Rửa miệng sau khi dùng dạng hít để giảm kích ứng và nấm miệng",
+            "Nếu cần dùng SABA thường xuyên → cần đánh giá lại điều trị và tăng ICS",
+            "Nếu không đáp ứng → cần đánh giá lại chẩn đoán và điều trị"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5.5 giờ (dài hơn salbutamol)",
+            "onset": "15-30 phút (chậm hơn SABA)",
+            "duration": "12 giờ (dài)",
+            "protein_binding": "96%",
+            "clearance": "Gan (chuyển hóa qua CYP3A4), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. Kiểm tra hạn sử dụng định kỳ.",
+        "black_box_warnings": "KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - phải dùng kết hợp với ICS. Dùng đơn độc LABA có thể tăng nguy cơ tử vong do hen. Không dùng để cắt cơn hen cấp (tác dụng chậm). Chỉ dùng để phòng ngừa và phải luôn có SABA để cắt cơn."
     },
     
     "Ipratropium": {
@@ -2784,7 +3133,36 @@ DRUG_DATABASE = {
             "Anticholinergic khác: tăng tác dụng phụ",
             "Beta-agonist: hiệp đồng tốt"
         ],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "mechanism_of_action": "Anticholinergic - ức chế muscarinic receptors (M1, M2, M3) ở cơ trơn phế quản, giảm acetylcholine-mediated co thắt phế quản. Giãn cơ trơn phế quản, giảm tiết dịch đường hô hấp. Không hấp thu hệ thống đáng kể khi dùng dạng hít (do ion hóa) → ít tác dụng phụ hệ thống hơn atropine. Tác dụng ngắn (4-6 giờ). An toàn hơn beta-agonist cho bệnh nhân tim mạch (không kích thích beta-1 receptors).",
+        "monitoring": [
+            "Đáp ứng phế quản (peak flow, FEV1)",
+            "Nhịp tim, huyết áp (ít tác dụng tim mạch hơn beta-agonist)",
+            "Dấu hiệu kích ứng mắt (nếu vào mắt - tăng nhãn áp, đỏ mắt)",
+            "Dấu hiệu tăng nhãn áp (đau mắt, nhìn mờ) - đặc biệt ở bệnh nhân glaucoma",
+            "Dấu hiệu bí tiểu (khó tiểu, đầy bụng) - hiếm nhưng cần chú ý",
+            "Dấu hiệu khô miệng nặng (có thể ảnh hưởng sức khỏe răng miệng)"
+        ],
+        "precautions": [
+            "Rửa miệng sau khi dùng để giảm kích ứng và tránh thuốc vào mắt",
+            "Tránh để thuốc vào mắt (có thể gây tăng nhãn áp, đặc biệt ở bệnh nhân glaucoma)",
+            "Thận trọng ở bệnh nhân glaucoma góc đóng (chống chỉ định) hoặc tăng nhãn áp",
+            "Thận trọng ở bệnh nhân phì đại tuyến tiền liệt (có thể gây bí tiểu)",
+            "Kết hợp với beta-agonist (SABA) cho hiệu quả tốt hơn - hiệp đồng tác dụng",
+            "Dùng đều đặn cho COPD, dùng khi cần cho hen (kết hợp với SABA)",
+            "Dạng hít: sử dụng đúng kỹ thuật để đạt hiệu quả tối đa",
+            "Dạng nebulizer: phù hợp cho bệnh nhân không thể dùng dạng hít",
+            "An toàn hơn beta-agonist cho bệnh nhân tim mạch (không kích thích tim)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 giờ",
+            "onset": "15-30 phút (chậm hơn SABA)",
+            "duration": "4-6 giờ",
+            "protein_binding": "Không đáng kể (ion hóa, không hấp thu hệ thống)",
+            "clearance": "Chủ yếu tại chỗ (phế quản), không chuyển hóa đáng kể"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. Kiểm tra hạn sử dụng định kỳ.",
+        "black_box_warnings": "Tránh để thuốc vào mắt - có thể gây tăng nhãn áp, đặc biệt nguy hiểm ở bệnh nhân glaucoma góc đóng. Rửa miệng sau khi dùng để tránh thuốc vào mắt."
     },
     
     "Tiotropium": {
@@ -2823,7 +3201,38 @@ DRUG_DATABASE = {
             "Anticholinergic khác: tăng tác dụng phụ",
             "Beta-agonist: hiệp đồng"
         ],
-        "pregnancy": "C"
+        "pregnancy": "C",
+        "mechanism_of_action": "Anticholinergic dài tác dụng - ức chế muscarinic receptors (M1, M2, M3) ở cơ trơn phế quản, giảm acetylcholine-mediated co thắt phế quản. Giãn cơ trơn phế quản, giảm tiết dịch đường hô hấp. Liên kết chặt với M3 receptors (chủ yếu) và M1 receptors, giải phóng chậm → tác dụng kéo dài 24 giờ. Không hấp thu hệ thống đáng kể khi dùng dạng hít (do ion hóa) → ít tác dụng phụ hệ thống. Tác dụng dài hơn ipratropium (4-6 giờ so với 24 giờ). An toàn hơn beta-agonist cho bệnh nhân tim mạch.",
+        "monitoring": [
+            "Đáp ứng phế quản (peak flow, FEV1) - đánh giá hiệu quả phòng ngừa",
+            "Nhịp tim, huyết áp (ít tác dụng tim mạch hơn beta-agonist)",
+            "Dấu hiệu kích ứng mắt (nếu vào mắt - tăng nhãn áp, đỏ mắt)",
+            "Dấu hiệu tăng nhãn áp (đau mắt, nhìn mờ) - đặc biệt ở bệnh nhân glaucoma",
+            "Dấu hiệu bí tiểu (khó tiểu, đầy bụng) - đặc biệt ở bệnh nhân phì đại tuyến tiền liệt",
+            "Dấu hiệu khô miệng nặng (có thể ảnh hưởng sức khỏe răng miệng)",
+            "Chức năng thận (thải qua thận, tích lũy ở suy thận)"
+        ],
+        "precautions": [
+            "Rửa miệng sau khi dùng để giảm kích ứng và tránh thuốc vào mắt",
+            "Tránh để thuốc vào mắt (có thể gây tăng nhãn áp, đặc biệt ở bệnh nhân glaucoma)",
+            "Thận trọng ở bệnh nhân glaucoma góc đóng (chống chỉ định) hoặc tăng nhãn áp",
+            "Thận trọng ở bệnh nhân phì đại tuyến tiền liệt nặng (có thể gây bí tiểu)",
+            "Thận trọng ở suy thận (thải qua thận, tích lũy) - tránh dùng nếu CrCl <30",
+            "Dùng 1 lần/ngày với HandiHaler (18mcg) hoặc 2 lần/ngày với Respimat (5mcg)",
+            "Kết hợp với ICS cho hen phế quản nếu không kiểm soát",
+            "Dạng hít: sử dụng đúng kỹ thuật để đạt hiệu quả tối đa",
+            "An toàn hơn beta-agonist cho bệnh nhân tim mạch (không kích thích tim)",
+            "Không dùng để cắt cơn (tác dụng chậm) - cần có SABA để cắt cơn"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5-6 ngày (rất dài, do liên kết chặt với receptor)",
+            "onset": "30-60 phút",
+            "duration": "24 giờ (dài)",
+            "protein_binding": "72%",
+            "clearance": "Thận (thải qua thận, tích lũy ở suy thận)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. HandiHaler: bảo quản trong bao bì gốc. Kiểm tra hạn sử dụng định kỳ.",
+        "black_box_warnings": "Tránh để thuốc vào mắt - có thể gây tăng nhãn áp, đặc biệt nguy hiểm ở bệnh nhân glaucoma góc đóng. Rửa miệng sau khi dùng để tránh thuốc vào mắt. Thận trọng ở suy thận - tích lũy có thể gây tăng tác dụng phụ."
     },
     
     "Budesonide inhaled": {
