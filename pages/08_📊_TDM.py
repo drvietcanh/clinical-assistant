@@ -14,7 +14,11 @@ from drugs.tdm import (
     render_phenytoin_tdm,
     render_lithium_tdm,
     render_theophylline_tdm,
-    render_immunosuppressants_tdm
+    render_immunosuppressants_tdm,
+    render_vancomycin_tdm,
+    render_aminoglycosides_tdm,
+    render_carbamazepine_tdm,
+    render_valproic_acid_tdm
 )
 
 # Standard page setup
@@ -136,7 +140,20 @@ elif "Theophylline" in tdm_drug:
 elif "Tacrolimus" in tdm_drug or "Cyclosporine" in tdm_drug:
     render_immunosuppressants_tdm()
 
-# Route to new drugs from config
+# Route to new detailed calculators
+elif "Vancomycin" in tdm_drug:
+    render_vancomycin_tdm()
+
+elif any(x in tdm_drug for x in ["Amikacin", "Gentamicin", "Tobramycin", "Netilmicin"]):
+    render_aminoglycosides_tdm()
+
+elif "Carbamazepine" in tdm_drug:
+    render_carbamazepine_tdm()
+
+elif "Valproic" in tdm_drug or "Valproate" in tdm_drug:
+    render_valproic_acid_tdm()
+
+# Route to new drugs from config (basic interpretation)
 elif tdm_drug in category_map:
     drug_id = category_map[tdm_drug]
     drug_info = TDM_DRUGS[drug_id]
