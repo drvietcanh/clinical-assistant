@@ -249,7 +249,7 @@ python check_enhanced_fields.py
 
 ---
 
-**Cập nhật lần cuối:** 2024-12-19 (hoàn thành nhóm 5 - 19/20 thuốc) 
+**Cập nhật lần cuối:** 2024-12-19 (hoàn thành nhóm 5 - 20/20 thuốc - 100%) 
 - ✅ HOÀN THÀNH Phase 1: Tất cả 141 thuốc đã có đủ 6 fields cơ bản
 - ✅ Bổ sung 5 thuốc cuối cùng: Calcium, Vitamin D, Budesonide, Enalaprilat, Amoxicillin suspension
 - ✅ Phase 2 đang tiến hành: Bổ sung 8 fields tùy chọn
@@ -257,9 +257,10 @@ python check_enhanced_fields.py
   - ✅ **HOÀN THÀNH NHÓM 2** (6/6 thuốc - 100%): Valproate, Lamotrigine, Amitriptyline, Cisplatin, Carboplatin, Cyclophosphamide
   - ✅ **HOÀN THÀNH NHÓM 3** (7/7 thuốc - 100%): Fluoxetine, Sertraline, Citalopram, Escitalopram, Loratadine, Cetirizine, Fexofenadine
   - ✅ **HOÀN THÀNH NHÓM 4** (9/9 thuốc - 100%): Captopril, Dapagliflozin, Empagliflozin, Glibenclamide, Gliclazide, Metformin, Prasugrel, Sitagliptin, Ticagrelor
-  - ✅ **HOÀN THÀNH NHÓM 5** (19/20 thuốc - 95%): Enalapril ✅, Lisinopril ✅, Losartan ✅, Metoprolol ✅, Propranolol ✅, Amlodipine ✅, Atenolol ✅, Bisoprolol ✅, Carvedilol ✅, Nifedipine ✅, Diltiazem ✅, Verapamil ✅, Furosemide ✅, Hydrochlorothiazide ✅, Amiodarone ✅, Digoxin ✅, Warfarin ✅, Aspirin ✅, Clopidogrel ✅, Spironolactone (đang kiểm tra)
-  - ✅ Tổng số đã hoàn thành: 51/141 thuốc (36%)
-  - ⏳ Còn lại: 90 thuốc
+  - ✅ **HOÀN THÀNH NHÓM 5** (20/20 thuốc - 100%): Enalapril ✅, Lisinopril ✅, Losartan ✅, Metoprolol ✅, Propranolol ✅, Amlodipine ✅, Atenolol ✅, Bisoprolol ✅, Carvedilol ✅, Nifedipine ✅, Diltiazem ✅, Verapamil ✅, Furosemide ✅, Hydrochlorothiazide ✅, Amiodarone ✅, Digoxin ✅, Warfarin ✅, Aspirin ✅, Clopidogrel ✅, Spironolactone ✅
+  - ✅ **HOÀN THÀNH NHÓM 6** (10/10 thuốc - 100%): Omeprazole ✅, Pantoprazole ✅, Lansoprazole ✅, Esomeprazole ✅, Ranitidine ✅, Metoclopramide ✅, Loperamide ✅, Domperidone ✅, Ondansetron ✅, Sucralfate ✅
+  - ✅ Tổng số đã hoàn thành: 66/141 thuốc (46%)
+  - ⏳ Còn lại: 75 thuốc
   - 📋 Kế hoạch chi tiết: Xem `drugs/PHASE2_PLAN.md`
   - 📊 Script theo dõi: `track_phase2_progress.py`
 

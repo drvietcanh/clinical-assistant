@@ -3633,7 +3633,174 @@ DRUG_DATABASE = {
             "clearance": "Gan (CYP3A4)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Tiêu cơ vân - có thể gây suy thận cấp và tử vong. Nguy cơ tăng khi dùng chung với thuốc khác hoặc liều cao"
+        "black_box_warnings": "Tiêu cơ vân - có thể gây suy thận cấp và tử vong. Nguy cơ tăng khi dùng chung với thuốc khác hoặc liều cao",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Cyclosporine, Tacrolimus",
+                    "mechanism": "Cyclosporine ức chế CYP3A4 và P-glycoprotein, tăng nồng độ atorvastatin đáng kể",
+                    "effect": "Tăng nguy cơ tiêu cơ vân (rhabdomyolysis) nghiêm trọng, có thể gây suy thận cấp, tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Nếu cần: giảm liều atorvastatin tối đa 10mg/ngày, theo dõi CK và men gan thường xuyên. Cân nhắc dùng pravastatin hoặc rosuvastatin (ít chuyển hóa qua CYP3A4)."
+                },
+                {
+                    "drug": "Clarithromycin, Erythromycin, Telithromycin",
+                    "mechanism": "Macrolide ức chế CYP3A4, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân, đặc biệt ở liều cao atorvastatin",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu cần: giảm liều atorvastatin 50-75%, theo dõi CK và dấu hiệu đau cơ. Tạm ngừng atorvastatin nếu có đau cơ hoặc CK tăng."
+                },
+                {
+                    "drug": "Itraconazole, Ketoconazole, Voriconazole, Posaconazole",
+                    "mechanism": "Azole antifungals ức chế CYP3A4 mạnh, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Tạm ngừng atorvastatin trong thời gian dùng azole antifungal. Hoặc dùng pravastatin/rosuvastatin (ít chuyển hóa qua CYP3A4)."
+                },
+                {
+                    "drug": "Grapefruit juice (lớn hơn 1.2L/ngày hoặc liều cao atorvastatin)",
+                    "mechanism": "Grapefruit juice ức chế CYP3A4 ở ruột, tăng hấp thu atorvastatin",
+                    "effect": "Tăng nồng độ atorvastatin, tăng nguy cơ tiêu cơ vân",
+                    "management": "Tránh grapefruit juice khi dùng atorvastatin, đặc biệt ở liều cao (40-80mg). Nước ép cam, táo không có vấn đề."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Amiodarone, Diltiazem, Verapamil",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "Giảm liều atorvastatin 50% hoặc tối đa 20mg/ngày. Theo dõi CK và dấu hiệu đau cơ. Cân nhắc dùng pravastatin/rosuvastatin."
+                },
+                {
+                    "drug": "Ritonavir, Lopinavir, Saquinavir (HIV protease inhibitors)",
+                    "mechanism": "Ức chế CYP3A4 mạnh, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "Giảm liều atorvastatin. Theo dõi CK. Cân nhắc dùng pravastatin hoặc rosuvastatin."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Atorvastatin có thể tăng tác dụng chống đông của warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên khi bắt đầu hoặc thay đổi liều atorvastatin. Có thể cần giảm liều warfarin."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Atorvastatin có thể tăng nhẹ nồng độ digoxin qua P-glycoprotein",
+                    "effect": "Tăng nhẹ nồng độ digoxin",
+                    "management": "Theo dõi nồng độ digoxin và dấu hiệu ngộ độc digoxin. Có thể cần giảm liều digoxin."
+                },
+                {
+                    "drug": "Colchicine",
+                    "mechanism": "Cả hai đều chuyển hóa qua CYP3A4, có thể tăng tác dụng phụ",
+                    "effect": "Tăng nguy cơ độc cơ, đặc biệt ở bệnh nhân suy thận",
+                    "management": "Thận trọng, đặc biệt ở bệnh nhân suy thận. Theo dõi CK và dấu hiệu đau cơ. Có thể cần giảm liều một trong hai thuốc."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Rifampin, Phenytoin",
+                    "mechanism": "Cảm ứng CYP3A4, tăng chuyển hóa atorvastatin",
+                    "effect": "Giảm hiệu quả atorvastatin",
+                    "management": "Có thể cần tăng liều atorvastatin. Theo dõi lipid profile."
+                },
+                {
+                    "drug": "Oral contraceptives",
+                    "mechanism": "Atorvastatin có thể tăng nhẹ nồng độ estrogen",
+                    "effect": "Tăng nhẹ tác dụng phụ của thuốc tránh thai",
+                    "management": "Thường không cần điều chỉnh. Theo dõi tác dụng phụ."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Bệnh gan hoạt động (active liver disease) - tăng men gan kéo dài, viêm gan",
+                "Có thai (pregnancy) - FDA category X, gây dị tật thai nhi",
+                "Cho con bú (lactation) - bài tiết vào sữa mẹ",
+                "Tiêu cơ vân đang hoạt động (active myopathy/rhabdomyolysis)",
+                "Dị ứng với atorvastatin hoặc bất kỳ thành phần nào",
+                "Dùng cùng cyclosporine, itraconazole, ketoconazole (tăng nguy cơ tiêu cơ vân nghiêm trọng)"
+            ],
+            "relative": [
+                "Suy thận - thận trọng, giảm liều nếu cần",
+                "Suy gan - thận trọng, theo dõi men gan thường xuyên",
+                "Uống rượu nhiều - tăng nguy cơ viêm gan",
+                "Bệnh nhân Châu Á - tăng nồng độ atorvastatin, có thể cần liều thấp hơn",
+                "Người cao tuổi - tăng nguy cơ đau cơ, tiêu cơ vân",
+                "Đái tháo đường - statins có thể tăng đường huyết nhẹ",
+                "Bệnh tuyến giáp - tăng nguy cơ đau cơ",
+                "Dùng cùng thuốc ức chế CYP3A4 - giảm liều atorvastatin"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH trong thai kỳ. Atorvastatin gây dị tật thai nhi, đặc biệt trong tam cá nguyệt đầu tiên. Statins ức chế tổng hợp cholesterol, cần thiết cho sự phát triển của thai nhi. Có thể gây dị tật bẩm sinh, chậm phát triển. Phải ngừng atorvastatin ít nhất 1-2 tháng trước khi có thai. Nếu có thai khi đang dùng, ngừng ngay lập tức.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Atorvastatin bài tiết vào sữa mẹ. Có thể gây tác dụng phụ trên trẻ bú mẹ. Chưa có dữ liệu đầy đủ về an toàn. Statins có thể ảnh hưởng đến sự phát triển của trẻ.",
+                "recommendation": "CHỐNG CHỈ ĐỊNH khi cho con bú. Ngừng atorvastatin hoặc ngừng cho con bú. Cân nhắc thuốc thay thế nếu cần."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi liều. Theo dõi men gan thường xuyên.",
+            "moderate": "Thận trọng. Giảm liều hoặc dùng liều thấp hơn. Theo dõi men gan mỗi 3-6 tháng. Ngừng nếu ALT >3 lần ULN.",
+            "severe": "CHỐNG CHỈ ĐỊNH. Không dùng ở bệnh nhân suy gan nặng hoặc bệnh gan hoạt động.",
+            "notes": "Atorvastatin chuyển hóa qua gan (CYP3A4). Suy gan có thể làm tăng nồng độ atorvastatin và tăng nguy cơ độc tính. Kiểm tra men gan trước điều trị. Ngừng nếu ALT >3 lần ULN hoặc có dấu hiệu viêm gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu cơ vân (rhabdomyolysis) - triệu chứng chính và nguy hiểm nhất",
+                "Đau cơ dữ dội, yếu cơ",
+                "Nước tiểu sẫm màu (myoglobinuria)",
+                "Suy thận cấp (do myoglobin)",
+                "Tăng men gan (ALT, AST)",
+                "Tăng CK (creatine kinase)",
+                "Mệt mỏi, buồn nôn",
+                "Rối loạn tiêu hóa"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: ngừng atorvastatin, truyền dịch tích cực để phòng suy thận, lọc máu nếu cần",
+            "treatment": [
+                "Ngừng atorvastatin ngay lập tức",
+                "Đo CK, men gan, chức năng thận ngay",
+                "Nếu có tiêu cơ vân:",
+                "  - Truyền dịch tích cực (normal saline 1-2L/giờ) để duy trì lượng nước tiểu >100-200ml/giờ",
+                "  - Kiềm hóa nước tiểu (sodium bicarbonate) để giảm độc tính myoglobin trên thận",
+                "  - Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)",
+                "  - Hemodialysis nếu suy thận cấp, tăng kali máu, hoặc quá tải dịch",
+                "  - Theo dõi điện giải (natri, kali, canxi, phosphate)",
+                "Điều trị hỗ trợ:",
+                "  - Điều chỉnh rối loạn điện giải",
+                "  - Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "  - Giảm đau (opioids) nếu đau cơ nặng",
+                "Theo dõi CK, men gan, chức năng thận hàng ngày cho đến khi ổn định",
+                "Theo dõi ít nhất 48-72 giờ do half-life 14 giờ"
+            ],
+            "monitoring": "CK, ALT, AST, creatinine, BUN, kali, canxi, phosphate, lượng nước tiểu, ECG (nếu có rối loạn điện giải), dấu hiệu suy thận"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày (sáng, trưa, hoặc tối). Uống cùng một giờ mỗi ngày để nhớ. Có thể uống trước hoặc sau bữa ăn."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "Không áp dụng",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Atorvastatin chỉ có dạng uống (PO)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lipitor (atorvastatin)",
+                "UpToDate - Atorvastatin: Drug information",
+                "ACC/AHA Guidelines - Cholesterol Management (2018)",
+                "NLA Guidelines - Statin Safety (2014)",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics - Lipid-lowering drugs"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (ASCOT, CARDS, PROVE-IT) showing cardiovascular benefit"
+        }
     },
     
     "Simvastatin": {
@@ -3691,7 +3858,170 @@ DRUG_DATABASE = {
               "clearance": "Gan (CYP3A4) - extensive first-pass metabolism"
           },
           "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-          "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ - có thể gây dị tật thai nhi. Phụ nữ trong độ tuổi sinh đẻ phải dùng biện pháp tránh thai hiệu quả. Tiêu cơ vân có thể gây suy thận cấp và tử vong - ngừng ngay nếu có đau cơ, yếu cơ, nước tiểu sẫm màu"
+          "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ - có thể gây dị tật thai nhi. Phụ nữ trong độ tuổi sinh đẻ phải dùng biện pháp tránh thai hiệu quả. Tiêu cơ vân có thể gây suy thận cấp và tử vong - ngừng ngay nếu có đau cơ, yếu cơ, nước tiểu sẫm màu",
+          "drug_interactions": {
+              "major": [
+                  {
+                      "drug": "Cyclosporine, Tacrolimus",
+                      "mechanism": "Cyclosporine ức chế CYP3A4 và P-glycoprotein, tăng nồng độ simvastatin đáng kể",
+                      "effect": "Tăng nguy cơ tiêu cơ vân nghiêm trọng, có thể gây suy thận cấp, tử vong",
+                      "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Nếu cần: giảm liều simvastatin tối đa 10mg/ngày, theo dõi CK và men gan thường xuyên. Cân nhắc dùng pravastatin hoặc rosuvastatin (ít chuyển hóa qua CYP3A4)."
+                  },
+                  {
+                      "drug": "Itraconazole, Ketoconazole, Voriconazole, Posaconazole",
+                      "mechanism": "Azole antifungals ức chế CYP3A4 mạnh, tăng nồng độ simvastatin",
+                      "effect": "Tăng nguy cơ tiêu cơ vân nghiêm trọng",
+                      "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Tạm ngừng simvastatin trong thời gian dùng azole antifungal. Hoặc dùng pravastatin/rosuvastatin (ít chuyển hóa qua CYP3A4)."
+                  },
+                  {
+                      "drug": "Clarithromycin, Erythromycin, Telithromycin",
+                      "mechanism": "Macrolide ức chế CYP3A4, tăng nồng độ simvastatin",
+                      "effect": "Tăng nguy cơ tiêu cơ vân, đặc biệt ở liều cao simvastatin",
+                      "management": "Tránh dùng cùng nếu có thể. Nếu cần: giảm liều simvastatin hoặc tạm ngừng. Theo dõi CK và dấu hiệu đau cơ. Tạm ngừng simvastatin nếu có đau cơ hoặc CK tăng."
+                  },
+                  {
+                      "drug": "Grapefruit juice",
+                      "mechanism": "Grapefruit juice ức chế CYP3A4 ở ruột, tăng hấp thu simvastatin",
+                      "effect": "Tăng nồng độ simvastatin đáng kể, tăng nguy cơ tiêu cơ vân",
+                      "management": "CHỐNG CHỈ ĐỊNH dùng grapefruit juice khi dùng simvastatin. Tránh hoàn toàn, kể cả lượng nhỏ. Nước ép cam, táo không có vấn đề."
+                  },
+                  {
+                      "drug": "Amiodarone",
+                      "mechanism": "Amiodarone ức chế CYP3A4, tăng nồng độ simvastatin",
+                      "effect": "Tăng nguy cơ tiêu cơ vân, đặc biệt ở liều cao simvastatin",
+                      "management": "Giảm liều simvastatin xuống TỐI ĐA 20mg/ngày. Theo dõi CK và dấu hiệu đau cơ. Cân nhắc dùng pravastatin hoặc rosuvastatin (ít chuyển hóa qua CYP3A4)."
+                  }
+              ],
+              "moderate": [
+                  {
+                      "drug": "Diltiazem, Verapamil",
+                      "mechanism": "Ức chế CYP3A4, tăng nồng độ simvastatin",
+                      "effect": "Tăng nguy cơ tiêu cơ vân",
+                      "management": "Giảm liều simvastatin 50% hoặc tối đa 20mg/ngày. Theo dõi CK và dấu hiệu đau cơ. Cân nhắc dùng pravastatin/rosuvastatin."
+                  },
+                  {
+                      "drug": "Ritonavir, Lopinavir, Saquinavir (HIV protease inhibitors)",
+                      "mechanism": "Ức chế CYP3A4 mạnh, tăng nồng độ simvastatin",
+                      "effect": "Tăng nguy cơ tiêu cơ vân",
+                      "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Cân nhắc dùng pravastatin hoặc rosuvastatin."
+                  },
+                  {
+                      "drug": "Warfarin",
+                      "mechanism": "Simvastatin có thể tăng tác dụng chống đông của warfarin",
+                      "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                      "management": "Theo dõi INR thường xuyên khi bắt đầu hoặc thay đổi liều simvastatin. Có thể cần giảm liều warfarin."
+                  },
+                  {
+                      "drug": "Colchicine",
+                      "mechanism": "Cả hai đều chuyển hóa qua CYP3A4, có thể tăng tác dụng phụ",
+                      "effect": "Tăng nguy cơ độc cơ, đặc biệt ở bệnh nhân suy thận",
+                      "management": "Thận trọng, đặc biệt ở bệnh nhân suy thận. Theo dõi CK và dấu hiệu đau cơ. Có thể cần giảm liều một trong hai thuốc."
+                  }
+              ],
+              "minor": [
+                  {
+                      "drug": "Rifampin, Phenytoin",
+                      "mechanism": "Cảm ứng CYP3A4, tăng chuyển hóa simvastatin",
+                      "effect": "Giảm hiệu quả simvastatin",
+                      "management": "Có thể cần tăng liều simvastatin. Theo dõi lipid profile."
+                  }
+              ]
+          },
+          "contraindications": {
+              "absolute": [
+                  "Bệnh gan hoạt động (active liver disease) - tăng men gan kéo dài, viêm gan",
+                  "Có thai (pregnancy) - FDA category X, gây dị tật thai nhi",
+                  "Cho con bú (lactation) - bài tiết vào sữa mẹ",
+                  "Tiêu cơ vân đang hoạt động (active myopathy/rhabdomyolysis)",
+                  "Dị ứng với simvastatin hoặc bất kỳ thành phần nào",
+                  "Dùng cùng cyclosporine, itraconazole, ketoconazole (tăng nguy cơ tiêu cơ vân nghiêm trọng)",
+                  "Dùng grapefruit juice"
+              ],
+              "relative": [
+                  "Suy thận - thận trọng, giảm liều nếu cần",
+                  "Suy gan - thận trọng, theo dõi men gan thường xuyên",
+                  "Uống rượu nhiều - tăng nguy cơ viêm gan",
+                  "Người cao tuổi - tăng nguy cơ đau cơ, tiêu cơ vân",
+                  "Đái tháo đường - statins có thể tăng đường huyết nhẹ",
+                  "Bệnh tuyến giáp - tăng nguy cơ đau cơ",
+                  "Dùng cùng thuốc ức chế CYP3A4 - giảm liều simvastatin",
+                  "Liều cao (>40mg/ngày) - tăng nguy cơ tiêu cơ vân"
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "X",
+              "pregnancy_details": "CHỐNG CHỈ ĐỊNH trong thai kỳ. Simvastatin gây dị tật thai nhi, đặc biệt trong tam cá nguyệt đầu tiên. Statins ức chế tổng hợp cholesterol, cần thiết cho sự phát triển của thai nhi. Có thể gây dị tật bẩm sinh, chậm phát triển. Phụ nữ trong độ tuổi sinh đẻ phải dùng biện pháp tránh thai hiệu quả. Phải ngừng simvastatin ít nhất 1-2 tháng trước khi có thai. Nếu có thai khi đang dùng, ngừng ngay lập tức.",
+              "lactation": {
+                  "safety": "Incompatible",
+                  "details": "Simvastatin bài tiết vào sữa mẹ. Có thể gây tác dụng phụ trên trẻ bú mẹ. Chưa có dữ liệu đầy đủ về an toàn. Statins có thể ảnh hưởng đến sự phát triển của trẻ.",
+                  "recommendation": "CHỐNG CHỈ ĐỊNH khi cho con bú. Ngừng simvastatin hoặc ngừng cho con bú. Cân nhắc thuốc thay thế nếu cần."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi liều. Theo dõi men gan thường xuyên.",
+              "moderate": "Thận trọng. Giảm liều hoặc dùng liều thấp hơn. Theo dõi men gan mỗi 3-6 tháng. Ngừng nếu ALT >3 lần ULN.",
+              "severe": "CHỐNG CHỈ ĐỊNH. Không dùng ở bệnh nhân suy gan nặng hoặc bệnh gan hoạt động.",
+              "notes": "Simvastatin chuyển hóa qua gan (CYP3A4) - extensive first-pass metabolism. Suy gan có thể làm tăng nồng độ simvastatin và tăng nguy cơ độc tính. Kiểm tra men gan trước điều trị. Ngừng nếu ALT >3 lần ULN hoặc có dấu hiệu viêm gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Tiêu cơ vân (rhabdomyolysis) - triệu chứng chính và nguy hiểm nhất",
+                  "Đau cơ dữ dội, yếu cơ",
+                  "Nước tiểu sẫm màu (myoglobinuria)",
+                  "Suy thận cấp (do myoglobin)",
+                  "Tăng men gan (ALT, AST)",
+                  "Tăng CK (creatine kinase)",
+                  "Mệt mỏi, buồn nôn",
+                  "Rối loạn tiêu hóa"
+              ],
+              "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: ngừng simvastatin, truyền dịch tích cực để phòng suy thận, lọc máu nếu cần",
+              "treatment": [
+                  "Ngừng simvastatin ngay lập tức",
+                  "Đo CK, men gan, chức năng thận ngay",
+                  "Nếu có tiêu cơ vân:",
+                  "  - Truyền dịch tích cực (normal saline 1-2L/giờ) để duy trì lượng nước tiểu >100-200ml/giờ",
+                  "  - Kiềm hóa nước tiểu (sodium bicarbonate) để giảm độc tính myoglobin trên thận",
+                  "  - Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)",
+                  "  - Hemodialysis nếu suy thận cấp, tăng kali máu, hoặc quá tải dịch",
+                  "  - Theo dõi điện giải (natri, kali, canxi, phosphate)",
+                  "Điều trị hỗ trợ:",
+                  "  - Điều chỉnh rối loạn điện giải",
+                  "  - Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                  "  - Giảm đau (opioids) nếu đau cơ nặng",
+                  "Theo dõi CK, men gan, chức năng thận hàng ngày cho đến khi ổn định",
+                  "Theo dõi ít nhất 24-48 giờ do half-life 2-3 giờ (nhưng tác dụng kéo dài)"
+              ],
+              "monitoring": "CK, ALT, AST, creatinine, BUN, kali, canxi, phosphate, lượng nước tiểu, ECG (nếu có rối loạn điện giải), dấu hiệu suy thận"
+          },
+          "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                  "timing": "Uống 1 lần/ngày vào BUỔI TỐI (cholesterol được tổng hợp nhiều vào ban đêm). Uống cùng một giờ mỗi ngày để nhớ. TRÁNH grapefruit juice hoàn toàn."
+              },
+              "iv": {
+                  "reconstitution": "Không có dạng IV",
+                  "infusion_rate": "Không áp dụng",
+                  "compatibility": [],
+                  "incompatibility": [],
+                  "notes": "Simvastatin chỉ có dạng uống (PO)."
+              }
+          },
+          "references": {
+              "primary_sources": [
+                  "FDA Drug Label - Zocor (simvastatin)",
+                  "UpToDate - Simvastatin: Drug information",
+                  "ACC/AHA Guidelines - Cholesterol Management (2018)",
+                  "NLA Guidelines - Statin Safety (2014)",
+                  "4S Study - Lancet (1994) - Simvastatin trong dự phòng biến cố tim mạch",
+                  "Goodman & Gilman's Pharmacological Basis of Therapeutics - Lipid-lowering drugs"
+              ],
+              "last_updated": "2024-12-19",
+              "evidence_level": "High - Multiple large RCTs (4S, HPS) showing cardiovascular benefit"
+          }
       },
           
     # ========== DIABETES ==========
@@ -4338,7 +4668,197 @@ DRUG_DATABASE = {
             "clearance": "Gan (50-60%), thận (30-40%), một phần bị phân hủy bởi insulinase"
         },
         "storage": "Chưa mở: Tủ lạnh (2-8°C), không đông lạnh. Đang dùng: Nhiệt độ phòng (<30°C), tránh ánh sáng, tránh nhiệt độ cao. Dùng trong vòng 28-30 ngày sau khi mở",
-        "black_box_warnings": "Hạ đường huyết có thể đe dọa tính mạng. Cần theo dõi đường huyết thường xuyên và có sẵn glucose/glucagon để điều trị hạ đường huyết. Không được dùng chung ống tiêm insulin"
+        "black_box_warnings": "Hạ đường huyết có thể đe dọa tính mạng. Cần theo dõi đường huyết thường xuyên và có sẵn glucose/glucagon để điều trị hạ đường huyết. Không được dùng chung ống tiêm insulin",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Beta-blockers (atenolol, metoprolol, propranolol)",
+                    "mechanism": "Beta-blockers che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run, đổ mồ hôi) và ức chế glycogenolysis",
+                    "effect": "Tăng nguy cơ hạ đường huyết nặng, khó nhận biết triệu chứng, khó điều trị",
+                    "management": "Theo dõi đường huyết thường xuyên. Bệnh nhân nên biết các triệu chứng hạ đường huyết khác (lú lẫn, đổ mồ hôi). Cân nhắc dùng beta-1 selective (atenolol, metoprolol) thay vì non-selective (propranolol)."
+                },
+                {
+                    "drug": "Rượu (ethanol)",
+                    "mechanism": "Rượu ức chế gluconeogenesis ở gan, tăng nguy cơ hạ đường huyết, đặc biệt khi đói",
+                    "effect": "Tăng nguy cơ hạ đường huyết nặng, có thể hôn mê, đặc biệt khi uống rượu mà không ăn",
+                    "management": "Tránh uống rượu khi đói. Nếu uống rượu, nên ăn kèm. Theo dõi đường huyết sau khi uống rượu. Giáo dục bệnh nhân về nguy cơ."
+                },
+                {
+                    "drug": "Corticosteroids (prednisone, dexamethasone, hydrocortisone)",
+                    "mechanism": "Corticosteroids tăng sản xuất glucose ở gan, tăng insulin resistance, tăng đường huyết",
+                    "effect": "Giảm hiệu quả insulin, tăng nhu cầu insulin, tăng đường huyết",
+                    "management": "Tăng liều insulin khi dùng corticosteroid. Theo dõi đường huyết thường xuyên. Giảm liều insulin khi ngừng corticosteroid."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thiazide diuretics (hydrochlorothiazide, chlorthalidone)",
+                    "mechanism": "Thiazide có thể gây hạ kali máu, tăng đường huyết nhẹ",
+                    "effect": "Tăng nhẹ đường huyết, có thể cần tăng liều insulin",
+                    "management": "Theo dõi đường huyết. Có thể cần tăng liều insulin nhẹ."
+                },
+                {
+                    "drug": "Sulfonylureas (glibenclamide, gliclazide)",
+                    "mechanism": "Cả hai đều kích thích tiết insulin, tác dụng hiệp đồng",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Thường không dùng cùng. Nếu cần, giảm liều cả hai. Theo dõi đường huyết chặt chẽ."
+                },
+                {
+                    "drug": "ACE inhibitors, ARB (enalapril, losartan)",
+                    "mechanism": "ACE inhibitors có thể tăng nhạy cảm với insulin, tăng nguy cơ hạ đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết nhẹ",
+                    "management": "Theo dõi đường huyết. Có thể cần giảm liều insulin nhẹ."
+                },
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "MAO inhibitors có thể tăng tác dụng insulin",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Theo dõi đường huyết. Có thể cần giảm liều insulin."
+                },
+                {
+                    "drug": "Pentamidine (antiparasitic)",
+                    "mechanism": "Pentamidine có thể gây hạ đường huyết (phá hủy tế bào beta) hoặc tăng đường huyết",
+                    "effect": "Hạ đường huyết hoặc tăng đường huyết",
+                    "management": "Theo dõi đường huyết chặt chẽ. Điều chỉnh liều insulin theo đường huyết."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Aspirin liều thấp",
+                    "mechanism": "Aspirin có thể tăng nhẹ tác dụng insulin",
+                    "effect": "Tăng nhẹ nguy cơ hạ đường huyết",
+                    "management": "Thường không cần điều chỉnh. Theo dõi đường huyết."
+                },
+                {
+                    "drug": "Thyroid hormones (levothyroxine)",
+                    "mechanism": "Thyroid hormones tăng chuyển hóa, có thể tăng nhu cầu insulin",
+                    "effect": "Tăng nhẹ nhu cầu insulin",
+                    "management": "Theo dõi đường huyết. Có thể cần tăng liều insulin nhẹ khi bắt đầu levothyroxine."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Hạ đường huyết (hypoglycemia) - không được dùng khi đường huyết thấp",
+                "Dị ứng insulin hoặc bất kỳ thành phần nào trong chế phẩm insulin",
+                "Hôn mê do hạ đường huyết - không được dùng insulin cho đến khi hồi phục"
+            ],
+            "relative": [
+                "Suy thận - giảm clearance insulin, giảm liều insulin",
+                "Suy gan - giảm gluconeogenesis, tăng nguy cơ hạ đường huyết, giảm liều insulin",
+                "Suy tim - thận trọng, có thể cần điều chỉnh liều",
+                "Người cao tuổi - tăng nguy cơ hạ đường huyết, cần liều thấp hơn",
+                "Bệnh nhân không có khả năng tự quản lý - cần người chăm sóc",
+                "Bệnh nhân không có khả năng nhận biết hạ đường huyết - tăng nguy cơ",
+                "Thai kỳ - điều chỉnh liều thường xuyên (tăng nhu cầu trong tam cá nguyệt 2-3)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Insulin là thuốc được ưu tiên trong thai kỳ cho đái tháo đường. Insulin không qua nhau thai, an toàn cho thai nhi. Nhu cầu insulin tăng trong thai kỳ, đặc biệt ở tam cá nguyệt 2-3 (tăng 50-100%). Cần điều chỉnh liều thường xuyên. Hạ đường huyết mẹ có thể ảnh hưởng đến thai nhi. Tăng đường huyết mẹ có thể gây dị tật thai nhi, thai to, hạ đường huyết ở trẻ sơ sinh. Mục tiêu đường huyết: <95 mg/dL (trước ăn), <140 mg/dL (1 giờ sau ăn), <120 mg/dL (2 giờ sau ăn).",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Insulin không bài tiết vào sữa mẹ ở nồng độ đáng kể. Insulin là protein, bị tiêu hóa trong đường tiêu hóa của trẻ, không hấp thu. Insulin là thuốc được ưu tiên cho phụ nữ đái tháo đường cho con bú. Nhu cầu insulin có thể giảm nhẹ khi cho con bú (do tiêu thụ glucose).",
+                "recommendation": "Có thể dùng khi cho con bú. Insulin là thuốc được ưu tiên cho phụ nữ đái tháo đường cho con bú. Theo dõi đường huyết và điều chỉnh liều nếu cần."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng. Giảm liều insulin 10-20% do giảm gluconeogenesis, tăng nguy cơ hạ đường huyết.",
+            "moderate": "Thận trọng. Giảm liều insulin 20-30%. Theo dõi đường huyết thường xuyên. Tăng nguy cơ hạ đường huyết.",
+            "severe": "Thận trọng. Giảm liều insulin 30-50%. Theo dõi đường huyết rất thường xuyên. Tăng nguy cơ hạ đường huyết nặng. Cân nhắc dùng insulin tác dụng ngắn và điều chỉnh theo đường huyết.",
+            "notes": "Insulin chuyển hóa chủ yếu ở gan (50-60%). Suy gan làm giảm gluconeogenesis và glycogenolysis, tăng nguy cơ hạ đường huyết. Cần giảm liều insulin và theo dõi đường huyết thường xuyên."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ đường huyết (hypoglycemia) - triệu chứng chính và nguy hiểm nhất",
+                "Triệu chứng nhẹ đến trung bình: Run rẩy, đổ mồ hôi, nhịp tim nhanh, đói, lo lắng, nhức đầu, nhầm lẫn nhẹ",
+                "Triệu chứng nặng: Co giật, hôn mê, mất ý thức, rối loạn hành vi, yếu cơ, nhìn đôi",
+                "Hạ đường huyết nặng có thể gây tổn thương não vĩnh viễn, tử vong",
+                "Tăng kali máu (hiếm, với insulin IV liều cao)",
+                "Hạ kali máu (do điều trị hạ đường huyết với glucose)"
+            ],
+            "antidote": "Glucagon (đối kháng insulin, kích thích glycogenolysis), Glucose (điều trị trực tiếp hạ đường huyết)",
+            "treatment": [
+                "Đo đường huyết ngay (nếu có thể, nhưng không trì hoãn điều trị nếu nghi ngờ hạ đường huyết)",
+                "Nếu bệnh nhân tỉnh và có thể nuốt:",
+                "  - Glucose 15-20g đường miệng (4 viên glucose, 1/2 lon nước ngọt, 1/2 cốc nước trái cây, 1 thìa mật ong)",
+                "  - Lặp lại sau 15 phút nếu đường huyết vẫn <70 mg/dL",
+                "  - Ăn bữa ăn hoặc snack sau khi đường huyết ổn định",
+                "Nếu bệnh nhân không tỉnh hoặc không thể nuốt:",
+                "  - Glucagon 1mg SC/IM (có thể lặp lại sau 15 phút nếu cần)",
+                "  - HOẶC Dextrose 50% 50ml IV (có thể lặp lại)",
+                "  - HOẶC Dextrose 10% truyền IV liên tục nếu cần",
+                "  - Theo dõi đường huyết mỗi 15-30 phút cho đến khi ổn định",
+                "Ngừng insulin tạm thời (nếu đang truyền liên tục)",
+                "Theo dõi đường huyết thường xuyên (mỗi 15-30 phút) cho đến khi ổn định",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, ý thức",
+                "Theo dõi kali máu (có thể hạ kali sau khi điều trị hạ đường huyết)",
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi ít nhất 24 giờ (tùy loại insulin - rapid-acting 3-5 giờ, long-acting 18-24 giờ)"
+            ],
+            "monitoring": "Đường huyết (mỗi 15-30 phút cho đến khi ổn định), dấu hiệu sinh tồn (huyết áp, nhịp tim, ý thức), kali máu (có thể hạ kali), dấu hiệu hạ đường huyết tái phát, dấu hiệu tổn thương não (nếu hạ đường huyết nặng kéo dài)"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Glucagon",
+                    "mechanism": "Kích thích glycogenolysis ở gan, tăng đường huyết, đối kháng tác dụng insulin",
+                    "dose": "1mg SC/IM, có thể lặp lại sau 15 phút nếu cần",
+                    "indication": "Hạ đường huyết nặng, đặc biệt khi bệnh nhân không tỉnh hoặc không thể nuốt"
+                },
+                {
+                    "name": "Glucose (Dextrose)",
+                    "mechanism": "Cung cấp glucose trực tiếp, tăng đường huyết",
+                    "dose": "Dextrose 50% 50ml IV, hoặc Dextrose 10% truyền IV liên tục",
+                    "indication": "Hạ đường huyết nặng, đặc biệt khi bệnh nhân không tỉnh"
+                },
+                {
+                    "name": "Glucose đường miệng",
+                    "mechanism": "Cung cấp glucose trực tiếp qua đường tiêu hóa",
+                    "dose": "15-20g glucose (4 viên glucose, 1/2 lon nước ngọt, 1/2 cốc nước trái cây)",
+                    "indication": "Hạ đường huyết nhẹ đến trung bình, bệnh nhân tỉnh và có thể nuốt"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Không áp dụng - insulin không uống được",
+                "timing": "Không áp dụng"
+            },
+            "iv": {
+                "reconstitution": "Insulin regular (short-acting) có thể dùng IV. Pha trong normal saline hoặc dextrose. Nồng độ thường: 0.05-0.1 đơn vị/kg/giờ trong DKA hoặc tăng đường huyết trong bệnh viện.",
+                "infusion_rate": "Truyền liên tục với tốc độ điều chỉnh theo đường huyết. Thường bắt đầu với 0.05-0.1 đơn vị/kg/giờ. Điều chỉnh theo protocol insulin sliding scale hoặc theo đường huyết.",
+                "compatibility": [
+                    "Normal saline (0.9% NaCl)",
+                    "Dextrose 5% (D5W)",
+                    "Dextrose 10% (D10W)",
+                    "Ringer's lactate"
+                ],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác trong cùng ống truyền",
+                    "Một số thuốc có thể làm giảm hiệu quả insulin (cần kiểm tra cụ thể)"
+                ],
+                "notes": "Insulin IV chỉ dùng trong bệnh viện, DKA, hoặc tăng đường huyết nặng. Phải có protocol rõ ràng và theo dõi đường huyết thường xuyên (mỗi 1-2 giờ)."
+            },
+            "sc": {
+                "with_food": "Rapid-acting insulin: Tiêm 15 phút TRƯỚC bữa ăn. Short-acting insulin: Tiêm 30-60 phút TRƯỚC bữa ăn. Long-acting insulin: Tiêm 1 lần/ngày, không phụ thuộc bữa ăn.",
+                "timing": "Rapid-acting (lispro, aspart): 15 phút trước bữa ăn. Short-acting (regular): 30-60 phút trước bữa ăn. Intermediate (NPH): 1-3 giờ trước bữa ăn. Long-acting (glargine, detemir): 1 lần/ngày, cùng một giờ mỗi ngày. Xoay vị trí tiêm (bụng, đùi, cánh tay, mông)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Various insulin products",
+                "UpToDate - Insulin therapy in type 1 and type 2 diabetes",
+                "American Diabetes Association (ADA) Standards of Medical Care in Diabetes",
+                "American Association of Clinical Endocrinologists (AACE) Guidelines",
+                "DCCT Study - New England Journal of Medicine (1993) - Intensive insulin therapy in type 1 diabetes",
+                "UKPDS Study - Lancet (1998) - Intensive glucose control in type 2 diabetes",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics - Insulin and oral hypoglycemic agents"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (DCCT, UKPDS) showing benefit of intensive glucose control"
+        }
     },
     
     "Empagliflozin": {
@@ -5084,7 +5604,145 @@ DRUG_DATABASE = {
             "clearance": "Gan (CYP2C19, CYP3A4)"
                 },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Có thể tăng nguy cơ gãy xương hông, cổ tay, cột sống khi dùng lâu dài (≥1 năm) và liều cao. Giảm hiệu quả clopidogrel khi dùng đồng thời. Nguy cơ nhiễm C. difficile tăng. Giảm hấp thu vitamin B12 và magnesium khi dùng lâu dài"
+        "black_box_warnings": "Có thể tăng nguy cơ gãy xương hông, cổ tay, cột sống khi dùng lâu dài (≥1 năm) và liều cao. Giảm hiệu quả clopidogrel khi dùng đồng thời. Nguy cơ nhiễm C. difficile tăng. Giảm hấp thu vitamin B12 và magnesium khi dùng lâu dài",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Clopidogrel",
+                    "mechanism": "Omeprazole ức chế CYP2C19, enzyme cần thiết để chuyển hóa clopidogrel thành dạng hoạt động",
+                    "effect": "Giảm hiệu quả chống kết tập tiểu cầu của clopidogrel, tăng nguy cơ biến cố tim mạch",
+                    "management": "Tránh dùng cùng. Chuyển sang pantoprazole (ít ảnh hưởng hơn) hoặc PPI khác không ức chế CYP2C19. Nếu phải dùng, cân nhắc dùng cách thời gian (omeprazole trước clopidogrel 12 giờ)."
+                },
+                {
+                    "drug": "Atazanavir (HIV protease inhibitor)",
+                    "mechanism": "PPI làm tăng pH dạ dày, giảm hấp thu atazanavir (cần môi trường acid)",
+                    "effect": "Giảm nồng độ atazanavir, giảm hiệu quả điều trị HIV, tăng nguy cơ kháng thuốc",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Không dùng omeprazole với atazanavir. Dùng H2 blocker hoặc PPI khác cách thời gian (12 giờ)."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Omeprazole ức chế CYP2C9 nhẹ, có thể tăng nồng độ warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Omeprazole ức chế CYP2C19, giảm chuyển hóa phenytoin",
+                    "effect": "Tăng nồng độ phenytoin, tăng nguy cơ độc tính (chóng mặt, nystagmus, ataxia)",
+                    "management": "Theo dõi nồng độ phenytoin. Giảm liều phenytoin nếu cần."
+                },
+                {
+                    "drug": "Methotrexate (liều cao)",
+                    "mechanism": "PPI giảm thải trừ methotrexate qua thận (cạnh tranh với organic anion transporters)",
+                    "effect": "Tăng nồng độ methotrexate, tăng nguy cơ độc tính (myelosuppression, mucositis, nephrotoxicity)",
+                    "management": "Thận trọng. Tạm ngừng PPI khi dùng methotrexate liều cao. Theo dõi chức năng thận, công thức máu."
+                },
+                {
+                    "drug": "Ketoconazole, Itraconazole, Posaconazole",
+                    "mechanism": "PPI tăng pH dạ dày, giảm hấp thu azole antifungals (cần môi trường acid)",
+                    "effect": "Giảm nồng độ azole, giảm hiệu quả điều trị",
+                    "management": "Cách thời gian ít nhất 2 giờ. Hoặc dùng dạng lỏng posaconazole (ít ảnh hưởng pH hơn)."
+                },
+                {
+                    "drug": "Iron salts (ferrous sulfate, ferrous fumarate)",
+                    "mechanism": "PPI giảm acid dạ dày, giảm chuyển Fe3+ thành Fe2+ (dạng hấp thu được)",
+                    "effect": "Giảm hấp thu sắt, có thể gây thiếu máu thiếu sắt",
+                    "management": "Cách thời gian ít nhất 2 giờ. Hoặc dùng sắt dạng chelate (iron bisglycinate) ít phụ thuộc acid."
+                },
+                {
+                    "drug": "Vitamin B12 (cobalamin)",
+                    "mechanism": "PPI giảm acid dạ dày, giảm tách B12 khỏi protein thức ăn",
+                    "effect": "Giảm hấp thu B12, có thể gây thiếu máu thiếu B12 sau 2-3 năm dùng PPI",
+                    "management": "Bổ sung B12 định kỳ nếu dùng PPI lâu dài (>2 năm). Theo dõi B12 máu mỗi 1-2 năm."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Diazepam",
+                    "mechanism": "Ức chế CYP2C19 nhẹ",
+                    "effect": "Tăng nồng độ diazepam nhẹ",
+                    "management": "Thận trọng, không cần điều chỉnh liều thường quy"
+                },
+                {
+                    "drug": "Citalopram, Escitalopram",
+                    "mechanism": "Ức chế CYP2C19",
+                    "effect": "Tăng nồng độ SSRI nhẹ",
+                    "management": "Thận trọng, theo dõi tác dụng phụ SSRI"
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng omeprazole hoặc PPI khác",
+                "Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối do giảm hấp thu atazanavir"
+            ],
+            "relative": [
+                "Suy gan nặng (Child-Pugh C) - giảm liều tối đa 20mg/ngày",
+                "Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng",
+                "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
+                "Nhiễm C. difficile - tăng nguy cơ",
+                "Thiếu vitamin B12 - bổ sung nếu dùng lâu dài",
+                "Thiếu magnesium - bổ sung nếu dùng lâu dài"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Omeprazole là FDA category C. Nghiên cứu trên động vật cho thấy có thể gây độc tính cho thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Một số nghiên cứu quan sát lớn không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, đặc biệt trong GERD nặng hoặc loét dạ dày. Dùng liều thấp nhất có hiệu quả.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Omeprazole bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ rất thấp (<0.01% liều mẹ). Không có báo cáo tác dụng phụ ở trẻ bú mẹ. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thường dùng (20-40mg/ngày). Theo dõi trẻ nếu có lo ngại."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều, nhưng thận trọng",
+            "severe": "Giảm liều tối đa 20mg/ngày (Child-Pugh C). Omeprazole chuyển hóa ở gan qua CYP2C19 và CYP3A4. Suy gan nặng làm giảm clearance, tăng nồng độ thuốc.",
+            "notes": "Omeprazole chuyển hóa ở gan. Suy gan nặng làm giảm chuyển hóa, tăng nồng độ. Tuy nhiên, PPI thường được dung nạp tốt ngay cả ở suy gan. Giảm liều ở suy gan nặng (Child-Pugh C)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "PPI ít gây quá liều nghiêm trọng do an toàn tốt",
+                "Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy, chóng mặt",
+                "Liều rất cao có thể gây: buồn ngủ, lú lẫn"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ triệu chứng nếu có",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Nếu uống trong vòng 1-2 giờ: có thể cân nhắc activated charcoal (hiệu quả thấp)",
+                "Hầu hết trường hợp tự khỏi, không cần điều trị đặc hiệu"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng thần kinh nhẹ"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống 30 phút TRƯỚC bữa ăn (quan trọng - để PPI hoạt động khi proton pump được kích hoạt bởi thức ăn)",
+                "timing": "Uống vào buổi sáng trước bữa sáng (hoặc 30 phút trước bữa tối nếu dùng 2 lần/ngày). KHÔNG được nhai hoặc nghiền viên bao tan trong ruột (enteric-coated) - phải nuốt nguyên viên. Nếu khó nuốt, có thể mở viên và rắc vào thức ăn mềm (táo, sữa chua) nhưng phải nuốt ngay, không nhai."
+            },
+            "iv": {
+                "reconstitution": "Omeprazole IV: 40mg pha với 100ml NaCl 0.9% hoặc dextrose 5%",
+                "infusion_rate": "Truyền trong 20-30 phút",
+                "compatibility": ["NaCl 0.9%", "Dextrose 5%"],
+                "incompatibility": ["Không pha với các thuốc khác trong cùng đường truyền"],
+                "notes": "Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể. Bảo quản dung dịch đã pha ở nhiệt độ phòng, dùng trong 12 giờ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Omeprazole",
+                "UpToDate - Proton pump inhibitors: Overview of use and adverse effects",
+                "Micromedex - Omeprazole",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
+                "Lancet - Proton pump inhibitors and risk of fractures (2006)",
+                "JAMA - Clopidogrel-omeprazole interaction (2010)"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - FDA approved, multiple RCTs, systematic reviews"
+        }
     },
 
     "Pantoprazole": {
@@ -5138,7 +5796,118 @@ DRUG_DATABASE = {
               "clearance": "Gan (CYP2C19, CYP3A4) - ít tương tác hơn omeprazole"
           },
           "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-          "black_box_warnings": ""
+          "black_box_warnings": "Có thể tăng nguy cơ gãy xương hông, cổ tay, cột sống khi dùng lâu dài (≥1 năm) và liều cao. Nguy cơ nhiễm C. difficile tăng. Giảm hấp thu vitamin B12 và magnesium khi dùng lâu dài",
+          "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Atazanavir (HIV protease inhibitor)",
+                    "mechanism": "PPI làm tăng pH dạ dày, giảm hấp thu atazanavir (cần môi trường acid)",
+                    "effect": "Giảm nồng độ atazanavir, giảm hiệu quả điều trị HIV",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Không dùng pantoprazole với atazanavir. Dùng H2 blocker hoặc cách thời gian 12 giờ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Pantoprazole ít ức chế CYP450 hơn omeprazole, nhưng vẫn có thể tương tác nhẹ",
+                    "effect": "Có thể tăng INR nhẹ",
+                    "management": "Theo dõi INR thường xuyên. Pantoprazole ít ảnh hưởng hơn omeprazole."
+                },
+                {
+                    "drug": "Ketoconazole, Itraconazole, Posaconazole",
+                    "mechanism": "PPI tăng pH dạ dày, giảm hấp thu azole antifungals (cần môi trường acid)",
+                    "effect": "Giảm nồng độ azole, giảm hiệu quả điều trị",
+                    "management": "Cách thời gian ít nhất 2 giờ. Hoặc dùng dạng lỏng posaconazole."
+                },
+                {
+                    "drug": "Iron salts (ferrous sulfate, ferrous fumarate)",
+                    "mechanism": "PPI giảm acid dạ dày, giảm chuyển Fe3+ thành Fe2+",
+                    "effect": "Giảm hấp thu sắt",
+                    "management": "Cách thời gian ít nhất 2 giờ. Hoặc dùng sắt dạng chelate."
+                },
+                {
+                    "drug": "Vitamin B12 (cobalamin)",
+                    "mechanism": "PPI giảm acid dạ dày, giảm tách B12 khỏi protein thức ăn",
+                    "effect": "Giảm hấp thu B12 sau 2-3 năm dùng PPI",
+                    "management": "Bổ sung B12 định kỳ nếu dùng lâu dài (>2 năm)."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Clopidogrel",
+                    "mechanism": "Pantoprazole ít ức chế CYP2C19 hơn omeprazole",
+                    "effect": "Ít ảnh hưởng đến clopidogrel hơn omeprazole, nhưng vẫn thận trọng",
+                    "management": "Pantoprazole là lựa chọn tốt hơn omeprazole khi cần dùng với clopidogrel. Vẫn nên tránh dùng cùng nếu có thể."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng pantoprazole hoặc PPI khác",
+                "Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối"
+            ],
+            "relative": [
+                "Suy gan nặng (Child-Pugh C) - thận trọng, có thể giảm liều",
+                "Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng",
+                "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
+                "Nhiễm C. difficile - tăng nguy cơ",
+                "Thiếu vitamin B12 - bổ sung nếu dùng lâu dài",
+                "Thiếu magnesium - bổ sung nếu dùng lâu dài"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Pantoprazole là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Một số nghiên cứu quan sát không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. An toàn hơn omeprazole (category C) trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Pantoprazole bài tiết vào sữa mẹ ở nồng độ rất thấp. Không có báo cáo tác dụng phụ ở trẻ bú mẹ. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thường dùng (40mg/ngày)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều, nhưng thận trọng",
+            "severe": "Thận trọng ở suy gan nặng (Child-Pugh C). Có thể giảm liều. Pantoprazole chuyển hóa ở gan qua CYP2C19 và CYP3A4, nhưng ít phụ thuộc vào CYP2C19 hơn omeprazole.",
+            "notes": "Pantoprazole ít tương tác với CYP450 hơn omeprazole, nên ít ảnh hưởng hơn ở suy gan. Tuy nhiên, vẫn thận trọng ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "PPI ít gây quá liều nghiêm trọng",
+                "Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy, chóng mặt"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Hầu hết trường hợp tự khỏi"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng nhẹ"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống 30-60 phút TRƯỚC bữa ăn (quan trọng - để PPI hoạt động khi proton pump được kích hoạt)",
+                "timing": "Uống vào buổi sáng trước bữa sáng (hoặc trước bữa tối nếu dùng 2 lần/ngày). KHÔNG được nhai hoặc nghiền viên bao tan trong ruột - phải nuốt nguyên viên."
+            },
+            "iv": {
+                "reconstitution": "Pantoprazole IV: 40mg pha với 100ml NaCl 0.9% hoặc dextrose 5%",
+                "infusion_rate": "Truyền trong 15 phút (IV bolus) hoặc 30 phút (infusion)",
+                "compatibility": ["NaCl 0.9%", "Dextrose 5%"],
+                "incompatibility": ["Không pha với các thuốc khác trong cùng đường truyền"],
+                "notes": "Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Pantoprazole",
+                "UpToDate - Proton pump inhibitors: Overview of use and adverse effects",
+                "Micromedex - Pantoprazole",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
+                "JAMA - Pantoprazole vs omeprazole and clopidogrel interaction (2010)"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - FDA approved, multiple RCTs"
+        }
       },
       
       "Ranitidine": {
@@ -5192,7 +5961,104 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa), thận (30-50% thải nguyên dạng)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Kiểm tra nguồn gốc sản phẩm (một số sản phẩm đã bị thu hồi do NDMA).",
-        "black_box_warnings": "Một số sản phẩm ranitidine đã bị thu hồi do chứa NDMA (N-nitrosodimethylamine) - chất gây ung thư. NDMA có thể tích lũy trong sản phẩm theo thời gian, đặc biệt ở nhiệt độ cao. Kiểm tra nguồn gốc sản phẩm và cân nhắc dùng thuốc khác (PPI, famotidine) nếu có thể."
+        "black_box_warnings": "Một số sản phẩm ranitidine đã bị thu hồi do chứa NDMA (N-nitrosodimethylamine) - chất gây ung thư. NDMA có thể tích lũy trong sản phẩm theo thời gian, đặc biệt ở nhiệt độ cao. Kiểm tra nguồn gốc sản phẩm và cân nhắc dùng thuốc khác (PPI, famotidine) nếu có thể.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Ranitidine ức chế CYP450 nhẹ (ít hơn cimetidine)",
+                    "effect": "Có thể tăng INR nhẹ, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Ranitidine ít ảnh hưởng hơn cimetidine."
+                },
+                {
+                    "drug": "Ketoconazole, Itraconazole",
+                    "mechanism": "H2 blocker giảm acid dạ dày, giảm hấp thu azole antifungals",
+                    "effect": "Giảm nồng độ azole, giảm hiệu quả điều trị",
+                    "management": "Cách thời gian ít nhất 2 giờ."
+                },
+                {
+                    "drug": "Iron salts",
+                    "mechanism": "H2 blocker giảm acid dạ dày, giảm hấp thu sắt",
+                    "effect": "Giảm hấp thu sắt",
+                    "management": "Cách thời gian ít nhất 2 giờ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Phenytoin, Theophylline",
+                    "mechanism": "Ức chế CYP450 nhẹ",
+                    "effect": "Có thể tăng nồng độ nhẹ",
+                    "management": "Thận trọng, theo dõi nồng độ nếu cần"
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng ranitidine hoặc H2 blocker khác",
+                "Một số sản phẩm ranitidine đã bị thu hồi do NDMA - tránh dùng các sản phẩm bị thu hồi"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <30) - giảm liều 50%",
+                "Suy gan nặng (Child-Pugh C) - giảm liều 50%",
+                "Người già - thận trọng, giảm liều nếu cần",
+                "Nhiễm C. difficile - tăng nguy cơ nhẹ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Ranitidine là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Một số nghiên cứu trên người không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Tuy nhiên, một số nghiên cứu gần đây gợi ý có thể có nguy cơ nhẹ, nên cân nhắc dùng PPI (pantoprazole, esomeprazole) nếu có thể.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Ranitidine bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thường dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Giảm liều 50%",
+            "severe": "Giảm liều 50% (Child-Pugh C). Ranitidine chuyển hóa ở gan một phần, thải trừ qua thận. Suy gan nặng làm giảm chuyển hóa.",
+            "notes": "Giảm liều ở suy gan trung bình và nặng. Thận trọng theo dõi."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "H2 blocker ít gây quá liều nghiêm trọng",
+                "Triệu chứng nhẹ: nhức đầu, buồn nôn, chóng mặt",
+                "Liều rất cao có thể gây: lú lẫn, co giật (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Nếu uống trong vòng 1-2 giờ: có thể cân nhắc activated charcoal",
+                "Hầu hết trường hợp tự khỏi"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng thần kinh"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc trước bữa ăn (tăng hiệu quả)",
+                "timing": "Uống 2 lần/ngày (sáng và tối) hoặc 1 lần/ngày vào buổi tối. Có thể uống với hoặc không với thức ăn."
+            },
+            "iv": {
+                "reconstitution": "Ranitidine IV: 50mg pha với 20-50ml NaCl 0.9% hoặc dextrose 5%",
+                "infusion_rate": "Truyền trong 15-20 phút (bolus) hoặc 50mg truyền liên tục trong 24 giờ",
+                "compatibility": ["NaCl 0.9%", "Dextrose 5%"],
+                "incompatibility": ["Không pha với các thuốc khác trong cùng đường truyền"],
+                "notes": "Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ranitidine (Note: Many products recalled due to NDMA)",
+                "UpToDate - H2-receptor antagonists: Pharmacology and clinical use",
+                "Micromedex - Ranitidine",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - FDA approved, multiple RCTs (Note: Many products recalled due to NDMA contamination)"
+        }
     },
     
     "Metoclopramide": {
@@ -5258,7 +6124,119 @@ DRUG_DATABASE = {
             "clearance": "Gan (CYP2D6), thận (30% thải nguyên dạng)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Rối loạn vận động muộn (tardive dyskinesia) có thể phát triển và trở thành không hồi phục. Nguy cơ tăng với thời gian điều trị và tổng liều. Ngừng ngay nếu có dấu hiệu rối loạn vận động. KHÔNG dùng quá 12 tuần"
+        "black_box_warnings": "Rối loạn vận động muộn (tardive dyskinesia) có thể phát triển và trở thành không hồi phục. Nguy cơ tăng với thời gian điều trị và tổng liều. Ngừng ngay nếu có dấu hiệu rối loạn vận động. KHÔNG dùng quá 12 tuần",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "SSRI/SNRI (fluoxetine, sertraline, venlafaxine, etc.)",
+                    "mechanism": "Metoclopramide ức chế 5-HT3 receptor và có thể tăng serotonin, tác dụng hiệp đồng với SSRI/SNRI",
+                    "effect": "Tăng nguy cơ hội chứng serotonin (kích động, tăng thân nhiệt, tăng phản xạ, co giật)",
+                    "management": "Tránh dùng cùng hoặc thận trọng. Theo dõi dấu hiệu hội chứng serotonin. Ngừng ngay nếu có triệu chứng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antipsychotics (haloperidol, chlorpromazine, risperidone, etc.)",
+                    "mechanism": "Tác dụng hiệp đồng ức chế dopamine D2 receptor",
+                    "effect": "Tăng nguy cơ rối loạn vận động (extrapyramidal symptoms, tardive dyskinesia)",
+                    "management": "Thận trọng. Tránh dùng cùng nếu có thể. Theo dõi dấu hiệu rối loạn vận động."
+                },
+                {
+                    "drug": "Anticholinergics (atropine, scopolamine, benztropine)",
+                    "mechanism": "Đối kháng tác dụng prokinetic của metoclopramide",
+                    "effect": "Giảm hiệu quả prokinetic, có thể gây tắc ruột",
+                    "management": "Tránh dùng cùng. Đối kháng tác dụng."
+                },
+                {
+                    "drug": "CNS depressants (alcohol, opioids, benzodiazepines)",
+                    "mechanism": "Tác dụng hiệp đồng ức chế thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, lú lẫn",
+                    "management": "Thận trọng. Tránh lái xe, vận hành máy móc."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Paracetamol",
+                    "mechanism": "Tăng nhu động dạ dày",
+                    "effect": "Tăng hấp thu paracetamol nhẹ",
+                    "management": "Không cần điều chỉnh liều"
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng metoclopramide",
+                "Tắc ruột cơ học",
+                "Xuất huyết tiêu hóa",
+                "Thủng dạ dày-ruột",
+                "Pheochromocytoma (tăng nguy cơ tăng huyết áp)",
+                "Rối loạn vận động (Parkinson, dystonia, tardive dyskinesia)"
+            ],
+            "relative": [
+                "Suy thận (CrCl <30) - giảm liều 50-75%",
+                "Suy gan nặng - thận trọng, có thể giảm liều",
+                "Trẻ em và thanh niên - tăng nguy cơ dystonia, parkinsonism",
+                "Epilepsy - có thể làm nặng co giật",
+                "Đang dùng SSRI/SNRI - tăng nguy cơ hội chứng serotonin",
+                "Đang dùng antipsychotics - tăng nguy cơ rối loạn vận động"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Metoclopramide là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Một số nghiên cứu trên người không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Thường dùng để điều trị buồn nôn, nôn trong thai kỳ (hyperemesis gravidarum).",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Metoclopramide bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng để tăng tiết sữa mẹ (off-label). An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thường dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể giảm liều",
+            "severe": "Thận trọng, giảm liều. Metoclopramide chuyển hóa ở gan qua CYP2D6. Suy gan nặng làm giảm chuyển hóa.",
+            "notes": "Metoclopramide chuyển hóa ở gan. Suy gan nặng làm tăng nồng độ. Thận trọng, giảm liều ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Rối loạn vận động nặng: dystonia, parkinsonism, akathisia",
+                "Buồn ngủ, lú lẫn",
+                "Hội chứng serotonin (nếu dùng với SSRI/SNRI): kích động, tăng thân nhiệt, co giật",
+                "Rối loạn nhịp tim (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Dùng diphenhydramine hoặc benztropine để điều trị dystonia.",
+            "treatment": [
+                "Điều trị rối loạn vận động: diphenhydramine 25-50mg IV/IM hoặc benztropine 1-2mg IV/IM",
+                "Hỗ trợ triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Điều trị hội chứng serotonin nếu có: cyproheptadine, cooling, benzodiazepines"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu rối loạn vận động, dấu hiệu hội chứng serotonin"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống 30 phút trước bữa ăn (để tăng hiệu quả prokinetic)",
+                "timing": "Uống 30 phút trước bữa ăn và trước khi đi ngủ. Có thể uống với hoặc không với thức ăn."
+            },
+            "iv": {
+                "reconstitution": "Metoclopramide IV: 10mg pha với 10-20ml NaCl 0.9% hoặc dextrose 5%",
+                "infusion_rate": "Truyền trong 15-30 phút (bolus) hoặc tiêm tĩnh mạch chậm",
+                "compatibility": ["NaCl 0.9%", "Dextrose 5%"],
+                "incompatibility": ["Không pha với các thuốc khác trong cùng đường truyền"],
+                "notes": "IV nhanh hơn PO. Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Metoclopramide",
+                "UpToDate - Metoclopramide: Drug information",
+                "Micromedex - Metoclopramide",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
+                "FDA Black Box Warning - Tardive dyskinesia risk"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - FDA approved, multiple RCTs, black box warning"
+        }
       },
       
       "Loperamide": {
@@ -5319,7 +6297,118 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để xa tầm tay trẻ em (nguy cơ quá liều).",
-        "black_box_warnings": "Liều cao có thể gây ức chế hô hấp nặng, có thể tử vong, đặc biệt ở trẻ em. Không dùng quá liều khuyến cáo (16mg/ngày). Không dùng cho trẻ em <2 tuổi. Không dùng cho tiêu chảy nhiễm khuẩn nặng - có thể giữ vi khuẩn trong ruột và làm nặng bệnh. Ngừng ngay nếu có dấu hiệu quá liều."
+        "black_box_warnings": "Liều cao có thể gây ức chế hô hấp nặng, có thể tử vong, đặc biệt ở trẻ em. Không dùng quá liều khuyến cáo (16mg/ngày). Không dùng cho trẻ em <2 tuổi. Không dùng cho tiêu chảy nhiễm khuẩn nặng - có thể giữ vi khuẩn trong ruột và làm nặng bệnh. Ngừng ngay nếu có dấu hiệu quá liều.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Opioids (morphine, codeine, fentanyl, etc.)",
+                    "mechanism": "Tác dụng hiệp đồng ức chế opioid mu-receptor",
+                    "effect": "Tăng nguy cơ ức chế hô hấp, tăng nguy cơ tác dụng phụ opioid hệ thống",
+                    "management": "Tránh dùng cùng. Thận trọng nếu phải dùng cùng (giảm liều cả hai)."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir, clarithromycin)",
+                    "mechanism": "Ức chế chuyển hóa loperamide qua CYP3A4",
+                    "effect": "Tăng nồng độ loperamide, tăng nguy cơ tác dụng phụ hệ thống (ức chế hô hấp)",
+                    "management": "Tránh dùng cùng hoặc giảm liều loperamide. Theo dõi dấu hiệu quá liều."
+                },
+                {
+                    "drug": "CYP2C8 inhibitors (gemfibrozil)",
+                    "mechanism": "Ức chế chuyển hóa loperamide",
+                    "effect": "Tăng nồng độ loperamide",
+                    "management": "Thận trọng, giảm liều loperamide"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng loperamide",
+                "Tiêu chảy nhiễm khuẩn nặng (C. difficile, E. coli O157:H7) - có thể giữ vi khuẩn trong ruột",
+                "Viêm đại tràng giả mạc - có thể làm nặng thêm",
+                "Tắc ruột cơ học",
+                "Trẻ em <2 tuổi - nguy cơ ức chế hô hấp",
+                "Liều cao với CYP3A4 inhibitors - CHỐNG CHỈ ĐỊNH"
+            ],
+            "relative": [
+                "Suy gan nặng - giảm liều, tăng nguy cơ tích lũy",
+                "Suy thận nặng - giảm liều, tăng nguy cơ tích lũy",
+                "Tiêu chảy nhiễm khuẩn nhẹ - thận trọng, đã điều trị kháng sinh",
+                "Trẻ em 2-6 tuổi - thận trọng, giảm liều",
+                "Đang dùng opioids - tăng nguy cơ tác dụng phụ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Loperamide là FDA category C. Nghiên cứu trên động vật cho thấy có thể gây độc tính cho thai nhi ở liều cao. Không có nghiên cứu đầy đủ trên người. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, nhưng nên tránh trong tam cá nguyệt đầu nếu có thể. Dùng liều thấp nhất có hiệu quả.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Loperamide bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú ở liều điều trị.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thường dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Giảm liều 50%",
+            "severe": "Giảm liều 50% hoặc tránh dùng. Loperamide chuyển hóa ở gan qua CYP3A4 và CYP2C8. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ hệ thống.",
+            "notes": "Loperamide chuyển hóa ở gan. Suy gan nặng làm tăng nồng độ, tăng nguy cơ ức chế hô hấp. Giảm liều hoặc tránh dùng ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp nặng (triệu chứng chính, có thể tử vong)",
+                "Giảm ý thức, hôn mê",
+                "Co đồng tử (miosis)",
+                "Táo bón nặng, tắc ruột",
+                "Buồn nôn, nôn",
+                "Buồn ngủ, lú lẫn"
+            ],
+            "antidote": "Naloxone (opioid antagonist) - có thể đảo ngược ức chế hô hấp",
+            "treatment": [
+                "Naloxone 0.4-2mg IV/IM/SC, lặp lại mỗi 2-3 phút nếu cần (tối đa 10mg)",
+                "Hỗ trợ hô hấp: thông khí, oxy, nếu cần đặt nội khí quản",
+                "Theo dõi dấu hiệu sinh tồn chặt chẽ",
+                "Activated charcoal nếu uống trong vòng 1-2 giờ",
+                "Điều trị tắc ruột nếu có"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn (nhịp thở, SpO2, ý thức), dấu hiệu tắc ruột"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Naloxone",
+                    "dose": "0.4-2mg IV/IM/SC, lặp lại mỗi 2-3 phút nếu cần (tối đa 10mg)",
+                    "mechanism": "Opioid mu-receptor antagonist, đảo ngược ức chế hô hấp",
+                    "notes": "Có thể đảo ngược ức chế hô hấp do quá liều loperamide"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không với thức ăn",
+                "timing": "Liều đầu: 4mg. Sau đó: 2mg sau mỗi lần đi ngoài (tối đa 16mg/ngày). Không dùng quá 48 giờ nếu không cải thiện."
+            },
+            "iv": {
+                "reconstitution": "Loperamide chỉ có dạng uống (PO)",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Loperamide chỉ có dạng uống, không có dạng IV"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Loperamide",
+                "UpToDate - Loperamide: Drug information",
+                "Micromedex - Loperamide",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
+                "FDA Safety Communication - Loperamide abuse and overdose (2016)"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - FDA approved, multiple RCTs, safety warnings"
+        }
     },
     
     "Domperidone": {
@@ -5392,7 +6481,106 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Nguy cơ QT kéo dài và loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Nguy cơ tăng ở liều cao (>80mg/ngày), suy thận, suy gan, hoặc dùng với các thuốc kéo dài QT. Không vượt quá 80mg/ngày. Tránh dùng với các thuốc kéo dài QT."
+        "black_box_warnings": "Nguy cơ QT kéo dài và loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Nguy cơ tăng ở liều cao (>80mg/ngày), suy thận, suy gan, hoặc dùng với các thuốc kéo dài QT. Không vượt quá 80mg/ngày. Tránh dùng với các thuốc kéo dài QT.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc kéo dài QT (amiodarone, quinolone, macrolide, haloperidol, etc.)",
+                    "mechanism": "Tác dụng hiệp đồng kéo dài QT interval",
+                    "effect": "Tăng nguy cơ QT kéo dài, torsades de pointes, loạn nhịp tim, có thể tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Tránh dùng domperidone với các thuốc kéo dài QT."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir, clarithromycin, erythromycin)",
+                    "mechanism": "Ức chế chuyển hóa domperidone qua CYP3A4",
+                    "effect": "Tăng nồng độ domperidone, tăng nguy cơ QT kéo dài",
+                    "management": "Tránh dùng cùng hoặc giảm liều domperidone. Theo dõi ECG."
+                },
+                {
+                    "drug": "Anticholinergics",
+                    "mechanism": "Đối kháng tác dụng prokinetic",
+                    "effect": "Giảm hiệu quả prokinetic",
+                    "management": "Tránh dùng cùng nếu có thể"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng domperidone",
+                "Chảy máu dạ dày",
+                "Tắc ruột cơ học",
+                "Prolactinoma",
+                "Dùng với các thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH tuyệt đối",
+                "QT kéo dài (QTc >450ms ở nam, >470ms ở nữ) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <30) - giảm liều 50%",
+                "Suy gan nặng - giảm liều, tăng nguy cơ QT kéo dài",
+                "Hạ kali, hạ magie - tăng nguy cơ QT kéo dài",
+                "Người già - thận trọng, giảm liều",
+                "Rối loạn nhịp tim - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Domperidone là FDA category C. Nghiên cứu trên động vật cho thấy có thể gây độc tính cho thai nhi. Không có nghiên cứu đầy đủ trên người. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, nhưng nên tránh trong tam cá nguyệt đầu nếu có thể.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Domperidone bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng để tăng tiết sữa mẹ (off-label). An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thường dùng (10-20mg x 3-4 lần/ngày)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể giảm liều",
+            "severe": "Giảm liều hoặc tránh dùng. Domperidone chuyển hóa ở gan qua CYP3A4. Suy gan nặng làm giảm chuyển hóa, tăng nồng độ, tăng nguy cơ QT kéo dài.",
+            "notes": "Domperidone chuyển hóa ở gan. Suy gan nặng làm tăng nồng độ, tăng nguy cơ QT kéo dài. Giảm liều hoặc tránh dùng ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "QT kéo dài, torsades de pointes, loạn nhịp tim (triệu chứng chính, có thể tử vong)",
+                "Tăng prolactin: rối loạn kinh nguyệt, chảy sữa",
+                "Buồn nôn, nôn",
+                "Nhức đầu"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Theo dõi ECG liên tục (QT interval)",
+                "Điều trị torsades de pointes nếu có: magnesium sulfate 2g IV, pacing nếu cần",
+                "Bổ sung kali, magie nếu thiếu",
+                "Hỗ trợ triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn chặt chẽ"
+            ],
+            "monitoring": "Theo dõi ECG liên tục (QT interval), dấu hiệu sinh tồn, điện giải"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống 15-30 phút TRƯỚC bữa ăn (tăng hiệu quả)",
+                "timing": "Uống 15-30 phút trước bữa ăn và trước khi đi ngủ. Không vượt quá 80mg/ngày."
+            },
+            "iv": {
+                "reconstitution": "Domperidone chỉ có dạng uống (PO)",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Domperidone chỉ có dạng uống, không có dạng IV"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Domperidone (Note: Not FDA approved in US, available in other countries)",
+                "UpToDate - Domperidone: Drug information",
+                "Micromedex - Domperidone",
+                "European Medicines Agency - Domperidone safety review",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs, safety warnings (QT prolongation)"
+        }
     },
     
     "Ondansetron": {
@@ -5462,8 +6650,103 @@ DRUG_DATABASE = {
             "clearance": "Chủ yếu qua gan, cần điều chỉnh ở suy gan"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Dung dịch tiêm: bảo quản ở nhiệt độ phòng, tránh ánh sáng.",
-        "black_box_warnings": "Nguy cơ QT kéo dài, có thể gây rối loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Nguy cơ tăng ở liều cao, hạ kali, hạ magie, suy gan, hoặc dùng với các thuốc kéo dài QT khác. Không dùng vượt quá liều khuyến cáo."
-
+        "black_box_warnings": "Nguy cơ QT kéo dài, có thể gây rối loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Nguy cơ tăng ở liều cao, hạ kali, hạ magie, suy gan, hoặc dùng với các thuốc kéo dài QT khác. Không dùng vượt quá liều khuyến cáo.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Apomorphine",
+                    "mechanism": "Ondansetron ức chế 5-HT3 receptor, đối kháng với apomorphine",
+                    "effect": "Giảm hiệu quả apomorphine, có thể gây hạ huyết áp nặng",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Không dùng ondansetron với apomorphine."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc kéo dài QT (amiodarone, quinolone, macrolide, haloperidol, etc.)",
+                    "mechanism": "Tác dụng hiệp đồng kéo dài QT interval",
+                    "effect": "Tăng nguy cơ QT kéo dài, torsades de pointes, loạn nhịp tim",
+                    "management": "Tránh dùng cùng hoặc thận trọng. Theo dõi ECG. Giảm liều ondansetron."
+                },
+                {
+                    "drug": "CYP2D6 inhibitors (fluoxetine, paroxetine, quinidine)",
+                    "mechanism": "Ức chế chuyển hóa ondansetron qua CYP2D6",
+                    "effect": "Tăng nồng độ ondansetron, tăng nguy cơ QT kéo dài",
+                    "management": "Thận trọng, giảm liều ondansetron nếu cần"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng ondansetron",
+                "Dùng với apomorphine - CHỐNG CHỈ ĐỊNH tuyệt đối",
+                "QT kéo dài (QTc >450ms ở nam, >470ms ở nữ) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "relative": [
+                "Suy gan nặng - giảm liều 50% (tối đa 8mg/ngày)",
+                "Hạ kali, hạ magie - tăng nguy cơ QT kéo dài, bổ sung trước khi dùng",
+                "Đang dùng thuốc kéo dài QT - thận trọng, giảm liều",
+                "Người già - thận trọng, giảm liều",
+                "Rối loạn nhịp tim - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Ondansetron là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Một số nghiên cứu trên người không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Thường dùng để điều trị buồn nôn, nôn trong thai kỳ (hyperemesis gravidarum).",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Ondansetron bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thường dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Giảm liều 50% (tối đa 8mg/ngày)",
+            "severe": "Giảm liều 50% (tối đa 8mg/ngày). Ondansetron chuyển hóa ở gan qua CYP1A2, CYP2D6, CYP3A4. Suy gan nặng làm giảm chuyển hóa, tăng nồng độ, tăng nguy cơ QT kéo dài.",
+            "notes": "Ondansetron chuyển hóa ở gan. Suy gan nặng làm tăng nồng độ, tăng nguy cơ QT kéo dài. Giảm liều ở suy gan trung bình và nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "QT kéo dài, torsades de pointes, loạn nhịp tim (triệu chứng chính, có thể tử vong)",
+                "Nhức đầu, chóng mặt",
+                "Buồn nôn, nôn",
+                "Mệt mỏi"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Theo dõi ECG liên tục (QT interval)",
+                "Điều trị torsades de pointes nếu có: magnesium sulfate 2g IV, pacing nếu cần",
+                "Bổ sung kali, magie nếu thiếu",
+                "Hỗ trợ triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn chặt chẽ"
+            ],
+            "monitoring": "Theo dõi ECG liên tục (QT interval), dấu hiệu sinh tồn, điện giải"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không với thức ăn",
+                "timing": "Uống 30 phút trước hóa trị/xạ trị/phẫu thuật (dự phòng) hoặc ngay khi có buồn nôn. Có thể lặp lại mỗi 8 giờ. Tối đa 32mg/ngày."
+            },
+            "iv": {
+                "reconstitution": "Ondansetron IV: 4-8mg pha với 50ml NaCl 0.9% hoặc dextrose 5%",
+                "infusion_rate": "Truyền trong 15 phút",
+                "compatibility": ["NaCl 0.9%", "Dextrose 5%"],
+                "incompatibility": ["Không pha với các thuốc khác trong cùng đường truyền"],
+                "notes": "Có thể tiêm IV trực tiếp chậm (2-5 phút) hoặc truyền. Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ondansetron",
+                "UpToDate - Ondansetron: Drug information",
+                "Micromedex - Ondansetron",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
+                "FDA Safety Communication - Ondansetron QT prolongation (2012)"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - FDA approved, multiple RCTs, safety warnings (QT prolongation)"
+        }
     },
     
     "Lansoprazole": {
@@ -5533,7 +6816,116 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa qua CYP2C19, CYP3A4), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên tan trong miệng: bảo quản trong bao bì gốc, tránh ẩm.",
-        "black_box_warnings": "Dùng lâu dài (>1 năm) có thể tăng nguy cơ loãng xương, gãy xương hông, cổ tay, cột sống. Dùng lâu dài có thể tăng nguy cơ thiếu vitamin B12. Tăng nguy cơ nhiễm C. difficile."
+        "black_box_warnings": "Dùng lâu dài (>1 năm) có thể tăng nguy cơ loãng xương, gãy xương hông, cổ tay, cột sống. Dùng lâu dài có thể tăng nguy cơ thiếu vitamin B12. Tăng nguy cơ nhiễm C. difficile.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Atazanavir (HIV protease inhibitor)",
+                    "mechanism": "PPI làm tăng pH dạ dày, giảm hấp thu atazanavir",
+                    "effect": "Giảm nồng độ atazanavir, giảm hiệu quả điều trị HIV",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Không dùng lansoprazole với atazanavir."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Lansoprazole ức chế CYP2C9 nhẹ",
+                    "effect": "Tăng INR nhẹ, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Lansoprazole có thể tăng nồng độ digoxin nhẹ",
+                    "effect": "Tăng nồng độ digoxin nhẹ",
+                    "management": "Theo dõi nồng độ digoxin. Thận trọng."
+                },
+                {
+                    "drug": "Methotrexate (liều cao)",
+                    "mechanism": "PPI giảm thải trừ methotrexate qua thận",
+                    "effect": "Tăng nồng độ methotrexate, tăng nguy cơ độc tính",
+                    "management": "Thận trọng. Tạm ngừng PPI khi dùng methotrexate liều cao."
+                },
+                {
+                    "drug": "Ketoconazole, Itraconazole, Posaconazole",
+                    "mechanism": "PPI tăng pH dạ dày, giảm hấp thu azole antifungals",
+                    "effect": "Giảm nồng độ azole, giảm hiệu quả điều trị",
+                    "management": "Cách thời gian ít nhất 2 giờ."
+                },
+                {
+                    "drug": "Iron salts, Vitamin B12",
+                    "mechanism": "PPI giảm acid dạ dày, giảm hấp thu",
+                    "effect": "Giảm hấp thu sắt và B12",
+                    "management": "Cách thời gian ít nhất 2 giờ. Bổ sung B12 nếu dùng lâu dài."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng lansoprazole hoặc PPI khác",
+                "Dùng cùng atazanavir (HIV protease inhibitor)"
+            ],
+            "relative": [
+                "Suy gan nặng (Child-Pugh C) - giảm liều tối đa 15mg/ngày",
+                "Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng",
+                "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
+                "Nhiễm C. difficile - tăng nguy cơ",
+                "Thiếu vitamin B12 - bổ sung nếu dùng lâu dài",
+                "Thiếu magnesium - bổ sung nếu dùng lâu dài"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Lansoprazole là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Một số nghiên cứu quan sát không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Lansoprazole bài tiết vào sữa mẹ ở nồng độ rất thấp. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thường dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều, nhưng thận trọng",
+            "severe": "Giảm liều tối đa 15mg/ngày (Child-Pugh C). Lansoprazole chuyển hóa ở gan qua CYP2C19 và CYP3A4.",
+            "notes": "Suy gan nặng làm giảm chuyển hóa, tăng nồng độ. Giảm liều ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "PPI ít gây quá liều nghiêm trọng",
+                "Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Hầu hết trường hợp tự khỏi"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống 30 phút TRƯỚC bữa ăn (quan trọng)",
+                "timing": "Uống vào buổi sáng trước bữa sáng. Viên tan trong miệng: đặt trên lưỡi, để tan tự nhiên, không cần nước. KHÔNG nghiền hoặc nhai viên bao tan trong ruột."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV cho lansoprazole",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Lansoprazole chỉ có dạng uống (PO)"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lansoprazole",
+                "UpToDate - Proton pump inhibitors: Overview of use and adverse effects",
+                "Micromedex - Lansoprazole",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - FDA approved, multiple RCTs"
+        }
     },
     
     "Esomeprazole": {
@@ -5606,7 +6998,116 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa qua CYP2C19 ít hơn omeprazole, CYP3A4), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên bao tan trong ruột: không nghiền hoặc nhai.",
-        "black_box_warnings": "Dùng lâu dài (>1 năm) có thể tăng nguy cơ loãng xương, gãy xương hông, cổ tay, cột sống. Dùng lâu dài có thể tăng nguy cơ thiếu vitamin B12. Tăng nguy cơ nhiễm C. difficile."
+        "black_box_warnings": "Dùng lâu dài (>1 năm) có thể tăng nguy cơ loãng xương, gãy xương hông, cổ tay, cột sống. Dùng lâu dài có thể tăng nguy cơ thiếu vitamin B12. Tăng nguy cơ nhiễm C. difficile.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Atazanavir (HIV protease inhibitor)",
+                    "mechanism": "PPI làm tăng pH dạ dày, giảm hấp thu atazanavir",
+                    "effect": "Giảm nồng độ atazanavir, giảm hiệu quả điều trị HIV",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Không dùng esomeprazole với atazanavir."
+                },
+                {
+                    "drug": "Clopidogrel",
+                    "mechanism": "Esomeprazole ức chế CYP2C19, enzyme cần thiết để chuyển hóa clopidogrel",
+                    "effect": "Giảm hiệu quả chống kết tập tiểu cầu của clopidogrel (controversial, nhưng nên thận trọng)",
+                    "management": "Thận trọng. Cân nhắc dùng pantoprazole (ít ảnh hưởng hơn) hoặc cách thời gian."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Esomeprazole ức chế CYP2C9 nhẹ",
+                    "effect": "Tăng INR nhẹ, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Methotrexate (liều cao)",
+                    "mechanism": "PPI giảm thải trừ methotrexate qua thận",
+                    "effect": "Tăng nồng độ methotrexate, tăng nguy cơ độc tính",
+                    "management": "Thận trọng. Tạm ngừng PPI khi dùng methotrexate liều cao."
+                },
+                {
+                    "drug": "Ketoconazole, Itraconazole, Posaconazole",
+                    "mechanism": "PPI tăng pH dạ dày, giảm hấp thu azole antifungals",
+                    "effect": "Giảm nồng độ azole, giảm hiệu quả điều trị",
+                    "management": "Cách thời gian ít nhất 2 giờ."
+                },
+                {
+                    "drug": "Iron salts, Vitamin B12",
+                    "mechanism": "PPI giảm acid dạ dày, giảm hấp thu",
+                    "effect": "Giảm hấp thu sắt và B12",
+                    "management": "Cách thời gian ít nhất 2 giờ. Bổ sung B12 nếu dùng lâu dài."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng esomeprazole hoặc PPI khác",
+                "Dùng cùng atazanavir (HIV protease inhibitor)"
+            ],
+            "relative": [
+                "Suy gan nặng (Child-Pugh C) - giảm liều tối đa 20mg/ngày",
+                "Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng",
+                "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
+                "Nhiễm C. difficile - tăng nguy cơ",
+                "Thiếu vitamin B12 - bổ sung nếu dùng lâu dài",
+                "Thiếu magnesium - bổ sung nếu dùng lâu dài"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Esomeprazole là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Một số nghiên cứu quan sát không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. An toàn hơn omeprazole (category C) trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Esomeprazole bài tiết vào sữa mẹ ở nồng độ rất thấp. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thường dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều, nhưng thận trọng",
+            "severe": "Giảm liều tối đa 20mg/ngày (Child-Pugh C). Esomeprazole chuyển hóa ở gan qua CYP2C19 (ít hơn omeprazole) và CYP3A4.",
+            "notes": "Esomeprazole ít phụ thuộc CYP2C19 hơn omeprazole, nên ít ảnh hưởng hơn ở suy gan. Tuy nhiên, vẫn giảm liều ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "PPI ít gây quá liều nghiêm trọng",
+                "Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Hầu hết trường hợp tự khỏi"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống 30 phút TRƯỚC bữa ăn (quan trọng)",
+                "timing": "Uống vào buổi sáng trước bữa sáng (hoặc trước bữa tối nếu dùng 2 lần/ngày). KHÔNG nghiền hoặc nhai viên bao tan trong ruột - phải nuốt nguyên viên."
+            },
+            "iv": {
+                "reconstitution": "Esomeprazole IV: 20-40mg pha với 100ml NaCl 0.9% hoặc dextrose 5%",
+                "infusion_rate": "Truyền trong 10-30 phút",
+                "compatibility": ["NaCl 0.9%", "Dextrose 5%"],
+                "incompatibility": ["Không pha với các thuốc khác trong cùng đường truyền"],
+                "notes": "Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Esomeprazole",
+                "UpToDate - Proton pump inhibitors: Overview of use and adverse effects",
+                "Micromedex - Esomeprazole",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - FDA approved, multiple RCTs"
+        }
     },
     
     "Sucralfate": {
@@ -5674,8 +7175,102 @@ DRUG_DATABASE = {
             "protein_binding": "Không áp dụng (không hấp thu)",
             "clearance": "Không hấp thu đáng kể, thải qua phân. Nhôm có thể tích tụ ở suy thận."
         },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Tránh dùng ở suy thận nặng (CrCl <30) - tích tụ nhôm có thể gây độc thần kinh, xương yếu, thiếu máu. Không dùng với PPI/H2 blocker/antacid đồng thời - cách 2 giờ để đảm bảo hiệu quả."
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Tích tụ nhôm ở suy thận nặng có thể gây độc tính thần kinh và xương. Tránh dùng ở suy thận nặng (CrCl <30).",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "PPI, H2 blocker, Antacid",
+                    "mechanism": "Giảm acid dạ dày, làm giảm khả năng tạo gel của sucralfate",
+                    "effect": "Giảm hiệu quả của sucralfate",
+                    "management": "Cách thời gian ít nhất 2 giờ. Uống sucralfate trước PPI/H2 blocker/antacid."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Sucralfate có thể tăng hấp thu warfarin hoặc tương tác khác",
+                    "effect": "Có thể tăng tác dụng chống đông, tăng INR",
+                    "management": "Theo dõi INR thường xuyên. Cách thời gian 2 giờ."
+                },
+                {
+                    "drug": "Phenytoin, Digoxin, Quinolone, Thyroxine",
+                    "mechanism": "Sucralfate giảm hấp thu các thuốc này (hấp phụ hoặc chelate)",
+                    "effect": "Giảm nồng độ thuốc, giảm hiệu quả điều trị",
+                    "management": "Cách thời gian ít nhất 2 giờ. Uống các thuốc khác trước sucralfate."
+                },
+                {
+                    "drug": "Iron salts, Vitamin D, Calcium",
+                    "mechanism": "Sucralfate có thể giảm hấp thu",
+                    "effect": "Giảm hấp thu iron, vitamin D, calcium",
+                    "management": "Cách thời gian ít nhất 2 giờ"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng sucralfate",
+                "Suy thận nặng (CrCl <30) - CHỐNG CHỈ ĐỊNH do tích tụ nhôm"
+            ],
+            "relative": [
+                "Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều, theo dõi chức năng thận",
+                "Táo bón nặng - có thể làm nặng thêm",
+                "Đang dùng nhiều thuốc - tăng nguy cơ tương tác hấp thu"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Sucralfate là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Không hấp thu đáng kể, nên an toàn hơn trong thai kỳ. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Sucralfate không hấp thu đáng kể, không bài tiết vào sữa mẹ. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thường dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều. Sucralfate không hấp thu đáng kể, không chuyển hóa ở gan.",
+            "notes": "Sucralfate không hấp thu đáng kể, không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Sucralfate ít gây quá liều nghiêm trọng do không hấp thu",
+                "Triệu chứng nhẹ: táo bón nặng, buồn nôn",
+                "Ở suy thận nặng: tích tụ nhôm có thể gây độc tính thần kinh, xương yếu"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ triệu chứng (điều trị táo bón nếu cần)",
+                "Theo dõi dấu hiệu tích tụ nhôm ở suy thận nặng",
+                "Hầu hết trường hợp tự khỏi"
+            ],
+            "monitoring": "Theo dõi dấu hiệu tích tụ nhôm ở suy thận nặng (rối loạn thần kinh, xương yếu)"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống KHI BỤNG ĐÓI (1 giờ trước bữa ăn) - quan trọng, cần acid dạ dày để tạo gel",
+                "timing": "Uống 1 giờ trước bữa ăn và trước khi đi ngủ. Không uống với PPI, H2 blocker, antacid, hoặc các thuốc khác - cách ít nhất 2 giờ. KHÔNG nghiền hoặc nhai viên - nuốt nguyên viên với nước."
+            },
+            "iv": {
+                "reconstitution": "Sucralfate chỉ có dạng uống (PO)",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Sucralfate chỉ có dạng uống, không có dạng IV"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Sucralfate",
+                "UpToDate - Sucralfate: Drug information",
+                "Micromedex - Sucralfate",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - FDA approved, multiple RCTs"
+        }
     },
     
     # ========== ANALGESICS ==========
@@ -15116,7 +16711,157 @@ DRUG_DATABASE = {
             "clearance": "Chủ yếu qua gan (90%), một phần qua thận (10%)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
-        "black_box_warnings": "Nguy cơ tiêu cơ vân (rhabdomyolysis), có thể gây suy thận cấp và tử vong. Nguy cơ tăng ở liều cao, suy thận, và dùng với một số thuốc. Ngừng ngay nếu có đau cơ, yếu cơ, hoặc dấu hiệu tiêu cơ vân. Không dùng trong thai kỳ."
+        "black_box_warnings": "Nguy cơ tiêu cơ vân (rhabdomyolysis), có thể gây suy thận cấp và tử vong. Nguy cơ tăng ở liều cao, suy thận, và dùng với một số thuốc. Ngừng ngay nếu có đau cơ, yếu cơ, hoặc dấu hiệu tiêu cơ vân. Không dùng trong thai kỳ.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Cyclosporine, Tacrolimus",
+                    "mechanism": "Cyclosporine ức chế OATP1B1 transporter và P-glycoprotein, tăng nồng độ rosuvastatin đáng kể",
+                    "effect": "Tăng nguy cơ tiêu cơ vân nghiêm trọng, có thể gây suy thận cấp, tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Nếu cần: giảm liều rosuvastatin tối đa 5mg/ngày, theo dõi CK và men gan thường xuyên. Cân nhắc dùng pravastatin (ít tương tác hơn)."
+                },
+                {
+                    "drug": "Gemfibrozil, Fenofibrate (fibrates)",
+                    "mechanism": "Fibrates và rosuvastatin đều có thể gây độc cơ, tác dụng hiệp đồng",
+                    "effect": "Tăng nguy cơ tiêu cơ vân nghiêm trọng",
+                    "management": "Thận trọng. Tránh dùng cùng nếu có thể. Nếu cần: dùng liều thấp cả hai, theo dõi CK và dấu hiệu đau cơ thường xuyên. KHÔNG dùng gemfibrozil với rosuvastatin (tăng nguy cơ cao). Có thể cân nhắc fenofibrate (ít tương tác hơn gemfibrozil)."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Rosuvastatin có thể tăng tác dụng chống đông của warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên khi bắt đầu hoặc thay đổi liều rosuvastatin. Có thể cần giảm liều warfarin."
+                },
+                {
+                    "drug": "Diltiazem, Verapamil",
+                    "mechanism": "Có thể tăng nhẹ nồng độ rosuvastatin qua OATP1B1",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "Thận trọng. Giảm liều rosuvastatin 50% hoặc tối đa 10mg/ngày. Theo dõi CK và dấu hiệu đau cơ."
+                },
+                {
+                    "drug": "Niacin (liều cao)",
+                    "mechanism": "Cả hai đều có thể gây độc cơ, tác dụng hiệp đồng",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "Thận trọng. Theo dõi CK và dấu hiệu đau cơ thường xuyên. Có thể cần giảm liều một trong hai thuốc."
+                },
+                {
+                    "drug": "Colchicine",
+                    "mechanism": "Có thể tăng tác dụng phụ độc cơ",
+                    "effect": "Tăng nguy cơ độc cơ, đặc biệt ở bệnh nhân suy thận",
+                    "management": "Thận trọng, đặc biệt ở bệnh nhân suy thận. Theo dõi CK và dấu hiệu đau cơ. Có thể cần giảm liều một trong hai thuốc."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Rifampin",
+                    "mechanism": "Cảm ứng OATP1B1, giảm hấp thu rosuvastatin",
+                    "effect": "Giảm hiệu quả rosuvastatin",
+                    "management": "Có thể cần tăng liều rosuvastatin. Theo dõi lipid profile."
+                },
+                {
+                    "drug": "Oral contraceptives",
+                    "mechanism": "Rosuvastatin có thể tăng nhẹ nồng độ estrogen",
+                    "effect": "Tăng nhẹ tác dụng phụ của thuốc tránh thai",
+                    "management": "Thường không cần điều chỉnh. Theo dõi tác dụng phụ."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Bệnh gan hoạt động (active liver disease) - tăng men gan kéo dài, viêm gan",
+                "Có thai (pregnancy) - FDA category X, gây dị tật thai nhi",
+                "Cho con bú (lactation) - bài tiết vào sữa mẹ",
+                "Tiêu cơ vân đang hoạt động (active myopathy/rhabdomyolysis)",
+                "Dị ứng với rosuvastatin hoặc bất kỳ thành phần nào",
+                "Dùng cùng cyclosporine (tăng nguy cơ tiêu cơ vân nghiêm trọng)"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <30) - bắt đầu với liều thấp (5mg/ngày)",
+                "Suy gan - thận trọng, theo dõi men gan thường xuyên",
+                "Uống rượu nhiều - tăng nguy cơ viêm gan",
+                "Người cao tuổi - tăng nguy cơ đau cơ, tiêu cơ vân",
+                "Đái tháo đường - statins có thể tăng đường huyết nhẹ",
+                "Bệnh tuyến giáp - tăng nguy cơ đau cơ",
+                "Dùng với fibrate, niacin liều cao - tăng nguy cơ tiêu cơ vân",
+                "Bệnh nhân Châu Á - tăng nồng độ rosuvastatin, có thể cần liều thấp hơn"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH trong thai kỳ. Rosuvastatin gây dị tật thai nhi, đặc biệt trong tam cá nguyệt đầu tiên. Statins ức chế tổng hợp cholesterol, cần thiết cho sự phát triển của thai nhi. Có thể gây dị tật bẩm sinh, chậm phát triển. Phụ nữ trong độ tuổi sinh đẻ phải dùng biện pháp tránh thai hiệu quả. Phải ngừng rosuvastatin ít nhất 1-2 tháng trước khi có thai. Nếu có thai khi đang dùng, ngừng ngay lập tức.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Rosuvastatin bài tiết vào sữa mẹ. Có thể gây tác dụng phụ trên trẻ bú mẹ. Chưa có dữ liệu đầy đủ về an toàn. Statins có thể ảnh hưởng đến sự phát triển của trẻ.",
+                "recommendation": "CHỐNG CHỈ ĐỊNH khi cho con bú. Ngừng rosuvastatin hoặc ngừng cho con bú. Cân nhắc thuốc thay thế nếu cần."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi liều. Theo dõi men gan thường xuyên.",
+            "moderate": "Thận trọng. Giảm liều hoặc dùng liều thấp hơn. Theo dõi men gan mỗi 3-6 tháng. Ngừng nếu ALT >3 lần ULN.",
+            "severe": "CHỐNG CHỈ ĐỊNH. Không dùng ở bệnh nhân suy gan nặng hoặc bệnh gan hoạt động.",
+            "notes": "Rosuvastatin chuyển hóa qua gan (CYP2C9, CYP2C19) - chuyển hóa yếu hơn atorvastatin/simvastatin, ít tương tác hơn. Tuy nhiên, suy gan vẫn có thể làm tăng nồng độ và tăng nguy cơ độc tính. Kiểm tra men gan trước điều trị. Ngừng nếu ALT >3 lần ULN hoặc có dấu hiệu viêm gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu cơ vân (rhabdomyolysis) - triệu chứng chính và nguy hiểm nhất",
+                "Đau cơ dữ dội, yếu cơ",
+                "Nước tiểu sẫm màu (myoglobinuria)",
+                "Suy thận cấp (do myoglobin)",
+                "Tăng men gan (ALT, AST)",
+                "Tăng CK (creatine kinase)",
+                "Mệt mỏi, buồn nôn",
+                "Rối loạn tiêu hóa"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: ngừng rosuvastatin, truyền dịch tích cực để phòng suy thận, lọc máu nếu cần",
+            "treatment": [
+                "Ngừng rosuvastatin ngay lập tức",
+                "Đo CK, men gan, chức năng thận ngay",
+                "Nếu có tiêu cơ vân:",
+                "  - Truyền dịch tích cực (normal saline 1-2L/giờ) để duy trì lượng nước tiểu >100-200ml/giờ",
+                "  - Kiềm hóa nước tiểu (sodium bicarbonate) để giảm độc tính myoglobin trên thận",
+                "  - Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)",
+                "  - Hemodialysis nếu suy thận cấp, tăng kali máu, hoặc quá tải dịch",
+                "  - Theo dõi điện giải (natri, kali, canxi, phosphate)",
+                "Điều trị hỗ trợ:",
+                "  - Điều chỉnh rối loạn điện giải",
+                "  - Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "  - Giảm đau (opioids) nếu đau cơ nặng",
+                "Theo dõi CK, men gan, chức năng thận hàng ngày cho đến khi ổn định",
+                "Theo dõi ít nhất 48-72 giờ do half-life 19 giờ (dài)"
+            ],
+            "monitoring": "CK, ALT, AST, creatinine, BUN, kali, canxi, phosphate, lượng nước tiểu, ECG (nếu có rối loạn điện giải), dấu hiệu suy thận"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1 lần/ngày, có thể uống vào buổi sáng hoặc buổi tối. Uống cùng một giờ mỗi ngày để nhớ. Không cần thiết phải uống buổi tối như simvastatin (rosuvastatin có half-life dài 19 giờ)."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "Không áp dụng",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Rosuvastatin chỉ có dạng uống (PO)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Crestor (rosuvastatin)",
+                "UpToDate - Rosuvastatin: Drug information",
+                "ACC/AHA Guidelines - Cholesterol Management (2018)",
+                "NLA Guidelines - Statin Safety (2014)",
+                "JUPITER Study - New England Journal of Medicine (2008) - Rosuvastatin trong dự phòng biến cố tim mạch",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics - Lipid-lowering drugs"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (JUPITER, CORONA) showing cardiovascular benefit"
+        }
 
     },
     
@@ -15943,7 +17688,157 @@ DRUG_DATABASE.update({
             "clearance": "Chủ yếu qua thận và gan"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, tăng kali máu có thể gây rối loạn nhịp tim nghiêm trọng, có thể tử vong, đặc biệt ở bệnh nhân suy thận hoặc dùng với các thuốc tăng kali khác. Phải theo dõi kali thường xuyên."
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, tăng kali máu có thể gây rối loạn nhịp tim nghiêm trọng, có thể tử vong, đặc biệt ở bệnh nhân suy thận hoặc dùng với các thuốc tăng kali khác. Phải theo dõi kali thường xuyên.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "ACE inhibitors (captopril, enalapril, lisinopril), ARB (losartan, valsartan)",
+                    "mechanism": "Cả hai đều làm giảm bài tiết kali qua thận, tác dụng hiệp đồng gây tăng kali máu",
+                    "effect": "Tăng kali máu nặng (hyperkalemia), có thể gây rối loạn nhịp tim, ngừng tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên (1-2 tuần sau khi bắt đầu, sau đó mỗi 1-3 tháng). KHÔNG dùng cùng nếu kali > 5 mEq/L hoặc eGFR < 30. Cân nhắc giảm liều hoặc ngừng một trong hai thuốc nếu kali tăng."
+                },
+                {
+                    "drug": "Kali bổ sung (potassium supplements), muối kali (potassium chloride)",
+                    "mechanism": "Spironolactone giữ kali, kali bổ sung tăng kali máu",
+                    "effect": "Tăng kali máu nặng, nguy hiểm",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. KHÔNG dùng kali bổ sung khi đang dùng spironolactone trừ khi được giám sát chặt chẽ và có chỉ định đặc biệt."
+                },
+                {
+                    "drug": "Trimethoprim, Trimethoprim-sulfamethoxazole",
+                    "mechanism": "Trimethoprim ức chế bài tiết kali ở ống lượn xa, tương tự spironolactone",
+                    "effect": "Tăng kali máu nặng, đặc biệt ở người cao tuổi, suy thận",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Cân nhắc tránh dùng cùng, đặc biệt ở người cao tuổi hoặc suy thận."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Spironolactone ức chế thải trừ digoxin qua thận, tăng nồng độ digoxin trong máu",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ ngộ độc digoxin (buồn nôn, rối loạn nhịp tim, block AV)",
+                    "management": "Theo dõi nồng độ digoxin trong máu. Có thể cần giảm liều digoxin. Theo dõi dấu hiệu ngộ độc digoxin."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac)",
+                    "mechanism": "NSAID làm giảm lưu lượng máu thận, giảm bài tiết natri và kali",
+                    "effect": "Tăng nguy cơ tăng kali máu, suy thận cấp",
+                    "management": "Thận trọng, đặc biệt ở người cao tuổi hoặc suy thận. Theo dõi kali máu và chức năng thận. Tránh dùng lâu dài cùng."
+                },
+                {
+                    "drug": "Amiloride, Triamterene (các kali-sparing diuretics khác)",
+                    "mechanism": "Tác dụng hiệp đồng giữ kali",
+                    "effect": "Tăng kali máu nặng",
+                    "management": "KHÔNG dùng cùng. Chọn một trong các kali-sparing diuretics."
+                },
+                {
+                    "drug": "Heparin (liều cao)",
+                    "mechanism": "Heparin ức chế sản xuất aldosterone, có thể làm giảm bài tiết kali",
+                    "effect": "Tăng nguy cơ tăng kali máu",
+                    "management": "Theo dõi kali máu khi dùng heparin liều cao cùng spironolactone."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Aspirin liều thấp",
+                    "mechanism": "Có thể làm giảm tác dụng lợi tiểu của spironolactone",
+                    "effect": "Giảm nhẹ hiệu quả lợi tiểu",
+                    "management": "Thường không cần điều chỉnh. Theo dõi đáp ứng điều trị."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Tăng kali máu (hyperkalemia) - kali > 5 mEq/L",
+                "Suy thận nặng (CrCl < 30 mL/min, eGFR < 30)",
+                "Vô niệu (anuria)",
+                "Bệnh Addison (suy thượng thận nguyên phát)",
+                "Dùng cùng kali bổ sung hoặc kali-sparing diuretics khác (amiloride, triamterene)"
+            ],
+            "relative": [
+                "Suy thận trung bình (CrCl 30-60) - thận trọng, theo dõi kali thường xuyên",
+                "Dùng cùng ACE inhibitor/ARB - thận trọng, theo dõi kali thường xuyên",
+                "Người cao tuổi - tăng nguy cơ tăng kali máu",
+                "Suy gan - thận trọng (chuyển hóa qua gan)",
+                "Tiểu đường - thận trọng (tăng nguy cơ tăng kali máu ở bệnh nhân đái tháo đường type 4)",
+                "Thai kỳ - FDA category D, cân nhắc lợi ích/nguy cơ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Spironolactone có thể gây tác dụng phụ trên thai nhi. Có thể gây tác dụng chống androgen (anti-androgen) trên thai nhi nam, dẫn đến dị tật bộ phận sinh dục. Có thể gây tác dụng phụ trên thai nhi nữ. Cân nhắc lợi ích/nguy cơ. Chỉ dùng khi lợi ích rõ ràng vượt trội nguy cơ. Tránh dùng trong tam cá nguyệt đầu tiên nếu có thể.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Spironolactone và các metabolites bài tiết vào sữa mẹ. Nồng độ trong sữa mẹ thấp nhưng có thể gây tác dụng phụ trên trẻ bú mẹ. Có thể gây tác dụng chống androgen nhẹ. Có thể gây tăng kali máu ở trẻ bú mẹ (hiếm).",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc lợi ích/nguy cơ. Theo dõi trẻ bú mẹ nếu có dấu hiệu bất thường. Có thể cân nhắc ngừng cho con bú hoặc dùng thuốc thay thế nếu có thể."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi liều",
+            "moderate": "Thận trọng, có thể cần giảm liều do chuyển hóa qua gan",
+            "severe": "Thận trọng, giảm liều hoặc tránh dùng. Spironolactone chuyển hóa qua gan thành canrenone (active metabolite). Suy gan nặng có thể làm tăng nồng độ spironolactone.",
+            "notes": "Spironolactone chuyển hóa qua gan (chuyển đổi thành canrenone). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ spironolactone và tăng tác dụng phụ. Tuy nhiên, spironolactone thường được dùng trong xơ gan với cổ trướng, nên cần cân nhắc lợi ích/nguy cơ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng kali máu nặng (hyperkalemia) - triệu chứng chính và nguy hiểm nhất",
+                "Yếu cơ, liệt cơ",
+                "Rối loạn nhịp tim (arrhythmias), đặc biệt là rối loạn nhịp chậm",
+                "Block nhĩ thất",
+                "Ngừng tim (cardiac arrest)",
+                "Rối loạn điện giải (hạ natri máu có thể xảy ra)",
+                "Mất nước (dehydration) do lợi tiểu quá mức",
+                "Hạ huyết áp",
+                "Buồn nôn, nôn",
+                "Chóng mặt, mệt mỏi"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Xử trí tăng kali máu: Calcium gluconate/calcium chloride (bảo vệ tim), Insulin + glucose (chuyển kali vào tế bào), Sodium bicarbonate (nếu có nhiễm toan), Beta-2 agonist (salbutamol) - chuyển kali vào tế bào, Furosemide (tăng bài tiết kali) nếu chức năng thận bình thường, Hemodialysis nếu tăng kali nặng không đáp ứng",
+            "treatment": [
+                "Ngừng spironolactone ngay lập tức",
+                "Đo kali máu ngay (ECG nếu có thể)",
+                "Xử trí tăng kali máu:",
+                "  - Nếu kali > 6.5 mEq/L hoặc có dấu hiệu tim mạch: Calcium gluconate 1-3g IV (bảo vệ tim, tác dụng nhanh)",
+                "  - Insulin regular 10 đơn vị + Dextrose 50% 50ml IV (chuyển kali vào tế bào, tác dụng trong 15-30 phút)",
+                "  - Sodium bicarbonate 50-100 mEq IV nếu có nhiễm toan (pH < 7.35)",
+                "  - Salbutamol nebulizer 10-20mg (beta-2 agonist, chuyển kali vào tế bào)",
+                "  - Furosemide 40-80mg IV nếu chức năng thận bình thường (tăng bài tiết kali)",
+                "  - Hemodialysis nếu kali > 6.5 mEq/L và không đáp ứng với điều trị trên",
+                "Theo dõi ECG liên tục (tăng kali gây thay đổi ECG: sóng T cao nhọn, kéo dài PR, mất sóng P, giãn QRS, rối loạn nhịp)",
+                "Theo dõi kali máu thường xuyên (mỗi 1-2 giờ cho đến khi ổn định)",
+                "Điều chỉnh các rối loạn điện giải khác (natri, canxi, magie)",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Rửa dạ dày và than hoạt tính nếu uống quá liều trong vòng 1-2 giờ (tuy nhiên spironolactone hấp thu chậm)",
+                "Theo dõi ít nhất 24-48 giờ do half-life dài (10-35 giờ)"
+            ],
+            "monitoring": "ECG liên tục, kali máu (mỗi 1-2 giờ), natri máu, chức năng thận (creatinine, BUN), huyết áp, nhịp tim, dấu hiệu rối loạn nhịp tim, dấu hiệu suy hô hấp, dấu hiệu yếu cơ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên uống với thức ăn để tăng hấp thu và giảm kích ứng dạ dày",
+                "timing": "Uống 1-2 lần/ngày vào cùng một giờ mỗi ngày. Có thể uống vào buổi sáng hoặc chia 2 lần (sáng và trưa). Tránh uống vào buổi tối muộn để tránh đi tiểu đêm. Tác dụng chậm (vài ngày đến vài tuần), cần kiên nhẫn."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "Không áp dụng",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Spironolactone chỉ có dạng uống (PO)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Aldactone (spironolactone)",
+                "UpToDate - Spironolactone: Drug information",
+                "RALES Study - New England Journal of Medicine (1999) - Spironolactone trong suy tim",
+                "EPHESUS Study - New England Journal of Medicine (2003) - Eplerenone sau nhồi máu cơ tim",
+                "American Heart Association/American College of Cardiology guidelines - Heart failure management",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics - Diuretics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (RALES, EPHESUS) showing mortality benefit in heart failure"
+        }
 
 },
 
