@@ -1,6 +1,6 @@
 """
 Other Common Medications
-Generated from drug_database_data.py
+Active module - contains all other common drug data
 """
 
 OTHER_DRUGS = {

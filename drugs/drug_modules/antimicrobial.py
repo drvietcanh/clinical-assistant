@@ -1,6 +1,6 @@
 """
 Antimicrobial Medications (Antibiotics, Antivirals, Antifungals)
-Generated from drug_database_data.py
+Active module - contains all antimicrobial drug data
 """
 
 ANTIMICROBIAL_DRUGS = {

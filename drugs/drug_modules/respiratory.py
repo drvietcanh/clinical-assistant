@@ -1,6 +1,6 @@
 """
 Respiratory Medications
-Generated from drug_database_data.py
+Active module - contains all respiratory drug data
 """
 
 RESPIRATORY_DRUGS = {

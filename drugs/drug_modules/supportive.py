@@ -1,6 +1,6 @@
 """
 Supportive Care Medications (Vitamins, Corticosteroids, Antihistamines)
-Generated from drug_database_data.py
+Active module - contains all supportive care drug data
 """
 
 SUPPORTIVE_DRUGS = {

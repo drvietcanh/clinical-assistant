@@ -1,6 +1,6 @@
 """
 Oncology Medications
-Generated from drug_database_data.py
+Active module - contains all oncology drug data
 """
 
 ONCOLOGY_DRUGS = {

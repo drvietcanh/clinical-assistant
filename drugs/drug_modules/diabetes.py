@@ -1,6 +1,6 @@
 """
 Diabetes Medications
-Generated from drug_database_data.py
+Active module - contains all diabetes drug data
 """
 
 DIABETES_DRUGS = {

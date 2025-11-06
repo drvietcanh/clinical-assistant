@@ -1,6 +1,6 @@
 """
 Emergency and ACLS Medications
-Generated from drug_database_data.py
+Active module - contains all emergency and ACLS drug data
 """
 
 EMERGENCY_DRUGS = {
@@ -76,7 +76,176 @@ EMERGENCY_DRUGS = {
             "clearance": "Rất nhanh, bị bất hoạt bởi enzyme (MAO và COMT trong gan và mô)"
         },
         "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh. Kiểm tra màu sắc trước dùng (hóa nâu = hỏng).",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, tiêm ngoài mạch có thể gây hoại tử mô. Liều cao có thể gây nhồi máu cơ tim, đột quỵ, hoặc tử vong."
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, tiêm ngoài mạch có thể gây hoại tử mô. Liều cao có thể gây nhồi máu cơ tim, đột quỵ, hoặc tử vong.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Beta-blockers (non-selective)",
+                    "mechanism": "Beta-blockers đối kháng tác dụng beta của epinephrine, nhưng không đối kháng tác dụng alpha. Kết quả: tăng huyết áp nặng do chỉ còn tác dụng co mạch alpha, không có tác dụng giãn mạch beta-2.",
+                    "effect": "Tăng huyết áp nặng, nguy cơ đột quỵ, nhồi máu cơ tim, phù phổi cấp",
+                    "management": "TRÁNH dùng epinephrine với beta-blockers non-selective. Nếu cần trong cấp cứu: dùng liều thấp, theo dõi huyết áp chặt chẽ. Có thể cần thuốc giãn mạch (phentolamine) nếu tăng huyết áp nặng."
+                },
+                {
+                    "drug": "MAOIs (Monoamine Oxidase Inhibitors)",
+                    "mechanism": "MAOIs ức chế enzyme MAO chuyển hóa epinephrine, làm tăng nồng độ và thời gian tác dụng của epinephrine.",
+                    "effect": "Tăng tác dụng và thời gian tác dụng của epinephrine, tăng nguy cơ tăng huyết áp nặng, nhồi máu cơ tim, đột quỵ",
+                    "management": "GIẢM LIỀU epinephrine xuống 10-25% liều thông thường. Theo dõi huyết áp chặt chẽ. Trong cấp cứu: dùng liều thấp nhất có hiệu quả."
+                },
+                {
+                    "drug": "Tricyclic Antidepressants (TCAs)",
+                    "mechanism": "TCAs ức chế tái hấp thu norepinephrine, tăng nồng độ catecholamine, tăng tác dụng của epinephrine.",
+                    "effect": "Tăng tác dụng của epinephrine, tăng nguy cơ tăng huyết áp nặng, rối loạn nhịp tim",
+                    "management": "Thận trọng, giảm liều epinephrine. Theo dõi huyết áp và ECG chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Digoxin làm tăng nhạy cảm của cơ tim với catecholamine, tăng nguy cơ rối loạn nhịp tim.",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim (nhịp nhanh thất, rung thất), đặc biệt ở bệnh nhân digoxin độc tính",
+                    "management": "Thận trọng, theo dõi ECG chặt chẽ. Kiểm tra nồng độ digoxin nếu có thể. Tránh dùng epinephrine nếu có dấu hiệu digoxin độc tính."
+                },
+                {
+                    "drug": "Alpha-blockers",
+                    "mechanism": "Alpha-blockers đối kháng tác dụng alpha của epinephrine, có thể làm giảm hiệu quả điều trị sốc.",
+                    "effect": "Giảm hiệu quả điều trị sốc, có thể cần liều cao hơn",
+                    "management": "Có thể cần tăng liều epinephrine. Theo dõi đáp ứng điều trị."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Beta-2 agonists (Salbutamol, Salmeterol)",
+                    "mechanism": "Cùng tác dụng beta-2, có thể tăng tác dụng giãn phế quản và tăng nhịp tim.",
+                    "effect": "Tăng nhịp tim, run tay (nhẹ)",
+                    "management": "Theo dõi nhịp tim. Không cần điều chỉnh liều thường quy."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Không có chống chỉ định tuyệt đối trong cấp cứu ngừng tim",
+                "Dị ứng epinephrine (hiếm nhưng nguy hiểm)"
+            ],
+            "relative": [
+                "Bệnh mạch vành - tăng nguy cơ nhồi máu cơ tim, đau thắt ngực",
+                "Tăng huyết áp nặng không kiểm soát - có thể làm tăng huyết áp hơn nữa",
+                "Rối loạn nhịp tim nặng - có thể làm nặng rối loạn nhịp",
+                "Đột quỵ gần đây - tăng nguy cơ tái phát",
+                "Pheochromocytoma - tăng nguy cơ tăng huyết áp nặng, cơn tăng huyết áp",
+                "Dùng với beta-blockers non-selective - tăng huyết áp nặng",
+                "Dùng với MAOIs - tăng tác dụng, cần giảm liều",
+                "Dùng với TCAs - tăng tác dụng, cần thận trọng",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm với tác dụng phụ",
+                "Bệnh nhân có bệnh mạch máu ngoại biên - tăng nguy cơ thiếu máu cục bộ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Epinephrine là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Epinephrine có thể qua nhau thai và có thể gây co mạch, giảm tưới máu nhau thai. Tuy nhiên, trong cấp cứu (sốc phản vệ, ngừng tim), lợi ích cứu sống mẹ vượt quá nguy cơ cho thai nhi. Sốc phản vệ và ngừng tim có thể gây tử vong cho cả mẹ và thai nhi nếu không điều trị. Epinephrine được sử dụng trong cấp cứu ở phụ nữ có thai và được coi là an toàn khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Epinephrine có thời gian bán thải rất ngắn (2-3 phút) và bị chuyển hóa nhanh. Không có khả năng bài tiết vào sữa mẹ ở nồng độ đáng kể. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Epinephrine có thời gian bán thải rất ngắn và không bài tiết vào sữa mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Epinephrine chuyển hóa nhanh bởi MAO và COMT, nhưng không phụ thuộc vào chức năng gan.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Epinephrine chuyển hóa nhanh, không tích lũy ở suy gan.",
+            "notes": "Epinephrine bị chuyển hóa nhanh bởi enzyme MAO và COMT trong gan và mô, nhưng không phụ thuộc vào chức năng gan. Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng huyết áp nặng (có thể >200/120 mmHg)",
+                "Nhịp tim nhanh nặng (>150-200 bpm)",
+                "Nhồi máu cơ tim",
+                "Đột quỵ",
+                "Phù phổi cấp",
+                "Rối loạn nhịp tim (rung nhĩ, rung thất)",
+                "Co giật",
+                "Hoại tử mô (nếu tiêm ngoài mạch)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Có thể dùng thuốc giãn mạch (phentolamine, nitroglycerin) để đối kháng tác dụng alpha. Beta-blockers có thể đối kháng tác dụng beta nhưng nguy hiểm (tăng huyết áp nặng).",
+            "treatment": [
+                "Ngừng ngay epinephrine nếu đang truyền",
+                "Theo dõi ECG và huyết áp liên tục",
+                "Nếu tăng huyết áp nặng:",
+                "  - Phentolamine 5-10mg IV (đối kháng alpha, giảm huyết áp)",
+                "  - Hoặc Nitroglycerin IV (giãn mạch, giảm huyết áp)",
+                "  - Hoặc Labetalol (alpha + beta blocker) - thận trọng",
+                "Nếu nhịp tim nhanh nặng:",
+                "  - Beta-blocker (metoprolol, esmolol) - THẬN TRỌNG, chỉ dùng nếu không có tăng huyết áp nặng",
+                "  - Nếu có tăng huyết áp + nhịp nhanh: Labetalol",
+                "Nếu nhồi máu cơ tim: Điều trị theo protocol nhồi máu cơ tim (aspirin, clopidogrel, statin, có thể cần can thiệp)",
+                "Nếu đột quỵ: Điều trị theo protocol đột quỵ",
+                "Nếu phù phổi cấp: Furosemide, nitroglycerin, hỗ trợ hô hấp",
+                "Nếu rối loạn nhịp: Điều trị theo protocol rối loạn nhịp",
+                "Nếu hoại tử mô (tiêm ngoài mạch):",
+                "  - Phentolamine 5-10mg pha trong 10-15ml NS tiêm quanh vùng hoại tử (trong vòng 12 giờ)",
+                "  - Chườm ấm",
+                "  - Có thể cần phẫu thuật nếu hoại tử nặng",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, ECG trong ít nhất 2-4 giờ"
+            ],
+            "monitoring": "Theo dõi ECG, huyết áp, nhịp tim liên tục trong ít nhất 2-4 giờ sau khi dùng. Theo dõi lâu hơn nếu có biến chứng (nhồi máu cơ tim, đột quỵ, rối loạn nhịp)."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Phentolamine",
+                    "mechanism": "Alpha-blocker, đối kháng tác dụng alpha của epinephrine (co mạch, tăng huyết áp)",
+                    "indication": "Tăng huyết áp nặng do quá liều epinephrine, hoại tử mô do tiêm ngoài mạch",
+                    "dose": "5-10mg IV cho tăng huyết áp, 5-10mg pha trong 10-15ml NS tiêm quanh vùng hoại tử (trong vòng 12 giờ)"
+                },
+                {
+                    "agent": "Nitroglycerin",
+                    "mechanism": "Giãn mạch, giảm huyết áp",
+                    "indication": "Tăng huyết áp nặng do quá liều epinephrine",
+                    "dose": "5-10mcg/phút IV, tăng dần đến khi đạt huyết áp mục tiêu"
+                },
+                {
+                    "agent": "Beta-blockers (thận trọng)",
+                    "mechanism": "Đối kháng tác dụng beta của epinephrine (nhịp tim nhanh)",
+                    "indication": "Nhịp tim nhanh nặng do quá liều epinephrine (CHỈ dùng nếu không có tăng huyết áp nặng)",
+                    "dose": "Metoprolol 5mg IV hoặc Esmolol 0.5mg/kg IV bolus, sau đó 50-200mcg/kg/phút IV infusion"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha loãng: 1mg epinephrine (1ml 1:1000) trong 9ml NS = 0.1mg/ml (1:10000). Hoặc dùng trực tiếp dung dịch 1:10000 nếu có.",
+                "infusion_rate": "Cardiac arrest: 1mg IV bolus mỗi 3-5 phút. Anaphylaxis: 0.1-0.25mg IV bolus (pha loãng). Shock: 0.1-2mcg/kg/phút IV infusion (pha 1mg trong 250ml D5W = 4mcg/ml).",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": ["Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion."],
+                "notes": "QUAN TRỌNG: 1) Pha đúng nồng độ: 1:1000 (1mg/ml) cho IM/SC, 1:10000 (0.1mg/ml) cho IV, 2) TUYỆT ĐỐI KHÔNG tiêm ngoài mạch (hoại tử), 3) Trong anaphylaxis: tiêm IM ở đùi ngoài (hấp thu nhanh hơn), 4) Theo dõi huyết áp và ECG chặt chẽ, 5) Kiểm tra màu sắc trước dùng (hóa nâu = hỏng)."
+            },
+            "im": {
+                "reconstitution": "Dùng trực tiếp dung dịch 1:1000 (1mg/ml).",
+                "injection_site": "Đùi ngoài (vastus lateralis) - hấp thu nhanh nhất. Có thể dùng cánh tay nhưng hấp thu chậm hơn.",
+                "notes": "Anaphylaxis: 0.3-0.5mg IM ở đùi ngoài. Trẻ em: 0.01mg/kg IM ở đùi ngoài (tối đa 0.5mg). Tiêm sâu vào cơ, không tiêm vào mỡ dưới da."
+            },
+            "inhaled": {
+                "reconstitution": "Dùng dung dịch 1:1000 (1mg/ml) pha trong 3-5ml NS cho nebulizer.",
+                "dose": "0.5-1mg (0.5-1ml 1:1000) pha trong 3-5ml NS, khí dung mỗi 15-20 phút nếu cần.",
+                "notes": "Dùng trong cơn hen nặng. Theo dõi nhịp tim và huyết áp."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Epinephrine",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "Anaphylaxis Guidelines - World Allergy Organization",
+                "UpToDate - Epinephrine: Drug Information",
+                "Medscape - Epinephrine Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Epinephrine Monograph",
+                "Micromedex - Epinephrine Drug Information"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, anaphylaxis guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     "Atropine": {
         "group": "Emergency - Anticholinergic",
@@ -220,7 +389,153 @@ EMERGENCY_DRUGS = {
             "clearance": "Chủ yếu qua gan, cần điều chỉnh ở suy gan"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch: tránh đông lạnh.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, độc tính tim mạch có thể gây block nhĩ thất, rung thất, và tử vong, đặc biệt ở suy gan hoặc quá liều. Độc tính thần kinh trung ương (co giật) là dấu hiệu cảnh báo sớm."
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, độc tính tim mạch có thể gây block nhĩ thất, rung thất, và tử vong, đặc biệt ở suy gan hoặc quá liều. Độc tính thần kinh trung ương (co giật) là dấu hiệu cảnh báo sớm.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Beta-blockers (Propranolol, Metoprolol, etc.)",
+                    "mechanism": "Beta-blockers ức chế enzyme CYP3A4 và CYP1A2 chuyển hóa lidocaine, làm giảm chuyển hóa và tăng nồng độ lidocaine trong máu.",
+                    "effect": "Tăng nồng độ lidocaine, tăng nguy cơ độc tính thần kinh trung ương (co giật, lú lẫn) và độc tính tim mạch (block AV, rung thất)",
+                    "management": "GIẢM LIỀU lidocaine xuống 30-50% khi dùng với beta-blockers. Theo dõi chặt chẽ dấu hiệu độc tính. Kiểm tra nồng độ lidocaine trong máu nếu có thể."
+                },
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Cimetidine ức chế enzyme CYP3A4 và CYP1A2 chuyển hóa lidocaine, làm giảm chuyển hóa và tăng nồng độ lidocaine trong máu.",
+                    "effect": "Tăng nồng độ lidocaine, tăng nguy cơ độc tính thần kinh trung ương và độc tính tim mạch",
+                    "management": "GIẢM LIỀU lidocaine xuống 30-50% khi dùng với cimetidine. Theo dõi chặt chẽ dấu hiệu độc tính. Có thể dùng ranitidine hoặc famotidine thay thế cimetidine."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Phenytoin có thể tăng độc tính của lidocaine (cơ chế không rõ ràng, có thể liên quan đến tác dụng trên hệ thần kinh trung ương).",
+                    "effect": "Tăng nguy cơ độc tính thần kinh trung ương (co giật, lú lẫn)",
+                    "management": "Thận trọng, theo dõi chặt chẽ dấu hiệu độc tính. Có thể cần giảm liều lidocaine."
+                },
+                {
+                    "drug": "Amiodarone",
+                    "mechanism": "Amiodarone có thể tăng độc tính tim mạch của lidocaine (cả hai đều là thuốc chống loạn nhịp, có thể tăng tác dụng phụ).",
+                    "effect": "Tăng nguy cơ độc tính tim mạch (block AV, rung thất)",
+                    "management": "Thận trọng, theo dõi ECG chặt chẽ. Có thể cần giảm liều lidocaine."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Quinidine, Procainamide",
+                    "mechanism": "Các thuốc chống loạn nhịp khác có thể tăng tác dụng phụ tim mạch.",
+                    "effect": "Tăng nguy cơ độc tính tim mạch (nhẹ)",
+                    "management": "Theo dõi ECG. Không cần điều chỉnh liều thường quy."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng lidocaine hoặc thuốc gây tê nhóm amide",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp - có thể làm nặng block, gây nhịp chậm nặng",
+                "Hội chứng Adams-Stokes - nguy cơ nhịp chậm nặng, ngừng tim"
+            ],
+            "relative": [
+                "Suy gan nặng - giảm chuyển hóa, tích lũy, tăng nguy cơ độc tính",
+                "Suy tim nặng - giảm phân bố, tăng nồng độ, tăng nguy cơ độc tính",
+                "Người cao tuổi - giảm chuyển hóa, tăng nhạy cảm với độc tính",
+                "Block nhĩ thất độ 1 - có thể làm nặng block",
+                "Block nhánh - có thể làm nặng block",
+                "Rối loạn nhịp nặng - có thể làm nặng rối loạn nhịp",
+                "Dùng với beta-blockers hoặc cimetidine - tăng nồng độ, cần giảm liều",
+                "Bệnh nhân có tiền sử co giật - tăng nguy cơ co giật"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Lidocaine là thuốc phân loại B. Có một số nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Lidocaine có thể qua nhau thai, nhưng nồng độ trong máu thai nhi thấp. Được sử dụng trong gây tê sản khoa (epidural, spinal) và được coi là an toàn. Trong cấp cứu (rối loạn nhịp thất), lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Lidocaine bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ khi dùng liều điều trị. Khi dùng liều cao hoặc kéo dài, có thể cần thận trọng.",
+                "recommendation": "Có thể dùng khi cho con bú. Lidocaine bài tiết vào sữa mẹ ở nồng độ thấp và không gây tác dụng phụ ở trẻ bú mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Giảm liều 20-30%. Lidocaine chuyển hóa mạnh ở gan (CYP3A4, CYP1A2), suy gan nhẹ có thể làm giảm chuyển hóa.",
+            "moderate": "Giảm liều 30-50%. Theo dõi chặt chẽ dấu hiệu độc tính.",
+            "severe": "Giảm liều 50-70% hoặc tránh dùng. Suy gan nặng làm giảm chuyển hóa mạnh, tích lũy, tăng nguy cơ độc tính. Nếu cần dùng: dùng liều thấp, theo dõi chặt chẽ, kiểm tra nồng độ lidocaine trong máu.",
+            "notes": "Lidocaine chuyển hóa mạnh ở gan (CYP3A4, CYP1A2). Suy gan làm giảm chuyển hóa, tích lũy, tăng nguy cơ độc tính. PHẢI điều chỉnh liều ở suy gan. Theo dõi chặt chẽ dấu hiệu độc tính (co giật, lú lẫn, block AV)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Độc tính thần kinh trung ương (dấu hiệu sớm):",
+                "  - Chóng mặt, ù tai, nhìn mờ",
+                "  - Lú lẫn, kích động",
+                "  - Co giật",
+                "  - Mất ý thức, ngừng thở",
+                "Độc tính tim mạch (dấu hiệu muộn, nguy hiểm):",
+                "  - Block nhĩ thất độ 2-3",
+                "  - Nhịp tim chậm nặng",
+                "  - Rung thất",
+                "  - Ngừng tim",
+                "Hạ huyết áp",
+                "Phản ứng dị ứng (hiếm): phát ban, sốc phản vệ"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho quá liều lidocaine. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay lidocaine nếu đang truyền",
+                "Theo dõi ECG và dấu hiệu sinh tồn liên tục",
+                "Nếu độc tính thần kinh trung ương (co giật):",
+                "  - Benzodiazepine (diazepam 5-10mg IV, lorazepam 2-4mg IV) - điều trị chính",
+                "  - Nếu không đáp ứng: Phenytoin, phenobarbital",
+                "  - Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Nếu độc tính tim mạch (block AV, nhịp chậm, rung thất):",
+                "  - Nếu block AV độ 2-3 hoặc nhịp chậm nặng:",
+                "    - Atropine 0.5-1mg IV (nếu không có block AV)",
+                "    - Epinephrine 1mg IV (nếu ngừng tim)",
+                "    - Máy tạo nhịp tạm thời nếu cần",
+                "  - Nếu rung thất: Defibrillation",
+                "  - Nếu ngừng tim: CPR, ACLS protocol",
+                "Nếu hạ huyết áp:",
+                "  - Truyền dịch (NS, LR)",
+                "  - Thuốc vận mạch nếu cần (epinephrine, norepinephrine)",
+                "Nếu phản ứng dị ứng:",
+                "  - Epinephrine 0.3-0.5mg IM",
+                "  - Diphenhydramine 25-50mg IV",
+                "  - Corticosteroid (methylprednisolone 125mg IV)",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, ECG, nhịp thở, SpO2 trong ít nhất 2-4 giờ",
+                "Kiểm tra nồng độ lidocaine trong máu nếu có thể (nồng độ điều trị: 1.5-5mcg/ml, độc tính: >5-6mcg/ml)"
+            ],
+            "monitoring": "Theo dõi ECG, huyết áp, nhịp tim, nhịp thở, SpO2 liên tục trong ít nhất 2-4 giờ sau khi dùng. Theo dõi lâu hơn nếu có biến chứng (độc tính thần kinh, độc tính tim mạch). Kiểm tra nồng độ lidocaine trong máu nếu có thể."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có reversal agent đặc hiệu cho lidocaine. Điều trị hỗ trợ và điều trị triệu chứng (benzodiazepine cho co giật, atropine/epinephrine cho block AV/nhịp chậm)."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Dùng trực tiếp từ lọ (1% = 10mg/ml, 2% = 20mg/ml). Không cần pha loãng cho bolus. Cho infusion: pha 1g (50ml 2%) trong 450ml D5W = 2mg/ml.",
+                "infusion_rate": "Cardiac arrest: 1-1.5mg/kg IV bolus, lặp lại 0.5-0.75mg/kg mỗi 5-10 phút (tối đa 3mg/kg). VT with pulse: 1-1.5mg/kg IV bolus, sau đó 1-4mg/phút IV infusion. Trẻ em: 1mg/kg IV/IO bolus, sau đó 20-50mcg/kg/phút IV infusion.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "LR (Lactated Ringer's)"],
+                "incompatibility": ["Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion."],
+                "notes": "QUAN TRỌNG: 1) PHẢI điều chỉnh liều ở suy gan (giảm 30-70%), 2) PHẢI điều chỉnh liều ở suy tim (giảm 20-30%), 3) PHẢI điều chỉnh liều khi dùng với beta-blockers hoặc cimetidine (giảm 30-50%), 4) Độc tính thần kinh trung ương là dấu hiệu CẢNH BÁO SỚM - ngừng ngay nếu có, 5) Tiêm IV chậm (không quá 25-50mg/phút) để tránh độc tính, 6) Theo dõi ECG chặt chẽ, 7) Giảm liều ở người cao tuổi."
+            },
+            "local_anesthesia": {
+                "reconstitution": "Dùng trực tiếp từ lọ (1% = 10mg/ml, 2% = 20mg/ml). Có thể pha với epinephrine để kéo dài tác dụng và giảm hấp thu.",
+                "max_dose": "Không có epinephrine: 4.5mg/kg (tối đa 300mg). Có epinephrine: 7mg/kg (tối đa 500mg).",
+                "notes": "Tuân thủ liều tối đa để tránh độc tính. Không tiêm vào mạch máu. Theo dõi dấu hiệu độc tính (chóng mặt, ù tai, co giật)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lidocaine",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "UpToDate - Lidocaine: Drug Information",
+                "Medscape - Lidocaine Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Lidocaine Monograph",
+                "Micromedex - Lidocaine Drug Information"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     "Adenosine": {
         "group": "Emergency - Antiarrhythmic",
@@ -488,7 +803,126 @@ EMERGENCY_DRUGS = {
             "clearance": "Gan (glucuronidation), thời gian bán thải ngắn hơn nhiều so với hầu hết opioid"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Có thể bảo quản ở nhiệt độ 2-8°C.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, thời gian tác dụng ngắn có thể dẫn đến tái ngộ độc opioid nếu không theo dõi đúng. Hội chứng cai opioid có thể nguy hiểm ở bệnh nhân nghiện."
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, thời gian tác dụng ngắn có thể dẫn đến tái ngộ độc opioid nếu không theo dõi đúng. Hội chứng cai opioid có thể nguy hiểm ở bệnh nhân nghiện.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Opioids (Morphine, Fentanyl, Heroin, Methadone, etc.)",
+                    "mechanism": "Naloxone là opioid receptor antagonist cạnh tranh, đẩy opioid ra khỏi receptor, đảo ngược hoàn toàn tác dụng của opioid.",
+                    "effect": "Đảo ngược tác dụng opioid (ức chế hô hấp, an thần, giảm đau, miosis). Nếu opioid có thời gian tác dụng dài hơn naloxone → tái ngộ độc sau khi naloxone hết tác dụng.",
+                    "management": "Đây là tác dụng điều trị mong muốn. Tuy nhiên, cần theo dõi sát ít nhất 2-4 giờ sau khi dùng naloxone vì nguy cơ tái ngộ độc. Nếu opioid có thời gian tác dụng dài (methadone, buprenorphine), có thể cần infusion naloxone."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Buprenorphine",
+                    "mechanism": "Buprenorphine có ái lực rất cao với opioid receptor, khó bị đẩy ra bởi naloxone. Có thể cần liều cao hơn hoặc không đáp ứng.",
+                    "effect": "Có thể không đảo ngược hoàn toàn tác dụng của buprenorphine, hoặc cần liều naloxone cao hơn",
+                    "management": "Có thể cần liều naloxone cao hơn (2-4mg) hoặc infusion. Theo dõi sát, có thể cần hỗ trợ hô hấp nếu không đáp ứng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng naloxone (hiếm)"
+            ],
+            "relative": [
+                "Bệnh nhân nghiện opioid - có thể gây hội chứng cai nặng (kích động, nôn, tăng huyết áp, nhịp tim nhanh)",
+                "Bệnh nhân dùng opioid để giảm đau mãn tính - có thể đảo ngược hoàn toàn giảm đau, gây đau nặng",
+                "Bệnh nhân có tiền sử co giật - có thể gây co giật",
+                "Bệnh nhân có bệnh tim mạch - hội chứng cai có thể gây tăng huyết áp, nhịp tim nhanh, nguy cơ biến cố tim mạch"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Naloxone là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Naloxone có thể qua nhau thai. Tuy nhiên, trong quá liều opioid, lợi ích cứu sống mẹ (và thai nhi) vượt quá nguy cơ. Quá liều opioid có thể gây tử vong cho cả mẹ và thai nhi (ức chế hô hấp, thiếu oxy). Naloxone được sử dụng trong cấp cứu ở phụ nữ có thai và được coi là an toàn khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Naloxone có thời gian bán thải ngắn (30-90 phút) và bị chuyển hóa nhanh. Không có khả năng bài tiết vào sữa mẹ ở nồng độ đáng kể. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Naloxone có thời gian bán thải ngắn và không bài tiết vào sữa mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Naloxone chuyển hóa qua gan nhưng không tích lũy ở suy gan nhẹ.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Naloxone chuyển hóa qua gan nhưng không tích lũy ở suy gan nặng.",
+            "notes": "Naloxone chuyển hóa qua gan (glucuronidation), nhưng không tích lũy ở suy gan. Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hội chứng cai opioid nặng (kích động, nôn, tăng huyết áp, nhịp tim nhanh, run, đau cơ)",
+                "Co giật (hiếm)",
+                "Phù phổi cấp (hiếm)",
+                "Rối loạn nhịp tim (hiếm)",
+                "Tăng huyết áp nặng",
+                "Tái ngộ độc opioid (sau khi naloxone hết tác dụng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho quá liều naloxone. Có thể dùng opioid (morphine, fentanyl) để đối kháng tác dụng nếu hội chứng cai quá nặng, nhưng THẬN TRỌNG (có thể gây ức chế hô hấp trở lại).",
+            "treatment": [
+                "Ngừng ngay naloxone nếu đang truyền",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Nếu hội chứng cai nặng:",
+                "  - Hỗ trợ tâm lý, an ủi bệnh nhân",
+                "  - Nếu tăng huyết áp nặng: Thuốc hạ huyết áp (labetalol, clonidine)",
+                "  - Nếu nôn: Thuốc chống nôn (ondansetron, metoclopramide)",
+                "  - Nếu đau: Thuốc giảm đau không opioid (paracetamol, ibuprofen)",
+                "  - THẬN TRỌNG: Không dùng opioid để điều trị hội chứng cai (có thể gây ức chế hô hấp trở lại)",
+                "Nếu co giật:",
+                "  - Benzodiazepine (diazepam, lorazepam) IV",
+                "  - Theo dõi hô hấp (benzodiazepine có thể ức chế hô hấp)",
+                "Nếu phù phổi cấp:",
+                "  - Hỗ trợ hô hấp: Thở oxy, CPAP/BiPAP nếu cần",
+                "  - Furosemide nếu có suy tim",
+                "  - Nitroglycerin nếu có tăng huyết áp",
+                "Nếu tái ngộ độc opioid:",
+                "  - Dùng lại naloxone (0.4-2mg IV/IM)",
+                "  - Hoặc dùng infusion naloxone (0.25-6.25mcg/kg/giờ IV)",
+                "  - Theo dõi sát nhịp thở và SpO2",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2 trong ít nhất 2-4 giờ"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn (huyết áp, nhịp tim, nhịp thở, SpO2) liên tục trong ít nhất 2-4 giờ sau khi dùng naloxone. Theo dõi lâu hơn nếu có biến chứng (hội chứng cai nặng, co giật, phù phổi, tái ngộ độc opioid)."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có reversal agent cho naloxone. Nếu hội chứng cai quá nặng, có thể dùng opioid (morphine, fentanyl) để đối kháng, nhưng THẬN TRỌNG vì có thể gây ức chế hô hấp trở lại."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Dùng trực tiếp từ lọ (0.4mg/ml hoặc 1mg/ml). Không cần pha loãng cho bolus. Cho infusion: pha 2mg trong 500ml D5W hoặc NS = 4mcg/ml.",
+                "infusion_rate": "Overdose: 0.4-2mg IV bolus, lặp lại mỗi 2-3 phút đến khi đáp ứng. Reversal: 0.04-0.4mg IV titrate đến khi đáp ứng. Infusion: 0.25-6.25mcg/kg/giờ IV (pha 2mg trong 500ml = 4mcg/ml).",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": ["Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion."],
+                "notes": "QUAN TRỌNG: 1) Tác dụng ngắn (30-90 phút) - opioid có thể tác dụng trở lại, 2) Theo dõi sát ít nhất 2-4 giờ sau khi dùng, 3) Nếu opioid có thời gian tác dụng dài (methadone, buprenorphine), có thể cần infusion, 4) Ở bệnh nhân nghiện: có thể gây hội chứng cai nặng, 5) Dùng liều thấp (0.04-0.4mg) khi đảo ngược tác dụng opioid sau phẫu thuật."
+            },
+            "im": {
+                "reconstitution": "Dùng trực tiếp từ lọ (0.4mg/ml hoặc 1mg/ml).",
+                "injection_site": "Cánh tay hoặc đùi ngoài.",
+                "notes": "Overdose: 0.4-2mg IM, lặp lại mỗi 2-3 phút đến khi đáp ứng. Trẻ em: 0.01mg/kg IM, lặp lại đến khi đáp ứng. Tác dụng chậm hơn IV (2-5 phút so với 1-2 phút)."
+            },
+            "inhaled": {
+                "reconstitution": "Dùng dạng xịt mũi (Narcan Nasal Spray) - 4mg/0.1ml.",
+                "dose": "4mg (1 lần xịt) vào một bên mũi. Lặp lại sau 2-3 phút nếu không đáp ứng (có thể đổi bên mũi).",
+                "notes": "Dùng trong quá liều opioid ngoài bệnh viện. Tác dụng tương tự IM. Theo dõi sát sau khi dùng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Naloxone",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "Opioid Overdose Guidelines - CDC",
+                "UpToDate - Naloxone: Drug Information",
+                "Medscape - Naloxone Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Naloxone Monograph",
+                "Micromedex - Naloxone Drug Information"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, opioid overdose guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     "Flumazenil": {
         "group": "Emergency - Benzodiazepine Antagonist",
@@ -559,7 +993,123 @@ EMERGENCY_DRUGS = {
             "clearance": "Gan, thời gian bán thải ngắn hơn nhiều so với hầu hết benzodiazepine"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, thời gian tác dụng ngắn có thể dẫn đến tái an thần và tái ức chế hô hấp nếu không theo dõi đúng. Hội chứng cai benzodiazepine có thể nguy hiểm ở bệnh nhân nghiện. Nguy cơ co giật ở bệnh nhân có tiền sử co giật hoặc ngộ độc tricyclic antidepressant."
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, thời gian tác dụng ngắn có thể dẫn đến tái an thần và tái ức chế hô hấp nếu không theo dõi đúng. Hội chứng cai benzodiazepine có thể nguy hiểm ở bệnh nhân nghiện. Nguy cơ co giật ở bệnh nhân có tiền sử co giật hoặc ngộ độc tricyclic antidepressant.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Benzodiazepines (Diazepam, Midazolam, Lorazepam, etc.)",
+                    "mechanism": "Flumazenil là benzodiazepine receptor antagonist cạnh tranh, đẩy benzodiazepine ra khỏi receptor, đảo ngược hoàn toàn tác dụng của benzodiazepine.",
+                    "effect": "Đảo ngược tác dụng benzodiazepine (an thần, ức chế hô hấp, giảm trương lực cơ, mất trí nhớ). Nếu benzodiazepine có thời gian tác dụng dài hơn flumazenil → tái an thần sau khi flumazenil hết tác dụng.",
+                    "management": "Đây là tác dụng điều trị mong muốn. Tuy nhiên, cần theo dõi sát ít nhất 2-4 giờ sau khi dùng flumazenil vì nguy cơ tái an thần. Nếu benzodiazepine có thời gian tác dụng dài (diazepam, clonazepam), có thể cần lặp lại liều flumazenil."
+                },
+                {
+                    "drug": "Tricyclic Antidepressants (TCAs)",
+                    "mechanism": "Flumazenil có thể làm giảm ngưỡng co giật, và TCAs cũng làm giảm ngưỡng co giật. Kết hợp: tăng nguy cơ co giật nặng.",
+                    "effect": "Tăng nguy cơ co giật nặng, rối loạn nhịp tim, nguy hiểm tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng flumazenil ở ngộ độc tricyclic antidepressant. Nếu không chắc chắn, không dùng flumazenil."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Zolpidem, Zopiclone (Non-benzodiazepine hypnotics)",
+                    "mechanism": "Zolpidem và zopiclone tác dụng trên benzodiazepine receptor, có thể bị đảo ngược bởi flumazenil.",
+                    "effect": "Có thể đảo ngược tác dụng của zolpidem/zopiclone, nhưng có thể không hoàn toàn",
+                    "management": "Có thể dùng flumazenil để đảo ngược quá liều zolpidem/zopiclone. Theo dõi sát."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng flumazenil (hiếm)",
+                "Động kinh đang điều trị với benzodiazepine - có thể gây co giật nặng",
+                "Quá liều tricyclic antidepressant - tăng nguy cơ co giật, rối loạn nhịp tim",
+                "Phụ thuộc benzodiazepine lâu dài - có thể gây hội chứng cai nặng, co giật"
+            ],
+            "relative": [
+                "Bệnh nhân nghiện benzodiazepine - có thể gây hội chứng cai nặng (kích động, run, co giật)",
+                "Bệnh nhân có tiền sử co giật - tăng nguy cơ co giật",
+                "Bệnh nhân dùng benzodiazepine để chống co giật - có thể gây co giật nặng",
+                "Bệnh nhân có bệnh tim mạch - hội chứng cai có thể gây tăng huyết áp, nhịp tim nhanh",
+                "Ngộ độc hỗn hợp (nhiều thuốc) - không chắc chắn thành phần → không dùng flumazenil"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Flumazenil là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Flumazenil có thể qua nhau thai. Tuy nhiên, trong quá liều benzodiazepine, lợi ích cứu sống mẹ (và thai nhi) vượt quá nguy cơ. Quá liều benzodiazepine có thể gây tử vong cho cả mẹ và thai nhi (ức chế hô hấp, thiếu oxy). Flumazenil được sử dụng trong cấp cứu ở phụ nữ có thai và được coi là an toàn khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Flumazenil có thời gian bán thải ngắn (41-79 phút) và bị chuyển hóa nhanh. Không có khả năng bài tiết vào sữa mẹ ở nồng độ đáng kể. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Flumazenil có thời gian bán thải ngắn và không bài tiết vào sữa mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Flumazenil chuyển hóa qua gan nhưng không tích lũy ở suy gan nhẹ.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Flumazenil chuyển hóa qua gan nhưng không tích lũy ở suy gan nặng.",
+            "notes": "Flumazenil chuyển hóa qua gan (glucuronidation), nhưng không tích lũy ở suy gan. Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hội chứng cai benzodiazepine nặng (kích động, run, co giật, lo lắng)",
+                "Co giật nặng (đặc biệt nguy hiểm ở bệnh nhân có tiền sử co giật hoặc ngộ độc TCA)",
+                "Rối loạn nhịp tim (hiếm, thường liên quan đến ngộ độc TCA)",
+                "Tăng huyết áp",
+                "Tái an thần/tái ức chế hô hấp (sau khi flumazenil hết tác dụng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho quá liều flumazenil. Có thể dùng benzodiazepine (diazepam, midazolam) để đối kháng tác dụng nếu hội chứng cai quá nặng hoặc co giật, nhưng THẬN TRỌNG (có thể gây ức chế hô hấp trở lại).",
+            "treatment": [
+                "Ngừng ngay flumazenil nếu đang truyền",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2, mức độ ý thức",
+                "Nếu co giật:",
+                "  - Benzodiazepine (diazepam 5-10mg IV, lorazepam 2-4mg IV) - đây là điều trị chính",
+                "  - Nếu không đáp ứng: Phenytoin, phenobarbital",
+                "  - Theo dõi hô hấp (benzodiazepine có thể ức chế hô hấp)",
+                "Nếu hội chứng cai nặng:",
+                "  - Hỗ trợ tâm lý, an ủi bệnh nhân",
+                "  - Nếu tăng huyết áp nặng: Thuốc hạ huyết áp (labetalol, clonidine)",
+                "  - Nếu lo lắng nặng: Benzodiazepine (diazepam, lorazepam) - THẬN TRỌNG",
+                "Nếu rối loạn nhịp tim:",
+                "  - Điều trị theo protocol rối loạn nhịp",
+                "  - Nếu liên quan đến ngộ độc TCA: Điều trị theo protocol ngộ độc TCA",
+                "Nếu tái an thần/tái ức chế hô hấp:",
+                "  - Dùng lại flumazenil (0.2mg IV, lặp lại đến khi đáp ứng)",
+                "  - Hoặc dùng benzodiazepine nếu cần an thần (THẬN TRỌNG)",
+                "  - Theo dõi sát nhịp thở và SpO2",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2, mức độ ý thức trong ít nhất 2-4 giờ"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn (huyết áp, nhịp tim, nhịp thở, SpO2, mức độ ý thức) liên tục trong ít nhất 2-4 giờ sau khi dùng flumazenil. Theo dõi lâu hơn nếu có biến chứng (hội chứng cai nặng, co giật, tái an thần)."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có reversal agent cho flumazenil. Nếu hội chứng cai quá nặng hoặc co giật, có thể dùng benzodiazepine (diazepam, midazolam, lorazepam) để đối kháng, nhưng THẬN TRỌNG vì có thể gây ức chế hô hấp trở lại."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Dùng trực tiếp từ lọ (0.1mg/ml). Không cần pha loãng.",
+                "infusion_rate": "Overdose: 0.2mg IV, lặp lại 0.2mg mỗi 1 phút đến khi đáp ứng (tối đa 1mg). Reversal: 0.1-0.2mg IV titrate đến khi đáp ứng. Trẻ em: 0.01mg/kg IV (tối đa 0.2mg), lặp lại đến khi đáp ứng.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": ["Không trộn với các thuốc khác. Tiêm bolus riêng biệt."],
+                "notes": "QUAN TRỌNG: 1) Tác dụng ngắn (45-90 phút) - benzodiazepine có thể tác dụng trở lại, 2) Theo dõi sát ít nhất 2-4 giờ sau khi dùng, 3) CHỐNG CHỈ ĐỊNH ở ngộ độc TCA hoặc động kinh đang điều trị với benzodiazepine, 4) Ở bệnh nhân nghiện: có thể gây hội chứng cai nặng, 5) Khởi đầu với liều thấp (0.2mg), tăng dần nếu cần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Flumazenil",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "Benzodiazepine Overdose Guidelines",
+                "UpToDate - Flumazenil: Drug Information",
+                "Medscape - Flumazenil Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Flumazenil Monograph",
+                "Micromedex - Flumazenil Drug Information"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, benzodiazepine overdose guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
 }
 

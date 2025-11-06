@@ -1,6 +1,6 @@
 """
 Gastrointestinal Drugs
-Generated from drug_database_data.py
+Active module - contains all gastrointestinal drug data
 """
 
 GASTROINTESTINAL_DRUGS = {

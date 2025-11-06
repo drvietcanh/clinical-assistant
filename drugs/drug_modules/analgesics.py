@@ -1,6 +1,6 @@
 """
 Analgesic and Pain Medications
-Generated from drug_database_data.py
+Active module - contains all analgesic drug data
 """
 
 ANALGESICS_DRUGS = {

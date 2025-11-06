@@ -1,6 +1,6 @@
 """
 Cardiovascular Drugs
-Generated from drug_database_data.py
+Active module - contains all cardiovascular drug data
 """
 
 CARDIOVASCULAR_DRUGS = {

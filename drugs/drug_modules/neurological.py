@@ -1,6 +1,6 @@
 """
 Neurological and Psychiatric Medications
-Generated from drug_database_data.py
+Active module - contains all neurological and psychiatric drug data
 """
 
 NEUROLOGICAL_DRUGS = {
@@ -73,7 +73,144 @@ NEUROLOGICAL_DRUGS = {
             "clearance": "Gan, bị ảnh hưởng bởi tự cảm ứng và các thuốc tương tác"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
-        "black_box_warnings": "Nguy cơ hội chứng Stevens-Johnson và hoại tử thượng bì nhiễm độc (TEN), có thể tử vong. Nguy cơ thiếu máu bất sản và giảm bạch cầu nghiêm trọng. Ngừng ngay nếu có phát ban hoặc dấu hiệu giảm bạch cầu. Nguy cơ tự sát và hành vi tự sát. Ngừng đột ngột có thể gây co giật."
+        "black_box_warnings": "Nguy cơ hội chứng Stevens-Johnson và hoại tử thượng bì nhiễm độc (TEN), có thể tử vong. Nguy cơ thiếu máu bất sản và giảm bạch cầu nghiêm trọng. Ngừng ngay nếu có phát ban hoặc dấu hiệu giảm bạch cầu. Nguy cơ tự sát và hành vi tự sát. Ngừng đột ngột có thể gây co giật.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Carbamazepine cảm ứng CYP2C9, tăng chuyển hóa warfarin",
+                    "effect": "Giảm tác dụng chống đông, giảm INR",
+                    "management": "Tăng liều warfarin, theo dõi INR thường xuyên. Có thể cần tăng liều warfarin 50-100% khi dùng carbamazepine."
+                },
+                {
+                    "drug": "Oral contraceptives",
+                    "mechanism": "Carbamazepine cảm ứng CYP3A4, tăng chuyển hóa estrogen và progestin",
+                    "effect": "Giảm hiệu quả tránh thai, tăng nguy cơ mang thai",
+                    "management": "Sử dụng biện pháp tránh thai bổ sung (barrier method) hoặc chuyển sang thuốc tránh thai liều cao hơn. Tư vấn bệnh nhân về nguy cơ."
+                },
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nguy cơ hội chứng serotonin và tăng huyết áp",
+                    "effect": "Nguy cơ hội chứng serotonin, tăng huyết áp nguy hiểm",
+                    "management": "Chống chỉ định. Ngừng MAO inhibitor ít nhất 14 ngày trước khi dùng carbamazepine."
+                },
+                {
+                    "drug": "Erythromycin, Clarithromycin",
+                    "mechanism": "Ức chế CYP3A4, giảm chuyển hóa carbamazepine",
+                    "effect": "Tăng nồng độ carbamazepine, tăng nguy cơ độc tính",
+                    "management": "Giảm liều carbamazepine 25-50%, theo dõi nồng độ trong máu, dấu hiệu độc tính."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Valproate",
+                    "mechanism": "Cả hai đều ức chế chuyển hóa của nhau",
+                    "effect": "Tăng nồng độ carbamazepine-10,11-epoxide (chất chuyển hóa độc)",
+                    "management": "Theo dõi nồng độ trong máu, giảm liều nếu cần. Theo dõi dấu hiệu độc tính."
+                },
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Cảm ứng enzyme lẫn nhau",
+                    "effect": "Giảm nồng độ cả hai thuốc",
+                    "management": "Theo dõi nồng độ trong máu, tăng liều nếu cần để đạt mức điều trị."
+                },
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Ức chế CYP3A4",
+                    "effect": "Tăng nồng độ carbamazepine",
+                    "management": "Giảm liều carbamazepine, theo dõi nồng độ trong máu."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Grapefruit juice",
+                    "mechanism": "Ức chế nhẹ CYP3A4",
+                    "effect": "Tăng nhẹ nồng độ carbamazepine",
+                    "management": "Tránh uống nhiều, hoặc tránh hoàn toàn nếu có thể."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Block nhĩ thất (AV block) độ II hoặc III",
+                "Suy gan nặng (Child-Pugh C)",
+                "Porphyria",
+                "Dùng MAO inhibitor (trong vòng 14 ngày)",
+                "Tiền sử phản ứng quá mẫn với carbamazepine hoặc tricyclic antidepressants",
+                "Giảm bạch cầu hoặc giảm tiểu cầu trước đó do carbamazepine"
+            ],
+            "relative": [
+                "Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều, theo dõi chặt chẽ",
+                "Suy thận (CrCl <30) - giảm liều, theo dõi nồng độ",
+                "Bệnh tim mạch (rối loạn nhịp, block nhĩ thất độ I)",
+                "Tiền sử bệnh tâm thần (nguy cơ tự sát)",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Glaucoma góc đóng",
+                "Bệnh nhân lớn tuổi (tăng nguy cơ hạ natri máu, độc tính)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Carbamazepine có nguy cơ dị tật bẩm sinh (neural tube defects, dị tật tim, sứt môi/hà ếch). Nguy cơ dị tật bẩm sinh khoảng 5-6% (so với 2-3% ở dân số chung). Cần bổ sung acid folic 4-5mg/ngày trước và trong thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền, siêu âm chi tiết, và theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Carbamazepine bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình (nồng độ trong sữa mẹ khoảng 40-50% nồng độ trong huyết thanh mẹ). Nồng độ trong máu trẻ sơ sinh khoảng 5-10% nồng độ trong máu mẹ. Một số trẻ có thể có các tác dụng phụ nhẹ (buồn ngủ, bú kém).",
+                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém, chậm tăng cân). Nếu trẻ có dấu hiệu ảnh hưởng, cân nhắc giảm liều hoặc ngừng cho con bú. Đo nồng độ carbamazepine trong máu trẻ nếu có triệu chứng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều, nhưng theo dõi chặt chẽ chức năng gan và nồng độ trong máu",
+            "moderate": "Giảm liều 25-50%, theo dõi nồng độ trong máu thường xuyên, theo dõi ALT/AST",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ. Theo dõi nồng độ trong máu và ALT/AST thường xuyên. Nguy cơ tích lũy và độc tính cao.",
+            "notes": "Carbamazepine chuyển hóa ở gan qua CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính. Đặc biệt thận trọng vì carbamazepine có thể gây viêm gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: chóng mặt, ataxia, lú lẫn, buồn ngủ, hôn mê, co giật",
+                "Rối loạn tim mạch: nhịp nhanh, hạ huyết áp, block nhĩ thất, rối loạn nhịp",
+                "Rối loạn hô hấp: suy hô hấp, ngừng thở",
+                "Rối loạn tiêu hóa: buồn nôn, nôn",
+                "Triệu chứng khác: sốt, giảm bạch cầu, rối loạn điện giải"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ",
+                "Đo nồng độ carbamazepine trong máu (nguy hiểm nếu >40 mcg/ml)",
+                "Xử trí co giật: benzodiazepine (diazepam, lorazepam) hoặc phenobarbital",
+                "Xử trí block nhĩ thất: atropine, pacemaker nếu cần",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Lọc máu: không hiệu quả (gắn protein cao), nhưng có thể xem xét ở trường hợp nặng",
+                "Theo dõi công thức máu (nguy cơ giảm bạch cầu)"
+            ],
+            "monitoring": "Theo dõi liên tục ý thức, hô hấp, tim mạch, điện tâm đồ, nồng độ carbamazepine trong máu, công thức máu, chức năng gan, điện giải"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc ngay sau bữa ăn để giảm kích ứng dạ dày và tăng hấp thu",
+                "timing": "Chia liều 2-3 lần/ngày. Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Carbamazepine",
+                "UpToDate - Carbamazepine: Drug information",
+                "FDA - Tegretol (carbamazepine) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
     },
     "Fluoxetine": {
         "group": "Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)",
@@ -354,7 +491,149 @@ NEUROLOGICAL_DRUGS = {
             "clearance": "Gan, có thể bị ảnh hưởng bởi tình trạng dinh dưỡng, tuổi tác"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dung dịch IV: bảo quản ở nhiệt độ phòng, không đông lạnh, chỉ dùng NS để pha.",
-        "black_box_warnings": "Nguy cơ hội chứng Stevens-Johnson và hoại tử thượng bì nhiễm độc (TEN), có thể tử vong. Ngừng ngay nếu có phát ban. Nguy cơ tự sát và hành vi tự sát. Giảm bạch cầu, giảm tiểu cầu có thể nặng. Ngừng đột ngột có thể gây status epilepticus."
+        "black_box_warnings": "Nguy cơ hội chứng Stevens-Johnson và hoại tử thượng bì nhiễm độc (TEN), có thể tử vong. Ngừng ngay nếu có phát ban. Nguy cơ tự sát và hành vi tự sát. Giảm bạch cầu, giảm tiểu cầu có thể nặng. Ngừng đột ngột có thể gây status epilepticus.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Phenytoin cảm ứng CYP2C9, tăng chuyển hóa warfarin",
+                    "effect": "Giảm tác dụng chống đông, giảm INR",
+                    "management": "Tăng liều warfarin, theo dõi INR thường xuyên. Có thể cần tăng liều warfarin 50-100% khi dùng phenytoin."
+                },
+                {
+                    "drug": "Oral contraceptives",
+                    "mechanism": "Phenytoin cảm ứng CYP3A4, tăng chuyển hóa estrogen và progestin",
+                    "effect": "Giảm hiệu quả tránh thai, tăng nguy cơ mang thai",
+                    "management": "Sử dụng biện pháp tránh thai bổ sung (barrier method) hoặc chuyển sang thuốc tránh thai liều cao hơn. Tư vấn bệnh nhân về nguy cơ."
+                },
+                {
+                    "drug": "Folic acid",
+                    "mechanism": "Folic acid có thể làm giảm nồng độ phenytoin",
+                    "effect": "Giảm nồng độ phenytoin, có thể gây co giật",
+                    "management": "Theo dõi nồng độ phenytoin khi bổ sung folic acid. Có thể cần tăng liều phenytoin."
+                },
+                {
+                    "drug": "Chloramphenicol, Isoniazid, Sulfonamides",
+                    "mechanism": "Ức chế CYP2C9, CYP2C19, giảm chuyển hóa phenytoin",
+                    "effect": "Tăng nồng độ phenytoin, tăng nguy cơ độc tính",
+                    "management": "Giảm liều phenytoin 25-50%, theo dõi nồng độ trong máu, dấu hiệu độc tính."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Carbamazepine",
+                    "mechanism": "Cảm ứng enzyme lẫn nhau",
+                    "effect": "Giảm nồng độ cả hai thuốc",
+                    "management": "Theo dõi nồng độ trong máu, tăng liều nếu cần để đạt mức điều trị."
+                },
+                {
+                    "drug": "Valproate",
+                    "mechanism": "Ức chế chuyển hóa phenytoin, tăng nồng độ free phenytoin (do giảm protein binding)",
+                    "effect": "Tăng nồng độ free phenytoin, tăng nguy cơ độc tính",
+                    "management": "Giảm liều phenytoin 25-50%, theo dõi nồng độ free phenytoin, dấu hiệu độc tính."
+                },
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Ức chế CYP2C9, CYP2C19",
+                    "effect": "Tăng nồng độ phenytoin",
+                    "management": "Giảm liều phenytoin, theo dõi nồng độ trong máu."
+                },
+                {
+                    "drug": "Corticosteroids",
+                    "mechanism": "Phenytoin cảm ứng enzyme, tăng chuyển hóa",
+                    "effect": "Giảm hiệu quả corticosteroid",
+                    "management": "Tăng liều corticosteroid nếu cần."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Antacids",
+                    "mechanism": "Giảm hấp thu phenytoin",
+                    "effect": "Giảm nhẹ nồng độ phenytoin",
+                    "management": "Uống cách nhau 2-3 giờ."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng phenytoin",
+                "Suy gan nặng (Child-Pugh C)",
+                "Block nhĩ thất độ II hoặc III",
+                "Hội chứng bệnh lympho (lymphoma-like syndrome)",
+                "Tiền sử hội chứng Stevens-Johnson do phenytoin"
+            ],
+            "relative": [
+                "Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều, theo dõi chặt chẽ",
+                "Suy thận (CrCl <30) - giảm liều 50%, theo dõi nồng độ",
+                "Bệnh tim mạch (rối loạn nhịp, block nhĩ thất độ I)",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Bệnh nhân lớn tuổi (tăng nguy cơ độc tính, giảm chuyển hóa)",
+                "Thiếu hụt folate (tăng nguy cơ thiếu máu megaloblastic)",
+                "Loãng xương (tăng nguy cơ gãy xương)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Phenytoin có nguy cơ dị tật bẩm sinh (fetal hydantoin syndrome: dị tật tim, sứt môi/hà ếch, chậm phát triển, dị tật ngón tay). Nguy cơ dị tật bẩm sinh khoảng 5-10%. Cần bổ sung acid folic 4-5mg/ngày trước và trong thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền, siêu âm chi tiết, và theo dõi chặt chẽ. Theo dõi nồng độ phenytoin thường xuyên (thay đổi trong thai kỳ).",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Phenytoin bài tiết vào sữa mẹ ở nồng độ thấp (nồng độ trong sữa mẹ khoảng 10-20% nồng độ trong huyết thanh mẹ). Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
+                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém). Đo nồng độ phenytoin trong máu trẻ nếu có triệu chứng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều, nhưng theo dõi chặt chẽ chức năng gan và nồng độ trong máu",
+            "moderate": "Giảm liều 25-50%, theo dõi nồng độ trong máu thường xuyên, theo dõi ALT/AST",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ. Theo dõi nồng độ trong máu và ALT/AST thường xuyên. Nguy cơ tích lũy và độc tính cao.",
+            "notes": "Phenytoin chuyển hóa ở gan qua CYP2C9 và CYP2C19. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính. Đặc biệt thận trọng vì phenytoin có thể gây viêm gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: nystagmus (dấu hiệu sớm nhất), ataxia, lú lẫn, buồn ngủ, hôn mê, co giật",
+                "Rối loạn tim mạch: nhịp chậm, block nhĩ thất, hạ huyết áp, rối loạn nhịp",
+                "Rối loạn hô hấp: suy hô hấp, ngừng thở",
+                "Rối loạn tiêu hóa: buồn nôn, nôn",
+                "Triệu chứng khác: sốt, giảm bạch cầu, rối loạn điện giải"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ",
+                "Đo nồng độ phenytoin trong máu (nguy hiểm nếu >40 mcg/ml)",
+                "Xử trí co giật: benzodiazepine (diazepam, lorazepam) hoặc phenobarbital",
+                "Xử trí block nhĩ thất: atropine, pacemaker nếu cần",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Lọc máu: không hiệu quả (gắn protein cao), nhưng có thể xem xét ở trường hợp nặng",
+                "Theo dõi công thức máu (nguy cơ giảm bạch cầu)"
+            ],
+            "monitoring": "Theo dõi liên tục ý thức, hô hấp, tim mạch, điện tâm đồ, nồng độ phenytoin trong máu (total và free), công thức máu, chức năng gan, điện giải"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc ngay sau bữa ăn để giảm kích ứng dạ dày và tăng hấp thu",
+                "timing": "Chia liều 2-3 lần/ngày. Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều. KHÔNG nghiền viên nang hoặc viên nén (giảm hấp thu)."
+            },
+            "iv": {
+                "reconstitution": "Pha trong 0.9% NaCl (không dùng D5W - kết tủa). Nồng độ tối đa 10mg/ml. Không trộn với các thuốc khác.",
+                "infusion_rate": "Truyền chậm: không quá 50mg/phút (tối đa 50mg/phút) để tránh hạ huyết áp, rối loạn nhịp, ngừng tim. Theo dõi huyết áp, nhịp tim liên tục trong khi truyền.",
+                "compatibility": ["0.9% NaCl"],
+                "incompatibility": ["D5W (kết tủa)", "Không trộn với các thuốc khác"],
+                "notes": "Chỉ dùng NS để pha. Truyền qua đường tĩnh mạch lớn. Theo dõi huyết áp, nhịp tim, điện tâm đồ trong khi truyền. Không dùng filter trong dây truyền (có thể làm giảm nồng độ)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Phenytoin",
+                "UpToDate - Phenytoin: Drug information",
+                "FDA - Dilantin (phenytoin) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
     },
     "Valproate": {
         "group": "Neurology - Anticonvulsant",
@@ -634,7 +913,94 @@ NEUROLOGICAL_DRUGS = {
             "clearance": "Chủ yếu qua thận (66% bài tiết nguyên dạng), cần điều chỉnh thận"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Viên nén: tránh ẩm.",
-        "black_box_warnings": "Nguy cơ hành vi tự sát và ý tưởng tự sát. Cảnh báo bệnh nhân và gia đình về các dấu hiệu kích động, lo âu, trầm cảm, thay đổi tâm trạng, và hành vi bất thường. Ngừng đột ngột có thể gây co giật."
+        "black_box_warnings": "Nguy cơ hành vi tự sát và ý tưởng tự sát. Cảnh báo bệnh nhân và gia đình về các dấu hiệu kích động, lo âu, trầm cảm, thay đổi tâm trạng, và hành vi bất thường. Ngừng đột ngột có thể gây co giật.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Carbamazepine, Phenytoin, Phenobarbital",
+                    "mechanism": "Cảm ứng enzyme, tăng chuyển hóa levetiracetam",
+                    "effect": "Giảm nhẹ nồng độ levetiracetam",
+                    "management": "Có thể cần tăng liều levetiracetam nếu không đạt hiệu quả."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Ức chế bài tiết qua thận",
+                    "effect": "Tăng nhẹ nồng độ levetiracetam",
+                    "management": "Giảm liều levetiracetam 50% nếu dùng chung."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng levetiracetam hoặc các thành phần khác"
+            ],
+            "relative": [
+                "Suy thận (CrCl <30) - giảm liều 75%, tăng khoảng cách liều",
+                "Tiền sử bệnh tâm thần (tăng nguy cơ kích động, lo âu, trầm cảm)",
+                "Bệnh nhân lớn tuổi có suy thận - giảm liều thêm",
+                "Mang thai (chứng cứ hạn chế) - chỉ dùng nếu lợi ích > nguy cơ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh (khoảng 2.5-3% so với 2% ở dân số chung), nhưng chứng cứ không rõ ràng. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Levetiracetam bài tiết vào sữa mẹ ở nồng độ thấp (nồng độ trong sữa mẹ khoảng 50-100% nồng độ trong huyết thanh mẹ). Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm.",
+                "recommendation": "Có thể cho con bú. Theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều (levetiracetam không chuyển hóa ở gan)",
+            "moderate": "Không cần điều chỉnh liều (levetiracetam không chuyển hóa ở gan)",
+            "severe": "Không cần điều chỉnh liều (levetiracetam không chuyển hóa ở gan). Tuy nhiên, thận trọng ở bệnh nhân suy gan kèm suy thận.",
+            "notes": "Levetiracetam không chuyển hóa ở gan, bài tiết chủ yếu qua thận. Không cần điều chỉnh liều ở suy gan. Chỉ cần điều chỉnh liều ở suy thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, mất điều hòa (ataxia)",
+                "Rối loạn hô hấp: suy hô hấp (hiếm)",
+                "Rối loạn tiêu hóa: buồn nôn, nôn",
+                "Triệu chứng khác: mệt mỏi, kích động"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Theo dõi liên tục: ý thức, hô hấp",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Lọc máu: có thể hiệu quả (không gắn protein, bài tiết qua thận), xem xét ở trường hợp nặng"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, dấu hiệu thần kinh. Có thể đo nồng độ levetiracetam trong máu nếu có sẵn."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.",
+                "timing": "Chia liều 2 lần/ngày (sáng và tối). Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều."
+            },
+            "iv": {
+                "reconstitution": "Dùng trực tiếp từ lọ, không cần pha. Có thể pha loãng trong 0.9% NaCl hoặc D5W đến nồng độ 15mg/ml.",
+                "infusion_rate": "Truyền trong 15 phút (tốc độ tiêu chuẩn). Không truyền nhanh hơn.",
+                "compatibility": ["0.9% NaCl", "D5W"],
+                "incompatibility": [],
+                "notes": "Có thể truyền trực tiếp hoặc pha loãng. Theo dõi dấu hiệu phản ứng tại chỗ tiêm."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Levetiracetam",
+                "UpToDate - Levetiracetam: Drug information",
+                "FDA - Keppra (levetiracetam) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
     },
     "Lamotrigine": {
         "group": "Neurology - Anticonvulsant",
@@ -879,7 +1245,116 @@ NEUROLOGICAL_DRUGS = {
             "clearance": "Thận: bài tiết chủ yếu qua thận (100% nguyên dạng, không chuyển hóa). Không chuyển hóa ở gan. Hấp thu giảm khi tăng liều do cơ chế vận chuyển L-amino acid bão hòa ở ruột. Thời gian bán thải tăng ở suy thận (tỷ lệ với eGFR)."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén/capsule: bảo quản trong bao bì kín. Dạng suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng.",
-        "black_box_warnings": "Nguy cơ suy hô hấp nghiêm trọng, có thể gây tử vong, khi dùng với các thuốc ức chế hệ thần kinh trung ương (opioids, benzodiazepines). Nguy cơ tăng ở bệnh nhân có bệnh hô hấp, người cao tuổi. Theo dõi chặt chẽ dấu hiệu suy hô hấp. Nguy cơ tác dụng phụ thần kinh nghiêm trọng (buồn ngủ, chóng mặt, mệt mỏi) có thể ảnh hưởng đến khả năng lái xe và vận hành máy móc."
+        "black_box_warnings": "Nguy cơ suy hô hấp nghiêm trọng, có thể gây tử vong, khi dùng với các thuốc ức chế hệ thần kinh trung ương (opioids, benzodiazepines). Nguy cơ tăng ở bệnh nhân có bệnh hô hấp, người cao tuổi. Theo dõi chặt chẽ dấu hiệu suy hô hấp. Nguy cơ tác dụng phụ thần kinh nghiêm trọng (buồn ngủ, chóng mặt, mệt mỏi) có thể ảnh hưởng đến khả năng lái xe và vận hành máy móc.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Morphine, Opioids",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng nguy cơ suy hô hấp nghiêm trọng, có thể tử vong. Tăng buồn ngủ, chóng mặt.",
+                    "management": "Giảm liều opioid hoặc gabapentin. Theo dõi chặt chẽ dấu hiệu suy hô hấp. Cảnh báo bệnh nhân về nguy cơ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antacids (aluminum, magnesium)",
+                    "mechanism": "Giảm hấp thu gabapentin",
+                    "effect": "Giảm nồng độ gabapentin, giảm hiệu quả",
+                    "management": "Uống gabapentin cách xa antacids ít nhất 2 giờ."
+                },
+                {
+                    "drug": "Benzodiazepines",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
+                    "management": "Giảm liều một trong hai thuốc. Theo dõi dấu hiệu suy hô hấp."
+                },
+                {
+                    "drug": "Alcohol",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
+                    "management": "Tránh hoặc giảm rượu. Cảnh báo bệnh nhân."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Giảm nhẹ thải trừ qua thận",
+                    "effect": "Tăng nhẹ nồng độ gabapentin",
+                    "management": "Không cần điều chỉnh liều thường xuyên, nhưng theo dõi tác dụng phụ."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng gabapentin hoặc các thành phần khác"
+            ],
+            "relative": [
+                "Suy thận (CrCl <30) - giảm liều đáng kể, tăng khoảng cách liều",
+                "Suy thận nặng (CrCl <15) - giảm liều rất nhiều, có thể cách ngày",
+                "Bệnh nhân lớn tuổi có suy thận - giảm liều thêm",
+                "Mang thai (chứng cứ hạn chế) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Tiền sử lệ thuộc thuốc (có thể gây lệ thuộc)",
+                "Bệnh hô hấp (COPD, sleep apnea) - tăng nguy cơ suy hô hấp khi dùng với opioids/benzodiazepines"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh và kết quả thai kỳ kém, nhưng chứng cứ không rõ ràng. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Gabapentin bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình (nồng độ trong sữa mẹ khoảng 30-70% nồng độ trong huyết thanh mẹ). Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
+                "recommendation": "Có thể cho con bú. Theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém, chậm tăng cân)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều (gabapentin không chuyển hóa ở gan)",
+            "moderate": "Không cần điều chỉnh liều (gabapentin không chuyển hóa ở gan)",
+            "severe": "Không cần điều chỉnh liều (gabapentin không chuyển hóa ở gan). Tuy nhiên, thận trọng ở bệnh nhân suy gan kèm suy thận.",
+            "notes": "Gabapentin không chuyển hóa ở gan, bài tiết chủ yếu qua thận (100% nguyên dạng). Không cần điều chỉnh liều ở suy gan. Chỉ cần điều chỉnh liều ở suy thận (quan trọng)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, mất điều hòa (ataxia), mệt mỏi",
+                "Rối loạn hô hấp: suy hô hấp (hiếm, thường khi dùng với opioids/benzodiazepines)",
+                "Rối loạn tiêu hóa: buồn nôn, nôn, tiêu chảy",
+                "Triệu chứng khác: nhìn mờ, phù ngoại biên"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng nếu dùng với opioids)",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Theo dõi liên tục: ý thức, hô hấp (quan trọng)",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Naloxone: nếu có dùng opioids (để đảo ngược suy hô hấp do opioids)",
+                "Lọc máu: có thể hiệu quả (không gắn protein, bài tiết qua thận), xem xét ở trường hợp nặng"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp (quan trọng), dấu hiệu thần kinh. Có thể đo nồng độ gabapentin trong máu nếu có sẵn."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu đáng kể.",
+                "timing": "Chia liều 3 lần/ngày (sáng, trưa, tối). Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều. QUAN TRỌNG: Uống cách xa antacids ít nhất 2 giờ (giảm hấp thu)."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Gabapentin",
+                "UpToDate - Gabapentin: Drug information",
+                "FDA - Neurontin (gabapentin) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
     },
     "Pregabalin": {
         "group": "Neurology - Anticonvulsant (Alpha-2-delta ligand)",
@@ -954,7 +1429,118 @@ NEUROLOGICAL_DRUGS = {
             "clearance": "Thận: bài tiết chủ yếu qua thận (90% nguyên dạng, không chuyển hóa). Không chuyển hóa ở gan. Hấp thu tuyến tính (không bão hòa như gabapentin), dự đoán được. Thời gian bán thải tăng ở suy thận (tỷ lệ với eGFR)."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén/capsule: bảo quản trong bao bì kín. Controlled substance - cần bảo quản an toàn, tránh tiếp cận không được phép.",
-        "black_box_warnings": "Nguy cơ suy hô hấp nghiêm trọng, có thể gây tử vong, khi dùng với các thuốc ức chế hệ thần kinh trung ương (opioids, benzodiazepines). Nguy cơ tăng ở bệnh nhân có bệnh hô hấp, người cao tuổi. Theo dõi chặt chẽ dấu hiệu suy hô hấp. Nguy cơ lạm dụng, nghiện - pregabalin là controlled substance (Schedule V), có thể gây lệ thuộc, nghiện. Không ngừng đột ngột - tăng nguy cơ co giật, hội chứng cai. Nguy cơ tác dụng phụ thần kinh nghiêm trọng (buồn ngủ, chóng mặt, mệt mỏi) có thể ảnh hưởng đến khả năng lái xe và vận hành máy móc."
+        "black_box_warnings": "Nguy cơ suy hô hấp nghiêm trọng, có thể gây tử vong, khi dùng với các thuốc ức chế hệ thần kinh trung ương (opioids, benzodiazepines). Nguy cơ tăng ở bệnh nhân có bệnh hô hấp, người cao tuổi. Theo dõi chặt chẽ dấu hiệu suy hô hấp. Nguy cơ lạm dụng, nghiện - pregabalin là controlled substance (Schedule V), có thể gây lệ thuộc, nghiện. Không ngừng đột ngột - tăng nguy cơ co giật, hội chứng cai. Nguy cơ tác dụng phụ thần kinh nghiêm trọng (buồn ngủ, chóng mặt, mệt mỏi) có thể ảnh hưởng đến khả năng lái xe và vận hành máy móc.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Morphine, Opioids",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng nguy cơ suy hô hấp nghiêm trọng, có thể tử vong. Tăng buồn ngủ, chóng mặt.",
+                    "management": "Giảm liều opioid hoặc pregabalin. Theo dõi chặt chẽ dấu hiệu suy hô hấp. Cảnh báo bệnh nhân về nguy cơ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Benzodiazepines",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
+                    "management": "Giảm liều một trong hai thuốc. Theo dõi dấu hiệu suy hô hấp."
+                },
+                {
+                    "drug": "Alcohol",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
+                    "management": "Tránh hoặc giảm rượu. Cảnh báo bệnh nhân về nguy cơ nghiêm trọng."
+                },
+                {
+                    "drug": "Angiotensin-converting enzyme (ACE) inhibitors",
+                    "mechanism": "Cả hai đều có thể gây phù ngoại biên",
+                    "effect": "Tăng nguy cơ phù ngoại biên",
+                    "management": "Theo dõi dấu hiệu phù. Có thể cần giảm liều hoặc ngừng một trong hai thuốc."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Lorazepam, Oxcarbazepine",
+                    "mechanism": "Tăng nhẹ tác dụng an thần",
+                    "effect": "Tăng nhẹ buồn ngủ, chóng mặt",
+                    "management": "Theo dõi tác dụng phụ. Có thể cần giảm liều."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng pregabalin hoặc các thành phần khác"
+            ],
+            "relative": [
+                "Suy thận (CrCl <30) - giảm liều đáng kể, tăng khoảng cách liều",
+                "Suy thận nặng (CrCl <15) - giảm liều 90%, tăng khoảng cách liều",
+                "Bệnh nhân lớn tuổi có suy thận - giảm liều thêm",
+                "Mang thai (chứng cứ hạn chế) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Tiền sử lạm dụng thuốc, nghiện (nguy cơ cao - pregabalin là controlled substance)",
+                "Bệnh hô hấp (COPD, sleep apnea) - tăng nguy cơ suy hô hấp khi dùng với opioids/benzodiazepines",
+                "Congestive heart failure - tăng nguy cơ phù ngoại biên"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh và kết quả thai kỳ kém, nhưng chứng cứ không rõ ràng. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Pregabalin bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình (nồng độ trong sữa mẹ khoảng 50-70% nồng độ trong huyết thanh mẹ). Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
+                "recommendation": "Có thể cho con bú. Theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém, chậm tăng cân)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều (pregabalin không chuyển hóa ở gan)",
+            "moderate": "Không cần điều chỉnh liều (pregabalin không chuyển hóa ở gan)",
+            "severe": "Không cần điều chỉnh liều (pregabalin không chuyển hóa ở gan). Tuy nhiên, thận trọng ở bệnh nhân suy gan kèm suy thận.",
+            "notes": "Pregabalin không chuyển hóa ở gan, bài tiết chủ yếu qua thận (90% nguyên dạng). Không cần điều chỉnh liều ở suy gan. Chỉ cần điều chỉnh liều ở suy thận (quan trọng)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, mất điều hòa (ataxia), mệt mỏi, hôn mê",
+                "Rối loạn hô hấp: suy hô hấp (hiếm, thường khi dùng với opioids/benzodiazepines)",
+                "Rối loạn tiêu hóa: buồn nôn, nôn, tiêu chảy",
+                "Triệu chứng khác: nhìn mờ, phù ngoại biên, co giật (khi ngừng đột ngột)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng nếu dùng với opioids)",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Theo dõi liên tục: ý thức, hô hấp (quan trọng)",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Naloxone: nếu có dùng opioids (để đảo ngược suy hô hấp do opioids)",
+                "Xử trí co giật: benzodiazepine nếu có",
+                "Lọc máu: có thể hiệu quả (không gắn protein, bài tiết qua thận), xem xét ở trường hợp nặng"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp (quan trọng), dấu hiệu thần kinh. Có thể đo nồng độ pregabalin trong máu nếu có sẵn."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu đáng kể.",
+                "timing": "Chia liều 2-3 lần/ngày (thường 2 lần/ngày). Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều. QUAN TRỌNG: Không ngừng đột ngột - giảm liều dần dần trong ít nhất 1 tuần."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Pregabalin",
+                "UpToDate - Pregabalin: Drug information",
+                "FDA - Lyrica (pregabalin) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
     },
 }
 

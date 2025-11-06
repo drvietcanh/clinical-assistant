@@ -1,6 +1,6 @@
 """
 Metabolic and Endocrine Medications
-Generated from drug_database_data.py
+Active module - contains all metabolic and endocrine drug data
 """
 
 METABOLIC_DRUGS = {
@@ -84,7 +84,142 @@ METABOLIC_DRUGS = {
             "clearance": "Chủ yếu qua gan, một phần qua thận"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.",
-        "black_box_warnings": "Không được dùng để giảm cân ở bệnh nhân bình giáp. Quá liều có thể gây cường giáp, rối loạn nhịp tim, và đau thắt ngực ở bệnh nhân bệnh mạch vành. Ở bệnh nhân bệnh mạch vành, phải bắt đầu với liều thấp và tăng chậm."
+        "black_box_warnings": "Không được dùng để giảm cân ở bệnh nhân bình giáp. Quá liều có thể gây cường giáp, rối loạn nhịp tim, và đau thắt ngực ở bệnh nhân bệnh mạch vành. Ở bệnh nhân bệnh mạch vành, phải bắt đầu với liều thấp và tăng chậm.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Cholestyramine, Colestipol, Colesevelam",
+                    "mechanism": "Các resin gắn acid mật gắn với levothyroxine trong ruột, giảm hấp thu đáng kể.",
+                    "effect": "Giảm hấp thu levothyroxine 40-60%, giảm hiệu quả điều trị",
+                    "management": "Cách ít nhất 4 giờ giữa levothyroxine và resin. Uống levothyroxine trước, resin sau. Theo dõi TSH và điều chỉnh liều nếu cần."
+                },
+                {
+                    "drug": "Calcium carbonate, Sắt, Antacid (Aluminum, Magnesium)",
+                    "mechanism": "Các cation (Ca2+, Fe2+, Al3+, Mg2+) gắn với levothyroxine trong ruột, tạo phức hợp không hấp thu được.",
+                    "effect": "Giảm hấp thu levothyroxine 30-50%, giảm hiệu quả điều trị",
+                    "management": "Cách ít nhất 4 giờ giữa levothyroxine và các thuốc này. Uống levothyroxine sáng đói, các thuốc khác sau bữa ăn. Theo dõi TSH."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Levothyroxine tăng chuyển hóa các yếu tố đông máu phụ thuộc vitamin K, tăng tác dụng chống đông của warfarin.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng levothyroxine. Điều chỉnh liều warfarin nếu cần. INR có thể thay đổi trong 1-2 tuần sau khi điều chỉnh liều levothyroxine."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Estrogen (Oral contraceptives, Hormone replacement therapy)",
+                    "mechanism": "Estrogen tăng nồng độ thyroxine-binding globulin (TBG), tăng gắn T4 với protein, giảm T4 tự do.",
+                    "effect": "Tăng nhu cầu levothyroxine, có thể cần tăng liều 25-50%",
+                    "management": "Theo dõi TSH sau 6-8 tuần khi bắt đầu hoặc ngừng estrogen. Điều chỉnh liều levothyroxine nếu TSH tăng."
+                },
+                {
+                    "drug": "Rifampin, Carbamazepine, Phenytoin, Phenobarbital",
+                    "mechanism": "Cảm ứng enzyme chuyển hóa, tăng chuyển hóa levothyroxine.",
+                    "effect": "Giảm nồng độ levothyroxine, tăng nhu cầu liều",
+                    "management": "Theo dõi TSH và điều chỉnh liều levothyroxine. Có thể cần tăng liều 25-50%."
+                },
+                {
+                    "drug": "Sucralfate",
+                    "mechanism": "Sucralfate gắn với levothyroxine trong ruột, giảm hấp thu.",
+                    "effect": "Giảm hấp thu levothyroxine",
+                    "management": "Cách ít nhất 4 giờ. Uống levothyroxine sáng đói, sucralfate sau bữa ăn."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Levothyroxine có thể tăng chuyển hóa digoxin, giảm nồng độ digoxin.",
+                    "effect": "Giảm nồng độ digoxin, có thể cần tăng liều digoxin",
+                    "management": "Theo dõi nồng độ digoxin và điều chỉnh liều nếu cần."
+                },
+                {
+                    "drug": "Insulin, Oral hypoglycemics",
+                    "mechanism": "Levothyroxine tăng chuyển hóa glucose, có thể ảnh hưởng đến kiểm soát đường huyết.",
+                    "effect": "Có thể cần điều chỉnh liều insulin hoặc thuốc hạ đường huyết",
+                    "management": "Theo dõi đường huyết khi bắt đầu hoặc điều chỉnh liều levothyroxine."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Cường giáp không điều trị (có thể làm nặng thêm triệu chứng)",
+                "Nhồi máu cơ tim cấp (có thể làm nặng thêm, tăng nguy cơ rối loạn nhịp tim)",
+                "Viêm cơ tim cấp (có thể làm nặng thêm)",
+                "Dị ứng levothyroxine hoặc các thành phần khác"
+            ],
+            "relative": [
+                "Bệnh mạch vành (bắt đầu với liều rất thấp, tăng chậm)",
+                "Rối loạn nhịp tim (thận trọng, theo dõi sát)",
+                "Suy tim (thận trọng, bắt đầu với liều thấp)",
+                "Loãng xương (theo dõi mật độ xương nếu dùng liều cao kéo dài)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "A",
+            "pregnancy_details": "Levothyroxine là hormone tuyến giáp tự nhiên, an toàn và cần thiết trong thai kỳ. Suy giáp không điều trị trong thai kỳ có thể gây chậm phát triển thần kinh ở thai nhi, sảy thai, sinh non, và các biến chứng khác. Nhu cầu levothyroxine tăng 25-50% trong thai kỳ, đặc biệt trong tam cá nguyệt đầu và thứ hai. Phải theo dõi TSH mỗi 4-6 tuần trong thai kỳ và điều chỉnh liều để duy trì TSH trong khoảng bình thường (mục tiêu: 0.5-2.5 mIU/L trong tam cá nguyệt đầu, <3.0 mIU/L trong tam cá nguyệt thứ hai và thứ ba).",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Levothyroxine bài tiết vào sữa mẹ ở nồng độ rất thấp, không ảnh hưởng đến chức năng tuyến giáp của trẻ bú mẹ. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Không cần điều chỉnh liều. Theo dõi chức năng tuyến giáp của mẹ và trẻ nếu cần."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Levothyroxine chủ yếu chuyển hóa qua gan (deiodination), nhưng suy gan nhẹ không ảnh hưởng đáng kể.",
+            "moderate": "Không cần điều chỉnh liều thường quy. Theo dõi TSH và điều chỉnh nếu cần. Chuyển hóa có thể giảm nhẹ ở suy gan trung bình.",
+            "severe": "Không cần điều chỉnh liều thường quy. Theo dõi TSH chặt chẽ. Có thể cần giảm liều nhẹ nếu có dấu hiệu quá liều (tăng TSH không phản ánh đúng nhu cầu).",
+            "notes": "Levothyroxine chủ yếu chuyển hóa qua gan, nhưng suy gan thường không ảnh hưởng đáng kể đến nồng độ T4. Tuy nhiên, suy gan nặng có thể ảnh hưởng đến chuyển đổi T4 thành T3. Theo dõi TSH và FT4, không chỉ dựa vào T4 toàn phần."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Dấu hiệu cường giáp: tim đập nhanh, lo âu, mất ngủ, đổ mồ hôi, run tay",
+                "Rối loạn nhịp tim: nhịp nhanh xoang, rung nhĩ, rung thất (hiếm)",
+                "Đau thắt ngực, nhồi máu cơ tim (ở bệnh nhân bệnh mạch vành)",
+                "Sụt cân không giải thích được",
+                "Tiêu chảy, tăng nhu động ruột",
+                "Yếu cơ, run cơ",
+                "Loãng xương (nếu quá liều kéo dài)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Ngừng levothyroxine và điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng levothyroxine ngay lập tức",
+                "Theo dõi dấu hiệu sinh tồn: nhịp tim, huyết áp, ECG",
+                "Điều trị rối loạn nhịp tim nếu có (beta-blockers như propranolol để giảm nhịp tim)",
+                "Điều trị đau thắt ngực nếu có (nitroglycerin, beta-blockers)",
+                "Theo dõi TSH, FT4, FT3 sau 2-4 tuần",
+                "Khởi động lại với liều thấp hơn sau khi TSH tăng lên",
+                "Ở bệnh nhân bệnh mạch vành: điều trị tích cực rối loạn nhịp tim và đau thắt ngực"
+            ],
+            "monitoring": "Nhịp tim, huyết áp, ECG, TSH, FT4, FT3, dấu hiệu cường giáp. Theo dõi ít nhất 2-4 tuần sau khi ngừng thuốc."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "PHẢI uống khi đói, 30-60 phút trước khi ăn sáng. Thức ăn giảm hấp thu 40-60%. Có thể uống với nước đầy đủ.",
+                "timing": "Uống vào buổi sáng, khi đói, 30-60 phút trước khi ăn. Cách xa các thuốc khác ít nhất 4 giờ (sắt, canxi, antacid, cholestyramine, sucralfate). Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định."
+            },
+            "iv": {
+                "reconstitution": "Pha với nước cất hoặc dung dịch muối đẳng trương. Không pha với các dung dịch khác.",
+                "infusion_rate": "Truyền chậm trong 2-5 phút. Không truyền nhanh.",
+                "compatibility": ["D5W", "Normal saline"],
+                "incompatibility": ["Không trộn với các thuốc khác"],
+                "notes": "Chỉ dùng IV trong myxedema coma hoặc khi không thể dùng PO. Chuyển sang PO ngay khi có thể. Liều IV thường bằng 50-75% liều PO."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Levothyroxine (Synthroid, Levoxyl, Tirosint)",
+                "American Thyroid Association Guidelines - Hypothyroidism in Pregnancy",
+                "Endocrine Society Clinical Practice Guidelines - Thyroid Hormone Replacement",
+                "UpToDate - Hypothyroidism treatment",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, ATA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     "Methimazole": {
         "group": "Endocrinology - Antithyroid (Thionamide)",
@@ -154,7 +289,96 @@ METABOLIC_DRUGS = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Có thể gây agranulocytosis (mất bạch cầu) - nguy hiểm tính mạng. Bệnh nhân cần được hướng dẫn ngừng thuốc và đến bệnh viện ngay nếu có sốt, viêm họng. Có thể gây dị tật thai nhi nếu dùng trong thai kỳ"
+        "black_box_warnings": "Có thể gây agranulocytosis (mất bạch cầu) - nguy hiểm tính mạng. Bệnh nhân cần được hướng dẫn ngừng thuốc và đến bệnh viện ngay nếu có sốt, viêm họng. Có thể gây dị tật thai nhi nếu dùng trong thai kỳ",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Khi đạt bình giáp, nhu cầu warfarin giảm, tăng nguy cơ chảy máu.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi điều chỉnh liều methimazole. Giảm liều warfarin khi đạt bình giáp."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Khi đạt bình giáp, nhu cầu digoxin giảm.",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ digoxin và điều chỉnh liều khi đạt bình giáp."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng methimazole",
+                "Có thai (3 tháng đầu - dùng PTU thay thế)",
+                "Giảm bạch cầu nặng"
+            ],
+            "relative": [
+                "Đang cho con bú (ưu tiên PTU)",
+                "Suy gan (thận trọng, theo dõi chức năng gan)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Methimazole có thể gây dị tật thai nhi (aplasia cutis, choanal atresia, esophageal atresia) nếu dùng trong tam cá nguyệt đầu. Tránh dùng trong 3 tháng đầu thai kỳ, dùng PTU thay thế. Sau tam cá nguyệt đầu, có thể dùng methimazole nhưng thận trọng. Dùng liều thấp nhất hiệu quả.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Methimazole bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng nhưng ưu tiên PTU. Theo dõi chức năng tuyến giáp của trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú nhưng ưu tiên PTU. Dùng liều thấp nhất hiệu quả. Theo dõi chức năng tuyến giáp của trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+            "moderate": "Thận trọng, theo dõi chức năng gan chặt chẽ. Có thể cần giảm liều.",
+            "severe": "Thận trọng, theo dõi chức năng gan chặt chẽ. Có thể cần giảm liều hoặc dùng PTU thay thế.",
+            "notes": "Methimazole chuyển hóa qua gan. Suy gan có thể làm tăng nồng độ và độc tính. Theo dõi ALT, AST định kỳ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Giảm bạch cầu, agranulocytosis (sốt, viêm họng, nhiễm trùng)",
+                "Độc gan (vàng da, tăng ALT/AST)",
+                "Phát ban nặng",
+                "Rối loạn vị giác"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng methimazole ngay lập tức",
+                "Nếu agranulocytosis: điều trị nhiễm trùng, có thể cần G-CSF",
+                "Nếu độc gan: điều trị hỗ trợ gan, có thể cần N-acetylcysteine",
+                "Theo dõi công thức máu và chức năng gan",
+                "Có thể cần dùng PTU thay thế nếu vẫn cần điều trị cường giáp"
+            ],
+            "monitoring": "Công thức máu, chức năng gan, dấu hiệu nhiễm trùng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
+                "timing": "Uống 1-3 lần/ngày tùy liều. Có thể uống cùng thời điểm mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Methimazole (Tapazole)",
+                "American Thyroid Association Guidelines - Hyperthyroidism",
+                "UpToDate - Hyperthyroidism treatment",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, ATA guidelines, và dữ liệu lâm sàng"
+        }
     },
     "Propylthiouracil": {
         "group": "Endocrinology - Antithyroid (Thionamide)",
@@ -226,7 +450,95 @@ METABOLIC_DRUGS = {
             "clearance": "Gan (chuyển hóa chủ yếu), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Có thể gây suy gan cấp nặng và tử vong. Theo dõi sát chức năng gan và ngừng ngay nếu có dấu hiệu độc gan. Có thể gây agranulocytosis (mất bạch cầu) - nguy hiểm tính mạng"
+        "black_box_warnings": "Có thể gây suy gan cấp nặng và tử vong. Theo dõi sát chức năng gan và ngừng ngay nếu có dấu hiệu độc gan. Có thể gây agranulocytosis (mất bạch cầu) - nguy hiểm tính mạng",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Khi đạt bình giáp, nhu cầu warfarin giảm.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR",
+                    "management": "Theo dõi INR chặt chẽ, giảm liều warfarin khi đạt bình giáp."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Khi đạt bình giáp, nhu cầu digoxin giảm.",
+                    "effect": "Tăng nồng độ digoxin",
+                    "management": "Theo dõi nồng độ digoxin và điều chỉnh liều."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng propylthiouracil",
+                "Giảm bạch cầu nặng",
+                "Suy gan nặng"
+            ],
+            "relative": [
+                "Suy thận (thận trọng, giảm liều)",
+                "Đang cho con bú (có thể dùng)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "PTU ưu tiên hơn methimazole trong 3 tháng đầu thai kỳ (ít nguy cơ dị tật hơn). Sau tam cá nguyệt đầu, có thể dùng methimazole. Dùng liều thấp nhất hiệu quả.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "PTU bài tiết vào sữa mẹ ở nồng độ thấp. An toàn hơn methimazole khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng, theo dõi chức năng gan.",
+            "moderate": "Thận trọng, theo dõi chức năng gan chặt chẽ. Có thể cần giảm liều.",
+            "severe": "Chống chỉ định hoặc thận trọng tối đa. Nguy cơ suy gan cấp cao.",
+            "notes": "PTU có nguy cơ độc gan cao hơn methimazole. Theo dõi ALT, AST định kỳ. Ngừng ngay nếu có dấu hiệu độc gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Suy gan cấp (vàng da, tăng ALT/AST, suy gan)",
+                "Agranulocytosis (sốt, viêm họng, nhiễm trùng)",
+                "Phát ban nặng",
+                "Vasculitis"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng PTU ngay lập tức",
+                "Nếu suy gan cấp: điều trị hỗ trợ gan, có thể cần N-acetylcysteine, xem xét ghép gan nếu nặng",
+                "Nếu agranulocytosis: điều trị nhiễm trùng, có thể cần G-CSF",
+                "Theo dõi chức năng gan và công thức máu"
+            ],
+            "monitoring": "Chức năng gan, công thức máu, dấu hiệu nhiễm trùng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn.",
+                "timing": "Uống 3-4 lần/ngày do thời gian bán thải ngắn. Uống cùng thời điểm mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Propylthiouracil (PTU)",
+                "American Thyroid Association Guidelines - Hyperthyroidism",
+                "UpToDate - Hyperthyroidism treatment",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, ATA guidelines, và dữ liệu lâm sàng"
+        }
     },
     "Prednisone": {
         "group": "Endocrinology - Corticosteroid (Glucocorticoid)",
