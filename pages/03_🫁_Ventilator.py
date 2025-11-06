@@ -9,8 +9,10 @@ from utils.page_helper import setup_page, render_standard_footer
 from ventilator import (
     render_ardsnet,
     render_initial_settings,
-    render_peep_fio2_table
+    render_peep_fio2_table,
+    render_comprehensive_calculator
 )
+from ventilator.weaning import render_weaning_calculator
 from critical_care import render_fluid_calculator, render_vasopressor_guide
 
 # Standard page setup
@@ -27,9 +29,11 @@ with st.sidebar:
     function_type = st.selectbox(
         "Công cụ:",
         [
+            "🫁 Tính Toán Tổng Hợp",
             "🫁 ARDSNet - Tidal Volume",
             "⚙️ Cài Đặt Ban Đầu",
             "📊 Bảng PEEP/FiO2",
+            "🔄 Cai Máy Thở - Weaning",
             "💧 Tính Toán Dịch Truyền",
             "💉 Hướng Dẫn Vasopressor"
         ]
@@ -47,7 +51,10 @@ with st.sidebar:
 # ========== MAIN CONTENT ==========
 
 # Route to appropriate function
-if "ARDSNet" in function_type:
+if "Tính Toán Tổng Hợp" in function_type:
+    render_comprehensive_calculator()
+
+elif "ARDSNet" in function_type:
     render_ardsnet()
 
 elif "Cài Đặt Ban Đầu" in function_type:
@@ -55,6 +62,9 @@ elif "Cài Đặt Ban Đầu" in function_type:
 
 elif "PEEP/FiO2" in function_type:
     render_peep_fio2_table()
+
+elif "Cai Máy Thở" in function_type or "Weaning" in function_type:
+    render_weaning_calculator()
 
 elif "Dịch Truyền" in function_type:
     render_fluid_calculator()
