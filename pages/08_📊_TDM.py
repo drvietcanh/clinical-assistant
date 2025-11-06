@@ -32,6 +32,16 @@ setup_page(
 with st.sidebar:
     st.header("⚙️ Chọn Công Cụ TDM")
     
+    # Check if should switch to TDM from drug detail view
+    preset_drug_name = None
+    if st.session_state.get('switch_to_tdm', False):
+        st.session_state['switch_to_tdm'] = False
+        preset_drug_name = st.session_state.get('preset_tdm_drug', None)
+        if preset_drug_name:
+            # Clear preset after using
+            if 'preset_tdm_drug' in st.session_state:
+                del st.session_state['preset_tdm_drug']
+    
     # Get drugs by category
     categories = get_drugs_by_category()
     
@@ -72,11 +82,43 @@ with st.sidebar:
     # Combine lists
     all_options = existing_drugs + [d for d in drug_options if d not in existing_drugs]
     
+    # Find default index if preset drug is provided
+    default_index = 0
+    if preset_drug_name:
+        # Try to find matching option
+        try:
+            from drugs.drug_utils.tdm_mapping import get_tdm_info, get_tdm_calculator_name
+            
+            tdm_info = get_tdm_info(preset_drug_name)
+            if tdm_info:
+                # Search for matching option
+                preset_drug_display = tdm_info.get('name', preset_drug_name)
+                
+                # Try to find in existing_drugs first
+                for idx, option in enumerate(existing_drugs):
+                    if preset_drug_display.lower() in option.lower():
+                        default_index = idx
+                        break
+                else:
+                    # Try in drug_options
+                    for idx, option in enumerate(drug_options):
+                        if preset_drug_display.lower() in option.lower():
+                            default_index = len(existing_drugs) + idx
+                            break
+        except Exception:
+            # If mapping fails, use default
+            pass
+    
     tdm_drug = st.selectbox(
         "Thuốc:",
         all_options,
+        index=default_index,
         help="Chọn thuốc cần theo dõi nồng độ"
     )
+    
+    # Show notification if preset was used
+    if preset_drug_name:
+        st.success(f"✅ Đã chọn: **{preset_drug_name}** từ Drug Database")
     
     st.markdown("---")
     

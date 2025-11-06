@@ -28,6 +28,10 @@ def render_database():
     # Initialize session state
     if 'antibiotic_favorites' not in st.session_state:
         st.session_state.antibiotic_favorites = []
+    
+    # Initialize search state safely
+    if 'ab_search_main' not in st.session_state:
+        st.session_state.ab_search_main = ""
     if 'recently_viewed_antibiotics' not in st.session_state:
         st.session_state.recently_viewed_antibiotics = []
     
@@ -124,10 +128,17 @@ def render_database():
             suggestion_cols = st.columns(min(5, len(suggestions)))
             for idx, suggestion in enumerate(suggestions):
                 with suggestion_cols[idx]:
-                    if st.button(f"💊 {suggestion}", key=f"autocomplete_{suggestion}", use_container_width=True):
-                        st.session_state.ab_search_main = suggestion
-                        add_to_recent_searches(suggestion)
-                        st.rerun()
+                    # Sanitize suggestion for button key to avoid conflicts
+                    safe_key = f"autocomplete_{idx}_{str(suggestion).replace(' ', '_').replace('-', '_').replace('/', '_').replace('(', '').replace(')', '')[:30]}"
+                    if st.button(f"💊 {suggestion}", key=safe_key, use_container_width=True):
+                        # Ensure suggestion is a valid string
+                        if suggestion:
+                            try:
+                                st.session_state.ab_search_main = str(suggestion).strip()
+                                add_to_recent_searches(suggestion)
+                                st.rerun()
+                            except Exception as e:
+                                st.error(f"Lỗi khi tìm kiếm: {str(e)}")
             st.markdown("<br>", unsafe_allow_html=True)
     
     # Recent searches (when no query)
@@ -137,9 +148,16 @@ def render_database():
         recent_cols = st.columns(min(5, len(recent_searches)))
         for idx, recent in enumerate(recent_searches[:5]):
             with recent_cols[idx]:
-                if st.button(f"↩️ {recent}", key=f"recent_search_{recent}", use_container_width=True):
-                    st.session_state.ab_search_main = recent
-                    st.rerun()
+                # Sanitize recent for button key to avoid conflicts
+                safe_key = f"recent_{idx}_{str(recent).replace(' ', '_').replace('-', '_').replace('/', '_').replace('(', '').replace(')', '')[:30]}"
+                if st.button(f"↩️ {recent}", key=safe_key, use_container_width=True):
+                    # Ensure recent is a valid string
+                    if recent:
+                        try:
+                            st.session_state.ab_search_main = str(recent).strip()
+                            st.rerun()
+                        except Exception as e:
+                            st.error(f"Lỗi khi tìm kiếm: {str(e)}")
         st.markdown("<br>", unsafe_allow_html=True)
     
     # View mode selector
@@ -225,8 +243,10 @@ def render_database():
                             # Sanitize suggestion for key
                             safe_sugg_key = f"sugg_{str(suggestion).replace(' ', '_').replace('-', '_').replace('/', '_')}"
                             if st.button(suggestion, key=safe_sugg_key, use_container_width=True):
-                                st.session_state.ab_search_main = str(suggestion)
-                                st.rerun()
+                                # Ensure suggestion is a valid string
+                                if suggestion:
+                                    st.session_state.ab_search_main = str(suggestion).strip()
+                                    st.rerun()
                 else:
                     st.info("💡 **Gợi ý:** Thử tìm với tên thuốc, biệt dược, nhóm thuốc (ví dụ: Beta-lactam), hoặc chỉ định (ví dụ: MRSA, Sepsis, UTI)")
         else:

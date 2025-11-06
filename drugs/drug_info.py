@@ -241,6 +241,54 @@ def display_drug_info(drug_name, drug_data):
             for mon in drug_data['monitoring']:
                 st.markdown(f"- {mon}")
         
+        # TDM Section (Therapeutic Drug Monitoring)
+        try:
+            from drugs.drug_utils.tdm_mapping import get_tdm_info, has_tdm
+            
+            if has_tdm(drug_name):
+                tdm_info = get_tdm_info(drug_name)
+                
+                st.markdown("---")
+                st.markdown("### 📊 Theo Dõi Nồng Độ Thuốc (TDM)")
+                
+                col1, col2 = st.columns([2, 1])
+                
+                with col1:
+                    # Display TDM information
+                    therapeutic_range = tdm_info.get('therapeutic_range', 'N/A')
+                    sampling_time = tdm_info.get('sampling_time', 'N/A')
+                    half_life = tdm_info.get('half_life_hours', 'N/A')
+                    unit = tdm_info.get('unit', 'N/A')
+                    
+                    half_life_display = f"{half_life} giờ" if isinstance(half_life, (int, float)) else str(half_life)
+                    
+                    st.info(f"""
+                    **🎯 Khoảng điều trị:** {therapeutic_range}
+                    
+                    **⏰ Thời điểm lấy mẫu:** {sampling_time}
+                    
+                    **⏱️ Half-life:** {half_life_display}
+                    
+                    **📏 Đơn vị:** {unit}
+                    """)
+                
+                with col2:
+                    # Button to open TDM calculator
+                    safe_tdm_key = f"tdm_calc_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_').replace('(', '').replace(')', '')}"
+                    if st.button("📊 Mở TDM Calculator", key=safe_tdm_key, use_container_width=True, type="primary"):
+                        # Set session state to switch to TDM module with preset
+                        st.session_state['preset_tdm_drug'] = drug_name
+                        st.session_state['switch_to_tdm'] = True
+                        st.rerun()
+                
+                st.caption("💡 Click nút trên để mở TDM calculator với thuốc này đã được chọn sẵn")
+        except ImportError:
+            # TDM mapping not available, skip
+            pass
+        except Exception as e:
+            # Silently fail if TDM check fails
+            pass
+        
         # Precautions
         if 'precautions' in drug_data:
             st.markdown("---")
