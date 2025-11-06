@@ -6,6 +6,7 @@ UI components for displaying antibiotic information
 import streamlit as st
 import html
 import pandas as pd
+import re
 from .antibiotics_data import ANTIBIOTICS_DATABASE
 from .database_calculator import render_quick_dosing_calculator
 from .database_export import _render_antibiotic_export
@@ -20,6 +21,43 @@ def _escape_html(text):
             .replace(">", "&gt;")
             .replace('"', "&quot;")
             .replace("'", "&#x27;"))
+
+
+def _sanitize_key(text):
+    """
+    Sanitize text for use in Streamlit session state keys and widget keys.
+    Removes or replaces special characters that are not allowed in keys.
+    
+    Args:
+        text: Text to sanitize
+        
+    Returns:
+        Sanitized string safe for use in keys
+    """
+    if not text:
+        return ""
+    # Convert to string and replace problematic characters
+    safe = str(text)
+    # Replace spaces, hyphens, slashes, and other special chars with underscore
+    safe = safe.replace(" ", "_").replace("-", "_").replace("/", "_")
+    safe = safe.replace("\\", "_").replace("(", "_").replace(")", "_")
+    safe = safe.replace("[", "_").replace("]", "_").replace("{", "_")
+    safe = safe.replace("}", "_").replace(".", "_").replace(",", "_")
+    safe = safe.replace(":", "_").replace(";", "_").replace("!", "_")
+    safe = safe.replace("?", "_").replace("@", "_").replace("#", "_")
+    safe = safe.replace("$", "_").replace("%", "_").replace("^", "_")
+    safe = safe.replace("&", "_").replace("*", "_").replace("+", "_")
+    safe = safe.replace("=", "_").replace("|", "_").replace("~", "_")
+    # Remove any remaining non-alphanumeric characters except underscore
+    safe = re.sub(r'[^a-zA-Z0-9_]', '_', safe)
+    # Remove multiple consecutive underscores
+    safe = re.sub(r'_+', '_', safe)
+    # Remove leading/trailing underscores
+    safe = safe.strip('_')
+    # Ensure it doesn't start with a number (Streamlit requirement)
+    if safe and safe[0].isdigit():
+        safe = f"key_{safe}"
+    return safe
 
 
 
@@ -314,7 +352,9 @@ def display_antibiotic_info(ab_name, ab_data):
         if auto_open:
             st.session_state['auto_open_dosing'] = False
         
-        render_quick_dosing_calculator(ab_name, ab_data, key_prefix=f"info_{ab_name}_")
+        # Sanitize ab_name for key_prefix to avoid session state errors
+        safe_ab_name = _sanitize_key(ab_name)
+        render_quick_dosing_calculator(ab_name, ab_data, key_prefix=f"info_{safe_ab_name}_")
         
         # Export section
         if show_export:

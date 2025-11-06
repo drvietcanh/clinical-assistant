@@ -16,7 +16,8 @@ from .database_search import (
 )
 from .database_display import (
     render_compact_antibiotic_card,
-    display_antibiotic_info
+    display_antibiotic_info,
+    _sanitize_key
 )
 from .database_calculator import render_quick_dosing_calculator
 from .database_export import _render_antibiotic_export
@@ -72,7 +73,9 @@ def render_database():
             st.markdown("---")
             for ab_name in favorites:
                 if ab_name in ANTIBIOTICS_DATABASE:
-                    render_compact_antibiotic_card(ab_name, ANTIBIOTICS_DATABASE[ab_name], key_prefix=f"fav_{ab_name}_")
+                    # Sanitize ab_name for key_prefix to avoid session state errors
+                    safe_ab_name = _sanitize_key(ab_name)
+                    render_compact_antibiotic_card(ab_name, ANTIBIOTICS_DATABASE[ab_name], key_prefix=f"fav_{safe_ab_name}_")
                     st.markdown("<br>", unsafe_allow_html=True)
         else:
             st.info("💡 Chưa có kháng sinh yêu thích. Nhấn ☆ trên card để thêm vào danh sách yêu thích!")
@@ -84,7 +87,9 @@ def render_database():
             st.markdown("---")
             for ab_name in recent:
                 if ab_name in ANTIBIOTICS_DATABASE:
-                    render_compact_antibiotic_card(ab_name, ANTIBIOTICS_DATABASE[ab_name], key_prefix=f"recent_{ab_name}_")
+                    # Sanitize ab_name for key_prefix to avoid session state errors
+                    safe_ab_name = _sanitize_key(ab_name)
+                    render_compact_antibiotic_card(ab_name, ANTIBIOTICS_DATABASE[ab_name], key_prefix=f"recent_{safe_ab_name}_")
                     st.markdown("<br>", unsafe_allow_html=True)
         else:
             st.info("💡 Chưa có kháng sinh nào được xem gần đây")
