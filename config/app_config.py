@@ -34,8 +34,8 @@ class ModuleInfo:
 
 # Unified configuration
 APP_CONFIG = {
-    "version": "2.2.0",
-    "last_updated": "2025-11-03",
+    "version": "2.3.0",
+    "last_updated": "2025-01-30",
     
     "pages": {
         "scores": ModuleInfo(

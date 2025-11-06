@@ -141,3 +141,35 @@ def render_module_card(title: str, description: str, icon: str, color: str, bord
     </div>
     """
 
+
+def render_breadcrumb(items: list):
+    """
+    Render breadcrumb navigation
+    
+    Args:
+        items: List of (label, page_path) tuples or just labels for non-clickable items
+    
+    Example:
+        >>> render_breadcrumb([("Home", "app.py"), ("Scores", None), "Current Page"])
+    """
+    if not items:
+        return
+    
+    breadcrumb_html = '<div class="breadcrumb">'
+    
+    for idx, item in enumerate(items):
+        if isinstance(item, tuple):
+            label, page_path = item
+            if page_path:
+                breadcrumb_html += f'<a href="#" onclick="window.location.href=\'{page_path}\'">{label}</a>'
+            else:
+                breadcrumb_html += f'<span>{label}</span>'
+        else:
+            breadcrumb_html += f'<span>{item}</span>'
+        
+        if idx < len(items) - 1:
+            breadcrumb_html += '<span class="breadcrumb-separator">›</span>'
+    
+    breadcrumb_html += '</div>'
+    
+    st.markdown(breadcrumb_html, unsafe_allow_html=True)

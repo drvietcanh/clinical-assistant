@@ -3,8 +3,8 @@ Clinical Assistant - Streamlit Version
 Main application file - Refactored with modular components
 
 Author: Clinical IT Team
-Version: 2.2.0
-Date: 2025-11-03
+Version: 2.3.0
+Date: 2025-01-30
 """
 
 import streamlit as st
@@ -88,19 +88,52 @@ st.markdown("---")
 # ========== SIDEBAR ==========
 with st.sidebar:
     st.header("📋 Navigation")
-    st.info("""
-    **Chọn module bên trái** để bắt đầu:
     
-    - 📊 **Scores** - Thang điểm lâm sàng (110 calculators)
-    - 💊 **Antibiotics** - Liều kháng sinh & điều chỉnh thận
-    - 💊 **Tra Cứu Thuốc** - Database thuốc, tương tác, IV
-    - 📊 **TDM** - Theo dõi nồng độ thuốc (5 thuốc)
-    - 🔬 **Labs & Calculators** - Xét nghiệm + Tính toán ⭐ INTEGRATED
-    - 🫁 **Ventilator** - Cài đặt máy thở
-    - 🫁 **Critical Care** - Hồi sức (Fluids, Vasopressors, Transfusion, Sedation) ⭐ NEW
-    - 📋 **Protocols** - Phác đồ điều trị
-    - 🩺 **Diagnosis** - Chẩn đoán phân biệt (DDx)
+    # Quick Links Section
+    st.subheader("⚡ Quick Links")
+    quick_links = [
+        ("📊 Scores", "pages/01_📊_Scores.py"),
+        ("🔬 Labs", "pages/05_🔬_Labs_and_Calculators.py"),
+        ("💊 Thuốc", "pages/07_💊_Drug_Database.py"),
+        ("🫁 Hồi Sức", "pages/09_🫁_Critical_Care.py"),
+    ]
+    
+    for link_name, link_page in quick_links:
+        if st.button(link_name, key=f"quick_{link_name}", use_container_width=True):
+            st.switch_page(link_page)
+    
+    st.markdown("---")
+    
+    st.info("""
+    **📚 Tất Cả Modules:**
+    
+    **📊 Tính Toán:**
+    - Scores (110 calculators)
+    - Labs & Calculators
+    - TDM
+    
+    **💊 Thuốc:**
+    - Tra Cứu Thuốc
+    - Antibiotics
+    
+    **🫁 Hồi Sức:**
+    - Ventilator
+    - Critical Care
+    
+    **📋 Hướng Dẫn:**
+    - Protocols
+    - Diagnosis
     """)
+    
+    st.markdown("---")
+    
+    # Keyboard Shortcuts
+    with st.expander("⌨️ Keyboard Shortcuts"):
+        st.markdown("""
+        - **Ctrl+K** - Focus search
+        - **Esc** - Clear search
+        - **/** - Quick search
+        """)
     
     st.markdown("---")
     
@@ -117,68 +150,157 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
-# 1. Search
+# Hero Section with Search
+st.markdown("""
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            padding: 2rem; 
+            border-radius: 16px; 
+            margin-bottom: 2rem;
+            color: white;">
+    <h2 style="color: white; margin-bottom: 0.5rem;">🔍 Tìm Kiếm Nhanh</h2>
+    <p style="color: rgba(255,255,255,0.9); margin: 0;">Nhấn <kbd style="background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 4px;">Ctrl+K</kbd> để focus vào ô tìm kiếm</p>
+</div>
+""", unsafe_allow_html=True)
+
+# Search Component
 render_search()
-
-# 2. Favorites
-render_favorites()
-
-# 3. Recently Used
-render_recently_used()
-
-# 4. Quick Access Modules - Enhanced with beautiful cards
-st.markdown("### 🚀 Truy Cập Nhanh Modules")
-st.caption("Chọn module để bắt đầu tính toán")
-
-# Get modules from unified config
-modules = get_module_list_for_navigation()
-
-# Use responsive columns (5 on desktop, fewer on mobile)
-num_cols = min(5, len(modules))
-cols = st.columns(num_cols)
-
-for idx, (col, module) in enumerate(zip(cols, modules)):
-    with col:
-        # Get style from theme
-        module_id = module.get('id', module['key'].replace('quick_', ''))
-        style = get_module_style(module_id)
-        gradient = style.get('gradient', module.get('color', style['gradient']))
-        border = style.get('border', module.get('border', style['border']))
-        
-        # Enhanced card with hover effect
-        card_html = f"""
-        <div class="module-card" 
-             style="background: {gradient}; 
-                    border: 2px solid {border}; 
-                    text-align: center; 
-                    padding: 1.5rem; 
-                    border-radius: 12px; 
-                    margin: 0.5rem 0; 
-                    cursor: pointer; 
-                    transition: all 0.3s ease;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
-             onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
-            <div class="module-icon" style="font-size: 3rem; margin-bottom: 0.5rem;">{module['icon']}</div>
-            <div class="module-title" style="font-weight: bold; font-size: 1.1rem; margin-bottom: 0.5rem; color: #212121;">{module['title']}</div>
-            <div class="module-desc" style="font-size: 0.85rem; color: #666; line-height: 1.4;">{module['desc']}</div>
-        </div>
-        """
-        st.markdown(card_html, unsafe_allow_html=True)
-        
-        if st.button(f"▶️ Mở {module['title']}", key=module['key'], use_container_width=True, type="primary"):
-            st.switch_page(module['page'])
 
 st.markdown("---")
 
-# 5. Stats
-render_stats()
+# Tabs for better organization
+tab1, tab2, tab3 = st.tabs(["🚀 Truy Cập Nhanh", "⭐ Yêu Thích & Gần Đây", "📊 Thống Kê & Cập Nhật"])
 
-# 6. Updates
-render_updates()
+with tab1:
+    st.markdown("### 📚 Tất Cả Modules")
+    st.caption("Chọn module để bắt đầu. Modules được nhóm theo chức năng.")
+    
+    # Group modules by category
+    modules = get_module_list_for_navigation()
+    
+    # Define categories
+    categories = {
+        "📊 Tính Toán & Scores": ["scores", "labs", "tdm"],
+        "💊 Thuốc & Điều Trị": ["antibiotics", "drug_database"],
+        "🫁 Hồi Sức & Cấp Cứu": ["ventilator", "critical_care"],
+        "📋 Hướng Dẫn & Chẩn Đoán": ["protocols", "diagnosis"]
+    }
+    
+    # Organize modules by category
+    categorized_modules = {cat: [] for cat in categories.keys()}
+    uncategorized = []
+    
+    for module in modules:
+        module_id = module.get('id', module['key'].replace('quick_', ''))
+        categorized = False
+        for cat_name, cat_ids in categories.items():
+            if module_id in cat_ids:
+                categorized_modules[cat_name].append(module)
+                categorized = True
+                break
+        if not categorized:
+            uncategorized.append(module)
+    
+    # Display modules by category
+    for cat_name, cat_modules in categorized_modules.items():
+        if cat_modules:
+            st.markdown(f"#### {cat_name}")
+            st.caption(f"{len(cat_modules)} modules")
+            
+            # Use responsive columns
+            num_cols = min(3, len(cat_modules))
+            cols = st.columns(num_cols)
+            
+            for idx, module in enumerate(cat_modules):
+                with cols[idx % num_cols]:
+                    # Get style from theme
+                    module_id = module.get('id', module['key'].replace('quick_', ''))
+                    style = get_module_style(module_id)
+                    gradient = style.get('gradient', module.get('color', style['gradient']))
+                    border = style.get('border', module.get('border', style['border']))
+                    
+                    # Enhanced card with hover effect
+                    card_html = f"""
+                    <div class="module-card" 
+                         style="background: {gradient}; 
+                                border: 2px solid {border}; 
+                                text-align: center; 
+                                padding: 1.5rem; 
+                                border-radius: 12px; 
+                                margin: 0.5rem 0; 
+                                cursor: pointer; 
+                                transition: all 0.3s ease;
+                                box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+                         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
+                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                        <div class="module-icon" style="font-size: 3rem; margin-bottom: 0.5rem;">{module['icon']}</div>
+                        <div class="module-title" style="font-weight: bold; font-size: 1.1rem; margin-bottom: 0.5rem; color: #212121;">{module['title']}</div>
+                        <div class="module-desc" style="font-size: 0.85rem; color: #666; line-height: 1.4;">{module['desc']}</div>
+                    </div>
+                    """
+                    st.markdown(card_html, unsafe_allow_html=True)
+                    
+                    if st.button(f"▶️ Mở {module['title']}", key=f"{cat_name}_{module['key']}", use_container_width=True, type="primary"):
+                        st.switch_page(module['page'])
+            
+            st.markdown("---")
+    
+    # Display uncategorized modules if any
+    if uncategorized:
+        st.markdown("#### 📦 Khác")
+        num_cols = min(3, len(uncategorized))
+        cols = st.columns(num_cols)
+        for idx, module in enumerate(uncategorized):
+            with cols[idx % num_cols]:
+                module_id = module.get('id', module['key'].replace('quick_', ''))
+                style = get_module_style(module_id)
+                gradient = style.get('gradient', module.get('color', style['gradient']))
+                border = style.get('border', module.get('border', style['border']))
+                
+                card_html = f"""
+                <div class="module-card" 
+                     style="background: {gradient}; 
+                            border: 2px solid {border}; 
+                            text-align: center; 
+                            padding: 1.5rem; 
+                            border-radius: 12px; 
+                            margin: 0.5rem 0; 
+                            cursor: pointer; 
+                            transition: all 0.3s ease;
+                            box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+                     onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div class="module-icon" style="font-size: 3rem; margin-bottom: 0.5rem;">{module['icon']}</div>
+                    <div class="module-title" style="font-weight: bold; font-size: 1.1rem; margin-bottom: 0.5rem; color: #212121;">{module['title']}</div>
+                    <div class="module-desc" style="font-size: 0.85rem; color: #666; line-height: 1.4;">{module['desc']}</div>
+                </div>
+                """
+                st.markdown(card_html, unsafe_allow_html=True)
+                
+                if st.button(f"▶️ Mở {module['title']}", key=f"other_{module['key']}", use_container_width=True, type="primary"):
+                    st.switch_page(module['page'])
 
-# 7. Tips
-render_tips()
+with tab2:
+    st.markdown("### ⭐ Yêu Thích & Gần Đây")
+    st.caption("Các calculator bạn đã đánh dấu và sử dụng gần đây")
+    
+    # Favorites
+    render_favorites()
+    
+    # Recently Used
+    render_recently_used()
+
+with tab3:
+    st.markdown("### 📊 Thống Kê & Thông Tin")
+    st.caption("Thống kê hệ thống, cập nhật mới nhất và mẹo sử dụng")
+    
+    # Stats
+    render_stats()
+    
+    # Updates
+    render_updates()
+    
+    # Tips
+    render_tips()
 
 # 8. Data source info
 with st.expander("📚 Nguồn Dữ Liệu & Tài Liệu Tham Khảo"):

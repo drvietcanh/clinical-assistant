@@ -152,12 +152,29 @@ def get_all_categories() -> List[str]:
 
 def render_search():
     """Render enhanced search bar with fuzzy matching, filters, and suggestions"""
-    # Header with better styling
+    # Add keyboard shortcut handler
     st.markdown("""
-    <div style="margin-bottom: 1rem;">
-        <h2 style="margin-bottom: 0.5rem;">🔍 Tìm Kiếm Toàn Cục</h2>
-        <p style="color: #666; font-size: 0.9rem; margin: 0;">Tìm kiếm trong tất cả calculators, xét nghiệm, và protocols. Nhấn <kbd>Ctrl+K</kbd> để focus</p>
-    </div>
+    <script>
+    document.addEventListener('keydown', function(e) {
+        // Ctrl+K or Cmd+K to focus search
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            const searchInput = document.querySelector('input[placeholder*="Nhập từ khóa"]');
+            if (searchInput) {
+                searchInput.focus();
+                searchInput.select();
+            }
+        }
+        // Esc to clear search
+        if (e.key === 'Escape') {
+            const searchInput = document.querySelector('input[placeholder*="Nhập từ khóa"]');
+            if (searchInput && searchInput.value) {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+            }
+        }
+    });
+    </script>
     """, unsafe_allow_html=True)
     
     # Search controls with better layout
@@ -166,8 +183,8 @@ def render_search():
     with col_search:
         search_query = st.text_input(
             "🔎 Nhập từ khóa...",
-            placeholder="Ví dụ: CHA2DS2VASc, troponin, sepsis, SOFA...",
-            help="Gõ tên calculator, chuyên khoa, hoặc từ khóa bất kỳ. Hỗ trợ fuzzy matching!",
+            placeholder="Ví dụ: CHA2DS2VASc, troponin, sepsis, SOFA... (Ctrl+K để focus)",
+            help="Gõ tên calculator, chuyên khoa, hoặc từ khóa bất kỳ. Hỗ trợ fuzzy matching! Nhấn Ctrl+K để focus.",
             key="search_box",
             label_visibility="collapsed"
         )
@@ -185,19 +202,22 @@ def render_search():
             all_categories,
             index=0,
             key="search_category_filter",
-            label_visibility="collapsed"
+            label_visibility="collapsed",
+            help="Lọc theo chuyên khoa"
         )
         category_filter = None if selected_category == "Tất cả" else selected_category
     
     with col_clear:
-        if st.button("🗑️", help="Xóa tìm kiếm", use_container_width=True):
+        if st.button("🗑️", help="Xóa tìm kiếm (Esc)", use_container_width=True):
             st.session_state.search_box = ""
             st.rerun()
     
-    # Search options
-    with st.expander("⚙️ Tùy chọn tìm kiếm", expanded=False):
-        use_fuzzy = st.checkbox("Tìm kiếm mờ (Fuzzy)", value=True, help="Tìm kết quả tương tự ngay cả khi chính tả không chính xác")
-        boost_recent = st.checkbox("Ưu tiên đã dùng gần đây", value=True, help="Hiển thị các calculator đã dùng gần đây ở đầu")
+    # Search options - More accessible
+    col_options1, col_options2 = st.columns(2)
+    with col_options1:
+        use_fuzzy = st.checkbox("🔍 Tìm kiếm mờ (Fuzzy)", value=True, help="Tìm kết quả tương tự ngay cả khi chính tả không chính xác")
+    with col_options2:
+        boost_recent = st.checkbox("⭐ Ưu tiên đã dùng gần đây", value=True, help="Hiển thị các calculator đã dùng gần đây ở đầu")
     
     # Display results
     if search_query:
