@@ -35,7 +35,7 @@ def _sanitize_key(text):
         Sanitized string safe for use in keys
     """
     if not text:
-        return ""
+        return "key"
     # Convert to string and replace problematic characters
     safe = str(text)
     # Replace spaces, hyphens, slashes, and other special chars with underscore
@@ -57,6 +57,14 @@ def _sanitize_key(text):
     # Ensure it doesn't start with a number (Streamlit requirement)
     if safe and safe[0].isdigit():
         safe = f"key_{safe}"
+    # Ensure minimum length and valid characters only
+    if not safe or len(safe) == 0:
+        safe = "key"
+    # Limit length to prevent issues (Streamlit has key length limits)
+    if len(safe) > 100:
+        safe = safe[:100]
+    # Final check: ensure only valid characters
+    safe = re.sub(r'[^a-zA-Z0-9_]', '_', safe)
     return safe
 
 

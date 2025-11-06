@@ -18,6 +18,15 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
     Compact dosing calculator for embedding in antibiotic detail view
     Returns calculation result or None
     """
+    # Sanitize key_prefix to ensure it's safe for session state
+    from .database_display import _sanitize_key
+    if key_prefix:
+        # Extract the actual prefix part (before the last underscore if it ends with _)
+        prefix_parts = key_prefix.rstrip('_').split('_')
+        sanitized_parts = [_sanitize_key(part) for part in prefix_parts if part]
+        key_prefix = '_'.join(sanitized_parts) + '_' if sanitized_parts else 'info_'
+    else:
+        key_prefix = 'info_'
     st.markdown("---")
     
     # Modern card header
