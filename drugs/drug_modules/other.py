@@ -62,7 +62,122 @@ OTHER_DRUGS = {
               "clearance": "Thận (chủ yếu, allopurinol và oxypurinol thải qua nước tiểu). Cần giảm liều ở suy thận"
           },
           "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-          "black_box_warnings": "Có thể gây phản ứng da nghiêm trọng (ban da, SJS, TEN) đe dọa tính mạng. Ngừng ngay nếu có ban da. Nguy cơ tăng ở bệnh nhân suy thận, dùng đồng thời với ampicillin/amoxicillin, hoặc có tiền sử dị ứng allopurinol"
+          "black_box_warnings": "Có thể gây phản ứng da nghiêm trọng (ban da, SJS, TEN) đe dọa tính mạng. Ngừng ngay nếu có ban da. Nguy cơ tăng ở bệnh nhân suy thận, dùng đồng thời với ampicillin/amoxicillin, hoặc có tiền sử dị ứng allopurinol",
+          "drug_interactions": {
+              "major": [
+                  {
+                      "drug": "Azathioprine, 6-Mercaptopurine",
+                      "mechanism": "Allopurinol ức chế xanthine oxidase, enzyme chuyển hóa azathioprine và 6-mercaptopurine thành các chất không hoạt động. Ức chế enzyme này làm tăng nồng độ azathioprine/6-mercaptopurine trong máu.",
+                      "effect": "Tăng nồng độ azathioprine/6-mercaptopurine đáng kể, tăng độc tính (giảm bạch cầu, độc gan, độc tủy xương)",
+                      "management": "Giảm liều azathioprine/6-mercaptopurine 75% khi dùng với allopurinol. Theo dõi công thức máu và chức năng gan chặt chẽ. Hoặc tránh dùng đồng thời nếu có thể."
+                  },
+                  {
+                      "drug": "Ampicillin, Amoxicillin",
+                      "mechanism": "Cơ chế chưa rõ ràng, nhưng ampicillin/amoxicillin làm tăng nguy cơ phản ứng da nghiêm trọng với allopurinol.",
+                      "effect": "Tăng nguy cơ ban da nghiêm trọng, SJS, TEN (đe dọa tính mạng)",
+                      "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu ban da. Ngừng ngay nếu có ban da."
+                  },
+                  {
+                      "drug": "Warfarin",
+                      "mechanism": "Allopurinol có thể ức chế chuyển hóa warfarin, làm tăng nồng độ warfarin.",
+                      "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                      "management": "Theo dõi INR chặt chẽ khi bắt đầu hoặc điều chỉnh liều allopurinol. Điều chỉnh liều warfarin nếu cần."
+                  }
+              ],
+              "moderate": [
+                  {
+                      "drug": "Theophylline",
+                      "mechanism": "Allopurinol có thể ức chế chuyển hóa theophylline, làm tăng nồng độ theophylline.",
+                      "effect": "Tăng nồng độ theophylline, tăng độc tính (nhịp tim nhanh, co giật)",
+                      "management": "Theo dõi nồng độ theophylline và điều chỉnh liều nếu cần."
+                  },
+                  {
+                      "drug": "Cyclophosphamide",
+                      "mechanism": "Allopurinol có thể ức chế chuyển hóa cyclophosphamide, làm tăng độc tính.",
+                      "effect": "Tăng độc tính cyclophosphamide",
+                      "management": "Thận trọng khi dùng đồng thời. Theo dõi công thức máu và chức năng gan, thận."
+                  }
+              ],
+              "minor": []
+          },
+          "contraindications": {
+              "absolute": [
+                  "Dị ứng allopurinol",
+                  "Có thai (category C)",
+                  "Đang cho con bú",
+                  "Phản ứng da nghiêm trọng trước đây với allopurinol (SJS, TEN)"
+              ],
+              "relative": [
+                  "Suy thận (giảm liều theo CrCl)",
+                  "Suy gan (thận trọng, theo dõi chức năng gan)",
+                  "Đang dùng azathioprine/6-mercaptopurine (cần giảm liều 75%)",
+                  "Đang dùng ampicillin/amoxicillin (tăng nguy cơ ban da)"
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "C",
+              "pregnancy_details": "Allopurinol là category C. Không có dữ liệu đầy đủ về an toàn trong thai kỳ. Chỉ dùng nếu lợi ích > nguy cơ. Cân nhắc dùng liều thấp nhất hiệu quả.",
+              "lactation": {
+                  "safety": "Incompatible",
+                  "details": "Allopurinol và oxypurinol bài tiết vào sữa mẹ. Không nên dùng khi cho con bú do thiếu dữ liệu về an toàn cho trẻ bú mẹ.",
+                  "recommendation": "KHÔNG dùng khi cho con bú. Ngừng cho con bú hoặc ngừng allopurinol."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+              "moderate": "Thận trọng, theo dõi chức năng gan. Có thể cần giảm liều nhẹ.",
+              "severe": "Thận trọng, theo dõi chức năng gan chặt chẽ. Có thể cần giảm liều hoặc tránh dùng.",
+              "notes": "Allopurinol chuyển hóa một phần qua gan. Suy gan có thể làm tăng nồng độ và độc tính. Theo dõi ALT, AST định kỳ."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Ban da (có thể tiến triển thành SJS/TEN nếu nặng)",
+                  "Buồn nôn, nôn",
+                  "Đau đầu",
+                  "Tăng men gan",
+                  "Suy thận (hiếm)",
+                  "Phản ứng dị ứng nặng"
+              ],
+              "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+              "treatment": [
+                  "Ngừng allopurinol ngay lập tức",
+                  "Nếu có ban da: đánh giá mức độ nghiêm trọng, nếu SJS/TEN: điều trị như bỏng nặng (ICU, chăm sóc vết thương, điều trị nhiễm trùng)",
+                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                  "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                  "Theo dõi chức năng gan, thận",
+                  "Điều trị hỗ trợ: truyền dịch nếu cần",
+                  "Nếu SJS/TEN: điều trị tại ICU, có thể cần corticosteroid, IVIG"
+              ],
+              "monitoring": "Dấu hiệu ban da, chức năng gan, thận, dấu hiệu dị ứng. Nếu SJS/TEN: theo dõi tại ICU."
+          },
+          "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
+                  "timing": "Uống 1 lần/ngày sau bữa ăn. Uống với nhiều nước (2-3L/ngày) để tránh sỏi thận. Uống cùng thời điểm mỗi ngày."
+              },
+              "iv": {
+                  "reconstitution": "Không có dạng IV",
+                  "infusion_rate": "N/A",
+                  "compatibility": [],
+                  "incompatibility": [],
+                  "notes": "Chỉ có dạng uống"
+              }
+          },
+          "references": {
+              "primary_sources": [
+                  "FDA Drug Label - Allopurinol (Zyloric, Aloprim)",
+                  "American College of Rheumatology Guidelines - Gout Management",
+                  "UpToDate - Allopurinol drug information",
+                  "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                  "Lexicomp Online - Allopurinol Monograph"
+              ],
+              "last_updated": "2024-12-19",
+              "evidence_level": "A - Dựa trên FDA drug labels, ACR guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+          }
       },
       "Prednisolone": {
         "group": "Endocrinology - Corticosteroid",

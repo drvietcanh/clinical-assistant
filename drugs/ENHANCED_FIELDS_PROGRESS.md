@@ -395,7 +395,7 @@ python check_enhanced_fields.py
 **Cập nhật lần cuối:** 2025-02-04 (Session - Bổ sung 10 thuốc Enhanced Fields)  
 **Người cập nhật:** Auto (AI Assistant)  
 **Trạng thái:** ✅ File đã được cập nhật với thông tin mới nhất
-- ✅ **Tiến trình hiện tại:** 112/141 thuốc (79.4%) đã có đầy đủ 14 fields
+- ✅ **Tiến trình hiện tại:** 115/141 thuốc (81.6%) đã có đầy đủ 14 fields
 - ✅ **Đã hoàn thành:** 
   - Nhóm 1-8: 73 thuốc
   - Nhóm 9a (Emergency & Critical Care): 4 thuốc
@@ -404,8 +404,9 @@ python check_enhanced_fields.py
   - Nhóm 9c (Corticosteroids): 5 thuốc
   - Nhóm 9d (Respiratory): 7 thuốc
   - Nhóm 9e (Oncology): 6 thuốc
-  - Nhóm 9f (Endocrine & Others - Phần 1): 3 thuốc - **MỚI HOÀN THÀNH** (Levothyroxine, Methimazole, Propylthiouracil)
-- ⏳ **Còn lại:** 29 thuốc (20.6%) cần bổ sung 8 fields tùy chọn
+  - Nhóm 9f (Endocrine & Others - Phần 1): 3 thuốc (Levothyroxine, Methimazole, Propylthiouracil)
+  - Nhóm 9f (Endocrine & Others - Phần 2): 3 thuốc - **MỚI HOÀN THÀNH** (Methotrexate, Allopurinol, Atropine)
+- ⏳ **Còn lại:** 26 thuốc (18.4%) cần bổ sung 8 fields tùy chọn
 - 📋 **Ưu tiên tiếp theo:** 
   - Nhóm 9f (Phần 2): Methotrexate, Allopurinol, Atropine, Ticlopidine, Dipyridamole, Isosorbide mononitrate, Enalaprilat, Amoxicillin suspension, Budesonide
   - Các nhóm tiếp theo: Antivirals & Antifungals, Anthelmintics, Vitamins & Supplements
