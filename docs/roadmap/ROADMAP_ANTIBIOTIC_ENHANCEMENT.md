@@ -11,9 +11,9 @@
 |-------|-----|-----------|---------|--------|
 | **Phase 1** | Multi-Scenario Calculator | 1-2 tuần | 🔴 P0 | ⏳ Chưa bắt đầu |
 | **Phase 2** | Drug Interaction Checker | 1-2 tuần | 🔴 P0 | ⏳ Chưa bắt đầu |
-| **Phase 3** | Visual Charts & Export | 1 tuần | 🟡 P1 | ⏳ Chưa bắt đầu |
-| **Phase 4** | Integration & UX | 1 tuần | 🟡 P1 | ⏳ Chưa bắt đầu |
-| **Phase 5** | Advanced Features | 2-3 tuần | 🟢 P2 | ⏳ Chưa bắt đầu |
+| **Phase 3** | Visual Charts & Export | 1 tuần | 🟡 P1 | ✅ Hoàn thành |
+| **Phase 4** | Integration & UX | 1 tuần | 🟡 P1 | ✅ Hoàn thành |
+| **Phase 5** | Advanced Features | 2-3 tuần | 🟢 P2 | ✅ Hoàn thành |
 
 ---
 
@@ -553,21 +553,21 @@
 - [ ] Task 2.5: Expand Database
 
 ### Phase 3: Visual Charts & Export
-- [ ] Task 3.1: Bar Chart
-- [ ] Task 3.2: Interval Chart
-- [ ] Task 3.3: Export CSV
-- [ ] Task 3.4: Print View
+- [x] Task 3.1: Bar Chart ✅
+- [x] Task 3.2: Interval Chart ✅
+- [x] Task 3.3: Export CSV ✅
+- [x] Task 3.4: Print View ✅
 
 ### Phase 4: Integration & UX
-- [ ] Task 4.1: Recent Calculations
-- [ ] Task 4.2: Favorite Antibiotics
-- [ ] Task 4.3: Smart Search
-- [ ] Task 4.4: UI/UX Polish
+- [x] Task 4.1: Recent Calculations ✅
+- [x] Task 4.2: Favorite Antibiotics ✅
+- [x] Task 4.3: Smart Search ✅
+- [x] Task 4.4: UI/UX Polish ✅
 
 ### Phase 5: Advanced Features
-- [ ] Task 5.1: TDM Integration
-- [ ] Task 5.2: Pediatric Templates
-- [ ] Task 5.3: IV Compatibility
+- [x] Task 5.1: TDM Integration ✅
+- [x] Task 5.2: Pediatric Templates ✅
+- [x] Task 5.3: IV Compatibility ✅
 
 ---
 
@@ -580,6 +580,6 @@
 
 ---
 
-**Last Updated:** 2025-01-30  
-**Status:** 📋 Ready to Start
+**Last Updated:** 2025-02-04  
+**Status:** ✅ Phase 3, 4, 5 Complete - Visual Charts & Export, Integration & UX, Advanced Features đã hoàn thành
 

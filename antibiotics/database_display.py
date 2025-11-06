@@ -9,6 +9,7 @@ import pandas as pd
 import re
 from .antibiotics_data import ANTIBIOTICS_DATABASE
 from .database_calculator import render_quick_dosing_calculator
+from .scenario_dosing_calculator import render_scenario_dosing_calculator
 from .database_export import _render_antibiotic_export
 from .mic_breakpoints import get_mic_breakpoints, get_common_susceptibility
 from .resistance_patterns import get_antibiotic_resistance_summary
@@ -476,6 +477,20 @@ def display_antibiotic_info(ab_name, ab_data):
         # Sanitize ab_name for key_prefix to avoid session state errors
         safe_ab_name = _sanitize_key(ab_name)
         render_quick_dosing_calculator(ab_name, ab_data, key_prefix=f"info_{safe_ab_name}_")
+        
+        # Scenario Dosing Calculator (Phase 3)
+        with st.expander("🧮 Tính Liều Cho Nhiều Trường Hợp (Scenarios)", expanded=False):
+            render_scenario_dosing_calculator(ab_name)
+        
+        # TDM Calculator (Phase 5 - Task 5.1)
+        if ab_name == "Vancomycin":
+            from .tdm_integration import render_tdm_calculator
+            render_tdm_calculator(ab_name)
+        
+        # IV Compatibility Checker (Phase 5 - Task 5.3)
+        with st.expander("💉 Kiểm Tra Tương Thích IV", expanded=False):
+            from .iv_compatibility import render_iv_compatibility_checker
+            render_iv_compatibility_checker(ab_name)
         
         # Export section
         if show_export:

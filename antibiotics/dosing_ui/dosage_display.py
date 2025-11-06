@@ -100,10 +100,32 @@ def render_renal_adjustment_table(result):
         st.dataframe(df_renal, use_container_width=True, hide_index=True)
 
 
-def render_detailed_dose(selected_ab, weight, ibw, abw, crcl, indication_code, is_pediatric, height, is_obese, is_malnourished=False):
+def render_detailed_dose(selected_ab, weight, ibw, abw, crcl, indication_code, is_pediatric, height, is_obese, is_malnourished=False, age_years=None):
     """Render detailed dose calculation results"""
     st.markdown("---")
     st.markdown("### 💉 Tính Liều Chi Tiết:")
+    
+    # Pediatric templates (Phase 5 - Task 5.2)
+    if is_pediatric and age_years:
+        from ..pediatric_templates import (
+            get_pediatric_dosing_adjustment,
+            format_pediatric_category,
+            get_pediatric_warnings
+        )
+        
+        ped_adjustment = get_pediatric_dosing_adjustment(age_years, weight)
+        if ped_adjustment.get('is_pediatric'):
+            category = ped_adjustment.get('category')
+            st.info(f"""
+            **👶 {format_pediatric_category(category)}**
+            
+            {ped_adjustment.get('notes', '')}
+            """)
+            
+            # Show warnings
+            warnings = get_pediatric_warnings(age_years, selected_ab)
+            for warning in warnings:
+                st.warning(warning)
     
     detailed_dose = calculate_detailed_dose(
         selected_ab, weight, ibw, abw, crcl, 
@@ -295,7 +317,9 @@ def render_dosage_results(result, selected_ab, ab_data, crcl, renal_category, pa
         indication_code,
         patient_data['is_pediatric'],
         patient_data['height'],
-        patient_data['is_obese']
+        patient_data['is_obese'],
+        is_malnourished=False,
+        age_years=patient_data.get('age', None)
     )
     
     # ICU adjustments

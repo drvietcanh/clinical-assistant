@@ -128,6 +128,21 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
             st.session_state[f"{key_prefix}dosing_weight"] = weight
             st.session_state[f"{key_prefix}dosing_crcl"] = crcl
             st.session_state[f"{key_prefix}dosing_indication"] = indication_code
+            
+            # Save to recent calculations (Phase 4)
+            from .recent_calculations import save_calculation
+            save_calculation({
+                'antibiotic_name': ab_name,
+                'patient_info': {
+                    'weight': weight,
+                    'crcl': crcl,
+                    'egfr': imported_egfr
+                },
+                'indication': indication_code,
+                'result': result,
+                'calculation_type': 'quick'
+            })
+            
             st.rerun()
         else:
             st.error(result["error"])

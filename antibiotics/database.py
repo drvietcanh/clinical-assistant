@@ -7,6 +7,7 @@ Tích hợp database kháng sinh với công cụ tra cứu và tính liều
 import streamlit as st
 import pandas as pd
 import html
+from datetime import datetime
 from .antibiotics_data import ANTIBIOTICS_DATABASE
 from .database_search import (
     search_antibiotics,
@@ -23,6 +24,7 @@ from .database_display import (
 from .database_calculator import render_quick_dosing_calculator
 from .database_export import _render_antibiotic_export
 from .condition_search import search_by_condition, get_all_conditions
+from .recent_calculations import render_recent_calculations_sidebar
 
 def render_database():
     """Unified Antibiotic Database - Search, Browse, Detail View, and Integrated Dosing Calculator"""
@@ -99,6 +101,7 @@ def render_database():
             st.info("💡 Chưa có kháng sinh yêu thích. Nhấn ☆ trên card để thêm vào danh sách yêu thích!")
     
     with tab_recent:
+        # Recently viewed antibiotics
         recent = st.session_state.recently_viewed_antibiotics
         if recent:
             st.success(f"Đã xem **{len(recent)}** kháng sinh gần đây")
@@ -111,6 +114,45 @@ def render_database():
                     st.markdown("<br>", unsafe_allow_html=True)
         else:
             st.info("💡 Chưa có kháng sinh nào được xem gần đây")
+        
+        # Recent Calculations (Phase 4)
+        st.markdown("---")
+        st.markdown("### 🧮 Tính Liều Gần Đây")
+        
+        # Render recent calculations inline (not in sidebar)
+        from .recent_calculations import get_recent_calculations, format_calculation_summary, remove_calculation
+        recent_calcs = get_recent_calculations(limit=10)
+        
+        if recent_calcs:
+            st.info(f"📊 **{len(recent_calcs)}** calculations gần đây")
+            for i, calc in enumerate(recent_calcs):
+                summary = format_calculation_summary(calc)
+                timestamp = calc.get('timestamp', None)
+                
+                col1, col2 = st.columns([4, 1])
+                with col1:
+                    if st.button(
+                        f"📋 {summary}",
+                        key=f"recent_calc_{calc.get('id', i)}",
+                        use_container_width=True
+                    ):
+                        # Load calculation
+                        st.session_state['load_calculation'] = calc
+                        st.session_state['view_antibiotic'] = calc.get('antibiotic_name')
+                        st.rerun()
+                
+                with col2:
+                    if st.button("🗑️", key=f"del_calc_{calc.get('id', i)}", help="Xóa"):
+                        remove_calculation(calc.get('id'))
+                        st.rerun()
+                
+                if timestamp:
+                    st.caption(f"⏰ {timestamp.strftime('%d/%m/%Y %H:%M') if isinstance(timestamp, type(datetime.now())) else timestamp}")
+                
+                if i < len(recent_calcs) - 1:
+                    st.markdown("---")
+        else:
+            st.info("💡 Chưa có calculations nào. Tính liều để lưu vào đây!")
     
     st.markdown("---")
     
@@ -264,33 +306,59 @@ def render_database():
         horizontal=True
     )
     
-    # Filters (only for browse mode)
+    # Enhanced Filters (Phase 4 - Task 4.3: Smart Search Enhancement)
     if view_mode == "📋 Duyệt tất cả":
-        st.markdown("**🔽 Bộ lọc:**")
-        col1, col2, col3 = st.columns(3)
-        
-        all_groups = sorted(list(set([ab.get('group', 'Khác') for ab in ANTIBIOTICS_DATABASE.values()])))
-        
-        with col1:
-            filter_group = st.selectbox(
-                "Nhóm:",
-                ["Tất cả"] + all_groups,
-                key="filter_group_main"
-            )
-        
-        with col2:
-            filter_route = st.selectbox(
-                "Đường dùng:",
-                ["Tất cả", "IV", "IM", "PO"],
-                key="filter_route_main"
-            )
-        
-        with col3:
-            filter_aware = st.selectbox(
-                "AWaRe:",
-                ["Tất cả", "ACCESS", "WATCH", "RESERVE"],
-                key="filter_aware_main"
-            )
+        with st.expander("🔽 **Bộ Lọc Nâng Cao**", expanded=True):
+            col1, col2, col3, col4 = st.columns(4)
+            
+            all_groups = sorted(list(set([ab.get('group', 'Khác') for ab in ANTIBIOTICS_DATABASE.values()])))
+            
+            with col1:
+                filter_group = st.selectbox(
+                    "📦 Nhóm kháng sinh:",
+                    ["Tất cả"] + all_groups,
+                    key="filter_group_main",
+                    help="Lọc theo nhóm kháng sinh (Penicillin, Cephalosporin, etc.)"
+                )
+            
+            with col2:
+                filter_route = st.selectbox(
+                    "💉 Đường dùng:",
+                    ["Tất cả", "IV", "IM", "PO"],
+                    key="filter_route_main",
+                    help="Lọc theo đường dùng (tiêm tĩnh mạch, tiêm bắp, uống)"
+                )
+            
+            with col3:
+                filter_aware = st.selectbox(
+                    "🏥 AWaRe:",
+                    ["Tất cả", "ACCESS", "WATCH", "RESERVE"],
+                    key="filter_aware_main",
+                    help="Lọc theo phân loại AWaRe của WHO"
+                )
+            
+            with col4:
+                # Additional filter: Pregnancy safety
+                filter_pregnancy = st.selectbox(
+                    "🤰 Thai kỳ:",
+                    ["Tất cả", "A", "B", "C", "D", "X"],
+                    key="filter_pregnancy_main",
+                    help="Lọc theo độ an toàn trong thai kỳ (FDA category)"
+                )
+            
+            # Filter summary
+            active_filters = []
+            if filter_group != "Tất cả":
+                active_filters.append(f"Nhóm: {filter_group}")
+            if filter_route != "Tất cả":
+                active_filters.append(f"Đường: {filter_route}")
+            if filter_aware != "Tất cả":
+                active_filters.append(f"AWaRe: {filter_aware}")
+            if filter_pregnancy != "Tất cả":
+                active_filters.append(f"Thai kỳ: {filter_pregnancy}")
+            
+            if active_filters:
+                st.info(f"🔍 **Đang lọc:** {', '.join(active_filters)}")
     
     st.markdown("---")
     
@@ -412,7 +480,8 @@ def render_database():
         filtered_ab = filter_antibiotics(
             filter_group if view_mode == "📋 Duyệt tất cả" else "Tất cả",
             filter_route if view_mode == "📋 Duyệt tất cả" else "Tất cả",
-            filter_aware if view_mode == "📋 Duyệt tất cả" else "Tất cả"
+            filter_aware if view_mode == "📋 Duyệt tất cả" else "Tất cả",
+            filter_pregnancy if view_mode == "📋 Duyệt tất cả" else "Tất cả"
         )
         
         if filtered_ab:

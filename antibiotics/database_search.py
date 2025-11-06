@@ -141,8 +141,19 @@ def add_to_recent_searches(query):
     st.session_state.recent_antibiotic_searches = recent[:10]
 
 
-def filter_antibiotics(group_filter="Tất cả", route_filter="Tất cả", aware_filter="Tất cả"):
-    """Filter antibiotics by group, route, and AWaRe classification"""
+def filter_antibiotics(group_filter="Tất cả", route_filter="Tất cả", aware_filter="Tất cả", pregnancy_filter="Tất cả"):
+    """
+    Filter antibiotics by group, route, AWaRe classification, and pregnancy safety
+    
+    Args:
+        group_filter: Filter by antibiotic group
+        route_filter: Filter by administration route (IV, IM, PO)
+        aware_filter: Filter by AWaRe classification (ACCESS, WATCH, RESERVE)
+        pregnancy_filter: Filter by FDA pregnancy category (A, B, C, D, X)
+    
+    Returns:
+        Dict of filtered antibiotics
+    """
     filtered = {}
     
     for ab_name, ab_data in ANTIBIOTICS_DATABASE.items():
@@ -159,6 +170,20 @@ def filter_antibiotics(group_filter="Tất cả", route_filter="Tất cả", awa
         # AWaRe filter
         if aware_filter != "Tất cả":
             if ab_data.get('aware_classification', '') != aware_filter:
+                continue
+        
+        # Pregnancy filter (Phase 4 enhancement)
+        if pregnancy_filter != "Tất cả":
+            # Check in pregnancy field (could be 'pregnancy' or in enhanced_fields)
+            pregnancy_cat = ab_data.get('pregnancy', '')
+            if not pregnancy_cat:
+                # Try enhanced_fields
+                enhanced = ab_data.get('enhanced_fields', {})
+                if enhanced:
+                    preg_lact = enhanced.get('pregnancy_lactation', {})
+                    pregnancy_cat = preg_lact.get('fda_category', '')
+            
+            if pregnancy_cat != pregnancy_filter:
                 continue
         
         filtered[ab_name] = ab_data
