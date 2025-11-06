@@ -37,11 +37,11 @@
 
 **Tổng số thuốc:** 141  
 **Phase 1 - 6 fields cơ bản:** 141 ✅ (100% - HOÀN THÀNH!)  
-**Phase 2 - 8 fields tùy chọn:** 77 ✅ (54.6% - Đang tiến hành)  
-**Còn lại Phase 2:** 64 thuốc (45.4%)  
+**Phase 2 - 8 fields tùy chọn:** 91 ✅ (64.5% - Đang tiến hành)  
+**Còn lại Phase 2:** 50 thuốc (35.5%)  
 **Mục tiêu:** Bổ sung đầy đủ 14 fields cho tất cả 141 thuốc
 - ✅ Phase 1: 6 fields cơ bản - HOÀN THÀNH 100%
-- 🔄 Phase 2: 8 fields tùy chọn - Đang tiến hành (54.6%)
+- 🔄 Phase 2: 8 fields tùy chọn - Đang tiến hành (64.5%)
 
 ### Tiến Trình Gần Đây (2024-12-19 - HOÀN THÀNH 6 FIELDS CƠ BẢN)
 - ✅ **Hoàn thành 5 thuốc cuối cùng**: Calcium, Vitamin D, Budesonide, Enalaprilat, Amoxicillin suspension
@@ -187,9 +187,9 @@
 - ✅ **Tất cả 141 thuốc đã có đủ 6 fields cơ bản!**
 - ✅ Calcium, Vitamin D, Budesonide, Enalaprilat, Amoxicillin suspension (mới bổ sung)
 
-### 📋 Phase 2 - 8 Fields Tùy Chọn (77/141 thuốc - 54.6% hoàn thành)
+### 📋 Phase 2 - 8 Fields Tùy Chọn (91/141 thuốc - 64.5% hoàn thành)
 
-#### ✅ Đã Hoàn Thành (77 thuốc)
+#### ✅ Đã Hoàn Thành (91 thuốc)
 Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.py`
 
 **Các nhóm đã hoàn thành:**
@@ -201,43 +201,58 @@ Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.p
 - ✅ Nhóm 6: GI & Metabolic (10 thuốc)
 - ✅ Nhóm 7: Pain & Inflammation (5 thuốc)
 - ✅ Nhóm 8: Respiratory & Neurology (6 thuốc)
+- ✅ Nhóm 9a: Emergency & Critical Care (4 thuốc): Epinephrine, Naloxone, Flumazenil, Lidocaine
+- ✅ Nhóm 9b (Phần 1): Antimicrobials - High Priority (6 thuốc): Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline
+- ✅ Nhóm 9b (Phần 2): Antimicrobials - High Priority (4 thuốc): Amoxicillin-clavulanate, Azithromycin, Clarithromycin, Trimethoprim-sulfamethoxazole
 
-#### ⏳ Còn Lại (64 thuốc - 45.4%)
+#### ⏳ Còn Lại (50 thuốc - 35.5%)
 
 **Ưu tiên cao - Emergency & Critical Care (4 thuốc):**
 - ✅ Epinephrine, Naloxone, Flumazenil, Lidocaine - **HOÀN THÀNH**
 
 **Ưu tiên cao - Antimicrobials (10+ thuốc):**
-- Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline
-- Amoxicillin-clavulanate, Azithromycin, Clarithromycin, Trimethoprim-sulfamethoxazole
+- ✅ Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline - **HOÀN THÀNH**
+- ✅ Amoxicillin-clavulanate, Azithromycin, Clarithromycin, Trimethoprim-sulfamethoxazole - **HOÀN THÀNH**
 
-**Ưu tiên trung bình - Corticosteroids (4 thuốc):**
-- Dexamethasone, Hydrocortisone, Prednisolone, Betamethasone
+**Ưu tiên trung bình - Corticosteroids (5 thuốc):**
+- ⏳ Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone
 
-**Ưu tiên trung bình - Respiratory (6 thuốc):**
-- Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan
+**Ưu tiên trung bình - Respiratory (7 thuốc):**
+- ⏳ Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan
 
 **Ưu tiên trung bình - Oncology (6 thuốc):**
-- Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron
+- ⏳ Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron
 
 **Ưu tiên trung bình - Endocrine & Others (10+ thuốc):**
-- Levothyroxine, Methimazole, Propylthiouracil
-- Methotrexate, Allopurinol
-- Atropine, Adenosine (đã có trong nhóm 1 nhưng cần kiểm tra)
-- Ticlopidine, Dipyridamole, Isosorbide mononitrate
-- Enalaprilat, Amoxicillin suspension, Budesonide
+- ⏳ Levothyroxine, Methimazole, Propylthiouracil
+- ⏳ Methotrexate, Allopurinol
+- ⏳ Atropine
+- ⏳ Ticlopidine, Dipyridamole, Isosorbide mononitrate
+- ⏳ Enalaprilat, Amoxicillin suspension, Budesonide
 
 **Ưu tiên thấp - Antivirals & Antifungals (8+ thuốc):**
-- Oseltamivir, Ganciclovir, Ribavirin
-- Itraconazole, Voriconazole, Nystatin
-- Chloroquine, Artesunate
+- ⏳ Oseltamivir, Ganciclovir, Ribavirin
+- ⏳ Itraconazole, Voriconazole, Nystatin
+- ⏳ Chloroquine, Artesunate
 
 **Ưu tiên thấp - Anthelmintics & Others (10+ thuốc):**
-- Albendazole, Mebendazole
-- Vitamins & Supplements: Calcium, Vitamin D, Vitamin B12, Folic Acid, Iron
-- Desloratadine, Levocetirizine
-- Vildagliptin, Pioglitazone
-- Rosuvastatin (cần kiểm tra lại)
+- ⏳ Albendazole, Mebendazole
+- ⏳ Vitamins & Supplements: Calcium, Vitamin D, Vitamin B12, Folic Acid, Folic acid, Iron
+- ⏳ Desloratadine, Levocetirizine
+- ⏳ Vildagliptin, Pioglitazone
+
+**Danh sách đầy đủ 50 thuốc còn lại:**
+- **Corticosteroids (5):** Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone
+- **Respiratory (7):** Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan
+- **Oncology (6):** Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron
+- **Endocrine (3):** Levothyroxine, Methimazole, Propylthiouracil
+- **Others (9):** Methotrexate, Allopurinol, Atropine, Ticlopidine, Dipyridamole, Isosorbide mononitrate, Enalaprilat, Amoxicillin suspension, Budesonide
+- **Antivirals & Antifungals (8):** Oseltamivir, Ganciclovir, Ribavirin, Itraconazole, Voriconazole, Nystatin, Chloroquine, Artesunate
+- **Anthelmintics (2):** Albendazole, Mebendazole
+- **Vitamins & Supplements (6):** Calcium, Vitamin D, Vitamin B12, Folic Acid, Folic acid, Iron
+- **Antihistamines (2):** Desloratadine, Levocetirizine
+- **Antidiabetics (2):** Vildagliptin, Pioglitazone
+- **Tổng:** 50 thuốc
 
 **Chi tiết kế hoạch:** Xem `drugs/PHASE2_PLAN.md`  
 **Theo dõi tiến trình:** Chạy `python track_phase2_progress.py`
@@ -332,17 +347,18 @@ python check_enhanced_fields.py
 ### Tiếp Tục
 - ✅ **HOÀN THÀNH Phase 1:** Tất cả 141 thuốc đã có đủ 6 fields cơ bản (100%)
 - 📋 **Phase 2 đang tiến hành:** Bổ sung 8 fields tùy chọn cho tất cả 141 thuốc
-  - ✅ **Tổng số đã hoàn thành:** 77/141 thuốc (54.6%)
-  - ⏳ **Còn lại:** 64 thuốc (45.4%)
+  - ✅ **Tổng số đã hoàn thành:** 91/141 thuốc (64.5%)
+  - ⏳ **Còn lại:** 50 thuốc (35.5%)
   - 📋 **Kế hoạch chi tiết:** Xem `drugs/PHASE2_PLAN.md`
   - 📊 **Theo dõi tiến trình:** `python track_phase2_progress.py`
-- 📋 **Tiếp theo:** Nhóm 9 - Các thuốc còn lại (64 thuốc)
-  - **Ưu tiên cao:** Emergency drugs (Epinephrine, Naloxone, Flumazenil, Lidocaine)
-  - **Ưu tiên cao:** Antimicrobials (Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline)
-  - **Ưu tiên trung bình:** Corticosteroids (Dexamethasone, Hydrocortisone, Prednisolone, Betamethasone)
-  - **Ưu tiên trung bình:** Respiratory (Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled)
-  - **Ưu tiên trung bình:** Oncology (Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron)
-  - **Ưu tiên thấp:** Vitamins & Supplements, Antimalarials, Anthelmintics, Others
+- 📋 **Tiếp theo:** Nhóm 9 - Các thuốc còn lại (50 thuốc)
+  - ✅ **Ưu tiên cao - Emergency drugs:** Epinephrine, Naloxone, Flumazenil, Lidocaine - **HOÀN THÀNH**
+  - ✅ **Ưu tiên cao - Antimicrobials (Phần 1):** Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline - **HOÀN THÀNH**
+  - ✅ **Ưu tiên cao - Antimicrobials (Phần 2):** Amoxicillin-clavulanate, Azithromycin, Clarithromycin, Trimethoprim-sulfamethoxazole - **HOÀN THÀNH**
+  - ⏳ **Ưu tiên trung bình - Corticosteroids:** Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone
+  - ⏳ **Ưu tiên trung bình - Respiratory:** Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan
+  - ⏳ **Ưu tiên trung bình - Oncology:** Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron
+  - ⏳ **Ưu tiên thấp:** Vitamins & Supplements, Antimalarials, Anthelmintics, Others
 - 📋 **Sau khi hoàn thành Phase 2:** Tiến hành refactor module để tách file lớn
 
 ---
@@ -351,12 +367,12 @@ python check_enhanced_fields.py
 
 ### ✅ Thành Tựu
 - **Phase 1:** 100% hoàn thành - Tất cả 141 thuốc đã có đủ 6 fields cơ bản
-- **Phase 2:** 61.7% hoàn thành - 87/141 thuốc đã có đủ 8 fields tùy chọn
-- **Tổng cộng:** 87 thuốc đã có đầy đủ 14 fields (6 cơ bản + 8 tùy chọn)
+- **Phase 2:** 64.5% hoàn thành - 91/141 thuốc đã có đủ 8 fields tùy chọn
+- **Tổng cộng:** 91 thuốc đã có đầy đủ 14 fields (6 cơ bản + 8 tùy chọn)
 
 ### 🔄 Đang Tiến Hành
-- **Phase 2:** Bổ sung 8 fields tùy chọn cho 54 thuốc còn lại
-- **Ưu tiên tiếp theo:** Antimicrobials (Amoxicillin-clavulanate, Azithromycin, Clarithromycin, Trimethoprim-sulfamethoxazole)
+- **Phase 2:** Bổ sung 8 fields tùy chọn cho 50 thuốc còn lại
+- **Ưu tiên tiếp theo:** Corticosteroids (Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone)
 
 ### 📋 Công Cụ Hỗ Trợ
 - **Kiểm tra Phase 1 (6 fields cơ bản):** `python check_enhanced_fields.py`
@@ -366,16 +382,24 @@ python check_enhanced_fields.py
 
 ### 🎯 Mục Tiêu Tiếp Theo
 1. ✅ **Nhóm 9a - Emergency & Critical Care (4 thuốc):** Epinephrine, Naloxone, Flumazenil, Lidocaine - **HOÀN THÀNH**
-2. 🔄 **Nhóm 9b - Antimicrobials (10+ thuốc):** 
-   - ✅ **Hoàn thành:** Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline
-   - ⏳ **Còn lại:** Amoxicillin-clavulanate, Azithromycin, Clarithromycin, Trimethoprim-sulfamethoxazole
-3. **Nhóm 9c - Corticosteroids (4 thuốc):** Dexamethasone, Hydrocortisone, Prednisolone, Betamethasone
+2. ✅ **Nhóm 9b - Antimicrobials (10+ thuốc):** 
+  - ✅ **Hoàn thành (Phần 1):** Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline (6/10 thuốc)
+  - ✅ **Hoàn thành (Phần 2):** Amoxicillin-clavulanate, Azithromycin, Clarithromycin, Trimethoprim-sulfamethoxazole (4 thuốc) - **HOÀN THÀNH**
+3. **Nhóm 9c - Corticosteroids (5 thuốc):** Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone
 4. **Các nhóm tiếp theo:** Respiratory, Oncology, Endocrine, Others
 
 ---
 
-**Cập nhật lần cuối:** 2025-02-03 (Session 28 - Antimicrobials Phase 2)  
+**Cập nhật lần cuối:** 2025-02-03 (Session tiếp theo - Hoàn thành Nhóm 9b Phần 2)  
 **Người cập nhật:** Auto (AI Assistant)  
 **Trạng thái:** ✅ File đã được cập nhật với thông tin mới nhất
-- ✅ **Mới hoàn thành:** Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline (5 thuốc)
-- 📊 **Tiến trình:** 87/141 thuốc (61.7%) đã có đầy đủ 14 fields
+- ✅ **Tiến trình hiện tại:** 91/141 thuốc (64.5%) đã có đầy đủ 14 fields
+- ✅ **Đã hoàn thành:** 
+  - Nhóm 1-8: 73 thuốc
+  - Nhóm 9a (Emergency & Critical Care): 4 thuốc
+  - Nhóm 9b Phần 1 (Antimicrobials - High Priority): 6 thuốc
+  - Nhóm 9b Phần 2 (Antimicrobials - High Priority): 4 thuốc - **MỚI HOÀN THÀNH**
+- ⏳ **Còn lại:** 50 thuốc (35.5%) cần bổ sung 8 fields tùy chọn
+- 📋 **Ưu tiên tiếp theo:** 
+  - Nhóm 9c: Corticosteroids (5 thuốc): Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone
+  - Các nhóm tiếp theo: Respiratory, Oncology, Endocrine, Others
