@@ -138,7 +138,136 @@ ANALGESICS_DRUGS = {
             "clearance": "Chủ yếu qua thận, cần điều chỉnh ở suy thận nặng"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Viên nén: tránh ẩm, để xa tầm tay trẻ em.",
-        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt khi dùng với benzodiazepine, rượu, hoặc thuốc an thần khác. Nguy cơ co giật tăng ở liều cao và khi dùng với SSRI/SNRI. Nguy cơ hội chứng serotonin khi dùng với MAOI hoặc SSRI/SNRI, có thể tử vong."
+        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt khi dùng với benzodiazepine, rượu, hoặc thuốc an thần khác. Nguy cơ co giật tăng ở liều cao và khi dùng với SSRI/SNRI. Nguy cơ hội chứng serotonin khi dùng với MAOI hoặc SSRI/SNRI, có thể tử vong.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors (phenelzine, tranylcypromine, selegiline)",
+                    "mechanism": "Ức chế chuyển hóa serotonin, tăng nguy cơ hội chứng serotonin",
+                    "effect": "Hội chứng serotonin nghiêm trọng, có thể tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng MAOI ít nhất 14 ngày trước khi dùng tramadol"
+                },
+                {
+                    "drug": "SSRI/SNRI (fluoxetine, sertraline, venlafaxine, duloxetine)",
+                    "mechanism": "Tăng nồng độ serotonin, giảm ngưỡng co giật",
+                    "effect": "Tăng nguy cơ co giật và hội chứng serotonin",
+                    "management": "Tránh dùng hoặc dùng với thận trọng. Giảm liều tramadol. Theo dõi dấu hiệu co giật và hội chứng serotonin"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Benzodiazepine, rượu, thuốc an thần",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng nguy cơ ức chế hô hấp nặng, có thể tử vong",
+                    "management": "Tránh dùng đồng thời. Nếu phải dùng, giảm liều và theo dõi hô hấp chặt chẽ"
+                },
+                {
+                    "drug": "Quinidine, fluoxetine, paroxetine",
+                    "mechanism": "Ức chế CYP2D6, giảm chuyển hóa tramadol thành O-desmethyltramadol",
+                    "effect": "Giảm hiệu quả giảm đau (do giảm active metabolite)",
+                    "management": "Cân nhắc dùng opioid khác không phụ thuộc CYP2D6 nếu cần"
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Carbamazepine, phenytoin",
+                    "mechanism": "Cảm ứng CYP3A4, tăng chuyển hóa tramadol",
+                    "effect": "Giảm hiệu quả tramadol",
+                    "management": "Có thể cần tăng liều tramadol"
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dùng MAO inhibitor trong vòng 14 ngày",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Co giật không kiểm soát",
+                "Suy hô hấp nặng hoặc suy hô hấp cấp tính",
+                "Dị ứng tramadol"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <30) - giảm liều 50%",
+                "Suy gan nặng - giảm liều 50%",
+                "Dùng SSRI/SNRI - tăng nguy cơ co giật và hội chứng serotonin",
+                "Tiền sử co giật - tăng nguy cơ",
+                "Trẻ em <12 tuổi - nguy cơ ức chế hô hấp",
+                "Người cao tuổi - giảm liều"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng nếu lợi ích > nguy cơ. Nguy cơ ức chế hô hấp ở trẻ sơ sinh nếu dùng gần ngày sinh. Có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng kéo dài trong thai kỳ. Tránh dùng trong 3 tháng cuối nếu có thể.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Tramadol và O-desmethyltramadol bài tiết vào sữa mẹ. Nồng độ trong sữa mẹ tương đương khoảng 0.1% liều mẹ. Có thể gây ức chế hô hấp và buồn ngủ ở trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi cho con bú. Nếu dùng, theo dõi trẻ sát (dấu hiệu ức chế hô hấp, buồn ngủ). Tránh dùng liều cao hoặc kéo dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Giảm liều 25-50%",
+            "severe": "Giảm liều 50% hoặc tránh dùng",
+            "notes": "Tramadol chuyển hóa ở gan qua CYP2D6 và CYP3A4 thành O-desmethyltramadol (active metabolite). Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp nặng (thở chậm, ngừng thở)",
+                "Giảm ý thức, hôn mê",
+                "Co giật (đặc biệt ở liều cao hoặc với SSRI/SNRI)",
+                "Hội chứng serotonin (nếu dùng với SSRI/SNRI: kích động, sốt, run, cứng cơ)",
+                "Hạ huyết áp",
+                "Nhịp tim chậm",
+                "Táo bón nặng"
+            ],
+            "antidote": "Naloxone (opioid antagonist) - có thể đảo ngược một phần tác dụng opioid nhưng không đảo ngược co giật hoặc hội chứng serotonin",
+            "treatment": [
+                "Đảm bảo đường thở, hỗ trợ hô hấp (thở máy nếu cần)",
+                "Naloxone: 0.4-2mg IV, có thể lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg)",
+                "Nếu co giật: benzodiazepine (diazepam, lorazepam) hoặc phenobarbital",
+                "Nếu hội chứng serotonin: cyproheptadine, dantrolene nếu cần",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ (nhưng cần cẩn thận về nguy cơ hôn mê)",
+                "Truyền dịch, hỗ trợ huyết động nếu hạ huyết áp",
+                "Theo dõi liên tục: hô hấp, ý thức, ECG"
+            ],
+            "monitoring": "Nhịp thở, SpO2, ý thức, ECG, huyết áp, nhịp tim liên tục. Theo dõi ít nhất 24 giờ do half-life dài của active metabolite (7 giờ)"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Naloxone",
+                    "indication": "Đảo ngược tác dụng opioid (ức chế hô hấp, giảm ý thức)",
+                    "dose": "0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg). Có thể dùng IM/SC nếu không có IV",
+                    "notes": "Naloxone chỉ đảo ngược tác dụng opioid, KHÔNG đảo ngược co giật hoặc hội chứng serotonin. Half-life ngắn (1 giờ) nên có thể cần truyền liên tục nếu quá liều nặng."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Uống với thức ăn có thể giảm buồn nôn",
+                "timing": "Mỗi 4-6 giờ khi cần. Liều tối đa: 400mg/ngày"
+            },
+            "iv": {
+                "reconstitution": "Pha với 50-100ml NS hoặc D5W",
+                "infusion_rate": "Truyền trong 15-30 phút. Hoặc tiêm trực tiếp IV chậm (2-3 phút)",
+                "compatibility": ["NS", "D5W", "Ringer's Lactate"],
+                "incompatibility": [],
+                "notes": "Theo dõi hô hấp chặt chẽ khi dùng IV. Có thể gây co giật ở liều cao."
+            },
+            "im": {
+                "notes": "Tiêm bắp sâu. Có thể gây đau tại chỗ tiêm."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ultram (tramadol)",
+                "UpToDate - Tramadol: Drug information",
+                "Lexicomp - Tramadol monograph",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-06",
+            "evidence_level": "High - FDA-approved, extensive clinical data"
+        }
     },
     "Naproxen": {
         "group": "Analgesic - NSAID",
@@ -219,7 +348,134 @@ ANALGESICS_DRUGS = {
             "clearance": "Gan (chuyển hóa qua CYP2C9, CYP1A2), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp",
-        "black_box_warnings": "Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ, đặc biệt khi dùng lâu dài hoặc liều cao."
+        "black_box_warnings": "Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ, đặc biệt khi dùng lâu dài hoặc liều cao.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX-1, giảm tổng hợp thromboxane, tăng nguy cơ chảy máu",
+                    "effect": "Tăng nguy cơ chảy máu nặng, tăng INR",
+                    "management": "Tránh dùng đồng thời. Nếu phải dùng, theo dõi INR thường xuyên, giảm liều warfarin nếu cần"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin ở thận, giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN. Cân nhắc ngừng NSAID nếu có dấu hiệu suy thận"
+                },
+                {
+                    "drug": "Aspirin (liều thấp)",
+                    "mechanism": "Naproxen có thể ức chế tác dụng chống kết tập tiểu cầu của aspirin",
+                    "effect": "Giảm hiệu quả phòng ngừa nhồi máu cơ tim của aspirin",
+                    "management": "Dùng aspirin ít nhất 2 giờ trước naproxen, hoặc cân nhắc NSAID khác"
+                },
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính",
+                    "management": "Theo dõi lithium máu thường xuyên. Có thể cần giảm liều lithium"
+                },
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Giảm thải trừ methotrexate qua thận",
+                    "effect": "Tăng độc tính methotrexate (giảm bạch cầu, suy tủy)",
+                    "management": "Tránh dùng đồng thời. Nếu phải dùng, giảm liều methotrexate và theo dõi công thức máu chặt chẽ"
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Corticosteroid",
+                    "mechanism": "Tăng nguy cơ loét dạ dày",
+                    "effect": "Tăng nguy cơ chảy máu dạ dày",
+                    "management": "Cân nhắc dùng PPI hoặc misoprostol để bảo vệ dạ dày"
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng naproxen hoặc NSAID/aspirin (phản vệ, hen suyễn do aspirin)",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng (CrCl <30) và đang dùng ACE inhibitor/ARB"
+            ],
+            "relative": [
+                "Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều",
+                "Suy gan nặng - thận trọng, giảm liều",
+                "Suy tim nặng - tăng nguy cơ giữ nước, suy tim nặng hơn",
+                "Bệnh mạch vành, tiền sử nhồi máu cơ tim - tăng nguy cơ biến cố tim mạch",
+                "Tăng huyết áp không kiểm soát - NSAID có thể tăng huyết áp",
+                "Dùng warfarin hoặc thuốc chống đông - tăng nguy cơ chảy máu",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi, tăng áp lực động mạch phổi ở trẻ sơ sinh. Tránh dùng trong 3 tháng cuối.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Naproxen bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ <1% liều mẹ. Half-life dài (12-17 giờ) nhưng nồng độ trong sữa mẹ thấp nên ít ảnh hưởng đến trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú với liều ngắn hạn. Theo dõi trẻ về dấu hiệu bất thường (hiếm)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, giảm liều 25-50%",
+            "severe": "Tránh dùng hoặc giảm liều mạnh",
+            "notes": "Naproxen chuyển hóa ở gan qua CYP2C9 và CYP1A2. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy. Tuy nhiên, naproxen ít gây độc gan hơn một số NSAID khác (như diclofenac)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, đau bụng",
+                "Chóng mặt, nhức đầu",
+                "Lú lẫn, buồn ngủ",
+                "Ức chế hô hấp (hiếm, ở liều rất cao)",
+                "Hạ huyết áp",
+                "Suy thận cấp",
+                "Chảy máu dạ dày",
+                "Co giật (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi chức năng thận (creatinine, BUN), điện giải",
+                "Theo dõi huyết áp, nhịp tim",
+                "Hỗ trợ hô hấp nếu có ức chế hô hấp (hiếm)",
+                "Truyền dịch nếu hạ huyết áp, suy thận",
+                "Theo dõi dấu hiệu chảy máu dạ dày",
+                "Điều trị hỗ trợ triệu chứng"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, ý thức, creatinine, BUN, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 12-24 giờ do half-life dài (12-17 giờ)"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày",
+                "timing": "Mỗi 8-12 giờ (do half-life dài). Có thể dùng 2 lần/ngày. Dùng với bữa ăn để giảm tác dụng phụ dạ dày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Naprosyn (naproxen)",
+                "UpToDate - Naproxen: Drug information",
+                "Lexicomp - Naproxen monograph",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-06",
+            "evidence_level": "High - FDA-approved, extensive clinical data"
+        }
     },
     "Diclofenac": {
         "group": "Analgesic - NSAID",
@@ -298,7 +554,127 @@ ANALGESICS_DRUGS = {
             "clearance": "Gan (chuyển hóa qua CYP2C9, CYP3A4), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng bôi: bảo quản ở nhiệt độ phòng, không làm lạnh.",
-        "black_box_warnings": "Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ, đặc biệt khi dùng lâu dài hoặc liều cao. Diclofenac có nguy cơ tăng men gan và chảy máu dạ dày cao hơn một số NSAID khác."
+        "black_box_warnings": "Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ, đặc biệt khi dùng lâu dài hoặc liều cao. Diclofenac có nguy cơ tăng men gan và chảy máu dạ dày cao hơn một số NSAID khác.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX-1, giảm tổng hợp thromboxane, tăng nguy cơ chảy máu",
+                    "effect": "Tăng nguy cơ chảy máu nặng, tăng INR",
+                    "management": "Tránh dùng đồng thời. Nếu phải dùng, theo dõi INR thường xuyên, giảm liều warfarin nếu cần"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin ở thận, giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN. Cân nhắc ngừng NSAID nếu có dấu hiệu suy thận"
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Giảm thải trừ digoxin qua thận",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ độc tính (nhịp tim chậm, block nhĩ thất)",
+                    "management": "Theo dõi digoxin máu thường xuyên. Có thể cần giảm liều digoxin"
+                },
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Giảm thải trừ methotrexate qua thận",
+                    "effect": "Tăng độc tính methotrexate (giảm bạch cầu, suy tủy)",
+                    "management": "Tránh dùng đồng thời. Nếu phải dùng, giảm liều methotrexate và theo dõi công thức máu chặt chẽ"
+                },
+                {
+                    "drug": "Cyclosporine",
+                    "mechanism": "Tăng nguy cơ độc tính thận",
+                    "effect": "Tăng nguy cơ suy thận cấp",
+                    "management": "Theo dõi creatinine, BUN chặt chẽ. Cân nhắc NSAID khác hoặc giảm liều cyclosporine"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng diclofenac hoặc NSAID/aspirin (phản vệ, hen suyễn do aspirin)",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy gan nặng (do nguy cơ tăng men gan cao)",
+                "Suy thận nặng (CrCl <30) và đang dùng ACE inhibitor/ARB"
+            ],
+            "relative": [
+                "Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều",
+                "Suy gan trung bình - thận trọng, theo dõi men gan chặt chẽ",
+                "Suy tim nặng - tăng nguy cơ giữ nước, suy tim nặng hơn",
+                "Bệnh mạch vành, tiền sử nhồi máu cơ tim - tăng nguy cơ biến cố tim mạch",
+                "Tăng huyết áp không kiểm soát - NSAID có thể tăng huyết áp",
+                "Dùng warfarin hoặc thuốc chống đông - tăng nguy cơ chảy máu",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ, đặc biệt chảy máu dạ dày"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi, tăng áp lực động mạch phổi ở trẻ sơ sinh. Tránh dùng trong 3 tháng cuối.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Diclofenac bài tiết vào sữa mẹ ở nồng độ rất thấp (<0.1% liều mẹ). An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Dạng bôi tại chỗ: ít ảnh hưởng hệ thống, an toàn hơn."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi nhưng theo dõi men gan",
+            "moderate": "Thận trọng, giảm liều 25-50%, theo dõi men gan chặt chẽ",
+            "severe": "TRÁNH DÙNG (chống chỉ định)",
+            "notes": "Diclofenac chuyển hóa ở gan qua CYP2C9 và CYP3A4. Có nguy cơ tăng men gan cao hơn các NSAID khác. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, đau bụng",
+                "Chóng mặt, nhức đầu",
+                "Lú lẫn, buồn ngủ",
+                "Hạ huyết áp",
+                "Suy thận cấp",
+                "Chảy máu dạ dày",
+                "Tăng men gan (ALT, AST)",
+                "Co giật (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi chức năng thận (creatinine, BUN), điện giải",
+                "Theo dõi chức năng gan (ALT, AST) - diclofenac có nguy cơ cao",
+                "Theo dõi huyết áp, nhịp tim",
+                "Truyền dịch nếu hạ huyết áp, suy thận",
+                "Theo dõi dấu hiệu chảy máu dạ dày",
+                "Điều trị hỗ trợ triệu chứng"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, ý thức, creatinine, BUN, ALT/AST, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 12-24 giờ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày (quan trọng với diclofenac do nguy cơ cao)",
+                "timing": "Mỗi 8-12 giờ. Dùng với bữa ăn để giảm tác dụng phụ dạ dày."
+            },
+            "im": {
+                "notes": "Tiêm bắp sâu. Chỉ dùng tối đa 3 ngày, không dùng lâu dài. Có thể gây đau tại chỗ tiêm."
+            },
+            "topical": {
+                "notes": "Dạng bôi tại chỗ: Bôi 2-4g x 3-4 lần/ngày lên vùng đau. Ít tác dụng phụ hệ thống hơn dạng uống. Không bôi trên vùng da bị tổn thương hoặc niêm mạc."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Voltaren (diclofenac)",
+                "UpToDate - Diclofenac: Drug information",
+                "Lexicomp - Diclofenac monograph",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-06",
+            "evidence_level": "High - FDA-approved, extensive clinical data"
+        }
     },
     "Morphine": {
         "group": "Analgesic - Opioid Agonist (Strong)",
@@ -381,7 +757,142 @@ ANALGESICS_DRUGS = {
             "clearance": "Chủ yếu qua thận (morphine-6-glucuronide tích lũy ở suy thận)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để xa tầm tay trẻ em (nguy cơ quá liều).",
-        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt khi dùng với benzodiazepine hoặc rượu. Morphine có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng trong 3 tháng cuối thai kỳ."
+        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt khi dùng với benzodiazepine hoặc rượu. Morphine có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng trong 3 tháng cuối thai kỳ.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Benzodiazepine, thuốc an thần, rượu",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương, đặc biệt trung tâm hô hấp",
+                    "effect": "Tăng nguy cơ ức chế hô hấp nặng, có thể tử vong",
+                    "management": "TRÁNH DÙNG ĐỒNG THỜI. Nếu phải dùng, giảm liều morphine, theo dõi hô hấp liên tục, có naloxone sẵn sàng"
+                },
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nguy cơ phản ứng tương tác nghiêm trọng",
+                    "effect": "Có thể gây hội chứng serotonin, tăng huyết áp, nguy hiểm tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH. Ngừng MAOI ít nhất 14 ngày trước khi dùng morphine"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Ức chế chuyển hóa morphine qua gan",
+                    "effect": "Tăng nồng độ morphine, tăng nguy cơ ức chế hô hấp",
+                    "management": "Giảm liều morphine 25-50%. Theo dõi hô hấp chặt chẽ"
+                },
+                {
+                    "drug": "Rifampin",
+                    "mechanism": "Cảm ứng enzyme chuyển hóa morphine",
+                    "effect": "Giảm hiệu quả morphine",
+                    "management": "Có thể cần tăng liều morphine"
+                },
+                {
+                    "drug": "Phenothiazine, haloperidol",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng nguy cơ ức chế hô hấp, hạ huyết áp",
+                    "management": "Thận trọng. Giảm liều morphine, theo dõi hô hấp"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng morphine hoặc opioid",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Suy hô hấp nặng hoặc suy hô hấp cấp tính",
+                "Hen phế quản nặng không kiểm soát",
+                "Tắc ruột cơ học",
+                "Tăng áp lực nội sọ (do tăng CO2)",
+                "Dùng MAO inhibitor trong vòng 14 ngày"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <30) - giảm liều 50-75%, tăng khoảng cách liều (tích lũy morphine-6-glucuronide)",
+                "Suy gan nặng - giảm liều 25-50% (giảm chuyển hóa)",
+                "Người cao tuổi - giảm liều 25-50% (tăng nhạy cảm)",
+                "Trẻ em <12 tuổi - nguy cơ ức chế hô hấp",
+                "Tiền sử nghiện/lạm dụng chất - nguy cơ tái nghiện",
+                "Suy tim - tăng nguy cơ ức chế hô hấp",
+                "Bệnh phổi tắc nghẽn mạn tính (COPD) - tăng nguy cơ ức chế hô hấp"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ cho điều trị đau nặng. Tam cá nguyệt 3: Nguy cơ hội chứng cai ở trẻ sơ sinh nếu dùng kéo dài. Nguy cơ ức chế hô hấp ở trẻ sơ sinh nếu dùng gần ngày sinh. Tránh dùng kéo dài trong 3 tháng cuối nếu có thể.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Morphine bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ tương đương khoảng 0.8-3% liều mẹ. Có thể gây ức chế hô hấp và buồn ngủ ở trẻ bú mẹ, đặc biệt ở trẻ sơ sinh.",
+                "recommendation": "Thận trọng khi cho con bú. Nếu dùng, theo dõi trẻ sát (dấu hiệu ức chế hô hấp, buồn ngủ, bú kém). Tránh dùng liều cao hoặc kéo dài. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Giảm liều 25-50%",
+            "severe": "Giảm liều 50% hoặc tránh dùng",
+            "notes": "Morphine chuyển hóa ở gan qua glucuronidation thành morphine-6-glucuronide (active, mạnh hơn morphine) và morphine-3-glucuronide (inactive). Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp nặng (thở chậm <12 lần/phút, ngừng thở)",
+                "Giảm ý thức, hôn mê",
+                "Co đồng tử (miosis) - dấu hiệu đặc trưng",
+                "Hạ huyết áp",
+                "Nhịp tim chậm",
+                "Táo bón nặng",
+                "Co giật (hiếm, ở trẻ em hoặc liều rất cao)"
+            ],
+            "antidote": "Naloxone (opioid antagonist) - đảo ngược tác dụng opioid",
+            "treatment": [
+                "Đảm bảo đường thở, hỗ trợ hô hấp (thở máy nếu cần) - QUAN TRỌNG NHẤT",
+                "Naloxone: 0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg)",
+                "Nếu không có IV: 0.4-2mg IM/SC, có thể lặp lại",
+                "Nếu quá liều nặng: có thể cần truyền naloxone liên tục (0.4-0.8mg/giờ) do half-life ngắn (1 giờ) so với morphine (2-4 giờ)",
+                "Theo dõi hô hấp liên tục ít nhất 24 giờ (do half-life dài của morphine-6-glucuronide)",
+                "Hỗ trợ huyết động: truyền dịch, vasopressor nếu hạ huyết áp",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ (nhưng cần cẩn thận về nguy cơ hôn mê)",
+                "Theo dõi ECG, huyết áp, nhịp tim liên tục"
+            ],
+            "monitoring": "Nhịp thở, SpO2, ý thức, ECG, huyết áp, nhịp tim liên tục. Theo dõi ít nhất 24 giờ do half-life dài của active metabolite morphine-6-glucuronide"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Naloxone",
+                    "indication": "Đảo ngược tác dụng opioid (ức chế hô hấp, giảm ý thức, hạ huyết áp)",
+                    "dose": "0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg). IM/SC: 0.4-2mg nếu không có IV. Truyền liên tục: 0.4-0.8mg/giờ nếu quá liều nặng",
+                    "notes": "Naloxone có half-life ngắn (1 giờ) so với morphine (2-4 giờ) và morphine-6-glucuronide (dài hơn). Có thể cần truyền liên tục hoặc lặp lại liều để tránh tái phát ức chế hô hấp."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Uống với thức ăn có thể giảm buồn nôn",
+                "timing": "Mỗi 4 giờ khi cần (immediate release) hoặc 2 lần/ngày (extended release MS Contin)"
+            },
+            "iv": {
+                "reconstitution": "Pha với 50-100ml NS hoặc D5W cho truyền liên tục. Hoặc tiêm trực tiếp IV",
+                "infusion_rate": "Tiêm IV chậm trong 2-5 phút. Truyền liên tục: 0.8-10mg/giờ (tùy liều)",
+                "compatibility": ["NS", "D5W", "Ringer's Lactate"],
+                "incompatibility": ["Alkaline solutions"],
+                "notes": "Theo dõi hô hấp chặt chẽ khi dùng IV. Cần có naloxone sẵn sàng. Khởi đầu với liều thấp, tăng dần."
+            },
+            "im": {
+                "notes": "Tiêm bắp sâu. Có thể gây đau tại chỗ tiêm. Tác dụng bắt đầu 15-30 phút."
+            },
+            "sc": {
+                "notes": "Tiêm dưới da. Có thể gây kích ứng tại chỗ. Tác dụng bắt đầu 15-30 phút."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Morphine sulfate",
+                "UpToDate - Morphine: Drug information",
+                "Lexicomp - Morphine monograph",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-06",
+            "evidence_level": "High - FDA-approved, extensive clinical data, gold standard for severe pain"
+        }
     },
     "Codeine": {
         "group": "Analgesic - Opioid Agonist (Weak)",
@@ -459,7 +970,130 @@ ANALGESICS_DRUGS = {
             "clearance": "Chủ yếu qua thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để xa tầm tay trẻ em (nguy cơ quá liều).",
-        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt ở ultra-rapid metabolizers (tạo nhiều morphine) hoặc khi dùng với benzodiazepine/rượu. Trẻ em <12 tuổi: không dùng cho ho. Trẻ em <18 tuổi sau cắt amidan/VA: chống chỉ định (nguy cơ ức chế hô hấp nghiêm trọng, có thể tử vong)."
+        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt ở ultra-rapid metabolizers (tạo nhiều morphine) hoặc khi dùng với benzodiazepine/rượu. Trẻ em <12 tuổi: không dùng cho ho. Trẻ em <18 tuổi sau cắt amidan/VA: chống chỉ định (nguy cơ ức chế hô hấp nghiêm trọng, có thể tử vong).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Benzodiazepine, thuốc an thần, rượu",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương, đặc biệt trung tâm hô hấp",
+                    "effect": "Tăng nguy cơ ức chế hô hấp nặng, có thể tử vong",
+                    "management": "TRÁNH DÙNG ĐỒNG THỜI. Nếu phải dùng, giảm liều codeine, theo dõi hô hấp liên tục, có naloxone sẵn sàng"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP2D6 inhibitors (quinidine, fluoxetine, paroxetine)",
+                    "mechanism": "Ức chế CYP2D6, giảm chuyển hóa codeine thành morphine",
+                    "effect": "Giảm hiệu quả giảm đau (do giảm active metabolite morphine)",
+                    "management": "Cân nhắc dùng opioid khác không phụ thuộc CYP2D6 (như morphine, oxycodone)"
+                },
+                {
+                    "drug": "CYP2D6 inducers (rifampin)",
+                    "mechanism": "Cảm ứng CYP2D6, tăng chuyển hóa codeine thành morphine",
+                    "effect": "Tăng nguy cơ quá liều (tạo nhiều morphine)",
+                    "management": "Thận trọng. Giảm liều codeine. Theo dõi dấu hiệu quá liều"
+                },
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nguy cơ phản ứng tương tác nghiêm trọng",
+                    "effect": "Có thể gây hội chứng serotonin, tăng huyết áp, nguy hiểm tính mạng",
+                    "management": "Thận trọng. Ngừng MAOI ít nhất 14 ngày trước khi dùng codeine"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng codeine hoặc opioid",
+                "Ngộ độc cấp tính opioid",
+                "Suy hô hấp nặng hoặc suy hô hấp cấp tính",
+                "Hen phế quản nặng không kiểm soát",
+                "Tắc ruột cơ học",
+                "Trẻ em <12 tuổi (khi dùng cho ho)",
+                "Trẻ em <18 tuổi sau cắt amidan/VA (chống chỉ định tuyệt đối)"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <30) - tránh dùng hoặc giảm liều 50%",
+                "Suy gan nặng - giảm liều (giảm chuyển hóa)",
+                "Người cao tuổi - giảm liều (tăng nhạy cảm)",
+                "Ultra-rapid CYP2D6 metabolizers - tăng nguy cơ quá liều (tạo nhiều morphine)",
+                "Poor CYP2D6 metabolizers - không hiệu quả (không tạo đủ morphine)",
+                "Tiền sử nghiện/lạm dụng chất - nguy cơ tái nghiện",
+                "Tăng áp lực nội sọ - tăng nguy cơ ức chế hô hấp"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng nếu lợi ích > nguy cơ. Nguy cơ ức chế hô hấp ở trẻ sơ sinh nếu dùng gần ngày sinh. Có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng kéo dài trong thai kỳ. Tránh dùng kéo dài trong 3 tháng cuối nếu có thể.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Codeine và morphine (metabolite) bài tiết vào sữa mẹ. Nồng độ trong sữa mẹ tương đương khoảng 0.5-2% liều mẹ. Có thể gây ức chế hô hấp và buồn ngủ ở trẻ bú mẹ, đặc biệt ở trẻ sơ sinh hoặc mẹ là ultra-rapid metabolizer (tạo nhiều morphine).",
+                "recommendation": "Thận trọng khi cho con bú. Nếu dùng, theo dõi trẻ sát (dấu hiệu ức chế hô hấp, buồn ngủ, bú kém). Tránh dùng liều cao hoặc kéo dài. Dùng liều thấp nhất hiệu quả. Nếu mẹ là ultra-rapid metabolizer, tránh dùng codeine khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể giảm liều",
+            "severe": "Tránh dùng hoặc giảm liều mạnh",
+            "notes": "Codeine chuyển hóa ở gan qua CYP2D6 thành morphine (active metabolite) và CYP3A4 thành norcodeine (inactive). Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy. Ultra-rapid metabolizers có nguy cơ quá liều cao hơn."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp nặng (thở chậm, ngừng thở) - đặc biệt ở ultra-rapid metabolizers",
+                "Giảm ý thức, hôn mê",
+                "Co đồng tử (miosis) - dấu hiệu đặc trưng",
+                "Hạ huyết áp",
+                "Nhịp tim chậm",
+                "Táo bón nặng",
+                "Co giật (hiếm, ở trẻ em hoặc liều rất cao)"
+            ],
+            "antidote": "Naloxone (opioid antagonist) - đảo ngược tác dụng opioid",
+            "treatment": [
+                "Đảm bảo đường thở, hỗ trợ hô hấp (thở máy nếu cần) - QUAN TRỌNG NHẤT",
+                "Naloxone: 0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg)",
+                "Nếu không có IV: 0.4-2mg IM/SC, có thể lặp lại",
+                "Nếu quá liều nặng: có thể cần truyền naloxone liên tục do half-life ngắn (1 giờ)",
+                "Theo dõi hô hấp liên tục ít nhất 12-24 giờ",
+                "Hỗ trợ huyết động: truyền dịch, vasopressor nếu hạ huyết áp",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ (nhưng cần cẩn thận về nguy cơ hôn mê)",
+                "Theo dõi ECG, huyết áp, nhịp tim liên tục"
+            ],
+            "monitoring": "Nhịp thở, SpO2, ý thức, ECG, huyết áp, nhịp tim liên tục. Theo dõi ít nhất 12-24 giờ. Đặc biệt chú ý ở ultra-rapid metabolizers (tạo nhiều morphine)"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Naloxone",
+                    "indication": "Đảo ngược tác dụng opioid (ức chế hô hấp, giảm ý thức, hạ huyết áp)",
+                    "dose": "0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg). IM/SC: 0.4-2mg nếu không có IV. Truyền liên tục: 0.4-0.8mg/giờ nếu quá liều nặng",
+                    "notes": "Naloxone có half-life ngắn (1 giờ). Có thể cần truyền liên tục hoặc lặp lại liều để tránh tái phát ức chế hô hấp, đặc biệt ở ultra-rapid metabolizers."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Uống với thức ăn có thể giảm buồn nôn",
+                "timing": "Mỗi 4-6 giờ khi cần. Liều tối đa: 360mg/ngày (đau), 120mg/ngày (ho)"
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Codeine sulfate",
+                "UpToDate - Codeine: Drug information",
+                "Lexicomp - Codeine monograph",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-06",
+            "evidence_level": "High - FDA-approved, extensive clinical data. Note: efficacy depends on CYP2D6 genotype"
+        }
     },
     "Sumatriptan": {
         "group": "Analgesic - Antimigraine (5-HT1 Receptor Agonist)",

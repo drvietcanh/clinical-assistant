@@ -259,8 +259,9 @@ python check_enhanced_fields.py
   - ✅ **HOÀN THÀNH NHÓM 4** (9/9 thuốc - 100%): Captopril, Dapagliflozin, Empagliflozin, Glibenclamide, Gliclazide, Metformin, Prasugrel, Sitagliptin, Ticagrelor
   - ✅ **HOÀN THÀNH NHÓM 5** (20/20 thuốc - 100%): Enalapril ✅, Lisinopril ✅, Losartan ✅, Metoprolol ✅, Propranolol ✅, Amlodipine ✅, Atenolol ✅, Bisoprolol ✅, Carvedilol ✅, Nifedipine ✅, Diltiazem ✅, Verapamil ✅, Furosemide ✅, Hydrochlorothiazide ✅, Amiodarone ✅, Digoxin ✅, Warfarin ✅, Aspirin ✅, Clopidogrel ✅, Spironolactone ✅
   - ✅ **HOÀN THÀNH NHÓM 6** (10/10 thuốc - 100%): Omeprazole ✅, Pantoprazole ✅, Lansoprazole ✅, Esomeprazole ✅, Ranitidine ✅, Metoclopramide ✅, Loperamide ✅, Domperidone ✅, Ondansetron ✅, Sucralfate ✅
-  - ✅ Tổng số đã hoàn thành: 66/141 thuốc (46%)
-  - ⏳ Còn lại: 75 thuốc
+  - ✅ **HOÀN THÀNH NHÓM 7** (5/5 thuốc - 100%): Tramadol ✅, Naproxen ✅, Diclofenac ✅, Morphine ✅, Codeine ✅
+  - ✅ Tổng số đã hoàn thành: 71/141 thuốc (50%)
+  - ⏳ Còn lại: 70 thuốc
   - 📋 Kế hoạch chi tiết: Xem `drugs/PHASE2_PLAN.md`
   - 📊 Script theo dõi: `track_phase2_progress.py`
 
