@@ -44,48 +44,16 @@ with st.sidebar:
     category = st.radio(
         "Loại công cụ:",
         [
-            "🔬 Lab Panels",
-            "🧮 Calculators"
+            "🧮 Calculators",
+            "🔬 Lab Panels"
         ],
         index=0,
-        help="Lab Panels: Tra cứu và giải thích giá trị xét nghiệm\nCalculators: Tính toán công thức lâm sàng"
+        help="Calculators: Tính toán công thức lâm sàng\nLab Panels: Tra cứu và giải thích giá trị xét nghiệm"
     )
     
     st.markdown("---")
     
-    if category == "🔬 Lab Panels":
-        st.subheader("📋 Chọn Panel")
-        
-        lab_panel = st.selectbox(
-            "Lab Panel:",
-            [
-                "🩸 CBC - Complete Blood Count",
-                "🧪 BMP - Basic Metabolic Panel",
-                "🧪 CMP - Comprehensive Metabolic Panel",
-                "🫀 LFT - Liver Function Tests",
-                "💊 Lipid Panel",
-                "❤️ Cardiac Markers",
-                "🩸 Coagulation Panel",
-                "🦋 Thyroid Function Tests",
-                "💨 ABG - Arterial Blood Gas"
-            ],
-            label_visibility="collapsed"
-        )
-        
-        st.markdown("---")
-        
-        st.info("""
-        **📚 Features:**
-        - Normal ranges
-        - Critical values
-        - Interpretation guide
-        - Common patterns
-        
-        **💡 Tip:**
-        Enter patient values to see automatic interpretation
-        """)
-        
-    else:  # Calculators
+    if category == "🧮 Calculators":
         st.subheader("🧮 Chọn Calculator")
         
         calculator_type = st.selectbox(
@@ -123,6 +91,38 @@ with st.sidebar:
         **💊 Liên quan:** Các calculator này cần thiết cho điều chỉnh liều thuốc
         """)
     
+    elif category == "🔬 Lab Panels":
+        st.subheader("📋 Chọn Panel")
+        
+        lab_panel = st.selectbox(
+            "Lab Panel:",
+            [
+                "🩸 CBC - Complete Blood Count",
+                "🧪 BMP - Basic Metabolic Panel",
+                "🧪 CMP - Comprehensive Metabolic Panel",
+                "🫀 LFT - Liver Function Tests",
+                "💊 Lipid Panel",
+                "❤️ Cardiac Markers",
+                "🩸 Coagulation Panel",
+                "🦋 Thyroid Function Tests",
+                "💨 ABG - Arterial Blood Gas"
+            ],
+            label_visibility="collapsed"
+        )
+        
+        st.markdown("---")
+        
+        st.info("""
+        **📚 Features:**
+        - Normal ranges
+        - Critical values
+        - Interpretation guide
+        - Common patterns
+        
+        **💡 Tip:**
+        Enter patient values to see automatic interpretation
+        """)
+    
     st.markdown("---")
     st.caption("**Version:** 2.0")
     st.caption("**Updated:** 2025-01-31")
@@ -130,7 +130,82 @@ with st.sidebar:
 # ========== MAIN CONTENT ==========
 
 # Display category info
-if category == "🔬 Lab Panels":
+if category == "🧮 Calculators":
+    st.info(f"""
+    **Calculator:** {calculator_type}
+    
+    **Instructions:**
+    1. Enter input values
+    2. View calculated results
+    3. Check related lab panels for reference ranges
+    """)
+    
+    # Quick Links to related lab panels
+    st.markdown("### 🔗 Liên Quan - Lab Panels")
+    link_cols = st.columns(5)
+    
+    if "eGFR" in calculator_type or "GFR" in calculator_type:
+        with link_cols[0]:
+            if st.button("📋 BMP (Creatinine)", use_container_width=True):
+                st.session_state.show_panel = "bmp"
+    
+    if "Anion Gap" in calculator_type:
+        with link_cols[1]:
+            if st.button("📋 BMP (Na, Cl, HCO3)", use_container_width=True):
+                st.session_state.show_panel = "bmp"
+    
+    if "Corrected" in calculator_type or "Calcium" in calculator_type:
+        with link_cols[2]:
+            if st.button("📋 CMP (Ca, Albumin)", use_container_width=True):
+                st.session_state.show_panel = "cmp"
+    
+    if "FENa" in calculator_type:
+        with link_cols[3]:
+            if st.button("📋 BMP (Na, Creatinine)", use_container_width=True):
+                st.session_state.show_panel = "bmp"
+    
+    if "T4" in calculator_type or "Free" in calculator_type:
+        with link_cols[4]:
+            if st.button("📋 Thyroid Panel", use_container_width=True):
+                st.session_state.show_panel = "thyroid"
+    
+    st.markdown("---")
+    
+    # Handle show panel request
+    if hasattr(st.session_state, 'show_panel'):
+        panel = st.session_state.show_panel
+        st.markdown("### 🔬 Lab Panel Liên Quan")
+        
+        if panel == "bmp":
+            render_bmp()
+        elif panel == "cmp":
+            render_cmp()
+        elif panel == "thyroid":
+            render_thyroid()
+        
+        del st.session_state.show_panel
+    
+    # Route to appropriate calculator
+    if "BMI" in calculator_type or "IBW" in calculator_type or "BSA" in calculator_type:
+        render_bmi_ibw_bsa()
+    elif "eGFR" in calculator_type or "GFR" in calculator_type:
+        render_egfr()
+    elif "Osmolality" in calculator_type:
+        render_osmolality()
+    elif "Anion Gap" in calculator_type:
+        render_anion_gap()
+    elif "Corrected" in calculator_type or "Calcium" in calculator_type:
+        render_corrected_calcium()
+    elif "FENa" in calculator_type:
+        render_fena()
+    elif "HbA1c" in calculator_type or "eAG" in calculator_type:
+        render_hba1c_eag()
+    elif "Winter" in calculator_type:
+        render_winter_formula()
+    elif "T4" in calculator_type or "Free" in calculator_type:
+        render_free_t4_index()
+
+elif category == "🔬 Lab Panels":
     st.info(f"""
     **Lab Panel:** {lab_panel.split(' - ')[1] if ' - ' in lab_panel else lab_panel}
     
@@ -207,81 +282,6 @@ if category == "🔬 Lab Panels":
         
         # Clear quick action
         del st.session_state.quick_action
-
-else:  # Calculators
-    st.info(f"""
-    **Calculator:** {calculator_type}
-    
-    **Instructions:**
-    1. Enter input values
-    2. View calculated results
-    3. Check related lab panels for reference ranges
-    """)
-    
-    # Quick Links to related lab panels
-    st.markdown("### 🔗 Liên Quan - Lab Panels")
-    link_cols = st.columns(5)
-    
-    if "eGFR" in calculator_type or "GFR" in calculator_type:
-        with link_cols[0]:
-            if st.button("📋 BMP (Creatinine)", use_container_width=True):
-                st.session_state.show_panel = "bmp"
-    
-    if "Anion Gap" in calculator_type:
-        with link_cols[1]:
-            if st.button("📋 BMP (Na, Cl, HCO3)", use_container_width=True):
-                st.session_state.show_panel = "bmp"
-    
-    if "Corrected" in calculator_type or "Calcium" in calculator_type:
-        with link_cols[2]:
-            if st.button("📋 CMP (Ca, Albumin)", use_container_width=True):
-                st.session_state.show_panel = "cmp"
-    
-    if "FENa" in calculator_type:
-        with link_cols[3]:
-            if st.button("📋 BMP (Na, Creatinine)", use_container_width=True):
-                st.session_state.show_panel = "bmp"
-    
-    if "T4" in calculator_type or "Free" in calculator_type:
-        with link_cols[4]:
-            if st.button("📋 Thyroid Panel", use_container_width=True):
-                st.session_state.show_panel = "thyroid"
-    
-    st.markdown("---")
-    
-    # Handle show panel request
-    if hasattr(st.session_state, 'show_panel'):
-        panel = st.session_state.show_panel
-        st.markdown("### 🔬 Lab Panel Liên Quan")
-        
-        if panel == "bmp":
-            render_bmp()
-        elif panel == "cmp":
-            render_cmp()
-        elif panel == "thyroid":
-            render_thyroid()
-        
-        del st.session_state.show_panel
-    
-    # Route to appropriate calculator
-    if "BMI" in calculator_type or "IBW" in calculator_type or "BSA" in calculator_type:
-        render_bmi_ibw_bsa()
-    elif "eGFR" in calculator_type or "GFR" in calculator_type:
-        render_egfr()
-    elif "Osmolality" in calculator_type:
-        render_osmolality()
-    elif "Anion Gap" in calculator_type:
-        render_anion_gap()
-    elif "Corrected" in calculator_type or "Calcium" in calculator_type:
-        render_corrected_calcium()
-    elif "FENa" in calculator_type:
-        render_fena()
-    elif "HbA1c" in calculator_type or "eAG" in calculator_type:
-        render_hba1c_eag()
-    elif "Winter" in calculator_type:
-        render_winter_formula()
-    elif "T4" in calculator_type or "Free" in calculator_type:
-        render_free_t4_index()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=True)

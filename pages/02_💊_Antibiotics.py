@@ -26,8 +26,8 @@ with st.sidebar:
     function_type = st.selectbox(
         "Công cụ:",
         [
-            "🔬 So Sánh Nhiều Kháng Sinh",
-            "🔍 Tra Cứu & Dữ Liệu Kháng Sinh"
+            "🔍 Tra Cứu & Dữ Liệu Kháng Sinh",
+            "🔬 So Sánh Nhiều Kháng Sinh"
         ]
     )
     
@@ -47,11 +47,11 @@ with st.sidebar:
 # ========== MAIN CONTENT ==========
 
 # Route to appropriate function
-if "So Sánh Nhiều" in function_type:
-    render_multi_comparison()
-
-elif "Tra Cứu" in function_type and "Dữ Liệu" in function_type:
+if "Tra Cứu" in function_type and "Dữ Liệu" in function_type:
     render_database()
+
+elif "So Sánh Nhiều" in function_type:
+    render_multi_comparison()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)
