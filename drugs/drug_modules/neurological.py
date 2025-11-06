@@ -131,7 +131,7 @@ NEUROLOGICAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Block nhĩ thất (AV block) độ II hoặc III",
                 "Suy gan nặng (Child-Pugh C)",
                 "Porphyria",
@@ -139,7 +139,7 @@ NEUROLOGICAL_DRUGS = {
                 "Tiền sử phản ứng quá mẫn với carbamazepine hoặc tricyclic antidepressants",
                 "Giảm bạch cầu hoặc giảm tiểu cầu trước đó do carbamazepine"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều, theo dõi chặt chẽ",
                 "Suy thận (CrCl <30) - giảm liều, theo dõi nồng độ",
                 "Bệnh tim mạch (rối loạn nhịp, block nhĩ thất độ I)",
@@ -325,12 +325,12 @@ NEUROLOGICAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
                 "Dị ứng fluoxetine",
                 "Hội chứng serotonin đang diễn ra"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng - giảm liều",
                 "Suy thận nặng (CrCl <30) - giảm liều",
                 "Trẻ em <18 tuổi - tăng nguy cơ tự tử",
@@ -555,14 +555,14 @@ NEUROLOGICAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng phenytoin",
                 "Suy gan nặng (Child-Pugh C)",
                 "Block nhĩ thất độ II hoặc III",
                 "Hội chứng bệnh lympho (lymphoma-like syndrome)",
                 "Tiền sử hội chứng Stevens-Johnson do phenytoin"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều, theo dõi chặt chẽ",
                 "Suy thận (CrCl <30) - giảm liều 50%, theo dõi nồng độ",
                 "Bệnh tim mạch (rối loạn nhịp, block nhĩ thất độ I)",
@@ -759,14 +759,14 @@ NEUROLOGICAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Bệnh gan hoạt động (viêm gan cấp hoặc mạn)",
                 "Rối loạn chuyển hóa chu trình urea (urea cycle disorders)",
                 "Suy gan nặng (Child-Pugh C)",
                 "Có thai (cho rối loạn lưỡng cực) - nguy cơ dị tật thai nhi cao",
                 "Dị ứng valproate"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều, theo dõi chặt chẽ",
                 "Suy thận nặng (CrCl <30) - giảm liều",
                 "Thiếu hụt tiểu cầu - tăng nguy cơ chảy máu",
@@ -934,10 +934,10 @@ NEUROLOGICAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng levetiracetam hoặc các thành phần khác"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận (CrCl <30) - giảm liều 75%, tăng khoảng cách liều",
                 "Tiền sử bệnh tâm thần (tăng nguy cơ kích động, lo âu, trầm cảm)",
                 "Bệnh nhân lớn tuổi có suy thận - giảm liều thêm",
@@ -1096,12 +1096,12 @@ NEUROLOGICAL_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng lamotrigine",
                 "Ban da nặng trước đây (SJS/TEN) với lamotrigine",
                 "Tăng liều quá nhanh (vi phạm phác đồ tăng liều)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Dùng với valproate - giảm liều khởi đầu 50%",
                 "Trẻ em <16 tuổi - tăng nguy cơ ban da",
                 "Suy gan nặng - giảm liều",
@@ -1285,10 +1285,10 @@ NEUROLOGICAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng gabapentin hoặc các thành phần khác"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận (CrCl <30) - giảm liều đáng kể, tăng khoảng cách liều",
                 "Suy thận nặng (CrCl <15) - giảm liều rất nhiều, có thể cách ngày",
                 "Bệnh nhân lớn tuổi có suy thận - giảm liều thêm",
@@ -1469,10 +1469,10 @@ NEUROLOGICAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng pregabalin hoặc các thành phần khác"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận (CrCl <30) - giảm liều đáng kể, tăng khoảng cách liều",
                 "Suy thận nặng (CrCl <15) - giảm liều 90%, tăng khoảng cách liều",
                 "Bệnh nhân lớn tuổi có suy thận - giảm liều thêm",

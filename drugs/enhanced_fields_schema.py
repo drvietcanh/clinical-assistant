@@ -42,8 +42,8 @@ def create_enhanced_fields_template():
             "minor": []
         },
         "contraindications": {
-            "absolute": [],  # List chống chỉ định tuyệt đối
-            "relative": []  # List chống chỉ định tương đối
+            "tuyệt_đối": [],  # List chống chỉ định tuyệt đối
+            "tương_đối": []  # List chống chỉ định tương đối
         },
         "pregnancy_lactation": {
             "fda_category": "",  # A/B/C/D/X

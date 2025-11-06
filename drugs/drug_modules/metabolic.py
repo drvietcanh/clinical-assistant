@@ -142,13 +142,13 @@ METABOLIC_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Cường giáp không điều trị (có thể làm nặng thêm triệu chứng)",
                 "Nhồi máu cơ tim cấp (có thể làm nặng thêm, tăng nguy cơ rối loạn nhịp tim)",
                 "Viêm cơ tim cấp (có thể làm nặng thêm)",
                 "Dị ứng levothyroxine hoặc các thành phần khác"
             ],
-            "relative": [
+            "tương_đối": [
                 "Bệnh mạch vành (bắt đầu với liều rất thấp, tăng chậm)",
                 "Rối loạn nhịp tim (thận trọng, theo dõi sát)",
                 "Suy tim (thận trọng, bắt đầu với liều thấp)",
@@ -310,12 +310,12 @@ METABOLIC_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng methimazole",
                 "Có thai (3 tháng đầu - dùng PTU thay thế)",
                 "Giảm bạch cầu nặng"
             ],
-            "relative": [
+            "tương_đối": [
                 "Đang cho con bú (ưu tiên PTU)",
                 "Suy gan (thận trọng, theo dõi chức năng gan)"
             ]
@@ -471,12 +471,12 @@ METABOLIC_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng propylthiouracil",
                 "Giảm bạch cầu nặng",
                 "Suy gan nặng"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận (thận trọng, giảm liều)",
                 "Đang cho con bú (có thể dùng)"
             ]
@@ -685,12 +685,12 @@ METABOLIC_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Nhiễm nấm hệ thống không điều trị (cryptococcosis, histoplasmosis, coccidioidomycosis) - corticosteroid làm nặng nhiễm nấm",
                 "Dị ứng prednisone hoặc các corticosteroid khác",
                 "Nhiễm virus hoạt động (herpes simplex keratitis, varicella zoster lan tỏa) - trừ khi chỉ định đặc biệt"
             ],
-            "relative": [
+            "tương_đối": [
                 "Nhiễm trùng đang hoạt động - có thể làm nặng, che dấu triệu chứng",
                 "Đái tháo đường - tăng đường huyết, cần theo dõi và điều chỉnh",
                 "Tăng huyết áp - có thể tăng huyết áp, giữ nước",

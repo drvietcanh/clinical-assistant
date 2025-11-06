@@ -21,6 +21,12 @@ from .drug_modules import (
     ONCOLOGY_DRUGS,
     EMERGENCY_DRUGS,
     OTHER_DRUGS,
+    # Split modules from other.py (already included in OTHER_DRUGS, but available separately)
+    CARDIOVASCULAR_OTHER_DRUGS,
+    INFECTIOUS_OTHER_DRUGS,
+    PSYCHIATRY_OTHER_DRUGS,
+    ENDOCRINOLOGY_OTHER_DRUGS,
+    MISCELLANEOUS_DRUGS,
 )
 
 from .drug_utils import DRUG_GROUPS

@@ -135,11 +135,11 @@ GASTROINTESTINAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng omeprazole hoặc PPI khác",
                 "Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối do giảm hấp thu atazanavir"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng (Child-Pugh C) - giảm liều tối đa 20mg/ngày",
                 "Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng",
                 "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
@@ -302,11 +302,11 @@ GASTROINTESTINAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng pantoprazole hoặc PPI khác",
                 "Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng (Child-Pugh C) - thận trọng, có thể giảm liều",
                 "Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng",
                 "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
@@ -453,11 +453,11 @@ GASTROINTESTINAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng ranitidine hoặc H2 blocker khác",
                 "Một số sản phẩm ranitidine đã bị thu hồi do NDMA - tránh dùng các sản phẩm bị thu hồi"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nặng (CrCl <30) - giảm liều 50%",
                 "Suy gan nặng (Child-Pugh C) - giảm liều 50%",
                 "Người già - thận trọng, giảm liều nếu cần",
@@ -622,7 +622,7 @@ GASTROINTESTINAL_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng metoclopramide",
                 "Tắc ruột cơ học",
                 "Xuất huyết tiêu hóa",
@@ -630,7 +630,7 @@ GASTROINTESTINAL_DRUGS = {
                 "Pheochromocytoma (tăng nguy cơ tăng huyết áp)",
                 "Rối loạn vận động (Parkinson, dystonia, tardive dyskinesia)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận (CrCl <30) - giảm liều 50-75%",
                 "Suy gan nặng - thận trọng, có thể giảm liều",
                 "Trẻ em và thanh niên - tăng nguy cơ dystonia, parkinsonism",
@@ -781,7 +781,7 @@ GASTROINTESTINAL_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng loperamide",
                 "Tiêu chảy nhiễm khuẩn nặng (C. difficile, E. coli O157:H7) - có thể giữ vi khuẩn trong ruột",
                 "Viêm đại tràng giả mạc - có thể làm nặng thêm",
@@ -789,7 +789,7 @@ GASTROINTESTINAL_DRUGS = {
                 "Trẻ em <2 tuổi - nguy cơ ức chế hô hấp",
                 "Liều cao với CYP3A4 inhibitors - CHỐNG CHỈ ĐỊNH"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng - giảm liều, tăng nguy cơ tích lũy",
                 "Suy thận nặng - giảm liều, tăng nguy cơ tích lũy",
                 "Tiêu chảy nhiễm khuẩn nhẹ - thận trọng, đã điều trị kháng sinh",
@@ -964,7 +964,7 @@ GASTROINTESTINAL_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng domperidone",
                 "Chảy máu dạ dày",
                 "Tắc ruột cơ học",
@@ -972,7 +972,7 @@ GASTROINTESTINAL_DRUGS = {
                 "Dùng với các thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH tuyệt đối",
                 "QT kéo dài (QTc >450ms ở nam, >470ms ở nữ) - CHỐNG CHỈ ĐỊNH"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nặng (CrCl <30) - giảm liều 50%",
                 "Suy gan nặng - giảm liều, tăng nguy cơ QT kéo dài",
                 "Hạ kali, hạ magie - tăng nguy cơ QT kéo dài",
@@ -1132,12 +1132,12 @@ GASTROINTESTINAL_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng ondansetron",
                 "Dùng với apomorphine - CHỐNG CHỈ ĐỊNH tuyệt đối",
                 "QT kéo dài (QTc >450ms ở nam, >470ms ở nữ) - CHỐNG CHỈ ĐỊNH"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng - giảm liều 50% (tối đa 8mg/ngày)",
                 "Hạ kali, hạ magie - tăng nguy cơ QT kéo dài, bổ sung trước khi dùng",
                 "Đang dùng thuốc kéo dài QT - thận trọng, giảm liều",
@@ -1315,11 +1315,11 @@ GASTROINTESTINAL_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng lansoprazole hoặc PPI khác",
                 "Dùng cùng atazanavir (HIV protease inhibitor)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng (Child-Pugh C) - giảm liều tối đa 15mg/ngày",
                 "Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng",
                 "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
@@ -1496,11 +1496,11 @@ GASTROINTESTINAL_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng esomeprazole hoặc PPI khác",
                 "Dùng cùng atazanavir (HIV protease inhibitor)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng (Child-Pugh C) - giảm liều tối đa 20mg/ngày",
                 "Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng",
                 "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
@@ -1660,11 +1660,11 @@ GASTROINTESTINAL_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng sucralfate",
                 "Suy thận nặng (CrCl <30) - CHỐNG CHỈ ĐỊNH do tích tụ nhôm"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều, theo dõi chức năng thận",
                 "Táo bón nặng - có thể làm nặng thêm",
                 "Đang dùng nhiều thuốc - tăng nguy cơ tương tác hấp thu"

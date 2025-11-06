@@ -72,10 +72,10 @@ SUPPORTIVE_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng loratadine hoặc desloratadine"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng - thận trọng (giảm chuyển hóa)",
                 "Trẻ em <2 tuổi - an toàn từ 2 tuổi trở lên"
             ]
@@ -223,11 +223,11 @@ SUPPORTIVE_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng cetirizine hoặc hydroxyzine",
                 "Suy thận nặng (CrCl <30) - chống chỉ định hoặc dùng liều rất thấp"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nhẹ đến trung bình (CrCl 30-60) - giảm liều 50%",
                 "Người cao tuổi - có thể tăng nguy cơ buồn ngủ",
                 "Bệnh nhân có nguy cơ bí tiểu - tăng nguy cơ"
@@ -368,10 +368,10 @@ SUPPORTIVE_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng fexofenadine hoặc terfenadine"
             ],
-            "relative": [
+            "tương_đối": [
                 "Trẻ em <6 tuổi - an toàn từ 6 tuổi trở lên",
                 "Suy thận nặng - có thể tích lũy nhẹ nhưng không cần điều chỉnh liều"
             ]
@@ -498,10 +498,10 @@ SUPPORTIVE_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng desloratadine hoặc loratadine"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng - thận trọng, có thể cần giảm liều",
                 "Có thai - category C, thận trọng",
                 "Trẻ em <6 tháng tuổi - không khuyến cáo"
@@ -637,11 +637,11 @@ SUPPORTIVE_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng levocetirizine hoặc cetirizine",
                 "Suy thận nặng (CrCl <10) - chống chỉ định"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận (CrCl 30-60) - giảm liều (5mg cách ngày)",
                 "Suy thận (CrCl 10-30) - giảm liều (5mg mỗi 3 ngày)",
                 "Có thai - category B, thận trọng",
@@ -783,7 +783,125 @@ SUPPORTIVE_DRUGS = {
             "clearance": "Gan: chuyển hóa 25(OH)D thành các metabolites không hoạt động. Thận: chuyển hóa 25(OH)D thành 1,25(OH)2D (dưới tác dụng của PTH), và bài tiết các metabolites. Tích lũy trong mô mỡ (dự trữ dài hạn)."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để nơi khô ráo, tránh xa tầm tay trẻ em. Một số dạng có thể bảo quản trong tủ lạnh (xem hướng dẫn trên nhãn).",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thiazide diuretics (Hydrochlorothiazide, Chlorthalidone)",
+                    "mechanism": "Thiazide diuretics giảm bài tiết calcium qua thận, kết hợp với vitamin D tăng hấp thu calcium, dẫn đến tăng calci máu.",
+                    "effect": "Tăng nguy cơ tăng calci máu nghiêm trọng, sỏi thận, suy thận",
+                    "management": "Theo dõi nồng độ calcium trong máu chặt chẽ. Có thể cần giảm liều vitamin D hoặc thiazide. Theo dõi dấu hiệu tăng calci máu."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Corticosteroid (Prednisone, Dexamethasone)",
+                    "mechanism": "Corticosteroid giảm hấp thu calcium ở ruột và tăng bài tiết calcium qua thận, đối kháng với tác dụng của vitamin D.",
+                    "effect": "Giảm hiệu quả vitamin D, giảm hấp thu calcium",
+                    "management": "Có thể cần tăng liều vitamin D khi dùng corticosteroid. Theo dõi nồng độ calcium và 25(OH)D."
+                },
+                {
+                    "drug": "Cholestyramine, Colestipol, Colesevelam",
+                    "mechanism": "Các resin gắn acid mật gắn với vitamin D trong ruột, giảm hấp thu.",
+                    "effect": "Giảm hấp thu vitamin D, giảm hiệu quả",
+                    "management": "Cách ít nhất 4 giờ giữa vitamin D và resin. Uống vitamin D trước, resin sau."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Calcium supplements",
+                    "mechanism": "Vitamin D tăng hấp thu calcium từ ruột.",
+                    "effect": "Tăng hấp thu calcium (tác dụng mong muốn khi dùng kết hợp)",
+                    "management": "Kết hợp vitamin D và calcium là phổ biến và an toàn. Theo dõi nồng độ calcium để tránh tăng calci máu."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Tăng calci máu (hypercalcemia) - vitamin D làm nặng thêm",
+                "Tăng calci niệu (hypercalciuria) nặng - tăng nguy cơ sỏi thận",
+                "Sỏi thận calci đang hoạt động - tăng nguy cơ tái phát",
+                "Quá liều vitamin D đang điều trị"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - có thể cần dùng calcitriol (dạng hoạt hóa) thay vì vitamin D thường",
+                "Sỏi thận calci (tiền sử) - thận trọng, theo dõi calci niệu",
+                "Bệnh sarcoidosis - tăng nhạy cảm với vitamin D, tăng nguy cơ tăng calci máu",
+                "Bệnh cường cận giáp (hyperparathyroidism) - có thể làm nặng tăng calci máu",
+                "Dùng thiazide diuretics - tăng nguy cơ tăng calci máu"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "A",
+            "pregnancy_details": "Vitamin D an toàn và cần thiết trong thai kỳ. Thiếu vitamin D trong thai kỳ có thể gây còi xương ở trẻ sơ sinh, chậm phát triển xương, và các biến chứng khác. Nhu cầu vitamin D tăng trong thai kỳ. Khuyến cáo: 600-800 IU/ngày trong thai kỳ. Một số phụ nữ có thể cần liều cao hơn nếu thiếu vitamin D. Theo dõi nồng độ 25(OH)D trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Vitamin D bài tiết vào sữa mẹ ở nồng độ thấp. Vitamin D trong sữa mẹ phụ thuộc vào nồng độ vitamin D của mẹ. Bổ sung vitamin D cho mẹ giúp tăng nồng độ trong sữa mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Khuyến cáo: 600-800 IU/ngày khi cho con bú. Có thể cần liều cao hơn nếu thiếu vitamin D. Theo dõi nồng độ 25(OH)D của mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Vitamin D được chuyển hóa ở gan thành 25(OH)D (calcidiol), nhưng suy gan nhẹ không ảnh hưởng đáng kể.",
+            "moderate": "Không cần điều chỉnh liều thường quy. Theo dõi nồng độ 25(OH)D. Chuyển hóa có thể giảm nhẹ ở suy gan trung bình.",
+            "severe": "Thận trọng, theo dõi nồng độ 25(OH)D. Chuyển hóa có thể giảm ở suy gan nặng, nhưng thường không cần điều chỉnh liều.",
+            "notes": "Vitamin D được chuyển hóa ở gan thành 25(OH)D (calcidiol). Suy gan có thể làm giảm chuyển hóa, nhưng thường không ảnh hưởng đáng kể đến nồng độ 25(OH)D. Theo dõi nồng độ 25(OH)D để đảm bảo đủ vitamin D."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng calci máu (hypercalcemia): buồn nôn, nôn, táo bón, yếu cơ, rối loạn tâm thần, hôn mê",
+                "Tăng calci niệu (hypercalciuria): sỏi thận, đau thắt lưng, tiểu máu",
+                "Suy thận: do tăng calci máu và sỏi thận",
+                "Loạn nhịp tim: do tăng calci máu",
+                "Tổn thương thận vĩnh viễn (nếu không điều trị)",
+                "Tử vong (trong trường hợp quá liều nghiêm trọng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và giảm calci máu.",
+            "treatment": [
+                "Ngừng vitamin D ngay lập tức",
+                "Ngừng bổ sung calcium nếu đang dùng",
+                "Điều trị tăng calci máu:",
+                "  - Truyền dịch muối đẳng trương (0.9% NaCl) để tăng bài tiết calcium qua thận",
+                "  - Furosemide (lợi tiểu) để tăng bài tiết calcium (sau khi đã bù dịch)",
+                "  - Calcitonin (giảm giải phóng calcium từ xương) nếu tăng calci máu nặng",
+                "  - Bisphosphonates (pamidronate, zoledronate) nếu tăng calci máu nặng, kháng với điều trị khác",
+                "  - Glucocorticoid (prednisone) để giảm hấp thu calcium ở ruột (trong một số trường hợp)",
+                "  - Hemodialysis nếu tăng calci máu rất nặng và suy thận",
+                "Theo dõi nồng độ calcium trong máu thường xuyên (mỗi 6-12 giờ)",
+                "Theo dõi chức năng thận (creatinine, eGFR)",
+                "Theo dõi ECG (loạn nhịp tim do tăng calci máu)",
+                "Điều trị sỏi thận nếu có",
+                "Theo dõi ít nhất 1-2 tuần sau khi ngừng vitamin D (do tích lũy)"
+            ],
+            "monitoring": "Nồng độ calcium trong máu (ionized và total), phosphate, creatinine, eGFR, ECG, dấu hiệu lâm sàng tăng calci máu. Theo dõi ít nhất 1-2 tuần sau khi ngừng vitamin D."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên uống với thức ăn có chất béo để tăng hấp thu (vitamin D tan trong dầu). Có thể uống với sữa, dầu ăn, hoặc bữa ăn có chất béo.",
+                "timing": "Uống 1 lần/ngày hoặc theo chỉ định. Có thể uống bất kỳ lúc nào trong ngày, nhưng nên uống cùng thời điểm mỗi ngày để dễ nhớ. Với liều cao (50,000 IU/tuần), uống 1 lần/tuần vào cùng ngày mỗi tuần."
+            },
+            "iv": {
+                "reconstitution": "Vitamin D chủ yếu dùng đường uống. Nếu cần dùng IV, có thể dùng calcitriol (dạng hoạt hóa) IV trong một số trường hợp đặc biệt.",
+                "infusion_rate": "N/A - chủ yếu dùng đường uống",
+                "compatibility": ["N/A"],
+                "incompatibility": ["N/A"],
+                "notes": "Vitamin D chủ yếu dùng đường uống. Nếu cần dùng IV, cân nhắc dùng calcitriol (dạng hoạt hóa) thay thế."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Vitamin D (Cholecalciferol, Ergocalciferol)",
+                "Endocrine Society Clinical Practice Guidelines - Evaluation, Treatment, and Prevention of Vitamin D Deficiency",
+                "Institute of Medicine (IOM) - Dietary Reference Intakes for Calcium and Vitamin D",
+                "UpToDate - Vitamin D deficiency in adults",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels, Endocrine Society guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     "Vitamin B12": {
         "group": "Vitamins/Supplements - Vitamin B12",
@@ -852,7 +970,121 @@ SUPPORTIVE_DRUGS = {
             "clearance": "Dự trữ trong gan, thải trừ qua mật và nước tiểu"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng, tránh nhiệt độ cao",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Metformin",
+                    "mechanism": "Metformin dùng lâu dài có thể giảm hấp thu vitamin B12 ở ruột, dẫn đến thiếu B12.",
+                    "effect": "Giảm nồng độ B12, tăng nguy cơ thiếu B12",
+                    "management": "Theo dõi nồng độ B12 định kỳ ở bệnh nhân dùng metformin lâu dài (>2 năm). Bổ sung B12 nếu thiếu."
+                },
+                {
+                    "drug": "PPI (Omeprazole, Pantoprazole), H2 blockers (Ranitidine, Famotidine)",
+                    "mechanism": "Giảm acid dạ dày, giảm tách B12 khỏi protein trong thức ăn, giảm hấp thu.",
+                    "effect": "Giảm hấp thu B12, tăng nguy cơ thiếu B12",
+                    "management": "Theo dõi nồng độ B12 định kỳ ở bệnh nhân dùng PPI/H2 blocker lâu dài (>2 năm). Bổ sung B12 nếu thiếu."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Folic acid",
+                    "mechanism": "Folic acid có thể che dấu thiếu B12 (cải thiện thiếu máu nhưng không cải thiện tổn thương thần kinh).",
+                    "effect": "Che dấu thiếu B12, dẫn đến tổn thương thần kinh không được điều trị",
+                    "management": "Luôn kiểm tra B12 khi thiếu máu. Không dùng folic acid đơn độc mà không kiểm tra B12."
+                },
+                {
+                    "drug": "Chloramphenicol",
+                    "mechanism": "Chloramphenicol có thể giảm đáp ứng với B12 trong điều trị thiếu máu.",
+                    "effect": "Giảm đáp ứng với B12",
+                    "management": "Thận trọng. Theo dõi đáp ứng điều trị thiếu máu."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng vitamin B12 hoặc cobalt",
+                "Leber's disease (thoái hóa thần kinh thị giác di truyền) - B12 có thể làm nặng bệnh"
+            ],
+            "tương_đối": [
+                "Thiếu B12 do thiếu intrinsic factor (pernicious anemia) - cần dùng IM, không dùng PO",
+                "Thiếu hấp thu ở ruột - cần dùng IM, không dùng PO"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "A",
+            "pregnancy_details": "Vitamin B12 an toàn và cần thiết trong thai kỳ. Thiếu B12 trong thai kỳ có thể gây thiếu máu ở mẹ, chậm phát triển thần kinh ở thai nhi, và các biến chứng khác. Nhu cầu B12 tăng trong thai kỳ. Khuyến cáo: 2.6 mcg/ngày trong thai kỳ. Phụ nữ thiếu B12 cần bổ sung đủ trước và trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Vitamin B12 bài tiết vào sữa mẹ. Nồng độ B12 trong sữa mẹ phụ thuộc vào nồng độ B12 của mẹ. Thiếu B12 ở mẹ có thể dẫn đến thiếu B12 ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Khuyến cáo: 2.8 mcg/ngày khi cho con bú. Phụ nữ thiếu B12 cần bổ sung đủ để đảm bảo đủ B12 cho trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. B12 được dự trữ trong gan, nhưng suy gan nhẹ không ảnh hưởng đáng kể.",
+            "moderate": "Không cần điều chỉnh liều. B12 được dự trữ trong gan, nhưng suy gan trung bình không ảnh hưởng đáng kể.",
+            "severe": "Không cần điều chỉnh liều. B12 được dự trữ trong gan, nhưng suy gan nặng không ảnh hưởng đáng kể đến nồng độ B12.",
+            "notes": "Vitamin B12 được dự trữ trong gan. Suy gan không ảnh hưởng đáng kể đến nồng độ B12 trong máu. Tuy nhiên, suy gan có thể ảnh hưởng đến dự trữ B12."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Rất hiếm khi có triệu chứng quá liều (B12 là vitamin tan trong nước, thải trừ qua nước tiểu)",
+                "Phản ứng dị ứng (hiếm): phát ban, ngứa, sốc phản vệ",
+                "Tăng đông máu (với liều rất cao, hiếm)",
+                "Phản ứng tại chỗ tiêm (IM): đau, sưng, đỏ"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng B12 nếu có phản ứng dị ứng",
+                "Điều trị phản ứng dị ứng:",
+                "  - Antihistamine nếu phản ứng nhẹ",
+                "  - Epinephrine nếu sốc phản vệ",
+                "  - Corticosteroid nếu phản ứng nặng",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Điều trị phản ứng tại chỗ tiêm: chườm lạnh, giảm đau"
+            ],
+            "monitoring": "Dấu hiệu phản ứng dị ứng, dấu hiệu sinh tồn, phản ứng tại chỗ tiêm"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu tốt trong cả hai trường hợp.",
+                "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày. Uống cùng thời điểm mỗi ngày để dễ nhớ."
+            },
+            "im": {
+                "reconstitution": "Vitamin B12 IM thường có sẵn dạng tiêm sẵn. Không cần pha.",
+                "injection_site": "Tiêm bắp (deltoid hoặc gluteal). Xoay vị trí tiêm.",
+                "injection_rate": "Tiêm chậm, đều",
+                "notes": "IM cho thiếu máu nặng hoặc thiếu hấp thu. Tiêm bắp, xoay vị trí tiêm. Theo dõi phản ứng tại chỗ."
+            },
+            "sc": {
+                "reconstitution": "Vitamin B12 SC thường có sẵn dạng tiêm sẵn. Không cần pha.",
+                "injection_site": "Tiêm dưới da (bụng, đùi). Xoay vị trí tiêm.",
+                "injection_rate": "Tiêm chậm, đều",
+                "notes": "SC có thể dùng thay cho IM. Tiêm dưới da, xoay vị trí tiêm."
+            },
+            "iv": {
+                "reconstitution": "Không khuyến cáo dùng IV thường quy",
+                "infusion_rate": "N/A",
+                "compatibility": ["N/A"],
+                "incompatibility": ["N/A"],
+                "notes": "Vitamin B12 chủ yếu dùng PO, IM, hoặc SC. IV chỉ dùng trong trường hợp đặc biệt."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Vitamin B12 (Cyanocobalamin, Methylcobalamin)",
+                "UpToDate - Vitamin B12 deficiency",
+                "American Society of Hematology Guidelines - Vitamin B12 Deficiency",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels, ASH guidelines, và dữ liệu lâm sàng"
+        }
     },
     "Folic acid": {
         "group": "Vitamins/Supplements - Folate",
@@ -919,7 +1151,113 @@ SUPPORTIVE_DRUGS = {
             "clearance": "Thận (thải trừ qua nước tiểu), một phần dự trữ trong gan"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Folic acid đối kháng với tác dụng của methotrexate (methotrexate ức chế dihydrofolate reductase, folic acid bổ sung folate).",
+                    "effect": "Giảm hiệu quả methotrexate trong điều trị ung thư/viêm khớp",
+                    "management": "KHÔNG dùng folic acid cùng lúc với methotrexate trong điều trị ung thư/viêm khớp. Chỉ dùng folic acid để điều trị độc tính methotrexate, và phải dùng 24 giờ sau methotrexate."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Folic acid có thể giảm nồng độ phenytoin trong máu.",
+                    "effect": "Giảm nồng độ phenytoin, giảm hiệu quả chống động kinh, tăng nguy cơ co giật",
+                    "management": "Theo dõi nồng độ phenytoin khi bắt đầu hoặc ngừng folic acid. Có thể cần tăng liều phenytoin."
+                },
+                {
+                    "drug": "Sulfasalazine",
+                    "mechanism": "Sulfasalazine giảm hấp thu folic acid ở ruột.",
+                    "effect": "Giảm hấp thu folic acid, tăng nguy cơ thiếu folate",
+                    "management": "Bổ sung folic acid khi dùng sulfasalazine lâu dài. Theo dõi nồng độ folate."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Chloramphenicol",
+                    "mechanism": "Chloramphenicol có thể giảm đáp ứng với folic acid trong điều trị thiếu máu.",
+                    "effect": "Giảm đáp ứng với folic acid",
+                    "management": "Thận trọng. Theo dõi đáp ứng điều trị thiếu máu."
+                },
+                {
+                    "drug": "Vitamin B12",
+                    "mechanism": "Folic acid có thể che dấu thiếu B12 (cải thiện thiếu máu nhưng không cải thiện tổn thương thần kinh).",
+                    "effect": "Che dấu thiếu B12, dẫn đến tổn thương thần kinh không được điều trị",
+                    "management": "Luôn kiểm tra B12 khi thiếu máu. Không dùng folic acid đơn độc mà không kiểm tra B12."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng folic acid",
+                "Ung thư đang điều trị bằng methotrexate (trừ khi dùng để điều trị độc tính methotrexate)"
+            ],
+            "tương_đối": [
+                "Ung thư (không điều trị) - folic acid có thể kích thích tế bào ung thư",
+                "Thiếu B12 chưa được điều trị - folic acid có thể che dấu thiếu B12"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "A",
+            "pregnancy_details": "Folic acid an toàn và cần thiết trong thai kỳ, đặc biệt quan trọng để dự phòng dị tật ống thần kinh (spina bifida, anencephaly). Dị tật ống thần kinh xảy ra trong tuần 3-4 của thai kỳ, trước khi nhiều phụ nữ biết mình có thai. Do đó, phụ nữ trong độ tuổi sinh đẻ nên bổ sung folic acid trước khi có thai. Khuyến cáo: 400-800 mcg/ngày trước và trong 3 tháng đầu thai kỳ. Phụ nữ có tiền sử dị tật ống thần kinh hoặc dùng một số thuốc (valproate, carbamazepine) cần liều cao hơn (4-5 mg/ngày).",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Folic acid bài tiết vào sữa mẹ. Nồng độ folic acid trong sữa mẹ phụ thuộc vào nồng độ folic acid của mẹ. Bổ sung folic acid cho mẹ giúp tăng nồng độ trong sữa mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Khuyến cáo: 500 mcg/ngày khi cho con bú. Phụ nữ thiếu folate cần bổ sung đủ để đảm bảo đủ folate cho trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Folic acid chủ yếu thải trừ qua thận, không chuyển hóa ở gan.",
+            "moderate": "Không cần điều chỉnh liều. Folic acid chủ yếu thải trừ qua thận, không chuyển hóa ở gan.",
+            "severe": "Không cần điều chỉnh liều. Folic acid chủ yếu thải trừ qua thận, không chuyển hóa ở gan.",
+            "notes": "Folic acid chủ yếu thải trừ qua thận, một phần dự trữ trong gan. Suy gan không ảnh hưởng đáng kể đến nồng độ folic acid."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Rất hiếm khi có triệu chứng quá liều (folic acid là vitamin tan trong nước, thải trừ qua nước tiểu)",
+                "Phản ứng dị ứng (hiếm): phát ban, ngứa",
+                "Che dấu thiếu B12 (với liều cao >1mg/ngày) - cải thiện thiếu máu nhưng không cải thiện tổn thương thần kinh"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng folic acid nếu có phản ứng dị ứng",
+                "Điều trị phản ứng dị ứng: antihistamine nếu cần",
+                "Kiểm tra B12 nếu nghi ngờ che dấu thiếu B12",
+                "Theo dõi dấu hiệu sinh tồn"
+            ],
+            "monitoring": "Dấu hiệu phản ứng dị ứng, nồng độ B12 nếu nghi ngờ che dấu thiếu B12"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu tốt trong cả hai trường hợp.",
+                "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày. Uống cùng thời điểm mỗi ngày để dễ nhớ. Với methotrexate: dùng 24 giờ sau methotrexate (không dùng cùng lúc)."
+            },
+            "iv": {
+                "reconstitution": "Folic acid chủ yếu dùng đường uống. IV chỉ dùng trong trường hợp đặc biệt.",
+                "infusion_rate": "N/A - chủ yếu dùng đường uống",
+                "compatibility": ["N/A"],
+                "incompatibility": ["N/A"],
+                "notes": "Folic acid chủ yếu dùng đường uống. IV chỉ dùng trong trường hợp đặc biệt."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Folic Acid (Folate)",
+                "CDC Guidelines - Folic Acid for Prevention of Neural Tube Defects",
+                "American College of Obstetricians and Gynecologists (ACOG) - Folic Acid Supplementation",
+                "UpToDate - Folic acid deficiency",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels, CDC/ACOG guidelines, và dữ liệu lâm sàng"
+        }
     },
     "Iron": {
         "group": "Vitamins/Supplements - Iron",
@@ -998,7 +1336,164 @@ SUPPORTIVE_DRUGS = {
             "clearance": "Dự trữ trong gan, lách, tủy xương; thải trừ qua phân, mồ hôi, nước tiểu (ít)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Quá tải sắt có thể gây tổn thương gan, tim, và các cơ quan khác. Tránh dùng ở bệnh nhân hemochromatosis"
+        "black_box_warnings": "Quá tải sắt có thể gây tổn thương gan, tim, và các cơ quan khác. Tránh dùng ở bệnh nhân hemochromatosis",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Tetracycline, Doxycycline, Minocycline",
+                    "mechanism": "Sắt gắn với tetracycline trong ruột, tạo phức hợp không hấp thu được, giảm hấp thu cả hai.",
+                    "effect": "Giảm hấp thu cả sắt và tetracycline, giảm hiệu quả điều trị",
+                    "management": "Cách ít nhất 2-3 giờ giữa sắt và tetracycline. Uống sắt trước, tetracycline sau."
+                },
+                {
+                    "drug": "Quinolone (Ciprofloxacin, Levofloxacin, Moxifloxacin)",
+                    "mechanism": "Sắt gắn với quinolone trong ruột, tạo phức hợp không hấp thu được, giảm hấp thu cả hai.",
+                    "effect": "Giảm hấp thu cả sắt và quinolone, giảm hiệu quả điều trị",
+                    "management": "Cách ít nhất 2-3 giờ giữa sắt và quinolone. Uống sắt trước, quinolone sau."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Levothyroxine",
+                    "mechanism": "Sắt gắn với levothyroxine trong ruột, giảm hấp thu levothyroxine.",
+                    "effect": "Giảm hấp thu levothyroxine, giảm hiệu quả điều trị suy giáp",
+                    "management": "Cách ít nhất 4 giờ giữa sắt và levothyroxine. Uống levothyroxine sáng đói, sắt sau bữa ăn."
+                },
+                {
+                    "drug": "Antacid, PPI (Omeprazole, Pantoprazole), H2 blockers (Ranitidine)",
+                    "mechanism": "Giảm acid dạ dày, giảm hấp thu sắt (sắt cần acid để hấp thu tốt).",
+                    "effect": "Giảm hấp thu sắt, giảm hiệu quả điều trị thiếu máu",
+                    "management": "Cách ít nhất 2 giờ giữa sắt và antacid/PPI/H2 blocker. Uống sắt khi bụng đói (nếu dung nạp), antacid sau bữa ăn."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Vitamin C (Ascorbic acid)",
+                    "mechanism": "Vitamin C tăng hấp thu sắt bằng cách khử Fe3+ thành Fe2+ (dạng hấp thu tốt hơn).",
+                    "effect": "Tăng hấp thu sắt (tác dụng mong muốn)",
+                    "management": "Kết hợp sắt và vitamin C là phổ biến và có lợi. Uống cùng lúc hoặc gần nhau."
+                },
+                {
+                    "drug": "Chloramphenicol",
+                    "mechanism": "Chloramphenicol có thể giảm đáp ứng với sắt trong điều trị thiếu máu.",
+                    "effect": "Giảm đáp ứng với sắt",
+                    "management": "Thận trọng. Theo dõi đáp ứng điều trị thiếu máu."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Hemochromatosis (thừa sắt di truyền) - sắt làm nặng thêm",
+                "Thiếu máu không do thiếu sắt - không hiệu quả và có thể gây quá tải sắt",
+                "Dị ứng sắt"
+            ],
+            "tương_đối": [
+                "Viêm loét dạ dày tá tràng nặng - sắt có thể gây kích ứng",
+                "Viêm ruột (Crohn, viêm loét đại tràng) - sắt có thể gây kích ứng",
+                "Suy thận nặng - tăng nguy cơ tích tụ sắt",
+                "Đang truyền máu thường xuyên - tăng nguy cơ quá tải sắt"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "A",
+            "pregnancy_details": "Sắt an toàn và cần thiết trong thai kỳ. Thiếu sắt trong thai kỳ có thể gây thiếu máu ở mẹ, sinh non, nhẹ cân, và các biến chứng khác. Nhu cầu sắt tăng trong thai kỳ. Khuyến cáo: 30-60 mg sắt nguyên tố/ngày trong thai kỳ. Phụ nữ thiếu máu thiếu sắt cần liều cao hơn. Theo dõi hemoglobin và ferritin trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Sắt bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ sắt trong sữa mẹ tương đối ổn định và không phụ thuộc nhiều vào nồng độ sắt của mẹ. Tuy nhiên, thiếu sắt ở mẹ có thể ảnh hưởng đến sức khỏe mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Khuyến cáo: 15-30 mg sắt nguyên tố/ngày khi cho con bú. Phụ nữ thiếu máu thiếu sắt cần liều cao hơn."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Sắt được dự trữ trong gan, nhưng suy gan nhẹ không ảnh hưởng đáng kể.",
+            "moderate": "Thận trọng, theo dõi ferritin. Sắt được dự trữ trong gan, suy gan trung bình có thể ảnh hưởng đến dự trữ.",
+            "severe": "Thận trọng, theo dõi ferritin chặt chẽ. Suy gan nặng có thể ảnh hưởng đến dự trữ sắt và tăng nguy cơ quá tải sắt.",
+            "notes": "Sắt được dự trữ trong gan dưới dạng ferritin. Suy gan có thể ảnh hưởng đến dự trữ sắt. Theo dõi ferritin để tránh quá tải sắt."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Quá liều cấp tính (thường ở trẻ em):",
+                "  - Buồn nôn, nôn (có thể có máu)",
+                "  - Đau bụng, tiêu chảy (có thể có máu)",
+                "  - Mệt mỏi, yếu cơ",
+                "  - Sốc, hạ huyết áp",
+                "  - Tổn thương gan (tăng ALT/AST, vàng da)",
+                "  - Tổn thương thận (suy thận cấp)",
+                "  - Rối loạn đông máu",
+                "  - Hôn mê, tử vong (với liều rất cao)",
+                "Quá tải sắt mạn tính (hemosiderosis, hemochromatosis):",
+                "  - Tổn thương gan (xơ gan, suy gan)",
+                "  - Tổn thương tim (suy tim, loạn nhịp)",
+                "  - Tổn thương tụy (đái tháo đường)",
+                "  - Tổn thương khớp (viêm khớp)",
+                "  - Tăng sắc tố da (da xám, đồng)"
+            ],
+            "antidote": "Deferoxamine (Desferal) - chelate sắt, tăng bài tiết qua nước tiểu. Deferasirox (Exjade) - chelate sắt đường uống.",
+            "treatment": [
+                "Quá liều cấp tính:",
+                "  - Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "  - Than hoạt tính KHÔNG hiệu quả với sắt (không dùng)",
+                "  - Deferoxamine IV: 15 mg/kg/giờ (tối đa 6g/24h) nếu nồng độ sắt >350 mcg/dL hoặc có triệu chứng nặng",
+                "  - Deferoxamine IM: 1g mỗi 4-6 giờ (nếu không thể IV)",
+                "  - Theo dõi nồng độ sắt trong máu, ferritin",
+                "  - Điều trị hỗ trợ: truyền dịch, điều chỉnh điện giải, hỗ trợ gan/thận",
+                "  - Theo dõi dấu hiệu sinh tồn, chức năng gan/thận",
+                "Quá tải sắt mạn tính:",
+                "  - Ngừng bổ sung sắt",
+                "  - Deferoxamine hoặc deferasirox để giảm dự trữ sắt",
+                "  - Phlebotomy (lấy máu) nếu hemochromatosis",
+                "  - Điều trị tổn thương cơ quan (gan, tim, tụy)"
+            ],
+            "monitoring": "Nồng độ sắt trong máu, ferritin, TIBC, transferrin saturation, chức năng gan (ALT/AST, bilirubin), chức năng thận (creatinine, eGFR), dấu hiệu sinh tồn, ECG (nếu quá tải sắt nặng)."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Deferoxamine (Desferal)",
+                    "mechanism": "Chelate sắt, tạo phức hợp sắt-deferoxamine, tăng bài tiết qua nước tiểu.",
+                    "indication": "Quá liều sắt cấp tính hoặc quá tải sắt mạn tính",
+                    "dose": "IV: 15 mg/kg/giờ (tối đa 6g/24h). IM: 1g mỗi 4-6 giờ.",
+                    "notes": "Deferoxamine là antidote chính cho quá liều sắt. Bắt đầu sớm nếu có triệu chứng nặng hoặc nồng độ sắt cao."
+                },
+                {
+                    "name": "Deferasirox (Exjade)",
+                    "mechanism": "Chelate sắt đường uống, tăng bài tiết qua phân.",
+                    "indication": "Quá tải sắt mạn tính",
+                    "dose": "Theo chỉ định, thường 20-30 mg/kg/ngày",
+                    "notes": "Dùng cho quá tải sắt mạn tính, không dùng cho quá liều cấp tính."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên uống khi bụng đói (1 giờ trước bữa ăn) để tăng hấp thu. Nếu kích ứng dạ dày, có thể uống với thức ăn (giảm hấp thu 50%). Uống với vitamin C (nước cam, viên vitamin C) để tăng hấp thu.",
+                "timing": "Uống 1-3 lần/ngày tùy liều. Uống khi bụng đói (1 giờ trước bữa ăn) để tăng hấp thu. Cách xa các thuốc khác ít nhất 2-4 giờ: tetracycline, quinolone (2-3 giờ), levothyroxine (4 giờ), antacid/PPI/H2 blocker (2 giờ)."
+            },
+            "iv": {
+                "reconstitution": "Pha với nước muối đẳng trương (0.9% NaCl). Không pha với các dung dịch khác.",
+                "infusion_rate": "Truyền chậm trong ít nhất 1 giờ. Không truyền nhanh (tăng nguy cơ phản ứng dị ứng).",
+                "compatibility": ["Normal saline (0.9% NaCl)"],
+                "incompatibility": ["Không trộn với các thuốc khác"],
+                "notes": "IV cho thiếu máu nặng hoặc không dung nạp PO. Có thể gây phản ứng dị ứng nặng (sốc phản vệ). Theo dõi chặt chẽ trong 30 phút đầu. Test dose trước khi truyền đầy đủ."
+            },
+            "im": {
+                "reconstitution": "Sắt IM thường có sẵn dạng tiêm sẵn. Không cần pha.",
+                "injection_site": "Tiêm bắp sâu (gluteal). Xoay vị trí tiêm.",
+                "injection_rate": "Tiêm chậm, đều",
+                "notes": "IM ít dùng hơn IV. Tiêm bắp sâu, xoay vị trí tiêm. Có thể gây đau và đổi màu da tại chỗ tiêm."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Iron (Ferrous sulfate, Ferrous fumarate, Ferrous gluconate)",
+                "American Society of Hematology Guidelines - Iron Deficiency Anemia",
+                "WHO Guidelines - Iron Supplementation in Pregnancy",
+                "UpToDate - Iron deficiency anemia treatment",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels, ASH/WHO guidelines, và dữ liệu lâm sàng"
+        }
     },
     "Calcium": {
         "group": "Vitamins/Supplements - Calcium",
@@ -1079,7 +1574,143 @@ SUPPORTIVE_DRUGS = {
             "clearance": "Thận: bài tiết qua nước tiểu (tái hấp thu ở ống thận dưới tác dụng của PTH). Xương: lưu trữ dài hạn. Ruột: bài tiết qua phân (phần không hấp thu)."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Để nơi khô ráo, tránh xa tầm tay trẻ em.",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Levothyroxine",
+                    "mechanism": "Calcium gắn với levothyroxine trong ruột, tạo phức hợp không hấp thu được, giảm hấp thu levothyroxine.",
+                    "effect": "Giảm hấp thu levothyroxine 30-50%, giảm hiệu quả điều trị suy giáp",
+                    "management": "Cách ít nhất 4 giờ giữa calcium và levothyroxine. Uống levothyroxine sáng đói, calcium sau bữa ăn."
+                },
+                {
+                    "drug": "Tetracycline, Doxycycline, Minocycline",
+                    "mechanism": "Calcium gắn với tetracycline trong ruột, tạo phức hợp không hấp thu được, giảm hấp thu cả hai.",
+                    "effect": "Giảm hấp thu cả calcium và tetracycline, giảm hiệu quả điều trị",
+                    "management": "Cách ít nhất 2 giờ giữa calcium và tetracycline. Uống calcium trước, tetracycline sau."
+                },
+                {
+                    "drug": "Quinolone (Ciprofloxacin, Levofloxacin, Moxifloxacin)",
+                    "mechanism": "Calcium gắn với quinolone trong ruột, tạo phức hợp không hấp thu được, giảm hấp thu cả hai.",
+                    "effect": "Giảm hấp thu cả calcium và quinolone, giảm hiệu quả điều trị",
+                    "management": "Cách ít nhất 2 giờ giữa calcium và quinolone. Uống calcium trước, quinolone sau."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Calcium có thể tăng tác dụng của digoxin trên tim, tăng nguy cơ loạn nhịp.",
+                    "effect": "Tăng nguy cơ loạn nhịp tim do digoxin",
+                    "management": "Thận trọng. Theo dõi nồng độ digoxin và ECG. Tránh tăng calci máu."
+                },
+                {
+                    "drug": "Thiazide diuretics (Hydrochlorothiazide, Chlorthalidone)",
+                    "mechanism": "Thiazide diuretics giảm bài tiết calcium qua thận, kết hợp với bổ sung calcium, dẫn đến tăng calci máu.",
+                    "effect": "Tăng nguy cơ tăng calci máu, sỏi thận",
+                    "management": "Theo dõi nồng độ calcium trong máu chặt chẽ. Có thể cần giảm liều calcium hoặc thiazide."
+                },
+                {
+                    "drug": "Sắt (Iron)",
+                    "mechanism": "Calcium gắn với sắt trong ruột, giảm hấp thu sắt.",
+                    "effect": "Giảm hấp thu sắt, giảm hiệu quả điều trị thiếu máu",
+                    "management": "Cách ít nhất 2 giờ giữa calcium và sắt. Uống sắt khi bụng đói, calcium sau bữa ăn."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Vitamin D",
+                    "mechanism": "Vitamin D tăng hấp thu calcium từ ruột.",
+                    "effect": "Tăng hấp thu calcium (tác dụng mong muốn khi dùng kết hợp)",
+                    "management": "Kết hợp calcium và vitamin D là phổ biến và an toàn. Theo dõi nồng độ calcium để tránh tăng calci máu."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Tăng calci máu (hypercalcemia) - calcium làm nặng thêm",
+                "Tăng calci niệu (hypercalciuria) nặng - tăng nguy cơ sỏi thận",
+                "Sỏi thận calci đang hoạt động - tăng nguy cơ tái phát",
+                "Suy thận nặng với tăng calci máu"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - tăng nguy cơ tăng calci máu, sỏi thận",
+                "Sỏi thận calci (tiền sử) - thận trọng, theo dõi calci niệu",
+                "Bệnh sarcoidosis - tăng nhạy cảm với calcium, tăng nguy cơ tăng calci máu",
+                "Bệnh cường cận giáp (hyperparathyroidism) - có thể làm nặng tăng calci máu",
+                "Dùng thiazide diuretics - tăng nguy cơ tăng calci máu",
+                "Suy tim - calcium carbonate có thể gây đầy hơi, táo bón"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "A",
+            "pregnancy_details": "Calcium an toàn và cần thiết trong thai kỳ. Thiếu calcium trong thai kỳ có thể gây loãng xương ở mẹ, chậm phát triển xương ở thai nhi, và các biến chứng khác. Nhu cầu calcium tăng trong thai kỳ. Khuyến cáo: 1,000-1,300 mg nguyên tố calci/ngày trong thai kỳ. Phụ nữ thiếu calcium cần bổ sung đủ. Kết hợp với vitamin D để tăng hấp thu.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Calcium bài tiết vào sữa mẹ. Nồng độ calcium trong sữa mẹ tương đối ổn định và không phụ thuộc nhiều vào nồng độ calcium của mẹ (do điều hòa từ xương). Tuy nhiên, thiếu calcium ở mẹ có thể ảnh hưởng đến sức khỏe mẹ (loãng xương).",
+                "recommendation": "Có thể dùng khi cho con bú. Khuyến cáo: 1,000-1,300 mg nguyên tố calci/ngày khi cho con bú. Phụ nữ thiếu calcium cần bổ sung đủ để đảm bảo sức khỏe mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Calcium không chuyển hóa ở gan.",
+            "moderate": "Không cần điều chỉnh liều. Calcium không chuyển hóa ở gan.",
+            "severe": "Không cần điều chỉnh liều. Calcium không chuyển hóa ở gan. Tuy nhiên, suy gan nặng có thể ảnh hưởng đến albumin (protein binding của calcium).",
+            "notes": "Calcium không chuyển hóa ở gan. Suy gan không ảnh hưởng đáng kể đến nồng độ calcium. Tuy nhiên, suy gan nặng có thể ảnh hưởng đến albumin, ảnh hưởng đến protein binding của calcium (nhưng không ảnh hưởng đến ionized calcium - dạng hoạt động)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng calci máu (hypercalcemia): buồn nôn, nôn, táo bón, yếu cơ, rối loạn tâm thần, hôn mê",
+                "Tăng calci niệu (hypercalciuria): sỏi thận, đau thắt lưng, tiểu máu",
+                "Suy thận: do tăng calci máu và sỏi thận",
+                "Loạn nhịp tim: do tăng calci máu (đặc biệt với digoxin)",
+                "Tổn thương thận vĩnh viễn (nếu không điều trị)",
+                "Tử vong (trong trường hợp quá liều nghiêm trọng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và giảm calci máu.",
+            "treatment": [
+                "Ngừng calcium ngay lập tức",
+                "Ngừng bổ sung vitamin D nếu đang dùng",
+                "Điều trị tăng calci máu:",
+                "  - Truyền dịch muối đẳng trương (0.9% NaCl) để tăng bài tiết calcium qua thận",
+                "  - Furosemide (lợi tiểu) để tăng bài tiết calcium (sau khi đã bù dịch)",
+                "  - Calcitonin (giảm giải phóng calcium từ xương) nếu tăng calci máu nặng",
+                "  - Bisphosphonates (pamidronate, zoledronate) nếu tăng calci máu nặng, kháng với điều trị khác",
+                "  - Glucocorticoid (prednisone) để giảm hấp thu calcium ở ruột (trong một số trường hợp)",
+                "  - Hemodialysis nếu tăng calci máu rất nặng và suy thận",
+                "Theo dõi nồng độ calcium trong máu thường xuyên (mỗi 6-12 giờ)",
+                "Theo dõi chức năng thận (creatinine, eGFR)",
+                "Theo dõi ECG (loạn nhịp tim do tăng calci máu, đặc biệt với digoxin)",
+                "Điều trị sỏi thận nếu có"
+            ],
+            "monitoring": "Nồng độ calcium trong máu (ionized và total), phosphate, creatinine, eGFR, ECG, dấu hiệu lâm sàng tăng calci máu."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên uống với thức ăn để tăng hấp thu và giảm tác dụng phụ (táo bón, đầy hơi).",
+                "timing": "Uống 2-3 lần/ngày, chia liều (không uống quá 500-600mg nguyên tố calci mỗi lần) để tăng hấp thu. Cách xa các thuốc khác ít nhất 2-4 giờ: sắt (2 giờ), tetracycline, quinolone (2 giờ), levothyroxine (4 giờ)."
+            },
+            "iv": {
+                "reconstitution": "Calcium chủ yếu dùng đường uống. IV chỉ dùng trong trường hợp hạ calci máu cấp tính.",
+                "infusion_rate": "Truyền chậm (không quá 0.5-1 mEq/phút). Không truyền nhanh (tăng nguy cơ loạn nhịp tim).",
+                "compatibility": ["Normal saline (0.9% NaCl), D5W"],
+                "incompatibility": ["Không trộn với bicarbonate, phosphate (tạo kết tủa)"],
+                "notes": "Calcium IV chỉ dùng trong trường hợp hạ calci máu cấp tính. Truyền chậm, theo dõi ECG. Không trộn với bicarbonate hoặc phosphate."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Calcium (Calcium carbonate, Calcium citrate)",
+                "Institute of Medicine (IOM) - Dietary Reference Intakes for Calcium and Vitamin D",
+                "National Osteoporosis Foundation Guidelines - Calcium and Vitamin D",
+                "UpToDate - Calcium supplementation",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels, IOM/NOF guidelines, và dữ liệu lâm sàng"
+        }
     },
 }
 

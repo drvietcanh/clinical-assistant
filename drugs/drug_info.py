@@ -121,8 +121,23 @@ def display_drug_info(drug_name, drug_data):
         # Contraindications
         if 'contraindications' in drug_data:
             st.markdown("### ⛔ Chống chỉ định:")
-            for contra in drug_data['contraindications']:
-                st.markdown(f"- {contra}")
+            contraindications = drug_data['contraindications']
+            
+            # Check if it's a dict with tuyệt_đối and tương_đối
+            if isinstance(contraindications, dict):
+                if 'tuyệt_đối' in contraindications and contraindications['tuyệt_đối']:
+                    st.markdown("**🔴 Tuyệt đối:**")
+                    for contra in contraindications['tuyệt_đối']:
+                        st.markdown(f"- {contra}")
+                
+                if 'tương_đối' in contraindications and contraindications['tương_đối']:
+                    st.markdown("**🟡 Tương đối:**")
+                    for contra in contraindications['tương_đối']:
+                        st.markdown(f"- {contra}")
+            else:
+                # Old format: list
+                for contra in contraindications:
+                    st.markdown(f"- {contra}")
         
         st.markdown("---")
         

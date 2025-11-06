@@ -109,7 +109,7 @@ DIABETES_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Suy thận nặng (CrCl <30 hoặc eGFR <30)",
                 "Nhiễm toan lactic",
                 "Suy gan nặng",
@@ -118,7 +118,7 @@ DIABETES_DRUGS = {
                 "Nhiễm trùng nặng (tăng nguy cơ nhiễm toan lactic)",
                 "Dị ứng metformin"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận trung bình (CrCl 30-60) - giảm liều, theo dõi sát",
                 "Suy gan nhẹ đến trung bình - thận trọng",
                 "Suy tim nhẹ đến trung bình - thận trọng",
@@ -304,13 +304,13 @@ DIABETES_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Đái tháo đường type 1",
                 "Nhiễm toan ceton do đái tháo đường",
                 "Dị ứng glibenclamide hoặc sulfonylurea",
                 "Suy thận nặng (CrCl <30) - tăng nguy cơ hạ đường huyết nghiêm trọng"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng - tăng nguy cơ hạ đường huyết",
                 "Người cao tuổi - tăng nguy cơ hạ đường huyết",
                 "Suy thận trung bình (CrCl 30-60) - giảm liều, theo dõi sát",
@@ -490,13 +490,13 @@ DIABETES_DRUGS = {
               ]
           },
           "contraindications": {
-              "absolute": [
+              "tuyệt_đối": [
                   "Đái tháo đường type 1",
                   "Nhiễm toan ceton do đái tháo đường",
                   "Dị ứng gliclazide hoặc sulfonylurea",
                   "Suy thận nặng (CrCl <30) - tăng nguy cơ hạ đường huyết"
               ],
-              "relative": [
+              "tương_đối": [
                   "Suy gan nặng - tăng nguy cơ hạ đường huyết",
                   "Người cao tuổi - tăng nguy cơ hạ đường huyết",
                   "Suy thận trung bình (CrCl 30-60) - giảm liều, theo dõi sát",
@@ -713,12 +713,12 @@ DIABETES_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Hạ đường huyết (hypoglycemia) - không được dùng khi đường huyết thấp",
                 "Dị ứng insulin hoặc bất kỳ thành phần nào trong chế phẩm insulin",
                 "Hôn mê do hạ đường huyết - không được dùng insulin cho đến khi hồi phục"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận - giảm clearance insulin, giảm liều insulin",
                 "Suy gan - giảm gluconeogenesis, tăng nguy cơ hạ đường huyết, giảm liều insulin",
                 "Suy tim - thận trọng, có thể cần điều chỉnh liều",
@@ -948,14 +948,14 @@ DIABETES_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Đái tháo đường type 1",
                 "Nhiễm toan ceton do đái tháo đường",
                 "Suy thận nặng (eGFR <20)",
                 "Đang lọc máu",
                 "Dị ứng empagliflozin"
             ],
-            "relative": [
+            "tương_đối": [
                 "Nhiễm trùng đường tiết niệu tái phát - tăng nguy cơ nhiễm trùng",
                 "Suy tim nặng - tăng nguy cơ mất nước",
                 "Người cao tuổi - tăng nguy cơ mất nước, hạ huyết áp",
@@ -1134,14 +1134,14 @@ DIABETES_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Đái tháo đường type 1",
                 "Nhiễm toan ceton do đái tháo đường",
                 "Suy thận nặng (eGFR <25)",
                 "Đang lọc máu",
                 "Dị ứng dapagliflozin"
             ],
-            "relative": [
+            "tương_đối": [
                 "Nhiễm trùng đường tiết niệu tái phát - tăng nguy cơ nhiễm trùng",
                 "Suy tim nặng - tăng nguy cơ mất nước",
                 "Người cao tuổi - tăng nguy cơ mất nước, hạ huyết áp",
@@ -1304,13 +1304,13 @@ DIABETES_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Đái tháo đường type 1",
                 "Nhiễm toan ceton do đái tháo đường",
                 "Dị ứng sitagliptin",
                 "Viêm tụy cấp đang diễn ra"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nặng (CrCl <30) - cần giảm liều (25mg/ngày)",
                 "Suy thận trung bình (CrCl 30-50) - cần giảm liều (50mg/ngày)",
                 "Tiền sử viêm tụy cấp - tăng nguy cơ",
@@ -1451,12 +1451,12 @@ DIABETES_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Đái tháo đường type 1 - không hiệu quả (cần insulin)",
                 "Nhiễm toan ceton - cần insulin, không dùng vildagliptin",
                 "Suy gan nặng - chống chỉ định"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nặng (CrCl <30) - thận trọng, có thể cần giảm liều",
                 "Có thai - category C, thận trọng",
                 "Viêm tụy trước đây - tăng nguy cơ viêm tụy cấp"
@@ -1615,13 +1615,13 @@ DIABETES_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Đái tháo đường type 1 - không hiệu quả (cần insulin)",
                 "Suy tim (NYHA class III-IV) - CHỐNG CHỈ ĐỊNH (tăng nguy cơ suy tim)",
                 "Bệnh gan nặng - chống chỉ định (nguy cơ độc gan)",
                 "Ung thư bàng quang - chống chỉ định (tăng nguy cơ)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy tim (NYHA class I-II) - thận trọng, theo dõi sát",
                 "Gãy xương (phụ nữ có nguy cơ tăng) - thận trọng",
                 "Có thai - category C, thận trọng",

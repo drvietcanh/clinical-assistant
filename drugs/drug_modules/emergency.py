@@ -122,11 +122,11 @@ EMERGENCY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Không có chống chỉ định tuyệt đối trong cấp cứu ngừng tim",
                 "Dị ứng epinephrine (hiếm nhưng nguy hiểm)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Bệnh mạch vành - tăng nguy cơ nhồi máu cơ tim, đau thắt ngực",
                 "Tăng huyết áp nặng không kiểm soát - có thể làm tăng huyết áp hơn nữa",
                 "Rối loạn nhịp tim nặng - có thể làm nặng rối loạn nhịp",
@@ -351,13 +351,13 @@ EMERGENCY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Glaucoma góc đóng (có thể gây tăng nhãn áp đe dọa thị giác)",
                 "Tắc nghẽn đường tiểu (có thể làm nặng thêm bí tiểu)",
                 "Nhịp tim nhanh (có thể làm tăng nhịp tim hơn nữa)",
                 "Dị ứng atropine"
             ],
-            "relative": [
+            "tương_đối": [
                 "Sốt (có thể làm tăng nhiệt độ do giảm tiết mồ hôi)",
                 "Người già (tăng nguy cơ lú lẫn, bí tiểu)",
                 "Bệnh mạch vành (tăng nhịp tim có thể làm nặng thêm)",
@@ -549,12 +549,12 @@ EMERGENCY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng lidocaine hoặc thuốc gây tê nhóm amide",
                 "Block nhĩ thất độ 2-3 không có máy tạo nhịp - có thể làm nặng block, gây nhịp chậm nặng",
                 "Hội chứng Adams-Stokes - nguy cơ nhịp chậm nặng, ngừng tim"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng - giảm chuyển hóa, tích lũy, tăng nguy cơ độc tính",
                 "Suy tim nặng - giảm phân bố, tăng nồng độ, tăng nguy cơ độc tính",
                 "Người cao tuổi - giảm chuyển hóa, tăng nhạy cảm với độc tính",
@@ -765,14 +765,14 @@ EMERGENCY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Block nhĩ thất độ 2-3 (AV block) không có máy tạo nhịp",
                 "Hội chứng sick sinus (sick sinus syndrome) không có máy tạo nhịp",
                 "Hen phế quản nặng hoặc co thắt phế quản nặng",
                 "Dị ứng adenosine",
                 "Rung nhĩ/rung thất (không phải chỉ định)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Block AV độ 1 - thận trọng, có thể làm nặng",
                 "Hen phế quản nhẹ đến trung bình - thận trọng, có thể gây co thắt phế quản",
                 "Suy tim - thận trọng, có thể gây ngừng tim kéo dài",
@@ -944,10 +944,10 @@ EMERGENCY_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng naloxone (hiếm)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Bệnh nhân nghiện opioid - có thể gây hội chứng cai nặng (kích động, nôn, tăng huyết áp, nhịp tim nhanh)",
                 "Bệnh nhân dùng opioid để giảm đau mãn tính - có thể đảo ngược hoàn toàn giảm đau, gây đau nặng",
                 "Bệnh nhân có tiền sử co giật - có thể gây co giật",
@@ -1140,13 +1140,13 @@ EMERGENCY_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng flumazenil (hiếm)",
                 "Động kinh đang điều trị với benzodiazepine - có thể gây co giật nặng",
                 "Quá liều tricyclic antidepressant - tăng nguy cơ co giật, rối loạn nhịp tim",
                 "Phụ thuộc benzodiazepine lâu dài - có thể gây hội chứng cai nặng, co giật"
             ],
-            "relative": [
+            "tương_đối": [
                 "Bệnh nhân nghiện benzodiazepine - có thể gây hội chứng cai nặng (kích động, run, co giật)",
                 "Bệnh nhân có tiền sử co giật - tăng nguy cơ co giật",
                 "Bệnh nhân dùng benzodiazepine để chống co giật - có thể gây co giật nặng",

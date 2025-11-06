@@ -1,0 +1,454 @@
+"""
+Statins - HMG-CoA Reductase Inhibitors
+"""
+
+STATINS = {
+    "Atorvastatin": {
+        "group": "Cardiovascular - Statin (HMG-CoA Reductase Inhibitor)",
+        "vietnamese_name": "Atorvastatin, Lipitor",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng cholesterol máu",
+            "Dự phòng biến cố tim mạch",
+            "Sau nhồi máu cơ tim",
+            "Bệnh động mạch vành"
+        ],
+        "contraindications": [
+            "Bệnh gan hoạt động",
+            "Có thai",
+            "Cho con bú",
+            "Tiêu cơ vân đang hoạt động"
+        ],
+        "dosage": {
+            "adult_standard": "10-80mg x 1 lần/ngày",
+            "adult_high_intensity": "40-80mg x 1 lần/ngày",
+            "notes": "Uống bất kỳ lúc nào trong ngày, có thể uống với thức ăn"
+        },
+        "side_effects": [
+            "Đau cơ",
+            "Tiêu cơ vân (hiếm nhưng nguy hiểm)",
+            "Tăng men gan",
+            "Tăng đường huyết",
+            "Suy giảm trí nhớ (hiếm)"
+        ],
+        "interactions": [
+            "Clarithromycin/Erythromycin: tăng nguy cơ tiêu cơ vân",
+            "Grapefruit juice: tăng nồng độ (với liều cao)",
+            "Cyclosporine: tăng nguy cơ tiêu cơ vân"
+        ],
+        "pregnancy": "X",
+        "mechanism_of_action": "Ức chế HMG-CoA reductase, enzyme chính trong tổng hợp cholesterol, dẫn đến giảm LDL-cholesterol và tăng HDL-cholesterol",
+        "monitoring": [
+            "Lipid profile (LDL, HDL, TG) sau 6-8 tuần, sau đó mỗi 3-6 tháng",
+            "AST/ALT trước điều trị, sau 12 tuần, sau đó mỗi 6-12 tháng",
+            "CK nếu có đau cơ, yếu cơ",
+            "HbA1c/đường huyết (statin có thể tăng đường huyết)"
+        ],
+        "precautions": [
+            "Kiểm tra CK nếu đau cơ hoặc yếu cơ (ngừng nếu CK >10 lần ULN)",
+            "Ngừng nếu ALT >3 lần ULN",
+            "Thận trọng với bệnh nhân đái tháo đường (có thể tăng đường huyết)",
+            "Tránh grapefruit juice với liều cao"
+        ],
+        "pharmacokinetics": {
+            "half_life": "14 giờ",
+            "onset": "1-2 tuần",
+            "duration": "24 giờ",
+            "protein_binding": ">98%",
+            "clearance": "Gan (CYP3A4)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Tiêu cơ vân - có thể gây suy thận cấp và tử vong. Nguy cơ tăng khi dùng chung với thuốc khác hoặc liều cao",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Cyclosporine, Tacrolimus",
+                    "mechanism": "Cyclosporine ức chế CYP3A4 và P-glycoprotein, tăng nồng độ atorvastatin đáng kể",
+                    "effect": "Tăng nguy cơ tiêu cơ vân (rhabdomyolysis) nghiêm trọng, có thể gây suy thận cấp, tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Nếu cần: giảm liều atorvastatin tối đa 10mg/ngày, theo dõi CK và men gan thường xuyên. Cân nhắc dùng pravastatin hoặc rosuvastatin (ít chuyển hóa qua CYP3A4)."
+                },
+                {
+                    "drug": "Clarithromycin, Erythromycin, Telithromycin",
+                    "mechanism": "Macrolide ức chế CYP3A4, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân, đặc biệt ở liều cao atorvastatin",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu cần: giảm liều atorvastatin 50-75%, theo dõi CK và dấu hiệu đau cơ. Tạm ngừng atorvastatin nếu có đau cơ hoặc CK tăng."
+                },
+                {
+                    "drug": "Itraconazole, Ketoconazole, Voriconazole, Posaconazole",
+                    "mechanism": "Azole antifungals ức chế CYP3A4 mạnh, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Tạm ngừng atorvastatin trong thời gian dùng azole antifungal. Hoặc dùng pravastatin/rosuvastatin (ít chuyển hóa qua CYP3A4)."
+                },
+                {
+                    "drug": "Grapefruit juice (lớn hơn 1.2L/ngày hoặc liều cao atorvastatin)",
+                    "mechanism": "Grapefruit juice ức chế CYP3A4 ở ruột, tăng hấp thu atorvastatin",
+                    "effect": "Tăng nồng độ atorvastatin, tăng nguy cơ tiêu cơ vân",
+                    "management": "Tránh grapefruit juice khi dùng atorvastatin, đặc biệt ở liều cao (40-80mg). Nước ép cam, táo không có vấn đề."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Amiodarone, Diltiazem, Verapamil",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "Giảm liều atorvastatin 50% hoặc tối đa 20mg/ngày. Theo dõi CK và dấu hiệu đau cơ. Cân nhắc dùng pravastatin/rosuvastatin."
+                },
+                {
+                    "drug": "Ritonavir, Lopinavir, Saquinavir (HIV protease inhibitors)",
+                    "mechanism": "Ức chế CYP3A4 mạnh, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "Giảm liều atorvastatin. Theo dõi CK. Cân nhắc dùng pravastatin hoặc rosuvastatin."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Atorvastatin có thể tăng tác dụng chống đông của warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên khi bắt đầu hoặc thay đổi liều atorvastatin. Có thể cần giảm liều warfarin."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Atorvastatin có thể tăng nhẹ nồng độ digoxin qua P-glycoprotein",
+                    "effect": "Tăng nhẹ nồng độ digoxin",
+                    "management": "Theo dõi nồng độ digoxin và dấu hiệu ngộ độc digoxin. Có thể cần giảm liều digoxin."
+                },
+                {
+                    "drug": "Colchicine",
+                    "mechanism": "Cả hai đều chuyển hóa qua CYP3A4, có thể tăng tác dụng phụ",
+                    "effect": "Tăng nguy cơ độc cơ, đặc biệt ở bệnh nhân suy thận",
+                    "management": "Thận trọng, đặc biệt ở bệnh nhân suy thận. Theo dõi CK và dấu hiệu đau cơ. Có thể cần giảm liều một trong hai thuốc."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Rifampin, Phenytoin",
+                    "mechanism": "Cảm ứng CYP3A4, tăng chuyển hóa atorvastatin",
+                    "effect": "Giảm hiệu quả atorvastatin",
+                    "management": "Có thể cần tăng liều atorvastatin. Theo dõi lipid profile."
+                },
+                {
+                    "drug": "Oral contraceptives",
+                    "mechanism": "Atorvastatin có thể tăng nhẹ nồng độ estrogen",
+                    "effect": "Tăng nhẹ tác dụng phụ của thuốc tránh thai",
+                    "management": "Thường không cần điều chỉnh. Theo dõi tác dụng phụ."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Bệnh gan hoạt động (active liver disease) - tăng men gan kéo dài, viêm gan",
+                "Có thai (pregnancy) - FDA category X, gây dị tật thai nhi",
+                "Cho con bú (lactation) - bài tiết vào sữa mẹ",
+                "Tiêu cơ vân đang hoạt động (active myopathy/rhabdomyolysis)",
+                "Dị ứng với atorvastatin hoặc bất kỳ thành phần nào",
+                "Dùng cùng cyclosporine, itraconazole, ketoconazole (tăng nguy cơ tiêu cơ vân nghiêm trọng)"
+            ],
+            "tương_đối": [
+                "Suy thận - thận trọng, giảm liều nếu cần",
+                "Suy gan - thận trọng, theo dõi men gan thường xuyên",
+                "Uống rượu nhiều - tăng nguy cơ viêm gan",
+                "Bệnh nhân Châu Á - tăng nồng độ atorvastatin, có thể cần liều thấp hơn",
+                "Người cao tuổi - tăng nguy cơ đau cơ, tiêu cơ vân",
+                "Đái tháo đường - statins có thể tăng đường huyết nhẹ",
+                "Bệnh tuyến giáp - tăng nguy cơ đau cơ",
+                "Dùng cùng thuốc ức chế CYP3A4 - giảm liều atorvastatin"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH trong thai kỳ. Atorvastatin gây dị tật thai nhi, đặc biệt trong tam cá nguyệt đầu tiên. Statins ức chế tổng hợp cholesterol, cần thiết cho sự phát triển của thai nhi. Có thể gây dị tật bẩm sinh, chậm phát triển. Phải ngừng atorvastatin ít nhất 1-2 tháng trước khi có thai. Nếu có thai khi đang dùng, ngừng ngay lập tức.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Atorvastatin bài tiết vào sữa mẹ. Có thể gây tác dụng phụ trên trẻ bú mẹ. Chưa có dữ liệu đầy đủ về an toàn. Statins có thể ảnh hưởng đến sự phát triển của trẻ.",
+                "recommendation": "CHỐNG CHỈ ĐỊNH khi cho con bú. Ngừng atorvastatin hoặc ngừng cho con bú. Cân nhắc thuốc thay thế nếu cần."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi liều. Theo dõi men gan thường xuyên.",
+            "moderate": "Thận trọng. Giảm liều hoặc dùng liều thấp hơn. Theo dõi men gan mỗi 3-6 tháng. Ngừng nếu ALT >3 lần ULN.",
+            "severe": "CHỐNG CHỈ ĐỊNH. Không dùng ở bệnh nhân suy gan nặng hoặc bệnh gan hoạt động.",
+            "notes": "Atorvastatin chuyển hóa qua gan (CYP3A4). Suy gan có thể làm tăng nồng độ atorvastatin và tăng nguy cơ độc tính. Kiểm tra men gan trước điều trị. Ngừng nếu ALT >3 lần ULN hoặc có dấu hiệu viêm gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu cơ vân (rhabdomyolysis) - triệu chứng chính và nguy hiểm nhất",
+                "Đau cơ dữ dội, yếu cơ",
+                "Nước tiểu sẫm màu (myoglobinuria)",
+                "Suy thận cấp (do myoglobin)",
+                "Tăng men gan (ALT, AST)",
+                "Tăng CK (creatine kinase)",
+                "Mệt mỏi, buồn nôn",
+                "Rối loạn tiêu hóa"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: ngừng atorvastatin, truyền dịch tích cực để phòng suy thận, lọc máu nếu cần",
+            "treatment": [
+                "Ngừng atorvastatin ngay lập tức",
+                "Đo CK, men gan, chức năng thận ngay",
+                "Nếu có tiêu cơ vân:",
+                "  - Truyền dịch tích cực (normal saline 1-2L/giờ) để duy trì lượng nước tiểu >100-200ml/giờ",
+                "  - Kiềm hóa nước tiểu (sodium bicarbonate) để giảm độc tính myoglobin trên thận",
+                "  - Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)",
+                "  - Hemodialysis nếu suy thận cấp, tăng kali máu, hoặc quá tải dịch",
+                "  - Theo dõi điện giải (natri, kali, canxi, phosphate)",
+                "Điều trị hỗ trợ:",
+                "  - Điều chỉnh rối loạn điện giải",
+                "  - Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "  - Giảm đau (opioids) nếu đau cơ nặng",
+                "Theo dõi CK, men gan, chức năng thận hàng ngày cho đến khi ổn định",
+                "Theo dõi ít nhất 48-72 giờ do half-life 14 giờ"
+            ],
+            "monitoring": "CK, ALT, AST, creatinine, BUN, kali, canxi, phosphate, lượng nước tiểu, ECG (nếu có rối loạn điện giải), dấu hiệu suy thận"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày (sáng, trưa, hoặc tối). Uống cùng một giờ mỗi ngày để nhớ. Có thể uống trước hoặc sau bữa ăn."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "Không áp dụng",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Atorvastatin chỉ có dạng uống (PO)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lipitor (atorvastatin)",
+                "UpToDate - Atorvastatin: Drug information",
+                "ACC/AHA Guidelines - Cholesterol Management (2018)",
+                "NLA Guidelines - Statin Safety (2014)",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics - Lipid-lowering drugs"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (ASCOT, CARDS, PROVE-IT) showing cardiovascular benefit"
+        }
+    },
+
+    "Simvastatin": {
+        "group": "Cardiovascular - Statin",
+        "vietnamese_name": "Simvastatin, Zocor",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng cholesterol máu",
+            "Dự phòng biến cố tim mạch"
+        ],
+        "contraindications": [
+            "Bệnh gan hoạt động",
+            "Có thai",
+            "Cho con bú"
+        ],
+        "dosage": {
+            "adult_standard": "10-40mg x 1 lần/ngày",
+            "adult_max": "80mg x 1 lần/ngày (hiếm dùng)",
+            "notes": "Uống buổi tối, tránh grapefruit juice"
+        },
+        "side_effects": [
+            "Đau cơ",
+            "Tiêu cơ vân",
+            "Tăng men gan"
+        ],
+                  "interactions": [
+              "Amiodarone: giảm liều simvastatin xuống tối đa 20mg/ngày",
+              "Verapamil: giảm liều simvastatin",
+              "Grapefruit juice: tăng nồng độ"
+          ],
+          "pregnancy": "X",
+          "mechanism_of_action": "HMG-CoA reductase inhibitor (statin). Ức chế enzyme HMG-CoA reductase - enzyme quan trọng trong tổng hợp cholesterol ở gan. Giảm sản xuất cholesterol nội sinh, tăng biểu hiện LDL receptor ở gan, giảm LDL cholesterol. Cũng có tác dụng chống viêm, ổn định mảng xơ vữa (pleiotropic effects).",
+          "monitoring": [
+              "Lipid panel: Cholesterol toàn phần, LDL, HDL, triglycerides (sau 4-8 tuần, sau đó mỗi 3-6 tháng)",
+              "Chức năng gan: ALT, AST (trước khi bắt đầu, sau 12 tuần, sau đó mỗi 6-12 tháng hoặc khi có triệu chứng)",
+              "CK (creatine kinase) - nếu có đau cơ, yếu cơ (để phát hiện tiêu cơ vân)",
+              "Glucose/HbA1c - statins có thể tăng đường huyết nhẹ",
+              "Dấu hiệu đau cơ, yếu cơ, nước tiểu sẫm màu (dấu hiệu tiêu cơ vân)"
+          ],
+          "precautions": [
+              "Uống buổi tối (cholesterol được tổng hợp nhiều vào ban đêm)",
+              "TRÁNH grapefruit juice (ức chế CYP3A4, tăng nồng độ, tăng nguy cơ tác dụng phụ)",
+              "Kiểm tra CK nếu có đau cơ/yếu cơ - ngừng ngay nếu CK >10x ULN hoặc có dấu hiệu tiêu cơ vân",
+              "Thận trọng với liều cao (>40mg/ngày) - tăng nguy cơ tiêu cơ vân",
+              "Giảm liều khi dùng với amiodarone, verapamil, diltiazem, macrolides, azole antifungals (tương tác CYP3A4)",
+              "CHỐNG CHỈ ĐỊNH trong thai kỳ và cho con bú (category X)",
+              "Thận trọng ở bệnh nhân có bệnh gan - kiểm tra ALT/AST trước khi bắt đầu",
+              "Có thể tăng đường huyết nhẹ (đặc biệt ở bệnh nhân đái tháo đường)"
+          ],
+          "pharmacokinetics": {
+              "half_life": "2-3 giờ (ngắn), nhưng tác dụng kéo dài do ức chế enzyme)",
+              "onset": "1-2 tuần (giảm LDL)",
+              "duration": "Kéo dài sau khi ngừng",
+              "protein_binding": "95%",
+              "clearance": "Gan (CYP3A4) - extensive first-pass metabolism"
+          },
+          "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+          "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ - có thể gây dị tật thai nhi. Phụ nữ trong độ tuổi sinh đẻ phải dùng biện pháp tránh thai hiệu quả. Tiêu cơ vân có thể gây suy thận cấp và tử vong - ngừng ngay nếu có đau cơ, yếu cơ, nước tiểu sẫm màu",
+          "drug_interactions": {
+              "major": [
+                  {
+                      "drug": "Cyclosporine, Tacrolimus",
+                      "mechanism": "Cyclosporine ức chế CYP3A4 và P-glycoprotein, tăng nồng độ simvastatin đáng kể",
+                      "effect": "Tăng nguy cơ tiêu cơ vân nghiêm trọng, có thể gây suy thận cấp, tử vong",
+                      "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Nếu cần: giảm liều simvastatin tối đa 10mg/ngày, theo dõi CK và men gan thường xuyên. Cân nhắc dùng pravastatin hoặc rosuvastatin (ít chuyển hóa qua CYP3A4)."
+                  },
+                  {
+                      "drug": "Itraconazole, Ketoconazole, Voriconazole, Posaconazole",
+                      "mechanism": "Azole antifungals ức chế CYP3A4 mạnh, tăng nồng độ simvastatin",
+                      "effect": "Tăng nguy cơ tiêu cơ vân nghiêm trọng",
+                      "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Tạm ngừng simvastatin trong thời gian dùng azole antifungal. Hoặc dùng pravastatin/rosuvastatin (ít chuyển hóa qua CYP3A4)."
+                  },
+                  {
+                      "drug": "Clarithromycin, Erythromycin, Telithromycin",
+                      "mechanism": "Macrolide ức chế CYP3A4, tăng nồng độ simvastatin",
+                      "effect": "Tăng nguy cơ tiêu cơ vân, đặc biệt ở liều cao simvastatin",
+                      "management": "Tránh dùng cùng nếu có thể. Nếu cần: giảm liều simvastatin hoặc tạm ngừng. Theo dõi CK và dấu hiệu đau cơ. Tạm ngừng simvastatin nếu có đau cơ hoặc CK tăng."
+                  },
+                  {
+                      "drug": "Grapefruit juice",
+                      "mechanism": "Grapefruit juice ức chế CYP3A4 ở ruột, tăng hấp thu simvastatin",
+                      "effect": "Tăng nồng độ simvastatin đáng kể, tăng nguy cơ tiêu cơ vân",
+                      "management": "CHỐNG CHỈ ĐỊNH dùng grapefruit juice khi dùng simvastatin. Tránh hoàn toàn, kể cả lượng nhỏ. Nước ép cam, táo không có vấn đề."
+                  },
+                  {
+                      "drug": "Amiodarone",
+                      "mechanism": "Amiodarone ức chế CYP3A4, tăng nồng độ simvastatin",
+                      "effect": "Tăng nguy cơ tiêu cơ vân, đặc biệt ở liều cao simvastatin",
+                      "management": "Giảm liều simvastatin xuống TỐI ĐA 20mg/ngày. Theo dõi CK và dấu hiệu đau cơ. Cân nhắc dùng pravastatin hoặc rosuvastatin (ít chuyển hóa qua CYP3A4)."
+                  }
+              ],
+              "moderate": [
+                  {
+                      "drug": "Diltiazem, Verapamil",
+                      "mechanism": "Ức chế CYP3A4, tăng nồng độ simvastatin",
+                      "effect": "Tăng nguy cơ tiêu cơ vân",
+                      "management": "Giảm liều simvastatin 50% hoặc tối đa 20mg/ngày. Theo dõi CK và dấu hiệu đau cơ. Cân nhắc dùng pravastatin/rosuvastatin."
+                  },
+                  {
+                      "drug": "Ritonavir, Lopinavir, Saquinavir (HIV protease inhibitors)",
+                      "mechanism": "Ức chế CYP3A4 mạnh, tăng nồng độ simvastatin",
+                      "effect": "Tăng nguy cơ tiêu cơ vân",
+                      "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Cân nhắc dùng pravastatin hoặc rosuvastatin."
+                  },
+                  {
+                      "drug": "Warfarin",
+                      "mechanism": "Simvastatin có thể tăng tác dụng chống đông của warfarin",
+                      "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                      "management": "Theo dõi INR thường xuyên khi bắt đầu hoặc thay đổi liều simvastatin. Có thể cần giảm liều warfarin."
+                  },
+                  {
+                      "drug": "Colchicine",
+                      "mechanism": "Cả hai đều chuyển hóa qua CYP3A4, có thể tăng tác dụng phụ",
+                      "effect": "Tăng nguy cơ độc cơ, đặc biệt ở bệnh nhân suy thận",
+                      "management": "Thận trọng, đặc biệt ở bệnh nhân suy thận. Theo dõi CK và dấu hiệu đau cơ. Có thể cần giảm liều một trong hai thuốc."
+                  }
+              ],
+              "minor": [
+                  {
+                      "drug": "Rifampin, Phenytoin",
+                      "mechanism": "Cảm ứng CYP3A4, tăng chuyển hóa simvastatin",
+                      "effect": "Giảm hiệu quả simvastatin",
+                      "management": "Có thể cần tăng liều simvastatin. Theo dõi lipid profile."
+                  }
+              ]
+          },
+          "contraindications": {
+              "tuyệt_đối": [
+                  "Bệnh gan hoạt động (active liver disease) - tăng men gan kéo dài, viêm gan",
+                  "Có thai (pregnancy) - FDA category X, gây dị tật thai nhi",
+                  "Cho con bú (lactation) - bài tiết vào sữa mẹ",
+                  "Tiêu cơ vân đang hoạt động (active myopathy/rhabdomyolysis)",
+                  "Dị ứng với simvastatin hoặc bất kỳ thành phần nào",
+                  "Dùng cùng cyclosporine, itraconazole, ketoconazole (tăng nguy cơ tiêu cơ vân nghiêm trọng)",
+                  "Dùng grapefruit juice"
+              ],
+              "tương_đối": [
+                  "Suy thận - thận trọng, giảm liều nếu cần",
+                  "Suy gan - thận trọng, theo dõi men gan thường xuyên",
+                  "Uống rượu nhiều - tăng nguy cơ viêm gan",
+                  "Người cao tuổi - tăng nguy cơ đau cơ, tiêu cơ vân",
+                  "Đái tháo đường - statins có thể tăng đường huyết nhẹ",
+                  "Bệnh tuyến giáp - tăng nguy cơ đau cơ",
+                  "Dùng cùng thuốc ức chế CYP3A4 - giảm liều simvastatin",
+                  "Liều cao (>40mg/ngày) - tăng nguy cơ tiêu cơ vân"
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "X",
+              "pregnancy_details": "CHỐNG CHỈ ĐỊNH trong thai kỳ. Simvastatin gây dị tật thai nhi, đặc biệt trong tam cá nguyệt đầu tiên. Statins ức chế tổng hợp cholesterol, cần thiết cho sự phát triển của thai nhi. Có thể gây dị tật bẩm sinh, chậm phát triển. Phụ nữ trong độ tuổi sinh đẻ phải dùng biện pháp tránh thai hiệu quả. Phải ngừng simvastatin ít nhất 1-2 tháng trước khi có thai. Nếu có thai khi đang dùng, ngừng ngay lập tức.",
+              "lactation": {
+                  "safety": "Incompatible",
+                  "details": "Simvastatin bài tiết vào sữa mẹ. Có thể gây tác dụng phụ trên trẻ bú mẹ. Chưa có dữ liệu đầy đủ về an toàn. Statins có thể ảnh hưởng đến sự phát triển của trẻ.",
+                  "recommendation": "CHỐNG CHỈ ĐỊNH khi cho con bú. Ngừng simvastatin hoặc ngừng cho con bú. Cân nhắc thuốc thay thế nếu cần."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi liều. Theo dõi men gan thường xuyên.",
+              "moderate": "Thận trọng. Giảm liều hoặc dùng liều thấp hơn. Theo dõi men gan mỗi 3-6 tháng. Ngừng nếu ALT >3 lần ULN.",
+              "severe": "CHỐNG CHỈ ĐỊNH. Không dùng ở bệnh nhân suy gan nặng hoặc bệnh gan hoạt động.",
+              "notes": "Simvastatin chuyển hóa qua gan (CYP3A4) - extensive first-pass metabolism. Suy gan có thể làm tăng nồng độ simvastatin và tăng nguy cơ độc tính. Kiểm tra men gan trước điều trị. Ngừng nếu ALT >3 lần ULN hoặc có dấu hiệu viêm gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Tiêu cơ vân (rhabdomyolysis) - triệu chứng chính và nguy hiểm nhất",
+                  "Đau cơ dữ dội, yếu cơ",
+                  "Nước tiểu sẫm màu (myoglobinuria)",
+                  "Suy thận cấp (do myoglobin)",
+                  "Tăng men gan (ALT, AST)",
+                  "Tăng CK (creatine kinase)",
+                  "Mệt mỏi, buồn nôn",
+                  "Rối loạn tiêu hóa"
+              ],
+              "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: ngừng simvastatin, truyền dịch tích cực để phòng suy thận, lọc máu nếu cần",
+              "treatment": [
+                  "Ngừng simvastatin ngay lập tức",
+                  "Đo CK, men gan, chức năng thận ngay",
+                  "Nếu có tiêu cơ vân:",
+                  "  - Truyền dịch tích cực (normal saline 1-2L/giờ) để duy trì lượng nước tiểu >100-200ml/giờ",
+                  "  - Kiềm hóa nước tiểu (sodium bicarbonate) để giảm độc tính myoglobin trên thận",
+                  "  - Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)",
+                  "  - Hemodialysis nếu suy thận cấp, tăng kali máu, hoặc quá tải dịch",
+                  "  - Theo dõi điện giải (natri, kali, canxi, phosphate)",
+                  "Điều trị hỗ trợ:",
+                  "  - Điều chỉnh rối loạn điện giải",
+                  "  - Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                  "  - Giảm đau (opioids) nếu đau cơ nặng",
+                  "Theo dõi CK, men gan, chức năng thận hàng ngày cho đến khi ổn định",
+                  "Theo dõi ít nhất 24-48 giờ do half-life 2-3 giờ (nhưng tác dụng kéo dài)"
+              ],
+              "monitoring": "CK, ALT, AST, creatinine, BUN, kali, canxi, phosphate, lượng nước tiểu, ECG (nếu có rối loạn điện giải), dấu hiệu suy thận"
+          },
+          "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                  "timing": "Uống 1 lần/ngày vào BUỔI TỐI (cholesterol được tổng hợp nhiều vào ban đêm). Uống cùng một giờ mỗi ngày để nhớ. TRÁNH grapefruit juice hoàn toàn."
+              },
+              "iv": {
+                  "reconstitution": "Không có dạng IV",
+                  "infusion_rate": "Không áp dụng",
+                  "compatibility": [],
+                  "incompatibility": [],
+                  "notes": "Simvastatin chỉ có dạng uống (PO)."
+              }
+          },
+          "references": {
+              "primary_sources": [
+                  "FDA Drug Label - Zocor (simvastatin)",
+                  "UpToDate - Simvastatin: Drug information",
+                  "ACC/AHA Guidelines - Cholesterol Management (2018)",
+                  "NLA Guidelines - Statin Safety (2014)",
+                  "4S Study - Lancet (1994) - Simvastatin trong dự phòng biến cố tim mạch",
+                  "Goodman & Gilman's Pharmacological Basis of Therapeutics - Lipid-lowering drugs"
+              ],
+              "last_updated": "2024-12-19",
+              "evidence_level": "High - Multiple large RCTs (4S, HPS) showing cardiovascular benefit"
+          }
+      },
+
+}
+
+__all__ = ['STATINS']

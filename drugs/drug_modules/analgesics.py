@@ -178,14 +178,14 @@ ANALGESICS_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dùng MAO inhibitor trong vòng 14 ngày",
                 "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
                 "Co giật không kiểm soát",
                 "Suy hô hấp nặng hoặc suy hô hấp cấp tính",
                 "Dị ứng tramadol"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nặng (CrCl <30) - giảm liều 50%",
                 "Suy gan nặng - giảm liều 50%",
                 "Dùng SSRI/SNRI - tăng nguy cơ co giật và hội chứng serotonin",
@@ -394,13 +394,13 @@ ANALGESICS_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng naproxen hoặc NSAID/aspirin (phản vệ, hen suyễn do aspirin)",
                 "Loét dạ dày tá tràng đang hoạt động",
                 "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
                 "Suy thận nặng (CrCl <30) và đang dùng ACE inhibitor/ARB"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều",
                 "Suy gan nặng - thận trọng, giảm liều",
                 "Suy tim nặng - tăng nguy cơ giữ nước, suy tim nặng hơn",
@@ -593,14 +593,14 @@ ANALGESICS_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng diclofenac hoặc NSAID/aspirin (phản vệ, hen suyễn do aspirin)",
                 "Loét dạ dày tá tràng đang hoạt động",
                 "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
                 "Suy gan nặng (do nguy cơ tăng men gan cao)",
                 "Suy thận nặng (CrCl <30) và đang dùng ACE inhibitor/ARB"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều",
                 "Suy gan trung bình - thận trọng, theo dõi men gan chặt chẽ",
                 "Suy tim nặng - tăng nguy cơ giữ nước, suy tim nặng hơn",
@@ -796,7 +796,7 @@ ANALGESICS_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng morphine hoặc opioid",
                 "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
                 "Suy hô hấp nặng hoặc suy hô hấp cấp tính",
@@ -805,7 +805,7 @@ ANALGESICS_DRUGS = {
                 "Tăng áp lực nội sọ (do tăng CO2)",
                 "Dùng MAO inhibitor trong vòng 14 ngày"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nặng (CrCl <30) - giảm liều 50-75%, tăng khoảng cách liều (tích lũy morphine-6-glucuronide)",
                 "Suy gan nặng - giảm liều 25-50% (giảm chuyển hóa)",
                 "Người cao tuổi - giảm liều 25-50% (tăng nhạy cảm)",
@@ -1003,7 +1003,7 @@ ANALGESICS_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng codeine hoặc opioid",
                 "Ngộ độc cấp tính opioid",
                 "Suy hô hấp nặng hoặc suy hô hấp cấp tính",
@@ -1012,7 +1012,7 @@ ANALGESICS_DRUGS = {
                 "Trẻ em <12 tuổi (khi dùng cho ho)",
                 "Trẻ em <18 tuổi sau cắt amidan/VA (chống chỉ định tuyệt đối)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nặng (CrCl <30) - tránh dùng hoặc giảm liều 50%",
                 "Suy gan nặng - giảm liều (giảm chuyển hóa)",
                 "Người cao tuổi - giảm liều (tăng nhạy cảm)",
@@ -1204,7 +1204,7 @@ ANALGESICS_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng với sumatriptan hoặc các thành phần khác",
                 "Bệnh mạch vành (CAD)",
                 "Nhồi máu cơ tim",
@@ -1215,7 +1215,7 @@ ANALGESICS_DRUGS = {
                 "Dùng MAO inhibitor trong 14 ngày",
                 "Dùng ergotamine/dihydroergotamine trong 24 giờ"
             ],
-            "relative": [
+            "tương_đối": [
                 "Bệnh tim mạch khác (suy tim, loạn nhịp) - thận trọng, đánh giá tim mạch trước",
                 "Tăng huyết áp đã kiểm soát - thận trọng",
                 "Tiền sử đau thắt ngực - thận trọng",

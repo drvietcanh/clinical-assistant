@@ -165,13 +165,13 @@ RESPIRATORY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng với salmeterol hoặc các thành phần khác",
                 "Nhịp tim nhanh nặng không kiểm soát (>120 bpm)",
                 "Rối loạn nhịp tim nặng (rung nhĩ, rung thất không kiểm soát)",
                 "Hen phế quản cấp (không dùng đơn độc, không dùng để cắt cơn)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Bệnh tim mạch (suy tim, bệnh mạch vành) - thận trọng, theo dõi chặt chẽ",
                 "Tăng huyết áp không kiểm soát - có thể tăng huyết áp",
                 "Loạn nhịp tim nhẹ - có thể làm nặng",
@@ -347,12 +347,12 @@ RESPIRATORY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng với ipratropium, atropine hoặc các thành phần khác",
                 "Glaucoma góc đóng (chống chỉ định tuyệt đối)",
                 "Tăng nhãn áp nặng không kiểm soát"
             ],
-            "relative": [
+            "tương_đối": [
                 "Glaucoma góc mở - thận trọng, theo dõi nhãn áp",
                 "Tăng nhãn áp nhẹ - thận trọng, tránh để thuốc vào mắt",
                 "Phì đại tuyến tiền liệt - có thể gây bí tiểu",
@@ -532,13 +532,13 @@ RESPIRATORY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng với tiotropium, atropine hoặc các thành phần khác",
                 "Glaucoma góc đóng (chống chỉ định tuyệt đối)",
                 "Tăng nhãn áp nặng không kiểm soát",
                 "Suy thận nặng (CrCl <30 ml/min) - tích lũy, tăng tác dụng phụ"
             ],
-            "relative": [
+            "tương_đối": [
                 "Glaucoma góc mở - thận trọng, theo dõi nhãn áp",
                 "Tăng nhãn áp nhẹ - thận trọng, tránh để thuốc vào mắt",
                 "Phì đại tuyến tiền liệt nặng - có thể gây bí tiểu",
@@ -721,11 +721,11 @@ RESPIRATORY_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng với budesonide hoặc các thành phần khác",
                 "Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Lao phổi - cần điều trị lao trước, thận trọng",
                 "Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước",
                 "Dùng với ritonavir - tránh dùng",
@@ -887,12 +887,12 @@ RESPIRATORY_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng với fluticasone hoặc các thành phần khác",
                 "Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)",
                 "Dùng với ritonavir - chống chỉ định tuyệt đối"
             ],
-            "relative": [
+            "tương_đối": [
                 "Lao phổi - cần điều trị lao trước, thận trọng",
                 "Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước",
                 "Dùng với ketoconazole, itraconazole - thận trọng"
@@ -1043,10 +1043,10 @@ RESPIRATORY_DRUGS = {
         "minor": []
     },
     "contraindications": {
-        "absolute": [
+        "tuyệt_đối": [
             "Dị ứng với montelukast hoặc các thành phần khác"
         ],
-        "relative": [
+        "tương_đối": [
             "Rối loạn tâm thần (trầm cảm, lo âu, rối loạn hành vi) - thận trọng, theo dõi chặt chẽ",
             "Tiền sử tự sát - thận trọng, theo dõi chặt chẽ",
             "Dùng với phenobarbital, rifampin - có thể giảm hiệu quả"

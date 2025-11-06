@@ -1,0 +1,766 @@
+"""
+Antifungals - Antifungal Medications
+"""
+
+ANTIFUNGALS = {
+    "Fluconazole": {
+        "group": "Infectious Disease - Antifungal (Azole)",
+        "vietnamese_name": "Fluconazole, Diflucan",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm nấm Candida (oral, esophageal, vaginal, systemic)",
+            "Nhiễm nấm Cryptococcus",
+            "Nhiễm nấm Coccidioidomycosis",
+            "Dự phòng nhiễm nấm ở bệnh nhân suy giảm miễn dịch"
+        ],
+        "contraindications": [
+            "Dị ứng fluconazole/azole",
+            "Có thai (3 tháng đầu)",
+            "Dùng terfenadine/astemizole với liều fluconazole ≥400mg/ngày"
+        ],
+        "dosage": {
+            "adult_candidiasis_oral": "150mg x 1 lần (đơn liều) hoặc 50-100mg x 1 lần/ngày x 7-14 ngày",
+            "adult_candidiasis_esophageal": "100-200mg x 1 lần/ngày x 14-21 ngày",
+            "adult_candidiasis_vaginal": "150mg x 1 lần (đơn liều)",
+            "adult_cryptococcal_meningitis": "400mg ngày đầu, sau đó 200-400mg x 1 lần/ngày",
+            "adult_prophylaxis": "50-400mg x 1 lần/ngày",
+            "notes": "Thải qua thận, cần điều chỉnh liều khi suy thận"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Giảm liều 50-75%"
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Ban da",
+            "Tăng men gan",
+            "Rụng tóc",
+            "QT kéo dài (liều cao)"
+        ],
+        "interactions": [
+            "Warfarin: tăng tác dụng chống đông",
+            "Phenytoin: tăng nồng độ phenytoin",
+            "Cyclosporine: tăng nồng độ cyclosporine",
+            "Sulfonylurea: tăng nguy cơ hạ đường huyết",
+            "Rifampin: giảm nồng độ fluconazole"
+        ],
+        "pregnancy": "C - D trong 3 tháng đầu",
+        "mechanism_of_action": "Fluconazole ức chế enzyme lanosterol 14α-demethylase (CYP51) của nấm, enzyme chuyển lanosterol thành ergosterol. Ergosterol là thành phần quan trọng của màng tế bào nấm. Ức chế tổng hợp ergosterol → màng tế bào nấm không ổn định, rò rỉ, chết tế bào. Chọn lọc cao với nấm (ít ảnh hưởng đến tế bào người). Cũng ức chế một số enzyme CYP ở người (CYP2C9, CYP2C19, CYP3A4) nên có nhiều tương tác thuốc",
+        "monitoring": [
+            "Chức năng gan (ALT, AST) khi dùng liều cao hoặc kéo dài",
+            "Chức năng thận (creatinine, BUN) - điều chỉnh liều khi suy thận",
+            "Dấu hiệu độc gan: vàng da, mệt mỏi, đau bụng",
+            "ECG nếu dùng liều cao ≥400mg/ngày (QT kéo dài)",
+            "Đường huyết nếu dùng với sulfonylurea",
+            "INR nếu dùng với warfarin",
+            "Đáp ứng điều trị và triệu chứng lâm sàng"
+        ],
+        "precautions": [
+            "Điều chỉnh liều theo chức năng thận (giảm liều khi CrCl <50)",
+            "Theo dõi sát chức năng gan khi dùng liều cao hoặc kéo dài",
+            "Thận trọng với QT kéo dài khi dùng liều cao ≥400mg/ngày",
+            "Theo dõi INR khi dùng với warfarin (tăng nguy cơ chảy máu)",
+            "Theo dõi đường huyết khi dùng với sulfonylurea (tăng nguy cơ hạ đường huyết)",
+            "Tránh dùng trong 3 tháng đầu thai kỳ (có thể gây dị tật)",
+            "Dùng đủ thời gian để tránh tái phát (7-21 ngày tùy chỉ định)",
+            "Thận trọng ở bệnh nhân suy gan, suy thận"
+        ],
+        "pharmacokinetics": {
+            "half_life": "30 giờ (dài, cho phép dùng 1 lần/ngày)",
+            "onset": "Vài giờ đến vài ngày",
+            "duration": "Dài (do half-life dài)",
+            "protein_binding": "11-12% (thấp, dễ khuếch tán vào mô)",
+            "clearance": "Thận (chủ yếu, 80% thải nguyên dạng qua nước tiểu), gan (chuyển hóa ít)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Dung dịch IV: bảo quản theo hướng dẫn nhà sản xuất",
+        "black_box_warnings": "Chống chỉ định trong 3 tháng đầu thai kỳ - có thể gây dị tật thai nhi. QT kéo dài có thể xảy ra ở liều cao",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Fluconazole ức chế CYP2C9, làm giảm chuyển hóa warfarin, tăng nồng độ warfarin.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu nghiêm trọng",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng fluconazole. Giảm liều warfarin 25-50% khi bắt đầu fluconazole. Điều chỉnh liều warfarin theo INR."
+                },
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Fluconazole ức chế CYP2C9 và CYP2C19, làm giảm chuyển hóa phenytoin. Phenytoin cảm ứng CYP450, có thể giảm nồng độ fluconazole.",
+                    "effect": "Tăng nồng độ phenytoin, tăng độc tính phenytoin (chóng mặt, rung giật, ataxia). Giảm nồng độ fluconazole.",
+                    "management": "Theo dõi nồng độ phenytoin. Giảm liều phenytoin khi bắt đầu fluconazole. Tăng liều fluconazole nếu cần. Theo dõi dấu hiệu độc tính phenytoin."
+                },
+                {
+                    "drug": "Cyclosporine, Tacrolimus",
+                    "mechanism": "Fluconazole ức chế CYP3A4, làm giảm chuyển hóa cyclosporine và tacrolimus.",
+                    "effect": "Tăng nồng độ cyclosporine/tacrolimus, tăng độc tính (độc thận, tăng huyết áp, độc thần kinh)",
+                    "management": "Giảm liều cyclosporine/tacrolimus 25-50% khi bắt đầu fluconazole. Theo dõi nồng độ cyclosporine/tacrolimus, chức năng thận. Điều chỉnh liều theo nồng độ."
+                },
+                {
+                    "drug": "Rifampin",
+                    "mechanism": "Rifampin cảm ứng CYP450, làm tăng chuyển hóa fluconazole.",
+                    "effect": "Giảm nồng độ fluconazole, giảm hiệu quả điều trị",
+                    "management": "Tăng liều fluconazole 50-100% khi dùng với rifampin. Theo dõi đáp ứng điều trị."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Sulfonylurea (Glibenclamide, Gliclazide)",
+                    "mechanism": "Fluconazole ức chế CYP2C9, làm giảm chuyển hóa sulfonylurea.",
+                    "effect": "Tăng nồng độ sulfonylurea, tăng nguy cơ hạ đường huyết",
+                    "management": "Theo dõi đường huyết chặt chẽ. Giảm liều sulfonylurea khi bắt đầu fluconazole. Điều chỉnh liều theo đường huyết."
+                },
+                {
+                    "drug": "Statins (Atorvastatin, Simvastatin)",
+                    "mechanism": "Fluconazole ức chế CYP3A4, làm giảm chuyển hóa statins (đặc biệt simvastatin, atorvastatin).",
+                    "effect": "Tăng nồng độ statin, tăng nguy cơ độc cơ (myopathy, rhabdomyolysis)",
+                    "management": "Giảm liều statin hoặc tạm ngừng khi dùng fluconazole. Theo dõi CK, dấu hiệu đau cơ. Dùng pravastatin hoặc rosuvastatin (ít chuyển hóa qua CYP3A4) nếu có thể."
+                },
+                {
+                    "drug": "Benzodiazepine (Midazolam, Triazolam)",
+                    "mechanism": "Fluconazole ức chế CYP3A4, làm giảm chuyển hóa benzodiazepine.",
+                    "effect": "Tăng nồng độ benzodiazepine, tăng tác dụng an thần, kéo dài thời gian tác dụng",
+                    "management": "Giảm liều benzodiazepine. Theo dõi dấu hiệu an thần quá mức."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Theophylline",
+                    "mechanism": "Fluconazole có thể ảnh hưởng nhẹ đến chuyển hóa theophylline.",
+                    "effect": "Tăng nhẹ nồng độ theophylline",
+                    "management": "Theo dõi nồng độ theophylline. Không cần điều chỉnh liều thường quy."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng fluconazole hoặc các azole antifungals khác",
+                "Có thai (3 tháng đầu) - chống chỉ định tuyệt đối, có thể gây dị tật thai nhi",
+                "Dùng terfenadine hoặc astemizole với liều fluconazole ≥400mg/ngày - tăng nguy cơ QT kéo dài, loạn nhịp tim nghiêm trọng"
+            ],
+            "tương_đối": [
+                "Có thai (tam cá nguyệt 2-3) - thận trọng, chỉ dùng khi thực sự cần thiết",
+                "Suy thận nặng (CrCl <30) - giảm liều đáng kể, theo dõi chặt chẽ",
+                "Suy gan - thận trọng, có thể giảm chuyển hóa",
+                "QT kéo dài hoặc loạn nhịp tim - tăng nguy cơ QT kéo dài với liều cao",
+                "Dùng với warfarin - tăng nguy cơ chảy máu, cần theo dõi INR",
+                "Dùng với cyclosporine/tacrolimus - tăng độc tính, cần giảm liều",
+                "Dùng với statins - tăng nguy cơ độc cơ",
+                "Dùng với phenytoin - tăng độc tính phenytoin"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C (tam cá nguyệt 2-3), D (tam cá nguyệt đầu)",
+            "pregnancy_details": "Tam cá nguyệt đầu: Thuốc phân loại D - CHỐNG CHỈ ĐỊNH. Các nghiên cứu trên động vật cho thấy fluconazole liều cao có thể gây dị tật thai nhi (dị tật xương, sứt môi/vòm miệng). Có báo cáo về dị tật bẩm sinh ở người khi dùng liều cao trong tam cá nguyệt đầu. Tam cá nguyệt 2-3: Thuốc phân loại C. Có thể dùng khi lợi ích vượt quá nguy cơ, nhưng nên tránh nếu không cần thiết. Nhiễm nấm có thể gây nguy hiểm cho thai nhi. Dùng liều thấp nhất hiệu quả.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Fluconazole bài tiết vào sữa mẹ ở nồng độ thấp (tương đương nồng độ trong máu mẹ). Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Hấp thu qua đường tiêu hóa của trẻ sơ sinh thấp.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Fluconazole chuyển hóa ít qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Thận trọng, có thể cần giảm liều nhẹ. Chuyển hóa có thể giảm ở suy gan trung bình.",
+            "severe": "Thận trọng, có thể cần giảm liều. Chuyển hóa có thể giảm đáng kể ở suy gan nặng, nhưng thải trừ chủ yếu qua thận nên ít ảnh hưởng.",
+            "notes": "Fluconazole chuyển hóa ít qua gan (chủ yếu qua CYP2C9, CYP2C19), thải trừ chủ yếu qua thận (80% nguyên dạng). Suy gan có thể giảm chuyển hóa nhẹ nhưng không đáng kể. Tuy nhiên, suy gan có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng",
+                "Triệu chứng thần kinh: Đau đầu, chóng mặt, lú lẫn, co giật (hiếm)",
+                "Triệu chứng gan: Tăng men gan, vàng da, suy gan (hiếm nhưng nghiêm trọng)",
+                "Triệu chứng tim mạch: QT kéo dài, loạn nhịp tim (với liều cao ≥400mg/ngày)",
+                "Triệu chứng da: Phát ban, hội chứng Stevens-Johnson (hiếm nhưng nghiêm trọng)",
+                "Triệu chứng nghiêm trọng: Suy gan, rối loạn nhịp tim, hội chứng Stevens-Johnson"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay fluconazole",
+                "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2, ECG",
+                "Điều trị triệu chứng tiêu hóa:",
+                "  - Chống nôn nếu cần",
+                "  - Truyền dịch nếu mất nước",
+                "  - Theo dõi điện giải",
+                "Điều trị tăng men gan/suy gan nếu có:",
+                "  - Theo dõi ALT, AST, bilirubin",
+                "  - Điều trị hỗ trợ gan",
+                "  - Nếu suy gan nặng: điều trị suy gan",
+                "Điều trị QT kéo dài/loạn nhịp nếu có:",
+                "  - Theo dõi ECG liên tục",
+                "  - Điều trị loạn nhịp nếu cần",
+                "Điều trị hội chứng Stevens-Johnson nếu có:",
+                "  - Chuyển khoa da liễu/bỏng",
+                "  - Điều trị hỗ trợ",
+                "  - Kháng sinh nếu có nhiễm trùng",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, ECG, chức năng gan (ALT, AST, bilirubin), dấu hiệu da trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (suy gan, loạn nhịp, hội chứng Stevens-Johnson)."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không phụ thuộc vào thức ăn. Có thể uống với nước đầy đủ.",
+                "timing": "Uống 1 lần/ngày (do half-life dài 30 giờ). Có thể uống bất kỳ thời điểm nào trong ngày. Cách đều 24 giờ. Với liều cao (≥400mg), có thể chia 2 lần/ngày."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 2mg/ml (tối đa). Pha 200mg trong 100ml dịch = 2mg/ml. Pha 400mg trong 200ml dịch = 2mg/ml.",
+                "infusion_rate": "Truyền trong 1-2 giờ. Không truyền quá nhanh. Tốc độ: 100ml/giờ = ~1.7ml/phút. 200ml/2 giờ = ~1.7ml/phút.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": ["Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha."],
+                "notes": "Theo dõi chức năng gan, thận trong quá trình truyền. Có thể gây kích ứng tĩnh mạch - thay đổi vị trí tiêm nếu cần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Fluconazole (Diflucan)",
+                "UpToDate - Fluconazole: Drug Information",
+                "Medscape - Fluconazole Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Fluconazole Monograph",
+                "Micromedex - Fluconazole Drug Information",
+                "IDSA Guidelines - Antifungal Therapy"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+
+    "Itraconazole": {
+        "group": "Infectious Disease - Antifungal (Azole)",
+        "vietnamese_name": "Itraconazole, Sporanox",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm nấm Aspergillosis",
+            "Nhiễm nấm Blastomycosis",
+            "Nhiễm nấm Histoplasmosis",
+            "Nhiễm nấm Candidiasis (oral, esophageal)",
+            "Onychomycosis (nấm móng)"
+        ],
+        "contraindications": [
+            "Dị ứng itraconazole/azole",
+            "Có thai",
+            "Suy tim sung huyết",
+            "Dùng với thuốc chuyển hóa CYP3A4 (xem interactions)"
+        ],
+        "dosage": {
+            "adult_systemic": "200mg x 1-2 lần/ngày (PO)",
+            "adult_aspergillosis": "200mg x 3 lần/ngày x 3 ngày, sau đó 200mg x 1-2 lần/ngày",
+            "adult_onychomycosis": "200mg x 2 lần/ngày x 1 tuần mỗi tháng (x 3-4 tháng)",
+            "adult_vaginal_candidiasis": "200mg x 2 lần/ngày x 1 ngày",
+            "notes": "Uống với thức ăn để tăng hấp thu. Capsule cần acid dạ dày"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng (IV không dùng nếu CrCl <30)",
+            "under_30": "Tránh dùng IV"
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Tăng men gan (hiếm suy gan)",
+            "Phù, suy tim",
+            "Rụng tóc",
+            "Ban da"
+        ],
+        "interactions": [
+            "CYP3A4 substrates: tăng đáng kể nồng độ (simvastatin, lovastatin, midazolam, triazolam, quinidine)",
+            "Rifampin: giảm nồng độ itraconazole",
+            "Warfarin: tăng tác dụng chống đông",
+            "Digoxin: tăng nồng độ digoxin",
+            "Phenytoin: tăng nồng độ phenytoin"
+        ],
+        "pregnancy": "C - D (chống chỉ định)",
+        "mechanism_of_action": "Itraconazole là thuốc chống nấm phổ rộng thuộc nhóm triazole, ức chế enzyme lanosterol 14-alpha-demethylase (CYP51) của nấm. Enzyme này có vai trò quan trọng trong tổng hợp ergosterol, một thành phần chính của màng tế bào nấm. Bằng cách ức chế tổng hợp ergosterol, itraconazole làm thay đổi tính thấm màng tế bào nấm, dẫn đến ức chế sự phát triển và gây chết tế bào nấm. Itraconazole có phổ kháng nấm rộng: nấm men (Candida, Cryptococcus), nấm sợi (Aspergillus, Blastomyces, Histoplasma, Coccidioides), và dermatophytes (Trichophyton, Microsporum). Itraconazole cũng ức chế CYP3A4 ở gan, dẫn đến nhiều tương tác thuốc quan trọng. Hấp thu phụ thuộc vào pH dạ dày (cần acid dạ dày), tăng khi uống với thức ăn.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng nhiễm nấm, cải thiện lâm sàng)",
+            "Chức năng gan (ALT, AST, bilirubin) - tăng men gan phổ biến, suy gan hiếm nhưng có thể nghiêm trọng",
+            "Dấu hiệu suy tim (phù, khó thở, tăng cân) - itraconazole có thể gây suy tim, đặc biệt ở liều cao",
+            "Tương tác với CYP3A4 substrates (simvastatin, lovastatin - nguy cơ tiêu cơ vân; midazolam, triazolam - tăng an thần; quinidine - tăng nguy cơ loạn nhịp)",
+            "Warfarin (tăng INR), digoxin (tăng nồng độ, nguy cơ độc tính), phenytoin (tăng nồng độ)",
+            "Rifampin (giảm nồng độ itraconazole, có thể giảm hiệu quả)",
+            "Dấu hiệu phản ứng dị ứng (phát ban, sốt)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH ở bệnh nhân suy tim sung huyết - itraconazole có thể gây suy tim, đặc biệt ở liều cao",
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D)",
+            "Uống với thức ăn hoặc thức uống có acid (cola) để tăng hấp thu (cần acid dạ dày)",
+            "Tránh dùng với PPI, H2 blocker, antacid (giảm acid dạ dày → giảm hấp thu)",
+            "Nhiều tương tác thuốc do ức chế CYP3A4 - tăng nồng độ simvastatin, lovastatin (nguy cơ tiêu cơ vân), midazolam, triazolam (tăng an thần), quinidine (tăng nguy cơ loạn nhịp), warfarin (tăng INR), digoxin (tăng nồng độ), phenytoin (tăng nồng độ)",
+            "Tránh dùng với rifampin (giảm nồng độ itraconazole, có thể giảm hiệu quả)",
+            "Tăng men gan - phổ biến, theo dõi chức năng gan, ngừng nếu có suy gan",
+            "Suy tim - ngừng ngay nếu có dấu hiệu suy tim (phù, khó thở)",
+            "Không dùng IV nếu CrCl <30 (chứa cyclodextrin, tích lũy ở suy thận)",
+            "Dùng đủ liều và đủ thời gian để tránh tái phát",
+            "Thận trọng ở bệnh nhân có bệnh gan (chuyển hóa qua gan)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "21 giờ (itraconazole), 12 giờ (hydroxy-itraconazole - metabolite hoạt động)",
+            "onset": "Vài ngày đến vài tuần (tác dụng chống nấm)",
+            "duration": "24 giờ (dùng 1-2 lần/ngày)",
+            "protein_binding": "99.8% (gắn chặt với albumin)",
+            "clearance": "Gan: chuyển hóa qua CYP3A4 thành hydroxy-itraconazole (metabolite hoạt động, mạnh hơn itraconazole). Thận: bài tiết một phần metabolites. Hấp thu phụ thuộc vào pH dạ dày (cần acid dạ dày), tăng khi uống với thức ăn. IV chứa cyclodextrin, tích lũy ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén/capsule: bảo quản trong bao bì kín. Dạng solution: bảo quản ở nhiệt độ phòng, không làm lạnh. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở bệnh nhân suy tim sung huyết hoặc có tiền sử suy tim. Itraconazole có thể gây suy tim, đặc biệt ở liều cao. CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D). Nhiều tương tác thuốc nghiêm trọng do ức chế CYP3A4 - tăng nguy cơ tiêu cơ vân với simvastatin/lovastatin, tăng an thần với midazolam/triazolam, tăng nguy cơ loạn nhịp với quinidine.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Simvastatin, Lovastatin",
+                    "mechanism": "Itraconazole ức chế CYP3A4, làm giảm chuyển hóa simvastatin và lovastatin, tăng nồng độ statin trong máu.",
+                    "effect": "Tăng nguy cơ tiêu cơ vân (rhabdomyolysis) nghiêm trọng, suy thận cấp, đe dọa tính mạng",
+                    "management": "TRÁNH DÙNG đồng thời. Nếu bắt buộc, ngừng statin hoặc dùng statin không chuyển hóa qua CYP3A4 (pravastatin, rosuvastatin). Theo dõi CK, creatinine, dấu hiệu tiêu cơ vân (đau cơ, nước tiểu sẫm màu)."
+                },
+                {
+                    "drug": "Midazolam, Triazolam",
+                    "mechanism": "Itraconazole ức chế CYP3A4, làm giảm chuyển hóa midazolam và triazolam, tăng nồng độ benzodiazepine trong máu.",
+                    "effect": "Tăng an thần nghiêm trọng, suy hô hấp, nguy cơ tử vong",
+                    "management": "TRÁNH DÙNG đồng thời. Nếu bắt buộc, giảm liều benzodiazepine đáng kể, theo dõi hô hấp chặt chẽ."
+                },
+                {
+                    "drug": "Quinidine",
+                    "mechanism": "Itraconazole ức chế CYP3A4, làm giảm chuyển hóa quinidine, tăng nồng độ quinidine trong máu.",
+                    "effect": "Tăng nguy cơ loạn nhịp tim nghiêm trọng (torsades de pointes), QT kéo dài, đe dọa tính mạng",
+                    "management": "TRÁNH DÙNG đồng thời. Nếu bắt buộc, theo dõi ECG chặt chẽ, giảm liều quinidine."
+                },
+                {
+                    "drug": "Rifampin, Rifabutin",
+                    "mechanism": "Rifampin cảm ứng CYP3A4 mạnh, làm tăng chuyển hóa itraconazole, giảm nồng độ itraconazole trong máu.",
+                    "effect": "Giảm nồng độ itraconazole, giảm hiệu quả điều trị, nguy cơ thất bại điều trị",
+                    "management": "TRÁNH DÙNG đồng thời. Nếu bắt buộc, tăng liều itraconazole (có thể cần tăng gấp đôi), theo dõi nồng độ itraconazole trong máu."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Itraconazole ức chế CYP3A4 và CYP2C9, làm giảm chuyển hóa warfarin, tăng nồng độ warfarin trong máu.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng itraconazole. Giảm liều warfarin 25-50% khi bắt đầu itraconazole."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Itraconazole ức chế P-glycoprotein, làm giảm thải trừ digoxin, tăng nồng độ digoxin trong máu.",
+                    "effect": "Tăng nồng độ digoxin, tăng độc tính digoxin (buồn nôn, rối loạn nhịp tim)",
+                    "management": "Theo dõi nồng độ digoxin và dấu hiệu độc tính. Giảm liều digoxin 25-50% khi bắt đầu itraconazole."
+                },
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Phenytoin cảm ứng CYP3A4, làm giảm nồng độ itraconazole. Itraconazole ức chế CYP2C9, tăng nồng độ phenytoin.",
+                    "effect": "Giảm nồng độ itraconazole, tăng nồng độ phenytoin",
+                    "management": "Theo dõi nồng độ cả hai thuốc. Tăng liều itraconazole, giảm liều phenytoin nếu cần."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng itraconazole hoặc azole",
+                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
+                "Suy tim sung huyết hoặc có tiền sử suy tim - itraconazole có thể gây suy tim, đặc biệt ở liều cao"
+            ],
+            "tương_đối": [
+                "Suy thận (CrCl <30) khi dùng IV - không dùng IV (chứa cyclodextrin, tích lũy ở suy thận), có thể dùng PO",
+                "Suy gan - thận trọng, theo dõi chức năng gan, ngừng nếu có suy gan",
+                "Dùng với PPI, H2 blocker, antacid - giảm hấp thu (cần acid dạ dày), có thể cần tăng liều hoặc dùng solution",
+                "Bệnh nhân cao tuổi - tăng nguy cơ độc tính, suy tim"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Itraconazole gây dị tật thai nhi, đặc biệt trong 3 tháng đầu. Có thể gây sẩy thai, dị tật tim, dị tật xương. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Itraconazole bài tiết vào sữa mẹ. Thuốc có thể gây độc tính cho trẻ sơ sinh.",
+                "recommendation": "Không cho con bú khi dùng itraconazole. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, theo dõi chức năng gan, có thể cần giảm liều",
+            "severe": "Tránh dùng hoặc giảm liều mạnh, theo dõi chặt chẽ",
+            "notes": "Itraconazole chuyển hóa chủ yếu qua gan (CYP3A4). Suy gan làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan, ngừng nếu có suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Tiêu chảy",
+                "Tăng men gan, suy gan",
+                "Phù, suy tim",
+                "Rối loạn nhịp tim (khi dùng với quinidine)",
+                "Tiêu cơ vân (khi dùng với statin)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay itraconazole",
+                "Rửa dạ dày nếu mới uống <1 giờ",
+                "Supportive care",
+                "Theo dõi chức năng gan, chức năng tim",
+                "Điều trị suy tim nếu có (furosemide, ACE inhibitor)",
+                "Điều trị suy gan nếu có (supportive care)",
+                "Theo dõi ECG nếu có rối loạn nhịp tim"
+            ],
+            "monitoring": "Chức năng gan, chức năng tim, ECG, dấu hiệu lâm sàng"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc thức uống có acid (cola) để tăng hấp thu",
+                "timing": "Uống với thức ăn. Capsule cần acid dạ dày, tránh dùng với PPI, H2 blocker, antacid."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất",
+                "infusion_rate": "Truyền trong 60 phút",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Không dùng IV nếu CrCl <30 (chứa cyclodextrin, tích lũy ở suy thận). Truyền trong 60 phút."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Itraconazole (Sporanox)",
+                "UpToDate - Itraconazole Drug Information",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
+    },
+
+    "Voriconazole": {
+        "group": "Infectious Disease - Antifungal (Azole, 2nd generation)",
+        "vietnamese_name": "Voriconazole, Vfend",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm nấm Aspergillosis invasive",
+            "Nhiễm nấm Candida (invasive, kháng fluconazole)",
+            "Nhiễm nấm Fusarium",
+            "Nhiễm nấm Scedosporium",
+            "Nhiễm nấm Seedosporium"
+        ],
+        "contraindications": [
+            "Dị ứng voriconazole",
+            "Có thai",
+            "Dùng rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine"
+        ],
+        "dosage": {
+            "adult_po_loading": "400mg x 2 lần/ngày x 2 ngày đầu",
+            "adult_po_maintenance": "200mg x 2 lần/ngày",
+            "adult_iv_loading": "6mg/kg x 2 lần/ngày x 2 ngày đầu",
+            "adult_iv_maintenance": "4mg/kg x 2 lần/ngày",
+            "notes": "Theo dõi nồng độ trong máu. Nguy cơ cao với rối loạn chuyển hóa CYP2C19"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "IV: thay đổi chất pha (không dùng cyclodextrin)",
+            "under_30": "IV: thay đổi chất pha. PO: không đổi"
+        },
+        "side_effects": [
+            "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng - thường thoáng qua)",
+            "Ban da (phản ứng quang hóa)",
+            "Tăng men gan, suy gan",
+            "Hallucination",
+            "QT kéo dài",
+            "Nhức đầu",
+            "Buồn nôn"
+        ],
+        "interactions": [
+            "Rifampin/Rifabutin: giảm nồng độ voriconazole - tránh dùng",
+            "Carbamazepine/Phenobarbital: giảm nồng độ voriconazole - tránh dùng",
+            "Warfarin: tăng tác dụng chống đông",
+            "Cyclosporine/Tacrolimus: tăng nồng độ",
+            "Phenytoin: giảm nồng độ voriconazole",
+            "Omeprazole: tăng nồng độ omeprazole"
+        ],
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Voriconazole là thuốc chống nấm phổ rộng thuộc nhóm triazole thế hệ thứ hai, ức chế enzyme lanosterol 14-alpha-demethylase (CYP51) của nấm. Enzyme này có vai trò quan trọng trong tổng hợp ergosterol, một thành phần chính của màng tế bào nấm. Bằng cách ức chế tổng hợp ergosterol, voriconazole làm thay đổi tính thấm màng tế bào nấm, dẫn đến ức chế sự phát triển và gây chết tế bào nấm. Voriconazole có phổ kháng nấm rộng hơn fluconazole: nấm men (Candida, bao gồm cả kháng fluconazole), nấm sợi (Aspergillus, Fusarium, Scedosporium), và một số nấm kháng thuốc khác. Voriconazole được coi là thuốc điều trị đầu tay cho nhiễm nấm Aspergillus invasive. Voriconazole ức chế CYP2C19, CYP2C9, và CYP3A4 ở gan, dẫn đến nhiều tương tác thuốc. Chuyển hóa phụ thuộc vào CYP2C19 (polymorphism), cần theo dõi nồng độ trong máu.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng nhiễm nấm, cải thiện lâm sàng)",
+            "Nồng độ voriconazole trong máu (therapeutic drug monitoring - TDM) - QUAN TRỌNG, đặc biệt ở bệnh nhân suy gan, suy thận, hoặc có rối loạn chuyển hóa CYP2C19",
+            "Chức năng gan (ALT, AST, bilirubin) - tăng men gan phổ biến, suy gan có thể nghiêm trọng",
+            "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng, nhìn thấy ánh sáng bất thường) - thường thoáng qua, xuất hiện 30 phút sau liều, kéo dài 30 phút",
+            "Dấu hiệu phản ứng quang hóa (ban da, phồng rộp) - tránh ánh nắng trực tiếp",
+            "ECG - QT kéo dài (nguy cơ loạn nhịp)",
+            "Hallucination - hiếm nhưng có thể xảy ra",
+            "Tương tác với rifampin, rifabutin, carbamazepine, phenobarbital (giảm nồng độ voriconazole), warfarin (tăng INR), cyclosporine, tacrolimus (tăng nồng độ), phenytoin (giảm nồng độ voriconazole)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D)",
+            "CHỐNG CHỈ ĐỊNH với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine (giảm nồng độ voriconazole hoặc tăng nguy cơ độc tính)",
+            "Theo dõi nồng độ trong máu (TDM) - QUAN TRỌNG, đặc biệt ở bệnh nhân suy gan, suy thận, hoặc có rối loạn chuyển hóa CYP2C19 (poor metabolizer có nồng độ cao, extensive metabolizer có nồng độ thấp)",
+            "Liều khởi đầu (loading dose) QUAN TRỌNG - PO: 400mg x 2 lần/ngày x 2 ngày đầu, IV: 6mg/kg x 2 lần/ngày x 2 ngày đầu",
+            "Rối loạn thị giác - thường thoáng qua, xuất hiện 30 phút sau liều, kéo dài 30 phút, thường tự khỏi, không cần ngừng thuốc",
+            "Tránh ánh nắng trực tiếp - nguy cơ phản ứng quang hóa (ban da, phồng rộp), dùng kem chống nắng, mặc quần áo che",
+            "Tăng men gan, suy gan - theo dõi chức năng gan, ngừng nếu có suy gan",
+            "QT kéo dài - không dùng với các thuốc kéo dài QT khác, bệnh nhân có tiền sử rối loạn nhịp",
+            "Hallucination - hiếm nhưng có thể xảy ra, cần theo dõi",
+            "Nhiều tương tác thuốc do ức chế CYP - tăng nồng độ warfarin (tăng INR), cyclosporine, tacrolimus (tăng nồng độ, nguy cơ độc tính), omeprazole (tăng nồng độ)",
+            "Phenytoin giảm nồng độ voriconazole - có thể cần tăng liều voriconazole",
+            "IV chứa cyclodextrin - không dùng ở suy thận nặng (CrCl <50), tích lũy cyclodextrin",
+            "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu như itraconazole)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6 giờ (bình thường), tăng ở poor CYP2C19 metabolizers",
+            "onset": "Vài ngày đến vài tuần (tác dụng chống nấm)",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "58%",
+            "clearance": "Gan: chuyển hóa qua CYP2C19 (chính), CYP2C9, và CYP3A4. Chuyển hóa phụ thuộc vào polymorphism CYP2C19 (poor metabolizer có nồng độ cao, extensive metabolizer có nồng độ thấp). Thận: bài tiết một phần metabolites. IV chứa cyclodextrin, tích lũy ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha, dùng trong vòng 24 giờ sau khi pha.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D). Nguy cơ suy gan nghiêm trọng, có thể gây tử vong. Theo dõi chức năng gan trước và trong khi điều trị. Ngừng ngay nếu có suy gan. Nguy cơ QT kéo dài và rối loạn nhịp tim. Theo dõi ECG nếu có nguy cơ. Nguy cơ rối loạn thị giác (thường thoáng qua). CHỐNG CHỈ ĐỊNH với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rifampin, Rifabutin",
+                    "mechanism": "Rifampin và rifabutin cảm ứng CYP450 mạnh, làm tăng chuyển hóa voriconazole, giảm nồng độ voriconazole trong máu.",
+                    "effect": "Giảm nồng độ voriconazole đáng kể, giảm hiệu quả điều trị, nguy cơ thất bại điều trị",
+                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời. Nếu bắt buộc, tăng liều voriconazole (có thể cần tăng gấp đôi), theo dõi nồng độ voriconazole trong máu."
+                },
+                {
+                    "drug": "Carbamazepine, Phenobarbital",
+                    "mechanism": "Carbamazepine và phenobarbital cảm ứng CYP450 mạnh, làm tăng chuyển hóa voriconazole, giảm nồng độ voriconazole trong máu.",
+                    "effect": "Giảm nồng độ voriconazole đáng kể, giảm hiệu quả điều trị",
+                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời. Nếu bắt buộc, tăng liều voriconazole, theo dõi nồng độ voriconazole trong máu."
+                },
+                {
+                    "drug": "Ergotamine",
+                    "mechanism": "Voriconazole ức chế CYP3A4, làm giảm chuyển hóa ergotamine, tăng nồng độ ergotamine trong máu.",
+                    "effect": "Tăng nguy cơ co thắt mạch máu nghiêm trọng, hoại tử chi, đe dọa tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Voriconazole ức chế CYP2C9, làm giảm chuyển hóa warfarin, tăng nồng độ warfarin trong máu.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng voriconazole. Giảm liều warfarin 25-50% khi bắt đầu voriconazole."
+                },
+                {
+                    "drug": "Cyclosporine, Tacrolimus",
+                    "mechanism": "Voriconazole ức chế CYP3A4, làm giảm chuyển hóa cyclosporine và tacrolimus, tăng nồng độ trong máu.",
+                    "effect": "Tăng nồng độ cyclosporine/tacrolimus, tăng độc tính (độc thận, tăng huyết áp, rối loạn điện giải)",
+                    "management": "Theo dõi nồng độ cyclosporine/tacrolimus chặt chẽ. Giảm liều cyclosporine/tacrolimus 50-75% khi bắt đầu voriconazole."
+                },
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Phenytoin cảm ứng CYP450, làm giảm nồng độ voriconazole. Voriconazole ức chế CYP2C9, tăng nồng độ phenytoin.",
+                    "effect": "Giảm nồng độ voriconazole, tăng nồng độ phenytoin",
+                    "management": "Theo dõi nồng độ cả hai thuốc. Tăng liều voriconazole (có thể cần tăng gấp đôi), giảm liều phenytoin nếu cần."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Omeprazole",
+                    "mechanism": "Voriconazole ức chế CYP2C19, làm giảm chuyển hóa omeprazole, tăng nồng độ omeprazole trong máu.",
+                    "effect": "Tăng nhẹ nồng độ omeprazole",
+                    "management": "Theo dõi dấu hiệu độc tính omeprazole. Có thể cần giảm liều omeprazole."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng voriconazole",
+                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
+                "Dùng với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine - chống chỉ định"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <50) khi dùng IV - không dùng IV (chứa cyclodextrin, tích lũy), có thể dùng PO",
+                "Suy gan - thận trọng, theo dõi chức năng gan, ngừng nếu có suy gan",
+                "Rối loạn chuyển hóa CYP2C19 (poor metabolizer) - tăng nồng độ, tăng độc tính, cần giảm liều",
+                "Rối loạn chuyển hóa CYP2C19 (extensive metabolizer) - giảm nồng độ, có thể cần tăng liều",
+                "Bệnh nhân có tiền sử rối loạn nhịp tim - nguy cơ QT kéo dài"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Voriconazole gây dị tật thai nhi, đặc biệt trong 3 tháng đầu. Có thể gây sẩy thai, dị tật xương, dị tật tim. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Voriconazole bài tiết vào sữa mẹ. Thuốc có thể gây độc tính cho trẻ sơ sinh.",
+                "recommendation": "Không cho con bú khi dùng voriconazole. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, theo dõi chức năng gan, có thể cần giảm liều",
+            "severe": "Tránh dùng hoặc giảm liều mạnh, theo dõi chặt chẽ",
+            "notes": "Voriconazole chuyển hóa chủ yếu qua gan (CYP2C19, CYP2C9, CYP3A4). Suy gan làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và nồng độ voriconazole trong máu, ngừng nếu có suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng)",
+                "Tăng men gan, suy gan",
+                "Ban da (phản ứng quang hóa)",
+                "Hallucination",
+                "QT kéo dài, rối loạn nhịp tim",
+                "Buồn nôn, nôn"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay voriconazole",
+                "Rửa dạ dày nếu mới uống <1 giờ",
+                "Supportive care",
+                "Theo dõi chức năng gan, ECG",
+                "Điều trị suy gan nếu có (supportive care)",
+                "Theo dõi và điều trị rối loạn nhịp tim nếu có",
+                "Tránh ánh nắng trực tiếp (phản ứng quang hóa)"
+            ],
+            "monitoring": "Chức năng gan, ECG, nồng độ voriconazole trong máu, dấu hiệu lâm sàng"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu)",
+                "timing": "Chia 2 lần/ngày. Loading dose: 400mg x 2 lần/ngày x 2 ngày đầu, sau đó 200mg x 2 lần/ngày."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất",
+                "infusion_rate": "Truyền trong 1-2 giờ",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Không dùng IV nếu CrCl <50 (chứa cyclodextrin, tích lũy ở suy thận). Loading dose: 6mg/kg x 2 lần/ngày x 2 ngày đầu, sau đó 4mg/kg x 2 lần/ngày. Truyền trong 1-2 giờ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Voriconazole (Vfend)",
+                "UpToDate - Voriconazole Drug Information",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
+    },
+
+    "Nystatin": {
+        "group": "Infectious Disease - Antifungal (Polyene)",
+        "vietnamese_name": "Nystatin, Mycostatin",
+        "administration": ["PO (suspension, tablet)", "Topical"],
+        "indications": [
+            "Nhiễm nấm Candida miệng (oral candidiasis/thrush)",
+            "Nhiễm nấm Candida thực quản",
+            "Nhiễm nấm Candida da (topical)",
+            "Nhiễm nấm Candida âm đạo (topical)"
+        ],
+        "contraindications": [
+            "Dị ứng nystatin"
+        ],
+        "dosage": {
+            "adult_oral_suspension": "400,000-600,000 đơn vị x 4 lần/ngày",
+            "adult_oral_tablet": "500,000-1,000,000 đơn vị x 4 lần/ngày",
+            "adult_topical": "Bôi 2-3 lần/ngày",
+            "notes": "Không hấp thu qua đường tiêu hóa. Chỉ tác dụng tại chỗ. Súc miệng và nuốt (suspension)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn (hiếm, PO)",
+            "Tiêu chảy (hiếm, PO)",
+            "Kích ứng da (hiếm, topical)",
+            "Dị ứng (hiếm)"
+        ],
+        "interactions": [
+            "Rất ít tương tác (không hấp thu hệ thống)"
+        ],
+        "pregnancy": "C - An toàn (không hấp thu)",
+        "mechanism_of_action": "Nystatin là polyene antifungal, gắn với ergosterol trong màng tế bào nấm, tạo lỗ thủng trong màng, làm rò rỉ các ion và chất dinh dưỡng, dẫn đến chết tế bào nấm. Thuốc có ái lực cao với ergosterol (có trong nấm) nhưng không gắn với cholesterol (có trong tế bào người), nên an toàn cho tế bào người. Nystatin không hấp thu qua đường tiêu hóa hoặc qua da, nên chỉ tác dụng tại chỗ. Thuốc hiệu quả trên Candida species, đặc biệt Candida albicans, thường dùng cho nhiễm nấm miệng, thực quản, và da.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng, giảm mảng trắng trong miệng)",
+            "Dấu hiệu dị ứng (ban da, kích ứng)",
+            "Triệu chứng tiêu hóa (buồn nôn, tiêu chảy) - hiếm",
+            "Tái nhiễm (nếu điều trị không đủ hoặc yếu tố nguy cơ vẫn còn)"
+        ],
+        "precautions": [
+            "Suspension: súc miệng kỹ, giữ trong miệng vài phút, sau đó nuốt (cho nhiễm nấm thực quản)",
+            "Tablet: ngậm trong miệng cho tan (cho nhiễm nấm miệng)",
+            "Topical: bôi đều, rửa sạch tay sau khi bôi",
+            "Tiếp tục điều trị 48 giờ sau khi hết triệu chứng",
+            "Với nhiễm nấm miệng: điều trị 7-14 ngày",
+            "Với nhiễm nấm thực quản: điều trị 14-21 ngày",
+            "An toàn trong thai kỳ và cho con bú (không hấp thu)",
+            "Rất ít tác dụng phụ do không hấp thu hệ thống",
+            "Thận trọng ở bệnh nhân có vết thương mở rộng (topical)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (không hấp thu)",
+            "onset": "Tác dụng tại chỗ ngay lập tức",
+            "duration": "Tác dụng tại chỗ trong vài giờ",
+            "protein_binding": "Không áp dụng (không vào máu)",
+            "clearance": "Không hấp thu, thải trừ qua phân (PO) hoặc rửa trôi (topical)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh, lắc kỹ trước khi dùng (suspension)",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng nystatin"
+            ],
+            "tương_đối": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "An toàn trong thai kỳ. Nystatin không hấp thu qua đường tiêu hóa hoặc qua da, nên không vào máu và không ảnh hưởng đến thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Nystatin không hấp thu hệ thống, không bài tiết vào sữa mẹ. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Nystatin không hấp thu hệ thống, không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn (hiếm)",
+                "Tiêu chảy (hiếm)",
+                "Kích ứng da (topical)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc",
+                "Rửa miệng/da nếu cần",
+                "Supportive care",
+                "Theo dõi triệu chứng"
+            ],
+            "monitoring": "Triệu chứng lâm sàng"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn",
+                "timing": "Suspension: súc miệng kỹ, giữ trong miệng vài phút, sau đó nuốt (cho nhiễm nấm thực quản). Tablet: ngậm trong miệng cho tan (cho nhiễm nấm miệng)."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "Không áp dụng",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Nystatin chỉ có dạng PO và topical, không có dạng IV."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Nystatin (Mycostatin)",
+                "UpToDate - Nystatin Drug Information",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
+    },
+
+}
+
+__all__ = ['ANTIFUNGALS']

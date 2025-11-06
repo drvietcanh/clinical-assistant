@@ -106,13 +106,13 @@ HEMATOLOGY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Chảy máu đang hoạt động",
                 "Xuất huyết nội sọ đang hoạt động",
                 "Dị ứng ticagrelor",
                 "Dùng strong CYP3A4 inhibitors (ketoconazole, itraconazole, clarithromycin, ritonavir)"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy gan nặng - chống chỉ định",
                 "Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng",
                 "Tiền sử nhịp tim chậm hoặc block nhĩ thất - tăng nguy cơ bradycardia",
@@ -275,12 +275,12 @@ HEMATOLOGY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Chảy máu đang hoạt động",
                 "Tiền sử TIA hoặc đột quỵ",
                 "Dị ứng prasugrel"
             ],
-            "relative": [
+            "tương_đối": [
                 "Tuổi ≥75 (trừ nguy cơ cao) - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
                 "Cân nặng <60kg (trừ nguy cơ cao) - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
                 "Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng",

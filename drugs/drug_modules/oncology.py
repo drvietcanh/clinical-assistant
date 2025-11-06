@@ -131,7 +131,7 @@ ONCOLOGY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Suy thận nặng (CrCl <60)",
                 "Giảm thính lực nặng",
                 "Có thai",
@@ -139,7 +139,7 @@ ONCOLOGY_DRUGS = {
                 "Dị ứng cisplatin hoặc platinum compounds",
                 "Giảm bạch cầu/tiểu cầu nặng"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nhẹ đến trung bình (CrCl 30-60) - giảm liều 25-50%",
                 "Giảm thính lực nhẹ - theo dõi sát",
                 "Suy gan nặng - thận trọng",
@@ -325,13 +325,13 @@ ONCOLOGY_DRUGS = {
             "minor": []
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Có thai",
                 "Đang cho con bú",
                 "Dị ứng carboplatin hoặc platinum compounds",
                 "Giảm bạch cầu/tiểu cầu nặng"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nặng (CrCl <30) - giảm liều đáng kể, điều chỉnh công thức Calvert",
                 "Suy gan nặng - thận trọng",
                 "Người cao tuổi - tăng nguy cơ myelosuppression",
@@ -473,7 +473,97 @@ ONCOLOGY_DRUGS = {
             "clearance": "Thận (thải trừ chủ yếu), không chuyển hóa"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu",
-        "black_box_warnings": "Có thể gây độc lạnh nặng (cold-induced neuropathy) - tránh tiếp xúc với lạnh trong 3-7 ngày sau truyền. Có thể gây độc thần kinh ngoại biên tích lũy và kéo dài"
+        "black_box_warnings": "Có thể gây độc lạnh nặng (cold-induced neuropathy) - tránh tiếp xúc với lạnh trong 3-7 ngày sau truyền. Có thể gây độc thần kinh ngoại biên tích lũy và kéo dài",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc độc thận (Aminoglycosides, Vancomycin, Amphotericin B)",
+                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn làm tăng nguy cơ suy thận cấp.",
+                    "effect": "Tăng nguy cơ suy thận cấp, độc thận nghiêm trọng",
+                    "management": "Thận trọng khi dùng đồng thời. Theo dõi chức năng thận chặt chẽ. Duy trì đủ dịch."
+                },
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Oxaliplatin có thể giảm nồng độ phenytoin trong máu.",
+                    "effect": "Giảm nồng độ phenytoin, giảm hiệu quả chống co giật",
+                    "management": "Theo dõi nồng độ phenytoin. Có thể cần tăng liều phenytoin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng oxaliplatin hoặc platinum compounds",
+                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
+                "Đang cho con bú - chống chỉ định"
+            ],
+            "tương_đối": [
+                "Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục",
+                "Suy thận nặng (CrCl <30) - giảm liều 25-50%, theo dõi chặt chẽ",
+                "Suy gan nặng - thận trọng, có thể cần giảm liều",
+                "Bệnh nhân có tiền sử độc thần kinh - tăng nguy cơ độc thần kinh nặng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Oxaliplatin gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Oxaliplatin bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.",
+                "recommendation": "Không cho con bú khi dùng oxaliplatin. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều 25-50%",
+            "notes": "Oxaliplatin không chuyển hóa qua gan, thải trừ chủ yếu qua thận. Tuy nhiên, suy gan có thể ảnh hưởng đến chức năng tổng thể và khả năng chịu đựng điều trị."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Độc lạnh nặng (tê, cảm giác như bị điện giật khi tiếp xúc lạnh)",
+                "Độc thần kinh ngoại biên nặng (tê bì, mất cảm giác)",
+                "Nôn mửa nặng",
+                "Tiêu chảy nặng",
+                "Giảm bạch cầu, tiểu cầu nặng",
+                "Phản ứng dị ứng nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay oxaliplatin",
+                "Tránh tiếp xúc với lạnh (quan trọng)",
+                "Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần",
+                "Theo dõi CBC, chức năng thận, chức năng gan",
+                "Điều trị nôn mửa (ondansetron, granisetron)",
+                "Điều trị tiêu chảy (loperamide, bù dịch)",
+                "Theo dõi và điều trị phản ứng dị ứng nếu có"
+            ],
+            "monitoring": "CBC, chức năng thận, chức năng gan, dấu hiệu độc lạnh, dấu hiệu độc thần kinh, dấu hiệu nhiễm trùng"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Không áp dụng",
+                "timing": "Không có dạng uống (chỉ có IV)"
+            },
+            "iv": {
+                "reconstitution": "Pha với D5W (không dùng NS - có thể làm tăng độc tính) theo hướng dẫn nhà sản xuất",
+                "infusion_rate": "Truyền trong 2-6 giờ",
+                "compatibility": ["D5W"],
+                "incompatibility": ["NS", "NaCl"],
+                "notes": "KHÔNG dùng NS hoặc NaCl để pha (có thể làm tăng độc tính). Chỉ dùng D5W. Truyền trong 2-6 giờ. Tránh lạnh khi truyền và sau truyền."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Oxaliplatin (Eloxatin)",
+                "UpToDate - Oxaliplatin Drug Information",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
     },
     "5-Fluorouracil": {
         "group": "Oncology - Antimetabolite",
@@ -551,7 +641,122 @@ ONCOLOGY_DRUGS = {
             "clearance": "Gan (chuyển hóa qua DPD - dihydropyrimidine dehydrogenase), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu",
-        "black_box_warnings": "Thiếu hụt DPD (dihydropyrimidine dehydrogenase) có thể gây độc tính nặng và tử vong. Nên test DPD trước điều trị nếu có thể. Theo dõi sát độc tính và ngừng ngay nếu có dấu hiệu độc tính nặng"
+        "black_box_warnings": "Thiếu hụt DPD (dihydropyrimidine dehydrogenase) có thể gây độc tính nặng và tử vong. Nên test DPD trước điều trị nếu có thể. Theo dõi sát độc tính và ngừng ngay nếu có dấu hiệu độc tính nặng",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Cả hai đều là antimetabolite, tác dụng cộng dồn làm tăng độc tính tủy xương và niêm mạc.",
+                    "effect": "Tăng nguy cơ giảm bạch cầu, tiểu cầu, loét miệng, tiêu chảy nghiêm trọng",
+                    "management": "Thận trọng khi dùng đồng thời. Theo dõi CBC và dấu hiệu độc tính chặt chẽ. Có thể cần giảm liều hoặc tránh dùng đồng thời."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "5-FU có thể ức chế chuyển hóa warfarin, tăng nồng độ warfarin trong máu.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu hoặc ngừng 5-FU. Có thể cần giảm liều warfarin."
+                },
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "5-FU có thể ức chế chuyển hóa phenytoin, tăng nồng độ phenytoin trong máu.",
+                    "effect": "Tăng nồng độ phenytoin, tăng độc tính phenytoin",
+                    "management": "Theo dõi nồng độ phenytoin và dấu hiệu độc tính. Có thể cần giảm liều phenytoin."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Leucovorin",
+                    "mechanism": "Leucovorin tăng hiệu quả của 5-FU bằng cách tăng ức chế thymidylate synthase, nhưng cũng tăng độc tính.",
+                    "effect": "Tăng hiệu quả và độc tính của 5-FU",
+                    "management": "Dùng kèm để tăng hiệu quả, nhưng cần theo dõi độc tính chặt chẽ hơn."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng 5-FU",
+                "Thiếu hụt DPD (dihydropyrimidine dehydrogenase) nặng - chống chỉ định tuyệt đối, có thể gây tử vong",
+                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
+                "Đang cho con bú - chống chỉ định"
+            ],
+            "tương_đối": [
+                "Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục",
+                "Suy thận (CrCl <30) - giảm liều 25-50%, theo dõi chặt chẽ",
+                "Suy gan - thận trọng, có thể cần giảm liều",
+                "Bệnh nhân cao tuổi - tăng nguy cơ độc tính"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. 5-FU gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "5-FU bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.",
+                "recommendation": "Không cho con bú khi dùng 5-FU. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều 25-50%",
+            "notes": "5-FU chuyển hóa chủ yếu qua gan (DPD - dihydropyrimidine dehydrogenase). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Loét miệng nặng (stomatitis)",
+                "Tiêu chảy nặng, mất nước",
+                "Giảm bạch cầu, tiểu cầu nặng (nhiễm trùng, chảy máu)",
+                "Độc tim (hiếm)",
+                "Rối loạn thần kinh (hiếm)",
+                "Tăng bilirubin"
+            ],
+            "antidote": "Uridine triacetate (Vistogard) - antidote đặc hiệu cho quá liều 5-FU do thiếu hụt DPD",
+            "treatment": [
+                "Ngừng ngay 5-FU",
+                "Nếu có thiếu hụt DPD và quá liều: dùng uridine triacetate (Vistogard) càng sớm càng tốt",
+                "Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần",
+                "Theo dõi CBC, chức năng gan, chức năng thận",
+                "Điều trị loét miệng (súc miệng, thuốc giảm đau)",
+                "Điều trị tiêu chảy (loperamide, bù dịch)",
+                "Theo dõi và điều trị độc tim nếu có"
+            ],
+            "monitoring": "CBC mỗi ngày, chức năng gan, chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu độc tim"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Uridine triacetate (Vistogard)",
+                    "indication": "Quá liều 5-FU do thiếu hụt DPD hoặc quá liều do lỗi dùng thuốc",
+                    "dose": "10g PO x 3 lần/ngày x 5 ngày (bắt đầu càng sớm càng tốt)",
+                    "notes": "Antidote đặc hiệu cho quá liều 5-FU. Hiệu quả nhất khi dùng trong vòng 96 giờ sau quá liều."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Không áp dụng",
+                "timing": "Không có dạng uống (chỉ có IV và topical)"
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất",
+                "infusion_rate": "Bolus: tiêm trực tiếp. Infusion: truyền trong 4-24 giờ tùy phác đồ",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Bolus: 400-600mg/m² tiêm trực tiếp. Infusion: 1000mg/m²/ngày truyền trong 4-24 giờ. Theo dõi extravasation."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - 5-Fluorouracil",
+                "UpToDate - 5-Fluorouracil Drug Information",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
     },
     "Methotrexate": {
         "group": "Oncology - Antimetabolite (Antifolate)",
@@ -685,7 +890,7 @@ ONCOLOGY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Dị ứng methotrexate",
                 "Có thai (gây dị tật thai nhi, sảy thai)",
                 "Đang cho con bú",
@@ -694,7 +899,7 @@ ONCOLOGY_DRUGS = {
                 "Giảm bạch cầu/tiểu cầu nặng",
                 "Loét dạ dày tá tràng hoạt động"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận (CrCl 30-60: giảm liều 25-50%)",
                 "Suy gan nhẹ-trung bình (theo dõi chức năng gan)",
                 "Nhiễm trùng đang hoạt động (ức chế miễn dịch)",
@@ -900,14 +1105,14 @@ ONCOLOGY_DRUGS = {
             ]
         },
         "contraindications": {
-            "absolute": [
+            "tuyệt_đối": [
                 "Viêm bàng quang chảy máu hoạt động",
                 "Có thai",
                 "Đang cho con bú",
                 "Dị ứng cyclophosphamide",
                 "Giảm bạch cầu/tiểu cầu nặng"
             ],
-            "relative": [
+            "tương_đối": [
                 "Suy thận nặng (CrCl <30) - giảm liều đáng kể",
                 "Suy gan nặng - thận trọng (cần gan để chuyển hóa thành chất hoạt động)",
                 "Nhiễm trùng hoạt động - tăng nguy cơ",
@@ -1060,7 +1265,109 @@ ONCOLOGY_DRUGS = {
             "clearance": "Gan (chuyển hóa chủ yếu qua CYP2B6, CYP3A4), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu",
-        "black_box_warnings": "Có thể gây viêm bàng quang chảy máu nặng và nguy hiểm tính mạng. LUÔN phải dùng kèm mesna để bảo vệ bàng quang. Có thể gây độc thần kinh trung ương nặng (lú lẫn, co giật, hôn mê) với liều cao"
+        "black_box_warnings": "Có thể gây viêm bàng quang chảy máu nặng và nguy hiểm tính mạng. LUÔN phải dùng kèm mesna để bảo vệ bàng quang. Có thể gây độc thần kinh trung ương nặng (lú lẫn, co giật, hôn mê) với liều cao",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Cisplatin",
+                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn làm tăng nguy cơ suy thận cấp và độc thận nghiêm trọng.",
+                    "effect": "Tăng nguy cơ suy thận cấp, độc thận nghiêm trọng",
+                    "management": "Thận trọng khi dùng đồng thời. Theo dõi chức năng thận chặt chẽ. Duy trì đủ dịch. Có thể cần giảm liều hoặc tránh dùng đồng thời."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Phenobarbital",
+                    "mechanism": "Phenobarbital cảm ứng CYP450, làm tăng chuyển hóa ifosfamide, giảm nồng độ ifosfamide trong máu.",
+                    "effect": "Giảm nồng độ ifosfamide, giảm hiệu quả điều trị",
+                    "management": "Theo dõi đáp ứng điều trị. Có thể cần tăng liều ifosfamide."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng ifosfamide",
+                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
+                "Đang cho con bú - chống chỉ định",
+                "Viêm bàng quang chảy máu nặng - chống chỉ định cho đến khi hồi phục"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - giảm liều đáng kể, theo dõi chặt chẽ",
+                "Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục",
+                "Suy gan - thận trọng, có thể cần giảm liều",
+                "Bệnh nhân có tiền sử độc thần kinh trung ương - tăng nguy cơ độc thần kinh nặng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Ifosfamide gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Ifosfamide bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.",
+                "recommendation": "Không cho con bú khi dùng ifosfamide. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều 25-50%",
+            "notes": "Ifosfamide chuyển hóa chủ yếu qua gan (CYP2B6, CYP3A4). Suy gan làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Viêm bàng quang chảy máu nặng (đái máu, đau bụng dưới)",
+                "Độc thần kinh trung ương nặng (lú lẫn, co giật, hôn mê)",
+                "Giảm bạch cầu, tiểu cầu nặng (nhiễm trùng, chảy máu)",
+                "Suy thận cấp",
+                "Nôn mửa nặng"
+            ],
+            "antidote": "Mesna (nếu chưa dùng) - bảo vệ bàng quang",
+            "treatment": [
+                "Ngừng ngay ifosfamide",
+                "Nếu chưa dùng mesna: dùng mesna ngay để bảo vệ bàng quang",
+                "Truyền dịch đầy đủ (đảm bảo >2L/ngày, >100ml/giờ)",
+                "Theo dõi nước tiểu (hematuria, proteinuria)",
+                "Điều trị viêm bàng quang chảy máu nếu có (mesna, truyền dịch, có thể cần đặt ống thông)",
+                "Điều trị độc thần kinh trung ương nếu có (methylene blue, thiamine, có thể cần điều trị co giật)",
+                "Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần",
+                "Theo dõi CBC, chức năng thận, chức năng gan"
+            ],
+            "monitoring": "CBC, chức năng thận, chức năng gan, nước tiểu (hematuria), dấu hiệu độc thần kinh trung ương, lượng nước tiểu"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Mesna",
+                    "indication": "Bảo vệ bàng quang chống viêm bàng quang chảy máu do ifosfamide",
+                    "dose": "20% liều ifosfamide IV trước, trong, và sau ifosfamide (tổng 60% liều ifosfamide)",
+                    "notes": "Bắt buộc phải dùng kèm với ifosfamide. Mesna gắn với acrolein (sản phẩm chuyển hóa độc của ifosfamide) trong nước tiểu, bảo vệ bàng quang."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Không áp dụng",
+                "timing": "Không có dạng uống (chỉ có IV)"
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất",
+                "infusion_rate": "Truyền trong 1-4 giờ",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "1200-2000mg/m² IV x 3-5 ngày (mỗi 3-4 tuần). LUÔN dùng kèm mesna (20% liều ifosfamide IV trước, trong, và sau ifosfamide). Truyền dịch đầy đủ (đảm bảo >2L/ngày, >100ml/giờ). Truyền trong 1-4 giờ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ifosfamide (Ifex)",
+                "UpToDate - Ifosfamide Drug Information",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
     },
     "Doxorubicin": {
         "group": "Oncology - Anthracycline",
@@ -1139,7 +1446,112 @@ ONCOLOGY_DRUGS = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ - chậm)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu. Bảo vệ khỏi ánh sáng",
-        "black_box_warnings": "Có thể gây độc tim nặng và suy tim không hồi phục. Tổng liều tích lũy tối đa: 450-550mg/m². Theo dõi chức năng tim trước mỗi chu kỳ. Độc tim có thể xảy ra muộn (sau nhiều năm)"
+        "black_box_warnings": "Có thể gây độc tim nặng và suy tim không hồi phục. Tổng liều tích lũy tối đa: 450-550mg/m². Theo dõi chức năng tim trước mỗi chu kỳ. Độc tim có thể xảy ra muộn (sau nhiều năm)",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Cyclophosphamide",
+                    "mechanism": "Cả hai đều gây độc tim, tác dụng cộng dồn làm tăng nguy cơ suy tim nghiêm trọng.",
+                    "effect": "Tăng nguy cơ độc tim, suy tim không hồi phục",
+                    "management": "Thận trọng khi dùng đồng thời. Giảm tổng liều tích lũy của cả hai thuốc. Theo dõi chức năng tim chặt chẽ."
+                },
+                {
+                    "drug": "Trastuzumab",
+                    "mechanism": "Cả hai đều gây độc tim, tác dụng cộng dồn làm tăng nguy cơ suy tim nghiêm trọng.",
+                    "effect": "Tăng nguy cơ độc tim, suy tim không hồi phục",
+                    "management": "Thận trọng khi dùng đồng thời. Theo dõi chức năng tim chặt chẽ. Có thể cần giảm liều hoặc tránh dùng đồng thời."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Paclitaxel",
+                    "mechanism": "Có thể tăng độc tính của doxorubicin.",
+                    "effect": "Tăng độc tính tổng thể",
+                    "management": "Thận trọng khi dùng đồng thời. Theo dõi độc tính chặt chẽ."
+                },
+                {
+                    "drug": "Các anthracyclines khác (Daunorubicin, Epirubicin, Idarubicin)",
+                    "mechanism": "Cả hai đều gây độc tim tích lũy, tác dụng cộng dồn.",
+                    "effect": "Tăng nguy cơ độc tim, suy tim",
+                    "management": "Tính tổng liều tích lũy của tất cả anthracyclines. Giảm tổng liều tích lũy tối đa."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng doxorubicin",
+                "Suy tim nặng - chống chỉ định tuyệt đối",
+                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
+                "Đang cho con bú - chống chỉ định"
+            ],
+            "tương_đối": [
+                "Bệnh tim tiềm ẩn - thận trọng, theo dõi chức năng tim chặt chẽ",
+                "Tổng liều tích lũy >450-550mg/m² - nguy cơ độc tim cao, nên ngừng",
+                "Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục",
+                "Suy gan - thận trọng, có thể cần giảm liều",
+                "Suy thận - thận trọng, có thể cần giảm liều"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Doxorubicin gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Doxorubicin bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.",
+                "recommendation": "Không cho con bú khi dùng doxorubicin. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, giảm liều 25-50%",
+            "severe": "Thận trọng, giảm liều 50-75%",
+            "notes": "Doxorubicin chuyển hóa chủ yếu qua gan. Suy gan làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ. Có thể cần giảm liều đáng kể ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Suy tim cấp (khó thở, phù, mệt mỏi)",
+                "Rối loạn nhịp tim",
+                "Giảm bạch cầu, tiểu cầu nặng (nhiễm trùng, chảy máu)",
+                "Loét miệng nặng",
+                "Nôn mửa nặng",
+                "Extravasation (da đỏ, đau - nguy hiểm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay doxorubicin",
+                "Nếu có extravasation: ngừng truyền ngay, không rút kim, chườm lạnh, tham khảo phẫu thuật",
+                "Điều trị suy tim: furosemide, ACE inhibitor, beta-blocker nếu cần",
+                "Theo dõi và điều trị rối loạn nhịp tim",
+                "Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần",
+                "Theo dõi CBC, chức năng tim, chức năng gan",
+                "Điều trị nôn mửa (ondansetron, granisetron)"
+            ],
+            "monitoring": "Chức năng tim (echo, ECG), CBC, chức năng gan, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu extravasation"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Không áp dụng",
+                "timing": "Không có dạng uống (chỉ có IV)"
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất",
+                "infusion_rate": "Truyền trong 15-30 phút (bolus) hoặc 1-4 giờ (infusion)",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Bolus: 60-75mg/m² truyền trong 15-30 phút. Infusion: có thể truyền trong 1-4 giờ để giảm độc tính. QUAN TRỌNG: Theo dõi extravasation chặt chẽ (có thể gây hoại tử da). Bảo vệ khỏi ánh sáng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Doxorubicin (Adriamycin)",
+                "UpToDate - Doxorubicin Drug Information",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
     },
     "Granisetron": {
         "group": "Oncology - Anti-emetic (5-HT3 Antagonist)",
@@ -1202,7 +1614,89 @@ ONCOLOGY_DRUGS = {
             "clearance": "Gan (chuyển hóa qua CYP3A4), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Apomorphine",
+                    "mechanism": "Granisetron ức chế 5-HT3 receptor, có thể tăng tác dụng của apomorphine, gây hạ huyết áp nghiêm trọng.",
+                    "effect": "Tăng tác dụng apomorphine, hạ huyết áp nghiêm trọng, nguy cơ tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Các 5-HT3 antagonists khác (Ondansetron, Palonosetron)",
+                    "mechanism": "Cả hai đều ức chế 5-HT3 receptor, không có lợi ích bổ sung.",
+                    "effect": "Không tăng hiệu quả, có thể tăng tác dụng phụ",
+                    "management": "Không nên dùng đồng thời. Chọn một trong hai."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng granisetron hoặc 5-HT3 antagonists"
+            ],
+            "tương_đối": [
+                "Bệnh nhân có tiền sử QT kéo dài - thận trọng, theo dõi ECG",
+                "Suy gan - thận trọng, có thể cần giảm liều"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Có thể dùng trong thai kỳ nếu cần. Không có bằng chứng dị tật thai nhi, nhưng dữ liệu còn hạn chế. Dùng với thận trọng.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Granisetron bài tiết vào sữa mẹ ở nồng độ thấp. Chưa có đủ dữ liệu về an toàn cho trẻ sơ sinh.",
+                "recommendation": "Thận trọng khi cho con bú. Có thể dùng nếu lợi ích vượt trội nguy cơ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều 25-50%",
+            "notes": "Granisetron chuyển hóa chủ yếu qua gan (CYP3A4). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Đau đầu nặng",
+                "Táo bón nặng",
+                "Chóng mặt",
+                "QT kéo dài (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc",
+                "Supportive care",
+                "Theo dõi ECG nếu có QT kéo dài",
+                "Điều trị táo bón nếu cần"
+            ],
+            "monitoring": "ECG, dấu hiệu lâm sàng"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn",
+                "timing": "Uống 30 phút - 1 giờ trước hóa trị"
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất",
+                "infusion_rate": "Tiêm trực tiếp hoặc truyền trong 5 phút",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "1mg IV x 1 lần trước hóa trị hoặc 0.01mg/kg IV. Có thể tiêm trực tiếp hoặc truyền trong 5 phút."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Granisetron (Kytril)",
+                "UpToDate - Granisetron Drug Information",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
     },
     "Palonosetron": {
         "group": "Oncology - Anti-emetic (5-HT3 Antagonist)",
@@ -1261,7 +1755,82 @@ ONCOLOGY_DRUGS = {
             "clearance": "Gan (chuyển hóa qua CYP2D6, CYP3A4), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Apomorphine",
+                    "mechanism": "Palonosetron ức chế 5-HT3 receptor, có thể tăng tác dụng của apomorphine, gây hạ huyết áp nghiêm trọng.",
+                    "effect": "Tăng tác dụng apomorphine, hạ huyết áp nghiêm trọng, nguy cơ tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng palonosetron hoặc 5-HT3 antagonists"
+            ],
+            "tương_đối": [
+                "Bệnh nhân có tiền sử QT kéo dài - thận trọng, theo dõi ECG",
+                "Suy gan - thận trọng, có thể cần giảm liều"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Có thể dùng trong thai kỳ nếu cần. Không có bằng chứng dị tật thai nhi, nhưng dữ liệu còn hạn chế. Dùng với thận trọng.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Palonosetron bài tiết vào sữa mẹ ở nồng độ thấp. Chưa có đủ dữ liệu về an toàn cho trẻ sơ sinh.",
+                "recommendation": "Thận trọng khi cho con bú. Có thể dùng nếu lợi ích vượt trội nguy cơ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều 25-50%",
+            "notes": "Palonosetron chuyển hóa chủ yếu qua gan (CYP2D6, CYP3A4). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Đau đầu nặng",
+                "Táo bón nặng",
+                "Chóng mặt",
+                "QT kéo dài (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc",
+                "Supportive care",
+                "Theo dõi ECG nếu có QT kéo dài",
+                "Điều trị táo bón nếu cần"
+            ],
+            "monitoring": "ECG, dấu hiệu lâm sàng"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Không áp dụng",
+                "timing": "Không có dạng uống (chỉ có IV)"
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất",
+                "infusion_rate": "Tiêm trực tiếp hoặc truyền trong 30 giây",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "0.25mg IV x 1 lần trước hóa trị hoặc 0.075mg IV x 1 lần trước gây mê. Tiêm trực tiếp hoặc truyền trong 30 giây. Chỉ cần 1 liều (tác dụng kéo dài 48-72 giờ)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Palonosetron (Aloxi)",
+                "UpToDate - Palonosetron Drug Information",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
     },
 }
 

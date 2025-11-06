@@ -217,20 +217,20 @@ ENHANCED_FIELDS_SCHEMA = {
         "type": "dict",
         "required": False,
         "description": "Chống chỉ định phân loại thành tuyệt đối và tương đối",
-        "format": "Dictionary với absolute và relative",
+        "format": "Dictionary với tuyệt_đối và tương_đối",
         "guidelines": [
-            "Absolute: Chống chỉ định tuyệt đối (không được dùng)",
-            "Relative: Chống chỉ định tương đối (dùng với thận trọng)",
+            "tuyệt_đối: Chống chỉ định tuyệt đối (không được dùng)",
+            "tương_đối: Chống chỉ định tương đối (dùng với thận trọng)",
             "Nếu không có, có thể để None hoặc rỗng"
         ],
         "examples": [
             {
-                "absolute": [
+                "tuyệt_đối": [
                     "Dị ứng với thuốc (phản vệ)",
                     "Tam cá nguyệt 2-3 thai kỳ",
                     "Suy thận nặng (CrCl <15)"
                 ],
-                "relative": [
+                "tương_đối": [
                     "Suy thận trung bình (CrCl 15-30) - giảm liều",
                     "Suy gan - dùng với thận trọng"
                 ]
@@ -433,8 +433,8 @@ def create_enhanced_fields_template():
             "minor": []
         },
         "contraindications": {
-            "absolute": [],  # List chống chỉ định tuyệt đối
-            "relative": []  # List chống chỉ định tương đối
+            "tuyệt_đối": [],  # List chống chỉ định tuyệt đối
+            "tương_đối": []  # List chống chỉ định tương đối
         },
         "pregnancy_lactation": {
             "fda_category": "",  # A/B/C/D/X

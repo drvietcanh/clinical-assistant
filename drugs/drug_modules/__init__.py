@@ -17,6 +17,13 @@ from .oncology import ONCOLOGY_DRUGS
 from .emergency import EMERGENCY_DRUGS
 from .other import OTHER_DRUGS
 
+# Import split modules from other.py
+from .cardiovascular_other import CARDIOVASCULAR_OTHER_DRUGS
+from .infectious_other import INFECTIOUS_OTHER_DRUGS
+from .psychiatry_other import PSYCHIATRY_OTHER_DRUGS
+from .endocrinology_other import ENDOCRINOLOGY_OTHER_DRUGS
+from .miscellaneous import MISCELLANEOUS_DRUGS
+
 __all__ = [
     'CARDIOVASCULAR_DRUGS',
     'DIABETES_DRUGS',
@@ -31,5 +38,11 @@ __all__ = [
     'ONCOLOGY_DRUGS',
     'EMERGENCY_DRUGS',
     'OTHER_DRUGS',
+    # Split modules from other.py
+    'CARDIOVASCULAR_OTHER_DRUGS',
+    'INFECTIOUS_OTHER_DRUGS',
+    'PSYCHIATRY_OTHER_DRUGS',
+    'ENDOCRINOLOGY_OTHER_DRUGS',
+    'MISCELLANEOUS_DRUGS',
 ]
 
