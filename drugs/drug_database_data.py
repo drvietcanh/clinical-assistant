@@ -73,7 +73,126 @@ DRUG_DATABASE = {
             "clearance": "Thận (50-75%)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng"
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac)",
+                    "mechanism": "Giảm tác dụng giãn mạch, giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi chức năng thận, huyết áp. Tránh dùng lâu dài cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE inhibitor giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ lithium. Giảm liều lithium nếu cần."
+                },
+                {
+                    "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức",
+                    "management": "Thận trọng khi bắt đầu. Có thể cần giảm liều diuretic."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Allopurinol",
+                    "mechanism": "Tăng nguy cơ phản ứng dị ứng",
+                    "effect": "Tăng nguy cơ hội chứng Stevens-Johnson",
+                    "management": "Thận trọng. Theo dõi dấu hiệu dị ứng."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng ACE inhibitor",
+                "Có thai",
+                "Hẹp động mạch thận 2 bên",
+                "Phù mạch trước đây với ACE inhibitor"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <10) - không dùng",
+                "Suy thận trung bình (CrCl 10-30) - giảm liều, theo dõi sát",
+                "Tăng kali máu - điều chỉnh trước khi dùng",
+                "Hẹp động mạch thận 1 bên - thận trọng",
+                "Dùng kali-sparing diuretics - tăng nguy cơ tăng kali máu",
+                "Dùng NSAID - tăng nguy cơ suy thận"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây dị tật thai nhi (dị tật thận, xương sọ, phổi), thiểu ối, chậm phát triển thai nhi, và tử vong thai nhi. Nguy cơ cao nhất trong 3 tháng đầu và 3 tháng cuối. Ngừng ngay khi phát hiện có thai.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Captopril bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi (chủ yếu thải qua thận)",
+            "notes": "Captopril chủ yếu thải qua thận (50-75%). Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Nhịp tim chậm",
+                "Suy thận cấp",
+                "Tăng kali máu",
+                "Ho khan",
+                "Phù mạch"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Điều trị hạ huyết áp: Truyền dịch (normal saline), nâng chân, nếu cần: dopamine, norepinephrine",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Theo dõi huyết áp, nhịp tim, chức năng thận, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Nếu có phù mạch: Epinephrine, corticosteroids, antihistamines",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi ít nhất 6-12 giờ (do half-life ngắn)"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, chức năng thận (creatinine, BUN), điện giải (kali), dấu hiệu phù mạch, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống 1 giờ trước bữa ăn để tăng hấp thu. Dùng với thức ăn có thể giảm hấp thu 30-40%.",
+                "timing": "Uống 2-3 lần/ngày (do half-life ngắn). Khởi đầu với liều thấp (6.25-12.5mg), tăng dần. Uống đúng giờ mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Capoten (captopril)",
+                "UpToDate - Captopril: Drug information",
+                "SOLVD Study - New England Journal of Medicine",
+                "SAVE Study - New England Journal of Medicine",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (SOLVD, SAVE) and extensive clinical experience"
+        }
     },
     
     "Enalapril": {
@@ -136,7 +255,126 @@ DRUG_DATABASE = {
             "clearance": "Thận (60%), một phần qua gan"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng"
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac)",
+                    "mechanism": "Giảm tác dụng giãn mạch, giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi chức năng thận, huyết áp. Tránh dùng lâu dài cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE inhibitor giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ lithium. Giảm liều lithium nếu cần."
+                },
+                {
+                    "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức",
+                    "management": "Thận trọng khi bắt đầu. Có thể cần giảm liều diuretic."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Allopurinol",
+                    "mechanism": "Tăng nguy cơ phản ứng dị ứng",
+                    "effect": "Tăng nguy cơ hội chứng Stevens-Johnson",
+                    "management": "Thận trọng. Theo dõi dấu hiệu dị ứng."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng ACE inhibitor",
+                "Có thai",
+                "Hẹp động mạch thận 2 bên",
+                "Phù mạch trước đây với ACE inhibitor"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <10) - không dùng",
+                "Suy thận trung bình (CrCl 10-30) - giảm liều, theo dõi sát",
+                "Tăng kali máu - điều chỉnh trước khi dùng",
+                "Hẹp động mạch thận 1 bên - thận trọng",
+                "Dùng kali-sparing diuretics - tăng nguy cơ tăng kali máu",
+                "Dùng NSAID - tăng nguy cơ suy thận"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây dị tật thai nhi (dị tật thận, xương sọ, phổi), thiểu ối, chậm phát triển thai nhi, và tử vong thai nhi. Nguy cơ cao nhất trong 3 tháng đầu và 3 tháng cuối. Ngừng ngay khi phát hiện có thai.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Enalaprilat (hoạt chất) bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng (chuyển hóa một phần qua gan)",
+            "severe": "Thận trọng, giảm liều (chuyển hóa một phần qua gan)",
+            "notes": "Enalapril là prodrug chuyển hóa thành enalaprilat trong gan. Chủ yếu thải qua thận (60%) nhưng cần gan để chuyển hóa. Suy gan có thể làm giảm chuyển hóa thành hoạt chất."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Nhịp tim chậm",
+                "Suy thận cấp",
+                "Tăng kali máu",
+                "Ho khan",
+                "Phù mạch"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Điều trị hạ huyết áp: Truyền dịch (normal saline), nâng chân, nếu cần: dopamine, norepinephrine",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Theo dõi huyết áp, nhịp tim, chức năng thận, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Nếu có phù mạch: Epinephrine, corticosteroids, antihistamines",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi ít nhất 12-24 giờ (do half-life của enalaprilat dài: 30-35 giờ)"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, chức năng thận (creatinine, BUN), điện giải (kali), dấu hiệu phù mạch, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1-2 lần/ngày (do half-life dài). Khởi đầu với liều thấp (2.5-5mg), tăng dần. Uống đúng giờ mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "Enalaprilat IV: Pha với D5W hoặc normal saline. Nồng độ cuối: 0.25mg/ml",
+                "infusion_rate": "Tiêm trực tiếp qua 5 phút hoặc pha trong 50ml dịch truyền trong 15 phút",
+                "compatibility": ["D5W", "Normal saline"],
+                "incompatibility": [],
+                "notes": "Dạng IV (enalaprilat) chỉ dùng khi cần hạ huyết áp cấp. Theo dõi huyết áp sát."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Vasotec (enalapril)",
+                "UpToDate - Enalapril: Drug information",
+                "SOLVD Study - New England Journal of Medicine",
+                "CONSENSUS Study - New England Journal of Medicine",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (SOLVD, CONSENSUS) and extensive clinical experience"
+        }
     },
     
     "Lisinopril": {
@@ -197,7 +435,126 @@ DRUG_DATABASE = {
             "clearance": "Thận (100%), không chuyển hóa qua gan"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng"
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac)",
+                    "mechanism": "Giảm tác dụng giãn mạch, giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi chức năng thận, huyết áp. Tránh dùng lâu dài cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE inhibitor giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ lithium. Giảm liều lithium nếu cần."
+                },
+                {
+                    "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức",
+                    "management": "Thận trọng khi bắt đầu. Có thể cần giảm liều diuretic."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Allopurinol",
+                    "mechanism": "Tăng nguy cơ phản ứng dị ứng",
+                    "effect": "Tăng nguy cơ hội chứng Stevens-Johnson",
+                    "management": "Thận trọng. Theo dõi dấu hiệu dị ứng."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng ACE inhibitor",
+                "Có thai",
+                "Hẹp động mạch thận 2 bên",
+                "Phù mạch trước đây với ACE inhibitor"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <10) - không dùng",
+                "Suy thận trung bình (CrCl 10-30) - giảm liều, theo dõi sát",
+                "Tăng kali máu - điều chỉnh trước khi dùng",
+                "Hẹp động mạch thận 1 bên - thận trọng",
+                "Dùng kali-sparing diuretics - tăng nguy cơ tăng kali máu",
+                "Dùng NSAID - tăng nguy cơ suy thận"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây dị tật thai nhi (dị tật thận, xương sọ, phổi), thiểu ối, chậm phát triển thai nhi, và tử vong thai nhi. Nguy cơ cao nhất trong 3 tháng đầu và 3 tháng cuối. Ngừng ngay khi phát hiện có thai.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Lisinopril bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi (100% thải qua thận, không chuyển hóa qua gan)",
+            "notes": "Lisinopril 100% thải qua thận, không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Nhịp tim chậm",
+                "Suy thận cấp",
+                "Tăng kali máu",
+                "Ho khan",
+                "Phù mạch"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Điều trị hạ huyết áp: Truyền dịch (normal saline), nâng chân, nếu cần: dopamine, norepinephrine",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Theo dõi huyết áp, nhịp tim, chức năng thận, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Nếu có phù mạch: Epinephrine, corticosteroids, antihistamines",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi ít nhất 12-24 giờ (do half-life 12 giờ)"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, chức năng thận (creatinine, BUN), điện giải (kali), dấu hiệu phù mạch, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1 lần/ngày (do half-life dài và duration 24 giờ). Khởi đầu với liều thấp (5-10mg), tăng dần. Uống đúng giờ mỗi ngày. Ưu điểm: compliance tốt hơn do chỉ uống 1 lần/ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Zestril (lisinopril)",
+                "UpToDate - Lisinopril: Drug information",
+                "ATLAS Study - Circulation",
+                "GISSI-3 Study - The Lancet",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (ATLAS, GISSI-3) and extensive clinical experience"
+        }
     },
     
     # ARBs
@@ -259,7 +616,125 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa), thận (EXP-3174)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi"
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac)",
+                    "mechanism": "Giảm tác dụng giãn mạch, giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi chức năng thận, huyết áp. Tránh dùng lâu dài cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ARB giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ lithium. Giảm liều lithium nếu cần."
+                },
+                {
+                    "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức",
+                    "management": "Thận trọng khi bắt đầu. Có thể cần giảm liều diuretic."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Rifampin",
+                    "mechanism": "CYP2C9 inducer làm giảm chuyển hóa losartan",
+                    "effect": "Giảm hiệu quả hạ huyết áp",
+                    "management": "Theo dõi huyết áp. Có thể cần tăng liều losartan."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng ARB",
+                "Có thai",
+                "Hẹp động mạch thận 2 bên",
+                "Phù mạch trước đây với ARB"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <10) - không dùng",
+                "Suy thận trung bình (CrCl 10-30) - giảm liều, theo dõi sát",
+                "Tăng kali máu - điều chỉnh trước khi dùng",
+                "Hẹp động mạch thận 1 bên - thận trọng",
+                "Dùng kali-sparing diuretics - tăng nguy cơ tăng kali máu",
+                "Dùng NSAID - tăng nguy cơ suy thận"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây dị tật thai nhi (dị tật thận, xương sọ, phổi), thiểu ối, chậm phát triển thai nhi, và tử vong thai nhi. Nguy cơ cao nhất trong 3 tháng đầu và 3 tháng cuối. Ngừng ngay khi phát hiện có thai.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Losartan và EXP-3174 bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể giảm liều (chuyển hóa qua gan)",
+            "severe": "Giảm liều 50% (chuyển hóa qua gan)",
+            "notes": "Losartan là prodrug chuyển hóa thành EXP-3174 trong gan (CYP2C9). Suy gan có thể làm giảm chuyển hóa thành hoạt chất. EXP-3174 thải qua thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Nhịp tim chậm",
+                "Suy thận cấp",
+                "Tăng kali máu",
+                "Phù mạch (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Điều trị hạ huyết áp: Truyền dịch (normal saline), nâng chân, nếu cần: dopamine, norepinephrine",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Theo dõi huyết áp, nhịp tim, chức năng thận, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Nếu có phù mạch: Epinephrine, corticosteroids, antihistamines",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi ít nhất 12-24 giờ (do half-life của EXP-3174: 6-9 giờ)"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, chức năng thận (creatinine, BUN), điện giải (kali), dấu hiệu phù mạch, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1-2 lần/ngày (do half-life của EXP-3174: 6-9 giờ). Khởi đầu với liều thấp (25-50mg), tăng dần. Uống đúng giờ mỗi ngày. Ưu điểm: ít gây ho hơn ACE inhibitor."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cozaar (losartan)",
+                "UpToDate - Losartan: Drug information",
+                "ELITE-2 Study - The Lancet",
+                "LIFE Study - The Lancet",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (ELITE-2, LIFE) and extensive clinical experience"
+        }
     },
     
     # Beta-blockers
@@ -320,7 +795,143 @@ DRUG_DATABASE = {
             "clearance": "Gan (CYP2D6)"
                 },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Không ngừng đột ngột - có thể gây tăng huyết áp phản hồi, đau thắt ngực, nhồi máu cơ tim. Giảm liều từ từ trong 1-2 tuần. Suy tim cấp có thể xảy ra nếu dùng ở bệnh nhân suy tim không bù trừ"
+        "black_box_warnings": "Không ngừng đột ngột - có thể gây tăng huyết áp phản hồi, đau thắt ngực, nhồi máu cơ tim. Giảm liều từ từ trong 1-2 tuần. Suy tim cấp có thể xảy ra nếu dùng ở bệnh nhân suy tim không bù trừ",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Verapamil, Diltiazem",
+                    "mechanism": "Tác dụng hiệp đồng ức chế dẫn truyền nhĩ thất và co bóp tim",
+                    "effect": "Tăng nguy cơ block nhĩ thất độ 2-3, nhịp tim chậm nặng, suy tim",
+                    "management": "Thận trọng. Tránh dùng cùng nếu có thể. Nếu cần, dùng liều thấp và theo dõi ECG sát."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Insulin, các thuốc hạ đường huyết",
+                    "mechanism": "Che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run rẩy)",
+                    "effect": "Tăng nguy cơ hạ đường huyết không được phát hiện, nguy hiểm",
+                    "management": "Theo dõi đường huyết thường xuyên. Bệnh nhân đái tháo đường nên biết các triệu chứng khác của hạ đường huyết."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen)",
+                    "mechanism": "Giảm tác dụng hạ huyết áp",
+                    "effect": "Giảm hiệu quả điều trị tăng huyết áp",
+                    "management": "Thận trọng. Theo dõi huyết áp. Tránh dùng lâu dài cùng."
+                },
+                {
+                    "drug": "CYP2D6 inhibitors (fluoxetine, paroxetine, quinidine)",
+                    "mechanism": "Ức chế chuyển hóa metoprolol",
+                    "effect": "Tăng nồng độ metoprolol, tăng tác dụng phụ",
+                    "management": "Theo dõi nhịp tim, huyết áp. Có thể cần giảm liều metoprolol."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Diphenhydramine",
+                    "mechanism": "Tăng nguy cơ an thần",
+                    "effect": "Tăng tác dụng an thần",
+                    "management": "Thận trọng. Tránh lái xe hoặc vận hành máy móc."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Hen phế quản nặng",
+                "Block nhĩ thất độ 2-3",
+                "Suy tim cấp không bù",
+                "Nhịp tim chậm nặng (<50 bpm)",
+                "Sốc tim",
+                "Hội chứng sick sinus (trừ khi có máy tạo nhịp)"
+            ],
+            "relative": [
+                "COPD (thận trọng, có thể dùng liều thấp)",
+                "Đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+                "Bệnh mạch máu ngoại biên (có thể làm nặng)",
+                "Suy gan (giảm chuyển hóa)",
+                "Dùng với verapamil/diltiazem (tăng nguy cơ block AV)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng khi cần thiết. Có thể gây nhịp tim chậm thai nhi, hạ đường huyết, giảm thông khí. Theo dõi sát thai nhi. Ưu tiên dùng trong 3 tháng cuối nếu có thể.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Metoprolol bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu nhịp tim chậm hoặc hạ đường huyết."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể giảm liều (chuyển hóa qua gan)",
+            "severe": "Giảm liều 50% (chuyển hóa qua gan CYP2D6)",
+            "notes": "Metoprolol chuyển hóa qua gan (CYP2D6). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Nhịp tim chậm nặng (<40 bpm)",
+                "Block nhĩ thất độ 2-3",
+                "Hạ huyết áp nặng",
+                "Suy tim cấp",
+                "Co thắt phế quản",
+                "Hạ đường huyết",
+                "Ngất"
+            ],
+            "antidote": "Atropine (cho nhịp tim chậm), Glucagon (cho suy tim), Epinephrine (cho hạ huyết áp nặng)",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Điều trị nhịp tim chậm: Atropine 0.5-1mg IV, có thể lặp lại",
+                "Nếu atropine không hiệu quả: Glucagon 1-5mg IV (kích thích tim qua cơ chế không phụ thuộc beta-receptor)",
+                "Điều trị hạ huyết áp: Truyền dịch, nâng chân, nếu cần: dopamine, norepinephrine",
+                "Điều trị block AV: Atropine, nếu cần: máy tạo nhịp tạm thời",
+                "Điều trị co thắt phế quản: Albuterol, ipratropium",
+                "Điều trị hạ đường huyết: Glucose IV",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi ít nhất 12-24 giờ (do half-life 3-7 giờ)"
+            ],
+            "monitoring": "Nhịp tim, huyết áp, ECG (block AV, rối loạn nhịp), đường huyết, chức năng hô hấp, ý thức"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Glucagon",
+                    "mechanism": "Kích thích tim qua cơ chế không phụ thuộc beta-receptor (tăng cAMP)",
+                    "indication": "Suy tim, nhịp tim chậm nặng do beta-blocker",
+                    "dose": "1-5mg IV, có thể lặp lại"
+                },
+                {
+                    "name": "Atropine",
+                    "mechanism": "Ức chế phó giao cảm, tăng nhịp tim",
+                    "indication": "Nhịp tim chậm, block nhĩ thất",
+                    "dose": "0.5-1mg IV, có thể lặp lại"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Uống với thức ăn có thể giảm tác dụng phụ đầu tiên.",
+                "timing": "Tartrate: 2 lần/ngày. Succinate: 1 lần/ngày. Uống cùng giờ mỗi ngày. KHÔNG ngừng đột ngột - giảm liều dần dần trong 1-2 tuần."
+            },
+            "iv": {
+                "reconstitution": "Dùng trực tiếp từ lọ. Không pha loãng.",
+                "infusion_rate": "Tiêm trực tiếp 2.5-5mg mỗi 5 phút, tối đa 15mg. Theo dõi ECG và huyết áp sát.",
+                "compatibility": ["D5W", "Normal saline"],
+                "incompatibility": [],
+                "notes": "Dùng cho cấp cứu. Theo dõi ECG và huyết áp liên tục. Chuyển sang PO càng sớm càng tốt."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lopressor (metoprolol tartrate), Toprol-XL (metoprolol succinate)",
+                "UpToDate - Metoprolol: Drug information",
+                "MERIT-HF Study - The Lancet",
+                "Goteborg Metoprolol Trial - The Lancet",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (MERIT-HF, Goteborg) and extensive clinical experience"
+        }
     },
 
     "Propranolol": {
@@ -383,7 +994,144 @@ DRUG_DATABASE = {
               "clearance": "Gan (extensive first-pass metabolism), CYP2D6, CYP1A2"
           },
           "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-          "black_box_warnings": "KHÔNG được ngừng đột ngột ở bệnh nhân đau thắt ngực - có thể gây đau thắt ngực nặng, nhồi máu cơ tim, rối loạn nhịp tim nặng. Phải giảm liều dần dần trong 1-2 tuần"
+          "black_box_warnings": "KHÔNG được ngừng đột ngột ở bệnh nhân đau thắt ngực - có thể gây đau thắt ngực nặng, nhồi máu cơ tim, rối loạn nhịp tim nặng. Phải giảm liều dần dần trong 1-2 tuần",
+          "drug_interactions": {
+              "major": [
+                  {
+                      "drug": "Verapamil, Diltiazem",
+                      "mechanism": "Tác dụng hiệp đồng ức chế dẫn truyền nhĩ thất và co bóp tim",
+                      "effect": "Tăng nguy cơ block nhĩ thất độ 2-3, nhịp tim chậm nặng, suy tim",
+                      "management": "Thận trọng. Tránh dùng cùng nếu có thể. Nếu cần, dùng liều thấp và theo dõi ECG sát."
+                  }
+              ],
+              "moderate": [
+                  {
+                      "drug": "Insulin, các thuốc hạ đường huyết",
+                      "mechanism": "Che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run rẩy)",
+                      "effect": "Tăng nguy cơ hạ đường huyết không được phát hiện, nguy hiểm",
+                      "management": "Theo dõi đường huyết thường xuyên. Bệnh nhân đái tháo đường nên biết các triệu chứng khác của hạ đường huyết."
+                  },
+                  {
+                      "drug": "NSAIDs (ibuprofen, naproxen)",
+                      "mechanism": "Giảm tác dụng hạ huyết áp",
+                      "effect": "Giảm hiệu quả điều trị tăng huyết áp",
+                      "management": "Thận trọng. Theo dõi huyết áp. Tránh dùng lâu dài cùng."
+                  },
+                  {
+                      "drug": "CYP2D6, CYP1A2 inhibitors (fluoxetine, cimetidine, ciprofloxacin)",
+                      "mechanism": "Ức chế chuyển hóa propranolol",
+                      "effect": "Tăng nồng độ propranolol, tăng tác dụng phụ",
+                      "management": "Theo dõi nhịp tim, huyết áp. Có thể cần giảm liều propranolol."
+                  }
+              ],
+              "minor": [
+                  {
+                      "drug": "Chlorpromazine",
+                      "mechanism": "Tăng nguy cơ an thần",
+                      "effect": "Tăng tác dụng an thần",
+                      "management": "Thận trọng. Tránh lái xe hoặc vận hành máy móc."
+                  }
+              ]
+          },
+          "contraindications": {
+              "absolute": [
+                  "Hen phế quản",
+                  "Suy tim cấp",
+                  "Block nhĩ thất độ 2-3",
+                  "Nhịp tim chậm nặng (<50 bpm)",
+                  "Sốc tim",
+                  "Hội chứng sick sinus (trừ khi có máy tạo nhịp)"
+              ],
+              "relative": [
+                  "COPD (thận trọng, có thể dùng liều thấp nhưng nguy cơ co thắt phế quản cao hơn)",
+                  "Đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+                  "Bệnh mạch máu ngoại biên (có thể làm nặng)",
+                  "Suy gan (giảm chuyển hóa, extensive first-pass)",
+                  "Dùng với verapamil/diltiazem (tăng nguy cơ block AV)"
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "C",
+              "pregnancy_details": "Có thể dùng khi cần thiết. Có thể gây nhịp tim chậm thai nhi, hạ đường huyết, giảm thông khí. Theo dõi sát thai nhi. Ưu tiên dùng trong 3 tháng cuối nếu có thể.",
+              "lactation": {
+                  "safety": "Compatible",
+                  "details": "Propranolol bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                  "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu nhịp tim chậm hoặc hạ đường huyết."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Thận trọng, có thể giảm liều (extensive first-pass metabolism)",
+              "severe": "Giảm liều 50% (extensive first-pass metabolism qua gan)",
+              "notes": "Propranolol có extensive first-pass metabolism qua gan (CYP2D6, CYP1A2). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Nhịp tim chậm nặng (<40 bpm)",
+                  "Block nhĩ thất độ 2-3",
+                  "Hạ huyết áp nặng",
+                  "Suy tim cấp",
+                  "Co thắt phế quản nặng",
+                  "Hạ đường huyết",
+                  "Ngất",
+                  "Sốc tim"
+              ],
+              "antidote": "Atropine (cho nhịp tim chậm), Glucagon (cho suy tim), Epinephrine (cho hạ huyết áp nặng)",
+              "treatment": [
+                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                  "Than hoạt tính",
+                  "Điều trị nhịp tim chậm: Atropine 0.5-1mg IV, có thể lặp lại",
+                  "Nếu atropine không hiệu quả: Glucagon 1-5mg IV (kích thích tim qua cơ chế không phụ thuộc beta-receptor)",
+                  "Điều trị hạ huyết áp: Truyền dịch, nâng chân, nếu cần: dopamine, norepinephrine",
+                  "Điều trị block AV: Atropine, nếu cần: máy tạo nhịp tạm thời",
+                  "Điều trị co thắt phế quản: Albuterol, ipratropium (quan trọng vì non-selective)",
+                  "Điều trị hạ đường huyết: Glucose IV",
+                  "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                  "Theo dõi ít nhất 12-24 giờ (do half-life 3-5 giờ nhưng tác dụng kéo dài)"
+              ],
+              "monitoring": "Nhịp tim, huyết áp, ECG (block AV, rối loạn nhịp), đường huyết, chức năng hô hấp (đặc biệt quan trọng), ý thức"
+          },
+          "reversal_agents": {
+              "available": True,
+              "agents": [
+                  {
+                      "name": "Glucagon",
+                      "mechanism": "Kích thích tim qua cơ chế không phụ thuộc beta-receptor (tăng cAMP)",
+                      "indication": "Suy tim, nhịp tim chậm nặng do beta-blocker",
+                      "dose": "1-5mg IV, có thể lặp lại"
+                  },
+                  {
+                      "name": "Atropine",
+                      "mechanism": "Ức chế phó giao cảm, tăng nhịp tim",
+                      "indication": "Nhịp tim chậm, block nhĩ thất",
+                      "dose": "0.5-1mg IV, có thể lặp lại"
+                  }
+              ]
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Uống với thức ăn để giảm tác dụng phụ và tăng hấp thu (giảm first-pass metabolism).",
+                  "timing": "Uống 2-3 lần/ngày (do half-life ngắn). Uống cùng giờ mỗi ngày. KHÔNG ngừng đột ngột - giảm liều dần dần trong 1-2 tuần."
+              },
+              "iv": {
+                  "reconstitution": "Không có dạng IV thường dùng",
+                  "infusion_rate": "N/A",
+                  "compatibility": [],
+                  "incompatibility": [],
+                  "notes": "Chỉ có dạng uống thường dùng"
+              }
+          },
+          "references": {
+              "primary_sources": [
+                  "FDA Drug Label - Inderal (propranolol)",
+                  "UpToDate - Propranolol: Drug information",
+                  "Beta-Blocker Heart Attack Trial - JAMA",
+                  "ISIS-1 Study - The Lancet",
+                  "American Heart Association/American College of Cardiology guidelines"
+              ],
+              "last_updated": "2024-12-19",
+              "evidence_level": "High - Multiple large RCTs (BHAT, ISIS-1) and extensive clinical experience"
+          }
       },
     
     # Calcium Channel Blockers
@@ -437,7 +1185,122 @@ DRUG_DATABASE = {
             "clearance": "Gan (CYP3A4)"
                 },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Không có black box warning cụ thể. Thận trọng với bệnh nhân suy tim mất bù, hẹp van động mạch chủ nặng. Phù ngoại biên có thể xảy ra và thường không phản ánh suy tim"
+        "black_box_warnings": "Không có black box warning cụ thể. Thận trọng với bệnh nhân suy tim mất bù, hẹp van động mạch chủ nặng. Phù ngoại biên có thể xảy ra và thường không phản ánh suy tim",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Simvastatin, Lovastatin",
+                    "mechanism": "Ức chế CYP3A4 chung, tăng nồng độ statin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân, tăng men gan",
+                    "management": "Giảm liều simvastatin/lovastatin. Theo dõi CK, men gan. Có thể dùng atorvastatin hoặc rosuvastatin thay thế."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Grapefruit juice",
+                    "mechanism": "Ức chế CYP3A4",
+                    "effect": "Tăng nồng độ amlodipine, tăng tác dụng phụ",
+                    "management": "Tránh uống grapefruit juice. Có thể dùng nước cam thay thế."
+                },
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, itraconazole, erythromycin, clarithromycin)",
+                    "mechanism": "Ức chế chuyển hóa amlodipine",
+                    "effect": "Tăng nồng độ amlodipine, tăng tác dụng phụ",
+                    "management": "Thận trọng. Theo dõi huyết áp, phù chân. Có thể cần giảm liều amlodipine."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Sildenafil, Tadalafil",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp",
+                    "management": "Thận trọng. Theo dõi huyết áp. Không phải chống chỉ định."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng amlodipine hoặc dihydropyridine calcium channel blockers",
+                "Sốc tim",
+                "Suy tim mất bù nặng (NYHA class IV)"
+            ],
+            "relative": [
+                "Hẹp van động mạch chủ nặng - có thể gây suy tim",
+                "Suy gan - giảm chuyển hóa, tăng nồng độ",
+                "Suy tim nhẹ đến trung bình - thận trọng",
+                "Phù ngoại biên - tác dụng phụ thường gặp nhưng không nguy hiểm"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng khi cần thiết. Nghiên cứu trên động vật cho thấy có thể gây hại cho thai nhi. Không có nghiên cứu đầy đủ trên người. Ưu tiên dùng trong 3 tháng cuối nếu có thể. Theo dõi sát thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Amlodipine bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều (chuyển hóa qua gan)",
+            "severe": "Giảm liều 50% (chuyển hóa qua gan CYP3A4)",
+            "notes": "Amlodipine chuyển hóa qua gan (CYP3A4). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ. Giảm liều ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nặng",
+                "Nhịp tim nhanh phản xạ",
+                "Phù ngoại biên",
+                "Chóng mặt, ngất",
+                "Sốc tim (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Calcium (cho block calci)",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Điều trị hạ huyết áp: Truyền dịch (normal saline), nâng chân, nếu cần: dopamine, norepinephrine",
+                "Calcium gluconate hoặc calcium chloride IV (đối kháng với calcium channel blocker)",
+                "Atropine nếu có nhịp tim chậm",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi ít nhất 24-48 giờ (do half-life rất dài: 30-50 giờ)"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, ECG, dấu hiệu sống, ý thức"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Calcium gluconate hoặc Calcium chloride",
+                    "mechanism": "Đối kháng với calcium channel blocker bằng cách tăng nồng độ calci ngoại bào",
+                    "indication": "Hạ huyết áp nặng, block calci",
+                    "dose": "Calcium gluconate 10%: 10-30ml IV, hoặc Calcium chloride 10%: 5-10ml IV"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1 lần/ngày (do half-life rất dài: 30-50 giờ). Uống cùng giờ mỗi ngày. Tác dụng chậm, đạt đỉnh sau 6-12 giờ."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Norvasc (amlodipine)",
+                "UpToDate - Amlodipine: Drug information",
+                "ALLHAT Study - JAMA",
+                "ASCOT Study - The Lancet",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (ALLHAT, ASCOT) and extensive clinical experience"
+        }
     },
 
     "Nifedipine": {
@@ -1390,7 +2253,129 @@ DRUG_DATABASE = {
             "clearance": "Thận (chủ yếu)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Nhiễm toan lactic - có thể tử vong. Nguy cơ cao ở suy thận, suy tim, suy gan, nhiễm trùng nặng"
+        "black_box_warnings": "Nhiễm toan lactic - có thể tử vong. Nguy cơ cao ở suy thận, suy tim, suy gan, nhiễm trùng nặng",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc cản quang (iodinated contrast media)",
+                    "mechanism": "Tăng nguy cơ nhiễm toan lactic do suy thận cấp",
+                    "effect": "Nguy cơ nhiễm toan lactic, suy thận cấp, tử vong",
+                    "management": "NGỪNG METFORMIN 48 GIỜ TRƯỚC và 48 GIỜ SAU khi dùng thuốc cản quang. Đánh giá chức năng thận trước khi dùng lại."
+                },
+                {
+                    "drug": "Rượu (ethanol)",
+                    "mechanism": "Tăng sản xuất lactate, giảm chuyển hóa lactate",
+                    "effect": "Tăng nguy cơ nhiễm toan lactic",
+                    "management": "TRÁNH RƯỢU hoàn toàn khi dùng metformin. Cảnh báo bệnh nhân về nguy cơ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Furosemide",
+                    "mechanism": "Có thể tăng nồng độ metformin, tăng nguy cơ nhiễm toan lactic",
+                    "effect": "Tăng nguy cơ nhiễm toan lactic",
+                    "management": "Thận trọng. Theo dõi chức năng thận, lactate. Có thể cần giảm liều metformin."
+                },
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Giảm thải trừ metformin qua thận",
+                    "effect": "Tăng nồng độ metformin, tăng nguy cơ độc tính",
+                    "management": "Thận trọng. Theo dõi lactate. Có thể cần giảm liều metformin."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Metformin có thể tăng nhẹ tác dụng chống đông",
+                    "effect": "Tăng nhẹ INR",
+                    "management": "Theo dõi INR. Điều chỉnh liều warfarin nếu cần."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Suy thận nặng (CrCl <30 hoặc eGFR <30)",
+                "Nhiễm toan lactic",
+                "Suy gan nặng",
+                "Suy tim nặng (NYHA class III-IV)",
+                "Dùng thuốc cản quang (tạm ngừng 48h trước và sau)",
+                "Nhiễm trùng nặng (tăng nguy cơ nhiễm toan lactic)",
+                "Dị ứng metformin"
+            ],
+            "relative": [
+                "Suy thận trung bình (CrCl 30-60) - giảm liều, theo dõi sát",
+                "Suy gan nhẹ đến trung bình - thận trọng",
+                "Suy tim nhẹ đến trung bình - thận trọng",
+                "Người cao tuổi - tăng nguy cơ nhiễm toan lactic",
+                "Uống rượu - tăng nguy cơ nhiễm toan lactic",
+                "Phẫu thuật lớn - tạm ngừng trước và sau phẫu thuật"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Không có bằng chứng về nguy cơ gây dị tật thai nhi ở động vật. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Được sử dụng rộng rãi trong thai kỳ, đặc biệt ở bệnh nhân đái tháo đường thai kỳ và PCOS. Theo dõi đường huyết chặt chẽ trong thai kỳ. Có thể dùng với insulin.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Metformin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. An toàn và được khuyến nghị trong thời kỳ cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Metformin chuyển hóa một phần ở gan. Suy gan làm giảm chuyển hóa lactate, tăng nguy cơ nhiễm toan lactic. Không dùng ở suy gan nặng. Thận trọng ở suy gan nhẹ đến trung bình."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, tiêu chảy",
+                "Đau bụng",
+                "Nhiễm toan lactic (pH <7.35, lactate >5 mmol/L) - nguy hiểm",
+                "Hạ đường huyết (hiếm)",
+                "Suy thận cấp",
+                "Hôn mê, tử vong (nếu nhiễm toan lactic nặng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và lọc máu",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính (hiệu quả hạn chế)",
+                "Điều trị nhiễm toan lactic: Bicarbonate IV, lọc máu (hemodialysis) để loại bỏ metformin",
+                "Hỗ trợ hô hấp và tuần hoàn",
+                "Theo dõi lactate, pH máu, điện giải, chức năng thận",
+                "Lọc máu nếu lactate >5 mmol/L hoặc nhiễm toan lactic nặng",
+                "Điều trị hạ đường huyết nếu có: Glucose IV",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Lactate máu, pH máu, điện giải, chức năng thận, glucose máu, dấu hiệu sống, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với bữa ăn để giảm buồn nôn, tiêu chảy. Có thể giảm tác dụng phụ đường tiêu hóa.",
+                "timing": "Uống 2-3 lần/ngày với bữa ăn. Dạng extended-release: 1 lần/ngày với bữa ăn tối. Khởi đầu với liều thấp (500mg x 2 lần/ngày), tăng dần để giảm tác dụng phụ."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Glucophage (metformin)",
+                "UpToDate - Metformin: Drug information",
+                "UK Prospective Diabetes Study (UKPDS)",
+                "American Diabetes Association guidelines",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (UKPDS) and extensive clinical experience"
+        }
     },
     
     "Glibenclamide": {
@@ -1458,7 +2443,144 @@ DRUG_DATABASE = {
             "clearance": "Gan: chuyển hóa qua CYP2C9 và CYP3A4 thành metabolites không hoạt động. Thận: bài tiết một phần nguyên dạng và metabolites. Thời gian bán thải tăng ở suy thận (tăng nguy cơ hạ đường huyết)."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng, có thể gây tử vong. Nguy cơ tăng ở người cao tuổi, suy thận, suy gan, bỏ bữa, uống rượu. Bệnh nhân cần biết dấu hiệu và cách xử trí hạ đường huyết. Không dùng ở đái tháo đường type 1 hoặc nhiễm toan ceton."
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng, có thể gây tử vong. Nguy cơ tăng ở người cao tuổi, suy thận, suy gan, bỏ bữa, uống rượu. Bệnh nhân cần biết dấu hiệu và cách xử trí hạ đường huyết. Không dùng ở đái tháo đường type 1 hoặc nhiễm toan ceton.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rượu (ethanol)",
+                    "mechanism": "Ức chế sản xuất glucose ở gan, tăng nguy cơ hạ đường huyết",
+                    "effect": "Hạ đường huyết nghiêm trọng, có thể kéo dài",
+                    "management": "TRÁNH RƯỢU hoàn toàn khi dùng glibenclamide. Cảnh báo bệnh nhân về nguy cơ."
+                },
+                {
+                    "drug": "Beta-blockers (propranolol, metoprolol)",
+                    "mechanism": "Che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run)",
+                    "effect": "Khó nhận biết hạ đường huyết, tăng nguy cơ hạ đường huyết nặng",
+                    "management": "Thận trọng. Theo dõi đường huyết chặt chẽ. Bệnh nhân cần biết các triệu chứng hạ đường huyết không bị che dấu (vã mồ hôi, lú lẫn)."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Glibenclamide có thể tăng tác dụng chống đông",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "CYP2C9 inhibitors (fluconazole, amiodarone)",
+                    "mechanism": "Ức chế chuyển hóa glibenclamide, tăng nồng độ",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Thận trọng. Theo dõi đường huyết. Có thể cần giảm liều glibenclamide."
+                },
+                {
+                    "drug": "Salicylates (aspirin liều cao)",
+                    "mechanism": "Tăng tác dụng giảm đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Thận trọng. Theo dõi đường huyết."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Chloramphenicol",
+                    "mechanism": "Tăng nồng độ glibenclamide",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Thận trọng. Theo dõi đường huyết."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Dị ứng glibenclamide hoặc sulfonylurea",
+                "Suy thận nặng (CrCl <30) - tăng nguy cơ hạ đường huyết nghiêm trọng"
+            ],
+            "relative": [
+                "Suy gan nặng - tăng nguy cơ hạ đường huyết",
+                "Người cao tuổi - tăng nguy cơ hạ đường huyết",
+                "Suy thận trung bình (CrCl 30-60) - giảm liều, theo dõi sát",
+                "Có thai - có thể gây hạ đường huyết ở trẻ sơ sinh",
+                "Bỏ bữa thường xuyên - tăng nguy cơ hạ đường huyết",
+                "Uống rượu - tăng nguy cơ hạ đường huyết nghiêm trọng",
+                "Dùng beta-blocker - che dấu triệu chứng hạ đường huyết"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, nhưng THƯỜNG TRÁNH DÙNG. Sulfonylureas có thể gây hạ đường huyết ở trẻ sơ sinh. Insulin là lựa chọn ưu tiên trong thai kỳ. Nếu dùng, theo dõi đường huyết chặt chẽ và ngừng trước khi sinh để tránh hạ đường huyết ở trẻ sơ sinh.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Glibenclamide bài tiết vào sữa mẹ ở nồng độ thấp. Ít có nguy cơ gây hạ đường huyết ở trẻ bú mẹ do nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ. Theo dõi dấu hiệu hạ đường huyết ở trẻ (quấy khóc, bú kém, vã mồ hôi)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng, giảm liều nhẹ",
+            "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan và đường huyết",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Glibenclamide chuyển hóa ở gan qua CYP2C9 và CYP3A4. Suy gan làm giảm chuyển hóa, tăng nồng độ, tăng nguy cơ hạ đường huyết nghiêm trọng. Không dùng ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ đường huyết: run, vã mồ hôi, nhịp tim nhanh, đói, lú lẫn, co giật, hôn mê",
+                "Hạ đường huyết có thể kéo dài (do thời gian bán thải dài)",
+                "Hạ đường huyết nghiêm trọng có thể gây tử vong hoặc tổn thương não vĩnh viễn"
+            ],
+            "antidote": "Glucose (đường uống hoặc IV)",
+            "treatment": [
+                "Nếu tỉnh táo: Glucose 15-20g PO (nước đường, nước ngọt, kẹo)",
+                "Nếu hôn mê hoặc không thể uống: Dextrose 50% 50ml IV hoặc glucagon 1mg SC/IM",
+                "Theo dõi đường huyết mỗi 15-30 phút trong ít nhất 4-6 giờ (do thời gian bán thải dài)",
+                "Duy trì glucose IV nếu cần (dextrose 5% hoặc 10% truyền liên tục)",
+                "Theo dõi ít nhất 24 giờ (do thời gian bán thải dài, có thể tái phát hạ đường huyết)",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nhưng ưu tiên điều trị hạ đường huyết)",
+                "Than hoạt tính (hiệu quả hạn chế do hấp thu nhanh)",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi ý thức, dấu hiệu sống"
+            ],
+            "monitoring": "Đường huyết (mỗi 15-30 phút trong ít nhất 4-6 giờ), ý thức, dấu hiệu sống, điện giải, chức năng thận"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Glucose",
+                    "route": "PO hoặc IV",
+                    "dose": "15-20g PO hoặc dextrose 50% 50ml IV",
+                    "notes": "Điều trị hạ đường huyết ngay lập tức"
+                },
+                {
+                    "agent": "Glucagon",
+                    "route": "SC hoặc IM",
+                    "dose": "1mg SC/IM",
+                    "notes": "Nếu không thể truyền IV, dùng glucagon để tăng đường huyết"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc trước bữa ăn (15-30 phút trước bữa ăn) để tránh hạ đường huyết. Không bỏ bữa sau khi uống.",
+                "timing": "Uống 1-2 lần/ngày, thường trước bữa sáng và/hoặc bữa tối. Khởi đầu với liều thấp (2.5-5mg/ngày) và tăng dần. Uống đúng giờ mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Glyburide (glibenclamide)",
+                "UpToDate - Glyburide: Drug information",
+                "UK Prospective Diabetes Study (UKPDS)",
+                "American Diabetes Association guidelines",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (UKPDS) and extensive clinical experience"
+        }
     },
     
     "Gliclazide": {
@@ -1514,7 +2636,135 @@ DRUG_DATABASE = {
               "clearance": "Gan (CYP2C9), thận (metabolites)"
           },
           "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-          "black_box_warnings": "Hạ đường huyết có thể gây nguy hiểm tính mạng, đặc biệt ở bệnh nhân suy thận, suy gan, người già. Bệnh nhân cần biết dấu hiệu và cách xử trí hạ đường huyết"
+          "black_box_warnings": "Hạ đường huyết có thể gây nguy hiểm tính mạng, đặc biệt ở bệnh nhân suy thận, suy gan, người già. Bệnh nhân cần biết dấu hiệu và cách xử trí hạ đường huyết",
+          "drug_interactions": {
+              "major": [
+                  {
+                      "drug": "Rượu (ethanol)",
+                      "mechanism": "Ức chế sản xuất glucose ở gan, tăng nguy cơ hạ đường huyết",
+                      "effect": "Hạ đường huyết nghiêm trọng",
+                      "management": "TRÁNH RƯỢU hoàn toàn khi dùng gliclazide. Cảnh báo bệnh nhân về nguy cơ."
+                  },
+                  {
+                      "drug": "Beta-blockers (propranolol, metoprolol)",
+                      "mechanism": "Che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run)",
+                      "effect": "Khó nhận biết hạ đường huyết",
+                      "management": "Thận trọng. Theo dõi đường huyết chặt chẽ."
+                  }
+              ],
+              "moderate": [
+                  {
+                      "drug": "CYP2C9 inhibitors (fluconazole, amiodarone)",
+                      "mechanism": "Ức chế chuyển hóa gliclazide, tăng nồng độ",
+                      "effect": "Tăng nguy cơ hạ đường huyết",
+                      "management": "Thận trọng. Theo dõi đường huyết. Có thể cần giảm liều gliclazide."
+                  },
+                  {
+                      "drug": "Salicylates (aspirin liều cao)",
+                      "mechanism": "Tăng tác dụng giảm đường huyết",
+                      "effect": "Tăng nguy cơ hạ đường huyết",
+                      "management": "Thận trọng. Theo dõi đường huyết."
+                  }
+              ],
+              "minor": [
+                  {
+                      "drug": "Chloramphenicol",
+                      "mechanism": "Tăng nồng độ gliclazide",
+                      "effect": "Tăng nguy cơ hạ đường huyết",
+                      "management": "Thận trọng. Theo dõi đường huyết."
+                  }
+              ]
+          },
+          "contraindications": {
+              "absolute": [
+                  "Đái tháo đường type 1",
+                  "Nhiễm toan ceton do đái tháo đường",
+                  "Dị ứng gliclazide hoặc sulfonylurea",
+                  "Suy thận nặng (CrCl <30) - tăng nguy cơ hạ đường huyết"
+              ],
+              "relative": [
+                  "Suy gan nặng - tăng nguy cơ hạ đường huyết",
+                  "Người cao tuổi - tăng nguy cơ hạ đường huyết",
+                  "Suy thận trung bình (CrCl 30-60) - giảm liều, theo dõi sát",
+                  "Có thai - có thể gây hạ đường huyết ở trẻ sơ sinh",
+                  "Bỏ bữa thường xuyên - tăng nguy cơ hạ đường huyết",
+                  "Uống rượu - tăng nguy cơ hạ đường huyết"
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "C",
+              "pregnancy_details": "Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, nhưng THƯỜNG TRÁNH DÙNG. Sulfonylureas có thể gây hạ đường huyết ở trẻ sơ sinh. Insulin là lựa chọn ưu tiên trong thai kỳ. Nếu dùng, theo dõi đường huyết chặt chẽ và ngừng trước khi sinh.",
+              "lactation": {
+                  "safety": "Compatible",
+                  "details": "Gliclazide bài tiết vào sữa mẹ ở nồng độ thấp. Ít có nguy cơ gây hạ đường huyết ở trẻ bú mẹ do nồng độ thấp.",
+                  "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ. Theo dõi dấu hiệu hạ đường huyết ở trẻ."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Thận trọng, giảm liều nhẹ",
+              "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan và đường huyết",
+              "severe": "CHỐNG CHỈ ĐỊNH",
+              "notes": "Gliclazide chuyển hóa ở gan qua CYP2C9. Suy gan làm giảm chuyển hóa, tăng nồng độ, tăng nguy cơ hạ đường huyết. Không dùng ở suy gan nặng."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Hạ đường huyết: run, vã mồ hôi, nhịp tim nhanh, đói, lú lẫn, co giật, hôn mê",
+                  "Hạ đường huyết ít kéo dài hơn glibenclamide (do thời gian bán thải ngắn hơn)"
+              ],
+              "antidote": "Glucose (đường uống hoặc IV)",
+              "treatment": [
+                  "Nếu tỉnh táo: Glucose 15-20g PO (nước đường, nước ngọt, kẹo)",
+                  "Nếu hôn mê hoặc không thể uống: Dextrose 50% 50ml IV hoặc glucagon 1mg SC/IM",
+                  "Theo dõi đường huyết mỗi 15-30 phút trong ít nhất 4 giờ",
+                  "Duy trì glucose IV nếu cần (dextrose 5% hoặc 10% truyền liên tục)",
+                  "Theo dõi ít nhất 12-24 giờ (thời gian ngắn hơn glibenclamide)",
+                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nhưng ưu tiên điều trị hạ đường huyết)",
+                  "Than hoạt tính (hiệu quả hạn chế)",
+                  "Hỗ trợ hô hấp và tuần hoàn nếu cần"
+              ],
+              "monitoring": "Đường huyết (mỗi 15-30 phút trong ít nhất 4 giờ), ý thức, dấu hiệu sống, điện giải"
+          },
+          "reversal_agents": {
+              "available": True,
+              "agents": [
+                  {
+                      "agent": "Glucose",
+                      "route": "PO hoặc IV",
+                      "dose": "15-20g PO hoặc dextrose 50% 50ml IV",
+                      "notes": "Điều trị hạ đường huyết ngay lập tức"
+                  },
+                  {
+                      "agent": "Glucagon",
+                      "route": "SC hoặc IM",
+                      "dose": "1mg SC/IM",
+                      "notes": "Nếu không thể truyền IV, dùng glucagon để tăng đường huyết"
+                  }
+              ]
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Uống với thức ăn hoặc trước bữa ăn (15-30 phút trước bữa ăn) để tránh hạ đường huyết. Không bỏ bữa sau khi uống.",
+                  "timing": "Uống 1-2 lần/ngày, thường trước bữa sáng và/hoặc bữa tối. Dạng modified-release: 1 lần/ngày với bữa sáng. Khởi đầu với liều thấp và tăng dần."
+              },
+              "iv": {
+                  "reconstitution": "Không có dạng IV",
+                  "infusion_rate": "N/A",
+                  "compatibility": [],
+                  "incompatibility": [],
+                  "notes": "Chỉ có dạng uống"
+              }
+          },
+          "references": {
+              "primary_sources": [
+                  "FDA Drug Label - Diamicron (gliclazide)",
+                  "UpToDate - Gliclazide: Drug information",
+                  "UK Prospective Diabetes Study (UKPDS)",
+                  "American Diabetes Association guidelines",
+                  "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+              ],
+              "last_updated": "2024-12-19",
+              "evidence_level": "High - Multiple large RCTs (UKPDS) and extensive clinical experience"
+          }
       },
       
       "Insulin": {
@@ -1656,7 +2906,123 @@ DRUG_DATABASE = {
             "clearance": "Gan: chuyển hóa qua glucuronidation (phần lớn). Thận: bài tiết một phần nguyên dạng và metabolites. Không cần điều chỉnh liều ở suy gan, nhưng không dùng nếu eGFR <20."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Insulin, Sulfonylurea (glibenclamide, gliclazide)",
+                    "mechanism": "Tác dụng hiệp đồng giảm đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Giảm liều insulin hoặc sulfonylurea khi bắt đầu empagliflozin. Theo dõi đường huyết chặt chẽ."
+                },
+                {
+                    "drug": "Loop diuretics (furosemide, torsemide)",
+                    "mechanism": "Tăng bài tiết natri và nước",
+                    "effect": "Tăng nguy cơ mất nước, hạ huyết áp, suy thận cấp",
+                    "management": "Thận trọng. Theo dõi huyết áp, cân nặng, chức năng thận. Có thể cần giảm liều diuretic."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Empagliflozin có thể tăng nhẹ nồng độ digoxin",
+                    "effect": "Tăng nguy cơ độc tính digoxin",
+                    "management": "Theo dõi nồng độ digoxin, ECG. Điều chỉnh liều digoxin nếu cần."
+                },
+                {
+                    "drug": "Thiazide diuretics (hydrochlorothiazide)",
+                    "mechanism": "Tăng bài tiết natri và nước",
+                    "effect": "Tăng nguy cơ mất nước, hạ huyết áp",
+                    "management": "Thận trọng. Theo dõi huyết áp, cân nặng."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "UDP-glucuronosyltransferase (UGT) inducers",
+                    "mechanism": "Có thể giảm nồng độ empagliflozin",
+                    "effect": "Giảm hiệu quả empagliflozin",
+                    "management": "Thận trọng. Theo dõi đường huyết."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Suy thận nặng (eGFR <20)",
+                "Đang lọc máu",
+                "Dị ứng empagliflozin"
+            ],
+            "relative": [
+                "Nhiễm trùng đường tiết niệu tái phát - tăng nguy cơ nhiễm trùng",
+                "Suy tim nặng - tăng nguy cơ mất nước",
+                "Người cao tuổi - tăng nguy cơ mất nước, hạ huyết áp",
+                "Dùng diuretics - tăng nguy cơ mất nước",
+                "Nhiễm trùng đường sinh dục tái phát - tăng nguy cơ nhiễm trùng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Không có nghiên cứu đầy đủ ở người. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Không nên dùng trong 3 tháng đầu trừ khi thực sự cần thiết. Có thể gây hạ đường huyết ở thai nhi. Theo dõi đường huyết chặt chẽ trong thai kỳ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Empagliflozin bài tiết vào sữa mẹ ở nồng độ thấp. Không có dữ liệu đầy đủ về an toàn ở trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể. Nếu cần dùng, theo dõi trẻ chặt chẽ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi (không chuyển hóa đáng kể qua gan)",
+            "notes": "Empagliflozin chủ yếu chuyển hóa qua glucuronidation ở gan, nhưng không cần điều chỉnh liều ở suy gan nhẹ đến trung bình. Chưa có nghiên cứu đầy đủ ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ đường huyết",
+                "Mất nước",
+                "Hạ huyết áp",
+                "Nhiễm toan ceton (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Điều trị hạ đường huyết: Glucose 15-20g PO hoặc dextrose IV",
+                "Bù dịch nếu mất nước, hạ huyết áp",
+                "Theo dõi đường huyết, điện giải",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính không hiệu quả (do không hấp thu qua đường tiêu hóa tốt)",
+                "Theo dõi chức năng thận",
+                "Nếu có nhiễm toan ceton: điều trị theo protocol DKA"
+            ],
+            "monitoring": "Đường huyết, huyết áp, cân nặng, chức năng thận, điện giải, dấu hiệu nhiễm toan ceton"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.",
+                "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày. Nên uống vào cùng một thời điểm mỗi ngày để dễ nhớ."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Jardiance (empagliflozin)",
+                "EMPA-REG OUTCOME Study - New England Journal of Medicine",
+                "EMPEROR-Reduced Study - New England Journal of Medicine",
+                "EMPEROR-Preserved Study - New England Journal of Medicine",
+                "UpToDate - Empagliflozin: Drug information"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (EMPA-REG OUTCOME, EMPEROR-Reduced, EMPEROR-Preserved)"
+        }
     },
     
     "Dapagliflozin": {
@@ -1727,7 +3093,122 @@ DRUG_DATABASE = {
             "clearance": "Gan: chuyển hóa qua glucuronidation (phần lớn). Thận: bài tiết một phần nguyên dạng và metabolites. Không cần điều chỉnh liều ở suy gan, nhưng không dùng nếu eGFR <25."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Insulin, Sulfonylurea (glibenclamide, gliclazide)",
+                    "mechanism": "Tác dụng hiệp đồng giảm đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Giảm liều insulin hoặc sulfonylurea khi bắt đầu dapagliflozin. Theo dõi đường huyết chặt chẽ."
+                },
+                {
+                    "drug": "Loop diuretics (furosemide, torsemide)",
+                    "mechanism": "Tăng bài tiết natri và nước",
+                    "effect": "Tăng nguy cơ mất nước, hạ huyết áp, suy thận cấp",
+                    "management": "Thận trọng. Theo dõi huyết áp, cân nặng, chức năng thận. Có thể cần giảm liều diuretic."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Dapagliflozin có thể tăng nhẹ nồng độ digoxin",
+                    "effect": "Tăng nguy cơ độc tính digoxin",
+                    "management": "Theo dõi nồng độ digoxin, ECG. Điều chỉnh liều digoxin nếu cần."
+                },
+                {
+                    "drug": "Thiazide diuretics (hydrochlorothiazide)",
+                    "mechanism": "Tăng bài tiết natri và nước",
+                    "effect": "Tăng nguy cơ mất nước, hạ huyết áp",
+                    "management": "Thận trọng. Theo dõi huyết áp, cân nặng."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "UDP-glucuronosyltransferase (UGT) inducers",
+                    "mechanism": "Có thể giảm nồng độ dapagliflozin",
+                    "effect": "Giảm hiệu quả dapagliflozin",
+                    "management": "Thận trọng. Theo dõi đường huyết."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Suy thận nặng (eGFR <25)",
+                "Đang lọc máu",
+                "Dị ứng dapagliflozin"
+            ],
+            "relative": [
+                "Nhiễm trùng đường tiết niệu tái phát - tăng nguy cơ nhiễm trùng",
+                "Suy tim nặng - tăng nguy cơ mất nước",
+                "Người cao tuổi - tăng nguy cơ mất nước, hạ huyết áp",
+                "Dùng diuretics - tăng nguy cơ mất nước",
+                "Nhiễm trùng đường sinh dục tái phát - tăng nguy cơ nhiễm trùng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Không có nghiên cứu đầy đủ ở người. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Không nên dùng trong 3 tháng đầu trừ khi thực sự cần thiết. Có thể gây hạ đường huyết ở thai nhi. Theo dõi đường huyết chặt chẽ trong thai kỳ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Dapagliflozin bài tiết vào sữa mẹ ở nồng độ thấp. Không có dữ liệu đầy đủ về an toàn ở trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể. Nếu cần dùng, theo dõi trẻ chặt chẽ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi (không chuyển hóa đáng kể qua gan)",
+            "notes": "Dapagliflozin chủ yếu chuyển hóa qua glucuronidation ở gan, nhưng không cần điều chỉnh liều ở suy gan nhẹ đến trung bình. Chưa có nghiên cứu đầy đủ ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ đường huyết",
+                "Mất nước",
+                "Hạ huyết áp",
+                "Nhiễm toan ceton (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Điều trị hạ đường huyết: Glucose 15-20g PO hoặc dextrose IV",
+                "Bù dịch nếu mất nước, hạ huyết áp",
+                "Theo dõi đường huyết, điện giải",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính không hiệu quả (do không hấp thu qua đường tiêu hóa tốt)",
+                "Theo dõi chức năng thận",
+                "Nếu có nhiễm toan ceton: điều trị theo protocol DKA"
+            ],
+            "monitoring": "Đường huyết, huyết áp, cân nặng, chức năng thận, điện giải, dấu hiệu nhiễm toan ceton"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.",
+                "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày. Nên uống vào cùng một thời điểm mỗi ngày để dễ nhớ."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Forxiga (dapagliflozin)",
+                "DECLARE-TIMI 58 Study - New England Journal of Medicine",
+                "DAPA-HF Study - New England Journal of Medicine",
+                "UpToDate - Dapagliflozin: Drug information"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (DECLARE-TIMI 58, DAPA-HF)"
+        }
     },
     
     "Sitagliptin": {
@@ -1796,7 +3277,107 @@ DRUG_DATABASE = {
             "clearance": "Thận: bài tiết chủ yếu qua thận (79% nguyên dạng, không chuyển hóa). Gan: ít chuyển hóa. Cần điều chỉnh liều ở suy thận."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Sitagliptin có thể tăng nhẹ nồng độ digoxin",
+                    "effect": "Tăng nguy cơ độc tính digoxin",
+                    "management": "Theo dõi nồng độ digoxin, ECG. Điều chỉnh liều digoxin nếu cần."
+                },
+                {
+                    "drug": "Insulin, Sulfonylurea (glibenclamide, gliclazide)",
+                    "mechanism": "Tác dụng hiệp đồng giảm đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Thận trọng. Theo dõi đường huyết. Có thể cần giảm liều insulin hoặc sulfonylurea."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "CYP3A4 substrates",
+                    "mechanism": "Sitagliptin ít chuyển hóa qua CYP, ít tương tác",
+                    "effect": "Tương tác tối thiểu",
+                    "management": "Không cần điều chỉnh liều"
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Dị ứng sitagliptin",
+                "Viêm tụy cấp đang diễn ra"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <30) - cần giảm liều (25mg/ngày)",
+                "Suy thận trung bình (CrCl 30-50) - cần giảm liều (50mg/ngày)",
+                "Tiền sử viêm tụy cấp - tăng nguy cơ",
+                "Tiền sử suy tim - tăng nhẹ nguy cơ suy tim",
+                "Đau khớp nghiêm trọng - ngừng thuốc nếu xảy ra"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Không có bằng chứng về nguy cơ gây dị tật thai nhi ở động vật. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Ít dữ liệu ở người, nhưng không có báo cáo về dị tật thai nhi. Theo dõi đường huyết chặt chẽ trong thai kỳ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Sitagliptin bài tiết vào sữa mẹ ở nồng độ thấp. Không có dữ liệu đầy đủ về an toàn ở trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể. Nếu cần dùng, theo dõi trẻ chặt chẽ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi (chủ yếu thải qua thận, không phụ thuộc gan)",
+            "notes": "Sitagliptin chủ yếu bài tiết qua thận (79% nguyên dạng), không chuyển hóa đáng kể qua gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ đường huyết (nếu dùng với insulin hoặc sulfonylurea)",
+                "Đau bụng, buồn nôn, nôn (dấu hiệu viêm tụy)",
+                "Nhức đầu",
+                "Đau khớp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Điều trị hạ đường huyết nếu có: Glucose 15-20g PO hoặc dextrose IV",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Theo dõi đường huyết, chức năng thận",
+                "Nếu có dấu hiệu viêm tụy cấp: ngừng thuốc, điều trị hỗ trợ, theo dõi amylase/lipase",
+                "Điều trị hỗ trợ"
+            ],
+            "monitoring": "Đường huyết, chức năng thận, dấu hiệu viêm tụy (đau bụng, amylase/lipase), đau khớp"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.",
+                "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày. Nên uống vào cùng một thời điểm mỗi ngày để dễ nhớ."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Januvia (sitagliptin)",
+                "UpToDate - Sitagliptin: Drug information",
+                "TECOS Study - New England Journal of Medicine",
+                "American Diabetes Association guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews (TECOS study)"
+        }
     },
     
     "Vildagliptin": {
@@ -3677,7 +5258,141 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa qua CYP2D6, CYP2C9, CYP3A4 thành norfluoxetine - chất hoạt động với half-life dài hơn)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. Chống chỉ định với MAO inhibitor - nguy cơ hội chứng serotonin nghiêm trọng"
+        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. Chống chỉ định với MAO inhibitor - nguy cơ hội chứng serotonin nghiêm trọng",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors (phenelzine, tranylcypromine, selegiline, linezolid)",
+                    "mechanism": "Ức chế chuyển hóa serotonin, tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin nghiêm trọng: kích động, nhịp tim nhanh, tăng huyết áp, sốt cao, co giật, tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng fluoxetine ít nhất 5 tuần trước khi bắt đầu MAO inhibitor (do half-life dài)."
+                },
+                {
+                    "drug": "Tramadol",
+                    "mechanism": "Tăng nồng độ serotonin, tăng nguy cơ co giật",
+                    "effect": "Hội chứng serotonin, tăng nguy cơ co giật",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, giảm liều tramadol và theo dõi sát."
+                },
+                {
+                    "drug": "Triptans (sumatriptan, rizatriptan)",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin",
+                    "management": "Thận trọng. Dùng cách xa ít nhất 24 giờ. Theo dõi dấu hiệu hội chứng serotonin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Fluoxetine ức chế CYP2C9, tăng nồng độ warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Phenytoin, Carbamazepine",
+                    "mechanism": "Fluoxetine ức chế CYP2D6, CYP2C9, tăng nồng độ",
+                    "effect": "Tăng nồng độ phenytoin/carbamazepine, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ. Giảm liều phenytoin/carbamazepine nếu cần."
+                },
+                {
+                    "drug": "Tricyclic antidepressants (TCA)",
+                    "mechanism": "Ức chế CYP2D6, tăng nồng độ TCA",
+                    "effect": "Tăng nồng độ TCA, tăng nguy cơ độc tính (rối loạn nhịp, block nhĩ thất)",
+                    "management": "Thận trọng. Giảm liều TCA 50%. Theo dõi ECG."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "CYP2D6 substrates (codeine, metoprolol)",
+                    "mechanism": "Ức chế CYP2D6",
+                    "effect": "Tăng nồng độ các thuốc chuyển hóa qua CYP2D6",
+                    "management": "Thận trọng. Điều chỉnh liều nếu cần."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "Dị ứng fluoxetine",
+                "Hội chứng serotonin đang diễn ra"
+            ],
+            "relative": [
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử",
+                "Có ý định tự tử - chỉ kê đơn số lượng ít",
+                "Bệnh tim - thận trọng",
+                "Rối loạn đông máu - tăng nguy cơ chảy máu",
+                "Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Một số nghiên cứu gợi ý tăng nguy cơ dị tật thai nhi (dị tật tim, dị tật chi) khi dùng trong 3 tháng đầu, nhưng chứng cứ không rõ ràng. Có thể gây tăng huyết áp phổi ở trẻ sơ sinh (PPHN) - nguy cơ thấp. Có thể gây hội chứng cai ở trẻ sơ sinh (kích động, khó thở, run) nếu dùng gần ngày sinh. Theo dõi trẻ sơ sinh sau sinh.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Fluoxetine bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ bú mẹ thường <10% nồng độ mẹ. Có thể gây buồn ngủ, bú kém, quấy khóc ở trẻ. Ít báo cáo về tác dụng phụ nghiêm trọng.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu buồn ngủ, bú kém, quấy khóc ở trẻ. Nếu trẻ có dấu hiệu bất thường, cân nhắc ngừng cho con bú hoặc chuyển sang SSRI khác (sertraline)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi hoặc giảm liều nhẹ",
+            "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ",
+            "notes": "Fluoxetine chuyển hóa ở gan qua CYP2D6, CYP2C9, CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy. Tuy nhiên, ít gây độc gan trực tiếp."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Kích động, lú lẫn",
+                "Nhịp tim nhanh",
+                "Tăng huyết áp",
+                "Sốt",
+                "Co giật",
+                "Hôn mê",
+                "Hội chứng serotonin (nếu dùng với thuốc khác)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ECG, huyết áp, nhịp tim",
+                "Điều trị hội chứng serotonin: Cyproheptadine (4-8mg PO/IV), benzodiazepines cho co giật",
+                "Điều trị co giật: Benzodiazepines (lorazepam, diazepam)",
+                "Điều trị tăng huyết áp: Esmolol, labetalol",
+                "Hạ nhiệt nếu sốt",
+                "Truyền dịch",
+                "Theo dõi ít nhất 24-48 giờ (do half-life dài)"
+            ],
+            "monitoring": "ECG, huyết áp, nhịp tim, nhiệt độ, ý thức, dấu hiệu co giật, điện giải"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn",
+                "timing": "Dùng 1 lần/ngày (buổi sáng hoặc tối tùy tác dụng phụ). Nếu gây mất ngủ → dùng buổi sáng. Nếu gây buồn ngủ → dùng buổi tối."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Prozac (fluoxetine)",
+                "UpToDate - Fluoxetine: Drug information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
+                "American Psychiatric Association guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     # ========== ADDITIONAL COMMON DRUGS ==========
@@ -3940,7 +5655,122 @@ DRUG_DATABASE = {
             "clearance": "Gan: chuyển hóa qua CYP3A4 thành metabolite hoạt động. Thận: bài tiết một phần. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": "Nguy cơ chảy máu nghiêm trọng, có thể gây tử vong. Không dùng ở bệnh nhân có xuất huyết nội sọ đang hoạt động, chảy máu đang hoạt động. Không dùng aspirin >100mg/ngày vì có thể giảm hiệu quả của ticagrelor."
+        "black_box_warnings": "Nguy cơ chảy máu nghiêm trọng, có thể gây tử vong. Không dùng ở bệnh nhân có xuất huyết nội sọ đang hoạt động, chảy máu đang hoạt động. Không dùng aspirin >100mg/ngày vì có thể giảm hiệu quả của ticagrelor.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Strong CYP3A4 inhibitors (ketoconazole, itraconazole, clarithromycin, ritonavir)",
+                    "mechanism": "Ức chế chuyển hóa ticagrelor, tăng nồng độ",
+                    "effect": "Tăng nguy cơ chảy máu",
+                    "management": "CHỐNG CHỈ ĐỊNH. Tránh dùng cùng strong CYP3A4 inhibitors."
+                },
+                {
+                    "drug": "Aspirin >100mg/ngày",
+                    "mechanism": "Có thể giảm hiệu quả của ticagrelor",
+                    "effect": "Giảm hiệu quả chống kết tập tiểu cầu",
+                    "management": "Dùng aspirin 75-100mg/ngày. Không dùng aspirin >100mg/ngày."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Tác dụng hiệp đồng chống đông",
+                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng",
+                    "management": "Thận trọng. Theo dõi INR, dấu hiệu chảy máu. Thường tránh dùng cùng."
+                },
+                {
+                    "drug": "Strong CYP3A4 inducers (rifampin, carbamazepine, phenytoin)",
+                    "mechanism": "Tăng chuyển hóa ticagrelor, giảm nồng độ",
+                    "effect": "Giảm hiệu quả ticagrelor",
+                    "management": "Thận trọng. Tránh dùng cùng nếu có thể."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Moderate CYP3A4 inhibitors (diltiazem, verapamil)",
+                    "mechanism": "Có thể tăng nhẹ nồng độ ticagrelor",
+                    "effect": "Tăng nhẹ nguy cơ chảy máu",
+                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Chảy máu đang hoạt động",
+                "Xuất huyết nội sọ đang hoạt động",
+                "Dị ứng ticagrelor",
+                "Dùng strong CYP3A4 inhibitors (ketoconazole, itraconazole, clarithromycin, ritonavir)"
+            ],
+            "relative": [
+                "Suy gan nặng - chống chỉ định",
+                "Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng",
+                "Tiền sử nhịp tim chậm hoặc block nhĩ thất - tăng nguy cơ bradycardia",
+                "Suy thận nặng - thận trọng",
+                "Phẫu thuật lớn - cần ngừng trước phẫu thuật"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Nguy cơ chảy máu ở mẹ và thai nhi. Cân nhắc nguy cơ huyết khối vs nguy cơ chảy máu. Theo dõi chặt chẽ dấu hiệu chảy máu.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Ticagrelor và metabolite có thể bài tiết vào sữa mẹ. Không có dữ liệu đầy đủ về an toàn ở trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể. Nếu cần dùng, theo dõi trẻ chặt chẽ về dấu hiệu chảy máu."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Ticagrelor chuyển hóa ở gan qua CYP3A4. Không cần điều chỉnh liều ở suy gan nhẹ đến trung bình. Chống chỉ định ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Chảy máu: chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu nội sọ",
+                "Khó thở (dyspnea) - do tăng adenosine",
+                "Nhịp tim chậm (bradycardia)",
+                "Chảy máu có thể nghiêm trọng và đe dọa tính mạng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Truyền tiểu cầu nếu cần",
+            "treatment": [
+                "Ngừng ticagrelor ngay lập tức",
+                "Truyền tiểu cầu nếu chảy máu nghiêm trọng (hiệu quả hạn chế do ticagrelor reversible)",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi dấu hiệu sống, công thức máu, dấu hiệu chảy máu",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Theo dõi ít nhất 24-48 giờ (do half-life metabolite 8-12 giờ)",
+                "Điều trị chảy máu: truyền máu, tiểu cầu, huyết tương tươi đông lạnh nếu cần"
+            ],
+            "monitoring": "Dấu hiệu sống, công thức máu (tiểu cầu, hemoglobin), dấu hiệu chảy máu, ECG (bradycardia)"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên dùng với thức ăn để giảm dyspnea và tăng hấp thu",
+                "timing": "Uống 2 lần/ngày (sáng và tối), cách nhau 12 giờ. Loading dose: 180mg x 1 lần. Maintenance: 90mg x 2 lần/ngày. Dùng kèm aspirin 75-100mg/ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Brilinta (ticagrelor)",
+                "PLATO Study - New England Journal of Medicine",
+                "UpToDate - Ticagrelor: Drug information",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Large RCT (PLATO study)"
+        }
     },
     
     "Prasugrel": {
@@ -4000,7 +5830,116 @@ DRUG_DATABASE = {
             "clearance": "Gan: chuyển hóa nhanh qua CYP3A4 và CYP2B6 thành metabolite hoạt động (không cần chuyển hóa qua CYP2C19 như clopidogrel). Thận: bài tiết một phần. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": "Nguy cơ chảy máu nghiêm trọng, có thể gây tử vong. Không dùng ở bệnh nhân có tiền sử TIA hoặc đột quỵ - tăng nguy cơ chảy máu nội sọ. Không dùng ở bệnh nhân có chảy máu đang hoạt động. Thận trọng ở bệnh nhân ≥75 tuổi, <60kg, hoặc có nguy cơ chảy máu cao."
+        "black_box_warnings": "Nguy cơ chảy máu nghiêm trọng, có thể gây tử vong. Không dùng ở bệnh nhân có tiền sử TIA hoặc đột quỵ - tăng nguy cơ chảy máu nội sọ. Không dùng ở bệnh nhân có chảy máu đang hoạt động. Thận trọng ở bệnh nhân ≥75 tuổi, <60kg, hoặc có nguy cơ chảy máu cao.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Tác dụng hiệp đồng chống đông",
+                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng",
+                    "management": "Thận trọng. Theo dõi INR, dấu hiệu chảy máu. Thường tránh dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Aspirin",
+                    "mechanism": "Dùng kèm trong dual antiplatelet therapy",
+                    "effect": "Tăng nguy cơ chảy máu",
+                    "management": "Dùng kèm aspirin 75-100mg/ngày. Theo dõi dấu hiệu chảy máu."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen)",
+                    "mechanism": "Tác dụng hiệp đồng chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu",
+                    "management": "Thận trọng. Tránh dùng nếu có thể."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "CYP inducers/inhibitors",
+                    "mechanism": "Prasugrel chuyển hóa qua CYP3A4, CYP2B6, nhưng ít bị ảnh hưởng bởi CYP inhibitors/inducers hơn clopidogrel",
+                    "effect": "Tương tác tối thiểu",
+                    "management": "Không cần điều chỉnh liều"
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Chảy máu đang hoạt động",
+                "Tiền sử TIA hoặc đột quỵ",
+                "Dị ứng prasugrel"
+            ],
+            "relative": [
+                "Tuổi ≥75 (trừ nguy cơ cao) - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
+                "Cân nặng <60kg (trừ nguy cơ cao) - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
+                "Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng",
+                "Phẫu thuật lớn - cần ngừng trước phẫu thuật",
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Không có bằng chứng về nguy cơ gây dị tật thai nhi ở động vật. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Nguy cơ chảy máu ở mẹ và thai nhi. Cân nhắc nguy cơ huyết khối vs nguy cơ chảy máu. Theo dõi chặt chẽ dấu hiệu chảy máu.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Prasugrel và metabolite có thể bài tiết vào sữa mẹ. Không có dữ liệu đầy đủ về an toàn ở trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể. Nếu cần dùng, theo dõi trẻ chặt chẽ về dấu hiệu chảy máu."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Thận trọng",
+            "notes": "Prasugrel chuyển hóa ở gan qua CYP3A4 và CYP2B6. Không cần điều chỉnh liều ở suy gan nhẹ đến trung bình. Thận trọng ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Chảy máu: chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu nội sọ",
+                "Chảy máu lớn có thể nghiêm trọng và đe dọa tính mạng",
+                "Thrombotic thrombocytopenic purpura (TTP) - hiếm nhưng nguy hiểm"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Truyền tiểu cầu nếu cần (hiệu quả hạn chế do irreversible binding)",
+            "treatment": [
+                "Ngừng prasugrel ngay lập tức",
+                "Truyền tiểu cầu nếu chảy máu nghiêm trọng (hiệu quả hạn chế do irreversible binding - cần tiểu cầu mới)",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi dấu hiệu sống, công thức máu, dấu hiệu chảy máu",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Theo dõi ít nhất 7-10 ngày (do irreversible binding - tiểu cầu mới không bị ảnh hưởng)",
+                "Điều trị chảy máu: truyền máu, tiểu cầu, huyết tương tươi đông lạnh nếu cần",
+                "Nếu có TTP: điều trị với plasma exchange"
+            ],
+            "monitoring": "Dấu hiệu sống, công thức máu (tiểu cầu, hemoglobin), dấu hiệu chảy máu, dấu hiệu TTP"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.",
+                "timing": "Uống 1 lần/ngày. Loading dose: 60mg x 1 lần. Maintenance: 10mg x 1 lần/ngày (5mg nếu <60kg hoặc ≥75 tuổi). Dùng kèm aspirin 75-100mg/ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Effient (prasugrel)",
+                "TRITON-TIMI 38 Study - New England Journal of Medicine",
+                "UpToDate - Prasugrel: Drug information",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Large RCT (TRITON-TIMI 38 study)"
+        }
     },
     
     "Ticlopidine": {
@@ -4187,7 +6126,121 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa qua CYP2C9, CYP2C19, CYP2D6, CYP3A4), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. Chống chỉ định với MAO inhibitor"
+        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. Chống chỉ định với MAO inhibitor",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng sertraline ít nhất 2 tuần trước khi bắt đầu MAO inhibitor."
+                },
+                {
+                    "drug": "Tramadol",
+                    "mechanism": "Tăng nồng độ serotonin, tăng nguy cơ co giật",
+                    "effect": "Hội chứng serotonin, tăng nguy cơ co giật",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, giảm liều tramadol và theo dõi sát."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể tăng nồng độ warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Triptans",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin",
+                    "management": "Thận trọng. Dùng cách xa ít nhất 24 giờ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "CYP2D6 substrates",
+                    "mechanism": "Ức chế CYP2D6 nhẹ",
+                    "effect": "Tăng nhẹ nồng độ các thuốc chuyển hóa qua CYP2D6",
+                    "management": "Thận trọng. Điều chỉnh liều nếu cần."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "Dị ứng sertraline"
+            ],
+            "relative": [
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử",
+                "Có ý định tự tử - chỉ kê đơn số lượng ít",
+                "Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Một số nghiên cứu gợi ý tăng nguy cơ dị tật thai nhi (dị tật tim) khi dùng trong 3 tháng đầu, nhưng chứng cứ không rõ ràng. Có thể gây tăng huyết áp phổi ở trẻ sơ sinh (PPHN) - nguy cơ thấp. Có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng gần ngày sinh. Theo dõi trẻ sơ sinh sau sinh.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Sertraline bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường <1% nồng độ mẹ. An toàn cho trẻ bú mẹ. Ít báo cáo về tác dụng phụ ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú. Sertraline là SSRI được lựa chọn khi cho con bú do nồng độ trong sữa mẹ thấp. Theo dõi dấu hiệu buồn ngủ, bú kém ở trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi hoặc giảm liều nhẹ",
+            "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ",
+            "notes": "Sertraline chuyển hóa ở gan qua CYP2C9, CYP2C19, CYP2D6, CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, tiêu chảy",
+                "Kích động, lú lẫn",
+                "Nhịp tim nhanh",
+                "Co giật",
+                "Hôn mê",
+                "Hội chứng serotonin (nếu dùng với thuốc khác)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ECG, huyết áp, nhịp tim",
+                "Điều trị hội chứng serotonin: Cyproheptadine, benzodiazepines",
+                "Điều trị co giật: Benzodiazepines",
+                "Truyền dịch",
+                "Theo dõi ít nhất 24 giờ"
+            ],
+            "monitoring": "ECG, huyết áp, nhịp tim, ý thức, dấu hiệu co giật"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn",
+                "timing": "Dùng 1 lần/ngày (buổi sáng hoặc tối). Có thể dùng cùng bữa ăn để giảm tiêu chảy."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Zoloft (sertraline)",
+                "UpToDate - Sertraline: Drug information",
+                "American Psychiatric Association guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Citalopram": {
@@ -4249,7 +6302,120 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa qua CYP2C19, CYP3A4, CYP2D6), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. QT kéo dài có thể xảy ra ở liều >40mg/ngày, đặc biệt ở người già - giới hạn liều 40mg/ngày (20mg ở người già). Chống chỉ định với MAO inhibitor"
+        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. QT kéo dài có thể xảy ra ở liều >40mg/ngày, đặc biệt ở người già - giới hạn liều 40mg/ngày (20mg ở người già). Chống chỉ định với MAO inhibitor",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng citalopram ít nhất 2 tuần trước khi bắt đầu MAO inhibitor."
+                },
+                {
+                    "drug": "QT prolonging drugs (amiodarone, sotalol, quetiapine)",
+                    "mechanism": "Tăng nguy cơ QT prolongation",
+                    "effect": "QT kéo dài, rối loạn nhịp tim (torsades de pointes)",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, giới hạn liều citalopram 20mg/ngày và theo dõi ECG."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể tăng nồng độ warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Triptans, Tramadol",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin",
+                    "management": "Thận trọng. Dùng cách xa ít nhất 24 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "QT prolongation",
+                "Dị ứng citalopram",
+                "Liều >40mg/ngày (chống chỉ định do QT prolongation)"
+            ],
+            "relative": [
+                "Người già >60 tuổi - giới hạn 20mg/ngày",
+                "Bệnh tim - tăng nguy cơ QT prolongation",
+                "Rối loạn điện giải (hạ kali, hạ magne) - tăng nguy cơ QT prolongation",
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Một số nghiên cứu gợi ý tăng nguy cơ dị tật thai nhi (dị tật tim) khi dùng trong 3 tháng đầu, nhưng chứng cứ không rõ ràng. Có thể gây tăng huyết áp phổi ở trẻ sơ sinh (PPHN) - nguy cơ thấp. Có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng gần ngày sinh. Theo dõi trẻ sơ sinh sau sinh.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Citalopram bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ bú mẹ thường <10% nồng độ mẹ. Có thể gây buồn ngủ, bú kém ở trẻ. Ít báo cáo về tác dụng phụ nghiêm trọng.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu buồn ngủ, bú kém ở trẻ. Nếu trẻ có dấu hiệu bất thường, cân nhắc ngừng cho con bú hoặc chuyển sang SSRI khác (sertraline)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi hoặc giảm liều nhẹ",
+            "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ",
+            "notes": "Citalopram chuyển hóa ở gan qua CYP2C19, CYP3A4, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy. Tuy nhiên, ít gây độc gan trực tiếp."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Kích động, lú lẫn",
+                "QT prolongation, rối loạn nhịp tim (torsades de pointes)",
+                "Nhịp tim nhanh",
+                "Co giật",
+                "Hôn mê",
+                "Hội chứng serotonin (nếu dùng với thuốc khác)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ECG liên tục - QT prolongation là nguy hiểm nhất",
+                "Điều trị QT prolongation: Magnesium sulfate (2g IV), isoproterenol nếu cần",
+                "Điều trị torsades de pointes: Magnesium sulfate, overdrive pacing",
+                "Điều trị hội chứng serotonin: Cyproheptadine, benzodiazepines",
+                "Điều trị co giật: Benzodiazepines",
+                "Truyền dịch",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "ECG liên tục (QT interval), huyết áp, nhịp tim, ý thức, dấu hiệu co giật, điện giải"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn",
+                "timing": "Dùng 1 lần/ngày (buổi sáng hoặc tối). GIỚI HẠN 40mg/ngày (20mg ở người già >60 tuổi) do nguy cơ QT prolongation."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Celexa (citalopram)",
+                "UpToDate - Citalopram: Drug information",
+                "American Psychiatric Association guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Escitalopram": {
@@ -4310,7 +6476,107 @@ DRUG_DATABASE = {
             "clearance": "Gan (chuyển hóa qua CYP2C19, CYP3A4, CYP2D6), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. Chống chỉ định với MAO inhibitor"
+        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. Chống chỉ định với MAO inhibitor",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng escitalopram ít nhất 2 tuần trước khi bắt đầu MAO inhibitor."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể tăng nồng độ warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Tramadol, Triptans",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin",
+                    "management": "Thận trọng. Dùng cách xa ít nhất 24 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "Dị ứng escitalopram"
+            ],
+            "relative": [
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử",
+                "Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Một số nghiên cứu gợi ý tăng nguy cơ dị tật thai nhi (dị tật tim) khi dùng trong 3 tháng đầu, nhưng chứng cứ không rõ ràng. Có thể gây tăng huyết áp phổi ở trẻ sơ sinh (PPHN) - nguy cơ thấp. Có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng gần ngày sinh. Theo dõi trẻ sơ sinh sau sinh.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Escitalopram bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường <5% nồng độ mẹ. An toàn cho trẻ bú mẹ. Ít báo cáo về tác dụng phụ ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu buồn ngủ, bú kém ở trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi hoặc giảm liều nhẹ",
+            "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ",
+            "notes": "Escitalopram chuyển hóa ở gan qua CYP2C19, CYP3A4, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy. Tuy nhiên, ít gây độc gan trực tiếp."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Kích động, lú lẫn",
+                "Nhịp tim nhanh",
+                "Co giật",
+                "Hôn mê",
+                "Hội chứng serotonin (nếu dùng với thuốc khác)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ECG, huyết áp, nhịp tim",
+                "Điều trị hội chứng serotonin: Cyproheptadine, benzodiazepines",
+                "Điều trị co giật: Benzodiazepines",
+                "Truyền dịch",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "ECG, huyết áp, nhịp tim, ý thức, dấu hiệu co giật"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn",
+                "timing": "Dùng 1 lần/ngày (buổi sáng hoặc tối). Ưu điểm: ít tác dụng phụ hơn citalopram, ít nguy cơ QT kéo dài hơn."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lexapro (escitalopram)",
+                "UpToDate - Escitalopram: Drug information",
+                "American Psychiatric Association guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Venlafaxine": {
@@ -5343,7 +7609,87 @@ DRUG_DATABASE = {
             "clearance": "Gan: chuyển hóa qua CYP3A4 và CYP2D6 thành desloratadine (metabolite hoạt động, mạnh hơn loratadine). Thận: bài tiết một phần nguyên dạng và metabolites."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng syrup: bảo quản ở nhiệt độ phòng, đậy kín sau khi dùng.",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Erythromycin, Ketoconazole, Itraconazole",
+                    "mechanism": "Ức chế CYP3A4, giảm chuyển hóa loratadine",
+                    "effect": "Tăng nồng độ loratadine và desloratadine",
+                    "management": "Thận trọng. Thường không cần điều chỉnh liều nhưng có thể tăng buồn ngủ nhẹ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng loratadine hoặc desloratadine"
+            ],
+            "relative": [
+                "Suy gan nặng - thận trọng (giảm chuyển hóa)",
+                "Trẻ em <2 tuổi - an toàn từ 2 tuổi trở lên"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "An toàn trong thai kỳ. Không có bằng chứng về dị tật bẩm sinh. Có thể dùng ở tất cả các tam cá nguyệt. Loratadine là một trong những antihistamine được lựa chọn trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Loratadine bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ. Ít báo cáo về tác dụng phụ ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi dấu hiệu buồn ngủ ở trẻ (hiếm)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể giảm liều nhẹ",
+            "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+            "notes": "Loratadine chuyển hóa ở gan qua CYP3A4 và CYP2D6 thành desloratadine (metabolite hoạt động). Suy gan có thể làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ (tăng so với liều điều trị)",
+                "Nhức đầu",
+                "Khô miệng",
+                "Lú lẫn (hiếm)",
+                "Tim đập nhanh (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ý thức, huyết áp, nhịp tim",
+                "Điều trị hỗ trợ: truyền dịch nếu cần",
+                "Theo dõi ít nhất 4-6 giờ"
+            ],
+            "monitoring": "Ý thức, huyết áp, nhịp tim"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp",
+                "timing": "Dùng 1 lần/ngày (tác dụng kéo dài 24 giờ). Có thể dùng buổi sáng hoặc tối."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Clarityne (loratadine)",
+                "UpToDate - Loratadine: Drug information",
+                "Allergy & Clinical Immunology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Cetirizine": {
@@ -5408,7 +7754,96 @@ DRUG_DATABASE = {
             "clearance": "Thận: bài tiết chủ yếu qua thận (60-70% nguyên dạng, không chuyển hóa). Gan: ít chuyển hóa. Cần điều chỉnh liều ở suy thận."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng syrup: bảo quản ở nhiệt độ phòng, đậy kín sau khi dùng.",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Alcohol",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, suy hô hấp",
+                    "management": "Tránh dùng với rượu. Cảnh báo bệnh nhân về nguy cơ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Theophylline",
+                    "mechanism": "Có thể tăng nhẹ nồng độ theophylline",
+                    "effect": "Tăng nhẹ tác dụng theophylline",
+                    "management": "Thận trọng. Theo dõi nồng độ theophylline nếu cần."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng cetirizine hoặc hydroxyzine",
+                "Suy thận nặng (CrCl <30) - chống chỉ định hoặc dùng liều rất thấp"
+            ],
+            "relative": [
+                "Suy thận nhẹ đến trung bình (CrCl 30-60) - giảm liều 50%",
+                "Người cao tuổi - có thể tăng nguy cơ buồn ngủ",
+                "Bệnh nhân có nguy cơ bí tiểu - tăng nguy cơ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "An toàn trong thai kỳ. Không có bằng chứng về dị tật bẩm sinh. Có thể dùng ở tất cả các tam cá nguyệt. Cetirizine là một trong những antihistamine được lựa chọn trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Cetirizine bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường <1% nồng độ mẹ. An toàn cho trẻ bú mẹ. Ít báo cáo về tác dụng phụ ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi dấu hiệu buồn ngủ ở trẻ (hiếm)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Cetirizine chủ yếu thải trừ qua thận (không chuyển hóa ở gan), không cần điều chỉnh liều ở suy gan. Tuy nhiên, suy gan nặng có thể ảnh hưởng đến protein binding."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ (tăng so với liều điều trị)",
+                "Nhức đầu",
+                "Khô miệng",
+                "Lú lẫn (hiếm)",
+                "Tim đập nhanh (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ý thức, huyết áp, nhịp tim",
+                "Điều trị hỗ trợ: truyền dịch nếu cần",
+                "Theo dõi ít nhất 4-6 giờ"
+            ],
+            "monitoring": "Ý thức, huyết áp, nhịp tim"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn",
+                "timing": "Dùng 1 lần/ngày (tác dụng kéo dài 24 giờ). Có thể dùng buổi sáng hoặc tối. CẦN ĐIỀU CHỈNH LIỀU Ở SUY THẬN: CrCl 30-60 → 5mg/ngày, CrCl <30 → 5mg cách ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Zyrtec (cetirizine)",
+                "UpToDate - Cetirizine: Drug information",
+                "Allergy & Clinical Immunology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Fexofenadine": {
@@ -5466,7 +7901,92 @@ DRUG_DATABASE = {
             "clearance": "Thận: bài tiết chủ yếu qua thận (80% nguyên dạng, 11% metabolites). Gan: ít chuyển hóa. Không cần điều chỉnh liều ở suy thận hoặc suy gan (mặc dù có thể tích lũy nhẹ ở suy thận nặng)."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng viên nén tan nhanh: bảo quản trong bao bì kín, tránh ẩm.",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Fruit juices (apple, orange, grapefruit)",
+                    "mechanism": "Giảm hấp thu fexofenadine qua transporter",
+                    "effect": "Giảm nồng độ fexofenadine, giảm hiệu quả",
+                    "management": "KHÔNG dùng với fruit juices. Cách xa ít nhất 1-2 giờ. Uống với nước lọc."
+                },
+                {
+                    "drug": "Antacids (aluminum, magnesium)",
+                    "mechanism": "Giảm hấp thu fexofenadine",
+                    "effect": "Giảm nồng độ fexofenadine, giảm hiệu quả",
+                    "management": "Cách xa ít nhất 2 giờ. Uống với nước lọc."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng fexofenadine hoặc terfenadine"
+            ],
+            "relative": [
+                "Trẻ em <6 tuổi - an toàn từ 6 tuổi trở lên",
+                "Suy thận nặng - có thể tích lũy nhẹ nhưng không cần điều chỉnh liều"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Không có bằng chứng rõ ràng về dị tật bẩm sinh, nhưng ít dữ liệu hơn so với loratadine và cetirizine. Cân nhắc dùng loratadine hoặc cetirizine (category B) nếu có thể.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Fexofenadine bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ. Ít báo cáo về tác dụng phụ ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi dấu hiệu bất thường ở trẻ (hiếm)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Fexofenadine chủ yếu thải trừ qua thận (ít chuyển hóa ở gan), không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Nhức đầu (tăng so với liều điều trị)",
+                "Mệt mỏi",
+                "Buồn ngủ (hiếm)",
+                "Lú lẫn (rất hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ý thức, huyết áp, nhịp tim",
+                "Điều trị hỗ trợ: truyền dịch nếu cần",
+                "Theo dõi ít nhất 4-6 giờ"
+            ],
+            "monitoring": "Ý thức, huyết áp, nhịp tim"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Uống với nước lọc. KHÔNG dùng với fruit juices (táo, cam, bưởi) - giảm hấp thu đáng kể",
+                "timing": "Dùng 1-2 lần/ngày tùy liều (180mg x 1 lần/ngày hoặc 60mg x 2 lần/ngày). Cách xa fruit juices 1-2 giờ. Cách xa antacids 2 giờ."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Allegra (fexofenadine)",
+                "UpToDate - Fexofenadine: Drug information",
+                "Allergy & Clinical Immunology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
     },
     
     "Desloratadine": {

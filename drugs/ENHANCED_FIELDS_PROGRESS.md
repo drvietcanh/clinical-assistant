@@ -255,8 +255,11 @@ python check_enhanced_fields.py
 - ✅ Phase 2 đang tiến hành: Bổ sung 8 fields tùy chọn
   - ✅ **HOÀN THÀNH NHÓM 1** (10/10 thuốc - 100%): Paracetamol, Ibuprofen, Salbutamol, Adenosine, Acyclovir, Valacyclovir, Methylprednisolone, Fluconazole, Ciprofloxacin, Levofloxacin
   - ✅ **HOÀN THÀNH NHÓM 2** (6/6 thuốc - 100%): Valproate, Lamotrigine, Amitriptyline, Cisplatin, Carboplatin, Cyclophosphamide
-  - ✅ Tổng số đã hoàn thành: 16/141 thuốc (11%)
-  - ⏳ Còn lại: 125 thuốc
+  - ✅ **HOÀN THÀNH NHÓM 3** (7/7 thuốc - 100%): Fluoxetine, Sertraline, Citalopram, Escitalopram, Loratadine, Cetirizine, Fexofenadine
+  - ✅ **HOÀN THÀNH NHÓM 4** (9/9 thuốc - 100%): Captopril, Dapagliflozin, Empagliflozin, Glibenclamide, Gliclazide, Metformin, Prasugrel, Sitagliptin, Ticagrelor
+  - ⏳ **ĐANG LÀM NHÓM 5** (6/20 thuốc - 30%): Enalapril ✅, Lisinopril ✅, Losartan ✅, Metoprolol ✅, Propranolol ✅, Amlodipine ✅, Atenolol, Bisoprolol, Carvedilol, Nifedipine, Diltiazem, Verapamil, Furosemide, Hydrochlorothiazide, Spironolactone, Amiodarone, Digoxin, Warfarin, Aspirin, Clopidogrel
+  - ✅ Tổng số đã hoàn thành: 38/141 thuốc (26%)
+  - ⏳ Còn lại: 103 thuốc
   - 📋 Kế hoạch chi tiết: Xem `drugs/PHASE2_PLAN.md`
   - 📊 Script theo dõi: `track_phase2_progress.py`
 
