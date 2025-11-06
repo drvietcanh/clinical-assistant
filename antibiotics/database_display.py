@@ -10,6 +10,8 @@ import re
 from .antibiotics_data import ANTIBIOTICS_DATABASE
 from .database_calculator import render_quick_dosing_calculator
 from .database_export import _render_antibiotic_export
+from .mic_breakpoints import get_mic_breakpoints, get_common_susceptibility
+from .resistance_patterns import get_antibiotic_resistance_summary
 
 def _escape_html(text):
     """Escape HTML special characters to prevent rendering issues"""
@@ -95,55 +97,69 @@ def render_compact_antibiotic_card(ab_name, ab_data, key_prefix=""):
     admin_str = " • ".join(admin_display) if admin_display else "N/A"
     admin_str_escaped = html.escape(admin_str)
     
-    # AWaRe badge with tooltip
+    # AWaRe badge with enhanced color coding and tooltip
     aware_colors = {
-        "ACCESS": {"bg": "#4CAF50", "icon": "🟢"},
-        "WATCH": {"bg": "#FF9800", "icon": "🟡"},
-        "RESERVE": {"bg": "#F44336", "icon": "🔴"}
+        "ACCESS": {
+            "bg": "linear-gradient(135deg, #4CAF50 0%, #45a049 100%)",
+            "icon": "🟢",
+            "shadow": "0 2px 8px rgba(76, 175, 80, 0.3)"
+        },
+        "WATCH": {
+            "bg": "linear-gradient(135deg, #FF9800 0%, #F57C00 100%)",
+            "icon": "🟡",
+            "shadow": "0 2px 8px rgba(255, 152, 0, 0.3)"
+        },
+        "RESERVE": {
+            "bg": "linear-gradient(135deg, #F44336 0%, #D32F2F 100%)",
+            "icon": "🔴",
+            "shadow": "0 2px 8px rgba(244, 67, 54, 0.3)"
+        }
     }
     aware_badge = ""
     if aware and aware in aware_colors:
         badge_info = aware_colors[aware]
-        aware_badge = f'''<span style="background-color: {badge_info["bg"]}; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.75em; font-weight: bold; margin-left: 8px; display: inline-flex; align-items: center; gap: 4px;" title="WHO AWaRe: {aware}">{badge_info["icon"]} {aware}</span>'''
+        aware_badge = f'''<span style="background: {badge_info["bg"]}; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75em; font-weight: 700; margin-left: 8px; display: inline-flex; align-items: center; gap: 5px; box-shadow: {badge_info["shadow"]}; letter-spacing: 0.3px;" title="WHO AWaRe Classification: {aware}">{badge_info["icon"]} {aware}</span>'''
     
-    # Calculator badge
+    # Calculator badge with enhanced styling
     calc_badge = ""
     if has_calc:
-        calc_badge = '<span style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.75em; font-weight: bold; margin-left: 6px; display: inline-flex; align-items: center; gap: 4px;" title="Có máy tính liều dùng">🧮 Tính liều</span>'
+        calc_badge = '<span style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75em; font-weight: 700; margin-left: 6px; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3); letter-spacing: 0.3px;" title="Có máy tính liều dùng tích hợp">🧮 Tính liều</span>'
     
     # Check if favorite
     favorites = st.session_state.get('antibiotic_favorites', [])
     is_favorite = ab_name in favorites
     favorite_icon = "⭐" if is_favorite else "☆"
     
-    # Enhanced card with hover effect and better styling
+    # Enhanced card with modern design: 16px border-radius, better shadows, 20px padding
     card_html = f"""
     <div style='
-        background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
-        border: 1px solid #e0e0e0;
-        border-radius: 12px;
-        padding: 16px 18px;
-        margin: 10px 0;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+        border: 1.5px solid #e0e0e0;
+        border-radius: 16px;
+        padding: 20px 22px;
+        margin: 12px 0;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
         cursor: pointer;
-    ' onmouseover="this.style.boxShadow='0 4px 12px rgba(25,118,210,0.15)'; this.style.transform='translateY(-2px)'; this.style.borderColor='#1976D2';" 
-       onmouseout="this.style.boxShadow='0 2px 4px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)'; this.style.borderColor='#e0e0e0';">
-        <div style='display: flex; justify-content: space-between; align-items: start; gap: 12px;'>
+        position: relative;
+        overflow: hidden;
+    ' onmouseover="this.style.boxShadow='0 8px 24px rgba(25,118,210,0.15), 0 4px 8px rgba(0,0,0,0.1)'; this.style.transform='translateY(-3px)'; this.style.borderColor='#1976D2';" 
+       onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05)'; this.style.transform='translateY(0)'; this.style.borderColor='#e0e0e0';">
+        <div style='display: flex; justify-content: space-between; align-items: start; gap: 14px;'>
             <div style='flex: 1; min-width: 0;'>
-                <div style='display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 8px; gap: 6px;'>
-                    <strong style='color: #1976D2; font-size: 1.15em; margin-right: 4px; font-weight: 600;'>{ab_name_escaped}</strong>
+                <div style='display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 10px; gap: 8px;'>
+                    <strong style='color: #1976D2; font-size: 1.25em; margin-right: 6px; font-weight: 700; letter-spacing: -0.3px;'>{ab_name_escaped}</strong>
                     {aware_badge}
                     {calc_badge}
-                    <span style='color: #999; font-size: 0.85em; margin-left: auto; cursor: pointer;' title="Yêu thích" id="fav_{key_prefix}_{ab_name_escaped}">{favorite_icon}</span>
+                    <span style='color: #999; font-size: 1.1em; margin-left: auto; cursor: pointer; transition: transform 0.2s;' title="Yêu thích" id="fav_{key_prefix}_{ab_name_escaped}" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">{favorite_icon}</span>
                 </div>
-                {f"<div style='color: #666; font-size: 0.9em; margin-bottom: 6px; font-style: italic;'>{vn_name_escaped}</div>" if vn_name else ""}
-                <div style='color: #888; font-size: 0.88em; line-height: 1.5;'>
-                    <span style='font-weight: 500;'>{admin_str_escaped}</span>
-                    <span style='color: #ccc; margin: 0 8px;'>|</span>
-                    <span style='color: #666;'>{group_escaped}</span>
+                {f"<div style='color: #666; font-size: 0.95em; margin-bottom: 8px; font-style: italic; font-weight: 400;'>{vn_name_escaped}</div>" if vn_name else ""}
+                <div style='color: #555; font-size: 0.9em; line-height: 1.6; margin-top: 4px;'>
+                    <span style='font-weight: 600; color: #1976D2;'>{admin_str_escaped}</span>
+                    <span style='color: #ddd; margin: 0 10px; font-weight: 300;'>•</span>
+                    <span style='color: #666; font-weight: 500;'>{group_escaped}</span>
                 </div>
-                {f"<div style='color: #999; font-size: 0.8em; margin-top: 6px; line-height: 1.4;'><span style='color: #666;'>💡 </span>{html.escape(indications[0] if indications else '')}</div>" if indications else ""}
+                {f"<div style='color: #777; font-size: 0.85em; margin-top: 8px; line-height: 1.5; padding: 8px 12px; background: rgba(25,118,210,0.05); border-radius: 8px; border-left: 3px solid #1976D2;'><span style='color: #1976D2; font-weight: 600;'>💡 </span>{html.escape(indications[0] if indications else '')}</div>" if indications else ""}
             </div>
         </div>
     </div>
@@ -228,11 +244,18 @@ def display_antibiotic_info(ab_name, ab_data):
         # Export button - will show expander below
         show_export = st.button("📤 Export", key=f"export_btn_{safe_detail_name}", help="Xuất thông tin")
     
-    # Main content in expander
+    # Main content in expander with enhanced design
     with st.expander(f"💊 **{ab_name}** - Thông tin chi tiết", expanded=True):
-        # Header info with modern card
+        # Enhanced header info card with better visual hierarchy
         st.markdown(f"""
-        <div style='background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 12px; margin-bottom: 15px;'>
+        <div style='
+            background: linear-gradient(135deg, #f5f7fa 0%, #e3e8f0 50%, #c3cfe2 100%);
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 1px solid rgba(25,118,210,0.1);
+        '>
             <div style='display: flex; justify-content: space-between; align-items: start;'>
         """, unsafe_allow_html=True)
         
@@ -252,24 +275,41 @@ def display_antibiotic_info(ab_name, ab_data):
                 st.markdown(f"**💉 Đường dùng:** {admin_display}")
             
             if 'aware_classification' in ab_data:
-                aware_colors = {"ACCESS": "🟢", "WATCH": "🟡", "RESERVE": "🔴"}
                 aware_name = ab_data['aware_classification']
-                st.markdown(f"**🌐 AWaRe:** {aware_colors.get(aware_name, '')} {aware_name}")
+                aware_info = {
+                    "ACCESS": {"icon": "🟢", "color": "#4CAF50", "bg": "rgba(76, 175, 80, 0.1)"},
+                    "WATCH": {"icon": "🟡", "color": "#FF9800", "bg": "rgba(255, 152, 0, 0.1)"},
+                    "RESERVE": {"icon": "🔴", "color": "#F44336", "bg": "rgba(244, 67, 54, 0.1)"}
+                }
+                info = aware_info.get(aware_name, {"icon": "", "color": "#666", "bg": "rgba(0,0,0,0.05)"})
+                st.markdown(f"""
+                <div style='background: {info["bg"]}; padding: 8px 12px; border-radius: 8px; border-left: 3px solid {info["color"]}; margin-top: 8px;'>
+                    <strong style='color: {info["color"]};'>🌐 AWaRe:</strong> <span style='font-weight: 700; color: {info["color"]};'>{info["icon"]} {aware_name}</span>
+                </div>
+                """, unsafe_allow_html=True)
         
         st.markdown("</div>", unsafe_allow_html=True)
         st.markdown("---")
         
-        # Indications
+        # Indications with enhanced styling
         if 'indications' in ab_data:
             st.markdown("### 📋 Chỉ định:")
             for ind in ab_data['indications']:
-                st.markdown(f"- {ind}")
+                st.markdown(f"""
+                <div style='padding: 8px 12px; margin: 4px 0; background: rgba(76, 175, 80, 0.08); border-left: 3px solid #4CAF50; border-radius: 6px;'>
+                    ✓ {ind}
+                </div>
+                """, unsafe_allow_html=True)
         
-        # Contraindications
+        # Contraindications with warning styling
         if 'contraindications' in ab_data:
             st.markdown("### ⛔ Chống chỉ định:")
             for contr in ab_data['contraindications']:
-                st.markdown(f"- ❌ {contr}")
+                st.markdown(f"""
+                <div style='padding: 8px 12px; margin: 4px 0; background: rgba(244, 67, 54, 0.08); border-left: 3px solid #F44336; border-radius: 6px;'>
+                    ❌ {contr}
+                </div>
+                """, unsafe_allow_html=True)
         
         st.markdown("---")
         
@@ -351,6 +391,79 @@ def display_antibiotic_info(ab_name, ab_data):
         # Pregnancy
         if 'pregnancy' in ab_data:
             st.markdown(f"### 🤰 **An toàn thai kỳ:** {ab_data['pregnancy']}")
+        
+        # MIC Breakpoints & Susceptibility
+        st.markdown("---")
+        mic_data = get_mic_breakpoints(ab_name)
+        if mic_data:
+            st.markdown("### 📊 MIC Breakpoints & Độ Nhạy:")
+            
+            # Common susceptibility
+            common_suscept = get_common_susceptibility(ab_name)
+            if common_suscept:
+                st.markdown("**💡 Độ nhạy thường gặp:**")
+                for organism, pattern in common_suscept.items():
+                    # Color code based on pattern
+                    if "S (" in pattern and float(pattern.split("S (")[1].split("%")[0]) >= 80:
+                        color = "#4CAF50"
+                    elif "R (" in pattern and float(pattern.split("R (")[1].split("%")[0]) >= 50:
+                        color = "#F44336"
+                    else:
+                        color = "#FF9800"
+                    
+                    st.markdown(f"""
+                    <div style='padding: 6px 10px; margin: 4px 0; background: rgba(25,118,210,0.05); border-left: 3px solid {color}; border-radius: 6px;'>
+                        <strong>{organism}:</strong> <span style='color: {color}; font-weight: 600;'>{pattern}</span>
+                    </div>
+                    """, unsafe_allow_html=True)
+            
+            # MIC breakpoints table
+            if 'organisms' in mic_data:
+                st.markdown("**📋 Giá trị MIC (CLSI/EUCAST):**")
+                mic_table_data = []
+                for organism, breakpoints in mic_data['organisms'].items():
+                    mic_table_data.append({
+                        "Vi khuẩn": organism,
+                        "Nhạy cảm (S)": breakpoints.get('sensitive', 'N/A'),
+                        "Trung gian (I)": breakpoints.get('intermediate', 'N/A'),
+                        "Kháng (R)": breakpoints.get('resistant', 'N/A')
+                    })
+                
+                if mic_table_data:
+                    df_mic = pd.DataFrame(mic_table_data)
+                    st.dataframe(df_mic, use_container_width=True, hide_index=True)
+        
+        # Resistance Patterns (Vietnam)
+        st.markdown("---")
+        resistance_summary = get_antibiotic_resistance_summary(ab_name)
+        if resistance_summary:
+            st.markdown("### 🦠 Tỷ Lệ Kháng Thuốc (Việt Nam, 2024):")
+            for organism, pattern in resistance_summary.items():
+                resistant_pct = pattern.get('resistant', 'N/A')
+                sensitive_pct = pattern.get('sensitive', 'N/A')
+                
+                # Color code
+                if resistant_pct != 'N/A' and '%' in resistant_pct:
+                    try:
+                        r_val = float(resistant_pct.split('%')[0].split('-')[0])
+                        if r_val >= 50:
+                            color = "#F44336"
+                        elif r_val >= 30:
+                            color = "#FF9800"
+                        else:
+                            color = "#4CAF50"
+                    except:
+                        color = "#666"
+                else:
+                    color = "#666"
+                
+                st.markdown(f"""
+                <div style='padding: 8px 12px; margin: 4px 0; background: rgba(244,67,54,0.05); border-left: 3px solid {color}; border-radius: 6px;'>
+                    <strong>{organism}:</strong><br>
+                    <span style='color: #F44336;'>Kháng (R): {resistant_pct}</span> | 
+                    <span style='color: #4CAF50;'>Nhạy cảm (S): {sensitive_pct}</span>
+                </div>
+                """, unsafe_allow_html=True)
         
         # Integrated Quick Dosing Calculator
         st.markdown("---")

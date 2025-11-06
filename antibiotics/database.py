@@ -6,6 +6,7 @@ Tích hợp database kháng sinh với công cụ tra cứu và tính liều
 
 import streamlit as st
 import pandas as pd
+import html
 from .antibiotics_data import ANTIBIOTICS_DATABASE
 from .database_search import (
     search_antibiotics,
@@ -21,6 +22,7 @@ from .database_display import (
 )
 from .database_calculator import render_quick_dosing_calculator
 from .database_export import _render_antibiotic_export
+from .condition_search import search_by_condition, get_all_conditions
 
 def render_database():
     """Unified Antibiotic Database - Search, Browse, Detail View, and Integrated Dosing Calculator"""
@@ -44,21 +46,26 @@ def render_database():
     
     ab_count = len(ANTIBIOTICS_DATABASE)
     
-    # Modern header with gradient
+    # Enhanced header with improved typography hierarchy and visual design
     st.markdown(f"""
     <div style='
-        background: linear-gradient(135deg, #0EA5E9 0%, #0288D1 100%);
+        background: linear-gradient(135deg, #0EA5E9 0%, #0288D1 50%, #01579B 100%);
         color: white;
-        padding: 25px;
-        border-radius: 15px;
-        margin-bottom: 25px;
+        padding: 30px 25px;
+        border-radius: 20px;
+        margin-bottom: 30px;
         text-align: center;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 8px 24px rgba(2,136,209,0.25), 0 4px 8px rgba(0,0,0,0.1);
+        position: relative;
+        overflow: hidden;
     '>
-        <h1 style='margin: 0; color: white; font-size: 2.2em;'>🔍 Tra Cứu & Dữ Liệu Kháng Sinh</h1>
-        <p style='margin: 10px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1.1em;'>
-            Database <strong>{ab_count}</strong> kháng sinh tiêm truyền thông dụng • Tích hợp tính liều tự động
-        </p>
+        <div style='position: absolute; top: -50%; right: -10%; width: 300px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 50%; filter: blur(60px);'></div>
+        <div style='position: relative; z-index: 1;'>
+            <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: 700; letter-spacing: -0.5px; text-shadow: 0 2px 8px rgba(0,0,0,0.2);'>🔍 Tra Cứu & Dữ Liệu Kháng Sinh</h1>
+            <p style='margin: 12px 0 0 0; color: rgba(255,255,255,0.95); font-size: 1.15em; font-weight: 400; line-height: 1.6;'>
+                Database <strong style='font-weight: 700; font-size: 1.1em;'>{ab_count}</strong> kháng sinh tiêm truyền thông dụng • Tích hợp tính liều tự động
+            </p>
+        </div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -108,7 +115,92 @@ def render_database():
     st.markdown("---")
     
     # ========== SEARCH & FILTER SECTION ==========
-    st.markdown("### 🔍 Tìm Kiếm")
+    st.markdown("""
+    <h2 style='font-size: 1.8em; font-weight: 700; color: #1976D2; margin: 30px 0 20px 0; letter-spacing: -0.3px;'>🔍 Tìm Kiếm</h2>
+    """, unsafe_allow_html=True)
+    
+    # Condition-based search option
+    search_mode = st.radio(
+        "Chế độ tìm kiếm:",
+        ["🔍 Tên thuốc / Biệt dược", "🏥 Theo bệnh lý"],
+        key="search_mode",
+        horizontal=True,
+        help="Tìm theo tên thuốc hoặc theo bệnh lý lâm sàng"
+    )
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Condition-based search
+    if search_mode == "🏥 Theo bệnh lý":
+        conditions = get_all_conditions()
+        condition_map = {
+            "Sepsis": "Sepsis / Nhiễm khuẩn huyết",
+            "UTI": "UTI / Nhiễm khuẩn tiết niệu",
+            "Pneumonia": "Viêm phổi",
+            "Meningitis": "Viêm màng não",
+            "Intra-abdominal": "Nhiễm khuẩn ổ bụng",
+            "Skin_Soft_Tissue": "Nhiễm khuẩn da và mô mềm",
+            "Osteomyelitis": "Viêm xương tủy",
+            "Endocarditis": "Viêm nội tâm mạc",
+            "Cellulitis": "Viêm mô tế bào",
+            "Diabetic_Foot": "Nhiễm khuẩn bàn chân ĐTĐ",
+            "Prostatitis": "Viêm tuyến tiền liệt"
+        }
+        
+        selected_condition = st.selectbox(
+            "Chọn bệnh lý:",
+            options=conditions,
+            format_func=lambda x: condition_map.get(x, x),
+            key="condition_select"
+        )
+        
+        if selected_condition:
+            condition_data = search_by_condition(selected_condition)
+            if condition_data:
+                st.markdown("---")
+                st.markdown(f"""
+                <div style='
+                    background: linear-gradient(135deg, rgba(25,118,210,0.1) 0%, rgba(25,118,210,0.05) 100%);
+                    padding: 20px;
+                    border-radius: 16px;
+                    border-left: 4px solid #1976D2;
+                    margin: 20px 0;
+                '>
+                    <h3 style='font-size: 1.4em; font-weight: 700; color: #1976D2; margin-bottom: 10px;'>🏥 {condition_data['description']}</h3>
+                    <p style='color: #666; margin-bottom: 15px;'>{condition_data.get('notes', '')}</p>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                st.markdown("### 💊 Khuyến Cáo Điều Trị:")
+                
+                for idx, therapy in enumerate(condition_data.get('empiric_therapy', []), 1):
+                    priority_colors = {
+                        "First-line": "#4CAF50",
+                        "Alternative": "#FF9800",
+                        "Add-on": "#2196F3",
+                        "Complex UTI": "#9C27B0",
+                        "Severe HAP/VAP": "#F44336",
+                        "MRSA": "#F44336"
+                    }
+                    priority_color = priority_colors.get(therapy.get('priority', ''), "#666")
+                    
+                    with st.expander(f"**{idx}. {therapy['antibiotic']}** - {therapy.get('priority', '')}", expanded=(idx == 1)):
+                        st.markdown(f"""
+                        <div style='padding: 12px; background: rgba(25,118,210,0.03); border-radius: 8px; margin-bottom: 10px;'>
+                            <p style='margin: 5px 0;'><strong>💡 Lý do:</strong> {therapy.get('rationale', '')}</p>
+                            <p style='margin: 5px 0;'><strong>💉 Liều dùng:</strong> <span style='color: #1976D2; font-weight: 600;'>{therapy.get('dosing', '')}</span></p>
+                            <span style='background: {priority_color}; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; font-weight: 600;'>{therapy.get('priority', '')}</span>
+                        </div>
+                        """, unsafe_allow_html=True)
+                        
+                        # Quick link to antibiotic detail
+                        if therapy['antibiotic'] in ANTIBIOTICS_DATABASE:
+                            if st.button(f"📖 Xem chi tiết {therapy['antibiotic']}", key=f"condition_{selected_condition}_{idx}"):
+                                st.session_state['view_antibiotic'] = therapy['antibiotic']
+                                st.rerun()
+                
+                st.markdown("---")
+                return  # Exit early for condition-based search
     
     # Enhanced search with better UI
     col_search, col_clear = st.columns([5, 1])
@@ -234,32 +326,74 @@ def render_database():
                     if idx < len(results) - 1:
                         st.markdown("<hr style='margin: 10px 0; border: none; border-top: 1px solid #e0e0e0;'>", unsafe_allow_html=True)
             else:
-                st.warning(f"❌ Không tìm thấy kết quả nào cho '{search_query}'")
+                # Enhanced no results state
+                st.markdown(f"""
+                <div style='
+                    background: linear-gradient(135deg, rgba(255,152,0,0.08) 0%, rgba(255,152,0,0.02) 100%);
+                    padding: 25px;
+                    border-radius: 16px;
+                    border: 2px solid rgba(255,152,0,0.3);
+                    margin: 20px 0;
+                '>
+                    <div style='font-size: 2.5em; margin-bottom: 10px;'>❌</div>
+                    <h3 style='font-size: 1.2em; font-weight: 700; color: #FF9800; margin-bottom: 8px;'>Không tìm thấy kết quả</h3>
+                    <p style='color: #666; margin: 0;'>Không tìm thấy kết quả nào cho '<strong>{html.escape(search_query)}</strong>'</p>
+                </div>
+                """, unsafe_allow_html=True)
                 
                 # Show autocomplete suggestions as fallback
                 suggestions = get_antibiotic_autocomplete_suggestions(search_query, max_suggestions=5)
                 if suggestions:
-                    st.info("💡 **Gợi ý tìm kiếm:**")
+                    st.markdown("""
+                    <div style='margin: 20px 0 10px 0;'>
+                        <strong style='font-size: 1.1em; color: #1976D2;'>💡 Gợi ý tìm kiếm:</strong>
+                    </div>
+                    """, unsafe_allow_html=True)
                     sugg_cols = st.columns(min(5, len(suggestions)))
                     for idx, suggestion in enumerate(suggestions):
                         with sugg_cols[idx]:
                             # Sanitize suggestion for key
                             safe_sugg_key = f"sugg_{str(suggestion).replace(' ', '_').replace('-', '_').replace('/', '_')}"
-                            if st.button(suggestion, key=safe_sugg_key, use_container_width=True):
+                            if st.button(f"💊 {suggestion}", key=safe_sugg_key, use_container_width=True):
                                 # Ensure suggestion is a valid string
                                 if suggestion:
                                     # Use trigger instead of direct assignment to avoid widget conflict
                                     st.session_state.ab_search_trigger = str(suggestion).strip()
                                     st.rerun()
                 else:
-                    st.info("💡 **Gợi ý:** Thử tìm với tên thuốc, biệt dược, nhóm thuốc (ví dụ: Beta-lactam), hoặc chỉ định (ví dụ: MRSA, Sepsis, UTI)")
+                    st.markdown("""
+                    <div style='
+                        background: rgba(25,118,210,0.05);
+                        padding: 15px 20px;
+                        border-radius: 12px;
+                        border-left: 4px solid #1976D2;
+                        margin-top: 15px;
+                    '>
+                        <strong style='color: #1976D2;'>💡 Gợi ý:</strong> Thử tìm với tên thuốc, biệt dược, nhóm thuốc (ví dụ: <strong>Beta-lactam</strong>), hoặc chỉ định (ví dụ: <strong>MRSA</strong>, <strong>Sepsis</strong>, <strong>UTI</strong>)
+                    </div>
+                    """, unsafe_allow_html=True)
         else:
-            # Empty state with popular searches
-            st.info("👆 **Nhập từ khóa để tìm kiếm** (ví dụ: Vancomycin, Ceftriaxone, MRSA, Sepsis)")
+            # Enhanced empty state with better design
+            st.markdown("""
+            <div style='
+                background: linear-gradient(135deg, rgba(25,118,210,0.05) 0%, rgba(25,118,210,0.02) 100%);
+                padding: 30px;
+                border-radius: 16px;
+                border: 2px dashed rgba(25,118,210,0.2);
+                text-align: center;
+                margin: 20px 0;
+            '>
+                <div style='font-size: 3em; margin-bottom: 15px;'>🔍</div>
+                <h3 style='font-size: 1.3em; font-weight: 700; color: #1976D2; margin-bottom: 10px;'>Nhập từ khóa để tìm kiếm</h3>
+                <p style='color: #666; font-size: 1em; margin: 0;'>Ví dụ: <strong>Vancomycin</strong>, <strong>Ceftriaxone</strong>, <strong>MRSA</strong>, <strong>Sepsis</strong></p>
+            </div>
+            """, unsafe_allow_html=True)
             st.markdown("---")
             
-            # Show popular/quick links
-            st.markdown("### ⚡ Truy cập nhanh:")
+            # Show popular/quick links with enhanced design
+            st.markdown("""
+            <h3 style='font-size: 1.5em; font-weight: 700; color: #1976D2; margin: 25px 0 15px 0;'>⚡ Truy cập nhanh</h3>
+            """, unsafe_allow_html=True)
             popular = ["Vancomycin", "Ceftriaxone", "Piperacillin-Tazobactam", "Meropenem", "Levofloxacin"]
             cols = st.columns(len(popular))
             for col, ab_name in zip(cols, popular):
@@ -282,11 +416,23 @@ def render_database():
         )
         
         if filtered_ab:
-            st.success(f"📋 Hiển thị **{len(filtered_ab)}** kháng sinh")
+            st.markdown(f"""
+            <div style='
+                background: linear-gradient(135deg, rgba(76,175,80,0.1) 0%, rgba(76,175,80,0.05) 100%);
+                padding: 15px 20px;
+                border-radius: 12px;
+                border-left: 4px solid #4CAF50;
+                margin: 20px 0;
+            '>
+                <strong style='font-size: 1.1em; color: #2e7d32;'>📋 Hiển thị <span style='font-size: 1.2em;'>{len(filtered_ab)}</span> kháng sinh</strong>
+            </div>
+            """, unsafe_allow_html=True)
             st.markdown("---")
             
-            # Display as compact list
-            st.markdown("### 📚 Danh sách kháng sinh:")
+            # Display as compact list with enhanced header
+            st.markdown("""
+            <h3 style='font-size: 1.5em; font-weight: 700; color: #1976D2; margin: 25px 0 15px 0;'>📚 Danh sách kháng sinh</h3>
+            """, unsafe_allow_html=True)
             
             # Group by category for better organization
             groups_dict = {}
@@ -296,10 +442,19 @@ def render_database():
                     groups_dict[group] = []
                 groups_dict[group].append((ab_name, ab_data))
             
-            # Display by group
+            # Display by group with enhanced styling
             for group in sorted(groups_dict.keys()):
                 if len(groups_dict) > 1:
-                    st.markdown(f"#### {group} ({len(groups_dict[group])} thuốc)")
+                    st.markdown(f"""
+                    <h4 style='
+                        font-size: 1.3em;
+                        font-weight: 700;
+                        color: #1976D2;
+                        margin: 30px 0 15px 0;
+                        padding-bottom: 10px;
+                        border-bottom: 2px solid rgba(25,118,210,0.2);
+                    '>{group} <span style='font-size: 0.85em; color: #666; font-weight: 500;'>({len(groups_dict[group])} thuốc)</span></h4>
+                    """, unsafe_allow_html=True)
                 
                 for idx, (ab_name, ab_data) in enumerate(sorted(groups_dict[group], key=lambda x: x[0])):
                     render_compact_antibiotic_card(ab_name, ab_data, key_prefix=f"browse_{group}_{idx}_")
@@ -309,8 +464,22 @@ def render_database():
                 if group != list(groups_dict.keys())[-1]:
                     st.markdown("<br>", unsafe_allow_html=True)
         else:
-            st.warning("❌ Không có kháng sinh nào thỏa mãn bộ lọc")
-            if st.button("🔄 Xóa bộ lọc"):
+            # Enhanced empty filter state
+            st.markdown("""
+            <div style='
+                background: linear-gradient(135deg, rgba(255,152,0,0.08) 0%, rgba(255,152,0,0.02) 100%);
+                padding: 30px;
+                border-radius: 16px;
+                border: 2px solid rgba(255,152,0,0.3);
+                text-align: center;
+                margin: 20px 0;
+            '>
+                <div style='font-size: 3em; margin-bottom: 15px;'>🔍</div>
+                <h3 style='font-size: 1.3em; font-weight: 700; color: #FF9800; margin-bottom: 10px;'>Không có kháng sinh nào thỏa mãn bộ lọc</h3>
+                <p style='color: #666; margin-bottom: 20px;'>Thử điều chỉnh bộ lọc để xem thêm kết quả</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("🔄 Xóa bộ lọc", use_container_width=True, type="primary"):
                 st.rerun()
 
 

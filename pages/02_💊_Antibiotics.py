@@ -11,6 +11,8 @@ from antibiotics import (
     render_database,
     render_multi_comparison
 )
+from antibiotics.comparison import render_comparison
+from antibiotics.treatment_algorithms import render_algorithms_page
 
 # Standard page setup
 setup_page(
@@ -27,7 +29,9 @@ with st.sidebar:
         "Công cụ:",
         [
             "🔍 Tra Cứu & Dữ Liệu Kháng Sinh",
-            "🔬 So Sánh Nhiều Kháng Sinh"
+            "🔬 So Sánh Nhiều Kháng Sinh",
+            "📊 So Sánh Side-by-Side",
+            "🔄 Phác Đồ Điều Trị"
         ]
     )
     
@@ -52,6 +56,12 @@ if "Tra Cứu" in function_type and "Dữ Liệu" in function_type:
 
 elif "So Sánh Nhiều" in function_type:
     render_multi_comparison()
+
+elif "Side-by-Side" in function_type:
+    render_comparison()
+
+elif "Phác Đồ" in function_type:
+    render_algorithms_page()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)
