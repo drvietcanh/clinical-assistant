@@ -1238,7 +1238,135 @@ OTHER_DRUGS = {
             "clearance": "Gan: chuyển hóa qua CYP2D6 thành desvenlafaxine (metabolite hoạt động, mạnh hơn venlafaxine). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều ở suy thận và suy gan nặng."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng extended release: bảo quản tương tự, không nghiền hoặc nhai (phải uống nguyên viên).",
-        "black_box_warnings": "Nguy cơ tự sát và hành vi tự sát ở trẻ em, thanh thiếu niên, và người trẻ tuổi (<25 tuổi) với các thuốc chống trầm cảm. Nguy cơ tăng trong vài tháng đầu điều trị và khi tăng liều. Theo dõi chặt chẽ dấu hiệu tự sát, thay đổi hành vi, lo âu, kích động, mất ngủ, hoặc các triệu chứng mới hoặc nặng hơn. Nguy cơ hội chứng serotonin khi dùng với MAO inhibitor, tramadol, triptans."
+        "black_box_warnings": "Nguy cơ tự sát và hành vi tự sát ở trẻ em, thanh thiếu niên, và người trẻ tuổi (<25 tuổi) với các thuốc chống trầm cảm. Nguy cơ tăng trong vài tháng đầu điều trị và khi tăng liều. Theo dõi chặt chẽ dấu hiệu tự sát, thay đổi hành vi, lo âu, kích động, mất ngủ, hoặc các triệu chứng mới hoặc nặng hơn. Nguy cơ hội chứng serotonin khi dùng với MAO inhibitor, tramadol, triptans.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors (phenelzine, tranylcypromine, selegiline)",
+                    "mechanism": "Ức chế chuyển hóa serotonin, tăng nồng độ serotonin",
+                    "effect": "Nguy cơ hội chứng serotonin nghiêm trọng, có thể tử vong (sốt, kích động, run, nhịp tim nhanh, co giật, hôn mê)",
+                    "management": "CHỐNG CHỈ ĐỊNH. Phải ngừng MAO inhibitor ít nhất 14 ngày trước khi bắt đầu venlafaxine. Phải ngừng venlafaxine ít nhất 7 ngày trước khi bắt đầu MAO inhibitor."
+                },
+                {
+                    "drug": "Tramadol",
+                    "mechanism": "Cả hai đều tăng serotonin, tăng nguy cơ hội chứng serotonin",
+                    "effect": "Nguy cơ hội chứng serotonin và co giật",
+                    "management": "Tránh dùng chung nếu có thể. Nếu phải dùng, theo dõi chặt chẽ dấu hiệu hội chứng serotonin. Giảm liều tramadol."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Venlafaxine có thể ức chế CYP2C9 nhẹ, tăng nồng độ warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Có thể cần giảm liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Triptans (sumatriptan, rizatriptan)",
+                    "mechanism": "Cả hai đều tăng serotonin",
+                    "effect": "Tăng nguy cơ hội chứng serotonin",
+                    "management": "Thận trọng, theo dõi dấu hiệu hội chứng serotonin. Có thể cần giảm liều triptan hoặc tăng khoảng cách giữa các liều."
+                },
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Tăng serotonin",
+                    "effect": "Tăng nguy cơ hội chứng serotonin",
+                    "management": "Theo dõi dấu hiệu hội chứng serotonin. Có thể cần giảm liều lithium."
+                },
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Ức chế CYP2D6, giảm chuyển hóa venlafaxine",
+                    "effect": "Tăng nồng độ venlafaxine",
+                    "management": "Giảm liều venlafaxine 25-50%. Theo dõi tác dụng phụ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Metoclopramide",
+                    "mechanism": "Cả hai đều tăng serotonin nhẹ",
+                    "effect": "Tăng nhẹ nguy cơ hội chứng serotonin",
+                    "management": "Theo dõi dấu hiệu hội chứng serotonin. Thường không cần điều chỉnh liều."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dùng MAO inhibitor (trong vòng 14 ngày)",
+                "Dị ứng venlafaxine hoặc các thành phần khác"
+            ],
+            "relative": [
+                "Tăng huyết áp không kiểm soát - nguy cơ tăng huyết áp ở liều cao",
+                "Bệnh tim mạch (loạn nhịp, suy tim) - tăng nhịp tim, tăng huyết áp",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Mang thai (nguy cơ dị tật bẩm sinh, withdrawal ở trẻ sơ sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Tiền sử co giật - tăng nguy cơ co giật",
+                "Glaucoma góc hẹp - tăng nguy cơ tăng nhãn áp",
+                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh (tim, sứt môi/hà ếch), nhưng chứng cứ không rõ ràng. Trẻ sơ sinh có thể có withdrawal syndrome (khó chịu, run, khó thở, co giật) nếu mẹ dùng venlafaxine trong thai kỳ, đặc biệt gần cuối thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ. Theo dõi trẻ sơ sinh về dấu hiệu withdrawal.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Venlafaxine và desvenlafaxine bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ, kích động nhẹ.",
+                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, kích động, bú kém)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
+            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
+            "notes": "Venlafaxine chuyển hóa ở gan qua CYP2D6 thành desvenlafaxine. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy venlafaxine và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, co giật, hôn mê",
+                "Hội chứng serotonin: sốt, kích động, run, nhịp tim nhanh, tăng huyết áp, co giật",
+                "Rối loạn tim mạch: nhịp nhanh, tăng huyết áp, rối loạn nhịp, QT kéo dài",
+                "Rối loạn hô hấp: suy hô hấp",
+                "Rối loạn tiêu hóa: buồn nôn, nôn",
+                "Triệu chứng khác: giãn đồng tử, sốt"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Cyproheptadine có thể được dùng để điều trị hội chứng serotonin (không được FDA chấp thuận).",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ (QT kéo dài)",
+                "Xử trí hội chứng serotonin: cyproheptadine (antagonist serotonin), hạ nhiệt, benzodiazepine cho kích động, co giật",
+                "Xử trí co giật: benzodiazepine (diazepam, lorazepam)",
+                "Xử trí tăng huyết áp: labetalol, esmolol (beta-blocker)",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Theo dõi điện tâm đồ: QT kéo dài, rối loạn nhịp"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, điện tâm đồ (QT, nhịp tim), dấu hiệu hội chứng serotonin, nhiệt độ cơ thể"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để giảm buồn nôn (tác dụng phụ phổ biến nhất)",
+                "timing": "Dạng immediate release: chia 2-3 lần/ngày. Dạng extended release (ER): uống 1 lần/ngày vào buổi sáng hoặc tối. Uống cùng thời điểm mỗi ngày. KHÔNG nghiền hoặc nhai viên ER (phải uống nguyên viên). Không ngừng đột ngột - giảm liều dần dần trong ít nhất 2 tuần."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Venlafaxine",
+                "UpToDate - Venlafaxine: Drug information",
+                "FDA - Effexor (venlafaxine) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
     },
     "Amitriptyline": {
         "group": "Psychiatry - Tricyclic Antidepressant (TCA)",
@@ -2182,7 +2310,155 @@ OTHER_DRUGS = {
             "clearance": "Gan và thận, KHÔNG tích lũy ở suy thận (khác với tetracycline cũ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nang: tránh ẩm. Bảo quản tốt hơn các tetracycline cũ (ít bị hỏng).",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, ố vàng răng vĩnh viễn ở trẻ em < 8 tuổi là không hồi phục. Tăng áp lực nội sọ giả có thể gây mù. Viêm thực quản có thể nghiêm trọng."
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, ố vàng răng vĩnh viễn ở trẻ em < 8 tuổi là không hồi phục. Tăng áp lực nội sọ giả có thể gây mù. Viêm thực quản có thể nghiêm trọng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Antacid, Sắt, Calcium, Magnesium, Kẽm, Bismuth",
+                    "mechanism": "Các cation hóa trị 2+ (Ca²⁺, Mg²⁺, Fe²⁺, Zn²⁺) tạo phức hợp không hòa tan với doxycycline, làm giảm hấp thu doxycycline.",
+                    "effect": "Giảm hấp thu doxycycline đáng kể (50-90%), giảm hiệu quả kháng khuẩn",
+                    "management": "Cách ít nhất 2 giờ giữa doxycycline và các thuốc/thực phẩm chứa cation (antacid, sắt, canxi, magie, kẽm, sữa, bismuth). Uống doxycycline trước bữa ăn hoặc 2 giờ sau bữa ăn nếu bữa ăn chứa nhiều sữa hoặc thực phẩm giàu canxi."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Doxycycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K. Ngoài ra, có thể đẩy warfarin khỏi albumin (protein binding cao).",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng doxycycline). Có thể cần giảm liều warfarin. Đặc biệt thận trọng ở bệnh nhân dùng kéo dài (>7 ngày)."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Doxycycline có thể làm tăng hấp thu digoxin bằng cách thay đổi hệ vi khuẩn đường ruột, làm tăng nồng độ digoxin.",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ độc tính digoxin (buồn nôn, rối loạn nhịp tim)",
+                    "management": "Theo dõi nồng độ digoxin. Có thể cần giảm liều digoxin. Theo dõi dấu hiệu độc tính digoxin."
+                },
+                {
+                    "drug": "Phenytoin, Carbamazepine",
+                    "mechanism": "Phenytoin và carbamazepine cảm ứng enzyme chuyển hóa doxycycline, làm giảm nồng độ doxycycline.",
+                    "effect": "Giảm nồng độ doxycycline, giảm hiệu quả kháng khuẩn",
+                    "management": "Có thể cần tăng liều doxycycline. Theo dõi đáp ứng điều trị."
+                },
+                {
+                    "drug": "Thuốc tránh thai đường uống",
+                    "mechanism": "Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột. Ngoài ra, doxycycline có thể cảm ứng enzyme chuyển hóa estrogen.",
+                    "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
+                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Penicillin",
+                    "mechanism": "Doxycycline có thể đối kháng với penicillin trong một số trường hợp (ức chế tổng hợp protein vs ức chế tổng hợp thành tế bào).",
+                    "effect": "Giảm hiệu quả kháng khuẩn của penicillin (hiếm)",
+                    "management": "Tránh dùng đồng thời nếu có thể. Chọn một trong hai thuốc tùy theo chỉ định."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng doxycycline hoặc tetracycline",
+                "Có thai (3 tháng cuối) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)",
+                "Trẻ em < 8 tuổi - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (trừ trường hợp đe dọa tính mạng như sốt rét, rickettsia) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương"
+            ],
+            "relative": [
+                "Có thai (3 tháng đầu và giữa) - nguy cơ ố vàng răng, chậm phát triển xương ở trẻ, chỉ dùng khi thực sự cần thiết",
+                "Suy gan nặng - tăng nguy cơ độc gan",
+                "Tăng áp lực nội sọ giả - có thể làm nặng thêm",
+                "Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu",
+                "Bệnh nhân đang dùng digoxin - tăng nguy cơ độc tính digoxin",
+                "Nhạy cảm với ánh sáng - tăng nguy cơ phản ứng quang hóa"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Doxycycline là thuốc phân loại D. Các nghiên cứu trên động vật và người cho thấy nguy cơ ố vàng răng vĩnh viễn và chậm phát triển xương ở trẻ khi dùng trong thai kỳ, đặc biệt trong tam cá nguyệt thứ hai và thứ ba. Chống chỉ định trong tam cá nguyệt thứ hai và thứ ba. Tránh dùng trong tam cá nguyệt đầu tiên nếu có thể. Chỉ dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong các trường hợp đe dọa tính mạng như sốt rét, rickettsia.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Doxycycline bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Tuy nhiên, có thể gây ố vàng răng ở trẻ sơ sinh nếu dùng kéo dài.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Tránh dùng kéo dài. Theo dõi trẻ sơ sinh về dấu hiệu tiêu chảy, phát ban, hoặc các tác dụng phụ khác. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Doxycycline chuyển hóa một phần qua gan, nhưng không tích lũy đáng kể ở suy gan nhẹ.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan và dấu hiệu độc gan.",
+            "severe": "Giảm liều 25-50% hoặc tăng khoảng cách giữa các liều. Theo dõi chức năng gan chặt chẽ. Có thể cần tránh dùng nếu suy gan rất nặng.",
+            "notes": "Doxycycline chuyển hóa một phần qua gan, nhưng thải trừ chủ yếu qua gan và thận. Không tích lũy đáng kể ở suy gan nhẹ, nhưng có thể tích lũy ở suy gan nặng. Cần điều chỉnh liều ở suy gan nặng. Khác với tetracycline cũ, doxycycline không tích lũy ở suy thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, viêm thực quản (đau khi nuốt, khó nuốt)",
+                "Triệu chứng gan: Tăng men gan, viêm gan (đặc biệt ở liều cao, suy gan)",
+                "Triệu chứng thần kinh: Tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị) - đặc biệt ở phụ nữ, có thể gây mù",
+                "Triệu chứng da: Phản ứng quang hóa nặng (phát ban, bỏng da khi tiếp xúc với ánh sáng)",
+                "Triệu chứng chảy máu: Chảy máu kéo dài, tăng INR (khi dùng với warfarin)",
+                "Triệu chứng dị ứng: Phát ban, phù mạch, sốc phản vệ (nếu dị ứng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay doxycycline",
+                "Điều trị viêm thực quản nếu có:",
+                "  - Uống nhiều nước",
+                "  - Tránh nằm ngửa",
+                "  - Điều trị giảm đau nếu cần",
+                "  - Có thể cần nội soi nếu nghiêm trọng",
+                "Điều trị tăng áp lực nội sọ giả nếu có:",
+                "  - Ngừng ngay doxycycline",
+                "  - Điều trị bằng acetazolamide hoặc mannitol nếu cần",
+                "  - Theo dõi thị lực và dấu hiệu thần kinh",
+                "  - Có thể cần chọc dò tủy sống để giảm áp lực",
+                "Điều trị phản ứng quang hóa nếu có:",
+                "  - Tránh ánh nắng trực tiếp",
+                "  - Dùng kem chống nắng",
+                "  - Điều trị phát ban/bỏng da",
+                "Điều trị chảy máu nếu có:",
+                "  - Bổ sung vitamin K nếu giảm prothrombin",
+                "  - Truyền huyết tương tươi đông lạnh (FFP) nếu chảy máu nặng",
+                "  - Điều chỉnh liều warfarin nếu đang dùng",
+                "Điều trị độc gan nếu có:",
+                "  - Ngừng ngay doxycycline",
+                "  - Điều trị hỗ trợ gan",
+                "  - Theo dõi chức năng gan",
+                "Điều trị dị ứng nếu có:",
+                "  - Epinephrine nếu sốc phản vệ",
+                "  - Antihistamine, corticosteroid",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis không hiệu quả do protein binding cao (80-90%)"
+            ],
+            "monitoring": "Theo dõi dấu hiệu tiêu hóa (buồn nôn, nôn, viêm thực quản), dấu hiệu tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị), dấu hiệu phản ứng quang hóa (phát ban, bỏng da), chức năng gan (ALT, AST), PT/INR (nếu dùng với warfarin), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có tăng áp lực nội sọ giả hoặc độc gan."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhưng giảm hấp thu một phần. Tránh uống với sữa hoặc thực phẩm giàu canxi (giảm hấp thu đáng kể).",
+                "timing": "Uống 1-2 lần/ngày tùy chỉ định (respiratory: 2 lần/ngày, chlamydia: 2 lần/ngày, acne: 1-2 lần/ngày, malaria prophylaxis: 1 lần/ngày). Cách đều trong ngày. Uống với nhiều nước (ít nhất 200ml) và ở tư thế đứng để tránh viêm thực quản. KHÔNG uống nằm ngửa hoặc trước khi ngủ. Cách ít nhất 2 giờ với antacid, sắt, canxi, magie, kẽm, sữa."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 0.1-1mg/ml. Pha 100mg trong 100ml = 1mg/ml. Pha 200mg trong 200ml = 1mg/ml. Lắc kỹ để hòa tan hoàn toàn. Bảo quản tránh ánh sáng.",
+                "infusion_rate": "Truyền IV trong 1-4 giờ. Tốc độ: 100ml/1 giờ = ~1.7ml/phút, 200ml/4 giờ = ~0.83ml/phút. KHÔNG truyền nhanh (bolus) - tăng nguy cơ tác dụng phụ.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Ringer's Lactate - có thể tạo kết tủa với canxi",
+                    "Các dung dịch chứa canxi, magie, sắt - tạo kết tủa",
+                    "Các thuốc có tính kiềm hoặc acid mạnh"
+                ],
+                "notes": "QUAN TRỌNG: 1) Uống với nhiều nước và ở tư thế đứng để tránh viêm thực quản, 2) Tránh ánh nắng trực tiếp, dùng kem chống nắng, 3) Cách ít nhất 2 giờ với antacid, sắt, canxi, magie, kẽm, sữa, 4) KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng), 5) KHÔNG dùng trong 3 tháng cuối thai kỳ, 6) Theo dõi dấu hiệu tăng áp lực nội sọ giả."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Doxycycline (Vibramycin)",
+                "UpToDate - Doxycycline: Drug Information",
+                "Medscape - Doxycycline Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Doxycycline Monograph",
+                "Micromedex - Doxycycline Drug Information",
+                "IDSA Guidelines - Community-Acquired Pneumonia, Tick-Borne Infections"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     "Metronidazole": {
         "group": "Infectious Disease - Nitroimidazole Antibiotic",
@@ -2263,7 +2539,153 @@ OTHER_DRUGS = {
             "clearance": "Chủ yếu qua gan (60-80%), cần điều chỉnh ở suy gan nặng"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ánh sáng. Viên nén: tránh ẩm. Dung dịch pha tiêm: sau khi pha, bảo quản ở nhiệt độ phòng 24 giờ, tránh ánh sáng.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, phản ứng Disulfiram-like với rượu có thể nặng. Tổn thương thần kinh có thể không hồi phục. Nguy cơ dị tật thai nhi nếu dùng trong 3 tháng đầu thai kỳ."
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, phản ứng Disulfiram-like với rượu có thể nặng. Tổn thương thần kinh có thể không hồi phục. Nguy cơ dị tật thai nhi nếu dùng trong 3 tháng đầu thai kỳ.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rượu (Ethanol)",
+                    "mechanism": "Metronidazole ức chế aldehyde dehydrogenase, enzyme chuyển hóa acetaldehyde (sản phẩm chuyển hóa của ethanol) thành acetate. Kết quả là tích lũy acetaldehyde, gây phản ứng Disulfiram-like.",
+                    "effect": "Phản ứng Disulfiram-like nặng: buồn nôn, nôn, đỏ bừng mặt, nhịp tim nhanh, hạ huyết áp, khó thở, có thể đe dọa tính mạng",
+                    "management": "TUYỆT ĐỐI KHÔNG uống rượu trong và ít nhất 3 ngày sau khi ngừng metronidazole. Tránh tất cả các sản phẩm chứa rượu (thuốc ho, nước súc miệng, thực phẩm có rượu). Nếu uống rượu, ngừng ngay metronidazole và điều trị hỗ trợ."
+                },
+                {
+                    "drug": "Disulfiram",
+                    "mechanism": "Cả hai đều ức chế aldehyde dehydrogenase, tác dụng cộng dồn làm tăng nguy cơ phản ứng Disulfiram-like và tổn thương thần kinh.",
+                    "effect": "Tăng nguy cơ phản ứng Disulfiram-like nặng, tăng nguy cơ tổn thương thần kinh",
+                    "management": "CHỐNG CHỈ ĐỊNH: Không dùng metronidazole trong vòng 14 ngày sau khi ngừng disulfiram. Nếu đang dùng disulfiram, không dùng metronidazole."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Metronidazole ức chế chuyển hóa warfarin qua CYP2C9, làm tăng nồng độ warfarin và tăng tác dụng chống đông.",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu nghiêm trọng",
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng metronidazole). Giảm liều warfarin 30-50%. Đặc biệt thận trọng ở bệnh nhân suy gan, dùng kéo dài (>7 ngày)."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Metronidazole có thể làm giảm thải trừ lithium, làm tăng nồng độ lithium trong máu.",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính lithium (buồn nôn, run, lú lẫn, suy thận)",
+                    "management": "Theo dõi nồng độ lithium thường xuyên. Có thể cần giảm liều lithium. Theo dõi dấu hiệu độc tính lithium."
+                },
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Metronidazole ức chế chuyển hóa phenytoin qua CYP2C9, làm tăng nồng độ phenytoin.",
+                    "effect": "Tăng nồng độ phenytoin, tăng nguy cơ độc tính (chóng mặt, rung giật nhãn cầu, lú lẫn, co giật)",
+                    "management": "Theo dõi nồng độ phenytoin. Có thể cần giảm liều phenytoin. Theo dõi dấu hiệu độc tính phenytoin."
+                },
+                {
+                    "drug": "Phenobarbital",
+                    "mechanism": "Phenobarbital có thể cảm ứng enzyme chuyển hóa metronidazole, làm giảm nồng độ metronidazole.",
+                    "effect": "Giảm nồng độ metronidazole, giảm hiệu quả kháng khuẩn",
+                    "management": "Có thể cần tăng liều metronidazole. Theo dõi đáp ứng điều trị."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Cimetidine có thể ức chế chuyển hóa metronidazole, làm tăng nhẹ nồng độ metronidazole.",
+                    "effect": "Tăng nhẹ nồng độ metronidazole",
+                    "management": "Theo dõi dấu hiệu tác dụng phụ. Thường không cần điều chỉnh liều."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng metronidazole hoặc nitroimidazole",
+                "Đang dùng disulfiram hoặc đã dùng disulfiram trong vòng 14 ngày - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI"
+            ],
+            "relative": [
+                "Có thai (3 tháng đầu) - nguy cơ dị tật thai nhi, chỉ dùng khi thực sự cần thiết",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tác dụng phụ thần kinh",
+                "Bệnh thần kinh ngoại biên - tăng nguy cơ tổn thương thần kinh",
+                "Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu",
+                "Bệnh nhân đang dùng lithium - tăng nguy cơ độc tính lithium",
+                "Nhiễm trùng do vi khuẩn hiếu khí - không hiệu quả"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B (D trong 3 tháng đầu)",
+            "pregnancy_details": "Metronidazole là thuốc phân loại B trong tam cá nguyệt thứ hai và thứ ba, nhưng phân loại D trong tam cá nguyệt đầu tiên. Các nghiên cứu trên động vật cho thấy nguy cơ dị tật bẩm sinh khi dùng trong tam cá nguyệt đầu tiên. Các nghiên cứu trên người cho thấy nguy cơ dị tật tăng nhẹ khi dùng trong tam cá nguyệt đầu tiên. Tránh dùng trong tam cá nguyệt đầu tiên nếu có thể. Nếu cần thiết, chỉ dùng khi lợi ích vượt quá nguy cơ. Có thể dùng trong tam cá nguyệt thứ hai và thứ ba khi cần thiết.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Metronidazole bài tiết vào sữa mẹ ở nồng độ tương đương nồng độ trong máu mẹ. Nồng độ trong sữa mẹ cao và có thể gây vị đắng cho trẻ sơ sinh. Tuy nhiên, không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ khi dùng liều thông thường.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Có thể gây vị đắng cho trẻ sơ sinh. Theo dõi trẻ sơ sinh về dấu hiệu tiêu chảy, phát ban, hoặc các tác dụng phụ khác. Dùng liều thấp nhất hiệu quả. Có thể cân nhắc ngừng cho con bú trong thời gian ngắn nếu dùng liều cao."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Metronidazole chuyển hóa qua gan (CYP450), nhưng không tích lũy đáng kể ở suy gan nhẹ.",
+            "moderate": "Thận trọng, có thể cần giảm liều 25-50%. Theo dõi chức năng gan và dấu hiệu tác dụng phụ thần kinh.",
+            "severe": "Giảm liều 50% hoặc tăng khoảng cách giữa các liều (q12h thay vì q8h). Theo dõi chức năng gan chặt chẽ. Theo dõi dấu hiệu tác dụng phụ thần kinh (dị cảm, co giật). Có thể cần tránh dùng nếu suy gan rất nặng.",
+            "notes": "Metronidazole chuyển hóa mạnh qua gan (CYP450), thải trừ chủ yếu qua gan (60-80%). Half-life tăng từ 6-8 giờ (bình thường) lên 9-15 giờ (suy gan). Tích lũy ở suy gan nặng, làm tăng nguy cơ tác dụng phụ thần kinh. Cần điều chỉnh liều ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: Co giật, rối loạn ý thức, dị cảm, viêm dây thần kinh ngoại biên, chóng mặt, mất điều hòa (đặc biệt ở suy gan, liều cao)",
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, vị kim loại",
+                "Triệu chứng Disulfiram-like: Buồn nôn, nôn, đỏ bừng mặt, nhịp tim nhanh, hạ huyết áp, khó thở (nếu uống rượu)",
+                "Triệu chứng chảy máu: Chảy máu kéo dài, tăng INR (khi dùng với warfarin)",
+                "Triệu chứng gan: Tăng men gan, viêm gan (hiếm)",
+                "Triệu chứng dị ứng: Phát ban, phù mạch, sốc phản vệ (nếu dị ứng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay metronidazole",
+                "Điều trị co giật nếu có: Benzodiazepine (diazepam, lorazepam), phenobarbital",
+                "Điều trị phản ứng Disulfiram-like nếu có (nếu uống rượu):",
+                "  - Ngừng ngay metronidazole",
+                "  - Bù dịch đầy đủ",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "  - Điều trị hạ huyết áp nếu cần",
+                "  - Theo dõi dấu hiệu sinh tồn",
+                "Điều trị tổn thương thần kinh ngoại biên:",
+                "  - Ngừng ngay metronidazole",
+                "  - Điều trị hỗ trợ (vật lý trị liệu)",
+                "  - Tổn thương có thể không hồi phục hoàn toàn",
+                "Điều trị chảy máu nếu có:",
+                "  - Bổ sung vitamin K nếu giảm prothrombin",
+                "  - Truyền huyết tương tươi đông lạnh (FFP) nếu chảy máu nặng",
+                "  - Điều chỉnh liều warfarin nếu đang dùng",
+                "Điều trị dị ứng nếu có:",
+                "  - Epinephrine nếu sốc phản vệ",
+                "  - Antihistamine, corticosteroid",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis có thể loại bỏ metronidazole một phần (protein binding <20%), nhưng không hiệu quả lắm do chuyển hóa chủ yếu qua gan."
+            ],
+            "monitoring": "Theo dõi dấu hiệu thần kinh (co giật, ý thức, dị cảm, viêm dây thần kinh), dấu hiệu Disulfiram-like (nếu uống rượu), PT/INR (nếu dùng với warfarin), chức năng gan (ALT, AST), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có tổn thương thần kinh hoặc suy gan."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên uống với thức ăn để giảm kích ứng dạ dày và vị kim loại. Uống với thức ăn không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 2-3 lần/ngày tùy chỉ định (anaerobic: 3 lần/ngày, C. difficile: 3 lần/ngày, H. pylori: 2 lần/ngày). Cách đều trong ngày. TUYỆT ĐỐI KHÔNG uống rượu trong và ít nhất 3 ngày sau khi ngừng."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl), D5W (5% Dextrose), hoặc Ringer's Lactate. Nồng độ pha: 5mg/ml (tối đa). Pha 500mg trong 100ml = 5mg/ml. Pha 1g trong 200ml = 5mg/ml. Lắc kỹ để hòa tan hoàn toàn. Bảo quản tránh ánh sáng.",
+                "infusion_rate": "Truyền IV trong 30-60 phút. Tốc độ: 100ml/30 phút = ~3.3ml/phút, 100ml/60 phút = ~1.7ml/phút. KHÔNG truyền nhanh (bolus) - tăng nguy cơ tác dụng phụ.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "Ringer's Lactate"],
+                "incompatibility": [
+                    "Aminophylline - tạo kết tủa, không pha chung",
+                    "Phenytoin - có thể tạo kết tủa, không pha chung",
+                    "Các thuốc có tính kiềm hoặc acid mạnh"
+                ],
+                "notes": "QUAN TRỌNG: 1) TUYỆT ĐỐI KHÔNG uống rượu trong và ít nhất 3 ngày sau khi ngừng, 2) Truyền chậm (30-60 phút) để giảm tác dụng phụ, 3) Bảo quản tránh ánh sáng, 4) Theo dõi dấu hiệu tổn thương thần kinh, 5) Điều chỉnh liều ở suy gan nặng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Metronidazole (Flagyl)",
+                "UpToDate - Metronidazole: Drug Information",
+                "Medscape - Metronidazole Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Metronidazole Monograph",
+                "Micromedex - Metronidazole Drug Information",
+                "IDSA Guidelines - Anaerobic Infections, C. difficile Infection"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
 "Chloroquine": {
         "group": "Infectious Disease - Antimalarial",
@@ -3748,7 +4170,153 @@ OTHER_DRUGS = {
             "clearance": "40% qua thận, 60% qua mật (độc nhất trong cephalosporin) → không cần điều chỉnh thận"
         },
         "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 10 ngày. Không đông lạnh.",
-        "black_box_warnings": "KHÔNG dùng ở trẻ sơ sinh < 28 ngày tuổi nếu đang dùng calci IV - có thể gây kết tủa ceftriaxone-calcium trong phổi, thận, có thể tử vong. Tránh dùng calci IV trong 48 giờ sau liều ceftriaxone cuối cùng ở trẻ sơ sinh."
+        "black_box_warnings": "KHÔNG dùng ở trẻ sơ sinh < 28 ngày tuổi nếu đang dùng calci IV - có thể gây kết tủa ceftriaxone-calcium trong phổi, thận, có thể tử vong. Tránh dùng calci IV trong 48 giờ sau liều ceftriaxone cuối cùng ở trẻ sơ sinh.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Calcium IV (đặc biệt ở trẻ sơ sinh < 28 ngày)",
+                    "mechanism": "Ceftriaxone tạo phức hợp không hòa tan với calci, gây kết tủa ceftriaxone-calcium trong phổi, thận, có thể tử vong.",
+                    "effect": "Kết tủa ceftriaxone-calcium trong phổi, thận, có thể tử vong (đặc biệt ở trẻ sơ sinh)",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI: Không dùng ceftriaxone ở trẻ sơ sinh < 28 ngày nếu đang dùng calci IV. Tránh dùng calci IV trong 48 giờ sau liều ceftriaxone cuối cùng ở trẻ sơ sinh. Ở người lớn, tránh pha chung trong cùng một ống truyền, truyền riêng biệt."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Ceftriaxone có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K. Ngoài ra, có thể đẩy warfarin khỏi albumin (protein binding cao).",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng ceftriaxone). Có thể cần giảm liều warfarin. Đặc biệt thận trọng ở bệnh nhân suy gan, dùng kéo dài (>7 ngày)."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết ống thận của ceftriaxone, làm giảm thải trừ và tăng nồng độ ceftriaxone.",
+                    "effect": "Tăng nồng độ ceftriaxone, tăng thời gian bán thải",
+                    "management": "Có thể cần giảm liều ceftriaxone. Theo dõi chức năng thận. Thường không cần điều chỉnh liều thường quy do ceftriaxone thải trừ chủ yếu qua mật."
+                },
+                {
+                    "drug": "Vancomycin",
+                    "mechanism": "Có thể tạo kết tủa khi pha chung. Cả hai đều có thể gây độc thận, tác dụng cộng dồn.",
+                    "effect": "Kết tủa khi pha chung, tăng nguy cơ độc thận",
+                    "management": "Không pha chung. Truyền riêng biệt. Theo dõi chức năng thận chặt chẽ. Theo dõi nồng độ vancomycin nếu có thể."
+                },
+                {
+                    "drug": "Aminoglycosides (Gentamicin, Tobramycin, Amikacin)",
+                    "mechanism": "Có thể tạo kết tủa khi pha chung. Cả hai đều có thể gây độc thận, tác dụng cộng dồn.",
+                    "effect": "Kết tủa khi pha chung, tăng nguy cơ độc thận",
+                    "management": "Không pha chung. Truyền riêng biệt. Theo dõi chức năng thận chặt chẽ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Thuốc tránh thai đường uống",
+                    "mechanism": "Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.",
+                    "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
+                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)",
+                "Trẻ sơ sinh < 28 ngày tuổi đang dùng calci IV - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ kết tủa tử vong)"
+            ],
+            "relative": [
+                "Dị ứng penicillin (phản ứng chéo ~5-10%) - thận trọng, có thể dùng nếu phản ứng nhẹ",
+                "Suy gan nặng kèm suy thận (CrCl <10) - cần giảm liều",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Rối loạn đông máu - tăng nguy cơ chảy máu khi dùng với warfarin",
+                "Sỏi mật - tăng nguy cơ sỏi mật (ceftriaxone-calcium complex), đặc biệt ở trẻ em, dùng liều cao"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Ceftriaxone là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh, nhưng không có nghiên cứu đầy đủ trên phụ nữ có thai. Cephalosporins nói chung được coi là an toàn trong thai kỳ và được sử dụng rộng rãi. Ceftriaxone có thể được dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong nhiễm khuẩn nặng như viêm màng não. Tuy nhiên, cần thận trọng với nguy cơ sỏi mật và tương tác với calci. Nên tránh dùng kéo dài nếu có thể.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Ceftriaxone bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Cephalosporins nói chung được coi là an toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ sơ sinh về dấu hiệu tiêu chảy, phát ban, hoặc các tác dụng phụ khác. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Ceftriaxone thải trừ 40% qua thận, 60% qua mật, không chuyển hóa qua gan.",
+            "moderate": "Không cần điều chỉnh liều. Tuy nhiên, cần thận trọng với nguy cơ tăng bilirubin (nhất thời, do đẩy bilirubin khỏi albumin).",
+            "severe": "Không cần điều chỉnh liều. Tuy nhiên, nếu kèm theo suy thận nặng (CrCl <10), có thể cần giảm liều. Theo dõi bilirubin và chức năng gan.",
+            "notes": "Ceftriaxone không chuyển hóa qua gan, thải trừ 40% qua thận và 60% qua mật (độc nhất trong cephalosporin). Không cần điều chỉnh liều ở bệnh nhân suy gan. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận nếu CrCl <10. Ngoài ra, ceftriaxone có protein binding cao (85-95%), có thể đẩy bilirubin khỏi albumin, gây tăng bilirubin nhất thời."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: Co giật, rối loạn ý thức (hiếm, thường chỉ với liều rất cao hoặc suy thận nặng)",
+                "Triệu chứng gan: Tăng bilirubin, tăng transaminase (nhất thời)",
+                "Triệu chứng sỏi mật: Đau bụng, buồn nôn, nôn (do kết tủa ceftriaxone-calcium)",
+                "Triệu chứng thận: Suy thận cấp (hiếm với liều thông thường)",
+                "Triệu chứng tiêu hóa: Tiêu chảy nặng, buồn nôn, nôn",
+                "Triệu chứng dị ứng: Phát ban, phù mạch, sốc phản vệ (nếu dị ứng)",
+                "Triệu chứng chảy máu: Chảy máu kéo dài, tăng INR (khi dùng với warfarin)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay ceftriaxone",
+                "Điều trị co giật nếu có: Benzodiazepine (diazepam, lorazepam), phenobarbital",
+                "Điều trị sỏi mật nếu có:",
+                "  - Giảm đau: NSAID hoặc opioid",
+                "  - Bù dịch đầy đủ",
+                "  - Theo dõi siêu âm bụng",
+                "  - Có thể cần can thiệp nếu tắc nghẽn",
+                "Điều trị chảy máu nếu có:",
+                "  - Bổ sung vitamin K nếu giảm prothrombin",
+                "  - Truyền huyết tương tươi đông lạnh (FFP) nếu chảy máu nặng",
+                "  - Điều chỉnh liều warfarin nếu đang dùng",
+                "Điều trị suy thận cấp nếu có:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải",
+                "  - Lọc máu nếu cần (hemodialysis có thể loại bỏ ceftriaxone một phần)",
+                "Điều trị dị ứng nếu có:",
+                "  - Epinephrine nếu sốc phản vệ",
+                "  - Antihistamine, corticosteroid",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis có thể loại bỏ ceftriaxone một phần (40% thải qua thận), nhưng không hiệu quả bằng các cephalosporin khác do thải trừ chủ yếu qua mật."
+            ],
+            "monitoring": "Theo dõi dấu hiệu thần kinh (co giật, ý thức), chức năng gan (bilirubin, ALT, AST), dấu hiệu sỏi mật (đau bụng), chức năng thận (creatinine, BUN, lượng nước tiểu), PT/INR (nếu dùng với warfarin), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có suy thận cấp hoặc sỏi mật."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Không áp dụng - chỉ có dạng IV và IM",
+                "timing": "Không áp dụng - chỉ có dạng IV và IM"
+            },
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl), D5W (5% Dextrose), hoặc Ringer's Lactate. Nồng độ pha: 10-40mg/ml. Pha 1g trong 10ml = 100mg/ml (quá đậm, không dùng). Pha 1g trong 50ml = 20mg/ml. Pha 2g trong 50ml = 40mg/ml. Lắc kỹ để hòa tan hoàn toàn. KHÔNG pha với calci IV.",
+                "infusion_rate": "Truyền IV trong 30 phút. Tốc độ: 50ml/30 phút = ~1.7ml/phút. Có thể truyền nhanh hơn (bolus) nếu cần, nhưng thường truyền trong 30 phút để giảm đau tại chỗ.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "Ringer's Lactate"],
+                "incompatibility": [
+                    "Calcium IV - KHÔNG pha chung, nguy cơ kết tủa tử vong (đặc biệt ở trẻ sơ sinh)",
+                    "Vancomycin - tạo kết tủa, không pha chung",
+                    "Aminoglycosides - có thể tạo kết tủa, truyền riêng biệt",
+                    "Amphotericin B - không tương thích",
+                    "Các thuốc có tính kiềm hoặc acid mạnh"
+                ],
+                "notes": "QUAN TRỌNG: 1) KHÔNG pha chung với calci IV (nguy cơ kết tủa tử vong ở trẻ sơ sinh), 2) Không pha chung với vancomycin hoặc aminoglycosides, 3) Thời gian bán thải dài (6-9 giờ) → chỉ cần 1 lần/ngày (trừ viêm màng não: q12h), 4) Tiêm IM: pha với lidocaine 1% để giảm đau, 5) Theo dõi sỏi mật ở trẻ em, dùng liều cao, dùng kéo dài."
+            },
+            "im": {
+                "reconstitution": "Pha với lidocaine 1% (không có epinephrine) để giảm đau. Nồng độ pha: 250mg/ml (1g trong 3.5ml lidocaine 1%). Pha 1g trong 3.5ml lidocaine 1% = 250mg/ml. Lắc kỹ để hòa tan hoàn toàn.",
+                "injection_site": "Tiêm sâu vào cơ (gluteus maximus hoặc vastus lateralis). Tránh tiêm vào mạch máu.",
+                "notes": "Pha với lidocaine 1% để giảm đau tại chỗ. Tiêm sâu vào cơ. Có thể gây đau tại chỗ, nhưng thường nhẹ khi pha với lidocaine."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ceftriaxone (Rocephin)",
+                "UpToDate - Ceftriaxone: Drug Information",
+                "Medscape - Ceftriaxone Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Ceftriaxone Monograph",
+                "Micromedex - Ceftriaxone Drug Information",
+                "IDSA Guidelines - Community-Acquired Pneumonia, Meningitis"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     },
     "Ciprofloxacin": {
         "group": "Antibiotic - Fluoroquinolone",

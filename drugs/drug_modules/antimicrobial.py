@@ -1122,7 +1122,144 @@ ANTIMICROBIAL_DRUGS = {
             "clearance": "Chủ yếu qua thận (68% piperacillin, 80% tazobactam bài tiết nguyên dạng), cần điều chỉnh thận"
         },
         "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày. Không đông lạnh.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, hàm lượng natri cao có thể gây vấn đề ở bệnh nhân suy tim hoặc cần hạn chế natri. Giảm prothrombin có thể gây chảy máu nặng."
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, hàm lượng natri cao có thể gây vấn đề ở bệnh nhân suy tim hoặc cần hạn chế natri. Giảm prothrombin có thể gây chảy máu nặng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Piperacillin-tazobactam có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K. Ngoài ra, có thể ức chế chuyển hóa warfarin.",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu, đặc biệt ở bệnh nhân suy thận, suy gan, dùng kéo dài",
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng piperacillin-tazobactam). Có thể cần giảm liều warfarin. Đặc biệt thận trọng ở bệnh nhân suy thận, suy gan, dùng kéo dài (>7 ngày)."
+                },
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Piperacillin có thể ức chế bài tiết ống thận của methotrexate, làm giảm thải trừ và tăng nồng độ methotrexate.",
+                    "effect": "Tăng nồng độ methotrexate, tăng nguy cơ độc tính (giảm bạch cầu, độc thận, viêm niêm mạc)",
+                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ nồng độ methotrexate, công thức máu, chức năng thận. Có thể cần giảm liều methotrexate hoặc tăng khoảng cách giữa các liều."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Aminoglycosides (Gentamicin, Tobramycin, Amikacin)",
+                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn. Ngoài ra, aminoglycosides có thể bị bất hoạt về mặt hóa học bởi beta-lactams khi pha chung.",
+                    "effect": "Tăng nguy cơ độc thận, giảm hiệu quả kháng khuẩn của aminoglycosides nếu pha chung",
+                    "management": "Không pha chung trong cùng một ống truyền. Truyền riêng biệt. Theo dõi chức năng thận chặt chẽ (creatinine, BUN). Có thể cần giảm liều hoặc tăng khoảng cách giữa các liều."
+                },
+                {
+                    "drug": "Vancomycin",
+                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn. Ngoài ra, có thể tạo kết tủa khi pha chung.",
+                    "effect": "Tăng nguy cơ độc thận, kết tủa khi pha chung",
+                    "management": "Không pha chung. Truyền riêng biệt. Theo dõi chức năng thận chặt chẽ. Theo dõi nồng độ vancomycin nếu có thể."
+                },
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết ống thận của piperacillin, làm giảm thải trừ và tăng nồng độ piperacillin.",
+                    "effect": "Tăng nồng độ piperacillin, tăng thời gian bán thải",
+                    "management": "Có thể cần giảm liều piperacillin-tazobactam. Theo dõi chức năng thận. Thường không cần điều chỉnh liều thường quy."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Thuốc tránh thai đường uống",
+                    "mechanism": "Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.",
+                    "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
+                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng penicillin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)",
+                "Dị ứng tazobactam",
+                "Tiền sử phản ứng dị ứng nặng với beta-lactam (penicillin, cephalosporin, carbapenem)"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <20) - cần giảm liều đáng kể, theo dõi chặt chẽ",
+                "Suy tim, phù, tăng huyết áp - hàm lượng natri cao (2.79 mEq/4.5g) có thể làm nặng thêm tình trạng",
+                "Suy gan nặng - tăng nguy cơ giảm prothrombin và chảy máu",
+                "Rối loạn đông máu - tăng nguy cơ chảy máu do giảm prothrombin",
+                "Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Piperacillin-tazobactam là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh, nhưng không có nghiên cứu đầy đủ trên phụ nữ có thai. Penicillins nói chung được coi là an toàn trong thai kỳ và được sử dụng rộng rãi. Piperacillin-tazobactam có thể được dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong nhiễm khuẩn nặng. Tuy nhiên, cần thận trọng với hàm lượng natri cao và nguy cơ giảm prothrombin. Nên tránh dùng kéo dài nếu có thể.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Piperacillin và tazobactam bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Penicillins nói chung được coi là an toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ sơ sinh về dấu hiệu tiêu chảy, phát ban, hoặc các tác dụng phụ khác. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Piperacillin và tazobactam không chuyển hóa đáng kể qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Không cần điều chỉnh liều. Tuy nhiên, cần thận trọng với nguy cơ giảm prothrombin và chảy máu. Theo dõi PT/INR.",
+            "severe": "Không cần điều chỉnh liều. Tuy nhiên, tăng nguy cơ giảm prothrombin và chảy máu. Theo dõi PT/INR chặt chẽ. Có thể cần bổ sung vitamin K hoặc điều chỉnh liều thuốc chống đông nếu đang dùng.",
+            "notes": "Piperacillin và tazobactam không chuyển hóa đáng kể qua gan, thải trừ chủ yếu qua thận (68% piperacillin, 80% tazobactam bài tiết nguyên dạng). Không cần điều chỉnh liều ở bệnh nhân suy gan. Tuy nhiên, suy gan có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận. Ngoài ra, suy gan làm tăng nguy cơ giảm prothrombin và chảy máu, cần theo dõi PT/INR."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: Co giật, rối loạn ý thức (hiếm, thường chỉ với liều rất cao)",
+                "Triệu chứng điện giải: Tăng natri máu (do hàm lượng natri cao), rối loạn điện giải",
+                "Triệu chứng chảy máu: Chảy máu kéo dài, tăng INR (do giảm prothrombin)",
+                "Triệu chứng thận: Suy thận cấp, tăng creatinine (hiếm với liều thông thường)",
+                "Triệu chứng tiêu hóa: Tiêu chảy nặng, buồn nôn, nôn",
+                "Triệu chứng dị ứng: Phát ban, phù mạch, sốc phản vệ (nếu dị ứng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay piperacillin-tazobactam",
+                "Điều trị co giật nếu có: Benzodiazepine (diazepam, lorazepam), phenobarbital",
+                "Điều chỉnh điện giải: Điều chỉnh natri máu nếu tăng natri, bù dịch phù hợp",
+                "Điều trị chảy máu:",
+                "  - Bổ sung vitamin K nếu giảm prothrombin",
+                "  - Truyền huyết tương tươi đông lạnh (FFP) nếu chảy máu nặng",
+                "  - Điều chỉnh liều thuốc chống đông nếu đang dùng",
+                "Điều trị suy thận cấp nếu có:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải",
+                "  - Lọc máu nếu cần (hemodialysis có thể loại bỏ piperacillin và tazobactam)",
+                "Điều trị dị ứng nếu có:",
+                "  - Epinephrine nếu sốc phản vệ",
+                "  - Antihistamine, corticosteroid",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis có thể loại bỏ piperacillin và tazobactam nếu suy thận nặng"
+            ],
+            "monitoring": "Theo dõi dấu hiệu thần kinh (co giật, ý thức), điện giải (natri, kali), PT/INR, chức năng thận (creatinine, BUN, lượng nước tiểu), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có suy thận cấp hoặc rối loạn đông máu."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Không áp dụng - chỉ có dạng IV",
+                "timing": "Không áp dụng - chỉ có dạng IV"
+            },
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Thể tích pha: 50-150ml cho liều 4.5g. Nồng độ pha: 90mg/ml (4.5g/50ml) đến 30mg/ml (4.5g/150ml). Pha 4.5g trong 50ml = 90mg/ml. Pha 4.5g trong 100ml = 45mg/ml. Pha 4.5g trong 150ml = 30mg/ml. Lắc kỹ để hòa tan hoàn toàn.",
+                "infusion_rate": "Liều chuẩn (4.5g q6h hoặc q8h): Truyền trong 30 phút. Extended infusion (4.5g q8h trong 3-4 giờ): Được khuyến cáo cho Pseudomonas aeruginosa để tối ưu hóa PK/PD. Tốc độ: 50ml/30 phút = ~1.7ml/phút (liều chuẩn), 50ml/3-4 giờ = ~0.25-0.33ml/phút (extended infusion).",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "Ringer's Lactate"],
+                "incompatibility": [
+                    "Vancomycin - tạo kết tủa, không pha chung",
+                    "Aminoglycosides - có thể bị bất hoạt khi pha chung, truyền riêng biệt",
+                    "Amphotericin B - không tương thích",
+                    "Các thuốc có tính kiềm hoặc acid mạnh"
+                ],
+                "notes": "QUAN TRỌNG: 1) Không pha chung với vancomycin (tạo kết tủa), 2) Không pha chung với aminoglycosides (truyền riêng biệt), 3) Điều chỉnh liều theo CrCl, 4) Hàm lượng natri cao (2.79 mEq/4.5g) - thận trọng ở suy tim, 5) Extended infusion (3-4 giờ) được khuyến cáo cho Pseudomonas aeruginosa, 6) Theo dõi PT/INR ở bệnh nhân suy thận, suy gan, dùng kéo dài."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Piperacillin-Tazobactam (Zosyn)",
+                "UpToDate - Piperacillin-Tazobactam: Drug Information",
+                "Medscape - Piperacillin-Tazobactam Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Piperacillin-Tazobactam Monograph",
+                "Micromedex - Piperacillin-Tazobactam Drug Information",
+                "IDSA Guidelines - Hospital-Acquired Pneumonia, Intra-abdominal Infections"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
 
 },
 
@@ -1194,7 +1331,132 @@ ANTIMICROBIAL_DRUGS = {
             "clearance": "Chủ yếu qua thận (70% bài tiết nguyên dạng), cần điều chỉnh thận"
         },
         "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 2-4 giờ, hoặc trong tủ lạnh 24 giờ. Không đông lạnh.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ co giật tăng ở suy thận nặng và bệnh nhân có tiền sử co giật. Kháng thuốc có thể phát triển nếu dùng không đúng chỉ định."
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ co giật tăng ở suy thận nặng và bệnh nhân có tiền sử co giật. Kháng thuốc có thể phát triển nếu dùng không đúng chỉ định.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Valproate (Valproic acid)",
+                    "mechanism": "Meropenem ức chế hấp thu và tăng thải trừ valproate, làm giảm nồng độ valproate trong máu đáng kể (có thể giảm 50-70%).",
+                    "effect": "Giảm nồng độ valproate, mất kiểm soát co giật, nguy cơ co giật nặng",
+                    "management": "TRÁNH dùng cùng nếu có thể. Nếu bắt buộc: tăng liều valproate, theo dõi nồng độ valproate trong máu thường xuyên, cân nhắc dùng thuốc chống co giật khác. Theo dõi chặt chẽ dấu hiệu co giật."
+                },
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết meropenem qua thận, làm tăng nồng độ và thời gian bán thải của meropenem.",
+                    "effect": "Tăng nồng độ meropenem, tăng nguy cơ tác dụng phụ (co giật, độc tính thần kinh)",
+                    "management": "GIẢM LIỀU meropenem hoặc tăng khoảng cách liều. Theo dõi chặt chẽ dấu hiệu độc tính. Không khuyến cáo dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Meropenem có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm sản xuất vitamin K, tăng tác dụng của warfarin.",
+                    "effect": "Tăng tác dụng warfarin, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Có thể cần giảm liều warfarin. Theo dõi dấu hiệu chảy máu."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Các kháng sinh beta-lactam khác",
+                    "mechanism": "Có thể có tương tác phụ thuộc thời gian (time-dependent killing), nhưng thường không dùng cùng.",
+                    "effect": "Không rõ, thường không dùng cùng",
+                    "management": "Không khuyến cáo dùng cùng. Chọn một kháng sinh phù hợp."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng meropenem hoặc carbapenem",
+                "Dị ứng penicillins hoặc cephalosporins nặng (phản ứng chéo ~1%, nhưng có thể nguy hiểm)"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl < 25ml/min) - tăng nguy cơ co giật, cần giảm liều mạnh",
+                "Bệnh thần kinh trung ương - tăng nguy cơ co giật",
+                "Tiền sử co giật - tăng nguy cơ co giật",
+                "Suy gan nặng - thận trọng, mặc dù chủ yếu thải qua thận",
+                "Người cao tuổi - tăng nguy cơ co giật, suy thận",
+                "Dùng với valproate - giảm nồng độ valproate, mất kiểm soát co giật",
+                "Dùng với probenecid - tăng nồng độ meropenem"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Meropenem là thuốc phân loại B. Có một số nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Meropenem có thể qua nhau thai, nhưng nồng độ trong máu thai nhi thấp. Được sử dụng trong nhiễm trùng nặng ở phụ nữ có thai và được coi là an toàn khi lợi ích vượt quá nguy cơ. Nhiễm trùng nặng có thể nguy hiểm cho cả mẹ và thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Meropenem bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ. Nồng độ trong sữa mẹ thấp và không đáng kể.",
+                "recommendation": "Có thể dùng khi cho con bú. Meropenem bài tiết vào sữa mẹ ở nồng độ thấp và không gây tác dụng phụ ở trẻ bú mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Meropenem chủ yếu thải qua thận, không phụ thuộc vào chức năng gan.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Thận trọng, nhưng không cần điều chỉnh liều thường quy. Meropenem chủ yếu thải qua thận. Theo dõi chức năng gan nếu có triệu chứng.",
+            "notes": "Meropenem chủ yếu thải qua thận (70% bài tiết nguyên dạng), chỉ 40% chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan. Tuy nhiên, thận trọng ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Co giật (nguy hiểm, đặc biệt ở suy thận nặng)",
+                "Độc tính thần kinh trung ương (lú lẫn, kích động)",
+                "Tăng men gan (ALT, AST)",
+                "Giảm tiểu cầu (hiếm)",
+                "Tiêu chảy nặng",
+                "Nhiễm C. difficile (tiêu chảy, đau bụng, sốt)"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho quá liều meropenem. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay meropenem nếu đang truyền",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Nếu co giật:",
+                "  - Benzodiazepine (diazepam 5-10mg IV, lorazepam 2-4mg IV) - điều trị chính",
+                "  - Nếu không đáp ứng: Phenytoin, phenobarbital",
+                "  - Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Nếu độc tính thần kinh trung ương:",
+                "  - Hỗ trợ tâm lý, an ủi bệnh nhân",
+                "  - Theo dõi chặt chẽ, thường tự hồi phục sau khi ngừng thuốc",
+                "Nếu nhiễm C. difficile:",
+                "  - Ngừng meropenem và các kháng sinh khác nếu có thể",
+                "  - Metronidazole 500mg PO x 3 lần/ngày x 10-14 ngày",
+                "  - Hoặc Vancomycin 125mg PO x 4 lần/ngày x 10-14 ngày (nếu nặng)",
+                "  - Theo dõi dấu hiệu viêm đại tràng giả mạc",
+                "Nếu tăng men gan:",
+                "  - Ngừng meropenem nếu tăng nặng",
+                "  - Theo dõi chức năng gan",
+                "  - Thường tự hồi phục sau khi ngừng thuốc",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2 trong ít nhất 24-48 giờ",
+                "Có thể cần lọc máu nếu suy thận nặng (meropenem có thể được loại bỏ qua lọc máu)"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn (huyết áp, nhịp tim, nhịp thở, SpO2) liên tục trong ít nhất 24-48 giờ sau khi ngừng meropenem. Theo dõi lâu hơn nếu có biến chứng (co giật, độc tính thần kinh, nhiễm C. difficile)."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có reversal agent đặc hiệu cho meropenem. Điều trị hỗ trợ và điều trị triệu chứng (benzodiazepine cho co giật)."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha bột khô trong NS hoặc D5W: 500mg pha trong 10ml = 50mg/ml, 1g pha trong 20ml = 50mg/ml. Sau đó pha loãng trong 50-250ml NS hoặc D5W để truyền.",
+                "infusion_rate": "Truyền IV trong 15-30 phút. Không truyền nhanh hơn (có thể gây co giật). Liều: 1g IV mỗi 8 giờ (bình thường), 500mg-1g IV mỗi 12 giờ (suy thận).",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": ["Không trộn với các thuốc khác. Dùng đường truyền riêng hoặc flush trước/sau khi truyền thuốc khác."],
+                "notes": "QUAN TRỌNG: 1) PHẢI điều chỉnh liều theo chức năng thận (eGFR), 2) Truyền trong 15-30 phút (không nhanh hơn), 3) Nguy cơ co giật tăng ở suy thận nặng và bệnh nhân có tiền sử co giật, 4) TRÁNH dùng với valproate (giảm nồng độ valproate), 5) Theo dõi nhiễm C. difficile, 6) Không pha trộn với các thuốc khác."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Meropenem",
+                "IDSA Guidelines - Antimicrobial Therapy",
+                "UpToDate - Meropenem: Drug Information",
+                "Medscape - Meropenem Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Meropenem Monograph",
+                "Micromedex - Meropenem Drug Information"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
 
 },
 
@@ -1266,7 +1528,144 @@ ANTIMICROBIAL_DRUGS = {
             "clearance": "Gan và thận, không cần điều chỉnh thận nhưng thận trọng ở suy gan"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C). Viên nang: tránh ẩm. Dung dịch pha tiêm: sau khi pha, bảo quản ở nhiệt độ phòng 24 giờ.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ nhiễm C. difficile rất cao, có thể gây viêm đại tràng giả mạc nặng, có thể tử vong. Ngừng ngay nếu có tiêu chảy."
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ nhiễm C. difficile rất cao, có thể gây viêm đại tràng giả mạc nặng, có thể tử vong. Ngừng ngay nếu có tiêu chảy.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Erythromycin",
+                    "mechanism": "Cả hai đều gắn với tiểu phần 50S của ribosome, đối kháng cạnh tranh, làm giảm hiệu quả kháng khuẩn của cả hai thuốc.",
+                    "effect": "Giảm hiệu quả kháng khuẩn của cả hai thuốc",
+                    "management": "TRÁNH DÙNG đồng thời. Chọn một trong hai thuốc. Nếu đã dùng erythromycin, chờ ít nhất 2-3 giờ trước khi dùng clindamycin."
+                },
+                {
+                    "drug": "Neuromuscular blocking agents (Succinylcholine, Vecuronium, Rocuronium)",
+                    "mechanism": "Clindamycin có thể tăng cường tác dụng của thuốc giãn cơ, gây tê liệt kéo dài và suy hô hấp.",
+                    "effect": "Tăng tác dụng giãn cơ, tăng thời gian tê liệt, tăng nguy cơ suy hô hấp",
+                    "management": "Thận trọng khi dùng đồng thời. Theo dõi chức năng hô hấp chặt chẽ. Có thể cần giảm liều thuốc giãn cơ. Đảm bảo có thiết bị hỗ trợ hô hấp sẵn sàng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Clindamycin có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng clindamycin). Có thể cần giảm liều warfarin. Đặc biệt thận trọng ở bệnh nhân dùng kéo dài (>7 ngày)."
+                },
+                {
+                    "drug": "Kaolin-pectin (thuốc chống tiêu chảy)",
+                    "mechanism": "Kaolin-pectin có thể hấp phụ clindamycin, làm giảm hấp thu và giảm nồng độ clindamycin trong máu.",
+                    "effect": "Giảm hấp thu clindamycin, giảm hiệu quả kháng khuẩn",
+                    "management": "Cách ít nhất 2 giờ giữa clindamycin và kaolin-pectin. Không dùng kaolin-pectin nếu đang điều trị C. difficile (có thể làm nặng bệnh)."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Thuốc tránh thai đường uống",
+                    "mechanism": "Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.",
+                    "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
+                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng clindamycin hoặc lincomycin",
+                "Viêm đại tràng giả mạc trước đây do C. difficile (tiền sử)"
+            ],
+            "relative": [
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tác dụng phụ",
+                "Bệnh nhân đang dùng thuốc giãn cơ - tăng nguy cơ tê liệt kéo dài",
+                "Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu",
+                "Nhiễm trùng do vi khuẩn Gram-âm - không hiệu quả"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Clindamycin là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh, nhưng không có nghiên cứu đầy đủ trên phụ nữ có thai. Clindamycin được sử dụng rộng rãi trong thai kỳ và có vẻ an toàn. Có thể được dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong nhiễm khuẩn kỵ khí. Tuy nhiên, cần thận trọng với nguy cơ nhiễm C. difficile, có thể nghiêm trọng trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Clindamycin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Tuy nhiên, có thể gây tiêu chảy hoặc phát ban ở trẻ sơ sinh.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ sơ sinh về dấu hiệu tiêu chảy, phát ban, hoặc các tác dụng phụ khác. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Clindamycin chuyển hóa một phần qua gan (CYP3A4), nhưng không tích lũy đáng kể.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan và dấu hiệu tác dụng phụ.",
+            "severe": "Giảm liều 25-50% hoặc tăng khoảng cách giữa các liều. Theo dõi chức năng gan chặt chẽ. Có thể cần giảm tần suất dùng (q12h thay vì q8h).",
+            "notes": "Clindamycin chuyển hóa một phần qua gan (CYP3A4), nhưng thải trừ chủ yếu qua gan và thận. Không tích lũy đáng kể ở suy gan nhẹ, nhưng có thể tích lũy ở suy gan nặng. Cần điều chỉnh liều ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Tiêu chảy nặng, đau bụng, buồn nôn, nôn (có thể là C. difficile)",
+                "Triệu chứng thần kinh: Co giật, rối loạn ý thức (hiếm, thường chỉ với liều rất cao)",
+                "Triệu chứng hô hấp: Suy hô hấp (nếu dùng với thuốc giãn cơ)",
+                "Triệu chứng chảy máu: Chảy máu kéo dài, tăng INR (khi dùng với warfarin)",
+                "Triệu chứng gan: Tăng men gan, viêm gan (hiếm)",
+                "Triệu chứng dị ứng: Phát ban, phù mạch, sốc phản vệ (nếu dị ứng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay clindamycin",
+                "Điều trị C. difficile nếu có:",
+                "  - Ngừng ngay clindamycin",
+                "  - Điều trị bằng vancomycin PO hoặc metronidazole PO",
+                "  - Bù dịch đầy đủ",
+                "  - Theo dõi dấu hiệu viêm đại tràng nặng (sốt, đau bụng, tiêu chảy máu)",
+                "Điều trị co giật nếu có: Benzodiazepine (diazepam, lorazepam), phenobarbital",
+                "Điều trị suy hô hấp nếu có:",
+                "  - Hỗ trợ hô hấp (thở máy nếu cần)",
+                "  - Điều trị tê liệt do thuốc giãn cơ nếu có",
+                "Điều trị chảy máu nếu có:",
+                "  - Bổ sung vitamin K nếu giảm prothrombin",
+                "  - Truyền huyết tương tươi đông lạnh (FFP) nếu chảy máu nặng",
+                "  - Điều chỉnh liều warfarin nếu đang dùng",
+                "Điều trị dị ứng nếu có:",
+                "  - Epinephrine nếu sốc phản vệ",
+                "  - Antihistamine, corticosteroid",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis không hiệu quả do protein binding cao (90-95%)"
+            ],
+            "monitoring": "Theo dõi dấu hiệu C. difficile (tiêu chảy, đau bụng, sốt), dấu hiệu thần kinh (co giật, ý thức), chức năng hô hấp (nếu dùng với thuốc giãn cơ), PT/INR (nếu dùng với warfarin), chức năng gan (ALT, AST), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có C. difficile hoặc suy hô hấp."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhưng không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 3-4 lần/ngày (150-450mg mỗi lần). Cách đều trong ngày. Uống với nhiều nước (ít nhất 200ml) để giảm kích ứng thực quản."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 6-12mg/ml. Pha 600mg trong 50ml = 12mg/ml. Pha 900mg trong 50ml = 18mg/ml (quá đậm, không dùng). Pha 900mg trong 100ml = 9mg/ml. Lắc kỹ để hòa tan hoàn toàn.",
+                "infusion_rate": "Truyền IV trong ít nhất 10-60 phút (tùy liều). Liều 600mg: truyền trong 10-30 phút. Liều 900mg: truyền trong 30-60 phút. Tốc độ: 50ml/30 phút = ~1.7ml/phút. KHÔNG truyền nhanh (bolus) - tăng nguy cơ viêm tĩnh mạch.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "Ringer's Lactate"],
+                "incompatibility": [
+                    "Aminophylline - tạo kết tủa, không pha chung",
+                    "Phenytoin - tạo kết tủa, không pha chung",
+                    "Barbiturates - tạo kết tủa, không pha chung",
+                    "Các thuốc có tính kiềm hoặc acid mạnh"
+                ],
+                "notes": "QUAN TRỌNG: 1) Không pha chung với aminophylline, phenytoin, barbiturates (tạo kết tủa), 2) Truyền chậm (ít nhất 10-60 phút) để giảm viêm tĩnh mạch, 3) Theo dõi sát dấu hiệu C. difficile, 4) Không dùng cho nhiễm trùng do vi khuẩn Gram-âm."
+            },
+            "im": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 150mg/ml (tối đa). Pha 600mg trong 4ml = 150mg/ml. Lắc kỹ để hòa tan hoàn toàn.",
+                "injection_site": "Tiêm sâu vào cơ (gluteus maximus hoặc vastus lateralis). Tránh tiêm vào mạch máu.",
+                "notes": "Tiêm sâu vào cơ. Có thể gây đau tại chỗ. Liều IM: 600mg mỗi 12 giờ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Clindamycin (Cleocin)",
+                "UpToDate - Clindamycin: Drug Information",
+                "Medscape - Clindamycin Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Clindamycin Monograph",
+                "Micromedex - Clindamycin Drug Information",
+                "IDSA Guidelines - Skin and Soft Tissue Infections, Anaerobic Infections"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
 
 },
 
