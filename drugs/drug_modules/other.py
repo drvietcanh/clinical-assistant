@@ -866,7 +866,106 @@ OTHER_DRUGS = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Nguy cơ giảm bạch cầu và giảm tiểu cầu nghiêm trọng, đe dọa tính mạng. Nguy cơ TTP (thrombotic thrombocytopenic purpura) có thể tử vong. Cần theo dõi công thức máu thường xuyên"
+        "black_box_warnings": "Nguy cơ giảm bạch cầu và giảm tiểu cầu nghiêm trọng, đe dọa tính mạng. Nguy cơ TTP (thrombotic thrombocytopenic purpura) có thể tử vong. Cần theo dõi công thức máu thường xuyên",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Aspirin, NSAIDs",
+                    "mechanism": "Cả hai đều ức chế tiểu cầu, tác dụng cộng dồn.",
+                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu chảy máu."
+                },
+                {
+                    "drug": "Warfarin, Anticoagulants",
+                    "mechanism": "Tác dụng cộng dồn chống đông máu.",
+                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng, tăng INR",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, theo dõi INR chặt chẽ và điều chỉnh liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antacids",
+                    "mechanism": "Giảm hấp thu ticlopidine.",
+                    "effect": "Giảm hiệu quả ticlopidine",
+                    "management": "Cách ít nhất 2 giờ giữa ticlopidine và antacid."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Giảm bạch cầu nặng (<3500/μL)",
+                "Giảm tiểu cầu nặng (<100,000/μL)",
+                "Chảy máu đang hoạt động",
+                "TTP (thrombotic thrombocytopenic purpura) trước đây",
+                "Dị ứng ticlopidine"
+            ],
+            "relative": [
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ độc tính",
+                "Suy thận nặng - thận trọng",
+                "Có thai - category B, thận trọng",
+                "Đang dùng aspirin hoặc warfarin - tăng nguy cơ chảy máu"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Ticlopidine là category B. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Thận trọng, đặc biệt trong tam cá nguyệt thứ ba (tăng nguy cơ chảy máu ở mẹ và thai nhi).",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết ticlopidine có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng, theo dõi chức năng gan. Ticlopidine chuyển hóa ở gan.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan và công thức máu chặt chẽ.",
+            "severe": "Chống chỉ định hoặc thận trọng tối đa. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ độc tính.",
+            "notes": "Ticlopidine là prodrug, chuyển hóa ở gan thành chất hoạt động. Suy gan làm giảm chuyển hóa, có thể giảm hiệu quả hoặc tăng độc tính."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Chảy máu nghiêm trọng (xuất huyết, chảy máu cam, chảy máu tiêu hóa)",
+                "Giảm bạch cầu, giảm tiểu cầu",
+                "TTP (sốt, thiếu máu, giảm tiểu cầu, rối loạn thần kinh)",
+                "Rối loạn tiêu hóa (buồn nôn, tiêu chảy)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ticlopidine ngay lập tức",
+                "Theo dõi công thức máu (CBC) chặt chẽ",
+                "Nếu chảy máu: truyền tiểu cầu nếu cần, điều trị hỗ trợ",
+                "Nếu TTP: điều trị cấp cứu (plasma exchange, corticosteroids)",
+                "Nếu giảm bạch cầu nặng: điều trị nhiễm trùng, có thể cần G-CSF",
+                "Theo dõi dấu hiệu sinh tồn"
+            ],
+            "monitoring": "Công thức máu, dấu hiệu chảy máu, dấu hiệu TTP, dấu hiệu nhiễm trùng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
+                "timing": "Uống 2 lần/ngày (sáng và tối), cách đều. Cách xa antacid ít nhất 2 giờ."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ticlopidine (Ticlid)",
+                "UpToDate - Ticlopidine: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
     },
     "Dipyridamole": {
         "group": "Cardiovascular - Antiplatelet",
@@ -923,7 +1022,103 @@ OTHER_DRUGS = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin, Anticoagulants",
+                    "mechanism": "Tác dụng cộng dồn chống đông máu.",
+                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng, tăng INR",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, theo dõi INR chặt chẽ và điều chỉnh liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Aspirin",
+                    "mechanism": "Cả hai đều ức chế tiểu cầu, tác dụng cộng dồn.",
+                    "effect": "Tăng hiệu quả chống đông nhưng tăng nguy cơ chảy máu",
+                    "management": "Thường dùng kết hợp (dipyridamole + aspirin 25mg x 2 lần/ngày). Theo dõi dấu hiệu chảy máu."
+                },
+                {
+                    "drug": "Theophylline, Caffeine",
+                    "mechanism": "Dipyridamole ức chế adenosine deaminase, tăng adenosine. Theophylline/caffeine đối kháng adenosine.",
+                    "effect": "Giảm hiệu quả dipyridamole",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi đáp ứng điều trị."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Nhồi máu cơ tim cấp - có thể làm nặng thêm",
+                "Co thắt mạch vành (vasospasm) - có thể làm nặng thêm",
+                "Dị ứng dipyridamole"
+            ],
+            "relative": [
+                "Hạ huyết áp nặng - dipyridamole gây giãn mạch, có thể làm nặng hạ huyết áp",
+                "Suy tim nặng - thận trọng",
+                "Có thai - category B, thận trọng",
+                "Đang dùng warfarin - tăng nguy cơ chảy máu"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Dipyridamole là category B. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Thận trọng, đặc biệt trong tam cá nguyệt thứ ba (tăng nguy cơ chảy máu ở mẹ và thai nhi).",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết dipyridamole có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan.",
+            "severe": "Thận trọng, giảm liều. Suy gan nặng làm giảm chuyển hóa, có thể tăng nồng độ.",
+            "notes": "Dipyridamole chuyển hóa ở gan. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Chảy máu nghiêm trọng (xuất huyết, chảy máu cam, chảy máu tiêu hóa)",
+                "Hạ huyết áp nặng, ngất",
+                "Nhức đầu nặng",
+                "Chóng mặt, buồn nôn"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng dipyridamole ngay lập tức",
+                "Theo dõi huyết áp, nhịp tim",
+                "Nếu chảy máu: điều trị hỗ trợ, truyền tiểu cầu nếu cần",
+                "Nếu hạ huyết áp: truyền dịch, thuốc vận mạch nếu cần",
+                "Theo dõi dấu hiệu sinh tồn"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, dấu hiệu chảy máu, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
+                "timing": "Uống 2 lần/ngày (sáng và tối), cách đều. Dạng modified-release: uống 1-2 lần/ngày theo chỉ định."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Dipyridamole (Persantine)",
+                "UpToDate - Dipyridamole: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
     },
 "Sertraline": {
         "group": "Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)",
@@ -4889,7 +5084,106 @@ OTHER_DRUGS = {
             "clearance": "Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~85-90% bị chuyển hóa). Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản)."
         },
         "storage": "Dạng hít (MDI/DPI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Nebulizer suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng, dùng trong vòng 2 giờ sau khi mở gói. Bảo quản trong tủ lạnh nếu không dùng ngay (2-8°C), để nhiệt độ phòng trước khi dùng.",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Ritonavir (HIV protease inhibitor)",
+                    "mechanism": "Ritonavir ức chế CYP3A4 mạnh, làm giảm chuyển hóa budesonide, tăng nồng độ budesonide đáng kể.",
+                    "effect": "Tăng nồng độ budesonide đáng kể, tăng nguy cơ ức chế trục HPA, tác dụng phụ toàn thân (Cushing, tăng đường huyết, ức chế miễn dịch)",
+                    "management": "TRÁNH DÙNG cùng. Nếu bắt buộc, giảm liều budesonide đáng kể hoặc dùng corticosteroid hít khác (fluticasone ít bị ảnh hưởng hơn). Theo dõi dấu hiệu ức chế HPA."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Ketoconazole, Itraconazole, Voriconazole (Azole antifungals)",
+                    "mechanism": "Azole antifungals ức chế CYP3A4, làm giảm chuyển hóa budesonide.",
+                    "effect": "Tăng nồng độ budesonide, tăng nguy cơ tác dụng phụ toàn thân",
+                    "management": "Thận trọng. Có thể cần giảm liều budesonide. Theo dõi dấu hiệu ức chế HPA."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng budesonide",
+                "Nhiễm trùng đường hô hấp không điều trị (lao phổi, nhiễm nấm) - corticosteroid có thể làm nặng nhiễm trùng"
+            ],
+            "relative": [
+                "Lao phổi - cần điều trị lao trước, thận trọng",
+                "Nhiễm nấm đường hô hấp - cần điều trị trước",
+                "Có thai - category C, thận trọng",
+                "Đang dùng ritonavir - tăng nguy cơ ức chế HPA"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Budesonide là category C. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Corticosteroid hít có ít tác dụng toàn thân hơn corticosteroid uống, nhưng vẫn có thể ảnh hưởng đến thai nhi ở liều cao. Dùng liều thấp nhất hiệu quả.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Budesonide bài tiết vào sữa mẹ ở nồng độ rất thấp do chuyển hóa nhanh ở gan. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Budesonide chuyển hóa ở gan nhưng suy gan nhẹ không ảnh hưởng đáng kể.",
+            "moderate": "Thận trọng, có thể tăng nồng độ nhẹ. Theo dõi dấu hiệu tác dụng phụ toàn thân.",
+            "severe": "Thận trọng, có thể tăng nồng độ. Giảm liều nếu có dấu hiệu tác dụng phụ toàn thân.",
+            "notes": "Budesonide chuyển hóa nhanh ở gan qua CYP3A4 (first-pass metabolism cao). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ toàn thân."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tác dụng toàn thân: ức chế trục HPA, Cushing, tăng đường huyết, tăng huyết áp",
+                "Nấm miệng nặng (nếu không súc miệng)",
+                "Khàn tiếng, ho nặng",
+                "Ức chế miễn dịch (tăng nguy cơ nhiễm trùng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng budesonide hoặc giảm liều đáng kể",
+                "Nếu ức chế HPA: điều trị hỗ trợ, có thể cần corticosteroid thay thế tạm thời",
+                "Nếu nấm miệng: điều trị nấm (nystatin, fluconazole)",
+                "Theo dõi đường huyết, huyết áp, dấu hiệu nhiễm trùng",
+                "Theo dõi chức năng thượng thận nếu có dấu hiệu ức chế HPA"
+            ],
+            "monitoring": "Đường huyết, huyết áp, dấu hiệu ức chế HPA, dấu hiệu nhiễm trùng, nấm miệng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "N/A - dạng hít",
+                "timing": "N/A - dạng hít"
+            },
+            "iv": {
+                "reconstitution": "N/A - chỉ có dạng hít",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng hít (MDI/DPI) và nebulizer"
+            },
+            "inhaled": {
+                "technique": "MDI: Lắc kỹ, thở ra hoàn toàn, đặt ống ngậm vào miệng, bấm và hít sâu chậm, giữ hơi 10 giây. DPI: Thở ra hoàn toàn, đặt ống ngậm vào miệng, hít mạnh và sâu, giữ hơi 10 giây.",
+                "after_use": "Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng - QUAN TRỌNG",
+                "frequency": "2 lần/ngày (sáng và tối), cách đều"
+            },
+            "nebulizer": {
+                "preparation": "Lắc kỹ suspension trước khi dùng. Đổ vào buồng nebulizer. Dùng trong vòng 2 giờ sau khi mở gói.",
+                "administration": "Thở bình thường qua ống ngậm hoặc mặt nạ cho đến khi hết thuốc (thường 5-15 phút).",
+                "after_use": "Súc miệng và súc họng sau khi dùng. Rửa sạch thiết bị nebulizer."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Budesonide (Pulmicort)",
+                "UpToDate - Budesonide: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
     },
     "Amoxicillin suspension": {
         "group": "Antibiotic - Beta-lactam (Penicillin)",
@@ -4965,7 +5259,114 @@ OTHER_DRUGS = {
             "clearance": "Thận: bài tiết chủ yếu qua nước tiểu (không thay đổi, 60-70% trong 6-8 giờ). Một phần nhỏ qua mật. Hấp thu tốt qua đường uống (75-90%), không bị ảnh hưởng bởi thức ăn. Dạng suspension hấp thu tương tự viên nén."
         },
         "storage": "Bảo quản suspension ở nhiệt độ phòng (15-30°C) hoặc trong tủ lạnh (2-8°C) - theo hướng dẫn trên nhãn. Lắc kỹ trước khi dùng. Sau khi pha (nếu là bột pha nước): bảo quản trong tủ lạnh (2-8°C), dùng trong vòng 7-14 ngày (theo hướng dẫn). Tránh đông lạnh. Để nơi khô ráo, tránh ánh sáng trực tiếp, tránh xa tầm tay trẻ em.",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Amoxicillin làm giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate.",
+                    "effect": "Tăng độc tính methotrexate (giảm bạch cầu, độc gan, độc thận, viêm niêm mạc)",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi công thức máu, chức năng gan, thận chặt chẽ. Có thể cần giảm liều methotrexate."
+                },
+                {
+                    "drug": "Allopurinol",
+                    "mechanism": "Cơ chế chưa rõ ràng, nhưng allopurinol làm tăng nguy cơ phản ứng da nghiêm trọng với amoxicillin.",
+                    "effect": "Tăng nguy cơ phát ban nghiêm trọng, SJS, TEN (đe dọa tính mạng)",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu phát ban. Ngừng ngay nếu có phát ban."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, ảnh hưởng đến chuyển hóa vitamin K, tăng tác dụng warfarin.",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên khi dùng amoxicillin. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Thuốc tránh thai (estrogen)",
+                    "mechanism": "Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, giảm tái hấp thu estrogen, giảm hiệu quả thuốc tránh thai.",
+                    "effect": "Giảm hiệu quả thuốc tránh thai, tăng nguy cơ có thai",
+                    "management": "Dùng biện pháp tránh thai dự phòng (bao cao su) trong thời gian dùng amoxicillin và 7 ngày sau."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng penicillin - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (phản ứng chéo với cephalosporin ~5-10%)",
+                "Dị ứng beta-lactam",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "relative": [
+                "Dị ứng cephalosporin - thận trọng (phản ứng chéo ~5-10%)",
+                "Nhiễm C. difficile trước đây - tăng nguy cơ tái phát",
+                "Suy thận nặng - giảm liều hoặc tăng khoảng cách",
+                "Đang dùng methotrexate - tăng độc tính methotrexate",
+                "Đang dùng allopurinol - tăng nguy cơ phát ban"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Amoxicillin là category B - an toàn trong thai kỳ. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Không có bằng chứng về dị tật thai nhi. Có thể dùng trong tất cả các tam cá nguyệt.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Amoxicillin bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ. Có thể gây tiêu chảy nhẹ hoặc phát ban ở trẻ, nhưng hiếm.",
+                "recommendation": "Có thể dùng khi cho con bú. An toàn cho trẻ bú mẹ. Theo dõi dấu hiệu tiêu chảy hoặc phát ban ở trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận, không chuyển hóa ở gan.",
+            "moderate": "Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.",
+            "severe": "Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.",
+            "notes": "Amoxicillin chủ yếu thải qua thận (60-70% trong 6-8 giờ), không chuyển hóa ở gan. Suy gan không ảnh hưởng đến nồng độ amoxicillin."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nặng (có thể là nhiễm C. difficile)",
+                "Buồn nôn, nôn",
+                "Phát ban, mề đay",
+                "Sốc phản vệ (hiếm nhưng nguy hiểm)",
+                "Co giật (với liều rất cao, suy thận)",
+                "Rối loạn điện giải (natri cao nếu dùng liều lớn)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng amoxicillin ngay lập tức",
+                "Nếu sốc phản vệ: epinephrine, corticosteroids, antihistamines, hỗ trợ hô hấp",
+                "Nếu tiêu chảy nặng: điều trị C. difficile nếu xác định (metronidazole, vancomycin)",
+                "Nếu co giật: benzodiazepines (diazepam, lorazepam)",
+                "Điều chỉnh điện giải nếu cần",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi dấu hiệu sinh tồn"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, dấu hiệu dị ứng, tiêu chảy, điện giải, dấu hiệu nhiễm C. difficile"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu tốt, không bị ảnh hưởng bởi thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
+                "timing": "Uống 2-3 lần/ngày tùy chỉ định, cách đều. Lắc kỹ suspension trước khi dùng (thuốc lắng xuống đáy). Dùng đúng liều theo cân nặng ở trẻ em (tính theo mg/kg)."
+            },
+            "iv": {
+                "reconstitution": "N/A - chỉ có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống (suspension)"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Amoxicillin",
+                "UpToDate - Amoxicillin: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
     },
 "Rosuvastatin": {
         "group": "Cardiovascular - Statin (HMG-CoA Reductase Inhibitor)",
@@ -5258,7 +5659,112 @@ OTHER_DRUGS = {
             "clearance": "Thận: bài tiết chủ yếu qua nước tiểu (không cần chuyển hóa như enalapril). Thời gian bán thải dài (11 giờ) so với enalapril (1 giờ) vì enalaprilat là chất chuyển hóa cuối cùng."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Sau khi pha: dùng ngay, không bảo quản lâu. Theo hướng dẫn của nhà sản xuất về thời gian sử dụng sau khi pha.",
-        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây tổn thương thai nhi và tử vong khi dùng trong tam cá nguyệt thứ hai và thứ ba. Phù mạch (angioedema) có thể xảy ra bất cứ lúc nào, có thể đe dọa tính mạng, cần ngừng ngay và điều trị cấp cứu."
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây tổn thương thai nhi và tử vong khi dùng trong tam cá nguyệt thứ hai và thứ ba. Phù mạch (angioedema) có thể xảy ra bất cứ lúc nào, có thể đe dọa tính mạng, cần ngừng ngay và điều trị cấp cứu.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu.",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac)",
+                    "mechanism": "Giảm tác dụng giãn mạch, giảm lưu lượng máu thận.",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi chức năng thận, huyết áp. Tránh dùng lâu dài cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp.",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức",
+                    "management": "Thận trọng khi bắt đầu. Có thể cần giảm liều diuretic hoặc tạm ngừng trước khi bắt đầu enalaprilat."
+                },
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE inhibitor giảm thải trừ lithium qua thận.",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ lithium. Giảm liều lithium nếu cần."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Có thai - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (gây dị tật thai nhi, tử vong thai nhi)",
+                "Hẹp động mạch thận 2 bên - có thể gây suy thận cấp",
+                "Phù mạch (angioedema) trước đây với ACE inhibitor",
+                "Dị ứng enalaprilat hoặc ACE inhibitor"
+            ],
+            "relative": [
+                "Hẹp động mạch thận 1 bên - thận trọng, theo dõi chức năng thận",
+                "Suy thận nặng - giảm liều, theo dõi creatinine",
+                "Đang dùng diuretics - tăng nguy cơ hạ huyết áp",
+                "Đang dùng kali hoặc kali-sparing diuretics - tăng nguy cơ tăng kali máu"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Enalaprilat là category D - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây tổn thương thai nhi và tử vong khi dùng trong tam cá nguyệt thứ hai và thứ ba. Có thể gây dị tật thai nhi (hội chứng ACE inhibitor: thiểu ối, suy thận, hạ huyết áp, thiểu sản phổi, gãy xương sọ, tử vong). Ngừng ngay nếu phát hiện có thai.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết enalaprilat có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Enalaprilat không cần chuyển hóa ở gan (là dạng hoạt động).",
+            "moderate": "Không cần điều chỉnh liều. Enalaprilat không cần chuyển hóa ở gan.",
+            "severe": "Không cần điều chỉnh liều. Enalaprilat không cần chuyển hóa ở gan.",
+            "notes": "Enalaprilat là dạng hoạt động, không cần chuyển hóa ở gan (khác với enalapril uống là prodrug). Suy gan không ảnh hưởng đến nồng độ enalaprilat."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng, sốc",
+                "Tăng kali máu nặng (rối loạn nhịp tim)",
+                "Suy thận cấp",
+                "Phù mạch (angioedema) - sưng mặt, môi, lưỡi, họng",
+                "Ho khan nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng enalaprilat ngay lập tức",
+                "Nếu hạ huyết áp: đặt bệnh nhân nằm ngửa, nâng chân cao, truyền dịch (normal saline), thuốc vận mạch nếu cần (norepinephrine)",
+                "Nếu tăng kali máu: điều chỉnh kali (calcium gluconate, insulin+glucose, sodium bicarbonate, kayexalate)",
+                "Nếu phù mạch: epinephrine, corticosteroids, antihistamines, hỗ trợ hô hấp nếu cần",
+                "Nếu suy thận cấp: điều trị hỗ trợ, có thể cần lọc máu",
+                "Theo dõi huyết áp, nhịp tim, kali máu, creatinine liên tục"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, kali máu, creatinine, dấu hiệu phù mạch, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "N/A - chỉ có dạng IV",
+                "timing": "N/A - chỉ có dạng IV"
+            },
+            "iv": {
+                "reconstitution": "Pha với normal saline hoặc D5W. Dùng ngay sau khi pha.",
+                "infusion_rate": "Tiêm tĩnh mạch chậm trong 5 phút. Không truyền nhanh.",
+                "compatibility": ["Normal saline", "D5W"],
+                "incompatibility": ["Không trộn với các thuốc khác"],
+                "notes": "Tiêm tĩnh mạch chậm trong 5 phút. Theo dõi huyết áp sát trong 30-60 phút đầu. Chuyển sang enalapril uống khi bệnh nhân có thể uống được."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Enalaprilat (Vasotec IV)",
+                "UpToDate - Enalaprilat: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
     },
     "Ceftriaxone": {
         "group": "Antibiotic - Cephalosporin (3rd Generation)",

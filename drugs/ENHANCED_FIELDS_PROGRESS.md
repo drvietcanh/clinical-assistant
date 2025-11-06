@@ -187,7 +187,7 @@
 - ✅ **Tất cả 141 thuốc đã có đủ 6 fields cơ bản!**
 - ✅ Calcium, Vitamin D, Budesonide, Enalaprilat, Amoxicillin suspension (mới bổ sung)
 
-### 📋 Phase 2 - 8 Fields Tùy Chọn (109/141 thuốc - 77.3% hoàn thành)
+### 📋 Phase 2 - 8 Fields Tùy Chọn (125/141 thuốc - 88.7% hoàn thành)
 
 #### ✅ Đã Hoàn Thành (109 thuốc)
 Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.py`
@@ -208,7 +208,7 @@ Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.p
 - ✅ Nhóm 9d: Respiratory (7 thuốc): Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan
 - ✅ Nhóm 9e: Oncology (6 thuốc): Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron
 
-#### ⏳ Còn Lại (32 thuốc - 22.7%)
+#### ⏳ Còn Lại (16 thuốc - 11.3%)
 
 **Ưu tiên cao - Emergency & Critical Care (4 thuốc):**
 - ✅ Epinephrine, Naloxone, Flumazenil, Lidocaine - **HOÀN THÀNH**
@@ -238,22 +238,15 @@ Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.p
 - ⏳ Itraconazole, Voriconazole, Nystatin
 - ⏳ Chloroquine, Artesunate
 
-**Ưu tiên thấp - Anthelmintics & Others (10+ thuốc):**
+**Ưu tiên thấp - Anthelmintics & Others (8+ thuốc):**
 - ⏳ Albendazole, Mebendazole
 - ⏳ Vitamins & Supplements: Calcium, Vitamin D, Vitamin B12, Folic Acid, Folic acid, Iron
-- ⏳ Desloratadine, Levocetirizine
-- ⏳ Vildagliptin, Pioglitazone
 
-**Danh sách đầy đủ 32 thuốc còn lại:**
-- **Oncology (6):** ✅ Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron - **HOÀN THÀNH**
-- **Endocrine (3):** Levothyroxine, Methimazole, Propylthiouracil
-- **Others (9):** Methotrexate, Allopurinol, Atropine, Ticlopidine, Dipyridamole, Isosorbide mononitrate, Enalaprilat, Amoxicillin suspension, Budesonide
+**Danh sách đầy đủ 16 thuốc còn lại:**
 - **Antivirals & Antifungals (8):** Oseltamivir, Ganciclovir, Ribavirin, Itraconazole, Voriconazole, Nystatin, Chloroquine, Artesunate
 - **Anthelmintics (2):** Albendazole, Mebendazole
 - **Vitamins & Supplements (6):** Calcium, Vitamin D, Vitamin B12, Folic Acid, Folic acid, Iron
-- **Antihistamines (2):** Desloratadine, Levocetirizine
-- **Antidiabetics (2):** Vildagliptin, Pioglitazone
-- **Tổng:** 32 thuốc
+- **Tổng:** 16 thuốc
 
 **Chi tiết kế hoạch:** Xem `drugs/PHASE2_PLAN.md`  
 **Theo dõi tiến trình:** Chạy `python track_phase2_progress.py`
@@ -392,10 +385,10 @@ python check_enhanced_fields.py
 
 ---
 
-**Cập nhật lần cuối:** 2025-02-04 (Session - Bổ sung 10 thuốc Enhanced Fields)  
+**Cập nhật lần cuối:** 2025-02-04 (Session - Bổ sung 10 thuốc Enhanced Fields - HOÀN THÀNH)  
 **Người cập nhật:** Auto (AI Assistant)  
 **Trạng thái:** ✅ File đã được cập nhật với thông tin mới nhất
-- ✅ **Tiến trình hiện tại:** 115/141 thuốc (81.6%) đã có đầy đủ 14 fields
+- ✅ **Tiến trình hiện tại:** 125/141 thuốc (88.7%) đã có đầy đủ 14 fields
 - ✅ **Đã hoàn thành:** 
   - Nhóm 1-8: 73 thuốc
   - Nhóm 9a (Emergency & Critical Care): 4 thuốc
@@ -405,8 +398,12 @@ python check_enhanced_fields.py
   - Nhóm 9d (Respiratory): 7 thuốc
   - Nhóm 9e (Oncology): 6 thuốc
   - Nhóm 9f (Endocrine & Others - Phần 1): 3 thuốc (Levothyroxine, Methimazole, Propylthiouracil)
-  - Nhóm 9f (Endocrine & Others - Phần 2): 3 thuốc - **MỚI HOÀN THÀNH** (Methotrexate, Allopurinol, Atropine)
-- ⏳ **Còn lại:** 26 thuốc (18.4%) cần bổ sung 8 fields tùy chọn
+  - Nhóm 9f (Endocrine & Others - Phần 2): 3 thuốc (Methotrexate, Allopurinol, Atropine)
+  - Nhóm 9f (Endocrine & Others - Phần 3): 6 thuốc - **MỚI HOÀN THÀNH** (Ticlopidine, Dipyridamole, Isosorbide mononitrate, Enalaprilat, Amoxicillin suspension, Budesonide)
+  - Nhóm 9g (Diabetes & Antihistamines): 4 thuốc - **MỚI HOÀN THÀNH** (Vildagliptin, Pioglitazone, Desloratadine, Levocetirizine)
+- ⏳ **Còn lại:** 16 thuốc (11.3%) cần bổ sung 8 fields tùy chọn
 - 📋 **Ưu tiên tiếp theo:** 
-  - Nhóm 9f (Phần 3): Ticlopidine, Dipyridamole, Isosorbide mononitrate, Enalaprilat, Amoxicillin suspension, Budesonide
-  - Các nhóm tiếp theo: Antivirals & Antifungals, Anthelmintics, Vitamins & Supplements
+  - Antivirals & Antifungals: Oseltamivir, Ganciclovir, Ribavirin, Itraconazole, Voriconazole, Nystatin
+  - Antimalarials: Chloroquine, Artesunate
+  - Anthelmintics: Albendazole, Mebendazole
+  - Vitamins & Supplements: Calcium, Vitamin D, Vitamin B12, Folic Acid, Folic acid, Iron

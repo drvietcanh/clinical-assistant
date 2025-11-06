@@ -484,7 +484,86 @@ SUPPORTIVE_DRUGS = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, itraconazole, erythromycin)",
+                    "mechanism": "Có thể ức chế chuyển hóa desloratadine nhẹ.",
+                    "effect": "Tăng nhẹ nồng độ desloratadine",
+                    "management": "Thận trọng. Thường không cần điều chỉnh liều."
+                }
+            ]
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng desloratadine hoặc loratadine"
+            ],
+            "relative": [
+                "Suy gan nặng - thận trọng, có thể cần giảm liều",
+                "Có thai - category C, thận trọng",
+                "Trẻ em <6 tháng tuổi - không khuyến cáo"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Desloratadine là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Thận trọng, đặc biệt trong tam cá nguyệt đầu.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Desloratadine bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. An toàn cho trẻ bú mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan.",
+            "severe": "Thận trọng, giảm liều. Suy gan nặng làm giảm chuyển hóa, có thể tăng nồng độ.",
+            "notes": "Desloratadine chuyển hóa ở gan. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Nhức đầu",
+                "Khô miệng",
+                "Chóng mặt"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng desloratadine ngay lập tức",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi trong 24-48 giờ (half-life dài)"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, mức độ ý thức, dấu hiệu buồn ngủ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu.",
+                "timing": "Uống 1 lần/ngày, bất kỳ lúc nào, cùng thời điểm mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Desloratadine (Clarinex)",
+                "UpToDate - Desloratadine: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
     },
     "Levocetirizine": {
         "group": "Allergy - Antihistamine (H1 Antagonist, 2nd generation)",
@@ -544,7 +623,89 @@ SUPPORTIVE_DRUGS = {
             "clearance": "Thận (thải trừ chủ yếu - 85%), gan (chuyển hóa - 15%)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": None
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Alcohol",
+                    "mechanism": "Cả hai đều ức chế hệ thần kinh trung ương, tác dụng cộng dồn.",
+                    "effect": "Tăng buồn ngủ, giảm khả năng lái xe",
+                    "management": "Tránh rượu khi dùng levocetirizine."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng levocetirizine hoặc cetirizine",
+                "Suy thận nặng (CrCl <10) - chống chỉ định"
+            ],
+            "relative": [
+                "Suy thận (CrCl 30-60) - giảm liều (5mg cách ngày)",
+                "Suy thận (CrCl 10-30) - giảm liều (5mg mỗi 3 ngày)",
+                "Có thai - category B, thận trọng",
+                "Trẻ em <6 tuổi - không khuyến cáo"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Levocetirizine là category B - an toàn hơn category C. Không có bằng chứng về dị tật thai nhi. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Levocetirizine bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. An toàn cho trẻ bú mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Levocetirizine chủ yếu thải qua thận.",
+            "moderate": "Không cần điều chỉnh liều. Levocetirizine chủ yếu thải qua thận.",
+            "severe": "Không cần điều chỉnh liều. Levocetirizine chủ yếu thải qua thận.",
+            "notes": "Levocetirizine chủ yếu thải qua thận (85%), chỉ 15% chuyển hóa ở gan. Suy gan không ảnh hưởng đáng kể đến nồng độ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Nhức đầu",
+                "Mệt mỏi",
+                "Khô miệng",
+                "Chóng mặt"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng levocetirizine ngay lập tức",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi trong 24-48 giờ"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, mức độ ý thức, dấu hiệu buồn ngủ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu.",
+                "timing": "Uống 1 lần/ngày buổi tối (để giảm buồn ngủ ban ngày) hoặc bất kỳ lúc nào, cùng thời điểm mỗi ngày. Giảm liều nếu suy thận (CrCl 30-60: 5mg cách ngày, CrCl 10-30: 5mg mỗi 3 ngày)."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Levocetirizine (Xyzal)",
+                "UpToDate - Levocetirizine: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
     },
 "Vitamin D": {
         "group": "Vitamins/Supplements - Vitamin D",

@@ -1437,7 +1437,87 @@ DIABETES_DRUGS = {
             "clearance": "Thận (thải trừ chủ yếu), gan (chuyển hóa)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Có thể gây viêm tụy cấp hiếm nhưng nguy hiểm. Ngừng ngay nếu có dấu hiệu viêm tụy cấp (đau bụng, nôn)"
+        "black_box_warnings": "Có thể gây viêm tụy cấp hiếm nhưng nguy hiểm. Ngừng ngay nếu có dấu hiệu viêm tụy cấp (đau bụng, nôn)",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Insulin, Sulfonylurea (Glibenclamide, Gliclazide)",
+                    "mechanism": "Vildagliptin tăng tiết insulin, tác dụng cộng dồn với insulin/sulfonylurea.",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Thận trọng. Có thể cần giảm liều insulin/sulfonylurea. Theo dõi đường huyết chặt chẽ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Đái tháo đường type 1 - không hiệu quả (cần insulin)",
+                "Nhiễm toan ceton - cần insulin, không dùng vildagliptin",
+                "Suy gan nặng - chống chỉ định"
+            ],
+            "relative": [
+                "Suy thận nặng (CrCl <30) - thận trọng, có thể cần giảm liều",
+                "Có thai - category C, thận trọng",
+                "Viêm tụy trước đây - tăng nguy cơ viêm tụy cấp"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Vildagliptin là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Thận trọng, đặc biệt trong tam cá nguyệt đầu.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết vildagliptin có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan chặt chẽ.",
+            "severe": "Chống chỉ định. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ độc tính.",
+            "notes": "Vildagliptin chuyển hóa ở gan. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ độc tính, đặc biệt viêm tụy cấp."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ đường huyết (nếu dùng với insulin/sulfonylurea)",
+                "Viêm tụy cấp (đau bụng, nôn, sốt)",
+                "Nhức đầu, chóng mặt"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng vildagliptin ngay lập tức",
+                "Nếu hạ đường huyết: glucose đường uống hoặc IV, theo dõi đường huyết",
+                "Nếu viêm tụy cấp: điều trị hỗ trợ, nhịn ăn, truyền dịch, giảm đau, theo dõi chức năng tụy",
+                "Theo dõi đường huyết, chức năng gan, chức năng tụy"
+            ],
+            "monitoring": "Đường huyết, dấu hiệu viêm tụy cấp, chức năng gan, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với bữa ăn (tăng hấp thu). Có thể uống sáng và tối với bữa ăn.",
+                "timing": "Uống 2 lần/ngày (sáng và tối), cách đều, với bữa ăn."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Vildagliptin (Galvus)",
+                "UpToDate - Vildagliptin: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
     },
     "Pioglitazone": {
         "group": "Diabetes - Thiazolidinedione (TZD)",
@@ -1508,7 +1588,106 @@ DIABETES_DRUGS = {
             "clearance": "Gan (chuyển hóa qua CYP2C8, CYP3A4), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Có thể gây suy tim hoặc làm trầm trọng suy tim hiện có. Không dùng nếu suy tim (NYHA class III-IV). Ngừng ngay nếu có dấu hiệu suy tim. Có thể gây độc gan - ngừng nếu ALT >3x ULN"
+        "black_box_warnings": "Có thể gây suy tim hoặc làm trầm trọng suy tim hiện có. Không dùng nếu suy tim (NYHA class III-IV). Ngừng ngay nếu có dấu hiệu suy tim. Có thể gây độc gan - ngừng nếu ALT >3x ULN",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Insulin",
+                    "mechanism": "Cả hai đều tăng giữ nước, tác dụng cộng dồn.",
+                    "effect": "Tăng nguy cơ suy tim, phù, giữ nước nghiêm trọng",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu suy tim, phù. Có thể cần giảm liều insulin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Pioglitazone có thể tăng nồng độ digoxin.",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ digoxin và điều chỉnh liều nếu cần."
+                },
+                {
+                    "drug": "Gemfibrozil",
+                    "mechanism": "Gemfibrozil ức chế CYP2C8, làm giảm chuyển hóa pioglitazone.",
+                    "effect": "Tăng nồng độ pioglitazone, tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng. Có thể cần giảm liều pioglitazone."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Đái tháo đường type 1 - không hiệu quả (cần insulin)",
+                "Suy tim (NYHA class III-IV) - CHỐNG CHỈ ĐỊNH (tăng nguy cơ suy tim)",
+                "Bệnh gan nặng - chống chỉ định (nguy cơ độc gan)",
+                "Ung thư bàng quang - chống chỉ định (tăng nguy cơ)"
+            ],
+            "relative": [
+                "Suy tim (NYHA class I-II) - thận trọng, theo dõi sát",
+                "Gãy xương (phụ nữ có nguy cơ tăng) - thận trọng",
+                "Có thai - category C, thận trọng",
+                "Suy thận nặng - thận trọng",
+                "Đang dùng insulin - tăng nguy cơ suy tim"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Pioglitazone là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Thận trọng, đặc biệt trong tam cá nguyệt đầu. Có thể gây giữ nước, phù ở mẹ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết pioglitazone có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+            "moderate": "Thận trọng, theo dõi chức năng gan chặt chẽ. Ngừng nếu ALT >3x ULN.",
+            "severe": "Chống chỉ định. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ độc gan.",
+            "notes": "Pioglitazone chuyển hóa ở gan qua CYP2C8 và CYP3A4. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ độc gan. Ngừng nếu ALT >3x ULN hoặc có dấu hiệu độc gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Suy tim, phù nặng, giữ nước",
+                "Hạ đường huyết (nếu dùng với insulin/sulfonylurea)",
+                "Độc gan (vàng da, tăng ALT/AST)",
+                "Thiếu máu nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng pioglitazone ngay lập tức",
+                "Nếu suy tim: điều trị suy tim (diuretics, ACE inhibitors), theo dõi chặt chẽ",
+                "Nếu hạ đường huyết: glucose đường uống hoặc IV, theo dõi đường huyết",
+                "Nếu độc gan: điều trị hỗ trợ gan, theo dõi ALT/AST",
+                "Nếu thiếu máu: điều trị hỗ trợ, có thể cần truyền máu",
+                "Theo dõi dấu hiệu sinh tồn, chức năng gan, chức năng tim"
+            ],
+            "monitoring": "Dấu hiệu suy tim, phù, đường huyết, chức năng gan, công thức máu, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu.",
+                "timing": "Uống 1 lần/ngày, bất kỳ lúc nào, cùng thời điểm mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Pioglitazone (Actos)",
+                "UpToDate - Pioglitazone: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
     },
 }
 

@@ -2054,7 +2054,110 @@ CARDIOVASCULAR_DRUGS = {
             "clearance": "Gan: chuyển hóa thành isosorbide và các metabolites không hoạt động. Thận: bài tiết một phần metabolites. Không cần điều chỉnh liều ở suy thận hoặc suy gan."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng extended release: bảo quản tương tự, không nghiền hoặc nhai.",
-        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với sildenafil, tadalafil, vardenafil trong 24-48 giờ. Kết hợp có thể gây hạ huyết áp nghiêm trọng, có thể gây tử vong. Nguy cơ hạ huyết áp nặng, ngất, nhồi máu cơ tim, đột quỵ."
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với sildenafil, tadalafil, vardenafil trong 24-48 giờ. Kết hợp có thể gây hạ huyết áp nghiêm trọng, có thể gây tử vong. Nguy cơ hạ huyết áp nặng, ngất, nhồi máu cơ tim, đột quỵ.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Sildenafil, Tadalafil, Vardenafil (PDE-5 inhibitors)",
+                    "mechanism": "Cả hai đều tăng cGMP, tác dụng cộng dồn giãn mạch.",
+                    "effect": "Hạ huyết áp nghiêm trọng, có thể gây tử vong, ngất, nhồi máu cơ tim, đột quỵ",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong 24-48 giờ. Không dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Rượu",
+                    "mechanism": "Rượu gây giãn mạch, tác dụng cộng dồn với nitrate.",
+                    "effect": "Tăng tác dụng hạ huyết áp, tăng nguy cơ ngất",
+                    "management": "Tránh rượu khi dùng nitrate."
+                },
+                {
+                    "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Beta-blockers, Diuretics)",
+                    "mechanism": "Tác dụng cộng dồn hạ huyết áp.",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều các thuốc hạ huyết áp khác."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dùng sildenafil, tadalafil, vardenafil trong 24-48 giờ - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
+                "Hạ huyết áp nặng (systolic <90 mmHg)",
+                "Shock",
+                "Tăng áp lực nội sọ",
+                "Thiếu máu nặng",
+                "Dị ứng nitrate"
+            ],
+            "relative": [
+                "Suy tim nặng - thận trọng, có thể cần giảm liều",
+                "Hẹp động mạch chủ nặng - thận trọng",
+                "Hẹp động mạch phổi nặng - thận trọng",
+                "Có thai - category C, thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Isosorbide mononitrate là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Thận trọng, đặc biệt trong tam cá nguyệt thứ ba (có thể gây hạ huyết áp ở mẹ và thai nhi).",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết isosorbide mononitrate có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Isosorbide mononitrate chuyển hóa ở gan nhưng suy gan nhẹ không ảnh hưởng đáng kể.",
+            "moderate": "Không cần điều chỉnh liều thường quy. Theo dõi đáp ứng điều trị.",
+            "severe": "Không cần điều chỉnh liều thường quy. Theo dõi đáp ứng điều trị.",
+            "notes": "Isosorbide mononitrate chuyển hóa ở gan thành isosorbide và các metabolites không hoạt động. Suy gan thường không ảnh hưởng đáng kể đến nồng độ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng, ngất",
+                "Nhức đầu nặng",
+                "Chóng mặt, buồn nôn, nôn",
+                "Nhịp tim nhanh phản ứng",
+                "Methemoglobinemia (hiếm, với liều rất cao)",
+                "Shock, tử vong"
+            ],
+            "antidote": "Methylene blue cho methemoglobinemia nếu có. Điều trị hỗ trợ cho hạ huyết áp.",
+            "treatment": [
+                "Ngừng isosorbide mononitrate ngay lập tức",
+                "Đặt bệnh nhân nằm ngửa, nâng chân cao",
+                "Truyền dịch nếu cần (normal saline)",
+                "Nếu hạ huyết áp nặng: thuốc vận mạch (norepinephrine, phenylephrine)",
+                "Nếu methemoglobinemia: methylene blue 1-2 mg/kg IV",
+                "Theo dõi huyết áp, nhịp tim, SpO2 liên tục",
+                "Hỗ trợ hô hấp nếu cần"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, SpO2, dấu hiệu sinh tồn, methemoglobin nếu nghi ngờ methemoglobinemia"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu.",
+                "timing": "Dạng immediate release: 2-3 lần/ngày, đảm bảo khoảng nghỉ nitrate-free 10-14 giờ. Dạng extended release: 1 lần/ngày vào buổi sáng. KHÔNG nghiền hoặc nhai dạng extended release."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Isosorbide Mononitrate (Imdur)",
+                "UpToDate - Isosorbide Mononitrate: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-04",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
     },
     # Diuretics
     "Furosemide": {
