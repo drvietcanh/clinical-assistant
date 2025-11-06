@@ -408,5 +408,5 @@ python check_enhanced_fields.py
   - Nhóm 9f (Endocrine & Others - Phần 2): 3 thuốc - **MỚI HOÀN THÀNH** (Methotrexate, Allopurinol, Atropine)
 - ⏳ **Còn lại:** 26 thuốc (18.4%) cần bổ sung 8 fields tùy chọn
 - 📋 **Ưu tiên tiếp theo:** 
-  - Nhóm 9f (Phần 2): Methotrexate, Allopurinol, Atropine, Ticlopidine, Dipyridamole, Isosorbide mononitrate, Enalaprilat, Amoxicillin suspension, Budesonide
+  - Nhóm 9f (Phần 3): Ticlopidine, Dipyridamole, Isosorbide mononitrate, Enalaprilat, Amoxicillin suspension, Budesonide
   - Các nhóm tiếp theo: Antivirals & Antifungals, Anthelmintics, Vitamins & Supplements
