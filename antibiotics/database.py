@@ -32,8 +32,15 @@ def render_database():
     # Initialize search state safely
     if 'ab_search_main' not in st.session_state:
         st.session_state.ab_search_main = ""
+    if 'ab_search_trigger' not in st.session_state:
+        st.session_state.ab_search_trigger = None
     if 'recently_viewed_antibiotics' not in st.session_state:
         st.session_state.recently_viewed_antibiotics = []
+    
+    # Handle search trigger from buttons (before widget is created)
+    if st.session_state.ab_search_trigger is not None:
+        st.session_state.ab_search_main = st.session_state.ab_search_trigger
+        st.session_state.ab_search_trigger = None  # Clear trigger
     
     ab_count = len(ANTIBIOTICS_DATABASE)
     
@@ -116,8 +123,8 @@ def render_database():
         )
     
     with col_clear:
-        if st.button("🗑️", help="Xóa tìm kiếm", use_container_width=True):
-            st.session_state.ab_search_main = ""
+        if st.button("🗑️", help="Xóa tìm kiếm", use_container_width=True, key="clear_search_btn"):
+            st.session_state.ab_search_trigger = ""
             st.rerun()
     
     # Show autocomplete suggestions in a nicer format
@@ -133,12 +140,10 @@ def render_database():
                     if st.button(f"💊 {suggestion}", key=safe_key, use_container_width=True):
                         # Ensure suggestion is a valid string
                         if suggestion:
-                            try:
-                                st.session_state.ab_search_main = str(suggestion).strip()
-                                add_to_recent_searches(suggestion)
-                                st.rerun()
-                            except Exception as e:
-                                st.error(f"Lỗi khi tìm kiếm: {str(e)}")
+                            # Use trigger instead of direct assignment to avoid widget conflict
+                            st.session_state.ab_search_trigger = str(suggestion).strip()
+                            add_to_recent_searches(suggestion)
+                            st.rerun()
             st.markdown("<br>", unsafe_allow_html=True)
     
     # Recent searches (when no query)
@@ -153,11 +158,9 @@ def render_database():
                 if st.button(f"↩️ {recent}", key=safe_key, use_container_width=True):
                     # Ensure recent is a valid string
                     if recent:
-                        try:
-                            st.session_state.ab_search_main = str(recent).strip()
-                            st.rerun()
-                        except Exception as e:
-                            st.error(f"Lỗi khi tìm kiếm: {str(e)}")
+                        # Use trigger instead of direct assignment to avoid widget conflict
+                        st.session_state.ab_search_trigger = str(recent).strip()
+                        st.rerun()
         st.markdown("<br>", unsafe_allow_html=True)
     
     # View mode selector
@@ -245,7 +248,8 @@ def render_database():
                             if st.button(suggestion, key=safe_sugg_key, use_container_width=True):
                                 # Ensure suggestion is a valid string
                                 if suggestion:
-                                    st.session_state.ab_search_main = str(suggestion).strip()
+                                    # Use trigger instead of direct assignment to avoid widget conflict
+                                    st.session_state.ab_search_trigger = str(suggestion).strip()
                                     st.rerun()
                 else:
                     st.info("💡 **Gợi ý:** Thử tìm với tên thuốc, biệt dược, nhóm thuốc (ví dụ: Beta-lactam), hoặc chỉ định (ví dụ: MRSA, Sepsis, UTI)")

@@ -6,6 +6,7 @@ Main logic for generating ranked differential diagnoses
 import streamlit as st
 from typing import List, Dict, Any, Optional
 from .ddx_data import get_scenario_data, get_symptom_matches
+from .vietnamese_translations import translate_symptom, translate_risk_factor
 
 
 def calculate_diagnosis_score(
@@ -240,10 +241,12 @@ def render_ddx_interface():
     for i, symptom in enumerate(symptom_list):
         col_idx = i % num_cols
         with cols[col_idx]:
+            # Translate symptom to Vietnamese
+            symptom_display = translate_symptom(symptom)
             if st.checkbox(
-                symptom.replace("_", " ").title(),
+                symptom_display,
                 key=f"ddx_symptom_{i}",
-                help=f"Symptom: {symptom}"
+                help=f"Triệu chứng: {symptom_display}"
             ):
                 selected_symptoms.append(symptom)
     
@@ -276,9 +279,12 @@ def render_ddx_interface():
     for i, rf in enumerate(common_risk_factors):
         col_idx = i % 4
         with risk_cols[col_idx]:
+            # Translate risk factor to Vietnamese
+            rf_display = translate_risk_factor(rf)
             if st.checkbox(
-                rf.replace("_", " ").title(),
-                key=f"ddx_rf_{i}"
+                rf_display,
+                key=f"ddx_rf_{i}",
+                help=f"Yếu tố nguy cơ: {rf_display}"
             ):
                 selected_risk_factors.append(rf)
     
