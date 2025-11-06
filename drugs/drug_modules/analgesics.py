@@ -1171,7 +1171,139 @@ ANALGESICS_DRUGS = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng SC: bảo quản trong tủ lạnh, để ở nhiệt độ phòng trước khi dùng.",
-        "black_box_warnings": "Nguy cơ co mạch nghiêm trọng, có thể gây nhồi máu cơ tim, đột quỵ, thiếu máu cục bộ, có thể tử vong. CHỐNG CHỈ ĐỊNH trong bệnh mạch vành, nhồi máu cơ tim, đột quỵ, TIA, bệnh mạch máu ngoại biên, tăng huyết áp không kiểm soát. Không dùng với ergotamine trong 24 giờ. Nếu có đau ngực, khó thở → ngừng ngay và đánh giá."
+        "black_box_warnings": "Nguy cơ co mạch nghiêm trọng, có thể gây nhồi máu cơ tim, đột quỵ, thiếu máu cục bộ, có thể tử vong. CHỐNG CHỈ ĐỊNH trong bệnh mạch vành, nhồi máu cơ tim, đột quỵ, TIA, bệnh mạch máu ngoại biên, tăng huyết áp không kiểm soát. Không dùng với ergotamine trong 24 giờ. Nếu có đau ngực, khó thở → ngừng ngay và đánh giá.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Ergotamine, Dihydroergotamine",
+                    "mechanism": "Cả hai đều gây co mạch, tăng nguy cơ co mạch nghiêm trọng",
+                    "effect": "Tăng nguy cơ co mạch nghiêm trọng, nhồi máu cơ tim, đột quỵ, thiếu máu cục bộ",
+                    "management": "CHỐNG CHỈ ĐỊNH - không dùng với ergotamine/dihydroergotamine trong 24 giờ."
+                },
+                {
+                    "drug": "MAO Inhibitors (Phenelzine, Tranylcypromine)",
+                    "mechanism": "Ức chế MAO-A (chuyển hóa sumatriptan), tăng nồng độ sumatriptan",
+                    "effect": "Tăng nguy cơ tác dụng phụ, co mạch nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH - không dùng với MAO inhibitor trong 14 ngày."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "SSRI/SNRI (Fluoxetine, Sertraline, Venlafaxine)",
+                    "mechanism": "Cả hai đều tăng serotonin, tăng nguy cơ hội chứng serotonin",
+                    "effect": "Tăng nguy cơ hội chứng serotonin (kích động, tăng thân nhiệt, tăng phản xạ)",
+                    "management": "Thận trọng, theo dõi dấu hiệu hội chứng serotonin. Có thể cần tránh dùng cùng."
+                },
+                {
+                    "drug": "Thuốc ức chế CYP2D6",
+                    "mechanism": "Giảm chuyển hóa sumatriptan, tăng nồng độ",
+                    "effect": "Tăng tác dụng phụ, tăng nguy cơ co mạch",
+                    "management": "Thận trọng, theo dõi tác dụng phụ. Có thể cần giảm liều sumatriptan."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "absolute": [
+                "Dị ứng với sumatriptan hoặc các thành phần khác",
+                "Bệnh mạch vành (CAD)",
+                "Nhồi máu cơ tim",
+                "Đau thắt ngực không ổn định",
+                "Đột quỵ, TIA",
+                "Bệnh mạch máu ngoại biên",
+                "Tăng huyết áp không kiểm soát",
+                "Dùng MAO inhibitor trong 14 ngày",
+                "Dùng ergotamine/dihydroergotamine trong 24 giờ"
+            ],
+            "relative": [
+                "Bệnh tim mạch khác (suy tim, loạn nhịp) - thận trọng, đánh giá tim mạch trước",
+                "Tăng huyết áp đã kiểm soát - thận trọng",
+                "Tiền sử đau thắt ngực - thận trọng",
+                "Dùng với SSRI/SNRI - tăng nguy cơ hội chứng serotonin",
+                "Suy thận nặng - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Sumatriptan là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Sumatriptan được sử dụng trong thai kỳ để điều trị migraine và có vẻ an toàn. Tuy nhiên, có nguy cơ co mạch có thể ảnh hưởng đến thai nhi. Có thể được dùng khi lợi ích vượt quá nguy cơ, nhưng thận trọng.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Sumatriptan bài tiết vào sữa mẹ với nồng độ thấp. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng - sumatriptan chuyển hóa qua gan (MAO-A, CYP2D6), có thể tích lũy",
+            "severe": "Thận trọng - có thể tích lũy, tăng tác dụng phụ",
+            "notes": "Sumatriptan chuyển hóa qua gan (MAO-A, một phần CYP2D6). Ở suy gan, có thể tích lũy và tăng tác dụng phụ. Theo dõi chặt chẽ tác dụng phụ. Có thể cần giảm liều."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Co mạch nghiêm trọng",
+                "Nhồi máu cơ tim",
+                "Đột quỵ",
+                "Thiếu máu cục bộ",
+                "Đau ngực nặng",
+                "Khó thở nặng",
+                "Tăng huyết áp nghiêm trọng",
+                "Hội chứng serotonin (nếu dùng với SSRI/SNRI)",
+                "Kích động, lú lẫn"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Nitroglycerin có thể được dùng để giãn mạch, nhưng thận trọng.",
+            "treatment": [
+                "Ngừng ngay sumatriptan",
+                "Hỗ trợ hô hấp nếu cần (oxy, thở máy nếu suy hô hấp)",
+                "Theo dõi tim mạch liên tục (ECG, huyết áp, SpO2)",
+                "Điều trị nhồi máu cơ tim nếu có (theo protocol)",
+                "Điều trị đột quỵ nếu có (theo protocol)",
+                "Nitroglycerin để giãn mạch (thận trọng, có thể gây hạ huyết áp)",
+                "Điều trị hội chứng serotonin nếu có (dantrolene, benzodiazepine)",
+                "Hỗ trợ tim mạch nếu cần (IV fluids, vasopressors nếu hạ huyết áp)",
+                "Theo dõi và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi liên tục: ECG, huyết áp, SpO2, dấu hiệu co mạch, dấu hiệu nhồi máu cơ tim, dấu hiệu đột quỵ, dấu hiệu hội chứng serotonin. Theo dõi ít nhất 24 giờ do thời gian bán thải (2 giờ) và nguy cơ biến chứng."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Nitroglycerin",
+                    "mechanism": "Giãn mạch, đối kháng tác dụng co mạch",
+                    "indication": "Quá liều gây co mạch nghiêm trọng, đau ngực",
+                    "caution": "Thận trọng, có thể gây hạ huyết áp. Chỉ dùng khi có co mạch nghiêm trọng."
+                }
+            ],
+            "notes": "Không có antidote đặc hiệu. Nitroglycerin có thể được dùng để giãn mạch trong trường hợp quá liều nghiêm trọng, nhưng thận trọng. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn",
+                "timing": "Dùng ngay khi có triệu chứng migraine. Không dùng để phòng ngừa. Có thể lặp sau 2 giờ nếu cần (tối đa 200mg/ngày)."
+            },
+            "iv": None,
+            "sc": {
+                "technique": "Dạng SC: Tiêm dưới da, thường ở đùi hoặc cánh tay. Liều: 6mg SC.",
+                "timing": "Dùng ngay khi có triệu chứng migraine. Có thể lặp sau 1 giờ nếu cần (tối đa 12mg/ngày).",
+                "notes": "Tác dụng nhanh nhất (10-15 phút). Bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi dùng."
+            },
+            "nasal": {
+                "technique": "Dạng xịt mũi: Xịt vào một bên mũi, nhắm mắt và miệng khi xịt.",
+                "timing": "Dùng ngay khi có triệu chứng migraine. Có thể lặp sau 2 giờ nếu cần (tối đa 40mg/ngày).",
+                "notes": "Tác dụng nhanh (15-30 phút). Có thể gây vị đắng trong miệng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Label: Imitrex (Sumatriptan)",
+                "UpToDate: Triptans for acute migraine",
+                "American Headache Society Guidelines",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
+                "Micromedex: Sumatriptan"
+            ],
+            "last_updated": "2025-02-03",
+            "evidence_level": "High - FDA approved, multiple RCTs, clinical guidelines"
+        }
     },
 }
 

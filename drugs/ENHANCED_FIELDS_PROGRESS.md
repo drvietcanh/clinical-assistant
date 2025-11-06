@@ -37,11 +37,11 @@
 
 **Tổng số thuốc:** 141  
 **Phase 1 - 6 fields cơ bản:** 141 ✅ (100% - HOÀN THÀNH!)  
-**Phase 2 - 8 fields tùy chọn:** 91 ✅ (64.5% - Đang tiến hành)  
-**Còn lại Phase 2:** 50 thuốc (35.5%)  
+**Phase 2 - 8 fields tùy chọn:** 103 ✅ (73% - Đang tiến hành)  
+**Còn lại Phase 2:** 38 thuốc (27%)  
 **Mục tiêu:** Bổ sung đầy đủ 14 fields cho tất cả 141 thuốc
 - ✅ Phase 1: 6 fields cơ bản - HOÀN THÀNH 100%
-- 🔄 Phase 2: 8 fields tùy chọn - Đang tiến hành (64.5%)
+- 🔄 Phase 2: 8 fields tùy chọn - Đang tiến hành (73%)
 
 ### Tiến Trình Gần Đây (2024-12-19 - HOÀN THÀNH 6 FIELDS CƠ BẢN)
 - ✅ **Hoàn thành 5 thuốc cuối cùng**: Calcium, Vitamin D, Budesonide, Enalaprilat, Amoxicillin suspension
@@ -187,9 +187,9 @@
 - ✅ **Tất cả 141 thuốc đã có đủ 6 fields cơ bản!**
 - ✅ Calcium, Vitamin D, Budesonide, Enalaprilat, Amoxicillin suspension (mới bổ sung)
 
-### 📋 Phase 2 - 8 Fields Tùy Chọn (96/141 thuốc - 68.1% hoàn thành)
+### 📋 Phase 2 - 8 Fields Tùy Chọn (103/141 thuốc - 73% hoàn thành)
 
-#### ✅ Đã Hoàn Thành (96 thuốc)
+#### ✅ Đã Hoàn Thành (103 thuốc)
 Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.py`
 
 **Các nhóm đã hoàn thành:**
@@ -205,8 +205,9 @@ Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.p
 - ✅ Nhóm 9b (Phần 1): Antimicrobials - High Priority (6 thuốc): Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline
 - ✅ Nhóm 9b (Phần 2): Antimicrobials - High Priority (4 thuốc): Amoxicillin-clavulanate, Azithromycin, Clarithromycin, Trimethoprim-sulfamethoxazole
 - ✅ Nhóm 9c: Corticosteroids (5 thuốc): Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone
+- ✅ Nhóm 9d: Respiratory (7 thuốc): Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan
 
-#### ⏳ Còn Lại (45 thuốc - 31.9%)
+#### ⏳ Còn Lại (38 thuốc - 27%)
 
 **Ưu tiên cao - Emergency & Critical Care (4 thuốc):**
 - ✅ Epinephrine, Naloxone, Flumazenil, Lidocaine - **HOÀN THÀNH**
@@ -219,7 +220,7 @@ Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.p
 - ✅ Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone - **HOÀN THÀNH**
 
 **Ưu tiên trung bình - Respiratory (7 thuốc):**
-- ⏳ Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan
+- ✅ Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan - **HOÀN THÀNH**
 
 **Ưu tiên trung bình - Oncology (6 thuốc):**
 - ⏳ Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron
@@ -242,8 +243,7 @@ Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.p
 - ⏳ Desloratadine, Levocetirizine
 - ⏳ Vildagliptin, Pioglitazone
 
-**Danh sách đầy đủ 45 thuốc còn lại:**
-- **Respiratory (7):** Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan
+**Danh sách đầy đủ 38 thuốc còn lại:**
 - **Oncology (6):** Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron
 - **Endocrine (3):** Levothyroxine, Methimazole, Propylthiouracil
 - **Others (9):** Methotrexate, Allopurinol, Atropine, Ticlopidine, Dipyridamole, Isosorbide mononitrate, Enalaprilat, Amoxicillin suspension, Budesonide
@@ -252,7 +252,7 @@ Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.p
 - **Vitamins & Supplements (6):** Calcium, Vitamin D, Vitamin B12, Folic Acid, Folic acid, Iron
 - **Antihistamines (2):** Desloratadine, Levocetirizine
 - **Antidiabetics (2):** Vildagliptin, Pioglitazone
-- **Tổng:** 45 thuốc
+- **Tổng:** 38 thuốc
 
 **Chi tiết kế hoạch:** Xem `drugs/PHASE2_PLAN.md`  
 **Theo dõi tiến trình:** Chạy `python track_phase2_progress.py`
@@ -347,16 +347,16 @@ python check_enhanced_fields.py
 ### Tiếp Tục
 - ✅ **HOÀN THÀNH Phase 1:** Tất cả 141 thuốc đã có đủ 6 fields cơ bản (100%)
 - 📋 **Phase 2 đang tiến hành:** Bổ sung 8 fields tùy chọn cho tất cả 141 thuốc
-  - ✅ **Tổng số đã hoàn thành:** 96/141 thuốc (68.1%)
-  - ⏳ **Còn lại:** 45 thuốc (31.9%)
+  - ✅ **Tổng số đã hoàn thành:** 103/141 thuốc (73%)
+  - ⏳ **Còn lại:** 38 thuốc (27%)
   - 📋 **Kế hoạch chi tiết:** Xem `drugs/PHASE2_PLAN.md`
   - 📊 **Theo dõi tiến trình:** `python track_phase2_progress.py`
-- 📋 **Tiếp theo:** Nhóm 9 - Các thuốc còn lại (50 thuốc)
+- 📋 **Tiếp theo:** Nhóm 9 - Các thuốc còn lại (38 thuốc)
   - ✅ **Ưu tiên cao - Emergency drugs:** Epinephrine, Naloxone, Flumazenil, Lidocaine - **HOÀN THÀNH**
   - ✅ **Ưu tiên cao - Antimicrobials (Phần 1):** Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline - **HOÀN THÀNH**
   - ✅ **Ưu tiên cao - Antimicrobials (Phần 2):** Amoxicillin-clavulanate, Azithromycin, Clarithromycin, Trimethoprim-sulfamethoxazole - **HOÀN THÀNH**
   - ✅ **Ưu tiên trung bình - Corticosteroids:** Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone - **HOÀN THÀNH**
-  - ⏳ **Ưu tiên trung bình - Respiratory:** Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan
+  - ✅ **Ưu tiên trung bình - Respiratory:** Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan - **HOÀN THÀNH**
   - ⏳ **Ưu tiên trung bình - Oncology:** Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron
   - ⏳ **Ưu tiên thấp:** Vitamins & Supplements, Antimalarials, Anthelmintics, Others
 - 📋 **Sau khi hoàn thành Phase 2:** Tiến hành refactor module để tách file lớn
@@ -367,12 +367,12 @@ python check_enhanced_fields.py
 
 ### ✅ Thành Tựu
 - **Phase 1:** 100% hoàn thành - Tất cả 141 thuốc đã có đủ 6 fields cơ bản
-- **Phase 2:** 68.1% hoàn thành - 96/141 thuốc đã có đủ 8 fields tùy chọn
-- **Tổng cộng:** 96 thuốc đã có đầy đủ 14 fields (6 cơ bản + 8 tùy chọn)
+- **Phase 2:** 73% hoàn thành - 103/141 thuốc đã có đủ 8 fields tùy chọn
+- **Tổng cộng:** 103 thuốc đã có đầy đủ 14 fields (6 cơ bản + 8 tùy chọn)
 
 ### 🔄 Đang Tiến Hành
-- **Phase 2:** Bổ sung 8 fields tùy chọn cho 45 thuốc còn lại
-- **Ưu tiên tiếp theo:** Respiratory (Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan)
+- **Phase 2:** Bổ sung 8 fields tùy chọn cho 38 thuốc còn lại
+- **Ưu tiên tiếp theo:** Oncology (Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron)
 
 ### 📋 Công Cụ Hỗ Trợ
 - **Kiểm tra Phase 1 (6 fields cơ bản):** `python check_enhanced_fields.py`
@@ -386,21 +386,23 @@ python check_enhanced_fields.py
   - ✅ **Hoàn thành (Phần 1):** Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline (6/10 thuốc)
   - ✅ **Hoàn thành (Phần 2):** Amoxicillin-clavulanate, Azithromycin, Clarithromycin, Trimethoprim-sulfamethoxazole (4 thuốc) - **HOÀN THÀNH**
 3. ✅ **Nhóm 9c - Corticosteroids (5 thuốc):** Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone - **HOÀN THÀNH**
-4. **Các nhóm tiếp theo:** Respiratory, Oncology, Endocrine, Others
+4. ✅ **Nhóm 9d - Respiratory (7 thuốc):** Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan - **HOÀN THÀNH**
+5. **Các nhóm tiếp theo:** Oncology, Endocrine, Others
 
 ---
 
-**Cập nhật lần cuối:** 2025-02-03 (Session tiếp theo - Hoàn thành Nhóm 9c Corticosteroids)  
+**Cập nhật lần cuối:** 2025-02-03 (Session - Hoàn thành Nhóm 9d Respiratory)  
 **Người cập nhật:** Auto (AI Assistant)  
 **Trạng thái:** ✅ File đã được cập nhật với thông tin mới nhất
-- ✅ **Tiến trình hiện tại:** 96/141 thuốc (68.1%) đã có đầy đủ 14 fields
+- ✅ **Tiến trình hiện tại:** 103/141 thuốc (73%) đã có đầy đủ 14 fields
 - ✅ **Đã hoàn thành:** 
   - Nhóm 1-8: 73 thuốc
   - Nhóm 9a (Emergency & Critical Care): 4 thuốc
   - Nhóm 9b Phần 1 (Antimicrobials - High Priority): 6 thuốc
   - Nhóm 9b Phần 2 (Antimicrobials - High Priority): 4 thuốc
-  - Nhóm 9c (Corticosteroids): 5 thuốc - **MỚI HOÀN THÀNH** (Dexamethasone, Hydrocortisone, Prednisolone, Prednisone, Betamethasone)
-- ⏳ **Còn lại:** 45 thuốc (31.9%) cần bổ sung 8 fields tùy chọn
+  - Nhóm 9c (Corticosteroids): 5 thuốc
+  - Nhóm 9d (Respiratory): 7 thuốc - **MỚI HOÀN THÀNH** (Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan)
+- ⏳ **Còn lại:** 38 thuốc (27%) cần bổ sung 8 fields tùy chọn
 - 📋 **Ưu tiên tiếp theo:** 
-  - Nhóm 9d: Respiratory (7 thuốc): Salmeterol, Ipratropium, Tiotropium, Montelukast, Budesonide inhaled, Fluticasone inhaled, Sumatriptan
-  - Các nhóm tiếp theo: Oncology, Endocrine, Others
+  - Nhóm 9e: Oncology (6 thuốc): Oxaliplatin, 5-Fluorouracil, Ifosfamide, Doxorubicin, Granisetron, Palonosetron
+  - Các nhóm tiếp theo: Endocrine, Others
