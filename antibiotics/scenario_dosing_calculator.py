@@ -417,8 +417,11 @@ def render_scenario_dosing_calculator(antibiotic_name):
             )
             
             if results:
-                st.session_state[f"scenario_results_{antibiotic_name}"] = results
-                st.session_state[f"scenario_patient_info_{antibiotic_name}"] = {
+                from .database_display import _make_safe_session_key
+                safe_ab_name = _make_safe_session_key("scenario_results", antibiotic_name)
+                st.session_state[safe_ab_name] = results
+                safe_patient_key = _make_safe_session_key("scenario_patient_info", antibiotic_name)
+                st.session_state[safe_patient_key] = {
                     'weight': weight,
                     'height': height,
                     'age': age,
@@ -429,9 +432,15 @@ def render_scenario_dosing_calculator(antibiotic_name):
                 st.error("Không thể tính liều. Vui lòng kiểm tra lại thông tin.")
     
     # Display results
-    if f"scenario_results_{antibiotic_name}" in st.session_state:
-        results = st.session_state[f"scenario_results_{antibiotic_name}"]
-        patient_info = st.session_state.get(f"scenario_patient_info_{antibiotic_name}", {})
+    from .database_display import _make_safe_session_key
+    safe_results_key = _make_safe_session_key("scenario_results", antibiotic_name)
+    safe_patient_key = _make_safe_session_key("scenario_patient_info", antibiotic_name)
+    
+    if safe_results_key in st.session_state:
+        results = st.session_state.get(safe_results_key, None)
+        if not results:
+            return
+        patient_info = st.session_state.get(safe_patient_key, {})
         
         if not results:
             st.warning("Không có kết quả để hiển thị")

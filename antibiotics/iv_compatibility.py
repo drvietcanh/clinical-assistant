@@ -232,10 +232,14 @@ def render_iv_compatibility_checker(antibiotic_name: str):
     # Input: Other drugs
     st.markdown("#### 📋 Thuốc Khác Đang Truyền")
     
+    # Sanitize antibiotic name for keys
+    from .database_display import _make_safe_session_key
+    safe_ab_name = _make_safe_session_key("iv_compat", antibiotic_name)
+    
     other_drugs_text = st.text_input(
         "Nhập tên thuốc (phân cách bằng dấu phẩy):",
         placeholder="Ví dụ: Piperacillin-Tazobactam, Ceftriaxone, NS",
-        key=f"iv_compat_{antibiotic_name}_drugs",
+        key=_make_safe_session_key(safe_ab_name, "drugs"),
         help="Nhập các thuốc hoặc dịch truyền khác đang dùng cùng lúc"
     )
     
@@ -244,11 +248,11 @@ def render_iv_compatibility_checker(antibiotic_name: str):
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        use_ns = st.checkbox("Normal Saline (NS)", key=f"iv_compat_{antibiotic_name}_ns")
+        use_ns = st.checkbox("Normal Saline (NS)", key=_make_safe_session_key(safe_ab_name, "ns"))
     with col2:
-        use_d5w = st.checkbox("D5W", key=f"iv_compat_{antibiotic_name}_d5w")
+        use_d5w = st.checkbox("D5W", key=_make_safe_session_key(safe_ab_name, "d5w"))
     with col3:
-        use_calcium = st.checkbox("Calcium", key=f"iv_compat_{antibiotic_name}_calcium")
+        use_calcium = st.checkbox("Calcium", key=_make_safe_session_key(safe_ab_name, "calcium"))
     
     # Build drug list
     drugs_to_check = [antibiotic_name]
@@ -269,7 +273,7 @@ def render_iv_compatibility_checker(antibiotic_name: str):
         return
     
     # Check button
-    if st.button("🔍 Kiểm Tra Tương Thích", type="primary", key=f"check_iv_{antibiotic_name}"):
+    if st.button("🔍 Kiểm Tra Tương Thích", type="primary", key=_make_safe_session_key(safe_ab_name, "check")):
         results = check_multiple_drugs(drugs_to_check)
         
         if not results:

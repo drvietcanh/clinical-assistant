@@ -38,6 +38,10 @@ def render_tdm_calculator(antibiotic_name):
     with tab1:
         st.markdown("#### 📋 AUC-Based Dosing (Ưu Tiên)")
         
+        # Sanitize antibiotic name for keys
+        from .database_display import _make_safe_session_key
+        safe_ab_name = _make_safe_session_key("tdm", antibiotic_name)
+        
         col1, col2 = st.columns(2)
         
         with col1:
@@ -47,7 +51,7 @@ def render_tdm_calculator(antibiotic_name):
                 max_value=150.0,
                 value=70.0,
                 step=1.0,
-                key=f"tdm_{antibiotic_name}_weight"
+                key=_make_safe_session_key(safe_ab_name, "weight")
             )
             
             crcl = st.number_input(
@@ -56,7 +60,7 @@ def render_tdm_calculator(antibiotic_name):
                 max_value=150.0,
                 value=60.0,
                 step=5.0,
-                key=f"tdm_{antibiotic_name}_crcl"
+                key=_make_safe_session_key(safe_ab_name, "crcl")
             )
         
         with col2:
@@ -66,13 +70,13 @@ def render_tdm_calculator(antibiotic_name):
                 max_value=700.0,
                 value=500.0,
                 step=50.0,
-                key=f"tdm_{antibiotic_name}_target_auc",
+                key=_make_safe_session_key(safe_ab_name, "target_auc"),
                 help="Thường 400-600 mg·h/L"
             )
             
             has_current_levels = st.checkbox(
                 "Có nồng độ hiện tại?",
-                key=f"tdm_{antibiotic_name}_has_levels"
+                key=_make_safe_session_key(safe_ab_name, "has_levels")
             )
         
         if has_current_levels:
@@ -88,7 +92,7 @@ def render_tdm_calculator(antibiotic_name):
                     max_value=50.0,
                     value=25.0,
                     step=0.5,
-                    key=f"tdm_{antibiotic_name}_peak"
+                    key=_make_safe_session_key(safe_ab_name, "peak")
                 )
             
             with col2:
@@ -98,14 +102,14 @@ def render_tdm_calculator(antibiotic_name):
                     max_value=50.0,
                     value=15.0,
                     step=0.5,
-                    key=f"tdm_{antibiotic_name}_trough"
+                    key=_make_safe_session_key(safe_ab_name, "trough")
                 )
             
             # Calculate current AUC
             current_auc = calculate_vancomycin_auc(current_peak, current_trough)
             st.info(f"**AUC hiện tại:** {current_auc:.0f} mg·h/L")
         
-        if st.button("🧮 Tính Liều (AUC-based)", type="primary", key=f"calc_auc_{antibiotic_name}"):
+        if st.button("🧮 Tính Liều (AUC-based)", type="primary", key=_make_safe_session_key(safe_ab_name, "calc_auc")):
             result = calculate_vancomycin_dose_auc_based(
                 weight_kg=weight,
                 crcl=crcl,
