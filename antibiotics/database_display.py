@@ -30,6 +30,7 @@ def _sanitize_key(text):
     """
     Sanitize text for use in Streamlit session state keys and widget keys.
     Removes or replaces special characters that are not allowed in keys.
+    Streamlit keys must: start with letter/underscore, contain only alphanumeric/underscore.
     
     Args:
         text: Text to sanitize
@@ -39,36 +40,85 @@ def _sanitize_key(text):
     """
     if not text:
         return "key"
-    # Convert to string and replace problematic characters
+    
+    # Convert to string and normalize Unicode
     safe = str(text)
-    # Replace spaces, hyphens, slashes, and other special chars with underscore
-    safe = safe.replace(" ", "_").replace("-", "_").replace("/", "_")
-    safe = safe.replace("\\", "_").replace("(", "_").replace(")", "_")
-    safe = safe.replace("[", "_").replace("]", "_").replace("{", "_")
-    safe = safe.replace("}", "_").replace(".", "_").replace(",", "_")
-    safe = safe.replace(":", "_").replace(";", "_").replace("!", "_")
-    safe = safe.replace("?", "_").replace("@", "_").replace("#", "_")
-    safe = safe.replace("$", "_").replace("%", "_").replace("^", "_")
-    safe = safe.replace("&", "_").replace("*", "_").replace("+", "_")
-    safe = safe.replace("=", "_").replace("|", "_").replace("~", "_")
-    # Remove any remaining non-alphanumeric characters except underscore
-    safe = re.sub(r'[^a-zA-Z0-9_]', '_', safe)
+    
+    # Remove all non-ASCII characters first (Unicode normalization)
+    safe = safe.encode('ascii', 'ignore').decode('ascii')
+    
+    # Replace all non-alphanumeric characters with underscore
+    safe = re.sub(r'[^a-zA-Z0-9]', '_', safe)
+    
     # Remove multiple consecutive underscores
     safe = re.sub(r'_+', '_', safe)
+    
     # Remove leading/trailing underscores
     safe = safe.strip('_')
+    
     # Ensure it doesn't start with a number (Streamlit requirement)
     if safe and safe[0].isdigit():
         safe = f"key_{safe}"
+    
     # Ensure minimum length and valid characters only
     if not safe or len(safe) == 0:
         safe = "key"
-    # Limit length to prevent issues (Streamlit has key length limits)
-    if len(safe) > 100:
-        safe = safe[:100]
-    # Final check: ensure only valid characters
-    safe = re.sub(r'[^a-zA-Z0-9_]', '_', safe)
+    
+    # Limit length to prevent issues (Streamlit has key length limits, typically 200 chars)
+    # Use 80 chars to be safe and leave room for suffixes
+    if len(safe) > 80:
+        safe = safe[:80]
+    
+    # Final validation: ensure only valid characters (should already be done, but double-check)
+    safe = re.sub(r'[^a-zA-Z0-9_]', '', safe)
+    
+    # Final check: ensure it starts with letter or underscore
+    if safe and safe[0].isdigit():
+        safe = f"key_{safe}"
+    
     return safe
+
+
+def _make_safe_session_key(prefix, suffix=""):
+    """
+    Create a safe session state key from prefix and suffix.
+    Ensures the entire key is valid for Streamlit session state.
+    
+    Args:
+        prefix: Key prefix (will be sanitized)
+        suffix: Key suffix (will be sanitized)
+        
+    Returns:
+        Safe session state key
+    """
+    # Sanitize both parts
+    safe_prefix = _sanitize_key(prefix) if prefix else "key"
+    safe_suffix = _sanitize_key(suffix) if suffix else ""
+    
+    # Combine with underscore
+    if safe_suffix:
+        full_key = f"{safe_prefix}_{safe_suffix}"
+    else:
+        full_key = safe_prefix
+    
+    # Final validation
+    full_key = re.sub(r'[^a-zA-Z0-9_]', '', full_key)
+    full_key = re.sub(r'_+', '_', full_key)
+    full_key = full_key.strip('_')
+    
+    # Ensure it doesn't start with number
+    if full_key and full_key[0].isdigit():
+        full_key = f"key_{full_key}"
+    
+    # Ensure minimum length
+    if not full_key:
+        full_key = "key"
+    
+    # Limit total length
+    if len(full_key) > 150:
+        full_key = full_key[:150]
+    
+    return full_key
 
 
 

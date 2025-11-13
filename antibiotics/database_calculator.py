@@ -19,7 +19,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
     Returns calculation result or None
     """
     # Sanitize key_prefix to ensure it's safe for session state
-    from .database_display import _sanitize_key
+    from .database_display import _sanitize_key, _make_safe_session_key
     if key_prefix:
         # Extract the actual prefix part (before the last underscore if it ends with _)
         prefix_parts = key_prefix.rstrip('_').split('_')
@@ -27,6 +27,10 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         key_prefix = '_'.join(sanitized_parts) + '_' if sanitized_parts else 'info_'
     else:
         key_prefix = 'info_'
+    
+    # Helper function to create safe keys
+    def safe_key(suffix):
+        return _make_safe_session_key(key_prefix.rstrip('_'), suffix)
     st.markdown("---")
     
     # Modern card header
@@ -56,7 +60,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
             max_value=200.0,
             value=70.0,
             step=1.0,
-            key=f"{key_prefix}dosing_weight",
+            key=safe_key("dosing_weight"),
             help="Cân nặng thực tế của bệnh nhân"
         )
     
@@ -66,7 +70,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
             use_imported = st.checkbox(
                 f"📥 Dùng CrCl đã tính: {imported_crcl:.1f}",
                 value=True,
-                key=f"{key_prefix}use_crcl"
+                key=safe_key("use_crcl")
             )
             if use_imported:
                 crcl = imported_crcl
@@ -78,7 +82,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
                     max_value=200.0,
                     value=float(imported_crcl),
                     step=1.0,
-                    key=f"{key_prefix}crcl",
+                    key=safe_key("crcl"),
                     help="Creatinine Clearance"
                 )
         else:
@@ -88,7 +92,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
                 max_value=200.0,
                 value=60.0,
                 step=1.0,
-                key=f"{key_prefix}crcl",
+                key=safe_key("crcl"),
                 help="Creatinine Clearance. Dùng eGFR Calculator để tính chính xác"
             )
     
@@ -96,7 +100,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         indication = st.selectbox(
             "Chỉ định:",
             ["Chuẩn", "Nhiễm khuẩn nặng", "Viêm màng não"],
-            key=f"{key_prefix}indication",
+            key=safe_key("indication"),
             help="Loại nhiễm khuẩn"
         )
     
@@ -105,7 +109,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         f"🧮 Tính Liều {ab_name}",
         type="primary",
         use_container_width=True,
-        key=f"{key_prefix}calc_btn"
+        key=safe_key("calc_btn")
     ):
         indication_map = {
             "Chuẩn": "standard",
@@ -123,11 +127,11 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         )
         
         if "error" not in result:
-            # Store result in session for display
-            st.session_state[f"{key_prefix}dosing_result"] = result
-            st.session_state[f"{key_prefix}dosing_weight"] = weight
-            st.session_state[f"{key_prefix}dosing_crcl"] = crcl
-            st.session_state[f"{key_prefix}dosing_indication"] = indication_code
+            # Store result in session for display - use safe keys
+            st.session_state[safe_key("dosing_result")] = result
+            st.session_state[safe_key("dosing_weight")] = weight
+            st.session_state[safe_key("dosing_crcl")] = crcl
+            st.session_state[safe_key("dosing_indication")] = indication_code
             
             # Save to recent calculations (Phase 4)
             from .recent_calculations import save_calculation
@@ -147,11 +151,12 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         else:
             st.error(result["error"])
     
-    # Display results if available
-    if f"{key_prefix}dosing_result" in st.session_state:
-        result = st.session_state[f"{key_prefix}dosing_result"]
-        weight_used = st.session_state.get(f"{key_prefix}dosing_weight", weight)
-        crcl_used = st.session_state.get(f"{key_prefix}dosing_crcl", crcl)
+    # Display results if available - use safe keys
+    result_key = safe_key("dosing_result")
+    if result_key in st.session_state:
+        result = st.session_state[result_key]
+        weight_used = st.session_state.get(safe_key("dosing_weight"), weight)
+        crcl_used = st.session_state.get(safe_key("dosing_crcl"), crcl)
         
         # Results card
         st.markdown("---")
@@ -187,7 +192,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         
         detailed = calculate_detailed_dose(
             ab_name, weight_used, ibw, abw, crcl_used,
-            indication=st.session_state.get(f"{key_prefix}dosing_indication", "standard"),
+            indication=st.session_state.get(safe_key("dosing_indication"), "standard"),
             is_pediatric=False
         )
         
@@ -222,12 +227,12 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         st.info("💡 **Cần tính chi tiết hơn?** Dùng công cụ **'🧮 Tính Liều Theo eGFR/CrCl'** ở menu để nhập đầy đủ thông tin (chiều cao, giới tính, ICU, HD, etc.)")
         
         # Clear button
-        if st.button("🗑️ Xóa kết quả", key=f"{key_prefix}clear_result"):
+        if st.button("🗑️ Xóa kết quả", key=safe_key("clear_result")):
             keys_to_remove = [
-                f"{key_prefix}dosing_result",
-                f"{key_prefix}dosing_weight",
-                f"{key_prefix}dosing_crcl",
-                f"{key_prefix}dosing_indication"
+                safe_key("dosing_result"),
+                safe_key("dosing_weight"),
+                safe_key("dosing_crcl"),
+                safe_key("dosing_indication")
             ]
             for key in keys_to_remove:
                 if key in st.session_state:
