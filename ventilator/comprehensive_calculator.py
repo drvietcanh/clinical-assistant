@@ -51,21 +51,8 @@ def calculate_compliance(vt, plateau, peep):
     return None
 
 
-def interpret_compliance(compliance):
-    """Đánh giá compliance"""
-    if compliance is None:
-        return None, None
-    
-    if compliance < 20:
-        return "Rất thấp", "error"
-    elif compliance < 30:
-        return "Thấp", "error"
-    elif compliance <= 50:
-        return "Bình thường", "success"
-    elif compliance <= 80:
-        return "Cao", "info"
-    else:
-        return "Rất cao", "warning"
+# Note: interpret_compliance is now imported from .compliance module
+# This function is kept for backward compatibility but should use the one from compliance.py
 
 
 def render_comprehensive_calculator():
@@ -184,9 +171,13 @@ def render_comprehensive_calculator():
         end_exp_pause_value = end_expiratory_pause if end_expiratory_pause > 0 else None
         auto_peep = estimate_auto_peep(plateau, peep, end_exp_pause_value)
         
-        # For backward compatibility
+        # Get compliance interpretation
         from .compliance import interpret_compliance
-        compliance_text, compliance_color = interpret_compliance(compliance)
+        result = interpret_compliance(compliance, "static")
+        if result and result[0] is not None:
+            compliance_text, compliance_color, _ = result
+        else:
+            compliance_text, compliance_color = None, None
         vt_per_kg = (vt / pbw) if pbw > 0 and vt > 0 else None
         
         # Display ABG summary
