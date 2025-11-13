@@ -193,7 +193,28 @@ def render_compact_antibiotic_card(ab_name, ab_data, key_prefix=""):
     safe_key_prefix = html.escape(str(key_prefix).replace(" ", "_").replace("-", "_"))
     safe_ab_name_for_id = html.escape(str(ab_name).replace(" ", "_").replace("-", "_"))
     
-    card_html = f"""<div style="background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%); border: 1.5px solid #e0e0e0; border-radius: 16px; padding: 20px 22px; margin: 12px 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05); cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.boxShadow='0 8px 24px rgba(25,118,210,0.15), 0 4px 8px rgba(0,0,0,0.1)'; this.style.transform='translateY(-3px)'; this.style.borderColor='#1976D2';" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05)'; this.style.transform='translateY(0)'; this.style.borderColor='#e0e0e0';"><div style="display: flex; justify-content: space-between; align-items: start; gap: 14px;"><div style="flex: 1; min-width: 0;"><div style="display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 10px; gap: 8px;"><strong style="color: #1976D2; font-size: 1.25em; margin-right: 6px; font-weight: 700; letter-spacing: -0.3px;">{ab_name_escaped}</strong>{aware_badge}{calc_badge}<span style="color: #999; font-size: 1.1em; margin-left: auto; cursor: pointer; transition: transform 0.2s;" title="Yêu thích" id="fav_{safe_key_prefix}_{safe_ab_name_for_id}" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">{favorite_icon}</span></div>{vn_name_html}<div style="color: #555; font-size: 0.9em; line-height: 1.6; margin-top: 4px;"><span style="font-weight: 600; color: #1976D2;">{admin_str_escaped}</span><span style="color: #ddd; margin: 0 10px; font-weight: 300;">•</span><span style="color: #666; font-weight: 500;">{group_escaped}</span></div>{indication_html}</div></div></div>"""
+    # Build card HTML in parts to avoid quote conflicts
+    card_style = "background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%); border: 1.5px solid #e0e0e0; border-radius: 16px; padding: 20px 22px; margin: 12px 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05); cursor: pointer; position: relative; overflow: hidden;"
+    hover_on = "this.style.boxShadow='0 8px 24px rgba(25,118,210,0.15), 0 4px 8px rgba(0,0,0,0.1)'; this.style.transform='translateY(-3px)'; this.style.borderColor='#1976D2';"
+    hover_off = "this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05)'; this.style.transform='translateY(0)'; this.style.borderColor='#e0e0e0';"
+    
+    card_html = f'<div style="{card_style}" onmouseover="{hover_on}" onmouseout="{hover_off}">'
+    card_html += '<div style="display: flex; justify-content: space-between; align-items: start; gap: 14px;">'
+    card_html += '<div style="flex: 1; min-width: 0;">'
+    card_html += '<div style="display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 10px; gap: 8px;">'
+    card_html += f'<strong style="color: #1976D2; font-size: 1.25em; margin-right: 6px; font-weight: 700; letter-spacing: -0.3px;">{ab_name_escaped}</strong>'
+    card_html += aware_badge
+    card_html += calc_badge
+    card_html += f'<span style="color: #999; font-size: 1.1em; margin-left: auto; cursor: pointer; transition: transform 0.2s;" title="Yêu thích" id="fav_{safe_key_prefix}_{safe_ab_name_for_id}" onmouseover="this.style.transform=\'scale(1.2)\'" onmouseout="this.style.transform=\'scale(1)\'">{favorite_icon}</span>'
+    card_html += '</div>'
+    card_html += vn_name_html
+    card_html += '<div style="color: #555; font-size: 0.9em; line-height: 1.6; margin-top: 4px;">'
+    card_html += f'<span style="font-weight: 600; color: #1976D2;">{admin_str_escaped}</span>'
+    card_html += '<span style="color: #ddd; margin: 0 10px; font-weight: 300;">•</span>'
+    card_html += f'<span style="color: #666; font-weight: 500;">{group_escaped}</span>'
+    card_html += '</div>'
+    card_html += indication_html
+    card_html += '</div></div></div>'
     
     st.markdown(card_html, unsafe_allow_html=True)
     
