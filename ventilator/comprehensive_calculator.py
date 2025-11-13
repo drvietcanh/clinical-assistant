@@ -27,22 +27,20 @@ from .auto_peep import (
     estimate_auto_peep,
     display_auto_peep_analysis
 )
+from .history import save_ventilator_entry, render_history_panel
+from .trends import render_trends_panel
+from .export import render_export_panel
+from .cache_utils import cached_pbw, cached_driving_pressure, cached_pf_ratio
 
 
 def calculate_pbw(sex, height):
-    """Tính Predicted Body Weight (PBW)"""
-    if sex == "Nam":
-        pbw = 50 + 0.91 * (height - 152.4)
-    else:  # Nữ
-        pbw = 45.5 + 0.91 * (height - 152.4)
-    return round(pbw, 1)
+    """Tính Predicted Body Weight (PBW) - Optimized with cache"""
+    return cached_pbw(sex, height)
 
 
 def calculate_driving_pressure(plateau, peep):
-    """Tính Driving Pressure (ΔP = Plateau - PEEP)"""
-    if plateau > 0 and peep >= 0:
-        return plateau - peep
-    return None
+    """Tính Driving Pressure (ΔP = Plateau - PEEP) - Optimized with cache"""
+    return cached_driving_pressure(plateau, peep)
 
 
 def calculate_compliance(vt, plateau, peep):
@@ -328,6 +326,20 @@ def render_comprehensive_calculator():
         st.markdown("---")
         display_protocol_recommendations("ARDSNet", pbw=pbw, pf_ratio=pf_ratio, has_ards=True)
         
+        # Save to history (PHIÊN 5)
+        patient_info = {
+            "sex": sex,
+            "height": height,
+            "pbw": pbw
+        }
+        save_ventilator_entry(
+            vent_settings=vent_settings,
+            abg_data=abg_data,
+            calculations=calculations,
+            patient_info=patient_info
+        )
+        st.success("✅ Đã lưu vào lịch sử")
+        
         # Summary table
         st.markdown("---")
         st.markdown("### 📋 Tóm Tắt Thông Số")
@@ -351,6 +363,21 @@ def render_comprehensive_calculator():
         import pandas as pd
         df = pd.DataFrame(summary_data)
         st.dataframe(df, hide_index=True, use_container_width=True)
+        
+        # PHIÊN 5: History, Trends, Export Tabs
+        st.markdown("---")
+        st.markdown("### 📊 Lịch Sử & Xu Hướng (PHIÊN 5)")
+        
+        tab1, tab2, tab3 = st.tabs(["📜 Lịch Sử", "📈 Xu Hướng", "📤 Export"])
+        
+        with tab1:
+            render_history_panel()
+        
+        with tab2:
+            render_trends_panel()
+        
+        with tab3:
+            render_export_panel()
         
         # Expandable reference
         with st.expander("📚 Thông Tin Thêm"):

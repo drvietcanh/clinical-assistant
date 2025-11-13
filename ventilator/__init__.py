@@ -35,6 +35,32 @@ from .weaning import (
     assess_weaning_readiness,
     render_weaning_calculator
 )
+from .history import (
+    init_history_state,
+    save_ventilator_entry,
+    get_history,
+    get_history_count,
+    clear_history,
+    delete_history_entry,
+    get_history_dataframe,
+    compare_entries,
+    render_history_panel
+)
+from .trends import (
+    get_trend_data,
+    plot_trend,
+    plot_pf_ratio_trend,
+    plot_plateau_trend,
+    plot_driving_pressure_trend,
+    plot_compliance_trend,
+    plot_multi_trends,
+    render_trends_panel
+)
+from .export import (
+    export_history_to_csv,
+    export_report_to_text,
+    render_export_panel
+)
 
 __all__ = [
     'render_ardsnet',
@@ -61,5 +87,26 @@ __all__ = [
     'interpret_rsbi',
     'assess_weaning_readiness',
     'render_weaning_calculator',
+    # PHIÊN 5: History, Trends, Export
+    'init_history_state',
+    'save_ventilator_entry',
+    'get_history',
+    'get_history_count',
+    'clear_history',
+    'delete_history_entry',
+    'get_history_dataframe',
+    'compare_entries',
+    'render_history_panel',
+    'get_trend_data',
+    'plot_trend',
+    'plot_pf_ratio_trend',
+    'plot_plateau_trend',
+    'plot_driving_pressure_trend',
+    'plot_compliance_trend',
+    'plot_multi_trends',
+    'render_trends_panel',
+    'export_history_to_csv',
+    'export_report_to_text',
+    'render_export_panel',
 ]
 
