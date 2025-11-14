@@ -177,3 +177,126 @@ def search_by_indication(indication_query):
     
     return results
 
+
+def search_drugs_with_filters(query="", filters=None):
+    """
+    Search drugs with advanced filters
+    filters: dict with keys: groups, routes, pregnancy, requires_monitoring, has_renal_adjustment, has_black_box
+    """
+    if filters is None:
+        filters = {}
+    
+    # First, get base results from query
+    if query:
+        base_results = search_drugs(query)
+        # Convert to dict for easier filtering
+        base_drugs = {name: data for name, data in base_results}
+    else:
+        base_drugs = DRUG_DATABASE
+    
+    results = []
+    
+    for drug_name, drug_data in base_drugs.items():
+        # Filter by groups
+        if 'groups' in filters and filters['groups']:
+            if 'group' not in drug_data:
+                continue
+            group_match = False
+            for filter_group in filters['groups']:
+                if filter_group.lower() in drug_data['group'].lower():
+                    group_match = True
+                    break
+            if not group_match:
+                continue
+        
+        # Filter by routes
+        if 'routes' in filters and filters['routes']:
+            if 'administration' not in drug_data:
+                continue
+            route_match = False
+            for filter_route in filters['routes']:
+                if filter_route in drug_data['administration']:
+                    route_match = True
+                    break
+            if not route_match:
+                continue
+        
+        # Filter by pregnancy category
+        if 'pregnancy' in filters and filters['pregnancy'] and filters['pregnancy'] != "All":
+            if 'pregnancy' not in drug_data:
+                continue
+            if drug_data['pregnancy'] != filters['pregnancy']:
+                continue
+        
+        # Filter by requires monitoring
+        if 'requires_monitoring' in filters and filters['requires_monitoring']:
+            if 'monitoring' not in drug_data or not drug_data['monitoring']:
+                continue
+        
+        # Filter by has renal adjustment
+        if 'has_renal_adjustment' in filters and filters['has_renal_adjustment']:
+            if 'renal_adjustment' not in drug_data or not drug_data['renal_adjustment']:
+                continue
+        
+        # Filter by has black box warning
+        if 'has_black_box' in filters and filters['has_black_box']:
+            if 'black_box_warnings' not in drug_data or not drug_data['black_box_warnings']:
+                continue
+        
+        results.append((drug_name, drug_data))
+    
+    return results
+
+
+def highlight_search_term(text, query):
+    """Highlight search term in text"""
+    if not query or not text:
+        return text
+    
+    import re
+    # Escape special regex characters
+    escaped_query = re.escape(query)
+    # Case-insensitive pattern
+    pattern = re.compile(escaped_query, re.IGNORECASE)
+    # Replace with highlighted version
+    highlighted = pattern.sub(
+        lambda m: f"<mark style='background: #fef08a; padding: 2px 4px; border-radius: 3px; font-weight: 600;'>{m.group()}</mark>",
+        text
+    )
+    return highlighted
+
+
+def save_search(name, query, filters=None):
+    """Save search with name, query, and filters"""
+    if 'drug_saved_searches' not in st.session_state:
+        st.session_state.drug_saved_searches = {}
+    
+    st.session_state.drug_saved_searches[name] = {
+        'query': query,
+        'filters': filters or {}
+    }
+
+
+def get_saved_searches():
+    """Get all saved searches"""
+    if 'drug_saved_searches' not in st.session_state:
+        st.session_state.drug_saved_searches = {}
+    return st.session_state.drug_saved_searches
+
+
+def load_saved_search(name):
+    """Load saved search by name"""
+    if 'drug_saved_searches' not in st.session_state:
+        return None, None
+    saved = st.session_state.drug_saved_searches.get(name)
+    if saved:
+        return saved.get('query', ''), saved.get('filters', {})
+    return None, None
+
+
+def delete_saved_search(name):
+    """Delete saved search by name"""
+    if 'drug_saved_searches' not in st.session_state:
+        return
+    if name in st.session_state.drug_saved_searches:
+        del st.session_state.drug_saved_searches[name]

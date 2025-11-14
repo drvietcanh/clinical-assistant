@@ -3,7 +3,7 @@ Active module - contains all gastrointestinal drug data"""
 
 # Proton Pump Inhibitor (PPI)s
 
-PROTON_PUMP_INHIBITOR_(PPI)S_DRUGS = {
+PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
     "Omeprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor (PPI)',
         'vietnamese_name': 'Omeprazole, Losec', 'administration': ['PO', 'IV'],
         'indications': ['Loét dạ dày tá tràng',
