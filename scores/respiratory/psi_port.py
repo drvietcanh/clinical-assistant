@@ -126,6 +126,7 @@ def render():
             max_value=7.8,
             value=7.4,
             step=0.01,
+            format="%.2f",
             help="<7.35: +30 điểm"
         )
         

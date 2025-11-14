@@ -391,11 +391,11 @@ def render():
     st.markdown("#### 🩺 Sinh Hiệu")
     col3, col4, col5 = st.columns(3)
     with col3:
-        heart_rate = st.number_input("Nhịp tim (/min)", 0.0, 250.0, 80.0, 1.0)
+        heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1)
     with col4:
-        sbp = st.number_input("SBP (mmHg)", 0.0, 300.0, 120.0, 1.0)
+        sbp = st.number_input("SBP (mmHg)", 0, 300, 120, 1)
     with col5:
-        temperature = st.number_input("Nhiệt độ (°C)", 20.0, 45.0, 37.0, 0.1)
+        temperature = st.number_input("Nhiệt độ (°C)", 20, 45, 37, 1)
     
     st.divider()
     
@@ -406,9 +406,9 @@ def render():
     if is_ventilated:
         col6, col7 = st.columns(2)
         with col6:
-            pao2 = st.number_input("PaO₂ (mmHg)", 0.0, 700.0, 100.0, 1.0)
+            pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1)
         with col7:
-            fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 21.0, 1.0)
+            fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1)
     else:
         pao2 = 100.0
         fio2 = 21.0
@@ -420,16 +420,16 @@ def render():
     col8, col9 = st.columns(2)
     
     with col8:
-        urine_output = st.number_input("Nước tiểu (L/24h)", 0.0, 10.0, 1.5, 0.1)
-        bun = st.number_input("BUN (mg/dL)", 0.0, 200.0, 20.0, 1.0)
+        urine_output = st.number_input("Nước tiểu (L/24h)", 0.0, 10.0, 1.5, 0.1, format="%.1f")
+        bun = st.number_input("BUN (mg/dL)", 0.0, 200.0, 20.0, 1.0, format="%.1f")
         st.caption("💡 mmol/L × 2.8 = mg/dL")
-        wbc = st.number_input("WBC (×10³/μL)", 0.0, 100.0, 10.0, 0.1)
-        potassium = st.number_input("Potassium (mEq/L)", 1.5, 10.0, 4.0, 0.1)
+        wbc = st.number_input("WBC (×10³/μL)", 0.0, 100.0, 10.0, 0.1, format="%.1f")
+        potassium = st.number_input("Potassium (mEq/L)", 1.5, 10.0, 4.0, 0.1, format="%.1f")
     
     with col9:
-        sodium = st.number_input("Sodium (mEq/L)", 80.0, 200.0, 140.0, 1.0)
-        bicarbonate = st.number_input("Bicarbonate/HCO₃ (mEq/L)", 0.0, 50.0, 24.0, 1.0)
-        bilirubin = st.number_input("Bilirubin (mg/dL)", 0.0, 30.0, 1.0, 0.1)
+        sodium = st.number_input("Sodium (mEq/L)", 80.0, 200.0, 140.0, 1.0, format="%.1f")
+        bicarbonate = st.number_input("Bicarbonate/HCO₃ (mEq/L)", 0.0, 50.0, 24.0, 1.0, format="%.1f")
+        bilirubin = st.number_input("Bilirubin (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f")
         st.caption("💡 μmol/L ÷ 17.1 = mg/dL")
     
     st.divider()

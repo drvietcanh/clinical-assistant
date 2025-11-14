@@ -295,7 +295,7 @@ def render():
     
     with col2:
         st.markdown("#### 🩺 Sinh Hiệu")
-        sbp = st.number_input("Huyết áp tâm thu (mmHg)", 80.0, 220.0, 140.0, 1.0)
+        sbp = st.number_input("Huyết áp tâm thu (mmHg)", 80, 220, 140, 1)
     
     st.divider()
     

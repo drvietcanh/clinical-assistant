@@ -302,9 +302,9 @@ def render():
     st.markdown("#### 1️⃣ Hô Hấp (Respiratory)")
     col1, col2 = st.columns(2)
     with col1:
-        pao2 = st.number_input("PaO₂ (mmHg)", 0.0, 700.0, 100.0, 1.0, help="Áp lực oxy máu động mạch")
+        pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1, help="Áp lực oxy máu động mạch", key="sofa_pao2")
     with col2:
-        fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 21.0, 1.0, help="Nồng độ oxy hít vào")
+        fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1, help="Nồng độ oxy hít vào", key="sofa_fio2")
     
     pao2_fio2 = (pao2 / fio2) * 100 if fio2 > 0 else 0
     st.caption(f"💡 PaO₂/FiO₂ = {pao2_fio2:.0f} mmHg")
@@ -313,37 +313,40 @@ def render():
     
     # Coagulation
     st.markdown("#### 2️⃣ Đông Máu (Coagulation)")
-    platelets = st.number_input("Tiểu cầu (×10³/μL)", 0.0, 500.0, 200.0, 1.0)
+    platelets = st.number_input("Tiểu cầu (×10³/μL)", 0, 500, 200, 1, key="sofa_platelets")
     
     st.divider()
     
     # Liver
     st.markdown("#### 3️⃣ Gan (Liver)")
-    bilirubin = st.number_input("Bilirubin toàn phần (mg/dL)", 0.0, 30.0, 1.0, 0.1)
+    bilirubin = st.number_input("Bilirubin toàn phần (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f", key="sofa_bilirubin")
     st.caption("💡 Chuyển đổi: μmol/L ÷ 17.1 = mg/dL")
     
     st.divider()
     
     # Cardiovascular
     st.markdown("#### 4️⃣ Tim Mạch (Cardiovascular)")
-    use_vasopressor = st.checkbox("**Bệnh nhân đang dùng thuốc vận mạch (vasopressor)**")
+    use_vasopressor = st.checkbox("**Bệnh nhân đang dùng thuốc vận mạch (vasopressor)**", key="sofa_use_vasopressor")
     
     if use_vasopressor:
         col3, col4 = st.columns(2)
         with col3:
             vasopressor_type = st.selectbox(
                 "Loại thuốc",
-                ["Dopamine", "Dobutamine", "Epinephrine", "Norepinephrine"]
+                ["Dopamine", "Dobutamine", "Epinephrine", "Norepinephrine"],
+                key="sofa_vasopressor_type"
             )
         with col4:
             vasopressor_dose = st.number_input(
                 "Liều (mcg/kg/min)",
                 0.0, 50.0, 5.0, 0.1,
-                help="Liều thuốc vận mạch"
+                format="%.1f",
+                help="Liều thuốc vận mạch",
+                key="sofa_vasopressor_dose"
             )
         map_value = 70.0  # Default when on vasopressor
     else:
-        map_value = st.number_input("MAP - Mean Arterial Pressure (mmHg)", 0.0, 200.0, 70.0, 1.0)
+        map_value = st.number_input("MAP - Mean Arterial Pressure (mmHg)", 0, 200, 70, 1, key="sofa_map")
         vasopressor_type = ""
         vasopressor_dose = 0.0
         st.caption("💡 MAP = (SBP + 2×DBP) / 3")
@@ -352,7 +355,7 @@ def render():
     
     # Central Nervous System
     st.markdown("#### 5️⃣ Thần Kinh (CNS)")
-    gcs = st.number_input("Glasgow Coma Scale (GCS)", 3, 15, 15, 1)
+    gcs = st.number_input("Glasgow Coma Scale (GCS)", 3, 15, 15, 1, key="sofa_gcs")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
     st.divider()
@@ -361,15 +364,15 @@ def render():
     st.markdown("#### 6️⃣ Thận (Renal)")
     col5, col6 = st.columns(2)
     with col5:
-        creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
+        creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f", key="sofa_creatinine")
         st.caption("💡 μmol/L ÷ 88.4 = mg/dL")
     with col6:
-        urine_output = st.number_input("Nước tiểu 24h (mL)", 0.0, 5000.0, 1500.0, 10.0)
+        urine_output = st.number_input("Nước tiểu 24h (mL)", 0, 5000, 1500, 10, key="sofa_urine_output")
     
     st.divider()
     
     # Calculate button
-    if st.button("🧮 Tính SOFA Score", type="primary", use_container_width=True):
+    if st.button("🧮 Tính SOFA Score", type="primary", use_container_width=True, key="sofa_calculate"):
         result = calculate_sofa(
             pao2_fio2=pao2_fio2,
             platelets=platelets,

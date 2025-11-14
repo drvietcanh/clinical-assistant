@@ -265,9 +265,9 @@ def render():
     st.markdown("#### 1️⃣ Hô Hấp")
     col1, col2 = st.columns(2)
     with col1:
-        pao2 = st.number_input("PaO₂ (mmHg)", 0.0, 700.0, 100.0, 1.0)
+        pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1)
     with col2:
-        fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 21.0, 1.0)
+        fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1)
     
     pao2_fio2 = (pao2 / fio2) * 100 if fio2 > 0 else 0
     st.caption(f"💡 PaO₂/FiO₂ = {pao2_fio2:.0f} mmHg")
@@ -283,7 +283,7 @@ def render():
     
     # Hepatic
     st.markdown("#### 3️⃣ Gan")
-    bilirubin = st.number_input("Bilirubin (mg/dL)", 0.0, 30.0, 1.0, 0.1)
+    bilirubin = st.number_input("Bilirubin (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f")
     st.caption("💡 μmol/L ÷ 17.1 = mg/dL")
     
     st.divider()
@@ -292,16 +292,16 @@ def render():
     st.markdown("#### 4️⃣ Tim Mạch")
     col3, col4 = st.columns(2)
     with col3:
-        heart_rate = st.number_input("Nhịp tim (/min)", 0.0, 250.0, 80.0, 1.0)
+        heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1)
     with col4:
-        map_value = st.number_input("MAP (mmHg)", 0.0, 200.0, 70.0, 1.0)
+        map_value = st.number_input("MAP (mmHg)", 0, 200, 70, 1)
         st.caption("MAP = (SBP + 2×DBP)/3")
     
     st.divider()
     
     # Hematologic
     st.markdown("#### 5️⃣ Huyết Học")
-    platelets = st.number_input("Tiểu cầu (×10³/μL)", 0.0, 500.0, 200.0, 1.0)
+    platelets = st.number_input("Tiểu cầu (×10³/μL)", 0, 500, 200, 1)
     
     st.divider()
     

@@ -232,9 +232,9 @@ def render():
     st.markdown("#### 1️⃣ Hô Hấp (Respiratory) - Với Hỗ Trợ Hiện Đại")
     col1, col2 = st.columns(2)
     with col1:
-        pao2 = st.number_input("PaO₂ (mmHg)", 0.0, 700.0, 100.0, 1.0)
+        pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1)
     with col2:
-        fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 21.0, 1.0)
+        fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1)
     
     pao2_fio2 = (pao2 / fio2) * 100 if fio2 > 0 else 0
     st.caption(f"💡 PaO₂/FiO₂ = {pao2_fio2:.0f} mmHg")
@@ -254,19 +254,19 @@ def render():
     
     hfnc_flow = None
     if respiratory_support == "hfnc":
-        hfnc_flow = st.number_input("HFNC Flow (L/min)", 20.0, 70.0, 50.0, 1.0)
+        hfnc_flow = st.number_input("HFNC Flow (L/min)", 20, 70, 50, 1)
     
     st.divider()
     
     # Coagulation
     st.markdown("#### 2️⃣ Đông Máu (Coagulation)")
-    platelets = st.number_input("Tiểu cầu (×10³/μL)", 0.0, 500.0, 200.0, 1.0)
+    platelets = st.number_input("Tiểu cầu (×10³/μL)", 0, 500, 200, 1)
     
     st.divider()
     
     # Liver
     st.markdown("#### 3️⃣ Gan (Liver)")
-    bilirubin = st.number_input("Bilirubin toàn phần (mg/dL)", 0.0, 30.0, 1.0, 0.1)
+    bilirubin = st.number_input("Bilirubin toàn phần (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f")
     st.caption("💡 Chuyển đổi: μmol/L ÷ 17.1 = mg/dL")
     
     st.divider()
@@ -292,11 +292,12 @@ def render():
             
             vasopressor_dose = st.number_input(
                 f"Liều ({unit})",
-                0.0, max_val, 0.1 if unit == "mcg/kg/min" else 0.03, 0.01
+                0.0, max_val, 0.1 if unit == "mcg/kg/min" else 0.03, 0.01,
+                format="%.2f"
             )
         map_value = 70.0
     else:
-        map_value = st.number_input("MAP - Mean Arterial Pressure (mmHg)", 0.0, 200.0, 70.0, 1.0)
+        map_value = st.number_input("MAP - Mean Arterial Pressure (mmHg)", 0, 200, 70, 1)
         vasopressor_type = ""
         vasopressor_dose = 0.0
         st.caption("💡 MAP = (SBP + 2×DBP) / 3")
@@ -319,7 +320,7 @@ def render():
         creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
         st.caption("💡 μmol/L ÷ 88.4 = mg/dL")
     with col6:
-        urine_output = st.number_input("Nước tiểu 24h (mL)", 0.0, 5000.0, 1500.0, 10.0)
+        urine_output = st.number_input("Nước tiểu 24h (mL)", 0, 5000, 1500, 10)
     
     st.divider()
     

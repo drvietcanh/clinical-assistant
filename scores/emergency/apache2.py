@@ -226,14 +226,14 @@ def render():
     st.markdown("#### 🩺 Sinh Hiệu")
     col3, col4, col5 = st.columns(3)
     with col3:
-        temperature = st.number_input("Nhiệt độ (°C)", 20.0, 45.0, 37.0, 0.1)
+        temperature = st.number_input("Nhiệt độ (°C)", 20, 45, 37, 1)
     with col4:
-        map_val = st.number_input("MAP (mmHg)", 0.0, 250.0, 70.0, 1.0)
+        map_val = st.number_input("MAP (mmHg)", 0, 250, 70, 1)
         st.caption("MAP = (SBP + 2×DBP)/3")
     with col5:
-        heart_rate = st.number_input("Nhịp tim (/min)", 0.0, 250.0, 80.0, 1.0)
+        heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1)
     
-    respiratory_rate = st.number_input("Nhịp thở (/min)", 0.0, 70.0, 16.0, 1.0)
+    respiratory_rate = st.number_input("Nhịp thở (/min)", 0, 70, 16, 1)
     
     st.divider()
     
@@ -241,13 +241,13 @@ def render():
     st.markdown("#### 🫁 Khí Máu Động Mạch (ABG)")
     col6, col7, col8 = st.columns(3)
     with col6:
-        fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 21.0, 1.0)
+        fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1)
     with col7:
-        pao2 = st.number_input("PaO₂ (mmHg)", 0.0, 700.0, 100.0, 1.0)
+        pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1)
     with col8:
-        paco2 = st.number_input("PaCO₂ (mmHg)", 0.0, 150.0, 40.0, 1.0, format="%.1f")
+        paco2 = st.number_input("PaCO₂ (mmHg)", 0, 150, 40, 1)
     
-    ph = st.number_input("pH", 6.5, 8.0, 7.40, 0.01)
+    ph = st.number_input("pH", 6.5, 8.0, 7.40, 0.01, format="%.2f")
     
     st.divider()
     
@@ -255,14 +255,14 @@ def render():
     st.markdown("#### 🔬 Xét Nghiệm")
     col9, col10 = st.columns(2)
     with col9:
-        sodium = st.number_input("Sodium (mEq/L)", 80.0, 200.0, 140.0, 1.0)
-        potassium = st.number_input("Potassium (mEq/L)", 1.5, 10.0, 4.0, 0.1)
+        sodium = st.number_input("Sodium (mEq/L)", 80.0, 200.0, 140.0, 1.0, format="%.1f")
+        potassium = st.number_input("Potassium (mEq/L)", 1.5, 10.0, 4.0, 0.1, format="%.1f")
         creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
         has_arf = st.checkbox("**Suy thận cấp (ARF)** - nhân đôi điểm Cr")
     
     with col10:
-        hematocrit = st.number_input("Hematocrit (%)", 0.0, 80.0, 40.0, 0.1)
-        wbc = st.number_input("WBC (×10³/μL)", 0.0, 100.0, 10.0, 0.1)
+        hematocrit = st.number_input("Hematocrit (%)", 0.0, 80.0, 40.0, 0.1, format="%.1f")
+        wbc = st.number_input("WBC (×10³/μL)", 0.0, 100.0, 10.0, 0.1, format="%.1f")
     
     st.divider()
     

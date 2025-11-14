@@ -140,6 +140,7 @@ def render():
             max_value=7.8,
             value=7.25,
             step=0.01,
+            format="%.2f",
             help="pH máu động mạch (bình thường: 7.35-7.45)"
         )
         
