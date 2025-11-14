@@ -10,7 +10,14 @@ from critical_care import (
     render_fluid_calculator,
     render_vasopressor_guide,
     render_transfusion_calculator,
-    render_sedation_calculator
+    render_sedation_calculator,
+    render_scoring_calculator,
+    render_critical_care_dashboard,
+    render_ventilator_calculator,
+    render_ards_protocols,
+    render_sepsis_protocols,
+    render_shock_management,
+    render_rrt_calculator
 )
 
 # Standard page setup
@@ -24,41 +31,78 @@ setup_page(
 with st.sidebar:
     st.header("📂 Chọn Công Cụ")
     
+    # Tool options with consistent naming
+    tool_options = [
+        "🏠 Dashboard",
+        "📊 Scoring Systems",
+        "🫁 Ventilator Management",
+        "🫁 ARDS Protocols",
+        "🦠 Sepsis Protocols",
+        "💉 Shock Management",
+        "🩺 RRT Calculator",
+        "💧 Fluid Therapy",
+        "💉 Vasopressors",
+        "🩸 Transfusion",
+        "💤 Sedation & Analgesia"
+    ]
+    
+    # Use saved tool selection or default
+    saved_tool = st.session_state.get('critical_care_tool_selection', None)
+    default_index = 0
+    
+    if saved_tool and saved_tool in tool_options:
+        default_index = tool_options.index(saved_tool)
+    
     tool_type = st.selectbox(
         "Công cụ:",
-        [
-            "💧 Fluid Therapy",
-            "💉 Vasopressors",
-            "🩸 Transfusion",
-            "💉 Sedation & Analgesia"
-        ],
-        key="critical_care_tool"
+        tool_options,
+        index=default_index,
+        key="critical_care_tool_selector"
     )
+    
+    # Save current selection
+    if tool_type:
+        st.session_state['critical_care_tool_selection'] = str(tool_type)
     
     st.markdown("---")
     st.info("""
-    **📚 Critical Care Module:**
-    - Fluid therapy calculations
-    - Vasopressor dosing guides
-    - Blood product transfusions
-    - Sedation & analgesia protocols
+    **📚 Module Hồi Sức:**
+    - Tính toán dịch truyền và điện giải
+    - Hướng dẫn liều vasopressor
+    - Tính toán truyền máu và chế phẩm máu
+    - Giao thức an thần và giảm đau
     
     **💡 Dựa trên:**
     - Surviving Sepsis Guidelines
-    - ICU protocols
-    - Evidence-based practices
+    - Hướng dẫn ICU quốc tế
+    - Thực hành dựa trên bằng chứng
     """)
 
 # ========== MAIN CONTENT ==========
 
-st.info(f"""
-**Công cụ đang sử dụng:** {tool_type}
-""")
-
-st.markdown("---")
-
 # Route to appropriate calculator
-if "Fluid" in tool_type:
+if "Dashboard" in tool_type:
+    render_critical_care_dashboard()
+    
+elif "Scoring" in tool_type:
+    render_scoring_calculator()
+    
+elif "Ventilator Management" in tool_type:
+    render_ventilator_calculator()
+    
+elif "ARDS" in tool_type:
+    render_ards_protocols()
+    
+elif "Sepsis" in tool_type:
+    render_sepsis_protocols()
+    
+elif "Shock" in tool_type:
+    render_shock_management()
+    
+elif "RRT" in tool_type:
+    render_rrt_calculator()
+    
+elif "Fluid" in tool_type:
     st.header("💧 Fluid Therapy Calculator")
     st.caption("Tính toán dịch truyền, bù dịch, và điều chỉnh điện giải")
     render_fluid_calculator()
@@ -71,7 +115,7 @@ elif "Vasopressor" in tool_type:
 elif "Transfusion" in tool_type:
     render_transfusion_calculator()
     
-elif "Sedation" in tool_type:
+elif "Sedation" in tool_type or "Analgesia" in tool_type:
     render_sedation_calculator()
 
 # ========== FOOTER ==========
