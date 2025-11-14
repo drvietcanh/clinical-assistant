@@ -19,21 +19,25 @@ def render():
         pt = st.number_input(
             "PT - Prothrombin Time (giây)", 
             0.0, 100.0, 12.0, 0.1,
+            format="%.1f",
             help="Bình thường: 11-13.5 giây"
         )
         inr = st.number_input(
             "INR - International Normalized Ratio", 
             0.0, 10.0, 1.0, 0.1,
+            format="%.1f",
             help="Bình thường: 0.8-1.2"
         )
         aptt = st.number_input(
             "aPTT - activated Partial Thromboplastin Time (giây)", 
             0.0, 150.0, 30.0, 0.1,
+            format="%.1f",
             help="Bình thường: 25-35 giây"
         )
         d_dimer = st.number_input(
             "D-dimer (µg/mL hoặc FEU)", 
             0.0, 10.0, 0.3, 0.1,
+            format="%.1f",
             help="Bình thường: <0.5 µg/mL"
         )
     

@@ -228,6 +228,7 @@ def render_prbc_calculator():
             max_value=25.0 if hgb_units == "g/dL" else 250.0,
             value=7.0 if hgb_units == "g/dL" else 70.0,
             step=0.1,
+            format="%.1f",  # Chỉ hiển thị 1 số thập phân
             key="prbc_current_hgb"
         )
         
@@ -237,6 +238,7 @@ def render_prbc_calculator():
             max_value=25.0 if hgb_units == "g/dL" else 250.0,
             value=10.0 if hgb_units == "g/dL" else 100.0,
             step=0.1,
+            format="%.1f",  # Chỉ hiển thị 1 số thập phân
             key="prbc_target_hgb"
         )
     

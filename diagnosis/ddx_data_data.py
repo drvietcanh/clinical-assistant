@@ -1322,6 +1322,941 @@ RASH_DDX = {
     }
 }
 
+# Cough (Ho)
+COUGH_DDX = {
+    "Community Acquired Pneumonia (CAP)": {
+        "symptoms": {
+            "required": ["cough"],
+            "supporting": ["productive_cough", "fever", "dyspnea", "chest_pain", "sputum_purulent", "chills", "malaise"],
+            "contradictory": ["chronic_cough", "no_fever", "no_sputum"]
+        },
+        "demographics": {
+            "age_risk": {"<5": 0.6, "5-65": 0.5, ">65": 0.8},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["age_>65", "smoking", "COPD", "immunocompromised", "nursing_home", "alcoholism"],
+        "specificity": 0.75,
+        "urgency": "urgent",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["CXR", "CBC", "CRP", "Blood_cultures"],
+            "within_6h": ["Sputum_culture", "ABG_if_severe"],
+            "optional": ["Procalcitonin", "CT_chest"]
+        },
+        "management_hints": "CURB-65 score for severity. If CURB-65 ≥2 → Hospital admission. Empiric antibiotics: Amoxicillin-clavulanate or Azithromycin. If severe → Ceftriaxone + Azithromycin."
+    },
+    "COPD Exacerbation": {
+        "symptoms": {
+            "required": ["cough", "chronic_cough"],
+            "supporting": ["productive_cough", "increased_sputum", "dyspnea", "wheeze", "history_copd", "smoking_history"],
+            "contradictory": ["acute_onset", "no_smoking_history", "young_age"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.2, "40-70": 0.7, ">70": 0.8},
+            "sex_risk": {"male": 1.3, "female": 1.0}
+        },
+        "risk_factors": ["smoking", "age", "occupational_exposure", "alpha1_antitrypsin_deficiency"],
+        "specificity": 0.80,
+        "urgency": "urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["CXR", "ABG", "PEFR", "CBC"],
+            "within_6h": ["Sputum_culture", "ECG"],
+            "optional": ["CT_chest", "Echo"]
+        },
+        "management_hints": "Bronchodilators (SABA + LABA). Systemic steroids. Antibiotics if purulent sputum. O2 to target SpO2 88-92%. Consider NIV if hypercapnic."
+    },
+    "Congestive Heart Failure (CHF)": {
+        "symptoms": {
+            "required": ["cough", "dyspnea"],
+            "supporting": ["orthopnea", "paroxysmal_nocturnal_dyspnea", "edema", "fatigue", "weight_gain", "jugular_venous_distension"],
+            "contradictory": ["no_dyspnea", "no_edema"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.2, "40-70": 0.6, ">70": 0.8},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["hypertension", "CAD", "diabetes", "valvular_disease", "cardiomyopathy"],
+        "specificity": 0.70,
+        "urgency": "urgent",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["CXR", "BNP_NT_proBNP", "ECG", "Echo"],
+            "within_6h": ["Troponin", "Electrolytes"],
+            "optional": ["CT_chest"]
+        },
+        "management_hints": "Diuretics (furosemide). ACE-I/ARB. Beta-blockers if stable. O2. If severe → NIV or intubation. Treat underlying cause."
+    },
+    "Asthma": {
+        "symptoms": {
+            "required": ["cough"],
+            "supporting": ["wheeze", "dyspnea", "chest_tightness", "nocturnal_symptoms", "exercise_induced", "atopy", "family_history"],
+            "contradictory": ["chronic_productivity", "smoking_history_long"]
+        },
+        "demographics": {
+            "age_risk": {"<20": 0.7, "20-50": 0.6, ">50": 0.4},
+            "sex_risk": {"male": 1.0, "female": 1.2}
+        },
+        "risk_factors": ["atopy", "family_history", "allergies", "viral_infections"],
+        "specificity": 0.75,
+        "urgency": "urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["PEFR", "CXR", "O2_saturation"],
+            "within_6h": ["ABG_if_severe", "Spirometry"],
+            "optional": ["Allergy_testing"]
+        },
+        "management_hints": "SABA (salbutamol). Systemic steroids if moderate-severe. O2. If severe → IV magnesium, consider intubation. Long-term: ICS + LABA."
+    },
+    "GERD": {
+        "symptoms": {
+            "required": ["cough"],
+            "supporting": ["heartburn", "regurgitation", "worse_lying_down", "worse_after_meals", "chronic_cough", "hoarseness", "nocturnal_cough"],
+            "contradictory": ["fever", "productive_cough", "dyspnea"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.4, "40-70": 0.6, ">70": 0.5},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["obesity", "pregnancy", "hiatal_hernia", "smoking", "alcohol"],
+        "specificity": 0.70,
+        "urgency": "non_urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["Clinical_diagnosis"],
+            "within_6h": [],
+            "optional": ["Upper_endoscopy", "pH_monitoring"]
+        },
+        "management_hints": "PPI trial (omeprazole 40mg BID). Lifestyle: Elevate head, avoid late meals, weight loss. If persistent → Endoscopy."
+    },
+    "Post-nasal Drip": {
+        "symptoms": {
+            "required": ["cough"],
+            "supporting": ["nasal_congestion", "rhinorrhea", "throat_clearing", "chronic_cough", "worse_lying_down", "allergic_symptoms"],
+            "contradictory": ["fever", "productive_cough", "dyspnea"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.5, "40-70": 0.6, ">70": 0.4},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["allergies", "sinusitis", "rhinitis"],
+        "specificity": 0.65,
+        "urgency": "non_urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["Clinical_diagnosis"],
+            "within_6h": [],
+            "optional": ["Sinus_CT", "Allergy_testing"]
+        },
+        "management_hints": "Nasal steroids. Antihistamines. Nasal irrigation. Treat underlying rhinitis/sinusitis."
+    }
+}
+
+# Bleeding (Chảy Máu)
+BLEEDING_DDX = {
+    "Upper GI Bleeding": {
+        "symptoms": {
+            "required": ["bleeding"],
+            "supporting": ["hematemesis", "melena", "coffee_ground_vomiting", "abdominal_pain", "dizziness", "syncope", "hypotension"],
+            "contradictory": ["hematochezia_only", "no_hematemesis_melena"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.3, "40-70": 0.6, ">70": 0.8},
+            "sex_risk": {"male": 1.2, "female": 1.0}
+        },
+        "risk_factors": ["NSAIDs", "alcohol", "peptic_ulcer", "varices", "anticoagulants"],
+        "specificity": 0.85,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["CBC", "Coagulation", "Type_cross", "IV_access", "EGD"],
+            "within_6h": ["EGD_with_intervention"],
+            "optional": ["CT_angiography"]
+        },
+        "management_hints": "URGENT! Resuscitate first (IV fluids, blood if needed). PPI (omeprazole 80mg IV). If varices → Octreotide. EGD within 24h. Rockall/Blatchford score."
+    },
+    "Lower GI Bleeding": {
+        "symptoms": {
+            "required": ["bleeding"],
+            "supporting": ["hematochezia", "bright_red_blood", "abdominal_pain", "dizziness", "syncope"],
+            "contradictory": ["hematemesis", "melena_only"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.3, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["diverticulosis", "angiodysplasia", "colitis", "polyps", "anticoagulants"],
+        "specificity": 0.75,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["CBC", "Coagulation", "Type_cross", "IV_access"],
+            "within_6h": ["Colonoscopy", "CT_angiography"],
+            "optional": ["Tagged_RBC_scan"]
+        },
+        "management_hints": "Resuscitate. Most stop spontaneously. Colonoscopy if stable. If massive → CT angiography → embolization. Surgery if refractory."
+    },
+    "Hemoptysis": {
+        "symptoms": {
+            "required": ["bleeding", "cough"],
+            "supporting": ["bloody_sputum", "hemoptysis", "dyspnea", "chest_pain", "fever", "weight_loss"],
+            "contradictory": ["hematemesis", "no_cough"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.4, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 1.2, "female": 1.0}
+        },
+        "risk_factors": ["smoking", "TB", "lung_cancer", "bronchiectasis", "anticoagulants"],
+        "specificity": 0.80,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["CXR", "CBC", "Coagulation", "Chest_CT"],
+            "within_6h": ["Bronchoscopy"],
+            "optional": ["CT_angiography"]
+        },
+        "management_hints": "URGENT if massive (>500ml/24h). Position patient (bleeding side down). O2. If massive → Intubation, bronchoscopy, embolization. Treat underlying cause."
+    },
+    "Hematuria": {
+        "symptoms": {
+            "required": ["bleeding"],
+            "supporting": ["bloody_urine", "hematuria", "dysuria", "frequency", "flank_pain", "colicky_pain"],
+            "contradictory": ["no_urinary_symptoms"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.4, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 1.2, "female": 1.0}
+        },
+        "risk_factors": ["UTI", "stones", "malignancy", "glomerulonephritis", "anticoagulants"],
+        "specificity": 0.75,
+        "urgency": "urgent",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Urinalysis", "Urine_culture", "CBC", "Creatinine"],
+            "within_6h": ["CT_KUB", "Cystoscopy"],
+            "optional": ["Renal_biopsy"]
+        },
+        "management_hints": "If >40 years → Full urologic workup (CT, cystoscopy) to rule out malignancy. If <40 + UTI → Treat UTI first. If glomerular → Nephrology consult."
+    },
+    "Menorrhagia": {
+        "symptoms": {
+            "required": ["bleeding"],
+            "supporting": ["heavy_menstrual_bleeding", "prolonged_periods", "anemia", "fatigue", "clots"],
+            "contradictory": ["male", "no_menstrual_history"]
+        },
+        "demographics": {
+            "age_risk": {"<20": 0.4, "20-50": 0.7, ">50": 0.5},
+            "sex_risk": {"male": 0.0, "female": 1.0}
+        },
+        "risk_factors": ["fibroids", "polyps", "coagulopathy", "hormonal_imbalance", "IUD"],
+        "specificity": 0.70,
+        "urgency": "urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["CBC", "Coagulation", "Pregnancy_test"],
+            "within_6h": ["Pelvic_US"],
+            "optional": ["Endometrial_biopsy", "Hysteroscopy"]
+        },
+        "management_hints": "If severe anemia → Transfuse. Hormonal treatment (OCP, progestin). Tranexamic acid. If structural → Surgery. Rule out malignancy if >40."
+    }
+}
+
+# Fatigue (Mệt Mỏi)
+FATIGUE_DDX = {
+    "Anemia": {
+        "symptoms": {
+            "required": ["fatigue"],
+            "supporting": ["pale", "dyspnea", "dizziness", "tachycardia", "weakness", "pica"],
+            "contradictory": ["normal_Hb", "no_pale"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.4, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 0.8, "female": 1.2}
+        },
+        "risk_factors": ["bleeding", "nutritional_deficiency", "chronic_disease", "malignancy"],
+        "specificity": 0.75,
+        "urgency": "urgent",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["CBC", "Iron_studies", "B12_Folate", "Reticulocyte"],
+            "within_6h": [],
+            "optional": ["Bone_marrow_biopsy"]
+        },
+        "management_hints": "Treat underlying cause. Iron if iron deficiency. B12/folate if deficiency. Transfuse if severe (Hgb <7 or symptomatic)."
+    },
+    "Hypothyroidism": {
+        "symptoms": {
+            "required": ["fatigue"],
+            "supporting": ["weight_gain", "cold_intolerance", "constipation", "depression", "dry_skin", "hair_loss", "bradycardia"],
+            "contradictory": ["weight_loss", "tachycardia", "heat_intolerance"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.4, "40-70": 0.7, ">70": 0.6},
+            "sex_risk": {"male": 0.3, "female": 1.0}
+        },
+        "risk_factors": ["autoimmune", "iodine_deficiency", "post_thyroidectomy", "medications"],
+        "specificity": 0.80,
+        "urgency": "non_urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["TSH", "Free_T4"],
+            "within_6h": [],
+            "optional": ["TPO_antibodies", "Thyroid_US"]
+        },
+        "management_hints": "Levothyroxine replacement. Start low dose (25-50mcg) if elderly or cardiac disease. Monitor TSH every 6-8 weeks until stable."
+    },
+    "Depression": {
+        "symptoms": {
+            "required": ["fatigue"],
+            "supporting": ["low_mood", "anhedonia", "sleep_disturbance", "appetite_change", "concentration_problems", "guilt", "suicidal_ideation"],
+            "contradictory": ["normal_mood", "no_psychiatric_symptoms"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.5, "40-70": 0.6, ">70": 0.5},
+            "sex_risk": {"male": 0.7, "female": 1.0}
+        },
+        "risk_factors": ["stress", "trauma", "family_history", "chronic_disease", "medications"],
+        "specificity": 0.70,
+        "urgency": "urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["PHQ9", "Clinical_assessment"],
+            "within_6h": [],
+            "optional": ["Psychiatry_referral"]
+        },
+        "management_hints": "SSRI (sertraline, escitalopram). Psychotherapy. If suicidal → Psychiatry consult immediately. Monitor for improvement."
+    },
+    "Congestive Heart Failure": {
+        "symptoms": {
+            "required": ["fatigue"],
+            "supporting": ["dyspnea", "edema", "orthopnea", "PND", "exercise_intolerance", "jugular_venous_distension"],
+            "contradictory": ["no_dyspnea", "no_edema"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.2, "40-70": 0.6, ">70": 0.8},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["hypertension", "CAD", "diabetes", "valvular_disease"],
+        "specificity": 0.75,
+        "urgency": "urgent",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["BNP_NT_proBNP", "Echo", "CXR", "ECG"],
+            "within_6h": [],
+            "optional": ["Cardiac_MRI"]
+        },
+        "management_hints": "Diuretics. ACE-I/ARB. Beta-blockers. Treat underlying cause. If severe → Hospital admission."
+    },
+    "COPD": {
+        "symptoms": {
+            "required": ["fatigue"],
+            "supporting": ["dyspnea", "chronic_cough", "smoking_history", "exercise_intolerance", "wheeze"],
+            "contradictory": ["no_smoking", "no_dyspnea"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.2, "40-70": 0.7, ">70": 0.8},
+            "sex_risk": {"male": 1.3, "female": 1.0}
+        },
+        "risk_factors": ["smoking", "age", "occupational_exposure"],
+        "specificity": 0.70,
+        "urgency": "non_urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["Spirometry", "CXR"],
+            "within_6h": [],
+            "optional": ["CT_chest"]
+        },
+        "management_hints": "Bronchodilators. Smoking cessation. Pulmonary rehab. O2 if hypoxemic. Long-term: ICS + LABA."
+    },
+    "Chronic Kidney Disease": {
+        "symptoms": {
+            "required": ["fatigue"],
+            "supporting": ["edema", "nausea", "anemia", "hypertension", "decreased_urine_output"],
+            "contradictory": ["normal_creatinine", "no_edema"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.3, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["diabetes", "hypertension", "glomerulonephritis", "polycystic_kidney"],
+        "specificity": 0.70,
+        "urgency": "urgent",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Creatinine", "eGFR", "Urinalysis", "Electrolytes"],
+            "within_6h": [],
+            "optional": ["Renal_US", "Biopsy"]
+        },
+        "management_hints": "Treat underlying cause. Control BP. Manage complications (anemia, bone disease). If advanced → Nephrology consult, prepare for dialysis."
+    },
+    "Malignancy": {
+        "symptoms": {
+            "required": ["fatigue"],
+            "supporting": ["weight_loss", "fever", "night_sweats", "lymphadenopathy", "organomegaly", "bleeding"],
+            "contradictory": ["no_weight_loss", "stable_weight"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.2, "40-70": 0.5, ">70": 0.6},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["age", "smoking", "family_history", "exposures"],
+        "specificity": 0.60,
+        "urgency": "urgent",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["CBC", "CMP", "CXR", "CT_chest_abdomen_pelvis"],
+            "within_6h": [],
+            "optional": ["Biopsy", "PET_scan"]
+        },
+        "management_hints": "URGENT workup if red flags (weight loss, night sweats, lymphadenopathy). Oncology consult. Staging if confirmed."
+    }
+}
+
+# Back Pain (Đau Lưng)
+BACK_PAIN_DDX = {
+    "Mechanical Back Pain": {
+        "symptoms": {
+            "required": ["back_pain"],
+            "supporting": ["worse_with_movement", "better_with_rest", "muscle_spasm", "no_red_flags", "gradual_onset"],
+            "contradictory": ["red_flags", "neurologic_deficit", "fever"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.6, "40-70": 0.7, ">70": 0.6},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["heavy_lifting", "sedentary", "obesity", "poor_posture"],
+        "specificity": 0.75,
+        "urgency": "non_urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["Clinical_exam"],
+            "within_6h": [],
+            "optional": ["X_ray", "MRI_if_persistent"]
+        },
+        "management_hints": "NSAIDs. Physical therapy. Activity modification. Usually resolves in 4-6 weeks. If persists >6 weeks → Imaging."
+    },
+    "Disc Herniation": {
+        "symptoms": {
+            "required": ["back_pain"],
+            "supporting": ["radiating_pain", "sciatica", "leg_pain", "numbness", "weakness", "worse_with_sitting"],
+            "contradictory": ["no_radiating", "no_neurologic"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.6, "40-70": 0.7, ">70": 0.4},
+            "sex_risk": {"male": 1.2, "female": 1.0}
+        },
+        "risk_factors": ["heavy_lifting", "repetitive_stress", "age"],
+        "specificity": 0.75,
+        "urgency": "urgent",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Neurologic_exam", "Straight_leg_raise"],
+            "within_6h": ["MRI_spine"],
+            "optional": ["EMG"]
+        },
+        "management_hints": "NSAIDs. Physical therapy. If cauda equina or severe weakness → Urgent surgery. Most improve with conservative treatment."
+    },
+    "Spinal Stenosis": {
+        "symptoms": {
+            "required": ["back_pain"],
+            "supporting": ["neurogenic_claudication", "worse_with_walking", "better_with_sitting", "bilateral_symptoms", "elderly"],
+            "contradictory": ["young_age", "unilateral_only"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.1, "40-70": 0.5, ">70": 0.8},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["age", "degenerative_changes", "congenital"],
+        "specificity": 0.80,
+        "urgency": "non_urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["Clinical_exam"],
+            "within_6h": [],
+            "optional": ["MRI_spine", "CT_spine"]
+        },
+        "management_hints": "NSAIDs. Physical therapy. Epidural injections. If severe → Surgery (decompression)."
+    },
+    "Cauda Equina Syndrome": {
+        "symptoms": {
+            "required": ["back_pain"],
+            "supporting": ["saddle_anesthesia", "bowel_bladder_dysfunction", "bilateral_leg_weakness", "severe_pain"],
+            "contradictory": ["no_neurologic", "unilateral_only"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.4, "40-70": 0.6, ">70": 0.5},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["disc_herniation", "tumor", "trauma"],
+        "specificity": 0.85,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Urgent_MRI", "Neurologic_exam", "Rectal_exam"],
+            "within_6h": ["Surgical_consult"],
+            "optional": []
+        },
+        "management_hints": "URGENT! Surgical emergency. Decompression within 24-48h. Delay → Permanent deficits. Immediate neurosurgery consult."
+    },
+    "Spinal Infection": {
+        "symptoms": {
+            "required": ["back_pain"],
+            "supporting": ["fever", "night_sweats", "weight_loss", "localized_tenderness", "recent_infection", "IVDU"],
+            "contradictory": ["no_fever", "no_red_flags"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.4, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 1.2, "female": 1.0}
+        },
+        "risk_factors": ["IVDU", "immunocompromised", "diabetes", "recent_surgery"],
+        "specificity": 0.75,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["MRI_spine", "Blood_cultures", "ESR_CRP", "CBC"],
+            "within_6h": ["CT_guided_biopsy"],
+            "optional": []
+        },
+        "management_hints": "URGENT! IV antibiotics (empiric: Vancomycin + Ceftriaxone). Surgical debridement if abscess. 6-12 weeks antibiotics."
+    },
+    "Malignancy (Spinal)": {
+        "symptoms": {
+            "required": ["back_pain"],
+            "supporting": ["night_pain", "weight_loss", "fever", "history_cancer", "worse_at_rest", "constitutional_symptoms"],
+            "contradictory": ["no_red_flags", "mechanical_pattern"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.2, "40-70": 0.5, ">70": 0.7},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["history_cancer", "age", "smoking"],
+        "specificity": 0.70,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["MRI_spine", "CT_chest_abdomen_pelvis", "CBC", "ESR"],
+            "within_6h": ["Biopsy"],
+            "optional": ["PET_scan"]
+        },
+        "management_hints": "URGENT workup. Oncology consult. If cord compression → Urgent radiation/surgery. Treat underlying malignancy."
+    }
+}
+
+# Vision Changes (Thay Đổi Thị Lực)
+VISION_CHANGES_DDX = {
+    "Retinal Detachment": {
+        "symptoms": {
+            "required": ["vision_changes"],
+            "supporting": ["sudden_vision_loss", "floaters", "flashes", "curtain_vision", "no_pain", "monocular"],
+            "contradictory": ["gradual_onset", "pain", "bilateral"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.3, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["myopia", "trauma", "previous_detachment", "diabetes"],
+        "specificity": 0.80,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Ophthalmology_consult", "Fundoscopy", "Slit_lamp"],
+            "within_6h": ["Ocular_ultrasound"],
+            "optional": []
+        },
+        "management_hints": "URGENT! Ophthalmology consult immediately. Surgical repair (pneumatic retinopexy, scleral buckle, vitrectomy). Delay → Permanent vision loss."
+    },
+    "CVA / Stroke": {
+        "symptoms": {
+            "required": ["vision_changes"],
+            "supporting": ["sudden_vision_loss", "homonymous_hemianopia", "diplopia", "neurologic_deficit", "facial_droop", "speech_problems"],
+            "contradictory": ["gradual_onset", "no_neurologic"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.2, "40-70": 0.6, ">70": 0.8},
+            "sex_risk": {"male": 1.2, "female": 1.0}
+        },
+        "risk_factors": ["hypertension", "atrial_fibrillation", "diabetes", "smoking", "age"],
+        "specificity": 0.75,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["CT_head", "Neurology_consult", "NIHSS"],
+            "within_6h": ["MRI_brain", "CTA"],
+            "optional": []
+        },
+        "management_hints": "URGENT! If ischemic <4.5h → tPA. If <24h + large vessel → Thrombectomy. Control risk factors."
+    },
+    "Glaucoma (Acute Angle Closure)": {
+        "symptoms": {
+            "required": ["vision_changes"],
+            "supporting": ["sudden_vision_loss", "eye_pain", "headache", "nausea", "vomiting", "halos", "red_eye"],
+            "contradictory": ["no_pain", "gradual_onset"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.2, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 0.8, "female": 1.0}
+        },
+        "risk_factors": ["hyperopia", "age", "family_history", "Asian_ethnicity"],
+        "specificity": 0.80,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Ophthalmology_consult", "IOP_measurement", "Slit_lamp"],
+            "within_6h": ["Gonioscopy"],
+            "optional": []
+        },
+        "management_hints": "URGENT! Lower IOP immediately (timolol, pilocarpine, acetazolamide). Laser iridotomy. Delay → Permanent vision loss."
+    },
+    "Migraine Aura": {
+        "symptoms": {
+            "required": ["vision_changes"],
+            "supporting": ["scintillating_scotoma", "zigzag_lines", "tunnel_vision", "headache_follows", "recurrent", "no_neurologic_deficit"],
+            "contradictory": ["persistent_deficit", "sudden_onset_severe"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.7, "40-70": 0.5, ">70": 0.2},
+            "sex_risk": {"male": 0.5, "female": 1.0}
+        },
+        "risk_factors": ["family_history", "female", "young_age"],
+        "specificity": 0.75,
+        "urgency": "non_urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["Clinical_diagnosis"],
+            "within_6h": [],
+            "optional": ["MRI_if_atypical"]
+        },
+        "management_hints": "Triptans if headache. Avoid triggers. If first episode or atypical → Neuroimaging to rule out stroke/TIA."
+    },
+    "Giant Cell Arteritis": {
+        "symptoms": {
+            "required": ["vision_changes"],
+            "supporting": ["sudden_vision_loss", "headache", "temporal_tenderness", "jaw_claudication", "fever", "elderly", "ESR_elevated"],
+            "contradictory": ["young_age", "no_headache"]
+        },
+        "demographics": {
+            "age_risk": {"<50": 0.0, "50-70": 0.6, ">70": 0.8},
+            "sex_risk": {"male": 0.5, "female": 1.0}
+        },
+        "risk_factors": ["age_>50", "female", "polymyalgia_rheumatica"],
+        "specificity": 0.80,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["ESR_CRP", "Temporal_artery_biopsy", "High_dose_steroids"],
+            "within_6h": [],
+            "optional": []
+        },
+        "management_hints": "URGENT! High-dose steroids (prednisone 60-80mg) immediately to prevent vision loss. Temporal artery biopsy within 1 week."
+    }
+}
+
+# Pediatric Joint Pain (Đau Khớp Nhi)
+PEDIATRIC_JOINT_PAIN_DDX = {
+    "Juvenile Idiopathic Arthritis (JIA)": {
+        "symptoms": {
+            "required": ["joint_pain"],
+            "supporting": ["morning_stiffness", "swelling", "multiple_joints", "chronic", "fever", "rash", "uveitis"],
+            "contradictory": ["acute_severe", "single_joint", "septic_appearance"]
+        },
+        "demographics": {
+            "age_risk": {"<16": 1.0, "16-18": 0.8, ">18": 0.0},
+            "sex_risk": {"male": 0.7, "female": 1.0}
+        },
+        "risk_factors": ["family_history", "HLA_B27"],
+        "specificity": 0.75,
+        "urgency": "urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["CBC", "ESR_CRP", "RF_ANA", "X_ray_joints"],
+            "within_6h": [],
+            "optional": ["HLA_B27", "Ophthalmology_screening"]
+        },
+        "management_hints": "NSAIDs. DMARDs (methotrexate). Biologics if severe. Ophthalmology screening (uveitis risk). Rheumatology consult."
+    },
+    "Septic Arthritis": {
+        "symptoms": {
+            "required": ["joint_pain"],
+            "supporting": ["fever", "single_joint", "severe_pain", "erythema", "swelling", "decreased_range_of_motion", "toxic_appearance"],
+            "contradictory": ["no_fever", "multiple_joints", "chronic"]
+        },
+        "demographics": {
+            "age_risk": {"<5": 0.8, "5-10": 0.6, ">10": 0.4},
+            "sex_risk": {"male": 1.2, "female": 1.0}
+        },
+        "risk_factors": ["recent_infection", "immunocompromised", "sickle_cell"],
+        "specificity": 0.85,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Joint_aspiration", "Synovial_fluid_analysis", "Blood_cultures", "CBC", "ESR_CRP"],
+            "within_6h": ["X_ray", "Orthopedic_consult"],
+            "optional": []
+        },
+        "management_hints": "URGENT! IV antibiotics (empiric: Vancomycin + Ceftriaxone). Surgical drainage if needed. Delay → Joint destruction."
+    },
+    "Reactive Arthritis": {
+        "symptoms": {
+            "required": ["joint_pain"],
+            "supporting": ["recent_infection", "GI_URI_symptoms", "asymmetric", "lower_extremities", "enthesitis", "urethritis", "conjunctivitis"],
+            "contradictory": ["no_recent_infection", "symmetric"]
+        },
+        "demographics": {
+            "age_risk": {"<10": 0.4, "10-18": 0.7, ">18": 0.5},
+            "sex_risk": {"male": 1.2, "female": 1.0}
+        },
+        "risk_factors": ["recent_infection", "HLA_B27"],
+        "specificity": 0.70,
+        "urgency": "urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["CBC", "ESR_CRP", "Stool_culture", "Urethral_culture", "HLA_B27"],
+            "within_6h": [],
+            "optional": []
+        },
+        "management_hints": "NSAIDs. Treat underlying infection. Usually self-limited. If persistent → DMARDs. Rheumatology consult."
+    },
+    "Growing Pains": {
+        "symptoms": {
+            "required": ["joint_pain"],
+            "supporting": ["bilateral", "lower_extremities", "evening_night", "no_swelling", "no_limitation", "intermittent", "young_age"],
+            "contradictory": ["swelling", "morning_stiffness", "fever", "single_joint"]
+        },
+        "demographics": {
+            "age_risk": {"<5": 0.6, "5-10": 0.8, ">10": 0.3},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["young_age", "active_child"],
+        "specificity": 0.75,
+        "urgency": "non_urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["Clinical_diagnosis"],
+            "within_6h": [],
+            "optional": []
+        },
+        "management_hints": "Reassurance. Massage. Stretching. Usually resolves with age. If atypical features → Further workup."
+    },
+    "Osteomyelitis": {
+        "symptoms": {
+            "required": ["joint_pain"],
+            "supporting": ["fever", "localized_pain", "swelling", "erythema", "decreased_motion", "recent_trauma", "toxic_appearance"],
+            "contradictory": ["no_fever", "multiple_sites", "chronic_mild"]
+        },
+        "demographics": {
+            "age_risk": {"<5": 0.7, "5-10": 0.6, ">10": 0.4},
+            "sex_risk": {"male": 1.2, "female": 1.0}
+        },
+        "risk_factors": ["recent_trauma", "sickle_cell", "immunocompromised"],
+        "specificity": 0.75,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["X_ray", "MRI", "Blood_cultures", "CBC", "ESR_CRP"],
+            "within_6h": ["Bone_aspiration", "Orthopedic_consult"],
+            "optional": []
+        },
+        "management_hints": "URGENT! IV antibiotics (Vancomycin + Ceftriaxone). Surgical debridement if abscess. 4-6 weeks antibiotics."
+    }
+}
+
+# Electrolyte Disorders (Rối Loạn Điện Giải)
+ELECTROLYTE_DISORDERS_DDX = {
+    "Hyponatremia": {
+        "symptoms": {
+            "required": ["electrolyte_disorder"],
+            "supporting": ["nausea", "headache", "confusion", "seizures", "coma", "low_Na"],
+            "contradictory": ["normal_Na", "high_Na"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.4, "40-70": 0.6, ">70": 0.8},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["diuretics", "SIADH", "heart_failure", "liver_disease", "renal_disease"],
+        "specificity": 0.80,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Na", "Osmolality", "Urine_Na", "Urine_osmolality", "TSH", "Cortisol"],
+            "within_6h": [],
+            "optional": []
+        },
+        "management_hints": "If severe (<120) or symptomatic → 3% saline. Correct slowly (0.5-1 mEq/L/h) to avoid ODS. Treat underlying cause."
+    },
+    "Hypernatremia": {
+        "symptoms": {
+            "required": ["electrolyte_disorder"],
+            "supporting": ["thirst", "confusion", "seizures", "coma", "high_Na", "dehydration"],
+            "contradictory": ["normal_Na", "low_Na"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.3, "40-70": 0.5, ">70": 0.7},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["dehydration", "diabetes_insipidus", "elderly", "tube_feeding"],
+        "specificity": 0.80,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Na", "Osmolality", "Urine_osmolality", "Volume_status"],
+            "within_6h": [],
+            "optional": []
+        },
+        "management_hints": "If severe (>160) or symptomatic → D5W or 0.45% saline. Correct slowly (0.5-1 mEq/L/h). Treat underlying cause."
+    },
+    "Hypokalemia": {
+        "symptoms": {
+            "required": ["electrolyte_disorder"],
+            "supporting": ["weakness", "muscle_cramps", "arrhythmias", "low_K", "diuretics"],
+            "contradictory": ["normal_K", "high_K"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.4, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["diuretics", "vomiting", "diarrhea", "alkalosis"],
+        "specificity": 0.80,
+        "urgency": "urgent",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["K", "Mg", "ABG", "ECG"],
+            "within_6h": [],
+            "optional": ["Urine_K"]
+        },
+        "management_hints": "If severe (<2.5) or symptomatic → IV K (max 20 mEq/h with cardiac monitoring). Check Mg. Treat underlying cause."
+    },
+    "Hyperkalemia": {
+        "symptoms": {
+            "required": ["electrolyte_disorder"],
+            "supporting": ["weakness", "arrhythmias", "ECG_changes", "high_K", "renal_disease"],
+            "contradictory": ["normal_K", "low_K"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.3, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["renal_disease", "medications", "acidosis", "cell_lysis"],
+        "specificity": 0.85,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["K", "ECG", "Creatinine", "ABG"],
+            "within_6h": [],
+            "optional": []
+        },
+        "management_hints": "URGENT if >6.5 or ECG changes! Calcium gluconate (cardioprotection), insulin+glucose, albuterol, kayexalate. Dialysis if severe."
+    }
+}
+
+# Drug Reaction (Tác Dụng Phụ Thuốc)
+DRUG_REACTION_DDX = {
+    "Drug Allergy": {
+        "symptoms": {
+            "required": ["drug_reaction"],
+            "supporting": ["rash", "urticaria", "pruritus", "recent_medication", "timing_related", "angioedema"],
+            "contradictory": ["no_rash", "delayed_timing"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.5, "40-70": 0.7, ">70": 0.8},
+            "sex_risk": {"male": 1.0, "female": 1.2}
+        },
+        "risk_factors": ["multiple_medications", "prior_allergies", "specific_drugs"],
+        "specificity": 0.75,
+        "urgency": "urgent",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Stop_drug", "CBC", "Clinical_assessment"],
+            "within_6h": [],
+            "optional": ["Allergy_testing"]
+        },
+        "management_hints": "Stop suspected drug immediately. Antihistamines. Steroids if severe. If anaphylaxis → Epinephrine, ICU."
+    },
+    "Drug Toxicity": {
+        "symptoms": {
+            "required": ["drug_reaction"],
+            "supporting": ["nausea", "vomiting", "confusion", "seizures", "organ_dysfunction", "overdose", "high_dose"],
+            "contradictory": ["normal_dose", "no_symptoms"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.4, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["overdose", "drug_interactions", "renal_hepatic_impairment", "elderly"],
+        "specificity": 0.70,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Drug_levels", "CBC", "CMP", "ECG", "Toxicology_screen"],
+            "within_6h": [],
+            "optional": []
+        },
+        "management_hints": "URGENT! Stop drug. Supportive care. Specific antidotes if available. Activated charcoal if recent ingestion. Dialysis if indicated."
+    },
+    "Stevens-Johnson Syndrome / TEN": {
+        "symptoms": {
+            "required": ["drug_reaction"],
+            "supporting": ["rash", "target_lesions", "bulla", "mucosal_involvement", "fever", "drug_exposure", "toxic_epidermal_necrolysis"],
+            "contradictory": ["mild_rash", "no_mucosal"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.5, "40-70": 0.8, ">70": 0.7},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["drugs", "infections", "genetic_factors"],
+        "specificity": 0.85,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Stop_all_drugs", "ICU_admit", "Dermatology_consult", "Skin_biopsy"],
+            "within_6h": [],
+            "optional": []
+        },
+        "management_hints": "URGENT! Life-threatening! ICU immediately. Stop all drugs. Dermatology + burn unit. Supportive care. High mortality if >30% BSA."
+    },
+    "Anaphylaxis": {
+        "symptoms": {
+            "required": ["drug_reaction"],
+            "supporting": ["urticaria", "angioedema", "hypotension", "dyspnea", "wheezing", "rapid_onset", "shock"],
+            "contradictory": ["delayed_onset", "no_respiratory_cardiovascular"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.5, "40-70": 0.6, ">70": 0.7},
+            "sex_risk": {"male": 1.0, "female": 1.2}
+        },
+        "risk_factors": ["prior_allergies", "atopy", "specific_drugs"],
+        "specificity": 0.90,
+        "urgency": "emergency",
+        "rule_out_first": True,
+        "workup": {
+            "immediate": ["Epinephrine", "IV_access", "O2", "ICU"],
+            "within_6h": [],
+            "optional": ["Tryptase"]
+        },
+        "management_hints": "URGENT! Life-threatening! Epinephrine IM immediately. IV fluids. Antihistamines. Steroids. ICU monitoring. Delay → Death."
+    },
+    "Serum Sickness": {
+        "symptoms": {
+            "required": ["drug_reaction"],
+            "supporting": ["fever", "rash", "arthralgia", "lymphadenopathy", "delayed_onset", "serum_proteins"],
+            "contradictory": ["immediate_onset", "no_fever"]
+        },
+        "demographics": {
+            "age_risk": {"<40": 0.5, "40-70": 0.6, ">70": 0.4},
+            "sex_risk": {"male": 1.0, "female": 1.0}
+        },
+        "risk_factors": ["serum_proteins", "monoclonal_antibodies", "vaccines"],
+        "specificity": 0.70,
+        "urgency": "urgent",
+        "rule_out_first": False,
+        "workup": {
+            "immediate": ["CBC", "ESR_CRP", "Clinical_assessment"],
+            "within_6h": [],
+            "optional": []
+        },
+        "management_hints": "Stop drug. Antihistamines. NSAIDs for arthralgia. Steroids if severe. Usually self-limited."
+    }
+}
+
 # Map all scenarios
 ALL_SCENARIOS = {
     "Chest Pain": CHEST_PAIN_DDX,
@@ -1338,6 +2273,14 @@ ALL_SCENARIOS = {
     "Hypertension Emergency": HTN_EMERGENCY_DDX,
     "Vomiting": VOMITING_DDX,
     "Rash": RASH_DDX,
+    "Cough": COUGH_DDX,
+    "Bleeding": BLEEDING_DDX,
+    "Fatigue": FATIGUE_DDX,
+    "Back Pain": BACK_PAIN_DDX,
+    "Vision Changes": VISION_CHANGES_DDX,
+    "Pediatric Joint Pain": PEDIATRIC_JOINT_PAIN_DDX,
+    "Electrolyte Disorders": ELECTROLYTE_DISORDERS_DDX,
+    "Drug Reaction": DRUG_REACTION_DDX,
 }
 
 # Symptom aliases for matching

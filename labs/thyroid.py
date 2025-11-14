@@ -16,9 +16,9 @@ def render():
     with col1:
         st.markdown("#### 📝 Nhập Giá Trị")
         
-        tsh = st.number_input("TSH (mIU/L)", 0.0, 50.0, 2.0, 0.1)
-        ft4 = st.number_input("Free T4 (ng/dL)", 0.0, 5.0, 1.2, 0.1)
-        ft3 = st.number_input("Free T3 (pg/mL)", 0.0, 10.0, 3.0, 0.1)
+        tsh = st.number_input("TSH (mIU/L)", 0.0, 50.0, 2.0, 0.1, format="%.1f")
+        ft4 = st.number_input("Free T4 (ng/dL)", 0.0, 5.0, 1.2, 0.1, format="%.1f")
+        ft3 = st.number_input("Free T3 (pg/mL)", 0.0, 10.0, 3.0, 0.1, format="%.1f")
     
     with col2:
         st.markdown("#### 📊 Giải Thích")

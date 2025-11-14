@@ -29,6 +29,7 @@ def render():
         ckmb = st.number_input(
             "CK-MB - Creatine Kinase MB (ng/mL)", 
             0.0, 50.0, 2.0, 0.1,
+            format="%.1f",
             help="Bình thường: <5 ng/mL"
         )
     

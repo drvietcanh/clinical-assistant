@@ -45,6 +45,7 @@ def render():
             bili_t = st.number_input(
                 "Bilirubin Total (mg/dL)",
                 0.0, 30.0, 0.8, 0.1,
+                format="%.1f",
                 help="Bình thường: 0.2-1.0 mg/dL",
                 key="bili_t_mgdl"
             )
@@ -55,15 +56,17 @@ def render():
             bili_d_input = st.number_input(
                 "Bilirubin Direct (µmol/L)",
                 0.0, 250.0, 3.4, 0.5,
+                format="%.1f",
                 help="Bình thường: 0-5 µmol/L",
                 key="bili_d_umol"
             )
             bili_d = bili_d_input / 17.1  # Convert to mg/dL
-            st.caption(f"≈ {bili_d:.2f} mg/dL")
+            st.caption(f"≈ {bili_d:.1f} mg/dL")
         else:
             bili_d = st.number_input(
                 "Bilirubin Direct (mg/dL)",
                 0.0, 15.0, 0.2, 0.1,
+                format="%.1f",
                 help="Bình thường: 0-0.3 mg/dL",
                 key="bili_d_mgdl"
             )
@@ -72,13 +75,13 @@ def render():
         # Calculate indirect bilirubin
         bili_i = bili_t - bili_d
         if use_si_bili:
-            st.info(f"**Bilirubin Indirect:** {bili_i * 17.1:.1f} µmol/L (≈ {bili_i:.2f} mg/dL)")
+            st.info(f"**Bilirubin Indirect:** {bili_i * 17.1:.1f} µmol/L (≈ {bili_i:.1f} mg/dL)")
         else:
-            st.info(f"**Bilirubin Indirect:** {bili_i:.2f} mg/dL (≈ {bili_i * 17.1:.1f} µmol/L)")
+            st.info(f"**Bilirubin Indirect:** {bili_i:.1f} mg/dL (≈ {bili_i * 17.1:.1f} µmol/L)")
         
         st.markdown("---")
         albumin = st.number_input("Albumin (g/dL)", 0.0, 10.0, 4.0, 0.1, format="%.1f", key="lft_alb")
-        tp = st.number_input("Total Protein (g/dL)", 0.0, 15.0, 7.0, 0.1, key="lft_tp")
+        tp = st.number_input("Total Protein (g/dL)", 0.0, 15.0, 7.0, 0.1, format="%.1f", key="lft_tp")
         
         # Calculate ratios
         if ast > 0:

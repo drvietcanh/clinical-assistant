@@ -26,6 +26,7 @@ def render():
             max_value=100.0,
             value=7.0,
             step=0.1,
+            format="%.1f",
             key="wbc"
         )
         
@@ -36,6 +37,7 @@ def render():
             max_value=10.0,
             value=5.0,
             step=0.1,
+            format="%.1f",
             key="rbc"
         )
         
@@ -46,6 +48,7 @@ def render():
             max_value=25.0,
             value=14.0,
             step=0.1,
+            format="%.1f",
             key="hgb"
         )
         
@@ -56,6 +59,7 @@ def render():
             max_value=70.0,
             value=42.0,
             step=0.1,
+            format="%.1f",
             key="hct"
         )
         
@@ -66,6 +70,7 @@ def render():
             max_value=150.0,
             value=90.0,
             step=0.1,
+            format="%.1f",
             key="mcv"
         )
         
@@ -76,6 +81,7 @@ def render():
             max_value=50.0,
             value=30.0,
             step=0.1,
+            format="%.1f",
             key="mch"
         )
         
@@ -86,6 +92,7 @@ def render():
             max_value=40.0,
             value=34.0,
             step=0.1,
+            format="%.1f",
             key="mchc"
         )
         
