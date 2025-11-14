@@ -36,6 +36,11 @@ from .weight_loss import WEIGHT_LOSS_DDX
 from .dizziness_vertigo import DIZZINESS_VERTIGO_DDX
 from .constipation import CONSTIPATION_DDX
 from .urinary_retention import URINARY_RETENTION_DDX
+from .hearing_loss import HEARING_LOSS_DDX
+from .tremor import TREMOR_DDX
+from .swelling import SWELLING_DDX
+from .night_sweats import NIGHT_SWEATS_DDX
+from .memory_loss import MEMORY_LOSS_DDX
 
 # ALL_SCENARIOS
 
@@ -53,6 +58,8 @@ ALL_SCENARIOS = {'Chest Pain': CHEST_PAIN_DDX, 'Dyspnea': DYSPNEA_DDX, 'Abdomina
     'Jaundice': JAUNDICE_DDX, 'Lymphadenopathy': LYMPHADENOPATHY_DDX,
     'Acute Limb Weakness': ACUTE_LIMB_WEAKNESS_DDX, 'Weight Loss': WEIGHT_LOSS_DDX,
     'Dizziness / Vertigo': DIZZINESS_VERTIGO_DDX, 'Constipation': CONSTIPATION_DDX,
-    'Urinary Retention': URINARY_RETENTION_DDX}
+    'Urinary Retention': URINARY_RETENTION_DDX, 'Hearing Loss': HEARING_LOSS_DDX,
+    'Tremor': TREMOR_DDX, 'Swelling': SWELLING_DDX, 'Night Sweats': NIGHT_SWEATS_DDX,
+    'Memory Loss': MEMORY_LOSS_DDX}
 
 __all__ = ['ALL_SCENARIOS']
