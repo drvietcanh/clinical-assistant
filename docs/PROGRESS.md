@@ -1,13 +1,25 @@
 # 📊 Clinical Assistant - Progress & Tasks
 
-**Last Updated:** 2025-02-03 (Session 26)  
-**Status:** ✅ Active - Drug Database Enhanced Fields Expansion  
-**Version:** 2.16.2+  
-**Current Focus:** Drug Database Enhanced Fields - 70 thuốc với đầy đủ 6 enhanced fields (49.6% coverage)
+**Last Updated:** 2025-02-04 (Session 27)  
+**Status:** ✅ Active - UI/UX Improvements & Export Enhancements  
+**Version:** 2.17.0  
+**Current Focus:** Mobile Optimization, PDF Export, Batch Export, Protocols Expansion Roadmap
 
 ---
 
 ## 🎯 Current Session Summary
+
+### **Session 27 - 2025-02-04** (UI/UX Improvements & Export Enhancements) ✅
+- ✅ **Mobile UI/UX Optimization** - Enhanced responsive design with touch-friendly inputs (44px minimum), tablet support, landscape mode
+- ✅ **PDF Export Functionality** - Added PDF generation using reportlab with formatted tables, headers, and professional layout
+- ✅ **Batch Export Feature** - Implemented batch export for multiple calculations (TXT and PDF formats)
+- ✅ **Export Component Enhancement** - Updated export component to support 3 formats: Copy, Download TXT, Download PDF
+- ✅ **Session State Bug Fix** - Fixed session state key conflicts in antibiotics database calculator
+- ✅ **Protocols Expansion Roadmap** - Created comprehensive roadmap for adding 13 new protocols with step-by-step guide
+- ✅ **Protocol Template** - Created template file for easy protocol implementation
+- ✅ **Requirements Update** - Added reportlab>=4.0.0 for PDF generation
+
+**Impact:** Improved mobile experience, professional export capabilities, and clear roadmap for protocol expansion. All 11 existing calculators with export now support PDF export automatically.
 
 ### **Session 26 - 2025-02-03** (Drug Database Enhanced Fields Expansion - Common Drugs) ✅
 - ✅ **Enhanced Drug Information** - Added enhanced fields to 14 additional common drugs (Session 26a + 26b + 26c + 26d)

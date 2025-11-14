@@ -127,11 +127,11 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         )
         
         if "error" not in result:
-            # Store result in session for display - use safe keys
+            # Store result in session for display - use different keys to avoid conflicts with widget keys
             st.session_state[safe_key("dosing_result")] = result
-            st.session_state[safe_key("dosing_weight")] = weight
-            st.session_state[safe_key("dosing_crcl")] = crcl
-            st.session_state[safe_key("dosing_indication")] = indication_code
+            st.session_state[safe_key("stored_weight")] = weight
+            st.session_state[safe_key("stored_crcl")] = crcl
+            st.session_state[safe_key("stored_indication")] = indication_code
             
             # Save to recent calculations (Phase 4)
             from .recent_calculations import save_calculation
@@ -155,8 +155,8 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
     result_key = safe_key("dosing_result")
     if result_key in st.session_state:
         result = st.session_state[result_key]
-        weight_used = st.session_state.get(safe_key("dosing_weight"), weight)
-        crcl_used = st.session_state.get(safe_key("dosing_crcl"), crcl)
+        weight_used = st.session_state.get(safe_key("stored_weight"), weight)
+        crcl_used = st.session_state.get(safe_key("stored_crcl"), crcl)
         
         # Results card
         st.markdown("---")
@@ -192,7 +192,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         
         detailed = calculate_detailed_dose(
             ab_name, weight_used, ibw, abw, crcl_used,
-            indication=st.session_state.get(safe_key("dosing_indication"), "standard"),
+            indication=st.session_state.get(safe_key("stored_indication"), "standard"),
             is_pediatric=False
         )
         
@@ -230,9 +230,9 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         if st.button("🗑️ Xóa kết quả", key=safe_key("clear_result")):
             keys_to_remove = [
                 safe_key("dosing_result"),
-                safe_key("dosing_weight"),
-                safe_key("dosing_crcl"),
-                safe_key("dosing_indication")
+                safe_key("stored_weight"),
+                safe_key("stored_crcl"),
+                safe_key("stored_indication")
             ]
             for key in keys_to_remove:
                 if key in st.session_state:
