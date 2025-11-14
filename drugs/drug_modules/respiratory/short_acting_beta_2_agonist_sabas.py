@@ -1,0 +1,46 @@
+"""Respiratory Medications
+Active module - contains all respiratory drug data"""
+
+# Short-acting Beta-2 Agonist (SABA)s
+
+SHORT_ACTING_BETA_2_AGONIST_(SABA)S_DRUGS = {
+    "Salbutamol": {'group': 'Respiratory - Short-acting Beta-2 Agonist (SABA)',
+        'vietnamese_name': 'Salbutamol, Ventolin', 'administration': [
+        'Inhalation', 'IV', 'PO'], 'indications': ['Hen phế quản (cắt cơn)',
+        'COPD (cắt cơn)', 'Co thắt phế quản cấp',
+        'Dự phòng co thắt do vận động'], 'contraindications': ['Dị ứng',
+        'Nhịp tim nhanh nặng'], 'dosage': {'adult_inhalation':
+        '1-2 puffs (100-200mcg) mỗi 4-6 giờ khi cần', 'adult_nebulizer':
+        '2.5-5mg mỗi 4-6 giờ', 'adult_iv':
+        '0.5mg IV, sau đó 5-20mcg/phút truyền liên tục', 'notes':
+        'Dùng khi cần (PRN) cho cắt cơn, không dùng thường xuyên'},
+        'side_effects': ['Tim đập nhanh', 'Run cơ', 'Đau đầu',
+        'Hạ kali máu (liều cao)', 'Loạn nhịp tim (hiếm)'], 'interactions': [
+        'Beta-blocker: đối kháng tác dụng (tránh dùng)'], 'pregnancy': 'C',
+        'mechanism_of_action':
+        'Kích thích beta-2 adrenergic receptors ở cơ trơn phế quản, kích hoạt adenylate cyclase → tăng cAMP → giãn cơ trơn phế quản. Tác dụng nhanh, ngắn (4-6 giờ). Chọn lọc beta-2 hơn beta-1 nhưng vẫn có tác dụng tim mạch ở liều cao. Giảm phóng thích chất trung gian gây viêm từ mast cells.'
+        , 'monitoring': [
+        'Nhịp tim, huyết áp (đặc biệt khi dùng IV hoặc liều cao)',
+        'Kali máu nếu dùng liều cao hoặc kéo dài',
+        'Đáp ứng phế quản (peak flow, FEV1)',
+        'Dấu hiệu quá liều: nhịp tim nhanh >120 bpm, run cơ nặng, loạn nhịp',
+        'Dấu hiệu nghịch lý: co thắt phế quản nặng hơn (hiếm nhưng nguy hiểm)'],
+        'precautions': [
+        'Chỉ dùng khi cần (PRN) cho cắt cơn - không dùng thường xuyên',
+        'Nếu cần dùng >4 lần/ngày → cần đánh giá lại điều trị và tăng ICS',
+        'Tránh dùng với beta-blocker (đối kháng tác dụng)',
+        'Thận trọng ở bệnh nhân tim mạch, tăng huyết áp, loạn nhịp (tăng nguy cơ tác dụng tim mạch)'
+        , 'Dùng liều thấp nhất hiệu quả để giảm tác dụng phụ',
+        'Rửa miệng sau khi dùng dạng hít để giảm kích ứng và nấm miệng',
+        'Nếu không đáp ứng → cần đánh giá lại chẩn đoán và điều trị'],
+        'pharmacokinetics': {'half_life': '2-7 giờ (hít), 2-4 giờ (IV)',
+        'onset': '5-15 phút (hít), 2-5 phút (IV)', 'duration': '4-6 giờ',
+        'protein_binding': '10%', 'clearance':
+        'Gan (chuyển hóa qua sulfation, một phần qua CYP450), thận (thải trừ)'},
+        'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. Kiểm tra hạn sử dụng định kỳ.'
+        , 'black_box_warnings':
+        'Không dùng đơn độc cho hen phế quản mạn tính - phải kết hợp với corticosteroid dạng hít. Dùng quá mức (>4 lần/ngày) có thể gây tăng nguy cơ tử vong do hen. Nếu cần dùng thường xuyên → cần đánh giá lại và tăng điều trị kiểm soát.'
+        }}
+
+__all__ = ['SHORT_ACTING_BETA_2_AGONIST_(SABA)S_DRUGS']

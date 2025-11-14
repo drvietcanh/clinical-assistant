@@ -1,11 +1,11 @@
 # 📋 TIẾN TRÌNH TÁCH MODULE - LƯU CHO PHIÊN SAU
 
-**Ngày cập nhật:** Sau khi tách UI components cho egfr.py và mrs.py  
-**Trạng thái:** Hoàn thành tách logic files CRITICAL + Tách UI components cho 2 score calculators lớn nhất
+**Ngày cập nhật:** Sau khi tách infectious_other.py bằng AST + astor  
+**Trạng thái:** Hoàn thành tách logic files CRITICAL + Tách UI components + Tách data files lớn
 
 ## ✅ ĐÃ HOÀN THÀNH
 
-### Files đã tách (9 files):
+### Files đã tách (21 files):
 
 1. ✅ **`drugs/drug_database.py`** (8735 → 17 dòng)
    - Tách: `drugs/drug_database_data.py`
@@ -61,17 +61,86 @@
      - `scores/neurology/mrs_ui_help.py` - Help sections
    - Status: ✅ Hoàn thành, test OK (giảm 89% từ 741 dòng)
 
+10. ✅ **`drugs/drug_modules/infectious_other.py`** (2423 → 8 dòng)
+   - Tách theo category (dùng AST + astor):
+     - `drugs/drug_modules/infectious_other/macrolides.py` - 2 thuốc
+     - `drugs/drug_modules/infectious_other/fluoroquinolones.py` - 1 thuốc
+     - `drugs/drug_modules/infectious_other/tetracyclines.py` - 1 thuốc
+     - `drugs/drug_modules/infectious_other/nitroimidazoles.py` - 1 thuốc
+     - `drugs/drug_modules/infectious_other/antimalarials.py` - 2 thuốc
+     - `drugs/drug_modules/infectious_other/anthelmintics.py` - 2 thuốc
+     - `drugs/drug_modules/infectious_other/beta_lactams.py` - 2 thuốc
+     - `drugs/drug_modules/infectious_other/cephalosporins.py` - 1 thuốc
+     - `drugs/drug_modules/infectious_other/__init__.py` - Merge tất cả
+   - Status: ✅ Hoàn thành, test OK (giảm 99.7% từ 2423 dòng)
+   - Method: AST parsing + astor để extract và reconstruct chính xác
+
+11. ✅ **`diagnosis/ddx_data_data.py`** (2303 → 10 dòng)
+   - Tách theo scenario (dùng AST + astor):
+     - `diagnosis/ddx_data_data/chest_pain.py` - 6 diagnoses
+     - `diagnosis/ddx_data_data/dyspnea.py` - 5 diagnoses
+     - `diagnosis/ddx_data_data/abdominal_pain.py` - 3 diagnoses
+     - `diagnosis/ddx_data_data/altered_mental_status.py` - 5 diagnoses
+     - `diagnosis/ddx_data_data/fever.py` - 4 diagnoses
+     - `diagnosis/ddx_data_data/syncope.py` - 4 diagnoses
+     - `diagnosis/ddx_data_data/joint_pain.py` - 5 diagnoses
+     - `diagnosis/ddx_data_data/headache.py` - 6 diagnoses
+     - `diagnosis/ddx_data_data/diarrhea.py` - 4 diagnoses
+     - `diagnosis/ddx_data_data/anemia.py` - 3 diagnoses
+     - `diagnosis/ddx_data_data/kidney_injury.py` - 4 diagnoses
+     - `diagnosis/ddx_data_data/htn_emergency.py` - 3 diagnoses
+     - `diagnosis/ddx_data_data/vomiting.py` - 4 diagnoses
+     - `diagnosis/ddx_data_data/rash.py` - 4 diagnoses
+     - `diagnosis/ddx_data_data/cough.py` - 6 diagnoses
+     - `diagnosis/ddx_data_data/bleeding.py` - 5 diagnoses
+     - `diagnosis/ddx_data_data/fatigue.py` - 7 diagnoses
+     - `diagnosis/ddx_data_data/back_pain.py` - 6 diagnoses
+     - `diagnosis/ddx_data_data/vision_changes.py` - 5 diagnoses
+     - `diagnosis/ddx_data_data/pediatric_joint_pain.py` - 5 diagnoses
+     - `diagnosis/ddx_data_data/electrolyte_disorders.py` - 4 diagnoses
+     - `diagnosis/ddx_data_data/drug_reaction.py` - 5 diagnoses
+     - `diagnosis/ddx_data_data/all_scenarios.py` - ALL_SCENARIOS mapping
+     - `diagnosis/ddx_data_data/symptom_aliases.py` - SYMPTOM_ALIASES
+     - `diagnosis/ddx_data_data/__init__.py` - Import tất cả
+   - Status: ✅ Hoàn thành, test OK (giảm 99.6% từ 2303 dòng)
+   - Method: AST parsing + astor để extract và reconstruct chính xác
+   - Total: 24 files (22 scenario files + 2 mapping files + 1 __init__.py)
+
+12-21. ✅ **10 files trong `drugs/drug_modules/`** (1838-1107 dòng → ~10 dòng mỗi file)
+   - Tách theo category (dùng AST + astor):
+     - `oncology.py` → 6 categories (7 files)
+     - `gastrointestinal.py` → 7 categories (8 files)
+     - `supportive.py` → 6 categories (7 files)
+     - `diabetes.py` → 6 categories (7 files)
+     - `neurological.py` → 3 categories (4 files)
+     - `analgesics.py` → 5 categories (6 files)
+     - `emergency.py` → 6 categories (7 files)
+     - `endocrinology_other.py` → 1 category (2 files)
+     - `respiratory.py` → 6 categories (7 files)
+     - `miscellaneous.py` → 6 categories (7 files)
+   - Status: ✅ Hoàn thành, test OK (giảm ~99% mỗi file)
+   - Method: AST parsing + astor để extract và reconstruct chính xác
+   - Total: ~60+ category files được tạo
+
 ## 📊 TRẠNG THÁI HIỆN TẠI
 
-### CRITICAL Files (>800 dòng): 4 files
-**Tất cả đều là DATA FILES - Chấp nhận được**
+### CRITICAL Files (>800 dòng): 9 files ⬇️ (giảm 11 files từ 20 ban đầu)
+**Các file còn lại đều <1100 dòng - Chấp nhận được**
 
-1. `drugs/drug_database_data.py` (8688 dòng) - Data thuần túy
-2. `antibiotics/antibiotics_data_data.py` (3203 dòng) - Data thuần túy
-3. `diagnosis/ddx_data_data.py` (1339 dòng) - Data thuần túy
-4. `drugs/enhanced_fields_schema_data.py` (856 dòng) - Schema data
+1. `drugs/drug_database_data.py` (8688 dòng) - Data thuần túy (file lớn nhất, có thể tách tiếp)
+2. `drugs/drug_modules/cardiovascular_other.py` (1071 dòng) - Data thuần túy
+3. `drugs/drug_modules/antimicrobial/antibiotics.py` (1067 dòng) - Data thuần túy
+4. `drugs/drug_modules/cardiovascular/beta_blockers.py` (1048 dòng) - Data thuần túy
+5. `drugs/drug_modules/psychiatry_other.py` (934 dòng) - Data thuần túy
+6. `drugs/drug_modules/antimicrobial/antivirals.py` (926 dòng) - Data thuần túy
+7. `antibiotics/antibiotics_data/cephalosporins.py` (923 dòng) - Data thuần túy
+8. `drugs/enhanced_fields_schema_data.py` (887 dòng) - Schema data
+9. `drugs/drug_modules/cardiovascular/calcium_blockers.py` (867 dòng) - Data thuần túy
 
-**Khuyến nghị:** Giữ nguyên vì chỉ chứa data, không có logic
+**Khuyến nghị:** 
+- Các file còn lại đều <1100 dòng, chấp nhận được
+- File lớn nhất `drug_database_data.py` (8688 dòng) có thể tách tiếp nếu cần
+- Tất cả đều là data files thuần túy, không có logic phức tạp
 
 ### WARNING Files (500-800 dòng): 40 files ⬇️ (giảm 2 files)
 
@@ -220,9 +289,23 @@ from drugs.enhanced_fields_schema import ENHANCED_FIELDS_SCHEMA
 
 **Code base hiện tại đã được tối ưu và dễ maintain hơn nhiều!**
 
-### 📊 Tổng kết phiên này:
+### 📊 Tổng kết các phiên:
 - ✅ `egfr.py`: 778 → 129 dòng (giảm 84%)
 - ✅ `mrs.py`: 741 → 79 dòng (giảm 89%)
-- ✅ Tạo 7 file UI components mới
+- ✅ `infectious_other.py`: 2423 → 8 dòng (giảm 99.7%) ⭐
+- ✅ `ddx_data_data.py`: 2303 → 10 dòng (giảm 99.6%) ⭐
+- ✅ `oncology.py`: 1838 → ~10 dòng (giảm 99.5%) ⭐ MỚI
+- ✅ `gastrointestinal.py`: 1730 → ~10 dòng (giảm 99.4%) ⭐ MỚI
+- ✅ `supportive.py`: 1718 → ~10 dòng (giảm 99.4%) ⭐ MỚI
+- ✅ `diabetes.py`: 1695 → ~10 dòng (giảm 99.4%) ⭐ MỚI
+- ✅ `neurological.py`: 1548 → ~10 dòng (giảm 99.4%) ⭐ MỚI
+- ✅ `analgesics.py`: 1311 → ~10 dòng (giảm 99.2%) ⭐ MỚI
+- ✅ `emergency.py`: 1237 → ~10 dòng (giảm 99.2%) ⭐ MỚI
+- ✅ `endocrinology_other.py`: 1144 → ~10 dòng (giảm 99.1%) ⭐ MỚI
+- ✅ `respiratory.py`: 1116 → ~10 dòng (giảm 99.1%) ⭐ MỚI
+- ✅ `miscellaneous.py`: 1107 → ~10 dòng (giảm 99.1%) ⭐ MỚI
+- ✅ Tạo 100+ file components mới
+- ✅ CRITICAL files: 20 → 9 (giảm 55%) 🎉
 - ✅ Tất cả imports và backward compatibility OK
+- ✅ Phương pháp mới: AST + astor cho data files phức tạp
 

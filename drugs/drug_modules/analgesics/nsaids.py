@@ -1,0 +1,279 @@
+"""Analgesic and Pain Medications
+Active module - contains all analgesic drug data"""
+
+# NSAIDs
+
+NSAIDS_DRUGS = {
+    "Ibuprofen": {'group': 'Analgesic - NSAID', 'vietnamese_name': 'Ibuprofen, Brufen',
+        'administration': ['PO'], 'indications': ['Đau nhẹ đến trung bình',
+        'Viêm khớp', 'Sốt', 'Đau bụng kinh'], 'contraindications': [
+        'Loét dạ dày tá tràng đang hoạt động', 'Suy thận nặng', 'Suy gan nặng',
+        'Có thai (3 tháng cuối)', 'Dị ứng NSAID/aspirin'], 'dosage': {
+        'adult_pain': '200-400mg mỗi 4-6 giờ (tối đa 2.4g/ngày)',
+        'adult_arthritis': '400-800mg x 3-4 lần/ngày (tối đa 3.2g/ngày)',
+        'notes': 'Uống với thức ăn để giảm kích ứng dạ dày'}, 'side_effects': [
+        'Chảy máu dạ dày', 'Suy thận', 'Tăng huyết áp', 'Phù', 'Đau đầu',
+        'Ban da'], 'interactions': ['Warfarin: tăng nguy cơ chảy máu nặng',
+        'ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận',
+        'Aspirin: tăng nguy cơ chảy máu dạ dày',
+        'Methotrexate: tăng độc tính methotrexate'], 'pregnancy':
+        'C - D trong 3 tháng cuối', 'mechanism_of_action':
+        'Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin, thromboxane, và prostacyclin. Prostaglandin tham gia vào quá trình đau, viêm, sốt, bảo vệ niêm mạc dạ dày, và điều hòa thận'
+        , 'monitoring': [
+        'Dấu hiệu chảy máu dạ dày (phân đen, nôn ra máu, đau bụng)',
+        'Creatinine, BUN nếu dùng lâu dài hoặc bệnh nhân có nguy cơ',
+        'Huyết áp (NSAID có thể tăng huyết áp)',
+        'Chức năng gan (transaminase) nếu dùng lâu dài',
+        'Dấu hiệu suy tim (giữ nước, phù)'], 'precautions': [
+        'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày',
+        'Cân nhắc dùng PPI hoặc misoprostol nếu có nguy cơ loét dạ dày',
+        'Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp',
+        'Tránh dùng với ACE inhibitor/ARB (giảm hiệu quả, tăng nguy cơ suy thận)',
+        'Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm)',
+        'Ngừng trước phẫu thuật 5-7 ngày (tăng nguy cơ chảy máu)',
+        'Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể'],
+        'pharmacokinetics': {'half_life': '2-4 giờ', 'onset': '30-60 phút',
+        'duration': '4-6 giờ', 'protein_binding': '99%', 'clearance':
+        'Gan (chuyển hóa qua CYP2C9, CYP2C8), thận (thải trừ)'}, 'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm', 'black_box_warnings':
+        'Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ'
+        },
+    "Naproxen": {'group': 'Analgesic - NSAID', 'vietnamese_name': 'Naproxen, Naprosyn',
+        'administration': ['PO'], 'indications': ['Đau nhẹ đến trung bình',
+        'Viêm khớp dạng thấp', 'Viêm khớp xương khớp',
+        'Viêm cột sống dính khớp', 'Đau bụng kinh', 'Đau đầu do căng thẳng',
+        'Gout cấp'], 'contraindications': [
+        'Loét dạ dày tá tràng đang hoạt động', 'Suy thận nặng', 'Suy gan nặng',
+        'Có thai (3 tháng cuối)', 'Dị ứng NSAID/aspirin', 'Suy tim nặng'],
+        'dosage': {'adult_pain': '250-500mg x 2 lần/ngày (tối đa 1.25g/ngày)',
+        'adult_arthritis': '250-500mg x 2 lần/ngày (tối đa 1.5g/ngày)',
+        'adult_dysmenorrhea':
+        '500mg ngay khi có triệu chứng, sau đó 250mg mỗi 6-8 giờ', 'adult_gout':
+        '750mg ngay, sau đó 250mg mỗi 8 giờ', 'notes':
+        'Tác dụng kéo dài hơn ibuprofen. Uống với thức ăn'}, 'renal_adjustment':
+        {'normal': 'Không đổi', '30_60': 'Thận trọng, giảm liều', 'under_30':
+        'Tránh dùng'}, 'side_effects': ['Chảy máu dạ dày', 'Suy thận',
+        'Tăng huyết áp', 'Phù', 'Đau đầu', 'Ban da', 'Nhạy cảm với ánh sáng'],
+        'interactions': ['Warfarin: tăng nguy cơ chảy máu nặng',
+        'ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận',
+        'Aspirin: giảm hiệu quả naproxen', 'Lithium: tăng nồng độ lithium',
+        'Methotrexate: tăng độc tính methotrexate'], 'pregnancy':
+        'C - D trong 3 tháng cuối', 'mechanism_of_action':
+        'Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin, thromboxane, và prostacyclin. Prostaglandin tham gia vào quá trình đau, viêm, sốt, bảo vệ niêm mạc dạ dày, và điều hòa thận. Tác dụng kháng viêm và giảm đau mạnh hơn ibuprofen. Thời gian bán thải dài hơn ibuprofen (12-17 giờ) → tác dụng kéo dài hơn, có thể dùng 2 lần/ngày.'
+        , 'monitoring': [
+        'Dấu hiệu chảy máu dạ dày (phân đen, nôn ra máu, đau bụng)',
+        'Creatinine, BUN nếu dùng lâu dài hoặc bệnh nhân có nguy cơ',
+        'Huyết áp (NSAID có thể tăng huyết áp)',
+        'Chức năng gan (transaminase) nếu dùng lâu dài',
+        'Dấu hiệu suy tim (giữ nước, phù)', 'Lithium máu nếu dùng với lithium',
+        'Nhạy cảm với ánh sáng (ban da khi tiếp xúc ánh nắng)'], 'precautions':
+        ['Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày',
+        'Cân nhắc dùng PPI hoặc misoprostol nếu có nguy cơ loét dạ dày',
+        'Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp',
+        'Tránh dùng với ACE inhibitor/ARB (giảm hiệu quả, tăng nguy cơ suy thận)',
+        'Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm)',
+        'Ngừng trước phẫu thuật 5-7 ngày (tăng nguy cơ chảy máu)',
+        'Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể',
+        'Tránh tiếp xúc ánh nắng quá nhiều (nhạy cảm với ánh sáng)',
+        'Thời gian bán thải dài → tích lũy ở bệnh nhân suy thận, suy gan'],
+        'pharmacokinetics': {'half_life': '12-17 giờ (dài hơn ibuprofen)',
+        'onset': '30-60 phút', 'duration': '8-12 giờ', 'protein_binding': '99%',
+        'clearance': 'Gan (chuyển hóa qua CYP2C9, CYP1A2), thận (thải trừ)'},
+        'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp',
+        'black_box_warnings':
+        'Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ, đặc biệt khi dùng lâu dài hoặc liều cao.'
+        , 'drug_interactions': {'major': [{'drug':
+        'Warfarin, các thuốc chống đông khác', 'mechanism':
+        'Ức chế COX-1, giảm tổng hợp thromboxane, tăng nguy cơ chảy máu',
+        'effect': 'Tăng nguy cơ chảy máu nặng, tăng INR', 'management':
+        'Tránh dùng đồng thời. Nếu phải dùng, theo dõi INR thường xuyên, giảm liều warfarin nếu cần'
+        }], 'moderate': [{'drug': 'ACE inhibitor, ARB', 'mechanism':
+        'Giảm tổng hợp prostaglandin ở thận, giảm lưu lượng máu thận', 'effect':
+        'Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp', 'management':
+        'Thận trọng. Theo dõi creatinine, BUN. Cân nhắc ngừng NSAID nếu có dấu hiệu suy thận'
+        }, {'drug': 'Aspirin (liều thấp)', 'mechanism':
+        'Naproxen có thể ức chế tác dụng chống kết tập tiểu cầu của aspirin',
+        'effect': 'Giảm hiệu quả phòng ngừa nhồi máu cơ tim của aspirin',
+        'management':
+        'Dùng aspirin ít nhất 2 giờ trước naproxen, hoặc cân nhắc NSAID khác'},
+        {'drug': 'Lithium', 'mechanism': 'Giảm thải trừ lithium qua thận',
+        'effect': 'Tăng nồng độ lithium, tăng nguy cơ độc tính', 'management':
+        'Theo dõi lithium máu thường xuyên. Có thể cần giảm liều lithium'}, {
+        'drug': 'Methotrexate', 'mechanism':
+        'Giảm thải trừ methotrexate qua thận', 'effect':
+        'Tăng độc tính methotrexate (giảm bạch cầu, suy tủy)', 'management':
+        'Tránh dùng đồng thời. Nếu phải dùng, giảm liều methotrexate và theo dõi công thức máu chặt chẽ'
+        }], 'minor': [{'drug': 'Corticosteroid', 'mechanism':
+        'Tăng nguy cơ loét dạ dày', 'effect': 'Tăng nguy cơ chảy máu dạ dày',
+        'management': 'Cân nhắc dùng PPI hoặc misoprostol để bảo vệ dạ dày'}]},
+        'contraindications': {'tuyệt_đối': [
+        'Dị ứng naproxen hoặc NSAID/aspirin (phản vệ, hen suyễn do aspirin)',
+        'Loét dạ dày tá tràng đang hoạt động',
+        'Tam cá nguyệt 3 thai kỳ (3 tháng cuối)',
+        'Suy thận nặng (CrCl <30) và đang dùng ACE inhibitor/ARB'], 'tương_đối':
+        ['Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều',
+        'Suy gan nặng - thận trọng, giảm liều',
+        'Suy tim nặng - tăng nguy cơ giữ nước, suy tim nặng hơn',
+        'Bệnh mạch vành, tiền sử nhồi máu cơ tim - tăng nguy cơ biến cố tim mạch',
+        'Tăng huyết áp không kiểm soát - NSAID có thể tăng huyết áp',
+        'Dùng warfarin hoặc thuốc chống đông - tăng nguy cơ chảy máu',
+        'Người cao tuổi - tăng nguy cơ tác dụng phụ']}, 'pregnancy_lactation':
+        {'fda_category': 'C - D trong tam cá nguyệt 3', 'pregnancy_details':
+        'Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi, tăng áp lực động mạch phổi ở trẻ sơ sinh. Tránh dùng trong 3 tháng cuối.'
+        , 'lactation': {'safety': 'Compatible', 'details':
+        'Naproxen bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ <1% liều mẹ. Half-life dài (12-17 giờ) nhưng nồng độ trong sữa mẹ thấp nên ít ảnh hưởng đến trẻ.'
+        , 'recommendation':
+        'Có thể dùng khi cho con bú với liều ngắn hạn. Theo dõi trẻ về dấu hiệu bất thường (hiếm).'
+        }}, 'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
+        'Thận trọng, giảm liều 25-50%', 'severe':
+        'Tránh dùng hoặc giảm liều mạnh', 'notes':
+        'Naproxen chuyển hóa ở gan qua CYP2C9 và CYP1A2. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy. Tuy nhiên, naproxen ít gây độc gan hơn một số NSAID khác (như diclofenac).'
+        }, 'overdose_management': {'symptoms': ['Buồn nôn, nôn, đau bụng',
+        'Chóng mặt, nhức đầu', 'Lú lẫn, buồn ngủ',
+        'Ức chế hô hấp (hiếm, ở liều rất cao)', 'Hạ huyết áp', 'Suy thận cấp',
+        'Chảy máu dạ dày', 'Co giật (hiếm)'], 'antidote':
+        'Không có antidote đặc hiệu', 'treatment': [
+        'Rửa dạ dày nếu uống trong vòng 1-2 giờ',
+        'Than hoạt tính nếu uống trong vòng 1-2 giờ',
+        'Theo dõi chức năng thận (creatinine, BUN), điện giải',
+        'Theo dõi huyết áp, nhịp tim',
+        'Hỗ trợ hô hấp nếu có ức chế hô hấp (hiếm)',
+        'Truyền dịch nếu hạ huyết áp, suy thận',
+        'Theo dõi dấu hiệu chảy máu dạ dày', 'Điều trị hỗ trợ triệu chứng'],
+        'monitoring':
+        'Huyết áp, nhịp tim, ý thức, creatinine, BUN, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 12-24 giờ do half-life dài (12-17 giờ)'
+        }, 'reversal_agents': {'available': False, 'agents': []},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày', 'timing':
+        'Mỗi 8-12 giờ (do half-life dài). Có thể dùng 2 lần/ngày. Dùng với bữa ăn để giảm tác dụng phụ dạ dày.'
+        }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
+        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        }}, 'references': {'primary_sources': [
+        'FDA Drug Label - Naprosyn (naproxen)',
+        'UpToDate - Naproxen: Drug information',
+        'Lexicomp - Naproxen monograph',
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
+        'last_updated': '2025-01-06', 'evidence_level':
+        'High - FDA-approved, extensive clinical data'}},
+    "Diclofenac": {'group': 'Analgesic - NSAID', 'vietnamese_name': 'Diclofenac, Voltaren',
+        'administration': ['PO', 'IM', 'Topical'], 'indications': [
+        'Đau nhẹ đến trung bình', 'Viêm khớp dạng thấp', 'Viêm khớp xương khớp',
+        'Đau sau phẫu thuật', 'Đau do chấn thương', 'Viêm gân (topical)'],
+        'contraindications': ['Loét dạ dày tá tràng đang hoạt động',
+        'Suy thận nặng', 'Suy gan nặng', 'Có thai (3 tháng cuối)',
+        'Dị ứng NSAID/aspirin', 'Suy tim nặng'], 'dosage': {'adult_po':
+        '50mg x 2-3 lần/ngày hoặc 75-100mg x 1 lần/ngày (extended release)',
+        'adult_im': '75mg IM x 1-2 lần/ngày (tối đa 3 ngày)', 'adult_topical':
+        'Bôi 2-4g x 3-4 lần/ngày', 'notes':
+        'Hiệu quả cao nhưng nguy cơ tác dụng phụ cao'}, 'renal_adjustment': {
+        'normal': 'Không đổi', '30_60': 'Thận trọng, giảm liều', 'under_30':
+        'Tránh dùng'}, 'side_effects': [
+        'Chảy máu dạ dày (cao hơn các NSAID khác)', 'Suy thận', 'Tăng huyết áp',
+        'Phù', 'Tăng men gan', 'Đau đầu', 'Ban da'], 'interactions': [
+        'Warfarin: tăng nguy cơ chảy máu nặng',
+        'ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận',
+        'Digoxin: tăng nồng độ digoxin',
+        'Methotrexate: tăng độc tính methotrexate'], 'pregnancy':
+        'C - D trong 3 tháng cuối', 'mechanism_of_action':
+        'Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), ưu tiên COX-2 hơn một số NSAID khác. Giảm tổng hợp prostaglandin, thromboxane, và prostacyclin. Prostaglandin tham gia vào quá trình đau, viêm, sốt, bảo vệ niêm mạc dạ dày, và điều hòa thận. Tác dụng kháng viêm và giảm đau mạnh. Có nhiều dạng: uống, tiêm bắp, bôi tại chỗ. Dạng bôi tại chỗ có ít tác dụng phụ hệ thống hơn.'
+        , 'monitoring': [
+        'Dấu hiệu chảy máu dạ dày (phân đen, nôn ra máu, đau bụng) - nguy cơ cao hơn các NSAID khác'
+        , 'Creatinine, BUN nếu dùng lâu dài hoặc bệnh nhân có nguy cơ',
+        'Huyết áp (NSAID có thể tăng huyết áp)',
+        'Chức năng gan (ALT, AST) - diclofenac có nguy cơ tăng men gan cao hơn',
+        'Dấu hiệu suy tim (giữ nước, phù)', 'Lithium máu nếu dùng với lithium',
+        'Cyclosporine levels nếu dùng với cyclosporine'], 'precautions': [
+        'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày',
+        'Cân nhắc dùng PPI hoặc misoprostol nếu có nguy cơ loét dạ dày (nguy cơ cao)'
+        , 'Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp',
+        'Tránh dùng với ACE inhibitor/ARB (giảm hiệu quả, tăng nguy cơ suy thận)',
+        'Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm)',
+        'Ngừng trước phẫu thuật 5-7 ngày (tăng nguy cơ chảy máu)',
+        'Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể',
+        'Dạng bôi tại chỗ: ít tác dụng phụ hệ thống, phù hợp cho đau cục bộ',
+        'IM: chỉ dùng tối đa 3 ngày, không dùng lâu dài',
+        'Theo dõi chức năng gan chặt chẽ (nguy cơ tăng men gan)'],
+        'pharmacokinetics': {'half_life':
+        '1-2 giờ (ngắn), nhưng tác dụng kéo dài do tích lũy trong dịch khớp',
+        'onset': '30-60 phút (PO), 10-15 phút (IM)', 'duration': '8-12 giờ',
+        'protein_binding': '99.7%', 'clearance':
+        'Gan (chuyển hóa qua CYP2C9, CYP3A4), thận (thải trừ)'}, 'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng bôi: bảo quản ở nhiệt độ phòng, không làm lạnh.'
+        , 'black_box_warnings':
+        'Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ, đặc biệt khi dùng lâu dài hoặc liều cao. Diclofenac có nguy cơ tăng men gan và chảy máu dạ dày cao hơn một số NSAID khác.'
+        , 'drug_interactions': {'major': [{'drug':
+        'Warfarin, các thuốc chống đông khác', 'mechanism':
+        'Ức chế COX-1, giảm tổng hợp thromboxane, tăng nguy cơ chảy máu',
+        'effect': 'Tăng nguy cơ chảy máu nặng, tăng INR', 'management':
+        'Tránh dùng đồng thời. Nếu phải dùng, theo dõi INR thường xuyên, giảm liều warfarin nếu cần'
+        }], 'moderate': [{'drug': 'ACE inhibitor, ARB', 'mechanism':
+        'Giảm tổng hợp prostaglandin ở thận, giảm lưu lượng máu thận', 'effect':
+        'Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp', 'management':
+        'Thận trọng. Theo dõi creatinine, BUN. Cân nhắc ngừng NSAID nếu có dấu hiệu suy thận'
+        }, {'drug': 'Digoxin', 'mechanism': 'Giảm thải trừ digoxin qua thận',
+        'effect':
+        'Tăng nồng độ digoxin, tăng nguy cơ độc tính (nhịp tim chậm, block nhĩ thất)'
+        , 'management':
+        'Theo dõi digoxin máu thường xuyên. Có thể cần giảm liều digoxin'}, {
+        'drug': 'Methotrexate', 'mechanism':
+        'Giảm thải trừ methotrexate qua thận', 'effect':
+        'Tăng độc tính methotrexate (giảm bạch cầu, suy tủy)', 'management':
+        'Tránh dùng đồng thời. Nếu phải dùng, giảm liều methotrexate và theo dõi công thức máu chặt chẽ'
+        }, {'drug': 'Cyclosporine', 'mechanism': 'Tăng nguy cơ độc tính thận',
+        'effect': 'Tăng nguy cơ suy thận cấp', 'management':
+        'Theo dõi creatinine, BUN chặt chẽ. Cân nhắc NSAID khác hoặc giảm liều cyclosporine'
+        }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'Dị ứng diclofenac hoặc NSAID/aspirin (phản vệ, hen suyễn do aspirin)',
+        'Loét dạ dày tá tràng đang hoạt động',
+        'Tam cá nguyệt 3 thai kỳ (3 tháng cuối)',
+        'Suy gan nặng (do nguy cơ tăng men gan cao)',
+        'Suy thận nặng (CrCl <30) và đang dùng ACE inhibitor/ARB'], 'tương_đối':
+        ['Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều',
+        'Suy gan trung bình - thận trọng, theo dõi men gan chặt chẽ',
+        'Suy tim nặng - tăng nguy cơ giữ nước, suy tim nặng hơn',
+        'Bệnh mạch vành, tiền sử nhồi máu cơ tim - tăng nguy cơ biến cố tim mạch',
+        'Tăng huyết áp không kiểm soát - NSAID có thể tăng huyết áp',
+        'Dùng warfarin hoặc thuốc chống đông - tăng nguy cơ chảy máu',
+        'Người cao tuổi - tăng nguy cơ tác dụng phụ, đặc biệt chảy máu dạ dày']
+        }, 'pregnancy_lactation': {'fda_category':
+        'C - D trong tam cá nguyệt 3', 'pregnancy_details':
+        'Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi, tăng áp lực động mạch phổi ở trẻ sơ sinh. Tránh dùng trong 3 tháng cuối.'
+        , 'lactation': {'safety': 'Compatible', 'details':
+        'Diclofenac bài tiết vào sữa mẹ ở nồng độ rất thấp (<0.1% liều mẹ). An toàn cho trẻ bú mẹ.'
+        , 'recommendation':
+        'Có thể dùng khi cho con bú. Dạng bôi tại chỗ: ít ảnh hưởng hệ thống, an toàn hơn.'
+        }}, 'hepatic_adjustment': {'mild': 'Không đổi nhưng theo dõi men gan',
+        'moderate': 'Thận trọng, giảm liều 25-50%, theo dõi men gan chặt chẽ',
+        'severe': 'TRÁNH DÙNG (chống chỉ định)', 'notes':
+        'Diclofenac chuyển hóa ở gan qua CYP2C9 và CYP3A4. Có nguy cơ tăng men gan cao hơn các NSAID khác. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính gan.'
+        }, 'overdose_management': {'symptoms': ['Buồn nôn, nôn, đau bụng',
+        'Chóng mặt, nhức đầu', 'Lú lẫn, buồn ngủ', 'Hạ huyết áp',
+        'Suy thận cấp', 'Chảy máu dạ dày', 'Tăng men gan (ALT, AST)',
+        'Co giật (hiếm)'], 'antidote': 'Không có antidote đặc hiệu',
+        'treatment': ['Rửa dạ dày nếu uống trong vòng 1-2 giờ',
+        'Than hoạt tính nếu uống trong vòng 1-2 giờ',
+        'Theo dõi chức năng thận (creatinine, BUN), điện giải',
+        'Theo dõi chức năng gan (ALT, AST) - diclofenac có nguy cơ cao',
+        'Theo dõi huyết áp, nhịp tim', 'Truyền dịch nếu hạ huyết áp, suy thận',
+        'Theo dõi dấu hiệu chảy máu dạ dày', 'Điều trị hỗ trợ triệu chứng'],
+        'monitoring':
+        'Huyết áp, nhịp tim, ý thức, creatinine, BUN, ALT/AST, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 12-24 giờ'
+        }, 'reversal_agents': {'available': False, 'agents': []},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày (quan trọng với diclofenac do nguy cơ cao)'
+        , 'timing':
+        'Mỗi 8-12 giờ. Dùng với bữa ăn để giảm tác dụng phụ dạ dày.'}, 'im': {
+        'notes':
+        'Tiêm bắp sâu. Chỉ dùng tối đa 3 ngày, không dùng lâu dài. Có thể gây đau tại chỗ tiêm.'
+        }, 'topical': {'notes':
+        'Dạng bôi tại chỗ: Bôi 2-4g x 3-4 lần/ngày lên vùng đau. Ít tác dụng phụ hệ thống hơn dạng uống. Không bôi trên vùng da bị tổn thương hoặc niêm mạc.'
+        }}, 'references': {'primary_sources': [
+        'FDA Drug Label - Voltaren (diclofenac)',
+        'UpToDate - Diclofenac: Drug information',
+        'Lexicomp - Diclofenac monograph',
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
+        'last_updated': '2025-01-06', 'evidence_level':
+        'High - FDA-approved, extensive clinical data'}}}
+
+__all__ = ['NSAIDS_DRUGS']

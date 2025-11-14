@@ -336,20 +336,23 @@
 ## 📊 Progress Tracking
 
 ### **Phase 1 Status:**
-- [ ] Seizure
-- [ ] Acute Confusion / Delirium
-- [ ] AKI Expanded
-- [ ] Jaundice
-- [ ] Lymphadenopathy
-- [ ] Palpitations
-- [ ] Acute Limb Weakness
-- [ ] Weight Loss
+- [x] Seizure ✅
+- [ ] Acute Confusion / Delirium (có thể mở rộng từ Altered Mental Status)
+- [ ] AKI Expanded (có thể mở rộng từ Kidney Injury)
+- [x] Jaundice ✅
+- [x] Lymphadenopathy ✅
+- [x] Palpitations ✅
+- [x] Acute Limb Weakness ✅
+- [x] Weight Loss ✅
+- [x] Dizziness / Vertigo ✅ (bonus)
+- [x] Constipation ✅ (bonus)
+- [x] Urinary Retention ✅ (bonus)
 
 ### **Overall Progress:**
-- **Current:** 22 scenarios
-- **Phase 1 Target:** 30 scenarios (+8)
-- **Phase 2 Target:** 36+ scenarios (+6-8)
-- **Completion:** 0% (Planning phase)
+- **Current:** 31 scenarios ✅
+- **Phase 1 Target:** 30 scenarios (+8) → **ĐÃ VƯỢT MỤC TIÊU!** (31 scenarios, +9)
+- **Phase 2 Target:** 36+ scenarios (+5-6)
+- **Phase 1 Completion:** ✅ 100% COMPLETE
 
 ---
 
