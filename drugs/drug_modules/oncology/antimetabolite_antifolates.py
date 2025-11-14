@@ -3,7 +3,7 @@ Active module - contains all oncology drug data"""
 
 # Antimetabolite (Antifolate)s
 
-ANTIMETABOLITE_(ANTIFOLATE)S_DRUGS = {
+ANTIMETABOLITE_ANTIFOLATES_DRUGS = {
     "Methotrexate": {'group': 'Oncology - Antimetabolite (Antifolate)', 'vietnamese_name':
         'Methotrexate, MTX, Amethopterin', 'administration': ['PO', 'IV', 'IM',
         'SC', 'IT'], 'indications': ['Bệnh bạch cầu cấp (leukemia)',
@@ -163,4 +163,4 @@ ANTIMETABOLITE_(ANTIFOLATE)S_DRUGS = {
         'A - Dựa trên FDA drug labels, ACR guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         }}}
 
-__all__ = ['ANTIMETABOLITE_(ANTIFOLATE)S_DRUGS']
+__all__ = ['ANTIMETABOLITE_ANTIFOLATES_DRUGS']

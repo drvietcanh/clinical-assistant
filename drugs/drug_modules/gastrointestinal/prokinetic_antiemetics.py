@@ -3,7 +3,7 @@ Active module - contains all gastrointestinal drug data"""
 
 # Prokinetic, Antiemetics
 
-PROKINETIC,_ANTIEMETICS_DRUGS = {
+PROKINETIC_ANTIEMETICS_DRUGS = {
     "Metoclopramide": {'group': 'Gastrointestinal - Prokinetic, Antiemetic', 'vietnamese_name':
         'Metoclopramide, Primperan', 'administration': ['PO', 'IV', 'IM'],
         'indications': ['Buồn nôn, nôn', 'Liệt dạ dày',
@@ -220,4 +220,4 @@ PROKINETIC,_ANTIEMETICS_DRUGS = {
         'last_updated': '2024-12-19', 'evidence_level':
         'High - Multiple RCTs, safety warnings (QT prolongation)'}}}
 
-__all__ = ['PROKINETIC,_ANTIEMETICS_DRUGS']
+__all__ = ['PROKINETIC_ANTIEMETICS_DRUGS']

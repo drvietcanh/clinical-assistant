@@ -3,7 +3,7 @@ Active module - contains all respiratory drug data"""
 
 # Anticholinergic (Short-acting)s
 
-ANTICHOLINERGIC_(SHORT_ACTING)S_DRUGS = {
+ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
     "Ipratropium": {'group': 'Respiratory - Anticholinergic (Short-acting)', 'vietnamese_name':
         'Ipratropium, Atrovent', 'administration': ['Inhalation', 'Nebulizer'],
         'indications': ['COPD (cắt cơn và phòng ngừa)',
@@ -129,4 +129,4 @@ ANTICHOLINERGIC_(SHORT_ACTING)S_DRUGS = {
         'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'}}}
 
-__all__ = ['ANTICHOLINERGIC_(SHORT_ACTING)S_DRUGS']
+__all__ = ['ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS']

@@ -3,7 +3,7 @@ Active module - contains all respiratory drug data"""
 
 # Long-acting Beta-2 Agonist (LABA)s
 
-LONG_ACTING_BETA_2_AGONIST_(LABA)S_DRUGS = {
+LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
     "Salmeterol": {'group': 'Respiratory - Long-acting Beta-2 Agonist (LABA)',
         'vietnamese_name': 'Salmeterol, Serevent', 'administration': [
         'Inhalation'], 'indications': [
@@ -140,4 +140,4 @@ LONG_ACTING_BETA_2_AGONIST_(LABA)S_DRUGS = {
         'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'}}}
 
-__all__ = ['LONG_ACTING_BETA_2_AGONIST_(LABA)S_DRUGS']
+__all__ = ['LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS']

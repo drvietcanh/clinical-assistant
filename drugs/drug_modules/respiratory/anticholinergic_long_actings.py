@@ -3,7 +3,7 @@ Active module - contains all respiratory drug data"""
 
 # Anticholinergic (Long-acting)s
 
-ANTICHOLINERGIC_(LONG_ACTING)S_DRUGS = {
+ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
     "Tiotropium": {'group': 'Respiratory - Anticholinergic (Long-acting)', 'vietnamese_name':
         'Tiotropium, Spiriva', 'administration': [
         'Inhalation (HandiHaler hoặc Respimat)'], 'indications': [
@@ -131,4 +131,4 @@ ANTICHOLINERGIC_(LONG_ACTING)S_DRUGS = {
         'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'}}}
 
-__all__ = ['ANTICHOLINERGIC_(LONG_ACTING)S_DRUGS']
+__all__ = ['ANTICHOLINERGIC_LONG_ACTINGS_DRUGS']

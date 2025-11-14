@@ -3,7 +3,7 @@ Active module - contains all analgesic drug data"""
 
 # Antimigraine (5-HT1 Receptor Agonist)s
 
-ANTIMIGRAINE_(5_HT1_RECEPTOR_AGONIST)S_DRUGS = {
+ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
     "Sumatriptan": {'group': 'Analgesic - Antimigraine (5-HT1 Receptor Agonist)',
         'vietnamese_name': 'Sumatriptan, Imitrex', 'administration': ['PO',
         'SC', 'Nasal'], 'indications': [
@@ -142,4 +142,4 @@ ANTIMIGRAINE_(5_HT1_RECEPTOR_AGONIST)S_DRUGS = {
         'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'}}}
 
-__all__ = ['ANTIMIGRAINE_(5_HT1_RECEPTOR_AGONIST)S_DRUGS']
+__all__ = ['ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS']

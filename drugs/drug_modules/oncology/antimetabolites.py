@@ -129,4 +129,14 @@ ANTIMETABOLITES_DRUGS = {
         'last_updated': '2025-01-15', 'evidence_level':
         'High (FDA-approved, extensive clinical data)'}}}
 
+# Import antimetabolite antifolates
+from .antimetabolite_antifolates import ANTIMETABOLITE_ANTIFOLATES_DRUGS
+
+# Merge with antifolates
+_ANTIMETABOLITES_BASE = ANTIMETABOLITES_DRUGS.copy()
+ANTIMETABOLITES_DRUGS = {
+    **_ANTIMETABOLITES_BASE,
+    **ANTIMETABOLITE_ANTIFOLATES_DRUGS,
+}
+
 __all__ = ['ANTIMETABOLITES_DRUGS']
