@@ -16,11 +16,11 @@ def render():
     with col1:
         st.markdown("#### 📝 Nhập Giá Trị")
         
-        ph = st.number_input("pH", 6.8, 7.8, 7.40, 0.01)
+        ph = st.number_input("pH", 6.8, 7.8, 7.40, 0.01, format="%.2f")
         pco2 = st.number_input("PaCO₂ (mmHg)", 10.0, 100.0, 40.0, 0.1, format="%.1f")
-        po2 = st.number_input("PaO₂ (mmHg)", 30.0, 600.0, 95.0, 1.0)
+        po2 = st.number_input("PaO₂ (mmHg)", 30.0, 600.0, 95.0, 1.0, format="%.0f")
         hco3 = st.number_input("HCO₃ (mEq/L)", 5.0, 50.0, 24.0, 0.1, format="%.1f")
-        fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 21.0, 1.0)
+        fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 21.0, 1.0, format="%.0f")
     
     with col2:
         st.markdown("#### 📊 Giải Thích")

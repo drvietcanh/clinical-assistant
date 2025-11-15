@@ -103,6 +103,7 @@ def render():
             max_value=2000.0,
             value=250.0,
             step=1.0,
+            format="%.0f",
             key="plt"
         )
     

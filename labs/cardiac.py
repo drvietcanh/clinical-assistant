@@ -19,11 +19,13 @@ def render():
         trop_i = st.number_input(
             "Troponin I (ng/mL)", 
             0.0, 10.0, 0.02, 0.01,
+            format="%.2f",
             help="Bình thường: <0.04 ng/mL"
         )
         bnp = st.number_input(
             "BNP - B-type Natriuretic Peptide (pg/mL)", 
             0.0, 5000.0, 50.0, 10.0,
+            format="%.0f",
             help="Bình thường: <100 pg/mL"
         )
         ckmb = st.number_input(

@@ -16,9 +16,9 @@ def render():
     with col1:
         st.markdown("#### 📝 Nhập Giá Trị")
         
-        alt = st.number_input("ALT/SGPT (U/L)", 0.0, 1000.0, 30.0, 1.0)
-        ast = st.number_input("AST/SGOT (U/L)", 0.0, 1000.0, 25.0, 1.0)
-        alp = st.number_input("ALP (U/L)", 0.0, 1000.0, 80.0, 1.0)
+        alt = st.number_input("ALT/SGPT (U/L)", 0.0, 1000.0, 30.0, 1.0, format="%.0f")
+        ast = st.number_input("AST/SGOT (U/L)", 0.0, 1000.0, 25.0, 1.0, format="%.0f")
+        alp = st.number_input("ALP (U/L)", 0.0, 1000.0, 80.0, 1.0, format="%.0f")
         
         # Bilirubin with unit conversion
         st.markdown("#### 🔄 Bilirubin")
@@ -36,6 +36,7 @@ def render():
             bili_t_input = st.number_input(
                 "Bilirubin Total (µmol/L)",
                 0.0, 500.0, 13.7, 1.0,
+                format="%.1f",
                 help="Bình thường: 3-17 µmol/L",
                 key="bili_t_umol"
             )
