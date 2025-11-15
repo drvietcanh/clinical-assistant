@@ -45,12 +45,15 @@
 
 ### **Week 1: Design System (Continuing)**
 
-#### **Next Steps:**
+#### **Completed:**
 - [x] Apply new scoring components to SOFA calculator ✅
-- [ ] Apply new scoring components to APACHE II
-- [ ] Apply new scoring components to SAPS II
-- [ ] Create quick reference tables for major calculators
+- [x] Apply new scoring components to APACHE II ✅
+- [x] Apply new scoring components to SAPS II ✅
+
+#### **Next Steps:**
+- [ ] Create quick reference tables for other calculators
 - [ ] Test color-coded results display
+- [ ] Apply to MODS and other scoring calculators
 
 ---
 
@@ -80,10 +83,10 @@
 ## 📊 METRICS
 
 ### **Current Status:**
-- **Design System:** 60% complete
-- **Component Library:** 50% complete
-- **Scoring Calculators:** 40% enhanced (SOFA done)
-- **Overall UI/UX:** 40% optimized
+- **Design System:** 70% complete
+- **Component Library:** 60% complete
+- **Scoring Calculators:** 60% enhanced (SOFA, APACHE II, SAPS II done)
+- **Overall UI/UX:** 50% optimized
 
 ### **Target Metrics (End of Month 1):**
 - UI/UX score: 4.0+ / 5.0
