@@ -202,7 +202,6 @@ def render_crrt_calculator():
             value=70.0,
             step=0.1,
             format="%.1f",
-            format="%.1f",
             key="crrt_weight"
         )
     
