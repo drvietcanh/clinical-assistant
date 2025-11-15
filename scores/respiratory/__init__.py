@@ -9,6 +9,7 @@ from .wells_pe import render as render_wells_pe
 from .smartcop import render as render_smartcop
 from .bode import render as render_bode
 from .perc import render as render_perc
+from .ards_berlin import render as render_ards_berlin
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -26,6 +27,7 @@ def render_respiratory_calculator(calculator_id):
         "BODE Index": render_bode,
         "Wells PE": render_wells_pe,
         "PERC": render_perc,
+        "ARDS Berlin": render_ards_berlin,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -42,5 +44,7 @@ __all__ = [
     'render_smartcop',
     'render_bode',
     'render_wells_pe',
+    'render_perc',
+    'render_ards_berlin',
 ]
 

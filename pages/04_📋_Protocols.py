@@ -21,7 +21,13 @@ from protocols import (
     render_aki,
     render_cap,
     render_hap_vap,
-    render_cdiff
+    render_cdiff,
+    render_thyrotoxic_crisis,
+    render_myxedema_coma,
+    render_adrenal_crisis,
+    render_tls,
+    render_febrile_neutropenia,
+    render_hypercalcemia
 )
 
 # Standard page setup
@@ -42,7 +48,9 @@ with st.sidebar:
             "🫁 Hô Hấp (Respiratory)",
             "❤️ Tim Mạch (Cardiology)",
             "🧪 Thận (Nephrology)",
-            "🦠 Nhiễm Khuẩn (Infectious)"
+            "🦠 Nhiễm Khuẩn (Infectious)",
+            "⚕️ Nội Tiết (Endocrinology)",
+            "🎗️ Ung Thư (Oncology)"
         ]
     )
     
@@ -96,6 +104,26 @@ with st.sidebar:
                 "🫁 CAP Management",
                 "🏥 HAP/VAP Guidelines",
                 "🦠 C. diff Treatment"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Nội Tiết" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "⚡ Thyrotoxic Crisis",
+                "❄️ Myxedema Coma",
+                "⚡ Adrenal Crisis"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Ung Thư" in specialty or "Oncology" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "🎗️ Tumor Lysis Syndrome",
+                "🌡️ Febrile Neutropenia",
+                "📈 Hypercalcemia of Malignancy"
             ],
             label_visibility="collapsed"
         )
@@ -164,6 +192,24 @@ elif "HAP" in protocol or "VAP" in protocol:
 
 elif "C. diff" in protocol or "cdiff" in protocol.lower():
     render_cdiff()
+
+elif "Thyrotoxic" in protocol or "thyrotoxic" in protocol.lower():
+    render_thyrotoxic_crisis()
+
+elif "Myxedema" in protocol or "myxedema" in protocol.lower():
+    render_myxedema_coma()
+
+elif "Adrenal" in protocol or "adrenal" in protocol.lower():
+    render_adrenal_crisis()
+
+elif "Tumor Lysis" in protocol or "TLS" in protocol or "tls" in protocol.lower():
+    render_tls()
+
+elif "Febrile Neutropenia" in protocol or "neutropenia" in protocol.lower():
+    render_febrile_neutropenia()
+
+elif "Hypercalcemia" in protocol or "hypercalcemia" in protocol.lower():
+    render_hypercalcemia()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

@@ -37,6 +37,7 @@ SCORES_BY_SPECIALTY = {
         "Wells PE": {"name": "Wells PE Score", "desc": "Nguy cơ thuyên tắc phổi", "status": "✅"},
         "SMART-COP": {"name": "SMART-COP", "desc": "Cần hỗ trợ hô hấp trong viêm phổi", "status": "✅"},
         "BODE Index": {"name": "BODE Index", "desc": "Tiên lượng COPD", "status": "✅"},
+        "ARDS Berlin": {"name": "ARDS Berlin Definition", "desc": "Tiêu chuẩn chẩn đoán ARDS (Berlin 2012)", "status": "✅"},
     },
     
     "🧠 Thần Kinh (Neurology)": {
@@ -45,6 +46,8 @@ SCORES_BY_SPECIALTY = {
         "ICH Score": {"name": "ICH Score", "desc": "Tiên lượng xuất huyết nội sọ", "status": "✅"},
         "Hunt & Hess": {"name": "Hunt & Hess Scale", "desc": "Phân loại xuất huyết dưới nhện", "status": "✅"},
         "mRS": {"name": "mRS - Modified Rankin Scale", "desc": "Mức độ khuyết tật sau đột quỵ", "status": "✅"},
+        "ASPECTS": {"name": "ASPECTS - Alberta Stroke Program Early CT Score", "desc": "Đánh giá thay đổi thiếu máu sớm trên CT - Quyết định thrombolysis/thrombectomy", "status": "✅"},
+        "ABCD2": {"name": "ABCD2 Score", "desc": "Phân tầng nguy cơ đột quỵ sau TIA", "status": "✅"},
     },
     
     "🩸 Tiêu Hóa - Gan Mật (GI/Hepatology)": {
@@ -90,6 +93,7 @@ SCORES_BY_SPECIALTY = {
         "Pediatric GCS": {"name": "Pediatric GCS", "desc": "Ý thức trẻ em", "status": "✅"},
         "PELOD-2": {"name": "PELOD-2 - Pediatric Logistic Organ Dysfunction", "desc": "Suy đa cơ quan ICU nhi", "status": "✅"},
         "PRISM III": {"name": "PRISM III - Pediatric Risk of Mortality", "desc": "Nguy cơ tử vong ICU nhi", "status": "✅"},
+        "Pediatric SOFA": {"name": "Pediatric SOFA (pSOFA)", "desc": "Suy đa cơ quan ICU nhi - Điều chỉnh theo tuổi", "status": "✅"},
     },
     
     "🤰 Sản Khoa (Obstetrics)": {

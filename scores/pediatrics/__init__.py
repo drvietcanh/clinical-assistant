@@ -9,6 +9,7 @@ from .pediatric_gcs import render as render_pediatric_gcs
 from .westley_croup import render as render_westley_croup
 from .pelod2 import render as render_pelod2
 from .prism3 import render as render_prism3
+from .pediatric_sofa import render as render_pediatric_sofa
 
 
 def render_pediatrics_calculator(calculator_id):
@@ -27,6 +28,7 @@ def render_pediatrics_calculator(calculator_id):
         "Pediatric GCS": render_pediatric_gcs,
         "PELOD-2": render_pelod2,
         "PRISM III": render_prism3,
+        "Pediatric SOFA": render_pediatric_sofa,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -43,5 +45,6 @@ __all__ = [
     'render_pediatric_gcs',
     'render_pelod2',
     'render_prism3',
+    'render_pediatric_sofa',
 ]
 

@@ -8,6 +8,8 @@ from .nihss import render as render_nihss
 from .ich_score import render as render_ich_score
 from .hunt_hess import render as render_hunt_hess
 from .mrs import render as render_mrs
+from .aspects import render as render_aspects
+from .abcd2 import render as render_abcd2
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -23,7 +25,9 @@ def render_neurology_calculator(calculator_id):
         "NIHSS": render_nihss,
         "ICH Score": render_ich_score,
         "Hunt & Hess": render_hunt_hess,
-        "mRS": render_mrs,  # ✅ ALL NEUROLOGY SCORES COMPLETE!
+        "mRS": render_mrs,
+        "ASPECTS": render_aspects,
+        "ABCD2": render_abcd2,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -40,5 +44,7 @@ __all__ = [
     'render_ich_score',
     'render_hunt_hess',
     'render_mrs',
+    'render_aspects',
+    'render_abcd2',
 ]
 

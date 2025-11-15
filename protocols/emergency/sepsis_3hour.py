@@ -432,7 +432,7 @@ def render():
     st.markdown("### ⚠️ Các Trường Hợp Đặc Biệt")
     
     with st.expander("🔍 Xem các trường hợp đặc biệt", expanded=False):
-        st.markdown("#### **Suy thận:**
+        st.markdown("""#### **Suy thận:**
         - Điều chỉnh liều kháng sinh theo CrCl
         - Thận trọng với truyền dịch (nguy cơ quá tải)
         - Xem xét lọc máu sớm nếu cần
