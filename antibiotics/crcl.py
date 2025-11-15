@@ -30,6 +30,7 @@ def render():
             max_value=200.0,
             value=70.0,
             step=0.5,
+            format="%.1f",
             help="Cân nặng thực tế"
         )
         

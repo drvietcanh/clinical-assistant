@@ -46,6 +46,7 @@ def render():
             max_value=200.0,
             value=70.0,
             step=0.5,
+            format="%.1f",
             key="ag_weight"
         )
         
@@ -55,6 +56,7 @@ def render():
             max_value=220,
             value=170,
             step=1,
+            format="%d",
             key="ag_height"
         )
         

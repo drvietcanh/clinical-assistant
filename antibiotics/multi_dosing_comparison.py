@@ -53,15 +53,15 @@ def render_multi_comparison():
             # Manual input
             col1, col2 = st.columns(2)
             with col1:
-                crcl = st.number_input("CrCl (mL/min)", min_value=0.0, max_value=200.0, value=float(patient_crcl), step=1.0, key="multi_crcl")
+                crcl = st.number_input("CrCl (mL/min)", min_value=0, max_value=200, value=int(patient_crcl), step=1, format="%d", key="multi_crcl")
             with col2:
-                egfr = st.number_input("eGFR (mL/min/1.73m²)", min_value=0.0, max_value=200.0, value=float(patient_egfr), step=1.0, key="multi_egfr")
+                egfr = st.number_input("eGFR (mL/min/1.73m²)", min_value=0, max_value=200, value=int(patient_egfr), step=1, format="%d", key="multi_egfr")
     else:
         col1, col2 = st.columns(2)
         with col1:
-            crcl = st.number_input("CrCl (mL/min)", min_value=0.0, max_value=200.0, value=70.0, step=1.0, key="multi_crcl")
+            crcl = st.number_input("CrCl (mL/min)", min_value=0, max_value=200, value=70, step=1, format="%d", key="multi_crcl")
         with col2:
-            egfr = st.number_input("eGFR (mL/min/1.73m²)", min_value=0.0, max_value=200.0, value=70.0, step=1.0, key="multi_egfr")
+            egfr = st.number_input("eGFR (mL/min/1.73m²)", min_value=0, max_value=200, value=70, step=1, format="%d", key="multi_egfr")
     
     # Weight for dose calculation
     weight = st.number_input("Cân nặng (kg) - để tính liều cụ thể", min_value=10.0, max_value=200.0, value=70.0, step=1.0, format="%.1f", key="multi_weight")
