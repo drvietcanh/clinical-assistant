@@ -2,11 +2,20 @@
 
 **Để tiếp tục nhanh ở phiên sau:**
 
-## ✅ Đã làm
+## ✅ Đã làm (Phiên này - 2025-11-15)
 
-- Tách **9 files** lớn nhất
-- Tất cả logic CRITICAL files đã được tách
-- Còn lại: 4 data files (có thể chấp nhận)
+- Tách **2 files** CRITICAL:
+  - ✅ `drugs/drug_modules/antimicrobial/antibiotics.py` (1067 → ~10 dòng)
+    - Tách thành 4 module: beta_lactams, lincosamides, sulfonamides, fluoroquinolones
+  - ✅ `drugs/drug_modules/cardiovascular/beta_blockers.py` (1048 → ~10 dòng)
+    - Tách thành 2 module: selective, non_selective
+
+## 📊 Tổng kết
+
+- **Đã tách:** 25 files lớn
+- **CRITICAL files:** 20 → 7 (giảm 65%)
+- **WARNING:** 40 files
+- **OK:** 198+ files
 
 ## 🚀 Bắt đầu lại
 
@@ -20,9 +29,9 @@ cat MODULE_SPLIT_PROGRESS.md
 
 ## 📊 Kết quả hiện tại
 
-- **CRITICAL:** 4 files (chỉ data files)
-- **WARNING:** 42 files (hầu hết score calculators)
-- **OK:** 198 files
+- **CRITICAL:** 7 files (chỉ data files, đều <950 dòng)
+- **WARNING:** 40 files (hầu hết score calculators)
+- **OK:** 198+ files
 
 ## 📝 Files quan trọng
 
