@@ -46,7 +46,7 @@
 ### **Week 1: Design System (Continuing)**
 
 #### **Next Steps:**
-- [ ] Apply new scoring components to SOFA calculator
+- [x] Apply new scoring components to SOFA calculator ✅
 - [ ] Apply new scoring components to APACHE II
 - [ ] Apply new scoring components to SAPS II
 - [ ] Create quick reference tables for major calculators
@@ -81,9 +81,9 @@
 
 ### **Current Status:**
 - **Design System:** 60% complete
-- **Component Library:** 40% complete
-- **Scoring Calculators:** 30% enhanced
-- **Overall UI/UX:** 35% optimized
+- **Component Library:** 50% complete
+- **Scoring Calculators:** 40% enhanced (SOFA done)
+- **Overall UI/UX:** 40% optimized
 
 ### **Target Metrics (End of Month 1):**
 - UI/UX score: 4.0+ / 5.0
