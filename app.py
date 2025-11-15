@@ -16,7 +16,11 @@ from config.app_config import get_module_list_for_navigation, APP_CONFIG
 from config.theme import get_module_style
 
 # Import UI components
-from components.search import render_search
+try:
+    from components.search_enhanced import render_search_enhanced as render_search
+except ImportError:
+    # Fallback to original search
+    from components.search import render_search
 from components.favorites import render_favorites
 from components.recently_used import render_recently_used
 from components.stats import render_stats, render_updates, render_tips

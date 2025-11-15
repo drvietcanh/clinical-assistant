@@ -20,6 +20,13 @@ plotly>=5.17.0
 # PDF Export
 reportlab>=4.0.0
 
+# Enhanced Search (optional but recommended)
+rapidfuzz>=3.0.0  # Fast fuzzy string matching
+
+# Export & QR Code (optional but recommended)
+qrcode>=7.4.2  # QR code generation
+Pillow>=10.0.0  # Image processing for QR codes
+
 # Optional: AI integration (for future features)
 # google-generativeai>=0.3.0  # Gemini AI
 # openai>=1.0.0  # OpenAI GPT-4

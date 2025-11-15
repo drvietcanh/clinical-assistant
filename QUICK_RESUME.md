@@ -4,7 +4,31 @@
 
 ## ✅ Đã làm (Phiên này - 2025-11-15)
 
-- Tách **10 files** CRITICAL:
+### 🎨 UI/UX Improvements:
+- ✅ **Enhanced Search với AI Suggestions** ⭐ MỚI
+  - Real-time suggestions khi gõ
+  - Search history (20 queries)
+  - Popular searches tracking
+  - Calculator usage tracking
+  - Smart ranking (relevance + usage)
+  - Better fuzzy matching (rapidfuzz)
+  - Keyboard shortcuts (Ctrl+K, Esc)
+- ✅ **Enhanced Export - PDF & QR Code** ⭐ MỚI
+  - PDF export với formatting
+  - QR code generation (share results)
+  - Print-friendly view
+  - Enhanced export buttons
+  - Batch export support
+
+### 📦 Module Splitting:
+- Tách **13 files** CRITICAL/WARNING:
+  - ✅ `drugs/drug_modules/metabolic.py` (794 → ~13 dòng) ⭐ MỚI
+    - Tách thành 3 module: thyroid_hormones.py (1 thuốc), antithyroid.py (2 thuốc), corticosteroids.py (1 thuốc)
+  - ✅ `drugs/drug_modules/antimicrobial/antifungals.py` (767 → ~13 dòng) ⭐ MỚI
+    - Tách thành 2 module: azoles.py (3 thuốc), polyenes.py (1 thuốc)
+  - ✅ `scores/metabolism/fena.py` (701 → 90 dòng) ⭐ MỚI
+    - Tách thành 4 module: calculator.py, ui_input.py, ui_results.py, ui_help.py
+  - ✅ Tách **10 files** CRITICAL khác:
   - ✅ `antibiotics/antibiotics_data/cephalosporins.py` (923 → ~10 dòng) ⭐ MỚI
     - Tách thành 7 module: generation_1.py (3 thuốc), generation_2.py (2 thuốc), generation_3.py (8 thuốc), generation_4.py (1 thuốc), generation_5.py (2 thuốc), cephamycins.py (2 thuốc), beta_lactamase_inhibitors.py (3 thuốc)
   - ✅ `drugs/drug_modules/endocrinology_other/corticosteroids.py` (854 → ~10 dòng) ⭐ MỚI
@@ -26,10 +50,19 @@
 
 ## 📊 Tổng kết
 
-- **Đã tách:** 33 files lớn
+### Module Splitting:
+- **Đã tách:** 36 files lớn (tăng 3 files mới)
 - **CRITICAL files:** 20 → 0 (giảm 100%! 🎉)
-- **WARNING:** 62 files
-- **OK:** 484 files
+- **WARNING:** 62 → 60 files (giảm 2 files)
+- **OK:** 484 → 496 files (tăng 12 files)
+
+### UI/UX Improvements:
+- ✅ Enhanced Search với AI Suggestions
+- ✅ Enhanced Export - PDF & QR Code
+- ✅ Better fuzzy matching (rapidfuzz)
+- ✅ Smart ranking algorithm
+- ✅ Real-time suggestions
+- ✅ Usage tracking
 
 ## 🚀 Bắt đầu lại
 
@@ -44,8 +77,8 @@ cat MODULE_SPLIT_PROGRESS.md
 ## 📊 Kết quả hiện tại
 
 - **CRITICAL:** 0 files 🎉 (Đã tách hết!)
-- **WARNING:** 62 files (hầu hết score calculators)
-- **OK:** 484 files
+- **WARNING:** 61 files (hầu hết score calculators)
+- **OK:** 491 files (tăng từ tách modules)
 
 ## 📝 Files quan trọng
 

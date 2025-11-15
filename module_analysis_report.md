@@ -1,12 +1,12 @@
 # BÁO CÁO PHÂN TÍCH MODULE
 **Ngày tạo:** D:\1app\medical
-**Tổng số file:** 546
+**Tổng số file:** 556
 
 ## 📊 TÓM TẮT
 
 - ⚠️  **CRITICAL** (> 800 dòng): 0 files
-- ⚠️  **Recommended** (> 500 dòng): 62 files
-- ✅ **OK**: 484 files
+- ⚠️  **Recommended** (> 500 dòng): 60 files
+- ✅ **OK**: 496 files
 
 ## 🔴 CẦN TÁCH NGAY (CRITICAL)
 
@@ -14,23 +14,9 @@ Không có file nào cần tách ngay.
 
 ## 🟡 NÊN XEM XÉT TÁCH
 
-### drugs\drug_modules\metabolic.py (794 dòng)
-- ⚠️  File dài (794 dòng) - Nên xem xét tách
-- 📝 Code thực tế: 791 dòng (không tính comment)
-- 📊 Có data dictionary lớn (~59 entries) - Nên tách data ra file riêng
-
-### drugs\drug_modules\antimicrobial\antifungals.py (767 dòng)
-- ⚠️  File dài (767 dòng) - Nên xem xét tách
-- 📝 Code thực tế: 760 dòng (không tính comment)
-- 📊 Có data dictionary lớn (~56 entries) - Nên tách data ra file riêng
-
 ### test_new_features_extended.py (742 dòng)
 - ⚠️  File dài (742 dòng) - Nên xem xét tách
 - 📝 Code thực tế: 559 dòng (không tính comment)
-
-### scores\metabolism\fena.py (701 dòng)
-- ⚠️  File dài (701 dòng) - Nên xem xét tách
-- 📝 Code thực tế: 566 dòng (không tính comment)
 
 ### scores\gi\child_pugh.py (699 dòng)
 - ⚠️  File dài (699 dòng) - Nên xem xét tách
@@ -80,6 +66,10 @@ Không có file nào cần tách ngay.
 ### scores\cardiology\qtc.py (639 dòng)
 - ⚠️  File dài (639 dòng) - Nên xem xét tách
 - 📝 Code thực tế: 501 dòng (không tính comment)
+
+### drugs\drug_modules\antimicrobial\antifungals\azoles.py (639 dòng)
+- ⚠️  File dài (639 dòng) - Nên xem xét tách
+- 📝 Code thực tế: 634 dòng (không tính comment)
 
 ### drugs\drug_modules\cardiovascular\beta_blockers\selective.py (631 dòng)
 - ⚠️  File dài (631 dòng) - Nên xem xét tách
@@ -261,10 +251,7 @@ Không có file nào cần tách ngay.
 
 | File | Dòng | Code | Classes | Functions | Data Dict |
 |------|------|------|---------|-----------|-----------|
-| drugs\drug_modules\metabolic.py | 794 | 791 | 0 | 0 | ✅ (~59) |
-| drugs\drug_modules\antimicrobial\antifungals.py | 767 | 760 | 0 | 0 | ✅ (~56) |
 | test_new_features_extended.py | 742 | 559 | 0 | 0 | ❌ |
-| scores\metabolism\fena.py | 701 | 566 | 0 | 1 | ❌ |
 | scores\gi\child_pugh.py | 699 | 549 | 0 | 1 | ❌ |
 | scores\gi\meld.py | 698 | 543 | 0 | 2 | ❌ |
 | scores\gi\glasgow_blatchford.py | 686 | 544 | 0 | 2 | ❌ |
@@ -277,7 +264,10 @@ Không có file nào cần tách ngay.
 | scores\respiratory\smartcop.py | 649 | 512 | 0 | 1 | ❌ |
 | scores\gi\meld_na.py | 645 | 499 | 0 | 3 | ❌ |
 | scores\cardiology\qtc.py | 639 | 501 | 0 | 8 | ❌ |
+| drugs\drug_modules\antimicrobial\antifungals\azoles.py | 639 | 634 | 0 | 0 | ❌ |
 | drugs\drug_modules\cardiovascular\beta_blockers\selective.py | 631 | 627 | 0 | 0 | ❌ |
 | drugs\drug_modules\cardiovascular\diuretics.py | 630 | 623 | 0 | 0 | ❌ |
 | scores\neurology\hunt_hess.py | 628 | 484 | 0 | 1 | ❌ |
 | scores\infectious\centor.py | 625 | 471 | 0 | 4 | ❌ |
+| scores\surgery\asa.py | 624 | 489 | 0 | 3 | ❌ |
+| scores\gi\bisap.py | 622 | 474 | 0 | 1 | ❌ |

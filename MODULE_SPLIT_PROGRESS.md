@@ -5,9 +5,24 @@
 
 ## ✅ ĐÃ HOÀN THÀNH
 
-### Files đã tách (25 files):
+### Files đã tách (27 files):
 
-1. ✅ **`drugs/drug_database.py`** (8735 → 17 dòng)
+1. ✅ **`drugs/drug_modules/metabolic.py`** (794 → 12 dòng) ⭐ MỚI
+   - Tách thành 3 module:
+     - `drugs/drug_modules/metabolic/thyroid_hormones.py` - 1 thuốc (Levothyroxine)
+     - `drugs/drug_modules/metabolic/antithyroid.py` - 2 thuốc (Methimazole, Propylthiouracil)
+     - `drugs/drug_modules/metabolic/corticosteroids.py` - 1 thuốc (Prednisone)
+     - `drugs/drug_modules/metabolic/__init__.py` - Merge tất cả
+   - Status: ✅ Hoàn thành, test OK (giảm 98.5% từ 794 dòng)
+
+2. ✅ **`drugs/drug_modules/antimicrobial/antifungals.py`** (767 → 11 dòng) ⭐ MỚI
+   - Tách thành 2 module:
+     - `drugs/drug_modules/antimicrobial/antifungals/azoles.py` - 3 thuốc (Fluconazole, Itraconazole, Voriconazole)
+     - `drugs/drug_modules/antimicrobial/antifungals/polyenes.py` - 1 thuốc (Nystatin)
+     - `drugs/drug_modules/antimicrobial/antifungals/__init__.py` - Merge tất cả
+   - Status: ✅ Hoàn thành, test OK (giảm 98.6% từ 767 dòng)
+
+3. ✅ **`drugs/drug_database.py`** (8735 → 17 dòng)
    - Tách: `drugs/drug_database_data.py`
    - Status: ✅ Hoàn thành, test OK
 

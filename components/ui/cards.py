@@ -143,8 +143,22 @@ def render_calculator_card(
         if show_open_button:
             with col2:
                 if st.button("▶️ Mở", key=f"open_card_{calc_id}", type="primary", use_container_width=True):
-                    from components.recently_used import add_to_recently_used
+                    from utils.state import add_to_recently_used
                     add_to_recently_used(calc_id)
+                    # Page should be a path (e.g., "pages/01_📊_Scores.py")
+                    # If it's a page name, map it to path
+                    if not page.endswith('.py'):
+                        page_path_map = {
+                            'Scores': 'pages/01_📊_Scores.py',
+                            'Labs': 'pages/05_🔬_Labs_and_Calculators.py',
+                            'Antibiotics': 'pages/02_💊_Antibiotics.py',
+                            'Drugs': 'pages/07_💊_Drug_Database.py',
+                            'Ventilator': 'pages/03_🫁_Ventilator.py',
+                            'Critical Care': 'pages/09_🫁_Critical_Care.py',
+                            'Protocols': 'pages/04_📋_Protocols.py',
+                            'Diagnosis': 'pages/06_🩺_Diagnosis.py',
+                        }
+                        page = page_path_map.get(page, 'pages/01_📊_Scores.py')
                     st.switch_page(page)
 
 
