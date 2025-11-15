@@ -82,7 +82,8 @@ def render_comprehensive_calculator():
         )
         height = st.number_input(
             "Chiều cao (cm)", 
-            100, 220, 170, 1, 
+            100, 220, 170, 1,
+            format="%d",
             key="comp_height",
             help="Chiều cao thực tế của bệnh nhân"
         )
@@ -102,37 +103,43 @@ def render_comprehensive_calculator():
         )
         vt = st.number_input(
             "Vt (mL)", 
-            0, 1000, 0, 10, 
+            0, 1000, 0, 10,
+            format="%d",
             key="comp_vt",
             help="Thể tích khí lưu thông"
         )
         rr = st.number_input(
             "RR (lần/phút)", 
-            0, 50, 0, 1, 
+            0, 50, 0, 1,
+            format="%d",
             key="comp_rr",
             help="Tần số thở"
         )
         peep = st.number_input(
             "PEEP (cmH2O)", 
-            0, 30, 0, 1, 
+            0, 30, 0, 1,
+            format="%d",
             key="comp_peep",
             help="Áp lực dương cuối thì thở ra"
         )
         fio2 = st.number_input(
             "FiO₂ (%)", 
-            21, 100, 21, 1, 
+            21, 100, 21, 1,
+            format="%d",
             key="comp_fio2",
             help="Nồng độ O₂ trong khí thở vào"
         )
         plateau = st.number_input(
             "Plateau Pressure (cmH2O)", 
-            0, 60, 0, 1, 
+            0, 60, 0, 1,
+            format="%d",
             key="comp_plateau",
             help="Áp lực cao nguyên (đo khi giữ hơi thở)"
         )
         peak = st.number_input(
             "Peak Pressure (cmH2O)", 
-            0, 80, 0, 1, 
+            0, 80, 0, 1,
+            format="%d",
             key="comp_peak",
             help="Áp lực đỉnh (tùy chọn)"
         )
@@ -145,6 +152,7 @@ def render_comprehensive_calculator():
         end_expiratory_pause = st.number_input(
             "End-Expiratory Pause Pressure (cmH2O) - Tùy chọn",
             0, 50, 0, 1,
+            format="%d",
             key="comp_end_exp_pause",
             help="Áp lực khi giữ hơi thở cuối thì thở ra (để tính auto-PEEP chính xác)"
         )

@@ -29,6 +29,7 @@ def render_ardsnet():
             max_value=220,
             value=170,
             step=1,
+            format="%d",
             help="Chiều cao thực tế của bệnh nhân"
         )
         
@@ -41,6 +42,7 @@ def render_ardsnet():
             max_value=1000,
             value=0,
             step=10,
+            format="%d",
             help="Để trống nếu chưa đặt máy thở"
         )
         
@@ -189,6 +191,7 @@ def render_initial_settings():
             max_value=220,
             value=170,
             step=1,
+            format="%d",
             help="Chiều cao thực tế của bệnh nhân",
             key="initial_height"
         )

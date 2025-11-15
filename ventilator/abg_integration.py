@@ -15,7 +15,8 @@ def render_abg_panel(key_prefix="vent_abg"):
     with col1:
         ph = st.number_input(
             "pH", 
-            6.8, 7.8, 7.40, 0.01, 
+            6.8, 7.8, 7.40, 0.01,
+            format="%.2f",
             key=f"{key_prefix}_ph",
             help="pH động mạch (bình thường: 7.35-7.45)"
         )
@@ -28,7 +29,8 @@ def render_abg_panel(key_prefix="vent_abg"):
         )
         po2 = st.number_input(
             "PaO₂ (mmHg)", 
-            30.0, 600.0, 95.0, 1.0, 
+            30.0, 600.0, 95.0, 1.0,
+            format="%.0f",
             key=f"{key_prefix}_po2",
             help="Áp lực riêng phần O₂ (bình thường: 80-100 mmHg)"
         )
@@ -43,7 +45,8 @@ def render_abg_panel(key_prefix="vent_abg"):
         )
         fio2 = st.number_input(
             "FiO₂ (%)", 
-            21.0, 100.0, 21.0, 1.0, 
+            21.0, 100.0, 21.0, 1.0,
+            format="%.0f",
             key=f"{key_prefix}_fio2",
             help="Nồng độ O₂ trong khí thở vào (21-100%)"
         )

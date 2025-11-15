@@ -229,12 +229,14 @@ def render_weaning_calculator():
             rr = st.number_input(
                 "RR (lần/phút)",
                 0, 60, 20, 1,
+                format="%d",
                 key="weaning_rsbi_rr",
                 help="Tần số thở"
             )
             vt_ml = st.number_input(
                 "Vt (mL)",
                 0, 1000, 0, 10,
+                format="%d",
                 key="weaning_rsbi_vt",
                 help="Thể tích khí lưu thông"
             )
@@ -291,24 +293,24 @@ def render_weaning_calculator():
         
         with col1:
             st.markdown("#### 💨 ABG")
-            abg_ph = st.number_input("pH", 6.8, 7.8, 7.40, 0.01, key="weaning_abg_ph")
+            abg_ph = st.number_input("pH", 6.8, 7.8, 7.40, 0.01, format="%.2f", key="weaning_abg_ph")
             abg_pco2 = st.number_input("PaCO₂ (mmHg)", 10.0, 100.0, 40.0, 0.1, format="%.1f", key="weaning_abg_pco2")
-            abg_po2 = st.number_input("PaO₂ (mmHg)", 30.0, 600.0, 95.0, 1.0, key="weaning_abg_po2")
+            abg_po2 = st.number_input("PaO₂ (mmHg)", 30.0, 600.0, 95.0, 1.0, format="%.0f", key="weaning_abg_po2")
             abg_hco3 = st.number_input("HCO₃ (mEq/L)", 5.0, 50.0, 24.0, 0.1, format="%.1f", key="weaning_abg_hco3")
-            abg_fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 40.0, 1.0, key="weaning_abg_fio2")
+            abg_fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 40.0, 1.0, format="%.0f", key="weaning_abg_fio2")
         
         with col2:
             st.markdown("#### ⚙️ Máy Thở")
-            vent_peep = st.number_input("PEEP (cmH2O)", 0, 30, 5, 1, key="weaning_vent_peep")
-            vent_fio2 = st.number_input("FiO₂ (%)", 21, 100, 40, 1, key="weaning_vent_fio2")
+            vent_peep = st.number_input("PEEP (cmH2O)", 0, 30, 5, 1, format="%d", key="weaning_vent_peep")
+            vent_fio2 = st.number_input("FiO₂ (%)", 21, 100, 40, 1, format="%d", key="weaning_vent_fio2")
             
             st.markdown("#### 💓 Sinh Tồn")
-            vitals_hr = st.number_input("HR (bpm)", 0, 200, 80, 1, key="weaning_vitals_hr")
-            vitals_bp_systolic = st.number_input("SBP (mmHg)", 0, 300, 120, 1, key="weaning_vitals_sbp")
-            vitals_temp = st.number_input("Temp (°C)", 30.0, 42.0, 37.0, 0.1, key="weaning_vitals_temp")
+            vitals_hr = st.number_input("HR (bpm)", 0, 200, 80, 1, format="%d", key="weaning_vitals_hr")
+            vitals_bp_systolic = st.number_input("SBP (mmHg)", 0, 300, 120, 1, format="%d", key="weaning_vitals_sbp")
+            vitals_temp = st.number_input("Temp (°C)", 30.0, 42.0, 37.0, 0.1, format="%.1f", key="weaning_vitals_temp")
             
             st.markdown("#### 🧠 Thần Kinh")
-            neuro_gcs = st.number_input("GCS", 3, 15, 15, 1, key="weaning_neuro_gcs")
+            neuro_gcs = st.number_input("GCS", 3, 15, 15, 1, format="%d", key="weaning_neuro_gcs")
         
         st.markdown("---")
         st.markdown("#### 📋 Yếu Tố Khác")
