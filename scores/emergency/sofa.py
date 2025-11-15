@@ -28,6 +28,11 @@ Clinical Utility:
 """
 
 import streamlit as st
+from components.ui.scoring import (
+    render_score_result,
+    render_score_breakdown,
+    render_quick_reference_table,
+)
 
 
 def calculate_sofa(
@@ -389,38 +394,35 @@ def render():
         # Display results
         st.subheader("📊 Kết Quả")
         
-        # Score box
-        col_r1, col_r2 = st.columns([1, 2])
+        # Color-coded score result (MDCalc style)
+        render_score_result(
+            title="SOFA Score",
+            score=result['total_score'],
+            interpretation=result['interpretation'],
+            mortality=result['mortality'],
+            icon=result['color'],
+            thresholds={"low": 6, "moderate": 11, "high": 14},
+            size="large"
+        )
         
-        with col_r1:
-            st.metric(
-                label="**SOFA Score**",
-                value=f"{result['total_score']} điểm"
-            )
-            st.caption("0-24 điểm (cao = nặng hơn)")
+        # Subscores breakdown
+        organs_display = {
+            "Hô hấp": result['subscores']['respiratory'],
+            "Đông máu": result['subscores']['coagulation'],
+            "Gan": result['subscores']['liver'],
+            "Tim mạch": result['subscores']['cardiovascular'],
+            "Thần kinh": result['subscores']['cns'],
+            "Thận": result['subscores']['renal']
+        }
         
-        with col_r2:
-            st.markdown(f"### {result['color']} {result['interpretation']}")
-            st.markdown(f"**Tử vong ước tính: {result['mortality']}**")
+        render_score_breakdown(
+            title="📋 Điểm Từng Hệ Cơ Quan",
+            subscores=organs_display,
+            total_score=result['total_score']
+        )
         
-        # Subscores table
-        with st.expander("📋 Điểm Từng Hệ Cơ Quan", expanded=True):
-            cols = st.columns(6)
-            organs = [
-                ("Hô hấp", "respiratory"),
-                ("Đông máu", "coagulation"),
-                ("Gan", "liver"),
-                ("Tim mạch", "cardiovascular"),
-                ("Thần kinh", "cns"),
-                ("Thận", "renal")
-            ]
-            
-            for col, (name, key) in zip(cols, organs):
-                with col:
-                    st.metric(name, f"{result['subscores'][key]}")
-            
-            st.markdown("---")
-            st.markdown("**Chi tiết tính điểm:**")
+        # Detailed scoring breakdown
+        with st.expander("📝 Chi Tiết Tính Điểm", expanded=False):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         
@@ -568,22 +570,25 @@ def render():
         - Quyết định điều trị cuối cùng thuộc về bác sĩ điều trị
         """)
     
-    # Quick reference
-    with st.expander("📖 Bảng SOFA Scoring Chi Tiết"):
+    # Quick reference table
+    with st.expander("📖 Bảng SOFA Scoring Chi Tiết", expanded=False):
+        render_quick_reference_table(
+            title="SOFA Scoring Table",
+            headers=["Hệ Cơ Quan", "0", "1", "2", "3", "4"],
+            rows=[
+                ["Hô hấp (PaO₂/FiO₂, mmHg)", "≥400", "<400", "<300", "<200", "<100"],
+                ["Đông máu (Platelets, ×10³/μL)", "≥150", "<150", "<100", "<50", "<20"],
+                ["Gan (Bilirubin, mg/dL)", "<1.2", "1.2-1.9", "2.0-5.9", "6.0-11.9", "≥12"],
+                ["Tim mạch", "MAP≥70", "MAP<70", "Dopa <5* hoặc Dobu", "Dopa 5-15* hoặc Epi/Norepi ≤0.1**", "Dopa >15* hoặc Epi/Norepi >0.1**"],
+                ["Thần kinh (GCS)", "15", "13-14", "10-12", "6-9", "3-5"],
+                ["Thận (Cr mg/dL hoặc UO)", "<1.2", "1.2-1.9", "2.0-3.4", "3.5-4.9 hoặc <500 mL/d", "≥5.0 hoặc <200 mL/d"],
+            ]
+        )
+        
         st.markdown("""
-        ### SOFA Scoring Table
-        
-        | Hệ Cơ Quan | 0 | 1 | 2 | 3 | 4 |
-        |------------|---|---|---|---|---|
-        | **Hô hấp** PaO₂/FiO₂ (mmHg) | ≥400 | <400 | <300 | <200 | <100 |
-        | **Đông máu** Platelets (×10³/μL) | ≥150 | <150 | <100 | <50 | <20 |
-        | **Gan** Bilirubin (mg/dL) | <1.2 | 1.2-1.9 | 2.0-5.9 | 6.0-11.9 | ≥12 |
-        | **Tim mạch** | MAP≥70 | MAP<70 | Dopa <5* hoặc Dobu | Dopa 5-15* hoặc Epi/Norepi ≤0.1** | Dopa >15* hoặc Epi/Norepi >0.1** |
-        | **Thần kinh** GCS | 15 | 13-14 | 10-12 | 6-9 | 3-5 |
-        | **Thận** Cr (mg/dL) hoặc UO | <1.2 | 1.2-1.9 | 2.0-3.4 | 3.5-4.9 hoặc <500 mL/d | ≥5.0 hoặc <200 mL/d |
-        
-        * Dopamine liều (mcg/kg/min)  
-        ** Epinephrine/Norepinephrine liều (mcg/kg/min)
+        **Ghi chú:**
+        - * Dopamine liều (mcg/kg/min)  
+        - ** Epinephrine/Norepinephrine liều (mcg/kg/min)
         
         ### Sepsis-3 Definitions
         
