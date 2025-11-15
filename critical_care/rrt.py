@@ -201,16 +201,18 @@ def render_crrt_calculator():
             max_value=200.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="crrt_weight"
         )
     
     with col2:
         target_clearance = st.number_input(
             "Target clearance (ml/kg/h):",
-            min_value=20.0,
-            max_value=40.0,
-            value=25.0,
-            step=1.0,
+            min_value=20,
+            max_value=40,
+            value=25,
+            step=1,
+            format="%d",
             key="crrt_clearance",
             help="Typical: 25-35 ml/kg/h"
         )
@@ -281,6 +283,7 @@ def render_ihd_calculator():
             max_value=200.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="ihd_weight"
         )
     
@@ -361,6 +364,7 @@ def render_sled_calculator():
             max_value=200.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="sled_weight"
         )
     
@@ -371,6 +375,7 @@ def render_sled_calculator():
             max_value=12.0,
             value=8.0,
             step=0.5,
+            format="%.1f",
             key="sled_duration",
             help="Typical: 6-12 hours"
         )
@@ -441,6 +446,7 @@ def render_anticoagulation_calculator():
             max_value=200.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="anticoag_weight"
         )
     

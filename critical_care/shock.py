@@ -156,28 +156,31 @@ def render_shock_classification():
     with col1:
         sbp = st.number_input(
             "Systolic BP (mmHg):",
-            min_value=50.0,
-            max_value=200.0,
-            value=90.0,
-            step=1.0,
+            min_value=50,
+            max_value=200,
+            value=90,
+            step=1,
+            format="%d",
             key="shock_sbp"
         )
         
         map_value = st.number_input(
             "Mean Arterial Pressure (mmHg):",
-            min_value=40.0,
-            max_value=150.0,
-            value=60.0,
-            step=1.0,
+            min_value=40,
+            max_value=150,
+            value=60,
+            step=1,
+            format="%d",
             key="shock_map"
         )
         
         hr = st.number_input(
             "Heart Rate (bpm):",
-            min_value=40.0,
-            max_value=200.0,
-            value=120.0,
-            step=1.0,
+            min_value=40,
+            max_value=200,
+            value=120,
+            step=1,
+            format="%d",
             key="shock_hr"
         )
     
@@ -198,16 +201,18 @@ def render_shock_classification():
             max_value=30.0,
             value=None,
             step=0.5,
+            format="%.1f",
             key="shock_cvp",
             help="Optional"
         )
         
         scvo2 = st.number_input(
             "ScvO2 (%):",
-            min_value=30.0,
-            max_value=100.0,
+            min_value=30,
+            max_value=100,
             value=None,
-            step=1.0,
+            step=1,
+            format="%d",
             key="shock_scvo2",
             help="Optional"
         )

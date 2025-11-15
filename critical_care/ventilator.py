@@ -194,10 +194,11 @@ def render_ibw_calculator():
     with col2:
         height_cm = st.number_input(
             "Chiều cao (cm):",
-            min_value=100.0,
-            max_value=250.0,
-            value=170.0,
-            step=0.1,
+            min_value=100,
+            max_value=250,
+            value=170,
+            step=1,
+            format="%d",
             key="ibw_height"
         )
     
@@ -251,6 +252,7 @@ def render_tidal_volume_calculator():
             max_value=150.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="tidal_ibw",
             help="Sử dụng IBW, không dùng actual body weight"
         )
@@ -262,6 +264,7 @@ def render_tidal_volume_calculator():
             max_value=10.0,
             value=6.0,
             step=0.5,
+            format="%.1f",
             key="tidal_ml_per_kg",
             help="ARDSNet: 6 ml/kg IBW"
         )
@@ -397,19 +400,21 @@ def render_plateau_pressure_calculator():
     with col1:
         vt_ml = st.number_input(
             "Tidal Volume (ml):",
-            min_value=100.0,
-            max_value=1000.0,
-            value=420.0,
-            step=10.0,
+            min_value=100,
+            max_value=1000,
+            value=420,
+            step=10,
+            format="%d",
             key="plateau_vt"
         )
         
         compliance = st.number_input(
             "Static Compliance (ml/cmH2O):",
-            min_value=10.0,
-            max_value=200.0,
-            value=50.0,
-            step=1.0,
+            min_value=10,
+            max_value=200,
+            value=50,
+            step=1,
+            format="%d",
             key="plateau_compliance",
             help="C_static = Vt / (Plateau - PEEP)"
         )
@@ -417,10 +422,11 @@ def render_plateau_pressure_calculator():
     with col2:
         peep = st.number_input(
             "PEEP (cmH2O):",
-            min_value=0.0,
-            max_value=30.0,
-            value=10.0,
-            step=1.0,
+            min_value=0,
+            max_value=30,
+            value=10,
+            step=1,
+            format="%d",
             key="plateau_peep"
         )
     
@@ -504,10 +510,11 @@ def render_weaning_calculator():
     with col1:
         rr = st.number_input(
             "Respiratory Rate (breaths/min):",
-            min_value=5.0,
-            max_value=50.0,
-            value=20.0,
-            step=1.0,
+            min_value=5,
+            max_value=50,
+            value=20,
+            step=1,
+            format="%d",
             key="weaning_rr"
         )
     

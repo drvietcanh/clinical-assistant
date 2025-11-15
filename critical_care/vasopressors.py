@@ -190,6 +190,7 @@ def render_vasopressor_guide():
             max_value=300.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="vaso_weight"
         )
     

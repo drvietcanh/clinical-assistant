@@ -280,6 +280,7 @@ def render_propofol_calculator():
             max_value=300.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="propofol_weight"
         )
         
@@ -368,6 +369,7 @@ def render_midazolam_calculator():
             max_value=300.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="midazolam_weight"
         )
         
@@ -441,6 +443,7 @@ def render_dexmedetomidine_calculator():
             max_value=300.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="dex_weight"
         )
         
@@ -511,6 +514,7 @@ def render_fentanyl_calculator():
             max_value=300.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="fentanyl_weight"
         )
         

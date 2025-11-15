@@ -211,16 +211,18 @@ def render_fluid_calculator():
                 max_value=300.0,
                 value=70.0,
                 step=0.1,
+                format="%.1f",
                 key="maintenance_weight"
             )
         
         with col2:
             age = st.number_input(
                 "Tuổi (năm):",
-                min_value=0.0,
-                max_value=120.0,
-                value=30.0,
-                step=1.0,
+                min_value=0,
+                max_value=120,
+                value=30,
+                step=1,
+                format="%d",
                 key="maintenance_age",
                 help="Để trống hoặc ≥18 cho người lớn"
             )
@@ -301,6 +303,7 @@ def render_fluid_calculator():
                 max_value=300.0,
                 value=70.0,
                 step=0.1,
+                format="%.1f",
                 key="deficit_weight"
             )
         
@@ -311,6 +314,7 @@ def render_fluid_calculator():
                 max_value=180.0,
                 value=155.0,
                 step=0.1,
+                format="%.1f",
                 key="current_na_deficit"
             )
         
@@ -320,6 +324,7 @@ def render_fluid_calculator():
             max_value=145.0,
             value=140.0,
             step=0.1,
+            format="%.1f",
             key="target_na_deficit",
             help="Thường là 140 mmol/L"
         )
@@ -375,6 +380,7 @@ def render_fluid_calculator():
                 max_value=300.0,
                 value=70.0,
                 step=0.1,
+                format="%.1f",
                 key="hyponatremia_weight"
             )
         
@@ -385,6 +391,7 @@ def render_fluid_calculator():
                 max_value=135.0,
                 value=120.0,
                 step=0.1,
+                format="%.1f",
                 key="current_na_hyponatremia"
             )
         
@@ -394,6 +401,7 @@ def render_fluid_calculator():
             max_value=140.0,
             value=135.0,
             step=0.1,
+            format="%.1f",
             key="target_na_hyponatremia",
             help="Thường là 135 mmol/L, không vượt quá 10 mmol/L trong 24h đầu"
         )
@@ -465,6 +473,7 @@ def render_fluid_calculator():
             max_value=300.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="electrolytes_weight"
         )
         

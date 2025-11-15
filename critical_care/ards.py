@@ -113,10 +113,11 @@ def render_ardsnet_calculator():
     with col2:
         height_cm = st.number_input(
             "Chiều cao (cm):",
-            min_value=100.0,
-            max_value=250.0,
-            value=170.0,
-            step=0.1,
+            min_value=100,
+            max_value=250,
+            value=170,
+            step=1,
+            format="%d",
             key="ards_height"
         )
     
@@ -138,10 +139,11 @@ def render_ardsnet_calculator():
         if has_abg:
             pao2 = st.number_input(
                 "PaO2 (mmHg):",
-                min_value=30.0,
-                max_value=600.0,
-                value=100.0,
-                step=1.0,
+                min_value=30,
+                max_value=600,
+                value=100,
+                step=1,
+                format="%d",
                 key="ards_pao2"
             )
         else:

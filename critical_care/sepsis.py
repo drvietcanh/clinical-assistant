@@ -258,6 +258,7 @@ def render_fluid_resuscitation():
         max_value=200.0,
         value=70.0,
         step=0.1,
+        format="%.1f",
         key="sepsis_weight"
     )
     

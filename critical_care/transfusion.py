@@ -212,6 +212,7 @@ def render_prbc_calculator():
             max_value=300.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="prbc_weight"
         )
         
@@ -305,6 +306,7 @@ def render_platelet_calculator():
             max_value=300.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="platelet_weight"
         )
         
@@ -396,6 +398,7 @@ def render_ffp_calculator():
             max_value=300.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="ffp_weight"
         )
         
@@ -405,6 +408,7 @@ def render_ffp_calculator():
             max_value=10.0,
             value=2.5,
             step=0.1,
+            format="%.1f",
             key="ffp_current_inr"
         )
     
@@ -415,6 +419,7 @@ def render_ffp_calculator():
             max_value=3.0,
             value=1.5,
             step=0.1,
+            format="%.1f",
             key="ffp_target_inr"
         )
         
@@ -501,6 +506,7 @@ def render_massive_transfusion_calculator():
             max_value=300.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             key="mtp_weight"
         )
         
