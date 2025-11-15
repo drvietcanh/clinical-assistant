@@ -324,6 +324,7 @@ def render_platelet_calculator():
             max_value=1000,
             value=20,
             step=1,
+            format="%d",
             key="platelet_current"
         )
         
@@ -333,6 +334,7 @@ def render_platelet_calculator():
             max_value=1000,
             value=50,
             step=1,
+            format="%d",
             key="platelet_target"
         )
     
@@ -429,6 +431,7 @@ def render_ffp_calculator():
             max_value=1000.0,
             value=150.0,
             step=10.0,
+            format="%.0f",
             key="ffp_fibrinogen",
             help="Cần cho tính toán Cryoprecipitate"
         )
@@ -489,6 +492,7 @@ def render_massive_transfusion_calculator():
             max_value=10000,
             value=2000,
             step=100,
+            format="%d",
             key="mtp_blood_loss"
         )
         

@@ -202,6 +202,7 @@ def render_crrt_calculator():
             value=70.0,
             step=0.1,
             format="%.1f",
+            format="%.1f",
             key="crrt_weight"
         )
     
@@ -284,6 +285,7 @@ def render_ihd_calculator():
             value=70.0,
             step=0.1,
             format="%.1f",
+            format="%.1f",
             key="ihd_weight"
         )
     
@@ -294,6 +296,7 @@ def render_ihd_calculator():
             max_value=2.0,
             value=1.2,
             step=0.1,
+            format="%.1f",
             key="ihd_ktv",
             help="Adequate: ≥1.2"
         )
@@ -365,6 +368,7 @@ def render_sled_calculator():
             value=70.0,
             step=0.1,
             format="%.1f",
+            format="%.1f",
             key="sled_weight"
         )
     
@@ -375,6 +379,7 @@ def render_sled_calculator():
             max_value=12.0,
             value=8.0,
             step=0.5,
+            format="%.1f",
             format="%.1f",
             key="sled_duration",
             help="Typical: 6-12 hours"
@@ -446,6 +451,7 @@ def render_anticoagulation_calculator():
             max_value=200.0,
             value=70.0,
             step=0.1,
+            format="%.1f",
             format="%.1f",
             key="anticoag_weight"
         )

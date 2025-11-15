@@ -525,6 +525,7 @@ def render_weaning_calculator():
             max_value=2.0,
             value=0.5,
             step=0.05,
+            format="%.2f",
             key="weaning_vt",
             help="Tidal volume trong spontaneous breathing"
         )

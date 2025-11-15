@@ -191,6 +191,7 @@ def render_shock_classification():
             max_value=20.0,
             value=None,
             step=0.1,
+            format="%.1f",
             key="shock_lactate",
             help="Optional"
         )
@@ -307,6 +308,7 @@ def render_fluid_responsiveness():
             max_value=30.0,
             value=None,
             step=0.5,
+            format="%.1f",
             key="fr_cvp",
             help="Optional"
         )
@@ -317,6 +319,7 @@ def render_fluid_responsiveness():
             max_value=50.0,
             value=None,
             step=0.5,
+            format="%.1f",
             key="fr_ppv",
             help="Chỉ dùng khi thở máy, không có rối loạn nhịp"
         )
@@ -328,6 +331,7 @@ def render_fluid_responsiveness():
             max_value=50.0,
             value=None,
             step=0.5,
+            format="%.1f",
             key="fr_svv",
             help="Chỉ dùng khi thở máy"
         )

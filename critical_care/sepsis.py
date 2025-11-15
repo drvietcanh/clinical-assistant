@@ -322,6 +322,7 @@ def render_lactate_monitoring():
             max_value=20.0,
             value=4.0,
             step=0.1,
+            format="%.1f",
             key="lactate_initial"
         )
     
@@ -332,6 +333,7 @@ def render_lactate_monitoring():
             max_value=20.0,
             value=3.0,
             step=0.1,
+            format="%.1f",
             key="lactate_repeat"
         )
     
@@ -341,6 +343,7 @@ def render_lactate_monitoring():
         max_value=24.0,
         value=2.0,
         step=0.5,
+        format="%.1f",
         key="lactate_hours"
     )
     

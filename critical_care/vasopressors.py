@@ -201,6 +201,7 @@ def render_vasopressor_guide():
             max_value=100.0,
             value=0.1,
             step=0.01,
+            format="%.2f",
             key="vaso_dose"
         )
     

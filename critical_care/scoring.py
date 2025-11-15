@@ -217,6 +217,7 @@ def render_cam_icu_calculator():
             min_value=0,
             max_value=5,
             value=0,
+            format="%d",
             key="cam_icu_save_errors"
         )
         feature2 = save_errors >= 2
@@ -232,6 +233,7 @@ def render_cam_icu_calculator():
             min_value=0,
             max_value=10,
             value=0,
+            format="%d",
             key="cam_icu_vigilance_errors"
         )
         feature2 = vigilance_errors >= 3
@@ -354,6 +356,7 @@ def render_aki_staging_quick():
             max_value=10.0,
             value=1.0,
             step=0.1,
+            format="%.1f",
             key="aki_baseline_cr"
         )
         
@@ -363,6 +366,7 @@ def render_aki_staging_quick():
             max_value=10.0,
             value=1.5,
             step=0.1,
+            format="%.1f",
             key="aki_current_cr"
         )
     
@@ -373,6 +377,7 @@ def render_aki_staging_quick():
             max_value=5.0,
             value=1.0,
             step=0.1,
+            format="%.1f",
             key="aki_baseline_uo",
             help="Thường là 0.5-1.0 ml/kg/h"
         )
@@ -383,6 +388,7 @@ def render_aki_staging_quick():
             max_value=5.0,
             value=0.3,
             step=0.1,
+            format="%.1f",
             key="aki_current_uo"
         )
     
