@@ -3,7 +3,7 @@ Active module - contains all analgesic drug data"""
 
 # Opioid Agonist (Weak)s
 
-OPIOID_AGONIST_(WEAK)S_DRUGS = {
+OPIOID_AGONIST_WEAKS_DRUGS = {
     "Codeine": {'group': 'Analgesic - Opioid Agonist (Weak)', 'vietnamese_name': 'Codeine',
         'administration': ['PO'], 'indications': ['Đau nhẹ đến trung bình',
         'Ho không hiệu quả (chỉ định hạn chế)', 'Đau sau phẫu thuật nhỏ'],
@@ -130,4 +130,4 @@ OPIOID_AGONIST_(WEAK)S_DRUGS = {
         'High - FDA-approved, extensive clinical data. Note: efficacy depends on CYP2D6 genotype'
         }}}
 
-__all__ = ['OPIOID_AGONIST_(WEAK)S_DRUGS']
+__all__ = ['OPIOID_AGONIST_WEAKS_DRUGS']

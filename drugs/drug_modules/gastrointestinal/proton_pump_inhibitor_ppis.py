@@ -354,4 +354,4 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
         'last_updated': '2024-12-19', 'evidence_level':
         'High - FDA approved, multiple RCTs'}}}
 
-__all__ = ['PROTON_PUMP_INHIBITOR_(PPI)S_DRUGS']
+__all__ = ['PROTON_PUMP_INHIBITOR_PPIS_DRUGS']

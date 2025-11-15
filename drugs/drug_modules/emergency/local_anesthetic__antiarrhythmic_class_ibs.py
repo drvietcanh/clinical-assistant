@@ -3,7 +3,7 @@ Active module - contains all emergency and ACLS drug data"""
 
 # Local Anesthetic / Antiarrhythmic (Class IB)s
 
-LOCAL_ANESTHETIC_/_ANTIARRHYTHMIC_(CLASS_IB)S_DRUGS = {
+LOCAL_ANESTHETIC_ANTIARRHYTHMIC_CLASS_IB_DRUGS = {
     "Lidocaine": {'group': 'Emergency - Local Anesthetic / Antiarrhythmic (Class IB)',
         'vietnamese_name': 'Lidocaine, Xylocaine', 'administration': ['IV',
         'IO', 'IT'], 'indications': [
@@ -172,4 +172,4 @@ LOCAL_ANESTHETIC_/_ANTIARRHYTHMIC_(CLASS_IB)S_DRUGS = {
         'A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         }}}
 
-__all__ = ['LOCAL_ANESTHETIC_/_ANTIARRHYTHMIC_(CLASS_IB)S_DRUGS']
+__all__ = ['LOCAL_ANESTHETIC_ANTIARRHYTHMIC_CLASS_IB_DRUGS']

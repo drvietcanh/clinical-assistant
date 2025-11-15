@@ -64,8 +64,8 @@ def render_multi_comparison():
             egfr = st.number_input("eGFR (mL/min/1.73m²)", min_value=0.0, max_value=200.0, value=70.0, step=1.0, key="multi_egfr")
     
     # Weight for dose calculation
-    weight = st.number_input("Cân nặng (kg) - để tính liều cụ thể", min_value=10.0, max_value=200.0, value=70.0, step=1.0, key="multi_weight")
-    height = st.number_input("Chiều cao (cm) - để tính IBW/ABW", min_value=50, max_value=220, value=170, step=1, key="multi_height")
+    weight = st.number_input("Cân nặng (kg) - để tính liều cụ thể", min_value=10.0, max_value=200.0, value=70.0, step=1.0, format="%.1f", key="multi_weight")
+    height = st.number_input("Chiều cao (cm) - để tính IBW/ABW", min_value=50, max_value=220, value=170, step=1, format="%d", key="multi_height")
     sex = st.radio("Giới tính", ["Nam", "Nữ"], horizontal=True, key="multi_sex")
     
     # Calculate IBW/ABW
@@ -214,25 +214,84 @@ def render_multi_comparison():
                 else:
                     st.success("✅ Không có cảnh báo")
         
-        # Interaction warnings
+        # Interaction warnings - Using Drug Interaction Checker
         st.markdown("---")
         st.markdown("### ⚠️ Cảnh Báo Tương Tác Khi Phối Hợp:")
         
-        # Check for dangerous combinations
-        dangerous_combos = []
-        if "Vancomycin" in selected_antibiotics:
-            nephrotoxic = ["Gentamicin", "Amikacin", "Tobramycin"]
-            if any(drug in selected_antibiotics for drug in nephrotoxic):
-                dangerous_combos.append("🚨 **Vancomycin + Aminoglycoside:** Tăng nguy cơ độc thận rất cao!")
-        
-        if "Piperacillin-Tazobactam" in selected_antibiotics and "Vancomycin" in selected_antibiotics:
-            dangerous_combos.append("⚠️ **Piperacillin-Tazobactam + Vancomycin:** Có thể tăng nguy cơ độc thận (nghiên cứu mới)")
-        
-        if dangerous_combos:
-            for combo in dangerous_combos:
-                st.error(combo)
-        else:
-            st.success("✅ Không phát hiện phối hợp nguy hiểm")
+        # Import drug interaction checker
+        try:
+            from drugs.interactions_data import check_interactions, normalize_drug_name, SEVERITY_MAJOR, SEVERITY_MODERATE
+            
+            # Normalize antibiotic names for interaction checking
+            normalized_abs = [normalize_drug_name(ab) for ab in selected_antibiotics]
+            
+            # Check all pairwise interactions
+            interactions_found = check_interactions(normalized_abs)
+            
+            if interactions_found:
+                # Group by severity
+                major_interactions = [i for i in interactions_found if i.get('severity') == SEVERITY_MAJOR]
+                moderate_interactions = [i for i in interactions_found if i.get('severity') == SEVERITY_MODERATE]
+                minor_interactions = [i for i in interactions_found if i.get('severity') == 'Minor']
+                
+                # Display major interactions
+                if major_interactions:
+                    st.error("🚨 **Tương Tác Nghiêm Trọng (Major):**")
+                    for interaction in major_interactions:
+                        st.error(f"""
+                        **{interaction.get('drug1', '')} + {interaction.get('drug2', '')}**
+                        - **Cơ chế:** {interaction.get('mechanism', 'N/A')}
+                        - **Mô tả:** {interaction.get('description', 'N/A')}
+                        - **Xử trí:** {interaction.get('management', 'N/A')}
+                        """)
+                
+                # Display moderate interactions
+                if moderate_interactions:
+                    st.warning("⚠️ **Tương Tác Trung Bình (Moderate):**")
+                    for interaction in moderate_interactions:
+                        st.warning(f"""
+                        **{interaction.get('drug1', '')} + {interaction.get('drug2', '')}**
+                        - **Cơ chế:** {interaction.get('mechanism', 'N/A')}
+                        - **Mô tả:** {interaction.get('description', 'N/A')}
+                        - **Xử trí:** {interaction.get('management', 'N/A')}
+                        """)
+                
+                # Display minor interactions (collapsed)
+                if minor_interactions:
+                    with st.expander(f"ℹ️ Tương Tác Nhẹ (Minor) - {len(minor_interactions)} tương tác"):
+                        for interaction in minor_interactions:
+                            st.info(f"**{interaction.get('drug1', '')} + {interaction.get('drug2', '')}:** {interaction.get('description', 'N/A')}")
+            else:
+                st.success("✅ Không phát hiện tương tác thuốc trong database")
+                
+            # Also check for hardcoded dangerous combinations (as backup)
+            dangerous_combos = []
+            if "Vancomycin" in selected_antibiotics:
+                nephrotoxic = ["Gentamicin", "Amikacin", "Tobramycin"]
+                if any(drug in selected_antibiotics for drug in nephrotoxic):
+                    dangerous_combos.append("🚨 **Vancomycin + Aminoglycoside:** Tăng nguy cơ độc thận rất cao! (Cảnh báo bổ sung)")
+            
+            if dangerous_combos:
+                for combo in dangerous_combos:
+                    st.error(combo)
+                    
+        except ImportError:
+            # Fallback to hardcoded interactions if import fails
+            st.warning("⚠️ Không thể tải drug interaction checker. Sử dụng cảnh báo cơ bản.")
+            dangerous_combos = []
+            if "Vancomycin" in selected_antibiotics:
+                nephrotoxic = ["Gentamicin", "Amikacin", "Tobramycin"]
+                if any(drug in selected_antibiotics for drug in nephrotoxic):
+                    dangerous_combos.append("🚨 **Vancomycin + Aminoglycoside:** Tăng nguy cơ độc thận rất cao!")
+            
+            if "Piperacillin-Tazobactam" in selected_antibiotics and "Vancomycin" in selected_antibiotics:
+                dangerous_combos.append("⚠️ **Piperacillin-Tazobactam + Vancomycin:** Có thể tăng nguy cơ độc thận (nghiên cứu mới)")
+            
+            if dangerous_combos:
+                for combo in dangerous_combos:
+                    st.error(combo)
+            else:
+                st.success("✅ Không phát hiện phối hợp nguy hiểm")
         
         # Recommendations
         st.markdown("---")

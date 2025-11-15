@@ -3,7 +3,7 @@ Active module - contains all emergency and ACLS drug data"""
 
 # Catecholamine (Alpha & Beta Agonist)s
 
-CATECHOLAMINE_(ALPHA_&_BETA_AGONIST)S_DRUGS = {
+CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
     "Epinephrine": {'group': 'Emergency - Catecholamine (Alpha & Beta Agonist)',
         'vietnamese_name': 'Epinephrine, Adrenaline', 'administration': ['IV',
         'IM', 'SC', 'INH', 'IT'], 'indications': ['Ngừng tim (cardiac arrest)',
@@ -184,4 +184,4 @@ CATECHOLAMINE_(ALPHA_&_BETA_AGONIST)S_DRUGS = {
         'A - Dựa trên FDA drug labels, ACLS guidelines, anaphylaxis guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         }}}
 
-__all__ = ['CATECHOLAMINE_(ALPHA_&_BETA_AGONIST)S_DRUGS']
+__all__ = ['CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS']

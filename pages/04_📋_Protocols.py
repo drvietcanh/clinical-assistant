@@ -8,6 +8,7 @@ from utils.page_helper import setup_page, render_standard_footer
 
 from protocols import (
     render_sepsis,
+    render_sepsis_3hour,
     render_shock,
     render_stroke,
     render_gi_bleeding,
@@ -17,7 +18,10 @@ from protocols import (
     render_asthma,
     render_acs,
     render_hf,
-    render_aki
+    render_aki,
+    render_cap,
+    render_hap_vap,
+    render_cdiff
 )
 
 # Standard page setup
@@ -37,7 +41,8 @@ with st.sidebar:
             "🚨 Cấp Cứu (Emergency)",
             "🫁 Hô Hấp (Respiratory)",
             "❤️ Tim Mạch (Cardiology)",
-            "🧪 Thận (Nephrology)"
+            "🧪 Thận (Nephrology)",
+            "🦠 Nhiễm Khuẩn (Infectious)"
         ]
     )
     
@@ -49,6 +54,7 @@ with st.sidebar:
             "Phác đồ:",
             [
                 "🦠 Sepsis 1-Hour Bundle",
+                "🦠 Sepsis 3-Hour Bundle",
                 "💔 Quản Lý Sốc",
                 "🧠 Stroke Management",
                 "🩸 GI Bleeding",
@@ -83,6 +89,16 @@ with st.sidebar:
             ],
             label_visibility="collapsed"
         )
+    elif "Nhiễm Khuẩn" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "🫁 CAP Management",
+                "🏥 HAP/VAP Guidelines",
+                "🦠 C. diff Treatment"
+            ],
+            label_visibility="collapsed"
+        )
     
     st.markdown("---")
     st.info("""
@@ -103,8 +119,12 @@ st.info(f"""
 st.markdown("---")
 
 # Route to appropriate protocol
-if "Sepsis" in protocol:
+if "Sepsis 1-Hour" in protocol:
     render_sepsis()
+elif "Sepsis 3-Hour" in protocol:
+    render_sepsis_3hour()
+elif "Sepsis" in protocol:
+    render_sepsis()  # Fallback
 
 elif "Sốc" in protocol:
     render_shock()
@@ -135,6 +155,15 @@ elif "Electrolyte" in protocol:
 
 elif "AKI" in protocol:
     render_aki()
+
+elif "CAP" in protocol:
+    render_cap()
+
+elif "HAP" in protocol or "VAP" in protocol:
+    render_hap_vap()
+
+elif "C. diff" in protocol or "cdiff" in protocol.lower():
+    render_cdiff()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

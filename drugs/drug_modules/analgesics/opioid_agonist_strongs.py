@@ -3,7 +3,7 @@ Active module - contains all analgesic drug data"""
 
 # Opioid Agonist (Strong)s
 
-OPIOID_AGONIST_(STRONG)S_DRUGS = {
+OPIOID_AGONIST_STRONGS_DRUGS = {
     "Morphine": {'group': 'Analgesic - Opioid Agonist (Strong)', 'vietnamese_name':
         'Morphine', 'administration': ['PO', 'IV', 'IM', 'SC'], 'indications':
         ['Đau nặng (ung thư, sau phẫu thuật)', 'Đau cấp tính nặng',
@@ -149,4 +149,4 @@ OPIOID_AGONIST_(STRONG)S_DRUGS = {
         'High - FDA-approved, extensive clinical data, gold standard for severe pain'
         }}}
 
-__all__ = ['OPIOID_AGONIST_(STRONG)S_DRUGS']
+__all__ = ['OPIOID_AGONIST_STRONGS_DRUGS']

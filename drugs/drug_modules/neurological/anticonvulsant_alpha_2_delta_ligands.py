@@ -3,7 +3,7 @@ Active module - contains all neurological and psychiatric drug data"""
 
 # Anticonvulsant (Alpha-2-delta ligand)s
 
-ANTICONVULSANT_(ALPHA_2_DELTA_LIGAND)S_DRUGS = {
+ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
     "Gabapentin": {'group': 'Neurology - Anticonvulsant (Alpha-2-delta ligand)',
         'vietnamese_name': 'Gabapentin, Neurontin', 'administration': ['PO'],
         'indications': ['Động kinh cục bộ',
@@ -257,4 +257,4 @@ ANTICONVULSANT_(ALPHA_2_DELTA_LIGAND)S_DRUGS = {
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         }}}
 
-__all__ = ['ANTICONVULSANT_(ALPHA_2_DELTA_LIGAND)S_DRUGS']
+__all__ = ['ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS']

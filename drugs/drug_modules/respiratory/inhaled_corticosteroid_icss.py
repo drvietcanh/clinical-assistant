@@ -3,7 +3,7 @@ Active module - contains all respiratory drug data"""
 
 # Inhaled Corticosteroid (ICS)s
 
-INHALED_CORTICOSTEROID_(ICS)S_DRUGS = {
+INHALED_CORTICOSTEROID_ICSS_DRUGS = {
     "Budesonide inhaled": {'group': 'Respiratory - Inhaled Corticosteroid (ICS)', 'vietnamese_name':
         'Budesonide, Pulmicort', 'administration': ['Inhalation', 'Nebulizer'],
         'indications': ['Hen phế quản (kiểm soát, phòng ngừa)',
@@ -226,4 +226,4 @@ INHALED_CORTICOSTEROID_(ICS)S_DRUGS = {
         'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'}}}
 
-__all__ = ['INHALED_CORTICOSTEROID_(ICS)S_DRUGS']
+__all__ = ['INHALED_CORTICOSTEROID_ICSS_DRUGS']

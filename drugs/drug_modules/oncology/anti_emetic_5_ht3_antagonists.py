@@ -3,7 +3,7 @@ Active module - contains all oncology drug data"""
 
 # Anti-emetic (5-HT3 Antagonist)s
 
-ANTI_EMETIC_(5_HT3_ANTAGONIST)S_DRUGS = {
+ANTI_EMETIC_5_HT3_ANTAGONISTS_DRUGS = {
     "Granisetron": {'group': 'Oncology - Anti-emetic (5-HT3 Antagonist)', 'vietnamese_name':
         'Granisetron, Kytril', 'administration': ['PO', 'IV'], 'indications': [
         'Phòng và điều trị nôn do hóa trị', 'Phòng nôn sau phẫu thuật',
@@ -147,4 +147,4 @@ ANTI_EMETIC_(5_HT3_ANTAGONIST)S_DRUGS = {
         'last_updated': '2025-01-15', 'evidence_level':
         'High (FDA-approved, extensive clinical data)'}}}
 
-__all__ = ['ANTI_EMETIC_(5_HT3_ANTAGONIST)S_DRUGS']
+__all__ = ['ANTI_EMETIC_5_HT3_ANTAGONISTS_DRUGS']

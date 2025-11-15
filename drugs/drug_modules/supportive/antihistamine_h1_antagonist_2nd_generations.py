@@ -3,7 +3,7 @@ Active module - contains all supportive care drug data"""
 
 # Antihistamine (H1 Antagonist, 2nd generation)s
 
-ANTIHISTAMINE_(H1_ANTAGONIST,_2ND_GENERATION)S_DRUGS = {
+ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
     "Loratadine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Loratadine, Clarityne', 'administration': ['PO'],
         'indications': ['Dị ứng (allergic rhinitis)', 'Mề đay (urticaria)',
@@ -365,4 +365,4 @@ ANTIHISTAMINE_(H1_ANTAGONIST,_2ND_GENERATION)S_DRUGS = {
         ], 'last_updated': '2025-02-04', 'evidence_level':
         'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}}}
 
-__all__ = ['ANTIHISTAMINE_(H1_ANTAGONIST,_2ND_GENERATION)S_DRUGS']
+__all__ = ['ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS']

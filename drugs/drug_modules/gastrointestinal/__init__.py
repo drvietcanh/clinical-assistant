@@ -6,7 +6,9 @@ from .antidiarrheals import ANTIDIARRHEALS_DRUGS
 from .h2_receptor_antagonists import H2_RECEPTOR_ANTAGONISTS_DRUGS
 from .mucosal_protectants import MUCOSAL_PROTECTANTS_DRUGS
 from .proton_pump_inhibitors import PROTON_PUMP_INHIBITORS_DRUGS
+from .proton_pump_inhibitor_ppis import PROTON_PUMP_INHIBITOR_PPIS_DRUGS
 from .prokinetic_antiemetics import PROKINETIC_ANTIEMETICS_DRUGS
+from .antiemetic_5_ht3_antagonists import ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS
 
 # Merge all categories
 GASTROINTESTINAL_DRUGS = {
@@ -14,7 +16,9 @@ GASTROINTESTINAL_DRUGS = {
     **H2_RECEPTOR_ANTAGONISTS_DRUGS,
     **MUCOSAL_PROTECTANTS_DRUGS,
     **PROTON_PUMP_INHIBITORS_DRUGS,
+    **PROTON_PUMP_INHIBITOR_PPIS_DRUGS,
     **PROKINETIC_ANTIEMETICS_DRUGS,
+    **ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS,
 }
 
 __all__ = ['GASTROINTESTINAL_DRUGS']

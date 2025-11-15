@@ -3,7 +3,7 @@ Active module - contains all neurological and psychiatric drug data"""
 
 # SSRI (Selective Serotonin Reuptake Inhibitor)s
 
-SSRI_(SELECTIVE_SEROTONIN_REUPTAKE_INHIBITOR)S_DRUGS = {
+SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
     "Fluoxetine": {'group': 'Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)',
         'vietnamese_name': 'Fluoxetine, Prozac', 'administration': ['PO'],
         'indications': ['Trầm cảm', 'Rối loạn lo âu',
@@ -127,4 +127,4 @@ SSRI_(SELECTIVE_SEROTONIN_REUPTAKE_INHIBITOR)S_DRUGS = {
         '2024-12-19', 'evidence_level':
         'High - Multiple RCTs and systematic reviews'}}}
 
-__all__ = ['SSRI_(SELECTIVE_SEROTONIN_REUPTAKE_INHIBITOR)S_DRUGS']
+__all__ = ['SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS']

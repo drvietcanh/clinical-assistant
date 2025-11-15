@@ -64,7 +64,8 @@ DRUG_GROUPS = {
         "Vitamin D", "Vitamin B12", "Folic acid", "Iron", "Calcium"
     ],
     "Anti-infectives": [
-        "Chloroquine", "Artesunate", "Albendazole", "Mebendazole"
+        "Chloroquine", "Artesunate", "Albendazole", "Mebendazole",
+        "Acyclovir", "Valacyclovir", "Fluconazole"
     ],
     "Endocrinology": [
         "Levothyroxine", "Methimazole", "Propylthiouracil", "Prednisone"

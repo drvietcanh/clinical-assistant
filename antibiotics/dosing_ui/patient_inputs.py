@@ -40,6 +40,7 @@ def render_patient_inputs():
             max_value=200.0,
             value=70.0,
             step=1.0,
+            format="%.1f",
             key="dosing_weight"
         )
         patient_data['weight'] = weight
@@ -50,6 +51,7 @@ def render_patient_inputs():
             max_value=220,
             value=170,
             step=1,
+            format="%d",
             key="dosing_height"
         )
         patient_data['height'] = height

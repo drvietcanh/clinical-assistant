@@ -3,7 +3,7 @@ Active module - contains all gastrointestinal drug data"""
 
 # Antiemetic (5-HT3 Antagonist)s
 
-ANTIEMETIC_(5_HT3_ANTAGONIST)S_DRUGS = {
+ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS = {
     "Ondansetron": {'group': 'Gastrointestinal - Antiemetic (5-HT3 Antagonist)',
         'vietnamese_name': 'Ondansetron, Zofran', 'administration': ['PO', 'IV',
         'IM'], 'indications': ['Buồn nôn, nôn sau hóa trị',
@@ -102,4 +102,4 @@ ANTIEMETIC_(5_HT3_ANTAGONIST)S_DRUGS = {
         'last_updated': '2024-12-19', 'evidence_level':
         'High - FDA approved, multiple RCTs, safety warnings (QT prolongation)'}}}
 
-__all__ = ['ANTIEMETIC_(5_HT3_ANTAGONIST)S_DRUGS']
+__all__ = ['ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS']

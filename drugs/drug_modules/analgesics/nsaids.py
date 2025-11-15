@@ -37,7 +37,75 @@ NSAIDS_DRUGS = {
         'Gan (chuyển hóa qua CYP2C9, CYP2C8), thận (thải trừ)'}, 'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm', 'black_box_warnings':
         'Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ'
-        },
+        , 'drug_interactions': {'major': [{'drug':
+        'Warfarin, các thuốc chống đông khác', 'mechanism':
+        'Ức chế COX-1, giảm tổng hợp thromboxane, tăng nguy cơ chảy máu',
+        'effect': 'Tăng nguy cơ chảy máu nặng, tăng INR', 'management':
+        'Tránh dùng đồng thời. Nếu phải dùng, theo dõi INR thường xuyên, giảm liều warfarin nếu cần'
+        }], 'moderate': [{'drug': 'ACE inhibitor, ARB', 'mechanism':
+        'Giảm tổng hợp prostaglandin ở thận, giảm lưu lượng máu thận', 'effect':
+        'Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp', 'management':
+        'Thận trọng. Theo dõi creatinine, BUN. Cân nhắc ngừng NSAID nếu có dấu hiệu suy thận'
+        }, {'drug': 'Aspirin (liều thấp)', 'mechanism':
+        'Ibuprofen có thể ức chế tác dụng chống kết tập tiểu cầu của aspirin',
+        'effect': 'Giảm hiệu quả phòng ngừa nhồi máu cơ tim của aspirin',
+        'management':
+        'Dùng aspirin ít nhất 2 giờ trước ibuprofen, hoặc cân nhắc NSAID khác'}, {
+        'drug': 'Methotrexate', 'mechanism':
+        'Giảm thải trừ methotrexate qua thận', 'effect':
+        'Tăng độc tính methotrexate (giảm bạch cầu, suy tủy)', 'management':
+        'Tránh dùng đồng thời. Nếu phải dùng, giảm liều methotrexate và theo dõi công thức máu chặt chẽ'
+        }], 'minor': [{'drug': 'Corticosteroid', 'mechanism':
+        'Tăng nguy cơ loét dạ dày', 'effect': 'Tăng nguy cơ chảy máu dạ dày',
+        'management': 'Cân nhắc dùng PPI hoặc misoprostol để bảo vệ dạ dày'}]},
+        'contraindications': {'tuyệt_đối': [
+        'Dị ứng ibuprofen hoặc NSAID/aspirin (phản vệ, hen suyễn do aspirin)',
+        'Loét dạ dày tá tràng đang hoạt động',
+        'Tam cá nguyệt 3 thai kỳ (3 tháng cuối)',
+        'Suy thận nặng (CrCl <30) và đang dùng ACE inhibitor/ARB'], 'tương_đối':
+        ['Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều',
+        'Suy gan nặng - thận trọng, giảm liều',
+        'Suy tim nặng - tăng nguy cơ giữ nước, suy tim nặng hơn',
+        'Bệnh mạch vành, tiền sử nhồi máu cơ tim - tăng nguy cơ biến cố tim mạch',
+        'Tăng huyết áp không kiểm soát - NSAID có thể tăng huyết áp',
+        'Dùng warfarin hoặc thuốc chống đông - tăng nguy cơ chảy máu',
+        'Người cao tuổi - tăng nguy cơ tác dụng phụ']}, 'pregnancy_lactation':
+        {'fda_category': 'C - D trong tam cá nguyệt 3', 'pregnancy_details':
+        'Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi, tăng áp lực động mạch phổi ở trẻ sơ sinh. Tránh dùng trong 3 tháng cuối.'
+        , 'lactation': {'safety': 'Compatible', 'details':
+        'Ibuprofen bài tiết vào sữa mẹ ở nồng độ rất thấp (<0.6% liều mẹ). Half-life ngắn (2-4 giờ) nên ít tích lũy. An toàn cho trẻ bú mẹ.'
+        , 'recommendation':
+        'Có thể dùng khi cho con bú với liều ngắn hạn. Theo dõi trẻ về dấu hiệu bất thường (hiếm).'}}, 'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
+        'Thận trọng, giảm liều 25-50%', 'severe':
+        'Tránh dùng hoặc giảm liều mạnh', 'notes':
+        'Ibuprofen chuyển hóa ở gan qua CYP2C9 và CYP2C8. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy. Tuy nhiên, ibuprofen ít gây độc gan trực tiếp hơn một số NSAID khác (như diclofenac).'
+        }, 'overdose_management': {'symptoms': ['Buồn nôn, nôn, đau bụng',
+        'Chóng mặt, nhức đầu', 'Lú lẫn, buồn ngủ',
+        'Ức chế hô hấp (hiếm, ở liều rất cao)', 'Hạ huyết áp', 'Suy thận cấp',
+        'Chảy máu dạ dày', 'Co giật (hiếm)'], 'antidote':
+        'Không có antidote đặc hiệu', 'treatment': [
+        'Rửa dạ dày nếu uống trong vòng 1-2 giờ',
+        'Than hoạt tính nếu uống trong vòng 1-2 giờ',
+        'Theo dõi chức năng thận (creatinine, BUN), điện giải',
+        'Theo dõi huyết áp, nhịp tim',
+        'Hỗ trợ hô hấp nếu có ức chế hô hấp (hiếm)',
+        'Truyền dịch nếu hạ huyết áp, suy thận',
+        'Theo dõi dấu hiệu chảy máu dạ dày', 'Điều trị hỗ trợ triệu chứng'],
+        'monitoring':
+        'Huyết áp, nhịp tim, ý thức, creatinine, BUN, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 4-6 giờ do half-life ngắn (2-4 giờ)'
+        }, 'reversal_agents': {'available': False, 'agents': []},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày', 'timing':
+        'Mỗi 4-6 giờ (do half-life ngắn). Dùng với bữa ăn để giảm tác dụng phụ dạ dày. Liều tối đa: 2.4g/ngày (đau) hoặc 3.2g/ngày (viêm khớp).'
+        }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
+        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        }}, 'references': {'primary_sources': [
+        'FDA Drug Label - Advil, Motrin (ibuprofen)',
+        'UpToDate - Ibuprofen: Drug information',
+        'Lexicomp - Ibuprofen monograph',
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
+        'last_updated': '2025-02-04', 'evidence_level':
+        'High - FDA-approved, extensive clinical data'}},
     "Naproxen": {'group': 'Analgesic - NSAID', 'vietnamese_name': 'Naproxen, Naprosyn',
         'administration': ['PO'], 'indications': ['Đau nhẹ đến trung bình',
         'Viêm khớp dạng thấp', 'Viêm khớp xương khớp',
