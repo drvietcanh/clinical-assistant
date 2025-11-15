@@ -181,7 +181,7 @@ def render_result_card(
             metrics_html += f"""
             <div style="
                 padding: 0.75rem;
-                border-bottom: 1px solid {THEME['colors']['border']};
+                border-bottom: 1px solid {THEME['colors'].get('border', '#e0e0e0')};
             ">
                 <div style="font-size: 0.85rem; color: {THEME['colors']['text_secondary']}; margin-bottom: 0.25rem;">
                     {metric_icon_html}{metric_label}
@@ -262,7 +262,7 @@ def render_metric_display(
     metric_html = f"""
     <div style="
         padding: 0.75rem;
-        border-bottom: 1px solid {THEME['colors']['border']};
+        border-bottom: 1px solid {THEME['colors'].get('border', '#e0e0e0')};
         display: flex;
         justify-content: space-between;
         align-items: center;
