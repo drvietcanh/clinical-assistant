@@ -1,51 +1,16 @@
 # BÁO CÁO PHÂN TÍCH MODULE
 **Ngày tạo:** D:\1app\medical
-**Tổng số file:** 525
+**Tổng số file:** 546
 
 ## 📊 TÓM TẮT
 
-- ⚠️  **CRITICAL** (> 800 dòng): 4 files
-- ⚠️  **Recommended** (> 500 dòng): 61 files
-- ✅ **OK**: 460 files
+- ⚠️  **CRITICAL** (> 800 dòng): 0 files
+- ⚠️  **Recommended** (> 500 dòng): 62 files
+- ✅ **OK**: 484 files
 
 ## 🔴 CẦN TÁCH NGAY (CRITICAL)
 
-### antibiotics\antibiotics_data\cephalosporins.py
-- **Dòng:** 923 (code: 899)
-- **Classes:** 0
-- **Functions:** 0
-- **Data dict:** Có (~63 entries)
-- **Gợi ý:**
-  - ⚠️  CRITICAL: File quá dài (923 dòng) - Nên tách ngay!
-  - 📝 Code thực tế: 899 dòng (không tính comment)
-  - 📊 Có data dictionary lớn (~63 entries) - Nên tách data ra file riêng
-
-### drugs\enhanced_fields_schema_data.py
-- **Dòng:** 887 (code: 773)
-- **Classes:** 0
-- **Functions:** 3
-- **Data dict:** Có (~52 entries)
-- **Gợi ý:**
-  - ⚠️  CRITICAL: File quá dài (887 dòng) - Nên tách ngay!
-  - 📝 Code thực tế: 773 dòng (không tính comment)
-  - 📊 Có data dictionary lớn (~52 entries) - Nên tách data ra file riêng
-
-### drugs\drug_info.py
-- **Dòng:** 859 (code: 639)
-- **Classes:** 0
-- **Functions:** 5
-- **Data dict:** Có (~0 entries)
-- **Gợi ý:**
-  - ⚠️  CRITICAL: File quá dài (859 dòng) - Nên tách ngay!
-  - 📝 Code thực tế: 639 dòng (không tính comment)
-
-### drugs\drug_modules\endocrinology_other\corticosteroids.py
-- **Dòng:** 854 (code: 849)
-- **Classes:** 0
-- **Functions:** 0
-- **Gợi ý:**
-  - ⚠️  CRITICAL: File quá dài (854 dòng) - Nên tách ngay!
-  - 📝 Code thực tế: 849 dòng (không tính comment)
+Không có file nào cần tách ngay.
 
 ## 🟡 NÊN XEM XÉT TÁCH
 
@@ -279,6 +244,10 @@
 ### scores\psychiatry\phq9.py (517 dòng)
 - ⚠️  File dài (517 dòng) - Nên xem xét tách
 
+### drugs\drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py (513 dòng)
+- ⚠️  File dài (513 dòng) - Nên xem xét tách
+- 📝 Code thực tế: 511 dòng (không tính comment)
+
 ### scores\metabolism\free_t4_index.py (508 dòng)
 - ⚠️  File dài (508 dòng) - Nên xem xét tách
 
@@ -292,10 +261,6 @@
 
 | File | Dòng | Code | Classes | Functions | Data Dict |
 |------|------|------|---------|-----------|-----------|
-| antibiotics\antibiotics_data\cephalosporins.py | 923 | 899 | 0 | 0 | ✅ (~63) |
-| drugs\enhanced_fields_schema_data.py | 887 | 773 | 0 | 3 | ✅ (~52) |
-| drugs\drug_info.py | 859 | 639 | 0 | 5 | ✅ (~0) |
-| drugs\drug_modules\endocrinology_other\corticosteroids.py | 854 | 849 | 0 | 0 | ❌ |
 | drugs\drug_modules\metabolic.py | 794 | 791 | 0 | 0 | ✅ (~59) |
 | drugs\drug_modules\antimicrobial\antifungals.py | 767 | 760 | 0 | 0 | ✅ (~56) |
 | test_new_features_extended.py | 742 | 559 | 0 | 0 | ❌ |
@@ -312,3 +277,7 @@
 | scores\respiratory\smartcop.py | 649 | 512 | 0 | 1 | ❌ |
 | scores\gi\meld_na.py | 645 | 499 | 0 | 3 | ❌ |
 | scores\cardiology\qtc.py | 639 | 501 | 0 | 8 | ❌ |
+| drugs\drug_modules\cardiovascular\beta_blockers\selective.py | 631 | 627 | 0 | 0 | ❌ |
+| drugs\drug_modules\cardiovascular\diuretics.py | 630 | 623 | 0 | 0 | ❌ |
+| scores\neurology\hunt_hess.py | 628 | 484 | 0 | 1 | ❌ |
+| scores\infectious\centor.py | 625 | 471 | 0 | 4 | ❌ |
