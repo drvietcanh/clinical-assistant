@@ -117,8 +117,7 @@ with st.sidebar:
     - Antibiotics
     
     **🫁 Hồi Sức:**
-    - Ventilator
-    - Critical Care
+    - Critical Care (bao gồm Ventilator Management)
     
     **📋 Hướng Dẫn:**
     - Protocols

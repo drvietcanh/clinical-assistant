@@ -61,7 +61,7 @@ APP_CONFIG = {
             title="Thở Máy",
             icon="🫁",
             page_path="pages/03_🫁_Ventilator.py",
-            description="ARDSNet, PEEP/FiO₂",
+            description="Đã tích hợp vào Critical Care - Redirect",
             color="linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)",
             border="#e91e63"
         ),
@@ -115,7 +115,7 @@ APP_CONFIG = {
             title="Hồi Sức",
             icon="🫁",
             page_path="pages/09_🫁_Critical_Care.py",
-            description="Fluids, Vasopressors, Transfusion, Sedation",
+            description="Ventilator, Fluids, Vasopressors, Transfusion, Sedation",
             color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
             border="#ff6f00"
         ),

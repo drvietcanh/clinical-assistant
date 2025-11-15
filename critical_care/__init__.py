@@ -15,6 +15,19 @@ from .sepsis import render_sepsis_protocols
 from .shock import render_shock_management
 from .rrt import render_rrt_calculator
 
+# Import comprehensive ventilator calculator from ventilator module
+try:
+    from ventilator import render_comprehensive_calculator, render_ardsnet, render_initial_settings, render_peep_fio2_table
+    from ventilator.weaning import render_weaning_calculator as render_weaning_calculator_advanced
+    VENTILATOR_ADVANCED_AVAILABLE = True
+except ImportError:
+    VENTILATOR_ADVANCED_AVAILABLE = False
+    render_comprehensive_calculator = None
+    render_ardsnet = None
+    render_initial_settings = None
+    render_peep_fio2_table = None
+    render_weaning_calculator_advanced = None
+
 __all__ = [
     'render_fluid_calculator',
     'render_vasopressor_guide',
@@ -27,5 +40,6 @@ __all__ = [
     'render_sepsis_protocols',
     'render_shock_management',
     'render_rrt_calculator',
+    'VENTILATOR_ADVANCED_AVAILABLE',
 ]
 

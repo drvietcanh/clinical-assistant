@@ -17,8 +17,19 @@ from critical_care import (
     render_ards_protocols,
     render_sepsis_protocols,
     render_shock_management,
-    render_rrt_calculator
+    render_rrt_calculator,
+    VENTILATOR_ADVANCED_AVAILABLE
 )
+
+# Import advanced ventilator functions if available
+if VENTILATOR_ADVANCED_AVAILABLE:
+    from ventilator import (
+        render_comprehensive_calculator,
+        render_ardsnet,
+        render_initial_settings,
+        render_peep_fio2_table
+    )
+    from ventilator.weaning import render_weaning_calculator as render_weaning_calculator_advanced
 
 # Standard page setup
 setup_page(
@@ -88,7 +99,40 @@ elif "Scoring" in tool_type:
     render_scoring_calculator()
     
 elif "Ventilator Management" in tool_type:
-    render_ventilator_calculator()
+    st.header("🫁 Ventilator Management")
+    st.caption("Công cụ quản lý máy thở cho ICU")
+    
+    # Sub-menu for ventilator tools
+    if VENTILATOR_ADVANCED_AVAILABLE:
+        vent_tabs = st.tabs([
+            "🫁 Tính Toán Tổng Hợp",
+            "📏 Công Cụ Cơ Bản",
+            "🫁 ARDSNet",
+            "⚙️ Cài Đặt Ban Đầu",
+            "📊 PEEP/FiO2 Table",
+            "🔄 Cai Máy Thở"
+        ])
+        
+        with vent_tabs[0]:
+            render_comprehensive_calculator()
+        
+        with vent_tabs[1]:
+            render_ventilator_calculator()
+        
+        with vent_tabs[2]:
+            render_ardsnet()
+        
+        with vent_tabs[3]:
+            render_initial_settings()
+        
+        with vent_tabs[4]:
+            render_peep_fio2_table()
+        
+        with vent_tabs[5]:
+            render_weaning_calculator_advanced()
+    else:
+        # Fallback to basic calculator if advanced not available
+        render_ventilator_calculator()
     
 elif "ARDS" in tool_type:
     render_ards_protocols()
