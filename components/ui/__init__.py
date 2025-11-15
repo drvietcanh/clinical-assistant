@@ -24,6 +24,12 @@ from .results import (
     render_result_card,
     render_metric_display,
 )
+from .scoring import (
+    get_risk_color,
+    render_score_result,
+    render_score_breakdown,
+    render_quick_reference_table,
+)
 
 __all__ = [
     # Cards
@@ -43,5 +49,10 @@ __all__ = [
     'render_result_box',
     'render_result_card',
     'render_metric_display',
+    # Scoring
+    'get_risk_color',
+    'render_score_result',
+    'render_score_breakdown',
+    'render_quick_reference_table',
 ]
 

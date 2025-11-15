@@ -6,35 +6,49 @@ Centralized theme system for consistent design across the app
 from typing import Dict
 
 
-# Color Palette
+# Color Palette - Standardized for Medical Apps (MDCalc/UpToDate style)
 COLORS = {
-    "primary": "#0EA5E9",
-    "primary_dark": "#0c84c7",
-    "primary_light": "#3db8f5",
+    # Primary - Medical Blue (UpToDate style)
+    "primary": "#1976d2",
+    "primary_dark": "#1565c0",
+    "primary_light": "#42a5f5",
     
+    # Success - Green (Low risk)
     "success": "#4caf50",
     "success_dark": "#388e3c",
     "success_light": "#81c784",
     
+    # Warning - Orange (Moderate risk)
     "warning": "#ff9800",
     "warning_dark": "#f57c00",
     "warning_light": "#ffb74d",
     
+    # Error - Red (High/Critical risk)
     "error": "#f44336",
     "error_dark": "#d32f2f",
     "error_light": "#e57373",
     
-    "info": "#2196f3",
-    "info_dark": "#1976d2",
-    "info_light": "#64b5f6",
+    # Info - Light Blue
+    "info": "#03a9f4",
+    "info_dark": "#0288d1",
+    "info_light": "#4fc3f7",
     
+    # Text Colors
     "text_primary": "#212121",
     "text_secondary": "#757575",
     "text_disabled": "#bdbdbd",
     
+    # Background Colors
     "background": "#ffffff",
-    "background_secondary": "#f5f5f5",
+    "background_secondary": "#fafafa",
     "surface": "#ffffff",
+    "border": "#e0e0e0",
+    
+    # Score Risk Colors (MDCalc style)
+    "risk_low": "#4caf50",        # Green - Low risk (0-6)
+    "risk_moderate": "#ff9800",  # Orange - Moderate risk (7-11)
+    "risk_high": "#ff5722",      # Deep Orange - High risk (12-14)
+    "risk_critical": "#f44336",  # Red - Critical risk (15+)
 }
 
 
@@ -71,13 +85,20 @@ SPACING = {
 }
 
 
-# Typography
+# Typography - Standardized Hierarchy
 TYPOGRAPHY = {
-    "font_family": "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    "font_size_small": "0.875rem",    # 14px
-    "font_size_base": "1rem",          # 16px
-    "font_size_large": "1.25rem",      # 20px
-    "font_size_xlarge": "1.5rem",      # 24px
+    "font_family": "system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    # Heading sizes (MDCalc/UpToDate style)
+    "h1": "2.5rem",      # 40px - Page titles
+    "h2": "1.875rem",   # 30px - Section headers
+    "h3": "1.5rem",     # 24px - Subsection headers
+    "h4": "1.25rem",    # 20px - Card titles
+    # Body sizes
+    "font_size_small": "0.875rem",    # 14px - Captions, small text
+    "font_size_base": "1rem",          # 16px - Body text
+    "font_size_large": "1.25rem",      # 20px - Emphasized text
+    "font_size_xlarge": "1.5rem",      # 24px - Large text
+    # Font weights
     "font_weight_normal": "400",
     "font_weight_medium": "500",
     "font_weight_bold": "700",
