@@ -31,9 +31,9 @@ def render():
         drowsy = st.checkbox("Buồn ngủ hoặc lơ mơ", key="asthma_drowsy")
         
         # Vital signs
-        rr = st.number_input("Nhịp thở (/phút)", min_value=0, max_value=60, value=20, step=1, key="asthma_rr")
-        hr = st.number_input("Nhịp tim (/phút)", min_value=0, max_value=250, value=80, step=1, key="asthma_hr")
-        spo2 = st.number_input("SpO₂ (%)", min_value=50, max_value=100, value=95, step=1, key="asthma_spo2")
+        rr = st.number_input("Nhịp thở (/phút)", min_value=0, max_value=60, value=20, step=1, format="%d", key="asthma_rr")
+        hr = st.number_input("Nhịp tim (/phút)", min_value=0, max_value=250, value=80, step=1, format="%d", key="asthma_hr")
+        spo2 = st.number_input("SpO₂ (%)", min_value=50, max_value=100, value=95, step=1, format="%d", key="asthma_spo2")
         
         # PEFR
         pefr_measured = st.checkbox("Đo được PEFR/FEV1", key="asthma_pefr_check")

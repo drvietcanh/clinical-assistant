@@ -279,7 +279,7 @@ def render():
     
     with col1:
         st.markdown("#### 👤 Thông Tin")
-        age = st.number_input("Tuổi", 70, 100, 75, 1, help="SCORE2-OP dành cho ≥70 tuổi")
+        age = st.number_input("Tuổi", 70, 100, 75, 1, format="%d", help="SCORE2-OP dành cho ≥70 tuổi")
         
         sex = st.radio("Giới tính", ["Nam", "Nữ"], horizontal=True)
         is_female = (sex == "Nữ")
@@ -295,7 +295,7 @@ def render():
     
     with col2:
         st.markdown("#### 🩺 Sinh Hiệu")
-        sbp = st.number_input("Huyết áp tâm thu (mmHg)", 80, 220, 140, 1)
+        sbp = st.number_input("Huyết áp tâm thu (mmHg)", 80, 220, 140, 1, format="%d")
     
     st.divider()
     

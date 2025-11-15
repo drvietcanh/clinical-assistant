@@ -320,6 +320,7 @@ def render():
     fev1_percent = st.number_input(
         "**FEV1 % predicted**",
         0.0, 150.0, 50.0, 1.0,
+        format="%.1f",
         help="FEV1 sau giãn phế quản / FEV1 predicted × 100%"
     )
     st.caption("💡 Lấy sau khi dùng giãn phế quản")
@@ -349,6 +350,7 @@ def render():
     walk_distance = st.number_input(
         "**6-Minute Walk Distance (meters)**",
         0, 1000, 300, 10,
+        format="%d",
         help="Khoảng cách đi được trong 6 phút"
     )
     st.caption("💡 Test 6 phút đi bộ trên mặt phẳng")

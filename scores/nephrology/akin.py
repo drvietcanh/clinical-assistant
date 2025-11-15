@@ -138,10 +138,10 @@ def render():
     
     with col2:
         st.markdown("#### Nước Tiểu")
-        weight = st.number_input("Cân Nặng (kg)", 0.0, 300.0, 70.0, 1.0)
-        urine_output_6h = st.number_input("Nước tiểu 6h (mL)", -1.0, 5000.0, -1.0, 10.0)
-        urine_output_12h = st.number_input("Nước tiểu 12h (mL)", -1.0, 10000.0, -1.0, 10.0)
-        urine_output_24h = st.number_input("Nước tiểu 24h (mL)", -1.0, 20000.0, -1.0, 10.0)
+        weight = st.number_input("Cân Nặng (kg)", 0.0, 300.0, 70.0, 1.0, format="%.1f")
+        urine_output_6h = st.number_input("Nước tiểu 6h (mL)", -1.0, 5000.0, -1.0, 10.0, format="%.0f")
+        urine_output_12h = st.number_input("Nước tiểu 12h (mL)", -1.0, 10000.0, -1.0, 10.0, format="%.0f")
+        urine_output_24h = st.number_input("Nước tiểu 24h (mL)", -1.0, 20000.0, -1.0, 10.0, format="%.0f")
     
     if st.button("🧮 Đánh Giá AKIN Stage", type="primary"):
         result = calculate_akin(scr_baseline, scr_current, scr_increase_48h,

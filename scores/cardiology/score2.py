@@ -255,7 +255,7 @@ def render():
     
     with col1:
         st.markdown("#### 👤 Thông Tin Cá Nhân")
-        age = st.number_input("Tuổi", 40, 69, 50, 1, help="SCORE2 chỉ dành cho 40-69 tuổi")
+        age = st.number_input("Tuổi", 40, 69, 50, 1, format="%d", help="SCORE2 chỉ dành cho 40-69 tuổi")
         
         sex = st.radio("Giới tính", ["Nam", "Nữ"], horizontal=True)
         is_female = (sex == "Nữ")

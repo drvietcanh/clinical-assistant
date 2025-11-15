@@ -45,10 +45,10 @@ def render():
         oliguria = st.checkbox("Tiểu ít (<0.5 mL/kg/h)", key="hf_oliguria")
         
         # Vital signs
-        sbp = st.number_input("Huyết áp tâm thu (mmHg)", 50, 250, 120, 5, key="hf_sbp")
-        hr = st.number_input("Nhịp tim (/phút)", 30, 200, 80, 5, key="hf_hr")
-        rr = st.number_input("Nhịp thở (/phút)", 10, 60, 20, 2, key="hf_rr")
-        spo2 = st.number_input("SpO₂ (%)", 70, 100, 95, 1, key="hf_spo2")
+        sbp = st.number_input("Huyết áp tâm thu (mmHg)", 50, 250, 120, 5, format="%d", key="hf_sbp")
+        hr = st.number_input("Nhịp tim (/phút)", 30, 200, 80, 5, format="%d", key="hf_hr")
+        rr = st.number_input("Nhịp thở (/phút)", 10, 60, 20, 2, format="%d", key="hf_rr")
+        spo2 = st.number_input("SpO₂ (%)", 70, 100, 95, 1, format="%d", key="hf_spo2")
     
     with col2:
         st.markdown("### 📊 Phân Loại")

@@ -39,11 +39,11 @@ def render():
     # Vital signs
     col1, col2, col3 = st.columns(3)
     with col1:
-        sbp = st.number_input("HA tâm thu (mmHg)", 60, 220, 120, 1)
+        sbp = st.number_input("HA tâm thu (mmHg)", 60, 220, 120, 1, format="%d")
     with col2:
-        hr = st.number_input("Nhịp tim (bpm)", 40, 180, 80, 1)
+        hr = st.number_input("Nhịp tim (bpm)", 40, 180, 80, 1, format="%d")
     with col3:
-        rr = st.number_input("Nhịp thở (/phút)", 10, 50, 16, 1)
+        rr = st.number_input("Nhịp thở (/phút)", 10, 50, 16, 1, format="%d")
     
     # Clinical findings
     st.markdown("### 🩺 Khám lâm sàng:")

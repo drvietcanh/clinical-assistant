@@ -77,7 +77,7 @@ def render():
         
         with col1:
             st.markdown("**1. Nhiệt độ (°C):**")
-            temp = st.number_input("Nhiệt độ:", min_value=35.0, max_value=45.0, value=37.0, step=0.1, key="thyrotoxic_temp")
+            temp = st.number_input("Nhiệt độ:", min_value=35.0, max_value=45.0, value=37.0, step=0.1, format="%.1f", key="thyrotoxic_temp")
             temp_score = 0
             if temp >= 37.2 and temp < 37.8:
                 temp_score = 5
@@ -112,7 +112,7 @@ def render():
             neuro_score = neuro_scores.get(neuro, 0)
             st.caption(f"Điểm thần kinh: {neuro_score}")
         
-        hr = st.number_input("Nhịp tim (bpm):", min_value=60, max_value=250, value=80, key="thyrotoxic_hr")
+        hr = st.number_input("Nhịp tim (bpm):", min_value=60, max_value=250, value=80, format="%d", key="thyrotoxic_hr")
         hr_score = 0
         if hr >= 99 and hr < 109:
             hr_score = 5
