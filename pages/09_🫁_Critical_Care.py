@@ -31,6 +31,15 @@ if VENTILATOR_ADVANCED_AVAILABLE:
     )
     from ventilator.weaning import render_weaning_calculator as render_weaning_calculator_advanced
 
+# Import individual quick tools from critical_care/ventilator
+from critical_care.ventilator import (
+    render_ibw_calculator,
+    render_tidal_volume_calculator,
+    render_peep_calculator,
+    render_plateau_pressure_calculator,
+    render_weaning_calculator as render_weaning_calculator_basic
+)
+
 # Standard page setup
 setup_page(
     page_title="Hồi Sức",
@@ -102,33 +111,77 @@ elif "Ventilator Management" in tool_type:
     st.header("🫁 Ventilator Management")
     st.caption("Công cụ quản lý máy thở cho ICU")
     
-    # Sub-menu for ventilator tools
+    # Sub-menu for ventilator tools - Organized into 4 clear tabs
     if VENTILATOR_ADVANCED_AVAILABLE:
         vent_tabs = st.tabs([
-            "🫁 Tính Toán Tổng Hợp",
-            "📏 Công Cụ Cơ Bản",
-            "🫁 ARDSNet",
-            "⚙️ Cài Đặt Ban Đầu",
-            "📊 PEEP/FiO2 Table",
-            "🔄 Cai Máy Thở"
+            "🚀 Quick Tools",
+            "🫁 Comprehensive Analysis",
+            "📊 Protocols & Settings",
+            "🔄 Weaning & Extubation"
         ])
         
+        # Tab 1: Quick Tools - For fast decisions
         with vent_tabs[0]:
+            st.markdown("### 🚀 Quick Tools")
+            st.caption("Công cụ tính toán nhanh cho quyết định lâm sàng")
+            st.info("💡 **Sử dụng khi:** Cần tính toán nhanh, đơn giản, không cần phân tích chi tiết")
+            
+            quick_tools_tabs = st.tabs([
+                "📏 IBW",
+                "💨 Tidal Volume",
+                "📊 PEEP",
+                "📈 Plateau Pressure",
+                "🔄 RSBI (Quick)"
+            ])
+            
+            with quick_tools_tabs[0]:
+                render_ibw_calculator()
+            
+            with quick_tools_tabs[1]:
+                render_tidal_volume_calculator()
+            
+            with quick_tools_tabs[2]:
+                render_peep_calculator()
+            
+            with quick_tools_tabs[3]:
+                render_plateau_pressure_calculator()
+            
+            with quick_tools_tabs[4]:
+                render_weaning_calculator_basic()
+        
+        # Tab 2: Comprehensive Analysis - For detailed assessment
+        with vent_tabs[1]:
+            st.markdown("### 🫁 Comprehensive Analysis")
+            st.caption("Phân tích tổng hợp với ABG integration, alerts, history, và trends")
+            st.info("💡 **Sử dụng khi:** Cần đánh giá chi tiết, theo dõi dài hạn, có ABG results")
             render_comprehensive_calculator()
         
-        with vent_tabs[1]:
-            render_ventilator_calculator()
-        
+        # Tab 3: Protocols & Settings - Standard protocols
         with vent_tabs[2]:
-            render_ardsnet()
+            st.markdown("### 📊 Protocols & Settings")
+            st.caption("Các protocol chuẩn và hướng dẫn cài đặt máy thở")
+            st.info("💡 **Sử dụng khi:** Cần tuân thủ protocol chuẩn, cài đặt ban đầu")
+            
+            protocol_tabs = st.tabs([
+                "🫁 ARDSNet Protocol",
+                "⚙️ Initial Settings",
+                "📊 PEEP/FiO2 Table"
+            ])
+            
+            with protocol_tabs[0]:
+                render_ardsnet()
+            
+            with protocol_tabs[1]:
+                render_initial_settings()
+            
+            with protocol_tabs[2]:
+                render_peep_fio2_table()
         
+        # Tab 4: Weaning & Extubation - For weaning assessment
         with vent_tabs[3]:
-            render_initial_settings()
-        
-        with vent_tabs[4]:
-            render_peep_fio2_table()
-        
-        with vent_tabs[5]:
+            st.markdown("### 🔄 Weaning & Extubation")
+            st.caption("Đánh giá sẵn sàng cai máy thở và extubation")
+            st.info("💡 **Sử dụng khi:** Đánh giá khả năng cai máy thở, chuẩn bị extubation")
             render_weaning_calculator_advanced()
     else:
         # Fallback to basic calculator if advanced not available
