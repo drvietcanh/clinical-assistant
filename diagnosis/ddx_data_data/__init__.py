@@ -36,6 +36,13 @@ from .weight_loss import WEIGHT_LOSS_DDX
 from .dizziness_vertigo import DIZZINESS_VERTIGO_DDX
 from .constipation import CONSTIPATION_DDX
 from .urinary_retention import URINARY_RETENTION_DDX
+from .hearing_loss import HEARING_LOSS_DDX
+from .tremor import TREMOR_DDX
+from .swelling import SWELLING_DDX
+from .night_sweats import NIGHT_SWEATS_DDX
+from .memory_loss import MEMORY_LOSS_DDX
+from .nausea import NAUSEA_DDX
+from .insomnia import INSOMNIA_DDX
 from .all_scenarios import ALL_SCENARIOS
 from .symptom_aliases import SYMPTOM_ALIASES
 
@@ -74,4 +81,11 @@ __all__ = [
     'DIZZINESS_VERTIGO_DDX',
     'CONSTIPATION_DDX',
     'URINARY_RETENTION_DDX',
+    'HEARING_LOSS_DDX',
+    'TREMOR_DDX',
+    'SWELLING_DDX',
+    'NIGHT_SWEATS_DDX',
+    'MEMORY_LOSS_DDX',
+    'NAUSEA_DDX',
+    'INSOMNIA_DDX',
 ]

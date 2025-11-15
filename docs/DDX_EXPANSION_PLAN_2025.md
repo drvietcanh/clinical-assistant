@@ -347,12 +347,18 @@
 - [x] Dizziness / Vertigo ✅ (bonus)
 - [x] Constipation ✅ (bonus)
 - [x] Urinary Retention ✅ (bonus)
+- [x] Hearing Loss ✅ (bonus - Phase 2)
+- [x] Tremor ✅ (bonus - Phase 2)
+- [x] Swelling ✅ (bonus - Phase 2)
+- [x] Night Sweats ✅ (bonus - Phase 2)
+- [x] Memory Loss ✅ (bonus - Phase 2)
 
 ### **Overall Progress:**
-- **Current:** 31 scenarios ✅
+- **Current:** 36 scenarios ✅
 - **Phase 1 Target:** 30 scenarios (+8) → **ĐÃ VƯỢT MỤC TIÊU!** (31 scenarios, +9)
-- **Phase 2 Target:** 36+ scenarios (+5-6)
+- **Phase 2 Target:** 36+ scenarios (+5-6) → **✅ HOÀN THÀNH!** (36 scenarios)
 - **Phase 1 Completion:** ✅ 100% COMPLETE
+- **Phase 2 Completion:** ✅ 100% COMPLETE (All 5 bonus scenarios integrated)
 
 ---
 

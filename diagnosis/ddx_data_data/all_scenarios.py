@@ -41,6 +41,8 @@ from .tremor import TREMOR_DDX
 from .swelling import SWELLING_DDX
 from .night_sweats import NIGHT_SWEATS_DDX
 from .memory_loss import MEMORY_LOSS_DDX
+from .nausea import NAUSEA_DDX
+from .insomnia import INSOMNIA_DDX
 
 # ALL_SCENARIOS
 
@@ -60,6 +62,6 @@ ALL_SCENARIOS = {'Chest Pain': CHEST_PAIN_DDX, 'Dyspnea': DYSPNEA_DDX, 'Abdomina
     'Dizziness / Vertigo': DIZZINESS_VERTIGO_DDX, 'Constipation': CONSTIPATION_DDX,
     'Urinary Retention': URINARY_RETENTION_DDX, 'Hearing Loss': HEARING_LOSS_DDX,
     'Tremor': TREMOR_DDX, 'Swelling': SWELLING_DDX, 'Night Sweats': NIGHT_SWEATS_DDX,
-    'Memory Loss': MEMORY_LOSS_DDX}
+    'Memory Loss': MEMORY_LOSS_DDX, 'Nausea': NAUSEA_DDX, 'Insomnia': INSOMNIA_DDX}
 
 __all__ = ['ALL_SCENARIOS']
