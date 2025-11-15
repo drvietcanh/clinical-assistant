@@ -1,34 +1,14 @@
 # BÁO CÁO PHÂN TÍCH MODULE
 **Ngày tạo:** D:\1app\medical
-**Tổng số file:** 513
+**Tổng số file:** 525
 
 ## 📊 TÓM TẮT
 
-- ⚠️  **CRITICAL** (> 800 dòng): 7 files
-- ⚠️  **Recommended** (> 500 dòng): 60 files
-- ✅ **OK**: 446 files
+- ⚠️  **CRITICAL** (> 800 dòng): 4 files
+- ⚠️  **Recommended** (> 500 dòng): 61 files
+- ✅ **OK**: 460 files
 
 ## 🔴 CẦN TÁCH NGAY (CRITICAL)
-
-### drugs\drug_modules\psychiatry_other.py
-- **Dòng:** 934 (code: 926)
-- **Classes:** 0
-- **Functions:** 0
-- **Data dict:** Có (~69 entries)
-- **Gợi ý:**
-  - ⚠️  CRITICAL: File quá dài (934 dòng) - Nên tách ngay!
-  - 📝 Code thực tế: 926 dòng (không tính comment)
-  - 📊 Có data dictionary lớn (~69 entries) - Nên tách data ra file riêng
-
-### drugs\drug_modules\antimicrobial\antivirals.py
-- **Dòng:** 926 (code: 918)
-- **Classes:** 0
-- **Functions:** 0
-- **Data dict:** Có (~72 entries)
-- **Gợi ý:**
-  - ⚠️  CRITICAL: File quá dài (926 dòng) - Nên tách ngay!
-  - 📝 Code thực tế: 918 dòng (không tính comment)
-  - 📊 Có data dictionary lớn (~72 entries) - Nên tách data ra file riêng
 
 ### antibiotics\antibiotics_data\cephalosporins.py
 - **Dòng:** 923 (code: 899)
@@ -49,16 +29,6 @@
   - ⚠️  CRITICAL: File quá dài (887 dòng) - Nên tách ngay!
   - 📝 Code thực tế: 773 dòng (không tính comment)
   - 📊 Có data dictionary lớn (~52 entries) - Nên tách data ra file riêng
-
-### drugs\drug_modules\cardiovascular\calcium_blockers.py
-- **Dòng:** 867 (code: 860)
-- **Classes:** 0
-- **Functions:** 0
-- **Data dict:** Có (~59 entries)
-- **Gợi ý:**
-  - ⚠️  CRITICAL: File quá dài (867 dòng) - Nên tách ngay!
-  - 📝 Code thực tế: 860 dòng (không tính comment)
-  - 📊 Có data dictionary lớn (~59 entries) - Nên tách data ra file riêng
 
 ### drugs\drug_info.py
 - **Dòng:** 859 (code: 639)
@@ -289,6 +259,10 @@
 - ⚠️  File dài (531 dòng) - Nên xem xét tách
 - 📝 Code thực tế: 437 dòng (không tính comment)
 
+### drugs\drug_modules\psychiatry_other\ssris.py (526 dòng)
+- ⚠️  File dài (526 dòng) - Nên xem xét tách
+- 📝 Code thực tế: 520 dòng (không tính comment)
+
 ### scores\metabolism\crcl.py (525 dòng)
 - ⚠️  File dài (525 dòng) - Nên xem xét tách
 
@@ -318,11 +292,8 @@
 
 | File | Dòng | Code | Classes | Functions | Data Dict |
 |------|------|------|---------|-----------|-----------|
-| drugs\drug_modules\psychiatry_other.py | 934 | 926 | 0 | 0 | ✅ (~69) |
-| drugs\drug_modules\antimicrobial\antivirals.py | 926 | 918 | 0 | 0 | ✅ (~72) |
 | antibiotics\antibiotics_data\cephalosporins.py | 923 | 899 | 0 | 0 | ✅ (~63) |
 | drugs\enhanced_fields_schema_data.py | 887 | 773 | 0 | 3 | ✅ (~52) |
-| drugs\drug_modules\cardiovascular\calcium_blockers.py | 867 | 860 | 0 | 0 | ✅ (~59) |
 | drugs\drug_info.py | 859 | 639 | 0 | 5 | ✅ (~0) |
 | drugs\drug_modules\endocrinology_other\corticosteroids.py | 854 | 849 | 0 | 0 | ❌ |
 | drugs\drug_modules\metabolic.py | 794 | 791 | 0 | 0 | ✅ (~59) |
@@ -338,3 +309,6 @@
 | critical_care\sedation.py | 654 | 512 | 0 | 10 | ❌ |
 | drugs\drug_modules\cardiovascular\anticoagulants.py | 653 | 647 | 0 | 0 | ❌ |
 | scores\pediatrics\apgar.py | 649 | 496 | 0 | 3 | ❌ |
+| scores\respiratory\smartcop.py | 649 | 512 | 0 | 1 | ❌ |
+| scores\gi\meld_na.py | 645 | 499 | 0 | 3 | ❌ |
+| scores\cardiology\qtc.py | 639 | 501 | 0 | 8 | ❌ |
