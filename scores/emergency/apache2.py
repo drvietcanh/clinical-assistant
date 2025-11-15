@@ -220,9 +220,9 @@ def render():
     st.markdown("#### 👤 Thông Tin Chung")
     col1, col2 = st.columns(2)
     with col1:
-        age = st.number_input("Tuổi", 0, 120, 50, 1)
+        age = st.number_input("Tuổi", 0, 120, 50, 1, format="%d")
     with col2:
-        gcs = st.number_input("GCS (Glasgow Coma Scale)", 3, 15, 15, 1)
+        gcs = st.number_input("GCS (Glasgow Coma Scale)", 3, 15, 15, 1, format="%d")
     
     st.divider()
     
@@ -230,14 +230,14 @@ def render():
     st.markdown("#### 🩺 Sinh Hiệu")
     col3, col4, col5 = st.columns(3)
     with col3:
-        temperature = st.number_input("Nhiệt độ (°C)", 20, 45, 37, 1)
+        temperature = st.number_input("Nhiệt độ (°C)", 20, 45, 37, 1, format="%d")
     with col4:
-        map_val = st.number_input("MAP (mmHg)", 0, 250, 70, 1)
+        map_val = st.number_input("MAP (mmHg)", 0, 250, 70, 1, format="%d")
         st.caption("MAP = (SBP + 2×DBP)/3")
     with col5:
-        heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1)
+        heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1, format="%d")
     
-    respiratory_rate = st.number_input("Nhịp thở (/min)", 0, 70, 16, 1)
+    respiratory_rate = st.number_input("Nhịp thở (/min)", 0, 70, 16, 1, format="%d")
     
     st.divider()
     
@@ -245,11 +245,11 @@ def render():
     st.markdown("#### 🫁 Khí Máu Động Mạch (ABG)")
     col6, col7, col8 = st.columns(3)
     with col6:
-        fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1)
+        fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1, format="%d")
     with col7:
-        pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1)
+        pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1, format="%d")
     with col8:
-        paco2 = st.number_input("PaCO₂ (mmHg)", 0, 150, 40, 1)
+        paco2 = st.number_input("PaCO₂ (mmHg)", 0, 150, 40, 1, format="%d")
     
     ph = st.number_input("pH", 6.5, 8.0, 7.40, 0.01, format="%.2f")
     

@@ -232,9 +232,9 @@ def render():
     st.markdown("#### 1️⃣ Hô Hấp (Respiratory) - Với Hỗ Trợ Hiện Đại")
     col1, col2 = st.columns(2)
     with col1:
-        pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1)
+        pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1, format="%d")
     with col2:
-        fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1)
+        fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1, format="%d")
     
     pao2_fio2 = (pao2 / fio2) * 100 if fio2 > 0 else 0
     st.caption(f"💡 PaO₂/FiO₂ = {pao2_fio2:.0f} mmHg")
@@ -254,13 +254,13 @@ def render():
     
     hfnc_flow = None
     if respiratory_support == "hfnc":
-        hfnc_flow = st.number_input("HFNC Flow (L/min)", 20, 70, 50, 1)
+        hfnc_flow = st.number_input("HFNC Flow (L/min)", 20, 70, 50, 1, format="%d")
     
     st.divider()
     
     # Coagulation
     st.markdown("#### 2️⃣ Đông Máu (Coagulation)")
-    platelets = st.number_input("Tiểu cầu (×10³/μL)", 0, 500, 200, 1)
+    platelets = st.number_input("Tiểu cầu (×10³/μL)", 0, 500, 200, 1, format="%d")
     
     st.divider()
     
@@ -297,7 +297,7 @@ def render():
             )
         map_value = 70.0
     else:
-        map_value = st.number_input("MAP - Mean Arterial Pressure (mmHg)", 0, 200, 70, 1)
+        map_value = st.number_input("MAP - Mean Arterial Pressure (mmHg)", 0, 200, 70, 1, format="%d")
         vasopressor_type = ""
         vasopressor_dose = 0.0
         st.caption("💡 MAP = (SBP + 2×DBP) / 3")
@@ -306,7 +306,7 @@ def render():
     
     # Central Nervous System
     st.markdown("#### 5️⃣ Thần Kinh (CNS)")
-    gcs = st.number_input("Glasgow Coma Scale (GCS)", 3, 15, 15, 1)
+    gcs = st.number_input("Glasgow Coma Scale (GCS)", 3, 15, 15, 1, format="%d")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
     st.divider()
@@ -320,7 +320,7 @@ def render():
         creatinine = st.number_input("Creatinine (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
         st.caption("💡 μmol/L ÷ 88.4 = mg/dL")
     with col6:
-        urine_output = st.number_input("Nước tiểu 24h (mL)", 0, 5000, 1500, 10)
+        urine_output = st.number_input("Nước tiểu 24h (mL)", 0, 5000, 1500, 10, format="%d")
     
     st.divider()
     

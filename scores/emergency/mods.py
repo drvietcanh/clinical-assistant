@@ -265,9 +265,9 @@ def render():
     st.markdown("#### 1️⃣ Hô Hấp")
     col1, col2 = st.columns(2)
     with col1:
-        pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1)
+        pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1, format="%d")
     with col2:
-        fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1)
+        fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1, format="%d")
     
     pao2_fio2 = (pao2 / fio2) * 100 if fio2 > 0 else 0
     st.caption(f"💡 PaO₂/FiO₂ = {pao2_fio2:.0f} mmHg")
@@ -292,22 +292,22 @@ def render():
     st.markdown("#### 4️⃣ Tim Mạch")
     col3, col4 = st.columns(2)
     with col3:
-        heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1)
+        heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1, format="%d")
     with col4:
-        map_value = st.number_input("MAP (mmHg)", 0, 200, 70, 1)
+        map_value = st.number_input("MAP (mmHg)", 0, 200, 70, 1, format="%d")
         st.caption("MAP = (SBP + 2×DBP)/3")
     
     st.divider()
     
     # Hematologic
     st.markdown("#### 5️⃣ Huyết Học")
-    platelets = st.number_input("Tiểu cầu (×10³/μL)", 0, 500, 200, 1)
+    platelets = st.number_input("Tiểu cầu (×10³/μL)", 0, 500, 200, 1, format="%d")
     
     st.divider()
     
     # Neurologic
     st.markdown("#### 6️⃣ Thần Kinh")
-    gcs = st.number_input("GCS (Glasgow Coma Scale)", 3, 15, 15, 1)
+    gcs = st.number_input("GCS (Glasgow Coma Scale)", 3, 15, 15, 1, format="%d")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
     st.divider()
