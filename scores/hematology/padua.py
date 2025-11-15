@@ -71,7 +71,7 @@ def render():
         components.append("Chấn thương/PT gần đây (+2)")
     
     # Age >= 70
-    age = st.number_input("Tuổi", 18, 120, 60, 1)
+    age = st.number_input("Tuổi", 18, 120, 60, 1, format="%d")
     age_70 = age >= 70
     if age_70:
         score += 1
@@ -96,7 +96,7 @@ def render():
         components.append("Nhiễm khuẩn/Thấp khớp (+1)")
     
     # Obesity
-    bmi = st.number_input("BMI (kg/m²)", 10.0, 60.0, 25.0, 0.5)
+    bmi = st.number_input("BMI (kg/m²)", 10.0, 60.0, 25.0, 0.5, format="%.1f")
     obesity = bmi >= 30
     if obesity:
         score += 1

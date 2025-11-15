@@ -42,11 +42,11 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        bp_sys = st.number_input("HA tâm thu (mmHg)", 100, 250, 140, 1)
-        bp_dia = st.number_input("HA tâm trương (mmHg)", 60, 150, 90, 1)
+        bp_sys = st.number_input("HA tâm thu (mmHg)", 100, 250, 140, 1, format="%d")
+        bp_dia = st.number_input("HA tâm trương (mmHg)", 60, 150, 90, 1, format="%d")
     
     with col2:
-        gestational_age = st.number_input("Tuổi thai (tuần)", 20, 42, 32, 1)
+        gestational_age = st.number_input("Tuổi thai (tuần)", 20, 42, 32, 1, format="%d")
         st.caption(f"Thai {gestational_age} tuần")
     
     proteinuria = st.checkbox(

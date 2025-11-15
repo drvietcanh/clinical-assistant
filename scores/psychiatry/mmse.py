@@ -3,7 +3,7 @@ import streamlit as st
 def render():
     st.markdown("<h2 style='text-align: center; color: #7C3AED;'>🧠 MMSE</h2><p style='text-align: center;'><em>Đánh giá nhận thức</em></p>", unsafe_allow_html=True)
     with st.expander("ℹ️ MMSE"): st.markdown("**MMSE** sàng lọc suy giảm nhận thức. **Điểm:** 0-30")
-    st.markdown("---"); orientation = st.number_input("Định hướng (0-10)", 0, 10, 10); registration = st.number_input("Ghi nhớ (0-3)", 0, 3, 3); attention = st.number_input("Chú ý (0-5)", 0, 5, 5); recall = st.number_input("Nhớ lại (0-3)", 0, 3, 3); language = st.number_input("Ngôn ngữ (0-9)", 0, 9, 9); total = orientation + registration + attention + recall + language
+    st.markdown("---"); orientation = st.number_input("Định hướng (0-10)", 0, 10, 10, format="%d"); registration = st.number_input("Ghi nhớ (0-3)", 0, 3, 3, format="%d"); attention = st.number_input("Chú ý (0-5)", 0, 5, 5, format="%d"); recall = st.number_input("Nhớ lại (0-3)", 0, 3, 3, format="%d"); language = st.number_input("Ngôn ngữ (0-9)", 0, 9, 9, format="%d"); total = orientation + registration + attention + recall + language
     if st.button("🔬 Tính MMSE", type="primary", use_container_width=True):
         if total >= 27: status = "Bình thường"; color = "#28a745"
         elif total >= 21: status = "Suy giảm nhẹ"; color = "#fd7e14"

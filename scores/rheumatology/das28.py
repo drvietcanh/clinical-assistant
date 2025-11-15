@@ -4,9 +4,9 @@ import math
 def render():
     st.markdown("<h2 style='text-align: center; color: #F97316;'>🦴 DAS28</h2><p style='text-align: center;'><em>Hoạt động bệnh viêm khớp dạng thấp</em></p>", unsafe_allow_html=True)
     with st.expander("ℹ️ DAS28"): st.markdown("**DAS28** đánh giá hoạt động bệnh RA. Khám 28 khớp + ESR/CRP + đánh giá chủ quan.")
-    st.markdown("---"); tjc = st.number_input("TJC - Số khớp đau (0-28)", 0, 28, 0); sjc = st.number_input("SJC - Số khớp sưng (0-28)", 0, 28, 0); method = st.radio("Chọn phương pháp:", ["DAS28-ESR", "DAS28-CRP"]); 
-    if method == "DAS28-ESR": esr = st.number_input("ESR (mm/h)", 0, 200, 10); pga = st.slider("PGA - Bệnh nhân đánh giá (VAS 0-100mm)", 0, 100, 50); das28 = 0.56 * math.sqrt(tjc) + 0.28 * math.sqrt(sjc) + 0.70 * math.log(esr + 1) + 0.014 * pga
-    else: crp = st.number_input("CRP (mg/L)", 0.0, 200.0, 5.0); pga = st.slider("PGA - Bệnh nhân đánh giá (VAS 0-100mm)", 0, 100, 50); das28 = 0.56 * math.sqrt(tjc) + 0.28 * math.sqrt(sjc) + 0.36 * math.log(crp + 1) + 0.014 * pga + 0.96
+    st.markdown("---"); tjc = st.number_input("TJC - Số khớp đau (0-28)", 0, 28, 0, format="%d"); sjc = st.number_input("SJC - Số khớp sưng (0-28)", 0, 28, 0, format="%d"); method = st.radio("Chọn phương pháp:", ["DAS28-ESR", "DAS28-CRP"]); 
+    if method == "DAS28-ESR": esr = st.number_input("ESR (mm/h)", 0, 200, 10, format="%d"); pga = st.slider("PGA - Bệnh nhân đánh giá (VAS 0-100mm)", 0, 100, 50); das28 = 0.56 * math.sqrt(tjc) + 0.28 * math.sqrt(sjc) + 0.70 * math.log(esr + 1) + 0.014 * pga
+    else: crp = st.number_input("CRP (mg/L)", 0.0, 200.0, 5.0, format="%.1f"); pga = st.slider("PGA - Bệnh nhân đánh giá (VAS 0-100mm)", 0, 100, 50); das28 = 0.56 * math.sqrt(tjc) + 0.28 * math.sqrt(sjc) + 0.36 * math.log(crp + 1) + 0.014 * pga + 0.96
     
     if st.button("🔬 Tính DAS28", type="primary", use_container_width=True):
         if das28 < 2.6: status = "Thuyên giảm"; color = "#28a745"
