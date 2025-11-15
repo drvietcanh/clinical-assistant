@@ -24,6 +24,10 @@ Clinical Utility:
 
 import streamlit as st
 import math
+from components.ui.scoring import (
+    render_score_result,
+    render_score_breakdown,
+)
 from .apache2_lookup import (
     get_temp_score,
     get_map_score,
@@ -314,31 +318,33 @@ def render():
         # Display results
         st.subheader("📊 Kết Quả")
         
-        col_r1, col_r2, col_r3 = st.columns(3)
-        
-        with col_r1:
-            st.metric("**APACHE II**", f"{result['total_score']}")
-            st.caption("0-71 (cao = nặng)")
-        
-        with col_r2:
-            st.metric("**Tử Vong Dự Đoán**", f"{result['predicted_mortality']:.1f}%")
-            st.caption(f"Khoảng: {result['mortality_range']}")
-        
-        with col_r3:
-            st.markdown(f"### {result['color']}")
-            st.markdown(f"**{result['interpretation']}**")
+        # Color-coded score result (MDCalc style)
+        mortality_text = f"{result['predicted_mortality']:.1f}% (Khoảng: {result['mortality_range']})"
+        render_score_result(
+            title="APACHE II Score",
+            score=result['total_score'],
+            interpretation=result['interpretation'],
+            mortality=mortality_text,
+            icon=result['color'],
+            thresholds={"low": 15, "moderate": 25, "high": 35},  # APACHE II thresholds
+            size="large"
+        )
         
         # Score breakdown
-        with st.expander("📋 Chi Tiết Điểm Số", expanded=True):
-            st.markdown(f"""
-            - **Acute Physiology Score (APS):** {result['aps']}/60 điểm
-            - **Age Points:** {result['age_points']}/6 điểm
-            - **Chronic Health Points:** {result['chronic_points']}/5 điểm
-            - **TỔNG:** {result['total_score']}/71 điểm
-            """)
-            
-            st.markdown("---")
-            st.markdown("**Chi tiết từng biến số:**")
+        breakdown_scores = {
+            "Acute Physiology Score (APS)": result['aps'],
+            "Age Points": result['age_points'],
+            "Chronic Health Points": result['chronic_points'],
+        }
+        
+        render_score_breakdown(
+            title="📋 Chi Tiết Điểm Số",
+            subscores=breakdown_scores,
+            total_score=result['total_score']
+        )
+        
+        # Detailed scoring breakdown
+        with st.expander("📝 Chi Tiết Từng Biến Số", expanded=False):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         
