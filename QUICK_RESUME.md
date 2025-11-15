@@ -63,8 +63,20 @@
 - ✅ Smart ranking algorithm
 - ✅ Real-time suggestions
 - ✅ Usage tracking
+- 🔄 **Visual IV Compatibility Checker** (Đang làm - In Progress)
+  - Đã có basic IV compatibility checker trong `drugs/iv_compatibility.py`
+  - Cần bổ sung: Visual matrix với color-coded cells
+  - Interactive tooltips/hover
+  - Better visual representation
+  - Export functionality
 
 ## 🚀 Bắt đầu lại
+
+### Tiếp tục UI/UX Improvements:
+- **Task tiếp theo:** Visual IV Compatibility Checker - Matrix display
+  - File hiện tại: `drugs/iv_compatibility.py` (đã có basic functionality)
+  - Cần bổ sung: Visual matrix component với color-coded cells, tooltips, interactive
+  - Reference: `docs/UI_UX_IMPROVEMENTS_PROPOSAL.md`
 
 ```bash
 # 1. Kiểm tra trạng thái
