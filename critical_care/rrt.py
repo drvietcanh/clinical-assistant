@@ -380,7 +380,6 @@ def render_sled_calculator():
             value=8.0,
             step=0.5,
             format="%.1f",
-            format="%.1f",
             key="sled_duration",
             help="Typical: 6-12 hours"
         )
