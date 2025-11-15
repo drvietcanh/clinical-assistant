@@ -24,6 +24,9 @@ Clinical Utility:
 
 import streamlit as st
 import math
+from components.ui.scoring import (
+    render_score_result,
+)
 
 
 def get_age_points(age: int) -> int:
@@ -481,22 +484,20 @@ def render():
         # Display results
         st.subheader("📊 Kết Quả")
         
-        col_r1, col_r2, col_r3 = st.columns(3)
-        
-        with col_r1:
-            st.metric("**SAPS II**", f"{result['total_score']}")
-            st.caption("0-163 (cao = nặng)")
-        
-        with col_r2:
-            st.metric("**Tử Vong Dự Đoán**", f"{result['predicted_mortality']:.1f}%")
-            st.caption(f"Khoảng: {result['mortality_range']}")
-        
-        with col_r3:
-            st.markdown(f"### {result['color']}")
-            st.markdown(f"**{result['interpretation']}**")
+        # Color-coded score result (MDCalc style)
+        mortality_text = f"{result['predicted_mortality']:.1f}% (Khoảng: {result['mortality_range']})"
+        render_score_result(
+            title="SAPS II Score",
+            score=result['total_score'],
+            interpretation=result['interpretation'],
+            mortality=mortality_text,
+            icon=result['color'],
+            thresholds={"low": 20, "moderate": 40, "high": 60},  # SAPS II thresholds
+            size="large"
+        )
         
         # Details
-        with st.expander("📋 Chi Tiết Điểm Số", expanded=True):
+        with st.expander("📋 Chi Tiết Điểm Số", expanded=False):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         
