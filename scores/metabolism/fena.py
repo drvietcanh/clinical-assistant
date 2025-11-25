@@ -16,6 +16,7 @@ JAMA. 1976;236(6):579-81.
 """
 
 import streamlit as st
+from datetime import datetime
 
 from .fena_calculator import calculate_fena, interpret_fena
 from .fena_ui_input import render_input_form
@@ -52,6 +53,18 @@ def render():
     st.markdown("---")
     
     if st.button("🧮 Tính FENa", type="primary", use_container_width=True):
+        # Track calculation
+        try:
+            from components.analytics import track_calculation
+            track_calculation(
+                calculator_id="fena",
+                calculator_name="FENa Calculator",
+                inputs=inputs,
+                results=None
+            )
+        except ImportError:
+            pass
+        
         # Calculate FENa
         fena = calculate_fena(
             inputs["u_na"],
@@ -114,8 +127,8 @@ def render():
                 show_export=True,
                 max_display=10
             )
-        except ImportError:
-            pass  # Notes component not available
+        except (ImportError, Exception) as e:
+            pass  # Notes component not available or error
     
     # Educational content
     st.markdown("---")

@@ -58,6 +58,15 @@
   - Export notes (JSON)
   - Delete và clear notes
   - Timestamp tracking
+- ✅ **Usage Analytics Dashboard** ⭐ MỚI (Priority 2)
+  - Track calculations với timestamp
+  - Most used calculators
+  - Specialty breakdown
+  - Daily usage charts
+  - Peak usage hours
+  - Export to CSV
+  - Visual charts (bar, line)
+  - Anonymous tracking (no PHI)
 
 ### 📦 Module Splitting:
 - Tách **13 files** CRITICAL/WARNING:
@@ -109,7 +118,7 @@
 
 ## 🚀 Bắt đầu lại
 
-### ✅ HOÀN THÀNH UI/UX IMPROVEMENTS PRIORITY 1 + Priority 2 (1/5)
+### ✅ HOÀN THÀNH UI/UX IMPROVEMENTS PRIORITY 1 + Priority 2 (2/4)
 
 **Priority 1 - Đã hoàn thành 6/6 tasks:**
 1. ✅ Enhanced Search với AI Suggestions
@@ -119,15 +128,19 @@
 5. ✅ Enhanced References & Evidence Levels - GRADE system, PubMed links
 6. ✅ Interactive Diagnostic Algorithms - Visual flowcharts
 
-**Priority 2 - Đã hoàn thành 1/5 tasks:**
+**Priority 2 - Đã hoàn thành 2/4 tasks:**
 1. ✅ Personal Notes & Annotations
+2. ✅ Usage Analytics Dashboard
 
 **Priority 2 - Còn lại:**
-- Usage Analytics Dashboard
 - Offline Mode với Service Worker
 - Mobile-First Improvements
 - Advanced Calculator Features
-- Reference: `docs/UI_UX_IMPROVEMENTS_PROPOSAL.md`
+
+**Đã bỏ:**
+- ❌ Multi-language Support (không làm)
+
+**Reference:** `docs/UI_UX_IMPROVEMENTS_PROPOSAL.md`
 
 ```bash
 # 1. Kiểm tra trạng thái
