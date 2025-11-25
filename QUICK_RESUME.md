@@ -19,6 +19,12 @@
   - Print-friendly view
   - Enhanced export buttons
   - Batch export support
+- ✅ **Visual IV Compatibility Checker - Matrix display** ⭐ MỚI
+  - Color-coded visual matrix (green/yellow/red/gray)
+  - Interactive tooltips với hover effects
+  - Compatibility summary với metrics
+  - Export to HTML và TXT
+  - Better visual representation với HTML/CSS
 
 ### 📦 Module Splitting:
 - Tách **13 files** CRITICAL/WARNING:
@@ -59,23 +65,20 @@
 ### UI/UX Improvements:
 - ✅ Enhanced Search với AI Suggestions
 - ✅ Enhanced Export - PDF & QR Code
+- ✅ Visual IV Compatibility Checker - Matrix display
 - ✅ Better fuzzy matching (rapidfuzz)
 - ✅ Smart ranking algorithm
 - ✅ Real-time suggestions
 - ✅ Usage tracking
-- 🔄 **Visual IV Compatibility Checker** (Đang làm - In Progress)
-  - Đã có basic IV compatibility checker trong `drugs/iv_compatibility.py`
-  - Cần bổ sung: Visual matrix với color-coded cells
-  - Interactive tooltips/hover
-  - Better visual representation
-  - Export functionality
 
 ## 🚀 Bắt đầu lại
 
 ### Tiếp tục UI/UX Improvements:
-- **Task tiếp theo:** Visual IV Compatibility Checker - Matrix display
-  - File hiện tại: `drugs/iv_compatibility.py` (đã có basic functionality)
-  - Cần bổ sung: Visual matrix component với color-coded cells, tooltips, interactive
+- **Task tiếp theo:** Full Drug Interaction Checker - Severity levels, recommendations
+  - Cần bổ sung: Severity levels (Major/Moderate/Minor)
+  - Clinical significance
+  - Management recommendations
+  - Alternative suggestions
   - Reference: `docs/UI_UX_IMPROVEMENTS_PROPOSAL.md`
 
 ```bash

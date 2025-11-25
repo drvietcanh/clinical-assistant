@@ -6,6 +6,11 @@ Visual compatibility matrix with color-coded warnings
 
 import streamlit as st
 import pandas as pd
+from components.iv_compatibility_matrix import (
+    render_visual_compatibility_matrix,
+    render_compatibility_summary,
+    export_matrix_to_html
+)
 
 
 # IV Compatibility Database
@@ -293,15 +298,8 @@ def render_iv_compatibility_checker():
                 questionable_count = sum(1 for r in results if r["status"] == "questionable")
                 compatible_count = sum(1 for r in results if r["status"] == "compatible")
                 
-                col1, col2, col3, col4 = st.columns(4)
-                with col1:
-                    st.metric("❌ Không tương thích", incompatible_count)
-                with col2:
-                    st.metric("⚠️ Thận trọng", questionable_count)
-                with col3:
-                    st.metric("✅ Tương thích", compatible_count)
-                with col4:
-                    st.metric("❓ Chưa rõ", len(results) - incompatible_count - questionable_count - compatible_count)
+                # Render compatibility summary with visual metrics
+                render_compatibility_summary(results)
                 
                 st.markdown("---")
                 
@@ -348,34 +346,56 @@ def render_iv_compatibility_checker():
                     
                     st.markdown("---")
                 
-                # Compatibility Matrix
-                st.markdown("### 📊 Ma Trận Tương Thích")
+                # Visual Compatibility Matrix
+                st.markdown("### 📊 Ma Trận Tương Thích Trực Quan")
                 
-                # Create matrix
-                matrix_data = []
-                for drug1 in selected_drugs:
-                    row = {"Thuốc": drug1}
-                    for drug2 in selected_drugs:
-                        if drug1 == drug2:
-                            row[drug2] = "—"
-                        else:
-                            status, _ = get_compatibility(drug1, drug2)
-                            if status == "compatible":
-                                row[drug2] = "✅"
-                            elif status == "questionable":
-                                row[drug2] = "⚠️"
-                            elif status == "incompatible":
-                                row[drug2] = "❌"
-                            else:
-                                row[drug2] = "❓"
-                    matrix_data.append(row)
+                # Render visual matrix
+                render_visual_compatibility_matrix(
+                    drugs=selected_drugs,
+                    compatibility_data=results,
+                    show_tooltips=True,
+                    compact=False
+                )
                 
-                df_matrix = pd.DataFrame(matrix_data)
-                df_matrix = df_matrix.set_index("Thuốc")
-                st.dataframe(df_matrix, use_container_width=True)
+                # Export options
+                st.markdown("---")
+                col1, col2, col3 = st.columns(3)
                 
-                # Legend
-                st.caption("**Chú giải:** ✅ Tương thích | ⚠️ Thận trọng | ❌ Không tương thích | ❓ Chưa rõ | — Cùng thuốc")
+                with col1:
+                    # Export HTML
+                    html_content = export_matrix_to_html(
+                        drugs=selected_drugs,
+                        compatibility_data=results,
+                        title="IV Compatibility Matrix"
+                    )
+                    st.download_button(
+                        label="📄 Download HTML",
+                        data=html_content,
+                        file_name="iv_compatibility_matrix.html",
+                        mime="text/html",
+                        use_container_width=True
+                    )
+                
+                with col2:
+                    # Copy to clipboard (as text summary)
+                    summary_text = f"IV Compatibility Matrix\n"
+                    summary_text += f"Drugs: {', '.join(selected_drugs)}\n\n"
+                    for result in results:
+                        summary_text += f"{result['drug1']} + {result['drug2']}: {result['status']}\n"
+                        summary_text += f"  {result['notes']}\n\n"
+                    
+                    st.download_button(
+                        label="📋 Download TXT",
+                        data=summary_text,
+                        file_name="iv_compatibility_summary.txt",
+                        mime="text/plain",
+                        use_container_width=True
+                    )
+                
+                with col3:
+                    # Print view
+                    if st.button("🖨️ Print View", use_container_width=True):
+                        st.info("💡 Sử dụng Ctrl+P (Windows) hoặc Cmd+P (Mac) để in trang này")
             
             else:
                 st.warning("Không có kết quả kiểm tra.")
