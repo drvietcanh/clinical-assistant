@@ -44,6 +44,8 @@ env/
 *service-account*.json
 ga-credentials.json
 google-analytics-*.json
+ordinal-tower-*.json
+*4a63b90a1b41.json
 
 # Logs
 *.log
