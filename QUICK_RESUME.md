@@ -50,6 +50,14 @@
   - AKI Diagnostic Algorithm
   - Step-by-step decision trees
   - Algorithm selector interface
+- ✅ **Personal Notes & Annotations** ⭐ MỚI (Priority 2)
+  - Notes cho mỗi calculator
+  - Patient-specific notes (không lưu PHI)
+  - Tags và metadata
+  - Search notes
+  - Export notes (JSON)
+  - Delete và clear notes
+  - Timestamp tracking
 
 ### 📦 Module Splitting:
 - Tách **13 files** CRITICAL/WARNING:
@@ -101,9 +109,9 @@
 
 ## 🚀 Bắt đầu lại
 
-### ✅ HOÀN THÀNH TẤT CẢ UI/UX IMPROVEMENTS PRIORITY 1!
+### ✅ HOÀN THÀNH UI/UX IMPROVEMENTS PRIORITY 1 + Priority 2 (1/5)
 
-**Đã hoàn thành 6/6 tasks:**
+**Priority 1 - Đã hoàn thành 6/6 tasks:**
 1. ✅ Enhanced Search với AI Suggestions
 2. ✅ Enhanced Export - PDF & QR Code
 3. ✅ Visual IV Compatibility Checker - Matrix display
@@ -111,10 +119,14 @@
 5. ✅ Enhanced References & Evidence Levels - GRADE system, PubMed links
 6. ✅ Interactive Diagnostic Algorithms - Visual flowcharts
 
-**Có thể tiếp tục với Priority 2 tasks:**
-- Personal Notes & Annotations
-- Advanced Calculator Customization
-- Multi-language Support
+**Priority 2 - Đã hoàn thành 1/5 tasks:**
+1. ✅ Personal Notes & Annotations
+
+**Priority 2 - Còn lại:**
+- Usage Analytics Dashboard
+- Offline Mode với Service Worker
+- Mobile-First Improvements
+- Advanced Calculator Features
 - Reference: `docs/UI_UX_IMPROVEMENTS_PROPOSAL.md`
 
 ```bash

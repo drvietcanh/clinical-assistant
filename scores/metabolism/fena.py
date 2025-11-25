@@ -85,6 +85,37 @@ def render():
         
         # Render references
         render_references_expander()
+        
+        # Render notes section
+        try:
+            from components.notes import render_notes_section
+            from datetime import datetime
+            result_id = f"fena_{fena:.2f}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            render_notes_section(
+                calculator_id="fena",
+                result_id=result_id,
+                show_add_form=True,
+                show_search=True,
+                show_export=True,
+                max_display=10
+            )
+        except ImportError:
+            pass  # Notes component not available
+        
+        # Render notes section
+        try:
+            from components.notes import render_notes_section
+            result_id = f"fena_{fena:.2f}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            render_notes_section(
+                calculator_id="fena",
+                result_id=result_id,
+                show_add_form=True,
+                show_search=True,
+                show_export=True,
+                max_display=10
+            )
+        except ImportError:
+            pass  # Notes component not available
     
     # Educational content
     st.markdown("---")
