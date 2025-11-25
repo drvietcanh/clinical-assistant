@@ -320,11 +320,11 @@ def render():
         st.info(f"""
         **Modified Bishop Score: {total_score}/15** ({parity_text})
         
-        **Đánh giá:** {result['favorability']}
+        **Đánh Giá:** {result['favorability']}
         
         **Tỷ lệ thành công:** {result['success_rate']}
         
-        **Khuyến nghị:** {result['recommendation']}
+        **Khuyến Nghị:** {result['recommendation']}
         """)
         
         # Special considerations

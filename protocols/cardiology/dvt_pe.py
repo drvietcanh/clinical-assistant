@@ -93,7 +93,7 @@ def render():
     **1. Thrombolysis:**
     - **Alteplase (tPA):** 100 mg IV trong 2 giờ
     - **Hoặc:** 0.6 mg/kg (max 50 mg) trong 15 phút
-    - **Chống chỉ định:** Chảy máu nội sọ, phẫu thuật gần đây, chấn thương
+    - **Chống Chỉ Định:** Chảy máu nội sọ, phẫu thuật gần đây, chấn thương
     
     **2. Embolectomy:**
     - Phẫu thuật hoặc catheter-directed
@@ -207,17 +207,17 @@ def render_dvt_protocol():
     st.success("## 🟢 Huyết Khối Tĩnh Mạch Sâu (DVT)")
     
     st.markdown("""
-    **Triệu chứng:**
+    **Triệu Chứng:**
     - Sưng, đau chân (thường một bên)
     - Đỏ, nóng da
     - Tăng chu vi chân
     
-    **Chẩn đoán:**
+    **Chẩn Đoán:**
     - **Wells Score:** Đánh giá nguy cơ
     - **D-dimer:** Nếu nguy cơ thấp
     - **Siêu âm Doppler:** Xác nhận
     
-    **Điều trị:**
+    **Điều Trị:**
     1. **Chống đông ngay:**
        - DOAC (apixaban, rivaroxaban) - ưu tiên
        - Hoặc LMWH + warfarin
@@ -237,19 +237,19 @@ def render_pe_protocol():
     st.error("## 🔴 Thuyên Tắc Phổi (PE)")
     
     st.markdown("""
-    **Triệu chứng:**
+    **Triệu Chứng:**
     - Khó thở đột ngột
     - Đau ngực (kiểu màng phổi)
     - Ho, ho ra máu
     - Ngất, hạ huyết áp
     
-    **Chẩn đoán:**
+    **Chẩn Đoán:**
     - **Wells Score / PERC:** Đánh giá nguy cơ
     - **D-dimer:** Nếu nguy cơ thấp
     - **CTPA:** Xác nhận (tiêu chuẩn vàng)
     - **V/Q scan:** Nếu không thể CT
     
-    **Điều trị:**
+    **Điều Trị:**
     1. **Nếu ổn định:**
        - DOAC hoặc LMWH + warfarin
        - Oxygen, hỗ trợ hô hấp
@@ -258,7 +258,7 @@ def render_pe_protocol():
        - Thrombolysis (alteplase)
        - Hoặc embolectomy
     
-    3. **Theo dõi:**
+    3. **Theo Dõi:**
        - Huyết động, hô hấp
        - Dấu hiệu tái phát
     """)

@@ -362,9 +362,9 @@ def render():
             
             **Nguy cơ cần IRVS:** ~{predicted_risk:.1f}%
             
-            **Đánh giá:** Bệnh nhân viêm phổi nhẹ, nguy cơ tiến triển nặng thấp.
+            **Đánh Giá:** Bệnh nhân viêm phổi nhẹ, nguy cơ tiến triển nặng thấp.
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             
             1. **Điều trị ngoại trú (nếu không có chống chỉ định khác):**
                - Kháng sinh uống: Amoxicillin-clavulanate + Azithromycin hoặc
@@ -376,7 +376,7 @@ def render():
                - Không tuân thủ điều trị ngoại trú
                - Yếu tố xã hội (không có người chăm sóc)
             
-            3. **Theo dõi:**
+            3. **Theo Dõi:**
                - Tái khám sau 48-72h nếu không cải thiện
                - Chụp X-quang ngực lại sau 4-6 tuần (để loại trừ ung thư phổi)
             
@@ -395,15 +395,15 @@ def render():
             
             **Nguy cơ cần IRVS:** ~{predicted_risk:.1f}%
             
-            **Đánh giá:** Viêm phổi mức độ vừa, cần theo dõi sát.
+            **Đánh Giá:** Viêm phổi mức độ vừa, cần theo dõi sát.
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             
             1. **NHẬP VIỆN - Khoa Nội/Hô hấp:**
                - Theo dõi sát: vital signs mỗi 4-6h
                - SpO₂ monitoring liên tục nếu có
             
-            2. **Điều trị:**
+            2. **Điều Trị:**
                - **Kháng sinh IV:**
                  * Ceftriaxone 1-2g IV q24h + Azithromycin 500mg IV/PO q24h
                  * Hoặc: Levofloxacin 750mg IV q24h
@@ -440,9 +440,9 @@ def render():
             
             **Nguy cơ cần IRVS:** ~{predicted_risk:.1f}%
             
-            **Đánh giá:** Viêm phổi nặng, nguy cơ cao cần hỗ trợ hô hấp/tuần hoàn.
+            **Đánh Giá:** Viêm phổi nặng, nguy cơ cao cần hỗ trợ hô hấp/tuần hoàn.
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             
             1. **NHẬP ICU/HDU (High Dependency Unit):**
                - **KHÔNG trì hoãn!** Nguy cơ tiến triển nhanh cao
@@ -565,7 +565,7 @@ def render():
         - CURB-65 = 2-3 (không chắc chắn)
         - Bệnh nhân trẻ (<65 tuổi) nhưng có vẻ nặng
         
-        **Khuyến nghị:**
+        **Khuyến Nghị:**
         - **CURB-65:** Sàng lọc nhanh (ngoại trú vs nhập viện)
         - **SMART-COP:** Quyết định khoa thường vs ICU
         - **PSI/PORT:** Đánh giá tiên lượng tổng thể

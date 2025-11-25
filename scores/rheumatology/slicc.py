@@ -7,7 +7,7 @@ def render():
     st.markdown("### Miễn dịch (Immunologic):"); ana = st.checkbox("1. ANA (+)"); anti_dsdna = st.checkbox("2. Anti-dsDNA"); anti_sm = st.checkbox("3. Anti-Sm"); antiphospholipid = st.checkbox("4. Antiphospholipid Ab"); low_complement = st.checkbox("5. Giảm complement (C3, C4, CH50)"); coombs = st.checkbox("6. Coombs test (+)"); immuno_score = sum([ana, anti_dsdna, anti_sm, antiphospholipid, low_complement, coombs]); total = clinical_score + immuno_score
     if st.button("🔬 Đánh giá SLICC", type="primary", use_container_width=True):
         lupus_nephritis_positive = renal and (ana or anti_dsdna)
-        if (total >= 4 and clinical_score >= 1 and immuno_score >= 1) or lupus_nephritis_positive: st.error(f"🚨 **Đáp ứng tiêu chuẩn SLE (SLICC 2012)**\n\n- Tổng: {total} tiêu chuẩn\n- Lâm sàng: {clinical_score}\n- Miễn dịch: {immuno_score}"); st.info("**Điều trị:** Hydroxychloroquine + Glucocorticoid ± Immunosuppressants")
+        if (total >= 4 and clinical_score >= 1 and immuno_score >= 1) or lupus_nephritis_positive: st.error(f"🚨 **Đáp ứng tiêu chuẩn SLE (SLICC 2012)**\n\n- Tổng: {total} tiêu chuẩn\n- Lâm sàng: {clinical_score}\n- Miễn dịch: {immuno_score}"); st.info("**Điều Trị:** Hydroxychloroquine + Glucocorticoid ± Immunosuppressants")
         else: st.success(f"✅ **Chưa đủ tiêu chuẩn SLE**\n\n- Tổng: {total} tiêu chuẩn\n- Lâm sàng: {clinical_score}\n- Miễn dịch: {immuno_score}\n\nTheo dõi tiếp, cân nhắc bệnh khác")
 if __name__ == "__main__": render()
 

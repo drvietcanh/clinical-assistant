@@ -53,8 +53,8 @@ def render():
     **1. Fluid Resuscitation (Ưu tiên hàng đầu):**
     - **Liều:** 250-500 mL/h trong 24-48 giờ đầu
     - **Loại:** Lactated Ringer (ưu tiên) hoặc Normal Saline
-    - **Mục tiêu:** Urine output ≥0.5 mL/kg/h
-    - **Theo dõi:** Dấu hiệu sống, BUN, Cr
+    - **Mục Tiêu:** Urine output ≥0.5 mL/kg/h
+    - **Theo Dõi:** Dấu hiệu sống, BUN, Cr
     
     **2. Pain Management:**
     - **Opioid:** Morphine, fentanyl (không dùng meperidine)
@@ -229,7 +229,7 @@ def render_apache():
     st.info("## 📊 APACHE II Score")
     
     st.markdown("""
-    **Đánh giá:**
+    **Đánh Giá:**
     - 12 tiêu chí (0-71 điểm)
     - Bao gồm: Tuổi, dấu hiệu sống, xét nghiệm
     
@@ -266,11 +266,11 @@ def render_mild_pancreatitis():
     - Không có biến chứng cục bộ
     - Tỷ lệ tử vong: <1%
     
-    **Điều trị:**
+    **Điều Trị:**
     1. **Truyền dịch:** 250-500 mL/h x 24-48 giờ
     2. **Giảm đau:** Opioid
     3. **Early enteral feeding:** Trong 24-48 giờ
-    4. **Theo dõi:** Dấu hiệu sống, BUN, Cr
+    4. **Theo Dõi:** Dấu hiệu sống, BUN, Cr
     
     **Thời gian nằm viện:** 3-5 ngày
     """)
@@ -286,12 +286,12 @@ def render_moderate_pancreatitis():
     - Không có suy cơ quan kéo dài
     - Tỷ lệ tử vong: 5-10%
     
-    **Điều trị:**
+    **Điều Trị:**
     1. **Truyền dịch:** 250-500 mL/h x 48-72 giờ
     2. **Giảm đau:** Opioid, có thể cần PCA
     3. **Early enteral feeding:** Trong 24-48 giờ
     4. **CT scan:** Nếu không cải thiện sau 48-72 giờ
-    5. **Theo dõi:** ICU nếu cần
+    5. **Theo Dõi:** ICU nếu cần
     
     **Thời gian nằm viện:** 5-10 ngày
     """)
@@ -307,7 +307,7 @@ def render_severe_pancreatitis():
     - Có thể có hoại tử tụy
     - Tỷ lệ tử vong: 20-40%
     
-    **Điều trị:**
+    **Điều Trị:**
     1. **ICU care:**
        - Monitor liên tục
        - Hỗ trợ hô hấp nếu cần
@@ -323,7 +323,7 @@ def render_severe_pancreatitis():
     
     6. **Antibiotics:** Chỉ khi có infected necrosis
     
-    7. **Theo dõi:** Dấu hiệu sống, BUN, Cr, lactate
+    7. **Theo Dõi:** Dấu hiệu sống, BUN, Cr, lactate
     
     **Thời gian nằm viện:** 2-4 tuần hoặc lâu hơn
     """)

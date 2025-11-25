@@ -453,7 +453,7 @@ def render():
         #### 1. Argatroban (DTI - Direct Thrombin Inhibitor)
         - **Liều:** 2 mcg/kg/min IV continuous
           - Suy gan: 0.5-1 mcg/kg/min
-        - **Theo dõi:** aPTT (mục tiêu 1.5-3× baseline, thường 60-80s)
+        - **Theo Dõi:** aPTT (mục tiêu 1.5-3× baseline, thường 60-80s)
         - **Ưu điểm:** Phổ biến, bài tiết qua gan
         - **Nhược điểm:** Tăng INR → khó chuyển warfarin
         

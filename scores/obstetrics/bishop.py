@@ -348,7 +348,7 @@ def render():
             
             **Bishop Score: {total_score}/13** ({'Sản phụ ' + parity_text})
             
-            **Đánh giá:** Cổ tử cung thuận lợi cho gây chuyển dạ
+            **Đánh Giá:** Cổ tử cung thuận lợi cho gây chuyển dạ
             
             **Tỷ lệ thành công:** {result['induction_success']}
             
@@ -356,7 +356,7 @@ def render():
             
             **Thời gian chuyển dạ:** {result['labor_duration']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             
             **Ripening:** {result['ripening']}
             """)
@@ -387,7 +387,7 @@ def render():
             
             **Bishop Score: {total_score}/13** ({'Sản phụ ' + parity_text})
             
-            **Đánh giá:** Cổ tử cung {'chưa' if result['severity'] == 'unfavorable' else 'tương đối'} thuận lợi
+            **Đánh Giá:** Cổ tử cung {'chưa' if result['severity'] == 'unfavorable' else 'tương đối'} thuận lợi
             
             **Tỷ lệ thành công:** {result['induction_success']}
             
@@ -395,7 +395,7 @@ def render():
             
             **Thời gian chuyển dạ:** {result['labor_duration']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             
             **Ripening:** {result['ripening']}
             """)
@@ -526,7 +526,7 @@ def render():
         - Elective (39-40 tuần, cervix favorable)
         - Logistic reasons (xa bệnh viện, tiền sử chuyển dạ nhanh)
         
-        **Chống chỉ định:**
+        **Chống Chỉ Định:**
         - Chống chỉ định ngôi thường (placenta previa, etc.)
         - Cổ tử cung sẹo > 1
         - Herpes sinh dục active

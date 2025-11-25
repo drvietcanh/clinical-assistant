@@ -325,7 +325,7 @@ def render():
         
         **(+) Spironolactone nếu EF <40%**
         
-        **Theo dõi:**
+        **Theo Dõi:**
         - Tuần 1-2: Tái khám
         - Tháng 1: Hồ sơ lipid, điều chỉnh statin
         - Tháng 3: Echo kiểm tra EF

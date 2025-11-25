@@ -128,7 +128,7 @@ def render():
     **Ý nghĩa lâm sàng:**
     - **Quyết định điều trị:** Phác đồ hóa trị, phẫu thuật, tham gia thử nghiệm
     - **Tiên lượng:** Thời gian sống thêm
-    - **Theo dõi:** Đánh giá đáp ứng và tiến triển bệnh
+    - **Theo Dõi:** Đánh giá đáp ứng và tiến triển bệnh
     
     **Ứng dụng:**
     - Tất cả loại ung thư
@@ -224,7 +224,7 @@ def render():
         **Điều trị miễn dịch:**  
         {treatment_rec['immunotherapy']}
         
-        **Theo dõi:**  
+        **Theo Dõi:**  
         {treatment_rec['monitoring']}
         """)
         

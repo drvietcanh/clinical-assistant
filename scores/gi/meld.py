@@ -236,9 +236,9 @@ def render():
                 - 3 tháng: {mortality_3m}
                 - 1 năm: {mortality_1yr}
                 
-                **Đánh giá:** Xơ gan còn bù trừ tốt hoặc bệnh gan nhẹ.
+                **Đánh Giá:** Xơ gan còn bù trừ tốt hoặc bệnh gan nhẹ.
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **Theo dõi định kỳ:**
                    - Khám gan mỗi 3-6 tháng
@@ -270,9 +270,9 @@ def render():
                 - 3 tháng: {mortality_3m}
                 - 1 năm: {mortality_1yr}
                 
-                **Đánh giá:** Bệnh gan tiến triển, cần theo dõi sát.
+                **Đánh Giá:** Bệnh gan tiến triển, cần theo dõi sát.
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **Theo dõi chặt chẽ:**
                    - Khám gan mỗi 2-3 tháng
@@ -306,9 +306,9 @@ def render():
                 - 3 tháng: {mortality_3m}
                 - 1 năm: {mortality_1yr}
                 
-                **Đánh giá:** Xơ gan nặng, nguy cơ cao, CẦN ghép gan.
+                **Đánh Giá:** Xơ gan nặng, nguy cơ cao, CẦN ghép gan.
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **ĐÁNH GIÁ GHÉP GAN KHẨN CẤP:**
                    - ✅ **Chỉ định ghép gan rõ ràng**
@@ -354,9 +354,9 @@ def render():
                 - 3 tháng: {mortality_3m}
                 - 1 năm: {mortality_1yr}
                 
-                **Đánh giá:** Xơ gan giai đoạn cuối, nguy cơ tử vong rất cao, CẦN ghép gan KHẨN CẤP.
+                **Đánh Giá:** Xơ gan giai đoạn cuối, nguy cơ tử vong rất cao, CẦN ghép gan KHẨN CẤP.
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **GHÉP GAN KHẨN CẤP:**
                    - 🚨 **Chỉ định ghép gan ưu tiên cao**
@@ -438,7 +438,7 @@ def render():
                 - Kết quả làm tròn đến số nguyên
                 - Giới hạn: 6-40 điểm
                 
-                **Kết quả:** MELD = **{meld_score}**
+                **Kết Quả:** MELD = **{meld_score}**
                 """)
             
             with st.expander("📊 Bảng Tỷ Lệ Tử Vong Theo MELD"):
@@ -511,7 +511,7 @@ def render():
                 - **MELD:** Ghép gan, tiên lượng ngắn hạn, nghiên cứu
                 - **Child-Pugh:** Phẫu thuật, điều trị, đánh giá tổng quát
                 
-                **Khuyến nghị:** Sử dụng CẢ HAI để đánh giá toàn diện!
+                **Khuyến Nghị:** Sử dụng CẢ HAI để đánh giá toàn diện!
                 
                 **Tương quan gần đúng:**
                 - MELD <10 ≈ Child A
@@ -690,7 +690,7 @@ def render():
         - **Hydration:** Cải thiện Cr tạm thời
         - **Dialysis:** Giảm Cr nhưng MELD cap at 40
         
-        **Khuyến nghị:**
+        **Khuyến Nghị:**
         - Đánh giá MELD khi bệnh nhân ổn định
         - Tránh tác nhân nhiễu (thuốc, dehydration)
         - Lặp lại MELD định kỳ để theo dõi xu hướng

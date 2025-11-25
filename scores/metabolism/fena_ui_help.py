@@ -550,7 +550,7 @@ def render_limitations_expander():
         - Acute glomerulonephritis
         - Hepatorenal syndrome
         
-        **Khuyến nghị:**
+        **Khuyến Nghị:**
         - **Không dựa vào FENa đơn độc!**
         - Kết hợp với lâm sàng
         - Kết hợp xét nghiệm khác:

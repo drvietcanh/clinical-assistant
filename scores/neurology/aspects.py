@@ -190,7 +190,7 @@ def render():
             st.error(f"## **ASPECTS Score: {result['total_score']}/10**")
         
         st.markdown(f"**Vùng bị ảnh hưởng:** {result['regions_affected']}/10")
-        st.markdown(f"**Đánh giá:** {result['interpretation']}")
+        st.markdown(f"**Đánh Giá:** {result['interpretation']}")
         
         # Show affected regions
         affected_regions = [k for k, v in regions.items() if v == 0]

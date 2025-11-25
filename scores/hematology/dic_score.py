@@ -331,7 +331,7 @@ def render():
         2. **Xét nghiệm:** CBC, PT/INR, aPTT, Fibrinogen, D-dimer
         3. **Tính điểm:** Nhập kết quả vào calculator
         4. **Diễn giải:** Score ≥5 + bệnh nền + lâm sàng → DIC
-        5. **Theo dõi:** Tính lại score hàng ngày để đánh giá đáp ứng
+        5. **Theo Dõi:** Tính lại score hàng ngày để đánh giá đáp ứng
         
         ### ⚠️ Lưu Ý
         

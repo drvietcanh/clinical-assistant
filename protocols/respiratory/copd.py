@@ -141,7 +141,7 @@ def render():
             """)
         
         st.warning("""
-        **Tác dụng phụ:**
+        **Tác Dụng Phụ:**
         - Tăng đường huyết (theo dõi nếu ĐTĐ)
         - Tăng huyết áp
         - Lú lẫn (đặc biệt người cao tuổi)
@@ -203,16 +203,16 @@ def render():
         
         st.success("""
         **Oxygen Therapy:**
-        - **Mục tiêu:** SpO₂ 88-92% (KHÔNG phải 100%!)
+        - **Mục Tiêu:** SpO₂ 88-92% (KHÔNG phải 100%!)
         - **Lý do:** Tránh ức chế thở do CO₂ retention
         - **Cách cho:** Nasal cannula 1-2L/min hoặc Venturi mask 24-28%
-        - **Theo dõi:** Khí máu sau 30-60 phút
+        - **Theo Dõi:** Khí máu sau 30-60 phút
         """)
         
         st.error("""
         **Chỉ định NIV (Non-Invasive Ventilation):**
         
-        **Tiêu chuẩn:**
+        **Tiêu Chuẩn:**
         - pH <7.35 với PaCO₂ >45 mmHg
         - Khó thở nặng với sử dụng cơ hô hấp phụ
         - Nhịp thở >25/phút

@@ -179,12 +179,12 @@ def render():
         
         st.success("""
         **Oxygen:**
-        - **Mục tiêu:** SpO₂ 93-95% (người lớn)
-        - SpO₂ 94-98% (trẻ em)
+        - **Mục Tiêu:** SpO₂ 93-95% (Người Lớn)
+        - SpO₂ 94-98% (Trẻ Em)
         - Nasal cannula hoặc mask
         
         **Magnesium Sulfate:**
-        - **Chỉ định:** Cơn hen nặng không đáp ứng với điều trị ban đầu
+        - **Chỉ Định:** Cơn hen nặng không đáp ứng với điều trị ban đầu
         - **Liều:** 2g IV trong 20 phút
         - **Cơ chế:** Giãn phế quản
         - **Evidence:** Giảm tỷ lệ nhập viện
@@ -261,7 +261,7 @@ def render():
         - **Tidal volume:** 6-8 mL/kg IBW
         - **Respiratory rate:** 10-14/phút (cho phép I:E ratio dài)
         - **PEEP:** Thấp (3-5 cmH₂O)
-        - **Mục tiêu:** Cho phép "permissive hypercapnia"
+        - **Mục Tiêu:** Cho phép "permissive hypercapnia"
         - **Nguy cơ:** Dynamic hyperinflation, barotrauma
         """)
     

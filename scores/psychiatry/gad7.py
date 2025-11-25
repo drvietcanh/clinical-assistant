@@ -177,7 +177,7 @@ def render():
         
         **Khuyến nghị điều trị:** {result['recommendation']}
         
-        **Theo dõi:** {result['monitoring']}
+        **Theo Dõi:** {result['monitoring']}
         """)
         
         # Score breakdown
@@ -361,7 +361,7 @@ def render():
         **Đáp ứng điều trị:**
         - **Response:** Giảm ≥ 50% điểm GAD-7
         - **Remission:** GAD-7 < 5
-        - **Mục tiêu:** Remission hoàn toàn
+        - **Mục Tiêu:** Remission hoàn toàn
         
         **Khi dừng thuốc:**
         - Sau remission ≥ 12 tháng

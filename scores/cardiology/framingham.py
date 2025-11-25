@@ -371,7 +371,7 @@ def render():
                 - ACE-I/ARB nếu có THA hoặc ĐTĐ
                 - Cân nhắc ezetimibe hoặc PCSK9i nếu LDL vẫn cao
                 
-                **Theo dõi:**
+                **Theo Dõi:**
                 - Lipid profile mỗi 3-6 tháng
                 - ECG hàng năm
                 - Stress test nếu có triệu chứng

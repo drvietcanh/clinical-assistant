@@ -233,7 +233,7 @@ def render():
             **Công thức:**  
             PCO₂ dự đoán = 1.5 × [{hco3:.1f}] + 8 (± 2)
             
-            **Kết quả:**
+            **Kết Quả:**
             - PCO₂ dự đoán: **{expected_pco2:.1f} mmHg**
             - Khoảng chấp nhận: **{lower_limit:.1f} - {upper_limit:.1f} mmHg**
             - PCO₂ thực tế: **{actual_pco2:.1f} mmHg**
@@ -259,7 +259,7 @@ def render():
             
             Bệnh nhân có toan chuyển hóa đơn thuần với bù thường hô hấp thích hợp.
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             - {result['action']}
             - Xác định và điều trị nguyên nhân toan chuyển hóa
             - Theo dõi điện giải đồ và chức năng thận
@@ -270,7 +270,7 @@ def render():
             
             Bệnh nhân có rối loạn acid-base hỗn hợp cần đánh giá kỹ hơn.
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             - {result['action']}
             - Xem xét các nguyên nhân gây rối loạn acid-base đồng thời
             - Cân nhắc hội chẩn chuyên khoa

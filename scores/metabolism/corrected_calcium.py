@@ -195,7 +195,7 @@ def render():
                 
                 **Ca của bạn: {ca_corrected_mgdl:.1f} mg/dL** = {"Nhẹ" if ca_corrected_mgdl > 7.5 else "Trung bình" if ca_corrected_mgdl > 6.5 else "NẶNG"}
                 
-                **Triệu chứng:**
+                **Triệu Chứng:**
                 
                 **Nhẹ-Trung bình:**
                 - Tê bì chung quanh miệng, tay chân
@@ -212,7 +212,7 @@ def render():
                 - **Heart failure**
                 - Bronchospasm
                 
-                **Nguyên nhân:**
+                **Nguyên Nhân:**
                 
                 1. **Suy tuyến cận giáp:**
                    - Sau phẫu thuật tuyến giáp
@@ -277,7 +277,7 @@ def render():
                 
                 3. **Điều trị nguyên nhân**
                 
-                **Theo dõi:**
+                **Theo Dõi:**
                 - Ca, Albumin, Mg, Phosphate
                 - PTH, Vitamin D (25-OH-D)
                 - ECG (QTc interval)
@@ -294,7 +294,7 @@ def render():
                 
                 **Ca điều chỉnh: {ca_corrected_mgdl:.1f} mg/dL**
                 
-                **Đánh giá:** Calcium trong giới hạn bình thường.
+                **Đánh Giá:** Calcium trong giới hạn bình thường.
                 
                 **Lưu ý:**
                 - Giá trị Ca điều chỉnh chỉ là ước tính

@@ -21,7 +21,7 @@ def render():
     - Tuần hoàn (hypotension, syncope)
     - GI (nausea, vomiting, diarrhea)
     
-    **Chẩn đoán:** ≥2 hệ cơ quan hoặc hạ huyết áp sau tiếp xúc với chất gây dị ứng
+    **Chẩn Đoán:** ≥2 hệ cơ quan hoặc hạ huyết áp sau tiếp xúc với chất gây dị ứng
     """)
     
     st.markdown("---")
@@ -35,14 +35,14 @@ def render():
         **1. EPINEPHRINE - Thuốc Đầu Tay**
         
         **IM (Ưu tiên):**
-        - **Người lớn:** 0.3-0.5 mg IM (1:1000)
-        - **Trẻ em:** 0.01 mg/kg IM (max 0.3 mg)
+        - **Người Lớn:** 0.3-0.5 mg IM (1:1000)
+        - **Trẻ Em:** 0.01 mg/kg IM (max 0.3 mg)
         - **Vị trí:** Mặt trước-bên đùi
         - **Lặp lại:** q5-15 phút nếu cần
         
         **IV (Nếu shock nặng):**
-        - **Người lớn:** 0.1 mg IV (1:10,000)
-        - **Trẻ em:** 0.01 mg/kg IV
+        - **Người Lớn:** 0.1 mg IV (1:10,000)
+        - **Trẻ Em:** 0.01 mg/kg IV
         - **Truyền tĩnh mạch:** 1-4 mcg/min
         """)
     
@@ -70,17 +70,17 @@ def render():
     **Sau khi đã dùng Epinephrine:**
     
     **1. Antihistamines (H1 blocker):**
-    - **Diphenhydramine:** 25-50 mg IV/IM (người lớn)
-    - **Trẻ em:** 1 mg/kg IV/IM (max 50 mg)
+    - **Diphenhydramine:** 25-50 mg IV/IM (Người Lớn)
+    - **Trẻ Em:** 1 mg/kg IV/IM (max 50 mg)
     - **Hoặc:** Cetirizine 10 mg PO
     
     **2. H2 Blocker:**
-    - **Ranitidine:** 50 mg IV (người lớn)
+    - **Ranitidine:** 50 mg IV (Người Lớn)
     - **Hoặc:** Famotidine 20 mg IV
     
     **3. Corticosteroids:**
-    - **Methylprednisolone:** 125 mg IV (người lớn)
-    - **Trẻ em:** 1-2 mg/kg IV
+    - **Methylprednisolone:** 125 mg IV (Người Lớn)
+    - **Trẻ Em:** 1-2 mg/kg IV
     - **Hoặc:** Prednisone 60 mg PO
     - **Mục đích:** Ngăn phản ứng 2 pha (biphasic)
     """)
@@ -119,7 +119,7 @@ def render():
       - Dùng epinephrine muộn
       - Cần >1 liều epinephrine
     
-    **Khuyến nghị:**
+    **Khuyến Nghị:**
     - Theo dõi ít nhất 4-6 giờ (phản ứng nặng: 8-12 giờ)
     - Có thể xuất viện nếu:
       - Không triệu chứng sau 4-6 giờ
@@ -154,12 +154,12 @@ def render():
     
     with col1:
         st.markdown("""
-        **Phụ nữ có thai:**
+        **Phụ Nữ Có Thai:**
         - Epinephrine an toàn (ưu tiên cứu mẹ)
         - Tư thế nằm nghiêng trái
         - Monitor thai nhi
         
-        **Người cao tuổi:**
+        **Người Cao Tuổi:**
         - Cẩn thận với epinephrine (tăng nguy cơ MI)
         - Giảm liều nếu có bệnh tim mạch
         - Theo dõi ECG
@@ -167,7 +167,7 @@ def render():
     
     with col2:
         st.markdown("""
-        **Trẻ em:**
+        **Trẻ Em:**
         - Liều epinephrine: 0.01 mg/kg IM
         - Auto-injector: EpiPen Jr (0.15 mg)
         - Theo dõi sát (dễ tái phát)
@@ -183,7 +183,7 @@ def render():
     st.markdown("### 🎯 Mục Tiêu Điều Trị")
     
     st.success("""
-    **Mục tiêu:**
+    **Mục Tiêu:**
     - ✅ Huyết áp ổn định (MAP ≥65 mmHg)
     - ✅ SpO2 ≥94%
     - ✅ Không stridor/wheezing
@@ -224,15 +224,15 @@ def render_mild_anaphylaxis():
     st.success("## 🟢 MILD ANAPHYLAXIS")
     
     st.markdown("""
-    **Triệu chứng:**
+    **Triệu Chứng:**
     - Chỉ có da/mucosa (urticaria, angioedema)
     - Không có hô hấp/tuần hoàn
     
-    **Điều trị:**
-    1. **Epinephrine:** 0.3 mg IM (người lớn)
+    **Điều Trị:**
+    1. **Epinephrine:** 0.3 mg IM (Người Lớn)
     2. **Diphenhydramine:** 25-50 mg IV/IM
     3. **Corticosteroid:** Prednisone 60 mg PO
-    4. **Theo dõi:** 2-4 giờ
+    4. **Theo Dõi:** 2-4 giờ
     
     **Xuất viện:** Có thể sau 2-4 giờ nếu ổn định
     """)
@@ -243,19 +243,19 @@ def render_moderate_anaphylaxis():
     st.warning("## 🟡 MODERATE ANAPHYLAXIS")
     
     st.markdown("""
-    **Triệu chứng:**
+    **Triệu Chứng:**
     - Da/mucosa + Hô hấp (wheezing, dyspnea)
     - Hoặc da/mucosa + GI (nausea, vomiting)
     - Không có hạ huyết áp
     
-    **Điều trị:**
+    **Điều Trị:**
     1. **Epinephrine:** 0.3-0.5 mg IM (lặp lại nếu cần)
     2. **Oxygen:** 100% qua mask
     3. **Albuterol:** Nebulizer nếu wheezing
     4. **Diphenhydramine:** 50 mg IV
     5. **Ranitidine:** 50 mg IV
     6. **Methylprednisolone:** 125 mg IV
-    7. **Theo dõi:** 4-6 giờ
+    7. **Theo Dõi:** 4-6 giờ
     
     **Xuất viện:** Sau 4-6 giờ nếu ổn định
     """)
@@ -266,7 +266,7 @@ def render_severe_anaphylaxis():
     st.error("## 🔴 SEVERE ANAPHYLAXIS - ICU")
     
     st.markdown("""
-    **Triệu chứng:**
+    **Triệu Chứng:**
     - Hạ huyết áp (SBP <90 mmHg)
     - Stridor, laryngeal edema
     - Suy hô hấp
@@ -297,7 +297,7 @@ def render_severe_anaphylaxis():
        - Arterial line nếu cần
        - ECG monitoring
     
-    6. **Theo dõi:** 8-12 giờ (nguy cơ biphasic cao)
+    6. **Theo Dõi:** 8-12 giờ (nguy cơ biphasic cao)
     """)
 
 
@@ -315,7 +315,7 @@ def render_cardiac_arrest():
     
     **2. Epinephrine:**
     - **ACLS dose:** 1 mg IV q3-5 min
-    - **Hoặc:** 0.1 mg/kg IV (trẻ em)
+    - **Hoặc:** 0.1 mg/kg IV (Trẻ Em)
     - **Truyền tĩnh mạch:** 5-10 mcg/min
     
     **3. Fluids:**

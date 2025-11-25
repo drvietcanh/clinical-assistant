@@ -125,7 +125,7 @@ def calculate_score2_moderate_risk(
         - Bỏ thuốc lá (nếu hút)
         - Theo dõi mỗi 2-3 năm
         
-        **Mục tiêu:**
+        **Mục Tiêu:**
         - LDL-C <3.0 mmol/L (116 mg/dL)
         - Non-HDL-C <3.8 mmol/L
         """

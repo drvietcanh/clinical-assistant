@@ -438,7 +438,7 @@ def render():
         - **SOFA cao liên tục** → tiên lượng xấu
         - **SOFA giảm** → đáp ứng điều trị tốt
         
-        **Theo dõi:**
+        **Theo Dõi:**
         - Tính SOFA hàng ngày để đánh giá diễn tiến
         - So sánh với baseline để xác định Sepsis (Sepsis-3)
         """)

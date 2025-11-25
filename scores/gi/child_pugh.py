@@ -301,9 +301,9 @@ def render():
             - Sống sót 2 năm: {survival_2yr}
             - Tử vong phẫu thuật bụng: {periop_mortality}
             
-            **Đánh giá:** Chức năng gan còn bù trừ tốt, tiên lượng tốt.
+            **Đánh Giá:** Chức năng gan còn bù trừ tốt, tiên lượng tốt.
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             
             1. **Theo dõi định kỳ:**
                - Khám gan mỗi 3-6 tháng
@@ -344,9 +344,9 @@ def render():
             - Sống sót 2 năm: {survival_2yr}
             - Tử vong phẫu thuật bụng: {periop_mortality}
             
-            **Đánh giá:** Chức năng gan suy giảm đáng kể, cần theo dõi sát và điều trị tích cực.
+            **Đánh Giá:** Chức năng gan suy giảm đáng kể, cần theo dõi sát và điều trị tích cực.
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             
             1. **Theo dõi chặt chẽ:**
                - Khám gan mỗi 2-3 tháng
@@ -405,9 +405,9 @@ def render():
             - Sống sót 2 năm: {survival_2yr}
             - Tử vong phẫu thuật bụng: {periop_mortality}
             
-            **Đánh giá:** Xơ gan mất bù nặng, tiên lượng xấu, cần điều trị tích cực và ghép gan.
+            **Đánh Giá:** Xơ gan mất bù nặng, tiên lượng xấu, cần điều trị tích cực và ghép gan.
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             
             1. **URGENT - Đánh giá ghép gan:**
                - ✅ **Chỉ định ghép gan**
@@ -523,7 +523,7 @@ def render():
             | **Phân loại** | 3 class (A, B, C) | Liên tục (6-40) |
             | **Ứng dụng** | Phẫu thuật, điều trị | Ưu tiên ghép gan |
             
-            **Khuyến nghị:** Sử dụng CẢ HAI thang điểm để đánh giá toàn diện!
+            **Khuyến Nghị:** Sử dụng CẢ HAI thang điểm để đánh giá toàn diện!
             """)
         
         # References
@@ -679,7 +679,7 @@ def render():
         - Không xâm lấn mạch máu
         - Không di căn xa
         
-        **Chống chỉ định:**
+        **Chống Chỉ Định:**
         - Ung thư ngoài gan (trừ da không phải melanoma)
         - Nhiễm trùng toàn thân đang hoạt động
         - Bệnh tim phổi nặng

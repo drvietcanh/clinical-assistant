@@ -35,7 +35,7 @@ def render():
         st.markdown("#### 🦠 Sốc Nhiễm Trùng (Septic Shock)")
         
         st.error("""
-        **Chẩn đoán:**
+        **Chẩn Đoán:**
         - Nhiễm trùng đã xác định hoặc nghi ngờ
         - MAP <65 mmHg (hoặc SBP <90 mmHg) sau truyền dịch ≥30 mL/kg
         - Lactate >2 mmol/L
@@ -104,13 +104,13 @@ def render():
         st.markdown("#### 💧 Sốc Giảm Thể Tích (Hypovolemic Shock)")
         
         st.error("""
-        **Chẩn đoán:**
+        **Chẩn Đoán:**
         - Mất máu hoặc dịch (mất qua đường nào đó)
         - Dấu hiệu: Da lạnh, nổi da gà, tĩnh mạch cổ xẹp
         - Hạ huyết áp, nhịp tim nhanh
         - Lượng nước tiểu giảm
         
-        **Nguyên nhân:**
+        **Nguyên Nhân:**
         - Chảy máu (chấn thương, xuất huyết tiêu hóa, v.v.)
         - Mất dịch (bỏng, tiêu chảy, nôn, đái tháo đường)
         """)
@@ -163,13 +163,13 @@ def render():
         st.markdown("#### ❤️ Sốc Tim (Cardiogenic Shock)")
         
         st.error("""
-        **Chẩn đoán:**
+        **Chẩn Đoán:**
         - Suy chức năng tim (giảm CO)
         - Dấu hiệu ứ máu (tĩnh mạch cổ nổi, phù phổi)
         - Hạ huyết áp mặc dù thể tích đủ
         - Cold extremities
         
-        **Nguyên nhân:**
+        **Nguyên Nhân:**
         - Nhồi máu cơ tim cấp
         - Rối loạn nhịp tim
         - Bệnh cơ tim, van tim
@@ -242,7 +242,7 @@ def render():
         - CO có thể bình thường hoặc tăng
         - Warm extremities (trừ sốc nhiễm trùng nặng)
         
-        **Nguyên nhân:**
+        **Nguyên Nhân:**
         - Sốc nhiễm trùng (phổ biến nhất)
         - Sốc phản vệ
         - Sốc thần kinh
@@ -278,7 +278,7 @@ def render():
         - Tắc nghẽn dòng máu về hoặc đi từ tim
         - CO giảm do cơ học
         
-        **Nguyên nhân:**
+        **Nguyên Nhân:**
         - Thuyên tắc phổi lớn (massive PE)
         - Chèn ép tim (tamponade)
         - Tràn khí màng phổi áp lực (tension pneumothorax)

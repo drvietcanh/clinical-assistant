@@ -182,9 +182,9 @@ def render():
             st.info(f"""
             **{status_info['color']} Tình trạng:** {status_info['status']}
             
-            **Đánh giá:** {status_info['risk']}
+            **Đánh Giá:** {status_info['risk']}
             
-            **Khuyến nghị:** {status_info['recommendation']}
+            **Khuyến Nghị:** {status_info['recommendation']}
             """)
             
             # Reference table
@@ -280,9 +280,9 @@ def render():
             st.info(f"""
             **{status_info['color']} Tình trạng:** {status_info['status']}
             
-            **Đánh giá:** {status_info['risk']}
+            **Đánh Giá:** {status_info['risk']}
             
-            **Khuyến nghị:** {status_info['recommendation']}
+            **Khuyến Nghị:** {status_info['recommendation']}
             """)
     
     # Clinical notes
@@ -341,7 +341,7 @@ def render():
         - 268 người không ĐTĐ
         - 16 tuần theo dõi glucose liên tục + SMBG
         
-        **Kết quả:**
+        **Kết Quả:**
         - Tương quan cao giữa HbA1c và glucose trung bình (r = 0.92)
         - Công thức: eAG (mg/dL) = 28.7 × HbA1c - 46.7
         - Độ chính xác: ±2 SD = ±30 mg/dL

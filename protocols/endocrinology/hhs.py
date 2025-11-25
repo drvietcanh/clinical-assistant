@@ -18,7 +18,7 @@ def render():
     - Thường gặp ở người cao tuổi, đái tháo đường type 2
     - Đặc điểm: Đường huyết rất cao, tăng áp lực thẩm thấu, không có nhiễm toan ceton
     
-    **Chẩn đoán:**
+    **Chẩn Đoán:**
     - Glucose >600 mg/dL
     - Osmolality >320 mOsm/kg
     - pH >7.30 (không có nhiễm toan)
@@ -64,12 +64,12 @@ def render():
     **1. Fluid Resuscitation (Ưu tiên hàng đầu):**
     - **Loại:** 0.9% Normal Saline
     - **Liều:** 1-2 L trong giờ đầu, sau đó 200-500 mL/h
-    - **Mục tiêu:** Bù 50% thiếu hụt trong 12 giờ đầu
-    - **Theo dõi:** Dấu hiệu sống, BUN, Cr, osmolality
+    - **Mục Tiêu:** Bù 50% thiếu hụt trong 12 giờ đầu
+    - **Theo Dõi:** Dấu hiệu sống, BUN, Cr, osmolality
     
     **2. Insulin Therapy:**
     - **Liều:** 0.05-0.1 units/kg/h (thấp hơn DKA)
-    - **Mục tiêu:** Giảm glucose 50-75 mg/dL/h
+    - **Mục Tiêu:** Giảm glucose 50-75 mg/dL/h
     - **Tránh:** Hạ quá nhanh (nguy cơ phù não)
     - **Khi glucose <300:** Thêm dextrose 5% + insulin
     
@@ -179,14 +179,14 @@ def render():
     st.markdown("### 🎯 Mục Tiêu Điều Trị")
     
     st.success("""
-    **Mục tiêu:**
+    **Mục Tiêu:**
     - ✅ Glucose: 200-300 mg/dL trong 24 giờ đầu
     - ✅ Osmolality: Giảm <10 mOsm/kg/h
     - ✅ Dấu hiệu sống ổn định
     - ✅ Điện giải bình thường
     - ✅ Không biến chứng
     
-    **Theo dõi:**
+    **Theo Dõi:**
     - Glucose mỗi 1-2 giờ
     - Osmolality mỗi 4-6 giờ
     - Điện giải mỗi 4-6 giờ

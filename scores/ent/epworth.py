@@ -260,9 +260,9 @@ def render():
             
             **Điểm ESS: {total_score}/24**
             
-            **Đánh giá:** {result['description']}
+            **Đánh Giá:** {result['description']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             
             **Xử trí:** {result['action']}
             """)
@@ -281,11 +281,11 @@ def render():
             
             **Điểm ESS: {total_score}/24** - BẤT THƯỜNG
             
-            **Đánh giá:** {result['description']}
+            **Đánh Giá:** {result['description']}
             
             **Nguy cơ OSA:** {result['osa_risk']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             
             **Xử trí:** {result['action']}
             """)
@@ -341,7 +341,7 @@ def render():
         - → Giảm/ngừng thở → Giảm oxy máu → Thức giấc
         - → Phân mảnh giấc ngủ → Buồn ngủ ban ngày
         
-        **Triệu chứng:**
+        **Triệu Chứng:**
         
         **Ban đêm:**
         - Ngáy to, không đều
@@ -371,7 +371,7 @@ def render():
         - Cằm lùi (retrognathia)
         - Tiền sử gia đình
         
-        **Biến chứng:**
+        **Biến Chứng:**
         - Tăng huyết áp (50-60%)
         - Bệnh tim mạch, đột quỵ
         - Rối loạn nhịp tim
@@ -380,7 +380,7 @@ def render():
         - Giảm chất lượng cuộc sống
         - Tăng tử vong
         
-        **Chẩn đoán:**
+        **Chẩn Đoán:**
         - **Polysomnography (PSG):** Gold standard
         - AHI (Apnea-Hypopnea Index):
           + < 5: Bình thường
@@ -388,7 +388,7 @@ def render():
           + 15-30: OSA trung bình
           + > 30: OSA nặng
         
-        **Điều trị:**
+        **Điều Trị:**
         - **CPAP:** Lựa chọn đầu tay
         - Giảm cân (nếu béo phì)
         - Tránh rượu, thuốc ngủ

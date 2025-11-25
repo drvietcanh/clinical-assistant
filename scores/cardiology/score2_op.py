@@ -108,7 +108,7 @@ def calculate_score2_op(
            - Không bắt đầu mới nếu tuổi thọ dự kiến <5 năm
            - Ưu tiên điều trị các bệnh khác quan trọng hơn
         
-        3. **Theo dõi:**
+        3. **Theo Dõi:**
            - Kiểm tra định kỳ mỗi 1-2 năm
            - Đánh giá lại khi có thay đổi sức khỏe
         
@@ -138,7 +138,7 @@ def calculate_score2_op(
            - Vẫn có lợi ngay cả ở tuổi cao
            - Hỗ trợ cai thuốc
         
-        4. **Theo dõi:**
+        4. **Theo Dõi:**
            - 6-12 tháng/lần
            - Đánh giá chức năng nhận thức, ngã
         

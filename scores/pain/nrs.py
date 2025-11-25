@@ -122,13 +122,13 @@ def render():
             st.info("""
             **💊 Đau nhẹ (NRS 1-3):**
             
-            **Điều trị:**
+            **Điều Trị:**
             - **Bước 1 (Non-opioid):**
               - Paracetamol: 500-1000 mg mỗi 4-6 giờ (max 4g/ngày)
               - Hoặc NSAID: Ibuprofen 400-600 mg mỗi 6-8 giờ
               - Hoặc Diclofenac 50 mg mỗi 8 giờ
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Đánh giá lại sau 30-60 phút
             - Mục tiêu: NRS ≤ 3
             """)
@@ -136,7 +136,7 @@ def render():
             st.warning("""
             **💊 Đau vừa (NRS 4-6):**
             
-            **Điều trị:**
+            **Điều Trị:**
             - **Bước 2 (Opioid yếu + Non-opioid):**
               - Paracetamol 1000 mg + Codeine 30-60 mg mỗi 4-6 giờ
               - Hoặc Tramadol 50-100 mg mỗi 6-8 giờ
@@ -145,7 +145,7 @@ def render():
             **Nếu không đáp ứng:**
             - Chuyển sang opioid mạnh (Morphine)
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Đánh giá lại sau 30 phút
             - Mục tiêu: NRS ≤ 3
             """)
@@ -164,7 +164,7 @@ def render():
             - Paracetamol 1000 mg mỗi 6 giờ
             - NSAID nếu không chống chỉ định
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Đánh giá lại sau 15-30 phút
             - Mục tiêu: NRS ≤ 3 trong vòng 1 giờ
             - Theo dõi tác dụng phụ: ức chế hô hấp, buồn nôn, ngứa
@@ -189,7 +189,7 @@ def render():
                - Đau khi nghỉ ngơi
                - Đau khi vận động (nếu có)
             
-            3. **Theo dõi:**
+            3. **Theo Dõi:**
                - Đánh giá lại sau mỗi can thiệp điều trị
                - Ghi nhận NRS trước và sau điều trị
                - Mục tiêu: Giảm ≥2 điểm hoặc NRS ≤ 3

@@ -406,7 +406,7 @@ def render_lithium_tdm():
                 **Xử trí:**
                 1. **Ngừng lithium ngay**
                 2. **Bù dịch:** NS 0.9% để tăng thải lithium
-                3. **Theo dõi:**
+                3. **Theo Dõi:**
                    - Nồng độ lithium (mỗi 12-24h)
                    - Điện giải (Na+, K+)
                    - Creatinine, CrCl

@@ -315,7 +315,7 @@ def render():
                 st.error("""
                 **🚨 Severe ARDS:**
                 
-                **Điều trị:**
+                **Điều Trị:**
                 - Lung-protective ventilation (6 ml/kg IBW)
                 - PEEP cao (12-24 cmH2O)
                 - Prone positioning (16-18h/ngày)
@@ -331,7 +331,7 @@ def render():
                 st.warning("""
                 **⚠️ Moderate ARDS:**
                 
-                **Điều trị:**
+                **Điều Trị:**
                 - Lung-protective ventilation (6 ml/kg IBW)
                 - PEEP trung bình (8-12 cmH2O)
                 - Cân nhắc prone positioning
@@ -345,7 +345,7 @@ def render():
                 st.info("""
                 **ℹ️ Mild ARDS:**
                 
-                **Điều trị:**
+                **Điều Trị:**
                 - Lung-protective ventilation (6 ml/kg IBW)
                 - PEEP thấp-trung bình (5-10 cmH2O)
                 - Theo dõi sát

@@ -17,7 +17,7 @@ def render():
         st.markdown("""
         **DN4 (Douleur Neuropathique 4)** là công cụ sàng lọc đau thần kinh.
         
-        **Chỉ định:**
+        **Chỉ Định:**
         - Bệnh nhân có đau mạn tính
         - Nghi ngờ đau thần kinh (đau sau đột quỵ, đái tháo đường, herpes zoster...)
         - Phân biệt đau thần kinh với đau nội tạng/đau cơ xương
@@ -169,7 +169,7 @@ def render():
             st.error("""
             **🚨 Chẩn Đoán Đau Thần Kinh (DN4 ≥ 4)**
             
-            **Điều trị:**
+            **Điều Trị:**
             
             **1. Thuốc hàng đầu (First-line):**
             - **Gabapentin:** 300-600 mg/ngày, tăng dần đến 1800-3600 mg/ngày
@@ -206,7 +206,7 @@ def render():
             - Đau cơ xương
             - Đau viêm
             
-            **Điều trị:**
+            **Điều Trị:**
             - Điều trị theo nguyên nhân
             - Paracetamol, NSAID
             - Opioid nếu cần
@@ -265,7 +265,7 @@ def render():
     💡 **Điểm quan trọng:**
     
     1. **DN4 ≥ 4:** Chẩn đoán đau thần kinh
-    2. **Điều trị:** Gabapentin, Pregabalin, Amitriptyline, Duloxetine
+    2. **Điều Trị:** Gabapentin, Pregabalin, Amitriptyline, Duloxetine
     3. **Độ nhạy:** ~83%, **Độ đặc hiệu:** ~90%
     4. **Lưu ý:** Đau thần kinh thường khó điều trị, cần thời gian
     5. **Có thể kết hợp:** Đau thần kinh + đau nội tạng

@@ -111,13 +111,13 @@ def render():
         **A. Hô hấp:**
         - **Oxygen:** Duy trì SpO2 >90%
         - **Thở máy:** Nếu giảm thông khí nặng, CO2 tăng
-        - **Theo dõi:** ABG, SpO2 liên tục
+        - **Theo Dõi:** ABG, SpO2 liên tục
         
         **B. Tuần hoàn:**
         - **Dịch truyền:** NS 0.9% hoặc LR
         - **Vasopressors:** Nếu huyết áp thấp không đáp ứng dịch
           - Norepinephrine: 0.05-0.3 mcg/kg/min
-        - **Theo dõi:** Huyết áp, nhịp tim liên tục
+        - **Theo Dõi:** Huyết áp, nhịp tim liên tục
         """)
     
     with col2:
@@ -126,7 +126,7 @@ def render():
         - **Làm ấm từ từ:** Tránh làm ấm quá nhanh (có thể gây shock)
         - **Chăn ấm, sưởi ấm phòng**
         - **Dịch truyền ấm** (nếu có)
-        - **Theo dõi:** Nhiệt độ mỗi 1-2 giờ
+        - **Theo Dõi:** Nhiệt độ mỗi 1-2 giờ
         
         **D. Điều chỉnh điện giải:**
         - **Hyponatremia:** Thường gặp, điều chỉnh từ từ
@@ -204,7 +204,7 @@ def render():
         st.info("""
         **Liothyronine (T3) - Tùy chọn:**
         
-        **Chỉ định:**
+        **Chỉ Định:**
         - Bệnh nhân nặng, không đáp ứng
         - Cần tác dụng nhanh hơn
         

@@ -160,7 +160,7 @@ def render_dosing_schedule_generator():
         **Thuốc:** {drug_name}  
         **Liều:** {dose_amount}  
         **Khoảng cách:** Mỗi {interval_hours} giờ  
-        **Đường dùng:** {route}  
+        **Đường Dùng:** {route}  
         **Thời gian điều trị:** {duration_days} ngày  
         **Số lần dùng:** {len(doses)} lần
         """

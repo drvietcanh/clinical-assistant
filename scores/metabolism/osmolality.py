@@ -303,7 +303,7 @@ def render():
             st.warning("""
             **Hypo-osmolality (Osmolality thấp)**
             
-            **Nguyên nhân:**
+            **Nguyên Nhân:**
             - **Hạ Na máu** (phổ biến nhất)
             - SIADH
             - Suy thận
@@ -318,7 +318,7 @@ def render():
             st.warning("""
             **Hyper-osmolality (Osmolality cao)**
             
-            **Nguyên nhân:**
+            **Nguyên Nhân:**
             - **Tăng Na máu:**
                 - Mất nước (tiêu chảy, lợi tiểu, sốt)
                 - Thiểu năng ADH (diabetes insipidus)
@@ -419,7 +419,7 @@ def render():
     
     4. **Gap tăng + Anion gap tăng:** Methanol hoặc Ethylene glycol → CẤP CỨU!
     
-    5. **Điều trị:** Fomepizole + Lọc máu
+    5. **Điều Trị:** Fomepizole + Lọc máu
     """)
 
 

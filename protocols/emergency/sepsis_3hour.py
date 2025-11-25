@@ -70,7 +70,7 @@ def render():
         st.warning("""
         **Sau truyền dịch 30 mL/kg:**
         
-        **Đánh giá:**
+        **Đánh Giá:**
         - MAP có ≥65 mmHg?
         - Lactate có giảm?
         - Urine output có ≥0.5 mL/kg/h?
@@ -199,7 +199,7 @@ def render():
         st.info("""
         ### ❓ Nguồn Nhiễm Trùng Không Rõ
         
-        **Khuyến nghị:** Điều trị như nhiễm trùng bệnh viện (phổ rộng hơn)
+        **Khuyến Nghị:** Điều trị như nhiễm trùng bệnh viện (phổ rộng hơn)
         
         **Lựa chọn:**
         - **Meropenem 1g IV q8h**
@@ -293,31 +293,31 @@ def render():
     # ========== SECTION 5: VASOPRESSOR MANAGEMENT ==========
     st.markdown("### ⚠️ Quản lý vasopressor")
     
-    st.markdown("**Chỉ định:** MAP <65 mmHg sau truyền dịch đầy đủ")
+    st.markdown("**Chỉ Định:** MAP <65 mmHg sau truyền dịch đầy đủ")
     
     st.error("""
     **1st line: Norepinephrine**
     - **Liều:** 0.05-2 mcg/kg/min
-    - **Mục tiêu:** MAP ≥65 mmHg
+    - **Mục Tiêu:** MAP ≥65 mmHg
     - **Titrate:** Mỗi 5-10 phút
     - **Ưu điểm:** Tăng MAP, tăng cardiac output nhẹ
     - **Nhược điểm:** Tăng nhịp tim, tăng nguy cơ loạn nhịp
     
     **2nd line: Vasopressin**
     - **Liều:** 0.03-0.04 units/min (không titrate)
-    - **Chỉ định:** Thêm vào norepinephrine nếu không đủ
+    - **Chỉ Định:** Thêm vào norepinephrine nếu không đủ
     - **Ưu điểm:** Giảm liều norepinephrine, ít tác dụng phụ tim mạch
     - **Nhược điểm:** Có thể gây thiếu máu cục bộ (hiếm)
     
     **3rd line: Epinephrine**
     - **Liều:** 0.05-2 mcg/kg/min
-    - **Chỉ định:** Nếu cần thêm vasopressor
+    - **Chỉ Định:** Nếu cần thêm vasopressor
     - **Ưu điểm:** Tăng MAP và cardiac output mạnh
     - **Nhược điểm:** Tăng nhịp tim, tăng nguy cơ loạn nhịp, tăng lactate
     
     **Inotrope: Dobutamine**
     - **Liều:** 2.5-20 mcg/kg/min
-    - **Chỉ định:** Nếu cardiac output thấp, MAP đã ổn định
+    - **Chỉ Định:** Nếu cardiac output thấp, MAP đã ổn định
     - **Ưu điểm:** Tăng cardiac output, giảm afterload
     - **Nhược điểm:** Có thể gây hạ huyết áp, tăng nhịp tim
     """)

@@ -17,7 +17,7 @@ def render():
         st.markdown("""
         **Braden Scale** là thang điểm tiêu chuẩn để đánh giá nguy cơ loét tì đè (pressure ulcer).
         
-        **Chỉ định:**
+        **Chỉ Định:**
         - Tất cả bệnh nhân nội trú
         - Bệnh nhân nằm liệt giường
         - Bệnh nhân hạn chế vận động
@@ -213,7 +213,7 @@ def render():
                - Bổ sung vitamin C, kẽm nếu thiếu
                - Đánh giá lại tình trạng dinh dưỡng
             
-            5. **Theo dõi:**
+            5. **Theo Dõi:**
                - Đánh giá lại Braden mỗi 24 giờ
                - Ghi nhận vị trí da đỏ, vết loét
                - Báo bác sĩ nếu có dấu hiệu loét
@@ -237,7 +237,7 @@ def render():
                - Đảm bảo đủ protein
                - Đánh giá lại tình trạng dinh dưỡng
             
-            4. **Theo dõi:**
+            4. **Theo Dõi:**
                - Đánh giá lại Braden mỗi 48 giờ
             """)
         elif total_score <= 18:
@@ -254,7 +254,7 @@ def render():
                - Kiểm tra da hàng ngày
                - Giữ da sạch sẽ, khô ráo
             
-            3. **Theo dõi:**
+            3. **Theo Dõi:**
                - Đánh giá lại Braden mỗi 72 giờ hoặc khi có thay đổi
             """)
         else:
@@ -312,6 +312,6 @@ def render():
     3. **Braden 15-18:** Nguy cơ thấp → Phòng ngừa cơ bản
     4. **Braden ≥ 19:** Rất ít nguy cơ
     5. **Đánh giá lại:** Tùy theo mức độ nguy cơ (24-72 giờ)
-    6. **Mục tiêu:** Phòng ngừa loét tì đè, không để xảy ra loét
+    6. **Mục Tiêu:** Phòng ngừa loét tì đè, không để xảy ra loét
     """)
 

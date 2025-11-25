@@ -196,7 +196,7 @@ def render_multi_comparison():
                 st.markdown(f"**Liều chuẩn:** {result.get('base_dose', 'N/A')}")
                 
                 # Adjusted dose
-                st.markdown(f"**Điều chỉnh:** {result.get('adjustment', 'N/A')}")
+                st.markdown(f"**Điều Chỉnh:** {result.get('adjustment', 'N/A')}")
                 
                 # Detailed dose
                 if detailed and detailed.get('calculated_dose_mg'):

@@ -302,7 +302,7 @@ def render():
                  - Đánh giá qSOFA/SOFA
                - Xét nghiệm theo nguyên nhân nghi ngờ
             
-            3. **Điều trị:**
+            3. **Điều Trị:**
                - Điều trị nguyên nhân
                - Nếu sepsis → Surviving Sepsis Campaign:
                  - Kháng sinh trong 1 giờ
@@ -310,7 +310,7 @@ def render():
                  - Theo dõi lactate
                  - Vasopressor nếu cần
             
-            4. **Theo dõi:**
+            4. **Theo Dõi:**
                - Dấu hiệu sinh tồn thường xuyên
                - Đánh giá lại qSOFA/SOFA
                - Theo dõi chức năng các cơ quan

@@ -298,7 +298,7 @@ def render():
         
         **ICU:** {interp['icu_need']}
         
-        **Khuyến nghị:** {interp['recommendation']}
+        **Khuyến Nghị:** {interp['recommendation']}
         """)
         
         # Detailed management
@@ -581,7 +581,7 @@ def render():
         - **Interstitial edematous (80%):** Nhẹ, tự khỏi
         - **Necrotizing (20%):** Nặng, tử vong cao
         
-        **Biến chứng:**
+        **Biến Chứng:**
         - **Early (< 2 weeks):** SIRS, organ failure
         - **Late (> 2 weeks):** Infection, pseudocyst, abscess
         """)

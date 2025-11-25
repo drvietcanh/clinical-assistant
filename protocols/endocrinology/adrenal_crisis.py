@@ -172,7 +172,7 @@ def render():
     - Sau đó: 2-4L/ngày tùy theo nhu cầu
     - **D5NS:** Nếu có hypoglycemia
     
-    **Mục tiêu:**
+    **Mục Tiêu:**
     - Huyết áp ổn định (SBP >90 mmHg)
     - Đi tiểu tốt (>0.5 mL/kg/h)
     - Điện giải bình thường
@@ -215,7 +215,7 @@ def render():
     - **Chỉ dùng trong suy thượng thận nguyên phát**
     - **Liều:** 0.1-0.2mg PO/ngày
     - **Bắt đầu:** Khi bệnh nhân có thể uống
-    - **Mục tiêu:** Điều chỉnh điện giải, huyết áp
+    - **Mục Tiêu:** Điều chỉnh điện giải, huyết áp
     
     **Lưu ý:**
     - Hydrocortisone liều cao đã có một phần mineralocorticoid activity

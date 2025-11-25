@@ -178,6 +178,6 @@ def render():
     2. **VAS 31-60mm:** Đau vừa → Opioid yếu
     3. **VAS 61-100mm:** Đau nặng → Opioid mạnh
     4. **Chuyển đổi:** VAS (mm) ÷ 10 ≈ NRS
-    5. **Mục tiêu:** VAS ≤ 30mm hoặc giảm ≥20mm
+    5. **Mục Tiêu:** VAS ≤ 30mm hoặc giảm ≥20mm
     """)
 

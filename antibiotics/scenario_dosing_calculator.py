@@ -361,7 +361,7 @@ def render_scenario_dosing_calculator(antibiotic_name):
         scenario_severe = st.checkbox("CrCl < 15 (Severe)", value=True, key=f"scenario_severe_{antibiotic_name}")
     
     with col2:
-        st.markdown("**Chỉ định:**")
+        st.markdown("**Chỉ Định:**")
         indication_standard = st.checkbox("Chuẩn", value=True, key=f"indication_standard_{antibiotic_name}")
         indication_severe = st.checkbox("Nhiễm khuẩn nặng", value=False, key=f"indication_severe_{antibiotic_name}")
         indication_meningitis = st.checkbox("Viêm màng não", value=False, key=f"indication_meningitis_{antibiotic_name}")

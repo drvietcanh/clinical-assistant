@@ -115,7 +115,7 @@ def render_ardsnet():
             - **PEEP/FiO2:** Theo bảng PEEP/FiO2
             - **I:E:** 1:1 đến 1:3
             
-            **Mục tiêu:**
+            **Mục Tiêu:**
             - **Plateau Pressure:** ≤30 cmH2O
             - **pH:** 7.30-7.45
             - **SpO2:** 88-95%

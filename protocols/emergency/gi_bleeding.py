@@ -114,7 +114,7 @@ def render_upper_gi_bleeding():
        - RBC:FFP:Platelet = 1:1:1
        - Mục tiêu: Hgb >7, INR <1.5, Platelet >50k
     
-    **Mục tiêu:**
+    **Mục Tiêu:**
     - SBP ≥90 mmHg
     - MAP ≥65 mmHg
     - Hgb >7-8 g/dL
@@ -202,7 +202,7 @@ def render_upper_gi_bleeding():
         st.markdown("#### 💊 Peptic Ulcer Disease (PUD)")
         
         st.success("""
-        **Điều trị:**
+        **Điều Trị:**
         
         1. **PPI high-dose** (như trên)
         
@@ -257,7 +257,7 @@ def render_upper_gi_bleeding():
         - Thường tự cầm (85-95%)
         - Liên quan đến nôn/nôn khan
         
-        **Điều trị:**
+        **Điều Trị:**
         - **Nếu đang xuất huyết:** Nội soi clip hoặc cautery
         - **Nếu đã cầm:** PPI × 2-4 tuần
         - **Supportive care:** NPO 24h, sau đó chế độ ăn mềm
@@ -316,7 +316,7 @@ def render_lower_gi_bleeding():
     
     with col1:
         st.info("""
-        **Triệu chứng:**
+        **Triệu Chứng:**
         - Đi ngoài máu đỏ tươi (hematochezia)
         - Đi ngoài máu đỏ sẫm
         - Máu lẫn phân
@@ -375,7 +375,7 @@ def render_lower_gi_bleeding():
       * Polyethylene glycol 4L trong 3-4h
       * Hoặc chia 2 ngày nếu không urgent
     
-    **Chống chỉ định:**
+    **Chống Chỉ Định:**
     - ⚠️ Shock không ổn định
     - ⚠️ Peritonitis
     - ⚠️ Toxic megacolon
@@ -395,7 +395,7 @@ def render_lower_gi_bleeding():
         - Thường tự cầm (80%)
         - Tái phát: 25-30%
         
-        **Điều trị:**
+        **Điều Trị:**
         - **Nội soi:**
           * Clip nếu thấy active bleeding
           * Cautery nếu có visible vessel
@@ -416,7 +416,7 @@ def render_lower_gi_bleeding():
         - Thường ở right colon
         - Liên quan tuổi già, CKD
         
-        **Điều trị:**
+        **Điều Trị:**
         - **Endoscopic:**
           * APC (Argon Plasma Coagulation)
           * Cautery
@@ -435,7 +435,7 @@ def render_lower_gi_bleeding():
         - Thường tự giới hạn
         - Liên quan low flow states
         
-        **Điều trị:**
+        **Điều Trị:**
         - **Supportive:**
           * NPO
           * IV fluids
@@ -443,7 +443,7 @@ def render_lower_gi_bleeding():
         - **Monitoring:** Lâm sàng, labs
         - **Surgery:** Nếu thủng, hoại tử
         
-        **Nguyên nhân:**
+        **Nguyên Nhân:**
         - Low cardiac output
         - Vasopressors
         - Mesenteric ischemia
@@ -502,7 +502,7 @@ def render_unknown_gi_bleeding():
     4. ✅ **Resuscitation** - Bù dịch và máu nếu cần
     5. ✅ **Đảo ngược anticoagulation** nếu đang dùng
     
-    **Đánh giá:**
+    **Đánh Giá:**
     - **Hematemesis hoặc coffee-ground emesis:** → UGIB
     - **Melena (phân đen):** → Thường UGIB, có thể LGIB
     - **Hematochezia (máu đỏ tươi):** → Thường LGIB, có thể UGIB nếu nặng

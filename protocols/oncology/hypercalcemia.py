@@ -115,7 +115,7 @@ def render():
         # Corrected Ca = Total Ca + 0.8 × (4.0 - Albumin)
         corrected_ca = total_ca + 0.8 * (4.0 - albumin)
         
-        st.markdown("### 📊 Kết Quả:")
+        st.markdown("### 📊 Kết Quả")
         
         st.metric("Total Ca", f"{total_ca:.1f} mg/dL")
         st.metric("Corrected Ca", f"{corrected_ca:.1f} mg/dL")
@@ -266,7 +266,7 @@ def render():
     st.markdown("#### **3. Calcitonin (Nếu cần tác dụng nhanh)**")
     
     st.warning("""
-    **Chỉ định:**
+    **Chỉ Định:**
     - Severe hypercalcemia (>14 mg/dL)
     - Cần tác dụng nhanh (trong khi chờ bisphosphonates)
     - Không đáp ứng hydration
@@ -298,7 +298,7 @@ def render():
     st.markdown("#### **4. Denosumab (Nếu bisphosphonates chống chỉ định)**")
     
     st.info("""
-    **Chỉ định:**
+    **Chỉ Định:**
     - Suy thận nặng (CrCl <30)
     - Không dung nạp bisphosphonates
     - Không đáp ứng bisphosphonates

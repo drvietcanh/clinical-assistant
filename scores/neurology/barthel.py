@@ -17,7 +17,7 @@ def render():
         st.markdown("""
         **Barthel Index** là thang điểm đánh giá khả năng thực hiện các hoạt động sống hàng ngày (Activities of Daily Living - ADL).
         
-        **Chỉ định:**
+        **Chỉ Định:**
         - Đánh giá chức năng sau đột quỵ
         - Đánh giá chức năng ở bệnh nhân cao tuổi
         - Theo dõi tiến triển phục hồi chức năng

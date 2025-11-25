@@ -62,7 +62,7 @@ def render():
         st.markdown(f"<div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'><h3 style='color: {score_color};'>🎯 Mức độ: {result['severity']}</h3><p style='font-size: 1.2em;'><strong>Điều trị:</strong> {result['management']}</p></div>", unsafe_allow_html=True)
         
         st.info("""
-        **Điều trị:**
+        **Điều Trị:**
         - **5-12:** Nhẹ-TB → Clonidine, hỗ trợ triệu chứng
         - **13-24:** TB-Nặng → Buprenorphine 4-8mg hoặc Methadone 20-30mg
         - **>24:** Nặng → Buprenorphine liều cao hoặc Methadone 30-40mg

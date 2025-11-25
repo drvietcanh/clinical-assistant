@@ -379,7 +379,7 @@ def render():
               - Bắt đầu ăn sớm khi đỡ đau (24-48h)
               - Bắt đầu từ thức ăn lỏng
             
-            - 📊 **Theo dõi:**
+            - 📊 **Theo Dõi:**
               - Dấu hiệu sinh tồn
               - Lượng nước tiểu
               - Tái đánh giá BISAP mỗi ngày

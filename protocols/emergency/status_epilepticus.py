@@ -55,22 +55,22 @@ def render():
     
     **1. Fosphenytoin (Ưu tiên):**
     - **Liều:** 20 mg PE/kg IV (max 1500 mg)
-    - **Tốc độ:** ≤150 mg PE/min
+    - **Tốc Độ:** ≤150 mg PE/min
     - **Ưu điểm:** Ít gây kích ứng mạch máu hơn phenytoin
     
     **2. Phenytoin:**
     - **Liều:** 20 mg/kg IV (max 1500 mg)
-    - **Tốc độ:** ≤50 mg/min
-    - **Theo dõi:** ECG, huyết áp
+    - **Tốc Độ:** ≤50 mg/min
+    - **Theo Dõi:** ECG, huyết áp
     
     **3. Valproate:**
     - **Liều:** 20-40 mg/kg IV (max 3000 mg)
-    - **Tốc độ:** 3-6 mg/kg/min
-    - **Chống chỉ định:** Bệnh gan, thiếu hụt enzyme chuyển hóa
+    - **Tốc Độ:** 3-6 mg/kg/min
+    - **Chống Chỉ Định:** Bệnh gan, thiếu hụt enzyme chuyển hóa
     
     **4. Levetiracetam:**
     - **Liều:** 20-60 mg/kg IV (max 4500 mg)
-    - **Tốc độ:** 5-15 phút
+    - **Tốc Độ:** 5-15 phút
     - **Ưu điểm:** Ít tương tác thuốc, an toàn
     """)
     
@@ -84,7 +84,7 @@ def render():
     **1. Midazolam truyền tĩnh mạch:**
     - **Bolus:** 0.2 mg/kg IV
     - **Truyền:** 0.05-2 mg/kg/h
-    - **Mục tiêu:** EEG burst suppression
+    - **Mục Tiêu:** EEG burst suppression
     
     **2. Propofol:**
     - **Bolus:** 1-2 mg/kg IV
@@ -218,13 +218,13 @@ def render():
     st.markdown("### 🎯 Mục Tiêu Điều Trị")
     
     st.success("""
-    **Mục tiêu:**
+    **Mục Tiêu:**
     - ✅ Ngừng co giật trong 5-20 phút
     - ✅ Hồi phục ý thức
     - ✅ Tìm và điều trị nguyên nhân
     - ✅ Dự phòng tái phát
     
-    **Theo dõi:**
+    **Theo Dõi:**
     - EEG nếu có (để phát hiện non-convulsive SE)
     - Hô hấp, huyết động
     - Chức năng thần kinh
@@ -255,13 +255,13 @@ def render_early_se():
     st.success("## 🟢 Sớm (0-5 phút)")
     
     st.markdown("""
-    **Điều trị:**
+    **Điều Trị:**
     1. ABC, oxygen
     2. Đo đường huyết
     3. **Lorazepam:** 0.1 mg/kg IV (max 4 mg)
        - Hoặc: Midazolam 0.2 mg/kg IM
     
-    **Mục tiêu:** Ngừng co giật trong 5 phút
+    **Mục Tiêu:** Ngừng co giật trong 5 phút
     """)
 
 def render_established_se():
@@ -269,15 +269,15 @@ def render_established_se():
     st.warning("## 🟡 Đã Thiết Lập (5-20 phút)")
     
     st.markdown("""
-    **Điều trị:**
+    **Điều Trị:**
     1. Nếu vẫn co giật sau benzodiazepine:
        - **Fosphenytoin:** 20 mg PE/kg IV
        - Hoặc: Valproate 20-40 mg/kg IV
        - Hoặc: Levetiracetam 20-60 mg/kg IV
     
-    2. **Theo dõi:** ECG, huyết áp
+    2. **Theo Dõi:** ECG, huyết áp
     
-    **Mục tiêu:** Ngừng co giật trong 20 phút
+    **Mục Tiêu:** Ngừng co giật trong 20 phút
     """)
 
 def render_refractory_se():
@@ -285,7 +285,7 @@ def render_refractory_se():
     st.error("## 🔴 Kháng Trị (20-40 phút) - ICU")
     
     st.markdown("""
-    **Điều trị:**
+    **Điều Trị:**
     1. **Midazolam truyền tĩnh mạch:**
        - Bolus: 0.2 mg/kg
        - Truyền: 0.05-2 mg/kg/h
@@ -298,7 +298,7 @@ def render_refractory_se():
     
     4. **ICU care:** Intubation, monitoring
     
-    **Mục tiêu:** EEG burst suppression
+    **Mục Tiêu:** EEG burst suppression
     """)
 
 def render_super_refractory_se():
@@ -306,7 +306,7 @@ def render_super_refractory_se():
     st.error("## ⚫ Siêu Kháng Trị (≥40 phút) - ICU Chuyên Sâu")
     
     st.markdown("""
-    **Điều trị:**
+    **Điều Trị:**
     1. **Ketamine:**
        - Bolus: 1-3 mg/kg
        - Truyền: 0.5-10 mg/kg/h
@@ -323,6 +323,6 @@ def render_super_refractory_se():
     
     4. **Hội chẩn:** Thần kinh, gây mê
     
-    **Mục tiêu:** Kiểm soát co giật, tìm nguyên nhân
+    **Mục Tiêu:** Kiểm soát co giật, tìm nguyên nhân
     """)
 

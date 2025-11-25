@@ -387,13 +387,13 @@ def render():
             st.success("""
             ### ✅ MELD-Na < 10 - Bệnh Gan Còn Ổn Định
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Khám định kỳ 3-6 tháng
             - Labs định kỳ (CBC, LFT, PT/INR, Creatinine, Sodium, AFP)
             - Ultrasound bụng 6 tháng
             - Endoscopy sàng lọc varices
             
-            **Điều trị:**
+            **Điều Trị:**
             - Điều trị nguyên nhân (HCV, HBV, alcohol, NASH)
             - Vaccinations (HAV, HBV, influenza, pneumococcal)
             - Tránh hepatotoxic drugs
@@ -408,12 +408,12 @@ def render():
             st.info("""
             ### 📋 MELD-Na 10-14 - Bệnh Gan Nặng Dần
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Khám định kỳ 2-3 tháng
             - Labs thường xuyên hơn
             - Đánh giá biến chứng (ascites, encephalopathy, varices)
             
-            **Điều trị:**
+            **Điều Trị:**
             - Tối ưu điều trị nguyên nhân
             - Điều trị biến chứng tích cực
             - Diuretics cho ascites
@@ -430,12 +430,12 @@ def render():
             st.warning("""
             ### ⚠️ MELD-Na 15-19 - NÊN Transplant
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Khám hàng tháng hoặc thường xuyên hơn
             - Labs định kỳ chặt chẽ
             - Monitor biến chứng sát
             
-            **Điều trị:**
+            **Điều Trị:**
             - Điều trị tích cực mọi biến chứng
             - Paracentesis cho tense ascites
             - Lactulose liều cao cho encephalopathy
@@ -454,12 +454,12 @@ def render():
             st.error("""
             ### 🚨 MELD-Na ≥ 20 - TRANSPLANT KHẨN CẤP
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Theo dõi chặt chẽ (có thể nội trú)
             - Labs rất thường xuyên
             - Monitor vitals, mental status
             
-            **Điều trị:**
+            **Điều Trị:**
             - ICU care nếu cần
             - Điều trị tích cực biến chứng
             - TIPS cho refractory ascites/bleeding

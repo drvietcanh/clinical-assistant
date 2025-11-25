@@ -49,9 +49,9 @@ def render_recommendations(selected_mrs, mrs_info):
         st.success(f"""
         **{mrs_info['icon']} mRS 0 - HOÀN TOÀN BÌNH THƯỜNG**
         
-        **Đánh giá:** Bệnh nhân đã hồi phục hoàn toàn, không còn bất kỳ triệu chứng nào.
+        **Đánh Giá:** Bệnh nhân đã hồi phục hoàn toàn, không còn bất kỳ triệu chứng nào.
         
-        **Khuyến nghị:**
+        **Khuyến Nghị:**
         
         1. **Phòng ngừa đột quỵ tái phát:**
            - Kiểm soát yếu tố nguy cơ: tăng huyết áp, đái tháo đường, lipid máu
@@ -82,9 +82,9 @@ def render_recommendations(selected_mrs, mrs_info):
         st.success(f"""
         **{mrs_info['icon']} mRS 1 - KHUYẾT TẬT KHÔNG ĐÁNG KỂ**
         
-        **Đánh giá:** Có triệu chứng nhẹ nhưng không ảnh hưởng đáng kể đến sinh hoạt.
+        **Đánh Giá:** Có triệu chứng nhẹ nhưng không ảnh hưởng đáng kể đến sinh hoạt.
         
-        **Khuyến nghị:**
+        **Khuyến Nghị:**
         
         1. **Phục hồi chức năng:**
            - Vật lý trị liệu để cải thiện sức mạnh, phối hợp vận động
@@ -101,7 +101,7 @@ def render_recommendations(selected_mrs, mrs_info):
            - Tư vấn tâm lý nếu cần
            - Hỗ trợ tái hòa nhập xã hội, công việc
         
-        4. **Theo dõi:**
+        4. **Theo Dõi:**
            - Đánh giá chức năng định kỳ
            - Theo dõi tiến triển triệu chứng
         
@@ -112,9 +112,9 @@ def render_recommendations(selected_mrs, mrs_info):
         st.success(f"""
         **{mrs_info['icon']} mRS 2 - KHUYẾT TẬT NHẸ**
         
-        **Đánh giá:** Khuyết tật nhẹ, tự chăm sóc được nhưng không làm được tất cả hoạt động như trước.
+        **Đánh Giá:** Khuyết tật nhẹ, tự chăm sóc được nhưng không làm được tất cả hoạt động như trước.
         
-        **Khuyến nghị:**
+        **Khuyến Nghị:**
         
         1. **Phục hồi chức năng tích cực:**
            - **Vật lý trị liệu:** 3-5 buổi/tuần
@@ -137,7 +137,7 @@ def render_recommendations(selected_mrs, mrs_info):
            - Cải thiện an toàn tại nhà (tay vịn, chống trơn...)
            - Đánh giá khả năng lái xe
         
-        5. **Theo dõi:**
+        5. **Theo Dõi:**
            - Đánh giá chức năng mỗi 1-3 tháng
            - Điều chỉnh phục hồi chức năng dựa trên tiến triển
         
@@ -149,9 +149,9 @@ def render_recommendations(selected_mrs, mrs_info):
         st.warning(f"""
         **{mrs_info['icon']} mRS 3 - KHUYẾT TẬT TRUNG BÌNH**
         
-        **Đánh giá:** Cần giúp đỡ một số hoạt động nhưng đi lại độc lập.
+        **Đánh Giá:** Cần giúp đỡ một số hoạt động nhưng đi lại độc lập.
         
-        **Khuyến nghị:**
+        **Khuyến Nghị:**
         
         1. **Phục hồi chức năng chuyên sâu:**
            - **Vật lý trị liệu:** 5-7 buổi/tuần (giai đoạn đầu)
@@ -178,7 +178,7 @@ def render_recommendations(selected_mrs, mrs_info):
            - Nhóm hỗ trợ bệnh nhân đột quỵ
            - Tư vấn gia đình
         
-        5. **Theo dõi:**
+        5. **Theo Dõi:**
            - Đánh giá chức năng định kỳ
            - Điều chỉnh phục hồi chức năng
            - Theo dõi biến chứng
@@ -191,9 +191,9 @@ def render_recommendations(selected_mrs, mrs_info):
         st.error(f"""
         **{mrs_info['icon']} mRS 4 - KHUYẾT TẬT VỪA NẶNG**
         
-        **Đánh giá:** Phụ thuộc nặng, cần giúp đỡ đi lại và tự chăm sóc.
+        **Đánh Giá:** Phụ thuộc nặng, cần giúp đỡ đi lại và tự chăm sóc.
         
-        **Khuyến nghị:**
+        **Khuyến Nghị:**
         
         1. **Phục hồi chức năng:**
            - **Vật lý trị liệu:** Duy trì khả năng vận động tối đa
@@ -239,9 +239,9 @@ def render_recommendations(selected_mrs, mrs_info):
         st.error(f"""
         **{mrs_info['icon']} mRS 5 - KHUYẾT TẬT NẶNG**
         
-        **Đánh giá:** Nằm liệt giường, không tự chủ, cần chăm sóc toàn diện.
+        **Đánh Giá:** Nằm liệt giường, không tự chủ, cần chăm sóc toàn diện.
         
-        **Khuyến nghị:**
+        **Khuyến Nghị:**
         
         1. **Chăm sóc dài hạn:**
            - **BẮT BUỘC chăm sóc 24/7**
@@ -303,7 +303,7 @@ def render_recommendations(selected_mrs, mrs_info):
         st.error(f"""
         **{mrs_info['icon']} mRS 6 - TỬ VONG**
         
-        **Đánh giá:** Bệnh nhân đã tử vong.
+        **Đánh Giá:** Bệnh nhân đã tử vong.
         
         **Hỗ trợ gia đình:**
         - Tư vấn tâm lý cho gia đình

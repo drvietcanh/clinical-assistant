@@ -36,6 +36,9 @@ from protocols import (
     render_hhs,
     render_acute_pancreatitis,
     render_transfusion,
+    render_anticoagulation_reversal,
+    render_delirium,
+    render_sedation,
     render_tls,
     render_febrile_neutropenia,
     render_hypercalcemia
@@ -64,7 +67,8 @@ with st.sidebar:
             "🎗️ Ung thư (Oncology)",
             "💊 Đau (Pain Management)",
             "🩸 Huyết học (Hematology)",
-            "🫀 Tiêu hóa (Gastroenterology)"
+            "🫀 Tiêu hóa (Gastroenterology)",
+            "🏥 Hồi sức (Critical Care)"
         ]
     )
     
@@ -143,7 +147,8 @@ with st.sidebar:
         protocol = st.radio(
             "Phác đồ:",
             [
-                "🩸 Truyền Máu (Transfusion)"
+                "🩸 Truyền Máu (Transfusion)",
+                "🩸 Đảo Ngược Chống Đông (Anticoagulation Reversal)"
             ],
             label_visibility="collapsed"
         )
@@ -152,6 +157,15 @@ with st.sidebar:
             "Phác đồ:",
             [
                 "🫀 Viêm Tụy Cấp (Acute Pancreatitis)"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Hồi sức" in specialty or "Critical Care" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "🧠 Quản Lý Delirium (Delirium Management)",
+                "💤 An Thần & Giảm Đau ICU (ICU Sedation & Analgesia)"
             ],
             label_visibility="collapsed"
         )
@@ -275,8 +289,17 @@ elif "HHS" in protocol or "Hyperosmolar" in protocol or "hyperosmolar" in protoc
 elif "Pancreatitis" in protocol or "pancreatitis" in protocol.lower() or "Tụy" in protocol:
     render_acute_pancreatitis()
 
+elif "Delirium" in protocol or "delirium" in protocol.lower() or "Quản Lý Delirium" in protocol:
+    render_delirium()
+
+elif "Sedation" in protocol or "sedation" in protocol.lower() or "An Thần" in protocol or "Giảm Đau ICU" in protocol:
+    render_sedation()
+
 elif "Transfusion" in protocol or "transfusion" in protocol.lower() or "Truyền Máu" in protocol:
     render_transfusion()
+
+elif "Anticoagulation" in protocol or "anticoagulation" in protocol.lower() or "Đảo Ngược" in protocol or "Chống Đông" in protocol:
+    render_anticoagulation_reversal()
 
 elif "Tumor Lysis" in protocol or "TLS" in protocol or "tls" in protocol.lower():
     render_tls()

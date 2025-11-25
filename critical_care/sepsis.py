@@ -283,7 +283,7 @@ def render_fluid_resuscitation():
         - **Bolus:** 500-1000 ml mỗi lần
         - **Đánh giá đáp ứng:** Sau mỗi bolus
         - **Dung dịch:** Ringer Lactate hoặc Normal Saline
-        - **Mục tiêu:** MAP ≥65 mmHg, giảm lactate
+        - **Mục Tiêu:** MAP ≥65 mmHg, giảm lactate
         
         **Dấu hiệu đáp ứng:**
         - MAP tăng

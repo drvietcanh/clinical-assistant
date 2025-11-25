@@ -6,7 +6,7 @@ CORTICOSTEROID_(INHALED)S_DRUGS = {
     "Budesonide": {'group': 'Respiratory - Corticosteroid (Inhaled)', 'vietnamese_name':
         'Budesonide inhaled, Pulmicort', 'administration': ['INH', 'NEB'],
         'indications': ['Hen phế quản (duy trì)', 'COPD', 'Viêm mũi dị ứng',
-        'Hen phế quản (trẻ em)'], 'contraindications': ['Dị ứng budesonide',
+        'Hen phế quản (Trẻ Em)'], 'contraindications': ['Dị ứng budesonide',
         'Nhiễm trùng đường hô hấp không điều trị'], 'dosage': {'adult_inh':
         '200-800mcg x 2 lần/ngày', 'adult_neb':
         '0.5-1mg nebulizer x 2 lần/ngày', 'pediatric_inh':

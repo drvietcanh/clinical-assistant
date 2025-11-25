@@ -280,14 +280,14 @@ def render():
                 - Tử vong: {mortality}
                 - Tái chảy máu: {rebleed}
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **Có thể xuất viện sớm:**
                    - Sau nội soi 12-24h
                    - Nếu ổn định lâm sàng
                    - Không comorbidity nặng
                 
-                2. **Điều trị:**
+                2. **Điều Trị:**
                    - PPI: Omeprazole 20-40mg daily
                    - Thời gian tùy nguyên nhân
                 
@@ -306,13 +306,13 @@ def render():
                 - Tử vong: {mortality}
                 - Tái chảy máu: {rebleed}
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **Nhập viện theo dõi:**
                    - 2-3 ngày
                    - Theo dõi biến chứng
                 
-                2. **Điều trị:**
+                2. **Điều Trị:**
                    - PPI IV 72h → PO
                    - Theo dõi Hgb
                 
@@ -331,7 +331,7 @@ def render():
                 - Tử vong: {mortality}
                 - Tái chảy máu: {rebleed}
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **ICU/HDU monitoring:**
                    - Theo dõi sát
@@ -429,7 +429,7 @@ def render():
         - Dự đoán chính xác hơn
         - Hướng dẫn điều trị tốt hơn
         
-        **Khuyến nghị:**
+        **Khuyến Nghị:**
         - Tính Clinical Rockall tại ED/admission
         - Tính Complete Rockall sau nội soi
         - Sử dụng cả hai để đánh giá đầy đủ

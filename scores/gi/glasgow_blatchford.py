@@ -285,7 +285,7 @@ def render():
                 - Cần can thiệp: <1%
                 - Tử vong: <0.5%
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **✅ Có thể XUẤT VIỆN an toàn**
                    - Không cần nội soi cấp cứu
@@ -322,7 +322,7 @@ def render():
                 - Cần can thiệp: ~2%
                 - Tử vong: <0.5%
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **Nhập viện ngắn ngày hoặc Observation Unit:**
                    - Theo dõi 12-24h
@@ -339,7 +339,7 @@ def render():
                    - Có thể làm trong 24h
                    - Hoặc ngoại trú trong vài ngày nếu ổn định
                 
-                4. **Theo dõi:**
+                4. **Theo Dõi:**
                    - Vital signs q4-6h
                    - CBC lặp lại sau 6-12h
                    - Đánh giá lại cho xuất viện nếu:
@@ -363,7 +363,7 @@ def render():
                 - Cần can thiệp: ~{intervention_risk}
                 - Tử vong: ~{mortality}
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **NHẬP VIỆN - Khoa Tiêu Hóa:**
                    - Theo dõi sát
@@ -383,7 +383,7 @@ def render():
                    - Không cần siêu khẩn cấp (trừ hemodynamic instability)
                    - Pre-endoscopy: Erythromycin 250mg IV (giúp làm sạch dạ dày)
                 
-                4. **Theo dõi:**
+                4. **Theo Dõi:**
                    - Vital signs q2-4h
                    - CBC mỗi 6-12h
                    - Đánh giá lại GBS sau resuscitation
@@ -411,7 +411,7 @@ def render():
                 - Cần can thiệp: >30%
                 - Tử vong: >5%
                 
-                **Khuyến nghị:**
+                **Khuyến Nghị:**
                 
                 1. **KHẨN CẤP - ICU hoặc High-Dependency Unit:**
                    - Monitoring liên tục
@@ -432,7 +432,7 @@ def render():
                    
                    **Truyền máu:**
                    - **PRBC:** Nếu Hgb <7 g/dL (hoặc <8 nếu CAD/instability)
-                   - **Mục tiêu:** Hgb 7-9 g/dL
+                   - **Mục Tiêu:** Hgb 7-9 g/dL
                    - **Tránh over-transfusion** (tăng pressure, tăng rebleeding)
                    - **FFP:** Nếu INR >1.5-2.0 và chảy máu active
                    - **Platelet:** Nếu <50,000 và chảy máu active

@@ -195,7 +195,7 @@ def render():
     
     with col1:
         st.success("""
-        **Chỉ định:**
+        **Chỉ Định:**
         - ≥2 lần tái phát C. diff
         - Hoặc ≥3 lần tái phát
         - Đã thất bại với Vancomycin/Fidaxomicin
@@ -209,7 +209,7 @@ def render():
     
     with col2:
         st.error("""
-        **Chống chỉ định:**
+        **Chống Chỉ Định:**
         - Megacolon độc tố
         - Thủng ruột
         - Suy giảm miễn dịch nặng
@@ -229,7 +229,7 @@ def render():
     st.info("""
     **Bezlotoxumab** là monoclonal antibody chống độc tố B của C. diff.
     
-    **Chỉ định:**
+    **Chỉ Định:**
     - Dùng cùng với Vancomycin hoặc Fidaxomicin
     - Bệnh nhân có ≥1 lần tái phát C. diff
     - Hoặc nguy cơ tái phát cao (tuổi >65, suy giảm miễn dịch, nhiễm C. diff nặng)
@@ -291,7 +291,7 @@ def render():
     st.markdown("**Theo dõi trong quá trình điều trị:**")
     
     monitoring_items = [
-        "**Triệu chứng:** Số lần tiêu chảy, đau bụng, sốt",
+        "**Triệu Chứng:** Số lần tiêu chảy, đau bụng, sốt",
         "**Dấu hiệu sinh tồn:** Huyết áp, nhịp tim, nhiệt độ",
         "**Xét nghiệm:** WBC, Creatinine, Albumin (nếu nặng)",
         "**Dấu hiệu biến chứng:** Megacolon, thủng ruột, sốc",

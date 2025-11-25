@@ -4,7 +4,7 @@ def render():
     st.markdown("<h2 style='text-align: center; color: #F97316;'>🦴 ACR/EULAR Gout Classification</h2><p style='text-align: center;'><em>Tiêu chuẩn chẩn đoán Gout</em></p>", unsafe_allow_html=True)
     with st.expander("ℹ️ Gout Classification"): st.markdown("**ACR/EULAR 2015** chẩn đoán gout. **Chuẩn vàng:** Thấy tinh thể urat trong dịch khớp. Nếu không có → Dùng điểm số ≥8 để chẩn đoán.")
     st.markdown("---"); crystal = st.radio("Có tinh thể urat trong dịch khớp/tophi?", ["Có", "Không", "Không làm"]); 
-    if crystal == "Có": st.success("✅ **Chẩn đoán xác định GOUT**\n\nThấy tinh thể urat → Chuẩn vàng chẩn đoán"); st.info("**Điều trị:** NSAID/Colchicine (cấp) + Allopurinol/Febuxostat (dự phòng)")
+    if crystal == "Có": st.success("✅ **Chẩn đoán xác định GOUT**\n\nThấy tinh thể urat → Chuẩn vàng chẩn đoán"); st.info("**Điều Trị:** NSAID/Colchicine (cấp) + Allopurinol/Febuxostat (dự phòng)")
     else:
         st.warning("Sử dụng tiêu chuẩn lâm sàng (cần ≥8 điểm):")
         score = 0; pattern = st.radio("Đặc điểm cơn", [0, 1, 2, 3], format_func=lambda x: ["0đ: Không", "1đ: Viêm cổ chân/bàn chân", "2đ: Viêm khớp gối ngón chân cái", "3đ: Đỏ cổ chân/gối ngón chân"][x]); score += pattern

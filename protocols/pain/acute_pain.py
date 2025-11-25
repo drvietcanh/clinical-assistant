@@ -32,7 +32,7 @@ def render():
     
     pain_scale = st.radio(
         "**Thang điểm đau:**",
-        ["NRS (0-10)", "VAS (0-100mm)", "FACES (Trẻ em)", "FLACC (Trẻ nhỏ)"],
+        ["NRS (0-10)", "VAS (0-100mm)", "FACES (Trẻ Em)", "FLACC (Trẻ nhỏ)"],
         key="pain_scale"
     )
     
@@ -97,7 +97,7 @@ def render():
     **Thuốc Opioid:**
     
     **1. Morphine (Tiêu chuẩn):**
-    - **IV:** 2-5 mg q3-4h (người lớn)
+    - **IV:** 2-5 mg q3-4h (Người Lớn)
     - **PO:** 10-30 mg q4h
     - **PCA:** 1-2 mg bolus, lockout 6-10 phút
     
@@ -131,7 +131,7 @@ def render():
     - **Ibuprofen:** 400-800 mg PO q6-8h
     - **Naproxen:** 250-500 mg PO q12h
     - **Ketorolac:** 15-30 mg IV q6h (max 5 ngày)
-    - **Chống chỉ định:** Suy thận, loét dạ dày, chảy máu
+    - **Chống Chỉ Định:** Suy thận, loét dạ dày, chảy máu
     
     **2. Acetaminophen (Paracetamol):**
     - **PO:** 650-1000 mg q4-6h (max 4g/ngày)
@@ -244,13 +244,13 @@ def render():
     st.markdown("### 🎯 Mục Tiêu Điều Trị")
     
     st.success("""
-    **Mục tiêu:**
+    **Mục Tiêu:**
     - ✅ Giảm đau xuống mức chấp nhận được (NRS ≤3-4)
     - ✅ Cải thiện chức năng
     - ✅ Ít tác dụng phụ
     - ✅ Không lạm dụng
     
-    **Đánh giá:**
+    **Đánh Giá:**
     - Đánh giá đau trước và sau điều trị
     - Đánh giá chức năng
     - Đánh giá tác dụng phụ
@@ -295,7 +295,7 @@ def render_nrs_scale():
     **Ưu điểm:**
     - Dễ sử dụng
     - Nhanh
-    - Phù hợp người lớn
+    - Phù hợp Người Lớn
     
     **Sử dụng:**
     - Hỏi: "Đau của bạn là bao nhiêu từ 0-10?"
@@ -364,7 +364,7 @@ def render_mild_pain():
     st.success("## 🟢 Đau Nhẹ (NRS 1-3)")
     
     st.markdown("""
-    **Điều trị:**
+    **Điều Trị:**
     1. **Non-opioid:**
        - Acetaminophen: 650-1000 mg PO q4-6h
        - Hoặc NSAID: Ibuprofen 400-600 mg PO q6-8h
@@ -373,7 +373,7 @@ def render_mild_pain():
     
     3. **Nếu không đáp ứng:** Tăng liều hoặc thêm NSAID
     
-    **Mục tiêu:** NRS ≤2
+    **Mục Tiêu:** NRS ≤2
     """)
 
 
@@ -382,7 +382,7 @@ def render_moderate_pain():
     st.warning("## 🟡 Đau Trung Bình (NRS 4-6)")
     
     st.markdown("""
-    **Điều trị:**
+    **Điều Trị:**
     1. **Multimodal:**
        - Acetaminophen: 1000 mg PO q6h
        - NSAID: Ibuprofen 600-800 mg PO q8h
@@ -396,7 +396,7 @@ def render_moderate_pain():
     
     4. **Đánh giá lại:** Sau 1 giờ
     
-    **Mục tiêu:** NRS ≤3-4
+    **Mục Tiêu:** NRS ≤3-4
     """)
 
 
@@ -405,7 +405,7 @@ def render_severe_pain():
     st.error("## 🔴 Đau Nặng (NRS 7-10)")
     
     st.markdown("""
-    **Điều trị:**
+    **Điều Trị:**
     1. **Opioid ngay:**
        - **IV:** Morphine 2-5 mg q3-4h
        - **Hoặc:** Hydromorphone 0.5-1 mg IV q3-4h
@@ -426,6 +426,6 @@ def render_severe_pain():
     
     6. **Titration:** Tăng liều nếu không đáp ứng
     
-    **Mục tiêu:** NRS ≤4
+    **Mục Tiêu:** NRS ≤4
     """)
 

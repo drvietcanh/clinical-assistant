@@ -126,7 +126,7 @@ def render():
         hourly_rate = na_deficit / duration if duration > 0 else 0
         daily_rate = hourly_rate * 24
         
-        st.markdown("### 📊 Kết Quả:")
+        st.markdown("### 📊 Kết Quả")
         
         st.metric("Na⁺ deficit", f"{na_deficit:.0f} mEq/L")
         st.metric("TBW", f"{tbw:.1f} L")

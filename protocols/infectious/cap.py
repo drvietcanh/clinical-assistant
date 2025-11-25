@@ -58,7 +58,7 @@ def render():
     # ========== SECTION 2: OUTPATIENT TREATMENT ==========
     st.markdown("### 🏠 Điều Trị Ngoại Trú (Outpatient)")
     
-    st.markdown("**Chỉ định:** CURB-65 = 0-1, PSI Class I-III, không có yếu tố nguy cơ MDR")
+    st.markdown("**Chỉ Định:** CURB-65 = 0-1, PSI Class I-III, không có yếu tố nguy cơ MDR")
     
     col1, col2 = st.columns(2)
     
@@ -97,7 +97,7 @@ def render():
     # ========== SECTION 3: INPATIENT (NON-ICU) ==========
     st.markdown("### 🏥 Điều Trị Nội Trú (Non-ICU)")
     
-    st.markdown("**Chỉ định:** CURB-65 = 2, PSI Class IV, cần nhập viện nhưng không cần ICU")
+    st.markdown("**Chỉ Định:** CURB-65 = 2, PSI Class IV, cần nhập viện nhưng không cần ICU")
     
     col1, col2 = st.columns(2)
     
@@ -138,7 +138,7 @@ def render():
     # ========== SECTION 4: ICU TREATMENT ==========
     st.markdown("### 🚨 Điều Trị ICU")
     
-    st.markdown("**Chỉ định:** CURB-65 ≥3, PSI Class V, suy hô hấp, sốc nhiễm khuẩn")
+    st.markdown("**Chỉ Định:** CURB-65 ≥3, PSI Class V, suy hô hấp, sốc nhiễm khuẩn")
     
     st.error("""
     **Empiric Therapy (Phổ rộng):**

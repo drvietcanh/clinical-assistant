@@ -293,7 +293,7 @@ def render():
             
             **Xác suất viêm họng do GAS: {result['probability']}**
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             
             **Xử trí:** {result['action']}
             
@@ -316,7 +316,7 @@ def render():
             
             **Xác suất viêm họng do GAS: {result['probability']}**
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             
             **Test:** {result['testing']}
             
@@ -350,7 +350,7 @@ def render():
             
             **Xác suất viêm họng do GAS: {result['probability']}**
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             
             **Test:** {result['testing']}
             
@@ -461,7 +461,7 @@ def render():
         - Hay gặp nhất ở trẻ 5-15 tuổi
         - Ít gặp < 3 tuổi và người lớn
         
-        **Triệu chứng:**
+        **Triệu Chứng:**
         - Đau họng đột ngột, nặng
         - Sốt cao (thường > 38.5°C)
         - Amidan đỏ, sưng, có mủ/bạch sấu
@@ -469,7 +469,7 @@ def render():
         - Đau đầu, đau bụng (đặc biệt trẻ em)
         - **KHÔNG** ho, sổ mũi (nếu có → Nghĩ virus)
         
-        **Biến chứng:**
+        **Biến Chứng:**
         
         **1. Hóa mủ (hiếm với kháng sinh):**
         - Áp xe quanh amidan

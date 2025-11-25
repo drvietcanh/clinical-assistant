@@ -9,7 +9,7 @@ BETA_LACTAMS_DRUGS = {
         'administration': ['PO', 'IV'], 'indications': [
         'Nhiễm khuẩn đường hô hấp trên/dưới', 'Nhiễm khuẩn đường tiết niệu',
         'Nhiễm khuẩn da mô mềm', 'Nhiễm khuẩn răng miệng',
-        'Nhiễm khuẩn tai mũi họng (trẻ em)'], 'contraindications': [
+        'Nhiễm khuẩn tai mũi họng (Trẻ Em)'], 'contraindications': [
         'Dị ứng penicillin', 'Viêm gan do amoxicillin-clavulanate trước đây',
         'Dị ứng beta-lactam'], 'dosage': {'adult_po':
         '875/125mg x 2 lần/ngày hoặc 500/125mg x 3 lần/ngày',

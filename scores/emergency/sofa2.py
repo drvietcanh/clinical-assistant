@@ -395,7 +395,7 @@ def render():
         - **SOFA-2 cao liên tục** → tiên lượng xấu
         - **SOFA-2 giảm** → đáp ứng điều trị tốt
         
-        **Theo dõi:**
+        **Theo Dõi:**
         - Tính SOFA-2 hàng ngày để đánh giá diễn tiến
         - So sánh với baseline để xác định Sepsis (Sepsis-3)
         - SOFA-2 có độ chính xác cao hơn SOFA gốc nhờ big data 2025

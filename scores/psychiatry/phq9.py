@@ -233,7 +233,7 @@ def render():
         
         **Khuyến nghị điều trị:** {result['recommendation']}
         
-        **Theo dõi:** {result['monitoring']}
+        **Theo Dõi:** {result['monitoring']}
         """)
         
         # Suicide risk assessment
@@ -411,7 +411,7 @@ def render():
         **Đáp ứng điều trị:**
         - **Response:** Giảm ≥ 50% điểm PHQ-9
         - **Remission:** PHQ-9 < 5
-        - **Mục tiêu:** Remission hoàn toàn
+        - **Mục Tiêu:** Remission hoàn toàn
         
         **Khi dừng thuốc:**
         - Chỉ sau remission ≥ 6-12 tháng

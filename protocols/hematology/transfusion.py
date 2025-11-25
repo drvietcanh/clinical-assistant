@@ -60,14 +60,14 @@ def render():
     st.warning("""
     **Restrictive Strategy (Ưu tiên):**
     - **RBC:** Hb <7 g/dL (hoặc <8 g/dL nếu có bệnh tim mạch)
-    - **Mục tiêu:** Hb 7-9 g/dL
+    - **Mục Tiêu:** Hb 7-9 g/dL
     - **Lợi ích:** Giảm nguy cơ nhiễm trùng, giảm chi phí
     - **Áp dụng:** Hầu hết bệnh nhân
     
     **Liberal Strategy:**
     - **RBC:** Hb <10 g/dL
-    - **Mục tiêu:** Hb 10-12 g/dL
-    - **Chỉ định:** 
+    - **Mục Tiêu:** Hb 10-12 g/dL
+    - **Chỉ Định:** 
       - Bệnh tim mạch không ổn định
       - Chảy máu cấp tính
       - Thiếu máu nặng có triệu chứng
@@ -180,7 +180,7 @@ def render_rbc_protocol():
     st.success("## 🩸 Truyền Hồng Cầu (RBC)")
     
     st.markdown("""
-    **Chỉ định:**
+    **Chỉ Định:**
     
     **1. Restrictive Threshold (Ưu tiên):**
     - Hb <7 g/dL (ổn định)
@@ -198,10 +198,10 @@ def render_rbc_protocol():
     - Phẫu thuật lớn
     
     **Liều:**
-    - **1 đơn vị:** Tăng Hb ~1 g/dL (người lớn)
-    - **Trẻ em:** 10-15 mL/kg
+    - **1 đơn vị:** Tăng Hb ~1 g/dL (Người Lớn)
+    - **Trẻ Em:** 10-15 mL/kg
     
-    **Tốc độ:**
+    **Tốc Độ:**
     - Bắt đầu: 15 phút đầu chậm
     - Sau đó: 2-4 giờ/đơn vị
     - Hoàn thành trong 4 giờ
@@ -213,7 +213,7 @@ def render_platelet_protocol():
     st.warning("## 🩸 Truyền Tiểu Cầu (Platelets)")
     
     st.markdown("""
-    **Chỉ định:**
+    **Chỉ Định:**
     
     **1. Prophylactic (Dự phòng):**
     - Plt <10,000/μL (không chảy máu)
@@ -232,7 +232,7 @@ def render_platelet_protocol():
     - **1 đơn vị apheresis:** Tăng Plt ~30,000-50,000/μL
     - **1 pool (6 đơn vị):** Tương đương 1 đơn vị apheresis
     
-    **Tốc độ:**
+    **Tốc Độ:**
     - Truyền nhanh (15-30 phút)
     - Hoàn thành trong 4 giờ
     """)
@@ -243,7 +243,7 @@ def render_ffp_protocol():
     st.info("## 🩸 Truyền Huyết Tương Tươi Đông Lạnh (FFP)")
     
     st.markdown("""
-    **Chỉ định:**
+    **Chỉ Định:**
     
     **1. Chảy máu:**
     - Chảy máu + PT/PTT kéo dài
@@ -266,7 +266,7 @@ def render_ffp_protocol():
     - **10-15 mL/kg:** Điều chỉnh PT/PTT
     - **1 đơn vị:** ~200-250 mL
     
-    **Tốc độ:**
+    **Tốc Độ:**
     - Truyền nhanh nếu chảy máu
     - Hoàn thành trong 4 giờ
     """)
@@ -277,7 +277,7 @@ def render_cryoprecipitate_protocol():
     st.info("## 🩸 Truyền Cryoprecipitate")
     
     st.markdown("""
-    **Chỉ định:**
+    **Chỉ Định:**
     
     **1. Fibrinogen thấp:**
     - Fibrinogen <100 mg/dL + chảy máu
@@ -296,7 +296,7 @@ def render_cryoprecipitate_protocol():
     - **1 pool (10 đơn vị):** Tăng fibrinogen ~50-100 mg/dL
     - **Liều thông thường:** 1-2 pools
     
-    **Tốc độ:**
+    **Tốc Độ:**
     - Truyền nhanh
     - Hoàn thành trong 4 giờ
     """)
@@ -317,19 +317,19 @@ def render_massive_transfusion():
     - **1 đơn vị FFP**
     - **1 đơn vị Platelets**
     
-    **Mục tiêu:**
+    **Mục Tiêu:**
     - Duy trì Hb >7-8 g/dL
     - Duy trì Plt >50,000/μL
     - Duy trì PT/PTT gần bình thường
     - Duy trì fibrinogen >150 mg/dL
     
-    **Theo dõi:**
+    **Theo Dõi:**
     - CBC, PT/PTT, fibrinogen mỗi 1-2 giờ
     - Ionized calcium (nguy cơ hạ canxi)
     - pH, lactate (nguy cơ toan chuyển hóa)
     - Nhiệt độ (nguy cơ hạ thân nhiệt)
     
-    **Biến chứng:**
+    **Biến Chứng:**
     - Hạ canxi (citrate toxicity)
     - Toan chuyển hóa
     - Hạ thân nhiệt

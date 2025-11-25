@@ -350,7 +350,7 @@ def render():
                 - IV rt-PA: Trong 4.5 giờ từ khởi phát
                 - Càng sớm càng tốt!
                 
-                **Điều trị:**
+                **Điều Trị:**
                 - Aspirin 300mg sau 24h (nếu có thrombolysis)
                 - Hoặc ngay nếu không thrombolysis
                 - Kiểm soát huyết áp

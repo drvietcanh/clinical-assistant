@@ -138,14 +138,14 @@ def render():
     st.info("""
     **Bù dịch là nền tảng của phòng ngừa TLS:**
     
-    **Mục tiêu:**
-    - Duy trì lượng nước tiểu >100 ml/h (người lớn)
-    - Hoặc >2 ml/kg/h (trẻ em)
+    **Mục Tiêu:**
+    - Duy trì lượng nước tiểu >100 ml/h (Người Lớn)
+    - Hoặc >2 ml/kg/h (Trẻ Em)
     - Giảm nguy cơ kết tinh uric acid trong thận
     
     **Phác đồ:**
     - **Natri clorid 0.9% hoặc Dextrose 5%:** 2-3 L/m²/ngày
-    - Hoặc 200-300 ml/h (người lớn)
+    - Hoặc 200-300 ml/h (Người Lớn)
     - Bắt đầu 24-48h trước hóa trị
     - Tiếp tục trong và sau hóa trị
     
@@ -166,7 +166,7 @@ def render():
         st.markdown("#### Allopurinol")
         
         st.success("""
-        **Chỉ định:**
+        **Chỉ Định:**
         - Nguy cơ thấp đến trung bình
         - Không có thiếu hụt G6PD
         - Không có tăng uric acid máu nặng (>10 mg/dL)
@@ -195,7 +195,7 @@ def render():
         st.markdown("#### Rasburicase")
         
         st.error("""
-        **Chỉ định:**
+        **Chỉ Định:**
         - **TLS nguy cơ cao**
         - Tăng uric acid máu nặng (>10 mg/dL)
         - Laboratory TLS đã xảy ra
@@ -219,7 +219,7 @@ def render():
         - Phá hủy uric acid đã có
         - Tác dụng nhanh (vài giờ)
         
-        **Theo dõi:**
+        **Theo Dõi:**
         - Uric acid mỗi 4-6h
         - Hemoglobin, methemoglobin (nếu có triệu chứng)
         - Ngừng nếu tan máu hoặc methemoglobinemia

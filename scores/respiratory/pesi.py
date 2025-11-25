@@ -17,7 +17,7 @@ def render():
         st.markdown("""
         **PESI (Pulmonary Embolism Severity Index)** đánh giá mức độ nặng và tiên lượng 30 ngày của bệnh nhân thuyên tắc phổi.
         
-        **Chỉ định:**
+        **Chỉ Định:**
         - Bệnh nhân đã được chẩn đoán thuyên tắc phổi (PE)
         - Quyết định điều trị ngoại trú hay nội trú
         - Đánh giá tiên lượng
@@ -279,7 +279,7 @@ def render():
             st.info(f"""
             **✅ PESI Class {risk_class} - Nguy cơ thấp (≤ 85 điểm)**
             
-            **Điều trị:**
+            **Điều Trị:**
             - **Có thể điều trị ngoại trú** (Class I-II)
             - Kháng đông: DOAC (rivaroxaban, apixaban, edoxaban) hoặc warfarin
             - Theo dõi sát tại nhà
@@ -296,7 +296,7 @@ def render():
             st.warning(f"""
             **⚠️ PESI Class {risk_class} - Nguy cơ trung bình (86-105 điểm)**
             
-            **Điều trị:**
+            **Điều Trị:**
             - **Nên điều trị nội trú**
             - Kháng đông: DOAC hoặc warfarin
             - Theo dõi sát dấu hiệu sinh tồn
@@ -311,7 +311,7 @@ def render():
             st.error(f"""
             **🚨 PESI Class {risk_class} - Nguy cơ cao (≥ 106 điểm)**
             
-            **Điều trị:**
+            **Điều Trị:**
             - **Cần điều trị nội trú, theo dõi sát**
             - Kháng đông: DOAC hoặc warfarin
             - Cân nhắc điều trị tan huyết khối nếu:
@@ -319,7 +319,7 @@ def render():
               - Suy hô hấp nặng
               - Không có chống chỉ định
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Dấu hiệu sinh tồn mỗi 4-6 giờ
             - SpO₂ liên tục
             - Đánh giá lại sau 24 giờ
@@ -338,7 +338,7 @@ def render():
                - Tính điểm PESI ngay khi chẩn đoán
                - Quyết định điều trị ngoại trú hay nội trú
             
-            2. **Theo dõi:**
+            2. **Theo Dõi:**
                - Đánh giá lại PESI khi có thay đổi tình trạng
                - Đánh giá lại sau 24-48 giờ điều trị
             
@@ -371,7 +371,7 @@ def render():
     1. **PESI Class I-II (≤ 85):** Nguy cơ thấp → Có thể điều trị ngoại trú
     2. **PESI Class III (86-105):** Nguy cơ trung bình → Nên điều trị nội trú
     3. **PESI Class IV-V (≥ 106):** Nguy cơ cao → Cần điều trị nội trú, theo dõi sát
-    4. **Mục tiêu:** Quyết định điều trị ngoại trú hay nội trú, đánh giá tiên lượng
+    4. **Mục Tiêu:** Quyết định điều trị ngoại trú hay nội trú, đánh giá tiên lượng
     5. **Lưu ý:** PESI dùng sau khi đã chẩn đoán PE, không dùng để chẩn đoán
     """)
 

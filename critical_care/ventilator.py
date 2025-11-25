@@ -323,7 +323,7 @@ def render_tidal_volume_calculator():
         st.info(f"""
         **💡 Khuyến nghị:**
         - **ARDSNet protocol:** 6 ml/kg IBW = **{ibw_kg * 6:.0f} ml**
-        - **Mục tiêu:** Plateau pressure < 30 cmH2O
+        - **Mục Tiêu:** Plateau pressure < 30 cmH2O
         - **Driving pressure:** < 15 cmH2O
         - **Lưu ý:** Sử dụng IBW, không dùng cân nặng thực tế
         """)
@@ -398,7 +398,7 @@ def render_plateau_pressure_calculator():
     
     st.markdown("""
     **Áp lực cao nguyên:** Áp lực trong phổi khi giữ hơi thở cuối thì hít vào (tạm dừng cuối thì hít vào).
-    **Mục tiêu:** < 30 cmH2O (lung-protective ventilation)
+    **Mục Tiêu:** < 30 cmH2O (lung-protective ventilation)
     """)
     
     st.markdown("---")

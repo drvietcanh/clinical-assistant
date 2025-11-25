@@ -165,7 +165,7 @@ def render_visual_comparison():
                     st.caption(f"**Tên biệt dược:** {drug_data['vietnamese_name']}")
                 
                 if 'administration' in drug_data:
-                    st.caption(f"**Đường dùng:** {', '.join(drug_data['administration'])}")
+                    st.caption(f"**Đường Dùng:** {', '.join(drug_data['administration'])}")
                 
                 # Dosage
                 if 'dosage' in drug_data:
@@ -178,7 +178,7 @@ def render_visual_comparison():
                 # Indications (first 2)
                 if 'indications' in drug_data:
                     inds = drug_data['indications'][:2]
-                    st.write("**Chỉ định:**")
+                    st.write("**Chỉ Định:**")
                     for ind in inds:
                         st.write(f"- {ind}")
                 

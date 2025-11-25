@@ -191,7 +191,7 @@ def render():
         - 60-80mg PO q4-6h
         - Hoặc 1-2mg IV chậm, lặp lại q15-30 phút đến khi đạt nhịp tim mục tiêu
         
-        **Mục tiêu:**
+        **Mục Tiêu:**
         - Nhịp tim <100 bpm
         - Giảm triệu chứng tim mạch
         
@@ -238,7 +238,7 @@ def render():
         - Nếu không uống được: Nghiền, trộn với nước, bơm qua ống thông dạ dày
         - Hoặc dùng dạng viên nhỏ (nếu có)
         
-        **Theo dõi:**
+        **Theo Dõi:**
         - Công thức máu (giảm bạch cầu)
         - Chức năng gan (độc gan)
         """)
@@ -322,7 +322,7 @@ def render():
         - 100mg IV q8h
         - Hoặc 50mg IV q6h
         
-        **Chỉ định:**
+        **Chỉ Định:**
         - Nghi ngờ suy thượng thận kèm theo
         - Bệnh Graves có thể kèm suy thượng thận
         """)

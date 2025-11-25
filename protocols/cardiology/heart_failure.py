@@ -107,7 +107,7 @@ def render():
             - **Bolus liên tục** (mỗi 6-12h)
             - Hoặc **Truyền liên tục:** 5-10mg/h (nếu đáp ứng kém)
             
-            **Mục tiêu:**
+            **Mục Tiêu:**
             - Cân nặng giảm 0.5-1 kg/ngày
             - Tiểu ≥100-150 mL/h trong 6h đầu
             - Giảm triệu chứng tắc nghẽn
@@ -125,7 +125,7 @@ def render():
                 """)
             
             st.info("""
-            **Theo dõi:**
+            **Theo Dõi:**
             - Điện giải (K, Mg, Na) hàng ngày
             - Creatinine hàng ngày
             - Cân nặng hàng ngày (cùng giờ)
@@ -154,7 +154,7 @@ def render():
             - Bắt đầu: 10-20 mcg/min
             - Tăng 5-10 mcg/min mỗi 5-10 phút
             - Tối đa: 200 mcg/min
-            - **Mục tiêu:** Giảm SBP 10-15% (không <90 mmHg)
+            - **Mục Tiêu:** Giảm SBP 10-15% (không <90 mmHg)
             
             **Lợi ích:**
             - Giảm preload (giãn tĩnh mạch)
@@ -208,7 +208,7 @@ def render():
             - Infusion: 0.05-0.2 mcg/kg/min
             - Hiệu quả kéo dài 7-10 ngày
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Arterial line monitoring
             - Cardiac output monitoring
             - ECG liên tục (loạn nhịp tim)
@@ -236,12 +236,12 @@ def render():
         
         st.success("""
         **Oxygen Therapy:**
-        - **Mục tiêu:** SpO₂ >90% (>94% nếu có thể)
+        - **Mục Tiêu:** SpO₂ >90% (>94% nếu có thể)
         - Nasal cannula: 2-6 L/min
         - Face mask: 6-10 L/min nếu cần
         - High-flow oxygen nếu suy hô hấp
         
-        **Chỉ định:**
+        **Chỉ Định:**
         - SpO₂ <90%
         - Khó thở nặng
         - Phù phổi cấp
@@ -250,7 +250,7 @@ def render():
         st.warning("""
         **NIV (Non-Invasive Ventilation):**
         
-        **Chỉ định:**
+        **Chỉ Định:**
         - Phù phổi cấp
         - Suy hô hấp (RR >25, SpO₂ <90%)
         - Không đáp ứng với oxygen thường
@@ -266,7 +266,7 @@ def render():
         - Giảm tỷ lệ đặt nội khí quản
         - Giảm tử vong (trong phù phổi cấp)
         
-        **Chống chỉ định:**
+        **Chống Chỉ Định:**
         - Ngừng thở/ngừng tim
         - Không hợp tác
         - Chảy máu đường tiêu hóa trên nặng

@@ -23,7 +23,7 @@ def render():
         - Phù hợp cho người lớn không biết chữ, rối loạn ngôn ngữ
         - Phù hợp cho bệnh nhân già, sa sút trí tuệ
         
-        **Chỉ định:**
+        **Chỉ Định:**
         - Trẻ em 3-7 tuổi
         - Người lớn không biết chữ
         - Bệnh nhân rối loạn ngôn ngữ

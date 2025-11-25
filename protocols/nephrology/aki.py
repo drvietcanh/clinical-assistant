@@ -70,7 +70,7 @@ def render_aki_stage1():
     
     with col2:
         st.warning("""
-        **Đánh giá:**
+        **Đánh Giá:**
         
         **Labs:**
         - FENa, FEUrea

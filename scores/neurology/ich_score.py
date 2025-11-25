@@ -170,7 +170,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 0%
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             - Theo dõi sát tại khoa Thần kinh hoặc ICU
             - Kiểm soát huyết áp mục tiêu: SBP 140-160 mmHg
             - Tránh thuốc chống đông, kháng tiểu cầu trong giai đoạn cấp
@@ -185,7 +185,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 13%
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             - Nhập viện ICU hoặc Stroke Unit
             - Kiểm soát huyết áp chặt chẽ: SBP 140-160 mmHg
             - Đảo ngược tác dụng kháng đông nếu bệnh nhân đang dùng
@@ -201,7 +201,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 26%
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             - **BẮT BUỘC nhập ICU/Stroke Unit**
             - Theo dõi sát: GCS, pupils, huyết động mỗi 1 giờ
             - Kiểm soát huyết áp tích cực: SBP 140-160 mmHg (nicardipine, labetalol)
@@ -219,7 +219,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 72%
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             - **KHẨN CẤP - ICU chuyên sâu**
             - Hội chẩn đa chuyên khoa: thần kinh, hồi sức, phẫu thuật thần kinh
             - Kiểm soát huyết áp: SBP 140-160 mmHg
@@ -240,7 +240,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 97%
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             - **TIÊN LƯỢNG RẤT XẤU - Tử vong gần như chắc chắn**
             - Hội chẩn khẩn cấp đa chuyên khoa
             - **Thảo luận nghiêm túc với gia đình về:**
@@ -261,7 +261,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 100%
             
-            **Khuyến nghị:**
+            **Khuyến Nghị:**
             - **TIÊN LƯỢNG CỰC KỲ XẤU - Tử vong gần như chắc chắn**
             - **Thảo luận thẳng thắn với gia đình:**
               * Không có khả năng sống sót
@@ -379,7 +379,7 @@ def render():
         - Hai đường truyền tĩnh mạch cỡ lớn
         
         **2. Kiểm soát huyết áp:**
-        - **Mục tiêu:** SBP 140-160 mmHg (giảm trong 1h đầu)
+        - **Mục Tiêu:** SBP 140-160 mmHg (giảm trong 1h đầu)
         - **Thuốc:** Nicardipine IV, Labetalol IV
         - **Tránh:** Giảm huyết áp quá mạnh (có thể gây thiếu máu não)
         
@@ -397,11 +397,11 @@ def render():
         - Cân nhắc ICP monitor nếu GCS ≤8
         
         **5. Phẫu thuật:**
-        - **Chỉ định:**
+        - **Chỉ Định:**
           * Máu tụ tiểu não >3cm với xấu đi về thần kinh
           * Hydrocephalus do IVH (dẫn lưu não thất)
           * Máu tụ thùy >30ml, nông (<1cm từ bề mặt), xấu đi
-        - **Chống chỉ định:**
+        - **Chống Chỉ Định:**
           * ICH Score ≥4 (tiên lượng rất xấu)
           * GCS 3-4 với pupils giãn cố định
           * Bệnh lý nền nặng, tuổi quá cao

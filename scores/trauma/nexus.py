@@ -219,7 +219,7 @@ def render():
             
             **Lý do:** {result['reason']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             
             **Độ tin cậy:** {result['sensitivity']}
             
@@ -258,7 +258,7 @@ def render():
             
             **Lý do:** {result['reason']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             
             **Tiêu chí dương tính:** {positive_count}/5
             """)
@@ -309,7 +309,7 @@ def render():
         
         **Quy mô:** 34,069 bệnh nhân chấn thương cùn
         
-        **Kết quả:**
+        **Kết Quả:**
         - **Độ nhạy (Sensitivity):** 99.6% (99.0-100%)
         - **Độ đặc hiệu (Specificity):** 12.9%
         - **NPV (Negative Predictive Value):** 99.8%
@@ -380,7 +380,7 @@ def render():
         
         ### 2. Altered Mental Status:
         
-        **Đánh giá:**
+        **Đánh Giá:**
         - GCS: Phải = 15
         - Orientation: Person, Place, Time, Event
         - Memory: Nhớ được sự kiện trước/sau chấn thương
@@ -412,7 +412,7 @@ def render():
         
         ### 4. Neurological Deficit:
         
-        **Đánh giá:**
+        **Đánh Giá:**
         - Motor: Sức cơ 4 chi
         - Sensory: Đối xứng 2 bên?
         - Reflexes: Tăng? Giảm? Babinski?

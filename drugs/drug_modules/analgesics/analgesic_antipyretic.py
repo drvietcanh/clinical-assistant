@@ -26,7 +26,7 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
             'pediatric_po': '10-15mg/kg x 3-4 lần/ngày (tối đa 60mg/kg/ngày)',
             'pediatric_iv': '15mg/kg IV mỗi 6 giờ (tối đa 60mg/kg/ngày)',
             'pediatric_pr': '15-20mg/kg PR mỗi 6 giờ (khi không uống được)',
-            'notes': 'Liều tối đa: Người lớn 4g/ngày, Trẻ em 60mg/kg/ngày. Quá liều gây độc gan nghiêm trọng'
+            'notes': 'Liều tối đa: Người Lớn 4g/ngày, Trẻ em 60mg/kg/ngày. Quá liều gây độc gan nghiêm trọng'
         },
         'renal_adjustment': {
             'normal': 'Không đổi',
@@ -134,7 +134,7 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
                 ],
                 'antidote': 'N-acetylcysteine (NAC) - hiệu quả nếu dùng trong vòng 8-10 giờ sau quá liều, tốt nhất trong 4-6 giờ',
                 'treatment': [
-                    'Đánh giá nguy cơ: Liều >150mg/kg (trẻ em) hoặc >10g (người lớn) hoặc >200mg/kg (người lớn có nguy cơ) = nguy cơ cao',
+                    'Đánh giá nguy cơ: Liều >150mg/kg (Trẻ Em) hoặc >10g (Người Lớn) hoặc >200mg/kg (người lớn có nguy cơ) = nguy cơ cao',
                     'Đo nồng độ paracetamol trong máu 4 giờ sau khi uống (hoặc ngay khi đến viện nếu >4 giờ)',
                     "Sử dụng đồ thị Rumack-Matthew để quyết định điều trị: Nếu nồng độ trên đường 'điều trị' → dùng NAC",
                     'NAC protocol: IV hoặc PO. IV: 150mg/kg trong 15 phút, sau đó 50mg/kg trong 4 giờ, sau đó 100mg/kg trong 16 giờ. PO: 140mg/kg, sau đó 70mg/kg mỗi 4 giờ x 17 liều',
@@ -158,7 +158,7 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
             'administration_instructions': {
                 'oral': {
                     'with_food': 'Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ',
-                    'timing': 'Mỗi 4-6 giờ khi cần. Không quá 4g/ngày (người lớn) hoặc 60mg/kg/ngày (trẻ em). Có thể dùng trước khi đi ngủ nếu cần giảm đau/giảm sốt ban đêm.'
+                    'timing': 'Mỗi 4-6 giờ khi cần. Không quá 4g/ngày (Người Lớn) hoặc 60mg/kg/ngày (Trẻ Em). Có thể dùng trước khi đi ngủ nếu cần giảm đau/giảm sốt ban đêm.'
                 },
                 'iv': {
                     'reconstitution': 'Pha trong D5W hoặc NS. Nồng độ cuối: 1mg/ml (tối đa 10mg/ml). Dùng ngay sau khi pha.',

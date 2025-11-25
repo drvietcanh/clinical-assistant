@@ -111,7 +111,7 @@ def render_batch_calculator(
             
             # Show result if available
             if 'result' in patient:
-                st.markdown("**Kết quả:**")
+                st.markdown("**Kết Quả:**")
                 if isinstance(patient['result'], dict):
                     st.json(patient['result'])
                 else:

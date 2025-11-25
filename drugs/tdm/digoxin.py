@@ -438,7 +438,7 @@ def render_digoxin_tdm():
                    - Liều: Tính theo nồng độ digoxin
                    - Chỉ dùng khi thật sự cần thiết
                 
-                5. **Theo dõi:**
+                5. **Theo Dõi:**
                    - ECG liên tục
                    - Nồng độ digoxin (có thể tăng sau Digibind do giải phóng từ mô)
                 """)

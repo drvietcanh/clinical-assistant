@@ -222,7 +222,7 @@ def calculate_kdigo(
            - **Điều chỉnh liều:** Vancomycin, metformin, digoxin, LMWH
            - Xem lại TẤT CẢ thuốc - adjust theo GFR
         
-        4. **THEO DÕI:**
+        4. **Theo Dõi:**
            - SCr, BUN: Hàng ngày hoặc 2 lần/ngày
            - Điện giải (K, Na, Mg, PO4): Hàng ngày
            - Nước tiểu: Mỗi 4-6 giờ
@@ -333,7 +333,7 @@ def calculate_kdigo(
            - Protein: 1.2-1.5 g/kg/day (nếu trên RRT)
            - Hạn chế K, PO4
         
-        7. **THEO DÕI:**
+        7. **Theo Dõi:**
            - SCr, BUN: 2-3 lần/ngày
            - Điện giải: 3-4 lần/ngày
            - ABG: Khi cần (nếu acidosis)
@@ -631,7 +631,7 @@ def render():
         - Shock: Septic, cardiogenic, hypovolemic
         - Hẹp động mạch thận
         
-        **Chẩn đoán:** FENa <1%, BUN/Cr >20, đáp ứng với truyền dịch
+        **Chẩn Đoán:** FENa <1%, BUN/Cr >20, đáp ứng với truyền dịch
         
         #### 2. 🔴 Thận (Intrinsic/Renal) - 25-40%
         
@@ -654,7 +654,7 @@ def render():
         - Atheroembolic disease (sau thủ thuật mạch máu)
         - TTP/HUS, DIC
         
-        **Chẩn đoán:** FENa >2%, BUN/Cr <20, urine casts (muddy brown, RBC, WBC)
+        **Chẩn Đoán:** FENa >2%, BUN/Cr <20, urine casts (muddy brown, RBC, WBC)
         
         #### 3. 🔼 Sau Thận (Post-Renal) - 5-10%
         
@@ -666,7 +666,7 @@ def render():
         - Nấm cầu (fungal ball), cục máu đông
         - Catheter bị tắc
         
-        **Chẩn đoán:** Siêu âm thận (hydronephrosis), FENa có thể >1%
+        **Chẩn Đoán:** Siêu âm thận (hydronephrosis), FENa có thể >1%
         
         ### 🔍 Các xét nghiệm giúp phân biệt
         

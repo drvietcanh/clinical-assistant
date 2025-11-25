@@ -388,7 +388,7 @@ def render_comprehensive_calculator():
             - **Compliance:** Vt / (Plateau - PEEP)
             - **Vt/kg:** Vt / PBW
             
-            **Mục tiêu:**
+            **Mục Tiêu:**
             - Vt/kg: ≤6-8 mL/kg PBW (lung-protective)
             - Plateau: ≤30 cmH2O
             - Driving P: ≤15 cmH2O

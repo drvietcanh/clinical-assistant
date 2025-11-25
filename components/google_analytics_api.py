@@ -200,7 +200,13 @@ def get_analytics_data(
         }
         
     except Exception as e:
-        st.error(f"Lỗi khi lấy dữ liệu từ Google Analytics: {str(e)}")
+        error_msg = str(e)
+        # Hiển thị lỗi chi tiết hơn
+        if hasattr(st, 'error'):
+            st.error(f"Lỗi khi lấy dữ liệu từ Google Analytics: {error_msg}")
+        else:
+            # Nếu không có streamlit context, print ra console
+            print(f"❌ Lỗi: {error_msg}")
         return None
 
 

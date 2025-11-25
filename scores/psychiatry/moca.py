@@ -281,7 +281,7 @@ def render():
     - **MoCA ≥ 26:** Bình thường
     - **MoCA 18-25:** Suy giảm nhận thức nhẹ (MCI)
     - **MoCA < 18:** Suy giảm nhận thức nặng (Dementia)
-    - **Điều chỉnh:** +1 điểm nếu học ≤ 12 năm
+    - **Điều Chỉnh:** +1 điểm nếu học ≤ 12 năm
     - **Thời gian:** 10-15 phút
     - **Nhạy hơn MMSE** với suy giảm nhận thức nhẹ
     """)

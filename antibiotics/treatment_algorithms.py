@@ -305,7 +305,7 @@ ALGORITHMS = {
             "Bắt đầu kháng sinh NGAY LẬP TỨC (trong vòng 30 phút)",
             "Lấy CSF TRƯỚC khi dùng kháng sinh",
             "Liều cao để đảm bảo thấm vào dịch não tủy",
-            "Ceftriaxone: 2g mỗi 12 giờ (người lớn)",
+            "Ceftriaxone: 2g mỗi 12 giờ (Người Lớn)",
             "Vancomycin: Trough target 15-20 mg/L",
             "Thời gian điều trị: 7-21 ngày tùy tác nhân"
         ]

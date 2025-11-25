@@ -29,12 +29,13 @@ from .endocrinology import (
     render_hhs
 )
 from .gastroenterology import render_acute_pancreatitis
-from .hematology import render_transfusion
+from .hematology import render_transfusion, render_anticoagulation_reversal
 from .oncology import (
     render_tls,
     render_febrile_neutropenia,
     render_hypercalcemia
 )
+from .critical_care import render_delirium, render_sedation
 
 __all__ = [
     'render_sepsis',
@@ -66,8 +67,11 @@ __all__ = [
     'render_hhs',
     'render_acute_pancreatitis',
     'render_transfusion',
+    'render_anticoagulation_reversal',
     'render_tls',
     'render_febrile_neutropenia',
     'render_hypercalcemia',
+    'render_delirium',
+    'render_sedation',
 ]
 

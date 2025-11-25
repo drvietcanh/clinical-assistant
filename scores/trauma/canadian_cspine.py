@@ -263,7 +263,7 @@ def render():
         3. "Từ từ xoay cổ sang bên phải"
         4. Quan sát: Xoay được 45° không?
         
-        **Đánh giá:**
+        **Đánh Giá:**
         - **PASS:** Xoay được 45° cả 2 bên, không đau
         - **FAIL:** Xoay < 45° hoặc đau khi xoay
         
@@ -310,7 +310,7 @@ def render():
             
             **Lý do:** {result['reason']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             
             **Độ tin cậy:** Độ nhạy 99.4%, NPV 100%
             
@@ -347,7 +347,7 @@ def render():
             
             **Lý do:** {result['reason']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             """)
             
             st.warning("""
@@ -374,7 +374,7 @@ def render():
         
         **Quy mô:** 8,924 bệnh nhân
         
-        **Kết quả:**
+        **Kết Quả:**
         - **Độ nhạy:** 99.4% (96.0-100%)
         - **Độ đặc hiệu:** 45.1%
         - **NPV:** 100%

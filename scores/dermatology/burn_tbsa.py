@@ -144,7 +144,7 @@ def render():
         st.warning("""
         ⚠️ **Lưu ý quan trọng:**
         - Parkland chỉ là công thức khởi đầu
-        - Điều chỉnh theo nước tiểu: Mục tiêu 0.5-1 ml/kg/h (người lớn)
+        - Điều chỉnh theo nước tiểu: Mục tiêu 0.5-1 ml/kg/h (Người Lớn)
         - Theo dõi sát: BP, HR, nước tiểu, lactate
         """)
 

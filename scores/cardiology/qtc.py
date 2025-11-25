@@ -319,9 +319,9 @@ def render():
             
             **QTc = {qtc:.0f} ms** (Bình thường < {460 if gender == "Nữ" else 450} ms cho {gender})
             
-            **Đánh giá:** {result['risk']}
+            **Đánh Giá:** {result['risk']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             """)
         elif result['severity'] == "borderline":
             st.warning(f"""
@@ -329,9 +329,9 @@ def render():
             
             **QTc = {qtc:.0f} ms**
             
-            **Đánh giá:** {result['risk']}
+            **Đánh Giá:** {result['risk']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             """)
         else:
             st.error(f"""
@@ -339,9 +339,9 @@ def render():
             
             **QTc = {qtc:.0f} ms** - CẢNH BÁO!
             
-            **Đánh giá:** {result['risk']}
+            **Đánh Giá:** {result['risk']}
             
-            **Khuyến nghị:** {result['recommendation']}
+            **Khuyến Nghị:** {result['recommendation']}
             """)
         
         # Reference values
@@ -538,7 +538,7 @@ def render():
         - Kéo dài QT bẩm sinh
         - Chuyển đổi gần đây từ AF về nhịp xoang
         
-        **Triệu chứng:**
+        **Triệu Chứng:**
         - Hồi hộp, choáng váng
         - Ngất (syncope)
         - Đột tử (nếu tiến triển → VF)
@@ -564,7 +564,7 @@ def render():
              + Pacing tạm thời (90-110 bpm)
            - Lidocaine (ức chế depolarization sớm)
         
-        **Phòng ngừa:**
+        **Phòng Ngừa:**
         - Screening QTc trước khi dùng thuốc nguy cơ cao
         - Theo dõi điện giải đồ thường xuyên
         - Tránh kết hợp nhiều thuốc kéo dài QT

@@ -217,7 +217,7 @@ def render():
             st.success("""
             **NYHA Class I - Điều trị dự phòng**
             
-            **Mục tiêu:** Ngăn tiến triển, kiểm soát yếu tố nguy cơ
+            **Mục Tiêu:** Ngăn tiến triển, kiểm soát yếu tố nguy cơ
             
             **Thuốc nền:**
             - **ACEi/ARB hoặc ARNI** (nếu EF giảm)
@@ -231,7 +231,7 @@ def render():
             - ✅ Kiểm soát ĐTĐ, THA, lipid
             - ❌ Ngừng hút thuốc, hạn chế rượu
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Khám lại 3-6 tháng
             - Siêu âm tim hàng năm
             - Monitor EF, BNP
@@ -241,7 +241,7 @@ def render():
             st.warning("""
             **NYHA Class II - Điều trị tối ưu**
             
-            **Mục tiêu:** Giảm triệu chứng, ngăn tiến triển
+            **Mục Tiêu:** Giảm triệu chứng, ngăn tiến triển
             
             **Thuốc nền (GDMT):**
             - **ACEi/ARB hoặc ARNI** 
@@ -260,7 +260,7 @@ def render():
             - ✅ Hạn chế dịch < 1.5-2L/ngày
             - ✅ Cân nặng hàng ngày
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Khám lại 2-3 tháng
             - Siêu âm tim 6-12 tháng
             - Đánh giá ICD nếu EF < 35%
@@ -270,7 +270,7 @@ def render():
             st.error("""
             **NYHA Class III - Điều trị tích cực**
             
-            **Mục tiêu:** Giảm triệu chứng, cải thiện chất lượng sống, giảm nhập viện
+            **Mục Tiêu:** Giảm triệu chứng, cải thiện chất lượng sống, giảm nhập viện
             
             **Thuốc nền (GDMT) - LIỀU TỐI ĐA:**
             - **ARNI** (Sacubitril/Valsartan) thay ACEi
@@ -295,7 +295,7 @@ def render():
             - ✅ Muối < 2g/ngày, dịch < 1.5L/ngày
             - ✅ Cân nặng HÀNG NGÀY
             
-            **Theo dõi:**
+            **Theo Dõi:**
             - Khám 1-2 tháng
             - Siêu âm tim 3-6 tháng
             - ⚠️ Hội chẩn chuyên khoa tim

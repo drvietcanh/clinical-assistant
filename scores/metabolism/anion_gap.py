@@ -152,7 +152,7 @@ def render():
                 
                 **AG = {ag_display:.1f} mEq/L**
                 
-                **Nguyên nhân:**
+                **Nguyên Nhân:**
                 
                 1. **Giảm albumin** (phổ biến nhất):
                    - Suy dinh dưỡng
@@ -184,7 +184,7 @@ def render():
                 
                 **AG = {ag_display:.1f} mEq/L**
                 
-                **Đánh giá:** Điện giải cân bằng, không có toan chuyển hóa AG tăng.
+                **Đánh Giá:** Điện giải cân bằng, không có toan chuyển hóa AG tăng.
                 
                 **Nếu có toan chuyển hóa (HCO₃ < 22):**
                 → **Non-Anion Gap Metabolic Acidosis (NAGMA)**
@@ -217,7 +217,7 @@ def render():
                 
                 **AG = {ag_display:.1f} mEq/L**
                 
-                **Đánh giá:** Có thể bắt đầu toan chuyển hóa AG tăng hoặc tình trạng kết hợp.
+                **Đánh Giá:** Có thể bắt đầu toan chuyển hóa AG tăng hoặc tình trạng kết hợp.
                 
                 **Cần kiểm tra thêm:**
                 1. **ABG (Arterial Blood Gas):**
@@ -259,7 +259,7 @@ def render():
                 
                 **AG = {ag_display:.1f} mEq/L**
                 
-                **Đánh giá:** Toan chuyển hóa AG tăng - CẦN TÌM NGUYÊN NHÂN KHẨN CẤP!
+                **Đánh Giá:** Toan chuyển hóa AG tăng - CẦN TÌM NGUYÊN NHÂN KHẨN CẤP!
                 
                 **Nguyên nhân - "MUDPILES":**
                 
