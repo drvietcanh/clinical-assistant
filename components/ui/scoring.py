@@ -112,6 +112,15 @@ def render_score_result(
     st.markdown(box_html, unsafe_allow_html=True)
 
 
+def _hex_to_rgba(hex_color: str, alpha: float = 0.15) -> str:
+    """Convert hex color to rgba format"""
+    hex_color = hex_color.lstrip('#')
+    r = int(hex_color[0:2], 16)
+    g = int(hex_color[2:4], 16)
+    b = int(hex_color[4:6], 16)
+    return f"rgba({r}, {g}, {b}, {alpha})"
+
+
 def render_score_breakdown(
     title: str,
     subscores: Dict[str, int],
@@ -141,6 +150,7 @@ def render_score_breakdown(
     subscores_html = ""
     for organ, score in subscores.items():
         organ_color = color_map.get(organ, COLORS["primary"])
+        organ_bg = _hex_to_rgba(organ_color, 0.15)
         subscores_html += f"""
         <div style="
             display: flex;
@@ -154,12 +164,16 @@ def render_score_breakdown(
                 font-size: 1.25rem;
                 font-weight: bold;
                 color: {organ_color};
-                background: {organ_color}26;
+                background: {organ_bg};
                 padding: 0.25rem 0.75rem;
                 border-radius: 8px;
             ">{score}</span>
         </div>
         """
+    
+    # Convert primary color to rgba for gradient
+    primary_rgba_start = _hex_to_rgba(COLORS['primary'], 0.1)
+    primary_rgba_end = _hex_to_rgba(COLORS['primary'], 0.05)
     
     breakdown_html = f"""
     <div style="
@@ -171,7 +185,7 @@ def render_score_breakdown(
         box-shadow: {THEME['shadows']['md']};
     ">
         <div style="
-            background: linear-gradient(135deg, {COLORS['primary']}1a 0%, {COLORS['primary']}0d 100%);
+            background: linear-gradient(135deg, {primary_rgba_start} 0%, {primary_rgba_end} 100%);
             padding: 1rem;
             border-bottom: 2px solid {COLORS['border']};
         ">

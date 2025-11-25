@@ -1,5 +1,5 @@
 """
-Phác Đồ Cơn Bão Giáp (Thyrotoxic Crisis)
+Phác đồ cơn bão giáp (Thyrotoxic Crisis)
 Hướng dẫn ATA 2016
 Cấp cứu đe dọa tính mạng cần điều trị ngay lập tức
 """
@@ -8,7 +8,7 @@ import streamlit as st
 
 
 def render():
-    """Phác Đồ Cơn Bão Giáp (Thyrotoxic Crisis)"""
+    """Phác đồ cơn bão giáp (Thyrotoxic Crisis)"""
     st.subheader("⚡ Cơn Bão Giáp (Thyrotoxic Crisis)")
     st.caption("Hướng dẫn ATA 2016 - Cấp cứu cường giáp đe dọa tính mạng")
     

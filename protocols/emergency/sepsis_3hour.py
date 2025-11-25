@@ -59,7 +59,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: 3-HOUR MANAGEMENT ==========
-    st.markdown("### ⏱️ Quản Lý Trong 3 Giờ Đầu")
+    st.markdown("### ⏱️ Quản lý trong 3 giờ đầu")
     
     st.markdown("**Các bước tiếp theo sau 1-hour bundle:**")
     
@@ -291,7 +291,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: VASOPRESSOR MANAGEMENT ==========
-    st.markdown("### ⚠️ Quản Lý Vasopressor")
+    st.markdown("### ⚠️ Quản lý vasopressor")
     
     st.markdown("**Chỉ định:** MAP <65 mmHg sau truyền dịch đầy đủ")
     

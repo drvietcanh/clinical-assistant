@@ -8,7 +8,7 @@ import streamlit as st
 
 def render():
     """Acute Coronary Syndrome Protocol"""
-    st.subheader("💔 ACS - Hội Chứng Vành Cấp")
+    st.subheader("💔 ACS - Hội chứng vành cấp")
     st.caption("STEMI & NSTEMI Management - ESC/AHA Guidelines")
     
     st.info("""

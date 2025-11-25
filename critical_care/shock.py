@@ -498,7 +498,7 @@ def render_vasopressor_selection():
 def render_shock_management():
     """Main function to render shock management tools"""
     
-    st.markdown("## 💉 Quản Lý Sốc")
+    st.markdown("## 💉 Quản lý sốc")
     st.markdown("""
     Hướng dẫn quản lý sốc:
     - Phân loại sốc

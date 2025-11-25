@@ -49,7 +49,7 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("📂 Chọn Công Cụ")
+    st.header("📂 Chọn công cụ")
     
     # Tool options with consistent naming
     tool_options = [

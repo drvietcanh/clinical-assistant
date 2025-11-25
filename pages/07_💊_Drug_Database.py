@@ -18,14 +18,14 @@ from antibiotics import render_dosing_calculator
 
 # Standard page setup
 setup_page(
-    page_title="Tra Cứu Thuốc",
+    page_title="Tra cứu thuốc",
     page_icon="💊",
     description="Cơ sở dữ liệu thuốc toàn diện, tính liều theo thận, kiểm tra tương tác, tương thích IV"
 )
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("⚙️ Chọn Công Cụ")
+    st.header("⚙️ Chọn công cụ")
     
     # Check if should switch to dosing calculator from drug detail view
     if st.session_state.get('switch_to_dosing_calculator', False):
@@ -33,18 +33,18 @@ with st.sidebar:
         st.session_state['switch_to_dosing_calculator'] = False
         # Set function_type directly via rerun (will be handled in routing)
         if 'drug_db_function_type' not in st.session_state:
-            st.session_state['drug_db_function_type'] = str("🧮 Tính Liều Theo eGFR/CrCl (Kháng Sinh)")
+            st.session_state['drug_db_function_type'] = str("🧮 Tính liều theo eGFR/CrCl (Kháng sinh)")
     
     # Use saved function_type or default
     saved_function_type = st.session_state.get('drug_db_function_type', None)
     default_index = 0
     menu_options = [
         "💊 Tra cứu thuốc (Tất cả)",
-        "🧮 Tính Liều Theo eGFR/CrCl (Kháng Sinh)",
-        "📊 So Sánh Thuốc Trực Quan",
-        "📅 Tạo Lịch Trình Liều Dùng",
-        "💉 Kiểm Tra Tương Thích IV",
-        "🔍 Kiểm Tra Tương Tác Thuốc"
+        "🧮 Tính liều theo eGFR/CrCl (Kháng sinh)",
+        "📊 So sánh thuốc trực quan",
+        "📅 Tạo lịch trình liều dùng",
+        "💉 Kiểm tra tương thích IV",
+        "🔍 Kiểm tra tương tác thuốc"
     ]
     
     if saved_function_type and saved_function_type in menu_options:
@@ -86,29 +86,29 @@ with st.sidebar:
 if st.session_state.get('switch_to_comparison', False):
     st.session_state['switch_to_comparison'] = False
     if 'drug_db_function_type' not in st.session_state:
-        st.session_state['drug_db_function_type'] = str("📊 So Sánh Thuốc Trực Quan")
+        st.session_state['drug_db_function_type'] = str("📊 So sánh thuốc trực quan")
     # Preset drugs if available
     if 'preset_comparison_drugs' in st.session_state:
         st.session_state['visual_selected_drugs'] = st.session_state['preset_comparison_drugs']
         del st.session_state['preset_comparison_drugs']
 
 # Route to appropriate function
-if "Tra cứu thuốc" in function_type or "Tra Cứu Thuốc" in function_type:
+if "Tra cứu thuốc" in function_type:
     render_drug_database()
 
-elif "Tính Liều Theo eGFR" in function_type or "CrCl" in function_type:
+elif "Tính liều theo eGFR" in function_type or "CrCl" in function_type:
     render_dosing_calculator()
 
-elif "So Sánh Thuốc Trực Quan" in function_type:
+elif "So sánh thuốc trực quan" in function_type:
     render_visual_comparison()
 
-elif "Lịch Trình Liều Dùng" in function_type:
+elif "Lịch trình liều dùng" in function_type:
     render_dosing_schedule_generator()
 
-elif "Tương Thích IV" in function_type:
+elif "Tương thích IV" in function_type:
     render_iv_compatibility_checker()
 
-elif "Tương Tác" in function_type:
+elif "Tương tác" in function_type:
     render_interaction_checker()
 
 # ========== FOOTER ==========

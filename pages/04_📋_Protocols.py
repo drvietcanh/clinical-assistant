@@ -63,7 +63,7 @@ with st.sidebar:
             [
                 "🦠 Sepsis 1-Hour Bundle",
                 "🦠 Sepsis 3-Hour Bundle",
-                "💔 Quản Lý Sốc",
+                "💔 Quản lý sốc",
                 "🧠 Stroke Management",
                 "🩸 GI Bleeding",
                 "🍭 DKA Protocol",
@@ -84,7 +84,7 @@ with st.sidebar:
         protocol = st.radio(
             "Phác đồ:",
             [
-                "💔 ACS - Hội Chứng Vành Cấp",
+                "💔 ACS - Hội chứng vành cấp",
                 "💔 Suy Tim Cấp"
             ],
             label_visibility="collapsed"

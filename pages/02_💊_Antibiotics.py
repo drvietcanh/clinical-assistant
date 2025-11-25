@@ -23,14 +23,14 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("⚙️ Chọn Công Cụ")
+    st.header("⚙️ Chọn công cụ")
     
     function_type = st.selectbox(
         "Công cụ:",
         [
-            "🔍 Tra Cứu & Dữ Liệu Kháng Sinh",
-            "🔬 So Sánh Nhiều Kháng Sinh",
-            "📊 So Sánh Side-by-Side",
+            "🔍 Tra cứu & dữ liệu kháng sinh",
+            "🔬 So sánh nhiều kháng sinh",
+            "📊 So sánh Side-by-Side",
             "🔄 Phác đồ điều trị"
         ]
     )
@@ -45,22 +45,22 @@ with st.sidebar:
     
     **💡 Tính liều theo thận:**
     Xem module "💊 Tra cứu thuốc" → 
-    "🧮 Tính Liều Theo eGFR/CrCl"
+    "🧮 Tính liều theo eGFR/CrCl"
     """)
 
 # ========== MAIN CONTENT ==========
 
 # Route to appropriate function
-if "Tra Cứu" in function_type and "Dữ Liệu" in function_type:
+if "Tra cứu" in function_type and "dữ liệu" in function_type:
     render_database()
 
-elif "So Sánh Nhiều" in function_type:
+elif "So sánh nhiều" in function_type:
     render_multi_comparison()
 
 elif "Side-by-Side" in function_type:
     render_comparison()
 
-elif "Phác đồ" in function_type or "Phác Đồ" in function_type:
+elif "Phác đồ" in function_type:
     render_algorithms_page()
 
 # ========== FOOTER ==========

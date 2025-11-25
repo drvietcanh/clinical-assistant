@@ -256,7 +256,7 @@ def render_vasopressor_guide():
         render_info_alert(vasopressor_data['notes'], title="Thông tin quan trọng")
     
     # Quick reference table
-    with st.expander("📋 Bảng So Sánh Nhanh Tất Cả Vasopressor"):
+    with st.expander("📋 Bảng so sánh nhanh tất cả vasopressor"):
         import pandas as pd
         
         comparison_data = []

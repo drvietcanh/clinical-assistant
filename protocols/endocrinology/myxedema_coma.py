@@ -1,5 +1,5 @@
 """
-Phác Đồ Hôn Mê Phù Niêm (Myxedema Coma)
+Phác đồ hôn mê phù niêm (Myxedema Coma)
 Hướng dẫn ATA 2014
 Cấp cứu suy giáp đe dọa tính mạng
 """
@@ -8,8 +8,8 @@ import streamlit as st
 
 
 def render():
-    """Phác Đồ Hôn Mê Phù Niêm (Myxedema Coma)"""
-    st.subheader("❄️ Hôn Mê Phù Niêm (Myxedema Coma)")
+    """Phác đồ hôn mê phù niêm (Myxedema Coma)"""
+    st.subheader("❄️ Hôn mê phù niêm (Myxedema Coma)")
     st.caption("Hướng dẫn ATA 2014 - Cấp cứu suy giáp đe dọa tính mạng")
     
     st.error("""

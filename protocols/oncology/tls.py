@@ -1,5 +1,5 @@
 """
-Phác Đồ Phòng Ngừa Hội Chứng Tan U (TLS)
+Phác đồ phòng ngừa hội chứng tan u (TLS)
 Hướng dẫn NCCN 2023
 Phòng ngừa và điều trị TLS trong các bệnh ác tính huyết học
 """
@@ -8,8 +8,8 @@ import streamlit as st
 
 
 def render():
-    """Phác Đồ Phòng Ngừa Hội Chứng Tan U (TLS)"""
-    st.subheader("🎗️ Phòng Ngừa Hội Chứng Tan U (TLS)")
+    """Phác đồ phòng ngừa hội chứng tan u (TLS)"""
+    st.subheader("🎗️ Phòng ngừa hội chứng tan u (TLS)")
     st.caption("Hướng dẫn NCCN 2023 - Phòng ngừa và điều trị TLS")
     
     st.error("""
@@ -113,7 +113,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: PREVENTION PROTOCOL ==========
-    st.markdown("### 🛡️ Phác Đồ Phòng Ngừa")
+    st.markdown("### 🛡️ Phác đồ phòng ngừa")
     
     risk_level = st.radio(
         "**Mức độ nguy cơ:**",
@@ -133,7 +133,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: HYDRATION ==========
-    st.markdown("### 💧 Phác Đồ Bù Dịch")
+    st.markdown("### 💧 Phác đồ bù dịch")
     
     st.info("""
     **Bù dịch là nền tảng của phòng ngừa TLS:**
@@ -260,7 +260,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: MONITORING ==========
-    st.markdown("### 📈 Phác Đồ Theo Dõi")
+    st.markdown("### 📈 Phác đồ theo dõi")
     
     st.markdown("""
     **Ban đầu (trước hóa trị):**
@@ -392,7 +392,7 @@ def render():
 
 
 def render_high_risk_protocol():
-    """Phác Đồ Phòng Ngừa TLS Nguy Cơ Cao"""
+    """Phác đồ phòng ngừa TLS nguy cơ cao"""
     st.error("## 🔴 PHÁC ĐỒ PHÒNG NGỪA TLS NGUY CƠ CAO")
     
     st.markdown("""
@@ -424,7 +424,7 @@ def render_high_risk_protocol():
 
 
 def render_intermediate_risk_protocol():
-    """Phác Đồ Phòng Ngừa TLS Nguy Cơ Trung Bình"""
+    """Phác đồ phòng ngừa TLS nguy cơ trung bình"""
     st.warning("## 🟡 PHÁC ĐỒ PHÒNG NGỪA TLS NGUY CƠ TRUNG BÌNH")
     
     st.markdown("""
@@ -455,7 +455,7 @@ def render_intermediate_risk_protocol():
 
 
 def render_low_risk_protocol():
-    """Phác Đồ Phòng Ngừa TLS Nguy Cơ Thấp"""
+    """Phác đồ phòng ngừa TLS nguy cơ thấp"""
     st.success("## 🟢 PHÁC ĐỒ PHÒNG NGỪA TLS NGUY CƠ THẤP")
     
     st.markdown("""

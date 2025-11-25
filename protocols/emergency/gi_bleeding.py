@@ -194,7 +194,7 @@ def render_upper_gi_bleeding():
     """)
     
     st.markdown("---")
-    st.markdown("### 6️⃣ Quản Lý Theo Nguyên Nhân")
+    st.markdown("### 6️⃣ Quản lý theo nguyên nhân")
     
     tab1, tab2, tab3, tab4 = st.tabs(["PUD", "Varices", "Mallory-Weiss", "Khác"])
     
