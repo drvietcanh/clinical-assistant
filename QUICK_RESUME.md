@@ -32,6 +32,16 @@
   - Management recommendations
   - Severity levels (Major/Moderate/Minor)
   - Interactive tooltips và hover effects
+- ✅ **Enhanced References & Evidence Levels - GRADE system, PubMed links** ⭐ MỚI
+  - GRADE system evidence levels (High/Moderate/Low/Very Low)
+  - AHA/ACC evidence levels (I/IIa/IIb/III)
+  - APA format citations
+  - Direct PubMed links
+  - DOI links và full text access
+  - Guideline sources với URLs
+  - Last updated date tracking
+  - Strength of recommendation badges
+  - Grouped references by type
 
 ### 📦 Module Splitting:
 - Tách **13 files** CRITICAL/WARNING:
@@ -74,6 +84,7 @@
 - ✅ Enhanced Export - PDF & QR Code
 - ✅ Visual IV Compatibility Checker - Matrix display
 - ✅ Full Drug Interaction Checker - Severity levels, recommendations
+- ✅ Enhanced References & Evidence Levels - GRADE system, PubMed links
 - ✅ Better fuzzy matching (rapidfuzz)
 - ✅ Smart ranking algorithm
 - ✅ Real-time suggestions
@@ -82,13 +93,14 @@
 ## 🚀 Bắt đầu lại
 
 ### Tiếp tục UI/UX Improvements:
-- **Task tiếp theo:** Enhanced References & Evidence Levels - GRADE system, PubMed links
-  - Cần bổ sung: Evidence level (GRADE system)
-  - Full citation (APA format)
-  - Direct PubMed links
-  - Guideline source
-  - Last updated date
-  - Strength of recommendation
+- **Task tiếp theo:** Interactive Diagnostic Algorithms - Visual flowcharts
+  - Cần bổ sung: Visual flowcharts cho diagnostic algorithms
+  - Interactive decision trees
+  - Chest Pain Algorithm
+  - Dyspnea Workup
+  - Acute Kidney Injury
+  - Sepsis Protocol
+  - Anemia Workup
   - Reference: `docs/UI_UX_IMPROVEMENTS_PROPOSAL.md`
 
 ```bash

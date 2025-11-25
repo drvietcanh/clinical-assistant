@@ -397,28 +397,100 @@ def render_feurea_expander():
         """)
 
 
+def get_fena_references():
+    """Get FENa references with enhanced metadata"""
+    return [
+        {
+            "type": "primary",
+            "title": "The FENa test. Use in the differential diagnosis of acute renal failure.",
+            "authors": "Espinel CH",
+            "journal": "JAMA",
+            "year": 1976,
+            "volume": "236",
+            "issue": "6",
+            "pages": "579-81",
+            "pmid": "947239",
+            "evidence_level": "IIa",
+            "strength": "Strong"
+        },
+        {
+            "type": "guideline",
+            "title": "KDIGO Clinical Practice Guideline for Acute Kidney Injury",
+            "authors": "KDIGO AKI Guideline Work Group",
+            "journal": "Kidney Int Suppl",
+            "year": 2012,
+            "volume": "2",
+            "issue": "1",
+            "pages": "1-138",
+            "evidence_level": "I",
+            "strength": "Strong",
+            "url": "https://kdigo.org/guidelines/acute-kidney-injury/"
+        },
+        {
+            "type": "guideline",
+            "title": "Diagnosis, evaluation, and management of acute kidney injury: a KDIGO summary (Part 1)",
+            "authors": "Kellum JA, Lameire N",
+            "journal": "Crit Care",
+            "year": 2013,
+            "volume": "17",
+            "issue": "1",
+            "pages": "204",
+            "pmid": "23394211",
+            "evidence_level": "I",
+            "strength": "Strong"
+        },
+        {
+            "type": "primary",
+            "title": "Significance of the fractional excretion of urea in the differential diagnosis of acute renal failure",
+            "authors": "Carvounis CP, Nisar S, Guro-Razuman S",
+            "journal": "Kidney Int",
+            "year": 2002,
+            "volume": "62",
+            "issue": "6",
+            "pages": "2223-9",
+            "pmid": "12427135",
+            "evidence_level": "IIa",
+            "strength": "Moderate"
+        }
+    ]
+
+
 def render_references_expander():
-    """Render references expander"""
-    with st.expander("📚 Tài Liệu Tham Khảo"):
-        st.markdown("""
-        **Primary Reference:**
-        - Espinel CH. 
-          *The FENa test. Use in the differential diagnosis of acute renal failure.* 
-          JAMA. 1976 Aug 9;236(6):579-81. [PMID: 947239]
+    """Render references expander with enhanced format"""
+    try:
+        from components.references import render_references_section
         
-        **Guidelines:**
-        - KDIGO Clinical Practice Guideline for Acute Kidney Injury. 
-          Kidney Int Suppl. 2012;2(1):1-138.
-        
-        - Kellum JA, Lameire N; KDIGO AKI Guideline Work Group. 
-          *Diagnosis, evaluation, and management of acute kidney injury: a KDIGO summary (Part 1).* 
-          Crit Care. 2013 Feb 4;17(1):204.
-        
-        **FEUrea:**
-        - Carvounis CP, Nisar S, Guro-Razuman S. 
-          *Significance of the fractional excretion of urea in the differential diagnosis of acute renal failure.* 
-          Kidney Int. 2002 Dec;62(6):2223-9.
-        """)
+        references = get_fena_references()
+        render_references_section(
+            references=references,
+            title="📚 Tài Liệu Tham Khảo",
+            last_updated="2025-11-15",
+            show_evidence_level=True,
+            show_links=True,
+            grouped=True
+        )
+    except ImportError:
+        # Fallback to old format
+        with st.expander("📚 Tài Liệu Tham Khảo"):
+            st.markdown("""
+            **Primary Reference:**
+            - Espinel CH. 
+              *The FENa test. Use in the differential diagnosis of acute renal failure.* 
+              JAMA. 1976 Aug 9;236(6):579-81. [PMID: 947239]
+            
+            **Guidelines:**
+            - KDIGO Clinical Practice Guideline for Acute Kidney Injury. 
+              Kidney Int Suppl. 2012;2(1):1-138.
+            
+            - Kellum JA, Lameire N; KDIGO AKI Guideline Work Group. 
+              *Diagnosis, evaluation, and management of acute kidney injury: a KDIGO summary (Part 1).* 
+              Crit Care. 2013 Feb 4;17(1):204.
+            
+            **FEUrea:**
+            - Carvounis CP, Nisar S, Guro-Razuman S. 
+              *Significance of the fractional excretion of urea in the differential diagnosis of acute renal failure.* 
+              Kidney Int. 2002 Dec;62(6):2223-9.
+            """)
 
 
 def render_what_is_fena_expander():
