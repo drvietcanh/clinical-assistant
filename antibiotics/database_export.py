@@ -115,7 +115,7 @@ def _render_antibiotic_export(ab_name, ab_data):
             safe_download_key = f"download_{safe_filename}"
             filename = f"antibiotic_{safe_filename}"
             st.download_button(
-                label="💾 Download TXT",
+                label="💾 Tải TXT",
                 data=export_text,
                 file_name=f"{filename}.txt",
                 mime="text/plain",

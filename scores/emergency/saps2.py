@@ -182,11 +182,11 @@ def get_admission_points(admission_type: str, has_aids: bool, has_hematologic_ma
     """Admission type and chronic disease points"""
     points = 0
     
-    if admission_type == "Scheduled surgical":
+    if admission_type == "Phẫu thuật theo kế hoạch":
         points = 0
-    elif admission_type == "Medical":
+    elif admission_type == "Nội khoa":
         points = 6
-    elif admission_type == "Unscheduled surgical":
+    elif admission_type == "Phẫu thuật cấp cứu":
         points = 8
     
     # Chronic diseases
@@ -441,8 +441,8 @@ def render():
     st.markdown("#### 🏥 Loại Nhập Viện & Bệnh Mạn Tính")
     admission_type = st.radio(
         "Loại nhập viện ICU",
-        ["Scheduled surgical", "Medical", "Unscheduled surgical"],
-        help="Scheduled surgical = Phẫu thuật theo kế hoạch"
+        ["Phẫu thuật theo kế hoạch", "Nội khoa", "Phẫu thuật cấp cứu"],
+        help="Phẫu thuật theo kế hoạch = Scheduled surgical"
     )
     
     col10, col11, col12 = st.columns(3)

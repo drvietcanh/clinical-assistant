@@ -607,6 +607,6 @@ def render_ventilator_calculator():
     - Các tính toán này chỉ mục đích hỗ trợ quyết định lâm sàng
     - Luôn đánh giá lâm sàng và điều chỉnh theo đáp ứng của bệnh nhân
     - Theo dõi huyết động, ABG, và các thông số khác
-    - Tuân thủ hướng dẫn địa phương và quy định bệnh viện
+    - Tuân thủ hướng dẫn của Bộ Y tế, Bệnh viện
     """)
 

@@ -386,7 +386,7 @@ def render_export_buttons_enhanced(
                 txt_filename += '.txt'
             
             st.download_button(
-                label="💾 Download TXT",
+                label="💾 Tải TXT",
                 data=export_text,
                 file_name=txt_filename,
                 mime="text/plain",
@@ -408,7 +408,7 @@ def render_export_buttons_enhanced(
                     pdf_filename += '.pdf'
                 
                 st.download_button(
-                    label="📄 Download PDF",
+                    label="📄 Tải PDF",
                     data=pdf_bytes,
                     file_name=pdf_filename,
                     mime="application/pdf",
@@ -437,7 +437,7 @@ def render_export_buttons_enhanced(
                         qr_filename += '.png'
                     
                     st.download_button(
-                        label="💾 Download QR Code",
+                        label="💾 Tải QR Code",
                         data=qr_bytes,
                         file_name=qr_filename,
                         mime="image/png",
@@ -451,8 +451,8 @@ def render_export_buttons_enhanced(
     # Email button (optional, requires email setup)
     if show_email:
         with cols[col_idx]:
-            if st.button("📧 Email", use_container_width=True, key="export_email_enhanced"):
-                st.info("📧 Email functionality requires email server setup. Coming soon!")
+            if st.button("📧 Gửi Email", use_container_width=True, key="export_email_enhanced"):
+                st.info("📧 Tính năng gửi email cần cấu hình email server. Sắp có!")
 
 
 def render_export_section_enhanced(

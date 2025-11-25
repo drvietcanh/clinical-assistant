@@ -232,36 +232,36 @@ def render_notes_section(
     
     # Add note form
     if show_add_form:
-        with st.expander("➕ Add Note", expanded=len(notes) == 0):
+        with st.expander("➕ Thêm Ghi Chú", expanded=len(notes) == 0):
             note_text = st.text_area(
-                "Note:",
+                "Ghi chú:",
                 key=f"note_input_{calculator_id}_{result_id or 'general'}",
-                placeholder="Enter your note here... (e.g., Patient has CKD, adjusted dosing)",
+                placeholder="Nhập ghi chú của bạn... (ví dụ: Bệnh nhân có CKD, điều chỉnh liều)",
                 height=100
             )
             
             col1, col2 = st.columns([3, 1])
             with col1:
                 tags_input = st.text_input(
-                    "Tags (comma-separated):",
+                    "Tags (phân cách bằng dấu phẩy):",
                     key=f"note_tags_{calculator_id}_{result_id or 'general'}",
-                    placeholder="e.g., CKD, dosing, follow-up"
+                    placeholder="Ví dụ: CKD, liều dùng, theo dõi"
                 )
             
             with col2:
                 st.markdown("<br>", unsafe_allow_html=True)
-                if st.button("💾 Save Note", key=f"save_note_{calculator_id}_{result_id or 'general'}", use_container_width=True):
+                if st.button("💾 Lưu Ghi Chú", key=f"save_note_{calculator_id}_{result_id or 'general'}", use_container_width=True):
                     tags = [tag.strip() for tag in tags_input.split(",") if tag.strip()] if tags_input else []
                     
                     if save_note(calculator_id, note_text, result_id, tags):
-                        st.success("✅ Note saved!")
+                        st.success("✅ Đã lưu ghi chú!")
                         st.rerun()
                     else:
-                        st.warning("Please enter a note")
+                        st.warning("Vui lòng nhập ghi chú")
     
     # Display notes
     if notes:
-        st.markdown(f"**📋 Notes ({len(notes)}):**")
+        st.markdown(f"**📋 Ghi chú ({len(notes)}):**")
         
         for note in notes:
             with st.container():
@@ -288,29 +288,29 @@ def render_notes_section(
                         st.markdown(tags_html, unsafe_allow_html=True)
                 
                 with col2:
-                    if st.button("🗑️", key=f"delete_note_{calculator_id}_{note.get('id')}", help="Delete note"):
+                    if st.button("🗑️", key=f"delete_note_{calculator_id}_{note.get('id')}", help="Xóa ghi chú"):
                         if delete_note(calculator_id, note.get("id"), result_id):
-                            st.success("Note deleted")
+                            st.success("Đã xóa ghi chú")
                             st.rerun()
                 
                 # Note content
                 st.info(note.get("text", ""))
                 st.markdown("---")
     else:
-        st.info("No notes yet. Add your first note above!")
+        st.info("Chưa có ghi chú nào. Thêm ghi chú đầu tiên ở trên!")
     
     # Search notes
     if show_search and len(notes) > 0:
-        with st.expander("🔍 Search Notes"):
-            search_query = st.text_input("Search:", key=f"search_notes_{calculator_id}")
+        with st.expander("🔍 Tìm Kiếm Ghi Chú"):
+            search_query = st.text_input("Tìm kiếm:", key=f"search_notes_{calculator_id}")
             if search_query:
                 search_results = search_notes(search_query, calculator_id)
                 if search_results:
-                    st.markdown(f"**Found {len(search_results)} matching notes:**")
+                    st.markdown(f"**Tìm thấy {len(search_results)} ghi chú phù hợp:**")
                     for result in search_results:
                         st.markdown(f"**{result['calculator_id']}:** {result['note'].get('text', '')}")
                 else:
-                    st.info("No matching notes found")
+                    st.info("Không tìm thấy ghi chú phù hợp")
     
     # Export notes
     if show_export and len(notes) > 0:
@@ -319,7 +319,7 @@ def render_notes_section(
         with col1:
             notes_json = export_notes(calculator_id)
             st.download_button(
-                label="📥 Export Notes (JSON)",
+                label="📥 Xuất Ghi Chú (JSON)",
                 data=notes_json,
                 file_name=f"notes_{calculator_id}_{datetime.now().strftime('%Y%m%d')}.json",
                 mime="application/json",
@@ -327,11 +327,11 @@ def render_notes_section(
             )
         
         with col2:
-            if st.button("🗑️ Clear All Notes", key=f"clear_notes_{calculator_id}", use_container_width=True):
+            if st.button("🗑️ Xóa Tất Cả Ghi Chú", key=f"clear_notes_{calculator_id}", use_container_width=True):
                 storage_key = get_notes_storage_key(calculator_id, result_id)
                 if 'user_notes' in st.session_state and storage_key in st.session_state.user_notes:
                     st.session_state.user_notes[storage_key] = []
-                    st.success("All notes cleared")
+                    st.success("Đã xóa tất cả ghi chú")
                     st.rerun()
 
 

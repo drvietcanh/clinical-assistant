@@ -529,7 +529,7 @@ def render_fluid_calculator():
     - Các tính toán này chỉ mục đích hỗ trợ quyết định lâm sàng
     - Luôn đánh giá lâm sàng và điều chỉnh theo đáp ứng của bệnh nhân
     - Theo dõi điện giải và cân bằng dịch thường xuyên
-    - Tuân thủ hướng dẫn địa phương và quy định bệnh viện
+    - Tuân thủ hướng dẫn của Bộ Y tế, Bệnh viện
     """)
 
 

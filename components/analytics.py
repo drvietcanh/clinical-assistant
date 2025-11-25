@@ -435,7 +435,7 @@ def render_analytics_dashboard() -> None:
         csv_data = export_analytics_to_csv()
         if csv_data:
             st.download_button(
-                label="📥 Export to CSV",
+                label="📥 Xuất CSV",
                 data=csv_data,
                 file_name=f"analytics_{datetime.now().strftime('%Y%m%d')}.csv",
                 mime="text/csv",
@@ -445,7 +445,7 @@ def render_analytics_dashboard() -> None:
             st.info("No data to export")
     
     with col2:
-        if st.button("🗑️ Clear Analytics", use_container_width=True):
+        if st.button("🗑️ Xóa Thống Kê", use_container_width=True):
             if 'analytics_data' in st.session_state:
                 st.session_state.analytics_data = {
                     'calculations': [],

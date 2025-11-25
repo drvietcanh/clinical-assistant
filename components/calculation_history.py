@@ -315,7 +315,7 @@ def render_history_ui(calculator_id: Optional[str] = None, show_actions: bool = 
         st.markdown("---")
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("📥 Export JSON", key=f"export_json_{calculator_id or 'all'}"):
+            if st.button("📥 Xuất JSON", key=f"export_json_{calculator_id or 'all'}"):
                 export_data = export_history('json', calculator_id)
                 st.download_button(
                     "⬇️ Tải xuống",
@@ -324,7 +324,7 @@ def render_history_ui(calculator_id: Optional[str] = None, show_actions: bool = 
                     mime="application/json"
                 )
         with col2:
-            if st.button("📥 Export CSV", key=f"export_csv_{calculator_id or 'all'}"):
+            if st.button("📥 Xuất CSV", key=f"export_csv_{calculator_id or 'all'}"):
                 export_data = export_history('csv', calculator_id)
                 st.download_button(
                     "⬇️ Tải xuống",

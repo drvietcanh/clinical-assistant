@@ -65,7 +65,7 @@ def render_responsive_table(
     
     # Add mobile-friendly note for large tables
     if len(data.columns) > 5:
-        st.caption("💡 **Mobile tip:** Swipe horizontally to see all columns")
+        st.caption("💡 **Mẹo di động:** Vuốt ngang để xem tất cả cột")
 
 
 def render_table_cards(data: pd.DataFrame, title: Optional[str] = None):

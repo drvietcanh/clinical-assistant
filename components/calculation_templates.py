@@ -216,7 +216,7 @@ def render_templates_ui(calculator_id: str, calculator_name: str):
             col1, col2 = st.columns(2)
             
             with col1:
-                if st.button("📥 Load", key=f"load_template_{template['id']}"):
+                if st.button("📥 Tải", key=f"load_template_{template['id']}"):
                     # Load template inputs into session state
                     for key, value in template['inputs'].items():
                         st.session_state[f"input_{calculator_id}_{key}"] = value
@@ -234,7 +234,7 @@ def render_templates_ui(calculator_id: str, calculator_name: str):
     col1, col2 = st.columns(2)
     
     with col1:
-        if st.button("📥 Export Templates", key=f"export_templates_{calculator_id}"):
+        if st.button("📥 Xuất Templates", key=f"export_templates_{calculator_id}"):
             export_data = json.dumps(templates, indent=2, default=str)
             st.download_button(
                 "⬇️ Tải xuống JSON",

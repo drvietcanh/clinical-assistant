@@ -181,7 +181,7 @@ def render_undo_redo_ui(calculator_id: str, on_undo: callable, on_redo: callable
                         marker = "👉" if is_current else "  "
                         st.caption(f"{marker} {snapshot['description']} - {snapshot['timestamp'][:19]}")
                         
-                        if st.button("📥 Load", key=f"load_history_{calculator_id}_{idx}"):
+                        if st.button("📥 Tải", key=f"load_history_{calculator_id}_{idx}"):
                             state['current_index'] = idx
                             on_undo(snapshot['inputs'])
                             st.rerun()

@@ -279,7 +279,7 @@ def render_vasopressor_guide():
     - Hướng dẫn này chỉ mục đích tham khảo
     - Luôn điều chỉnh liều theo đáp ứng lâm sàng của bệnh nhân
     - Theo dõi sát các dấu hiệu sống và tác dụng phụ
-    - Tuân thủ hướng dẫn địa phương và quy định bệnh viện
+    - Tuân thủ hướng dẫn của Bộ Y tế, Bệnh viện
     - Dùng đường truyền tĩnh mạch trung tâm khi có thể
     """)
 

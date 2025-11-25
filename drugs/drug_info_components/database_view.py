@@ -102,47 +102,49 @@ def render_drug_database():
             st.session_state['drug_filters'] = {}
         filters = st.session_state['drug_filters']
         with col1:
-            filter_groups = st.multiselect('Drug Class', options=list(
+            filter_groups = st.multiselect('Nhóm thuốc', options=list(
                 DRUG_GROUPS.keys()), default=filters.get('groups', []), key
                 ='filter_groups')
-            filter_routes = st.multiselect('Route', options=['PO', 'IV',
+            filter_routes = st.multiselect('Đường dùng', options=['PO', 'IV',
                 'IM', 'SC', 'Inhalation', 'Rectal', 'Topical'], default=
                 filters.get('routes', []), key='filter_routes')
         with col2:
-            filter_pregnancy = st.selectbox('Pregnancy Category', options=[
-                'All', 'A', 'B', 'C', 'D', 'X'], index=0 if filters.get(
-                'pregnancy', 'All') == 'All' else ['A', 'B', 'C', 'D', 'X']
-                .index(filters.get('pregnancy', 'All')) + 1 if filters.get(
-                'pregnancy', 'All') in ['A', 'B', 'C', 'D', 'X'] else 0,
+            filter_pregnancy = st.selectbox('Phân loại thai kỳ', options=[
+                'Tất cả', 'A', 'B', 'C', 'D', 'X'], index=0 if filters.get(
+                'pregnancy', 'Tất cả') == 'Tất cả' else ['A', 'B', 'C', 'D', 'X']
+                .index(filters.get('pregnancy', 'Tất cả')) + 1 if filters.get(
+                'pregnancy', 'Tất cả') in ['A', 'B', 'C', 'D', 'X'] else 0,
                 key='filter_pregnancy')
-            filter_monitoring = st.checkbox('Requires Monitoring', value=
+            filter_monitoring = st.checkbox('Cần theo dõi', value=
                 filters.get('requires_monitoring', False), key=
                 'filter_monitoring')
         with col3:
-            filter_renal = st.checkbox('Has Renal Adjustment', value=
+            filter_renal = st.checkbox('Có điều chỉnh theo thận', value=
                 filters.get('has_renal_adjustment', False), key='filter_renal')
-            filter_black_box = st.checkbox('Has Black Box Warning', value=
+            filter_black_box = st.checkbox('Có cảnh báo Black Box', value=
                 filters.get('has_black_box', False), key='filter_black_box')
+        # Convert 'Tất cả' back to 'All' for internal processing
+        pregnancy_value = 'All' if filter_pregnancy == 'Tất cả' else filter_pregnancy
         st.session_state['drug_filters'] = {'groups': filter_groups,
-            'routes': filter_routes, 'pregnancy': filter_pregnancy,
+            'routes': filter_routes, 'pregnancy': pregnancy_value,
             'requires_monitoring': filter_monitoring,
             'has_renal_adjustment': filter_renal, 'has_black_box':
             filter_black_box}
         col_save1, col_save2 = st.columns([2, 1])
         with col_save1:
-            save_search_name = st.text_input('Save search as:', key=
-                'save_search_name', placeholder='e.g., My Search')
+            save_search_name = st.text_input('Lưu tìm kiếm với tên:', key=
+                'save_search_name', placeholder='Ví dụ: Tìm kiếm của tôi')
         with col_save2:
             st.markdown('<br>', unsafe_allow_html=True)
-            if st.button('💾 Save Search', key='save_search_btn',
+            if st.button('💾 Lưu Tìm Kiếm', key='save_search_btn',
                 use_container_width=True):
                 if save_search_name:
                     save_search(save_search_name, search_query, st.
                         session_state['drug_filters'])
-                    st.success(f'✅ Saved: {save_search_name}')
+                    st.success(f'✅ Đã lưu: {save_search_name}')
                     st.rerun()
                 else:
-                    st.warning('Please enter a name for the search')
+                    st.warning('Vui lòng nhập tên cho tìm kiếm')
     if search_query and len(search_query) >= 1:
         suggestions = get_drug_autocomplete_suggestions(search_query,
             max_suggestions=5)

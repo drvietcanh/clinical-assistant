@@ -214,7 +214,7 @@ def render_crrt_calculator():
             step=1,
             format="%d",
             key="crrt_clearance",
-            help="Typical: 25-35 ml/kg/h"
+            help="Thường là: 25-35 ml/kg/h"
         )
     
     if st.button("Tính toán", type="primary", key="calc_crrt"):
@@ -296,7 +296,7 @@ def render_ihd_calculator():
             step=0.1,
             format="%.1f",
             key="ihd_ktv",
-            help="Adequate: ≥1.2"
+            help="Đủ: ≥1.2"
         )
     
     if st.button("Tính toán", type="primary", key="calc_ihd"):
@@ -379,7 +379,7 @@ def render_sled_calculator():
             step=0.5,
             format="%.1f",
             key="sled_duration",
-            help="Typical: 6-12 hours"
+            help="Thường là: 6-12 giờ"
         )
     
     if st.button("Tính toán", type="primary", key="calc_sled"):
@@ -556,7 +556,7 @@ def render_rrt_calculator():
     **⚠️ QUAN TRỌNG:**
     - Các tính toán này chỉ mục đích hỗ trợ quyết định lâm sàng
     - Luôn đánh giá lâm sàng và điều chỉnh theo đáp ứng của bệnh nhân
-    - Tuân thủ hướng dẫn địa phương và quy định bệnh viện
+    - Tuân thủ hướng dẫn của Bộ Y tế, Bệnh viện
     - Tư vấn thận học khi cần
     """)
 

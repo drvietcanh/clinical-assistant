@@ -193,7 +193,7 @@ def render_shock_classification():
             step=0.1,
             format="%.1f",
             key="shock_lactate",
-            help="Optional"
+            help="Tùy chọn"
         )
         
         cvp = st.number_input(
@@ -204,7 +204,7 @@ def render_shock_classification():
             step=0.5,
             format="%.1f",
             key="shock_cvp",
-            help="Optional"
+            help="Tùy chọn"
         )
         
         scvo2 = st.number_input(
@@ -215,7 +215,7 @@ def render_shock_classification():
             step=1,
             format="%d",
             key="shock_scvo2",
-            help="Optional"
+            help="Tùy chọn"
         )
     
     if st.button("Phân loại", type="primary", key="classify_shock"):
@@ -310,7 +310,7 @@ def render_fluid_responsiveness():
             step=0.5,
             format="%.1f",
             key="fr_cvp",
-            help="Optional"
+            help="Tùy chọn"
         )
         
         ppv = st.number_input(
@@ -529,6 +529,6 @@ def render_shock_management():
     **⚠️ QUAN TRỌNG:**
     - Các tính toán này chỉ mục đích hỗ trợ quyết định lâm sàng
     - Luôn đánh giá lâm sàng và điều chỉnh theo đáp ứng của bệnh nhân
-    - Tuân thủ hướng dẫn địa phương và quy định bệnh viện
+    - Tuân thủ hướng dẫn của Bộ Y tế, Bệnh viện
     """)
 

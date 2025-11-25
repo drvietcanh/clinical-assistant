@@ -179,7 +179,7 @@ def render_export_panel():
     st.markdown("---")
     
     # Export CSV
-    st.markdown("#### 📊 Export CSV")
+    st.markdown("#### 📊 Xuất CSV")
     st.caption("Export lịch sử dạng bảng CSV (có thể mở bằng Excel)")
     
     col1, col2 = st.columns([3, 1])

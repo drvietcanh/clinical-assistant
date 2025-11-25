@@ -445,7 +445,7 @@ def render_ards_protocols():
     **⚠️ QUAN TRỌNG:**
     - Các tính toán này chỉ mục đích hỗ trợ quyết định lâm sàng
     - Luôn đánh giá lâm sàng và điều chỉnh theo đáp ứng của bệnh nhân
-    - Tuân thủ hướng dẫn địa phương và quy định bệnh viện
+    - Tuân thủ hướng dẫn của Bộ Y tế, Bệnh viện
     - ARDSNet protocol dựa trên nghiên cứu năm 2000, có thể có cập nhật mới
     """)
 

@@ -196,8 +196,8 @@ def render_export_buttons(
     results: Optional[Dict[str, Any]] = None,
     calculator_name: Optional[str] = None,
     button_label_copy: str = "📋 Copy",
-    button_label_download: str = "💾 Download TXT",
-    button_label_pdf: str = "📄 Download PDF",
+    button_label_download: str = "💾 Tải TXT",
+    button_label_pdf: str = "📄 Tải PDF",
     show_copy: bool = True,
     show_download: bool = True,
     show_pdf: bool = True

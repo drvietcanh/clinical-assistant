@@ -369,7 +369,7 @@ def render_iv_compatibility_checker():
                         title="IV Compatibility Matrix"
                     )
                     st.download_button(
-                        label="📄 Download HTML",
+                        label="📄 Tải HTML",
                         data=html_content,
                         file_name="iv_compatibility_matrix.html",
                         mime="text/html",
@@ -385,7 +385,7 @@ def render_iv_compatibility_checker():
                         summary_text += f"  {result['notes']}\n\n"
                     
                     st.download_button(
-                        label="📋 Download TXT",
+                        label="📋 Tải TXT",
                         data=summary_text,
                         file_name="iv_compatibility_summary.txt",
                         mime="text/plain",
@@ -394,7 +394,7 @@ def render_iv_compatibility_checker():
                 
                 with col3:
                     # Print view
-                    if st.button("🖨️ Print View", use_container_width=True):
+                    if st.button("🖨️ Xem In", use_container_width=True):
                         st.info("💡 Sử dụng Ctrl+P (Windows) hoặc Cmd+P (Mac) để in trang này")
             
             else:

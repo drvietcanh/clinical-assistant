@@ -214,7 +214,7 @@ def render():
                 - AUC₀₋₂₄: 400-600 mg·h/L
                 
                 **Nếu chỉ theo dõi trough (cách cũ):**
-                - Mục tiêu trough: 10-20 mg/L
+                - Mục tiêu nồng độ đáy: 10-20 mg/L
                 - Nhiễm khuẩn nặng: 15-20 mg/L
                 - Lấy mẫu ngay trước liều tiếp theo
                 """)
@@ -270,8 +270,8 @@ def render():
                 - For MIC = 1: Target AUC₀₋₂₄: 400-600 mg·h/L
                 - Use Bayesian software or pharmacokinetic consultation
                 
-                **Trough Monitoring (Traditional):**
-                - Target trough: 10-20 mg/L
+                **Theo dõi nồng độ đáy (Truyền thống):**
+                - Mục tiêu nồng độ đáy: 10-20 mg/L
                 - Serious infections (endocarditis, meningitis, pneumonia): 15-20 mg/L
                 - Sample before 4th or 5th dose at steady state
                 
