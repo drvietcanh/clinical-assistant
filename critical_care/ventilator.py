@@ -171,7 +171,7 @@ def calculate_rsbi(rr: float, vt_liters: float) -> dict:
 
 def render_ibw_calculator():
     """Render Ideal Body Weight calculator"""
-    st.subheader("📏 Ideal Body Weight (IBW) Calculator")
+    st.subheader("📏 Máy Tính Cân Nặng Lý Tưởng (IBW)")
     st.caption("Tính trọng lượng cơ thể lý tưởng để tính tidal volume")
     
     st.markdown("""
@@ -208,7 +208,7 @@ def render_ibw_calculator():
         st.markdown("### 📊 Kết Quả")
         
         render_result_box(
-            "Ideal Body Weight",
+            "Cân Nặng Lý Tưởng",
             f"{ibw:.1f} kg",
             subtitle=f"Chiều cao: {height_cm} cm ({sex})",
             color="primary",
@@ -234,7 +234,7 @@ def render_ibw_calculator():
 
 def render_tidal_volume_calculator():
     """Render Tidal Volume calculator"""
-    st.subheader("💨 Tidal Volume Calculator")
+    st.subheader("💨 Máy Tính Thể Tích Khí Lưu Thông")
     st.caption("Tính tidal volume dựa trên IBW (ARDSNet protocol)")
     
     st.markdown("""
@@ -385,7 +385,7 @@ def render_peep_calculator():
 
 def render_plateau_pressure_calculator():
     """Render Plateau Pressure calculator"""
-    st.subheader("📈 Plateau Pressure Calculator")
+    st.subheader("📈 Máy Tính Áp Lực Cao Nguyên")
     st.caption("Tính plateau pressure và driving pressure")
     
     st.markdown("""
@@ -399,7 +399,7 @@ def render_plateau_pressure_calculator():
     
     with col1:
         vt_ml = st.number_input(
-            "Tidal Volume (ml):",
+            "Thể tích khí lưu thông (ml):",
             min_value=100,
             max_value=1000,
             value=420,
@@ -409,7 +409,7 @@ def render_plateau_pressure_calculator():
         )
         
         compliance = st.number_input(
-            "Static Compliance (ml/cmH2O):",
+            "Độ giãn nở tĩnh (ml/cmH2O):",
             min_value=10,
             max_value=200,
             value=50,
@@ -453,7 +453,7 @@ def render_plateau_pressure_calculator():
                     color = "error"
                 
                 render_result_box(
-                    "Plateau Pressure",
+                    "Áp Lực Cao Nguyên",
                     f"{results['plateau']:.1f} cmH2O",
                     subtitle=status,
                     color=color,
@@ -473,7 +473,7 @@ def render_plateau_pressure_calculator():
                     dp_color = "error"
                 
                 render_result_box(
-                    "Driving Pressure",
+                    "Áp Lực Đẩy",
                     f"{results['driving_pressure']:.1f} cmH2O",
                     subtitle=dp_status,
                     color=dp_color,
@@ -492,11 +492,11 @@ def render_plateau_pressure_calculator():
 
 def render_weaning_calculator():
     """Render Ventilator Weaning calculator"""
-    st.subheader("🔄 Ventilator Weaning Calculator")
+    st.subheader("🔄 Máy Tính Cai Máy Thở")
     st.caption("Đánh giá sẵn sàng cai máy thở (RSBI)")
     
     st.markdown("""
-    **RSBI (Rapid Shallow Breathing Index)** = RR / Vt (L)
+    **RSBI (Chỉ Số Thở Nhanh Nông)** = RR / Vt (L)
     
     - **RSBI < 105:** Tốt - Có thể cai máy thở
     - **RSBI 105-130:** Trung bình - Cần theo dõi
@@ -509,7 +509,7 @@ def render_weaning_calculator():
     
     with col1:
         rr = st.number_input(
-            "Respiratory Rate (breaths/min):",
+            "Tần số thở (lần/phút):",
             min_value=5,
             max_value=50,
             value=20,
@@ -520,7 +520,7 @@ def render_weaning_calculator():
     
     with col2:
         vt_liters = st.number_input(
-            "Tidal Volume (L):",
+            "Thể tích khí lưu thông (L):",
             min_value=0.1,
             max_value=2.0,
             value=0.5,
@@ -539,7 +539,7 @@ def render_weaning_calculator():
             st.markdown("### 📊 Kết Quả")
             
             render_result_box(
-                "RSBI",
+                "Chỉ Số RSBI",
                 f"{results['rsbi']:.1f}",
                 subtitle=results["interpretation"],
                 color=results["color"],
@@ -565,14 +565,14 @@ def render_weaning_calculator():
 def render_ventilator_calculator():
     """Main function to render ventilator management tools"""
     
-    st.markdown("## 🫁 Ventilator Management Tools")
+    st.markdown("## 🫁 Công Cụ Quản Lý Máy Thở")
     st.markdown("""
     Công cụ quản lý máy thở cho ICU:
-    - Ideal Body Weight (IBW) - Tính trọng lượng lý tưởng
-    - Tidal Volume - Tính thể tích khí lưu thông
-    - PEEP Calculator - Khuyến nghị PEEP dựa trên FiO2
-    - Plateau Pressure - Tính áp lực cao nguyên
-    - Weaning Parameters - Đánh giá sẵn sàng cai máy thở
+    - Cân Nặng Lý Tưởng (IBW) - Tính trọng lượng lý tưởng
+    - Thể Tích Khí Lưu Thông - Tính thể tích khí lưu thông
+    - Máy Tính PEEP - Khuyến nghị PEEP dựa trên FiO2
+    - Áp Lực Cao Nguyên - Tính áp lực cao nguyên
+    - Thông Số Cai Máy Thở - Đánh giá sẵn sàng cai máy thở
     """)
     
     st.markdown("---")
@@ -580,10 +580,10 @@ def render_ventilator_calculator():
     # Tab selection
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "📏 IBW",
-        "💨 Tidal Volume",
+        "💨 Thể Tích Khí Lưu Thông",
         "📊 PEEP",
-        "📈 Plateau Pressure",
-        "🔄 Weaning"
+        "📈 Áp Lực Cao Nguyên",
+        "🔄 Cai Máy Thở"
     ])
     
     with tab1:

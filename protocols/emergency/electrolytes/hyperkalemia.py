@@ -75,7 +75,7 @@ def render():
     - **D50:** 50ml IV (hoặc 1 amp)
     - **Effect:** Onset 15-30 min
     - **Duration:** 4-6h
-    - **Check glucose:** Mỗi 1h × 4h (risk hypoglycemia!)
+    - **Kiểm tra glucose:** Mỗi 1h × 4h (risk hypoglycemia!)
     
     **B. Albuterol:**
     - **10-20mg nebulized**
@@ -126,35 +126,35 @@ def render():
         st.markdown("#### ⚠️ Mild Hyperkalemia (5.5-6.0)")
         
         st.info("""
-        **Actions:**
-        1. ✅ Check ECG (nếu có changes → treat as moderate)
-        2. ✅ Identify cause
-        3. ✅ Discontinue K⁺ supplements, K⁺-sparing diuretics
-        4. ✅ Monitor K⁺ mỗi 4-6h
-        5. ✅ Consider:
+        **Các Bước:**
+        1. ✅ Kiểm tra ECG (nếu có changes → treat as moderate)
+        2. ✅ Xác định nguyên nhân
+        3. ✅ Ngừng bổ sung K⁺, thuốc lợi tiểu giữ K⁺
+        4. ✅ Theo dõi K⁺ mỗi 4-6h
+        5. ✅ Cân nhắc:
            * Loop diuretic
            * K⁺ binder (Kayexalate)
         
-        **Usually:** Non-urgent, treat cause
+        **Thường:** Không cấp cứu, điều trị nguyên nhân
         """)
     
     with tab2:
         st.markdown("#### 🚨 Moderate Hyperkalemia (6.0-7.0)")
         
         st.error("""
-        **Immediate Actions:**
+        **Hành Động Ngay Lập Tức:**
         1. ✅ **ECG ngay** - Nếu có changes → Treat as severe
-        2. ✅ **IV access**
-        3. ✅ **Monitor ECG continuously**
+        2. ✅ **Đặt đường truyền tĩnh mạch**
+        3. ✅ **Theo dõi ECG liên tục**
         
-        **Treatment:**
+        **Điều Trị:**
         1. **Calcium:** 1g IV (if ECG changes)
         2. **Insulin + D50:** 10U + 50ml
         3. **Albuterol:** 10-20mg nebulized
         4. **Furosemide:** 40-80mg IV (nếu có UO)
         5. **K⁺ binder:** Kayexalate 15-30g
         
-        **Monitor:**
+        **Theo Dõi:**
         - K⁺ mỗi 2-4h
         - ECG mỗi 1-2h
         - Glucose mỗi 1h (nếu dùng insulin)
@@ -182,20 +182,20 @@ def render():
         2. ✅ **Kayexalate:** 30g PO/PR
         3. ✅ **Nephrology consult** - Prepare for HD
         
-        **Indications for HD:**
+        **Chỉ Định Lọc Máu:**
         - K⁺ >7.0 với ECG changes
         - Oliguric/anuric
         - Renal failure
-        - Không đáp ứng treatment
+        - Không đáp ứng điều trị
         
-        **Monitor:**
+        **Theo Dõi:**
         - K⁺ mỗi 1-2h
         - ECG continuous
         - Glucose mỗi 1h × 4h
         """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Common Causes")
+    st.markdown("### 4️⃣ Nguyên Nhân Thường Gặp")
     
     st.warning("""
     **Pseudohyperkalemia:**

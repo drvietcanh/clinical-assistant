@@ -138,7 +138,7 @@ def assess_fluid_responsiveness(cvp: float = None, pulse_pressure_variation: flo
 
 def render_shock_classification():
     """Render shock classification calculator"""
-    st.subheader("🔍 Shock Classification")
+    st.subheader("🔍 Phân Loại Sốc")
     st.caption("Phân loại sốc dựa trên huyết động")
     
     st.markdown("""
@@ -155,7 +155,7 @@ def render_shock_classification():
     
     with col1:
         sbp = st.number_input(
-            "Systolic BP (mmHg):",
+            "Huyết áp tâm thu (mmHg):",
             min_value=50,
             max_value=200,
             value=90,
@@ -165,7 +165,7 @@ def render_shock_classification():
         )
         
         map_value = st.number_input(
-            "Mean Arterial Pressure (mmHg):",
+            "Áp lực động mạch trung bình (mmHg):",
             min_value=40,
             max_value=150,
             value=60,
@@ -175,7 +175,7 @@ def render_shock_classification():
         )
         
         hr = st.number_input(
-            "Heart Rate (bpm):",
+            "Nhịp tim (bpm):",
             min_value=40,
             max_value=200,
             value=120,
@@ -287,7 +287,7 @@ def render_shock_classification():
 
 def render_fluid_responsiveness():
     """Render fluid responsiveness assessment"""
-    st.subheader("💧 Fluid Responsiveness Assessment")
+    st.subheader("💧 Đánh Giá Đáp Ứng Dịch")
     st.caption("Đánh giá đáp ứng dịch")
     
     st.markdown("""
@@ -314,7 +314,7 @@ def render_fluid_responsiveness():
         )
         
         ppv = st.number_input(
-            "Pulse Pressure Variation (%):",
+            "Biến thiên áp lực mạch (%):",
             min_value=0.0,
             max_value=50.0,
             value=None,
@@ -326,7 +326,7 @@ def render_fluid_responsiveness():
     
     with col2:
         svv = st.number_input(
-            "Stroke Volume Variation (%):",
+            "Biến thiên thể tích nhát bóp (%):",
             min_value=0.0,
             max_value=50.0,
             value=None,
@@ -337,7 +337,7 @@ def render_fluid_responsiveness():
         )
         
         plr_response = st.selectbox(
-            "Passive Leg Raise (PLR):",
+            "Nâng chân thụ động (PLR):",
             ["Chưa test", "Đáp ứng (CO tăng ≥10%)", "Không đáp ứng"],
             key="fr_plr"
         )
@@ -389,7 +389,7 @@ def render_fluid_responsiveness():
 
 def render_vasopressor_selection():
     """Render vasopressor selection guide"""
-    st.subheader("💉 Vasopressor Selection Guide")
+    st.subheader("💉 Hướng Dẫn Chọn Vasopressor")
     st.caption("Hướng dẫn chọn vasopressor cho sốc")
     
     st.markdown("""
@@ -498,7 +498,7 @@ def render_vasopressor_selection():
 def render_shock_management():
     """Main function to render shock management tools"""
     
-    st.markdown("## 💉 Shock Management")
+    st.markdown("## 💉 Quản Lý Sốc")
     st.markdown("""
     Hướng dẫn quản lý sốc:
     - Phân loại sốc
@@ -510,9 +510,9 @@ def render_shock_management():
     
     # Tab selection
     tab1, tab2, tab3 = st.tabs([
-        "🔍 Classification",
-        "💧 Fluid Responsiveness",
-        "💉 Vasopressor Selection"
+        "🔍 Phân Loại",
+        "💧 Đáp Ứng Dịch",
+        "💉 Chọn Vasopressor"
     ])
     
     with tab1:

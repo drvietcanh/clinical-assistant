@@ -84,7 +84,7 @@ def calculate_ardsnet_settings(ibw_kg: float, pf_ratio: float, current_fio2: flo
 
 def render_ardsnet_calculator():
     """Render ARDSNet protocol calculator"""
-    st.subheader("🫁 ARDSNet Protocol Calculator")
+    st.subheader("🫁 Máy Tính Giao Thức ARDSNet")
     st.caption("Tính toán cài đặt máy thở theo ARDSNet protocol")
     
     st.markdown("""
@@ -124,7 +124,7 @@ def render_ardsnet_calculator():
     # Calculate IBW
     ibw = calculate_ibw(sex, height_cm)
     
-    st.info(f"**Ideal Body Weight (IBW):** {ibw:.1f} kg")
+    st.info(f"**Cân Nặng Lý Tưởng (IBW):** {ibw:.1f} kg")
     
     st.markdown("---")
     
@@ -182,9 +182,9 @@ def render_ardsnet_calculator():
             # ARDS Classification
             st.markdown("#### 🏷️ Phân Loại ARDS")
             render_result_box(
-                "ARDS Severity",
+                "Mức Độ ARDS",
                 ards_class["severity"],
-                subtitle=f"P/F ratio: {pf_ratio:.0f} mmHg ({ards_class['pf_range']})",
+                subtitle=f"Tỷ số P/F: {pf_ratio:.0f} mmHg ({ards_class['pf_range']})",
                 color=ards_class["color"],
                 icon=ards_class["icon"]
             )
@@ -198,7 +198,7 @@ def render_ardsnet_calculator():
             
             with col1:
                 render_result_box(
-                    "Tidal Volume",
+                    "Thể Tích Khí Lưu Thông",
                     f"{settings['vt_ml']:.0f} ml",
                     subtitle=f"{settings['vt_liters']:.2f} L (6 ml/kg IBW)",
                     color="primary",
@@ -231,7 +231,7 @@ def render_ardsnet_calculator():
             
             # Tidal volume
             recommendations.append({
-                "title": "Tidal Volume",
+                "title": "Thể Tích Khí Lưu Thông",
                 "value": f"{settings['vt_ml']:.0f} ml",
                 "description": f"6 ml/kg IBW (IBW = {ibw:.1f} kg)"
             })

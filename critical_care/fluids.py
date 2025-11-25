@@ -200,7 +200,7 @@ def render_fluid_calculator():
     
     # ========== TAB 1: MAINTENANCE FLUIDS ==========
     with tab1:
-        st.markdown("### 💧 Maintenance Fluids (Holliday-Segar)")
+        st.markdown("### 💧 Dịch Duy Trì (Holliday-Segar)")
         
         col1, col2 = st.columns(2)
         
