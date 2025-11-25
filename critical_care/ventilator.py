@@ -8,6 +8,14 @@ from components.ui.results import render_result_box, render_result_card
 from components.ui.alerts import render_info_alert, render_warning_alert
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def calculate_ibw(sex: str, height_cm: float) -> float:
     """
     Calculate Ideal Body Weight (IBW) / Predicted Body Weight (PBW)
@@ -80,7 +88,7 @@ def recommend_peep(fio2: float) -> dict:
     """
     table = get_peep_fio2_table()
     
-    # Find matching range
+        # Tìm khoảng phù hợp
     for entry in table:
         if fio2 <= entry["FiO2"]:
             return {
@@ -171,12 +179,12 @@ def calculate_rsbi(rr: float, vt_liters: float) -> dict:
 
 def render_ibw_calculator():
     """Render Ideal Body Weight calculator"""
-    st.subheader("📏 Máy Tính Cân Nặng Lý Tưởng (IBW)")
-    st.caption("Tính trọng lượng cơ thể lý tưởng để tính tidal volume")
+    st.subheader("📏 Máy tính cân nặng lý tưởng (IBW)")
+    st.caption("Tính trọng lượng cơ thể lý tưởng để tính thể tích khí lưu thông")
     
     st.markdown("""
-    **IBW (Ideal Body Weight)** hay **PBW (Predicted Body Weight)** được sử dụng để tính tidal volume 
-    trong ARDSNet protocol, không dùng actual body weight.
+    **IBW (Ideal Body Weight)** hay **PBW (Predicted Body Weight)** được sử dụng để tính thể tích khí lưu thông 
+    trong ARDSNet protocol, không dùng cân nặng thực tế.
     """)
     
     st.markdown("---")
@@ -205,11 +213,11 @@ def render_ibw_calculator():
     if st.button("Tính toán", type="primary", key="calc_ibw"):
         ibw = calculate_ibw(sex, height_cm)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         render_result_box(
-            "Cân Nặng Lý Tưởng",
-            f"{ibw:.1f} kg",
+            "Cân nặng lý tưởng",
+            f"{_format_num(ibw, 1)} kg",
             subtitle=f"Chiều cao: {height_cm} cm ({sex})",
             color="primary",
             icon="📏"
@@ -217,14 +225,14 @@ def render_ibw_calculator():
         
         st.markdown("---")
         st.info(f"""
-        **💡 Sử dụng IBW để tính Tidal Volume:**
+        **💡 Sử dụng IBW để tính thể tích khí lưu thông:**
         - ARDSNet protocol: **6 ml/kg IBW**
-        - Tidal volume khuyến nghị: **{ibw * 6:.0f} ml** ({ibw * 6 / 1000:.2f} L)
+        - Thể tích khí lưu thông khuyến nghị: **{ibw * 6:.0f} ml** ({ibw * 6 / 1000:.2f} L)
         - Mục tiêu: Bảo vệ phổi (lung-protective ventilation)
         """)
         
         st.markdown("---")
-        st.markdown("### 📋 Công Thức")
+        st.markdown("### 📋 Công thức")
         
         if sex == "Nam":
             st.latex(r"IBW = 50 + 2.3 \times (height_{inches} - 60)")
@@ -234,11 +242,11 @@ def render_ibw_calculator():
 
 def render_tidal_volume_calculator():
     """Render Tidal Volume calculator"""
-    st.subheader("💨 Máy Tính Thể Tích Khí Lưu Thông")
-    st.caption("Tính tidal volume dựa trên IBW (ARDSNet protocol)")
+    st.subheader("💨 Máy tính thể tích khí lưu thông")
+    st.caption("Tính thể tích khí lưu thông dựa trên IBW (ARDSNet protocol)")
     
     st.markdown("""
-    **ARDSNet Protocol:** Tidal volume = 6 ml/kg IBW (lung-protective ventilation)
+    **ARDSNet Protocol:** Thể tích khí lưu thông = 6 ml/kg IBW (lung-protective ventilation)
     """)
     
     st.markdown("---")
@@ -247,14 +255,14 @@ def render_tidal_volume_calculator():
     
     with col1:
         ibw_kg = st.number_input(
-            "Ideal Body Weight (kg):",
+            "Cân nặng lý tưởng (kg):",
             min_value=20.0,
             max_value=150.0,
             value=70.0,
             step=0.1,
             format="%.1f",
             key="tidal_ibw",
-            help="Sử dụng IBW, không dùng actual body weight"
+            help="Sử dụng IBW, không dùng cân nặng thực tế"
         )
     
     with col2:
@@ -272,15 +280,15 @@ def render_tidal_volume_calculator():
     if st.button("Tính toán", type="primary", key="calc_tidal"):
         results = calculate_tidal_volume(ibw_kg, ml_per_kg)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         col1, col2, col3 = st.columns(3)
         
         with col1:
             render_result_box(
-                "Tidal Volume",
-                f"{results['vt_ml']:.0f} ml",
-                subtitle=f"{results['vt_liters']:.2f} L",
+                "Thể tích khí lưu thông",
+                f"{round(results['vt_ml'])} ml",
+                subtitle=f"{_format_num(results['vt_liters'], 2)} L",
                 color="primary",
                 icon="💨"
             )
@@ -288,13 +296,13 @@ def render_tidal_volume_calculator():
         with col2:
             render_result_box(
                 "ml/kg IBW",
-                f"{ml_per_kg:.1f} ml/kg",
-                subtitle=f"IBW: {ibw_kg:.1f} kg",
+                f"{_format_num(ml_per_kg, 1)} ml/kg",
+                subtitle=f"IBW: {_format_num(ibw_kg, 1)} kg",
                 color="info"
             )
         
         with col3:
-            # Check if protective
+            # Kiểm tra mức độ bảo vệ phổi
             if ml_per_kg <= 6:
                 status = "✅ Bảo vệ phổi"
                 color_status = "success"
@@ -317,17 +325,17 @@ def render_tidal_volume_calculator():
         - **ARDSNet protocol:** 6 ml/kg IBW = **{ibw_kg * 6:.0f} ml**
         - **Mục tiêu:** Plateau pressure < 30 cmH2O
         - **Driving pressure:** < 15 cmH2O
-        - **Lưu ý:** Sử dụng IBW, không dùng actual body weight
+        - **Lưu ý:** Sử dụng IBW, không dùng cân nặng thực tế
         """)
 
 
 def render_peep_calculator():
     """Render PEEP calculator"""
-    st.subheader("📊 PEEP Calculator")
+    st.subheader("📊 Máy tính PEEP")
     st.caption("Khuyến nghị PEEP dựa trên FiO2 (ARDSNet protocol)")
     
     st.markdown("""
-    **ARDSNet PEEP/FiO2 Table:** Khuyến nghị PEEP dựa trên FiO2 để đạt SpO2 88-95% hoặc PaO2 55-80 mmHg.
+    **Bảng ARDSNet PEEP/FiO2:** Khuyến nghị PEEP dựa trên FiO2 để đạt SpO2 88-95% hoặc PaO2 55-80 mmHg.
     """)
     
     st.markdown("---")
@@ -346,22 +354,22 @@ def render_peep_calculator():
     if st.button("Tính toán", type="primary", key="calc_peep"):
         recommendation = recommend_peep(fio2_decimal)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         render_result_box(
             "PEEP khuyến nghị",
-            f"{recommendation['peep_recommended']:.0f} cmH2O",
-            subtitle=f"Range: {recommendation['peep_min']}-{recommendation['peep_max']} cmH2O",
+            f"{round(recommendation['peep_recommended'])} cmH2O",
+            subtitle=f"Khoảng: {recommendation['peep_min']}-{recommendation['peep_max']} cmH2O",
             color="primary",
             icon="📊"
         )
         
         st.markdown("---")
-        st.markdown("### 📋 ARDSNet PEEP/FiO2 Table")
+        st.markdown("### 📋 Bảng ARDSNet PEEP/FiO2")
         
         table = get_peep_fio2_table()
         
-        # Highlight current row
+        # Làm nổi bật dòng hiện tại
         for entry in table:
             is_current = entry["FiO2"] * 100 == fio2_percent
             bg_color = "#e3f2fd" if is_current else "white"
@@ -385,11 +393,11 @@ def render_peep_calculator():
 
 def render_plateau_pressure_calculator():
     """Render Plateau Pressure calculator"""
-    st.subheader("📈 Máy Tính Áp Lực Cao Nguyên")
+    st.subheader("📈 Máy tính áp lực cao nguyên")
     st.caption("Tính plateau pressure và driving pressure")
     
     st.markdown("""
-    **Plateau Pressure:** Áp lực trong phổi khi giữ hơi thở cuối thì hít vào (end-inspiratory pause).
+    **Áp lực cao nguyên:** Áp lực trong phổi khi giữ hơi thở cuối thì hít vào (tạm dừng cuối thì hít vào).
     **Mục tiêu:** < 30 cmH2O (lung-protective ventilation)
     """)
     
@@ -436,12 +444,12 @@ def render_plateau_pressure_calculator():
         if results["plateau"] is None:
             st.error("Không thể tính toán. Vui lòng kiểm tra giá trị nhập vào.")
         else:
-            st.markdown("### 📊 Kết Quả")
+            st.markdown("### 📊 Kết quả")
             
             col1, col2 = st.columns(2)
             
             with col1:
-                # Check if safe
+                # Kiểm tra mức độ an toàn
                 if results["plateau"] < 30:
                     status = "✅ An toàn"
                     color = "success"
@@ -453,15 +461,15 @@ def render_plateau_pressure_calculator():
                     color = "error"
                 
                 render_result_box(
-                    "Áp Lực Cao Nguyên",
-                    f"{results['plateau']:.1f} cmH2O",
+                    "Áp lực cao nguyên",
+                    f"{_format_num(results['plateau'], 1)} cmH2O",
                     subtitle=status,
                     color=color,
                     icon="📈"
                 )
             
             with col2:
-                # Check driving pressure
+                # Kiểm tra áp lực đẩy
                 if results["driving_pressure"] and results["driving_pressure"] < 15:
                     dp_status = "✅ Tốt"
                     dp_color = "success"
@@ -473,7 +481,7 @@ def render_plateau_pressure_calculator():
                     dp_color = "error"
                 
                 render_result_box(
-                    "Áp Lực Đẩy",
+                    "Áp lực đẩy",
                     f"{results['driving_pressure']:.1f} cmH2O",
                     subtitle=dp_status,
                     color=dp_color,
@@ -492,11 +500,11 @@ def render_plateau_pressure_calculator():
 
 def render_weaning_calculator():
     """Render Ventilator Weaning calculator"""
-    st.subheader("🔄 Máy Tính Cai Máy Thở")
+    st.subheader("🔄 Máy tính cai máy thở")
     st.caption("Đánh giá sẵn sàng cai máy thở (RSBI)")
     
     st.markdown("""
-    **RSBI (Chỉ Số Thở Nhanh Nông)** = RR / Vt (L)
+    **RSBI (Chỉ số thở nhanh nông)** = RR / Vt (L)
     
     - **RSBI < 105:** Tốt - Có thể cai máy thở
     - **RSBI 105-130:** Trung bình - Cần theo dõi
@@ -527,7 +535,7 @@ def render_weaning_calculator():
             step=0.05,
             format="%.2f",
             key="weaning_vt",
-            help="Tidal volume trong spontaneous breathing"
+            help="Thể tích khí lưu thông trong thở tự nhiên"
         )
     
     if st.button("Tính toán", type="primary", key="calc_weaning"):
@@ -536,11 +544,11 @@ def render_weaning_calculator():
         if results["rsbi"] is None:
             st.error("Không thể tính toán. Vt phải > 0.")
         else:
-            st.markdown("### 📊 Kết Quả")
+            st.markdown("### 📊 Kết quả")
             
             render_result_box(
-                "Chỉ Số RSBI",
-                f"{results['rsbi']:.1f}",
+                "Chỉ số RSBI",
+                f"{_format_num(results['rsbi'], 1)}",
                 subtitle=results["interpretation"],
                 color=results["color"],
                 icon="🔄"
@@ -565,14 +573,14 @@ def render_weaning_calculator():
 def render_ventilator_calculator():
     """Main function to render ventilator management tools"""
     
-    st.markdown("## 🫁 Công Cụ Quản Lý Máy Thở")
+    st.markdown("## 🫁 Công cụ quản lý máy thở")
     st.markdown("""
     Công cụ quản lý máy thở cho ICU:
-    - Cân Nặng Lý Tưởng (IBW) - Tính trọng lượng lý tưởng
-    - Thể Tích Khí Lưu Thông - Tính thể tích khí lưu thông
-    - Máy Tính PEEP - Khuyến nghị PEEP dựa trên FiO2
-    - Áp Lực Cao Nguyên - Tính áp lực cao nguyên
-    - Thông Số Cai Máy Thở - Đánh giá sẵn sàng cai máy thở
+    - Cân nặng lý tưởng (IBW) - Tính trọng lượng lý tưởng
+    - Thể tích khí lưu thông - Tính thể tích khí lưu thông
+    - Máy tính PEEP - Khuyến nghị PEEP dựa trên FiO2
+    - Áp lực cao nguyên - Tính áp lực cao nguyên
+    - Thông số cai máy thở - Đánh giá sẵn sàng cai máy thở
     """)
     
     st.markdown("---")
@@ -580,10 +588,10 @@ def render_ventilator_calculator():
     # Tab selection
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "📏 IBW",
-        "💨 Thể Tích Khí Lưu Thông",
+        "💨 Thể tích khí lưu thông",
         "📊 PEEP",
-        "📈 Áp Lực Cao Nguyên",
-        "🔄 Cai Máy Thở"
+        "📈 Áp lực cao nguyên",
+        "🔄 Cai máy thở"
     ])
     
     with tab1:

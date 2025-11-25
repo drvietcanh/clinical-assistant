@@ -82,7 +82,7 @@ def render():
     st.markdown("---")
     
     if st.button("📊 Đánh Giá", type="primary", use_container_width=True):
-        st.markdown("## 📊 Kết Quả")
+        st.markdown("## 📊 Kết quả")
         
         # Convert VAS to NRS equivalent for interpretation
         nrs_equivalent = round(vas_value / 10)
@@ -119,7 +119,7 @@ def render():
         
         # Treatment recommendations (similar to NRS)
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Nghị Điều Trị")
+        st.markdown("### 💊 Khuyến nghị điều trị")
         
         if vas_value == 0:
             st.success("**✅ Không cần điều trị giảm đau**")

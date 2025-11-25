@@ -69,7 +69,7 @@ def render():
     st.markdown("---")
     
     if st.button("📊 Đánh Giá", type="primary", use_container_width=True):
-        st.markdown("## 📊 Kết Quả")
+        st.markdown("## 📊 Kết quả")
         
         # Interpret pain level
         if pain_level == 0:
@@ -109,7 +109,7 @@ def render():
         
         # Treatment recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Nghị Điều Trị")
+        st.markdown("### 💊 Khuyến nghị điều trị")
         
         if pain_level == 0:
             st.success("""
@@ -208,7 +208,7 @@ def render():
             - Bệnh nhân không nói được: Dùng thang điểm hành vi
             """)
         
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **McCaffery M, Pasero C.** Pain: Clinical Manual. 2nd ed. St. Louis: Mosby; 1999.
             

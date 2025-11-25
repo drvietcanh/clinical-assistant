@@ -69,7 +69,7 @@ def render():
                 help="Bình thường: 0.3-1.2 mg/dL"
             )
             bili_mgdl = bili
-            st.caption(f"≈ {bili * 17.1:.0f} µmol/L")
+            st.caption(f"≈ {round(bili * 17.1)} µmol/L")
         else:
             bili = st.number_input(
                 "Bilirubin (µmol/L):",
@@ -80,7 +80,7 @@ def render():
                 help="Bình thường: 5-21 µmol/L"
             )
             bili_mgdl = bili / 17.1
-            st.caption(f"≈ {bili_mgdl:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(bili_mgdl, 1)} mg/dL")
         
         # Score bilirubin
         if bili_mgdl < 2:
@@ -114,7 +114,7 @@ def render():
             format="%.1f",
             help="Bình thường: 3.5-5.5 g/dL"
         )
-        st.caption(f"≈ {albumin * 10:.0f} g/L")
+        st.caption(f"≈ {round(albumin * 10)} g/L")
         
         # Score albumin
         if albumin > 3.5:
@@ -472,7 +472,7 @@ def render():
         
         # Score breakdown
         st.markdown("---")
-        with st.expander("📊 Chi Tiết Điểm Số"):
+        with st.expander("📊 Chi tiết điểm số"):
             st.markdown("| Thành Phần | Giá Trị | Điểm |")
             st.markdown("|------------|---------|------|")
             st.markdown(f"| **Bilirubin** | {bili_mgdl:.1f} mg/dL | {score_breakdown['Bilirubin']} |")
@@ -559,7 +559,7 @@ def render():
             filename="child_pugh_result"
         )
         
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             **Primary Reference:**
             - Pugh RN, Murray-Lyon IM, Dawson JL, Pietroni MC, Williams R. 

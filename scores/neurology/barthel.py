@@ -177,12 +177,12 @@ def render():
     
     st.markdown("---")
     
-    if st.button("📊 Tính Điểm Barthel", type="primary", use_container_width=True):
+    if st.button("📊 Tính điểm Barthel", type="primary", use_container_width=True):
         total_score = (bowel_score + bladder_score + grooming_score + mobility_score + 
                       stairs_score + bathing_score + dressing_score + bowel_control_score + 
                       bladder_control_score + feeding_score)
         
-        st.markdown("## 📊 Kết Quả")
+        st.markdown("## 📊 Kết quả")
         
         # Interpret dependency level
         if total_score <= 20:
@@ -226,7 +226,7 @@ def render():
         st.markdown(f"**Diễn giải:** {interpretation}")
         
         # Breakdown
-        st.markdown("### 📋 Chi Tiết Điểm Số:")
+        st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         - **Đi đại tiện:** {bowel_score}/10
         - **Đi tiểu tiện:** {bladder_score}/10
@@ -244,7 +244,7 @@ def render():
         
         # Care recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Nghị Chăm Sóc")
+        st.markdown("### 💊 Khuyến nghị chăm sóc")
         
         if total_score <= 20:
             st.error("""
@@ -313,7 +313,7 @@ def render():
             st.markdown("""
             **Barthel Index** và **mRS (Modified Rankin Scale)** đều đánh giá chức năng sau đột quỵ:
             
-            | Barthel Index | mRS | Diễn Giải |
+            | Barthel Index | mRS | Diễn giải |
             |--------------|-----|-----------|
             | 100 | 0 | Không có triệu chứng |
             | 91-99 | 1 | Không có khuyết tật đáng kể |
@@ -362,7 +362,7 @@ def render():
             - Đánh giá lại định kỳ để theo dõi tiến triển
             """)
         
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **Mahoney FI, Barthel DW.** Functional Evaluation: The Barthel Index. 
                *Md State Med J.* 1965;14:61-65.

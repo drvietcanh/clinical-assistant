@@ -7,6 +7,14 @@ import streamlit as st
 import math
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def calculate_meld_na(creatinine, bilirubin, inr, sodium, dialysis_twice=False):
     """
     Calculate MELD-Na score
@@ -159,7 +167,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.subheader("📝 Nhập Thông Số")
+    st.subheader("📝 Nhập thông số")
     
     col1, col2 = st.columns(2)
     
@@ -181,11 +189,11 @@ def render():
                 max_value=1000.0,
                 value=88.0,
                 step=1.0,
-                format="%.1f",
+                format="%d",
                 help="Giá trị bình thường: 60-110 µmol/L"
             )
             creatinine = round(cre_input / 88.4, 2)  # Convert to mg/dL
-            st.caption(f"≈ {creatinine:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(creatinine, 1)} mg/dL")
         else:
             creatinine = st.number_input(
                 "Creatinine (mg/dL):",
@@ -196,7 +204,7 @@ def render():
                 format="%.1f",
                 help="Giá trị bình thường: 0.7-1.3 mg/dL"
             )
-            st.caption(f"≈ {round(creatinine * 88.4, 1):.0f} µmol/L")
+            st.caption(f"≈ {round(creatinine * 88.4)} µmol/L")
         
         st.markdown("---")
         
@@ -288,7 +296,7 @@ def render():
         interp = interpret_meld_na(meld_na)
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả")
+        st.subheader("📈 Kết quả")
         
         # Display scores
         col1, col2, col3 = st.columns(3)
@@ -328,7 +336,7 @@ def render():
         st.markdown("---")
         
         # Detailed interpretation
-        st.subheader("🎯 Phân Tích & Tiên Lượng")
+        st.subheader("🎯 Phân tích & tiên lượng")
         
         st.info(f"""
         **MELD-Na Score: {meld_na}/40**
@@ -373,7 +381,7 @@ def render():
         
         # Recommendations based on score
         st.markdown("---")
-        st.subheader("💡 Khuyến Nghị")
+        st.subheader("💡 Khuyến nghị")
         
         if meld_na < 10:
             st.success("""

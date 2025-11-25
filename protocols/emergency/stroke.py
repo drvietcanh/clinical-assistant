@@ -58,7 +58,7 @@ def render_ischemic_stroke():
         st.metric("Door-to-Puncture (MT)", "≤90 phút", "🎯 Mục tiêu")
     
     st.markdown("---")
-    st.markdown("### 1️⃣ Xử Trí Tức Thì (< 10 Phút)")
+    st.markdown("### 1️⃣ Xử trí tức thì (< 10 phút)")
     
     st.error("""
     **ABC - Airway, Breathing, Circulation:**
@@ -89,7 +89,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Chẩn Đoán - CT Scan")
+    st.markdown("### 2️⃣ Chẩn đoán - CT Scan")
     
     st.warning("""
     **CT Head NGAY (trong 25 phút):**
@@ -108,7 +108,7 @@ def render_ischemic_stroke():
     st.markdown("---")
     st.markdown("### 3️⃣ Thrombolysis - tPA Criteria")
     
-    st.markdown("#### ✅ Chỉ Định tPA (Alteplase)")
+    st.markdown("#### ✅ Chỉ định tPA (Alteplase)")
     
     col1, col2 = st.columns(2)
     
@@ -129,7 +129,7 @@ def render_ischemic_stroke():
     
     with col2:
         st.error("""
-        **Exclusion Criteria (Tuyệt Đối):**
+        **Exclusion Criteria (Tuyệt đối):**
         
         🚫 **Thời gian:** > 4.5 giờ từ khi khởi phát
         🚫 **Xuất huyết:** Xuất huyết não trên CT
@@ -142,7 +142,7 @@ def render_ischemic_stroke():
         🚫 **Đang dùng NOAC (Xa inhibitor) <48h**
         🚫 **Platelet <100,000/µL**
         
-        **Exclusion (Tương Đối):**
+        **Exclusion (Tương đối):**
         ⚠️ Tuổi >80 (có thể cân nhắc với liều thấp hơn)
         ⚠️ Tiểu đường + tiền sử đột quỵ
         """)
@@ -169,7 +169,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Lấy Huyết Khối Cơ Học (MT)")
+    st.markdown("### 4️⃣ Lấy huyết khối cơ học (MT)")
     
     st.warning("""
     **Chỉ định MT (Endovascular Thrombectomy):**
@@ -191,7 +191,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 5️⃣ Hỗ Trợ Y Tế")
+    st.markdown("### 5️⃣ Hỗ trợ y tế")
     
     st.info("""
     **Huyết áp:**
@@ -213,7 +213,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 6️⃣ Điều Trị Sau Giai Đoạn Cấp")
+    st.markdown("### 6️⃣ Điều trị sau giai đoạn cấp")
     
     st.success("""
     **Antiplatelet (sau 24h nếu không dùng tPA):**
@@ -232,7 +232,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 7️⃣ Thời Điểm Bắt Đầu Anticoagulation")
+    st.markdown("### 7️⃣ Thời điểm bắt đầu anticoagulation")
     
     st.warning("""
     **Nếu có chỉ định anticoagulation (AF, DVT/PE):**
@@ -255,7 +255,7 @@ def render_hemorrhagic_stroke():
     st.error("## 🚨 HEMORRHAGIC STROKE (ICH) PROTOCOL")
     st.error("**CODE STROKE - Xử trí khẩn cấp!**")
     
-    st.markdown("### 1️⃣ Xử Trí Tức Thì")
+    st.markdown("### 1️⃣ Xử trí tức thì")
     
     st.error("""
     **ABC tương tự Ischemic Stroke:**
@@ -267,7 +267,7 @@ def render_hemorrhagic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Kiểm Soát Huyết Áp")
+    st.markdown("### 2️⃣ Kiểm soát huyết áp")
     
     st.warning("""
     **Mục tiêu huyết áp:**
@@ -291,7 +291,7 @@ def render_hemorrhagic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 3️⃣ Đảo Ngược Anticoagulation")
+    st.markdown("### 3️⃣ Đảo ngược anticoagulation")
     
     st.error("""
     **Warfarin (Vitamin K antagonist):**
@@ -313,7 +313,7 @@ def render_hemorrhagic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Đánh Giá & Quyết Định Phẫu Thuật")
+    st.markdown("### 4️⃣ Đánh giá & quyết định phẫu thuật")
     
     col1, col2 = st.columns(2)
     
@@ -351,7 +351,7 @@ def render_hemorrhagic_stroke():
         """)
     
     st.markdown("---")
-    st.markdown("### 5️⃣ Điều Trị Hỗ Trợ")
+    st.markdown("### 5️⃣ Điều trị hỗ trợ")
     
     st.info("""
     **ICP Management (nếu có monitoring ICP):**
@@ -372,7 +372,7 @@ def render_hemorrhagic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 6️⃣ Theo Dõi")
+    st.markdown("### 6️⃣ Theo dõi")
     
     st.success("""
     **Monitoring:**

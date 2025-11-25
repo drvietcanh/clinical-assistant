@@ -14,7 +14,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 📝 Nhập Kết Quả")
+        st.markdown("#### 📝 Nhập kết quả")
         
         gender = st.radio("Giới tính:", ["Nam", "Nữ"], key="cbc_gender")
         gender_key = "male" if "Nam" in gender else "female"
@@ -108,7 +108,7 @@ def render():
         )
     
     with col2:
-        st.markdown("#### Interpretation / Giải Thích")
+        st.markdown("#### Interpretation / Giải thích")
         
         results = {
             "WBC": wbc,
@@ -142,7 +142,7 @@ def render():
     
     # Interpretation guide
     st.markdown("---")
-    with st.expander("📚 Interpretation Guide / Hướng Dẫn Giải Thích"):
+    with st.expander("📚 Interpretation Guide / Hướng dẫn giải thích"):
         st.markdown("""
         **WBC (White Blood Cells):**
         - ⬆️ High: Nhiễm trùng, viêm, ung thư máu

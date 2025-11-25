@@ -20,7 +20,7 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("Chọn Chuyên Khoa")
+    st.header("Chọn chuyên khoa")
     
     specialty = st.selectbox(
         "Chuyên khoa:",
@@ -30,7 +30,7 @@ with st.sidebar:
     
     st.markdown("---")
     
-    st.subheader("Thang Điểm Có Sẵn")
+    st.subheader("Thang điểm có sẵn")
     
     # Display scores for selected specialty
     scores_in_specialty = SCORES_BY_SPECIALTY[specialty]
@@ -78,15 +78,15 @@ st.info(f"""
 # ========== ROUTE TO APPROPRIATE MODULE ==========
 
 # Emergency & Critical Care
-if "Cấp Cứu" in specialty:
+if "Cấp cứu" in specialty:
     emergency.render_emergency_calculator(selected_score_id)
 
 # Cardiology
-elif "Tim Mạch" in specialty:
+elif "Tim mạch" in specialty:
     cardiology.render_cardiology_calculator(selected_score_id)
 
 # Respiratory
-elif "Hô Hấp" in specialty:
+elif "Hô hấp" in specialty:
     respiratory.render_respiratory_calculator(selected_score_id)
 
 # Neurology
@@ -98,7 +98,7 @@ elif "Tiêu Hóa" in specialty or "Gan" in specialty:
     gi.render_gi_calculator(selected_score_id)
 
 # Metabolism/Endocrinology
-elif "Nội Tiết" in specialty or "Chuyển Hóa" in specialty:
+elif "Nội tiết" in specialty or "Chuyển hóa" in specialty:
     metabolism.render_metabolism_calculator(selected_score_id)
 
 # Hematology
@@ -118,7 +118,7 @@ elif "Tâm Thần" in specialty or "Tâm Lý" in specialty:
     psychiatry.render_psychiatry_calculator(selected_score_id)
 
 # Oncology
-elif "Ung Thư" in specialty:
+elif "Ung thư" in specialty:
     oncology.render_oncology_calculator(selected_score_id)
 
 # Surgery
@@ -130,7 +130,7 @@ elif "Nhi Khoa" in specialty:
     pediatrics.render_pediatrics_calculator(selected_score_id)
 
 # Infectious Disease
-elif "Nhiễm Khuẩn" in specialty:
+elif "Nhiễm khuẩn" in specialty:
     infectious.render_infectious_calculator(selected_score_id)
 
 # ENT

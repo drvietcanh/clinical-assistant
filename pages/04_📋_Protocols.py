@@ -39,25 +39,25 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("📂 Chọn Chuyên Khoa")
+    st.header("📂 Chọn chuyên khoa")
     
     specialty = st.selectbox(
         "Chuyên khoa:",
         [
-            "🚨 Cấp Cứu (Emergency)",
-            "🫁 Hô Hấp (Respiratory)",
-            "❤️ Tim Mạch (Cardiology)",
+            "🚨 Cấp cứu (Emergency)",
+            "🫁 Hô hấp (Respiratory)",
+            "❤️ Tim mạch (Cardiology)",
             "🧪 Thận (Nephrology)",
-            "🦠 Nhiễm Khuẩn (Infectious)",
-            "⚕️ Nội Tiết (Endocrinology)",
-            "🎗️ Ung Thư (Oncology)"
+            "🦠 Nhiễm khuẩn (Infectious)",
+            "⚕️ Nội tiết (Endocrinology)",
+            "🎗️ Ung thư (Oncology)"
         ]
     )
     
     st.markdown("---")
     
     # Display protocols based on specialty
-    if "Cấp Cứu" in specialty:
+    if "Cấp cứu" in specialty:
         protocol = st.radio(
             "Phác đồ:",
             [
@@ -71,16 +71,16 @@ with st.sidebar:
             ],
             label_visibility="collapsed"
         )
-    elif "Hô Hấp" in specialty:
+    elif "Hô hấp" in specialty:
         protocol = st.radio(
             "Phác đồ:",
             [
                 "🫁 COPD Exacerbation",
-                "🫁 Cơn Hen Cấp"
+                "🫁 Cơn hen cấp"
             ],
             label_visibility="collapsed"
         )
-    elif "Tim Mạch" in specialty:
+    elif "Tim mạch" in specialty:
         protocol = st.radio(
             "Phác đồ:",
             [
@@ -97,7 +97,7 @@ with st.sidebar:
             ],
             label_visibility="collapsed"
         )
-    elif "Nhiễm Khuẩn" in specialty:
+    elif "Nhiễm khuẩn" in specialty:
         protocol = st.radio(
             "Phác đồ:",
             [
@@ -107,7 +107,7 @@ with st.sidebar:
             ],
             label_visibility="collapsed"
         )
-    elif "Nội Tiết" in specialty:
+    elif "Nội tiết" in specialty:
         protocol = st.radio(
             "Phác đồ:",
             [
@@ -117,7 +117,7 @@ with st.sidebar:
             ],
             label_visibility="collapsed"
         )
-    elif "Ung Thư" in specialty or "Oncology" in specialty:
+    elif "Ung thư" in specialty or "Oncology" in specialty:
         protocol = st.radio(
             "Phác đồ:",
             [

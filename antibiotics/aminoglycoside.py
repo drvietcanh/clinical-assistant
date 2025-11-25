@@ -6,6 +6,14 @@ Extended-Interval Dosing (Once-Daily)
 import streamlit as st
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def render():
     """Aminoglycoside Dosing Calculator"""
     st.subheader("💊 Aminoglycoside - Tính Liều")
@@ -21,7 +29,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Số Bệnh Nhân")
+        st.markdown("### 📋 Thông số bệnh nhân")
         
         # Drug selection
         drug = st.selectbox(
@@ -79,7 +87,7 @@ def render():
             st.info(f"**Béo phì:** IBW = {ibw:.1f} kg → Dùng ABW = {dosing_weight:.1f} kg")
         else:
             dosing_weight = ibw
-            st.caption(f"IBW = {ibw:.1f} kg (dùng IBW để tính liều)")
+            st.caption(f"IBW = {_format_num(ibw, 1)} kg (dùng IBW để tính liều)")
         
         # Creatinine
         st.markdown("#### Creatinine Máu")
@@ -98,11 +106,11 @@ def render():
                 max_value=1500.0,
                 value=88.0,
                 step=5.0,
-                format="%.1f",
+                format="%d",
                 key="ag_scr_umol"
             )
             scr_mgdl = scr_umol / 88.4
-            st.caption(f"≈ {scr_mgdl:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(scr_mgdl, 1)} mg/dL")
         else:  # mg/dL
             scr_mgdl = st.number_input(
                 "Creatinine (mg/dL)",
@@ -113,7 +121,7 @@ def render():
                 format="%.1f",
                 key="ag_scr_mgdl"
             )
-            st.caption(f"≈ {scr_mgdl * 88.4:.0f} µmol/L")
+            st.caption(f"≈ {round(scr_mgdl * 88.4)} µmol/L")
         
         # Calculate CrCl using IBW
         crcl = ((140 - age) * dosing_weight) / (72 * scr_mgdl)
@@ -203,9 +211,9 @@ def render():
                 st.success(f"## {drug}")
                 st.metric("Liều", f"{dose:.0f} mg", f"{mg_per_kg} mg/kg")
                 st.metric("Tần suất", f"Mỗi {interval}h")
-                st.caption(f"Cân nặng tính liều: {dosing_weight:.1f} kg")
+                st.caption(f"Cân nặng tính liều: {_format_num(dosing_weight, 1)} kg")
             
-            st.markdown("### 💡 Chi Tiết Tính Toán")
+            st.markdown("### 💡 Chi tiết tính toán")
             st.write(f"- **Thuốc:** {drug}")
             st.write(f"- **Cân nặng (IBW/ABW):** {dosing_weight:.1f} kg")
             st.write(f"- **CrCl:** {crcl} mL/phút")
@@ -230,7 +238,7 @@ def render():
             - Không béo phì quá mức
             """)
             
-            st.markdown("### 📝 Hướng Dẫn Truyền")
+            st.markdown("### 📝 Hướng dẫn truyền")
             
             if drug in ["Gentamicin", "Tobramycin"]:
                 st.info(f"""
@@ -311,7 +319,7 @@ def render():
             **Lưu ý:** Cần tham khảo dược sĩ lâm sàng để tính toán chính xác.
             """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **Extended-Interval Aminoglycoside Dosing**
                 

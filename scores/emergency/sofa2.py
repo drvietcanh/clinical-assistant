@@ -226,10 +226,10 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Thông Số 6 Hệ Cơ Quan")
+    st.subheader("📝 Nhập thông số 6 hệ cơ quan")
     
     # Respiratory
-    st.markdown("#### 1️⃣ Hô Hấp (Respiratory) - Với Hỗ Trợ Hiện Đại")
+    st.markdown("#### 1️⃣ Hô hấp (Respiratory) - Với hỗ trợ hiện đại")
     col1, col2 = st.columns(2)
     with col1:
         pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1, format="%d")
@@ -272,7 +272,7 @@ def render():
     st.divider()
     
     # Cardiovascular
-    st.markdown("#### 4️⃣ Tim Mạch (Cardiovascular) - Vasopressor Hiện Đại")
+    st.markdown("#### 4️⃣ Tim mạch (Cardiovascular) - Vasopressor hiện đại")
     use_vasopressor = st.checkbox("**Bệnh nhân đang dùng thuốc vận mạch**")
     
     if use_vasopressor:

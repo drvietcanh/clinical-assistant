@@ -78,7 +78,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Điều Trị (First 6 Hours)")
+    st.markdown("### 🎯 Mục tiêu điều trị (First 6 Hours)")
     
     st.info("""
     **Resuscitation Goals:**
@@ -118,7 +118,7 @@ def render():
     - Nếu cardiac output thấp
     """)
     
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         **Surviving Sepsis Campaign Guidelines 2021**
         

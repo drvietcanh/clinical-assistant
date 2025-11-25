@@ -264,7 +264,7 @@ def render():
         - Theo dõi diễn tiến bệnh
         - **Sepsis-3 definition:** SOFA ≥2 = Sepsis
         
-        ### 🎯 6 Hệ Cơ Quan
+        ### 🎯 6 hệ cơ quan
         
         1. **Hô hấp:** PaO₂/FiO₂ ratio
         2. **Đông máu:** Tiểu cầu
@@ -275,9 +275,9 @@ def render():
         
         Mỗi hệ: 0-4 điểm → Tổng: 0-24 điểm
         
-        ### 📊 Điểm & Tử Vong
+        ### 📊 Điểm & tử vong
         
-        | SOFA Score | Tử Vong ICU |
+        | SOFA Score | Tử vong ICU |
         |------------|-------------|
         | 0-6 | <20% |
         | 7-11 | 20-40% |
@@ -292,7 +292,7 @@ def render():
         - Nếu không biết baseline → giả định = 0
         - qSOFA dùng để screening ngoài ICU
         
-        ### 📚 Tài Liệu Tham Khảo
+        ### 📚 Tài liệu tham khảo
         
         - Vincent JL, et al. *Intensive Care Med* 1996;22:707-710
         - Singer M, et al. *JAMA* 2016;315:801-810 (Sepsis-3)
@@ -301,10 +301,10 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Thông Số 6 Hệ Cơ Quan")
+    st.subheader("📝 Nhập thông số 6 hệ cơ quan")
     
     # Respiratory
-    st.markdown("#### 1️⃣ Hô Hấp (Respiratory)")
+    st.markdown("#### 1️⃣ Hô hấp (Respiratory)")
     col1, col2 = st.columns(2)
     with col1:
         pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1, format="%d", help="Áp lực oxy máu động mạch", key="sofa_pao2")
@@ -330,7 +330,7 @@ def render():
     st.divider()
     
     # Cardiovascular
-    st.markdown("#### 4️⃣ Tim Mạch (Cardiovascular)")
+    st.markdown("#### 4️⃣ Tim mạch (Cardiovascular)")
     use_vasopressor = st.checkbox("**Bệnh nhân đang dùng thuốc vận mạch (vasopressor)**", key="sofa_use_vasopressor")
     
     if use_vasopressor:
@@ -392,7 +392,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         # Color-coded score result (MDCalc style)
         render_score_result(
@@ -416,13 +416,13 @@ def render():
         }
         
         render_score_breakdown(
-            title="📋 Điểm Từng Hệ Cơ Quan",
+            title="📋 Điểm từng hệ cơ quan",
             subscores=organs_display,
             total_score=result['total_score']
         )
         
         # Detailed scoring breakdown
-        with st.expander("📝 Chi Tiết Tính Điểm", expanded=False):
+        with st.expander("📝 Chi tiết tính điểm", expanded=False):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         
@@ -432,7 +432,7 @@ def render():
         
         # Interpretation & Management
         st.info("""
-        **📌 Diễn Giải SOFA:**
+        **📌 Diễn giải SOFA:**
         
         - **Tăng SOFA ≥2 điểm** trong 24-48h → xấu đi, nguy cơ tử vong tăng
         - **SOFA cao liên tục** → tiên lượng xấu
@@ -456,7 +456,7 @@ def render():
         
         # Management recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Cáo Xử Trí")
+        st.markdown("### 💊 Khuyến cáo xử trí")
         
         recommendations = []
         
@@ -571,10 +571,10 @@ def render():
         """)
     
     # Quick reference table
-    with st.expander("📖 Bảng SOFA Scoring Chi Tiết", expanded=False):
+    with st.expander("📖 Bảng SOFA scoring chi tiết", expanded=False):
         render_quick_reference_table(
-            title="SOFA Scoring Table",
-            headers=["Hệ Cơ Quan", "0", "1", "2", "3", "4"],
+            title="Bảng SOFA scoring",
+            headers=["Hệ cơ quan", "0", "1", "2", "3", "4"],
             rows=[
                 ["Hô hấp (PaO₂/FiO₂, mmHg)", "≥400", "<400", "<300", "<200", "<100"],
                 ["Đông máu (Platelets, ×10³/μL)", "≥150", "<150", "<100", "<50", "<20"],

@@ -111,10 +111,10 @@ def render():
     
     st.markdown("---")
     
-    if st.button("📊 Tính Điểm NIPS", type="primary", use_container_width=True):
+    if st.button("📊 Tính điểm NIPS", type="primary", use_container_width=True):
         total_score = facial + cry + breathing + arms + legs + arousal
         
-        st.markdown("## 📊 Kết Quả")
+        st.markdown("## 📊 Kết quả")
         
         # Interpret score
         if total_score == 0:
@@ -151,7 +151,7 @@ def render():
         """, unsafe_allow_html=True)
         
         # Breakdown
-        st.markdown("### 📋 Chi Tiết Điểm Số:")
+        st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         - **Facial Expression (Khuôn mặt):** {facial}/1
         - **Cry (Khóc):** {cry}/1
@@ -167,7 +167,7 @@ def render():
         
         # Treatment recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Nghị Điều Trị")
+        st.markdown("### 💊 Khuyến nghị điều trị")
         
         if total_score == 0:
             st.success("**✅ Không cần điều trị giảm đau**")
@@ -255,7 +255,7 @@ def render():
             - Trẻ non tháng có thể có biểu hiện đau khác (thay đổi SpO2, nhịp tim...)
             """)
         
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **Lawrence J, Alcock D, McGrath P, Kay J, MacMurray SB, Dulberg C.** The development of a tool to assess neonatal pain. 
                *Neonatal Netw.* 1993;12(6):59-66.

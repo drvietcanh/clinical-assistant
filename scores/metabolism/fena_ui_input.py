@@ -6,6 +6,14 @@ Handles all input fields and form sections
 import streamlit as st
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def render_input_form():
     """
     Render the input form section for FENa calculator
@@ -49,7 +57,8 @@ def render_input_form():
                 help="Bình thường: 0.7-1.3 mg/dL"
             )
             p_cr_mgdl = p_cr
-            st.caption(f"≈ {p_cr * 88.4:.0f} µmol/L")
+            p_cr_umol = round(p_cr * 88.4)
+            st.caption(f"≈ {p_cr_umol} µmol/L")
         else:
             p_cr = st.number_input(
                 "P-Cr (µmol/L):",
@@ -57,11 +66,11 @@ def render_input_form():
                 max_value=1800.0,
                 value=133.0,
                 step=5.0,
-                format="%.1f",
+                format="%d",
                 help="Bình thường: 62-115 µmol/L"
             )
             p_cr_mgdl = p_cr / 88.4
-            st.caption(f"≈ {p_cr_mgdl:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(p_cr_mgdl, 1)} mg/dL")
         
         st.markdown("---")
         st.markdown("### 💧 Xét Nghiệm Nước Tiểu (Urine)")
@@ -97,7 +106,7 @@ def render_input_form():
                 help="Varies widely"
             )
             u_cr_mgdl = u_cr
-            st.caption(f"≈ {u_cr / 11.3:.1f} mmol/L")
+            st.caption(f"≈ {_format_num(u_cr / 11.3, 1)} mmol/L")
         else:
             u_cr = st.number_input(
                 "U-Cr (mmol/L):",
@@ -109,7 +118,7 @@ def render_input_form():
                 help="Varies widely"
             )
             u_cr_mgdl = u_cr * 11.3
-            st.caption(f"≈ {u_cr_mgdl:.0f} mg/dL")
+            st.caption(f"≈ {round(u_cr_mgdl)} mg/dL")
         
         st.markdown("---")
         

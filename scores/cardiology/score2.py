@@ -99,7 +99,7 @@ def calculate_score2_moderate_risk(
         risk_class = "LOW"
         color = "🟢"
         recommendation = """
-        **🟢 Nguy cơ Tim Mạch THẤP (<2.5%):**
+        **🟢 Nguy cơ tim mạch THẤP (<2.5%):**
         
         **Khuyến cáo:**
         - Duy trì lối sống lành mạnh
@@ -113,7 +113,7 @@ def calculate_score2_moderate_risk(
         risk_class = "MODERATE"
         color = "🟡"
         recommendation = """
-        **🟡 Nguy cơ Tim Mạch TRUNG BÌNH (2.5-7.5%):**
+        **🟡 Nguy cơ tim mạch TRUNG BÌNH (2.5-7.5%):**
         
         **Khuyến cáo:**
         - Thay đổi lối sống tích cực
@@ -134,7 +134,7 @@ def calculate_score2_moderate_risk(
         risk_class = "HIGH"
         color = "🟠"
         recommendation = """
-        **🟠 Nguy cơ Tim Mạch CAO (7.5-10%):**
+        **🟠 Nguy cơ tim mạch CAO (7.5-10%):**
         
         **Khuyến cáo:**
         - **STATIN khuyến cáo** (moderate-high intensity)
@@ -157,7 +157,7 @@ def calculate_score2_moderate_risk(
         risk_class = "VERY_HIGH"
         color = "🔴"
         recommendation = """
-        **🔴 Nguy cơ Tim Mạch RẤT CAO (≥10%):**
+        **🔴 Nguy cơ tim mạch RẤT CAO (≥10%):**
         
         **Khuyến cáo:**
         - **HIGH-INTENSITY STATIN bắt buộc**
@@ -207,7 +207,7 @@ def render():
         - Bao gồm: Nhồi máu cơ tim, Đột quỵ
         - Dành cho người 40-69 tuổi KHÔNG có CVD
         
-        ### 🎯 Yếu Tố Nguy Cơ
+        ### 🎯 Yếu tố nguy cơ
         
         1. **Tuổi:** 40-69
         2. **Giới tính:** Nam/Nữ
@@ -225,9 +225,9 @@ def render():
         
         **Việt Nam:** Được coi là **MODERATE to HIGH risk**
         
-        ### 📊 Phân Loại Nguy Cơ
+        ### 📊 Phân loại nguy cơ
         
-        | Nguy Cơ 10 năm | Phân Loại |
+        | Nguy cơ 10 năm | Phân loại |
         |----------------|-----------|
         | <2.5% | Thấp |
         | 2.5-7.5% | Trung bình |
@@ -249,7 +249,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Thông Tin")
+    st.subheader("📝 Nhập thông tin")
     
     col1, col2 = st.columns(2)
     
@@ -359,7 +359,7 @@ def render():
             st.caption("MI tử vong/không tử vong + Đột quỵ tử vong/không tử vong")
         
         # Risk factors summary
-        with st.expander("📋 Tóm Tắt Yếu Tố Nguy Cơ", expanded=True):
+        with st.expander("📋 Tóm tắt yếu tố nguy cơ", expanded=True):
             factors = []
             factors.append(f"- Tuổi: {age} tuổi")
             factors.append(f"- Giới tính: {sex}")
@@ -374,12 +374,12 @@ def render():
         
         # Recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Cáo Điều Trị")
+        st.markdown("### 💊 Khuyến cáo điều trị")
         st.markdown(result['recommendation'])
         
         # Additional info
         st.info("""
-        **📌 Lưu Ý Quan Trọng:**
+        **📌 Lưu ý quan trọng:**
         
         - SCORE2 là công cụ HỖ TRỢ, không thay thế đánh giá lâm sàng
         - Quyết định điều trị cần cân nhắc:
@@ -410,7 +410,7 @@ def render():
             """)
         
         st.warning("""
-        ⚠️ **Cảnh Báo:**
+        ⚠️ **Cảnh báo:**
         - Đây là bản ĐƠNGIẢN HÓA của SCORE2
         - Để tính chính xác, sử dụng công cụ chính thức của ESC
         - Không dùng cho người đã có CVD, DM type 1, DM type 2 >10 năm
@@ -420,18 +420,18 @@ def render():
         st.session_state['score2_result'] = result
     
     # Quick reference
-    with st.expander("📖 Mục Tiêu Điều Trị Theo Nguy Cơ"):
+    with st.expander("📖 Mục tiêu điều trị theo nguy cơ"):
         st.markdown("""
-        ### Mục Tiêu LDL-C Theo ESC 2021
+        ### Mục tiêu LDL-C theo ESC 2021
         
-        | Phân Loại Nguy Cơ | LDL-C Mục Tiêu | Non-HDL-C Mục Tiêu |
+        | Phân loại nguy cơ | LDL-C mục tiêu | Non-HDL-C mục tiêu |
         |-------------------|----------------|---------------------|
         | **Thấp** | <3.0 mmol/L (116 mg/dL) | <3.8 mmol/L (147 mg/dL) |
         | **Trung bình** | <3.0 mmol/L (116 mg/dL) | <3.8 mmol/L (147 mg/dL) |
         | **Cao** | <1.8 mmol/L (70 mg/dL) + ↓≥50% | <2.6 mmol/L (100 mg/dL) |
         | **Rất cao** | <1.4 mmol/L (55 mg/dL) + ↓≥50% | <2.2 mmol/L (85 mg/dL) |
         
-        ### Liều Statin Khuyến Cáo
+        ### Liều statin khuyến cáo
         
         **High-intensity:**
         - Atorvastatin 40-80 mg

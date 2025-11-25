@@ -127,10 +127,10 @@ def render():
     
     st.markdown("---")
     
-    if st.button("📊 Tính Điểm Braden", type="primary", use_container_width=True):
+    if st.button("📊 Tính điểm Braden", type="primary", use_container_width=True):
         total_score = sensory_score + moisture_score + activity_score + mobility_score + nutrition_score + friction_score
         
-        st.markdown("## 📊 Kết Quả")
+        st.markdown("## 📊 Kết quả")
         
         # Interpret risk
         if total_score <= 12:
@@ -169,7 +169,7 @@ def render():
         st.markdown(f"**Diễn giải:** {interpretation}")
         
         # Breakdown
-        st.markdown("### 📋 Chi Tiết Điểm Số:")
+        st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         - **Sensory Perception (Cảm giác):** {sensory_score}/4
         - **Moisture (Độ ẩm):** {moisture_score}/4
@@ -183,11 +183,11 @@ def render():
         
         # Prevention recommendations
         st.markdown("---")
-        st.markdown("### 🛡️ Khuyến Nghị Phòng Ngừa")
+        st.markdown("### 🛡️ Khuyến nghị phòng ngừa")
         
         if total_score <= 12:
             st.error("""
-            **🚨 Nguy Cơ Cao (Braden ≤ 12) - Can Thiệp Ngay:**
+            **🚨 Nguy cơ cao (Braden ≤ 12) - Can thiệp ngay:**
             
             **Biện pháp phòng ngừa:**
             
@@ -220,7 +220,7 @@ def render():
             """)
         elif total_score <= 14:
             st.warning("""
-            **⚠️ Nguy Cơ Trung Bình (Braden 13-14) - Theo Dõi:**
+            **⚠️ Nguy cơ trung bình (Braden 13-14) - Theo dõi:**
             
             **Biện pháp phòng ngừa:**
             
@@ -242,7 +242,7 @@ def render():
             """)
         elif total_score <= 18:
             st.info("""
-            **💡 Nguy Cơ Thấp (Braden 15-18) - Phòng Ngừa Cơ Bản:**
+            **💡 Nguy cơ thấp (Braden 15-18) - Phòng ngừa cơ bản:**
             
             **Biện pháp:**
             
@@ -259,7 +259,7 @@ def render():
             """)
         else:
             st.success("""
-            **✅ Rất Ít Nguy Cơ (Braden ≥ 19):**
+            **✅ Rất ít nguy cơ (Braden ≥ 19):**
             
             - Tiếp tục chăm sóc da cơ bản
             - Đánh giá lại khi có thay đổi tình trạng
@@ -295,7 +295,7 @@ def render():
             - Tai (nếu nằm nghiêng)
             """)
         
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **Bergstrom N, Braden BJ, Laguzza A, Holman V.** The Braden Scale for Predicting Pressure Sore Risk. 
                *Nurs Res.* 1987;36(4):205-210.

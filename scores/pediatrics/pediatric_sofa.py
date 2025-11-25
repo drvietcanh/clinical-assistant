@@ -333,7 +333,7 @@ def render():
     
     with col1:
         # Respiratory
-        st.markdown("#### 1️⃣ Hô Hấp")
+        st.markdown("#### 1️⃣ Hô hấp")
         pao2 = st.number_input(
             "PaO₂ (mmHg):",
             min_value=30.0,
@@ -385,7 +385,7 @@ def render():
     
     with col2:
         # Cardiovascular
-        st.markdown("#### 4️⃣ Tim Mạch")
+        st.markdown("#### 4️⃣ Tim mạch")
         map_value = st.number_input(
             f"MAP (mmHg) [Bình thường ≥{normal_map} cho tuổi {age_years:.0f}]:",
             min_value=30.0,

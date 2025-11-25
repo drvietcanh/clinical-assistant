@@ -6,6 +6,14 @@ import streamlit as st
 from .normal_ranges import get_normal_range, is_critical, interpret_value, ALL_RANGES
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def render():
     """Lipid Panel"""
     st.subheader("💊 Lipid Panel")
@@ -38,7 +46,7 @@ def render():
                 key="chol_mmol"
             )
             chol = chol_input * 38.67  # Convert to mg/dL for calculations
-            st.caption(f"≈ {chol:.0f} mg/dL")
+            st.caption(f"≈ {round(chol)} mg/dL")
         else:
             chol = st.number_input(
                 "Total Cholesterol (mg/dL)",
@@ -47,7 +55,7 @@ def render():
                 help="Bình thường: <200 mg/dL",
                 key="chol_mgdl"
             )
-            st.caption(f"≈ {chol/38.67:.1f} mmol/L")
+            st.caption(f"≈ {_format_num(chol/38.67, 1)} mmol/L")
         
         # LDL
         st.markdown("**LDL Cholesterol**")
@@ -60,7 +68,7 @@ def render():
                 key="ldl_mmol"
             )
             ldl = ldl_input * 38.67
-            st.caption(f"≈ {ldl:.0f} mg/dL")
+            st.caption(f"≈ {round(ldl)} mg/dL")
         else:
             ldl = st.number_input(
                 "LDL Cholesterol (mg/dL)",
@@ -69,7 +77,7 @@ def render():
                 help="Mục tiêu: <100 mg/dL",
                 key="ldl_mgdl"
             )
-            st.caption(f"≈ {ldl/38.67:.1f} mmol/L")
+            st.caption(f"≈ {_format_num(ldl/38.67, 1)} mmol/L")
         
         # HDL
         st.markdown("**HDL Cholesterol**")
@@ -82,7 +90,7 @@ def render():
                 key="hdl_mmol"
             )
             hdl = hdl_input * 38.67
-            st.caption(f"≈ {hdl:.0f} mg/dL")
+            st.caption(f"≈ {round(hdl)} mg/dL")
         else:
             hdl = st.number_input(
                 "HDL Cholesterol (mg/dL)",
@@ -91,7 +99,7 @@ def render():
                 help="Nam >40, Nữ >50 mg/dL",
                 key="hdl_mgdl"
             )
-            st.caption(f"≈ {hdl/38.67:.1f} mmol/L")
+            st.caption(f"≈ {_format_num(hdl/38.67, 1)} mmol/L")
         
         # Triglycerides
         st.markdown("**Triglycerides**")
@@ -104,7 +112,7 @@ def render():
                 key="tg_mmol"
             )
             tg = tg_input * 88.57  # Convert to mg/dL for calculations
-            st.caption(f"≈ {tg:.0f} mg/dL")
+            st.caption(f"≈ {round(tg)} mg/dL")
         else:
             tg = st.number_input(
                 "Triglycerides (mg/dL)",
@@ -113,7 +121,7 @@ def render():
                 help="Bình thường: <150 mg/dL",
                 key="tg_mgdl"
             )
-            st.caption(f"≈ {tg/88.57:.1f} mmol/L")
+            st.caption(f"≈ {_format_num(tg/88.57, 1)} mmol/L")
         
         # Calculate ratios
         if hdl > 0:

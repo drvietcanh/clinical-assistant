@@ -6,6 +6,14 @@ Tính độ thanh thải creatinine - Quan trọng cho điều chỉnh liều th
 import streamlit as st
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def calculate_crcl(age, weight, creatinine, gender, creatinine_unit="µmol/L"):
     """
     Cockcroft-Gault formula for Creatinine Clearance
@@ -118,10 +126,10 @@ def render():
                 max_value=2000.0,
                 value=100.0,
                 step=1.0,
-                format="%.1f",
+                format="%d",
                 help="Bình thường: Nam 62-106, Nữ 44-80 µmol/L"
             )
-            st.caption(f"💡 = {creatinine / 88.4:.1f} mg/dL")
+            st.caption(f"💡 = {_format_num(creatinine / 88.4, 1)} mg/dL")
         else:
             creatinine = st.number_input(
                 "Creatinine (mg/dL)",
@@ -132,7 +140,7 @@ def render():
                 format="%.1f",
                 help="Bình thường: Nam 0.7-1.2, Nữ 0.5-0.9 mg/dL"
             )
-            st.caption(f"💡 = {creatinine * 88.4:.0f} µmol/L")
+            st.caption(f"💡 = {round(creatinine * 88.4)} µmol/L")
     
     # Option for adjusted body weight
     st.markdown("---")

@@ -69,12 +69,12 @@ def render():
         
         if ph < 7.35:
             if pco2 > 45:
-                st.error("**Toan Hô Hấp**")
+                st.error("**Toan hô hấp**")
             if hco3 < 22:
                 st.error("**Toan Chuyển Hóa**")
         elif ph > 7.45:
             if pco2 < 35:
-                st.error("**Kiềm Hô Hấp**")
+                st.error("**Kiềm hô hấp**")
             if hco3 > 26:
                 st.error("**Kiềm Chuyển Hóa**")
         else:

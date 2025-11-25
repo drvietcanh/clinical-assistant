@@ -6,6 +6,14 @@ Loading and Maintenance Dosing with TDM
 import streamlit as st
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def render():
     """Vancomycin Dosing Calculator"""
     st.subheader("💉 Vancomycin - Tính Liều")
@@ -21,7 +29,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Số Bệnh Nhân")
+        st.markdown("### 📋 Thông số bệnh nhân")
         
         # Patient info
         age = st.number_input(
@@ -74,7 +82,7 @@ def render():
             st.info(f"**Béo phì:** IBW = {ibw:.1f} kg → Dùng ABW = {abw:.1f} kg để tính liều")
             dosing_weight = abw
         else:
-            st.caption(f"IBW = {ibw:.1f} kg")
+            st.caption(f"IBW = {_format_num(ibw, 1)} kg")
             dosing_weight = weight
         
         # Creatinine
@@ -94,11 +102,11 @@ def render():
                 max_value=1500.0,
                 value=88.0,
                 step=5.0,
-                format="%.1f",
+                format="%d",
                 key="vanco_scr_umol"
             )
             scr_mgdl = scr_umol / 88.4
-            st.caption(f"≈ {scr_mgdl:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(scr_mgdl, 1)} mg/dL")
         else:  # mg/dL
             scr_mgdl = st.number_input(
                 "Creatinine (mg/dL)",
@@ -109,7 +117,7 @@ def render():
                 format="%.1f",
                 key="vanco_scr_mgdl"
             )
-            st.caption(f"≈ {scr_mgdl * 88.4:.0f} µmol/L")
+            st.caption(f"≈ {round(scr_mgdl * 88.4)} µmol/L")
         
         # Calculate CrCl
         crcl = ((140 - age) * dosing_weight) / (72 * scr_mgdl)
@@ -179,16 +187,16 @@ def render():
                 st.info(f"## Maintenance")
                 st.metric("Liều duy trì", f"{maint_dose:.0f} mg")
                 st.metric("Tần suất", f"Mỗi {interval}h")
-                st.caption(f"Liều ngày: {maint_dose * (24/interval):.0f} mg/ngày")
+                st.caption(f"Liều ngày: {round(maint_dose * (24/interval))} mg/ngày")
             
-            st.markdown("### 💡 Chi Tiết Tính Toán")
+            st.markdown("### 💡 Chi tiết tính toán")
             st.write(f"- **Cân nặng tính liều:** {dosing_weight:.1f} kg")
             st.write(f"- **CrCl:** {crcl} mL/phút")
             st.write(f"- **Loading dose:** {loading_dose_mg_kg} mg/kg × {dosing_weight:.1f} kg = {loading_dose:.0f} mg")
             st.write(f"- **Maintenance:** {maint_dose:.0f} mg mỗi {interval}h")
             
             st.markdown("---")
-            st.markdown("### 🎯 Mục Tiêu TDM (Therapeutic Drug Monitoring)")
+            st.markdown("### 🎯 Mục tiêu TDM (Therapeutic Drug Monitoring)")
             
             if "nặng" in indication or "nội tâm mạc" in indication or "viêm phổi" in indication.lower():
                 st.error("""
@@ -236,7 +244,7 @@ def render():
             - Tham khảo dược sĩ lâm sàng để tính AUC
             """)
             
-            st.markdown("### 📝 Hướng Dẫn Truyền")
+            st.markdown("### 📝 Hướng dẫn truyền")
             st.info(f"""
             **Quy trình truyền Vancomycin:**
             
@@ -256,7 +264,7 @@ def render():
             - Có thể cho kháng histamine (diphenhydramine) nếu cần
             """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **Vancomycin Dosing Guidelines**
                 

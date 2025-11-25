@@ -7,6 +7,14 @@ import streamlit as st
 from ..dosing_calculator import calculate_ibw, calculate_abw, calculate_bmi
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def render_patient_inputs():
     """
     Render tất cả patient input forms
@@ -93,7 +101,7 @@ def render_patient_inputs():
         
         # ICU-specific inputs
         if is_icu:
-            st.markdown("#### 🔴 Thông Số ICU")
+            st.markdown("#### 🔴 Thông số ICU")
             shock_type = st.selectbox(
                 "Loại shock:",
                 ["Không có", "Sốc nhiễm khuẩn (Septic)", "Sốc tim (Cardiogenic)", "Sốc phân bố (Distributive)", "Sốc giảm thể tích (Hypovolemic)"],
@@ -156,11 +164,11 @@ def render_patient_inputs():
                 max_value=1500.0,
                 value=88.0,
                 step=5.0,
-                format="%.1f",
+                format="%d",
                 key="dosing_scr_umol"
             )
             scr_mgdl = scr_value / 88.4
-            st.caption(f"≈ {scr_mgdl:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(scr_mgdl, 1)} mg/dL")
         else:
             scr_mgdl = st.number_input(
                 "Creatinine (mg/dL)",
@@ -171,7 +179,7 @@ def render_patient_inputs():
                 format="%.1f",
                 key="dosing_scr_mgdl"
             )
-            st.caption(f"≈ {scr_mgdl * 88.4:.0f} µmol/L")
+            st.caption(f"≈ {round(scr_mgdl * 88.4)} µmol/L")
         
         patient_data['scr_mgdl'] = scr_mgdl
     

@@ -12,7 +12,7 @@ from .hypocalcemia import render as render_hypocalcemia
 
 def render():
     """Electrolyte Emergency Protocols"""
-    st.subheader("⚡ Giao Thức Cấp Cứu Điện Giải")
+    st.subheader("⚡ Giao thức cấp cứu điện giải")
     st.caption("Hyperkalemia, Hyponatremia, Hypomagnesemia, Hypophosphatemia, Hypocalcemia")
     
     st.markdown("---")

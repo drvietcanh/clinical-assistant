@@ -73,8 +73,7 @@ def render():
                 key="bun_mmol"
             )
             bun = bun_input / 0.357  # Convert to mg/dL
-            bun_rounded = round(bun, 1)
-            st.caption(f"≈ {bun_rounded if bun_rounded != int(bun_rounded) else int(bun_rounded)} mg/dL (BUN)")
+            st.caption(f"≈ {_format_num(bun, 1)} mg/dL (BUN)")
         else:
             bun = st.number_input(
                 "BUN (mg/dL)", 
@@ -83,8 +82,7 @@ def render():
                 help="Bình thường: 7-20 mg/dL",
                 key="bun_mgdl"
             )
-            bun_mmol = round(bun * 0.357, 1)
-            st.caption(f"≈ {bun_mmol if bun_mmol != int(bun_mmol) else int(bun_mmol)} mmol/L (Urea)")
+            st.caption(f"≈ {_format_num(bun * 0.357, 1)} mmol/L (Urea)")
         
         # Creatinine with unit conversion
         st.markdown("#### 🔄 Creatinine")
@@ -104,8 +102,7 @@ def render():
                 key="cr_umol_bmp"
             )
             cr = cr_input / 88.4  # Convert to mg/dL
-            cr_rounded = round(cr, 1)
-            st.caption(f"≈ {cr_rounded if cr_rounded != int(cr_rounded) else int(cr_rounded)} mg/dL")
+            st.caption(f"≈ {_format_num(cr, 1)} mg/dL")
         else:
             cr = st.number_input(
                 "Creatinine (mg/dL)", 
@@ -144,8 +141,7 @@ def render():
                 help="Bình thường: 70-100 mg/dL (đói)",
                 key="glucose_mgdl"
             )
-            glucose_mmol = round(glucose/18.0, 1)
-            st.caption(f"≈ {glucose_mmol if glucose_mmol != int(glucose_mmol) else int(glucose_mmol)} mmol/L")
+            st.caption(f"≈ {_format_num(glucose/18.0, 1)} mmol/L")
         
         # Calculate BUN/Cr ratio
         st.markdown("---")
@@ -160,7 +156,7 @@ def render():
                 st.caption("✓ Bình thường (10-20)")
     
     with col2:
-        st.markdown("#### 📊 Giải Thích Kết Quả")
+        st.markdown("#### 📊 Giải thích kết quả")
         
         results = {
             "Sodium": na,

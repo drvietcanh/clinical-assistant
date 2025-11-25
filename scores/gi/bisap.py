@@ -6,6 +6,14 @@ Tiên lượng viêm tụy cấp - đơn giản, nhanh chóng
 import streamlit as st
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def render():
     """Render BISAP Score interface"""
     
@@ -80,7 +88,7 @@ def render():
                 help="Bình thường: 2.5-7.1 mmol/L"
             )
             bun = bun_mmol * 2.8
-            st.caption(f"💡 = {bun:.1f} mg/dL")
+            st.caption(f"💡 = {_format_num(bun, 1)} mg/dL")
         else:
             bun = st.number_input(
                 "BUN (mg/dL)",
@@ -92,7 +100,7 @@ def render():
                 help="Bình thường: 7-20 mg/dL"
             )
             bun_mmol = bun / 2.8
-            st.caption(f"💡 = {bun_mmol:.1f} mmol/L")
+            st.caption(f"💡 = {_format_num(bun_mmol, 1)} mmol/L")
     
     with col2:
         bun_positive = bun > 25

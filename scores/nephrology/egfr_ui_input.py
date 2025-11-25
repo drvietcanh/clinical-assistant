@@ -4,6 +4,14 @@ Handles all input fields and form sections
 """
 
 import streamlit as st
+
+
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
 from .egfr_calculators import calculate_ibw, calculate_abw
 
 
@@ -74,10 +82,10 @@ def render_input_form():
                 max_value=2000.0,
                 value=88.0,
                 step=1.0,
-                format="%.1f",
+                format="%d",
                 help="Bình thường: Nam 62-106, Nữ 44-80 µmol/L"
             )
-            st.caption(f"💡 = {creatinine / 88.4:.1f} mg/dL")
+            st.caption(f"💡 = {_format_num(creatinine / 88.4, 1)} mg/dL")
         else:
             creatinine = st.number_input(
                 "Creatinine (mg/dL)",
@@ -88,7 +96,8 @@ def render_input_form():
                 format="%.1f",
                 help="Bình thường: Nam 0.7-1.2, Nữ 0.5-0.9 mg/dL"
             )
-            st.caption(f"💡 = {creatinine * 88.4:.0f} µmol/L")
+            cr_umol = round(creatinine * 88.4)
+            st.caption(f"💡 = {cr_umol} µmol/L")
     
     # Advanced options
     st.markdown("---")

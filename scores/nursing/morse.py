@@ -117,10 +117,10 @@ def render():
     
     st.markdown("---")
     
-    if st.button("📊 Tính Điểm Morse", type="primary", use_container_width=True):
+    if st.button("📊 Tính điểm Morse", type="primary", use_container_width=True):
         total_score = history_score + secondary_score + ambulatory_score + iv_score + gait_score + mental_score
         
-        st.markdown("## 📊 Kết Quả")
+        st.markdown("## 📊 Kết quả")
         
         # Interpret risk
         if total_score < 25:
@@ -154,7 +154,7 @@ def render():
         st.markdown(f"**Diễn giải:** {interpretation}")
         
         # Breakdown
-        st.markdown("### 📋 Chi Tiết Điểm Số:")
+        st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         - **History of Falling (Tiền sử té ngã):** {history_score} điểm
         - **Secondary Diagnosis (Chẩn đoán thứ phát):** {secondary_score} điểm
@@ -168,11 +168,11 @@ def render():
         
         # Prevention recommendations
         st.markdown("---")
-        st.markdown("### 🛡️ Khuyến Nghị Phòng Ngừa")
+        st.markdown("### 🛡️ Khuyến nghị phòng ngừa")
         
         if total_score < 25:
             st.success("""
-            **✅ Nguy Cơ Thấp (Morse < 25):**
+            **✅ Nguy cơ thấp (Morse < 25):**
             
             **Biện pháp cơ bản:**
             - Hướng dẫn bệnh nhân về an toàn
@@ -181,7 +181,7 @@ def render():
             """)
         elif total_score < 45:
             st.warning("""
-            **⚠️ Nguy Cơ Trung Bình (Morse 25-44):**
+            **⚠️ Nguy cơ trung bình (Morse 25-44):**
             
             **Biện pháp phòng ngừa:**
             
@@ -202,7 +202,7 @@ def render():
             """)
         else:
             st.error("""
-            **🚨 Nguy Cơ Cao (Morse ≥ 45) - Can Thiệp Ngay:**
+            **🚨 Nguy cơ cao (Morse ≥ 45) - Can thiệp ngay:**
             
             **Biện pháp phòng ngừa tích cực:**
             
@@ -256,7 +256,7 @@ def render():
                - Khi thay đổi thuốc (an thần, hạ huyết áp...)
                - Khi chuyển khoa
             
-            ### 📋 Yếu Tố Nguy Cơ Té Ngã:
+            ### 📋 Yếu tố nguy cơ té ngã:
             - Tuổi cao (≥ 65 tuổi)
             - Tiền sử té ngã
             - Rối loạn dáng đi, thăng bằng
@@ -267,7 +267,7 @@ def render():
             - Môi trường (ánh sáng kém, sàn trơn...)
             """)
         
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **Morse JM, Morse RM, Tylko SJ.** Development of a scale to identify the fall-prone patient. 
                *Can J Aging.* 1989;8(4):366-377.

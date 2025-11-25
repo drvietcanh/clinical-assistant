@@ -81,9 +81,9 @@ def render():
             st.caption("→ Cần đánh giá thêm (không đặc hiệu)")
     
     st.markdown("---")
-    with st.expander("📚 Hướng Dẫn Diễn Giải"):
+    with st.expander("📚 Hướng dẫn diễn giải"):
         st.markdown("""
-        ### **INR - Mục Tiêu Điều Trị:**
+        ### **INR - Mục tiêu điều trị:**
         
         **Rung nhĩ (AF):**
         - Mục tiêu: **2.0 - 3.0**

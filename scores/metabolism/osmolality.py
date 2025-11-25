@@ -6,6 +6,14 @@ Tính độ thẩm thấu huyết thanh và osmolal gap
 import streamlit as st
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def render():
     """Render Osmolality Calculator interface"""
     
@@ -69,7 +77,7 @@ def render():
                 help="Bình thường: 3.9-6.1 mmol/L"
             )
             glucose_mg = glucose_mmol * 18
-            st.caption(f"= {glucose_mg:.0f} mg/dL")
+            st.caption(f"= {round(glucose_mg)} mg/dL")
         else:
             glucose_mg = st.number_input(
                 "Glucose (mg/dL)",
@@ -81,7 +89,7 @@ def render():
                 help="Bình thường: 70-110 mg/dL"
             )
             glucose_mmol = glucose_mg / 18
-            st.caption(f"= {glucose_mmol:.1f} mmol/L")
+            st.caption(f"= {_format_num(glucose_mmol, 1)} mmol/L")
     
     with col2:
         bun_unit = st.radio(
@@ -102,7 +110,7 @@ def render():
                 help="Bình thường: 2.5-7.1 mmol/L"
             )
             bun_mg = urea_mmol * 2.8
-            st.caption(f"= {bun_mg:.1f} mg/dL BUN")
+            st.caption(f"= {_format_num(bun_mg, 1)} mg/dL BUN")
         else:
             bun_mg = st.number_input(
                 "BUN (mg/dL)",
@@ -114,7 +122,7 @@ def render():
                 help="Bình thường: 7-20 mg/dL"
             )
             urea_mmol = bun_mg / 2.8
-            st.caption(f"= {urea_mmol:.1f} mmol/L Urea")
+            st.caption(f"= {_format_num(urea_mmol, 1)} mmol/L Urea")
     
     # Measured osmolality (optional)
     st.markdown("---")

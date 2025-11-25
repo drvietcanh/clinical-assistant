@@ -1,16 +1,16 @@
 """
-Adrenal Crisis (Acute Adrenal Insufficiency) Protocol
-Endocrine Society 2016 Guidelines
-Life-threatening emergency requiring immediate treatment
+Phác đồ cơn suy thượng thận cấp (Adrenal Crisis)
+Hướng dẫn Hiệp hội Nội tiết 2016
+Cấp cứu đe dọa tính mạng cần điều trị ngay lập tức
 """
 
 import streamlit as st
 
 
 def render():
-    """Adrenal Crisis Protocol"""
-    st.subheader("⚡ Adrenal Crisis (Acute Adrenal Insufficiency)")
-    st.caption("Endocrine Society 2016 Guidelines - Life-threatening adrenal insufficiency emergency")
+    """Phác đồ cơn suy thượng thận cấp"""
+    st.subheader("⚡ Cơn suy thượng thận cấp (Adrenal Crisis)")
+    st.caption("Hướng dẫn Hiệp hội Nội tiết 2016 - Cấp cứu suy thượng thận đe dọa tính mạng")
     
     st.error("""
     **🚨 CẤP CỨU - Cần điều trị ngay lập tức**
@@ -25,7 +25,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: DIAGNOSTIC CRITERIA ==========
-    st.markdown("### 📋 Tiêu Chuẩn Chẩn Đoán")
+    st.markdown("### 📋 Tiêu chuẩn chẩn đoán")
     
     with st.expander("🔍 Xem tiêu chuẩn chẩn đoán", expanded=True):
         st.markdown("""
@@ -112,7 +112,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### 🚨 Điều Trị Ngay Lập Tức (ICU)")
+    st.markdown("### 🚨 Điều trị ngay lập tức (ICU)")
     
     st.markdown("""
     **Thứ tự ưu tiên điều trị (theo Endocrine Society 2016):**
@@ -152,7 +152,7 @@ def render():
         - 40-80mg IV q6-8h
         
         **Lưu ý:**
-        - Không có mineralocorticoid activity
+        - Không có hoạt tính mineralocorticoid
         - Cần bổ sung fludrocortisone nếu suy thượng thận nguyên phát
         """)
     
@@ -164,7 +164,7 @@ def render():
     """)
     
     # Step 2: Fluid resuscitation
-    st.markdown("#### **2. Bù Dịch (Fluid Resuscitation)**")
+    st.markdown("#### **2. Bù dịch (Fluid Resuscitation)**")
     
     st.markdown("""
     **Dịch truyền:**
@@ -179,7 +179,7 @@ def render():
     """)
     
     # Step 3: Electrolyte correction
-    st.markdown("#### **3. Điều Chỉnh Điện Giải**")
+    st.markdown("#### **3. Điều chỉnh điện giải**")
     
     col1, col2 = st.columns(2)
     
@@ -187,7 +187,7 @@ def render():
         st.markdown("""
         **Hyponatremia:**
         - Thường tự cải thiện sau khi dùng Hydrocortisone
-        - Nếu nặng: Dùng hypertonic saline cẩn thận
+        - Nếu nặng: Dùng dung dịch muối ưu trương cẩn thận
         - Điều chỉnh từ từ (0.5-1 mEq/L/giờ)
         
         **Hyperkalemia:**
@@ -223,7 +223,7 @@ def render():
     """)
     
     # Step 5: Treat precipitating cause
-    st.markdown("#### **5. Điều Trị Nguyên Nhân Thúc Đẩy**")
+    st.markdown("#### **5. Điều trị nguyên nhân thúc đẩy**")
     
     st.markdown("""
     **Tìm và điều trị nguyên nhân:**
@@ -245,7 +245,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     st.markdown("""
     **Theo dõi sát trong 24-48 giờ đầu:**
@@ -280,7 +280,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Dân Số Đặc Biệt")
+    st.markdown("### 👥 Dân số đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -312,7 +312,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: LONG-TERM MANAGEMENT ==========
-    st.markdown("### 🔄 Điều Trị Dài Hạn")
+    st.markdown("### 🔄 Điều trị dài hạn")
     
     st.markdown("""
     **Sau khi qua giai đoạn cấp (24-48 giờ):**
@@ -348,7 +348,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: PREVENTION ==========
-    st.markdown("### 🛡️ Phòng Ngừa")
+    st.markdown("### 🛡️ Phòng ngừa")
     
     st.markdown("""
     **Giáo dục bệnh nhân:**
@@ -378,20 +378,20 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: REFERENCES ==========
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
-    1. **Endocrine Society Clinical Practice Guideline** - 2016
-       - Treatment of Primary Adrenal Insufficiency
-       - Adrenal Crisis Management
+    1. **Hướng dẫn Thực hành Lâm sàng Hiệp hội Nội tiết** - 2016
+       - Điều trị suy thượng thận nguyên phát
+       - Quản lý cơn suy thượng thận cấp
     
     2. **Bornstein SR, et al.** Diagnosis and Treatment of Primary Adrenal Insufficiency:
        An Endocrine Society Clinical Practice Guideline.
        J Clin Endocrinol Metab. 2016;101(2):364-389.
     
-    3. **UpToDate:** Adrenal Crisis - Last updated 2024
-       - Clinical features and diagnosis
-       - Treatment protocols
+    3. **UpToDate:** Cơn suy thượng thận cấp - Cập nhật lần cuối 2024
+       - Đặc điểm lâm sàng và chẩn đoán
+       - Phác đồ điều trị
     
     4. **Hahner S, et al.** Adrenal insufficiency.
        Lancet. 2021;397(10274):613-629.

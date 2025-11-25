@@ -259,10 +259,10 @@ def render():
     
     st.divider()
     
-    st.subheader("📝 Nhập Thông Số 6 Hệ Cơ Quan")
+    st.subheader("📝 Nhập thông số 6 hệ cơ quan")
     
     # Respiratory
-    st.markdown("#### 1️⃣ Hô Hấp")
+    st.markdown("#### 1️⃣ Hô hấp")
     col1, col2 = st.columns(2)
     with col1:
         pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1, format="%d")
@@ -289,7 +289,7 @@ def render():
     st.divider()
     
     # Cardiovascular
-    st.markdown("#### 4️⃣ Tim Mạch")
+    st.markdown("#### 4️⃣ Tim mạch")
     col3, col4 = st.columns(2)
     with col3:
         heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1, format="%d")

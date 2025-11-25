@@ -100,7 +100,7 @@ def render():
     st.markdown("---")
     
     if st.button("📊 Đánh Giá", type="primary", use_container_width=True):
-        st.markdown("## 📊 Kết Quả")
+        st.markdown("## 📊 Kết quả")
         
         # Interpret pain level
         if selected_face == 0:
@@ -140,7 +140,7 @@ def render():
         
         # Treatment recommendations (similar to NRS)
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Nghị Điều Trị")
+        st.markdown("### 💊 Khuyến nghị điều trị")
         
         if selected_face == 0:
             st.success("**✅ Không cần điều trị giảm đau**")
@@ -196,7 +196,7 @@ def render():
             - Phù hợp cho bệnh nhân sa sút trí tuệ, rối loạn ngôn ngữ
             """)
         
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **Wong DL, Baker CM.** Pain in children: comparison of assessment scales. 
                *Pediatr Nurs.* 1988;14(1):9-17.

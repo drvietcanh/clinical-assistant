@@ -6,6 +6,14 @@ import streamlit as st
 from .normal_ranges import get_normal_range, is_critical, interpret_value, ALL_RANGES
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def render():
     """Liver Function Tests"""
     st.subheader("🫀 LFT - Liver Function Tests")
@@ -41,7 +49,7 @@ def render():
                 key="bili_t_umol"
             )
             bili_t = bili_t_input / 17.1  # Convert to mg/dL
-            st.caption(f"≈ {bili_t:.2f} mg/dL")
+            st.caption(f"≈ {_format_num(bili_t, 2)} mg/dL")
         else:
             bili_t = st.number_input(
                 "Bilirubin Total (mg/dL)",
@@ -50,7 +58,7 @@ def render():
                 help="Bình thường: 0.2-1.0 mg/dL",
                 key="bili_t_mgdl"
             )
-            st.caption(f"≈ {bili_t * 17.1:.1f} µmol/L")
+            st.caption(f"≈ {_format_num(bili_t * 17.1, 1)} µmol/L")
         
         # Direct Bilirubin
         if use_si_bili:
@@ -62,7 +70,7 @@ def render():
                 key="bili_d_umol"
             )
             bili_d = bili_d_input / 17.1  # Convert to mg/dL
-            st.caption(f"≈ {bili_d:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(bili_d, 1)} mg/dL")
         else:
             bili_d = st.number_input(
                 "Bilirubin Direct (mg/dL)",
@@ -71,7 +79,7 @@ def render():
                 help="Bình thường: 0-0.3 mg/dL",
                 key="bili_d_mgdl"
             )
-            st.caption(f"≈ {bili_d * 17.1:.1f} µmol/L")
+            st.caption(f"≈ {_format_num(bili_d * 17.1, 1)} µmol/L")
         
         # Calculate indirect bilirubin
         bili_i = bili_t - bili_d

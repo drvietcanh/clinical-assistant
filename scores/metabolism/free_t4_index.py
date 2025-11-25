@@ -6,6 +6,14 @@ Chỉ số T4 tự do - ước tính T4 tự do từ T4 toàn phần và T3 upta
 import streamlit as st
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def calculate_fti(total_t4, t3_uptake):
     """
     Tính Free T4 Index
@@ -128,7 +136,7 @@ def render():
             # Convert nmol/L to µg/dL (1 nmol/L = 0.0777 µg/dL)
             total_t4 = total_t4_nmol * 0.0777
             st.info(f"💡 Giá trị bình thường: **64-154 nmol/L**")
-            st.caption(f"= {total_t4:.1f} µg/dL")
+            st.caption(f"= {_format_num(total_t4, 1)} µg/dL")
     
     with col2:
         st.markdown("### 2️⃣ T3 Resin Uptake (T3RU)")
@@ -240,10 +248,10 @@ def render():
         col1, col2, col3 = st.columns(3)
         
         with col1:
-            st.metric("T4 toàn phần", f"{total_t4:.1f} µg/dL")
+            st.metric("T4 toàn phần", f"{_format_num(total_t4, 1)} µg/dL")
         
         with col2:
-            st.metric("T3 Uptake", f"{t3_uptake:.1f}%")
+            st.metric("T3 Uptake", f"{_format_num(t3_uptake, 1)}%")
         
         with col3:
             st.metric("FTI", f"{result['fti']:.2f}")

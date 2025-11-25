@@ -6,6 +6,14 @@ Cockcroft-Gault Formula
 import streamlit as st
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def render():
     """Creatinine Clearance (CrCl) Calculator - Cockcroft-Gault"""
     st.subheader("🧮 Tính Độ Lọc Cầu Thận (CrCl)")
@@ -14,7 +22,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Số Bệnh Nhân")
+        st.markdown("### 📋 Thông số bệnh nhân")
         
         age = st.number_input(
             "Tuổi (năm)",
@@ -51,12 +59,12 @@ def render():
                 max_value=1500.0,
                 value=88.0,
                 step=5.0,
-                format="%.1f",
+                format="%d",
                 help="Bình thường: 62-106 µmol/L",
                 key="scr_umol"
             )
             scr_mgdl = scr_input / 88.4  # Convert to mg/dL
-            st.caption(f"≈ {scr_mgdl:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(scr_mgdl, 1)} mg/dL")
         else:  # mg/dL
             scr_input = st.number_input(
                 "Creatinine (mg/dL)",
@@ -69,7 +77,8 @@ def render():
                 key="scr_mgdl"
             )
             scr_mgdl = scr_input
-            st.caption(f"≈ {scr_input * 88.4:.0f} µmol/L")
+            scr_umol = round(scr_input * 88.4)
+            st.caption(f"≈ {scr_umol} µmol/L")
         
         sex = st.radio(
             "Giới tính",
@@ -86,7 +95,7 @@ def render():
             crcl = round(crcl, 1)
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if crcl >= 90:
                     st.success(f"## {crcl} mL/phút")

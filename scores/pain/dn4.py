@@ -104,14 +104,14 @@ def render():
     
     st.markdown("---")
     
-    if st.button("📊 Tính Điểm DN4", type="primary", use_container_width=True):
+    if st.button("📊 Tính điểm DN4", type="primary", use_container_width=True):
         # Calculate score
         score = sum([
             q1, q2, q3, q4, q5, q6, q7,  # Questions 1-7
             sign1, sign2, sign3  # Clinical signs 8-10
         ])
         
-        st.markdown("## 📊 Kết Quả")
+        st.markdown("## 📊 Kết quả")
         
         # Interpret
         is_neuropathic = score >= 4
@@ -142,7 +142,7 @@ def render():
         st.markdown(f"**Diễn giải:** {interpretation}")
         
         # Breakdown
-        st.markdown("### 📋 Chi Tiết Điểm Số:")
+        st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         **Phần 1 - Hỏi bệnh nhân (7 câu):**
         - Bỏng rát: {'✅' if q1 else '❌'}
@@ -163,7 +163,7 @@ def render():
         
         # Treatment recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Nghị Điều Trị")
+        st.markdown("### 💊 Khuyến nghị điều trị")
         
         if is_neuropathic:
             st.error("""
@@ -252,7 +252,7 @@ def render():
             - Độ nhạy: ~83%, Độ đặc hiệu: ~90%
             """)
         
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **Bouhassira D, Attal N, Alchaar H, et al.** Comparison of pain syndromes associated with nervous or somatic lesions and development of a new neuropathic pain diagnostic questionnaire (DN4). 
                *Pain.* 2005;114(1-2):29-36.

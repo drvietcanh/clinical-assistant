@@ -66,7 +66,7 @@ def render():
                 max_value=1500.0,
                 value=88.0,
                 step=5.0,
-                format="%.1f",
+                format="%d",
                 key="grace_scr_umol"
             )
             scr_mgdl = scr_umol / 88.4
@@ -252,12 +252,12 @@ def render():
                     st.error(f"## GRACE = {points}")
                     st.error("🚨 Nguy cơ CAO")
             
-            st.markdown("### 💡 Chi Tiết Điểm")
+            st.markdown("### 💡 Chi tiết điểm")
             for d in details:
                 st.write(f"- {d}")
             
             st.markdown("---")
-            st.markdown("### 📈 Nguy Cơ Tử Vong")
+            st.markdown("### 📈 Nguy cơ tử vong")
             
             col_m1, col_m2 = st.columns(2)
             with col_m1:
@@ -271,7 +271,7 @@ def render():
                     value=six_month_mort
                 )
             
-            st.markdown("### 💊 Khuyến Cáo Xử Trí")
+            st.markdown("### 💊 Khuyến cáo xử trí")
             
             if risk_category == "thấp":
                 st.success(f"""
@@ -348,7 +348,7 @@ def render():
                 filename="grace_result"
             )
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **GRACE (Global Registry of Acute Coronary Events) Risk Score**
                 

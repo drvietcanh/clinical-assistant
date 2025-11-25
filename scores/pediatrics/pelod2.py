@@ -233,7 +233,7 @@ def render():
     st.markdown("---")
     
     # Cardiovascular
-    st.markdown("### ❤️ Tim Mạch (Cardiovascular)")
+    st.markdown("### ❤️ Tim mạch (Cardiovascular)")
     
     col1, col2, col3, col4 = st.columns(4)
     
@@ -323,7 +323,7 @@ def render():
     st.markdown("---")
     
     # Respiratory
-    st.markdown("### 🫁 Hô Hấp (Respiratory)")
+    st.markdown("### 🫁 Hô hấp (Respiratory)")
     
     col1, col2 = st.columns(2)
     

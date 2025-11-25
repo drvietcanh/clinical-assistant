@@ -1,16 +1,16 @@
 """
-Myxedema Coma Protocol
-ATA 2014 Guidelines
-Life-threatening hypothyroidism emergency
+Phác Đồ Hôn Mê Phù Niêm (Myxedema Coma)
+Hướng dẫn ATA 2014
+Cấp cứu suy giáp đe dọa tính mạng
 """
 
 import streamlit as st
 
 
 def render():
-    """Myxedema Coma Protocol"""
-    st.subheader("❄️ Myxedema Coma")
-    st.caption("ATA 2014 Guidelines - Life-threatening hypothyroidism emergency")
+    """Phác Đồ Hôn Mê Phù Niêm (Myxedema Coma)"""
+    st.subheader("❄️ Hôn Mê Phù Niêm (Myxedema Coma)")
+    st.caption("Hướng dẫn ATA 2014 - Cấp cứu suy giáp đe dọa tính mạng")
     
     st.error("""
     **🚨 CẤP CỨU - Cần điều trị ngay lập tức**
@@ -83,7 +83,7 @@ def render():
     - **Nhiễm trùng:** Nhiễm trùng hô hấp, tiết niệu
     - **Lạnh:** Tiếp xúc lạnh, mùa đông
     - **Thuốc:** 
-      - Sedatives, anesthetics
+      - Thuốc an thần, gây mê
       - Amiodarone
       - Lithium
       - Phenytoin, carbamazepine
@@ -95,14 +95,14 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### 🚨 Điều Trị Ngay Lập Tức (ICU)")
+    st.markdown("### 🚨 Điều trị ngay lập tức (ICU)")
     
     st.markdown("""
     **Thứ tự ưu tiên điều trị (theo ATA 2014):**
     """)
     
     # Step 1: Supportive Care
-    st.markdown("#### **1. Hồi Sức Hỗ Trợ (Supportive Care)**")
+    st.markdown("#### **1. Hồi sức hỗ trợ (Supportive Care)**")
     
     col1, col2 = st.columns(2)
     
@@ -170,7 +170,7 @@ def render():
         - 2-4mg IV q6-8h
         
         **Lưu ý:**
-        - Không có mineralocorticoid activity
+        - Không có hoạt tính mineralocorticoid
         - Cần bổ sung fludrocortisone nếu cần
         """)
     
@@ -225,7 +225,7 @@ def render():
     """)
     
     # Step 4: Additional treatments
-    st.markdown("#### **4. Điều Trị Bổ Sung**")
+    st.markdown("#### **4. Điều trị bổ sung**")
     
     st.markdown("""
     **A. Điều trị nhiễm trùng:**
@@ -235,18 +235,18 @@ def render():
     **B. Điều chỉnh điện giải:**
     - **Hyponatremia:** 
       - Nếu nhẹ: Hạn chế dịch
-      - Nếu nặng: Dùng hypertonic saline cẩn thận
+      - Nếu nặng: Dùng dung dịch muối ưu trương cẩn thận
       - Điều chỉnh từ từ (0.5-1 mEq/L/giờ)
     
     **C. Tránh thuốc:**
-    - Tránh sedatives, anesthetics không cần thiết
+    - Tránh thuốc an thần, gây mê không cần thiết
     - Tránh thuốc làm chậm nhịp tim
     """)
     
     st.markdown("---")
     
     # ========== SECTION 4: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     st.markdown("""
     **Theo dõi sát trong 24-48 giờ đầu:**
@@ -282,7 +282,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Dân Số Đặc Biệt")
+    st.markdown("### 👥 Dân số đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -313,7 +313,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: LONG-TERM MANAGEMENT ==========
-    st.markdown("### 🔄 Điều Trị Dài Hạn")
+    st.markdown("### 🔄 Điều trị dài hạn")
     
     st.markdown("""
     **Sau khi qua giai đoạn cấp (3-5 ngày):**
@@ -341,7 +341,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: PROGNOSIS ==========
-    st.markdown("### 📊 Tiên Lượng")
+    st.markdown("### 📊 Tiên lượng")
     
     st.markdown("""
     **Tỷ lệ tử vong:**
@@ -367,19 +367,19 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: REFERENCES ==========
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
-    1. **American Thyroid Association (ATA) Guidelines for Hypothyroidism** - 2014
-       - Myxedema Coma Management
-       - Diagnostic Criteria and Treatment
+    1. **Hướng dẫn Hiệp hội Tuyến giáp Hoa Kỳ (ATA) về Suy giáp** - 2014
+       - Quản lý hôn mê phù niêm
+       - Tiêu chuẩn chẩn đoán và điều trị
     
     2. **Jonklaas J, et al.** Guidelines for the treatment of hypothyroidism.
        Thyroid. 2014;24(12):1670-1751.
     
-    3. **UpToDate:** Myxedema Coma - Last updated 2024
-       - Clinical features and diagnosis
-       - Treatment protocols
+    3. **UpToDate:** Hôn mê phù niêm - Cập nhật lần cuối 2024
+       - Đặc điểm lâm sàng và chẩn đoán
+       - Phác đồ điều trị
     
     4. **Wartofsky L.** Myxedema coma.
        Endocrinol Metab Clin North Am. 2006;35(4):687-698.

@@ -57,10 +57,12 @@ def render():
                 max_value=16.0,
                 value=8.5,
                 step=0.1,
+                format="%.1f",
                 help="Bình thường: 8.5-10.5 mg/dL"
             )
             ca_mgdl = ca
-            st.caption(f"≈ {ca / 4:.2f} mmol/L")
+            ca_mmol = round(ca / 4, 2)
+            st.caption(f"≈ {ca_mmol if ca_mmol != int(ca_mmol) else int(ca_mmol)} mmol/L")
         else:
             ca = st.number_input(
                 "Calcium (mmol/L):",
@@ -68,10 +70,11 @@ def render():
                 max_value=4.0,
                 value=2.2,
                 step=0.05,
+                format="%.1f",
                 help="Bình thường: 2.12-2.62 mmol/L"
             )
             ca_mgdl = ca * 4
-            st.caption(f"≈ {ca_mgdl:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(ca_mgdl, 1)} mg/dL")
         
         # Albumin
         st.markdown("#### 2. Albumin")
@@ -84,7 +87,7 @@ def render():
             format="%.1f",
             help="Bình thường: 3.5-5.5 g/dL"
         )
-        st.caption(f"≈ {albumin * 10:.0f} g/L")
+        st.caption(f"≈ {round(albumin * 10)} g/L")
         
         st.markdown("---")
         
@@ -111,7 +114,7 @@ def render():
                 color = "warning"
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 st.info(f"""
                 **Ca đo được:**
@@ -444,7 +447,7 @@ def render():
             
             # Additional info
             st.markdown("---")
-            with st.expander("🧮 Chi Tiết Tính Toán"):
+            with st.expander("🧮 Chi tiết tính toán"):
                 st.markdown(f"""
                 **Công thức Payne:**
                 ```
@@ -462,7 +465,7 @@ def render():
                 - {ca_corrected_mgdl:.1f} mg/dL = {ca_corrected_mmol:.2f} mmol/L
                 """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **Primary Reference:**
                 - Payne RB, Little AJ, Williams RB, Milner JR. 

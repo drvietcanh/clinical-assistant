@@ -4,7 +4,7 @@ Defines available calculators organized by specialty
 """
 
 SCORES_BY_SPECIALTY = {
-    "🚨 Cấp Cứu & Hồi Sức (Emergency & Critical Care)": {
+    "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)": {
         "NEWS2": {"name": "NEWS2 - National Early Warning Score 2", "desc": "Hệ thống cảnh báo sớm cho bệnh nhân nội trú (DÙNG HÀNG NGÀY)", "status": "✅"},
         "qSOFA": {"name": "qSOFA - Quick SOFA", "desc": "Sàng lọc nhiễm trùng huyết", "status": "✅"},
         "SOFA": {"name": "SOFA - Sequential Organ Failure Assessment", "desc": "Đánh giá suy cơ quan", "status": "✅"},
@@ -14,7 +14,7 @@ SCORES_BY_SPECIALTY = {
         "MODS": {"name": "MODS - Multiple Organ Dysfunction Score", "desc": "Rối loạn đa cơ quan", "status": "✅"},
     },
     
-    "❤️ Tim Mạch (Cardiology)": {
+    "❤️ Tim mạch (Cardiology)": {
         "ASCVD Risk": {"name": "ASCVD Risk Calculator ⭐", "desc": "Nguy cơ tim mạch 10 năm - ACC/AHA Pooled Cohort Equations (THAY THẾ FRAMINGHAM)", "status": "✅"},
         "NYHA": {"name": "NYHA Classification", "desc": "Phân loại chức năng suy tim (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Killip": {"name": "Killip Classification", "desc": "Suy tim cấp trong AMI (DÙNG HÀNG NGÀY)", "status": "✅"},
@@ -30,7 +30,7 @@ SCORES_BY_SPECIALTY = {
         "Corrected QT": {"name": "QTc - Corrected QT Interval", "desc": "QT điều chỉnh theo nhịp tim", "status": "✅"},
     },
     
-    "🫁 Hô Hấp (Respiratory)": {
+    "🫁 Hô hấp (Respiratory)": {
         "PERC": {"name": "PERC Rule", "desc": "Loại trừ PE không cần D-dimer (DÙNG HÀNG NGÀY)", "status": "✅"},
         "CURB-65": {"name": "CURB-65", "desc": "Mức độ nặng viêm phổi", "status": "✅"},
         "PSI/PORT": {"name": "PSI/PORT Score", "desc": "Tiên lượng viêm phổi cộng đồng", "status": "✅"},
@@ -104,7 +104,7 @@ SCORES_BY_SPECIALTY = {
         "Modified Bishop": {"name": "Modified Bishop Score", "desc": "Dự đoán chuyển dạ", "status": "✅"},
     },
     
-    "💉 Nội Tiết - Chuyển Hóa (Endocrinology/Metabolism)": {
+    "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)": {
         "CrCl": {"name": "CrCl - Cockcroft-Gault", "desc": "Độ thanh thải Creatinine - Điều chỉnh liều thuốc (DÙNG HÀNG NGÀY)", "status": "✅"},
         "BMI/IBW/BSA": {"name": "BMI | IBW | BSA", "desc": "Chỉ số cơ thể - BMI, Cân nặng lý tưởng, Diện tích da (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Osmolality": {"name": "Serum Osmolality & Gap", "desc": "Độ thẩm thấu - Nghi ngờ ngộ độc (DÙNG HÀNG NGÀY)", "status": "✅"},
@@ -126,7 +126,7 @@ SCORES_BY_SPECIALTY = {
         "Gout Diagnostic": {"name": "ACR/EULAR Gout Classification", "desc": "Chẩn đoán bệnh gout", "status": "✅"},
     },
     
-    "🦠 Nhiễm Khuẩn (Infectious Disease)": {
+    "🦠 Nhiễm khuẩn (Infectious Disease)": {
         "SIRS": {"name": "SIRS - Systemic Inflammatory Response", "desc": "Hội chứng đáp ứng viêm toàn thân", "status": "✅"},
         "Pitt Bacteremia": {"name": "Pitt Bacteremia Score", "desc": "Tiên lượng nhiễm khuẩn huyết", "status": "✅"},
         "MASCC": {"name": "MASCC Risk Index", "desc": "Nguy cơ sốt giảm bạch cầu hạt", "status": "✅"},
@@ -142,7 +142,7 @@ SCORES_BY_SPECIALTY = {
         "Parkland Formula": {"name": "Parkland Formula", "desc": "Truyền dịch ban đầu cho bỏng", "status": "✅"},
     },
     
-    "🎗️ Ung Thư (Oncology)": {
+    "🎗️ Ung thư (Oncology)": {
         "ECOG": {"name": "ECOG Performance Status", "desc": "Trạng thái thể trạng bệnh nhân ung thư", "status": "✅"},
         "Karnofsky": {"name": "Karnofsky Performance Scale", "desc": "Thang đo thể trạng", "status": "✅"},
         "Palliative Performance": {"name": "PPS - Palliative Performance Scale", "desc": "Thể trạng chăm sóc giảm nhẹ", "status": "✅"},

@@ -18,6 +18,14 @@ import streamlit as st
 import math
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def calculate_meld(bilirubin, inr, creatinine, dialysis=False):
     """
     Calculate MELD Score
@@ -77,10 +85,10 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 🔬 Xét Nghiệm")
+        st.markdown("### 🔬 Xét nghiệm")
         
         # 1. Bilirubin
-        st.markdown("#### 1. Bilirubin Toàn Phần")
+        st.markdown("#### 1. Bilirubin toàn phần")
         
         bili_unit = st.radio(
             "Đơn vị:",
@@ -99,7 +107,7 @@ def render():
                 help="Bình thường: 0.3-1.2 mg/dL"
             )
             bili_mgdl = bili
-            st.caption(f"≈ {bili * 17.1:.0f} µmol/L")
+            st.caption(f"≈ {round(bili * 17.1)} µmol/L")
         else:
             bili = st.number_input(
                 "Bilirubin (µmol/L):",
@@ -110,7 +118,7 @@ def render():
                 help="Bình thường: 5-21 µmol/L"
             )
             bili_mgdl = bili / 17.1
-            st.caption(f"≈ {bili_mgdl:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(bili_mgdl, 1)} mg/dL")
         
         # 2. INR
         st.markdown("#### 2. INR")
@@ -141,11 +149,11 @@ def render():
                 max_value=1500.0,
                 value=88.0,
                 step=5.0,
-                format="%.1f",
+                format="%d",
                 help="Bình thường: 62-115 µmol/L"
             )
             cr_mgdl = cr / 88.4
-            st.caption(f"≈ {cr_mgdl:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(cr_mgdl, 1)} mg/dL")
         else:  # mg/dL
             cr = st.number_input(
                 "Creatinine (mg/dL):",
@@ -157,7 +165,7 @@ def render():
                 help="Bình thường: 0.7-1.3 mg/dL"
             )
             cr_mgdl = cr
-            st.caption(f"≈ {cr * 88.4:.0f} µmol/L")
+            st.caption(f"≈ {round(cr * 88.4)} µmol/L")
         
         # 4. Dialysis
         st.markdown("#### 4. Lọc Máu")
@@ -202,7 +210,7 @@ def render():
                 transplant_priority = "Rất cao (khẩn cấp)"
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 st.markdown(f"""
                 <div style="background-color: {color}; padding: 20px; border-radius: 10px; text-align: center;">
@@ -541,7 +549,7 @@ def render():
                 filename="meld_result"
             )
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **Primary Reference:**
                 - Kamath PS, Wiesner RH, Malinchoc M, et al. 

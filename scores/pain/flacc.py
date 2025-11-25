@@ -103,10 +103,10 @@ def render():
     
     st.markdown("---")
     
-    if st.button("📊 Tính Điểm FLACC", type="primary", use_container_width=True):
+    if st.button("📊 Tính điểm FLACC", type="primary", use_container_width=True):
         total_score = face + legs + activity + cry + consolability
         
-        st.markdown("## 📊 Kết Quả")
+        st.markdown("## 📊 Kết quả")
         
         # Interpret score
         if total_score == 0:
@@ -143,7 +143,7 @@ def render():
         """, unsafe_allow_html=True)
         
         # Breakdown
-        st.markdown("### 📋 Chi Tiết Điểm Số:")
+        st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         - **Face (Khuôn mặt):** {face}/2
         - **Legs (Chân):** {legs}/2
@@ -158,7 +158,7 @@ def render():
         
         # Treatment recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Nghị Điều Trị")
+        st.markdown("### 💊 Khuyến nghị điều trị")
         
         if total_score == 0:
             st.success("**✅ Không cần điều trị giảm đau**")
@@ -237,7 +237,7 @@ def render():
             - Cân nhắc các yếu tố khác: đói, sợ hãi, bệnh lý nền
             """)
         
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **Merkel SI, Voepel-Lewis T, Shayevitz JR, Malviya S.** The FLACC: a behavioral scale for scoring postoperative pain in young children. 
                *Pediatr Nurs.* 1997;23(3):293-297.

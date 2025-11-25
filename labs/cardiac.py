@@ -8,13 +8,13 @@ from .normal_ranges import get_normal_range, is_critical, interpret_value, ALL_R
 
 def render():
     """Cardiac Markers"""
-    st.subheader("❤️ Cardiac Markers - Dấu Ấn Tim Mạch")
+    st.subheader("❤️ Cardiac Markers - Dấu ấn tim mạch")
     st.caption("Xét nghiệm chẩn đoán nhồi máu cơ tim và suy tim")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 📝 Nhập Kết Quả")
+        st.markdown("#### 📝 Nhập kết quả")
         
         trop_i = st.number_input(
             "Troponin I (ng/mL)", 
@@ -36,7 +36,7 @@ def render():
         )
     
     with col2:
-        st.markdown("#### 📊 Giải Thích Kết Quả")
+        st.markdown("#### 📊 Giải thích kết quả")
         
         # Troponin I
         if trop_i < 0.04:
@@ -63,7 +63,7 @@ def render():
             st.caption("→ Tổn thương cơ tim hoặc cơ vân")
     
     st.markdown("---")
-    with st.expander("📚 Hướng Dẫn Diễn Giải"):
+    with st.expander("📚 Hướng dẫn diễn giải"):
         st.markdown("""
         ### **Troponin I:**
         - **Tăng:** 3-4 giờ sau nhồi máu cơ tim
@@ -82,7 +82,7 @@ def render():
         - Có thể tăng trong: tổn thương cơ vân, phẫu thuật, chấn thương
         - Hiện nay ít dùng hơn, thay bằng Troponin
         
-        ### **Nguyên Tắc Chung:**
+        ### **Nguyên tắc chung:**
         - ✅ **Luôn kết hợp với lâm sàng và ECG**
         - ✅ **Xét nghiệm serial** (0h, 3h, 6h) để theo dõi xu hướng
         - ✅ **Troponin âm tính không loại trừ ACS** nếu <3 giờ từ khởi phát

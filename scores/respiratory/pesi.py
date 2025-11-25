@@ -58,7 +58,7 @@ def render():
     gender_score = 10 if gender == "Nam" else 0
     
     # Cancer
-    st.markdown("### 3️⃣ Ung Thư")
+    st.markdown("### 3️⃣ Ung thư")
     cancer = st.checkbox(
         "Có ung thư (đang điều trị hoặc đã điều trị trong 6 tháng qua)",
         key="pesi_cancer"
@@ -192,12 +192,12 @@ def render():
     
     st.markdown("---")
     
-    if st.button("📊 Tính Điểm PESI", type="primary", use_container_width=True):
+    if st.button("📊 Tính điểm PESI", type="primary", use_container_width=True):
         total_score = (age_score + gender_score + cancer_score + heart_failure_score + 
                       lung_score + pulse_score + sbp_score + rr_score + temp_score + 
                       mental_score + spo2_score)
         
-        st.markdown("## 📊 Kết Quả")
+        st.markdown("## 📊 Kết quả")
         
         # Determine risk class
         if total_score <= 65:
@@ -254,7 +254,7 @@ def render():
         st.markdown(f"**Khuyến nghị điều trị:** {treatment}")
         
         # Breakdown
-        st.markdown("### 📋 Chi Tiết Điểm Số:")
+        st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         - **Tuổi:** {age_score} điểm (1 điểm/năm)
         - **Giới tính (Nam):** {gender_score} điểm
@@ -273,11 +273,11 @@ def render():
         
         # Treatment recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Nghị Điều Trị")
+        st.markdown("### 💊 Khuyến nghị điều trị")
         
         if total_score <= 85:
             st.info(f"""
-            **✅ PESI Class {risk_class} - Nguy Cơ Thấp (≤ 85 điểm)**
+            **✅ PESI Class {risk_class} - Nguy cơ thấp (≤ 85 điểm)**
             
             **Điều trị:**
             - **Có thể điều trị ngoại trú** (Class I-II)
@@ -294,7 +294,7 @@ def render():
             """)
         elif total_score <= 105:
             st.warning(f"""
-            **⚠️ PESI Class {risk_class} - Nguy Cơ Trung Bình (86-105 điểm)**
+            **⚠️ PESI Class {risk_class} - Nguy cơ trung bình (86-105 điểm)**
             
             **Điều trị:**
             - **Nên điều trị nội trú**
@@ -309,7 +309,7 @@ def render():
             """)
         else:
             st.error(f"""
-            **🚨 PESI Class {risk_class} - Nguy Cơ Cao (≥ 106 điểm)**
+            **🚨 PESI Class {risk_class} - Nguy cơ cao (≥ 106 điểm)**
             
             **Điều trị:**
             - **Cần điều trị nội trú, theo dõi sát**
@@ -330,9 +330,9 @@ def render():
             - Cần theo dõi sát, can thiệp kịp thời
             """)
         
-        with st.expander("📚 Hướng Dẫn Sử Dụng"):
+        with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
-            ### 🎯 Cách Đánh Giá:
+            ### 🎯 Cách đánh giá:
             
             1. **Đánh giá khi chẩn đoán PE:**
                - Tính điểm PESI ngay khi chẩn đoán
@@ -346,17 +346,17 @@ def render():
                - PESI + Troponin, BNP để đánh giá nguy cơ
                - PESI + siêu âm tim để đánh giá suy tim phải
             
-            ### 📋 So Sánh PESI vs Wells PE:
+            ### 📋 So sánh PESI vs Wells PE:
             - **Wells PE:** Đánh giá xác suất trước test (có PE hay không)
             - **PESI:** Đánh giá mức độ nặng và tiên lượng (sau khi đã chẩn đoán PE)
             
-            ### ⚠️ Lưu Ý:
+            ### ⚠️ Lưu ý:
             - PESI dùng cho bệnh nhân đã được chẩn đoán PE
             - Không dùng để chẩn đoán PE
             - Cân nhắc các yếu tố khác (troponin, BNP, siêu âm tim) khi quyết định điều trị
             """)
         
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **Aujesky D, Obrosky DS, Stone RA, et al.** Derivation and validation of a prognostic model for pulmonary embolism. 
                *Am J Respir Crit Care Med.* 2005;172(8):1041-1046.

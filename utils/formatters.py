@@ -84,24 +84,26 @@ def format_height(height: Union[int, float]) -> str:
 
 def format_lab_value(value: float, decimals: int = 1) -> str:
     """
-    Format giá trị lab - mặc định 1 số thập phân
+    Format giá trị lab - mặc định 1 số thập phân, tự động loại bỏ số 0 thừa
     
     Args:
         value: Giá trị lab
         decimals: Số chữ số thập phân (mặc định 1, có thể 2 cho một số lab)
     
     Returns:
-        String đã format
+        String đã format (loại bỏ số 0 thừa)
     
     Example:
         >>> format_lab_value(100.5)
         '100.5'
         >>> format_lab_value(100.0)
-        '100.0'
+        '100'
         >>> format_lab_value(100.25, decimals=2)
         '100.25'
+        >>> format_lab_value(100.0, decimals=2)
+        '100'
     """
-    return f"{value:.{decimals}f}"
+    return format_number(value, decimals=decimals, remove_trailing_zeros=True)
 
 
 def format_percentage(value: float, decimals: int = 1) -> str:

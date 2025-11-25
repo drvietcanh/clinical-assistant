@@ -120,6 +120,7 @@ def render():
             max_value=1000.0,
             value=60.0,
             step=5.0,
+            format="%d",
             help="Bình thường thai: 40-90 µmol/L"
         )
         creat_high = creat > 97  # >1.1 mg/dL

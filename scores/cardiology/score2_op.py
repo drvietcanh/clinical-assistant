@@ -93,7 +93,7 @@ def calculate_score2_op(
         risk_class = "LOW_MODERATE"
         color = "🟢"
         recommendation = f"""
-        **🟢 Nguy cơ Tim Mạch THẤP-TRUNG BÌNH (<7.5% trong {time_horizon} năm):**
+        **🟢 Nguy cơ tim mạch THẤP-TRUNG BÌNH (<7.5% trong {time_horizon} năm):**
         
         **Khuyến cáo cho người cao tuổi:**
         
@@ -119,7 +119,7 @@ def calculate_score2_op(
         risk_class = "HIGH"
         color = "🟡"
         recommendation = f"""
-        **🟡 Nguy cơ Tim Mạch CAO (7.5-15% trong {time_horizon} năm):**
+        **🟡 Nguy cơ tim mạch CAO (7.5-15% trong {time_horizon} năm):**
         
         **Khuyến cáo:**
         
@@ -151,7 +151,7 @@ def calculate_score2_op(
         risk_class = "VERY_HIGH"
         color = "🟠"
         recommendation = f"""
-        **🟠 Nguy cơ Tim Mạch RẤT CAO (≥15% trong {time_horizon} năm):**
+        **🟠 Nguy cơ tim mạch RẤT CAO (≥15% trong {time_horizon} năm):**
         
         **Khuyến cáo (cân nhắc cá nhân hóa):**
         
@@ -216,7 +216,7 @@ def render():
         - Đặc biệt cho elderly: competing risks, life expectancy
         - Cân nhắc quality of life vs treatment burden
         
-        ### 🎯 Yếu Tố Nguy Cơ
+        ### 🎯 Yếu tố nguy cơ
         
         Giống SCORE2:
         1. Tuổi (≥70)
@@ -225,7 +225,7 @@ def render():
         4. Huyết áp tâm thu
         5. Cholesterol (non-HDL)
         
-        ### ⏱️ Thời Gian Dự Đoán
+        ### ⏱️ Thời gian dự đoán
         
         - **10 năm:** Tiêu chuẩn
         - **5 năm:** Phù hợp hơn nếu tuổi thọ dự kiến hạn chế
@@ -249,7 +249,7 @@ def render():
         - Cognitive function
         - Patient preferences
         
-        ### 📊 Mục Tiêu Linh Hoạt Hơn
+        ### 📊 Mục tiêu linh hoạt hơn
         
         Ở người cao tuổi, mục tiêu điều trị cần **CÁ NHÂN HÓA:**
         - LDL-C: <2.6 mmol/L thay vì <1.4-1.8
@@ -273,7 +273,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Thông Tin")
+    st.subheader("📝 Nhập thông tin")
     
     col1, col2 = st.columns(2)
     
@@ -348,7 +348,7 @@ def render():
         
         with col_r1:
             st.metric(
-                f"**Nguy Cơ {time_horizon} Năm**",
+                f"**Nguy cơ {time_horizon} năm**",
                 f"{result['risk']:.1f}%"
             )
             st.caption("Mắc CVD (MI + Stroke)")
@@ -414,7 +414,7 @@ def render():
         st.session_state['score2_op_result'] = result
     
     # Quick reference
-    with st.expander("📖 Nguyên Tắc Điều Trị Người Cao Tuổi"):
+    with st.expander("📖 Nguyên tắc điều trị người cao tuổi"):
         st.markdown("""
         ### Start Low, Go Slow
         

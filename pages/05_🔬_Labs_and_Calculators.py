@@ -134,10 +134,10 @@ if category == "🧮 Calculators":
     st.info(f"""
     **Calculator:** {calculator_type}
     
-    **Instructions:**
-    1. Enter input values
-    2. View calculated results
-    3. Check related lab panels for reference ranges
+    **Hướng dẫn:**
+    1. Nhập các giá trị đầu vào
+    2. Xem kết quả tính toán
+    3. Kiểm tra các panel xét nghiệm liên quan để tra cứu khoảng giá trị tham chiếu
     """)
     
     # Quick Links to related lab panels
@@ -209,11 +209,11 @@ elif category == "🔬 Lab Panels":
     st.info(f"""
     **Lab Panel:** {lab_panel.split(' - ')[1] if ' - ' in lab_panel else lab_panel}
     
-    **Instructions:** 
-    1. Enter patient lab values
-    2. View automatic interpretation
-    3. Check reference ranges
-    4. Use Quick Actions below to calculate related values
+    **Hướng dẫn:** 
+    1. Nhập giá trị xét nghiệm của bệnh nhân
+    2. Xem giải thích tự động
+    3. Kiểm tra khoảng giá trị tham chiếu
+    4. Sử dụng Quick Actions bên dưới để tính toán các giá trị liên quan
     """)
     
     # Quick Actions section (for integration)

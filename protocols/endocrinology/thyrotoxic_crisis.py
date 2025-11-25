@@ -1,16 +1,16 @@
 """
-Thyrotoxic Crisis (Thyroid Storm) Protocol
-ATA 2016 Guidelines
-Life-threatening emergency requiring immediate treatment
+Phác Đồ Cơn Bão Giáp (Thyrotoxic Crisis)
+Hướng dẫn ATA 2016
+Cấp cứu đe dọa tính mạng cần điều trị ngay lập tức
 """
 
 import streamlit as st
 
 
 def render():
-    """Thyrotoxic Crisis (Thyroid Storm) Protocol"""
-    st.subheader("⚡ Thyrotoxic Crisis (Thyroid Storm)")
-    st.caption("ATA 2016 Guidelines - Life-threatening hyperthyroidism emergency")
+    """Phác Đồ Cơn Bão Giáp (Thyrotoxic Crisis)"""
+    st.subheader("⚡ Cơn Bão Giáp (Thyrotoxic Crisis)")
+    st.caption("Hướng dẫn ATA 2016 - Cấp cứu cường giáp đe dọa tính mạng")
     
     st.error("""
     **🚨 CẤP CỨU - Cần điều trị ngay lập tức**
@@ -161,14 +161,14 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### 🚨 Điều Trị Ngay Lập Tức (ICU)")
+    st.markdown("### 🚨 Điều trị ngay lập tức (ICU)")
     
     st.markdown("""
     **Thứ tự ưu tiên điều trị (theo ATA 2016):**
     """)
     
     # Step 1: Supportive Care
-    st.markdown("#### **1. Hồi Sức Hỗ Trợ (Supportive Care)**")
+    st.markdown("#### **1. Hồi sức hỗ trợ (Supportive Care)**")
     st.markdown("""
     - **Oxygen:** Duy trì SpO2 >90%
     - **Dịch truyền:** NS 0.9% hoặc LR, bù dịch theo nhu cầu
@@ -215,12 +215,12 @@ def render():
         """)
     
     # Step 3: Antithyroid drugs
-    st.markdown("#### **3. Thuốc Kháng Giáp (Antithyroid Drugs)**")
+    st.markdown("#### **3. Thuốc kháng giáp (Antithyroid Drugs)**")
     
     st.warning("""
     **⚠️ QUAN TRỌNG: Dùng PTU (Propylthiouracil) thay vì Methimazole trong Thyroid Storm**
     
-    **Lý do:** PTU ức chế cả T4→T3 conversion (ngoài ức chế tổng hợp hormone)
+    **Lý do:** PTU ức chế cả chuyển đổi T4→T3 (ngoài ức chế tổng hợp hormone)
     """)
     
     col1, col2 = st.columns(2)
@@ -252,15 +252,15 @@ def render():
         - Sau đó 20-30mg PO q6-8h
         
         **Lưu ý:**
-        - Không ức chế T4→T3 conversion
-        - Cần kết hợp với thuốc khác để ức chế conversion
+        - Không ức chế chuyển đổi T4→T3
+        - Cần kết hợp với thuốc khác để ức chế chuyển đổi
         """)
     
     # Step 4: Iodine
     st.markdown("#### **4. Iodine (Ức chế giải phóng hormone)**")
     
     st.markdown("""
-    **⚠️ QUAN TRỌNG: Chỉ dùng Iodine SAU KHI đã dùng antithyroid drugs ≥1 giờ**
+    **⚠️ QUAN TRỌNG: Chỉ dùng Iodine SAU KHI đã dùng thuốc kháng giáp ≥1 giờ**
     
     **Lý do:** Nếu dùng trước, Iodine có thể làm tăng tổng hợp hormone (Jod-Basedow effect)
     """)
@@ -293,7 +293,7 @@ def render():
         """)
     
     # Step 5: Corticosteroids
-    st.markdown("#### **5. Corticosteroids (Ức chế T4→T3 conversion + Adrenal support)**")
+    st.markdown("#### **5. Corticosteroids (Ức chế chuyển đổi T4→T3 + Hỗ trợ thượng thận)**")
     
     st.markdown("""
     **Dexamethasone hoặc Hydrocortisone:**
@@ -328,7 +328,7 @@ def render():
         """)
     
     # Step 6: Additional treatments
-    st.markdown("#### **6. Điều Trị Bổ Sung**")
+    st.markdown("#### **6. Điều trị bổ sung**")
     
     st.markdown("""
     **A. Cholestyramine (Nếu có):**
@@ -347,7 +347,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     st.markdown("""
     **Theo dõi sát trong 24-48 giờ đầu:**
@@ -381,7 +381,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Dân Số Đặc Biệt")
+    st.markdown("### 👥 Dân số đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -415,7 +415,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: LONG-TERM MANAGEMENT ==========
-    st.markdown("### 🔄 Điều Trị Dài Hạn")
+    st.markdown("### 🔄 Điều trị dài hạn")
     
     st.markdown("""
     **Sau khi qua giai đoạn cấp (24-48 giờ):**
@@ -425,14 +425,14 @@ def render():
     - Corticosteroids: Giảm dần trong 5-7 ngày
     - Iodine: Ngừng sau 7-10 ngày
     
-    **2. Duy trì antithyroid drugs:**
-    - PTU: 100-150mg PO q8h
-    - Hoặc Methimazole: 10-15mg PO q8h
+    **2. Duy trì thuốc kháng giáp:**
+    - PTU: 100-150mg uống q8h
+    - Hoặc Methimazole: 10-15mg uống q8h
     - Điều trị 12-18 tháng
     
     **3. Lựa chọn điều trị dài hạn:**
-    - Tiếp tục antithyroid drugs
-    - Radioactive iodine (RAI)
+    - Tiếp tục thuốc kháng giáp
+    - Iod phóng xạ (RAI)
     - Phẫu thuật cắt tuyến giáp
     
     **4. Theo dõi:**
@@ -444,19 +444,19 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: REFERENCES ==========
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
-    1. **American Thyroid Association (ATA) Guidelines for Hyperthyroidism** - 2016
-       - Thyroid Storm Management
-       - Diagnostic Criteria and Treatment
+    1. **Hướng dẫn Hiệp hội Tuyến giáp Hoa Kỳ (ATA) về Cường giáp** - 2016
+       - Quản lý cơn bão giáp
+       - Tiêu chuẩn chẩn đoán và điều trị
     
     2. **Burch HB, Wartofsky L.** Life-threatening thyrotoxicosis. Thyroid storm.
        Endocrinol Metab Clin North Am. 1993;22(2):263-277.
     
-    3. **UpToDate:** Thyroid Storm (Thyrotoxic Crisis) - Last updated 2024
-       - Clinical features and diagnosis
-       - Treatment protocols
+    3. **UpToDate:** Cơn bão giáp (Thyrotoxic Crisis) - Cập nhật lần cuối 2024
+       - Đặc điểm lâm sàng và chẩn đoán
+       - Phác đồ điều trị
     
     4. **Ross DS, et al.** 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis.
        Thyroid. 2016;26(10):1343-1421.

@@ -14,6 +14,14 @@ Lancet. 2000;356(9238):1318-21.
 import streamlit as st
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def calculate_gbs(
     bun_mgdl, hgb, sbp, hr, melena, syncope, liver_disease, heart_failure, gender
 ):
@@ -129,7 +137,7 @@ def render():
                 help="Bình thường: 2.5-7.1 mmol/L"
             )
             bun_mgdl = bun_mmol * 2.8
-            st.caption(f"≈ {bun_mgdl:.1f} mg/dL")
+            st.caption(f"≈ {_format_num(bun_mgdl, 1)} mg/dL")
         else:
             bun = st.number_input(
                 "BUN (mg/dL):",
@@ -141,7 +149,7 @@ def render():
                 help="Bình thường: 7-20 mg/dL"
             )
             bun_mgdl = bun
-            st.caption(f"≈ {bun / 2.8:.1f} mmol/L")
+            st.caption(f"≈ {_format_num(bun / 2.8, 1)} mmol/L")
         
         # Hemoglobin
         st.markdown("#### 2. Hemoglobin")
@@ -153,7 +161,7 @@ def render():
             step=0.1,
             help="Nam: 13.5-17.5 g/dL, Nữ: 12.0-15.5 g/dL"
         )
-        st.caption(f"≈ {hgb * 10:.0f} g/L")
+        st.caption(f"≈ {round(hgb * 10)} g/L")
         
         st.markdown("---")
         st.markdown("### 🩺 Sinh Hiệu")
@@ -245,7 +253,7 @@ def render():
                 mortality = ">5%"
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if color == "green":
                     st.success(f"## GBS = {gbs}")
@@ -477,7 +485,7 @@ def render():
             
             # Score breakdown
             st.markdown("---")
-            with st.expander("📊 Chi Tiết Điểm Số"):
+            with st.expander("📊 Chi tiết điểm số"):
                 st.markdown(f"""
                 **Glasgow-Blatchford Score = {gbs}**
                 
@@ -543,7 +551,7 @@ def render():
                 - **Kết hợp cả hai** cho đánh giá toàn diện
                 """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **Primary Reference:**
                 - Blatchford O, Murray WR, Blatchford M. 
@@ -642,7 +650,7 @@ def render():
         - Aortoenteric fistula
         """)
     
-    with st.expander("💊 Điều Trị PPI Trong UGIB"):
+    with st.expander("💊 Điều trị PPI trong UGIB"):
         st.markdown("""
         **PPI (Proton Pump Inhibitor) trong UGIB:**
         
