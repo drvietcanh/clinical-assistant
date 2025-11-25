@@ -10,11 +10,12 @@ try:
 except ImportError:
     ANTIBIOTICS_DATABASE = {}
 from .card_components import render_compact_drug_card
+from .detail_view import display_drug_info
 
 def render_drug_database():
     """Main function to render drug database page with search and browse"""
     from .search import search_drugs, search_drugs_with_filters, get_drug_autocomplete_suggestions, get_recent_searches, add_recent_search, search_by_group, save_search, get_saved_searches, load_saved_search, delete_saved_search
-    from .drug_database import DRUG_GROUPS
+    from ..drug_database import DRUG_GROUPS
     drug_count = len(DRUG_DATABASE)
     st.markdown(
         f"""
