@@ -103,7 +103,7 @@ def render_renal_adjustment_table(result):
 def render_detailed_dose(selected_ab, weight, ibw, abw, crcl, indication_code, is_pediatric, height, is_obese, is_malnourished=False, age_years=None):
     """Render detailed dose calculation results"""
     st.markdown("---")
-    st.markdown("### 💉 Tính Liều Chi Tiết:")
+    st.markdown("### 💉 Tính liều chi tiết:")
     
     # Pediatric templates (Phase 5 - Task 5.2)
     if is_pediatric and age_years:

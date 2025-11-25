@@ -16,7 +16,7 @@ def _format_num(value: float, decimals: int = 1) -> str:
 
 def render():
     """Vancomycin Dosing Calculator"""
-    st.subheader("💉 Vancomycin - Tính Liều")
+    st.subheader("💉 Vancomycin - Tính liều")
     st.caption("Liều Khởi Đầu & Theo Dõi Nồng Độ Thuốc (TDM)")
     
     st.info("""
@@ -143,7 +143,7 @@ def render():
             key="vanco_indication"
         )
         
-        if st.button("🧮 Tính Liều Vancomycin", type="primary", key="vanco_calc"):
+        if st.button("🧮 Tính liều Vancomycin", type="primary", key="vanco_calc"):
             # Loading dose calculation
             # Standard: 25-30 mg/kg for serious infections
             if "nặng" in indication or "nội tâm mạc" in indication or "màng não" in indication:

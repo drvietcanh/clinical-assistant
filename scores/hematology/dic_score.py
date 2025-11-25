@@ -104,7 +104,7 @@ def calculate_dic_score(
         risk_class = "POSITIVE"
         color = "🔴"
         recommendation = """
-        **🔴 Xử Trí Khuyến Cáo - OVERT DIC:**
+        **🔴 Xử trí khuyến cáo - OVERT DIC:**
         
         ### 1️⃣ ĐIỀU TRỊ BỆNH NỀN - QUAN TRỌNG NHẤT
         
@@ -186,7 +186,7 @@ def calculate_dic_score(
         risk_class = "SUGGESTIVE"
         color = "🟡"
         recommendation = """
-        **🟡 Xử Trí Khuyến Cáo - NON-OVERT DIC:**
+        **🟡 Xử trí khuyến cáo - NON-OVERT DIC:**
         
         ### 1️⃣ ĐÁNH GIÁ LẠI
         
@@ -314,7 +314,7 @@ def render():
         
         ### 📊 Tiêu Chí Chẩn Đoán
         
-        | Xét Nghiệm | 0 điểm | 1 điểm | 2 điểm | 3 điểm |
+        | Xét nghiệm | 0 điểm | 1 điểm | 2 điểm | 3 điểm |
         |------------|--------|--------|--------|--------|
         | **Tiểu cầu (×10³/μL)** | ≥100 | 50-99 | <50 | - |
         | **D-dimer/FDP** | Không tăng | - | Tăng vừa | Tăng mạnh |
@@ -350,7 +350,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Kết Quả Xét Nghiệm")
+    st.subheader("📝 Nhập kết quả xét nghiệm")
     
     col1, col2 = st.columns(2)
     
@@ -444,7 +444,7 @@ def render():
         
         # Additional context
         st.info("""
-        **🔬 Xét Nghiệm Bổ Sung Nên Làm:**
+        **🔬 Xét nghiệm bổ sung nên làm:**
         
         - **Huyết Học:**
           * Peripheral blood smear (tìm schistocytes - RBC phân mảnh)

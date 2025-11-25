@@ -153,7 +153,7 @@ def render():
             st.markdown(f"**Tổng điểm: {score}**")
             
             st.markdown("---")
-            st.markdown("### 💊 Khuyến Cáo Xét Nghiệm")
+            st.markdown("### 💊 Khuyến cáo xét nghiệm")
             
             if color == "success":
                 st.success(f"""

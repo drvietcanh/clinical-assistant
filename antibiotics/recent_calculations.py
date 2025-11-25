@@ -103,7 +103,7 @@ def render_recent_calculations_sidebar():
         st.sidebar.info("💡 Chưa có calculations nào. Tính liều để lưu vào đây!")
         return
     
-    st.sidebar.markdown("### 🕐 Tính Liều Gần Đây")
+    st.sidebar.markdown("### 🕐 Tính liều gần đây")
     
     for i, calc in enumerate(recent):
         summary = format_calculation_summary(calc)

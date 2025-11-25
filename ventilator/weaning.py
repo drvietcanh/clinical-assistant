@@ -309,7 +309,7 @@ def render_weaning_calculator():
             vitals_bp_systolic = st.number_input("SBP (mmHg)", 0, 300, 120, 1, format="%d", key="weaning_vitals_sbp")
             vitals_temp = st.number_input("Temp (°C)", 30.0, 42.0, 37.0, 0.1, format="%.1f", key="weaning_vitals_temp")
             
-            st.markdown("#### 🧠 Thần Kinh")
+            st.markdown("#### 🧠 Thần kinh")
             neuro_gcs = st.number_input("GCS", 3, 15, 15, 1, format="%d", key="weaning_neuro_gcs")
         
         st.markdown("---")

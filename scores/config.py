@@ -41,7 +41,7 @@ SCORES_BY_SPECIALTY = {
         "ARDS Berlin": {"name": "ARDS Berlin Definition", "desc": "Tiêu chuẩn chẩn đoán ARDS (Berlin 2012)", "status": "✅"},
     },
     
-    "🧠 Thần Kinh (Neurology)": {
+    "🧠 Thần kinh (Neurology)": {
         "GCS": {"name": "GCS - Glasgow Coma Scale", "desc": "Mức độ ý thức", "status": "✅"},
         "NIHSS": {"name": "NIHSS - NIH Stroke Scale", "desc": "Mức độ nặng đột quỵ", "status": "✅"},
         "ICH Score": {"name": "ICH Score", "desc": "Tiên lượng xuất huyết nội sọ", "status": "✅"},
@@ -62,7 +62,7 @@ SCORES_BY_SPECIALTY = {
         "Ranson": {"name": "Ranson Criteria", "desc": "Tiên lượng viêm tụy cấp", "status": "✅"},
     },
     
-    "🩺 Huyết Học & Đông Máu (Hematology)": {
+    "🩺 Huyết Học & Đông máu (Hematology)": {
         "Padua": {"name": "Padua Prediction Score", "desc": "Nguy cơ VTE - Chỉ định prophylaxis (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Wells DVT": {"name": "Wells DVT Score", "desc": "Nguy cơ huyết khối tĩnh mạch sâu", "status": "✅"},
         "4Ts Score": {"name": "4Ts Score - HIT", "desc": "Giảm tiểu cầu do heparin", "status": "✅"},

@@ -54,7 +54,7 @@ def render_compare_results(
     # Differences table
     if show_differences and len(results_list) == 2:
         st.markdown("---")
-        st.markdown("### 📊 Bảng So Sánh")
+        st.markdown("### 📊 Bảng so sánh")
         
         # Extract all keys from both results
         if isinstance(results_list[0], dict) and isinstance(results_list[1], dict):

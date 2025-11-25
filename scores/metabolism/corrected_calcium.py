@@ -38,7 +38,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 🔬 Xét Nghiệm")
+        st.markdown("### 🔬 Xét nghiệm")
         
         # Calcium
         st.markdown("#### 1. Calcium Toàn Phần")

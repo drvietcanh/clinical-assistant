@@ -259,7 +259,7 @@ def render():
     st.divider()
     
     # Coagulation
-    st.markdown("#### 2️⃣ Đông Máu (Coagulation)")
+    st.markdown("#### 2️⃣ Đông máu (Coagulation)")
     platelets = st.number_input("Tiểu cầu (×10³/μL)", 0, 500, 200, 1, format="%d")
     
     st.divider()
@@ -305,7 +305,7 @@ def render():
     st.divider()
     
     # Central Nervous System
-    st.markdown("#### 5️⃣ Thần Kinh (CNS)")
+    st.markdown("#### 5️⃣ Thần kinh (CNS)")
     gcs = st.number_input("Glasgow Coma Scale (GCS)", 3, 15, 15, 1, format="%d")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
@@ -362,7 +362,7 @@ def render():
             st.caption("(Cải thiện độ chính xác so với SOFA gốc)")
         
         # Subscores table
-        with st.expander("📋 Điểm Từng Hệ Cơ Quan", expanded=True):
+        with st.expander("📋 Điểm từng hệ cơ quan", expanded=True):
             cols = st.columns(6)
             organs = [
                 ("Hô hấp", "respiratory"),

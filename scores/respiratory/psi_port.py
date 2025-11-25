@@ -117,7 +117,7 @@ def render():
         )
         
         st.markdown("---")
-        st.markdown("### 🔬 Xét Nghiệm")
+        st.markdown("### 🔬 Xét nghiệm")
         
         # pH with unit conversion (arterial pH)
         ph = st.number_input(

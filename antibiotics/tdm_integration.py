@@ -33,7 +33,7 @@ def render_tdm_calculator(antibiotic_name):
     """)
     
     # Tab selection
-    tab1, tab2, tab3 = st.tabs(["📊 AUC-Based", "📊 Trough-Based", "🔍 Giải Thích Nồng Độ"])
+    tab1, tab2, tab3 = st.tabs(["📊 AUC-Based", "📊 Trough-Based", "🔍 Giải thích nồng độ"])
     
     with tab1:
         st.markdown("#### 📋 AUC-Based Dosing (Ưu Tiên)")
@@ -204,7 +204,7 @@ def render_tdm_calculator(antibiotic_name):
                     st.info(f"**Loading dose:** {result['loading_dose_mg']:.0f} mg")
     
     with tab3:
-        st.markdown("#### 🔍 Giải Thích Nồng Độ")
+        st.markdown("#### 🔍 Giải thích nồng độ")
         
         col1, col2 = st.columns(2)
         

@@ -227,7 +227,7 @@ def render_vasopressor_guide():
     st.markdown("---")
     
     # Compatibility
-    st.markdown("### 🔗 Tương Thích (Compatibility)")
+    st.markdown("### 🔗 Tương thích (Compatibility)")
     if vasopressor_data.get('compatibility'):
         st.info(vasopressor_data['compatibility'])
     

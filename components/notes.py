@@ -301,7 +301,7 @@ def render_notes_section(
     
     # Search notes
     if show_search and len(notes) > 0:
-        with st.expander("🔍 Tìm Kiếm Ghi Chú"):
+        with st.expander("🔍 Tìm kiếm ghi chú"):
             search_query = st.text_input("Tìm kiếm:", key=f"search_notes_{calculator_id}")
             if search_query:
                 search_results = search_notes(search_query, calculator_id)

@@ -424,7 +424,7 @@ def render():
     st.markdown("---")
     
     # Labs
-    st.markdown("### 🔬 Xét Nghiệm")
+    st.markdown("### 🔬 Xét nghiệm")
     
     col1, col2, col3 = st.columns(3)
     

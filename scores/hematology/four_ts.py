@@ -58,7 +58,7 @@ def calculate_4ts_score(
         risk_class = "HIGH"
         color = "🔴"
         recommendation = """
-        **🔴 Xử Trí Khuyến Cáo - HIGH PROBABILITY:**
+        **🔴 Xử trí khuyến cáo - HIGH PROBABILITY:**
         
         1. **DỪNG Heparin NGAY LẬP TỨC:**
            - Dừng TẤT CẢ heparin (UFH, LMWH, heparin flush)
@@ -110,7 +110,7 @@ def calculate_4ts_score(
         risk_class = "INTERMEDIATE"
         color = "🟡"
         recommendation = """
-        **🟡 Xử Trí Khuyến Cáo - INTERMEDIATE PROBABILITY:**
+        **🟡 Xử trí khuyến cáo - INTERMEDIATE PROBABILITY:**
         
         1. **Đánh Giá Kỹ & Quyết Định:**
            - Xem xét DỪNG heparin (khuyến cáo mạnh nếu điểm 5)
@@ -157,14 +157,14 @@ def calculate_4ts_score(
         risk_class = "LOW"
         color = "🟢"
         recommendation = """
-        **🟢 Xử Trí Khuyến Cáo - LOW PROBABILITY:**
+        **🟢 Xử trí khuyến cáo - LOW PROBABILITY:**
         
         1. **Đánh Giá:**
            - HIT rất ít có khả năng (NPV ~95-99%)
            - Có thể AN TOÀN tiếp tục heparin
            - Tìm nguyên nhân KHÁC của giảm tiểu cầu
         
-        2. **Xét Nghiệm:**
+        2. **Xét nghiệm:**
            - Xét nghiệm HIT antibody KHÔNG khuyến cáo (trừ khi nghi ngờ đặc biệt)
            - Nếu vẫn lo lắng → có thể làm ELISA (thường âm tính)
            - Tìm nguyên nhân khác: sepsis, thuốc, DIC, etc.
@@ -415,7 +415,7 @@ def render():
             """)
         
         st.info("""
-        **🔬 Xét Nghiệm HIT:**
+        **🔬 Xét nghiệm HIT:**
         
         1. **ELISA (PF4/Heparin Antibodies):**
            - Nhanh (vài giờ), nhạy cao

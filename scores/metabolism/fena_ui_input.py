@@ -24,7 +24,7 @@ def render_input_form():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 🔬 Xét Nghiệm Máu (Plasma)")
+        st.markdown("### 🔬 Xét nghiệm máu (Plasma)")
         
         # Plasma Sodium
         p_na = st.number_input(
@@ -73,7 +73,7 @@ def render_input_form():
             st.caption(f"≈ {_format_num(p_cr_mgdl, 1)} mg/dL")
         
         st.markdown("---")
-        st.markdown("### 💧 Xét Nghiệm Nước Tiểu (Urine)")
+        st.markdown("### 💧 Xét nghiệm nước tiểu (Urine)")
         
         # Urine Sodium
         u_na = st.number_input(

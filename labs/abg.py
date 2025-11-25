@@ -9,7 +9,7 @@ from .normal_ranges import get_normal_range, is_critical, interpret_value, ALL_R
 def render():
     """Arterial Blood Gas"""
     st.subheader("💨 ABG - Arterial Blood Gas")
-    st.caption("Khí Máu Động Mạch")
+    st.caption("Khí máu động mạch")
     
     col1, col2 = st.columns(2)
     

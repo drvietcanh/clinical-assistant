@@ -47,7 +47,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### 🔬 Xét Nghiệm")
+        st.markdown("### 🔬 Xét nghiệm")
         
         # 1. Total Bilirubin
         st.markdown("#### 1. Bilirubin Toàn Phần")

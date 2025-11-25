@@ -23,14 +23,14 @@ from drugs.tdm import (
 
 # Standard page setup
 setup_page(
-    page_title="TDM - Theo Dõi Nồng Độ Thuốc",
+    page_title="TDM - Theo dõi nồng độ thuốc",
     page_icon="📊",
     description="Tính toán và theo dõi nồng độ thuốc trong điều trị"
 )
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("⚙️ Chọn Công Cụ TDM")
+    st.header("⚙️ Chọn công cụ TDM")
     
     # Check if should switch to TDM from drug detail view
     preset_drug_name = None
@@ -73,7 +73,7 @@ with st.sidebar:
     # Add existing drugs that might not be in config yet
     existing_drugs = [
         "💚 TDM - Digoxin (Tim Mạch)",
-        "🧠 TDM - Phenytoin (Thần Kinh)",
+        "🧠 TDM - Phenytoin (Thần kinh)",
         "💊 TDM - Lithium (Tâm Thần)",
         "🫁 TDM - Theophylline (Hô Hấp)",
         "🩸 TDM - Tacrolimus/Cyclosporine (Miễn Dịch)"
@@ -216,7 +216,7 @@ elif tdm_drug in category_map:
     
     # Basic level interpretation
     st.markdown("---")
-    st.markdown("### 📊 Giải Thích Nồng Độ Cơ Bản")
+    st.markdown("### 📊 Giải thích nồng độ cơ bản")
     
     col1, col2 = st.columns(2)
     

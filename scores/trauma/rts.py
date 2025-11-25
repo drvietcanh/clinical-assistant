@@ -257,7 +257,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Sinh Hiệu")
+    st.subheader("📝 Nhập sinh hiệu")
     
     col1, col2, col3 = st.columns(3)
     
@@ -350,7 +350,7 @@ def render():
         
         # Management
         st.markdown("---")
-        st.markdown("### 💊 Xử Trí Khuyến Cáo")
+        st.markdown("### 💊 Xử trí khuyến cáo")
         st.markdown(result['management'])
         
         # Additional info

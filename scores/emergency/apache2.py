@@ -214,10 +214,10 @@ def render():
     
     st.divider()
     
-    st.subheader("📝 Nhập Dữ Liệu (Giá trị TỆ NHẤT trong 24h đầu ICU)")
+    st.subheader("📝 Nhập dữ liệu (Giá trị TỆ NHẤT trong 24h đầu ICU)")
     
     # Demographics
-    st.markdown("#### 👤 Thông Tin Chung")
+    st.markdown("#### 👤 Thông tin chung")
     col1, col2 = st.columns(2)
     with col1:
         age = st.number_input("Tuổi", 0, 120, 50, 1, format="%d")
@@ -227,7 +227,7 @@ def render():
     st.divider()
     
     # Vital signs
-    st.markdown("#### 🩺 Sinh Hiệu")
+    st.markdown("#### 🩺 Sinh hiệu")
     col3, col4, col5 = st.columns(3)
     with col3:
         temperature = st.number_input("Nhiệt độ (°C)", 20, 45, 37, 1, format="%d")
@@ -242,7 +242,7 @@ def render():
     st.divider()
     
     # ABG
-    st.markdown("#### 🫁 Khí Máu Động Mạch (ABG)")
+    st.markdown("#### 🫁 Khí máu động mạch (ABG)")
     col6, col7, col8 = st.columns(3)
     with col6:
         fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1, format="%d")
@@ -256,7 +256,7 @@ def render():
     st.divider()
     
     # Labs
-    st.markdown("#### 🔬 Xét Nghiệm")
+    st.markdown("#### 🔬 Xét nghiệm")
     col9, col10 = st.columns(2)
     with col9:
         sodium = st.number_input("Sodium (mEq/L)", 80.0, 200.0, 140.0, 1.0, format="%.1f")
@@ -271,7 +271,7 @@ def render():
     st.divider()
     
     # Chronic health
-    st.markdown("#### 🏥 Bệnh Mạn Tính")
+    st.markdown("#### 🏥 Bệnh mạn tính")
     has_chronic_health = st.checkbox(
         "**Có bệnh mạn tính nặng**",
         help="Suy tim NYHA IV, COPD nặng, xơ gan Child C, HD lâu dài, immunocompromised"

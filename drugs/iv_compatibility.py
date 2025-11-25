@@ -222,7 +222,7 @@ def render_iv_compatibility_checker():
         text-align: center;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     '>
-        <h1 style='margin: 0; color: white; font-size: 2.2em;'>💉 Kiểm Tra Tương Thích IV</h1>
+        <h1 style='margin: 0; color: white; font-size: 2.2em;'>💉 Kiểm tra tương thích IV</h1>
         <p style='margin: 10px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1.1em;'>
             Kiểm tra tương thích giữa nhiều thuốc trong cùng một line IV • An toàn cho bệnh nhân
         </p>
@@ -287,11 +287,11 @@ def render_iv_compatibility_checker():
     
     # Check compatibility
     if len(selected_drugs) >= 2:
-        if st.button("🔍 Kiểm Tra Tương Thích", use_container_width=True, type="primary"):
+        if st.button("🔍 Kiểm tra tương thích", use_container_width=True, type="primary"):
             results = check_multiple_compatibility(selected_drugs)
             
             if results:
-                st.markdown("### 📊 Kết Quả Kiểm Tra")
+                st.markdown("### 📊 Kết quả kiểm tra")
                 
                 # Summary
                 incompatible_count = sum(1 for r in results if r["status"] == "incompatible")
@@ -347,7 +347,7 @@ def render_iv_compatibility_checker():
                     st.markdown("---")
                 
                 # Visual Compatibility Matrix
-                st.markdown("### 📊 Ma Trận Tương Thích Trực Quan")
+                st.markdown("### 📊 Ma trận tương thích trực quan")
                 
                 # Render visual matrix
                 render_visual_compatibility_matrix(

@@ -306,7 +306,7 @@ def render():
     st.divider()
     
     # Neurologic
-    st.markdown("#### 6️⃣ Thần Kinh")
+    st.markdown("#### 6️⃣ Thần kinh")
     gcs = st.number_input("GCS (Glasgow Coma Scale)", 3, 15, 15, 1, format="%d")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
@@ -339,7 +339,7 @@ def render():
             st.markdown(f"**Tử vong ước tính: {result['mortality']}**")
         
         # Subscores
-        with st.expander("📋 Điểm Từng Hệ Cơ Quan", expanded=True):
+        with st.expander("📋 Điểm từng hệ cơ quan", expanded=True):
             cols = st.columns(6)
             organs = [
                 ("Hô hấp", "respiratory"),

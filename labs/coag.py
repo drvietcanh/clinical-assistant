@@ -8,7 +8,7 @@ from .normal_ranges import get_normal_range, is_critical, interpret_value, ALL_R
 
 def render():
     """Coagulation Panel"""
-    st.subheader("🩸 Coagulation Panel - Đông Máu")
+    st.subheader("🩸 Coagulation Panel - Đông máu")
     st.caption("Xét nghiệm đánh giá chức năng đông máu và điều trị chống đông")
     
     col1, col2 = st.columns(2)

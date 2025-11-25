@@ -543,7 +543,7 @@ def display_antibiotic_info(ab_name, ab_data):
         render_quick_dosing_calculator(ab_name, ab_data, key_prefix=f"info_{safe_ab_name}_")
         
         # Scenario Dosing Calculator (Phase 3)
-        with st.expander("🧮 Tính Liều Cho Nhiều Trường Hợp (Scenarios)", expanded=False):
+        with st.expander("🧮 Tính liều cho nhiều trường hợp (Scenarios)", expanded=False):
             render_scenario_dosing_calculator(ab_name)
         
         # TDM Calculator (Phase 5 - Task 5.1)

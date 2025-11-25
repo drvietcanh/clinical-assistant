@@ -359,7 +359,7 @@ def render():
         st.markdown("---")
         
         # Coagulation
-        st.markdown("#### 2️⃣ Đông Máu")
+        st.markdown("#### 2️⃣ Đông máu")
         platelets = st.number_input(
             "Tiểu cầu (×10³/μL):",
             min_value=0.0,
@@ -423,7 +423,7 @@ def render():
         st.markdown("---")
         
         # CNS
-        st.markdown("#### 5️⃣ Thần Kinh")
+        st.markdown("#### 5️⃣ Thần kinh")
         pediatric_gcs = st.number_input(
             "Pediatric GCS (3-15):",
             min_value=3,
@@ -498,7 +498,7 @@ def render():
         st.markdown("---")
         
         # Subscores breakdown
-        st.markdown("### 📋 Điểm Từng Hệ Cơ Quan")
+        st.markdown("### 📋 Điểm từng hệ cơ quan")
         
         organs_display = {
             "Hô hấp": result['subscores']['respiratory'],

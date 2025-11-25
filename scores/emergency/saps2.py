@@ -378,10 +378,10 @@ def render():
     
     st.divider()
     
-    st.subheader("📝 Nhập Dữ Liệu (Giá trị TỆ NHẤT trong 24h đầu ICU)")
+    st.subheader("📝 Nhập dữ liệu (Giá trị TỆ NHẤT trong 24h đầu ICU)")
     
     # Demographics
-    st.markdown("#### 👤 Thông Tin Chung")
+    st.markdown("#### 👤 Thông tin chung")
     col1, col2 = st.columns(2)
     with col1:
         age = st.number_input("Tuổi", 0, 120, 50, 1, format="%d")
@@ -391,7 +391,7 @@ def render():
     st.divider()
     
     # Vital signs
-    st.markdown("#### 🩺 Sinh Hiệu")
+    st.markdown("#### 🩺 Sinh hiệu")
     col3, col4, col5 = st.columns(3)
     with col3:
         heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1, format="%d")
@@ -419,7 +419,7 @@ def render():
     st.divider()
     
     # Labs
-    st.markdown("#### 🔬 Xét Nghiệm")
+    st.markdown("#### 🔬 Xét nghiệm")
     col8, col9 = st.columns(2)
     
     with col8:
@@ -438,7 +438,7 @@ def render():
     st.divider()
     
     # Admission type
-    st.markdown("#### 🏥 Loại Nhập Viện & Bệnh Mạn Tính")
+    st.markdown("#### 🏥 Loại nhập viện & bệnh mạn tính")
     admission_type = st.radio(
         "Loại nhập viện ICU",
         ["Phẫu thuật theo kế hoạch", "Nội khoa", "Phẫu thuật cấp cứu"],

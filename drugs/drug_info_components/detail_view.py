@@ -155,7 +155,7 @@ def display_drug_info(drug_name, drug_data):
         is_antibiotic = drug_name in ANTIBIOTICS_DATABASE
         if is_antibiotic:
             st.markdown('---')
-            st.markdown('### 🧮 Tính Liều Theo CrCl/eGFR')
+            st.markdown('### 🧮 Tính liều theo CrCl/eGFR')
             col1, col2 = st.columns([2, 1])
             with col1:
                 st.info(
@@ -170,7 +170,7 @@ def display_drug_info(drug_name, drug_data):
                 safe_calc_key = (
                     f"calc_dose_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
                     )
-                if st.button('🧮 Tính Liều Theo CrCl', key=safe_calc_key,
+                if st.button('🧮 Tính liều theo CrCl', key=safe_calc_key,
                     use_container_width=True, type='primary'):
                     st.session_state['preset_antibiotic_name'] = drug_name
                     st.session_state['switch_to_dosing_calculator'] = True

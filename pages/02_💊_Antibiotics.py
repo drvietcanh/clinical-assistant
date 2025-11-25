@@ -16,7 +16,7 @@ from antibiotics.treatment_algorithms import render_algorithms_page
 
 # Standard page setup
 setup_page(
-    page_title="Kháng Sinh",
+    page_title="Kháng sinh",
     page_icon="💊",
     description="Tra cứu kháng sinh, so sánh liều dùng và chỉ định"
 )

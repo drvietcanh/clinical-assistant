@@ -37,11 +37,11 @@ ALL_CALCULATORS = {
     "bode": {"name": "BODE Index", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
     
     # Scores - Neurology
-    "gcs": {"name": "GCS", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
-    "nihss": {"name": "NIHSS", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
-    "ich_score": {"name": "ICH Score", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
-    "hunt_hess": {"name": "Hunt & Hess", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
-    "mrs": {"name": "mRS", "category": "Thần Kinh", "icon": "🧠", "page": "Scores"},
+    "gcs": {"name": "GCS", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
+    "nihss": {"name": "NIHSS", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
+    "ich_score": {"name": "ICH Score", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
+    "hunt_hess": {"name": "Hunt & Hess", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
+    "mrs": {"name": "mRS", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     
     # Scores - GI/Hepatology
     "bisap": {"name": "BISAP Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
@@ -146,15 +146,15 @@ ALL_CALCULATORS = {
     "feverpain": {"name": "FeverPAIN Score", "category": "Nhiễm Khuẩn", "icon": "🦠", "page": "Scores"},
     
     # Labs
-    "cbc": {"name": "CBC", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
-    "bmp": {"name": "BMP", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
-    "cmp": {"name": "CMP", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
-    "lft": {"name": "LFT", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
-    "lipid": {"name": "Lipid Panel", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
-    "cardiac_markers": {"name": "Cardiac Markers", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
-    "coag": {"name": "Coagulation", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
-    "thyroid": {"name": "Thyroid", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
-    "abg": {"name": "ABG", "category": "Xét Nghiệm", "icon": "🔬", "page": "Labs"},
+    "cbc": {"name": "CBC", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
+    "bmp": {"name": "BMP", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
+    "cmp": {"name": "CMP", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
+    "lft": {"name": "LFT", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
+    "lipid": {"name": "Lipid Panel", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
+    "cardiac_markers": {"name": "Cardiac Markers", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
+    "coag": {"name": "Coagulation", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
+    "thyroid": {"name": "Thyroid", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
+    "abg": {"name": "ABG", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
     
     # Ventilator
     "ardsnet": {"name": "ARDSNet Calculator", "category": "Thở Máy", "icon": "🫁", "page": "Ventilator"},

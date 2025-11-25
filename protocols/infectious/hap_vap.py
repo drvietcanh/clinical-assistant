@@ -199,7 +199,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: PREVENTION ==========
-    st.markdown("### 🛡️ Phòng Ngừa VAP")
+    st.markdown("### 🛡️ Phòng ngừa VAP")
     
     st.info("""
     **Các biện pháp phòng ngừa VAP:**

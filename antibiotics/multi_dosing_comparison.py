@@ -21,7 +21,7 @@ def render_multi_comparison():
     """Compare multiple antibiotics side by side"""
     
     st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🔬 So Sánh Liều Nhiều Kháng Sinh</h2>
+    <h2 style='text-align: center; color: #0EA5E9;'>🔬 So sánh liều nhiều kháng sinh</h2>
     <p style='text-align: center;'><em>So sánh liều dùng và điều chỉnh của nhiều kháng sinh cùng lúc</em></p>
     """, unsafe_allow_html=True)
     
@@ -77,7 +77,7 @@ def render_multi_comparison():
     st.markdown("---")
     
     # Select antibiotics
-    st.markdown("### 💊 Chọn Kháng Sinh Để So Sánh")
+    st.markdown("### 💊 Chọn kháng sinh để so sánh")
     
     all_antibiotics = sorted(list(ANTIBIOTICS_DATABASE.keys()))
     
@@ -93,12 +93,12 @@ def render_multi_comparison():
     if len(selected_antibiotics) == 0:
         st.info("👆 Chọn ít nhất 1 kháng sinh để bắt đầu so sánh")
         st.markdown("---")
-        st.markdown("### 💡 Gợi Ý Các Phối Hợp Thường Dùng:")
+        st.markdown("### 💡 Gợi ý các phối hợp thường dùng:")
         
         suggestions = {
             "Phối hợp MRSA": ["Vancomycin", "Piperacillin-Tazobactam"],
             "Phối hợp Pseudomonas": ["Piperacillin-Tazobactam", "Ciprofloxacin"],
-            "Phối hợp Nhiễm Khuẩn Huyết": ["Vancomycin", "Meropenem"],
+            "Phối hợp nhiễm khuẩn huyết": ["Vancomycin", "Meropenem"],
             "Phối hợp Viêm Phổi": ["Ceftriaxone", "Azithromycin"],
             "Phối hợp Độc Thận (CẨN THẬN)": ["Vancomycin", "Gentamicin"]
         }
@@ -131,7 +131,7 @@ def render_multi_comparison():
     st.markdown("---")
     
     # Calculate for all selected antibiotics
-    if st.button("🔬 So Sánh Kháng Sinh", type="primary", use_container_width=True):
+    if st.button("🔬 So sánh kháng sinh", type="primary", use_container_width=True):
         renal_category = get_renal_category(crcl, egfr)
         
         # Prepare comparison data
@@ -167,14 +167,14 @@ def render_multi_comparison():
             })
         
         # Display comparison table
-        st.markdown("### 📊 Bảng So Sánh")
+        st.markdown("### 📊 Bảng so sánh")
         
         df = pd.DataFrame(comparison_data)
         st.dataframe(df, use_container_width=True, hide_index=True)
         
         # Detailed comparison cards
         st.markdown("---")
-        st.markdown("### 📋 Chi Tiết Từng Kháng Sinh:")
+        st.markdown("### 📋 Chi tiết từng kháng sinh:")
         
         cols = st.columns(min(len(selected_antibiotics), 3))
         
@@ -216,7 +216,7 @@ def render_multi_comparison():
         
         # Interaction warnings - Using Drug Interaction Checker
         st.markdown("---")
-        st.markdown("### ⚠️ Cảnh Báo Tương Tác Khi Phối Hợp:")
+        st.markdown("### ⚠️ Cảnh báo tương tác khi phối hợp:")
         
         # Import drug interaction checker
         try:
@@ -236,7 +236,7 @@ def render_multi_comparison():
                 
                 # Display major interactions
                 if major_interactions:
-                    st.error("🚨 **Tương Tác Nghiêm Trọng (Major):**")
+                    st.error("🚨 **Tương tác nghiêm trọng (Major):**")
                     for interaction in major_interactions:
                         st.error(f"""
                         **{interaction.get('drug1', '')} + {interaction.get('drug2', '')}**
@@ -247,7 +247,7 @@ def render_multi_comparison():
                 
                 # Display moderate interactions
                 if moderate_interactions:
-                    st.warning("⚠️ **Tương Tác Trung Bình (Moderate):**")
+                    st.warning("⚠️ **Tương tác trung bình (Moderate):**")
                     for interaction in moderate_interactions:
                         st.warning(f"""
                         **{interaction.get('drug1', '')} + {interaction.get('drug2', '')}**
@@ -258,7 +258,7 @@ def render_multi_comparison():
                 
                 # Display minor interactions (collapsed)
                 if minor_interactions:
-                    with st.expander(f"ℹ️ Tương Tác Nhẹ (Minor) - {len(minor_interactions)} tương tác"):
+                    with st.expander(f"ℹ️ Tương tác nhẹ (Minor) - {len(minor_interactions)} tương tác"):
                         for interaction in minor_interactions:
                             st.info(f"**{interaction.get('drug1', '')} + {interaction.get('drug2', '')}:** {interaction.get('description', 'N/A')}")
             else:
@@ -295,7 +295,7 @@ def render_multi_comparison():
         
         # Recommendations
         st.markdown("---")
-        st.markdown("### 💡 Khuyến Cáo:")
+        st.markdown("### 💡 Khuyến cáo:")
         
         # Find best option (fewest warnings, appropriate dosing)
         best_options = []

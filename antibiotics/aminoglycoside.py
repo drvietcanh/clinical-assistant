@@ -16,7 +16,7 @@ def _format_num(value: float, decimals: int = 1) -> str:
 
 def render():
     """Aminoglycoside Dosing Calculator"""
-    st.subheader("💊 Aminoglycoside - Tính Liều")
+    st.subheader("💊 Aminoglycoside - Tính liều")
     st.caption("Gentamicin, Tobramycin, Amikacin - Extended-Interval Dosing")
     
     st.info("""
@@ -145,7 +145,7 @@ def render():
             key="ag_indication"
         )
         
-        if st.button(f"🧮 Tính Liều {drug}", type="primary", key="ag_calc"):
+        if st.button(f"🧮 Tính liều {drug}", type="primary", key="ag_calc"):
             # Extended-interval dosing
             # Gentamicin/Tobramycin: 5-7 mg/kg
             # Amikacin: 15-20 mg/kg

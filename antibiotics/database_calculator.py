@@ -42,7 +42,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         border-radius: 10px;
         margin: 15px 0 10px 0;
     '>
-        <h4 style='margin: 0; color: white;'>🧮 Tính Liều Cho Bệnh Nhân</h4>
+        <h4 style='margin: 0; color: white;'>🧮 Tính liều cho bệnh nhân</h4>
     </div>
     """, unsafe_allow_html=True)
     
@@ -106,7 +106,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
     
     # Calculate button
     if st.button(
-        f"🧮 Tính Liều {ab_name}",
+        f"🧮 Tính liều {ab_name}",
         type="primary",
         use_container_width=True,
         key=safe_key("calc_btn")
@@ -160,7 +160,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         
         # Results card
         st.markdown("---")
-        st.markdown("### 📊 Kết Quả Tính Liều:")
+        st.markdown("### 📊 Kết quả tính liều:")
         
         # Metrics
         col1, col2, col3 = st.columns(3)
@@ -224,7 +224,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
                     st.dataframe(pd.DataFrame(renal_table), use_container_width=True, hide_index=True)
         
         # Link to full calculator
-        st.info("💡 **Cần tính chi tiết hơn?** Dùng công cụ **'🧮 Tính Liều Theo eGFR/CrCl'** ở menu để nhập đầy đủ thông tin (chiều cao, giới tính, ICU, HD, etc.)")
+        st.info("💡 **Cần tính chi tiết hơn?** Dùng công cụ **'🧮 Tính liều theo eGFR/CrCl'** ở menu để nhập đầy đủ thông tin (chiều cao, giới tính, ICU, HD, etc.)")
         
         # Clear button
         if st.button("🗑️ Xóa kết quả", key=safe_key("clear_result")):

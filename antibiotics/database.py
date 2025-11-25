@@ -117,7 +117,7 @@ def render_database():
         
         # Recent Calculations (Phase 4)
         st.markdown("---")
-        st.markdown("### 🧮 Tính Liều Gần Đây")
+        st.markdown("### 🧮 Tính liều gần đây")
         
         # Render recent calculations inline (not in sidebar)
         from .recent_calculations import get_recent_calculations, format_calculation_summary, remove_calculation
@@ -158,7 +158,7 @@ def render_database():
     
     # ========== SEARCH & FILTER SECTION ==========
     st.markdown("""
-    <h2 style='font-size: 1.8em; font-weight: 700; color: #1976D2; margin: 30px 0 20px 0; letter-spacing: -0.3px;'>🔍 Tìm Kiếm</h2>
+    <h2 style='font-size: 1.8em; font-weight: 700; color: #1976D2; margin: 30px 0 20px 0; letter-spacing: -0.3px;'>🔍 Tìm kiếm</h2>
     """, unsafe_allow_html=True)
     
     # Condition-based search option
@@ -213,7 +213,7 @@ def render_database():
                 </div>
                 """, unsafe_allow_html=True)
                 
-                st.markdown("### 💊 Khuyến Cáo Điều Trị:")
+                st.markdown("### 💊 Khuyến cáo điều trị:")
                 
                 for idx, therapy in enumerate(condition_data.get('empiric_therapy', []), 1):
                     priority_colors = {

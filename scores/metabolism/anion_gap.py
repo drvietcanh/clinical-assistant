@@ -35,7 +35,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 🔬 Xét Nghiệm Điện Giải")
+        st.markdown("### 🔬 Xét nghiệm điện giải")
         
         # Sodium
         na = st.number_input(

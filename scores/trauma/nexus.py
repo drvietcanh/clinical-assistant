@@ -148,7 +148,7 @@ def render():
     st.markdown("---")
     
     # 4. Neurological deficit
-    st.markdown("### 4️⃣ Triệu Chứng Thần Kinh Khu Trú")
+    st.markdown("### 4️⃣ Triệu chứng thần kinh khu trú")
     neurological_deficit = st.checkbox(
         "**Có triệu chứng thần kinh khu trú (yếu chi, tê, giảm cảm giác)**",
         help="Motor weakness, sensory deficit, reflex abnormality"

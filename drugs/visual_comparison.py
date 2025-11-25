@@ -56,7 +56,7 @@ def render_visual_comparison():
     if len(selected_drugs) < 2:
         st.info("👆 Chọn ít nhất 2 thuốc để bắt đầu so sánh")
         
-        st.markdown("### 💡 Gợi Ý Các Phối Hợp Thường Dùng:")
+        st.markdown("### 💡 Gợi ý các phối hợp thường dùng:")
         suggestions = {
             "ACE Inhibitors": ["Captopril", "Enalapril", "Lisinopril"],
             "Beta-blockers": ["Metoprolol", "Propranolol"],
@@ -125,14 +125,14 @@ def render_visual_comparison():
             })
         
         # Display comparison table
-        st.markdown("### 📊 Bảng So Sánh")
+        st.markdown("### 📊 Bảng so sánh")
         df = pd.DataFrame(comparison_data)
         st.dataframe(df, use_container_width=True, hide_index=True)
         
         st.markdown("---")
         
         # Side-by-side detailed comparison
-        st.markdown("### 📋 So Sánh Chi Tiết Từng Thuốc:")
+        st.markdown("### 📋 So sánh chi tiết từng thuốc:")
         
         cols = st.columns(min(len(selected_drugs), 3))
         
@@ -215,7 +215,7 @@ def render_visual_comparison():
         
         # Summary recommendations
         st.markdown("---")
-        st.markdown("### 💡 Tóm Tắt & Khuyến Cáo:")
+        st.markdown("### 💡 Tóm tắt & khuyến cáo:")
         
         # Find safest (fewest side effects)
         side_effect_counts = {d: len(DRUG_DATABASE[d].get('side_effects', [])) for d in selected_drugs}

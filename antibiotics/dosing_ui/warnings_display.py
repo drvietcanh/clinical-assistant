@@ -10,7 +10,7 @@ from ..dosing_calculator import check_warnings
 def render_warnings_section(selected_ab, crcl, age, is_pregnant, is_breastfeeding, other_drugs):
     """Render warnings and alerts section"""
     st.markdown("---")
-    st.markdown("### ⚠️ Cảnh Báo & Khuyến Cáo:")
+    st.markdown("### ⚠️ Cảnh báo & khuyến cáo:")
     
     warnings = check_warnings(
         selected_ab, crcl, age, 
@@ -94,7 +94,7 @@ def render_warnings_section(selected_ab, crcl, age, is_pregnant, is_breastfeedin
                 st.success(f"✅ Không phát hiện tương tác giữa {selected_ab} và các thuốc đang dùng")
                 
         except ImportError:
-            st.info("💡 **Gợi ý:** Sử dụng công cụ 'Kiểm Tra Tương Tác Thuốc' trong module Tra Cứu Thuốc để kiểm tra chi tiết")
+            st.info("💡 **Gợi ý:** Sử dụng công cụ 'Kiểm tra tương tác thuốc' trong module Tra cứu thuốc để kiểm tra chi tiết")
         except Exception as e:
-            st.info("💡 **Gợi ý:** Sử dụng công cụ 'Kiểm Tra Tương Tác Thuốc' trong module Tra Cứu Thuốc để kiểm tra chi tiết")
+            st.info("💡 **Gợi ý:** Sử dụng công cụ 'Kiểm tra tương tác thuốc' trong module Tra cứu thuốc để kiểm tra chi tiết")
 

@@ -24,7 +24,7 @@ def render_comparison():
         text-align: center;
         box-shadow: 0 8px 24px rgba(102,126,234,0.25);
     '>
-        <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: 700;'>📊 So Sánh Kháng Sinh</h1>
+        <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: 700;'>📊 So sánh kháng sinh</h1>
         <p style='margin: 12px 0 0 0; color: rgba(255,255,255,0.95); font-size: 1.15em;'>
             So sánh 2-4 kháng sinh: Liều dùng, Phổ tác dụng, AWaRe, Độ nhạy, Tác dụng phụ
         </p>
@@ -32,7 +32,7 @@ def render_comparison():
     """, unsafe_allow_html=True)
     
     # Antibiotic selection
-    st.markdown("### 🔍 Chọn Kháng Sinh Để So Sánh:")
+    st.markdown("### 🔍 Chọn kháng sinh để so sánh:")
     
     available_antibiotics = sorted(list(ANTIBIOTICS_DATABASE.keys()))
     
@@ -72,7 +72,7 @@ def render_comparison():
     st.markdown("---")
     
     # Comparison table
-    st.markdown("### 📋 Bảng So Sánh:")
+    st.markdown("### 📋 Bảng so sánh:")
     
     # Prepare comparison data
     comparison_data = []
@@ -136,7 +136,7 @@ def render_comparison():
     st.markdown("---")
     
     # Detailed comparison by category
-    st.markdown("### 📊 So Sánh Chi Tiết:")
+    st.markdown("### 📊 So sánh chi tiết:")
     
     comparison_tabs = st.tabs(["💉 Liều Dùng", "📋 Chỉ Định", "🦠 Độ Nhạy", "⚠️ Tác Dụng Phụ", "🫘 Điều Chỉnh Thận"])
     

@@ -292,7 +292,7 @@ def render_scenario_dosing_calculator(antibiotic_name):
         border-radius: 10px;
         margin: 15px 0;
     '>
-        <h3 style='margin: 0; color: white;'>🧮 Tính Liều Cho Nhiều Trường Hợp</h3>
+        <h3 style='margin: 0; color: white;'>🧮 Tính liều cho nhiều trường hợp</h3>
         <p style='margin: 5px 0 0 0; color: rgba(255,255,255,0.9); font-size: 0.95em;'>
             Tính liều cho nhiều scenarios (CrCl khác nhau) và chỉ định trong một lần
         </p>
@@ -300,7 +300,7 @@ def render_scenario_dosing_calculator(antibiotic_name):
     """, unsafe_allow_html=True)
     
     # Patient input form
-    st.markdown("### 📋 Thông Tin Bệnh Nhân")
+    st.markdown("### 📋 Thông tin bệnh nhân")
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
@@ -404,7 +404,7 @@ def render_scenario_dosing_calculator(antibiotic_name):
         return
     
     # Calculate button
-    if st.button("🧮 Tính Liều Cho Tất Cả Scenarios", type="primary", use_container_width=True, key=f"calc_scenarios_{antibiotic_name}"):
+    if st.button("🧮 Tính liều cho tất cả scenarios", type="primary", use_container_width=True, key=f"calc_scenarios_{antibiotic_name}"):
         with st.spinner("Đang tính liều cho tất cả scenarios..."):
             results = calculate_scenarios(
                 antibiotic_name,

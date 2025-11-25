@@ -114,7 +114,7 @@ def render():
         )
         
         st.markdown("---")
-        st.markdown("### 🔬 Xét Nghiệm")
+        st.markdown("### 🔬 Xét nghiệm")
         
         # BUN
         st.markdown("#### 1. Urea (BUN)")
@@ -164,7 +164,7 @@ def render():
         st.caption(f"≈ {round(hgb * 10)} g/L")
         
         st.markdown("---")
-        st.markdown("### 🩺 Sinh Hiệu")
+        st.markdown("### 🩺 Sinh hiệu")
         
         # SBP
         sbp = st.number_input(

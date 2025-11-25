@@ -202,7 +202,7 @@ def calculate_kdigo(
         """
     elif final_stage == 1:
         management = """
-        **Xử Trí Khuyến Cáo - Stage 1:**
+        **Xử trí khuyến cáo - Stage 1:**
         
         1. **TÌM VÀ XỬ TRÍ NGUYÊN NHÂN:**
            - **Tiền thận (Pre-renal):** Giảm thể tích, giảm CO, thuốc giãn mạch
@@ -237,7 +237,7 @@ def calculate_kdigo(
         """
     elif final_stage == 2:
         management = """
-        **Xử Trí Khuyến Cáo - Stage 2:**
+        **Xử trí khuyến cáo - Stage 2:**
         
         1. **CẤP CỨU & TÌM NGUYÊN NHÂN:**
            - Đánh giá NGAY: Pre-renal vs Intrinsic vs Post-renal
@@ -278,7 +278,7 @@ def calculate_kdigo(
         """
     else:  # stage == 3
         management = """
-        **Xử Trí Khuyến Cáo - Stage 3:**
+        **Xử trí khuyến cáo - Stage 3:**
         
         1. **TƯ VẤN THẬN NGAY LẬP TỨC:**
            - Đây là cấp cứu thận học
@@ -417,7 +417,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Dữ Liệu Lâm Sàng")
+    st.subheader("📝 Nhập dữ liệu lâm sàng")
     
     # Creatinine section
     st.markdown("#### 🩺 Serum Creatinine")
@@ -583,7 +583,7 @@ def render():
         # Additional info
         if result['stage'] > 0:
             st.info("""
-            **🔬 Xét Nghiệm Bổ Sung Khuyến Cáo:**
+            **🔬 Xét nghiệm bổ sung khuyến cáo:**
             
             - **Phân biệt nguyên nhân:**
               * FENa / FEUrea (phân biệt tiền thận vs thận)
@@ -668,9 +668,9 @@ def render():
         
         **Chẩn đoán:** Siêu âm thận (hydronephrosis), FENa có thể >1%
         
-        ### 🔍 Các Xét Nghiệm Giúp Phân Biệt
+        ### 🔍 Các xét nghiệm giúp phân biệt
         
-        | Xét Nghiệm | Pre-Renal | ATN (Intrinsic) | Post-Renal |
+        | Xét nghiệm | Pre-Renal | ATN (Intrinsic) | Post-Renal |
         |------------|-----------|-----------------|------------|
         | FENa | <1% | >2% | >1% (thường) |
         | FEUrea | <35% | >50% | Không đặc hiệu |

@@ -28,7 +28,7 @@ def render_drug_database():
         text-align: center;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     '>
-        <h1 style='margin: 0; color: white; font-size: 2.2em;'>💊 Tra Cứu Dữ Liệu Thuốc</h1>
+        <h1 style='margin: 0; color: white; font-size: 2.2em;'>💊 Tra cứu dữ liệu thuốc</h1>
         <p style='margin: 10px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1.1em;'>
             Database <strong>{drug_count}</strong> thuốc phổ biến • Tất cả chuyên khoa
         </p>
@@ -50,7 +50,7 @@ def render_drug_database():
     if 'drug_comparison_list' in st.session_state and st.session_state[
         'drug_comparison_list']:
         comparison_list = st.session_state['drug_comparison_list']
-        st.markdown('### 🔄 Danh Sách So Sánh')
+        st.markdown('### 🔄 Danh sách so sánh')
         col_list, col_btn = st.columns([3, 1])
         with col_list:
             comparison_str = ', '.join([f'**{drug}**' for drug in
@@ -58,7 +58,7 @@ def render_drug_database():
             st.info(f'📊 Đã chọn {len(comparison_list)} thuốc: {comparison_str}'
                 )
         with col_btn:
-            if st.button('📊 Mở So Sánh', use_container_width=True, type=
+            if st.button('📊 Mở so sánh', use_container_width=True, type=
                 'primary'):
                 st.session_state['switch_to_comparison'] = True
                 st.session_state['preset_comparison_drugs'
@@ -136,7 +136,7 @@ def render_drug_database():
                 'save_search_name', placeholder='Ví dụ: Tìm kiếm của tôi')
         with col_save2:
             st.markdown('<br>', unsafe_allow_html=True)
-            if st.button('💾 Lưu Tìm Kiếm', key='save_search_btn',
+            if st.button('💾 Lưu tìm kiếm', key='save_search_btn',
                 use_container_width=True):
                 if save_search_name:
                     save_search(save_search_name, search_query, st.

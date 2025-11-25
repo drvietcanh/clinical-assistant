@@ -108,7 +108,7 @@ def calculate_wells_dvt(
         probability_percent = "Nguy cơ DVT: ~28-34% (trước xét nghiệm)"
         risk_class = "HIGH"
         recommendation = """
-        **🔴 Xử Trí Khuyến Cáo:**
+        **🔴 Xử trí khuyến cáo:**
         
         1. **Cận Lâm Sàng:**
            - Siêu âm tĩnh mạch chân (Duplex ultrasound) - NGAY
@@ -139,7 +139,7 @@ def calculate_wells_dvt(
         probability_percent = "Nguy cơ DVT: ~3-6% (trước xét nghiệm)"
         risk_class = "LOW"
         recommendation = """
-        **🟢 Xử Trí Khuyến Cáo:**
+        **🟢 Xử trí khuyến cáo:**
         
         1. **D-dimer:**
            - Xét nghiệm D-dimer trước tiên

@@ -90,7 +90,7 @@ elif "Hô hấp" in specialty:
     respiratory.render_respiratory_calculator(selected_score_id)
 
 # Neurology
-elif "Thần Kinh" in specialty:
+elif "Thần kinh" in specialty:
     neurology.render_neurology_calculator(selected_score_id)
 
 # GI/Hepatology
@@ -102,7 +102,7 @@ elif "Nội tiết" in specialty or "Chuyển hóa" in specialty:
     metabolism.render_metabolism_calculator(selected_score_id)
 
 # Hematology
-elif "Huyết Học" in specialty or "Đông Máu" in specialty:
+elif "Huyết Học" in specialty or "Đông máu" in specialty:
     hematology.render_hematology_calculator(selected_score_id)
 
 # Nephrology

@@ -129,7 +129,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.subheader("📊 Nhập Thông Số Khí Máu Động Mạch")
+    st.subheader("📊 Nhập thông số khí máu động mạch")
     
     col1, col2 = st.columns(2)
     
@@ -324,7 +324,7 @@ def render():
         - Hướng dẫn điều trị thích hợp
         """)
     
-    with st.expander("📊 Cách Đánh Giá Khí Máu Động Mạch"):
+    with st.expander("📊 Cách đánh giá khí máu động mạch"):
         st.markdown("""
         ### Tiếp cận có hệ thống:
         

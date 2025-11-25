@@ -10,7 +10,7 @@ from ..antibiotics_data import ANTIBIOTICS_DATABASE
 def render_header():
     """Render header section"""
     st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🧮 Tính Liều Kháng Sinh Theo eGFR/CrCl</h2>
+    <h2 style='text-align: center; color: #0EA5E9;'>🧮 Tính liều kháng sinh theo eGFR/CrCl</h2>
     <p style='text-align: center;'><em>Công cụ tính liều tự động cho tất cả kháng sinh dựa trên chức năng thận</em></p>
     """, unsafe_allow_html=True)
     
@@ -77,7 +77,7 @@ def render_renal_metrics(crcl, egfr, renal_category):
 
 def render_antibiotic_selection():
     """Render antibiotic selection section"""
-    st.markdown("### 💊 Chọn Kháng Sinh")
+    st.markdown("### 💊 Chọn kháng sinh")
     
     all_antibiotics = sorted(list(ANTIBIOTICS_DATABASE.keys()))
     

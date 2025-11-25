@@ -138,7 +138,7 @@ def render_dosing_calculator():
     st.markdown("---")
     
     # Calculate dose button
-    if st.button("🧮 Tính Liều", type="primary", use_container_width=True):
+    if st.button("🧮 Tính liều", type="primary", use_container_width=True):
         # Calculate adjusted dose
         result = calculate_adjusted_dose(
             selected_ab,

@@ -70,7 +70,7 @@ def render():
     st.markdown("**Nguyên tắc:** Ngừng kháng sinh gây bệnh nếu có thể, bắt đầu điều trị ngay")
     
     # Severity-based treatment
-    with st.expander("📋 Phác Đồ Điều Trị Theo Mức Độ", expanded=True):
+    with st.expander("📋 Phác đồ điều trị theo mức độ", expanded=True):
         st.markdown("#### **1. Nhẹ - Mild (First Episode)**")
         st.success("""
         **Lựa chọn 1 (Ưu tiên):**
@@ -304,7 +304,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: PREVENTION ==========
-    st.markdown("### 🛡️ Phòng Ngừa")
+    st.markdown("### 🛡️ Phòng ngừa")
     
     col1, col2 = st.columns(2)
     

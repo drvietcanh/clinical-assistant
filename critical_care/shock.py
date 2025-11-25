@@ -221,7 +221,7 @@ def render_shock_classification():
     if st.button("Phân loại", type="primary", key="classify_shock"):
         result = classify_shock_type(sbp, map_value, hr, lactate, cvp, scvo2)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         render_result_box(
             "Loại Sốc",
@@ -351,7 +351,7 @@ def render_fluid_responsiveness():
     if st.button("Đánh giá", type="primary", key="assess_fr"):
         result = assess_fluid_responsiveness(cvp, ppv, svv, plr_bool)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         render_result_box(
             "Đáp Ứng Dịch",

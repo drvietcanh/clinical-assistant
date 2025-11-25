@@ -263,7 +263,7 @@ def render():
         is_smoker = st.checkbox("**Đang hút thuốc lá**", help="Hút thuốc hiện tại hoặc bỏ trong <1 năm")
     
     with col2:
-        st.markdown("#### 🩺 Sinh Hiệu")
+        st.markdown("#### 🩺 Sinh hiệu")
         sbp = st.number_input(
             "Huyết áp tâm thu (SBP) mmHg",
             80.0, 220.0, 120.0, 1.0,

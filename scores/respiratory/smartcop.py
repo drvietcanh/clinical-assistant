@@ -148,7 +148,7 @@ def render():
     
     with col2:
         # T - Tachycardia
-        st.markdown("### 💓 Thông Số Sinh Hiệu & Xét Nghiệm")
+        st.markdown("### 💓 Thông số sinh hiệu & xét nghiệm")
         st.markdown("#### T - Tachycardia (Nhịp tim nhanh)")
         hr = st.number_input(
             "Heart Rate (nhịp/phút):",
