@@ -194,11 +194,24 @@ def render_comparison():
             if suscept:
                 for org, pattern in suscept.items():
                     # Color code
-                    if "S (" in pattern and float(pattern.split("S (")[1].split("%")[0]) >= 80:
-                        color = "#4CAF50"
-                    elif "R (" in pattern and float(pattern.split("R (")[1].split("%")[0]) >= 50:
-                        color = "#F44336"
-                    else:
+                    color = "#FF9800"  # Default
+                    try:
+                        if "S (" in pattern:
+                            # Extract percentage from "S (XX%)" or "S (XX-YY%)"
+                            s_part = pattern.split("S (")[1].split("%")[0]
+                            # Handle range like "95-98" -> take first value
+                            s_val = float(s_part.split("-")[0].strip())
+                            if s_val >= 80:
+                                color = "#4CAF50"
+                        elif "R (" in pattern:
+                            # Extract percentage from "R (XX%)" or "R (XX-YY%)"
+                            r_part = pattern.split("R (")[1].split("%")[0]
+                            # Handle range like "60-70" -> take first value
+                            r_val = float(r_part.split("-")[0].strip())
+                            if r_val >= 50:
+                                color = "#F44336"
+                    except (ValueError, IndexError, AttributeError):
+                        # If parsing fails, use default color
                         color = "#FF9800"
                     
                     st.markdown(f"""
