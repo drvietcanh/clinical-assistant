@@ -13,7 +13,7 @@ def render():
     st.caption("ASAM 2020, CIWA-Ar Protocol - Alcohol withdrawal syndrome management")
     
     st.info("""
-    **Hội chứng cai rượu (Alcohol Withdrawal Syndrome):**
+    **Hội Chứng Cai Rượu (Alcohol Withdrawal Syndrome):**
     - Xảy ra 6-24 giờ sau khi ngừng uống rượu
     - Triệu chứng: Run tay, lo âu, mất ngủ, buồn nôn
     - Có thể tiến triển thành: Co giật, Ảo giác, Delirium tremens
@@ -30,7 +30,7 @@ def render():
     st.markdown("### 📊 CIWA-Ar Score (Clinical Institute Withdrawal Assessment)")
     
     st.warning("""
-    **CIWA-Ar Score:** Đánh giá mức độ cai rượu (0-67 điểm)
+    **CIWA-Ar Score:** Đánh Giá Mức Độ Cai Rượu (0-67 điểm)
     
     **Các tiêu chí (mỗi tiêu chí 0-7 điểm):**
     1. **Nausea & Vomiting** (Buồn nôn & Nôn)
@@ -55,7 +55,7 @@ def render():
     st.markdown("### 💊 Điều Trị Benzodiazepine")
     
     treatment_approach = st.radio(
-        "**Phương pháp điều trị:**",
+        "**Phương Pháp Điều Trị:**",
         [
             "Symptom-Triggered (Theo triệu chứng)",
             "Fixed-Schedule (Lịch cố định)",
@@ -78,7 +78,7 @@ def render():
     st.markdown("### 📊 Phân Loại Mức Độ")
     
     severity = st.radio(
-        "**Mức độ cai rượu:**",
+        "**Mức Độ Cai Rượu:**",
         ["Nhẹ (Mild)", "Trung bình (Moderate)", "Nặng (Severe)", "Delirium Tremens"],
         key="withdrawal_severity"
     )
@@ -136,7 +136,7 @@ def render():
     st.markdown("### ⚠️ Co Giật (Seizures)")
     
     st.error("""
-    **Co giật do cai rượu:**
+    **Co Giật Do Cai Rượu:**
     - Thường xảy ra 6-48 giờ sau ngừng rượu
     - Thường là co giật toàn thân
     - Có thể tái phát
@@ -148,7 +148,7 @@ def render():
     
     **Lưu ý:**
     - Co giật thường tự hết
-    - Cần điều trị nguyên nhân (cai rượu)
+    - Cần điều trị nguyên nhân (Cai Rượu)
     - Không cần điều trị dài hạn
     """)
     
@@ -249,7 +249,7 @@ def render():
     - CIWA-Ar <10 trong 24 giờ
     - Không triệu chứng nặng
     - Có kế hoạch theo dõi
-    - Tư vấn về cai rượu
+    - Tư vấn về Cai Rượu
     """)
     
     st.markdown("---")

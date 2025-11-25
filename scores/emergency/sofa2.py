@@ -266,7 +266,7 @@ def render():
     
     # Liver
     st.markdown("#### 3️⃣ Gan (Liver)")
-    bilirubin = st.number_input("Bilirubin toàn phần (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f")
+    bilirubin = st.number_input("Bilirubin Toàn Phần (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f")
     st.caption("💡 Chuyển đổi: μmol/L ÷ 17.1 = mg/dL")
     
     st.divider()
@@ -430,7 +430,7 @@ def render():
         if result['subscores'].get('coagulation', 0) >= 2:
             recommendations.append("""
             **Đông máu (Tiểu cầu <120):**
-            - Tìm nguyên nhân (DIC, sepsis, thuốc, HIT)
+            - Tìm Nguyên Nhân (DIC, sepsis, thuốc, HIT)
             - Xem xét truyền tiểu cầu nếu chảy máu hoặc thủ thuật
             - Tránh thuốc ảnh hưởng tiểu cầu
             """)
@@ -466,7 +466,7 @@ def render():
             recommendations.append("""
             **Thận (Cr >2, UO <500, hoặc RRT):**
             - Đánh giá theo KDIGO AKI criteria
-            - Tìm nguyên nhân: pre-renal/intrinsic/post-renal
+            - Tìm Nguyên Nhân: pre-renal/intrinsic/post-renal
             - Điều chỉnh liều thuốc
             - Theo dõi điện giải (K, PO4)
             - Xem xét RRT nếu chỉ định

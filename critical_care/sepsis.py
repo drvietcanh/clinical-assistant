@@ -426,7 +426,7 @@ def render_sepsis_protocols():
     
     st.markdown("## 🦠 Sepsis Protocols & Management")
     st.markdown("""
-    Hướng dẫn quản lý sepsis và septic shock:
+    Hướng Dẫn Quản Lý Sepsis và Septic Shock:
     - Sepsis recognition (SIRS, qSOFA, Sepsis-3)
     - 1-hour bundle checklist
     - Antibiotic selection guide

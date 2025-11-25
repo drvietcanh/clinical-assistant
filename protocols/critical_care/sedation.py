@@ -53,7 +53,7 @@ def render():
     medication_type = st.radio(
         "**Loại thuốc:**",
         [
-            "Analgesia (Giảm Đau) - Ưu tiên",
+            "Analgesia (Giảm Đau) - Ưu Tiên",
             "Sedation (An Thần)",
             "Combined (Kết Hợp)"
         ],
@@ -105,7 +105,7 @@ def render():
     4. Đánh giá đau
     5. Quyết định: Tiếp tục an thần hay không
     
-    **Chống chỉ định:**
+    **Chống Chỉ Định:**
     - Sốc không ổn định
     - ICP tăng
     - ARDS nặng
@@ -271,7 +271,7 @@ def render_analgesia():
     - Giải phóng histamine (hạ huyết áp)
     - Thời gian bán hủy dài
     
-    **Chống chỉ định:**
+    **Chống Chỉ Định:**
     - Suy thận nặng
     - Dị ứng morphine
     """)
@@ -334,7 +334,7 @@ def render_sedation():
     - Propofol infusion syndrome (liều cao >4 mg/kg/h >48h)
     - Tăng triglyceride
     
-    **Chống chỉ định:**
+    **Chống Chỉ Định:**
     - Dị ứng propofol
     - Tăng lipid máu nặng
     - Propofol infusion syndrome
@@ -369,7 +369,7 @@ def render_sedation():
     - Tăng nguy cơ delirium
     - Khó điều chỉnh
     
-    **Chống chỉ định:**
+    **Chống Chỉ Định:**
     - Suy gan nặng
     - Dị ứng benzodiazepine
     
@@ -402,7 +402,7 @@ def render_sedation():
     - Đắt tiền
     - Cần truyền tĩnh mạch liên tục
     
-    **Chống chỉ định:**
+    **Chống Chỉ Định:**
     - Block AV độ cao
     - Nhịp chậm nặng
     

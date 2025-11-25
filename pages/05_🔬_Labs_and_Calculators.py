@@ -88,7 +88,7 @@ with st.sidebar:
         - Corrected Ca, FENa
         - HbA1c, T4 Index
         
-        **💊 Liên quan:** Các calculator này cần thiết cho điều chỉnh liều thuốc
+        **💊 Liên Quan:** Các calculator này cần thiết cho điều chỉnh liều thuốc
         """)
     
     elif category == "🔬 Lab Panels":
@@ -137,7 +137,7 @@ if category == "🧮 Calculators":
     **Hướng dẫn:**
     1. Nhập các giá trị đầu vào
     2. Xem kết quả tính toán
-    3. Kiểm tra các panel xét nghiệm liên quan để tra cứu khoảng giá trị tham chiếu
+    3. Kiểm tra các panel xét nghiệm Liên Quan để tra cứu khoảng giá trị tham chiếu
     """)
     
     # Quick Links to related lab panels
@@ -213,7 +213,7 @@ elif category == "🔬 Lab Panels":
     1. Nhập giá trị xét nghiệm của bệnh nhân
     2. Xem giải thích tự động
     3. Kiểm tra khoảng giá trị tham chiếu
-    4. Sử dụng Quick Actions bên dưới để tính toán các giá trị liên quan
+    4. Sử dụng Quick Actions bên dưới để tính toán các giá trị Liên Quan
     """)
     
     # Quick Actions section (for integration)

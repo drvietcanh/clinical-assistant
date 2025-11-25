@@ -21,7 +21,7 @@ def render():
     
     **Phân loại:**
     - **Established SE:** ≥5 phút
-    - **Refractory SE (RSE):** Không đáp ứng với 2 thuốc chống động kinh
+    - **Refractory SE (RSE):** Không đáp ứng với 2 Thuốc Chống Động Kinh
     - **Super-refractory SE (SRSE):** ≥24 giờ dù đã dùng thuốc mê
     """)
     
@@ -79,7 +79,7 @@ def render():
     st.markdown("### 🔄 Refractory Status Epilepticus (20-40 phút)")
     
     st.error("""
-    **Nếu vẫn còn co giật sau 2 thuốc chống động kinh:**
+    **Nếu vẫn còn co giật sau 2 Thuốc Chống Động Kinh:**
     
     **1. Midazolam truyền tĩnh mạch:**
     - **Bolus:** 0.2 mg/kg IV
@@ -147,7 +147,7 @@ def render():
     
     st.info("""
     **Nguyên nhân thường gặp:**
-    1. **Ngừng thuốc chống động kinh** (30-40%)
+    1. **Ngừng Thuốc Chống Động Kinh** (30-40%)
     2. **Đột quỵ** (20-25%)
     3. **Chấn thương đầu** (10-15%)
     4. **Nhiễm trùng CNS** (5-10%)
@@ -159,7 +159,7 @@ def render():
     - CT/MRI não
     - LP (nếu nghi ngờ nhiễm trùng)
     - Điện giải, glucose, chức năng gan/thận
-    - Nồng độ thuốc chống động kinh
+    - Nồng độ Thuốc Chống Động Kinh
     - Độc chất học
     """)
     
@@ -174,7 +174,7 @@ def render():
         "✅ Lorazepam 0.1 mg/kg IV (hoặc midazolam IM)",
         "✅ Fosphenytoin 20 mg PE/kg IV (nếu vẫn co giật)",
         "✅ EEG monitoring (nếu có)",
-        "✅ Tìm nguyên nhân (CT, LP, xét nghiệm)",
+        "✅ Tìm Nguyên Nhân (CT, LP, xét nghiệm)",
         "✅ ICU nếu refractory",
         "✅ Theo dõi hô hấp, huyết động"
     ]
@@ -198,7 +198,7 @@ def render():
         **Người cao tuổi:**
         - Giảm liều benzodiazepine
         - Cẩn thận với hô hấp
-        - Tìm nguyên nhân (thường là đột quỵ)
+        - Tìm Nguyên Nhân (thường là đột quỵ)
         """)
     
     with col2:
@@ -323,6 +323,6 @@ def render_super_refractory_se():
     
     4. **Hội chẩn:** Thần kinh, gây mê
     
-    **Mục Tiêu:** Kiểm soát co giật, tìm nguyên nhân
+    **Mục Tiêu:** Kiểm soát co giật, Tìm Nguyên Nhân
     """)
 

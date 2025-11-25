@@ -110,9 +110,9 @@ def render():
     st.markdown("### 💊 Điều Trị")
     
     treatment_approach = st.radio(
-        "**Phương pháp điều trị:**",
+        "**Phương Pháp Điều Trị:**",
         [
-            "Non-Pharmacologic (Không dùng thuốc) - Ưu tiên",
+            "Non-Pharmacologic (Không dùng thuốc) - Ưu Tiên",
             "Pharmacologic (Dùng thuốc) - Khi cần"
         ],
         key="delirium_treatment"
@@ -131,7 +131,7 @@ def render():
     
     checklist_items = [
         "✅ Đánh giá CAM-ICU hàng ngày",
-        "✅ Tìm nguyên nhân (PIMED)",
+        "✅ Tìm Nguyên Nhân (PIMED)",
         "✅ Điều trị nguyên nhân",
         "✅ Non-pharmacologic management (ABCDE bundle)",
         "✅ Đánh giá đau thường xuyên",
@@ -231,7 +231,7 @@ def render_hyperactive_delirium():
     - Nguy hiểm cho bản thân và nhân viên
     
     **Điều Trị:**
-    1. **Non-pharmacologic (Ưu tiên):**
+    1. **Non-pharmacologic (Ưu Tiên):**
        - Đảm bảo an toàn
        - Giải thích, trấn an
        - Môi trường yên tĩnh
@@ -263,7 +263,7 @@ def render_hypoactive_delirium():
     - Dễ bỏ sót (không rõ ràng như hyperactive)
     
     **Điều Trị:**
-    1. **Non-pharmacologic (Ưu tiên):**
+    1. **Non-pharmacologic (Ưu Tiên):**
        - Kích thích nhẹ nhàng
        - Định hướng lại
        - Huy động gia đình
@@ -275,7 +275,7 @@ def render_hypoactive_delirium():
        - Cân nhắc quetiapine hoặc olanzapine (liều thấp)
     
     3. **Quan trọng:**
-       - Tìm nguyên nhân (thường là nhiễm trùng, rối loạn chuyển hóa)
+       - Tìm Nguyên Nhân (thường là nhiễm trùng, rối loạn chuyển hóa)
        - Điều trị nguyên nhân
     """)
 
@@ -291,7 +291,7 @@ def render_mixed_delirium():
     - Khó dự đoán
     
     **Điều Trị:**
-    1. **Non-pharmacologic (Ưu tiên):**
+    1. **Non-pharmacologic (Ưu Tiên):**
        - Linh hoạt theo từng giai đoạn
        - Đảm bảo an toàn khi kích động
        - Kích thích khi ức chế
@@ -312,7 +312,7 @@ def render_non_pharmacologic():
     st.success("## ✅ Non-Pharmacologic Management (ABCDE Bundle)")
     
     st.markdown("""
-    **ABCDE Bundle - Ưu tiên hàng đầu:**
+    **ABCDE Bundle - Ưu Tiên Hàng Đầu:**
     
     **A - Assess, Prevent, and Manage Pain:**
     - Đánh giá đau thường xuyên

@@ -284,7 +284,7 @@ def render():
         """)
         
         st.info("""
-        **Tiêu chuẩn xuất viện:**
+        **Tiêu Chuẩn Xuất Viện:**
         - ✅ SpO₂ >94% trong không khí phòng
         - ✅ PEFR >70% dự đoán hoặc best personal
         - ✅ Không cần SABA >4h

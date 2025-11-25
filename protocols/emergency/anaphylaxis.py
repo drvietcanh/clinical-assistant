@@ -15,7 +15,7 @@ def render():
     st.error("""
     **⚠️ ANAPHYLAXIS = MEDICAL EMERGENCY**
     
-    **Triệu chứng điển hình:**
+    **Triệu Chứng Điển Hình:**
     - Phản ứng da/mucosa (urticaria, angioedema)
     - Hô hấp (stridor, wheezing, dyspnea)
     - Tuần hoàn (hypotension, syncope)

@@ -252,7 +252,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### **Điều chỉnh kháng sinh:**")
+        st.markdown("#### **Điều Chỉnh Kháng Sinh:**")
         st.warning("""
         - **Ngừng kháng sinh gây bệnh** nếu có thể
         - Nếu phải tiếp tục kháng sinh:
@@ -260,7 +260,7 @@ def render():
           - Cân nhắc dùng probiotic (Lactobacillus, Saccharomyces)
         """)
         
-        st.markdown("#### **Bù dịch và điện giải:**")
+        st.markdown("#### **Bù Dịch Và Điện Giải:**")
         st.info("""
         - Bù dịch qua đường uống hoặc IV
         - Theo dõi điện giải (Na, K, Cl)
@@ -268,7 +268,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("#### **Tránh thuốc chống nhu động:**")
+        st.markdown("#### **Tránh Thuốc Chống Nhu Động:**")
         st.error("""
         - **Không dùng:** Loperamide, Diphenoxylate
         - Lý do: Làm chậm thải trừ độc tố, tăng nguy cơ megacolon

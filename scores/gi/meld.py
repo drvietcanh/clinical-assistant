@@ -88,7 +88,7 @@ def render():
         st.markdown("### 🔬 Xét nghiệm")
         
         # 1. Bilirubin
-        st.markdown("#### 1. Bilirubin toàn phần")
+        st.markdown("#### 1. Bilirubin Toàn Phần")
         
         bili_unit = st.radio(
             "Đơn vị:",

@@ -81,7 +81,7 @@ with st.sidebar:
             [
                 "🦠 Sepsis 1-Hour Bundle",
                 "🦠 Sepsis 3-Hour Bundle",
-                "💔 Quản lý sốc",
+                "💔 Quản Lý Sốc",
                 "🧠 Stroke Management",
                 "🩸 GI Bleeding",
                 "🍭 DKA Protocol",

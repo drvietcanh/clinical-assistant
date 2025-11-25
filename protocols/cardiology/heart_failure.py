@@ -232,7 +232,7 @@ def render():
             """)
     
     with tabs[3]:  # Oxygen/NIV
-        st.markdown("#### Hỗ trợ hô hấp")
+        st.markdown("#### Hỗ Trợ Hô Hấp")
         
         st.success("""
         **Oxygen Therapy:**
@@ -358,7 +358,7 @@ def render():
     
     with col_mon2:
         st.info("""
-        **Tiêu chuẩn xuất viện:**
+        **Tiêu Chuẩn Xuất Viện:**
         - ✅ Euvolemic (không tắc nghẽn)
         - ✅ Huyết động ổn định
         - ✅ Không cần IV meds ≥24h

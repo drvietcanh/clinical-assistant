@@ -573,9 +573,9 @@ def render_weaning_calculator():
 def render_ventilator_calculator():
     """Main function to render ventilator management tools"""
     
-    st.markdown("## 🫁 Công cụ quản lý máy thở")
+    st.markdown("## 🫁 Công Cụ Quản Lý Máy Thở")
     st.markdown("""
-    Công cụ quản lý máy thở cho ICU:
+    Công Cụ Quản Lý Máy Thở cho ICU:
     - Cân nặng lý tưởng (IBW) - Tính trọng lượng lý tưởng
     - Thể tích khí lưu thông - Tính thể tích khí lưu thông
     - Máy tính PEEP - Khuyến nghị PEEP dựa trên FiO2

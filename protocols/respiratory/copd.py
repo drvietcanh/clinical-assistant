@@ -161,7 +161,7 @@ def render():
         
         if antibiotics_indicated:
             st.success("""
-            **Lựa chọn kháng sinh (5-7 ngày):**
+            **Lựa Chọn Kháng Sinh (5-7 ngày):**
             
             **Lựa chọn 1 (Ưu tiên):**
             - **Amoxicillin-clavulanate** 875/125mg PO x 2 lần/ngày
@@ -257,7 +257,7 @@ def render():
         """)
         
         st.info("""
-        **Tiêu chuẩn xuất viện:**
+        **Tiêu Chuẩn Xuất Viện:**
         - ✅ Sử dụng SABA ≤ mỗi 4h
         - ✅ Tự đi lại được (nếu trước đây đi được)
         - ✅ Ăn uống, ngủ tốt

@@ -15,7 +15,7 @@ def render():
     st.error("""
     **⚠️ NGỘ ĐỘC OPIOID = CẤP CỨU Y TẾ**
     
-    **Triệu chứng điển hình:**
+    **Triệu Chứng Điển Hình:**
     - Ức chế hô hấp (respiratory depression)
     - Đồng tử co nhỏ (miosis)
     - Giảm ý thức, hôn mê
@@ -110,10 +110,10 @@ def render():
     st.markdown("### ⚠️ Re-Narcotization (Tái Ngộ Độc)")
     
     st.warning("""
-    **Nguy cơ tái ngộ độc:**
+    **Nguy Cơ Tái Ngộ Độc:**
     - Naloxone có thời gian bán hủy ngắn (30-90 phút)
     - Opioid có thể tồn tại lâu hơn (đặc biệt là fentanyl, methadone)
-    - Bệnh nhân có thể tái ngộ độc sau khi naloxone hết tác dụng
+    - Bệnh nhân có thể Tái Ngộ Độc sau khi naloxone hết tác dụng
     
     **Khuyến Nghị:**
     - **Theo dõi ít nhất 2-4 giờ** sau khi đáp ứng
@@ -131,7 +131,7 @@ def render():
     - Cần nhiều liều naloxone
     - Long-acting opioids (methadone, buprenorphine)
     - Fentanyl overdose
-    - Tái ngộ độc sau khi ngừng naloxone
+    - Tái Ngộ Độc sau khi ngừng naloxone
     
     **Liều truyền:**
     - **Bolus:** 0.4-2 mg IV
@@ -142,7 +142,7 @@ def render():
     **Theo Dõi:**
     - RR, SpO2 mỗi 15-30 phút
     - Ý thức
-    - Có thể cần tăng liều nếu tái ngộ độc
+    - Có thể cần tăng liều nếu Tái Ngộ Độc
     """)
     
     st.markdown("---")
@@ -156,7 +156,7 @@ def render():
         "✅ Đánh giá đáp ứng trong 1-2 phút",
         "✅ Lặp lại naloxone nếu không đáp ứng",
         "✅ Monitor RR, SpO2, ý thức",
-        "✅ Theo dõi 2-4 giờ (nguy cơ tái ngộ độc)",
+        "✅ Theo dõi 2-4 giờ (nguy cơ Tái Ngộ Độc)",
         "✅ Cân nhắc naloxone truyền tĩnh mạch nếu cần",
         "✅ Hỗ trợ hô hấp nếu cần"
     ]
@@ -175,7 +175,7 @@ def render():
         **Trẻ Em:**
         - Liều: 0.01 mg/kg IV/IM/IN
         - Có thể cần liều cao hơn nếu fentanyl
-        - Theo dõi sát (dễ tái ngộ độc)
+        - Theo dõi sát (dễ Tái Ngộ Độc)
         
         **Phụ Nữ Có Thai:**
         - Naloxone an toàn (không qua nhau thai nhiều)
@@ -205,14 +205,14 @@ def render():
     - ✅ Hồi phục hô hấp (RR ≥12/min)
     - ✅ SpO2 ≥94%
     - ✅ Hồi phục ý thức
-    - ✅ Không tái ngộ độc trong 2-4 giờ
+    - ✅ Không Tái Ngộ Độc trong 2-4 giờ
     
     **Xuất viện khi:**
     - Không triệu chứng ≥2-4 giờ
     - Hô hấp ổn định
     - Ý thức bình thường
     - Có kế hoạch theo dõi
-    - Tư vấn về nguy cơ tái ngộ độc
+    - Tư vấn về nguy cơ Tái Ngộ Độc
     """)
     
     st.markdown("---")
@@ -393,7 +393,7 @@ def render_severe_overdose():
        - Truyền dịch nếu hạ huyết áp
        - Monitor liên tục
     
-    5. **Theo Dõi:** 4-6 giờ (nguy cơ tái ngộ độc cao)
+    5. **Theo Dõi:** 4-6 giờ (nguy cơ Tái Ngộ Độc cao)
     """)
 
 
@@ -424,6 +424,6 @@ def render_respiratory_arrest():
     
     **5. Theo dõi:**
     - ICU monitoring
-    - 6-12 giờ (nguy cơ tái ngộ độc rất cao)
+    - 6-12 giờ (nguy cơ Tái Ngộ Độc rất cao)
     """)
 

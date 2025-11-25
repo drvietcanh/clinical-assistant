@@ -298,7 +298,7 @@ def render():
     with tabs[3]:
         st.markdown("#### Tiêu Chuẩn Xuất Viện & Theo Dõi")
         st.success("""
-        **Tiêu chuẩn xuất viện:**
+        **Tiêu Chuẩn Xuất Viện:**
         - ✅ Không đau ngực ≥24h
         - ✅ Huyết động ổn định
         - ✅ Không loạn nhịp tim nguy hiểm

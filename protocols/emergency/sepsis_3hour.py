@@ -59,7 +59,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: 3-HOUR MANAGEMENT ==========
-    st.markdown("### ⏱️ Quản lý trong 3 giờ đầu")
+    st.markdown("### ⏱️ Quản Lý Trong 3 Giờ Đầu")
     
     st.markdown("**Các bước tiếp theo sau 1-hour bundle:**")
     
@@ -243,7 +243,7 @@ def render():
         - Hoặc Normal Saline
         """)
     
-    st.markdown("**Đánh giá đáp ứng dịch:**")
+    st.markdown("**Đánh Giá Đáp Ứng Dịch:**")
     
     col1, col2 = st.columns(2)
     
@@ -291,7 +291,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: VASOPRESSOR MANAGEMENT ==========
-    st.markdown("### ⚠️ Quản lý vasopressor")
+    st.markdown("### ⚠️ Quản Lý Vasopressor")
     
     st.markdown("**Chỉ Định:** MAP <65 mmHg sau truyền dịch đầy đủ")
     
