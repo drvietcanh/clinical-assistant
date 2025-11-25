@@ -173,21 +173,21 @@ with st.sidebar:
     st.markdown("---")
     
     st.info("""
-    **📚 Tất Cả Modules:**
+    **📚 Tất cả modules:**
     
-    **📊 Tính Toán:**
+    **📊 Tính toán:**
     - Scores (110 calculators)
     - Labs & Calculators
     - TDM
     
     **💊 Thuốc:**
-    - Tra Cứu Thuốc
+    - Tra cứu thuốc
     - Antibiotics
     
-    **🫁 Hồi Sức:**
+    **🫁 Hồi sức:**
     - Critical Care (bao gồm Ventilator Management)
     
-    **📋 Hướng Dẫn:**
+    **📋 Hướng dẫn:**
     - Protocols
     - Diagnosis
     """)
@@ -233,7 +233,7 @@ st.markdown("""
             border-radius: 16px; 
             margin-bottom: 2rem;
             color: white;">
-    <h2 style="color: white; margin-bottom: 0.5rem;">🔍 Tìm Kiếm Nhanh</h2>
+    <h2 style="color: white; margin-bottom: 0.5rem;">🔍 Tìm kiếm nhanh</h2>
     <p style="color: rgba(255,255,255,0.9); margin: 0;">Nhấn <kbd style="background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 4px;">Ctrl+K</kbd> để focus vào ô tìm kiếm</p>
 </div>
 """, unsafe_allow_html=True)
@@ -247,7 +247,7 @@ st.markdown("---")
 tab1, tab2, tab3 = st.tabs(["🚀 Truy Cập Nhanh", "⭐ Yêu Thích & Gần Đây", "📊 Thống Kê & Cập Nhật"])
 
 with tab1:
-    st.markdown("### 📚 Tất Cả Modules")
+    st.markdown("### 📚 Tất cả modules")
     st.caption("Chọn module để bắt đầu. Modules được nhóm theo chức năng.")
     
     # Group modules by category
@@ -255,10 +255,10 @@ with tab1:
     
     # Define categories
     categories = {
-        "📊 Tính Toán & Scores": ["scores", "labs", "tdm"],
-        "💊 Thuốc & Điều Trị": ["antibiotics", "drug_database"],
-        "🫁 Hồi Sức & Cấp Cứu": ["ventilator", "critical_care"],
-        "📋 Hướng Dẫn & Chẩn Đoán": ["protocols", "diagnosis"]
+        "📊 Tính toán & Scores": ["scores", "labs", "tdm"],
+        "💊 Thuốc & Điều trị": ["antibiotics", "drug_database"],
+        "🫁 Hồi sức & Cấp cứu": ["ventilator", "critical_care"],
+        "📋 Hướng dẫn & Chẩn đoán": ["protocols", "diagnosis"]
     }
     
     # Organize modules by category
@@ -397,7 +397,7 @@ with tab3:
         render_tips()
 
 # 8. Data source info
-with st.expander("📚 Nguồn Dữ Liệu & Tài Liệu Tham Khảo"):
+with st.expander("📚 Nguồn dữ liệu & Tài liệu tham khảo"):
     st.markdown("""
     **Guidelines Chính:**
     - Sepsis-3 (JAMA 2016) - qSOFA, SOFA definitions

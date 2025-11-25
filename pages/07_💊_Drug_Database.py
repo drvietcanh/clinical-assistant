@@ -39,7 +39,7 @@ with st.sidebar:
     saved_function_type = st.session_state.get('drug_db_function_type', None)
     default_index = 0
     menu_options = [
-        "💊 Tra Cứu Thuốc (Tất Cả)",
+        "💊 Tra cứu thuốc (Tất cả)",
         "🧮 Tính Liều Theo eGFR/CrCl (Kháng Sinh)",
         "📊 So Sánh Thuốc Trực Quan",
         "📅 Tạo Lịch Trình Liều Dùng",
@@ -93,7 +93,7 @@ if st.session_state.get('switch_to_comparison', False):
         del st.session_state['preset_comparison_drugs']
 
 # Route to appropriate function
-if "Tra Cứu Thuốc" in function_type:
+if "Tra cứu thuốc" in function_type or "Tra Cứu Thuốc" in function_type:
     render_drug_database()
 
 elif "Tính Liều Theo eGFR" in function_type or "CrCl" in function_type:

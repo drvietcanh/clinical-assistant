@@ -31,7 +31,7 @@ with st.sidebar:
             "🔍 Tra Cứu & Dữ Liệu Kháng Sinh",
             "🔬 So Sánh Nhiều Kháng Sinh",
             "📊 So Sánh Side-by-Side",
-            "🔄 Phác Đồ Điều Trị"
+            "🔄 Phác đồ điều trị"
         ]
     )
     
@@ -44,7 +44,7 @@ with st.sidebar:
     - WHO AWaRe Classification
     
     **💡 Tính liều theo thận:**
-    Xem module "💊 Tra Cứu Thuốc" → 
+    Xem module "💊 Tra cứu thuốc" → 
     "🧮 Tính Liều Theo eGFR/CrCl"
     """)
 
@@ -60,7 +60,7 @@ elif "So Sánh Nhiều" in function_type:
 elif "Side-by-Side" in function_type:
     render_comparison()
 
-elif "Phác Đồ" in function_type:
+elif "Phác đồ" in function_type or "Phác Đồ" in function_type:
     render_algorithms_page()
 
 # ========== FOOTER ==========

@@ -42,7 +42,7 @@ from critical_care.ventilator import (
 
 # Standard page setup
 setup_page(
-    page_title="Hồi Sức",
+    page_title="Hồi sức",
     page_icon="🫁",
     description="Công cụ hỗ trợ hồi sức cấp cứu và ICU"
 )
@@ -86,7 +86,7 @@ with st.sidebar:
     
     st.markdown("---")
     st.info("""
-    **📚 Module Hồi Sức:**
+    **📚 Module Hồi sức:**
     - Tính toán dịch truyền và điện giải
     - Hướng dẫn liều vasopressor
     - Tính toán truyền máu và chế phẩm máu

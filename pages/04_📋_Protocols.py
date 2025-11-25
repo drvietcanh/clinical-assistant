@@ -32,7 +32,7 @@ from protocols import (
 
 # Standard page setup
 setup_page(
-    page_title="Phác Đồ Điều Trị",
+    page_title="Phác đồ điều trị",
     page_icon="📋",
     description="Các phác đồ điều trị chuẩn theo hướng dẫn quốc tế"
 )

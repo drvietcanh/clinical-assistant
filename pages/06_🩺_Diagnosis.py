@@ -10,7 +10,7 @@ from diagnosis import render_ddx_interface
 
 # Standard page setup
 setup_page(
-    page_title="Chẩn Đoán Phân Biệt",
+    page_title="Chẩn đoán phân biệt",
     page_icon="🩺",
     description="Công cụ hỗ trợ tạo danh sách chẩn đoán phân biệt"
 )

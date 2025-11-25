@@ -25,7 +25,7 @@ def render_google_analytics_stats():
         return
     
     st.markdown("---")
-    st.markdown("### 📊 Thống Kê Truy Cập")
+    st.markdown("### 📊 Thống kê truy cập")
     
     # Hiển thị widget Google Analytics
     st.markdown(f"""
@@ -122,7 +122,7 @@ def render_google_analytics_counter():
         text-align: center;
         box-shadow: 0 4px 12px rgba(102,126,234,0.2);
     ">
-        <h2 style="color: white; margin: 0 0 10px 0; font-size: 2rem;">📊 Thống Kê Truy Cập</h2>
+        <h2 style="color: white; margin: 0 0 10px 0; font-size: 2rem;">📊 Thống kê truy cập</h2>
         <p style="color: rgba(255,255,255,0.95); margin: 0; font-size: 1rem;">
             Theo dõi lượt truy cập và thống kê từ Google Analytics
         </p>
@@ -177,11 +177,8 @@ def render_google_analytics_counter():
         st.caption(f"📅 Dữ liệu từ {analytics_data['date_range']['start']} đến {analytics_data['date_range']['end']}")
         st.markdown("---")
     else:
-        # Hiển thị hướng dẫn setup nếu chưa có API
-        if GA_API_AVAILABLE:
-            render_analytics_setup_guide()
-        else:
-            st.info("💡 Để hiển thị số liệu thực tế, cần cài đặt `google-analytics-data` package.")
+        # Không hiển thị gì nếu chưa có dữ liệu
+        pass
     
     col1, col2, col3 = st.columns(3)
     
@@ -255,50 +252,4 @@ def render_google_analytics_counter():
         </div>
         """, unsafe_allow_html=True)
     
-    # Info box
-    st.markdown("""
-    <div style="
-        background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-        padding: 20px;
-        border-radius: 12px;
-        margin-top: 25px;
-        border-left: 5px solid #1976d2;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    ">
-        <div style="display: flex; align-items: start; gap: 15px;">
-            <div style="font-size: 2rem;">💡</div>
-            <div style="flex: 1;">
-                <h4 style="margin: 0 0 10px 0; color: #1976d2;">Cách xem số liệu chi tiết:</h4>
-                <ul style="margin: 0; padding-left: 20px; color: #666; line-height: 1.8;">
-                    <li>Đăng nhập vào <a href="https://analytics.google.com/" target="_blank" style="color: #1976d2; font-weight: bold;">Google Analytics Dashboard</a></li>
-                    <li>Số liệu sẽ được cập nhật sau vài phút khi có người dùng truy cập</li>
-                    <li>Xem <strong>Realtime</strong> để thấy lượt truy cập đang diễn ra</li>
-                    <li>Xem <strong>Reports</strong> để xem thống kê theo ngày/tuần/tháng</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    # Quick link button
-    st.markdown("""
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="https://analytics.google.com/" target="_blank" 
-           style="
-               display: inline-block;
-               padding: 12px 30px;
-               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-               color: white;
-               text-decoration: none;
-               border-radius: 25px;
-               font-weight: bold;
-               box-shadow: 0 4px 12px rgba(102,126,234,0.3);
-               transition: all 0.3s ease;
-           "
-           onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(102,126,234,0.4)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(102,126,234,0.3)';">
-            🚀 Mở Google Analytics Dashboard
-        </a>
-    </div>
-    """, unsafe_allow_html=True)
 

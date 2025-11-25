@@ -13,7 +13,7 @@ from scores import cardiology, emergency, respiratory, neurology, gi, metabolism
 
 # Standard page setup
 setup_page(
-    page_title="Thang Điểm Lâm Sàng",
+    page_title="Thang điểm lâm sàng",
     page_icon="📊",
     description="Calculators phân loại theo chuyên khoa"
 )

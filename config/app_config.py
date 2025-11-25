@@ -46,7 +46,7 @@ APP_CONFIG = {
     "pages": {
         "scores": ModuleInfo(
             id="scores",
-            title="Thang Điểm Lâm Sàng",
+            title="Thang điểm lâm sàng",
             icon="📊",
             page_path="pages/01_📊_Scores.py",
             description="110 calculators, 19 specialties",
@@ -55,7 +55,7 @@ APP_CONFIG = {
         ),
         "antibiotics": ModuleInfo(
             id="antibiotics",
-            title="Kháng Sinh",
+            title="Kháng sinh",
             icon="💊",
             page_path="pages/02_💊_Antibiotics.py",
             description="Tra cứu & so sánh kháng sinh",
@@ -64,7 +64,7 @@ APP_CONFIG = {
         ),
         "ventilator": ModuleInfo(
             id="ventilator",
-            title="Thở Máy",
+            title="Thở máy",
             icon="🫁",
             page_path="pages/03_🫁_Ventilator.py",
             description="Đã tích hợp vào Critical Care - Redirect",
@@ -73,7 +73,7 @@ APP_CONFIG = {
         ),
         "protocols": ModuleInfo(
             id="protocols",
-            title="Phác Đồ Điều Trị",
+            title="Phác đồ điều trị",
             icon="📋",
             page_path="pages/04_📋_Protocols.py",
             description="5 protocols, Evidence-based",
@@ -91,7 +91,7 @@ APP_CONFIG = {
         ),
         "diagnosis": ModuleInfo(
             id="diagnosis",
-            title="Chẩn Đoán Phân Biệt",
+            title="Chẩn đoán phân biệt",
             icon="🩺",
             page_path="pages/06_🩺_Diagnosis.py",
             description="DDx Generator, Clinical decision support",
@@ -100,7 +100,7 @@ APP_CONFIG = {
         ),
         "drug_database": ModuleInfo(
             id="drug_database",
-            title="Tra Cứu Thuốc",
+            title="Tra cứu thuốc",
             icon="💊",
             page_path="pages/07_💊_Drug_Database.py",
             description="Database thuốc, tính liều theo thận, tương tác, IV",
@@ -109,7 +109,7 @@ APP_CONFIG = {
         ),
         "tdm": ModuleInfo(
             id="tdm",
-            title="TDM - Theo Dõi Nồng Độ",
+            title="TDM - Theo dõi nồng độ",
             icon="📊",
             page_path="pages/08_📊_TDM.py",
             description="Tính toán và theo dõi nồng độ thuốc (5 thuốc)",
@@ -118,7 +118,7 @@ APP_CONFIG = {
         ),
         "critical_care": ModuleInfo(
             id="critical_care",
-            title="Hồi Sức",
+            title="Hồi sức",
             icon="🫁",
             page_path="pages/09_🫁_Critical_Care.py",
             description="Ventilator, Fluids, Vasopressors, Transfusion, Sedation",
