@@ -190,7 +190,7 @@ def render():
         
         **Theo Dõi:**
         - K⁺ mỗi 1-2h
-        - ECG continuous
+        - ECG liên tục
         - Glucose mỗi 1h × 4h
         """)
     

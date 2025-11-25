@@ -33,7 +33,7 @@ def render():
         
         **1. Triệu chứng cấp tính:**
         - **Sốc:** Huyết áp thấp, không đáp ứng dịch
-        - **Hạ huyết áp:** SBP <90 mmHg hoặc giảm >20 mmHg so với baseline
+        - **Hạ huyết áp:** SBP <90 mmHg hoặc giảm >20 mmHg so với ban đầu
         - **Mệt mỏi cực độ:** Không thể đứng dậy
         - **Nôn, buồn nôn:** Thường gặp
         - **Đau bụng:** Có thể giống viêm phúc mạc

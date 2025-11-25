@@ -374,7 +374,7 @@ def render():
     
     monitoring_table = {
         "Thông số": [
-            "Vital signs",
+            "Dấu hiệu sống",
             "Lactate",
             "Urine output",
             "MAP",

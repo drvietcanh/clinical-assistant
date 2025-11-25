@@ -30,8 +30,8 @@ def render():
         **Severe (<1.0 mg/dL):**
         - Seizures
         - Tetany
-        - Arrhythmias
-        - Cardiac arrhythmias
+        - Loạn nhịp tim
+        - Loạn nhịp tim
         """)
     
     with col2:
@@ -85,7 +85,7 @@ def render():
         
         severity = st.radio(
             "Mức độ:",
-            ["Nhẹ (asymptomatic)", "Trung bình (symptomatic)", "Nặng (seizures, arrhythmias)"],
+            ["Nhẹ (asymptomatic)", "Trung bình (symptomatic)", "Nặng (seizures, loạn nhịp tim)"],
             key="mg_severity"
         )
     

@@ -248,7 +248,7 @@ def render_shock_classification():
             st.error("""
             **❤️ Cardiogenic Shock:**
             1. Đánh giá chức năng tim (echo, ECG)
-            2. Điều trị nguyên nhân (ACS, arrhythmia, etc.)
+            2. Điều trị nguyên nhân (ACS, loạn nhịp tim, etc.)
             3. Inotrope (dobutamine, milrinone)
             4. Vasopressor nếu cần (norepinephrine)
             5. Cân nhắc IABP, ECMO nếu nặng

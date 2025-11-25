@@ -254,16 +254,16 @@ def render():
     with tabs[1]:
         st.markdown("#### Theo Dõi")
         st.info("""
-        **Monitoring tại CCU:**
-        - ✓ Continuous ECG monitoring
-        - ✓ Vital signs mỗi 1-2h
-        - ✓ Serial troponin (0h, 3h, 6h)
-        - ✓ Daily ECG
-        - ✓ Echocardiography (đánh giá EF, biến chứng)
-        - ✓ Lipid profile, HbA1c
+        **Theo dõi tại CCU:**
+        - ✓ Theo dõi ECG liên tục
+        - ✓ Dấu hiệu sống mỗi 1-2h
+        - ✓ Troponin theo dõi (0h, 3h, 6h)
+        - ✓ ECG hàng ngày
+        - ✓ Siêu âm tim (đánh giá EF, biến chứng)
+        - ✓ Hồ sơ lipid, HbA1c
         
         **Thời gian nằm viện:**
-        - STEMI uncomplicated: 3-5 ngày
+        - STEMI không biến chứng: 3-5 ngày
         - NSTEMI: 2-4 ngày
         - Có biến chứng: 7-14 ngày
         """)
@@ -273,12 +273,12 @@ def render():
         st.error("""
         **Biến chứng cần theo dõi:**
         
-        **1. Arrhythmias:**
+        **1. Loạn nhịp tim:**
         - VF/VT (24-48h đầu)
-        - Bradycardia (inferior MI)
+        - Nhịp chậm (inferior MI)
         - AF mới (15-20%)
         
-        **2. Mechanical:**
+        **2. Cơ học:**
         - Suy tim cấp
         - Shock tim
         - Thủng vách liên thất (ngày 3-5)
@@ -301,8 +301,8 @@ def render():
         **Tiêu chuẩn xuất viện:**
         - ✅ Không đau ngực ≥24h
         - ✅ Huyết động ổn định
-        - ✅ Không arrhythmia nguy hiểm
-        - ✅ Đã PCI/medical management ổn định
+        - ✅ Không loạn nhịp tim nguy hiểm
+        - ✅ Đã PCI/điều trị nội khoa ổn định
         - ✅ Echo đã làm (biết EF)
         - ✅ Đã giáo dục bệnh nhân
         - ✅ Có thuốc về nhà đầy đủ
@@ -327,7 +327,7 @@ def render():
         
         **Theo dõi:**
         - Tuần 1-2: Tái khám
-        - Tháng 1: Lipid profile, adjust statin
+        - Tháng 1: Hồ sơ lipid, điều chỉnh statin
         - Tháng 3: Echo kiểm tra EF
         - Tháng 12: Đánh giá toàn diện, có thể ngưng P2Y12
         """)

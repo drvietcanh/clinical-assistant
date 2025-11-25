@@ -31,7 +31,7 @@ def render():
         - Tetany
         - Seizures
         - Laryngospasm
-        - Cardiac arrhythmias
+        - Loạn nhịp tim
         - Prolonged QT
         """)
     
@@ -135,7 +135,7 @@ def render():
         - **⚠️ More irritating, use central line if possible**
         
         **After initial dose:**
-        - **Continuous infusion:** 1-2g/h (10-20 mg/kg/h)
+        - **Truyền liên tục:** 1-2g/h (10-20 mg/kg/h)
         - Hoặc **Intermittent:** 1g q4-6h
         - **Duration:** 12-24h hoặc đến khi ổn định
         
@@ -148,7 +148,7 @@ def render():
         st.warning("""
         **⚠️ Precautions:**
         - **Hypercalcemia:** Không quá 2g trong 1h
-        - **Digoxin:** Cẩn thận (risk arrhythmias)
+        - **Digoxin:** Cẩn thận (nguy cơ loạn nhịp tim)
         - **IV site:** Có thể gây kích ứng (phlebitis)
         - **Renal failure:** Theo dõi sát PO4
         """)
@@ -241,7 +241,7 @@ def render():
     - Ca × PO4 product <55 (risk precipitation)
     
     **Digoxin:**
-    - Cẩn thận với IV Ca (risk arrhythmias)
+    - Cẩn thận với IV Ca (nguy cơ loạn nhịp tim)
     - Điều chỉnh từ từ
     
     **Renal Failure:**

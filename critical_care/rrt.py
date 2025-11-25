@@ -156,7 +156,7 @@ def calculate_anticoagulation_rrt(weight_kg: float, rrt_type: str,
                 "Heparin: 5-10 U/kg/h (target aPTT 1.5-2x normal)",
                 "Citrate: 2-4 mmol/L blood flow (regional, preferred if available)",
                 "Monitor aPTT (heparin) or ionized Ca (citrate)",
-                "Adjust based on circuit patency"
+                "Điều chỉnh dựa trên tình trạng mạch máu"
             ]
         }
     else:  # IHD or SLED
@@ -420,7 +420,7 @@ def render_sled_calculator():
         - **Duration:** {duration_hours:.1f} hours per session
         - **Total flow:** {results['total_flow_l']:.1f} L per session
         - **Kt/V:** {results['kt_v']:.2f}
-        - **Frequency:** Daily or every other day
+        - **Tần suất:** Hàng ngày hoặc cách ngày
         """)
 
 

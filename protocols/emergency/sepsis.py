@@ -88,7 +88,7 @@ def render():
     - ScvO2 ≥70% (nếu đo được)
     
     **Monitoring:**
-    - Vital signs q15-30min
+    - Dấu hiệu sống mỗi 15-30 phút
     - Lactate q2-4h cho đến bình thường
     - Urine output hourly
     - Consider arterial line

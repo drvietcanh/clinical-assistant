@@ -32,7 +32,7 @@ def render():
         **Nhẹ - Mild:**
         - Tiêu chảy, không có dấu hiệu nặng
         - WBC <15,000/µL
-        - Creatinine <1.5x baseline
+        - Creatinine <1.5x ban đầu
         - Không có dấu hiệu tắc ruột
         """)
         
@@ -40,7 +40,7 @@ def render():
         **Trung bình - Moderate:**
         - Tiêu chảy + 1 trong các dấu hiệu:
         - WBC 15,000-20,000/µL
-        - Creatinine 1.5-2x baseline
+        - Creatinine 1.5-2x ban đầu
         - Hoặc có dấu hiệu tắc ruột nhẹ
         """)
     
@@ -49,7 +49,7 @@ def render():
         **Nặng - Severe:**
         - Tiêu chảy + 1 trong các dấu hiệu:
         - WBC >20,000/µL
-        - Creatinine >2x baseline
+        - Creatinine >2x ban đầu
         - Hoặc albumin <3 g/dL
         - Hoặc có dấu hiệu tắc ruột nặng
         """)

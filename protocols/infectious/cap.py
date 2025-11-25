@@ -187,7 +187,7 @@ def render():
     with col1:
         st.markdown("""
         **Hàng ngày:**
-        - Vital signs (nhiệt độ, mạch, huyết áp, SpO2)
+        - Dấu hiệu sống (nhiệt độ, mạch, huyết áp, SpO2)
         - Triệu chứng hô hấp
         - Tình trạng tổng quát
         

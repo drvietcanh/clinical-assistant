@@ -83,21 +83,21 @@ def render():
         **Chẩn đoán Laboratory TLS khi có ≥2 trong 4 tiêu chuẩn (trong 3 ngày trước hoặc 7 ngày sau hóa trị):**
         
         **1. Uric acid:**
-        - Tăng >25% so với baseline
+        - Tăng >25% so với ban đầu
         - Hoặc >8 mg/dL (476 µmol/L) ở người lớn
         - Hoặc >6.5 mg/dL (387 µmol/L) ở trẻ em
         
         **2. Potassium:**
-        - Tăng >25% so với baseline
+        - Tăng >25% so với ban đầu
         - Hoặc >6.0 mEq/L (6.0 mmol/L)
         
         **3. Phosphate:**
-        - Tăng >25% so với baseline
+        - Tăng >25% so với ban đầu
         - Hoặc >4.5 mg/dL (1.45 mmol/L) ở người lớn
         - Hoặc >6.5 mg/dL (2.1 mmol/L) ở trẻ em
         
         **4. Calcium:**
-        - Giảm >25% so với baseline
+        - Giảm >25% so với ban đầu
         - Hoặc <7.0 mg/dL (1.75 mmol/L)
         - Hoặc ionized Ca <1.0 mmol/L
         """)
@@ -263,7 +263,7 @@ def render():
     st.markdown("### 📈 Monitoring Protocol")
     
     st.markdown("""
-    **Baseline (trước hóa trị):**
+    **Ban đầu (trước hóa trị):**
     - CBC, BMP (K⁺, PO₄³⁻, Ca²⁺, Cr, BUN)
     - Uric acid
     - LDH
@@ -284,7 +284,7 @@ def render():
     - ECG (nếu có hyperkalemia)
     
     **Dấu hiệu cảnh báo:**
-    - ⚠️ Creatinine tăng >1.5 × baseline
+    - ⚠️ Creatinine tăng >1.5 × ban đầu
     - ⚠️ Uric acid >10 mg/dL
     - ⚠️ K⁺ >6.0 hoặc ECG changes
     - ⚠️ PO₄³⁻ >6.5 mg/dL

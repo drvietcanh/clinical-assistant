@@ -30,7 +30,7 @@ def render():
         agitation = st.checkbox("Kích động hoặc lú lẫn", key="asthma_agitation")
         drowsy = st.checkbox("Buồn ngủ hoặc lơ mơ", key="asthma_drowsy")
         
-        # Vital signs
+        # Dấu hiệu sống
         rr = st.number_input("Nhịp thở (/phút)", min_value=0, max_value=60, value=20, step=1, format="%d", key="asthma_rr")
         hr = st.number_input("Nhịp tim (/phút)", min_value=0, max_value=250, value=80, step=1, format="%d", key="asthma_hr")
         spo2 = st.number_input("SpO₂ (%)", min_value=50, max_value=100, value=95, step=1, format="%d", key="asthma_spo2")
@@ -272,7 +272,7 @@ def render():
         **Theo dõi tại cấp cứu/bệnh viện:**
         - ✓ SpO₂ liên tục
         - ✓ PEFR mỗi 30-60 phút ban đầu
-        - ✓ Vital signs mỗi 15-30 phút
+        - ✓ Dấu hiệu sống mỗi 15-30 phút
         - ✓ Khí máu động mạch nếu nặng
         - ✓ X-quang ngực (nếu nghi ngờ biến chứng)
         - ✓ ECG (nếu nguy cơ tim mạch)
@@ -337,7 +337,7 @@ def render():
         **Phân loại mức độ nặng:**
         - **Mild-Moderate:** Có thể nói thành câu, RR <25, HR <110, SpO₂ >95%, PEFR >50%
         - **Severe:** Nói từng cụm từ, RR ≥25, HR ≥110, SpO₂ 90-95%, PEFR 33-50%
-        - **Life-threatening:** Silent chest, cyanosis, poor respiratory effort, arrhythmia, hypotension, drowsy/confused, SpO₂ <90%, PEFR <33%
+        - **Đe dọa tính mạng:** Lồng ngực im lặng, tím tái, nỗ lực hô hấp kém, loạn nhịp tim, hạ huyết áp, buồn ngủ/lú lẫn, SpO₂ <90%, PEFR <33%
         
         **Evidence-based treatment:**
         - SABA: ✓ First-line bronchodilator

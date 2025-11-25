@@ -90,15 +90,17 @@ def render():
             max_value=250,
             value=170,
             step=1,
+            format="%d",
             help="Chiều cao của bệnh nhân"
         )
         
         weight = st.number_input(
             "Cân nặng (kg)",
-            min_value=20,
-            max_value=300,
-            value=70,
-            step=1,
+            min_value=20.0,
+            max_value=300.0,
+            value=70.0,
+            step=0.1,
+            format="%.1f",
             help="Cân nặng hiện tại"
         )
     

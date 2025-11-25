@@ -132,7 +132,7 @@ def render():
             - Có thể cần 2-3 L ban đầu
             
             **3. Theo dõi:**
-            - Vital signs q5-15min
+            - Dấu hiệu sống mỗi 5-15 phút
             - Đáp ứng với dịch truyền
             """)
         
@@ -347,7 +347,7 @@ def render():
     **Monitoring trong sốc:**
     
     **Cơ bản:**
-    - Vital signs q5-15min (cho đến ổn định)
+    - Dấu hiệu sống mỗi 5-15 phút (cho đến ổn định)
     - Urine output hourly
     - Mental status
     

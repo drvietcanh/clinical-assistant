@@ -132,7 +132,7 @@ def render():
         st.metric("TBW", f"{tbw:.1f} L")
         st.metric("Na⁺ needed", f"{na_needed:.0f} mEq")
         st.metric("Hourly rate", f"{hourly_rate:.2f} mEq/L/h")
-        st.metric("Daily rate", f"{daily_rate:.1f} mEq/L/24h")
+        st.metric("Tốc độ hàng ngày", f"{daily_rate:.1f} mEq/L/24h")
         
         # Warning
         if daily_rate > 12:
@@ -161,7 +161,7 @@ def render():
         1. ✅ **Identify cause**
         2. ✅ **3% Saline:** 0.5-2 ml/kg/h
         3. ✅ **Monitor Na⁺ mỗi 2-4h**
-        4. ✅ **Adjust rate** để không vượt 8 mEq/L/24h
+        4. ✅ **Điều chỉnh tốc độ** để không vượt 8 mEq/L/24h
         """)
     
     with tab2:

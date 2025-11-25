@@ -13,7 +13,7 @@ def calculate_fluid_deficit(weight_kg, current_na, baseline_na=140):
     Args:
         weight_kg: Body weight
         current_na: Current sodium
-        baseline_na: Baseline sodium (usually 140 mEq/L)
+        baseline_na: Natri ban đầu (thường là 140 mEq/L)
     
     Returns:
         Fluid deficit in liters
@@ -21,7 +21,7 @@ def calculate_fluid_deficit(weight_kg, current_na, baseline_na=140):
     # Simplified: Assume 10% dehydration in severe DKA
     fluid_deficit_l = weight_kg * 0.1
     
-    # Adjust based on Na (if Na high → more dehydration)
+    # Điều chỉnh dựa trên Na (nếu Na cao → mất nước nhiều hơn)
     if current_na > baseline_na:
         correction = (current_na - baseline_na) * 2  # Rough estimate
         fluid_deficit_l += correction
@@ -125,7 +125,7 @@ def render_mild_dka():
     """)
     
     st.markdown("---")
-    st.markdown("### 3️⃣ Discharge Criteria")
+    st.markdown("### 3️⃣ Tiêu Chuẩn Xuất Viện")
     
     st.success("""
     - pH >7.3
@@ -271,7 +271,7 @@ def render_moderate_dka():
     - Ketones: Mỗi 4-6h
     
     **Clinical:**
-    - Vital signs mỗi 1-2h
+    - Dấu hiệu sống mỗi 1-2h
     - Mental status
     - UO
     """)
@@ -390,7 +390,7 @@ def render_severe_dka():
     
     st.info("""
     **ICU Monitoring:**
-    - Continuous ECG
+    - ECG liên tục
     - Arterial BP
     - CVP (nếu cần)
     - Pulse oximetry
@@ -403,7 +403,7 @@ def render_severe_dka():
     
     **Clinical:**
     - Neurologic checks mỗi 1-2h
-    - Vital signs liên tục
+    - Dấu hiệu sống liên tục
     """)
     
     st.markdown("---")

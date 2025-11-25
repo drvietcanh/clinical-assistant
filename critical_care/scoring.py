@@ -186,7 +186,7 @@ def render_cam_icu_calculator():
     # Feature 1: Acute onset or fluctuating course
     st.markdown("#### 1️⃣ Khởi phát cấp và dao động")
     feature1_q1 = st.checkbox(
-        "Có thay đổi cấp tính trạng thái tâm thần so với baseline?",
+        "Có thay đổi cấp tính trạng thái tâm thần so với ban đầu?",
         key="cam_icu_f1_q1"
     )
     feature1_q2 = st.checkbox(
@@ -351,7 +351,7 @@ def render_aki_staging_quick():
     
     with col1:
         baseline_cr = st.number_input(
-            "Creatinine baseline (mg/dL):",
+            "Creatinine ban đầu (mg/dL):",
             min_value=0.1,
             max_value=10.0,
             value=1.0,
@@ -372,7 +372,7 @@ def render_aki_staging_quick():
     
     with col2:
         baseline_uo = st.number_input(
-            "Lượng nước tiểu baseline (ml/kg/h):",
+            "Lượng nước tiểu ban đầu (ml/kg/h):",
             min_value=0.0,
             max_value=5.0,
             value=1.0,
@@ -455,7 +455,7 @@ def render_aki_staging_quick():
         with col1:
             st.markdown(f"""
             **Theo Creatinine:**
-            - Baseline: {baseline_cr:.2f} mg/dL
+            - Ban đầu: {baseline_cr:.2f} mg/dL
             - Hiện tại: {current_cr:.2f} mg/dL
             - Tăng: {cr_increase*100:.1f}%
             - **Stage: {stage_cr}**
@@ -464,7 +464,7 @@ def render_aki_staging_quick():
         with col2:
             st.markdown(f"""
             **Theo Lượng nước tiểu:**
-            - Baseline: {baseline_uo:.2f} ml/kg/h
+            - Ban đầu: {baseline_uo:.2f} ml/kg/h
             - Hiện tại: {current_uo:.2f} ml/kg/h
             - **Stage: {stage_uo}**
             """)

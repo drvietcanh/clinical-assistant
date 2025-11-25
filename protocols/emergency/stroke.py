@@ -169,7 +169,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Mechanical Thrombectomy (MT)")
+    st.markdown("### 4️⃣ Lấy Huyết Khối Cơ Học (MT)")
     
     st.warning("""
     **Chỉ định MT (Endovascular Thrombectomy):**

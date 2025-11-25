@@ -44,7 +44,7 @@ def render():
         altered_mental = st.checkbox("Lú lẫn", key="hf_confusion")
         oliguria = st.checkbox("Tiểu ít (<0.5 mL/kg/h)", key="hf_oliguria")
         
-        # Vital signs
+        # Dấu hiệu sống
         sbp = st.number_input("Huyết áp tâm thu (mmHg)", 50, 250, 120, 5, format="%d", key="hf_sbp")
         hr = st.number_input("Nhịp tim (/phút)", 30, 200, 80, 5, format="%d", key="hf_hr")
         rr = st.number_input("Nhịp thở (/phút)", 10, 60, 20, 2, format="%d", key="hf_rr")
@@ -105,7 +105,7 @@ def render():
             
             **Chiến lược:**
             - **Bolus liên tục** (mỗi 6-12h)
-            - Hoặc **Continuous infusion:** 5-10mg/h (nếu đáp ứng kém)
+            - Hoặc **Truyền liên tục:** 5-10mg/h (nếu đáp ứng kém)
             
             **Mục tiêu:**
             - Cân nặng giảm 0.5-1 kg/ngày
@@ -211,13 +211,13 @@ def render():
             **Theo dõi:**
             - Arterial line monitoring
             - Cardiac output monitoring
-            - ECG liên tục (arrhythmias)
+            - ECG liên tục (loạn nhịp tim)
             - Electrolytes, lactate
             """)
             
             st.warning("""
             **⚠️ Lưu ý:**
-            - Inotropes tăng nguy cơ arrhythmia
+            - Inotropes tăng nguy cơ loạn nhịp tim
             - Tăng nhu cầu oxy cơ tim
             - Chỉ dùng tạm thời để ổn định
             - Không cải thiện tiên lượng dài hạn
@@ -341,18 +341,18 @@ def render():
         **Monitoring:**
         - ✓ Cân nặng hàng ngày (cùng giờ)
         - ✓ Cân bằng nước vào/ra
-        - ✓ Vital signs mỗi 4-6h
+        - ✓ Dấu hiệu sống mỗi 4-6h
         - ✓ Electrolytes, Cr, BUN hàng ngày
-        - ✓ BNP/NT-proBNP (baseline & discharge)
-        - ✓ Echo (đánh giá EF, valves)
-        - ✓ Telemetry nếu arrhythmia
+        - ✓ BNP/NT-proBNP (ban đầu & khi xuất viện)
+        - ✓ Siêu âm tim (đánh giá EF, van tim)
+        - ✓ Theo dõi điện tim liên tục nếu loạn nhịp tim
         
         **Labs cần làm:**
         - CBC, electrolytes, Cr, BUN
         - BNP hoặc NT-proBNP
         - Troponin (loại trừ ACS)
         - TSH (loại trừ thyroid)
-        - Lipid profile
+        - Hồ sơ lipid
         - HbA1c
         """)
     
@@ -412,8 +412,8 @@ def render():
         
         **Diuretic Strategy:**
         - IV loop diuretics for acute decompensation
-        - Continuous infusion if inadequate response to boluses
-        - Monitor electrolytes, renal function daily
+        - Truyền liên tục nếu đáp ứng kém với bolus
+        - Theo dõi điện giải, chức năng thận hàng ngày
         
         **References:**
         - McDonagh TA et al. Eur Heart J. 2021;42(36):3599-3726.

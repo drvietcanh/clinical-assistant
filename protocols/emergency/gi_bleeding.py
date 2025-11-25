@@ -288,7 +288,7 @@ def render_upper_gi_bleeding():
     
     st.success("""
     **Monitoring:**
-    - Vital signs mỗi 1-2h × 24h
+    - Dấu hiệu sống mỗi 1-2h × 24h
     - Hgb mỗi 6-12h × 24-48h
     - Đánh giá xuất huyết tiếp (nôn máu, phân đen, Hgb drop)
     
