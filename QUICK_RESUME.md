@@ -25,6 +25,13 @@
   - Compatibility summary với metrics
   - Export to HTML và TXT
   - Better visual representation với HTML/CSS
+- ✅ **Full Drug Interaction Checker - Severity levels, recommendations** ⭐ MỚI
+  - Visual interaction matrix với color-coding (red/yellow/blue)
+  - Clinical significance chi tiết
+  - Alternative drug suggestions
+  - Management recommendations
+  - Severity levels (Major/Moderate/Minor)
+  - Interactive tooltips và hover effects
 
 ### 📦 Module Splitting:
 - Tách **13 files** CRITICAL/WARNING:
@@ -66,6 +73,7 @@
 - ✅ Enhanced Search với AI Suggestions
 - ✅ Enhanced Export - PDF & QR Code
 - ✅ Visual IV Compatibility Checker - Matrix display
+- ✅ Full Drug Interaction Checker - Severity levels, recommendations
 - ✅ Better fuzzy matching (rapidfuzz)
 - ✅ Smart ranking algorithm
 - ✅ Real-time suggestions
@@ -74,11 +82,13 @@
 ## 🚀 Bắt đầu lại
 
 ### Tiếp tục UI/UX Improvements:
-- **Task tiếp theo:** Full Drug Interaction Checker - Severity levels, recommendations
-  - Cần bổ sung: Severity levels (Major/Moderate/Minor)
-  - Clinical significance
-  - Management recommendations
-  - Alternative suggestions
+- **Task tiếp theo:** Enhanced References & Evidence Levels - GRADE system, PubMed links
+  - Cần bổ sung: Evidence level (GRADE system)
+  - Full citation (APA format)
+  - Direct PubMed links
+  - Guideline source
+  - Last updated date
+  - Strength of recommendation
   - Reference: `docs/UI_UX_IMPROVEMENTS_PROPOSAL.md`
 
 ```bash

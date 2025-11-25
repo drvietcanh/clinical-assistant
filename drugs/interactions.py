@@ -14,14 +14,38 @@ from .interactions_data import (
 )
 from components.ui.alerts import render_error_alert, render_warning_alert, render_info_alert
 from components.ui.results import render_result_card
+from components.drug_interaction_matrix import (
+    render_interaction_matrix,
+    render_interaction_summary
+)
 
 
 def render_interaction_checker():
     """Render drug interaction checker interface"""
     
-    st.markdown("## 🔍 Kiểm Tra Tương Tác Thuốc")
     st.markdown("""
-    **Công cụ kiểm tra tương tác thuốc-thuốc** giúp phát hiện các tương tác tiềm ẩn trong đơn thuốc.
+    <div style='
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 25px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    '>
+        <h1 style='margin: 0; color: white; font-size: 2.2em;'>🔍 Kiểm Tra Tương Tác Thuốc</h1>
+        <p style='margin: 10px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1.1em;'>
+            Phát hiện tương tác thuốc-thuốc với mức độ nghiêm trọng và khuyến nghị xử trí • An toàn cho bệnh nhân
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.info("""
+    **Tính năng mới:**
+    - 📊 Ma trận tương tác trực quan với color-coding
+    - ⚕️ Ý nghĩa lâm sàng chi tiết
+    - 💡 Gợi ý thuốc thay thế
+    - 📋 Hướng dẫn xử trí cụ thể
     
     ⚠️ **Lưu ý:** Database hiện tại bao gồm ~50 tương tác phổ biến. Luôn tham khảo nguồn đáng tin cậy trước khi quyết định lâm sàng.
     """)
@@ -103,20 +127,8 @@ def render_interaction_checker():
         checked_drugs = st.session_state.get('checked_drugs', [])
         original_drugs = st.session_state.get('original_drugs', [])
         
-        # Summary
-        major_count = sum(1 for i in interactions if i['severity'] == SEVERITY_MAJOR)
-        moderate_count = sum(1 for i in interactions if i['severity'] == SEVERITY_MODERATE)
-        minor_count = sum(1 for i in interactions if i['severity'] == SEVERITY_MINOR)
-        
-        col1, col2, col3, col4 = st.columns(4)
-        with col1:
-            st.metric("Tổng số thuốc", len(checked_drugs))
-        with col2:
-            st.metric("⚠️ Major", major_count, delta=None, delta_color="inverse")
-        with col3:
-            st.metric("⚡ Moderate", moderate_count, delta=None)
-        with col4:
-            st.metric("ℹ️ Minor", minor_count, delta=None)
+        # Summary with visual metrics
+        render_interaction_summary(interactions)
         
         # Show checked drugs
         st.markdown("**📋 Danh sách thuốc đã kiểm tra:**")
@@ -128,6 +140,18 @@ def render_interaction_checker():
             st.markdown("---")
             st.markdown("### ⚠️ Phát Hiện Tương Tác")
             
+            # Visual Interaction Matrix
+            st.markdown("#### 📊 Ma Trận Tương Tác Trực Quan")
+            render_interaction_matrix(
+                drugs=checked_drugs,
+                interactions=interactions,
+                show_tooltips=True,
+                compact=False
+            )
+            
+            st.markdown("---")
+            st.markdown("#### 📋 Chi Tiết Tương Tác")
+            
             # Group by severity
             major_interactions = [i for i in interactions if i['severity'] == SEVERITY_MAJOR]
             moderate_interactions = [i for i in interactions if i['severity'] == SEVERITY_MODERATE]
@@ -135,48 +159,98 @@ def render_interaction_checker():
             
             # Major interactions
             if major_interactions:
-                st.markdown("#### 🔴 Tương Tác Nghiêm Trọng (Major)")
+                st.markdown("##### 🔴 Tương Tác Nghiêm Trọng (Major)")
                 for interaction in major_interactions:
                     with st.expander(
                         f"**{interaction['drug1']}** ↔ **{interaction['drug2']}** - {interaction['severity']}",
                         expanded=True
                     ):
-                        st.markdown(f"**Cơ chế:** {interaction['mechanism']}")
-                        st.markdown(f"**Mô tả:** {interaction['description']}")
+                        col1, col2 = st.columns([2, 1])
                         
-                        st.markdown("**📋 Hướng xử trí:**")
-                        st.warning(interaction['management'])
+                        with col1:
+                            st.markdown(f"**🔬 Cơ chế:** {interaction['mechanism']}")
+                            st.markdown(f"**📝 Mô tả:** {interaction['description']}")
+                            
+                            # Clinical significance
+                            if 'clinical_significance' in interaction:
+                                st.markdown(f"**⚕️ Ý nghĩa lâm sàng:**")
+                                st.error(interaction['clinical_significance'])
+                            
+                            st.markdown("**📋 Hướng xử trí:**")
+                            st.warning(interaction['management'])
+                            
+                            if 'references' in interaction:
+                                st.caption(f"📚 **Tài liệu tham khảo:** {interaction['references']}")
                         
-                        if 'references' in interaction:
-                            st.caption(f"📚 **Tài liệu tham khảo:** {interaction['references']}")
+                        with col2:
+                            # Alternatives
+                            if 'alternatives' in interaction:
+                                st.markdown("**💡 Thuốc thay thế:**")
+                                alt = interaction['alternatives']
+                                
+                                # Check for drug1 alternatives
+                                drug1_key = f"for_{interaction['drug1'].lower().replace(' ', '_')}"
+                                drug2_key = f"for_{interaction['drug2'].lower().replace(' ', '_')}"
+                                
+                                if drug1_key in alt:
+                                    st.info(f"**Thay {interaction['drug1']}:**\n" + ", ".join(alt[drug1_key]))
+                                
+                                if drug2_key in alt:
+                                    st.info(f"**Thay {interaction['drug2']}:**\n" + ", ".join(alt[drug2_key]))
+                                
+                                # Generic alternatives (other keys)
+                                for key, value in alt.items():
+                                    if key not in [drug1_key, drug2_key] and isinstance(value, list):
+                                        st.info(f"**{key.replace('_', ' ').title()}:**\n" + ", ".join(value))
             
             # Moderate interactions
             if moderate_interactions:
-                st.markdown("#### 🟡 Tương Tác Trung Bình (Moderate)")
+                st.markdown("##### 🟡 Tương Tác Trung Bình (Moderate)")
                 for interaction in moderate_interactions:
                     with st.expander(
                         f"**{interaction['drug1']}** ↔ **{interaction['drug2']}** - {interaction['severity']}",
                         expanded=False
                     ):
-                        st.markdown(f"**Cơ chế:** {interaction['mechanism']}")
-                        st.markdown(f"**Mô tả:** {interaction['description']}")
+                        st.markdown(f"**🔬 Cơ chế:** {interaction['mechanism']}")
+                        st.markdown(f"**📝 Mô tả:** {interaction['description']}")
+                        
+                        # Clinical significance
+                        if 'clinical_significance' in interaction:
+                            st.markdown(f"**⚕️ Ý nghĩa lâm sàng:**")
+                            st.warning(interaction['clinical_significance'])
                         
                         st.markdown("**📋 Hướng xử trí:**")
                         st.info(interaction['management'])
+                        
+                        # Alternatives
+                        if 'alternatives' in interaction:
+                            st.markdown("**💡 Thuốc thay thế:**")
+                            alt = interaction['alternatives']
+                            drug1_key = f"for_{interaction['drug1'].lower().replace(' ', '_')}"
+                            drug2_key = f"for_{interaction['drug2'].lower().replace(' ', '_')}"
+                            
+                            if drug1_key in alt:
+                                st.caption(f"**Thay {interaction['drug1']}:** {', '.join(alt[drug1_key])}")
+                            if drug2_key in alt:
+                                st.caption(f"**Thay {interaction['drug2']}:** {', '.join(alt[drug2_key])}")
+                            
+                            for key, value in alt.items():
+                                if key not in [drug1_key, drug2_key] and isinstance(value, list):
+                                    st.caption(f"**{key.replace('_', ' ').title()}:** {', '.join(value)}")
                         
                         if 'references' in interaction:
                             st.caption(f"📚 **Tài liệu tham khảo:** {interaction['references']}")
             
             # Minor interactions
             if minor_interactions:
-                st.markdown("#### 🔵 Tương Tác Nhẹ (Minor)")
+                st.markdown("##### 🔵 Tương Tác Nhẹ (Minor)")
                 for interaction in minor_interactions:
                     with st.expander(
                         f"**{interaction['drug1']}** ↔ **{interaction['drug2']}** - {interaction['severity']}",
                         expanded=False
                     ):
-                        st.markdown(f"**Cơ chế:** {interaction['mechanism']}")
-                        st.markdown(f"**Mô tả:** {interaction['description']}")
+                        st.markdown(f"**🔬 Cơ chế:** {interaction['mechanism']}")
+                        st.markdown(f"**📝 Mô tả:** {interaction['description']}")
                         
                         st.markdown("**📋 Hướng xử trí:**")
                         st.info(interaction['management'])

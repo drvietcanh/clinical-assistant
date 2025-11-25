@@ -23,7 +23,12 @@ DRUG_INTERACTIONS = {
         "severity": SEVERITY_MAJOR,
         "mechanism": "Tăng nguy cơ xuất huyết",
         "description": "NSAID làm tăng nguy cơ xuất huyết dạ dày và tăng tác dụng chống đông",
+        "clinical_significance": "Nguy cơ xuất huyết dạ dày-ruột tăng 2-4 lần. Có thể gây xuất huyết nặng, đặc biệt ở người cao tuổi.",
         "management": "Tránh dùng chung. Dùng Paracetamol thay thế nếu cần giảm đau/sốt",
+        "alternatives": {
+            "for_ibuprofen": ["Paracetamol", "Acetaminophen"],
+            "for_warfarin": ["Dabigatran", "Rivaroxaban", "Apixaban"]
+        },
         "references": "Micromedex"
     },
     ("Warfarin", "Omeprazole"): {
@@ -39,7 +44,12 @@ DRUG_INTERACTIONS = {
         "severity": SEVERITY_MAJOR,
         "mechanism": "Metronidazole ức chế chuyển hóa warfarin",
         "description": "Tăng nguy cơ xuất huyết nặng",
+        "clinical_significance": "INR có thể tăng 2-3 lần. Nguy cơ xuất huyết nặng, đặc biệt trong 1-2 tuần đầu.",
         "management": "Giảm liều warfarin 30-50% khi dùng metronidazole. Theo dõi INR 2-3 lần/tuần",
+        "alternatives": {
+            "for_metronidazole": ["Clindamycin", "Vancomycin (nếu phù hợp)"],
+            "for_warfarin": ["Dabigatran", "Rivaroxaban"]
+        },
         "references": "AHFS Drug Information"
     },
     ("Warfarin", "Ciprofloxacin"): {
@@ -92,7 +102,12 @@ DRUG_INTERACTIONS = {
         "severity": SEVERITY_MAJOR,
         "mechanism": "Tăng nguy cơ tăng kali máu và suy thận",
         "description": "Có thể gây tăng kali máu nguy hiểm",
+        "clinical_significance": "Kali máu có thể tăng >5.5 mEq/L, nguy cơ rối loạn nhịp tim, đặc biệt ở bệnh nhân suy thận.",
         "management": "Tránh dùng chung nếu có thể. Nếu cần: theo dõi kali máu và chức năng thận thường xuyên",
+        "alternatives": {
+            "for_spironolactone": ["Furosemide", "Hydrochlorothiazide"],
+            "for_ace_inhibitor": ["ARB (Losartan, Valsartan)"]
+        },
         "references": "AHFS Drug Information"
     },
     ("Digoxin", "Amiodarone"): {
@@ -124,7 +139,12 @@ DRUG_INTERACTIONS = {
         "severity": SEVERITY_MAJOR,
         "mechanism": "Tăng nguy cơ tiêu cơ vân",
         "description": "Clarithromycin ức chế chuyển hóa atorvastatin",
+        "clinical_significance": "Nguy cơ tiêu cơ vân tăng 10-15 lần. Có thể gây suy thận cấp, tử vong.",
         "management": "Tránh dùng chung. Nếu cần: giảm liều atorvastatin 50-75%, theo dõi CK",
+        "alternatives": {
+            "for_clarithromycin": ["Azithromycin", "Doxycycline"],
+            "for_atorvastatin": ["Pravastatin", "Rosuvastatin"]
+        },
         "references": "FDA, Micromedex"
     },
     ("Simvastatin", "Amiodarone"): {
