@@ -14,7 +14,8 @@ from ..search import (
     save_search,
     get_saved_searches,
     load_saved_search,
-    delete_saved_search
+    delete_saved_search,
+    highlight_search_term
 )
 
 __all__ = [
@@ -27,6 +28,7 @@ __all__ = [
     'save_search',
     'get_saved_searches',
     'load_saved_search',
-    'delete_saved_search'
+    'delete_saved_search',
+    'highlight_search_term'
 ]
 
