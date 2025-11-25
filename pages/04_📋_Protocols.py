@@ -14,10 +14,15 @@ from protocols import (
     render_gi_bleeding,
     render_dka,
     render_electrolytes,
+    render_anaphylaxis,
+    render_hypertensive_emergency,
+    render_status_epilepticus,
     render_copd,
     render_asthma,
     render_acs,
     render_hf,
+    render_atrial_fibrillation,
+    render_dvt_pe,
     render_aki,
     render_cap,
     render_hap_vap,
@@ -67,7 +72,10 @@ with st.sidebar:
                 "🧠 Stroke Management",
                 "🩸 GI Bleeding",
                 "🍭 DKA Protocol",
-                "⚡ Electrolyte Emergency"
+                "⚡ Electrolyte Emergency",
+                "🚨 Anaphylaxis",
+                "⚡ Cơn Tăng Huyết Áp Cấp Cứu",
+                "🧠 Status Epilepticus"
             ],
             label_visibility="collapsed"
         )
@@ -85,7 +93,9 @@ with st.sidebar:
             "Phác đồ:",
             [
                 "💔 ACS - Hội chứng vành cấp",
-                "💔 Suy Tim Cấp"
+                "💔 Suy Tim Cấp",
+                "💓 Rung Nhĩ (Atrial Fibrillation)",
+                "🩸 DVT/PE Management"
             ],
             label_visibility="collapsed"
         )
@@ -180,6 +190,21 @@ elif "DKA" in protocol:
 
 elif "Electrolyte" in protocol:
     render_electrolytes()
+
+elif "Anaphylaxis" in protocol or "anaphylaxis" in protocol.lower():
+    render_anaphylaxis()
+
+elif "Tăng Huyết Áp" in protocol or "Hypertensive" in protocol or "hypertensive" in protocol.lower():
+    render_hypertensive_emergency()
+
+elif "Status Epilepticus" in protocol or "status epilepticus" in protocol.lower() or "Epilepticus" in protocol:
+    render_status_epilepticus()
+
+elif "Rung Nhĩ" in protocol or "Atrial Fibrillation" in protocol or "atrial fibrillation" in protocol.lower() or "AF" in protocol:
+    render_atrial_fibrillation()
+
+elif "DVT" in protocol or "PE" in protocol or "dvt" in protocol.lower() or "pe" in protocol.lower() or "Huyết Khối" in protocol or "Thuyên Tắc" in protocol:
+    render_dvt_pe()
 
 elif "AKI" in protocol:
     render_aki()

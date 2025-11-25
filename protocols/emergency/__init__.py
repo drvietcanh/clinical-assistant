@@ -10,6 +10,9 @@ from .stroke import render as render_stroke
 from .gi_bleeding import render as render_gi_bleeding
 from .dka import render as render_dka
 from .electrolytes import render as render_electrolytes
+from .anaphylaxis import render as render_anaphylaxis
+from .hypertensive_emergency import render as render_hypertensive_emergency
+from .status_epilepticus import render as render_status_epilepticus
 
 
 __all__ = [
@@ -20,5 +23,8 @@ __all__ = [
     'render_gi_bleeding',
     'render_dka',
     'render_electrolytes',
+    'render_anaphylaxis',
+    'render_hypertensive_emergency',
+    'render_status_epilepticus',
 ]
 
