@@ -31,3 +31,9 @@ Pillow>=10.0.0  # Image processing for QR codes
 # google-generativeai>=0.3.0  # Gemini AI
 # openai>=1.0.0  # OpenAI GPT-4
 
+# Google Analytics Data API
+google-analytics-data>=0.18.0
+google-auth>=2.23.0
+google-auth-oauthlib>=1.1.0
+google-auth-httplib2>=0.1.1
+

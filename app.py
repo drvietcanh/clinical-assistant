@@ -428,6 +428,14 @@ st.warning("""
 **Phần mềm cung cấp "như hiện có" - Người dùng chịu trách nhiệm về quyết định lâm sàng**
 """)
 
+# ========== GOOGLE ANALYTICS STATS ==========
+# Hiển thị thống kê lượt truy cập từ Google Analytics
+try:
+    from components.google_analytics_widget import render_google_analytics_counter
+    render_google_analytics_counter()
+except ImportError:
+    pass
+
 # Footer
 st.markdown("---")
 st.caption("© 2025 Clinical Assistant | Made with ❤️ for healthcare workers")
