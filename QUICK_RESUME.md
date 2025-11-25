@@ -132,15 +132,20 @@
 1. ✅ Personal Notes & Annotations
 2. ✅ Usage Analytics Dashboard
 
-**Priority 2 - Còn lại:**
-- Offline Mode với Service Worker
+**Priority 2 - Còn lại (tiếp tục lần lượt):**
+- 🔄 Offline Mode với Service Worker (tiếp theo)
 - Mobile-First Improvements
 - Advanced Calculator Features
 
 **Đã bỏ:**
-- ❌ Multi-language Support (không làm)
+- ❌ Multi-language Support (không làm theo yêu cầu)
 
 **Reference:** `docs/UI_UX_IMPROVEMENTS_PROPOSAL.md`
+
+**Lưu ý:** 
+- Analytics tracking đã tích hợp vào FENa calculator (demo)
+- Cần tích hợp `track_calculation()` vào các calculators khác khi cần
+- Analytics dashboard có thể truy cập từ Home page → Tab "Thống Kê & Cập Nhật" → "Usage Analytics"
 
 ```bash
 # 1. Kiểm tra trạng thái
