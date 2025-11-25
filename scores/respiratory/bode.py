@@ -304,7 +304,7 @@ def render():
     with col1:
         weight = st.number_input("Cân nặng (kg)", 20.0, 200.0, 60.0, 0.1, format="%.1f")
     with col2:
-        height = st.number_input("Chiều cao (cm)", 100.0, 250.0, 170.0, 0.1, format="%.0f")
+        height = st.number_input("Chiều cao (cm)", 100, 250, 170, 1, format="%d")
     with col3:
         bmi = weight / ((height / 100) ** 2)
         st.metric("**BMI**", f"{bmi:.1f}")
