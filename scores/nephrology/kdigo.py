@@ -417,7 +417,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập dữ liệu lâm sàng")
+    st.subheader("📝 Nhập Dữ Liệu Lâm Sàng")
     
     # Creatinine section
     st.markdown("#### 🩺 Serum Creatinine")

@@ -23,7 +23,7 @@ def render():
     # ========== SECTION 1: SEVERITY ASSESSMENT ==========
     st.markdown("### 📊 Đánh Giá Mức Độ Nặng")
     
-    st.markdown("**Phân loại mức độ theo IDSA/SHEA 2021:**")
+    st.markdown("**Phân Loại Mức Độ Theo IDSA/SHEA 2021:**")
     
     col1, col2 = st.columns(2)
     
@@ -67,7 +67,7 @@ def render():
     # ========== SECTION 2: INITIAL EPISODE TREATMENT ==========
     st.markdown("### 💊 Điều Trị Đợt Đầu Tiên (Initial Episode)")
     
-    st.markdown("**Nguyên tắc:** Ngừng kháng sinh gây bệnh nếu có thể, bắt đầu điều trị ngay")
+    st.markdown("**Nguyên Tắc:** Ngừng kháng sinh gây bệnh nếu có thể, bắt đầu điều trị ngay")
     
     # Severity-based treatment
     with st.expander("📋 Phác đồ điều trị theo mức độ", expanded=True):
@@ -140,12 +140,12 @@ def render():
     # ========== SECTION 3: RECURRENT C. DIFF ==========
     st.markdown("### 🔄 Điều Trị Tái Phát (Recurrent C. diff)")
     
-    st.markdown("**Định nghĩa:** Tái phát trong vòng 8 tuần sau khi ngừng điều trị")
+    st.markdown("**Định Nghĩa:** Tái phát trong vòng 8 tuần sau khi ngừng điều trị")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### **Tái phát lần 1 (First Recurrence)**")
+        st.markdown("#### **Tái Phát Lần 1 (First Recurrence)**")
         st.warning("""
         **Lựa chọn 1 (Ưu tiên):**
         - **Fidaxomicin 200mg PO BID x 10 ngày**
@@ -163,7 +163,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("#### **Tái phát lần 2 trở đi (Multiple Recurrences)**")
+        st.markdown("#### **Tái Phát Lần 2 Trở Đi (Multiple Recurrences)**")
         st.error("""
         **Lựa chọn 1 (Ưu tiên):**
         - **Fidaxomicin 200mg PO BID x 10 ngày**
@@ -189,7 +189,7 @@ def render():
     # ========== SECTION 4: FECAL MICROBIOTA TRANSPLANTATION (FMT) ==========
     st.markdown("### 💩 Fecal Microbiota Transplantation (FMT)")
     
-    st.markdown("**Chỉ định FMT:**")
+    st.markdown("**Chỉ Định FMT:**")
     
     col1, col2 = st.columns(2)
     
@@ -288,7 +288,7 @@ def render():
     # ========== SECTION 7: MONITORING ==========
     st.markdown("### 📊 Theo Dõi")
     
-    st.markdown("**Theo dõi trong quá trình điều trị:**")
+    st.markdown("**Theo Dõi Trong Quá Trình Điều Trị:**")
     
     monitoring_items = [
         "**Triệu Chứng:** Số lần tiêu chảy, đau bụng, sốt",
@@ -304,12 +304,12 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: PREVENTION ==========
-    st.markdown("### 🛡️ Phòng ngừa")
+    st.markdown("### 🛡️ Phòng Ngừa")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### **Phòng ngừa ban đầu:**")
+        st.markdown("#### **Phòng Ngừa Ban Đầu:**")
         st.success("""
         - **Sử dụng kháng sinh hợp lý:**
           - Tránh kháng sinh phổ rộng không cần thiết
@@ -322,7 +322,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("#### **Phòng ngừa tái phát:**")
+        st.markdown("#### **Phòng Ngừa Tái Phát:**")
         st.warning("""
         - **Tránh kháng sinh không cần thiết** trong 8 tuần sau điều trị
         
@@ -342,7 +342,7 @@ def render():
     st.markdown("### 👥 Dân Số Đặc Biệt")
     
     with st.expander("🔍 Xem hướng dẫn cho dân số đặc biệt", expanded=False):
-        st.markdown("#### **Phụ nữ có thai:**")
+        st.markdown("#### **Phụ Nữ Có Thai:**")
         st.info("""
         - **Vancomycin 125mg PO QID** là lựa chọn an toàn
         - Fidaxomicin: Dữ liệu hạn chế, cân nhắc nếu cần
@@ -352,7 +352,7 @@ def render():
         
         st.markdown("---")
         
-        st.markdown("#### **Suy thận:**")
+        st.markdown("#### **Suy Thận:**")
         st.info("""
         - **Vancomycin:** Không hấp thu qua đường tiêu hóa, an toàn cho suy thận
         - **Fidaxomicin:** Không cần điều chỉnh liều
@@ -361,7 +361,7 @@ def render():
         
         st.markdown("---")
         
-        st.markdown("#### **Suy giảm miễn dịch:**")
+        st.markdown("#### **Suy Giảm Miễn Dịch:**")
         st.warning("""
         - Điều trị tương tự, nhưng:
         - Cân nhắc điều trị lâu hơn (14 ngày thay vì 10 ngày)
@@ -372,7 +372,7 @@ def render():
         
         st.markdown("---")
         
-        st.markdown("#### **Trẻ em:**")
+        st.markdown("#### **Trẻ Em:**")
         st.info("""
         - **Vancomycin:** 40mg/kg/ngày chia 4 lần (max 2g/ngày)
         - **Metronidazole:** 30mg/kg/ngày chia 3 lần (max 1.5g/ngày)
@@ -385,7 +385,7 @@ def render():
     # ========== SECTION 10: DURATION & FOLLOW-UP ==========
     st.markdown("### ⏱️ Thời Gian Điều Trị & Theo Dõi")
     
-    st.markdown("**Thời gian điều trị tiêu chuẩn:**")
+    st.markdown("**Thời Gian Điều Trị Tiêu Chuẩn:**")
     
     duration_table = {
         "Mức độ": ["Nhẹ", "Trung bình", "Nặng", "Rất nặng"],
@@ -400,7 +400,7 @@ def render():
     
     st.table(duration_table)
     
-    st.markdown("**Theo dõi sau điều trị:**")
+    st.markdown("**Theo Dõi Sau Điều Trị:**")
     st.info("""
     - **Không cần test lại** nếu triệu chứng đã hết
     - Test lại chỉ khi:

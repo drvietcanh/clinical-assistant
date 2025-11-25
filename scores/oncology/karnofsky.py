@@ -64,7 +64,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Chọn mức độ phù hợp nhất với bệnh nhân")
+    st.subheader("📝 Chọn Mức Độ Phù Hợp Nhất Với Bệnh Nhân")
     
     kps_score = st.select_slider(
         "Karnofsky Performance Scale",

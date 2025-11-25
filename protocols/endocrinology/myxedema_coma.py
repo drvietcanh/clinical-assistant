@@ -9,7 +9,7 @@ import streamlit as st
 
 def render():
     """Phác đồ hôn mê phù niêm (Myxedema Coma)"""
-    st.subheader("❄️ Hôn mê phù niêm (Myxedema Coma)")
+    st.subheader("❄️ Hôn Mê Phù Niêm (Myxedema Coma)")
     st.caption("Hướng dẫn ATA 2014 - Cấp cứu suy giáp đe dọa tính mạng")
     
     st.error("""
@@ -95,14 +95,14 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### 🚨 Điều trị ngay lập tức (ICU)")
+    st.markdown("### 🚨 Điều Trị Ngay Lập Tức (ICU)")
     
     st.markdown("""
     **Thứ tự ưu tiên điều trị (theo ATA 2014):**
     """)
     
     # Step 1: Supportive Care
-    st.markdown("#### **1. Hồi sức hỗ trợ (Supportive Care)**")
+    st.markdown("#### **1. Hồi Sức Hỗ Trợ (Supportive Care)**")
     
     col1, col2 = st.columns(2)
     
@@ -134,7 +134,7 @@ def render():
         """)
     
     # Step 2: Corticosteroids
-    st.markdown("#### **2. Corticosteroids (QUAN TRỌNG - Điều trị trước hormone tuyến giáp)**")
+    st.markdown("#### **2. Corticosteroids (QUAN TRỌNG - Điều Trị Trước Hormone Tuyến Giáp)**")
     
     st.error("""
     **⚠️ QUAN TRỌNG: Luôn dùng Corticosteroids TRƯỚC khi dùng Levothyroxine**
@@ -225,7 +225,7 @@ def render():
     """)
     
     # Step 4: Additional treatments
-    st.markdown("#### **4. Điều trị bổ sung**")
+    st.markdown("#### **4. Điều Trị Bổ Sung**")
     
     st.markdown("""
     **A. Điều trị nhiễm trùng:**
@@ -246,7 +246,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: MONITORING ==========
-    st.markdown("### 📈 Theo dõi")
+    st.markdown("### 📈 Theo Dõi")
     
     st.markdown("""
     **Theo dõi sát trong 24-48 giờ đầu:**
@@ -282,7 +282,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Dân số đặc biệt")
+    st.markdown("### 👥 Dân Số Đặc Biệt")
     
     col1, col2 = st.columns(2)
     
@@ -313,7 +313,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: LONG-TERM MANAGEMENT ==========
-    st.markdown("### 🔄 Điều trị dài hạn")
+    st.markdown("### 🔄 Điều Trị Dài Hạn")
     
     st.markdown("""
     **Sau khi qua giai đoạn cấp (3-5 ngày):**

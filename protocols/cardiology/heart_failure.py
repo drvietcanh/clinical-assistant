@@ -30,7 +30,7 @@ def render():
         fatigue = st.checkbox("Mệt mỏi", key="hf_fatigue")
         
         # Signs
-        st.markdown("**Dấu hiệu khám:**")
+        st.markdown("**Dấu Hiệu Khám:**")
         rales = st.checkbox("Ran ẩm phổi", key="hf_rales")
         edema = st.checkbox("Phù 2 chân", key="hf_edema")
         jvd = st.checkbox("Tĩnh mạch cổ nổi (JVD)", key="hf_jvd")
@@ -38,7 +38,7 @@ def render():
         hepatomegaly = st.checkbox("Gan to", key="hf_hepato")
         
         # Severity markers
-        st.markdown("**Dấu hiệu nặng:**")
+        st.markdown("**Dấu Hiệu Nặng:**")
         hypotension = st.checkbox("Hạ huyết áp (SBP <90 mmHg)", key="hf_hypotension")
         cold_extremities = st.checkbox("Chi lạnh, toát mồ hôi", key="hf_cold")
         altered_mental = st.checkbox("Lú lẫn", key="hf_confusion")

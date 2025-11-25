@@ -213,7 +213,7 @@ def render_ibw_calculator():
     if st.button("Tính toán", type="primary", key="calc_ibw"):
         ibw = calculate_ibw(sex, height_cm)
         
-        st.markdown("### 📊 Kết quả")
+        st.markdown("### 📊 Kết Quả")
         
         render_result_box(
             "Cân nặng lý tưởng",
@@ -280,7 +280,7 @@ def render_tidal_volume_calculator():
     if st.button("Tính toán", type="primary", key="calc_tidal"):
         results = calculate_tidal_volume(ibw_kg, ml_per_kg)
         
-        st.markdown("### 📊 Kết quả")
+        st.markdown("### 📊 Kết Quả")
         
         col1, col2, col3 = st.columns(3)
         
@@ -354,7 +354,7 @@ def render_peep_calculator():
     if st.button("Tính toán", type="primary", key="calc_peep"):
         recommendation = recommend_peep(fio2_decimal)
         
-        st.markdown("### 📊 Kết quả")
+        st.markdown("### 📊 Kết Quả")
         
         render_result_box(
             "PEEP khuyến nghị",
@@ -444,7 +444,7 @@ def render_plateau_pressure_calculator():
         if results["plateau"] is None:
             st.error("Không thể tính toán. Vui lòng kiểm tra giá trị nhập vào.")
         else:
-            st.markdown("### 📊 Kết quả")
+            st.markdown("### 📊 Kết Quả")
             
             col1, col2 = st.columns(2)
             
@@ -544,7 +544,7 @@ def render_weaning_calculator():
         if results["rsbi"] is None:
             st.error("Không thể tính toán. Vt phải > 0.")
         else:
-            st.markdown("### 📊 Kết quả")
+            st.markdown("### 📊 Kết Quả")
             
             render_result_box(
                 "Chỉ số RSBI",

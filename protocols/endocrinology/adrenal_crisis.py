@@ -9,7 +9,7 @@ import streamlit as st
 
 def render():
     """Phác đồ cơn suy thượng thận cấp"""
-    st.subheader("⚡ Cơn suy thượng thận cấp (Adrenal Crisis)")
+    st.subheader("⚡ Cơn Suy Thượng Thận Cấp (Adrenal Crisis)")
     st.caption("Hướng dẫn Hiệp hội Nội tiết 2016 - Cấp cứu suy thượng thận đe dọa tính mạng")
     
     st.error("""
@@ -25,7 +25,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: DIAGNOSTIC CRITERIA ==========
-    st.markdown("### 📋 Tiêu chuẩn chẩn đoán")
+    st.markdown("### 📋 Tiêu Chuẩn Chẩn Đoán")
     
     with st.expander("🔍 Xem tiêu chuẩn chẩn đoán", expanded=True):
         st.markdown("""
@@ -112,14 +112,14 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### 🚨 Điều trị ngay lập tức (ICU)")
+    st.markdown("### 🚨 Điều Trị Ngay Lập Tức (ICU)")
     
     st.markdown("""
     **Thứ tự ưu tiên điều trị (theo Endocrine Society 2016):**
     """)
     
     # Step 1: Hydrocortisone
-    st.markdown("#### **1. Hydrocortisone (QUAN TRỌNG NHẤT - Điều trị ngay)**")
+    st.markdown("#### **1. Hydrocortisone (QUAN TRỌNG NHẤT - Điều Trị Ngay)**")
     
     st.error("""
     **⚠️ QUAN TRỌNG: Điều trị Hydrocortisone NGAY LẬP TỨC, không chờ xét nghiệm**
@@ -164,7 +164,7 @@ def render():
     """)
     
     # Step 2: Fluid resuscitation
-    st.markdown("#### **2. Bù dịch (Fluid Resuscitation)**")
+    st.markdown("#### **2. Bù Dịch (Fluid Resuscitation)**")
     
     st.markdown("""
     **Dịch truyền:**
@@ -179,7 +179,7 @@ def render():
     """)
     
     # Step 3: Electrolyte correction
-    st.markdown("#### **3. Điều chỉnh điện giải**")
+    st.markdown("#### **3. Điều Chỉnh Điện Giải**")
     
     col1, col2 = st.columns(2)
     
@@ -223,7 +223,7 @@ def render():
     """)
     
     # Step 5: Treat precipitating cause
-    st.markdown("#### **5. Điều trị nguyên nhân thúc đẩy**")
+    st.markdown("#### **5. Điều Trị Nguyên Nhân Thúc Đẩy**")
     
     st.markdown("""
     **Tìm và điều trị nguyên nhân:**
@@ -245,7 +245,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: MONITORING ==========
-    st.markdown("### 📈 Theo dõi")
+    st.markdown("### 📈 Theo Dõi")
     
     st.markdown("""
     **Theo dõi sát trong 24-48 giờ đầu:**
@@ -280,7 +280,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Dân số đặc biệt")
+    st.markdown("### 👥 Dân Số Đặc Biệt")
     
     col1, col2 = st.columns(2)
     
@@ -312,7 +312,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: LONG-TERM MANAGEMENT ==========
-    st.markdown("### 🔄 Điều trị dài hạn")
+    st.markdown("### 🔄 Điều Trị Dài Hạn")
     
     st.markdown("""
     **Sau khi qua giai đoạn cấp (24-48 giờ):**
@@ -348,7 +348,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: PREVENTION ==========
-    st.markdown("### 🛡️ Phòng ngừa")
+    st.markdown("### 🛡️ Phòng Ngừa")
     
     st.markdown("""
     **Giáo dục bệnh nhân:**

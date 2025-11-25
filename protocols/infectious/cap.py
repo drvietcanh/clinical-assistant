@@ -64,7 +64,7 @@ def render():
     
     with col1:
         st.success("""
-        **Không có yếu tố nguy cơ kháng thuốc:**
+        **Không Có Yếu Tố Nguy Cơ Kháng Thuốc:**
         
         **Lựa chọn 1:**
         - Amoxicillin 1g PO TID
@@ -80,7 +80,7 @@ def render():
     
     with col2:
         st.warning("""
-        **Có yếu tố nguy cơ kháng thuốc:**
+        **Có Yếu Tố Nguy Cơ Kháng Thuốc:**
         - COPD, hút thuốc, kháng sinh gần đây
         
         **Lựa chọn:**
@@ -103,7 +103,7 @@ def render():
     
     with col1:
         st.success("""
-        **Không có yếu tố nguy cơ MDR:**
+        **Không Có Yếu Tố Nguy Cơ MDR:**
         
         **Lựa chọn 1:**
         - Ampicillin-sulbactam 1.5-3g IV q6h
@@ -120,7 +120,7 @@ def render():
     
     with col2:
         st.warning("""
-        **Có yếu tố nguy cơ MDR:**
+        **Có Yếu Tố Nguy Cơ MDR:**
         - Kháng sinh gần đây, nhập viện gần đây, COPD nặng
         
         **Lựa chọn:**

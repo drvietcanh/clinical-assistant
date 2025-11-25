@@ -49,7 +49,7 @@ def render():
         """)
     
     st.markdown("---")
-    st.subheader("📝 Đánh giá các yếu tố")
+    st.subheader("📝 Đánh Giá Các Yếu Tố")
     
     burden = st.radio(
         "Mức độ triệu chứng nhiễm trùng",

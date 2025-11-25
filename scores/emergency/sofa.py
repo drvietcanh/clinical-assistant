@@ -392,7 +392,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết quả")
+        st.subheader("📊 Kết Quả")
         
         # Color-coded score result (MDCalc style)
         render_score_result(

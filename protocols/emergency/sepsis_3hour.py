@@ -140,7 +140,7 @@ def render():
     # ========== SECTION 3: ANTIBIOTIC SELECTION ==========
     st.markdown("### 💊 Lựa Chọn Kháng Sinh Thực Nghiệm")
     
-    st.markdown("**Nguyên tắc:** Kháng sinh phổ rộng trong 1 giờ đầu, điều chỉnh sau khi có kết quả")
+    st.markdown("**Nguyên Tắc:** Kháng sinh phổ rộng trong 1 giờ đầu, điều chỉnh sau khi có kết quả")
     
     # Community vs Hospital acquired
     infection_source = st.radio(
@@ -293,7 +293,7 @@ def render():
     # ========== SECTION 5: VASOPRESSOR MANAGEMENT ==========
     st.markdown("### ⚠️ Quản Lý Vasopressor")
     
-    st.markdown("**Chỉ Định:** MAP <65 mmHg sau truyền dịch đầy đủ")
+    st.markdown("**Chỉ Định:** MAP <65 mmHg sau Truyền Dịch đầy đủ")
     
     st.error("""
     **1st line: Norepinephrine**
@@ -327,7 +327,7 @@ def render():
     # ========== SECTION 6: SOURCE CONTROL ==========
     st.markdown("### 🔍 Source Control")
     
-    st.markdown("**Nguyên tắc:** Xác định và điều trị ổ nhiễm trùng càng sớm càng tốt")
+    st.markdown("**Nguyên Tắc:** Xác định và điều trị ổ nhiễm trùng càng sớm càng tốt")
     
     source_control_options = [
         "Viêm phổi",
@@ -432,27 +432,27 @@ def render():
     st.markdown("### ⚠️ Các Trường Hợp Đặc Biệt")
     
     with st.expander("🔍 Xem các trường hợp đặc biệt", expanded=False):
-        st.markdown("""#### **Suy thận:**
+        st.markdown("""#### **Suy Thận:**
         - Điều chỉnh liều kháng sinh theo CrCl
         - Thận trọng với truyền dịch (nguy cơ quá tải)
         - Xem xét lọc máu sớm nếu cần
         
-        #### **Suy gan:**
+        #### **Suy Gan:**
         - Tránh kháng sinh độc gan
         - Thận trọng với truyền dịch (nguy cơ cổ trướng)
         - Xem xét albumin nếu giảm albumin nặng
         
-        #### **Suy tim:**
+        #### **Suy Tim:**
         - Thận trọng với truyền dịch (nguy cơ suy tim nặng)
         - Ưu tiên vasopressor thay vì dịch
         - Xem xét inotrope (dobutamine) sớm
         
-        #### **Phụ nữ có thai:**
+        #### **Phụ Nữ Có Thai:**
         - Tránh kháng sinh gây hại thai nhi
         - Thận trọng với vasopressor (ảnh hưởng đến thai nhi)
         - Xem xét chấm dứt thai kỳ nếu cần
         
-        #### **Người cao tuổi:**
+        #### **Người Cao Tuổi:**
         - Thận trọng với truyền dịch (nguy cơ quá tải)
         - Điều chỉnh liều kháng sinh theo CrCl
         - Xem xét các bệnh lý kèm theo

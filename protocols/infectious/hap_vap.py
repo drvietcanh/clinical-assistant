@@ -25,7 +25,7 @@ def render():
     # ========== SECTION 1: RISK STRATIFICATION ==========
     st.markdown("### 📊 Phân Tầng Nguy Cơ MDR (Multidrug-Resistant)")
     
-    st.markdown("**Yếu tố nguy cơ MDR:**")
+    st.markdown("**Yếu Tố Nguy Cơ MDR:**")
     
     col1, col2 = st.columns(2)
     
@@ -70,7 +70,7 @@ def render():
         - Hoặc Moxifloxacin 400mg IV QD
         - Hoặc Ampicillin-sulbactam 3g IV q6h
         
-        **Thêm Vancomycin nếu có yếu tố nguy cơ MRSA:**
+        **Thêm Vancomycin Nếu Có Yếu Tố Nguy Cơ MRSA:**
         - Vancomycin 15-20mg/kg IV q8-12h (điều chỉnh theo CrCl)
         """)
     else:
@@ -91,7 +91,7 @@ def render():
         - Meropenem 1g IV q8h
         + Gentamicin 5-7mg/kg IV QD
         
-        **Thêm Vancomycin nếu có yếu tố nguy cơ MRSA:**
+        **Thêm Vancomycin Nếu Có Yếu Tố Nguy Cơ MRSA:**
         - Vancomycin 15-20mg/kg IV q8-12h (điều chỉnh theo CrCl)
         - Hoặc Linezolid 600mg IV q12h (nếu suy thận)
         """)
@@ -199,7 +199,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: PREVENTION ==========
-    st.markdown("### 🛡️ Phòng ngừa VAP")
+    st.markdown("### 🛡️ Phòng Ngừa VAP")
     
     st.info("""
     **Các biện pháp phòng ngừa VAP:**

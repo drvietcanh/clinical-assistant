@@ -8,7 +8,7 @@ import streamlit as st
 
 def render():
     """Shock Management Protocol"""
-    st.subheader("💔 Quản lý sốc")
+    st.subheader("💔 Quản Lý Sốc")
     st.caption("Phân loại và xử trí sốc")
     
     st.info("""

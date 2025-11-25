@@ -161,14 +161,14 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### 🚨 Điều trị ngay lập tức (ICU)")
+    st.markdown("### 🚨 Điều Trị Ngay Lập Tức (ICU)")
     
     st.markdown("""
     **Thứ tự ưu tiên điều trị (theo ATA 2016):**
     """)
     
     # Step 1: Supportive Care
-    st.markdown("#### **1. Hồi sức hỗ trợ (Supportive Care)**")
+    st.markdown("#### **1. Hồi Sức Hỗ Trợ (Supportive Care)**")
     st.markdown("""
     - **Oxygen:** Duy trì SpO2 >90%
     - **Dịch truyền:** NS 0.9% hoặc LR, bù dịch theo nhu cầu
@@ -293,7 +293,7 @@ def render():
         """)
     
     # Step 5: Corticosteroids
-    st.markdown("#### **5. Corticosteroids (Ức chế chuyển đổi T4→T3 + Hỗ trợ thượng thận)**")
+    st.markdown("#### **5. Corticosteroids (Ức Chế Chuyển Đổi T4→T3 + Hỗ Trợ Thượng Thận)**")
     
     st.markdown("""
     **Dexamethasone hoặc Hydrocortisone:**
@@ -328,7 +328,7 @@ def render():
         """)
     
     # Step 6: Additional treatments
-    st.markdown("#### **6. Điều trị bổ sung**")
+    st.markdown("#### **6. Điều Trị Bổ Sung**")
     
     st.markdown("""
     **A. Cholestyramine (Nếu có):**
@@ -347,7 +347,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: MONITORING ==========
-    st.markdown("### 📈 Theo dõi")
+    st.markdown("### 📈 Theo Dõi")
     
     st.markdown("""
     **Theo dõi sát trong 24-48 giờ đầu:**
@@ -381,7 +381,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Dân số đặc biệt")
+    st.markdown("### 👥 Dân Số Đặc Biệt")
     
     col1, col2 = st.columns(2)
     
@@ -415,7 +415,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: LONG-TERM MANAGEMENT ==========
-    st.markdown("### 🔄 Điều trị dài hạn")
+    st.markdown("### 🔄 Điều Trị Dài Hạn")
     
     st.markdown("""
     **Sau khi qua giai đoạn cấp (24-48 giờ):**

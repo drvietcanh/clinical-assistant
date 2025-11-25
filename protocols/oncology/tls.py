@@ -9,7 +9,7 @@ import streamlit as st
 
 def render():
     """Phác đồ phòng ngừa hội chứng tan u (TLS)"""
-    st.subheader("🎗️ Phòng ngừa hội chứng tan u (TLS)")
+    st.subheader("🎗️ Phòng Ngừa Hội Chứng Tan U (TLS)")
     st.caption("Hướng dẫn NCCN 2023 - Phòng ngừa và điều trị TLS")
     
     st.error("""

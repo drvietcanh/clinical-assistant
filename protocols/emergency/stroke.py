@@ -58,7 +58,7 @@ def render_ischemic_stroke():
         st.metric("Door-to-Puncture (MT)", "≤90 phút", "🎯 Mục tiêu")
     
     st.markdown("---")
-    st.markdown("### 1️⃣ Xử trí tức thì (< 10 phút)")
+    st.markdown("### 1️⃣ Xử Trí Tức Thì (< 10 phút)")
     
     st.error("""
     **ABC - Airway, Breathing, Circulation:**
@@ -89,7 +89,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Chẩn đoán - CT Scan")
+    st.markdown("### 2️⃣ Chẩn Đoán - CT Scan")
     
     st.warning("""
     **CT Head NGAY (trong 25 phút):**
@@ -108,7 +108,7 @@ def render_ischemic_stroke():
     st.markdown("---")
     st.markdown("### 3️⃣ Thrombolysis - tPA Criteria")
     
-    st.markdown("#### ✅ Chỉ định tPA (Alteplase)")
+    st.markdown("#### ✅ Chỉ Định tPA (Alteplase)")
     
     col1, col2 = st.columns(2)
     
@@ -191,7 +191,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 5️⃣ Hỗ trợ y tế")
+    st.markdown("### 5️⃣ Hỗ Trợ Y Tế")
     
     st.info("""
     **Huyết áp:**
@@ -213,7 +213,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 6️⃣ Điều trị sau giai đoạn cấp")
+    st.markdown("### 6️⃣ Điều Trị Sau Giai Đoạn Cấp")
     
     st.success("""
     **Antiplatelet (sau 24h nếu không dùng tPA):**
@@ -255,7 +255,7 @@ def render_hemorrhagic_stroke():
     st.error("## 🚨 HEMORRHAGIC STROKE (ICH) PROTOCOL")
     st.error("**CODE STROKE - Xử trí khẩn cấp!**")
     
-    st.markdown("### 1️⃣ Xử trí tức thì")
+    st.markdown("### 1️⃣ Xử Trí Tức Thì")
     
     st.error("""
     **ABC tương tự Ischemic Stroke:**
@@ -267,7 +267,7 @@ def render_hemorrhagic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Kiểm soát huyết áp")
+    st.markdown("### 2️⃣ Kiểm Soát Huyết Áp")
     
     st.warning("""
     **Mục tiêu huyết áp:**
@@ -313,7 +313,7 @@ def render_hemorrhagic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Đánh giá & quyết định phẫu thuật")
+    st.markdown("### 4️⃣ Đánh Giá & Quyết Định Phẫu Thuật")
     
     col1, col2 = st.columns(2)
     
@@ -351,7 +351,7 @@ def render_hemorrhagic_stroke():
         """)
     
     st.markdown("---")
-    st.markdown("### 5️⃣ Điều trị hỗ trợ")
+    st.markdown("### 5️⃣ Điều Trị Hỗ Trợ")
     
     st.info("""
     **ICP Management (nếu có monitoring ICP):**
@@ -372,7 +372,7 @@ def render_hemorrhagic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 6️⃣ Theo dõi")
+    st.markdown("### 6️⃣ Theo Dõi")
     
     st.success("""
     **Monitoring:**

@@ -195,7 +195,7 @@ def render():
     """)
     
     # Step 2: Bisphosphonates
-    st.markdown("#### **2. Bisphosphonates (Điều trị chính)**")
+    st.markdown("#### **2. Bisphosphonates (Điều Trị Chính)**")
     
     st.markdown("""
     **⚠️ CHỐNG CHỈ ĐỊNH:**
@@ -295,7 +295,7 @@ def render():
     """)
     
     # Step 4: Denosumab
-    st.markdown("#### **4. Denosumab (Nếu bisphosphonates chống chỉ định)**")
+    st.markdown("#### **4. Denosumab (Nếu Bisphosphonates Chống Chỉ Định)**")
     
     st.info("""
     **Chỉ Định:**

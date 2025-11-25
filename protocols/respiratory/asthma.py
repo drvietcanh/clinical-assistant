@@ -8,7 +8,7 @@ import streamlit as st
 
 def render():
     """Acute Asthma Protocol"""
-    st.subheader("🫁 Cơn hen cấp")
+    st.subheader("🫁 Cơn Hen Cấp")
     st.caption("Xử Trí Cơn Hen Theo GINA 2023")
     
     st.info("ℹ️ **Guideline Update Note:** Vui lòng kiểm tra GINA 2025 (nếu đã phát hành) tại https://ginasthma.org để cập nhật khuyến cáo mới nhất.")

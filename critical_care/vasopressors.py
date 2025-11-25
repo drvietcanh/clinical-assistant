@@ -145,7 +145,7 @@ def render_vasopressor_guide():
         st.markdown(f"**Tên khác:** {vasopressor_data['name_vn']}")
     
     # Indication
-    st.markdown("### 📋 Chỉ định")
+    st.markdown("### 📋 Chỉ Định")
     st.info(vasopressor_data['indication'])
     
     # Dosage section

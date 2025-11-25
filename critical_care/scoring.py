@@ -82,7 +82,7 @@ def render_rass_calculator():
         severity = "An thần"
     
     st.markdown("---")
-    st.markdown(f"### 📊 Kết quả")
+    st.markdown(f"### 📊 Kết Quả")
     
     render_result_box(
         "RASS Score",
@@ -184,7 +184,7 @@ def render_cam_icu_calculator():
     st.markdown("### 📋 Đánh Giá CAM-ICU")
     
     # Feature 1: Acute onset or fluctuating course
-    st.markdown("#### 1️⃣ Khởi phát cấp và dao động")
+    st.markdown("#### 1️⃣ Khởi Phát Cấp Và Dao Động")
     feature1_q1 = st.checkbox(
         "Có thay đổi cấp tính trạng thái tâm thần so với ban đầu?",
         key="cam_icu_f1_q1"
@@ -196,7 +196,7 @@ def render_cam_icu_calculator():
     feature1 = feature1_q1 or feature1_q2
     
     # Feature 2: Inattention
-    st.markdown("#### 2️⃣ Giảm chú ý")
+    st.markdown("#### 2️⃣ Giảm Chú Ý")
     st.markdown("**Test chú ý (chọn 1):**")
     
     attention_test = st.radio(
@@ -244,7 +244,7 @@ def render_cam_icu_calculator():
         )
     
     # Feature 3: Disorganized thinking
-    st.markdown("#### 3️⃣ Tư duy rối loạn")
+    st.markdown("#### 3️⃣ Tư Duy Rối Loạn")
     feature3_q1 = st.checkbox(
         "Câu trả lời không mạch lạc, lan man?",
         key="cam_icu_f3_q1"
@@ -256,7 +256,7 @@ def render_cam_icu_calculator():
     feature3 = feature3_q1 or feature3_q2
     
     # Feature 4: Altered level of consciousness
-    st.markdown("#### 4️⃣ Thay đổi mức độ ý thức")
+    st.markdown("#### 4️⃣ Thay Đổi Mức Độ Ý Thức")
     consciousness_level = st.selectbox(
         "Mức độ ý thức hiện tại:",
         [
@@ -275,7 +275,7 @@ def render_cam_icu_calculator():
     if st.button("🔬 Đánh Giá CAM-ICU", type="primary", key="cam_icu_calculate"):
         has_delirium = feature1 and feature2 and feature3 and feature4
         
-        st.markdown("### 📊 Kết quả")
+        st.markdown("### 📊 Kết Quả")
         
         if has_delirium:
             render_warning_alert(
@@ -420,7 +420,7 @@ def render_aki_staging_quick():
         # Final stage (worst of the two)
         final_stage = max(stage_cr, stage_uo)
         
-        st.markdown("### 📊 Kết quả")
+        st.markdown("### 📊 Kết Quả")
         
         if final_stage == 0:
             color = "success"
@@ -448,7 +448,7 @@ def render_aki_staging_quick():
         )
         
         st.markdown("---")
-        st.markdown("### 📋 Chi tiết")
+        st.markdown("### 📋 Chi Tiết")
         
         col1, col2 = st.columns(2)
         

@@ -94,7 +94,7 @@ def render_upper_gi_bleeding():
         """)
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Resuscitation - Bù dịch & máu")
+    st.markdown("### 2️⃣ Resuscitation - Bù Dịch & Máu")
     
     st.info("""
     **Fluid Resuscitation:**
@@ -147,7 +147,7 @@ def render_upper_gi_bleeding():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Điều trị dược lý")
+    st.markdown("### 4️⃣ Điều Trị Dược Lý")
     
     col1, col2 = st.columns(2)
     
@@ -174,7 +174,7 @@ def render_upper_gi_bleeding():
         """)
     
     st.markdown("---")
-    st.markdown("### 5️⃣ Chỉ định nội soi")
+    st.markdown("### 5️⃣ Chỉ Định Nội Soi")
     
     st.info("""
     **Timing cho EGD (Esophagogastroduodenoscopy):**
@@ -194,7 +194,7 @@ def render_upper_gi_bleeding():
     """)
     
     st.markdown("---")
-    st.markdown("### 6️⃣ Quản lý theo nguyên nhân")
+    st.markdown("### 6️⃣ Quản Lý Theo Nguyên Nhân")
     
     tab1, tab2, tab3, tab4 = st.tabs(["PUD", "Varices", "Mallory-Weiss", "Khác"])
     
@@ -284,7 +284,7 @@ def render_upper_gi_bleeding():
         """)
     
     st.markdown("---")
-    st.markdown("### 7️⃣ Theo dõi & dự phòng tái phát")
+    st.markdown("### 7️⃣ Theo Dõi & Dự Phòng Tái Phát")
     
     st.success("""
     **Monitoring:**
@@ -382,7 +382,7 @@ def render_lower_gi_bleeding():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Quản lý theo nguyên nhân")
+    st.markdown("### 4️⃣ Quản Lý Theo Nguyên Nhân")
     
     tab1, tab2, tab3, tab4 = st.tabs(["Diverticular", "Angiodysplasia", "Ischemic Colitis", "Khác"])
     

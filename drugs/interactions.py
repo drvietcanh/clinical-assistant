@@ -7,6 +7,8 @@ import streamlit as st
 from .interactions_data import (
     check_interactions,
     normalize_drug_name,
+    get_drug_autocomplete_suggestions,
+    get_drug_classes,
     SEVERITY_MAJOR,
     SEVERITY_MODERATE,
     SEVERITY_MINOR,
@@ -46,8 +48,11 @@ def render_interaction_checker():
     - ⚕️ Ý nghĩa lâm sàng chi tiết
     - 💡 Gợi ý thuốc thay thế
     - 📋 Hướng dẫn xử trí cụ thể
+    - 🔍 **Tìm kiếm thông minh với autocomplete** (Day 8)
+    - 🎯 **Class-based interactions** - Tự động nhận diện tương tác theo nhóm thuốc (Day 8)
+    - 🔤 **Fuzzy matching** - Tìm thuốc ngay cả khi gõ sai chính tả (Day 8)
     
-    ⚠️ **Lưu ý:** Database hiện tại bao gồm ~50 tương tác phổ biến. Luôn tham khảo nguồn đáng tin cậy trước khi quyết định lâm sàng.
+    ⚠️ **Lưu ý:** Database hiện tại bao gồm **500+ tương tác** phổ biến. Luôn tham khảo nguồn đáng tin cậy trước khi quyết định lâm sàng.
     """)
     
     st.markdown("---")
@@ -77,10 +82,25 @@ def render_interaction_checker():
         )
         
         for i in range(num_drugs):
+            # Get autocomplete suggestions
+            drug_input_key = f"drug_{i}"
+            current_value = st.session_state.get(drug_input_key, "")
+            
+            # Show autocomplete suggestions
+            if current_value and len(current_value) >= 1:
+                suggestions = get_drug_autocomplete_suggestions(current_value, max_results=5)
+                if suggestions:
+                    with st.expander(f"💡 Gợi ý cho '{current_value}'", expanded=False):
+                        for sug in suggestions:
+                            if st.button(f"✓ {sug}", key=f"sug_{i}_{sug}", use_container_width=True):
+                                st.session_state[drug_input_key] = sug
+                                st.rerun()
+            
             drug = st.text_input(
                 f"Thuốc {i+1}:",
-                key=f"drug_{i}",
-                placeholder="Ví dụ: Warfarin, Aspirin, Metformin..."
+                key=drug_input_key,
+                placeholder="Ví dụ: Warfarin, Aspirin, Metformin...",
+                help="Nhập tên thuốc (tiếng Anh hoặc tiếng Việt). Hệ thống sẽ tự động gợi ý."
             )
             if drug and drug.strip():
                 drug_list.append(drug.strip())
@@ -104,12 +124,19 @@ def render_interaction_checker():
                 title="Thiếu thông tin"
             )
         else:
-            # Normalize drug names
-            normalized_list = [normalize_drug_name(drug) for drug in drug_list]
+            # Normalize drug names with fuzzy matching
+            normalized_list = [normalize_drug_name(drug, use_fuzzy=True) for drug in drug_list]
+            
+            # Store mapping of original -> normalized for display
+            drug_mapping = {}
+            for orig, norm in zip(drug_list, normalized_list):
+                if orig != norm:
+                    drug_mapping[orig] = norm
             
             # Store in session state for display
             st.session_state['checked_drugs'] = normalized_list
             st.session_state['original_drugs'] = drug_list
+            st.session_state['drug_mapping'] = drug_mapping
             
             # Check interactions
             interactions = check_interactions(normalized_list)
@@ -126,14 +153,31 @@ def render_interaction_checker():
         interactions = st.session_state['interactions']
         checked_drugs = st.session_state.get('checked_drugs', [])
         original_drugs = st.session_state.get('original_drugs', [])
+        drug_mapping = st.session_state.get('drug_mapping', {})
         
         # Summary with visual metrics
         render_interaction_summary(interactions)
         
-        # Show checked drugs
+        # Show checked drugs with normalization info
         st.markdown("**📋 Danh sách thuốc đã kiểm tra:**")
-        drugs_display = ", ".join([f"**{drug}**" for drug in checked_drugs])
+        drugs_display_parts = []
+        for orig, norm in zip(original_drugs, checked_drugs):
+            if orig != norm:
+                drugs_display_parts.append(f"**{orig}** → *{norm}*")
+            else:
+                drugs_display_parts.append(f"**{norm}**")
+        drugs_display = ", ".join(drugs_display_parts)
         st.info(drugs_display)
+        
+        # Show drug classes if available
+        if checked_drugs:
+            with st.expander("ℹ️ Thông tin nhóm thuốc (Drug Classes)"):
+                for drug in checked_drugs:
+                    classes = get_drug_classes(drug)
+                    if classes:
+                        st.caption(f"**{drug}**: {', '.join(classes)}")
+                    else:
+                        st.caption(f"**{drug}**: Không xác định được nhóm")
         
         # Display interactions
         if interactions:
@@ -152,10 +196,45 @@ def render_interaction_checker():
             st.markdown("---")
             st.markdown("#### 📋 Chi Tiết Tương Tác")
             
+            # Filter options
+            col1, col2 = st.columns([2, 1])
+            with col1:
+                search_query = st.text_input(
+                    "🔍 Tìm kiếm trong tương tác:",
+                    placeholder="Nhập từ khóa để tìm...",
+                    key="interaction_search"
+                )
+            with col2:
+                severity_filter = st.multiselect(
+                    "Lọc theo mức độ:",
+                    [SEVERITY_MAJOR, SEVERITY_MODERATE, SEVERITY_MINOR],
+                    default=[SEVERITY_MAJOR, SEVERITY_MODERATE, SEVERITY_MINOR],
+                    key="severity_filter"
+                )
+            
+            # Filter interactions
+            filtered_interactions = interactions
+            if search_query:
+                search_lower = search_query.lower()
+                filtered_interactions = [
+                    i for i in filtered_interactions
+                    if (search_lower in i.get('drug1', '').lower() or
+                        search_lower in i.get('drug2', '').lower() or
+                        search_lower in i.get('mechanism', '').lower() or
+                        search_lower in i.get('description', '').lower() or
+                        search_lower in i.get('management', '').lower())
+                ]
+            
+            if severity_filter:
+                filtered_interactions = [
+                    i for i in filtered_interactions
+                    if i.get('severity') in severity_filter
+                ]
+            
             # Group by severity
-            major_interactions = [i for i in interactions if i['severity'] == SEVERITY_MAJOR]
-            moderate_interactions = [i for i in interactions if i['severity'] == SEVERITY_MODERATE]
-            minor_interactions = [i for i in interactions if i['severity'] == SEVERITY_MINOR]
+            major_interactions = [i for i in filtered_interactions if i['severity'] == SEVERITY_MAJOR]
+            moderate_interactions = [i for i in filtered_interactions if i['severity'] == SEVERITY_MODERATE]
+            minor_interactions = [i for i in filtered_interactions if i['severity'] == SEVERITY_MINOR]
             
             # Major interactions
             if major_interactions:
@@ -272,23 +351,25 @@ def render_interaction_checker():
             st.rerun()
     
     # Available drugs info
-    with st.expander("ℹ️ Danh sách thuốc có trong database"):
+    with st.expander("ℹ️ Thông tin Database"):
         st.markdown("""
-        **Database hiện tại hỗ trợ kiểm tra tương tác cho các thuốc sau:**
+        **📊 Database hiện tại:**
+        - **500+ tương tác thuốc** được phân loại theo 8 nhóm chính
+        - **Hỗ trợ class-based matching** - Tự động nhận diện tương tác theo nhóm thuốc
+        - **Fuzzy matching** - Tìm thuốc ngay cả khi gõ sai chính tả
+        - **Autocomplete** - Gợi ý thuốc khi nhập
         
-        **Anticoagulants:** Warfarin, Aspirin, Clopidogrel  
-        **Antibiotics:** Metronidazole, Ciprofloxacin, Erythromycin, Clarithromycin  
-        **Antidepressants:** Fluoxetine, Sertraline, Tramadol  
-        **Antihypertensives:** ACE Inhibitor, Digoxin, Amiodarone, Spironolactone  
-        **Antidiabetics:** Metformin, Sulfonylurea  
-        **Statins:** Atorvastatin, Simvastatin  
-        **Antifungals:** Ketoconazole, Fluconazole  
-        **PPI:** Omeprazole  
-        **Antihistamines:** Diphenhydramine  
-        **NSAIDs:** Ibuprofen  
-        **Others:** Methotrexate, Oral Contraceptives  
+        **Các nhóm thuốc được hỗ trợ:**
+        - **Anticoagulants:** Warfarin, DOACs (Dabigatran, Rivaroxaban, Apixaban), Heparin, LMWH
+        - **Antibiotics:** Beta-lactams, Quinolones, Macrolides, Tetracyclines, Vancomycin, Linezolid, TMP-SMX, Aminoglycosides, Rifampin
+        - **Cardiovascular:** ACE Inhibitors, ARBs, Beta-blockers, CCBs, Digoxin, Amiodarone, Statins, Diuretics
+        - **Antidiabetics:** Metformin, Sulfonylureas, DPP-4 inhibitors, SGLT2 inhibitors, GLP-1 agonists, Insulin, TZDs
+        - **Psychiatry:** SSRIs, SNRIs, TCAs, Mood Stabilizers, Antipsychotics, Benzodiazepines, MAO Inhibitors
+        - **GI:** PPIs, H2 Blockers, Antacids, Metoclopramide, Cholestyramine
+        - **Oncology:** Methotrexate, 5-FU, Cyclophosphamide, Doxorubicin, Paclitaxel, TKIs, Immunosuppressants
+        - **Other:** NSAIDs, Opioids, Corticosteroids, Antihistamines, Antifungals, Antivirals, Anticonvulsants, Oral Contraceptives, Thyroid Hormones, Theophylline, Iron, Calcium, Herbal/Supplements
         
-        💡 Database sẽ được mở rộng thêm các thuốc phổ biến tại Việt Nam.
+        💡 **Day 8 Enhancements:** Đã thêm fuzzy matching, class-based interactions, và autocomplete!
         """)
     
     # Disclaimer
