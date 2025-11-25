@@ -3,6 +3,7 @@ Unified Application Configuration
 Single source of truth for all app configuration
 """
 
+import os
 from typing import Dict, List, Optional
 from dataclasses import dataclass
 
@@ -36,6 +37,11 @@ class ModuleInfo:
 APP_CONFIG = {
     "version": "2.3.0",
     "last_updated": "2025-01-30",
+    
+    # Google Analytics Configuration
+    # Có thể set qua environment variable: GOOGLE_ANALYTICS_ID
+    # Hoặc thay đổi giá trị mặc định bên dưới
+    "google_analytics_id": os.getenv("GOOGLE_ANALYTICS_ID", "G-JRP0GQLG70"),
     
     "pages": {
         "scores": ModuleInfo(
