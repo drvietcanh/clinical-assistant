@@ -46,16 +46,28 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
             'Phenytoin/Carbamazepine: tăng nguy cơ độc gan'
         ],
         'pregnancy': 'B - An toàn (dùng được trong thai kỳ)',
-        'enhanced_fields': {
-            'mechanism_of_action': 'Paracetamol ức chế cyclooxygenase (COX) chủ yếu ở hệ thần kinh trung ương, làm giảm tổng hợp prostaglandin E2 trong vùng dưới đồi, từ đó giảm đau và hạ sốt. Khác với NSAID, paracetamol ít tác dụng kháng viêm ở ngoại biên vì không ức chế COX hiệu quả ở mô ngoại biên. Cơ chế chính xác vẫn chưa hoàn toàn rõ ràng, nhưng có thể liên quan đến ức chế COX-2 ở hệ thần kinh trung ương hoặc tác dụng qua con đường cannabinoid. Quan trọng: Ở liều quá cao, chuyển hóa qua CYP2E1 tạo NAPQI (N-acetyl-p-benzoquinone imine) - chất độc gây tổn thương gan nặng.',
-            'monitoring': [
+        'mechanism_of_action': {
+            'primary': 'Ức chế cyclooxygenase (COX) chủ yếu ở hệ thần kinh trung ương, làm giảm tổng hợp prostaglandin E2',
+            'detailed': 'Paracetamol ức chế cyclooxygenase (COX) chủ yếu ở hệ thần kinh trung ương, làm giảm tổng hợp prostaglandin E2 trong vùng dưới đồi, từ đó giảm đau và hạ sốt. Khác với NSAID, paracetamol ít tác dụng kháng viêm ở ngoại biên vì không ức chế COX hiệu quả ở mô ngoại biên. Cơ chế chính xác vẫn chưa hoàn toàn rõ ràng, nhưng có thể liên quan đến ức chế COX-2 ở hệ thần kinh trung ương hoặc tác dụng qua con đường cannabinoid. Quan trọng: Ở liều quá cao, chuyển hóa qua CYP2E1 tạo NAPQI (N-acetyl-p-benzoquinone imine) - chất độc gây tổn thương gan nặng.',
+            'target': 'COX-2 (hệ thần kinh trung ương), CYP2E1 (chuyển hóa)'
+        },
+        'monitoring': {
+            'labs': [
                 'ALT/AST nếu nghi ngờ quá liều hoặc bệnh nhân có nguy cơ (suy gan, uống rượu, dùng isoniazid)',
                 'INR nếu dùng với warfarin liều cao kéo dài (tăng nguy cơ chảy máu)',
-                'Dấu hiệu độc tính gan: buồn nôn, nôn, đau bụng, vàng da (xuất hiện sau 24-48h sau quá liều)',
                 'Nồng độ paracetamol trong máu nếu quá liều (đồ thị Rumack-Matthew để quyết định điều trị N-acetylcysteine)',
                 'Đường huyết (hạ đường huyết có thể xảy ra trong quá liều)'
             ],
-            'precautions': [
+            'vital_signs': [
+                'Huyết áp',
+                'Nhịp tim'
+            ],
+            'clinical': [
+                'Dấu hiệu độc tính gan: buồn nôn, nôn, đau bụng, vàng da (xuất hiện sau 24-48h sau quá liều)'
+            ],
+            'frequency': 'Theo dõi ALT/AST sau 24-48h nếu quá liều hoặc có nguy cơ'
+        },
+        'precautions': [
                 'Không vượt quá 4g/ngày ở người lớn, 60mg/kg/ngày ở trẻ em để tránh độc tính gan',
                 'Giảm liều ở bệnh nhân suy gan, suy thận nặng (khoảng cách liều 6-8 giờ)',
                 'Tránh rượu khi dùng (rượu tăng CYP2E1 → tăng sản xuất NAPQI độc)',
@@ -63,11 +75,26 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
                 'Thận trọng với bệnh nhân suy dinh dưỡng, nhịn ăn (giảm glutathione → tăng nguy cơ độc tính)',
                 'Nếu quá liều, điều trị ngay với N-acetylcysteine (hiệu quả nhất trong vòng 8 giờ đầu)',
                 'Thận trọng với bệnh nhân dùng isoniazid, phenytoin, carbamazepine (tăng nguy cơ độc gan)'
-            ],
-            'pharmacokinetics': 'Half-life: 2-3 giờ (bình thường), 4-8 giờ (quá liều). Onset: 30-60 phút (PO), 15-30 phút (IV), 60 phút (PR). Duration: 4-6 giờ. Protein binding: 10-25%. Clearance: Gan - chủ yếu qua glucuronidation (40-60%) và sulfation (20-40%), một phần nhỏ qua CYP2E1 tạo NAPQI (chất độc). Thận: <5% bài tiết nguyên dạng. Ở quá liều, con đường CYP2E1 tăng → tăng NAPQI → vượt quá glutathione → độc gan.',
-            'storage': 'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dung dịch: tránh đông lạnh. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi dùng.',
-            'black_box_warnings': 'Quá liều có thể gây độc tính gan nghiêm trọng, suy gan cấp, tử vong. Liều >150mg/kg ở trẻ em hoặc >10g ở người lớn có thể gây độc tính gan. Triệu chứng ban đầu có thể nhẹ (buồn nôn, nôn) nhưng tổn thương gan xảy ra sau 24-48 giờ. Điều trị ngay với N-acetylcysteine nếu quá liều (hiệu quả nhất trong vòng 8 giờ đầu). Không dùng quá 4g/ngày ở người lớn.',
-            'drug_interactions': {
+        ],
+        'pharmacokinetics': {
+            'half_life': '2-3 giờ (bình thường), 4-8 giờ (quá liều)',
+            'onset': '30-60 phút (PO), 15-30 phút (IV), 60 phút (PR)',
+            'duration': '4-6 giờ',
+            'protein_binding': '10-25%',
+            'clearance': 'Gan - chủ yếu qua glucuronidation (40-60%) và sulfation (20-40%), một phần nhỏ qua CYP2E1 tạo NAPQI (chất độc). Thận: <5% bài tiết nguyên dạng',
+            'bioavailability': '80-100% (PO)',
+            'metabolism': 'CYP2E1 (một phần nhỏ, tạo NAPQI độc), glucuronidation, sulfation',
+            'excretion': 'Thận (<5% nguyên dạng), phần lớn chuyển hóa ở gan'
+        },
+        'storage': 'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dung dịch: tránh đông lạnh. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi dùng.',
+        'black_box_warnings': [
+            'Quá liều có thể gây độc tính gan nghiêm trọng, suy gan cấp, tử vong',
+            'Liều >150mg/kg ở trẻ em hoặc >10g ở người lớn có thể gây độc tính gan',
+            'Triệu chứng ban đầu có thể nhẹ (buồn nôn, nôn) nhưng tổn thương gan xảy ra sau 24-48 giờ',
+            'Điều trị ngay với N-acetylcysteine nếu quá liều (hiệu quả nhất trong vòng 8 giờ đầu)',
+            'Không dùng quá 4g/ngày ở người lớn'
+        ],
+        'drug_interactions': {
                 'major': [
                     {
                         'drug': 'Warfarin',
@@ -97,20 +124,20 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
                     }
                 ]
             },
-            'contraindications': {
-                'tuyệt_đối': [
-                    'Suy gan nặng (Child-Pugh C)',
-                    'Dị ứng paracetamol',
-                    'Quá liều paracetamol (đang trong quá trình điều trị)'
-                ],
-                'tương_đối': [
-                    'Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều',
-                    'Nghiện rượu - giảm liều tối đa 2g/ngày',
-                    'Suy thận nặng (CrCl <30) - giảm liều hoặc tăng khoảng cách',
-                    'Thiếu hụt G6PD (hiếm gây thiếu máu tan máu)'
-                ]
-            },
-            'pregnancy_lactation': {
+        'contraindications': {
+            'tuyệt_đối': [
+                'Suy gan nặng (Child-Pugh C)',
+                'Dị ứng paracetamol',
+                'Quá liều paracetamol (đang trong quá trình điều trị)'
+            ],
+            'tương_đối': [
+                'Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều',
+                'Nghiện rượu - giảm liều tối đa 2g/ngày',
+                'Suy thận nặng (CrCl <30) - giảm liều hoặc tăng khoảng cách',
+                'Thiếu hụt G6PD (hiếm gây thiếu máu tan máu)'
+            ]
+        },
+        'pregnancy_lactation': {
                 'fda_category': 'B',
                 'pregnancy_details': 'An toàn trong thai kỳ. Paracetamol là thuốc giảm đau/hạ sốt được lựa chọn đầu tiên trong thai kỳ. Không có bằng chứng về dị tật bẩm sinh. Có thể dùng ở tất cả các tam cá nguyệt. Tuy nhiên, một số nghiên cứu quan sát gợi ý mối liên hệ có thể có với ADHD và tự kỷ ở trẻ khi dùng lâu dài trong thai kỳ, nhưng chứng cứ chưa rõ ràng.',
                 'lactation': {
@@ -119,13 +146,13 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
                     'recommendation': 'Có thể dùng an toàn khi cho con bú. Dùng liều thường dùng (500-1000mg mỗi 4-6 giờ).'
                 }
             },
-            'hepatic_adjustment': {
-                'mild': 'Giảm liều tối đa 2-3g/ngày, chia 3-4 lần',
-                'moderate': 'Giảm liều tối đa 2g/ngày, chia 3-4 lần. Theo dõi ALT/AST',
-                'severe': 'Tránh dùng hoặc dùng liều rất thấp (1-1.5g/ngày) dưới sự giám sát chặt chẽ. Theo dõi ALT/AST thường xuyên',
-                'notes': 'Paracetamol chuyển hóa ở gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính. Đặc biệt thận trọng ở bệnh nhân nghiện rượu.'
-            },
-            'overdose_management': {
+        'hepatic_adjustment': {
+            'mild': 'Giảm liều tối đa 2-3g/ngày, chia 3-4 lần',
+            'moderate': 'Giảm liều tối đa 2g/ngày, chia 3-4 lần. Theo dõi ALT/AST',
+            'severe': 'Tránh dùng hoặc dùng liều rất thấp (1-1.5g/ngày) dưới sự giám sát chặt chẽ. Theo dõi ALT/AST thường xuyên',
+            'notes': 'Paracetamol chuyển hóa ở gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính. Đặc biệt thận trọng ở bệnh nhân nghiện rượu.'
+        },
+        'overdose_management': {
                 'symptoms': [
                     'Giai đoạn 1 (0-24h): Buồn nôn, nôn, đau bụng, chán ăn, mệt mỏi. Bệnh nhân có thể không có triệu chứng rõ ràng',
                     "Giai đoạn 2 (24-48h): Giảm triệu chứng (giai đoạn 'yên lặng'), nhưng ALT/AST bắt đầu tăng",
@@ -141,21 +168,18 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
                     'Theo dõi ALT/AST, INR, bilirubin, glucose, lactate, creatinine thường xuyên',
                     'Điều trị hỗ trợ: Truyền dịch, điều chỉnh đường huyết, điều chỉnh rối loạn đông máu, xem xét ghép gan nếu suy gan nặng'
                 ],
-                'monitoring': "Nồng độ paracetamol trong máu, ALT/AST mỗi 12-24 giờ, INR, bilirubin, glucose, lactate, creatinine, dấu hiệu bệnh não gan, tiên lượng (King's College Criteria cho ghép gan)"
-            },
-            'reversal_agents': {
-                'available': True,
-                'agents': [
-                    {
-                        'name': 'N-acetylcysteine (NAC)',
-                        'indication': 'Quá liều paracetamol',
-                        'dose': 'IV: 150mg/kg trong 15 phút, sau đó 50mg/kg trong 4 giờ, sau đó 100mg/kg trong 16 giờ. PO: 140mg/kg, sau đó 70mg/kg mỗi 4 giờ x 17 liều',
-                        'mechanism': 'Bổ sung glutathione, liên kết với NAPQI (chất độc), giải độc gan',
-                        'notes': 'Hiệu quả nhất nếu dùng trong vòng 8-10 giờ sau quá liều, tốt nhất trong 4-6 giờ. Vẫn có thể có lợi sau 24 giờ nếu có suy gan.'
-                    }
-                ]
-            },
-            'administration_instructions': {
+            'monitoring': "Nồng độ paracetamol trong máu, ALT/AST mỗi 12-24 giờ, INR, bilirubin, glucose, lactate, creatinine, dấu hiệu bệnh não gan, tiên lượng (King's College Criteria cho ghép gan)"
+        },
+        'reversal_agents': [
+            {
+                'name': 'N-acetylcysteine (NAC)',
+                'indication': 'Quá liều paracetamol',
+                'dose': 'IV: 150mg/kg trong 15 phút, sau đó 50mg/kg trong 4 giờ, sau đó 100mg/kg trong 16 giờ. PO: 140mg/kg, sau đó 70mg/kg mỗi 4 giờ x 17 liều',
+                'mechanism': 'Bổ sung glutathione, liên kết với NAPQI (chất độc), giải độc gan',
+                'notes': 'Hiệu quả nhất nếu dùng trong vòng 8-10 giờ sau quá liều, tốt nhất trong 4-6 giờ. Vẫn có thể có lợi sau 24 giờ nếu có suy gan.'
+            }
+        ],
+        'administration_instructions': {
                 'oral': {
                     'with_food': 'Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ',
                     'timing': 'Mỗi 4-6 giờ khi cần. Không quá 4g/ngày (Người Lớn) hoặc 60mg/kg/ngày (Trẻ Em). Có thể dùng trước khi đi ngủ nếu cần giảm đau/giảm sốt ban đêm.'
@@ -167,18 +191,38 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
                     'incompatibility': ['Không pha trộn với các thuốc khác'],
                     'notes': 'Dùng cho bệnh nhân không uống được hoặc cần tác dụng nhanh. Liều tương đương PO.'
                 }
-            },
-            'references': {
-                'primary_sources': [
-                    'FDA Drug Label - Acetaminophen',
-                    'UpToDate - Acetaminophen poisoning',
-                    'Rumack-Matthew nomogram',
-                    "Goodman & Gilman's Pharmacological Basis of Therapeutics",
-                    "King's College Criteria for liver transplantation in acute liver failure"
-                ],
-                'last_updated': '2024-12-19',
-                'evidence_level': 'High - RCTs và guidelines dựa trên chứng cứ'
-            }
+        },
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo dùng cho trẻ <1 tháng tuổi',
+            'infants': '10-15mg/kg PO mỗi 4-6 giờ (tối đa 60mg/kg/ngày). 15mg/kg IV mỗi 6 giờ',
+            'children': '10-15mg/kg PO mỗi 4-6 giờ (tối đa 60mg/kg/ngày). 15mg/kg IV mỗi 6 giờ. 15-20mg/kg PR mỗi 6 giờ nếu không uống được',
+            'adolescents': '500-1000mg PO mỗi 4-6 giờ (tối đa 4g/ngày). 1000mg IV mỗi 6 giờ',
+            'notes': 'Liều tối đa: 60mg/kg/ngày. Quá liều gây độc gan nghiêm trọng. Điều trị ngay với N-acetylcysteine nếu quá liều.'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ. Suy gan, suy thận phổ biến hơn',
+            'dose_adjustment': 'Giảm liều nếu có suy gan hoặc suy thận. Tối đa 3g/ngày nếu có suy gan nhẹ',
+            'monitoring': 'Theo dõi chức năng gan, thận thường xuyên. Đặc biệt thận trọng với bệnh nhân uống rượu'
+        },
+        'brand_names': {
+            'vietnam': ['Paracetamol', 'Efferalgan', 'Tylenol', 'Panadol', 'Hapacol', 'Paracetamol Stada'],
+            'common': ['Acetaminophen', 'Tylenol', 'Panadol', 'Paracetamol']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '2,000 - 8,000 VND/viên (tùy hàm lượng và thương hiệu)',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Paracetamol generic thường rẻ hơn (2,000-4,000 VND/viên).'
+        },
+        'references': {
+            'primary_sources': [
+                'FDA Drug Label - Acetaminophen',
+                'UpToDate - Acetaminophen poisoning',
+                'Rumack-Matthew nomogram',
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics",
+                "King's College Criteria for liver transplantation in acute liver failure"
+            ],
+            'last_updated': '2024-12-19',
+            'evidence_level': 'High - RCTs và guidelines dựa trên chứng cứ'
         }
     }
 }
