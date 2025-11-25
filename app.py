@@ -25,6 +25,28 @@ from components.favorites import render_favorites
 from components.recently_used import render_recently_used
 from components.stats import render_stats, render_updates, render_tips
 
+# Offline indicator (rendered at top level)
+try:
+    from components.offline import render_offline_indicator
+    render_offline_indicator()
+except ImportError:
+    pass
+
+# Mobile navigation and optimizations
+try:
+    from components.mobile_navigation import (
+        render_mobile_bottom_nav,
+        render_mobile_swipe_gestures,
+        render_mobile_optimizations
+    )
+    from components.mobile_inputs import render_mobile_input_optimizations
+    render_mobile_bottom_nav()
+    render_mobile_swipe_gestures()
+    render_mobile_optimizations()
+    render_mobile_input_optimizations()
+except ImportError:
+    pass
+
 # ========== PAGE CONFIG ==========
 st.set_page_config(
     page_title="Clinical Assistant",
@@ -52,6 +74,28 @@ css_file = Path(__file__).parent / "static" / "styles.css"
 if css_file.exists():
     with open(css_file, "r", encoding="utf-8") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# ========== PWA SUPPORT - OFFLINE MODE ==========
+# Inject manifest and service worker
+static_dir = Path(__file__).parent / "static"
+manifest_file = static_dir / "manifest.json"
+offline_js_file = static_dir / "offline.js"
+
+if manifest_file.exists():
+    st.markdown(
+        """
+        <link rel="manifest" href="/static/manifest.json">
+        <meta name="theme-color" content="#1976d2">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="apple-mobile-web-app-title" content="Clinical Assistant">
+        """,
+        unsafe_allow_html=True
+    )
+
+if offline_js_file.exists():
+    with open(offline_js_file, "r", encoding="utf-8") as f:
+        st.markdown(f"<script>{f.read()}</script>", unsafe_allow_html=True)
 
 # Apply dark mode
 if st.session_state.dark_mode:
@@ -145,6 +189,15 @@ with st.sidebar:
     st.caption(f"**Updated:** {APP_CONFIG['last_updated']}")
     st.caption(f"**Calculators:** {len(ALL_CALCULATORS)}")
     st.caption(f"**Favorites:** {len(st.session_state.favorites)}")
+    
+    # PWA/Offline Info
+    try:
+        from components.offline import render_pwa_info, render_offline_status
+        with st.expander("📱 PWA & Offline", expanded=False):
+            render_offline_status()
+            render_pwa_info()
+    except ImportError:
+        pass
     
     # Footer
     st.markdown("---")
@@ -296,14 +349,32 @@ with tab3:
     st.markdown("### 📊 Thống Kê & Thông Tin")
     st.caption("Thống kê hệ thống, cập nhật mới nhất và mẹo sử dụng")
     
-    # Stats
-    render_stats()
-    
-    # Updates
-    render_updates()
-    
-    # Tips
-    render_tips()
+    # Analytics Dashboard Toggle
+    try:
+        from components.analytics import render_analytics_dashboard
+        analytics_tab, stats_tab = st.tabs(["📊 Usage Analytics", "📈 System Stats"])
+        
+        with analytics_tab:
+            render_analytics_dashboard()
+        
+        with stats_tab:
+            # Stats
+            render_stats()
+            
+            # Updates
+            render_updates()
+            
+            # Tips
+            render_tips()
+    except ImportError:
+        # Stats
+        render_stats()
+        
+        # Updates
+        render_updates()
+        
+        # Tips
+        render_tips()
 
 # 8. Data source info
 with st.expander("📚 Nguồn Dữ Liệu & Tài Liệu Tham Khảo"):

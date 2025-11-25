@@ -430,31 +430,106 @@ kbd {
     .stTabs [data-baseweb="tab"] {
         padding: 8px 16px;
         font-size: 0.9rem;
-        min-height: 44px; /* Touch-friendly */
+        min-height: 48px; /* Touch-friendly - iOS/Android best practice */
     }
     
     /* Buttons - Touch-friendly */
     .stButton>button {
-        min-height: 44px; /* iOS/Android touch target minimum */
+        min-height: 48px; /* iOS/Android touch target best practice */
+        min-width: 48px;
         font-size: 1rem;
         padding: 12px 20px;
     }
     
     /* Input fields - Larger for mobile */
     .stTextInput>div>div>input {
-        min-height: 44px;
+        min-height: 48px; /* Increased from 44px for better touch targets */
         font-size: 16px; /* Prevents zoom on iOS */
         padding: 12px 16px;
     }
     
     .stNumberInput>div>div>input {
-        min-height: 44px;
+        min-height: 48px; /* Increased from 44px */
         font-size: 16px;
     }
     
     .stSelectbox>div>div {
-        min-height: 44px;
+        min-height: 48px; /* Increased from 44px */
         font-size: 16px;
+    }
+    
+    /* Checkbox and Radio - Touch-friendly */
+    .stCheckbox, .stRadio {
+        min-height: 48px;
+        padding: 8px 0;
+    }
+    
+    /* Responsive Tables */
+    .mobile-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 1rem 0;
+    }
+    
+    .mobile-table-wrapper table {
+        min-width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .mobile-table-wrapper table th,
+    .mobile-table-wrapper table td {
+        padding: 12px 8px;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+        white-space: nowrap;
+    }
+    
+    .mobile-table-wrapper table th {
+        background: var(--primary);
+        color: white;
+        font-weight: 600;
+        position: sticky;
+        left: 0;
+        z-index: 1;
+    }
+    
+    /* Card-based table for very small screens */
+    @media (max-width: 480px) {
+        .mobile-table-card {
+            display: block;
+        }
+        
+        .mobile-table-card table,
+        .mobile-table-card thead,
+        .mobile-table-card tbody,
+        .mobile-table-card tr,
+        .mobile-table-card td {
+            display: block;
+        }
+        
+        .mobile-table-card thead {
+            display: none;
+        }
+        
+        .mobile-table-card tr {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: var(--card-bg);
+        }
+        
+        .mobile-table-card td {
+            border: none;
+            padding: 8px 0;
+            text-align: left;
+        }
+        
+        .mobile-table-card td:before {
+            content: attr(data-label) ": ";
+            font-weight: bold;
+            color: var(--text-secondary);
+        }
     }
     
     /* Sidebar adjustments */
