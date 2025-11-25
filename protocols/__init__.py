@@ -25,8 +25,11 @@ from .infectious import render_cap, render_hap_vap, render_cdiff
 from .endocrinology import (
     render_thyrotoxic_crisis,
     render_myxedema_coma,
-    render_adrenal_crisis
+    render_adrenal_crisis,
+    render_hhs
 )
+from .gastroenterology import render_acute_pancreatitis
+from .hematology import render_transfusion
 from .oncology import (
     render_tls,
     render_febrile_neutropenia,
@@ -60,6 +63,9 @@ __all__ = [
     'render_thyrotoxic_crisis',
     'render_myxedema_coma',
     'render_adrenal_crisis',
+    'render_hhs',
+    'render_acute_pancreatitis',
+    'render_transfusion',
     'render_tls',
     'render_febrile_neutropenia',
     'render_hypercalcemia',

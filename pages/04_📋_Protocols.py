@@ -33,6 +33,9 @@ from protocols import (
     render_thyrotoxic_crisis,
     render_myxedema_coma,
     render_adrenal_crisis,
+    render_hhs,
+    render_acute_pancreatitis,
+    render_transfusion,
     render_tls,
     render_febrile_neutropenia,
     render_hypercalcemia
@@ -59,7 +62,9 @@ with st.sidebar:
             "🦠 Nhiễm khuẩn (Infectious)",
             "⚕️ Nội tiết (Endocrinology)",
             "🎗️ Ung thư (Oncology)",
-            "💊 Đau (Pain Management)"
+            "💊 Đau (Pain Management)",
+            "🩸 Huyết học (Hematology)",
+            "🫀 Tiêu hóa (Gastroenterology)"
         ]
     )
     
@@ -129,7 +134,24 @@ with st.sidebar:
             [
                 "⚡ Thyrotoxic Crisis",
                 "❄️ Myxedema Coma",
-                "⚡ Adrenal Crisis"
+                "⚡ Adrenal Crisis",
+                "🍭 HHS (Hyperglycemic Hyperosmolar State)"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Huyết học" in specialty or "Hematology" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "🩸 Truyền Máu (Transfusion)"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Tiêu hóa" in specialty or "Gastroenterology" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "🫀 Viêm Tụy Cấp (Acute Pancreatitis)"
             ],
             label_visibility="collapsed"
         )
@@ -246,6 +268,15 @@ elif "Myxedema" in protocol or "myxedema" in protocol.lower():
 
 elif "Adrenal" in protocol or "adrenal" in protocol.lower():
     render_adrenal_crisis()
+
+elif "HHS" in protocol or "Hyperosmolar" in protocol or "hyperosmolar" in protocol.lower():
+    render_hhs()
+
+elif "Pancreatitis" in protocol or "pancreatitis" in protocol.lower() or "Tụy" in protocol:
+    render_acute_pancreatitis()
+
+elif "Transfusion" in protocol or "transfusion" in protocol.lower() or "Truyền Máu" in protocol:
+    render_transfusion()
 
 elif "Tumor Lysis" in protocol or "TLS" in protocol or "tls" in protocol.lower():
     render_tls()
