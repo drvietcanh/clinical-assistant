@@ -5,6 +5,12 @@ Cấu hình Google Analytics Data API để lấy số liệu thực tế (users
 
 ---
 
+## 📖 HƯỚNG DẪN CHI TIẾT TỪNG BƯỚC
+
+👉 **Xem hướng dẫn chi tiết với hình ảnh mô tả:** [HUONG_DAN_GOOGLE_CLOUD_STEP_BY_STEP.md](./HUONG_DAN_GOOGLE_CLOUD_STEP_BY_STEP.md)
+
+---
+
 ## 📝 Bước 1: Tạo Google Cloud Project
 
 1. Truy cập: https://console.cloud.google.com/
