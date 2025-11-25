@@ -366,7 +366,6 @@ def render_sled_calculator():
             value=70.0,
             step=0.1,
             format="%.1f",
-            format="%.1f",
             key="sled_weight"
         )
     
@@ -448,7 +447,6 @@ def render_anticoagulation_calculator():
             max_value=200.0,
             value=70.0,
             step=0.1,
-            format="%.1f",
             format="%.1f",
             key="anticoag_weight"
         )
