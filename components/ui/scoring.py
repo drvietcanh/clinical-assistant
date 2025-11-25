@@ -154,7 +154,7 @@ def render_score_breakdown(
                 font-size: 1.25rem;
                 font-weight: bold;
                 color: {organ_color};
-                background: {organ_color}15;
+                background: {organ_color}26;
                 padding: 0.25rem 0.75rem;
                 border-radius: 8px;
             ">{score}</span>
@@ -171,7 +171,7 @@ def render_score_breakdown(
         box-shadow: {THEME['shadows']['md']};
     ">
         <div style="
-            background: linear-gradient(135deg, {COLORS['primary']}10 0%, {COLORS['primary']}05 100%);
+            background: linear-gradient(135deg, {COLORS['primary']}1a 0%, {COLORS['primary']}0d 100%);
             padding: 1rem;
             border-bottom: 2px solid {COLORS['border']};
         ">
