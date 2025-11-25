@@ -40,6 +40,11 @@ env/
 .streamlit/secrets.toml
 .streamlit/config_local.toml
 
+# Google Analytics Credentials
+*service-account*.json
+ga-credentials.json
+google-analytics-*.json
+
 # Logs
 *.log
 
