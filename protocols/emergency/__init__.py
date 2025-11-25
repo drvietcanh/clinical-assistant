@@ -13,6 +13,8 @@ from .electrolytes import render as render_electrolytes
 from .anaphylaxis import render as render_anaphylaxis
 from .hypertensive_emergency import render as render_hypertensive_emergency
 from .status_epilepticus import render as render_status_epilepticus
+from .opioid_overdose import render as render_opioid_overdose
+from .alcohol_withdrawal import render as render_alcohol_withdrawal
 
 
 __all__ = [
@@ -26,5 +28,7 @@ __all__ = [
     'render_anaphylaxis',
     'render_hypertensive_emergency',
     'render_status_epilepticus',
+    'render_opioid_overdose',
+    'render_alcohol_withdrawal',
 ]
 

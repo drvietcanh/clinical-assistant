@@ -17,6 +17,9 @@ from protocols import (
     render_anaphylaxis,
     render_hypertensive_emergency,
     render_status_epilepticus,
+    render_opioid_overdose,
+    render_alcohol_withdrawal,
+    render_acute_pain,
     render_copd,
     render_asthma,
     render_acs,
@@ -55,7 +58,8 @@ with st.sidebar:
             "🧪 Thận (Nephrology)",
             "🦠 Nhiễm khuẩn (Infectious)",
             "⚕️ Nội tiết (Endocrinology)",
-            "🎗️ Ung thư (Oncology)"
+            "🎗️ Ung thư (Oncology)",
+            "💊 Đau (Pain Management)"
         ]
     )
     
@@ -75,7 +79,9 @@ with st.sidebar:
                 "⚡ Electrolyte Emergency",
                 "🚨 Anaphylaxis",
                 "⚡ Cơn Tăng Huyết Áp Cấp Cứu",
-                "🧠 Status Epilepticus"
+                "🧠 Status Epilepticus",
+                "💉 Ngộ Độc Opioid / Naloxone",
+                "🍺 Cai Rượu Cấp"
             ],
             label_visibility="collapsed"
         )
@@ -134,6 +140,14 @@ with st.sidebar:
                 "🎗️ Tumor Lysis Syndrome",
                 "🌡️ Febrile Neutropenia",
                 "📈 Hypercalcemia of Malignancy"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Đau" in specialty or "Pain" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "💊 Quản Lý Đau Cấp"
             ],
             label_visibility="collapsed"
         )
@@ -200,6 +214,12 @@ elif "Tăng Huyết Áp" in protocol or "Hypertensive" in protocol or "hypertens
 elif "Status Epilepticus" in protocol or "status epilepticus" in protocol.lower() or "Epilepticus" in protocol:
     render_status_epilepticus()
 
+elif "Opioid" in protocol or "opioid" in protocol.lower() or "Naloxone" in protocol or "naloxone" in protocol.lower() or "Ngộ Độc" in protocol:
+    render_opioid_overdose()
+
+elif "Alcohol" in protocol or "alcohol" in protocol.lower() or "Cai Rượu" in protocol or "Rượu" in protocol:
+    render_alcohol_withdrawal()
+
 elif "Rung Nhĩ" in protocol or "Atrial Fibrillation" in protocol or "atrial fibrillation" in protocol.lower() or "AF" in protocol:
     render_atrial_fibrillation()
 
@@ -235,6 +255,9 @@ elif "Febrile Neutropenia" in protocol or "neutropenia" in protocol.lower():
 
 elif "Hypercalcemia" in protocol or "hypercalcemia" in protocol.lower():
     render_hypercalcemia()
+
+elif "Đau" in protocol or "Pain" in protocol or "pain" in protocol.lower():
+    render_acute_pain()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

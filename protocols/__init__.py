@@ -13,8 +13,11 @@ from .emergency import (
     render_electrolytes,
     render_anaphylaxis,
     render_hypertensive_emergency,
-    render_status_epilepticus
+    render_status_epilepticus,
+    render_opioid_overdose,
+    render_alcohol_withdrawal
 )
+from .pain import render_acute_pain
 from .respiratory import render_copd, render_asthma
 from .cardiology import render_acs, render_hf, render_atrial_fibrillation, render_dvt_pe
 from .nephrology import render_aki
@@ -41,6 +44,9 @@ __all__ = [
     'render_anaphylaxis',
     'render_hypertensive_emergency',
     'render_status_epilepticus',
+    'render_opioid_overdose',
+    'render_alcohol_withdrawal',
+    'render_acute_pain',
     'render_copd',
     'render_asthma',
     'render_acs',
