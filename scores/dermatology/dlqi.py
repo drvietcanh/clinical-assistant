@@ -31,18 +31,18 @@ def render():
     st.markdown("---")
     st.info("**Trong 1 tuần qua**, bệnh da ảnh hưởng như thế nào?")
     
-    options = [("Rất nhiều", 3), ("Nhiều", 2), ("Một chút", 1), ("Không", 0)]
+    options_dict = {3: "Rất nhiều", 2: "Nhiều", 1: "Một chút", 0: "Không"}
     
-    q1 = st.radio("1. Ngứa, đau, cảm giác khó chịu?", [3,2,1,0], format_func=lambda x: dict(options)[x])
-    q2 = st.radio("2. Xấu hổ, tự ti?", [3,2,1,0], format_func=lambda x: dict(options)[x])
-    q3 = st.radio("3. Ảnh hưởng mua sắm hoặc chăm sóc nhà?", [3,2,1,0], format_func=lambda x: dict(options)[x])
-    q4 = st.radio("4. Ảnh hưởng chọn quần áo?", [3,2,1,0], format_func=lambda x: dict(options)[x])
-    q5 = st.radio("5. Ảnh hưởng hoạt động xã hội/giải trí?", [3,2,1,0], format_func=lambda x: dict(options)[x])
-    q6 = st.radio("6. Ảnh hưởng thể thao?", [3,2,1,0], format_func=lambda x: dict(options)[x])
-    q7 = st.radio("7. Ngăn cản làm việc/học tập?", [3,2,1,0], format_func=lambda x: dict(options)[x])
-    q8 = st.radio("8. Gây vấn đề với bạn bè/người thân?", [3,2,1,0], format_func=lambda x: dict(options)[x])
-    q9 = st.radio("9. Gây khó khăn tình dục?", [3,2,1,0], format_func=lambda x: dict(options)[x])
-    q10 = st.radio("10. Điều trị gây phiền toái?", [3,2,1,0], format_func=lambda x: dict(options)[x])
+    q1 = st.radio("1. Ngứa, đau, cảm giác khó chịu?", [3,2,1,0], format_func=lambda x: options_dict[x])
+    q2 = st.radio("2. Xấu hổ, tự ti?", [3,2,1,0], format_func=lambda x: options_dict[x])
+    q3 = st.radio("3. Ảnh hưởng mua sắm hoặc chăm sóc nhà?", [3,2,1,0], format_func=lambda x: options_dict[x])
+    q4 = st.radio("4. Ảnh hưởng chọn quần áo?", [3,2,1,0], format_func=lambda x: options_dict[x])
+    q5 = st.radio("5. Ảnh hưởng hoạt động xã hội/giải trí?", [3,2,1,0], format_func=lambda x: options_dict[x])
+    q6 = st.radio("6. Ảnh hưởng thể thao?", [3,2,1,0], format_func=lambda x: options_dict[x])
+    q7 = st.radio("7. Ngăn cản làm việc/học tập?", [3,2,1,0], format_func=lambda x: options_dict[x])
+    q8 = st.radio("8. Gây vấn đề với bạn bè/người thân?", [3,2,1,0], format_func=lambda x: options_dict[x])
+    q9 = st.radio("9. Gây khó khăn tình dục?", [3,2,1,0], format_func=lambda x: options_dict[x])
+    q10 = st.radio("10. Điều trị gây phiền toái?", [3,2,1,0], format_func=lambda x: options_dict[x])
     
     if st.button("🔬 Tính DLQI", type="primary", use_container_width=True):
         result = calculate_dlqi(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)

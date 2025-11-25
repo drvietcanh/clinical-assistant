@@ -14,7 +14,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 📝 Nhập Kết Quả")
+        st.markdown("#### 📝 Nhập kết quả")
         
         pt = st.number_input(
             "PT - Prothrombin Time (giây)", 
@@ -42,7 +42,7 @@ def render():
         )
     
     with col2:
-        st.markdown("#### 📊 Giải Thích Kết Quả")
+        st.markdown("#### 📊 Giải thích kết quả")
         
         # INR
         if inr < 1.2:
@@ -125,7 +125,7 @@ def render():
         
         ---
         
-        ### **Nguyên Tắc Giải Thích:**
+        ### **Nguyên tắc giải thích:**
         
         1. ✅ **INR** - Theo dõi Warfarin (đường uống)
         2. ✅ **aPTT** - Theo dõi Heparin (tiêm tĩnh mạch)

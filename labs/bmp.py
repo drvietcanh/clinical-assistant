@@ -6,6 +6,14 @@ import streamlit as st
 from .normal_ranges import get_normal_range, is_critical, interpret_value, ALL_RANGES
 
 
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
+
+
 def render():
     """Basic Metabolic Panel"""
     st.subheader("🧪 BMP - Basic Metabolic Panel")
@@ -65,7 +73,8 @@ def render():
                 key="bun_mmol"
             )
             bun = bun_input / 0.357  # Convert to mg/dL
-            st.caption(f"≈ {bun:.1f} mg/dL (BUN)")
+            bun_rounded = round(bun, 1)
+            st.caption(f"≈ {bun_rounded if bun_rounded != int(bun_rounded) else int(bun_rounded)} mg/dL (BUN)")
         else:
             bun = st.number_input(
                 "BUN (mg/dL)", 
@@ -74,7 +83,8 @@ def render():
                 help="Bình thường: 7-20 mg/dL",
                 key="bun_mgdl"
             )
-            st.caption(f"≈ {bun * 0.357:.1f} mmol/L (Urea)")
+            bun_mmol = round(bun * 0.357, 1)
+            st.caption(f"≈ {bun_mmol if bun_mmol != int(bun_mmol) else int(bun_mmol)} mmol/L (Urea)")
         
         # Creatinine with unit conversion
         st.markdown("#### 🔄 Creatinine")
@@ -89,12 +99,13 @@ def render():
             cr_input = st.number_input(
                 "Creatinine (µmol/L)", 
                 0.0, 1500.0, 88.0, 5.0,
-                format="%.1f",
+                format="%d",
                 help="Bình thường: 62-106 µmol/L (nam), 44-80 µmol/L (nữ)",
                 key="cr_umol_bmp"
             )
             cr = cr_input / 88.4  # Convert to mg/dL
-            st.caption(f"≈ {cr:.1f} mg/dL")
+            cr_rounded = round(cr, 1)
+            st.caption(f"≈ {cr_rounded if cr_rounded != int(cr_rounded) else int(cr_rounded)} mg/dL")
         else:
             cr = st.number_input(
                 "Creatinine (mg/dL)", 
@@ -103,7 +114,8 @@ def render():
                 help="Bình thường: 0.7-1.2 mg/dL (nam), 0.5-0.9 mg/dL (nữ)",
                 key="cr_mgdl_bmp"
             )
-            st.caption(f"≈ {cr * 88.4:.1f} µmol/L")
+            cr_umol = round(cr * 88.4)
+            st.caption(f"≈ {cr_umol} µmol/L")
         
         # Glucose with unit conversion
         st.markdown("#### 🔄 Glucose")
@@ -123,7 +135,7 @@ def render():
                 key="glucose_mmol"
             )
             glucose = glucose_input * 18.0  # Convert to mg/dL
-            st.caption(f"≈ {glucose:.0f} mg/dL")
+            st.caption(f"≈ {round(glucose)} mg/dL")
         else:
             glucose = st.number_input(
                 "Glucose (mg/dL)", 
@@ -132,7 +144,8 @@ def render():
                 help="Bình thường: 70-100 mg/dL (đói)",
                 key="glucose_mgdl"
             )
-            st.caption(f"≈ {glucose/18.0:.1f} mmol/L")
+            glucose_mmol = round(glucose/18.0, 1)
+            st.caption(f"≈ {glucose_mmol if glucose_mmol != int(glucose_mmol) else int(glucose_mmol)} mmol/L")
         
         # Calculate BUN/Cr ratio
         st.markdown("---")

@@ -9,7 +9,7 @@ import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
 
 from scores.config import SCORES_BY_SPECIALTY
-from scores import cardiology, emergency, respiratory, neurology, gi, metabolism, hematology, nephrology, trauma, psychiatry, oncology, surgery, pediatrics, infectious, ent, obstetrics, dermatology, rheumatology, ophthalmology
+from scores import cardiology, emergency, respiratory, neurology, gi, metabolism, hematology, nephrology, trauma, psychiatry, oncology, surgery, pediatrics, infectious, ent, obstetrics, dermatology, rheumatology, ophthalmology, pain, nursing
 
 # Standard page setup
 setup_page(
@@ -152,6 +152,14 @@ elif "Thấp Khớp" in specialty or "Miễn Dịch" in specialty:
 # Ophthalmology
 elif "Mắt" in specialty or "Ophthalmology" in specialty:
     ophthalmology.render_ophthalmology_calculator(selected_score_id)
+
+# Pain Assessment
+elif "Đánh Giá Đau" in specialty or "Pain" in specialty:
+    pain.render_pain_calculator(selected_score_id)
+
+# Nursing Care
+elif "Chăm Sóc Điều Dưỡng" in specialty or "Nursing" in specialty:
+    nursing.render_nursing_calculator(selected_score_id)
 
 # Other specialties - show placeholder for now
 else:

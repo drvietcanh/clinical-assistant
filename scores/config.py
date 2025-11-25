@@ -35,6 +35,7 @@ SCORES_BY_SPECIALTY = {
         "CURB-65": {"name": "CURB-65", "desc": "Mức độ nặng viêm phổi", "status": "✅"},
         "PSI/PORT": {"name": "PSI/PORT Score", "desc": "Tiên lượng viêm phổi cộng đồng", "status": "✅"},
         "Wells PE": {"name": "Wells PE Score", "desc": "Nguy cơ thuyên tắc phổi", "status": "✅"},
+        "PESI": {"name": "PESI - Pulmonary Embolism Severity Index", "desc": "Mức độ nặng và tiên lượng thuyên tắc phổi", "status": "✅"},
         "SMART-COP": {"name": "SMART-COP", "desc": "Cần hỗ trợ hô hấp trong viêm phổi", "status": "✅"},
         "BODE Index": {"name": "BODE Index", "desc": "Tiên lượng COPD", "status": "✅"},
         "ARDS Berlin": {"name": "ARDS Berlin Definition", "desc": "Tiêu chuẩn chẩn đoán ARDS (Berlin 2012)", "status": "✅"},
@@ -48,6 +49,7 @@ SCORES_BY_SPECIALTY = {
         "mRS": {"name": "mRS - Modified Rankin Scale", "desc": "Mức độ khuyết tật sau đột quỵ", "status": "✅"},
         "ASPECTS": {"name": "ASPECTS - Alberta Stroke Program Early CT Score", "desc": "Đánh giá thay đổi thiếu máu sớm trên CT - Quyết định thrombolysis/thrombectomy", "status": "✅"},
         "ABCD2": {"name": "ABCD2 Score", "desc": "Phân tầng nguy cơ đột quỵ sau TIA", "status": "✅"},
+        "Barthel Index": {"name": "Barthel Index", "desc": "Đánh giá chức năng hoạt động hàng ngày (ADL)", "status": "✅"},
     },
     
     "🩸 Tiêu Hóa - Gan Mật (GI/Hepatology)": {
@@ -168,6 +170,20 @@ SCORES_BY_SPECIALTY = {
     
     "👁️ Mắt (Ophthalmology)": {
         "Intraocular Pressure": {"name": "IOP Correction", "desc": "Điều chỉnh nhãn áp theo CCT", "status": "✅"},
+    },
+    
+    "😣 Đánh Giá Đau (Pain Assessment)": {
+        "NRS": {"name": "NRS - Numeric Rating Scale", "desc": "Thang điểm số đánh giá đau (0-10) - DÙNG HÀNG NGÀY", "status": "✅"},
+        "VAS": {"name": "VAS - Visual Analogue Scale", "desc": "Thang đo thị giác đánh giá đau (0-100mm)", "status": "✅"},
+        "FLACC": {"name": "FLACC - Face, Legs, Activity, Cry, Consolability", "desc": "Đánh giá đau ở trẻ em (2 tháng - 7 tuổi)", "status": "✅"},
+        "NIPS": {"name": "NIPS - Neonatal Infant Pain Scale", "desc": "Đánh giá đau ở trẻ sơ sinh (0-2 tháng)", "status": "✅"},
+        "Wong-Baker": {"name": "Wong-Baker Faces Rating Scale", "desc": "Thang điểm khuôn mặt đánh giá đau (trẻ em và người lớn)", "status": "✅"},
+        "DN4": {"name": "DN4 - Douleur Neuropathique 4", "desc": "Chẩn đoán đau thần kinh", "status": "✅"},
+    },
+    
+    "🛏️ Chăm Sóc Điều Dưỡng (Nursing Care)": {
+        "Braden": {"name": "Braden Scale", "desc": "Đánh giá nguy cơ loét tì đè (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "Morse": {"name": "Morse Fall Scale", "desc": "Đánh giá nguy cơ té ngã (DÙNG HÀNG NGÀY)", "status": "✅"},
     },
 }
 
