@@ -15,7 +15,7 @@ def render_results_display(fena, interpretation, on_diuretics):
         interpretation: dict with keys: interpretation, color, cause
         on_diuretics: bool indicating if patient is on diuretics
     """
-    st.markdown("### 📊 Kết Quả")
+    st.markdown("### 📊 Kết quả")
     
     color = interpretation["color"]
     interpretation_text = interpretation["interpretation"]
@@ -71,7 +71,7 @@ def render_calculation_details(u_na, p_na, u_cr_mgdl, p_cr_mgdl, fena):
         p_cr_mgdl: Plasma Creatinine (mg/dL)
         fena: Calculated FENa value
     """
-    with st.expander("🧮 Chi Tiết Tính Toán"):
+    with st.expander("🧮 Chi tiết tính toán"):
         st.markdown(f"""
         **Công thức FENa:**
         ```

@@ -368,7 +368,7 @@ def render():
                 color = "error"
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if color == "success":
                     st.success(f"## PSI Score: {score}")
@@ -390,7 +390,7 @@ def render():
                 """)
             
             st.markdown("---")
-            st.markdown("### 💡 Chi Tiết Tính Điểm")
+            st.markdown("### 💡 Chi tiết tính điểm")
             
             with st.expander("Xem chi tiết"):
                 for d in details:

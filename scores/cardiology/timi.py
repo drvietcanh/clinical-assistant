@@ -107,7 +107,7 @@ def render():
         
         if st.button("🧮 Tính TIMI Risk Score", type="primary", key="timi_calc"):
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if score <= 2:
                     st.success(f"## TIMI = {score}")
@@ -134,7 +134,7 @@ def render():
                 7: "65.0%"
             }
             
-            st.markdown("### 💡 Chi Tiết Điểm")
+            st.markdown("### 💡 Chi tiết Điểm")
             if details:
                 for d in details:
                     st.write(f"- {d}")

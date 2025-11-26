@@ -304,7 +304,7 @@ def render():
         result = calculate_rts(gcs=gcs, sbp=sbp, rr=rr)
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         # Score box
         col_r1, col_r2, col_r3 = st.columns([1, 1, 1])

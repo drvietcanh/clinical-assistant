@@ -201,7 +201,7 @@ def render():
         suicide_risk = assess_suicide_risk(scores[8])  # Question 9
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh Giá")
         
         # Display total score
         col1, col2 = st.columns([1, 2])
@@ -224,7 +224,7 @@ def render():
         st.markdown("---")
         
         # Detailed interpretation
-        st.subheader("🎯 Phân Tích Chi Tiết")
+        st.subheader("🎯 Phân Tích Chi tiết")
         
         st.info(f"""
         **Mức độ:** {result['severity']} (Điểm: {total_score})
@@ -420,7 +420,7 @@ def render():
         - PHQ-9 định kỳ mỗi tháng × 3 tháng
         """)
     
-    with st.expander("⚠️ Đánh Giá Nguy Cơ Tự Tử Chi Tiết"):
+    with st.expander("⚠️ Đánh Giá Nguy Cơ Tự Tử Chi tiết"):
         st.markdown("""
         ### Yếu tố nguy cơ cao:
         

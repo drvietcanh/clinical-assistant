@@ -192,7 +192,7 @@ DRUG_GROUPS = {
 }
 ```
 
-### Option 2: Tách Theo Mức Độ Chi Tiết (Alternative)
+### Option 2: Tách Theo Mức Độ Chi tiết (Alternative)
 
 ```
 drugs/
@@ -260,7 +260,7 @@ drugs/
 - **Trước**: Thêm thuốc mới → scroll đến cuối file → khó tìm chỗ
 - **Sau**: Thêm thuốc mới → mở module tương ứng → thêm vào đúng chỗ
 
-## ⚠️ Lưu Ý Quan Trọng
+## ⚠️ Lưu ý quan trọng
 
 1. **Backward Compatibility**
    - Giữ `drug_database_data.py` hoặc tạo wrapper để import tương tự

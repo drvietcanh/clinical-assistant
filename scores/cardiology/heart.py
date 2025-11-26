@@ -108,7 +108,7 @@ def render():
             total_score = history + ecg + age + risk + troponin
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if total_score <= 3:
                     st.success(f"## HEART = {total_score}")
@@ -126,7 +126,7 @@ def render():
                     mace_risk = "50-65%"
                     color = "error"
             
-            st.markdown("### 💡 Chi Tiết Điểm")
+            st.markdown("### 💡 Chi tiết Điểm")
             st.write(f"- **H** (History): {history} điểm")
             st.write(f"- **E** (ECG): {ecg} điểm")
             st.write(f"- **A** (Age): {age} điểm")

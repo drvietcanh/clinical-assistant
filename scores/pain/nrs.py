@@ -201,7 +201,7 @@ def render():
             - Khi bệnh nhân than đau
             - Sau phẫu thuật: Mỗi 2-4 giờ trong 24 giờ đầu
             
-            ### ⚠️ Lưu Ý:
+            ### ⚠️ Lưu ý:
             - NRS chỉ dùng cho bệnh nhân có khả năng giao tiếp
             - Trẻ em < 7 tuổi: Dùng FLACC hoặc Wong-Baker Faces
             - Bệnh nhân không tỉnh táo: Dùng thang điểm hành vi (FLACC, BPS)

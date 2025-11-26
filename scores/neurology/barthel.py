@@ -356,7 +356,7 @@ def render():
             - Theo dõi phục hồi chức năng: Mỗi tuần hoặc mỗi 2 tuần
             - Đánh giá nhu cầu chăm sóc: Khi lập kế hoạch chăm sóc
             
-            ### ⚠️ Lưu Ý:
+            ### ⚠️ Lưu ý:
             - Đánh giá dựa trên khả năng thực tế, không phải khả năng lý thuyết
             - Cân nhắc môi trường (nhà, bệnh viện, cơ sở chăm sóc...)
             - Đánh giá lại định kỳ để theo dõi tiến triển

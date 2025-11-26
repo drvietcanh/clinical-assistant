@@ -176,7 +176,7 @@ def render_digoxin_tdm():
         if st.button("🧮 Tính Liều Digoxin", type="primary", use_container_width=True):
             result = calculate_digoxin_dose(weight, crcl, indication_code)
             
-            st.markdown("### 💊 Kết Quả Tính Liều")
+            st.markdown("### 💊 Kết quả Tính Liều")
             
             if need_loading:
                 st.markdown("#### 🔴 Loading Dose (Digitalization):")
@@ -343,7 +343,7 @@ def render_digoxin_tdm():
             indication_code = "heart_failure" if "Suy tim" in indication_interp else "atrial_fibrillation"
             interpretation = interpret_digoxin_level(level, indication_code)
             
-            st.markdown("### 📈 Kết Quả Giải Thích")
+            st.markdown("### 📈 Kết quả Giải Thích")
             
             # Display status
             if interpretation['color'] == 'success':

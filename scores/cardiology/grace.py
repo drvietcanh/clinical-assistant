@@ -240,7 +240,7 @@ def render():
                 color_class = "error"
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if color_class == "success":
                     st.success(f"## GRACE = {points}")

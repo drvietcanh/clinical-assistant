@@ -121,7 +121,7 @@ def render():
                 details.append(f"✓ Tuổi ≥65 ({age}) (+1)")
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if score == 0:
                     st.success(f"## CURB-65 = {score}")

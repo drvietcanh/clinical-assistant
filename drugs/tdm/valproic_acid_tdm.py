@@ -182,7 +182,7 @@ def render_valproic_acid_tdm():
                 weight, current_level, target_level, current_dose
             )
             
-            st.markdown("### 💊 Kết Quả Tính Liều")
+            st.markdown("### 💊 Kết quả Tính Liều")
             
             col1, col2, col3 = st.columns(3)
             

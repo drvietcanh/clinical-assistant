@@ -367,7 +367,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         col_r1, col_r2 = st.columns([1, 2])
         
@@ -380,7 +380,7 @@ def render():
             st.markdown(f"**Tử vong 4 năm: {result['mortality_4yr']}**")
         
         # Details
-        with st.expander("📋 Chi Tiết Tính Điểm", expanded=True):
+        with st.expander("📋 Chi tiết tính điểm", expanded=True):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         

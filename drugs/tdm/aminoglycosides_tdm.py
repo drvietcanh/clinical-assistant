@@ -252,7 +252,7 @@ def render_aminoglycosides_tdm():
                 drug_id, weight, crcl, indication_code
             )
             
-            st.markdown("### 💊 Kết Quả Tính Liều")
+            st.markdown("### 💊 Kết quả Tính Liều")
             
             st.markdown("#### 🔴 Loading Dose:")
             col1, col2 = st.columns(2)
@@ -364,7 +364,7 @@ def render_aminoglycosides_tdm():
         if st.button("📊 Giải Thích Nồng Độ", type="primary", use_container_width=True):
             interpretations = interpret_aminoglycoside_levels(drug_id, peak, trough)
             
-            st.markdown("### 📈 Kết Quả Giải Thích")
+            st.markdown("### 📈 Kết quả Giải Thích")
             
             for interp in interpretations:
                 st.markdown(f"#### {interp['type'].upper()}: {interp['value']:.2f} mg/L")

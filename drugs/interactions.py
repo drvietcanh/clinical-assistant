@@ -148,7 +148,7 @@ def render_interaction_checker():
     # Display results
     if 'interactions' in st.session_state and st.session_state['interactions']:
         st.markdown("---")
-        st.markdown("### 📋 Kết Quả Kiểm Tra")
+        st.markdown("### 📋 Kết quả Kiểm Tra")
         
         interactions = st.session_state['interactions']
         checked_drugs = st.session_state.get('checked_drugs', [])
@@ -194,7 +194,7 @@ def render_interaction_checker():
             )
             
             st.markdown("---")
-            st.markdown("#### 📋 Chi Tiết Tương Tác")
+            st.markdown("#### 📋 Chi tiết Tương Tác")
             
             # Filter options
             col1, col2 = st.columns([2, 1])

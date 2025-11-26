@@ -195,7 +195,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         if result["color"] == "success":
             st.success(f"## **ABCD2 Score: {result['total_score']}/7**")
@@ -210,7 +210,7 @@ def render():
         
         # Score breakdown
         st.markdown("---")
-        st.markdown("### 📋 Chi Tiết Điểm Số")
+        st.markdown("### 📋 Chi tiết điểm số")
         
         breakdown = []
         if age >= 60:

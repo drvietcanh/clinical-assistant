@@ -484,7 +484,7 @@ def render_export_section_enhanced(
         include_qr_code=False
     )
     
-    with st.expander("📤 Export Kết Quả", expanded=False):
+    with st.expander("📤 Export Kết quả", expanded=False):
         if show_preview:
             st.markdown("**📋 Preview:**")
             st.code(export_text, language="text")

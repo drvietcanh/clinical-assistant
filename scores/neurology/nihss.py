@@ -283,7 +283,7 @@ def render():
                 thrombolysis = "Có chỉ định cao + xem xét thrombectomy"
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if color == "success":
                     st.success(f"## NIHSS = {total_score}")
@@ -299,7 +299,7 @@ def render():
                     st.error(f"**{severity}**")
             
             st.markdown("---")
-            st.markdown("### 💡 Chi Tiết Điểm Số")
+            st.markdown("### 💡 Chi tiết điểm số")
             
             details = [
                 f"1a. Ý thức: {loc_score}",
@@ -428,7 +428,7 @@ def render():
                 """)
             
             st.markdown("---")
-            st.markdown("### 📊 Diễn Giải & Tiên Lượng")
+            st.markdown("### 📊 Diễn giải & Tiên Lượng")
             
             st.info(f"""
             **NIHSS = {total_score} - {severity}**
@@ -512,7 +512,7 @@ def render():
             
             st.markdown("---")
             st.warning("""
-            ⚠️ **Lưu Ý Quan Trọng:**
+            ⚠️ **Lưu ý quan trọng:**
             
             - **TIME IS BRAIN!** - Đột quỵ là cấp cứu tuyệt đối
             - **Đánh giá NIHSS** phải chính xác, có training

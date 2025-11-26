@@ -284,7 +284,7 @@ def render():
         )
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh Giá")
         
         col1, col2 = st.columns(2)
         
@@ -374,7 +374,7 @@ def render():
         
         **Quy mô:** 8,924 bệnh nhân
         
-        **Kết Quả:**
+        **Kết quả:**
         - **Độ nhạy:** 99.4% (96.0-100%)
         - **Độ đặc hiệu:** 45.1%
         - **NPV:** 100%

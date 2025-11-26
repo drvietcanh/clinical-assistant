@@ -252,7 +252,7 @@ def render_vasopressor_guide():
     
     # Notes
     if vasopressor_data.get('notes'):
-        st.markdown("### 💡 Lưu Ý")
+        st.markdown("### 💡 Lưu ý")
         render_info_alert(vasopressor_data['notes'], title="Thông tin quan trọng")
     
     # Quick reference table

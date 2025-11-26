@@ -148,7 +148,7 @@ def render():
                                 urine_output_6h, urine_output_12h, urine_output_24h,
                                 weight, on_rrt)
         
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         st.markdown(f"### {result['color']} {result['stage_name']}")
         
         if result['scr_fold'] > 0:

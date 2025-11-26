@@ -277,7 +277,7 @@ def render():
         result = interpret_qtc(qtc, gender)
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả")
+        st.subheader("📈 Kết quả")
         
         # Display metrics
         col1, col2, col3 = st.columns(3)

@@ -281,7 +281,7 @@ def render_iv_compatibility_checker(antibiotic_name: str):
             return
         
         st.markdown("---")
-        st.markdown("### 📊 Kết Quả Kiểm Tra")
+        st.markdown("### 📊 Kết quả Kiểm Tra")
         
         # Group by compatibility
         compatible = []

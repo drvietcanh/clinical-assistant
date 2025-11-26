@@ -220,7 +220,7 @@ def render():
         result = interpret_centor(total_score)
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh Giá")
         
         # Display scores
         col1, col2, col3 = st.columns(3)
@@ -250,7 +250,7 @@ def render():
         st.markdown("---")
         
         # Score breakdown
-        st.subheader("📊 Chi Tiết Điểm Số")
+        st.subheader("📊 Chi tiết điểm số")
         
         components = [
             ("🌡️ Sốt > 38°C", fever_score),
@@ -360,7 +360,7 @@ def render():
             """)
             
             st.warning("""
-            ### ⚠️ Lưu Ý Quan Trọng:
+            ### ⚠️ Lưu ý quan trọng:
             
             **Với điểm ≥ 4, xác suất GAS > 50%:**
             - Test nhanh (RADT) nếu có sẵn

@@ -98,7 +98,7 @@ def render_error_alert(
     st.error(content, icon=icon)
     
     if show_details and details:
-        with st.expander("🔍 Chi Tiết Lỗi"):
+        with st.expander("🔍 Chi tiết Lỗi"):
             st.code(details, language="text")
 
 

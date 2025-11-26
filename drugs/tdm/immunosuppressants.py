@@ -274,7 +274,7 @@ def render_immunosuppressants_tdm():
             if st.button("📊 Giải Thích Nồng Độ", type="primary", use_container_width=True):
                 interpretation = interpret_tacrolimus_level(level, transplant_code, time_post)
                 
-                st.markdown("### 📈 Kết Quả")
+                st.markdown("### 📈 Kết quả")
                 
                 if interpretation['color'] == 'success':
                     st.success(f"**{interpretation['level_text']}**")
@@ -437,7 +437,7 @@ def render_immunosuppressants_tdm():
             c2_val = c2_level if c2_level > 0 else None
             interpretation = interpret_cyclosporine_level(level, transplant_code, time_post, c2_val)
             
-            st.markdown("### 📈 Kết Quả")
+            st.markdown("### 📈 Kết quả")
             
             if interpretation['color'] == 'success':
                 st.success(f"**{interpretation['level_text']}**")

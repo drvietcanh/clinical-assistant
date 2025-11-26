@@ -353,7 +353,7 @@ def render_detailed_explanations():
         
         ---
         
-        ### ⚠️ Lưu Ý Quan Trọng
+        ### ⚠️ Lưu ý quan trọng
         
         **1. Chẩn đoán CKD:**
         - ✅ Dùng **eGFR chuẩn hóa** (mL/min/1.73m²)

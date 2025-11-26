@@ -450,7 +450,7 @@ def render_scenario_dosing_calculator(antibiotic_name):
         results_df = pd.DataFrame(results)
         
         st.markdown("---")
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         # Display table
         display_df = results_df[['scenario', 'crcl', 'indication', 'dose_mg', 'interval_hours', 'renal_adjustment']].copy()
@@ -526,7 +526,7 @@ def render_scenario_dosing_calculator(antibiotic_name):
             st.markdown("**Ghi chú:** In trang này để lưu trữ hoặc chia sẻ với đồng nghiệp.")
         
         # Clear button
-        if st.button("🗑️ Xóa Kết Quả", key=f"clear_scenario_{antibiotic_name}"):
+        if st.button("🗑️ Xóa Kết quả", key=f"clear_scenario_{antibiotic_name}"):
             keys_to_remove = [
                 f"scenario_results_{antibiotic_name}",
                 f"scenario_patient_info_{antibiotic_name}"

@@ -149,7 +149,7 @@ def render():
             status_info = get_diabetes_status(hba1c)
             
             st.markdown("---")
-            st.subheader("📈 Kết Quả Chuyển Đổi")
+            st.subheader("📈 Kết quả Chuyển Đổi")
             
             # Display results
             col1, col2 = st.columns(2)
@@ -247,7 +247,7 @@ def render():
             status_info = get_diabetes_status(hba1c)
             
             st.markdown("---")
-            st.subheader("📈 Kết Quả Chuyển Đổi")
+            st.subheader("📈 Kết quả Chuyển Đổi")
             
             # Display results
             col1, col2 = st.columns(2)
@@ -341,7 +341,7 @@ def render():
         - 268 người không ĐTĐ
         - 16 tuần theo dõi glucose liên tục + SMBG
         
-        **Kết Quả:**
+        **Kết quả:**
         - Tương quan cao giữa HbA1c và glucose trung bình (r = 0.92)
         - Công thức: eAG (mg/dL) = 28.7 × HbA1c - 46.7
         - Độ chính xác: ±2 SD = ±30 mg/dL

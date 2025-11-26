@@ -145,7 +145,7 @@ def render():
         result = interpret_gad7(total_score)
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh Giá")
         
         # Display total score
         col1, col2 = st.columns([1, 2])
@@ -168,7 +168,7 @@ def render():
         st.markdown("---")
         
         # Detailed interpretation
-        st.subheader("🎯 Phân Tích Chi Tiết")
+        st.subheader("🎯 Phân Tích Chi tiết")
         
         st.info(f"""
         **Mức độ:** {result['severity']} (Điểm: {total_score})

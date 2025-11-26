@@ -370,7 +370,7 @@ def render_vancomycin_tdm():
                 weight, crcl, target_auc, current_auc, current_dose
             )
             
-            st.markdown("### 💊 Kết Quả Tính Liều")
+            st.markdown("### 💊 Kết quả Tính Liều")
             
             col1, col2, col3 = st.columns(3)
             
@@ -486,7 +486,7 @@ def render_vancomycin_tdm():
                 weight, crcl, target_trough, current_trough, current_dose
             )
             
-            st.markdown("### 💊 Kết Quả Tính Liều")
+            st.markdown("### 💊 Kết quả Tính Liều")
             
             if result.get('loading_dose_mg'):
                 st.markdown("#### 🔴 Loading Dose:")
@@ -587,7 +587,7 @@ def render_vancomycin_tdm():
                 auc=auc if method == "AUC (Ưu tiên)" else None
             )
             
-            st.markdown("### 📈 Kết Quả Giải Thích")
+            st.markdown("### 📈 Kết quả Giải Thích")
             
             for interp in interpretations:
                 if interp['color'] == 'success':

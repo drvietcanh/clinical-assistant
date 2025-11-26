@@ -231,7 +231,7 @@ def render_fluid_calculator():
             results = calculate_maintenance_fluids(weight, age if age > 0 else None)
             
             st.markdown("---")
-            st.markdown("### 📊 Kết Quả")
+            st.markdown("### 📊 Kết quả")
             
             col1, col2, col3 = st.columns(3)
             
@@ -336,7 +336,7 @@ def render_fluid_calculator():
                 st.warning(results["note"])
             else:
                 st.markdown("---")
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 col1, col2 = st.columns(2)
                 
@@ -417,7 +417,7 @@ def render_fluid_calculator():
                 st.warning(results["note"])
             else:
                 st.markdown("---")
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 # Severe hyponatremia warning
                 if current_na_hyponatremia < 120:
@@ -481,7 +481,7 @@ def render_fluid_calculator():
             results = calculate_maintenance_electrolytes(weight_electrolytes)
             
             st.markdown("---")
-            st.markdown("### 📊 Kết Quả")
+            st.markdown("### 📊 Kết quả")
             
             metrics = [
                 {"label": "Natri (Na)", "value": f"{results['sodium_mmol']:.1f} mmol/ngày", "icon": "🧂"},

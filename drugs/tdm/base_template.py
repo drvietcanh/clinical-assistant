@@ -147,7 +147,7 @@ class TDMCalculator:
         if st.button("📊 Giải Thích Nồng Độ", type="primary", use_container_width=True):
             interpretation = self.interpret_level(level)
             
-            st.markdown("### 📈 Kết Quả Giải Thích")
+            st.markdown("### 📈 Kết quả Giải Thích")
             
             # Display status
             if interpretation['color'] == 'success':

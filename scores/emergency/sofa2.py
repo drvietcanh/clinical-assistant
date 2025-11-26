@@ -343,7 +343,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả SOFA-2")
+        st.subheader("📊 Kết quả SOFA-2")
         
         # Score box
         col_r1, col_r2 = st.columns([1, 2])

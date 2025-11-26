@@ -18,7 +18,7 @@
 ✅ `storage` - Điều kiện bảo quản  
 ✅ `black_box_warnings` - Cảnh báo hộp đen  
 
-## So Sánh Chi Tiết
+## So Sánh Chi tiết
 
 ### 1. DRUG INTERACTIONS / TƯƠNG TÁC THUỐC
 
@@ -403,7 +403,7 @@
 
 ---
 
-## Lưu Ý
+## Lưu ý
 
 - Không phải tất cả thuốc đều cần tất cả enhanced fields
 - Một số fields có thể là `None` hoặc rỗng

@@ -68,7 +68,7 @@ def render():
             total_score = eye_score + verbal_score + motor_score
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 st.markdown(f"**E{eye_score} V{verbal_score} M{motor_score}**")
                 

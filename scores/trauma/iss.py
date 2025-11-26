@@ -342,7 +342,7 @@ def render():
         result = calculate_iss(ais_scores)
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         # Score box
         col_r1, col_r2 = st.columns([1, 2])
@@ -359,7 +359,7 @@ def render():
             st.markdown(f"**Tỷ lệ tử vong ước tính: {result['mortality']}**")
         
         # Calculation details
-        with st.expander("📋 Chi Tiết Tính Toán", expanded=True):
+        with st.expander("📋 Chi tiết tính toán", expanded=True):
             st.markdown("**AIS Scores theo vùng:**")
             sorted_regions = sorted(result['ais_scores'].items(), key=lambda x: x[1], reverse=True)
             
@@ -423,7 +423,7 @@ def render():
         """)
     
     # AIS quick reference
-    with st.expander("📖 Bảng Tham Khảo Nhanh - Ví Dụ AIS"):
+    with st.expander("📖 Bảng tham khảo Nhanh - Ví Dụ AIS"):
         st.markdown("""
         ### Ví Dụ AIS Theo Từng Vùng
         

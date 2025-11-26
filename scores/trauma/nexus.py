@@ -182,7 +182,7 @@ def render():
         )
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh Giá")
         
         # Summary
         positive_count = sum([
@@ -309,7 +309,7 @@ def render():
         
         **Quy mô:** 34,069 bệnh nhân chấn thương cùn
         
-        **Kết Quả:**
+        **Kết quả:**
         - **Độ nhạy (Sensitivity):** 99.6% (99.0-100%)
         - **Độ đặc hiệu (Specificity):** 12.9%
         - **NPV (Negative Predictive Value):** 99.8%
@@ -360,7 +360,7 @@ def render():
         - Cả 2 rule đều an toàn và hiệu quả
         """)
     
-    with st.expander("💡 Chi Tiết Từng Tiêu Chí"):
+    with st.expander("💡 Chi tiết từng tiêu chí"):
         st.markdown("""
         ### 1. Midline Tenderness:
         

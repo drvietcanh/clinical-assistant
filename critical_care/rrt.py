@@ -220,7 +220,7 @@ def render_crrt_calculator():
     if st.button("Tính toán", type="primary", key="calc_crrt"):
         results = calculate_crrt_dosing(weight_kg, target_clearance)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         col1, col2, col3 = st.columns(3)
         
@@ -302,7 +302,7 @@ def render_ihd_calculator():
     if st.button("Tính toán", type="primary", key="calc_ihd"):
         results = calculate_ihd_dosing(weight_kg, target_kt_v)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         col1, col2, col3 = st.columns(3)
         
@@ -384,7 +384,7 @@ def render_sled_calculator():
     if st.button("Tính toán", type="primary", key="calc_sled"):
         results = calculate_sled_dosing(weight_kg, duration_hours)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         col1, col2, col3 = st.columns(3)
         
@@ -467,7 +467,7 @@ def render_anticoagulation_calculator():
     if st.button("Tính toán", type="primary", key="calc_anticoag"):
         results = calculate_anticoagulation_rrt(weight_kg, rrt_type, has_bleeding_risk)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         render_result_box(
             "Anticoagulation",

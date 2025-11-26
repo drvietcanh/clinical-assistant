@@ -126,7 +126,7 @@ def render():
                 color = "error"
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if color == "success":
                     st.success(f"## AG = {ag_display:.1f}")

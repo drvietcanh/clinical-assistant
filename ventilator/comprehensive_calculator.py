@@ -192,7 +192,7 @@ def render_comprehensive_calculator():
         abg_analysis = display_abg_summary(abg_data, show_details=True)
         
         st.markdown("---")
-        st.markdown("### 📊 Kết Quả Tính Toán")
+        st.markdown("### 📊 Kết quả Tính Toán")
         
         # Metrics in 4 columns
         col1, col2, col3, col4 = st.columns(4)

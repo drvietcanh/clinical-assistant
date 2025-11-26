@@ -293,7 +293,7 @@ def render():
     st.markdown("---")
     
     # Analysis
-    st.markdown("#### 📊 Kết Quả Phân Tích")
+    st.markdown("#### 📊 Kết quả Phân Tích")
     
     # Create results table
     results = []
@@ -380,7 +380,7 @@ def render():
         st.metric("Giá trị nguy hiểm", critical_count)
     
     # Export option
-    with st.expander("💾 Xuất Kết Quả"):
+    with st.expander("💾 Xuất Kết quả"):
         csv = df.to_csv(index=False, encoding='utf-8-sig')
         st.download_button(
             label="📥 Tải xuống CSV",

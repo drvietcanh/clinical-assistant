@@ -119,7 +119,7 @@ def render_tdm_calculator(antibiotic_name):
             )
             
             if result:
-                st.success("### 📊 Kết Quả")
+                st.success("### 📊 Kết quả")
                 st.metric("Liều khuyến cáo", f"{result.get('dose_mg', 0):.0f} mg")
                 st.metric("Tần suất", f"Mỗi {result.get('frequency_hours', 0):.0f} giờ")
                 if result.get('loading_dose_mg'):
@@ -197,7 +197,7 @@ def render_tdm_calculator(antibiotic_name):
             )
             
             if result:
-                st.success("### 📊 Kết Quả")
+                st.success("### 📊 Kết quả")
                 st.metric("Liều khuyến cáo", f"{result.get('dose_mg', 0):.0f} mg")
                 st.metric("Tần suất", f"Mỗi {result.get('frequency_hours', 0):.0f} giờ")
                 if result.get('loading_dose_mg'):

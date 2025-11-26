@@ -247,7 +247,7 @@ def render():
             - Sau phẫu thuật: Mỗi 1-2 giờ trong 24 giờ đầu
             - Khi có dấu hiệu đau (khóc, không yên, nhăn mặt...)
             
-            ### ⚠️ Lưu Ý:
+            ### ⚠️ Lưu ý:
             - NIPS dùng cho trẻ sơ sinh 0-2 tháng tuổi
             - Trẻ > 2 tháng: Dùng FLACC
             - Đánh giá khi trẻ tỉnh táo (không ngủ sâu)

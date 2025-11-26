@@ -177,7 +177,7 @@ def render_ardsnet_calculator():
             settings = calculate_ardsnet_settings(ibw, pf_ratio, fio2_decimal)
             ards_class = classify_ards_severity(pf_ratio)
             
-            st.markdown("### 📊 Kết Quả")
+            st.markdown("### 📊 Kết quả")
             
             # ARDS Classification
             st.markdown("#### 🏷️ Phân Loại ARDS")

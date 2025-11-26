@@ -477,7 +477,7 @@ def render_theophylline_tdm():
             
             half_life = calculate_theophylline_half_life(age, smoking_code, crcl, other_factors)
             
-            st.markdown("### ⏱️ Kết Quả")
+            st.markdown("### ⏱️ Kết quả")
             
             col1, col2 = st.columns(2)
             

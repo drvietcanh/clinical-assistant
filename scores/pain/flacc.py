@@ -229,7 +229,7 @@ def render():
             - Sau phẫu thuật: Mỗi 1-2 giờ trong 24 giờ đầu
             - Khi có dấu hiệu đau (khóc, không yên, nhăn mặt...)
             
-            ### ⚠️ Lưu Ý:
+            ### ⚠️ Lưu ý:
             - FLACC dùng cho trẻ 2 tháng - 7 tuổi
             - Trẻ sơ sinh < 2 tháng: Dùng NIPS
             - Trẻ > 7 tuổi có thể giao tiếp: Dùng NRS hoặc Wong-Baker Faces

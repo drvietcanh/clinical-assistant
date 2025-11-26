@@ -276,7 +276,7 @@ def render():
     )
     
     # Display results
-    st.markdown("### 📊 Kết Quả")
+    st.markdown("### 📊 Kết quả")
     
     if result["color"] == "error":
         st.error(f"## **{result['diagnosis']}**")

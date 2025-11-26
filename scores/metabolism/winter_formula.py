@@ -192,7 +192,7 @@ def render():
         result = interpret_compensation(actual_pco2, expected_pco2, lower_limit, upper_limit)
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả Phân Tích")
+        st.subheader("📈 Kết quả Phân Tích")
         
         # Display ABG values
         col1, col2, col3 = st.columns(3)
@@ -233,7 +233,7 @@ def render():
             **Công thức:**  
             PCO₂ dự đoán = 1.5 × [{hco3:.1f}] + 8 (± 2)
             
-            **Kết Quả:**
+            **Kết quả:**
             - PCO₂ dự đoán: **{expected_pco2:.1f} mmHg**
             - Khoảng chấp nhận: **{lower_limit:.1f} - {upper_limit:.1f} mmHg**
             - PCO₂ thực tế: **{actual_pco2:.1f} mmHg**

@@ -301,7 +301,7 @@ def render_export_section(
     """
     export_text = format_result_for_export(title, inputs, results, calculator_name)
     
-    with st.expander("📤 Export Kết Quả", expanded=False):
+    with st.expander("📤 Export Kết quả", expanded=False):
         if show_preview:
             st.markdown("**Preview:**")
             st.code(export_text, language="text")
@@ -339,7 +339,7 @@ def render_batch_export(
         st.warning("Không có kết quả nào để export")
         return
     
-    with st.expander("📦 Batch Export - Xuất Nhiều Kết Quả", expanded=False):
+    with st.expander("📦 Batch Export - Xuất Nhiều Kết quả", expanded=False):
         st.info(f"📊 Tổng số: {len(calculations)} kết quả")
         
         # Format all calculations

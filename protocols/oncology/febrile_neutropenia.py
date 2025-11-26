@@ -89,7 +89,7 @@ def render():
     with col2:
         total_score = burden_score + hypotension_score + copd_score + tumor_score + dehydration_score + outpatient_score + age_score
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         st.metric("MASCC Score", f"{total_score}/26")
         
         if total_score >= 21:

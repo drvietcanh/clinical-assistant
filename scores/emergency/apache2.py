@@ -201,7 +201,7 @@ def render():
         | 30-34 | 73% |
         | ≥35 | 85% |
         
-        ### ⚠️ Lưu Ý
+        ### ⚠️ Lưu ý
         
         - Tính trong 24h ĐẦU nhập ICU
         - Lấy giá trị TỆ NHẤT trong 24h
@@ -316,7 +316,7 @@ def render():
         result = calculate_apache2(params)
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         # Color-coded score result (MDCalc style)
         mortality_text = f"{result['predicted_mortality']:.1f}% (Khoảng: {result['mortality_range']})"
@@ -338,13 +338,13 @@ def render():
         }
         
         render_score_breakdown(
-            title="📋 Chi Tiết Điểm Số",
+            title="📋 Chi tiết điểm số",
             subscores=breakdown_scores,
             total_score=result['total_score']
         )
         
         # Detailed scoring breakdown
-        with st.expander("📝 Chi Tiết Từng Biến Số", expanded=False):
+        with st.expander("📝 Chi tiết từng biến số", expanded=False):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         
@@ -422,9 +422,9 @@ def render():
         st.session_state['apache2_result'] = result
     
     # Reference table
-    with st.expander("📖 Bảng Tham Khảo APACHE II Scoring"):
+    with st.expander("📖 Bảng tham khảo APACHE II Scoring"):
         st.markdown("""
-        ### APACHE II Chi Tiết
+        ### APACHE II Chi tiết
         
         Xem tài liệu gốc Knaus et al. 1985 cho bảng scoring đầy đủ của 12 biến số.
         

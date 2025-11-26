@@ -101,7 +101,7 @@ def render():
         # 1g MgSO4 = 8.12 mEq Mg
         mgso4_needed = mg_deficit_meq / 8.12
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         st.metric("Mg²⁺ deficit", f"{mg_deficit:.2f} mg/dL")
         st.metric("Mg²⁺ deficit", f"{mg_deficit_meq:.1f} mEq")

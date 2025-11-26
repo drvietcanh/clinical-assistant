@@ -122,7 +122,7 @@ def calculate_wells_dvt(
            - Cân nhắc bắt đầu kháng đông nếu siêu âm chậm trễ và không có chống chỉ định
            - Theo dõi triệu chứng suy tĩnh mạch, thuyên tắc phổi
         
-        4. **Lưu Ý:**
+        4. **Lưu ý:**
            - Wells ≥2: Sensitivity ~86%, Specificity ~47%
            - PPV ~28-34%, NPV ~93-96%
         """
@@ -158,7 +158,7 @@ def calculate_wells_dvt(
            - Nếu D-dimer dương: siêu âm trong 24-48h
            - Tái khám nếu triệu chứng tiến triển
         
-        4. **Lưu Ý:**
+        4. **Lưu ý:**
            - Wells <2 + D-dimer âm: NPV ~99% → an toàn loại trừ DVT
            - D-dimer dương tính không đồng nghĩa với DVT (nhiều nguyên nhân khác)
         """
@@ -203,7 +203,7 @@ def render():
         
         1. **Thời Điểm:** Khi bệnh nhân có triệu chứng nghi ngờ DVT (đau chân, phù, đỏ)
         2. **Đánh Giá:** Trả lời 9 câu hỏi lâm sàng
-        3. **Kết Quả:**
+        3. **Kết quả:**
            - **≥2 điểm:** DVT likely → Siêu âm ngay
            - **<2 điểm:** DVT unlikely → D-dimer trước
         
@@ -216,7 +216,7 @@ def render():
         
         **Wells <2 + D-dimer âm tính:** NPV ~99% → An toàn loại trừ DVT
         
-        ### ⚠️ Lưu Ý
+        ### ⚠️ Lưu ý
         
         - **Không thay thế** đánh giá lâm sàng toàn diện
         - Kết hợp với D-dimer age-adjusted (tuổi >50)
@@ -308,7 +308,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         # Score box
         col_r1, col_r2 = st.columns([1, 2])
@@ -325,7 +325,7 @@ def render():
         
         # Details
         if result['details']:
-            with st.expander("📋 Chi Tiết Tính Điểm", expanded=True):
+            with st.expander("📋 Chi tiết tính điểm", expanded=True):
                 for detail in result['details']:
                     st.markdown(f"- {detail}")
         
@@ -334,7 +334,7 @@ def render():
         st.markdown(result['recommendation'])
         
         # Education
-        with st.expander("💡 Diễn Giải Kết Quả"):
+        with st.expander("💡 Diễn giải kết quả"):
             st.markdown(result['education'])
         
         # Additional clinical context
@@ -356,7 +356,7 @@ def render():
                     └─ Dương tính → Siêu âm tĩnh mạch chân
         ```
         
-        **💊 Lưu Ý Điều Trị:**
+        **💊 Lưu ý điều trị:**
         - Nếu siêu âm trì hoãn + Wells ≥2 + không chống chỉ định → cân nhắc kháng đông ngay
         - Theo dõi triệu chứng thuyên tắc phổi (chest pain, SOB, hemoptysis)
         """)
@@ -374,7 +374,7 @@ def render():
         """)
     
     # Quick reference
-    with st.expander("📖 Bảng Tham Khảo Nhanh"):
+    with st.expander("📖 Bảng tham khảo Nhanh"):
         st.markdown("""
         ### Wells DVT Score - Tiêu Chí
         

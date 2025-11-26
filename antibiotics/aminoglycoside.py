@@ -275,7 +275,7 @@ def render():
                 - TDM sau 6-14h để điều chỉnh interval
                 """)
             
-            st.markdown("### ⚠️ Lưu Ý An Toàn")
+            st.markdown("### ⚠️ Lưu ý An Toàn")
             st.warning("""
             **Độc tính của Aminoglycosides:**
             

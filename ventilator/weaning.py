@@ -249,7 +249,7 @@ def render_weaning_calculator():
                 if rsbi:
                     interpretation, color, description = interpret_rsbi(rsbi)
                     
-                    st.markdown("#### Kết Quả")
+                    st.markdown("#### Kết quả")
                     if color == "success":
                         st.success(f"**RSBI: {rsbi:.0f}** ✓")
                     elif color == "warning":
@@ -357,7 +357,7 @@ def render_weaning_calculator():
             )
             
             st.markdown("---")
-            st.markdown("### 📊 Kết Quả Đánh Giá")
+            st.markdown("### 📊 Kết quả Đánh Giá")
             
             # Overall readiness
             if readiness_color == "success":

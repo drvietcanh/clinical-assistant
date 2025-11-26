@@ -176,7 +176,7 @@ def render():
     selected_info = asa_options[selected_asa]
     
     st.markdown("---")
-    st.subheader("📊 Mô Tả Chi Tiết")
+    st.subheader("📊 Mô Tả Chi tiết")
     
     # Main classification
     if selected_asa in ["ASA I", "ASA II"]:
@@ -228,7 +228,7 @@ def render():
         **Ảnh hưởng:** {emergency_info['impact']}
         """)
     
-    if st.button("📈 Phân Tích Nguy Cơ Chi Tiết", type="primary", use_container_width=True):
+    if st.button("📈 Phân Tích Nguy Cơ Chi tiết", type="primary", use_container_width=True):
         st.markdown("---")
         st.subheader("🎯 Đánh Giá Nguy Cơ & Khuyến Nghị")
         

@@ -286,7 +286,7 @@ def render():
         result = interpret_bishop_score(total_score, is_nulliparous)
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh Giá")
         
         # Display total score
         col1, col2 = st.columns(2)
@@ -455,7 +455,7 @@ def render():
     st.markdown("---")
     st.subheader("📚 Thông Tin Bổ Sung")
     
-    with st.expander("📊 Chi Tiết Từng Thành Phần"):
+    with st.expander("📊 Chi tiết từng thành phần"):
         st.markdown("""
         ### Bishop Score Components:
         

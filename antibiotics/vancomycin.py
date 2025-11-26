@@ -227,7 +227,7 @@ def render():
                 - Lấy mẫu ngay trước liều tiếp theo
                 """)
             
-            st.markdown("### ⚠️ Lưu Ý An Toàn")
+            st.markdown("### ⚠️ Lưu ý An Toàn")
             st.warning("""
             **Theo dõi độc tính:**
             - ⚠️ Độc thận: Creatinine hàng ngày, đặc biệt nếu CrCl thấp

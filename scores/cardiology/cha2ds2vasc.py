@@ -83,7 +83,7 @@ def render():
                 details.append("✓ Giới tính nữ (+1)")
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if score == 0:
                     st.success(f"## CHA₂DS₂-VASc = {score}")

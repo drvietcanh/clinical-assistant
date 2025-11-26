@@ -365,7 +365,7 @@ def render():
         | 50-59 | 40-60% |
         | ≥60 | >60% |
         
-        ### ⚠️ Lưu Ý
+        ### ⚠️ Lưu ý
         
         - Tính trong 24h ĐẦU nhập ICU
         - Lấy giá trị TỆ NHẤT
@@ -482,7 +482,7 @@ def render():
         result = calculate_saps2(params)
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         # Color-coded score result (MDCalc style)
         mortality_text = f"{result['predicted_mortality']:.1f}% (Khoảng: {result['mortality_range']})"
@@ -497,7 +497,7 @@ def render():
         )
         
         # Details
-        with st.expander("📋 Chi Tiết Điểm Số", expanded=False):
+        with st.expander("📋 Chi tiết điểm số", expanded=False):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         

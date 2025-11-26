@@ -248,7 +248,7 @@ def render():
         interp = interpret_ranson(total_score)
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả")
+        st.subheader("📈 Kết quả")
         
         # Display scores
         col1, col2, col3 = st.columns(3)

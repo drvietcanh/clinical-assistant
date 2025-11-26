@@ -80,7 +80,7 @@ def render():
                 details.append("✓ Lạm dụng rượu (+1)")
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if score <= 2:
                     st.success(f"## HAS-BLED = {score}")

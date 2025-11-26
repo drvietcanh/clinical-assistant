@@ -501,7 +501,7 @@ def render():
         
         # Score breakdown
         st.markdown("---")
-        with st.expander("📊 Chi Tiết Điểm Số"):
+        with st.expander("📊 Chi tiết điểm số"):
             st.markdown("| Thành Phần | Điểm |")
             st.markdown("|------------|------|")
             for component, score in score_breakdown.items():

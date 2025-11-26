@@ -245,7 +245,7 @@ def render():
             - **DN4 ≥ 4:** Chẩn đoán đau thần kinh
             - **DN4 < 4:** Không đủ tiêu chí đau thần kinh
             
-            ### ⚠️ Lưu Ý:
+            ### ⚠️ Lưu ý:
             - DN4 là công cụ sàng lọc, không phải chẩn đoán xác định
             - Cần kết hợp với khám lâm sàng và xét nghiệm
             - Có thể có đau hỗn hợp (đau thần kinh + đau nội tạng)

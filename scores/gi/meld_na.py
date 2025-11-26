@@ -480,7 +480,7 @@ def render():
         
         # Special considerations
         st.markdown("---")
-        with st.expander("⚠️ Lưu Ý Đặc Biệt"):
+        with st.expander("⚠️ Lưu ý đặc biệt"):
             st.markdown(f"""
             ### Các yếu tố ảnh hưởng MELD-Na:
             

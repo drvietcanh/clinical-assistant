@@ -210,7 +210,7 @@ def render():
         result = interpret_epworth(total_score)
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh Giá")
         
         # Display score
         col1, col2 = st.columns(2)

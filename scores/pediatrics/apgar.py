@@ -198,7 +198,7 @@ def render():
         result = interpret_apgar(total_score, time_point)
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả APGAR")
+        st.subheader("📈 Kết quả APGAR")
         
         # Display score
         col1, col2, col3 = st.columns(3)
@@ -228,7 +228,7 @@ def render():
         st.markdown("---")
         
         # Score breakdown
-        st.subheader("📊 Chi Tiết Từng Thành Phần")
+        st.subheader("📊 Chi tiết từng thành phần")
         
         components = [
             ("🎨 Appearance (Màu sắc)", appearance),
@@ -353,7 +353,7 @@ def render():
         
         if time_point == "1 phút":
             st.info("""
-            ### 📝 Lưu Ý Điểm 1 Phút
+            ### 📝 Lưu ý Điểm 1 Phút
             
             - Điểm 1 phút phản ánh tình trạng ngay sau sinh
             - **KHÔNG** có giá trị tiên lượng dài hạn

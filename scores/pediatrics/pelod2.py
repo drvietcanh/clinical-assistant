@@ -436,7 +436,7 @@ def render():
             hepatic_score
         )
         
-        st.markdown("### 📊 Kết Quả PELOD-2")
+        st.markdown("### 📊 Kết quả PELOD-2")
         
         col1, col2 = st.columns(2)
         
@@ -455,7 +455,7 @@ def render():
         st.markdown("---")
         
         # Breakdown
-        st.markdown("#### 📋 Chi Tiết Điểm Số:")
+        st.markdown("#### 📋 Chi tiết điểm số:")
         
         import pandas as pd
         

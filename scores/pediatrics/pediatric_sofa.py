@@ -476,7 +476,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         # Color-coded score
         if result["color"] == "success":
@@ -518,7 +518,7 @@ def render():
         st.markdown("---")
         
         # Detailed scoring
-        with st.expander("📝 Chi Tiết Tính Điểm", expanded=False):
+        with st.expander("📝 Chi tiết tính điểm", expanded=False):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         

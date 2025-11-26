@@ -80,7 +80,7 @@ def render_barthel_comparison():
         
         **So sánh tương đương (xấp xỉ):**
         
-        | mRS | Barthel Index | Diễn Giải |
+        | mRS | Barthel Index | Diễn giải |
         |-----|---------------|-----------|
         | 0-1 | 100 | Hoàn toàn độc lập |
         | 2 | 95 | Gần như độc lập |

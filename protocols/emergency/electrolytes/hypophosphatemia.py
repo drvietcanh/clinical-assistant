@@ -106,7 +106,7 @@ def render():
         # Sodium phosphate: 1 mmol = 31 mg PO4
         # Need: phos_deficit_mmol mmol
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         st.metric("PO₄³⁻ deficit", f"{phos_deficit:.2f} mg/dL")
         st.metric("PO₄³⁻ deficit", f"{phos_deficit_mmol:.1f} mmol")

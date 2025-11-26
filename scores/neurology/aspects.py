@@ -180,7 +180,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         if result["color"] == "success":
             st.success(f"## **ASPECTS Score: {result['total_score']}/10**")

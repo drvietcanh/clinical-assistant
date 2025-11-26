@@ -324,7 +324,7 @@ def render():
         if st.button("Tính Osmolality", type="primary", key="calc_hhs_osm"):
             osmolality = 2 * na + glucose/18 + bun/2.8
             
-            st.markdown("### 📊 Kết Quả")
+            st.markdown("### 📊 Kết quả")
             
             if osmolality > 320:
                 st.error(f"""

@@ -566,7 +566,7 @@ def render_algorithm(algorithm_name):
     
     # Notes section
     if 'notes' in algo:
-        st.markdown("### 📝 Lưu Ý Quan Trọng:")
+        st.markdown("### 📝 Lưu ý quan trọng:")
         for note in algo['notes']:
             st.markdown(f"• {note}")
 

@@ -61,7 +61,7 @@ def render_ardsnet():
             vt_high = pbw * 8
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 st.metric("PBW", f"{pbw} kg")
                 st.metric("Vt Mục Tiêu", f"{vt_target:.0f} mL")
@@ -465,7 +465,7 @@ def render_initial_settings():
             st.info(f"**{settings['strategy']}**")
         
         st.markdown("---")
-        st.markdown("### ⚠️ Lưu Ý Quan Trọng")
+        st.markdown("### ⚠️ Lưu ý quan trọng")
         
         for i, note in enumerate(settings["notes"], 1):
             st.markdown(f"{i}. {note}")

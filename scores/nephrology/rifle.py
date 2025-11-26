@@ -135,7 +135,7 @@ def render():
         result = calculate_rifle(scr_baseline, scr_current, gfr_decrease_percent, 
                                  urine_output_6h, urine_output_12h, weight)
         
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         st.markdown(f"### {result['color']} {result['category_name']}")
         
         if result['scr_fold'] > 0:

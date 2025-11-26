@@ -47,7 +47,7 @@ def render():
     3. **Tư duy rối loạn:** Lú lẫn, không logic, ảo giác
     4. **Thay đổi mức độ ý thức:** Không tỉnh táo hoàn toàn
     
-    **Kết Quả:**
+    **Kết quả:**
     - **Dương tính:** Có đủ 4 tiêu chí → Chẩn đoán DELIRIUM
     - **Âm tính:** Thiếu ≥1 tiêu chí → Không có delirium
     """)

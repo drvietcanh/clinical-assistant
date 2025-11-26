@@ -153,7 +153,7 @@ DRUG_DATABASE = {
 4. **Scalability**: Dễ thêm thuốc mới vào module tương ứng
 5. **Testing**: Dễ test từng module riêng biệt
 
-## Lưu Ý
+## Lưu ý
 
 - ⚠️ Đảm bảo backward compatibility
 - ⚠️ Test kỹ sau khi refactor

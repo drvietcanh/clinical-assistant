@@ -160,7 +160,7 @@ def render():
     selected_info = ecog_options[selected_ecog]
     
     st.markdown("---")
-    st.subheader("📊 Mô Tả Chi Tiết")
+    st.subheader("📊 Mô Tả Chi tiết")
     
     st.info(f"""
     **{selected_info['color']} ECOG {selected_ecog}: {selected_info['status']}**

@@ -154,7 +154,7 @@
   - ✅ administration_instructions: 74/74 (100%)
   - ✅ references: 74/74 (100%)
 
-## Lưu Ý Khi Bổ Sung
+## Lưu ý Khi Bổ Sung
 
 1. **contraindications**: Chuyển đổi từ list sang dict với `absolute` và `relative`
 2. **drug_interactions**: Phân loại major, moderate, minor với đầy đủ mechanism, effect, management

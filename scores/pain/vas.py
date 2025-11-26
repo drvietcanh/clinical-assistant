@@ -165,7 +165,7 @@ def render():
             - **VAS 31-60mm** ≈ NRS 4-6 (Đau vừa)
             - **VAS 61-100mm** ≈ NRS 7-10 (Đau nặng)
             
-            ### ⚠️ Lưu Ý:
+            ### ⚠️ Lưu ý:
             - VAS nhạy cảm hơn NRS với thay đổi nhỏ
             - Phù hợp cho nghiên cứu và theo dõi dài hạn
             - Khó dùng cho bệnh nhân già, rối loạn thị giác

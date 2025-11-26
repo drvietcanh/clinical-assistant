@@ -298,7 +298,7 @@ def render():
         """)
         
         # Score breakdown
-        with st.expander("📊 Chi Tiết Điểm Số"):
+        with st.expander("📊 Chi tiết điểm số"):
             st.markdown(f"""
             | Thành Phần | Giá Trị | Điểm |
             |------------|---------|------|

@@ -5,7 +5,7 @@
 **Ngày hoàn thành:** 2025-01-06  
 **Mục tiêu:** Tách file `drug_database_data.py` (18,762 dòng) thành các module nhỏ hơn để dễ quản lý
 
-## Kết Quả
+## Kết quả
 
 ### Trước Khi Tách
 - **1 file duy nhất:** `drug_database_data.py`

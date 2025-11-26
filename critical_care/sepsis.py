@@ -266,7 +266,7 @@ def render_fluid_resuscitation():
         total_fluid_ml = weight_kg * 30
         total_fluid_liters = total_fluid_ml / 1000
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         render_result_box(
             "Tổng dịch cần truyền",
@@ -353,7 +353,7 @@ def render_lactate_monitoring():
         if results["clearance_percent"] is None:
             st.error("Không thể tính toán. Lactate ban đầu phải > 0.")
         else:
-            st.markdown("### 📊 Kết Quả")
+            st.markdown("### 📊 Kết quả")
             
             col1, col2 = st.columns(2)
             

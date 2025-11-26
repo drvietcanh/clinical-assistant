@@ -209,7 +209,7 @@ def render_lithium_tdm():
             else:
                 adjustment_note = None
             
-            st.markdown("### 💊 Kết Quả Tính Liều")
+            st.markdown("### 💊 Kết quả Tính Liều")
             
             if adjustment_note:
                 st.warning(adjustment_note)
@@ -349,7 +349,7 @@ def render_lithium_tdm():
             
             interpretation = interpret_lithium_level(level, indication_code, time_since_dose)
             
-            st.markdown("### 📈 Kết Quả Giải Thích")
+            st.markdown("### 📈 Kết quả Giải Thích")
             
             if interpretation.get('trough_warning'):
                 st.warning(interpretation['trough_warning'])
@@ -421,7 +421,7 @@ def render_lithium_tdm():
     
     # Drug interactions
     st.markdown("---")
-    with st.expander("⚠️ Tương Tác & Lưu Ý"):
+    with st.expander("⚠️ Tương Tác & Lưu ý"):
         st.markdown("""
         **Thuốc TĂNG nồng độ Lithium:**
         - Diuretics (thiazide): Tăng nguy cơ độc tính

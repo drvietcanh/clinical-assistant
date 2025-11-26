@@ -326,7 +326,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         col_r1, col_r2 = st.columns([1, 2])
         
@@ -389,7 +389,7 @@ def render():
         st.session_state['mods_result'] = result
     
     # Quick reference
-    with st.expander("📖 Bảng MODS Scoring Chi Tiết"):
+    with st.expander("📖 Bảng MODS Scoring Chi tiết"):
         st.markdown("""
         ### MODS Scoring Table
         

@@ -342,7 +342,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         col_r1, col_r2 = st.columns([1, 2])
         

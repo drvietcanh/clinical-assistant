@@ -604,7 +604,7 @@ def render():
         
         result = calculate_prism3(variables)
         
-        st.markdown("### 📊 Kết Quả PRISM III")
+        st.markdown("### 📊 Kết quả PRISM III")
         
         col1, col2 = st.columns(2)
         

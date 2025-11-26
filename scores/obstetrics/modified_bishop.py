@@ -243,7 +243,7 @@ def render():
         result = interpret_modified_bishop(total_score, is_nulliparous)
         
         st.markdown("---")
-        st.subheader("📈 Kết Quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh Giá")
         
         # Display scores
         col1, col2, col3 = st.columns(3)
@@ -282,7 +282,7 @@ def render():
         st.markdown("---")
         
         # Score breakdown
-        st.subheader("📊 Phân Tích Chi Tiết")
+        st.subheader("📊 Phân Tích Chi tiết")
         
         st.markdown("**5 thành phần chính:**")
         components = [
@@ -329,7 +329,7 @@ def render():
         
         # Special considerations
         if has_preeclampsia or has_prom:
-            st.markdown("### 🔔 Lưu Ý Đặc Biệt")
+            st.markdown("### 🔔 Lưu ý đặc biệt")
             
             if has_preeclampsia:
                 st.warning("""

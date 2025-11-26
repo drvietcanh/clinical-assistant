@@ -122,7 +122,7 @@ def render():
     # Display selected grade details
     grade_info = grade_descriptions[selected_grade]
     
-    with st.expander(f"📖 Chi Tiết {selected_grade}", expanded=True):
+    with st.expander(f"📖 Chi tiết {selected_grade}", expanded=True):
         st.markdown(grade_info["desc"])
     
     # Serious systemic disease modifier

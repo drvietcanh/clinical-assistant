@@ -189,7 +189,7 @@ def render():
             - Khi bệnh nhân/trẻ than đau
             - Sau phẫu thuật: Mỗi 2-4 giờ trong 24 giờ đầu
             
-            ### ⚠️ Lưu Ý:
+            ### ⚠️ Lưu ý:
             - Wong-Baker dùng cho trẻ em 3-7 tuổi và người lớn không biết chữ
             - Trẻ < 3 tuổi: Dùng FLACC hoặc NIPS
             - Trẻ > 7 tuổi có thể giao tiếp: Có thể dùng NRS

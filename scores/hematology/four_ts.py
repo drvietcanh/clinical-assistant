@@ -132,7 +132,7 @@ def calculate_4ts_score(
            - Nếu tiểu cầu giảm >50% hoặc <100,000 → DỪNG NGAY
            - Theo dõi sát triệu chứng huyết khối
         
-        5. **Khi Có Kết Quả ELISA:**
+        5. **Khi Có Kết quả ELISA:**
            - **Dương tính (OD >1.0):** Xử trí như HIGH probability
            - **Âm tính hoặc yếu (OD <0.4):** Có thể an toàn tiếp tục heparin
            - **Borderline (OD 0.4-1.0):** Cần functional assay
@@ -183,7 +183,7 @@ def calculate_4ts_score(
            - Tái đánh giá 4Ts nếu có thay đổi lâm sàng
            - Nếu tiểu cầu tiếp tục giảm → xem xét lại
         
-        5. **Lưu Ý:**
+        5. **Lưu ý:**
            - 4Ts <4 có NPV rất cao → an toàn loại trừ HIT
            - NHƯNG nếu có thay đổi lâm sàng → tính lại 4Ts
            - Không dừng heparin chỉ dựa trên điểm thấp
@@ -277,7 +277,7 @@ def render():
         | 4-5 | Intermediate | 10-30% | Cân nhắc dừng, xét nghiệm ELISA |
         | 0-3 | Low | <5% | An toàn tiếp tục, tìm nguyên nhân khác |
         
-        ### ⚠️ Lưu Ý Quan Trọng
+        ### ⚠️ Lưu ý quan trọng
         
         - **4Ts HIGH (≥6):** DỪNG heparin NGAY + bắt đầu alternative anticoagulant
         - **KHÔNG truyền tiểu cầu** (trừ chảy máu đe dọa tính mạng)
@@ -374,7 +374,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         # Score box
         col_r1, col_r2 = st.columns([1, 2])
@@ -390,7 +390,7 @@ def render():
             st.markdown(f"**Xác suất HIT: {result['probability_range']}**")
         
         # Details
-        with st.expander("📋 Chi Tiết Tính Điểm", expanded=True):
+        with st.expander("📋 Chi tiết tính điểm", expanded=True):
             st.markdown("**Các thành phần đã chọn:**")
             for i, detail in enumerate(result['details'], 1):
                 st.markdown(f"{i}. {detail}")
@@ -400,7 +400,7 @@ def render():
         st.markdown(result['recommendation'])
         
         # Education
-        with st.expander("💡 Diễn Giải Kết Quả"):
+        with st.expander("💡 Diễn giải kết quả"):
             st.markdown(result['education'])
         
         # Additional clinical context
@@ -446,7 +446,7 @@ def render():
         """)
     
     # Quick reference
-    with st.expander("📖 Bảng Tham Khảo Nhanh - Alternative Anticoagulants"):
+    with st.expander("📖 Bảng tham khảo Nhanh - Alternative Anticoagulants"):
         st.markdown("""
         ### Thuốc Kháng Đông Thay Thế Cho HIT
         
@@ -480,7 +480,7 @@ def render():
         3. **Overlap ≥5 ngày** + INR 2-3 trong 24h
         4. **Duy trì kháng đông:** ≥3 tháng (6-12 tháng nếu có huyết khối)
         
-        ### Lưu Ý Quan Trọng
+        ### Lưu ý quan trọng
         
         - ❌ **KHÔNG dùng warfarin khi tiểu cầu thấp** → nguy cơ warfarin-induced limb gangrene
         - ❌ **KHÔNG truyền tiểu cầu** (trừ chảy máu đe dọa tính mạng)

@@ -128,7 +128,7 @@ def render():
         
         if is_complete:
             st.markdown("---")
-            st.markdown("### 🔬 Kết Quả Nội Soi")
+            st.markdown("### 🔬 Kết quả Nội Soi")
             
             # 4. Diagnosis
             st.markdown("#### 4. Chẩn Đoán")
@@ -243,7 +243,7 @@ def render():
                     color = "red"
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if color == "green":
                     st.success(f"## Rockall = {total_score}")

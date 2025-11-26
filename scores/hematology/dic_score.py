@@ -333,7 +333,7 @@ def render():
         4. **Diễn giải:** Score ≥5 + bệnh nền + lâm sàng → DIC
         5. **Theo Dõi:** Tính lại score hàng ngày để đánh giá đáp ứng
         
-        ### ⚠️ Lưu Ý
+        ### ⚠️ Lưu ý
         
         - DIC là chẩn đoán **LÂM SÀNG + XÉT NGHIỆM**
         - Score CHỈ là một phần trong đánh giá
@@ -412,7 +412,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         # Score box
         col_r1, col_r2 = st.columns([1, 2])
@@ -427,7 +427,7 @@ def render():
             st.markdown(f"### {result['color']} {result['interpretation']}")
         
         # Details
-        with st.expander("📋 Chi Tiết Tính Điểm", expanded=True):
+        with st.expander("📋 Chi tiết tính điểm", expanded=True):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         
@@ -439,7 +439,7 @@ def render():
         st.markdown(result['recommendation'])
         
         # Education
-        with st.expander("💡 Diễn Giải Kết Quả"):
+        with st.expander("💡 Diễn giải kết quả"):
             st.markdown(result['education'])
         
         # Additional context

@@ -234,7 +234,7 @@ def render():
         | 7.5-10% | Cao |
         | ≥10% | Rất cao |
         
-        ### ⚠️ Lưu Ý
+        ### ⚠️ Lưu ý
         
         - **CHỈ dùng** cho người 40-69 tuổi, KHÔNG có CVD
         - **KHÔNG dùng** nếu có: CAD, stroke, PAD, DM type 1, DM type 2 >10 năm
@@ -343,7 +343,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         col_r1, col_r2 = st.columns([1, 2])
         

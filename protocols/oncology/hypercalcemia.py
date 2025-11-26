@@ -115,7 +115,7 @@ def render():
         # Corrected Ca = Total Ca + 0.8 × (4.0 - Albumin)
         corrected_ca = total_ca + 0.8 * (4.0 - albumin)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         st.metric("Total Ca", f"{total_ca:.1f} mg/dL")
         st.metric("Corrected Ca", f"{corrected_ca:.1f} mg/dL")

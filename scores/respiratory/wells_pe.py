@@ -125,7 +125,7 @@ def render():
                 detail = "Không cần D-dimer - chụp CTPA trực tiếp"
             
             with col2:
-                st.markdown("### 📊 Kết Quả")
+                st.markdown("### 📊 Kết quả")
                 
                 if color == "success":
                     st.success(f"## Wells Score: {score}")
@@ -142,7 +142,7 @@ def render():
                 """)
             
             st.markdown("---")
-            st.markdown("### 💡 Chi Tiết Tính Điểm")
+            st.markdown("### 💡 Chi tiết tính điểm")
             
             if details:
                 for d in details:

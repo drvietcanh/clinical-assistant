@@ -401,7 +401,7 @@ def render():
         | **2** | 2.0-2.9× baseline | <0.5 mL/kg/h × ≥12h |
         | **3** | ≥3× baseline HOẶC ≥4.0 mg/dL HOẶC RRT | <0.3 mL/kg/h × ≥24h HOẶC anuria ≥12h |
         
-        ### ⚠️ Lưu Ý Quan Trọng
+        ### ⚠️ Lưu ý quan trọng
         
         - **Baseline creatinine:** Sử dụng SCr thấp nhất trong 3 tháng trước
         - **Nếu không có baseline:** Ước tính từ MDRD (giả định GFR = 75 mL/min/1.73m²)
@@ -528,7 +528,7 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết Quả")
+        st.subheader("📊 Kết quả")
         
         # Stage box
         col_r1, col_r2 = st.columns([1, 2])
@@ -551,7 +551,7 @@ def render():
                 st.caption(f"SCr: {scr_baseline:.2f} → {scr_current:.2f} mg/dL ({result['scr_fold']:.2f}×)")
         
         # Details
-        with st.expander("📋 Chi Tiết Đánh Giá", expanded=True):
+        with st.expander("📋 Chi tiết đánh giá", expanded=True):
             if result['scr_criteria']:
                 st.markdown("**Tiêu chí Creatinine:**")
                 for criterion in result['scr_criteria']:
@@ -616,7 +616,7 @@ def render():
         """)
     
     # Quick reference
-    with st.expander("📖 Bảng Tham Khảo Nhanh - Nguyên Nhân AKI"):
+    with st.expander("📖 Bảng tham khảo Nhanh - Nguyên Nhân AKI"):
         st.markdown("""
         ### Phân Loại Nguyên Nhân AKI
         

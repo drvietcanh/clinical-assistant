@@ -82,7 +82,7 @@ def render_rass_calculator():
         severity = "An thần"
     
     st.markdown("---")
-    st.markdown(f"### 📊 Kết Quả")
+    st.markdown(f"### 📊 Kết quả")
     
     render_result_box(
         "RASS Score",
@@ -275,7 +275,7 @@ def render_cam_icu_calculator():
     if st.button("🔬 Đánh Giá CAM-ICU", type="primary", key="cam_icu_calculate"):
         has_delirium = feature1 and feature2 and feature3 and feature4
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         if has_delirium:
             render_warning_alert(
@@ -420,7 +420,7 @@ def render_aki_staging_quick():
         # Final stage (worst of the two)
         final_stage = max(stage_cr, stage_uo)
         
-        st.markdown("### 📊 Kết Quả")
+        st.markdown("### 📊 Kết quả")
         
         if final_stage == 0:
             color = "success"
@@ -448,7 +448,7 @@ def render_aki_staging_quick():
         )
         
         st.markdown("---")
-        st.markdown("### 📋 Chi Tiết")
+        st.markdown("### 📋 Chi tiết")
         
         col1, col2 = st.columns(2)
         

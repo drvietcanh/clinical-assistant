@@ -438,7 +438,7 @@ def render():
                 - Kết quả làm tròn đến số nguyên
                 - Giới hạn: 6-40 điểm
                 
-                **Kết Quả:** MELD = **{meld_score}**
+                **Kết quả:** MELD = **{meld_score}**
                 """)
             
             with st.expander("📊 Bảng Tỷ Lệ Tử Vong Theo MELD"):

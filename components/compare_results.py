@@ -30,7 +30,7 @@ def render_compare_results(
         st.warning("Cần ít nhất 2 kết quả để so sánh")
         return
     
-    st.subheader("🔀 So Sánh Kết Quả")
+    st.subheader("🔀 So Sánh Kết quả")
     
     # Default labels
     if not labels:

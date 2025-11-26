@@ -39,7 +39,7 @@ def render_selection():
     # Display selected grade details
     mrs_info = MRS_GRADES[selected_mrs]
     
-    with st.expander(f"📖 Chi Tiết mRS {selected_mrs}", expanded=True):
+    with st.expander(f"📖 Chi tiết mRS {selected_mrs}", expanded=True):
         st.markdown(mrs_info["desc"])
     
     return selected_mrs, mrs_info
