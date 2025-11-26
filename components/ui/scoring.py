@@ -146,65 +146,72 @@ def render_score_breakdown(
     if color_map is None:
         color_map = {}
     
-    # Build subscores HTML
+    # Build subscores HTML - using proper formatting to avoid rendering issues
     subscores_html = ""
     for organ, score in subscores.items():
         organ_color = color_map.get(organ, COLORS["primary"])
         organ_bg = _hex_to_rgba(organ_color, 0.15)
-        subscores_html += f"""
-        <div style="
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 1rem;
-            border-bottom: 1px solid {COLORS['border']};
-        ">
-            <span style="font-size: 0.95rem; color: {COLORS['text_primary']};">{organ}</span>
-            <span style="
-                font-size: 1.25rem;
-                font-weight: bold;
-                color: {organ_color};
-                background: {organ_bg};
-                padding: 0.25rem 0.75rem;
-                border-radius: 8px;
-            ">{score}</span>
-        </div>
-        """
+        # Escape HTML in organ name to prevent XSS
+        organ_escaped = str(organ).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        # Build each row with proper structure
+        subscores_html += (
+            '<div style="'
+            'display: flex; '
+            'justify-content: space-between; '
+            'align-items: center; '
+            f'padding: 0.75rem 1rem; '
+            f'border-bottom: 1px solid {COLORS["border"]};'
+            '">'
+            f'<span style="font-size: 0.95rem; color: {COLORS["text_primary"]};">{organ_escaped}</span>'
+            '<span style="'
+            'font-size: 1.25rem; '
+            'font-weight: bold; '
+            f'color: {organ_color}; '
+            f'background: {organ_bg}; '
+            'padding: 0.25rem 0.75rem; '
+            'border-radius: 8px;'
+            f'">{score}</span>'
+            '</div>'
+        )
     
     # Convert primary color to rgba for gradient
     primary_rgba_start = _hex_to_rgba(COLORS['primary'], 0.1)
     primary_rgba_end = _hex_to_rgba(COLORS['primary'], 0.05)
     
-    breakdown_html = f"""
-    <div style="
-        background: {COLORS['surface']};
-        border: 2px solid {COLORS['border']};
-        border-radius: 12px;
-        margin: 1rem 0;
-        overflow: hidden;
-        box-shadow: {THEME['shadows']['md']};
-    ">
-        <div style="
-            background: linear-gradient(135deg, {primary_rgba_start} 0%, {primary_rgba_end} 100%);
-            padding: 1rem;
-            border-bottom: 2px solid {COLORS['border']};
-        ">
-            <strong style="font-size: 1.1rem; color: {COLORS['text_primary']};">{title}</strong>
-        </div>
-        <div>
-            {subscores_html}
-        </div>
-        <div style="
-            background: {COLORS['background_secondary']};
-            padding: 1rem;
-            border-top: 2px solid {COLORS['border']};
-            text-align: center;
-        ">
-            <span style="font-size: 0.9rem; color: {COLORS['text_secondary']}; margin-right: 0.5rem;">Tổng điểm:</span>
-            <span style="font-size: 1.5rem; font-weight: bold; color: {COLORS['primary']};">{total_score} điểm</span>
-        </div>
-    </div>
-    """
+    # Escape title to prevent XSS
+    title_escaped = str(title).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    
+    # Build complete HTML structure with proper nesting
+    breakdown_html = (
+        '<div style="'
+        f'background: {COLORS["surface"]}; '
+        f'border: 2px solid {COLORS["border"]}; '
+        'border-radius: 12px; '
+        'margin: 1rem 0; '
+        'overflow: hidden; '
+        f'box-shadow: {THEME["shadows"]["md"]};'
+        '">'
+        '<div style="'
+        f'background: linear-gradient(135deg, {primary_rgba_start} 0%, {primary_rgba_end} 100%); '
+        'padding: 1rem; '
+        f'border-bottom: 2px solid {COLORS["border"]};'
+        '">'
+        f'<strong style="font-size: 1.1rem; color: {COLORS["text_primary"]};">{title_escaped}</strong>'
+        '</div>'
+        '<div>'
+        f'{subscores_html}'
+        '</div>'
+        '<div style="'
+        f'background: {COLORS["background_secondary"]}; '
+        'padding: 1rem; '
+        f'border-top: 2px solid {COLORS["border"]}; '
+        'text-align: center;'
+        '">'
+        f'<span style="font-size: 0.9rem; color: {COLORS["text_secondary"]}; margin-right: 0.5rem;">Tổng điểm:</span>'
+        f'<span style="font-size: 1.5rem; font-weight: bold; color: {COLORS["primary"]};">{total_score} điểm</span>'
+        '</div>'
+        '</div>'
+    )
     
     st.markdown(breakdown_html, unsafe_allow_html=True)
 
