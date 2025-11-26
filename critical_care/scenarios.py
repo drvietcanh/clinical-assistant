@@ -103,9 +103,9 @@ def render_sepsis_scenario():
         st.markdown("""
         **Theo dõi:**
         - **Lactate clearance:** Đo lại sau 2-4 giờ
-        - **Vital signs:** Liên tục
-        - **Urine output:** Mỗi giờ
-        - **ABG:** Nếu có suy hô hấp
+        - **Dấu hiệu sinh tồn:** Liên tục
+        - **Lượng nước tiểu:** Mỗi giờ
+        - **Khí máu động mạch (ABG):** Nếu có suy hô hấp
         
         **Mục tiêu:**
         - Lactate clearance ≥20% trong 2 giờ
@@ -222,8 +222,8 @@ def render_ards_scenario():
         
         st.info("""
         **💡 Lưu ý:**
-        - Cần team có kinh nghiệm
-        - Theo dõi sát trong quá trình prone
+        - Cần đội ngũ có kinh nghiệm
+        - Theo dõi sát trong quá trình nằm sấp
         - Đánh giá lại sau 4-6 giờ
         """)
     
@@ -239,11 +239,11 @@ def render_ards_scenario():
         
         2. **Neuromuscular Blockade**
            - ARDS Severe, P/F <150
-           - Patient-ventilator dyssynchrony
+           - Mất đồng bộ bệnh nhân-máy thở
            - Cisatracurium 37.5 mg/h
         
         3. **Inhaled Nitric Oxide (iNO)**
-           - Refractory hypoxemia
+           - Thiếu oxy máu kháng trị
            - Tác dụng tạm thời
         """)
     
@@ -303,11 +303,11 @@ def render_shock_scenario():
         **Đánh giá huyết động:**
         
         - **MAP:** Mục tiêu ≥65 mmHg
-        - **CO/CI:** Cardiac output/index
-        - **CVP:** Central venous pressure
-        - **SVR:** Systemic vascular resistance
+        - **CO/CI:** Cung lượng tim/chỉ số tim
+        - **CVP:** Áp lực tĩnh mạch trung tâm
+        - **SVR:** Sức cản mạch hệ thống
         - **Lactate:** Tưới máu mô
-        - **Urine output:** Tưới máu thận
+        - **Lượng nước tiểu:** Tưới máu thận
         """)
         
         st.warning("""
@@ -366,7 +366,7 @@ def render_shock_scenario():
         - **Lactate:** Giảm dần
         - **Urine output:** ≥0.5 ml/kg/h
         - **CO/CI:** Cải thiện
-        - **SvO₂/ScvO₂:** ≥70%
+        - **SvO₂/ScvO₂:** Độ bão hòa oxy tĩnh mạch ≥70%
         """)
     
     st.markdown("---")
@@ -455,8 +455,8 @@ def render_ventilator_weaning_scenario():
         - Thời gian: 30-120 phút
         
         **Theo dõi:**
-        - Vital signs mỗi 15 phút
-        - ABG sau 30-60 phút
+        - Dấu hiệu sinh tồn mỗi 15 phút
+        - Khí máu động mạch (ABG) sau 30-60 phút
         - Đánh giá sự thoải mái
         """)
         
@@ -466,7 +466,7 @@ def render_ventilator_weaning_scenario():
         - SpO₂ ≥88-90%
         - HR <140 bpm
         - SBP 90-180 mmHg
-        - Không có signs of distress
+        - Không có dấu hiệu suy hô hấp
         - pH ≥7.32
         
         **Tiêu chí thất bại:**
@@ -474,7 +474,7 @@ def render_ventilator_weaning_scenario():
         - SpO₂ <88-90%
         - HR >140 bpm
         - SBP <90 hoặc >180 mmHg
-        - Signs of distress
+        - Dấu hiệu suy hô hấp
         - pH <7.32
         """)
         
@@ -487,17 +487,17 @@ def render_ventilator_weaning_scenario():
         **Sau SBT thành công:**
         
         **Đánh giá:**
-        - Cough strength (mạnh)
-        - Secretions (ít)
-        - Gag reflex (có)
-        - Mental status (tỉnh)
+        - Sức ho (mạnh)
+        - Đờm/tiết dịch (ít)
+        - Phản xạ nôn (có)
+        - Tình trạng tinh thần (tỉnh)
         
         **Chuẩn bị:**
-        - NPO (nhịn ăn) 4-6 giờ
-        - Có sẵn reintubation equipment
+        - Nhịn ăn (NPO) 4-6 giờ
+        - Có sẵn dụng cụ đặt nội khí quản lại
         - Team sẵn sàng
         
-        **Sau extubation:**
+        **Sau rút nội khí quản:**
         - Theo dõi sát 24-48 giờ
         - Hỗ trợ thở oxy
         - Đánh giá lại nếu cần
@@ -517,8 +517,8 @@ def render_sedation_scenario():
     st.caption("Hướng dẫn an thần và giảm đau trong ICU")
     
     st.markdown("""
-    **Sedation** trong ICU cần cân bằng giữa an thần đủ và tránh quá liều.
-    Mục tiêu: **RASS -1 đến 0** (calm, alert).
+    **An thần** trong ICU cần cân bằng giữa an thần đủ và tránh quá liều.
+    Mục tiêu: **RASS -1 đến 0** (bình tĩnh, tỉnh táo).
     """)
     
     st.markdown("---")
@@ -529,16 +529,16 @@ def render_sedation_scenario():
         **Đánh giá mức độ an thần:**
         
         **RASS (Richmond Agitation-Sedation Scale):**
-        - **+4:** Combative
-        - **+3:** Very agitated
-        - **+2:** Agitated
-        - **+1:** Restless
-        - **0:** Alert and calm (MỤC TIÊU)
-        - **-1:** Drowsy
-        - **-2:** Light sedation
-        - **-3:** Moderate sedation
-        - **-4:** Deep sedation
-        - **-5:** Unarousable
+        - **+4:** Kích động, chống đối
+        - **+3:** Rất kích động
+        - **+2:** Kích động
+        - **+1:** Bồn chồn
+        - **0:** Tỉnh táo và bình tĩnh (MỤC TIÊU)
+        - **-1:** Buồn ngủ/Li bì
+        - **-2:** An thần nhẹ
+        - **-3:** An thần trung bình
+        - **-4:** An thần sâu
+        - **-5:** Không thể đánh thức
         
         **Mục tiêu:** RASS -1 đến 0
         """)
@@ -562,7 +562,7 @@ def render_sedation_scenario():
         **Lưu ý:**
         - Đánh giá đau trước khi an thần
         - Điều trị đau trước
-        - Đau không kiểm soát → tăng agitation
+        - Đau không kiểm soát → tăng kích động
         """)
     
     # Step 3: Sedation Strategy
@@ -597,7 +597,7 @@ def render_sedation_scenario():
     # Step 4: Analgesia
     with st.expander("💉 Bước 4: Giảm Đau", expanded=True):
         st.markdown("""
-        **Opioids:**
+        **Thuốc giảm đau nhóm opioid:**
         
         **Fentanyl:**
         - Tác dụng nhanh, ngắn
@@ -607,7 +607,7 @@ def render_sedation_scenario():
         **Morphine:**
         - Tác dụng dài
         - Liều: 0.05-0.2 mg/kg/h
-        - Lưu ý: Histamine release
+        - Lưu ý: Giải phóng histamine
         
         **Hydromorphone:**
         - Tác dụng trung bình
@@ -629,10 +629,10 @@ def render_sedation_scenario():
         **≥2/4 tiêu chí** → Delirium
         
         **Phòng ngừa:**
-        - Giảm sedation
-        - Early mobilization
-        - Sleep protocol
-        - Tránh benzodiazepine
+        - Giảm an thần
+        - Vận động sớm
+        - Giao thức giấc ngủ
+        - Tránh benzodiazepin
         """)
         
         if st.button("🧠 Tính CAM-ICU", key="sedation_cam"):
@@ -649,7 +649,7 @@ def render_sedation_scenario():
         - Đánh giá sẵn sàng cai máy thở
         
         **Thực hiện:**
-        - Ngừng sedation mỗi ngày
+        - Ngừng an thần mỗi ngày
         - Đánh giá RASS, GCS
         - Nếu RASS >0 → Giảm liều
         - Nếu RASS <0 → Tăng liều
