@@ -379,7 +379,7 @@ def render():
         
         # Warning
         st.warning("""
-        ⚠️ **Lưu Ý Y Khoa:**
+        ⚠️ **Lưu ý y khoa:**
         - RTS là công cụ hỗ trợ, không thay thế đánh giá lâm sàng
         - Quyết định điều trị và triage cuối cùng thuộc về bác sĩ điều trị
         - Ưu tiên ABC (Airway, Breathing, Circulation) luôn luôn là trên hết

@@ -94,7 +94,7 @@ def render():
     st.markdown("**Acute Kidney Injury Network Classification (Historical)**")
     
     st.info("""
-    **ℹ️ Lưu Ý Quan Trọng:**
+    **ℹ️ Lưu ý quan trọng:**
     
     AKIN (2007) là phiên bản cải tiến của RIFLE, nhưng hiện nay đã được **hợp nhất vào KDIGO** (2012).
     

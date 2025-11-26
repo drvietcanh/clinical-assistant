@@ -325,7 +325,7 @@ render_standard_footer(disclaimer=True)
 
 # Additional lab-specific warning
 st.warning("""
-**⚠️ Lưu Ý Quan Trọng về Lab:**
+**⚠️ Lưu ý quan trọng về Lab:**
 - Khoảng giá trị tham chiếu có thể khác nhau giữa các phòng xét nghiệm
 - Luôn so sánh với khoảng giá trị của phòng xét nghiệm địa phương bạn
 - Giá trị nguy kịch cần đối chiếu lâm sàng ngay lập tức

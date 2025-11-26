@@ -389,7 +389,7 @@ def render():
         
         # Interpretation & Management
         st.info("""
-        **📌 Diễn Giải SOFA-2:**
+        **📌 Diễn giải SOFA-2:**
         
         - **Tăng SOFA-2 ≥2 điểm** trong 24-48h → xấu đi, nguy cơ tử vong tăng
         - **SOFA-2 cao liên tục** → tiên lượng xấu
@@ -483,7 +483,7 @@ def render():
         
         # Warning
         st.warning("""
-        ⚠️ **Lưu Ý Y Khoa:**
+        ⚠️ **Lưu ý y khoa:**
         - SOFA-2 là công cụ đánh giá, không phải chẩn đoán
         - Cần kết hợp với lâm sàng và xét nghiệm khác
         - SOFA-2 có độ chính xác cao hơn SOFA gốc nhờ big data 2025

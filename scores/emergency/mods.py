@@ -361,7 +361,7 @@ def render():
         
         # Interpretation
         st.info("""
-        **📌 Diễn Giải MODS:**
+        **📌 Diễn giải MODS:**
         
         - MODS tăng dần → tiên lượng xấu
         - MODS giảm → đáp ứng điều trị tốt

@@ -608,7 +608,7 @@ def render():
         
         # Warning
         st.warning("""
-        ⚠️ **Lưu Ý Y Khoa:**
+        ⚠️ **Lưu ý y khoa:**
         - KDIGO là hệ thống phân loại, không thay thế đánh giá lâm sàng
         - Điều trị then chốt: TÌM VÀ XỬ TRÍ NGUYÊN NHÂN (pre-renal/intrinsic/post-renal)
         - Stage 3 AKI: Tư vấn thận ngay, xem xét RRT

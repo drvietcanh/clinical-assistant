@@ -171,7 +171,7 @@ def calculate_dic_score(
         """
         
         education = """
-        **💡 Diễn Giải - OVERT DIC:**
+        **💡 Diễn giải - OVERT DIC:**
         
         - **DIC Score ≥5:** Chẩn đoán DIC rõ ràng (với bệnh nền phù hợp)
         - **DIC** là hội chứng đông máu nội mạch lan tỏa → tiêu thụ tiểu cầu/yếu tố đông máu
@@ -226,7 +226,7 @@ def calculate_dic_score(
         """
         
         education = """
-        **💡 Diễn Giải - NON-OVERT DIC:**
+        **💡 Diễn giải - NON-OVERT DIC:**
         
         - **DIC Score <5:** Gợi ý rối loạn đông máu nhưng chưa đủ tiêu chuẩn DIC rõ ràng
         - Có thể là:

@@ -391,7 +391,7 @@ def render():
         
         # Additional info
         st.info("""
-        **📌 Lưu Ý Quan Trọng:**
+        **📌 Lưu ý quan trọng:**
         
         - **BODE tốt hơn FEV1** trong dự đoán tử vong
         - Tính lại BODE định kỳ (6-12 tháng) để theo dõi

@@ -503,7 +503,7 @@ def render():
         
         # Interpretation
         st.info("""
-        **📌 Diễn Giải:**
+        **📌 Diễn giải:**
         
         - SAPS II đơn giản hơn APACHE II
         - Ít biến số hơn, dễ tính

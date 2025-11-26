@@ -389,7 +389,7 @@ def render():
         
         # Additional info
         st.info("""
-        **📌 Lưu Ý Quan Trọng:**
+        **📌 Lưu ý quan trọng:**
         
         - **ISS** là thang điểm GIẢI PHẪU (anatomical), đánh giá tổn thương cơ thể
         - **RTS** là thang điểm SINH LÝ (physiological), đánh giá chức năng sống
@@ -415,7 +415,7 @@ def render():
         
         # Warning
         st.warning("""
-        ⚠️ **Lưu Ý Y Khoa:**
+        ⚠️ **Lưu ý y khoa:**
         - ISS đòi hỏi kiến thức về AIS - cần đào tạo để đánh giá chính xác
         - ISS là công cụ hỗ trợ, không thay thế đánh giá lâm sàng
         - Kết hợp ISS với RTS để có TRISS score (tiên lượng tốt hơn)

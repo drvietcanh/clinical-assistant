@@ -563,7 +563,7 @@ def render():
         
         # Warning
         st.warning("""
-        ⚠️ **Lưu Ý Y Khoa:**
+        ⚠️ **Lưu ý y khoa:**
         - SOFA là công cụ đánh giá, không phải chẩn đoán
         - Cần kết hợp với lâm sàng và xét nghiệm khác
         - SOFA không dự đoán chính xác 100% - chỉ là ước tính

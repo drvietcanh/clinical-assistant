@@ -57,7 +57,7 @@ def render_standard_footer(disclaimer: bool = True):
     
     if disclaimer:
         st.warning("""
-        **⚠️ Lưu Ý Quan Trọng:**
+        **⚠️ Lưu ý quan trọng:**
         - Công cụ này chỉ mục đích hỗ trợ quyết định lâm sàng
         - KHÔNG thay thế đánh giá lâm sàng của bác sĩ
         - Bác sĩ phải tự xác minh kết quả trước khi áp dụng

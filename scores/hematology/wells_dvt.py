@@ -127,7 +127,7 @@ def calculate_wells_dvt(
            - PPV ~28-34%, NPV ~93-96%
         """
         education = """
-        **💡 Diễn Giải:**
+        **💡 Diễn giải:**
         - Điểm Wells ≥2 → DVT có khả năng cao
         - Siêu âm tĩnh mạch là tiêu chuẩn vàng
         - Nếu siêu âm âm tính + D-dimer âm tính → loại trừ DVT
@@ -163,7 +163,7 @@ def calculate_wells_dvt(
            - D-dimer dương tính không đồng nghĩa với DVT (nhiều nguyên nhân khác)
         """
         education = """
-        **💡 Diễn Giải:**
+        **💡 Diễn giải:**
         - Điểm Wells <2 → DVT ít có khả năng
         - Nên dùng D-dimer để loại trừ (tránh siêu âm không cần thiết)
         - D-dimer âm tính + Wells <2 → NPV cực cao (~99%)

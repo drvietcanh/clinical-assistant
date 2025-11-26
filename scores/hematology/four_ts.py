@@ -96,7 +96,7 @@ def calculate_4ts_score(
         """
         
         education = """
-        **💡 Diễn Giải - High Probability:**
+        **💡 Diễn giải - High Probability:**
         - 4Ts ≥6 → HIT có khả năng cao (50-80%)
         - PPV ~70-90% (tùy population)
         - PHẢI dừng heparin và bắt đầu kháng đông thay thế NGAY
@@ -143,7 +143,7 @@ def calculate_4ts_score(
         """
         
         education = """
-        **💡 Diễn Giải - Intermediate Probability:**
+        **💡 Diễn giải - Intermediate Probability:**
         - 4Ts = 4-5 → HIT có thể có (10-30%)
         - Không thể loại trừ hoàn toàn
         - Cần xét nghiệm ELISA để quyết định
@@ -190,7 +190,7 @@ def calculate_4ts_score(
         """
         
         education = """
-        **💡 Diễn Giải - Low Probability:**
+        **💡 Diễn giải - Low Probability:**
         - 4Ts ≤3 → HIT rất ít có khả năng (<5%)
         - NPV ~95-99% → an toàn loại trừ
         - Không cần xét nghiệm HIT antibody
@@ -439,7 +439,7 @@ def render():
         
         # Warning
         st.warning("""
-        ⚠️ **Lưu Ý Y Khoa:**
+        ⚠️ **Lưu ý y khoa:**
         - Thang điểm 4Ts là công cụ hỗ trợ, cần kết hợp với xét nghiệm và đánh giá lâm sàng
         - Quyết định dừng heparin và điều trị thay thế thuộc về bác sĩ điều trị
         - Khi nghi ngờ HIT → tư vấn huyết học ngay

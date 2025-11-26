@@ -20,6 +20,8 @@ REPLACEMENTS = {
     "Chi Tiết Đánh Giá": "Chi tiết đánh giá",
     "Diễn Giải": "Diễn giải",
     "Diễn Giải Kết Quả": "Diễn giải kết quả",
+    "Diễn Giải SOFA-2": "Diễn giải SOFA-2",
+    "Diễn Giải MODS": "Diễn giải MODS",
     "Lưu Ý": "Lưu ý",
     "Lưu Ý Quan Trọng": "Lưu ý quan trọng",
     "Lưu Ý Y Khoa": "Lưu ý y khoa",

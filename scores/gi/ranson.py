@@ -93,7 +93,7 @@ def render():
     
     # Important note about etiology
     st.info("""
-    **⚠️ Lưu Ý Quan Trọng:**
+    **⚠️ Lưu ý quan trọng:**
     
     Ranson Criteria có 2 BỘ KHÁC NHAU:
     - **Gallstone (sỏi mật) pancreatitis:** 1 bộ tiêu chí
