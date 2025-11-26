@@ -163,7 +163,7 @@ def render():
     st.info("✨ **Version 2025:** Điều chỉnh ngưỡng từ dữ liệu lớn, tích hợp hỗ trợ cơ quan hiện đại")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin SOFA-2 (2025) & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin SOFA-2 (2025) & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu SOFA-2
         
@@ -414,7 +414,7 @@ def render():
         
         # Management recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Cáo Xử Trí")
+        st.markdown("### 💊 Khuyến cáo Xử Trí")
         
         recommendations = []
         
@@ -491,7 +491,7 @@ def render():
         """)
     
     # Comparison with original SOFA
-    with st.expander("🔍 So Sánh SOFA-2 vs SOFA Gốc"):
+    with st.expander("🔍 So sánh SOFA-2 vs SOFA Gốc"):
         st.markdown("""
         ### Điểm Khác Biệt Chính
         

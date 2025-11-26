@@ -158,7 +158,7 @@ def render():
                 st.write("- Không có tiêu chí nào")
             
             st.markdown("---")
-            st.markdown("### 💊 Khuyến Cáo")
+            st.markdown("### 💊 Khuyến cáo")
             
             st.info(f"""
             **Tỷ lệ tử vong 30 ngày:** {mortality}

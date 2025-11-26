@@ -36,7 +36,7 @@ def render_tdm_calculator(antibiotic_name):
     tab1, tab2, tab3 = st.tabs(["📊 AUC-Based", "📊 Trough-Based", "🔍 Giải thích nồng độ"])
     
     with tab1:
-        st.markdown("#### 📋 AUC-Based Dosing (Ưu Tiên)")
+        st.markdown("#### 📋 AUC-Based Dosing (Ưu tiên)")
         
         # Sanitize antibiotic name for keys
         from .database_display import _make_safe_session_key

@@ -447,7 +447,7 @@ def display_antibiotic_info(ab_name, ab_data):
         st.markdown("---")
         mic_data = get_mic_breakpoints(ab_name)
         if mic_data:
-            st.markdown("### 📊 MIC Breakpoints & Độ Nhạy:")
+            st.markdown("### 📊 MIC Breakpoints & Độ nhạy:")
             
             # Common susceptibility
             common_suscept = get_common_susceptibility(ab_name)
@@ -501,7 +501,7 @@ def display_antibiotic_info(ab_name, ab_data):
         st.markdown("---")
         resistance_summary = get_antibiotic_resistance_summary(ab_name)
         if resistance_summary:
-            st.markdown("### 🦠 Tỷ Lệ Kháng Thuốc (Việt Nam, 2024):")
+            st.markdown("### 🦠 Tỷ lệ kháng thuốc (Việt Nam, 2024):")
             for organism, pattern in resistance_summary.items():
                 resistant_pct = pattern.get('resistant', 'N/A')
                 sensitive_pct = pattern.get('sensitive', 'N/A')
@@ -552,7 +552,7 @@ def display_antibiotic_info(ab_name, ab_data):
             render_tdm_calculator(ab_name)
         
         # IV Compatibility Checker (Phase 5 - Task 5.3)
-        with st.expander("💉 Kiểm Tra Tương Thích IV", expanded=False):
+        with st.expander("💉 Kiểm tra tương thích IV", expanded=False):
             from .iv_compatibility import render_iv_compatibility_checker
             render_iv_compatibility_checker(ab_name)
         

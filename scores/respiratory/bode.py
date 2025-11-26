@@ -242,7 +242,7 @@ def render():
     st.markdown("**Tiên lượng tử vong ở bệnh nhân COPD**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -386,7 +386,7 @@ def render():
         
         # Management
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Cáo Điều Trị")
+        st.markdown("### 💊 Khuyến cáo điều trị")
         st.markdown(result['management'])
         
         # Additional info

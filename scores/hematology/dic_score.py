@@ -297,7 +297,7 @@ def render():
     """)
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -325,7 +325,7 @@ def render():
         - **≥5 điểm:** Overt DIC (tương thích với DIC rõ ràng)
         - **<5 điểm:** Non-overt (gợi ý, cần theo dõi)
         
-        ### 🎯 Cách Sử Dụng
+        ### 🎯 Cách Sử dụng
         
         1. **Xác định:** Bệnh nhân có bệnh nền liên quan DIC
         2. **Xét nghiệm:** CBC, PT/INR, aPTT, Fibrinogen, D-dimer
@@ -482,7 +482,7 @@ def render():
         """)
     
     # Quick reference
-    with st.expander("📖 Nguyên Nhân Thường Gặp của DIC"):
+    with st.expander("📖 Nguyên Nhân Thường gặp của DIC"):
         st.markdown("""
         ### Nguyên Nhân DIC Theo Tần Suất
         

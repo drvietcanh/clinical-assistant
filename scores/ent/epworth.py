@@ -341,7 +341,7 @@ def render():
         - → Giảm/ngừng thở → Giảm oxy máu → Thức giấc
         - → Phân mảnh giấc ngủ → Buồn ngủ ban ngày
         
-        **Triệu Chứng:**
+        **Triệu chứng:**
         
         **Ban đêm:**
         - Ngáy to, không đều

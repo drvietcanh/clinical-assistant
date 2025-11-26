@@ -170,7 +170,7 @@ def render():
     st.markdown("**Acute Physiology and Chronic Health Evaluation II - Dự đoán tử vong ICU**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         

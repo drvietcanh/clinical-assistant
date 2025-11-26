@@ -190,7 +190,7 @@ def render():
     st.markdown("**Đánh giá xác suất tiền test của huyết khối tĩnh mạch sâu**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -199,7 +199,7 @@ def render():
         - Hướng dẫn chiến lược xét nghiệm (D-dimer vs siêu âm)
         - Giảm thiểu các xét nghiệm không cần thiết
         
-        ### 🎯 Cách Sử Dụng
+        ### 🎯 Cách Sử dụng
         
         1. **Thời Điểm:** Khi bệnh nhân có triệu chứng nghi ngờ DVT (đau chân, phù, đỏ)
         2. **Đánh giá:** Trả lời 9 câu hỏi lâm sàng
@@ -255,7 +255,7 @@ def render():
         )
     
     with col2:
-        st.markdown("##### 🔍 Triệu Chứng Lâm Sàng")
+        st.markdown("##### 🔍 Triệu chứng Lâm Sàng")
         localized_tenderness = st.checkbox(
             "**Đau chạm khu trú dọc hệ tĩnh mạch sâu**",
             help="Đau dọc theo đường đi của tĩnh mạch đùi hoặc tĩnh mạch khoeo"

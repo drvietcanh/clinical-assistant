@@ -23,7 +23,7 @@ def render_visual_comparison():
         text-align: center;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     '>
-        <h1 style='margin: 0; color: white; font-size: 2.2em;'>📊 So Sánh Thuốc Trực Quan</h1>
+        <h1 style='margin: 0; color: white; font-size: 2.2em;'>📊 So sánh Thuốc Trực Quan</h1>
         <p style='margin: 10px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1.1em;'>
             So sánh nhiều thuốc trong bảng/grid • Visual charts • Side-by-side comparison
         </p>
@@ -41,7 +41,7 @@ def render_visual_comparison():
     st.markdown("---")
     
     # Drug selection
-    st.markdown("### 💊 Chọn Thuốc Để So Sánh")
+    st.markdown("### 💊 Chọn Thuốc Để So sánh")
     
     all_drugs = sorted(list(DRUG_DATABASE.keys()))
     
@@ -78,7 +78,7 @@ def render_visual_comparison():
     st.markdown("---")
     
     # Comparison table
-    if st.button("📊 So Sánh", type="primary", use_container_width=True):
+    if st.button("📊 So sánh", type="primary", use_container_width=True):
         comparison_data = []
         
         for drug_name in selected_drugs:
@@ -195,7 +195,7 @@ def render_visual_comparison():
         st.markdown("---")
         
         # Comparison by category
-        st.markdown("### 📈 So Sánh Theo Tiêu chí:")
+        st.markdown("### 📈 So sánh Theo Tiêu chí:")
         
         # Side effects comparison
         side_effects_data = {

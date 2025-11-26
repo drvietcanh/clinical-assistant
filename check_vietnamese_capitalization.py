@@ -59,6 +59,42 @@ COMMON_PHRASES = [
     ("phòng", "ngừa", "ban", "đầu"), # Phòng Ngừa Ban Đầu
     ("phòng", "ngừa", "tái", "phát"), # Phòng Ngừa Tái Phát
     ("tái", "phát", "lần"),      # Tái Phát Lần
+    ("điều", "chỉnh", "theo", "nhịp", "tim"), # Điều Chỉnh Theo Nhịp Tim
+    ("nhập", "thông", "số"),     # Nhập Thông Số
+    ("nhịp", "tim"),             # Nhịp Tim
+    ("phân", "tích"),            # Phân Tích
+    ("giá", "trị", "tham", "chiếu"), # Giá Trị Tham Chiếu
+    ("giá", "trị"),              # Giá Trị
+    ("tham", "chiếu"),           # Tham Chiếu
+    ("thuốc", "gây", "kéo", "dài"), # Thuốc Gây Kéo Dài
+    ("thường", "gặp"),           # Thường Gặp
+    ("kiến", "thức", "bổ", "sung"), # Kiến Thức Bổ Sung
+    ("so", "sánh", "các", "công", "thức"), # So Sánh Các Công Thức
+    ("so", "sánh"),              # So Sánh
+    ("cách", "đo", "chính", "xác"), # Cách Đo Chính Xác
+    ("nguyên", "nhân", "kéo", "dài"), # Nguyên Nhân Kéo Dài
+    ("quản", "lý", "kéo", "dài", "qt", "do", "thuốc"), # Quản Lý Kéo Dài QT Do Thuốc
+    ("thông", "tin", "bệnh", "nhân"), # Thông Tin Bệnh Nhân
+    ("khuyến", "cáo"),           # Khuyến Cáo
+    ("tài", "liệu", "tham", "khảo"), # Tài Liệu Tham Khảo
+    ("thông", "số", "lâm", "sàng"), # Thông Số Lâm Sàng
+    ("chi", "tiết", "điểm"),     # Chi Tiết Điểm
+    ("nguy", "cơ", "tử", "vong"), # Nguy Cơ Tử Vong
+    ("tái", "can", "thiệp"),     # Tái Can Thiệp
+    ("khuyến", "cáo", "điều", "trị"), # Khuyến Cáo Điều Trị
+    ("mẹo", "sử", "dụng"),      # Mẹo Sử Dụng
+    ("sử", "dụng"),             # Sử Dụng
+    ("tính", "toán", "gần", "đây"), # Tính Toán Gần Đây
+    ("tình", "huống", "lâm", "sàng"), # Tình Huống Lâm Sàng
+    ("truy", "cập", "nhanh"),   # Truy Cập Nhanh
+    ("thông", "số", "bệnh", "nhân"), # Thông Số Bệnh Nhân
+    ("tra", "cứu", "dữ", "liệu", "kháng", "sinh"), # Tra Cứu & Dữ Liệu Kháng Sinh
+    ("độ", "nhạy"),             # Độ Nhạy
+    ("tỷ", "lệ", "kháng", "thuốc"), # Tỷ Lệ Kháng Thuốc
+    ("ưu", "tiên"),             # Ưu Tiên
+    ("kiểm", "tra", "tương", "thích"), # Kiểm Tra Tương Thích
+    ("thuốc", "khác", "đang", "truyền"), # Thuốc Khác Đang Truyền
+    ("dịch", "truyền"),         # Dịch Truyền
 ]
 
 # Pattern để tìm các từ có chữ cái đầu viết hoa

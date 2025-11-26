@@ -63,7 +63,7 @@ def render_database():
     '>
         <div style='position: absolute; top: -50%; right: -10%; width: 300px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 50%; filter: blur(60px);'></div>
         <div style='position: relative; z-index: 1;'>
-            <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: 700; letter-spacing: -0.5px; text-shadow: 0 2px 8px rgba(0,0,0,0.2);'>🔍 Tra Cứu & Dữ Liệu Kháng Sinh</h1>
+            <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: 700; letter-spacing: -0.5px; text-shadow: 0 2px 8px rgba(0,0,0,0.2);'>🔍 Tra cứu & Dữ liệu kháng sinh</h1>
             <p style='margin: 12px 0 0 0; color: rgba(255,255,255,0.95); font-size: 1.15em; font-weight: 400; line-height: 1.6;'>
                 Database <strong style='font-weight: 700; font-size: 1.1em;'>{ab_count}</strong> kháng sinh tiêm truyền thông dụng • Tích hợp tính liều tự động
             </p>

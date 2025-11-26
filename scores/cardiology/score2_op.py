@@ -207,7 +207,7 @@ def render():
     st.markdown("**Đánh giá nguy cơ tim mạch ở người cao tuổi (≥70 tuổi)**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -371,7 +371,7 @@ def render():
         
         # Recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến Cáo Cho Người Cao Tuổi")
+        st.markdown("### 💊 Khuyến cáo Cho Người Cao Tuổi")
         st.markdown(result['recommendation'])
         
         # Important considerations

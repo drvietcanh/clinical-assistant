@@ -195,7 +195,7 @@ def render_dosing_calculator():
         **📖 Tra Cứu Kháng Sinh:**
         - Xem thông tin đầy đủ về kháng sinh đã chọn
         - Tính liều nhanh ngay trong trang tra cứu
-        - Dùng **"🔍 Tra Cứu & Dữ Liệu Kháng Sinh"** ở menu
+        - Dùng **"🔍 Tra cứu & Dữ liệu kháng sinh"** ở menu
         """)
 
 

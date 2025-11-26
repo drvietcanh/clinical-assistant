@@ -195,7 +195,7 @@ def render():
         """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Nguyên Nhân Thường Gặp")
+    st.markdown("### 4️⃣ Nguyên nhân thường gặp")
     
     st.warning("""
     **Pseudohyperkalemia:**

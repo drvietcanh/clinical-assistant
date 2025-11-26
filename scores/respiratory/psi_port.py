@@ -73,7 +73,7 @@ def render():
         )
         
         st.markdown("---")
-        st.markdown("### 🌡️ Triệu Chứng Lâm Sàng")
+        st.markdown("### 🌡️ Triệu chứng Lâm Sàng")
         
         altered_mental = st.checkbox(
             "Rối loạn ý thức",
@@ -398,7 +398,7 @@ def render():
                 st.markdown(f"**Tổng điểm: {score}**")
             
             st.markdown("---")
-            st.markdown("### 💊 Khuyến Cáo Điều Trị")
+            st.markdown("### 💊 Khuyến cáo điều trị")
             
             if risk_class in ["I", "II"]:
                 st.success(f"""

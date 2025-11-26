@@ -667,7 +667,7 @@ def render_sedation_scenario():
 def render_scenarios_calculator():
     """Main function to render clinical scenarios"""
     
-    st.markdown("## 🎯 Clinical Scenarios - Tình Huống Lâm Sàng")
+    st.markdown("## 🎯 Clinical Scenarios - Tình huống lâm sàng")
     st.markdown("""
     Hướng dẫn từng bước xử lý các tình huống lâm sàng phổ biến trong ICU:
     - Sepsis

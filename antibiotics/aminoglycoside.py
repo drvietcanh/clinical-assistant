@@ -207,7 +207,7 @@ def render():
                 target_trough = "<5 µg/mL trước liều tiếp theo"
             
             with col2:
-                st.markdown("### 📊 Liều Khuyến Cáo")
+                st.markdown("### 📊 Liều Khuyến cáo")
                 st.success(f"## {drug}")
                 st.metric("Liều", f"{dose:.0f} mg", f"{mg_per_kg} mg/kg")
                 st.metric("Tần suất", f"Mỗi {interval}h")

@@ -473,7 +473,7 @@ def render():
         # Score breakdown
         st.markdown("---")
         with st.expander("📊 Chi tiết điểm số"):
-            st.markdown("| Thành phần | Giá Trị | Điểm |")
+            st.markdown("| Thành phần | Giá trị | Điểm |")
             st.markdown("|------------|---------|------|")
             st.markdown(f"| **Bilirubin** | {bili_mgdl:.1f} mg/dL | {score_breakdown['Bilirubin']} |")
             st.markdown(f"| **Albumin** | {albumin:.1f} g/dL | {score_breakdown['Albumin']} |")
@@ -500,7 +500,7 @@ def render():
             """)
         
         # Comparison table
-        with st.expander("📊 So Sánh Child-Pugh Classes"):
+        with st.expander("📊 So sánh Child-Pugh Classes"):
             st.markdown("""
             | Class | Điểm | Mức Độ | Sống sót 1 năm | Sống sót 2 năm | Tử vong PT |
             |-------|------|---------|----------------|----------------|------------|

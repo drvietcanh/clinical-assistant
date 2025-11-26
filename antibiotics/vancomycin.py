@@ -128,7 +128,7 @@ def render():
         st.metric("CrCl (Cockcroft-Gault)", f"{crcl} mL/phút")
         
         # Indication
-        st.markdown("#### Chỉ Định Sử Dụng")
+        st.markdown("#### Chỉ Định Sử dụng")
         indication = st.selectbox(
             "Loại nhiễm khuẩn:",
             [
@@ -177,7 +177,7 @@ def render():
             maint_dose = round(maint_dose / 250) * 250  # Round to nearest 250mg
             
             with col2:
-                st.markdown("### 📊 Liều Khuyến Cáo")
+                st.markdown("### 📊 Liều Khuyến cáo")
                 st.success(f"## Loading Dose")
                 st.metric("Liều khởi đầu", f"{loading_dose:.0f} mg", f"{loading_dose_mg_kg} mg/kg")
                 st.caption("Truyền trong 1-2 giờ")

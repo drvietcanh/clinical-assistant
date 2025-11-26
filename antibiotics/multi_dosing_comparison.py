@@ -36,7 +36,7 @@ def render_multi_comparison():
     st.markdown("---")
     
     # Patient info (simplified - reuse from main calculator if available)
-    st.markdown("### 📋 Thông Số Bệnh Nhân (Tóm Tắt)")
+    st.markdown("### 📋 Thông số bệnh nhân (Tóm Tắt)")
     
     # Try to get from session state first
     patient_crcl = st.session_state.get('patient_crcl', None)

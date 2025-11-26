@@ -76,7 +76,7 @@ def render():
     st.markdown("### 🔍 Tìm Nguyên Nhân (PIMED)")
     
     st.warning("""
-    **PIMED - Các Nguyên Nhân Thường Gặp:**
+    **PIMED - Các Nguyên Nhân Thường gặp:**
     
     **P - Pain (Đau):**
     - Đau không được kiểm soát
@@ -112,7 +112,7 @@ def render():
     treatment_approach = st.radio(
         "**Phương Pháp Điều Trị:**",
         [
-            "Non-Pharmacologic (Không dùng thuốc) - Ưu Tiên",
+            "Non-Pharmacologic (Không dùng thuốc) - Ưu tiên",
             "Pharmacologic (Dùng thuốc) - Khi cần"
         ],
         key="delirium_treatment"
@@ -231,7 +231,7 @@ def render_hyperactive_delirium():
     - Nguy hiểm cho bản thân và nhân viên
     
     **Điều Trị:**
-    1. **Non-pharmacologic (Ưu Tiên):**
+    1. **Non-pharmacologic (Ưu tiên):**
        - Đảm bảo an toàn
        - Giải thích, trấn an
        - Môi trường yên tĩnh
@@ -263,7 +263,7 @@ def render_hypoactive_delirium():
     - Dễ bỏ sót (không rõ ràng như hyperactive)
     
     **Điều Trị:**
-    1. **Non-pharmacologic (Ưu Tiên):**
+    1. **Non-pharmacologic (Ưu tiên):**
        - Kích thích nhẹ nhàng
        - Định hướng lại
        - Huy động gia đình
@@ -291,7 +291,7 @@ def render_mixed_delirium():
     - Khó dự đoán
     
     **Điều Trị:**
-    1. **Non-pharmacologic (Ưu Tiên):**
+    1. **Non-pharmacologic (Ưu tiên):**
        - Linh hoạt theo từng giai đoạn
        - Đảm bảo an toàn khi kích động
        - Kích thích khi ức chế
@@ -312,7 +312,7 @@ def render_non_pharmacologic():
     st.success("## ✅ Non-Pharmacologic Management (ABCDE Bundle)")
     
     st.markdown("""
-    **ABCDE Bundle - Ưu Tiên Hàng Đầu:**
+    **ABCDE Bundle - Ưu tiên Hàng Đầu:**
     
     **A - Assess, Prevent, and Manage Pain:**
     - Đánh giá đau thường xuyên

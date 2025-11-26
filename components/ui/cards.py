@@ -218,3 +218,99 @@ def render_info_card(
     
     return card_html
 
+
+def render_clickable_dashboard_card(
+    title: str,
+    description: str,
+    icon: str,
+    gradient: str,
+    action_key: str,
+    action_value: str,
+    tooltip: str = None
+) -> None:
+    """
+    Render a clickable dashboard card that navigates to a tool
+    
+    Args:
+        title: Card title (English)
+        description: Card description (Vietnamese)
+        icon: Icon emoji
+        gradient: CSS gradient string
+        action_key: Session state key to set (e.g., 'critical_care_tool_selection')
+        action_value: Value to set in session state (e.g., '💧 Fluid Therapy')
+        tooltip: Optional tooltip text
+    
+    Example:
+        >>> render_clickable_dashboard_card(
+        ...     "Fluid Therapy", "Dịch truyền & Điện giải", "💧",
+        ...     "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        ...     "critical_care_tool_selection", "💧 Fluid Therapy"
+        ... )
+    """
+    # Inject card-specific styles (only once)
+    if 'dashboard_card_styles_injected' not in st.session_state:
+        st.markdown("""
+        <style>
+        .dashboard-card-wrapper {
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .dashboard-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        
+        .dashboard-card-button {
+            margin-top: 8px;
+            width: 100%;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        st.session_state['dashboard_card_styles_injected'] = True
+    
+    # Render card HTML with wrapper
+    card_html = f"""
+    <div class="dashboard-card-wrapper">
+        <div class="dashboard-card" style="background: {gradient};">
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">{icon}</div>
+            <div style="font-weight: bold; font-size: 1.1rem;">{title}</div>
+            <div style="font-size: 0.9rem; margin-top: 5px; opacity: 0.95;">{description}</div>
+        </div>
+    </div>
+    """
+    st.markdown(card_html, unsafe_allow_html=True)
+    
+    # Button below card for navigation - styled to match card
+    button_style = f"""
+    <style>
+    div[data-testid*="{action_key}_{title}"] button {{
+        background: {gradient} !important;
+        color: white !important;
+        border: none !important;
+        font-weight: 600 !important;
+        transition: all 0.2s ease !important;
+    }}
+    
+    div[data-testid*="{action_key}_{title}"] button:hover {{
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+    }}
+    </style>
+    """
+    st.markdown(button_style, unsafe_allow_html=True)
+    
+    if st.button(f"▶️ Mở {title}", key=f"dashboard_card_{action_key}_{title}", use_container_width=True, help=tooltip):
+        # Set session state to trigger navigation
+        st.session_state[action_key] = action_value
+        st.rerun()

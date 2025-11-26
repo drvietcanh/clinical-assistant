@@ -547,7 +547,7 @@ def render_algorithm(algorithm_name):
                 border-left: 4px solid #4CAF50;
                 margin: 15px 0;
             '>
-                <h4 style='color: #2e7d32; margin-bottom: 10px;'>💊 Khuyến Cáo:</h4>
+                <h4 style='color: #2e7d32; margin-bottom: 10px;'>💊 Khuyến cáo:</h4>
                 <p style='font-size: 1.1em; font-weight: 600; color: #1976D2; margin: 10px 0;'>{option_data['recommendation']}</p>
                 <p style='color: #666; margin-top: 10px;'><strong>💡 Lý do:</strong> {option_data.get('rationale', '')}</p>
             </div>

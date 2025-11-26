@@ -309,7 +309,7 @@ def render():
             """)
         
         # Comparison with mRS
-        with st.expander("🔄 So Sánh Với mRS"):
+        with st.expander("🔄 So sánh Với mRS"):
             st.markdown("""
             **Barthel Index** và **mRS (Modified Rankin Scale)** đều đánh giá chức năng sau đột quỵ:
             

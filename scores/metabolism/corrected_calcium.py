@@ -195,7 +195,7 @@ def render():
                 
                 **Ca của bạn: {ca_corrected_mgdl:.1f} mg/dL** = {"Nhẹ" if ca_corrected_mgdl > 7.5 else "Trung bình" if ca_corrected_mgdl > 6.5 else "NẶNG"}
                 
-                **Triệu Chứng:**
+                **Triệu chứng:**
                 
                 **Nhẹ-Trung bình:**
                 - Tê bì chung quanh miệng, tay chân

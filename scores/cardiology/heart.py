@@ -126,7 +126,7 @@ def render():
                     mace_risk = "50-65%"
                     color = "error"
             
-            st.markdown("### 💡 Chi tiết Điểm")
+            st.markdown("### 💡 Chi tiết điểm")
             st.write(f"- **H** (History): {history} điểm")
             st.write(f"- **E** (ECG): {ecg} điểm")
             st.write(f"- **A** (Age): {age} điểm")
@@ -134,7 +134,7 @@ def render():
             st.write(f"- **T** (Troponin): {troponin} điểm")
             
             st.markdown("---")
-            st.markdown("### 💊 Khuyến Cáo Xử Trí")
+            st.markdown("### 💊 Khuyến cáo Xử Trí")
             
             if total_score <= 3:
                 st.success("""

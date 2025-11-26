@@ -292,7 +292,7 @@ def render():
             - **HA:** 2 lần/ngày tại nhà hoặc hàng ngày tại viện
             - **Xét nghiệm:** 2 lần/tuần (CBC, CMP, LFT)
             - **Thai nhi:** NST 2 lần/tuần, siêu âm 1-2 lần/tuần
-            - **Triệu Chứng:** Hướng dẫn nhận biết dấu hiệu nặng
+            - **Triệu chứng:** Hướng dẫn nhận biết dấu hiệu nặng
             
             **3️⃣ KHÔNG cần:**
             - Điều trị huyết áp (trừ khi HA ≥ 160/110)
@@ -364,7 +364,7 @@ def render():
     **Huyết áp:**
     - HA ≥ 160/110 mmHg
     
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Đau đầu dữ dội dai dẳng
     - Rối loạn thị giác
     - Đau thượng vị/hạ sườn phải

@@ -22,6 +22,8 @@ try:
     COAG_RANGES = _lab_data.get("COAG_RANGES", {})
     THYROID_RANGES = _lab_data.get("THYROID_RANGES", {})
     ADDITIONAL_RANGES = _lab_data.get("ADDITIONAL_RANGES", {})
+    # CMP (Comprehensive Metabolic Panel) = BMP + LFT
+    CMP_RANGES = {**BMP_RANGES, **LFT_RANGES}
 except FileNotFoundError:
     # Fallback to empty dicts if JSON not found
     CBC_RANGES = {}
@@ -32,8 +34,11 @@ except FileNotFoundError:
     COAG_RANGES = {}
     THYROID_RANGES = {}
     ADDITIONAL_RANGES = {}
+    # CMP (Comprehensive Metabolic Panel) = BMP + LFT
+    CMP_RANGES = {}
 
 # Combine all ranges
+# Note: CMP_RANGES is BMP + LFT combined, so we don't need to add it separately here
 ALL_RANGES = {
     **CBC_RANGES,
     **BMP_RANGES,

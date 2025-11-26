@@ -300,7 +300,7 @@ def render():
         # Score breakdown
         with st.expander("📊 Chi tiết điểm số"):
             st.markdown(f"""
-            | Thành Phần | Giá Trị | Điểm |
+            | Thành Phần | Giá trị | Điểm |
             |------------|---------|------|
             | **GCS Score** | {gcs_selection} | {gcs_score} |
             | **ICH Volume** | {volume_selection} | {volume_score} |

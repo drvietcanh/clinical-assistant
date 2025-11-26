@@ -76,7 +76,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: LABORATORY CRITERIA ==========
-    st.markdown("### 🧪 Tiêu chuẩn Xét Nghiệm (Laboratory TLS)")
+    st.markdown("### 🧪 Tiêu chuẩn xét nghiệm (Laboratory TLS)")
     
     with st.expander("🔍 Xem tiêu chuẩn chẩn đoán TLS", expanded=True):
         st.markdown("""

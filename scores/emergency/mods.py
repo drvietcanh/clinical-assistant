@@ -214,7 +214,7 @@ def render():
     st.markdown("**Multiple Organ Dysfunction Score - Đánh giá rối loạn đa cơ quan**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -245,7 +245,7 @@ def render():
         | 9-12 | 25-50% |
         | >12 | >50% |
         
-        ### 🔍 So Sánh với SOFA
+        ### 🔍 So sánh với SOFA
         
         **MODS vs SOFA:**
         - MODS đơn giản hơn (không cần vasopressor dose)

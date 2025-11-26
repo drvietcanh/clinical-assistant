@@ -248,7 +248,7 @@ def render():
     st.markdown("**Đánh giá xác suất giảm tiểu cầu do heparin**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         

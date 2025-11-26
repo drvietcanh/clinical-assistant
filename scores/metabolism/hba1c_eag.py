@@ -189,7 +189,7 @@ def render():
             
             # Reference table
             st.markdown("---")
-            st.subheader("📋 Bảng Tham Chiếu HbA1c - eAG")
+            st.subheader("📋 Bảng Tham chiếu HbA1c - eAG")
             
             st.markdown("""
             | HbA1c (%) | eAG (mg/dL) | eAG (mmol/L) | Phân loại |

@@ -16,12 +16,12 @@ def render():
     """)
     
     # Assessment
-    st.markdown("### 1️⃣ Đánh giá Ban Đầu")
+    st.markdown("### 1️⃣ Đánh giá ban đầu")
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("#### Triệu Chứng & Dấu Hiệu")
+        st.markdown("#### Triệu chứng & Dấu hiệu")
         
         # Symptoms
         dyspnea = st.checkbox("Khó thở", key="hf_dyspnea")

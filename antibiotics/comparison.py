@@ -125,7 +125,7 @@ def render_comparison():
             "AWaRe": aware,
             "Liều Dùng": dosage_str,
             "Chỉ Định": indications_str,
-            "Độ Nhạy": suscept_str,
+            "Độ nhạy": suscept_str,
             "Tác Dụng Phụ": side_effects_str
         })
     
@@ -138,7 +138,7 @@ def render_comparison():
     # Detailed comparison by category
     st.markdown("### 📊 So sánh chi tiết:")
     
-    comparison_tabs = st.tabs(["💉 Liều Dùng", "📋 Chỉ Định", "🦠 Độ Nhạy", "⚠️ Tác Dụng Phụ", "🫘 Điều Chỉnh Thận"])
+    comparison_tabs = st.tabs(["💉 Liều Dùng", "📋 Chỉ Định", "🦠 Độ nhạy", "⚠️ Tác Dụng Phụ", "🫘 Điều Chỉnh Thận"])
     
     # Dosage comparison
     with comparison_tabs[0]:
@@ -183,7 +183,7 @@ def render_comparison():
     
     # Susceptibility comparison
     with comparison_tabs[2]:
-        st.markdown("#### 🦠 Độ Nhạy Thường Gặp:")
+        st.markdown("#### 🦠 Độ nhạy Thường gặp:")
         for ab_name in selected_antibiotics:
             if ab_name not in ANTIBIOTICS_DATABASE:
                 continue

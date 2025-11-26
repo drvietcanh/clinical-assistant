@@ -327,7 +327,7 @@ def render():
             st.markdown(f"**→ Tổng điểm: {total_score}/42**")
             
             st.markdown("---")
-            st.markdown("### 💊 Khuyến Cáo Điều Trị")
+            st.markdown("### 💊 Khuyến cáo điều trị")
             
             if total_score == 0:
                 st.success("""

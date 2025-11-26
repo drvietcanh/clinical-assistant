@@ -18,12 +18,12 @@ def render():
     """)
     
     # Assessment
-    st.markdown("### 1️⃣ Đánh giá Mức Độ Nặng")
+    st.markdown("### 1️⃣ Đánh giá mức độ nặng")
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("#### Triệu Chứng & Dấu Hiệu")
+        st.markdown("#### Triệu chứng & Dấu hiệu")
         
         # Symptoms
         difficulty_speaking = st.checkbox("Khó nói thành câu / từng cụm từ", key="asthma_speech")

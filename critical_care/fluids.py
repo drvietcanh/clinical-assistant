@@ -177,7 +177,7 @@ def calculate_maintenance_electrolytes(weight_kg: float) -> dict:
 def render_fluid_calculator():
     """Render fluid therapy calculator interface"""
     
-    st.markdown("## 💧 Tính Toán Dịch Truyền")
+    st.markdown("## 💧 Tính Toán Dịch truyền")
     st.markdown("""
     Công cụ tính toán dịch truyền và điện giải cho bệnh nhân.
     

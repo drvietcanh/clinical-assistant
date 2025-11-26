@@ -276,7 +276,7 @@ drugs/
    - Commit từng module riêng để dễ review
    - Merge sau khi test kỹ
 
-## 📊 So Sánh
+## 📊 So sánh
 
 | Metric | Hiện Tại | Sau Khi Tách |
 |--------|----------|--------------|

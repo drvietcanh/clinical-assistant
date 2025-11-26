@@ -49,7 +49,7 @@ def render_advanced_features_tabs(
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "📜 Lịch Sử",
         "📊 Batch",
-        "🔀 So Sánh",
+        "🔀 So sánh",
         "📋 Templates",
         "↶ Undo/Redo"
     ])

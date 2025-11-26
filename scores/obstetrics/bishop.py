@@ -362,7 +362,7 @@ def render():
             """)
             
             st.info("""
-            ### ✅ Phương Pháp Induction Khuyến Cáo:
+            ### ✅ Phương Pháp Induction Khuyến cáo:
             
             **Với Bishop > 8:**
             

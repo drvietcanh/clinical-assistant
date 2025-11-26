@@ -17,7 +17,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Số Lâm Sàng")
+        st.markdown("### 📋 Thông số lâm sàng")
         
         # Age
         age = st.number_input(

@@ -26,7 +26,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Đánh giá Mức Độ Nặng")
+    st.markdown("### 📊 Đánh giá mức độ nặng")
     
     severity_score = st.radio(
         "**Hệ thống đánh giá:**",

@@ -219,7 +219,7 @@ def render_history_panel():
         
         # So sánh entries
         st.markdown("---")
-        st.markdown("#### 🔄 So Sánh Entries")
+        st.markdown("#### 🔄 So sánh Entries")
         
         col1, col2 = st.columns(2)
         with col1:

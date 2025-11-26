@@ -54,7 +54,7 @@ def render_important_notes():
 
 def render_comparison_table():
     """Render comparison table expander"""
-    with st.expander("📊 Bảng So Sánh mRS Scores"):
+    with st.expander("📊 Bảng So sánh mRS Scores"):
         st.markdown("""
         | mRS | Mô Tả | Đi Lại | Tự Chăm Sóc | Độc Lập | Kết Cục |
         |-----|-------|--------|-------------|---------|---------|
@@ -205,7 +205,7 @@ def render_clinical_decisions():
 
 def render_common_mistakes():
     """Render common mistakes expander"""
-    with st.expander("⚠️ Những Sai Lầm Thường Gặp"):
+    with st.expander("⚠️ Những Sai Lầm Thường gặp"):
         st.markdown("""
         **1. Đánh giá dựa trên tiềm năng thay vì thực tế:**
         - ❌ SAI: "Bệnh nhân CÓ THỂ tự tắm nếu cố gắng" → mRS 2

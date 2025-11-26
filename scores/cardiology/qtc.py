@@ -167,7 +167,7 @@ def render():
     
     st.title("💓 QTc - Corrected QT Interval")
     st.markdown("""
-    ### QT Điều Chỉnh Theo Nhịp Tim
+    ### QT Điều Chỉnh Theo Nhịp tim
     
     **QT interval:**
     - Thời gian từ bắt đầu sóng Q đến kết thúc sóng T
@@ -187,7 +187,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.subheader("📊 Nhập Thông Số ECG")
+    st.subheader("📊 Nhập thông số ECG")
     
     col1, col2 = st.columns(2)
     
@@ -222,7 +222,7 @@ def render():
         
         # Heart rate input
         hr = st.number_input(
-            "**Nhịp Tim (bpm)**",
+            "**Nhịp tim (bpm)**",
             min_value=30,
             max_value=200,
             value=75,
@@ -291,7 +291,7 @@ def render():
         
         with col2:
             st.metric(
-                "Nhịp Tim",
+                "Nhịp tim",
                 f"{hr} bpm",
                 help="Tần số tim"
             )
@@ -346,7 +346,7 @@ def render():
         
         # Reference values
         st.markdown("---")
-        st.subheader("📋 Giá Trị Tham Chiếu")
+        st.subheader("📋 Giá trị tham chiếu")
         
         col1, col2 = st.columns(2)
         
@@ -370,7 +370,7 @@ def render():
         
         # QT prolonging drugs
         st.markdown("---")
-        st.subheader("💊 Thuốc Gây Kéo Dài QT Thường Gặp")
+        st.subheader("💊 Thuốc gây kéo dài QT Thường gặp")
         
         drugs = get_qtc_prolonging_drugs()
         
@@ -392,9 +392,9 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Kiến Thức Bổ Sung")
+    st.subheader("📚 Kiến thức bổ sung")
     
-    with st.expander("📐 So Sánh Các Công Thức QTc"):
+    with st.expander("📐 So sánh các công thức QTc"):
         st.markdown("""
         ### 1. Bazett's Formula (1920) - Phổ biến nhất
         ```
@@ -436,7 +436,7 @@ def render():
         - **Nghiên cứu:** Báo cáo cả Bazett và Fridericia
         """)
     
-    with st.expander("🎯 Cách Đo QT Interval Chính Xác"):
+    with st.expander("🎯 Cách đo QT Interval chính xác"):
         st.markdown("""
         ### Kỹ thuật đo QT:
         
@@ -472,7 +472,7 @@ def render():
           + **Hodges:** QTc = QT - (0.154 × QRS)
         """)
     
-    with st.expander("⚠️ Nguyên Nhân Kéo Dài QT"):
+    with st.expander("⚠️ Nguyên nhân kéo dài QT"):
         st.markdown("""
         ### Nguyên nhân bẩm sinh:
         
@@ -538,7 +538,7 @@ def render():
         - Kéo dài QT bẩm sinh
         - Chuyển đổi gần đây từ AF về nhịp xoang
         
-        **Triệu Chứng:**
+        **Triệu chứng:**
         - Hồi hộp, choáng váng
         - Ngất (syncope)
         - Đột tử (nếu tiến triển → VF)
@@ -571,7 +571,7 @@ def render():
         - Giảm liều ở suy thận, suy gan
         """)
     
-    with st.expander("💡 Quản Lý Kéo Dài QT Do Thuốc"):
+    with st.expander("💡 Quản lý kéo dài QT do thuốc"):
         st.markdown("""
         ### Khi phát hiện QTc kéo dài:
         

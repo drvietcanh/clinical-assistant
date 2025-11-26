@@ -271,7 +271,7 @@ def render_vancomycin_tdm():
     tab1, tab2, tab3 = st.tabs(["🧮 Tính Liều (AUC-based)", "🧮 Tính Liều (Trough-based)", "📊 Giải Thích Nồng Độ"])
     
     with tab1:
-        st.markdown("### 📋 AUC-Based Dosing (Ưu Tiên)")
+        st.markdown("### 📋 AUC-Based Dosing (Ưu tiên)")
         st.info("""
         **AUC-based dosing là phương pháp ưu tiên:**
         - Mục tiêu: AUC 400-600 mg·h/L
@@ -280,7 +280,7 @@ def render_vancomycin_tdm():
         """)
         
         st.markdown("---")
-        st.markdown("#### 📋 Thông Số Bệnh Nhân")
+        st.markdown("#### 📋 Thông số bệnh nhân")
         
         col1, col2 = st.columns(2)
         
@@ -414,7 +414,7 @@ def render_vancomycin_tdm():
         """)
         
         st.markdown("---")
-        st.markdown("#### 📋 Thông Số Bệnh Nhân")
+        st.markdown("#### 📋 Thông số bệnh nhân")
         
         col1, col2 = st.columns(2)
         

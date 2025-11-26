@@ -99,7 +99,7 @@ def render():
                     st.write(f"- {d}")
             
             st.markdown("---")
-            st.markdown("### 💊 Khuyến Cáo")
+            st.markdown("### 💊 Khuyến cáo")
             
             if score <= 2:
                 st.success("""

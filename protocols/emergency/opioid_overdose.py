@@ -15,7 +15,7 @@ def render():
     st.error("""
     **⚠️ NGỘ ĐỘC OPIOID = CẤP CỨU Y TẾ**
     
-    **Triệu Chứng Điển Hình:**
+    **Triệu chứng Điển Hình:**
     - Ức chế hô hấp (respiratory depression)
     - Đồng tử co nhỏ (miosis)
     - Giảm ý thức, hôn mê

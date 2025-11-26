@@ -275,7 +275,7 @@ def render():
 
 def render_symptom_triggered():
     """Symptom-triggered protocol"""
-    st.success("## 🟢 Symptom-Triggered (Theo Triệu Chứng)")
+    st.success("## 🟢 Symptom-Triggered (Theo Triệu chứng)")
     
     st.markdown("""
     **Chỉ Định:**

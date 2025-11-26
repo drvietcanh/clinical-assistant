@@ -18,12 +18,12 @@ def render():
     """)
     
     # Assessment
-    st.markdown("### 1️⃣ Đánh giá Mức Độ Nặng")
+    st.markdown("### 1️⃣ Đánh giá mức độ nặng")
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("#### Triệu Chứng")
+        st.markdown("#### Triệu chứng")
         dyspnea_increased = st.checkbox("Khó thở tăng", key="copd_dyspnea")
         sputum_increased = st.checkbox("Đờm tăng", key="copd_sputum")
         sputum_purulent = st.checkbox("Đờm mủ", key="copd_purulent")
@@ -79,7 +79,7 @@ def render():
         - Tần suất: Mỗi 4-6h
         - **Phối hợp SABA + SAMA hiệu quả hơn đơn trị**
         
-        **Liều Khuyến Cáo:**
+        **Liều Khuyến cáo:**
         """)
         
         if severity == "severe":

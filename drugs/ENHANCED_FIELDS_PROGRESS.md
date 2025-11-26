@@ -1,6 +1,6 @@
 ---
 
-## Ưu Tiên Bổ Sung (Đề Xuất)
+## Ưu tiên Bổ Sung (Đề Xuất)
 
 ### Nhóm 1 - Thuốc Cấp Cứu & Thường Dùng (Ưu tiên cao)
 - Paracetamol (thuốc giảm đau phổ biến nhất)

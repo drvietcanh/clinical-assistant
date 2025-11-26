@@ -361,7 +361,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION: COMMON CAUSES ==========
-    st.markdown("### 🔍 Nguyên Nhân Thường Gặp")
+    st.markdown("### 🔍 Nguyên nhân thường gặp")
     
     st.warning("""
     **Nguyên nhân thúc đẩy HHS:**

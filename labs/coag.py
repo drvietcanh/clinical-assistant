@@ -99,7 +99,7 @@ def render():
         
         ---
         
-        ### **aPTT - Sử Dụng:**
+        ### **aPTT - Sử dụng:**
         
         **Theo dõi Heparin không phân đoạn:**
         - Mục tiêu: **1.5 - 2.5 x baseline** (~ 60-80 giây)

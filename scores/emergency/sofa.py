@@ -254,7 +254,7 @@ def render():
     st.markdown("**Sequential Organ Failure Assessment - Đánh giá suy đa cơ quan**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         

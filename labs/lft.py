@@ -22,7 +22,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 📝 Nhập Giá Trị")
+        st.markdown("#### 📝 Nhập Giá trị")
         
         alt = st.number_input("ALT/SGPT (U/L)", 0.0, 1000.0, 30.0, 1.0, format="%.0f")
         ast = st.number_input("AST/SGOT (U/L)", 0.0, 1000.0, 25.0, 1.0, format="%.0f")
@@ -129,7 +129,7 @@ def render():
     
     # Patterns
     st.markdown("---")
-    with st.expander("📊 Các Mẫu LFT Thường Gặp"):
+    with st.expander("📊 Các Mẫu LFT Thường gặp"):
         st.markdown("""
         **Mẫu Tổn Thương Tế Bào Gan (ALT, AST ⬆️⬆️):**
         - Viêm gan virus (A, B, C)

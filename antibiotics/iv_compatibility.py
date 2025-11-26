@@ -220,7 +220,7 @@ def render_iv_compatibility_checker(antibiotic_name: str):
         antibiotic_name: Tên kháng sinh chính
     """
     st.markdown("---")
-    st.markdown("### 💉 Kiểm Tra Tương Thích IV")
+    st.markdown("### 💉 Kiểm tra tương thích IV")
     
     st.info("""
     **Kiểm tra tính tương thích khi pha chế IV:**
@@ -230,7 +230,7 @@ def render_iv_compatibility_checker(antibiotic_name: str):
     """)
     
     # Input: Other drugs
-    st.markdown("#### 📋 Thuốc Khác Đang Truyền")
+    st.markdown("#### 📋 Thuốc khác đang truyền")
     
     # Sanitize antibiotic name for keys
     from .database_display import _make_safe_session_key
@@ -244,7 +244,7 @@ def render_iv_compatibility_checker(antibiotic_name: str):
     )
     
     # Common IV fluids
-    st.markdown("#### 💧 Dịch Truyền")
+    st.markdown("#### 💧 Dịch truyền")
     col1, col2, col3 = st.columns(3)
     
     with col1:
@@ -273,7 +273,7 @@ def render_iv_compatibility_checker(antibiotic_name: str):
         return
     
     # Check button
-    if st.button("🔍 Kiểm Tra Tương Thích", type="primary", key=_make_safe_session_key(safe_ab_name, "check")):
+    if st.button("🔍 Kiểm tra tương thích", type="primary", key=_make_safe_session_key(safe_ab_name, "check")):
         results = check_multiple_drugs(drugs_to_check)
         
         if not results:

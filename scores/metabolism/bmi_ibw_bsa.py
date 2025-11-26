@@ -579,7 +579,7 @@ def render():
         
         ---
         
-        ### 📊 So Sánh Tổng Hợp
+        ### 📊 So sánh Tổng Hợp
         
         | Chỉ số | Đơn vị | Mục đích | Khi nào dùng |
         |:-------|:-------|:---------|:-------------|

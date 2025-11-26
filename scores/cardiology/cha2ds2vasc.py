@@ -105,7 +105,7 @@ def render():
                     else:
                         risk = ">10%/năm"
             
-            st.markdown("### 💡 Giải Thích & Khuyến Cáo")
+            st.markdown("### 💡 Giải Thích & Khuyến cáo")
             st.markdown(f"**Nguy cơ đột quỵ hàng năm:** {risk}")
             
             st.markdown("**Chi tiết điểm:**")
@@ -116,7 +116,7 @@ def render():
                 st.write("- Không có yếu tố nguy cơ")
             
             st.markdown("---")
-            st.markdown("### 💊 Khuyến Cáo Điều Trị")
+            st.markdown("### 💊 Khuyến cáo điều trị")
             
             if score == 0 and sex == "Nam":
                 st.info("""

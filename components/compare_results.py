@@ -30,7 +30,7 @@ def render_compare_results(
         st.warning("Cần ít nhất 2 kết quả để so sánh")
         return
     
-    st.subheader("🔀 So Sánh Kết quả")
+    st.subheader("🔀 So sánh Kết quả")
     
     # Default labels
     if not labels:
@@ -100,7 +100,7 @@ def render_compare_from_history(
     """
     from components.calculation_history import get_calculation_history
     
-    st.subheader("🔀 So Sánh Từ Lịch Sử")
+    st.subheader("🔀 So sánh Từ Lịch Sử")
     
     # Get history
     history = get_calculation_history(calculator_id=calculator_id, limit=50)
@@ -141,7 +141,7 @@ def render_compare_from_history(
     
     # Quick compare: Before/After
     st.markdown("---")
-    st.markdown("### ⚡ So Sánh Nhanh: Trước/Sau")
+    st.markdown("### ⚡ So sánh Nhanh: Trước/Sau")
     
     col1, col2 = st.columns(2)
     
@@ -199,7 +199,7 @@ def render_compare_current_with_history(
     """
     from components.calculation_history import get_calculation_history
     
-    st.markdown("### 🔀 So Sánh Với Lịch Sử")
+    st.markdown("### 🔀 So sánh Với Lịch Sử")
     
     # Get recent calculations for this calculator
     history = get_calculation_history(calculator_id=calculator_id, limit=5)

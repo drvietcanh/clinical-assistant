@@ -53,7 +53,7 @@ def render():
     medication_type = st.radio(
         "**Loại thuốc:**",
         [
-            "Analgesia (Giảm Đau) - Ưu Tiên",
+            "Analgesia (Giảm Đau) - Ưu tiên",
             "Sedation (An Thần)",
             "Combined (Kết Hợp)"
         ],
@@ -211,7 +211,7 @@ def render():
 
 def render_analgesia():
     """Analgesia protocol"""
-    st.success("## 💉 Analgesia (Giảm Đau) - Ưu Tiên")
+    st.success("## 💉 Analgesia (Giảm Đau) - Ưu tiên")
     
     st.markdown("""
     **Nguyên tắc: Analgesia First**

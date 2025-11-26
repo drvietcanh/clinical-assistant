@@ -134,7 +134,7 @@ def render():
                 7: "65.0%"
             }
             
-            st.markdown("### 💡 Chi tiết Điểm")
+            st.markdown("### 💡 Chi tiết điểm")
             if details:
                 for d in details:
                     st.write(f"- {d}")
@@ -142,14 +142,14 @@ def render():
                 st.write("- Không có yếu tố nguy cơ")
             
             st.markdown("---")
-            st.markdown("### 📈 Nguy Cơ Tử Vong/MI/Tái Can Thiệp (14 Ngày)")
+            st.markdown("### 📈 Nguy cơ tử vong/MI/Tái can thiệp (14 Ngày)")
             st.metric(
                 label="Nguy cơ sự kiện bất lợi",
                 value=risk_data.get(score, ">65%"),
                 delta=f"TIMI Score = {score}"
             )
             
-            st.markdown("### 💊 Khuyến Cáo Điều Trị")
+            st.markdown("### 💊 Khuyến cáo điều trị")
             
             if score <= 2:
                 st.success(f"""
@@ -197,13 +197,13 @@ def render():
             
             # Prepare inputs for export
             inputs_dict = {
-                "Age ≥65": "Có" if age >= 65 else "Không",
-                "≥3 CAD Risk Factors": "Có" if risk_factors >= 3 else "Không",
+                "Age ≥65": "Có" if age_65 else "Không",
+                "≥3 CAD Risk Factors": "Có" if rf_count >= 3 else "Không",
                 "Known CAD": "Có" if known_cad else "Không",
                 "Aspirin in Past 7 Days": "Có" if aspirin else "Không",
                 "Severe Angina": "Có" if severe_angina else "Không",
-                "ST Deviation": "Có" if st_deviation else "Không",
-                "Positive Cardiac Marker": "Có" if positive_marker else "Không"
+                "ST Deviation": "Có" if st_changes else "Không",
+                "Positive Cardiac Marker": "Có" if elevated_markers else "Không"
             }
             
             # Prepare results for export

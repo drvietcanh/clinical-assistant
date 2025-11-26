@@ -37,7 +37,7 @@ def render():
         - RR interval không đều
         - Tần số thất: 100-180 bpm (không điều trị)
         
-        **Triệu Chứng:**
+        **Triệu chứng:**
         - Hồi hộp, đánh trống ngực
         - Khó thở, mệt mỏi
         - Đau ngực, chóng mặt
@@ -72,7 +72,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Đánh giá Nguy Cơ")
+    st.markdown("### 📊 Đánh giá nguy cơ")
     
     st.info("""
     **CHADS₂-VASc Score (Nguy cơ đột quỵ):**

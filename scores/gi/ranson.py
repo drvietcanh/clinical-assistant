@@ -518,7 +518,7 @@ def render():
     st.markdown("---")
     st.subheader("📚 Thông tin bổ sung")
     
-    with st.expander("🆚 So Sánh Các Hệ Thống Tiên Lượng"):
+    with st.expander("🆚 So sánh Các Hệ Thống Tiên Lượng"):
         st.markdown("""
         ### Ranson vs APACHE II vs Atlanta:
         

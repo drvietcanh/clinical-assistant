@@ -368,7 +368,7 @@ def render():
     st.markdown("**Phân loại và đánh giá giai đoạn suy thận cấp**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         

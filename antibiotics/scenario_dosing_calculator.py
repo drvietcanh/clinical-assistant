@@ -167,7 +167,7 @@ def create_dosing_chart(results_df, antibiotic_name):
         ))
     
     fig.update_layout(
-        title=f"📊 So Sánh Liều {antibiotic_name} Theo Scenarios",
+        title=f"📊 So sánh Liều {antibiotic_name} Theo Scenarios",
         xaxis_title="Scenario (CrCl)",
         yaxis_title="Liều (mg)",
         barmode='group',

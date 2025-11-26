@@ -323,7 +323,7 @@ def render_immunosuppressants_tdm():
                     st.error("""
                     **🚨 Độc Tính Tacrolimus:**
                     
-                    **Triệu Chứng:**
+                    **Triệu chứng:**
                     - Độc thận (tăng creatinine)
                     - Độc thần kinh (run tay, co giật)
                     - Tăng đường huyết

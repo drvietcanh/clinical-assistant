@@ -494,9 +494,9 @@ def render():
         """)
         
         # Comparison table
-        with st.expander("📊 So Sánh Hunt & Hess Grades"):
+        with st.expander("📊 So sánh Hunt & Hess Grades"):
             st.markdown("""
-            | Grade | Triệu Chứng Chính | GCS | Tử Vong | Tiên Lượng |
+            | Grade | Triệu chứng Chính | GCS | Tử Vong | Tiên Lượng |
             |-------|-------------------|-----|---------|------------|
             | **1** | Không triệu chứng/Đau đầu nhẹ | 15 | 0-5% | 🟢 Rất tốt |
             | **2** | Đau đầu nặng, cứng gáy | 14-15 | 5-10% | 🟢 Tốt |

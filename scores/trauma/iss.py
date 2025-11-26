@@ -207,7 +207,7 @@ def render():
     st.markdown("**Đánh giá mức độ nặng đa chấn thương dựa trên giải phẫu**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         

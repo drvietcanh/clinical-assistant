@@ -250,7 +250,7 @@ def render():
     st.markdown("---")
     
     # Data entry
-    st.markdown("#### 📝 Nhập Giá Trị")
+    st.markdown("#### 📝 Nhập Giá trị")
     
     panel_data = {}
     

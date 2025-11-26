@@ -1,6 +1,6 @@
-# So Sánh Schema với Các Ứng Dụng Medical Calculator Phổ Biến
+# So sánh Schema với Các Ứng Dụng Medical Calculator Phổ Biến
 
-## Các Ứng Dụng Được So Sánh
+## Các Ứng Dụng Được So sánh
 
 1. **UpToDate** - Drug Information
 2. **Medscape** - Drug Reference
@@ -18,7 +18,7 @@
 ✅ `storage` - Điều kiện bảo quản  
 ✅ `black_box_warnings` - Cảnh báo hộp đen  
 
-## So Sánh Chi tiết
+## So sánh Chi tiết
 
 ### 1. DRUG INTERACTIONS / TƯƠNG TÁC THUỐC
 

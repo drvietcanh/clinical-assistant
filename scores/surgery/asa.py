@@ -504,7 +504,7 @@ def render():
         - COPD trung bình-nặng: ASA III
         """)
     
-    with st.expander("📊 ASA vs Nguy Cơ Tử Vong"):
+    with st.expander("📊 ASA vs Nguy cơ tử vong"):
         st.markdown("""
         ### Tỷ lệ tử vong theo ASA:
         

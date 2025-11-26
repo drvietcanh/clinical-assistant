@@ -72,7 +72,7 @@ def render_ardsnet():
                 - Max: {vt_high:.0f} mL (8 mL/kg)
                 """)
             
-            st.markdown("### 💡 Khuyến Cáo")
+            st.markdown("### 💡 Khuyến cáo")
             
             if current_vt > 0:
                 if current_vt > vt_high:

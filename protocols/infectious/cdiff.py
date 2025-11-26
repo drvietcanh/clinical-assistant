@@ -21,7 +21,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: SEVERITY ASSESSMENT ==========
-    st.markdown("### 📊 Đánh giá Mức Độ Nặng")
+    st.markdown("### 📊 Đánh giá mức độ nặng")
     
     st.markdown("**Phân Loại Mức Độ Theo IDSA/SHEA 2021:**")
     
@@ -291,7 +291,7 @@ def render():
     st.markdown("**Theo Dõi Trong Quá Trình Điều Trị:**")
     
     monitoring_items = [
-        "**Triệu Chứng:** Số lần tiêu chảy, đau bụng, sốt",
+        "**Triệu chứng:** Số lần tiêu chảy, đau bụng, sốt",
         "**Dấu hiệu sinh tồn:** Huyết áp, nhịp tim, nhiệt độ",
         "**Xét nghiệm:** WBC, Creatinine, Albumin (nếu nặng)",
         "**Dấu hiệu biến chứng:** Megacolon, thủng ruột, sốc",

@@ -173,7 +173,7 @@ def display_compliance_analysis(static_compliance, dynamic_compliance, plateau, 
     # Comparison
     if static_compliance and dynamic_compliance:
         st.markdown("---")
-        st.markdown("#### So Sánh Static vs Dynamic")
+        st.markdown("#### So sánh Static vs Dynamic")
         difference = dynamic_compliance - static_compliance
         if abs(difference) < 5:
             st.success("Static và Dynamic compliance gần nhau - Không có sự khác biệt đáng kể")

@@ -206,7 +206,7 @@ def render_theophylline_tdm():
     tab1, tab2, tab3 = st.tabs(["🧮 Tính Liều", "📊 Điều Chỉnh Liều", "⏱️ Tính Half-life"])
     
     with tab1:
-        st.markdown("### 📋 Thông Số Bệnh Nhân")
+        st.markdown("### 📋 Thông số bệnh nhân")
         
         col1, col2 = st.columns(2)
         

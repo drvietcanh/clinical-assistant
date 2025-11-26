@@ -188,7 +188,7 @@ def render():
     st.markdown("**Đánh giá sinh lý và tiên lượng bệnh nhân chấn thương**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -241,7 +241,7 @@ def render():
         
         ### 📈 Phân Tầng Nguy Cơ
         
-        | RTS | Tỷ Lệ Sống Sót | Ưu Tiên |
+        | RTS | Tỷ Lệ Sống Sót | Ưu tiên |
         |-----|----------------|---------|
         | ≥7 | >95% | Không khẩn cấp |
         | 5-6.99 | 70-95% | Khẩn cấp |
@@ -328,7 +328,7 @@ def render():
             st.markdown(f"**{result['interpretation']}**")
         
         # Coded values
-        with st.expander("📋 Giá Trị Mã Hóa & Tính Toán", expanded=True):
+        with st.expander("📋 Giá trị Mã Hóa & Tính Toán", expanded=True):
             st.markdown(f"""
             **Giá Trị Đầu Vào:**
             - GCS: {gcs} → Coded: {result['gcs_coded']}
@@ -345,7 +345,7 @@ def render():
         
         # Triage
         st.markdown("---")
-        st.markdown("### 🚨 Triage & Ưu Tiên")
+        st.markdown("### 🚨 Triage & Ưu tiên")
         st.markdown(result['triage'])
         
         # Management
@@ -414,7 +414,7 @@ def render():
         - Sử dụng rộng rãi cho quality improvement
         - Benchmark cho trauma care
         
-        **Sử Dụng:**
+        **Sử dụng:**
         - Cần cả RTS và ISS
         - ISS calculator có sẵn trong cùng module này
         - Kết hợp cả hai để có TRISS

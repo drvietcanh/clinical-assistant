@@ -296,7 +296,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Kiến Thức Bổ Sung")
+    st.subheader("📚 Kiến thức bổ sung")
     
     with st.expander("🎯 Cơ Chế Bù Thường"):
         st.markdown("""

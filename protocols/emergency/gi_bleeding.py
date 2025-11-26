@@ -310,7 +310,7 @@ def render_lower_gi_bleeding():
     
     st.error("## 🚨 LOWER GI BLEEDING (LGIB) PROTOCOL")
     
-    st.markdown("### 1️⃣ Đánh giá Ban Đầu")
+    st.markdown("### 1️⃣ Đánh giá ban đầu")
     
     col1, col2 = st.columns(2)
     

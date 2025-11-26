@@ -317,7 +317,7 @@ def render():
             st.write(f"**Tổng điểm:** {points}")
             
             st.markdown("---")
-            st.markdown("### 💊 Khuyến Cáo")
+            st.markdown("### 💊 Khuyến cáo")
             
             if risk_pct < 10:
                 st.success("""

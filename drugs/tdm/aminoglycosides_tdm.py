@@ -206,7 +206,7 @@ def render_aminoglycosides_tdm():
     tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải Thích Nồng Độ"])
     
     with tab1:
-        st.markdown("### 📋 Thông Số Bệnh Nhân")
+        st.markdown("### 📋 Thông số bệnh nhân")
         
         col1, col2 = st.columns(2)
         

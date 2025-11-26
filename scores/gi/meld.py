@@ -456,7 +456,7 @@ def render():
                 **Nguồn:** UNOS (United Network for Organ Sharing) data
                 """)
             
-            with st.expander("🏥 MELD và Ưu Tiên Ghép Gan"):
+            with st.expander("🏥 MELD và Ưu tiên Ghép Gan"):
                 st.markdown("""
                 **Hệ thống MELD dùng để phân bổ gan ghép:**
                 

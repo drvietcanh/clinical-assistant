@@ -181,7 +181,7 @@ def render():
     st.markdown("---")
     
     # Clinical features
-    st.markdown("### 🌡️ Các Triệu Chứng Lâm Sàng")
+    st.markdown("### 🌡️ Các Triệu chứng Lâm Sàng")
     
     fever = st.checkbox(
         "**Sốt > 38°C (100.4°F)**",
@@ -413,7 +413,7 @@ def render():
     st.markdown("---")
     st.subheader("📚 Thông tin bổ sung")
     
-    with st.expander("🎯 Cách Sử Dụng Centor Score"):
+    with st.expander("🎯 Cách Sử dụng Centor Score"):
         st.markdown("""
         ### Hướng dẫn áp dụng:
         
@@ -461,7 +461,7 @@ def render():
         - Hay gặp nhất ở trẻ 5-15 tuổi
         - Ít gặp < 3 tuổi và người lớn
         
-        **Triệu Chứng:**
+        **Triệu chứng:**
         - Đau họng đột ngột, nặng
         - Sốt cao (thường > 38.5°C)
         - Amidan đỏ, sưng, có mủ/bạch sấu
