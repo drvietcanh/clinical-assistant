@@ -18,6 +18,7 @@ from critical_care import (
     render_sepsis_protocols,
     render_shock_management,
     render_rrt_calculator,
+    render_scenarios_calculator,
     VENTILATOR_ADVANCED_AVAILABLE
 )
 
@@ -60,6 +61,7 @@ with st.sidebar:
         "🦠 Sepsis Protocols",
         "💉 Shock Management",
         "🩺 RRT Calculator",
+        "🎯 Clinical Scenarios",
         "💧 Fluid Therapy",
         "💉 Vasopressors",
         "🩸 Transfusion",
@@ -198,6 +200,9 @@ elif "Shock" in tool_type:
     
 elif "RRT" in tool_type:
     render_rrt_calculator()
+    
+elif "Clinical Scenarios" in tool_type or "Scenarios" in tool_type:
+    render_scenarios_calculator()
     
 elif "Fluid" in tool_type:
     st.header("💧 Fluid Therapy Calculator")

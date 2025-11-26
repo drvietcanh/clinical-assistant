@@ -20,6 +20,7 @@ from .rrt import (
     calculate_sled_dosing,
     calculate_anticoagulation_rrt
 )
+from .scenarios import render_scenarios_calculator
 
 # Import comprehensive ventilator calculator from ventilator module
 try:
@@ -50,6 +51,7 @@ __all__ = [
     'calculate_ihd_dosing',
     'calculate_sled_dosing',
     'calculate_anticoagulation_rrt',
+    'render_scenarios_calculator',
     'VENTILATOR_ADVANCED_AVAILABLE',
 ]
 
