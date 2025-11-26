@@ -505,20 +505,20 @@
 
 ---
 
-#### **4.2. Clinical Scenarios** ⏸️
+#### **4.2. Clinical Scenarios** ✅ COMPLETED
 
 **Features:**
-- Sepsis scenario
-- ARDS scenario
-- Shock scenario
-- Ventilator weaning scenario
-- Sedation scenario
+- ✅ Sepsis scenario
+- ✅ ARDS scenario
+- ✅ Shock scenario
+- ✅ Ventilator weaning scenario
+- ✅ Sedation scenario
 
-**File:** `critical_care/scenarios.py`
+**File:** `critical_care/scenarios.py` ✅
 
-**Thời gian:** 2-3 giờ
+**Thời gian:** 2-3 giờ ✅
 
-**Status:** Để sau, không critical cho Phase 4
+**Status:** ✅ Completed (2025-02-05)
 
 ---
 
@@ -638,7 +638,7 @@
 
 ### **Phase 4: RRT & Advanced** ✅ COMPLETED
 - [x] RRT calculator (CRRT, IHD, SLED, Anticoagulation)
-- [ ] Clinical scenarios (để sau, không critical)
+- [x] Clinical scenarios ✅ (5 scenarios: Sepsis, ARDS, Shock, Weaning, Sedation)
 - [x] UI/UX improvements (đã tích hợp vào các modules)
 - [x] Testing ✅ (test_critical_care_phase4_rrt.py - 6/6 tests passed)
 
