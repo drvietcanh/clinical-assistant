@@ -150,6 +150,7 @@ REPLACEMENTS = {
     "Kiểm Soát Đại Tiện": "Kiểm soát đại tiện",
     "Kiểm Soát Tiểu Tiện": "Kiểm soát tiểu tiện",
     "Ăn Uống": "Ăn uống",
+    "Liều Tính Được": "Liều tính được",
     
     # Từ đơn lẻ (cần cẩn thận với context)
     "Chi Tiết": "Chi tiết",

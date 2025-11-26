@@ -143,6 +143,7 @@ COMMON_PHRASES = [
     ("kiểm", "soát", "đại", "tiện"), # Kiểm Soát Đại Tiện
     ("kiểm", "soát", "tiểu", "tiện"), # Kiểm Soát Tiểu Tiện
     ("ăn", "uống"),               # Ăn Uống
+    ("liều", "tính", "được"),      # Liều Tính Được
 ]
 
 # Pattern để tìm các từ có chữ cái đầu viết hoa

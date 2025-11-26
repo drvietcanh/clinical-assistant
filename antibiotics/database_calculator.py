@@ -60,6 +60,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
             max_value=200.0,
             value=70.0,
             step=1.0,
+            format="%d",
             key=safe_key("dosing_weight"),
             help="Cân nặng thực tế của bệnh nhân"
         )
@@ -82,6 +83,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
                     max_value=200.0,
                     value=float(imported_crcl),
                     step=1.0,
+                    format="%d",
                     key=safe_key("crcl"),
                     help="Creatinine Clearance"
                 )
@@ -92,6 +94,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
                 max_value=200.0,
                 value=60.0,
                 step=1.0,
+                format="%d",
                 key=safe_key("crcl"),
                 help="Creatinine Clearance. Dùng eGFR Calculator để tính chính xác"
             )
@@ -197,7 +200,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         )
         
         if detailed and detailed.get('calculated_dose_mg'):
-            st.markdown("#### 💉 Liều Tính Được:")
+            st.markdown("#### 💉 Liều tính được:")
             col1, col2 = st.columns(2)
             with col1:
                 st.info(f"**Liều:** {detailed['calculated_dose_mg']:.0f} mg")
