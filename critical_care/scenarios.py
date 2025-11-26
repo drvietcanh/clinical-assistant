@@ -234,7 +234,7 @@ def render_ards_scenario():
         
         1. **ECMO** (Extracorporeal Membrane Oxygenation)
            - ARDS Severe, P/F <80
-           - Refractory hypoxemia
+           - Thiếu oxy máu kháng trị
            - Cần trung tâm có ECMO
         
         2. **Neuromuscular Blockade**
@@ -364,7 +364,7 @@ def render_shock_scenario():
         **Theo dõi:**
         - **MAP:** ≥65 mmHg
         - **Lactate:** Giảm dần
-        - **Urine output:** ≥0.5 ml/kg/h
+        - **Lượng nước tiểu:** ≥0.5 ml/kg/h
         - **CO/CI:** Cải thiện
         - **SvO₂/ScvO₂:** Độ bão hòa oxy tĩnh mạch ≥70%
         """)
@@ -482,7 +482,7 @@ def render_ventilator_weaning_scenario():
             st.session_state['weaning_scenario_tool'] = 'sbt'
     
     # Step 4: Extubation
-    with st.expander("✅ Bước 4: Extubation", expanded=True):
+    with st.expander("✅ Bước 4: Rút Nội Khí Quản", expanded=True):
         st.markdown("""
         **Sau SBT thành công:**
         
@@ -495,7 +495,7 @@ def render_ventilator_weaning_scenario():
         **Chuẩn bị:**
         - Nhịn ăn (NPO) 4-6 giờ
         - Có sẵn dụng cụ đặt nội khí quản lại
-        - Team sẵn sàng
+        - Đội ngũ sẵn sàng
         
         **Sau rút nội khí quản:**
         - Theo dõi sát 24-48 giờ
