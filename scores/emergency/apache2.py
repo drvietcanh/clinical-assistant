@@ -350,7 +350,7 @@ def render():
         
         # Interpretation
         st.info("""
-        **📌 Diễn Giải:**
+        **📌 Diễn giải:**
         
         - APACHE II dự đoán tử vong BỆNH VIỆN, không phải ICU
         - Tính 1 LẦN trong 24h đầu nhập ICU (giá trị tệ nhất)
@@ -373,6 +373,16 @@ def render():
         from components.export import render_export_section
         
         # Prepare inputs for export
+        # Format chronic health status
+        if not has_chronic_health:
+            chronic_health = "Không"
+        elif is_nonsurgical:
+            chronic_health = "Có (Nonsurgical)"
+        elif is_post_emergency_surgery:
+            chronic_health = "Có (Sau phẫu thuật cấp cứu)"
+        else:
+            chronic_health = "Có (Sau phẫu thuật chương trình)"
+        
         inputs_dict = {
             "Age": f"{age} tuổi",
             "Temperature": f"{temperature:.1f}°C",
