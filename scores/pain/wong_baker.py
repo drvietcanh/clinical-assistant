@@ -34,7 +34,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá Đau")
+    st.subheader("📝 Đánh giá đau")
     
     # Display faces
     st.markdown("### 😊 Chọn Khuôn Mặt Mô Tả Mức Độ Đau")
@@ -99,7 +99,7 @@ def render():
     
     st.markdown("---")
     
-    if st.button("📊 Đánh Giá", type="primary", use_container_width=True):
+    if st.button("📊 Đánh giá", type="primary", use_container_width=True):
         st.markdown("## 📊 Kết quả")
         
         # Interpret pain level
@@ -163,9 +163,9 @@ def render():
             - Đánh giá lại sau 15-30 phút
             """)
         
-        with st.expander("📚 Hướng Dẫn Sử Dụng"):
+        with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
-            ### 🎯 Cách Đánh Giá:
+            ### 🎯 Cách đánh giá:
             
             1. **Giải thích cho bệnh nhân/trẻ em:**
                - "Khuôn mặt đầu tiên (0) = Không đau, vui vẻ"
@@ -182,7 +182,7 @@ def render():
                - Đau khi nghỉ ngơi
                - Đau khi vận động (nếu có)
             
-            ### 📋 Khi Nào Đánh Giá:
+            ### 📋 Khi nào đánh giá:
             - Khi bệnh nhân/trẻ vào viện
             - Trước và sau điều trị giảm đau
             - Mỗi 4 giờ ở bệnh nhân nội trú

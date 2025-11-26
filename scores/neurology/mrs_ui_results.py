@@ -49,7 +49,7 @@ def render_recommendations(selected_mrs, mrs_info):
         st.success(f"""
         **{mrs_info['icon']} mRS 0 - HOÀN TOÀN BÌNH THƯỜNG**
         
-        **Đánh Giá:** Bệnh nhân đã hồi phục hoàn toàn, không còn bất kỳ triệu chứng nào.
+        **Đánh giá:** Bệnh nhân đã hồi phục hoàn toàn, không còn bất kỳ triệu chứng nào.
         
         **Khuyến Nghị:**
         
@@ -82,7 +82,7 @@ def render_recommendations(selected_mrs, mrs_info):
         st.success(f"""
         **{mrs_info['icon']} mRS 1 - KHUYẾT TẬT KHÔNG ĐÁNG KỂ**
         
-        **Đánh Giá:** Có triệu chứng nhẹ nhưng không ảnh hưởng đáng kể đến sinh hoạt.
+        **Đánh giá:** Có triệu chứng nhẹ nhưng không ảnh hưởng đáng kể đến sinh hoạt.
         
         **Khuyến Nghị:**
         
@@ -112,7 +112,7 @@ def render_recommendations(selected_mrs, mrs_info):
         st.success(f"""
         **{mrs_info['icon']} mRS 2 - KHUYẾT TẬT NHẸ**
         
-        **Đánh Giá:** Khuyết tật nhẹ, tự chăm sóc được nhưng không làm được tất cả hoạt động như trước.
+        **Đánh giá:** Khuyết tật nhẹ, tự chăm sóc được nhưng không làm được tất cả hoạt động như trước.
         
         **Khuyến Nghị:**
         
@@ -149,7 +149,7 @@ def render_recommendations(selected_mrs, mrs_info):
         st.warning(f"""
         **{mrs_info['icon']} mRS 3 - KHUYẾT TẬT TRUNG BÌNH**
         
-        **Đánh Giá:** Cần giúp đỡ một số hoạt động nhưng đi lại độc lập.
+        **Đánh giá:** Cần giúp đỡ một số hoạt động nhưng đi lại độc lập.
         
         **Khuyến Nghị:**
         
@@ -191,7 +191,7 @@ def render_recommendations(selected_mrs, mrs_info):
         st.error(f"""
         **{mrs_info['icon']} mRS 4 - KHUYẾT TẬT VỪA NẶNG**
         
-        **Đánh Giá:** Phụ thuộc nặng, cần giúp đỡ đi lại và tự chăm sóc.
+        **Đánh giá:** Phụ thuộc nặng, cần giúp đỡ đi lại và tự chăm sóc.
         
         **Khuyến Nghị:**
         
@@ -239,7 +239,7 @@ def render_recommendations(selected_mrs, mrs_info):
         st.error(f"""
         **{mrs_info['icon']} mRS 5 - KHUYẾT TẬT NẶNG**
         
-        **Đánh Giá:** Nằm liệt giường, không tự chủ, cần chăm sóc toàn diện.
+        **Đánh giá:** Nằm liệt giường, không tự chủ, cần chăm sóc toàn diện.
         
         **Khuyến Nghị:**
         
@@ -303,7 +303,7 @@ def render_recommendations(selected_mrs, mrs_info):
         st.error(f"""
         **{mrs_info['icon']} mRS 6 - TỬ VONG**
         
-        **Đánh Giá:** Bệnh nhân đã tử vong.
+        **Đánh giá:** Bệnh nhân đã tử vong.
         
         **Hỗ trợ gia đình:**
         - Tư vấn tâm lý cho gia đình

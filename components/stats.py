@@ -85,7 +85,7 @@ def render_updates():
 
 def render_tips():
     """Render usage tips"""
-    st.subheader("💡 Mẹo Sử Dụng")
+    st.subheader("💡 Mẹo sử dụng")
     
     tip_col1, tip_col2, tip_col3 = st.columns(3)
     

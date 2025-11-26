@@ -9,12 +9,12 @@ import streamlit as st
 def render():
     """HAS-BLED Score Calculator"""
     st.subheader("🩸 HAS-BLED Score")
-    st.caption("Đánh Giá Nguy Cơ Chảy Máu Khi Dùng Kháng Đông")
+    st.caption("Đánh giá Nguy Cơ Chảy Máu Khi Dùng Kháng Đông")
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Tiêu Chí Đánh Giá")
+        st.markdown("### 📋 Tiêu Chí Đánh giá")
         
         htn_uncontrolled = st.checkbox(
             "**H** - Tăng huyết áp không kiểm soát",

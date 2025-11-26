@@ -34,10 +34,10 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá Đau")
+    st.subheader("📝 Đánh giá đau")
     
     # Visual scale display
-    st.markdown("### 📊 Thang Đo VAS (100mm)")
+    st.markdown("### 📊 Thang đo VAS (100mm)")
     
     # Create visual scale
     vas_value = st.slider(
@@ -81,7 +81,7 @@ def render():
     
     st.markdown("---")
     
-    if st.button("📊 Đánh Giá", type="primary", use_container_width=True):
+    if st.button("📊 Đánh giá", type="primary", use_container_width=True):
         st.markdown("## 📊 Kết quả")
         
         # Convert VAS to NRS equivalent for interpretation
@@ -142,9 +142,9 @@ def render():
             - Đánh giá lại sau 15-30 phút
             """)
         
-        with st.expander("📚 Hướng Dẫn Sử Dụng"):
+        with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
-            ### 🎯 Cách Đánh Giá:
+            ### 🎯 Cách đánh giá:
             
             1. **Chuẩn bị:**
                - Thước đo 100mm

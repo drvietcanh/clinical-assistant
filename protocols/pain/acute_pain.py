@@ -28,7 +28,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Đánh Giá Đau")
+    st.markdown("### 📊 Đánh giá đau")
     
     pain_scale = st.radio(
         "**Thang điểm đau:**",
@@ -250,7 +250,7 @@ def render():
     - ✅ Ít tác dụng phụ
     - ✅ Không lạm dụng
     
-    **Đánh Giá:**
+    **Đánh giá:**
     - Đánh giá đau trước và sau điều trị
     - Đánh giá chức năng
     - Đánh giá tác dụng phụ

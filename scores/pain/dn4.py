@@ -31,7 +31,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá")
+    st.subheader("📝 Đánh giá")
     
     st.markdown("### Phần 1: Hỏi Bệnh Nhân (7 câu hỏi)")
     
@@ -217,9 +217,9 @@ def render():
             - Có thể có đau hỗn hợp (đau thần kinh + đau nội tạng)
             """)
         
-        with st.expander("📚 Hướng Dẫn Sử Dụng"):
+        with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
-            ### 🎯 Cách Đánh Giá:
+            ### 🎯 Cách đánh giá:
             
             **Phần 1 - Hỏi bệnh nhân:**
             1. Hỏi từng câu hỏi một cách rõ ràng

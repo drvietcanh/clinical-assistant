@@ -140,7 +140,7 @@ def render_critical_care_dashboard():
     st.markdown("---")
     
     # Recent calculations (placeholder)
-    st.markdown("### 🕐 Tính Toán Gần Đây")
+    st.markdown("### 🕐 Tính toán gần đây")
     st.info("""
     **Tính năng đang phát triển:**
     - Lưu lịch sử tính toán
@@ -151,7 +151,7 @@ def render_critical_care_dashboard():
     st.markdown("---")
     
     # Quick tips
-    st.markdown("### 💡 Mẹo Sử Dụng")
+    st.markdown("### 💡 Mẹo sử dụng")
     
     tips = [
         "💧 **Fluid Therapy:** Sử dụng Holliday-Segar cho maintenance, tính deficit cho hypernatremia",

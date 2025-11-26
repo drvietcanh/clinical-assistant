@@ -35,7 +35,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá Đau")
+    st.subheader("📝 Đánh giá đau")
     
     # Facial Expression
     st.markdown("### 1️⃣ Facial Expression (Biểu hiện khuôn mặt)")
@@ -223,9 +223,9 @@ def render():
             - Trẻ sơ sinh dễ bị ức chế hô hấp với opioid → theo dõi sát
             """)
         
-        with st.expander("📚 Hướng Dẫn Sử Dụng"):
+        with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
-            ### 🎯 Cách Đánh Giá:
+            ### 🎯 Cách đánh giá:
             
             1. **Quan sát trẻ trong 1-2 phút:**
                - Không làm trẻ chú ý
@@ -239,7 +239,7 @@ def render():
                - Cộng điểm của 6 tiêu chí
                - Tổng điểm: 0-7
             
-            ### 📋 Khi Nào Đánh Giá:
+            ### 📋 Khi nào đánh giá:
             - Khi trẻ vào viện
             - Trước và sau thủ thuật (chích, lấy máu, đặt catheter...)
             - Trước và sau điều trị giảm đau

@@ -362,7 +362,7 @@ def render():
             
             **Nguy cơ cần IRVS:** ~{predicted_risk:.1f}%
             
-            **Đánh Giá:** Bệnh nhân viêm phổi nhẹ, nguy cơ tiến triển nặng thấp.
+            **Đánh giá:** Bệnh nhân viêm phổi nhẹ, nguy cơ tiến triển nặng thấp.
             
             **Khuyến Nghị:**
             
@@ -395,7 +395,7 @@ def render():
             
             **Nguy cơ cần IRVS:** ~{predicted_risk:.1f}%
             
-            **Đánh Giá:** Viêm phổi mức độ vừa, cần theo dõi sát.
+            **Đánh giá:** Viêm phổi mức độ vừa, cần theo dõi sát.
             
             **Khuyến Nghị:**
             
@@ -440,7 +440,7 @@ def render():
             
             **Nguy cơ cần IRVS:** ~{predicted_risk:.1f}%
             
-            **Đánh Giá:** Viêm phổi nặng, nguy cơ cao cần hỗ trợ hô hấp/tuần hoàn.
+            **Đánh giá:** Viêm phổi nặng, nguy cơ cao cần hỗ trợ hô hấp/tuần hoàn.
             
             **Khuyến Nghị:**
             

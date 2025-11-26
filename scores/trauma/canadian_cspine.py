@@ -86,7 +86,7 @@ def render():
     - Độ đặc hiệu 45.1% (CAO HƠN NEXUS 12.9%)
     - **Giảm chụp 40-50%** (tốt hơn NEXUS 20-30%)
     
-    **3 Bước Đánh Giá:**
+    **3 Bước Đánh giá:**
     
     **Bước 1: Có yếu tố NGUY CƠ CAO không?**
     - Tuổi ≥ 65
@@ -191,7 +191,7 @@ def render():
     st.markdown("---")
     
     # Step 2: Low-Risk Factors
-    st.subheader("🟡 Bước 2: Yếu Tố Cho Phép Đánh Giá ROM")
+    st.subheader("🟡 Bước 2: Yếu Tố Cho Phép Đánh giá ROM")
     st.info("Cần có ≥ 1 yếu tố để AN TOÀN đánh giá range of motion")
     
     simple_rear_end_mvc = st.checkbox(
@@ -229,7 +229,7 @@ def render():
     st.markdown("---")
     
     # Step 3: ROM Assessment
-    st.subheader("🔵 Bước 3: Đánh Giá Xoay Cổ")
+    st.subheader("🔵 Bước 3: Đánh giá Xoay Cổ")
     st.info("Chỉ đánh giá nếu ĐỦ điều kiện từ Bước 1 và 2")
     
     midline_tenderness = st.checkbox(
@@ -248,7 +248,7 @@ def render():
     if unable_rotate:
         st.warning("⚠️ ROM không đầy đủ → CẦN CHỤP")
     
-    with st.expander("📋 Cách Đánh Giá ROM Chính Xác"):
+    with st.expander("📋 Cách đánh giá ROM Chính Xác"):
         st.markdown("""
         ### Active Range of Motion Test:
         
@@ -263,7 +263,7 @@ def render():
         3. "Từ từ xoay cổ sang bên phải"
         4. Quan sát: Xoay được 45° không?
         
-        **Đánh Giá:**
+        **Đánh giá:**
         - **PASS:** Xoay được 45° cả 2 bên, không đau
         - **FAIL:** Xoay < 45° hoặc đau khi xoay
         
@@ -276,7 +276,7 @@ def render():
     st.markdown("---")
     
     # Evaluate button
-    if st.button("📊 Đánh Giá Canadian C-Spine Rule", type="primary", use_container_width=True):
+    if st.button("📊 Đánh giá Canadian C-Spine Rule", type="primary", use_container_width=True):
         result = evaluate_canadian_cspine(
             age, dangerous_mechanism, paresthesias,
             simple_rear_end_mvc, sitting_position, ambulatory, delayed_neck_pain,
@@ -284,7 +284,7 @@ def render():
         )
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh giá")
         
         col1, col2 = st.columns(2)
         

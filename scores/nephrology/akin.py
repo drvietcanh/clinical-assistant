@@ -143,7 +143,7 @@ def render():
         urine_output_12h = st.number_input("Nước tiểu 12h (mL)", -1.0, 10000.0, -1.0, 10.0, format="%.0f")
         urine_output_24h = st.number_input("Nước tiểu 24h (mL)", -1.0, 20000.0, -1.0, 10.0, format="%.0f")
     
-    if st.button("🧮 Đánh Giá AKIN Stage", type="primary"):
+    if st.button("🧮 Đánh giá AKIN Stage", type="primary"):
         result = calculate_akin(scr_baseline, scr_current, scr_increase_48h,
                                 urine_output_6h, urine_output_12h, urine_output_24h,
                                 weight, on_rrt)

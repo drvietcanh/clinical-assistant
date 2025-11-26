@@ -23,7 +23,7 @@ import streamlit as st
 def render():
     """Render ICH Score Calculator"""
     
-    st.subheader("🧠 ICH Score - Đánh Giá Xuất Huyết Nội Sọ")
+    st.subheader("🧠 ICH Score - Đánh giá Xuất Huyết Nội Sọ")
     st.caption("Dự đoán tỷ lệ tử vong 30 ngày ở bệnh nhân xuất huyết não")
     
     st.markdown("""

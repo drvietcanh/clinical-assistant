@@ -145,7 +145,7 @@ def render():
         result = interpret_gad7(total_score)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh giá")
         
         # Display total score
         col1, col2 = st.columns([1, 2])
@@ -210,7 +210,7 @@ def render():
         
         # Functional impairment
         st.markdown("---")
-        st.subheader("🔍 Đánh Giá Chức Năng")
+        st.subheader("🔍 Đánh giá Chức Năng")
         
         functional_impact = st.radio(
             "**Các vấn đề trên đã ảnh hưởng đến công việc, việc nhà, hoặc quan hệ với người khác của bạn đến mức độ nào?**",

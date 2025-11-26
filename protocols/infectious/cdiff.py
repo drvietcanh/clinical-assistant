@@ -21,7 +21,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: SEVERITY ASSESSMENT ==========
-    st.markdown("### 📊 Đánh Giá Mức Độ Nặng")
+    st.markdown("### 📊 Đánh giá Mức Độ Nặng")
     
     st.markdown("**Phân Loại Mức Độ Theo IDSA/SHEA 2021:**")
     

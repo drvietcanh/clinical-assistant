@@ -18,6 +18,11 @@ REPLACEMENTS = {
     "Chi Tiết Từng Thành Phần": "Chi tiết từng thành phần",
     "Chi Tiết Từng Tiêu Chí": "Chi tiết từng tiêu chí",
     "Chi Tiết Đánh Giá": "Chi tiết đánh giá",
+    "Chăm Sóc Điều Dưỡng": "Chăm sóc điều dưỡng",
+    "Hướng Dẫn Sử Dụng": "Hướng dẫn sử dụng",
+    "Khi Nào Đánh Giá": "Khi nào đánh giá",
+    "Cách Đánh Giá": "Cách đánh giá",
+    "Đánh Giá Đau": "Đánh giá đau",
     "Diễn Giải": "Diễn giải",
     "Diễn Giải Kết Quả": "Diễn giải kết quả",
     "Diễn Giải SOFA-2": "Diễn giải SOFA-2",
@@ -27,10 +32,14 @@ REPLACEMENTS = {
     "Lưu Ý Y Khoa": "Lưu ý y khoa",
     "Lưu Ý Đặc Biệt": "Lưu ý đặc biệt",
     "Lưu Ý Điều Trị": "Lưu ý điều trị",
+    "Thang Đo": "Thang đo",
+    "Tính Toán Gần Đây": "Tính toán gần đây",
+    "Mẹo Sử Dụng": "Mẹo sử dụng",
     
     # Từ đơn lẻ (cần cẩn thận với context)
     "Chi Tiết": "Chi tiết",
     "Kết Quả": "Kết quả",
+    "Đánh Giá": "Đánh giá",
 }
 
 # Thư mục cần quét

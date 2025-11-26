@@ -177,12 +177,12 @@ def render():
             st.markdown("---")
             
             # Status interpretation
-            st.subheader("🎯 Phân Loại & Đánh Giá")
+            st.subheader("🎯 Phân Loại & Đánh giá")
             
             st.info(f"""
             **{status_info['color']} Tình trạng:** {status_info['status']}
             
-            **Đánh Giá:** {status_info['risk']}
+            **Đánh giá:** {status_info['risk']}
             
             **Khuyến Nghị:** {status_info['recommendation']}
             """)
@@ -275,12 +275,12 @@ def render():
             st.markdown("---")
             
             # Status interpretation
-            st.subheader("🎯 Phân Loại & Đánh Giá")
+            st.subheader("🎯 Phân Loại & Đánh giá")
             
             st.info(f"""
             **{status_info['color']} Tình trạng:** {status_info['status']}
             
-            **Đánh Giá:** {status_info['risk']}
+            **Đánh giá:** {status_info['risk']}
             
             **Khuyến Nghị:** {status_info['recommendation']}
             """)

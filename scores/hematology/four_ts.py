@@ -112,7 +112,7 @@ def calculate_4ts_score(
         recommendation = """
         **🟡 Xử trí khuyến cáo - INTERMEDIATE PROBABILITY:**
         
-        1. **Đánh Giá Kỹ & Quyết Định:**
+        1. **Đánh giá Kỹ & Quyết Định:**
            - Xem xét DỪNG heparin (khuyến cáo mạnh nếu điểm 5)
            - Nếu điểm = 4 → cân nhắc rủi ro/lợi ích
            - Nếu không thể dừng → giám sát sát tiểu cầu
@@ -159,7 +159,7 @@ def calculate_4ts_score(
         recommendation = """
         **🟢 Xử trí khuyến cáo - LOW PROBABILITY:**
         
-        1. **Đánh Giá:**
+        1. **Đánh giá:**
            - HIT rất ít có khả năng (NPV ~95-99%)
            - Có thể AN TOÀN tiếp tục heparin
            - Tìm nguyên nhân KHÁC của giảm tiểu cầu

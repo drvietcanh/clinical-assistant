@@ -66,11 +66,11 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### **Giờ 1-2: Đánh Giá Đáp Ứng**")
+        st.markdown("#### **Giờ 1-2: Đánh giá Đáp Ứng**")
         st.warning("""
         **Sau truyền dịch 30 mL/kg:**
         
-        **Đánh Giá:**
+        **Đánh giá:**
         - MAP có ≥65 mmHg?
         - Lactate có giảm?
         - Urine output có ≥0.5 mL/kg/h?
@@ -243,7 +243,7 @@ def render():
         - Hoặc Normal Saline
         """)
     
-    st.markdown("**Đánh Giá Đáp Ứng Dịch:**")
+    st.markdown("**Đánh giá Đáp Ứng Dịch:**")
     
     col1, col2 = st.columns(2)
     

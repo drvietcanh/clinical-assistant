@@ -144,7 +144,7 @@ def render():
     
     # Calculate button
     st.markdown("---")
-    if st.button("🧮 Đánh Giá Hunt & Hess", type="primary", use_container_width=True):
+    if st.button("🧮 Đánh giá Hunt & Hess", type="primary", use_container_width=True):
         st.session_state.total_calculations = st.session_state.get('total_calculations', 0) + 1
         
         # Get final grade info

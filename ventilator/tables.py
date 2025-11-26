@@ -52,7 +52,7 @@ def render_peep_fio2_table():
     
     st.markdown("---")
     
-    st.markdown("### 💡 Hướng Dẫn Sử Dụng")
+    st.markdown("### 💡 Hướng dẫn sử dụng")
     
     st.success("""
     **Cách điều chỉnh:**

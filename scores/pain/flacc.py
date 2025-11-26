@@ -34,7 +34,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá Đau")
+    st.subheader("📝 Đánh giá đau")
     
     # Face
     st.markdown("### 1️⃣ Face (Khuôn mặt)")
@@ -206,9 +206,9 @@ def render():
             - Cân nhắc nguyên nhân đau
             """)
         
-        with st.expander("📚 Hướng Dẫn Sử Dụng"):
+        with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
-            ### 🎯 Cách Đánh Giá:
+            ### 🎯 Cách đánh giá:
             
             1. **Quan sát trẻ trong 2-5 phút:**
                - Không làm trẻ chú ý
@@ -222,7 +222,7 @@ def render():
                - Cộng điểm của 5 tiêu chí
                - Tổng điểm: 0-10
             
-            ### 📋 Khi Nào Đánh Giá:
+            ### 📋 Khi nào đánh giá:
             - Khi trẻ vào viện
             - Trước và sau điều trị giảm đau
             - Mỗi 2-4 giờ ở trẻ nội trú

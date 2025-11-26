@@ -266,7 +266,7 @@ def render_pe_protocol():
 
 def render_risk_assessment():
     """Risk assessment tools"""
-    st.info("## 📊 Đánh Giá Nguy Cơ")
+    st.info("## 📊 Đánh giá Nguy Cơ")
     
     st.markdown("""
     **Wells Score (DVT):**

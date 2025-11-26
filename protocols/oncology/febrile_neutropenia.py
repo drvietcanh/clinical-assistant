@@ -110,7 +110,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: INITIAL EVALUATION ==========
-    st.markdown("### 🔍 Đánh Giá Ban Đầu")
+    st.markdown("### 🔍 Đánh giá Ban Đầu")
     
     st.markdown("""
     **1. History & Physical:**

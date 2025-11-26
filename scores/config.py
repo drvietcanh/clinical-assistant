@@ -172,7 +172,7 @@ SCORES_BY_SPECIALTY = {
         "Intraocular Pressure": {"name": "IOP Correction", "desc": "Điều chỉnh nhãn áp theo CCT", "status": "✅"},
     },
     
-    "😣 Đánh Giá Đau (Pain Assessment)": {
+    "😣 Đánh giá đau (Pain Assessment)": {
         "NRS": {"name": "NRS - Numeric Rating Scale", "desc": "Thang điểm số đánh giá đau (0-10) - DÙNG HÀNG NGÀY", "status": "✅"},
         "VAS": {"name": "VAS - Visual Analogue Scale", "desc": "Thang đo thị giác đánh giá đau (0-100mm)", "status": "✅"},
         "FLACC": {"name": "FLACC - Face, Legs, Activity, Cry, Consolability", "desc": "Đánh giá đau ở trẻ em (2 tháng - 7 tuổi)", "status": "✅"},
@@ -181,7 +181,7 @@ SCORES_BY_SPECIALTY = {
         "DN4": {"name": "DN4 - Douleur Neuropathique 4", "desc": "Chẩn đoán đau thần kinh", "status": "✅"},
     },
     
-    "🛏️ Chăm Sóc Điều Dưỡng (Nursing Care)": {
+    "🛏️ Chăm sóc điều dưỡng (Nursing Care)": {
         "Braden": {"name": "Braden Scale", "desc": "Đánh giá nguy cơ loét tì đè (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Morse": {"name": "Morse Fall Scale", "desc": "Đánh giá nguy cơ té ngã (DÙNG HÀNG NGÀY)", "status": "✅"},
     },

@@ -177,7 +177,7 @@ def render():
     st.markdown("---")
     
     # ESS Questions
-    st.subheader("📋 8 Tình Huống Đánh Giá")
+    st.subheader("📋 8 Tình Huống Đánh giá")
     
     scores = []
     
@@ -210,7 +210,7 @@ def render():
         result = interpret_epworth(total_score)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh giá")
         
         # Display score
         col1, col2 = st.columns(2)
@@ -260,7 +260,7 @@ def render():
             
             **Điểm ESS: {total_score}/24**
             
-            **Đánh Giá:** {result['description']}
+            **Đánh giá:** {result['description']}
             
             **Khuyến Nghị:** {result['recommendation']}
             
@@ -281,7 +281,7 @@ def render():
             
             **Điểm ESS: {total_score}/24** - BẤT THƯỜNG
             
-            **Đánh Giá:** {result['description']}
+            **Đánh giá:** {result['description']}
             
             **Nguy cơ OSA:** {result['osa_risk']}
             

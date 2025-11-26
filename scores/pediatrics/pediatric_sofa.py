@@ -488,7 +488,7 @@ def render():
         else:
             st.error(f"## **pSOFA Score: {result['total_score']}/24**")
         
-        st.markdown(f"**Đánh Giá:** {result['interpretation']}")
+        st.markdown(f"**Đánh giá:** {result['interpretation']}")
         st.markdown(f"**Tỷ lệ tử vong ước tính:** {result['mortality']}")
         
         # Sepsis note

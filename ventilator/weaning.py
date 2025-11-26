@@ -287,7 +287,7 @@ def render_weaning_calculator():
             """)
     
     with tab2:
-        st.markdown("### ✅ Đánh Giá Sẵn Sàng Cai Máy Thở")
+        st.markdown("### ✅ Đánh giá Sẵn Sàng Cai Máy Thở")
         
         col1, col2 = st.columns(2)
         
@@ -322,7 +322,7 @@ def render_weaning_calculator():
         with col2:
             hemodynamically_stable = st.checkbox("Huyết động ổn định", key="weaning_hemo_stable")
         
-        if st.button("🧮 Đánh Giá Sẵn Sàng", type="primary", use_container_width=True):
+        if st.button("🧮 Đánh giá Sẵn Sàng", type="primary", use_container_width=True):
             abg_data = {
                 "ph": abg_ph,
                 "pco2": abg_pco2,
@@ -357,7 +357,7 @@ def render_weaning_calculator():
             )
             
             st.markdown("---")
-            st.markdown("### 📊 Kết quả Đánh Giá")
+            st.markdown("### 📊 Kết quả Đánh giá")
             
             # Overall readiness
             if readiness_color == "success":

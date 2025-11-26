@@ -43,7 +43,7 @@ def render_upper_gi_bleeding():
     st.error("## 🚨 UPPER GI BLEEDING (UGIB) PROTOCOL")
     st.error("**CODE GI BLEED - Xử trí khẩn cấp!**")
     
-    st.markdown("### 1️⃣ Đánh Giá & Resuscitation (< 30 Phút)")
+    st.markdown("### 1️⃣ Đánh giá & Resuscitation (< 30 Phút)")
     
     col1, col2 = st.columns(2)
     
@@ -310,7 +310,7 @@ def render_lower_gi_bleeding():
     
     st.error("## 🚨 LOWER GI BLEEDING (LGIB) PROTOCOL")
     
-    st.markdown("### 1️⃣ Đánh Giá Ban Đầu")
+    st.markdown("### 1️⃣ Đánh giá Ban Đầu")
     
     col1, col2 = st.columns(2)
     
@@ -502,7 +502,7 @@ def render_unknown_gi_bleeding():
     4. ✅ **Resuscitation** - Bù dịch và máu nếu cần
     5. ✅ **Đảo ngược anticoagulation** nếu đang dùng
     
-    **Đánh Giá:**
+    **Đánh giá:**
     - **Hematemesis hoặc coffee-ground emesis:** → UGIB
     - **Melena (phân đen):** → Thường UGIB, có thể LGIB
     - **Hematochezia (máu đỏ tươi):** → Thường LGIB, có thể UGIB nếu nặng

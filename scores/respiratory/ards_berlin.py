@@ -151,7 +151,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.markdown("### 📋 Đánh Giá Tiêu Chuẩn")
+    st.markdown("### 📋 Đánh giá Tiêu Chuẩn")
     
     # Criterion 1: Timing
     st.markdown("#### 1️⃣ Timing")
@@ -290,7 +290,7 @@ def render():
     st.markdown("---")
     
     # Criteria evaluation
-    st.markdown("### ✅ Đánh Giá Tiêu Chuẩn")
+    st.markdown("### ✅ Đánh giá Tiêu Chuẩn")
     
     if result["criteria_met"]:
         st.markdown("**Tiêu chuẩn đáp ứng:**")

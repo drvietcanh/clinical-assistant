@@ -181,7 +181,7 @@ def render():
     
     if st.button("📈 Phân Tích Đầy Đủ", type="primary", use_container_width=True):
         st.markdown("---")
-        st.subheader("🎯 Đánh Giá & Khuyến Nghị")
+        st.subheader("🎯 Đánh giá & Khuyến Nghị")
         
         # Prognosis
         col1, col2 = st.columns(2)
@@ -311,7 +311,7 @@ def render():
         **Khuyến cáo:** Sử dụng ECOG trong hầu hết trường hợp
         """)
     
-    with st.expander("🎯 Cách Đánh Giá ECOG Chính Xác"):
+    with st.expander("🎯 Cách đánh giá ECOG Chính Xác"):
         st.markdown("""
         ### Nguyên tắc đánh giá:
         

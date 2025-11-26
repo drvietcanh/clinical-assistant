@@ -301,7 +301,7 @@ def render():
             - Sống sót 2 năm: {survival_2yr}
             - Tử vong phẫu thuật bụng: {periop_mortality}
             
-            **Đánh Giá:** Chức năng gan còn bù trừ tốt, tiên lượng tốt.
+            **Đánh giá:** Chức năng gan còn bù trừ tốt, tiên lượng tốt.
             
             **Khuyến Nghị:**
             
@@ -344,7 +344,7 @@ def render():
             - Sống sót 2 năm: {survival_2yr}
             - Tử vong phẫu thuật bụng: {periop_mortality}
             
-            **Đánh Giá:** Chức năng gan suy giảm đáng kể, cần theo dõi sát và điều trị tích cực.
+            **Đánh giá:** Chức năng gan suy giảm đáng kể, cần theo dõi sát và điều trị tích cực.
             
             **Khuyến Nghị:**
             
@@ -405,7 +405,7 @@ def render():
             - Sống sót 2 năm: {survival_2yr}
             - Tử vong phẫu thuật bụng: {periop_mortality}
             
-            **Đánh Giá:** Xơ gan mất bù nặng, tiên lượng xấu, cần điều trị tích cực và ghép gan.
+            **Đánh giá:** Xơ gan mất bù nặng, tiên lượng xấu, cần điều trị tích cực và ghép gan.
             
             **Khuyến Nghị:**
             

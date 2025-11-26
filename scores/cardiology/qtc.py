@@ -311,7 +311,7 @@ def render():
         st.markdown("---")
         
         # Interpretation
-        st.subheader("🎯 Phân Tích & Đánh Giá")
+        st.subheader("🎯 Phân Tích & Đánh giá")
         
         if result['severity'] == "normal":
             st.success(f"""
@@ -319,7 +319,7 @@ def render():
             
             **QTc = {qtc:.0f} ms** (Bình thường < {460 if gender == "Nữ" else 450} ms cho {gender})
             
-            **Đánh Giá:** {result['risk']}
+            **Đánh giá:** {result['risk']}
             
             **Khuyến Nghị:** {result['recommendation']}
             """)
@@ -329,7 +329,7 @@ def render():
             
             **QTc = {qtc:.0f} ms**
             
-            **Đánh Giá:** {result['risk']}
+            **Đánh giá:** {result['risk']}
             
             **Khuyến Nghị:** {result['recommendation']}
             """)
@@ -339,7 +339,7 @@ def render():
             
             **QTc = {qtc:.0f} ms** - CẢNH BÁO!
             
-            **Đánh Giá:** {result['risk']}
+            **Đánh giá:** {result['risk']}
             
             **Khuyến Nghị:** {result['recommendation']}
             """)

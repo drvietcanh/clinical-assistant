@@ -40,7 +40,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá")
+    st.subheader("📝 Đánh giá")
     
     # 1. Sensory Perception
     st.markdown("### 1️⃣ Sensory Perception (Cảm giác)")
@@ -265,9 +265,9 @@ def render():
             - Đánh giá lại khi có thay đổi tình trạng
             """)
         
-        with st.expander("📚 Hướng Dẫn Sử Dụng"):
+        with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
-            ### 🎯 Cách Đánh Giá:
+            ### 🎯 Cách đánh giá:
             
             1. **Đánh giá khi vào viện:**
                - Tất cả bệnh nhân nội trú

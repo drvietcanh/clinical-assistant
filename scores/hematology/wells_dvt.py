@@ -202,7 +202,7 @@ def render():
         ### 🎯 Cách Sử Dụng
         
         1. **Thời Điểm:** Khi bệnh nhân có triệu chứng nghi ngờ DVT (đau chân, phù, đỏ)
-        2. **Đánh Giá:** Trả lời 9 câu hỏi lâm sàng
+        2. **Đánh giá:** Trả lời 9 câu hỏi lâm sàng
         3. **Kết quả:**
            - **≥2 điểm:** DVT likely → Siêu âm ngay
            - **<2 điểm:** DVT unlikely → D-dimer trước

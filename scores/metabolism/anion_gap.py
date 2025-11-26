@@ -20,7 +20,7 @@ def render():
     """Render Anion Gap Calculator"""
     
     st.subheader("🧪 Anion Gap")
-    st.caption("Khoảng Trống Anion - Đánh Giá Rối Loạn Acid-Base")
+    st.caption("Khoảng Trống Anion - Đánh giá Rối Loạn Acid-Base")
     
     st.markdown("""
     **Anion Gap** giúp phân loại toan chuyển hóa và tìm nguyên nhân rối loạn acid-base.
@@ -184,7 +184,7 @@ def render():
                 
                 **AG = {ag_display:.1f} mEq/L**
                 
-                **Đánh Giá:** Điện giải cân bằng, không có toan chuyển hóa AG tăng.
+                **Đánh giá:** Điện giải cân bằng, không có toan chuyển hóa AG tăng.
                 
                 **Nếu có toan chuyển hóa (HCO₃ < 22):**
                 → **Non-Anion Gap Metabolic Acidosis (NAGMA)**
@@ -217,7 +217,7 @@ def render():
                 
                 **AG = {ag_display:.1f} mEq/L**
                 
-                **Đánh Giá:** Có thể bắt đầu toan chuyển hóa AG tăng hoặc tình trạng kết hợp.
+                **Đánh giá:** Có thể bắt đầu toan chuyển hóa AG tăng hoặc tình trạng kết hợp.
                 
                 **Cần kiểm tra thêm:**
                 1. **ABG (Arterial Blood Gas):**
@@ -259,7 +259,7 @@ def render():
                 
                 **AG = {ag_display:.1f} mEq/L**
                 
-                **Đánh Giá:** Toan chuyển hóa AG tăng - CẦN TÌM NGUYÊN NHÂN KHẨN CẤP!
+                **Đánh giá:** Toan chuyển hóa AG tăng - CẦN TÌM NGUYÊN NHÂN KHẨN CẤP!
                 
                 **Nguyên nhân - "MUDPILES":**
                 

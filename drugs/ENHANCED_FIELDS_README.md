@@ -1,4 +1,4 @@
-# Enhanced Fields Schema - Hướng Dẫn Sử Dụng
+# Enhanced Fields Schema - Hướng dẫn sử dụng
 
 ## Tổng Quan
 

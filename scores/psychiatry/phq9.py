@@ -131,7 +131,7 @@ def render():
     
     st.title("🧠 PHQ-9 - Patient Health Questionnaire")
     st.markdown("""
-    ### Sàng Lọc & Đánh Giá Trầm Cảm
+    ### Sàng Lọc & Đánh giá Trầm Cảm
     
     **PHQ-9:**
     - Công cụ sàng lọc trầm cảm được validate rộng rãi
@@ -201,7 +201,7 @@ def render():
         suicide_risk = assess_suicide_risk(scores[8])  # Question 9
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh giá")
         
         # Display total score
         col1, col2 = st.columns([1, 2])
@@ -239,7 +239,7 @@ def render():
         # Suicide risk assessment
         if scores[8] > 0:
             st.markdown("---")
-            st.subheader("⚠️ Đánh Giá Nguy Cơ Tự Tử")
+            st.subheader("⚠️ Đánh giá Nguy Cơ Tự Tử")
             
             if suicide_risk['color'] == "🔴":
                 st.error(f"""
@@ -300,7 +300,7 @@ def render():
         
         # Functional impairment
         st.markdown("---")
-        st.subheader("🔍 Đánh Giá Chức Năng")
+        st.subheader("🔍 Đánh giá Chức Năng")
         
         functional_impact = st.radio(
             "**Các vấn đề trên đã ảnh hưởng đến công việc, việc nhà, hoặc quan hệ với người khác của bạn đến mức độ nào?**",
@@ -420,7 +420,7 @@ def render():
         - PHQ-9 định kỳ mỗi tháng × 3 tháng
         """)
     
-    with st.expander("⚠️ Đánh Giá Nguy Cơ Tự Tử Chi tiết"):
+    with st.expander("⚠️ Đánh giá Nguy Cơ Tự Tử Chi tiết"):
         st.markdown("""
         ### Yếu tố nguy cơ cao:
         

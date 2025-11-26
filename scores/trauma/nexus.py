@@ -108,7 +108,7 @@ def render():
     st.markdown("---")
     
     # NEXUS Criteria Evaluation
-    st.subheader("📋 Đánh Giá 5 Tiêu Chí NEXUS")
+    st.subheader("📋 Đánh giá 5 Tiêu Chí NEXUS")
     
     st.info("""
     **Hướng dẫn:** Đánh giá từng tiêu chí. Tick vào ô nếu tiêu chí DƯƠNG TÍNH (có bất thường)
@@ -171,7 +171,7 @@ def render():
     st.markdown("---")
     
     # Evaluate button
-    if st.button("📊 Đánh Giá NEXUS C-Spine", type="primary", use_container_width=True):
+    if st.button("📊 Đánh giá NEXUS C-Spine", type="primary", use_container_width=True):
         # Evaluate
         result = evaluate_nexus(
             midline_tenderness,
@@ -182,7 +182,7 @@ def render():
         )
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh giá")
         
         # Summary
         positive_count = sum([
@@ -380,7 +380,7 @@ def render():
         
         ### 2. Altered Mental Status:
         
-        **Đánh Giá:**
+        **Đánh giá:**
         - GCS: Phải = 15
         - Orientation: Person, Place, Time, Event
         - Memory: Nhớ được sự kiện trước/sau chấn thương
@@ -412,7 +412,7 @@ def render():
         
         ### 4. Neurological Deficit:
         
-        **Đánh Giá:**
+        **Đánh giá:**
         - Motor: Sức cơ 4 chi
         - Sensory: Đối xứng 2 bên?
         - Reflexes: Tăng? Giảm? Babinski?

@@ -286,7 +286,7 @@ def render():
         result = interpret_bishop_score(total_score, is_nulliparous)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh giá")
         
         # Display total score
         col1, col2 = st.columns(2)
@@ -348,7 +348,7 @@ def render():
             
             **Bishop Score: {total_score}/13** ({'Sản phụ ' + parity_text})
             
-            **Đánh Giá:** Cổ tử cung thuận lợi cho gây chuyển dạ
+            **Đánh giá:** Cổ tử cung thuận lợi cho gây chuyển dạ
             
             **Tỷ lệ thành công:** {result['induction_success']}
             
@@ -387,7 +387,7 @@ def render():
             
             **Bishop Score: {total_score}/13** ({'Sản phụ ' + parity_text})
             
-            **Đánh Giá:** Cổ tử cung {'chưa' if result['severity'] == 'unfavorable' else 'tương đối'} thuận lợi
+            **Đánh giá:** Cổ tử cung {'chưa' if result['severity'] == 'unfavorable' else 'tương đối'} thuận lợi
             
             **Tỷ lệ thành công:** {result['induction_success']}
             

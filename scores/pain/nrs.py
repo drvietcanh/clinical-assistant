@@ -31,7 +31,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá Đau")
+    st.subheader("📝 Đánh giá đau")
     
     # Pain level input
     pain_level = st.slider(
@@ -68,7 +68,7 @@ def render():
     
     st.markdown("---")
     
-    if st.button("📊 Đánh Giá", type="primary", use_container_width=True):
+    if st.button("📊 Đánh giá", type="primary", use_container_width=True):
         st.markdown("## 📊 Kết quả")
         
         # Interpret pain level
@@ -175,9 +175,9 @@ def render():
             """)
         
         # Pain assessment tips
-        with st.expander("📚 Hướng Dẫn Sử Dụng"):
+        with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
-            ### 🎯 Cách Đánh Giá:
+            ### 🎯 Cách đánh giá:
             
             1. **Giải thích cho bệnh nhân:**
                - "0 = Không đau"
@@ -194,7 +194,7 @@ def render():
                - Ghi nhận NRS trước và sau điều trị
                - Mục tiêu: Giảm ≥2 điểm hoặc NRS ≤ 3
             
-            ### 📋 Khi Nào Đánh Giá:
+            ### 📋 Khi nào đánh giá:
             - Khi bệnh nhân vào viện
             - Trước và sau điều trị giảm đau
             - Mỗi 4 giờ ở bệnh nhân nội trú

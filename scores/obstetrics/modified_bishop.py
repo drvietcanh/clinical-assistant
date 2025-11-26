@@ -243,7 +243,7 @@ def render():
         result = interpret_modified_bishop(total_score, is_nulliparous)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh giá")
         
         # Display scores
         col1, col2, col3 = st.columns(3)
@@ -320,7 +320,7 @@ def render():
         st.info(f"""
         **Modified Bishop Score: {total_score}/15** ({parity_text})
         
-        **Đánh Giá:** {result['favorability']}
+        **Đánh giá:** {result['favorability']}
         
         **Tỷ lệ thành công:** {result['success_rate']}
         

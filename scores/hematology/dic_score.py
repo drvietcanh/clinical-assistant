@@ -455,7 +455,7 @@ def render():
           * Thrombin time (kéo dài)
           * Fibrin degradation products (FDP) - nếu không có D-dimer
         
-        - **Đánh Giá Cơ Quan:**
+        - **Đánh giá Cơ Quan:**
           * Creatinine, BUN (suy thận)
           * ALT, AST, bilirubin (suy gan)
           * Lactate (tưới máu mô)

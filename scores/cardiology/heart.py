@@ -8,7 +8,7 @@ import streamlit as st
 def render():
     """HEART Score Calculator"""
     st.subheader("❤️ HEART Score")
-    st.caption("Đánh Giá Nguy Cơ ACS Trong Đau Ngực Cấp")
+    st.caption("Đánh giá Nguy Cơ ACS Trong Đau Ngực Cấp")
     
     st.info("""
     **HEART Score** dự đoán nguy cơ MACE (Major Adverse Cardiac Events) trong 6 tuần ở bệnh nhân đau ngực cấp.
@@ -17,7 +17,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Tiêu Chí Đánh Giá")
+        st.markdown("### 📋 Tiêu Chí Đánh giá")
         
         # History
         st.markdown("#### H - History (Tiền sử)")

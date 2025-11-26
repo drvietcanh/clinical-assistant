@@ -147,7 +147,7 @@ def calculate_iss(ais_scores: dict) -> dict:
         management = """
         **🟡 Xử Trí - Chấn Thương Trung Bình:**
         
-        1. **Đánh Giá:**
+        1. **Đánh giá:**
            - Complete trauma assessment
            - Imaging phù hợp
            - Xét nghiệm cơ bản
@@ -170,7 +170,7 @@ def calculate_iss(ais_scores: dict) -> dict:
         management = """
         **🟢 Xử Trí - Chấn Thương Nhẹ:**
         
-        1. **Đánh Giá:**
+        1. **Đánh giá:**
            - Khám lâm sàng kỹ
            - Imaging selective
            - Xét nghiệm theo chỉ định

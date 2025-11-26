@@ -72,7 +72,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Đánh Giá Nguy Cơ")
+    st.markdown("### 📊 Đánh giá Nguy Cơ")
     
     st.info("""
     **CHADS₂-VASc Score (Nguy cơ đột quỵ):**

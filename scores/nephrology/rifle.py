@@ -131,7 +131,7 @@ def render():
         urine_output_6h = st.number_input("Nước tiểu 6h (mL)", -1.0, 5000.0, -1.0, 10.0, format="%.0f")
         urine_output_12h = st.number_input("Nước tiểu 12h (mL)", -1.0, 10000.0, -1.0, 10.0, format="%.0f")
     
-    if st.button("🧮 Đánh Giá RIFLE", type="primary"):
+    if st.button("🧮 Đánh giá RIFLE", type="primary"):
         result = calculate_rifle(scr_baseline, scr_current, gfr_decrease_percent, 
                                  urine_output_6h, urine_output_12h, weight)
         

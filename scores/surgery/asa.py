@@ -230,7 +230,7 @@ def render():
     
     if st.button("📈 Phân Tích Nguy Cơ Chi tiết", type="primary", use_container_width=True):
         st.markdown("---")
-        st.subheader("🎯 Đánh Giá Nguy Cơ & Khuyến Nghị")
+        st.subheader("🎯 Đánh giá Nguy Cơ & Khuyến Nghị")
         
         # Display final classification
         final_classification = f"{selected_asa}{'-E' if is_emergency else ''}"

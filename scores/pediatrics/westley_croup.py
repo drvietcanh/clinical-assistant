@@ -36,7 +36,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá Trẻ")
+    st.subheader("📝 Đánh giá Trẻ")
     
     score = 0
     

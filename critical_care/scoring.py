@@ -181,7 +181,7 @@ def render_cam_icu_calculator():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Đánh Giá CAM-ICU")
+    st.markdown("### 📋 Đánh giá CAM-ICU")
     
     # Feature 1: Acute onset or fluctuating course
     st.markdown("#### 1️⃣ Khởi Phát Cấp Và Dao Động")
@@ -272,7 +272,7 @@ def render_cam_icu_calculator():
     st.markdown("---")
     
     # Calculate result
-    if st.button("🔬 Đánh Giá CAM-ICU", type="primary", key="cam_icu_calculate"):
+    if st.button("🔬 Đánh giá CAM-ICU", type="primary", key="cam_icu_calculate"):
         has_delirium = feature1 and feature2 and feature3 and feature4
         
         st.markdown("### 📊 Kết quả")
@@ -392,7 +392,7 @@ def render_aki_staging_quick():
             key="aki_current_uo"
         )
     
-    if st.button("🔬 Đánh Giá AKI", type="primary", key="aki_calculate"):
+    if st.button("🔬 Đánh giá AKI", type="primary", key="aki_calculate"):
         # Calculate AKI stage based on KDIGO
         cr_increase = (current_cr - baseline_cr) / baseline_cr if baseline_cr > 0 else 0
         cr_absolute_increase = current_cr - baseline_cr

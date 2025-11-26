@@ -9,7 +9,7 @@ import streamlit as st
 def render():
     """NIHSS Calculator"""
     st.subheader("🧠 NIHSS - NIH Stroke Scale")
-    st.caption("Thang Điểm Đánh Giá Mức Độ Nặng Đột Quỵ")
+    st.caption("Thang Điểm Đánh giá Mức Độ Nặng Đột Quỵ")
     
     st.info("""
     **NIHSS** là thang điểm chuẩn vàng đánh giá mức độ nặng của đột quỵ não.
@@ -22,7 +22,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Đánh Giá 11 Hạng Mục")
+        st.markdown("### 📋 Đánh giá 11 Hạng Mục")
         
         # 1a. Level of Consciousness
         st.markdown("#### 1a. Mức Độ Ý Thức")

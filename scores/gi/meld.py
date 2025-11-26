@@ -236,7 +236,7 @@ def render():
                 - 3 tháng: {mortality_3m}
                 - 1 năm: {mortality_1yr}
                 
-                **Đánh Giá:** Xơ gan còn bù trừ tốt hoặc bệnh gan nhẹ.
+                **Đánh giá:** Xơ gan còn bù trừ tốt hoặc bệnh gan nhẹ.
                 
                 **Khuyến Nghị:**
                 
@@ -270,7 +270,7 @@ def render():
                 - 3 tháng: {mortality_3m}
                 - 1 năm: {mortality_1yr}
                 
-                **Đánh Giá:** Bệnh gan tiến triển, cần theo dõi sát.
+                **Đánh giá:** Bệnh gan tiến triển, cần theo dõi sát.
                 
                 **Khuyến Nghị:**
                 
@@ -306,7 +306,7 @@ def render():
                 - 3 tháng: {mortality_3m}
                 - 1 năm: {mortality_1yr}
                 
-                **Đánh Giá:** Xơ gan nặng, nguy cơ cao, CẦN ghép gan.
+                **Đánh giá:** Xơ gan nặng, nguy cơ cao, CẦN ghép gan.
                 
                 **Khuyến Nghị:**
                 
@@ -354,7 +354,7 @@ def render():
                 - 3 tháng: {mortality_3m}
                 - 1 năm: {mortality_1yr}
                 
-                **Đánh Giá:** Xơ gan giai đoạn cuối, nguy cơ tử vong rất cao, CẦN ghép gan KHẨN CẤP.
+                **Đánh giá:** Xơ gan giai đoạn cuối, nguy cơ tử vong rất cao, CẦN ghép gan KHẨN CẤP.
                 
                 **Khuyến Nghị:**
                 

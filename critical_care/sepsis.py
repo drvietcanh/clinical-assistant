@@ -378,7 +378,7 @@ def render_lactate_monitoring():
             st.markdown("---")
             
             # Lactate levels
-            st.markdown("### 📋 Đánh Giá Lactate")
+            st.markdown("### 📋 Đánh giá Lactate")
             
             if initial_lactate > 2:
                 st.error(f"""

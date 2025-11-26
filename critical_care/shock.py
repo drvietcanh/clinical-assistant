@@ -287,7 +287,7 @@ def render_shock_classification():
 
 def render_fluid_responsiveness():
     """Render fluid responsiveness assessment"""
-    st.subheader("💧 Đánh Giá Đáp Ứng Dịch")
+    st.subheader("💧 Đánh giá Đáp Ứng Dịch")
     st.caption("Đánh giá đáp ứng dịch")
     
     st.markdown("""

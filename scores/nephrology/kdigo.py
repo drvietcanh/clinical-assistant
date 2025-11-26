@@ -515,7 +515,7 @@ def render():
     st.divider()
     
     # Calculate button
-    if st.button("🧮 Đánh Giá KDIGO AKI Stage", type="primary", use_container_width=True):
+    if st.button("🧮 Đánh giá KDIGO AKI Stage", type="primary", use_container_width=True):
         result = calculate_kdigo(
             scr_baseline=scr_baseline,
             scr_current=scr_current,
@@ -536,7 +536,7 @@ def render():
         with col_r1:
             if result['stage'] == 0:
                 st.metric(
-                    label="**Đánh Giá**",
+                    label="**Đánh giá**",
                     value="Không AKI"
                 )
             else:

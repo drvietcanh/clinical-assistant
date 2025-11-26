@@ -9,12 +9,12 @@ import streamlit as st
 def render():
     """CHA₂DS₂-VASc Score Calculator"""
     st.subheader("❤️ CHA₂DS₂-VASc Score")
-    st.caption("Đánh Giá Nguy Cơ Đột Quỵ Trong Rung Nhĩ")
+    st.caption("Đánh giá Nguy Cơ Đột Quỵ Trong Rung Nhĩ")
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Tiêu Chí Đánh Giá")
+        st.markdown("### 📋 Tiêu Chí Đánh giá")
         
         chf = st.checkbox(
             "**C** - Suy tim sung huyết / Rối loạn chức năng thất trái",

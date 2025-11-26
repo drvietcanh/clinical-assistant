@@ -30,7 +30,7 @@ def render():
     st.markdown("### 📊 CIWA-Ar Score (Clinical Institute Withdrawal Assessment)")
     
     st.warning("""
-    **CIWA-Ar Score:** Đánh Giá Mức Độ Cai Rượu (0-67 điểm)
+    **CIWA-Ar Score:** Đánh giá Mức Độ Cai Rượu (0-67 điểm)
     
     **Các tiêu chí (mỗi tiêu chí 0-7 điểm):**
     1. **Nausea & Vomiting** (Buồn nôn & Nôn)
@@ -44,7 +44,7 @@ def render():
     9. **Headache** (Đau đầu)
     10. **Orientation** (Định hướng)
     
-    **Đánh Giá:**
+    **Đánh giá:**
     - **0-9 điểm:** Nhẹ - Có thể không cần benzodiazepine
     - **10-19 điểm:** Trung bình - Cần benzodiazepine
     - **≥20 điểm:** Nặng - Cần điều trị tích cực

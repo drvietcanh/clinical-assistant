@@ -34,7 +34,7 @@ def render():
     st.markdown("---")
     
     # Input
-    st.subheader("📝 Đánh Giá Bệnh Nhân")
+    st.subheader("📝 Đánh giá Bệnh Nhân")
     
     # Basic criteria
     st.markdown("### 1️⃣ Chẩn đoán cơ bản Preeclampsia:")

@@ -166,7 +166,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.subheader("📋 Đánh Giá Lâm Sàng")
+    st.subheader("📋 Đánh giá Lâm Sàng")
     
     # Age
     age = st.number_input(
@@ -220,7 +220,7 @@ def render():
         result = interpret_centor(total_score)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh Giá")
+        st.subheader("📈 Kết quả Đánh giá")
         
         # Display scores
         col1, col2, col3 = st.columns(3)

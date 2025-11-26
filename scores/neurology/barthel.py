@@ -45,7 +45,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá")
+    st.subheader("📝 Đánh giá")
     
     # 1. Đi đại tiện
     st.markdown("### 1️⃣ Đi Đại Tiện")
@@ -332,9 +332,9 @@ def render():
             - Tiêu chuẩn quốc tế
             """)
         
-        with st.expander("📚 Hướng Dẫn Sử Dụng"):
+        with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
-            ### 🎯 Cách Đánh Giá:
+            ### 🎯 Cách đánh giá:
             
             1. **Quan sát và hỏi bệnh nhân:**
                - Quan sát bệnh nhân thực hiện các hoạt động
@@ -350,7 +350,7 @@ def render():
                - Tính tổng điểm
                - Đánh giá mức độ phụ thuộc
             
-            ### 📋 Khi Nào Đánh Giá:
+            ### 📋 Khi nào đánh giá:
             - Sau đột quỵ: Khi vào viện, khi xuất viện, 3 tháng, 6 tháng, 1 năm
             - Ở bệnh nhân cao tuổi: Khi vào viện, định kỳ
             - Theo dõi phục hồi chức năng: Mỗi tuần hoặc mỗi 2 tuần

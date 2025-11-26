@@ -16,7 +16,7 @@ def render():
     """)
     
     # Assessment
-    st.markdown("### 1️⃣ Đánh Giá Ban Đầu")
+    st.markdown("### 1️⃣ Đánh giá Ban Đầu")
     
     col1, col2 = st.columns([2, 1])
     

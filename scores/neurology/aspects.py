@@ -67,7 +67,7 @@ def render():
     st.markdown("---")
     
     # Instructions
-    st.markdown("### 📋 Hướng Dẫn Đánh Giá")
+    st.markdown("### 📋 Hướng Dẫn Đánh giá")
     
     with st.expander("🔍 Xem hướng dẫn đánh giá", expanded=True):
         st.markdown("""
@@ -123,7 +123,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.markdown("### 📊 Đánh Giá 10 Vùng")
+    st.markdown("### 📊 Đánh giá 10 Vùng")
     
     st.markdown("**Vùng MCA (M1-M6):**")
     
@@ -190,7 +190,7 @@ def render():
             st.error(f"## **ASPECTS Score: {result['total_score']}/10**")
         
         st.markdown(f"**Vùng bị ảnh hưởng:** {result['regions_affected']}/10")
-        st.markdown(f"**Đánh Giá:** {result['interpretation']}")
+        st.markdown(f"**Đánh giá:** {result['interpretation']}")
         
         # Show affected regions
         affected_regions = [k for k, v in regions.items() if v == 0]

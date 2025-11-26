@@ -39,7 +39,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá")
+    st.subheader("📝 Đánh giá")
     
     # 1. History of Falling
     st.markdown("### 1️⃣ History of Falling (Tiền sử té ngã)")
@@ -235,9 +235,9 @@ def render():
                - Cân nhắc điều chỉnh liều hoặc thời gian dùng thuốc
             """)
         
-        with st.expander("📚 Hướng Dẫn Sử Dụng"):
+        with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
-            ### 🎯 Cách Đánh Giá:
+            ### 🎯 Cách đánh giá:
             
             1. **Đánh giá khi vào viện:**
                - Tất cả bệnh nhân nội trú

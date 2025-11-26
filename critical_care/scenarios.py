@@ -298,7 +298,7 @@ def render_shock_scenario():
             st.session_state['shock_scenario_tool'] = 'classification'
     
     # Step 2: Assessment
-    with st.expander("📊 Bước 2: Đánh Giá", expanded=True):
+    with st.expander("📊 Bước 2: Đánh giá", expanded=True):
         st.markdown("""
         **Đánh giá huyết động:**
         
@@ -318,7 +318,7 @@ def render_shock_scenario():
         """)
     
     # Step 3: Fluid Responsiveness
-    with st.expander("💧 Bước 3: Đánh Giá Đáp Ứng Dịch", expanded=True):
+    with st.expander("💧 Bước 3: Đánh giá Đáp Ứng Dịch", expanded=True):
         st.markdown("""
         **Test đáp ứng dịch:**
         
@@ -390,7 +390,7 @@ def render_ventilator_weaning_scenario():
     st.markdown("---")
     
     # Step 1: Readiness Assessment
-    with st.expander("📋 Bước 1: Đánh Giá Sẵn Sàng", expanded=True):
+    with st.expander("📋 Bước 1: Đánh giá Sẵn Sàng", expanded=True):
         st.markdown("""
         **Tiêu chí sẵn sàng:**
         
@@ -418,7 +418,7 @@ def render_ventilator_weaning_scenario():
         - Huyết động ổn định
         """)
         
-        if st.button("🔄 Đánh Giá Sẵn Sàng", key="weaning_readiness"):
+        if st.button("🔄 Đánh giá Sẵn Sàng", key="weaning_readiness"):
             st.session_state['weaning_scenario_tool'] = 'readiness'
     
     # Step 2: RSBI
@@ -524,7 +524,7 @@ def render_sedation_scenario():
     st.markdown("---")
     
     # Step 1: Assessment
-    with st.expander("📋 Bước 1: Đánh Giá", expanded=True):
+    with st.expander("📋 Bước 1: Đánh giá", expanded=True):
         st.markdown("""
         **Đánh giá mức độ an thần:**
         
@@ -547,7 +547,7 @@ def render_sedation_scenario():
             st.session_state['sedation_scenario_tool'] = 'rass'
     
     # Step 2: Pain Assessment
-    with st.expander("😣 Bước 2: Đánh Giá Đau", expanded=True):
+    with st.expander("😣 Bước 2: Đánh giá đau", expanded=True):
         st.markdown("""
         **Đánh giá đau:**
         

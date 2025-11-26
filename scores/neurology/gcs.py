@@ -9,12 +9,12 @@ import streamlit as st
 def render():
     """Glasgow Coma Scale Calculator"""
     st.subheader("🧠 Glasgow Coma Scale (GCS)")
-    st.caption("Đánh Giá Mức Độ Ý Thức")
+    st.caption("Đánh giá Mức Độ Ý Thức")
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thang Đánh Giá")
+        st.markdown("### 📋 Thang Đánh giá")
         
         # Eye Opening (E)
         st.markdown("#### 👁️ Eye Opening (Mở Mắt)")

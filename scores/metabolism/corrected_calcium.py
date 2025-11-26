@@ -294,7 +294,7 @@ def render():
                 
                 **Ca điều chỉnh: {ca_corrected_mgdl:.1f} mg/dL**
                 
-                **Đánh Giá:** Calcium trong giới hạn bình thường.
+                **Đánh giá:** Calcium trong giới hạn bình thường.
                 
                 **Lưu ý:**
                 - Giá trị Ca điều chỉnh chỉ là ước tính

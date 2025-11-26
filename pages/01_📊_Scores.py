@@ -154,11 +154,11 @@ elif "Mắt" in specialty or "Ophthalmology" in specialty:
     ophthalmology.render_ophthalmology_calculator(selected_score_id)
 
 # Pain Assessment
-elif "Đánh Giá Đau" in specialty or "Pain" in specialty:
+elif "Đánh giá đau" in specialty or "Pain" in specialty:
     pain.render_pain_calculator(selected_score_id)
 
 # Nursing Care
-elif "Chăm Sóc Điều Dưỡng" in specialty or "Nursing" in specialty:
+elif "Chăm sóc điều dưỡng" in specialty or "Nursing" in specialty:
     nursing.render_nursing_calculator(selected_score_id)
 
 # Other specialties - show placeholder for now

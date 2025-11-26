@@ -34,7 +34,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh Giá")
+    st.subheader("📝 Đánh giá")
     
     # Age
     st.markdown("### 1️⃣ Tuổi")

@@ -134,7 +134,7 @@ def render_references():
 
 def render_assessment_guide():
     """Render assessment guide expander"""
-    with st.expander("❓ Cách Đánh Giá mRS Chính Xác"):
+    with st.expander("❓ Cách đánh giá mRS Chính Xác"):
         st.markdown("""
         **Cách tiếp cận có cấu trúc để đánh giá mRS:**
         

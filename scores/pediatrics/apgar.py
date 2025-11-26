@@ -95,7 +95,7 @@ def render():
     st.markdown("---")
     
     # Time point selection
-    st.subheader("⏱️ Chọn Thời Điểm Đánh Giá")
+    st.subheader("⏱️ Chọn Thời Điểm Đánh giá")
     
     time_point = st.radio(
         "**Thời điểm:**",
@@ -107,7 +107,7 @@ def render():
     st.markdown("---")
     
     # APGAR components
-    st.subheader("📋 Đánh Giá Các Thành Phần APGAR")
+    st.subheader("📋 Đánh giá Các Thành Phần APGAR")
     
     # A - Appearance (Skin Color)
     st.markdown("### 🎨 A - Appearance (Màu sắc da)")
@@ -253,7 +253,7 @@ def render():
         st.markdown("---")
         
         # Interpretation and action
-        st.subheader("🎯 Đánh Giá & Xử Trí")
+        st.subheader("🎯 Đánh giá & Xử Trí")
         
         if result['level'] == "normal":
             st.success(f"""
@@ -466,7 +466,7 @@ def render():
         - "Mother of Neonatology"
         """)
     
-    with st.expander("🎯 Cách Đánh Giá APGAR Chính Xác"):
+    with st.expander("🎯 Cách đánh giá APGAR Chính Xác"):
         st.markdown("""
         ### Hướng dẫn chi tiết từng thông số:
         
