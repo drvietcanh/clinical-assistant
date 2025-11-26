@@ -169,6 +169,27 @@ ARBS = {
                 "notes": "Chỉ có dạng uống"
             }
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "children": "6-16 tuổi: 0.7mg/kg/ngày x 1 lần (tối đa 50mg/ngày). Chỉ dùng cho tăng huyết áp. Theo dõi huyết áp, chức năng thận, kali máu",
+            "adolescents": "25-50mg x 1 lần/ngày, tăng dần đến 50-100mg/ngày nếu cần. Liều người lớn",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥6 tuổi. Khởi đầu với liều thấp, tăng dần. Theo dõi huyết áp, chức năng thận, kali máu"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (25mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên"
+        },
+        "brand_names": {
+            "vietnam": ["Cozaar", "Losartan Stada", "Losartan", "Losar"],
+            "common": ["Cozaar", "Losartan"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "15,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Losartan generic thường rẻ hơn (15,000-25,000 VND/viên 50mg)."
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Cozaar (losartan)",

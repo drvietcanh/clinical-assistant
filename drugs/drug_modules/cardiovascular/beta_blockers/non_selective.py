@@ -190,6 +190,27 @@ NON_SELECTIVE_BETA_BLOCKERS = {
                   "notes": "Chỉ có dạng uống thường dùng"
               }
           },
+          "pediatric_dosing": {
+              "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+              "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+              "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Nếu cần, 1-4mg/kg/ngày chia 2-3 lần, tối đa 160mg/ngày",
+              "adolescents": "20-40mg x 2-3 lần/ngày, tăng dần đến 80-160mg x 2 lần/ngày nếu cần. Liều người lớn",
+              "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng khi thực sự cần thiết. Theo dõi nhịp tim, huyết áp, chức năng gan, chức năng phổi chặt chẽ"
+          },
+          "geriatric_dosing": {
+              "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (nhịp tim chậm, hạ huyết áp, mệt mỏi). Suy gan phổ biến hơn (extensive first-pass metabolism)",
+              "dose_adjustment": "Khởi đầu với liều thấp hơn (10-20mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo chức năng gan",
+              "monitoring": "Theo dõi nhịp tim, huyết áp sát hơn. Theo dõi chức năng gan. Cảnh báo về không ngừng đột ngột"
+          },
+          "brand_names": {
+              "vietnam": ["Inderal", "Propranolol Stada", "Propranolol"],
+              "common": ["Inderal", "Propranolol"]
+          },
+          "cost_estimate": {
+              "unit": "VND",
+              "range": "5,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu)",
+              "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Propranolol generic thường rẻ hơn (5,000-12,000 VND/viên 40mg)."
+          },
           "references": {
               "primary_sources": [
                   "FDA Drug Label - Inderal (propranolol)",
@@ -404,6 +425,27 @@ NON_SELECTIVE_BETA_BLOCKERS = {
               "incompatibility": [],
               "notes": "Carvedilol chỉ có dạng uống (PO)."
           }
+      },
+      "pediatric_dosing": {
+          "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+          "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+          "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Nếu cần, 0.1-0.2mg/kg/ngày chia 2 lần, tối đa 25mg x 2 lần/ngày",
+          "adolescents": "3.125mg x 2 lần/ngày, tăng dần đến 6.25-12.5mg x 2 lần/ngày nếu cần. Liều người lớn",
+          "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng khi thực sự cần thiết. Theo dõi nhịp tim, huyết áp, chức năng gan chặt chẽ"
+      },
+      "geriatric_dosing": {
+          "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (nhịp tim chậm, hạ huyết áp, mệt mỏi). Suy gan phổ biến hơn (thải chủ yếu qua gan)",
+          "dose_adjustment": "Khởi đầu với liều thấp hơn (3.125mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo chức năng gan",
+          "monitoring": "Theo dõi nhịp tim, huyết áp sát hơn (nguy cơ hạ huyết áp cao do alpha-blocking). Theo dõi chức năng gan. Cảnh báo về không ngừng đột ngột"
+      },
+      "brand_names": {
+          "vietnam": ["Dilatrend", "Carvedilol Stada", "Carvedilol", "Coreg"],
+          "common": ["Coreg", "Carvedilol", "Dilatrend"]
+      },
+      "cost_estimate": {
+          "unit": "VND",
+          "range": "12,000 - 35,000 VND/viên (tùy hàm lượng và thương hiệu)",
+          "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Carvedilol generic thường rẻ hơn (12,000-25,000 VND/viên 12.5mg)."
       },
       "references": {
           "primary_sources": [

@@ -102,7 +102,24 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'compatibility': ['NaCl 0.9%', 'Dextrose 5%'], 'incompatibility': [
         'Không pha với các thuốc khác trong cùng đường truyền'], 'notes':
         'Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể.'}},
-        'references': {'primary_sources': ['FDA Drug Label - Pantoprazole',
+        'pediatric_dosing': {
+        'neonates': 'Không khuyến cáo cho trẻ <1 tuổi (dữ liệu hạn chế)',
+        'infants': '1-12 tháng: 0.5-1mg/kg/ngày chia 1-2 lần. Chỉ dùng khi thực sự cần thiết. Theo dõi chặt chẽ',
+        'children': '1-16 tuổi: 0.7-1.4mg/kg/ngày chia 1-2 lần (tối đa 40mg/ngày). Chỉ dùng cho GERD nặng hoặc loét dạ dày. Uống 30-60 phút trước bữa ăn',
+        'adolescents': '40mg x 1-2 lần/ngày. Liều người lớn. Uống 30-60 phút trước bữa ăn',
+        'notes': 'Dùng cho GERD và loét dạ dày ở trẻ em. Khởi đầu với liều thấp, tăng dần. Uống 30-60 phút trước bữa ăn. Ưu điểm: ít tương tác với CYP450 hơn omeprazole. Theo dõi triệu chứng, vitamin B12, magnesium nếu dùng lâu dài'
+    }, 'geriatric_dosing': {
+        'considerations': 'Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ. Tăng nguy cơ nhiễm C. difficile, gãy xương, thiếu B12 và magnesium khi dùng lâu dài',
+        'dose_adjustment': 'Khởi đầu với liều thấp hơn (20-40mg x 1 lần/ngày). Tăng dần nếu cần. Dùng liều thấp nhất có hiệu quả, thời gian ngắn nhất',
+        'monitoring': 'Theo dõi triệu chứng, vitamin B12, magnesium thường xuyên hơn nếu dùng lâu dài. Cảnh báo về nguy cơ nhiễm C. difficile, gãy xương'
+    }, 'brand_names': {
+        'vietnam': ['Pantoloc', 'Pantoprazole Stada', 'Pantoprazole', 'Controloc'],
+        'common': ['Pantoloc', 'Protonix', 'Pantoprazole']
+    }, 'cost_estimate': {
+        'unit': 'VND',
+        'range': '8,000 - 30,000 VND/viên (tùy hàm lượng và thương hiệu)',
+        'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Pantoprazole generic thường rẻ hơn (8,000-20,000 VND/viên 40mg).'
+    }, 'references': {'primary_sources': ['FDA Drug Label - Pantoprazole',
         'UpToDate - Proton pump inhibitors: Overview of use and adverse effects',
         'Micromedex - Pantoprazole',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",

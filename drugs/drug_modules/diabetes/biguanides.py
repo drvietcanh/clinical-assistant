@@ -101,7 +101,24 @@ BIGUANIDES_DRUGS = {
         'Uống 2-3 lần/ngày với bữa ăn. Dạng extended-release: 1 lần/ngày với bữa ăn tối. Khởi đầu với liều thấp (500mg x 2 lần/ngày), tăng dần để giảm tác dụng phụ.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': [
+        }}, 'pediatric_dosing': {
+        'neonates': 'Không khuyến cáo cho trẻ <10 tuổi',
+        'infants': 'Không khuyến cáo cho trẻ <10 tuổi',
+        'children': '10-17 tuổi: 500mg x 2 lần/ngày với bữa ăn, tăng dần đến 2000mg/ngày. Chỉ dùng cho đái tháo đường type 2. Theo dõi chức năng thận',
+        'adolescents': '500mg x 2 lần/ngày với bữa ăn, tăng dần đến 1000mg x 2 lần/ngày (2000mg/ngày). Liều người lớn',
+        'notes': 'Dùng cho đái tháo đường type 2 ở trẻ em ≥10 tuổi. Khởi đầu với liều thấp, tăng dần. Uống với bữa ăn. Theo dõi chức năng thận, đường huyết, vitamin B12'
+    }, 'geriatric_dosing': {
+        'considerations': 'Người cao tuổi có nguy cơ cao nhiễm toan lactic. Suy thận phổ biến hơn. Chức năng thận có thể giảm nhanh',
+        'dose_adjustment': 'Khởi đầu với liều thấp hơn (250-500mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl. Theo dõi chức năng thận thường xuyên hơn (mỗi 3 tháng)',
+        'monitoring': 'Theo dõi chức năng thận (creatinine, eGFR) thường xuyên hơn (mỗi 3 tháng). Theo dõi lactate nếu có triệu chứng. Theo dõi vitamin B12. Cảnh báo về nhiễm toan lactic'
+    }, 'brand_names': {
+        'vietnam': ['Glucophage', 'Metformin Stada', 'Metformin', 'Diaformin', 'Metforal'],
+        'common': ['Glucophage', 'Metformin', 'Fortamet', 'Riomet']
+    }, 'cost_estimate': {
+        'unit': 'VND',
+        'range': '2,000 - 10,000 VND/viên (tùy hàm lượng và thương hiệu)',
+        'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Metformin generic thường rẻ hơn (2,000-5,000 VND/viên 500mg).'
+    }, 'references': {'primary_sources': [
         'FDA Drug Label - Glucophage (metformin)',
         'UpToDate - Metformin: Drug information',
         'UK Prospective Diabetes Study (UKPDS)',

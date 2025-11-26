@@ -215,6 +215,27 @@ STATINS = {
                 "notes": "Atorvastatin chỉ có dạng uống (PO)."
             }
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <10 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <10 tuổi (dữ liệu hạn chế)",
+            "children": "10-17 tuổi: 10mg x 1 lần/ngày, tăng dần đến 20mg/ngày nếu cần. Chỉ dùng cho tăng cholesterol máu gia đình (familial hypercholesterolemia). Theo dõi lipid panel, men gan, CK",
+            "adolescents": "10-20mg x 1 lần/ngày, tăng dần đến 20-40mg/ngày nếu cần. Liều người lớn. Theo dõi lipid panel, men gan, CK",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng cholesterol máu gia đình ở trẻ ≥10 tuổi. Khởi đầu với liều thấp, tăng dần. Theo dõi lipid panel, men gan, CK. CHỐNG CHỈ ĐỊNH trong thai kỳ"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ (đau cơ, tiêu cơ vân). Suy gan, suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (10mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo chức năng gan, thận",
+            "monitoring": "Theo dõi men gan, CK thường xuyên hơn. Cảnh báo về triệu chứng đau cơ, yếu cơ (dấu hiệu tiêu cơ vân). Theo dõi lipid panel"
+        },
+        "brand_names": {
+            "vietnam": ["Lipitor", "Atorvastatin Stada", "Atorvastatin", "Atorlip"],
+            "common": ["Lipitor", "Atorvastatin"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "15,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Atorvastatin generic thường rẻ hơn (15,000-30,000 VND/viên 20mg)."
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Lipitor (atorvastatin)",
@@ -434,6 +455,27 @@ STATINS = {
                   "incompatibility": [],
                   "notes": "Simvastatin chỉ có dạng uống (PO)."
               }
+          },
+          "pediatric_dosing": {
+              "neonates": "Không khuyến cáo cho trẻ <10 tuổi (dữ liệu hạn chế)",
+              "infants": "Không khuyến cáo cho trẻ <10 tuổi (dữ liệu hạn chế)",
+              "children": "10-17 tuổi: 10mg x 1 lần/ngày vào buổi tối, tăng dần đến 20-40mg/ngày nếu cần. Chỉ dùng cho tăng cholesterol máu gia đình. Theo dõi lipid panel, men gan, CK. TRÁNH grapefruit juice",
+              "adolescents": "10-20mg x 1 lần/ngày vào buổi tối, tăng dần đến 20-40mg/ngày nếu cần. Liều người lớn. Theo dõi lipid panel, men gan, CK",
+              "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng cholesterol máu gia đình ở trẻ ≥10 tuổi. Uống buổi tối. Khởi đầu với liều thấp, tăng dần. Theo dõi lipid panel, men gan, CK. CHỐNG CHỈ ĐỊNH trong thai kỳ. TRÁNH grapefruit juice hoàn toàn"
+          },
+          "geriatric_dosing": {
+              "considerations": "Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ (đau cơ, tiêu cơ vân). Suy gan phổ biến hơn (extensive first-pass metabolism qua CYP3A4)",
+              "dose_adjustment": "Khởi đầu với liều thấp hơn (10mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo chức năng gan. Giảm liều khi dùng với amiodarone, verapamil, diltiazem",
+              "monitoring": "Theo dõi men gan, CK thường xuyên hơn. Cảnh báo về triệu chứng đau cơ, yếu cơ (dấu hiệu tiêu cơ vân). Theo dõi lipid panel. Cảnh báo về TRÁNH grapefruit juice"
+          },
+          "brand_names": {
+              "vietnam": ["Zocor", "Simvastatin Stada", "Simvastatin", "Simva"],
+              "common": ["Zocor", "Simvastatin"]
+          },
+          "cost_estimate": {
+              "unit": "VND",
+              "range": "10,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)",
+              "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Simvastatin generic thường rẻ hơn (10,000-25,000 VND/viên 20mg)."
           },
           "references": {
               "primary_sources": [

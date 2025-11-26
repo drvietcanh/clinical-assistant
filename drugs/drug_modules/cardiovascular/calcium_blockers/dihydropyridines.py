@@ -159,6 +159,27 @@ DIHYDROPYRIDINE_CCB = {
                 "notes": "Chỉ có dạng uống"
             }
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "children": "6-17 tuổi: 2.5-5mg x 1 lần/ngày (tối đa 5mg/ngày). Chỉ dùng cho tăng huyết áp. Theo dõi huyết áp, phù chân",
+            "adolescents": "2.5-5mg x 1 lần/ngày, tăng dần đến 5-10mg/ngày nếu cần. Liều người lớn",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥6 tuổi. Khởi đầu với liều thấp, tăng dần. Theo dõi huyết áp, phù chân"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (phù chân, hạ huyết áp). Half-life dài hơn (30-50 giờ) nên tích lũy dễ hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (2.5mg x 1 lần/ngày). Tăng dần chậm hơn. Có thể cần liều thấp hơn do tích lũy",
+            "monitoring": "Theo dõi huyết áp sát hơn. Theo dõi phù chân (tác dụng phụ thường gặp). Cảnh báo về tương tác với grapefruit juice"
+        },
+        "brand_names": {
+            "vietnam": ["Norvasc", "Amlodipine Stada", "Amlodipine", "Amlor"],
+            "common": ["Norvasc", "Amlodipine"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "8,000 - 25,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Amlodipine generic thường rẻ hơn (8,000-15,000 VND/viên 5mg)."
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Norvasc (amlodipine)",

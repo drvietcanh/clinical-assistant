@@ -177,6 +177,27 @@ ACE_INHIBITORS = {
                 "notes": "Chỉ có dạng uống"
             }
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <1 tháng tuổi",
+            "infants": "0.15-0.3mg/kg x 3 lần/ngày (tối đa 6mg/kg/ngày). Khởi đầu với liều thấp, tăng dần",
+            "children": "0.5-2mg/kg/ngày chia 2-3 lần (tối đa 6mg/kg/ngày). Khởi đầu với liều thấp, tăng dần",
+            "adolescents": "6.25-25mg x 2-3 lần/ngày, tăng dần đến 50mg x 3 lần/ngày nếu cần",
+            "notes": "Dùng cho tăng huyết áp và suy tim ở trẻ em. Khởi đầu với liều thấp, tăng dần. Uống 1 giờ trước bữa ăn. Theo dõi huyết áp, chức năng thận, kali máu"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (6.25mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên"
+        },
+        "brand_names": {
+            "vietnam": ["Capoten", "Captopril Stada", "Captopril", "Acepril"],
+            "common": ["Capoten", "Captopril"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "15,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Captopril generic thường rẻ hơn (15,000-25,000 VND/viên 25mg)."
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Capoten (captopril)",
@@ -359,6 +380,27 @@ ACE_INHIBITORS = {
                 "notes": "Dạng IV (enalaprilat) chỉ dùng khi cần hạ huyết áp cấp. Theo dõi huyết áp sát."
             }
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <1 tháng tuổi",
+            "infants": "0.1-0.5mg/kg/ngày chia 1-2 lần. Khởi đầu với liều thấp, tăng dần",
+            "children": "0.1-0.5mg/kg/ngày chia 1-2 lần (tối đa 40mg/ngày). Khởi đầu với liều thấp, tăng dần",
+            "adolescents": "2.5-10mg x 1-2 lần/ngày, tăng dần đến 20-40mg/ngày nếu cần",
+            "notes": "Dùng cho tăng huyết áp và suy tim ở trẻ em. Khởi đầu với liều thấp, tăng dần. Có thể dùng 1-2 lần/ngày. Theo dõi huyết áp, chức năng thận, kali máu"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (2.5mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên"
+        },
+        "brand_names": {
+            "vietnam": ["Renitec", "Enalapril Stada", "Enalapril", "Vasotec"],
+            "common": ["Vasotec", "Enalapril", "Renitec"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "20,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Enalapril generic thường rẻ hơn (20,000-35,000 VND/viên 5mg)."
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Vasotec (enalapril)",
@@ -538,6 +580,27 @@ ACE_INHIBITORS = {
                 "incompatibility": [],
                 "notes": "Chỉ có dạng uống"
             }
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "children": "0.07-0.6mg/kg/ngày x 1 lần/ngày (tối đa 40mg/ngày). Khởi đầu với liều thấp, tăng dần. Chỉ dùng cho trẻ ≥6 tuổi",
+            "adolescents": "5-10mg x 1 lần/ngày, tăng dần đến 20-40mg/ngày nếu cần",
+            "notes": "Dùng cho tăng huyết áp ở trẻ em ≥6 tuổi. Khởi đầu với liều thấp, tăng dần. Ưu điểm: dùng 1 lần/ngày (compliance tốt). Theo dõi huyết áp, chức năng thận, kali máu"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (2.5-5mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên"
+        },
+        "brand_names": {
+            "vietnam": ["Zestril", "Lisinopril Stada", "Lisinopril", "Prinivil"],
+            "common": ["Zestril", "Prinivil", "Lisinopril"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "25,000 - 60,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Lisinopril generic thường rẻ hơn (25,000-40,000 VND/viên 10mg)."
         },
         "references": {
             "primary_sources": [

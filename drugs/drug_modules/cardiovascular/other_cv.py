@@ -233,6 +233,27 @@ OTHER_CV_DRUGS = {
                 "notes": "Dùng cho cấp cứu. Tiêm CHẬM qua 5-10 phút. Theo dõi ECG và huyết áp liên tục. Chuyển sang PO càng sớm càng tốt."
             }
         },
+        "pediatric_dosing": {
+            "neonates": "10-15mcg/kg/ngày chia 2 lần (PO) hoặc 15-25mcg/kg/ngày (IV). Loading: 20-30mcg/kg chia 3 lần trong 24h. Theo dõi nồng độ digoxin chặt chẽ",
+            "infants": "10-15mcg/kg/ngày chia 2 lần (PO) hoặc 15-25mcg/kg/ngày (IV). Loading: 20-30mcg/kg chia 3 lần trong 24h. Theo dõi nồng độ digoxin chặt chẽ",
+            "children": "10-15mcg/kg/ngày chia 2 lần (PO) hoặc 15-25mcg/kg/ngày (IV). Loading: 20-30mcg/kg chia 3 lần trong 24h. Theo dõi nồng độ digoxin, K+, Mg2+ chặt chẽ",
+            "adolescents": "0.125-0.25mg x 1 lần/ngày (PO) hoặc 0.25-0.5mg IV. Liều người lớn. Theo dõi nồng độ digoxin",
+            "notes": "Dùng cho suy tim và rối loạn nhịp ở trẻ em. Liều tính theo cân nặng. BẮT BUỘC theo dõi nồng độ digoxin trong máu (mục tiêu 0.8-2 ng/mL). Theo dõi K+, Mg2+ (hạ K+, hạ Mg2+ → tăng nguy cơ ngộ độc). Giảm liều ở suy thận"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với ngộ độc digoxin. Suy thận phổ biến hơn → half-life tăng (4-6 ngày). Cần liều thấp hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp (0.0625-0.125mg/ngày). Điều chỉnh theo CrCl. Tránh loading dose nhanh. Theo dõi nồng độ digoxin chặt chẽ hơn",
+            "monitoring": "Theo dõi nồng độ digoxin thường xuyên hơn (mỗi 1-2 tuần khi bắt đầu). Theo dõi K+, Mg2+, creatinine. Cảnh báo về triệu chứng ngộ độc (buồn nôn, rối loạn thị giác, rối loạn nhịp)"
+        },
+        "brand_names": {
+            "vietnam": ["Lanoxin", "Digoxin Stada", "Digoxin", "Cardiox"],
+            "common": ["Lanoxin", "Digoxin"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "3,000 - 12,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Digoxin generic thường rẻ hơn (3,000-8,000 VND/viên 0.25mg)."
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Lanoxin (digoxin)",

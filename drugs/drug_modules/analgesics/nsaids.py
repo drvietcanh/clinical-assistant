@@ -34,7 +34,9 @@ NSAIDS_DRUGS = {
         'Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể'],
         'pharmacokinetics': {'half_life': '2-4 giờ', 'onset': '30-60 phút',
         'duration': '4-6 giờ', 'protein_binding': '99%', 'clearance':
-        'Gan (chuyển hóa qua CYP2C9, CYP2C8), thận (thải trừ)'}, 'storage':
+        'Gan (chuyển hóa qua CYP2C9, CYP2C8), thận (thải trừ)'}, 'renal_adjustment': {
+        'normal': 'Không đổi', '30_60': 'Thận trọng, giảm liều 25-50%', 'under_30':
+        'Tránh dùng hoặc giảm liều mạnh. Theo dõi chức năng thận chặt chẽ'}, 'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm', 'black_box_warnings':
         'Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ'
         , 'drug_interactions': {'major': [{'drug':
@@ -99,7 +101,24 @@ NSAIDS_DRUGS = {
         'Mỗi 4-6 giờ (do half-life ngắn). Dùng với bữa ăn để giảm tác dụng phụ dạ dày. Liều tối đa: 2.4g/ngày (đau) hoặc 3.2g/ngày (viêm khớp).'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': [
+        }}, 'pediatric_dosing': {
+        'neonates': 'Không khuyến cáo cho trẻ <6 tháng tuổi',
+        'infants': '10mg/kg mỗi 6-8 giờ (tối đa 40mg/kg/ngày). Dùng cho sốt và đau',
+        'children': '10mg/kg mỗi 6-8 giờ (tối đa 40mg/kg/ngày). Dùng cho sốt, đau, viêm khớp. Liều tối đa: 2.4g/ngày',
+        'adolescents': '200-400mg mỗi 4-6 giờ (tối đa 2.4g/ngày). Liều người lớn',
+        'notes': 'Dùng cho sốt, đau, viêm khớp ở trẻ em. Uống với thức ăn để giảm kích ứng dạ dày. Theo dõi dấu hiệu chảy máu dạ dày, suy thận'
+    }, 'geriatric_dosing': {
+        'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ (chảy máu dạ dày, suy thận). Suy thận, suy tim phổ biến hơn',
+        'dose_adjustment': 'Khởi đầu với liều thấp hơn (200mg mỗi 6-8 giờ). Giảm liều nếu có suy thận (CrCl <60). Tránh dùng lâu dài',
+        'monitoring': 'Theo dõi dấu hiệu chảy máu dạ dày sát hơn. Theo dõi chức năng thận (creatinine, BUN) thường xuyên. Theo dõi huyết áp'
+    }, 'brand_names': {
+        'vietnam': ['Brufen', 'Ibuprofen Stada', 'Ibuprofen', 'Advil', 'Nurofen'],
+        'common': ['Advil', 'Motrin', 'Ibuprofen', 'Brufen', 'Nurofen']
+    }, 'cost_estimate': {
+        'unit': 'VND',
+        'range': '3,000 - 15,000 VND/viên (tùy hàm lượng và thương hiệu)',
+        'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Ibuprofen generic thường rẻ hơn (3,000-8,000 VND/viên 400mg).'
+    }, 'references': {'primary_sources': [
         'FDA Drug Label - Advil, Motrin (ibuprofen)',
         'UpToDate - Ibuprofen: Drug information',
         'Lexicomp - Ibuprofen monograph',

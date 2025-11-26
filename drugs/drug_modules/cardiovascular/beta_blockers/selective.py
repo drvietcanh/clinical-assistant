@@ -186,6 +186,27 @@ SELECTIVE_BETA_BLOCKERS = {
                 "notes": "Dùng cho cấp cứu. Theo dõi ECG và huyết áp liên tục. Chuyển sang PO càng sớm càng tốt."
             }
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Nếu cần, 1-2mg/kg/ngày chia 2 lần, tối đa 200mg/ngày",
+            "adolescents": "25-50mg x 2 lần/ngày (tartrate) hoặc 50-100mg x 1 lần/ngày (succinate), tăng dần. Liều người lớn",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng khi thực sự cần thiết. Theo dõi nhịp tim, huyết áp, chức năng gan chặt chẽ"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (nhịp tim chậm, hạ huyết áp, mệt mỏi). Suy gan phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (12.5-25mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo chức năng gan",
+            "monitoring": "Theo dõi nhịp tim, huyết áp sát hơn. Theo dõi chức năng gan. Cảnh báo về không ngừng đột ngột"
+        },
+        "brand_names": {
+            "vietnam": ["Betaloc", "Metoprolol Stada", "Metoprolol", "Lopressor", "Toprol-XL"],
+            "common": ["Lopressor", "Toprol-XL", "Metoprolol", "Betaloc"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "8,000 - 25,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Metoprolol generic thường rẻ hơn (8,000-15,000 VND/viên 50mg)."
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Lopressor (metoprolol tartrate), Toprol-XL (metoprolol succinate)",
@@ -397,6 +418,27 @@ SELECTIVE_BETA_BLOCKERS = {
               "incompatibility": [],
               "notes": "Atenolol chỉ có dạng uống (PO)."
           }
+      },
+      "pediatric_dosing": {
+          "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+          "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+          "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Nếu cần, 0.5-1mg/kg/ngày x 1 lần, tối đa 100mg/ngày",
+          "adolescents": "25-50mg x 1 lần/ngày, tăng dần đến 100mg/ngày nếu cần. Liều người lớn",
+          "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng khi thực sự cần thiết. Theo dõi nhịp tim, huyết áp, chức năng thận chặt chẽ"
+      },
+      "geriatric_dosing": {
+          "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (nhịp tim chậm, hạ huyết áp, mệt mỏi). Suy thận phổ biến hơn",
+          "dose_adjustment": "Khởi đầu với liều thấp hơn (12.5-25mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl (giảm liều 50-75% nếu CrCl <60)",
+          "monitoring": "Theo dõi nhịp tim, huyết áp sát hơn. Theo dõi chức năng thận. Cảnh báo về không ngừng đột ngột"
+      },
+      "brand_names": {
+          "vietnam": ["Tenormin", "Atenolol Stada", "Atenolol"],
+          "common": ["Tenormin", "Atenolol"]
+      },
+      "cost_estimate": {
+          "unit": "VND",
+          "range": "5,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu)",
+          "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Atenolol generic thường rẻ hơn (5,000-12,000 VND/viên 50mg)."
       },
       "references": {
           "primary_sources": [
@@ -613,6 +655,27 @@ SELECTIVE_BETA_BLOCKERS = {
               "incompatibility": [],
               "notes": "Bisoprolol chỉ có dạng uống (PO)."
           }
+      },
+      "pediatric_dosing": {
+          "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+          "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+          "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Nếu cần, 0.1-0.2mg/kg/ngày x 1 lần, tối đa 10mg/ngày",
+          "adolescents": "1.25-2.5mg x 1 lần/ngày, tăng dần đến 5-10mg/ngày nếu cần. Liều người lớn",
+          "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng khi thực sự cần thiết. Theo dõi nhịp tim, huyết áp, chức năng thận và gan chặt chẽ"
+      },
+      "geriatric_dosing": {
+          "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (nhịp tim chậm, hạ huyết áp, mệt mỏi). Suy thận và suy gan phổ biến hơn",
+          "dose_adjustment": "Khởi đầu với liều thấp hơn (1.25mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo chức năng thận và gan",
+          "monitoring": "Theo dõi nhịp tim, huyết áp sát hơn. Theo dõi chức năng thận và gan. Cảnh báo về không ngừng đột ngột"
+      },
+      "brand_names": {
+          "vietnam": ["Concor", "Bisoprolol Stada", "Bisoprolol", "Zebeta"],
+          "common": ["Zebeta", "Concor", "Bisoprolol"]
+      },
+      "cost_estimate": {
+          "unit": "VND",
+          "range": "10,000 - 30,000 VND/viên (tùy hàm lượng và thương hiệu)",
+          "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Bisoprolol generic thường rẻ hơn (10,000-20,000 VND/viên 5mg)."
       },
       "references": {
           "primary_sources": [
