@@ -23,7 +23,7 @@ import streamlit as st
 def render():
     """Render ICH Score Calculator"""
     
-    st.subheader("🧠 ICH Score - Đánh giá Xuất Huyết Nội Sọ")
+    st.subheader("🧠 ICH Score - Đánh giá Xuất huyết nội sọ")
     st.caption("Dự đoán tỷ lệ tử vong 30 ngày ở bệnh nhân xuất huyết não")
     
     st.markdown("""
@@ -40,7 +40,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### 1️⃣ Glasgow Coma Scale (GCS)")
+        st.markdown("### 1️⃣ Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow")
         gcs_options = {
             "13-15 (Nhẹ)": 0,
             "5-12 (Trung bình)": 1,
@@ -54,7 +54,7 @@ def render():
         gcs_score = gcs_options[gcs_selection]
         total_score += gcs_score
         
-        st.markdown("### 2️⃣ Thể Tích Máu Tụ (ICH Volume)")
+        st.markdown("### 2️⃣ Thể tích máu tụ (ICH Volume)")
         volume_options = {
             "< 30 cm³": 0,
             "≥ 30 cm³": 1
@@ -76,7 +76,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("### 3️⃣ Xuất Huyết Não Thất (IVH)")
+        st.markdown("### 3️⃣ Xuất huyết não thất (IVH)")
         ivh_options = {
             "Không": 0,
             "Có": 1
@@ -89,7 +89,7 @@ def render():
         ivh_score = ivh_options[ivh_selection]
         total_score += ivh_score
         
-        st.markdown("### 4️⃣ Vị Trí Dưới Lều (Infratentorial)")
+        st.markdown("### 4️⃣ Vị trí dưới lều (Infratentorial)")
         location_options = {
             "Không (Trên lều)": 0,
             "Có (Dưới lều - Tiểu não/Thân não)": 1
@@ -151,10 +151,10 @@ def render():
         col1, col2, col3 = st.columns(3)
         
         with col1:
-            st.metric("Tỷ Lệ Tử Vong 30 Ngày", mortality["rate"])
+            st.metric("Tỷ lệ tử vong 30 Ngày", mortality["rate"])
         
         with col2:
-            st.metric("Mức Độ Nguy Cơ", mortality["desc"])
+            st.metric("Mức độ nguy cơ", mortality["desc"])
         
         with col3:
             st.metric("Điểm Thành phần", f"GCS:{gcs_score} Vol:{volume_score} IVH:{ivh_score} Loc:{location_score} Age:{age_score}")
@@ -311,9 +311,9 @@ def render():
             """)
         
         # Mortality table
-        with st.expander("📈 Bảng Tỷ Lệ Tử Vong Theo Điểm"):
+        with st.expander("📈 Bảng tỷ lệ tử vong theo điểm"):
             st.markdown("""
-            | ICH Score | Tỷ Lệ Tử Vong 30 Ngày | Mức Độ Nguy Cơ |
+            | ICH Score | Tỷ lệ tử vong 30 Ngày | Mức độ nguy cơ |
             |-----------|------------------------|-----------------|
             | 0 | 0% | Rất thấp 🟢 |
             | 1 | 13% | Thấp 🟡 |

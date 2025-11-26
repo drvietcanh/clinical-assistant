@@ -8,7 +8,7 @@ import streamlit as st
 def render():
     """GRACE Score Calculator"""
     st.subheader("📊 GRACE Score")
-    st.caption("Tiên Lượng Tử Vong Trong ACS")
+    st.caption("Tiên lượng Tử vong Trong ACS")
     
     st.info("""
     **GRACE Score** dự đoán tử vong trong bệnh viện và 6 tháng sau ACS (STEMI/NSTEMI).

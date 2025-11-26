@@ -105,7 +105,7 @@ def render():
                     else:
                         risk = ">10%/năm"
             
-            st.markdown("### 💡 Giải Thích & Khuyến cáo")
+            st.markdown("### 💡 Giải thích & Khuyến cáo")
             st.markdown(f"**Nguy cơ đột quỵ hàng năm:** {risk}")
             
             st.markdown("**Chi tiết điểm:**")

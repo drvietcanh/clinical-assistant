@@ -228,7 +228,7 @@ def render_tdm_calculator(antibiotic_name):
                 key=f"interpret_{antibiotic_name}_peak"
             )
         
-        if st.button("🔍 Giải Thích", type="primary", key=f"interpret_{antibiotic_name}"):
+        if st.button("🔍 Giải thích", type="primary", key=f"interpret_{antibiotic_name}"):
             interpretation = interpret_vancomycin_level(
                 trough_mg_l=trough if trough > 0 else None,
                 peak_mg_l=peak if peak > 0 else None

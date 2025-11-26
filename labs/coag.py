@@ -125,7 +125,7 @@ def render():
         
         ---
         
-        ### **Nguyên Tắc Giải Thích:**
+        ### **Nguyên Tắc Giải thích:**
         
         1. ✅ **INR** - Theo dõi Warfarin (đường uống)
         2. ✅ **aPTT** - Theo dõi Heparin (tiêm tĩnh mạch)

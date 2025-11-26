@@ -355,7 +355,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: SPECIAL CONSIDERATIONS ==========
-    st.markdown("### 👥 Các Trường Hợp Đặc Biệt")
+    st.markdown("### 👥 Các trường hợp đặc biệt")
     
     col1, col2 = st.columns(2)
     

@@ -306,7 +306,7 @@ def render():
     
     # Clinical implications
     if result["all_criteria_met"] and result["severity"]:
-        st.markdown("### 💊 Ý Nghĩa Lâm Sàng")
+        st.markdown("### 💊 Ý nghĩa lâm sàng")
         
         col1, col2 = st.columns(2)
         

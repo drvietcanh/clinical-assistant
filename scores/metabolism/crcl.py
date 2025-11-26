@@ -476,7 +476,7 @@ def render():
             
             ---
             
-            ### 📖 Giải Thích Chuyên Sâu
+            ### 📖 Giải thích Chuyên Sâu
             
             **CrCl (Creatinine Clearance - Độ Thanh Thải Creatinine):**
             - **Định nghĩa:** CrCl là thể tích huyết tương được thanh thải creatinine trong một phút, thể hiện khả năng lọc của thận

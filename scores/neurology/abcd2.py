@@ -304,7 +304,7 @@ def render():
     st.markdown("---")
     
     # Score interpretation
-    st.markdown("### 📊 Bảng Phân Loại Nguy Cơ")
+    st.markdown("### 📊 Bảng phân loại nguy cơ")
     
     import pandas as pd
     
@@ -323,7 +323,7 @@ def render():
     st.markdown("---")
     
     # Special considerations
-    st.markdown("### ⚠️ Các Trường Hợp Đặc Biệt")
+    st.markdown("### ⚠️ Các trường hợp đặc biệt")
     
     st.warning("""
     **ABCD3-I Score (Extended):**

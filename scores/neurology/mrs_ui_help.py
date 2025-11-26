@@ -56,7 +56,7 @@ def render_comparison_table():
     """Render comparison table expander"""
     with st.expander("📊 Bảng So sánh mRS Scores"):
         st.markdown("""
-        | mRS | Mô Tả | Đi Lại | Tự Chăm Sóc | Độc Lập | Kết Cục |
+        | mRS | Mô Tả | Đi lại | Tự chăm sóc | Độc lập | Kết Cục |
         |-----|-------|--------|-------------|---------|---------|
         | **0** | Không triệu chứng | ✅ Bình thường | ✅ Hoàn toàn | ✅ Hoàn toàn | 🟢 Excellent |
         | **1** | Triệu chứng nhẹ | ✅ Bình thường | ✅ Hoàn toàn | ✅ Hoàn toàn | 🟢 Excellent |

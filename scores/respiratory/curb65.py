@@ -149,7 +149,7 @@ def render():
                     mortality = "40%"
                     recommendation = "Nhập ICU ngay"
             
-            st.markdown("### 💡 Giải Thích")
+            st.markdown("### 💡 Giải thích")
             
             if details:
                 for d in details:

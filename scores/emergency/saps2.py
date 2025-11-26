@@ -355,9 +355,9 @@ def render():
         
         **Tổng điểm:** 0-163 (thực tế thường <100)
         
-        ### 📊 Điểm & Tử Vong
+        ### 📊 Điểm & Tử vong
         
-        | SAPS II | Tử Vong |
+        | SAPS II | Tử vong |
         |---------|---------|
         | <30 | <10% |
         | 30-39 | 10-25% |
@@ -386,7 +386,7 @@ def render():
     with col1:
         age = st.number_input("Tuổi", 0, 120, 50, 1, format="%d")
     with col2:
-        gcs = st.number_input("GCS (Glasgow Coma Scale)", 3, 15, 15, 1, format="%d")
+        gcs = st.number_input("GCS (Glasgow Coma Scale) - Thang Điểm Hôn Mê Glasgow", 3, 15, 15, 1, format="%d")
     
     st.divider()
     

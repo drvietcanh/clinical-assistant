@@ -92,7 +92,7 @@ def render():
                     st.error(f"## HAS-BLED = {score}")
                     st.error("🚨 Nguy cơ chảy máu CAO")
             
-            st.markdown("### 💡 Giải Thích")
+            st.markdown("### 💡 Giải thích")
             
             if details:
                 for d in details:

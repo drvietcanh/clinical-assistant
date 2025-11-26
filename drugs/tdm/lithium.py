@@ -137,7 +137,7 @@ def render_lithium_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải Thích Nồng Độ"])
+    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải thích Nồng Độ"])
     
     with tab1:
         st.markdown("### 📋 Thông số bệnh nhân")
@@ -306,7 +306,7 @@ def render_lithium_tdm():
             """)
     
     with tab2:
-        st.markdown("### 📊 Giải Thích Nồng Độ Lithium")
+        st.markdown("### 📊 Giải thích Nồng Độ Lithium")
         
         col1, col2 = st.columns(2)
         
@@ -344,12 +344,12 @@ def render_lithium_tdm():
         
         st.markdown("---")
         
-        if st.button("📊 Giải Thích Nồng Độ", type="primary", use_container_width=True):
+        if st.button("📊 Giải thích Nồng Độ", type="primary", use_container_width=True):
             indication_code = "bipolar_acute" if "Điều trị cấp" in indication_interp else ("bipolar_maintenance" if "Duy trì" in indication_interp else "depression")
             
             interpretation = interpret_lithium_level(level, indication_code, time_since_dose)
             
-            st.markdown("### 📈 Kết quả Giải Thích")
+            st.markdown("### 📈 Kết quả Giải thích")
             
             if interpretation.get('trough_warning'):
                 st.warning(interpretation['trough_warning'])

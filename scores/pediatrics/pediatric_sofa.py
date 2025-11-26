@@ -525,7 +525,7 @@ def render():
         st.markdown("---")
         
         # Clinical implications
-        st.markdown("### 💊 Ý Nghĩa Lâm Sàng")
+        st.markdown("### 💊 Ý nghĩa lâm sàng")
         
         col1, col2 = st.columns(2)
         

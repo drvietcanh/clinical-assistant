@@ -172,10 +172,10 @@ def render():
             st.metric("Hunt & Hess Grade", f"Grade {final_grade}/5")
         
         with col2:
-            st.metric("Tỷ Lệ Tử Vong", final_info["mortality"])
+            st.metric("Tỷ lệ tử vong", final_info["mortality"])
         
         with col3:
-            st.metric("Tiên Lượng", final_info["outcome"])
+            st.metric("Tiên lượng", final_info["outcome"])
         
         st.markdown("---")
         
@@ -496,7 +496,7 @@ def render():
         # Comparison table
         with st.expander("📊 So sánh Hunt & Hess Grades"):
             st.markdown("""
-            | Grade | Triệu chứng Chính | GCS | Tử Vong | Tiên Lượng |
+            | Grade | Triệu chứng chính | GCS | Tử vong | Tiên lượng |
             |-------|-------------------|-----|---------|------------|
             | **1** | Không triệu chứng/Đau đầu nhẹ | 15 | 0-5% | 🟢 Rất tốt |
             | **2** | Đau đầu nặng, cứng gáy | 14-15 | 5-10% | 🟢 Tốt |

@@ -234,7 +234,7 @@ elif tdm_drug in category_map:
     with col2:
         st.metric("Mục tiêu điều trị", drug_info['therapeutic_range'])
     
-    if st.button("📊 Giải Thích", type="primary"):
+    if st.button("📊 Giải thích", type="primary"):
         if level < drug_info['target_min']:
             st.info(f"⬇️ **Dưới mục tiêu** ({level:.2f} {drug_info['unit']} < {drug_info['target_min']} {drug_info['unit']})")
         elif level <= drug_info['target_max']:

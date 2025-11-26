@@ -176,7 +176,7 @@ def render():
     selected_info = asa_options[selected_asa]
     
     st.markdown("---")
-    st.subheader("📊 Mô Tả Chi tiết")
+    st.subheader("📊 Mô tả Chi tiết")
     
     # Main classification
     if selected_asa in ["ASA I", "ASA II"]:

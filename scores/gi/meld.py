@@ -441,7 +441,7 @@ def render():
                 **Kết quả:** MELD = **{meld_score}**
                 """)
             
-            with st.expander("📊 Bảng Tỷ Lệ Tử Vong Theo MELD"):
+            with st.expander("📊 Bảng Tỷ lệ tử vong Theo MELD"):
                 st.markdown("""
                 | MELD Score | Tử vong 3 tháng | Tử vong 1 năm | Mức Độ | Ưu tiên ghép |
                 |------------|-----------------|---------------|---------|--------------|

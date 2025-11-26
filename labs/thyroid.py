@@ -21,7 +21,7 @@ def render():
         ft3 = st.number_input("Free T3 (pg/mL)", 0.0, 10.0, 3.0, 0.1, format="%.1f")
     
     with col2:
-        st.markdown("#### 📊 Giải Thích")
+        st.markdown("#### 📊 Giải thích")
         
         # TSH
         if 0.4 <= tsh <= 4.0:

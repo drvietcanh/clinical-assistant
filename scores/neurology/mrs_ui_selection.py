@@ -10,7 +10,7 @@ from .mrs_data import MRS_GRADES
 def render_selection():
     """Render the mRS grade selection UI"""
     
-    st.markdown("### 🩺 Chọn Mức Độ Chức Năng")
+    st.markdown("### 🩺 Chọn mức độ chức năng")
     
     st.info("""
     **Hướng dẫn:** Chọn mức độ phù hợp nhất với tình trạng chức năng hiện tại của bệnh nhân.

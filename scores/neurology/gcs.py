@@ -9,7 +9,7 @@ import streamlit as st
 def render():
     """Glasgow Coma Scale Calculator"""
     st.subheader("🧠 Glasgow Coma Scale (GCS)")
-    st.caption("Đánh giá Mức Độ Ý Thức")
+    st.caption("Đánh giá Mức độ ý thức")
     
     col1, col2 = st.columns([2, 1])
     
@@ -17,7 +17,7 @@ def render():
         st.markdown("### 📋 Thang Đánh giá")
         
         # Eye Opening (E)
-        st.markdown("#### 👁️ Eye Opening (Mở Mắt)")
+        st.markdown("#### 👁️ Mở mắt (Eye Opening)")
         eye_options = {
             "Spontaneous (Tự nhiên)": 4,
             "To speech (Khi gọi)": 3,
@@ -32,7 +32,7 @@ def render():
         eye_score = eye_options[eye_response]
         
         # Verbal Response (V)
-        st.markdown("#### 🗣️ Verbal Response (Lời Nói)")
+        st.markdown("#### 🗣️ Phản Ứng Lời nói (Verbal Response)")
         verbal_options = {
             "Oriented (Tỉnh táo, định hướng đúng)": 5,
             "Confused (Lẫn lộn)": 4,
@@ -48,7 +48,7 @@ def render():
         verbal_score = verbal_options[verbal_response]
         
         # Motor Response (M)
-        st.markdown("#### 💪 Motor Response (Vận Động)")
+        st.markdown("#### 💪 Phản Ứng Vận động (Motor Response)")
         motor_options = {
             "Obeys commands (Làm theo lệnh)": 6,
             "Localizes pain (Định vị đau)": 5,
@@ -75,30 +75,30 @@ def render():
                 if total_score >= 14:
                     st.success(f"## GCS = {total_score}")
                     st.success("✅ Tổn Thương Nhẹ")
-                    severity = "Mild TBI"
+                    severity = "Chấn thương sọ não nhẹ (Mild TBI)"
                 elif total_score >= 9:
                     st.warning(f"## GCS = {total_score}")
                     st.warning("⚠️ Tổn Thương Trung Bình")
-                    severity = "Moderate TBI"
+                    severity = "Chấn thương sọ não trung bình (Moderate TBI)"
                 else:
                     st.error(f"## GCS = {total_score}")
                     st.error("🚨 Tổn Thương Nặng")
-                    severity = "Severe TBI"
+                    severity = "Chấn thương sọ não nặng (Severe TBI)"
             
-            st.markdown("### 💡 Giải Thích")
+            st.markdown("### 💡 Giải thích")
             
             st.write(f"**Tổng điểm:** {total_score}/15")
             st.write(f"**Phân loại:** {severity}")
             
             st.markdown(f"""
             **Chi tiết:**
-            - Eye Opening: {eye_score}/4 - {eye_response}
-            - Verbal Response: {verbal_score}/5 - {verbal_response}
-            - Motor Response: {motor_score}/6 - {motor_response}
+            - Mở mắt (Eye Opening): {eye_score}/4 - {eye_response}
+            - Phản Ứng Lời nói (Verbal Response): {verbal_score}/5 - {verbal_response}
+            - Phản Ứng Vận động (Motor Response): {motor_score}/6 - {motor_response}
             """)
             
             st.markdown("---")
-            st.markdown("### 💊 Ý Nghĩa Lâm Sàng")
+            st.markdown("### 💊 Ý nghĩa lâm sàng")
             
             if total_score >= 14:
                 st.success("""
@@ -141,40 +141,40 @@ def render():
                 
                 **Thang điểm (3-15):**
                 
-                **Eye Opening (1-4):**
-                - 4: Spontaneous
-                - 3: To speech
-                - 2: To pain
-                - 1: None
+                **Mở mắt (Eye Opening) (1-4):**
+                - 4: Tự nhiên (Spontaneous)
+                - 3: Khi gọi (To speech)
+                - 2: Khi đau (To pain)
+                - 1: Không mở (None)
                 
-                **Verbal Response (1-5):**
-                - 5: Oriented
-                - 4: Confused
-                - 3: Inappropriate words
-                - 2: Incomprehensible sounds
-                - 1: None
+                **Phản Ứng Lời nói (Verbal Response) (1-5):**
+                - 5: Tỉnh táo, định hướng đúng (Oriented)
+                - 4: Lẫn lộn (Confused)
+                - 3: Nói lung tung (Inappropriate words)
+                - 2: Rên rỉ (Incomprehensible sounds)
+                - 1: Không nói (None)
                 
-                **Motor Response (1-6):**
-                - 6: Obeys commands
-                - 5: Localizes pain
-                - 4: Withdraws from pain
-                - 3: Flexion to pain (decorticate)
-                - 2: Extension to pain (decerebrate)
-                - 1: None
+                **Phản Ứng Vận động (Motor Response) (1-6):**
+                - 6: Làm theo lệnh (Obeys commands)
+                - 5: Định vị đau (Localizes pain)
+                - 4: Rút tay khi đau (Withdraws from pain)
+                - 3: Gấp cứng khi đau (decorticate) (Flexion to pain)
+                - 2: Duỗi cứng khi đau (decerebrate) (Extension to pain)
+                - 1: Không cử động (None)
                 
                 **Phân loại chấn thương sọ não:**
-                - GCS 14-15: Mild TBI
-                - GCS 9-13: Moderate TBI
-                - GCS 3-8: Severe TBI
+                - GCS 14-15: Chấn thương sọ não nhẹ (Mild TBI)
+                - GCS 9-13: Chấn thương sọ não trung bình (Moderate TBI)
+                - GCS 3-8: Chấn thương sọ não nặng (Severe TBI)
                 
                 **Chỉ định đặt nội khí quản:**
                 - GCS ≤8 (mất khả năng bảo vệ đường thở)
                 
-                **Reference:**
+                **Tài liệu tham khảo:**
                 Teasdale G, Jennett B. Assessment of coma and impaired consciousness. A practical scale. Lancet. 1974;2(7872):81-84.
                 
-                **Validation:**
-                - Widely validated across trauma, neurosurgery, ICU
-                - Gold standard for consciousness assessment
+                **Xác nhận giá trị:**
+                - Được xác nhận rộng rãi trong chấn thương, phẫu thuật thần kinh, hồi sức cấp cứu
+                - Tiêu chuẩn vàng để đánh giá mức độ ý thức
                 """)
 

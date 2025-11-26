@@ -128,7 +128,7 @@ def render_digoxin_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải Thích Nồng Độ"])
+    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải thích Nồng Độ"])
     
     with tab1:
         st.markdown("### 📋 Thông số bệnh nhân")
@@ -301,7 +301,7 @@ def render_digoxin_tdm():
             """)
     
     with tab2:
-        st.markdown("### 📊 Giải Thích Nồng Độ Digoxin")
+        st.markdown("### 📊 Giải thích Nồng Độ Digoxin")
         
         col1, col2 = st.columns(2)
         
@@ -339,11 +339,11 @@ def render_digoxin_tdm():
         
         st.markdown("---")
         
-        if st.button("📊 Giải Thích Nồng Độ", type="primary", use_container_width=True):
+        if st.button("📊 Giải thích Nồng Độ", type="primary", use_container_width=True):
             indication_code = "heart_failure" if "Suy tim" in indication_interp else "atrial_fibrillation"
             interpretation = interpret_digoxin_level(level, indication_code)
             
-            st.markdown("### 📈 Kết quả Giải Thích")
+            st.markdown("### 📈 Kết quả Giải thích")
             
             # Display status
             if interpretation['color'] == 'success':

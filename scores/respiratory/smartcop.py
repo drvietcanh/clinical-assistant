@@ -341,7 +341,7 @@ def render():
             st.metric("Nguy Cơ Cần IRVS", f"{predicted_risk:.1f}%")
         
         with col3:
-            st.metric("Mức Độ Nguy Cơ", risk)
+            st.metric("Mức độ nguy cơ", risk)
         
         st.markdown("---")
         

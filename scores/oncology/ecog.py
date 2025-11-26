@@ -160,7 +160,7 @@ def render():
     selected_info = ecog_options[selected_ecog]
     
     st.markdown("---")
-    st.subheader("📊 Mô Tả Chi tiết")
+    st.subheader("📊 Mô tả Chi tiết")
     
     st.info(f"""
     **{selected_info['color']} ECOG {selected_ecog}: {selected_info['status']}**
@@ -230,7 +230,7 @@ def render():
         
         # Prognosis and survival
         st.markdown("---")
-        st.subheader("📈 Tiên Lượng & Thời Gian Sống Thêm")
+        st.subheader("📈 Tiên lượng & Thời Gian Sống Thêm")
         
         st.warning(f"""
         **Tổng quan:** {selected_info['survival']}
@@ -415,7 +415,7 @@ def render():
         - Không dùng với ECOG 4
         """)
     
-    with st.expander("📈 ECOG và Tiên Lượng"):
+    with st.expander("📈 ECOG và Tiên lượng"):
         st.markdown("""
         ### ECOG là yếu tố tiên lượng độc lập:
         

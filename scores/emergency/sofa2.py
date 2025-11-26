@@ -199,9 +199,9 @@ def render():
         
         Mỗi hệ: 0-4 điểm → Tổng: 0-24 điểm
         
-        ### 📊 Điểm & Tử Vong (Cập Nhật 2025)
+        ### 📊 Điểm & Tử vong (Cập Nhật 2025)
         
-        | SOFA-2 Score | Tử Vong ICU | So Với SOFA Gốc |
+        | SOFA-2 Score | Tử vong ICU | So Với SOFA Gốc |
         |--------------|-------------|-----------------|
         | 0 | <8% | Cải thiện |
         | 1-6 | 8-18% | Chính xác hơn |
@@ -306,7 +306,7 @@ def render():
     
     # Central Nervous System
     st.markdown("#### 5️⃣ Thần kinh (CNS)")
-    gcs = st.number_input("Glasgow Coma Scale (GCS)", 3, 15, 15, 1, format="%d")
+    gcs = st.number_input("Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow", 3, 15, 15, 1, format="%d")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
     st.divider()

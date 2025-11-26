@@ -22,10 +22,10 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Đánh giá 11 Hạng Mục")
+        st.markdown("### 📋 Đánh giá 11 Hạng mục")
         
         # 1a. Level of Consciousness
-        st.markdown("#### 1a. Mức Độ Ý Thức")
+        st.markdown("#### 1a. Mức độ ý thức")
         loc = st.radio(
             "Đánh giá:",
             [
@@ -39,7 +39,7 @@ def render():
         loc_score = int(loc[0])
         
         # 1b. LOC Questions
-        st.markdown("#### 1b. Câu Hỏi Định Hướng")
+        st.markdown("#### 1b. Câu hỏi định hướng")
         st.caption("Hỏi: Tháng này là tháng mấy? Bao nhiêu tuổi?")
         loc_questions = st.radio(
             "Trả lời đúng:",
@@ -53,7 +53,7 @@ def render():
         loc_q_score = int(loc_questions[0])
         
         # 1c. LOC Commands
-        st.markdown("#### 1c. Làm Theo Lệnh")
+        st.markdown("#### 1c. Làm theo lệnh")
         st.caption("Yêu cầu: Mở/nhắm mắt, nắm/mở bàn tay")
         loc_commands = st.radio(
             "Thực hiện đúng:",
@@ -69,7 +69,7 @@ def render():
         st.markdown("---")
         
         # 2. Best Gaze
-        st.markdown("#### 2. Vận Nhãn (Eye Movement)")
+        st.markdown("#### 2. Vận nhãn (Eye Movement)")
         gaze = st.radio(
             "Nhìn theo ngón tay ngang:",
             [
@@ -82,7 +82,7 @@ def render():
         gaze_score = int(gaze[0])
         
         # 3. Visual Fields
-        st.markdown("#### 3. Thị Trường")
+        st.markdown("#### 3. Thị trường")
         visual = st.radio(
             "Kiểm tra bằng cách đếm ngón tay 4 góc:",
             [
@@ -96,7 +96,7 @@ def render():
         visual_score = int(visual[0])
         
         # 4. Facial Palsy
-        st.markdown("#### 4. Liệt Mặt")
+        st.markdown("#### 4. Liệt mặt")
         st.caption("Yêu cầu: Cười, nhăn mặt")
         facial = st.radio(
             "Đánh giá:",
@@ -113,7 +113,7 @@ def render():
         st.markdown("---")
         
         # 5. Motor Arm (Left)
-        st.markdown("#### 5a. Vận Động Tay TRÁI")
+        st.markdown("#### 5a. Vận động Tay TRÁI")
         st.caption("Giơ tay lên 90° (ngồi) hoặc 45° (nằm), giữ 10 giây")
         arm_left = st.radio(
             "Tay trái:",
@@ -129,7 +129,7 @@ def render():
         arm_l_score = int(arm_left[0])
         
         # 5. Motor Arm (Right)
-        st.markdown("#### 5b. Vận Động Tay PHẢI")
+        st.markdown("#### 5b. Vận động Tay PHẢI")
         arm_right = st.radio(
             "Tay phải:",
             [
@@ -144,7 +144,7 @@ def render():
         arm_r_score = int(arm_right[0])
         
         # 6. Motor Leg (Left)
-        st.markdown("#### 6a. Vận Động Chân TRÁI")
+        st.markdown("#### 6a. Vận động Chân TRÁI")
         st.caption("Nâng chân lên 30°, giữ 5 giây")
         leg_left = st.radio(
             "Chân trái:",
@@ -160,7 +160,7 @@ def render():
         leg_l_score = int(leg_left[0])
         
         # 6. Motor Leg (Right)
-        st.markdown("#### 6b. Vận Động Chân PHẢI")
+        st.markdown("#### 6b. Vận động Chân PHẢI")
         leg_right = st.radio(
             "Chân phải:",
             [
@@ -177,7 +177,7 @@ def render():
         st.markdown("---")
         
         # 7. Limb Ataxia
-        st.markdown("#### 7. Mất Điều Hòa Chi (Ataxia)")
+        st.markdown("#### 7. Mất điều hòa chi (Ataxia)")
         st.caption("Test: Ngón tay chạm mũi, gót chân chạm đầu gối")
         ataxia = st.radio(
             "Đánh giá:",
@@ -191,7 +191,7 @@ def render():
         ataxia_score = int(ataxia[0])
         
         # 8. Sensory
-        st.markdown("#### 8. Cảm Giác")
+        st.markdown("#### 8. Cảm giác")
         st.caption("Test kim châm nhẹ, so sánh 2 bên")
         sensory = st.radio(
             "Đánh giá:",
@@ -205,7 +205,7 @@ def render():
         sensory_score = int(sensory[0])
         
         # 9. Best Language (Aphasia)
-        st.markdown("#### 9. Ngôn Ngữ (Aphasia)")
+        st.markdown("#### 9. Ngôn ngữ (Aphasia)")
         st.caption("Mô tả tranh, đọc câu, đặt tên vật")
         language = st.radio(
             "Đánh giá:",
@@ -220,7 +220,7 @@ def render():
         language_score = int(language[0])
         
         # 10. Dysarthria
-        st.markdown("#### 10. Khó Phát Âm (Dysarthria)")
+        st.markdown("#### 10. Khó phát âm (Dysarthria)")
         st.caption("Đọc danh sách từ: Mẹ, Bà, Cầu...")
         dysarthria = st.radio(
             "Đánh giá:",
@@ -234,7 +234,7 @@ def render():
         dysarthria_score = int(dysarthria[0])
         
         # 11. Extinction/Inattention (Neglect)
-        st.markdown("#### 11. Bỏ Qua/Không Chú Ý (Neglect)")
+        st.markdown("#### 11. Bỏ qua/Không chú ý (Neglect)")
         st.caption("Test kích thích đồng thời 2 bên (xúc giác, thị giác)")
         neglect = st.radio(
             "Đánh giá:",
@@ -428,7 +428,7 @@ def render():
                 """)
             
             st.markdown("---")
-            st.markdown("### 📊 Diễn giải & Tiên Lượng")
+            st.markdown("### 📊 Diễn giải & Tiên lượng")
             
             st.info(f"""
             **NIHSS = {total_score} - {severity}**

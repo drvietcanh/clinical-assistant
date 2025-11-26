@@ -18,7 +18,7 @@
 
 ### 📊 **100 Clinical Calculators - Đầy Đủ Nhất** ⭐ 
 
-#### 🚨 **Cấp Cứu & Hồi Sức (5 calculators)**
+#### 🚨 **Cấp cứu & Hồi sức (5 calculators)**
 - qSOFA, SOFA, APACHE II, SAPS II, MODS
 
 #### ❤️ **Tim Mạch (12 calculators)**  

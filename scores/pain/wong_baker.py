@@ -37,7 +37,7 @@ def render():
     st.subheader("📝 Đánh giá đau")
     
     # Display faces
-    st.markdown("### 😊 Chọn Khuôn Mặt Mô Tả Mức Độ Đau")
+    st.markdown("### 😊 Chọn Khuôn Mặt Mô tả Mức Độ Đau")
     
     # Create visual faces representation
     faces_data = [

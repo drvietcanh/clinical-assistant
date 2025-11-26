@@ -201,7 +201,7 @@ def render():
         ### 🎯 Thành phần
         
         **3 Thông Số Sinh Lý:**
-        1. **GCS (Glasgow Coma Scale):** Mức độ ý thức
+        1. **GCS (Glasgow Coma Scale - Thang Điểm Hôn Mê Glasgow):** Mức độ ý thức
         2. **SBP (Systolic Blood Pressure):** Huyết áp tâm thu
         3. **RR (Respiratory Rate):** Tần số thở
         
@@ -262,7 +262,7 @@ def render():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.markdown("#### 🧠 Glasgow Coma Scale")
+        st.markdown("#### 🧠 Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow")
         gcs = st.number_input(
             "**GCS**",
             min_value=3,
@@ -300,7 +300,7 @@ def render():
     st.divider()
     
     # Calculate button
-    if st.button("🧮 Tính RTS & Tiên Lượng", type="primary", use_container_width=True):
+    if st.button("🧮 Tính RTS & Tiên lượng", type="primary", use_container_width=True):
         result = calculate_rts(gcs=gcs, sbp=sbp, rr=rr)
         
         # Display results
@@ -388,7 +388,7 @@ def render():
     # Quick reference
     with st.expander("📖 TRISS - Trauma and Injury Severity Score"):
         st.markdown("""
-        ### TRISS Score - Tiên Lượng Chính Xác Hơn
+        ### TRISS Score - Tiên lượng Chính Xác Hơn
         
         **TRISS kết hợp:**
         1. **RTS** (Revised Trauma Score) - sinh lý

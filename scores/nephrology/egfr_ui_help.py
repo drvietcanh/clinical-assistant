@@ -218,7 +218,7 @@ def render_references():
 
 def render_detailed_explanations():
     """Render detailed explanations expander"""
-    with st.expander("📖 Giải Thích Chuyên Sâu Các Thuật Ngữ", expanded=False):
+    with st.expander("📖 Giải thích Chuyên Sâu Các Thuật Ngữ", expanded=False):
         st.markdown("""
         ### 🧪 eGFR (estimated Glomerular Filtration Rate - Tốc Độ Lọc Cầu Thận Ước Tính)
         

@@ -542,7 +542,7 @@ def render():
         - Neurological examination
         """)
     
-    with st.expander("📊 APGAR vs Tiên Lượng"):
+    with st.expander("📊 APGAR vs Tiên lượng"):
         st.markdown("""
         ### Mối liên hệ giữa APGAR và kết cục:
         

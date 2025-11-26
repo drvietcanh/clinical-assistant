@@ -113,7 +113,7 @@ def render_carbamazepine_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải Thích Nồng Độ"])
+    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải thích Nồng Độ"])
     
     with tab1:
         st.markdown("### 📋 Thông số bệnh nhân")

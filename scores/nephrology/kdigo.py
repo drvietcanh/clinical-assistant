@@ -142,11 +142,11 @@ def calculate_kdigo(
         interpretation = """
         **🟡 AKI Giai Đoạn 1 - Nhẹ**
         
-        **Tỷ Lệ Tử Vong:**
+        **Tỷ lệ tử vong:**
         - Trong bệnh viện: ~5-10%
         - Nếu tiến triển sang Stage 2-3: nguy cơ tăng đáng kể
         
-        **Tiên Lượng:**
+        **Tiên lượng:**
         - Hầu hết hồi phục hoàn toàn nếu điều trị sớm
         - Nguy cơ chuyển thành CKD: thấp (~5-10%)
         - Cần theo dõi sát để phát hiện tiến triển
@@ -158,11 +158,11 @@ def calculate_kdigo(
         interpretation = """
         **🟠 AKI Giai Đoạn 2 - Trung Bình**
         
-        **Tỷ Lệ Tử Vong:**
+        **Tỷ lệ tử vong:**
         - Trong bệnh viện: ~15-25%
         - Nguy cơ tiến triển sang Stage 3: ~30-40%
         
-        **Tiên Lượng:**
+        **Tiên lượng:**
         - Hồi phục: ~60-70% nếu điều trị kịp thời
         - Nguy cơ chuyển thành CKD: trung bình (~15-25%)
         - Cần can thiệp tích cực và theo dõi sát
@@ -174,11 +174,11 @@ def calculate_kdigo(
         interpretation = """
         **🔴 AKI Giai Đoạn 3 - Nặng**
         
-        **Tỷ Lệ Tử Vong:**
+        **Tỷ lệ tử vong:**
         - Trong bệnh viện: ~30-60%
         - Nếu cần RRT: tử vong ~50-70%
         
-        **Tiên Lượng:**
+        **Tiên lượng:**
         - Hồi phục hoàn toàn: ~40-50%
         - Nguy cơ chuyển thành CKD: cao (~25-40%)
         - Nguy cơ cần RRT lâu dài: ~10-15%

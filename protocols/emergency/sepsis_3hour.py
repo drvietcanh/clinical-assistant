@@ -429,7 +429,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 9: SPECIAL CONSIDERATIONS ==========
-    st.markdown("### ⚠️ Các Trường Hợp Đặc Biệt")
+    st.markdown("### ⚠️ Các trường hợp đặc biệt")
     
     with st.expander("🔍 Xem các trường hợp đặc biệt", expanded=False):
         st.markdown("""#### **Suy Thận:**

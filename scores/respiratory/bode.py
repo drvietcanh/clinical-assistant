@@ -270,9 +270,9 @@ def render():
         | **mMRC Dyspnea** | 0-1 | 2 | 3 | 4 |
         | **6MWD (meters)** | ≥350 | 250-349 | 150-249 | ≤149 |
         
-        ### 📈 Tử Vong 4 Năm
+        ### 📈 Tử vong 4 Năm
         
-        | BODE Score | Quartile | Tử Vong 4 Năm |
+        | BODE Score | Quartile | Tử vong 4 Năm |
         |------------|----------|---------------|
         | 0-2 | Q1 | ~20% |
         | 3-4 | Q2 | ~30% |

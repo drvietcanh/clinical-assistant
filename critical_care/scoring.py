@@ -256,7 +256,7 @@ def render_cam_icu_calculator():
     feature3 = feature3_q1 or feature3_q2
     
     # Feature 4: Altered level of consciousness
-    st.markdown("#### 4️⃣ Thay Đổi Mức Độ Ý Thức")
+    st.markdown("#### 4️⃣ Thay Đổi Mức độ ý thức")
     consciousness_level = st.selectbox(
         "Mức độ ý thức hiện tại:",
         [

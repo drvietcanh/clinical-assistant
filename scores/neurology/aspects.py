@@ -200,7 +200,7 @@ def render():
             st.success("✅ Không có vùng nào bị ảnh hưởng")
     
     with col2:
-        st.markdown("### 📈 Tiên Lượng")
+        st.markdown("### 📈 Tiên lượng")
         
         if result["total_score"] >= 7:
             st.success("""
@@ -227,7 +227,7 @@ def render():
     st.markdown("---")
     
     # Clinical implications
-    st.markdown("### 💊 Ý Nghĩa Lâm Sàng")
+    st.markdown("### 💊 Ý nghĩa lâm sàng")
     
     col1, col2 = st.columns(2)
     

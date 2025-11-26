@@ -35,7 +35,7 @@ def render():
         )
         
         gcs = st.number_input(
-            "Glasgow Coma Scale",
+            "Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow",
             min_value=3,
             max_value=15,
             value=15,

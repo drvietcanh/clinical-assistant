@@ -268,7 +268,7 @@ def render_vancomycin_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2, tab3 = st.tabs(["🧮 Tính Liều (AUC-based)", "🧮 Tính Liều (Trough-based)", "📊 Giải Thích Nồng Độ"])
+    tab1, tab2, tab3 = st.tabs(["🧮 Tính Liều (AUC-based)", "🧮 Tính Liều (Trough-based)", "📊 Giải thích Nồng Độ"])
     
     with tab1:
         st.markdown("### 📋 AUC-Based Dosing (Ưu tiên)")
@@ -530,7 +530,7 @@ def render_vancomycin_tdm():
             """)
     
     with tab3:
-        st.markdown("### 📊 Giải Thích Nồng Độ Vancomycin")
+        st.markdown("### 📊 Giải thích Nồng Độ Vancomycin")
         
         method = st.radio(
             "Phương pháp:",
@@ -580,14 +580,14 @@ def render_vancomycin_tdm():
         
         st.markdown("---")
         
-        if st.button("📊 Giải Thích Nồng Độ", type="primary", use_container_width=True):
+        if st.button("📊 Giải thích Nồng Độ", type="primary", use_container_width=True):
             interpretations = interpret_vancomycin_level(
                 trough_mg_l=trough if method == "Trough" else (trough if peak else None),
                 peak_mg_l=peak if method == "AUC (Ưu tiên)" else None,
                 auc=auc if method == "AUC (Ưu tiên)" else None
             )
             
-            st.markdown("### 📈 Kết quả Giải Thích")
+            st.markdown("### 📈 Kết quả Giải thích")
             
             for interp in interpretations:
                 if interp['color'] == 'success':

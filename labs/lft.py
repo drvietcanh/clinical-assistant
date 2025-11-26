@@ -104,7 +104,7 @@ def render():
                 st.caption("✓ Ratio 1-2")
     
     with col2:
-        st.markdown("#### 📊 Giải Thích")
+        st.markdown("#### 📊 Giải thích")
         
         results = {
             "ALT": alt,

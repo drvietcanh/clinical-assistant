@@ -23,7 +23,7 @@ def render():
         fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 21.0, 1.0, format="%.0f")
     
     with col2:
-        st.markdown("#### 📊 Giải Thích")
+        st.markdown("#### 📊 Giải thích")
         
         # pH
         if 7.35 <= ph <= 7.45:

@@ -48,7 +48,7 @@ def render():
     st.subheader("📝 Đánh giá")
     
     # 1. Đi đại tiện
-    st.markdown("### 1️⃣ Đi Đại Tiện")
+    st.markdown("### 1️⃣ Đi đại tiện")
     bowel = st.radio(
         "Khả năng đi đại tiện:",
         [
@@ -61,7 +61,7 @@ def render():
     bowel_score = int(bowel.split(" - ")[0])
     
     # 2. Đi tiểu tiện
-    st.markdown("### 2️⃣ Đi Tiểu Tiện")
+    st.markdown("### 2️⃣ Đi tiểu tiện")
     bladder = st.radio(
         "Khả năng đi tiểu tiện:",
         [
@@ -74,7 +74,7 @@ def render():
     bladder_score = int(bladder.split(" - ")[0])
     
     # 3. Tự chăm sóc cá nhân
-    st.markdown("### 3️⃣ Tự Chăm Sóc Cá Nhân")
+    st.markdown("### 3️⃣ Tự chăm sóc Cá Nhân")
     grooming = st.radio(
         "Khả năng tự chăm sóc (rửa mặt, chải đầu, đánh răng, cạo râu):",
         [
@@ -86,7 +86,7 @@ def render():
     grooming_score = int(grooming.split(" - ")[0])
     
     # 4. Đi lại
-    st.markdown("### 4️⃣ Đi Lại")
+    st.markdown("### 4️⃣ Đi lại")
     mobility = st.radio(
         "Khả năng đi lại (trong phòng, hành lang):",
         [
@@ -99,7 +99,7 @@ def render():
     mobility_score = int(mobility.split(" - ")[0])
     
     # 5. Lên xuống cầu thang
-    st.markdown("### 5️⃣ Lên Xuống Cầu Thang")
+    st.markdown("### 5️⃣ Lên xuống cầu thang")
     stairs = st.radio(
         "Khả năng lên xuống cầu thang:",
         [
@@ -112,7 +112,7 @@ def render():
     stairs_score = int(stairs.split(" - ")[0])
     
     # 6. Tắm rửa
-    st.markdown("### 6️⃣ Tắm Rửa")
+    st.markdown("### 6️⃣ Tắm rửa")
     bathing = st.radio(
         "Khả năng tắm rửa:",
         [
@@ -124,7 +124,7 @@ def render():
     bathing_score = int(bathing.split(" - ")[0])
     
     # 7. Mặc quần áo
-    st.markdown("### 7️⃣ Mặc Quần Áo")
+    st.markdown("### 7️⃣ Mặc quần áo")
     dressing = st.radio(
         "Khả năng mặc quần áo:",
         [
@@ -137,7 +137,7 @@ def render():
     dressing_score = int(dressing.split(" - ")[0])
     
     # 8. Kiểm soát đại tiện
-    st.markdown("### 8️⃣ Kiểm Soát Đại Tiện")
+    st.markdown("### 8️⃣ Kiểm soát đại tiện")
     bowel_control = st.radio(
         "Kiểm soát đại tiện:",
         [
@@ -150,7 +150,7 @@ def render():
     bowel_control_score = int(bowel_control.split(" - ")[0])
     
     # 9. Kiểm soát tiểu tiện
-    st.markdown("### 9️⃣ Kiểm Soát Tiểu Tiện")
+    st.markdown("### 9️⃣ Kiểm soát tiểu tiện")
     bladder_control = st.radio(
         "Kiểm soát tiểu tiện:",
         [
@@ -163,7 +163,7 @@ def render():
     bladder_control_score = int(bladder_control.split(" - ")[0])
     
     # 10. Ăn uống
-    st.markdown("### 🔟 Ăn Uống")
+    st.markdown("### 🔟 Ăn uống")
     feeding = st.radio(
         "Khả năng ăn uống:",
         [

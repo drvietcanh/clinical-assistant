@@ -95,6 +95,54 @@ COMMON_PHRASES = [
     ("kiểm", "tra", "tương", "thích"), # Kiểm Tra Tương Thích
     ("thuốc", "khác", "đang", "truyền"), # Thuốc Khác Đang Truyền
     ("dịch", "truyền"),         # Dịch Truyền
+    ("mở", "mắt"),              # Mở Mắt
+    ("lời", "nói"),             # Lời Nói
+    ("vận", "động"),           # Vận Động
+    ("giải", "thích"),         # Giải Thích
+    ("ý", "nghĩa", "lâm", "sàng"), # Ý Nghĩa Lâm Sàng
+    ("hạng", "mục"),           # Hạng Mục
+    ("mức", "độ", "ý", "thức"), # Mức Độ Ý Thức
+    ("câu", "hỏi", "định", "hướng"), # Câu Hỏi Định Hướng
+    ("làm", "theo", "lệnh"),   # Làm Theo Lệnh
+    ("vận", "nhãn"),           # Vận Nhãn
+    ("thị", "trường"),         # Thị Trường
+    ("liệt", "mặt"),           # Liệt Mặt
+    ("vận", "động", "tay"),    # Vận Động Tay
+    ("vận", "động", "chân"),   # Vận Động Chân
+    ("mất", "điều", "hòa", "chi"), # Mất Điều Hòa Chi
+    ("cảm", "giác"),           # Cảm Giác
+    ("ngôn", "ngữ"),           # Ngôn Ngữ
+    ("khó", "phát", "âm"),     # Khó Phát Âm
+    ("bỏ", "qua"),             # Bỏ Qua
+    ("không", "chú", "ý"),     # Không Chú Ý
+    ("tiên", "lượng"),         # Tiên Lượng
+    ("xuất", "huyết", "nội", "sọ"), # Xuất Huyết Nội Sọ
+    ("xuất", "huyết", "não", "thất"), # Xuất Huyết Não Thất
+    ("vị", "trí", "dưới", "lề"), # Vị Trí Dưới Lề
+    ("thể", "tích", "máu", "tụ"), # Thể Tích Máu Tụ
+    ("bảng", "tỷ", "lệ", "tử", "vong", "theo", "điểm"), # Bảng Tỷ Lệ Tử Vong Theo Điểm
+    ("mức", "độ", "nguy", "cơ"), # Mức Độ Nguy Cơ
+    ("tỷ", "lệ", "tử", "vong"), # Tỷ Lệ Tử Vong
+    ("triệu", "chứng", "chính"), # Triệu Chứng Chính
+    ("tử", "vong"),              # Tử Vong
+    ("chọn", "mức", "độ", "chức", "năng"), # Chọn Mức Độ Chức Năng
+    ("mô", "tả"),                  # Mô Tả
+    ("đi", "lại"),                 # Đi Lại
+    ("tự", "chăm", "sóc"),         # Tự Chăm Sóc
+    ("độc", "lập"),                # Độc Lập
+    ("những", "sai", "lầm", "thường", "gặp"), # Những Sai Lầm Thường Gặp
+    ("hướng", "dẫn", "đánh", "giá"), # Hướng Dẫn Đánh Giá
+    ("bảng", "phân", "loại", "nguy", "cơ"), # Bảng Phân Loại Nguy Cơ
+    ("các", "trường", "hợp", "đặc", "biệt"), # Các Trường Hợp Đặc Biệt
+    ("đi", "đại", "tiện"),        # Đi Đại Tiện
+    ("đi", "tiểu", "tiện"),       # Đi Tiểu Tiện
+    ("tự", "chăm", "sóc", "cá", "nhân"), # Tự Chăm Sóc Cá Nhân
+    ("lên", "xuống", "cầu", "thang"), # Lên Xuống Cầu Thang
+    ("tắm", "rửa"),              # Tắm Rửa
+    ("mặc", "quần", "áo"),        # Mặc Quần Áo
+    ("kiểm", "soát", "đại", "tiện"), # Kiểm Soát Đại Tiện
+    ("kiểm", "soát", "tiểu", "tiện"), # Kiểm Soát Tiểu Tiện
+    ("ăn", "uống"),               # Ăn Uống
 ]
 
 # Pattern để tìm các từ có chữ cái đầu viết hoa

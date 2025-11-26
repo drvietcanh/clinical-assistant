@@ -44,7 +44,7 @@
 
 📊 CALCULATORS (Tính Toán Lâm Sàng)
 ├── Tim Mạch (14 scores)
-├── Cấp Cứu & Hồi Sức (5 scores)
+├── Cấp cứu & Hồi sức (5 scores)
 ├── Hô Hấp (5 scores)
 ├── Thần Kinh (5 scores)
 ├── Tiêu Hóa (5 scores)

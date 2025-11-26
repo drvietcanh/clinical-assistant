@@ -235,9 +235,9 @@ def render():
         
         Mỗi hệ: 0-4 điểm → Tổng: 0-24 điểm
         
-        ### 📊 Điểm & Tử Vong
+        ### 📊 Điểm & Tử vong
         
-        | MODS Score | Tử Vong ICU |
+        | MODS Score | Tử vong ICU |
         |------------|-------------|
         | 0 | <5% |
         | 1-4 | 5-10% |
@@ -307,7 +307,7 @@ def render():
     
     # Neurologic
     st.markdown("#### 6️⃣ Thần kinh")
-    gcs = st.number_input("GCS (Glasgow Coma Scale)", 3, 15, 15, 1, format="%d")
+    gcs = st.number_input("GCS (Glasgow Coma Scale) - Thang Điểm Hôn Mê Glasgow", 3, 15, 15, 1, format="%d")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
     st.divider()

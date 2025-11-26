@@ -228,7 +228,7 @@ def render():
         
         ### 📊 Abbreviated Injury Scale (AIS)
         
-        | AIS | Mô Tả | Ví Dụ |
+        | AIS | Mô tả | Ví Dụ |
         |-----|-------|-------|
         | **0** | Không tổn thương | - |
         | **1** | Minor | Bầm tím, vết trầy |
@@ -251,7 +251,7 @@ def render():
         
         ### 📈 Phân Tầng Nguy Cơ
         
-        | ISS | Phân Loại | Tử Vong | Xử Trí |
+        | ISS | Phân Loại | Tử vong | Xử Trí |
         |-----|-----------|---------|--------|
         | 1-8 | Minor | <1% | Outpatient có thể |
         | 9-15 | Moderate | <5% | Admit, theo dõi |
@@ -329,7 +329,7 @@ def render():
     st.divider()
     
     # Calculate button
-    if st.button("🧮 Tính ISS & Tiên Lượng", type="primary", use_container_width=True):
+    if st.button("🧮 Tính ISS & Tiên lượng", type="primary", use_container_width=True):
         ais_scores = {
             'Head/Neck': ais_head,
             'Face': ais_face,

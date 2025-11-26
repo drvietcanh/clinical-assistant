@@ -287,7 +287,7 @@ def render():
         st.markdown("---")
         
         # Interpretation
-        st.subheader("🎯 Phân tích & Tiên Lượng")
+        st.subheader("🎯 Phân tích & Tiên lượng")
         
         st.info(f"""
         **Ranson Score: {total_score}/11**
@@ -465,7 +465,7 @@ def render():
             """)
         
         # Criteria interpretation
-        with st.expander("📋 Giải Thích Từng Tiêu chí"):
+        with st.expander("📋 Giải thích Từng Tiêu chí"):
             st.markdown(f"""
             ### Tiêu chí lúc nhập viện ({admission_count}/5):
             
@@ -518,7 +518,7 @@ def render():
     st.markdown("---")
     st.subheader("📚 Thông tin bổ sung")
     
-    with st.expander("🆚 So sánh Các Hệ Thống Tiên Lượng"):
+    with st.expander("🆚 So sánh Các Hệ Thống Tiên lượng"):
         st.markdown("""
         ### Ranson vs APACHE II vs Atlanta:
         

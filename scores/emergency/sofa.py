@@ -360,7 +360,7 @@ def render():
     
     # Central Nervous System
     st.markdown("#### 5️⃣ Thần kinh (CNS)")
-    gcs = st.number_input("Glasgow Coma Scale (GCS)", 3, 15, 15, 1, format="%d", key="sofa_gcs")
+    gcs = st.number_input("Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow", 3, 15, 15, 1, format="%d", key="sofa_gcs")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
     st.divider()

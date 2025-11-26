@@ -118,7 +118,7 @@ def render():
                     st.error("🚨 Suy thận")
                     stage = "CKD Giai đoạn 5 (G5)"
             
-            st.markdown("### 💡 Giải Thích")
+            st.markdown("### 💡 Giải thích")
             st.write(f"**Giai đoạn CKD:** {stage}")
             
             st.markdown("""
