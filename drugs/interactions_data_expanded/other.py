@@ -676,5 +676,524 @@ OTHER_INTERACTIONS = {
         "management": "Tránh bổ sung vitamin K không cần thiết. Nếu cần: điều chỉnh liều warfarin và theo dõi INR",
         "references": "Micromedex"
     },
+    
+    # ========== ADDITIONAL NSAIDs ==========
+    
+    ("Celecoxib", "Warfarin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Celecoxib có thể tăng nguy cơ xuất huyết",
+        "description": "Tăng nguy cơ xuất huyết dạ dày-ruột",
+        "management": "Theo dõi INR khi dùng celecoxib",
+        "references": "Micromedex"
+    },
+    
+    ("Meloxicam", "Warfarin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Meloxicam có thể tăng nguy cơ xuất huyết",
+        "description": "Tăng nguy cơ xuất huyết",
+        "management": "Theo dõi INR khi dùng meloxicam",
+        "references": "Micromedex"
+    },
+    
+    ("Indomethacin", "Lithium"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Indomethacin làm giảm đào thải lithium",
+        "description": "Tăng nồng độ lithium",
+        "management": "Theo dõi nồng độ lithium khi dùng indomethacin",
+        "references": "Micromedex"
+    },
+    
+    ("Ibuprofen", "Aspirin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng nguy cơ xuất huyết dạ dày-ruột",
+        "description": "Tăng nguy cơ xuất huyết dạ dày-ruột",
+        "management": "Thận trọng khi dùng chung. Dùng PPI bảo vệ dạ dày",
+        "references": "Micromedex"
+    },
+    
+    # ========== ADDITIONAL OPIOIDS ==========
+    
+    ("Fentanyl", "Benzodiazepine"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng tác dụng ức chế hô hấp",
+        "description": "Tăng nguy cơ suy hô hấp, tử vong",
+        "clinical_significance": "Nguy cơ suy hô hấp rất cao, đặc biệt khi dùng đường tiêm.",
+        "management": "Thận trọng khi dùng chung. Dùng liều thấp, theo dõi sát",
+        "references": "FDA Black Box Warning, Micromedex"
+    },
+    
+    ("Oxycodone", "Benzodiazepine"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng tác dụng ức chế hô hấp",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Thận trọng khi dùng chung. Dùng liều thấp",
+        "references": "FDA Black Box Warning, Micromedex"
+    },
+    
+    ("Hydromorphone", "Benzodiazepine"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng tác dụng ức chế hô hấp",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Thận trọng khi dùng chung",
+        "references": "FDA Black Box Warning, Micromedex"
+    },
+    
+    ("Methadone", "Rifampin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Rifampin cảm ứng chuyển hóa methadone",
+        "description": "Giảm nồng độ methadone, nguy cơ hội chứng cai",
+        "management": "Tăng liều methadone khi dùng rifampin. Theo dõi triệu chứng cai",
+        "references": "Micromedex"
+    },
+    
+    ("Methadone", "Phenytoin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Phenytoin cảm ứng chuyển hóa methadone",
+        "description": "Giảm nồng độ methadone",
+        "management": "Tăng liều methadone khi dùng phenytoin",
+        "references": "Micromedex"
+    },
+    
+    ("Methadone", "Carbamazepine"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Carbamazepine cảm ứng chuyển hóa methadone",
+        "description": "Giảm nồng độ methadone",
+        "management": "Tăng liều methadone khi dùng carbamazepine",
+        "references": "Micromedex"
+    },
+    
+    ("Fentanyl", "CYP3A4 Inhibitor"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "CYP3A4 inhibitor tăng nồng độ fentanyl",
+        "description": "Tăng nguy cơ suy hô hấp, tử vong",
+        "management": "Giảm liều fentanyl khi dùng CYP3A4 inhibitor",
+        "references": "Micromedex"
+    },
+    
+    # ========== ADDITIONAL ANTICONVULSANTS ==========
+    
+    ("Gabapentin", "Opioid"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng tác dụng ức chế thần kinh trung ương",
+        "description": "Tăng nguy cơ buồn ngủ, suy hô hấp",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("Pregabalin", "Opioid"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng tác dụng ức chế thần kinh trung ương",
+        "description": "Tăng nguy cơ buồn ngủ, suy hô hấp",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("Levetiracetam", "Warfarin"): {
+        "severity": SEVERITY_MINOR,
+        "mechanism": "Tương tác nhỏ, không đáng kể",
+        "description": "Tương tác tối thiểu",
+        "management": "Theo dõi INR nếu cần",
+        "references": "Micromedex"
+    },
+    
+    ("Topiramate", "Oral Contraceptive"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Topiramate có thể giảm hiệu quả tránh thai",
+        "description": "Giảm hiệu quả tránh thai",
+        "management": "Khuyên dùng biện pháp tránh thai bổ sung",
+        "references": "Micromedex"
+    },
+    
+    ("Lamotrigine", "Oral Contraceptive"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Oral contraceptive giảm nồng độ lamotrigine",
+        "description": "Giảm hiệu quả lamotrigine",
+        "management": "Tăng liều lamotrigine khi dùng oral contraceptive",
+        "references": "Micromedex"
+    },
+    
+    ("Valproic Acid", "Lamotrigine"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Valproic acid tăng nồng độ lamotrigine",
+        "description": "Tăng nguy cơ phát ban nặng, hội chứng Stevens-Johnson",
+        "management": "Giảm liều lamotrigine khi dùng valproic acid",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Phenytoin", "Valproic Acid"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tương tác phức tạp, có thể tăng hoặc giảm nồng độ",
+        "description": "Tác dụng không dự đoán được",
+        "management": "Theo dõi nồng độ cả hai thuốc",
+        "references": "Micromedex"
+    },
+    
+    # ========== BRONCHODILATORS ==========
+    
+    ("Albuterol", "Beta-blocker"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Beta-blocker đối kháng tác dụng của albuterol",
+        "description": "Giảm hiệu quả điều trị hen suyễn",
+        "management": "Tránh dùng beta-blocker không chọn lọc ở bệnh nhân hen",
+        "references": "Micromedex"
+    },
+    
+    ("Salmeterol", "Beta-blocker"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Beta-blocker đối kháng tác dụng của salmeterol",
+        "description": "Giảm hiệu quả điều trị",
+        "management": "Tránh dùng beta-blocker không chọn lọc",
+        "references": "Micromedex"
+    },
+    
+    ("Formoterol", "Beta-blocker"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Beta-blocker đối kháng tác dụng của formoterol",
+        "description": "Giảm hiệu quả điều trị",
+        "management": "Tránh dùng beta-blocker không chọn lọc",
+        "references": "Micromedex"
+    },
+    
+    # ========== MUSCLE RELAXANTS ==========
+    
+    ("Baclofen", "Opioid"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng tác dụng ức chế thần kinh trung ương",
+        "description": "Tăng nguy cơ buồn ngủ, suy hô hấp",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("Tizanidine", "Ciprofloxacin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ciprofloxacin ức chế chuyển hóa tizanidine",
+        "description": "Tăng nồng độ tizanidine, tăng nguy cơ hạ huyết áp",
+        "management": "Tránh dùng chung. Nếu cần: giảm liều tizanidine",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Tizanidine", "CYP1A2 Inhibitor"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "CYP1A2 inhibitor tăng nồng độ tizanidine",
+        "description": "Tăng nguy cơ hạ huyết áp",
+        "management": "Tránh dùng chung hoặc giảm liều tizanidine",
+        "references": "Micromedex"
+    },
+    
+    ("Cyclobenzaprine", "MAO Inhibitor"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ hội chứng serotonin",
+        "management": "Tránh dùng chung",
+        "references": "Micromedex"
+    },
+    
+    # ========== ANTIEMETICS ==========
+    
+    ("Ondansetron", "QT Prolonging Drug"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ kéo dài QT interval",
+        "description": "Tăng nguy cơ rối loạn nhịp tim",
+        "management": "Thận trọng khi dùng chung. Theo dõi ECG",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Metoclopramide", "Antipsychotic"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng nguy cơ rối loạn vận động",
+        "description": "Tăng nguy cơ rối loạn vận động ngoại tháp",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("Metoclopramide", "Dopamine Antagonist"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng nguy cơ rối loạn vận động",
+        "description": "Tăng nguy cơ rối loạn vận động",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    # ========== ADDITIONAL ANTIFUNGALS ==========
+    
+    ("Voriconazole", "Warfarin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Voriconazole ức chế CYP2C9, tăng tác dụng warfarin",
+        "description": "Tăng nguy cơ xuất huyết",
+        "management": "Giảm liều warfarin. Theo dõi INR thường xuyên",
+        "references": "Micromedex"
+    },
+    
+    ("Voriconazole", "Phenytoin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tương tác phức tạp: phenytoin giảm nồng độ voriconazole, voriconazole tăng nồng độ phenytoin",
+        "description": "Giảm hiệu quả voriconazole, tăng nguy cơ độc tính phenytoin",
+        "management": "Tăng liều voriconazole, giảm liều phenytoin. Theo dõi nồng độ cả hai",
+        "references": "Micromedex"
+    },
+    
+    ("Posaconazole", "Warfarin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Posaconazole có thể tăng tác dụng warfarin",
+        "description": "Tăng nguy cơ xuất huyết",
+        "management": "Theo dõi INR thường xuyên",
+        "references": "Micromedex"
+    },
+    
+    ("Fluconazole", "Phenytoin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Fluconazole ức chế chuyển hóa phenytoin",
+        "description": "Tăng nồng độ phenytoin",
+        "management": "Theo dõi nồng độ phenytoin, cân nhắc giảm liều",
+        "references": "Micromedex"
+    },
+    
+    # ========== ADDITIONAL ANTIVIRALS ==========
+    
+    ("Ritonavir", "Phenytoin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Ritonavir có thể giảm nồng độ phenytoin",
+        "description": "Giảm hiệu quả phenytoin",
+        "management": "Theo dõi nồng độ phenytoin, có thể cần tăng liều",
+        "references": "Micromedex"
+    },
+    
+    ("Ritonavir", "Carbamazepine"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Carbamazepine giảm nồng độ ritonavir, ritonavir tăng nồng độ carbamazepine",
+        "description": "Giảm hiệu quả ritonavir, tăng nguy cơ độc tính carbamazepine",
+        "management": "Tăng liều ritonavir, giảm liều carbamazepine. Theo dõi nồng độ",
+        "references": "Micromedex"
+    },
+    
+    # ========== LAXATIVES ==========
+    
+    ("Laxative", "Digoxin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Laxative có thể giảm hấp thu digoxin",
+        "description": "Giảm hiệu quả digoxin",
+        "management": "Cách xa thời gian dùng. Theo dõi nồng độ digoxin",
+        "references": "Micromedex"
+    },
+    
+    ("Laxative", "Oral Medication"): {
+        "severity": SEVERITY_MINOR,
+        "mechanism": "Có thể giảm hấp thu thuốc uống",
+        "description": "Giảm hấp thu một số thuốc",
+        "management": "Cách xa thời gian dùng thuốc khác",
+        "references": "Micromedex"
+    },
+    
+    # ========== ADDITIONAL INTERACTIONS ==========
+    
+    ("Colchicine", "Clarithromycin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Clarithromycin ức chế chuyển hóa colchicine",
+        "description": "Tăng nồng độ colchicine, tăng nguy cơ độc tính",
+        "management": "Tránh dùng chung. Nếu cần: giảm liều colchicine",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Colchicine", "Cyclosporine"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cyclosporine ức chế chuyển hóa colchicine",
+        "description": "Tăng nồng độ colchicine",
+        "management": "Tránh dùng chung hoặc giảm liều colchicine",
+        "references": "Micromedex"
+    },
+    
+    ("Allopurinol", "Warfarin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Allopurinol có thể tăng tác dụng warfarin",
+        "description": "Tăng nguy cơ xuất huyết",
+        "management": "Theo dõi INR khi bắt đầu/dừng allopurinol",
+        "references": "Micromedex"
+    },
+    
+    ("Allopurinol", "Azathioprine"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Allopurinol ức chế chuyển hóa azathioprine",
+        "description": "Tăng nồng độ azathioprine, tăng nguy cơ giảm bạch cầu",
+        "management": "Giảm liều azathioprine 75% khi dùng allopurinol",
+        "references": "Micromedex"
+    },
+    
+    ("Probenecid", "Penicillin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Probenecid giảm đào thải penicillin",
+        "description": "Tăng nồng độ penicillin",
+        "management": "Có thể cần giảm liều penicillin",
+        "references": "Micromedex"
+    },
+    
+    ("Probenecid", "Methotrexate"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Probenecid giảm đào thải methotrexate",
+        "description": "Tăng nồng độ methotrexate, tăng nguy cơ độc tính",
+        "management": "Tránh dùng chung. Nếu cần: giảm liều methotrexate",
+        "references": "Micromedex"
+    },
+    
+    # ========== ADDITIONAL INTERACTIONS TO REACH 140 TARGET ==========
+    
+    ("Diltiazem", "Fentanyl"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Diltiazem ức chế CYP3A4, tăng nồng độ fentanyl",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều fentanyl khi dùng diltiazem",
+        "references": "Micromedex"
+    },
+    
+    ("Verapamil", "Fentanyl"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Verapamil ức chế CYP3A4, tăng nồng độ fentanyl",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều fentanyl khi dùng verapamil",
+        "references": "Micromedex"
+    },
+    
+    ("Amiodarone", "Fentanyl"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Amiodarone ức chế CYP3A4, tăng nồng độ fentanyl",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều fentanyl khi dùng amiodarone",
+        "references": "Micromedex"
+    },
+    
+    ("Diltiazem", "Alfentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Diltiazem ức chế CYP3A4, tăng nồng độ alfentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều alfentanil khi dùng diltiazem",
+        "references": "Micromedex"
+    },
+    
+    ("Verapamil", "Alfentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Verapamil ức chế CYP3A4, tăng nồng độ alfentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều alfentanil khi dùng verapamil",
+        "references": "Micromedex"
+    },
+    
+    ("Ketoconazole", "Alfentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ketoconazole ức chế CYP3A4, tăng nồng độ alfentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều alfentanil 75% khi dùng ketoconazole",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Itraconazole", "Alfentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Itraconazole ức chế CYP3A4, tăng nồng độ alfentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều alfentanil 75% khi dùng itraconazole",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Voriconazole", "Alfentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Voriconazole ức chế CYP3A4, tăng nồng độ alfentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều alfentanil 75% khi dùng voriconazole",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Erythromycin", "Alfentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Erythromycin ức chế CYP3A4, tăng nồng độ alfentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều alfentanil khi dùng erythromycin",
+        "references": "Micromedex"
+    },
+    
+    ("Clarithromycin", "Alfentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Clarithromycin ức chế CYP3A4, tăng nồng độ alfentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều alfentanil khi dùng clarithromycin",
+        "references": "Micromedex"
+    },
+    
+    ("Ritonavir", "Alfentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ritonavir ức chế CYP3A4, tăng nồng độ alfentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều alfentanil khi dùng ritonavir",
+        "references": "Micromedex"
+    },
+    
+    ("Fluconazole", "Alfentanil"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Fluconazole có thể tăng nồng độ alfentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("Diltiazem", "Sufentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Diltiazem ức chế CYP3A4, tăng nồng độ sufentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều sufentanil khi dùng diltiazem",
+        "references": "Micromedex"
+    },
+    
+    ("Verapamil", "Sufentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Verapamil ức chế CYP3A4, tăng nồng độ sufentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều sufentanil khi dùng verapamil",
+        "references": "Micromedex"
+    },
+    
+    ("Ketoconazole", "Sufentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ketoconazole ức chế CYP3A4, tăng nồng độ sufentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều sufentanil khi dùng ketoconazole",
+        "references": "Micromedex"
+    },
+    
+    ("Itraconazole", "Sufentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Itraconazole ức chế CYP3A4, tăng nồng độ sufentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều sufentanil khi dùng itraconazole",
+        "references": "Micromedex"
+    },
+    
+    ("Voriconazole", "Sufentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Voriconazole ức chế CYP3A4, tăng nồng độ sufentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều sufentanil khi dùng voriconazole",
+        "references": "Micromedex"
+    },
+    
+    ("Erythromycin", "Sufentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Erythromycin ức chế CYP3A4, tăng nồng độ sufentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều sufentanil khi dùng erythromycin",
+        "references": "Micromedex"
+    },
+    
+    ("Clarithromycin", "Sufentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Clarithromycin ức chế CYP3A4, tăng nồng độ sufentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều sufentanil khi dùng clarithromycin",
+        "references": "Micromedex"
+    },
+    
+    ("Ritonavir", "Sufentanil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ritonavir ức chế CYP3A4, tăng nồng độ sufentanil",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Giảm liều sufentanil khi dùng ritonavir",
+        "references": "Micromedex"
+    },
 }
 

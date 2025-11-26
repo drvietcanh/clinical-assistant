@@ -16,7 +16,9 @@ from labs import (
     render_cardiac_markers,
     render_coag,
     render_thyroid,
-    render_abg
+    render_abg,
+    render_trend_analysis,
+    render_panel_calculator
 )
 
 # Import calculators
@@ -45,10 +47,11 @@ with st.sidebar:
         "Loại công cụ:",
         [
             "🧮 Calculators",
-            "🔬 Lab Panels"
+            "🔬 Lab Panels",
+            "📈 Lab Enhancement"
         ],
         index=0,
-        help="Calculators: Tính toán công thức lâm sàng\nLab Panels: Tra cứu và giải thích giá trị xét nghiệm"
+        help="Calculators: Tính toán công thức lâm sàng\nLab Panels: Tra cứu và giải thích giá trị xét nghiệm\nLab Enhancement: Trend analysis và panel calculator"
     )
     
     st.markdown("---")
@@ -121,6 +124,34 @@ with st.sidebar:
         
         **💡 Tip:**
         Enter patient values to see automatic interpretation
+        """)
+    
+    elif category == "📈 Lab Enhancement":
+        st.subheader("📈 Chọn Tính Năng")
+        
+        enhancement_type = st.selectbox(
+            "Tính năng:",
+            [
+                "📈 Lab Trend Analysis",
+                "🧮 Lab Panel Calculator"
+            ],
+            label_visibility="collapsed"
+        )
+        
+        st.markdown("---")
+        
+        st.info("""
+        **📈 Lab Enhancement Features:**
+        
+        **Trend Analysis:**
+        - Serial lab monitoring
+        - Trend visualization
+        - Pattern recognition
+        
+        **Panel Calculator:**
+        - Multi-lab interpretation
+        - Auto-pattern detection
+        - Critical value alerts
         """)
     
     st.markdown("---")
@@ -282,6 +313,12 @@ elif category == "🔬 Lab Panels":
         
         # Clear quick action
         del st.session_state.quick_action
+
+elif category == "📈 Lab Enhancement":
+    if "Trend Analysis" in enhancement_type:
+        render_trend_analysis()
+    elif "Panel Calculator" in enhancement_type:
+        render_panel_calculator()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=True)

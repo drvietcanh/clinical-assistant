@@ -14,13 +14,29 @@ from components.iv_compatibility_matrix import (
 
 
 # IV Compatibility Database
+# Enhanced with same-syringe compatibility, detailed reasons, and alternatives
 IV_COMPATIBILITY_DB = {
     # ========== ANTIBIOTICS ==========
     "Vancomycin": {
         "compatible": ["Gentamicin", "Tobramycin", "Amikacin", "Furosemide"],
         "questionable": ["Piperacillin-Tazobactam", "Heparin", "Morphine"],
         "incompatible": ["Amphotericin B", "Acyclovir", "Phenytoin"],
-        "notes": "Y-site: Tốt với aminoglycosides. Tránh pha chung với beta-lactams."
+        "notes": "Y-site: Tốt với aminoglycosides. Tránh pha chung với beta-lactams.",
+        "same_syringe": {
+            "compatible": [],
+            "incompatible": ["Piperacillin-Tazobactam", "Amphotericin B", "Acyclovir", "Phenytoin"],
+            "notes": "KHÔNG pha trong cùng syringe với beta-lactams (kết tủa)."
+        },
+        "incompatibility_reasons": {
+            "Piperacillin-Tazobactam": "Tạo kết tủa khi pha chung. Tăng nguy cơ độc thận khi phối hợp.",
+            "Amphotericin B": "Tạo kết tủa, mất tác dụng.",
+            "Acyclovir": "Tạo kết tủa.",
+            "Phenytoin": "Tạo kết tủa."
+        },
+        "alternatives": {
+            "Piperacillin-Tazobactam": "Dùng line riêng hoặc dùng Meropenem thay thế",
+            "Amphotericin B": "Dùng line riêng, flush kỹ giữa các liều"
+        }
     },
     "Piperacillin-Tazobactam": {
         "compatible": ["Gentamicin", "Tobramycin", "Amikacin", "Metronidazole"],
@@ -38,7 +54,20 @@ IV_COMPATIBILITY_DB = {
         "compatible": ["Metronidazole", "Vancomycin"],
         "questionable": ["Piperacillin-Tazobactam", "Heparin"],
         "incompatible": ["Calcium", "Amphotericin B"],
-        "notes": "⚠️ KHÔNG pha chung với calcium (nguy cơ kết tủa tử vong)."
+        "notes": "⚠️ KHÔNG pha chung với calcium (nguy cơ kết tủa tử vong).",
+        "same_syringe": {
+            "compatible": [],
+            "incompatible": ["Calcium", "Amphotericin B"],
+            "notes": "⚠️ TUYỆT ĐỐI KHÔNG pha trong cùng syringe với calcium - nguy cơ kết tủa tử vong!"
+        },
+        "incompatibility_reasons": {
+            "Calcium": "⚠️ BLACK BOX WARNING: Kết tủa không tan trong phổi/thận, có thể tử vong. Cách xa ít nhất 48 giờ nếu dùng IV calcium.",
+            "Amphotericin B": "Tạo kết tủa, mất tác dụng."
+        },
+        "alternatives": {
+            "Calcium": "Dùng Ceftazidime hoặc Cefepime thay thế nếu cần dùng calcium",
+            "Amphotericin B": "Dùng line riêng, flush kỹ"
+        }
     },
     "Gentamicin": {
         "compatible": ["Vancomycin", "Piperacillin-Tazobactam", "Meropenem", "Clindamycin"],
@@ -128,55 +157,281 @@ IV_COMPATIBILITY_DB = {
         "incompatible": [],
         "notes": "Tương thích tốt."
     },
+    
+    # ========== ADDITIONAL ANTIBIOTICS ==========
+    "Ceftazidime": {
+        "compatible": ["Metronidazole", "Vancomycin", "Gentamicin"],
+        "questionable": ["Heparin"],
+        "incompatible": ["Amphotericin B"],
+        "notes": "Y-site: Tương thích tốt. Có thể dùng với calcium (khác ceftriaxone).",
+        "same_syringe": {
+            "compatible": ["Calcium"],
+            "incompatible": ["Amphotericin B"],
+            "notes": "Có thể pha với calcium (an toàn hơn ceftriaxone)."
+        }
+    },
+    "Cefepime": {
+        "compatible": ["Metronidazole", "Vancomycin", "Gentamicin"],
+        "questionable": ["Heparin"],
+        "incompatible": ["Amphotericin B"],
+        "notes": "Y-site: Tương thích tốt.",
+        "same_syringe": {
+            "compatible": [],
+            "incompatible": ["Amphotericin B"],
+            "notes": "Không pha chung với amphotericin B."
+        }
+    },
+    "Ciprofloxacin": {
+        "compatible": ["Metronidazole", "Vancomycin"],
+        "questionable": ["Heparin", "Calcium", "Magnesium"],
+        "incompatible": ["Amphotericin B"],
+        "notes": "Thận trọng với calcium/magnesium (chelate, giảm hấp thu).",
+        "incompatibility_reasons": {
+            "Calcium": "Chelate với quinolone, giảm hấp thu. Cách xa ít nhất 2 giờ.",
+            "Magnesium": "Chelate với quinolone, giảm hấp thu. Cách xa ít nhất 2 giờ."
+        },
+        "alternatives": {
+            "Calcium": "Cách xa ít nhất 2 giờ hoặc dùng Levofloxacin (ít bị ảnh hưởng hơn)"
+        }
+    },
+    "Levofloxacin": {
+        "compatible": ["Metronidazole", "Vancomycin"],
+        "questionable": ["Heparin", "Calcium", "Magnesium"],
+        "incompatible": ["Amphotericin B"],
+        "notes": "Tương thích tốt hơn ciprofloxacin với calcium/magnesium."
+    },
+    "Clindamycin": {
+        "compatible": ["Gentamicin", "Vancomycin", "Most antibiotics"],
+        "questionable": ["Heparin"],
+        "incompatible": ["Amphotericin B"],
+        "notes": "Y-site: Tương thích tốt với nhiều kháng sinh."
+    },
+    "Metronidazole": {
+        "compatible": ["Piperacillin-Tazobactam", "Ceftriaxone", "Vancomycin", "Most antibiotics"],
+        "questionable": ["Heparin"],
+        "incompatible": ["Amphotericin B"],
+        "notes": "Y-site: Tương thích tốt với nhiều kháng sinh."
+    },
+    "Linezolid": {
+        "compatible": ["Most antibiotics"],
+        "questionable": ["Heparin"],
+        "incompatible": ["Amphotericin B"],
+        "notes": "Y-site: Tương thích tốt."
+    },
+    
+    # ========== ADDITIONAL SEDATIVES ==========
+    "Midazolam": {
+        "compatible": ["Morphine", "Fentanyl", "Propofol"],
+        "questionable": ["Heparin"],
+        "incompatible": [],
+        "notes": "Y-site: Tương thích với nhiều thuốc an thần.",
+        "same_syringe": {
+            "compatible": ["Morphine", "Fentanyl"],
+            "incompatible": [],
+            "notes": "Có thể pha chung với opioids trong syringe."
+        }
+    },
+    "Propofol": {
+        "compatible": ["Morphine", "Fentanyl", "Midazolam"],
+        "questionable": ["Heparin"],
+        "incompatible": [],
+        "notes": "Y-site: Tương thích. Dùng line riêng nếu có thể (nguy cơ nhiễm trùng).",
+        "same_syringe": {
+            "compatible": [],
+            "incompatible": [],
+            "notes": "Không nên pha chung với thuốc khác (nguy cơ nhiễm trùng)."
+        }
+    },
+    
+    # ========== ADDITIONAL VASOPRESSORS ==========
+    "Dobutamine": {
+        "compatible": ["Norepinephrine", "Dopamine", "Epinephrine"],
+        "questionable": ["Heparin", "Insulin"],
+        "incompatible": ["Alkaline solutions", "Sodium bicarbonate"],
+        "notes": "Tương thích với vasopressors khác. Dùng line riêng nếu có thể."
+    },
+    "Vasopressin": {
+        "compatible": ["Norepinephrine", "Dopamine"],
+        "questionable": ["Heparin"],
+        "incompatible": ["Alkaline solutions"],
+        "notes": "Dùng line riêng cho vasopressors nếu có thể."
+    },
+    
+    # ========== ADDITIONAL ELECTROLYTES ==========
+    "Phosphate": {
+        "compatible": ["Most solutions"],
+        "questionable": ["Calcium", "Magnesium"],
+        "incompatible": ["Calcium (nếu pha chung)"],
+        "notes": "⚠️ KHÔNG pha chung với calcium (kết tủa).",
+        "incompatibility_reasons": {
+            "Calcium": "Tạo kết tủa calcium phosphate không tan."
+        },
+        "alternatives": {
+            "Calcium": "Dùng line riêng, cách xa ít nhất 2 giờ"
+        }
+    },
+    "Sodium Bicarbonate": {
+        "compatible": ["Most solutions"],
+        "questionable": ["Calcium", "Magnesium"],
+        "incompatible": ["Vasopressors", "Calcium (nếu pha chung)"],
+        "notes": "⚠️ KHÔNG pha chung với vasopressors (alkaline).",
+        "incompatibility_reasons": {
+            "Vasopressors": "Alkaline solution làm giảm tác dụng vasopressors.",
+            "Calcium": "Tạo kết tủa calcium carbonate."
+        },
+        "alternatives": {
+            "Vasopressors": "Dùng line riêng cho vasopressors"
+        }
+    },
+    
+    # ========== ADDITIONAL COMMON DRUGS ==========
+    "Dexamethasone": {
+        "compatible": ["Most solutions"],
+        "questionable": ["Heparin"],
+        "incompatible": [],
+        "notes": "Tương thích tốt."
+    },
+    "Ondansetron": {
+        "compatible": ["Most solutions"],
+        "questionable": ["Heparin"],
+        "incompatible": [],
+        "notes": "Y-site: Tương thích tốt."
+    },
+    "Pantoprazole": {
+        "compatible": ["Most solutions"],
+        "questionable": ["Heparin"],
+        "incompatible": [],
+        "notes": "Y-site: Tương thích tốt."
+    },
+    "Famotidine": {
+        "compatible": ["Most solutions"],
+        "questionable": [],
+        "incompatible": [],
+        "notes": "Tương thích tốt."
+    },
+    "Ranitidine": {
+        "compatible": ["Most solutions"],
+        "questionable": [],
+        "incompatible": [],
+        "notes": "Tương thích tốt."
+    },
+    
+    # ========== IV FLUIDS ==========
+    "NS": {
+        "compatible": ["Most drugs"],
+        "questionable": [],
+        "incompatible": [],
+        "notes": "Normal Saline (0.9% NaCl) - Tương thích với hầu hết thuốc."
+    },
+    "D5W": {
+        "compatible": ["Most drugs"],
+        "questionable": [],
+        "incompatible": [],
+        "notes": "Dextrose 5% in Water - Tương thích với hầu hết thuốc."
+    },
+    "LR": {
+        "compatible": ["Most drugs"],
+        "questionable": ["Calcium-containing drugs"],
+        "incompatible": [],
+        "notes": "Lactated Ringer's - Thận trọng với thuốc chứa calcium."
+    },
 }
 
 
-def get_compatibility(drug1, drug2):
+def get_compatibility(drug1, drug2, check_type="y_site"):
     """
     Get compatibility status between two drugs
     
+    Args:
+        drug1: First drug name
+        drug2: Second drug name
+        check_type: "y_site" (default) or "same_syringe"
+    
     Returns:
-        tuple: (status, notes)
+        tuple: (status, notes, reason, alternatives)
         status: "compatible", "questionable", "incompatible", or "unknown"
+        notes: General notes
+        reason: Detailed incompatibility reason (if incompatible)
+        alternatives: List of alternatives (if incompatible)
     """
     if drug1 not in IV_COMPATIBILITY_DB or drug2 not in IV_COMPATIBILITY_DB:
-        return "unknown", "Không có dữ liệu về tương thích giữa hai thuốc này."
+        return "unknown", "Không có dữ liệu về tương thích giữa hai thuốc này.", "", []
     
     db1 = IV_COMPATIBILITY_DB[drug1]
     db2 = IV_COMPATIBILITY_DB[drug2]
     
+    # Check same-syringe compatibility if requested
+    if check_type == "same_syringe":
+        syringe1 = db1.get("same_syringe", {})
+        syringe2 = db2.get("same_syringe", {})
+        
+        # Check if drug2 is in drug1's same-syringe incompatible list
+        if drug2 in syringe1.get("incompatible", []):
+            reason = db1.get("incompatibility_reasons", {}).get(drug2, syringe1.get("notes", ""))
+            alternatives = db1.get("alternatives", {}).get(drug2, [])
+            if isinstance(alternatives, str):
+                alternatives = [alternatives]
+            return "incompatible", syringe1.get("notes", ""), reason, alternatives
+        
+        # Check reverse
+        if drug1 in syringe2.get("incompatible", []):
+            reason = db2.get("incompatibility_reasons", {}).get(drug1, syringe2.get("notes", ""))
+            alternatives = db2.get("alternatives", {}).get(drug1, [])
+            if isinstance(alternatives, str):
+                alternatives = [alternatives]
+            return "incompatible", syringe2.get("notes", ""), reason, alternatives
+        
+        # Check compatible
+        if drug2 in syringe1.get("compatible", []):
+            return "compatible", syringe1.get("notes", ""), "", []
+        if drug1 in syringe2.get("compatible", []):
+            return "compatible", syringe2.get("notes", ""), "", []
+    
+    # Y-site compatibility (default)
     # Check if drug2 is in drug1's compatible list
     if drug2 in db1.get("compatible", []):
-        return "compatible", db1.get("notes", "")
+        return "compatible", db1.get("notes", ""), "", []
     
     # Check if drug2 is in drug1's incompatible list
     if drug2 in db1.get("incompatible", []):
-        return "incompatible", db1.get("notes", "")
+        reason = db1.get("incompatibility_reasons", {}).get(drug2, db1.get("notes", ""))
+        alternatives = db1.get("alternatives", {}).get(drug2, [])
+        if isinstance(alternatives, str):
+            alternatives = [alternatives]
+        return "incompatible", db1.get("notes", ""), reason, alternatives
     
     # Check if drug2 is in drug1's questionable list
     if drug2 in db1.get("questionable", []):
-        return "questionable", db1.get("notes", "")
+        return "questionable", db1.get("notes", ""), "", []
     
     # Check reverse (drug1 in drug2's lists)
     if drug1 in db2.get("compatible", []):
-        return "compatible", db2.get("notes", "")
+        return "compatible", db2.get("notes", ""), "", []
     
     if drug1 in db2.get("incompatible", []):
-        return "incompatible", db2.get("notes", "")
+        reason = db2.get("incompatibility_reasons", {}).get(drug1, db2.get("notes", ""))
+        alternatives = db2.get("alternatives", {}).get(drug1, [])
+        if isinstance(alternatives, str):
+            alternatives = [alternatives]
+        return "incompatible", db2.get("notes", ""), reason, alternatives
     
     if drug1 in db2.get("questionable", []):
-        return "questionable", db2.get("notes", "")
+        return "questionable", db2.get("notes", ""), "", []
     
     # If not in any list, assume compatible but with caution
-    return "unknown", "Không có dữ liệu cụ thể. Thận trọng khi dùng chung, nên dùng line riêng hoặc flush giữa các thuốc."
+    return "unknown", "Không có dữ liệu cụ thể. Thận trọng khi dùng chung, nên dùng line riêng hoặc flush giữa các thuốc.", "", []
 
 
-def check_multiple_compatibility(drug_list):
+def check_multiple_compatibility(drug_list, check_type="y_site"):
     """
     Check compatibility between all pairs in a drug list
     
+    Args:
+        drug_list: List of drug names
+        check_type: "y_site" (default) or "same_syringe"
+    
     Returns:
-        list of dicts with compatibility info
+        list of dicts with compatibility info including reasons and alternatives
     """
     results = []
     checked_pairs = set()
@@ -194,12 +449,15 @@ def check_multiple_compatibility(drug_list):
             
             checked_pairs.add(pair)
             
-            status, notes = get_compatibility(drug1, drug2)
+            status, notes, reason, alternatives = get_compatibility(drug1, drug2, check_type)
             results.append({
                 "drug1": drug1,
                 "drug2": drug2,
                 "status": status,
-                "notes": notes
+                "notes": notes,
+                "reason": reason,
+                "alternatives": alternatives,
+                "check_type": check_type
             })
     
     # Sort by severity (incompatible > questionable > compatible > unknown)
@@ -247,6 +505,19 @@ def render_iv_compatibility_checker():
     
     st.markdown("---")
     
+    # Check type selection
+    st.markdown("### 🔍 Loại Kiểm Tra")
+    check_type = st.radio(
+        "Chọn loại kiểm tra:",
+        ["Y-site Compatibility", "Same-Syringe Compatibility"],
+        index=0,
+        key="iv_check_type",
+        help="Y-site: Kiểm tra tương thích khi truyền qua Y-site\nSame-Syringe: Kiểm tra tương thích khi pha trong cùng syringe"
+    )
+    check_type_key = "same_syringe" if check_type == "Same-Syringe Compatibility" else "y_site"
+    
+    st.markdown("---")
+    
     # Drug input section
     st.markdown("### 📋 Chọn thuốc cần kiểm tra")
     
@@ -288,10 +559,14 @@ def render_iv_compatibility_checker():
     # Check compatibility
     if len(selected_drugs) >= 2:
         if st.button("🔍 Kiểm tra tương thích", use_container_width=True, type="primary"):
-            results = check_multiple_compatibility(selected_drugs)
+            results = check_multiple_compatibility(selected_drugs, check_type_key)
             
             if results:
                 st.markdown("### 📊 Kết quả kiểm tra")
+                
+                # Display check type
+                check_type_display = "Y-site" if check_type_key == "y_site" else "Same-Syringe"
+                st.info(f"**Loại kiểm tra:** {check_type_display} Compatibility")
                 
                 # Summary
                 incompatible_count = sum(1 for r in results if r["status"] == "incompatible")
@@ -311,13 +586,25 @@ def render_iv_compatibility_checker():
                     notes = result["notes"]
                     
                     if status == "incompatible":
-                        st.error(f"""
+                        reason = result.get("reason", "")
+                        alternatives = result.get("alternatives", [])
+                        
+                        error_msg = f"""
                         ❌ **{drug1} + {drug2} - KHÔNG TƯƯNG THÍCH**
                         
                         {notes}
+                        """
                         
-                        **⚠️ HÀNH ĐỘNG:** KHÔNG được dùng chung. Dùng line riêng hoặc flush kỹ giữa các thuốc.
-                        """)
+                        if reason:
+                            error_msg += f"\n\n**🔍 Nguyên nhân:** {reason}"
+                        
+                        if alternatives:
+                            alt_text = ", ".join(alternatives) if isinstance(alternatives, list) else alternatives
+                            error_msg += f"\n\n**💡 Gợi ý thay thế:** {alt_text}"
+                        
+                        error_msg += "\n\n**⚠️ HÀNH ĐỘNG:** KHÔNG được dùng chung. Dùng line riêng hoặc flush kỹ giữa các thuốc."
+                        
+                        st.error(error_msg)
                     
                     elif status == "questionable":
                         st.warning(f"""

@@ -16,6 +16,8 @@ from .cardiac import render as render_cardiac_markers
 from .coag import render as render_coag
 from .thyroid import render as render_thyroid
 from .abg import render as render_abg
+from .trend_analysis import render as render_trend_analysis
+from .panel_calculator import render as render_panel_calculator
 
 __all__ = [
     # Core functions
@@ -34,5 +36,9 @@ __all__ = [
     'render_coag',
     'render_thyroid',
     'render_abg',
+    
+    # Lab Enhancement Phase 3
+    'render_trend_analysis',
+    'render_panel_calculator',
 ]
 
