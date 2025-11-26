@@ -43,7 +43,7 @@ def render():
         
         **Mục đích:** Phân loại nguy cơ để quyết định điều trị nội trú hoặc ngoại trú
         
-        **Tiêu Chuẩn:**
+        **Tiêu chuẩn:**
         - ≥ 21 điểm: Nguy cơ thấp → Có thể ngoại trú
         - < 21 điểm: Nguy cơ cao → Nhập viện
         """)

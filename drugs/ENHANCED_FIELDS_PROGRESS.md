@@ -291,7 +291,7 @@ python check_enhanced_fields.py
 
 ---
 
-## Files Tham Khảo
+## Files Tham khảo
 
 - **Schema:** `drugs/enhanced_fields_schema.py`
 - **Template:** `create_enhanced_fields_template()`

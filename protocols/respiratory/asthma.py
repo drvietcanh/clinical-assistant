@@ -220,7 +220,7 @@ def render():
         """)
     
     with tabs[3]:  # ICU criteria
-        st.markdown("#### Tiêu Chí Nhập ICU & Thở Máy")
+        st.markdown("#### Tiêu chí nhập ICU & Thở Máy")
         
         st.error("""
         **Chỉ định nhập ICU:**
@@ -327,7 +327,7 @@ def render():
     
     st.markdown("---")
     
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         **GINA 2023 - Global Initiative for Asthma**
         

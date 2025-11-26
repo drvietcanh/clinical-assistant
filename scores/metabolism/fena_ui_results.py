@@ -56,7 +56,7 @@ def render_results_display(fena, interpretation, on_diuretics):
         
         Lợi tiểu làm tăng FENa giả tạo → Có thể chẩn đoán nhầm prerenal thành intrinsic renal.
         
-        **Khuyến Nghị:** Dùng FEUrea hoặc đánh giá lâm sàng.
+        **Khuyến nghị:** Dùng FEUrea hoặc đánh giá lâm sàng.
         """)
 
 

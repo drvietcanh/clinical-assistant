@@ -296,7 +296,7 @@ def render():
         """)
     
     with tabs[3]:
-        st.markdown("#### Tiêu Chuẩn Xuất Viện & Theo Dõi")
+        st.markdown("#### Tiêu chuẩn xuất viện & Theo Dõi")
         st.success("""
         **Tiêu Chuẩn Xuất Viện:**
         - ✅ Không đau ngực ≥24h
@@ -345,7 +345,7 @@ def render():
     
     st.markdown("---")
     
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         **ESC Guidelines 2020 - Acute Coronary Syndromes**
         **AHA/ACC Guidelines 2021**

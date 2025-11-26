@@ -313,7 +313,7 @@ def render_hemorrhagic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Đánh giá & Quyết Định Phẫu Thuật")
+    st.markdown("### 4️⃣ Đánh giá & Quyết định phẫu thuật")
     
     col1, col2 = st.columns(2)
     

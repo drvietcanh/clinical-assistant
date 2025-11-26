@@ -188,7 +188,7 @@ def render():
     st.markdown("**Đánh giá sinh lý và tiên lượng bệnh nhân chấn thương**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -198,7 +198,7 @@ def render():
         - Hỗ trợ quyết định triage
         - Đánh giá chất lượng chăm sóc chấn thương
         
-        ### 🎯 Thành Phần
+        ### 🎯 Thành phần
         
         **3 Thông Số Sinh Lý:**
         1. **GCS (Glasgow Coma Scale):** Mức độ ý thức
@@ -248,7 +248,7 @@ def render():
         | 3-4.99 | 30-70% | Cấp cứu ngay |
         | <3 | <30% | Hồi sức cấp cứu |
         
-        ### 📚 Tài Liệu Tham Khảo
+        ### 📚 Tài liệu tham khảo
         
         - Champion HR, et al. *J Trauma* 1989;29:623-629
         - Champion HR, et al. *J Trauma* 1990;30:1356-1365

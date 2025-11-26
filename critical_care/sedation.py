@@ -343,7 +343,7 @@ def render_propofol_calculator():
         
         # Drug info
         st.markdown("---")
-        st.markdown("### 📋 Thông Tin Thuốc")
+        st.markdown("### 📋 Thông tin Thuốc")
         drug_info = SEDATIVES["Propofol"]
         
         st.markdown(f"**Chỉ Định:** {drug_info['indication']}")

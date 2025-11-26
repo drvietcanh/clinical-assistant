@@ -379,7 +379,7 @@ def render_lithium_tdm():
                 )
             
             st.markdown("---")
-            st.markdown(f"### 💡 Khuyến Nghị")
+            st.markdown(f"### 💡 Khuyến nghị")
             
             if interpretation['color'] == 'error':
                 st.error(interpretation['recommendation'])
@@ -441,7 +441,7 @@ def render_lithium_tdm():
     
     # References
     st.markdown("---")
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         - **APA Guidelines - Bipolar Disorder**
         - **Half-life:** 18-36 giờ

@@ -17,7 +17,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Tiêu Chí Đánh giá")
+        st.markdown("### 📋 Tiêu chí Đánh giá")
         
         # History
         st.markdown("#### H - History (Tiền sử)")
@@ -174,7 +174,7 @@ def render():
                 - ICU/CCU monitoring
                 """.format(mace_risk))
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **HEART Score for Major Cardiac Events**
                 

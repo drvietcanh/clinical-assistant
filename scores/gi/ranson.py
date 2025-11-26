@@ -74,7 +74,7 @@ def render():
     - Điểm từ 0-11
     - Dự đoán tử vong và cần ICU
     
-    **2 Bộ Tiêu Chí:**
+    **2 Bộ Tiêu chí:**
     - **Lúc nhập viện (0h):** 5 tiêu chí
     - **Sau 48 giờ:** 6 tiêu chí
     
@@ -105,8 +105,8 @@ def render():
     st.markdown("---")
     
     # Admission criteria (0h)
-    st.subheader("📋 Tiêu Chí Lúc Nhập Viện (0h)")
-    st.markdown("### 5 Tiêu Chí Ban Đầu")
+    st.subheader("📋 Tiêu chí Lúc Nhập Viện (0h)")
+    st.markdown("### 5 Tiêu chí Ban Đầu")
     
     admission_count = 0
     
@@ -162,8 +162,8 @@ def render():
     st.markdown("---")
     
     # 48-hour criteria
-    st.subheader("📋 Tiêu Chí Sau 48 Giờ")
-    st.markdown("### 6 Tiêu Chí Tại 48h")
+    st.subheader("📋 Tiêu chí Sau 48 Giờ")
+    st.markdown("### 6 Tiêu chí Tại 48h")
     
     st.warning("""
     **⏱️ Cần chờ 48 giờ từ khi nhập viện để đánh giá đầy đủ**
@@ -287,7 +287,7 @@ def render():
         st.markdown("---")
         
         # Interpretation
-        st.subheader("🎯 Phân Tích & Tiên Lượng")
+        st.subheader("🎯 Phân tích & Tiên Lượng")
         
         st.info(f"""
         **Ranson Score: {total_score}/11**
@@ -298,7 +298,7 @@ def render():
         
         **ICU:** {interp['icu_need']}
         
-        **Khuyến Nghị:** {interp['recommendation']}
+        **Khuyến nghị:** {interp['recommendation']}
         """)
         
         # Detailed management
@@ -465,7 +465,7 @@ def render():
             """)
         
         # Criteria interpretation
-        with st.expander("📋 Giải Thích Từng Tiêu Chí"):
+        with st.expander("📋 Giải Thích Từng Tiêu chí"):
             st.markdown(f"""
             ### Tiêu chí lúc nhập viện ({admission_count}/5):
             
@@ -516,7 +516,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("🆚 So Sánh Các Hệ Thống Tiên Lượng"):
         st.markdown("""

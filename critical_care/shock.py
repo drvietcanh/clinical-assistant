@@ -234,7 +234,7 @@ def render_shock_classification():
         st.markdown("---")
         
         # Management recommendations
-        st.markdown("### 💡 Khuyến Nghị Xử Trí")
+        st.markdown("### 💡 Khuyến nghị xử trí")
         
         if "Hypovolemic" in result["shock_type"]:
             st.error("""
@@ -416,7 +416,7 @@ def render_vasopressor_selection():
     )
     
     if st.button("Khuyến nghị", type="primary", key="recommend_vasopressor"):
-        st.markdown("### 💡 Khuyến Nghị")
+        st.markdown("### 💡 Khuyến nghị")
         
         if shock_type == "Septic Shock":
             st.error("""

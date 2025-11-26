@@ -14,7 +14,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Tiêu Chí Đánh giá")
+        st.markdown("### 📋 Tiêu chí Đánh giá")
         
         confusion = st.checkbox(
             "**C** - Confusion (Lú lẫn)",
@@ -190,7 +190,7 @@ def render():
                 - Theo dõi sát
                 """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **CURB-65 Score**
                 

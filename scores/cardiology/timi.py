@@ -17,7 +17,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Tiêu Chí (7 Tiêu Chuẩn)")
+        st.markdown("### 📋 Tiêu chí (7 Tiêu chuẩn)")
         
         score = 0
         details = []
@@ -222,7 +222,7 @@ def render():
                 filename="timi_result"
             )
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **TIMI Risk Score for UA/NSTEMI**
                 

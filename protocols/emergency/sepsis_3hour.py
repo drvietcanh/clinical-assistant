@@ -199,7 +199,7 @@ def render():
         st.info("""
         ### ❓ Nguồn Nhiễm Trùng Không Rõ
         
-        **Khuyến Nghị:** Điều trị như nhiễm trùng bệnh viện (phổ rộng hơn)
+        **Khuyến nghị:** Điều trị như nhiễm trùng bệnh viện (phổ rộng hơn)
         
         **Lựa chọn:**
         - **Meropenem 1g IV q8h**
@@ -461,7 +461,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 10: REFERENCES ==========
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     references = [
         "**Surviving Sepsis Campaign Guidelines 2021:** International Guidelines for Management of Sepsis and Septic Shock",

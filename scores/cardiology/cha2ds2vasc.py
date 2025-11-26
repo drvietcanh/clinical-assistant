@@ -14,7 +14,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Tiêu Chí Đánh giá")
+        st.markdown("### 📋 Tiêu chí Đánh giá")
         
         chf = st.checkbox(
             "**C** - Suy tim sung huyết / Rối loạn chức năng thất trái",
@@ -182,7 +182,7 @@ def render():
                 filename="cha2ds2vasc_result"
             )
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **ESC Guidelines 2020 - Atrial Fibrillation**
                 

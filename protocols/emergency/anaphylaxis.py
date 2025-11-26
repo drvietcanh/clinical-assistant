@@ -119,7 +119,7 @@ def render():
       - Dùng epinephrine muộn
       - Cần >1 liều epinephrine
     
-    **Khuyến Nghị:**
+    **Khuyến nghị:**
     - Theo dõi ít nhất 4-6 giờ (phản ứng nặng: 8-12 giờ)
     - Có thể xuất viện nếu:
       - Không triệu chứng sau 4-6 giờ

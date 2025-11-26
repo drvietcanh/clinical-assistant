@@ -137,7 +137,7 @@ def render():
         st.markdown("---")
     
     # Calculate button
-    if st.button("📊 Tính Điểm & Phân Tích", type="primary", use_container_width=True):
+    if st.button("📊 Tính Điểm & Phân tích", type="primary", use_container_width=True):
         # Calculate total score
         total_score = calculate_gad7(scores)
         
@@ -168,7 +168,7 @@ def render():
         st.markdown("---")
         
         # Detailed interpretation
-        st.subheader("🎯 Phân Tích Chi tiết")
+        st.subheader("🎯 Phân tích chi tiết")
         
         st.info(f"""
         **Mức độ:** {result['severity']} (Điểm: {total_score})
@@ -182,7 +182,7 @@ def render():
         
         # Score breakdown
         st.markdown("---")
-        st.subheader("📊 Phân Tích Từng Câu Hỏi")
+        st.subheader("📊 Phân tích từng Câu Hỏi")
         
         symptom_labels = [
             "1. Lo lắng/căng thẳng",
@@ -249,7 +249,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("📋 Phân Loại Mức Độ Lo Âu"):
         st.markdown("""

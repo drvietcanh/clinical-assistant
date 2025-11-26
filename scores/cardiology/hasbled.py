@@ -14,7 +14,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Tiêu Chí Đánh giá")
+        st.markdown("### 📋 Tiêu chí Đánh giá")
         
         htn_uncontrolled = st.checkbox(
             "**H** - Tăng huyết áp không kiểm soát",
@@ -129,7 +129,7 @@ def render():
                 - Theo dõi sát sao
                 """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **HAS-BLED Score**
                 

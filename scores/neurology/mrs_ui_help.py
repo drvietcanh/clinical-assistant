@@ -102,7 +102,7 @@ def render_barthel_comparison():
 
 def render_references():
     """Render references expander"""
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         **Primary References:**
         - Rankin J. *Cerebral vascular accidents in patients over the age of 60. II. Prognosis.* 
@@ -172,7 +172,7 @@ def render_assessment_guide():
 
 def render_clinical_decisions():
     """Render clinical decisions expander"""
-    with st.expander("🎯 mRS Trong Quyết Định Lâm Sàng"):
+    with st.expander("🎯 mRS Trong Quyết định lâm sàng"):
         st.markdown("""
         **mRS được sử dụng để quyết định điều trị:**
         

@@ -322,7 +322,7 @@ def render_reference_item(
 
 def render_references_section(
     references: List[Dict[str, Any]],
-    title: str = "📚 Tài Liệu Tham Khảo",
+    title: str = "📚 Tài liệu tham khảo",
     last_updated: Optional[str] = None,
     show_evidence_level: bool = True,
     show_links: bool = True,

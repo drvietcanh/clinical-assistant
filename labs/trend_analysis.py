@@ -426,7 +426,7 @@ def render():
     st.markdown("---")
     
     # Analysis
-    st.markdown("#### 📊 Phân Tích Xu Hướng")
+    st.markdown("#### 📊 Phân tích Xu Hướng")
     
     # Detect trend
     trend = detect_trend(values)

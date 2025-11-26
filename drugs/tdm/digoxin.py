@@ -370,7 +370,7 @@ def render_digoxin_tdm():
                 )
             
             st.markdown("---")
-            st.markdown(f"### 💡 Khuyến Nghị")
+            st.markdown(f"### 💡 Khuyến nghị")
             
             if interpretation['color'] == 'error':
                 st.error(interpretation['recommendation'])
@@ -477,7 +477,7 @@ def render_digoxin_tdm():
     
     # References
     st.markdown("---")
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         - **ACC/AHA Heart Failure Guidelines 2022**
         - **Digoxin TDM Guidelines**

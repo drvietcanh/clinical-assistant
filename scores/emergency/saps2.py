@@ -336,7 +336,7 @@ def render():
     st.markdown("**Simplified Acute Physiology Score II - Dự đoán tử vong ICU đơn giản hóa**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -346,7 +346,7 @@ def render():
         - Phổ biến ở châu Âu
         - 17 biến số (vs 12 physiological + age + admission)
         
-        ### 🎯 Thành Phần
+        ### 🎯 Thành phần
         
         - 12 biến số sinh lý
         - Tuổi
@@ -371,7 +371,7 @@ def render():
         - Lấy giá trị TỆ NHẤT
         - Đơn giản hơn APACHE II (ít biến số hơn)
         
-        ### 📚 Tham Khảo
+        ### 📚 Tham khảo
         
         - Le Gall JR, et al. *JAMA* 1993;270:2957-2963
         """)

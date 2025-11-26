@@ -453,7 +453,7 @@ def render():
                - Nếu phù hợp và gia đình đồng ý
                - Tham vấn Organ Procurement Organization
             
-            **Khuyến Nghị:** Trong hầu hết trường hợp Grade 5, **Palliative Care/Comfort Care** 
+            **Khuyến nghị:** Trong hầu hết trường hợp Grade 5, **Palliative Care/Comfort Care** 
             là lựa chọn hợp lý hơn điều trị tích cực.
             
             **Tôn trọng:** Ý muốn của bệnh nhân (advance directive nếu có) và quyết định của gia đình.
@@ -506,7 +506,7 @@ def render():
             """)
         
         # References
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             **Primary Reference:**
             - Hunt WE, Hess RM. *Surgical risk as related to time of intervention in the repair of intracranial aneurysms.* 
@@ -588,7 +588,7 @@ def render():
         - Dựa vào lượng máu trên CT scan
         - Dự đoán nguy cơ vasospasm
         
-        **Khuyến Nghị:** Sử dụng cả Hunt & Hess và WFNS để đánh giá toàn diện.
+        **Khuyến nghị:** Sử dụng cả Hunt & Hess và WFNS để đánh giá toàn diện.
         """)
     
     with st.expander("⚠️ Khi Nào Nghi Ngờ SAH?"):

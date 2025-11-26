@@ -190,7 +190,7 @@ def render():
     st.markdown("**Đánh giá xác suất tiền test của huyết khối tĩnh mạch sâu**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -223,7 +223,7 @@ def render():
         - Cân nhắc yếu tố nguy cơ khác (thrombophilia, tiền sử gia đình)
         - Nếu nghi ngờ cao bất thường → xem xét hình ảnh dù điểm thấp
         
-        ### 📚 Tài Liệu Tham Khảo
+        ### 📚 Tài liệu tham khảo
         
         - Wells PS, et al. *Lancet* 1997;350:1795-1798
         - Wells PS, et al. *N Engl J Med* 2003;349:1227-1235
@@ -233,7 +233,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Thông Tin Lâm Sàng")
+    st.subheader("📝 Nhập Thông tin lâm sàng")
     
     col1, col2 = st.columns(2)
     
@@ -376,9 +376,9 @@ def render():
     # Quick reference
     with st.expander("📖 Bảng tham khảo Nhanh"):
         st.markdown("""
-        ### Wells DVT Score - Tiêu Chí
+        ### Wells DVT Score - Tiêu chí
         
-        | Tiêu Chí | Điểm |
+        | Tiêu chí | Điểm |
         |----------|------|
         | Ung thư đang hoạt động | +1 |
         | Liệt/bất động chân | +1 |

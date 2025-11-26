@@ -238,7 +238,7 @@ def render():
                 
                 **Đánh giá:** Xơ gan còn bù trừ tốt hoặc bệnh gan nhẹ.
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **Theo dõi định kỳ:**
                    - Khám gan mỗi 3-6 tháng
@@ -272,7 +272,7 @@ def render():
                 
                 **Đánh giá:** Bệnh gan tiến triển, cần theo dõi sát.
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **Theo dõi chặt chẽ:**
                    - Khám gan mỗi 2-3 tháng
@@ -308,7 +308,7 @@ def render():
                 
                 **Đánh giá:** Xơ gan nặng, nguy cơ cao, CẦN ghép gan.
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **ĐÁNH GIÁ GHÉP GAN KHẨN CẤP:**
                    - ✅ **Chỉ định ghép gan rõ ràng**
@@ -356,7 +356,7 @@ def render():
                 
                 **Đánh giá:** Xơ gan giai đoạn cuối, nguy cơ tử vong rất cao, CẦN ghép gan KHẨN CẤP.
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **GHÉP GAN KHẨN CẤP:**
                    - 🚨 **Chỉ định ghép gan ưu tiên cao**
@@ -511,7 +511,7 @@ def render():
                 - **MELD:** Ghép gan, tiên lượng ngắn hạn, nghiên cứu
                 - **Child-Pugh:** Phẫu thuật, điều trị, đánh giá tổng quát
                 
-                **Khuyến Nghị:** Sử dụng CẢ HAI để đánh giá toàn diện!
+                **Khuyến nghị:** Sử dụng CẢ HAI để đánh giá toàn diện!
                 
                 **Tương quan gần đúng:**
                 - MELD <10 ≈ Child A
@@ -690,7 +690,7 @@ def render():
         - **Hydration:** Cải thiện Cr tạm thời
         - **Dialysis:** Giảm Cr nhưng MELD cap at 40
         
-        **Khuyến Nghị:**
+        **Khuyến nghị:**
         - Đánh giá MELD khi bệnh nhân ổn định
         - Tránh tác nhân nhiễu (thuốc, dehydration)
         - Lặp lại MELD định kỳ để theo dõi xu hướng

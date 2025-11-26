@@ -331,7 +331,7 @@ def render():
     st.markdown("---")
     
     # Patient info
-    st.markdown("### 📋 Thông Tin Bệnh Nhân")
+    st.markdown("### 📋 Thông tin bệnh nhân")
     
     col1, col2 = st.columns(2)
     
@@ -658,7 +658,7 @@ def render():
     
     st.markdown("---")
     
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         **Pollack MM, et al. The Pediatric Risk of Mortality (PRISM) III Score System.**
         *Pediatr Crit Care Med.* 2016;17(7):671-680.

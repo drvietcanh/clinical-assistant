@@ -256,7 +256,7 @@ def render_export_panel():
     st.markdown("---")
     
     # Thông tin thêm
-    with st.expander("ℹ️ Thông Tin Export"):
+    with st.expander("ℹ️ Thông tin Export"):
         st.markdown("""
         **CSV Format:**
         - Encoding: UTF-8 with BOM (Excel compatible)

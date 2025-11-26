@@ -125,7 +125,7 @@ def render_mild_dka():
     """)
     
     st.markdown("---")
-    st.markdown("### 3️⃣ Tiêu Chuẩn Xuất Viện")
+    st.markdown("### 3️⃣ Tiêu chuẩn xuất viện")
     
     st.success("""
     - pH >7.3
@@ -424,7 +424,7 @@ def render_severe_dka():
     """)
     
     st.markdown("---")
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         - **ADA Standards of Care 2024**
         - **ISPAD Guidelines 2022**

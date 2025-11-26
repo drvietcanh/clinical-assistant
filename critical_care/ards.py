@@ -98,7 +98,7 @@ def render_ardsnet_calculator():
     st.markdown("---")
     
     # Patient info
-    st.markdown("### 📋 Thông Tin Bệnh Nhân")
+    st.markdown("### 📋 Thông tin bệnh nhân")
     
     col1, col2 = st.columns(2)
     
@@ -225,7 +225,7 @@ def render_ardsnet_calculator():
             st.markdown("---")
             
             # Recommendations
-            st.markdown("#### 💡 Khuyến Nghị")
+            st.markdown("#### 💡 Khuyến nghị")
             
             recommendations = []
             
@@ -257,7 +257,7 @@ def render_ardsnet_calculator():
                 "description": "Điều chỉnh PEEP/FiO2 để đạt mục tiêu"
             })
             
-            render_result_card("Khuyến Nghị ARDSNet", recommendations, color="info")
+            render_result_card("Khuyến nghị ARDSNet", recommendations, color="info")
             
             st.markdown("---")
             

@@ -207,7 +207,7 @@ def render():
     st.markdown("**Đánh giá mức độ nặng đa chấn thương dựa trên giải phẫu**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -260,7 +260,7 @@ def render():
         | 50-75 | Critical | >50% | Hồi sức tích cực |
         | 75 (AIS 6) | Unsurvivable | >90% | Palliative care |
         
-        ### 📚 Tài Liệu Tham Khảo
+        ### 📚 Tài liệu tham khảo
         
         - Baker SP, et al. *J Trauma* 1974;14:187-196
         - Copes WS, et al. *J Trauma* 1988;28:69-77

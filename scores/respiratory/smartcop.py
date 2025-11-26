@@ -47,7 +47,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### 🩺 Thông Tin Lâm Sàng")
+        st.markdown("### 🩺 Thông tin lâm sàng")
         
         # S - Systolic BP
         st.markdown("#### S - Systolic BP (Huyết áp tâm thu)")
@@ -364,7 +364,7 @@ def render():
             
             **Đánh giá:** Bệnh nhân viêm phổi nhẹ, nguy cơ tiến triển nặng thấp.
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             
             1. **Điều trị ngoại trú (nếu không có chống chỉ định khác):**
                - Kháng sinh uống: Amoxicillin-clavulanate + Azithromycin hoặc
@@ -397,7 +397,7 @@ def render():
             
             **Đánh giá:** Viêm phổi mức độ vừa, cần theo dõi sát.
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             
             1. **NHẬP VIỆN - Khoa Nội/Hô hấp:**
                - Theo dõi sát: vital signs mỗi 4-6h
@@ -442,7 +442,7 @@ def render():
             
             **Đánh giá:** Viêm phổi nặng, nguy cơ cao cần hỗ trợ hô hấp/tuần hoàn.
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             
             1. **NHẬP ICU/HDU (High Dependency Unit):**
                - **KHÔNG trì hoãn!** Nguy cơ tiến triển nhanh cao
@@ -502,7 +502,7 @@ def render():
         # Score breakdown
         st.markdown("---")
         with st.expander("📊 Chi tiết điểm số"):
-            st.markdown("| Thành Phần | Điểm |")
+            st.markdown("| Thành phần | Điểm |")
             st.markdown("|------------|------|")
             for component, score in score_breakdown.items():
                 st.markdown(f"| {component} | {score} |")
@@ -511,7 +511,7 @@ def render():
         # Risk table
         with st.expander("📈 Bảng Nguy Cơ Theo Điểm SMART-COP"):
             st.markdown("""
-            | SMART-COP Score | Nguy Cơ Cần IRVS | Khuyến Nghị |
+            | SMART-COP Score | Nguy Cơ Cần IRVS | Khuyến nghị |
             |-----------------|-------------------|-------------|
             | 0-2 | 5-10% | 🟢 Ngoại trú hoặc khoa thường |
             | 3-4 | 12-25% | 🟡 Nhập viện, theo dõi sát |
@@ -522,7 +522,7 @@ def render():
             """)
         
         # References
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             **Primary Reference:**
             - Charles PG, Wolfe R, Whitby M, et al. 
@@ -565,7 +565,7 @@ def render():
         - CURB-65 = 2-3 (không chắc chắn)
         - Bệnh nhân trẻ (<65 tuổi) nhưng có vẻ nặng
         
-        **Khuyến Nghị:**
+        **Khuyến nghị:**
         - **CURB-65:** Sàng lọc nhanh (ngoại trú vs nhập viện)
         - **SMART-COP:** Quyết định khoa thường vs ICU
         - **PSI/PORT:** Đánh giá tiên lượng tổng thể
@@ -573,7 +573,7 @@ def render():
         **Trong thực hành:** Kết hợp cả 3 thang điểm + đánh giá lâm sàng!
         """)
     
-    with st.expander("🏥 Tiêu Chí Nhập ICU Cho Viêm Phổi (ATS/IDSA)"):
+    with st.expander("🏥 Tiêu chí nhập ICU Cho Viêm Phổi (ATS/IDSA)"):
         st.markdown("""
         **Severe CAP** định nghĩa bởi ATS/IDSA Guidelines:
         

@@ -260,7 +260,7 @@ def render():
     st.markdown("---")
     
     # References
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **Barber PA, et al.** Validity and reliability of a quantitative computed tomography score in predicting outcome of hyperacute stroke before thrombolytic therapy.

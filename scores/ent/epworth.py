@@ -233,7 +233,7 @@ def render():
         st.markdown("---")
         
         # Score breakdown
-        st.subheader("📊 Phân Tích Từng Tình Huống")
+        st.subheader("📊 Phân tích từng Tình Huống")
         
         for i, (item, score) in enumerate(zip(ESS_SITUATIONS, scores), 1):
             col1, col2 = st.columns([4, 1])
@@ -252,7 +252,7 @@ def render():
         st.markdown("---")
         
         # Interpretation
-        st.subheader("🎯 Phân Tích & Khuyến Nghị")
+        st.subheader("🎯 Phân tích & Khuyến nghị")
         
         if result['severity'] in ["normal_low", "normal_high"]:
             st.success(f"""
@@ -262,7 +262,7 @@ def render():
             
             **Đánh giá:** {result['description']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             
             **Xử trí:** {result['action']}
             """)
@@ -285,7 +285,7 @@ def render():
             
             **Nguy cơ OSA:** {result['osa_risk']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             
             **Xử trí:** {result['action']}
             """)
@@ -330,7 +330,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("😴 Về Obstructive Sleep Apnea (OSA)"):
         st.markdown("""

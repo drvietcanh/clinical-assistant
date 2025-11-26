@@ -80,7 +80,7 @@ def render():
     st.markdown("---")
     
     # Input form
-    st.subheader("📝 Nhập Thông Tin Bệnh Nhân")
+    st.subheader("📝 Nhập Thông tin bệnh nhân")
     
     col1, col2 = st.columns(2)
     

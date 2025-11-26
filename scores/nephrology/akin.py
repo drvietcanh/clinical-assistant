@@ -106,7 +106,7 @@ def render():
     **Khuyến cáo:** Sử dụng **KDIGO** để đánh giá và quản lý AKI.
     """)
     
-    with st.expander("ℹ️ Thông Tin AKIN"):
+    with st.expander("ℹ️ Thông tin AKIN"):
         st.markdown("""
         ### AKIN Stages (2007)
         

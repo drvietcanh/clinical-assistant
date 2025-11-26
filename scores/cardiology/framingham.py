@@ -17,7 +17,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Tin Bệnh Nhân")
+        st.markdown("### 📋 Thông tin bệnh nhân")
         
         # Gender
         sex = st.radio(
@@ -312,7 +312,7 @@ def render():
                     st.error(f"## {risk_pct}%")
                     st.error("🚨 Nguy cơ CAO")
             
-            st.markdown("### 💡 Phân Tích")
+            st.markdown("### 💡 Phân tích")
             st.write(f"**Nguy cơ mắc bệnh tim mạch trong 10 năm:** {risk_pct}%")
             st.write(f"**Tổng điểm:** {points}")
             
@@ -377,7 +377,7 @@ def render():
                 - Stress test nếu có triệu chứng
                 """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **Framingham Risk Score (FRS)**
                 

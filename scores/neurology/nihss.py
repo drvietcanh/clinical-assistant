@@ -455,7 +455,7 @@ def render():
             - NIHSS >25: Cân nhắc (nguy cơ chảy máu cao hơn)
             """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown(f"""
                 **NIHSS - NIH Stroke Scale**
                 

@@ -14,7 +14,7 @@ def render_ardsnet():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Tin Bệnh Nhân")
+        st.markdown("### 📋 Thông tin bệnh nhân")
         
         sex = st.radio(
             "Giới tính",
@@ -176,7 +176,7 @@ def render_initial_settings():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Tin Bệnh Nhân")
+        st.markdown("### 📋 Thông tin bệnh nhân")
         
         sex = st.radio(
             "Giới tính",
@@ -472,7 +472,7 @@ def render_initial_settings():
         
         st.markdown("---")
         
-        with st.expander("📚 Thông Tin Thêm"):
+        with st.expander("📚 Thông tin thêm"):
             st.markdown(f"""
             **Bệnh lý:** {condition}
             **PBW:** {pbw} kg (Chiều cao: {height} cm, {sex})

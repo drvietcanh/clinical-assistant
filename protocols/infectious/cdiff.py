@@ -385,7 +385,7 @@ def render():
     # ========== SECTION 10: DURATION & FOLLOW-UP ==========
     st.markdown("### ⏱️ Thời Gian Điều Trị & Theo Dõi")
     
-    st.markdown("**Thời Gian Điều Trị Tiêu Chuẩn:**")
+    st.markdown("**Thời Gian Điều Trị Tiêu chuẩn:**")
     
     duration_table = {
         "Mức độ": ["Nhẹ", "Trung bình", "Nặng", "Rất nặng"],
@@ -412,7 +412,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 11: REFERENCES ==========
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     references = [
         "**IDSA/SHEA 2021:** Clinical Practice Guidelines for Clostridioides difficile Infection in Adults and Children",

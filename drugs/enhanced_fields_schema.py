@@ -241,7 +241,7 @@ def validate_enhanced_fields(drug_name, enhanced_fields):
 
 
 # ============================================================================
-# HELPER FUNCTION - Tạo Enhanced Fields từ Thông Tin Thuốc
+# HELPER FUNCTION - Tạo Enhanced Fields từ Thông tin Thuốc
 # ============================================================================
 
 def generate_enhanced_fields_guidelines():

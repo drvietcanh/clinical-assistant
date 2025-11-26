@@ -285,7 +285,7 @@ def render():
         st.markdown("---")
         
         # Recommendations
-        st.subheader("🎯 Khuyến Nghị Xử Trí")
+        st.subheader("🎯 Khuyến nghị xử trí")
         
         if result['level'] in ["very_low", "low"]:
             st.success(f"""
@@ -293,7 +293,7 @@ def render():
             
             **Xác suất viêm họng do GAS: {result['probability']}**
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             
             **Xử trí:** {result['action']}
             
@@ -316,7 +316,7 @@ def render():
             
             **Xác suất viêm họng do GAS: {result['probability']}**
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             
             **Test:** {result['testing']}
             
@@ -350,7 +350,7 @@ def render():
             
             **Xác suất viêm họng do GAS: {result['probability']}**
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             
             **Test:** {result['testing']}
             
@@ -411,7 +411,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("🎯 Cách Sử Dụng Centor Score"):
         st.markdown("""

@@ -163,7 +163,7 @@ def render():
     st.info("✨ **Version 2025:** Điều chỉnh ngưỡng từ dữ liệu lớn, tích hợp hỗ trợ cơ quan hiện đại")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin SOFA-2 (2025) & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin SOFA-2 (2025) & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu SOFA-2
         
@@ -216,7 +216,7 @@ def render():
         - Tăng SOFA-2 ≥2 điểm so với baseline
         - Nếu không biết baseline → giả định = 0
         
-        ### 📚 Tài Liệu Tham Khảo
+        ### 📚 Tài liệu tham khảo
         
         - SOFA-2 Publication (October 2025)
         - Vincent JL, et al. *Intensive Care Med* 1996;22:707-710 (Original SOFA)

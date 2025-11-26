@@ -567,7 +567,7 @@ def render_phenytoin_tdm():
     
     # References
     st.markdown("---")
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         - **AAN/AES Guidelines 2020**
         - **Michaelis-Menten kinetics:** Vmax ~ 7 mg/kg/day, Km ~ 4-5 mg/L

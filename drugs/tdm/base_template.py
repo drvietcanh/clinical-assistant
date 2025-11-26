@@ -174,7 +174,7 @@ class TDMCalculator:
                 )
             
             st.markdown("---")
-            st.markdown(f"### 💡 Khuyến Nghị")
+            st.markdown(f"### 💡 Khuyến nghị")
             
             if interpretation['color'] == 'error':
                 st.error(interpretation['recommendation'])
@@ -188,6 +188,6 @@ class TDMCalculator:
     def render_references(self, references: str):
         """Render references section"""
         st.markdown("---")
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown(references)
 

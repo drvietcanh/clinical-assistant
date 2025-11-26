@@ -1,6 +1,6 @@
-# Phân Tích File `drug_database_data.py` và Đề Xuất Tách Tối Ưu
+# Phân tích File `drug_database_data.py` và Đề Xuất Tách Tối Ưu
 
-## 📊 Phân Tích Hiện Trạng
+## 📊 Phân tích Hiện Trạng
 
 ### Kích Thước File
 - **Số dòng**: 18,762 dòng
@@ -288,7 +288,7 @@ drugs/
 | Maintainability | Khó | Dễ |
 | Testability | Khó | Dễ |
 
-## ✅ Khuyến Nghị
+## ✅ Khuyến nghị
 
 **RECOMMENDED: Thực hiện Option 1 (Tách theo nhóm thuốc)**
 

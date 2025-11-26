@@ -347,7 +347,7 @@ def render():
             
             # Delta-Delta
             st.markdown("---")
-            st.markdown("### 🔢 Delta-Delta Ratio (Phân Tích Nâng Cao)")
+            st.markdown("### 🔢 Delta-Delta Ratio (Phân tích Nâng Cao)")
             
             with st.expander("📊 Tính Delta-Delta"):
                 st.markdown(f"""
@@ -376,7 +376,7 @@ def render():
                 **Lưu ý:** Chỉ áp dụng khi có toan chuyển hóa (HCO₃ < 22)
                 """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **References:**
                 

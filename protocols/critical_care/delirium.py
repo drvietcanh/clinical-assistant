@@ -41,7 +41,7 @@ def render():
     st.info("""
     **CAM-ICU:** Tiêu chuẩn vàng để chẩn đoán delirium trong ICU
     
-    **4 Tiêu Chí (Tất cả phải có):**
+    **4 Tiêu chí (Tất cả phải có):**
     1. **Khởi phát cấp tính + Dao động:** Thay đổi từ baseline, dao động trong ngày
     2. **Giảm chú ý:** Không thể tập trung, dễ phân tâm
     3. **Tư duy rối loạn:** Lú lẫn, không logic, ảo giác

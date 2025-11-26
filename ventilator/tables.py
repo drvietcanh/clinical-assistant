@@ -82,7 +82,7 @@ def render_peep_fio2_table():
     st.markdown("---")
     
     # Alternative: Higher PEEP table
-    with st.expander("📊 Bảng Higher PEEP Strategy (Tham Khảo)"):
+    with st.expander("📊 Bảng Higher PEEP Strategy (Tham khảo)"):
         st.info("""
         **Higher PEEP/Lower FiO2 Strategy:**
         
@@ -97,7 +97,7 @@ def render_peep_fio2_table():
         df_higher = pd.DataFrame(higher_peep_data)
         st.dataframe(df_higher, hide_index=True, use_container_width=True)
     
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         **ARDSNet PEEP/FiO2 Table**
         

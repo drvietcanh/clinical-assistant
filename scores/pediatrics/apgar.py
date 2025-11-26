@@ -107,7 +107,7 @@ def render():
     st.markdown("---")
     
     # APGAR components
-    st.subheader("📋 Đánh giá Các Thành Phần APGAR")
+    st.subheader("📋 Đánh giá Các Thành phần APGAR")
     
     # A - Appearance (Skin Color)
     st.markdown("### 🎨 A - Appearance (Màu sắc da)")
@@ -436,7 +436,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("📖 Lịch Sử APGAR Score"):
         st.markdown("""

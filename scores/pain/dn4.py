@@ -199,7 +199,7 @@ def render():
             """)
         else:
             st.info("""
-            **✅ Không Đủ Tiêu Chí Đau Thần Kinh (DN4 < 4)**
+            **✅ Không Đủ Tiêu chí Đau Thần Kinh (DN4 < 4)**
             
             **Có thể là:**
             - Đau nội tạng

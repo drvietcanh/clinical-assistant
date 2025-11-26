@@ -214,7 +214,7 @@ def render():
     st.markdown("**Multiple Organ Dysfunction Score - Đánh giá rối loạn đa cơ quan**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -252,7 +252,7 @@ def render():
         - SOFA phổ biến hơn (Sepsis-3)
         - Cả hai đều đánh giá 6 hệ cơ quan
         
-        ### 📚 Tham Khảo
+        ### 📚 Tham khảo
         
         - Marshall JC, et al. *Crit Care Med* 1995;23:1638-1652
         """)

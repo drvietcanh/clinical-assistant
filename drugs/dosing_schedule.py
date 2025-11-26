@@ -69,7 +69,7 @@ def render_dosing_schedule_generator():
     st.markdown("---")
     
     # Drug selection
-    st.markdown("### 💊 Thông Tin Thuốc")
+    st.markdown("### 💊 Thông tin Thuốc")
     
     drug_name = st.text_input(
         "Tên thuốc:",

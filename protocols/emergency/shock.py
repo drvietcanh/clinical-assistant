@@ -361,7 +361,7 @@ def render():
     
     st.markdown("---")
     
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         **Guidelines:**
         

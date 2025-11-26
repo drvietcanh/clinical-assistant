@@ -197,7 +197,7 @@ def render():
     st.markdown("**Đánh giá nguy cơ bệnh tim mạch 10 năm (40-69 tuổi)**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -240,7 +240,7 @@ def render():
         - **KHÔNG dùng** nếu có: CAD, stroke, PAD, DM type 1, DM type 2 >10 năm
         - **Risk enhancers** làm tăng nguy cơ: Family history, CAC score, CKD, etc.
         
-        ### 📚 Tham Khảo
+        ### 📚 Tham khảo
         
         - SCORE2 working group. *Eur Heart J* 2021;42:2439-2454
         - ESC Guidelines 2021 on CVD prevention
@@ -254,7 +254,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 👤 Thông Tin Cá Nhân")
+        st.markdown("#### 👤 Thông tin Cá Nhân")
         age = st.number_input("Tuổi", 40, 69, 50, 1, format="%d", help="SCORE2 chỉ dành cho 40-69 tuổi")
         
         sex = st.radio("Giới tính", ["Nam", "Nữ"], horizontal=True)

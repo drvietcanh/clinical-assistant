@@ -93,7 +93,7 @@ def render_rass_calculator():
     )
     
     st.markdown("---")
-    st.markdown("### 💡 Khuyến Nghị")
+    st.markdown("### 💡 Khuyến nghị")
     
     # Recommendations based on RASS
     if rass_num >= +2:

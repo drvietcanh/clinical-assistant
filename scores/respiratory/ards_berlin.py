@@ -131,12 +131,12 @@ def evaluate_ards_berlin(
 def render():
     """ARDS Berlin Definition Calculator"""
     st.subheader("🫁 ARDS Berlin Definition")
-    st.caption("Tiêu Chuẩn Chẩn Đoán ARDS - Berlin Definition 2012")
+    st.caption("Tiêu chuẩn chẩn đoán ARDS - Berlin Definition 2012")
     
     st.warning("""
     **⚠️ QUAN TRỌNG: ARDS Berlin Definition (2012)**
     
-    **4 Tiêu Chuẩn Bắt Buộc:**
+    **4 Tiêu chuẩn Bắt Buộc:**
     1. **Timing:** Trong vòng 1 tuần sau tổn thương lâm sàng hoặc triệu chứng hô hấp mới/trầm trọng hơn
     2. **Chest Imaging:** Opacities hai bên trên X-quang hoặc CT ngực
     3. **Origin of Edema:** Suy hô hấp không hoàn toàn do suy tim hoặc quá tải dịch
@@ -151,7 +151,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.markdown("### 📋 Đánh giá Tiêu Chuẩn")
+    st.markdown("### 📋 Đánh giá Tiêu chuẩn")
     
     # Criterion 1: Timing
     st.markdown("#### 1️⃣ Timing")
@@ -290,7 +290,7 @@ def render():
     st.markdown("---")
     
     # Criteria evaluation
-    st.markdown("### ✅ Đánh giá Tiêu Chuẩn")
+    st.markdown("### ✅ Đánh giá Tiêu chuẩn")
     
     if result["criteria_met"]:
         st.markdown("**Tiêu chuẩn đáp ứng:**")
@@ -372,7 +372,7 @@ def render():
     st.markdown("---")
     
     # Additional information
-    with st.expander("📚 Thông Tin Thêm"):
+    with st.expander("📚 Thông tin thêm"):
         st.markdown("""
         **ARDS Berlin Definition (2012) - Thay thế AECC Definition (1994):**
         
@@ -395,7 +395,7 @@ def render():
     st.markdown("---")
     
     # References
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ARDS Definition Task Force.** Acute respiratory distress syndrome: the Berlin Definition.

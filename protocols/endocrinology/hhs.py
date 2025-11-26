@@ -256,7 +256,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION: DIAGNOSTIC CRITERIA ==========
-    st.markdown("### 🔍 Tiêu Chuẩn Chẩn Đoán")
+    st.markdown("### 🔍 Tiêu chuẩn chẩn đoán")
     
     with st.expander("🔍 Xem tiêu chuẩn chẩn đoán HHS", expanded=True):
         st.markdown("""
@@ -466,7 +466,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION: DISCHARGE CRITERIA ==========
-    st.markdown("### 🏥 Tiêu Chuẩn Xuất Viện")
+    st.markdown("### 🏥 Tiêu chuẩn xuất viện")
     
     st.success("""
     **Tiêu chuẩn xuất viện khi:**

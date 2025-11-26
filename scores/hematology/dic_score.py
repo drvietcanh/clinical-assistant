@@ -118,7 +118,7 @@ def calculate_dic_score(
         
         ### 2️⃣ HỖ TRỢ ĐÔNG MÁU
         
-        **A. Truyền Thành Phần Máu:**
+        **A. Truyền Thành phần Máu:**
         
         - **Tiểu cầu:**
           - Mục tiêu: >50,000/μL (nếu chảy máu hoặc thủ thuật xâm lấn)
@@ -297,7 +297,7 @@ def render():
     """)
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -312,7 +312,7 @@ def render():
         - Theo dõi diễn tiến
         - Đánh giá đáp ứng điều trị
         
-        ### 📊 Tiêu Chí Chẩn Đoán
+        ### 📊 Tiêu chí chẩn đoán
         
         | Xét nghiệm | 0 điểm | 1 điểm | 2 điểm | 3 điểm |
         |------------|--------|--------|--------|--------|
@@ -340,7 +340,7 @@ def render():
         - Cần có: Bệnh nền + Biểu hiện lâm sàng + Score ≥5
         - Điều trị then chốt: **ĐIỀU TRỊ BỆNH NỀN**
         
-        ### 📚 Tài Liệu Tham Khảo
+        ### 📚 Tài liệu tham khảo
         
         - Taylor FB Jr, et al. *Thromb Haemost* 2001;86:1327-1330
         - Levi M, et al. *Br J Haematol* 2009;145:24-33

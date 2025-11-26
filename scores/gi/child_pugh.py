@@ -303,7 +303,7 @@ def render():
             
             **Đánh giá:** Chức năng gan còn bù trừ tốt, tiên lượng tốt.
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             
             1. **Theo dõi định kỳ:**
                - Khám gan mỗi 3-6 tháng
@@ -346,7 +346,7 @@ def render():
             
             **Đánh giá:** Chức năng gan suy giảm đáng kể, cần theo dõi sát và điều trị tích cực.
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             
             1. **Theo dõi chặt chẽ:**
                - Khám gan mỗi 2-3 tháng
@@ -407,7 +407,7 @@ def render():
             
             **Đánh giá:** Xơ gan mất bù nặng, tiên lượng xấu, cần điều trị tích cực và ghép gan.
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             
             1. **URGENT - Đánh giá ghép gan:**
                - ✅ **Chỉ định ghép gan**
@@ -473,7 +473,7 @@ def render():
         # Score breakdown
         st.markdown("---")
         with st.expander("📊 Chi tiết điểm số"):
-            st.markdown("| Thành Phần | Giá Trị | Điểm |")
+            st.markdown("| Thành phần | Giá Trị | Điểm |")
             st.markdown("|------------|---------|------|")
             st.markdown(f"| **Bilirubin** | {bili_mgdl:.1f} mg/dL | {score_breakdown['Bilirubin']} |")
             st.markdown(f"| **Albumin** | {albumin:.1f} g/dL | {score_breakdown['Albumin']} |")
@@ -523,7 +523,7 @@ def render():
             | **Phân loại** | 3 class (A, B, C) | Liên tục (6-40) |
             | **Ứng dụng** | Phẫu thuật, điều trị | Ưu tiên ghép gan |
             
-            **Khuyến Nghị:** Sử dụng CẢ HAI thang điểm để đánh giá toàn diện!
+            **Khuyến nghị:** Sử dụng CẢ HAI thang điểm để đánh giá toàn diện!
             """)
         
         # References

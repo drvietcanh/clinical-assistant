@@ -21,7 +21,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Tiêu Chí Lâm Sàng")
+        st.markdown("### 📋 Tiêu chí lâm sàng")
         
         # Clinical signs of DVT
         dvt_signs = st.checkbox(
@@ -245,7 +245,7 @@ def render():
             - Nhồi máu cơ tim
             """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown(f"""
                 **Wells Score for Pulmonary Embolism**
                 

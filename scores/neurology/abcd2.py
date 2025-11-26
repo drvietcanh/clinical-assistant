@@ -97,7 +97,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.markdown("### 📋 Thông Tin Bệnh Nhân")
+    st.markdown("### 📋 Thông tin bệnh nhân")
     
     col1, col2 = st.columns(2)
     
@@ -232,7 +232,7 @@ def render():
             st.markdown(item)
     
     with col2:
-        st.markdown("### 🎯 Khuyến Nghị")
+        st.markdown("### 🎯 Khuyến nghị")
         
         if result["total_score"] >= 6:
             st.error("""
@@ -268,7 +268,7 @@ def render():
     st.markdown("---")
     
     # Workup recommendations
-    st.markdown("### 🔍 Workup Khuyến Nghị")
+    st.markdown("### 🔍 Workup Khuyến nghị")
     
     col1, col2 = st.columns(2)
     
@@ -347,7 +347,7 @@ def render():
     st.markdown("---")
     
     # References
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **Johnston SC, et al.** Validation and refinement of scores to predict very early stroke risk after transient ischaemic attack.

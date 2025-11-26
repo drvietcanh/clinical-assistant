@@ -101,7 +101,7 @@ def render():
     - Hiểu diễn tiến của AKI classification
     """)
     
-    with st.expander("ℹ️ Thông Tin RIFLE"):
+    with st.expander("ℹ️ Thông tin RIFLE"):
         st.markdown("""
         ### RIFLE Categories
         

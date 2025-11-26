@@ -47,7 +47,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Tin Lâm Sàng")
+        st.markdown("### 📋 Thông tin lâm sàng")
         
         # 1. Age
         st.markdown("#### 1. Tuổi")
@@ -280,7 +280,7 @@ def render():
                 - Tử vong: {mortality}
                 - Tái chảy máu: {rebleed}
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **Có thể xuất viện sớm:**
                    - Sau nội soi 12-24h
@@ -306,7 +306,7 @@ def render():
                 - Tử vong: {mortality}
                 - Tái chảy máu: {rebleed}
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **Nhập viện theo dõi:**
                    - 2-3 ngày
@@ -331,7 +331,7 @@ def render():
                 - Tử vong: {mortality}
                 - Tái chảy máu: {rebleed}
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **ICU/HDU monitoring:**
                    - Theo dõi sát
@@ -354,7 +354,7 @@ def render():
             st.markdown("---")
             with st.expander("📊 Bảng Chấm Điểm Rockall"):
                 st.markdown("""
-                | Thành Phần | 0 điểm | 1 điểm | 2 điểm | 3 điểm |
+                | Thành phần | 0 điểm | 1 điểm | 2 điểm | 3 điểm |
                 |------------|--------|--------|--------|--------|
                 | **Tuổi** | <60 | 60-79 | ≥80 | - |
                 | **Shock** | SBP≥100, HR<100 | SBP≥100, HR≥100 | SBP<100 | - |
@@ -393,7 +393,7 @@ def render():
                     | ≥5 | 11-25% | 24% |
                     """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **Primary Reference:**
                 - Rockall TA, Logan RF, Devlin HB, Northfield TC. 
@@ -429,7 +429,7 @@ def render():
         - Dự đoán chính xác hơn
         - Hướng dẫn điều trị tốt hơn
         
-        **Khuyến Nghị:**
+        **Khuyến nghị:**
         - Tính Clinical Rockall tại ED/admission
         - Tính Complete Rockall sau nội soi
         - Sử dụng cả hai để đánh giá đầy đủ

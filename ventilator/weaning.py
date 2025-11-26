@@ -270,7 +270,7 @@ def render_weaning_calculator():
             else:
                 st.info("Nhập Vt để tính RSBI")
         
-        with st.expander("📚 Thông Tin Về RSBI"):
+        with st.expander("📚 Thông tin về RSBI"):
             st.markdown("""
             **RSBI (Rapid Shallow Breathing Index):**
             - **Công thức:** RSBI = RR / Vt (L)
@@ -371,13 +371,13 @@ def render_weaning_calculator():
             
             # Passed criteria
             if criteria["passed"]:
-                st.markdown("#### ✅ Tiêu Chí Đạt")
+                st.markdown("#### ✅ Tiêu chí Đạt")
                 for criterion in criteria["passed"]:
                     st.success(f"✓ {criterion}")
             
             # Failed criteria
             if criteria["failed"]:
-                st.markdown("#### ❌ Tiêu Chí Không Đạt")
+                st.markdown("#### ❌ Tiêu chí Không Đạt")
                 for criterion in criteria["failed"]:
                     st.error(f"✗ {criterion}")
             
@@ -389,7 +389,7 @@ def render_weaning_calculator():
             
             # Recommendations
             st.markdown("---")
-            st.markdown("### 💡 Khuyến Nghị")
+            st.markdown("### 💡 Khuyến nghị")
             
             if readiness == "Sẵn sàng":
                 st.success("""
@@ -435,20 +435,20 @@ def render_weaning_calculator():
             st.markdown("---")
         
         # Success criteria
-        st.markdown("#### ✅ Tiêu Chí Thành Công")
+        st.markdown("#### ✅ Tiêu chí Thành Công")
         for criterion in protocol["success_criteria"]:
             st.success(f"✓ {criterion}")
         
         st.markdown("---")
         
         # Failure criteria
-        st.markdown("#### ❌ Tiêu Chí Thất Bại")
+        st.markdown("#### ❌ Tiêu chí Thất Bại")
         for criterion in protocol["failure_criteria"]:
             st.error(f"✗ {criterion}")
         
         st.markdown("---")
         
-        with st.expander("📚 Thông Tin Thêm"):
+        with st.expander("📚 Thông tin thêm"):
             st.markdown("""
             **SBT Protocol:**
             - **Mục đích:** Đánh giá khả năng thở tự nhiên của bệnh nhân

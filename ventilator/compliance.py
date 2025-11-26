@@ -136,7 +136,7 @@ def get_compliance_recommendations(compliance, plateau, peep, vt, pbw):
 
 def display_compliance_analysis(static_compliance, dynamic_compliance, plateau, peak, peep, vt, pbw):
     """Hiển thị phân tích compliance đầy đủ"""
-    st.markdown("### 📊 Phân Tích Compliance")
+    st.markdown("### 📊 Phân tích Compliance")
     
     col1, col2 = st.columns(2)
     
@@ -185,7 +185,7 @@ def display_compliance_analysis(static_compliance, dynamic_compliance, plateau, 
     recommendations = get_compliance_recommendations(static_compliance, plateau, peep, vt, pbw)
     if recommendations:
         st.markdown("---")
-        st.markdown("#### 💡 Khuyến Nghị Dựa Trên Compliance")
+        st.markdown("#### 💡 Khuyến nghị Dựa Trên Compliance")
         for rec in recommendations:
             if rec["priority"] == "critical":
                 st.error(f"**🔴 {rec['title']}**")

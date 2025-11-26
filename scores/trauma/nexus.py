@@ -63,7 +63,7 @@ def render():
     - Độ nhạy 99.6% (rất an toàn)
     - Validate trên > 34,000 bệnh nhân
     
-    **5 Tiêu Chí NEXUS (Mnemonic: NSAID):**
+    **5 Tiêu chí NEXUS (Mnemonic: NSAID):**
     1. **N**o midline tenderness (Không đau chính giữa)
     2. **S**ober/Normal mental status (Không rối loạn ý thức)
     3. **A**lert (Không say rượu/ma túy)
@@ -83,7 +83,7 @@ def render():
     st.markdown("---")
     
     # Inclusion/Exclusion criteria
-    with st.expander("⚠️ Tiêu Chí Áp Dụng NEXUS", expanded=True):
+    with st.expander("⚠️ Tiêu chí áp dụng NEXUS", expanded=True):
         st.markdown("""
         ### ✅ Áp dụng cho:
         - Bệnh nhân chấn thương BẤT KỲ cơ chế nào
@@ -108,7 +108,7 @@ def render():
     st.markdown("---")
     
     # NEXUS Criteria Evaluation
-    st.subheader("📋 Đánh giá 5 Tiêu Chí NEXUS")
+    st.subheader("📋 Đánh giá 5 Tiêu chí NEXUS")
     
     st.info("""
     **Hướng dẫn:** Đánh giá từng tiêu chí. Tick vào ô nếu tiêu chí DƯƠNG TÍNH (có bất thường)
@@ -197,7 +197,7 @@ def render():
         
         with col1:
             st.metric(
-                "Tiêu Chí Dương Tính",
+                "Tiêu chí dương tính",
                 f"{positive_count}/5",
                 help="Số tiêu chí dương tính"
             )
@@ -211,7 +211,7 @@ def render():
         st.markdown("---")
         
         # Detailed result
-        st.subheader("🎯 Khuyến Nghị")
+        st.subheader("🎯 Khuyến nghị")
         
         if result['safe_to_clear']:
             st.success(f"""
@@ -219,7 +219,7 @@ def render():
             
             **Lý do:** {result['reason']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             
             **Độ tin cậy:** {result['sensitivity']}
             
@@ -258,13 +258,13 @@ def render():
             
             **Lý do:** {result['reason']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             
             **Tiêu chí dương tính:** {positive_count}/5
             """)
             
             # List positive criteria
-            st.markdown("### Các Tiêu Chí Dương Tính:")
+            st.markdown("### Các Tiêu chí dương tính:")
             if midline_tenderness:
                 st.markdown("- ⚠️ Đau chính giữa cột sống cổ")
             if altered_mental_status:
@@ -301,7 +301,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("📊 Độ Chính Xác Của NEXUS"):
         st.markdown("""

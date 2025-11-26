@@ -104,7 +104,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Tin Bệnh Nhân")
+        st.markdown("### 📋 Thông tin bệnh nhân")
         
         # Gender
         gender = st.radio(
@@ -285,7 +285,7 @@ def render():
                 - Cần can thiệp: <1%
                 - Tử vong: <0.5%
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **✅ Có thể XUẤT VIỆN an toàn**
                    - Không cần nội soi cấp cứu
@@ -322,7 +322,7 @@ def render():
                 - Cần can thiệp: ~2%
                 - Tử vong: <0.5%
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **Nhập viện ngắn ngày hoặc Observation Unit:**
                    - Theo dõi 12-24h
@@ -363,7 +363,7 @@ def render():
                 - Cần can thiệp: ~{intervention_risk}
                 - Tử vong: ~{mortality}
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **NHẬP VIỆN - Khoa Tiêu Hóa:**
                    - Theo dõi sát
@@ -411,7 +411,7 @@ def render():
                 - Cần can thiệp: >30%
                 - Tử vong: >5%
                 
-                **Khuyến Nghị:**
+                **Khuyến nghị:**
                 
                 1. **KHẨN CẤP - ICU hoặc High-Dependency Unit:**
                    - Monitoring liên tục
@@ -502,7 +502,7 @@ def render():
             
             with st.expander("📈 Bảng Chấm Điểm Glasgow-Blatchford"):
                 st.markdown("""
-                | Yếu Tố | Tiêu Chuẩn | Điểm |
+                | Yếu Tố | Tiêu chuẩn | Điểm |
                 |--------|-----------|------|
                 | **BUN (mg/dL)** | ≥150 (≥25 mmol/L) | 6 |
                 | | 100-149.9 (18.2-24.9) | 4 |

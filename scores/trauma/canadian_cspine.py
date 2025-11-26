@@ -119,7 +119,7 @@ def render():
     st.markdown("---")
     
     # Inclusion/Exclusion
-    with st.expander("⚠️ Tiêu Chí Áp Dụng", expanded=True):
+    with st.expander("⚠️ Tiêu chí áp dụng", expanded=True):
         st.markdown("""
         ### ✅ Áp dụng cho:
         - Chấn thương cùn (blunt trauma)
@@ -199,7 +199,7 @@ def render():
         help="Không lật, không đẩy vào xe khác, không xe bus/xe tải, tốc độ thấp"
     )
     
-    with st.expander("📋 Tiêu Chí 'Tai Nạn Đâm Đuôi Đơn Giản'"):
+    with st.expander("📋 Tiêu chí 'Tai Nạn Đâm Đuôi Đơn Giản'"):
         st.markdown("""
         **Phải thỏa TẤT CẢ:**
         - Xe bị đâm từ phía sau
@@ -310,7 +310,7 @@ def render():
             
             **Lý do:** {result['reason']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             
             **Độ tin cậy:** Độ nhạy 99.4%, NPV 100%
             
@@ -347,7 +347,7 @@ def render():
             
             **Lý do:** {result['reason']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             """)
             
             st.warning("""
@@ -366,7 +366,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("📊 Độ Chính Xác"):
         st.markdown("""

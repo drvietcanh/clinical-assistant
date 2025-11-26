@@ -157,7 +157,7 @@ def render():
             st.metric("Mức Độ Nguy Cơ", mortality["desc"])
         
         with col3:
-            st.metric("Điểm Thành Phần", f"GCS:{gcs_score} Vol:{volume_score} IVH:{ivh_score} Loc:{location_score} Age:{age_score}")
+            st.metric("Điểm Thành phần", f"GCS:{gcs_score} Vol:{volume_score} IVH:{ivh_score} Loc:{location_score} Age:{age_score}")
         
         st.markdown("---")
         
@@ -170,7 +170,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 0%
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             - Theo dõi sát tại khoa Thần kinh hoặc ICU
             - Kiểm soát huyết áp mục tiêu: SBP 140-160 mmHg
             - Tránh thuốc chống đông, kháng tiểu cầu trong giai đoạn cấp
@@ -185,7 +185,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 13%
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             - Nhập viện ICU hoặc Stroke Unit
             - Kiểm soát huyết áp chặt chẽ: SBP 140-160 mmHg
             - Đảo ngược tác dụng kháng đông nếu bệnh nhân đang dùng
@@ -201,7 +201,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 26%
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             - **BẮT BUỘC nhập ICU/Stroke Unit**
             - Theo dõi sát: GCS, pupils, huyết động mỗi 1 giờ
             - Kiểm soát huyết áp tích cực: SBP 140-160 mmHg (nicardipine, labetalol)
@@ -219,7 +219,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 72%
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             - **KHẨN CẤP - ICU chuyên sâu**
             - Hội chẩn đa chuyên khoa: thần kinh, hồi sức, phẫu thuật thần kinh
             - Kiểm soát huyết áp: SBP 140-160 mmHg
@@ -240,7 +240,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 97%
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             - **TIÊN LƯỢNG RẤT XẤU - Tử vong gần như chắc chắn**
             - Hội chẩn khẩn cấp đa chuyên khoa
             - **Thảo luận nghiêm túc với gia đình về:**
@@ -261,7 +261,7 @@ def render():
             
             **Tỷ lệ tử vong 30 ngày:** 100%
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             - **TIÊN LƯỢNG CỰC KỲ XẤU - Tử vong gần như chắc chắn**
             - **Thảo luận thẳng thắn với gia đình:**
               * Không có khả năng sống sót
@@ -327,7 +327,7 @@ def render():
             """)
         
         # References
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             **Primary Reference:**
             - Hemphill JC 3rd, Bonovich DC, Besmertis L, Manley GT, Johnston SC. 

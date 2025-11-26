@@ -242,7 +242,7 @@ def render():
     st.markdown("**Tiên lượng tử vong ở bệnh nhân COPD**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -252,7 +252,7 @@ def render():
         - Hướng dẫn quản lý COPD
         - Theo dõi diễn tiến bệnh
         
-        ### 🎯 4 Thành Phần (BODE)
+        ### 🎯 4 Thành phần (BODE)
         
         1. **B (Body mass index):** Chỉ số khối cơ thể
         2. **O (Obstruction):** Tắc nghẽn khí đạo (FEV1)
@@ -263,7 +263,7 @@ def render():
         
         ### 📊 BODE Scoring
         
-        | Thành Phần | 0 điểm | 1 điểm | 2 điểm | 3 điểm |
+        | Thành phần | 0 điểm | 1 điểm | 2 điểm | 3 điểm |
         |------------|--------|--------|--------|--------|
         | **BMI** | >21 | ≤21 | - | - |
         | **FEV1 (% predicted)** | ≥65 | 50-64 | 36-49 | ≤35 |
@@ -287,7 +287,7 @@ def render():
         - **3:** Phải dừng để nghỉ sau khi đi ~100 mét
         - **4:** Quá khó thở để ra khỏi nhà
         
-        ### 📚 Tham Khảo
+        ### 📚 Tham khảo
         
         - Celli BR, et al. *N Engl J Med* 2004;350:1005-1012
         - GOLD Guidelines 2024

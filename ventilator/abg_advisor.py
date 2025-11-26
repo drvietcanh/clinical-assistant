@@ -196,7 +196,7 @@ def display_abg_recommendations(recommendations):
     if not recommendations:
         return
     
-    st.markdown("### 🔬 Phân Tích ABG & Khuyến Nghị")
+    st.markdown("### 🔬 Phân tích ABG & Khuyến nghị")
     
     # Sort by priority
     priority_order = {"critical": 0, "high": 1, "medium": 2, "low": 3}
@@ -223,7 +223,7 @@ def display_ventilator_adjustments(recommendations):
         st.success("✅ Không có khuyến nghị điều chỉnh thông số máy thở")
         return
     
-    st.markdown("### ⚙️ Khuyến Nghị Điều Chỉnh Thông Số Máy Thở")
+    st.markdown("### ⚙️ Khuyến nghị điều chỉnh Thông Số Máy Thở")
     
     # Group by parameter
     by_parameter = {}

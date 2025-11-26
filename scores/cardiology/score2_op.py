@@ -207,7 +207,7 @@ def render():
     st.markdown("**Đánh giá nguy cơ tim mạch ở người cao tuổi (≥70 tuổi)**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -264,7 +264,7 @@ def render():
         - Bệnh nền nặng (ung thư giai đoạn cuối, etc.)
         - Bệnh nhân từ chối
         
-        ### 📚 Tham Khảo
+        ### 📚 Tham khảo
         
         - SCORE2-OP working group. *Eur Heart J* 2021;42:2455-2467
         - ESC Guidelines 2021 on CVD prevention in clinical practice
@@ -278,7 +278,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 👤 Thông Tin")
+        st.markdown("#### 👤 Thông tin")
         age = st.number_input("Tuổi", 70, 100, 75, 1, format="%d", help="SCORE2-OP dành cho ≥70 tuổi")
         
         sex = st.radio("Giới tính", ["Nam", "Nữ"], horizontal=True)

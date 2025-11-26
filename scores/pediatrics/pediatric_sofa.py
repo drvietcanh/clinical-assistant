@@ -288,7 +288,7 @@ def render():
     st.markdown("---")
     
     # Patient info
-    st.markdown("### 📋 Thông Tin Bệnh Nhân")
+    st.markdown("### 📋 Thông tin bệnh nhân")
     
     col1, col2 = st.columns(2)
     
@@ -559,7 +559,7 @@ def render():
     st.markdown("---")
     
     # References
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **Matics TJ, Sanchez-Pinto LN.** Adaptation and validation of a pediatric sequential organ failure assessment score and evaluation of the Sepsis-3 definitions in critically ill children.

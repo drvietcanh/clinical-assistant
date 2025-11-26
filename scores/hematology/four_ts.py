@@ -112,7 +112,7 @@ def calculate_4ts_score(
         recommendation = """
         **🟡 Xử trí khuyến cáo - INTERMEDIATE PROBABILITY:**
         
-        1. **Đánh giá Kỹ & Quyết Định:**
+        1. **Đánh giá Kỹ & Quyết định:**
            - Xem xét DỪNG heparin (khuyến cáo mạnh nếu điểm 5)
            - Nếu điểm = 4 → cân nhắc rủi ro/lợi ích
            - Nếu không thể dừng → giám sát sát tiểu cầu
@@ -122,7 +122,7 @@ def calculate_4ts_score(
            - Nếu ELISA dương tính → làm functional assay (SRA)
            - Quyết định dựa trên kết quả xét nghiệm
         
-        3. **Nếu Quyết Định Dừng Heparin:**
+        3. **Nếu Quyết định Dừng Heparin:**
            - Bắt đầu kháng đông thay thế (argatroban/fondaparinux)
            - Theo dõi tiểu cầu hàng ngày
            - Đánh giá huyết khối
@@ -248,7 +248,7 @@ def render():
     st.markdown("**Đánh giá xác suất giảm tiểu cầu do heparin**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -262,7 +262,7 @@ def render():
         - Nguy cơ huyết khối: 30-50% nếu không điều trị
         - Tử vong: ~10-20%
         
-        ### 🎯 4 Thành Phần (4 T's)
+        ### 🎯 4 Thành phần (4 T's)
         
         1. **T**hrombocytopenia: Mức độ giảm tiểu cầu
         2. **T**iming: Thời gian xuất hiện giảm tiểu cầu
@@ -284,7 +284,7 @@ def render():
         - **KHÔNG dùng warfarin** cho đến khi tiểu cầu >150,000/μL
         - **Functional assay (SRA)** là gold standard nhưng mất thời gian
         
-        ### 📚 Tài Liệu Tham Khảo
+        ### 📚 Tài liệu tham khảo
         
         - Lo GK, et al. *J Thromb Haemost* 2006;4:759-765
         - Cuker A, et al. *Blood Adv* 2018;2:3360-3392
@@ -294,7 +294,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Thông Tin 4 Thành Phần")
+    st.subheader("📝 Nhập Thông tin 4 Thành phần")
     
     # 1. Thrombocytopenia
     st.markdown("#### 1️⃣ Thrombocytopenia - Mức Độ Giảm Tiểu Cầu")

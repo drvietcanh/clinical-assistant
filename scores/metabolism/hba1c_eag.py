@@ -184,7 +184,7 @@ def render():
             
             **Đánh giá:** {status_info['risk']}
             
-            **Khuyến Nghị:** {status_info['recommendation']}
+            **Khuyến nghị:** {status_info['recommendation']}
             """)
             
             # Reference table
@@ -282,7 +282,7 @@ def render():
             
             **Đánh giá:** {status_info['risk']}
             
-            **Khuyến Nghị:** {status_info['recommendation']}
+            **Khuyến nghị:** {status_info['recommendation']}
             """)
     
     # Clinical notes

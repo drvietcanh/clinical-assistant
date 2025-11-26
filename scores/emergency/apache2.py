@@ -170,7 +170,7 @@ def render():
     st.markdown("**Acute Physiology and Chronic Health Evaluation II - Dự đoán tử vong ICU**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -180,7 +180,7 @@ def render():
         - So sánh chất lượng chăm sóc ICU
         - Nghiên cứu & phân tầng bệnh nhân
         
-        ### 🎯 3 Thành Phần
+        ### 🎯 3 Thành phần
         
         1. **Acute Physiology Score (0-60):** 12 biến số sinh lý
         2. **Age Points (0-6):** Điểm tuổi
@@ -207,7 +207,7 @@ def render():
         - Lấy giá trị TỆ NHẤT trong 24h
         - Không tính lại trong ICU stay
         
-        ### 📚 Tham Khảo
+        ### 📚 Tham khảo
         
         - Knaus WA, et al. *Crit Care Med* 1985;13:818-829
         """)

@@ -112,7 +112,7 @@ def get_auto_peep_recommendations(auto_peep, rr, ie_ratio, vt, peep):
 
 def display_auto_peep_analysis(auto_peep, plateau, peep, rr, ie_ratio, vt):
     """Hiển thị phân tích auto-PEEP"""
-    st.markdown("### 💨 Phân Tích Auto-PEEP")
+    st.markdown("### 💨 Phân tích Auto-PEEP")
     
     if auto_peep is None:
         st.info("""
@@ -150,7 +150,7 @@ def display_auto_peep_analysis(auto_peep, plateau, peep, rr, ie_ratio, vt):
     recommendations = get_auto_peep_recommendations(auto_peep, rr, ie_ratio, vt, peep)
     if recommendations:
         st.markdown("---")
-        st.markdown("#### 💡 Khuyến Nghị Điều Chỉnh")
+        st.markdown("#### 💡 Khuyến nghị điều chỉnh")
         for rec in recommendations:
             priority_icon = "🔴" if rec["priority"] == "high" else "🟡" if rec["priority"] == "medium" else "🔵"
             st.markdown(f"**{priority_icon} {rec['parameter']}:**")
@@ -162,7 +162,7 @@ def display_auto_peep_analysis(auto_peep, plateau, peep, rr, ie_ratio, vt):
             st.markdown("---")
     
     # Information
-    with st.expander("📚 Thông Tin Về Auto-PEEP"):
+    with st.expander("📚 Thông tin về Auto-PEEP"):
         st.markdown("""
         **Auto-PEEP (Intrinsic PEEP):**
         - Áp lực dương còn lại trong phổi ở cuối thì thở ra

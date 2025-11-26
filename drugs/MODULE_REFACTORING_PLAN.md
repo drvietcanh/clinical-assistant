@@ -1,6 +1,6 @@
 # Kế Hoạch Tách Module cho drug_database.py
 
-## Phân Tích Hiện Trạng
+## Phân tích Hiện Trạng
 
 ### Kích Thước File
 - **Kích thước**: ~850KB (ước tính)
@@ -166,7 +166,7 @@ DRUG_DATABASE = {
 - **Có thể làm từng bước**: ✅ Có
 - **Có thể rollback**: ✅ Có (có backup)
 
-## Quyết Định
+## Quyết định
 
 **Recommendation**: Thực hiện Option 1 (Tách theo nhóm thuốc)
 

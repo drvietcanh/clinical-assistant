@@ -76,7 +76,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: LABORATORY CRITERIA ==========
-    st.markdown("### 🧪 Tiêu Chuẩn Xét Nghiệm (Laboratory TLS)")
+    st.markdown("### 🧪 Tiêu chuẩn Xét Nghiệm (Laboratory TLS)")
     
     with st.expander("🔍 Xem tiêu chuẩn chẩn đoán TLS", expanded=True):
         st.markdown("""
@@ -366,7 +366,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 10: REFERENCES ==========
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **NCCN Clinical Practice Guidelines in Oncology** - Hội chứng tan u (Version 2023)

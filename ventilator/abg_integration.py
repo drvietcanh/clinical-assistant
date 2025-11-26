@@ -176,7 +176,7 @@ def display_abg_summary(abg_data, show_details=True):
     # Acid-base disorders
     if acid_base_disorders and show_details:
         st.markdown("---")
-        st.markdown("**🔬 Phân Tích Acid-Base:**")
+        st.markdown("**🔬 Phân tích Acid-Base:**")
         for disorder in acid_base_disorders:
             severity_icon = "🔴" if disorder["severity"] == "severe" else "🟡"
             st.warning(f"{severity_icon} **{disorder['type']}** ({disorder['severity']})")

@@ -212,7 +212,7 @@ def render():
         st.error("""
         **Chỉ định NIV (Non-Invasive Ventilation):**
         
-        **Tiêu Chuẩn:**
+        **Tiêu chuẩn:**
         - pH <7.35 với PaCO₂ >45 mmHg
         - Khó thở nặng với sử dụng cơ hô hấp phụ
         - Nhịp thở >25/phút
@@ -239,7 +239,7 @@ def render():
         """)
     
     with tabs[4]:  # Monitoring
-        st.markdown("#### Theo Dõi & Tiêu Chuẩn Xuất Viện")
+        st.markdown("#### Theo Dõi & Tiêu chuẩn xuất viện")
         
         st.success("""
         **Theo dõi tại bệnh viện:**
@@ -279,7 +279,7 @@ def render():
     
     st.markdown("---")
     
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         **GOLD 2023 - Global Initiative for Chronic Obstructive Lung Disease**
         

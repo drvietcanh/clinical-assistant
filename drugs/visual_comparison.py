@@ -195,7 +195,7 @@ def render_visual_comparison():
         st.markdown("---")
         
         # Comparison by category
-        st.markdown("### 📈 So Sánh Theo Tiêu Chí:")
+        st.markdown("### 📈 So Sánh Theo Tiêu chí:")
         
         # Side effects comparison
         side_effects_data = {

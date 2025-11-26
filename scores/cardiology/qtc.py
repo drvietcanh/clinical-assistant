@@ -311,7 +311,7 @@ def render():
         st.markdown("---")
         
         # Interpretation
-        st.subheader("🎯 Phân Tích & Đánh giá")
+        st.subheader("🎯 Phân tích & Đánh giá")
         
         if result['severity'] == "normal":
             st.success(f"""
@@ -321,7 +321,7 @@ def render():
             
             **Đánh giá:** {result['risk']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             """)
         elif result['severity'] == "borderline":
             st.warning(f"""
@@ -331,7 +331,7 @@ def render():
             
             **Đánh giá:** {result['risk']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             """)
         else:
             st.error(f"""
@@ -341,7 +341,7 @@ def render():
             
             **Đánh giá:** {result['risk']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             """)
         
         # Reference values

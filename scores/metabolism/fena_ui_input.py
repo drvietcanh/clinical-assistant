@@ -134,7 +134,7 @@ def render_input_form():
             
             → FENa không đáng tin cậy!
             
-            **Khuyến Nghị:** Dùng **FEUrea** thay thế (không bị ảnh hưởng bởi lợi tiểu)
+            **Khuyến nghị:** Dùng **FEUrea** thay thế (không bị ảnh hưởng bởi lợi tiểu)
             """)
     
     return {

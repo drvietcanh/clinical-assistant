@@ -393,7 +393,7 @@ def render():
     
     st.markdown("---")
     
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         **ESC Guidelines 2021 - Acute and Chronic Heart Failure**
         **AHA/ACC/HFSA Guidelines 2022**

@@ -179,9 +179,9 @@ def render():
             """)
             st.markdown("---")
     
-    if st.button("📈 Phân Tích Đầy Đủ", type="primary", use_container_width=True):
+    if st.button("📈 Phân tích Đầy Đủ", type="primary", use_container_width=True):
         st.markdown("---")
-        st.subheader("🎯 Đánh giá & Khuyến Nghị")
+        st.subheader("🎯 Đánh giá & Khuyến nghị")
         
         # Prognosis
         col1, col2 = st.columns(2)
@@ -204,7 +204,7 @@ def render():
         st.markdown("---")
         
         # Treatment recommendations
-        st.subheader("💊 Khuyến Nghị Điều Trị")
+        st.subheader("💊 Khuyến nghị điều trị")
         
         treatment_rec = get_treatment_recommendations(selected_ecog)
         
@@ -249,7 +249,7 @@ def render():
         if selected_ecog >= 3:
             st.markdown("---")
             st.error("""
-            ### ⚠️ Khuyến Nghị Đặc Biệt - ECOG 3-4
+            ### ⚠️ Khuyến nghị Đặc Biệt - ECOG 3-4
             
             **Ưu tiên:**
             1. **Chăm sóc hỗ trợ (Supportive Care):**
@@ -277,7 +277,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("📊 ECOG vs Karnofsky Performance Scale"):
         st.markdown("""
@@ -356,7 +356,7 @@ def render():
         - Nếu bệnh nhân có COPD nặng → ECOG vẫn phản ánh thực tế
         """)
     
-    with st.expander("💊 ECOG và Quyết Định Điều Trị"):
+    with st.expander("💊 ECOG và Quyết định điều trị"):
         st.markdown("""
         ### Vai trò của ECOG trong điều trị:
         

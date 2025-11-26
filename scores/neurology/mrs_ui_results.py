@@ -51,7 +51,7 @@ def render_recommendations(selected_mrs, mrs_info):
         
         **Đánh giá:** Bệnh nhân đã hồi phục hoàn toàn, không còn bất kỳ triệu chứng nào.
         
-        **Khuyến Nghị:**
+        **Khuyến nghị:**
         
         1. **Phòng ngừa đột quỵ tái phát:**
            - Kiểm soát yếu tố nguy cơ: tăng huyết áp, đái tháo đường, lipid máu
@@ -84,7 +84,7 @@ def render_recommendations(selected_mrs, mrs_info):
         
         **Đánh giá:** Có triệu chứng nhẹ nhưng không ảnh hưởng đáng kể đến sinh hoạt.
         
-        **Khuyến Nghị:**
+        **Khuyến nghị:**
         
         1. **Phục hồi chức năng:**
            - Vật lý trị liệu để cải thiện sức mạnh, phối hợp vận động
@@ -114,7 +114,7 @@ def render_recommendations(selected_mrs, mrs_info):
         
         **Đánh giá:** Khuyết tật nhẹ, tự chăm sóc được nhưng không làm được tất cả hoạt động như trước.
         
-        **Khuyến Nghị:**
+        **Khuyến nghị:**
         
         1. **Phục hồi chức năng tích cực:**
            - **Vật lý trị liệu:** 3-5 buổi/tuần
@@ -151,7 +151,7 @@ def render_recommendations(selected_mrs, mrs_info):
         
         **Đánh giá:** Cần giúp đỡ một số hoạt động nhưng đi lại độc lập.
         
-        **Khuyến Nghị:**
+        **Khuyến nghị:**
         
         1. **Phục hồi chức năng chuyên sâu:**
            - **Vật lý trị liệu:** 5-7 buổi/tuần (giai đoạn đầu)
@@ -193,7 +193,7 @@ def render_recommendations(selected_mrs, mrs_info):
         
         **Đánh giá:** Phụ thuộc nặng, cần giúp đỡ đi lại và tự chăm sóc.
         
-        **Khuyến Nghị:**
+        **Khuyến nghị:**
         
         1. **Phục hồi chức năng:**
            - **Vật lý trị liệu:** Duy trì khả năng vận động tối đa
@@ -241,7 +241,7 @@ def render_recommendations(selected_mrs, mrs_info):
         
         **Đánh giá:** Nằm liệt giường, không tự chủ, cần chăm sóc toàn diện.
         
-        **Khuyến Nghị:**
+        **Khuyến nghị:**
         
         1. **Chăm sóc dài hạn:**
            - **BẮT BUỘC chăm sóc 24/7**

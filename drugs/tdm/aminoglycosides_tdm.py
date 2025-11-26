@@ -383,7 +383,7 @@ def render_aminoglycosides_tdm():
     
     # References
     st.markdown("---")
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown(f"""
         - **{drug_selection} TDM Guidelines**
         - **Peak target:** {drug_info['target_min']}-{drug_info['target_max']} mg/L

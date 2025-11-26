@@ -184,7 +184,7 @@ def render():
     if hco3 >= 22:
         st.warning("⚠️ **Lưu ý:** Winter's Formula chỉ áp dụng cho toan chuyển hóa (HCO₃⁻ < 22 mmol/L)")
     
-    if st.button("🔬 Tính Toán & Phân Tích", type="primary", use_container_width=True):
+    if st.button("🔬 Tính Toán & Phân tích", type="primary", use_container_width=True):
         # Calculate expected PCO2
         expected_pco2, lower_limit, upper_limit = calculate_expected_pco2(hco3)
         
@@ -192,7 +192,7 @@ def render():
         result = interpret_compensation(actual_pco2, expected_pco2, lower_limit, upper_limit)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Phân Tích")
+        st.subheader("📈 Kết quả Phân tích")
         
         # Display ABG values
         col1, col2, col3 = st.columns(3)
@@ -251,7 +251,7 @@ def render():
         st.markdown("---")
         
         # Clinical interpretation
-        st.subheader("🎯 Phân Tích Lâm Sàng")
+        st.subheader("🎯 Phân tích Lâm Sàng")
         
         if result['color'] == "🟢":
             st.success(f"""
@@ -259,7 +259,7 @@ def render():
             
             Bệnh nhân có toan chuyển hóa đơn thuần với bù thường hô hấp thích hợp.
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             - {result['action']}
             - Xác định và điều trị nguyên nhân toan chuyển hóa
             - Theo dõi điện giải đồ và chức năng thận
@@ -270,7 +270,7 @@ def render():
             
             Bệnh nhân có rối loạn acid-base hỗn hợp cần đánh giá kỹ hơn.
             
-            **Khuyến Nghị:**
+            **Khuyến nghị:**
             - {result['action']}
             - Xem xét các nguyên nhân gây rối loạn acid-base đồng thời
             - Cân nhắc hội chẩn chuyên khoa

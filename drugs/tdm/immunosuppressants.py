@@ -531,7 +531,7 @@ def render_immunosuppressants_tdm():
     
     # References
     st.markdown("---")
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         - **AST/ASTS Guidelines - Transplant**
         - **KDIGO Guidelines - Kidney Transplant**

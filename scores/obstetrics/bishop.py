@@ -138,7 +138,7 @@ def render():
     - Dự đoán khả năng thành công của gây chuyển dạ
     - Công cụ quan trọng nhất trong sản khoa
     
-    **5 Thành Phần (Mnemonic: PEEDS):**
+    **5 Thành phần (Mnemonic: PEEDS):**
     1. **P**osition (Vị trí cổ tử cung)
     2. **E**ffacement (Xóa mỏng cổ tử cung)
     3. **E**ngagement (Lọt)
@@ -160,7 +160,7 @@ def render():
     st.markdown("---")
     
     # Patient information
-    with st.expander("ℹ️ Thông Tin Sản Phụ", expanded=False):
+    with st.expander("ℹ️ Thông tin Sản Phụ", expanded=False):
         parity = st.radio(
             "Parity (Thai sản):",
             options=["nulliparous", "multiparous"],
@@ -179,7 +179,7 @@ def render():
     st.markdown("---")
     
     # Bishop Score Components
-    st.subheader("📋 5 Thành Phần Bishop Score")
+    st.subheader("📋 5 Thành phần Bishop Score")
     
     # 1. Dilation
     st.markdown("### 1️⃣ Dilation - Mở Cổ Tử Cung")
@@ -309,7 +309,7 @@ def render():
         st.markdown("---")
         
         # Score breakdown
-        st.subheader("📊 Phân Tích Từng Thành Phần")
+        st.subheader("📊 Phân tích từng Thành phần")
         
         components = [
             ("Dilation (Mở cổ tử cung)", scores['dilation_score'], f"{dilation} cm"),
@@ -338,7 +338,7 @@ def render():
         st.markdown("---")
         
         # Interpretation
-        st.subheader("🎯 Phân Tích & Khuyến Nghị")
+        st.subheader("🎯 Phân tích & Khuyến nghị")
         
         parity_text = "nulliparous (con so)" if is_nulliparous else "multiparous (đã sinh)"
         
@@ -356,7 +356,7 @@ def render():
             
             **Thời gian chuyển dạ:** {result['labor_duration']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             
             **Ripening:** {result['ripening']}
             """)
@@ -395,7 +395,7 @@ def render():
             
             **Thời gian chuyển dạ:** {result['labor_duration']}
             
-            **Khuyến Nghị:** {result['recommendation']}
+            **Khuyến nghị:** {result['recommendation']}
             
             **Ripening:** {result['ripening']}
             """)
@@ -453,7 +453,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("📊 Chi tiết từng thành phần"):
         st.markdown("""

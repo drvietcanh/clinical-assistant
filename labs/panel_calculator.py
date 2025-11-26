@@ -293,7 +293,7 @@ def render():
     st.markdown("---")
     
     # Analysis
-    st.markdown("#### 📊 Kết quả Phân Tích")
+    st.markdown("#### 📊 Kết quả Phân tích")
     
     # Create results table
     results = []

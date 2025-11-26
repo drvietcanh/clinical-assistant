@@ -555,7 +555,7 @@ def render_theophylline_tdm():
     
     # References
     st.markdown("---")
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         - **ATS/ERS Guidelines - Asthma & COPD**
         - **Half-life:** 5-8 giờ (thay đổi)

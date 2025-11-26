@@ -99,7 +99,7 @@ def _render_antibiotic_export(ab_name, ab_data):
     
     export_text = "\n".join(lines)
     
-    with st.expander("📤 Export Thông Tin", expanded=True):
+    with st.expander("📤 Export Thông tin", expanded=True):
         st.markdown("**Preview:**")
         st.code(export_text, language="text")
         st.markdown("---")

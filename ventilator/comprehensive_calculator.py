@@ -73,7 +73,7 @@ def render_comprehensive_calculator():
     col1, col2, col3 = st.columns([1, 1, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Tin Bệnh Nhân")
+        st.markdown("### 📋 Thông tin bệnh nhân")
         sex = st.radio(
             "Giới tính", 
             ["Nam", "Nữ"], 
@@ -164,7 +164,7 @@ def render_comprehensive_calculator():
     st.markdown("---")
     
     # Calculate button
-    if st.button("🧮 Tính Toán & Phân Tích", type="primary", use_container_width=True):
+    if st.button("🧮 Tính Toán & Phân tích", type="primary", use_container_width=True):
         # Calculate all metrics
         pf_ratio = calculate_pf_ratio(abg_data["po2"], abg_data["fio2"])
         ards_class, ards_color, _ = classify_ards(pf_ratio)
@@ -379,7 +379,7 @@ def render_comprehensive_calculator():
             render_export_panel()
         
         # Expandable reference
-        with st.expander("📚 Thông Tin Thêm"):
+        with st.expander("📚 Thông tin thêm"):
             st.markdown("""
             **Công thức:**
             - **PBW:** Nam = 50 + 0.91 × (Height - 152.4), Nữ = 45.5 + 0.91 × (Height - 152.4)

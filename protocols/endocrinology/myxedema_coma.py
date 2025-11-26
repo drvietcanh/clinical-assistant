@@ -25,7 +25,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: DIAGNOSTIC CRITERIA ==========
-    st.markdown("### 📋 Tiêu Chuẩn Chẩn Đoán")
+    st.markdown("### 📋 Tiêu chuẩn chẩn đoán")
     
     with st.expander("🔍 Xem tiêu chuẩn chẩn đoán", expanded=True):
         st.markdown("""

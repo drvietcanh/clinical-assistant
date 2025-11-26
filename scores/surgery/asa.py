@@ -228,9 +228,9 @@ def render():
         **Ảnh hưởng:** {emergency_info['impact']}
         """)
     
-    if st.button("📈 Phân Tích Nguy Cơ Chi tiết", type="primary", use_container_width=True):
+    if st.button("📈 Phân tích Nguy Cơ Chi tiết", type="primary", use_container_width=True):
         st.markdown("---")
-        st.subheader("🎯 Đánh giá Nguy Cơ & Khuyến Nghị")
+        st.subheader("🎯 Đánh giá Nguy Cơ & Khuyến nghị")
         
         # Display final classification
         final_classification = f"{selected_asa}{'-E' if is_emergency else ''}"
@@ -264,7 +264,7 @@ def render():
         st.markdown("---")
         
         # Risk assessment and recommendations
-        st.subheader("💡 Khuyến Nghị Lâm Sàng")
+        st.subheader("💡 Khuyến nghị Lâm Sàng")
         
         if selected_asa == "ASA I":
             st.success("""
@@ -435,7 +435,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("📖 Lịch Sử & Phát Triển ASA"):
         st.markdown("""

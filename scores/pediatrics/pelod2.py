@@ -179,7 +179,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.markdown("### 📋 Thông Tin Bệnh Nhân")
+    st.markdown("### 📋 Thông tin bệnh nhân")
     
     col1, col2 = st.columns(2)
     
@@ -518,7 +518,7 @@ def render():
     
     st.markdown("---")
     
-    with st.expander("📚 Tài Liệu Tham Khảo"):
+    with st.expander("📚 Tài liệu tham khảo"):
         st.markdown("""
         **Leteurtre S, et al. PELOD-2: an update of the PEdiatric logistic organ dysfunction score.**
         *Crit Care Med.* 2013;41(7):1761-1773.

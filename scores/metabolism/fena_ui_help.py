@@ -463,7 +463,7 @@ def render_references_expander():
         references = get_fena_references()
         render_references_section(
             references=references,
-            title="📚 Tài Liệu Tham Khảo",
+            title="📚 Tài liệu tham khảo",
             last_updated="2025-11-15",
             show_evidence_level=True,
             show_links=True,
@@ -471,7 +471,7 @@ def render_references_expander():
         )
     except ImportError:
         # Fallback to old format
-        with st.expander("📚 Tài Liệu Tham Khảo"):
+        with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             **Primary Reference:**
             - Espinel CH. 
@@ -550,7 +550,7 @@ def render_limitations_expander():
         - Acute glomerulonephritis
         - Hepatorenal syndrome
         
-        **Khuyến Nghị:**
+        **Khuyến nghị:**
         - **Không dựa vào FENa đơn độc!**
         - Kết hợp với lâm sàng
         - Kết hợp xét nghiệm khác:

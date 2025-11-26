@@ -509,7 +509,7 @@ def render_anticoagulation_calculator():
                 )
         
         st.markdown("---")
-        st.markdown("### 💡 Khuyến Nghị")
+        st.markdown("### 💡 Khuyến nghị")
         
         for rec in results["recommendations"]:
             st.markdown(f"- {rec}")

@@ -172,7 +172,7 @@ def render():
     st.markdown("---")
     
     # Original Bishop components
-    st.subheader("📋 5 Thành Phần Bishop Score Gốc")
+    st.subheader("📋 5 Thành phần Bishop Score Gốc")
     
     # 1. Dilation
     st.markdown("### 1️⃣ Dilation - Mở Cổ Tử Cung")
@@ -282,7 +282,7 @@ def render():
         st.markdown("---")
         
         # Score breakdown
-        st.subheader("📊 Phân Tích Chi tiết")
+        st.subheader("📊 Phân tích chi tiết")
         
         st.markdown("**5 thành phần chính:**")
         components = [
@@ -313,7 +313,7 @@ def render():
         st.markdown("---")
         
         # Interpretation
-        st.subheader("🎯 Khuyến Nghị")
+        st.subheader("🎯 Khuyến nghị")
         
         parity_text = "nulliparous" if is_nulliparous else "multiparous"
         
@@ -324,7 +324,7 @@ def render():
         
         **Tỷ lệ thành công:** {result['success_rate']}
         
-        **Khuyến Nghị:** {result['recommendation']}
+        **Khuyến nghị:** {result['recommendation']}
         """)
         
         # Special considerations
@@ -390,7 +390,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("🆚 Modified Bishop vs Bishop Score Gốc"):
         st.markdown("""

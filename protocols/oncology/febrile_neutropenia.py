@@ -297,7 +297,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 9: REFERENCES ==========
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **IDSA Clinical Practice Guideline** - Management of Cancer Patients with Febrile Neutropenia (2010)

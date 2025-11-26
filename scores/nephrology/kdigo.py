@@ -368,7 +368,7 @@ def render():
     st.markdown("**Phân loại và đánh giá giai đoạn suy thận cấp**")
     
     # Educational information
-    with st.expander("ℹ️ Thông Tin & Cách Sử Dụng"):
+    with st.expander("ℹ️ Thông tin & Cách Sử Dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -382,7 +382,7 @@ def render():
         - Tăng tử vong: 2-5× so với không AKI
         - Nguy cơ CKD dài hạn
         
-        ### 🎯 Tiêu Chí Chẩn Đoán AKI
+        ### 🎯 Tiêu chí chẩn đoán AKI
         
         **AKI khi có MỘT trong các tiêu chí sau:**
         
@@ -408,7 +408,7 @@ def render():
         - **Giai đoạn cuối cùng:** Lấy giai đoạn CAO NHẤT từ SCr hoặc nước tiểu
         - **RRT (Renal Replacement Therapy):** Dialysis = Stage 3 tự động
         
-        ### 📚 Tài Liệu Tham Khảo
+        ### 📚 Tài liệu tham khảo
         
         - KDIGO AKI Guideline 2012
         - Kellum JA, et al. *Crit Care* 2013;17:204

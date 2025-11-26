@@ -135,7 +135,7 @@ def render():
                 - Nguy cơ hít sặc cao
                 """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
                 **Glasgow Coma Scale (GCS)**
                 

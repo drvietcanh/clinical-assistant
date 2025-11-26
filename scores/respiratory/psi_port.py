@@ -21,7 +21,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Tin Bệnh Nhân")
+        st.markdown("### 📋 Thông tin bệnh nhân")
         
         # Demographics
         age = st.number_input(
@@ -445,7 +445,7 @@ def render():
                   - Septic shock
                 """)
             
-            with st.expander("📚 Tài Liệu Tham Khảo"):
+            with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown(f"""
                 **PSI/PORT Score - Pneumonia Severity Index**
                 

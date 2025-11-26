@@ -115,7 +115,7 @@ def render():
     - Opioid có thể tồn tại lâu hơn (đặc biệt là fentanyl, methadone)
     - Bệnh nhân có thể Tái Ngộ Độc sau khi naloxone hết tác dụng
     
-    **Khuyến Nghị:**
+    **Khuyến nghị:**
     - **Theo dõi ít nhất 2-4 giờ** sau khi đáp ứng
     - **Nếu dùng fentanyl/methadone:** Theo dõi 4-6 giờ
     - **Nếu dùng long-acting opioids:** Cân nhắc naloxone truyền tĩnh mạch

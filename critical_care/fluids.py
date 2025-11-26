@@ -273,7 +273,7 @@ def render_fluid_calculator():
             
             # Recommendations
             st.markdown("---")
-            st.markdown("### 💡 Khuyến Nghị")
+            st.markdown("### 💡 Khuyến nghị")
             
             if age and age < 18:
                 st.info(f"""
@@ -492,7 +492,7 @@ def render_fluid_calculator():
             render_result_card("Nhu Cầu Điện Giải", metrics, color="info")
             
             st.markdown("---")
-            st.markdown("### 💡 Thành Phần Dung Dịch")
+            st.markdown("### 💡 Thành phần dung dịch")
             
             col1, col2, col3 = st.columns(3)
             

@@ -424,7 +424,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: REFERENCES ==========
-    st.markdown("### 📚 Tài Liệu Tham Khảo")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ASCO Clinical Practice Guideline** - Management of Hypercalcemia of Malignancy (2021)

@@ -93,7 +93,7 @@ def render():
     st.markdown("---")
     
     # Input form
-    st.subheader("📝 Đánh giá 4 Tiêu Chuẩn SIRS")
+    st.subheader("📝 Đánh giá 4 Tiêu chuẩn SIRS")
     
     st.markdown("""
     <div style='background-color: #FEF3C7; padding: 15px; border-radius: 10px; border-left: 4px solid #F59E0B;'>

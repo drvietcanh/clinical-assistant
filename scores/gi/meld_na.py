@@ -512,7 +512,7 @@ def render():
     
     # Educational content
     st.markdown("---")
-    st.subheader("📚 Thông Tin Bổ Sung")
+    st.subheader("📚 Thông tin bổ sung")
     
     with st.expander("🆚 MELD vs MELD-Na"):
         st.markdown("""
