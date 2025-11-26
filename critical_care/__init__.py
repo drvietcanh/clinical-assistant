@@ -13,7 +13,13 @@ from .ventilator import render_ventilator_calculator
 from .ards import render_ards_protocols
 from .sepsis import render_sepsis_protocols
 from .shock import render_shock_management
-from .rrt import render_rrt_calculator
+from .rrt import (
+    render_rrt_calculator,
+    calculate_crrt_dosing,
+    calculate_ihd_dosing,
+    calculate_sled_dosing,
+    calculate_anticoagulation_rrt
+)
 
 # Import comprehensive ventilator calculator from ventilator module
 try:
@@ -40,6 +46,10 @@ __all__ = [
     'render_sepsis_protocols',
     'render_shock_management',
     'render_rrt_calculator',
+    'calculate_crrt_dosing',
+    'calculate_ihd_dosing',
+    'calculate_sled_dosing',
+    'calculate_anticoagulation_rrt',
     'VENTILATOR_ADVANCED_AVAILABLE',
 ]
 
