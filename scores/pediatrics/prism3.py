@@ -342,6 +342,7 @@ def render():
             max_value=216,
             value=24,
             step=1,
+            format="%d",
             key="prism3_age"
         )
     
@@ -367,6 +368,7 @@ def render():
             max_value=300,
             value=100,
             step=5,
+            format="%d",
             key="prism3_sbp"
         )
         
@@ -376,6 +378,7 @@ def render():
             max_value=200,
             value=60,
             step=5,
+            format="%d",
             key="prism3_dbp"
         )
     
@@ -386,6 +389,7 @@ def render():
             max_value=300,
             value=120,
             step=5,
+            format="%d",
             key="prism3_hr"
         )
         
@@ -456,6 +460,7 @@ def render():
             max_value=600,
             value=100,
             step=10,
+            format="%d",
             key="prism3_pao2"
         )
         
@@ -465,6 +470,7 @@ def render():
             max_value=600,
             value=300,
             step=10,
+            format="%d",
             key="prism3_pao2_fio2"
         )
     
@@ -475,6 +481,7 @@ def render():
             max_value=600,
             value=100,
             step=10,
+            format="%d",
             key="prism3_glucose"
         )
         
@@ -504,6 +511,7 @@ def render():
             max_value=200,
             value=15,
             step=5,
+            format="%d",
             key="prism3_bun"
         )
     
@@ -524,6 +532,7 @@ def render():
             max_value=1000,
             value=200,
             step=10,
+            format="%d",
             key="prism3_platelets"
         )
         
@@ -543,6 +552,7 @@ def render():
             max_value=200,
             value=30,
             step=5,
+            format="%d",
             key="prism3_ptt"
         )
         
