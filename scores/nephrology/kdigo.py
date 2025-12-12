@@ -465,10 +465,11 @@ def render():
     
     weight = st.number_input(
         "**Cân Nặng (kg)**",
-        min_value=0.0,
-        max_value=300.0,
-        value=70.0,
-        step=1.0,
+        min_value=0,
+        max_value=300,
+        value=70,
+        step=1,
+        format="%d",
         help="Cân nặng hiện tại của bệnh nhân"
     )
     
@@ -477,30 +478,33 @@ def render():
     with col4:
         urine_output_6h = st.number_input(
             "**Tổng nước tiểu 6 giờ (mL)**",
-            min_value=-1.0,
-            max_value=5000.0,
-            value=-1.0,
-            step=10.0,
+            min_value=-1,
+            max_value=5000,
+            value=-1,
+            step=10,
+            format="%d",
             help="Tổng lượng nước tiểu trong 6 giờ. Nhập -1 nếu không đo"
         )
     
     with col5:
         urine_output_12h = st.number_input(
             "**Tổng nước tiểu 12 giờ (mL)**",
-            min_value=-1.0,
-            max_value=10000.0,
-            value=-1.0,
-            step=10.0,
+            min_value=-1,
+            max_value=10000,
+            value=-1,
+            step=10,
+            format="%d",
             help="Tổng lượng nước tiểu trong 12 giờ. Nhập -1 nếu không đo"
         )
     
     with col6:
         urine_output_24h = st.number_input(
             "**Tổng nước tiểu 24 giờ (mL)**",
-            min_value=-1.0,
-            max_value=20000.0,
-            value=-1.0,
-            step=10.0,
+            min_value=-1,
+            max_value=20000,
+            value=-1,
+            step=10,
+            format="%d",
             help="Tổng lượng nước tiểu trong 24 giờ. Nhập -1 nếu không đo"
         )
     

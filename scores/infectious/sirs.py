@@ -114,6 +114,7 @@ def render():
             max_value=42.0,
             value=37.0,
             step=0.1,
+            format="%.1f",
             help="Nhiệt độ trung tâm"
         )
         
@@ -132,6 +133,7 @@ def render():
             max_value=200,
             value=80,
             step=1,
+            format="%d",
             help="Heart rate"
         )
         
@@ -159,6 +161,7 @@ def render():
                 max_value=60,
                 value=16,
                 step=1,
+                format="%d",
                 help="Respiratory rate"
             )
             
@@ -194,6 +197,7 @@ def render():
             max_value=50.0,
             value=8.0,
             step=0.1,
+            format="%.1f",
             help="White blood cell count"
         )
         
@@ -203,6 +207,7 @@ def render():
             max_value=100,
             value=0,
             step=1,
+            format="%d",
             help="Phần trăm bạch cầu băng"
         )
         
