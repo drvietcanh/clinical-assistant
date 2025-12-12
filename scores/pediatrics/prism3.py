@@ -406,6 +406,7 @@ def render():
             max_value=15,
             value=15,
             step=1,
+            format="%d",
             key="prism3_gcs"
         )
         

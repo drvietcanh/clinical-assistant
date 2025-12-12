@@ -104,6 +104,7 @@ def render():
                 max_value=30.0,
                 value=1.0,
                 step=0.1,
+                format="%.1f",
                 help="Bình thường: 0.3-1.2 mg/dL"
             )
             bili_mgdl = bili
@@ -111,10 +112,11 @@ def render():
         else:
             bili = st.number_input(
                 "Bilirubin (µmol/L):",
-                min_value=0.0,
-                max_value=500.0,
-                value=17.0,
-                step=1.0,
+                min_value=0,
+                max_value=500,
+                value=17,
+                step=1,
+                format="%d",
                 help="Bình thường: 5-21 µmol/L"
             )
             bili_mgdl = bili / 17.1
@@ -128,6 +130,7 @@ def render():
             max_value=10.0,
             value=1.0,
             step=0.1,
+            format="%.1f",
             help="Bình thường: 0.9-1.1"
         )
         
@@ -145,10 +148,10 @@ def render():
         if "µmol/L" in cr_unit:
             cr = st.number_input(
                 "Creatinine (µmol/L):",
-                min_value=0.0,
-                max_value=1500.0,
-                value=88.0,
-                step=5.0,
+                min_value=0,
+                max_value=1500,
+                value=88,
+                step=5,
                 format="%d",
                 help="Bình thường: 62-115 µmol/L"
             )
