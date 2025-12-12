@@ -213,20 +213,21 @@ def render_aminoglycosides_tdm():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key=f"{drug_id}_weight"
             )
             
             crcl = st.number_input(
                 "CrCl (mL/min)",
-                min_value=5.0,
-                max_value=150.0,
-                value=60.0,
-                step=5.0,
-                format="%.1f",
+                min_value=5,
+                max_value=150,
+                value=60,
+                step=5,
+                format="%d",
                 key=f"{drug_id}_crcl"
             )
         
@@ -342,6 +343,7 @@ def render_aminoglycosides_tdm():
                 max_value=50.0,
                 value=(drug_info['target_min'] + drug_info['target_max']) / 2,
                 step=0.5,
+                format="%.1f",
                 key=f"{drug_id}_peak"
             )
             
@@ -354,6 +356,7 @@ def render_aminoglycosides_tdm():
                 max_value=10.0,
                 value=drug_info.get('trough_max', 1.0),
                 step=0.1,
+                format="%.1f",
                 key=f"{drug_id}_trough"
             )
             

@@ -213,10 +213,11 @@ def render_theophylline_tdm():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key="theo_weight"
             )
             
@@ -310,11 +311,11 @@ def render_theophylline_tdm():
         with col1:
             current_dose = st.number_input(
                 "Liều hiện tại (mg/ngày)",
-                min_value=100.0,
-                max_value=900.0,
-                value=400.0,
-                step=50.0,
-                format="%.0f",
+                min_value=100,
+                max_value=900,
+                value=400,
+                step=50,
+                format="%d",
                 key="theo_adj_dose"
             )
         
@@ -445,11 +446,11 @@ def render_theophylline_tdm():
             
             crcl = st.number_input(
                 "CrCl (mL/min)",
-                min_value=30.0,
-                max_value=150.0,
-                value=90.0,
-                step=5.0,
-                format="%.1f",
+                min_value=30,
+                max_value=150,
+                value=90,
+                step=5,
+                format="%d",
                 key="theo_half_crcl"
             )
         

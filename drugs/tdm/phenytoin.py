@@ -220,10 +220,11 @@ def render_phenytoin_tdm():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key="phenytoin_loading_weight"
             )
             
@@ -307,10 +308,11 @@ def render_phenytoin_tdm():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key="phenytoin_maint_weight"
             )
             
@@ -411,11 +413,11 @@ def render_phenytoin_tdm():
         with col1:
             current_dose = st.number_input(
                 "Liều hiện tại (mg/ngày)",
-                min_value=100.0,
-                max_value=600.0,
-                value=300.0,
-                step=50.0,
-                format="%.0f",
+                min_value=100,
+                max_value=600,
+                value=300,
+                step=50,
+                format="%d",
                 key="phenytoin_adj_current_dose"
             )
         
