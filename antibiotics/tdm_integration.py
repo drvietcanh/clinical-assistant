@@ -47,29 +47,32 @@ def render_tdm_calculator(antibiotic_name):
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key=_make_safe_session_key(safe_ab_name, "weight")
             )
             
             crcl = st.number_input(
                 "CrCl (mL/min)",
-                min_value=5.0,
-                max_value=150.0,
-                value=60.0,
-                step=5.0,
+                min_value=5,
+                max_value=150,
+                value=60,
+                step=5,
+                format="%d",
                 key=_make_safe_session_key(safe_ab_name, "crcl")
             )
         
         with col2:
             target_auc = st.number_input(
                 "Mục tiêu AUC (mg·h/L)",
-                min_value=300.0,
-                max_value=700.0,
-                value=500.0,
-                step=50.0,
+                min_value=300,
+                max_value=700,
+                value=500,
+                step=50,
+                format="%d",
                 key=_make_safe_session_key(safe_ab_name, "target_auc"),
                 help="Thường 400-600 mg·h/L"
             )
@@ -81,7 +84,7 @@ def render_tdm_calculator(antibiotic_name):
         
         if has_current_levels:
             st.markdown("---")
-            st.markdown("#### 📊 Nồng Độ Hiện Tại")
+            st.markdown("#### 📊 Nồng độ hiện tại")
             
             col1, col2 = st.columns(2)
             
@@ -92,6 +95,7 @@ def render_tdm_calculator(antibiotic_name):
                     max_value=50.0,
                     value=25.0,
                     step=0.5,
+                    format="%.1f",
                     key=_make_safe_session_key(safe_ab_name, "peak")
                 )
             
@@ -102,6 +106,7 @@ def render_tdm_calculator(antibiotic_name):
                     max_value=50.0,
                     value=15.0,
                     step=0.5,
+                    format="%.1f",
                     key=_make_safe_session_key(safe_ab_name, "trough")
                 )
             
@@ -109,7 +114,7 @@ def render_tdm_calculator(antibiotic_name):
             current_auc = calculate_vancomycin_auc(current_peak, current_trough)
             st.info(f"**AUC hiện tại:** {current_auc:.0f} mg·h/L")
         
-        if st.button("🧮 Tính Liều (AUC-based)", type="primary", key=_make_safe_session_key(safe_ab_name, "calc_auc")):
+        if st.button("🧮 Tính liều (AUC-based)", type="primary", key=_make_safe_session_key(safe_ab_name, "calc_auc")):
             result = calculate_vancomycin_dose_auc_based(
                 weight_kg=weight,
                 crcl=crcl,
@@ -133,29 +138,32 @@ def render_tdm_calculator(antibiotic_name):
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key=f"tdm_trough_{antibiotic_name}_weight"
             )
             
             crcl = st.number_input(
                 "CrCl (mL/min)",
-                min_value=5.0,
-                max_value=150.0,
-                value=60.0,
-                step=5.0,
+                min_value=5,
+                max_value=150,
+                value=60,
+                step=5,
+                format="%d",
                 key=f"tdm_trough_{antibiotic_name}_crcl"
             )
         
         with col2:
             target_trough = st.number_input(
                 "Mục tiêu Trough (mg/L)",
-                min_value=5.0,
-                max_value=25.0,
-                value=15.0,
-                step=1.0,
+                min_value=5,
+                max_value=25,
+                value=15,
+                step=1,
+                format="%d",
                 key=f"tdm_trough_{antibiotic_name}_target",
                 help="Thường 10-20 mg/L"
             )
@@ -172,22 +180,24 @@ def render_tdm_calculator(antibiotic_name):
                 max_value=50.0,
                 value=15.0,
                 step=0.5,
+                format="%.1f",
                 key=f"tdm_trough_{antibiotic_name}_current"
             )
             
             current_dose = st.number_input(
                 "Liều hiện tại (mg)",
-                min_value=0.0,
-                max_value=3000.0,
-                value=1000.0,
-                step=250.0,
+                min_value=0,
+                max_value=3000,
+                value=1000,
+                step=250,
+                format="%d",
                 key=f"tdm_trough_{antibiotic_name}_dose"
             )
         else:
             current_trough = None
             current_dose = None
         
-        if st.button("🧮 Tính Liều (Trough-based)", type="primary", key=f"calc_trough_{antibiotic_name}"):
+        if st.button("🧮 Tính liều (Trough-based)", type="primary", key=f"calc_trough_{antibiotic_name}"):
             result = calculate_vancomycin_dose_trough_based(
                 weight_kg=weight,
                 crcl=crcl,
@@ -215,6 +225,7 @@ def render_tdm_calculator(antibiotic_name):
                 max_value=50.0,
                 value=15.0,
                 step=0.5,
+                format="%.1f",
                 key=f"interpret_{antibiotic_name}_trough"
             )
         
@@ -225,6 +236,7 @@ def render_tdm_calculator(antibiotic_name):
                 max_value=50.0,
                 value=0.0,
                 step=0.5,
+                format="%.1f",
                 key=f"interpret_{antibiotic_name}_peak"
             )
         

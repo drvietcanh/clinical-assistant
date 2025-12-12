@@ -203,7 +203,7 @@ def render_theophylline_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2, tab3 = st.tabs(["🧮 Tính Liều", "📊 Điều Chỉnh Liều", "⏱️ Tính Half-life"])
+    tab1, tab2, tab3 = st.tabs(["🧮 Tính liều", "📊 Điều Chỉnh Liều", "⏱️ Tính Half-life"])
     
     with tab1:
         st.markdown("### 📋 Thông số bệnh nhân")
@@ -241,7 +241,7 @@ def render_theophylline_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Liều Theophylline", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều Theophylline", type="primary", use_container_width=True):
             result = calculate_theophylline_dose(weight, indication_code, target_level)
             
             st.markdown("### 💊 Maintenance Dose:")
@@ -363,7 +363,7 @@ def render_theophylline_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Liều Điều Chỉnh", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều điều chỉnh", type="primary", use_container_width=True):
             result = adjust_theophylline_dose(current_dose, current_level, target_level)
             
             if "error" in result:

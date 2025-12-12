@@ -113,7 +113,7 @@ def render_carbamazepine_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải thích Nồng Độ"])
+    tab1, tab2 = st.tabs(["🧮 Tính liều", "📊 Giải thích nồng độ"])
     
     with tab1:
         st.markdown("### 📋 Thông số bệnh nhân")
@@ -123,19 +123,21 @@ def render_carbamazepine_tdm():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key="cbz_weight"
             )
             
             target_level = st.number_input(
                 "Mục tiêu nồng độ (mg/L)",
-                min_value=4.0,
-                max_value=12.0,
-                value=8.0,
-                step=1.0,
+                min_value=4,
+                max_value=12,
+                value=8,
+                step=1,
+                format="%d",
                 key="cbz_target",
                 help="Thường 4-12 mg/L"
             )
@@ -148,7 +150,7 @@ def render_carbamazepine_tdm():
         
         if has_current_level:
             st.markdown("---")
-            st.markdown("#### 📊 Nồng Độ Hiện Tại")
+            st.markdown("#### 📊 Nồng độ hiện tại")
             
             col1, col2 = st.columns(2)
             
@@ -159,16 +161,18 @@ def render_carbamazepine_tdm():
                     max_value=20.0,
                     value=6.0,
                     step=0.5,
+                    format="%.1f",
                     key="cbz_current_level"
                 )
             
             with col2:
                 current_dose = st.number_input(
                     "Liều hiện tại (mg/ngày)",
-                    min_value=100.0,
-                    max_value=2000.0,
-                    value=600.0,
-                    step=100.0,
+                    min_value=100,
+                    max_value=2000,
+                    value=600,
+                    step=100,
+                    format="%d",
                     key="cbz_current_dose"
                 )
         else:
@@ -177,12 +181,12 @@ def render_carbamazepine_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Liều Carbamazepine", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều Carbamazepine", type="primary", use_container_width=True):
             result = calculate_carbamazepine_dose(
                 weight, current_level, target_level, current_dose
             )
             
-            st.markdown("### 💊 Kết quả Tính Liều")
+            st.markdown("### 💊 Kết quả tính liều")
             
             col1, col2, col3 = st.columns(3)
             

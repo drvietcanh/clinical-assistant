@@ -128,7 +128,7 @@ def render_digoxin_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải thích Nồng Độ"])
+    tab1, tab2 = st.tabs(["🧮 Tính liều", "📊 Giải thích nồng độ"])
     
     with tab1:
         st.markdown("### 📋 Thông số bệnh nhân")
@@ -138,10 +138,11 @@ def render_digoxin_tdm():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key="digoxin_weight"
             )
             
@@ -173,10 +174,10 @@ def render_digoxin_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Liều Digoxin", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều Digoxin", type="primary", use_container_width=True):
             result = calculate_digoxin_dose(weight, crcl, indication_code)
             
-            st.markdown("### 💊 Kết quả Tính Liều")
+            st.markdown("### 💊 Kết quả tính liều")
             
             if need_loading:
                 st.markdown("#### 🔴 Loading Dose (Digitalization):")
@@ -301,7 +302,7 @@ def render_digoxin_tdm():
             """)
     
     with tab2:
-        st.markdown("### 📊 Giải thích Nồng Độ Digoxin")
+        st.markdown("### 📊 Giải thích nồng độ Digoxin")
         
         col1, col2 = st.columns(2)
         
@@ -339,7 +340,7 @@ def render_digoxin_tdm():
         
         st.markdown("---")
         
-        if st.button("📊 Giải thích Nồng Độ", type="primary", use_container_width=True):
+        if st.button("📊 Giải thích nồng độ", type="primary", use_container_width=True):
             indication_code = "heart_failure" if "Suy tim" in indication_interp else "atrial_fibrillation"
             interpretation = interpret_digoxin_level(level, indication_code)
             

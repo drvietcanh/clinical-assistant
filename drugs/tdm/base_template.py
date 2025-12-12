@@ -115,7 +115,7 @@ class TDMCalculator:
     
     def render_level_interpretation_tab(self):
         """Render level interpretation tab"""
-        st.markdown(f"### 📊 Giải thích Nồng Độ {self.drug_name}")
+        st.markdown(f"### 📊 Giải thích nồng độ {self.drug_name}")
         
         col1, col2 = st.columns(2)
         
@@ -144,7 +144,7 @@ class TDMCalculator:
         
         st.markdown("---")
         
-        if st.button("📊 Giải thích Nồng Độ", type="primary", use_container_width=True):
+        if st.button("📊 Giải thích nồng độ", type="primary", use_container_width=True):
             interpretation = self.interpret_level(level)
             
             st.markdown("### 📈 Kết quả Giải thích")

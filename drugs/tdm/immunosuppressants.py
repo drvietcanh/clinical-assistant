@@ -227,7 +227,7 @@ def render_immunosuppressants_tdm():
     if drug == "Tacrolimus":
         st.markdown("### 💊 Tacrolimus TDM")
         
-        tab1, tab2 = st.tabs(["📊 Giải thích Nồng Độ", "📋 Mục Tiêu Theo Thời Gian"])
+        tab1, tab2 = st.tabs(["📊 Giải thích nồng độ", "📋 Mục Tiêu Theo Thời Gian"])
         
         with tab1:
             col1, col2, col3 = st.columns(3)
@@ -271,7 +271,7 @@ def render_immunosuppressants_tdm():
             
             st.markdown("---")
             
-            if st.button("📊 Giải thích Nồng Độ", type="primary", use_container_width=True):
+            if st.button("📊 Giải thích nồng độ", type="primary", use_container_width=True):
                 interpretation = interpret_tacrolimus_level(level, transplant_code, time_post)
                 
                 st.markdown("### 📈 Kết quả")
@@ -433,7 +433,7 @@ def render_immunosuppressants_tdm():
         
         st.markdown("---")
         
-        if st.button("📊 Giải thích Nồng Độ", type="primary", use_container_width=True):
+        if st.button("📊 Giải thích nồng độ", type="primary", use_container_width=True):
             c2_val = c2_level if c2_level > 0 else None
             interpretation = interpret_cyclosporine_level(level, transplant_code, time_post, c2_val)
             

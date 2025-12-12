@@ -203,7 +203,7 @@ def render_aminoglycosides_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải thích Nồng Độ"])
+    tab1, tab2 = st.tabs(["🧮 Tính liều", "📊 Giải thích nồng độ"])
     
     with tab1:
         st.markdown("### 📋 Thông số bệnh nhân")
@@ -247,12 +247,12 @@ def render_aminoglycosides_tdm():
         
         st.markdown("---")
         
-        if st.button(f"🧮 Tính Liều {drug_selection}", type="primary", use_container_width=True):
+        if st.button(f"🧮 Tính liều {drug_selection}", type="primary", use_container_width=True):
             result = calculate_aminoglycoside_dose(
                 drug_id, weight, crcl, indication_code
             )
             
-            st.markdown("### 💊 Kết quả Tính Liều")
+            st.markdown("### 💊 Kết quả tính liều")
             
             st.markdown("#### 🔴 Loading Dose:")
             col1, col2 = st.columns(2)
@@ -331,7 +331,7 @@ def render_aminoglycosides_tdm():
             """)
     
     with tab2:
-        st.markdown("### 📊 Giải thích Nồng Độ Aminoglycosides")
+        st.markdown("### 📊 Giải thích nồng độ Aminoglycosides")
         
         col1, col2 = st.columns(2)
         
@@ -361,7 +361,7 @@ def render_aminoglycosides_tdm():
         
         st.markdown("---")
         
-        if st.button("📊 Giải thích Nồng Độ", type="primary", use_container_width=True):
+        if st.button("📊 Giải thích nồng độ", type="primary", use_container_width=True):
             interpretations = interpret_aminoglycoside_levels(drug_id, peak, trough)
             
             st.markdown("### 📈 Kết quả Giải thích")

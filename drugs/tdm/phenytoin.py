@@ -457,7 +457,7 @@ def render_phenytoin_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Liều Điều Chỉnh", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều điều chỉnh", type="primary", use_container_width=True):
             result = adjust_phenytoin_dose(current_dose, current_level, target_level)
             
             if "error" in result:

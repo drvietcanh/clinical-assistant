@@ -113,7 +113,7 @@ def render_valproic_acid_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải thích Nồng Độ"])
+    tab1, tab2 = st.tabs(["🧮 Tính liều", "📊 Giải thích nồng độ"])
     
     with tab1:
         st.markdown("### 📋 Thông số bệnh nhân")
@@ -123,19 +123,21 @@ def render_valproic_acid_tdm():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key="vpa_weight"
             )
             
             target_level = st.number_input(
                 "Mục tiêu nồng độ (mg/L)",
-                min_value=50.0,
-                max_value=100.0,
-                value=75.0,
-                step=5.0,
+                min_value=50,
+                max_value=100,
+                value=75,
+                step=5,
+                format="%d",
                 key="vpa_target",
                 help="Thường 50-100 mg/L"
             )
@@ -148,27 +150,29 @@ def render_valproic_acid_tdm():
         
         if has_current_level:
             st.markdown("---")
-            st.markdown("#### 📊 Nồng Độ Hiện Tại")
+            st.markdown("#### 📊 Nồng độ hiện tại")
             
             col1, col2 = st.columns(2)
             
             with col1:
                 current_level = st.number_input(
                     "Nồng độ hiện tại (mg/L)",
-                    min_value=0.0,
-                    max_value=200.0,
-                    value=60.0,
-                    step=5.0,
+                    min_value=0,
+                    max_value=200,
+                    value=60,
+                    step=5,
+                    format="%d",
                     key="vpa_current_level"
                 )
             
             with col2:
                 current_dose = st.number_input(
                     "Liều hiện tại (mg/ngày)",
-                    min_value=200.0,
-                    max_value=3000.0,
-                    value=1000.0,
-                    step=100.0,
+                    min_value=200,
+                    max_value=3000,
+                    value=1000,
+                    step=100,
+                    format="%d",
                     key="vpa_current_dose"
                 )
         else:
@@ -177,12 +181,12 @@ def render_valproic_acid_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Liều Valproic Acid", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều Valproic Acid", type="primary", use_container_width=True):
             result = calculate_valproic_acid_dose(
                 weight, current_level, target_level, current_dose
             )
             
-            st.markdown("### 💊 Kết quả Tính Liều")
+            st.markdown("### 💊 Kết quả tính liều")
             
             col1, col2, col3 = st.columns(3)
             

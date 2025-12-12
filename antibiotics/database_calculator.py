@@ -56,10 +56,10 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
     with col1:
         weight = st.number_input(
             "Cân nặng (kg)",
-            min_value=10.0,
-            max_value=200.0,
-            value=70.0,
-            step=1.0,
+            min_value=10,
+            max_value=200,
+            value=70,
+            step=1,
             format="%d",
             key=safe_key("dosing_weight"),
             help="Cân nặng thực tế của bệnh nhân"
@@ -79,10 +79,10 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
             else:
                 crcl = st.number_input(
                     "CrCl (mL/min)",
-                    min_value=0.0,
-                    max_value=200.0,
-                    value=float(imported_crcl),
-                    step=1.0,
+                    min_value=0,
+                    max_value=200,
+                    value=int(round(imported_crcl)),
+                    step=1,
                     format="%d",
                     key=safe_key("crcl"),
                     help="Creatinine Clearance"
@@ -90,10 +90,10 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         else:
             crcl = st.number_input(
                 "CrCl (mL/min)",
-                min_value=0.0,
-                max_value=200.0,
-                value=60.0,
-                step=1.0,
+                min_value=0,
+                max_value=200,
+                value=60,
+                step=1,
                 format="%d",
                 key=safe_key("crcl"),
                 help="Creatinine Clearance. Dùng eGFR Calculator để tính chính xác"

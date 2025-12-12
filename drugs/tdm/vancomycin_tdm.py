@@ -268,7 +268,7 @@ def render_vancomycin_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2, tab3 = st.tabs(["🧮 Tính Liều (AUC-based)", "🧮 Tính Liều (Trough-based)", "📊 Giải thích Nồng Độ"])
+    tab1, tab2, tab3 = st.tabs(["🧮 Tính liều (AUC-based)", "🧮 Tính liều (Trough-based)", "📊 Giải thích nồng độ"])
     
     with tab1:
         st.markdown("### 📋 AUC-Based Dosing (Ưu tiên)")
@@ -287,20 +287,21 @@ def render_vancomycin_tdm():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key="vanc_auc_weight"
             )
             
             crcl = st.number_input(
                 "CrCl (mL/min)",
-                min_value=5.0,
-                max_value=150.0,
-                value=60.0,
-                step=5.0,
-                format="%.1f",
+                min_value=5,
+                max_value=150,
+                value=60,
+                step=5,
+                format="%d",
                 key="vanc_auc_crcl",
                 help="Creatinine clearance"
             )
@@ -308,10 +309,11 @@ def render_vancomycin_tdm():
         with col2:
             target_auc = st.number_input(
                 "Mục tiêu AUC (mg·h/L)",
-                min_value=300.0,
-                max_value=700.0,
-                value=500.0,
-                step=50.0,
+                min_value=300,
+                max_value=700,
+                value=500,
+                step=50,
+                format="%d",
                 key="vanc_target_auc",
                 help="Thường 400-600 mg·h/L"
             )
@@ -323,7 +325,7 @@ def render_vancomycin_tdm():
         
         if has_current_levels:
             st.markdown("---")
-            st.markdown("#### 📊 Nồng Độ Hiện Tại")
+            st.markdown("#### 📊 Nồng độ hiện tại")
             
             col1, col2 = st.columns(2)
             
@@ -334,6 +336,7 @@ def render_vancomycin_tdm():
                     max_value=50.0,
                     value=25.0,
                     step=0.5,
+                    format="%.1f",
                     key="vanc_current_peak"
                 )
             
@@ -344,6 +347,7 @@ def render_vancomycin_tdm():
                     max_value=30.0,
                     value=12.0,
                     step=0.5,
+                    format="%.1f",
                     key="vanc_current_trough_auc"
                 )
             
@@ -353,10 +357,11 @@ def render_vancomycin_tdm():
             
             current_dose = st.number_input(
                 "Liều hiện tại (mg)",
-                min_value=250.0,
-                max_value=2000.0,
-                value=1000.0,
-                step=250.0,
+                min_value=250,
+                max_value=2000,
+                value=1000,
+                step=250,
+                format="%d",
                 key="vanc_current_dose_auc"
             )
         else:
@@ -365,12 +370,12 @@ def render_vancomycin_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Liều Vancomycin (AUC-based)", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều Vancomycin (AUC-based)", type="primary", use_container_width=True):
             result = calculate_vancomycin_dose_auc_based(
                 weight, crcl, target_auc, current_auc, current_dose
             )
             
-            st.markdown("### 💊 Kết quả Tính Liều")
+            st.markdown("### 💊 Kết quả tính liều")
             
             col1, col2, col3 = st.columns(3)
             
@@ -421,30 +426,32 @@ def render_vancomycin_tdm():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=30.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=30,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key="vanc_trough_weight"
             )
             
             crcl = st.number_input(
                 "CrCl (mL/min)",
-                min_value=5.0,
-                max_value=150.0,
-                value=60.0,
-                step=5.0,
-                format="%.1f",
+                min_value=5,
+                max_value=150,
+                value=60,
+                step=5,
+                format="%d",
                 key="vanc_trough_crcl"
             )
         
         with col2:
             target_trough = st.number_input(
                 "Mục tiêu Trough (mg/L)",
-                min_value=10.0,
-                max_value=20.0,
-                value=15.0,
-                step=1.0,
+                min_value=10,
+                max_value=20,
+                value=15,
+                step=1,
+                format="%d",
                 key="vanc_target_trough",
                 help="Thường 10-20 mg/L"
             )
@@ -456,7 +463,7 @@ def render_vancomycin_tdm():
         
         if has_current_trough:
             st.markdown("---")
-            st.markdown("#### 📊 Nồng Độ Hiện Tại")
+            st.markdown("#### 📊 Nồng độ hiện tại")
             
             current_trough = st.number_input(
                 "Trough hiện tại (mg/L)",
@@ -464,15 +471,17 @@ def render_vancomycin_tdm():
                 max_value=30.0,
                 value=12.0,
                 step=0.5,
+                format="%.1f",
                 key="vanc_current_trough"
             )
             
             current_dose = st.number_input(
                 "Liều hiện tại (mg)",
-                min_value=250.0,
-                max_value=2000.0,
-                value=1000.0,
-                step=250.0,
+                min_value=250,
+                max_value=2000,
+                value=1000,
+                step=250,
+                format="%d",
                 key="vanc_current_dose_trough"
             )
         else:
@@ -481,12 +490,12 @@ def render_vancomycin_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Liều Vancomycin (Trough-based)", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều Vancomycin (Trough-based)", type="primary", use_container_width=True):
             result = calculate_vancomycin_dose_trough_based(
                 weight, crcl, target_trough, current_trough, current_dose
             )
             
-            st.markdown("### 💊 Kết quả Tính Liều")
+            st.markdown("### 💊 Kết quả tính liều")
             
             if result.get('loading_dose_mg'):
                 st.markdown("#### 🔴 Loading Dose:")
@@ -530,7 +539,7 @@ def render_vancomycin_tdm():
             """)
     
     with tab3:
-        st.markdown("### 📊 Giải thích Nồng Độ Vancomycin")
+        st.markdown("### 📊 Giải thích nồng độ Vancomycin")
         
         method = st.radio(
             "Phương pháp:",
@@ -550,6 +559,7 @@ def render_vancomycin_tdm():
                     max_value=50.0,
                     value=25.0,
                     step=0.5,
+                    format="%.1f",
                     key="vanc_interp_peak"
                 )
             
@@ -560,6 +570,7 @@ def render_vancomycin_tdm():
                     max_value=30.0,
                     value=12.0,
                     step=0.5,
+                    format="%.1f",
                     key="vanc_interp_trough"
                 )
             
@@ -580,7 +591,7 @@ def render_vancomycin_tdm():
         
         st.markdown("---")
         
-        if st.button("📊 Giải thích Nồng Độ", type="primary", use_container_width=True):
+        if st.button("📊 Giải thích nồng độ", type="primary", use_container_width=True):
             interpretations = interpret_vancomycin_level(
                 trough_mg_l=trough if method == "Trough" else (trough if peak else None),
                 peak_mg_l=peak if method == "AUC (Ưu tiên)" else None,

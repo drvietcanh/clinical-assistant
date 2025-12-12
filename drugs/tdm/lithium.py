@@ -137,7 +137,7 @@ def render_lithium_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2 = st.tabs(["🧮 Tính Liều", "📊 Giải thích Nồng Độ"])
+    tab1, tab2 = st.tabs(["🧮 Tính liều", "📊 Giải thích nồng độ"])
     
     with tab1:
         st.markdown("### 📋 Thông số bệnh nhân")
@@ -147,10 +147,11 @@ def render_lithium_tdm():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg)",
-                min_value=40.0,
-                max_value=150.0,
-                value=70.0,
-                step=1.0,
+                min_value=40,
+                max_value=150,
+                value=70,
+                step=1,
+                format="%d",
                 key="lithium_weight"
             )
             
@@ -167,16 +168,17 @@ def render_lithium_tdm():
                 max_value=100,
                 value=45,
                 step=1,
+                format="%d",
                 key="lithium_age"
             )
             
             crcl = st.number_input(
                 "CrCl (mL/min)",
-                min_value=30.0,
-                max_value=150.0,
-                value=90.0,
-                step=5.0,
-                format="%.1f",
+                min_value=30,
+                max_value=150,
+                value=90,
+                step=5,
+                format="%d",
                 key="lithium_crcl",
                 help="Lithium thải qua thận - CrCl quan trọng!"
             )
@@ -194,7 +196,7 @@ def render_lithium_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Liều Lithium", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều Lithium", type="primary", use_container_width=True):
             indication_code = "bipolar_acute" if "Điều trị cấp" in indication else ("bipolar_maintenance" if "Duy trì" in indication else "depression")
             
             # Adjust for elderly or renal impairment
@@ -209,7 +211,7 @@ def render_lithium_tdm():
             else:
                 adjustment_note = None
             
-            st.markdown("### 💊 Kết quả Tính Liều")
+            st.markdown("### 💊 Kết quả tính liều")
             
             if adjustment_note:
                 st.warning(adjustment_note)
@@ -306,7 +308,7 @@ def render_lithium_tdm():
             """)
     
     with tab2:
-        st.markdown("### 📊 Giải thích Nồng Độ Lithium")
+        st.markdown("### 📊 Giải thích nồng độ Lithium")
         
         col1, col2 = st.columns(2)
         
@@ -344,7 +346,7 @@ def render_lithium_tdm():
         
         st.markdown("---")
         
-        if st.button("📊 Giải thích Nồng Độ", type="primary", use_container_width=True):
+        if st.button("📊 Giải thích nồng độ", type="primary", use_container_width=True):
             indication_code = "bipolar_acute" if "Điều trị cấp" in indication_interp else ("bipolar_maintenance" if "Duy trì" in indication_interp else "depression")
             
             interpretation = interpret_lithium_level(level, indication_code, time_since_dose)
