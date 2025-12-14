@@ -253,7 +253,7 @@ def render():
         st.markdown("---")
         
         # Interpretation and action
-        st.subheader("🎯 Đánh giá & Xử trí)
+        st.subheader("🎯 Đánh giá & Xử trí")
         
         if result['level'] == "normal":
             st.success(f"""
