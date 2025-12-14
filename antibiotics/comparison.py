@@ -123,10 +123,10 @@ def render_comparison():
             "Nhóm": ab_data.get('group', 'N/A'),
             "Đường Dùng": admin_str,
             "AWaRe": aware,
-            "Liều Dùng": dosage_str,
-            "Chỉ Định": indications_str,
+            "Liều dùng": dosage_str,
+            "Chỉ định": indications_str,
             "Độ nhạy": suscept_str,
-            "Tác Dụng Phụ": side_effects_str
+            "Tác dụng phụ": side_effects_str
         })
     
     if comparison_data:
@@ -138,11 +138,11 @@ def render_comparison():
     # Detailed comparison by category
     st.markdown("### 📊 So sánh chi tiết:")
     
-    comparison_tabs = st.tabs(["💉 Liều Dùng", "📋 Chỉ Định", "🦠 Độ nhạy", "⚠️ Tác Dụng Phụ", "🫘 Điều Chỉnh Thận"])
+    comparison_tabs = st.tabs(["💉 Liều dùng", "📋 Chỉ định", "🦠 Độ nhạy", "⚠️ Tác dụng phụ", "🫘 Điều chỉnh thận"])
     
     # Dosage comparison
     with comparison_tabs[0]:
-        st.markdown("#### 💉 Liều Dùng:")
+        st.markdown("#### 💉 Liều dùng:")
         for ab_name in selected_antibiotics:
             if ab_name not in ANTIBIOTICS_DATABASE:
                 continue
@@ -165,7 +165,7 @@ def render_comparison():
     
     # Indications comparison
     with comparison_tabs[1]:
-        st.markdown("#### 📋 Chỉ Định:")
+        st.markdown("#### 📋 Chỉ định:")
         for ab_name in selected_antibiotics:
             if ab_name not in ANTIBIOTICS_DATABASE:
                 continue
@@ -225,7 +225,7 @@ def render_comparison():
     
     # Side effects comparison
     with comparison_tabs[3]:
-        st.markdown("#### ⚠️ Tác Dụng Phụ:")
+        st.markdown("#### ⚠️ Tác dụng phụ:")
         for ab_name in selected_antibiotics:
             if ab_name not in ANTIBIOTICS_DATABASE:
                 continue

@@ -464,7 +464,7 @@ def render_ffp_calculator():
             
             # Guidelines
             st.markdown("---")
-            st.markdown("### 📋 Chỉ Định Truyền FFP")
+            st.markdown("### 📋 Chỉ định truyền FFP")
             
             render_info_alert(
                 "ℹ️ Chỉ định chính",

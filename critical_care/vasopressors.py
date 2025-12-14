@@ -118,7 +118,7 @@ def calculate_dose_per_hour(weight_kg: float, dose_mcg_per_kg_min: float) -> dic
 def render_vasopressor_guide():
     """Render vasopressor dosing guide interface"""
     
-    st.markdown("## 💉 Hướng Dẫn Liều Dùng Vasopressor")
+    st.markdown("## 💉 Hướng dẫn liều dùng vasopressor")
     st.markdown("""
     Hướng dẫn liều dùng, điều chỉnh liều, và thông tin tương thích cho các vasopressor.
     
@@ -145,11 +145,11 @@ def render_vasopressor_guide():
         st.markdown(f"**Tên khác:** {vasopressor_data['name_vn']}")
     
     # Indication
-    st.markdown("### 📋 Chỉ Định")
+    st.markdown("### 📋 Chỉ định")
     st.info(vasopressor_data['indication'])
     
     # Dosage section
-    st.markdown("### 💊 Liều Dùng")
+    st.markdown("### 💊 Liều dùng")
     
     col1, col2 = st.columns(2)
     
@@ -244,7 +244,7 @@ def render_vasopressor_guide():
     st.markdown("---")
     
     # Side effects
-    st.markdown("### ⚠️ Tác Dụng Phụ")
+    st.markdown("### ⚠️ Tác dụng phụ")
     if vasopressor_data.get('side_effects'):
         st.warning(vasopressor_data['side_effects'])
     

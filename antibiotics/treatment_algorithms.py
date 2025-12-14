@@ -8,7 +8,7 @@ import streamlit as st
 
 ALGORITHMS = {
     "Sepsis": {
-        "title": "Sepsis / Nhiễm Khuẩn Huyết",
+        "title": "Sepsis / Nhiễm khuẩn huyết",
         "description": "Phác đồ điều trị empiric cho sepsis",
         "steps": [
             {
@@ -594,7 +594,7 @@ def render_algorithms_page():
     # Algorithm selection
     algorithm_names = list(ALGORITHMS.keys())
     algorithm_display = {
-        "Sepsis": "Sepsis / Nhiễm Khuẩn Huyết",
+        "Sepsis": "Sepsis / Nhiễm khuẩn huyết",
         "Pneumonia": "Viêm Phổi (CAP/HAP)",
         "UTI": "Nhiễm Khuẩn Đường Tiết Niệu",
         "Meningitis": "Viêm Màng Não",

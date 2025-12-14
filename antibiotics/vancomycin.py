@@ -128,7 +128,7 @@ def render():
         st.metric("CrCl (Cockcroft-Gault)", f"{crcl} mL/phút")
         
         # Indication
-        st.markdown("#### Chỉ Định Sử dụng")
+        st.markdown("#### Chỉ định sử dụng")
         indication = st.selectbox(
             "Loại nhiễm khuẩn:",
             [

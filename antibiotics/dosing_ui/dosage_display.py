@@ -61,7 +61,7 @@ def render_renal_adjustment(result, crcl, renal_category):
 def render_renal_adjustment_table(result):
     """Render full renal adjustment table"""
     st.markdown("---")
-    st.markdown("### 📋 Bảng Điều Chỉnh Đầy Đủ:")
+    st.markdown("### 📋 Bảng điều chỉnh đầy đủ:")
     
     renal_guide = result.get('full_renal_guide', {})
     if renal_guide:

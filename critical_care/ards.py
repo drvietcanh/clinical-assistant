@@ -349,7 +349,7 @@ def render_prone_positioning_guide():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Chỉ Định")
+    st.markdown("### 📋 Chỉ định")
     
     col1, col2 = st.columns(2)
     

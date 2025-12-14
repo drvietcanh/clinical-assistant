@@ -210,7 +210,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         
         # Full renal guide
         if result.get('full_renal_guide'):
-            with st.expander("📋 Bảng Điều Chỉnh Đầy Đủ", expanded=False):
+            with st.expander("📋 Bảng điều chỉnh đầy đủ", expanded=False):
                 renal_guide = result['full_renal_guide']
                 renal_table = []
                 
