@@ -487,7 +487,7 @@ def render():
     st.markdown("---")
     st.markdown("### 📖 THÔNG TIN THÊM")
     
-    with st.expander("❓ Tại Sao Cần Điều Chỉnh Calcium?"):
+    with st.expander("❓ Tại sao cần điều chỉnh calcium?"):
         st.markdown("""
         **Calcium trong máu có 3 dạng:**
         

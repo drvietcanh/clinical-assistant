@@ -14,7 +14,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 📝 Nhập Giá trị")
+        st.markdown("#### 📝 Nhập giá trị")
         
         tsh = st.number_input("TSH (mIU/L)", 0.0, 50.0, 2.0, 0.1, format="%.1f")
         ft4 = st.number_input("Free T4 (ng/dL)", 0.0, 5.0, 1.2, 0.1, format="%.1f")

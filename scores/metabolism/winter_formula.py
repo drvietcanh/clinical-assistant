@@ -111,7 +111,7 @@ def render():
     
     st.title("🧪 Winter Formula")
     st.markdown("""
-    ### PCO2 Dự Đoán trong Toan Chuyển Hóa
+    ### PCO2 dự đoán trong toan chuyển hóa
     
     **Winter's Formula:**
     - Dự đoán mức PCO2 bù thường thích hợp trong toan chuyển hóa
@@ -298,7 +298,7 @@ def render():
     st.markdown("---")
     st.subheader("📚 Kiến thức bổ sung")
     
-    with st.expander("🎯 Cơ Chế Bù Thường"):
+    with st.expander("🎯 Cơ chế bù thường"):
         st.markdown("""
         ### Bù thường hô hấp trong toan chuyển hóa:
         
@@ -361,7 +361,7 @@ def render():
         - Ratio > 2: Thêm kiềm chuyển hóa
         """)
     
-    with st.expander("⚠️ Rối Loạn Acid-Base Hỗn Hợp"):
+    with st.expander("⚠️ Rối loạn acid-base hỗn hợp"):
         st.markdown("""
         ### Các tình huống thường gặp:
         
@@ -388,7 +388,7 @@ def render():
         - Rất phức tạp, cần hội chẩn
         """)
     
-    with st.expander("🔢 Công Thức Khác Liên quan"):
+    with st.expander("🔢 Công thức khác liên quan"):
         st.markdown("""
         ### Các công thức bù thường khác:
         

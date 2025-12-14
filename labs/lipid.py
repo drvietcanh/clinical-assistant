@@ -64,11 +64,11 @@ def calculate_ldl_martin_hopkins(chol: float, hdl: float, tg: float) -> float:
 
 def render():
     """Lipid Panel với các công thức tính chuyên sâu"""
-    st.subheader("💊 Lipid Panel - Công Thức Tính Chuyên Sâu")
+    st.subheader("💊 Lipid Panel - Công thức tính chuyên sâu")
     st.caption("Mỡ Máu - Chuyển đổi đơn vị mmol/L ↔ mg/dL | Tính LDL khi TG cao")
     
     # Unit selection
-    st.markdown("#### 🔄 Chọn Đơn Vị")
+    st.markdown("#### 🔄 Chọn đơn vị")
     unit_system = st.radio(
         "Hệ đơn vị:",
         ["mmol/L (SI Units - Mặc định)", "mg/dL (Conventional)"],
@@ -79,7 +79,7 @@ def render():
     use_si = "mmol/L" in unit_system
     
     # Option: nhập LDL trực tiếp hoặc tính từ công thức
-    st.markdown("#### 📋 Chế Độ Nhập")
+    st.markdown("#### 📋 Chế độ nhập")
     input_mode = st.radio(
         "Chế độ:",
         ["Tự động tính LDL từ công thức", "Nhập LDL trực tiếp"],
@@ -90,7 +90,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 📝 Nhập Giá trị")
+        st.markdown("#### 📝 Nhập giá trị")
         
         # Total Cholesterol
         st.markdown("**Total Cholesterol**")
@@ -253,7 +253,7 @@ def render():
     st.markdown("---")
     
     # Tính các chỉ số lipid chuyên sâu
-    st.markdown("#### 🔬 Các Chỉ Số Lipid Chuyên Sâu")
+    st.markdown("#### 🔬 Các chỉ số lipid chuyên sâu")
     
     if hdl > 0 and chol > 0:
         # Non-HDL Cholesterol
@@ -286,7 +286,7 @@ def render():
         st.caption("Remnant cholesterol = VLDL + IDL (nguy cơ tim mạch độc lập)")
         
         # Các tỉ lệ
-        st.markdown("**3. Các Tỉ Lệ Lipid**")
+        st.markdown("**3. Các tỉ lệ lipid**")
         
         # Total Chol/HDL
         chol_hdl_ratio = chol / hdl
@@ -377,7 +377,7 @@ def render():
     st.markdown("---")
     
     # Thông tin về công thức
-    with st.expander("ℹ️ Thông tin Về Các Công Thức Tính LDL"):
+    with st.expander("ℹ️ Thông tin về các công thức tính LDL"):
         st.markdown("""
         **1. Công thức Friedewald (1972)**
         - LDL = Total Chol - HDL - (TG / 5) [mg/dL]
