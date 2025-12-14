@@ -345,7 +345,7 @@ def render_scenario_dosing_calculator(antibiotic_name):
     imported_egfr = st.session_state.get('patient_egfr', None)
     
     if imported_crcl:
-        st.info(f"📥 CrCl đã import: {imported_crcl:.1f} mL/min (có thể thêm vào scenarios)")
+        st.info(f"📥 CrCl (Độ thanh thải creatinine) đã import: {imported_crcl:.1f} mL/min (có thể thêm vào scenarios)")
     
     st.markdown("---")
     
