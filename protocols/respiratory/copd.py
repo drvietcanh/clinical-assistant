@@ -302,7 +302,7 @@ def render():
         - NICE 2018: COPD exacerbation
         - ERS/ATS 2017: COPD guidelines
         
-        **References:**
+        **Tài liệu tham khảo:**
         - Leuppi JD et al. JAMA. 2013;309(21):2223-2231 (REDUCE trial)
         - Walters JA et al. Cochrane Database. 2014 (Systemic corticosteroids)
         - Osadnik CR et al. Cochrane Database. 2017 (NIV)

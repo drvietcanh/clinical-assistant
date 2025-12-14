@@ -61,11 +61,11 @@ def render_ischemic_stroke():
     st.markdown("### 1️⃣ Xử Trí Tức Thì (< 10 phút)")
     
     st.error("""
-    **ABC - Airway, Breathing, Circulation:**
+    **ABC - Đường thở, Hô hấp, Tuần hoàn:**
     
     **A - Airway:**
     - Đảm bảo đường thở thông thoáng
-    - Cân nhắc intubation nếu GCS <8, không bảo vệ được đường thở
+    - Cân nhắc đặt nội khí quản nếu GCS <8, không bảo vệ được đường thở
     
     **B - Breathing:**
     - O₂ để duy trì SpO₂ >94%
@@ -424,19 +424,19 @@ def render_ischemic_stroke():
             vial_mg = 50 if vial_size == "50 mg" else 100
             vials_needed = 1 if total_dose <= vial_mg else 2
             
-            st.markdown("### 📊 Kết quả Tính Liều")
+            st.markdown("### 📊 Kết quả tính liều")
             st.metric("**Tổng liều:**", f"{total_dose:.1f} mg", help="0.9 mg/kg, tối đa 90 mg")
             st.metric("**Bolus (10%):**", f"{bolus_dose:.1f} mg", help="Truyền trong 1 phút")
             st.metric("**Infusion (90%):**", f"{infusion_dose:.1f} mg", help="Truyền trong 60 phút")
             
             st.markdown("---")
-            st.markdown("### 💧 Thể Tích & Tốc Độ Truyền")
+            st.markdown("### 💧 Thể tích & tốc độ truyền")
             st.metric("**Bolus volume:**", f"{bolus_volume:.1f} ml", help="Nếu pha 1 mg/ml")
             st.metric("**Infusion volume:**", f"{infusion_volume:.1f} ml", help="Nếu pha 1 mg/ml")
             st.metric("**Infusion rate:**", f"{infusion_rate:.1f} ml/h", help="Trong 60 phút")
             
             st.markdown("---")
-            st.markdown("### 📦 Chuẩn Bị Thuốc")
+            st.markdown("### 📦 Chuẩn bị thuốc")
             st.info(f"**Cần {vials_needed} lọ {vial_size}**")
             if vials_needed == 1:
                 st.success(f"Pha {vial_mg}mg trong {vial_mg}ml NS = 1 mg/ml")
@@ -444,7 +444,7 @@ def render_ischemic_stroke():
                 st.success(f"Pha {vial_mg * 2}mg trong {vial_mg * 2}ml NS = 1 mg/ml")
     
     with col2:
-        st.markdown("### 📋 Hướng Dẫn Pha & Truyền")
+        st.markdown("### 📋 Hướng dẫn pha & truyền")
         
         st.info("""
         **Alteplase (tPA) Protocol:**
@@ -502,7 +502,7 @@ def render_ischemic_stroke():
     tab1, tab2, tab3 = st.tabs(["⏱️ Trong khi truyền (0-60 phút)", "🕐 0-24 giờ", "🚨 Xử trí xuất huyết"])
     
     with tab1:
-        st.warning("### Monitoring Trong Khi Truyền tPA (60 phút)")
+        st.warning("### Theo dõi trong khi truyền tPA (60 phút)")
         
         st.markdown("**Checklist theo dõi:**")
         
@@ -671,7 +671,7 @@ def render_ischemic_stroke():
         """)
     
     st.markdown("---")
-    st.markdown("#### 🚫 Chống chỉ định Điều Chỉnh Huyết áp")
+    st.markdown("#### 🚫 Chống chỉ định điều chỉnh huyết áp")
     
     st.info("""
     **Nếu SBP >185 hoặc DBP >110 trước tPA:**
@@ -690,7 +690,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Lấy Huyết Khối Cơ Học (Mechanical Thrombectomy)")
+    st.markdown("### 4️⃣ Lấy huyết khối cơ học (Mechanical Thrombectomy)")
     
     st.markdown("#### ✅ Chỉ định MT (Endovascular Thrombectomy)")
     
@@ -805,7 +805,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 5️⃣ Hỗ Trợ Y Tế & Quản lý Huyết áp")
+    st.markdown("### 5️⃣ Hỗ trợ y tế & quản lý huyết áp")
     
     st.markdown("#### 💊 Quản lý Huyết áp")
     
@@ -841,7 +841,7 @@ def render_ischemic_stroke():
         """)
     
     st.markdown("---")
-    st.markdown("#### 🌡️ Quản lý Sốt")
+    st.markdown("#### 🌡️ Quản lý sốt")
     
     st.info("""
     **Sốt sau đột quỵ:**
@@ -855,7 +855,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("#### 🍽️ Nuôi Dưỡng")
+    st.markdown("#### 🍽️ Nuôi dưỡng")
     
     st.warning("""
     **Đánh giá nuốt:**
@@ -870,7 +870,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("#### 🩸 Dự Phòng DVT")
+    st.markdown("#### 🩸 Dự phòng DVT")
     
     st.success("""
     **Dự phòng DVT sau đột quỵ:**
@@ -890,7 +890,7 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 6️⃣ Điều trị Sau Giai Đoạn Cấp")
+    st.markdown("### 6️⃣ Điều trị sau giai đoạn cấp")
     
     st.success("""
     **Antiplatelet (sau 24h nếu không dùng tPA):**
@@ -1080,7 +1080,7 @@ def render_unknown_stroke():
     st.error("""
     **Xử trí ngay trong khi chờ CT:**
     
-    1. ✅ **ABC** - Airway, Breathing, Circulation
+    1. ✅ **ABC** - Đường thở, Hô hấp, Tuần hoàn
     2. ✅ **2 đường truyền** tĩnh mạch
     3. ✅ **Lấy máu:** CBC, PT/INR, aPTT, Glucose
     4. ✅ **ECG**

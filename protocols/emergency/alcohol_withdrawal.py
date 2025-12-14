@@ -9,28 +9,28 @@ import streamlit as st
 
 def render():
     """Acute Alcohol Withdrawal Protocol"""
-    st.subheader("🍺 Cai Rượu Cấp (Alcohol Withdrawal)")
+    st.subheader("🍺 Cai rượu cấp (Alcohol Withdrawal)")
     st.caption("ASAM 2020, CIWA-Ar Protocol - Alcohol withdrawal syndrome management")
     
     st.info("""
-    **Hội Chứng Cai Rượu (Alcohol Withdrawal Syndrome):**
+    **Hội chứng cai rượu (Alcohol Withdrawal Syndrome):**
     - Xảy ra 6-24 giờ sau khi ngừng uống rượu
     - Triệu chứng: Run tay, lo âu, mất ngủ, buồn nôn
-    - Có thể tiến triển thành: Co giật, Ảo giác, Delirium tremens
+    - Có thể tiến triển thành: Co giật, Ảo giác, Sảng rượu (Delirium tremens)
     
     **Yếu tố nguy cơ:**
     - Uống rượu lâu ngày
     - Uống nhiều rượu
-    - Có tiền sử co giật/DT
+    - Có tiền sử co giật/sảng rượu (DT)
     - Có bệnh lý kèm theo
     """)
     
     st.markdown("---")
     
-    st.markdown("### 📊 CIWA-Ar Score (Clinical Institute Withdrawal Assessment)")
+    st.markdown("### 📊 Thang điểm CIWA-Ar (Clinical Institute Withdrawal Assessment)")
     
     st.warning("""
-    **CIWA-Ar Score:** Đánh giá Mức Độ Cai Rượu (0-67 điểm)
+    **Thang điểm CIWA-Ar:** Đánh giá mức độ cai rượu (0-67 điểm)
     
     **Các tiêu chí (mỗi tiêu chí 0-7 điểm):**
     1. **Nausea & Vomiting** (Buồn nôn & Nôn)
@@ -75,11 +75,11 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Loại Mức Độ")
+    st.markdown("### 📊 Phân loại mức độ")
     
     severity = st.radio(
-        "**Mức Độ Cai Rượu:**",
-        ["Nhẹ (Mild)", "Trung bình (Moderate)", "Nặng (Severe)", "Delirium Tremens"],
+        "**Mức độ cai rượu:**",
+        ["Nhẹ (Mild)", "Trung bình (Moderate)", "Nặng (Severe)", "Sảng rượu (Delirium Tremens, DT)"],
         key="withdrawal_severity"
     )
     
@@ -96,7 +96,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💉 Thuốc Điều trị")
+    st.markdown("### 💉 Thuốc điều trị")
     
     st.info("""
     **1. Benzodiazepines (Thuốc đầu tay):**
@@ -104,7 +104,7 @@ def render():
     **Lorazepam (Ưu tiên):**
     - **Liều:** 1-4 mg PO/IV q1-4h
     - **Ưu điểm:** Không chuyển hóa qua gan (an toàn cho suy gan)
-    - **Dùng khi:** Suy gan, Người Cao Tuổi
+    - **Dùng khi:** Suy gan, Người cao tuổi
     
     **Diazepam:**
     - **Liều:** 5-20 mg PO/IV q1-4h
@@ -119,7 +119,7 @@ def render():
     **2. Thiamine (Vitamin B1):**
     - **Liều:** 100 mg IV/IM qd x 3-5 ngày
     - **Sau đó:** 100 mg PO qd
-    - **Mục đích:** Phòng ngừa Wernicke-Korsakoff
+    - **Mục đích:** Phòng ngừa hội chứng Wernicke-Korsakoff
     
     **3. Folate & Multivitamin:**
     - **Folate:** 1 mg PO qd
@@ -133,10 +133,10 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚠️ Co Giật (Seizures)")
+    st.markdown("### ⚠️ Co giật (Seizures)")
     
     st.error("""
-    **Co Giật Do Cai Rượu:**
+    **Co giật do cai rượu:**
     - Thường xảy ra 6-48 giờ sau ngừng rượu
     - Thường là co giật toàn thân
     - Có thể tái phát
@@ -148,16 +148,16 @@ def render():
     
     **Lưu ý:**
     - Co giật thường tự hết
-    - Cần điều trị nguyên nhân (Cai Rượu)
+    - Cần điều trị nguyên nhân (cai rượu)
     - Không cần điều trị dài hạn
     """)
     
     st.markdown("---")
     
-    st.markdown("### 🚨 Delirium Tremens (DT)")
+    st.markdown("### 🚨 Sảng rượu (Delirium Tremens, DT)")
     
     st.error("""
-    **Delirium Tremens:**
+    **Sảng rượu (Delirium Tremens, DT):**
     - Xảy ra 48-96 giờ sau ngừng rượu
     - Tỷ lệ tử vong: 5-15% nếu không điều trị
     - Triệu chứng: Sốt, mạch nhanh, tăng huyết áp, rối loạn ý thức, ảo giác
@@ -166,10 +166,10 @@ def render():
     1. **Benzodiazepine liều cao:**
        - Lorazepam: 2-4 mg IV q15-30min
        - Hoặc Diazepam: 5-20 mg IV q15-30min
-       - Mục tiêu: An thần nhẹ (RASS -2 đến 0)
+       - Mục tiêu: An thần nhẹ (RASS -2 đến 0) - Thang điểm đánh giá mức độ an thần
     
-    2. **ICU care:**
-       - Monitor liên tục
+    2. **Chăm sóc ICU:**
+       - Theo dõi liên tục
        - Hỗ trợ hô hấp nếu cần
        - Điều chỉnh điện giải
     
@@ -182,18 +182,18 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
-        "✅ Đánh giá CIWA-Ar score",
+        "✅ Đánh giá thang điểm CIWA-Ar",
         "✅ Bắt đầu benzodiazepine nếu CIWA-Ar ≥10",
         "✅ Thiamine 100 mg IV/IM ngay",
         "✅ Folate & multivitamin",
         "✅ Điều chỉnh điện giải (Mg, K, P)",
-        "✅ Monitor dấu hiệu sống",
+        "✅ Theo dõi dấu hiệu sống",
         "✅ Theo dõi CIWA-Ar q4-6h",
         "✅ Điều chỉnh liều benzodiazepine",
-        "✅ Chuẩn bị cho DT nếu nguy cơ cao"
+        "✅ Chuẩn bị cho sảng rượu (DT) nếu nguy cơ cao"
     ]
     
     for item in checklist_items:
@@ -201,13 +201,13 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("""
-        **Người Cao Tuổi:**
+        **Người cao tuổi:**
         - Bắt đầu với liều thấp
         - Ưu tiên lorazepam (ít tích lũy)
         - Cẩn thận với hô hấp
@@ -226,11 +226,11 @@ def render():
         - Cẩn thận với tích lũy
         - Theo dõi chức năng thận
         
-        **Phụ Nữ Có Thai:**
+        **Phụ nữ có thai:**
         - Benzodiazepine có thể dùng (nguy cơ thấp)
         - Ưu tiên cứu mẹ
         - Thiamine an toàn
-        - Monitor thai nhi
+        - Theo dõi thai nhi
         """)
     
     st.markdown("---")
@@ -241,7 +241,7 @@ def render():
     **Mục tiêu:**
     - ✅ CIWA-Ar <10 điểm
     - ✅ Không co giật
-    - ✅ Không DT
+    - ✅ Không sảng rượu (DT)
     - ✅ Dấu hiệu sống ổn định
     - ✅ Bổ sung đủ vitamin
     
@@ -249,12 +249,12 @@ def render():
     - CIWA-Ar <10 trong 24 giờ
     - Không triệu chứng nặng
     - Có kế hoạch theo dõi
-    - Tư vấn về Cai Rượu
+    - Tư vấn về cai rượu
     """)
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ASAM 2020 Guidelines**
@@ -275,7 +275,7 @@ def render():
 
 def render_symptom_triggered():
     """Symptom-triggered protocol"""
-    st.success("## 🟢 Symptom-Triggered (Theo Triệu chứng)")
+    st.success("## 🟢 Symptom-Triggered (Theo triệu chứng)")
     
     st.markdown("""
     **Chỉ định:**
@@ -349,21 +349,21 @@ def render_front_loading():
     - Giảm nguy cơ DT
     
     **Nhược điểm:**
-    - Cần monitor sát
+    - Cần theo dõi sát
     - Có thể quá liều
     """)
 
 
 def render_mild_withdrawal():
     """Mild withdrawal protocol"""
-    st.success("## 🟢 Cai Rượu Nhẹ")
+    st.success("## 🟢 Cai rượu nhẹ")
     
     st.markdown("""
     **Triệu chứng:**
     - CIWA-Ar 0-9 điểm
     - Run tay nhẹ
     - Lo âu nhẹ
-    - Không có co giật/DT
+    - Không có co giật/sảng rượu (DT)
     
     **Điều trị:**
     1. **Theo dõi:** CIWA-Ar q4-6h
@@ -377,7 +377,7 @@ def render_mild_withdrawal():
 
 def render_moderate_withdrawal():
     """Moderate withdrawal protocol"""
-    st.warning("## 🟡 Cai Rượu Trung Bình")
+    st.warning("## 🟡 Cai rượu trung bình")
     
     st.markdown("""
     **Triệu chứng:**
@@ -405,7 +405,7 @@ def render_moderate_withdrawal():
 
 def render_severe_withdrawal():
     """Severe withdrawal protocol"""
-    st.error("## 🔴 Cai Rượu Nặng - ICU")
+    st.error("## 🔴 Cai rượu nặng - ICU")
     
     st.markdown("""
     **Triệu chứng:**
@@ -427,10 +427,10 @@ def render_severe_withdrawal():
     
     4. **Magnesium:** 2-4 g IV nếu thiếu
     
-    5. **ICU monitoring:**
+    5. **Theo dõi ICU:**
        - Dấu hiệu sống liên tục
        - CIWA-Ar q2-4h
-       - Chuẩn bị cho DT
+       - Chuẩn bị cho sảng rượu (DT)
     
     6. **Theo dõi:** 5-7 ngày
     """)
@@ -438,7 +438,7 @@ def render_severe_withdrawal():
 
 def render_delirium_tremens():
     """Delirium tremens protocol"""
-    st.error("## ⚫ Delirium Tremens - ICU")
+    st.error("## ⚫ Sảng rượu (Delirium Tremens, DT) - ICU")
     
     st.markdown("""
     **Triệu chứng:**
@@ -451,16 +451,16 @@ def render_delirium_tremens():
     1. **Benzodiazepine liều cao:**
        - Lorazepam 2-4 mg IV q15-30min
        - Hoặc Diazepam 5-20 mg IV q15-30min
-       - Mục tiêu: An thần (RASS -2 đến 0)
-       - Có thể cần 50-100 mg/ngày
+       - Mục tiêu: An thần (RASS -2 đến 0) - Thang điểm đánh giá mức độ an thần
+       - Có thể cần 50-100 mg/ngày (liều cao)
     
     2. **Haloperidol (nếu cần):**
        - 2-5 mg IV q4-6h
        - Chỉ khi kích động nặng, không đáp ứng benzodiazepine
     
-    3. **ICU care:**
-       - Intubation nếu cần
-       - Monitor liên tục
+    3. **Chăm sóc ICU:**
+       - Đặt nội khí quản nếu cần
+       - Theo dõi liên tục
        - Điều chỉnh điện giải
        - Hạ sốt
     

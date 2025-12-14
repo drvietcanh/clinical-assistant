@@ -167,7 +167,7 @@ def render():
         **CODE HYPERKALEMIA - EMERGENCY!**
         
         **Immediate (< 5 min):**
-        1. ✅ **ECG ngay** - Monitor continuously
+        1. ✅ **ECG ngay** - Theo dõi continuously
         2. ✅ **IV access** (2 lines)
         3. ✅ **Calcium:** 1g IV trong 2-3 phút
         4. ✅ **Repeat calcium** nếu ECG không cải thiện
@@ -182,7 +182,7 @@ def render():
         2. ✅ **Kayexalate:** 30g PO/PR
         3. ✅ **Nephrology consult** - Prepare for HD
         
-        **Chỉ định Lọc Máu:**
+        **Chỉ định Lọc máu:**
         - K⁺ >7.0 với ECG changes
         - Oliguric/anuric
         - Renal failure

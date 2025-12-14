@@ -371,7 +371,7 @@ def render():
         mà chỉ là công cụ hỗ trợ thảo luận tiên lượng.
         """)
     
-    with st.expander("🏥 Xử Trí Xuất Huyết Não - Nguyên tắc Chung"):
+    with st.expander("🏥 Xử trí xuất huyết não - Nguyên tắc Chung"):
         st.markdown("""
         **1. Hồi sức ban đầu:**
         - ABC: Đảm bảo đường thở, thở, tuần hoàn
@@ -418,7 +418,7 @@ def render():
         - Đánh giá khả năng nuốt trước khi cho ăn uống
         """)
     
-    with st.expander("⚠️ Hạn Chế Của ICH Score"):
+    with st.expander("⚠️ Hạn chế của ICH Score"):
         st.markdown("""
         **ICH Score có một số hạn chế:**
         

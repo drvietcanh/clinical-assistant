@@ -9,7 +9,7 @@ import streamlit as st
 
 def render():
     """Hypertensive Emergency/Urgency Protocol"""
-    st.subheader("⚡ Cơn Tăng Huyết áp Cấp cứu")
+    st.subheader("⚡ Cơn tăng huyết áp cấp cứu")
     st.caption("AHA/ACC 2017, JNC 8 - Hypertensive Emergency/Urgency Management")
     
     st.info("""
@@ -47,7 +47,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục tiêu Hạ Huyết áp")
+    st.markdown("### 🎯 Mục tiêu hạ huyết áp")
     
     col1, col2 = st.columns(2)
     
@@ -75,7 +75,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Thuốc Điều trị")
+    st.markdown("### 💊 Thuốc điều trị")
     
     condition_type = st.radio(
         "**Loại tổn thương cơ quan:**",
@@ -107,7 +107,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Thuốc IV Thường Dùng")
+    st.markdown("### 📊 Thuốc IV thường dùng")
     
     st.info("""
     **1. Labetalol (Alpha + Beta blocker):**
@@ -129,7 +129,7 @@ def render():
     **4. Nitroprusside:**
     - **Liều:** 0.25-10 mcg/kg/min
     - **Ưu điểm:** Tác dụng rất nhanh
-    - **Nhược điểm:** Cần monitor sát, nguy cơ thiếu máu cục bộ
+    - **Nhược điểm:** Cần theo dõi sát, nguy cơ thiếu máu cục bộ
     - **Chống chỉ định:** Suy thận nặng
     
     **5. Hydralazine:**
@@ -144,7 +144,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
         "✅ Đánh giá tổn thương cơ quan đích",
@@ -153,7 +153,7 @@ def render():
         "✅ Xét nghiệm: BUN, Cr, Troponin, BNP",
         "✅ Chọn thuốc phù hợp với tổn thương cơ quan",
         "✅ Hạ BP từ từ (15-25% trong 1 giờ đầu)",
-        "✅ Monitor BP liên tục",
+        "✅ Theo dõi BP liên tục",
         "✅ Tránh hạ quá nhanh",
         "✅ Điều chỉnh liều theo đáp ứng"
     ]
@@ -179,7 +179,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -210,7 +210,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **AHA/ACC 2017 Hypertension Guidelines**
@@ -231,7 +231,7 @@ def render():
 
 def render_urgency_protocol():
     """Hypertensive urgency protocol"""
-    st.success("## 🟢 Cơn Tăng Huyết áp Khẩn Cấp")
+    st.success("## 🟢 Cơn tăng huyết áp khẩn cấp")
     
     st.markdown("""
     **Đặc điểm:**

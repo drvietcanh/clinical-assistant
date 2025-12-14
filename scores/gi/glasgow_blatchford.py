@@ -185,7 +185,7 @@ def render():
         )
         
         st.markdown("---")
-        st.markdown("### 📋 Lâm Sàng")
+        st.markdown("### 📋 Lâm sàng")
         
         # Melena
         melena = st.checkbox(

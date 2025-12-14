@@ -96,7 +96,7 @@ def render():
         render_unknown_ibd()
     
     st.markdown("---")
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ECCO Guidelines 2023** - Ulcerative Colitis Management

@@ -26,7 +26,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚡ Xử Trí Ngay Lập Tức (ABC)")
+    st.markdown("### ⚡ Xử trí ngay lập tức (ABC)")
     
     col1, col2 = st.columns(2)
     
@@ -36,13 +36,13 @@ def render():
         
         **IM (Ưu tiên):**
         - **Người Lớn:** 0.3-0.5 mg IM (1:1000)
-        - **Trẻ Em:** 0.01 mg/kg IM (max 0.3 mg)
+        - **Trẻ em:** 0.01 mg/kg IM (max 0.3 mg)
         - **Vị trí:** Mặt trước-bên đùi
         - **Lặp lại:** q5-15 phút nếu cần
         
         **IV (Nếu shock nặng):**
         - **Người Lớn:** 0.1 mg IV (1:10,000)
-        - **Trẻ Em:** 0.01 mg/kg IV
+        - **Trẻ em:** 0.01 mg/kg IV
         - **Truyền tĩnh mạch:** 1-4 mcg/min
         """)
     
@@ -51,7 +51,7 @@ def render():
         **2. AIRWAY & BREATHING**
         
         - **Oxygen:** 100% qua mask
-        - **Nếu stridor:** Chuẩn bị intubation
+        - **Nếu stridor:** Chuẩn bị đặt nội khí quản
         - **Nếu wheezing:** Albuterol nebulizer
         - **Cricothyrotomy:** Nếu không thể intubate
         
@@ -71,7 +71,7 @@ def render():
     
     **1. Antihistamines (H1 blocker):**
     - **Diphenhydramine:** 25-50 mg IV/IM (Người Lớn)
-    - **Trẻ Em:** 1 mg/kg IV/IM (max 50 mg)
+    - **Trẻ em:** 1 mg/kg IV/IM (max 50 mg)
     - **Hoặc:** Cetirizine 10 mg PO
     
     **2. H2 Blocker:**
@@ -80,14 +80,14 @@ def render():
     
     **3. Corticosteroids:**
     - **Methylprednisolone:** 125 mg IV (Người Lớn)
-    - **Trẻ Em:** 1-2 mg/kg IV
+    - **Trẻ em:** 1-2 mg/kg IV
     - **Hoặc:** Prednisone 60 mg PO
     - **Mục đích:** Ngăn phản ứng 2 pha (biphasic)
     """)
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Loại Mức Độ")
+    st.markdown("### 📊 Phân loại mức độ")
     
     severity = st.radio(
         "**Mức độ nghiêm trọng:**",
@@ -108,7 +108,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚠️ Biphasic Reactions")
+    st.markdown("### ⚠️ Phản ứng hai pha (Biphasic Reactions)")
     
     st.warning("""
     **Phản ứng 2 pha (Biphasic):**
@@ -129,7 +129,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
         "✅ Epinephrine IM (mặt trước-bên đùi)",
@@ -138,8 +138,8 @@ def render():
         "✅ Diphenhydramine IV/IM",
         "✅ Ranitidine IV",
         "✅ Methylprednisolone IV",
-        "✅ Monitor BP, HR, SpO2",
-        "✅ Chuẩn bị intubation nếu cần",
+        "✅ Theo dõi huyết áp, nhịp tim, SpO2",
+        "✅ Chuẩn bị đặt nội khí quản nếu cần",
         "✅ Theo dõi 4-6 giờ (nặng: 8-12 giờ)"
     ]
     
@@ -148,18 +148,18 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("""
-        **Phụ Nữ Có Thai:**
+        **Phụ nữ có thai:**
         - Epinephrine an toàn (ưu tiên cứu mẹ)
         - Tư thế nằm nghiêng trái
-        - Monitor thai nhi
+        - Theo dõi thai nhi
         
-        **Người Cao Tuổi:**
+        **Người cao tuổi:**
         - Cẩn thận với epinephrine (tăng nguy cơ MI)
         - Giảm liều nếu có bệnh tim mạch
         - Theo dõi ECG
@@ -167,7 +167,7 @@ def render():
     
     with col2:
         st.markdown("""
-        **Trẻ Em:**
+        **Trẻ em:**
         - Liều epinephrine: 0.01 mg/kg IM
         - Auto-injector: EpiPen Jr (0.15 mg)
         - Theo dõi sát (dễ tái phát)
@@ -175,7 +175,7 @@ def render():
         **Bệnh tim mạch:**
         - Epinephrine vẫn cần thiết
         - Cân nhắc giảm liều
-        - Monitor ECG, troponin
+        - Theo dõi ECG, troponin
         """)
     
     st.markdown("---")
@@ -200,7 +200,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ACAAI/WAO Anaphylaxis Guidelines 2020**
@@ -280,7 +280,7 @@ def render_severe_anaphylaxis():
     
     2. **Airway:**
        - 100% Oxygen
-       - Chuẩn bị intubation ngay
+       - Chuẩn bị đặt nội khí quản ngay
        - Cricothyrotomy nếu cần
     
     3. **Fluids:**
@@ -292,7 +292,7 @@ def render_severe_anaphylaxis():
        - Ranitidine 50 mg IV
        - Methylprednisolone 125 mg IV
     
-    5. **ICU Monitoring:**
+    5. **Theo dõi ICU:**
        - Continuous BP, HR, SpO2
        - Arterial line nếu cần
        - ECG monitoring
@@ -315,7 +315,7 @@ def render_cardiac_arrest():
     
     **2. Epinephrine:**
     - **ACLS dose:** 1 mg IV q3-5 min
-    - **Hoặc:** 0.1 mg/kg IV (Trẻ Em)
+    - **Hoặc:** 0.1 mg/kg IV (Trẻ em)
     - **Truyền tĩnh mạch:** 5-10 mcg/min
     
     **3. Fluids:**
@@ -331,6 +331,6 @@ def render_cardiac_arrest():
     **5. Post-resuscitation:**
     - TTM (targeted temperature management)
     - ICU care
-    - Monitor 24-48 giờ
+    - Theo dõi 24-48 giờ
     """)
 

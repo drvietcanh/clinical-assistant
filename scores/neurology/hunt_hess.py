@@ -16,7 +16,7 @@ import streamlit as st
 def render():
     """Render Hunt & Hess Scale Calculator"""
     
-    st.subheader("🧠 Hunt & Hess Scale - Xuất Huyết Dưới Nhện")
+    st.subheader("🧠 Hunt & Hess Scale - Xuất huyết dưới nhện")
     st.caption("Phân loại mức độ nghiêm trọng của xuất huyết dưới màng nhện")
     
     st.markdown("""
@@ -27,7 +27,7 @@ def render():
     st.markdown("---")
     
     # Selection
-    st.markdown("### 🩺 Chọn Mức Độ Lâm Sàng")
+    st.markdown("### 🩺 Chọn mức độ lâm sàng")
     
     st.info("""
     **Hướng dẫn:** Chọn mức độ phù hợp nhất với tình trạng lâm sàng của bệnh nhân.
@@ -127,7 +127,7 @@ def render():
     
     # Serious systemic disease modifier
     st.markdown("---")
-    st.markdown("### ⚠️ Bệnh Toàn Thân Nghiêm Trọng")
+    st.markdown("### ⚠️ Bệnh toàn thân nghiêm trọng")
     
     serious_disease = st.checkbox(
         "Có biến chứng toàn thân nghiêm trọng (tăng huyết áp nặng, đái tháo đường, xơ vữa mạch nặng, COPD nặng, vasospasm trên DSA)",
@@ -534,7 +534,7 @@ def render():
     st.markdown("---")
     st.markdown("### 📖 THÔNG TIN THÊM")
     
-    with st.expander("❓ Xuất Huyết Dưới Nhện (SAH) là gì?"):
+    with st.expander("❓ Xuất huyết dưới nhện (SAH) là gì?"):
         st.markdown("""
         **Xuất huyết dưới màng nhện (Subarachnoid Hemorrhage - SAH)** là tình trạng 
         xuất huyết vào khoang dưới màng nhện (giữa màng nhện và màng mềm não).
@@ -591,7 +591,7 @@ def render():
         **Khuyến nghị:** Sử dụng cả Hunt & Hess và WFNS để đánh giá toàn diện.
         """)
     
-    with st.expander("⚠️ Khi Nào Nghi Ngờ SAH?"):
+    with st.expander("⚠️ Khi nào nghi ngờ SAH?"):
         st.markdown("""
         **LUÔN nghi ngờ SAH khi bệnh nhân có:**
         

@@ -9,28 +9,28 @@ import streamlit as st
 
 def render():
     """Status Epilepticus Protocol"""
-    st.subheader("🧠 Status Epilepticus")
+    st.subheader("🧠 Trạng thái động kinh liên tục (Status Epilepticus)")
     st.caption("AES 2016, Neurocritical Care Society - Prolonged seizures management")
     
     st.error("""
-    **⚠️ STATUS EPILEPTICUS = MEDICAL EMERGENCY**
+    **⚠️ TRẠNG THÁI ĐỘNG KINH LIÊN TỤC = CẤP CỨU Y TẾ**
     
     **Định nghĩa:**
     - Co giật liên tục ≥5 phút
     - Hoặc ≥2 cơn co giật không hồi phục ý thức giữa các cơn
     
     **Phân loại:**
-    - **Established SE:** ≥5 phút
-    - **Refractory SE (RSE):** Không đáp ứng với 2 Thuốc Chống Động Kinh
-    - **Super-refractory SE (SRSE):** ≥24 giờ dù đã dùng thuốc mê
+    - **Đã thiết lập (Established SE):** ≥5 phút
+    - **Kháng trị (Refractory SE, RSE):** Không đáp ứng với 2 thuốc chống động kinh
+    - **Siêu kháng trị (Super-refractory SE, SRSE):** ≥24 giờ dù đã dùng thuốc mê
     """)
     
     st.markdown("---")
     
-    st.markdown("### ⚡ Xử Trí Ngay Lập Tức (0-5 phút)")
+    st.markdown("### ⚡ Xử trí ngay lập tức (0-5 phút)")
     
     st.error("""
-    **1. ABC (Airway, Breathing, Circulation):**
+    **1. ABC (Đường thở, Hô hấp, Tuần hoàn):**
     - Đảm bảo đường thở
     - Oxygen 100%
     - Monitor: BP, HR, SpO2, ECG
@@ -48,7 +48,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Thuốc Chống Động Kinh (5-20 phút)")
+    st.markdown("### 💊 Thuốc chống động kinh (5-20 phút)")
     
     st.warning("""
     **Nếu vẫn còn co giật sau benzodiazepine:**
@@ -76,10 +76,10 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🔄 Refractory Status Epilepticus (20-40 phút)")
+    st.markdown("### 🔄 Trạng thái động kinh liên tục kháng trị (20-40 phút)")
     
     st.error("""
-    **Nếu vẫn còn co giật sau 2 Thuốc Chống Động Kinh:**
+    **Nếu vẫn còn co giật sau 2 Thuốc chống động kinh:**
     
     **1. Midazolam truyền tĩnh mạch:**
     - **Bolus:** 0.2 mg/kg IV
@@ -99,7 +99,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🚨 Super-Refractory SE (≥40 phút)")
+    st.markdown("### 🚨 Trạng thái động kinh liên tục siêu kháng trị (≥40 phút)")
     
     st.error("""
     **Nếu vẫn còn co giật sau thuốc mê:**
@@ -122,11 +122,11 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Loại Theo Thời Gian")
+    st.markdown("### 📊 Phân loại theo thời gian")
     
     timeline = st.radio(
         "**Thời gian co giật:**",
-        ["0-5 phút (Sớm)", "5-20 phút (Established)", "20-40 phút (Refractory)", "≥40 phút (Super-refractory)"],
+        ["0-5 phút (Sớm)", "5-20 phút (Đã thiết lập)", "20-40 phút (Kháng trị)", "≥40 phút (Siêu kháng trị)"],
         key="se_timeline"
     )
     
@@ -143,11 +143,11 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🔍 Nguyên Nhân & Điều trị Nguyên Nhân")
+    st.markdown("### 🔍 Nguyên nhân & điều trị nguyên nhân")
     
     st.info("""
     **Nguyên nhân thường gặp:**
-    1. **Ngừng Thuốc Chống Động Kinh** (30-40%)
+    1. **Ngừng thuốc chống động kinh** (30-40%)
     2. **Đột quỵ** (20-25%)
     3. **Chấn thương đầu** (10-15%)
     4. **Nhiễm trùng CNS** (5-10%)
@@ -159,16 +159,16 @@ def render():
     - CT/MRI não
     - LP (nếu nghi ngờ nhiễm trùng)
     - Điện giải, glucose, chức năng gan/thận
-    - Nồng độ Thuốc Chống Động Kinh
+    - Nồng độ thuốc chống động kinh
     - Độc chất học
     """)
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
-        "✅ ABC: Airway, Breathing, Circulation",
+        "✅ ABC: Đường thở, Hô hấp, Tuần hoàn",
         "✅ Đo đường huyết (nếu thấp: dextrose)",
         "✅ Thiamine 100 mg IV (nếu nghi ngờ)",
         "✅ Lorazepam 0.1 mg/kg IV (hoặc midazolam IM)",
@@ -184,7 +184,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -206,7 +206,7 @@ def render():
         **Có thai:**
         - Tránh valproate, phenytoin nếu có thể
         - Levetiracetam an toàn hơn
-        - Monitor thai nhi
+        - Theo dõi thai nhi
         
         **Suy gan/thận:**
         - Tránh valproate nếu suy gan
@@ -232,7 +232,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **AES 2016 Guidelines**
@@ -296,7 +296,7 @@ def render_refractory_se():
     
     3. **EEG monitoring:** Để đánh giá hiệu quả
     
-    4. **ICU care:** Intubation, monitoring
+    4. **ICU care:** Đặt nội khí quản, monitoring
     
     **Mục tiêu:** EEG burst suppression
     """)

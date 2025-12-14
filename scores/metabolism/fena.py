@@ -35,7 +35,7 @@ def render():
     """Render FENa Calculator"""
     
     st.subheader("🧪 FENa - Fractional Excretion of Sodium")
-    st.caption("Phân biệt Suy Thận Cấp Tiền Thận vs Thận")
+    st.caption("Phân biệt suy thận cấp tiền thận vs thận")
     
     st.markdown("""
     **FENa** giúp phân biệt nguyên nhân suy thận cấp (AKI):

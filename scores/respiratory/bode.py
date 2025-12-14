@@ -242,7 +242,7 @@ def render():
     st.markdown("**Tiên lượng tử vong ở bệnh nhân COPD**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
+    with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -302,7 +302,7 @@ def render():
     st.markdown("#### 1️⃣ B - Body Mass Index")
     col1, col2, col3 = st.columns(3)
     with col1:
-        weight = st.number_input("Cân nặng (kg)", 20.0, 200.0, 60.0, 1.0, format="%d")
+        weight = st.number_input("Cân nặng (kg)", 20.0, 200.0, 60.0, 1.0, format="%.1f")
     with col2:
         height = st.number_input("Chiều cao (cm)", 100, 250, 170, 1, format="%d")
     with col3:

@@ -89,7 +89,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Loại Mức Độ")
+    st.markdown("### 📊 Phân loại mức độ")
     
     severity = st.radio(
         "**Mức độ viêm tụy:**",
@@ -108,7 +108,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
         "✅ Chẩn đoán (≥2 trong 3 tiêu chuẩn)",
@@ -127,7 +127,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -159,7 +159,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ACG 2013 Guidelines**
@@ -309,7 +309,7 @@ def render_severe_pancreatitis():
     
     **Điều trị:**
     1. **ICU care:**
-       - Monitor liên tục
+       - Theo dõi liên tục
        - Hỗ trợ hô hấp nếu cần
        - Hỗ trợ huyết động nếu cần
     

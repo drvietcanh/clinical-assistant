@@ -251,7 +251,7 @@ def render():
     st.markdown("---")
     st.subheader("📚 Thông tin bổ sung")
     
-    with st.expander("📋 Phân Loại Mức Độ Lo Âu"):
+    with st.expander("📋 Phân loại mức độ lo âu"):
         st.markdown("""
         ### Phân loại theo điểm GAD-7:
         

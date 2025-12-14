@@ -102,7 +102,7 @@ elif "Nội tiết" in specialty or "Chuyển hóa" in specialty:
     metabolism.render_metabolism_calculator(selected_score_id)
 
 # Hematology
-elif "Huyết Học" in specialty or "Đông máu" in specialty:
+elif "Huyết học" in specialty or "Đông máu" in specialty:
     hematology.render_hematology_calculator(selected_score_id)
 
 # Nephrology
@@ -138,7 +138,7 @@ elif "Tai Mũi Họng" in specialty or "ENT" in specialty:
     ent.render_ent_calculator(selected_score_id)
 
 # Obstetrics
-elif "Sản Khoa" in specialty or "Obstetrics" in specialty:
+elif "Sản khoa" in specialty or "Obstetrics" in specialty:
     obstetrics.render_obstetrics_calculator(selected_score_id)
 
 # Dermatology

@@ -166,7 +166,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.subheader("📋 Đánh giá Lâm Sàng")
+    st.subheader("📋 Đánh giá Lâm sàng")
     
     # Age
     age = st.number_input(
@@ -181,7 +181,7 @@ def render():
     st.markdown("---")
     
     # Clinical features
-    st.markdown("### 🌡️ Các Triệu chứng Lâm Sàng")
+    st.markdown("### 🌡️ Các Triệu chứng Lâm sàng")
     
     fever = st.checkbox(
         "**Sốt > 38°C (100.4°F)**",

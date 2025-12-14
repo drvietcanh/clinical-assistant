@@ -118,7 +118,7 @@ def render():
     
     st.title("🎗️ ECOG Performance Status")
     st.markdown("""
-    ### Đánh giá Thể Trạng Bệnh nhân Ung Thư
+    ### Đánh giá Thể Trạng Bệnh nhân Ung thư
     
     **ECOG (Eastern Cooperative Oncology Group):**
     - Thang đo thể trạng được sử dụng rộng rãi nhất trong ung thư học

@@ -166,7 +166,7 @@ def render_detailed_dose(selected_ab, weight, ibw, abw, crcl, indication_code, i
         if detailed_dose.get('infusion_details'):
             infusion = detailed_dose['infusion_details']
             st.markdown("---")
-            st.markdown("#### 💉 Hướng Dẫn Pha & Truyền (IV):")
+            st.markdown("#### 💉 Hướng dẫn pha & truyền (IV):")
             
             col1, col2, col3 = st.columns(3)
             with col1:

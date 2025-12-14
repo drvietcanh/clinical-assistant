@@ -95,10 +95,10 @@ with st.sidebar:
                 "🍭 DKA Protocol",
                 "⚡ Electrolyte Emergency",
                 "🚨 Anaphylaxis",
-                "⚡ Cơn Tăng Huyết áp Cấp cứu",
-                "🧠 Status Epilepticus",
+                "⚡ Cơn tăng huyết áp cấp cứu",
+                "🧠 Trạng thái động kinh liên tục",
                 "💉 Ngộ Độc Opioid / Naloxone",
-                "🍺 Cai Rượu Cấp"
+                "🍺 Cai rượu cấp"
             ],
             label_visibility="collapsed"
         )
@@ -116,7 +116,7 @@ with st.sidebar:
             "Phác đồ:",
             [
                 "💔 ACS - Hội chứng vành cấp",
-                "💔 Suy Tim Cấp",
+                "💔 Suy tim Cấp",
                 "💓 Rung Nhĩ (Atrial Fibrillation)",
                 "🩸 DVT/PE Management"
             ],
@@ -249,7 +249,7 @@ elif "Hen" in protocol:
 elif "ACS" in protocol:
     render_acs()
 
-elif "Suy Tim" in protocol:
+elif "Suy tim" in protocol:
     render_hf()
 
 elif "Stroke" in protocol:
@@ -270,13 +270,13 @@ elif "Anaphylaxis" in protocol or "anaphylaxis" in protocol.lower():
 elif "Tăng Huyết áp" in protocol or "Hypertensive" in protocol or "hypertensive" in protocol.lower():
     render_hypertensive_emergency()
 
-elif "Status Epilepticus" in protocol or "status epilepticus" in protocol.lower() or "Epilepticus" in protocol:
+elif "Status Epilepticus" in protocol or "status epilepticus" in protocol.lower() or "Epilepticus" in protocol or "Trạng thái động kinh" in protocol:
     render_status_epilepticus()
 
 elif "Opioid" in protocol or "opioid" in protocol.lower() or "Naloxone" in protocol or "naloxone" in protocol.lower() or "Ngộ Độc" in protocol:
     render_opioid_overdose()
 
-elif "Alcohol" in protocol or "alcohol" in protocol.lower() or "Cai Rượu" in protocol or "Rượu" in protocol:
+elif "Alcohol" in protocol or "alcohol" in protocol.lower() or "Cai rượu" in protocol or "cai rượu" in protocol.lower() or "Rượu" in protocol:
     render_alcohol_withdrawal()
 
 elif "Rung Nhĩ" in protocol or "Atrial Fibrillation" in protocol or "atrial fibrillation" in protocol.lower() or "AF" in protocol:

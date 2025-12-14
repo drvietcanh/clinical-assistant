@@ -23,7 +23,7 @@ def render():
     # ========== SECTION 1: SEVERITY ASSESSMENT ==========
     st.markdown("### 📊 Đánh giá mức độ nặng")
     
-    st.markdown("**Phân Loại Mức Độ Theo IDSA/SHEA 2021:**")
+    st.markdown("**Phân loại mức độ Theo IDSA/SHEA 2021:**")
     
     col1, col2 = st.columns(2)
     
@@ -342,7 +342,7 @@ def render():
     st.markdown("### 👥 Dân Số Đặc Biệt")
     
     with st.expander("🔍 Xem hướng dẫn cho dân số đặc biệt", expanded=False):
-        st.markdown("#### **Phụ Nữ Có Thai:**")
+        st.markdown("#### **Phụ nữ có thai:**")
         st.info("""
         - **Vancomycin 125mg PO QID** là lựa chọn an toàn
         - Fidaxomicin: Dữ liệu hạn chế, cân nhắc nếu cần
@@ -372,7 +372,7 @@ def render():
         
         st.markdown("---")
         
-        st.markdown("#### **Trẻ Em:**")
+        st.markdown("#### **Trẻ em:**")
         st.info("""
         - **Vancomycin:** 40mg/kg/ngày chia 4 lần (max 2g/ngày)
         - **Metronidazole:** 30mg/kg/ngày chia 3 lần (max 1.5g/ngày)

@@ -297,7 +297,7 @@ def render():
     """)
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
+    with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -355,7 +355,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 🩺 Huyết Học")
+        st.markdown("#### 🩺 Huyết học")
         platelet_count = st.number_input(
             "**Tiểu cầu (×10³/μL hoặc ×10⁹/L)**",
             min_value=0.0,
@@ -446,7 +446,7 @@ def render():
         st.info("""
         **🔬 Xét nghiệm bổ sung nên làm:**
         
-        - **Huyết Học:**
+        - **Huyết học:**
           * Peripheral blood smear (tìm schistocytes - RBC phân mảnh)
           * Reticulocyte count (đánh giá thiếu máu tan máu)
         
@@ -482,24 +482,24 @@ def render():
         """)
     
     # Quick reference
-    with st.expander("📖 Nguyên Nhân Thường gặp của DIC"):
+    with st.expander("📖 Nguyên nhân thường gặp của DIC"):
         st.markdown("""
-        ### Nguyên Nhân DIC Theo Tần Suất
+        ### Nguyên nhân DIC theo tần suất
         
-        #### 1. 🦠 Sepsis / Nhiễm Trùng (Phổ Biến Nhất - 30-50%)
+        #### 1. 🦠 Sepsis / Nhiễm trùng (phổ biến nhất - 30-50%)
         - Gram âm (endotoxin) > Gram dương
         - Fungal sepsis
         - Viral (HIV, CMV, EBV, hemorrhagic fever viruses)
         - Parasitic (malaria)
         
-        #### 2. 🤕 Chấn Thương / Phẫu Thuật (10-20%)
+        #### 2. 🤕 Chấn thương / phẫu thuật (10-20%)
         - Chấn thương sọ não nặng
         - Polytrauma với tissue injury lớn
         - Fat embolism
         - Crush injury, burns
         - Phẫu thuật tim, gan, tụy
         
-        #### 3. 🎗️ Ung Thư (10-20%)
+        #### 3. 🎗️ Ung thư (10-20%)
         - **Huyết học:**
           * Acute promyelocytic leukemia (APL) - cao nhất
           * AML, ALL
@@ -507,7 +507,7 @@ def render():
           * Adenocarcinoma (tụy, tuyến tiền liệt tuyến, phổi, dạ dày)
           * Mucin-producing tumors
         
-        #### 4. 🤰 Sản Khoa (5-10%)
+        #### 4. 🤰 Sản khoa (5-10%)
         - Nhau bong non (Placental abruption)
         - Ối vào mạch (Amniotic fluid embolism)
         - Thai chết lưu >4 tuần (Retained dead fetus)
@@ -515,16 +515,16 @@ def render():
         - Pre-eclampsia/Eclampsia nặng
         - Septic abortion
         
-        #### 5. 🫀 Bệnh Mạch Máu
+        #### 5. 🫀 Bệnh mạch máu
         - Kasabach-Merritt syndrome (giant hemangioma)
         - Aortic aneurysm (đặc biệt khi vỡ)
         
-        #### 6. 🧪 Độc Tố / Miễn Dịch
+        #### 6. 🧪 Độc tố / miễn dịch
         - Rắn độc cắn (venom-induced consumptive coagulopathy)
         - Phản ứng truyền máu cấp (Acute hemolytic transfusion reaction)
         - Transplant rejection
         
-        #### 7. 🫘 Bệnh Gan
+        #### 7. 🫘 Bệnh gan
         - Acute liver failure / Fulminant hepatitis
         - Cirrhosis tiến triển
         - Budd-Chiari syndrome
@@ -534,7 +534,7 @@ def render():
         - Hypothermia nặng
         - Massive transfusion (dilutional + consumptive)
         
-        ### 🔍 Phân biệt DIC với Bệnh Khác
+        ### 🔍 Phân biệt DIC với bệnh khác
         
         | Đặc Điểm | DIC | Suy Gan | TTP/HUS | ITP |
         |----------|-----|---------|---------|-----|

@@ -325,7 +325,7 @@ def render():
     st.markdown("---")
     st.subheader("📚 Thông tin bổ sung")
     
-    with st.expander("📋 Phân Loại Mức Độ Trầm Cảm"):
+    with st.expander("📋 Phân loại mức độ trầm cảm"):
         st.markdown("""
         ### Phân loại theo điểm PHQ-9:
         

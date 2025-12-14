@@ -187,7 +187,7 @@ def render():
     st.markdown("**Sequential Organ Failure Assessment - Đánh giá suy đa cơ quan**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
+    with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -257,7 +257,7 @@ def render():
     
     # Liver
     st.markdown("#### 3️⃣ Gan (Liver)")
-    bilirubin = st.number_input("Bilirubin Toàn Phần (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f", key="sofa_bilirubin")
+    bilirubin = st.number_input("Bilirubin toàn phần (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f", key="sofa_bilirubin")
     st.caption("💡 Chuyển đổi: μmol/L ÷ 17.1 = mg/dL")
     
     st.divider()

@@ -212,7 +212,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -242,7 +242,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: REFERENCES ==========
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **IDSA/ATS 2019 Guidelines** - Community-Acquired Pneumonia in Adults

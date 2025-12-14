@@ -79,7 +79,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### Phần 2: Khám Lâm Sàng (3 dấu hiệu)")
+    st.markdown("### Phần 2: Khám Lâm sàng (3 dấu hiệu)")
     
     # Clinical sign 1
     sign1 = st.checkbox(

@@ -49,7 +49,7 @@ def render():
     age_score = age  # 1 điểm cho mỗi năm tuổi
     
     # Gender
-    st.markdown("### 2️⃣ Giới Tính")
+    st.markdown("### 2️⃣ Giới tính")
     gender = st.radio(
         "Giới tính:",
         ["Nam", "Nữ"],
@@ -66,7 +66,7 @@ def render():
     cancer_score = 30 if cancer else 0
     
     # Heart failure
-    st.markdown("### 4️⃣ Suy Tim")
+    st.markdown("### 4️⃣ Suy tim")
     heart_failure = st.checkbox(
         "Có suy tim mạn tính",
         key="pesi_heart_failure"
@@ -74,7 +74,7 @@ def render():
     heart_failure_score = 10 if heart_failure else 0
     
     # Chronic lung disease
-    st.markdown("### 5️⃣ Bệnh Phổi Mạn")
+    st.markdown("### 5️⃣ Bệnh phổi mạn")
     lung_disease = st.checkbox(
         "Có bệnh phổi mạn tính (COPD, hen phế quản...)",
         key="pesi_lung"
@@ -112,7 +112,7 @@ def render():
         sbp_score = 0
     
     # Respiratory rate
-    st.markdown("### 8️⃣ Tần Số Thở")
+    st.markdown("### 8️⃣ Tần số thở")
     rr = st.number_input(
         "Tần số thở (lần/phút):",
         min_value=0,
@@ -164,7 +164,7 @@ def render():
         temp_score = 0
     
     # Mental status
-    st.markdown("### 🔟 Tình Trạng Tâm Thần")
+    st.markdown("### 🔟 Tình trạng tâm thần")
     mental_status = st.radio(
         "Tình trạng tâm thần:",
         [

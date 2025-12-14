@@ -24,7 +24,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: SEVERITY ==========
-    st.markdown("### 📊 Phân Loại Mức Độ")
+    st.markdown("### 📊 Phân loại mức độ")
     
     col1, col2 = st.columns(2)
     

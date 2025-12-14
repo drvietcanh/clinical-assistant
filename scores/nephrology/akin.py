@@ -132,13 +132,13 @@ def render():
     with col1:
         st.markdown("#### Creatinine")
         scr_baseline = st.number_input("SCr Baseline (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
-        scr_current = st.number_input("SCr Hiện Tại (mg/dL)", 0.0, 20.0, 1.5, 0.1, format="%.1f")
+        scr_current = st.number_input("SCr Hiện tại (mg/dL)", 0.0, 20.0, 1.5, 0.1, format="%.1f")
         scr_increase_48h = st.number_input("SCr Tăng trong 48h (mg/dL)", 0.0, 10.0, 0.0, 0.1, format="%.1f")
         on_rrt = st.checkbox("Đang chạy thận (RRT)")
     
     with col2:
         st.markdown("#### Nước Tiểu")
-        weight = st.number_input("Cân Nặng (kg)", 0.0, 300.0, 70.0, 1.0, format="%d")
+        weight = st.number_input("Cân nặng (kg)", 0.0, 300.0, 70.0, 1.0, format="%.1f")
         urine_output_6h = st.number_input("Nước tiểu 6h (mL)", -1.0, 5000.0, -1.0, 10.0, format="%.0f")
         urine_output_12h = st.number_input("Nước tiểu 12h (mL)", -1.0, 10000.0, -1.0, 10.0, format="%.0f")
         urine_output_24h = st.number_input("Nước tiểu 24h (mL)", -1.0, 20000.0, -1.0, 10.0, format="%.0f")

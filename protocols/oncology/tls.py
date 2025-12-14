@@ -140,7 +140,7 @@ def render():
     
     **Mục tiêu:**
     - Duy trì lượng nước tiểu >100 ml/h (Người Lớn)
-    - Hoặc >2 ml/kg/h (Trẻ Em)
+    - Hoặc >2 ml/kg/h (Trẻ em)
     - Giảm nguy cơ kết tinh uric acid trong thận
     
     **Phác đồ:**

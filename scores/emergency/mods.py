@@ -214,7 +214,7 @@ def render():
     st.markdown("**Multiple Organ Dysfunction Score - Đánh giá rối loạn đa cơ quan**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
+    with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -300,7 +300,7 @@ def render():
     st.divider()
     
     # Hematologic
-    st.markdown("#### 5️⃣ Huyết Học")
+    st.markdown("#### 5️⃣ Huyết học")
     platelets = st.number_input("Tiểu cầu (×10³/μL)", 0, 500, 200, 1, format="%d")
     
     st.divider()

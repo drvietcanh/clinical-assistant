@@ -27,7 +27,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚡ Xử Trí Ngay Lập Tức (ABC)")
+    st.markdown("### ⚡ Xử trí ngay lập tức (ABC)")
     
     col1, col2 = st.columns(2)
     
@@ -38,7 +38,7 @@ def render():
         - **Đảm bảo đường thở:** Head-tilt, chin-lift
         - **Oxygen:** 100% qua mask
         - **Bag-mask ventilation:** Nếu không thở
-        - **Chuẩn bị intubation:** Nếu cần
+        - **Chuẩn bị đặt nội khí quản:** Nếu cần
         
         **2. CIRCULATION**
         
@@ -55,7 +55,7 @@ def render():
         
         **Liều ban đầu:**
         - **Người Lớn:** 0.4-2 mg IV/IM/IN
-        - **Trẻ Em:** 0.01 mg/kg IV/IM/IN
+        - **Trẻ em:** 0.01 mg/kg IV/IM/IN
         - **Lặp lại:** q2-3 phút nếu cần
         
         **Theo dõi:** 
@@ -86,7 +86,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Loại Mức Độ")
+    st.markdown("### 📊 Phân loại mức độ")
     
     severity = st.radio(
         "**Mức độ nghiêm trọng:**",
@@ -107,13 +107,13 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚠️ Re-Narcotization (Tái Ngộ Độc)")
+    st.markdown("### ⚠️ Re-Narcotization (Tái ngộ độc)")
     
     st.warning("""
-    **Nguy cơ Tái Ngộ Độc:**
+    **Nguy cơ Tái ngộ độc:**
     - Naloxone có thời gian bán hủy ngắn (30-90 phút)
     - Opioid có thể tồn tại lâu hơn (đặc biệt là fentanyl, methadone)
-    - Bệnh nhân có thể Tái Ngộ Độc sau khi naloxone hết tác dụng
+    - Bệnh nhân có thể Tái ngộ độc sau khi naloxone hết tác dụng
     
     **Khuyến nghị:**
     - **Theo dõi ít nhất 2-4 giờ** sau khi đáp ứng
@@ -129,9 +129,9 @@ def render():
     st.info("""
     **Chỉ định truyền tĩnh mạch:**
     - Cần nhiều liều naloxone
-    - Long-acting opioids (methadone, buprenorphine)
-    - Fentanyl overdose
-    - Tái Ngộ Độc sau khi ngừng naloxone
+    - Opioid tác dụng kéo dài (methadone, buprenorphine)
+    - Ngộ độc fentanyl
+    - Tái ngộ độc sau khi ngừng naloxone
     
     **Liều truyền:**
     - **Bolus:** 0.4-2 mg IV
@@ -142,21 +142,21 @@ def render():
     **Theo dõi:**
     - RR, SpO2 mỗi 15-30 phút
     - Ý thức
-    - Có thể cần tăng liều nếu Tái Ngộ Độc
+    - Có thể cần tăng liều nếu Tái ngộ độc
     """)
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
-        "✅ ABC: Airway, Breathing, Circulation",
+        "✅ ABC: Đường thở, Hô hấp, Tuần hoàn",
         "✅ Oxygen 100%",
         "✅ Naloxone ngay lập tức (0.4-2 mg)",
         "✅ Đánh giá đáp ứng trong 1-2 phút",
         "✅ Lặp lại naloxone nếu không đáp ứng",
-        "✅ Monitor RR, SpO2, ý thức",
-        "✅ Theo dõi 2-4 giờ (nguy cơ Tái Ngộ Độc)",
+        "✅ Theo dõi RR, SpO2, ý thức",
+        "✅ Theo dõi 2-4 giờ (nguy cơ Tái ngộ độc)",
         "✅ Cân nhắc naloxone truyền tĩnh mạch nếu cần",
         "✅ Hỗ trợ hô hấp nếu cần"
     ]
@@ -166,26 +166,26 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("""
-        **Trẻ Em:**
+        **Trẻ em:**
         - Liều: 0.01 mg/kg IV/IM/IN
         - Có thể cần liều cao hơn nếu fentanyl
-        - Theo dõi sát (dễ Tái Ngộ Độc)
+        - Theo dõi sát (dễ Tái ngộ độc)
         
-        **Phụ Nữ Có Thai:**
+        **Phụ nữ có thai:**
         - Naloxone an toàn (không qua nhau thai nhiều)
         - Ưu tiên cứu mẹ
-        - Monitor thai nhi sau khi mẹ ổn định
+        - Theo dõi thai nhi sau khi mẹ ổn định
         """)
     
     with col2:
         st.markdown("""
-        **Người Cao Tuổi:**
+        **Người cao tuổi:**
         - Có thể nhạy cảm hơn với naloxone
         - Bắt đầu với liều thấp
         - Theo dõi huyết động (có thể tăng huyết áp)
@@ -205,19 +205,19 @@ def render():
     - ✅ Hồi phục hô hấp (RR ≥12/min)
     - ✅ SpO2 ≥94%
     - ✅ Hồi phục ý thức
-    - ✅ Không Tái Ngộ Độc trong 2-4 giờ
+    - ✅ Không Tái ngộ độc trong 2-4 giờ
     
     **Xuất viện khi:**
     - Không triệu chứng ≥2-4 giờ
     - Hô hấp ổn định
     - Ý thức bình thường
     - Có kế hoạch theo dõi
-    - Tư vấn về nguy cơ Tái Ngộ Độc
+    - Tư vấn về nguy cơ Tái ngộ độc
     """)
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **AHA 2020 Guidelines**
@@ -238,12 +238,12 @@ def render():
 
 def render_iv_protocol():
     """IV naloxone protocol"""
-    st.success("## 💉 Naloxone IV (Tĩnh Mạch)")
+    st.success("## 💉 Naloxone IV (Tĩnh mạch)")
     
     st.markdown("""
     **Liều:**
     - **Người Lớn:** 0.4-2 mg IV bolus
-    - **Trẻ Em:** 0.01 mg/kg IV (max 2 mg)
+    - **Trẻ em:** 0.01 mg/kg IV (max 2 mg)
     
     **Ưu điểm:**
     - Tác dụng nhanh nhất (30-60 giây)
@@ -264,7 +264,7 @@ def render_im_protocol():
     st.markdown("""
     **Liều:**
     - **Người Lớn:** 0.4-2 mg IM
-    - **Trẻ Em:** 0.01 mg/kg IM (max 2 mg)
+    - **Trẻ em:** 0.01 mg/kg IM (max 2 mg)
     
     **Ưu điểm:**
     - Không cần đường tĩnh mạch
@@ -285,7 +285,7 @@ def render_in_protocol():
     st.markdown("""
     **Liều:**
     - **Người Lớn:** 2-4 mg IN (mỗi bên mũi)
-    - **Trẻ Em:** 0.1 mg/kg IN (max 4 mg)
+    - **Trẻ em:** 0.1 mg/kg IN (max 4 mg)
     
     **Ưu điểm:**
     - Không cần kim tiêm
@@ -322,7 +322,7 @@ def render_auto_injector_protocol():
 
 def render_mild_overdose():
     """Mild overdose protocol"""
-    st.success("## 🟢 Ngộ Độc Nhẹ")
+    st.success("## 🟢 Ngộ độc nhẹ")
     
     st.markdown("""
     **Triệu chứng:**
@@ -376,7 +376,7 @@ def render_severe_overdose():
     
     **Điều trị ngay:**
     1. **Airway:**
-       - Intubation nếu cần
+       - Đặt nội khí quản nếu cần
        - 100% Oxygen
        - Bag-mask ventilation
     
@@ -391,9 +391,9 @@ def render_severe_overdose():
     
     4. **Hỗ trợ:**
        - Truyền dịch nếu hạ huyết áp
-       - Monitor liên tục
+       - Theo dõi liên tục
     
-    5. **Theo dõi:** 4-6 giờ (nguy cơ Tái Ngộ Độc cao)
+    5. **Theo dõi:** 4-6 giờ (nguy cơ Tái ngộ độc cao)
     """)
 
 
@@ -424,6 +424,6 @@ def render_respiratory_arrest():
     
     **5. Theo dõi:**
     - ICU monitoring
-    - 6-12 giờ (nguy cơ Tái Ngộ Độc rất cao)
+    - 6-12 giờ (nguy cơ Tái ngộ độc rất cao)
     """)
 

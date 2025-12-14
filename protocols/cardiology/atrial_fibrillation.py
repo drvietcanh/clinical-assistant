@@ -153,7 +153,7 @@ def render():
        - **Flecainide:** 200-300 mg PO (pill-in-pocket)
        - **Propafenone:** 600 mg PO
        - **Amiodarone:** 400-800 mg PO qd x 2 tuần
-       - **Ibutilide:** 1 mg IV (cần monitor 4 giờ)
+       - **Ibutilide:** 1 mg IV (cần theo dõi 4 giờ)
     """)
     
     st.markdown("---")
@@ -179,7 +179,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
         "✅ ECG xác nhận rung nhĩ",
@@ -197,7 +197,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -230,7 +230,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **AHA/ACC/HRS 2019 Guidelines**

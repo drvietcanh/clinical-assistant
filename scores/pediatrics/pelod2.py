@@ -350,7 +350,7 @@ def render():
     st.markdown("---")
     
     # Hematologic
-    st.markdown("### 🩸 Huyết Học (Hematologic)")
+    st.markdown("### 🩸 Huyết học (Hematologic)")
     
     col1, col2, col3 = st.columns(3)
     

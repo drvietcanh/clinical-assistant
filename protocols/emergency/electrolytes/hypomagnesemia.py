@@ -170,7 +170,7 @@ def render():
         st.info("""
         **⚠️ Precautions:**
         - **Renal failure:** Giảm liều 50-75%
-        - **Monitor reflexes:** Mất phản xạ = quá liều
+        - **Theo dõi reflexes:** Mất phản xạ = quá liều
         - **Antidote:** Calcium gluconate 1g IV (nếu quá liều)
         """)
     

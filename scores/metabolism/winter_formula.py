@@ -251,7 +251,7 @@ def render():
         st.markdown("---")
         
         # Clinical interpretation
-        st.subheader("🎯 Phân tích Lâm Sàng")
+        st.subheader("🎯 Phân tích Lâm sàng")
         
         if result['color'] == "🟢":
             st.success(f"""

@@ -166,7 +166,7 @@ def render_aki_stage2():
     2. ✅ **Ngừng thuốc độc thận**
     3. ✅ **Optimize perfusion** (nếu prerenal component)
     4. ✅ **Fluid balance** - Euvolemia
-    5. ✅ **Monitor electrolytes** (K⁺ đặc biệt quan trọng!)
+    5. ✅ **Theo dõi electrolytes** (K⁺ đặc biệt quan trọng!)
     """)
     
     st.markdown("---")

@@ -8,7 +8,7 @@ import streamlit as st
 
 def render():
     """Acute Heart Failure Protocol"""
-    st.subheader("💔 Suy Tim Cấp")
+    st.subheader("💔 Suy tim Cấp")
     st.caption("Acute Decompensated Heart Failure - ESC/AHA Guidelines")
     
     st.info("""
@@ -415,7 +415,7 @@ def render():
         - Truyền liên tục nếu đáp ứng kém với bolus
         - Theo dõi điện giải, chức năng thận hàng ngày
         
-        **References:**
+        **Tài liệu tham khảo:**
         - McDonagh TA et al. Eur Heart J. 2021;42(36):3599-3726.
         - Heidenreich PA et al. Circulation. 2022;145(18):e895-e1032.
         - Felker GM et al. JAMA. 2011;305(24):2543-2550. (DOSE trial)

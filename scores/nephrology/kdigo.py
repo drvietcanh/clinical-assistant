@@ -190,7 +190,7 @@ def calculate_kdigo(
         management = """
         **Quản lý - Không AKI:**
         
-        1. **Dự Phòng:**
+        1. **Dự phòng:**
            - Duy trì euvolemia
            - Tránh thuốc độc thận (NSAIDs, aminoglycosides, contrast)
            - Điều chỉnh liều thuốc theo chức năng thận
@@ -368,7 +368,7 @@ def render():
     st.markdown("**Phân loại và đánh giá giai đoạn suy thận cấp**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
+    with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -417,7 +417,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Dữ Liệu Lâm Sàng")
+    st.subheader("📝 Nhập dữ liệu lâm sàng")
     
     # Creatinine section
     st.markdown("#### 🩺 Serum Creatinine")
@@ -436,7 +436,7 @@ def render():
     
     with col2:
         scr_current = st.number_input(
-            "**SCr Hiện Tại (mg/dL)**",
+            "**SCr Hiện tại (mg/dL)**",
             min_value=0.0,
             max_value=20.0,
             value=1.5,
@@ -624,7 +624,7 @@ def render():
         st.markdown("""
         ### Phân Loại Nguyên Nhân AKI
         
-        #### 1. 🔽 Tiền Thận (Pre-Renal) - 40-70%
+        #### 1. 🔽 Tiền thận (Pre-Renal) - 40-70%
         
         **Giảm thể tích:**
         - Mất dịch: Chảy máu, tiêu chảy, nôn, polyuria, bỏng
@@ -660,7 +660,7 @@ def render():
         
         **Chẩn đoán:** FENa >2%, BUN/Cr <20, urine casts (muddy brown, RBC, WBC)
         
-        #### 3. 🔼 Sau Thận (Post-Renal) - 5-10%
+        #### 3. 🔼 Sau thận (Post-Renal) - 5-10%
         
         **Tắc nghẽn đường tiểu:**
         - Phì đại/ung thư tuyến tiền liệt tuyến

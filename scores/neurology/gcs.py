@@ -14,7 +14,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thang Đánh giá")
+        st.markdown("### 📋 Thang đánh giá")
         
         # Eye Opening (E)
         st.markdown("#### 👁️ Mở mắt (Eye Opening)")
@@ -32,7 +32,7 @@ def render():
         eye_score = eye_options[eye_response]
         
         # Verbal Response (V)
-        st.markdown("#### 🗣️ Phản Ứng Lời nói (Verbal Response)")
+        st.markdown("#### 🗣️ Phản ứng lời nói (Verbal Response)")
         verbal_options = {
             "Oriented (Tỉnh táo, định hướng đúng)": 5,
             "Confused (Lẫn lộn)": 4,
@@ -48,7 +48,7 @@ def render():
         verbal_score = verbal_options[verbal_response]
         
         # Motor Response (M)
-        st.markdown("#### 💪 Phản Ứng Vận động (Motor Response)")
+        st.markdown("#### 💪 Phản ứng vận động (Motor Response)")
         motor_options = {
             "Obeys commands (Làm theo lệnh)": 6,
             "Localizes pain (Định vị đau)": 5,
@@ -93,8 +93,8 @@ def render():
             st.markdown(f"""
             **Chi tiết:**
             - Mở mắt (Eye Opening): {eye_score}/4 - {eye_response}
-            - Phản Ứng Lời nói (Verbal Response): {verbal_score}/5 - {verbal_response}
-            - Phản Ứng Vận động (Motor Response): {motor_score}/6 - {motor_response}
+            - Phản ứng lời nói (Verbal Response): {verbal_score}/5 - {verbal_response}
+            - Phản ứng vận động (Motor Response): {motor_score}/6 - {motor_response}
             """)
             
             st.markdown("---")
@@ -147,14 +147,14 @@ def render():
                 - 2: Khi đau (To pain)
                 - 1: Không mở (None)
                 
-                **Phản Ứng Lời nói (Verbal Response) (1-5):**
+                **Phản ứng lời nói (Verbal Response) (1-5):**
                 - 5: Tỉnh táo, định hướng đúng (Oriented)
                 - 4: Lẫn lộn (Confused)
                 - 3: Nói lung tung (Inappropriate words)
                 - 2: Rên rỉ (Incomprehensible sounds)
                 - 1: Không nói (None)
                 
-                **Phản Ứng Vận động (Motor Response) (1-6):**
+                **Phản ứng vận động (Motor Response) (1-6):**
                 - 6: Làm theo lệnh (Obeys commands)
                 - 5: Định vị đau (Localizes pain)
                 - 4: Rút tay khi đau (Withdraws from pain)

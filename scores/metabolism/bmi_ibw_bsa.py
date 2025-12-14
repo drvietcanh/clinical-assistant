@@ -429,7 +429,7 @@ def render():
     
     # Quick reference with detailed explanations
     st.markdown("---")
-    with st.expander("📖 Giải thích Chuyên Sâu Các Thuật Ngữ", expanded=False):
+    with st.expander("📖 Giải thích chuyên sâu các thuật ngữ", expanded=False):
         st.markdown("""
         ### 📏 BMI (Body Mass Index - Chỉ Số Khối Cơ Thể)
         

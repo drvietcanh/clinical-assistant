@@ -100,7 +100,7 @@ def render():
         st.caption(f"{shock_level} → Điểm: {shock_score}")
         
         # 3. Comorbidities
-        st.markdown("#### 3. Bệnh Đi Kèm")
+        st.markdown("#### 3. Bệnh đi kèm")
         
         comorbidity_options = [
             "Không có hoặc nhẹ",
@@ -368,7 +368,7 @@ def render():
                 **Complete Rockall:** 0-11 điểm
                 """)
             
-            with st.expander("📈 Bảng Nguy cơ Theo Điểm"):
+            with st.expander("📈 Bảng nguy cơ theo điểm"):
                 if is_complete:
                     st.markdown("""
                     **Complete Rockall Score:**

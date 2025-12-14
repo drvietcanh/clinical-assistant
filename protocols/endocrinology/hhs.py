@@ -242,11 +242,11 @@ def render():
     st.markdown("---")
     
     # ========== SECTION: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### ⚡ Xử Trí Ngay Lập Tức")
+    st.markdown("### ⚡ Xử trí ngay lập tức")
     
     st.error("""
     **Ưu tiên hàng đầu:**
-    1. ✅ **ABC:** Airway, Breathing, Circulation
+    1. ✅ **ABC:** Đường thở, Hô hấp, Tuần hoàn
     2. ✅ **Truyền dịch ngay:** 0.9% NS 1-2 L trong giờ đầu
     3. ✅ **Đo glucose, ABG, điện giải ngay**
     4. ✅ **Bắt đầu insulin** sau khi đã truyền dịch
@@ -488,11 +488,11 @@ def render():
     st.markdown("---")
     
     # ========== SECTION: CHECKLIST ==========
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
         "✅ Chẩn đoán (Glucose >600, Osmolality >320, pH >7.30)",
-        "✅ ABC: Airway, Breathing, Circulation",
+        "✅ ABC: Đường thở, Hô hấp, Tuần hoàn",
         "✅ Truyền Dịch ngay (0.9% NS 1-2 L giờ đầu)",
         "✅ Insulin 0.05-0.1 units/kg/h (sau khi đã truyền dịch)",
         "✅ Bổ Sung Kali ngay",
@@ -508,7 +508,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -535,7 +535,7 @@ def render():
         **Có thai:**
         - Hiếm gặp
         - Điều trị tương tự
-        - Monitor thai nhi
+        - Theo dõi thai nhi
         """)
     
     st.markdown("---")
@@ -559,7 +559,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ADA 2023 Guidelines**

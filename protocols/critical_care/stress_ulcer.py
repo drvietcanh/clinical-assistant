@@ -122,7 +122,7 @@ def render():
     st.markdown("### 4️⃣ Monitoring")
     
     st.info("""
-    **Monitor dấu hiệu GI bleeding:**
+    **Theo dõi dấu hiệu GI bleeding:**
     - **Hematemesis:** Nôn máu
     - **Melena:** Phân đen
     - **Hematochezia:** Phân máu đỏ
@@ -160,7 +160,7 @@ def render():
         """)
     
     st.markdown("---")
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **SCCM Guidelines** - Stress Ulcer Prophylaxis 2016

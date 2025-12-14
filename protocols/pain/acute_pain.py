@@ -32,7 +32,7 @@ def render():
     
     pain_scale = st.radio(
         "**Thang điểm đau:**",
-        ["NRS (0-10)", "VAS (0-100mm)", "FACES (Trẻ Em)", "FLACC (Trẻ nhỏ)"],
+        ["NRS (0-10)", "VAS (0-100mm)", "FACES (Trẻ em)", "FLACC (Trẻ nhỏ)"],
         key="pain_scale"
     )
     
@@ -68,7 +68,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Loại Mức Độ Đau")
+    st.markdown("### 📊 Phân loại mức độ Đau")
     
     pain_level = st.radio(
         "**Mức độ đau:**",
@@ -185,7 +185,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
         "✅ Đánh giá đau (NRS/VAS)",
@@ -205,7 +205,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -259,7 +259,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ASIPP 2017 Guidelines**
@@ -326,7 +326,7 @@ def render_vas_scale():
 
 def render_faces_scale():
     """FACES pain scale"""
-    st.info("## 📊 FACES (Trẻ Em)")
+    st.info("## 📊 FACES (Trẻ em)")
     
     st.markdown("""
     **6 khuôn mặt:**

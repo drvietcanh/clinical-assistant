@@ -110,7 +110,7 @@ def calculate_wells_dvt(
         recommendation = """
         **🔴 Xử trí khuyến cáo:**
         
-        1. **Cận Lâm Sàng:**
+        1. **Cận Lâm sàng:**
            - Siêu âm tĩnh mạch chân (Duplex ultrasound) - NGAY
            - Nếu siêu âm âm tính nhưng nghi ngờ cao → xem xét chụp CT/MRI tĩnh mạch
         
@@ -146,7 +146,7 @@ def calculate_wells_dvt(
            - D-dimer âm tính (age-adjusted) → loại trừ DVT (NPV ~99%)
            - D-dimer dương tính → tiến hành siêu âm tĩnh mạch
         
-        2. **Chiến Lược 2 Bước:**
+        2. **Chiến lược 2 bước:**
            ```
            Wells <2 → D-dimer
                 ├─ Âm tính → Loại trừ DVT, tìm chẩn đoán khác
@@ -190,7 +190,7 @@ def render():
     st.markdown("**Đánh giá xác suất tiền test của huyết khối tĩnh mạch sâu**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
+    with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -238,7 +238,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("##### 🏥 Tiền Sử & Yếu tố nguy cơ")
+        st.markdown("##### 🏥 Tiền sử & yếu tố nguy cơ")
         active_cancer = st.checkbox(
             "**Ung thư đang hoạt động**",
             help="Đang điều trị, trong 6 tháng qua, hoặc điều trị giảm nhẹ"
@@ -255,7 +255,7 @@ def render():
         )
     
     with col2:
-        st.markdown("##### 🔍 Triệu chứng Lâm Sàng")
+        st.markdown("##### 🔍 Triệu chứng Lâm sàng")
         localized_tenderness = st.checkbox(
             "**Đau chạm khu trú dọc hệ tĩnh mạch sâu**",
             help="Đau dọc theo đường đi của tĩnh mạch đùi hoặc tĩnh mạch khoeo"
@@ -271,7 +271,7 @@ def render():
             help="Đo chu vi bắp chân cách mỏm chày 10 cm"
         )
     
-    st.markdown("##### 🩺 Khám Lâm Sàng")
+    st.markdown("##### 🩺 Khám Lâm sàng")
     col3, col4 = st.columns(2)
     
     with col3:

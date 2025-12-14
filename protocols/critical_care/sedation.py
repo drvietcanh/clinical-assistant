@@ -71,7 +71,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Loại Mức Độ")
+    st.markdown("### 📊 Phân loại mức độ")
     
     sedation_level = st.radio(
         "**Mức độ an thần cần thiết:**",
@@ -115,7 +115,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
         "✅ Đánh giá đau trước (NRS/VAS)",
@@ -135,13 +135,13 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("""
-        **Người Cao Tuổi:**
+        **Người cao tuổi:**
         - Nhạy cảm hơn với thuốc
         - Giảm liều 25-50%
         - Tránh benzodiazepine nếu có thể
@@ -162,7 +162,7 @@ def render():
         - Cẩn thận với fentanyl
         - Theo dõi chức năng gan
         
-        **Trẻ Em:**
+        **Trẻ em:**
         - Liều tính theo kg
         - Cẩn thận propofol infusion syndrome
         - Ưu tiên dexmedetomidine
@@ -192,7 +192,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **SCCM 2018 Guidelines**

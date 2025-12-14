@@ -88,7 +88,7 @@ def render():
         st.markdown("### 🔬 Xét nghiệm")
         
         # 1. Bilirubin
-        st.markdown("#### 1. Bilirubin Toàn Phần")
+        st.markdown("#### 1. Bilirubin toàn phần")
         
         bili_unit = st.radio(
             "Đơn vị:",
@@ -171,7 +171,7 @@ def render():
             st.caption(f"≈ {round(cr * 88.4)} µmol/L")
         
         # 4. Dialysis
-        st.markdown("#### 4. Lọc Máu")
+        st.markdown("#### 4. Lọc máu")
         dialysis = st.checkbox(
             "Đã lọc máu ≥2 lần trong 7 ngày qua HOẶC CRRT 24h",
             help="Nếu có, Cr sẽ được tính là 4.0 mg/dL"

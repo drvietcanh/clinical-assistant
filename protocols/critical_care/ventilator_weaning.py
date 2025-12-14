@@ -24,7 +24,7 @@ def render():
     # Readiness assessment
     st.markdown("### 1️⃣ Readiness Assessment - Đánh giá Sẵn Sàng Cai Máy")
     
-    st.markdown("#### 📋 Checklist - Sẵn Sàng Cai Máy")
+    st.markdown("#### 📋 Danh sách kiểm tra - Sẵn Sàng Cai Máy")
     
     col1, col2 = st.columns(2)
     
@@ -137,7 +137,7 @@ def render():
     **Other:**
     - No stridor risk (cuff leak test nếu cần)
     - No planned surgery trong 24h
-    - Reintubation risk assessment
+    - Ređặt nội khí quản risk assessment
     """)
     
     st.markdown("---")
@@ -173,7 +173,7 @@ def render():
     """)
     
     st.markdown("---")
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **SCCM Guidelines** - Liberation from Mechanical Ventilation 2017
@@ -224,7 +224,7 @@ def render_sbt():
     with col2:
         st.markdown("#### 📊 SBT Monitoring")
         
-        st.markdown("**Monitor mỗi 5-15 phút:**")
+        st.markdown("**Theo dõi mỗi 5-15 phút:**")
         st.checkbox("✅ SpO₂", key="sbt_mon1")
         st.checkbox("✅ HR, BP", key="sbt_mon2")
         st.checkbox("✅ RR", key="sbt_mon3")
@@ -277,7 +277,7 @@ def render_tpiece():
     1. Disconnect từ ventilator
     2. T-piece với O₂ flow 10-15 L/min
     3. Duration: 30-120 phút
-    4. Monitor sát (tương tự SBT)
+    4. Theo dõi sát (tương tự SBT)
     5. Nếu thành công → Extubate
     """)
 

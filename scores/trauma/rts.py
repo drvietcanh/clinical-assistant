@@ -188,7 +188,7 @@ def render():
     st.markdown("**Đánh giá sinh lý và tiên lượng bệnh nhân chấn thương**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
+    with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -286,7 +286,7 @@ def render():
         st.caption("Huyết áp tâm thu")
     
     with col3:
-        st.markdown("#### 🫁 Tần Số Thở")
+        st.markdown("#### 🫁 Tần số thở")
         rr = st.number_input(
             "**RR (breaths/min)**",
             min_value=0.0,

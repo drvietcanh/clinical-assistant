@@ -160,7 +160,7 @@ def render():
         **If mild/moderate:**
         1. ✅ **Identify cause**
         2. ✅ **3% Saline:** 0.5-2 ml/kg/h
-        3. ✅ **Monitor Na⁺ mỗi 2-4h**
+        3. ✅ **Theo dõi Na⁺ mỗi 2-4h**
         4. ✅ **Điều chỉnh tốc độ** để không vượt 8 mEq/L/24h
         """)
     
@@ -185,7 +185,7 @@ def render():
            * Vaptans (tolvaptan) - cautious
            * Loop diuretic + NaCl tablets
         4. ✅ **3% Saline:** Rất thận trọng, slow rate
-        5. ✅ **Monitor Na⁺ mỗi 4-6h**
+        5. ✅ **Theo dõi Na⁺ mỗi 4-6h**
         """)
     
     with tab3:
@@ -210,7 +210,7 @@ def render():
         - Stop hypertonic saline
         - Give D5W 100-200ml/h
         - Hoặc DDAVP 1-2 mcg IV q6-8h
-        - Monitor Na⁺ mỗi 2h
+        - Theo dõi Na⁺ mỗi 2h
         """)
     
     st.markdown("---")
@@ -231,7 +231,7 @@ def render():
     - Volume: 420 / 513 = 0.82 L
     - Rate over 24h: 0.82 / 24 × 1000 = 34 ml/h
     
-    **⚠️ Monitor Na⁺ mỗi 2-4h và điều chỉnh!**
+    **⚠️ Theo dõi Na⁺ mỗi 2-4h và điều chỉnh!**
     """)
     
     st.markdown("---")

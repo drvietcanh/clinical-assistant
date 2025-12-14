@@ -374,7 +374,7 @@ def render():
         # Liver
         st.markdown("#### 3️⃣ Gan")
         bilirubin = st.number_input(
-            "Bilirubin Toàn Phần (mg/dL):",
+            "Bilirubin toàn phần (mg/dL):",
             min_value=0.0,
             max_value=30.0,
             value=1.0,

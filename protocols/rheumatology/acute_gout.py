@@ -172,7 +172,7 @@ def render_mild_gout():
     **Sau khi hết cơn:**
     - Đánh giá chỉ định ULT
     - Lifestyle modifications
-    - Monitor uric acid
+    - Theo dõi uric acid
     """)
 
 
@@ -297,8 +297,8 @@ def render_severe_gout():
           * Stop
         
         **Lưu ý:**
-        - Monitor glucose (diabetes)
-        - Monitor BP
+        - Theo dõi glucose (diabetes)
+        - Theo dõi BP
         - GI protection (PPI)
         """)
     

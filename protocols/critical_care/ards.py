@@ -37,7 +37,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("#### Phân Loại Mức Độ")
+        st.markdown("#### Phân loại mức độ")
         
         pao2_fio2 = st.number_input(
             "**PaO₂/FiO₂ (mmHg):**",
@@ -69,11 +69,11 @@ def render():
     st.markdown("### 1️⃣ Xử Trí Tức Thì (< 1 Giờ)")
     
     st.error("""
-    **ABC - Airway, Breathing, Circulation:**
+    **ABC - Đường thở, Hô hấp, Tuần hoàn:**
     
     **A - Airway:**
     - Đảm bảo đường thở thông thoáng
-    - Cân nhắc intubation nếu:
+    - Cân nhắc đặt nội khí quản nếu:
       * GCS <8
       * Không bảo vệ được đường thở
       * Respiratory failure (PaO₂ <60 mmHg với O₂)
@@ -81,7 +81,7 @@ def render():
     
     **B - Breathing:**
     - **Oxygen therapy:** High-flow nasal cannula (HFNC) hoặc non-invasive ventilation (NIV)
-    - **Nếu không đáp ứng:** Intubation và mechanical ventilation
+    - **Nếu không đáp ứng:** Đặt nội khí quản và mechanical ventilation
     - **Mục tiêu SpO₂:** 88-95% (cho phép permissive hypoxemia)
     
     **C - Circulation:**
@@ -264,7 +264,7 @@ def render():
         - **Mục tiêu:** Negative balance 500-1000ml/ngày
         
         **Lưu ý:**
-        - Monitor creatinine, electrolytes
+        - Theo dõi creatinine, electrolytes
         - Không dùng nếu hypovolemic
         - Cân nhắc albumin nếu hypoalbuminemia
         """)
@@ -355,7 +355,7 @@ def render():
         
         **Lưu ý:**
         - Phải có deep sedation (RASS -5)
-        - Monitor với train-of-four (TOF)
+        - Theo dõi với train-of-four (TOF)
         - Ngừng sau 48h, đánh giá lại
         """)
     
@@ -409,7 +409,7 @@ def render():
         **Lưu ý:**
         - Có thể gây hypotension
         - Có thể gây barotrauma
-        - Monitor BP, SpO₂ trong khi RM
+        - Theo dõi BP, SpO₂ trong khi RM
         - Không dùng nếu có pneumothorax
         """)
     
@@ -438,7 +438,7 @@ def render():
         
         **Lưu ý:**
         - Không dùng nếu nghi nhiễm trùng không kiểm soát được
-        - Monitor glucose, infection
+        - Theo dõi glucose, infection
         - Có thể tăng nguy cơ neuromyopathy
         """)
     
@@ -519,7 +519,7 @@ def render():
         """)
     
     st.markdown("---")
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **Berlin Definition of ARDS** - ARDS Definition Task Force 2012

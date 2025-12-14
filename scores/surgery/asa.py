@@ -264,7 +264,7 @@ def render():
         st.markdown("---")
         
         # Risk assessment and recommendations
-        st.subheader("💡 Khuyến nghị Lâm Sàng")
+        st.subheader("💡 Khuyến nghị Lâm sàng")
         
         if selected_asa == "ASA I":
             st.success("""

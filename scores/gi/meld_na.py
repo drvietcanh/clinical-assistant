@@ -385,7 +385,7 @@ def render():
         
         if meld_na < 10:
             st.success("""
-            ### ✅ MELD-Na < 10 - Bệnh Gan Còn Ổn Định
+            ### ✅ MELD-Na < 10 - Bệnh gan còn ổn định
             
             **Theo dõi:**
             - Khám định kỳ 3-6 tháng
@@ -406,7 +406,7 @@ def render():
         
         elif meld_na < 15:
             st.info("""
-            ### 📋 MELD-Na 10-14 - Bệnh Gan Nặng Dần
+            ### 📋 MELD-Na 10-14 - Bệnh gan Nặng Dần
             
             **Theo dõi:**
             - Khám định kỳ 2-3 tháng

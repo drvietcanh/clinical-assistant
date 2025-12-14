@@ -50,18 +50,18 @@ def render_upper_gi_bleeding():
     
     with col1:
         st.error("""
-        **ABC - Airway, Breathing, Circulation:**
+        **ABC - Đường thở, Hô hấp, Tuần hoàn:**
         
         **A - Airway:**
         - Đảm bảo đường thở thông thoáng
-        - Cân nhắc intubation nếu:
+        - Cân nhắc đặt nội khí quản nếu:
           * GCS <8
           * Nôn máu nhiều
           * Risk aspiration cao
         
         **B - Breathing:**
         - O₂ để duy trì SpO₂ >94%
-        - Monitor SpO₂ liên tục
+        - Theo dõi SpO₂ liên tục
         
         **C - Circulation:**
         - **2 đường truyền tĩnh mạch lớn** (16-18G)
@@ -109,7 +109,7 @@ def render_upper_gi_bleeding():
     
     **Nếu tụt huyết áp hoặc shock:**
     1. **Crystalloid:** NS 0.9% hoặc LR
-       - Bolus 500-1000ml
+       - Liều bolus 500-1000ml
        - Đánh giá đáp ứng
        - Lặp lại nếu cần
     
@@ -118,7 +118,7 @@ def render_upper_gi_bleeding():
        - **Nếu Hgb 7-10 g/dL:** Tùy tình trạng lâm sàng
        - **Nếu Hgb >10 g/dL:** Thường không cần (trừ khi shock hoặc xuất huyết tiếp)
     
-    3. **Massive Transfusion Protocol (nếu xuất huyết nặng):**
+    3. **Phác đồ truyền máu khối lượng lớn (nếu xuất huyết nặng):**
        - RBC:FFP:Platelet = 1:1:1
        - Mục tiêu: Hgb >7, INR <1.5, Platelet >50k
     
@@ -159,19 +159,19 @@ def render_upper_gi_bleeding():
     
     bleeding_source = st.radio(
         "**Nghi ngờ nguyên nhân:**",
-        ["Chưa xác định", "Non-Variceal (PUD, Mallory-Weiss)", "Variceal (Xơ gan/Varices)"],
+        ["Chưa xác định", "Không do giãn tĩnh mạch (PUD, Mallory-Weiss)", "Do giãn tĩnh mạch (Xơ gan/Varices)"],
         key="ugib_source"
     )
     
     st.markdown("---")
     
-    if "Non-Variceal" in bleeding_source or "Chưa xác định" in bleeding_source:
-        st.markdown("#### 💊 Non-Variceal Bleeding - PPI Protocol")
+    if "Không do giãn tĩnh mạch" in bleeding_source or "Chưa xác định" in bleeding_source:
+        st.markdown("#### 💊 Xuất huyết không do giãn tĩnh mạch - Phác đồ PPI")
         
-        tab1, tab2 = st.tabs(["IV PPI Dosing Calculator", "Hướng dẫn điều trị"])
+        tab1, tab2 = st.tabs(["Máy tính liều PPI IV", "Hướng dẫn điều trị"])
         
         with tab1:
-            st.markdown("##### 💉 High-Dose IV PPI Calculator")
+            st.markdown("##### 💉 Máy tính liều cao PPI IV")
             
             col1, col2 = st.columns([1, 2])
             
@@ -184,15 +184,15 @@ def render_upper_gi_bleeding():
                 
                 method = st.radio(
                     "**Phương pháp:**",
-                    ["Continuous Infusion (Ưu tiên)", "Intermittent Bolus"],
+                    ["Truyền liên tục (Ưu tiên)", "Liều bolus ngắt quãng"],
                     key="ppi_method"
                 )
                 
-                if method == "Continuous Infusion":
+                if "Truyền liên tục" in method:
                     st.markdown("**Liều chuẩn:**")
                     st.info("""
-                    - **Bolus:** 80mg IV trong 30 phút
-                    - **Infusion:** 8mg/h × 72 giờ
+                    - **Liều bolus:** 80mg IV trong 30 phút
+                    - **Truyền tĩnh mạch:** 8mg/h × 72 giờ
                     """)
                     
                     # Calculate infusion
@@ -220,13 +220,13 @@ def render_upper_gi_bleeding():
                 st.markdown("##### 📋 Protocol Chi tiết")
                 
                 st.success("""
-                **High-Dose IV PPI (Non-Variceal UGIB):**
+                **PPI IV liều cao (Xuất huyết tiêu hóa trên không do giãn tĩnh mạch):**
                 
-                **Bước 1: Bolus**
+                **Bước 1: Liều bolus**
                 - {ppi_type} 80mg IV trong 30 phút
                 - Bắt đầu ngay khi chẩn đoán UGIB
                 
-                **Bước 2: Continuous Infusion (nếu dùng)**
+                **Bước 2: Truyền liên tục (nếu dùng)**
                 - {ppi_type} 8mg/h × 72 giờ
                 - Duy trì pH dạ dày >6
                 - Giảm tái xuất huyết
@@ -254,18 +254,18 @@ def render_upper_gi_bleeding():
             
             st.markdown("**Chống chỉ định:**")
             st.warning("""
-            - ❌ Variceal bleeding (dùng Octreotide thay vì PPI)
+            - ❌ Xuất huyết do giãn tĩnh mạch (dùng Octreotide thay vì PPI)
             - ❌ Dị ứng PPI
             """)
     
-    if "Variceal" in bleeding_source or "Chưa xác định" in bleeding_source:
+    if "Do giãn tĩnh mạch" in bleeding_source or "Chưa xác định" in bleeding_source:
         st.markdown("---")
-        st.markdown("#### 🩸 Variceal Bleeding - Octreotide Protocol")
+        st.markdown("#### 🩸 Xuất huyết do giãn tĩnh mạch - Phác đồ Octreotide")
         
         col1, col2 = st.columns([1, 2])
         
         with col1:
-            st.markdown("##### 💉 Octreotide Dosing")
+            st.markdown("##### 💉 Tính liều Octreotide")
             
             weight = st.number_input(
                 "**Cân nặng (kg):**",
@@ -279,8 +279,8 @@ def render_upper_gi_bleeding():
             bolus_dose = 50.0  # mcg
             infusion_rate = 25.0  # mcg/h (có thể tăng đến 50mcg/h)
             
-            st.metric("**Bolus:**", f"{bolus_dose:.0f} mcg IV", help="Truyền trong 5 phút")
-            st.metric("**Infusion:**", f"{infusion_rate:.0f} mcg/h", help="Tối đa 5 ngày")
+            st.metric("**Liều bolus:**", f"{bolus_dose:.0f} mcg IV", help="Truyền trong 5 phút")
+            st.metric("**Truyền tĩnh mạch:**", f"{infusion_rate:.0f} mcg/h", help="Tối đa 5 ngày")
             
             st.info("""
             **Cách pha:**
@@ -290,14 +290,14 @@ def render_upper_gi_bleeding():
             """.format(infusion_rate / 20))
         
         with col2:
-            st.markdown("##### 📋 Variceal Protocol")
+            st.markdown("##### 📋 Phác đồ xuất huyết do giãn tĩnh mạch")
             
             st.error("""
-            **Variceal Bleeding Management:**
+            **Điều trị xuất huyết do giãn tĩnh mạch:**
             
             1. **Octreotide:**
-               - Bolus: 50-100mcg IV (truyền trong 5 phút)
-               - Infusion: 25-50mcg/h × 5 ngày (tối đa)
+               - Liều bolus: 50-100mcg IV (truyền trong 5 phút)
+               - Truyền tĩnh mạch: 25-50mcg/h × 5 ngày (tối đa)
                - Giảm portal pressure
             
             2. **Kháng sinh dự phòng:**
@@ -321,7 +321,7 @@ def render_upper_gi_bleeding():
     st.markdown("---")
     st.markdown("### 5️⃣ Chỉ định Nội Soi - Decision Tree")
     
-    st.markdown("#### ⏱️ Endoscopy Timing Calculator")
+    st.markdown("#### ⏱️ Máy tính thời điểm nội soi")
     
     # Input for decision
     col1, col2 = st.columns(2)
@@ -421,7 +421,7 @@ def render_upper_gi_bleeding():
     """)
     
     st.markdown("---")
-    st.markdown("#### 🔍 Chuẩn Bị Nội Soi")
+    st.markdown("#### 🔍 Chuẩn bị nội soi")
     
     col1, col2 = st.columns(2)
     
@@ -442,7 +442,7 @@ def render_upper_gi_bleeding():
         - ✅ Monitor: BP, HR, SpO₂ liên tục
         - ✅ Sẵn sàng can thiệp cầm máu
         - ✅ Sẵn sàng truyền máu nếu cần
-        - ✅ Có thể cần intubation nếu nguy cơ cao
+        - ✅ Có thể cần đặt nội khí quản nếu nguy cơ cao
         
         **Sau nội soi:**
         - ✅ Theo dõi sát 24-48h
@@ -481,7 +481,7 @@ def render_upper_gi_bleeding():
         """)
     
     with tab2:
-        st.markdown("#### 🩸 Variceal Bleeding")
+        st.markdown("#### 🩸 Xuất huyết do giãn tĩnh mạch")
         
         st.error("""
         **Điều trị khẩn cấp:**
@@ -542,7 +542,7 @@ def render_upper_gi_bleeding():
         """)
     
     st.markdown("---")
-    st.markdown("### 7️⃣ Theo dõi & Dự Phòng Tái Phát")
+    st.markdown("### 7️⃣ Theo dõi & Dự phòng Tái Phát")
     
     st.success("""
     **Monitoring:**
@@ -620,7 +620,7 @@ def render_lower_gi_bleeding():
     st.success("""
     **Timing cho Colonoscopy:**
     
-    **Urgent Colonoscopy (< 24h):**
+    **Nội soi đại tràng khẩn cấp (< 24h):**
     - ✅ Xuất huyết tiếp diễn
     - ✅ Hemodynamically unstable
     - ✅ Hgb drop nhanh
@@ -748,7 +748,7 @@ def render_lower_gi_bleeding():
 
 def render_gbs_calculator():
     """Simplified GBS calculator for protocol"""
-    st.markdown("#### 🩸 Glasgow-Blatchford Score Calculator")
+    st.markdown("#### 🩸 Máy tính điểm Glasgow-Blatchford")
     
     col1, col2 = st.columns([2, 1])
     
@@ -823,7 +823,7 @@ def render_gbs_calculator():
 
 def render_rockall_calculator():
     """Simplified Rockall calculator for protocol"""
-    st.markdown("#### 🩸 Rockall Score Calculator")
+    st.markdown("#### 🩸 Máy tính điểm Rockall")
     
     version = st.radio(
         "**Phiên bản:**",
@@ -914,7 +914,7 @@ def render_unknown_gi_bleeding():
     st.error("""
     **Xử trí ngay trong khi đánh giá:**
     
-    1. ✅ **ABC** - Airway, Breathing, Circulation
+    1. ✅ **ABC** - Đường thở, Hô hấp, Tuần hoàn
     2. ✅ **2 đường truyền** tĩnh mạch lớn
     3. ✅ **Lấy máu:** CBC, PT/INR, aPTT, Type & Cross
     4. ✅ **Resuscitation** - Bù dịch và máu nếu cần

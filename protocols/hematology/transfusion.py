@@ -105,7 +105,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Truyền Máu")
+    st.markdown("### 📋 Danh sách kiểm tra truyền máu")
     
     checklist_items = [
         "✅ Xác định chỉ định truyền máu",
@@ -124,7 +124,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -151,12 +151,12 @@ def render():
         **Có thai:**
         - Rh-negative cần RhIg nếu Rh-positive
         - Truyền chậm
-        - Monitor thai nhi
+        - Theo dõi thai nhi
         """)
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **AABB 2016 Guidelines**
@@ -199,7 +199,7 @@ def render_rbc_protocol():
     
     **Liều:**
     - **1 đơn vị:** Tăng Hb ~1 g/dL (Người Lớn)
-    - **Trẻ Em:** 10-15 mL/kg
+    - **Trẻ em:** 10-15 mL/kg
     
     **Tốc Độ:**
     - Bắt đầu: 15 phút đầu chậm

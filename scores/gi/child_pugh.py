@@ -50,7 +50,7 @@ def render():
         st.markdown("### 🔬 Xét nghiệm")
         
         # 1. Total Bilirubin
-        st.markdown("#### 1. Bilirubin Toàn Phần")
+        st.markdown("#### 1. Bilirubin toàn phần")
         
         bili_unit = st.radio(
             "Đơn vị:",
@@ -170,10 +170,10 @@ def render():
             st.error(f"🔴 {inr_level} → +{inr_score} điểm")
     
     with col2:
-        st.markdown("### 🩺 Lâm Sàng")
+        st.markdown("### 🩺 Lâm sàng")
         
         # 4. Ascites
-        st.markdown("#### 4. Cổ Chướng (Ascites)")
+        st.markdown("#### 4. Cổ chướng (Ascites)")
         ascites = st.radio(
             "Mức độ cổ chướng:",
             [
@@ -198,7 +198,7 @@ def render():
         score_breakdown["Ascites"] = asc_score
         
         # 5. Hepatic Encephalopathy
-        st.markdown("#### 5. Bệnh Não Gan (Hepatic Encephalopathy)")
+        st.markdown("#### 5. Bệnh não gan (Hepatic Encephalopathy)")
         
         st.info("""
         **West Haven Criteria:**

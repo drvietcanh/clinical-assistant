@@ -519,7 +519,7 @@ def render():
         - Neurosurgery consult
         """)
     
-    with st.expander("📋 Protocol Loại Trừ Lâm Sàng"):
+    with st.expander("📋 Protocol Loại Trừ Lâm sàng"):
         st.markdown("""
         ### C-Spine Clinical Clearance Algorithm:
         

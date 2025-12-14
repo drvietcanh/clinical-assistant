@@ -76,7 +76,7 @@ def render():
     st.markdown("### 🔍 Tìm Nguyên Nhân (PIMED)")
     
     st.warning("""
-    **PIMED - Các Nguyên Nhân Thường gặp:**
+    **PIMED - Các Nguyên nhân thường gặp:**
     
     **P - Pain (Đau):**
     - Đau không được kiểm soát
@@ -127,7 +127,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
         "✅ Đánh giá CAM-ICU hàng ngày",
@@ -147,13 +147,13 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("""
-        **Người Cao Tuổi:**
+        **Người cao tuổi:**
         - Nguy cơ cao hơn
         - Thường là hypoactive delirium
         - Cẩn thận với thuốc (giảm liều)
@@ -172,7 +172,7 @@ def render():
         - Tránh benzodiazepine nếu có thể
         - Theo dõi chức năng gan
         
-        **Trẻ Em:**
+        **Trẻ em:**
         - Delirium ít gặp hơn
         - Cần đánh giá phù hợp lứa tuổi
         - Cẩn thận với thuốc
@@ -199,7 +199,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ICU Delirium Guidelines**

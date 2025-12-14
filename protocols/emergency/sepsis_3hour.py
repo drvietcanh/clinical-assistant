@@ -442,17 +442,17 @@ def render():
         - Thận trọng với truyền dịch (nguy cơ cổ trướng)
         - Xem xét albumin nếu giảm albumin nặng
         
-        #### **Suy Tim:**
+        #### **Suy tim:**
         - Thận trọng với truyền dịch (nguy cơ suy tim nặng)
         - Ưu tiên vasopressor thay vì dịch
         - Xem xét inotrope (dobutamine) sớm
         
-        #### **Phụ Nữ Có Thai:**
+        #### **Phụ nữ có thai:**
         - Tránh kháng sinh gây hại thai nhi
         - Thận trọng với vasopressor (ảnh hưởng đến thai nhi)
         - Xem xét chấm dứt thai kỳ nếu cần
         
-        #### **Người Cao Tuổi:**
+        #### **Người cao tuổi:**
         - Thận trọng với truyền dịch (nguy cơ quá tải)
         - Điều chỉnh liều kháng sinh theo CrCl
         - Xem xét các bệnh lý kèm theo

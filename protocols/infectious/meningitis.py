@@ -50,18 +50,18 @@ def render_bacterial_meningitis():
     
     with col1:
         st.error("""
-        **ABC - Airway, Breathing, Circulation:**
+        **ABC - Đường thở, Hô hấp, Tuần hoàn:**
         
         **A - Airway:**
         - Đảm bảo đường thở thông thoáng
-        - Cân nhắc intubation nếu:
+        - Cân nhắc đặt nội khí quản nếu:
           * GCS <8
           * Không bảo vệ được đường thở
           * Respiratory failure
         
         **B - Breathing:**
         - O₂ để duy trì SpO₂ >94%
-        - Monitor SpO₂ liên tục
+        - Theo dõi SpO₂ liên tục
         
         **C - Circulation:**
         - **2 đường truyền tĩnh mạch lớn**
@@ -482,7 +482,7 @@ def render_unknown_meningitis():
     st.error("""
     **Xử trí ngay trong khi chờ chẩn đoán:**
     
-    1. ✅ **ABC** - Airway, Breathing, Circulation
+    1. ✅ **ABC** - Đường thở, Hô hấp, Tuần hoàn
     2. ✅ **2 đường truyền** tĩnh mạch
     3. ✅ **Lấy máu:** CBC, PT/INR, Blood cultures
     4. ✅ **LP ngay** (nếu không chống chỉ định)

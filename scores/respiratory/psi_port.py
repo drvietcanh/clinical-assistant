@@ -74,7 +74,7 @@ def render():
         )
         
         st.markdown("---")
-        st.markdown("### 🌡️ Triệu chứng Lâm Sàng")
+        st.markdown("### 🌡️ Triệu chứng Lâm sàng")
         
         altered_mental = st.checkbox(
             "Rối loạn ý thức",

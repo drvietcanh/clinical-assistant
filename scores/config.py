@@ -63,7 +63,7 @@ SCORES_BY_SPECIALTY = {
         "Ranson": {"name": "Ranson Criteria", "desc": "Tiên lượng viêm tụy cấp", "status": "✅"},
     },
     
-    "🩺 Huyết Học & Đông máu (Hematology)": {
+    "🩺 Huyết học & Đông máu (Hematology)": {
         "Padua": {"name": "Padua Prediction Score", "desc": "Nguy cơ VTE - Chỉ định prophylaxis (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Wells DVT": {"name": "Wells DVT Score", "desc": "Nguy cơ huyết khối tĩnh mạch sâu", "status": "✅"},
         "4Ts Score": {"name": "4Ts Score - HIT", "desc": "Giảm tiểu cầu do heparin", "status": "✅"},
@@ -100,7 +100,7 @@ SCORES_BY_SPECIALTY = {
         "Pediatric SOFA": {"name": "Pediatric SOFA (pSOFA)", "desc": "Suy đa cơ quan ICU nhi - Điều chỉnh theo tuổi", "status": "✅"},
     },
     
-    "🤰 Sản Khoa (Obstetrics)": {
+    "🤰 Sản khoa (Obstetrics)": {
         "Preeclampsia": {"name": "Preeclampsia Severity", "desc": "Mức độ nặng tiền sản giật (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Bishop Score": {"name": "Bishop Score", "desc": "Đánh giá cổ tử cung", "status": "✅"},
         "Modified Bishop": {"name": "Modified Bishop Score", "desc": "Dự đoán chuyển dạ", "status": "✅"},

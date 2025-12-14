@@ -109,7 +109,7 @@ def render():
         **Lưu ý:**
         - Dùng ngắn hạn (≤2 tuần)
         - Giảm dần liều
-        - Monitor glucose, BP
+        - Theo dõi glucose, BP
         """)
     
     with tab2:
@@ -173,7 +173,7 @@ def render():
         
         **Lưu ý:**
         - Cần screening TB, HBV, HCV trước khi dùng
-        - Monitor infection
+        - Theo dõi infection
         - Không dùng nếu có infection active
         """)
     
@@ -206,7 +206,7 @@ def render():
     """)
     
     st.markdown("---")
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ACR Guidelines 2021** - Rheumatoid Arthritis Treatment

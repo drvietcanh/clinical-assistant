@@ -180,7 +180,7 @@ def render():
         st.success("""
         **Oxygen:**
         - **Mục tiêu:** SpO₂ 93-95% (Người Lớn)
-        - SpO₂ 94-98% (Trẻ Em)
+        - SpO₂ 94-98% (Trẻ em)
         - Nasal cannula hoặc mask
         
         **Magnesium Sulfate:**
@@ -202,7 +202,7 @@ def render():
             **2. Aminophylline IV (nếu ICU):**
             - Loading: 5-6 mg/kg IV trong 20-30 phút
             - Maintenance: 0.5-0.7 mg/kg/h
-            - **LƯU Ý:** Chỉ dùng ở ICU, có monitor ECG
+            - **LƯU Ý:** Chỉ dùng ở ICU, có theo dõi ECG
             - Nguy cơ tác dụng phụ cao
             
             **3. Heliox (nếu có):**
@@ -350,7 +350,7 @@ def render():
         - BTS/SIGN 2019: British Thoracic Society
         - NAEPP EPR-4 2020: US Guidelines
         
-        **References:**
+        **Tài liệu tham khảo:**
         - Rowe BH et al. Cochrane Database. 2013 (Magnesium sulfate)
         - Griffiths B et al. Cochrane Database. 2016 (Ipratropium bromide)
         - Rowe BH et al. Cochrane Database. 2001 (Systemic corticosteroids)

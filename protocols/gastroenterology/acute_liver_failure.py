@@ -56,18 +56,18 @@ def render_acetaminophen_alf():
     
     with col1:
         st.error("""
-        **ABC - Airway, Breathing, Circulation:**
+        **ABC - Đường thở, Hô hấp, Tuần hoàn:**
         
         **A - Airway:**
         - Đánh giá GCS
-        - Cân nhắc intubation nếu:
+        - Cân nhắc đặt nội khí quản nếu:
           * GCS <8
           * Encephalopathy grade 3-4
           * Không bảo vệ được đường thở
         
         **B - Breathing:**
         - O₂ để duy trì SpO₂ >94%
-        - Monitor SpO₂ liên tục
+        - Theo dõi SpO₂ liên tục
         
         **C - Circulation:**
         - **2 đường truyền tĩnh mạch lớn**
@@ -134,7 +134,7 @@ def render_acetaminophen_alf():
         
         **Lưu ý:**
         - Có thể lặp lại nếu cần
-        - Monitor anaphylactoid reactions (rash, bronchospasm)
+        - Theo dõi anaphylactoid reactions (rash, bronchospasm)
         - Nếu có reaction: Dừng 1h, sau đó tiếp tục với tốc độ chậm hơn
         """)
     
@@ -168,7 +168,7 @@ def render_acetaminophen_alf():
         **Coagulopathy:**
         - **Vitamin K:** 10mg IV × 3 ngày
         - **FFP:** Chỉ nếu có bleeding hoặc trước procedure
-        - **INR:** Monitor nhưng không điều trị trừ khi bleeding
+        - **INR:** Theo dõi nhưng không điều trị trừ khi bleeding
         """)
     
     with col2:
@@ -430,7 +430,7 @@ def render_unknown_alf():
     st.error("""
     **Xử trí ngay trong khi chờ chẩn đoán:**
     
-    1. ✅ **ABC** - Airway, Breathing, Circulation
+    1. ✅ **ABC** - Đường thở, Hô hấp, Tuần hoàn
     2. ✅ **2 đường truyền** tĩnh mạch
     3. ✅ **Lấy máu:** LFT, PT/INR, Acetaminophen level, Viral serology, Autoimmune markers, Ceruloplasmin, Copper
     4. ✅ **N-acetylcysteine:** Empiric nếu nghi acetaminophen

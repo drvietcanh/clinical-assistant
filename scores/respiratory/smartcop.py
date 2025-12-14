@@ -515,7 +515,7 @@ def render():
             st.markdown(f"| **TỔNG** | **{total_score}** |")
         
         # Risk table
-        with st.expander("📈 Bảng Nguy cơ Theo Điểm SMART-COP"):
+        with st.expander("📈 Bảng nguy cơ theo điểm SMART-COP"):
             st.markdown("""
             | SMART-COP Score | Nguy cơ Cần IRVS | Khuyến nghị |
             |-----------------|-------------------|-------------|
@@ -579,7 +579,7 @@ def render():
         **Trong thực hành:** Kết hợp cả 3 thang điểm + đánh giá lâm sàng!
         """)
     
-    with st.expander("🏥 Tiêu chí nhập ICU Cho Viêm Phổi (ATS/IDSA)"):
+    with st.expander("🏥 Tiêu chí nhập ICU Cho viêm phổi (ATS/IDSA)"):
         st.markdown("""
         **Severe CAP** định nghĩa bởi ATS/IDSA Guidelines:
         
@@ -603,7 +603,7 @@ def render():
         **SMART-COP giúp dự đoán sớm** những bệnh nhân này!
         """)
     
-    with st.expander("💊 Điều trị Kháng Sinh Viêm Phổi Cộng Đồng"):
+    with st.expander("💊 Điều trị kháng sinh viêm phổi cộng đồng"):
         st.markdown("""
         **Phân loại theo mức độ:**
         

@@ -287,7 +287,7 @@ def render():
     
     # Clinical notes
     st.markdown("---")
-    st.subheader("📚 Ghi Chú Lâm Sàng")
+    st.subheader("📚 Ghi Chú Lâm sàng")
     
     with st.expander("🎯 Mục tiêu HbA1c theo ADA/EASD"):
         st.markdown("""

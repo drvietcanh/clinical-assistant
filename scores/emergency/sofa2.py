@@ -266,7 +266,7 @@ def render():
     
     # Liver
     st.markdown("#### 3️⃣ Gan (Liver)")
-    bilirubin = st.number_input("Bilirubin Toàn Phần (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f")
+    bilirubin = st.number_input("Bilirubin toàn phần (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f")
     st.caption("💡 Chuyển đổi: μmol/L ÷ 17.1 = mg/dL")
     
     st.divider()

@@ -65,7 +65,7 @@ def calculate_4ts_score(
            - Kiểm tra tất cả thuốc/dịch truyền có chứa heparin
            - Không dùng heparin cho bất kỳ mục đích nào
         
-        2. **Bắt Đầu Kháng Đông Thay Thế:**
+        2. **Bắt đầu kháng đông thay thế:**
            - **Argatroban** (DTI - direct thrombin inhibitor):
              * Liều: 2 mcg/kg/min IV (giảm 0.5-1 mcg/kg/min nếu suy gan)
              * Theo dõi aPTT (mục tiêu: 1.5-3× baseline)
@@ -89,7 +89,7 @@ def calculate_4ts_score(
            - Đánh giá huyết khối mới (DVT, PE, động mạch)
            - Siêu âm doppler chi dưới nếu chưa làm
         
-        6. **Chuyển Đổi Sang Warfarin:**
+        6. **Chuyển đổi sang Warfarin:**
            - Chờ tiểu cầu >150,000/μL × 2 ngày
            - Overlap ≥5 ngày + INR 2-3 trong 24h
            - Duy trì kháng đông ≥3 tháng
@@ -248,7 +248,7 @@ def render():
     st.markdown("**Đánh giá xác suất giảm tiểu cầu do heparin**")
     
     # Educational information
-    with st.expander("ℹ️ Thông tin & Cách Sử dụng"):
+    with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
         ### 📋 Giới Thiệu
         
@@ -294,10 +294,10 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập Thông tin 4 Thành phần")
+    st.subheader("📝 Nhập thông tin 4 thành phần")
     
     # 1. Thrombocytopenia
-    st.markdown("#### 1️⃣ Thrombocytopenia - Mức Độ Giảm Tiểu Cầu")
+    st.markdown("#### 1️⃣ Thrombocytopenia - Mức độ giảm tiểu cầu")
     thrombocytopenia_category = st.radio(
         "Chọn mức độ giảm tiểu cầu:",
         options=[2, 1, 0],
@@ -313,7 +313,7 @@ def render():
     st.divider()
     
     # 2. Timing
-    st.markdown("#### 2️⃣ Timing - Thời Gian Xuất Hiện Giảm Tiểu Cầu")
+    st.markdown("#### 2️⃣ Timing - Thời gian xuất hiện giảm tiểu cầu")
     st.caption("Tính từ khi BẮT ĐẦU heparin đến khi tiểu cầu giảm")
     
     timing_category = st.radio(
@@ -331,7 +331,7 @@ def render():
     st.divider()
     
     # 3. Thrombosis
-    st.markdown("#### 3️⃣ Thrombosis - Huyết Khối hoặc Biến chứng Khác")
+    st.markdown("#### 3️⃣ Thrombosis - Huyết khối hoặc biến chứng khác")
     thrombosis_category = st.radio(
         "Chọn tình trạng huyết khối/biến chứng:",
         options=[2, 1, 0],
@@ -347,7 +347,7 @@ def render():
     st.divider()
     
     # 4. Other causes
-    st.markdown("#### 4️⃣ oTher Causes - Các Nguyên Nhân Khác")
+    st.markdown("#### 4️⃣ oTher Causes - Các nguyên nhân khác")
     st.caption("Đánh giá khả năng có nguyên nhân KHÁC gây giảm tiểu cầu")
     
     other_causes_category = st.radio(
@@ -448,7 +448,7 @@ def render():
     # Quick reference
     with st.expander("📖 Bảng tham khảo Nhanh - Alternative Anticoagulants"):
         st.markdown("""
-        ### Thuốc Kháng Đông Thay Thế Cho HIT
+        ### Thuốc kháng đông thay thế cho HIT
         
         #### 1. Argatroban (DTI - Direct Thrombin Inhibitor)
         - **Liều:** 2 mcg/kg/min IV continuous
@@ -473,7 +473,7 @@ def render():
         - **Rivaroxaban, Apixaban:** Một số evidence nhưng chưa approved chính thức
         - Có thể xem xét nếu không có alternative khác
         
-        ### Chuyển Đổi Sang Warfarin
+        ### Chuyển đổi sang Warfarin
         
         1. **Chờ tiểu cầu >150,000/μL** × 2 ngày liên tiếp
         2. **Bắt đầu warfarin:** 5 mg/ngày (hoặc liều thấp hơn nếu người già)

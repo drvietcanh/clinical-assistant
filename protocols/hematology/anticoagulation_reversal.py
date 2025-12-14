@@ -57,7 +57,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Loại Mức Độ Chảy Máu")
+    st.markdown("### 📊 Phân loại mức độ Chảy Máu")
     
     bleeding_severity = st.radio(
         "**Mức độ chảy máu:**",
@@ -78,7 +78,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Đảo Ngược")
+    st.markdown("### 📋 Danh sách kiểm tra đảo ngược")
     
     checklist_items = [
         "✅ Xác định loại thuốc chống đông",
@@ -98,13 +98,13 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("""
-        **Người Cao Tuổi:**
+        **Người cao tuổi:**
         - Cẩn thận với liều cao (nguy cơ quá liều)
         - Theo dõi sát hơn
         - Cân nhắc giảm liều nếu suy thận
@@ -122,7 +122,7 @@ def render():
         - PCC: Cẩn thận với nguy cơ huyết khối
         - Theo dõi chức năng gan
         
-        **Phụ Nữ Có Thai:**
+        **Phụ nữ có thai:**
         - Vitamin K an toàn
         - PCC: Cân nhắc cẩn thận
         - Protamine: Có thể dùng nếu cần
@@ -149,7 +149,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ACCP 2018 Guidelines**
@@ -549,7 +549,7 @@ def render_severe_bleeding():
     - Cần truyền máu ngay
     
     **Điều trị Ngay:**
-    1. **ABC:** Airway, Breathing, Circulation
+    1. **ABC:** Đường thở, Hô hấp, Tuần hoàn
     2. **Truyền máu:** Nếu cần
     3. **Đảo ngược ngay:**
     

@@ -66,7 +66,7 @@ def render():
     
     st.title("🏥 Ranson Criteria")
     st.markdown("""
-    ### Tiên Lượng Viêm Tụy Cấp
+    ### Tiên lượng viêm tụy cấp
     
     **Ranson Criteria:**
     - Tiên lượng mức độ nặng viêm tụy cấp
@@ -105,8 +105,8 @@ def render():
     st.markdown("---")
     
     # Admission criteria (0h)
-    st.subheader("📋 Tiêu chí Lúc Nhập Viện (0h)")
-    st.markdown("### 5 Tiêu chí Ban Đầu")
+    st.subheader("📋 Tiêu chí lúc nhập viện (0h)")
+    st.markdown("### 5 Tiêu chí ban đầu")
     
     admission_count = 0
     
@@ -162,7 +162,7 @@ def render():
     st.markdown("---")
     
     # 48-hour criteria
-    st.subheader("📋 Tiêu chí Sau 48 Giờ")
+    st.subheader("📋 Tiêu chí sau 48 giờ")
     st.markdown("### 6 Tiêu chí Tại 48h")
     
     st.warning("""
@@ -518,7 +518,7 @@ def render():
     st.markdown("---")
     st.subheader("📚 Thông tin bổ sung")
     
-    with st.expander("🆚 So sánh Các Hệ Thống Tiên lượng"):
+    with st.expander("🆚 So sánh các hệ thống tiên lượng"):
         st.markdown("""
         ### Ranson vs APACHE II vs Atlanta:
         

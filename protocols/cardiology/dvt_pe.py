@@ -9,7 +9,7 @@ import streamlit as st
 
 def render():
     """DVT/PE Management Protocol"""
-    st.subheader("🩸 Huyết Khối Tĩnh Mạch Sâu / Thuyên Tắc Phổi")
+    st.subheader("🩸 Huyết Khối Tĩnh mạch Sâu / Thuyên Tắc Phổi")
     st.caption("ACCP 2016, ESC 2019 - DVT/PE management")
     
     st.info("""
@@ -132,7 +132,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều trị")
+    st.markdown("### 📋 Danh sách kiểm tra điều trị")
     
     checklist_items = [
         "✅ Đánh giá nguy cơ (Wells score, PERC, PESI)",
@@ -150,7 +150,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 👥 Special Populations")
+    st.markdown("### 👥 Nhóm bệnh nhân đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -183,7 +183,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 References")
+    st.markdown("### 📚 Tài liệu tham khảo")
     
     st.markdown("""
     1. **ACCP 2016 Guidelines**
@@ -204,7 +204,7 @@ def render():
 
 def render_dvt_protocol():
     """DVT protocol"""
-    st.success("## 🟢 Huyết Khối Tĩnh Mạch Sâu (DVT)")
+    st.success("## 🟢 Huyết Khối Tĩnh mạch Sâu (DVT)")
     
     st.markdown("""
     **Triệu chứng:**

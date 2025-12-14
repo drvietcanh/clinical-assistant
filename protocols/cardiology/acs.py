@@ -370,7 +370,7 @@ def render():
         - High-risk NSTEMI: Angiography <24h
         - Intermediate-risk: Angiography <72h
         
-        **References:**
+        **Tài liệu tham khảo:**
         - Collet JP et al. Eur Heart J. 2021;42(14):1289-1367.
         - Ibanez B et al. Eur Heart J. 2018;39(2):119-177.
         - Lawton JS et al. Circulation. 2022;145(18):e18-e114.

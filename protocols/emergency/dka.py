@@ -339,7 +339,7 @@ def render_severe_dka():
     **K⁺:**
     - **Check ngay và thường xuyên**
     - **Replace aggressively** (20-40 mEq/L)
-    - **Monitor ECG**
+    - **Theo dõi ECG**
     """)
     
     st.markdown("---")
@@ -353,7 +353,7 @@ def render_severe_dka():
     
     **Dose:** 1-2 mEq/kg IV trong 1h
     
-    **⚠️ Monitor K⁺ closely!**
+    **⚠️ Theo dõi K⁺ closely!**
     """)
     
     st.markdown("---")
@@ -370,7 +370,7 @@ def render_severe_dka():
         
         **Hypokalemia:**
         - Xảy ra sau insulin
-        - Monitor thường xuyên
+        - Theo dõi thường xuyên
         """)
     
     with col2:
@@ -432,7 +432,7 @@ def render_severe_dka():
           * No insulin bolus (avoid rapid drops)
           * Aggressive fluid resuscitation
           * K⁺ replacement critical
-          * Monitor for cerebral edema (peds)
+          * Theo dõi for cerebral edema (peds)
           * Resolution takes 12-24h typically
         """)
 

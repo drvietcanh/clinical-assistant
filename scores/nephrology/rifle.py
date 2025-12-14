@@ -123,11 +123,11 @@ def render():
     
     with col1:
         scr_baseline = st.number_input("SCr Baseline (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
-        scr_current = st.number_input("SCr Hiện Tại (mg/dL)", 0.0, 20.0, 1.5, 0.1, format="%.1f")
+        scr_current = st.number_input("SCr Hiện tại (mg/dL)", 0.0, 20.0, 1.5, 0.1, format="%.1f")
         gfr_decrease_percent = st.number_input("GFR Giảm (%)", 0.0, 100.0, 0.0, 1.0, format="%.1f")
     
     with col2:
-        weight = st.number_input("Cân Nặng (kg)", 0.0, 300.0, 70.0, 1.0, format="%d")
+        weight = st.number_input("Cân nặng (kg)", 0.0, 300.0, 70.0, 1.0, format="%.1f")
         urine_output_6h = st.number_input("Nước tiểu 6h (mL)", -1.0, 5000.0, -1.0, 10.0, format="%.0f")
         urine_output_12h = st.number_input("Nước tiểu 12h (mL)", -1.0, 10000.0, -1.0, 10.0, format="%.0f")
     
