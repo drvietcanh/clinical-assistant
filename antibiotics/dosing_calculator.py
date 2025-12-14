@@ -76,17 +76,18 @@ def render_dosing_calculator():
     # Check for imported values
     use_imported, imported_crcl, imported_egfr, imported_gfr_absolute = check_imported_values()
     
-    # Get patient inputs
-    patient_data = render_patient_inputs()
+    # Get patient inputs (includes calculated IBW, BMI, ABW)
+    from .dosing_ui.patient_inputs import get_patient_data
+    patient_data = get_patient_data()
     
     st.markdown("---")
     
-    # Calculate IBW, ABW, BMI
-    ibw = patient_data['ibw']
-    bmi = patient_data['bmi']
-    is_obese = patient_data['is_obese']
-    abw = patient_data['abw']
-    weight = patient_data['weight']
+    # Extract calculated values
+    ibw = patient_data.get('ibw', 0)
+    bmi = patient_data.get('bmi', 0)
+    is_obese = patient_data.get('is_obese', False)
+    abw = patient_data.get('abw', patient_data.get('weight', 70))
+    weight = patient_data.get('weight', 70)
     
     # Display weight metrics
     render_weight_metrics(weight, ibw, bmi, is_obese, abw)
@@ -100,10 +101,10 @@ def render_dosing_calculator():
     else:
         # Calculate with appropriate weight
         crcl = calculate_crcl(
-            patient_data['age'],
+            patient_data.get('age', 65),
             abw if is_obese else weight,
-            patient_data['scr_mgdl'],
-            patient_data['sex'],
+            patient_data.get('scr_mgdl', 1.0),
+            patient_data.get('sex', 'Nam'),
             use_abw=is_obese,
             abw=abw
         )
@@ -114,17 +115,17 @@ def render_dosing_calculator():
         st.info(f"📥 Sử dụng eGFR đã import: {egfr:.1f} mL/min/1.73m²")
     else:
         egfr = calculate_egfr_simplified(
-            patient_data['age'],
-            patient_data['scr_mgdl'],
-            patient_data['sex']
+            patient_data.get('age', 65),
+            patient_data.get('scr_mgdl', 1.0),
+            patient_data.get('sex', 'Nam')
         )
     
     # Get renal category
     renal_category = get_renal_category(
         crcl, egfr,
-        patient_data['is_hemodialysis'],
-        patient_data['is_continuous_hd'],
-        patient_data['is_peritoneal_dialysis']
+        patient_data.get('is_hemodialysis', False),
+        patient_data.get('is_continuous_hd', False),
+        patient_data.get('is_peritoneal_dialysis', False)
     )
     
     # Display renal metrics
@@ -145,9 +146,9 @@ def render_dosing_calculator():
             crcl,
             egfr,
             indication=indication_code,
-            albumin_gdl=patient_data['albumin_gdl'] if patient_data['is_icu'] else None,
-            shock_type=patient_data['shock_type'] if patient_data['is_icu'] else None,
-            is_icu=patient_data['is_icu']
+            albumin_gdl=patient_data.get('albumin_gdl') if patient_data.get('is_icu', False) else None,
+            shock_type=patient_data.get('shock_type') if patient_data.get('is_icu', False) else None,
+            is_icu=patient_data.get('is_icu', False)
         )
         
         if "error" in result:
@@ -171,9 +172,9 @@ def render_dosing_calculator():
             render_warnings_section(
                 selected_ab,
                 crcl,
-                patient_data['age'],
-                patient_data['is_pregnant'],
-                patient_data['is_breastfeeding'],
+                patient_data.get('age', 65),
+                patient_data.get('is_pregnant', False),
+                patient_data.get('is_breastfeeding', False),
                 other_drugs
             )
     

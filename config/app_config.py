@@ -55,10 +55,10 @@ APP_CONFIG = {
         ),
         "antibiotics": ModuleInfo(
             id="antibiotics",
-            title="Thuốc",
+            title="Kháng sinh",
             icon="💊",
             page_path="pages/02_💊_Drugs.py",
-            description="Tra cứu & so sánh thuốc",
+            description="Tra cứu & so sánh kháng sinh",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
         ),

@@ -281,7 +281,6 @@ def render():
                 "pH động mạch:",
                 min_value=6.80,
                 max_value=7.80,
-                format="%.2f",
                 value=7.40,
                 step=0.01,
                 format="%.2f",

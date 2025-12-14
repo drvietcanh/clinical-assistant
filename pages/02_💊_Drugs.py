@@ -17,9 +17,9 @@ from antibiotics.treatment_algorithms import render_algorithms_page
 
 # Standard page setup
 setup_page(
-    page_title="Thuốc",
+    page_title="Kháng sinh",
     page_icon="💊",
-    description="Tra cứu thuốc, so sánh liều dùng và chỉ định"
+    description="Tra cứu kháng sinh, so sánh liều dùng và chỉ định"
 )
 
 # ========== SIDEBAR ==========
@@ -29,8 +29,8 @@ with st.sidebar:
     function_type = st.selectbox(
         "Công cụ:",
         [
-            "🔍 Tra cứu & dữ liệu thuốc",
-            "🔬 So sánh nhiều thuốc",
+            "🔍 Tra cứu & dữ liệu kháng sinh",
+            "🔬 So sánh nhiều kháng sinh",
             "📊 So sánh Side-by-Side",
             "🔄 Phác đồ điều trị"
         ]
@@ -45,7 +45,7 @@ with st.sidebar:
     - WHO AWaRe Classification
     
     **💡 Tính liều theo thận:**
-    Xem module "💊 Tra cứu thuốc" → 
+    Xem module "💊 Tra cứu kháng sinh" → 
     "🧮 Tính liều theo eGFR/CrCl"
     """)
 
