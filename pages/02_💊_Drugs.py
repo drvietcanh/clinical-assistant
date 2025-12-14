@@ -1,5 +1,5 @@
 """
-Drugs Module - Dosing & TDM
+Antibiotics Module - Dosing & TDM
 Main Router - Imports from antibiotics module
 Note: Module package name remains 'antibiotics' for backward compatibility
 """

@@ -7,6 +7,10 @@ Similar to antibiotics search but for general drug database
 import streamlit as st
 from difflib import SequenceMatcher
 from .drug_database import DRUG_DATABASE, DRUG_GROUPS
+import logging
+
+# Setup logger
+logger = logging.getLogger(__name__)
 
 
 def similarity_score(str1, str2):
@@ -19,54 +23,61 @@ def search_drugs(query, max_results=None):
     if not query:
         return []
     
-    query_lower = query.lower().strip()
-    results = []
-    
-    for drug_name, drug_data in DRUG_DATABASE.items():
-        score = 0.0
+    try:
+        query_lower = query.lower().strip()
+        results = []
         
-        # Search in name (highest priority)
-        if query_lower in drug_name.lower():
-            if query_lower == drug_name.lower():
-                score = 1.0  # Exact match
-            elif drug_name.lower().startswith(query_lower):
-                score = 0.9  # Starts with query
-            else:
-                score = 0.8  # Contains query
-            results.append((drug_name, drug_data, score))
-            continue
-        
-        # Search in Vietnamese name
-        if 'vietnamese_name' in drug_data:
-            vn_name_lower = drug_data['vietnamese_name'].lower()
-            if query_lower in vn_name_lower:
-                score = 0.7
+        for drug_name, drug_data in DRUG_DATABASE.items():
+            score = 0.0
+            
+            # Search in name (highest priority)
+            if query_lower in drug_name.lower():
+                if query_lower == drug_name.lower():
+                    score = 1.0  # Exact match
+                elif drug_name.lower().startswith(query_lower):
+                    score = 0.9  # Starts with query
+                else:
+                    score = 0.8  # Contains query
                 results.append((drug_name, drug_data, score))
                 continue
-        
-        # Search in group
-        if 'group' in drug_data:
-            group_lower = drug_data['group'].lower()
-            if query_lower in group_lower:
-                score = 0.6
-                results.append((drug_name, drug_data, score))
-                continue
-        
-        # Search in indications
-        if 'indications' in drug_data:
-            for indication in drug_data['indications']:
-                if query_lower in indication.lower():
-                    score = 0.5
+            
+            # Search in Vietnamese name
+            if 'vietnamese_name' in drug_data:
+                vn_name_lower = drug_data['vietnamese_name'].lower()
+                if query_lower in vn_name_lower:
+                    score = 0.7
                     results.append((drug_name, drug_data, score))
-                    break
+                    continue
+            
+            # Search in group
+            if 'group' in drug_data:
+                group_lower = drug_data['group'].lower()
+                if query_lower in group_lower:
+                    score = 0.6
+                    results.append((drug_name, drug_data, score))
+                    continue
+            
+            # Search in indications
+            if 'indications' in drug_data:
+                for indication in drug_data['indications']:
+                    if query_lower in indication.lower():
+                        score = 0.5
+                        results.append((drug_name, drug_data, score))
+                        break
     
-    # Sort by score (descending)
-    results.sort(key=lambda x: x[2], reverse=True)
-    
-    # Return just (name, data) tuples for backward compatibility
-    if max_results:
-        return [(name, data) for name, data, score in results[:max_results]]
-    return [(name, data) for name, data, score in results]
+        # Sort by score (descending)
+        results.sort(key=lambda x: x[2], reverse=True)
+        
+        # Return just (name, data) tuples for backward compatibility
+        result_tuples = [(name, data) for name, data, score in results]
+        
+        if max_results:
+            return result_tuples[:max_results]
+        return result_tuples
+        
+    except Exception as e:
+        logger.error(f"Error in search_drugs: {e}", exc_info=True)
+        return []
 
 
 def get_drug_autocomplete_suggestions(query, max_suggestions=5):
