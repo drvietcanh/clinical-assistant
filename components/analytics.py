@@ -341,7 +341,10 @@ def render_analytics_dashboard() -> None:
             </div>
             """
         chart_html += "</div>"
-        st.markdown(chart_html, unsafe_allow_html=True)
+        try:
+            st.html(chart_html)
+        except AttributeError:
+            st.markdown(chart_html, unsafe_allow_html=True)
     
     st.markdown("---")
     
@@ -368,7 +371,10 @@ def render_analytics_dashboard() -> None:
             </div>
             """
         specialty_html += "</div>"
-        st.markdown(specialty_html, unsafe_allow_html=True)
+        try:
+            st.html(specialty_html)
+        except AttributeError:
+            st.markdown(specialty_html, unsafe_allow_html=True)
     
     st.markdown("---")
     
@@ -421,7 +427,10 @@ def render_analytics_dashboard() -> None:
             </div>
             """
         chart_html += "</div>"
-        st.markdown(chart_html, unsafe_allow_html=True)
+        try:
+            st.html(chart_html)
+        except AttributeError:
+            st.markdown(chart_html, unsafe_allow_html=True)
     else:
         st.info("📊 Chưa có dữ liệu sử dụng. Hãy sử dụng các công cụ để xem thống kê!")
     
@@ -461,7 +470,10 @@ def render_analytics_dashboard() -> None:
             </div>
             """
         chart_html += "</div>"
-        st.markdown(chart_html, unsafe_allow_html=True)
+        try:
+            st.html(chart_html)
+        except AttributeError:
+            st.markdown(chart_html, unsafe_allow_html=True)
     else:
         st.info("📊 Chưa có dữ liệu sử dụng theo giờ. Hãy sử dụng các công cụ để xem thống kê!")
     
