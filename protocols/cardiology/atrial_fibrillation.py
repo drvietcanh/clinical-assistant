@@ -27,7 +27,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Chẩn Đoán")
+    st.markdown("### 📋 Chẩn đoán")
     
     with st.expander("🔍 Tiêu chuẩn chẩn đoán", expanded=True):
         st.markdown("""
@@ -46,7 +46,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Chiến Lược Điều Trị")
+    st.markdown("### 🎯 Chiến Lược Điều trị")
     
     strategy = st.radio(
         "**Chiến lược điều trị:**",
@@ -106,7 +106,7 @@ def render():
     st.markdown("### 💊 Thuốc Kiểm Soát Tần Số")
     
     st.warning("""
-    **Mục Tiêu:** Tần số thất 60-100 bpm (nghỉ ngơi), <110 bpm (vận động nhẹ)
+    **Mục tiêu:** Tần số thất 60-100 bpm (nghỉ ngơi), <110 bpm (vận động nhẹ)
     
     **1. Beta Blockers (Ưu tiên):**
     - **Metoprolol:** 25-100 mg PO bid
@@ -120,7 +120,7 @@ def render():
     **3. Digoxin:**
     - **Liều:** 0.125-0.25 mg PO qd
     - **Dùng khi:** Suy tim, không vận động nhiều
-    - **Theo Dõi:** Nồng độ digoxin, chức năng thận
+    - **Theo dõi:** Nồng độ digoxin, chức năng thận
     
     **4. Amiodarone:**
     - **Liều:** 200-400 mg PO qd
@@ -133,12 +133,12 @@ def render():
     st.markdown("### ⚡ Khôi Phục Nhịp (Cardioversion)")
     
     st.info("""
-    **Chỉ Định:**
+    **Chỉ định:**
     - Rung nhĩ mới (<48 giờ) có triệu chứng
     - Rung nhĩ persistent có triệu chứng
     - Suy tim do rung nhĩ
     
-    **Chống Chỉ Định:**
+    **Chống chỉ định:**
     - Rung nhĩ >48 giờ không chống đông đủ
     - Huyết khối nhĩ trái (cần TEE)
     - Digoxin toxicity
@@ -170,7 +170,7 @@ def render():
     **Warfarin:**
     - **Liều:** 2-10 mg PO qd (điều chỉnh theo INR)
     - **Mục tiêu INR:** 2.0-3.0
-    - **Theo Dõi:** INR hàng tuần đến ổn định
+    - **Theo dõi:** INR hàng tuần đến ổn định
     
     **Aspirin:**
     - Chỉ dùng khi CHADS₂-VASc = 0
@@ -179,7 +179,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều Trị")
+    st.markdown("### 📋 Checklist Điều trị")
     
     checklist_items = [
         "✅ ECG xác nhận rung nhĩ",
@@ -254,13 +254,13 @@ def render_rate_control():
     st.success("## 🟢 Kiểm Soát Tần Số")
     
     st.markdown("""
-    **Chỉ Định:**
+    **Chỉ định:**
     - Rung nhĩ không triệu chứng
     - Người cao tuổi
     - Rung nhĩ lâu năm
     - Không thể duy trì nhịp xoang
     
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - Tần số thất: 60-100 bpm (nghỉ ngơi)
     - <110 bpm (vận động nhẹ)
     
@@ -269,7 +269,7 @@ def render_rate_control():
     2. **Diltiazem:** 120-360 mg qd (ER)
     3. **Digoxin:** 0.125-0.25 mg qd (nếu suy tim)
     
-    **Theo Dõi:** ECG, triệu chứng, chức năng thận
+    **Theo dõi:** ECG, triệu chứng, chức năng thận
     """)
 
 
@@ -278,7 +278,7 @@ def render_rhythm_control():
     st.warning("## 🟡 Khôi Phục Nhịp")
     
     st.markdown("""
-    **Chỉ Định:**
+    **Chỉ định:**
     - Rung nhĩ mới (<48 giờ)
     - Có triệu chứng nặng
     - Suy tim do rung nhĩ
@@ -317,7 +317,7 @@ def render_anticoagulation():
     - Mục tiêu INR: 2.0-3.0
     - Dùng khi: Van cơ học, hẹp van 2 lá
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - Chức năng thận (DOAC)
     - INR (warfarin)
     - Dấu hiệu chảy máu
@@ -326,10 +326,10 @@ def render_anticoagulation():
 
 def render_acute_af_rvr():
     """Acute AF with rapid ventricular response"""
-    st.error("## 🔴 Rung Nhĩ Cấp Với RVR - Cấp Cứu")
+    st.error("## 🔴 Rung Nhĩ Cấp Với RVR - Cấp cứu")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Tần số thất >150 bpm
     - Hạ huyết áp, suy tim
     - Đau ngực, khó thở
@@ -347,8 +347,8 @@ def render_acute_af_rvr():
     
     4. **Amiodarone:** 150 mg IV bolus, sau đó 1 mg/min x 6h
     
-    **Mục Tiêu:** Tần số thất <100 bpm
+    **Mục tiêu:** Tần số thất <100 bpm
     
-    **Theo Dõi:** ECG liên tục, huyết áp
+    **Theo dõi:** ECG liên tục, huyết áp
     """)
 

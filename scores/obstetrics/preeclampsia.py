@@ -34,7 +34,7 @@ def render():
     st.markdown("---")
     
     # Input
-    st.subheader("📝 Đánh giá Bệnh Nhân")
+    st.subheader("📝 Đánh giá Bệnh nhân")
     
     # Basic criteria
     st.markdown("### 1️⃣ Chẩn đoán cơ bản Preeclampsia:")
@@ -190,7 +190,7 @@ def render():
     if st.button("📊 Đánh giá mức độ nặng", type="primary", use_container_width=True):
         is_severe = len(severe_features) > 0
         
-        # Results
+        # Kết quảs
         st.markdown("## 📊 Kết quả")
         
         if is_severe:
@@ -222,7 +222,7 @@ def render():
             - Lượng nước tiểu 24h
             
             **2️⃣ Điều trị huyết áp:**
-            - **Mục Tiêu:** HA < 160/110 mmHg
+            - **Mục tiêu:** HA < 160/110 mmHg
             - **Thuốc lựa chọn:**
               - **Labetalol** IV: 20 mg → 40 → 80 mg q10min
               - **Hydralazine** IV: 5-10 mg q20min

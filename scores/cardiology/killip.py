@@ -170,7 +170,7 @@ def render():
               - Nitroglycerin 10-200 mcg/min IV
               - Morphine 2-4 mg IV (giảm lo âu)
             - **PCI khẩn** nếu STEMI
-            - **Theo Dõi:** ABG, lactate, UOP
+            - **Theo dõi:** ABG, lactate, UOP
             """)
         else:  # class4
             st.error("""
@@ -192,7 +192,7 @@ def render():
             - Cân nhắc **CABG khẩn** nếu đa nhánh, thân chung trái
             - Cân nhắc **ECMO/Impella** nếu shock kháng trị
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - ABG, lactate q1-2h
             - Cardiac output, SVR
             - Nước tiểu (Foley catheter)

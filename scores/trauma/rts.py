@@ -13,9 +13,9 @@ RTS Formula:
 RTS = 0.9368 × GCS + 0.7326 × SBP + 0.2908 × RR
 
 Components (coded values):
-- Glasgow Coma Scale (GCS): 3-15
-- Systolic Blood Pressure (SBP): mmHg
-- Respiratory Rate (RR): breaths/min
+- Thang điểm hôn mê Glasgow (GCS): 3-15
+- Huyết áp tâm thu (SBP): mmHg
+- Nhịp thở (RR): breaths/min
 
 Interpretation:
 - RTS ranges from 0 (worst) to 7.84 (best)
@@ -79,9 +79,9 @@ def calculate_rts(gcs: int, sbp: float, rr: float) -> dict:
     Calculate Revised Trauma Score
     
     Args:
-        gcs: Glasgow Coma Scale (3-15)
-        sbp: Systolic Blood Pressure (mmHg)
-        rr: Respiratory Rate (breaths/min)
+        gcs: Thang điểm hôn mê Glasgow (3-15)
+        sbp: Huyết áp tâm thu (mmHg)
+        rr: Nhịp thở (lần/phút)
     
     Returns:
         Dictionary containing RTS, coded values, survival probability, and recommendations
@@ -200,10 +200,10 @@ def render():
         
         ### 🎯 Thành phần
         
-        **3 Thông Số Sinh Lý:**
-        1. **GCS (Glasgow Coma Scale - Thang Điểm Hôn Mê Glasgow):** Mức độ ý thức
-        2. **SBP (Systolic Blood Pressure):** Huyết áp tâm thu
-        3. **RR (Respiratory Rate):** Tần số thở
+        **3 Thông số Sinh Lý:**
+        1. **GCS (Thang điểm hôn mê Glasgow - Thang điểm hôn mê Glasgow):** Mức độ ý thức
+        2. **SBP (Huyết áp tâm thu):** Huyết áp tâm thu
+        3. **RR (Nhịp thở):** Tần số thở
         
         **Công Thức:**
         ```
@@ -239,7 +239,7 @@ def render():
         | 1-5 | 1 |
         | 0 (apnea) | 0 |
         
-        ### 📈 Phân Tầng Nguy Cơ
+        ### 📈 Phân tầng Nguy cơ
         
         | RTS | Tỷ Lệ Sống Sót | Ưu tiên |
         |-----|----------------|---------|
@@ -262,7 +262,7 @@ def render():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.markdown("#### 🧠 Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow")
+        st.markdown("#### 🧠 Thang điểm hôn mê Glasgow (GCS) - Thang điểm hôn mê Glasgow")
         gcs = st.number_input(
             "**GCS**",
             min_value=3,
@@ -274,7 +274,7 @@ def render():
         st.caption("3 (tệ nhất) → 15 (bình thường)")
     
     with col2:
-        st.markdown("#### 🫀 Huyết Áp Tâm Thu")
+        st.markdown("#### 🫀 Huyết áp tâm thu")
         sbp = st.number_input(
             "**SBP (mmHg)**",
             min_value=0.0,
@@ -330,7 +330,7 @@ def render():
         # Coded values
         with st.expander("📋 Giá trị Mã Hóa & Tính Toán", expanded=True):
             st.markdown(f"""
-            **Giá Trị Đầu Vào:**
+            **Giá trị Đầu Vào:**
             - GCS: {gcs} → Coded: {result['gcs_coded']}
             - SBP: {sbp:.0f} mmHg → Coded: {result['sbp_coded']}
             - RR: {rr:.0f} breaths/min → Coded: {result['rr_coded']}
@@ -355,7 +355,7 @@ def render():
         
         # Additional info
         st.info("""
-        **📌 Lưu Ý:**
+        **📌 Lưu ý:**
         
         - **RTS** là công cụ triage và tiên lượng, KHÔNG thay thế đánh giá lâm sàng toàn diện
         - Nên kết hợp với **ISS (Injury Severity Score)** để có TRISS score

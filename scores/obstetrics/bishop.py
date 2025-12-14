@@ -130,7 +130,7 @@ def render():
     
     st.title("🤰 Bishop Score")
     st.markdown("""
-    ### Đánh Giá Độ Chín Cổ Tử Cung
+    ### Đánh giá Độ Chín Cổ Tử Cung
     
     **Bishop Score:**
     - Đánh giá độ thuận lợi của cổ tử cung cho induction of labor
@@ -503,7 +503,7 @@ def render():
         - Khi labor tiến triển → Từ posterior → anterior
         """)
     
-    with st.expander("🎯 Chỉ Định Gây Chuyển Dạ"):
+    with st.expander("🎯 Chỉ định Gây Chuyển Dạ"):
         st.markdown("""
         ### Indications for Induction of Labor:
         
@@ -526,7 +526,7 @@ def render():
         - Elective (39-40 tuần, cervix favorable)
         - Logistic reasons (xa bệnh viện, tiền sử chuyển dạ nhanh)
         
-        **Chống Chỉ Định:**
+        **Chống chỉ định:**
         - Chống chỉ định ngôi thường (placenta previa, etc.)
         - Cổ tử cung sẹo > 1
         - Herpes sinh dục active

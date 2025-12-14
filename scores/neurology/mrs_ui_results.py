@@ -1,5 +1,5 @@
 """
-mRS Calculator - Results Display UI Components
+mRS Calculator - Kết quảs Display UI Components
 Handles all results display and recommendations
 """
 
@@ -101,7 +101,7 @@ def render_recommendations(selected_mrs, mrs_info):
            - Tư vấn tâm lý nếu cần
            - Hỗ trợ tái hòa nhập xã hội, công việc
         
-        4. **Theo Dõi:**
+        4. **Theo dõi:**
            - Đánh giá chức năng định kỳ
            - Theo dõi tiến triển triệu chứng
         
@@ -137,7 +137,7 @@ def render_recommendations(selected_mrs, mrs_info):
            - Cải thiện an toàn tại nhà (tay vịn, chống trơn...)
            - Đánh giá khả năng lái xe
         
-        5. **Theo Dõi:**
+        5. **Theo dõi:**
            - Đánh giá chức năng mỗi 1-3 tháng
            - Điều chỉnh phục hồi chức năng dựa trên tiến triển
         
@@ -178,7 +178,7 @@ def render_recommendations(selected_mrs, mrs_info):
            - Nhóm hỗ trợ bệnh nhân đột quỵ
            - Tư vấn gia đình
         
-        5. **Theo Dõi:**
+        5. **Theo dõi:**
            - Đánh giá chức năng định kỳ
            - Điều chỉnh phục hồi chức năng
            - Theo dõi biến chứng

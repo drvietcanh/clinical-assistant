@@ -199,7 +199,7 @@ def render_ddx_interface():
         all_symptoms.update(dx_data["symptoms"].get("supporting", []))
     
     # Patient demographics
-    st.markdown("### 📋 Thông Tin Bệnh Nhân (Tùy chọn)")
+    st.markdown("### 📋 Thông tin bệnh nhân (Tùy chọn)")
     
     col1, col2 = st.columns(2)
     
@@ -226,7 +226,7 @@ def render_ddx_interface():
     st.markdown("---")
     
     # Symptoms selection
-    st.markdown("### 🩺 Triệu Chứng")
+    st.markdown("### 🩺 Triệu chứng")
     st.info(f"Chọn các triệu chứng phù hợp với bệnh nhân. Scenario: **{scenario}**")
     
     # Group symptoms by category
@@ -265,7 +265,7 @@ def render_ddx_interface():
     st.markdown("---")
     
     # Risk factors (optional)
-    st.markdown("### ⚠️ Yếu Tố Nguy Cơ (Tùy chọn)")
+    st.markdown("### ⚠️ Yếu tố nguy cơ (Tùy chọn)")
     
     common_risk_factors = [
         "diabetes", "hypertension", "smoking", "obesity",
@@ -291,7 +291,7 @@ def render_ddx_interface():
     st.markdown("---")
     
     # Generate DDx button
-    if st.button("🔍 Tạo Danh Sách Chẩn Đoán Phân Biệt", type="primary", use_container_width=True):
+    if st.button("🔍 Tạo Danh Sách Chẩn đoán Phân biệt", type="primary", use_container_width=True):
         if not selected_symptoms:
             st.error("⚠️ Vui lòng chọn ít nhất một triệu chứng!")
         else:
@@ -366,7 +366,7 @@ def render_ddx_interface():
                 
                 # Tab 2: All DDx
                 with tab2:
-                    st.markdown("## 📊 Tất Cả Chẩn Đoán Phân Biệt (Ranked)")
+                    st.markdown("## 📊 Tất Cả Chẩn đoán Phân biệt (Ranked)")
                     
                     for idx, result in enumerate(results, 1):
                         urgency_badge = {

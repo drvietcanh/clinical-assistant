@@ -170,7 +170,7 @@ def render():
         """)
         
         st.markdown("---")
-        st.markdown("### 3️⃣ Phân Tầng Nguy Cơ & Chiến Lược")
+        st.markdown("### 3️⃣ Phân tầng Nguy cơ & Chiến Lược")
         
         st.info("""
         **Sử dụng GRACE Score hoặc TIMI Risk Score**
@@ -218,7 +218,7 @@ def render():
             """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Điều Trị Tại ICU/CCU")
+    st.markdown("### 4️⃣ Điều trị Tại ICU/CCU")
     
     tabs = st.tabs(["💊 Medications", "🎯 Monitoring", "⚠️ Complications", "🏥 Discharge"])
     
@@ -252,7 +252,7 @@ def render():
         """)
     
     with tabs[1]:
-        st.markdown("#### Theo Dõi")
+        st.markdown("#### Theo dõi")
         st.info("""
         **Theo dõi tại CCU:**
         - ✓ Theo dõi ECG liên tục
@@ -269,7 +269,7 @@ def render():
         """)
     
     with tabs[2]:
-        st.markdown("#### Biến Chứng")
+        st.markdown("#### Biến chứng")
         st.error("""
         **Biến chứng cần theo dõi:**
         
@@ -296,7 +296,7 @@ def render():
         """)
     
     with tabs[3]:
-        st.markdown("#### Tiêu chuẩn xuất viện & Theo Dõi")
+        st.markdown("#### Tiêu chuẩn xuất viện & Theo dõi")
         st.success("""
         **Tiêu Chuẩn Xuất Viện:**
         - ✅ Không đau ngực ≥24h
@@ -325,7 +325,7 @@ def render():
         
         **(+) Spironolactone nếu EF <40%**
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - Tuần 1-2: Tái khám
         - Tháng 1: Hồ sơ lipid, điều chỉnh statin
         - Tháng 3: Echo kiểm tra EF

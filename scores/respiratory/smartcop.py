@@ -57,6 +57,7 @@ def render():
             max_value=250,
             value=120,
             step=5,
+            format="%d",
             help="SBP <90 mmHg = 2 điểm"
         )
         if sbp < 90:
@@ -108,7 +109,7 @@ def render():
         score_breakdown["A - Albumin"] = a_score
         
         # R - Respiratory rate
-        st.markdown("#### R - Respiratory Rate (Nhịp thở)")
+        st.markdown("#### R - Nhịp thở (Nhịp thở)")
         
         age = st.number_input(
             "Tuổi:",
@@ -116,15 +117,17 @@ def render():
             max_value=120,
             value=50,
             step=1,
+            format="%d",
             help="Ngưỡng RR khác nhau theo tuổi"
         )
         
         rr = st.number_input(
-            "Respiratory Rate (lần/phút):",
+            "Nhịp thở (lần/phút):",
             min_value=8,
             max_value=60,
             value=20,
             step=1,
+            format="%d",
             help="≤50 tuổi: RR≥25 = 1đ. >50 tuổi: RR≥30 = 1đ"
         )
         
@@ -151,11 +154,12 @@ def render():
         st.markdown("### 💓 Thông số sinh hiệu & xét nghiệm")
         st.markdown("#### T - Tachycardia (Nhịp tim nhanh)")
         hr = st.number_input(
-            "Heart Rate (nhịp/phút):",
+            "Nhịp tim (nhịp/phút):",
             min_value=40,
             max_value=200,
             value=80,
             step=5,
+            format="%d",
             help="HR ≥125 = 1 điểm"
         )
         if hr >= 125:
@@ -207,6 +211,7 @@ def render():
                 max_value=150,
                 value=80,
                 step=5,
+                format="%d",
                 help="<70 = 1đ; <60 (tuổi ≤50) hoặc <50 (tuổi >50) = 2đ"
             )
             
@@ -236,6 +241,7 @@ def render():
                 max_value=100,
                 value=95,
                 step=1,
+                format="%d",
                 help="<90 = 1đ; <85 (tuổi ≤50) hoặc <80 (tuổi >50) = 2đ"
             )
             
@@ -275,6 +281,7 @@ def render():
                 "pH động mạch:",
                 min_value=6.80,
                 max_value=7.80,
+                format="%.2f",
                 value=7.40,
                 step=0.01,
                 format="%.2f",
@@ -338,7 +345,7 @@ def render():
             st.metric("SMART-COP Score", f"{total_score}/11")
         
         with col2:
-            st.metric("Nguy Cơ Cần IRVS", f"{predicted_risk:.1f}%")
+            st.metric("Nguy cơ Cần IRVS", f"{predicted_risk:.1f}%")
         
         with col3:
             st.metric("Mức độ nguy cơ", risk)
@@ -376,7 +383,7 @@ def render():
                - Không tuân thủ điều trị ngoại trú
                - Yếu tố xã hội (không có người chăm sóc)
             
-            3. **Theo Dõi:**
+            3. **Theo dõi:**
                - Tái khám sau 48-72h nếu không cải thiện
                - Chụp X-quang ngực lại sau 4-6 tuần (để loại trừ ung thư phổi)
             
@@ -403,7 +410,7 @@ def render():
                - Theo dõi sát: vital signs mỗi 4-6h
                - SpO₂ monitoring liên tục nếu có
             
-            2. **Điều Trị:**
+            2. **Điều trị:**
                - **Kháng sinh IV:**
                  * Ceftriaxone 1-2g IV q24h + Azithromycin 500mg IV/PO q24h
                  * Hoặc: Levofloxacin 750mg IV q24h
@@ -509,9 +516,9 @@ def render():
             st.markdown(f"| **TỔNG** | **{total_score}** |")
         
         # Risk table
-        with st.expander("📈 Bảng Nguy Cơ Theo Điểm SMART-COP"):
+        with st.expander("📈 Bảng Nguy cơ Theo Điểm SMART-COP"):
             st.markdown("""
-            | SMART-COP Score | Nguy Cơ Cần IRVS | Khuyến nghị |
+            | SMART-COP Score | Nguy cơ Cần IRVS | Khuyến nghị |
             |-----------------|-------------------|-------------|
             | 0-2 | 5-10% | 🟢 Ngoại trú hoặc khoa thường |
             | 3-4 | 12-25% | 🟡 Nhập viện, theo dõi sát |
@@ -554,7 +561,7 @@ def render():
         st.markdown("""
         **Ba thang điểm chính đánh giá viêm phổi cộng đồng (CAP):**
         
-        | Thang Điểm | Mục Đích | Ưu Điểm | Hạn Chế |
+        | Thang điểm | Mục Đích | Ưu Điểm | Hạn Chế |
         |------------|----------|---------|---------|
         | **CURB-65** | Dự đoán tử vong | Đơn giản, nhanh | Không dự đoán nhu cầu ICU tốt |
         | **PSI/PORT** | Dự đoán tử vong | Chính xác cao | Phức tạp, nhiều biến số |
@@ -597,7 +604,7 @@ def render():
         **SMART-COP giúp dự đoán sớm** những bệnh nhân này!
         """)
     
-    with st.expander("💊 Điều Trị Kháng Sinh Viêm Phổi Cộng Đồng"):
+    with st.expander("💊 Điều trị Kháng Sinh Viêm Phổi Cộng Đồng"):
         st.markdown("""
         **Phân loại theo mức độ:**
         

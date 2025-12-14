@@ -147,14 +147,14 @@ def render():
         2. ✅ **Đặt đường truyền tĩnh mạch**
         3. ✅ **Theo dõi ECG liên tục**
         
-        **Điều Trị:**
+        **Điều trị:**
         1. **Calcium:** 1g IV (if ECG changes)
         2. **Insulin + D50:** 10U + 50ml
         3. **Albuterol:** 10-20mg nebulized
         4. **Furosemide:** 40-80mg IV (nếu có UO)
         5. **K⁺ binder:** Kayexalate 15-30g
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - K⁺ mỗi 2-4h
         - ECG mỗi 1-2h
         - Glucose mỗi 1h (nếu dùng insulin)
@@ -182,13 +182,13 @@ def render():
         2. ✅ **Kayexalate:** 30g PO/PR
         3. ✅ **Nephrology consult** - Prepare for HD
         
-        **Chỉ Định Lọc Máu:**
+        **Chỉ định Lọc Máu:**
         - K⁺ >7.0 với ECG changes
         - Oliguric/anuric
         - Renal failure
         - Không đáp ứng điều trị
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - K⁺ mỗi 1-2h
         - ECG liên tục
         - Glucose mỗi 1h × 4h

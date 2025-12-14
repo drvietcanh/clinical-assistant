@@ -139,7 +139,7 @@ def render():
     st.markdown("---")
     
     # Step 1: High-Risk Factors
-    st.subheader("🔴 Bước 1: Yếu Tố Nguy Cơ Cao")
+    st.subheader("🔴 Bước 1: Yếu tố nguy cơ Cao")
     st.info("Nếu có BẤT KỲ yếu tố nào → CHỤP ngay, không cần đánh giá tiếp")
     
     age = st.number_input(
@@ -164,7 +164,7 @@ def render():
     if dangerous_mechanism:
         st.warning("⚠️ Cơ chế nguy hiểm → NGUY CƠ CAO → CẦN CHỤP")
     
-    with st.expander("📋 Cơ Chế Chấn Thương Nguy Hiểm"):
+    with st.expander("📋 Cơ Chế Chấn Thương Nguy hiểm"):
         st.markdown("""
         **Cơ chế nguy hiểm bao gồm:**
         - Rơi từ độ cao ≥ 1 m (≥ 3 feet) hoặc 5 bậc cầu thang
@@ -191,7 +191,7 @@ def render():
     st.markdown("---")
     
     # Step 2: Low-Risk Factors
-    st.subheader("🟡 Bước 2: Yếu Tố Cho Phép Đánh giá ROM")
+    st.subheader("🟡 Bước 2: Yếu tố Cho Phép Đánh giá ROM")
     st.info("Cần có ≥ 1 yếu tố để AN TOÀN đánh giá range of motion")
     
     simple_rear_end_mvc = st.checkbox(

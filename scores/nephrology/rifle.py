@@ -88,7 +88,7 @@ def render():
     st.markdown("**Hệ thống phân loại AKI (Historical - KDIGO khuyến cáo hơn)**")
     
     st.info("""
-    **ℹ️ Lưu Ý:**
+    **ℹ️ Lưu ý:**
     
     RIFLE là một trong những hệ thống phân loại AKI TIÊN PHONG (2004), nhưng hiện nay đã được 
     **thay thế bởi KDIGO** (2012) trong hầu hết các guidelines hiện đại.

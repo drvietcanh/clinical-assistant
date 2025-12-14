@@ -108,6 +108,7 @@ def render():
             max_value=120,
             value=65,
             step=1,
+            format="%d",
             key="abcd2_age"
         )
         
@@ -117,6 +118,7 @@ def render():
             max_value=250,
             value=150,
             step=5,
+            format="%d",
             key="abcd2_sbp"
         )
         
@@ -126,6 +128,7 @@ def render():
             max_value=150,
             value=90,
             step=5,
+            format="%d",
             key="abcd2_dbp"
         )
     
@@ -147,6 +150,7 @@ def render():
             max_value=1440,
             value=30,
             step=5,
+            format="%d",
             key="abcd2_duration"
         )
         

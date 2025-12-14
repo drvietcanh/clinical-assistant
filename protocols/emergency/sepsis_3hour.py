@@ -26,7 +26,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: 1-HOUR BUNDLE ==========
-    st.markdown("### ⏱️ Sepsis 1-Hour Bundle (Bắt Buộc)")
+    st.markdown("### ⏱️ Sepsis 1-Hour Bundle (Bắt buộc)")
     
     st.error("""
     **Thực hiện NGAY trong vòng 1 GIỜ:**
@@ -59,7 +59,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: 3-HOUR MANAGEMENT ==========
-    st.markdown("### ⏱️ Quản Lý Trong 3 Giờ Đầu")
+    st.markdown("### ⏱️ Quản lý Trong 3 Giờ Đầu")
     
     st.markdown("**Các bước tiếp theo sau 1-hour bundle:**")
     
@@ -140,7 +140,7 @@ def render():
     # ========== SECTION 3: ANTIBIOTIC SELECTION ==========
     st.markdown("### 💊 Lựa Chọn Kháng Sinh Thực Nghiệm")
     
-    st.markdown("**Nguyên Tắc:** Kháng sinh phổ rộng trong 1 giờ đầu, điều chỉnh sau khi có kết quả")
+    st.markdown("**Nguyên tắc:** Kháng sinh phổ rộng trong 1 giờ đầu, điều chỉnh sau khi có kết quả")
     
     # Community vs Hospital acquired
     infection_source = st.radio(
@@ -291,33 +291,33 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: VASOPRESSOR MANAGEMENT ==========
-    st.markdown("### ⚠️ Quản Lý Vasopressor")
+    st.markdown("### ⚠️ Quản lý Vasopressor")
     
-    st.markdown("**Chỉ Định:** MAP <65 mmHg sau Truyền Dịch đầy đủ")
+    st.markdown("**Chỉ định:** MAP <65 mmHg sau Truyền Dịch đầy đủ")
     
     st.error("""
     **1st line: Norepinephrine**
     - **Liều:** 0.05-2 mcg/kg/min
-    - **Mục Tiêu:** MAP ≥65 mmHg
+    - **Mục tiêu:** MAP ≥65 mmHg
     - **Titrate:** Mỗi 5-10 phút
     - **Ưu điểm:** Tăng MAP, tăng cardiac output nhẹ
     - **Nhược điểm:** Tăng nhịp tim, tăng nguy cơ loạn nhịp
     
     **2nd line: Vasopressin**
     - **Liều:** 0.03-0.04 units/min (không titrate)
-    - **Chỉ Định:** Thêm vào norepinephrine nếu không đủ
+    - **Chỉ định:** Thêm vào norepinephrine nếu không đủ
     - **Ưu điểm:** Giảm liều norepinephrine, ít tác dụng phụ tim mạch
     - **Nhược điểm:** Có thể gây thiếu máu cục bộ (hiếm)
     
     **3rd line: Epinephrine**
     - **Liều:** 0.05-2 mcg/kg/min
-    - **Chỉ Định:** Nếu cần thêm vasopressor
+    - **Chỉ định:** Nếu cần thêm vasopressor
     - **Ưu điểm:** Tăng MAP và cardiac output mạnh
     - **Nhược điểm:** Tăng nhịp tim, tăng nguy cơ loạn nhịp, tăng lactate
     
     **Inotrope: Dobutamine**
     - **Liều:** 2.5-20 mcg/kg/min
-    - **Chỉ Định:** Nếu cardiac output thấp, MAP đã ổn định
+    - **Chỉ định:** Nếu cardiac output thấp, MAP đã ổn định
     - **Ưu điểm:** Tăng cardiac output, giảm afterload
     - **Nhược điểm:** Có thể gây hạ huyết áp, tăng nhịp tim
     """)
@@ -327,7 +327,7 @@ def render():
     # ========== SECTION 6: SOURCE CONTROL ==========
     st.markdown("### 🔍 Source Control")
     
-    st.markdown("**Nguyên Tắc:** Xác định và điều trị ổ nhiễm trùng càng sớm càng tốt")
+    st.markdown("**Nguyên tắc:** Xác định và điều trị ổ nhiễm trùng càng sớm càng tốt")
     
     source_control_options = [
         "Viêm phổi",
@@ -368,7 +368,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: MONITORING ==========
-    st.markdown("### 📊 Theo Dõi Trong 3 Giờ Đầu")
+    st.markdown("### 📊 Theo dõi Trong 3 Giờ Đầu")
     
     st.markdown("**Monitoring parameters:**")
     
@@ -407,7 +407,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: RESUSCITATION GOALS ==========
-    st.markdown("### 🎯 Mục Tiêu Hồi Sức (Resuscitation Goals)")
+    st.markdown("### 🎯 Mục tiêu Hồi Sức (Resuscitation Goals)")
     
     st.info("""
     **Mục tiêu trong 3 giờ đầu:**

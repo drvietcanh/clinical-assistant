@@ -52,10 +52,10 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều Trị Benzodiazepine")
+    st.markdown("### 💊 Điều trị Benzodiazepine")
     
     treatment_approach = st.radio(
-        "**Phương Pháp Điều Trị:**",
+        "**Phương Pháp Điều trị:**",
         [
             "Symptom-Triggered (Theo triệu chứng)",
             "Fixed-Schedule (Lịch cố định)",
@@ -96,7 +96,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💉 Thuốc Điều Trị")
+    st.markdown("### 💉 Thuốc Điều trị")
     
     st.info("""
     **1. Benzodiazepines (Thuốc đầu tay):**
@@ -141,7 +141,7 @@ def render():
     - Thường là co giật toàn thân
     - Có thể tái phát
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Benzodiazepine:** Lorazepam 2-4 mg IV
     2. **Nếu tái phát:** Phenytoin 15-20 mg/kg IV
     3. **Dự phòng:** Benzodiazepine đủ liều
@@ -162,7 +162,7 @@ def render():
     - Tỷ lệ tử vong: 5-15% nếu không điều trị
     - Triệu chứng: Sốt, mạch nhanh, tăng huyết áp, rối loạn ý thức, ảo giác
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Benzodiazepine liều cao:**
        - Lorazepam: 2-4 mg IV q15-30min
        - Hoặc Diazepam: 5-20 mg IV q15-30min
@@ -177,12 +177,12 @@ def render():
        - 2-5 mg IV q4-6h
        - Chỉ dùng nếu kích động nặng, không đáp ứng benzodiazepine
     
-    4. **Theo Dõi:** 5-7 ngày
+    4. **Theo dõi:** 5-7 ngày
     """)
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều Trị")
+    st.markdown("### 📋 Checklist Điều trị")
     
     checklist_items = [
         "✅ Đánh giá CIWA-Ar score",
@@ -235,10 +235,10 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Điều Trị")
+    st.markdown("### 🎯 Mục tiêu điều trị")
     
     st.success("""
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - ✅ CIWA-Ar <10 điểm
     - ✅ Không co giật
     - ✅ Không DT
@@ -278,7 +278,7 @@ def render_symptom_triggered():
     st.success("## 🟢 Symptom-Triggered (Theo Triệu chứng)")
     
     st.markdown("""
-    **Chỉ Định:**
+    **Chỉ định:**
     - CIWA-Ar ≥10 điểm
     - Có thể theo dõi sát
     
@@ -303,7 +303,7 @@ def render_fixed_schedule():
     st.warning("## 🟡 Fixed-Schedule (Lịch Cố Định)")
     
     st.markdown("""
-    **Chỉ Định:**
+    **Chỉ định:**
     - Không thể theo dõi sát
     - CIWA-Ar ≥10
     
@@ -332,7 +332,7 @@ def render_front_loading():
     st.info("## 🔵 Front-Loading (Tải Liều Ban Đầu)")
     
     st.markdown("""
-    **Chỉ Định:**
+    **Chỉ định:**
     - CIWA-Ar ≥20 (nặng)
     - Nguy cơ DT cao
     
@@ -359,14 +359,14 @@ def render_mild_withdrawal():
     st.success("## 🟢 Cai Rượu Nhẹ")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - CIWA-Ar 0-9 điểm
     - Run tay nhẹ
     - Lo âu nhẹ
     - Không có co giật/DT
     
-    **Điều Trị:**
-    1. **Theo Dõi:** CIWA-Ar q4-6h
+    **Điều trị:**
+    1. **Theo dõi:** CIWA-Ar q4-6h
     2. **Thiamine:** 100 mg PO qd
     3. **Folate & multivitamin:** PO qd
     4. **Benzodiazepine:** Chỉ khi CIWA-Ar ≥10
@@ -380,13 +380,13 @@ def render_moderate_withdrawal():
     st.warning("## 🟡 Cai Rượu Trung Bình")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - CIWA-Ar 10-19 điểm
     - Run tay rõ
     - Lo âu, kích động
     - Có thể có buồn nôn
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Benzodiazepine:**
        - Lorazepam 1-2 mg PO/IV q4-6h
        - Hoặc Diazepam 5-10 mg PO q6h
@@ -395,7 +395,7 @@ def render_moderate_withdrawal():
     
     3. **Folate & multivitamin:** PO qd
     
-    4. **Theo Dõi:** CIWA-Ar q4-6h
+    4. **Theo dõi:** CIWA-Ar q4-6h
     
     5. **Điều chỉnh liều:** Theo CIWA-Ar
     
@@ -408,14 +408,14 @@ def render_severe_withdrawal():
     st.error("## 🔴 Cai Rượu Nặng - ICU")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - CIWA-Ar ≥20 điểm
     - Run tay nặng
     - Kích động nặng
     - Có thể có co giật
     - Nguy cơ DT cao
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Benzodiazepine liều cao:**
        - Lorazepam 2-4 mg IV q1-2h
        - Hoặc Diazepam 10-20 mg IV q1-2h
@@ -432,7 +432,7 @@ def render_severe_withdrawal():
        - CIWA-Ar q2-4h
        - Chuẩn bị cho DT
     
-    6. **Theo Dõi:** 5-7 ngày
+    6. **Theo dõi:** 5-7 ngày
     """)
 
 
@@ -441,7 +441,7 @@ def render_delirium_tremens():
     st.error("## ⚫ Delirium Tremens - ICU")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Sốt, mạch nhanh, tăng huyết áp
     - Rối loạn ý thức
     - Ảo giác (thị giác, thính giác)
@@ -466,6 +466,6 @@ def render_delirium_tremens():
     
     4. **Thiamine:** 100 mg IV qd
     
-    5. **Theo Dõi:** 5-7 ngày (tỷ lệ tử vong 5-15%)
+    5. **Theo dõi:** 5-7 ngày (tỷ lệ tử vong 5-15%)
     """)
 

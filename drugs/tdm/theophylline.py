@@ -285,7 +285,7 @@ def render_theophylline_tdm():
             """)
             
             st.markdown("---")
-            st.markdown("### 🎯 Mục Tiêu TDM")
+            st.markdown("### 🎯 Mục tiêu TDM")
             
             st.info(f"""
             **Mục tiêu nồng độ: {result['target_level']:.1f} mg/L**
@@ -455,7 +455,7 @@ def render_theophylline_tdm():
             )
         
         with col2:
-            st.markdown("#### Yếu Tố Ảnh Hưởng:")
+            st.markdown("#### Yếu tố Ảnh Hưởng:")
             
             heart_failure = st.checkbox("Suy tim", key="theo_half_hf")
             liver_disease = st.checkbox("Bệnh gan", key="theo_half_liver")
@@ -538,7 +538,7 @@ def render_theophylline_tdm():
     
     # Drug interactions
     st.markdown("---")
-    with st.expander("⚠️ Tương Tác Thuốc"):
+    with st.expander("⚠️ Tương tác Thuốc"):
         st.markdown("""
         **Thuốc TĂNG nồng độ (giảm clearance):**
         - Cimetidine

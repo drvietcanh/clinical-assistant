@@ -380,23 +380,49 @@ def render_analytics_dashboard() -> None:
         # Create simple line chart representation
         dates = sorted(daily_usage.keys())
         values = [daily_usage[date] for date in dates]
-        max_value = max(values) if values else 1
+        max_value = max(values) if values and max(values) > 0 else 1
+        
+        # Ensure we have at least 7 days of data
+        if len(dates) < 7:
+            # Fill missing days with 0
+            end_date = datetime.now()
+            all_dates = []
+            for i in range(7):
+                date = (end_date - timedelta(days=i)).strftime('%Y-%m-%d')
+                all_dates.insert(0, date)
+            dates = all_dates
+            values = [daily_usage.get(date, 0) for date in dates]
+            max_value = max(values) if values and max(values) > 0 else 1
         
         chart_html = "<div style='margin: 1rem 0; height: 200px; display: flex; align-items: flex-end; gap: 8px; border-bottom: 2px solid #dee2e6; padding-bottom: 1rem;'>"
         for date, value in zip(dates, values):
-            height_pct = (value / max_value * 100) if max_value > 0 else 0
+            # Calculate height percentage (minimum 4px for visibility, max 100%)
+            if max_value > 0:
+                height_pct = min((value / max_value * 100), 100)
+            else:
+                height_pct = 0
+            
+            # Ensure minimum height for visibility
+            if height_pct < 4 and value > 0:
+                height_pct = 4
+            
+            # Format date for display (day of month)
+            day_display = date.split('-')[2] if '-' in date else date[-2:]
+            
             chart_html += f"""
             <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                <div style="background: #4caf50; width: 100%; height: {height_pct}%; min-height: 4px; border-radius: 4px 4px 0 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; color: white; font-size: 0.7rem; font-weight: bold;">
+                <div style="background: #4caf50; width: 100%; height: {height_pct}%; min-height: {4 if value > 0 else 0}px; border-radius: 4px 4px 0 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; color: white; font-size: 0.7rem; font-weight: bold;">
                     {value if value > 0 else ''}
                 </div>
                 <div style="font-size: 0.7rem; color: #666; transform: rotate(-45deg); transform-origin: top left; white-space: nowrap;">
-                    {date.split('-')[2]}
+                    {day_display}
                 </div>
             </div>
             """
         chart_html += "</div>"
         st.markdown(chart_html, unsafe_allow_html=True)
+    else:
+        st.info("📊 Chưa có dữ liệu sử dụng. Hãy sử dụng các công cụ để xem thống kê!")
     
     st.markdown("---")
     
@@ -408,14 +434,25 @@ def render_analytics_dashboard() -> None:
         # Create hourly chart
         hours = list(range(24))
         hour_values = [hour_counts.get(h, 0) for h in hours]
-        max_hour_value = max(hour_values) if hour_values else 1
+        max_hour_value = max(hour_values) if hour_values and max(hour_values) > 0 else 1
         
         chart_html = "<div style='margin: 1rem 0; height: 150px; display: flex; align-items: flex-end; gap: 2px; border-bottom: 2px solid #dee2e6; padding-bottom: 1rem;'>"
         for hour, value in zip(hours, hour_values):
-            height_pct = (value / max_hour_value * 100) if max_hour_value > 0 else 0
+            # Calculate height percentage
+            if max_hour_value > 0:
+                height_pct = min((value / max_hour_value * 100), 100)
+            else:
+                height_pct = 0
+            
+            # Ensure minimum height for visibility
+            if height_pct < 2 and value > 0:
+                height_pct = 2
+            
             chart_html += f"""
             <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;">
-                <div style="background: #ff9800; width: 100%; height: {height_pct}%; min-height: 2px; border-radius: 2px 2px 0 0;"></div>
+                <div style="background: #ff9800; width: 100%; height: {height_pct}%; min-height: {2 if value > 0 else 0}px; border-radius: 2px 2px 0 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 2px; color: white; font-size: 0.6rem; font-weight: bold;">
+                    {value if value > 0 else ''}
+                </div>
                 <div style="font-size: 0.6rem; color: #666; writing-mode: vertical-rl; text-orientation: mixed;">
                     {hour}h
                 </div>
@@ -423,6 +460,8 @@ def render_analytics_dashboard() -> None:
             """
         chart_html += "</div>"
         st.markdown(chart_html, unsafe_allow_html=True)
+    else:
+        st.info("📊 Chưa có dữ liệu sử dụng theo giờ. Hãy sử dụng các công cụ để xem thống kê!")
     
     st.markdown("---")
     

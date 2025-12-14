@@ -212,7 +212,7 @@ def render():
     
     with col1:
         gcs = st.number_input(
-            "Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow",
+            "Thang điểm hôn mê Glasgow (GCS) - Thang điểm hôn mê Glasgow",
             min_value=3,
             max_value=15,
             value=15,
@@ -454,7 +454,7 @@ def render():
         
         st.markdown("---")
         
-        # Breakdown
+        # Chi tiết
         st.markdown("#### 📋 Chi tiết điểm số:")
         
         import pandas as pd

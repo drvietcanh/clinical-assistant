@@ -1,5 +1,5 @@
 """
-Pediatric GCS - Pediatric Glasgow Coma Scale Calculator
+Pediatric GCS - Pediatric Thang điểm hôn mê Glasgow Calculator
 Đánh giá mức độ ý thức ở trẻ em
 """
 
@@ -57,7 +57,7 @@ def render():
     # Thông tin về Pediatric GCS
     with st.expander("ℹ️ Giới thiệu về Pediatric GCS"):
         st.markdown("""
-        **Pediatric GCS** là phiên bản điều chỉnh của Glasgow Coma Scale dành cho trẻ em, 
+        **Pediatric GCS** là phiên bản điều chỉnh của Thang điểm hôn mê Glasgow dành cho trẻ em, 
         đặc biệt là trẻ < 2 tuổi chưa phát triển đầy đủ khả năng ngôn ngữ.
         
         **Mục đích:**
@@ -401,13 +401,13 @@ def render():
                a practical scale. Lancet. 1974;2(7872):81-4.
             
             2. **Holmes JF, Palchak MJ, MacFarlane T, Kuppermann N.** Performance of the pediatric 
-               Glasgow Coma Scale in children with blunt head trauma. Acad Emerg Med. 2005;12(9):814-9.
+               Thang điểm hôn mê Glasgow in children with blunt head trauma. Acad Emerg Med. 2005;12(9):814-9.
             
             3. **Tatman A, Warren A, Williams A, Powell JE, Whitehouse W.** Development of a modified 
                paediatric coma scale in intensive care clinical practice. Arch Dis Child. 1997;77(6):519-21.
             
             4. **Reilly PL, Simpson DA, Sprod R, Thomas L.** Assessing the conscious level in infants 
-               and young children: a paediatric version of the Glasgow Coma Scale. Childs Nerv Syst. 1988;4(1):30-3.
+               and young children: a paediatric version of the Thang điểm hôn mê Glasgow. Childs Nerv Syst. 1988;4(1):30-3.
             
             5. **Kirkham FJ, Newton CR, Whitehouse W.** Paediatric coma scales. 
                Dev Med Child Neurol. 2008;50(4):267-74.

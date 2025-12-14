@@ -30,19 +30,26 @@ from protocols import (
     render_cap,
     render_hap_vap,
     render_cdiff,
+    render_meningitis,
     render_thyrotoxic_crisis,
     render_myxedema_coma,
     render_adrenal_crisis,
     render_hhs,
     render_acute_pancreatitis,
+    render_acute_liver_failure,
     render_transfusion,
     render_anticoagulation_reversal,
     render_delirium,
     render_sedation,
+    render_ards,
+    render_ventilator_weaning,
+    render_stress_ulcer,
     render_tls,
     render_febrile_neutropenia,
-    render_hypercalcemia
+    render_hypercalcemia,
+    render_ibd_exacerbation
 )
+from protocols.rheumatology import render_acute_gout, render_ra_flare
 
 # Standard page setup
 setup_page(
@@ -68,7 +75,8 @@ with st.sidebar:
             "💊 Đau (Pain Management)",
             "🩸 Huyết học (Hematology)",
             "🫀 Tiêu hóa (Gastroenterology)",
-            "🏥 Hồi sức (Critical Care)"
+            "🏥 Hồi sức (Critical Care)",
+            "🦴 Thấp khớp (Rheumatology)"
         ]
     )
     
@@ -81,13 +89,13 @@ with st.sidebar:
             [
                 "🦠 Sepsis 1-Hour Bundle",
                 "🦠 Sepsis 3-Hour Bundle",
-                "💔 Quản Lý Sốc",
+                "💔 Quản lý Sốc",
                 "🧠 Stroke Management",
                 "🩸 GI Bleeding",
                 "🍭 DKA Protocol",
                 "⚡ Electrolyte Emergency",
                 "🚨 Anaphylaxis",
-                "⚡ Cơn Tăng Huyết Áp Cấp Cứu",
+                "⚡ Cơn Tăng Huyết áp Cấp cứu",
                 "🧠 Status Epilepticus",
                 "💉 Ngộ Độc Opioid / Naloxone",
                 "🍺 Cai Rượu Cấp"
@@ -128,7 +136,8 @@ with st.sidebar:
             [
                 "🫁 CAP Management",
                 "🏥 HAP/VAP Guidelines",
-                "🦠 C. diff Treatment"
+                "🦠 C. diff Treatment",
+                "🧠 Meningitis / Encephalitis"
             ],
             label_visibility="collapsed"
         )
@@ -156,7 +165,9 @@ with st.sidebar:
         protocol = st.radio(
             "Phác đồ:",
             [
-                "🫀 Viêm Tụy Cấp (Acute Pancreatitis)"
+                "🫀 Viêm Tụy Cấp (Acute Pancreatitis)",
+                "🫀 Suy Gan Cấp (Acute Liver Failure)",
+                "🩸 IBD Exacerbation (Acute Exacerbation of IBD)"
             ],
             label_visibility="collapsed"
         )
@@ -164,8 +175,11 @@ with st.sidebar:
         protocol = st.radio(
             "Phác đồ:",
             [
-                "🧠 Quản Lý Delirium (Delirium Management)",
-                "💤 An Thần & Giảm Đau ICU (ICU Sedation & Analgesia)"
+                "🧠 Quản lý Delirium (Delirium Management)",
+                "💤 An Thần & Giảm Đau ICU (ICU Sedation & Analgesia)",
+                "🫁 ARDS Management",
+                "🫁 Ventilator Weaning",
+                "🩸 Stress Ulcer Prophylaxis"
             ],
             label_visibility="collapsed"
         )
@@ -183,7 +197,16 @@ with st.sidebar:
         protocol = st.radio(
             "Phác đồ:",
             [
-                "💊 Quản Lý Đau Cấp"
+                "💊 Quản lý Đau Cấp (Acute Pain Management)"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Thấp khớp" in specialty or "Rheumatology" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "🦴 Gout Cấp (Acute Gout Management)",
+                "🦴 RA Flare (Acute Flare of Rheumatoid Arthritis)"
             ],
             label_visibility="collapsed"
         )
@@ -244,7 +267,7 @@ elif "Electrolyte" in protocol:
 elif "Anaphylaxis" in protocol or "anaphylaxis" in protocol.lower():
     render_anaphylaxis()
 
-elif "Tăng Huyết Áp" in protocol or "Hypertensive" in protocol or "hypertensive" in protocol.lower():
+elif "Tăng Huyết áp" in protocol or "Hypertensive" in protocol or "hypertensive" in protocol.lower():
     render_hypertensive_emergency()
 
 elif "Status Epilepticus" in protocol or "status epilepticus" in protocol.lower() or "Epilepticus" in protocol:
@@ -274,6 +297,9 @@ elif "HAP" in protocol or "VAP" in protocol:
 elif "C. diff" in protocol or "cdiff" in protocol.lower():
     render_cdiff()
 
+elif "Meningitis" in protocol or "meningitis" in protocol.lower() or "Encephalitis" in protocol or "encephalitis" in protocol.lower():
+    render_meningitis()
+
 elif "Thyrotoxic" in protocol or "thyrotoxic" in protocol.lower():
     render_thyrotoxic_crisis()
 
@@ -289,7 +315,10 @@ elif "HHS" in protocol or "Hyperosmolar" in protocol or "hyperosmolar" in protoc
 elif "Pancreatitis" in protocol or "pancreatitis" in protocol.lower() or "Tụy" in protocol:
     render_acute_pancreatitis()
 
-elif "Delirium" in protocol or "delirium" in protocol.lower() or "Quản Lý Delirium" in protocol:
+elif "Liver Failure" in protocol or "liver failure" in protocol.lower() or "Suy Gan" in protocol:
+    render_acute_liver_failure()
+
+elif "Delirium" in protocol or "delirium" in protocol.lower() or "Quản lý Delirium" in protocol:
     render_delirium()
 
 elif "Sedation" in protocol or "sedation" in protocol.lower() or "An Thần" in protocol or "Giảm Đau ICU" in protocol:
@@ -312,6 +341,24 @@ elif "Hypercalcemia" in protocol or "hypercalcemia" in protocol.lower():
 
 elif "Đau" in protocol or "Pain" in protocol or "pain" in protocol.lower():
     render_acute_pain()
+
+elif "Gout" in protocol or "gout" in protocol.lower():
+    render_acute_gout()
+
+elif "ARDS" in protocol or "ards" in protocol.lower():
+    render_ards()
+
+elif "Ventilator Weaning" in protocol or "weaning" in protocol.lower() or "Cai Máy" in protocol:
+    render_ventilator_weaning()
+
+elif "Stress Ulcer" in protocol or "stress ulcer" in protocol.lower() or "SUP" in protocol:
+    render_stress_ulcer()
+
+elif "RA Flare" in protocol or "rheumatoid arthritis" in protocol.lower() or "RA" in protocol:
+    render_ra_flare()
+
+elif "IBD" in protocol or "ibd" in protocol.lower() or "Crohn" in protocol or "Colitis" in protocol:
+    render_ibd_exacerbation()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

@@ -6,6 +6,7 @@ Defines available calculators organized by specialty
 SCORES_BY_SPECIALTY = {
     "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)": {
         "NEWS2": {"name": "NEWS2 - National Early Warning Score 2", "desc": "Hệ thống cảnh báo sớm cho bệnh nhân nội trú (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "MEWS": {"name": "MEWS - Modified Early Warning Score", "desc": "Hệ thống cảnh báo sớm - Phát hiện tình trạng xấu đi (DÙNG HÀNG NGÀY)", "status": "✅"},
         "qSOFA": {"name": "qSOFA - Quick SOFA", "desc": "Sàng lọc nhiễm trùng huyết", "status": "✅"},
         "SOFA": {"name": "SOFA - Sequential Organ Failure Assessment", "desc": "Đánh giá suy cơ quan", "status": "✅"},
         "SOFA-2 (2025)": {"name": "SOFA-2 (2025) ⭐", "desc": "SOFA cập nhật 2025 - HFNC, ECMO, RRT, vasopressor mới", "status": "✅"},
@@ -42,7 +43,7 @@ SCORES_BY_SPECIALTY = {
     },
     
     "🧠 Thần kinh (Neurology)": {
-        "GCS": {"name": "GCS - Glasgow Coma Scale (Thang Điểm Hôn Mê Glasgow)", "desc": "Mức độ ý thức", "status": "✅"},
+        "GCS": {"name": "GCS - Thang điểm hôn mê Glasgow (Thang điểm hôn mê Glasgow)", "desc": "Mức độ ý thức", "status": "✅"},
         "NIHSS": {"name": "NIHSS - NIH Stroke Scale", "desc": "Mức độ nặng đột quỵ", "status": "✅"},
         "ICH Score": {"name": "ICH Score", "desc": "Tiên lượng xuất huyết nội sọ", "status": "✅"},
         "Hunt & Hess": {"name": "Hunt & Hess Scale", "desc": "Phân loại xuất huyết dưới nhện", "status": "✅"},
@@ -95,6 +96,7 @@ SCORES_BY_SPECIALTY = {
         "Pediatric GCS": {"name": "Pediatric GCS", "desc": "Ý thức trẻ em", "status": "✅"},
         "PELOD-2": {"name": "PELOD-2 - Pediatric Logistic Organ Dysfunction", "desc": "Suy đa cơ quan ICU nhi", "status": "✅"},
         "PRISM III": {"name": "PRISM III - Pediatric Risk of Mortality", "desc": "Nguy cơ tử vong ICU nhi", "status": "✅"},
+        "PIM2": {"name": "PIM2 - Pediatric Index of Mortality 2", "desc": "Dự đoán tử vong ICU nhi (10 biến số)", "status": "✅"},
         "Pediatric SOFA": {"name": "Pediatric SOFA (pSOFA)", "desc": "Suy đa cơ quan ICU nhi - Điều chỉnh theo tuổi", "status": "✅"},
     },
     

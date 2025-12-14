@@ -9,7 +9,7 @@ import streamlit as st
 def render():
     """HAS-BLED Score Calculator"""
     st.subheader("🩸 HAS-BLED Score")
-    st.caption("Đánh giá Nguy Cơ Chảy Máu Khi Dùng Kháng Đông")
+    st.caption("Đánh giá Nguy cơ Chảy Máu Khi Dùng Kháng Đông")
     
     col1, col2 = st.columns([2, 1])
     

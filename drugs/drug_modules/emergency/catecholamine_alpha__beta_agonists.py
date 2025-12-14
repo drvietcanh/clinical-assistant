@@ -182,6 +182,229 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'Micromedex - Epinephrine Drug Information'], 'last_updated':
         '2025-02-03', 'evidence_level':
         'A - Dựa trên FDA drug labels, ACLS guidelines, anaphylaxis guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-        }}}
+        }},
+    
+    "Norepinephrine": {
+        "group": "Emergency - Catecholamine (Alpha & Beta Agonist)",
+        "vietnamese_name": "Norepinephrine, Noradrenaline, Levophed",
+        "administration": ["IV"],
+        "indications": [
+            "Sốc nhiễm khuẩn (septic shock)",
+            "Sốc tim (cardiogenic shock)",
+            "Sốc giảm thể tích (sau khi bù dịch)",
+            "Hạ huyết áp nặng trong cấp cứu"
+        ],
+        "contraindications": [
+            "Không có chống chỉ định tuyệt đối trong cấp cứu",
+            "Thiếu máu cục bộ mô (nếu có thể tránh)"
+        ],
+        "dosage": {
+            "adult_shock": "0.05-2 mcg/kg/phút IV infusion (khởi đầu 0.05-0.1 mcg/kg/phút)",
+            "adult_septic_shock": "0.05-2 mcg/kg/phút IV infusion",
+            "adult_cardiogenic_shock": "0.05-2 mcg/kg/phút IV infusion",
+            "notes": "Pha 4mg trong 250ml D5W = 16 mcg/ml. Truyền qua đường tĩnh mạch trung tâm để tránh hoại tử nếu rò rỉ."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Tăng huyết áp",
+            "Co mạch ngoại vi (giảm tưới máu mô)",
+            "Hoại tử mô (nếu rò rỉ ngoài mạch)",
+            "Rối loạn nhịp tim (hiếm)",
+            "Tăng đường huyết",
+            "Giảm tưới máu thận (với liều cao)"
+        ],
+        "interactions": [
+            "MAOIs: tăng tác dụng",
+            "TCAs: tăng tác dụng",
+            "Beta-blockers: tăng huyết áp nặng"
+        ],
+        "pregnancy": "C - An toàn trong cấp cứu",
+        "mechanism_of_action": "Chủ yếu alpha-adrenergic receptor agonist (alpha-1 và alpha-2), một số tác dụng beta-1. Kích thích alpha-1 receptors → co mạch ngoại vi mạnh, tăng huyết áp. Kích thích beta-1 receptors → tăng nhịp tim và co bóp cơ tim nhẹ. Không có tác dụng beta-2 (không giãn phế quản). Trong sốc: tăng huyết áp và tưới máu cơ quan quan trọng.",
+        "monitoring": [
+            "Huyết áp liên tục (arterial line nếu có thể)",
+            "Nhịp tim và ECG",
+            "Lactate máu (tưới máu mô)",
+            "Đường huyết",
+            "Tưới máu mô (da, thận, chi)",
+            "Dấu hiệu hoại tử tại chỗ tiêm"
+        ],
+        "precautions": [
+            "TUYỆT ĐỐI phải truyền qua đường tĩnh mạch trung tâm (nguy cơ hoại tử nếu rò rỉ)",
+            "Theo dõi tưới máu mô (da, thận) - có thể giảm với liều cao",
+            "Bù dịch đầy đủ trước khi dùng (trừ sốc tim)",
+            "Giảm liều khi huyết áp đã ổn định",
+            "Theo dõi lactate để đánh giá tưới máu mô"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-2 phút (rất ngắn)",
+            "onset": "Ngay lập tức sau khi bắt đầu truyền",
+            "duration": "Ngắn, cần truyền liên tục",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Rất nhanh, bị bất hoạt bởi MAO và COMT"
+        },
+        "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh. Kiểm tra màu sắc trước dùng (hóa nâu = hỏng).",
+        "black_box_warnings": "Hoại tử mô nếu rò rỉ ngoài mạch - phải truyền qua đường tĩnh mạch trung tâm.",
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Norepinephrine",
+                "Surviving Sepsis Campaign Guidelines",
+                "UpToDate - Norepinephrine: Drug Information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Dopamine": {
+        "group": "Emergency - Catecholamine (Alpha & Beta Agonist)",
+        "vietnamese_name": "Dopamine, Intropin",
+        "administration": ["IV"],
+        "indications": [
+            "Sốc (sau khi bù dịch)",
+            "Hạ huyết áp nặng",
+            "Suy thận cấp (liều thấp - renal dose)",
+            "Suy tim cấp"
+        ],
+        "contraindications": [
+            "Pheochromocytoma",
+            "Rối loạn nhịp tim nặng",
+            "Không dùng liều thấp cho suy thận (không có bằng chứng)"
+        ],
+        "dosage": {
+            "adult_renal_dose": "1-3 mcg/kg/phút IV (tăng tưới máu thận - không khuyến cáo)",
+            "adult_cardiac_dose": "3-10 mcg/kg/phút IV (tăng cung lượng tim)",
+            "adult_vasopressor_dose": "10-20 mcg/kg/phút IV (tăng huyết áp)",
+            "notes": "Pha 400mg trong 250ml D5W = 1600 mcg/ml. Tác dụng phụ thuộc liều."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Rối loạn nhịp tim",
+            "Tăng huyết áp (liều cao)",
+            "Co mạch ngoại vi (liều cao)",
+            "Hoại tử mô (nếu rò rỉ)",
+            "Buồn nôn, nôn"
+        ],
+        "interactions": [
+            "MAOIs: tăng tác dụng",
+            "TCAs: tăng tác dụng",
+            "Beta-blockers: tăng huyết áp"
+        ],
+        "pregnancy": "C - An toàn trong cấp cứu",
+        "mechanism_of_action": "Tác dụng phụ thuộc liều: Liều thấp (1-3 mcg/kg/phút): kích thích dopamine receptors → tăng tưới máu thận (không khuyến cáo, không có bằng chứng). Liều trung bình (3-10 mcg/kg/phút): kích thích beta-1 receptors → tăng nhịp tim, tăng co bóp cơ tim, tăng cung lượng tim. Liều cao (10-20 mcg/kg/phút): kích thích alpha-1 receptors → co mạch, tăng huyết áp.",
+        "monitoring": [
+            "Huyết áp liên tục",
+            "Nhịp tim và ECG (rối loạn nhịp)",
+            "Cung lượng tim (nếu có thể)",
+            "Tưới máu mô",
+            "Dấu hiệu hoại tử tại chỗ tiêm"
+        ],
+        "precautions": [
+            "Truyền qua đường tĩnh mạch trung tâm (nguy cơ hoại tử)",
+            "Không dùng liều thấp cho suy thận (không có bằng chứng hiệu quả)",
+            "Theo dõi rối loạn nhịp tim",
+            "Bù dịch đầy đủ trước khi dùng",
+            "Giảm liều khi huyết áp đã ổn định"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-2 phút (rất ngắn)",
+            "onset": "Ngay lập tức",
+            "duration": "Ngắn, cần truyền liên tục",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Rất nhanh, bị bất hoạt bởi MAO và COMT"
+        },
+        "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh.",
+        "black_box_warnings": "Hoại tử mô nếu rò rỉ ngoài mạch. Không dùng liều thấp cho suy thận (không có bằng chứng).",
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Dopamine",
+                "Surviving Sepsis Campaign Guidelines",
+                "UpToDate - Dopamine: Drug Information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Dobutamine": {
+        "group": "Emergency - Catecholamine (Alpha & Beta Agonist)",
+        "vietnamese_name": "Dobutamine, Dobutrex",
+        "administration": ["IV"],
+        "indications": [
+            "Suy tim cấp",
+            "Sốc tim (cardiogenic shock)",
+            "Stress test tim (dobutamine stress echo)",
+            "Sau phẫu thuật tim"
+        ],
+        "contraindications": [
+            "Hẹp động mạch chủ nặng",
+            "Rối loạn nhịp tim nặng",
+            "Sốc giảm thể tích (chưa bù dịch)"
+        ],
+        "dosage": {
+            "adult_heart_failure": "2.5-15 mcg/kg/phút IV infusion",
+            "adult_cardiogenic_shock": "2.5-20 mcg/kg/phút IV infusion",
+            "adult_stress_test": "5-40 mcg/kg/phút IV (tăng dần)",
+            "notes": "Pha 250mg trong 250ml D5W = 1000 mcg/ml. Khởi đầu 2.5-5 mcg/kg/phút."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Tăng nhịp tim",
+            "Rối loạn nhịp tim",
+            "Hạ huyết áp (do giãn mạch)",
+            "Đau ngực",
+            "Khó thở"
+        ],
+        "interactions": [
+            "Beta-blockers: đối kháng tác dụng",
+            "MAOIs: tăng tác dụng"
+        ],
+        "pregnancy": "C - An toàn trong cấp cứu",
+        "mechanism_of_action": "Chủ yếu beta-1-adrenergic receptor agonist, một số tác dụng beta-2 và alpha-1. Kích thích beta-1 receptors → tăng nhịp tim, tăng co bóp cơ tim mạnh, tăng cung lượng tim. Kích thích beta-2 receptors → giãn mạch nhẹ. Kích thích alpha-1 receptors → co mạch nhẹ. Kết quả: tăng cung lượng tim, giảm áp lực đổ đầy tim, ít ảnh hưởng đến huyết áp.",
+        "monitoring": [
+            "Huyết áp liên tục",
+            "Nhịp tim và ECG (rối loạn nhịp)",
+            "Cung lượng tim (nếu có thể)",
+            "Áp lực đổ đầy tim (CVP, PCWP)",
+            "Dấu hiệu thiếu máu cục bộ (đau ngực)"
+        ],
+        "precautions": [
+            "Bù dịch đầy đủ trước khi dùng (tránh hạ huyết áp)",
+            "Theo dõi rối loạn nhịp tim",
+            "Thận trọng ở bệnh nhân bệnh mạch vành",
+            "Giảm liều khi cung lượng tim đã cải thiện",
+            "Không dùng trong sốc giảm thể tích"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 phút (rất ngắn)",
+            "onset": "Ngay lập tức",
+            "duration": "Ngắn, cần truyền liên tục",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Rất nhanh, bị bất hoạt bởi COMT"
+        },
+        "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, có thể gây rối loạn nhịp tim nặng.",
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Dobutamine",
+                "ACLS Guidelines",
+                "UpToDate - Dobutamine: Drug Information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    }
+}
 
 __all__ = ['CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS']

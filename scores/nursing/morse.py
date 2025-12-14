@@ -17,7 +17,7 @@ def render():
         st.markdown("""
         **Morse Fall Scale** là thang điểm tiêu chuẩn để đánh giá nguy cơ té ngã ở bệnh nhân nội trú.
         
-        **Chỉ Định:**
+        **Chỉ định:**
         - Tất cả bệnh nhân nội trú
         - Bệnh nhân cao tuổi
         - Bệnh nhân có tiền sử té ngã
@@ -153,7 +153,7 @@ def render():
         
         st.markdown(f"**Diễn giải:** {interpretation}")
         
-        # Breakdown
+        # Chi tiết
         st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         - **History of Falling (Tiền sử té ngã):** {history_score} điểm
@@ -196,7 +196,7 @@ def render():
                - Sử dụng dụng cụ hỗ trợ phù hợp
                - Đảm bảo giày dép phù hợp, không trơn trượt
             
-            3. **Theo Dõi:**
+            3. **Theo dõi:**
                - Đánh giá lại Morse mỗi 48 giờ
                - Theo dõi sát bệnh nhân
             """)
@@ -219,7 +219,7 @@ def render():
                - Đảm bảo giày dép phù hợp, chống trượt
                - Cân nhắc sử dụng áo vest hoặc đai an toàn (nếu cần)
             
-            3. **Theo Dõi:**
+            3. **Theo dõi:**
                - Đánh giá lại Morse mỗi 24 giờ
                - Theo dõi sát bệnh nhân (mỗi 1-2 giờ)
                - Đặt bệnh nhân gần bàn điều dưỡng
@@ -283,6 +283,6 @@ def render():
     2. **Morse 25-44:** Nguy cơ trung bình → Theo dõi và phòng ngừa
     3. **Morse ≥ 45:** Nguy cơ cao → Can thiệp ngay
     4. **Đánh giá lại:** Tùy theo mức độ nguy cơ (24-48 giờ)
-    5. **Mục Tiêu:** Phòng ngừa té ngã, giảm tỷ lệ té ngã trong bệnh viện
+    5. **Mục tiêu:** Phòng ngừa té ngã, giảm tỷ lệ té ngã trong bệnh viện
     """)
 

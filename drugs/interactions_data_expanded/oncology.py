@@ -260,5 +260,23 @@ ONCOLOGY_INTERACTIONS = {
         "management": "Giảm liều tacrolimus 50-75% khi dùng ketoconazole",
         "references": "Micromedex"
     },
+    
+    # ========== IMMUNOSUPPRESSANTS (continued) ==========
+    
+    ("Cyclosporine", "St. John's Wort"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "St. John's Wort cảm ứng CYP3A4, giảm nồng độ cyclosporine",
+        "description": "Giảm đáng kể hiệu quả cyclosporine, nguy cơ thải ghép",
+        "management": "Tránh dùng chung. Theo dõi nồng độ cyclosporine",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Tacrolimus", "St. John's Wort"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "St. John's Wort cảm ứng CYP3A4, giảm nồng độ tacrolimus",
+        "description": "Giảm đáng kể hiệu quả tacrolimus, nguy cơ thải ghép",
+        "management": "Tránh dùng chung. Theo dõi nồng độ tacrolimus",
+        "references": "FDA, Micromedex"
+    },
 }
 

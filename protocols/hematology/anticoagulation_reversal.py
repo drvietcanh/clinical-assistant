@@ -130,17 +130,17 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Điều Trị")
+    st.markdown("### 🎯 Mục tiêu điều trị")
     
     st.success("""
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - ✅ INR <1.5 (warfarin)
     - ✅ PTT bình thường (heparin)
     - ✅ Cầm máu hiệu quả
     - ✅ Không tái phát chảy máu
     - ✅ Không biến chứng huyết khối
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - INR/PTT sau 30-60 phút
     - Dấu hiệu sống
     - Tình trạng chảy máu
@@ -463,7 +463,7 @@ def render_no_bleeding():
     - INR >5.0 nhưng <10.0: Có thể không cần
     - INR >10.0: Cân nhắc vitamin K
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **INR 5.0-9.0:**
        - Ngừng warfarin
        - Theo dõi
@@ -473,7 +473,7 @@ def render_no_bleeding():
        - Vitamin K 2.5-5 mg PO
        - Theo dõi INR sau 24 giờ
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - INR mỗi 24 giờ
     - Dấu hiệu chảy máu
     """)
@@ -484,11 +484,11 @@ def render_mild_bleeding():
     st.warning("## 🟡 Chảy Máu Nhẹ")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Chảy máu nhỏ (chảy máu cam, chảy máu nướu)
     - Không đe dọa tính mạng
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Warfarin:**
        - Ngừng warfarin
        - Vitamin K 2.5-5 mg PO hoặc 1-2 mg IV
@@ -510,12 +510,12 @@ def render_moderate_bleeding():
     st.error("## 🟠 Chảy Máu Trung Bình")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Chảy máu rõ rệt
     - Có thể cần truyền máu
     - Không đe dọa tính mạng ngay
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Warfarin:**
        - Ngừng warfarin
        - Vitamin K 5-10 mg IV
@@ -539,16 +539,16 @@ def render_moderate_bleeding():
 
 def render_severe_bleeding():
     """Severe bleeding protocol"""
-    st.error("## 🔴 Chảy Máu Nặng - Cấp Cứu")
+    st.error("## 🔴 Chảy Máu Nặng - Cấp cứu")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Chảy máu đe dọa tính mạng
     - Sốc xuất huyết
     - Chảy máu nội sọ
     - Cần truyền máu ngay
     
-    **Điều Trị Ngay:**
+    **Điều trị Ngay:**
     1. **ABC:** Airway, Breathing, Circulation
     2. **Truyền máu:** Nếu cần
     3. **Đảo ngược ngay:**
@@ -572,7 +572,7 @@ def render_severe_bleeding():
     **LMWH:**
     - Protamine 1 mg/1 mg enoxaparin
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - ICU monitoring
     - INR/PTT sau 30-60 phút
     - Dấu hiệu sống liên tục

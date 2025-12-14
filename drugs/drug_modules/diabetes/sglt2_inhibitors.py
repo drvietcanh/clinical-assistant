@@ -226,6 +226,182 @@ SGLT2_INHIBITORS_DRUGS = {
         'DAPA-HF Study - New England Journal of Medicine',
         'UpToDate - Dapagliflozin: Drug information'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - Multiple large RCTs (DECLARE-TIMI 58, DAPA-HF)'}}}
+        'High - Multiple large RCTs (DECLARE-TIMI 58, DAPA-HF)'}},
+    
+    "Canagliflozin": {
+        "group": "Diabetes - SGLT2 Inhibitor",
+        "vietnamese_name": "Canagliflozin, Invokana",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2",
+            "Giảm nguy cơ tim mạch",
+            "Bệnh thận mạn tính (CKD) ở bệnh nhân đái tháo đường"
+        ],
+        "contraindications": [
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton do đái tháo đường",
+            "Suy thận nặng (eGFR <30)",
+            "Đang lọc máu",
+            "Nhiễm trùng đường tiết niệu tái phát"
+        ],
+        "dosage": {
+            "adult_type2_dm": "100-300mg x 1 lần/ngày",
+            "adult_heart_failure": "100mg x 1 lần/ngày",
+            "adult_ckd": "100mg x 1 lần/ngày (eGFR ≥30)",
+            "notes": "Uống trước bữa ăn đầu tiên. Giảm đường huyết nhẹ. Liều 300mg có thể tăng nguy cơ tác dụng phụ."
+        },
+        "renal_adjustment": {
+            "normal": "100-300mg/ngày",
+            "30_60": "100mg/ngày (eGFR ≥30)",
+            "under_30": "CHỐNG CHỈ ĐỊNH - không dùng nếu eGFR <30"
+        },
+        "side_effects": [
+            "Nhiễm trùng đường tiết niệu",
+            "Nhiễm trùng đường sinh dục (nấm âm đạo, viêm quy đầu)",
+            "Mất nước, hạ huyết áp",
+            "Nhiễm toan ceton (hiếm)",
+            "Gãy xương tăng nhẹ",
+            "Hoại thư Fournier (hiếm nhưng nguy hiểm)",
+            "Cắt cụt chi dưới (tăng nguy cơ nhẹ)"
+        ],
+        "interactions": [
+            "Insulin/Sulfonylurea: tăng nguy cơ hạ đường huyết",
+            "Diuretics: tăng nguy cơ mất nước",
+            "Digoxin: tăng nhẹ nồng độ digoxin",
+            "Rifampin: giảm nồng độ canagliflozin"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Canagliflozin là chất ức chế chọn lọc sodium-glucose cotransporter 2 (SGLT2) ở ống lượn gần của thận. SGLT2 chịu trách nhiệm tái hấp thu 90% glucose từ nước tiểu. Bằng cách ức chế SGLT2, canagliflozin ngăn chặn tái hấp thu glucose, làm tăng bài tiết glucose qua nước tiểu (glucosuria), từ đó giảm đường huyết. Cơ chế này không phụ thuộc vào insulin, giúp giảm đường huyết mà không tăng nguy cơ hạ đường huyết (trừ khi dùng với insulin hoặc sulfonylurea). Ngoài ra, canagliflozin có lợi ích tim mạch và thận: giảm thể tích tuần hoàn, giảm huyết áp, giảm albumin niệu, và cải thiện kết cục tim mạch. Nghiên cứu CANVAS đã chứng minh lợi ích tim mạch. Canagliflozin có thể tăng nhẹ nguy cơ cắt cụt chi dưới.",
+        "monitoring": [
+            "Đường huyết (HbA1c, glucose máu) - đánh giá hiệu quả giảm đường huyết",
+            "Chức năng thận (eGFR, creatinine) - không dùng nếu eGFR <30",
+            "Nhiễm trùng đường tiết niệu (UTI) - triệu chứng, cấy nước tiểu nếu cần",
+            "Nhiễm trùng đường sinh dục (nấm âm đạo, viêm quy đầu) - đặc biệt ở phụ nữ",
+            "Dấu hiệu mất nước, hạ huyết áp (đặc biệt ở người cao tuổi, dùng diuretics)",
+            "Nhiễm toan ceton (DKA) - glucose máu, ketone, pH máu nếu có triệu chứng",
+            "Hoại thư Fournier (nhiễm trùng vùng sinh dục nặng) - hiếm nhưng nguy hiểm",
+            "Gãy xương (đặc biệt ở người cao tuổi)",
+            "Dấu hiệu nhiễm trùng, loét, đau ở chi dưới (nguy cơ cắt cụt chi)"
+        ],
+        "precautions": [
+            "Không dùng cho đái tháo đường type 1 (tăng nguy cơ nhiễm toan ceton)",
+            "CHỐNG CHỈ ĐỊNH nếu eGFR <30 - không hiệu quả",
+            "Tăng nguy cơ nhiễm trùng đường tiết niệu và đường sinh dục - vệ sinh tốt, uống nhiều nước",
+            "Nguy cơ nhiễm toan ceton (DKA) - đặc biệt ở bệnh nhân type 1, phẫu thuật, bệnh cấp tính, nhịn ăn",
+            "Nguy cơ mất nước, hạ huyết áp - đặc biệt ở người cao tuổi, dùng diuretics, suy tim",
+            "Tăng nguy cơ hạ đường huyết khi dùng với insulin hoặc sulfonylurea - có thể cần giảm liều",
+            "Hoại thư Fournier - hiếm nhưng nguy hiểm, cần chú ý vệ sinh vùng sinh dục",
+            "Tăng nhẹ nguy cơ cắt cụt chi dưới - theo dõi dấu hiệu nhiễm trùng, loét, đau ở chi dưới",
+            "Uống nhiều nước để giảm nguy cơ nhiễm trùng",
+            "Uống trước bữa ăn đầu tiên"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10-13 giờ",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa qua UGT1A9, UGT2B4), thận (thải trừ một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Nguy cơ nhiễm toan ceton (DKA) - đặc biệt ở bệnh nhân type 1, phẫu thuật, bệnh cấp tính. Nguy cơ cắt cụt chi dưới - tăng nhẹ nguy cơ. Hoại thư Fournier - hiếm nhưng nguy hiểm. Không dùng nếu eGFR <30.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rifampin",
+                    "mechanism": "Cảm ứng UGT1A9 và UGT2B4, tăng chuyển hóa canagliflozin",
+                    "effect": "Giảm nồng độ canagliflozin, giảm hiệu quả",
+                    "management": "Có thể cần tăng liều canagliflozin. Theo dõi đường huyết."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Insulin, Sulfonylureas",
+                    "mechanism": "Tác dụng cộng dồn giảm đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Theo dõi đường huyết chặt chẽ. Có thể cần giảm liều insulin hoặc sulfonylurea."
+                },
+                {
+                    "drug": "Diuretics",
+                    "mechanism": "Cả hai đều gây mất nước, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ mất nước, hạ huyết áp",
+                    "management": "Thận trọng. Theo dõi dấu hiệu mất nước, hạ huyết áp. Có thể cần giảm liều diuretics."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Canagliflozin có thể tăng nhẹ nồng độ digoxin",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ digoxin và dấu hiệu độc tính."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Suy thận nặng (eGFR <30) - CHỐNG CHỈ ĐỊNH",
+                "Đang lọc máu",
+                "Dị ứng canagliflozin hoặc SGLT2 inhibitor"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (eGFR 30-60) - dùng liều 100mg/ngày",
+                "Nhiễm trùng đường tiết niệu tái phát - tăng nguy cơ",
+                "Bệnh tim mạch - thận trọng",
+                "Có thai - category C"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, nhưng THƯỜNG TRÁNH DÙNG. Insulin là lựa chọn ưu tiên trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Canagliflozin bài tiết vào sữa mẹ ở nồng độ thấp. Ít có nguy cơ gây tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Canagliflozin chuyển hóa một phần qua gan nhưng chủ yếu thải qua thận.",
+            "moderate": "Không cần điều chỉnh liều thường quy. Theo dõi đáp ứng điều trị.",
+            "severe": "Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị và độc tính.",
+            "notes": "Canagliflozin chuyển hóa một phần qua gan (UGT1A9, UGT2B4) nhưng chủ yếu thải qua thận. Suy gan thường không ảnh hưởng đáng kể đến nồng độ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ đường huyết (nếu dùng với insulin hoặc sulfonylurea)",
+                "Mất nước, hạ huyết áp",
+                "Nhiễm toan ceton (hiếm)"
+            ],
+            "antidote": "Glucose (nếu hạ đường huyết)",
+            "treatment": [
+                "Ngừng canagliflozin nếu cần",
+                "Điều trị hạ đường huyết nếu có (glucose)",
+                "Truyền dịch nếu mất nước, hạ huyết áp",
+                "Điều trị nhiễm toan ceton nếu có",
+                "Theo dõi tại bệnh viện"
+            ],
+            "monitoring": "Đường huyết, dấu hiệu sinh tồn, dấu hiệu mất nước, ketone máu"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống trước bữa ăn đầu tiên (không cần ăn)",
+                "timing": "Uống 1 lần/ngày, trước bữa ăn đầu tiên. Nên uống vào cùng một thời điểm mỗi ngày để dễ nhớ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Canagliflozin (Invokana)",
+                "CANVAS Study - New England Journal of Medicine",
+                "UpToDate - Canagliflozin: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - Multiple large RCTs (CANVAS) showing cardiovascular benefit"
+        }
+    }
+}
 
 __all__ = ['SGLT2_INHIBITORS_DRUGS']

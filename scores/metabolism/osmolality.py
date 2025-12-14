@@ -172,7 +172,7 @@ def render():
         </div>
         """, unsafe_allow_html=True)
         
-        # Breakdown
+        # Chi tiết
         st.markdown("### 📋 Thành phần:")
         st.markdown(f"""
         - **2 × Na:** 2 × {na} = {2*na:.0f}
@@ -419,7 +419,7 @@ def render():
     
     4. **Gap tăng + Anion gap tăng:** Methanol hoặc Ethylene glycol → CẤP CỨU!
     
-    5. **Điều Trị:** Fomepizole + Lọc máu
+    5. **Điều trị:** Fomepizole + Lọc máu
     """)
 
 

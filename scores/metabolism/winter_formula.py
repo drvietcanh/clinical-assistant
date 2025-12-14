@@ -223,7 +223,7 @@ def render():
         
         st.markdown("---")
         
-        # Winter's Formula Results
+        # Winter's Formula Kết quảs
         st.subheader("🔬 Winter's Formula - PCO₂ Dự Đoán")
         
         col1, col2 = st.columns(2)

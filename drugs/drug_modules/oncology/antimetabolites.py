@@ -127,6 +127,104 @@ ANTIMETABOLITES_DRUGS = {
         'UpToDate - 5-Fluorouracil Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-15', 'evidence_level':
+        'High (FDA-approved, extensive clinical data)'}},
+    "Gemcitabine": {'group': 'Oncology - Antimetabolite', 'vietnamese_name':
+        'Gemcitabine, Gemzar', 'administration': ['IV'], 'indications': [
+        'Ung thư tụy (adjuvant và metastatic)', 'Ung thư phổi không tế bào nhỏ (NSCLC)',
+        'Ung thư bàng quang', 'Ung thư vú (metastatic)',
+        'Ung thư buồng trứng'], 'contraindications': ['Dị ứng gemcitabine',
+        'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'], 'dosage': {
+        'adult_standard': '1000mg/m² IV ngày 1, 8, 15 (mỗi 28 ngày) hoặc ngày 1, 8 (mỗi 21 ngày)',
+        'adult_pancreatic': '1000mg/m² IV ngày 1, 8, 15 (mỗi 28 ngày)',
+        'adult_bladder': '1000mg/m² IV ngày 1, 8, 15 (mỗi 28 ngày)',
+        'notes':
+        'Truyền trong 30 phút. Có thể phối hợp với cisplatin, carboplatin, hoặc paclitaxel'}, 'renal_adjustment': {
+        'normal': 'Không đổi', '30_60': 'Thận trọng, có thể giảm liều 25%',
+        'under_30': 'Thận trọng, giảm liều 25-50%'}, 'side_effects': [
+        'Giảm bạch cầu, tiểu cầu (myelosuppression - phổ biến)',
+        'Buồn nôn, nôn (nhẹ đến trung bình)', 'Phát ban, ngứa',
+        'Sốt, ớn lạnh (flu-like syndrome - phổ biến)',
+        'Phù ngoại biên (hiếm)', 'Độc phổi (viêm phổi kẽ - hiếm nhưng nguy hiểm)',
+        'Độc gan (tăng transaminase - hiếm)', 'Rụng tóc (nhẹ)'], 'interactions': [
+        'Cisplatin: tăng độc tính tủy xương',
+        'Warfarin: có thể tăng tác dụng chống đông',
+        'Live vaccines: tránh dùng trong điều trị'], 'pregnancy': 'D - Chống chỉ định',
+        'mechanism_of_action':
+        'Gemcitabine là antimetabolite pyrimidine, tương tự cytarabine. Gemcitabine được chuyển hóa thành gemcitabine triphosphate (dFdCTP) và gemcitabine diphosphate (dFdCDP). dFdCTP tích hợp vào DNA, gây chấm dứt chuỗi DNA (chain termination) và ngăn cản quá trình sao chép DNA. dFdCDP ức chế enzyme ribonucleotide reductase (RNR), ngăn cản tổng hợp deoxyribonucleotides (thành phần DNA), dẫn đến thiếu hụt DNA và gây chết tế bào. Gemcitabine tác động chủ yếu lên tế bào đang phân chia nhanh (ung thư), gây độc tế bào. Gemcitabine có tác dụng tự tăng cường (self-potentiating) - tích hợp vào DNA làm tăng tích lũy dFdCTP. Hiệu quả với nhiều loại ung thư, đặc biệt ung thư tụy, phổi, bàng quang.'
+        , 'monitoring': [
+        'Công thức máu toàn phần (CBC) trước mỗi chu kỳ và giữa các chu kỳ (theo dõi giảm bạch cầu, tiểu cầu - phổ biến)'
+        , 'Chức năng gan (ALT, AST) trước và trong điều trị (độc gan hiếm)',
+        'Dấu hiệu nhiễm trùng (sốt, ớn lạnh) do giảm bạch cầu',
+        'Dấu hiệu độc phổi (khó thở, ho, đau ngực) - viêm phổi kẽ hiếm nhưng nguy hiểm'
+        , 'Dấu hiệu flu-like syndrome (sốt, ớn lạnh, đau cơ) - phổ biến, thường tự khỏi'
+        , 'Dấu hiệu phát ban, ngứa'], 'precautions': [
+        'Theo dõi sát công thức máu (nguy cơ giảm bạch cầu, tiểu cầu cao)',
+        'Giảm liều hoặc trì hoãn điều trị nếu giảm bạch cầu/tiểu cầu nặng',
+        'Flu-like syndrome (sốt, ớn lạnh) - phổ biến, thường tự khỏi, có thể dùng acetaminophen'
+        , 'Độc phổi (viêm phổi kẽ) - hiếm nhưng nguy hiểm, ngừng ngay nếu có dấu hiệu',
+        'Tương tác với cisplatin (tăng độc tính tủy xương)',
+        'Tương tác với warfarin (tăng nguy cơ chảy máu)',
+        'Tránh dùng live vaccines trong điều trị',
+        'Giảm liều 25-50% nếu suy thận'], 'pharmacokinetics': {'half_life':
+        '42-94 phút (ngắn)', 'onset': '1-2 tuần (tác dụng lâm sàng)',
+        'duration': '4-6 giờ (tác dụng sinh học)', 'protein_binding': 'Minimal',
+        'clearance':
+        'Gan (chuyển hóa qua deamination), thận (thải trừ - 92% nguyên dạng)'}, 'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu. Pha với NS hoặc D5W.'
+        , 'black_box_warnings':
+        'Giảm bạch cầu, tiểu cầu (myelosuppression) phổ biến. Theo dõi CBC trước mỗi chu kỳ. Độc phổi (viêm phổi kẽ) hiếm nhưng nguy hiểm - ngừng ngay nếu có dấu hiệu.'
+        , 'drug_interactions': {'major': [{'drug': 'Cisplatin', 'mechanism':
+        'Cả hai đều gây myelosuppression, tác dụng cộng dồn', 'effect':
+        'Tăng nguy cơ giảm bạch cầu, tiểu cầu nghiêm trọng', 'management':
+        'Theo dõi CBC chặt chẽ. Có thể cần giảm liều hoặc trì hoãn điều trị.'}],
+        'moderate': [{'drug': 'Warfarin', 'mechanism':
+        'Gemcitabine có thể tăng tác dụng chống đông', 'effect':
+        'Tăng INR, tăng nguy cơ chảy máu', 'management':
+        'Theo dõi INR chặt chẽ. Có thể cần giảm liều warfarin.'}], 'minor': [{'drug':
+        'Live vaccines', 'mechanism':
+        'Gemcitabine ức chế miễn dịch, tăng nguy cơ nhiễm trùng từ vaccine', 'effect':
+        'Tăng nguy cơ nhiễm trùng từ live vaccine', 'management':
+        'Tránh dùng live vaccines trong điều trị và ít nhất 3 tháng sau điều trị.'}]},
+        'contraindications': {'tuyệt_đối': [
+        'Dị ứng gemcitabine hoặc các thành phần khác',
+        'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
+        'Đang cho con bú - chống chỉ định'], 'tương_đối': [
+        'Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục',
+        'Suy thận (CrCl <30) - giảm liều 25-50%, theo dõi chặt chẽ',
+        'Suy gan - thận trọng, có thể cần giảm liều',
+        'Bệnh phổi - tăng nguy cơ độc phổi',
+        'Bệnh nhân cao tuổi - tăng nguy cơ độc tính']}, 'pregnancy_lactation': {
+        'fda_category': 'D', 'pregnancy_details':
+        'Chống chỉ định trong thai kỳ. Gemcitabine gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.'
+        , 'lactation': {'safety': 'Incompatible', 'details':
+        'Gemcitabine bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.'
+        , 'recommendation':
+        'Không cho con bú khi dùng gemcitabine. Ngừng cho con bú hoặc ngừng thuốc.'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
+        'Thận trọng, có thể cần giảm liều', 'severe':
+        'Thận trọng, giảm liều 25-50%', 'notes':
+        'Gemcitabine chuyển hóa một phần qua gan (deamination). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ.'},
+        'overdose_management': {'symptoms': [
+        'Giảm bạch cầu, tiểu cầu nặng (nhiễm trùng, chảy máu)',
+        'Độc phổi (viêm phổi kẽ - khó thở, ho, đau ngực)',
+        'Buồn nôn, nôn nặng', 'Độc gan (tăng transaminase)'], 'antidote':
+        'Không có antidote đặc hiệu. Điều trị hỗ trợ', 'treatment': [
+        'Ngừng ngay gemcitabine',
+        'Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần',
+        'Theo dõi CBC, chức năng gan, chức năng thận',
+        'Điều trị độc phổi: corticosteroid nếu có viêm phổi kẽ',
+        'Theo dõi và điều trị triệu chứng'], 'monitoring':
+        'CBC mỗi ngày, chức năng gan, chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu độc phổi'},
+        'reversal_agents': {'available': False, 'agents': []},
+        'administration_instructions': {'oral': None, 'iv': {'reconstitution':
+        'Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất. Nồng độ cuối: ≤40mg/ml.',
+        'infusion_rate': 'Truyền trong 30 phút (tốc độ tiêu chuẩn)',
+        'compatibility': ['NS', 'D5W'], 'incompatibility': [], 'notes':
+        'Truyền trong 30 phút. Theo dõi extravasation. Có thể phối hợp với cisplatin, carboplatin, hoặc paclitaxel.'}},
+        'references': {'primary_sources': ['FDA Drug Label - Gemcitabine (Gemzar)',
+        'UpToDate - Gemcitabine Drug Information',
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
+        'last_updated': '2025-02-05', 'evidence_level':
         'High (FDA-approved, extensive clinical data)'}}}
 
 # Import antimetabolite antifolates

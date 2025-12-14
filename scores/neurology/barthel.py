@@ -17,7 +17,7 @@ def render():
         st.markdown("""
         **Barthel Index** là thang điểm đánh giá khả năng thực hiện các hoạt động sống hàng ngày (Activities of Daily Living - ADL).
         
-        **Chỉ Định:**
+        **Chỉ định:**
         - Đánh giá chức năng sau đột quỵ
         - Đánh giá chức năng ở bệnh nhân cao tuổi
         - Theo dõi tiến triển phục hồi chức năng
@@ -225,7 +225,7 @@ def render():
         
         st.markdown(f"**Diễn giải:** {interpretation}")
         
-        # Breakdown
+        # Chi tiết
         st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         - **Đi đại tiện:** {bowel_score}/10

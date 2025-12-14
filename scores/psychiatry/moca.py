@@ -150,7 +150,7 @@ def render():
         </div>
         """, unsafe_allow_html=True)
         
-        # Breakdown
+        # Chi tiết
         st.markdown("### 📊 Chi tiết điểm:")
         
         col1, col2 = st.columns(2)

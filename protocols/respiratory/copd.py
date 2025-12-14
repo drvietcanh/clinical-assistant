@@ -28,14 +28,14 @@ def render():
         sputum_increased = st.checkbox("Đờm tăng", key="copd_sputum")
         sputum_purulent = st.checkbox("Đờm mủ", key="copd_purulent")
         
-        st.markdown("#### Dấu Hiệu Nặng")
+        st.markdown("#### Dấu hiệu Nặng")
         severe_dyspnea = st.checkbox("Khó thở nặng (nói không thành câu)", key="copd_severe_dysp")
         rr_high = st.checkbox("Nhịp thở >25/phút", key="copd_rr")
         hr_high = st.checkbox("Nhịp tim >110/phút", key="copd_hr")
         cyanosis = st.checkbox("Tím tái", key="copd_cyanosis")
         confusion = st.checkbox("Lú lẫn", key="copd_confusion")
         
-        st.markdown("#### Yếu Tố Nguy Cơ")
+        st.markdown("#### Yếu tố nguy cơ")
         copd_severe = st.checkbox("COPD nặng (FEV1 <50%)", key="copd_fev1")
         frequent_exac = st.checkbox("Cơn cấp thường xuyên (≥2/năm)", key="copd_freq")
         comorbid = st.checkbox("Bệnh kèm theo nặng (tim, thận...)", key="copd_comorbid")
@@ -61,10 +61,10 @@ def render():
             severity = "mild"
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Điều Trị")
+    st.markdown("### 2️⃣ Điều trị")
     
     # Treatment protocol
-    tabs = st.tabs(["💨 Bronchodilators", "💊 Corticosteroids", "🦠 Antibiotics", "💉 Oxygen/NIV", "📋 Theo Dõi"])
+    tabs = st.tabs(["💨 Bronchodilators", "💊 Corticosteroids", "🦠 Antibiotics", "💉 Oxygen/NIV", "📋 Theo dõi"])
     
     with tabs[0]:  # Bronchodilators
         st.markdown("#### Thuốc Giãn Phế Quản")
@@ -108,7 +108,7 @@ def render():
         st.markdown("#### Corticosteroids Toàn Thân")
         
         st.success("""
-        **Khuyến Cáo (GOLD 2023):**
+        **Khuyến cáo (GOLD 2023):**
         - **Prednisolone/Prednisone 40mg PO x 5 ngày**
         - Hoặc **Methylprednisolone 32mg PO x 5 ngày**
         
@@ -141,7 +141,7 @@ def render():
             """)
         
         st.warning("""
-        **Tác Dụng Phụ:**
+        **Tác dụng phụ:**
         - Tăng đường huyết (theo dõi nếu ĐTĐ)
         - Tăng huyết áp
         - Lú lẫn (đặc biệt người cao tuổi)
@@ -203,10 +203,10 @@ def render():
         
         st.success("""
         **Oxygen Therapy:**
-        - **Mục Tiêu:** SpO₂ 88-92% (KHÔNG phải 100%!)
+        - **Mục tiêu:** SpO₂ 88-92% (KHÔNG phải 100%!)
         - **Lý do:** Tránh ức chế thở do CO₂ retention
         - **Cách cho:** Nasal cannula 1-2L/min hoặc Venturi mask 24-28%
-        - **Theo Dõi:** Khí máu sau 30-60 phút
+        - **Theo dõi:** Khí máu sau 30-60 phút
         """)
         
         st.error("""
@@ -239,7 +239,7 @@ def render():
         """)
     
     with tabs[4]:  # Monitoring
-        st.markdown("#### Theo Dõi & Tiêu chuẩn xuất viện")
+        st.markdown("#### Theo dõi & Tiêu chuẩn xuất viện")
         
         st.success("""
         **Theo dõi tại bệnh viện:**

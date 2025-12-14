@@ -3,7 +3,7 @@ ICH Score - Intracerebral Hemorrhage Score
 Predicts 30-day mortality in patients with intracerebral hemorrhage
 
 Score Components:
-1. GCS score (Glasgow Coma Scale)
+1. GCS score (Thang điểm hôn mê Glasgow)
 2. ICH volume (≥30 cm³)
 3. Intraventricular hemorrhage
 4. Infratentorial origin of ICH
@@ -40,7 +40,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### 1️⃣ Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow")
+        st.markdown("### 1️⃣ Thang điểm hôn mê Glasgow (GCS) - Thang điểm hôn mê Glasgow")
         gcs_options = {
             "13-15 (Nhẹ)": 0,
             "5-12 (Trung bình)": 1,
@@ -371,7 +371,7 @@ def render():
         mà chỉ là công cụ hỗ trợ thảo luận tiên lượng.
         """)
     
-    with st.expander("🏥 Xử Trí Xuất Huyết Não - Nguyên Tắc Chung"):
+    with st.expander("🏥 Xử Trí Xuất Huyết Não - Nguyên tắc Chung"):
         st.markdown("""
         **1. Hồi sức ban đầu:**
         - ABC: Đảm bảo đường thở, thở, tuần hoàn
@@ -379,7 +379,7 @@ def render():
         - Hai đường truyền tĩnh mạch cỡ lớn
         
         **2. Kiểm soát huyết áp:**
-        - **Mục Tiêu:** SBP 140-160 mmHg (giảm trong 1h đầu)
+        - **Mục tiêu:** SBP 140-160 mmHg (giảm trong 1h đầu)
         - **Thuốc:** Nicardipine IV, Labetalol IV
         - **Tránh:** Giảm huyết áp quá mạnh (có thể gây thiếu máu não)
         
@@ -397,11 +397,11 @@ def render():
         - Cân nhắc ICP monitor nếu GCS ≤8
         
         **5. Phẫu thuật:**
-        - **Chỉ Định:**
+        - **Chỉ định:**
           * Máu tụ tiểu não >3cm với xấu đi về thần kinh
           * Hydrocephalus do IVH (dẫn lưu não thất)
           * Máu tụ thùy >30ml, nông (<1cm từ bề mặt), xấu đi
-        - **Chống Chỉ Định:**
+        - **Chống chỉ định:**
           * ICH Score ≥4 (tiên lượng rất xấu)
           * GCS 3-4 với pupils giãn cố định
           * Bệnh lý nền nặng, tuổi quá cao

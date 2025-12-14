@@ -222,7 +222,7 @@ def render():
     with col1:
         age = st.number_input("Tuổi", 0, 120, 50, 1, format="%d")
     with col2:
-        gcs = st.number_input("GCS (Glasgow Coma Scale) - Thang Điểm Hôn Mê Glasgow", 3, 15, 15, 1, format="%d")
+        gcs = st.number_input("GCS (Thang điểm hôn mê Glasgow) - Thang điểm hôn mê Glasgow", 3, 15, 15, 1, format="%d")
     
     st.divider()
     
@@ -387,8 +387,8 @@ def render():
             "Age": f"{age} tuổi",
             "Temperature": f"{temperature:.1f}°C",
             "MAP": f"{map_val:.0f} mmHg",
-            "Heart Rate": f"{heart_rate:.0f} /min",
-            "Respiratory Rate": f"{respiratory_rate:.0f} /min",
+            "Nhịp tim": f"{heart_rate:.0f} /min",
+            "Nhịp thở": f"{respiratory_rate:.0f} /min",
             "FiO₂": f"{fio2:.0f}%",
             "PaO₂": f"{pao2:.0f} mmHg",
             "PaCO₂": f"{paco2:.0f} mmHg",
@@ -423,7 +423,7 @@ def render():
         )
         
         st.warning("""
-        ⚠️ **Lưu Ý:**
+        ⚠️ **Lưu ý:**
         - APACHE II chỉ là ước tính, không chính xác 100%
         - Nhiều yếu tố khác ảnh hưởng tiên lượng (bệnh nền, điều trị, biến chứng)
         - Quyết định điều trị dựa trên đánh giá lâm sàng toàn diện

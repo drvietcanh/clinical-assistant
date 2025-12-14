@@ -177,7 +177,7 @@ def render():
         
         **Khuyến nghị điều trị:** {result['recommendation']}
         
-        **Theo Dõi:** {result['monitoring']}
+        **Theo dõi:** {result['monitoring']}
         """)
         
         # Score breakdown
@@ -267,7 +267,7 @@ def render():
         - Cũng sàng lọc tốt cho panic disorder, social anxiety, PTSD
         """)
     
-    with st.expander("💊 Lựa Chọn Điều Trị Lo Âu"):
+    with st.expander("💊 Lựa Chọn Điều trị Lo Âu"):
         st.markdown("""
         ### Tâm lý trị liệu:
         
@@ -343,7 +343,7 @@ def render():
         - Chuyên khoa tâm thần
         """)
     
-    with st.expander("🔄 Theo Dõi Điều Trị"):
+    with st.expander("🔄 Theo dõi Điều trị"):
         st.markdown("""
         ### Lịch tái đánh giá GAD-7:
         
@@ -361,7 +361,7 @@ def render():
         **Đáp ứng điều trị:**
         - **Response:** Giảm ≥ 50% điểm GAD-7
         - **Remission:** GAD-7 < 5
-        - **Mục Tiêu:** Remission hoàn toàn
+        - **Mục tiêu:** Remission hoàn toàn
         
         **Khi dừng thuốc:**
         - Sau remission ≥ 12 tháng
@@ -369,7 +369,7 @@ def render():
         - Theo dõi tái phát
         """)
     
-    with st.expander("🎯 Chẩn Đoán Phân Biệt"):
+    with st.expander("🎯 Chẩn đoán Phân biệt"):
         st.markdown("""
         ### GAD-7 sàng lọc tốt cho:
         
@@ -407,7 +407,7 @@ def render():
         - **Cai chất:** Alcohol, benzodiazepines
         """)
     
-    with st.expander("💡 Kỹ Thuật Tự Quản Lý Lo Âu"):
+    with st.expander("💡 Kỹ Thuật Tự Quản lý Lo Âu"):
         st.markdown("""
         ### Kỹ thuật hô hấp:
         

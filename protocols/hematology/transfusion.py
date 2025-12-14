@@ -60,14 +60,14 @@ def render():
     st.warning("""
     **Restrictive Strategy (Ưu tiên):**
     - **RBC:** Hb <7 g/dL (hoặc <8 g/dL nếu có bệnh tim mạch)
-    - **Mục Tiêu:** Hb 7-9 g/dL
+    - **Mục tiêu:** Hb 7-9 g/dL
     - **Lợi ích:** Giảm nguy cơ nhiễm trùng, giảm chi phí
     - **Áp dụng:** Hầu hết bệnh nhân
     
     **Liberal Strategy:**
     - **RBC:** Hb <10 g/dL
-    - **Mục Tiêu:** Hb 10-12 g/dL
-    - **Chỉ Định:** 
+    - **Mục tiêu:** Hb 10-12 g/dL
+    - **Chỉ định:** 
       - Bệnh tim mạch không ổn định
       - Chảy máu cấp tính
       - Thiếu máu nặng có triệu chứng
@@ -180,7 +180,7 @@ def render_rbc_protocol():
     st.success("## 🩸 Truyền Hồng Cầu (RBC)")
     
     st.markdown("""
-    **Chỉ Định:**
+    **Chỉ định:**
     
     **1. Restrictive Threshold (Ưu tiên):**
     - Hb <7 g/dL (ổn định)
@@ -213,7 +213,7 @@ def render_platelet_protocol():
     st.warning("## 🩸 Truyền Tiểu Cầu (Platelets)")
     
     st.markdown("""
-    **Chỉ Định:**
+    **Chỉ định:**
     
     **1. Prophylactic (Dự phòng):**
     - Plt <10,000/μL (không chảy máu)
@@ -243,7 +243,7 @@ def render_ffp_protocol():
     st.info("## 🩸 Truyền Huyết Tương Tươi Đông Lạnh (FFP)")
     
     st.markdown("""
-    **Chỉ Định:**
+    **Chỉ định:**
     
     **1. Chảy máu:**
     - Chảy máu + PT/PTT kéo dài
@@ -277,7 +277,7 @@ def render_cryoprecipitate_protocol():
     st.info("## 🩸 Truyền Cryoprecipitate")
     
     st.markdown("""
-    **Chỉ Định:**
+    **Chỉ định:**
     
     **1. Fibrinogen thấp:**
     - Fibrinogen <100 mg/dL + chảy máu
@@ -317,19 +317,19 @@ def render_massive_transfusion():
     - **1 đơn vị FFP**
     - **1 đơn vị Platelets**
     
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - Duy trì Hb >7-8 g/dL
     - Duy trì Plt >50,000/μL
     - Duy trì PT/PTT gần bình thường
     - Duy trì fibrinogen >150 mg/dL
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - CBC, PT/PTT, fibrinogen mỗi 1-2 giờ
     - Ionized calcium (nguy cơ hạ canxi)
     - pH, lactate (nguy cơ toan chuyển hóa)
     - Nhiệt độ (nguy cơ hạ thân nhiệt)
     
-    **Biến Chứng:**
+    **Biến chứng:**
     - Hạ canxi (citrate toxicity)
     - Toan chuyển hóa
     - Hạ thân nhiệt

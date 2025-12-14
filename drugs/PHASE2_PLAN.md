@@ -1,4 +1,4 @@
-# Kế Hoạch Bổ Sung 8 Fields Tùy Chọn (Phase 2)
+# Kế Hoạch Bổ Sung 8 Fields Tùy chọn (Phase 2)
 
 ## Tổng Quan
 
@@ -19,7 +19,7 @@
 
 ## Kế Hoạch Phân Nhóm
 
-### Nhóm 1 - Thuốc Cấp Cứu & Thường Dùng (Ưu tiên cao nhất) ✅ HOÀN THÀNH
+### Nhóm 1 - Thuốc Cấp cứu & Thường Dùng (Ưu tiên cao nhất) ✅ HOÀN THÀNH
 **Số lượng:** 10 thuốc (100%)
 - ✅ Paracetamol
 - ✅ Ibuprofen
@@ -32,7 +32,7 @@
 - ✅ Ciprofloxacin
 - ✅ Levofloxacin
 
-### Nhóm 2 - Thuốc Có Nguy Cơ Cao (Ưu tiên cao) ✅ HOÀN THÀNH
+### Nhóm 2 - Thuốc Có Nguy cơ Cao (Ưu tiên cao) ✅ HOÀN THÀNH
 **Số lượng:** 6 thuốc (100%)
 - ✅ Valproate
 - ✅ Lamotrigine

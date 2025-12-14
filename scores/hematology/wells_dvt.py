@@ -153,7 +153,7 @@ def calculate_wells_dvt(
                 └─ Dương tính → Siêu âm tĩnh mạch chân
            ```
         
-        3. **Theo Dõi:**
+        3. **Theo dõi:**
            - Nếu D-dimer âm: giải thích, tư vấn
            - Nếu D-dimer dương: siêu âm trong 24-48h
            - Tái khám nếu triệu chứng tiến triển
@@ -238,7 +238,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("##### 🏥 Tiền Sử & Yếu Tố Nguy Cơ")
+        st.markdown("##### 🏥 Tiền Sử & Yếu tố nguy cơ")
         active_cancer = st.checkbox(
             "**Ung thư đang hoạt động**",
             help="Đang điều trị, trong 6 tháng qua, hoặc điều trị giảm nhẹ"
@@ -339,7 +339,7 @@ def render():
         
         # Additional clinical context
         st.info("""
-        **🔍 Chiến Lược Chẩn Đoán Theo Wells DVT:**
+        **🔍 Chiến Lược Chẩn đoán Theo Wells DVT:**
         
         ```
         Nghi ngờ DVT
@@ -366,7 +366,7 @@ def render():
         
         # Warning
         st.warning("""
-        ⚠️ **Cảnh Báo Y Khoa:**
+        ⚠️ **Cảnh báo Y Khoa:**
         - Thang điểm Wells DVT là công cụ hỗ trợ, không thay thế đánh giá lâm sàng
         - Kết hợp với D-dimer và hình ảnh học để chẩn đoán chính xác
         - Nếu nghi ngờ thuyên tắc phổi → đánh giá thêm Wells PE hoặc PERC
@@ -390,7 +390,7 @@ def render():
         | Tĩnh mạch nông nối bên | +1 |
         | Chẩn đoán khác có khả năng ≥ DVT | -2 |
         
-        ### Phân Tầng Nguy Cơ
+        ### Phân tầng Nguy cơ
         
         | Điểm Wells | Phân Loại | Tỷ Lệ DVT | Xử Trí |
         |------------|-----------|-----------|--------|
@@ -403,7 +403,7 @@ def render():
         - **≥50 tuổi:** Tuổi × 10 ng/mL
         - Ví dụ: 65 tuổi → cutoff = 650 ng/mL
         
-        ### Chẩn Đoán Phân Biệt (Alternative Diagnosis)
+        ### Chẩn đoán Phân biệt (Alternative Diagnosis)
         
         - Cellulitis / Nhiễm trùng da mô mềm
         - Tổn thương cơ / Rách cơ

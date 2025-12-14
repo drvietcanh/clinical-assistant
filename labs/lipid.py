@@ -377,7 +377,7 @@ def render():
     st.markdown("---")
     
     # Thông tin về công thức
-    with st.expander("ℹ️ Thông Tin Về Các Công Thức Tính LDL"):
+    with st.expander("ℹ️ Thông tin Về Các Công Thức Tính LDL"):
         st.markdown("""
         **1. Công thức Friedewald (1972)**
         - LDL = Total Chol - HDL - (TG / 5) [mg/dL]

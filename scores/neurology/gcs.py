@@ -1,5 +1,5 @@
 """
-Glasgow Coma Scale (GCS)
+Thang điểm hôn mê Glasgow (GCS)
 Consciousness level assessment
 """
 
@@ -7,8 +7,8 @@ import streamlit as st
 
 
 def render():
-    """Glasgow Coma Scale Calculator"""
-    st.subheader("🧠 Glasgow Coma Scale (GCS)")
+    """Thang điểm hôn mê Glasgow Calculator"""
+    st.subheader("🧠 Thang điểm hôn mê Glasgow (GCS)")
     st.caption("Đánh giá Mức độ ý thức")
     
     col1, col2 = st.columns([2, 1])
@@ -137,7 +137,7 @@ def render():
             
             with st.expander("📚 Tài liệu tham khảo"):
                 st.markdown("""
-                **Glasgow Coma Scale (GCS)**
+                **Thang điểm hôn mê Glasgow (GCS)**
                 
                 **Thang điểm (3-15):**
                 

@@ -23,9 +23,9 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: RISK STRATIFICATION ==========
-    st.markdown("### 📊 Phân Tầng Nguy Cơ MDR (Multidrug-Resistant)")
+    st.markdown("### 📊 Phân tầng Nguy cơ MDR (Multidrug-Resistant)")
     
-    st.markdown("**Yếu Tố Nguy Cơ MDR:**")
+    st.markdown("**Yếu tố nguy cơ MDR:**")
     
     col1, col2 = st.columns(2)
     
@@ -62,7 +62,7 @@ def render():
     
     if not has_mdr_risk:
         st.success("""
-        ### ✅ Không Có Yếu Tố Nguy Cơ MDR
+        ### ✅ Không Có Yếu tố nguy cơ MDR
         
         **Lựa chọn 1:**
         - Ceftriaxone 2g IV QD
@@ -70,12 +70,12 @@ def render():
         - Hoặc Moxifloxacin 400mg IV QD
         - Hoặc Ampicillin-sulbactam 3g IV q6h
         
-        **Thêm Vancomycin Nếu Có Yếu Tố Nguy Cơ MRSA:**
+        **Thêm Vancomycin Nếu Có Yếu tố nguy cơ MRSA:**
         - Vancomycin 15-20mg/kg IV q8-12h (điều chỉnh theo CrCl)
         """)
     else:
         st.error("""
-        ### 🚨 Có Yếu Tố Nguy Cơ MDR
+        ### 🚨 Có Yếu tố nguy cơ MDR
         
         **Empiric Therapy (Phổ rộng):**
         
@@ -91,7 +91,7 @@ def render():
         - Meropenem 1g IV q8h
         + Gentamicin 5-7mg/kg IV QD
         
-        **Thêm Vancomycin Nếu Có Yếu Tố Nguy Cơ MRSA:**
+        **Thêm Vancomycin Nếu Có Yếu tố nguy cơ MRSA:**
         - Vancomycin 15-20mg/kg IV q8-12h (điều chỉnh theo CrCl)
         - Hoặc Linezolid 600mg IV q12h (nếu suy thận)
         """)
@@ -118,7 +118,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: DURATION ==========
-    st.markdown("### ⏱️ Thời Gian Điều Trị")
+    st.markdown("### ⏱️ Thời Gian Điều trị")
     
     st.warning("""
     **Thời gian điều trị:**

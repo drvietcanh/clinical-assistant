@@ -285,5 +285,95 @@ ANTIDIABETIC_INTERACTIONS = {
         "management": "Theo dõi nồng độ digoxin",
         "references": "Micromedex"
     },
+    
+    # ========== METFORMIN (continued) ==========
+    
+    ("Metformin", "Topiramate"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Topiramate có thể tăng nguy cơ nhiễm toan lactic",
+        "description": "Tăng nguy cơ nhiễm toan lactic",
+        "management": "Thận trọng khi dùng chung. Theo dõi lactate",
+        "references": "Micromedex"
+    },
+    
+    ("Metformin", "Cimetidine"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Cimetidine làm giảm đào thải metformin, tăng nồng độ metformin",
+        "description": "Tăng nguy cơ tác dụng phụ metformin",
+        "management": "Thận trọng khi dùng chung. Có thể cần giảm liều metformin",
+        "references": "Micromedex"
+    },
+    
+    # ========== SULFONYLUREAS (continued) ==========
+    
+    ("Sulfonylurea", "Fluconazole"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Fluconazole ức chế chuyển hóa sulfonylurea",
+        "description": "Tăng tác dụng hạ đường huyết",
+        "management": "Thận trọng khi dùng chung. Theo dõi đường huyết",
+        "references": "Micromedex"
+    },
+    
+    ("Sulfonylurea", "Miconazole"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Miconazole ức chế chuyển hóa sulfonylurea mạnh",
+        "description": "Tăng mạnh tác dụng hạ đường huyết, nguy cơ hạ đường huyết nặng",
+        "management": "Tránh dùng chung. Nếu cần: giảm liều sulfonylurea",
+        "references": "Micromedex"
+    },
+    
+    ("Sulfonylurea", "Rifampin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Rifampin cảm ứng chuyển hóa sulfonylurea, giảm tác dụng",
+        "description": "Giảm hiệu quả hạ đường huyết",
+        "management": "Tăng liều sulfonylurea khi dùng rifampin. Theo dõi đường huyết",
+        "references": "Micromedex"
+    },
+    
+    # ========== INSULIN (continued) ==========
+    
+    ("Insulin", "MAO Inhibitor"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "MAO inhibitor tăng tác dụng hạ đường huyết",
+        "description": "Tăng nguy cơ hạ đường huyết",
+        "management": "Thận trọng khi dùng chung. Theo dõi đường huyết",
+        "references": "Micromedex"
+    },
+    
+    ("Insulin", "Pentamidine"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Pentamidine có thể gây hạ đường huyết hoặc tăng đường huyết",
+        "description": "Tăng nguy cơ rối loạn đường huyết",
+        "management": "Theo dõi đường huyết sát khi dùng pentamidine",
+        "references": "Micromedex"
+    },
+    
+    # ========== TZDs (continued) ==========
+    
+    ("Pioglitazone", "Gemfibrozil"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Gemfibrozil có thể tăng nồng độ pioglitazone",
+        "description": "Tăng nguy cơ tác dụng phụ pioglitazone",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("TZD", "Contraceptive"): {
+        "severity": SEVERITY_MINOR,
+        "mechanism": "TZD có thể giảm nhẹ hiệu quả tránh thai",
+        "description": "Giảm nhẹ hiệu quả tránh thai",
+        "management": "Khuyên dùng biện pháp tránh thai bổ sung",
+        "references": "Micromedex"
+    },
+    
+    # ========== DPP-4 INHIBITORS (continued) ==========
+    
+    ("Sitagliptin", "Digoxin"): {
+        "severity": SEVERITY_MINOR,
+        "mechanism": "Có thể tăng nhẹ nồng độ digoxin",
+        "description": "Tăng nhẹ nguy cơ ngộ độc digoxin",
+        "management": "Theo dõi nồng độ digoxin",
+        "references": "Micromedex"
+    },
 }
 

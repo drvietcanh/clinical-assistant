@@ -131,7 +131,26 @@ SULFONYLUREAS_DRUGS = {
         'Uống 1-2 lần/ngày, thường trước bữa sáng và/hoặc bữa tối. Khởi đầu với liều thấp (2.5-5mg/ngày) và tăng dần. Uống đúng giờ mỗi ngày.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': [
+        }}, 'pediatric_dosing': {'neonates':
+        'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Đái tháo đường type 2 ở trẻ em thường hiếm. Nguy cơ hạ đường huyết cao.',
+        'infants':
+        'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Đái tháo đường type 2 ở trẻ em thường hiếm. Nguy cơ hạ đường huyết cao.',
+        'children':
+        'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Nếu cần: 0.5-1mg/ngày, tăng dần đến 2.5-5mg/ngày. Theo dõi chặt chẽ đường huyết. Nguy cơ hạ đường huyết cao.',
+        'adolescents':
+        '≥18 tuổi: Liều người lớn. Khởi đầu 2.5-5mg x 1 lần/ngày, tăng dần đến 5-15mg/ngày chia 1-2 lần. Tối đa 20mg/ngày.',
+        'notes':
+        'Dữ liệu hạn chế ở trẻ em. Đái tháo đường type 2 ở trẻ em thường hiếm. Nguy cơ hạ đường huyết cao, đặc biệt ở trẻ em. Khởi đầu với liều thấp, tăng dần. Theo dõi chặt chẽ đường huyết. Bệnh nhân và gia đình cần biết dấu hiệu và cách xử trí hạ đường huyết.'}, 'geriatric_dosing': {'considerations':
+        'Người cao tuổi có nguy cơ hạ đường huyết cao hơn do: suy thận phổ biến hơn (tăng thời gian bán thải), suy gan phổ biến hơn, bỏ bữa, tương tác thuốc. Hạ đường huyết có thể nghiêm trọng và kéo dài (do thời gian bán thải dài).',
+        'dose_adjustment':
+        'Khởi đầu với liều thấp hơn (1.25-2.5mg/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng thận, gan. Có thể cần giảm liều hoặc tránh dùng ở suy thận nặng (CrCl <30).',
+        'monitoring':
+        'Theo dõi đường huyết chặt chẽ (đường huyết đói, sau ăn, HbA1c). Theo dõi dấu hiệu hạ đường huyết (run, vã mồ hôi, nhịp tim nhanh, lú lẫn, co giật). Theo dõi chức năng thận (creatinine, CrCl) định kỳ. Theo dõi chức năng gan (ALT, AST) nếu có bệnh gan. Cảnh báo bệnh nhân về dấu hiệu và cách xử trí hạ đường huyết.'}, 'brand_names': {'vietnam': [
+        'Glibenclamide', 'Daonil', 'Glibenclamide Stada', 'Gliben'], 'common': [
+        'Daonil', 'Glibenclamide', 'Glyburide']}, 'cost_estimate': {'unit': 'VND',
+        'range': '2,000 - 10,000 VND/viên (tùy hàm lượng và thương hiệu)',
+        'note':
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Glibenclamide generic thường rẻ hơn (2,000-5,000 VND/viên 5mg). Daonil (brand) thường đắt hơn (5,000-10,000 VND/viên 5mg).'}, 'references': {'primary_sources': [
         'FDA Drug Label - Glyburide (glibenclamide)',
         'UpToDate - Glyburide: Drug information',
         'UK Prospective Diabetes Study (UKPDS)',
@@ -237,13 +256,218 @@ SULFONYLUREAS_DRUGS = {
         'Uống 1-2 lần/ngày, thường trước bữa sáng và/hoặc bữa tối. Dạng modified-release: 1 lần/ngày với bữa sáng. Khởi đầu với liều thấp và tăng dần.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': [
+        }}, 'pediatric_dosing': {'neonates':
+        'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Đái tháo đường type 2 ở trẻ em thường hiếm. Nguy cơ hạ đường huyết cao.',
+        'infants':
+        'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Đái tháo đường type 2 ở trẻ em thường hiếm. Nguy cơ hạ đường huyết cao.',
+        'children':
+        'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Nếu cần: 40-80mg/ngày, tăng dần đến 80-160mg/ngày. Theo dõi chặt chẽ đường huyết. Nguy cơ hạ đường huyết cao.',
+        'adolescents':
+        '≥18 tuổi: Liều người lớn. 80-320mg/ngày chia 1-2 lần. Dạng modified-release: 30-120mg x 1 lần/ngày. Khởi đầu với liều thấp và tăng dần.',
+        'notes':
+        'Dữ liệu hạn chế ở trẻ em. Đái tháo đường type 2 ở trẻ em thường hiếm. Nguy cơ hạ đường huyết cao, nhưng ít hơn glibenclamide (do thời gian bán thải ngắn hơn). Khởi đầu với liều thấp, tăng dần. Theo dõi chặt chẽ đường huyết. Bệnh nhân và gia đình cần biết dấu hiệu và cách xử trí hạ đường huyết.'}, 'geriatric_dosing': {'considerations':
+        'Người cao tuổi có nguy cơ hạ đường huyết cao hơn do: suy thận phổ biến hơn, suy gan phổ biến hơn, bỏ bữa, tương tác thuốc. Hạ đường huyết ít kéo dài hơn glibenclamide (do thời gian bán thải ngắn hơn).',
+        'dose_adjustment':
+        'Khởi đầu với liều thấp hơn (40mg/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng thận, gan. Có thể cần giảm liều hoặc tránh dùng ở suy thận nặng (CrCl <30).',
+        'monitoring':
+        'Theo dõi đường huyết chặt chẽ (đường huyết đói, sau ăn, HbA1c). Theo dõi dấu hiệu hạ đường huyết (run, vã mồ hôi, nhịp tim nhanh, lú lẫn, co giật). Theo dõi chức năng thận (creatinine, CrCl) định kỳ. Theo dõi chức năng gan (ALT, AST) nếu có bệnh gan. Cảnh báo bệnh nhân về dấu hiệu và cách xử trí hạ đường huyết.'}, 'brand_names': {'vietnam': [
+        'Gliclazide', 'Diamicron', 'Gliclazide Stada', 'Glicla'], 'common': [
+        'Diamicron', 'Gliclazide']}, 'cost_estimate': {'unit': 'VND',
+        'range': '3,000 - 15,000 VND/viên (tùy hàm lượng và thương hiệu)',
+        'note':
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Gliclazide generic thường rẻ hơn (3,000-8,000 VND/viên 80mg). Diamicron (brand) thường đắt hơn (8,000-15,000 VND/viên 80mg).'}, 'references': {'primary_sources': [
         'FDA Drug Label - Diamicron (gliclazide)',
         'UpToDate - Gliclazide: Drug information',
         'UK Prospective Diabetes Study (UKPDS)',
         'American Diabetes Association guidelines',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
         'last_updated': '2024-12-19', 'evidence_level':
-        'High - Multiple large RCTs (UKPDS) and extensive clinical experience'}}}
+        'High - Multiple large RCTs (UKPDS) and extensive clinical experience'}},
+    
+    "Glimepiride": {
+        "group": "Diabetes - Sulfonylurea (3rd Generation)",
+        "vietnamese_name": "Glimepiride, Amaryl",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2",
+            "Kết hợp với metformin hoặc insulin"
+        ],
+        "contraindications": [
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton do đái tháo đường",
+            "Suy thận nặng (CrCl <30)",
+            "Suy gan nặng",
+            "Có thai"
+        ],
+        "dosage": {
+            "adult_start": "1-2mg x 1 lần/ngày với bữa sáng",
+            "adult_usual": "1-4mg x 1 lần/ngày",
+            "adult_max": "8mg/ngày (có thể chia 2 lần)",
+            "notes": "Ít nguy cơ hạ đường huyết hơn glibenclamide. Uống với bữa sáng hoặc bữa ăn đầu tiên."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Khởi đầu 1mg/ngày, tăng dần",
+            "under_30": "CHỐNG CHỈ ĐỊNH - tăng nguy cơ hạ đường huyết nghiêm trọng"
+        },
+        "side_effects": [
+            "Hạ đường huyết (ít hơn glibenclamide)",
+            "Tăng cân (nhẹ hơn glibenclamide)",
+            "Ban da",
+            "Rối loạn tiêu hóa",
+            "Tăng men gan (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: có thể tăng tác dụng chống đông",
+            "Rượu: tăng nguy cơ hạ đường huyết",
+            "Beta-blocker: che dấu triệu chứng hạ đường huyết",
+            "CYP2C9 inhibitors: tăng nồng độ glimepiride"
+        ],
+        "pregnancy": "C - Tránh dùng trong thai kỳ",
+        "mechanism_of_action": "Glimepiride là sulfonylurea thế hệ thứ ba, kích thích tế bào beta tuyến tụy tiết insulin. Glimepiride gắn vào SUR1 (sulfonylurea receptor 1) trên kênh KATP ở màng tế bào beta, làm đóng kênh KATP, khử cực màng tế bào, mở kênh canxi, và kích thích giải phóng insulin. Glimepiride có tác dụng nhanh hơn và thời gian bán thải ngắn hơn glibenclamide, dẫn đến nguy cơ hạ đường huyết thấp hơn, đặc biệt ở người cao tuổi. Glimepiride cũng có thể cải thiện độ nhạy cảm insulin ngoại vi và giảm sản xuất glucose ở gan. Glimepiride được chuyển hóa chủ yếu qua CYP2C9, nên có tương tác với các thuốc ức chế CYP2C9.",
+        "monitoring": [
+            "Đường huyết: HbA1c (mỗi 3 tháng), đường huyết đói, đường huyết sau ăn",
+            "Dấu hiệu hạ đường huyết: run, vã mồ hôi, nhịp tim nhanh, đói, lú lẫn, co giật",
+            "Đường huyết khi nghi ngờ hạ đường huyết",
+            "Cân nặng - có thể gây tăng cân nhẹ",
+            "Chức năng thận (creatinine, eGFR) - suy thận tăng nguy cơ hạ đường huyết",
+            "Chức năng gan (ALT, AST) - nếu có bệnh gan"
+        ],
+        "precautions": [
+            "Hạ đường huyết là tác dụng phụ phổ biến nhất - bệnh nhân cần biết dấu hiệu và cách xử trí",
+            "Nguy cơ hạ đường huyết thấp hơn glibenclamide (thời gian bán thải ngắn hơn)",
+            "Nguy cơ tăng ở: người cao tuổi, suy thận, suy gan, bỏ bữa, uống rượu",
+            "KHÔNG dùng ở đái tháo đường type 1 hoặc nhiễm toan ceton",
+            "CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30)",
+            "Uống với bữa sáng hoặc bữa ăn đầu tiên để tránh hạ đường huyết",
+            "Tránh bỏ bữa - tăng nguy cơ hạ đường huyết",
+            "Tránh rượu - tăng nguy cơ hạ đường huyết",
+            "Beta-blocker có thể che dấu triệu chứng hạ đường huyết",
+            "Có thể tăng cân nhẹ - cần tư vấn chế độ ăn và tập luyện",
+            "Không dùng trong thai kỳ",
+            "Bắt đầu với liều thấp (1-2mg/ngày) và tăng dần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5-8 giờ (ngắn hơn glibenclamide)",
+            "onset": "1-2 giờ",
+            "duration": "12-24 giờ",
+            "protein_binding": ">99%",
+            "clearance": "Gan: chuyển hóa qua CYP2C9 thành metabolites không hoạt động. Thận: bài tiết một phần. Thời gian bán thải ngắn hơn glibenclamide → ít nguy cơ hạ đường huyết hơn."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng, có thể gây tử vong. Nguy cơ tăng ở người cao tuổi, suy thận, suy gan, bỏ bữa, uống rượu. Bệnh nhân cần biết dấu hiệu và cách xử trí hạ đường huyết. Không dùng ở đái tháo đường type 1 hoặc nhiễm toan ceton. CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rượu (ethanol)",
+                    "mechanism": "Ức chế sản xuất glucose ở gan, tăng nguy cơ hạ đường huyết",
+                    "effect": "Hạ đường huyết nghiêm trọng, có thể kéo dài",
+                    "management": "TRÁNH RƯỢU hoàn toàn khi dùng glimepiride. Cảnh báo bệnh nhân về nguy cơ."
+                },
+                {
+                    "drug": "Beta-blockers (propranolol, metoprolol)",
+                    "mechanism": "Che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run)",
+                    "effect": "Khó nhận biết hạ đường huyết, tăng nguy cơ hạ đường huyết nặng",
+                    "management": "Thận trọng. Theo dõi đường huyết chặt chẽ. Bệnh nhân cần biết các triệu chứng hạ đường huyết không bị che dấu (vã mồ hôi, lú lẫn)."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Glimepiride có thể tăng tác dụng chống đông",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "CYP2C9 inhibitors (fluconazole, amiodarone, sulfamethoxazole)",
+                    "mechanism": "Ức chế chuyển hóa glimepiride, tăng nồng độ",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Thận trọng. Theo dõi đường huyết. Có thể cần giảm liều glimepiride."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Dị ứng glimepiride hoặc sulfonylurea",
+                "Suy thận nặng (CrCl <30) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - tăng nguy cơ hạ đường huyết",
+                "Người cao tuổi - tăng nguy cơ hạ đường huyết",
+                "Suy thận trung bình (CrCl 30-60) - khởi đầu liều thấp, theo dõi sát",
+                "Có thai - có thể gây hạ đường huyết ở trẻ sơ sinh",
+                "Bỏ bữa thường xuyên - tăng nguy cơ hạ đường huyết",
+                "Uống rượu - tăng nguy cơ hạ đường huyết nghiêm trọng",
+                "Dùng beta-blocker - che dấu triệu chứng hạ đường huyết"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, nhưng THƯỜNG TRÁNH DÙNG. Sulfonylureas có thể gây hạ đường huyết ở trẻ sơ sinh. Insulin là lựa chọn ưu tiên trong thai kỳ. Nếu dùng, theo dõi đường huyết chặt chẽ và ngừng trước khi sinh để tránh hạ đường huyết ở trẻ sơ sinh.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Glimepiride bài tiết vào sữa mẹ ở nồng độ thấp. Ít có nguy cơ gây hạ đường huyết ở trẻ bú mẹ do nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ. Theo dõi dấu hiệu hạ đường huyết ở trẻ (quấy khóc, bú kém, vã mồ hôi)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Theo dõi men gan.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi men gan và đường huyết.",
+            "severe": "CHỐNG CHỈ ĐỊNH. Không dùng ở suy gan nặng.",
+            "notes": "Glimepiride chuyển hóa ở gan qua CYP2C9. Suy gan làm giảm chuyển hóa, tăng nồng độ, tăng nguy cơ hạ đường huyết. Không dùng ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ đường huyết nghiêm trọng: run, vã mồ hôi, nhịp tim nhanh, đói, lú lẫn, co giật, hôn mê",
+                "Có thể gây tử vong nếu không điều trị"
+            ],
+            "antidote": "Glucose (đường uống hoặc IV)",
+            "treatment": [
+                "Nếu tỉnh táo: uống nước đường, nước ngọt, hoặc glucose 15-20g",
+                "Nếu không tỉnh táo: glucose 50% 50ml IV hoặc glucagon 1mg IM/SC",
+                "Theo dõi đường huyết liên tục",
+                "Có thể cần truyền glucose liên tục nếu hạ đường huyết kéo dài",
+                "Theo dõi tại bệnh viện ít nhất 24 giờ"
+            ],
+            "monitoring": "Đường huyết liên tục, dấu hiệu sinh tồn, dấu hiệu hạ đường huyết"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Glucose",
+                    "route": "PO hoặc IV",
+                    "dose": "15-20g PO (nếu tỉnh táo) hoặc 50% 50ml IV (nếu không tỉnh táo)",
+                    "notes": "Điều trị hạ đường huyết do glimepiride"
+                },
+                {
+                    "name": "Glucagon",
+                    "route": "IM hoặc SC",
+                    "dose": "1mg IM/SC",
+                    "notes": "Nếu không có đường tĩnh mạch"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "NÊN uống với bữa sáng hoặc bữa ăn đầu tiên để tránh hạ đường huyết",
+                "timing": "Uống 1 lần/ngày với bữa sáng. Với liều cao (8mg), có thể chia 2 lần/ngày (4mg x 2 lần)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Glimepiride (Amaryl)",
+                "UpToDate - Glimepiride: Drug Information",
+                "American Diabetes Association guidelines",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, multiple RCTs, extensive clinical experience"
+        }
+    }
+}
 
 __all__ = ['SULFONYLUREAS_DRUGS']

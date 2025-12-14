@@ -306,6 +306,82 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'UpToDate - Proton pump inhibitors: Overview of use and adverse effects',
         'Micromedex - Esomeprazole',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"], 'last_updated':
-        '2025-02-04', 'evidence_level': 'High - FDA approved, multiple RCTs'}}}
+        '2025-02-04', 'evidence_level': 'High - FDA approved, multiple RCTs'}},
+    
+    "Rabeprazole": {
+        "group": "Gastrointestinal - Proton Pump Inhibitor",
+        "vietnamese_name": "Rabeprazole, Pariet, Aciphex",
+        "administration": ["PO"],
+        "indications": [
+            "Loét dạ dày tá tràng",
+            "GERD",
+            "Hội chứng Zollinger-Ellison",
+            "Diệt H. pylori (kết hợp với kháng sinh)"
+        ],
+        "contraindications": [
+            "Dị ứng rabeprazole"
+        ],
+        "dosage": {
+            "adult_po": "20mg x 1-2 lần/ngày",
+            "adult_gerd": "20mg x 1 lần/ngày x 4-8 tuần",
+            "adult_ulcer": "20mg x 1 lần/ngày x 4-8 tuần",
+            "adult_h_pylori": "20mg x 2 lần/ngày (kết hợp với amoxicillin + clarithromycin)",
+            "notes": "Uống 30-60 phút trước bữa ăn. Ít phụ thuộc CYP2C19 hơn omeprazole."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Tiêu chảy",
+            "Buồn nôn",
+            "Đau bụng",
+            "Tăng men gan (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: có thể tăng INR nhẹ",
+            "Ketoconazole/Itraconazole: giảm hấp thu",
+            "Atazanavir: giảm hấp thu (chống chỉ định)"
+        ],
+        "pregnancy": "B - An toàn",
+        "mechanism_of_action": "Proton pump inhibitor (PPI). Ức chế H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, giảm tiết acid dạ dày mạnh và kéo dài. Rabeprazole được chuyển hóa chủ yếu qua CYP3A4, ít phụ thuộc CYP2C19 hơn omeprazole. Ưu điểm: ít bị ảnh hưởng bởi polymorphism CYP2C19, hiệu quả ổn định hơn.",
+        "monitoring": [
+            "Đáp ứng lâm sàng: giảm triệu chứng đau, ợ nóng",
+            "Mg2+ máu (nếu dùng kéo dài >3 tháng)",
+            "Vitamin B12 (nếu dùng kéo dài >2 năm)",
+            "Dấu hiệu nhiễm trùng: viêm phổi, C. difficile",
+            "Loãng xương (nếu dùng >1 năm)"
+        ],
+        "precautions": [
+            "Uống 30-60 phút TRƯỚC bữa ăn",
+            "KHÔNG được nhai hoặc nghiền viên bao tan trong ruột",
+            "Ít phụ thuộc CYP2C19 hơn omeprazole - hiệu quả ổn định hơn",
+            "Dùng ngắn hạn khi có thể",
+            "Thận trọng ở bệnh nhân loãng xương",
+            "Tăng nguy cơ viêm phổi, C. difficile colitis"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-2 giờ (ngắn), nhưng tác dụng kéo dài 24h",
+            "onset": "1-3 ngày (tác dụng đầy đủ)",
+            "duration": "24 giờ",
+            "protein_binding": "96%",
+            "metabolism": "Gan (CYP3A4 chủ yếu, ít phụ thuộc CYP2C19)",
+            "clearance": "Gan, ít bị ảnh hưởng bởi polymorphism CYP2C19"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể tăng nguy cơ gãy xương khi dùng lâu dài (≥1 năm) và liều cao. Nguy cơ nhiễm C. difficile tăng.",
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Rabeprazole",
+                "UpToDate - Rabeprazole: Drug Information",
+                "Medscape - Rabeprazole Drug Reference"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    }
+}
 
 __all__ = ['PROTON_PUMP_INHIBITORS_DRUGS']

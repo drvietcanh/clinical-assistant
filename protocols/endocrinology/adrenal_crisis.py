@@ -70,7 +70,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: RISK FACTORS ==========
-    st.markdown("### 📊 Yếu Tố Nguy Cơ")
+    st.markdown("### 📊 Yếu tố nguy cơ")
     
     col1, col2 = st.columns(2)
     
@@ -112,14 +112,14 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### 🚨 Điều Trị Ngay Lập Tức (ICU)")
+    st.markdown("### 🚨 Điều trị Ngay Lập Tức (ICU)")
     
     st.markdown("""
     **Thứ tự ưu tiên điều trị (theo Endocrine Society 2016):**
     """)
     
     # Step 1: Hydrocortisone
-    st.markdown("#### **1. Hydrocortisone (QUAN TRỌNG NHẤT - Điều Trị Ngay)**")
+    st.markdown("#### **1. Hydrocortisone (QUAN TRỌNG NHẤT - Điều trị Ngay)**")
     
     st.error("""
     **⚠️ QUAN TRỌNG: Điều trị Hydrocortisone NGAY LẬP TỨC, không chờ xét nghiệm**
@@ -172,7 +172,7 @@ def render():
     - Sau đó: 2-4L/ngày tùy theo nhu cầu
     - **D5NS:** Nếu có hypoglycemia
     
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - Huyết áp ổn định (SBP >90 mmHg)
     - Đi tiểu tốt (>0.5 mL/kg/h)
     - Điện giải bình thường
@@ -215,7 +215,7 @@ def render():
     - **Chỉ dùng trong suy thượng thận nguyên phát**
     - **Liều:** 0.1-0.2mg PO/ngày
     - **Bắt đầu:** Khi bệnh nhân có thể uống
-    - **Mục Tiêu:** Điều chỉnh điện giải, huyết áp
+    - **Mục tiêu:** Điều chỉnh điện giải, huyết áp
     
     **Lưu ý:**
     - Hydrocortisone liều cao đã có một phần mineralocorticoid activity
@@ -223,7 +223,7 @@ def render():
     """)
     
     # Step 5: Treat precipitating cause
-    st.markdown("#### **5. Điều Trị Nguyên Nhân Thúc Đẩy**")
+    st.markdown("#### **5. Điều trị Nguyên Nhân Thúc Đẩy**")
     
     st.markdown("""
     **Tìm và điều trị nguyên nhân:**
@@ -245,7 +245,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     st.markdown("""
     **Theo dõi sát trong 24-48 giờ đầu:**
@@ -312,7 +312,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: LONG-TERM MANAGEMENT ==========
-    st.markdown("### 🔄 Điều Trị Dài Hạn")
+    st.markdown("### 🔄 Điều trị Dài Hạn")
     
     st.markdown("""
     **Sau khi qua giai đoạn cấp (24-48 giờ):**

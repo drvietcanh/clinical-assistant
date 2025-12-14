@@ -180,7 +180,7 @@ def calculate_iss(ais_scores: dict) -> dict:
            - Chăm sóc vết thương
            - Pain control
         
-        3. **Theo Dõi:**
+        3. **Theo dõi:**
            - Tái khám nếu cần
            - Hướng dẫn dấu hiệu cảnh báo
         
@@ -249,7 +249,7 @@ def render():
         - Nếu có AIS = 6 ở bất kỳ vùng nào → ISS = 75 tự động
         - ISS tối đa = 75 (5² + 5² + 5²)
         
-        ### 📈 Phân Tầng Nguy Cơ
+        ### 📈 Phân tầng Nguy cơ
         
         | ISS | Phân Loại | Tử vong | Xử Trí |
         |-----|-----------|---------|--------|
@@ -384,7 +384,7 @@ def render():
         
         # Management
         st.markdown("---")
-        st.markdown("### 💊 Xử Trí & Quản Lý")
+        st.markdown("### 💊 Xử Trí & Quản lý")
         st.markdown(result['management'])
         
         # Additional info

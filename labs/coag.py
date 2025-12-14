@@ -83,7 +83,7 @@ def render():
     st.markdown("---")
     with st.expander("📚 Hướng dẫn diễn giải"):
         st.markdown("""
-        ### **INR - Mục Tiêu Điều Trị:**
+        ### **INR - Mục tiêu điều trị:**
         
         **Rung nhĩ (AF):**
         - Mục tiêu: **2.0 - 3.0**
@@ -105,7 +105,7 @@ def render():
         - Mục tiêu: **1.5 - 2.5 x baseline** (~ 60-80 giây)
         - Kiểm tra 6h sau thay đổi liều
         
-        **Chẩn Đoán:**
+        **Chẩn đoán:**
         - Kéo dài: thiếu yếu tố đông máu, kháng đông lupus, hemophilia
         - Ngắn: tăng đông máu
         
@@ -125,7 +125,7 @@ def render():
         
         ---
         
-        ### **Nguyên Tắc Giải thích:**
+        ### **Nguyên tắc Giải thích:**
         
         1. ✅ **INR** - Theo dõi Warfarin (đường uống)
         2. ✅ **aPTT** - Theo dõi Heparin (tiêm tĩnh mạch)

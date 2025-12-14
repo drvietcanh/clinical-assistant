@@ -70,7 +70,7 @@ def render_aki_stage1():
     
     with col2:
         st.warning("""
-        **Đánh Giá:**
+        **Đánh giá:**
         
         **Labs:**
         - FENa, FEUrea
@@ -83,7 +83,7 @@ def render_aki_stage1():
         """)
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Điều Trị Nguyên Nhân")
+    st.markdown("### 2️⃣ Điều trị Nguyên Nhân")
     
     st.success("""
     **Prerenal AKI:**
@@ -170,7 +170,7 @@ def render_aki_stage2():
     """)
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Điều Trị Nguyên Nhân (Tương Tự Stage 1)")
+    st.markdown("### 2️⃣ Điều trị Nguyên Nhân (Tương Tự Stage 1)")
     
     st.info("""
     **Nhưng tích cực hơn:**
@@ -353,24 +353,624 @@ def render_aki_stage3():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ RRT Initiation")
+    st.markdown("### 4️⃣ RRT Decision Support Tools")
     
-    st.success("""
-    **Timing:**
-    - **Early RRT:** Có thể tốt hơn (tùy nghiên cứu)
-    - **Không nên trì hoãn** nếu có clear indication
+    tab1, tab2, tab3 = st.tabs(["RRT Indication Calculator", "Timing Decision", "Modality Selection"])
     
-    **Access:**
-    - **HD:** Temporary catheter (jugular, femoral, subclavian)
-    - **CRRT:** Double-lumen catheter
+    with tab1:
+        st.markdown("#### 📊 RRT Indication Calculator (AEIOU)")
+        
+        st.markdown("**Nhập thông tin bệnh nhân:**")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            # A - Acidosis
+            st.markdown("**A - Acidosis:**")
+            ph = st.number_input(
+                "**pH:**",
+                min_value=6.5,
+                max_value=7.5,
+                value=7.35,
+                step=0.01,
+                key="rrt_ph"
+            )
+            hco3 = st.number_input(
+                "**HCO₃⁻ (mEq/L):**",
+                min_value=5.0,
+                max_value=50.0,
+                value=24.0,
+                step=0.5,
+                key="rrt_hco3"
+            )
+            bicarbonate_responsive = st.checkbox("**Đáp ứng NaHCO₃**", key="rrt_bicarb_resp")
+            
+            # E - Electrolytes
+            st.markdown("---")
+            st.markdown("**E - Electrolytes:**")
+            k = st.number_input(
+                "**K⁺ (mEq/L):**",
+                min_value=2.0,
+                max_value=10.0,
+                value=4.5,
+                step=0.1,
+                key="rrt_k"
+            )
+            k_ecg_changes = st.checkbox("**ECG changes (peaked T, QRS widening)**", key="rrt_k_ecg")
+            k_treatment_responsive = st.checkbox("**Đáp ứng điều trị**", key="rrt_k_resp")
+        
+        with col2:
+            # I - Intoxication
+            st.markdown("**I - Intoxication:**")
+            intoxication = st.selectbox(
+                "**Loại ngộ độc:**",
+                ["Không", "Toxic alcohols (methanol, ethylene glycol)", "Lithium", "Salicylates", "Theophylline"],
+                key="rrt_intoxication"
+            )
+            
+            # O - Overload
+            st.markdown("---")
+            st.markdown("**O - Overload:**")
+            pulmonary_edema = st.checkbox("**Pulmonary edema**", key="rrt_pe")
+            anasarca = st.checkbox("**Anasarca**", key="rrt_anasarca")
+            diuretic_responsive = st.checkbox("**Đáp ứng diuretics**", key="rrt_diuretic_resp")
+            fluid_overload_pct = st.number_input(
+                "**% Fluid overload:**",
+                min_value=0.0,
+                max_value=50.0,
+                value=0.0,
+                step=0.5,
+                key="rrt_fluid_pct",
+                help="(Current weight - Dry weight) / Dry weight × 100"
+            )
+            
+            # U - Uremia
+            st.markdown("---")
+            st.markdown("**U - Uremia:**")
+            bun = st.number_input(
+                "**BUN (mg/dL):**",
+                min_value=0.0,
+                max_value=300.0,
+                value=50.0,
+                step=1.0,
+                key="rrt_bun"
+            )
+            encephalopathy = st.checkbox("**Encephalopathy**", key="rrt_encephalopathy")
+            pericarditis = st.checkbox("**Pericarditis**", key="rrt_pericarditis")
+            uremic_bleeding = st.checkbox("**Uremic bleeding**", key="rrt_bleeding")
+        
+        st.markdown("---")
+        
+        # Calculate indications
+        indications = []
+        indication_count = 0
+        
+        # A - Acidosis
+        if ph < 7.1 or (ph < 7.15 and not bicarbonate_responsive):
+            indications.append("🚨 **A - Acidosis:** pH <7.1 hoặc <7.15 không đáp ứng NaHCO₃")
+            indication_count += 1
+        
+        # E - Electrolytes
+        if k > 6.5 or (k > 6.0 and k_ecg_changes) or (k > 6.0 and not k_treatment_responsive):
+            indications.append("🚨 **E - Hyperkalemia:** K⁺ >6.5 hoặc >6.0 với ECG changes/không đáp ứng")
+            indication_count += 1
+        
+        # I - Intoxication
+        if intoxication != "Không":
+            indications.append(f"🚨 **I - Intoxication:** {intoxication}")
+            indication_count += 1
+        
+        # O - Overload
+        if (pulmonary_edema and not diuretic_responsive) or (anasarca and fluid_overload_pct > 10):
+            indications.append("🚨 **O - Fluid Overload:** Pulmonary edema/anasarca không đáp ứng diuretics")
+            indication_count += 1
+        
+        # U - Uremia
+        if encephalopathy or pericarditis or uremic_bleeding or (bun > 100):
+            uremia_reasons = []
+            if encephalopathy:
+                uremia_reasons.append("Encephalopathy")
+            if pericarditis:
+                uremia_reasons.append("Pericarditis")
+            if uremic_bleeding:
+                uremia_reasons.append("Bleeding")
+            if bun > 100:
+                uremia_reasons.append(f"BUN >100 ({bun:.0f} mg/dL)")
+            indications.append(f"🚨 **U - Uremia:** {', '.join(uremia_reasons)}")
+            indication_count += 1
+        
+        # Display results
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            if indication_count > 0:
+                st.error(f"### ❌ **CÓ {indication_count} CHỈ ĐỊNH RRT**")
+                for ind in indications:
+                    st.error(ind)
+                st.warning("**Khuyến cáo:** Bắt đầu RRT ngay trong vòng 12-24h")
+            else:
+                st.success("### ✅ **CHƯA CÓ CHỈ ĐỊNH RRT RÕ RÀNG**")
+                st.info("Tiếp tục theo dõi và điều trị bảo tồn. Đánh giá lại nếu có thay đổi.")
+        
+        with col2:
+            st.markdown("### 📊 Tóm Tắt")
+            st.metric("**Số chỉ định:**", f"{indication_count}/5")
+            
+            if indication_count >= 2:
+                st.error("**Khẩn cấp**")
+            elif indication_count == 1:
+                st.warning("**Cân nhắc RRT**")
+            else:
+                st.success("**Chưa cần RRT**")
     
-    **Prescription:**
-    - **HD:** 3-4h sessions, 3×/week
-    - **CRRT:** Continuous, UF rate 20-25 ml/kg/h
+    with tab2:
+        st.markdown("#### ⏱️ Timing Decision: Early vs Late RRT")
+        
+        # Additional inputs for timing
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("**Thông tin bổ sung:**")
+            
+            aki_stage = st.selectbox(
+                "**KDIGO Stage:**",
+                ["Stage 1", "Stage 2", "Stage 3"],
+                key="timing_stage"
+            )
+            
+            uo_24h = st.number_input(
+                "**UO trong 24h (mL/kg/h):**",
+                min_value=0.0,
+                max_value=5.0,
+                value=0.5,
+                step=0.1,
+                key="timing_uo"
+            )
+            
+            anuria_hours = st.number_input(
+                "**Anuria (giờ):**",
+                min_value=0,
+                max_value=72,
+                value=0,
+                step=1,
+                key="timing_anuria"
+            )
+            
+            improving = st.checkbox("**Đang cải thiện (SCr giảm, UO tăng)**", key="timing_improving")
+            stable = st.checkbox("**Bệnh nhân ổn định**", key="timing_stable")
+        
+        with col2:
+            st.markdown("**Kết quả:**")
+            
+            # Timing decision logic
+            timing_recommendation = "Unknown"
+            timing_reason = ""
+            
+            if indication_count >= 2:
+                timing_recommendation = "Early RRT"
+                timing_reason = "Có ≥2 chỉ định AEIOU - Bắt đầu RRT trong 12-24h"
+            elif indication_count == 1:
+                if "Stage 3" in aki_stage:
+                    timing_recommendation = "Early RRT"
+                    timing_reason = "Stage 3 + 1 chỉ định - Bắt đầu RRT trong 24-48h"
+                elif uo_24h < 0.3 or anuria_hours >= 12:
+                    timing_recommendation = "Early RRT"
+                    timing_reason = "Oliguria/Anuria + chỉ định - Bắt đầu RRT trong 24-48h"
+                else:
+                    timing_recommendation = "Delayed RRT"
+                    timing_reason = "1 chỉ định nhưng ổn định - Theo dõi, RRT nếu xấu đi"
+            else:
+                if improving and stable:
+                    timing_recommendation = "Delayed RRT"
+                    timing_reason = "Không có chỉ định rõ + đang cải thiện - Tiếp tục điều trị bảo tồn"
+                else:
+                    timing_recommendation = "Monitor"
+                    timing_reason = "Theo dõi sát, đánh giá lại mỗi 12-24h"
+            
+            if timing_recommendation == "Early RRT":
+                st.error(f"### 🚨 **{timing_recommendation}**")
+                st.error(timing_reason)
+                st.info("**Timing:** Bắt đầu trong 12-48h")
+            elif timing_recommendation == "Delayed RRT":
+                st.warning(f"### ⚠️ **{timing_recommendation}**")
+                st.warning(timing_reason)
+                st.info("**Timing:** Theo dõi, RRT nếu có indication mới hoặc xấu đi")
+            else:
+                st.success(f"### ✅ **{timing_recommendation}**")
+                st.info(timing_reason)
+        
+        st.markdown("---")
+        st.markdown("#### 📋 Early vs Late RRT Comparison")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.success("""
+            **Early RRT Strategy:**
+            
+            **Chỉ định:**
+            - ≥2 AEIOU criteria
+            - Stage 3 AKI
+            - Oliguria <0.3 mL/kg/h × 24h
+            - Anuria × 12h với complications
+            
+            **Lợi ích:**
+            - Kiểm soát electrolytes tốt hơn
+            - Giảm fluid overload
+            - Tránh biến chứng nặng
+            - Có thể giảm mortality (một số nghiên cứu)
+            
+            **Timing:** 12-48h từ khi có indication
+            """)
+        
+        with col2:
+            st.warning("""
+            **Delayed RRT Strategy:**
+            
+            **Chỉ định:**
+            - Stage 1-2 AKI
+            - 0-1 AEIOU criteria
+            - Đang cải thiện
+            - Bệnh nhân ổn định
+            
+            **Lợi ích:**
+            - Tránh unnecessary RRT
+            - Giảm complications từ access
+            - Cho phép recovery tự nhiên
+            
+            **Lưu ý:** Không nên trì hoãn quá mức
+            """)
+    
+    with tab3:
+        st.markdown("#### 🔄 Modality Selection Decision Tree")
+        
+        st.markdown("**Nhập thông tin bệnh nhân:**")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            hemodynamically_stable = st.checkbox("**Hemodynamically stable**", key="modality_stable", value=True)
+            in_icu = st.checkbox("**Đang ở ICU**", key="modality_icu")
+            needs_icu = st.checkbox("**Cần ICU monitoring**", key="modality_icu_need")
+            fluid_overload_severe = st.checkbox("**Fluid overload nặng**", key="modality_fluid")
+            needs_tight_control = st.checkbox("**Cần kiểm soát electrolytes chặt chẽ**", key="modality_tight")
+        
+        with col2:
+            has_access = st.checkbox("**Đã có vascular access**", key="modality_access")
+            brain_edema = st.checkbox("**Brain edema/↑ICP**", key="modality_brain")
+            sepsis = st.checkbox("**Sepsis**", key="modality_sepsis")
+            needs_uremia_clearance = st.checkbox("**Cần uremia clearance tốt**", key="modality_uremia")
+        
+        st.markdown("---")
+        
+        # Modality decision logic
+        recommended_modality = "Unknown"
+        modality_reason = ""
+        alternatives = []
+        
+        if not hemodynamically_stable or in_icu or needs_icu or fluid_overload_severe or brain_edema:
+            recommended_modality = "CRRT (CVVHDF)"
+            modality_reason = "Hemodynamically unstable, ICU, fluid overload nặng, hoặc brain edema"
+            alternatives = ["SLED (nếu không có ICU bed)", "IHD (nếu ổn định sau hồi sức)"]
+        elif needs_tight_control and not has_access:
+            recommended_modality = "SLED"
+            modality_reason = "Cần kiểm soát tốt nhưng không unstable, không có ICU bed"
+            alternatives = ["IHD (nếu ổn định)", "CRRT (nếu có ICU bed)"]
+        elif needs_uremia_clearance and hemodynamically_stable:
+            recommended_modality = "IHD"
+            modality_reason = "Hemodynamically stable, cần uremia clearance tốt"
+            alternatives = ["SLED (nếu cần ổn định hơn)", "CRRT (nếu unstable)"]
+        else:
+            recommended_modality = "IHD hoặc SLED"
+            modality_reason = "Bệnh nhân ổn định, không có yêu cầu đặc biệt"
+            alternatives = ["CRRT (nếu có chỉ định ICU)"]
+        
+        # Display recommendation
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            st.markdown("### 📊 Khuyến Nghị")
+            st.success(f"### ✅ **{recommended_modality}**")
+            st.info(modality_reason)
+            
+            if alternatives:
+                st.markdown("**Phương án thay thế:**")
+                for alt in alternatives:
+                    st.caption(f"- {alt}")
+        
+        with col2:
+            st.markdown("### ⚙️ Prescription")
+            if "CRRT" in recommended_modality:
+                st.info("""
+                **CVVHDF:**
+                - Blood: 150-200 ml/min
+                - UF: 20-25 ml/kg/h
+                - Dialysate: 1-2 L/h
+                - Replacement: 1-2 L/h
+                """)
+            elif "IHD" in recommended_modality:
+                st.info("""
+                **IHD:**
+                - Duration: 3-4h
+                - Frequency: 3×/week
+                - Blood: 300-400 ml/min
+                """)
+            elif "SLED" in recommended_modality:
+                st.info("""
+                **SLED:**
+                - Duration: 6-12h
+                - Frequency: Daily
+                - Blood: 200 ml/min
+                """)
+    
+    st.markdown("---")
+    st.markdown("#### 🔄 Modality Selection: CRRT vs IHD vs SLED")
+    
+    tab1, tab2, tab3 = st.tabs(["CRRT (Continuous)", "IHD (Intermittent)", "SLED (Hybrid)"])
+    
+    with tab1:
+        st.markdown("##### 🔄 CRRT - Continuous Renal Replacement Therapy")
+        
+        st.success("""
+        **Chỉ định (Ưu tiên):**
+        - ✅ Hemodynamically unstable (shock, vasopressors)
+        - ✅ ICU patients
+        - ✅ Fluid overload nặng
+        - ✅ Cần kiểm soát electrolytes chặt chẽ
+        - ✅ Brain edema, ↑ICP
+        
+        **Modalities:**
+        - **CVVH (Continuous Veno-Venous Hemofiltration):**
+          * UF rate: 20-25 ml/kg/h
+          * Chủ yếu để fluid removal
+        - **CVVHD (Continuous Veno-Venous Hemodialysis):**
+          * Dialysate flow: 1-2 L/h
+          * Chủ yếu để solute clearance
+        - **CVVHDF (Continuous Veno-Venous Hemodiafiltration):**
+          * Kết hợp cả hai
+          * UF + Dialysate
+          * **Ưu tiên** cho AKI nặng
+        
+        **Prescription:**
+        - **Blood flow:** 150-200 ml/min
+        - **UF rate:** 20-25 ml/kg/h (≥35 ml/kg/h nếu sepsis)
+        - **Dialysate flow:** 1-2 L/h (CVVHD/CVVHDF)
+        - **Replacement fluid:** 1-2 L/h (CVVH/CVVHDF)
+        - **Anticoagulation:** 
+          * Heparin (aPTT 1.5-2× normal)
+          * Citrate (ưu tiên nếu không chống chỉ định)
+          * Không dùng nếu có chống chỉ định
+        
+        **Ưu điểm:**
+        - Hemodynamically stable hơn
+        - Kiểm soát fluid tốt
+        - Clearance liên tục
+        - Ít biến động electrolytes
+        
+        **Nhược điểm:**
+        - Cần ICU monitoring
+        - Anticoagulation risk
+        - Chi phí cao
+        - Cần trained staff
+        """)
+    
+    with tab2:
+        st.markdown("##### ⏸️ IHD - Intermittent Hemodialysis")
+        
+        st.info("""
+        **Chỉ định:**
+        - ✅ Hemodynamically stable
+        - ✅ Không cần ICU
+        - ✅ Uremia removal tốt
+        - ✅ Không có fluid overload nặng
+        
+        **Prescription:**
+        - **Duration:** 3-4 giờ/session
+        - **Frequency:** 3×/week (có thể tăng nếu cần)
+        - **Blood flow:** 300-400 ml/min
+        - **Dialysate flow:** 500-800 ml/min
+        - **UF rate:** Tùy fluid removal goal
+        
+        **Access:**
+        - **Temporary catheter:**
+          * **Jugular (ưu tiên):** Ít biến chứng, dễ chăm sóc
+          * **Femoral:** Dễ đặt, nhưng tăng nguy cơ nhiễm trùng
+          * **Subclavian:** Tránh nếu có thể (stenosis risk)
+        - **Size:** 11.5-13.5 Fr, double-lumen
+        
+        **Ưu điểm:**
+        - Uremia clearance tốt
+        - Không cần ICU
+        - Chi phí thấp hơn
+        - Staff quen thuộc
+        
+        **Nhược điểm:**
+        - Hemodynamically unstable
+        - Biến động electrolytes
+        - Khó kiểm soát fluid nếu overload nặng
+        """)
+    
+    with tab3:
+        st.markdown("##### 🔀 SLED - Sustained Low-Efficiency Dialysis")
+        
+        st.warning("""
+        **Chỉ định (Hybrid approach):**
+        - ✅ Hemodynamically unstable nhưng không cần CRRT
+        - ✅ Cần clearance tốt hơn CRRT
+        - ✅ Không có ICU bed cho CRRT
+        
+        **Prescription:**
+        - **Duration:** 6-12 giờ/session
+        - **Frequency:** Daily hoặc q12h
+        - **Blood flow:** 200 ml/min
+        - **Dialysate flow:** 100-300 ml/min
+        - **UF rate:** Tùy fluid goal
+        
+        **Ưu điểm:**
+        - Hemodynamically stable hơn IHD
+        - Clearance tốt hơn CRRT
+        - Có thể làm ngoài ICU
+        - Chi phí trung bình
+        
+        **Nhược điểm:**
+        - Không liên tục như CRRT
+        - Vẫn có biến động hơn CRRT
+        - Cần staff training
+        """)
+    
+    st.markdown("---")
+    st.markdown("#### 🩺 Vascular Access Placement")
+    
+    st.error("""
+    **Catheter Selection:**
+    
+    **Site Priority:**
+    1. **Right Internal Jugular** (ưu tiên nhất)
+       - Ít biến chứng
+       - Dễ chăm sóc
+       - Tỷ lệ nhiễm trùng thấp
+       - Không gây stenosis
+    
+    2. **Left Internal Jugular**
+       - Tương tự right nhưng có thể khó hơn
+    
+    3. **Femoral**
+       - Dễ đặt, nhanh
+       - Tăng nguy cơ nhiễm trùng
+       - Chỉ dùng tạm thời (<72h)
+       - Không dùng nếu có thể
+    
+    4. **Subclavian** (tránh nếu có thể)
+       - Tăng nguy cơ stenosis
+       - Khó chăm sóc
+       - Chỉ dùng nếu không có lựa chọn khác
+    
+    **Catheter Size:**
+    - **11.5-13.5 Fr** double-lumen
+    - **Length:** 
+      * Jugular: 15-20 cm
+      * Femoral: 20-24 cm
+      * Subclavian: 15-20 cm
+    
+    **Ultrasound-guided:** Bắt buộc cho jugular/subclavian
+    
+    **Complications:**
+    - Pneumothorax (subclavian)
+    - Hemorrhage
+    - Infection
+    - Thrombosis
+    - Stenosis (subclavian)
     """)
     
     st.markdown("---")
-    st.markdown("### 5️⃣ Supportive Care Nâng Cao")
+    st.markdown("#### 📋 RRT Prescription Details")
+    
+    st.info("""
+    **CRRT Prescription:**
+    
+    **CVVHDF (Recommended):**
+    - Blood flow: 150-200 ml/min
+    - UF rate: 20-25 ml/kg/h (≥35 ml/kg/h nếu sepsis)
+    - Dialysate flow: 1-2 L/h
+    - Replacement fluid: 1-2 L/h
+    - Anticoagulation: Citrate (ưu tiên) hoặc Heparin
+    
+    **IHD Prescription:**
+    - Duration: 3-4h
+    - Frequency: 3×/week (có thể daily nếu cần)
+    - Blood flow: 300-400 ml/min
+    - Dialysate flow: 500-800 ml/min
+    - UF goal: Tùy fluid status
+    
+    **SLED Prescription:**
+    - Duration: 6-12h
+    - Frequency: Daily hoặc q12h
+    - Blood flow: 200 ml/min
+    - Dialysate flow: 100-300 ml/min
+    
+    **Monitoring:**
+    - Pre-RRT: K⁺, PO₄⁻, Ca²⁺, Hgb
+    - During RRT: BP, access function
+    - Post-RRT: Labs, fluid balance
+    """)
+    
+    st.markdown("---")
+    st.markdown("### 5️⃣ KDIGO RRT Indications - Chi tiết")
+    
+    st.markdown("#### 📊 KDIGO 2012 Recommendations")
+    
+    st.error("""
+    **Absolute Indications (Must Start RRT):**
+    
+    1. **Severe Hyperkalemia:**
+       - K⁺ >6.5 mEq/L không đáp ứng điều trị
+       - K⁺ >6.0 với ECG changes (peaked T, QRS widening)
+    
+    2. **Severe Acidosis:**
+       - pH <7.1 không đáp ứng NaHCO₃
+       - pH <7.15 với hemodynamic instability
+    
+    3. **Severe Fluid Overload:**
+       - Pulmonary edema không đáp ứng diuretics
+       - Anasarca với organ dysfunction
+    
+    4. **Uremic Complications:**
+       - Encephalopathy
+       - Pericarditis
+       - Uremic bleeding (platelet dysfunction)
+       - BUN >100-150 mg/dL với symptoms
+    
+    5. **Intoxication:**
+       - Toxic alcohols (methanol, ethylene glycol)
+       - Lithium
+       - Salicylates (nếu không đáp ứng alkalinization)
+       - Theophylline
+    """)
+    
+    st.markdown("---")
+    st.markdown("#### ⚖️ Early vs Delayed RRT")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.success("""
+        **Early RRT Strategy:**
+        
+        **Start trong 12-24h nếu:**
+        - Stage 3 AKI
+        - Oliguria <0.3 mL/kg/h × 24h
+        - Anuria × 12h
+        - ≥2 AEIOU criteria
+        - BUN >100 mg/dL
+        
+        **Evidence:**
+        - Một số RCT cho thấy có lợi
+        - Giảm fluid overload
+        - Kiểm soát electrolytes tốt hơn
+        
+        **Khuyến cáo:** Cân nhắc early RRT nếu có indication
+        """)
+    
+    with col2:
+        st.warning("""
+        **Delayed RRT Strategy:**
+        
+        **Chờ recovery nếu:**
+        - Stage 1-2 AKI
+        - Không có AEIOU indication
+        - Đang cải thiện (SCr giảm, UO tăng)
+        - Bệnh nhân ổn định
+        
+        **Evidence:**
+        - Một số RCT không thấy lợi ích early
+        - Tránh unnecessary RRT
+        - Giảm complications từ access
+        
+        **Lưu ý:** Không nên trì hoãn quá mức
+        """)
+    
+    st.markdown("---")
+    st.markdown("### 6️⃣ Supportive Care Nâng Cao")
     
     st.warning("""
     **Nutrition:**

@@ -165,7 +165,7 @@ def get_bilirubin_points(bilirubin: float) -> int:
 
 
 def get_gcs_points(gcs: int) -> int:
-    """Glasgow Coma Scale points"""
+    """Thang điểm hôn mê Glasgow points"""
     if gcs < 6:
         return 26
     elif gcs < 9:
@@ -386,7 +386,7 @@ def render():
     with col1:
         age = st.number_input("Tuổi", 0, 120, 50, 1, format="%d")
     with col2:
-        gcs = st.number_input("GCS (Glasgow Coma Scale) - Thang Điểm Hôn Mê Glasgow", 3, 15, 15, 1, format="%d")
+        gcs = st.number_input("GCS (Thang điểm hôn mê Glasgow) - Thang điểm hôn mê Glasgow", 3, 15, 15, 1, format="%d")
     
     st.divider()
     
@@ -521,7 +521,7 @@ def render():
             """)
         
         st.warning("""
-        ⚠️ **Lưu Ý:**
+        ⚠️ **Lưu ý:**
         - Chỉ là ước tính, không chính xác 100%
         - Nhiều yếu tố khác ảnh hưởng tiên lượng
         - Quyết định dựa trên đánh giá lâm sàng toàn diện

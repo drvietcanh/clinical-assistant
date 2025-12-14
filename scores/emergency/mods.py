@@ -14,7 +14,7 @@ MODS Components (6 organ systems):
 3. Hepatic: Serum bilirubin
 4. Cardiovascular: Pressure-adjusted heart rate (PAR)
 5. Hematologic: Platelet count
-6. Neurologic: Glasgow Coma Scale
+6. Neurologic: Thang điểm hôn mê Glasgow
 
 Score: 0-4 points per organ → Total: 0-24 points
 
@@ -71,7 +71,7 @@ def get_hepatic_score(bilirubin: float) -> int:
 
 
 def get_cardiovascular_score(hr: float, map_val: float) -> int:
-    """Cardiovascular score based on PAR (Pressure-Adjusted Heart Rate)
+    """Cardiovascular score based on PAR (Pressure-Adjusted Nhịp tim)
     PAR = HR × CVP / MAP (simplified: HR / MAP when CVP not available)
     Using simplified version: HR × (Right Atrial Pressure / MAP)
     Even more simplified: Just use HR and MAP relationship
@@ -109,7 +109,7 @@ def get_hematologic_score(platelets: float) -> int:
 
 
 def get_neurologic_score(gcs: int) -> int:
-    """Neurologic score based on Glasgow Coma Scale"""
+    """Neurologic score based on Thang điểm hôn mê Glasgow"""
     if gcs >= 15:
         return 0
     elif gcs >= 13:
@@ -229,7 +229,7 @@ def render():
         1. **Hô hấp:** PaO₂/FiO₂ ratio
         2. **Thận:** Creatinine
         3. **Gan:** Bilirubin
-        4. **Tim mạch:** PAR (Pressure-Adjusted Heart Rate)
+        4. **Tim mạch:** PAR (Pressure-Adjusted Nhịp tim)
         5. **Huyết học:** Tiểu cầu
         6. **Thần kinh:** GCS
         
@@ -307,7 +307,7 @@ def render():
     
     # Neurologic
     st.markdown("#### 6️⃣ Thần kinh")
-    gcs = st.number_input("GCS (Glasgow Coma Scale) - Thang Điểm Hôn Mê Glasgow", 3, 15, 15, 1, format="%d")
+    gcs = st.number_input("GCS (Thang điểm hôn mê Glasgow) - Thang điểm hôn mê Glasgow", 3, 15, 15, 1, format="%d")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
     st.divider()
@@ -380,7 +380,7 @@ def render():
             """)
         
         st.warning("""
-        ⚠️ **Lưu Ý:**
+        ⚠️ **Lưu ý:**
         - MODS là công cụ đánh giá, không phải chẩn đoán
         - Kết hợp với đánh giá lâm sàng
         - Tính lại hàng ngày để theo dõi
@@ -402,7 +402,7 @@ def render():
         | **Huyết học** Platelets (×10³/μL) | >120 | 81-120 | 51-80 | 21-50 | ≤20 |
         | **Thần kinh** GCS | 15 | 13-14 | 10-12 | 7-9 | ≤6 |
         
-        * PAR (Pressure-Adjusted Heart Rate) = HR × CVP / MAP  
+        * PAR (Pressure-Adjusted Nhịp tim) = HR × CVP / MAP  
         Simplified: HR / MAP
         
         ### Ưu Điểm MODS

@@ -108,7 +108,7 @@ def calculate_score2_op(
            - Không bắt đầu mới nếu tuổi thọ dự kiến <5 năm
            - Ưu tiên điều trị các bệnh khác quan trọng hơn
         
-        3. **Theo Dõi:**
+        3. **Theo dõi:**
            - Kiểm tra định kỳ mỗi 1-2 năm
            - Đánh giá lại khi có thay đổi sức khỏe
         
@@ -138,7 +138,7 @@ def calculate_score2_op(
            - Vẫn có lợi ngay cả ở tuổi cao
            - Hỗ trợ cai thuốc
         
-        4. **Theo Dõi:**
+        4. **Theo dõi:**
            - 6-12 tháng/lần
            - Đánh giá chức năng nhận thức, ngã
         
@@ -256,7 +256,7 @@ def render():
         - BP: <140/90 thay vì <130/80
         - HbA1c: <8% thay vì <7% (nếu DM)
         
-        ### ⚠️ Khi KHÔNG Điều Trị Tích Cực
+        ### ⚠️ Khi KHÔNG Điều trị Tích Cực
         
         - Tuổi thọ dự kiến <3-5 năm
         - Frailty nặng
@@ -325,7 +325,7 @@ def render():
     st.divider()
     
     # Calculate
-    if st.button("🧮 Tính Nguy Cơ SCORE2-OP", type="primary", use_container_width=True):
+    if st.button("🧮 Tính Nguy cơ SCORE2-OP", type="primary", use_container_width=True):
         
         if age < 70:
             st.error("⚠️ SCORE2-OP dành cho người ≥70 tuổi. Sử dụng SCORE2 cho 40-69 tuổi.")
@@ -403,7 +403,7 @@ def render():
         """)
         
         st.warning("""
-        ⚠️ **Lưu Ý:**
+        ⚠️ **Lưu ý:**
         - Đây là công cụ hỗ trợ, không thay thế đánh giá toàn diện
         - Ở người cao tuổi: **QoL > Prolonging life**
         - Tránh overtreatment

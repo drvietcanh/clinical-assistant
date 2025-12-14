@@ -103,13 +103,13 @@ def _render_quick_facts_box(drug_data):
             summary = ', '.join(monitoring_list[:3])
             if len(monitoring_list) > 3:
                 summary += '...'
-            facts.append(f'**Theo Dõi:** {summary}')
+            facts.append(f'**Theo dõi:** {summary}')
     if 'administration' in drug_data:
         admin_icons = {'IV': '💉', 'IM': '💊', 'PO': '🍽️', 'Inhalation': '🌬️',
             'SC': '💉', 'Rectal': '📦'}
         admin_display = ' / '.join([f"{admin_icons.get(route, '')} {route}" for
             route in drug_data['administration']])
-        facts.append(f'**Đường Dùng:** {admin_display}')
+        facts.append(f'**Đường dùng:** {admin_display}')
     if not facts:
         return
     facts_html = ' | '.join(facts)

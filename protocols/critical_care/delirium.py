@@ -9,7 +9,7 @@ import streamlit as st
 
 def render():
     """Delirium Management Protocol"""
-    st.subheader("🧠 Quản Lý Delirium (Delirium Management)")
+    st.subheader("🧠 Quản lý Delirium (Delirium Management)")
     st.caption("ICU Delirium Guidelines, NICE - Delirium assessment and management")
     
     st.error("""
@@ -107,10 +107,10 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
     treatment_approach = st.radio(
-        "**Phương Pháp Điều Trị:**",
+        "**Phương Pháp Điều trị:**",
         [
             "Non-Pharmacologic (Không dùng thuốc) - Ưu tiên",
             "Pharmacologic (Dùng thuốc) - Khi cần"
@@ -127,7 +127,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều Trị")
+    st.markdown("### 📋 Checklist Điều trị")
     
     checklist_items = [
         "✅ Đánh giá CAM-ICU hàng ngày",
@@ -180,17 +180,17 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Điều Trị")
+    st.markdown("### 🎯 Mục tiêu điều trị")
     
     st.success("""
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - ✅ Giải quyết nguyên nhân
     - ✅ Cải thiện ý thức
     - ✅ Giảm kích động (nếu có)
     - ✅ Phục hồi chức năng nhận thức
     - ✅ Giảm thời gian nằm viện
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - CAM-ICU hàng ngày
     - Dấu hiệu sống
     - Đáp ứng điều trị
@@ -223,14 +223,14 @@ def render_hyperactive_delirium():
     st.error("## 🔴 Hyperactive Delirium (Kích Động)")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Kích động, bồn chồn
     - Kéo ống, rút catheter
     - Đánh, đá, la hét
     - Không hợp tác
     - Nguy hiểm cho bản thân và nhân viên
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Non-pharmacologic (Ưu tiên):**
        - Đảm bảo an toàn
        - Giải thích, trấn an
@@ -255,14 +255,14 @@ def render_hypoactive_delirium():
     st.warning("## 🟡 Hypoactive Delirium (Ức Chế)")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Lơ mơ, li bì
     - Giảm vận động
     - Không đáp ứng
     - Rút lui
     - Dễ bỏ sót (không rõ ràng như hyperactive)
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Non-pharmacologic (Ưu tiên):**
        - Kích thích nhẹ nhàng
        - Định hướng lại
@@ -285,12 +285,12 @@ def render_mixed_delirium():
     st.error("## 🟠 Mixed Delirium (Hỗn Hợp)")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Kết hợp cả hyperactive và hypoactive
     - Dao động giữa kích động và ức chế
     - Khó dự đoán
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Non-pharmacologic (Ưu tiên):**
        - Linh hoạt theo từng giai đoạn
        - Đảm bảo an toàn khi kích động
@@ -301,7 +301,7 @@ def render_mixed_delirium():
        - **Quetiapine:** 25-50 mg PO q12h
        - **Olanzapine:** 2.5-5 mg PO/IM q12h
     
-    3. **Theo Dõi:**
+    3. **Theo dõi:**
        - Đánh giá thường xuyên
        - Điều chỉnh liều theo triệu chứng
     """)
@@ -386,7 +386,7 @@ def render_pharmacologic():
     - Nguy cơ extrapyramidal symptoms
     - Không dùng nếu QT >500ms
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - ECG (QT interval)
     - Đáp ứng
     - Tác dụng phụ
@@ -414,7 +414,7 @@ def render_pharmacologic():
     - Tác dụng chậm hơn
     - Có thể gây hạ huyết áp
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - Huyết áp
     - Đáp ứng
     """)
@@ -440,7 +440,7 @@ def render_pharmacologic():
     - Tác dụng chậm hơn haloperidol
     - Có thể gây hạ huyết áp
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - Huyết áp
     - Đáp ứng
     """)
@@ -466,7 +466,7 @@ def render_pharmacologic():
     - Cần truyền tĩnh mạch liên tục
     - Đắt tiền
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - Huyết áp, nhịp tim
     - RASS
     """)

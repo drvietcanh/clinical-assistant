@@ -78,4 +78,4 @@ def render():
             if hco3 > 26:
                 st.error("**Kiềm Chuyển Hóa**")
         else:
-            st.success("**Bình Thường hoặc Đã Bù**")
+            st.success("**Bình thường hoặc Đã Bù**")

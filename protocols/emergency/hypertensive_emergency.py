@@ -9,7 +9,7 @@ import streamlit as st
 
 def render():
     """Hypertensive Emergency/Urgency Protocol"""
-    st.subheader("⚡ Cơn Tăng Huyết Áp Cấp Cứu")
+    st.subheader("⚡ Cơn Tăng Huyết áp Cấp cứu")
     st.caption("AHA/ACC 2017, JNC 8 - Hypertensive Emergency/Urgency Management")
     
     st.info("""
@@ -27,7 +27,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Chẩn Đoán")
+    st.markdown("### 📋 Chẩn đoán")
     
     with st.expander("🔍 Tiêu chuẩn chẩn đoán", expanded=True):
         st.markdown("""
@@ -47,14 +47,14 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Hạ Huyết Áp")
+    st.markdown("### 🎯 Mục tiêu Hạ Huyết áp")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.error("""
         **Cơn tăng huyết áp cấp cứu:**
-        - **Mục Tiêu:** Giảm 15-25% trong 1 giờ đầu
+        - **Mục tiêu:** Giảm 15-25% trong 1 giờ đầu
         - **Sau đó:** Giảm từ từ đến mục tiêu
         - **Tránh:** Hạ quá nhanh (nguy cơ thiếu máu cục bộ)
         
@@ -65,7 +65,7 @@ def render():
     with col2:
         st.warning("""
         **Cơn tăng huyết áp khẩn cấp:**
-        - **Mục Tiêu:** Hạ từ từ trong 24-48 giờ
+        - **Mục tiêu:** Hạ từ từ trong 24-48 giờ
         - **Có thể:** Điều trị ngoại trú
         - **Thuốc:** Uống, không cần IV
         
@@ -75,7 +75,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Thuốc Điều Trị")
+    st.markdown("### 💊 Thuốc Điều trị")
     
     condition_type = st.radio(
         "**Loại tổn thương cơ quan:**",
@@ -114,23 +114,23 @@ def render():
     - **Liều:** 20-80 mg IV bolus q10min
     - **Hoặc:** 0.5-2 mg/min truyền tĩnh mạch
     - **Ưu điểm:** Tác dụng nhanh, ít tác dụng phụ
-    - **Chống Chỉ Định:** Suy tim nặng, block nhĩ thất, hen phế quản
+    - **Chống chỉ định:** Suy tim nặng, block nhĩ thất, hen phế quản
     
     **2. Nicardipine (CCB):**
     - **Liều:** 5-15 mg/h truyền tĩnh mạch
     - **Ưu điểm:** Tác dụng nhanh, dễ điều chỉnh
-    - **Chống Chỉ Định:** Suy tim nặng
+    - **Chống chỉ định:** Suy tim nặng
     
     **3. Esmolol (Beta blocker):**
     - **Liều:** 500 mcg/kg bolus, sau đó 50-300 mcg/kg/min
     - **Ưu điểm:** Thời gian bán hủy ngắn
-    - **Chống Chỉ Định:** Suy tim, block nhĩ thất, hen phế quản
+    - **Chống chỉ định:** Suy tim, block nhĩ thất, hen phế quản
     
     **4. Nitroprusside:**
     - **Liều:** 0.25-10 mcg/kg/min
     - **Ưu điểm:** Tác dụng rất nhanh
     - **Nhược điểm:** Cần monitor sát, nguy cơ thiếu máu cục bộ
-    - **Chống Chỉ Định:** Suy thận nặng
+    - **Chống chỉ định:** Suy thận nặng
     
     **5. Hydralazine:**
     - **Liều:** 10-20 mg IV q20-30min
@@ -139,12 +139,12 @@ def render():
     
     **6. Enalaprilat (ACE inhibitor):**
     - **Liều:** 0.625-1.25 mg IV q6h
-    - **Chống Chỉ Định:** Suy thận, hẹp động mạch thận, có thai
+    - **Chống chỉ định:** Suy thận, hẹp động mạch thận, có thai
     """)
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều Trị")
+    st.markdown("### 📋 Checklist Điều trị")
     
     checklist_items = [
         "✅ Đánh giá tổn thương cơ quan đích",
@@ -163,7 +163,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚠️ Cảnh Báo")
+    st.markdown("### ⚠️ Cảnh báo")
     
     st.error("""
     **Tránh hạ huyết áp quá nhanh:**
@@ -231,21 +231,21 @@ def render():
 
 def render_urgency_protocol():
     """Hypertensive urgency protocol"""
-    st.success("## 🟢 Cơn Tăng Huyết Áp Khẩn Cấp")
+    st.success("## 🟢 Cơn Tăng Huyết áp Khẩn Cấp")
     
     st.markdown("""
     **Đặc điểm:**
     - BP >180/120 mmHg
     - Không có triệu chứng/tổn thương cơ quan
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Có thể điều trị ngoại trú**
     2. **Thuốc uống:**
        - Amlodipine 5-10 mg PO
        - Hoặc: Captopril 25 mg PO
        - Hoặc: Clonidine 0.1-0.2 mg PO
-    3. **Mục Tiêu:** Hạ từ từ trong 24-48 giờ
-    4. **Theo Dõi:** Tái khám sau 24-48 giờ
+    3. **Mục tiêu:** Hạ từ từ trong 24-48 giờ
+    4. **Theo dõi:** Tái khám sau 24-48 giờ
     
     **Xuất viện:** Có thể nếu ổn định
     """)
@@ -253,13 +253,13 @@ def render_urgency_protocol():
 
 def render_neurologic_protocol():
     """Neurologic emergency protocol"""
-    st.error("## 🔴 Tổn Thương Não - Cấp Cứu")
+    st.error("## 🔴 Tổn Thương Não - Cấp cứu")
     
     st.markdown("""
     **Tình huống:**
     - Encephalopathy, stroke, TIA
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Labetalol:** 20-80 mg IV bolus q10min
        - Hoặc: 0.5-2 mg/min truyền tĩnh mạch
     
@@ -272,19 +272,19 @@ def render_neurologic_protocol():
     
     4. **Tránh:** Hạ quá nhanh (nguy cơ thiếu máu cục bộ)
     
-    5. **Theo Dõi:** Thần kinh, BP liên tục
+    5. **Theo dõi:** Thần kinh, BP liên tục
     """)
 
 
 def render_cardiac_protocol():
     """Cardiac emergency protocol"""
-    st.error("## 🔴 Tổn Thương Tim - Cấp Cứu")
+    st.error("## 🔴 Tổn Thương Tim - Cấp cứu")
     
     st.markdown("""
     **Tình huống:**
     - ACS, suy tim cấp, phù phổi
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Nếu ACS:**
        - Nitroglycerin: 10-20 mcg/min
        - Labetalol: 20-80 mg IV
@@ -297,13 +297,13 @@ def render_cardiac_protocol():
     
     3. **Tránh:** Beta blocker nếu suy tim nặng
     
-    4. **Theo Dõi:** ECG, troponin, BNP
+    4. **Theo dõi:** ECG, troponin, BNP
     """)
 
 
 def render_aortic_dissection_protocol():
     """Aortic dissection protocol"""
-    st.error("## 🔴 Bóc Tách Động Mạch Chủ - Cấp Cứu Tối")
+    st.error("## 🔴 Bóc Tách Động Mạch Chủ - Cấp cứu Tối")
     
     st.markdown("""
     **Tình huống:**
@@ -322,19 +322,19 @@ def render_aortic_dissection_protocol():
     
     5. **Phẫu thuật:** Type A cần phẫu thuật ngay
     
-    6. **Theo Dõi:** BP, HR liên tục, CT scan
+    6. **Theo dõi:** BP, HR liên tục, CT scan
     """)
 
 
 def render_preeclampsia_protocol():
     """Preeclampsia/eclampsia protocol"""
-    st.error("## 🔴 Preeclampsia/Eclampsia - Cấp Cứu")
+    st.error("## 🔴 Preeclampsia/Eclampsia - Cấp cứu")
     
     st.markdown("""
     **Tình huống:**
     - Preeclampsia nặng, eclampsia
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Hydralazine:** 5-10 mg IV q20min
        - Hoặc: 10-20 mg IM
     
@@ -348,19 +348,19 @@ def render_preeclampsia_protocol():
     
     5. **Mục tiêu BP:** <160/110
     
-    6. **Theo Dõi:** Thai nhi, sản phụ
+    6. **Theo dõi:** Thai nhi, sản phụ
     """)
 
 
 def render_renal_protocol():
     """Renal emergency protocol"""
-    st.error("## 🔴 Tổn Thương Thận - Cấp Cứu")
+    st.error("## 🔴 Tổn Thương Thận - Cấp cứu")
     
     st.markdown("""
     **Tình huống:**
     - AKI, proteinuria nặng
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Labetalol:** 20-80 mg IV bolus
        - Hoặc: 0.5-2 mg/min truyền tĩnh mạch
     
@@ -372,6 +372,6 @@ def render_renal_protocol():
     
     4. **Mục tiêu BP:** <160/100
     
-    5. **Theo Dõi:** BUN, Cr, điện giải
+    5. **Theo dõi:** BUN, Cr, điện giải
     """)
 

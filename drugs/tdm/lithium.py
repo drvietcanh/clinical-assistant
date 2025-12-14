@@ -184,7 +184,7 @@ def render_lithium_tdm():
             )
         
         # Check for contraindications
-        st.markdown("#### ⚠️ Kiểm Tra Chống Chỉ Định")
+        st.markdown("#### ⚠️ Kiểm Tra Chống chỉ định")
         has_ckd = crcl < 60
         is_elderly = age >= 65
         
@@ -255,7 +255,7 @@ def render_lithium_tdm():
             """)
             
             st.markdown("---")
-            st.markdown("### 🎯 Mục Tiêu TDM")
+            st.markdown("### 🎯 Mục tiêu TDM")
             
             if indication_code == "bipolar_acute":
                 target_range = "0.8-1.2 mEq/L"
@@ -408,7 +408,7 @@ def render_lithium_tdm():
                 **Xử trí:**
                 1. **Ngừng lithium ngay**
                 2. **Bù dịch:** NS 0.9% để tăng thải lithium
-                3. **Theo Dõi:**
+                3. **Theo dõi:**
                    - Nồng độ lithium (mỗi 12-24h)
                    - Điện giải (Na+, K+)
                    - Creatinine, CrCl
@@ -423,7 +423,7 @@ def render_lithium_tdm():
     
     # Drug interactions
     st.markdown("---")
-    with st.expander("⚠️ Tương Tác & Lưu ý"):
+    with st.expander("⚠️ Tương tác & Lưu ý"):
         st.markdown("""
         **Thuốc TĂNG nồng độ Lithium:**
         - Diuretics (thiazide): Tăng nguy cơ độc tính

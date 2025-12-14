@@ -47,6 +47,176 @@ def render_drug_database():
         - ✅ Chỉ định, chống chỉ định, tác dụng phụ, tương tác
         """
             )
+    
+    # Quick filter buttons for common drug categories
+    st.markdown('### ⚡ Lọc nhanh theo nhóm thuốc phổ biến')
+    
+    def search_by_keywords(keywords):
+        """Search drugs by keywords in group field"""
+        results = []
+        keywords_lower = [kw.lower() for kw in keywords]
+        for drug_name, drug_data in DRUG_DATABASE.items():
+            if 'group' in drug_data:
+                group_lower = drug_data['group'].lower()
+                if any(kw in group_lower for kw in keywords_lower):
+                    results.append((drug_name, drug_data))
+        return results
+    
+    # Define quick filter categories
+    quick_filters = [
+        {
+            'name': '🫀 Huyết áp',
+            'keywords': ['ACE Inhibitor', 'ARB', 'Beta-blocker', 'Calcium Channel Blocker', 'Diuretic', 'Alpha-Beta Blocker'],
+            'color': '#E91E63'
+        },
+        {
+            'name': '🍬 Đái tháo đường',
+            'keywords': ['Diabetes'],
+            'color': '#9C27B0'
+        },
+        {
+            'name': '💊 Tim mạch',
+            'keywords': ['Cardiovascular'],
+            'color': '#F44336'
+        },
+        {
+            'name': '🫁 Tiêu hóa',
+            'keywords': ['Gastrointestinal'],
+            'color': '#FF9800'
+        },
+        {
+            'name': '😣 Giảm đau',
+            'keywords': ['Analgesic', 'NSAID', 'Opioid'],
+            'color': '#2196F3'
+        },
+        {
+            'name': '🦠 Kháng sinh',
+            'keywords': ['Antibiotic', 'Antimicrobial'],
+            'color': '#4CAF50'
+        },
+        {
+            'name': '🧠 Thần kinh',
+            'keywords': ['Neurological', 'Psychiatry'],
+            'color': '#9C27B0'
+        },
+        {
+            'name': '🫁 Hô hấp',
+            'keywords': ['Respiratory'],
+            'color': '#00BCD4'
+        },
+        {
+            'name': '💉 Chống đông',
+            'keywords': ['Anticoagulant', 'Antiplatelet'],
+            'color': '#E91E63'
+        },
+        {
+            'name': '🦴 Xương khớp',
+            'keywords': ['Rheumatology', 'Gout'],
+            'color': '#795548'
+        },
+        {
+            'name': '🎯 Ung thư',
+            'keywords': ['Oncology'],
+            'color': '#607D8B'
+        },
+        {
+            'name': '⚡ Cấp cứu',
+            'keywords': ['Emergency'],
+            'color': '#F44336'
+        }
+    ]
+    
+    # Display quick filter buttons in a grid
+    num_cols = 4
+    filter_cols = st.columns(num_cols)
+    
+    for idx, filter_item in enumerate(quick_filters):
+        col_idx = idx % num_cols
+        with filter_cols[col_idx]:
+            # Count drugs in this category
+            category_drugs = search_by_keywords(filter_item['keywords'])
+            count = len(category_drugs)
+            
+            # Create button with count
+            button_label = f"{filter_item['name']} ({count})"
+            
+            if st.button(
+                button_label,
+                key=f'quick_filter_{idx}',
+                use_container_width=True,
+                type='secondary'
+            ):
+                # Set search query and trigger search
+                st.session_state['drug_search_input'] = ''
+                st.session_state['drug_filters'] = {}
+                st.session_state['_quick_filter_keywords'] = filter_item['keywords']
+                st.session_state['_quick_filter_name'] = filter_item['name']
+                st.rerun()
+    
+    st.markdown('---')
+    
+    # Handle quick filter results
+    if '_quick_filter_keywords' in st.session_state:
+        filter_keywords = st.session_state['_quick_filter_keywords']
+        filter_name = st.session_state.get('_quick_filter_name', 'Nhóm thuốc')
+        filter_results = search_by_keywords(filter_keywords)
+        
+        # Add button to clear filter
+        col_clear, col_info = st.columns([1, 3])
+        with col_clear:
+            if st.button('✖️ Xóa lọc', key='clear_quick_filter', use_container_width=True):
+                if '_quick_filter_keywords' in st.session_state:
+                    del st.session_state['_quick_filter_keywords']
+                if '_quick_filter_name' in st.session_state:
+                    del st.session_state['_quick_filter_name']
+                st.rerun()
+        with col_info:
+            st.info(f'🔍 Đang lọc: **{filter_name}** ({len(filter_results)} thuốc)')
+        
+        if filter_results:
+            st.markdown(f'### 💊 {filter_name} ({len(filter_results)} thuốc)')
+            page_size = 20
+            page_key = 'quick_filter_page'
+            if page_key not in st.session_state:
+                st.session_state[page_key] = 0
+            current_page = st.session_state[page_key]
+            start_idx = current_page * page_size
+            end_idx = start_idx + page_size
+            page_results = filter_results[start_idx:end_idx]
+            
+            for drug_name, drug_data in page_results:
+                render_compact_drug_card(drug_name, drug_data, search_query='')
+                selected_key = 'selected_drug'
+                show_detail_key = 'show_detail'
+                if st.session_state.get(selected_key) == drug_name and st.session_state.get(show_detail_key, False):
+                    display_drug_info(drug_name, drug_data)
+                    safe_close_key = f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                    if st.button('✖️ Đóng', key=safe_close_key):
+                        if selected_key in st.session_state:
+                            del st.session_state[selected_key]
+                        if show_detail_key in st.session_state:
+                            st.session_state[show_detail_key] = False
+                        st.rerun()
+            
+            if len(filter_results) > page_size:
+                total_pages = (len(filter_results) + page_size - 1) // page_size
+                st.markdown('---')
+                col_prev, col_info, col_next = st.columns([1, 2, 1])
+                with col_prev:
+                    if st.button('◀️ Trước', disabled=current_page == 0, key='quick_filter_prev', use_container_width=True):
+                        st.session_state[page_key] = max(0, current_page - 1)
+                        st.rerun()
+                with col_info:
+                    st.markdown(f'**Trang {current_page + 1}/{total_pages}** ({start_idx + 1}-{min(end_idx, len(filter_results))} / {len(filter_results)} thuốc)', unsafe_allow_html=True)
+                with col_next:
+                    if st.button('Tiếp ▶️', disabled=current_page >= total_pages - 1, key='quick_filter_next', use_container_width=True):
+                        st.session_state[page_key] = min(total_pages - 1, current_page + 1)
+                        st.rerun()
+            else:
+                if page_key in st.session_state:
+                    st.session_state[page_key] = 0
+            st.markdown('---')
+    
     if 'drug_comparison_list' in st.session_state and st.session_state[
         'drug_comparison_list']:
         comparison_list = st.session_state['drug_comparison_list']
@@ -68,34 +238,43 @@ def render_drug_database():
             st.session_state['drug_comparison_list'] = []
             st.rerun()
         st.markdown('---')
-    st.markdown('### 🔍 Tìm kiếm thuốc')
-    if 'drug_search_selected' in st.session_state:
-        selected_value = st.session_state.pop('drug_search_selected')
-        st.info(f'🔍 Đang tìm: **{selected_value}**')
-        st.session_state['_auto_search_trigger'] = selected_value
-    saved_searches = get_saved_searches()
-    if saved_searches:
-        st.markdown('**⭐ Saved Searches:**')
-        saved_cols = st.columns(min(len(saved_searches), 5))
-        for idx, (name, saved_data) in enumerate(list(saved_searches.items(
-            ))[:5]):
-            with saved_cols[idx]:
-                if st.button(f'⭐ {name}', key=f'saved_{name}',
-                    use_container_width=True):
-                    query, filters = load_saved_search(name)
-                    st.session_state['drug_search_input'] = query or ''
-                    st.session_state['drug_filters'] = filters or {}
-                    st.session_state['_auto_search_trigger'] = query or ''
-                    st.rerun()
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        search_query = st.text_input('Nhập tên thuốc, nhóm, hoặc chỉ định',
-            key='drug_search_input', placeholder=
-            'Ví dụ: Metformin, Omeprazole, tăng huyết áp...', value=st.
-            session_state.get('drug_search_input', ''))
-    with col2:
-        st.markdown('<br>', unsafe_allow_html=True)
-        search_button = st.button('🔍 Tìm', use_container_width=True)
+    # Check if quick filter is active
+    quick_filter_active = '_quick_filter_keywords' in st.session_state
+    
+    if not quick_filter_active:
+        st.markdown('### 🔍 Tìm kiếm thuốc')
+        if 'drug_search_selected' in st.session_state:
+            selected_value = st.session_state.pop('drug_search_selected')
+            st.info(f'🔍 Đang tìm: **{selected_value}**')
+            st.session_state['_auto_search_trigger'] = selected_value
+        saved_searches = get_saved_searches()
+        if saved_searches:
+            st.markdown('**⭐ Saved Searches:**')
+            saved_cols = st.columns(min(len(saved_searches), 5))
+            for idx, (name, saved_data) in enumerate(list(saved_searches.items(
+                ))[:5]):
+                with saved_cols[idx]:
+                    if st.button(f'⭐ {name}', key=f'saved_{name}',
+                        use_container_width=True):
+                        query, filters = load_saved_search(name)
+                        st.session_state['drug_search_input'] = query or ''
+                        st.session_state['drug_filters'] = filters or {}
+                        st.session_state['_auto_search_trigger'] = query or ''
+                        # Clear quick filter if active
+                        if '_quick_filter_keywords' in st.session_state:
+                            del st.session_state['_quick_filter_keywords']
+                        if '_quick_filter_name' in st.session_state:
+                            del st.session_state['_quick_filter_name']
+                        st.rerun()
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            search_query = st.text_input('Nhập tên thuốc, nhóm, hoặc chỉ định',
+                key='drug_search_input', placeholder=
+                'Ví dụ: Metformin, Omeprazole, tăng huyết áp...', value=st.
+                session_state.get('drug_search_input', ''))
+        with col2:
+            st.markdown('<br>', unsafe_allow_html=True)
+            search_button = st.button('🔍 Tìm', use_container_width=True)
     with st.expander('🔍 Advanced Filters', expanded=False):
         col1, col2, col3 = st.columns(3)
         if 'drug_filters' not in st.session_state:
@@ -145,64 +324,140 @@ def render_drug_database():
                     st.rerun()
                 else:
                     st.warning('Vui lòng nhập tên cho tìm kiếm')
-    if search_query and len(search_query) >= 1:
-        suggestions = get_drug_autocomplete_suggestions(search_query,
-            max_suggestions=5)
-        if suggestions:
-            st.markdown('**Gợi ý:**')
-            suggestion_cols = st.columns(min(5, len(suggestions)))
-            for idx, suggestion in enumerate(suggestions[:5]):
-                with suggestion_cols[idx]:
-                    safe_suggestion_key = (
-                        f"suggest_{str(suggestion).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+        if search_query and len(search_query) >= 1:
+            suggestions = get_drug_autocomplete_suggestions(search_query,
+                max_suggestions=5)
+            if suggestions:
+                st.markdown('**Gợi ý:**')
+                suggestion_cols = st.columns(min(5, len(suggestions)))
+                for idx, suggestion in enumerate(suggestions[:5]):
+                    with suggestion_cols[idx]:
+                        safe_suggestion_key = (
+                            f"suggest_{str(suggestion).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                            )
+                        if st.button(f'💊 {suggestion}', key=safe_suggestion_key,
+                            use_container_width=True):
+                            st.session_state['drug_search_selected'] = str(
+                                suggestion)
+                            # Clear quick filter if active
+                            if '_quick_filter_keywords' in st.session_state:
+                                del st.session_state['_quick_filter_keywords']
+                            if '_quick_filter_name' in st.session_state:
+                                del st.session_state['_quick_filter_name']
+                            st.rerun()
+        recent = get_recent_searches()
+        if recent:
+            st.markdown('**Tìm kiếm gần đây:**')
+            recent_cols = st.columns(min(len(recent), 5))
+            for idx, recent_query in enumerate(recent[:5]):
+                with recent_cols[idx]:
+                    safe_recent_key = (
+                        f"recent_{str(recent_query).replace(' ', '_').replace('-', '_').replace('/', '_')}"
                         )
-                    if st.button(f'💊 {suggestion}', key=safe_suggestion_key,
+                    if st.button(f'↩️ {recent_query}', key=safe_recent_key,
                         use_container_width=True):
-                        st.session_state['drug_search_selected'] = str(
-                            suggestion)
+                        st.session_state['drug_search_selected'] = str(recent_query
+                            )
+                        # Clear quick filter if active
+                        if '_quick_filter_keywords' in st.session_state:
+                            del st.session_state['_quick_filter_keywords']
+                        if '_quick_filter_name' in st.session_state:
+                            del st.session_state['_quick_filter_name']
                         st.rerun()
-    recent = get_recent_searches()
-    if recent:
-        st.markdown('**Tìm kiếm gần đây:**')
-        recent_cols = st.columns(min(len(recent), 5))
-        for idx, recent_query in enumerate(recent[:5]):
-            with recent_cols[idx]:
-                safe_recent_key = (
-                    f"recent_{str(recent_query).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+            st.markdown('---')
+        # Skip normal search if quick filter is active
+        auto_search_query = None
+        if '_auto_search_trigger' in st.session_state:
+            auto_search_query = st.session_state.pop('_auto_search_trigger')
+        effective_query = auto_search_query if auto_search_query else search_query
+        filters = st.session_state.get('drug_filters', {})
+        if effective_query or search_button or any(filters.values()):
+            if effective_query:
+                add_recent_search(effective_query)
+            results = search_drugs_with_filters(effective_query, filters)
+            if results:
+                st.markdown(f'### 📊 Kết quả tìm kiếm ({len(results)} thuốc)')
+                page_size = 20
+                page_key = 'drug_results_page'
+                if page_key not in st.session_state:
+                    st.session_state[page_key] = 0
+                current_page = st.session_state[page_key]
+                start_idx = current_page * page_size
+                end_idx = start_idx + page_size
+                page_results = results[start_idx:end_idx]
+                for drug_name, drug_data in page_results:
+                    render_compact_drug_card(drug_name, drug_data, search_query
+                        =effective_query)
+                    selected_key = 'selected_drug'
+                    show_detail_key = 'show_detail'
+                    if st.session_state.get(selected_key
+                        ) == drug_name and st.session_state.get(show_detail_key,
+                        False):
+                        display_drug_info(drug_name, drug_data)
+                        safe_close_key = (
+                            f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                            )
+                        if st.button('✖️ Đóng', key=safe_close_key):
+                            if selected_key in st.session_state:
+                                del st.session_state[selected_key]
+                            if show_detail_key in st.session_state:
+                                st.session_state[show_detail_key] = False
+                            st.rerun()
+                if len(results) > page_size:
+                    total_pages = (len(results) + page_size - 1) // page_size
+                    st.markdown('---')
+                    col_prev, col_info, col_next = st.columns([1, 2, 1])
+                    with col_prev:
+                        if st.button('◀️ Trước', disabled=current_page == 0,
+                            use_container_width=True):
+                            st.session_state[page_key] = max(0, current_page - 1)
+                            st.rerun()
+                    with col_info:
+                        st.markdown(
+                            f'**Trang {current_page + 1}/{total_pages}** ({start_idx + 1}-{min(end_idx, len(results))} / {len(results)} thuốc)'
+                            , unsafe_allow_html=True)
+                    with col_next:
+                        if st.button('Tiếp ▶️', disabled=current_page >= 
+                            total_pages - 1, use_container_width=True):
+                            st.session_state[page_key] = min(total_pages - 1, 
+                                current_page + 1)
+                            st.rerun()
+                elif page_key in st.session_state:
+                    st.session_state[page_key] = 0
+            else:
+                st.warning(
+                    'Không tìm thấy thuốc nào. Thử tìm kiếm với từ khóa khác.')
+                st.markdown('**Gợi ý:**')
+                st.info(
+                    """- Thử tìm bằng tên chung (generic name)
+- Tìm theo nhóm thuốc (ví dụ: Cardiovascular, Diabetes)
+- Tìm theo chỉ định (ví dụ: tăng huyết áp, đái tháo đường)"""
                     )
-                if st.button(f'↩️ {recent_query}', key=safe_recent_key,
-                    use_container_width=True):
-                    st.session_state['drug_search_selected'] = str(recent_query
-                        )
-                    st.rerun()
-    st.markdown('---')
-    auto_search_query = None
-    if '_auto_search_trigger' in st.session_state:
-        auto_search_query = st.session_state.pop('_auto_search_trigger')
-    effective_query = auto_search_query if auto_search_query else search_query
-    filters = st.session_state.get('drug_filters', {})
-    if effective_query or search_button or any(filters.values()):
-        if effective_query:
-            add_recent_search(effective_query)
-        results = search_drugs_with_filters(effective_query, filters)
-        if results:
-            st.markdown(f'### 📊 Kết quả tìm kiếm ({len(results)} thuốc)')
+        else:
+            st.markdown('### 📚 Duyệt theo nhóm thuốc')
+            selected_group = st.selectbox('Chọn nhóm thuốc:', ['Tất cả'] + list
+                (DRUG_GROUPS.keys()), key='browse_group')
+            if selected_group == 'Tất cả':
+                all_drugs = list(DRUG_DATABASE.items())
+                st.markdown(f'### 💊 Tất cả thuốc ({len(all_drugs)})')
+            else:
+                all_drugs = search_by_group(selected_group)
+                st.markdown(f'### 💊 {selected_group} ({len(all_drugs)})')
             page_size = 20
-            page_key = 'drug_results_page'
+            page_key = 'drug_browse_page'
             if page_key not in st.session_state:
                 st.session_state[page_key] = 0
             current_page = st.session_state[page_key]
             start_idx = current_page * page_size
             end_idx = start_idx + page_size
-            page_results = results[start_idx:end_idx]
-            for drug_name, drug_data in page_results:
-                render_compact_drug_card(drug_name, drug_data, search_query
-                    =effective_query)
+            page_drugs = all_drugs[start_idx:end_idx]
+            for drug_name, drug_data in page_drugs:
+                render_compact_drug_card(drug_name, drug_data, search_query='')
                 selected_key = 'selected_drug'
                 show_detail_key = 'show_detail'
                 if st.session_state.get(selected_key
-                    ) == drug_name and st.session_state.get(show_detail_key,
-                    False):
+                    ) == drug_name and st.session_state.get(show_detail_key, False
+                    ):
                     display_drug_info(drug_name, drug_data)
                     safe_close_key = (
                         f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
@@ -213,89 +468,24 @@ def render_drug_database():
                         if show_detail_key in st.session_state:
                             st.session_state[show_detail_key] = False
                         st.rerun()
-            if len(results) > page_size:
-                total_pages = (len(results) + page_size - 1) // page_size
+            if len(all_drugs) > page_size:
+                total_pages = (len(all_drugs) + page_size - 1) // page_size
                 st.markdown('---')
                 col_prev, col_info, col_next = st.columns([1, 2, 1])
                 with col_prev:
-                    if st.button('◀️ Trước', disabled=current_page == 0,
-                        use_container_width=True):
+                    if st.button('◀️ Trước', disabled=current_page == 0, key=
+                        'browse_prev', use_container_width=True):
                         st.session_state[page_key] = max(0, current_page - 1)
                         st.rerun()
                 with col_info:
                     st.markdown(
-                        f'**Trang {current_page + 1}/{total_pages}** ({start_idx + 1}-{min(end_idx, len(results))} / {len(results)} thuốc)'
+                        f'**Trang {current_page + 1}/{total_pages}** ({start_idx + 1}-{min(end_idx, len(all_drugs))} / {len(all_drugs)} thuốc)'
                         , unsafe_allow_html=True)
                 with col_next:
                     if st.button('Tiếp ▶️', disabled=current_page >= 
-                        total_pages - 1, use_container_width=True):
+                        total_pages - 1, key='browse_next', use_container_width
+                        =True):
                         st.session_state[page_key] = min(total_pages - 1, 
                             current_page + 1)
                         st.rerun()
-            elif page_key in st.session_state:
-                st.session_state[page_key] = 0
-        else:
-            st.warning(
-                'Không tìm thấy thuốc nào. Thử tìm kiếm với từ khóa khác.')
-            st.markdown('**Gợi ý:**')
-            st.info(
-                """- Thử tìm bằng tên chung (generic name)
-- Tìm theo nhóm thuốc (ví dụ: Cardiovascular, Diabetes)
-- Tìm theo chỉ định (ví dụ: tăng huyết áp, đái tháo đường)"""
-                )
-    else:
-        st.markdown('### 📚 Duyệt theo nhóm thuốc')
-        selected_group = st.selectbox('Chọn nhóm thuốc:', ['Tất cả'] + list
-            (DRUG_GROUPS.keys()), key='browse_group')
-        if selected_group == 'Tất cả':
-            all_drugs = list(DRUG_DATABASE.items())
-            st.markdown(f'### 💊 Tất cả thuốc ({len(all_drugs)})')
-        else:
-            all_drugs = search_by_group(selected_group)
-            st.markdown(f'### 💊 {selected_group} ({len(all_drugs)})')
-        page_size = 20
-        page_key = 'drug_browse_page'
-        if page_key not in st.session_state:
-            st.session_state[page_key] = 0
-        current_page = st.session_state[page_key]
-        start_idx = current_page * page_size
-        end_idx = start_idx + page_size
-        page_drugs = all_drugs[start_idx:end_idx]
-        for drug_name, drug_data in page_drugs:
-            render_compact_drug_card(drug_name, drug_data, search_query='')
-            selected_key = 'selected_drug'
-            show_detail_key = 'show_detail'
-            if st.session_state.get(selected_key
-                ) == drug_name and st.session_state.get(show_detail_key, False
-                ):
-                display_drug_info(drug_name, drug_data)
-                safe_close_key = (
-                    f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
-                    )
-                if st.button('✖️ Đóng', key=safe_close_key):
-                    if selected_key in st.session_state:
-                        del st.session_state[selected_key]
-                    if show_detail_key in st.session_state:
-                        st.session_state[show_detail_key] = False
-                    st.rerun()
-        if len(all_drugs) > page_size:
-            total_pages = (len(all_drugs) + page_size - 1) // page_size
-            st.markdown('---')
-            col_prev, col_info, col_next = st.columns([1, 2, 1])
-            with col_prev:
-                if st.button('◀️ Trước', disabled=current_page == 0, key=
-                    'browse_prev', use_container_width=True):
-                    st.session_state[page_key] = max(0, current_page - 1)
-                    st.rerun()
-            with col_info:
-                st.markdown(
-                    f'**Trang {current_page + 1}/{total_pages}** ({start_idx + 1}-{min(end_idx, len(all_drugs))} / {len(all_drugs)} thuốc)'
-                    , unsafe_allow_html=True)
-            with col_next:
-                if st.button('Tiếp ▶️', disabled=current_page >= 
-                    total_pages - 1, key='browse_next', use_container_width
-                    =True):
-                    st.session_state[page_key] = min(total_pages - 1, 
-                        current_page + 1)
-                    st.rerun()
 

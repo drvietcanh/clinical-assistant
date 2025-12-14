@@ -188,14 +188,14 @@ def calculate_kdigo(
     # Management recommendations
     if final_stage == 0:
         management = """
-        **Quản Lý - Không AKI:**
+        **Quản lý - Không AKI:**
         
         1. **Dự Phòng:**
            - Duy trì euvolemia
            - Tránh thuốc độc thận (NSAIDs, aminoglycosides, contrast)
            - Điều chỉnh liều thuốc theo chức năng thận
         
-        2. **Theo Dõi:**
+        2. **Theo dõi:**
            - SCr, BUN định kỳ nếu có yếu tố nguy cơ
            - Theo dõi cân nặng, cân bằng dịch
            - Đánh giá nước tiểu
@@ -222,7 +222,7 @@ def calculate_kdigo(
            - **Điều chỉnh liều:** Vancomycin, metformin, digoxin, LMWH
            - Xem lại TẤT CẢ thuốc - adjust theo GFR
         
-        4. **Theo Dõi:**
+        4. **Theo dõi:**
            - SCr, BUN: Hàng ngày hoặc 2 lần/ngày
            - Điện giải (K, Na, Mg, PO4): Hàng ngày
            - Nước tiểu: Mỗi 4-6 giờ
@@ -333,7 +333,7 @@ def calculate_kdigo(
            - Protein: 1.2-1.5 g/kg/day (nếu trên RRT)
            - Hạn chế K, PO4
         
-        7. **Theo Dõi:**
+        7. **Theo dõi:**
            - SCr, BUN: 2-3 lần/ngày
            - Điện giải: 3-4 lần/ngày
            - ABG: Khi cần (nếu acidosis)
@@ -581,7 +581,7 @@ def render():
         
         # Management
         st.markdown("---")
-        st.markdown("### 💊 Xử Trí & Quản Lý")
+        st.markdown("### 💊 Xử Trí & Quản lý")
         st.markdown(result['management'])
         
         # Additional info
@@ -635,7 +635,7 @@ def render():
         - Shock: Septic, cardiogenic, hypovolemic
         - Hẹp động mạch thận
         
-        **Chẩn Đoán:** FENa <1%, BUN/Cr >20, đáp ứng với truyền dịch
+        **Chẩn đoán:** FENa <1%, BUN/Cr >20, đáp ứng với truyền dịch
         
         #### 2. 🔴 Thận (Intrinsic/Renal) - 25-40%
         
@@ -658,7 +658,7 @@ def render():
         - Atheroembolic disease (sau thủ thuật mạch máu)
         - TTP/HUS, DIC
         
-        **Chẩn Đoán:** FENa >2%, BUN/Cr <20, urine casts (muddy brown, RBC, WBC)
+        **Chẩn đoán:** FENa >2%, BUN/Cr <20, urine casts (muddy brown, RBC, WBC)
         
         #### 3. 🔼 Sau Thận (Post-Renal) - 5-10%
         
@@ -670,7 +670,7 @@ def render():
         - Nấm cầu (fungal ball), cục máu đông
         - Catheter bị tắc
         
-        **Chẩn Đoán:** Siêu âm thận (hydronephrosis), FENa có thể >1%
+        **Chẩn đoán:** Siêu âm thận (hydronephrosis), FENa có thể >1%
         
         ### 🔍 Các xét nghiệm giúp phân biệt
         

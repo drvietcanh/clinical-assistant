@@ -182,6 +182,189 @@ VASODILATORS = {
             "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
         }
     },
+    
+    "Hydralazine": {
+        "group": "Cardiovascular - Direct Vasodilator",
+        "vietnamese_name": "Hydralazine, Apresoline",
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Tăng huyết áp",
+            "Suy tim (kết hợp với nitrate)",
+            "Cơn tăng huyết áp",
+            "Tiền sản giật/sản giật"
+        ],
+        "contraindications": [
+            "Dị ứng hydralazine",
+            "Bệnh động mạch vành nặng",
+            "Bệnh van tim (hẹp động mạch chủ, hẹp động mạch phổi)",
+            "Lupus ban đỏ hệ thống (SLE)"
+        ],
+        "dosage": {
+            "adult_po": "10-25mg x 2-4 lần/ngày, tăng dần đến 200mg/ngày",
+            "adult_iv_im": "10-20mg IV/IM mỗi 4-6 giờ (cơn tăng huyết áp)",
+            "adult_heart_failure": "25-50mg x 3-4 lần/ngày (kết hợp với isosorbide dinitrate)",
+            "notes": "Khởi đầu với liều thấp, tăng dần. Có thể gây lupus-like syndrome với liều cao kéo dài"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, có thể cần giảm liều"
+        },
+        "side_effects": [
+            "Nhức đầu (phổ biến)",
+            "Nhịp tim nhanh phản ứng (tachycardia)",
+            "Đỏ mặt, đỏ bừng",
+            "Chóng mặt",
+            "Hạ huyết áp",
+            "Lupus-like syndrome (liều cao, dùng lâu dài)",
+            "Viêm đa khớp",
+            "Sốt",
+            "Phát ban"
+        ],
+        "interactions": [
+            "Thuốc hạ huyết áp khác: tăng tác dụng",
+            "MAO inhibitors: tăng tác dụng hạ huyết áp",
+            "NSAIDs: giảm hiệu quả hydralazine"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Hydralazine là direct-acting vasodilator, giãn trực tiếp cơ trơn động mạch (chủ yếu arterioles) bằng cách mở kênh K+ và ức chế IP3 (inositol triphosphate) pathway, dẫn đến giảm Ca2+ nội bào và thư giãn cơ trơn mạch máu. Hydralazine chủ yếu giãn động mạch (giảm hậu gánh), ít ảnh hưởng đến tĩnh mạch (không giảm tiền gánh). Kết quả: giảm huyết áp, giảm hậu gánh tim, tăng cung lượng tim. Hydralazine gây nhịp tim nhanh phản ứng (do hạ huyết áp kích thích baroreceptor reflex) và tăng renin-angiotensin-aldosterone system (RAAS), nên thường dùng kết hợp với beta-blocker hoặc diuretic. Trong suy tim, hydralazine kết hợp với isosorbide dinitrate (BiDil) đã được chứng minh giảm tử vong ở bệnh nhân suy tim người Mỹ gốc Phi.",
+        "monitoring": [
+            "Huyết áp - hạ huyết áp là tác dụng mong muốn nhưng cần tránh hạ quá mức",
+            "Nhịp tim - nhịp tim nhanh phản ứng phổ biến, có thể cần beta-blocker",
+            "Dấu hiệu lupus-like syndrome: sốt, đau khớp, phát ban, viêm màng phổi (nếu dùng liều cao >200mg/ngày, kéo dài >6 tháng)",
+            "ANA (antinuclear antibody) - kiểm tra nếu có triệu chứng lupus-like",
+            "Chức năng thận - hydralazine có thể gây viêm thận kẽ (hiếm)",
+            "Triệu chứng suy tim - đánh giá hiệu quả khi dùng kết hợp với nitrate"
+        ],
+        "precautions": [
+            "Nhịp tim nhanh phản ứng - phổ biến, có thể cần beta-blocker để chống lại",
+            "Lupus-like syndrome - nguy cơ tăng với liều cao (>200mg/ngày) và dùng lâu dài (>6 tháng), đặc biệt ở người chậm acetylator",
+            "CHỐNG CHỈ ĐỊNH trong bệnh động mạch vành nặng - nhịp tim nhanh có thể làm nặng thiếu máu cơ tim",
+            "CHỐNG CHỈ ĐỊNH trong hẹp động mạch chủ/phổi nặng - giảm hậu gánh có thể làm nặng hẹp",
+            "Khởi đầu với liều thấp, tăng dần để tránh hạ huyết áp quá mức",
+            "Thận trọng ở bệnh nhân có tiền sử SLE - có thể làm nặng bệnh",
+            "Trong suy tim: dùng kết hợp với isosorbide dinitrate (BiDil) - đã được chứng minh giảm tử vong",
+            "NSAIDs có thể giảm hiệu quả - tránh dùng cùng nếu có thể",
+            "Uống với thức ăn hoặc không (không ảnh hưởng hấp thu đáng kể)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-8 giờ (thay đổi theo acetylator status)",
+            "onset": "20-30 phút (PO), 5-20 phút (IV)",
+            "duration": "2-6 giờ",
+            "protein_binding": "85-90%",
+            "clearance": "Gan: chuyển hóa qua N-acetylation (phụ thuộc vào acetylator status - fast vs slow acetylator). Thận: bài tiết một phần. Slow acetylators có half-life dài hơn và nguy cơ lupus-like syndrome cao hơn."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng tiêm: bảo quản ở nhiệt độ phòng, tránh đông lạnh.",
+        "black_box_warnings": "Có thể gây lupus-like syndrome với liều cao (>200mg/ngày) và dùng lâu dài (>6 tháng), đặc biệt ở người chậm acetylator. Nguy cơ tăng ở phụ nữ và người Mỹ gốc Phi. Ngừng ngay nếu có triệu chứng lupus-like (sốt, đau khớp, phát ban, viêm màng phổi).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors (phenelzine, tranylcypromine)",
+                    "mechanism": "MAO inhibitors ức chế chuyển hóa catecholamines, tác dụng cộng dồn với hydralazine",
+                    "effect": "Tăng tác dụng hạ huyết áp, có thể gây hạ huyết áp nghiêm trọng",
+                    "management": "Tránh dùng cùng. Nếu cần, thận trọng và theo dõi huyết áp chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Beta-blockers, Diuretics)",
+                    "mechanism": "Tác dụng cộng dồn hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều các thuốc hạ huyết áp khác."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, indomethacin)",
+                    "mechanism": "NSAIDs ức chế prostaglandin, làm giảm tác dụng giãn mạch của hydralazine",
+                    "effect": "Giảm hiệu quả hạ huyết áp của hydralazine",
+                    "management": "Tránh dùng cùng nếu có thể. Theo dõi huyết áp. Có thể cần tăng liều hydralazine."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng hydralazine",
+                "Bệnh động mạch vành nặng - nhịp tim nhanh có thể làm nặng thiếu máu cơ tim",
+                "Hẹp động mạch chủ nặng - giảm hậu gánh có thể làm nặng hẹp",
+                "Hẹp động mạch phổi nặng - giảm hậu gánh có thể làm nặng hẹp",
+                "Lupus ban đỏ hệ thống (SLE) - có thể làm nặng bệnh"
+            ],
+            "tương_đối": [
+                "Suy tim nặng - thận trọng, có thể cần dùng kết hợp với nitrate",
+                "Bệnh thận - thận trọng, có thể gây viêm thận kẽ (hiếm)",
+                "Có thai - category C, thận trọng",
+                "Người chậm acetylator - tăng nguy cơ lupus-like syndrome"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Hydralazine là category C. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Thường dùng trong tiền sản giật/sản giật. Thận trọng, đặc biệt trong tam cá nguyệt thứ ba (có thể gây hạ huyết áp ở mẹ và thai nhi).",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hydralazine bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Hydralazine chuyển hóa ở gan nhưng suy gan nhẹ không ảnh hưởng đáng kể.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Chuyển hóa có thể giảm ở suy gan trung bình.",
+            "severe": "Thận trọng, giảm liều. Chuyển hóa giảm ở suy gan nặng, tăng nguy cơ tích lũy.",
+            "notes": "Hydralazine chuyển hóa ở gan qua N-acetylation. Suy gan có thể ảnh hưởng đến chuyển hóa, đặc biệt ở người chậm acetylator."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng, ngất",
+                "Nhịp tim nhanh",
+                "Nhức đầu nặng",
+                "Chóng mặt, buồn nôn, nôn",
+                "Shock, tử vong"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ cho hạ huyết áp.",
+            "treatment": [
+                "Ngừng hydralazine ngay lập tức",
+                "Đặt bệnh nhân nằm ngửa, nâng chân cao",
+                "Truyền dịch nếu cần (normal saline)",
+                "Nếu hạ huyết áp nặng: thuốc vận mạch (norepinephrine, phenylephrine)",
+                "Theo dõi huyết áp, nhịp tim liên tục",
+                "Hỗ trợ hô hấp nếu cần"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu đáng kể.",
+                "timing": "Uống 2-4 lần/ngày tùy liều. Khởi đầu với liều thấp (10-25mg x 2 lần/ngày), tăng dần đến liều hiệu quả."
+            },
+            "iv": {
+                "reconstitution": "Hydralazine IV: 20mg pha với 10ml NaCl 0.9% hoặc D5W",
+                "infusion_rate": "Tiêm tĩnh mạch chậm trong 1-2 phút hoặc truyền trong 10-20 phút",
+                "compatibility": ["NaCl 0.9%", "D5W"],
+                "incompatibility": [],
+                "notes": "Dùng cho cơn tăng huyết áp. Chuyển sang PO sớm nhất có thể."
+            },
+            "im": {
+                "reconstitution": "Hydralazine IM: 10-20mg tiêm bắp",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Có thể tiêm bắp nếu không có đường tĩnh mạch."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Hydralazine (Apresoline)",
+                "UpToDate - Hydralazine: Drug Information",
+                "A-HeFT Trial - New England Journal of Medicine (BiDil in heart failure)",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - FDA approved, large RCT (A-HeFT trial for heart failure)"
+        }
+    }
 
 }
 

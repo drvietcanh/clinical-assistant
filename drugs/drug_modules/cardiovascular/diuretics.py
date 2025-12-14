@@ -609,6 +609,27 @@ DIURETICS = {
                 "notes": "Spironolactone chỉ có dạng uống (PO)."
             }
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 1-3mg/kg/ngày PO chia 1-2 lần. Theo dõi kali máu chặt chẽ.",
+            "infants": "1 tháng - 2 tuổi: 1-3mg/kg/ngày PO chia 1-2 lần. Theo dõi kali máu chặt chẽ. Thận trọng ở suy thận.",
+            "children": "2-12 tuổi: 1-3mg/kg/ngày PO chia 1-2 lần (tối đa 100mg/ngày). Suy tim: 1-2mg/kg/ngày. Theo dõi kali máu chặt chẽ. Thận trọng ở suy thận.",
+            "adolescents": "≥12 tuổi: Liều người lớn. Suy tim: 12.5-25mg x 1 lần/ngày, tăng đến 25-50mg x 1 lần/ngày. Cổ trướng: 100-400mg/ngày chia 1-2 lần. Theo dõi kali máu chặt chẽ.",
+            "notes": "Theo dõi kali máu chặt chẽ (tăng kali máu là tác dụng phụ nghiêm trọng). Thận trọng ở suy thận (CrCl <30: chống chỉ định). Không dùng với ACE inhibitor/ARB ở trẻ em nếu có suy thận. Theo dõi chức năng thận định kỳ."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi có nguy cơ tăng kali máu cao hơn do: suy thận phổ biến hơn, dùng nhiều thuốc (ACE inhibitor, ARB, kali bổ sung), giảm chức năng thận. Tăng nguy cơ vú to ở nam (gynecomastia).",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (12.5mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng thận: CrCl 30-60 → thận trọng, theo dõi sát, CrCl <30 → chống chỉ định. Thận trọng khi dùng với ACE inhibitor/ARB.",
+            "monitoring": "Theo dõi kali máu chặt chẽ (mỗi 1-2 tuần khi bắt đầu, sau đó mỗi 1-3 tháng). Theo dõi chức năng thận (creatinine, CrCl) định kỳ. Theo dõi dấu hiệu tăng kali máu (yếu cơ, rối loạn nhịp tim). Theo dõi dấu hiệu vú to ở nam (gynecomastia). Theo dõi triệu chứng suy tim (khó thở, phù)."
+        },
+        "brand_names": {
+            "vietnam": ["Spironolactone", "Aldactone", "Spironolactone Stada", "Spiro"],
+            "common": ["Aldactone", "Spironolactone"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "3,000 - 15,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Spironolactone generic thường rẻ hơn (3,000-8,000 VND/viên 25mg). Aldactone (brand) thường đắt hơn (8,000-15,000 VND/viên 25mg)."
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Aldactone (spironolactone)",
@@ -623,6 +644,506 @@ DIURETICS = {
         }
 
     },
+
+    "Bumetanide": {
+        "group": "Cardiovascular - Loop Diuretic",
+        "vietnamese_name": "Bumetanide, Burinex",
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Phù (suy tim, xơ gan, suy thận)",
+            "Tăng huyết áp",
+            "Suy tim cấp",
+            "Tăng kali máu"
+        ],
+        "contraindications": [
+            "Vô niệu",
+            "Mất nước nặng",
+            "Hạ kali máu nặng",
+            "Dị ứng sulfonamide"
+        ],
+        "dosage": {
+            "adult_po": "0.5-2mg x 1-2 lần/ngày",
+            "adult_iv": "0.5-1mg IV (có thể lặp lại mỗi 2-3 giờ)",
+            "adult_iv_continuous": "0.1-0.2mg/giờ truyền liên tục",
+            "heart_failure_acute": "0.5-1mg IV, có thể lặp lại",
+            "notes": "1mg bumetanide ≈ 40mg furosemide. Theo dõi cân bằng dịch, điện giải"
+        },
+        "side_effects": [
+            "Hạ kali máu",
+            "Hạ natri máu",
+            "Mất nước",
+            "Tăng acid uric",
+            "Điếc tạm thời (IV liều cao)",
+            "Tăng đường huyết"
+        ],
+        "interactions": [
+            "Digoxin: tăng nguy cơ ngộ độc digoxin (hạ kali)",
+            "Aminoglycosides: tăng độc tính thính giác",
+            "NSAID: giảm hiệu quả",
+            "Lithium: tăng nồng độ lithium"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Loop diuretic. Ức chế đồng vận chuyển Na-K-2Cl ở quai Henle, tăng thải natri, kali, clo, và nước. Mạnh hơn furosemide (1mg bumetanide ≈ 40mg furosemide).",
+        "monitoring": [
+            "Điện giải (K, Na, Cl) trước điều trị và định kỳ",
+            "Cân bằng dịch vào-ra, cân nặng",
+            "Creatinine, BUN",
+            "Acid uric nếu dùng lâu dài",
+            "Thính giác nếu IV liều cao hoặc suy thận"
+        ],
+        "precautions": [
+            "Theo dõi sát điện giải, đặc biệt kali",
+            "Bù kali nếu cần",
+            "Tránh dùng quá liều (gây mất nước, suy thận)",
+            "Thận trọng với bệnh nhân suy thận (có thể cần liều cao hơn)",
+            "Tránh dùng IV liều cao ở bệnh nhân suy thận (nguy cơ điếc)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-1.5 giờ (PO), 1 giờ (IV)",
+            "onset": "30-60 phút (PO), 2-3 phút (IV)",
+            "duration": "4-6 giờ",
+            "protein_binding": "94-96%",
+            "clearance": "Thận (50%) và gan"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng",
+        "black_box_warnings": "Có thể gây mất nước và rối loạn điện giải nghiêm trọng. Điếc có thể xảy ra với liều IV cao hoặc dùng nhanh. Hạ kali máu có thể làm tăng nguy cơ ngộ độc digoxin và rối loạn nhịp tim",
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Bumetanide",
+                "UpToDate - Bumetanide: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - Extensive clinical experience"
+        }
+    },
+
+    "Torsemide": {
+        "group": "Cardiovascular - Loop Diuretic",
+        "vietnamese_name": "Torsemide, Demadex",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Phù (suy tim, xơ gan, suy thận)",
+            "Tăng huyết áp",
+            "Suy tim cấp",
+            "Tăng kali máu"
+        ],
+        "contraindications": [
+            "Vô niệu",
+            "Mất nước nặng",
+            "Hạ kali máu nặng",
+            "Dị ứng sulfonamide"
+        ],
+        "dosage": {
+            "adult_po": "5-20mg x 1 lần/ngày",
+            "adult_iv": "10-20mg IV (có thể lặp lại)",
+            "adult_iv_continuous": "0.2-0.4mg/giờ truyền liên tục",
+            "heart_failure_acute": "10-20mg IV, có thể lặp lại",
+            "notes": "10mg torsemide ≈ 40mg furosemide. Thời gian bán hủy dài hơn furosemide. Theo dõi cân bằng dịch, điện giải"
+        },
+        "side_effects": [
+            "Hạ kali máu",
+            "Hạ natri máu",
+            "Mất nước",
+            "Tăng acid uric",
+            "Điếc tạm thời (IV liều cao)",
+            "Tăng đường huyết"
+        ],
+        "interactions": [
+            "Digoxin: tăng nguy cơ ngộ độc digoxin (hạ kali)",
+            "Aminoglycosides: tăng độc tính thính giác",
+            "NSAID: giảm hiệu quả",
+            "Lithium: tăng nồng độ lithium"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Loop diuretic. Ức chế đồng vận chuyển Na-K-2Cl ở quai Henle, tăng thải natri, kali, clo, và nước. 10mg torsemide ≈ 40mg furosemide. Thời gian bán hủy dài hơn furosemide (3-4 giờ vs 2 giờ), có thể dùng 1 lần/ngày.",
+        "monitoring": [
+            "Điện giải (K, Na, Cl) trước điều trị và định kỳ",
+            "Cân bằng dịch vào-ra, cân nặng",
+            "Creatinine, BUN",
+            "Acid uric nếu dùng lâu dài",
+            "Thính giác nếu IV liều cao hoặc suy thận"
+        ],
+        "precautions": [
+            "Theo dõi sát điện giải, đặc biệt kali",
+            "Bù kali nếu cần",
+            "Tránh dùng quá liều (gây mất nước, suy thận)",
+            "Thận trọng với bệnh nhân suy thận (có thể cần liều cao hơn)",
+            "Tránh dùng IV liều cao ở bệnh nhân suy thận (nguy cơ điếc)",
+            "Thời gian bán hủy dài hơn furosemide - có thể dùng 1 lần/ngày"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-4 giờ (PO), 3 giờ (IV)",
+            "onset": "60 phút (PO), 10 phút (IV)",
+            "duration": "6-8 giờ",
+            "protein_binding": "97-99%",
+            "clearance": "Thận (80%) và gan (20%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng",
+        "black_box_warnings": "Có thể gây mất nước và rối loạn điện giải nghiêm trọng. Điếc có thể xảy ra với liều IV cao hoặc dùng nhanh. Hạ kali máu có thể làm tăng nguy cơ ngộ độc digoxin và rối loạn nhịp tim",
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Torsemide",
+                "UpToDate - Torsemide: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - Extensive clinical experience"
+        }
+    },
+
+    "Indapamide": {
+        "group": "Cardiovascular - Thiazide-like Diuretic",
+        "vietnamese_name": "Indapamide, Natrilix",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Phù (suy tim nhẹ)"
+        ],
+        "contraindications": [
+            "Dị ứng sulfonamide",
+            "Vô niệu",
+            "Hạ kali máu nặng",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_htn": "1.25-2.5mg x 1 lần/ngày",
+            "adult_edema": "2.5-5mg x 1 lần/ngày",
+            "notes": "Thiazide-like diuretic, tác dụng dài, uống 1 lần/ngày. Ít gây hạ kali máu hơn thiazide truyền thống"
+        },
+        "side_effects": [
+            "Hạ kali máu (ít hơn thiazide)",
+            "Hạ natri máu",
+            "Tăng đường huyết",
+            "Tăng acid uric",
+            "Chóng mặt",
+            "Mệt mỏi"
+        ],
+        "interactions": [
+            "Digoxin: tăng nguy cơ ngộ độc digoxin (hạ kali)",
+            "Lithium: tăng nồng độ lithium",
+            "NSAID: giảm hiệu quả"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Thiazide-like diuretic. Ức chế Na+/Cl- cotransporter ở đoạn xa của ống thận, tăng bài tiết Na+, Cl-, và nước. Có tác dụng giãn mạch trực tiếp (khác với thiazide truyền thống). Ít gây hạ kali máu hơn hydrochlorothiazide. Tác dụng dài, cho phép dùng 1 lần/ngày.",
+        "monitoring": [
+            "Kali máu (mỗi 1-3 tháng) - ít gây hạ kali hơn thiazide",
+            "Natri máu - có thể gây hạ natri máu",
+            "Creatinine, BUN",
+            "Đường huyết - có thể tăng đường huyết",
+            "Acid uric - có thể tăng acid uric"
+        ],
+        "precautions": [
+            "Ít gây hạ kali máu hơn hydrochlorothiazide nhưng vẫn cần theo dõi",
+            "Thận trọng ở người già (tăng nguy cơ hạ natri máu)",
+            "Thận trọng ở bệnh nhân đái tháo đường (tăng đường huyết)",
+            "Thận trọng ở bệnh nhân gout (tăng acid uric)",
+            "Tránh dùng với lithium (tăng nguy cơ độc tính lithium)",
+            "Dị ứng sulfonamide - không dùng nếu dị ứng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "14-18 giờ (dài)",
+            "onset": "1-2 giờ (PO)",
+            "duration": "24 giờ (cho phép dùng 1 lần/ngày)",
+            "protein_binding": "71-79%",
+            "clearance": "Thận (70%) và gan (30%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Indapamide làm giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: giảm liều lithium 50%, theo dõi nồng độ lithium chặt chẽ."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Indapamide gây hạ kali máu, tăng độc tính digoxin",
+                    "effect": "Tăng nguy cơ ngộ độc digoxin",
+                    "management": "Theo dõi kali máu chặt chẽ. Theo dõi nồng độ digoxin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "NSAIDs",
+                    "mechanism": "NSAIDs giảm tác dụng lợi tiểu và hạ huyết áp",
+                    "effect": "Giảm hiệu quả hạ huyết áp",
+                    "management": "Thận trọng. Theo dõi huyết áp. Tránh dùng lâu dài cùng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng sulfonamide",
+                "Vô niệu",
+                "Hạ kali máu nặng không kiểm soát được",
+                "Suy gan nặng"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (eGFR <30) - kém hiệu quả",
+                "Bệnh gout - tăng acid uric",
+                "Đái tháo đường - tăng đường huyết",
+                "Đang dùng lithium - tăng nồng độ lithium nguy hiểm"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Có thể dùng khi cần thiết. Ít dữ liệu hơn hydrochlorothiazide. Cân nhắc lợi ích/nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Indapamide bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng (thải một phần qua gan)",
+            "severe": "Chống chỉ định (thải một phần qua gan)",
+            "notes": "Indapamide thải qua cả thận (70%) và gan (30%). Suy gan nặng là chống chỉ định."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Mất nước nặng",
+                "Hạ kali máu nặng",
+                "Hạ natri máu nặng",
+                "Hạ huyết áp nặng",
+                "Suy thận cấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: bù dịch, điện giải",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Bù dịch: Truyền normal saline",
+                "Bù điện giải: Kali chloride nếu hạ kali máu",
+                "Theo dõi điện giải, chức năng thận",
+                "Theo dõi ít nhất 12-24 giờ"
+            ],
+            "monitoring": "Điện giải (K, Na), chức năng thận, huyết áp, nhịp tim"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn.",
+                "timing": "Uống 1 lần/ngày vào buổi sáng. Uống cùng giờ mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Indapamide",
+                "UpToDate - Indapamide: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - Extensive clinical experience"
+        }
+    },
+
+    "Eplerenone": {
+        "group": "Cardiovascular - Aldosterone Antagonist (Potassium-sparing Diuretic)",
+        "vietnamese_name": "Eplerenone, Inspra",
+        "administration": ["PO"],
+        "indications": [
+            "Suy tim (NYHA class II-IV) sau nhồi máu cơ tim",
+            "Suy tim với giảm phân suất tống máu (HFrEF)",
+            "Tăng huyết áp (liều thấp)"
+        ],
+        "contraindications": [
+            "Tăng kali máu (>5.5 mEq/L)",
+            "Suy thận nặng (CrCl <30)",
+            "Vô niệu",
+            "Dùng với kali-sparing diuretics hoặc kali bổ sung",
+            "Dùng với CYP3A4 inhibitors mạnh"
+        ],
+        "dosage": {
+            "adult_heart_failure_post_mi": "25mg x 1 lần/ngày, tăng đến 50mg x 1 lần/ngày sau 4 tuần",
+            "adult_heart_failure": "25mg x 1 lần/ngày, tăng đến 50mg x 1 lần/ngày",
+            "adult_htn": "50mg x 1-2 lần/ngày",
+            "notes": "Khởi đầu với liều thấp. Theo dõi kali máu. Có bằng chứng giảm tỷ lệ tử vong sau nhồi máu cơ tim (EPHESUS study)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, theo dõi kali sát",
+            "under_30": "Chống chỉ định"
+        },
+        "side_effects": [
+            "Tăng kali máu (tác dụng phụ chính)",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Ho",
+            "Ít tác dụng phụ nội tiết hơn spironolactone (không gây vú to)"
+        ],
+        "interactions": [
+            "ACE inhibitor/ARB: tăng kali máu đáng kể",
+            "Kali bổ sung: tăng kali máu",
+            "CYP3A4 inhibitors: tăng nồng độ eplerenone",
+            "NSAID: tăng nguy cơ tăng kali máu"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Potassium-sparing diuretic, selective aldosterone antagonist. Đối kháng với aldosterone tại mineralocorticoid receptor trong ống lượn xa và ống góp. Khác với spironolactone: eplerenone chọn lọc hơn, ít tác dụng trên androgen và progesterone receptors, do đó ít gây tác dụng phụ nội tiết (không gây vú to ở nam, rối loạn kinh nguyệt ở nữ). Có bằng chứng mạnh làm giảm tỷ lệ tử vong và nhập viện trong suy tim sau nhồi máu cơ tim (EPHESUS study) và suy tim mạn tính (EMPHASIS-HF study).",
+        "monitoring": [
+            "Điện giải (natri, kali) - tăng kali máu là tác dụng phụ chính (nguy hiểm)",
+            "Chức năng thận (creatinine, eGFR) - không dùng nếu eGFR < 30",
+            "Huyết áp",
+            "Cân nặng và dấu hiệu phù",
+            "Dấu hiệu quá liều (tăng kali nặng: yếu cơ, rối loạn nhịp tim)"
+        ],
+        "precautions": [
+            "Tăng kali MÁU là tác dụng phụ chính - KHÔNG dùng nếu kali > 5.5 mEq/L hoặc eGFR < 30",
+            "KHÔNG dùng với kali bổ sung hoặc các thuốc tăng kali khác (ACE inhibitor, ARB, trimethoprim) trừ khi được giám sát chặt chẽ",
+            "Theo dõi kali thường xuyên, đặc biệt khi bắt đầu điều trị và tăng liều (1-2 tuần sau khi bắt đầu, sau đó mỗi 1-3 tháng)",
+            "Ít tác dụng phụ nội tiết hơn spironolactone (không gây vú to, rối loạn kinh nguyệt)",
+            "Liều thường: 25-50mg/ngày (PO)",
+            "Tác dụng chậm (vài ngày đến vài tuần)",
+            "Không dùng ở suy thận nặng (eGFR < 30) hoặc tăng kali máu",
+            "Thận trọng ở người cao tuổi (tăng nguy cơ tăng kali)",
+            "Tránh dùng với CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-6 giờ (ngắn hơn spironolactone)",
+            "onset": "Vài ngày",
+            "duration": "12-24 giờ",
+            "protein_binding": "50%",
+            "metabolism": "Gan (CYP3A4) - chuyển hóa mạnh",
+            "clearance": "Chủ yếu qua gan (metabolism), một phần qua thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, tăng kali máu có thể gây rối loạn nhịp tim nghiêm trọng, có thể tử vong, đặc biệt ở bệnh nhân suy thận hoặc dùng với các thuốc tăng kali khác. Phải theo dõi kali thường xuyên.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "ACE inhibitors (captopril, enalapril, lisinopril), ARB (losartan, valsartan)",
+                    "mechanism": "Cả hai đều làm giảm bài tiết kali qua thận, tác dụng hiệp đồng gây tăng kali máu",
+                    "effect": "Tăng kali máu nặng (hyperkalemia), có thể gây rối loạn nhịp tim, ngừng tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên (1-2 tuần sau khi bắt đầu, sau đó mỗi 1-3 tháng). KHÔNG dùng cùng nếu kali > 5.5 mEq/L hoặc eGFR < 30. Cân nhắc giảm liều hoặc ngừng một trong hai thuốc nếu kali tăng."
+                },
+                {
+                    "drug": "Kali bổ sung (potassium supplements), muối kali (potassium chloride)",
+                    "mechanism": "Eplerenone giữ kali, kali bổ sung tăng kali máu",
+                    "effect": "Tăng kali máu nặng, nguy hiểm",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. KHÔNG dùng kali bổ sung khi đang dùng eplerenone trừ khi được giám sát chặt chẽ và có chỉ định đặc biệt."
+                },
+                {
+                    "drug": "CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, ritonavir)",
+                    "mechanism": "Ức chế chuyển hóa eplerenone qua CYP3A4",
+                    "effect": "Tăng nồng độ eplerenone đáng kể, tăng tác dụng phụ (tăng kali máu)",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng với CYP3A4 inhibitors mạnh."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Trimethoprim, Trimethoprim-sulfamethoxazole",
+                    "mechanism": "Trimethoprim ức chế bài tiết kali ở ống lượn xa",
+                    "effect": "Tăng kali máu nặng, đặc biệt ở người cao tuổi, suy thận",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Cân nhắc tránh dùng cùng."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac)",
+                    "mechanism": "NSAID làm giảm lưu lượng máu thận, giảm bài tiết kali",
+                    "effect": "Tăng nguy cơ tăng kali máu, suy thận cấp",
+                    "management": "Thận trọng, đặc biệt ở người cao tuổi hoặc suy thận. Theo dõi kali máu và chức năng thận."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Tăng kali máu (hyperkalemia) - kali > 5.5 mEq/L",
+                "Suy thận nặng (CrCl < 30 mL/min, eGFR < 30)",
+                "Vô niệu (anuria)",
+                "Dùng cùng kali bổ sung hoặc kali-sparing diuretics khác (spironolactone, amiloride, triamterene)",
+                "Dùng với CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, ritonavir)"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60) - thận trọng, theo dõi kali thường xuyên",
+                "Dùng cùng ACE inhibitor/ARB - thận trọng, theo dõi kali thường xuyên",
+                "Người cao tuổi - tăng nguy cơ tăng kali máu",
+                "Suy gan - thận trọng (chuyển hóa qua gan CYP3A4)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Eplerenone phân loại B - an toàn hơn spironolactone (category D). Có thể dùng khi cần thiết. Ít tác dụng phụ trên thai nhi hơn spironolactone. Cân nhắc lợi ích/nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Eplerenone bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng (chuyển hóa qua CYP3A4)",
+            "severe": "Thận trọng, có thể cần giảm liều (chuyển hóa qua CYP3A4)",
+            "notes": "Eplerenone chuyển hóa qua gan (CYP3A4). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ eplerenone. Thận trọng ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng kali máu nặng (hyperkalemia) - triệu chứng chính và nguy hiểm nhất",
+                "Yếu cơ, liệt cơ",
+                "Rối loạn nhịp tim (arrhythmias), đặc biệt là rối loạn nhịp chậm",
+                "Block nhĩ thất",
+                "Ngừng tim (cardiac arrest)",
+                "Hạ huyết áp",
+                "Buồn nôn, nôn",
+                "Chóng mặt, mệt mỏi"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Xử trí tăng kali máu: Calcium gluconate/calcium chloride (bảo vệ tim), Insulin + glucose (chuyển kali vào tế bào), Sodium bicarbonate (nếu có nhiễm toan), Beta-2 agonist (salbutamol), Furosemide (tăng bài tiết kali) nếu chức năng thận bình thường, Hemodialysis nếu tăng kali nặng không đáp ứng",
+            "treatment": [
+                "Ngừng eplerenone ngay lập tức",
+                "Đo kali máu ngay (ECG nếu có thể)",
+                "Xử trí tăng kali máu:",
+                "  - Nếu kali > 6.5 mEq/L hoặc có dấu hiệu tim mạch: Calcium gluconate 1-3g IV (bảo vệ tim, tác dụng nhanh)",
+                "  - Insulin regular 10 đơn vị + Dextrose 50% 50ml IV (chuyển kali vào tế bào, tác dụng trong 15-30 phút)",
+                "  - Sodium bicarbonate 50-100 mEq IV nếu có nhiễm toan (pH < 7.35)",
+                "  - Salbutamol nebulizer 10-20mg (beta-2 agonist, chuyển kali vào tế bào)",
+                "  - Furosemide 40-80mg IV nếu chức năng thận bình thường (tăng bài tiết kali)",
+                "  - Hemodialysis nếu kali > 6.5 mEq/L và không đáp ứng với điều trị trên",
+                "Theo dõi ECG liên tục (tăng kali gây thay đổi ECG: sóng T cao nhọn, kéo dài PR, mất sóng P, giãn QRS, rối loạn nhịp)",
+                "Theo dõi kali máu thường xuyên (mỗi 1-2 giờ cho đến khi ổn định)",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Rửa dạ dày và than hoạt tính nếu uống quá liều trong vòng 1-2 giờ",
+                "Theo dõi ít nhất 12-24 giờ do half-life 3-6 giờ"
+            ],
+            "monitoring": "ECG liên tục, kali máu (mỗi 1-2 giờ), natri máu, chức năng thận (creatinine, BUN), huyết áp, nhịp tim, dấu hiệu rối loạn nhịp tim"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1 lần/ngày vào cùng một giờ mỗi ngày. Khởi đầu với liều thấp (25mg/ngày), tăng dần sau 4 tuần nếu cần. Tác dụng chậm (vài ngày đến vài tuần), cần kiên nhẫn."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Eplerenone chỉ có dạng uống (PO)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Inspra (eplerenone)",
+                "UpToDate - Eplerenone: Drug information",
+                "EPHESUS Study - New England Journal of Medicine (2003) - Eplerenone sau nhồi máu cơ tim",
+                "EMPHASIS-HF Study - New England Journal of Medicine (2011) - Eplerenone trong suy tim",
+                "American Heart Association/American College of Cardiology guidelines - Heart failure management"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - Multiple large RCTs (EPHESUS, EMPHASIS-HF) showing mortality benefit in heart failure"
+        }
+    }
 
 }
 

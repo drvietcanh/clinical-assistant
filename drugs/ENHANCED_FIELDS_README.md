@@ -8,7 +8,7 @@ File `enhanced_fields_schema.py` chứa cấu trúc chuẩn và các công cụ 
 
 Enhanced fields bao gồm **14 trường** (6 cơ bản + 8 bổ sung):
 
-### 6 Fields Cơ Bản (Bắt Buộc)
+### 6 Fields Cơ Bản (Bắt buộc)
 
 1. **mechanism_of_action** (string) - Cơ chế tác dụng
 2. **monitoring** (list of strings) - Các thông số cần theo dõi
@@ -17,7 +17,7 @@ Enhanced fields bao gồm **14 trường** (6 cơ bản + 8 bổ sung):
 5. **storage** (string) - Điều kiện bảo quản
 6. **black_box_warnings** (string or None) - Cảnh báo hộp đen
 
-### 8 Fields Bổ Sung (Tùy Chọn)
+### 8 Fields Bổ Sung (Tùy chọn)
 
 7. **drug_interactions** (dict) - Tương tác thuốc chi tiết
 8. **contraindications** (dict) - Chống chỉ định phân loại

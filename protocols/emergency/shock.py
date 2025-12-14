@@ -8,7 +8,7 @@ import streamlit as st
 
 def render():
     """Shock Management Protocol"""
-    st.subheader("💔 Quản Lý Sốc")
+    st.subheader("💔 Quản lý Sốc")
     st.caption("Phân loại và xử trí sốc")
     
     st.info("""
@@ -35,7 +35,7 @@ def render():
         st.markdown("#### 🦠 Sốc Nhiễm Trùng (Septic Shock)")
         
         st.error("""
-        **Chẩn Đoán:**
+        **Chẩn đoán:**
         - Nhiễm trùng đã xác định hoặc nghi ngờ
         - MAP <65 mmHg (hoặc SBP <90 mmHg) sau truyền dịch ≥30 mL/kg
         - Lactate >2 mmol/L
@@ -91,7 +91,7 @@ def render():
             - Nếu CO thấp
             """)
         
-        st.markdown("##### 🎯 Mục Tiêu Điều Trị")
+        st.markdown("##### 🎯 Mục tiêu điều trị")
         st.info("""
         - MAP ≥65 mmHg
         - Urine output ≥0.5 mL/kg/h
@@ -104,7 +104,7 @@ def render():
         st.markdown("#### 💧 Sốc Giảm Thể Tích (Hypovolemic Shock)")
         
         st.error("""
-        **Chẩn Đoán:**
+        **Chẩn đoán:**
         - Mất máu hoặc dịch (mất qua đường nào đó)
         - Dấu hiệu: Da lạnh, nổi da gà, tĩnh mạch cổ xẹp
         - Hạ huyết áp, nhịp tim nhanh
@@ -150,7 +150,7 @@ def render():
             - Máu: Mất máu đáng kể
             """)
         
-        st.markdown("##### 🎯 Mục Tiêu")
+        st.markdown("##### 🎯 Mục tiêu")
         st.info("""
         - SBP ≥90 mmHg
         - HR <100 bpm
@@ -163,7 +163,7 @@ def render():
         st.markdown("#### ❤️ Sốc Tim (Cardiogenic Shock)")
         
         st.error("""
-        **Chẩn Đoán:**
+        **Chẩn đoán:**
         - Suy chức năng tim (giảm CO)
         - Dấu hiệu ứ máu (tĩnh mạch cổ nổi, phù phổi)
         - Hạ huyết áp mặc dù thể tích đủ
@@ -218,7 +218,7 @@ def render():
             - Bệnh nhân dùng beta-blocker
             """)
         
-        st.markdown("##### 🎯 Mục Tiêu")
+        st.markdown("##### 🎯 Mục tiêu")
         st.info("""
         - MAP ≥65 mmHg
         - CO >2.2 L/min/m²
@@ -314,7 +314,7 @@ def render():
             - Hỗ trợ huyết động tạm thời
             """)
         
-        st.markdown("##### 🎯 Mục Tiêu")
+        st.markdown("##### 🎯 Mục tiêu")
         st.info("""
         - Xử trí nguyên nhân tắc nghẽn NGAY
         - Hỗ trợ huyết động tạm thời trong lúc xử trí
@@ -323,7 +323,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Chung Điều Trị Sốc")
+    st.markdown("### 🎯 Mục tiêu Chung Điều trị Sốc")
     
     col1, col2, col3 = st.columns(3)
     
@@ -341,7 +341,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚠️ Theo Dõi")
+    st.markdown("### ⚠️ Theo dõi")
     
     st.info("""
     **Monitoring trong sốc:**

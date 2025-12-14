@@ -131,7 +131,7 @@ def render():
     
     st.title("😴 Epworth Sleepiness Scale")
     st.markdown("""
-    ### Đánh Giá Mức Độ Buồn Ngủ Ban Ngày
+    ### Đánh giá Mức Độ Buồn Ngủ Ban Ngày
     
     **Epworth Sleepiness Scale (ESS):**
     - Bảng câu hỏi tự đánh giá buồn ngủ ban ngày
@@ -292,7 +292,7 @@ def render():
             
             # Additional OSA screening
             st.markdown("---")
-            st.subheader("🔍 Sàng Lọc Bổ Sung - Nguy Cơ OSA")
+            st.subheader("🔍 Sàng Lọc Bổ Sung - Nguy cơ OSA")
             
             osa_questions = get_osa_screening_questions()
             
@@ -313,7 +313,7 @@ def render():
             
             st.markdown("---")
             st.error("""
-            ### ⚠️ Cảnh Báo An Toàn
+            ### ⚠️ Cảnh báo An Toàn
             
             **Với ESS > 10, đặc biệt > 15:**
             - **Nguy cơ tai nạn lái xe tăng 2-3 lần**
@@ -371,7 +371,7 @@ def render():
         - Cằm lùi (retrognathia)
         - Tiền sử gia đình
         
-        **Biến Chứng:**
+        **Biến chứng:**
         - Tăng huyết áp (50-60%)
         - Bệnh tim mạch, đột quỵ
         - Rối loạn nhịp tim
@@ -380,7 +380,7 @@ def render():
         - Giảm chất lượng cuộc sống
         - Tăng tử vong
         
-        **Chẩn Đoán:**
+        **Chẩn đoán:**
         - **Polysomnography (PSG):** Gold standard
         - AHI (Apnea-Hypopnea Index):
           + < 5: Bình thường
@@ -388,7 +388,7 @@ def render():
           + 15-30: OSA trung bình
           + > 30: OSA nặng
         
-        **Điều Trị:**
+        **Điều trị:**
         - **CPAP:** Lựa chọn đầu tay
         - Giảm cân (nếu béo phì)
         - Tránh rượu, thuốc ngủ

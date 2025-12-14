@@ -170,7 +170,7 @@ def render():
         # Display results
         st.markdown("## 📊 Kết quả")
         
-        # BMI Result
+        # BMI Kết quả
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, {bmi_color}22 0%, {bmi_color}44 100%); 
                     padding: 30px; border-radius: 15px; border-left: 5px solid {bmi_color}; margin: 20px 0;'>
@@ -374,7 +374,7 @@ def render():
                 {"### Kế hoạch TĂNG CÂN an toàn:" if weight < target_weight_low else "### Kế hoạch GIẢM CÂN an toàn:"}
                 
                 {'''
-                **Mục Tiêu:** Tăng 0.5-1 kg/tuần
+                **Mục tiêu:** Tăng 0.5-1 kg/tuần
                 
                 **Dinh dưỡng:**
                 - Tăng 500-1000 kcal/ngày
@@ -386,11 +386,11 @@ def render():
                 - Tập kháng lực (tạ)
                 - Tăng cơ, không chỉ mỡ
                 
-                **Theo Dõi:**
+                **Theo dõi:**
                 - Cân hàng tuần
                 - Đánh giá albumin, prealbumin
                 ''' if weight < target_weight_low else '''
-                **Mục Tiêu:** Giảm 0.5-1 kg/tuần (5-10% trong 6 tháng)
+                **Mục tiêu:** Giảm 0.5-1 kg/tuần (5-10% trong 6 tháng)
                 
                 **Dinh dưỡng:**
                 - Giảm 500-1000 kcal/ngày
@@ -403,7 +403,7 @@ def render():
                 - Tập kháng lực 2-3 lần/tuần
                 - Tăng hoạt động hàng ngày
                 
-                **Theo Dõi:**
+                **Theo dõi:**
                 - Cân hàng tuần
                 - Đường huyết, lipid, huyết áp
                 '''}

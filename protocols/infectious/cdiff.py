@@ -65,9 +65,9 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: INITIAL EPISODE TREATMENT ==========
-    st.markdown("### 💊 Điều Trị Đợt Đầu Tiên (Initial Episode)")
+    st.markdown("### 💊 Điều trị Đợt Đầu Tiên (Initial Episode)")
     
-    st.markdown("**Nguyên Tắc:** Ngừng kháng sinh gây bệnh nếu có thể, bắt đầu điều trị ngay")
+    st.markdown("**Nguyên tắc:** Ngừng kháng sinh gây bệnh nếu có thể, bắt đầu điều trị ngay")
     
     # Severity-based treatment
     with st.expander("📋 Phác đồ điều trị theo mức độ", expanded=True):
@@ -138,7 +138,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: RECURRENT C. DIFF ==========
-    st.markdown("### 🔄 Điều Trị Tái Phát (Recurrent C. diff)")
+    st.markdown("### 🔄 Điều trị Tái Phát (Recurrent C. diff)")
     
     st.markdown("**Định Nghĩa:** Tái phát trong vòng 8 tuần sau khi ngừng điều trị")
     
@@ -189,13 +189,13 @@ def render():
     # ========== SECTION 4: FECAL MICROBIOTA TRANSPLANTATION (FMT) ==========
     st.markdown("### 💩 Fecal Microbiota Transplantation (FMT)")
     
-    st.markdown("**Chỉ Định FMT:**")
+    st.markdown("**Chỉ định FMT:**")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.success("""
-        **Chỉ Định:**
+        **Chỉ định:**
         - ≥2 lần tái phát C. diff
         - Hoặc ≥3 lần tái phát
         - Đã thất bại với Vancomycin/Fidaxomicin
@@ -209,7 +209,7 @@ def render():
     
     with col2:
         st.error("""
-        **Chống Chỉ Định:**
+        **Chống chỉ định:**
         - Megacolon độc tố
         - Thủng ruột
         - Suy giảm miễn dịch nặng
@@ -229,7 +229,7 @@ def render():
     st.info("""
     **Bezlotoxumab** là monoclonal antibody chống độc tố B của C. diff.
     
-    **Chỉ Định:**
+    **Chỉ định:**
     - Dùng cùng với Vancomycin hoặc Fidaxomicin
     - Bệnh nhân có ≥1 lần tái phát C. diff
     - Hoặc nguy cơ tái phát cao (tuổi >65, suy giảm miễn dịch, nhiễm C. diff nặng)
@@ -286,9 +286,9 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: MONITORING ==========
-    st.markdown("### 📊 Theo Dõi")
+    st.markdown("### 📊 Theo dõi")
     
-    st.markdown("**Theo Dõi Trong Quá Trình Điều Trị:**")
+    st.markdown("**Theo dõi Trong Quá Trình Điều trị:**")
     
     monitoring_items = [
         "**Triệu chứng:** Số lần tiêu chảy, đau bụng, sốt",
@@ -383,9 +383,9 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 10: DURATION & FOLLOW-UP ==========
-    st.markdown("### ⏱️ Thời Gian Điều Trị & Theo Dõi")
+    st.markdown("### ⏱️ Thời Gian Điều trị & Theo dõi")
     
-    st.markdown("**Thời Gian Điều Trị Tiêu chuẩn:**")
+    st.markdown("**Thời Gian Điều trị Tiêu chuẩn:**")
     
     duration_table = {
         "Mức độ": ["Nhẹ", "Trung bình", "Nặng", "Rất nặng"],
@@ -400,7 +400,7 @@ def render():
     
     st.table(duration_table)
     
-    st.markdown("**Theo Dõi Sau Điều Trị:**")
+    st.markdown("**Theo dõi Sau Điều trị:**")
     st.info("""
     - **Không cần test lại** nếu triệu chứng đã hết
     - Test lại chỉ khi:

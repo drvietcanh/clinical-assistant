@@ -21,21 +21,22 @@ from .pain import render_acute_pain
 from .respiratory import render_copd, render_asthma
 from .cardiology import render_acs, render_hf, render_atrial_fibrillation, render_dvt_pe
 from .nephrology import render_aki
-from .infectious import render_cap, render_hap_vap, render_cdiff
+from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis
 from .endocrinology import (
     render_thyrotoxic_crisis,
     render_myxedema_coma,
     render_adrenal_crisis,
     render_hhs
 )
-from .gastroenterology import render_acute_pancreatitis
+from .gastroenterology import render_acute_pancreatitis, render_acute_liver_failure, render_ibd_exacerbation
 from .hematology import render_transfusion, render_anticoagulation_reversal
 from .oncology import (
     render_tls,
     render_febrile_neutropenia,
     render_hypercalcemia
 )
-from .critical_care import render_delirium, render_sedation
+from .critical_care import render_delirium, render_sedation, render_ards, render_ventilator_weaning, render_stress_ulcer
+from .rheumatology import render_acute_gout, render_ra_flare
 
 __all__ = [
     'render_sepsis',
@@ -61,11 +62,13 @@ __all__ = [
     'render_cap',
     'render_hap_vap',
     'render_cdiff',
+    'render_meningitis',
     'render_thyrotoxic_crisis',
     'render_myxedema_coma',
     'render_adrenal_crisis',
     'render_hhs',
     'render_acute_pancreatitis',
+    'render_acute_liver_failure',
     'render_transfusion',
     'render_anticoagulation_reversal',
     'render_tls',
@@ -73,5 +76,11 @@ __all__ = [
     'render_hypercalcemia',
     'render_delirium',
     'render_sedation',
+    'render_ards',
+    'render_ventilator_weaning',
+    'render_stress_ulcer',
+    'render_acute_gout',
+    'render_ra_flare',
+    'render_ibd_exacerbation',
 ]
 

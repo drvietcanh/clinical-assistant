@@ -231,7 +231,7 @@ def display_drug_info(drug_name, drug_data):
                 st.markdown(f'- {inter}')
         else:
             st.info(
-                "Không có thông tin về tương tác thuốc. Sử dụng công cụ 'Kiểm Tra Tương Tác Thuốc' để kiểm tra chi tiết."
+                "Không có thông tin về tương tác thuốc. Sử dụng công cụ 'Kiểm Tra Tương tác Thuốc' để kiểm tra chi tiết."
                 )
     with tab_monitoring:
         if 'monitoring' in drug_data:
@@ -246,7 +246,7 @@ def display_drug_info(drug_name, drug_data):
             from drugs.drug_utils.tdm_mapping import get_tdm_info, has_tdm
             if has_tdm(drug_name):
                 st.markdown('---')
-                st.markdown('### 📊 Theo Dõi Nồng Độ Thuốc (TDM)')
+                st.markdown('### 📊 Theo dõi Nồng Độ Thuốc (TDM)')
                 tdm_info = get_tdm_info(drug_name)
                 col1, col2 = st.columns([2, 1])
                 with col1:

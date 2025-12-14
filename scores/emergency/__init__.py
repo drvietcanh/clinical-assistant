@@ -4,6 +4,7 @@ All emergency and ICU calculators organized by individual files
 """
 
 from .news2 import render as render_news2
+from .mews import render as render_mews
 from .qsofa import render as render_qsofa
 from .sofa import render as render_sofa
 from .sofa2 import render as render_sofa2
@@ -23,6 +24,7 @@ def render_emergency_calculator(calculator_id):
     
     calculators = {
         "NEWS2": render_news2,
+        "MEWS": render_mews,
         "qSOFA": render_qsofa,
         "SOFA": render_sofa,
         "SOFA-2 (2025)": render_sofa2,
@@ -45,6 +47,7 @@ def render_emergency_calculator(calculator_id):
 __all__ = [
     'render_emergency_calculator',
     'render_news2',
+    'render_mews',
     'render_qsofa',
     'render_sofa',
     'render_sofa2',

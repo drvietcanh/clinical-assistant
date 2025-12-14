@@ -343,5 +343,202 @@ PSYCHIATRY_INTERACTIONS = {
         "management": "Tránh dùng chung",
         "references": "Micromedex"
     },
+    
+    # ========== SSRIs (continued) ==========
+    
+    ("Paroxetine", "Tramadol"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ co giật, nhầm lẫn, hôn mê",
+        "management": "Tránh dùng chung. Nếu cần: dùng liều thấp, theo dõi sát",
+        "references": "Micromedex"
+    },
+    
+    ("Sertraline", "Tramadol"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ co giật, nhầm lẫn",
+        "management": "Tránh dùng chung. Nếu cần: dùng liều thấp, theo dõi sát",
+        "references": "Micromedex"
+    },
+    
+    ("Citalopram", "Tramadol"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ co giật, nhầm lẫn",
+        "management": "Tránh dùng chung. Nếu cần: dùng liều thấp, theo dõi sát",
+        "references": "Micromedex"
+    },
+    
+    ("Escitalopram", "Tramadol"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ co giật, nhầm lẫn",
+        "management": "Tránh dùng chung. Nếu cần: dùng liều thấp, theo dõi sát",
+        "references": "Micromedex"
+    },
+    
+    ("SSRI", "Linezolid"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Linezolid ức chế MAO, tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ hội chứng serotonin nặng",
+        "management": "Tránh dùng chung. Ngừng SSRI trước khi dùng linezolid",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("SSRI", "Lithium"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ hội chứng serotonin",
+        "management": "Thận trọng khi dùng chung. Theo dõi triệu chứng",
+        "references": "Micromedex"
+    },
+    
+    # ========== SNRIs ==========
+    
+    ("Venlafaxine", "Tramadol"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ co giật, nhầm lẫn",
+        "management": "Tránh dùng chung. Nếu cần: dùng liều thấp, theo dõi sát",
+        "references": "Micromedex"
+    },
+    
+    ("Duloxetine", "Tramadol"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ co giật, nhầm lẫn",
+        "management": "Tránh dùng chung. Nếu cần: dùng liều thấp, theo dõi sát",
+        "references": "Micromedex"
+    },
+    
+    ("SNRI", "MAO Inhibitor"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ hội chứng serotonin nặng",
+        "management": "TRÁNH DÙNG CHUNG. Cách xa ít nhất 14 ngày",
+        "references": "FDA, Micromedex"
+    },
+    
+    # ========== TRICYCLIC ANTIDEPRESSANTS (TCAs) ==========
+    
+    ("TCA", "MAO Inhibitor"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin và tăng huyết áp",
+        "description": "Tăng nguy cơ hội chứng serotonin nặng",
+        "management": "TRÁNH DÙNG CHUNG. Cách xa ít nhất 14 ngày",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("TCA", "SSRI"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin",
+        "description": "Tăng nguy cơ hội chứng serotonin",
+        "management": "Tránh dùng chung. Nếu cần: dùng liều thấp, theo dõi sát",
+        "references": "Micromedex"
+    },
+    
+    ("TCA", "Tramadol"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ hội chứng serotonin và co giật",
+        "description": "Tăng nguy cơ co giật, nhầm lẫn",
+        "management": "Tránh dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("TCA", "Clonidine"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "TCA làm giảm tác dụng hạ huyết áp của clonidine",
+        "description": "Giảm hiệu quả hạ huyết áp",
+        "management": "Thận trọng khi dùng chung. Theo dõi huyết áp",
+        "references": "Micromedex"
+    },
+    
+    ("TCA", "Anticholinergic"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng tác dụng anticholinergic, tăng nguy cơ khô miệng, bí tiểu, nhầm lẫn",
+        "description": "Tăng nguy cơ tác dụng phụ anticholinergic",
+        "management": "Thận trọng khi dùng chung, đặc biệt ở người cao tuổi",
+        "references": "Micromedex"
+    },
+    
+    # ========== ANTIPSYCHOTICS ==========
+    
+    ("Antipsychotic", "QT Prolonging Drugs"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Nhiều thuốc chống loạn thần kéo dài QT, tăng nguy cơ khi dùng với thuốc kéo dài QT khác",
+        "description": "Tăng nguy cơ rối loạn nhịp tim (torsades de pointes)",
+        "management": "Tránh dùng với thuốc kéo dài QT khác. Theo dõi ECG",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Haloperidol", "Tramadol"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng nguy cơ co giật",
+        "description": "Tăng nguy cơ co giật",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("Risperidone", "Tramadol"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng nguy cơ co giật",
+        "description": "Tăng nguy cơ co giật",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("Quetiapine", "CYP3A4 Inhibitor"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "CYP3A4 inhibitor tăng nồng độ quetiapine",
+        "description": "Tăng nguy cơ tác dụng phụ quetiapine",
+        "management": "Giảm liều quetiapine khi dùng CYP3A4 inhibitor",
+        "references": "Micromedex"
+    },
+    
+    ("Olanzapine", "CYP1A2 Inhibitor"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "CYP1A2 inhibitor tăng nồng độ olanzapine",
+        "description": "Tăng nguy cơ tác dụng phụ olanzapine",
+        "management": "Thận trọng khi dùng chung. Có thể cần giảm liều olanzapine",
+        "references": "Micromedex"
+    },
+    
+    # ========== BENZODIAZEPINES (continued) ==========
+    
+    ("Benzodiazepine", "Opioid"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng tác dụng ức chế hô hấp, tăng nguy cơ suy hô hấp, tử vong",
+        "description": "Tăng nguy cơ suy hô hấp, tử vong",
+        "clinical_significance": "Nguy cơ suy hô hấp tăng đáng kể. Có thể tử vong.",
+        "management": "Tránh dùng chung nếu có thể. Nếu cần: dùng liều thấp, theo dõi sát",
+        "references": "FDA Black Box Warning, Micromedex"
+    },
+    
+    ("Benzodiazepine", "Alcohol"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng tác dụng ức chế thần kinh trung ương",
+        "description": "Tăng nguy cơ suy hô hấp, tử vong",
+        "management": "Tránh uống rượu khi dùng benzodiazepine",
+        "references": "Micromedex"
+    },
+    
+    # ========== LITHIUM (continued) ==========
+    
+    ("Lithium", "ACE Inhibitor"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "ACE inhibitor làm giảm đào thải lithium, tăng nồng độ lithium",
+        "description": "Tăng nguy cơ độc tính lithium",
+        "management": "Theo dõi nồng độ lithium khi bắt đầu/dừng ACE inhibitor. Cân nhắc giảm liều lithium",
+        "references": "Micromedex"
+    },
+    
+    ("Lithium", "NSAID"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "NSAID làm giảm đào thải lithium, tăng nồng độ lithium",
+        "description": "Tăng nguy cơ độc tính lithium",
+        "management": "Theo dõi nồng độ lithium khi dùng NSAID. Cân nhắc giảm liều lithium",
+        "references": "Micromedex"
+    },
 }
 

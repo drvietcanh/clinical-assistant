@@ -51,7 +51,7 @@ def render_dosing_schedule_generator():
         text-align: center;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     '>
-        <h1 style='margin: 0; color: white; font-size: 2.2em;'>📅 Tạo Lịch Trình Liều Dùng</h1>
+        <h1 style='margin: 0; color: white; font-size: 2.2em;'>📅 Tạo Lịch Trình Liều dùng</h1>
         <p style='margin: 10px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1.1em;'>
             Generate dosing schedule timeline • Visual timeline • Print schedule for nursing
         </p>
@@ -79,7 +79,7 @@ def render_dosing_schedule_generator():
     )
     
     # Dosing parameters
-    st.markdown("### 📋 Thông Số Liều Dùng")
+    st.markdown("### 📋 Thông số Liều dùng")
     
     col1, col2 = st.columns(2)
     
@@ -153,14 +153,14 @@ def render_dosing_schedule_generator():
         st.markdown("---")
         
         # Display schedule
-        st.markdown("### 📅 Lịch Trình Liều Dùng")
+        st.markdown("### 📅 Lịch Trình Liều dùng")
         
         # Header info
         schedule_info = f"""
         **Thuốc:** {drug_name}  
         **Liều:** {dose_amount}  
         **Khoảng cách:** Mỗi {interval_hours} giờ  
-        **Đường Dùng:** {route}  
+        **Đường dùng:** {route}  
         **Thời gian điều trị:** {duration_days} ngày  
         **Số lần dùng:** {len(doses)} lần
         """

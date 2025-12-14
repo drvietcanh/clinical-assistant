@@ -18,7 +18,7 @@ def render():
     - Thường gặp ở người cao tuổi, đái tháo đường type 2
     - Đặc điểm: Đường huyết rất cao, tăng áp lực thẩm thấu, không có nhiễm toan ceton
     
-    **Chẩn Đoán:**
+    **Chẩn đoán:**
     - Glucose >600 mg/dL
     - Osmolality >320 mOsm/kg
     - pH >7.30 (không có nhiễm toan)
@@ -28,7 +28,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Biệt HHS vs DKA")
+    st.markdown("### 📊 Phân biệt HHS vs DKA")
     
     col1, col2 = st.columns(2)
     
@@ -59,7 +59,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION: TREATMENT ==========
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
     treatment_tabs = st.tabs([
         "💧 Truyền Dịch",
@@ -77,13 +77,13 @@ def render():
         **Protocol:**
         1. **Giờ đầu:** 0.9% NS 1-2 L
         2. **Sau đó:** 200-500 mL/h (điều chỉnh theo đáp ứng)
-        3. **Mục Tiêu:** Bù 50% thiếu hụt trong 12 giờ đầu
+        3. **Mục tiêu:** Bù 50% thiếu hụt trong 12 giờ đầu
         
         **Tính thiếu hụt dịch:**
         - Ước tính: 8-12 L (10% trọng lượng cơ thể)
         - Hoặc: (Na hiện tại - 140) × 2 × trọng lượng (kg) × 0.6
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - Dấu hiệu sống mỗi 1-2 giờ
         - BUN, Cr mỗi 4-6 giờ
         - Osmolality mỗi 4-6 giờ
@@ -147,7 +147,7 @@ def render():
         **Protocol:**
         1. **Bolus:** KHÔNG cần (khác DKA)
         2. **Infusion:** 0.05-0.1 units/kg/h
-        3. **Mục Tiêu:** Giảm glucose 50-75 mg/dL/h
+        3. **Mục tiêu:** Giảm glucose 50-75 mg/dL/h
         4. **Khi glucose <300:** Thêm D5W + tiếp tục insulin
         5. **Khi glucose 200-300:** Chuyển SC insulin
         
@@ -190,7 +190,7 @@ def render():
             - Tốc độ truyền: {insulin_units_h:.2f} units/h = {insulin_units_h:.2f} mL/h
             - Hoặc: {insulin_units_h * 60:.1f} mL/phút
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Glucose mỗi 1-2 giờ
             - Điều chỉnh liều theo đáp ứng
             """)
@@ -202,8 +202,8 @@ def render():
         **Kali (K⁺):**
         - **Bổ sung ngay** (thường thiếu dù K⁺ bình thường)
         - **Liều:** 20-40 mEq/h khi K⁺ <5.5
-        - **Mục Tiêu:** K⁺ 4-5 mEq/L
-        - **Theo Dõi:** Mỗi 2-4 giờ
+        - **Mục tiêu:** K⁺ 4-5 mEq/L
+        - **Theo dõi:** Mỗi 2-4 giờ
         
         **Phosphorus (PO₄³⁻):**
         - **Bổ sung nếu:** <1.0 mg/dL
@@ -260,7 +260,7 @@ def render():
     
     with st.expander("🔍 Xem tiêu chuẩn chẩn đoán HHS", expanded=True):
         st.markdown("""
-        **Chẩn Đoán HHS khi có TẤT CẢ:**
+        **Chẩn đoán HHS khi có TẤT CẢ:**
         1. **Glucose:** >600 mg/dL (thường >800)
         2. **Osmolality:** >320 mOsm/kg
         3. **pH:** >7.30 (KHÔNG có nhiễm toan)
@@ -396,7 +396,7 @@ def render():
     st.markdown("### 📈 Monitoring Protocol")
     
     st.markdown("""
-    **Theo Dõi Trong Quá Trình Điều Trị:**
+    **Theo dõi Trong Quá Trình Điều trị:**
     """)
     
     monitoring_table = {
@@ -418,7 +418,7 @@ def render():
             "Mỗi 1-2 giờ",
             "Liên tục"
         ],
-        "Mục Tiêu": [
+        "Mục tiêu": [
             "Giảm 50-75 mg/dL/h",
             "Giảm <10 mOsm/kg/h",
             "K⁺ 4-5, Na⁺ bình thường",
@@ -432,7 +432,7 @@ def render():
     st.table(monitoring_table)
     
     st.warning("""
-    **Dấu Hiệu Cảnh Báo:**
+    **Dấu hiệu Cảnh báo:**
     - Glucose giảm quá nhanh (>100 mg/dL/h) → Nguy cơ phù não
     - Osmolality không giảm → Cần tăng tốc độ truyền dịch
     - K⁺ giảm → Tăng bổ sung kali
@@ -442,7 +442,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION: COMPLICATIONS ==========
-    st.markdown("### ⚠️ Biến Chứng")
+    st.markdown("### ⚠️ Biến chứng")
     
     st.error("""
     **1. Phù Não:**
@@ -488,19 +488,19 @@ def render():
     st.markdown("---")
     
     # ========== SECTION: CHECKLIST ==========
-    st.markdown("### 📋 Checklist Điều Trị")
+    st.markdown("### 📋 Checklist Điều trị")
     
     checklist_items = [
-        "✅ Chẩn Đoán (Glucose >600, Osmolality >320, pH >7.30)",
+        "✅ Chẩn đoán (Glucose >600, Osmolality >320, pH >7.30)",
         "✅ ABC: Airway, Breathing, Circulation",
         "✅ Truyền Dịch ngay (0.9% NS 1-2 L giờ đầu)",
         "✅ Insulin 0.05-0.1 units/kg/h (sau khi đã truyền dịch)",
         "✅ Bổ Sung Kali ngay",
         "✅ Heparin Prophylaxis (5000 units SC q8-12h)",
-        "✅ Theo Dõi Glucose mỗi 1-2 giờ",
-        "✅ Theo Dõi Osmolality mỗi 4-6 giờ",
-        "✅ Theo Dõi Điện Giải mỗi 4-6 giờ",
-        "✅ Tìm Và Điều Trị Nguyên Nhân (nhiễm trùng, thuốc, v.v.)"
+        "✅ Theo dõi Glucose mỗi 1-2 giờ",
+        "✅ Theo dõi Osmolality mỗi 4-6 giờ",
+        "✅ Theo dõi Điện Giải mỗi 4-6 giờ",
+        "✅ Tìm Và Điều trị Nguyên Nhân (nhiễm trùng, thuốc, v.v.)"
     ]
     
     for item in checklist_items:
@@ -540,17 +540,17 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Điều Trị")
+    st.markdown("### 🎯 Mục tiêu điều trị")
     
     st.success("""
-    **Mục Tiêu Trong 24 Giờ Đầu:**
+    **Mục tiêu Trong 24 Giờ Đầu:**
     - ✅ **Glucose:** 200-300 mg/dL (giảm 50-75 mg/dL/h)
     - ✅ **Osmolality:** Giảm <10 mOsm/kg/h
     - ✅ **Dấu hiệu sống:** Ổn định
     - ✅ **Điện giải:** Bình thường (K⁺ 4-5, Na⁺ bình thường)
     - ✅ **Không biến chứng:** Phù não, huyết khối, suy thận
     
-    **Mục Tiêu Trong 48-72 Giờ:**
+    **Mục tiêu Trong 48-72 Giờ:**
     - ✅ **Glucose:** 150-250 mg/dL
     - ✅ **Osmolality:** <310 mOsm/kg
     - ✅ **Chuyển SC insulin:** Khi glucose 200-300 và ổn định

@@ -581,7 +581,7 @@ def render():
         - **Interstitial edematous (80%):** Nhẹ, tự khỏi
         - **Necrotizing (20%):** Nặng, tử vong cao
         
-        **Biến Chứng:**
+        **Biến chứng:**
         - **Early (< 2 weeks):** SIRS, organ failure
         - **Late (> 2 weeks):** Infection, pseudocyst, abscess
         """)

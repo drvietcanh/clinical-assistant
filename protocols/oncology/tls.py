@@ -25,7 +25,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: RISK STRATIFICATION ==========
-    st.markdown("### 📊 Phân Tầng Nguy Cơ")
+    st.markdown("### 📊 Phân tầng Nguy cơ")
     
     st.markdown("""
     **Theo NCCN 2023, phân loại nguy cơ TLS:**
@@ -138,7 +138,7 @@ def render():
     st.info("""
     **Bù dịch là nền tảng của phòng ngừa TLS:**
     
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - Duy trì lượng nước tiểu >100 ml/h (Người Lớn)
     - Hoặc >2 ml/kg/h (Trẻ Em)
     - Giảm nguy cơ kết tinh uric acid trong thận
@@ -158,7 +158,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: URIC ACID LOWERING ==========
-    st.markdown("### 💊 Điều Trị Hạ Uric Acid")
+    st.markdown("### 💊 Điều trị Hạ Uric Acid")
     
     tab1, tab2 = st.tabs(["Allopurinol", "Rasburicase"])
     
@@ -166,7 +166,7 @@ def render():
         st.markdown("#### Allopurinol")
         
         st.success("""
-        **Chỉ Định:**
+        **Chỉ định:**
         - Nguy cơ thấp đến trung bình
         - Không có thiếu hụt G6PD
         - Không có tăng uric acid máu nặng (>10 mg/dL)
@@ -195,7 +195,7 @@ def render():
         st.markdown("#### Rasburicase")
         
         st.error("""
-        **Chỉ Định:**
+        **Chỉ định:**
         - **TLS nguy cơ cao**
         - Tăng uric acid máu nặng (>10 mg/dL)
         - Laboratory TLS đã xảy ra
@@ -219,7 +219,7 @@ def render():
         - Phá hủy uric acid đã có
         - Tác dụng nhanh (vài giờ)
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - Uric acid mỗi 4-6h
         - Hemoglobin, methemoglobin (nếu có triệu chứng)
         - Ngừng nếu tan máu hoặc methemoglobinemia
@@ -260,7 +260,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: MONITORING ==========
-    st.markdown("### 📈 Phác Đồ Theo Dõi")
+    st.markdown("### 📈 Phác Đồ Theo dõi")
     
     st.markdown("""
     **Ban đầu (trước hóa trị):**
@@ -295,7 +295,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: TREATMENT OF ESTABLISHED TLS ==========
-    st.markdown("### 🚨 Điều Trị TLS Đã Xảy Ra")
+    st.markdown("### 🚨 Điều trị TLS Đã Xảy Ra")
     
     st.error("""
     **Nếu Laboratory TLS đã xảy ra:**
@@ -331,7 +331,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 9: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Nhóm Bệnh Nhân Đặc Biệt")
+    st.markdown("### 👥 Nhóm Bệnh nhân Đặc Biệt")
     
     col1, col2 = st.columns(2)
     

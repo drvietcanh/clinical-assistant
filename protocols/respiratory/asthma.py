@@ -89,9 +89,9 @@ def render():
             severity = "mild"
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Điều Trị")
+    st.markdown("### 2️⃣ Điều trị")
     
-    tabs = st.tabs(["💨 Bronchodilators", "💊 Corticosteroids", "💉 Add-on Therapy", "🏥 ICU Criteria", "📋 Theo Dõi"])
+    tabs = st.tabs(["💨 Bronchodilators", "💊 Corticosteroids", "💉 Add-on Therapy", "🏥 ICU Criteria", "📋 Theo dõi"])
     
     with tabs[0]:  # Bronchodilators
         st.markdown("#### Thuốc Giãn Phế Quản")
@@ -140,7 +140,7 @@ def render():
         st.markdown("#### Corticosteroids Toàn Thân")
         
         st.success("""
-        **Khuyến Cáo (GINA 2023):**
+        **Khuyến cáo (GINA 2023):**
         - **Cho NGAY** trong giờ đầu tiên
         - Hiệu quả tương đương IV và PO
         
@@ -175,16 +175,16 @@ def render():
             """)
     
     with tabs[2]:  # Add-on therapy
-        st.markdown("#### Điều Trị Bổ Sung")
+        st.markdown("#### Điều trị Bổ Sung")
         
         st.success("""
         **Oxygen:**
-        - **Mục Tiêu:** SpO₂ 93-95% (Người Lớn)
+        - **Mục tiêu:** SpO₂ 93-95% (Người Lớn)
         - SpO₂ 94-98% (Trẻ Em)
         - Nasal cannula hoặc mask
         
         **Magnesium Sulfate:**
-        - **Chỉ Định:** Cơn hen nặng không đáp ứng với điều trị ban đầu
+        - **Chỉ định:** Cơn hen nặng không đáp ứng với điều trị ban đầu
         - **Liều:** 2g IV trong 20 phút
         - **Cơ chế:** Giãn phế quản
         - **Evidence:** Giảm tỷ lệ nhập viện
@@ -261,12 +261,12 @@ def render():
         - **Tidal volume:** 6-8 mL/kg IBW
         - **Respiratory rate:** 10-14/phút (cho phép I:E ratio dài)
         - **PEEP:** Thấp (3-5 cmH₂O)
-        - **Mục Tiêu:** Cho phép "permissive hypercapnia"
+        - **Mục tiêu:** Cho phép "permissive hypercapnia"
         - **Nguy cơ:** Dynamic hyperinflation, barotrauma
         """)
     
     with tabs[4]:  # Monitoring
-        st.markdown("#### Theo Dõi & Xuất Viện")
+        st.markdown("#### Theo dõi & Xuất Viện")
         
         st.success("""
         **Theo dõi tại cấp cứu/bệnh viện:**

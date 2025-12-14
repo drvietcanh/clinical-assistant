@@ -320,7 +320,7 @@ def render():
             
             **Nhiều thuốc CHỐNG CHỈ ĐỊNH hoặc cần giảm liều mạnh:**
             
-            **Chống Chỉ Định:**
+            **Chống chỉ định:**
             - ❌ **Metformin** (nguy cơ toan lactic)
             - ❌ **SGLT2i** (Dapagliflozin, Empagliflozin...)
             - ❌ **NSAIDs** (trừ khi thực sự cần thiết)

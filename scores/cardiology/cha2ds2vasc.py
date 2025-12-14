@@ -9,7 +9,7 @@ import streamlit as st
 def render():
     """CHA₂DS₂-VASc Score Calculator"""
     st.subheader("❤️ CHA₂DS₂-VASc Score")
-    st.caption("Đánh giá Nguy Cơ Đột Quỵ Trong Rung Nhĩ")
+    st.caption("Đánh giá Nguy cơ Đột Quỵ Trong Rung Nhĩ")
     
     col1, col2 = st.columns([2, 1])
     

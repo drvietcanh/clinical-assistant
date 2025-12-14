@@ -8,6 +8,7 @@ from .irons import IRONS_DRUGS
 from .vitamin_b12s import VITAMIN_B12S_DRUGS
 from .vitamin_ds import VITAMIN_DS_DRUGS
 from .antihistamine_h1_antagonist_2nd_generations import ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS
+from .antihistamine_h1_antagonist_1st_generations import ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS
 
 # Merge all categories
 SUPPORTIVE_DRUGS = {
@@ -17,6 +18,7 @@ SUPPORTIVE_DRUGS = {
     **VITAMIN_B12S_DRUGS,
     **VITAMIN_DS_DRUGS,
     **ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS,
+    **ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS,
 }
 
 __all__ = ['SUPPORTIVE_DRUGS']

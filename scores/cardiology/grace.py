@@ -26,6 +26,7 @@ def render():
             max_value=110,
             value=65,
             step=1,
+            format="%d",
             key="grace_age"
         )
         
@@ -36,6 +37,7 @@ def render():
             max_value=250,
             value=80,
             step=1,
+            format="%d",
             key="grace_hr"
         )
         
@@ -46,6 +48,7 @@ def render():
             max_value=250,
             value=120,
             step=1,
+            format="%d",
             key="grace_sbp"
         )
         
@@ -322,7 +325,7 @@ def render():
             # Prepare inputs for export
             inputs_dict = {
                 "Age": f"{age} tuổi",
-                "Heart Rate": f"{hr} /min",
+                "Nhịp tim": f"{hr} /min",
                 "Systolic BP": f"{sbp} mmHg",
                 "Creatinine": f"{scr_mgdl:.2f} mg/dL",
                 "Killip Class": f"{killip_class}",

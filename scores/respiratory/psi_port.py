@@ -29,6 +29,7 @@ def render():
             min_value=0,
             max_value=120,
             value=50,
+            format="%d",
             step=1,
             help="Tuổi tính bằng năm"
         )
@@ -173,6 +174,7 @@ def render():
             max_value=180.0,
             value=140.0,
             step=1.0,
+            format="%.0f",
             help="<130 mEq/L: +20 điểm"
         )
         

@@ -371,5 +371,112 @@ ANTICOAGULANT_INTERACTIONS = {
         "management": "Thận trọng khi dùng chung. Theo dõi dấu hiệu xuất huyết",
         "references": "Micromedex"
     },
+    
+    ("Enoxaparin", "Clopidogrel"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ xuất huyết do tăng tác dụng chống đông và chống kết tập tiểu cầu",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Thận trọng khi dùng chung. Theo dõi dấu hiệu xuất huyết sát",
+        "references": "Micromedex"
+    },
+    
+    ("Heparin", "Clopidogrel"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ xuất huyết",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Thận trọng khi dùng chung. Theo dõi aPTT và dấu hiệu xuất huyết",
+        "references": "Micromedex"
+    },
+    
+    # DOACs + Antiplatelets
+    ("Dabigatran", "Aspirin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ xuất huyết",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Thận trọng khi dùng chung. Theo dõi dấu hiệu xuất huyết",
+        "references": "Micromedex"
+    },
+    
+    ("Rivaroxaban", "Aspirin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ xuất huyết",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Thận trọng khi dùng chung. Theo dõi dấu hiệu xuất huyết",
+        "references": "Micromedex"
+    },
+    
+    ("Apixaban", "Aspirin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ xuất huyết",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Thận trọng khi dùng chung. Theo dõi dấu hiệu xuất huyết",
+        "references": "Micromedex"
+    },
+    
+    ("Dabigatran", "Clopidogrel"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ xuất huyết",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Thận trọng khi dùng chung. Theo dõi dấu hiệu xuất huyết",
+        "references": "Micromedex"
+    },
+    
+    ("Rivaroxaban", "Clopidogrel"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ xuất huyết",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Thận trọng khi dùng chung. Theo dõi dấu hiệu xuất huyết",
+        "references": "Micromedex"
+    },
+    
+    # DOACs + Antifungals
+    ("Dabigatran", "Itraconazole"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Itraconazole ức chế P-gp, tăng nồng độ dabigatran",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Tránh dùng chung. Nếu cần: giảm liều dabigatran",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Rivaroxaban", "Itraconazole"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Itraconazole ức chế CYP3A4 và P-gp, tăng nồng độ rivaroxaban",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Tránh dùng chung. Nếu cần: giảm liều rivaroxaban",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Apixaban", "Itraconazole"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Itraconazole ức chế CYP3A4 và P-gp, tăng nồng độ apixaban",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Tránh dùng chung. Nếu cần: giảm liều apixaban 50%",
+        "references": "FDA, Micromedex"
+    },
+    
+    # DOACs + Antivirals
+    ("Dabigatran", "Ritonavir"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ritonavir ức chế P-gp, tăng nồng độ dabigatran",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Tránh dùng chung. Cân nhắc chuyển sang warfarin",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Rivaroxaban", "Ritonavir"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ritonavir ức chế CYP3A4 và P-gp, tăng nồng độ rivaroxaban",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Tránh dùng chung. Cân nhắc chuyển sang warfarin",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Apixaban", "Ritonavir"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ritonavir ức chế CYP3A4 và P-gp, tăng nồng độ apixaban",
+        "description": "Tăng nguy cơ xuất huyết nặng",
+        "management": "Tránh dùng chung. Cân nhắc chuyển sang warfarin",
+        "references": "FDA, Micromedex"
+    },
 }
 

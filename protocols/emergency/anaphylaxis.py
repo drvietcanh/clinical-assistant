@@ -21,7 +21,7 @@ def render():
     - Tuần hoàn (hypotension, syncope)
     - GI (nausea, vomiting, diarrhea)
     
-    **Chẩn Đoán:** ≥2 hệ cơ quan hoặc hạ huyết áp sau tiếp xúc với chất gây dị ứng
+    **Chẩn đoán:** ≥2 hệ cơ quan hoặc hạ huyết áp sau tiếp xúc với chất gây dị ứng
     """)
     
     st.markdown("---")
@@ -64,7 +64,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều Trị Hỗ Trợ")
+    st.markdown("### 💊 Điều trị Hỗ Trợ")
     
     st.info("""
     **Sau khi đã dùng Epinephrine:**
@@ -129,7 +129,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều Trị")
+    st.markdown("### 📋 Checklist Điều trị")
     
     checklist_items = [
         "✅ Epinephrine IM (mặt trước-bên đùi)",
@@ -180,10 +180,10 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Điều Trị")
+    st.markdown("### 🎯 Mục tiêu điều trị")
     
     st.success("""
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - ✅ Huyết áp ổn định (MAP ≥65 mmHg)
     - ✅ SpO2 ≥94%
     - ✅ Không stridor/wheezing
@@ -224,15 +224,15 @@ def render_mild_anaphylaxis():
     st.success("## 🟢 MILD ANAPHYLAXIS")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Chỉ có da/mucosa (urticaria, angioedema)
     - Không có hô hấp/tuần hoàn
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Epinephrine:** 0.3 mg IM (Người Lớn)
     2. **Diphenhydramine:** 25-50 mg IV/IM
     3. **Corticosteroid:** Prednisone 60 mg PO
-    4. **Theo Dõi:** 2-4 giờ
+    4. **Theo dõi:** 2-4 giờ
     
     **Xuất viện:** Có thể sau 2-4 giờ nếu ổn định
     """)
@@ -243,19 +243,19 @@ def render_moderate_anaphylaxis():
     st.warning("## 🟡 MODERATE ANAPHYLAXIS")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Da/mucosa + Hô hấp (wheezing, dyspnea)
     - Hoặc da/mucosa + GI (nausea, vomiting)
     - Không có hạ huyết áp
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Epinephrine:** 0.3-0.5 mg IM (lặp lại nếu cần)
     2. **Oxygen:** 100% qua mask
     3. **Albuterol:** Nebulizer nếu wheezing
     4. **Diphenhydramine:** 50 mg IV
     5. **Ranitidine:** 50 mg IV
     6. **Methylprednisolone:** 125 mg IV
-    7. **Theo Dõi:** 4-6 giờ
+    7. **Theo dõi:** 4-6 giờ
     
     **Xuất viện:** Sau 4-6 giờ nếu ổn định
     """)
@@ -266,7 +266,7 @@ def render_severe_anaphylaxis():
     st.error("## 🔴 SEVERE ANAPHYLAXIS - ICU")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Hạ huyết áp (SBP <90 mmHg)
     - Stridor, laryngeal edema
     - Suy hô hấp
@@ -297,7 +297,7 @@ def render_severe_anaphylaxis():
        - Arterial line nếu cần
        - ECG monitoring
     
-    6. **Theo Dõi:** 8-12 giờ (nguy cơ biphasic cao)
+    6. **Theo dõi:** 8-12 giờ (nguy cơ biphasic cao)
     """)
 
 

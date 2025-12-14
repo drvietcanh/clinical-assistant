@@ -64,7 +64,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Chọn Mức Độ Phù Hợp Nhất Với Bệnh Nhân")
+    st.subheader("📝 Chọn Mức Độ Phù Hợp Nhất Với Bệnh nhân")
     
     kps_score = st.select_slider(
         "Karnofsky Performance Scale",
@@ -158,7 +158,7 @@ def render():
             st.success("""
             ✅ **KPS 80-100: Thể trạng tốt**
             
-            **Điều Trị:**
+            **Điều trị:**
             - Có thể điều trị tích cực (hóa trị, xạ trị, phẫu thuật)
             - Dung nạp điều trị tốt
             - Có thể tham gia thử nghiệm lâm sàng
@@ -169,18 +169,18 @@ def render():
             st.warning("""
             ⚠️ **KPS 50-70: Thể trạng trung bình**
             
-            **Điều Trị:**
+            **Điều trị:**
             - Cân nhắc điều trị phù hợp với thể trạng
             - Có thể cần giảm liều hóa trị
             - Tăng cường hỗ trợ dinh dưỡng, phục hồi chức năng
             
-            **Theo Dõi:** Cần đánh giá kỹ lợi ích/nguy cơ điều trị
+            **Theo dõi:** Cần đánh giá kỹ lợi ích/nguy cơ điều trị
             """)
         else:
             st.error("""
             🔴 **KPS < 50: Thể trạng kém**
             
-            **Điều Trị:**
+            **Điều trị:**
             - Cân nhắc chăm sóc giảm nhẹ (palliative care)
             - Điều trị triệu chứng
             - Hỗ trợ tâm lý, tinh thần

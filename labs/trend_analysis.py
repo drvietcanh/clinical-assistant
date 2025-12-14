@@ -354,7 +354,7 @@ def render():
     st.markdown("---")
     
     # Test selection
-    st.markdown("#### 📋 Chọn Xét Nghiệm")
+    st.markdown("#### 📋 Chọn Xét nghiệm")
     
     # Get available tests
     available_tests = sorted([name for name in ALL_RANGES.keys() if ALL_RANGES[name].get("label")])

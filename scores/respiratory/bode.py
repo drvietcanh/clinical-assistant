@@ -120,14 +120,14 @@ def calculate_bode(
         management = """
         **🟢 BODE 0-2 (Nguy cơ Thấp):**
         
-        **Điều Trị:**
+        **Điều trị:**
         - LAMA hoặc LABA đơn độc
         - Bỏ thuốc lá (quan trọng nhất!)
         - Vaccine: Flu hàng năm, Pneumococcal
         - Phục hồi chức năng phổi
         - Tập thể dục thường xuyên
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - FEV1 mỗi 6-12 tháng
         - Tái đánh giá BODE hàng năm
         - Đánh giá đợt cấp
@@ -141,7 +141,7 @@ def calculate_bode(
         management = """
         **🟡 BODE 3-4 (Nguy cơ Trung Bình):**
         
-        **Điều Trị:**
+        **Điều trị:**
         - **LAMA + LABA combination**
         - ICS nếu có đợt cấp tái phát
         - Bỏ thuốc lá
@@ -150,7 +150,7 @@ def calculate_bode(
         - Dinh dưỡng (nếu BMI thấp)
         - Oxy liệu pháp nếu hypoxemia
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - FEV1 mỗi 3-6 tháng
         - Đánh giá đợt cấp thường xuyên
         - Tái đánh giá BODE 6 tháng
@@ -165,7 +165,7 @@ def calculate_bode(
         management = """
         **🟠 BODE 5-6 (Nguy cơ Cao):**
         
-        **Điều Trị:**
+        **Điều trị:**
         - **Triple therapy: LAMA + LABA + ICS**
         - PDE4 inhibitor (Roflumilast) xem xét
         - Macrolide dài hạn nếu đợt cấp tái phát
@@ -180,7 +180,7 @@ def calculate_bode(
         - Phẫu thuật giảm thể tích phổi (LVRS) nếu phù hợp
         - Ghép phổi (nếu tuổi <65, không hút thuốc)
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - FEV1 mỗi 3 tháng
         - ABG định kỳ
         - Đánh giá hypoxemia, hypercapnia
@@ -195,7 +195,7 @@ def calculate_bode(
         management = """
         **🔴 BODE 7-10 (Nguy cơ Rất Cao):**
         
-        **Điều Trị Tích Cực:**
+        **Điều trị Tích Cực:**
         - **Triple therapy LAMA + LABA + ICS**
         - PDE4 inhibitor
         - Macrolide dài hạn
@@ -216,7 +216,7 @@ def calculate_bode(
         - Hỗ trợ tâm lý
         - Chăm sóc giảm nhẹ triệu chứng
         
-        **Theo Dõi Sát:**
+        **Theo dõi Sát:**
         - FEV1 mỗi 1-3 tháng
         - ABG thường xuyên
         - Đánh giá chất lượng cuộc sống
@@ -296,7 +296,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập 4 Thông Số BODE")
+    st.subheader("📝 Nhập 4 Thông số BODE")
     
     # BMI
     st.markdown("#### 1️⃣ B - Body Mass Index")
@@ -418,7 +418,7 @@ def render():
             """)
         
         st.warning("""
-        ⚠️ **Cảnh Báo:**
+        ⚠️ **Cảnh báo:**
         - BODE là công cụ tiên lượng, không phải chẩn đoán
         - Quyết định điều trị dựa trên đánh giá toàn diện
         - Bỏ thuốc lá là quan trọng NHẤT (giảm 50% tử vong)

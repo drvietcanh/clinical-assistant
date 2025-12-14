@@ -9,15 +9,15 @@ import streamlit as st
 def render():
     """qSOFA (Quick SOFA) Calculator"""
     st.subheader("🩺 qSOFA (Quick SOFA)")
-    st.caption("Sepsis-3 Criteria for Sepsis Screening")
+    st.caption("Tiêu chuẩn Sepsis-3 để sàng lọc nhiễm trùng huyết")
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### Patient Parameters")
+        st.markdown("### Thông số bệnh nhân")
         
         rr = st.number_input(
-            "Respiratory Rate (/min)",
+            "Nhịp thở (/phút)",
             min_value=0,
             max_value=60,
             value=20,
@@ -26,7 +26,7 @@ def render():
         )
         
         sbp = st.number_input(
-            "Systolic Blood Pressure (mmHg)",
+            "Huyết áp tâm thu (mmHg)",
             min_value=0,
             max_value=300,
             value=120,
@@ -35,7 +35,7 @@ def render():
         )
         
         gcs = st.number_input(
-            "Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow",
+            "Glasgow Coma Scale (GCS) - Thang điểm hôn mê Glasgow",
             min_value=3,
             max_value=15,
             value=15,
@@ -43,7 +43,7 @@ def render():
             help="Normal: 15; Coma: 3"
         )
         
-        if st.button("🔢 Calculate qSOFA", type="primary"):
+        if st.button("🔢 Tính qSOFA", type="primary"):
             score = 0
             details = []
             
@@ -66,7 +66,7 @@ def render():
                 details.append("✗ GCS = 15 (0)")
             
             with col2:
-                st.markdown("### Result")
+                st.markdown("### Kết quả")
                 
                 if score >= 2:
                     st.error(f"## qSOFA = {score}")
@@ -100,11 +100,11 @@ def render():
                 
                 st.markdown(interpretation)
             
-            st.markdown("### Breakdown")
+            st.markdown("### Chi tiết")
             for detail in details:
                 st.write(detail)
             
-            with st.expander("📚 Clinical Reference"):
+            with st.expander("📚 Tài liệu tham khảo lâm sàng"):
                 st.markdown("""
                 **qSOFA (Quick SOFA) Score**
                 

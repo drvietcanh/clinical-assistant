@@ -551,5 +551,173 @@ CARDIOVASCULAR_INTERACTIONS = {
         "management": "TRÁNH DÙNG CHUNG. Cách xa ít nhất 24 giờ",
         "references": "FDA Black Box Warning, Micromedex"
     },
+    
+    # ========== ALPHA-BLOCKERS ==========
+    
+    ("Alpha-blocker", "Beta-blocker"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng tác dụng hạ huyết áp, có thể gây hạ huyết áp quá mức",
+        "description": "Tăng nguy cơ hạ huyết áp",
+        "management": "Thận trọng khi bắt đầu. Theo dõi huyết áp",
+        "references": "Micromedex"
+    },
+    
+    ("Prazosin", "Diuretic"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng tác dụng hạ huyết áp",
+        "description": "Tăng nguy cơ hạ huyết áp",
+        "management": "Thận trọng khi bắt đầu. Có thể cần giảm liều diuretic",
+        "references": "Micromedex"
+    },
+    
+    # ========== ALDOSTERONE ANTAGONISTS ==========
+    
+    ("Spironolactone", "ARB"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ tăng kali máu",
+        "description": "Có thể gây tăng kali máu nguy hiểm",
+        "management": "Thận trọng khi dùng chung. Theo dõi kali máu thường xuyên",
+        "references": "Micromedex"
+    },
+    
+    ("Eplerenone", "ARB"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ tăng kali máu",
+        "description": "Có thể gây tăng kali máu nguy hiểm",
+        "management": "Thận trọng khi dùng chung. Theo dõi kali máu",
+        "references": "Micromedex"
+    },
+    
+    ("Spironolactone", "Potassium"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ tăng kali máu",
+        "description": "Có thể gây tăng kali máu nguy hiểm",
+        "management": "Tránh bổ sung kali khi dùng spironolactone. Theo dõi kali máu",
+        "references": "Micromedex"
+    },
+    
+    # ========== LOOP DIURETICS ==========
+    
+    ("Furosemide", "Hydrochlorothiazide"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng tác dụng lợi tiểu, tăng nguy cơ mất nước và rối loạn điện giải",
+        "description": "Tăng nguy cơ hạ kali máu, hạ natri máu",
+        "management": "Thận trọng khi dùng chung. Theo dõi điện giải",
+        "references": "Micromedex"
+    },
+    
+    ("Furosemide", "Lithium"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Furosemide có thể tăng nồng độ lithium",
+        "description": "Tăng nguy cơ độc tính lithium",
+        "management": "Theo dõi nồng độ lithium khi dùng furosemide",
+        "references": "Micromedex"
+    },
+    
+    # ========== THIAZIDE DIURETICS ==========
+    
+    ("Hydrochlorothiazide", "Digoxin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Thiazide gây hạ kali máu, tăng nguy cơ ngộ độc digoxin",
+        "description": "Tăng nguy cơ ngộ độc digoxin",
+        "management": "Theo dõi kali máu và nồng độ digoxin",
+        "references": "Micromedex"
+    },
+    
+    ("Hydrochlorothiazide", "NSAID"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "NSAID làm giảm tác dụng lợi tiểu và hạ huyết áp của thiazide",
+        "description": "Giảm hiệu quả hạ huyết áp",
+        "management": "Thận trọng khi dùng chung. Theo dõi huyết áp",
+        "references": "Micromedex"
+    },
+    
+    # ========== POTASSIUM-SPARING DIURETICS ==========
+    
+    ("Triamterene", "ACE Inhibitor"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ tăng kali máu",
+        "description": "Có thể gây tăng kali máu nguy hiểm",
+        "management": "Thận trọng khi dùng chung. Theo dõi kali máu",
+        "references": "Micromedex"
+    },
+    
+    ("Amiloride", "ACE Inhibitor"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ tăng kali máu",
+        "description": "Có thể gây tăng kali máu nguy hiểm",
+        "management": "Thận trọng khi dùng chung. Theo dõi kali máu",
+        "references": "Micromedex"
+    },
+    
+    # ========== ANTIARRHYTHMICS (continued) ==========
+    
+    ("Procainamide", "QT Prolonging Drugs"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Procainamide kéo dài QT, tăng nguy cơ khi dùng với thuốc kéo dài QT khác",
+        "description": "Tăng nguy cơ rối loạn nhịp tim (torsades de pointes)",
+        "management": "Tránh dùng với thuốc kéo dài QT khác",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Disopyramide", "Beta-blocker"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng tác dụng ức chế tim, có thể gây block nhĩ thất nặng",
+        "description": "Tăng nguy cơ block nhĩ thất, suy tim",
+        "management": "Tránh dùng chung nếu có thể. Nếu cần: theo dõi nhịp tim sát",
+        "references": "Micromedex"
+    },
+    
+    ("Disopyramide", "Verapamil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng tác dụng ức chế tim",
+        "description": "Tăng nguy cơ block nhĩ thất, suy tim",
+        "management": "Tránh dùng chung",
+        "references": "Micromedex"
+    },
+    
+    # ========== STATINS (continued) ==========
+    
+    ("Lovastatin", "Amiodarone"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Amiodarone ức chế CYP3A4, tăng nồng độ lovastatin",
+        "description": "Tăng nguy cơ tiêu cơ vân",
+        "management": "Giảm liều lovastatin hoặc chuyển statin khác",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Lovastatin", "Verapamil"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Verapamil ức chế CYP3A4, tăng nồng độ lovastatin",
+        "description": "Tăng nguy cơ tiêu cơ vân",
+        "management": "Giảm liều lovastatin hoặc chuyển statin khác",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Atorvastatin", "Amlodipine"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Amlodipine ức chế CYP3A4, tăng nồng độ atorvastatin",
+        "description": "Tăng nguy cơ tiêu cơ vân",
+        "management": "Thận trọng khi dùng chung. Theo dõi CK",
+        "references": "Micromedex"
+    },
+    
+    ("Pravastatin", "Gemfibrozil"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Gemfibrozil có thể tăng nồng độ pravastatin",
+        "description": "Tăng nguy cơ tiêu cơ vân",
+        "management": "Thận trọng khi dùng chung. Theo dõi CK",
+        "references": "Micromedex"
+    },
+    
+    # ========== FIBRATES ==========
+    
+    ("Gemfibrozil", "Warfarin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Có thể tăng tác dụng warfarin",
+        "description": "Tăng nguy cơ xuất huyết",
+        "management": "Theo dõi INR khi dùng gemfibrozil",
+        "references": "Micromedex"
+    },
 }
 

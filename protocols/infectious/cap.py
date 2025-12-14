@@ -22,7 +22,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: RISK STRATIFICATION ==========
-    st.markdown("### 📊 Phân Tầng Nguy Cơ (Risk Stratification)")
+    st.markdown("### 📊 Phân tầng Nguy cơ (Risk Stratification)")
     
     st.markdown("""
     **Sử dụng CURB-65 hoặc PSI (Pneumonia Severity Index) để quyết định:**
@@ -56,15 +56,15 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: OUTPATIENT TREATMENT ==========
-    st.markdown("### 🏠 Điều Trị Ngoại Trú (Outpatient)")
+    st.markdown("### 🏠 Điều trị Ngoại Trú (Outpatient)")
     
-    st.markdown("**Chỉ Định:** CURB-65 = 0-1, PSI Class I-III, không có yếu tố nguy cơ MDR")
+    st.markdown("**Chỉ định:** CURB-65 = 0-1, PSI Class I-III, không có yếu tố nguy cơ MDR")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.success("""
-        **Không Có Yếu Tố Nguy Cơ Kháng Thuốc:**
+        **Không Có Yếu tố nguy cơ Kháng Thuốc:**
         
         **Lựa chọn 1:**
         - Amoxicillin 1g PO TID
@@ -80,7 +80,7 @@ def render():
     
     with col2:
         st.warning("""
-        **Có Yếu Tố Nguy Cơ Kháng Thuốc:**
+        **Có Yếu tố nguy cơ Kháng Thuốc:**
         - COPD, hút thuốc, kháng sinh gần đây
         
         **Lựa chọn:**
@@ -95,15 +95,15 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: INPATIENT (NON-ICU) ==========
-    st.markdown("### 🏥 Điều Trị Nội Trú (Non-ICU)")
+    st.markdown("### 🏥 Điều trị Nội Trú (Non-ICU)")
     
-    st.markdown("**Chỉ Định:** CURB-65 = 2, PSI Class IV, cần nhập viện nhưng không cần ICU")
+    st.markdown("**Chỉ định:** CURB-65 = 2, PSI Class IV, cần nhập viện nhưng không cần ICU")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.success("""
-        **Không Có Yếu Tố Nguy Cơ MDR:**
+        **Không Có Yếu tố nguy cơ MDR:**
         
         **Lựa chọn 1:**
         - Ampicillin-sulbactam 1.5-3g IV q6h
@@ -120,7 +120,7 @@ def render():
     
     with col2:
         st.warning("""
-        **Có Yếu Tố Nguy Cơ MDR:**
+        **Có Yếu tố nguy cơ MDR:**
         - Kháng sinh gần đây, nhập viện gần đây, COPD nặng
         
         **Lựa chọn:**
@@ -136,9 +136,9 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: ICU TREATMENT ==========
-    st.markdown("### 🚨 Điều Trị ICU")
+    st.markdown("### 🚨 Điều trị ICU")
     
-    st.markdown("**Chỉ Định:** CURB-65 ≥3, PSI Class V, suy hô hấp, sốc nhiễm khuẩn")
+    st.markdown("**Chỉ định:** CURB-65 ≥3, PSI Class V, suy hô hấp, sốc nhiễm khuẩn")
     
     st.error("""
     **Empiric Therapy (Phổ rộng):**
@@ -163,7 +163,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: DURATION ==========
-    st.markdown("### ⏱️ Thời Gian Điều Trị")
+    st.markdown("### ⏱️ Thời Gian Điều trị")
     
     st.info("""
     **Thời gian điều trị:**

@@ -225,7 +225,7 @@ def render_valproic_acid_tdm():
             """)
             
             st.markdown("---")
-            st.markdown("### ⚠️ Cảnh Báo Độc Tính")
+            st.markdown("### ⚠️ Cảnh báo Độc Tính")
             
             st.error("""
             **Triệu chứng độc tính Valproic Acid:**

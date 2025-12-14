@@ -118,7 +118,7 @@ def render():
     
     with col1:
         gcs = st.number_input(
-            "Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow",
+            "Thang điểm hôn mê Glasgow (GCS) - Thang điểm hôn mê Glasgow",
             min_value=3,
             max_value=15,
             value=15,
@@ -315,7 +315,7 @@ def render():
         </div>
         """, unsafe_allow_html=True)
         
-        # Breakdown
+        # Chi tiết
         st.markdown("### 📋 Chi tiết điểm số:")
         
         components = []
@@ -379,7 +379,7 @@ def render():
               - Bắt đầu ăn sớm khi đỡ đau (24-48h)
               - Bắt đầu từ thức ăn lỏng
             
-            - 📊 **Theo Dõi:**
+            - 📊 **Theo dõi:**
               - Dấu hiệu sinh tồn
               - Lượng nước tiểu
               - Tái đánh giá BISAP mỗi ngày

@@ -676,7 +676,7 @@ def render():
            - Một số bệnh gan cholestatic
         """)
     
-    with st.expander("💊 Yếu Tố Ảnh Hưởng MELD"):
+    with st.expander("💊 Yếu tố Ảnh Hưởng MELD"):
         st.markdown("""
         **Các yếu tố có thể làm tăng/giảm MELD:**
         

@@ -26,7 +26,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Chẩn Đoán")
+    st.markdown("### 📋 Chẩn đoán")
     
     condition_type = st.radio(
         "**Loại bệnh:**",
@@ -49,7 +49,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều Trị Chống Đông")
+    st.markdown("### 💊 Điều trị Chống Đông")
     
     st.warning("""
     **DOACs (Ưu tiên cho DVT/PE):**
@@ -83,7 +83,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚡ Điều Trị Cấp Cứu (PE)")
+    st.markdown("### ⚡ Điều trị Cấp cứu (PE)")
     
     st.error("""
     **Chỉ định điều trị cấp cứu:**
@@ -93,7 +93,7 @@ def render():
     **1. Thrombolysis:**
     - **Alteplase (tPA):** 100 mg IV trong 2 giờ
     - **Hoặc:** 0.6 mg/kg (max 50 mg) trong 15 phút
-    - **Chống Chỉ Định:** Chảy máu nội sọ, phẫu thuật gần đây, chấn thương
+    - **Chống chỉ định:** Chảy máu nội sọ, phẫu thuật gần đây, chấn thương
     
     **2. Embolectomy:**
     - Phẫu thuật hoặc catheter-directed
@@ -107,7 +107,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Loại Nguy Cơ PE")
+    st.markdown("### 📊 Phân Loại Nguy cơ PE")
     
     st.info("""
     **High-Risk (Nguy cơ cao):**
@@ -132,7 +132,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều Trị")
+    st.markdown("### 📋 Checklist Điều trị")
     
     checklist_items = [
         "✅ Đánh giá nguy cơ (Wells score, PERC, PESI)",
@@ -207,17 +207,17 @@ def render_dvt_protocol():
     st.success("## 🟢 Huyết Khối Tĩnh Mạch Sâu (DVT)")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Sưng, đau chân (thường một bên)
     - Đỏ, nóng da
     - Tăng chu vi chân
     
-    **Chẩn Đoán:**
+    **Chẩn đoán:**
     - **Wells Score:** Đánh giá nguy cơ
     - **D-dimer:** Nếu nguy cơ thấp
     - **Siêu âm Doppler:** Xác nhận
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Chống đông ngay:**
        - DOAC (apixaban, rivaroxaban) - ưu tiên
        - Hoặc LMWH + warfarin
@@ -237,19 +237,19 @@ def render_pe_protocol():
     st.error("## 🔴 Thuyên Tắc Phổi (PE)")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Khó thở đột ngột
     - Đau ngực (kiểu màng phổi)
     - Ho, ho ra máu
     - Ngất, hạ huyết áp
     
-    **Chẩn Đoán:**
+    **Chẩn đoán:**
     - **Wells Score / PERC:** Đánh giá nguy cơ
     - **D-dimer:** Nếu nguy cơ thấp
     - **CTPA:** Xác nhận (tiêu chuẩn vàng)
     - **V/Q scan:** Nếu không thể CT
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Nếu ổn định:**
        - DOAC hoặc LMWH + warfarin
        - Oxygen, hỗ trợ hô hấp
@@ -258,7 +258,7 @@ def render_pe_protocol():
        - Thrombolysis (alteplase)
        - Hoặc embolectomy
     
-    3. **Theo Dõi:**
+    3. **Theo dõi:**
        - Huyết động, hô hấp
        - Dấu hiệu tái phát
     """)
@@ -266,7 +266,7 @@ def render_pe_protocol():
 
 def render_risk_assessment():
     """Risk assessment tools"""
-    st.info("## 📊 Đánh giá Nguy Cơ")
+    st.info("## 📊 Đánh giá Nguy cơ")
     
     st.markdown("""
     **Wells Score (DVT):**

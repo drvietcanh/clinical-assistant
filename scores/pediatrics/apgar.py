@@ -68,7 +68,7 @@ def render():
     
     st.title("👶 APGAR Score")
     st.markdown("""
-    ### Đánh Giá Trẻ Sơ Sinh Ngay Sau Sinh
+    ### Đánh giá Trẻ Sơ Sinh Ngay Sau Sinh
     
     **APGAR Score (Virginia Apgar, 1952):**
     - Thang điểm phổ biến nhất đánh giá trẻ sơ sinh
@@ -125,7 +125,7 @@ def render():
     
     st.markdown("---")
     
-    # P - Pulse (Heart Rate)
+    # P - Pulse (Nhịp tim)
     st.markdown("### 💓 P - Pulse (Nhịp tim)")
     pulse = st.radio(
         "Chọn mức độ:",

@@ -47,7 +47,7 @@ DRUG_GROUPS = {
     ],
     "Analgesics": [
         "Paracetamol", "Ibuprofen", "Tramadol",
-        "Naproxen", "Diclofenac", "Morphine", "Codeine", "Sumatriptan"
+        "Naproxen", "Diclofenac", "Morphine", "Fentanyl", "Codeine", "Sumatriptan"
     ],
     "Respiratory": [
         "Salbutamol", "Salmeterol", "Ipratropium", "Tiotropium",
@@ -68,10 +68,22 @@ DRUG_GROUPS = {
         "Acyclovir", "Valacyclovir", "Fluconazole"
     ],
     "Endocrinology": [
-        "Levothyroxine", "Methimazole", "Propylthiouracil", "Prednisone"
+        "Levothyroxine", "Methimazole", "Propylthiouracil", "Prednisone",
+        "Prednisolone", "Methylprednisolone", "Hydrocortisone", "Dexamethasone",
+        "Fludrocortisone", "Testosterone"
     ],
     "Other": [
-        "Allopurinol", "Prednisolone"
+        "Allopurinol", "Prednisolone",
+        "Colchicine", "Probenecid",
+        "Cyclosporine", "Tacrolimus", "Mycophenolate", "Azathioprine"
+    ],
+    "Hematology": [
+        "Warfarin", "Aspirin", "Clopidogrel", "Ticagrelor", "Prasugrel",
+        "Enoxaparin", "Heparin", "Rivaroxaban", "Fondaparinux"
+    ],
+    "Antifungals": [
+        "Fluconazole", "Itraconazole", "Voriconazole", "Posaconazole",
+        "Nystatin", "Amphotericin B"
     ]
 }
 

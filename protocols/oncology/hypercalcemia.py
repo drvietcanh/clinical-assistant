@@ -166,7 +166,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: TREATMENT ==========
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
     st.markdown("""
     **Thứ tự ưu tiên điều trị:**
@@ -195,7 +195,7 @@ def render():
     """)
     
     # Step 2: Bisphosphonates
-    st.markdown("#### **2. Bisphosphonates (Điều Trị Chính)**")
+    st.markdown("#### **2. Bisphosphonates (Điều trị Chính)**")
     
     st.markdown("""
     **⚠️ CHỐNG CHỈ ĐỊNH:**
@@ -266,7 +266,7 @@ def render():
     st.markdown("#### **3. Calcitonin (Nếu cần tác dụng nhanh)**")
     
     st.warning("""
-    **Chỉ Định:**
+    **Chỉ định:**
     - Severe hypercalcemia (>14 mg/dL)
     - Cần tác dụng nhanh (trong khi chờ bisphosphonates)
     - Không đáp ứng hydration
@@ -295,10 +295,10 @@ def render():
     """)
     
     # Step 4: Denosumab
-    st.markdown("#### **4. Denosumab (Nếu Bisphosphonates Chống Chỉ Định)**")
+    st.markdown("#### **4. Denosumab (Nếu Bisphosphonates Chống chỉ định)**")
     
     st.info("""
-    **Chỉ Định:**
+    **Chỉ định:**
     - Suy thận nặng (CrCl <30)
     - Không dung nạp bisphosphonates
     - Không đáp ứng bisphosphonates
@@ -397,7 +397,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: LONG-TERM MANAGEMENT ==========
-    st.markdown("### 🔄 Điều Trị Dài Hạn")
+    st.markdown("### 🔄 Điều trị Dài Hạn")
     
     st.markdown("""
     **Prevention of recurrence:**

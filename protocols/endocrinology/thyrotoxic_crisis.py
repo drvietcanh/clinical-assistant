@@ -161,7 +161,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### 🚨 Điều Trị Ngay Lập Tức (ICU)")
+    st.markdown("### 🚨 Điều trị Ngay Lập Tức (ICU)")
     
     st.markdown("""
     **Thứ tự ưu tiên điều trị (theo ATA 2016):**
@@ -191,7 +191,7 @@ def render():
         - 60-80mg PO q4-6h
         - Hoặc 1-2mg IV chậm, lặp lại q15-30 phút đến khi đạt nhịp tim mục tiêu
         
-        **Mục Tiêu:**
+        **Mục tiêu:**
         - Nhịp tim <100 bpm
         - Giảm triệu chứng tim mạch
         
@@ -238,7 +238,7 @@ def render():
         - Nếu không uống được: Nghiền, trộn với nước, bơm qua ống thông dạ dày
         - Hoặc dùng dạng viên nhỏ (nếu có)
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - Công thức máu (giảm bạch cầu)
         - Chức năng gan (độc gan)
         """)
@@ -322,13 +322,13 @@ def render():
         - 100mg IV q8h
         - Hoặc 50mg IV q6h
         
-        **Chỉ Định:**
+        **Chỉ định:**
         - Nghi ngờ suy thượng thận kèm theo
         - Bệnh Graves có thể kèm suy thượng thận
         """)
     
     # Step 6: Additional treatments
-    st.markdown("#### **6. Điều Trị Bổ Sung**")
+    st.markdown("#### **6. Điều trị Bổ Sung**")
     
     st.markdown("""
     **A. Cholestyramine (Nếu có):**
@@ -347,7 +347,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     st.markdown("""
     **Theo dõi sát trong 24-48 giờ đầu:**
@@ -415,7 +415,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: LONG-TERM MANAGEMENT ==========
-    st.markdown("### 🔄 Điều Trị Dài Hạn")
+    st.markdown("### 🔄 Điều trị Dài Hạn")
     
     st.markdown("""
     **Sau khi qua giai đoạn cấp (24-48 giờ):**

@@ -9,7 +9,7 @@ import streamlit as st
 def render():
     """NIHSS Calculator"""
     st.subheader("🧠 NIHSS - NIH Stroke Scale")
-    st.caption("Thang Điểm Đánh giá Mức Độ Nặng Đột Quỵ")
+    st.caption("Thang điểm Đánh giá Mức Độ Nặng Đột Quỵ")
     
     st.info("""
     **NIHSS** là thang điểm chuẩn vàng đánh giá mức độ nặng của đột quỵ não.
@@ -350,7 +350,7 @@ def render():
                 - IV rt-PA: Trong 4.5 giờ từ khởi phát
                 - Càng sớm càng tốt!
                 
-                **Điều Trị:**
+                **Điều trị:**
                 - Aspirin 300mg sau 24h (nếu có thrombolysis)
                 - Hoặc ngay nếu không thrombolysis
                 - Kiểm soát huyết áp

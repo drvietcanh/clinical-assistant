@@ -519,6 +519,192 @@ SSRI_DRUGS = {
             "evidence_level": "High - Multiple RCTs and systematic reviews"
         }
     },
+
+    "Paroxetine": {
+        "group": "Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)",
+        "vietnamese_name": "Paroxetine, Paxil",
+        "administration": ["PO"],
+        "indications": [
+            "Trầm cảm",
+            "Rối loạn lo âu tổng quát (GAD)",
+            "Rối loạn hoảng sợ",
+            "Rối loạn ám ảnh cưỡng chế (OCD)",
+            "Rối loạn stress sau sang chấn (PTSD)",
+            "Rối loạn lo âu xã hội"
+        ],
+        "contraindications": [
+            "Dùng MAO inhibitor",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_depression": "20mg x 1 lần/ngày, tăng đến 20-50mg/ngày",
+            "adult_ocd": "20-60mg/ngày",
+            "adult_max": "60mg/ngày",
+            "notes": "Khởi đầu 20mg/ngày, tăng dần. Uống buổi sáng hoặc tối"
+        },
+        "side_effects": [
+            "Buồn nôn",
+            "Mất ngủ",
+            "Buồn ngủ (phổ biến hơn các SSRI khác)",
+            "Giảm ham muốn tình dục",
+            "Nhức đầu",
+            "Khó chịu khi ngừng (withdrawal - phổ biến hơn các SSRI khác)",
+            "Tăng cân (phổ biến hơn các SSRI khác)"
+        ],
+        "interactions": [
+            "MAO inhibitor: chống chỉ định",
+            "Warfarin: có thể tăng tác dụng chống đông",
+            "Tramadol: tăng nguy cơ co giật",
+            "Triptans: tăng nguy cơ hội chứng serotonin",
+            "CYP2D6 substrates: ức chế CYP2D6 mạnh, tăng nồng độ nhiều thuốc"
+        ],
+        "pregnancy": "D",
+        "mechanism_of_action": "Paroxetine là SSRI ức chế tái hấp thu serotonin ở synap thần kinh, tăng nồng độ serotonin và dẫn đến tác dụng chống trầm cảm, chống lo âu. Có tính chọn lọc cao với serotonin. Paroxetine cũng ức chế CYP2D6 mạnh (mạnh hơn các SSRI khác), dẫn đến nhiều tương tác thuốc. Paroxetine có half-life ngắn (21 giờ), nhưng tác dụng kéo dài do gắn chặt với serotonin transporter. Tác dụng trên nhiều chỉ định: trầm cảm, lo âu, OCD, PTSD, hoảng sợ. Tác dụng phụ: buồn ngủ (phổ biến hơn các SSRI khác), tăng cân, khó chịu khi ngừng (withdrawal - phổ biến hơn do half-life ngắn). Phân loại D trong thai kỳ (nguy cơ dị tật bẩm sinh).",
+        "monitoring": [
+            "Tâm trạng và triệu chứng trầm cảm, lo âu (đánh giá định kỳ)",
+            "Dấu hiệu tự tử (tăng nguy cơ trong vài tuần đầu, đặc biệt ở <24 tuổi)",
+            "Dấu hiệu hội chứng serotonin (nếu dùng với thuốc khác)",
+            "INR nếu dùng với warfarin (tăng nguy cơ chảy máu)",
+            "Dấu hiệu rút thuốc khi ngừng (chóng mặt, buồn nôn, lo âu, mất ngủ) - phổ biến hơn các SSRI khác",
+            "Cân nặng (tăng cân - phổ biến hơn các SSRI khác)"
+        ],
+        "precautions": [
+            "KHÔNG dùng với MAO inhibitor (chống chỉ định tuyệt đối)",
+            "Ngừng paroxetine ít nhất 2 tuần trước khi bắt đầu MAO inhibitor",
+            "Theo dõi sát dấu hiệu tự tử trong vài tuần đầu (tăng nguy cơ ở <24 tuổi)",
+            "Giảm liều dần dần khi ngừng (tránh hội chứng rút thuốc) - QUAN TRỌNG vì withdrawal phổ biến hơn các SSRI khác",
+            "Buồn ngủ - phổ biến hơn các SSRI khác, có thể cần dùng buổi tối",
+            "Tăng cân - phổ biến hơn các SSRI khác, theo dõi cân nặng",
+            "Thận trọng khi dùng với tramadol, triptans (tăng nguy cơ hội chứng serotonin)",
+            "Thận trọng khi dùng với warfarin (tăng nguy cơ chảy máu)",
+            "Ức chế CYP2D6 mạnh - tăng nồng độ nhiều thuốc (codeine, metoprolol, tamoxifen, etc.)",
+            "Khởi đầu với liều thấp (20mg), tăng dần",
+            "Phân loại D trong thai kỳ - nguy cơ dị tật bẩm sinh, tránh dùng trong thai kỳ nếu có thể"
+        ],
+        "pharmacokinetics": {
+            "half_life": "21 giờ (trung bình, ngắn hơn fluoxetine)",
+            "onset": "2-4 tuần (tác dụng chống trầm cảm)",
+            "duration": "Dài (do gắn chặt với serotonin transporter)",
+            "protein_binding": "95% (rất cao)",
+            "clearance": "Gan (chuyển hóa qua CYP2D6 - paroxetine ức chế CYP2D6 mạnh), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. Chống chỉ định với MAO inhibitor. Phân loại D trong thai kỳ - nguy cơ dị tật bẩm sinh (tim, sứt môi/hà ếch).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng paroxetine ít nhất 2 tuần trước khi bắt đầu MAO inhibitor."
+                },
+                {
+                    "drug": "Tramadol",
+                    "mechanism": "Tăng nồng độ serotonin, tăng nguy cơ co giật",
+                    "effect": "Hội chứng serotonin, tăng nguy cơ co giật",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, giảm liều tramadol và theo dõi sát."
+                },
+                {
+                    "drug": "CYP2D6 substrates (codeine, metoprolol, tamoxifen, etc.)",
+                    "mechanism": "Paroxetine ức chế CYP2D6 mạnh, tăng nồng độ các thuốc chuyển hóa qua CYP2D6",
+                    "effect": "Tăng nồng độ các thuốc, tăng tác dụng phụ",
+                    "management": "Thận trọng. Điều chỉnh liều các thuốc chuyển hóa qua CYP2D6. Đặc biệt quan trọng với tamoxifen (giảm hiệu quả điều trị ung thư vú)."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể tăng nồng độ warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Triptans",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin",
+                    "management": "Thận trọng. Dùng cách xa ít nhất 24 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "Dị ứng paroxetine"
+            ],
+            "tương_đối": [
+                "Mang thai (phân loại D - nguy cơ dị tật bẩm sinh) - tránh dùng nếu có thể",
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử",
+                "Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin",
+                "Dùng với CYP2D6 substrates - tăng nồng độ các thuốc"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Paroxetine có nguy cơ dị tật bẩm sinh cao (dị tật tim, sứt môi/hà ếch) khi dùng trong 3 tháng đầu thai kỳ. Nguy cơ dị tật tim tăng 1.5-2 lần. Nguy cơ sứt môi/hà ếch tăng 2-3 lần. Phân loại D - chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu có thể, chuyển sang SSRI khác (sertraline, citalopram) trước khi mang thai. Nếu dùng trong thai kỳ, cần tư vấn di truyền, siêu âm chi tiết, và theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Paroxetine bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ bú mẹ thường <5% nồng độ mẹ. Có thể gây buồn ngủ, bú kém ở trẻ. Ít báo cáo về tác dụng phụ nghiêm trọng.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu buồn ngủ, bú kém ở trẻ. Nếu trẻ có dấu hiệu bất thường, cân nhắc ngừng cho con bú hoặc chuyển sang SSRI khác (sertraline)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi hoặc giảm liều nhẹ",
+            "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ",
+            "notes": "Paroxetine chuyển hóa ở gan qua CYP2D6 (paroxetine cũng ức chế CYP2D6 mạnh). Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Kích động, lú lẫn",
+                "Nhịp tim nhanh",
+                "Co giật",
+                "Hôn mê",
+                "Hội chứng serotonin (nếu dùng với thuốc khác)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ECG, huyết áp, nhịp tim",
+                "Điều trị hội chứng serotonin: Cyproheptadine, benzodiazepines",
+                "Điều trị co giật: Benzodiazepines",
+                "Truyền dịch",
+                "Theo dõi ít nhất 24 giờ"
+            ],
+            "monitoring": "ECG, huyết áp, nhịp tim, ý thức, dấu hiệu co giật"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn",
+                "timing": "Dùng 1 lần/ngày (buổi sáng hoặc tối). Có thể dùng buổi tối nếu gây buồn ngủ. Giảm liều dần dần khi ngừng (tránh withdrawal)."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Paxil (paroxetine)",
+                "UpToDate - Paroxetine: Drug information",
+                "American Psychiatric Association guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
+    }
 }
 
 __all__ = ['SSRI_DRUGS']

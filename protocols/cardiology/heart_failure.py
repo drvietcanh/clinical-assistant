@@ -30,7 +30,7 @@ def render():
         fatigue = st.checkbox("Mệt mỏi", key="hf_fatigue")
         
         # Signs
-        st.markdown("**Dấu Hiệu Khám:**")
+        st.markdown("**Dấu hiệu Khám:**")
         rales = st.checkbox("Ran ẩm phổi", key="hf_rales")
         edema = st.checkbox("Phù 2 chân", key="hf_edema")
         jvd = st.checkbox("Tĩnh mạch cổ nổi (JVD)", key="hf_jvd")
@@ -38,7 +38,7 @@ def render():
         hepatomegaly = st.checkbox("Gan to", key="hf_hepato")
         
         # Severity markers
-        st.markdown("**Dấu Hiệu Nặng:**")
+        st.markdown("**Dấu hiệu Nặng:**")
         hypotension = st.checkbox("Hạ huyết áp (SBP <90 mmHg)", key="hf_hypotension")
         cold_extremities = st.checkbox("Chi lạnh, toát mồ hôi", key="hf_cold")
         altered_mental = st.checkbox("Lú lẫn", key="hf_confusion")
@@ -83,7 +83,7 @@ def render():
             st.error("⚠️ SHOCK TIM")
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Điều Trị")
+    st.markdown("### 2️⃣ Điều trị")
     
     tabs = st.tabs(["💊 Diuretics", "🩸 Vasodilators", "💉 Inotropes", "🫁 Oxygen/NIV", "📋 GDMT"])
     
@@ -107,7 +107,7 @@ def render():
             - **Bolus liên tục** (mỗi 6-12h)
             - Hoặc **Truyền liên tục:** 5-10mg/h (nếu đáp ứng kém)
             
-            **Mục Tiêu:**
+            **Mục tiêu:**
             - Cân nặng giảm 0.5-1 kg/ngày
             - Tiểu ≥100-150 mL/h trong 6h đầu
             - Giảm triệu chứng tắc nghẽn
@@ -125,7 +125,7 @@ def render():
                 """)
             
             st.info("""
-            **Theo Dõi:**
+            **Theo dõi:**
             - Điện giải (K, Mg, Na) hàng ngày
             - Creatinine hàng ngày
             - Cân nặng hàng ngày (cùng giờ)
@@ -154,7 +154,7 @@ def render():
             - Bắt đầu: 10-20 mcg/min
             - Tăng 5-10 mcg/min mỗi 5-10 phút
             - Tối đa: 200 mcg/min
-            - **Mục Tiêu:** Giảm SBP 10-15% (không <90 mmHg)
+            - **Mục tiêu:** Giảm SBP 10-15% (không <90 mmHg)
             
             **Lợi ích:**
             - Giảm preload (giãn tĩnh mạch)
@@ -208,7 +208,7 @@ def render():
             - Infusion: 0.05-0.2 mcg/kg/min
             - Hiệu quả kéo dài 7-10 ngày
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Arterial line monitoring
             - Cardiac output monitoring
             - ECG liên tục (loạn nhịp tim)
@@ -236,12 +236,12 @@ def render():
         
         st.success("""
         **Oxygen Therapy:**
-        - **Mục Tiêu:** SpO₂ >90% (>94% nếu có thể)
+        - **Mục tiêu:** SpO₂ >90% (>94% nếu có thể)
         - Nasal cannula: 2-6 L/min
         - Face mask: 6-10 L/min nếu cần
         - High-flow oxygen nếu suy hô hấp
         
-        **Chỉ Định:**
+        **Chỉ định:**
         - SpO₂ <90%
         - Khó thở nặng
         - Phù phổi cấp
@@ -250,7 +250,7 @@ def render():
         st.warning("""
         **NIV (Non-Invasive Ventilation):**
         
-        **Chỉ Định:**
+        **Chỉ định:**
         - Phù phổi cấp
         - Suy hô hấp (RR >25, SpO₂ <90%)
         - Không đáp ứng với oxygen thường
@@ -266,7 +266,7 @@ def render():
         - Giảm tỷ lệ đặt nội khí quản
         - Giảm tử vong (trong phù phổi cấp)
         
-        **Chống Chỉ Định:**
+        **Chống chỉ định:**
         - Ngừng thở/ngừng tim
         - Không hợp tác
         - Chảy máu đường tiêu hóa trên nặng
@@ -332,7 +332,7 @@ def render():
         """)
     
     st.markdown("---")
-    st.markdown("### 3️⃣ Theo Dõi & Xuất Viện")
+    st.markdown("### 3️⃣ Theo dõi & Xuất Viện")
     
     col_mon1, col_mon2 = st.columns(2)
     

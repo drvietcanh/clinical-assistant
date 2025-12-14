@@ -140,7 +140,26 @@ MACROLIDES_DRUGS = {
         "Lactated Ringer's (LR) - không tương thích",
         'Các dung dịch có cation (Al3+, Mg2+) - có thể tạo phức hợp'], 'notes':
         'Truyền IV trong 60 phút. Không truyền nhanh hơn. Theo dõi phản ứng tại chỗ tiêm (viêm tĩnh mạch). Dùng ngay sau khi pha. Không bảo quản lâu sau khi pha.'
-        }}, 'references': {'primary_sources': [
+        }}, 'pediatric_dosing': {'neonates':
+        'Không khuyến cáo cho trẻ sơ sinh <6 tháng tuổi (dữ liệu hạn chế). Nếu cần: 10mg/kg/ngày PO x 3 ngày hoặc theo chỉ định bác sĩ.',
+        'infants':
+        '6 tháng - 2 tuổi: 10mg/kg/ngày PO x 3 ngày (tối đa 500mg/ngày). Hoặc 10mg/kg ngày đầu, sau đó 5mg/kg/ngày x 4 ngày. Có dạng suspension.',
+        'children':
+        '2-12 tuổi: 10mg/kg/ngày PO x 3 ngày (tối đa 500mg/ngày). Hoặc 10mg/kg ngày đầu, sau đó 5mg/kg/ngày x 4 ngày. Có dạng suspension và viên nén.',
+        'adolescents':
+        '≥12 tuổi: Liều người lớn. 500mg x 1 lần/ngày x 3 ngày hoặc 500mg ngày đầu, sau đó 250mg x 1 lần/ngày x 4 ngày. Chlamydia: 1g x 1 lần (đơn liều).',
+        'notes':
+        'Có dạng suspension cho trẻ em. Uống với hoặc không thức ăn. Theo dõi dấu hiệu tiêu chảy, QT kéo dài. An toàn hơn nhiều kháng sinh khác ở trẻ em.'}, 'geriatric_dosing': {'considerations':
+        'Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ (tiêu chảy, QT kéo dài). Suy thận, suy gan phổ biến hơn. Tăng nguy cơ QT kéo dài, torsades de pointes ở bệnh nhân có yếu tố nguy cơ.',
+        'dose_adjustment':
+        'Không cần điều chỉnh liều ở suy thận (thải trừ chủ yếu qua phân). Thận trọng ở suy gan nặng. Tránh dùng ở bệnh nhân QT kéo dài hoặc có yếu tố nguy cơ.',
+        'monitoring':
+        'Theo dõi ECG (QT interval) nếu có yếu tố nguy cơ. Theo dõi dấu hiệu tiêu chảy (có thể dẫn đến C. difficile colitis). Theo dõi dấu hiệu rối loạn nhịp tim. Theo dõi chức năng gan nếu có bệnh gan.'}, 'brand_names': {'vietnam': [
+        'Azithromycin', 'Zithromax', 'Azithromycin Stada', 'Azitromax'], 'common': [
+        'Zithromax', 'Azithromycin']}, 'cost_estimate': {'unit': 'VND',
+        'range': '10,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)',
+        'note':
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Azithromycin generic thường rẻ hơn (10,000-30,000 VND/viên 500mg). Dạng suspension: 80,000-150,000 VND/lọ 15ml (200mg/5ml).'}, 'references': {'primary_sources': [
         'FDA Label: Zithromax (azithromycin)',
         'UpToDate: Azithromycin drug information',
         'Lexicomp: Azithromycin monograph',
@@ -329,6 +348,167 @@ MACROLIDES_DRUGS = {
         'Sanford Guide to Antimicrobial Therapy'], 'last_updated': '2025-02-03',
         'evidence_level':
         'Level 1 - FDA approved, multiple clinical trials, extensive clinical experience'
-        }}}
+        }},
+    "Erythromycin": {
+        "group": "Infectious Disease - Macrolide Antibiotic",
+        "vietnamese_name": "Erythromycin, Erythrocin, E-mycin",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm trùng đường hô hấp (viêm phổi, viêm phế quản)",
+            "Nhiễm trùng da và mô mềm",
+            "Chlamydia (liều cao)",
+            "Nhiễm trùng đường tiết niệu",
+            "Prokinetic (kích thích nhu động dạ dày - off-label)"
+        ],
+        "contraindications": [
+            "Dị ứng erythromycin/macrolide",
+            "QT kéo dài",
+            "Suy gan nặng",
+            "Dùng pimozide, terfenadine, astemizole"
+        ],
+        "dosage": {
+            "adult_po": "250-500mg x 4 lần/ngày",
+            "adult_iv": "1g x 4 lần/ngày hoặc truyền liên tục",
+            "adult_prokinetic": "250mg x 3-4 lần/ngày (off-label)",
+            "notes": "Nhiều tương tác thuốc, nhiều tác dụng phụ tiêu hóa. Ít dùng hơn azithromycin/clarithromycin"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn, tiêu chảy (rất phổ biến)",
+            "Đau bụng",
+            "QT kéo dài",
+            "Rối loạn thính giác (hiếm)",
+            "Viêm gan (hiếm)"
+        ],
+        "interactions": [
+            "CYP3A4 substrates: tăng đáng kể nồng độ",
+            "Warfarin: tăng tác dụng chống đông",
+            "Digoxin: tăng nồng độ digoxin",
+            "Theophylline: tăng nồng độ theophylline",
+            "Carbamazepine: tăng nồng độ carbamazepine"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Erythromycin là macrolide đầu tiên, ức chế tổng hợp protein vi khuẩn bằng cách gắn vào 50S ribosomal subunit. Phổ kháng khuẩn: Gram-dương, một số Gram-âm, atypical pathogens. Ức chế CYP3A4 mạnh → nhiều tương tác thuốc. Có tác dụng kích thích motilin receptor (ở liều thấp) → tác dụng prokinetic. Ít dùng hơn azithromycin/clarithromycin do nhiều tác dụng phụ tiêu hóa và tương tác thuốc.",
+        "monitoring": [
+            "ECG: QT interval (có thể gây QT kéo dài)",
+            "Triệu chứng tiêu hóa: buồn nôn, nôn, tiêu chảy (rất phổ biến)",
+            "Chức năng gan: ALT, AST (hiếm gây viêm gan)",
+            "Rối loạn thính giác (hiếm)",
+            "Tương tác với CYP3A4 substrates"
+        ],
+        "precautions": [
+            "Nhiều tác dụng phụ tiêu hóa (buồn nôn, nôn, tiêu chảy) - rất phổ biến",
+            "Nhiều tương tác thuốc do ức chế CYP3A4 mạnh",
+            "Tránh dùng với pimozide, terfenadine, astemizole",
+            "QT kéo dài - tránh dùng với thuốc kéo dài QT khác",
+            "Uống với thức ăn để giảm tác dụng phụ tiêu hóa (nhưng có thể giảm hấp thu)",
+            "Thận trọng ở suy gan nặng",
+            "Ít dùng hơn azithromycin/clarithromycin do nhiều tác dụng phụ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1.5-2 giờ",
+            "onset": "1-2 giờ (PO)",
+            "duration": "q6-8h (dùng 3-4 lần/ngày)",
+            "protein_binding": "70-90%",
+            "clearance": "Gan (CYP3A4) - ức chế mạnh CYP3A4"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Có thể gây QT kéo dài và torsades de pointes. Không dùng với pimozide, terfenadine, astemizole. Tăng nguy cơ tử vong do tim mạch ở bệnh nhân có bệnh tim mạch.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Simvastatin, Lovastatin",
+                    "mechanism": "Ức chế CYP3A4 mạnh",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "TRÁNH DÙNG đồng thời"
+                },
+                {
+                    "drug": "Pimozide, Terfenadine, Astemizole",
+                    "mechanism": "Ức chế CYP3A4 + QT kéo dài",
+                    "effect": "Tăng nguy cơ tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin, Digoxin, Theophylline, Carbamazepine",
+                    "mechanism": "Ức chế CYP3A4",
+                    "effect": "Tăng nồng độ các thuốc này",
+                    "management": "Theo dõi và điều chỉnh liều"
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng erythromycin/macrolide",
+                "QT kéo dài",
+                "Dùng pimozide, terfenadine, astemizole",
+                "Suy gan nặng"
+            ],
+            "tương_đối": [
+                "Suy gan trung bình - thận trọng",
+                "Dùng với thuốc kéo dài QT - tăng nguy cơ",
+                "Dùng với CYP3A4 substrates - nhiều tương tác"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "An toàn trong thai kỳ. Phân loại B.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "An toàn khi cho con bú"
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa chủ yếu qua gan. Suy gan nặng là chống chỉ định."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, tiêu chảy nặng",
+                "QT kéo dài, torsades de pointes",
+                "Rối loạn thính giác",
+                "Viêm gan"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng erythromycin",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Điều trị hỗ trợ",
+                "Theo dõi ECG, chức năng gan"
+            ],
+            "monitoring": "ECG, chức năng gan, dấu hiệu sống"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để giảm tác dụng phụ tiêu hóa (nhưng có thể giảm hấp thu)",
+                "timing": "Uống 3-4 lần/ngày (q6-8h)"
+            },
+            "iv": {
+                "reconstitution": "Pha theo hướng dẫn",
+                "infusion_rate": "Truyền trong 30-60 phút",
+                "compatibility": ["NaCl 0.9%", "D5W"],
+                "incompatibility": ["Không trộn với các thuốc khác"],
+                "notes": "Có thể truyền liên tục"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Label: Erythromycin",
+                "UpToDate: Erythromycin drug information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, extensive clinical experience"
+        }
+    }}
 
 __all__ = ['MACROLIDES_DRUGS']

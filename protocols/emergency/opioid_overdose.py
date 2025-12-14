@@ -22,7 +22,7 @@ def render():
     - Da lạnh, ẩm
     - Nhịp tim chậm
     
-    **Chẩn Đoán:** Nghi ngờ khi có tam chứng: Ức chế hô hấp + Miosis + Giảm ý thức
+    **Chẩn đoán:** Nghi ngờ khi có tam chứng: Ức chế hô hấp + Miosis + Giảm ý thức
     """)
     
     st.markdown("---")
@@ -51,14 +51,14 @@ def render():
         st.warning("""
         **3. NALOXONE - Thuốc Đối Kháng**
         
-        **Mục Tiêu:** Đảo ngược ức chế hô hấp
+        **Mục tiêu:** Đảo ngược ức chế hô hấp
         
         **Liều ban đầu:**
         - **Người Lớn:** 0.4-2 mg IV/IM/IN
         - **Trẻ Em:** 0.01 mg/kg IV/IM/IN
         - **Lặp lại:** q2-3 phút nếu cần
         
-        **Theo Dõi:** 
+        **Theo dõi:** 
         - Đáp ứng trong 1-2 phút
         - Có thể cần liều cao hơn (fentanyl: 2-10 mg)
         """)
@@ -110,7 +110,7 @@ def render():
     st.markdown("### ⚠️ Re-Narcotization (Tái Ngộ Độc)")
     
     st.warning("""
-    **Nguy Cơ Tái Ngộ Độc:**
+    **Nguy cơ Tái Ngộ Độc:**
     - Naloxone có thời gian bán hủy ngắn (30-90 phút)
     - Opioid có thể tồn tại lâu hơn (đặc biệt là fentanyl, methadone)
     - Bệnh nhân có thể Tái Ngộ Độc sau khi naloxone hết tác dụng
@@ -137,9 +137,9 @@ def render():
     - **Bolus:** 0.4-2 mg IV
     - **Truyền tĩnh mạch:** 0.4-2 mg/h
     - **Điều Chỉnh:** Theo đáp ứng hô hấp
-    - **Mục Tiêu:** Duy trì RR ≥12/min, SpO2 ≥94%
+    - **Mục tiêu:** Duy trì RR ≥12/min, SpO2 ≥94%
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - RR, SpO2 mỗi 15-30 phút
     - Ý thức
     - Có thể cần tăng liều nếu Tái Ngộ Độc
@@ -147,7 +147,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều Trị")
+    st.markdown("### 📋 Checklist Điều trị")
     
     checklist_items = [
         "✅ ABC: Airway, Breathing, Circulation",
@@ -198,10 +198,10 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Điều Trị")
+    st.markdown("### 🎯 Mục tiêu điều trị")
     
     st.success("""
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - ✅ Hồi phục hô hấp (RR ≥12/min)
     - ✅ SpO2 ≥94%
     - ✅ Hồi phục ý thức
@@ -325,16 +325,16 @@ def render_mild_overdose():
     st.success("## 🟢 Ngộ Độc Nhẹ")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Buồn ngủ, giảm ý thức nhẹ
     - RR giảm nhẹ (12-16/min)
     - Miosis
     - SpO2 >90%
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Oxygen:** 100% qua mask
     2. **Naloxone:** 0.4-1 mg IV/IM/IN
-    3. **Theo Dõi:** 2 giờ
+    3. **Theo dõi:** 2 giờ
     
     **Xuất viện:** Có thể sau 2 giờ nếu ổn định
     """)
@@ -345,18 +345,18 @@ def render_moderate_overdose():
     st.warning("## 🟡 Ngộ Độc Trung Bình")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Giảm ý thức rõ rệt
     - RR 8-12/min
     - Miosis rõ
     - SpO2 85-90%
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Oxygen:** 100% qua mask
     2. **Bag-mask ventilation:** Nếu cần
     3. **Naloxone:** 1-2 mg IV/IM/IN
     4. **Lặp lại:** Nếu không đáp ứng sau 2-3 phút
-    5. **Theo Dõi:** 4 giờ
+    5. **Theo dõi:** 4 giờ
     
     **Xuất viện:** Sau 4 giờ nếu ổn định
     """)
@@ -367,7 +367,7 @@ def render_severe_overdose():
     st.error("## 🔴 Ngộ Độc Nặng - ICU")
     
     st.markdown("""
-    **Triệu Chứng:**
+    **Triệu chứng:**
     - Hôn mê
     - RR <8/min hoặc ngừng thở
     - Miosis rõ
@@ -393,7 +393,7 @@ def render_severe_overdose():
        - Truyền dịch nếu hạ huyết áp
        - Monitor liên tục
     
-    5. **Theo Dõi:** 4-6 giờ (nguy cơ Tái Ngộ Độc cao)
+    5. **Theo dõi:** 4-6 giờ (nguy cơ Tái Ngộ Độc cao)
     """)
 
 

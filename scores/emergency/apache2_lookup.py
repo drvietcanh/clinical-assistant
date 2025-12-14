@@ -269,5 +269,5 @@ def get_chronic_health_score(
 
 # GCS score - Simple calculation
 def get_gcs_score(gcs: int) -> int:
-    """Glasgow Coma Scale score (15 - GCS)"""
+    """Thang điểm hôn mê Glasgow score (15 - GCS)"""
     return 15 - gcs

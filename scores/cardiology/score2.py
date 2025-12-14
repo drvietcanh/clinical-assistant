@@ -125,7 +125,7 @@ def calculate_score2_moderate_risk(
         - Bỏ thuốc lá (nếu hút)
         - Theo dõi mỗi 2-3 năm
         
-        **Mục Tiêu:**
+        **Mục tiêu:**
         - LDL-C <3.0 mmol/L (116 mg/dL)
         - Non-HDL-C <3.8 mmol/L
         """
@@ -267,6 +267,7 @@ def render():
         sbp = st.number_input(
             "Huyết áp tâm thu (SBP) mmHg",
             80.0, 220.0, 120.0, 1.0,
+            format="%.0f",
             help="Lấy trung bình nhiều lần đo"
         )
     
@@ -326,7 +327,7 @@ def render():
     st.divider()
     
     # Calculate button
-    if st.button("🧮 Tính Nguy Cơ SCORE2", type="primary", use_container_width=True):
+    if st.button("🧮 Tính Nguy cơ SCORE2", type="primary", use_container_width=True):
         
         # Check age range
         if age < 40 or age > 69:
@@ -349,7 +350,7 @@ def render():
         
         with col_r1:
             st.metric(
-                "**Nguy Cơ 10 Năm**",
+                "**Nguy cơ 10 Năm**",
                 f"{result['risk_10yr']:.1f}%"
             )
             st.caption("Mắc CVD trong 10 năm")

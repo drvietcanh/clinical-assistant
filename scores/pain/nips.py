@@ -17,7 +17,7 @@ def render():
         st.markdown("""
         **NIPS (Neonatal Infant Pain Scale)** là thang điểm quan sát hành vi để đánh giá đau ở trẻ sơ sinh.
         
-        **Chỉ Định:**
+        **Chỉ định:**
         - Trẻ sơ sinh 0-2 tháng tuổi
         - Trẻ non tháng và đủ tháng
         - Sau thủ thuật, chấn thương, phẫu thuật
@@ -150,7 +150,7 @@ def render():
         </div>
         """, unsafe_allow_html=True)
         
-        # Breakdown
+        # Chi tiết
         st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         - **Facial Expression (Khuôn mặt):** {facial}/1
@@ -175,7 +175,7 @@ def render():
             st.info("""
             **💊 Đau nhẹ (NIPS 1-2):**
             
-            **Điều Trị:**
+            **Điều trị:**
             - **Non-pharmacological:**
               - Ôm ấp, da kề da
               - Cho bú, ngậm núm vú
@@ -183,7 +183,7 @@ def render():
             - **Pharmacological (nếu cần):**
               - Paracetamol: 10-15 mg/kg mỗi 4-6 giờ (max 60 mg/kg/ngày)
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Đánh giá lại sau 30-60 phút
             - Mục tiêu: NIPS ≤ 2
             """)
@@ -191,13 +191,13 @@ def render():
             st.warning("""
             **💊 Đau vừa (NIPS 3-4):**
             
-            **Điều Trị:**
+            **Điều trị:**
             - **Non-pharmacological:** (như trên)
             - **Pharmacological:**
               - Paracetamol: 15 mg/kg mỗi 4-6 giờ
               - Cân nhắc Morphine: 0.05 mg/kg IV mỗi 4-6 giờ (nếu đau do thủ thuật/phẫu thuật)
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Đánh giá lại sau 30 phút
             - Mục tiêu: NIPS ≤ 2
             """)
@@ -212,7 +212,7 @@ def render():
               - Hoặc **Fentanyl IV:** 1-2 µg/kg bolus, sau đó 0.5-1 µg/kg/h
               - Kết hợp Paracetamol
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Đánh giá lại sau 15-30 phút
             - Mục tiêu: NIPS ≤ 2 trong vòng 1 giờ
             - Theo dõi tác dụng phụ: ức chế hô hấp, bú kém
@@ -271,7 +271,7 @@ def render():
     2. **NIPS 1-2:** Đau nhẹ → Non-pharmacological + Paracetamol
     3. **NIPS 3-4:** Đau vừa → Paracetamol + cân nhắc Morphine
     4. **NIPS 5-7:** Đau nặng → Opioid mạnh ngay lập tức
-    5. **Mục Tiêu:** NIPS ≤ 2
+    5. **Mục tiêu:** NIPS ≤ 2
     6. **Đánh giá lại:** Sau 15-30 phút (đau nặng) hoặc 30-60 phút (đau nhẹ/vừa)
     7. **Cảnh báo:** Trẻ sơ sinh dễ bị ức chế hô hấp với opioid → theo dõi sát
     """)

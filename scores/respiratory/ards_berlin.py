@@ -136,7 +136,7 @@ def render():
     st.warning("""
     **⚠️ QUAN TRỌNG: ARDS Berlin Definition (2012)**
     
-    **4 Tiêu chuẩn Bắt Buộc:**
+    **4 Tiêu chuẩn Bắt buộc:**
     1. **Timing:** Trong vòng 1 tuần sau tổn thương lâm sàng hoặc triệu chứng hô hấp mới/trầm trọng hơn
     2. **Chest Imaging:** Opacities hai bên trên X-quang hoặc CT ngực
     3. **Origin of Edema:** Suy hô hấp không hoàn toàn do suy tim hoặc quá tải dịch
@@ -315,7 +315,7 @@ def render():
                 st.error("""
                 **🚨 Severe ARDS:**
                 
-                **Điều Trị:**
+                **Điều trị:**
                 - Lung-protective ventilation (6 ml/kg IBW)
                 - PEEP cao (12-24 cmH2O)
                 - Prone positioning (16-18h/ngày)
@@ -331,7 +331,7 @@ def render():
                 st.warning("""
                 **⚠️ Moderate ARDS:**
                 
-                **Điều Trị:**
+                **Điều trị:**
                 - Lung-protective ventilation (6 ml/kg IBW)
                 - PEEP trung bình (8-12 cmH2O)
                 - Cân nhắc prone positioning
@@ -345,7 +345,7 @@ def render():
                 st.info("""
                 **ℹ️ Mild ARDS:**
                 
-                **Điều Trị:**
+                **Điều trị:**
                 - Lung-protective ventilation (6 ml/kg IBW)
                 - PEEP thấp-trung bình (5-10 cmH2O)
                 - Theo dõi sát
@@ -357,7 +357,7 @@ def render():
         
         with col2:
             st.markdown("""
-            **📋 Checklist Điều Trị:**
+            **📋 Checklist Điều trị:**
             
             - ✅ Lung-protective ventilation
             - ✅ PEEP/FiO2 theo ARDSNet

@@ -17,7 +17,7 @@ def render():
         st.markdown("""
         **DN4 (Douleur Neuropathique 4)** là công cụ sàng lọc đau thần kinh.
         
-        **Chỉ Định:**
+        **Chỉ định:**
         - Bệnh nhân có đau mạn tính
         - Nghi ngờ đau thần kinh (đau sau đột quỵ, đái tháo đường, herpes zoster...)
         - Phân biệt đau thần kinh với đau nội tạng/đau cơ xương
@@ -33,7 +33,7 @@ def render():
     
     st.subheader("📝 Đánh giá")
     
-    st.markdown("### Phần 1: Hỏi Bệnh Nhân (7 câu hỏi)")
+    st.markdown("### Phần 1: Hỏi Bệnh nhân (7 câu hỏi)")
     
     # Question 1
     q1 = st.checkbox(
@@ -141,7 +141,7 @@ def render():
         
         st.markdown(f"**Diễn giải:** {interpretation}")
         
-        # Breakdown
+        # Chi tiết
         st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         **Phần 1 - Hỏi bệnh nhân (7 câu):**
@@ -167,9 +167,9 @@ def render():
         
         if is_neuropathic:
             st.error("""
-            **🚨 Chẩn Đoán Đau Thần Kinh (DN4 ≥ 4)**
+            **🚨 Chẩn đoán Đau Thần Kinh (DN4 ≥ 4)**
             
-            **Điều Trị:**
+            **Điều trị:**
             
             **1. Thuốc hàng đầu (First-line):**
             - **Gabapentin:** 300-600 mg/ngày, tăng dần đến 1800-3600 mg/ngày
@@ -206,7 +206,7 @@ def render():
             - Đau cơ xương
             - Đau viêm
             
-            **Điều Trị:**
+            **Điều trị:**
             - Điều trị theo nguyên nhân
             - Paracetamol, NSAID
             - Opioid nếu cần
@@ -241,7 +241,7 @@ def render():
                - Châm nhẹ vào vùng đau
                - Cảm giác đau tăng lên bất thường (hyperalgesia)
             
-            ### 📋 Chẩn Đoán:
+            ### 📋 Chẩn đoán:
             - **DN4 ≥ 4:** Chẩn đoán đau thần kinh
             - **DN4 < 4:** Không đủ tiêu chí đau thần kinh
             
@@ -265,7 +265,7 @@ def render():
     💡 **Điểm quan trọng:**
     
     1. **DN4 ≥ 4:** Chẩn đoán đau thần kinh
-    2. **Điều Trị:** Gabapentin, Pregabalin, Amitriptyline, Duloxetine
+    2. **Điều trị:** Gabapentin, Pregabalin, Amitriptyline, Duloxetine
     3. **Độ nhạy:** ~83%, **Độ đặc hiệu:** ~90%
     4. **Lưu ý:** Đau thần kinh thường khó điều trị, cần thời gian
     5. **Có thể kết hợp:** Đau thần kinh + đau nội tạng

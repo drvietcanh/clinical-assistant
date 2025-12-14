@@ -457,7 +457,399 @@ NON_SELECTIVE_BETA_BLOCKERS = {
           ],
           "last_updated": "2024-12-19",
           "evidence_level": "High - Multiple large RCTs (COPERNICUS, CAPRICORN) showing mortality benefit in heart failure and extensive clinical experience"
-      }    }
+      }    },
+    
+    "Nadolol": {
+        "group": "Cardiovascular - Beta-blocker (non-selective)",
+        "vietnamese_name": "Nadolol, Corgard",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Đau thắt ngực",
+            "Migraine phòng ngừa",
+            "Rối loạn nhịp tim"
+        ],
+        "contraindications": [
+            "Hen phế quản",
+            "Suy tim cấp",
+            "Block nhĩ thất độ 2-3",
+            "Nhịp tim chậm nặng",
+            "Suy thận nặng (CrCl <30)"
+        ],
+        "dosage": {
+            "adult_htn": "40-80mg x 1 lần/ngày, tăng dần đến 320mg/ngày nếu cần",
+            "adult_angina": "40-80mg x 1 lần/ngày, tăng dần đến 240mg/ngày nếu cần",
+            "adult_migraine": "40-80mg x 1 lần/ngày",
+            "notes": "Non-selective, half-life dài (20-24 giờ), dùng 1 lần/ngày. Thải qua thận, cần điều chỉnh liều ở suy thận."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50% hoặc tăng khoảng cách liều",
+            "under_30": "Giảm liều 75% hoặc tăng khoảng cách liều",
+            "hemodialysis": "Bổ sung liều sau mỗi lần lọc máu"
+        },
+        "side_effects": [
+            "Mệt mỏi",
+            "Lạnh tay chân",
+            "Nhịp tim chậm",
+            "Co thắt phế quản",
+            "Giảm libido",
+            "Rối loạn giấc ngủ"
+        ],
+        "interactions": [
+            "Verapamil: tăng nguy cơ block nhĩ thất",
+            "Insulin: che dấu triệu chứng hạ đường huyết",
+            "NSAIDs: giảm tác dụng hạ huyết áp"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Non-selective beta-adrenergic receptor blocker (beta1 và beta2). Ức chế tác dụng của catecholamines (epinephrine, norepinephrine), giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp, giảm nhu cầu oxy cơ tim. Ức chế renin-angiotensin system. Có tác dụng chống loạn nhịp (class II antiarrhythmic). Đặc điểm: thời gian bán thải rất dài (20-24 giờ), thải trừ chủ yếu qua thận (không chuyển hóa), cho phép dùng 1 lần/ngày.",
+        "monitoring": [
+            "Nhịp tim và huyết áp (trước và sau khi bắt đầu)",
+            "Dấu hiệu suy tim (khó thở, phù, tăng cân)",
+            "Chức năng phổi (nếu có bệnh phổi tắc nghẽn)",
+            "Chức năng thận (creatinine, eGFR) - quan trọng (thải qua thận)",
+            "Đường huyết (đặc biệt ở bệnh nhân đái tháo đường - che dấu triệu chứng hạ đường huyết)",
+            "Triệu chứng mệt mỏi, lạnh tay chân, rối loạn cương dương, rối loạn giấc ngủ"
+        ],
+        "precautions": [
+            "KHÔNG được ngừng đột ngột (có thể gây rebound hypertension, đau thắt ngực nặng, nhồi máu cơ tim). Phải giảm liều dần trong 1-2 tuần",
+            "Điều chỉnh liều theo chức năng thận (eGFR) - quan trọng (thải qua thận, không chuyển hóa)",
+            "Thận trọng ở bệnh nhân hen phế quản/COPD (có thể gây co thắt phế quản nặng)",
+            "Tránh dùng trong suy tim cấp, block AV độ 2-3, nhịp tim chậm <50 bpm",
+            "Thận trọng ở bệnh nhân đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+            "Có thể gây mệt mỏi, giảm khả năng tập luyện, rối loạn giấc ngủ",
+            "Thận trọng khi dùng với verapamil/diltiazem (tăng nguy cơ block AV, suy tim)",
+            "Half-life dài (20-24 giờ) → tác dụng kéo dài, tích lũy ở suy thận"
+        ],
+        "pharmacokinetics": {
+            "half_life": "20-24 giờ (rất dài)",
+            "onset": "1-2 giờ (PO)",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "30%",
+            "metabolism": "Không chuyển hóa đáng kể (khác với propranolol)",
+            "clearance": "Thận (chủ yếu, bài tiết nguyên dạng qua nước tiểu) - cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "KHÔNG được ngừng đột ngột ở bệnh nhân đau thắt ngực - có thể gây đau thắt ngực nặng, nhồi máu cơ tim, rối loạn nhịp tim nặng. Phải giảm liều dần dần trong 1-2 tuần",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Verapamil, Diltiazem",
+                    "mechanism": "Tác dụng hiệp đồng ức chế dẫn truyền nhĩ thất và co bóp tim",
+                    "effect": "Tăng nguy cơ block nhĩ thất độ 2-3, nhịp tim chậm nặng, suy tim",
+                    "management": "Thận trọng. Tránh dùng cùng nếu có thể. Nếu cần, dùng liều thấp và theo dõi ECG sát."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Insulin, các thuốc hạ đường huyết",
+                    "mechanism": "Che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run rẩy)",
+                    "effect": "Tăng nguy cơ hạ đường huyết không được phát hiện, nguy hiểm",
+                    "management": "Theo dõi đường huyết thường xuyên. Bệnh nhân đái tháo đường nên biết các triệu chứng khác của hạ đường huyết."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen)",
+                    "mechanism": "Giảm tác dụng hạ huyết áp",
+                    "effect": "Giảm hiệu quả điều trị tăng huyết áp",
+                    "management": "Thận trọng. Theo dõi huyết áp. Tránh dùng lâu dài cùng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Hen phế quản",
+                "Suy tim cấp",
+                "Block nhĩ thất độ 2-3",
+                "Nhịp tim chậm nặng (<50 bpm)",
+                "Sốc tim",
+                "Suy thận nặng (CrCl <30) - tích lũy do thải qua thận"
+            ],
+            "tương_đối": [
+                "COPD (thận trọng, có thể dùng liều thấp nhưng nguy cơ co thắt phế quản cao hơn)",
+                "Đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+                "Bệnh mạch máu ngoại biên (có thể làm nặng)",
+                "Suy thận trung bình (CrCl 30-60) - cần giảm liều",
+                "Dùng với verapamil/diltiazem (tăng nguy cơ block AV)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng khi cần thiết. Có thể gây nhịp tim chậm thai nhi, hạ đường huyết, giảm thông khí. Theo dõi sát thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Nadolol bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu nhịp tim chậm hoặc hạ đường huyết."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi (không chuyển hóa qua gan)",
+            "severe": "Không đổi (không chuyển hóa qua gan)",
+            "notes": "Nadolol không chuyển hóa qua gan, thải trừ chủ yếu qua thận. Suy gan không ảnh hưởng đến chuyển hóa, nhưng cần thận trọng với tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Nhịp tim chậm nặng (<40 bpm)",
+                "Block nhĩ thất độ 2-3",
+                "Hạ huyết áp nặng",
+                "Suy tim cấp",
+                "Co thắt phế quản nặng",
+                "Hạ đường huyết",
+                "Ngất",
+                "Sốc tim"
+            ],
+            "antidote": "Atropine (cho nhịp tim chậm), Glucagon (cho suy tim), Epinephrine (cho hạ huyết áp nặng)",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Điều trị nhịp tim chậm: Atropine 0.5-1mg IV, có thể lặp lại",
+                "Nếu atropine không hiệu quả: Glucagon 1-5mg IV",
+                "Điều trị hạ huyết áp: Truyền dịch, nâng chân, nếu cần: dopamine, norepinephrine",
+                "Điều trị block AV: Atropine, nếu cần: máy tạo nhịp tạm thời",
+                "Điều trị co thắt phế quản: Albuterol, ipratropium",
+                "Điều trị hạ đường huyết: Glucose IV",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Lọc máu: Hemodialysis có thể loại bỏ nadolol (thải qua thận)",
+                "Theo dõi ít nhất 24-48 giờ (do half-life dài 20-24 giờ)"
+            ],
+            "monitoring": "Nhịp tim, huyết áp, ECG (block AV, rối loạn nhịp), đường huyết, chức năng hô hấp, ý thức"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Glucagon",
+                    "mechanism": "Kích thích tim qua cơ chế không phụ thuộc beta-receptor (tăng cAMP)",
+                    "indication": "Suy tim, nhịp tim chậm nặng do beta-blocker",
+                    "dose": "1-5mg IV, có thể lặp lại"
+                },
+                {
+                    "name": "Atropine",
+                    "mechanism": "Ức chế phó giao cảm, tăng nhịp tim",
+                    "indication": "Nhịp tim chậm, block nhĩ thất",
+                    "dose": "0.5-1mg IV, có thể lặp lại"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với hoặc không thức ăn. Hấp thu tốt trong cả hai trường hợp.",
+                "timing": "Uống 1 lần/ngày (do half-life dài 20-24 giờ). Uống cùng giờ mỗi ngày. KHÔNG ngừng đột ngột - giảm liều dần dần trong 1-2 tuần."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống (PO)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Corgard (nadolol)",
+                "UpToDate - Nadolol: Drug information",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Timolol": {
+        "group": "Cardiovascular - Beta-blocker (non-selective)",
+        "vietnamese_name": "Timolol, Blocadren, Timoptic",
+        "administration": ["PO", "Ophthalmic"],
+        "indications": [
+            "Tăng huyết áp",
+            "Đau thắt ngực",
+            "Migraine phòng ngừa",
+            "Tăng nhãn áp (glaucoma) - dạng nhỏ mắt",
+            "Phòng ngừa nhồi máu cơ tim sau nhồi máu cơ tim"
+        ],
+        "contraindications": [
+            "Hen phế quản",
+            "Suy tim cấp",
+            "Block nhĩ thất độ 2-3",
+            "Nhịp tim chậm nặng",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_htn": "10-20mg x 2 lần/ngày, tăng dần đến 60mg/ngày nếu cần",
+            "adult_angina": "10-20mg x 2 lần/ngày",
+            "adult_migraine": "10-20mg x 2 lần/ngày",
+            "adult_post_mi": "10mg x 2 lần/ngày",
+            "adult_glaucoma": "1 giọt 0.25% hoặc 0.5% x 2 lần/ngày (mỗi mắt)",
+            "notes": "Non-selective. Có dạng uống và dạng nhỏ mắt (cho tăng nhãn áp). Dạng nhỏ mắt có thể hấp thu toàn thân và gây tác dụng phụ."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Thận trọng, có thể giảm liều"
+        },
+        "side_effects": [
+            "Mệt mỏi",
+            "Lạnh tay chân",
+            "Nhịp tim chậm",
+            "Co thắt phế quản",
+            "Giảm libido",
+            "Dạng nhỏ mắt: Kích ứng mắt, khô mắt, nhìn mờ (tạm thời)"
+        ],
+        "interactions": [
+            "Verapamil: tăng nguy cơ block nhĩ thất",
+            "Insulin: che dấu triệu chứng hạ đường huyết",
+            "NSAIDs: giảm tác dụng hạ huyết áp",
+            "Dạng nhỏ mắt: Có thể hấp thu toàn thân và tương tác với các thuốc khác"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Non-selective beta-adrenergic receptor blocker (beta1 và beta2). Ức chế tác dụng của catecholamines (epinephrine, norepinephrine), giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp, giảm nhu cầu oxy cơ tim. Ức chế renin-angiotensin system. Có tác dụng chống loạn nhịp (class II antiarrhythmic). Dạng nhỏ mắt: giảm sản xuất thủy dịch trong mắt, giảm nhãn áp. Đặc điểm: dạng nhỏ mắt có thể hấp thu toàn thân và gây tác dụng phụ (nhịp tim chậm, co thắt phế quản).",
+        "monitoring": [
+            "Nhịp tim và huyết áp (trước và sau khi bắt đầu)",
+            "Dấu hiệu suy tim (khó thở, phù, tăng cân)",
+            "Chức năng phổi (nếu có bệnh phổi tắc nghẽn) - đặc biệt quan trọng với dạng nhỏ mắt",
+            "Đường huyết (đặc biệt ở bệnh nhân đái tháo đường)",
+            "Nhãn áp (với dạng nhỏ mắt)",
+            "Triệu chứng mệt mỏi, lạnh tay chân, rối loạn cương dương"
+        ],
+        "precautions": [
+            "KHÔNG được ngừng đột ngột (có thể gây rebound hypertension, đau thắt ngực nặng, nhồi máu cơ tim). Phải giảm liều dần trong 1-2 tuần",
+            "Dạng nhỏ mắt: Có thể hấp thu toàn thân và gây tác dụng phụ (nhịp tim chậm, co thắt phế quản, hạ huyết áp) - đặc biệt ở bệnh nhân hen phế quản, suy tim",
+            "Thận trọng ở bệnh nhân hen phế quản/COPD (có thể gây co thắt phế quản nặng) - cả dạng uống và dạng nhỏ mắt",
+            "Tránh dùng trong suy tim cấp, block AV độ 2-3, nhịp tim chậm <50 bpm",
+            "Thận trọng ở bệnh nhân đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+            "Dạng nhỏ mắt: Nhỏ vào góc mắt, ấn nhẹ vào ống lệ để giảm hấp thu toàn thân",
+            "Thận trọng khi dùng với verapamil/diltiazem (tăng nguy cơ block AV, suy tim)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "4-5 giờ",
+            "onset": "1-2 giờ (PO), 30 phút (ophthalmic)",
+            "duration": "8-12 giờ (PO), 12-24 giờ (ophthalmic)",
+            "protein_binding": "10%",
+            "metabolism": "Gan (chuyển hóa một phần)",
+            "clearance": "Gan và thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng nhỏ mắt: bảo quản ở nhiệt độ phòng, tránh đông lạnh.",
+        "black_box_warnings": "KHÔNG được ngừng đột ngột ở bệnh nhân đau thắt ngực - có thể gây đau thắt ngực nặng, nhồi máu cơ tim, rối loạn nhịp tim nặng. Phải giảm liều dần dần trong 1-2 tuần. Dạng nhỏ mắt: Có thể hấp thu toàn thân và gây tác dụng phụ nghiêm trọng ở bệnh nhân hen phế quản, suy tim.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Verapamil, Diltiazem",
+                    "mechanism": "Tác dụng hiệp đồng ức chế dẫn truyền nhĩ thất và co bóp tim",
+                    "effect": "Tăng nguy cơ block nhĩ thất độ 2-3, nhịp tim chậm nặng, suy tim",
+                    "management": "Thận trọng. Tránh dùng cùng nếu có thể. Nếu cần, dùng liều thấp và theo dõi ECG sát."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Insulin, các thuốc hạ đường huyết",
+                    "mechanism": "Che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run rẩy)",
+                    "effect": "Tăng nguy cơ hạ đường huyết không được phát hiện, nguy hiểm",
+                    "management": "Theo dõi đường huyết thường xuyên."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen)",
+                    "mechanism": "Giảm tác dụng hạ huyết áp",
+                    "effect": "Giảm hiệu quả điều trị tăng huyết áp",
+                    "management": "Thận trọng. Theo dõi huyết áp."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Hen phế quản",
+                "Suy tim cấp",
+                "Block nhĩ thất độ 2-3",
+                "Nhịp tim chậm nặng (<50 bpm)",
+                "Sốc tim",
+                "Suy gan nặng"
+            ],
+            "tương_đối": [
+                "COPD (thận trọng, có thể dùng liều thấp nhưng nguy cơ co thắt phế quản cao hơn)",
+                "Đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+                "Bệnh mạch máu ngoại biên (có thể làm nặng)",
+                "Dùng với verapamil/diltiazem (tăng nguy cơ block AV)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng khi cần thiết. Có thể gây nhịp tim chậm thai nhi, hạ đường huyết. Theo dõi sát thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Timolol bài tiết vào sữa mẹ ở nồng độ thấp. Dạng nhỏ mắt: hấp thu toàn thân ít hơn.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu nhịp tim chậm hoặc hạ đường huyết."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể giảm liều",
+            "severe": "CHỐNG CHỈ ĐỊNH (chuyển hóa qua gan)",
+            "notes": "Timolol chuyển hóa một phần qua gan. Suy gan nặng là chống chỉ định."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Nhịp tim chậm nặng (<40 bpm)",
+                "Block nhĩ thất độ 2-3",
+                "Hạ huyết áp nặng",
+                "Suy tim cấp",
+                "Co thắt phế quản nặng",
+                "Hạ đường huyết",
+                "Ngất",
+                "Sốc tim"
+            ],
+            "antidote": "Atropine (cho nhịp tim chậm), Glucagon (cho suy tim), Epinephrine (cho hạ huyết áp nặng)",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Điều trị nhịp tim chậm: Atropine 0.5-1mg IV, có thể lặp lại",
+                "Nếu atropine không hiệu quả: Glucagon 1-5mg IV",
+                "Điều trị hạ huyết áp: Truyền dịch, nâng chân, nếu cần: dopamine, norepinephrine",
+                "Điều trị block AV: Atropine, nếu cần: máy tạo nhịp tạm thời",
+                "Điều trị co thắt phế quản: Albuterol, ipratropium",
+                "Điều trị hạ đường huyết: Glucose IV",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi ít nhất 12-24 giờ"
+            ],
+            "monitoring": "Nhịp tim, huyết áp, ECG (block AV, rối loạn nhịp), đường huyết, chức năng hô hấp, ý thức"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Glucagon",
+                    "mechanism": "Kích thích tim qua cơ chế không phụ thuộc beta-receptor (tăng cAMP)",
+                    "indication": "Suy tim, nhịp tim chậm nặng do beta-blocker",
+                    "dose": "1-5mg IV, có thể lặp lại"
+                },
+                {
+                    "name": "Atropine",
+                    "mechanism": "Ức chế phó giao cảm, tăng nhịp tim",
+                    "indication": "Nhịp tim chậm, block nhĩ thất",
+                    "dose": "0.5-1mg IV, có thể lặp lại"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với hoặc không thức ăn.",
+                "timing": "Uống 2 lần/ngày. KHÔNG ngừng đột ngột - giảm liều dần dần trong 1-2 tuần."
+            },
+            "ophthalmic": {
+                "with_food": "N/A",
+                "timing": "Nhỏ 1 giọt 0.25% hoặc 0.5% x 2 lần/ngày (mỗi mắt). Nhỏ vào góc mắt, ấn nhẹ vào ống lệ trong 1-2 phút để giảm hấp thu toàn thân.",
+                "notes": "QUAN TRỌNG: Dạng nhỏ mắt có thể hấp thu toàn thân và gây tác dụng phụ (nhịp tim chậm, co thắt phế quản, hạ huyết áp). Đặc biệt thận trọng ở bệnh nhân hen phế quản, suy tim. Nhỏ vào góc mắt, ấn nhẹ vào ống lệ để giảm hấp thu toàn thân."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Blocadren (timolol), Timoptic (timolol ophthalmic)",
+                "UpToDate - Timolol: Drug information",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    }
 }
 
 __all__ = ['NON_SELECTIVE_BETA_BLOCKERS']

@@ -84,7 +84,7 @@ def calculate_4ts_score(
            - ❌ Warfarin cho đến khi tiểu cầu >150,000/μL (nguy cơ hoại tử da, gangrene)
            - ❌ Truyền tiểu cầu (trừ khi chảy máu đe dọa tính mạng)
         
-        5. **Theo Dõi:**
+        5. **Theo dõi:**
            - Đếm tiểu cầu hàng ngày cho đến khi >150,000
            - Đánh giá huyết khối mới (DVT, PE, động mạch)
            - Siêu âm doppler chi dưới nếu chưa làm
@@ -137,7 +137,7 @@ def calculate_4ts_score(
            - **Âm tính hoặc yếu (OD <0.4):** Có thể an toàn tiếp tục heparin
            - **Borderline (OD 0.4-1.0):** Cần functional assay
         
-        6. **Theo Dõi:**
+        6. **Theo dõi:**
            - Tiểu cầu hàng ngày cho đến khi có kết quả xét nghiệm
            - Tái đánh giá 4Ts nếu có thay đổi lâm sàng
         """
@@ -178,7 +178,7 @@ def calculate_4ts_score(
            - **ITP** (Immune Thrombocytopenic Purpura)
            - **Giảm tiểu cầu do gan/lách to**
         
-        4. **Theo Dõi:**
+        4. **Theo dõi:**
            - Đếm tiểu cầu theo clinical indication
            - Tái đánh giá 4Ts nếu có thay đổi lâm sàng
            - Nếu tiểu cầu tiếp tục giảm → xem xét lại
@@ -269,7 +269,7 @@ def render():
         3. **T**hrombosis: Huyết khối hoặc biến chứng khác
         4. o**T**her causes: Các nguyên nhân khác
         
-        ### 📊 Phân Tầng Nguy Cơ
+        ### 📊 Phân tầng Nguy cơ
         
         | Điểm 4Ts | Phân Loại | Xác Suất HIT | Xử Trí |
         |----------|-----------|--------------|--------|
@@ -331,7 +331,7 @@ def render():
     st.divider()
     
     # 3. Thrombosis
-    st.markdown("#### 3️⃣ Thrombosis - Huyết Khối hoặc Biến Chứng Khác")
+    st.markdown("#### 3️⃣ Thrombosis - Huyết Khối hoặc Biến chứng Khác")
     thrombosis_category = st.radio(
         "Chọn tình trạng huyết khối/biến chứng:",
         options=[2, 1, 0],
@@ -453,7 +453,7 @@ def render():
         #### 1. Argatroban (DTI - Direct Thrombin Inhibitor)
         - **Liều:** 2 mcg/kg/min IV continuous
           - Suy gan: 0.5-1 mcg/kg/min
-        - **Theo Dõi:** aPTT (mục tiêu 1.5-3× baseline, thường 60-80s)
+        - **Theo dõi:** aPTT (mục tiêu 1.5-3× baseline, thường 60-80s)
         - **Ưu điểm:** Phổ biến, bài tiết qua gan
         - **Nhược điểm:** Tăng INR → khó chuyển warfarin
         

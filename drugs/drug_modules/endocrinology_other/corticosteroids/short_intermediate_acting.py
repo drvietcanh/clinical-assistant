@@ -509,4 +509,179 @@ SHORT_INTERMEDIATE_ACTING = {
     'last_updated': '2025-02-03', 'evidence_level':
     'A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
     }},
+    
+    "Fludrocortisone": {
+        "group": "Endocrinology - Mineralocorticoid",
+        "vietnamese_name": "Fludrocortisone, Florinef",
+        "administration": ["PO"],
+        "indications": [
+            "Suy thượng thận (Addison's disease) - thay thế mineralocorticoid",
+            "Hạ huyết áp tư thế đứng (orthostatic hypotension)",
+            "Hạ natri máu do mất muối",
+            "Bệnh mất muối do thận (salt-losing nephropathy)"
+        ],
+        "contraindications": [
+            "Cường giáp không điều trị",
+            "Suy tim nặng",
+            "Tăng huyết áp nặng",
+            "Phù nặng"
+        ],
+        "dosage": {
+            "adult_addison": "0.1-0.2mg x 1 lần/ngày (sáng)",
+            "adult_orthostatic_hypotension": "0.1-0.2mg x 1 lần/ngày",
+            "adult_salt_losing": "0.1-0.2mg x 1-2 lần/ngày",
+            "pediatric_addison": "0.05-0.1mg x 1 lần/ngày",
+            "notes": "Uống buổi sáng. Tác dụng mineralocorticoid mạnh (125 lần hydrocortisone). Thường dùng kết hợp với hydrocortisone trong suy thượng thận."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, có thể cần giảm liều"
+        },
+        "side_effects": [
+            "Giữ natri, phù (do tác dụng mineralocorticoid)",
+            "Hạ kali máu (do tăng thải kali)",
+            "Tăng huyết áp",
+            "Đau đầu",
+            "Yếu cơ (do hạ kali máu)",
+            "Tác dụng glucocorticoid nhẹ (ở liều cao)"
+        ],
+        "interactions": [
+            "Lợi tiểu thải kali (furosemide, thiazide): tăng hạ kali máu",
+            "Digoxin: hạ kali máu tăng độc tính digoxin",
+            "NSAID: tăng giữ natri, tăng huyết áp"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Fludrocortisone là mineralocorticoid tổng hợp, tác dụng chủ yếu trên mineralocorticoid receptor (MR) ở ống thận xa và ống góp. Kích thích tái hấp thu natri và nước ở ống thận, đồng thời tăng bài tiết kali và hydrogen ion. Dẫn đến: tăng thể tích tuần hoàn, tăng huyết áp, giữ natri, thải kali. Fludrocortisone có tác dụng mineralocorticoid mạnh gấp 125 lần hydrocortisone, nhưng tác dụng glucocorticoid yếu (chỉ bằng 1/10 hydrocortisone). Được dùng trong suy thượng thận để thay thế aldosterone thiếu hụt, thường kết hợp với hydrocortisone (thay thế cortisol).",
+        "monitoring": [
+            "Huyết áp (tăng huyết áp do giữ natri)",
+            "Điện giải: natri (tăng), kali (giảm) - QUAN TRỌNG",
+            "Cân nặng (giữ nước, phù)",
+            "Dấu hiệu hạ kali máu (yếu cơ, chuột rút, rối loạn nhịp tim)",
+            "Dấu hiệu phù (mắt cá chân, phù toàn thân)",
+            "Dấu hiệu suy thượng thận nếu quên liều (mệt mỏi, hạ huyết áp, hạ natri máu)"
+        ],
+        "precautions": [
+            "Uống buổi sáng, cùng thời điểm mỗi ngày",
+            "Theo dõi sát kali máu - hạ kali máu có thể nghiêm trọng",
+            "Theo dõi huyết áp - tăng huyết áp do giữ natri",
+            "Theo dõi cân nặng, dấu hiệu phù - giữ nước",
+            "Không được quên liều trong suy thượng thận (có thể gây suy thượng thận cấp)",
+            "Thận trọng ở bệnh nhân suy tim (giữ nước → phù, suy tim nặng)",
+            "Thận trọng ở bệnh nhân tăng huyết áp (có thể tăng huyết áp)",
+            "Thận trọng với lợi tiểu thải kali (tăng hạ kali máu)",
+            "Thận trọng với digoxin (hạ kali máu tăng độc tính digoxin)",
+            "Liều thay thế: 0.1-0.2mg/ngày, có thể tăng trong stress"
+        ],
+        "pharmacokinetics": {
+            "half_life": "18-36 giờ",
+            "onset": "1-2 giờ (PO)",
+            "duration": "18-36 giờ",
+            "protein_binding": "42%",
+            "metabolism": "Gan (CYP3A4)",
+            "clearance": "Gan, không cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, trong suy thượng thận, quên liều hoặc ngừng đột ngột có thể gây suy thượng thận cấp, có thể tử vong. Hạ kali máu có thể nghiêm trọng, đặc biệt với digoxin.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Lợi tiểu thải kali (Furosemide, Thiazide, Hydrochlorothiazide)",
+                    "mechanism": "Cả hai đều gây hạ kali máu, tác dụng cộng dồn.",
+                    "effect": "Hạ kali máu nặng, tăng nguy cơ rối loạn nhịp tim, yếu cơ",
+                    "management": "Theo dõi kali máu chặt chẽ. Bổ sung kali nếu cần. Thận trọng khi dùng đồng thời."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Fludrocortisone gây hạ kali máu, làm tăng độc tính digoxin.",
+                    "effect": "Tăng độc tính digoxin (buồn nôn, nôn, rối loạn nhịp tim, block AV)",
+                    "management": "Theo dõi kali máu và nồng độ digoxin chặt chẽ. Bổ sung kali nếu cần. Có thể cần giảm liều digoxin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "NSAID (Ibuprofen, Naproxen, Diclofenac)",
+                    "mechanism": "NSAID gây giữ natri, tác dụng cộng dồn với fludrocortisone.",
+                    "effect": "Tăng giữ natri, tăng huyết áp, tăng phù",
+                    "management": "Theo dõi huyết áp và cân nặng. Có thể cần giảm liều fludrocortisone hoặc tránh NSAID."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Suy tim nặng - giữ natri và nước có thể làm nặng suy tim, phù phổi",
+                "Tăng huyết áp nặng không kiểm soát - có thể làm tăng huyết áp hơn nữa",
+                "Phù nặng - có thể làm nặng phù"
+            ],
+            "tương_đối": [
+                "Suy tim nhẹ-trung bình - thận trọng, theo dõi cân nặng và dấu hiệu phù",
+                "Tăng huyết áp - thận trọng, theo dõi huyết áp",
+                "Hạ kali máu - tăng nguy cơ hạ kali máu nặng",
+                "Dùng với lợi tiểu thải kali - tăng hạ kali máu",
+                "Dùng với digoxin - tăng độc tính digoxin"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Fludrocortisone phân loại C. Có thể dùng trong thai kỳ khi cần thiết, đặc biệt trong suy thượng thận. Suy thượng thận không điều trị trong thai kỳ có thể nguy hiểm cho cả mẹ và thai nhi. Dùng liều thấp nhất hiệu quả.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Fludrocortisone bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ với liều thay thế thông thường.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều nhẹ",
+            "severe": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan.",
+            "notes": "Fludrocortisone chuyển hóa qua gan (CYP3A4). Suy gan có thể làm giảm chuyển hóa, tăng thời gian bán thải."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng huyết áp nặng",
+                "Hạ kali máu nặng (yếu cơ, chuột rút, rối loạn nhịp tim)",
+                "Phù nặng (mắt cá chân, toàn thân, phù phổi)",
+                "Suy tim (do giữ nước quá mức)",
+                "Đau đầu, buồn nôn"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng fludrocortisone",
+                "Điều trị hạ kali máu: bổ sung kali (KCl) PO hoặc IV",
+                "Điều trị tăng huyết áp: thuốc hạ huyết áp nếu cần",
+                "Điều trị phù: lợi tiểu (furosemide) nếu cần, hạn chế natri",
+                "Theo dõi điện giải, huyết áp, cân nặng",
+                "Nếu suy tim: điều trị suy tim (lợi tiểu, hạn chế dịch)"
+            ],
+            "monitoring": "Huyết áp, điện giải (natri, kali), cân nặng, dấu hiệu phù, dấu hiệu suy tim trong ít nhất 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",
+                "timing": "Uống buổi sáng, cùng thời điểm mỗi ngày (0.1-0.2mg). Trong suy thượng thận, không được quên liều."
+            },
+            "iv": {
+                "reconstitution": "N/A - chỉ có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Fludrocortisone (Florinef)",
+                "UpToDate - Fludrocortisone: Drug Information",
+                "Endocrine Society Guidelines - Adrenal Insufficiency Management",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng"
+        }
+    },
 }

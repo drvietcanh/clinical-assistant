@@ -50,7 +50,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: RISK STRATIFICATION ==========
-    st.markdown("### 📊 Phân Tầng Nguy Cơ (MASCC Score)")
+    st.markdown("### 📊 Phân tầng Nguy cơ (MASCC Score)")
     
     st.markdown("""
     **MASCC (Multinational Association for Supportive Care in Cancer) Risk Index:**
@@ -138,7 +138,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: EMPIRIC ANTIBIOTIC THERAPY ==========
-    st.markdown("### 💊 Kháng Sinh Điều Trị Ban Đầu (Empiric Therapy)")
+    st.markdown("### 💊 Kháng Sinh Điều trị Ban Đầu (Empiric Therapy)")
     
     st.error("""
     **⚠️ QUAN TRỌNG: Bắt đầu kháng sinh NGAY, không chờ kết quả cấy máu**
@@ -160,7 +160,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: ANTIFUNGAL THERAPY ==========
-    st.markdown("### 🦠 Điều Trị Kháng Nấm (Antifungal Therapy)")
+    st.markdown("### 🦠 Điều trị Kháng Nấm (Antifungal Therapy)")
     
     st.markdown("""
     **Empiric antifungal therapy nếu:**
@@ -203,7 +203,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: DURATION OF THERAPY ==========
-    st.markdown("### ⏱️ Thời Gian Điều Trị")
+    st.markdown("### ⏱️ Thời Gian Điều trị")
     
     st.markdown("""
     **1. Nếu afebrile và ANC >500:**
@@ -228,7 +228,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: OUTPATIENT MANAGEMENT ==========
-    st.markdown("### 🏠 Điều Trị Ngoại Trú (Low Risk)")
+    st.markdown("### 🏠 Điều trị Ngoại Trú (Low Risk)")
     
     st.success("""
     **Chỉ định (Tất cả phải thỏa):**
@@ -325,7 +325,7 @@ def render():
 
 def render_high_risk_antibiotics():
     """High Risk Febrile Neutropenia Antibiotic Regimens"""
-    st.error("## 🚨 HIGH RISK - Nhập Viện Điều Trị")
+    st.error("## 🚨 HIGH RISK - Nhập Viện Điều trị")
     
     st.markdown("""
     **Regimen 1: Monotherapy (Lựa chọn hàng đầu)**
@@ -381,7 +381,7 @@ def render_high_risk_antibiotics():
 
 def render_low_risk_antibiotics():
     """Low Risk Febrile Neutropenia Antibiotic Regimens"""
-    st.success("## ✅ LOW RISK - Có Thể Điều Trị Ngoại Trú")
+    st.success("## ✅ LOW RISK - Có Thể Điều trị Ngoại Trú")
     
     st.markdown("""
     **Regimen 1: Oral (Nếu có thể uống):**

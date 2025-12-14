@@ -78,7 +78,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Điều Trị (First 6 Hours)")
+    st.markdown("### 🎯 Mục tiêu điều trị (First 6 Hours)")
     
     st.info("""
     **Resuscitation Goals:**

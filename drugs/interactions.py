@@ -35,7 +35,7 @@ def render_interaction_checker():
         text-align: center;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     '>
-        <h1 style='margin: 0; color: white; font-size: 2.2em;'>🔍 Kiểm Tra Tương Tác Thuốc</h1>
+        <h1 style='margin: 0; color: white; font-size: 2.2em;'>🔍 Kiểm Tra Tương tác Thuốc</h1>
         <p style='margin: 10px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1.1em;'>
             Phát hiện tương tác thuốc-thuốc với mức độ nghiêm trọng và khuyến nghị xử trí • An toàn cho bệnh nhân
         </p>
@@ -117,7 +117,7 @@ def render_interaction_checker():
             drug_list = [d.strip() for d in drug_text.split('\n') if d.strip()]
     
     # Check button
-    if st.button("🔍 Kiểm Tra Tương Tác", type="primary", use_container_width=True):
+    if st.button("🔍 Kiểm Tra Tương tác", type="primary", use_container_width=True):
         if len(drug_list) < 2:
             render_error_alert(
                 "Vui lòng nhập ít nhất 2 thuốc để kiểm tra tương tác",
@@ -182,10 +182,10 @@ def render_interaction_checker():
         # Display interactions
         if interactions:
             st.markdown("---")
-            st.markdown("### ⚠️ Phát Hiện Tương Tác")
+            st.markdown("### ⚠️ Phát Hiện Tương tác")
             
             # Visual Interaction Matrix
-            st.markdown("#### 📊 Ma Trận Tương Tác Trực Quan")
+            st.markdown("#### 📊 Ma Trận Tương tác Trực Quan")
             render_interaction_matrix(
                 drugs=checked_drugs,
                 interactions=interactions,
@@ -194,7 +194,7 @@ def render_interaction_checker():
             )
             
             st.markdown("---")
-            st.markdown("#### 📋 Chi tiết Tương Tác")
+            st.markdown("#### 📋 Chi tiết Tương tác")
             
             # Filter options
             col1, col2 = st.columns([2, 1])
@@ -238,7 +238,7 @@ def render_interaction_checker():
             
             # Major interactions
             if major_interactions:
-                st.markdown("##### 🔴 Tương Tác Nghiêm Trọng (Major)")
+                st.markdown("##### 🔴 Tương tác Nghiêm Trọng (Major)")
                 for interaction in major_interactions:
                     with st.expander(
                         f"**{interaction['drug1']}** ↔ **{interaction['drug2']}** - {interaction['severity']}",
@@ -284,7 +284,7 @@ def render_interaction_checker():
             
             # Moderate interactions
             if moderate_interactions:
-                st.markdown("##### 🟡 Tương Tác Trung Bình (Moderate)")
+                st.markdown("##### 🟡 Tương tác Trung Bình (Moderate)")
                 for interaction in moderate_interactions:
                     with st.expander(
                         f"**{interaction['drug1']}** ↔ **{interaction['drug2']}** - {interaction['severity']}",
@@ -322,7 +322,7 @@ def render_interaction_checker():
             
             # Minor interactions
             if minor_interactions:
-                st.markdown("##### 🔵 Tương Tác Nhẹ (Minor)")
+                st.markdown("##### 🔵 Tương tác Nhẹ (Minor)")
                 for interaction in minor_interactions:
                     with st.expander(
                         f"**{interaction['drug1']}** ↔ **{interaction['drug2']}** - {interaction['severity']}",

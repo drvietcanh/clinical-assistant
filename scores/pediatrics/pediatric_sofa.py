@@ -327,7 +327,7 @@ def render():
     st.markdown("---")
     
     # Organ system inputs
-    st.markdown("### 🩺 Thông Số Cơ Quan")
+    st.markdown("### 🩺 Thông số Cơ Quan")
     
     col1, col2 = st.columns(2)
     
@@ -531,12 +531,12 @@ def render():
         
         with col1:
             st.markdown("""
-            **Theo Dõi:**
+            **Theo dõi:**
             - Đánh giá lại pSOFA mỗi 24 giờ
             - Theo dõi xu hướng (tăng/giảm)
             - Delta pSOFA (thay đổi) quan trọng hơn giá trị tuyệt đối
             
-            **Điều Trị:**
+            **Điều trị:**
             - pSOFA ≥2: Cân nhắc điều trị nhiễm trùng huyết
             - pSOFA tăng: Cần can thiệp tích cực hơn
             - pSOFA giảm: Đáp ứng điều trị tốt

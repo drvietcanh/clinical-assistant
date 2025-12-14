@@ -206,6 +206,7 @@ def render():
                 max_value=800.0,
                 value=400.0,
                 step=10.0,
+                format="%d",
                 help="Đo từ đầu sóng Q đến cuối sóng T (bình thường: 350-450 ms)"
             )
             qt_ms = qt_input
@@ -216,6 +217,7 @@ def render():
                 max_value=0.80,
                 value=0.40,
                 step=0.01,
+                format="%.2f",
                 help="Đo từ đầu sóng Q đến cuối sóng T (bình thường: 0.35-0.45 s)"
             )
             qt_ms = qt_input * 1000
@@ -227,6 +229,7 @@ def render():
             max_value=200,
             value=75,
             step=1,
+            format="%d",
             help="Tần số tim (bình thường: 60-100 bpm)"
         )
     

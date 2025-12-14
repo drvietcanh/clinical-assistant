@@ -548,7 +548,7 @@ def render():
             "1-Year Survival": survival_1yr,
             "2-Year Survival": survival_2yr,
             "Surgical Mortality": periop_mortality,
-            "Score Breakdown": score_breakdown
+            "Score Chi tiết": score_breakdown
         }
         
         render_export_section(
@@ -613,7 +613,7 @@ def render():
         - Không liên tục (chỉ 3 class)
         """)
     
-    with st.expander("⚠️ Biến Chứng Xơ Gan Mất Bù"):
+    with st.expander("⚠️ Biến chứng Xơ Gan Mất Bù"):
         st.markdown("""
         **Các biến chứng chính cần theo dõi và xử trí:**
         
@@ -654,7 +654,7 @@ def render():
         - Điều trị: Phẫu thuật, RFA, TACE, ghép gan
         """)
     
-    with st.expander("🏥 Chỉ Định Ghép Gan"):
+    with st.expander("🏥 Chỉ định Ghép Gan"):
         st.markdown("""
         **Chỉ định ghép gan trong xơ gan:**
         
@@ -679,7 +679,7 @@ def render():
         - Không xâm lấn mạch máu
         - Không di căn xa
         
-        **Chống Chỉ Định:**
+        **Chống chỉ định:**
         - Ung thư ngoài gan (trừ da không phải melanoma)
         - Nhiễm trùng toàn thân đang hoạt động
         - Bệnh tim phổi nặng

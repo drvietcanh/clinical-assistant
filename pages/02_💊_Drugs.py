@@ -1,6 +1,7 @@
 """
-Antibiotics Module - Dosing & TDM
+Drugs Module - Dosing & TDM
 Main Router - Imports from antibiotics module
+Note: Module package name remains 'antibiotics' for backward compatibility
 """
 
 import streamlit as st
@@ -16,9 +17,9 @@ from antibiotics.treatment_algorithms import render_algorithms_page
 
 # Standard page setup
 setup_page(
-    page_title="Kháng sinh",
+    page_title="Thuốc",
     page_icon="💊",
-    description="Tra cứu kháng sinh, so sánh liều dùng và chỉ định"
+    description="Tra cứu thuốc, so sánh liều dùng và chỉ định"
 )
 
 # ========== SIDEBAR ==========
@@ -28,8 +29,8 @@ with st.sidebar:
     function_type = st.selectbox(
         "Công cụ:",
         [
-            "🔍 Tra cứu & dữ liệu kháng sinh",
-            "🔬 So sánh nhiều kháng sinh",
+            "🔍 Tra cứu & dữ liệu thuốc",
+            "🔬 So sánh nhiều thuốc",
             "📊 So sánh Side-by-Side",
             "🔄 Phác đồ điều trị"
         ]
@@ -65,3 +66,4 @@ elif "Phác đồ" in function_type:
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)
+

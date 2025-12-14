@@ -277,7 +277,7 @@ def render():
                 
                 3. **Điều trị nguyên nhân**
                 
-                **Theo Dõi:**
+                **Theo dõi:**
                 - Ca, Albumin, Mg, Phosphate
                 - PTH, Vitamin D (25-OH-D)
                 - ECG (QTc interval)

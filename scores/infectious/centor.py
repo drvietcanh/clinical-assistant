@@ -137,7 +137,7 @@ def render():
     
     st.title("🦠 Centor Score (Modified)")
     st.markdown("""
-    ### Đánh Giá Viêm Họng Do Liên Cầu Khuẩn
+    ### Đánh giá Viêm Họng Do Liên Cầu Khuẩn
     
     **Centor Score / Modified Centor (McIsaac Score):**
     - Công cụ lâm sàng dự đoán viêm họng do Streptococcus pyogenes (GAS)
@@ -289,7 +289,7 @@ def render():
         
         if result['level'] in ["very_low", "low"]:
             st.success(f"""
-            ### ✅ Nguy Cơ {result['risk']} - {result['probability']}
+            ### ✅ Nguy cơ {result['risk']} - {result['probability']}
             
             **Xác suất viêm họng do GAS: {result['probability']}**
             
@@ -312,7 +312,7 @@ def render():
             
         elif result['level'] in ["moderate", "moderate_high"]:
             st.warning(f"""
-            ### ⚠️ Nguy Cơ {result['risk']} - {result['probability']}
+            ### ⚠️ Nguy cơ {result['risk']} - {result['probability']}
             
             **Xác suất viêm họng do GAS: {result['probability']}**
             
@@ -346,7 +346,7 @@ def render():
             
         else:  # high risk
             st.error(f"""
-            ### 🚨 Nguy Cơ {result['risk']} - {result['probability']}
+            ### 🚨 Nguy cơ {result['risk']} - {result['probability']}
             
             **Xác suất viêm họng do GAS: {result['probability']}**
             
@@ -374,7 +374,7 @@ def render():
         # Antibiotic regimens if indicated
         if result['level'] in ["moderate_high", "high"] or (result['level'] == "moderate" and total_score >= 2):
             st.markdown("---")
-            st.subheader("💊 Phác Đồ Kháng Sinh (Nếu Chỉ Định)")
+            st.subheader("💊 Phác Đồ Kháng Sinh (Nếu Chỉ định)")
             
             regimens = get_antibiotic_regimen()
             
@@ -469,7 +469,7 @@ def render():
         - Đau đầu, đau bụng (đặc biệt trẻ em)
         - **KHÔNG** ho, sổ mũi (nếu có → Nghĩ virus)
         
-        **Biến Chứng:**
+        **Biến chứng:**
         
         **1. Hóa mủ (hiếm với kháng sinh):**
         - Áp xe quanh amidan

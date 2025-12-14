@@ -181,6 +181,27 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
             "notes": "Theo dõi chức năng thận, dấu hiệu gân, thần kinh trong quá trình truyền. Có thể gây kích ứng tĩnh mạch - thay đổi vị trí tiêm nếu cần. Liều: 500-750mg x 1 lần/ngày (q24h)."
         }
     },
+    "pediatric_dosing": {
+        "neonates": "CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nguy cơ tổn thương sụn, viêm khớp.",
+        "infants": "CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nguy cơ tổn thương sụn, viêm khớp.",
+        "children": "CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nếu bắt buộc: 10mg/kg/ngày IV (tối đa 500mg/ngày). Theo dõi chặt chẽ dấu hiệu đau gân, viêm gân. Nguy cơ tổn thương sụn, viêm khớp.",
+        "adolescents": "CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nếu bắt buộc: liều người lớn (500-750mg x 1 lần/ngày). Theo dõi chặt chẽ dấu hiệu đau gân, viêm gân.",
+        "notes": "CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi do nguy cơ tổn thương sụn, viêm khớp. Chỉ dùng trong trường hợp đặc biệt như nhiễm trùng nặng (ví dụ: viêm phổi do Pseudomonas nặng) không có lựa chọn khác. Nếu dùng, theo dõi chặt chẽ dấu hiệu đau gân, viêm gân, đứt gân. Ngừng ngay nếu có đau gân. Ưu điểm: dùng 1 lần/ngày, compliance tốt hơn ciprofloxacin."
+    },
+    "geriatric_dosing": {
+        "considerations": "Người cao tuổi (>60 tuổi) có nguy cơ cao hơn đứt gân, viêm gân (đặc biệt gân Achilles). Suy thận phổ biến hơn, cần điều chỉnh liều. Tăng nguy cơ QT kéo dài, rối loạn nhịp tim.",
+        "dose_adjustment": "Điều chỉnh liều theo chức năng thận: CrCl 30-60 → giảm liều 50% (250-375mg/ngày), CrCl <30 → 250-500mg x 1 lần/ngày. Khởi đầu với liều thấp hơn.",
+        "monitoring": "Theo dõi chặt chẽ dấu hiệu đau gân, viêm gân, đứt gân (đặc biệt gân Achilles). Theo dõi ECG (QT interval). Theo dõi chức năng thận (creatinine, CrCl). Theo dõi dấu hiệu thần kinh (rối loạn giấc ngủ, nhức đầu). Ngừng ngay nếu có đau gân."
+    },
+    "brand_names": {
+        "vietnam": ["Levofloxacin", "Tavanic", "Levofloxacin Stada", "Levo"],
+        "common": ["Tavanic", "Levofloxacin", "Levaquin"]
+    },
+    "cost_estimate": {
+        "unit": "VND",
+        "range": "10,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)",
+        "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Levofloxacin generic thường rẻ hơn (10,000-30,000 VND/viên 500mg). Tavanic (brand) thường đắt hơn (30,000-50,000 VND/viên 500mg). Dạng IV: 80,000-150,000 VND/lọ 500mg."
+    },
     "references": {
         "primary_sources": [
             "FDA Drug Label - Levofloxacin (Tavanic)",
@@ -193,7 +214,236 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
         ],
         "last_updated": "2024-12-19",
         "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-    }    }
+    }
+    },
+    
+    "Moxifloxacin": {
+        "group": "Antibiotic - Fluoroquinolone (4th Generation)",
+        "vietnamese_name": "Moxifloxacin, Avelox",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Viêm phổi cộng đồng",
+            "Viêm phổi bệnh viện (một số trường hợp)",
+            "Nhiễm khuẩn da và mô mềm",
+            "Viêm xoang cấp",
+            "Viêm phúc mạc (kết hợp)"
+        ],
+        "contraindications": [
+            "Dị ứng fluoroquinolone",
+            "Trẻ em <18 tuổi (trừ trường hợp đặc biệt)",
+            "Có thai",
+            "QT kéo dài",
+            "Rối loạn nhịp tim nặng"
+        ],
+        "dosage": {
+            "adult_po": "400mg x 1 lần/ngày",
+            "adult_iv": "400mg IV x 1 lần/ngày",
+            "adult_pneumonia": "400mg x 1 lần/ngày x 7-14 ngày",
+            "notes": "Uống với hoặc không thức ăn. Không cần điều chỉnh thận (thải qua gan/mật)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi (thải qua gan/mật)",
+            "under_30": "Không đổi (thải qua gan/mật)"
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa",
+            "Nhức đầu",
+            "Rối loạn giấc ngủ",
+            "Rối loạn gân (viêm gân, đứt gân)",
+            "QT kéo dài (nhiều hơn các fluoroquinolone khác)",
+            "Hạ đường huyết (hiếm)",
+            "Tăng men gan (hiếm)"
+        ],
+        "interactions": [
+            "Antacid/Sắt: giảm hấp thu (cách 4 giờ)",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Corticosteroid: tăng nguy cơ đứt gân",
+            "Thuốc kéo dài QT: tăng nguy cơ rối loạn nhịp tim"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Moxifloxacin là fluoroquinolone thế hệ 4, kháng sinh phổ rộng. Ức chế DNA gyrase (ở vi khuẩn Gram-âm) và topoisomerase IV (ở vi khuẩn Gram-dương), enzyme cần thiết cho sao chép và sửa chữa DNA. Dẫn đến tổn thương DNA và chết tế bào vi khuẩn. Phổ kháng khuẩn: Gram-âm mạnh (Enterobacteriaceae, H. influenzae, Neisseria), Gram-dương tốt hơn các fluoroquinolone khác (Streptococcus pneumoniae - kể cả penicillin-resistant và macrolide-resistant, Staphylococcus aureus - MSSA), và vi khuẩn không điển hình (Legionella, Mycoplasma, Chlamydia). Đặc điểm: dùng 1 lần/ngày, không cần điều chỉnh thận (thải qua gan/mật), hiệu quả tốt với viêm phổi, nhưng QT kéo dài nhiều hơn.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "ECG - QT interval (quan trọng, moxifloxacin kéo dài QT nhiều hơn các fluoroquinolone khác)",
+            "Tendon (gân) - đau, sưng, đứt gân (đặc biệt gân Achilles)",
+            "Thần kinh trung ương (mất ngủ, lo âu, kích động, co giật)",
+            "Tim mạch (QT kéo dài, rối loạn nhịp tim) - đặc biệt quan trọng với moxifloxacin",
+            "Đường huyết (tăng hoặc hạ đường huyết)",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan nặng"
+        ],
+        "precautions": [
+            "NGỪNG NGAY nếu có đau, sưng gân (nguy cơ đứt gân, đặc biệt gân Achilles)",
+            "QT kéo dài NGHIÊM TRỌNG → không dùng với các thuốc kéo dài QT khác (amiodarone, sotalol, antipsychotics), bệnh nhân có tiền sử rối loạn nhịp, suy tim",
+            "Theo dõi ECG trước và trong khi dùng (đặc biệt quan trọng với moxifloxacin)",
+            "Co giật → không dùng ở bệnh nhân có tiền sử co giật, tránh dùng với NSAID",
+            "Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp, dùng kem chống nắng",
+            "Tương tác với nhiều thuốc: giảm hấp thu với antacid, sucralfate, sắt, kẽm (cách 4 giờ)",
+            "Hạ đường huyết → thận trọng với sulfonylurea",
+            "Không dùng cho trẻ em < 18 tuổi (trừ trường hợp đặc biệt) - nguy cơ tổn thương sụn",
+            "Không cần điều chỉnh thận (thải qua gan/mật) - ưu điểm",
+            "Uống nhiều nước để tránh kết tinh trong nước tiểu",
+            "Ưu điểm: dùng 1 lần/ngày, không cần điều chỉnh thận, hiệu quả tốt với viêm phổi"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12 giờ (dài nhất trong fluoroquinolone)",
+            "onset": "1-2 giờ (PO), ngay lập tức (IV)",
+            "duration": "q24h (1 lần/ngày)",
+            "protein_binding": "30-50%",
+            "metabolism": "Chủ yếu qua gan (CYP450)",
+            "clearance": "Gan (chủ yếu, chuyển hóa qua CYP450), mật (một phần). Không thải qua thận → không cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dung dịch IV: bảo quản theo hướng dẫn nhà sản xuất",
+        "black_box_warnings": "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles) - có thể xảy ra bất cứ lúc nào, kể cả sau khi ngừng thuốc. Ngừng ngay nếu có đau, sưng gân. QT kéo dài NGHIÊM TRỌNG - có thể gây rối loạn nhịp tim nghiêm trọng, đe dọa tính mạng. Không dùng với các thuốc kéo dài QT khác. Theo dõi ECG trước và trong khi dùng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Antacids (Aluminum, Magnesium), Sucralfate, Sắt, Kẽm",
+                    "mechanism": "Cation (Al3+, Mg2+, Fe2+, Zn2+) tạo phức hợp không hòa tan với moxifloxacin, giảm hấp thu.",
+                    "effect": "Giảm hấp thu moxifloxacin, giảm nồng độ trong máu, giảm hiệu quả điều trị",
+                    "management": "Cách ít nhất 4 giờ trước hoặc sau khi uống moxifloxacin. Không uống cùng lúc."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Moxifloxacin có thể ảnh hưởng đến chuyển hóa warfarin.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng moxifloxacin. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Thuốc kéo dài QT (Amiodarone, Sotalol, Antipsychotics, Macrolides)",
+                    "mechanism": "Cả hai đều kéo dài QT, tác dụng cộng dồn.",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim nghiêm trọng, đe dọa tính mạng (torsades de pointes)",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Nếu bắt buộc, theo dõi ECG liên tục. Theo dõi QT interval."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Corticosteroid",
+                    "mechanism": "Cả hai đều tăng nguy cơ đứt gân, tác dụng cộng dồn.",
+                    "effect": "Tăng nguy cơ viêm gân, đứt gân",
+                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ dấu hiệu đau, sưng gân. Ngừng ngay nếu có đau gân."
+                },
+                {
+                    "drug": "NSAID",
+                    "mechanism": "Cả hai đều có thể gây co giật, tác dụng cộng dồn.",
+                    "effect": "Tăng nguy cơ co giật",
+                    "management": "Tránh dùng đồng thời nếu có thể. Thận trọng ở bệnh nhân có tiền sử co giật."
+                },
+                {
+                    "drug": "Sulfonylurea",
+                    "mechanism": "Moxifloxacin có thể gây hạ đường huyết.",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Theo dõi đường huyết. Điều chỉnh liều sulfonylurea nếu cần."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng moxifloxacin hoặc các fluoroquinolone khác",
+                "Có thai - chống chỉ định tuyệt đối, nguy cơ tổn thương sụn thai nhi",
+                "Trẻ em < 18 tuổi (trừ trường hợp đặc biệt) - nguy cơ tổn thương sụn, viêm khớp",
+                "QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ loạn nhịp tim nghiêm trọng",
+                "Dùng với thuốc kéo dài QT - chống chỉ định tuyệt đối"
+            ],
+            "tương_đối": [
+                "Bệnh nhân > 60 tuổi - tăng nguy cơ đứt gân, viêm gân, QT kéo dài",
+                "Dùng corticosteroid - tăng nguy cơ đứt gân",
+                "Ghép cơ quan - tăng nguy cơ đứt gân",
+                "Tiền sử co giật - tăng nguy cơ co giật",
+                "Suy tim - tăng nguy cơ QT kéo dài, rối loạn nhịp tim",
+                "Suy gan nặng - có thể tích lũy (thải qua gan)",
+                "Dùng với warfarin - tăng nguy cơ chảy máu",
+                "Hoạt động thể lực nặng - tăng nguy cơ đứt gân"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Moxifloxacin là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể gây tổn thương sụn ở khớp ở thai nhi. Có báo cáo về tổn thương sụn ở trẻ em khi dùng trong thai kỳ. CHỐNG CHỈ ĐỊNH trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn khác. Nhiễm trùng nặng có thể gây nguy hiểm cho thai nhi, nhưng nên dùng kháng sinh khác nếu có thể.",
+            "lactation": {
+                "safety": "Compatible (với thận trọng)",
+                "details": "Moxifloxacin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Tuy nhiên, fluoroquinolone có thể gây tổn thương sụn ở trẻ sơ sinh.",
+                "recommendation": "Có thể dùng khi cho con bú với thận trọng. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh. Tránh dùng nếu có lựa chọn khác."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Moxifloxacin chuyển hóa qua gan nhưng không phụ thuộc nhiều vào chức năng gan.",
+            "moderate": "Không cần điều chỉnh liều. Thận trọng nếu có suy gan nặng.",
+            "severe": "Thận trọng, có thể tích lũy ở suy gan nặng. Có thể cần giảm liều hoặc tăng khoảng cách liều.",
+            "notes": "Moxifloxacin chuyển hóa qua gan (CYP450), thải trừ qua mật. Suy gan nặng có thể giảm chuyển hóa và tích lũy. Theo dõi chức năng gan và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng",
+                "Triệu chứng thần kinh: Co giật, kích động, lo âu, mất ngủ, trầm cảm, rối loạn tâm thần",
+                "Triệu chứng gân: Đau gân, viêm gân, đứt gân (đặc biệt gân Achilles)",
+                "Triệu chứng tim mạch: QT kéo dài NGHIÊM TRỌNG, rối loạn nhịp tim nghiêm trọng (torsades de pointes), có thể gây tử vong",
+                "Triệu chứng chuyển hóa: Hạ hoặc tăng đường huyết",
+                "Triệu chứng nghiêm trọng: Rối loạn nhịp tim nghiêm trọng, đứt gân"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay moxifloxacin",
+                "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2, ECG (QUAN TRỌNG)",
+                "Điều trị rối loạn nhịp tim nếu có: Theo dõi ECG liên tục, điều trị torsades de pointes nếu cần (magnesium IV)",
+                "Điều trị co giật nếu có: Benzodiazepine, theo dõi thần kinh chặt chẽ",
+                "Điều trị đau gân nếu có: Ngừng ngay, nghỉ ngơi, chườm lạnh, thuốc giảm đau nếu cần",
+                "Điều trị hạ đường huyết nếu có: Truyền glucose, theo dõi đường huyết",
+                "Điều trị triệu chứng tiêu hóa: Chống nôn nếu cần, truyền dịch nếu mất nước"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, ECG (QT interval) liên tục, dấu hiệu thần kinh, dấu hiệu gân, đường huyết trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (loạn nhịp, co giật, đứt gân)."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ (ít nhất 1-2 ly nước) để tránh kết tinh trong nước tiểu.",
+                "timing": "Uống 1 lần/ngày (q24h), cùng một thời điểm mỗi ngày. Cách ít nhất 4 giờ trước hoặc sau khi uống antacid, sucralfate, sắt, kẽm. Không uống cùng lúc với các cation này. Ưu điểm: dùng 1 lần/ngày, không cần điều chỉnh thận."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 1.6mg/ml (tối đa). Pha 400mg trong 250ml dịch = 1.6mg/ml.",
+                "infusion_rate": "Truyền trong 60 phút (ít nhất 60 phút). Không truyền quá nhanh. Tốc độ: 250ml/60 phút = ~4.2ml/phút.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": ["Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha. Tránh pha với cation (Al3+, Mg2+, Ca2+)."],
+                "notes": "Theo dõi ECG (QT interval) trước và trong khi truyền. Theo dõi chức năng gan, dấu hiệu gân, thần kinh trong quá trình truyền. Có thể gây kích ứng tĩnh mạch - thay đổi vị trí tiêm nếu cần. Liều: 400mg x 1 lần/ngày (q24h)."
+            }
+        },
+        "pediatric_dosing": {
+            "neonates": "CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nguy cơ tổn thương sụn, viêm khớp.",
+            "infants": "CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nguy cơ tổn thương sụn, viêm khớp.",
+            "children": "CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nếu bắt buộc: 10mg/kg/ngày IV (tối đa 400mg/ngày). Theo dõi chặt chẽ ECG (QT interval), dấu hiệu đau gân, viêm gân. Nguy cơ tổn thương sụn, viêm khớp.",
+            "adolescents": "CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nếu bắt buộc: liều người lớn (400mg x 1 lần/ngày). Theo dõi chặt chẽ ECG (QT interval), dấu hiệu đau gân, viêm gân.",
+            "notes": "CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi do nguy cơ tổn thương sụn, viêm khớp. Chỉ dùng trong trường hợp đặc biệt như nhiễm trùng nặng (ví dụ: viêm phổi do Streptococcus pneumoniae kháng thuốc) không có lựa chọn khác. Nếu dùng, theo dõi chặt chẽ ECG (QT interval), dấu hiệu đau gân, viêm gân, đứt gân. Ngừng ngay nếu có đau gân hoặc QT kéo dài. Ưu điểm: dùng 1 lần/ngày, không cần điều chỉnh thận."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi (>60 tuổi) có nguy cơ cao hơn đứt gân, viêm gân (đặc biệt gân Achilles), QT kéo dài, rối loạn nhịp tim. Suy gan có thể phổ biến hơn, cần thận trọng.",
+            "dose_adjustment": "Không cần điều chỉnh liều ở suy thận (thải qua gan/mật). Thận trọng ở suy gan nặng. Khởi đầu với liều thường dùng (400mg/ngày).",
+            "monitoring": "Theo dõi chặt chẽ ECG (QT interval) trước và trong khi dùng. Theo dõi dấu hiệu đau gân, viêm gân, đứt gân (đặc biệt gân Achilles). Theo dõi chức năng gan (ALT, AST). Theo dõi dấu hiệu thần kinh (rối loạn giấc ngủ, nhức đầu). Ngừng ngay nếu có đau gân hoặc QT kéo dài."
+        },
+        "brand_names": {
+            "vietnam": ["Moxifloxacin", "Avelox", "Moxifloxacin Stada"],
+            "common": ["Avelox", "Moxifloxacin"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "15,000 - 60,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Moxifloxacin generic thường rẻ hơn (15,000-40,000 VND/viên 400mg). Avelox (brand) thường đắt hơn (40,000-60,000 VND/viên 400mg). Dạng IV: 100,000-200,000 VND/lọ 400mg."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Moxifloxacin (Avelox)",
+                "UpToDate - Moxifloxacin: Drug Information",
+                "Medscape - Moxifloxacin Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Moxifloxacin Monograph",
+                "Micromedex - Moxifloxacin Drug Information",
+                "IDSA Guidelines - Community-Acquired Pneumonia"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    }
 }
 
 __all__ = ['FLUOROQUINOLONE_ANTIBIOTICS']

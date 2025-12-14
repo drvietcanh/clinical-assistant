@@ -13,8 +13,8 @@ Reference:
 
 NEWS2 Components (7 parameters):
 1. Respiration Rate
-2. Oxygen Saturation (SpO2)
-3. Systolic Blood Pressure
+2. Độ bão hòa oxy (SpO2)
+3. Huyết áp tâm thu
 4. Pulse Rate
 5. Level of Consciousness (Alert/Verbal/Pain/Unresponsive)
 6. Temperature
@@ -196,7 +196,7 @@ def calculate_news2(
     subscores['respiration'] = resp_score
     details.append(f"**Nhịp thở:** {resp_rate:.0f} /min → {resp_score} điểm")
     
-    # 2. Oxygen Saturation
+    # 2. Độ bão hòa oxy
     spo2_score = get_oxygen_saturation_score(spo2, use_supplemental_oxygen, has_type2_respiratory_failure)
     subscores['oxygen_saturation'] = spo2_score
     scale_note = " (thang Type 2 RF)" if has_type2_respiratory_failure else ""
@@ -322,7 +322,7 @@ def render():
             help="Bình thường: 12-20 /phút"
         )
         
-        # Oxygen Saturation
+        # Độ bão hòa oxy
         col_spo2_1, col_spo2_2 = st.columns([3, 1])
         with col_spo2_1:
             spo2 = st.number_input(
@@ -456,7 +456,7 @@ def render():
             
             # Prepare inputs for export
             inputs_dict = {
-                "Respiratory Rate": f"{resp_rate} /phút",
+                "Nhịp thở": f"{resp_rate} /phút",
                 "SpO₂": f"{spo2}%",
                 "Systolic BP": f"{systolic_bp} mmHg",
                 "Pulse Rate": f"{pulse_rate} /phút",
@@ -474,7 +474,7 @@ def render():
                 "Action Plan": result['action_plan'],
                 "Subscores": {
                     "Respiration": result['subscores']['respiration'],
-                    "Oxygen Saturation": result['subscores']['oxygen_saturation'],
+                    "Độ bão hòa oxy": result['subscores']['oxygen_saturation'],
                     "Blood Pressure": result['subscores']['blood_pressure'],
                     "Pulse Rate": result['subscores']['pulse_rate'],
                     "Consciousness": result['subscores']['consciousness'],

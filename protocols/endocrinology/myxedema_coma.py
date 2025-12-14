@@ -9,7 +9,7 @@ import streamlit as st
 
 def render():
     """Phác đồ hôn mê phù niêm (Myxedema Coma)"""
-    st.subheader("❄️ Hôn Mê Phù Niêm (Myxedema Coma)")
+    st.subheader("❄️ hôn mê Phù Niêm (Myxedema Coma)")
     st.caption("Hướng dẫn ATA 2014 - Cấp cứu suy giáp đe dọa tính mạng")
     
     st.error("""
@@ -75,7 +75,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: RISK FACTORS ==========
-    st.markdown("### 📊 Yếu Tố Nguy Cơ")
+    st.markdown("### 📊 Yếu tố nguy cơ")
     
     st.markdown("""
     **Các yếu tố thúc đẩy Myxedema Coma:**
@@ -95,7 +95,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### 🚨 Điều Trị Ngay Lập Tức (ICU)")
+    st.markdown("### 🚨 Điều trị Ngay Lập Tức (ICU)")
     
     st.markdown("""
     **Thứ tự ưu tiên điều trị (theo ATA 2014):**
@@ -111,13 +111,13 @@ def render():
         **A. Hô hấp:**
         - **Oxygen:** Duy trì SpO2 >90%
         - **Thở máy:** Nếu giảm thông khí nặng, CO2 tăng
-        - **Theo Dõi:** ABG, SpO2 liên tục
+        - **Theo dõi:** ABG, SpO2 liên tục
         
         **B. Tuần hoàn:**
         - **Dịch truyền:** NS 0.9% hoặc LR
         - **Vasopressors:** Nếu huyết áp thấp không đáp ứng dịch
           - Norepinephrine: 0.05-0.3 mcg/kg/min
-        - **Theo Dõi:** Huyết áp, nhịp tim liên tục
+        - **Theo dõi:** Huyết áp, nhịp tim liên tục
         """)
     
     with col2:
@@ -126,7 +126,7 @@ def render():
         - **Làm ấm từ từ:** Tránh làm ấm quá nhanh (có thể gây shock)
         - **Chăn ấm, sưởi ấm phòng**
         - **Dịch truyền ấm** (nếu có)
-        - **Theo Dõi:** Nhiệt độ mỗi 1-2 giờ
+        - **Theo dõi:** Nhiệt độ mỗi 1-2 giờ
         
         **D. Điều chỉnh điện giải:**
         - **Hyponatremia:** Thường gặp, điều chỉnh từ từ
@@ -134,7 +134,7 @@ def render():
         """)
     
     # Step 2: Corticosteroids
-    st.markdown("#### **2. Corticosteroids (QUAN TRỌNG - Điều Trị Trước Hormone Tuyến Giáp)**")
+    st.markdown("#### **2. Corticosteroids (QUAN TRỌNG - Điều trị Trước Hormone Tuyến Giáp)**")
     
     st.error("""
     **⚠️ QUAN TRỌNG: Luôn dùng Corticosteroids TRƯỚC khi dùng Levothyroxine**
@@ -204,7 +204,7 @@ def render():
         st.info("""
         **Liothyronine (T3) - Tùy chọn:**
         
-        **Chỉ Định:**
+        **Chỉ định:**
         - Bệnh nhân nặng, không đáp ứng
         - Cần tác dụng nhanh hơn
         
@@ -225,7 +225,7 @@ def render():
     """)
     
     # Step 4: Additional treatments
-    st.markdown("#### **4. Điều Trị Bổ Sung**")
+    st.markdown("#### **4. Điều trị Bổ Sung**")
     
     st.markdown("""
     **A. Điều trị nhiễm trùng:**
@@ -246,7 +246,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     st.markdown("""
     **Theo dõi sát trong 24-48 giờ đầu:**
@@ -313,7 +313,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: LONG-TERM MANAGEMENT ==========
-    st.markdown("### 🔄 Điều Trị Dài Hạn")
+    st.markdown("### 🔄 Điều trị Dài Hạn")
     
     st.markdown("""
     **Sau khi qua giai đoạn cấp (3-5 ngày):**

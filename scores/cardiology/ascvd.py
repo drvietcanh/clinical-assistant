@@ -18,7 +18,7 @@ Variables:
 - Race (White, African American, Other)
 - Total Cholesterol (TC)
 - HDL Cholesterol
-- Systolic Blood Pressure
+- Huyết áp tâm thu
 - Treatment for hypertension (yes/no)
 - Diabetes (yes/no)
 - Current smoking (yes/no)
@@ -309,6 +309,7 @@ def render():
             max_value=79,
             value=55,
             step=1,
+            format="%d",
             help="ASCVD calculator chỉ áp dụng cho người 40-79 tuổi"
         )
         
@@ -398,6 +399,7 @@ def render():
             max_value=250,
             value=120,
             step=5,
+            format="%d",
             help="Bình thường: <120 mmHg"
         )
         

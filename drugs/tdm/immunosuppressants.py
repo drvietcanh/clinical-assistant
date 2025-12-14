@@ -227,7 +227,7 @@ def render_immunosuppressants_tdm():
     if drug == "Tacrolimus":
         st.markdown("### 💊 Tacrolimus TDM")
         
-        tab1, tab2 = st.tabs(["📊 Giải thích nồng độ", "📋 Mục Tiêu Theo Thời Gian"])
+        tab1, tab2 = st.tabs(["📊 Giải thích nồng độ", "📋 Mục tiêu Theo Thời Gian"])
         
         with tab1:
             col1, col2, col3 = st.columns(3)
@@ -336,7 +336,7 @@ def render_immunosuppressants_tdm():
                     """)
         
         with tab2:
-            st.markdown("### 📋 Mục Tiêu Tacrolimus Theo Thời Gian")
+            st.markdown("### 📋 Mục tiêu Tacrolimus Theo Thời Gian")
             
             transplant_type_table = st.selectbox(
                 "Loại ghép:",
@@ -513,7 +513,7 @@ def render_immunosuppressants_tdm():
     
     # Drug interactions
     st.markdown("---")
-    with st.expander("⚠️ Tương Tác Thuốc Quan Trọng"):
+    with st.expander("⚠️ Tương tác Thuốc Quan Trọng"):
         st.markdown("""
         **Thuốc TĂNG nồng độ (tăng độc tính):**
         - **Ketoconazole, Itraconazole, Voriconazole** (rất mạnh!)

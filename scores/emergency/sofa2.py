@@ -22,7 +22,7 @@ Components (6 organ systems - same as SOFA):
 2. Coagulation: Platelets
 3. Liver: Bilirubin
 4. Cardiovascular: MAP, modern vasopressors
-5. Central Nervous System: Glasgow Coma Scale
+5. Central Nervous System: Thang điểm hôn mê Glasgow
 6. Renal: Creatinine, urine output, RRT
 
 Score: 0-4 points per organ system → Total: 0-24 points
@@ -71,7 +71,7 @@ def calculate_sofa2(
         use_vasopressor: Whether patient is on vasopressors
         vasopressor_type: Type of vasopressor
         vasopressor_dose: Vasopressor dose (mcg/kg/min)
-        gcs: Glasgow Coma Scale
+        gcs: Thang điểm hôn mê Glasgow
         creatinine: Serum creatinine (mg/dL)
         urine_output: Urine output (mL/day)
         on_rrt: Whether patient is on RRT
@@ -194,7 +194,7 @@ def render():
         2. **Đông máu:** Tiểu cầu
         3. **Gan:** Bilirubin
         4. **Tim mạch:** MAP hoặc vasopressor hiện đại
-        5. **Thần kinh:** Glasgow Coma Scale
+        5. **Thần kinh:** Thang điểm hôn mê Glasgow
         6. **Thận:** Creatinine, nước tiểu, RRT
         
         Mỗi hệ: 0-4 điểm → Tổng: 0-24 điểm
@@ -297,7 +297,7 @@ def render():
             )
         map_value = 70.0
     else:
-        map_value = st.number_input("MAP - Mean Arterial Pressure (mmHg)", 0, 200, 70, 1, format="%d")
+        map_value = st.number_input("MAP - Huyết áp động mạch trung bình (mmHg)", 0, 200, 70, 1, format="%d")
         vasopressor_type = ""
         vasopressor_dose = 0.0
         st.caption("💡 MAP = (SBP + 2×DBP) / 3")
@@ -306,7 +306,7 @@ def render():
     
     # Central Nervous System
     st.markdown("#### 5️⃣ Thần kinh (CNS)")
-    gcs = st.number_input("Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow", 3, 15, 15, 1, format="%d")
+    gcs = st.number_input("Thang điểm hôn mê Glasgow (GCS) - Thang điểm hôn mê Glasgow", 3, 15, 15, 1, format="%d")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
     st.divider()
@@ -395,7 +395,7 @@ def render():
         - **SOFA-2 cao liên tục** → tiên lượng xấu
         - **SOFA-2 giảm** → đáp ứng điều trị tốt
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - Tính SOFA-2 hàng ngày để đánh giá diễn tiến
         - So sánh với baseline để xác định Sepsis (Sepsis-3)
         - SOFA-2 có độ chính xác cao hơn SOFA gốc nhờ big data 2025

@@ -182,7 +182,7 @@ with st.sidebar:
     
     **💊 Thuốc:**
     - Tra cứu thuốc
-    - Antibiotics
+    - Thuốc (Drugs)
     
     **🫁 Hồi sức:**
     - Critical Care (bao gồm Ventilator Management)

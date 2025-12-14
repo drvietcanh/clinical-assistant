@@ -39,7 +39,7 @@ def render():
     **-4:** Deep Sedation - Không đáp ứng giọng nói, chỉ đáp ứng kích thích vật lý
     **-5:** Unarousable - Không đáp ứng giọng nói hoặc kích thích vật lý
     
-    **Mục Tiêu RASS:**
+    **Mục tiêu RASS:**
     - **Hầu hết bệnh nhân:** -2 đến 0
     - **Cai máy thở:** 0 đến -1
     - **ARDS, sốc:** -2 đến -3
@@ -105,7 +105,7 @@ def render():
     4. Đánh giá đau
     5. Quyết định: Tiếp tục an thần hay không
     
-    **Chống Chỉ Định:**
+    **Chống chỉ định:**
     - Sốc không ổn định
     - ICP tăng
     - ARDS nặng
@@ -115,7 +115,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Checklist Điều Trị")
+    st.markdown("### 📋 Checklist Điều trị")
     
     checklist_items = [
         "✅ Đánh giá đau trước (NRS/VAS)",
@@ -171,10 +171,10 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Mục Tiêu Điều Trị")
+    st.markdown("### 🎯 Mục tiêu điều trị")
     
     st.success("""
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - ✅ RASS -2 đến 0 (khi có thể)
     - ✅ Không đau (NRS ≤3)
     - ✅ Hợp tác, tỉnh táo
@@ -182,7 +182,7 @@ def render():
     - ✅ Giảm thời gian thở máy
     - ✅ Giảm thời gian nằm ICU
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - RASS q2-4h
     - Đánh giá đau thường xuyên
     - Dấu hiệu sống
@@ -243,7 +243,7 @@ def render_analgesia():
     - Độ cứng ngực (liều cao)
     - Ức chế hô hấp
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - Đau (NRS/VAS)
     - RASS
     - Huyết áp, nhịp tim
@@ -271,7 +271,7 @@ def render_analgesia():
     - Giải phóng histamine (hạ huyết áp)
     - Thời gian bán hủy dài
     
-    **Chống Chỉ Định:**
+    **Chống chỉ định:**
     - Suy thận nặng
     - Dị ứng morphine
     """)
@@ -334,12 +334,12 @@ def render_sedation():
     - Propofol infusion syndrome (liều cao >4 mg/kg/h >48h)
     - Tăng triglyceride
     
-    **Chống Chỉ Định:**
+    **Chống chỉ định:**
     - Dị ứng propofol
     - Tăng lipid máu nặng
     - Propofol infusion syndrome
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - RASS
     - Huyết áp
     - Triglyceride (nếu dùng lâu)
@@ -369,11 +369,11 @@ def render_sedation():
     - Tăng nguy cơ delirium
     - Khó điều chỉnh
     
-    **Chống Chỉ Định:**
+    **Chống chỉ định:**
     - Suy gan nặng
     - Dị ứng benzodiazepine
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - RASS
     - Tích lũy (thời gian bán hủy tăng)
     - Delirium
@@ -402,11 +402,11 @@ def render_sedation():
     - Đắt tiền
     - Cần truyền tĩnh mạch liên tục
     
-    **Chống Chỉ Định:**
+    **Chống chỉ định:**
     - Block AV độ cao
     - Nhịp chậm nặng
     
-    **Theo Dõi:**
+    **Theo dõi:**
     - RASS
     - Nhịp tim, huyết áp
     """)
@@ -456,13 +456,13 @@ def render_light_sedation():
     st.success("## 🟢 Light Sedation (RASS -2 đến 0)")
     
     st.markdown("""
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - RASS -2 đến 0
     - Tỉnh táo, hợp tác
     - Không đau
     - Không kích động
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Analgesia:**
        - Fentanyl: 0.5-1 µg/kg/h
        - Hoặc Morphine: 0.01-0.03 mg/kg/h
@@ -471,7 +471,7 @@ def render_light_sedation():
        - Dexmedetomidine: 0.2-0.7 µg/kg/h ⭐ Ưu tiên
        - Hoặc Propofol: 5-15 µg/kg/min
     
-    3. **Theo Dõi:**
+    3. **Theo dõi:**
        - RASS q2-4h
        - Đánh giá đau thường xuyên
        - Khả năng cai máy thở
@@ -489,7 +489,7 @@ def render_moderate_sedation():
     st.warning("## 🟡 Moderate Sedation (RASS -3)")
     
     st.markdown("""
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - RASS -3
     - An thần vừa phải
     - Vẫn đáp ứng kích thích
@@ -499,7 +499,7 @@ def render_moderate_sedation():
     - Sốc
     - Cần an thần để điều trị
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Analgesia:**
        - Fentanyl: 1-2 µg/kg/h
        - Hoặc Morphine: 0.03-0.05 mg/kg/h
@@ -508,7 +508,7 @@ def render_moderate_sedation():
        - Propofol: 15-30 µg/kg/min ⭐ Ưu tiên
        - Hoặc Midazolam: 0.05-0.1 mg/kg/h
     
-    3. **Theo Dõi:**
+    3. **Theo dõi:**
        - RASS q2-4h
        - Huyết động
        - Đánh giá khả năng giảm an thần
@@ -520,7 +520,7 @@ def render_deep_sedation():
     st.error("## 🔴 Deep Sedation (RASS -4 đến -5)")
     
     st.markdown("""
-    **Mục Tiêu:**
+    **Mục tiêu:**
     - RASS -4 đến -5
     - An thần sâu
     - Chỉ đáp ứng kích thích vật lý
@@ -531,7 +531,7 @@ def render_deep_sedation():
     - ICP tăng
     - Cần an thần sâu để điều trị
     
-    **Điều Trị:**
+    **Điều trị:**
     1. **Analgesia:**
        - Fentanyl: 1-2 µg/kg/h
        - Hoặc Morphine: 0.03-0.05 mg/kg/h
@@ -541,7 +541,7 @@ def render_deep_sedation():
        - Hoặc Midazolam: 0.1 mg/kg/h
        - Có thể kết hợp
     
-    3. **Theo Dõi:**
+    3. **Theo dõi:**
        - RASS q2-4h
        - Huyết động liên tục
        - EEG (nếu nghi ngờ co giật)

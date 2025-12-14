@@ -632,6 +632,200 @@ AZOLES_DRUGS = {
             "last_updated": "2025-01-15",
             "evidence_level": "High (FDA-approved, extensive clinical data)"
         }
+    },
+    
+    "Posaconazole": {
+        "group": "Infectious Disease - Antifungal (Azole - Triazole)",
+        "vietnamese_name": "Posaconazole, Noxafil",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Dự phòng nhiễm nấm xâm lấn (invasive fungal infections) ở bệnh nhân suy giảm miễn dịch nặng",
+            "Điều trị nhiễm nấm xâm lấn (Aspergillus, Candida, Mucor)",
+            "Nhiễm nấm kháng với các azole khác",
+            "Nhiễm nấm Mucor (mucormycosis) - hiệu quả hơn các azole khác"
+        ],
+        "contraindications": [
+            "Dị ứng posaconazole",
+            "Dùng với sirolimus (tăng nồng độ sirolimus)",
+            "Dùng với ergot alkaloids (tăng nguy cơ co thắt mạch)",
+            "Dùng với pimozide, quinidine (tăng nguy cơ QT kéo dài)"
+        ],
+        "dosage": {
+            "adult_prophylaxis": "300mg x 2 lần/ngày (ngày đầu), sau đó 300mg x 1 lần/ngày",
+            "adult_treatment": "300mg x 2 lần/ngày (ngày đầu), sau đó 300mg x 1 lần/ngày",
+            "adult_iv": "300mg IV x 2 lần/ngày (ngày đầu), sau đó 300mg IV x 1 lần/ngày",
+            "adult_delayed_release": "300mg x 1 lần/ngày (dạng delayed-release tablet)",
+            "notes": "Uống với thức ăn hoặc bữa ăn giàu chất béo để tăng hấp thu. Dạng IV: truyền trong 90 phút."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng (dạng IV chứa cyclodextrin, tích lũy ở suy thận)"
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa (buồn nôn, nôn, tiêu chảy)",
+            "Tăng men gan (ALT, AST)",
+            "QT kéo dài (hiếm)",
+            "Nhức đầu",
+            "Phát ban",
+            "Giảm tiểu cầu (hiếm)"
+        ],
+        "interactions": [
+            "Sirolimus: tăng nồng độ sirolimus - CHỐNG CHỈ ĐỊNH",
+            "Ergot alkaloids: tăng nguy cơ co thắt mạch - CHỐNG CHỈ ĐỊNH",
+            "Pimozide, Quinidine: tăng nguy cơ QT kéo dài - CHỐNG CHỈ ĐỊNH",
+            "Cyclosporine, Tacrolimus: tăng nồng độ - giảm liều 50%",
+            "Phenytoin, Rifampin: giảm nồng độ posaconazole",
+            "Midazolam, Triazolam: tăng nồng độ - giảm liều"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Posaconazole là triazole antifungal, ức chế enzyme lanosterol 14-alpha-demethylase (CYP51), ngăn chặn chuyển đổi lanosterol thành ergosterol (thành phần chính của màng tế bào nấm). Thiếu ergosterol → màng tế bào nấm không ổn định → chết tế bào nấm. Phổ kháng nấm rộng: Aspergillus, Candida, Mucor, Fusarium, Scedosporium. Đặc biệt hiệu quả trên Mucor (mucormycosis) - hiệu quả hơn các azole khác. Ức chế CYP3A4 mạnh → nhiều tương tác thuốc.",
+        "monitoring": [
+            "Chức năng gan (ALT, AST) - trước và trong điều trị",
+            "ECG (QT interval) - trước và trong điều trị (nếu có nguy cơ)",
+            "Nồng độ posaconazole trong máu (trough level) - mục tiêu >0.7-1.0 mcg/ml (prophylaxis), >1.0-1.25 mcg/ml (treatment)",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, CRP)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Nồng độ cyclosporine/tacrolimus nếu đang dùng (posaconazole tăng nồng độ)"
+        ],
+        "precautions": [
+            "Uống với thức ăn hoặc bữa ăn giàu chất béo để tăng hấp thu (tăng nồng độ trong máu)",
+            "Theo dõi nồng độ posaconazole trong máu (trough level) - quan trọng để đảm bảo hiệu quả",
+            "Mục tiêu nồng độ: >0.7-1.0 mcg/ml (prophylaxis), >1.0-1.25 mcg/ml (treatment)",
+            "Nhiều tương tác thuốc (ức chế CYP3A4 mạnh) - kiểm tra tất cả thuốc đang dùng",
+            "CHỐNG CHỈ ĐỊNH với sirolimus, ergot alkaloids, pimozide, quinidine",
+            "Giảm liều cyclosporine/tacrolimus 50% khi bắt đầu posaconazole",
+            "Theo dõi chức năng gan (tăng men gan có thể xảy ra)",
+            "Theo dõi ECG nếu có nguy cơ QT kéo dài",
+            "Dạng IV: thận trọng ở suy thận (chứa cyclodextrin, tích lũy)",
+            "Đặc biệt hiệu quả trên Mucor (mucormycosis) - lựa chọn tốt hơn các azole khác"
+        ],
+        "pharmacokinetics": {
+            "half_life": "20-35 giờ (dài)",
+            "onset": "Tác dụng kháng nấm bắt đầu trong 24-48 giờ",
+            "duration": "Dùng 1 lần/ngày sau loading dose",
+            "protein_binding": ">98%",
+            "metabolism": "Chuyển hóa qua gan (glucuronidation, không phải CYP) - ít tương tác hơn voriconazole",
+            "clearance": "Chủ yếu qua phân (77%), một phần qua thận (14%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Dạng suspension: lắc kỹ trước khi dùng.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với sirolimus, ergot alkaloids, pimozide, quinidine. Có thể gây QT kéo dài. Có thể gây tăng men gan.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Sirolimus",
+                    "mechanism": "Posaconazole ức chế CYP3A4, tăng nồng độ sirolimus",
+                    "effect": "Tăng nồng độ sirolimus đáng kể, tăng nguy cơ độc tính",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng. Nếu cần: ngừng sirolimus hoặc dùng thuốc kháng nấm khác."
+                },
+                {
+                    "drug": "Ergot alkaloids (Ergotamine, Dihydroergotamine)",
+                    "mechanism": "Posaconazole ức chế CYP3A4, tăng nồng độ ergot alkaloids",
+                    "effect": "Tăng nguy cơ co thắt mạch, hoại tử chi",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng."
+                },
+                {
+                    "drug": "Pimozide, Quinidine",
+                    "mechanism": "Posaconazole ức chế CYP3A4, tăng nồng độ pimozide/quinidine",
+                    "effect": "Tăng nguy cơ QT kéo dài, rối loạn nhịp tim",
+                    "management": "CHỐNG CHỈ ĐỊNH dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Cyclosporine, Tacrolimus",
+                    "mechanism": "Posaconazole ức chế CYP3A4, tăng nồng độ cyclosporine/tacrolimus",
+                    "effect": "Tăng nồng độ cyclosporine/tacrolimus, tăng nguy cơ độc tính thận",
+                    "management": "Giảm liều cyclosporine/tacrolimus 50% khi bắt đầu posaconazole. Theo dõi nồng độ cyclosporine/tacrolimus thường xuyên."
+                },
+                {
+                    "drug": "Phenytoin, Rifampin",
+                    "mechanism": "Cảm ứng enzyme, tăng chuyển hóa posaconazole",
+                    "effect": "Giảm nồng độ posaconazole, giảm hiệu quả",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu cần: tăng liều posaconazole hoặc dùng thuốc kháng nấm khác. Theo dõi nồng độ posaconazole."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Midazolam, Triazolam",
+                    "mechanism": "Posaconazole ức chế CYP3A4, tăng nồng độ benzodiazepine",
+                    "effect": "Tăng tác dụng an thần",
+                    "management": "Giảm liều midazolam/triazolam. Thận trọng."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng posaconazole",
+                "Dùng với sirolimus - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
+                "Dùng với ergot alkaloids - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
+                "Dùng với pimozide, quinidine - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng với dạng IV (chứa cyclodextrin)",
+                "Suy gan nặng - thận trọng, theo dõi men gan",
+                "QT kéo dài - thận trọng, theo dõi ECG",
+                "Dùng với cyclosporine/tacrolimus - giảm liều 50%",
+                "Dùng với phenytoin/rifampin - giảm hiệu quả"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Posaconazole phân loại C - thận trọng trong thai kỳ. Các nghiên cứu trên động vật cho thấy một số nguy cơ. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Cân nhắc lợi ích/nguy cơ. Nếu cần dùng: theo dõi sát thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Posaconazole bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, theo dõi men gan",
+            "severe": "Thận trọng, có thể cần giảm liều. Theo dõi men gan chặt chẽ.",
+            "notes": "Posaconazole chuyển hóa qua gan (glucuronidation). Suy gan có thể ảnh hưởng đến chuyển hóa. Theo dõi men gan thường xuyên."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Rối loạn tiêu hóa nặng (buồn nôn, nôn, tiêu chảy)",
+                "Tăng men gan",
+                "QT kéo dài (rối loạn nhịp tim)",
+                "Chóng mặt, nhức đầu"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng posaconazole",
+                "Rửa dạ dày nếu mới uống <1 giờ",
+                "Than hoạt tính",
+                "Supportive care",
+                "Theo dõi chức năng gan, ECG",
+                "Điều trị rối loạn nhịp tim nếu có"
+            ],
+            "monitoring": "Chức năng gan, ECG, nồng độ posaconazole trong máu, dấu hiệu lâm sàng"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "NÊN uống với thức ăn hoặc bữa ăn giàu chất béo để tăng hấp thu (tăng nồng độ trong máu đáng kể)",
+                "timing": "Loading dose: 300mg x 2 lần/ngày (ngày đầu). Maintenance: 300mg x 1 lần/ngày. Dạng delayed-release tablet: 300mg x 1 lần/ngày (không cần thức ăn)."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất",
+                "infusion_rate": "Truyền trong 90 phút",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Loading dose: 300mg IV x 2 lần/ngày (ngày đầu). Maintenance: 300mg IV x 1 lần/ngày. Truyền trong 90 phút. Thận trọng ở suy thận (chứa cyclodextrin)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Posaconazole (Noxafil)",
+                "UpToDate - Posaconazole Drug Information",
+                "IDSA Guidelines - Antifungal Therapy",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High (FDA-approved, extensive clinical data, IDSA guidelines)"
+        }
     }
 }
 

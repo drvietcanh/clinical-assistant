@@ -52,7 +52,7 @@
 
 ### **GIAI ĐOẠN 1: Bổ Sung 26 Thuốc (74 → 100)**
 
-#### **Nhóm 1: Thuốc Cấp Cứu & Thường Dùng (Ưu tiên cao nhất)** 🔥🔥🔥
+#### **Nhóm 1: Thuốc Cấp cứu & Thường Dùng (Ưu tiên cao nhất)** 🔥🔥🔥
 
 **Mục tiêu:** 10 thuốc
 
@@ -110,7 +110,7 @@
 
 ---
 
-#### **Nhóm 2: Thuốc Có Nguy Cơ Cao (Ưu tiên cao)** 🔥🔥
+#### **Nhóm 2: Thuốc Có Nguy cơ Cao (Ưu tiên cao)** 🔥🔥
 
 **Mục tiêu:** 6 thuốc
 

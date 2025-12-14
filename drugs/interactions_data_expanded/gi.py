@@ -222,5 +222,59 @@ GI_INTERACTIONS = {
         "management": "Cách xa ít nhất 2 giờ",
         "references": "Micromedex"
     },
+    
+    # ========== PPIs (continued) ==========
+    
+    ("PPI", "Clopidogrel"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "PPI (đặc biệt omeprazole, esomeprazole) ức chế CYP2C19, giảm tác dụng clopidogrel",
+        "description": "Có thể làm giảm hiệu quả phòng ngừa đột quỵ/nhồi máu cơ tim",
+        "management": "Cân nhắc dùng pantoprazole hoặc H2 blocker thay thế",
+        "references": "FDA"
+    },
+    
+    ("PPI", "Atazanavir"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "PPI làm giảm hấp thu atazanavir",
+        "description": "Giảm đáng kể hiệu quả atazanavir",
+        "management": "Tránh dùng chung. Cách xa ít nhất 12 giờ",
+        "references": "FDA, Micromedex"
+    },
+    
+    # ========== H2 BLOCKERS (continued) ==========
+    
+    ("Cimetidine", "Lidocaine"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Cimetidine ức chế chuyển hóa lidocaine, tăng nồng độ",
+        "description": "Tăng nguy cơ độc tính lidocaine",
+        "management": "Thận trọng khi dùng chung. Có thể cần giảm liều lidocaine",
+        "references": "Micromedex"
+    },
+    
+    ("Cimetidine", "Procainamide"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Cimetidine ức chế chuyển hóa procainamide, tăng nồng độ",
+        "description": "Tăng nguy cơ độc tính procainamide",
+        "management": "Thận trọng khi dùng chung. Có thể cần giảm liều procainamide",
+        "references": "Micromedex"
+    },
+    
+    # ========== ANTACIDS (continued) ==========
+    
+    ("Antacid", "Ciprofloxacin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Antacid (Ca, Mg, Al) chelate với ciprofloxacin, giảm hấp thu",
+        "description": "Giảm đáng kể hấp thu ciprofloxacin",
+        "management": "Cách xa ít nhất 2 giờ",
+        "references": "Micromedex"
+    },
+    
+    ("Antacid", "Levofloxacin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Antacid chelate với levofloxacin, giảm hấp thu",
+        "description": "Giảm hấp thu levofloxacin",
+        "management": "Cách xa ít nhất 2 giờ",
+        "references": "Micromedex"
+    },
 }
 

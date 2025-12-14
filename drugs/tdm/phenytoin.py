@@ -384,7 +384,7 @@ def render_phenytoin_tdm():
             """)
             
             st.markdown("---")
-            st.markdown("### 🎯 Mục Tiêu TDM")
+            st.markdown("### 🎯 Mục tiêu TDM")
             
             st.info("""
             **Mục tiêu nồng độ: 10-20 mg/L (total phenytoin)**
@@ -546,7 +546,7 @@ def render_phenytoin_tdm():
     
     # Drug interactions
     st.markdown("---")
-    with st.expander("⚠️ Tương Tác Thuốc Quan Trọng"):
+    with st.expander("⚠️ Tương tác Thuốc Quan Trọng"):
         st.markdown("""
         **Thuốc TĂNG nồng độ Phenytoin:**
         - Isoniazid

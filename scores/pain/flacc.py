@@ -17,7 +17,7 @@ def render():
         st.markdown("""
         **FLACC** là thang điểm quan sát hành vi để đánh giá đau ở trẻ em không thể tự báo cáo.
         
-        **Chỉ Định:**
+        **Chỉ định:**
         - Trẻ em 2 tháng - 7 tuổi
         - Trẻ không thể giao tiếp (hôn mê, thở máy, chậm phát triển)
         - Sau phẫu thuật, chấn thương
@@ -142,7 +142,7 @@ def render():
         </div>
         """, unsafe_allow_html=True)
         
-        # Breakdown
+        # Chi tiết
         st.markdown("### 📋 Chi tiết điểm số:")
         st.markdown(f"""
         - **Face (Khuôn mặt):** {face}/2
@@ -166,11 +166,11 @@ def render():
             st.info("""
             **💊 Đau nhẹ (FLACC 1-3):**
             
-            **Điều Trị:**
+            **Điều trị:**
             - Paracetamol: 15 mg/kg mỗi 4-6 giờ (max 60 mg/kg/ngày)
             - Ibuprofen: 10 mg/kg mỗi 6-8 giờ (nếu > 6 tháng tuổi)
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Đánh giá lại sau 30-60 phút
             - Mục tiêu: FLACC ≤ 3
             """)
@@ -178,12 +178,12 @@ def render():
             st.warning("""
             **💊 Đau vừa (FLACC 4-6):**
             
-            **Điều Trị:**
+            **Điều trị:**
             - Paracetamol + Ibuprofen (nếu không chống chỉ định)
             - Hoặc Codeine: 0.5-1 mg/kg mỗi 4-6 giờ (nếu > 1 tuổi)
             - Hoặc Tramadol: 1-2 mg/kg mỗi 6-8 giờ (nếu > 1 tuổi)
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Đánh giá lại sau 30 phút
             - Mục tiêu: FLACC ≤ 3
             """)
@@ -196,7 +196,7 @@ def render():
             - Hoặc **Fentanyl IV:** 1-2 µg/kg bolus, sau đó 0.5-1 µg/kg/h
             - Kết hợp Paracetamol và NSAID
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Đánh giá lại sau 15-30 phút
             - Mục tiêu: FLACC ≤ 3 trong vòng 1 giờ
             - Theo dõi tác dụng phụ: ức chế hô hấp, buồn nôn
@@ -253,7 +253,7 @@ def render():
     2. **FLACC 1-3:** Đau nhẹ → Paracetamol/NSAID
     3. **FLACC 4-6:** Đau vừa → Opioid yếu
     4. **FLACC 7-10:** Đau nặng → Opioid mạnh ngay lập tức
-    5. **Mục Tiêu:** FLACC ≤ 3
+    5. **Mục tiêu:** FLACC ≤ 3
     6. **Đánh giá lại:** Sau 15-30 phút (đau nặng) hoặc 30-60 phút (đau nhẹ/vừa)
     """)
 

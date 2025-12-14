@@ -216,7 +216,7 @@ def render():
             - Cận thị cao
             - Da màu (gốc Phi)
             
-            **Điều Trị:**
+            **Điều trị:**
             - Thuốc nhỏ mắt hạ nhãn áp (prostaglandin analog, beta-blocker...)
             - Laser (SLT, LPI)
             - Phẫu thuật (trabeculectomy) nếu cần
@@ -226,7 +226,7 @@ def render():
             st.success("""
             ✅ **IOP trong giới hạn bình thường**
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Khám mắt định kỳ hàng năm (nếu > 40 tuổi)
             - Nếu có yếu tố nguy cơ: Khám thường xuyên hơn
             

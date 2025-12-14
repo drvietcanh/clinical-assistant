@@ -8,7 +8,7 @@ import streamlit as st
 def render():
     """Framingham Risk Score Calculator"""
     st.subheader("📈 Framingham Risk Score")
-    st.caption("Nguy Cơ Bệnh Tim Mạch 10 Năm")
+    st.caption("Nguy cơ Bệnh Tim Mạch 10 Năm")
     
     st.info("""
     **Framingham Risk Score** dự đoán nguy cơ mắc bệnh tim mạch trong 10 năm tới.
@@ -34,6 +34,7 @@ def render():
             max_value=79,
             value=50,
             step=1,
+            format="%d",
             key="fram_age"
         )
         
@@ -99,6 +100,7 @@ def render():
             max_value=200,
             value=120,
             step=5,
+            format="%d",
             key="fram_sbp"
         )
         
@@ -371,7 +373,7 @@ def render():
                 - ACE-I/ARB nếu có THA hoặc ĐTĐ
                 - Cân nhắc ezetimibe hoặc PCSK9i nếu LDL vẫn cao
                 
-                **Theo Dõi:**
+                **Theo dõi:**
                 - Lipid profile mỗi 3-6 tháng
                 - ECG hàng năm
                 - Stress test nếu có triệu chứng

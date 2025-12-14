@@ -274,7 +274,7 @@ def render():
             - Súc miệng nước muối
             - Uống nhiều nước, nghỉ ngơi
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Quay lại nếu không đỡ sau 3 ngày dùng kháng sinh
             - Hoặc nếu có dấu hiệu biến chứng
             """)
@@ -388,7 +388,7 @@ def render():
     st.info("""
     💡 **Điểm quan trọng:**
     
-    1. **Mục Tiêu:** Giảm sử dụng kháng sinh không cần thiết (antimicrobial stewardship)
+    1. **Mục tiêu:** Giảm sử dụng kháng sinh không cần thiết (antimicrobial stewardship)
     
     2. **Điểm 0-1:** KHÔNG dùng kháng sinh - hầu hết do virus
     

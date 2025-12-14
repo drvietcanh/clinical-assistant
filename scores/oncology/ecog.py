@@ -118,7 +118,7 @@ def render():
     
     st.title("🎗️ ECOG Performance Status")
     st.markdown("""
-    ### Đánh Giá Thể Trạng Bệnh Nhân Ung Thư
+    ### Đánh giá Thể Trạng Bệnh nhân Ung Thư
     
     **ECOG (Eastern Cooperative Oncology Group):**
     - Thang đo thể trạng được sử dụng rộng rãi nhất trong ung thư học
@@ -128,7 +128,7 @@ def render():
     **Ý nghĩa lâm sàng:**
     - **Quyết định điều trị:** Phác đồ hóa trị, phẫu thuật, tham gia thử nghiệm
     - **Tiên lượng:** Thời gian sống thêm
-    - **Theo Dõi:** Đánh giá đáp ứng và tiến triển bệnh
+    - **Theo dõi:** Đánh giá đáp ứng và tiến triển bệnh
     
     **Ứng dụng:**
     - Tất cả loại ung thư
@@ -224,7 +224,7 @@ def render():
         **Điều trị miễn dịch:**  
         {treatment_rec['immunotherapy']}
         
-        **Theo Dõi:**  
+        **Theo dõi:**  
         {treatment_rec['monitoring']}
         """)
         
@@ -448,7 +448,7 @@ def render():
         - Xem xét thay đổi điều trị
         """)
     
-    with st.expander("🔄 Theo Dõi ECOG Trong Điều Trị"):
+    with st.expander("🔄 Theo dõi ECOG Trong Điều trị"):
         st.markdown("""
         ### Tần suất đánh giá:
         

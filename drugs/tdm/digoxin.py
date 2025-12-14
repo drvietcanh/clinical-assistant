@@ -242,7 +242,7 @@ def render_digoxin_tdm():
             """)
             
             st.markdown("---")
-            st.markdown("### 🎯 Mục Tiêu TDM")
+            st.markdown("### 🎯 Mục tiêu TDM")
             
             if indication_code == "heart_failure":
                 st.info("""
@@ -273,7 +273,7 @@ def render_digoxin_tdm():
                 """)
             
             st.markdown("---")
-            st.markdown("### ⚠️ Cảnh Báo Độc Tính")
+            st.markdown("### ⚠️ Cảnh báo Độc Tính")
             
             st.error("""
             **Triệu chứng độc tính Digoxin:**
@@ -439,7 +439,7 @@ def render_digoxin_tdm():
                    - Liều: Tính theo nồng độ digoxin
                    - Chỉ dùng khi thật sự cần thiết
                 
-                5. **Theo Dõi:**
+                5. **Theo dõi:**
                    - ECG liên tục
                    - Nồng độ digoxin (có thể tăng sau Digibind do giải phóng từ mô)
                 """)

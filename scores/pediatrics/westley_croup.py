@@ -148,7 +148,7 @@ def render():
             st.success("""
             **✅ CROUP NHẸ - Điều trị ngoại trú**
             
-            **Điều Trị:**
+            **Điều trị:**
             - **Dexamethasone** 0.6 mg/kg PO/IM/IV (tối đa 10 mg) - LIỀU DUY NHẤT
             - Hoặc **Prednisolone** 1 mg/kg PO
             - Hơi nước ấm (không chứng minh hiệu quả nhưng vô hại)
@@ -171,7 +171,7 @@ def render():
             st.warning("""
             **⚠️ CROUP TRUNG BÌNH - Cần nhập viện**
             
-            **Điều Trị:**
+            **Điều trị:**
             1. **Dexamethasone** 0.6 mg/kg IV/IM/PO (liều duy nhất)
             
             2. **Epinephrine nebulized (nếu có stridor khi nghỉ):**
@@ -183,7 +183,7 @@ def render():
             
             3. **Oxy** nếu SpO₂ < 92%
             
-            **Theo Dõi:**
+            **Theo dõi:**
             - Quan sát ít nhất 4h (vì epinephrine có rebound)
             - Monitor SpO₂, RR, HR
             - Tái đánh giá Westley Score

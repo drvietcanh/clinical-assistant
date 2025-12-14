@@ -2,7 +2,7 @@
 
 ## Ưu tiên Bổ Sung (Đề Xuất)
 
-### Nhóm 1 - Thuốc Cấp Cứu & Thường Dùng (Ưu tiên cao)
+### Nhóm 1 - Thuốc Cấp cứu & Thường Dùng (Ưu tiên cao)
 - Paracetamol (thuốc giảm đau phổ biến nhất)
 - Ibuprofen (NSAID thường dùng)
 - Salbutamol (thuốc cấp cứu hen suyễn)
@@ -12,7 +12,7 @@
 - Fluconazole (antifungal thường dùng)
 - Ciprofloxacin, Levofloxacin (kháng sinh phổ biến)
 
-### Nhóm 2 - Thuốc Có Nguy Cơ Cao (Ưu tiên cao)
+### Nhóm 2 - Thuốc Có Nguy cơ Cao (Ưu tiên cao)
 - Valproate (cần theo dõi chặt chẽ)
 - Lamotrigine (hội chứng Stevens-Johnson)
 - Amitriptyline (antidepressant, quá liều nguy hiểm)
@@ -59,7 +59,7 @@
   - **Iron** (mineral) (đã bổ sung)
 
 ### Tiến Trình Trước Đó (2024-12-19)
-- ✅ **Nhóm 1 - Thuốc Cấp Cứu & Thường Dùng**: 10 thuốc
+- ✅ **Nhóm 1 - Thuốc Cấp cứu & Thường Dùng**: 10 thuốc
   - Adenosine, Acyclovir, Methylprednisolone, Valacyclovir, Fluconazole, Levofloxacin
   - **Paracetamol, Ibuprofen, Salbutamol, Ciprofloxacin** (mới bổ sung)
 - ✅ **Nhóm 3 - Kháng sinh & Antiviral**: 3 thuốc
@@ -72,14 +72,14 @@
   - **Itraconazole, Voriconazole** (antifungal)
   - **Ganciclovir** (antiviral)
   - **Isosorbide mononitrate** (cardiovascular) (mới bổ sung)
-- ✅ **Nhóm 2 - Thuốc Có Nguy Cơ Cao**: 6 thuốc
+- ✅ **Nhóm 2 - Thuốc Có Nguy cơ Cao**: 6 thuốc
   - Valproate, Lamotrigine, Amitriptyline, Cisplatin, Carboplatin, Cyclophosphamide
 - ✅ **Nhóm 3 - Antidepressants**: 4 thuốc
   - Fluoxetine, Sertraline, Citalopram, Escitalopram
 
 ## Schema Enhanced Fields (14 Fields)
 
-### 6 Fields Cơ Bản (Bắt Buộc)
+### 6 Fields Cơ Bản (Bắt buộc)
 1. ✅ `mechanism_of_action` - Cơ chế tác dụng
 2. ✅ `monitoring` - Các thông số cần theo dõi
 3. ✅ `precautions` - Lưu ý và thận trọng
@@ -87,7 +87,7 @@
 5. ✅ `storage` - Điều kiện bảo quản
 6. ✅ `black_box_warnings` - Cảnh báo hộp đen
 
-### 8 Fields Bổ Sung (Tùy Chọn)
+### 8 Fields Bổ Sung (Tùy chọn)
 7. `drug_interactions` - Tương tác thuốc chi tiết
 8. `contraindications` - Chống chỉ định phân loại
 9. `pregnancy_lactation` - Thai kỳ và cho con bú
@@ -108,7 +108,7 @@
 - **Minerals**: Iron
 
 ### ✅ Đã Bổ Sung Trước (36 thuốc - 2024-12-19)
-- **Emergency/Cấp Cứu**: Adenosine
+- **Emergency/Cấp cứu**: Adenosine
 - **Antiviral**: Acyclovir, Valacyclovir
 - **Corticosteroid**: Methylprednisolone
 - **Antifungal**: Fluconazole
@@ -187,7 +187,7 @@
 - ✅ **Tất cả 141 thuốc đã có đủ 6 fields cơ bản!**
 - ✅ Calcium, Vitamin D, Budesonide, Enalaprilat, Amoxicillin suspension (mới bổ sung)
 
-### 📋 Phase 2 - 8 Fields Tùy Chọn (125/141 thuốc - 88.7% hoàn thành)
+### 📋 Phase 2 - 8 Fields Tùy chọn (125/141 thuốc - 88.7% hoàn thành)
 
 #### ✅ Đã Hoàn Thành (109 thuốc)
 Xem danh sách đầy đủ bằng cách chạy: `python track_phase2_progress.py`
@@ -374,7 +374,7 @@ python check_enhanced_fields.py
 - **Schema & Template:** `drugs/enhanced_fields_schema.py`
 - **Kế hoạch chi tiết:** `drugs/PHASE2_PLAN.md`
 
-### 🎯 Mục Tiêu Tiếp Theo
+### 🎯 Mục tiêu Tiếp Theo
 1. ✅ **Nhóm 9a - Emergency & Critical Care (4 thuốc):** Epinephrine, Naloxone, Flumazenil, Lidocaine - **HOÀN THÀNH**
 2. ✅ **Nhóm 9b - Antimicrobials (10+ thuốc):** 
   - ✅ **Hoàn thành (Phần 1):** Meropenem, Piperacillin-tazobactam, Ceftriaxone, Clindamycin, Metronidazole, Doxycycline (6/10 thuốc)

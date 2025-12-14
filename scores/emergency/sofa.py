@@ -15,7 +15,7 @@ SOFA Components (6 organ systems):
 2. Coagulation: Platelets
 3. Liver: Bilirubin
 4. Cardiovascular: Mean arterial pressure (MAP) or vasopressors
-5. Central Nervous System: Glasgow Coma Scale
+5. Central Nervous System: Thang điểm hôn mê Glasgow
 6. Renal: Creatinine or urine output
 
 Score: 0-4 points per organ system → Total: 0-24 points
@@ -32,6 +32,13 @@ from components.ui.scoring import (
     render_score_result,
     render_score_breakdown,
     render_quick_reference_table,
+)
+from .sofa_lookup import (
+    get_respiratory_score,
+    get_coagulation_score,
+    get_liver_score,
+    get_cns_score,
+    get_renal_score,
 )
 
 
@@ -58,7 +65,7 @@ def calculate_sofa(
         use_vasopressor: Whether patient is on vasopressors
         vasopressor_type: Type of vasopressor (dopamine/dobutamine/epi/norepi)
         vasopressor_dose: Vasopressor dose (mcg/kg/min)
-        gcs: Glasgow Coma Scale
+        gcs: Thang điểm hôn mê Glasgow
         creatinine: Serum creatinine (mg/dL)
         urine_output: Urine output (mL/day)
     
@@ -69,56 +76,17 @@ def calculate_sofa(
     subscores = {}
     details = []
     
-    # 1. RESPIRATORY (PaO2/FiO2)
-    if pao2_fio2 >= 400:
-        subscores['respiratory'] = 0
-        details.append(f"**Hô hấp:** PaO₂/FiO₂ = {pao2_fio2:.0f} → 0 điểm")
-    elif pao2_fio2 >= 300:
-        subscores['respiratory'] = 1
-        details.append(f"**Hô hấp:** PaO₂/FiO₂ = {pao2_fio2:.0f} → 1 điểm")
-    elif pao2_fio2 >= 200:
-        subscores['respiratory'] = 2
-        details.append(f"**Hô hấp:** PaO₂/FiO₂ = {pao2_fio2:.0f} → 2 điểm")
-    elif pao2_fio2 >= 100:
-        subscores['respiratory'] = 3
-        details.append(f"**Hô hấp:** PaO₂/FiO₂ = {pao2_fio2:.0f} → 3 điểm")
-    else:
-        subscores['respiratory'] = 4
-        details.append(f"**Hô hấp:** PaO₂/FiO₂ = {pao2_fio2:.0f} → 4 điểm")
+    # 1. RESPIRATORY (PaO2/FiO2) - Using lookup table
+    subscores['respiratory'] = get_respiratory_score(pao2_fio2)
+    details.append(f"**Hô hấp:** PaO₂/FiO₂ = {pao2_fio2:.0f} → {subscores['respiratory']} điểm")
     
-    # 2. COAGULATION (Platelets)
-    if platelets >= 150:
-        subscores['coagulation'] = 0
-        details.append(f"**Đông máu:** Tiểu cầu = {platelets:.0f} → 0 điểm")
-    elif platelets >= 100:
-        subscores['coagulation'] = 1
-        details.append(f"**Đông máu:** Tiểu cầu = {platelets:.0f} → 1 điểm")
-    elif platelets >= 50:
-        subscores['coagulation'] = 2
-        details.append(f"**Đông máu:** Tiểu cầu = {platelets:.0f} → 2 điểm")
-    elif platelets >= 20:
-        subscores['coagulation'] = 3
-        details.append(f"**Đông máu:** Tiểu cầu = {platelets:.0f} → 3 điểm")
-    else:
-        subscores['coagulation'] = 4
-        details.append(f"**Đông máu:** Tiểu cầu = {platelets:.0f} → 4 điểm")
+    # 2. COAGULATION (Platelets) - Using lookup table
+    subscores['coagulation'] = get_coagulation_score(platelets)
+    details.append(f"**Đông máu:** Tiểu cầu = {platelets:.0f} → {subscores['coagulation']} điểm")
     
-    # 3. LIVER (Bilirubin)
-    if bilirubin < 1.2:
-        subscores['liver'] = 0
-        details.append(f"**Gan:** Bilirubin = {bilirubin:.1f} → 0 điểm")
-    elif bilirubin < 2.0:
-        subscores['liver'] = 1
-        details.append(f"**Gan:** Bilirubin = {bilirubin:.1f} → 1 điểm")
-    elif bilirubin < 6.0:
-        subscores['liver'] = 2
-        details.append(f"**Gan:** Bilirubin = {bilirubin:.1f} → 2 điểm")
-    elif bilirubin < 12.0:
-        subscores['liver'] = 3
-        details.append(f"**Gan:** Bilirubin = {bilirubin:.1f} → 3 điểm")
-    else:
-        subscores['liver'] = 4
-        details.append(f"**Gan:** Bilirubin = {bilirubin:.1f} → 4 điểm")
+    # 3. LIVER (Bilirubin) - Using lookup table
+    subscores['liver'] = get_liver_score(bilirubin)
+    details.append(f"**Gan:** Bilirubin = {bilirubin:.1f} → {subscores['liver']} điểm")
     
     # 4. CARDIOVASCULAR
     if use_vasopressor:
@@ -151,48 +119,13 @@ def calculate_sofa(
             subscores['cardiovascular'] = 1
             details.append(f"**Tim mạch:** MAP = {map_value:.0f} mmHg → 1 điểm")
     
-    # 5. CENTRAL NERVOUS SYSTEM (GCS)
-    if gcs == 15:
-        subscores['cns'] = 0
-        details.append(f"**Thần kinh:** GCS = 15 → 0 điểm")
-    elif gcs >= 13:
-        subscores['cns'] = 1
-        details.append(f"**Thần kinh:** GCS = 13-14 → 1 điểm")
-    elif gcs >= 10:
-        subscores['cns'] = 2
-        details.append(f"**Thần kinh:** GCS = 10-12 → 2 điểm")
-    elif gcs >= 6:
-        subscores['cns'] = 3
-        details.append(f"**Thần kinh:** GCS = 6-9 → 3 điểm")
-    else:
-        subscores['cns'] = 4
-        details.append(f"**Thần kinh:** GCS = 3-5 → 4 điểm")
+    # 5. CENTRAL NERVOUS SYSTEM (GCS) - Using lookup table
+    subscores['cns'] = get_cns_score(gcs)
+    details.append(f"**Thần kinh:** GCS = {gcs} → {subscores['cns']} điểm")
     
-    # 6. RENAL
-    if creatinine < 1.2:
-        renal_by_cr = 0
-    elif creatinine < 2.0:
-        renal_by_cr = 1
-    elif creatinine < 3.5:
-        renal_by_cr = 2
-    elif creatinine < 5.0:
-        renal_by_cr = 3
-    else:
-        renal_by_cr = 4
-    
-    if urine_output >= 500:
-        renal_by_uo = 0
-    elif urine_output >= 200:
-        renal_by_uo = 3
-    else:
-        renal_by_uo = 4
-    
-    subscores['renal'] = max(renal_by_cr, renal_by_uo)
-    
-    if renal_by_uo > renal_by_cr:
-        details.append(f"**Thận:** UO = {urine_output:.0f} mL/24h → {subscores['renal']} điểm")
-    else:
-        details.append(f"**Thận:** Creatinine = {creatinine:.1f} mg/dL → {subscores['renal']} điểm")
+    # 6. RENAL - Using lookup table (combines creatinine and urine output)
+    subscores['renal'], renal_detail = get_renal_score(creatinine, urine_output)
+    details.append(renal_detail)
     
     # Calculate total
     total_score = sum(subscores.values())
@@ -270,7 +203,7 @@ def render():
         2. **Đông máu:** Tiểu cầu
         3. **Gan:** Bilirubin
         4. **Tim mạch:** MAP hoặc vasopressor
-        5. **Thần kinh:** Glasgow Coma Scale
+        5. **Thần kinh:** Thang điểm hôn mê Glasgow
         6. **Thận:** Creatinine hoặc nước tiểu
         
         Mỗi hệ: 0-4 điểm → Tổng: 0-24 điểm
@@ -351,7 +284,7 @@ def render():
             )
         map_value = 70.0  # Default when on vasopressor
     else:
-        map_value = st.number_input("MAP - Mean Arterial Pressure (mmHg)", 0, 200, 70, 1, format="%d", key="sofa_map")
+        map_value = st.number_input("MAP - Huyết áp động mạch trung bình (mmHg)", 0, 200, 70, 1, format="%d", key="sofa_map")
         vasopressor_type = ""
         vasopressor_dose = 0.0
         st.caption("💡 MAP = (SBP + 2×DBP) / 3")
@@ -360,7 +293,7 @@ def render():
     
     # Central Nervous System
     st.markdown("#### 5️⃣ Thần kinh (CNS)")
-    gcs = st.number_input("Glasgow Coma Scale (GCS) - Thang Điểm Hôn Mê Glasgow", 3, 15, 15, 1, format="%d", key="sofa_gcs")
+    gcs = st.number_input("Thang điểm hôn mê Glasgow (GCS) - Thang điểm hôn mê Glasgow", 3, 15, 15, 1, format="%d", key="sofa_gcs")
     st.caption("3 (tệ nhất) → 15 (bình thường)")
     
     st.divider()
@@ -438,7 +371,7 @@ def render():
         - **SOFA cao liên tục** → tiên lượng xấu
         - **SOFA giảm** → đáp ứng điều trị tốt
         
-        **Theo Dõi:**
+        **Theo dõi:**
         - Tính SOFA hàng ngày để đánh giá diễn tiến
         - So sánh với baseline để xác định Sepsis (Sepsis-3)
         """)

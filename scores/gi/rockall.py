@@ -131,7 +131,7 @@ def render():
             st.markdown("### 🔬 Kết quả Nội Soi")
             
             # 4. Diagnosis
-            st.markdown("#### 4. Chẩn Đoán")
+            st.markdown("#### 4. Chẩn đoán")
             
             diagnosis_options = [
                 "Mallory-Weiss tear, không có tổn thương, hoặc không có dấu hiệu chảy máu gần đây",
@@ -154,7 +154,7 @@ def render():
             st.caption(f"Điểm: {diagnosis_score}")
             
             # 5. Stigmata of recent hemorrhage
-            st.markdown("#### 5. Dấu Hiệu Chảy Máu Gần Đây")
+            st.markdown("#### 5. Dấu hiệu Chảy Máu Gần Đây")
             
             stigmata_options = [
                 "Không có dấu hiệu hoặc đốm đen (Forrest III)",
@@ -287,7 +287,7 @@ def render():
                    - Nếu ổn định lâm sàng
                    - Không comorbidity nặng
                 
-                2. **Điều Trị:**
+                2. **Điều trị:**
                    - PPI: Omeprazole 20-40mg daily
                    - Thời gian tùy nguyên nhân
                 
@@ -312,7 +312,7 @@ def render():
                    - 2-3 ngày
                    - Theo dõi biến chứng
                 
-                2. **Điều Trị:**
+                2. **Điều trị:**
                    - PPI IV 72h → PO
                    - Theo dõi Hgb
                 
@@ -368,7 +368,7 @@ def render():
                 **Complete Rockall:** 0-11 điểm
                 """)
             
-            with st.expander("📈 Bảng Nguy Cơ Theo Điểm"):
+            with st.expander("📈 Bảng Nguy cơ Theo Điểm"):
                 if is_complete:
                     st.markdown("""
                     **Complete Rockall Score:**

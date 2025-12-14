@@ -29,6 +29,7 @@ def render_input_form():
             max_value=120,
             value=50,
             step=1,
+            format="%d",
             help="Tuổi của bệnh nhân"
         )
         

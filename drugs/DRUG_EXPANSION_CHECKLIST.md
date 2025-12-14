@@ -17,7 +17,7 @@
 
 ### **GIAI ĐOẠN 1: 26 Thuốc (74 → 100)**
 
-#### **Nhóm 1: Thuốc Cấp Cứu & Thường Dùng** 🔥🔥🔥
+#### **Nhóm 1: Thuốc Cấp cứu & Thường Dùng** 🔥🔥🔥
 
 **Mục tiêu:** 10 thuốc
 
@@ -36,7 +36,7 @@
 
 ---
 
-#### **Nhóm 2: Thuốc Có Nguy Cơ Cao** 🔥🔥
+#### **Nhóm 2: Thuốc Có Nguy cơ Cao** 🔥🔥
 
 **Mục tiêu:** 6 thuốc
 

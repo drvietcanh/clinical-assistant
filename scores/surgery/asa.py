@@ -127,7 +127,7 @@ def render():
     
     st.title("🔪 ASA Physical Status Classification")
     st.markdown("""
-    ### Phân Loại Nguy Cơ Phẫu Thuật
+    ### Phân Loại Nguy cơ Phẫu Thuật
     
     **ASA Physical Status (American Society of Anesthesiologists):**
     - Hệ thống phân loại được sử dụng toàn cầu
@@ -219,7 +219,7 @@ def render():
         emergency_info = get_emergency_modifier_info()
         
         st.warning(f"""
-        ### ⚠️ Phẫu Thuật Cấp Cứu (Emergency)
+        ### ⚠️ Phẫu Thuật Cấp cứu (Emergency)
         
         **Phân loại:** {selected_asa}-E
         
@@ -228,9 +228,9 @@ def render():
         **Ảnh hưởng:** {emergency_info['impact']}
         """)
     
-    if st.button("📈 Phân tích Nguy Cơ Chi tiết", type="primary", use_container_width=True):
+    if st.button("📈 Phân tích Nguy cơ Chi tiết", type="primary", use_container_width=True):
         st.markdown("---")
-        st.subheader("🎯 Đánh giá Nguy Cơ & Khuyến nghị")
+        st.subheader("🎯 Đánh giá Nguy cơ & Khuyến nghị")
         
         # Display final classification
         final_classification = f"{selected_asa}{'-E' if is_emergency else ''}"
@@ -268,7 +268,7 @@ def render():
         
         if selected_asa == "ASA I":
             st.success("""
-            ### ✅ ASA I - Nguy Cơ Thấp Nhất
+            ### ✅ ASA I - Nguy cơ Thấp Nhất
             
             **Chuẩn bị trước mổ:**
             - Xét nghiệm tối thiểu (theo loại phẫu thuật)
@@ -287,7 +287,7 @@ def render():
             
         elif selected_asa == "ASA II":
             st.info("""
-            ### ✅ ASA II - Nguy Cơ Thấp
+            ### ✅ ASA II - Nguy cơ Thấp
             
             **Chuẩn bị trước mổ:**
             - Xét nghiệm cơ bản + đặc hiệu cho bệnh lý
@@ -311,7 +311,7 @@ def render():
             
         elif selected_asa == "ASA III":
             st.warning("""
-            ### ⚠️ ASA III - Nguy Cơ Trung Bình-Cao
+            ### ⚠️ ASA III - Nguy cơ Trung Bình-Cao
             
             **Chuẩn bị trước mổ:**
             - Xét nghiệm toàn diện
@@ -339,7 +339,7 @@ def render():
             
         elif selected_asa == "ASA IV":
             st.error("""
-            ### 🚨 ASA IV - Nguy Cơ Rất Cao
+            ### 🚨 ASA IV - Nguy cơ Rất Cao
             
             **Chuẩn bị trước mổ:**
             - Xét nghiệm toàn diện + chuyên sâu
@@ -411,7 +411,7 @@ def render():
         if is_emergency:
             st.markdown("---")
             st.error("""
-            ### ⚠️ Tác Động Của Phẫu Thuật Cấp Cứu
+            ### ⚠️ Tác Động Của Phẫu Thuật Cấp cứu
             
             **Nguy cơ tăng:**
             - Tử vong tăng 1.5-3 lần

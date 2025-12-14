@@ -21,6 +21,7 @@ ALL_CALCULATORS = {
     
     # Scores - Emergency
     "news2": {"name": "NEWS2", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
+    "mews": {"name": "MEWS - Modified Early Warning Score", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "qsofa": {"name": "qSOFA", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "sofa": {"name": "SOFA", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "sofa2": {"name": "SOFA-2 (2025)", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
@@ -35,6 +36,8 @@ ALL_CALCULATORS = {
     "wells_pe": {"name": "Wells PE", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
     "smartcop": {"name": "SMART-COP", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
     "bode": {"name": "BODE Index", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
+    "ards_berlin": {"name": "ARDS Berlin Definition", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
+    "pesi": {"name": "PESI", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
     
     # Scores - Neurology
     "gcs": {"name": "GCS", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
@@ -42,6 +45,9 @@ ALL_CALCULATORS = {
     "ich_score": {"name": "ICH Score", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     "hunt_hess": {"name": "Hunt & Hess", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     "mrs": {"name": "mRS", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
+    "aspects": {"name": "ASPECTS", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
+    "abcd2": {"name": "ABCD2", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
+    "barthel": {"name": "Barthel Index", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     
     # Scores - GI/Hepatology
     "bisap": {"name": "BISAP Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
@@ -75,6 +81,10 @@ ALL_CALCULATORS = {
     "pews": {"name": "PEWS - Pediatric Early Warning Score", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
     "pediatric_gcs": {"name": "Pediatric GCS", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
     "westley_croup": {"name": "Westley Croup Score", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
+    "pelod2": {"name": "PELOD-2", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
+    "prism3": {"name": "PRISM III", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
+    "pim2": {"name": "PIM2 - Pediatric Index of Mortality 2", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
+    "pediatric_sofa": {"name": "Pediatric SOFA", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
     
     # Scores - Surgery/Anesthesia
     "asa": {"name": "ASA Physical Status", "category": "Phẫu Thuật", "icon": "🔪", "page": "Scores"},
@@ -126,6 +136,18 @@ ALL_CALCULATORS = {
     
     # Scores - Ophthalmology
     "iop_correction": {"name": "IOP Correction", "category": "Mắt", "icon": "👁️", "page": "Scores"},
+    
+    # Scores - Pain Assessment
+    "nrs": {"name": "NRS - Numeric Rating Scale", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
+    "vas": {"name": "VAS - Visual Analog Scale", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
+    "flacc": {"name": "FLACC", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
+    "nips": {"name": "NIPS - Neonatal Infant Pain Scale", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
+    "wong_baker": {"name": "Wong-Baker Faces Scale", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
+    "dn4": {"name": "DN4 - Neuropathic Pain", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
+    
+    # Scores - Nursing Care
+    "braden": {"name": "Braden Scale", "category": "Điều Dưỡng", "icon": "🩺", "page": "Scores"},
+    "morse": {"name": "Morse Fall Scale", "category": "Điều Dưỡng", "icon": "🩺", "page": "Scores"},
     
     # Scores - Metabolism/Endocrinology
     "crcl": {"name": "CrCl - Cockcroft-Gault", "category": "Nội Tiết", "icon": "💉", "page": "Scores"},

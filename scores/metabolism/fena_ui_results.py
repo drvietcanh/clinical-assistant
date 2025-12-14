@@ -1,5 +1,5 @@
 """
-FENa Calculator - Results Display UI Components
+FENa Calculator - Kết quảs Display UI Components
 Handles all results display sections
 """
 

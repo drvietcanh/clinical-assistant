@@ -60,7 +60,7 @@ def calculate_gbs(
     elif sbp < 110:
         score += 1
     
-    # Heart Rate
+    # Nhịp tim
     if hr >= 100:
         score += 1
     
@@ -175,7 +175,7 @@ def render():
             step=5
         )
         
-        # Heart Rate
+        # Nhịp tim
         hr = st.number_input(
             "**Nhịp tim (lần/phút):**",
             min_value=30,
@@ -339,7 +339,7 @@ def render():
                    - Có thể làm trong 24h
                    - Hoặc ngoại trú trong vài ngày nếu ổn định
                 
-                4. **Theo Dõi:**
+                4. **Theo dõi:**
                    - Vital signs q4-6h
                    - CBC lặp lại sau 6-12h
                    - Đánh giá lại cho xuất viện nếu:
@@ -383,7 +383,7 @@ def render():
                    - Không cần siêu khẩn cấp (trừ hemodynamic instability)
                    - Pre-endoscopy: Erythromycin 250mg IV (giúp làm sạch dạ dày)
                 
-                4. **Theo Dõi:**
+                4. **Theo dõi:**
                    - Vital signs q2-4h
                    - CBC mỗi 6-12h
                    - Đánh giá lại GBS sau resuscitation
@@ -432,7 +432,7 @@ def render():
                    
                    **Truyền máu:**
                    - **PRBC:** Nếu Hgb <7 g/dL (hoặc <8 nếu CAD/instability)
-                   - **Mục Tiêu:** Hgb 7-9 g/dL
+                   - **Mục tiêu:** Hgb 7-9 g/dL
                    - **Tránh over-transfusion** (tăng pressure, tăng rebleeding)
                    - **FFP:** Nếu INR >1.5-2.0 và chảy máu active
                    - **Platelet:** Nếu <50,000 và chảy máu active
@@ -502,7 +502,7 @@ def render():
             
             with st.expander("📈 Bảng Chấm Điểm Glasgow-Blatchford"):
                 st.markdown("""
-                | Yếu Tố | Tiêu chuẩn | Điểm |
+                | Yếu tố | Tiêu chuẩn | Điểm |
                 |--------|-----------|------|
                 | **BUN (mg/dL)** | ≥150 (≥25 mmol/L) | 6 |
                 | | 100-149.9 (18.2-24.9) | 4 |

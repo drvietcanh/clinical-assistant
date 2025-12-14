@@ -233,13 +233,13 @@ def render():
         
         **Khuyến nghị điều trị:** {result['recommendation']}
         
-        **Theo Dõi:** {result['monitoring']}
+        **Theo dõi:** {result['monitoring']}
         """)
         
         # Suicide risk assessment
         if scores[8] > 0:
             st.markdown("---")
-            st.subheader("⚠️ Đánh giá Nguy Cơ Tự Tử")
+            st.subheader("⚠️ Đánh giá Nguy cơ Tự Tử")
             
             if suicide_risk['color'] == "🔴":
                 st.error(f"""
@@ -343,7 +343,7 @@ def render():
         - Xem xét các chẩn đoán phân biệt (rối loạn lưỡng cực, lo âu, v.v.)
         """)
     
-    with st.expander("💊 Lựa Chọn Điều Trị"):
+    with st.expander("💊 Lựa Chọn Điều trị"):
         st.markdown("""
         ### Tâm lý trị liệu:
         
@@ -393,7 +393,7 @@ def render():
         - ECT (trầm cảm nặng, không đáp ứng)
         """)
     
-    with st.expander("🔄 Theo Dõi Điều Trị"):
+    with st.expander("🔄 Theo dõi Điều trị"):
         st.markdown("""
         ### Lịch tái đánh giá PHQ-9:
         
@@ -411,7 +411,7 @@ def render():
         **Đáp ứng điều trị:**
         - **Response:** Giảm ≥ 50% điểm PHQ-9
         - **Remission:** PHQ-9 < 5
-        - **Mục Tiêu:** Remission hoàn toàn
+        - **Mục tiêu:** Remission hoàn toàn
         
         **Khi dừng thuốc:**
         - Chỉ sau remission ≥ 6-12 tháng
@@ -420,7 +420,7 @@ def render():
         - PHQ-9 định kỳ mỗi tháng × 3 tháng
         """)
     
-    with st.expander("⚠️ Đánh giá Nguy Cơ Tự Tử Chi tiết"):
+    with st.expander("⚠️ Đánh giá Nguy cơ Tự Tử Chi tiết"):
         st.markdown("""
         ### Yếu tố nguy cơ cao:
         

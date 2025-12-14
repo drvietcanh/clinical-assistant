@@ -8,7 +8,7 @@ import streamlit as st
 def render():
     """TIMI Risk Score Calculator"""
     st.subheader("💔 TIMI Risk Score")
-    st.caption("Đánh giá Nguy Cơ Trong UA/NSTEMI")
+    st.caption("Đánh giá Nguy cơ Trong UA/NSTEMI")
     
     st.info("""
     **TIMI Risk Score** dự đoán tử vong, nhồi máu cơ tim mới hoặc cần tái can thiệp trong 14 ngày.

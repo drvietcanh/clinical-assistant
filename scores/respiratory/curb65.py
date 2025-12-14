@@ -62,11 +62,12 @@ def render():
         
         # Respiratory rate
         rr = st.number_input(
-            "**R** - Respiratory Rate (nhịp thở/phút)",
+            "**R** - Nhịp thở (nhịp thở/phút)",
             min_value=0,
             max_value=60,
             value=18,
             step=1,
+            format="%d",
             help="Bình thường: 12-20/phút"
         )
         
@@ -76,7 +77,8 @@ def render():
             min_value=0,
             max_value=300,
             value=120,
-            step=5
+            step=5,
+            format="%d"
         )
         
         dbp = st.number_input(
@@ -84,7 +86,8 @@ def render():
             min_value=0,
             max_value=200,
             value=80,
-            step=5
+            step=5,
+            format="%d"
         )
         
         # Age
@@ -125,27 +128,27 @@ def render():
                 
                 if score == 0:
                     st.success(f"## CURB-65 = {score}")
-                    st.success("✅ Nguy Cơ THẤP")
+                    st.success("✅ Nguy cơ THẤP")
                     mortality = "0.7%"
                     recommendation = "Điều trị ngoại trú"
                 elif score == 1:
                     st.info(f"## CURB-65 = {score}")
-                    st.info("💡 Nguy Cơ THẤP")
+                    st.info("💡 Nguy cơ THẤP")
                     mortality = "2.1%"
                     recommendation = "Điều trị ngoại trú hoặc theo dõi ngắn"
                 elif score == 2:
                     st.warning(f"## CURB-65 = {score}")
-                    st.warning("⚠️ Nguy Cơ TRUNG BÌNH")
+                    st.warning("⚠️ Nguy cơ TRUNG BÌNH")
                     mortality = "9.2%"
                     recommendation = "Cân nhắc nhập viện"
                 elif score == 3:
                     st.error(f"## CURB-65 = {score}")
-                    st.error("❗ Nguy Cơ CAO")
+                    st.error("❗ Nguy cơ CAO")
                     mortality = "14.5%"
                     recommendation = "Nhập viện, ICU nếu cần"
                 else:
                     st.error(f"## CURB-65 = {score}")
-                    st.error("🚨 Nguy Cơ RẤT CAO")
+                    st.error("🚨 Nguy cơ RẤT CAO")
                     mortality = "40%"
                     recommendation = "Nhập ICU ngay"
             

@@ -39,7 +39,7 @@ def render():
         "Grade 1": {
             "name": "Grade 1 - Không triệu chứng hoặc đau đầu nhẹ",
             "desc": """
-            **Triệu Chứng:**
+            **Triệu chứng:**
             - Không có triệu chứng hoặc
             - Đau đầu nhẹ và
             - Cứng gáy nhẹ
@@ -54,7 +54,7 @@ def render():
         "Grade 2": {
             "name": "Grade 2 - Đau đầu vừa đến nặng, cứng gáy",
             "desc": """
-            **Triệu Chứng:**
+            **Triệu chứng:**
             - Đau đầu vừa phải đến nặng
             - Cứng gáy rõ
             - Có thể có liệt thần kinh sọ (đặc biệt CN III, IV, VI)
@@ -69,7 +69,7 @@ def render():
         "Grade 3": {
             "name": "Grade 3 - Buồn ngủ, lú lẫn, thiếu sót thần kinh nhẹ",
             "desc": """
-            **Triệu Chứng:**
+            **Triệu chứng:**
             - Buồn ngủ (drowsiness)
             - Lú lẫn (confusion)
             - Thiếu sót thần kinh khu trú nhẹ
@@ -83,7 +83,7 @@ def render():
         "Grade 4": {
             "name": "Grade 4 - Hôn mê, liệt nửa người, cứng co sớm",
             "desc": """
-            **Triệu Chứng:**
+            **Triệu chứng:**
             - Hôn mê (stupor - GCS 6-8)
             - Liệt nửa người vừa đến nặng
             - Cứng co tư thế sớm (early decerebrate rigidity)
@@ -98,7 +98,7 @@ def render():
         "Grade 5": {
             "name": "Grade 5 - Hôn mê sâu, cứng co tư thế, hấp hối",
             "desc": """
-            **Triệu Chứng:**
+            **Triệu chứng:**
             - Hôn mê sâu (deep coma - GCS 3-5)
             - Cứng co tư thế (decerebrate rigidity)
             - Tình trạng hấp hối (moribund appearance)
@@ -227,7 +227,7 @@ def render():
                - Chống nôn: Ondansetron
                - Tránh aspirin, NSAIDs (tăng nguy cơ chảy máu)
             
-            7. **Theo Dõi:**
+            7. **Theo dõi:**
                - Neurological checks q2-4h
                - CT scan lặp lại nếu có diễn biến xấu
                - DSA sau xử lý để confirm occlusion phình mạch
@@ -469,7 +469,7 @@ def render():
         - Thời gian: Ngày 3-14 sau SAH (đỉnh ngày 7-10)
         - Nguyên nhân chính gây thiếu máu não muộn
         - **Phòng ngừa bắt buộc:** Nimodipine 60mg q4h × 21 ngày
-        - **Điều Trị:** 3H therapy (Hypertension, Hypervolemia, Hemodilution)
+        - **Điều trị:** 3H therapy (Hypertension, Hypervolemia, Hemodilution)
         
         **2. Tái xuất huyết - Nguy hiểm nhất:**
         - Nguy cơ cao nhất trong 24h đầu (~4%)
@@ -552,7 +552,7 @@ def render():
         - Sợ ánh sáng (photophobia)
         - Có thể mất ý thức
         
-        **Chẩn Đoán:**
+        **Chẩn đoán:**
         - **CT scan não** (độ nhạy ~95% trong 6h đầu)
         - **Chọc dò tủy sống** nếu CT âm tính nhưng nghi ngờ cao
         - **CTA hoặc DSA** để tìm phình mạch

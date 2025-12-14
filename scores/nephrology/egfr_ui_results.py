@@ -1,5 +1,5 @@
 """
-eGFR Calculator - Results Display UI Components
+eGFR Calculator - Kết quảs Display UI Components
 Handles all results display sections
 """
 
