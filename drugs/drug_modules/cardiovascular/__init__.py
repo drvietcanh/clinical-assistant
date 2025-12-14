@@ -9,6 +9,14 @@ from .vasodilators import VASODILATORS
 from .ace_inhibitors import ACE_INHIBITORS
 from .arbs import ARBS
 from .beta_blockers import BETA_BLOCKERS
+from .statins import STATINS
+from .cholesterol_absorption_inhibitors import CHOLESTEROL_ABSORPTION_INHIBITORS
+from .antiarrhythmics import ANTIARRHYTHMICS
+from .calcium_blockers import CALCIUM_BLOCKERS
+from .diuretics import DIURETICS
+from .anticoagulants import ANTICOAGULANTS
+from .pcsk9_inhibitors import PCSK9_INHIBITORS
+from .triglyceride_lowering import TRIGLYCERIDE_LOWERING_DRUGS
 
 # Merge all categories
 CARDIOVASCULAR_DRUGS = {
@@ -17,6 +25,14 @@ CARDIOVASCULAR_DRUGS = {
     **ACE_INHIBITORS,
     **ARBS,
     **BETA_BLOCKERS,
+    **STATINS,
+    **CHOLESTEROL_ABSORPTION_INHIBITORS,
+    **ANTIARRHYTHMICS,
+    **CALCIUM_BLOCKERS,
+    **DIURETICS,
+    **ANTICOAGULANTS,
+    **PCSK9_INHIBITORS,
+    **TRIGLYCERIDE_LOWERING_DRUGS,
 }
 
 __all__ = ['CARDIOVASCULAR_DRUGS']
