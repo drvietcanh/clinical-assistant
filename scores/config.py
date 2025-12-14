@@ -11,10 +11,13 @@ SCORES_BY_SPECIALTY = {
         "SOFA": {"name": "SOFA - Sequential Organ Failure Assessment", "desc": "Đánh giá suy cơ quan", "status": "✅"},
         "SOFA-2 (2025)": {"name": "SOFA-2 (2025) ⭐", "desc": "SOFA cập nhật 2025 - HFNC, ECMO, RRT, vasopressor mới", "status": "✅"},
         "APACHE II": {"name": "APACHE II", "desc": "Dự đoán tử vong ICU", "status": "✅"},
+        "APACHE III": {"name": "APACHE III - Acute Physiology and Chronic Health Evaluation III", "desc": "Dự đoán tử vong ICU - Phiên bản cập nhật (chính xác hơn APACHE II)", "status": "✅"},
         "SAPS II": {"name": "SAPS II - Simplified Acute Physiology Score", "desc": "Độ nặng bệnh nhân ICU", "status": "✅"},
         "SAPS III": {"name": "SAPS III - Simplified Acute Physiology Score III", "desc": "Dự đoán tử vong ICU - Phiên bản cập nhật (chính xác hơn SAPS II)", "status": "✅"},
         "MODS": {"name": "MODS - Multiple Organ Dysfunction Score", "desc": "Rối loạn đa cơ quan", "status": "✅"},
         "LODS": {"name": "LODS - Logistic Organ Dysfunction Score", "desc": "Đánh giá suy cơ quan trong ICU", "status": "✅"},
+        "HOSPITAL Score": {"name": "HOSPITAL Score", "desc": "Dự đoán tái nhập viện 30 ngày", "status": "✅"},
+        "LACE Index": {"name": "LACE Index", "desc": "Dự đoán tái nhập viện hoặc tử vong 30 ngày", "status": "✅"},
     },
     
     "❤️ Tim mạch (Cardiology)": {
@@ -86,6 +89,7 @@ SCORES_BY_SPECIALTY = {
         "ISS": {"name": "ISS - Injury Severity Score", "desc": "Mức độ nặng đa chấn thương (giải phẫu)", "status": "✅"},
         "NEXUS": {"name": "NEXUS C-Spine", "desc": "Cần chụp X-quang cột sống cổ", "status": "✅"},
         "Canadian C-Spine": {"name": "Canadian C-Spine Rule", "desc": "Chỉ định chụp cột sống cổ", "status": "✅"},
+        "TRISS": {"name": "TRISS - Trauma and Injury Severity Score", "desc": "Dự đoán khả năng sống sót sau chấn thương", "status": "✅"},
     },
     
     "👂 Tai Mũi Họng (ENT)": {
@@ -172,6 +176,19 @@ SCORES_BY_SPECIALTY = {
         "Caprini": {"name": "Caprini VTE Risk Score", "desc": "Nguy cơ huyết khối sau phẫu thuật", "status": "✅"},
         "Aldrete Score": {"name": "Aldrete Score", "desc": "Hồi tỉnh sau gây mê", "status": "✅"},
         "Mallampati": {"name": "Mallampati Classification", "desc": "Đánh giá đường thở khó", "status": "✅"},
+        "Apfel PONV": {"name": "Apfel PONV Risk Score", "desc": "Nguy cơ buồn nôn nôn sau mổ (PONV)", "status": "✅"},
+        "Koivuranta PONV": {"name": "Koivuranta PONV Risk Score", "desc": "Nguy cơ PONV - Phiên bản mở rộng", "status": "✅"},
+        "Wilson Risk": {"name": "Wilson Risk Score", "desc": "Dự đoán đặt nội khí quản khó", "status": "✅"},
+        "El-Ganzouri": {"name": "El-Ganzouri Risk Index", "desc": "Đánh giá nguy cơ đặt nội khí quản khó", "status": "✅"},
+        "LEMON": {"name": "LEMON Assessment", "desc": "Đánh giá đường thở khó (Look, Evaluate, Mallampati, Obstruction, Neck)", "status": "✅"},
+        "Cormack-Lehane": {"name": "Cormack-Lehane Classification", "desc": "Phân loại tầm nhìn khi soi thanh quản", "status": "✅"},
+        "Ramsay": {"name": "Ramsay Sedation Scale", "desc": "Đánh giá mức độ an thần", "status": "✅"},
+        "RASS": {"name": "RASS - Richmond Agitation-Sedation Scale", "desc": "Đánh giá an thần/kích động (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "Riker SAS": {"name": "Riker SAS - Sedation-Agitation Scale", "desc": "Thang điểm an thần/kích động", "status": "✅"},
+        "PADSS": {"name": "PADSS - Post-Anesthesia Discharge Scoring System", "desc": "Tiêu chuẩn xuất viện sau gây mê ngoại trú", "status": "✅"},
+        "ARISCAT": {"name": "ARISCAT - Assess Respiratory Risk in Surgical Patients", "desc": "Nguy cơ biến chứng hô hấp sau phẫu thuật", "status": "✅"},
+        "CAM-ICU": {"name": "CAM-ICU - Confusion Assessment Method for ICU", "desc": "Chẩn đoán mê sảng trong ICU (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "4AT": {"name": "4AT - 4 A's Test for Delirium", "desc": "Sàng lọc mê sảng nhanh (2 phút)", "status": "✅"},
     },
     
     "👁️ Mắt (Ophthalmology)": {

@@ -30,6 +30,11 @@ Clinical Utility:
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_gcs,
+    validate_blood_pressure,
+    validate_respiratory_rate
+)
 
 
 def code_gcs(gcs: int) -> int:
@@ -301,6 +306,27 @@ def render():
     
     # Calculate button
     if st.button("🧮 Tính RTS & Tiên lượng", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_gcs, gcs_error = validate_gcs(gcs)
+        if not is_valid_gcs:
+            validation_errors.append(gcs_error)
+        
+        is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+        if not is_valid_sbp:
+            validation_errors.append(sbp_error)
+        
+        is_valid_rr, rr_error = validate_respiratory_rate(rr)
+        if not is_valid_rr:
+            validation_errors.append(rr_error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         result = calculate_rts(gcs=gcs, sbp=sbp, rr=rr)
         
         # Display results

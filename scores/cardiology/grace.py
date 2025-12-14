@@ -3,6 +3,12 @@ GRACE Score Calculator
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_heart_rate,
+    validate_blood_pressure,
+    validate_lab_value
+)
 
 
 def render():
@@ -118,6 +124,35 @@ def render():
         )
         
         if st.button("🧮 Tính GRACE Score", type="primary", key="grace_calc"):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_age, age_error = validate_age(age, 20, 110)
+            if not is_valid_age:
+                validation_errors.append(age_error)
+            
+            is_valid_hr, hr_error = validate_heart_rate(hr)
+            if not is_valid_hr:
+                validation_errors.append(hr_error)
+            
+            is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+            if not is_valid_sbp:
+                validation_errors.append(sbp_error)
+            
+            # Validate creatinine
+            if scr_unit == "µmol/L":
+                is_valid_scr, scr_error = validate_lab_value(scr_umol, 10, 1500, "Creatinine", "µmol/L")
+            else:
+                is_valid_scr, scr_error = validate_lab_value(scr_mgdl, 0.1, 15, "Creatinine", "mg/dL")
+            if not is_valid_scr:
+                validation_errors.append(scr_error)
+            
+            if validation_errors:
+                st.error("**⚠️ Lỗi validation:**")
+                for error in validation_errors:
+                    st.error(f"- {error}")
+                st.stop()
+            
             # Calculate points for each variable
             points = 0
             details = []

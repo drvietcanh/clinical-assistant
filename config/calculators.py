@@ -26,10 +26,13 @@ ALL_CALCULATORS = {
     "sofa": {"name": "SOFA", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "sofa2": {"name": "SOFA-2 (2025)", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "apache2": {"name": "APACHE II", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
+    "apache3": {"name": "APACHE III", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "saps2": {"name": "SAPS II", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "saps3": {"name": "SAPS III", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "mods": {"name": "MODS", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "lods": {"name": "LODS", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
+    "hospital_score": {"name": "HOSPITAL Score", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
+    "lace_index": {"name": "LACE Index", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     
     # Scores - Respiratory
     "perc": {"name": "PERC Rule", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
@@ -79,6 +82,7 @@ ALL_CALCULATORS = {
     "iss": {"name": "ISS - Injury Severity Score", "category": "Chấn Thương", "icon": "🦴", "page": "Scores"},
     "nexus": {"name": "NEXUS C-Spine", "category": "Chấn Thương", "icon": "🦴", "page": "Scores"},
     "canadian_cspine": {"name": "Canadian C-Spine Rule", "category": "Chấn Thương", "icon": "🦴", "page": "Scores"},
+    "triss": {"name": "TRISS", "category": "Chấn Thương", "icon": "🦴", "page": "Scores"},
     
     # Scores - Pediatrics
     "apgar": {"name": "APGAR Score", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},

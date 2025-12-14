@@ -26,6 +26,13 @@ Clinical Utility:
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_gcs,
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_lab_value,
+    safe_divide
+)
 
 
 def get_respiratory_score(pao2_fio2: float) -> int:

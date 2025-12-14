@@ -7,6 +7,7 @@ from .rts import render as render_rts
 from .iss import render as render_iss
 from .nexus import render as render_nexus
 from .canadian_cspine import render as render_canadian_cspine
+from .triss import render as render_triss
 
 
 def render_trauma_calculator(calculator_id):
@@ -23,6 +24,7 @@ def render_trauma_calculator(calculator_id):
         "ISS": render_iss,
         "NEXUS": render_nexus,
         "Canadian C-Spine": render_canadian_cspine,
+        "TRISS": render_triss,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -38,5 +40,6 @@ __all__ = [
     'render_iss',
     'render_nexus',
     'render_canadian_cspine',
+    'render_triss',
 ]
 

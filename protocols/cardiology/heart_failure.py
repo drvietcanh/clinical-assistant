@@ -4,6 +4,8 @@ Acute Decompensated Heart Failure Management
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -415,15 +417,18 @@ def render():
         - Truyền liên tục nếu đáp ứng kém với bolus
         - Theo dõi điện giải, chức năng thận hàng ngày
         
-        **Tài liệu tham khảo:**
-        - McDonagh TA et al. Eur Heart J. 2021;42(36):3599-3726.
-        - Heidenreich PA et al. Circulation. 2022;145(18):e895-e1032.
-        - Felker GM et al. JAMA. 2011;305(24):2543-2550. (DOSE trial)
-        
-        **Links:**
-        - ESC 2021: https://academic.oup.com/eurheartj/article/42/36/3599/6358045
-        - AHA/ACC 2022: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063
         """)
+    
+    # References section
+    references = get_references("Heart Failure")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol hỗ trợ lâm sàng - cần cá thể hóa theo EF và clinical profile")

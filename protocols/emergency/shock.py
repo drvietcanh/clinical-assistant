@@ -361,22 +361,13 @@ def render():
     
     st.markdown("---")
     
-    with st.expander("📚 Tài liệu tham khảo"):
-        st.markdown("""
-        **Guidelines:**
-        
-        1. **Surviving Sepsis Campaign 2021**
-           - Evans L, et al. Crit Care Med. 2021;49(11):e1063-e1143.
-        
-        2. **Cardiogenic Shock:**
-           - van Diepen S, et al. Contemporary Management of Cardiogenic Shock: A Scientific Statement From the American Heart Association. Circulation. 2017;136(16):e232-e268.
-        
-        3. **Hemorrhagic Shock:**
-           - ATLS Guidelines (American College of Surgeons)
-        
-        4. **Anaphylaxis:**
-           - Muraro A, et al. Anaphylaxis: guidelines from the European Academy of Allergy and Clinical Immunology. Allergy. 2014;69(8):1026-45.
-        
-        5. **Obstructive Shock:**
-           - Konstantinides SV, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J. 2020;41(4):543-603.
-        """)
+    # References section
+    references = get_references("Shock")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )

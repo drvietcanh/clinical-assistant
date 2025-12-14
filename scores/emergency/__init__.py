@@ -10,10 +10,13 @@ from .qsofa import render as render_qsofa
 from .sofa import render as render_sofa
 from .sofa2 import render as render_sofa2
 from .apache2 import render as render_apache2
+from .apache3 import render as render_apache3
 from .saps2 import render as render_saps2
 from .saps3 import render as render_saps3
 from .mods import render as render_mods
 from .lods import render as render_lods
+from .hospital_score import render as render_hospital_score
+from .lace_index import render as render_lace_index
 
 
 def render_emergency_calculator(calculator_id):
@@ -33,10 +36,13 @@ def render_emergency_calculator(calculator_id):
         "SOFA": render_sofa,
         "SOFA-2 (2025)": render_sofa2,
         "APACHE II": render_apache2,
+        "APACHE III": render_apache3,
         "SAPS II": render_saps2,
         "SAPS III": render_saps3,
         "MODS": render_mods,
         "LODS": render_lods,
+        "HOSPITAL Score": render_hospital_score,
+        "LACE Index": render_lace_index,
     }
     
     from utils.errors import safe_render_calculator, CalculatorNotFoundError
@@ -59,9 +65,12 @@ __all__ = [
     'render_sofa',
     'render_sofa2',
     'render_apache2',
+    'render_apache3',
     'render_saps2',
     'render_saps3',
     'render_mods',
     'render_lods',
+    'render_hospital_score',
+    'render_lace_index',
 ]
 

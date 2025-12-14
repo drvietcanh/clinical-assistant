@@ -4,6 +4,8 @@ STEMI & NSTEMI Management
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -370,15 +372,18 @@ def render():
         - High-risk NSTEMI: Angiography <24h
         - Intermediate-risk: Angiography <72h
         
-        **Tài liệu tham khảo:**
-        - Collet JP et al. Eur Heart J. 2021;42(14):1289-1367.
-        - Ibanez B et al. Eur Heart J. 2018;39(2):119-177.
-        - Lawton JS et al. Circulation. 2022;145(18):e18-e114.
-        
-        **Links:**
-        - ESC 2020 NSTE-ACS: https://academic.oup.com/eurheartj/article/42/14/1289/6146063
-        - ESC 2017 STEMI: https://academic.oup.com/eurheartj/article/39/2/119/4095042
         """)
+    
+    # References section
+    references = get_references("ACS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol hỗ trợ lâm sàng - CODE STEMI cần quy trình bệnh viện cụ thể")

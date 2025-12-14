@@ -4,6 +4,8 @@ DKA Management Protocol
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def calculate_fluid_deficit(weight_kg, current_na, baseline_na=140):
@@ -423,16 +425,14 @@ def render_severe_dka():
     **Timing:** Usually 24-48h
     """)
     
-    st.markdown("---")
-    with st.expander("📚 Tài liệu tham khảo"):
-        st.markdown("""
-        - **ADA Standards of Care 2024**
-        - **ISPAD Guidelines 2022**
-        - **Key Points:**
-          * No insulin bolus (avoid rapid drops)
-          * Aggressive fluid resuscitation
-          * K⁺ replacement critical
-          * Theo dõi for cerebral edema (peds)
-          * Resolution takes 12-24h typically
-        """)
+    # References section
+    references = get_references("DKA")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

@@ -3,6 +3,8 @@
 import streamlit as st
 import pandas as pd
 from ..drug_database import DRUG_DATABASE
+from drugs.references_config import get_drug_references
+from components.references import render_references_section
 
 # Check if drug is antibiotic
 try:
@@ -90,6 +92,19 @@ def display_drug_info(drug_name, drug_data):
             st.markdown('---')
             st.markdown('### 📦 Bảo quản:')
             st.info(drug_data['storage'])
+        
+        # References section
+        st.markdown('---')
+        drug_group = drug_data.get('group', '')
+        references = get_drug_references(drug_class=drug_group)
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
     with tab_dosing:
         if 'dosage' in drug_data:
             st.markdown('### 👤 Liều dùng người lớn:')

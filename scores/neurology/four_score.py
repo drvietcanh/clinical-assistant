@@ -33,6 +33,7 @@ Clinical Utility:
 import streamlit as st
 from components.ui.results import render_result_box, render_result_card
 from components.ui.alerts import render_info_alert, render_warning_alert
+from scores.utils.validation import validate_positive
 
 
 def calculate_four_score(eye: int, motor: int, brainstem: int, respiration: int) -> dict:
@@ -175,6 +176,24 @@ def render():
     st.markdown("---")
     
     if st.button("🧮 Tính FOUR Score", type="primary", use_container_width=True):
+        # Validate inputs (all should be 0-4)
+        validation_errors = []
+        
+        if eye_score < 0 or eye_score > 4:
+            validation_errors.append("Eye score phải từ 0-4")
+        if motor_score < 0 or motor_score > 4:
+            validation_errors.append("Motor score phải từ 0-4")
+        if brainstem_score < 0 or brainstem_score > 4:
+            validation_errors.append("Brainstem score phải từ 0-4")
+        if respiration_score < 0 or respiration_score > 4:
+            validation_errors.append("Respiration score phải từ 0-4")
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         result = calculate_four_score(eye_score, motor_score, brainstem_score, respiration_score)
         
         # Display results

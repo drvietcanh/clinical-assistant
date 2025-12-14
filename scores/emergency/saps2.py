@@ -458,6 +458,47 @@ def render():
     
     # Calculate
     if st.button("🧮 Tính SAPS II Score", type="primary", use_container_width=True, key="saps2_calculate"):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_age, age_error = validate_age(age, 0, 120)
+        if not is_valid_age:
+            validation_errors.append(age_error)
+        
+        is_valid_gcs, gcs_error = validate_gcs(gcs)
+        if not is_valid_gcs:
+            validation_errors.append(gcs_error)
+        
+        is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+        if not is_valid_sbp:
+            validation_errors.append(sbp_error)
+        
+        is_valid_hr, hr_error = validate_heart_rate(heart_rate)
+        if not is_valid_hr:
+            validation_errors.append(hr_error)
+        
+        is_valid_temp, temp_error = validate_temperature(temperature)
+        if not is_valid_temp:
+            validation_errors.append(temp_error)
+        
+        is_valid_na, na_error = validate_lab_value(sodium, "Sodium", 80, 200)
+        if not is_valid_na:
+            validation_errors.append(na_error)
+        
+        is_valid_k, k_error = validate_lab_value(potassium, "Potassium", 1.5, 10.0)
+        if not is_valid_k:
+            validation_errors.append(k_error)
+        
+        is_valid_wbc, wbc_error = validate_lab_value(wbc, "WBC", 0, 100)
+        if not is_valid_wbc:
+            validation_errors.append(wbc_error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         params = {
             'age': age,
             'heart_rate': heart_rate,

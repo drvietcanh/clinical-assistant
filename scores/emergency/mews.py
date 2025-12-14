@@ -29,6 +29,12 @@ Clinical Utility:
 
 import streamlit as st
 from utils.formatters import format_number
+from scores.utils.validation import (
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_respiratory_rate,
+    validate_temperature
+)
 
 
 def get_sbp_score(sbp: float) -> int:
@@ -209,6 +215,31 @@ def render():
     
     # Calculate
     if st.button("**Tính MEWS Score**", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+        if not is_valid_sbp:
+            validation_errors.append(sbp_error)
+        
+        is_valid_hr, hr_error = validate_heart_rate(hr)
+        if not is_valid_hr:
+            validation_errors.append(hr_error)
+        
+        is_valid_rr, rr_error = validate_respiratory_rate(resp_rate)
+        if not is_valid_rr:
+            validation_errors.append(rr_error)
+        
+        is_valid_temp, temp_error = validate_temperature(temp)
+        if not is_valid_temp:
+            validation_errors.append(temp_error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         result = calculate_mews(sbp, hr, resp_rate, temp, avpu)
         
         # Display result

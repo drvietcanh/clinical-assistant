@@ -30,6 +30,13 @@ Clinical Utility:
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_respiratory_rate,
+    validate_temperature,
+    validate_lab_value
+)
 
 
 def get_respiration_score(resp_rate: float) -> int:
@@ -394,6 +401,35 @@ def render():
         )
         
         if st.button("🔢 Tính NEWS2", type="primary"):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_rr, rr_error = validate_respiratory_rate(resp_rate)
+            if not is_valid_rr:
+                validation_errors.append(rr_error)
+            
+            is_valid_sbp, sbp_error = validate_blood_pressure(systolic_bp)
+            if not is_valid_sbp:
+                validation_errors.append(sbp_error)
+            
+            is_valid_hr, hr_error = validate_heart_rate(pulse_rate)
+            if not is_valid_hr:
+                validation_errors.append(hr_error)
+            
+            is_valid_spo2, spo2_error = validate_lab_value(spo2, "SpO2", 0, 100)
+            if not is_valid_spo2:
+                validation_errors.append(spo2_error)
+            
+            is_valid_temp, temp_error = validate_temperature(temperature, "celsius" if temp_unit == "C" else "fahrenheit")
+            if not is_valid_temp:
+                validation_errors.append(temp_error)
+            
+            if validation_errors:
+                st.error("**⚠️ Lỗi validation:**")
+                for error in validation_errors:
+                    st.error(f"- {error}")
+                st.stop()
+            
             result = calculate_news2(
                 resp_rate=resp_rate,
                 spo2=spo2,

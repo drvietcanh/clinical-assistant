@@ -4,6 +4,8 @@ IDSA/ATS 2016 Guidelines
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -214,17 +216,16 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: REFERENCES ==========
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **IDSA/ATS 2016 Guidelines** - Management of Adults with Hospital-acquired and Ventilator-associated Pneumonia
-       - Kalil AC, et al. Management of Adults With Hospital-acquired and Ventilator-associated Pneumonia: 2016 Clinical Practice Guidelines by the Infectious Diseases Society of America and the American Thoracic Society. Clin Infect Dis. 2016;63(5):e61-e111.
-    
-    2. **UpToDate:** Hospital-acquired pneumonia and ventilator-associated pneumonia in adults - Last updated 2024
-    
-    3. **De-escalation Strategy:**
-       - Kuti JL, et al. Optimizing antibiotic pharmacodynamics in clinical practice. Minerva Anestesiol. 2011;77(1):88-95.
-    """)
+    # References section
+    references = get_references("HAP/VAP")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     

@@ -32,6 +32,13 @@ Clinical Utility:
 import streamlit as st
 import math
 from components.ui.results import render_result_box
+from scores.utils.validation import (
+    validate_gcs,
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_lab_value,
+    safe_divide
+)
 
 
 def get_lods_neuro_points(gcs: int) -> int:
@@ -362,6 +369,43 @@ def render():
     st.markdown("---")
     
     if st.button("🧮 Tính LODS", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_gcs, gcs_error = validate_gcs(gcs)
+        if not is_valid_gcs:
+            validation_errors.append(gcs_error)
+        
+        is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+        if not is_valid_sbp:
+            validation_errors.append(sbp_error)
+        
+        is_valid_hr, hr_error = validate_heart_rate(hr)
+        if not is_valid_hr:
+            validation_errors.append(hr_error)
+        
+        is_valid_cr, cr_error = validate_lab_value(creatinine, "Creatinine", 0, 20)
+        if not is_valid_cr:
+            validation_errors.append(cr_error)
+        
+        is_valid_platelets, platelets_error = validate_lab_value(platelets, "Platelets", 0, 1000)
+        if not is_valid_platelets:
+            validation_errors.append(platelets_error)
+        
+        is_valid_wbc, wbc_error = validate_lab_value(wbc, "WBC", 0, 100)
+        if not is_valid_wbc:
+            validation_errors.append(wbc_error)
+        
+        is_valid_bilirubin, bilirubin_error = validate_lab_value(bilirubin, "Bilirubin", 0, 50)
+        if not is_valid_bilirubin:
+            validation_errors.append(bilirubin_error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         params = {
             'gcs': gcs,
             'hr': hr,

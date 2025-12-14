@@ -5,6 +5,8 @@ Ischemic & Hemorrhagic Stroke
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -1096,4 +1098,15 @@ def render_unknown_stroke():
     - CT trong 25 phút
     - Sau khi có CT → quyết định Ischemic vs Hemorrhagic protocol
     """)
+    
+    # References section
+    references = get_references("Stroke")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

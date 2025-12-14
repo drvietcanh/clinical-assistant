@@ -6,6 +6,7 @@ Consciousness level assessment
 import streamlit as st
 from scores.references_config import get_references
 from components.references import render_references_section
+from scores.utils.validation import validate_gcs as validate_gcs_score
 
 
 def render():
@@ -67,7 +68,14 @@ def render():
         motor_score = motor_options[motor_response]
         
         if st.button("🧮 Tính GCS", type="primary"):
+            # Validate GCS components (total should be 3-15)
             total_score = eye_score + verbal_score + motor_score
+            
+            # Validation is implicit since we use radio buttons with fixed values
+            # But we can add a check for safety
+            if total_score < 3 or total_score > 15:
+                st.error("**⚠️ Lỗi: GCS phải từ 3-15**")
+                st.stop()
             
             with col2:
                 st.markdown("### 📊 Kết quả")

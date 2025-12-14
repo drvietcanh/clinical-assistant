@@ -4,6 +4,8 @@ Surviving Sepsis Campaign 2021
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -118,20 +120,14 @@ def render():
     - Nếu cardiac output thấp
     """)
     
-    with st.expander("📚 Tài liệu tham khảo"):
-        st.markdown("""
-        **Surviving Sepsis Campaign Guidelines 2021**
-        
-        **Key Changes:**
-        - 1-hour bundle (từ 3-hour và 6-hour)
-        - Lactate measurement mandatory
-        - Blood culture before antibiotics
-        - 30 mL/kg crystalloid in 3 hours
-        
-        **Reference:**
-        Evans L, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Crit Care Med. 2021;49(11):e1063-e1143.
-        
-        **Link:**
-        https://www.sccm.org/SurvivingSepsisCampaign
-        """)
+    # References section
+    references = get_references("Sepsis")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

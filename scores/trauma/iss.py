@@ -330,6 +330,21 @@ def render():
     
     # Calculate button
     if st.button("🧮 Tính ISS & Tiên lượng", type="primary", use_container_width=True):
+        # Validate AIS scores (should be 0-6)
+        validation_errors = []
+        
+        ais_values = [ais_head, ais_face, ais_chest, ais_abdomen, ais_extremities, ais_external]
+        for i, ais_val in enumerate(ais_values):
+            is_valid, error = validate_range(ais_val, 0, 6, f"AIS vùng {i+1}")
+            if not is_valid:
+                validation_errors.append(error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         ais_scores = {
             'Head/Neck': ais_head,
             'Face': ais_face,

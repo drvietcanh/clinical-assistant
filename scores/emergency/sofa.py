@@ -42,6 +42,15 @@ from .sofa_lookup import (
 )
 from scores.references_config import get_references
 from components.references import render_references_section
+from scores.utils.validation import (
+    validate_gcs,
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_respiratory_rate,
+    validate_lab_value,
+    safe_divide,
+    validate_ratio
+)
 
 
 def calculate_sofa(
@@ -246,7 +255,11 @@ def render():
     with col2:
         fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1, format="%d", help="Nồng độ oxy hít vào", key="sofa_fio2")
     
-    pao2_fio2 = (pao2 / fio2) * 100 if fio2 > 0 else 0
+    # Calculate PaO2/FiO2 ratio safely
+    if fio2 > 0:
+        pao2_fio2 = (pao2 / (fio2 / 100.0)) if fio2 > 0 else 0
+    else:
+        pao2_fio2 = 0
     st.caption(f"💡 PaO₂/FiO₂ = {pao2_fio2:.0f} mmHg")
     
     st.divider()
@@ -313,6 +326,31 @@ def render():
     
     # Calculate button
     if st.button("🧮 Tính SOFA Score", type="primary", use_container_width=True, key="sofa_calculate"):
+        # Validate inputs before calculation
+        validation_errors = []
+        
+        is_valid_gcs, gcs_error = validate_gcs(gcs)
+        if not is_valid_gcs:
+            validation_errors.append(gcs_error)
+        
+        is_valid_platelets, platelets_error = validate_lab_value(platelets, "Tiểu cầu", 0, 1000)
+        if not is_valid_platelets:
+            validation_errors.append(platelets_error)
+        
+        is_valid_bilirubin, bilirubin_error = validate_lab_value(bilirubin, "Bilirubin", 0, 50)
+        if not is_valid_bilirubin:
+            validation_errors.append(bilirubin_error)
+        
+        is_valid_creatinine, creatinine_error = validate_lab_value(creatinine, "Creatinine", 0, 20)
+        if not is_valid_creatinine:
+            validation_errors.append(creatinine_error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         result = calculate_sofa(
             pao2_fio2=pao2_fio2,
             platelets=platelets,

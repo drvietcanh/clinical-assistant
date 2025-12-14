@@ -5,6 +5,8 @@ Acute and chronic atrial fibrillation management
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -230,20 +232,16 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **AHA/ACC/HRS 2019 Guidelines**
-       - January CT, et al. Circulation. 2019
-    
-    2. **ESC 2020 Guidelines**
-       - Hindricks G, et al. Eur Heart J. 2021
-    
-    3. **UpToDate:** Atrial fibrillation
-       - Last updated: 2024
-    
-    4. **Medscape:** Atrial Fibrillation Management
-    """)
+    # References section
+    references = get_references("Atrial Fibrillation")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất.")

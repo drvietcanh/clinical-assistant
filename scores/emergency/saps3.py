@@ -29,6 +29,13 @@ import streamlit as st
 import math
 from components.ui.scoring import render_score_result
 from components.ui.results import render_result_box, render_result_card
+from scores.utils.validation import (
+    validate_age,
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_temperature,
+    validate_lab_value
+)
 
 
 def get_saps3_age_points(age: int) -> float:
@@ -390,6 +397,47 @@ def render():
     st.markdown("---")
     
     if st.button("🧮 Tính SAPS III", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_age, age_error = validate_age(age, 0, 120)
+        if not is_valid_age:
+            validation_errors.append(age_error)
+        
+        is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+        if not is_valid_sbp:
+            validation_errors.append(sbp_error)
+        
+        is_valid_hr, hr_error = validate_heart_rate(hr)
+        if not is_valid_hr:
+            validation_errors.append(hr_error)
+        
+        is_valid_temp, temp_error = validate_temperature(temp)
+        if not is_valid_temp:
+            validation_errors.append(temp_error)
+        
+        is_valid_na, na_error = validate_lab_value(na, "Sodium", 100, 180)
+        if not is_valid_na:
+            validation_errors.append(na_error)
+        
+        is_valid_k, k_error = validate_lab_value(k, "Potassium", 1.0, 10.0)
+        if not is_valid_k:
+            validation_errors.append(k_error)
+        
+        is_valid_wbc, wbc_error = validate_lab_value(wbc, "WBC", 0, 100)
+        if not is_valid_wbc:
+            validation_errors.append(wbc_error)
+        
+        is_valid_bilirubin, bilirubin_error = validate_lab_value(bilirubin, "Bilirubin", 0, 50)
+        if not is_valid_bilirubin:
+            validation_errors.append(bilirubin_error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         params = {
             'age': age,
             'sbp': sbp,

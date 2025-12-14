@@ -5,6 +5,8 @@ Acute Respiratory Distress Syndrome Management
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -518,30 +520,16 @@ def render():
         - Long-term complications: ICU-acquired weakness, cognitive impairment
         """)
     
-    st.markdown("---")
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **Berlin Definition of ARDS** - ARDS Definition Task Force 2012
-       - JAMA 2012;307(23):2526-2533
-    
-    2. **Lung Protective Ventilation** - ARDS Network 2000
-       - NEJM 2000;342:1301-1308
-    
-    3. **Prone Positioning** - PROSEVA Trial 2013
-       - NEJM 2013;368:2159-2168
-    
-    4. **Neuromuscular Blockade** - ROSE Trial 2019
-       - NEJM 2019;380:1997-2008
-    
-    5. **ECMO** - EOLIA Trial 2018
-       - NEJM 2018;378:1965-1975
-    
-    6. **Corticosteroids** - DEXA-ARDS Trial 2020
-       - JAMA 2020;323:765-776
-    
-    7. **UpToDate:** Acute Respiratory Distress Syndrome - Last updated 2024
-    """)
+    # References section
+    references = get_references("ARDS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất.")

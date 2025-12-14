@@ -4,6 +4,12 @@ Community-Acquired Pneumonia severity assessment
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_respiratory_rate,
+    validate_blood_pressure,
+    validate_lab_value
+)
 
 
 def render():

@@ -5,6 +5,8 @@ Extended protocol covering first 3 hours of sepsis management
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -460,18 +462,19 @@ def render():
     
     st.markdown("---")
     
-    # ========== SECTION 10: REFERENCES ==========
-    st.markdown("### 📚 Tài liệu tham khảo")
+    # References section
+    references = get_references("Sepsis 3-Hour")
+    if not references:
+        references = get_references("Sepsis")  # Fallback to general Sepsis references
     
-    references = [
-        "**Surviving Sepsis Campaign Guidelines 2021:** International Guidelines for Management of Sepsis and Septic Shock",
-        "**Evans L, et al.** Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Crit Care Med. 2021;49(11):e1063-e1143.",
-        "**UpToDate:** Sepsis and septic shock in adults: Management and prognosis",
-        "**IDSA:** Guidelines for the Management of Sepsis",
-    ]
-    
-    for ref in references:
-        st.markdown(f"- {ref}")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.caption("💡 Protocol này dựa trên Surviving Sepsis Campaign 2021 guidelines. Cập nhật thường xuyên theo guidelines mới nhất.")
 

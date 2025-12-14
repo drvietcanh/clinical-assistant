@@ -4,6 +4,8 @@ IDSA/ATS 2019 Guidelines
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -242,17 +244,16 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: REFERENCES ==========
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **IDSA/ATS 2019 Guidelines** - Community-Acquired Pneumonia in Adults
-       - Metlay JP, et al. Diagnosis and Treatment of Adults with Community-acquired Pneumonia. An Official Clinical Practice Guideline of the American Thoracic Society and Infectious Diseases Society of America. Am J Respir Crit Care Med. 2019;200(7):e45-e67.
-    
-    2. **UpToDate:** Community-acquired pneumonia in adults - Last updated 2024
-    
-    3. **CURB-65 Score:**
-       - Lim WS, et al. Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study. Thorax. 2003;58(5):377-382.
-    """)
+    # References section
+    references = get_references("CAP")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     
