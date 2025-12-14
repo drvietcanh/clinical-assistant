@@ -46,7 +46,7 @@ def render():
         - Gram-negative, Gram-positive, nấm
         """)
         
-        st.markdown("##### ⚡ Xử tríNgay")
+        st.markdown("##### ⚡ Xử trí Ngay")
         
         col1, col2 = st.columns(2)
         
@@ -115,7 +115,7 @@ def render():
         - Mất dịch (bỏng, tiêu chảy, nôn, đái tháo đường)
         """)
         
-        st.markdown("##### ⚡ Xử trí)
+        st.markdown("##### ⚡ Xử trí")
         
         col1, col2 = st.columns(2)
         
@@ -176,7 +176,7 @@ def render():
         - Thuyên tắc phổi lớn
         """)
         
-        st.markdown("##### ⚡ Xử trí)
+        st.markdown("##### ⚡ Xử trí")
         
         col1, col2 = st.columns(2)
         
@@ -249,7 +249,7 @@ def render():
         - Ngộ độc (beta-blocker, calcium channel blocker)
         """)
         
-        st.markdown("##### ⚡ Xử trí)
+        st.markdown("##### ⚡ Xử trí")
         
         st.success("""
         **1. Xử trí theo nguyên nhân:**
@@ -285,7 +285,7 @@ def render():
         - Hẹp động mạch chủ nặng
         """)
         
-        st.markdown("##### ⚡ Xử trí)
+        st.markdown("##### ⚡ Xử trí")
         
         col1, col2 = st.columns(2)
         
