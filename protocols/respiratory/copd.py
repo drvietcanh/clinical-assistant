@@ -4,6 +4,8 @@ GOLD 2023 Guidelines
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -279,34 +281,16 @@ def render():
     
     st.markdown("---")
     
-    with st.expander("📚 Tài liệu tham khảo"):
-        st.markdown("""
-        **GOLD 2023 - Global Initiative for Chronic Obstructive Lung Disease**
-        
-        **Định nghĩa cơn cấp COPD:**
-        Đợt xấu đi cấp tính các triệu chứng hô hấp cần điều chỉnh điều trị thường quy.
-        
-        **Phân loại:**
-        - **Nhẹ:** Chỉ cần tăng SABA
-        - **Vừa:** Cần SABA + corticosteroids ± kháng sinh
-        - **Nặng:** Cần nhập viện hoặc cấp cứu
-        
-        **Evidence-based treatment:**
-        - Bronchodilators: ✓ Cải thiện triệu chứng
-        - Corticosteroids 5 ngày: ✓ Non-inferior vs 14 ngày (REDUCE trial)
-        - Antibiotics nếu đờm mủ: ✓ Giảm thất bại điều trị
-        - NIV: ✓ Giảm tử vong & cần đặt nội khí quản
-        
-        **Guidelines:**
-        - GOLD 2023: https://goldcopd.org
-        - NICE 2018: COPD exacerbation
-        - ERS/ATS 2017: COPD guidelines
-        
-        **Tài liệu tham khảo:**
-        - Leuppi JD et al. JAMA. 2013;309(21):2223-2231 (REDUCE trial)
-        - Walters JA et al. Cochrane Database. 2014 (Systemic corticosteroids)
-        - Osadnik CR et al. Cochrane Database. 2017 (NIV)
-        """)
+    # References section
+    references = get_references("COPD")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol hỗ trợ lâm sàng - cần cá thể hóa theo từng bệnh nhân")

@@ -5,6 +5,8 @@ Life-threatening allergic reaction requiring immediate treatment
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -200,20 +202,16 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **ACAAI/WAO Anaphylaxis Guidelines 2020**
-       - World Allergy Organization Journal
-    
-    2. **NIAID Guidelines 2017**
-       - National Institute of Allergy and Infectious Diseases
-    
-    3. **UpToDate:** Anaphylaxis: Emergency treatment
-       - Last updated: 2024
-    
-    4. **Medscape:** Anaphylaxis Management
-    """)
+    # References section
+    references = get_references("Anaphylaxis")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất.")

@@ -4,6 +4,8 @@ GINA 2023 Guidelines
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -327,34 +329,16 @@ def render():
     
     st.markdown("---")
     
-    with st.expander("📚 Tài liệu tham khảo"):
-        st.markdown("""
-        **GINA 2023 - Global Initiative for Asthma**
-        
-        **Định nghĩa:**
-        Cơn hen cấp là đợt xấu đi cấp tính hoặc tiến triển của triệu chứng và chức năng phổi.
-        
-        **Phân loại mức độ nặng:**
-        - **Mild-Moderate:** Có thể nói thành câu, RR <25, HR <110, SpO₂ >95%, PEFR >50%
-        - **Severe:** Nói từng cụm từ, RR ≥25, HR ≥110, SpO₂ 90-95%, PEFR 33-50%
-        - **Đe dọa tính mạng:** Lồng ngực im lặng, tím tái, nỗ lực hô hấp kém, loạn nhịp tim, hạ huyết áp, buồn ngủ/lú lẫn, SpO₂ <90%, PEFR <33%
-        
-        **Evidence-based treatment:**
-        - SABA: ✓ First-line bronchodilator
-        - Ipratropium + SABA: ✓ Better than SABA alone (severe asthma)
-        - Systemic corticosteroids: ✓ Reduce relapse, hospital admission
-        - Magnesium sulfate: ✓ Reduce hospital admission (severe asthma)
-        
-        **Guidelines:**
-        - GINA 2023: https://ginasthma.org
-        - BTS/SIGN 2019: British Thoracic Society
-        - NAEPP EPR-4 2020: US Guidelines
-        
-        **Tài liệu tham khảo:**
-        - Rowe BH et al. Cochrane Database. 2013 (Magnesium sulfate)
-        - Griffiths B et al. Cochrane Database. 2016 (Ipratropium bromide)
-        - Rowe BH et al. Cochrane Database. 2001 (Systemic corticosteroids)
-        """)
+    # References section
+    references = get_references("Asthma")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol hỗ trợ lâm sàng - cần cá thể hóa theo từng bệnh nhân")
