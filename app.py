@@ -106,42 +106,68 @@ if offline_js_file.exists():
 # Inject Google Analytics script vào <head>
 if GOOGLE_ANALYTICS_ID and GOOGLE_ANALYTICS_ID != "G-XXXXXXXXXX":
     # Inject Google Analytics script vào head bằng cách tạo script tag động
-    # Sử dụng st.markdown với unsafe_allow_html để inject script
+    # Sử dụng streamlit.components.v1.html để inject script
     import streamlit.components.v1 as components
     
-    # Google Analytics script - Inject vào head
+    # Google Analytics script - Inject vào head với retry logic
     ga_head_script = f"""
     <script>
-        // Inject Google Analytics script vào head
+        // Inject Google Analytics script vào head với retry logic
         (function() {{
-            // Tạo script tag cho gtag.js
-            var gtagScript = document.createElement('script');
-            gtagScript.async = true;
-            gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id={GOOGLE_ANALYTICS_ID}';
+            let retryCount = 0;
+            const maxRetries = 5;
             
-            // Inject vào head
-            (document.head || document.getElementsByTagName('head')[0]).appendChild(gtagScript);
+            function initGA() {{
+                try {{
+                    // Tạo script tag cho gtag.js
+                    var gtagScript = document.createElement('script');
+                    gtagScript.async = true;
+                    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id={GOOGLE_ANALYTICS_ID}';
+                    gtagScript.onload = function() {{
+                        // Initialize dataLayer và gtag function
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){{dataLayer.push(arguments);}}
+                        window.gtag = gtag;
+                        gtag('js', new Date());
+                        
+                        // Configure Google Analytics
+                        gtag('config', '{GOOGLE_ANALYTICS_ID}', {{
+                            'page_path': window.location.pathname,
+                            'page_location': window.location.href,
+                            'page_title': document.title,
+                            'send_page_view': true
+                        }});
+                        
+                        // Track initial page view
+                        gtag('event', 'page_view', {{
+                            'page_title': document.title,
+                            'page_location': window.location.href,
+                            'page_path': window.location.pathname
+                        }});
+                    }};
+                    gtagScript.onerror = function() {{
+                        if (retryCount < maxRetries) {{
+                            retryCount++;
+                            setTimeout(initGA, 1000 * retryCount);
+                        }}
+                    }};
+                    
+                    // Inject vào head
+                    (document.head || document.getElementsByTagName('head')[0]).appendChild(gtagScript);
+                }} catch (e) {{
+                    if (retryCount < maxRetries) {{
+                        retryCount++;
+                        setTimeout(initGA, 1000 * retryCount);
+                    }}
+                }}
+            }}
             
-            // Initialize dataLayer và gtag function
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){{dataLayer.push(arguments);}}
-            window.gtag = gtag;
-            gtag('js', new Date());
-            
-            // Configure Google Analytics
-            gtag('config', '{GOOGLE_ANALYTICS_ID}', {{
-                'page_path': window.location.pathname,
-                'page_location': window.location.href,
-                'page_title': document.title,
-                'send_page_view': true
-            }});
-            
-            // Track initial page view
-            gtag('event', 'page_view', {{
-                'page_title': document.title,
-                'page_location': window.location.href,
-                'page_path': window.location.pathname
-            }});
+            // Khởi tạo ngay khi script load
+            if (document.readyState === 'loading') {{
+                document.addEventListener('DOMContentLoaded', initGA);
+            }} else {{
+                initGA();
+            }}
         }})();
     </script>
     """
@@ -159,36 +185,41 @@ if GOOGLE_ANALYTICS_ID and GOOGLE_ANALYTICS_ID != "G-XXXXXXXXXX":
             let isTracking = false;
             
             function trackPageView() {{
-                // Đợi gtag được khởi tạo
+                // Đợi gtag được khởi tạo với retry
                 if (typeof gtag === 'undefined' || typeof window.gtag === 'undefined') {{
                     if (!isTracking) {{
                         isTracking = true;
-                        setTimeout(trackPageView, 200);
+                        setTimeout(trackPageView, 500);
                     }}
                     return;
                 }}
                 
                 isTracking = false;
                 
-                // Update config và track page view
-                gtag('config', '{GOOGLE_ANALYTICS_ID}', {{
-                    'page_path': window.location.pathname,
-                    'page_location': window.location.href,
-                    'page_title': document.title
-                }});
-                
-                gtag('event', 'page_view', {{
-                    'page_title': document.title,
-                    'page_location': window.location.href,
-                    'page_path': window.location.pathname
-                }});
+                try {{
+                    // Update config và track page view
+                    gtag('config', '{GOOGLE_ANALYTICS_ID}', {{
+                        'page_path': window.location.pathname,
+                        'page_location': window.location.href,
+                        'page_title': document.title
+                    }});
+                    
+                    gtag('event', 'page_view', {{
+                        'page_title': document.title,
+                        'page_location': window.location.href,
+                        'page_path': window.location.pathname
+                    }});
+                }} catch (e) {{
+                    console.error('GA tracking error:', e);
+                }}
             }}
             
             // Track khi trang load
             function initTracking() {{
+                // Đợi một chút để đảm bảo gtag đã load
                 setTimeout(function() {{
                     trackPageView();
-                }}, 1000);
+                }}, 1500);
             }}
             
             if (document.readyState === 'loading') {{
@@ -198,14 +229,19 @@ if GOOGLE_ANALYTICS_ID and GOOGLE_ANALYTICS_ID != "G-XXXXXXXXXX":
             }}
             
             // Track khi URL thay đổi (Streamlit navigation)
-            const observer = new MutationObserver(function() {{
+            function checkUrlChange() {{
                 const currentPath = window.location.pathname;
                 const currentUrl = window.location.href;
                 if (currentPath !== lastPath || currentUrl !== lastUrl) {{
                     lastPath = currentPath;
                     lastUrl = currentUrl;
-                    setTimeout(trackPageView, 300);
+                    setTimeout(trackPageView, 500);
                 }}
+            }}
+            
+            // Sử dụng MutationObserver để detect Streamlit navigation
+            const observer = new MutationObserver(function() {{
+                checkUrlChange();
             }});
             
             // Observe changes trong document
@@ -223,14 +259,22 @@ if GOOGLE_ANALYTICS_ID and GOOGLE_ANALYTICS_ID != "G-XXXXXXXXXX":
                 }});
             }}
             
-            // Track khi hash thay đổi
+            // Periodic check để đảm bảo không miss navigation
+            const checkInterval = setInterval(checkUrlChange, 2000);
+            
+            // Event listeners
             window.addEventListener('hashchange', function() {{
-                setTimeout(trackPageView, 200);
+                setTimeout(trackPageView, 500);
+            }});
+            window.addEventListener('popstate', function() {{
+                setTimeout(trackPageView, 500);
             }});
             
-            // Track khi popstate (back/forward)
-            window.addEventListener('popstate', function() {{
-                setTimeout(trackPageView, 200);
+            // Cleanup khi page unload
+            window.addEventListener('beforeunload', function() {{
+                if (checkInterval) {{
+                    clearInterval(checkInterval);
+                }}
             }});
         }})();
     </script>
@@ -282,7 +326,7 @@ with st.sidebar:
     quick_links = [
         ("📊 Scores", "pages/01_📊_Scores.py"),
         ("🔬 Labs", "pages/05_🔬_Labs_and_Calculators.py"),
-        ("💊 Kháng sinh", "pages/02_💊_Drugs.py"),
+        ("💊 Kháng sinh", "pages/02_💊_Antibiotics.py"),
         ("💊 Tra cứu thuốc", "pages/07_💊_Drug_Database.py"),
         ("🫁 Hồi Sức", "pages/09_🫁_Critical_Care.py"),
     ]

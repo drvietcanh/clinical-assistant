@@ -70,7 +70,8 @@ with st.sidebar:
                 "🧪 FENa",
                 "📊 HbA1c ↔ eAG",
                 "🌡️ Winter Formula",
-                "🔬 Free T4 Index"
+                "🔬 Free T4 Index",
+                "💊 Lipid Panel Calculator"
             ],
             label_visibility="collapsed"
         )
@@ -90,8 +91,9 @@ with st.sidebar:
         - Osmolality, Anion Gap
         - Corrected Ca, FENa
         - HbA1c, T4 Index
+        - Lipid Panel (LDL, tỉ lệ lipid)
         
-        **💊 Liên Quan:** Các calculator này cần thiết cho điều chỉnh liều thuốc
+        **💊 Liên quan:** Các calculator này cần thiết cho điều chỉnh liều thuốc
         """)
     
     elif category == "🔬 Lab Panels":
@@ -168,11 +170,11 @@ if category == "🧮 Calculators":
     **Hướng dẫn:**
     1. Nhập các giá trị đầu vào
     2. Xem kết quả tính toán
-    3. Kiểm tra các panel xét nghiệm Liên Quan để tra cứu khoảng giá trị tham chiếu
+    3. Kiểm tra các panel xét nghiệm Liên quan để tra cứu khoảng giá trị tham chiếu
     """)
     
     # Quick Links to related lab panels
-    st.markdown("### 🔗 Liên Quan - Lab Panels")
+    st.markdown("### 🔗 Liên quan - Lab Panels")
     link_cols = st.columns(5)
     
     if "eGFR" in calculator_type or "GFR" in calculator_type:
@@ -200,12 +202,17 @@ if category == "🧮 Calculators":
             if st.button("📋 Thyroid Panel", use_container_width=True):
                 st.session_state.show_panel = "thyroid"
     
+    if "Lipid" in calculator_type:
+        with link_cols[0]:
+            if st.button("📋 Lipid Panel", use_container_width=True):
+                st.session_state.show_panel = "lipid"
+    
     st.markdown("---")
     
     # Handle show panel request
     if hasattr(st.session_state, 'show_panel'):
         panel = st.session_state.show_panel
-        st.markdown("### 🔬 Lab Panel Liên Quan")
+        st.markdown("### 🔬 Lab Panel Liên quan")
         
         if panel == "bmp":
             render_bmp()
@@ -213,6 +220,8 @@ if category == "🧮 Calculators":
             render_cmp()
         elif panel == "thyroid":
             render_thyroid()
+        elif panel == "lipid":
+            render_lipid()
         
         del st.session_state.show_panel
     
@@ -235,6 +244,8 @@ if category == "🧮 Calculators":
         render_winter_formula()
     elif "T4" in calculator_type or "Free" in calculator_type:
         render_free_t4_index()
+    elif "Lipid" in calculator_type:
+        render_lipid()
 
 elif category == "🔬 Lab Panels":
     st.info(f"""
@@ -244,7 +255,7 @@ elif category == "🔬 Lab Panels":
     1. Nhập giá trị xét nghiệm của bệnh nhân
     2. Xem giải thích tự động
     3. Kiểm tra khoảng giá trị tham chiếu
-    4. Sử dụng Quick Actions bên dưới để tính toán các giá trị Liên Quan
+    4. Sử dụng Quick Actions bên dưới để tính toán các giá trị Liên quan
     """)
     
     # Quick Actions section (for integration)

@@ -10,6 +10,7 @@ from .ranson import render as render_ranson
 from .rockall import render as render_rockall
 from .glasgow_blatchford import render as render_glasgow_blatchford
 from .bisap import render as render_bisap
+from .aims65 import render as render_aims65
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -28,6 +29,7 @@ def render_gi_calculator(calculator_id):
         "Ranson": render_ranson,
         "Rockall Score": render_rockall,
         "Glasgow-Blatchford": render_glasgow_blatchford,
+        "AIMS65": render_aims65,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -45,5 +47,6 @@ __all__ = [
     'render_ranson',
     'render_rockall',
     'render_glasgow_blatchford',
+    'render_aims65',
 ]
 

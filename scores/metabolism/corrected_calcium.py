@@ -41,7 +41,7 @@ def render():
         st.markdown("### 🔬 Xét nghiệm")
         
         # Calcium
-        st.markdown("#### 1. Calcium Toàn Phần")
+        st.markdown("#### 1. Calcium toàn phần")
         
         ca_unit = st.radio(
             "Đơn vị:",

@@ -250,6 +250,9 @@ def render_drug_database():
     # Check if quick filter is active
     quick_filter_active = '_quick_filter_keywords' in st.session_state
     
+    # Initialize search_query to avoid UnboundLocalError
+    search_query = st.session_state.get('drug_search_input', '')
+    
     if not quick_filter_active:
         st.markdown('### 🔍 Tìm kiếm thuốc')
         if 'drug_search_selected' in st.session_state:

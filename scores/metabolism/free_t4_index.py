@@ -21,7 +21,7 @@ def calculate_fti(total_t4, t3_uptake):
     FTI = Total T4 × (T3 uptake / 100)
     
     Parameters:
-    - total_t4: T4 Toàn Phần (µg/dL)
+    - total_t4: T4 toàn phần (µg/dL)
     - t3_uptake: T3 uptake (%)
     
     Returns:
@@ -67,11 +67,11 @@ def render():
     with st.expander("ℹ️ Giới thiệu về Free T4 Index"):
         st.markdown("""
         **Free T4 Index (FTI)** là phương pháp tính toán để ước tính nồng độ T4 tự do 
-        từ T4 Toàn Phần và T3 resin uptake (T3RU).
+        từ T4 toàn phần và T3 resin uptake (T3RU).
         
         **Nguyên lý:**
-        - T4 Toàn Phần = T4 tự do + T4 gắn protein
-        - Khi protein gắn hormone thay đổi → T4 Toàn Phần thay đổi nhưng T4 tự do có thể bình thường
+        - T4 toàn phần = T4 tự do + T4 gắn protein
+        - Khi protein gắn hormone thay đổi → T4 toàn phần thay đổi nhưng T4 tự do có thể bình thường
         - FTI điều chỉnh cho sự thay đổi protein gắn hormone
         
         **Mục đích:**
@@ -104,7 +104,7 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### 1️⃣ Total T4 (T4 Toàn Phần)")
+        st.markdown("### 1️⃣ Total T4 (T4 toàn phần)")
         
         total_t4_unit = st.radio(
             "Chọn đơn vị:",
@@ -248,7 +248,7 @@ def render():
         col1, col2, col3 = st.columns(3)
         
         with col1:
-            st.metric("T4 Toàn Phần", f"{_format_num(total_t4, 1)} µg/dL")
+            st.metric("T4 toàn phần", f"{_format_num(total_t4, 1)} µg/dL")
         
         with col2:
             st.metric("T3 Uptake", f"{_format_num(t3_uptake, 1)}%")
@@ -434,14 +434,14 @@ def render():
         with st.expander("📋 Các tình huống lâm sàng"):
             st.markdown("""
             ### 1. Thai kỳ:
-            - TBG tăng → T4 Toàn Phần tăng
+            - TBG tăng → T4 toàn phần tăng
             - Nhưng T4 tự do (FTI) bình thường
             - TSH: Có thể giảm nhẹ tam cá nguyệt 1 (bình thường)
             - **Lưu ý:** Khoảng tham chiếu TSH khác ở thai phụ
             
             ### 2. Dùng thuốc tránh thai/Estrogen:
             - Tương tự thai kỳ
-            - TBG tăng → T4 Toàn Phần tăng
+            - TBG tăng → T4 toàn phần tăng
             - FTI và TSH bình thường → Không cần điều trị
             
             ### 3. Bệnh nhân ICU/Bệnh nặng:
@@ -451,7 +451,7 @@ def render():
             - **Không** điều trị hormone giáp
             
             ### 4. Suy dinh dưỡng:
-            - TBG giảm → T4 Toàn Phần thấp
+            - TBG giảm → T4 toàn phần thấp
             - FTI có thể bình thường
             - T3 thường thấp (chuyển hóa giảm)
             - Điều trị nguyên nhân, không phải hormone

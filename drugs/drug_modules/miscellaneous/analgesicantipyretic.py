@@ -99,7 +99,7 @@ ANALGESIC/ANTIPYRETIC_DRUGS = {
         'antidote':
         'N-acetylcysteine (NAC) - hiệu quả nếu dùng trong vòng 8-10 giờ sau quá liều, tốt nhất trong 4-6 giờ'
         , 'treatment': [
-        'Đánh giá nguy cơ: Liều >150mg/kg (Trẻ Em) hoặc >10g (Người Lớn) hoặc >200mg/kg (người lớn có nguy cơ) = nguy cơ cao'
+        'Đánh giá nguy cơ: Liều >150mg/kg (Trẻ em) hoặc >10g (Người Lớn) hoặc >200mg/kg (người lớn có nguy cơ) = nguy cơ cao'
         ,
         'Đo nồng độ paracetamol trong máu 4 giờ sau khi uống (hoặc ngay khi đến viện nếu >4 giờ)'
         ,
@@ -122,7 +122,7 @@ ANALGESIC/ANTIPYRETIC_DRUGS = {
         }]}, 'administration_instructions': {'oral': {'with_food':
         'Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ'
         , 'timing':
-        'Mỗi 4-6 giờ khi cần. Không quá 4g/ngày (Người Lớn) hoặc 60mg/kg/ngày (Trẻ Em). Có thể dùng trước khi đi ngủ nếu cần giảm đau/giảm sốt ban đêm.'
+        'Mỗi 4-6 giờ khi cần. Không quá 4g/ngày (Người Lớn) hoặc 60mg/kg/ngày (Trẻ em). Có thể dùng trước khi đi ngủ nếu cần giảm đau/giảm sốt ban đêm.'
         }, 'iv': {'reconstitution':
         'Pha trong D5W hoặc NS. Nồng độ cuối: 1mg/ml (tối đa 10mg/ml). Dùng ngay sau khi pha.'
         , 'infusion_rate': 'Truyền trong 15 phút', 'compatibility': ['D5W',

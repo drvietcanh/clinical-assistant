@@ -58,6 +58,7 @@ SCORES_BY_SPECIALTY = {
         "Child-Pugh": {"name": "Child-Pugh Score", "desc": "Mức độ xơ gan", "status": "✅"},
         "MELD": {"name": "MELD Score", "desc": "Tiên lượng bệnh gan mạn & ghép gan", "status": "✅"},
         "Glasgow-Blatchford": {"name": "Glasgow-Blatchford Score", "desc": "UGIB - quyết định xuất viện", "status": "✅"},
+        "AIMS65": {"name": "AIMS65 Score", "desc": "UGIB - dự đoán tử vong (đơn giản, 5 yếu tố)", "status": "✅"},
         "Rockall Score": {"name": "Rockall Score", "desc": "UGIB - tiên lượng tử vong", "status": "✅"},
         "MELD-Na": {"name": "MELD-Na", "desc": "MELD điều chỉnh theo Na", "status": "✅"},
         "Ranson": {"name": "Ranson Criteria", "desc": "Tiên lượng viêm tụy cấp", "status": "✅"},

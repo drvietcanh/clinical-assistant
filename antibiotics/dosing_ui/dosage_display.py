@@ -233,7 +233,7 @@ def render_special_population_guidance(is_hemodialysis, is_continuous_hd, is_per
     """Render special population guidance (HD/PD/CRRT)"""
     if is_hemodialysis:
         st.markdown("---")
-        st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Máu Ngắt Quãng:")
+        st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc máu Ngắt Quãng:")
         
         if hd_schedule:
             hd_freq_text = f"Lịch HD: {hd_schedule}"
@@ -255,7 +255,7 @@ def render_special_population_guidance(is_hemodialysis, is_continuous_hd, is_per
     
     if is_continuous_hd:
         st.markdown("---")
-        st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Máu Liên Tục (CRRT/CVVH):")
+        st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc máu Liên Tục (CRRT/CVVH):")
         st.warning(f"""
         **CRRT/CVVH:**
         - Liều thường cao hơn HD ngắt quãng do thời gian lọc liên tục

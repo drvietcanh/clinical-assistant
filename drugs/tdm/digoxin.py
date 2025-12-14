@@ -417,7 +417,7 @@ def render_digoxin_tdm():
             
             elif interpretation['status'] == "toxic":
                 st.markdown("---")
-                st.markdown("#### 🔽 Xử Trí Độc Tính:")
+                st.markdown("#### 🔽 Xử trí Độc Tính:")
                 
                 st.error("""
                 **🚨 Xử trí ngay lập tức:**

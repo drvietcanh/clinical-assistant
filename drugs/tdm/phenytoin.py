@@ -528,7 +528,7 @@ def render_phenytoin_tdm():
         if current_level > 30:
             st.markdown("---")
             st.error("""
-            **🚨 ĐỘC TÍNH PHENYTOIN - Xử Trí Ngay:**
+            **🚨 ĐỘC TÍNH PHENYTOIN - Xử trí Ngay:**
             
             **Triệu chứng độc tính:**
             - Nystagmus (rung giật nhãn cầu)

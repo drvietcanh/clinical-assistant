@@ -134,7 +134,7 @@ def render():
             st.write(f"- **T** (Troponin): {troponin} điểm")
             
             st.markdown("---")
-            st.markdown("### 💊 Khuyến cáo Xử trí)
+            st.markdown("### 💊 Khuyến cáo xử trí")
             
             if total_score <= 3:
                 st.success("""

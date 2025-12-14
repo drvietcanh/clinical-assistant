@@ -598,7 +598,7 @@ def render_rass_guide():
         """, unsafe_allow_html=True)
     
     st.markdown("---")
-    st.markdown("### 🎯 Mục Tiêu RASS Theo Tình Huống")
+    st.markdown("### 🎯 Mục Tiêu RASS Theo Tình huống")
     
     scenarios = {
         "An thần thủ thuật": "-1 to -2",

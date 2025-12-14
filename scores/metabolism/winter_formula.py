@@ -388,7 +388,7 @@ def render():
         - Rất phức tạp, cần hội chẩn
         """)
     
-    with st.expander("🔢 Công Thức Khác Liên Quan"):
+    with st.expander("🔢 Công Thức Khác Liên quan"):
         st.markdown("""
         ### Các công thức bù thường khác:
         

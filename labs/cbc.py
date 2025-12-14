@@ -9,7 +9,7 @@ from .normal_ranges import get_normal_range, is_critical, interpret_value, ALL_R
 def render():
     """Complete Blood Count"""
     st.subheader("🔬 CBC - Complete Blood Count")
-    st.caption("Công Thức Máu Toàn Phần - Đếm Tế Bào Máu")
+    st.caption("Công thức máu toàn phần - Đếm tế bào máu")
     
     col1, col2 = st.columns(2)
     

@@ -33,10 +33,10 @@
       "icons": [{ "src": "/static/icon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Drugs",
-      "short_name": "Drugs",
-      "description": "Drug database and calculators",
-      "url": "/pages/02_💊_Drugs.py",
+      "name": "Antibiotics",
+      "short_name": "Antibiotics",
+      "description": "Antibiotics database and calculators",
+      "url": "/pages/02_💊_Antibiotics.py",
       "icons": [{ "src": "/static/icon-192.png", "sizes": "192x192" }]
     },
     {

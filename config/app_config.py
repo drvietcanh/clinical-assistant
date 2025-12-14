@@ -41,7 +41,7 @@ APP_CONFIG = {
     # Google Analytics Configuration
     # Có thể set qua environment variable: GOOGLE_ANALYTICS_ID
     # Hoặc thay đổi giá trị mặc định bên dưới
-    "google_analytics_id": os.getenv("GOOGLE_ANALYTICS_ID", "G-JRP0GQLG70"),
+    "google_analytics_id": os.getenv("GOOGLE_ANALYTICS_ID", "G-JRPOGQLG70"),
     
     "pages": {
         "scores": ModuleInfo(
@@ -57,7 +57,7 @@ APP_CONFIG = {
             id="antibiotics",
             title="Kháng sinh",
             icon="💊",
-            page_path="pages/02_💊_Drugs.py",
+            page_path="pages/02_💊_Antibiotics.py",
             description="Tra cứu & so sánh kháng sinh",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"

@@ -431,7 +431,7 @@ def render():
     st.markdown("---")
     with st.expander("📖 Giải thích chuyên sâu các thuật ngữ", expanded=False):
         st.markdown("""
-        ### 📏 BMI (Body Mass Index - Chỉ Số Khối Cơ Thể)
+        ### 📏 BMI (Body Mass Index - Chỉ số khối cơ thể)
         
         **Định nghĩa:** BMI là chỉ số đo lường mối quan hệ giữa cân nặng và chiều cao, được sử dụng để đánh giá tình trạng dinh dưỡng và phân loại mức độ béo phì/gầy.
         
@@ -465,7 +465,7 @@ def render():
         
         ---
         
-        ### 🎯 IBW (Ideal Body Weight - Cân nặng Lý Tưởng)
+        ### 🎯 IBW (Ideal Body Weight - Cân nặng lý tưởng)
         
         **Định nghĩa:** IBW là cân nặng lý tưởng dựa trên giới tính và chiều cao, được tính toán để đạt được tỷ lệ mỡ cơ thể tối ưu và giảm nguy cơ bệnh tật.
         
@@ -492,7 +492,7 @@ def render():
         
         ---
         
-        ### 📐 BSA (Body Surface Area - Diện Tích Bề Mặt Cơ Thể)
+        ### 📐 BSA (Body Surface Area - Diện tích bề mặt cơ thể)
         
         **Định nghĩa:** BSA là diện tích bề mặt ngoài của cơ thể, được tính bằng mét vuông (m²). Chỉ số này quan trọng vì nhiều quá trình sinh lý (như trao đổi chất, thải thuốc) tỷ lệ với BSA chứ không phải cân nặng.
         
@@ -536,7 +536,7 @@ def render():
         
         ---
         
-        ### ⚖️ ABW (Adjusted Body Weight - Cân nặng Điều Chỉnh)
+        ### ⚖️ ABW (Adjusted Body Weight - Cân nặng điều chỉnh)
         
         **Định nghĩa:** ABW là cân nặng được điều chỉnh từ IBW và cân nặng thực tế, được sử dụng để tính liều thuốc ở bệnh nhân béo phì. ABW phản ánh thực tế rằng ở người béo phì, mỡ không tham gia vào phân bố và thải trừ thuốc như cơ và các mô khác.
         
@@ -579,7 +579,7 @@ def render():
         
         ---
         
-        ### 📊 So sánh Tổng Hợp
+        ### 📊 So sánh tổng hợp
         
         | Chỉ số | Đơn vị | Mục đích | Khi nào dùng |
         |:-------|:-------|:---------|:-------------|

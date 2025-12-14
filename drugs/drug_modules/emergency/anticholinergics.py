@@ -42,7 +42,7 @@ ANTICHOLINERGICS_DRUGS = {
         'Thận trọng khi dùng với các anticholinergics khác (tăng tác dụng phụ)',
         'Trong quá liều organophosphate: dùng liều cao hơn nhiều (2-5mg), có thể cần lặp lại nhiều lần cho đến khi đạt tác dụng (đồng tử co lại, giảm tiết)'
         ], 'pharmacokinetics': {'half_life':
-        '2-4 giờ (Người Lớn), 10-20 giờ (Trẻ Em)', 'onset':
+        '2-4 giờ (Người Lớn), 10-20 giờ (Trẻ em)', 'onset':
         'Vài phút (IV), 15-30 phút (IM)', 'duration':
         '4-6 giờ (tác dụng lâm sàng)', 'protein_binding': '50%', 'clearance':
         'Thận (50-90% thải qua nước tiểu dưới dạng không đổi), gan (metabolite). Thời gian bán hủy dài hơn ở trẻ em'

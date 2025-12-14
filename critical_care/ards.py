@@ -124,7 +124,7 @@ def render_ardsnet_calculator():
     # Calculate IBW
     ibw = calculate_ibw(sex, height_cm)
     
-    st.info(f"**Cân Nặng Lý Tưởng (IBW):** {ibw:.1f} kg")
+    st.info(f"**Cân nặng lý tưởng (IBW):** {ibw:.1f} kg")
     
     st.markdown("---")
     

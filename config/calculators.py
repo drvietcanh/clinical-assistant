@@ -57,6 +57,7 @@ ALL_CALCULATORS = {
     "ranson": {"name": "Ranson Criteria", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
     "rockall": {"name": "Rockall Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
     "glasgow_blatchford": {"name": "Glasgow-Blatchford Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
+    "aims65": {"name": "AIMS65 Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
     
     # Scores - Nephrology
     "egfr": {"name": "eGFR - CKD-EPI & MDRD", "category": "Thận", "icon": "🧪", "page": "Scores"},
