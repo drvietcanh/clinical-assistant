@@ -233,7 +233,7 @@ def render():
         st.markdown("---")
         
         # Score breakdown
-        st.subheader("📊 Phân tích từng Tình huống)
+        st.subheader("📊 Phân tích từng tình huống")
         
         for i, (item, score) in enumerate(zip(ESS_SITUATIONS, scores), 1):
             col1, col2 = st.columns([4, 1])
