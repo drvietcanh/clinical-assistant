@@ -303,7 +303,7 @@ def render():
         
         # Detailed management
         st.markdown("---")
-        st.subheader("💡 Xử trí)
+        st.subheader("💡 Xử trí")
         
         if total_score < 3:
             st.success("""
