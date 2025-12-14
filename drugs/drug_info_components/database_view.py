@@ -40,7 +40,7 @@ def render_drug_database():
             f"""
         **Cơ sở dữ liệu bao gồm:**
         - ✅ {drug_count} thuốc phổ biến tại Việt Nam
-        - ✅ Tim mạch, Đái tháo đường, Tiêu hóa, Giảm đau, và nhiều nhóm khác
+        - ✅ Tim mạch, Đái tháo đường, Tiêu hóa, Chống viêm - giảm đau, và nhiều nhóm khác
         - ✅ Tên biệt dược và tên chung
         - ✅ Liều dùng chi tiết
         - ✅ Điều chỉnh theo chức năng thận
@@ -85,7 +85,7 @@ def render_drug_database():
             'color': '#FF9800'
         },
         {
-            'name': '😣 Giảm đau',
+            'name': '😣 Chống viêm - giảm đau',
             'keywords': ['Analgesic', 'NSAID', 'Opioid'],
             'color': '#2196F3'
         },
