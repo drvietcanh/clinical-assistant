@@ -364,52 +364,40 @@ def render_enhanced_critical_care_dashboard():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        if st.button(
-            """
-            <div class="scoring-card" style="border-left-color: #667eea;">
-                <strong>📊 Đánh giá độ nặng:</strong><br>
-                • APACHE II<br>
-                • SOFA<br>
-                • SAPS II
-            </div>
-            """,
-            key="scoring_severity",
-            use_container_width=True,
-            help="Mở hệ thống đánh giá độ nặng (APACHE II, SOFA, SAPS II)"
-        ):
+        st.markdown("""
+        <div class="scoring-card" style="border-left-color: #667eea; margin-bottom: 10px;">
+            <strong>📊 Đánh giá độ nặng:</strong><br>
+            • APACHE II<br>
+            • SOFA<br>
+            • SAPS II
+        </div>
+        """, unsafe_allow_html=True)
+        if st.button("📊 Mở", key="scoring_severity", use_container_width=True, help="Mở hệ thống đánh giá độ nặng (APACHE II, SOFA, SAPS II)"):
             st.session_state['critical_care_tool_selection'] = "📊 Scoring Systems"
             st.rerun()
     
     with col2:
-        if st.button(
-            """
-            <div class="scoring-card" style="border-left-color: #f5576c;">
-                <strong>🧠 Đánh giá thần kinh:</strong><br>
-                • GCS<br>
-                • RASS<br>
-                • CAM-ICU
-            </div>
-            """,
-            key="scoring_neuro",
-            use_container_width=True,
-            help="Mở hệ thống đánh giá thần kinh (GCS, RASS, CAM-ICU)"
-        ):
+        st.markdown("""
+        <div class="scoring-card" style="border-left-color: #f5576c; margin-bottom: 10px;">
+            <strong>🧠 Đánh giá thần kinh:</strong><br>
+            • GCS<br>
+            • RASS<br>
+            • CAM-ICU
+        </div>
+        """, unsafe_allow_html=True)
+        if st.button("🧠 Mở", key="scoring_neuro", use_container_width=True, help="Mở hệ thống đánh giá thần kinh (GCS, RASS, CAM-ICU)"):
             st.session_state['critical_care_tool_selection'] = "📊 Scoring Systems"
             st.rerun()
     
     with col3:
-        if st.button(
-            """
-            <div class="scoring-card" style="border-left-color: #4facfe;">
-                <strong>🧪 Đánh giá thận:</strong><br>
-                • AKI Staging (KDIGO)<br>
-                • RIFLE
-            </div>
-            """,
-            key="scoring_renal",
-            use_container_width=True,
-            help="Mở hệ thống đánh giá thận (AKI Staging, RIFLE)"
-        ):
+        st.markdown("""
+        <div class="scoring-card" style="border-left-color: #4facfe; margin-bottom: 10px;">
+            <strong>🧪 Đánh giá thận:</strong><br>
+            • AKI Staging (KDIGO)<br>
+            • RIFLE
+        </div>
+        """, unsafe_allow_html=True)
+        if st.button("🧪 Mở", key="scoring_renal", use_container_width=True, help="Mở hệ thống đánh giá thận (AKI Staging, RIFLE)"):
             st.session_state['critical_care_tool_selection'] = "📊 Scoring Systems"
             st.rerun()
     
@@ -453,18 +441,14 @@ def render_enhanced_critical_care_dashboard():
     cols = st.columns(4)
     for idx, scenario in enumerate(scenarios):
         with cols[idx]:
-            if st.button(
-                f"""
-                <div class="scenario-card">
-                    <div style="font-size: 2rem; margin-bottom: 5px;">{scenario['icon']}</div>
-                    <div style="font-weight: bold; margin-bottom: 5px;">{scenario['title']}</div>
-                    <div style="font-size: 0.85rem; color: #6b7280;">{scenario['description']}</div>
-                </div>
-                """,
-                key=f"scenario_{scenario['title']}",
-                use_container_width=True,
-                help=f"Mở {scenario['title']} protocol"
-            ):
+            st.markdown(f"""
+            <div class="scenario-card" style="margin-bottom: 10px;">
+                <div style="font-size: 2rem; margin-bottom: 5px;">{scenario['icon']}</div>
+                <div style="font-weight: bold; margin-bottom: 5px;">{scenario['title']}</div>
+                <div style="font-size: 0.85rem; color: #6b7280;">{scenario['description']}</div>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button(f"{scenario['icon']} Mở", key=f"scenario_{scenario['title']}", use_container_width=True, help=f"Mở {scenario['title']} protocol"):
                 st.session_state['critical_care_tool_selection'] = scenario['tool_value']
                 st.rerun()
     
