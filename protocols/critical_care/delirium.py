@@ -199,20 +199,16 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **ICU Delirium Guidelines**
-       - Society of Critical Care Medicine
-    
-    2. **NICE Guidelines 2019**
-       - Delirium: prevention, diagnosis and management
-    
-    3. **UpToDate:** Delirium in adults
-       - Last updated: 2024
-    
-    4. **Medscape:** Delirium Management
-    """)
+    # References section
+    references = get_references("Delirium")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất.")

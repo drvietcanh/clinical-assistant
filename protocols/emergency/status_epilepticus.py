@@ -5,6 +5,8 @@ Prolonged or recurrent seizures without recovery
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -232,20 +234,16 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **AES 2016 Guidelines**
-       - Glauser T, et al. Epilepsy Currents. 2016
-    
-    2. **Neurocritical Care Society Guidelines**
-       - Brophy GM, et al. Neurocrit Care. 2012
-    
-    3. **UpToDate:** Status epilepticus in adults
-       - Last updated: 2024
-    
-    4. **Medscape:** Status Epilepticus Management
-    """)
+    # References section
+    references = get_references("Status Epilepticus")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất.")

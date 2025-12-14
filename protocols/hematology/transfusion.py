@@ -5,6 +5,8 @@ Evidence-based blood product transfusion guidelines
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -156,20 +158,16 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **AABB 2016 Guidelines**
-       - American Association of Blood Banks
-    
-    2. **ASH 2018 Guidelines**
-       - American Society of Hematology
-    
-    3. **UpToDate:** Transfusion therapy
-       - Last updated: 2024
-    
-    4. **Medscape:** Blood Transfusion
-    """)
+    # References section
+    references = get_references("Transfusion")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất.")
