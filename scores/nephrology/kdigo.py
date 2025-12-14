@@ -390,12 +390,12 @@ def render():
            - Tăng ≥0.3 mg/dL trong 48 giờ
            - HOẶC tăng ≥1.5× baseline trong 7 ngày
         
-        2. **Nước Tiểu:**
+        2. **Nước tiểu:**
            - <0.5 mL/kg/h trong 6 giờ
         
         ### 📊 Giai Đoạn KDIGO
         
-        | Stage | Serum Creatinine | Nước Tiểu |
+        | Stage | Serum Creatinine | Nước tiểu |
         |-------|------------------|-----------|
         | **1** | 1.5-1.9× baseline HOẶC ↑≥0.3 mg/dL | <0.5 mL/kg/h × 6-12h |
         | **2** | 2.0-2.9× baseline | <0.5 mL/kg/h × ≥12h |
@@ -461,10 +461,10 @@ def render():
     st.divider()
     
     # Urine output section
-    st.markdown("#### 💧 Nước Tiểu (Urine Output)")
+    st.markdown("#### 💧 Nước tiểu (Urine Output)")
     
     weight = st.number_input(
-        "**Cân Nặng (kg)**",
+        "**Cân nặng (kg)**",
         min_value=0,
         max_value=300,
         value=70,
@@ -566,7 +566,7 @@ def render():
             st.markdown("")
             
             if result['uo_criteria']:
-                st.markdown("**Tiêu chí Nước Tiểu:**")
+                st.markdown("**Tiêu chí Nước tiểu:**")
                 for criterion in result['uo_criteria']:
                     st.markdown(f"- {criterion}")
             else:
@@ -581,7 +581,7 @@ def render():
         
         # Management
         st.markdown("---")
-        st.markdown("### 💊 Xử Trí & Quản lý")
+        st.markdown("### 💊 Xử trí & quản lý")
         st.markdown(result['management'])
         
         # Additional info

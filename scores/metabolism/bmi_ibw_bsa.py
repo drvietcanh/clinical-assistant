@@ -465,7 +465,7 @@ def render():
         
         ---
         
-        ### 🎯 IBW (Ideal Body Weight - Cân Nặng Lý Tưởng)
+        ### 🎯 IBW (Ideal Body Weight - Cân nặng Lý Tưởng)
         
         **Định nghĩa:** IBW là cân nặng lý tưởng dựa trên giới tính và chiều cao, được tính toán để đạt được tỷ lệ mỡ cơ thể tối ưu và giảm nguy cơ bệnh tật.
         
@@ -536,7 +536,7 @@ def render():
         
         ---
         
-        ### ⚖️ ABW (Adjusted Body Weight - Cân Nặng Điều Chỉnh)
+        ### ⚖️ ABW (Adjusted Body Weight - Cân nặng Điều Chỉnh)
         
         **Định nghĩa:** ABW là cân nặng được điều chỉnh từ IBW và cân nặng thực tế, được sử dụng để tính liều thuốc ở bệnh nhân béo phì. ABW phản ánh thực tế rằng ở người béo phì, mỡ không tham gia vào phân bố và thải trừ thuốc như cơ và các mô khác.
         

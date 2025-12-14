@@ -157,7 +157,7 @@ def render_aki_stage2():
     
     st.error("## 🚨 AKI STAGE 2 PROTOCOL")
     
-    st.markdown("### 1️⃣ Xử Trí Khẩn Cấp")
+    st.markdown("### 1️⃣ Xử tríKhẩn Cấp")
     
     st.error("""
     **Immediate Actions:**
@@ -275,7 +275,7 @@ def render_aki_stage3():
     
     st.error("## 🚨🚨 AKI STAGE 3 PROTOCOL - NẶNG")
     
-    st.markdown("### 1️⃣ Xử Trí Khẩn Cấp Ngay")
+    st.markdown("### 1️⃣ Xử tríKhẩn Cấp Ngay")
     
     st.error("""
     **Immediate Actions (< 1h):**

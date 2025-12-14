@@ -58,7 +58,7 @@ def render_ischemic_stroke():
         st.metric("Door-to-Puncture (MT)", "≤90 phút", "🎯 Mục tiêu")
     
     st.markdown("---")
-    st.markdown("### 1️⃣ Xử Trí Tức Thì (< 10 phút)")
+    st.markdown("### 1️⃣ Xử tríTức Thì (< 10 phút)")
     
     st.error("""
     **ABC - Đường thở, Hô hấp, Tuần hoàn:**
@@ -631,7 +631,7 @@ def render_ischemic_stroke():
             """)
     
     with tab3:
-        st.error("### 🚨 Xử Trí Nếu Có Xuất Huyết")
+        st.error("### 🚨 Xử tríNếu Có Xuất Huyết")
         
         st.markdown("**Checklist xử trí xuất huyết:**")
         
@@ -932,7 +932,7 @@ def render_hemorrhagic_stroke():
     st.error("## 🚨 HEMORRHAGIC STROKE (ICH) PROTOCOL")
     st.error("**CODE STROKE - Xử trí khẩn cấp!**")
     
-    st.markdown("### 1️⃣ Xử Trí Tức Thì")
+    st.markdown("### 1️⃣ Xử tríTức Thì")
     
     st.error("""
     **ABC tương tự Ischemic Stroke:**

@@ -55,7 +55,7 @@ def render():
     
     st.title("🦴 NEXUS C-Spine Rule")
     st.markdown("""
-    ### Quy Tắc Loại Trừ Tổn Thương Cột Sống Cổ
+    ### Quy tắc loại trừ tổn thương cột sống cổ
     
     **NEXUS (National Emergency X-Radiography Utilization Study):**
     - Công cụ quyết định lâm sàng để loại trừ tổn thương cột sống cổ
@@ -115,7 +115,7 @@ def render():
     """)
     
     # 1. Midline tenderness
-    st.markdown("### 1️⃣ Đau Chính Giữa Cột Sống Cổ")
+    st.markdown("### 1️⃣ Đau chính giữa cột sống cổ")
     midline_tenderness = st.checkbox(
         "**Có đau khi ấn chính giữa (midline) cột sống cổ sau**",
         help="Palpation từ C1 đến C7/T1. Đau ở midline (KHÔNG phải cạnh cột sống)"
@@ -126,7 +126,7 @@ def render():
     st.markdown("---")
     
     # 2. Altered mental status
-    st.markdown("### 2️⃣ Rối Loạn Ý Thức")
+    st.markdown("### 2️⃣ Rối loạn ý thức")
     altered_mental_status = st.checkbox(
         "**Có rối loạn mức độ ý thức (GCS < 15, lú lẫn, mất định hướng)**",
         help="GCS < 15 HOẶC không trả lời đúng person/place/time/event"
@@ -137,7 +137,7 @@ def render():
     st.markdown("---")
     
     # 3. Intoxication
-    st.markdown("### 3️⃣ Say Rượu / Ma Túy")
+    st.markdown("### 3️⃣ Say rượu / ma túy")
     intoxication = st.checkbox(
         "**Có bằng chứng say rượu hoặc sử dụng chất kích thích**",
         help="Lâm sàng say rượu HOẶC dùng thuốc/ma túy ảnh hưởng đến đánh giá"
@@ -159,7 +159,7 @@ def render():
     st.markdown("---")
     
     # 5. Distracting injury
-    st.markdown("### 5️⃣ Tổn Thương Gây Mất Tập Trung")
+    st.markdown("### 5️⃣ Tổn thương gây mất tập trung")
     st.caption("Tổn thương đau nặng ở vị trí khác làm bệnh nhân không chú ý đến cột sống cổ")
     distracting_injury = st.checkbox(
         "**Có tổn thương gây đau nặng, mất tập trung (fracture chi dài, bỏng nặng, v.v.)**",
@@ -182,7 +182,7 @@ def render():
         )
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh giá")
+        st.subheader("📈 Kết quả đánh giá")
         
         # Summary
         positive_count = sum([
@@ -279,7 +279,7 @@ def render():
             st.markdown("---")
             
             st.warning("""
-            ### 🏥 Xử Trí Tiếp Theo:
+            ### 🏥 Xử tríTiếp Theo:
             
             **1. Giữ nguyên cổ cứng**
             
@@ -303,7 +303,7 @@ def render():
     st.markdown("---")
     st.subheader("📚 Thông tin bổ sung")
     
-    with st.expander("📊 Độ Chính Xác Của NEXUS"):
+    with st.expander("📊 Độ chính xác của NEXUS"):
         st.markdown("""
         ### Nghiên cứu gốc (Hoffman et al., NEJM 2000):
         
@@ -453,7 +453,7 @@ def render():
         - Khi nghi ngờ → Coi là (+)
         """)
     
-    with st.expander("🚨 Các Tình Huống Đặc Biệt"):
+    with st.expander("🚨 Các tình huống đặc biệt"):
         st.markdown("""
         ### 1. Trẻ em:
         

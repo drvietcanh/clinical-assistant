@@ -201,7 +201,7 @@ def render():
         suicide_risk = assess_suicide_risk(scores[8])  # Question 9
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh giá")
+        st.subheader("📈 Kết quả đánh giá")
         
         # Display total score
         col1, col2 = st.columns([1, 2])

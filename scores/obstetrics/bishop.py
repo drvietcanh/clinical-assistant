@@ -286,7 +286,7 @@ def render():
         result = interpret_bishop_score(total_score, is_nulliparous)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh giá")
+        st.subheader("📈 Kết quả đánh giá")
         
         # Display total score
         col1, col2 = st.columns(2)
@@ -338,7 +338,7 @@ def render():
         st.markdown("---")
         
         # Interpretation
-        st.subheader("🎯 Phân tích & Khuyến nghị")
+        st.subheader("🎯 Phân tích & khuyến nghị")
         
         parity_text = "nulliparous (con so)" if is_nulliparous else "multiparous (đã sinh)"
         

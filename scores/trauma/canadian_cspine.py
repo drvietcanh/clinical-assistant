@@ -78,7 +78,7 @@ def render():
     
     st.title("🍁 Canadian C-Spine Rule")
     st.markdown("""
-    ### Quy Tắc Quyết Định Chụp Cột Sống Cổ
+    ### Quy tắc quyết định chụp cột sống cổ
     
     **Canadian C-Spine Rule:**
     - Quy tắc 3 bước để quyết định cần chụp C-spine không
@@ -164,7 +164,7 @@ def render():
     if dangerous_mechanism:
         st.warning("⚠️ Cơ chế nguy hiểm → NGUY CƠ CAO → CẦN CHỤP")
     
-    with st.expander("📋 Cơ Chế Chấn Thương Nguy hiểm"):
+    with st.expander("📋 Cơ chế chấn thương nguy hiểm"):
         st.markdown("""
         **Cơ chế nguy hiểm bao gồm:**
         - Rơi từ độ cao ≥ 1 m (≥ 3 feet) hoặc 5 bậc cầu thang
@@ -191,7 +191,7 @@ def render():
     st.markdown("---")
     
     # Step 2: Low-Risk Factors
-    st.subheader("🟡 Bước 2: Yếu tố Cho Phép Đánh giá ROM")
+    st.subheader("🟡 Bước 2: Yếu tố cho phép đánh giá ROM")
     st.info("Cần có ≥ 1 yếu tố để AN TOÀN đánh giá range of motion")
     
     simple_rear_end_mvc = st.checkbox(
@@ -229,7 +229,7 @@ def render():
     st.markdown("---")
     
     # Step 3: ROM Assessment
-    st.subheader("🔵 Bước 3: Đánh giá Xoay Cổ")
+    st.subheader("🔵 Bước 3: Đánh giá Xoay cổ")
     st.info("Chỉ đánh giá nếu ĐỦ điều kiện từ Bước 1 và 2")
     
     midline_tenderness = st.checkbox(
@@ -284,7 +284,7 @@ def render():
         )
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh giá")
+        st.subheader("📈 Kết quả đánh giá")
         
         col1, col2 = st.columns(2)
         
@@ -351,7 +351,7 @@ def render():
             """)
             
             st.warning("""
-            ### 🏥 Xử Trí:
+            ### 🏥 Xử trí
             
             **1. Giữ cổ cứng**
             
@@ -368,7 +368,7 @@ def render():
     st.markdown("---")
     st.subheader("📚 Thông tin bổ sung")
     
-    with st.expander("📊 Độ Chính Xác"):
+    with st.expander("📊 Độ chính xác"):
         st.markdown("""
         ### Nghiên cứu gốc (Stiell et al., NEJM 2001):
         
@@ -398,7 +398,7 @@ def render():
         - Cần đánh giá ROM (không phải lúc nào cũng làm được)
         """)
     
-    with st.expander("💡 Tips Áp Dụng Thành Công"):
+    with st.expander("💡 Tips áp dụng thành công"):
         st.markdown("""
         ### Bí quyết sử dụng hiệu quả:
         

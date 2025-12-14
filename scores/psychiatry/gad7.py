@@ -145,7 +145,7 @@ def render():
         result = interpret_gad7(total_score)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh giá")
+        st.subheader("📈 Kết quả đánh giá")
         
         # Display total score
         col1, col2 = st.columns([1, 2])

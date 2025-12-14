@@ -68,7 +68,7 @@ def render():
     
     st.title("👶 APGAR Score")
     st.markdown("""
-    ### Đánh giá Trẻ Sơ Sinh Ngay Sau Sinh
+    ### Đánh giá trẻ Sơ Sinh Ngay Sau Sinh
     
     **APGAR Score (Virginia Apgar, 1952):**
     - Thang điểm phổ biến nhất đánh giá trẻ sơ sinh
@@ -253,7 +253,7 @@ def render():
         st.markdown("---")
         
         # Interpretation and action
-        st.subheader("🎯 Đánh giá & Xử Trí")
+        st.subheader("🎯 Đánh giá & Xử trí)
         
         if result['level'] == "normal":
             st.success(f"""

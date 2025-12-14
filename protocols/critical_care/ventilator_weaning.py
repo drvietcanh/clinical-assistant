@@ -141,7 +141,7 @@ def render():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Failed Weaning - Xử Trí")
+    st.markdown("### 4️⃣ Failed Weaning - Xử trí)
     
     st.warning("""
     **Nếu SBT thất bại:**

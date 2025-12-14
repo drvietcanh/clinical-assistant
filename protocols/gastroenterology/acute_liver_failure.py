@@ -50,7 +50,7 @@ def render_acetaminophen_alf():
     st.error("## 🚨 ACETAMINOPHEN-INDUCED ALF PROTOCOL")
     st.error("**N-ACETYLCYSTEINE (NAC) - ĐIỀU TRỊ KHẨN CẤP!**")
     
-    st.markdown("### 1️⃣ Xử Trí Tức Thì (< 1 Giờ)")
+    st.markdown("### 1️⃣ Xử tríTức Thì (< 1 Giờ)")
     
     col1, col2 = st.columns(2)
     

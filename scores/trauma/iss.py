@@ -84,7 +84,7 @@ def calculate_iss(ais_scores: dict) -> dict:
     # Management recommendations
     if risk_class == "UNSURVIVABLE" or risk_class == "CRITICAL":
         management = """
-        **🔴 Xử Trí - Chấn Thương Nguy Kịch:**
+        **🔴 Xử trí- Chấn Thương Nguy Kịch:**
         
         1. **HỒI SỨC TÍCH CỰC:**
            - Activate Trauma Team NGAY
@@ -117,7 +117,7 @@ def calculate_iss(ais_scores: dict) -> dict:
         """
     elif risk_class == "SEVERE":
         management = """
-        **🟠 Xử Trí - Chấn Thương Nặng:**
+        **🟠 Xử trí- Chấn Thương Nặng:**
         
         1. **ĐÁnh GIÁ TOÀN DIỆN:**
            - Primary survey (ABC)
@@ -145,7 +145,7 @@ def calculate_iss(ais_scores: dict) -> dict:
         """
     elif risk_class == "MODERATE":
         management = """
-        **🟡 Xử Trí - Chấn Thương Trung Bình:**
+        **🟡 Xử trí- Chấn Thương Trung Bình:**
         
         1. **Đánh giá:**
            - Complete trauma assessment
@@ -168,7 +168,7 @@ def calculate_iss(ais_scores: dict) -> dict:
         """
     else:  # MINOR
         management = """
-        **🟢 Xử Trí - Chấn Thương Nhẹ:**
+        **🟢 Xử trí - chấn thương nhẹ:**
         
         1. **Đánh giá:**
            - Khám lâm sàng kỹ
@@ -251,7 +251,7 @@ def render():
         
         ### 📈 Phân tầng Nguy cơ
         
-        | ISS | Phân Loại | Tử vong | Xử Trí |
+        | ISS | Phân Loại | Tử vong | Xử trí|
         |-----|-----------|---------|--------|
         | 1-8 | Minor | <1% | Outpatient có thể |
         | 9-15 | Moderate | <5% | Admit, theo dõi |
@@ -269,7 +269,7 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập AIS Score Cho Từng Vùng")
+    st.subheader("📝 Nhập AIS Score Cho từng vùng")
     
     st.info("""
     **Hướng dẫn:** Chọn điểm AIS (0-6) cho MỖI vùng cơ thể dựa trên tổn thương nặng nhất trong vùng đó.
@@ -384,7 +384,7 @@ def render():
         
         # Management
         st.markdown("---")
-        st.markdown("### 💊 Xử Trí & Quản lý")
+        st.markdown("### 💊 Xử trí & quản lý")
         st.markdown(result['management'])
         
         # Additional info
@@ -425,7 +425,7 @@ def render():
     # AIS quick reference
     with st.expander("📖 Bảng tham khảo Nhanh - Ví Dụ AIS"):
         st.markdown("""
-        ### Ví Dụ AIS Theo Từng Vùng
+        ### Ví dụ AIS theo từng vùng
         
         #### 1. Head/Neck
         - **AIS 1:** Headache, không mất ý thức

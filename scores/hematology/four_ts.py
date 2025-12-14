@@ -271,7 +271,7 @@ def render():
         
         ### 📊 Phân tầng Nguy cơ
         
-        | Điểm 4Ts | Phân Loại | Xác Suất HIT | Xử Trí |
+        | Điểm 4Ts | Phân Loại | Xác Suất HIT | Xử trí|
         |----------|-----------|--------------|--------|
         | 6-8 | High | 50-80% | Dừng heparin NGAY, kháng đông thay thế |
         | 4-5 | Intermediate | 10-30% | Cân nhắc dừng, xét nghiệm ELISA |

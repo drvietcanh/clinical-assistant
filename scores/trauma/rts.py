@@ -122,7 +122,7 @@ def calculate_rts(gcs: int, sbp: float, rr: float) -> dict:
     if risk_class == "LOW":
         triage = "**Ưu tiên:** Không khẩn cấp hoặc vừa phải"
         management = """
-        **Xử Trí:**
+        **Xử trí**
         - Đánh giá toàn diện tổn thương
         - Xử trí các chấn thương cụ thể
         - Theo dõi tiêu chuẩn
@@ -131,7 +131,7 @@ def calculate_rts(gcs: int, sbp: float, rr: float) -> dict:
     elif risk_class == "MODERATE":
         triage = "**Ưu tiên:** Khẩn cấp - Cần can thiệp sớm"
         management = """
-        **Xử Trí:**
+        **Xử trí**
         - Stabilization ngay lập tức
         - Đánh giá nhanh ABC
         - Hồi sức tích cực
@@ -142,7 +142,7 @@ def calculate_rts(gcs: int, sbp: float, rr: float) -> dict:
     else:  # HIGH or CRITICAL
         triage = "**Ưu tiên:** CẤP CỨU - Can thiệp ngay lập tức"
         management = """
-        **Xử Trí:**
+        **Xử trí**
         - **RESUSCITATION NGAY:**
           * Airway: Intubation nếu GCS ≤8
           * Breathing: O2, mechanical ventilation nếu cần
@@ -328,7 +328,7 @@ def render():
             st.markdown(f"**{result['interpretation']}**")
         
         # Coded values
-        with st.expander("📋 Giá trị Mã Hóa & Tính Toán", expanded=True):
+        with st.expander("📋 Giá trị mã hóa & tính toán", expanded=True):
             st.markdown(f"""
             **Giá trị Đầu Vào:**
             - GCS: {gcs} → Coded: {result['gcs_coded']}
@@ -388,7 +388,7 @@ def render():
     # Quick reference
     with st.expander("📖 TRISS - Trauma and Injury Severity Score"):
         st.markdown("""
-        ### TRISS Score - Tiên lượng Chính Xác Hơn
+        ### TRISS Score - Tiên lượng chính xác hơn
         
         **TRISS kết hợp:**
         1. **RTS** (Revised Trauma Score) - sinh lý

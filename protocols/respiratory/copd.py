@@ -9,7 +9,7 @@ import streamlit as st
 def render():
     """COPD Exacerbation Protocol"""
     st.subheader("🫁 COPD Exacerbation")
-    st.caption("Cơn Cấp COPD - Xử Trí Theo GOLD 2023")
+    st.caption("Cơn Cấp COPD - Xử tríTheo GOLD 2023")
     
     st.info("ℹ️ **Guideline Update Note:** Vui lòng kiểm tra GOLD 2025 (nếu đã phát hành) tại https://goldcopd.org để cập nhật khuyến cáo mới nhất.")
     

@@ -44,7 +44,7 @@ def render_bacterial_meningitis():
     st.error("## 🚨 BACTERIAL MENINGITIS PROTOCOL")
     st.error("**CODE MENINGITIS - Xử trí khẩn cấp!**")
     
-    st.markdown("### 1️⃣ Xử Trí Tức Thì (< 10 Phút)")
+    st.markdown("### 1️⃣ Xử tríTức Thì (< 10 Phút)")
     
     col1, col2 = st.columns(2)
     

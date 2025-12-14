@@ -43,7 +43,7 @@ def render():
             st.metric("Door-to-Needle (Fibrinolysis)", "≤30 phút", "🎯 Mục tiêu")
         
         st.markdown("---")
-        st.markdown("### 2️⃣ Xử Trí Tức Thì (Trong 10 Phút Đầu)")
+        st.markdown("### 2️⃣ Xử tríTức Thì (Trong 10 Phút Đầu)")
         
         st.error("""
         **A-B-C-D-E Approach:**
@@ -143,7 +143,7 @@ def render():
         # NSTEMI/UA Protocol
         st.warning("## ⚠️ NSTEMI/UA PROTOCOL")
         
-        st.markdown("### 2️⃣ Xử Trí Ban Đầu")
+        st.markdown("### 2️⃣ Xử tríBan Đầu")
         
         st.success("""
         **Điều trị ngay (trong 30 phút):**

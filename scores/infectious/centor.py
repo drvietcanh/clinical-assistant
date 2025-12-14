@@ -220,7 +220,7 @@ def render():
         result = interpret_centor(total_score)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh giá")
+        st.subheader("📈 Kết quả đánh giá")
         
         # Display scores
         col1, col2, col3 = st.columns(3)

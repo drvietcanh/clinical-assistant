@@ -414,7 +414,7 @@ def render():
         
         # Management recommendations
         st.markdown("---")
-        st.markdown("### 💊 Khuyến cáo Xử Trí")
+        st.markdown("### 💊 Khuyến cáo Xử trí)
         
         recommendations = []
         

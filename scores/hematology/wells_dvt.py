@@ -118,7 +118,7 @@ def calculate_wells_dvt(
            - Không khuyến cáo khi xác suất cao (âm tính vẫn cần hình ảnh)
            - Chỉ xem xét nếu không thể làm siêu âm ngay
         
-        3. **Xử Trí:**
+        3. **Xử trí**
            - Cân nhắc bắt đầu kháng đông nếu siêu âm chậm trễ và không có chống chỉ định
            - Theo dõi triệu chứng suy tĩnh mạch, thuyên tắc phổi
         
@@ -207,8 +207,7 @@ def render():
            - **≥2 điểm:** DVT likely → Siêu âm ngay
            - **<2 điểm:** DVT unlikely → D-dimer trước
         
-        ### 📊 Độ Chính Xác
-        
+        ### 📊 Độ chính xác        
         | Điểm Wells | Tỷ Lệ DVT | Chiến Lược |
         |------------|-----------|------------|
         | ≥2 (likely) | 28-34% | Siêu âm trực tiếp |
@@ -392,7 +391,7 @@ def render():
         
         ### Phân tầng Nguy cơ
         
-        | Điểm Wells | Phân Loại | Tỷ Lệ DVT | Xử Trí |
+        | Điểm Wells | Phân Loại | Tỷ Lệ DVT | Xử trí|
         |------------|-----------|-----------|--------|
         | ≥2 | DVT likely | 28-34% | Siêu âm trực tiếp |
         | <2 | DVT unlikely | 3-6% | D-dimer → Siêu âm nếu (+) |

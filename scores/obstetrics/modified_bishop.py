@@ -243,7 +243,7 @@ def render():
         result = interpret_modified_bishop(total_score, is_nulliparous)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh giá")
+        st.subheader("📈 Kết quả đánh giá")
         
         # Display scores
         col1, col2, col3 = st.columns(3)

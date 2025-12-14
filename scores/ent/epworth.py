@@ -131,7 +131,7 @@ def render():
     
     st.title("😴 Epworth Sleepiness Scale")
     st.markdown("""
-    ### Đánh giá Mức Độ Buồn Ngủ Ban Ngày
+    ### Đánh giá mức độ buồn ngủ ban ngày
     
     **Epworth Sleepiness Scale (ESS):**
     - Bảng câu hỏi tự đánh giá buồn ngủ ban ngày
@@ -177,7 +177,7 @@ def render():
     st.markdown("---")
     
     # ESS Questions
-    st.subheader("📋 8 Tình Huống Đánh giá")
+    st.subheader("📋 8 Tình huống đánh giá")
     
     scores = []
     
@@ -210,7 +210,7 @@ def render():
         result = interpret_epworth(total_score)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả Đánh giá")
+        st.subheader("📈 Kết quả đánh giá")
         
         # Display score
         col1, col2 = st.columns(2)
@@ -233,7 +233,7 @@ def render():
         st.markdown("---")
         
         # Score breakdown
-        st.subheader("📊 Phân tích từng Tình Huống")
+        st.subheader("📊 Phân tích từng Tình huống)
         
         for i, (item, score) in enumerate(zip(ESS_SITUATIONS, scores), 1):
             col1, col2 = st.columns([4, 1])
@@ -252,7 +252,7 @@ def render():
         st.markdown("---")
         
         # Interpretation
-        st.subheader("🎯 Phân tích & Khuyến nghị")
+        st.subheader("🎯 Phân tích & khuyến nghị")
         
         if result['severity'] in ["normal_low", "normal_high"]:
             st.success(f"""
@@ -397,7 +397,7 @@ def render():
         - Oral appliances
         """)
     
-    with st.expander("📊 Độ Chính Xác Của ESS"):
+    with st.expander("📊 Độ chính xác của ESS"):
         st.markdown("""
         ### ESS trong sàng lọc OSA:
         
@@ -432,7 +432,7 @@ def render():
         - PSG (chẩn đoán xác định)
         """)
     
-    with st.expander("💤 Cải Thiện Vệ Sinh Giấc Ngủ"):
+    with st.expander("💤 Cải thiện vệ sinh giấc ngủ"):
         st.markdown("""
         ### Sleep Hygiene - Thói quen ngủ tốt:
         
@@ -472,7 +472,7 @@ def render():
         - Sử dụng điện thoại trên giường
         """)
     
-    with st.expander("🚗 An Toàn Lái Xe"):
+    with st.expander("🚗 An toàn lái xe"):
         st.markdown("""
         ### ESS và an toàn lái xe:
         
@@ -513,7 +513,7 @@ def render():
         - → Dừng xe, nghỉ ngay!
         """)
     
-    with st.expander("🔬 Các Công Cụ Sàng Lọc Khác"):
+    with st.expander("🔬 Các công cụ sàng lọc khác"):
         st.markdown("""
         ### So sánh các questionnaires:
         

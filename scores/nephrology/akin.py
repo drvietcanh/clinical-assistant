@@ -110,7 +110,7 @@ def render():
         st.markdown("""
         ### AKIN Stages (2007)
         
-        | Stage | Creatinine | Nước Tiểu |
+        | Stage | Creatinine | Nước tiểu |
         |-------|------------|-----------|
         | **1** | ↑≥0.3 mg/dL HOẶC ×1.5-2 baseline | <0.5 mL/kg/h × 6h |
         | **2** | ×2-3 baseline | <0.5 mL/kg/h × 12h |
@@ -137,7 +137,7 @@ def render():
         on_rrt = st.checkbox("Đang chạy thận (RRT)")
     
     with col2:
-        st.markdown("#### Nước Tiểu")
+        st.markdown("#### Nước tiểu")
         weight = st.number_input("Cân nặng (kg)", 0.0, 300.0, 70.0, 1.0, format="%.1f")
         urine_output_6h = st.number_input("Nước tiểu 6h (mL)", -1.0, 5000.0, -1.0, 10.0, format="%.0f")
         urine_output_12h = st.number_input("Nước tiểu 12h (mL)", -1.0, 10000.0, -1.0, 10.0, format="%.0f")

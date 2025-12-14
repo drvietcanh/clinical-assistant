@@ -66,7 +66,7 @@ def render():
             ards_severity = "Severe"
     
     st.markdown("---")
-    st.markdown("### 1️⃣ Xử Trí Tức Thì (< 1 Giờ)")
+    st.markdown("### 1️⃣ Xử tríTức Thì (< 1 Giờ)")
     
     st.error("""
     **ABC - Đường thở, Hô hấp, Tuần hoàn:**
