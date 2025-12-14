@@ -168,10 +168,10 @@ def render_upper_gi_bleeding():
     if "Không do giãn tĩnh mạch" in bleeding_source or "Chưa xác định" in bleeding_source:
         st.markdown("#### 💊 Xuất huyết không do giãn tĩnh mạch - Phác đồ PPI")
         
-        tab1, tab2 = st.tabs(["Máy tính liều PPI IV", "Hướng dẫn điều trị"])
+        tab1, tab2 = st.tabs(["Tính toán liều PPI IV", "Hướng dẫn điều trị"])
         
         with tab1:
-            st.markdown("##### 💉 Máy tính liều cao PPI IV")
+            st.markdown("##### 💉 Tính toán liều cao PPI IV")
             
             col1, col2 = st.columns([1, 2])
             
@@ -321,7 +321,7 @@ def render_upper_gi_bleeding():
     st.markdown("---")
     st.markdown("### 5️⃣ Chỉ định Nội Soi - Decision Tree")
     
-    st.markdown("#### ⏱️ Máy tính thời điểm nội soi")
+    st.markdown("#### ⏱️ Tính toán thời điểm nội soi")
     
     # Input for decision
     col1, col2 = st.columns(2)
@@ -748,7 +748,7 @@ def render_lower_gi_bleeding():
 
 def render_gbs_calculator():
     """Simplified GBS calculator for protocol"""
-    st.markdown("#### 🩸 Máy tính điểm Glasgow-Blatchford")
+    st.markdown("#### 🩸 Tính toán điểm Glasgow-Blatchford")
     
     col1, col2 = st.columns([2, 1])
     
@@ -823,7 +823,7 @@ def render_gbs_calculator():
 
 def render_rockall_calculator():
     """Simplified Rockall calculator for protocol"""
-    st.markdown("#### 🩸 Máy tính điểm Rockall")
+    st.markdown("#### 🩸 Tính toán điểm Rockall")
     
     version = st.radio(
         "**Phiên bản:**",

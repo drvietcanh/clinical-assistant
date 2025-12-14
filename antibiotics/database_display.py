@@ -174,7 +174,7 @@ def render_compact_antibiotic_card(ab_name, ab_data, key_prefix=""):
     # Calculator badge with enhanced styling
     calc_badge = ""
     if has_calc:
-        calc_badge = '<span style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75em; font-weight: 700; margin-left: 6px; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3); letter-spacing: 0.3px;" title="Có máy tính liều dùng tích hợp">🧮 Tính liều</span>'
+        calc_badge = '<span style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75em; font-weight: 700; margin-left: 6px; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3); letter-spacing: 0.3px;" title="Có tính toán liều dùng tích hợp">🧮 Tính liều</span>'
     
     # Check if favorite
     favorites = st.session_state.get('antibiotic_favorites', [])

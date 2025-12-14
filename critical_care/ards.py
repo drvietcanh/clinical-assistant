@@ -84,7 +84,7 @@ def calculate_ardsnet_settings(ibw_kg: float, pf_ratio: float, current_fio2: flo
 
 def render_ardsnet_calculator():
     """Render ARDSNet protocol calculator"""
-    st.subheader("🫁 Máy tính giao thức ARDSNet")
+    st.subheader("🫁 Tính toán giao thức ARDSNet")
     st.caption("Tính toán cài đặt máy thở theo ARDSNet protocol")
     
     st.markdown("""

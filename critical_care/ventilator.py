@@ -179,7 +179,7 @@ def calculate_rsbi(rr: float, vt_liters: float) -> dict:
 
 def render_ibw_calculator():
     """Render Ideal Body Weight calculator"""
-    st.subheader("📏 Máy tính cân nặng lý tưởng (IBW)")
+    st.subheader("📏 Tính toán cân nặng lý tưởng (IBW)")
     st.caption("Tính trọng lượng cơ thể lý tưởng để tính thể tích khí lưu thông")
     
     st.markdown("""
@@ -242,7 +242,7 @@ def render_ibw_calculator():
 
 def render_tidal_volume_calculator():
     """Render Tidal Volume calculator"""
-    st.subheader("💨 Máy tính thể tích khí lưu thông")
+    st.subheader("💨 Tính toán thể tích khí lưu thông")
     st.caption("Tính thể tích khí lưu thông dựa trên IBW (ARDSNet protocol)")
     
     st.markdown("""
@@ -331,7 +331,7 @@ def render_tidal_volume_calculator():
 
 def render_peep_calculator():
     """Render PEEP calculator"""
-    st.subheader("📊 Máy tính PEEP")
+    st.subheader("📊 Tính toán PEEP")
     st.caption("Khuyến nghị PEEP dựa trên FiO2 (ARDSNet protocol)")
     
     st.markdown("""
@@ -393,7 +393,7 @@ def render_peep_calculator():
 
 def render_plateau_pressure_calculator():
     """Render Plateau Pressure calculator"""
-    st.subheader("📈 Máy tính áp lực cao nguyên")
+    st.subheader("📈 Tính toán áp lực cao nguyên")
     st.caption("Tính plateau pressure và driving pressure")
     
     st.markdown("""
@@ -500,7 +500,7 @@ def render_plateau_pressure_calculator():
 
 def render_weaning_calculator():
     """Render Ventilator Weaning calculator"""
-    st.subheader("🔄 Máy tính cai máy thở")
+    st.subheader("🔄 Tính toán cai máy thở")
     st.caption("Đánh giá sẵn sàng cai máy thở (RSBI)")
     
     st.markdown("""
@@ -578,7 +578,7 @@ def render_ventilator_calculator():
     Công Cụ Quản Lý Máy Thở cho ICU:
     - Cân nặng lý tưởng (IBW) - Tính trọng lượng lý tưởng
     - Thể tích khí lưu thông - Tính thể tích khí lưu thông
-    - Máy tính PEEP - Khuyến nghị PEEP dựa trên FiO2
+    - Tính toán PEEP - Khuyến nghị PEEP dựa trên FiO2
     - Áp lực cao nguyên - Tính áp lực cao nguyên
     - Thông số cai máy thở - Đánh giá sẵn sàng cai máy thở
     """)

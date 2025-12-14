@@ -213,7 +213,7 @@ def render_phenytoin_tdm():
     tab1, tab2, tab3 = st.tabs(["🔴 Liều nạp", "📅 Liều duy trì", "📊 Điều chỉnh theo nồng độ"])
     
     with tab1:
-        st.markdown("### 🔴 Máy tính liều nạp")
+        st.markdown("### 🔴 Tính toán liều nạp")
         
         col1, col2 = st.columns(2)
         
@@ -301,7 +301,7 @@ def render_phenytoin_tdm():
             """)
     
     with tab2:
-        st.markdown("### 📅 Máy tính liều duy trì")
+        st.markdown("### 📅 Tính toán liều duy trì")
         
         col1, col2 = st.columns(2)
         
