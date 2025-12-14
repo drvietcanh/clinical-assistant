@@ -4,6 +4,8 @@ NIHSS - NIH Stroke Scale
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -493,22 +495,18 @@ def render():
                 - Đột quỵ nặng hoặc chảy máu não <3 tháng
                 - Chảy máu tiêu hóa/tiết niệu <21 ngày
                 
-                **References:**
-                1. Brott T, et al. Measurements of acute cerebral infarction: a clinical examination scale. Stroke. 1989;20(7):864-870.
-                
-                2. Adams HP Jr, et al. Baseline NIH Stroke Scale score strongly predicts outcome after stroke: A report of the Trial of Org 10172 in Acute Stroke Treatment (TOAST). Neurology. 1999;53(1):126-131.
-                
-                3. Powers WJ, et al. 2018 Guidelines for the Early Management of Patients With Acute Ischemic Stroke (AHA/ASA). Stroke. 2018;49(3):e46-e110.
-                
-                **Guidelines:**
-                - AHA/ASA Acute Ischemic Stroke Guidelines 2019
-                - ESO Guidelines 2021
-                - NICE Stroke Guidelines 2019
-                
-                **Training:**
-                - NIHSS certification available online
-                - Requires periodic re-certification
                 """)
+            
+            # References section
+            references = get_references("NIHSS")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
             
             st.markdown("---")
             st.warning("""
@@ -526,5 +524,16 @@ def render():
             - **B**lood pressure - Quản lý BP cẩn thận
             - **C**T scan - CT não ASAP để loại trừ chảy máu
             """)
+    
+    # Always show references at the bottom
+    references = get_references("NIHSS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 

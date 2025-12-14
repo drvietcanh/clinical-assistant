@@ -11,6 +11,7 @@ from .mrs import render as render_mrs
 from .aspects import render as render_aspects
 from .abcd2 import render as render_abcd2
 from .barthel import render as render_barthel
+from .four_score import render as render_four_score
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -30,6 +31,7 @@ def render_neurology_calculator(calculator_id):
         "ASPECTS": render_aspects,
         "ABCD2": render_abcd2,
         "Barthel Index": render_barthel,
+        "FOUR Score": render_four_score,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -49,5 +51,6 @@ __all__ = [
     'render_aspects',
     'render_abcd2',
     'render_barthel',
+    'render_four_score',
 ]
 

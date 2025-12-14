@@ -4,6 +4,8 @@ Consciousness level assessment
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -170,11 +172,19 @@ def render():
                 **Chỉ định đặt nội khí quản:**
                 - GCS ≤8 (mất khả năng bảo vệ đường thở)
                 
-                **Tài liệu tham khảo:**
-                Teasdale G, Jennett B. Assessment of coma and impaired consciousness. A practical scale. Lancet. 1974;2(7872):81-84.
-                
                 **Xác nhận giá trị:**
                 - Được xác nhận rộng rãi trong chấn thương, phẫu thuật thần kinh, hồi sức cấp cứu
                 - Tiêu chuẩn vàng để đánh giá mức độ ý thức
                 """)
+    
+    # References section
+    references = get_references("GCS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

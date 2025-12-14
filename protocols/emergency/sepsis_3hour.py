@@ -138,7 +138,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: ANTIBIOTIC SELECTION ==========
-    st.markdown("### 💊 Lựa Chọn Kháng Sinh Thực Nghiệm")
+    st.markdown("### 💊 Lựa chọn kháng sinh thực nghiệm")
     
     st.markdown("**Nguyên tắc:** Kháng sinh phổ rộng trong 1 giờ đầu, điều chỉnh sau khi có kết quả")
     

@@ -186,7 +186,7 @@ def render_sepsis_1hour_bundle():
 
 def render_antibiotic_guide():
     """Render antibiotic selection guide"""
-    st.subheader("💊 Lựa Chọn Kháng Sinh Thực Nghiệm")
+    st.subheader("💊 Lựa chọn kháng sinh thực nghiệm")
     st.caption("Kháng sinh phổ rộng cho sepsis")
     
     st.markdown("---")
@@ -436,6 +436,21 @@ def render_sepsis_protocols():
     
     st.markdown("---")
     
+    # Check if specific tool should be opened
+    tool_to_open = st.session_state.get('sepsis_tool_to_open', None)
+    default_tab = 0
+    
+    if tool_to_open:
+        tool_tab_map = {
+            'lactate': 4,
+            'fluid': 3,
+            'protocols': 1
+        }
+        default_tab = tool_tab_map.get(tool_to_open, 0)
+        # Clear after using
+        if 'sepsis_tool_to_open' in st.session_state:
+            del st.session_state['sepsis_tool_to_open']
+    
     # Tab selection
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "🔍 Recognition",
@@ -443,7 +458,7 @@ def render_sepsis_protocols():
         "💊 Antibiotics",
         "💧 Fluid Resuscitation",
         "📊 Lactate Monitoring"
-    ])
+    ], selected=default_tab if default_tab < 5 else None)
     
     with tab1:
         render_sepsis_recognition()

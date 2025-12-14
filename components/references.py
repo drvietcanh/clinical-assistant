@@ -262,10 +262,12 @@ def render_reference_item(
             links.append(f'<a href="{doi_url}" target="_blank" style="text-decoration: none; color: #0066cc;">📄 Full Text</a>')
         
         if "url" in reference:
-            links.append(f'<a href="{reference[\"url\"]}" target="_blank" style="text-decoration: none; color: #0066cc;">🔗 Link</a>')
+            url = reference["url"]
+            links.append(f'<a href="{url}" target="_blank" style="text-decoration: none; color: #0066cc;">🔗 Link</a>')
         
         if "pdf_url" in reference:
-            links.append(f'<a href="{reference[\"pdf_url\"]}" target="_blank" style="text-decoration: none; color: #0066cc;">📥 Download PDF</a>')
+            pdf_url = reference["pdf_url"]
+            links.append(f'<a href="{pdf_url}" target="_blank" style="text-decoration: none; color: #0066cc;">📥 Download PDF</a>')
         
         if links:
             links_html = f"""

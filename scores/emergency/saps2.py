@@ -384,9 +384,9 @@ def render():
     st.markdown("#### 👤 Thông tin chung")
     col1, col2 = st.columns(2)
     with col1:
-        age = st.number_input("Tuổi", 0, 120, 50, 1, format="%d")
+        age = st.number_input("Tuổi", 0, 120, 50, 1, format="%d", key="saps2_age")
     with col2:
-        gcs = st.number_input("GCS (Thang điểm hôn mê Glasgow) - Thang điểm hôn mê Glasgow", 3, 15, 15, 1, format="%d")
+        gcs = st.number_input("GCS (Thang điểm hôn mê Glasgow) - Thang điểm hôn mê Glasgow", 3, 15, 15, 1, format="%d", key="saps2_gcs")
     
     st.divider()
     
@@ -394,24 +394,24 @@ def render():
     st.markdown("#### 🩺 Sinh hiệu")
     col3, col4, col5 = st.columns(3)
     with col3:
-        heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1, format="%d")
+        heart_rate = st.number_input("Nhịp tim (/min)", 0, 250, 80, 1, format="%d", key="saps2_hr")
     with col4:
-        sbp = st.number_input("SBP (mmHg)", 0, 300, 120, 1, format="%d")
+        sbp = st.number_input("SBP (mmHg)", 0, 300, 120, 1, format="%d", key="saps2_sbp")
     with col5:
-        temperature = st.number_input("Nhiệt độ (°C)", 20, 45, 37, 1, format="%d")
+        temperature = st.number_input("Nhiệt độ (°C)", 20, 45, 37, 1, format="%d", key="saps2_temp")
     
     st.divider()
     
     # Oxygenation (if ventilated)
     st.markdown("#### 🫁 Oxy Hóa")
-    is_ventilated = st.checkbox("**Bệnh nhân đang thở máy hoặc CPAP**")
+    is_ventilated = st.checkbox("**Bệnh nhân đang thở máy hoặc CPAP**", key="saps2_ventilated")
     
     if is_ventilated:
         col6, col7 = st.columns(2)
         with col6:
-            pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1, format="%d")
+            pao2 = st.number_input("PaO₂ (mmHg)", 0, 700, 100, 1, format="%d", key="saps2_pao2")
         with col7:
-            fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1, format="%d")
+            fio2 = st.number_input("FiO₂ (%)", 21, 100, 21, 1, format="%d", key="saps2_fio2")
     else:
         pao2 = 100.0
         fio2 = 21.0
@@ -423,16 +423,16 @@ def render():
     col8, col9 = st.columns(2)
     
     with col8:
-        urine_output = st.number_input("Nước tiểu (L/24h)", 0.0, 10.0, 1.5, 0.1, format="%.1f")
-        bun = st.number_input("BUN (mg/dL)", 0.0, 200.0, 20.0, 1.0, format="%.1f")
+        urine_output = st.number_input("Nước tiểu (L/24h)", 0.0, 10.0, 1.5, 0.1, format="%.1f", key="saps2_urine")
+        bun = st.number_input("BUN (mg/dL)", 0.0, 200.0, 20.0, 1.0, format="%.1f", key="saps2_bun")
         st.caption("💡 mmol/L × 2.8 = mg/dL")
-        wbc = st.number_input("WBC (×10³/μL)", 0.0, 100.0, 10.0, 0.1, format="%.1f")
-        potassium = st.number_input("Potassium (mEq/L)", 1.5, 10.0, 4.0, 0.1, format="%.1f")
+        wbc = st.number_input("WBC (×10³/μL)", 0.0, 100.0, 10.0, 0.1, format="%.1f", key="saps2_wbc")
+        potassium = st.number_input("Potassium (mEq/L)", 1.5, 10.0, 4.0, 0.1, format="%.1f", key="saps2_k")
     
     with col9:
-        sodium = st.number_input("Sodium (mEq/L)", 80.0, 200.0, 140.0, 1.0, format="%.1f")
-        bicarbonate = st.number_input("Bicarbonate/HCO₃ (mEq/L)", 0.0, 50.0, 24.0, 1.0, format="%.1f")
-        bilirubin = st.number_input("Bilirubin (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f")
+        sodium = st.number_input("Sodium (mEq/L)", 80.0, 200.0, 140.0, 1.0, format="%.1f", key="saps2_na")
+        bicarbonate = st.number_input("Bicarbonate/HCO₃ (mEq/L)", 0.0, 50.0, 24.0, 1.0, format="%.1f", key="saps2_hco3")
+        bilirubin = st.number_input("Bilirubin (mg/dL)", 0.0, 30.0, 1.0, 0.1, format="%.1f", key="saps2_bilirubin")
         st.caption("💡 μmol/L ÷ 17.1 = mg/dL")
     
     st.divider()
@@ -442,21 +442,22 @@ def render():
     admission_type = st.radio(
         "Loại nhập viện ICU",
         ["Phẫu thuật theo kế hoạch", "Nội khoa", "Phẫu thuật cấp cứu"],
-        help="Phẫu thuật theo kế hoạch = Scheduled surgical"
+        help="Phẫu thuật theo kế hoạch = Scheduled surgical",
+        key="saps2_admission"
     )
     
     col10, col11, col12 = st.columns(3)
     with col10:
-        has_aids = st.checkbox("AIDS")
+        has_aids = st.checkbox("AIDS", key="saps2_aids")
     with col11:
-        has_hematologic_malignancy = st.checkbox("Ung thư huyết học")
+        has_hematologic_malignancy = st.checkbox("Ung thư huyết học", key="saps2_hem_mal")
     with col12:
-        has_metastatic_cancer = st.checkbox("Ung thư di căn")
+        has_metastatic_cancer = st.checkbox("Ung thư di căn", key="saps2_met_cancer")
     
     st.divider()
     
     # Calculate
-    if st.button("🧮 Tính SAPS II Score", type="primary", use_container_width=True):
+    if st.button("🧮 Tính SAPS II Score", type="primary", use_container_width=True, key="saps2_calculate"):
         params = {
             'age': age,
             'heart_rate': heart_rate,

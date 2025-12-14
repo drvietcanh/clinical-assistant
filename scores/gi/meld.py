@@ -16,6 +16,8 @@ Hepatology. 2001;33(2):464-70.
 
 import streamlit as st
 import math
+from scores.references_config import get_references
+from components.references import render_references_section
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -425,7 +427,7 @@ def render():
             
             # Detailed info
             st.markdown("---")
-            with st.expander("🧮 Công Thức Tính MELD"):
+            with st.expander("🧮 Công thức tính MELD"):
                 st.markdown(f"""
                 **MELD = 3.78×ln[Bili] + 11.2×ln[INR] + 9.57×ln[Cr] + 6.43**
                 
@@ -552,39 +554,16 @@ def render():
                 filename="meld_result"
             )
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown("""
-                **Primary Reference:**
-                - Kamath PS, Wiesner RH, Malinchoc M, et al. 
-                  *A model to predict survival in patients with end-stage liver disease.* 
-                  Hepatology. 2001 Feb;33(2):464-70. [PMID: 11172350]
-                
-                **MELD for Transplant Allocation:**
-                - Wiesner R, Edwards E, Freeman R, et al. 
-                  *Model for end-stage liver disease (MELD) and allocation of donor livers.* 
-                  Gastroenterology. 2003 Jan;124(1):91-6.
-                
-                - Kamath PS, Kim WR; Advanced Liver Disease Study Group. 
-                  *The model for end-stage liver disease (MELD).* 
-                  Hepatology. 2007 Mar;45(3):797-805.
-                
-                **MELD-Na (Updated formula):**
-                - Biggins SW, et al. 
-                  *Serum sodium predicts mortality in patients listed for liver transplantation.* 
-                  Hepatology. 2005 Jul;42(1):79-88.
-                
-                - Kim WR, et al. 
-                  *Hyponatremia and mortality among patients on the liver-transplant waiting list.* 
-                  N Engl J Med. 2008 Sep 4;359(10):1018-26.
-                
-                **Guidelines:**
-                - Martin P, DiMartini A, Feng S, Brown R Jr, Fallon M. 
-                  *Evaluation for liver transplantation in adults: 2013 practice guideline by AASLD and AST.* 
-                  Hepatology. 2014 Mar;59(3):1144-65.
-                
-                - EASL Clinical Practice Guidelines: Liver transplantation. 
-                  J Hepatol. 2016 Feb;64(2):433-85.
-                """)
+            # References section
+            references = get_references("MELD")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
     
     # Educational content
     st.markdown("---")
@@ -700,9 +679,19 @@ def render():
         - Xem xét bối cảnh lâm sàng, không chỉ dựa vào số
         """)
     
+    # Always show references at the bottom
+    references = get_references("MELD")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
+    
     # Footer
     st.markdown("---")
-    st.caption("📚 Based on: Kamath PS, et al. Hepatology. 2001;33(2):464-70")
     st.caption("⚠️ Standard score for liver transplant prioritization (UNOS)")
     st.caption("🏥 Predicts 3-month mortality in cirrhosis patients")
 

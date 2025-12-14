@@ -199,7 +199,7 @@ def display_compliance_analysis(static_compliance, dynamic_compliance, plateau, 
             st.markdown("---")
     
     # Formula explanation
-    with st.expander("📐 Công Thức Compliance"):
+    with st.expander("📐 Công thức compliance"):
         st.markdown("""
         **Static Compliance:**
         ```

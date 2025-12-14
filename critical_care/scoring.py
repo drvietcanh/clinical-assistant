@@ -495,6 +495,24 @@ def render_scoring_calculator():
     
     st.markdown("---")
     
+    # Check if specific calculator should be opened
+    calc_to_open = st.session_state.get('scoring_calc_to_open', None)
+    default_tab = 0
+    
+    if calc_to_open:
+        calc_tab_map = {
+            'sofa': 1,
+            'rass': 4,
+            'cam_icu': 5,
+            'gcs': 3,
+            'apache2': 0,
+            'saps2': 2
+        }
+        default_tab = calc_tab_map.get(calc_to_open, 0)
+        # Clear after using
+        if 'scoring_calc_to_open' in st.session_state:
+            del st.session_state['scoring_calc_to_open']
+    
     # Tab selection
     tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
         "📊 APACHE II",
@@ -504,7 +522,7 @@ def render_scoring_calculator():
         "📊 RASS",
         "🧠 CAM-ICU",
         "🧪 AKI Staging"
-    ])
+    ], selected=default_tab if default_tab < 7 else None)
     
     # Tab 1: APACHE II
     with tab1:

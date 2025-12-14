@@ -34,7 +34,7 @@ def render_ardsnet():
         )
         
         st.markdown("---")
-        st.markdown("### ⚙️ Tham Số Máy Thở Hiện Tại")
+        st.markdown("### ⚙️ Tham số máy thở hiện tại")
         
         current_vt = st.number_input(
             "Vt hiện tại (mL)",
@@ -130,7 +130,7 @@ def render_ardsnet():
             - Theo dõi sát compliance, driving pressure
             """)
             
-            with st.expander("📐 Công Thức PBW"):
+            with st.expander("📐 Công thức PBW"):
                 st.markdown(f"""
                 **Predicted Body Weight (PBW):**
                 

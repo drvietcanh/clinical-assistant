@@ -40,6 +40,8 @@ from .sofa_lookup import (
     get_cns_score,
     get_renal_score,
 )
+from scores.references_config import get_references
+from components.references import render_references_section
 
 
 def calculate_sofa(
@@ -534,3 +536,14 @@ def render():
         - Nếu không biết baseline → giả định = 0
         - Tăng ≥2 điểm = có ý nghĩa lâm sàng
         """)
+    
+    # References section
+    references = get_references("SOFA")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )

@@ -4,6 +4,8 @@ Sepsis-3 screening tool
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -104,42 +106,27 @@ def render():
             for detail in details:
                 st.write(detail)
             
-            with st.expander("📚 Tài liệu tham khảo lâm sàng"):
-                st.markdown("""
-                **qSOFA (Quick SOFA) Score**
-                
-                **Purpose:** Rapid bedside screening for sepsis outside ICU
-                
-                **Criteria (1 point each):**
-                1. Respiratory rate ≥ 22/min
-                2. Altered mentation (GCS < 15)
-                3. Systolic blood pressure ≤ 100 mmHg
-                
-                **Interpretation:**
-                - **qSOFA ≥ 2:** Concerning for sepsis
-                  - Increased risk of death or prolonged ICU stay
-                  - Triggers full SOFA assessment
-                  - Consider sepsis bundle
-                
-                - **qSOFA < 2:** Lower risk
-                  - Does NOT rule out infection
-                  - Clinical judgment still essential
-                
-                **Limitations:**
-                - NOT for diagnosis, only screening
-                - Less sensitive than SIRS criteria
-                - Better specificity for adverse outcomes
-                
-                **Reference:**
-                Singer M, et al. The Third International Consensus Definitions 
-                for Sepsis and Septic Shock (Sepsis-3). JAMA. 2016;315(8):801-810.
-                doi:10.1001/jama.2016.0287
-                
-                **Guidelines:**
-                - Surviving Sepsis Campaign 2021
-                - Use as part of clinical assessment
-                - Not a standalone diagnostic tool
-                """)
+            # References section
+            references = get_references("qSOFA")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+    
+    # Always show references at the bottom
+    references = get_references("qSOFA")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.info("""

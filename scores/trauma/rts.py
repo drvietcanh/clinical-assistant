@@ -205,7 +205,7 @@ def render():
         2. **SBP (Huyết áp tâm thu):** Huyết áp tâm thu
         3. **RR (Nhịp thở):** Tần số thở
         
-        **Công Thức:**
+        **Công thức:**
         ```
         RTS = 0.9368 × (GCS coded) + 0.7326 × (SBP coded) + 0.2908 × (RR coded)
         ```
@@ -335,7 +335,7 @@ def render():
             - SBP: {sbp:.0f} mmHg → Coded: {result['sbp_coded']}
             - RR: {rr:.0f} breaths/min → Coded: {result['rr_coded']}
             
-            **Công Thức:**
+            **Công thức:**
             ```
             RTS = 0.9368 × {result['gcs_coded']} + 0.7326 × {result['sbp_coded']} + 0.2908 × {result['rr_coded']}
             RTS = {0.9368 * result['gcs_coded']:.3f} + {0.7326 * result['sbp_coded']:.3f} + {0.2908 * result['rr_coded']:.3f}
@@ -396,7 +396,7 @@ def render():
         3. **Age** - tuổi
         4. **Mechanism** - cơ chế chấn thương (blunt vs penetrating)
         
-        **Công Thức TRISS:**
+        **Công thức TRISS:**
         ```
         Survival Probability = 1 / (1 + e^(-b))
         

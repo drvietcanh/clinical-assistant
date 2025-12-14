@@ -12,7 +12,9 @@ SCORES_BY_SPECIALTY = {
         "SOFA-2 (2025)": {"name": "SOFA-2 (2025) ⭐", "desc": "SOFA cập nhật 2025 - HFNC, ECMO, RRT, vasopressor mới", "status": "✅"},
         "APACHE II": {"name": "APACHE II", "desc": "Dự đoán tử vong ICU", "status": "✅"},
         "SAPS II": {"name": "SAPS II - Simplified Acute Physiology Score", "desc": "Độ nặng bệnh nhân ICU", "status": "✅"},
+        "SAPS III": {"name": "SAPS III - Simplified Acute Physiology Score III", "desc": "Dự đoán tử vong ICU - Phiên bản cập nhật (chính xác hơn SAPS II)", "status": "✅"},
         "MODS": {"name": "MODS - Multiple Organ Dysfunction Score", "desc": "Rối loạn đa cơ quan", "status": "✅"},
+        "LODS": {"name": "LODS - Logistic Organ Dysfunction Score", "desc": "Đánh giá suy cơ quan trong ICU", "status": "✅"},
     },
     
     "❤️ Tim mạch (Cardiology)": {
@@ -51,6 +53,7 @@ SCORES_BY_SPECIALTY = {
         "ASPECTS": {"name": "ASPECTS - Alberta Stroke Program Early CT Score", "desc": "Đánh giá thay đổi thiếu máu sớm trên CT - Quyết định thrombolysis/thrombectomy", "status": "✅"},
         "ABCD2": {"name": "ABCD2 Score", "desc": "Phân tầng nguy cơ đột quỵ sau TIA", "status": "✅"},
         "Barthel Index": {"name": "Barthel Index", "desc": "Đánh giá chức năng hoạt động hàng ngày (ADL)", "status": "✅"},
+        "FOUR Score": {"name": "FOUR Score - Full Outline of UnResponsiveness", "desc": "Đánh giá mức độ ý thức - Thay thế GCS cho bệnh nhân thở máy", "status": "✅"},
     },
     
     "🩸 Tiêu Hóa - Gan Mật (GI/Hepatology)": {

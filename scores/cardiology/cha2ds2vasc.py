@@ -4,6 +4,8 @@ Stroke risk assessment in atrial fibrillation
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -182,29 +184,27 @@ def render():
                 filename="cha2ds2vasc_result"
             )
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown("""
-                **ESC Guidelines 2020 - Atrial Fibrillation**
-                
-                **Cách tính điểm:**
-                - **C** = Congestive heart failure/LV dysfunction (+1)
-                - **H** = Hypertension (+1)
-                - **A₂** = Age ≥75 years (+2)
-                - **D** = Diabetes mellitus (+1)
-                - **S₂** = Prior Stroke/TIA/thromboembolism (+2)
-                - **V** = Vascular disease (+1)
-                - **A** = Age 65-74 years (+1)
-                - **Sc** = Sex category (female) (+1)
-                
-                **Tổng điểm:** 0-9
-                
-                **Validation:**
-                - Euro Heart Survey on AF
-                - Danish National Patient Registry
-                
-                **Link:**
-                - ESC 2020: https://academic.oup.com/eurheartj/article/42/5/373/5899003
-                """)
+            # References section
+            references = get_references("CHA2DS2-VASc")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("CHA2DS2-VASc")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Công cụ hỗ trợ lâm sàng - không thay thế đánh giá lâm sàng toàn diện")

@@ -113,6 +113,26 @@ elif "Ventilator Management" in tool_type:
     st.header("🫁 Ventilator Management")
     st.caption("Công cụ quản lý máy thở cho ICU")
     
+    # Check if specific tool should be opened
+    vent_tool_to_open = st.session_state.get('ventilator_tool_to_open', None)
+    default_vent_tab = 0
+    default_sub_tab = 0
+    is_rsbi = False
+    
+    if vent_tool_to_open:
+        if vent_tool_to_open == 'rsbi':
+            default_vent_tab = 0  # Quick Tools tab
+            default_sub_tab = 4  # RSBI tab
+            is_rsbi = True
+        elif vent_tool_to_open in ['weaning', 'sbt']:
+            default_vent_tab = 3  # Weaning & Extubation tab
+        elif vent_tool_to_open == 'peep_fio2':
+            default_vent_tab = 2  # Protocols & Settings tab
+            default_sub_tab = 2  # PEEP/FiO2 Table
+        # Clear after using
+        if 'ventilator_tool_to_open' in st.session_state:
+            del st.session_state['ventilator_tool_to_open']
+    
     # Sub-menu for ventilator tools - Organized into 4 clear tabs
     if VENTILATOR_ADVANCED_AVAILABLE:
         vent_tabs = st.tabs([
@@ -120,7 +140,7 @@ elif "Ventilator Management" in tool_type:
             "🫁 Comprehensive Analysis",
             "📊 Protocols & Settings",
             "🔄 Weaning & Extubation"
-        ])
+        ], selected=default_vent_tab if default_vent_tab < 4 else None)
         
         # Tab 1: Quick Tools - For fast decisions
         with vent_tabs[0]:
@@ -134,7 +154,7 @@ elif "Ventilator Management" in tool_type:
                 "📊 PEEP",
                 "📈 Plateau Pressure",
                 "🔄 RSBI (Quick)"
-            ])
+            ], selected=default_sub_tab if is_rsbi else None)
             
             with quick_tools_tabs[0]:
                 render_ibw_calculator()
@@ -168,7 +188,7 @@ elif "Ventilator Management" in tool_type:
                 "🫁 ARDSNet Protocol",
                 "⚙️ Initial Settings",
                 "📊 PEEP/FiO2 Table"
-            ])
+            ], selected=default_sub_tab if default_vent_tab == 2 else None)
             
             with protocol_tabs[0]:
                 render_ardsnet()

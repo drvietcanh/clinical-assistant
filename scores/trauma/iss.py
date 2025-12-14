@@ -238,7 +238,7 @@ def render():
         | **5** | Critical | Rách gan độ III-IV, chấn thương sọ não nặng |
         | **6** | Unsurvivable | Tổn thương không thể sống sót |
         
-        ### 🧮 Công Thức ISS
+        ### 🧮 Công thức ISS
         
         **ISS = A² + B² + C²**
         

@@ -138,7 +138,7 @@ def assess_fluid_responsiveness(cvp: float = None, pulse_pressure_variation: flo
 
 def render_shock_classification():
     """Render shock classification calculator"""
-    st.subheader("🔍 Phân Loại Sốc")
+    st.subheader("🔍 Phân loại sốc")
     st.caption("Phân loại sốc dựa trên huyết động")
     
     st.markdown("""
@@ -510,7 +510,7 @@ def render_shock_management():
     
     # Tab selection
     tab1, tab2, tab3 = st.tabs([
-        "🔍 Phân Loại",
+        "🔍 Phân loại",
         "💧 Đáp Ứng Dịch",
         "💉 Chọn Vasopressor"
     ])

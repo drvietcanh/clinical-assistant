@@ -38,10 +38,14 @@ def render_sepsis_scenario():
         col1, col2 = st.columns(2)
         with col1:
             if st.button("📊 Tính SOFA Score", key="sepsis_sofa"):
-                st.session_state['sepsis_scenario_tool'] = 'sofa'
+                st.session_state['critical_care_tool_selection'] = "📊 Scoring Systems"
+                st.session_state['scoring_calc_to_open'] = 'sofa'
+                st.rerun()
         with col2:
             if st.button("⚡ Tính qSOFA", key="sepsis_qsofa"):
-                st.session_state['sepsis_scenario_tool'] = 'qsofa'
+                # qSOFA is in Scores page
+                st.session_state['scores_calc_to_open'] = 'qsofa'
+                st.switch_page("pages/01_📊_Scores.py")
     
     # Step 2: 1-Hour Bundle
     with st.expander("⏱️ Bước 2: 1-Hour Bundle (Bắt buộc)", expanded=True):
@@ -63,7 +67,8 @@ def render_sepsis_scenario():
         """)
         
         if st.button("🦠 Xem Sepsis Protocols", key="sepsis_protocols"):
-            st.session_state['sepsis_scenario_tool'] = 'protocols'
+            st.session_state['critical_care_tool_selection'] = "🦠 Sepsis Protocols"
+            st.rerun()
     
     # Step 3: Fluid Resuscitation
     with st.expander("💧 Bước 3: Bù Dịch", expanded=True):
@@ -80,7 +85,8 @@ def render_sepsis_scenario():
         """)
         
         if st.button("💧 Tính Fluid Therapy", key="sepsis_fluid"):
-            st.session_state['sepsis_scenario_tool'] = 'fluid'
+            st.session_state['critical_care_tool_selection'] = "💧 Fluid Therapy"
+            st.rerun()
     
     # Step 4: Vasopressors
     with st.expander("💉 Bước 4: Vasopressor", expanded=True):
@@ -96,7 +102,8 @@ def render_sepsis_scenario():
         """)
         
         if st.button("💉 Xem Vasopressor Guide", key="sepsis_vaso"):
-            st.session_state['sepsis_scenario_tool'] = 'vasopressor'
+            st.session_state['critical_care_tool_selection'] = "💉 Vasopressors"
+            st.rerun()
     
     # Step 5: Monitoring
     with st.expander("📊 Bước 5: Theo Dõi", expanded=True):
@@ -114,7 +121,9 @@ def render_sepsis_scenario():
         """)
         
         if st.button("📊 Tính Lactate Clearance", key="sepsis_lactate"):
-            st.session_state['sepsis_scenario_tool'] = 'lactate'
+            st.session_state['critical_care_tool_selection'] = "🦠 Sepsis Protocols"
+            st.session_state['sepsis_tool_to_open'] = 'lactate'
+            st.rerun()
     
     st.markdown("---")
     st.info("""
@@ -190,7 +199,8 @@ def render_ards_scenario():
         """)
         
         if st.button("🫁 ARDSNet Calculator", key="ards_calc"):
-            st.session_state['ards_scenario_tool'] = 'ardsnet'
+            st.session_state['critical_care_tool_selection'] = "🫁 ARDS Protocols"
+            st.rerun()
     
     # Step 3: PEEP/FiO₂ Table
     with st.expander("📊 Bước 3: PEEP/FiO₂ Table", expanded=True):
@@ -202,7 +212,9 @@ def render_ards_scenario():
         """)
         
         if st.button("📊 Xem PEEP/FiO₂ Table", key="ards_peep_table"):
-            st.session_state['ards_scenario_tool'] = 'peep_table'
+            st.session_state['critical_care_tool_selection'] = "🫁 Ventilator Management"
+            st.session_state['ventilator_tool_to_open'] = 'peep_fio2'
+            st.rerun()
     
     # Step 4: Prone Positioning
     with st.expander("🔄 Bước 4: Nằm Sấp (Prone)", expanded=True):
@@ -269,7 +281,7 @@ def render_shock_scenario():
     st.markdown("---")
     
     # Step 1: Classification
-    with st.expander("📋 Bước 1: Phân Loại Shock", expanded=True):
+    with st.expander("📋 Bước 1: Phân loại shock", expanded=True):
         st.markdown("""
         **4 Loại Shock:**
         
@@ -295,7 +307,8 @@ def render_shock_scenario():
         """)
         
         if st.button("💉 Xem Shock Classification", key="shock_classify"):
-            st.session_state['shock_scenario_tool'] = 'classification'
+            st.session_state['critical_care_tool_selection'] = "💉 Shock Management"
+            st.rerun()
     
     # Step 2: Assessment
     with st.expander("📊 Bước 2: Đánh giá", expanded=True):
@@ -335,7 +348,8 @@ def render_shock_scenario():
         """)
         
         if st.button("💧 Xem Fluid Responsiveness", key="shock_fluid"):
-            st.session_state['shock_scenario_tool'] = 'fluid_responsiveness'
+            st.session_state['critical_care_tool_selection'] = "💧 Fluid Therapy"
+            st.rerun()
     
     # Step 4: Vasopressor Selection
     with st.expander("💉 Bước 4: Chọn Vasopressor", expanded=True):
@@ -356,7 +370,8 @@ def render_shock_scenario():
         """)
         
         if st.button("💉 Xem Vasopressor Guide", key="shock_vaso"):
-            st.session_state['shock_scenario_tool'] = 'vasopressor'
+            st.session_state['critical_care_tool_selection'] = "💉 Vasopressors"
+            st.rerun()
     
     # Step 5: Monitoring
     with st.expander("📊 Bước 5: Theo Dõi", expanded=True):
@@ -419,7 +434,9 @@ def render_ventilator_weaning_scenario():
         """)
         
         if st.button("🔄 Đánh giá Sẵn Sàng", key="weaning_readiness"):
-            st.session_state['weaning_scenario_tool'] = 'readiness'
+            st.session_state['critical_care_tool_selection'] = "🫁 Ventilator Management"
+            st.session_state['ventilator_tool_to_open'] = 'weaning'
+            st.rerun()
     
     # Step 2: RSBI
     with st.expander("📊 Bước 2: RSBI (Rapid Shallow Breathing Index)", expanded=True):
@@ -437,7 +454,9 @@ def render_ventilator_weaning_scenario():
         """)
         
         if st.button("📊 Tính RSBI", key="weaning_rsbi"):
-            st.session_state['weaning_scenario_tool'] = 'rsbi'
+            st.session_state['critical_care_tool_selection'] = "🫁 Ventilator Management"
+            st.session_state['ventilator_tool_to_open'] = 'rsbi'
+            st.rerun()
     
     # Step 3: SBT Protocol
     with st.expander("⏱️ Bước 3: SBT (Spontaneous Breathing Trial)", expanded=True):
@@ -479,7 +498,9 @@ def render_ventilator_weaning_scenario():
         """)
         
         if st.button("⏱️ Xem SBT Protocol", key="weaning_sbt"):
-            st.session_state['weaning_scenario_tool'] = 'sbt'
+            st.session_state['critical_care_tool_selection'] = "🫁 Ventilator Management"
+            st.session_state['ventilator_tool_to_open'] = 'sbt'
+            st.rerun()
     
     # Step 4: Extubation
     with st.expander("✅ Bước 4: Rút Nội Khí Quản", expanded=True):
@@ -544,7 +565,9 @@ def render_sedation_scenario():
         """)
         
         if st.button("📊 Tính RASS", key="sedation_rass"):
-            st.session_state['sedation_scenario_tool'] = 'rass'
+            st.session_state['critical_care_tool_selection'] = "📊 Scoring Systems"
+            st.session_state['scoring_calc_to_open'] = 'rass'
+            st.rerun()
     
     # Step 2: Pain Assessment
     with st.expander("😣 Bước 2: Đánh giá đau", expanded=True):
@@ -592,7 +615,8 @@ def render_sedation_scenario():
         """)
         
         if st.button("💤 Xem Sedation Calculator", key="sedation_calc"):
-            st.session_state['sedation_scenario_tool'] = 'calculator'
+            st.session_state['critical_care_tool_selection'] = "💤 Sedation & Analgesia"
+            st.rerun()
     
     # Step 4: Analgesia
     with st.expander("💉 Bước 4: Giảm Đau", expanded=True):
@@ -636,7 +660,9 @@ def render_sedation_scenario():
         """)
         
         if st.button("🧠 Tính CAM-ICU", key="sedation_cam"):
-            st.session_state['sedation_scenario_tool'] = 'cam'
+            st.session_state['critical_care_tool_selection'] = "📊 Scoring Systems"
+            st.session_state['scoring_calc_to_open'] = 'cam_icu'
+            st.rerun()
     
     # Step 6: Daily Sedation Interruption
     with st.expander("⏰ Bước 6: Ngừng An Thần Hàng Ngày", expanded=True):

@@ -51,7 +51,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Lựa Chọn Kháng Sinh Thực Nghiệm")
+    st.markdown("### 💊 Lựa chọn kháng sinh thực nghiệm")
     
     col1, col2 = st.columns(2)
     

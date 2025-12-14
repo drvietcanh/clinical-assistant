@@ -27,7 +27,9 @@ ALL_CALCULATORS = {
     "sofa2": {"name": "SOFA-2 (2025)", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "apache2": {"name": "APACHE II", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "saps2": {"name": "SAPS II", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
+    "saps3": {"name": "SAPS III", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     "mods": {"name": "MODS", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
+    "lods": {"name": "LODS", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
     
     # Scores - Respiratory
     "perc": {"name": "PERC Rule", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
@@ -48,6 +50,7 @@ ALL_CALCULATORS = {
     "aspects": {"name": "ASPECTS", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     "abcd2": {"name": "ABCD2", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     "barthel": {"name": "Barthel Index", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
+    "four_score": {"name": "FOUR Score", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     
     # Scores - GI/Hepatology
     "bisap": {"name": "BISAP Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},

@@ -52,7 +52,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: EMPIRIC ANTIBIOTIC SELECTION ==========
-    st.markdown("### 💊 Lựa Chọn Kháng Sinh Thực Nghiệm")
+    st.markdown("### 💊 Lựa chọn kháng sinh thực nghiệm")
     
     # Risk assessment
     has_mdr_risk = st.checkbox("Có yếu tố nguy cơ MDR", key="hap_mdr_risk")

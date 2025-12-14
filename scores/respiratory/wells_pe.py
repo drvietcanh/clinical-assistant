@@ -4,6 +4,8 @@ Wells Score for Pulmonary Embolism
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -245,61 +247,16 @@ def render():
             - Nhồi máu cơ tim
             """)
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown(f"""
-                **Wells Score for Pulmonary Embolism**
-                
-                **Phân tầng nguy cơ:**
-                
-                | Score | Xác suất | Tỷ lệ PE | Khuyến cáo |
-                |-------|----------|----------|------------|
-                | <2 | Thấp | 3.6% | D-dimer → nếu (-) loại trừ PE |
-                | 2-6 | Trung bình | 20.5% | D-dimer → nếu (+) CTPA |
-                | >6 | Cao | 66.7% | CTPA trực tiếp |
-                
-                **Kết quả của bạn:** {probability} ({score} điểm) - {pe_prevalence} có PE
-                
-                **Tiêu chí tính điểm:**
-                
-                | Tiêu chí | Điểm |
-                |----------|------|
-                | Dấu hiệu lâm sàng DVT | +3.0 |
-                | PE là chẩn đoán khả năng nhất | +3.0 |
-                | Nhịp tim >100/phút | +1.5 |
-                | Nằm bất động ≥3 ngày hoặc phẫu thuật trong 4 tuần | +1.5 |
-                | Tiền sử DVT/PE | +1.5 |
-                | Ho ra máu | +1.0 |
-                | Ung thư (đang điều trị hoặc <6 tháng, hoặc palliative) | +1.0 |
-                
-                **Simplified Wells (2-tier):**
-                - ≤4: PE unlikely (12%)
-                - >4: PE likely (37%)
-                
-                **Ưu điểm:**
-                - Đơn giản, nhanh
-                - Validated rộng rãi
-                - Kết hợp tốt với D-dimer
-                - Giảm số lượng CTPA không cần thiết
-                
-                **Nhược điểm:**
-                - Phụ thuộc đánh giá chủ quan ("PE khả năng nhất")
-                - Không đánh giá mức độ nặng của PE
-                
-                **Alternatives:**
-                - PERC Rule (Pulmonary Embolism Rule-out Criteria)
-                - Geneva Score
-                - YEARS Algorithm
-                
-                **References:**
-                1. Wells PS, et al. Derivation of a simple clinical model to categorize patients probability of pulmonary embolism: increasing the models utility with the SimpliRED D-dimer. Thromb Haemost. 2000;83(3):416-420.
-                
-                2. Van Belle A, et al. Effectiveness of managing suspected pulmonary embolism using an algorithm combining clinical probability, D-dimer testing, and computed tomography. JAMA. 2006;295(2):172-179.
-                
-                **Guidelines:**
-                - ESC Guidelines for PE (2019)
-                - ACCP Guidelines (2016)
-                - NICE Guidelines (2020)
-                """)
+            # References section
+            references = get_references("Wells PE")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
             
             st.markdown("---")
             st.warning("""
