@@ -106,7 +106,6 @@ with st.sidebar:
                 "🧪 BMP - Basic Metabolic Panel",
                 "🧪 CMP - Comprehensive Metabolic Panel",
                 "🫀 LFT - Liver Function Tests",
-                "💊 Lipid Panel",
                 "❤️ Cardiac Markers",
                 "🩸 Coagulation Panel",
                 "🦋 Thyroid Function Tests",
@@ -294,8 +293,6 @@ elif category == "🔬 Lab Panels":
         render_cmp()
     elif "LFT" in lab_panel or "Liver" in lab_panel:
         render_lft()
-    elif "Lipid" in lab_panel:
-        render_lipid()
     elif "Cardiac" in lab_panel:
         render_cardiac_markers()
     elif "Coag" in lab_panel:
