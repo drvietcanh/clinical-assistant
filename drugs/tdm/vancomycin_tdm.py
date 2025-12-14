@@ -498,11 +498,11 @@ def render_vancomycin_tdm():
             st.markdown("### 💊 Kết quả tính liều")
             
             if result.get('loading_dose_mg'):
-                st.markdown("#### 🔴 Loading Dose:")
+                st.markdown("#### 🔴 Liều nạp:")
                 st.info(f"**Loading dose:** {result['loading_dose_mg']:.0f} mg (một lần)")
                 st.markdown("---")
             
-            st.markdown("#### 📅 Maintenance Dose:")
+            st.markdown("#### 📅 Liều duy trì:")
             
             col1, col2, col3 = st.columns(3)
             

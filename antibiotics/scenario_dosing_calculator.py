@@ -350,15 +350,15 @@ def render_scenario_dosing_calculator(antibiotic_name):
     st.markdown("---")
     
     # Scenario selection
-    st.markdown("### 🎯 Chọn Scenarios (CrCl)")
+    st.markdown("### 🎯 Chọn scenarios (CrCl - Độ thanh thải creatinine)")
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("**CrCl Categories:**")
-        scenario_normal = st.checkbox("CrCl ≥ 60 (Normal)", value=True, key=f"scenario_normal_{antibiotic_name}")
-        scenario_mild = st.checkbox("CrCl 30-59 (Mild)", value=True, key=f"scenario_mild_{antibiotic_name}")
-        scenario_moderate = st.checkbox("CrCl 15-29 (Moderate)", value=True, key=f"scenario_moderate_{antibiotic_name}")
-        scenario_severe = st.checkbox("CrCl < 15 (Severe)", value=True, key=f"scenario_severe_{antibiotic_name}")
+        st.markdown("**Phân loại CrCl:**")
+        scenario_normal = st.checkbox("CrCl ≥ 60 (Bình thường)", value=True, key=f"scenario_normal_{antibiotic_name}")
+        scenario_mild = st.checkbox("CrCl 30-59 (Suy thận nhẹ)", value=True, key=f"scenario_mild_{antibiotic_name}")
+        scenario_moderate = st.checkbox("CrCl 15-29 (Suy thận vừa)", value=True, key=f"scenario_moderate_{antibiotic_name}")
+        scenario_severe = st.checkbox("CrCl < 15 (Suy thận nặng)", value=True, key=f"scenario_severe_{antibiotic_name}")
     
     with col2:
         st.markdown("**Chỉ định:**")

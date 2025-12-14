@@ -167,7 +167,7 @@ def render_digoxin_tdm():
             indication_code = "heart_failure" if "Suy tim" in indication else "atrial_fibrillation"
             
             need_loading = st.checkbox(
-                "Cần loading dose?",
+                "Cần liều nạp?",
                 key="digoxin_loading",
                 help="Loading dose cho digitalization nhanh"
             )
@@ -180,12 +180,12 @@ def render_digoxin_tdm():
             st.markdown("### 💊 Kết quả tính liều")
             
             if need_loading:
-                st.markdown("#### 🔴 Loading Dose (Digitalization):")
+                st.markdown("#### 🔴 Liều nạp (Sốc digitalis):")
                 col1, col2 = st.columns(2)
                 
                 with col1:
                     st.info(f"""
-                    **Tổng loading dose:**
+                    **Tổng liều nạp:**
                     {result['loading_dose_mcg']:.0f} mcg
                     ({result['loading_dose_mg']:.2f} mg)
                     """)
@@ -199,7 +199,7 @@ def render_digoxin_tdm():
                     """)
             
             st.markdown("---")
-            st.markdown("#### 📅 Maintenance Dose (Liều Duy Trì):")
+            st.markdown("#### 📅 Liều duy trì:")
             
             col1, col2, col3 = st.columns(3)
             

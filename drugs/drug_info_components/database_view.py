@@ -313,7 +313,7 @@ def render_drug_database():
         with col3:
             filter_renal = st.checkbox('Có điều chỉnh theo thận', value=
                 filters.get('has_renal_adjustment', False), key='filter_renal')
-            filter_black_box = st.checkbox('Có cảnh báo Black Box', value=
+            filter_black_box = st.checkbox('Có cảnh báo hộp đen', value=
                 filters.get('has_black_box', False), key='filter_black_box')
         # Convert 'Tất cả' back to 'All' for internal processing
         pregnancy_value = 'All' if filter_pregnancy == 'Tất cả' else filter_pregnancy

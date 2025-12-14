@@ -210,10 +210,10 @@ def render_phenytoin_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2, tab3 = st.tabs(["🔴 Loading Dose", "📅 Maintenance Dose", "📊 Điều Chỉnh Theo Nồng Độ"])
+    tab1, tab2, tab3 = st.tabs(["🔴 Liều nạp", "📅 Liều duy trì", "📊 Điều chỉnh theo nồng độ"])
     
     with tab1:
-        st.markdown("### 🔴 Loading Dose Calculator")
+        st.markdown("### 🔴 Máy tính liều nạp")
         
         col1, col2 = st.columns(2)
         
@@ -246,16 +246,16 @@ def render_phenytoin_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Loading Dose", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều nạp", type="primary", use_container_width=True):
             result = calculate_phenytoin_loading_dose(weight, indication_code)
             
-            st.markdown("### 💊 Loading Dose:")
+            st.markdown("### 💊 Liều nạp:")
             
             col1, col2 = st.columns(2)
             
             with col1:
                 st.metric(
-                    "Tổng loading dose",
+                    "Tổng liều nạp",
                     f"{result['loading_dose_mg']:.0f} mg",
                     help=f"{result['loading_dose_mg_per_kg']:.1f} mg/kg"
                 )
@@ -286,7 +286,7 @@ def render_phenytoin_tdm():
                 """.format(result['loading_dose_mg'], result['loading_dose_mg'] / 50))
             else:
                 st.info("""
-                **PO Loading Dose:**
+                **Liều nạp uống:**
                 
                 - **Cách cho:** Có thể chia 2-3 lần, mỗi 2-4 giờ
                 - **Hoặc:** Cho toàn bộ cùng lúc nếu bệnh nhân tỉnh táo
@@ -295,13 +295,13 @@ def render_phenytoin_tdm():
             
             st.markdown("---")
             st.success("""
-            **📅 Sau loading dose:**
-            - Bắt đầu maintenance dose ngay sau khi cho xong loading
+            **📅 Sau liều nạp:**
+            - Bắt đầu liều duy trì ngay sau khi cho xong liều nạp
             - Lấy mẫu TDM sau 12-24 giờ (sau liều maintenance đầu tiên)
             """)
     
     with tab2:
-        st.markdown("### 📅 Maintenance Dose Calculator")
+        st.markdown("### 📅 Máy tính liều duy trì")
         
         col1, col2 = st.columns(2)
         
@@ -340,11 +340,11 @@ def render_phenytoin_tdm():
         
         st.markdown("---")
         
-        if st.button("🧮 Tính Maintenance Dose", type="primary", use_container_width=True):
+        if st.button("🧮 Tính liều duy trì", type="primary", use_container_width=True):
             current_level_val = current_level if current_level > 0 else None
             result = calculate_phenytoin_maintenance_dose(weight, current_level_val, target_level)
             
-            st.markdown("### 💊 Maintenance Dose:")
+            st.markdown("### 💊 Liều duy trì:")
             
             col1, col2, col3 = st.columns(3)
             

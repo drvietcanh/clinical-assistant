@@ -255,7 +255,7 @@ def render_aminoglycosides_tdm():
             
             st.markdown("### 💊 Kết quả tính liều")
             
-            st.markdown("#### 🔴 Loading Dose:")
+            st.markdown("#### 🔴 Liều nạp:")
             col1, col2 = st.columns(2)
             
             with col1:
@@ -269,7 +269,7 @@ def render_aminoglycosides_tdm():
                 """)
             
             st.markdown("---")
-            st.markdown("#### 📅 Maintenance Dose:")
+            st.markdown("#### 📅 Liều duy trì:")
             
             col1, col2, col3 = st.columns(3)
             

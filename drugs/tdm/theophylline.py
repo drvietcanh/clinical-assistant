@@ -245,7 +245,7 @@ def render_theophylline_tdm():
         if st.button("🧮 Tính liều Theophylline", type="primary", use_container_width=True):
             result = calculate_theophylline_dose(weight, indication_code, target_level)
             
-            st.markdown("### 💊 Maintenance Dose:")
+            st.markdown("### 💊 Liều duy trì:")
             
             col1, col2, col3 = st.columns(3)
             

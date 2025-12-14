@@ -145,7 +145,7 @@ def _render_black_box_warning(warning_text):
     '>
         <h3 style='color: #dc2626; margin: 0 0 10px 0; font-size: 1.2em; display: flex; align-items: center;'>
             <span style='font-size: 1.5em; margin-right: 10px;'>⚠️</span>
-            BLACK BOX WARNING
+            CẢNH BÁO HỘP ĐEN
         </h3>
         <p style='color: #991b1b; font-size: 1.05em; margin: 0; line-height: 1.6; font-weight: 500;'>
             {warning_text}
