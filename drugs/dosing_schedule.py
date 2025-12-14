@@ -23,8 +23,8 @@ def calculate_dosing_times(start_time_str, interval_hours, duration_days):
     try:
         start_time = datetime.strptime(start_time_str, "%H:%M").time()
         start_datetime = datetime.combine(datetime.today(), start_time)
-    except:
-        # Default to 8:00 AM
+    except (ValueError, TypeError):
+        # Default to 8:00 AM if invalid time format
         start_datetime = datetime.combine(datetime.today(), datetime.strptime("08:00", "%H:%M").time())
     
     doses = []

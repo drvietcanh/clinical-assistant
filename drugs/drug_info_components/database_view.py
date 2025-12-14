@@ -52,14 +52,23 @@ def render_drug_database():
     st.markdown('### ⚡ Lọc nhanh theo nhóm thuốc phổ biến')
     
     def search_by_keywords(keywords):
-        """Search drugs by keywords in group field"""
+        """Search drugs by keywords in group field - optimized with early exit"""
+        if not keywords:
+            return []
+        
         results = []
         keywords_lower = [kw.lower() for kw in keywords]
+        keywords_set = set(keywords_lower)  # Use set for faster lookup
+        
         for drug_name, drug_data in DRUG_DATABASE.items():
-            if 'group' in drug_data:
-                group_lower = drug_data['group'].lower()
-                if any(kw in group_lower for kw in keywords_lower):
-                    results.append((drug_name, drug_data))
+            if 'group' not in drug_data:
+                continue  # Early exit if no group
+            
+            group_lower = drug_data['group'].lower()
+            # Check if any keyword matches (optimized)
+            if any(kw in group_lower for kw in keywords_set):
+                results.append((drug_name, drug_data))
+        
         return results
     
     # Define quick filter categories

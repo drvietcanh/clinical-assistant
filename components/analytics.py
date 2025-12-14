@@ -397,21 +397,22 @@ def render_analytics_dashboard() -> None:
         chart_html = "<div style='margin: 1rem 0; height: 200px; display: flex; align-items: flex-end; gap: 8px; border-bottom: 2px solid #dee2e6; padding-bottom: 1rem;'>"
         for date, value in zip(dates, values):
             # Calculate height percentage (minimum 4px for visibility, max 100%)
-            if max_value > 0:
+            if max_value > 0 and value > 0:
                 height_pct = min((value / max_value * 100), 100)
+                # Ensure minimum height for visibility (at least 4% or 4px)
+                if height_pct < 4:
+                    height_pct = 4
+                min_height_px = 4
             else:
                 height_pct = 0
-            
-            # Ensure minimum height for visibility
-            if height_pct < 4 and value > 0:
-                height_pct = 4
+                min_height_px = 0
             
             # Format date for display (day of month)
             day_display = date.split('-')[2] if '-' in date else date[-2:]
             
             chart_html += f"""
             <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                <div style="background: #4caf50; width: 100%; height: {height_pct}%; min-height: {4 if value > 0 else 0}px; border-radius: 4px 4px 0 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; color: white; font-size: 0.7rem; font-weight: bold;">
+                <div style="background: #4caf50; width: 100%; height: {height_pct}%; min-height: {min_height_px}px; border-radius: 4px 4px 0 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; color: white; font-size: 0.7rem; font-weight: bold;">
                     {value if value > 0 else ''}
                 </div>
                 <div style="font-size: 0.7rem; color: #666; transform: rotate(-45deg); transform-origin: top left; white-space: nowrap;">
@@ -439,18 +440,19 @@ def render_analytics_dashboard() -> None:
         chart_html = "<div style='margin: 1rem 0; height: 150px; display: flex; align-items: flex-end; gap: 2px; border-bottom: 2px solid #dee2e6; padding-bottom: 1rem;'>"
         for hour, value in zip(hours, hour_values):
             # Calculate height percentage
-            if max_hour_value > 0:
+            if max_hour_value > 0 and value > 0:
                 height_pct = min((value / max_hour_value * 100), 100)
+                # Ensure minimum height for visibility (at least 2% or 2px)
+                if height_pct < 2:
+                    height_pct = 2
+                min_height_px = 2
             else:
                 height_pct = 0
-            
-            # Ensure minimum height for visibility
-            if height_pct < 2 and value > 0:
-                height_pct = 2
+                min_height_px = 0
             
             chart_html += f"""
             <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;">
-                <div style="background: #ff9800; width: 100%; height: {height_pct}%; min-height: {2 if value > 0 else 0}px; border-radius: 2px 2px 0 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 2px; color: white; font-size: 0.6rem; font-weight: bold;">
+                <div style="background: #ff9800; width: 100%; height: {height_pct}%; min-height: {min_height_px}px; border-radius: 2px 2px 0 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 2px; color: white; font-size: 0.6rem; font-weight: bold;">
                     {value if value > 0 else ''}
                 </div>
                 <div style="font-size: 0.6rem; color: #666; writing-mode: vertical-rl; text-orientation: mixed;">
