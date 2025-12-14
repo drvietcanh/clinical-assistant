@@ -65,7 +65,7 @@ def render_patient_inputs():
         patient_data['height'] = height
         
         # Special conditions
-        st.markdown("#### 🏥 Tình Trạng Đặc Biệt")
+        st.markdown("#### 🏥 Tình trạng đặc biệt")
         is_icu = st.checkbox("🏥 Bệnh nhân ICU", key="dosing_icu", help="Tự động điều chỉnh cho ICU: ARC, Vd changes")
         patient_data['is_icu'] = is_icu
         
@@ -148,7 +148,7 @@ def render_patient_inputs():
         patient_data['sex'] = sex
         
         # Creatinine
-        st.markdown("#### Creatinine Máu")
+        st.markdown("#### Creatinine máu")
         scr_unit = st.radio(
             "Đơn vị:",
             ["µmol/L", "mg/dL"],

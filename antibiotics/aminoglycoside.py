@@ -90,7 +90,7 @@ def render():
             st.caption(f"IBW = {_format_num(ibw, 1)} kg (dùng IBW để tính liều)")
         
         # Creatinine
-        st.markdown("#### Creatinine Máu")
+        st.markdown("#### Creatinine máu")
         scr_unit = st.radio(
             "Đơn vị:",
             ["µmol/L", "mg/dL"],

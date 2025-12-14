@@ -43,7 +43,7 @@ def render():
         )
         
         # Creatinine with unit conversion
-        st.markdown("#### Creatinine Máu")
+        st.markdown("#### Creatinine máu")
         scr_unit = st.radio(
             "Đơn vị:",
             ["µmol/L", "mg/dL"],
