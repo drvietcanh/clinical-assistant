@@ -5,6 +5,8 @@ Management of RA Flare/Exacerbation
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -206,13 +208,17 @@ def render():
     """)
     
     st.markdown("---")
-    st.markdown("### 📚 Tài liệu tham khảo")
     
-    st.markdown("""
-    1. **ACR Guidelines 2021** - Rheumatoid Arthritis Treatment
-    2. **EULAR Recommendations 2022** - RA Management
-    3. **UpToDate:** Rheumatoid Arthritis Treatment - Last updated 2024
-    """)
+    # References section
+    references = get_references("RA Flare")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể.")

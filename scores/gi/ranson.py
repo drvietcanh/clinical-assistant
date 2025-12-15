@@ -4,6 +4,13 @@ Tiên lượng viêm tụy cấp (Acute Pancreatitis)
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_ranson(criteria_admission, criteria_48h):
@@ -64,6 +71,11 @@ def interpret_ranson(total_score):
 def render():
     """Render the Ranson Criteria calculator"""
     
+    shared = load_shared_result_from_url()
+    shared_inputs = shared.get("inputs", {}) if shared and shared.get("calculator_id") == "ranson" else {}
+    if shared_inputs:
+        st.info("📥 Đã tải kết quả chia sẻ Ranson")
+    
     st.title("🏥 Ranson Criteria")
     st.markdown("""
     ### Tiên lượng viêm tụy cấp
@@ -104,6 +116,15 @@ def render():
     
     st.markdown("---")
     
+    render_suggestions(
+        calculator_id="ranson",
+        calculator_name="Ranson Criteria",
+        category="Tiêu Hóa",
+        show_related=True,
+        show_category=True,
+        limit=3
+    )
+    
     # Admission criteria (0h)
     st.subheader("📋 Tiêu chí lúc nhập viện (0h)")
     st.markdown("### 5 Tiêu chí ban đầu")
@@ -112,7 +133,7 @@ def render():
     
     # 1. Age
     st.markdown("#### 1️⃣ Tuổi > 55")
-    age_gt_55 = st.checkbox("Tuổi > 55", key="ranson_age")
+    age_gt_55 = st.checkbox("Tuổi > 55", key="ranson_age", value=shared_inputs.get("age_gt_55", False))
     if age_gt_55:
         admission_count += 1
         st.success("✅ +1 điểm")
@@ -121,7 +142,7 @@ def render():
     
     # 2. WBC
     st.markdown("#### 2️⃣ WBC > 16,000/mm³")
-    wbc_gt_16 = st.checkbox("WBC > 16,000/mm³ (> 16 × 10⁹/L)", key="ranson_wbc")
+    wbc_gt_16 = st.checkbox("WBC > 16,000/mm³ (> 16 × 10⁹/L)", key="ranson_wbc", value=shared_inputs.get("wbc_gt_16", False))
     if wbc_gt_16:
         admission_count += 1
         st.success("✅ +1 điểm")
@@ -130,7 +151,7 @@ def render():
     
     # 3. Glucose
     st.markdown("#### 3️⃣ Glucose > 200 mg/dL")
-    glucose_gt_200 = st.checkbox("Glucose > 200 mg/dL (> 11.1 mmol/L)", key="ranson_glucose")
+    glucose_gt_200 = st.checkbox("Glucose > 200 mg/dL (> 11.1 mmol/L)", key="ranson_glucose", value=shared_inputs.get("glucose_gt_200", False))
     if glucose_gt_200:
         admission_count += 1
         st.success("✅ +1 điểm")
@@ -139,7 +160,7 @@ def render():
     
     # 4. LDH
     st.markdown("#### 4️⃣ LDH > 350 U/L")
-    ldh_gt_350 = st.checkbox("LDH > 350 U/L", key="ranson_ldh")
+    ldh_gt_350 = st.checkbox("LDH > 350 U/L", key="ranson_ldh", value=shared_inputs.get("ldh_gt_350", False))
     if ldh_gt_350:
         admission_count += 1
         st.success("✅ +1 điểm")
@@ -148,7 +169,7 @@ def render():
     
     # 5. AST
     st.markdown("#### 5️⃣ AST > 250 U/L")
-    ast_gt_250 = st.checkbox("AST (SGOT) > 250 U/L", key="ranson_ast")
+    ast_gt_250 = st.checkbox("AST (SGOT) > 250 U/L", key="ranson_ast", value=shared_inputs.get("ast_gt_250", False))
     if ast_gt_250:
         admission_count += 1
         st.success("✅ +1 điểm")
@@ -176,7 +197,7 @@ def render():
     # 1. Hematocrit fall
     st.markdown("#### 6️⃣ Hematocrit giảm > 10%")
     st.caption("So với giá trị lúc nhập viện")
-    hct_fall = st.checkbox("Hematocrit giảm > 10% (points)", key="ranson_hct")
+    hct_fall = st.checkbox("Hematocrit giảm > 10% (points)", key="ranson_hct", value=shared_inputs.get("hct_fall", False))
     if hct_fall:
         criteria_48h_count += 1
         st.success("✅ +1 điểm")
@@ -186,7 +207,7 @@ def render():
     # 2. BUN rise
     st.markdown("#### 7️⃣ BUN tăng > 5 mg/dL")
     st.caption("Tăng so với lúc nhập viện")
-    bun_rise = st.checkbox("BUN tăng > 5 mg/dL (> 1.8 mmol/L)", key="ranson_bun")
+    bun_rise = st.checkbox("BUN tăng > 5 mg/dL (> 1.8 mmol/L)", key="ranson_bun", value=shared_inputs.get("bun_rise", False))
     if bun_rise:
         criteria_48h_count += 1
         st.success("✅ +1 điểm")
@@ -196,7 +217,7 @@ def render():
     # 3. Calcium
     st.markdown("#### 8️⃣ Calcium < 8 mg/dL")
     st.caption("Tại thời điểm 48h")
-    ca_lt_8 = st.checkbox("Calcium < 8 mg/dL (< 2 mmol/L)", key="ranson_ca")
+    ca_lt_8 = st.checkbox("Calcium < 8 mg/dL (< 2 mmol/L)", key="ranson_ca", value=shared_inputs.get("ca_lt_8", False))
     if ca_lt_8:
         criteria_48h_count += 1
         st.success("✅ +1 điểm")
@@ -206,7 +227,7 @@ def render():
     # 4. PaO2
     st.markdown("#### 9️⃣ PaO₂ < 60 mmHg")
     st.caption("Tại thời điểm 48h")
-    pao2_lt_60 = st.checkbox("PaO₂ < 60 mmHg (< 8 kPa)", key="ranson_pao2")
+    pao2_lt_60 = st.checkbox("PaO₂ < 60 mmHg (< 8 kPa)", key="ranson_pao2", value=shared_inputs.get("pao2_lt_60", False))
     if pao2_lt_60:
         criteria_48h_count += 1
         st.success("✅ +1 điểm")
@@ -216,7 +237,7 @@ def render():
     # 5. Base deficit
     st.markdown("#### 🔟 Base deficit > 4 mEq/L")
     st.caption("Acidosis chuyển hóa tại 48h")
-    base_deficit = st.checkbox("Base deficit > 4 mEq/L", key="ranson_base")
+    base_deficit = st.checkbox("Base deficit > 4 mEq/L", key="ranson_base", value=shared_inputs.get("base_deficit", False))
     if base_deficit:
         criteria_48h_count += 1
         st.success("✅ +1 điểm")
@@ -226,7 +247,7 @@ def render():
     # 6. Fluid sequestration
     st.markdown("#### 1️⃣1️⃣ Fluid sequestration > 6 L")
     st.caption("Lượng dịch truyền để duy trì huyết động trong 48h đầu")
-    fluid_seq = st.checkbox("Fluid sequestration > 6 L", key="ranson_fluid")
+    fluid_seq = st.checkbox("Fluid sequestration > 6 L", key="ranson_fluid", value=shared_inputs.get("fluid_seq", False))
     if fluid_seq:
         criteria_48h_count += 1
         st.success("✅ +1 điểm")
@@ -513,6 +534,57 @@ def render():
                 - Third-spacing massive
                 - Marker của necrotizing pancreatitis
             """)
+        
+        # Phase 1: save/share/history + references
+        inputs_dict = {
+            "age_gt_55": age_gt_55,
+            "wbc_gt_16": wbc_gt_16,
+            "glucose_gt_200": glucose_gt_200,
+            "ldh_gt_350": ldh_gt_350,
+            "ast_gt_250": ast_gt_250,
+            "hct_fall": hct_fall,
+            "bun_rise": bun_rise,
+            "ca_lt_8": ca_lt_8,
+            "pao2_lt_60": pao2_lt_60,
+            "base_deficit": base_deficit,
+            "fluid_seq": fluid_seq,
+            "admission_criteria": admission_count,
+            "criteria_48h": criteria_48h_count
+        }
+        results_dict = {
+            "Ranson Score": total_score,
+            "Severity": interp['severity'],
+            "Mortality": interp['mortality'],
+            "Recommendation": interp['recommendation']
+        }
+        
+        save_calculation_to_history(
+            calculator_id="ranson",
+            calculator_name="Ranson Criteria",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="ranson",
+            calculator_name="Ranson Criteria",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        st.markdown("---")
+        render_history_ui(calculator_id="ranson", show_actions=True)
+        
+        references = get_references("RANSON")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
     
     # Educational content
     st.markdown("---")

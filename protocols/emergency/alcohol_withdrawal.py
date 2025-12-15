@@ -5,6 +5,8 @@ Management of alcohol withdrawal syndrome and delirium tremens
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -254,20 +256,16 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **ASAM 2020 Guidelines**
-       - American Society of Addiction Medicine
-    
-    2. **CIWA-Ar Protocol**
-       - Clinical Institute Withdrawal Assessment for Alcohol
-    
-    3. **UpToDate:** Alcohol withdrawal
-       - Last updated: 2024
-    
-    4. **Medscape:** Alcohol Withdrawal Management
-    """)
+    # References section
+    references = get_references("Alcohol Withdrawal")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất.")
@@ -468,4 +466,17 @@ def render_delirium_tremens():
     
     5. **Theo dõi:** 5-7 ngày (tỷ lệ tử vong 5-15%)
     """)
+    
+    st.markdown("---")
+    
+    # References section
+    references = get_references("Alcohol Withdrawal")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

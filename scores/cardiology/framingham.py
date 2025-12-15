@@ -10,12 +10,26 @@ from scores.utils.validation import (
 )
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box, render_result_card
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def render():
     """Framingham Risk Score Calculator"""
     st.subheader("📈 Framingham Risk Score")
     st.caption("Nguy cơ Bệnh Tim Mạch 10 Năm")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'framingham':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.info("""
     **Framingham Risk Score** dự đoán nguy cơ mắc bệnh tim mạch trong 10 năm tới.
@@ -128,8 +142,19 @@ def render():
             "**Đái tháo đường**",
             key="fram_dm"
         )
-        
-        if st.button("🧮 Tính Framingham Risk", type="primary", key="fram_calc"):
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="framingham",
+            calculator_name="Framingham Risk Score",
+            category="Tim Mạch",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    if st.button("🧮 Tính Framingham Risk", type="primary", key="fram_calc"):
             # Validate inputs
             validation_errors = []
             
@@ -431,47 +456,122 @@ def render():
                 - Stress test nếu có triệu chứng
                 """)
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown("""
-                **Framingham Risk Score (FRS)**
-                
-                **Dự đoán nguy cơ 10 năm mắc:**
-                - Angina
-                - Myocardial infarction
-                - Coronary death
-                - Stroke
-                
-                **Yếu tố nguy cơ:**
-                - Age (tuổi)
-                - Gender (giới tính)
-                - Total cholesterol
-                - HDL cholesterol
-                - Systolic BP
-                - Treatment for hypertension
-                - Smoking status
-                - Diabetes
-                
-                **Phân tầng nguy cơ:**
-                - **<10%**: Low risk - lifestyle modification
-                - **10-20%**: Intermediate risk - consider statin
-                - **≥20%**: High risk - statin + aspirin recommended
-                
-                **Note:**
-                - Áp dụng cho người 30-79 tuổi không có bệnh tim mạch
-                - Có thể đánh giá thấp nguy cơ ở một số dân số
-                - Các công cụ mới hơn: ASCVD Risk Calculator, SCORE2
-                
-                **References:**
-                - Wilson PW et al. Circulation. 1998;97(18):1837-1847.
-                - D'Agostino RB et al. Circulation. 2008;117(6):743-753.
-                
-                **Guidelines:**
-                - AHA/ACC Cholesterol Guidelines
-                - ESC CVD Prevention Guidelines
-                
-                **Link:**
-                - https://www.mdcalc.com/framingham-risk-score-hard-coronary-heart-disease
-                """)
+            # Prepare inputs and results for export/history
+            inputs_dict = {
+                "Gender": sex,
+                "Age": str(age),
+                "Total Cholesterol": f"{total_chol:.0f} {chol_unit}" if chol_unit == "mg/dL" else f"{chol_mmol:.1f} {chol_unit}",
+                "HDL": f"{hdl:.0f} {chol_unit}" if chol_unit == "mg/dL" else f"{hdl_mmol:.1f} {chol_unit}",
+                "Systolic BP": f"{sbp} mmHg",
+                "BP Treatment": "Có" if bp_treated else "Không",
+                "Smoker": "Có" if smoker else "Không",
+                "Diabetes": "Có" if diabetes else "Không"
+            }
+            
+            results_dict = {
+                "Framingham Risk Score": f"{points} điểm",
+                "10-Year Risk": f"{risk_pct}%",
+                "Risk Category": risk_cat.upper(),
+                "Recommendation": "Thay đổi lối sống" if risk_pct < 10 else "Cân nhắc statin" if risk_pct < 20 else "Statin + Aspirin"
+            }
+            
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            render_export_section(
+                title=f"Framingham Risk = {risk_pct}%",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="Framingham Risk Score",
+                filename="framingham_result"
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="framingham",
+                calculator_name="Framingham Risk Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="framingham",
+                calculator_name="Framingham Risk Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="framingham", show_actions=True)
+            
+            # References section
+            references = get_references("Framingham")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+            else:
+                # Fallback to manual references
+                with st.expander("📚 Tài liệu tham khảo"):
+                    st.markdown("""
+                    **Framingham Risk Score (FRS)**
+                    
+                    **Dự đoán nguy cơ 10 năm mắc:**
+                    - Angina
+                    - Myocardial infarction
+                    - Coronary death
+                    - Stroke
+                    
+                    **Yếu tố nguy cơ:**
+                    - Age (tuổi)
+                    - Gender (giới tính)
+                    - Total cholesterol
+                    - HDL cholesterol
+                    - Systolic BP
+                    - Treatment for hypertension
+                    - Smoking status
+                    - Diabetes
+                    
+                    **Phân tầng nguy cơ:**
+                    - **<10%**: Low risk - lifestyle modification
+                    - **10-20%**: Intermediate risk - consider statin
+                    - **≥20%**: High risk - statin + aspirin recommended
+                    
+                    **Note:**
+                    - Áp dụng cho người 30-79 tuổi không có bệnh tim mạch
+                    - Có thể đánh giá thấp nguy cơ ở một số dân số
+                    - Các công cụ mới hơn: ASCVD Risk Calculator, SCORE2
+                    
+                    **References:**
+                    - Wilson PW et al. Circulation. 1998;97(18):1837-1847.
+                    - D'Agostino RB et al. Circulation. 2008;117(6):743-753.
+                    
+                    **Guidelines:**
+                    - AHA/ACC Cholesterol Guidelines
+                    - ESC CVD Prevention Guidelines
+                    
+                    **Link:**
+                    - https://www.mdcalc.com/framingham-risk-score-hard-coronary-heart-disease
+                    """)
+    
+    # Always show references at the bottom
+    references = get_references("Framingham")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Công cụ hỗ trợ lâm sàng - không thay thế đánh giá lâm sàng toàn diện")

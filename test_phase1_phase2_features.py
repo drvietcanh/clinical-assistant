@@ -450,8 +450,12 @@ print("\n" + "=" * 80)
 
 if failed == 0:
     print("🎉 ALL TESTS PASSED!")
-    sys.exit(0)
+    exit_code = 0
 else:
     print("⚠️  SOME TESTS FAILED")
-    sys.exit(1)
+    exit_code = 1
+
+# Tránh SystemExit khi pytest import file này; chỉ exit khi chạy trực tiếp
+if __name__ == "__main__":
+    sys.exit(exit_code)
 

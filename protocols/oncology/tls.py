@@ -5,6 +5,8 @@ Phòng ngừa và điều trị TLS trong các bệnh ác tính huyết học
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -387,6 +389,19 @@ def render():
     
     st.markdown("---")
     
+    # References section
+    references = get_references("TLS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
+    
+    st.markdown("---")
+    
     # Footer
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất. TLS là biến chứng đe dọa tính mạng, cần phòng ngừa và điều trị tích cực.")
 
@@ -479,4 +494,17 @@ def render_low_risk_protocol():
     - Uric acid tăng nhanh
     - Có dấu hiệu TLS
     """)
+    
+    st.markdown("---")
+    
+    # References section
+    references = get_references("TLS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

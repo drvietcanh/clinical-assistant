@@ -4,15 +4,38 @@ Tiêu chuẩn chẩn đoán viêm nội tâm mạc nhiễm khuẩn
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def render():
     """Render Duke Criteria interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    shared_inputs = {}
+    if shared and shared.get("calculator_id") == "duke":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Duke Criteria')}")
+        shared_inputs = shared.get("inputs", {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>❤️ Duke Criteria</h2>
     <p style='text-align: center;'><em>Chẩn đoán Viêm Nội Tâm Mạc Nhiễm Khuẩn (IE)</em></p>
     """, unsafe_allow_html=True)
+    
+    render_suggestions(
+        calculator_id="duke",
+        calculator_name="Duke Criteria",
+        category="Tim Mạch",
+        show_related=True,
+        show_category=True,
+        limit=3
+    )
     
     with st.expander("ℹ️ Giới thiệu về Duke Criteria"):
         st.markdown("""
@@ -43,15 +66,18 @@ def render():
     st.markdown("### 1️⃣ Cấy máu dương tính:")
     
     blood_typical = st.checkbox(
-        "Vi khuẩn ĐIỂN HÌNH cho IE trong ≥2 lần cấy máu riêng biệt: Streptococcus viridans, S. gallolyticus (bovis), HACEK, S. aureus, Enterococcus (không có ổ nhiễm khác)"
+        "Vi khuẩn ĐIỂN HÌNH cho IE trong ≥2 lần cấy máu riêng biệt: Streptococcus viridans, S. gallolyticus (bovis), HACEK, S. aureus, Enterococcus (không có ổ nhiễm khác)",
+        value=shared_inputs.get("blood_typical", False)
     )
     
     blood_persistent = st.checkbox(
-        "Vi khuẩn phù hợp IE trong cấy máu LIÊN TỤC: ≥2 lần cấy (+) cách ≥12h, HOẶC 3/3 hoặc >4/4 lần cấy (+) (cách ≥1h)"
+        "Vi khuẩn phù hợp IE trong cấy máu LIÊN TỤC: ≥2 lần cấy (+) cách ≥12h, HOẶC 3/3 hoặc >4/4 lần cấy (+) (cách ≥1h)",
+        value=shared_inputs.get("blood_persistent", False)
     )
     
     coxiella = st.checkbox(
-        "Coxiella burnetii: 1 lần cấy máu (+) HOẶC IgG anti-phase I > 1:800"
+        "Coxiella burnetii: 1 lần cấy máu (+) HOẶC IgG anti-phase I > 1:800",
+        value=shared_inputs.get("coxiella", False)
     )
     
     if blood_typical:
@@ -69,15 +95,18 @@ def render():
     st.markdown("### 2️⃣ Bằng chứng tổn thương nội tâm mạc (Echo):")
     
     vegetation = st.checkbox(
-        "Mảng sùi (vegetation) trên van tim, dây chằng, hoặc vật liệu cấy ghép"
+        "Mảng sùi (vegetation) trên van tim, dây chằng, hoặc vật liệu cấy ghép",
+        value=shared_inputs.get("vegetation", False)
     )
     
     abscess = st.checkbox(
-        "Áp xe quanh van"
+        "Áp xe quanh van",
+        value=shared_inputs.get("abscess", False)
     )
     
     new_dehiscence = st.checkbox(
-        "Suy van MỚI hoặc bong van nhân tạo"
+        "Suy van MỚI hoặc bong van nhân tạo",
+        value=shared_inputs.get("new_dehiscence", False)
     )
     
     if vegetation:
@@ -96,14 +125,16 @@ def render():
     st.markdown("## 🟡 MINOR CRITERIA")
     
     predisposing = st.checkbox(
-        "Yếu tố nguy cơ: Bệnh van tim từ trước HOẶC tiêm chích ma túy"
+        "Yếu tố nguy cơ: Bệnh van tim từ trước HOẶC tiêm chích ma túy",
+        value=shared_inputs.get("predisposing", False)
     )
     if predisposing:
         minor_count += 1
         minor_list.append("Yếu tố nguy cơ")
     
     fever = st.checkbox(
-        "Sốt ≥ 38°C"
+        "Sốt ≥ 38°C",
+        value=shared_inputs.get("fever", False)
     )
     if fever:
         minor_count += 1
@@ -119,7 +150,8 @@ def render():
             "Xuất huyết nội sọ",
             "Xuất huyết kết mạc",
             "Janeway lesions (nốt đỏ không đau ở lòng bàn tay/chân)"
-        ]
+        ],
+        default=shared_inputs.get("vascular", [])
     )
     if len(vascular) > 0:
         minor_count += 1
@@ -133,14 +165,16 @@ def render():
             "Roth spots (xuất huyết võng mạc)",
             "Rheumatoid factor (+)",
             "Viêm cầu thận"
-        ]
+        ],
+        default=shared_inputs.get("immunologic", [])
     )
     if len(immunologic) > 0:
         minor_count += 1
         minor_list.append(f"Hiện tượng miễn dịch: {', '.join(immunologic)}")
     
     micro_evidence = st.checkbox(
-        "Bằng chứng vi sinh KHÔNG đủ major: Cấy máu (+) nhưng không đủ tiêu chí major, HOẶC huyết thanh học gợi ý nhiễm khuẩn phù hợp IE"
+        "Bằng chứng vi sinh KHÔNG đủ major: Cấy máu (+) nhưng không đủ tiêu chí major, HOẶC huyết thanh học gợi ý nhiễm khuẩn phù hợp IE",
+        value=shared_inputs.get("micro_evidence", False)
     )
     if micro_evidence:
         minor_count += 1
@@ -359,6 +393,46 @@ def render():
             4. **Baddour LM, Wilson WR, Bayer AS, et al.** Infective Endocarditis in Adults: Diagnosis, Antimicrobial Therapy, and Management of Complications: A Scientific Statement for Healthcare Professionals From the American Heart Association. 
                *Circulation.* 2015;132(15):1435-86.
             """)
+        
+        # Phase 1: save history + share + history UI + references
+        inputs_dict = {
+            "Major criteria": major_list or ["Không tiêu chí"],
+            "Minor criteria": minor_list or ["Không tiêu chí"],
+            "Major count": major_count,
+            "Minor count": minor_count
+        }
+        results_dict = {
+            "Diagnosis": diagnosis,
+            "Recommendation": recommendation
+        }
+        
+        save_calculation_to_history(
+            calculator_id="duke",
+            calculator_name="Duke Criteria",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="duke",
+            calculator_name="Duke Criteria",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        st.markdown("---")
+        render_history_ui(calculator_id="duke", show_actions=True)
+        
+        references = get_references("DUKE")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
     
     st.info("""
     💡 **Điểm quan trọng:**

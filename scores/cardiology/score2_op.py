@@ -18,6 +18,13 @@ Note: Shorter time horizons (5 years) more relevant for elderly with limited lif
 
 import streamlit as st
 import math
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 from scores.utils.validation import (
     validate_age,
     validate_blood_pressure,
@@ -209,8 +216,23 @@ def calculate_score2_op(
 def render():
     """Render SCORE2-OP calculator"""
     
+    shared = load_shared_result_from_url()
+    shared_inputs = {}
+    if shared and shared.get("calculator_id") == "score2_op":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'SCORE2-OP')}")
+        shared_inputs = shared.get("inputs", {})
+    
     st.title("👴 SCORE2-OP - ESC 2021")
     st.markdown("**Đánh giá nguy cơ tim mạch ở người cao tuổi (≥70 tuổi)**")
+    
+    render_suggestions(
+        calculator_id="score2_op",
+        calculator_name="SCORE2-OP",
+        category="Tim Mạch",
+        show_related=True,
+        show_category=True,
+        limit=3
+    )
     
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
@@ -285,46 +307,52 @@ def render():
     
     with col1:
         st.markdown("#### 👤 Thông tin")
-        age = st.number_input("Tuổi", 70, 100, 75, 1, format="%d", help="SCORE2-OP dành cho ≥70 tuổi")
+        age = st.number_input("Tuổi", 70, 100, int(shared_inputs.get("age", 75)), 1, format="%d", help="SCORE2-OP dành cho ≥70 tuổi")
         
         sex = st.radio("Giới tính", ["Nam", "Nữ"], horizontal=True)
         is_female = (sex == "Nữ")
         
-        is_smoker = st.checkbox("**Đang hút thuốc lá**")
+        is_smoker = st.checkbox("**Đang hút thuốc lá**", value=shared_inputs.get("is_smoker", False))
         
         time_horizon = st.radio(
             "**Thời gian dự đoán**",
             [10, 5],
             format_func=lambda x: f"{x} năm",
-            help="5 năm phù hợp hơn nếu tuổi thọ dự kiến hạn chế"
+            help="5 năm phù hợp hơn nếu tuổi thọ dự kiến hạn chế",
+            index=[10, 5].index(int(shared_inputs.get("time_horizon", 10)))
         )
     
     with col2:
         st.markdown("#### 🩺 Sinh hiệu")
-        sbp = st.number_input("Huyết áp tâm thu (mmHg)", 80, 220, 140, 1, format="%d")
+        sbp = st.number_input("Huyết áp tâm thu (mmHg)", 80, 220, int(shared_inputs.get("sbp", 140)), 1, format="%d")
     
     st.divider()
     
     # Cholesterol
     st.markdown("#### 🔬 Cholesterol")
     
-    chol_unit = st.radio("Đơn vị", ["mmol/L", "mg/dL"], horizontal=True, index=0)
+    chol_unit = st.radio(
+        "Đơn vị",
+        ["mmol/L", "mg/dL"],
+        horizontal=True,
+        index=0 if shared_inputs.get("chol_unit", "mmol/L") == "mmol/L" else 1
+    )
     
     col3, col4 = st.columns(2)
     
     with col3:
         if chol_unit == "mmol/L":
-            total_chol = st.number_input("Total Cholesterol (mmol/L)", 2.0, 15.0, 5.5, 0.1, format="%.1f")
+            total_chol = st.number_input("Total Cholesterol (mmol/L)", 2.0, 15.0, float(shared_inputs.get("total_chol", 5.5)), 0.1, format="%.1f")
         else:
-            total_chol_mg = st.number_input("Total Cholesterol (mg/dL)", 80.0, 600.0, 210.0, 1.0, format="%.0f")
+            total_chol_mg = st.number_input("Total Cholesterol (mg/dL)", 80.0, 600.0, float(shared_inputs.get("total_chol_mg", 210.0)), 1.0, format="%.0f")
             total_chol = total_chol_mg / 38.67
         st.caption(f"= {total_chol * 38.67:.0f} mg/dL")
     
     with col4:
         if chol_unit == "mmol/L":
-            hdl_chol = st.number_input("HDL Cholesterol (mmol/L)", 0.5, 4.0, 1.4, 0.1, format="%.1f")
+            hdl_chol = st.number_input("HDL Cholesterol (mmol/L)", 0.5, 4.0, float(shared_inputs.get("hdl_chol", 1.4)), 0.1, format="%.1f")
         else:
-            hdl_chol_mg = st.number_input("HDL Cholesterol (mg/dL)", 20.0, 150.0, 55.0, 1.0, format="%.0f")
+            hdl_chol_mg = st.number_input("HDL Cholesterol (mg/dL)", 20.0, 150.0, float(shared_inputs.get("hdl_chol_mg", 55.0)), 1.0, format="%.0f")
             hdl_chol = hdl_chol_mg / 38.67
         st.caption(f"= {hdl_chol * 38.67:.0f} mg/dL")
     
@@ -447,7 +475,51 @@ def render():
         - Định kỳ tái đánh giá lợi ích/rủi ro
         """)
         
-        st.session_state['score2_op_result'] = result
+        inputs_dict = {
+            "age": age,
+            "sex": sex,
+            "is_smoker": is_smoker,
+            "sbp": sbp,
+            "chol_unit": chol_unit,
+            "total_chol": round(total_chol, 2),
+            "hdl_chol": round(hdl_chol, 2),
+            "time_horizon": time_horizon
+        }
+        results_dict = {
+            "Risk": f"{result['risk']:.1f}%",
+            "Risk category": result['risk_category'],
+            "Risk class": result['risk_class'],
+            "Non-HDL": f"{result['non_hdl']:.1f} mmol/L",
+            "Time horizon": f"{time_horizon} năm"
+        }
+        
+        save_calculation_to_history(
+            calculator_id="score2_op",
+            calculator_name="SCORE2-OP",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="score2_op",
+            calculator_name="SCORE2-OP",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        st.markdown("---")
+        render_history_ui(calculator_id="score2_op", show_actions=True)
+        
+        references = get_references("SCORE2-OP")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
     
     # Quick reference
     with st.expander("📖 Nguyên tắc điều trị người cao tuổi"):

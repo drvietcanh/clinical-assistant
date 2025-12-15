@@ -4,13 +4,15 @@ Wells Score for Pulmonary Embolism
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
-from scores.utils.validation import validate_heart_rate
-from components.ui.scoring import render_score_result, render_score_breakdown
 from components.calculation_history import save_calculation_to_history
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+# ======================================
+from scores.utils.validation import validate_heart_rate
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def render():

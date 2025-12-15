@@ -19,6 +19,13 @@ from scores.utils.validation import (
 )
 from components.ui.validation import render_validation_errors
 from components.ui.scoring import render_score_result, render_score_breakdown
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -96,6 +103,13 @@ def render():
     st.subheader("🩸 Glasgow-Blatchford Score (GBS)")
     st.caption("Đánh giá nguy cơ xuất huyết tiêu hóa trên cần can thiệp")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'glasgow_blatchford':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     **Glasgow-Blatchford Score** giúp xác định bệnh nhân UGIB nguy cơ thấp 
     có thể xuất viện an toàn.
@@ -107,6 +121,18 @@ def render():
     """)
     
     st.markdown("---")
+    
+    # Smart Suggestions
+    col_sugg1, col_sugg2 = st.columns([2, 1])
+    with col_sugg2:
+        render_suggestions(
+            calculator_id="glasgow_blatchford",
+            calculator_name="Glasgow-Blatchford Score",
+            category="Tiêu Hóa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     col1, col2 = st.columns([2, 1])
     
@@ -595,33 +621,99 @@ def render():
                 - **Kết hợp cả hai** cho đánh giá toàn diện
                 """)
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown("""
-                **Primary Reference:**
-                - Blatchford O, Murray WR, Blatchford M. 
-                  *A risk score to predict need for treatment for upper-gastrointestinal haemorrhage.* 
-                  Lancet. 2000 Oct 14;356(9238):1318-21. [PMID: 11073021]
-                
-                **Validation Studies:**
-                - Stanley AJ, Ashley D, Dalton HR, et al. 
-                  *Outpatient management of patients with low-risk upper-gastrointestinal haemorrhage: multicentre validation and prospective evaluation.* 
-                  Lancet. 2009 Jan 3;373(9657):42-7.
-                
-                - Saltzman JR, Tabak YP, Hyett BH, Sun X, Travis AC, Johannes RS. 
-                  *A simple risk score accurately predicts in-hospital mortality, length of stay, and cost in acute upper GI bleeding.* 
-                  Gastrointest Endosc. 2011 Dec;74(6):1215-24.
-                
-                - Bryant RV, Kuo P, Williamson K, et al. 
-                  *Performance of the Glasgow-Blatchford score in predicting clinical outcomes and intervention in hospitalized patients with upper GI bleeding.* 
-                  Gastrointest Endosc. 2013 Apr;77(4):576-83.
-                
-                **Guidelines:**
-                - Gralnek IM, et al. *Nonvariceal upper gastrointestinal hemorrhage: ESGE Guideline.* 
-                  Endoscopy. 2015 Oct;47(10):a1-46.
-                
-                - Barkun AN, et al. *International consensus recommendations on the management of patients with nonvariceal upper gastrointestinal bleeding.* 
-                  Ann Intern Med. 2010 Jan 5;152(1):101-13.
-                """)
+            # Prepare inputs and results for Phase 1
+            inputs_dict = {
+                "Gender": gender,
+                "BUN": f"{bun_mgdl:.0f} mg/dL" if "mg/dL" in bun_unit else f"{bun_mmol:.1f} mmol/L",
+                "Hemoglobin": f"{hgb:.1f} g/dL",
+                "SBP": f"{sbp} mmHg",
+                "Heart Rate": f"{hr} bpm",
+                "Melena": "Có" if melena else "Không",
+                "Syncope": "Có" if syncope else "Không",
+                "Liver Disease": "Có" if liver_disease else "Không",
+                "Heart Failure": "Có" if heart_failure else "Không"
+            }
+            
+            results_dict = {
+                "Glasgow-Blatchford Score": f"{gbs}",
+                "Risk Level": risk,
+                "Recommendation": recommendation,
+                "Intervention Risk": intervention_risk,
+                "Mortality": mortality
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="glasgow_blatchford",
+                calculator_name="Glasgow-Blatchford Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="glasgow_blatchford",
+                calculator_name="Glasgow-Blatchford Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            render_history_ui(calculator_id="glasgow_blatchford", show_actions=True)
+            
+            # References section
+            references = get_references("Glasgow-Blatchford")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+            else:
+                # Fallback to manual references if Phase 1 references not found
+                with st.expander("📚 Tài liệu tham khảo"):
+                    st.markdown("""
+                    **Primary Reference:**
+                    - Blatchford O, Murray WR, Blatchford M. 
+                      *A risk score to predict need for treatment for upper-gastrointestinal haemorrhage.* 
+                      Lancet. 2000 Oct 14;356(9238):1318-21. [PMID: 11073021]
+                    
+                    **Validation Studies:**
+                    - Stanley AJ, Ashley D, Dalton HR, et al. 
+                      *Outpatient management of patients with low-risk upper-gastrointestinal haemorrhage: multicentre validation and prospective evaluation.* 
+                      Lancet. 2009 Jan 3;373(9657):42-7.
+                    
+                    - Saltzman JR, Tabak YP, Hyett BH, Sun X, Travis AC, Johannes RS. 
+                      *A simple risk score accurately predicts in-hospital mortality, length of stay, and cost in acute upper GI bleeding.* 
+                      Gastrointest Endosc. 2011 Dec;74(6):1215-24.
+                    
+                    - Bryant RV, Kuo P, Williamson K, et al. 
+                      *Performance of the Glasgow-Blatchford score in predicting clinical outcomes and intervention in hospitalized patients with upper GI bleeding.* 
+                      Gastrointest Endosc. 2013 Apr;77(4):576-83.
+                    
+                    **Guidelines:**
+                    - Gralnek IM, et al. *Nonvariceal upper gastrointestinal hemorrhage: ESGE Guideline.* 
+                      Endoscopy. 2015 Oct;47(10):a1-46.
+                    
+                    - Barkun AN, et al. *International consensus recommendations on the management of patients with nonvariceal upper gastrointestinal bleeding.* 
+                      Ann Intern Med. 2010 Jan 5;152(1):101-13.
+                    """)
+    
+    # Always show references at the bottom (even before calculation)
+    st.markdown("---")
+    references = get_references("Glasgow-Blatchford")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Educational content
     st.markdown("---")

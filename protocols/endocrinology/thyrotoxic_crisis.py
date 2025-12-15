@@ -5,6 +5,8 @@ Cấp cứu đe dọa tính mạng cần điều trị ngay lập tức
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -444,23 +446,18 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: REFERENCES ==========
-    st.markdown("### 📚 Tài liệu tham khảo")
+    st.markdown("---")
     
-    st.markdown("""
-    1. **Hướng dẫn Hiệp hội Tuyến giáp Hoa Kỳ (ATA) về Cường giáp** - 2016
-       - Quản lý cơn bão giáp
-       - Tiêu chuẩn chẩn đoán và điều trị
-    
-    2. **Burch HB, Wartofsky L.** Life-threatening thyrotoxicosis. Thyroid storm.
-       Endocrinol Metab Clin North Am. 1993;22(2):263-277.
-    
-    3. **UpToDate:** Cơn bão giáp (Thyrotoxic Crisis) - Cập nhật lần cuối 2024
-       - Đặc điểm lâm sàng và chẩn đoán
-       - Phác đồ điều trị
-    
-    4. **Ross DS, et al.** 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis.
-       Thyroid. 2016;26(10):1343-1421.
-    """)
+    # References section
+    references = get_references("Thyrotoxic Crisis")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     

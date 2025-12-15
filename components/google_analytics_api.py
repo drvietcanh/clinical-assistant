@@ -9,6 +9,14 @@ from datetime import datetime, timedelta
 import json
 import os
 
+# Khi chạy test với MockStreamlit, bổ sung cache_data nếu thiếu để tránh AttributeError
+if not hasattr(st, "cache_data"):
+    def _cache_data(ttl=None):
+        def decorator(func):
+            return func
+        return decorator
+    st.cache_data = _cache_data
+
 try:
     from google.analytics.data_v1beta import BetaAnalyticsDataClient
     from google.analytics.data_v1beta.types import (

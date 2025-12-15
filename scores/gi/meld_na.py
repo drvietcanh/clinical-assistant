@@ -10,6 +10,13 @@ from scores.utils.validation import (
     validate_range
 )
 from components.ui.validation import render_validation_errors
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -169,7 +176,26 @@ def render():
     - Standard for UNOS từ 2016
     """)
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'meld_na':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("---")
+    
+    # Smart Suggestions
+    col_sugg1, col_sugg2 = st.columns([2, 1])
+    with col_sugg2:
+        render_suggestions(
+            calculator_id="meld_na",
+            calculator_name="MELD-Na Score",
+            category="Tiêu Hóa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Input section
     st.subheader("📝 Nhập thông số")
@@ -551,6 +577,57 @@ def render():
             - Không dự đoán post-transplant outcome
             - Cần kết hợp clinical judgment
             """)
+        
+        # Prepare inputs and results for Phase 1
+        inputs_dict = {
+            "Creatinine": f"{creatinine} mg/dL" if cre_unit == "mg/dL" else f"{cre_input} µmol/L",
+            "Bilirubin": f"{bilirubin} mg/dL" if bili_unit == "mg/dL" else f"{bili_input} µmol/L",
+            "INR": f"{inr}",
+            "Sodium": f"{sodium} mEq/L",
+            "Dialysis": "Có (≥2 lần/tuần)" if dialysis_twice else "Không"
+        }
+        
+        results_dict = {
+            "MELD Score": f"{meld}",
+            "MELD-Na Score": f"{meld_na}",
+            "Severity": interp['severity'],
+            "Mortality 3mo": interp['mortality_3mo'],
+            "Mortality 1yr": interp['mortality_1yr'],
+            "Transplant Priority": interp['transplant_priority'],
+            "Management": interp['management']
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="meld_na",
+            calculator_name="MELD-Na Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="meld_na",
+            calculator_name="MELD-Na Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="meld_na", show_actions=True)
+        
+        # References section
+        references = get_references("MELD-Na")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
     
     # Educational content
     st.markdown("---")
@@ -678,15 +755,30 @@ def render():
         - Update trên transplant list
         """)
     
-    # References
+    # Always show references at the bottom (even before calculation)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Kamath PS, et al. A model to predict survival in patients with end-stage liver disease. Hepatology. 2001;33(2):464-470
-    - Kim WR, et al. Hyponatremia and mortality among patients on the liver-transplant waiting list. NEJM. 2008;359(10):1018-1026
-    - Biggins SW, et al. Serum sodium predicts mortality in patients listed for liver transplantation. Hepatology. 2005;41(1):32-39
-    - OPTN/UNOS Policy 9: Allocation of Livers and Liver-Intestines. 2016
-    """)
+    references = get_references("MELD-Na")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        # Fallback to manual references if Phase 1 references not found
+        st.markdown("---")
+        st.caption("""
+        **Tài liệu tham khảo:**
+        - Kamath PS, et al. A model to predict survival in patients with end-stage liver disease. Hepatology. 2001;33(2):464-470
+        - Kim WR, et al. Hyponatremia and mortality among patients on the liver-transplant waiting list. NEJM. 2008;359(10):1018-1026
+        - Biggins SW, et al. Serum sodium predicts mortality in patients listed for liver transplantation. Hepatology. 2005;41(1):32-39
+        - OPTN/UNOS Policy 9: Allocation of Livers and Liver-Intestines. 2016
+        """)
+    
+    st.markdown("---")
+    st.caption("⚠️ Công cụ hỗ trợ lâm sàng - không thay thế đánh giá lâm sàng toàn diện")
 
 
 if __name__ == "__main__":

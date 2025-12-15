@@ -7,6 +7,13 @@ import streamlit as st
 import math
 from scores.utils.validation import validate_heart_rate, validate_range
 from components.ui.results import render_result_box
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_qtc_bazett(qt_ms, hr):
@@ -168,6 +175,14 @@ def render():
     """Render the QTc Calculator"""
     
     st.title("💓 QTc - Corrected QT Interval")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'qtc':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     ### QT Điều Chỉnh Theo Nhịp tim
     
@@ -191,7 +206,7 @@ def render():
     # Input section
     st.subheader("📊 Nhập thông số ECG")
     
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns([2, 1])
     
     with col1:
         # QT interval input
@@ -261,6 +276,16 @@ def render():
             "RR Interval",
             f"{rr_interval:.3f} s",
             help="RR = 60 / HR"
+        )
+        
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="qtc",
+            calculator_name="QTc Calculator",
+            category="Tim Mạch",
+            show_related=True,
+            show_category=True,
+            limit=3
         )
     
     if st.button("📈 Tính QTc", type="primary", use_container_width=True):
@@ -399,6 +424,67 @@ def render():
         - Micromedex
         - UpToDate Drug Interactions
         """)
+        
+        # Prepare inputs and results for export/history
+        inputs_dict = {
+            "QT Interval": f"{qt_ms:.0f} ms",
+            "Heart Rate": f"{hr} bpm",
+            "Gender": gender,
+            "Formula": formula,
+            "RR Interval": f"{rr_interval:.3f} s"
+        }
+        
+        results_dict = {
+            "QTc": f"{qtc:.0f} ms",
+            "Status": result['status'],
+            "Risk": result['risk'],
+            "Recommendation": result['recommendation'],
+            "Formula": formula_text
+        }
+        
+        # Export section
+        st.markdown("---")
+        from components.export import render_export_section
+        render_export_section(
+            title=f"QTc = {qtc:.0f} ms",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="QTc Calculator",
+            filename="qtc_result"
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="qtc",
+            calculator_name="QTc Calculator",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="qtc",
+            calculator_name="QTc Calculator",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="qtc", show_actions=True)
+        
+        # References section
+        references = get_references("QTc")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
     
     # Educational content
     st.markdown("---")
@@ -631,16 +717,27 @@ def render():
         - Website: CredibleMeds.org (kiểm tra thuốc)
         """)
     
-    # References
-    st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Rautaharju PM, et al. AHA/ACCF/HRS recommendations for QT interval measurement. Circulation. 2009
-    - Drew BJ, et al. Prevention of TdP in hospital settings. Circulation. 2010
-    - Giudicessi JR, et al. Genotype- and phenotype-guided management of LQTS. Circulation. 2018
-    - Al-Khatib SM, et al. What clinicians should know about the QT interval. JAMA. 2003
-    - www.CredibleMeds.org - QTdrugs List
-    """)
+    # Always show references at the bottom
+    references = get_references("QTc")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        # Fallback to manual references
+        st.markdown("---")
+        st.caption("""
+        **Tài liệu tham khảo:**
+        - Rautaharju PM, et al. AHA/ACCF/HRS recommendations for QT interval measurement. Circulation. 2009
+        - Drew BJ, et al. Prevention of TdP in hospital settings. Circulation. 2010
+        - Giudicessi JR, et al. Genotype- and phenotype-guided management of LQTS. Circulation. 2018
+        - Al-Khatib SM, et al. What clinicians should know about the QT interval. JAMA. 2003
+        - www.CredibleMeds.org - QTdrugs List
+        """)
 
 
 if __name__ == "__main__":

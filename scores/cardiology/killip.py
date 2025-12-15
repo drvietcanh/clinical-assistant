@@ -4,15 +4,37 @@ Phân loại suy tim cấp trong nhồi máu cơ tim
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def render():
     """Render Killip Classification interface"""
     
+    shared = load_shared_result_from_url()
+    shared_inputs = {}
+    if shared and shared.get("calculator_id") == "killip":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Killip Classification')}")
+        shared_inputs = shared.get("inputs", {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>❤️ Killip Classification</h2>
     <p style='text-align: center;'><em>Phân loại suy tim cấp trong AMI</em></p>
     """, unsafe_allow_html=True)
+    
+    render_suggestions(
+        calculator_id="killip",
+        calculator_name="Killip Classification",
+        category="Tim Mạch",
+        show_related=True,
+        show_category=True,
+        limit=3
+    )
     
     with st.expander("ℹ️ Giới thiệu về Killip Classification"):
         st.markdown("""
@@ -39,11 +61,11 @@ def render():
     # Vital signs
     col1, col2, col3 = st.columns(3)
     with col1:
-        sbp = st.number_input("HA tâm thu (mmHg)", 60, 220, 120, 1, format="%d")
+        sbp = st.number_input("HA tâm thu (mmHg)", 60, 220, value=int(shared_inputs.get("sbp", 120)), step=1, format="%d")
     with col2:
-        hr = st.number_input("Nhịp tim (bpm)", 40, 180, 80, 1, format="%d")
+        hr = st.number_input("Nhịp tim (bpm)", 40, 180, value=int(shared_inputs.get("hr", 80)), step=1, format="%d")
     with col3:
-        rr = st.number_input("Nhịp thở (/phút)", 10, 50, 16, 1, format="%d")
+        rr = st.number_input("Nhịp thở (/phút)", 10, 50, value=int(shared_inputs.get("rr", 16)), step=1, format="%d")
     
     # Clinical findings
     st.markdown("### 🩺 Khám lâm sàng:")
@@ -56,7 +78,8 @@ def render():
             "class2": "Class II - Ran ẩm ½ dưới phổi, S3, có thể tĩnh mạch cảnh nổi",
             "class3": "Class III - Ran ẩm cả 2 phổi (phù phổi cấp)",
             "class4": "Class IV - Shock tim (da lạnh, ẩm, giảm HA, giảm nước tiểu)"
-        }[x]
+        }[x],
+        index=["class1", "class2", "class3", "class4"].index(shared_inputs.get("option", "class1"))
     )
     
     st.markdown("---")
@@ -224,6 +247,46 @@ def render():
             2. **Khot UN, et al.** Prognostic importance of physical examination for heart failure in non-ST-elevation acute coronary syndromes. 
                *JAMA.* 2003;290(16):2174-81.
             """)
+        
+        inputs_dict = {
+            "SBP": f"{sbp} mmHg",
+            "HR": f"{hr} bpm",
+            "RR": f"{rr} /phút",
+            "Killip class": result["class"]
+        }
+        results_dict = {
+            "Diagnosis": result["name"],
+            "Mortality": result["mortality"],
+            "Prevalence": result["prevalence"]
+        }
+        
+        save_calculation_to_history(
+            calculator_id="killip",
+            calculator_name="Killip Classification",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="killip",
+            calculator_name="Killip Classification",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        st.markdown("---")
+        render_history_ui(calculator_id="killip", show_actions=True)
+        
+        references = get_references("KILLIP")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
     
     st.info("""
     💡 **Điểm quan trọng:**

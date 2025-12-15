@@ -344,9 +344,6 @@ def render_analytics_dashboard() -> None:
         try:
             st.html(chart_html)
         except AttributeError:
-            try:
-            st.html(chart_html)
-        except AttributeError:
             st.markdown(chart_html, unsafe_allow_html=True)
     
     st.markdown("---")
@@ -375,9 +372,6 @@ def render_analytics_dashboard() -> None:
             """
         specialty_html += "</div>"
         try:
-            st.html(specialty_html)
-        except AttributeError:
-            try:
             st.html(specialty_html)
         except AttributeError:
             st.markdown(specialty_html, unsafe_allow_html=True)
@@ -436,9 +430,6 @@ def render_analytics_dashboard() -> None:
         try:
             st.html(chart_html)
         except AttributeError:
-            try:
-            st.html(chart_html)
-        except AttributeError:
             st.markdown(chart_html, unsafe_allow_html=True)
     else:
         st.info("📊 Chưa có dữ liệu sử dụng. Hãy sử dụng các công cụ để xem thống kê!")
@@ -480,9 +471,6 @@ def render_analytics_dashboard() -> None:
             """
         chart_html += "</div>"
         try:
-            st.html(chart_html)
-        except AttributeError:
-            try:
             st.html(chart_html)
         except AttributeError:
             st.markdown(chart_html, unsafe_allow_html=True)

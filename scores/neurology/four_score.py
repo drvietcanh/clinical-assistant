@@ -35,6 +35,13 @@ from components.ui.results import render_result_box, render_result_card
 from components.ui.alerts import render_info_alert, render_warning_alert
 from scores.utils.validation import validate_positive
 from components.ui.scoring import render_score_result, render_score_breakdown
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_four_score(eye: int, motor: int, brainstem: int, respiration: int) -> dict:
@@ -87,6 +94,13 @@ def render():
     st.subheader("🧠 FOUR Score - Full Outline of UnResponsiveness")
     st.caption("Đánh giá mức độ ý thức - Thay thế GCS cho bệnh nhân thở máy")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'four_score':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     **FOUR Score** là thang điểm đánh giá mức độ ý thức, đặc biệt hữu ích cho bệnh nhân thở máy.
     
@@ -106,6 +120,18 @@ def render():
     """)
     
     st.markdown("---")
+    
+    # Smart Suggestions
+    col_sugg1, col_sugg2 = st.columns([2, 1])
+    with col_sugg2:
+        render_suggestions(
+            calculator_id="four_score",
+            calculator_name="FOUR Score",
+            category="Thần kinh",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Input section
     st.markdown("### 📝 Đánh giá")
@@ -317,6 +343,56 @@ def render():
         - Đánh giá nhanh tại hiện trường
         - Tiêu chuẩn quốc tế
         """)
+        
+        # Prepare inputs and results for Phase 1
+        inputs_dict = {
+            "Eye Response": eye_response,
+            "Motor Response": motor_response,
+            "Brainstem Reflexes": brainstem_response,
+            "Respiration": respiration_response
+        }
+        
+        results_dict = {
+            "FOUR Score": f"{result['total_score']}/16",
+            "Eye (E)": f"{result['eye']}/4",
+            "Motor (M)": f"{result['motor']}/4",
+            "Brainstem (B)": f"{result['brainstem']}/4",
+            "Respiration (R)": f"{result['respiration']}/4",
+            "Severity": result['severity'],
+            "Interpretation": result['interpretation']
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="four_score",
+            calculator_name="FOUR Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="four_score",
+            calculator_name="FOUR Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="four_score", show_actions=True)
+        
+        # References section
+        references = get_references("FOUR Score")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
     
     st.markdown("---")
     
@@ -363,21 +439,35 @@ def render():
         | 0 | Thở máy, không thở tự nhiên |
         """)
     
-    with st.expander("📚 Tài liệu tham khảo"):
-        st.markdown("""
-        **Tài liệu tham khảo:**
-        
-        1. **Wijdicks EF, et al.** Validation of a new coma scale: The FOUR score.
-           Ann Neurol. 2005;58(4):585-593.
-        
-        2. **Iyer VN, et al.** Validity and reliability of the FOUR score coma scale
-           compared with the Glasgow Coma Scale in the assessment of neurosurgical patients.
-           Neurocrit Care. 2009;10(1):50-54.
-        
-        3. **Wolf CA, et al.** Comparison of the Full Outline of UnResponsiveness score
-           and the Glasgow Coma Scale in predicting mortality in intoxicated patients.
-           J Emerg Med. 2013;45(5):711-716.
-        """)
+    # Always show references at the bottom (even before calculation)
+    st.markdown("---")
+    references = get_references("FOUR Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        # Fallback to manual references if Phase 1 references not found
+        with st.expander("📚 Tài liệu tham khảo"):
+            st.markdown("""
+            **Tài liệu tham khảo:**
+            
+            1. **Wijdicks EF, et al.** Validation of a new coma scale: The FOUR score.
+               Ann Neurol. 2005;58(4):585-593.
+            
+            2. **Iyer VN, et al.** Validity and reliability of the FOUR score coma scale
+               compared with the Glasgow Coma Scale in the assessment of neurosurgical patients.
+               Neurocrit Care. 2009;10(1):50-54.
+            
+            3. **Wolf CA, et al.** Comparison of the Full Outline of UnResponsiveness score
+               and the Glasgow Coma Scale in predicting mortality in intoxicated patients.
+               J Emerg Med. 2013;45(5):711-716.
+            """)
     
+    st.markdown("---")
     st.caption("⚠️ FOUR Score chỉ là công cụ hỗ trợ. Đánh giá lâm sàng toàn diện vẫn là quan trọng nhất.")
 

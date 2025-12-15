@@ -8,6 +8,13 @@ Lancet. 2007;369(9558):283-292.
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_abcd2(age, bp, clinical_features, duration, diabetes):
@@ -85,6 +92,13 @@ def render():
     st.subheader("🧠 ABCD2 Score")
     st.caption("TIA Risk Stratification - Stroke Risk After Transient Ischemic Attack")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'abcd2':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.warning("""
     **⚠️ QUAN TRỌNG: TIA là dấu hiệu cảnh báo đột quỵ**
     
@@ -99,7 +113,7 @@ def render():
     # Input section
     st.markdown("### 📋 Thông tin bệnh nhân")
     
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns([2, 1])
     
     with col1:
         age = st.number_input(
@@ -133,6 +147,22 @@ def render():
         )
     
     with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="abcd2",
+            calculator_name="ABCD2 Score",
+            category="Thần kinh",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    st.markdown("---")
+    
+    # Input section continued
+    col3, col4 = st.columns(2)
+    
+    with col3:
         clinical_features = st.radio(
             "Triệu chứng lâm sàng:",
             [
@@ -161,113 +191,126 @@ def render():
     
     st.markdown("---")
     
-    # Calculate
-    # ABCD2 BP criterion: Systolic ≥140 OR Diastolic ≥90
-    bp_meets_criterion = (systolic_bp >= 140) or (diastolic_bp >= 90)
-    # For calculation function, pass systolic BP (it will check >= 140)
-    # But we need to adjust the score if only diastolic meets criterion
-    bp_for_calc = systolic_bp if systolic_bp > 0 else diastolic_bp
-    
-    # Map clinical features
-    if "Both" in clinical_features or ("Unilateral" in clinical_features and "Speech" in clinical_features):
-        clinical_value = "Both"
-    elif "Unilateral" in clinical_features:
-        clinical_value = "Unilateral weakness"
-    elif "Speech" in clinical_features:
-        clinical_value = "Speech disturbance"
-    else:
-        clinical_value = "None"
-    
-    result = calculate_abcd2(age, bp_for_calc, clinical_value, duration, diabetes)
-    
-    # Adjust score if only diastolic BP meets criterion
-    if bp_meets_criterion and systolic_bp < 140:
-        result["total_score"] += 1
-        # Recalculate risk category
-        if result["total_score"] >= 6:
-            result["risk_category"] = "High Risk"
-            result["stroke_risk_2d"] = "8.1%"
-            result["stroke_risk_7d"] = "11.7%"
-            result["color"] = "error"
-        elif result["total_score"] >= 4:
-            result["risk_category"] = "Moderate Risk"
-            result["stroke_risk_2d"] = "4.1%"
-            result["stroke_risk_7d"] = "5.9%"
-            result["color"] = "warning"
-    
-    # Display results
     col1, col2 = st.columns([2, 1])
     
-    with col1:
-        st.markdown("### 📊 Kết quả")
-        
-        if result["color"] == "success":
-            st.success(f"## **ABCD2 Score: {result['total_score']}/7**")
-        elif result["color"] == "warning":
-            st.warning(f"## **ABCD2 Score: {result['total_score']}/7**")
-        else:
-            st.error(f"## **ABCD2 Score: {result['total_score']}/7**")
-        
-        st.markdown(f"**Phân loại nguy cơ:** {result['risk_category']}")
-        st.markdown(f"**Nguy cơ đột quỵ 2 ngày:** {result['stroke_risk_2d']}")
-        st.markdown(f"**Nguy cơ đột quỵ 7 ngày:** {result['stroke_risk_7d']}")
-        
-        # Score breakdown
-        st.markdown("---")
-        st.markdown("### 📋 Chi tiết điểm số")
-        
-        breakdown = []
-        if age >= 60:
-            breakdown.append(f"✅ Tuổi ≥60: +1 điểm")
-        if systolic_bp >= 140 or diastolic_bp >= 90:
-            breakdown.append(f"✅ Huyết áp ≥140/90: +1 điểm")
-        if clinical_value == "Unilateral weakness":
-            breakdown.append(f"✅ Yếu một bên: +2 điểm")
-        elif clinical_value == "Speech disturbance":
-            breakdown.append(f"✅ Rối loạn ngôn ngữ: +1 điểm")
-        if duration >= 60:
-            breakdown.append(f"✅ Thời gian ≥60 phút: +2 điểm")
-        elif duration >= 10:
-            breakdown.append(f"✅ Thời gian ≥10 phút: +1 điểm")
-        if diabetes:
-            breakdown.append(f"✅ Đái tháo đường: +1 điểm")
-        
-        for item in breakdown:
-            st.markdown(item)
-    
     with col2:
-        st.markdown("### 🎯 Khuyến nghị")
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="abcd2",
+            calculator_name="ABCD2 Score",
+            category="Thần Kinh",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    # Calculate button
+    if st.button("🧮 Tính ABCD2 Score", type="primary", use_container_width=True):
+        # Calculate
+        # ABCD2 BP criterion: Systolic ≥140 OR Diastolic ≥90
+        bp_meets_criterion = (systolic_bp >= 140) or (diastolic_bp >= 90)
+        # For calculation function, pass systolic BP (it will check >= 140)
+        # But we need to adjust the score if only diastolic meets criterion
+        bp_for_calc = systolic_bp if systolic_bp > 0 else diastolic_bp
         
-        if result["total_score"] >= 6:
-            st.error("""
-            **🚨 HIGH RISK:**
-            
-            **Cần nhập viện:**
-            - Workup ngay (CT/MRI, carotid imaging, ECG, echo)
-            - Bắt đầu antiplatelet ngay
-            - Theo dõi sát 24-48h
-            - Cân nhắc dual antiplatelet (aspirin + clopidogrel)
-            """)
-        elif result["total_score"] >= 4:
-            st.warning("""
-            **⚠️ MODERATE RISK:**
-            
-            **Cân nhắc nhập viện:**
-            - Workup trong 24-48h
-            - Bắt đầu antiplatelet
-            - Theo dõi sát
-            - Tái khám sớm
-            """)
+        # Map clinical features
+        if "Both" in clinical_features or ("Unilateral" in clinical_features and "Speech" in clinical_features):
+            clinical_value = "Both"
+        elif "Unilateral" in clinical_features:
+            clinical_value = "Unilateral weakness"
+        elif "Speech" in clinical_features:
+            clinical_value = "Speech disturbance"
         else:
-            st.success("""
-            **✅ LOW RISK:**
+            clinical_value = "None"
+        
+        result = calculate_abcd2(age, bp_for_calc, clinical_value, duration, diabetes)
+        
+        # Adjust score if only diastolic BP meets criterion
+        if bp_meets_criterion and systolic_bp < 140:
+            result["total_score"] += 1
+            # Recalculate risk category
+            if result["total_score"] >= 6:
+                result["risk_category"] = "High Risk"
+                result["stroke_risk_2d"] = "8.1%"
+                result["stroke_risk_7d"] = "11.7%"
+                result["color"] = "error"
+            elif result["total_score"] >= 4:
+                result["risk_category"] = "Moderate Risk"
+                result["stroke_risk_2d"] = "4.1%"
+                result["stroke_risk_7d"] = "5.9%"
+                result["color"] = "warning"
+        
+        # Display results
+        with col1:
+            st.markdown("### 📊 Kết quả")
             
-            **Có thể điều trị ngoại trú:**
-            - Workup trong 48-72h
-            - Bắt đầu antiplatelet
-            - Tái khám trong 1 tuần
-            - Giáo dục dấu hiệu đột quỵ
-            """)
+            if result["color"] == "success":
+                st.success(f"## **ABCD2 Score: {result['total_score']}/7**")
+            elif result["color"] == "warning":
+                st.warning(f"## **ABCD2 Score: {result['total_score']}/7**")
+            else:
+                st.error(f"## **ABCD2 Score: {result['total_score']}/7**")
+            
+            st.markdown(f"**Phân loại nguy cơ:** {result['risk_category']}")
+            st.markdown(f"**Nguy cơ đột quỵ 2 ngày:** {result['stroke_risk_2d']}")
+            st.markdown(f"**Nguy cơ đột quỵ 7 ngày:** {result['stroke_risk_7d']}")
+            
+            # Score breakdown
+            st.markdown("---")
+            st.markdown("### 📋 Chi tiết điểm số")
+            
+            breakdown = []
+            if age >= 60:
+                breakdown.append(f"✅ Tuổi ≥60: +1 điểm")
+            if systolic_bp >= 140 or diastolic_bp >= 90:
+                breakdown.append(f"✅ Huyết áp ≥140/90: +1 điểm")
+            if clinical_value == "Unilateral weakness":
+                breakdown.append(f"✅ Yếu một bên: +2 điểm")
+            elif clinical_value == "Speech disturbance":
+                breakdown.append(f"✅ Rối loạn ngôn ngữ: +1 điểm")
+            if duration >= 60:
+                breakdown.append(f"✅ Thời gian ≥60 phút: +2 điểm")
+            elif duration >= 10:
+                breakdown.append(f"✅ Thời gian ≥10 phút: +1 điểm")
+            if diabetes:
+                breakdown.append(f"✅ Đái tháo đường: +1 điểm")
+            
+            for item in breakdown:
+                st.markdown(item)
+    
+        with col2:
+            st.markdown("### 🎯 Khuyến nghị")
+            
+            if result["total_score"] >= 6:
+                st.error("""
+                **🚨 HIGH RISK:**
+                
+                **Cần nhập viện:**
+                - Workup ngay (CT/MRI, carotid imaging, ECG, echo)
+                - Bắt đầu antiplatelet ngay
+                - Theo dõi sát 24-48h
+                - Cân nhắc dual antiplatelet (aspirin + clopidogrel)
+                """)
+            elif result["total_score"] >= 4:
+                st.warning("""
+                **⚠️ MODERATE RISK:**
+                
+                **Cân nhắc nhập viện:**
+                - Workup trong 24-48h
+                - Bắt đầu antiplatelet
+                - Theo dõi sát
+                - Tái khám sớm
+                """)
+            else:
+                st.success("""
+                **✅ LOW RISK:**
+                
+                **Có thể điều trị ngoại trú:**
+                - Workup trong 48-72h
+                - Bắt đầu antiplatelet
+                - Tái khám trong 1 tuần
+                - Giáo dục dấu hiệu đột quỵ
+                """)
     
     st.markdown("---")
     
@@ -348,26 +391,76 @@ def render():
     - Cân nhắc các yếu tố khác (imaging, risk factors)
     """)
     
+    if 'result' in locals():
+        # Prepare data for history and share
+        inputs_dict = {
+            "Age": age,
+            "Systolic BP": systolic_bp,
+            "Diastolic BP": diastolic_bp,
+            "Clinical Features": clinical_features,
+            "Duration (minutes)": duration,
+            "Diabetes": diabetes
+        }
+        
+        results_dict = {
+            "ABCD2 Score": result["total_score"],
+            "Risk Category": result["risk_category"],
+            "Stroke Risk 2 days": result["stroke_risk_2d"],
+            "Stroke Risk 7 days": result["stroke_risk_7d"]
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="abcd2",
+            calculator_name="ABCD2 Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="abcd2",
+            calculator_name="ABCD2 Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="abcd2", show_actions=True)
+    
     st.markdown("---")
     
-    # References
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **Johnston SC, et al.** Validation and refinement of scores to predict very early stroke risk after transient ischaemic attack.
-       Lancet. 2007;369(9558):283-292.
-    
-    2. **Merwick A, et al.** Addition of brain and carotid imaging to the ABCD2 score to identify patients at early risk of stroke after transient ischaemic attack: a multicentre observational study.
-       Lancet Neurol. 2010;9(11):1060-1069.
-    
-    3. **UpToDate:** Transient Ischemic Attack - Last updated 2024
-       - Risk stratification
-       - Treatment protocols
-    
-    4. **AHA/ASA Guidelines** - TIA Management (2021)
-       - ABCD2 score
-       - Workup recommendations
-    """)
+    # References section (Phase 1)
+    references = get_references("ABCD2")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        # Fallback to manual references if Phase 1 references not found
+        st.markdown("### 📚 Tài liệu tham khảo")
+        st.markdown("""
+        1. **Johnston SC, et al.** Validation and refinement of scores to predict very early stroke risk after transient ischaemic attack.
+           Lancet. 2007;369(9558):283-292.
+        
+        2. **Merwick A, et al.** Addition of brain and carotid imaging to the ABCD2 score to identify patients at early risk of stroke after transient ischaemic attack: a multicentre observational study.
+           Lancet Neurol. 2010;9(11):1060-1069.
+        
+        3. **UpToDate:** Transient Ischemic Attack - Last updated 2024
+           - Risk stratification
+           - Treatment protocols
+        
+        4. **AHA/ASA Guidelines** - TIA Management (2021)
+           - ABCD2 score
+           - Workup recommendations
+        """)
     
     st.markdown("---")
     

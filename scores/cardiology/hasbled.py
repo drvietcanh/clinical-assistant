@@ -4,11 +4,13 @@ Bleeding risk assessment in patients on anticoagulation
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def render():

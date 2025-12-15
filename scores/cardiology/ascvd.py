@@ -33,6 +33,13 @@ Output:
 import streamlit as st
 import math
 from components.ui.results import render_result_box, render_result_card
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_ascvd_male_white(
@@ -298,7 +305,25 @@ def render():
     st.subheader("❤️ ASCVD Risk Calculator")
     st.caption("Atherosclerotic Cardiovascular Disease - 10-Year Risk Assessment (ACC/AHA 2013)")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'ascvd':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     col1, col2 = st.columns([2, 1])
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="ascvd",
+            calculator_name="ASCVD Risk Calculator",
+            category="Tim Mạch",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     with col1:
         st.markdown("### Thông tin bệnh nhân")
@@ -527,6 +552,38 @@ def render():
                     filename="ascvd_result"
                 )
                 
+                # Save to history
+                save_calculation_to_history(
+                    calculator_id="ascvd",
+                    calculator_name="ASCVD Risk Calculator",
+                    inputs=inputs_dict,
+                    results=results_dict
+                )
+                
+                # Share section
+                render_share_section(
+                    calculator_id="ascvd",
+                    calculator_name="ASCVD Risk Calculator",
+                    inputs=inputs_dict,
+                    results=results_dict,
+                    show_qr=True
+                )
+                
+                # History section
+                st.markdown("---")
+                render_history_ui(calculator_id="ascvd", show_actions=True)
+                
+                # References section
+                references = get_references("ASCVD")
+                if references:
+                    render_references_section(
+                        references=references,
+                        title="📚 Tài liệu tham khảo",
+                        last_updated="2024-01-15",
+                        show_evidence_level=True,
+                        show_links=True
+                    )
+                
                 with st.expander("📚 Tham khảo lâm sàng"):
                     st.markdown("""
                     **ASCVD Risk Calculator - Pooled Cohort Equations**
@@ -575,6 +632,18 @@ def render():
                     - Tăng huyết áp không kiểm soát làm tăng nguy cơ
                     """)
     
+    # Always show references at the bottom (even before calculation)
+    st.markdown("---")
+    references = get_references("ASCVD")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
+    
     st.markdown("---")
     st.info("""
     **Bước tiếp theo:**
@@ -583,4 +652,7 @@ def render():
     - Xem xét các yếu tố nguy cơ bổ sung (CAC score, hs-CRP)
     - Điều chỉnh lối sống luôn là nền tảng của phòng ngừa
     """)
+    
+    st.markdown("---")
+    st.caption("⚠️ Công cụ hỗ trợ lâm sàng - không thay thế đánh giá lâm sàng toàn diện")
 

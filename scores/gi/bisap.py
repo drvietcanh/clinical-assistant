@@ -10,6 +10,13 @@ from scores.utils.validation import (
 )
 from components.ui.validation import render_validation_errors
 from components.ui.scoring import render_score_result, render_score_breakdown
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -27,6 +34,13 @@ def render():
     <h2 style='text-align: center; color: #0EA5E9;'>🩺 BISAP Score</h2>
     <p style='text-align: center;'><em>Bedside Index for Severity in Acute Pancreatitis</em></p>
     """, unsafe_allow_html=True)
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'bisap':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     # Thông tin về BISAP
     with st.expander("ℹ️ Giới thiệu về BISAP Score"):
@@ -62,6 +76,19 @@ def render():
         """)
     
     st.markdown("---")
+    
+    col1, col2 = st.columns([2, 1])
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="bisap",
+            calculator_name="BISAP Score",
+            category="Tiêu Hóa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Input form
     st.subheader("📝 Nhập thông tin bệnh nhân")
@@ -631,26 +658,103 @@ def render():
             - **ERCP** (nếu có cholangitis hoặc sỏi đã chứng minh)
             """)
         
-        # References
-        with st.expander("📚 Tài liệu tham khảo"):
-            st.markdown("""
-            1. **Wu BU, Johannes RS, Sun X, Tabak Y, Conwell DL, Banks PA.** 
-               The early prediction of mortality in acute pancreatitis: a large population-based study. 
-               *Gut.* 2008;57(12):1698-703.
+            # Prepare inputs and results for export/history
+            inputs_dict = {
+                "BUN": f"{bun:.1f} mg/dL ({bun_mmol:.1f} mmol/L)" if bun_unit == "mmol/L" else f"{bun:.1f} mg/dL",
+                "GCS": str(gcs),
+                "Mental Impaired": "Có" if (mental_impaired or gcs < 15) else "Không",
+                "Temperature": f"{temp:.1f}°C",
+                "Heart Rate": f"{hr} bpm",
+                "Respiratory Rate": f"{rr} /min",
+                "WBC": f"{wbc:.1f} ×10³/µL",
+                "SIRS Count": f"{sirs_count}/4",
+                "SIRS Positive": "Có" if sirs_positive else "Không",
+                "Age": str(age),
+                "Pleural Effusion": "Có" if pleural else "Không"
+            }
             
-            2. **Singh VK, Wu BU, Bollen TL, et al.** A prospective evaluation of the bedside index for severity in acute pancreatitis score in assessing mortality and intermediate markers of severity in acute pancreatitis. 
-               *Am J Gastroenterol.* 2009;104(4):966-71.
+            results_dict = {
+                "BISAP Score": f"{bisap_score}/5",
+                "Severity": severity,
+                "Mortality": mortality,
+                "Components": ", ".join(components) if components else "Không có"
+            }
             
-            3. **Tenner S, Baillie J, DeWitt J, Vege SS; American College of Gastroenterology.** 
-               American College of Gastroenterology guideline: management of acute pancreatitis. 
-               *Am J Gastroenterol.* 2013;108(9):1400-15.
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            render_export_section(
+                title=f"BISAP Score = {bisap_score}/5",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="BISAP Score",
+                filename="bisap_result"
+            )
             
-            4. **Papachristou GI, Muddana V, Yadav D, et al.** Comparison of BISAP, Ranson's, APACHE-II, and CTSI scores in predicting organ failure, complications, and mortality in acute pancreatitis. 
-               *Am J Gastroenterol.* 2010;105(2):435-41.
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="bisap",
+                calculator_name="BISAP Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
             
-            5. **Boxhoorn L, Voermans RP, Bouwense SA, et al.** Acute pancreatitis. 
-               *Lancet.* 2020;396(10252):726-734.
-            """)
+            # Share section
+            render_share_section(
+                calculator_id="bisap",
+                calculator_name="BISAP Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="bisap", show_actions=True)
+            
+            # References section
+            references = get_references("BISAP")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+            else:
+                # Fallback to manual references
+                with st.expander("📚 Tài liệu tham khảo"):
+                    st.markdown("""
+                    1. **Wu BU, Johannes RS, Sun X, Tabak Y, Conwell DL, Banks PA.** 
+                       The early prediction of mortality in acute pancreatitis: a large population-based study. 
+                       *Gut.* 2008;57(12):1698-703.
+                    
+                    2. **Singh VK, Wu BU, Bollen TL, et al.** A prospective evaluation of the bedside index for severity in acute pancreatitis score in assessing mortality and intermediate markers of severity in acute pancreatitis. 
+                       *Am J Gastroenterol.* 2009;104(4):966-71.
+                    
+                    3. **Tenner S, Baillie J, DeWitt J, Vege SS; American College of Gastroenterology.** 
+                       American College of Gastroenterology guideline: management of acute pancreatitis. 
+                       *Am J Gastroenterol.* 2013;108(9):1400-15.
+                    
+                    4. **Papachristou GI, Muddana V, Yadav D, et al.** Comparison of BISAP, Ranson's, APACHE-II, and CTSI scores in predicting organ failure, complications, and mortality in acute pancreatitis. 
+                       *Am J Gastroenterol.* 2010;105(2):435-41.
+                    
+                    5. **Boxhoorn L, Voermans RP, Bouwense SA, et al.** Acute pancreatitis. 
+                       *Lancet.* 2020;396(10252):726-734.
+                    """)
+    
+    # Always show references at the bottom
+    references = get_references("BISAP")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Quick reference
     st.markdown("---")

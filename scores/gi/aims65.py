@@ -19,6 +19,13 @@ from scores.utils.validation import (
 )
 from components.ui.validation import render_validation_errors
 from components.ui.scoring import render_score_result, render_score_breakdown
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_aims65(albumin, inr, mental_status, sbp, age):
@@ -53,6 +60,13 @@ def render():
     
     st.subheader("🩸 AIMS65 Score")
     st.caption("Đánh giá nguy cơ tử vong trong xuất huyết tiêu hóa trên")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'aims65':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     **AIMS65 Score** là thang điểm đơn giản để dự đoán tử vong ở bệnh nhân 
@@ -138,8 +152,19 @@ def render():
             st.caption("⚠️ Rối loạn ý thức: Lơ mơ, kích động, không hợp tác, hôn mê")
         
         st.markdown("---")
-        
-        if st.button("🧮 Tính AIMS65 Score", type="primary", use_container_width=True):
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="aims65",
+            calculator_name="AIMS65 Score",
+            category="Tiêu Hóa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    if st.button("🧮 Tính AIMS65 Score", type="primary", use_container_width=True):
             # Validate inputs
             validation_errors = []
             
@@ -489,29 +514,102 @@ def render():
                 - **Kết hợp:** Dùng cả 3 để đánh giá toàn diện
                 """)
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown("""
-                **Primary Reference:**
-                - Saltzman JR, Tabak YP, Hyett BH, Sun X, Travis AC, Johannes RS.
-                  *A simple risk score accurately predicts in-hospital mortality, length of stay, and cost in acute upper GI bleeding.*
-                  Gastrointest Endosc. 2011 Dec;74(6):1215-24. [PMID: 22000769]
-                
-                **Validation Studies:**
-                - Robertson M, Majumdar A, Boyapati R, et al.
-                  *Risk stratification in acute upper GI bleeding: comparison of the AIMS65 score with the Glasgow-Blatchford and Rockall scoring systems.*
-                  Gastrointest Endosc. 2016 Jun;83(6):1151-60.
-                
-                - Hyett BH, Abougergi MS, Charpentier JP, et al.
-                  *The AIMS65 score compared with the Glasgow-Blatchford score in predicting outcomes in upper GI bleeding.*
-                  Gastrointest Endosc. 2013 Apr;77(4):551-7.
-                
-                **Guidelines:**
-                - Gralnek IM, et al. *Nonvariceal upper gastrointestinal hemorrhage: ESGE Guideline.*
-                  Endoscopy. 2015 Oct;47(10):a1-46.
-                
-                - Barkun AN, et al. *International consensus recommendations on the management of patients with nonvariceal upper gastrointestinal bleeding.*
-                  Ann Intern Med. 2010 Jan 5;152(1):101-13.
-                """)
+            # Prepare inputs and results for export/history
+            inputs_dict = {
+                "Age": str(age),
+                "Albumin": f"{albumin:.1f} g/dL",
+                "INR": f"{inr:.2f}",
+                "Mental Status": "Rối loạn ý thức" if mental_status else "Bình thường",
+                "Systolic BP": f"{sbp} mmHg"
+            }
+            
+            results_dict = {
+                "AIMS65 Score": f"{score}/5",
+                "Risk": risk,
+                "Mortality": mortality,
+                "Length of Stay": length_of_stay,
+                "Cost": cost
+            }
+            
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            render_export_section(
+                title=f"AIMS65 Score = {score}/5",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="AIMS65 Score",
+                filename="aims65_result"
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="aims65",
+                calculator_name="AIMS65 Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="aims65",
+                calculator_name="AIMS65 Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="aims65", show_actions=True)
+            
+            # References section
+            references = get_references("AIMS65")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+            else:
+                # Fallback to manual references
+                with st.expander("📚 Tài liệu tham khảo"):
+                    st.markdown("""
+                    **Primary Reference:**
+                    - Saltzman JR, Tabak YP, Hyett BH, Sun X, Travis AC, Johannes RS.
+                      *A simple risk score accurately predicts in-hospital mortality, length of stay, and cost in acute upper GI bleeding.*
+                      Gastrointest Endosc. 2011 Dec;74(6):1215-24. [PMID: 22000769]
+                    
+                    **Validation Studies:**
+                    - Robertson M, Majumdar A, Boyapati R, et al.
+                      *Risk stratification in acute upper GI bleeding: comparison of the AIMS65 score with the Glasgow-Blatchford and Rockall scoring systems.*
+                      Gastrointest Endosc. 2016 Jun;83(6):1151-60.
+                    
+                    - Hyett BH, Abougergi MS, Charpentier JP, et al.
+                      *The AIMS65 score compared with the Glasgow-Blatchford score in predicting outcomes in upper GI bleeding.*
+                      Gastrointest Endosc. 2013 Apr;77(4):551-7.
+                    
+                    **Guidelines:**
+                    - Gralnek IM, et al. *Nonvariceal upper gastrointestinal hemorrhage: ESGE Guideline.*
+                      Endoscopy. 2015 Oct;47(10):a1-46.
+                    
+                    - Barkun AN, et al. *International consensus recommendations on the management of patients with nonvariceal upper gastrointestinal bleeding.*
+                      Ann Intern Med. 2010 Jan 5;152(1):101-13.
+                    """)
+    
+    # Always show references at the bottom
+    references = get_references("AIMS65")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Educational content
     st.markdown("---")

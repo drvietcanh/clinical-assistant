@@ -4,15 +4,37 @@ Phân loại chức năng suy tim theo New York Heart Association
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def render():
     """Render NYHA Classification interface"""
     
+    shared = load_shared_result_from_url()
+    shared_inputs = {}
+    if shared and shared.get("calculator_id") == "nyha":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'NYHA Classification')}")
+        shared_inputs = shared.get("inputs", {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>❤️ NYHA Functional Classification</h2>
     <p style='text-align: center;'><em>Phân loại chức năng suy tim - New York Heart Association</em></p>
     """, unsafe_allow_html=True)
+    
+    render_suggestions(
+        calculator_id="nyha",
+        calculator_name="NYHA Functional Classification",
+        category="Tim Mạch",
+        show_related=True,
+        show_category=True,
+        limit=3
+    )
     
     # Thông tin về NYHA
     with st.expander("ℹ️ Giới thiệu về NYHA Classification"):
@@ -63,7 +85,8 @@ def render():
             "class3": "🔶 Có triệu chứng với hoạt động NHẸ (đi bộ bình thường, tắm rửa, thay quần áo)",
             "class4": "🚨 Có triệu chứng KHI NGHỈ hoặc với BẤT KỲ hoạt động nào"
         }[x],
-        help="Chọn mức độ hoạt động thấp nhất gây ra triệu chứng"
+        help="Chọn mức độ hoạt động thấp nhất gây ra triệu chứng",
+        index=["class1", "class2", "class3", "class4"].index(shared_inputs.get("option", "class1"))
     )
     
     st.markdown("---")
@@ -74,19 +97,19 @@ def render():
     col1, col2 = st.columns(2)
     
     with col1:
-        dyspnea = st.checkbox("Khó thở khi gắng sức", value=True)
-        fatigue = st.checkbox("Mệt mỏi, suy nhược", value=True)
+        dyspnea = st.checkbox("Khó thở khi gắng sức", value=shared_inputs.get("dyspnea", True))
+        fatigue = st.checkbox("Mệt mỏi, suy nhược", value=shared_inputs.get("fatigue", True))
     
     with col2:
-        palpitations = st.checkbox("Hồi hộp, tim đập nhanh")
-        orthopnea = st.checkbox("Khó thở khi nằm (orthopnea)")
+        palpitations = st.checkbox("Hồi hộp, tim đập nhanh", value=shared_inputs.get("palpitations", False))
+        orthopnea = st.checkbox("Khó thở khi nằm (orthopnea)", value=shared_inputs.get("orthopnea", False))
     
     # Additional assessment
     functional_capacity = st.slider(
         "Khả năng sinh hoạt hàng ngày (%)",
         min_value=0,
         max_value=100,
-        value=50,
+        value=int(shared_inputs.get("functional_capacity", 50)),
         step=10,
         help="Đánh giá tổng quát khả năng sinh hoạt so với bình thường"
     )
@@ -453,6 +476,49 @@ def render():
                American Heart Association Task Force on Practice Guidelines. 
                J Am Coll Cardiol. 2013;62(16):e147-239.
             """)
+        
+        inputs_dict = {
+            "NYHA class": result["class"],
+            "Symptoms with activity": option,
+            "Dyspnea": dyspnea,
+            "Fatigue": fatigue,
+            "Palpitations": palpitations,
+            "Orthopnea": orthopnea,
+            "Functional capacity": f"{functional_capacity}%"
+        }
+        results_dict = {
+            "Diagnosis": result["description"],
+            "Prognosis": result["prognosis"],
+            "Mortality": result["mortality"]
+        }
+        
+        save_calculation_to_history(
+            calculator_id="nyha",
+            calculator_name="NYHA Classification",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="nyha",
+            calculator_name="NYHA Classification",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        st.markdown("---")
+        render_history_ui(calculator_id="nyha", show_actions=True)
+        
+        references = get_references("NYHA")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
     
     # Quick reference table
     st.markdown("---")

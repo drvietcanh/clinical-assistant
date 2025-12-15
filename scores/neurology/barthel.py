@@ -4,14 +4,35 @@ Thang điểm đánh giá chức năng hoạt động hàng ngày (ADL)
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def render():
     """Barthel Index Calculator"""
+    shared = load_shared_result_from_url()
+    shared_inputs = shared.get("inputs", {}) if shared and shared.get("calculator_id") == "barthel" else {}
+    if shared_inputs:
+        st.info("📥 Đã tải kết quả chia sẻ Barthel")
+    
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>🛠️ Barthel Index</h2>
     <p style='text-align: center;'><em>Thang điểm đánh giá chức năng hoạt động hàng ngày (ADL)</em></p>
     """, unsafe_allow_html=True)
+    
+    render_suggestions(
+        calculator_id="barthel",
+        calculator_name="Barthel Index",
+        category="Thần Kinh",
+        show_related=True,
+        show_category=True,
+        limit=3
+    )
     
     with st.expander("ℹ️ Giới thiệu"):
         st.markdown("""
@@ -307,6 +328,53 @@ def render():
             - Không cần hỗ trợ
             - Tiếp tục duy trì chức năng
             """)
+        
+        inputs_dict = {
+            "bowel": bowel,
+            "bladder": bladder,
+            "grooming": grooming,
+            "mobility": mobility,
+            "stairs": stairs,
+            "bathing": bathing,
+            "dressing": dressing,
+            "bowel_control": bowel_control,
+            "bladder_control": bladder_control,
+            "feeding": feeding,
+            "total_score": total_score
+        }
+        results_dict = {
+            "Barthel Score": total_score,
+            "Dependency": dependency,
+            "Interpretation": interpretation
+        }
+        
+        save_calculation_to_history(
+            calculator_id="barthel",
+            calculator_name="Barthel Index",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="barthel",
+            calculator_name="Barthel Index",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        st.markdown("---")
+        render_history_ui(calculator_id="barthel", show_actions=True)
+        
+        references = get_references("BARTHEL")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
         
         # Comparison with mRS
         with st.expander("🔄 So sánh Với mRS"):

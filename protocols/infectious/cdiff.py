@@ -4,6 +4,10 @@ IDSA/SHEA 2021 Guidelines
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -412,17 +416,19 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 11: REFERENCES ==========
-    st.markdown("### 📚 Tài liệu tham khảo")
+    st.markdown("---")
     
-    references = [
-        "**IDSA/SHEA 2021:** Clinical Practice Guidelines for Clostridioides difficile Infection in Adults and Children",
-        "**UpToDate:** Clostridioides difficile infection in adults: Treatment and prevention",
-        "**Lexicomp:** Fidaxomicin, Vancomycin (oral), Metronidazole drug monographs",
-        "**FDA:** Bezlotoxumab (Zinplava) prescribing information",
-    ]
+    # References section
+    references = get_references("C. diff")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
-    for ref in references:
-        st.markdown(f"- {ref}")
-    
+    st.markdown("---")
     st.caption("💡 Protocol này dựa trên IDSA/SHEA 2021 guidelines. Cập nhật thường xuyên theo guidelines mới nhất.")
 

@@ -12,6 +12,13 @@ Gut. 1996;38(3):316-21.
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 from scores.utils.validation import (
     validate_age,
     validate_blood_pressure,
@@ -23,6 +30,11 @@ from components.ui.validation import render_validation_errors
 def render():
     """Render Rockall Score Calculator"""
     
+    shared = load_shared_result_from_url()
+    shared_inputs = shared.get("inputs", {}) if shared and shared.get("calculator_id") == "rockall" else {}
+    if shared_inputs:
+        st.info("📥 Đã tải kết quả chia sẻ Rockall")
+    
     st.subheader("🩸 Rockall Score")
     st.caption("Tiên lượng xuất huyết tiêu hóa trên")
     
@@ -33,6 +45,15 @@ def render():
     - **Pre-endoscopy (Clinical) Rockall:** 0-7 điểm
     - **Complete Rockall:** 0-11 điểm (sau nội soi)
     """)
+    
+    render_suggestions(
+        calculator_id="rockall",
+        calculator_name="Rockall Score",
+        category="Tiêu Hóa",
+        show_related=True,
+        show_category=True,
+        limit=3
+    )
     
     st.markdown("---")
     
@@ -51,6 +72,10 @@ def render():
     st.markdown("---")
     
     col1, col2 = st.columns([2, 1])
+    
+    # Defaults for complete scoring
+    diagnosis_score = 0
+    stigmata_score = 0
     
     with col1:
         st.markdown("### 📋 Thông tin lâm sàng")
@@ -383,6 +408,51 @@ def render():
                 
                 **Tiên lượng:** Xấu, cần theo dõi sát
                 """)
+            
+            # Phase 1: save/share/history + references
+            inputs_dict = {
+                "version": "Complete" if is_complete else "Pre-endoscopy",
+                "age": age,
+                "sbp": sbp,
+                "hr": hr,
+                "comorbidity": comorbidity,
+                "pre_endo_score": pre_endo_score,
+                "diagnosis": diagnosis if is_complete else None,
+                "stigmata": stigmata if is_complete else None
+            }
+            results_dict = {
+                "Rockall Score": total_score,
+                "Mortality": mortality,
+                "Rebleed": rebleed
+            }
+            
+            save_calculation_to_history(
+                calculator_id="rockall",
+                calculator_name="Rockall Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            render_share_section(
+                calculator_id="rockall",
+                calculator_name="Rockall Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            st.markdown("---")
+            render_history_ui(calculator_id="rockall", show_actions=True)
+            
+            references = get_references("ROCKALL")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
             
             # Score breakdown
             st.markdown("---")

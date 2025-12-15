@@ -16,8 +16,13 @@ Hepatology. 2001;33(2):464-70.
 
 import streamlit as st
 import math
+# ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 from scores.utils.validation import validate_lab_value
 from components.ui.scoring import render_score_result, render_score_breakdown
 
@@ -72,6 +77,12 @@ def calculate_meld(bilirubin, inr, creatinine, dialysis=False):
 def render():
     """Render MELD Score Calculator"""
     
+    shared = load_shared_result_from_url()
+    shared_inputs = {}
+    if shared and shared.get("calculator_id") == "meld":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'MELD Score')}")
+        shared_inputs = shared.get("inputs", {})
+    
     st.subheader("🩸 MELD Score")
     st.caption("Model for End-Stage Liver Disease - Tiên lượng xơ gan & ưu tiên ghép gan")
     
@@ -89,6 +100,14 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
+        render_suggestions(
+            calculator_id="meld",
+            calculator_name="MELD Score",
+            category="Tiêu Hóa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         st.markdown("### 🔬 Xét nghiệm")
         
         # 1. Bilirubin
@@ -98,7 +117,8 @@ def render():
             "Đơn vị:",
             ["mg/dL", "µmol/L (SI)"],
             horizontal=True,
-            key="bili_meld"
+            key="bili_meld",
+            index=0 if shared_inputs.get("bili_unit", "mg/dL") == "mg/dL" else 1
         )
         
         if "mg/dL" in bili_unit:
@@ -106,7 +126,7 @@ def render():
                 "Bilirubin (mg/dL):",
                 min_value=0.1,
                 max_value=30.0,
-                value=1.0,
+                value=float(shared_inputs.get("bili", 1.0)),
                 step=0.1,
                 format="%.1f",
                 help="Bình thường: 0.3-1.2 mg/dL"
@@ -118,7 +138,7 @@ def render():
                 "Bilirubin (µmol/L):",
                 min_value=0,
                 max_value=500,
-                value=17,
+                value=int(shared_inputs.get("bili", 17)),
                 step=1,
                 format="%d",
                 help="Bình thường: 5-21 µmol/L"
@@ -132,7 +152,7 @@ def render():
             "INR (International Normalized Ratio):",
             min_value=0.8,
             max_value=10.0,
-            value=1.0,
+            value=float(shared_inputs.get("inr", 1.0)),
             step=0.1,
             format="%.1f",
             help="Bình thường: 0.9-1.1"
@@ -145,7 +165,7 @@ def render():
             "Đơn vị:",
             ["µmol/L (SI)", "mg/dL"],
             horizontal=True,
-            index=0,
+            index=0 if shared_inputs.get("cr_unit", "µmol/L (SI)") == "µmol/L (SI)" else 1,
             key="cr_meld"
         )
         
@@ -154,7 +174,7 @@ def render():
                 "Creatinine (µmol/L):",
                 min_value=0,
                 max_value=1500,
-                value=88,
+                value=int(shared_inputs.get("cr", 88)),
                 step=5,
                 format="%d",
                 help="Bình thường: 62-115 µmol/L"
@@ -166,7 +186,7 @@ def render():
                 "Creatinine (mg/dL):",
                 min_value=0.1,
                 max_value=15.0,
-                value=1.0,
+                value=float(shared_inputs.get("cr", 1.0)),
                 step=0.1,
                 format="%.1f",
                 help="Bình thường: 0.7-1.3 mg/dL"
@@ -178,7 +198,8 @@ def render():
         st.markdown("#### 4. Lọc máu")
         dialysis = st.checkbox(
             "Đã lọc máu ≥2 lần trong 7 ngày qua HOẶC CRRT 24h",
-            help="Nếu có, Cr sẽ được tính là 4.0 mg/dL"
+            help="Nếu có, Cr sẽ được tính là 4.0 mg/dL",
+            value=shared_inputs.get("dialysis", False)
         )
         
         if dialysis:
@@ -571,9 +592,15 @@ def render():
             
             # Prepare inputs for export
             inputs_dict = {
+                "bili": round(bili, 2),
+                "bili_unit": bili_unit,
                 "Bilirubin": f"{bili_mgdl:.1f} mg/dL",
+                "inr": round(inr, 2),
                 "INR": f"{inr:.2f}",
+                "cr": round(cr, 2),
+                "cr_unit": cr_unit,
                 "Creatinine": f"{cr_mgdl:.1f} mg/dL",
+                "dialysis": dialysis,
                 "On Dialysis": "Có" if dialysis else "Không"
             }
             
@@ -593,6 +620,24 @@ def render():
                 calculator_name="MELD Score",
                 filename="meld_result"
             )
+            
+            save_calculation_to_history(
+                calculator_id="meld",
+                calculator_name="MELD Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            render_share_section(
+                calculator_id="meld",
+                calculator_name="MELD Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            st.markdown("---")
+            render_history_ui(calculator_id="meld", show_actions=True)
             
             # References section
             references = get_references("MELD")

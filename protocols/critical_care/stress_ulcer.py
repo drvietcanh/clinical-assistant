@@ -5,6 +5,8 @@ Prevention of Stress-Related Mucosal Disease
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -160,13 +162,17 @@ def render():
         """)
     
     st.markdown("---")
-    st.markdown("### 📚 Tài liệu tham khảo")
     
-    st.markdown("""
-    1. **SCCM Guidelines** - Stress Ulcer Prophylaxis 2016
-    2. **ASHP Guidelines** - Stress Ulcer Prophylaxis 1999
-    3. **UpToDate:** Stress Ulcer Prophylaxis in ICU - Last updated 2024
-    """)
+    # References section
+    references = get_references("Stress Ulcer")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể.")
@@ -291,4 +297,17 @@ def render_sucralfate_sup():
     - Không dùng nếu có bezoar risk
     - Có thể gây constipation
     """)
+    
+    st.markdown("---")
+    
+    # References section
+    references = get_references("Stress Ulcer")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

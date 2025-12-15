@@ -5,6 +5,8 @@ Management of hypercalcemia in cancer patients
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -424,23 +426,18 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: REFERENCES ==========
-    st.markdown("### 📚 Tài liệu tham khảo")
+    st.markdown("---")
     
-    st.markdown("""
-    1. **ASCO Clinical Practice Guideline** - Management of Hypercalcemia of Malignancy (2021)
-       - Treatment protocols
-       - Monitoring guidelines
-    
-    2. **UpToDate:** Hypercalcemia of Malignancy - Last updated 2024
-       - Clinical features and diagnosis
-       - Treatment protocols
-    
-    3. **Stewart AF.** Hypercalcemia associated with cancer.
-       N Engl J Med. 2005;352(4):373-379.
-    
-    4. **Major P, et al.** Zoledronic acid is superior to pamidronate in the treatment of hypercalcemia of malignancy: a pooled analysis of two randomized, controlled clinical trials.
-       J Clin Oncol. 2001;19(2):558-567.
-    """)
+    # References section
+    references = get_references("Hypercalcemia")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     

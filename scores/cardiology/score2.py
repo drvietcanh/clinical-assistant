@@ -38,6 +38,13 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.validation import render_validation_errors
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_score2_moderate_risk(
@@ -202,6 +209,13 @@ def render():
     st.title("📊 SCORE2 - ESC 2021")
     st.markdown("**Đánh giá nguy cơ bệnh tim mạch 10 năm (40-69 tuổi)**")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'score2':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
@@ -253,6 +267,18 @@ def render():
         """)
     
     st.divider()
+    
+    # Smart Suggestions
+    col_sugg1, col_sugg2 = st.columns([2, 1])
+    with col_sugg2:
+        render_suggestions(
+            calculator_id="score2",
+            calculator_name="SCORE2",
+            category="Tim Mạch",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Input section
     st.subheader("📝 Nhập thông tin")
@@ -453,6 +479,56 @@ def render():
         - Quyết định điều trị cuối cùng thuộc về bác sĩ
         """)
         
+        # Prepare inputs and results for Phase 1
+        inputs_dict = {
+            "Age": f"{age} tuổi",
+            "Gender": sex,
+            "Smoker": "Có" if is_smoker else "Không",
+            "SBP": f"{sbp:.0f} mmHg",
+            "Total Cholesterol": f"{total_chol:.1f} mmol/L ({total_chol * 38.67:.0f} mg/dL)",
+            "HDL Cholesterol": f"{hdl_chol:.1f} mmol/L ({hdl_chol * 38.67:.0f} mg/dL)",
+            "Non-HDL Cholesterol": f"{result['non_hdl']:.1f} mmol/L ({result['non_hdl'] * 38.67:.0f} mg/dL)"
+        }
+        
+        results_dict = {
+            "10-Year Risk": f"{result['risk_10yr']:.1f}%",
+            "Risk Category": result['risk_category'],
+            "Risk Class": result['risk_class'],
+            "Recommendations": result['recommendation']
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="score2",
+            calculator_name="SCORE2",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="score2",
+            calculator_name="SCORE2",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="score2", show_actions=True)
+        
+        # References section
+        references = get_references("SCORE2")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
+        
         st.session_state['score2_result'] = result
     
     # Quick reference
@@ -482,3 +558,18 @@ def render():
         - Ezetimibe 10 mg (giảm thêm 15-20%)
         - PCSK9 inhibitors (giảm thêm 50-60%)
         """)
+    
+    # Always show references at the bottom (even before calculation)
+    st.markdown("---")
+    references = get_references("SCORE2")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
+    
+    st.markdown("---")
+    st.caption("⚠️ Công cụ hỗ trợ lâm sàng - không thay thế đánh giá lâm sàng toàn diện")
