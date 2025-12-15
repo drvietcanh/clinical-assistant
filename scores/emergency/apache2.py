@@ -28,6 +28,13 @@ from components.ui.scoring import (
     render_score_result,
     render_score_breakdown,
 )
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 from .apache2_lookup import (
     get_temp_score,
     get_map_score,
@@ -177,6 +184,24 @@ def render():
     
     st.title("🏥 APACHE II Score")
     st.markdown("**Acute Physiology and Chronic Health Evaluation II - Dự đoán tử vong ICU**")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'apache2':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
+    # Smart Suggestions (sidebar)
+    with st.sidebar:
+        render_suggestions(
+            calculator_id="apache2",
+            calculator_name="APACHE II Score",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
@@ -416,6 +441,27 @@ def render():
             - Thảo luận với gia đình về mục tiêu điều trị
             """)
         
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="apache2",
+            calculator_name="APACHE II Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="apache2",
+            calculator_name="APACHE II Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="apache2", show_actions=True)
+        
         # Export section
         st.markdown("---")
         from components.export import render_export_section
@@ -499,3 +545,14 @@ def render():
         - Nonsurgical hoặc emergency post-op: **5 điểm**
         - Elective post-op: **2 điểm**
         """)
+    
+    # References section
+    references = get_references("APACHE II")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )

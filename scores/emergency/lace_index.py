@@ -32,6 +32,13 @@ Clinical Utility:
 
 import streamlit as st
 from components.ui.results import render_result_box
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def get_lace_length_points(length_of_stay: int) -> int:
@@ -165,6 +172,24 @@ def render():
     """LACE Index Calculator"""
     st.subheader("🏥 LACE Index")
     st.caption("Dự đoán tái nhập viện hoặc tử vong 30 ngày sau xuất viện")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'lace_index':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
+    # Smart Suggestions (sidebar)
+    with st.sidebar:
+        render_suggestions(
+            calculator_id="lace_index",
+            calculator_name="LACE Index",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.markdown("""
     **LACE Index** dự đoán nguy cơ tái nhập viện hoặc tử vong trong 30 ngày sau xuất viện.
@@ -340,6 +365,46 @@ def render():
             - Điều chỉnh thuốc nếu cần
             - Đảm bảo có người chăm sóc
             """)
+        
+        # Prepare inputs for history and share
+        inputs_dict = {
+            "Length of Stay": f"{length_of_stay} ngày",
+            "Is Emergent": "Có" if is_emergent else "Không",
+            "Charlson Index": f"{charlson_index}",
+            "ED Visits (6 months)": f"{ed_visits} lần"
+        }
+        
+        results_dict = {
+            "LACE Index": f"{result['total_score']}/19",
+            "Risk": result['risk'],
+            "Interpretation": result['interpretation'],
+            "Severity": result['severity'],
+            "L Points": result['l_points'],
+            "A Points": result['a_points'],
+            "C Points": result['c_points'],
+            "E Points": result['e_points']
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="lace_index",
+            calculator_name="LACE Index",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="lace_index",
+            calculator_name="LACE Index",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="lace_index", show_actions=True)
     
     st.markdown("---")
     
@@ -393,6 +458,17 @@ def render():
           or unplanned readmission after discharge from hospital to the community. 
           CMAJ. 2010;182(6):551-557.
         """)
+    
+    # References section
+    references = get_references("LACE Index")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.caption("⚠️ LACE Index chỉ là công cụ hỗ trợ. Quyết định xuất viện phải dựa trên đánh giá lâm sàng toàn diện.")
 

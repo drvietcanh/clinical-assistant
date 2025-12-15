@@ -32,6 +32,13 @@ Clinical Utility:
 import streamlit as st
 import math
 from components.ui.results import render_result_box
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 from scores.utils.validation import (
     validate_gcs,
     validate_blood_pressure,
@@ -235,6 +242,24 @@ def render():
     """LODS Score Calculator"""
     st.subheader("🚨 LODS - Logistic Organ Dysfunction Score")
     st.caption("Đánh giá suy cơ quan trong ICU")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'lods':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
+    # Smart Suggestions (sidebar)
+    with st.sidebar:
+        render_suggestions(
+            calculator_id="lods",
+            calculator_name="LODS Score",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.markdown("""
     **LODS (Logistic Organ Dysfunction Score)** đánh giá mức độ suy cơ quan trong ICU.
@@ -484,6 +509,50 @@ def render():
             - Hội chẩn đa chuyên khoa
             - Cân nhắc hỗ trợ cơ quan (RRT, ECMO, etc.)
             """)
+        
+        # Prepare inputs for history and share
+        inputs_dict = {
+            "GCS": f"{gcs}",
+            "Heart Rate": f"{hr:.0f} /min",
+            "SBP": f"{sbp:.0f} mmHg",
+            "Creatinine": f"{creatinine:.1f} mg/dL",
+            "Urine Output": f"{urine_output:.1f} L/ngày",
+            "Is Ventilated": "Có" if is_ventilated else "Không",
+            "PaO₂": f"{pao2:.0f} mmHg" if is_ventilated else "N/A",
+            "FiO₂": f"{fio2:.2f}" if is_ventilated else "N/A",
+            "Platelets": f"{platelets:.0f} ×10³/µL",
+            "WBC": f"{wbc:.1f} ×10³/µL",
+            "Bilirubin": f"{bilirubin:.1f} mg/dL",
+            "PT Ratio": f"{pt:.2f}"
+        }
+        
+        results_dict = {
+            "LODS Score": f"{result['total_score']}/22",
+            "Interpretation": result['interpretation'],
+            "Severity": result['severity'],
+            "Organ Scores": result['organ_scores']
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="lods",
+            calculator_name="LODS Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="lods",
+            calculator_name="LODS Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="lods", show_actions=True)
     
     st.markdown("---")
     
@@ -503,6 +572,17 @@ def render():
         - Le Gall JR, et al. The Logistic Organ Dysfunction system. A new way to assess 
           organ dysfunction in the intensive care unit. JAMA. 1996;276(10):802-810.
         """)
+    
+    # References section
+    references = get_references("LODS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.caption("⚠️ LODS chỉ là công cụ hỗ trợ. Đánh giá lâm sàng toàn diện vẫn là quan trọng nhất.")
 

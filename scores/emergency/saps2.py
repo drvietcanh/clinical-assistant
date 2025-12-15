@@ -27,6 +27,13 @@ import math
 from components.ui.scoring import (
     render_score_result,
 )
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def get_age_points(age: int) -> int:
@@ -335,6 +342,24 @@ def render():
     st.title("🏥 SAPS II Score")
     st.markdown("**Simplified Acute Physiology Score II - Dự đoán tử vong ICU đơn giản hóa**")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'saps2':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
+    # Smart Suggestions (sidebar)
+    with st.sidebar:
+        render_suggestions(
+            calculator_id="saps2",
+            calculator_name="SAPS II Score",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
@@ -375,6 +400,17 @@ def render():
         
         - Le Gall JR, et al. *JAMA* 1993;270:2957-2963
         """)
+    
+    # References section
+    references = get_references("SAPS II")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.divider()
     
@@ -568,5 +604,56 @@ def render():
         - Nhiều yếu tố khác ảnh hưởng tiên lượng
         - Quyết định dựa trên đánh giá lâm sàng toàn diện
         """)
+        
+        # Prepare inputs for history and share
+        inputs_dict = {
+            "Age": f"{age} tuổi",
+            "GCS": f"{gcs}",
+            "Heart Rate": f"{heart_rate:.0f} /min",
+            "SBP": f"{sbp:.0f} mmHg",
+            "Temperature": f"{temperature:.1f}°C",
+            "Is Ventilated": "Có" if is_ventilated else "Không",
+            "PaO₂": f"{pao2:.0f} mmHg" if is_ventilated else "N/A",
+            "FiO₂": f"{fio2:.0f}%" if is_ventilated else "N/A",
+            "Urine Output": f"{urine_output:.1f} L/24h",
+            "BUN": f"{bun:.0f} mg/dL",
+            "WBC": f"{wbc:.1f} ×10³/μL",
+            "Potassium": f"{potassium:.1f} mEq/L",
+            "Sodium": f"{sodium:.0f} mEq/L",
+            "Bicarbonate": f"{bicarbonate:.0f} mEq/L",
+            "Bilirubin": f"{bilirubin:.1f} mg/dL",
+            "Admission Type": admission_type,
+            "Has AIDS": "Có" if has_aids else "Không",
+            "Has Hematologic Malignancy": "Có" if has_hematologic_malignancy else "Không",
+            "Has Metastatic Cancer": "Có" if has_metastatic_cancer else "Không"
+        }
+        
+        results_dict = {
+            "SAPS II Score": f"{result['total_score']} điểm",
+            "Predicted Mortality": f"{result['predicted_mortality']:.1f}%",
+            "Mortality Range": result['mortality_range'],
+            "Interpretation": result['interpretation']
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="saps2",
+            calculator_name="SAPS II Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="saps2",
+            calculator_name="SAPS II Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="saps2", show_actions=True)
         
         st.session_state['saps2_result'] = result

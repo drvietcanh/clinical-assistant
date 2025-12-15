@@ -29,6 +29,13 @@ import streamlit as st
 import math
 from components.ui.scoring import render_score_result
 from components.ui.results import render_result_box, render_result_card
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 from scores.utils.validation import (
     validate_age,
     validate_blood_pressure,
@@ -264,6 +271,24 @@ def render():
     """SAPS III Score Calculator"""
     st.subheader("🚨 SAPS III - Simplified Acute Physiology Score III")
     st.caption("Dự đoán tử vong ICU - Phiên bản cập nhật (chính xác hơn SAPS II)")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'saps3':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
+    # Smart Suggestions (sidebar)
+    with st.sidebar:
+        render_suggestions(
+            calculator_id="saps3",
+            calculator_name="SAPS III Score",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.markdown("""
     **SAPS III** là phiên bản cập nhật của SAPS II, chính xác hơn trong dự đoán tử vong ICU.
@@ -507,6 +532,50 @@ def render():
         - Kết hợp với đánh giá lâm sàng để quyết định điều trị
         - Đánh giá lại thường xuyên khi tình trạng thay đổi
         """)
+        
+        # Prepare inputs for history and share
+        inputs_dict = {
+            "Age": f"{age} tuổi",
+            "SBP": f"{sbp:.0f} mmHg",
+            "Heart Rate": f"{hr:.0f} /min",
+            "Temperature": f"{temp:.1f}°C",
+            "pH": f"{ph:.2f}",
+            "Sodium": f"{na:.0f} mEq/L",
+            "Potassium": f"{k:.1f} mEq/L",
+            "WBC": f"{wbc:.1f} ×10³/µL",
+            "Bilirubin": f"{bilirubin:.1f} mg/dL",
+            "Is Ventilated": "Có" if is_ventilated else "Không",
+            "PaO₂": f"{pao2:.0f} mmHg" if is_ventilated else "N/A",
+            "FiO₂": f"{fio2:.2f}" if is_ventilated else "N/A"
+        }
+        
+        results_dict = {
+            "SAPS III Score": f"{result['total_score']:.1f} điểm",
+            "Predicted Mortality": f"{result['predicted_mortality']:.1f}%",
+            "Interpretation": result['interpretation'],
+            "Severity": result['severity']
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="saps3",
+            calculator_name="SAPS III Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="saps3",
+            calculator_name="SAPS III Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="saps3", show_actions=True)
     
     st.markdown("---")
     
@@ -530,6 +599,17 @@ def render():
           Part 2: Development of a prognostic model for hospital mortality at ICU admission. 
           Intensive Care Med. 2005;31(10):1345-1355.
         """)
+    
+    # References section
+    references = get_references("SAPS III")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.caption("⚠️ SAPS III chỉ là công cụ hỗ trợ. Đánh giá lâm sàng toàn diện vẫn là quan trọng nhất.")
 

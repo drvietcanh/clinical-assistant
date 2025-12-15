@@ -38,6 +38,13 @@ from components.ui.scoring import (
     render_score_result,
     render_score_breakdown,
 )
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 from scores.utils.validation import (
     validate_age,
     validate_gcs,
@@ -509,6 +516,24 @@ def render():
     st.title("🏥 APACHE III Score")
     st.markdown("**Acute Physiology and Chronic Health Evaluation III - Dự đoán tử vong ICU (Phiên bản cập nhật)**")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'apache3':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
+    # Smart Suggestions (sidebar)
+    with st.sidebar:
+        render_suggestions(
+            calculator_id="apache3",
+            calculator_name="APACHE III Score",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
@@ -757,6 +782,60 @@ def render():
             - Thảo luận với gia đình về mục tiêu điều trị
             """)
         
+        # Prepare inputs for history and share
+        inputs_dict = {
+            "Age": f"{age} tuổi",
+            "Temperature": f"{temperature:.1f}°C",
+            "MAP": f"{map_val:.0f} mmHg",
+            "Heart Rate": f"{heart_rate:.0f} /min",
+            "Respiratory Rate": f"{respiratory_rate:.0f} /min",
+            "FiO₂": f"{fio2:.0f}%",
+            "PaO₂": f"{pao2:.0f} mmHg",
+            "PaCO₂": f"{paco2:.0f} mmHg",
+            "pH": f"{ph:.2f}",
+            "Sodium": f"{sodium:.0f} mEq/L",
+            "Potassium": f"{potassium:.1f} mEq/L",
+            "Creatinine": f"{creatinine:.1f} mg/dL",
+            "Has ARF": "Có" if has_arf else "Không",
+            "Hematocrit": f"{hematocrit:.1f}%",
+            "WBC": f"{wbc:.1f} ×10³/μL",
+            "GCS": f"{gcs}",
+            "Is Ventilated": "Có" if is_ventilated else "Không",
+            "Chronic Health": "Có" if has_chronic_health else "Không",
+            "Disease Category": disease_category if has_chronic_health else "Không"
+        }
+        
+        results_dict = {
+            "APACHE III Score": f"{result['total_score']:.1f} điểm",
+            "Predicted Mortality": f"{result['predicted_mortality']:.1f}%",
+            "Mortality Range": result['mortality_range'],
+            "Interpretation": result['interpretation'],
+            "APS": f"{result['aps']:.0f} điểm",
+            "Age Points": f"{result['age_points']:.0f} điểm",
+            "Chronic Health Points": f"{result['chronic_points']:.0f} điểm"
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="apache3",
+            calculator_name="APACHE III Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="apache3",
+            calculator_name="APACHE III Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="apache3", show_actions=True)
+        
         st.session_state['apache3_result'] = result
     
     # Reference
@@ -782,6 +861,17 @@ def render():
         
         - **Lưu ý:** Công thức chính xác cần license từ Cerner Corporation
         """)
+    
+    # References section
+    references = get_references("APACHE III")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.caption("⚠️ APACHE III chỉ là công cụ hỗ trợ. Quyết định điều trị phải dựa trên đánh giá lâm sàng toàn diện.")
 

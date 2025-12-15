@@ -29,6 +29,13 @@ Clinical Utility:
 
 import streamlit as st
 from components.ui.results import render_result_box
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_hospital_score(
@@ -138,6 +145,24 @@ def render():
     """HOSPITAL Score Calculator"""
     st.subheader("🏥 HOSPITAL Score")
     st.caption("Dự đoán nguy cơ tái nhập viện 30 ngày")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'hospital_score':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
+    # Smart Suggestions (sidebar)
+    with st.sidebar:
+        render_suggestions(
+            calculator_id="hospital_score",
+            calculator_name="HOSPITAL Score",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.markdown("""
     **HOSPITAL Score** dự đoán nguy cơ tái nhập viện trong 30 ngày sau xuất viện.
@@ -298,6 +323,45 @@ def render():
            - Hỗ trợ vận chuyển nếu cần
            - Liên kết với dịch vụ chăm sóc tại nhà
         """)
+        
+        # Prepare inputs for history and share
+        inputs_dict = {
+            "Hemoglobin": f"{hemoglobin:.1f} g/dL",
+            "Is Oncology": "Có" if is_oncology else "Không",
+            "Sodium": f"{sodium:.0f} mEq/L",
+            "Had Procedure": "Có" if had_procedure else "Không",
+            "Is Elective": "Có" if is_elective else "Không",
+            "Admissions Past Year": f"{admissions_past_year} lần",
+            "Length of Stay": f"{length_of_stay} ngày"
+        }
+        
+        results_dict = {
+            "HOSPITAL Score": f"{result['total_score']}/13",
+            "Readmission Risk": result['readmission_risk'],
+            "Interpretation": result['interpretation'],
+            "Severity": result['severity']
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="hospital_score",
+            calculator_name="HOSPITAL Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="hospital_score",
+            calculator_name="HOSPITAL Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="hospital_score", show_actions=True)
     
     st.markdown("---")
     
@@ -318,6 +382,17 @@ def render():
         - Donze J, et al. Potentially avoidable 30-day hospital readmissions in medical patients:
           derivation and validation of a prediction model. JAMA Intern Med. 2013;173(8):632-638.
         """)
+    
+    # References section
+    references = get_references("HOSPITAL Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.caption("⚠️ HOSPITAL Score chỉ là công cụ hỗ trợ. Quyết định xuất viện phải dựa trên đánh giá lâm sàng toàn diện.")
 

@@ -34,6 +34,13 @@ from scores.utils.validation import (
     safe_divide
 )
 from components.ui.scoring import render_score_result, render_score_breakdown
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def get_respiratory_score(pao2_fio2: float) -> int:
@@ -221,6 +228,24 @@ def render():
     st.title("🏥 MODS Score")
     st.markdown("**Multiple Organ Dysfunction Score - Đánh giá rối loạn đa cơ quan**")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'mods':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
+    # Smart Suggestions (sidebar)
+    with st.sidebar:
+        render_suggestions(
+            calculator_id="mods",
+            calculator_name="MODS Score",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
         st.markdown("""
@@ -402,6 +427,47 @@ def render():
         - Tính lại hàng ngày để theo dõi
         """)
         
+        # Prepare inputs for history and share
+        inputs_dict = {
+            "PaO₂": f"{pao2} mmHg",
+            "FiO₂": f"{fio2}%",
+            "Creatinine": f"{creatinine:.1f} mg/dL",
+            "Bilirubin": f"{bilirubin:.1f} mg/dL",
+            "Heart Rate": f"{heart_rate} /min",
+            "MAP": f"{map_value} mmHg",
+            "Platelets": f"{platelets} ×10³/μL",
+            "GCS": f"{gcs}"
+        }
+        
+        results_dict = {
+            "MODS Score": f"{result['total_score']} điểm",
+            "Interpretation": result['interpretation'],
+            "Mortality": result['mortality'],
+            "Risk Class": result['risk_class'],
+            "Subscores": result['subscores']
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="mods",
+            calculator_name="MODS Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="mods",
+            calculator_name="MODS Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="mods", show_actions=True)
+        
         st.session_state['mods_result'] = result
     
     # Quick reference
@@ -428,3 +494,14 @@ def render():
         - Áp dụng rộng rãi
         - Tương quan tốt với mortality
         """)
+    
+    # References section
+    references = get_references("MODS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
