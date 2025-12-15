@@ -35,6 +35,12 @@ from scores.utils.validation import (
     validate_age,
     validate_range
 )
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def calculate_rts_for_triss(gcs: int, sbp: float, rr: float) -> float:
@@ -168,6 +174,14 @@ def calculate_triss(
 
 def render():
     """TRISS Calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'triss':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.subheader("🦴 TRISS - Trauma and Injury Severity Score")
     st.caption("Dự đoán khả năng sống sót sau chấn thương")
     
@@ -193,9 +207,12 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.markdown("### 📝 Thông tin bệnh nhân")
+    col_main, col_suggestions = st.columns([2, 1])
     
-    col1, col2 = st.columns(2)
+    with col_main:
+        st.markdown("### 📝 Thông tin bệnh nhân")
+        
+        col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("#### 🧠 RTS - Revised Trauma Score")
@@ -255,8 +272,19 @@ def render():
             key="triss_mechanism"
         )
         is_blunt = is_blunt == "Chấn thương kín (Blunt)"
+        
+        st.info("💡 **Lưu ý:** Nếu chưa biết ISS, sử dụng ISS Calculator để tính từ AIS scores.")
     
-    st.info("💡 **Lưu ý:** Nếu chưa biết ISS, sử dụng ISS Calculator để tính từ AIS scores.")
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="triss",
+            calculator_name="TRISS",
+            category="Chấn Thương",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.markdown("---")
     
@@ -366,6 +394,54 @@ def render():
         - Đánh giá lại khi tình trạng thay đổi
         - TRISS chính xác hơn khi kết hợp RTS và ISS
         """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "GCS": gcs,
+            "SBP": f"{sbp:.0f} mmHg",
+            "RR": f"{rr:.0f} /min",
+            "ISS": iss,
+            "Age": f"{age} tuổi",
+            "Mechanism": result['mechanism']
+        }
+        
+        results_dict = {
+            "RTS": f"{result['rts']:.2f}",
+            "ISS": result['iss'],
+            "Survival Probability": f"{result['ps_percent']:.1f}%",
+            "Interpretation": result['interpretation'],
+            "Severity": result['severity']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="triss",
+            calculator_name="TRISS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="triss",
+            calculator_name="TRISS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="triss",
+            calculator_name="TRISS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="triss", show_actions=True)
     
     st.markdown("---")
     
@@ -388,8 +464,22 @@ def render():
         **Công thức:**
         - Ps = 1 / (1 + e^(-b))
         - b = b0 + b1(RTS) + b2(ISS) + b3(Age) + b4(Mechanism)
-        
-        **Tài liệu tham khảo:**
+        """)
+    
+    # References section (Phase 1)
+    st.markdown("---")
+    references = get_references("TRISS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        # Fallback to manual references if Phase 1 references not found
+        st.markdown("### 📚 Tài liệu tham khảo")
+        st.markdown("""
         - Boyd CR, et al. Evaluating trauma care: the TRISS method. 
           Trauma Score and the Injury Severity Score. J Trauma. 1987;27(4):370-378.
         """)

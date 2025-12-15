@@ -275,9 +275,12 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập sinh hiệu")
+    col_main, col_suggestions = st.columns([2, 1])
     
-    col1, col2, col3 = st.columns(3)
+    with col_main:
+        st.subheader("📝 Nhập sinh hiệu")
+        
+        col1, col2, col3 = st.columns(3)
     
     with col1:
         st.markdown("#### 🧠 Thang điểm hôn mê Glasgow (GCS) - Thang điểm hôn mê Glasgow")
@@ -314,6 +317,17 @@ def render():
             help="Số lần thở mỗi phút"
         )
         st.caption("Số lần thở/phút")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="rts",
+            calculator_name="RTS",
+            category="Chấn Thương",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.divider()
     

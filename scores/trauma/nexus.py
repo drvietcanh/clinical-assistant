@@ -4,6 +4,12 @@ Quy tắc đánh giá cần chụp X-quang cột sống cổ sau chấn thương
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def evaluate_nexus(midline_tenderness, altered_mental_status, intoxication, 
@@ -52,6 +58,13 @@ def evaluate_nexus(midline_tenderness, altered_mental_status, intoxication,
 
 def render():
     """Render the NEXUS C-Spine Rule calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'nexus':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.title("🦴 NEXUS C-Spine Rule")
     st.markdown("""
@@ -108,11 +121,25 @@ def render():
     st.markdown("---")
     
     # NEXUS Criteria Evaluation
-    st.subheader("📋 Đánh giá 5 Tiêu chí NEXUS")
+    col_main, col_suggestions = st.columns([2, 1])
     
-    st.info("""
-    **Hướng dẫn:** Đánh giá từng tiêu chí. Tick vào ô nếu tiêu chí DƯƠNG TÍNH (có bất thường)
-    """)
+    with col_main:
+        st.subheader("📋 Đánh giá 5 Tiêu chí NEXUS")
+        
+        st.info("""
+        **Hướng dẫn:** Đánh giá từng tiêu chí. Tick vào ô nếu tiêu chí DƯƠNG TÍNH (có bất thường)
+        """)
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="nexus",
+            calculator_name="NEXUS C-Spine",
+            category="Chấn Thương",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # 1. Midline tenderness
     st.markdown("### 1️⃣ Đau chính giữa cột sống cổ")
@@ -298,6 +325,52 @@ def render():
             - Triệu chứng thần kinh → MRI, Neurosurgery consult
             - Say rượu → Chờ tỉnh rồi tái đánh giá lâm sàng
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Midline Tenderness": "Có" if midline_tenderness else "Không",
+            "Altered Mental Status": "Có" if altered_mental_status else "Không",
+            "Intoxication": "Có" if intoxication else "Không",
+            "Neurological Deficit": "Có" if neurological_deficit else "Không",
+            "Distracting Injury": "Có" if distracting_injury else "Không"
+        }
+        
+        results_dict = {
+            "Positive Criteria": f"{positive_count}/5",
+            "Imaging Required": result['imaging'],
+            "Recommendation": result['recommendation'],
+            "Safe to Clear": "Có" if result['safe_to_clear'] else "Không"
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="nexus",
+            calculator_name="NEXUS C-Spine",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="nexus",
+            calculator_name="NEXUS C-Spine",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="nexus",
+            calculator_name="NEXUS C-Spine",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="nexus", show_actions=True)
     
     # Educational content
     st.markdown("---")
@@ -571,14 +644,24 @@ def render():
           + Mất kiểm soát tiểu/tiện
         """)
     
-    # References
+    # References section (Phase 1)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Hoffman JR, et al. Validity of a set of clinical criteria to rule out injury to the cervical spine in patients with blunt trauma. NEJM. 2000;343(2):94-99
-    - Stiell IG, et al. The Canadian C-spine rule versus the NEXUS low-risk criteria. NEJM. 2003;349(26):2510-2518
-    - Panacek EA, et al. Test performance of the NEXUS low-risk clinical screening criteria. Ann Emerg Med. 2001;38(1):22-25
-    """)
+    references = get_references("NEXUS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        # Fallback to manual references if Phase 1 references not found
+        st.markdown("### 📚 Tài liệu tham khảo")
+        st.markdown("""
+        - Hoffman JR, et al. Validity of a set of clinical criteria to rule out injury to the cervical spine in patients with blunt trauma. NEJM. 2000;343(2):94-99
+        - Stiell IG, et al. The Canadian C-spine rule versus the NEXUS low-risk criteria. NEJM. 2003;349(26):2510-2518
+        - Panacek EA, et al. Test performance of the NEXUS low-risk clinical screening criteria. Ann Emerg Med. 2001;38(1):22-25
+        """)
 
 
 if __name__ == "__main__":

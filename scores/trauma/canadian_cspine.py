@@ -4,6 +4,12 @@ Quy tắc quyết định chụp cột sống cổ sau chấn thương
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def evaluate_canadian_cspine(age, dangerous_mechanism, paresthesias,
@@ -76,6 +82,13 @@ def evaluate_canadian_cspine(age, dangerous_mechanism, paresthesias,
 def render():
     """Render the Canadian C-Spine Rule calculator"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'canadian_cspine':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🍁 Canadian C-Spine Rule")
     st.markdown("""
     ### Quy tắc quyết định chụp cột sống cổ
@@ -138,11 +151,14 @@ def render():
     
     st.markdown("---")
     
-    # Step 1: High-Risk Factors
-    st.subheader("🔴 Bước 1: Yếu tố nguy cơ Cao")
-    st.info("Nếu có BẤT KỲ yếu tố nào → CHỤP ngay, không cần đánh giá tiếp")
+    col_main, col_suggestions = st.columns([2, 1])
     
-    age = st.number_input(
+    with col_main:
+        # Step 1: High-Risk Factors
+        st.subheader("🔴 Bước 1: Yếu tố nguy cơ Cao")
+        st.info("Nếu có BẤT KỲ yếu tố nào → CHỤP ngay, không cần đánh giá tiếp")
+        
+        age = st.number_input(
         "**Tuổi**",
         min_value=16,
         max_value=120,
@@ -273,6 +289,17 @@ def render():
         - Nếu nghi ngờ → Coi như FAIL
         """)
     
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="canadian_cspine",
+            calculator_name="Canadian C-Spine",
+            category="Chấn Thương",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
     st.markdown("---")
     
     # Evaluate button
@@ -363,6 +390,56 @@ def render():
             - C-spine precautions cho đến có kết quả
             - Log-roll khi di chuyển
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Age": f"{age} tuổi",
+            "Dangerous Mechanism": "Có" if dangerous_mechanism else "Không",
+            "Paresthesias": "Có" if paresthesias else "Không",
+            "Simple Rear End MVC": "Có" if simple_rear_end_mvc else "Không",
+            "Sitting Position": "Có" if sitting_position else "Không",
+            "Ambulatory": "Có" if ambulatory else "Không",
+            "Delayed Neck Pain": "Có" if delayed_neck_pain else "Không",
+            "Midline Tenderness": "Có" if midline_tenderness else "Không",
+            "Unable to Rotate 45°": "Có" if unable_rotate else "Không"
+        }
+        
+        results_dict = {
+            "Step": result['step'],
+            "Imaging Required": result['imaging'],
+            "Recommendation": result['recommendation'],
+            "Safe to Clear": "Có" if result['safe_to_clear'] else "Không"
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="canadian_cspine",
+            calculator_name="Canadian C-Spine",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="canadian_cspine",
+            calculator_name="Canadian C-Spine",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="canadian_cspine",
+            calculator_name="Canadian C-Spine",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="canadian_cspine", show_actions=True)
     
     # Educational content
     st.markdown("---")
@@ -433,12 +510,23 @@ def render():
         **"When in doubt, image!"**
         """)
     
-    # References
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Stiell IG, et al. The Canadian C-spine rule for radiography in alert and stable trauma patients. JAMA. 2001;286(15):1841-1848
-    - Stiell IG, et al. The Canadian C-spine rule versus the NEXUS low-risk criteria. NEJM. 2003;349(26):2510-2518
-    """)
+    # References section (Phase 1)
+    st.markdown("---")
+    references = get_references("Canadian C-Spine")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        # Fallback to manual references if Phase 1 references not found
+        st.markdown("### 📚 Tài liệu tham khảo")
+        st.markdown("""
+        - Stiell IG, et al. The Canadian C-spine rule for radiography in alert and stable trauma patients. JAMA. 2001;286(15):1841-1848
+        - Stiell IG, et al. The Canadian C-spine rule versus the NEXUS low-risk criteria. NEJM. 2003;349(26):2510-2518
+        """)
 
 
 if __name__ == "__main__":
