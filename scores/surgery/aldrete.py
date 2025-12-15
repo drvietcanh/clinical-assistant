@@ -47,6 +47,13 @@ def calculate_aldrete(activity, respiration, circulation, consciousness, color):
 def render():
     """Render Aldrete Score interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'aldrete':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🏥 Aldrete Score</h2>
     <p style='text-align: center;'><em>Đánh giá hồi tỉnh sau gây mê</em></p>
@@ -74,7 +81,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 5 thành phần")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 5 thành phần")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="aldrete",
+            calculator_name="Aldrete Score",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Activity
     st.markdown("### 1️⃣ Hoạt động vận động (Activity)")
@@ -329,6 +350,62 @@ def render():
             - Reversal nếu do thuốc (Flumazenil, Naloxone)
             - CT sọ não nếu nghi biến chứng thần kinh
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Activity": activity,
+            "Respiration": respiration,
+            "Circulation": circulation,
+            "Consciousness": consciousness,
+            "SpO2": color
+        }
+        
+        results_dict = {
+            "Điểm Aldrete": f"{result['total_score']}/10",
+            "Tình trạng": result['status'],
+            "Khuyến nghị": result['recommendation']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="aldrete",
+            calculator_name="Aldrete Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="aldrete",
+            calculator_name="Aldrete Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="aldrete",
+            calculator_name="Aldrete Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="aldrete", show_actions=True)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("Aldrete Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

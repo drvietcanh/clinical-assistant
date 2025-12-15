@@ -5,6 +5,11 @@ Cảnh báo sớm suy giảm trạng thái lâm sàng ở trẻ em
 
 import streamlit as st
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def calculate_pews(behavior, cardiovascular, respiratory):
@@ -50,6 +55,13 @@ def calculate_pews(behavior, cardiovascular, respiratory):
 def render():
     """Render PEWS calculator interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'pews':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #FF6B9D;'>👶 PEWS - Pediatric Early Warning Score</h2>
     <p style='text-align: center;'><em>Cảnh báo sớm suy giảm trạng thái lâm sàng ở trẻ em</em></p>
@@ -79,10 +91,24 @@ def render():
     
     st.markdown("---")
     
-    # Input form
-    st.subheader("📝 Nhập thông tin đánh giá")
+    col_main, col_suggestions = st.columns([2, 1])
     
-    col1, col2, col3 = st.columns(3)
+    with col_main:
+        # Input form
+        st.subheader("📝 Nhập thông tin đánh giá")
+        
+        col1, col2, col3 = st.columns(3)
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="pews",
+            calculator_name="PEWS",
+            category="Nhi Khoa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     with col1:
         st.markdown("### 🧠 Hành vi")
@@ -217,6 +243,49 @@ def render():
             - Đánh giá lại liên tục
             """)
         
+        # Prepare data for history and share
+        inputs_dict = {
+            "Hành vi": behavior,
+            "Tim mạch": cardiovascular,
+            "Hô hấp": respiratory
+        }
+        
+        results_dict = {
+            "Điểm PEWS": result['total_score'],
+            "Mức độ nguy cơ": result['risk_level'],
+            "Hành động": result['action']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="pews",
+            calculator_name="PEWS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="pews",
+            calculator_name="PEWS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="pews",
+            calculator_name="PEWS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="pews", show_actions=True)
+        
         # Score interpretation table
         with st.expander("📊 Bảng phân loại điểm PEWS"):
             st.markdown("""
@@ -262,6 +331,17 @@ def render():
             | > 10 tuổi | < 90 | 90-120 |
             """)
         
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("PEWS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
         # References
         with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""

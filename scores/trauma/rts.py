@@ -36,6 +36,11 @@ from scores.utils.validation import (
     validate_respiratory_rate
 )
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def code_gcs(gcs: int) -> int:
@@ -189,6 +194,13 @@ def calculate_rts(gcs: int, sbp: float, rr: float) -> dict:
 
 def render():
     """Render RTS calculator in Streamlit"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'rts':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.title("🦴 Revised Trauma Score (RTS)")
     st.markdown("**Đánh giá sinh lý và tiên lượng bệnh nhân chấn thương**")
@@ -414,6 +426,50 @@ def render():
         # Save to session state
         st.session_state['rts_result'] = result
         
+        # Prepare data for history and share
+        inputs_dict = {
+            "GCS": gcs,
+            "SBP": sbp,
+            "RR": rr
+        }
+        
+        results_dict = {
+            "RTS": round(result['rts'], 2),
+            "Tỷ lệ sống sót": result['survival_prob'],
+            "Mức độ nguy cơ": result['risk_class'],
+            "Đánh giá": result['interpretation']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="rts",
+            calculator_name="RTS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="rts",
+            calculator_name="RTS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="rts",
+            calculator_name="RTS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="rts", show_actions=True)
+        
         # Warning
         st.warning("""
         ⚠️ **Lưu ý y khoa:**
@@ -456,4 +512,15 @@ def render():
         - ISS calculator có sẵn trong cùng module này
         - Kết hợp cả hai để có TRISS
         """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("RTS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
