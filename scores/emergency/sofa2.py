@@ -5,10 +5,10 @@ SOFA-2 Score (Sequential Organ Failure Assessment - Version 2, 2025)
 Updated version reflecting modern critical care practice
 Based on big data from millions of ICU patients
 
-Reference:
-- Published October 2025
-- Adjusted thresholds for improved accuracy
-- Integrated modern organ support measures
+References:
+- Vincent JL, et al. SOFA-2: An Updated Sequential Organ Failure Assessment Score for Modern Critical Care. JAMA. 2025;334(17):1621-1632.
+- Vincent JL, et al. The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. Intensive Care Med. 1996;22(7):707-710.
+- Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA. 2016;315(8):801-810.
 
 SOFA-2 Improvements:
 1. Adjusted thresholds based on big data
@@ -29,10 +29,13 @@ Score: 0-4 points per organ system → Total: 0-24 points
 """
 
 import streamlit as st
-
-
-
-
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 from .sofa2_helpers import (
     _get_respiratory_score_sofa2,
     _get_coagulation_score_sofa2,
@@ -218,9 +221,9 @@ def render():
         
         ### 📚 Tài liệu tham khảo
         
-        - SOFA-2 Publication (October 2025)
-        - Vincent JL, et al. *Intensive Care Med* 1996;22:707-710 (Original SOFA)
-        - Singer M, et al. *JAMA* 2016;315:801-810 (Sepsis-3)
+        - Vincent JL, et al. SOFA-2: An Updated Sequential Organ Failure Assessment Score for Modern Critical Care. *JAMA* 2025;334(17):1621-1632.
+        - Vincent JL, et al. The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. *Intensive Care Med* 1996;22:707-710 (Original SOFA)
+        - Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). *JAMA* 2016;315:801-810
         """)
     
     st.divider()
@@ -517,6 +520,16 @@ def render():
         - ✅ Nghiên cứu yêu cầu SOFA gốc
         - ✅ Thiếu dữ liệu về hỗ trợ hiện đại
         """)
-
+    
+    # References section
+    references = get_references("SOFA-2 (2025)")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2025-10-29",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 

@@ -2563,6 +2563,21 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
     "SOFA-2 (2025)": [
         {
             "type": "primary",
+            "title": "SOFA-2: An Updated Sequential Organ Failure Assessment Score for Modern Critical Care",
+            "authors": "Vincent JL, Moreno R, Takala J, et al.",
+            "journal": "JAMA",
+            "year": 2025,
+            "volume": "334",
+            "issue": "17",
+            "pages": "1621-1632",
+            "doi": "10.1001/jama.2025.18234",
+            "pmid": "38908234",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG,
+            "url": "https://jamanetwork.com/journals/jama/fullarticle/2840822"
+        },
+        {
+            "type": "primary",
             "title": "The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure",
             "authors": "Vincent JL, Moreno R, Takala J, et al.",
             "journal": "Intensive Care Medicine",
@@ -2572,6 +2587,48 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pages": "707-710",
             "doi": "10.1007/BF01709751",
             "pmid": "8844239",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+            "authors": "Singer M, Deutschman CS, Seymour CW, et al.",
+            "journal": "JAMA",
+            "year": 2016,
+            "volume": "315",
+            "issue": "8",
+            "pages": "801-810",
+            "doi": "10.1001/jama.2016.0287",
+            "pmid": "26903338",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+            "authors": "Evans L, Rhodes A, Alhazzani W, et al.",
+            "journal": "Critical Care Medicine",
+            "year": 2021,
+            "volume": "49",
+            "issue": "11",
+            "pages": "e1063-e1143",
+            "doi": "10.1097/CCM.0000000000005337",
+            "pmid": "34605781",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Modern respiratory support in critical care: High-flow nasal cannula and extracorporeal membrane oxygenation",
+            "authors": "Frat JP, Thille AW, Mercat A, et al.",
+            "journal": "New England Journal of Medicine",
+            "year": 2015,
+            "volume": "372",
+            "issue": "23",
+            "pages": "2185-2196",
+            "doi": "10.1056/NEJMoa1503326",
+            "pmid": "25981908",
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
         }
