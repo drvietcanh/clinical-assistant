@@ -5,6 +5,8 @@ Cấp cứu đe dọa tính mạng cần điều trị ngay lập tức
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -396,6 +398,19 @@ def render():
     4. **Hahner S, et al.** Adrenal insufficiency.
        Lancet. 2021;397(10274):613-629.
     """)
+    
+    st.markdown("---")
+    
+    # References section
+    references = get_references("Adrenal Crisis")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     

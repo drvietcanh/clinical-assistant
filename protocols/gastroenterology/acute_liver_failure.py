@@ -5,6 +5,8 @@ Acute Liver Failure Management & Liver Transplant Criteria
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -462,4 +464,17 @@ def render_unknown_alf():
     - INR >6.5 HOẶC
     - 3/5: Age <10 or >40, Non-A/B etiology, Jaundice >7d, INR >3.5, Bilirubin >17.5
     """)
+    
+    st.markdown("---")
+    
+    # References section
+    references = get_references("Acute Liver Failure")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

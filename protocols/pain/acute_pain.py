@@ -5,6 +5,8 @@ Evidence-based acute pain management
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -259,23 +261,16 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **ASIPP 2017 Guidelines**
-       - American Society of Interventional Pain Physicians
-    
-    2. **WHO Pain Ladder**
-       - World Health Organization
-    
-    3. **CDC Opioid Prescribing Guidelines 2022**
-       - Centers for Disease Control and Prevention
-    
-    4. **UpToDate:** Acute pain management
-       - Last updated: 2024
-    
-    5. **Medscape:** Pain Management
-    """)
+    # References section
+    references = get_references("Acute Pain")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất.")

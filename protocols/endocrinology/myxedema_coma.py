@@ -5,6 +5,8 @@ Cấp cứu suy giáp đe dọa tính mạng
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -367,23 +369,18 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: REFERENCES ==========
-    st.markdown("### 📚 Tài liệu tham khảo")
+    st.markdown("---")
     
-    st.markdown("""
-    1. **Hướng dẫn Hiệp hội Tuyến giáp Hoa Kỳ (ATA) về Suy giáp** - 2014
-       - Quản lý hôn mê phù niêm
-       - Tiêu chuẩn chẩn đoán và điều trị
-    
-    2. **Jonklaas J, et al.** Guidelines for the treatment of hypothyroidism.
-       Thyroid. 2014;24(12):1670-1751.
-    
-    3. **UpToDate:** Hôn mê phù niêm - Cập nhật lần cuối 2024
-       - Đặc điểm lâm sàng và chẩn đoán
-       - Phác đồ điều trị
-    
-    4. **Wartofsky L.** Myxedema coma.
-       Endocrinol Metab Clin North Am. 2006;35(4):687-698.
-    """)
+    # References section
+    references = get_references("Myxedema Coma")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     
