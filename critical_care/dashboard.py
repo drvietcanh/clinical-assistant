@@ -98,6 +98,7 @@ def render_critical_care_dashboard():
         """, unsafe_allow_html=True)
         if st.button("📊 Mở", key="scoring_severity", use_container_width=True, help="Mở hệ thống đánh giá độ nặng (APACHE II, SOFA, SAPS II)"):
             st.session_state['critical_care_tool_selection'] = "📊 Scoring Systems"
+            st.session_state['scoring_calc_to_open'] = 'apache2'  # Mở tab APACHE II (tab đầu tiên của severity)
             st.rerun()
     
     with col2:
@@ -111,6 +112,7 @@ def render_critical_care_dashboard():
         """, unsafe_allow_html=True)
         if st.button("🧠 Mở", key="scoring_neuro", use_container_width=True, help="Mở hệ thống đánh giá thần kinh (GCS, RASS, CAM-ICU)"):
             st.session_state['critical_care_tool_selection'] = "📊 Scoring Systems"
+            st.session_state['scoring_calc_to_open'] = 'gcs'  # Mở tab GCS (tab đầu tiên của neurological)
             st.rerun()
     
     with col3:
@@ -123,6 +125,7 @@ def render_critical_care_dashboard():
         """, unsafe_allow_html=True)
         if st.button("🧪 Mở", key="scoring_renal", use_container_width=True, help="Mở hệ thống đánh giá thận (AKI Staging, RIFLE)"):
             st.session_state['critical_care_tool_selection'] = "📊 Scoring Systems"
+            st.session_state['scoring_calc_to_open'] = 'aki'  # Mở tab AKI Staging
             st.rerun()
     
     st.markdown("---")

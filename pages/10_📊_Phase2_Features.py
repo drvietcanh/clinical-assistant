@@ -226,9 +226,6 @@ elif "Pregnancy & Lactation" in selected_feature:
         st.info("💡 Tính năng này sẽ được mở rộng để thêm thuốc mới vào database.")
 
 elif "Pediatric Dosing" in selected_feature:
-    st.header("👶 Pediatric Dosing Calculator")
-    st.caption("Tính liều thuốc cho trẻ em")
-    
     render_pediatric_dosing_calculator()
 
 # Footer

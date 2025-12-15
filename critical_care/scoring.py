@@ -506,7 +506,9 @@ def render_scoring_calculator():
             'cam_icu': 5,
             'gcs': 3,
             'apache2': 0,
-            'saps2': 2
+            'saps2': 2,
+            'aki': 6,
+            'kdigo': 6
         }
         default_tab = calc_tab_map.get(calc_to_open, 0)
         # Clear after using
