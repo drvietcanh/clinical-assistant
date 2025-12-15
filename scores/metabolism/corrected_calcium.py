@@ -17,6 +17,13 @@ import streamlit as st
 from scores.utils.validation import validate_lab_value
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -32,6 +39,9 @@ def render():
     
     st.subheader("🦴 Corrected Calcium")
     st.caption("Calcium Điều Chỉnh Theo Albumin")
+    shared = load_shared_result_from_url()
+    if shared and shared.get("calculator_id") == "corrected_calcium":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Corrected Calcium')}")
     
     st.markdown("""
     **Corrected Calcium** điều chỉnh calcium toàn phần theo nồng độ albumin.
@@ -167,6 +177,42 @@ def render():
             )
             
             st.caption("Bình thường: 8.5-10.5 mg/dL")
+            
+            # Phase 1: history + share + suggestions
+            inputs_dict = {
+                "Calcium Input": ca_mgdl,
+                "Albumin (g/dL)": albumin,
+                "Unit": ca_unit
+            }
+            results_dict = {
+                "Corrected Calcium (mg/dL)": round(ca_corrected_mgdl, 1),
+                "Corrected Calcium (mmol/L)": round(ca_corrected_mmol, 2),
+                "Interpretation": interpretation
+            }
+            
+            save_calculation_to_history(
+                calculator_id="corrected_calcium",
+                calculator_name="Corrected Calcium",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            render_share_section(
+                calculator_id="corrected_calcium",
+                calculator_name="Corrected Calcium",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            render_suggestions(
+                calculator_id="corrected_calcium",
+                calculator_name="Corrected Calcium",
+                category="Nội Tiết",
+                show_related=True,
+                show_category=True,
+                limit=3
+            )
             
             st.markdown("---")
             
@@ -565,6 +611,15 @@ def render():
     
     # Footer
     st.markdown("---")
+    references = get_references("Corrected Ca")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    
     st.caption("📚 Essential correction for accurate calcium interpretation")
     st.caption("⚠️ Always consider albumin when interpreting calcium levels")
     st.caption("🏥 When in doubt, measure ionized calcium directly")

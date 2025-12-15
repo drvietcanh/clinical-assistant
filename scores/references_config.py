@@ -2993,19 +2993,19 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
 # Backup and prune unused references (not currently called in codebase)
 _UNUSED_REFERENCE_KEYS = [
     "4Ts Score", "ACR Criteria", "AKIN", "APGAR", "ARDS Berlin", "ASA",
-    "ASCVD Risk", "Anion Gap", "BMI/IBW/BSA", "BODE Index", "Barthel Index",
+    "ASCVD Risk", "BODE Index", "Barthel Index",
     "Bishop Score", "Braden", "Burn TBSA", "CDAI", "CIPN Grading", "Caprini",
-    "Centor", "Corrected Ca", "Corrected QT", "CrCl", "DAS28", "DIC Score",
-    "DLQI", "DN4", "Duke", "ECOG", "Epworth", "FENa", "FLACC", "FeverPAIN",
-    "Free T4 Index", "GRACE Score", "Gout Diagnostic", "HEART Score", "HbA1c",
+    "Centor", "Corrected QT", "DAS28", "DIC Score",
+    "DLQI", "DN4", "Duke", "ECOG", "Epworth", "FLACC", "FeverPAIN",
+    "GRACE Score", "Gout Diagnostic", "HEART Score",
     "Intraocular Pressure", "KDIGO", "Karnofsky", "Killip", "MASCC",
-    "Mallampati", "Modified Bishop", "Morse", "NIPS", "NRS", "Osmolality",
+    "Mallampati", "Modified Bishop", "Morse", "NIPS", "NRS",
     "P-POSSUM", "PASI", "PELOD-2", "PIM2", "PRISM III", "Padua",
     "Palliative Performance", "Parkland Formula", "Pediatric GCS",
     "Pediatric SOFA", "Pitt Bacteremia", "Preeclampsia", "RCRI", "RIFLE",
     "Ranson", "Rockall Score", "SCORAD", "SDAI", "SIRS", "SLEDAI", "SLICC",
     "SMART-COP", "STOP-BANG", "TIMI Risk", "VAS", "Wells DVT",
-    "Westley Croup", "Winter Formula", "Wong-Baker", "eGFR", "mRS"
+    "Westley Croup", "Wong-Baker", "mRS"
 ]
 
 # Keep a backup dictionary for future use or reactivation

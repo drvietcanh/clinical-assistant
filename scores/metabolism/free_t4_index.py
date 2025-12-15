@@ -9,6 +9,13 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.validation import render_validation_errors
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -67,6 +74,9 @@ def render():
     <h2 style='text-align: center; color: #8B5CF6;'>🦋 Free T4 Index (FTI)</h2>
     <p style='text-align: center;'><em>Chỉ số T4 tự do - Ước tính T4 tự do</em></p>
     """, unsafe_allow_html=True)
+    shared = load_shared_result_from_url()
+    if shared and shared.get("calculator_id") == "free_t4_index":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Free T4 Index')}")
     
     # Thông tin về FTI
     with st.expander("ℹ️ Giới thiệu về Free T4 Index"):
@@ -290,6 +300,40 @@ def render():
             st.metric("FTI", f"{result['fti']:.2f}")
         
         st.markdown("---")
+        
+        inputs_dict = {
+            "Total T4 (ug/dL)": round(total_t4, 2),
+            "T3 Uptake (%)": t3_uptake,
+            "TSH": tsh_value if include_tsh else None
+        }
+        results_dict = {
+            "FTI": round(result["fti"], 2),
+            "Status": result["status"]
+        }
+        
+        save_calculation_to_history(
+            calculator_id="free_t4_index",
+            calculator_name="Free T4 Index",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="free_t4_index",
+            calculator_name="Free T4 Index",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        render_suggestions(
+            calculator_id="free_t4_index",
+            calculator_name="Free T4 Index",
+            category="Nội Tiết",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
         # Status
         st.markdown(f"""
@@ -522,6 +566,15 @@ def render():
     
     # Quick guide
     st.markdown("---")
+    references = get_references("Free T4 Index")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    
     st.info("""
     💡 **Điểm quan trọng:**
     

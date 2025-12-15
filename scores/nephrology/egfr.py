@@ -36,6 +36,13 @@ from .egfr_ui_help import (
     render_detailed_explanations,
     render_summary_info
 )
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 def render():
     """Render comprehensive eGFR/GFR calculator"""
@@ -44,6 +51,9 @@ def render():
     <h2 style='text-align: center; color: #0EA5E9;'>🧪 eGFR/GFR Calculator</h2>
     <p style='text-align: center;'><em>Tính tốc độ lọc cầu thận với nhiều công thức</em></p>
     """, unsafe_allow_html=True)
+    shared = load_shared_result_from_url()
+    if shared and shared.get("calculator_id") == "egfr":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'eGFR/GFR Calculator')}")
     
     # Overview expander
     render_overview_expander()
@@ -104,6 +114,48 @@ def render():
             interpretation, recommended, reason
         )
         
+        inputs_dict = {
+            "Age": inputs["age"],
+            "Gender": inputs["gender"],
+            "Height (cm)": inputs["height_cm"],
+            "Weight (kg)": inputs["weight_kg"],
+            "Creatinine (mg/dL)": inputs["creatinine_mg"],
+            "Race": inputs["race"],
+            "Use ABW": inputs["use_abw"],
+            "ABW": inputs["abw"],
+            "BSA Formula": inputs["bsa_formula"]
+        }
+        results_dict = {
+            "eGFR CKD-EPI": round(egfr_ckd_epi, 1),
+            "eGFR MDRD": round(egfr_mdrd, 1),
+            "CrCl": round(crcl, 1),
+            "Absolute GFR (CKD-EPI)": round(gfr_absolute_ckd_epi, 1)
+        }
+        
+        save_calculation_to_history(
+            calculator_id="egfr",
+            calculator_name="eGFR/GFR Calculator",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="egfr",
+            calculator_name="eGFR/GFR Calculator",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        render_suggestions(
+            calculator_id="egfr",
+            calculator_name="eGFR/GFR Calculator",
+            category="Thận",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+        
         # Help expanders
         render_calculation_details(
             inputs["weight_kg"], inputs["height_cm"], inputs["age"],
@@ -123,6 +175,15 @@ def render():
     # Always show these expanders
     render_detailed_explanations()
     render_summary_info()
+    
+    references = get_references("eGFR")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

@@ -11,6 +11,13 @@ from scores.utils.validation import (
 )
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -52,6 +59,9 @@ def render():
     <h2 style='text-align: center; color: #0EA5E9;'>🧪 Creatinine Clearance (CrCl)</h2>
     <p style='text-align: center;'><em>Cockcroft-Gault Formula - Điều chỉnh liều thuốc</em></p>
     """, unsafe_allow_html=True)
+    shared = load_shared_result_from_url()
+    if shared and shared.get("calculator_id") == "crcl":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Creatinine Clearance')}")
     
     # Thông tin
     with st.expander("ℹ️ Giới thiệu về Creatinine Clearance"):
@@ -211,6 +221,7 @@ def render():
         
         if validation_errors:
             render_validation_errors(validation_errors)
+            return
         
         # Calculate CrCl
         crcl = calculate_crcl(age, weight_to_use, creatinine, gender, creatinine_unit)
@@ -261,6 +272,45 @@ def render():
             color=box_color,
             icon=icon,
             size="large"
+        )
+        
+        # Phase 1: save history, share, suggestions
+        inputs_phase1 = {
+            "Age": age,
+            "Gender": gender,
+            "Weight Used (kg)": round(weight_to_use, 1),
+            "Actual Weight (kg)": round(weight, 1),
+            "Creatinine": f"{creatinine:.2f} {creatinine_unit}",
+            "Used Adjusted Weight": use_adjusted
+        }
+        results_phase1 = {
+            "CrCl (mL/min)": round(crcl, 1),
+            "Kidney Function": stage,
+            "CKD Stage": "G1/G2" if crcl >= 60 else "G3a" if crcl >= 45 else "G3b" if crcl >= 30 else "G4" if crcl >= 15 else "G5"
+        }
+        
+        save_calculation_to_history(
+            calculator_id="crcl",
+            calculator_name="Creatinine Clearance (CrCl)",
+            inputs=inputs_phase1,
+            results=results_phase1
+        )
+        
+        render_share_section(
+            calculator_id="crcl",
+            calculator_name="Creatinine Clearance (CrCl)",
+            inputs=inputs_phase1,
+            results=results_phase1,
+            show_qr=True
+        )
+        
+        render_suggestions(
+            calculator_id="crcl",
+            calculator_name="Creatinine Clearance (CrCl)",
+            category="Nội Tiết",
+            show_related=True,
+            show_category=True,
+            limit=3
         )
         
         # Calculation breakdown
@@ -528,20 +578,14 @@ def render():
             """)
         
         # References
-        with st.expander("📚 Tài liệu tham khảo"):
-            st.markdown("""
-            1. **Cockcroft DW, Gault MH.** Prediction of creatinine clearance from serum creatinine. 
-               *Nephron.* 1976;16(1):31-41.
-            
-            2. **Levey AS, Bosch JP, Lewis JB, et al.** A more accurate method to estimate glomerular filtation rate from serum creatinine: a new prediction equation. 
-               *Ann Intern Med.* 1999;130(6):461-70.
-            
-            3. **Stevens LA, Nolin TD, Richardson MM, et al.** Comparison of drug dosing recommendations based on measured GFR and kidney function estimating equations. 
-               *Am J Kidney Dis.* 2009;54(1):33-42.
-            
-            4. **Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group.** KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. 
-               *Kidney Int Suppl.* 2013;3:1-150.
-            """)
+        references = get_references("CrCl")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                show_evidence_level=True,
+                show_links=True
+            )
     
     # Quick reference
     st.markdown("---")

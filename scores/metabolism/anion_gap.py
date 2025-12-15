@@ -17,6 +17,13 @@ import streamlit as st
 from scores.utils.validation import validate_lab_value
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
@@ -24,6 +31,9 @@ def render():
     
     st.subheader("🧪 Anion Gap")
     st.caption("Khoảng Trống Anion - Đánh giá Rối Loạn Acid-Base")
+    shared = load_shared_result_from_url()
+    if shared and shared.get("calculator_id") == "anion_gap":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Anion Gap')}")
     
     st.markdown("""
     **Anion Gap** giúp phân loại toan chuyển hóa và tìm nguyên nhân rối loạn acid-base.
@@ -173,6 +183,45 @@ def render():
             )
             
             st.caption("Bình thường: 8-12 mEq/L")
+            
+            # Phase 1: history + share + suggestions
+            inputs_dict = {
+                "Na (mEq/L)": na,
+                "Cl (mEq/L)": cl,
+                "HCO3 (mEq/L)": hco3,
+                "Adjust for Albumin": adjust_for_albumin,
+                "Albumin (g/dL)": albumin if adjust_for_albumin else None
+            }
+            results_dict = {
+                "Anion Gap": round(ag_display, 1),
+                "Interpretation": interpretation,
+                "Adjusted": adjust_for_albumin,
+                "Raw AG": round(ag, 1)
+            }
+            
+            save_calculation_to_history(
+                calculator_id="anion_gap",
+                calculator_name="Anion Gap",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            render_share_section(
+                calculator_id="anion_gap",
+                calculator_name="Anion Gap",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            render_suggestions(
+                calculator_id="anion_gap",
+                calculator_name="Anion Gap",
+                category="Nội Tiết",
+                show_related=True,
+                show_category=True,
+                limit=3
+            )
             
             st.markdown("---")
             st.markdown("### 💡 GIẢI THÍCH & NGUYÊN NHÂN")
@@ -522,6 +571,15 @@ def render():
     
     # Footer
     st.markdown("---")
+    references = get_references("Anion Gap")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    
     st.caption("📚 Most basic and important calculation in acid-base disorders")
     st.caption("⚠️ Always correlate with ABG and clinical context")
     st.caption("🏥 Remember MUDPILES for high anion gap metabolic acidosis")

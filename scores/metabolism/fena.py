@@ -34,6 +34,13 @@ from .fena_ui_help import (
     render_limitations_expander,
     render_summary_info
 )
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
@@ -41,6 +48,9 @@ def render():
     
     st.subheader("🧪 FENa - Fractional Excretion of Sodium")
     st.caption("Phân biệt suy thận cấp tiền thận vs thận")
+    shared = load_shared_result_from_url()
+    if shared and shared.get("calculator_id") == "fena":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'FENa Calculator')}")
     
     st.markdown("""
     **FENa** giúp phân biệt nguyên nhân suy thận cấp (AKI):
@@ -167,6 +177,43 @@ def render():
             )
         except (ImportError, Exception) as e:
             pass  # Notes component not available or error
+        
+        inputs_dict = {
+            "P-Na (mEq/L)": inputs["p_na"],
+            "P-Cr (mg/dL)": inputs["p_cr_mgdl"],
+            "U-Na (mEq/L)": inputs["u_na"],
+            "U-Cr (mg/dL)": inputs["u_cr_mgdl"],
+            "On Diuretics": inputs["on_diuretics"]
+        }
+        results_dict = {
+            "FENa (%)": round(fena, 2),
+            "Interpretation": interpretation["interpretation"],
+            "Cause": interpretation["cause"]
+        }
+        
+        save_calculation_to_history(
+            calculator_id="fena",
+            calculator_name="FENa Calculator",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="fena",
+            calculator_name="FENa Calculator",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        render_suggestions(
+            calculator_id="fena",
+            calculator_name="FENa Calculator",
+            category="Nội Tiết",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Educational content
     st.markdown("---")
@@ -174,6 +221,15 @@ def render():
     
     render_what_is_fena_expander()
     render_limitations_expander()
+    
+    references = get_references("FENa")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Footer
     render_summary_info()

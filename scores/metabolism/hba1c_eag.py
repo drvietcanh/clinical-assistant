@@ -4,6 +4,11 @@ Chuyển đổi giữa HbA1c và glucose trung bình ước tính
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def calculate_eag_from_hba1c(hba1c_percent):
@@ -96,6 +101,10 @@ def get_diabetes_status(hba1c_percent):
 def render():
     """Render the HbA1c - eAG Converter calculator"""
     
+    shared = load_shared_result_from_url()
+    if shared and shared.get("calculator_id") == "hba1c_eag":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'HbA1c - eAG Converter')}")
+    
     st.title("🩺 HbA1c - eAG Converter")
     st.markdown("""
     ### Chuyển đổi HbA1c ↔ Glucose trung bình
@@ -186,6 +195,70 @@ def render():
             
             **Khuyến nghị:** {status_info['recommendation']}
             """)
+            
+            inputs_dict = {
+                "eAG (mg/dL)": round(eag_value),
+                "Input Unit": unit
+            }
+            results_dict = {
+                "HbA1c (%)": round(hba1c, 1),
+                "Status": status_info["status"]
+            }
+            
+            save_calculation_to_history(
+                calculator_id="hba1c_eag",
+                calculator_name="HbA1c - eAG Converter",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            render_share_section(
+                calculator_id="hba1c_eag",
+                calculator_name="HbA1c - eAG Converter",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            render_suggestions(
+                calculator_id="hba1c_eag",
+                calculator_name="HbA1c - eAG Converter",
+                category="Nội Tiết",
+                show_related=True,
+                show_category=True,
+                limit=3
+            )
+            
+            inputs_dict = {"HbA1c (%)": hba1c}
+            results_dict = {
+                "eAG (mg/dL)": round(eag_mgdl),
+                "eAG (mmol/L)": round(eag_mmol, 1),
+                "Status": status_info["status"]
+            }
+            
+            save_calculation_to_history(
+                calculator_id="hba1c_eag",
+                calculator_name="HbA1c - eAG Converter",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            render_share_section(
+                calculator_id="hba1c_eag",
+                calculator_name="HbA1c - eAG Converter",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            render_suggestions(
+                calculator_id="hba1c_eag",
+                calculator_name="HbA1c - eAG Converter",
+                category="Nội Tiết",
+                show_related=True,
+                show_category=True,
+                limit=3
+            )
             
             # Reference table
             st.markdown("---")
@@ -371,6 +444,15 @@ def render():
         - → Hiểu được sẽ cải thiện HbA1c
         - → Tăng motivation điều trị
         """)
+    
+    references = get_references("HbA1c")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # References
     st.markdown("---")

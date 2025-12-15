@@ -7,6 +7,13 @@ import streamlit as st
 from scores.utils.validation import validate_lab_value
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -24,6 +31,9 @@ def render():
     <h2 style='text-align: center; color: #0EA5E9;'>🧪 Serum Osmolality Calculator</h2>
     <p style='text-align: center;'><em>Tính độ thẩm thấu huyết thanh & Osmolal Gap</em></p>
     """, unsafe_allow_html=True)
+    shared = load_shared_result_from_url()
+    if shared and shared.get("calculator_id") == "osmolality":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Serum Osmolality')}")
     
     with st.expander("ℹ️ Giới thiệu"):
         st.markdown("""
@@ -329,6 +339,43 @@ def render():
                 - Nếu vẫn nghi ngờ ngộ độc → Xét nghiệm trực tiếp methanol, ethylene glycol
                 """)
         
+        # Phase 1: history + share + suggestions
+        inputs_dict = {
+            "Na (mmol/L)": na,
+            "Glucose (mg/dL)": glucose_mg,
+            "BUN (mg/dL)": bun_mg,
+            "Measured Osmolality": measured_osm if measured_available else None
+        }
+        results_dict = {
+            "Calculated Osmolality": round(calc_osm, 1),
+            "Osmolal Gap": round(osm_gap, 1) if measured_available else None,
+            "Gap Status": gap_status if measured_available else "N/A"
+        }
+        
+        save_calculation_to_history(
+            calculator_id="osmolality",
+            calculator_name="Serum Osmolality",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="osmolality",
+            calculator_name="Serum Osmolality",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        render_suggestions(
+            calculator_id="osmolality",
+            calculator_name="Serum Osmolality",
+            category="Nội Tiết",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+        
         # Interpretation
         st.markdown("---")
         st.markdown("### 💡 Giải thích:")
@@ -441,6 +488,15 @@ def render():
             3. **Lepeytre F, Ghannoum M, Ammann H, Madore F, Troyanov S.** Ethylene glycol poisoning: A rare but life-threatening cause of metabolic acidosis-A single-centre experience. 
                *Nephrology (Carlton).* 2017;22(4):312-316.
             """)
+    
+    references = get_references("Osmolality")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.info("""
     💡 **Điểm quan trọng:**

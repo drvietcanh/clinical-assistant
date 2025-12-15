@@ -7,6 +7,13 @@ import streamlit as st
 import math
 from scores.utils.validation import validate_age, validate_range
 from components.ui.results import render_result_card
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_bmi(weight, height_cm):
@@ -51,6 +58,9 @@ def render():
     <h2 style='text-align: center; color: #0EA5E9;'>📏 BMI | IBW | BSA Calculator</h2>
     <p style='text-align: center;'><em>Chỉ số cơ thể - Body Mass Index, Ideal Weight, Body Surface Area</em></p>
     """, unsafe_allow_html=True)
+    shared = load_shared_result_from_url()
+    if shared and shared.get("calculator_id") == "bmi_ibw_bsa":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'BMI | IBW | BSA')}")
     
     # Thông tin
     with st.expander("ℹ️ Giới thiệu"):
@@ -218,6 +228,45 @@ def render():
             metrics=metrics_list,
             color=card_color,
             icon=bmi_icon
+        )
+        
+        # Phase 1: history + share + suggestions
+        inputs_dict = {
+            "Height (cm)": height_cm,
+            "Weight (kg)": weight,
+            "Gender": gender,
+            "Age": age
+        }
+        results_dict = {
+            "BMI": round(bmi, 1),
+            "BMI Category": bmi_category,
+            "IBW": round(ibw, 1),
+            "ABW": round(abw, 1) if weight > ibw * 1.2 else None,
+            "BSA (Mosteller)": round(bsa_mosteller, 2)
+        }
+        
+        save_calculation_to_history(
+            calculator_id="bmi_ibw_bsa",
+            calculator_name="BMI | IBW | BSA",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="bmi_ibw_bsa",
+            calculator_name="BMI | IBW | BSA",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        render_suggestions(
+            calculator_id="bmi_ibw_bsa",
+            calculator_name="BMI | IBW | BSA",
+            category="Nội Tiết",
+            show_related=True,
+            show_category=True,
+            limit=3
         )
         
         # ABW if obese
@@ -606,6 +655,15 @@ def render():
         """)
     
     st.markdown("---")
+    references = get_references("BMI/IBW/BSA")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    
     st.info("""
     💡 **Điểm quan trọng (Tóm tắt):**
     

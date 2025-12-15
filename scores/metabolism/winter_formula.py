@@ -7,6 +7,13 @@ import streamlit as st
 from scores.utils.validation import validate_lab_value, validate_range
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_expected_pco2(hco3):
@@ -128,6 +135,9 @@ def render():
     
     **Lưu ý:** Chỉ áp dụng cho toan chuyển hóa (HCO₃⁻ < 22 mmol/L)
     """)
+    shared = load_shared_result_from_url()
+    if shared and shared.get("calculator_id") == "winter_formula":
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Winter Formula')}")
     
     st.markdown("---")
     
@@ -276,6 +286,42 @@ def render():
         )
         
         st.markdown("---")
+        
+        inputs_dict = {
+            "pH": ph,
+            "HCO3 (mmol/L)": hco3,
+            "PCO2 (mmHg)": actual_pco2,
+            "Anion Gap": anion_gap if anion_gap is not None else None
+        }
+        results_dict = {
+            "Expected PCO2": round(expected_pco2, 1),
+            "Expected Range": f"{lower_limit:.1f}-{upper_limit:.1f}",
+            "Compensation": result["status"]
+        }
+        
+        save_calculation_to_history(
+            calculator_id="winter_formula",
+            calculator_name="Winter Formula",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="winter_formula",
+            calculator_name="Winter Formula",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        render_suggestions(
+            calculator_id="winter_formula",
+            calculator_name="Winter Formula",
+            category="Nội Tiết",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
         # Clinical interpretation
         st.subheader("🎯 Phân tích Lâm sàng")
@@ -450,6 +496,15 @@ def render():
     
     # References
     st.markdown("---")
+    references = get_references("Winter Formula")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    
     st.caption("""
     **Tài liệu tham khảo:**
     - Winter SD. A simple formula for the base excess of blood. J Appl Physiol. 1971
