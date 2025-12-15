@@ -32,6 +32,11 @@ Clinical Utility:
 
 import streamlit as st
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def calculate_iss(ais_scores: dict) -> dict:
@@ -204,6 +209,13 @@ def calculate_iss(ais_scores: dict) -> dict:
 def render():
     """Render ISS calculator in Streamlit"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'iss':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🦴 Injury Severity Score (ISS)")
     st.markdown("**Đánh giá mức độ nặng đa chấn thương dựa trên giải phẫu**")
     
@@ -270,14 +282,28 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập AIS Score Cho từng vùng")
+    col_main, col_suggestions = st.columns([2, 1])
     
-    st.info("""
-    **Hướng dẫn:** Chọn điểm AIS (0-6) cho MỖI vùng cơ thể dựa trên tổn thương nặng nhất trong vùng đó.
-    """)
+    with col_main:
+        st.subheader("📝 Nhập AIS Score Cho từng vùng")
+        
+        st.info("""
+        **Hướng dẫn:** Chọn điểm AIS (0-6) cho MỖI vùng cơ thể dựa trên tổn thương nặng nhất trong vùng đó.
+        """)
+        
+        # Create two columns for input
+        col1, col2 = st.columns(2)
     
-    # Create two columns for input
-    col1, col2 = st.columns(2)
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="iss",
+            calculator_name="ISS",
+            category="Chấn Thương",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     with col1:
         st.markdown("#### Vùng 1-3")
@@ -450,6 +476,53 @@ def render():
         - Kết hợp ISS với RTS để có TRISS score (tiên lượng tốt hơn)
         - Quyết định điều trị cuối cùng thuộc về bác sĩ điều trị
         """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Head/Neck": ais_head,
+            "Face": ais_face,
+            "Chest": ais_chest,
+            "Abdomen/Pelvis": ais_abdomen,
+            "Extremities": ais_extremities,
+            "External": ais_external
+        }
+        
+        results_dict = {
+            "ISS": result['iss'],
+            "Mức độ nguy cơ": result['risk_class'],
+            "Tỷ lệ tử vong": result['mortality'],
+            "Đánh giá": result['interpretation']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="iss",
+            calculator_name="ISS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="iss",
+            calculator_name="ISS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="iss",
+            calculator_name="ISS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="iss", show_actions=True)
     
     # AIS quick reference
     with st.expander("📖 Bảng tham khảo Nhanh - Ví Dụ AIS"):
@@ -502,4 +575,15 @@ def render():
         
         **Lưu ý:** Đây là ví dụ đơn giản hóa. AIS dictionary đầy đủ có hàng nghìn mã tổn thương.
         """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("ISS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 

@@ -4,6 +4,11 @@ Phân loại nguy cơ phẫu thuật của Hội Gây mê Hoa Kỳ
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def get_asa_classification():
@@ -125,6 +130,13 @@ def get_emergency_modifier_info():
 def render():
     """Render the ASA Physical Status calculator"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'asa':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🔪 ASA Physical Status Classification")
     st.markdown("""
     ### Phân Loại Nguy cơ Phẫu Thuật
@@ -149,28 +161,42 @@ def render():
     
     st.markdown("---")
     
-    # Selection section
-    st.subheader("📋 Chọn ASA Physical Status")
+    col1, col2 = st.columns([2, 1])
     
-    st.info("""
-    **Hướng dẫn:** Chọn phân loại phù hợp nhất với tình trạng sức khỏe hiện tại của bệnh nhân
-    """)
+    with col1:
+        # Selection section
+        st.subheader("📋 Chọn ASA Physical Status")
+        
+        st.info("""
+        **Hướng dẫn:** Chọn phân loại phù hợp nhất với tình trạng sức khỏe hiện tại của bệnh nhân
+        """)
+        
+        asa_options = get_asa_classification()
+        
+        # Create selection with detailed descriptions
+        selected_asa = st.radio(
+            "**Chọn ASA Classification:**",
+            options=list(asa_options.keys()),
+            format_func=lambda x: f"{x}: {asa_options[x]['status']}",
+            help="Chọn mức độ phù hợp nhất dựa trên tình trạng sức khỏe tổng thể"
+        )
+        
+        # Emergency modifier
+        is_emergency = st.checkbox(
+            "**Phẫu thuật cấp cứu (Emergency) - Thêm 'E'**",
+            help="Phẫu thuật không thể trì hoãn > 6 giờ"
+        )
     
-    asa_options = get_asa_classification()
-    
-    # Create selection with detailed descriptions
-    selected_asa = st.radio(
-        "**Chọn ASA Classification:**",
-        options=list(asa_options.keys()),
-        format_func=lambda x: f"{x}: {asa_options[x]['status']}",
-        help="Chọn mức độ phù hợp nhất dựa trên tình trạng sức khỏe tổng thể"
-    )
-    
-    # Emergency modifier
-    is_emergency = st.checkbox(
-        "**Phẫu thuật cấp cứu (Emergency) - Thêm 'E'**",
-        help="Phẫu thuật không thể trì hoãn > 6 giờ"
-    )
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="asa",
+            calculator_name="ASA Physical Status",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Display selected status details
     selected_info = asa_options[selected_asa]
@@ -432,6 +458,52 @@ def render():
             - Kỹ thuật rapid sequence intubation (RSI)
             - Chuẩn bị biến chứng
             """)
+        
+        # Prepare data for history and share
+        final_classification = f"{selected_asa}{'-E' if is_emergency else ''}"
+        selected_info = asa_options[selected_asa]
+        
+        inputs_dict = {
+            "ASA Classification": selected_asa,
+            "Emergency": is_emergency
+        }
+        
+        results_dict = {
+            "Phân loại cuối cùng": final_classification,
+            "Tỷ lệ tử vong": selected_info['mortality'],
+            "Mức độ nguy cơ": selected_info['risk'],
+            "Tình trạng": selected_info['status']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="asa",
+            calculator_name="ASA Physical Status",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="asa",
+            calculator_name="ASA Physical Status",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="asa",
+            calculator_name="ASA Physical Status",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="asa", show_actions=True)
     
     # Educational content
     st.markdown("---")
@@ -607,15 +679,24 @@ def render():
         - ASA IV-V: ICU
         """)
     
-    # References
+    # References section (always at bottom)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - ASA Physical Status Classification System. Updated October 2014
-    - Wolters U, et al. ASA classification and perioperative variables. Br J Anaesth. 1996
-    - Daabiss M. American Society of Anesthesiologists physical status classification. Indian J Anaesth. 2011
-    - Sankar A, et al. Reliability of the ASA physical status scale. Anaesthesia. 2014
-    """)
+    references = get_references("ASA Physical Status")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        st.caption("""
+        **Tài liệu tham khảo:**
+        - ASA Physical Status Classification System. Updated October 2014
+        - Wolters U, et al. ASA classification and perioperative variables. Br J Anaesth. 1996
+        - Daabiss M. American Society of Anesthesiologists physical status classification. Indian J Anaesth. 2011
+        - Sankar A, et al. Reliability of the ASA physical status scale. Anaesthesia. 2014
+        """)
 
 
 if __name__ == "__main__":

@@ -4,6 +4,11 @@ Sàng lọc và đánh giá mức độ trầm cảm
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 # PHQ-9 questions in Vietnamese
@@ -129,6 +134,13 @@ def assess_suicide_risk(question_9_score):
 def render():
     """Render the PHQ-9 calculator"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'phq9':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🧠 PHQ-9 - Patient Health Questionnaire")
     st.markdown("""
     ### Sàng Lọc & Đánh giá Trầm Cảm
@@ -153,41 +165,55 @@ def render():
     
     st.markdown("---")
     
-    # Instructions
-    st.info("""
-    **Trong 2 tuần qua**, bạn bị làm phiền bao nhiêu lần bởi các vấn đề sau?
+    col1, col2 = st.columns([2, 1])
     
-    Chọn đáp án phù hợp nhất:
-    - **0** = Không có
-    - **1** = Vài ngày
-    - **2** = Hơn nửa số ngày
-    - **3** = Gần như mỗi ngày
-    """)
-    
-    st.markdown("---")
-    
-    # Questions
-    st.subheader("📋 Bảng Câu Hỏi")
-    
-    scores = []
-    
-    for i, question in enumerate(PHQ9_QUESTIONS, 1):
-        st.markdown(f"**{i}. {question}**")
+    with col1:
+        # Instructions
+        st.info("""
+        **Trong 2 tuần qua**, bạn bị làm phiền bao nhiêu lần bởi các vấn đề sau?
         
-        score = st.radio(
-            "Chọn mức độ:",
-            options=[0, 1, 2, 3],
-            format_func=lambda x: ["0 - Không có", "1 - Vài ngày", "2 - Hơn nửa số ngày", "3 - Gần như mỗi ngày"][x],
-            key=f"phq9_q{i}",
-            horizontal=True
-        )
-        scores.append(score)
-        
-        # Special warning for question 9 (suicide)
-        if i == 9 and score > 0:
-            st.warning("⚠️ **Quan trọng:** Có ý nghĩ tự tử - cần đánh giá ngay!")
+        Chọn đáp án phù hợp nhất:
+        - **0** = Không có
+        - **1** = Vài ngày
+        - **2** = Hơn nửa số ngày
+        - **3** = Gần như mỗi ngày
+        """)
         
         st.markdown("---")
+        
+        # Questions
+        st.subheader("📋 Bảng Câu Hỏi")
+        
+        scores = []
+        
+        for i, question in enumerate(PHQ9_QUESTIONS, 1):
+            st.markdown(f"**{i}. {question}**")
+            
+            score = st.radio(
+                "Chọn mức độ:",
+                options=[0, 1, 2, 3],
+                format_func=lambda x: ["0 - Không có", "1 - Vài ngày", "2 - Hơn nửa số ngày", "3 - Gần như mỗi ngày"][x],
+                key=f"phq9_q{i}",
+                horizontal=True
+            )
+            scores.append(score)
+            
+            # Special warning for question 9 (suicide)
+            if i == 9 and score > 0:
+                st.warning("⚠️ **Quan trọng:** Có ý nghĩ tự tử - cần đánh giá ngay!")
+            
+            st.markdown("---")
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="phq9",
+            calculator_name="PHQ-9",
+            category="Tâm Thần",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Calculate button
     if st.button("📊 Tính Điểm & Phân tích", type="primary", use_container_width=True):
@@ -320,6 +346,51 @@ def render():
             Điều này cho thấy các triệu chứng trầm cảm đang ảnh hưởng đáng kể đến cuộc sống hàng ngày.
             Can thiệp điều trị được khuyến nghị mạnh mẽ hơn.
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            f"Câu {i+1}": score for i, score in enumerate(scores)
+        }
+        inputs_dict["Ảnh hưởng chức năng"] = functional_impact
+        
+        results_dict = {
+            "Tổng điểm PHQ-9": f"{total_score}/27",
+            "Mức độ": result['severity'],
+            "Mô tả": result['description'],
+            "Khuyến nghị": result['recommendation'],
+            "Theo dõi": result['monitoring'],
+            "Nguy cơ tự tử": suicide_risk['risk']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="phq9",
+            calculator_name="PHQ-9",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="phq9",
+            calculator_name="PHQ-9",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="phq9",
+            calculator_name="PHQ-9",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="phq9", show_actions=True)
     
     # Educational content
     st.markdown("---")
@@ -500,15 +571,24 @@ def render():
         - Mất thời gian
         """)
     
-    # References
+    # References section (always at bottom)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Kroenke K, et al. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001
-    - Spitzer RL, et al. Validation and utility of a self-report version of PRIME-MD. JAMA. 1999
-    - American Psychiatric Association. DSM-5 Diagnostic Criteria for Major Depressive Disorder. 2013
-    - NICE Guidelines: Depression in adults: treatment and management. 2022
-    """)
+    references = get_references("PHQ-9")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        st.caption("""
+        **Tài liệu tham khảo:**
+        - Kroenke K, et al. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001
+        - Spitzer RL, et al. Validation and utility of a self-report version of PRIME-MD. JAMA. 1999
+        - American Psychiatric Association. DSM-5 Diagnostic Criteria for Major Depressive Disorder. 2013
+        - NICE Guidelines: Depression in adults: treatment and management. 2022
+        """)
 
 
 if __name__ == "__main__":

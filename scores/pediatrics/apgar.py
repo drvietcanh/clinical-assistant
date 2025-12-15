@@ -4,6 +4,11 @@ APGAR Score - Newborn Assessment
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def calculate_apgar(appearance, pulse, grimace, activity, respiration):
@@ -66,6 +71,13 @@ def interpret_apgar(score, time_point):
 def render():
     """Render the APGAR Score calculator"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'apgar':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("👶 APGAR Score")
     st.markdown("""
     ### Đánh giá trẻ Sơ Sinh Ngay Sau Sinh
@@ -94,100 +106,114 @@ def render():
     
     st.markdown("---")
     
-    # Time point selection
-    st.subheader("⏱️ Chọn Thời Điểm Đánh giá")
+    col1, col2 = st.columns([2, 1])
     
-    time_point = st.radio(
-        "**Thời điểm:**",
-        ["1 phút", "5 phút", "10 phút"],
-        horizontal=True,
-        help="Chọn thời điểm đánh giá sau sinh"
-    )
+    with col1:
+        # Time point selection
+        st.subheader("⏱️ Chọn Thời Điểm Đánh giá")
+        
+        time_point = st.radio(
+            "**Thời điểm:**",
+            ["1 phút", "5 phút", "10 phút"],
+            horizontal=True,
+            help="Chọn thời điểm đánh giá sau sinh"
+        )
+        
+        st.markdown("---")
+        
+        # APGAR components
+        st.subheader("📋 Đánh giá Các Thành phần APGAR")
+        
+        # A - Appearance (Skin Color)
+        st.markdown("### 🎨 A - Appearance (Màu sắc da)")
+        appearance = st.radio(
+            "Chọn mức độ:",
+            options=[0, 1, 2],
+            format_func=lambda x: [
+                "0 - Tím/xanh toàn thân",
+                "1 - Hồng, tay chân xanh (acrocyanosis)",
+                "2 - Hồng toàn thân"
+            ][x],
+            key="appearance",
+            help="Đánh giá màu sắc da và niêm mạc"
+        )
+        
+        st.markdown("---")
+        
+        # P - Pulse (Nhịp tim)
+        st.markdown("### 💓 P - Pulse (Nhịp tim)")
+        pulse = st.radio(
+            "Chọn mức độ:",
+            options=[0, 1, 2],
+            format_func=lambda x: [
+                "0 - Không có",
+                "1 - < 100 bpm (chậm)",
+                "2 - ≥ 100 bpm (bình thường)"
+            ][x],
+            key="pulse",
+            help="Đánh giá tần số tim"
+        )
+        
+        st.markdown("---")
+        
+        # G - Grimace (Reflex Irritability)
+        st.markdown("### 😣 G - Grimace (Phản xạ kích thích)")
+        grimace = st.radio(
+            "Chọn mức độ:",
+            options=[0, 1, 2],
+            format_func=lambda x: [
+                "0 - Không đáp ứng",
+                "1 - Nhăn mặt/cử động nhẹ khi kích thích",
+                "2 - Ho/hắt hơi/khóc khi kích thích"
+            ][x],
+            key="grimace",
+            help="Đánh giá phản xạ khi hút mũi/họng"
+        )
+        
+        st.markdown("---")
+        
+        # A - Activity (Muscle Tone)
+        st.markdown("### 💪 A - Activity (Trương lực cơ)")
+        activity = st.radio(
+            "Chọn mức độ:",
+            options=[0, 1, 2],
+            format_func=lambda x: [
+                "0 - Mềm nhũn (floppy)",
+                "1 - Gập chi một số, trương lực cơ giảm",
+                "2 - Gập chi chủ động, vận động mạnh"
+            ][x],
+            key="activity",
+            help="Đánh giá trương lực cơ và vận động"
+        )
+        
+        st.markdown("---")
+        
+        # R - Respiration (Breathing Effort)
+        st.markdown("### 🫁 R - Respiration (Hô hấp)")
+        respiration = st.radio(
+            "Chọn mức độ:",
+            options=[0, 1, 2],
+            format_func=lambda x: [
+                "0 - Không thở",
+                "1 - Thở chậm, không đều, khóc yếu",
+                "2 - Thở tốt, khóc mạnh"
+            ][x],
+            key="respiration",
+            help="Đánh giá nỗ lực hô hấp"
+        )
+        
+        st.markdown("---")
     
-    st.markdown("---")
-    
-    # APGAR components
-    st.subheader("📋 Đánh giá Các Thành phần APGAR")
-    
-    # A - Appearance (Skin Color)
-    st.markdown("### 🎨 A - Appearance (Màu sắc da)")
-    appearance = st.radio(
-        "Chọn mức độ:",
-        options=[0, 1, 2],
-        format_func=lambda x: [
-            "0 - Tím/xanh toàn thân",
-            "1 - Hồng, tay chân xanh (acrocyanosis)",
-            "2 - Hồng toàn thân"
-        ][x],
-        key="appearance",
-        help="Đánh giá màu sắc da và niêm mạc"
-    )
-    
-    st.markdown("---")
-    
-    # P - Pulse (Nhịp tim)
-    st.markdown("### 💓 P - Pulse (Nhịp tim)")
-    pulse = st.radio(
-        "Chọn mức độ:",
-        options=[0, 1, 2],
-        format_func=lambda x: [
-            "0 - Không có",
-            "1 - < 100 bpm (chậm)",
-            "2 - ≥ 100 bpm (bình thường)"
-        ][x],
-        key="pulse",
-        help="Đánh giá tần số tim"
-    )
-    
-    st.markdown("---")
-    
-    # G - Grimace (Reflex Irritability)
-    st.markdown("### 😣 G - Grimace (Phản xạ kích thích)")
-    grimace = st.radio(
-        "Chọn mức độ:",
-        options=[0, 1, 2],
-        format_func=lambda x: [
-            "0 - Không đáp ứng",
-            "1 - Nhăn mặt/cử động nhẹ khi kích thích",
-            "2 - Ho/hắt hơi/khóc khi kích thích"
-        ][x],
-        key="grimace",
-        help="Đánh giá phản xạ khi hút mũi/họng"
-    )
-    
-    st.markdown("---")
-    
-    # A - Activity (Muscle Tone)
-    st.markdown("### 💪 A - Activity (Trương lực cơ)")
-    activity = st.radio(
-        "Chọn mức độ:",
-        options=[0, 1, 2],
-        format_func=lambda x: [
-            "0 - Mềm nhũn (floppy)",
-            "1 - Gập chi một số, trương lực cơ giảm",
-            "2 - Gập chi chủ động, vận động mạnh"
-        ][x],
-        key="activity",
-        help="Đánh giá trương lực cơ và vận động"
-    )
-    
-    st.markdown("---")
-    
-    # R - Respiration (Breathing Effort)
-    st.markdown("### 🫁 R - Respiration (Hô hấp)")
-    respiration = st.radio(
-        "Chọn mức độ:",
-        options=[0, 1, 2],
-        format_func=lambda x: [
-            "0 - Không thở",
-            "1 - Thở chậm, không đều, khóc yếu",
-            "2 - Thở tốt, khóc mạnh"
-        ][x],
-        key="respiration",
-        help="Đánh giá nỗ lực hô hấp"
-    )
-    
-    st.markdown("---")
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="apgar",
+            calculator_name="APGAR Score",
+            category="Nhi Khoa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Calculate button
     if st.button("📊 Tính Điểm APGAR", type="primary", use_container_width=True):
@@ -433,6 +459,54 @@ def render():
                 - Vật lý trị liệu/phục hồi chức năng
                 - Can thiệp sớm nếu có chậm phát triển
                 """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Thời điểm": time_point,
+            "Appearance": appearance,
+            "Pulse": pulse,
+            "Grimace": grimace,
+            "Activity": activity,
+            "Respiration": respiration
+        }
+        
+        results_dict = {
+            "Điểm APGAR": f"{total_score}/10",
+            "Mức độ": result['status'],
+            "Tình trạng": result['condition'],
+            "Xử trí": result['action'],
+            "Tiên lượng": result['prognosis']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="apgar",
+            calculator_name="APGAR Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="apgar",
+            calculator_name="APGAR Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="apgar",
+            calculator_name="APGAR Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="apgar", show_actions=True)
     
     # Educational content
     st.markdown("---")
@@ -632,15 +706,24 @@ def render():
         - Theo hướng dẫn đạo đức y khoa địa phương
         """)
     
-    # References
+    # References section (always at bottom)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Apgar V. A proposal for a new method of evaluation of the newborn infant. Curr Res Anesth Analg. 1953
-    - American Academy of Pediatrics. Neonatal Resuscitation Program (NRP) 8th Edition. 2020
-    - Ehrenstein V. Association of Apgar scores with death and neurologic disability. Clin Epidemiol. 2009
-    - Wyckoff MH, et al. Neonatal Life Support: 2020 International Consensus on CPR. Circulation. 2020
-    """)
+    references = get_references("APGAR Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        st.caption("""
+        **Tài liệu tham khảo:**
+        - Apgar V. A proposal for a new method of evaluation of the newborn infant. Curr Res Anesth Analg. 1953
+        - American Academy of Pediatrics. Neonatal Resuscitation Program (NRP) 8th Edition. 2020
+        - Ehrenstein V. Association of Apgar scores with death and neurologic disability. Clin Epidemiol. 2009
+        - Wyckoff MH, et al. Neonatal Life Support: 2020 International Consensus on CPR. Circulation. 2020
+        """)
 
 
 if __name__ == "__main__":
