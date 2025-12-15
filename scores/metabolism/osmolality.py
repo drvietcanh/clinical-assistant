@@ -4,6 +4,8 @@ Tính độ thẩm thấu huyết thanh và osmolal gap
 """
 
 import streamlit as st
+from scores.utils.validation import validate_lab_value
+from components.ui.validation import render_validation_errors
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -140,10 +142,42 @@ def render():
             step=1.0,
             help="Bình thường: 275-295 mOsm/kg"
         )
+    else:
+        measured_osm = None
     
     st.markdown("---")
     
     if st.button("🔬 Tính Osmolality", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_na, na_error = validate_lab_value(na, "Sodium (mmol/L)", 100.0, 180.0)
+        if not is_valid_na:
+            validation_errors.append(na_error)
+        
+        if glucose_unit == "mmol/L":
+            is_valid_glucose, glucose_error = validate_lab_value(glucose_mmol, "Glucose (mmol/L)", 0.0, 50.0)
+        else:
+            is_valid_glucose, glucose_error = validate_lab_value(glucose_mg, "Glucose (mg/dL)", 0.0, 900.0)
+        if not is_valid_glucose:
+            validation_errors.append(glucose_error)
+        
+        if bun_unit == "mmol/L (Urea)":
+            is_valid_bun, bun_error = validate_lab_value(urea_mmol, "Urea (mmol/L)", 0.0, 100.0)
+        else:
+            is_valid_bun, bun_error = validate_lab_value(bun_mg, "BUN (mg/dL)", 0.0, 300.0)
+        if not is_valid_bun:
+            validation_errors.append(bun_error)
+        
+        if measured_available and measured_osm is not None:
+            from scores.utils.validation import validate_range
+            is_valid_osm, osm_error = validate_range(measured_osm, 200.0, 500.0, "Measured Osmolality (mOsm/kg)")
+            if not is_valid_osm:
+                validation_errors.append(osm_error)
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+        
         # Calculate osmolality
         calc_osm = 2 * na + glucose_mg/18 + bun_mg/2.8
         

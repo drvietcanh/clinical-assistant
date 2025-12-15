@@ -125,6 +125,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
             border="#ff6f00"
         ),
+        "phase2_features": ModuleInfo(
+            id="phase2_features",
+            title="Phase 2 Features",
+            icon="📊",
+            page_path="pages/10_📊_Phase2_Features.py",
+            description="Flowcharts, Pregnancy Safety, Pediatric Dosing",
+            color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
+            border="#4caf50"
+        ),
     },
     
     "navigation": {

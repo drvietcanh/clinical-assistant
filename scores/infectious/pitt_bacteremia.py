@@ -4,6 +4,7 @@ Tiên lượng nhiễm khuẩn huyết
 """
 
 import streamlit as st
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def calculate_pitt(temp, hypotension, ventilator, cardiac_arrest, mental_status):
@@ -116,31 +117,56 @@ def render():
             "red": "#dc3545"
         }[result["color"]]
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'>
-            <h2 style='color: {score_color}; margin: 0; text-align: center;'>
-                Pitt Score: {result['total_score']}/14
-            </h2>
-        </div>
-        """, unsafe_allow_html=True)
+        icon_map = {
+            "green": "✅",
+            "orange": "⚠️",
+            "red": "🚨"
+        }
+        icon = icon_map[result["color"]]
         
-        col1, col2 = st.columns(2)
-        with col1:
-            st.metric("Nguy cơ tử vong", result["risk_level"])
-        with col2:
-            st.metric("Tỷ lệ tử vong 30 ngày", result["mortality"])
+        interpretation_map = {
+            "green": "Nguy cơ thấp",
+            "orange": "Nguy cơ trung bình",
+            "red": "Nguy cơ cao"
+        }
+        interpretation = f"{interpretation_map[result['color']]} - Tử vong 30 ngày: {result['mortality']}"
+        
+        # Use render_score_result for main score display
+        render_score_result(
+            title="Pitt Bacteremia Score",
+            score=result['total_score'],
+            interpretation=interpretation,
+            mortality=f"Tỷ lệ tử vong: {result['mortality']}",
+            color=score_color,
+            icon=icon,
+            size="large"
+        )
+        
+        # Use render_score_breakdown for component scores
+        render_score_breakdown(
+            title="Điểm Từng Thành Phần",
+            subscores={
+                "🌡️ Nhiệt độ": temp,
+                "💓 Hạ huyết áp": hypotension,
+                "🫁 Thở máy": ventilator,
+                "🫀 Ngưng tim": cardiac_arrest,
+                "🧠 Ý thức": mental_status
+            },
+            total_score=result['total_score']
+        )
         
         st.markdown("---")
+        
+        recommendation_text = {
+            "green": "✅ Nguy cơ thấp - Điều trị tiêu chuẩn, theo dõi chặt",
+            "orange": "⚠️ Nguy cơ trung bình - Điều trị tích cực, cân nhắc ICU",
+            "red": "🚨 Nguy cơ cao - Điều trị hồi sức tích cực, ICU ngay"
+        }[result["color"]]
         
         st.markdown(f"""
         <div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'>
             <h3 style='color: {score_color}; margin-top: 0;'>📋 Khuyến cáo</h3>
-            <p style='font-size: 1.1em;'>
-                {'✅ Nguy cơ thấp - Điều trị tiêu chuẩn, theo dõi chặt' if result['total_score'] <= 1 else 
-                 '⚠️ Nguy cơ trung bình - Điều trị tích cực, cân nhắc ICU' if result['total_score'] <= 3 else
-                 '🚨 Nguy cơ cao - Điều trị hồi sức tích cực, ICU ngay'}
-            </p>
+            <p style='font-size: 1.1em;'>{recommendation_text}</p>
         </div>
         """, unsafe_allow_html=True)
         

@@ -6,13 +6,24 @@ Consciousness level assessment
 import streamlit as st
 from scores.references_config import get_references
 from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 from scores.utils.validation import validate_gcs as validate_gcs_score
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def render():
     """Thang điểm hôn mê Glasgow Calculator"""
     st.subheader("🧠 Thang điểm hôn mê Glasgow (GCS)")
     st.caption("Đánh giá Mức độ ý thức")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'gcs':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     col1, col2 = st.columns([2, 1])
     
@@ -66,8 +77,19 @@ def render():
             key="gcs_motor"
         )
         motor_score = motor_options[motor_response]
-        
-        if st.button("🧮 Tính GCS", type="primary"):
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="gcs",
+            calculator_name="GCS Score",
+            category="Thần kinh",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    if st.button("🧮 Tính GCS", type="primary"):
             # Validate GCS components (total should be 3-15)
             total_score = eye_score + verbal_score + motor_score
             
@@ -77,35 +99,50 @@ def render():
                 st.error("**⚠️ Lỗi: GCS phải từ 3-15**")
                 st.stop()
             
+            # Determine severity and color
+            if total_score >= 14:
+                severity = "Chấn thương sọ não nhẹ (Mild TBI)"
+                color = "#28a745"  # green
+                icon = "✅"
+            elif total_score >= 9:
+                severity = "Chấn thương sọ não trung bình (Moderate TBI)"
+                color = "#fd7e14"  # orange
+                icon = "⚠️"
+            else:
+                severity = "Chấn thương sọ não nặng (Severe TBI)"
+                color = "#dc3545"  # red
+                icon = "🚨"
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                st.markdown(f"**E{eye_score} V{verbal_score} M{motor_score}**")
-                
-                if total_score >= 14:
-                    st.success(f"## GCS = {total_score}")
-                    st.success("✅ Tổn Thương Nhẹ")
-                    severity = "Chấn thương sọ não nhẹ (Mild TBI)"
-                elif total_score >= 9:
-                    st.warning(f"## GCS = {total_score}")
-                    st.warning("⚠️ Tổn Thương Trung Bình")
-                    severity = "Chấn thương sọ não trung bình (Moderate TBI)"
-                else:
-                    st.error(f"## GCS = {total_score}")
-                    st.error("🚨 Tổn Thương Nặng")
-                    severity = "Chấn thương sọ não nặng (Severe TBI)"
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="GCS Score",
+                    score=total_score,
+                    interpretation=severity,
+                    mortality=None,
+                    color=color,
+                    icon=icon,
+                    size="large"
+                )
             
-            st.markdown("### 💡 Giải thích")
+            # Use render_score_breakdown for component scores
+            render_score_breakdown(
+                title="Điểm Từng Thành Phần",
+                subscores={
+                    "👁️ Mở mắt (E)": eye_score,
+                    "🗣️ Lời nói (V)": verbal_score,
+                    "💪 Vận động (M)": motor_score
+                },
+                total_score=total_score
+            )
             
-            st.write(f"**Tổng điểm:** {total_score}/15")
-            st.write(f"**Phân loại:** {severity}")
-            
-            st.markdown(f"""
-            **Chi tiết:**
-            - Mở mắt (Eye Opening): {eye_score}/4 - {eye_response}
-            - Phản ứng lời nói (Verbal Response): {verbal_score}/5 - {verbal_response}
-            - Phản ứng vận động (Motor Response): {motor_score}/6 - {motor_response}
-            """)
+            st.markdown("---")
+            st.markdown(f"**Chi tiết:** E{eye_score} V{verbal_score} M{motor_score}")
+            st.markdown(f"- Mở mắt: {eye_response}")
+            st.markdown(f"- Phản ứng lời nói: {verbal_response}")
+            st.markdown(f"- Phản ứng vận động: {motor_response}")
             
             st.markdown("---")
             st.markdown("### 💊 Ý nghĩa lâm sàng")
@@ -184,6 +221,44 @@ def render():
                 - Được xác nhận rộng rãi trong chấn thương, phẫu thuật thần kinh, hồi sức cấp cứu
                 - Tiêu chuẩn vàng để đánh giá mức độ ý thức
                 """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Eye Opening": eye_response,
+                "Verbal Response": verbal_response,
+                "Motor Response": motor_response,
+                "Eye Score": eye_score,
+                "Verbal Score": verbal_score,
+                "Motor Score": motor_score
+            }
+            
+            results_dict = {
+                "GCS Total": total_score,
+                "Severity": severity,
+                "Details": f"E{eye_score} V{verbal_score} M{motor_score}"
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="gcs",
+                calculator_name="GCS Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="gcs",
+                calculator_name="GCS Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="gcs", show_actions=True)
     
     # References section
     references = get_references("GCS")

@@ -12,6 +12,13 @@ Lancet. 2000;356(9238):1318-21.
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_lab_value
+)
+from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -214,6 +221,35 @@ def render():
         st.markdown("---")
         
         if st.button("🧮 Tính Glasgow-Blatchford Score", type="primary", use_container_width=True):
+            # Validate inputs
+            validation_errors = []
+            
+            # Validate BUN
+            if "mmol/L" in bun_unit:
+                is_valid_bun, bun_error = validate_lab_value(bun_mmol, "BUN (mmol/L)", 0.0, 70.0)
+            else:
+                is_valid_bun, bun_error = validate_lab_value(bun, "BUN (mg/dL)", 0.0, 200.0)
+            if not is_valid_bun:
+                validation_errors.append(bun_error)
+            
+            # Validate hemoglobin
+            is_valid_hgb, hgb_error = validate_lab_value(hgb, "Hemoglobin (g/dL)", 3.0, 20.0)
+            if not is_valid_hgb:
+                validation_errors.append(hgb_error)
+            
+            # Validate blood pressure
+            is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+            if not is_valid_sbp:
+                validation_errors.append(sbp_error)
+            
+            # Validate heart rate
+            is_valid_hr, hr_error = validate_heart_rate(hr)
+            if not is_valid_hr:
+                validation_errors.append(hr_error)
+            
+            if validation_errors:
+                render_validation_errors(validation_errors)
+            
             # Calculate score
             gbs = calculate_gbs(
                 bun_mgdl, hgb, sbp, hr, melena, syncope, 
@@ -252,27 +288,35 @@ def render():
                 intervention_risk = ">30%"
                 mortality = ">5%"
             
+            # Map color names to hex
+            color_map = {
+                "green": "#28a745",  # green
+                "info": "#17a2b8",   # blue
+                "warning": "#fd7e14",  # orange
+                "error": "#dc3545"     # red
+            }
+            icon_map = {
+                "green": "✅",
+                "info": "💡",
+                "warning": "⚠️",
+                "error": "🚨"
+            }
+            score_color = color_map[color]
+            score_icon = icon_map[color]
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                if color == "green":
-                    st.success(f"## GBS = {gbs}")
-                    st.success(f"**Nguy cơ {risk}**")
-                elif color == "info":
-                    st.info(f"## GBS = {gbs}")
-                    st.info(f"**Nguy cơ {risk}**")
-                elif color == "warning":
-                    st.warning(f"## GBS = {gbs}")
-                    st.warning(f"**Nguy cơ {risk}**")
-                else:
-                    st.error(f"## GBS = {gbs}")
-                    st.error(f"**Nguy cơ {risk}**")
-                
-                st.markdown(f"""
-                **Nguy cơ can thiệp:** {intervention_risk}
-                
-                **Tử vong:** {mortality}
-                """)
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="Glasgow-Blatchford Score",
+                    score=gbs,
+                    interpretation=f"Nguy cơ {risk}",
+                    mortality=f"Can thiệp: {intervention_risk}, Tử vong: {mortality}",
+                    color=score_color,
+                    icon=score_icon,
+                    size="large"
+                )
             
             st.markdown("---")
             st.markdown("### 💊 KHUYẾN CÁO XỬ TRÍ")

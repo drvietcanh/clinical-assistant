@@ -42,6 +42,9 @@ from .sofa_lookup import (
 )
 from scores.references_config import get_references
 from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 from scores.utils.validation import (
     validate_gcs,
     validate_blood_pressure,
@@ -196,6 +199,24 @@ def render():
     
     st.title("🏥 SOFA Score")
     st.markdown("**Sequential Organ Failure Assessment - Đánh giá suy đa cơ quan**")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'sofa':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
+    # Smart Suggestions (sidebar)
+    with st.sidebar:
+        render_suggestions(
+            calculator_id="sofa",
+            calculator_name="SOFA Score",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
@@ -533,6 +554,28 @@ def render():
             calculator_name="SOFA Score",
             filename="sofa_score_result"
         )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="sofa",
+            calculator_name="SOFA Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="sofa",
+            calculator_name="SOFA Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="sofa", show_actions=True)
         
         # Warning
         st.warning("""

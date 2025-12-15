@@ -3,6 +3,13 @@ Framingham Risk Score Calculator
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_blood_pressure,
+    validate_lab_value
+)
+from components.ui.validation import render_validation_errors
+from components.ui.results import render_result_box, render_result_card
 
 
 def render():
@@ -123,6 +130,36 @@ def render():
         )
         
         if st.button("🧮 Tính Framingham Risk", type="primary", key="fram_calc"):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_age, age_error = validate_age(age, 30, 79)
+            if not is_valid_age:
+                validation_errors.append(age_error)
+            
+            # Validate cholesterol
+            if chol_unit == "mg/dL":
+                is_valid_chol, chol_error = validate_lab_value(total_chol, "Total Cholesterol (mg/dL)", 100, 400)
+            else:
+                is_valid_chol, chol_error = validate_lab_value(chol_mmol, "Total Cholesterol (mmol/L)", 2.5, 10.0)
+            if not is_valid_chol:
+                validation_errors.append(chol_error)
+            
+            # Validate HDL
+            if chol_unit == "mg/dL":
+                is_valid_hdl, hdl_error = validate_lab_value(hdl, "HDL (mg/dL)", 20, 100)
+            else:
+                is_valid_hdl, hdl_error = validate_lab_value(hdl_mmol, "HDL (mmol/L)", 0.5, 2.5)
+            if not is_valid_hdl:
+                validation_errors.append(hdl_error)
+            
+            is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+            if not is_valid_sbp:
+                validation_errors.append(sbp_error)
+            
+            if validation_errors:
+                render_validation_errors(validation_errors)
+            
             points = 0
             
             # Simplified Framingham calculation (point-based)
@@ -301,19 +338,34 @@ def render():
                 risk_cat = "cao"
                 color = "error"
             
+            # Map color names to component colors
+            color_map = {
+                "success": "success",
+                "warning": "warning",
+                "error": "error"
+            }
+            icon_map = {
+                "success": "✅",
+                "warning": "⚠️",
+                "error": "🚨"
+            }
+            component_color = color_map.get(color, "info")
+            component_icon = icon_map.get(color, "💡")
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                if color == "success":
-                    st.success(f"## {risk_pct}%")
-                    st.success("✅ Nguy cơ THẤP")
-                elif color == "warning":
-                    st.warning(f"## {risk_pct}%")
-                    st.warning("⚠️ Nguy cơ TRUNG BÌNH")
-                else:
-                    st.error(f"## {risk_pct}%")
-                    st.error("🚨 Nguy cơ CAO")
+                # Use render_result_box for risk percentage display
+                render_result_box(
+                    title="Nguy cơ 10 năm mắc bệnh tim mạch",
+                    value=f"{risk_pct}%",
+                    subtitle=f"Nguy cơ {risk_cat}",
+                    color=component_color,
+                    icon=component_icon,
+                    size="large"
+                )
             
+            st.markdown("---")
             st.markdown("### 💡 Phân tích")
             st.write(f"**Nguy cơ mắc bệnh tim mạch trong 10 năm:** {risk_pct}%")
             st.write(f"**Tổng điểm:** {points}")

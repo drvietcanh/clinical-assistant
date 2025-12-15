@@ -11,6 +11,7 @@ from .pelod2 import render as render_pelod2
 from .prism3 import render as render_prism3
 from .pim2 import render as render_pim2
 from .pediatric_sofa import render as render_pediatric_sofa
+from .pediatric_dosing import render_pediatric_dosing_calculator
 
 
 def render_pediatrics_calculator(calculator_id):

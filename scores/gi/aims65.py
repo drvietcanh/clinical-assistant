@@ -12,6 +12,13 @@ Gastrointest Endosc. 2011 Dec;74(6):1215-24.
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_blood_pressure,
+    validate_lab_value
+)
+from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def calculate_aims65(albumin, inr, mental_status, sbp, age):
@@ -133,8 +140,43 @@ def render():
         st.markdown("---")
         
         if st.button("🧮 Tính AIMS65 Score", type="primary", use_container_width=True):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_age, age_error = validate_age(age, 0, 120)
+            if not is_valid_age:
+                validation_errors.append(age_error)
+            
+            is_valid_alb, alb_error = validate_lab_value(albumin, "Albumin (g/dL)", 1.0, 6.0)
+            if not is_valid_alb:
+                validation_errors.append(alb_error)
+            
+            is_valid_inr, inr_error = validate_lab_value(inr, "INR", 0.8, 10.0)
+            if not is_valid_inr:
+                validation_errors.append(inr_error)
+            
+            is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+            if not is_valid_sbp:
+                validation_errors.append(sbp_error)
+            
+            if validation_errors:
+                render_validation_errors(validation_errors)
+            
             # Calculate score
             score = calculate_aims65(albumin, inr, mental_status, sbp, age)
+            
+            # Build breakdown of component scores
+            component_scores = {}
+            if albumin < 3.0:
+                component_scores["Albumin <3.0"] = 1
+            if inr > 1.5:
+                component_scores["INR >1.5"] = 1
+            if mental_status:
+                component_scores["Rối loạn ý thức"] = 1
+            if sbp <= 90:
+                component_scores["HA tâm thu ≤90"] = 1
+            if age > 65:
+                component_scores["Tuổi >65"] = 1
             
             # Determine mortality risk based on literature
             # Saltzman et al. Gastrointest Endosc. 2011
@@ -175,29 +217,49 @@ def render():
                 length_of_stay = ">10 ngày"
                 cost = "Rất cao"
             
+            # Map color names to hex
+            color_map = {
+                "green": "#28a745",  # green
+                "info": "#17a2b8",   # blue
+                "warning": "#fd7e14",  # orange
+                "error": "#dc3545"     # red
+            }
+            icon_map = {
+                "green": "✅",
+                "info": "💡",
+                "warning": "⚠️",
+                "error": "🚨"
+            }
+            score_color = color_map[color]
+            score_icon = icon_map[color]
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                if color == "green":
-                    st.success(f"## AIMS65 = {score}")
-                    st.success(f"**Nguy cơ {risk}**")
-                elif color == "info":
-                    st.info(f"## AIMS65 = {score}")
-                    st.info(f"**Nguy cơ {risk}**")
-                elif color == "warning":
-                    st.warning(f"## AIMS65 = {score}")
-                    st.warning(f"**Nguy cơ {risk}**")
-                else:
-                    st.error(f"## AIMS65 = {score}")
-                    st.error(f"**Nguy cơ {risk}**")
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="AIMS65 Score",
+                    score=score,
+                    interpretation=f"Nguy cơ {risk}",
+                    mortality=f"Tử vong: {mortality}",
+                    color=score_color,
+                    icon=score_icon,
+                    size="large"
+                )
                 
                 st.markdown(f"""
-                **Tử vong:** {mortality}
-                
                 **Thời gian nằm viện:** {length_of_stay}
                 
                 **Chi phí:** {cost}
                 """)
+            
+            # Use render_score_breakdown for component scores
+            if component_scores:
+                render_score_breakdown(
+                    title="Tiêu Chí AIMS65",
+                    subscores=component_scores,
+                    total_score=score
+                )
             
             st.markdown("---")
             st.markdown("### 💊 KHUYẾN CÁO XỬ TRÍ")

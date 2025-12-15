@@ -4,6 +4,8 @@ Công thức Winter - PCO2 dự đoán trong toan chuyển hóa
 """
 
 import streamlit as st
+from scores.utils.validation import validate_lab_value, validate_range
+from components.ui.validation import render_validation_errors
 
 
 def calculate_expected_pco2(hco3):
@@ -185,6 +187,25 @@ def render():
         st.warning("⚠️ **Lưu ý:** Winter's Formula chỉ áp dụng cho toan chuyển hóa (HCO₃⁻ < 22 mmol/L)")
     
     if st.button("🔬 Tính Toán & Phân tích", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_hco3, hco3_error = validate_lab_value(hco3, "Bicarbonate (mmol/L)", 5.0, 50.0)
+        if not is_valid_hco3:
+            validation_errors.append(hco3_error)
+        
+        is_valid_pco2, pco2_error = validate_range(actual_pco2, 10.0, 100.0, "PCO2 (mmHg)")
+        if not is_valid_pco2:
+            validation_errors.append(pco2_error)
+        
+        if calculate_ag:
+            is_valid_ag, ag_error = validate_range(anion_gap, 0.0, 50.0, "Anion Gap (mmol/L)")
+            if not is_valid_ag:
+                validation_errors.append(ag_error)
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+        
         # Calculate expected PCO2
         expected_pco2, lower_limit, upper_limit = calculate_expected_pco2(hco3)
         

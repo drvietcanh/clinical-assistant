@@ -4,6 +4,7 @@ El-Ganzouri Risk Index Calculator
 """
 
 import streamlit as st
+from scores.utils.anesthesia_validation import validate_el_ganzouri_score
 
 
 def calculate_el_ganzouri(
@@ -192,46 +193,57 @@ def render():
     
     st.markdown("---")
     
-    if st.button("🔍 Tính toán", type="primary", use_container_width=True):
-        result = calculate_el_ganzouri(
+    if st.button("🔬 Tính điểm El-Ganzouri", type="primary", use_container_width=True):
+        # Validation
+        is_valid, error_msg = validate_el_ganzouri_score(
             mouth_opening, thyromental_distance, mallampati, neck_movement,
             jaw_protrusion, weight, history_difficult_intubation
         )
         
-        # Display results
-        col1, col2, col3 = st.columns(3)
+        if not is_valid:
+            st.error(f"❌ Lỗi: {error_msg}")
+            return
         
-        with col1:
-            st.metric("Tổng điểm", f"{result['total_score']}/11")
-        
-        with col2:
-            st.metric("Nguy cơ", result['risk'])
-        
-        with col3:
-            st.metric("Xác suất", result['probability'])
-        
-        st.markdown("---")
-        
-        # Risk interpretation
-        if result['color'] == "green":
-            st.success(f"**{result['risk']}** - Xác suất đặt NKQ khó: {result['probability']}")
-        elif result['color'] == "orange":
-            st.warning(f"**{result['risk']}** - Xác suất đặt NKQ khó: {result['probability']}")
-        else:
-            st.error(f"**{result['risk']}** - Xác suất đặt NKQ khó: {result['probability']}")
-        
-        st.markdown("---")
-        
-        st.subheader("💡 Khuyến nghị")
-        st.markdown(f"""
-        {result['recommendation']}
-        """)
-        
-        st.markdown("---")
-        
-        # Warning if history present
-        if history_difficult_intubation == 1:
-            st.warning("""
+        try:
+            result = calculate_el_ganzouri(
+                mouth_opening, thyromental_distance, mallampati, neck_movement,
+                jaw_protrusion, weight, history_difficult_intubation
+            )
+            
+            # Display results
+            col1, col2, col3 = st.columns(3)
+            
+            with col1:
+                st.metric("Tổng điểm", f"{result['total_score']}/11")
+            
+            with col2:
+                st.metric("Nguy cơ", result['risk'])
+            
+            with col3:
+                st.metric("Xác suất", result['probability'])
+            
+            st.markdown("---")
+            
+            # Risk interpretation
+            if result['color'] == "green":
+                st.success(f"**{result['risk']}** - Xác suất đặt NKQ khó: {result['probability']}")
+            elif result['color'] == "orange":
+                st.warning(f"**{result['risk']}** - Xác suất đặt NKQ khó: {result['probability']}")
+            else:
+                st.error(f"**{result['risk']}** - Xác suất đặt NKQ khó: {result['probability']}")
+            
+            st.markdown("---")
+            
+            st.subheader("💡 Khuyến nghị")
+            st.markdown(f"""
+            {result['recommendation']}
+            """)
+            
+            st.markdown("---")
+            
+            # Warning if history present
+            if history_difficult_intubation == 1:
+                st.warning("""
             ⚠️ **CẢNH BÁO:** Bệnh nhân có tiền sử đặt NKQ khó - Đây là yếu tố dự đoán mạnh nhất!
             
             **Bắt buộc:**
@@ -241,4 +253,9 @@ def render():
             - Cân nhắc đặt NKQ tỉnh với fiberoptic
             - Thông báo cho đội ngũ phẫu thuật
             """)
+        
+        except Exception as e:
+            st.error(f"❌ Lỗi khi tính toán: {str(e)}")
+            st.exception(e)
+            return
 

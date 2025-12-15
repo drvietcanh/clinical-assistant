@@ -4,6 +4,11 @@ Chỉ số T4 tự do - ước tính T4 tự do từ T4 toàn phần và T3 upta
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_range,
+    validate_lab_value
+)
+from components.ui.validation import render_validation_errors
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -222,6 +227,34 @@ def render():
     
     # Calculate button
     if st.button("🔬 Tính Free T4 Index", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Total T4 validation (depends on unit)
+        if total_t4_unit == "µg/dL":
+            is_valid_t4, t4_error = validate_lab_value(total_t4_ugdl, "Total T4", 0.0, 30.0)
+            if not is_valid_t4:
+                validation_errors.append(f"Total T4 (µg/dL): {t4_error}")
+        else:  # nmol/L
+            is_valid_t4, t4_error = validate_lab_value(total_t4_nmol, "Total T4", 0.0, 400.0)
+            if not is_valid_t4:
+                validation_errors.append(f"Total T4 (nmol/L): {t4_error}")
+        
+        # T3 Uptake validation
+        is_valid_t3, t3_error = validate_range(t3_uptake, 0.0, 100.0, "T3 Uptake")
+        if not is_valid_t3:
+            validation_errors.append(f"T3 Uptake: {t3_error}")
+        
+        # TSH validation (if provided)
+        if include_tsh:
+            is_valid_tsh, tsh_error = validate_lab_value(tsh_value, "TSH", 0.0, 100.0)
+            if not is_valid_tsh:
+                validation_errors.append(f"TSH: {tsh_error}")
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+            return
+        
         result = calculate_fti(total_t4, t3_uptake)
         
         # Display result

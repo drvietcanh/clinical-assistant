@@ -26,6 +26,8 @@ known to be associated with DIC (sepsis, trauma, malignancy, obstetric complicat
 """
 
 import streamlit as st
+from scores.utils.validation import validate_lab_value, validate_range
+from components.ui.validation import render_validation_errors
 
 
 def calculate_dic_score(
@@ -404,6 +406,24 @@ def render():
     
     # Calculate button
     if st.button("🧮 Tính Toán ISTH DIC Score", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_platelet, platelet_error = validate_lab_value(platelet_count, "Platelet count (×10³/μL)", 0.0, 1000.0)
+        if not is_valid_platelet:
+            validation_errors.append(platelet_error)
+        
+        is_valid_fibrinogen, fibrinogen_error = validate_lab_value(fibrinogen, "Fibrinogen (mg/dL)", 0.0, 1000.0)
+        if not is_valid_fibrinogen:
+            validation_errors.append(fibrinogen_error)
+        
+        is_valid_pt, pt_error = validate_range(pt_prolongation, 0.0, 60.0, "PT prolongation (seconds)")
+        if not is_valid_pt:
+            validation_errors.append(pt_error)
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+        
         result = calculate_dic_score(
             platelet_count=platelet_count,
             ddimer_level=ddimer_level,

@@ -12,6 +12,12 @@ Gut. 1996;38(3):316-21.
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_blood_pressure,
+    validate_heart_rate
+)
+from components.ui.validation import render_validation_errors
 
 
 def render():
@@ -183,6 +189,23 @@ def render():
         st.markdown("---")
         
         if st.button("🧮 Tính Rockall Score", type="primary", use_container_width=True):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_age, age_error = validate_age(age, 0, 120)
+            if not is_valid_age:
+                validation_errors.append(age_error)
+            
+            is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+            if not is_valid_sbp:
+                validation_errors.append(sbp_error)
+            
+            is_valid_hr, hr_error = validate_heart_rate(hr)
+            if not is_valid_hr:
+                validation_errors.append(hr_error)
+            
+            if validation_errors:
+                render_validation_errors(validation_errors)
             
             if is_complete:
                 total_score = complete_score
@@ -242,24 +265,35 @@ def render():
                     risk = "RẤT CAO"
                     color = "red"
             
+            # Map color names to hex
+            color_map = {
+                "green": "#28a745",  # green
+                "orange": "#fd7e14",  # orange
+                "red": "#dc3545"     # red
+            }
+            icon_map = {
+                "green": "✅",
+                "orange": "⚠️",
+                "red": "🚨"
+            }
+            score_color = color_map.get(color, "#17a2b8")
+            score_icon = icon_map.get(color, "💡")
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                if color == "green":
-                    st.success(f"## Rockall = {total_score}")
-                    st.success(f"**Nguy cơ {risk}**")
-                elif color == "orange":
-                    st.warning(f"## Rockall = {total_score}")
-                    st.warning(f"**Nguy cơ {risk}**")
-                else:
-                    st.error(f"## Rockall = {total_score}")
-                    st.error(f"**Nguy cơ {risk}**")
+                # Use render_score_result for main score display
+                from components.ui.scoring import render_score_result, render_score_breakdown
                 
-                st.markdown(f"""
-                **Tử vong:** {mortality}
-                
-                **Tái chảy máu:** {rebleed}
-                """)
+                render_score_result(
+                    title="Rockall Score",
+                    score=total_score,
+                    interpretation=f"Nguy cơ {risk}",
+                    mortality=f"Tử vong: {mortality}, Tái chảy máu: {rebleed}",
+                    color=score_color,
+                    icon=score_icon,
+                    size="large"
+                )
             
             st.markdown("---")
             st.markdown("### 💊 KHUYẾN CÁO")

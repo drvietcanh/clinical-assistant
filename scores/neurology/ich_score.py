@@ -18,6 +18,7 @@ Stroke. 2001;32(4):891-7.
 """
 
 import streamlit as st
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def render():
@@ -124,40 +125,42 @@ def render():
         st.markdown("---")
         st.markdown("## 📊 KẾT QUẢ")
         
-        # Score badge
-        score_color = "green" if total_score <= 1 else "orange" if total_score <= 2 else "red"
-        st.markdown(f"""
-        <div style="background-color: {score_color}; padding: 20px; border-radius: 10px; text-align: center;">
-            <h1 style="color: white; margin: 0;">ICH Score: {total_score}</h1>
-            <p style="color: white; margin: 0; font-size: 1.2rem;">(0-6 điểm)</p>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        st.markdown("<br>", unsafe_allow_html=True)
-        
         # Mortality prediction
         mortality_data = {
-            0: {"rate": "0%", "desc": "Rất thấp", "color": "🟢"},
-            1: {"rate": "13%", "desc": "Thấp", "color": "🟡"},
-            2: {"rate": "26%", "desc": "Trung bình", "color": "🟠"},
-            3: {"rate": "72%", "desc": "Cao", "color": "🔴"},
-            4: {"rate": "97%", "desc": "Rất cao", "color": "🔴"},
-            5: {"rate": "100%", "desc": "Cực cao", "color": "⚫"},
-            6: {"rate": "100%", "desc": "Cực cao", "color": "⚫"}
+            0: {"rate": "0%", "desc": "Rất thấp", "color": "#28a745", "icon": "🟢"},
+            1: {"rate": "13%", "desc": "Thấp", "color": "#ffc107", "icon": "🟡"},
+            2: {"rate": "26%", "desc": "Trung bình", "color": "#fd7e14", "icon": "🟠"},
+            3: {"rate": "72%", "desc": "Cao", "color": "#dc3545", "icon": "🔴"},
+            4: {"rate": "97%", "desc": "Rất cao", "color": "#dc3545", "icon": "🔴"},
+            5: {"rate": "100%", "desc": "Cực cao", "color": "#6c757d", "icon": "⚫"},
+            6: {"rate": "100%", "desc": "Cực cao", "color": "#6c757d", "icon": "⚫"}
         }
         
         mortality = mortality_data[total_score]
         
-        col1, col2, col3 = st.columns(3)
+        # Use render_score_result for main score display
+        render_score_result(
+            title="ICH Score",
+            score=total_score,
+            interpretation=f"{mortality['desc']} - {mortality['rate']} tử vong 30 ngày",
+            mortality=f"Tỷ lệ tử vong: {mortality['rate']}",
+            color=mortality["color"],
+            icon=mortality["icon"],
+            size="large"
+        )
         
-        with col1:
-            st.metric("Tỷ lệ tử vong 30 Ngày", mortality["rate"])
-        
-        with col2:
-            st.metric("Mức độ nguy cơ", mortality["desc"])
-        
-        with col3:
-            st.metric("Điểm Thành phần", f"GCS:{gcs_score} Vol:{volume_score} IVH:{ivh_score} Loc:{location_score} Age:{age_score}")
+        # Use render_score_breakdown for component scores
+        render_score_breakdown(
+            title="Điểm Từng Thành Phần",
+            subscores={
+                "GCS": gcs_score,
+                "Thể tích ICH": volume_score,
+                "Xuất huyết não thất": ivh_score,
+                "Vị trí dưới lều": location_score,
+                "Tuổi ≥80": age_score
+            },
+            total_score=total_score
+        )
         
         st.markdown("---")
         

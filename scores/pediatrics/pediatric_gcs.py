@@ -4,6 +4,7 @@ Pediatric GCS - Pediatric Thang điểm hôn mê Glasgow Calculator
 """
 
 import streamlit as st
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def calculate_pediatric_gcs(eye, verbal, motor, age_group):
@@ -192,36 +193,35 @@ def render():
         # Display result
         st.markdown("## 📊 Kết quả đánh giá")
         
-        # Score display
-        score_color = {
+        # Map color names to hex for render_score_result
+        color_map = {
             "green": "#28a745",
             "orange": "#fd7e14",
             "red": "#dc3545"
-        }[result["color"]]
+        }
+        score_color = color_map[result["color"]]
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'>
-            <h2 style='color: {score_color}; margin: 0; text-align: center;'>
-                Pediatric GCS: {result['total_score']}/15
-            </h2>
-            <p style='text-align: center; font-size: 1.2em; margin: 10px 0;'>
-                E{result['eye_score']} V{result['verbal_score']} M{result['motor_score']}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        # Use render_score_result for main score display
+        render_score_result(
+            title="Pediatric GCS",
+            score=result['total_score'],
+            interpretation=f"{result['severity']} - {result['interpretation']}",
+            mortality=None,
+            color=score_color,
+            icon="👶",
+            size="large"
+        )
         
-        # Component scores
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            st.metric("👁️ Mở mắt", f"{result['eye_score']}/4")
-        
-        with col2:
-            st.metric("🗣️ Lời nói", f"{result['verbal_score']}/5")
-        
-        with col3:
-            st.metric("💪 Vận động", f"{result['motor_score']}/6")
+        # Use render_score_breakdown for component scores
+        render_score_breakdown(
+            title="Điểm Từng Thành Phần",
+            subscores={
+                "👁️ Mở mắt (E)": result['eye_score'],
+                "🗣️ Lời nói (V)": result['verbal_score'],
+                "💪 Vận động (M)": result['motor_score']
+            },
+            total_score=result['total_score']
+        )
         
         st.markdown("---")
         

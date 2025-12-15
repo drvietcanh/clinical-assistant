@@ -35,6 +35,7 @@ from scores.utils.validation import (
     validate_respiratory_rate,
     validate_temperature
 )
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def get_sbp_score(sbp: float) -> int:
@@ -245,36 +246,43 @@ def render():
         # Display result
         st.markdown("### 📊 Kết quả")
         
-        # Total score with color
-        if result["color"] == "success":
-            st.success(f"## MEWS Score: {result['total_score']} điểm")
-        elif result["color"] == "warning":
-            st.warning(f"## MEWS Score: {result['total_score']} điểm")
-        else:
-            st.error(f"## MEWS Score: {result['total_score']} điểm")
+        # Map color names to hex
+        color_map = {
+            "success": "#28a745",  # green
+            "warning": "#fd7e14",  # orange
+            "error": "#dc3545"     # red
+        }
+        icon_map = {
+            "success": "✅",
+            "warning": "⚠️",
+            "error": "🚨"
+        }
+        score_color = color_map[result["color"]]
+        score_icon = icon_map[result["color"]]
         
-        st.markdown(f"**Nguy cơ:** {result['risk_category']}")
-        st.markdown(f"**Hành động:** {result['action']}")
+        # Use render_score_result for main score display
+        render_score_result(
+            title="MEWS Score",
+            score=result['total_score'],
+            interpretation=f"{result['risk_category']} - {result['action']}",
+            mortality=None,
+            color=score_color,
+            icon=score_icon,
+            size="large"
+        )
         
-        st.markdown("---")
-        st.markdown("### 📋 Chi tiết Điểm số")
-        
-        col1, col2, col3, col4, col5 = st.columns(5)
-        
-        with col1:
-            st.metric("Huyết áp", f"{result['sbp_score']}", help=f"SBP: {format_number(sbp)} mmHg")
-        
-        with col2:
-            st.metric("Nhịp tim", f"{result['hr_score']}", help=f"HR: {format_number(hr)} bpm")
-        
-        with col3:
-            st.metric("Nhịp thở", f"{result['resp_score']}", help=f"RR: {format_number(resp_rate)} /phút")
-        
-        with col4:
-            st.metric("Nhiệt độ", f"{result['temp_score']}", help=f"Temp: {format_number(temp)} °C")
-        
-        with col5:
-            st.metric("AVPU", f"{result['avpu_score']}", help=f"AVPU: {avpu}")
+        # Use render_score_breakdown for component scores
+        render_score_breakdown(
+            title="Điểm Từng Thông Số",
+            subscores={
+                "Huyết áp tâm thu": result['sbp_score'],
+                "Nhịp tim": result['hr_score'],
+                "Nhịp thở": result['resp_score'],
+                "Nhiệt độ": result['temp_score'],
+                "AVPU": result['avpu_score']
+            },
+            total_score=result['total_score']
+        )
         
         st.markdown("---")
         st.markdown("### 📖 Bảng Điểm MEWS")

@@ -11,6 +11,7 @@ from scores.utils.validation import (
     validate_blood_pressure,
     validate_respiratory_rate
 )
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def render():
@@ -93,41 +94,73 @@ def render():
             else:
                 details.append("✗ GCS = 15 (0)")
             
+            # Determine risk level and color
+            if score >= 2:
+                risk_level = "CONCERNING FOR SEPSIS"
+                color = "#dc3545"  # red
+                icon = "⚠️"
+                interpretation = """
+                **Action Required:**
+                - Assess for infection source
+                - Consider blood cultures
+                - Start antibiotics if indicated
+                - Monitor closely
+                - Calculate full SOFA score
+                """
+            elif score == 1:
+                risk_level = "Intermediate Risk"
+                color = "#fd7e14"  # orange
+                icon = "⚡"
+                interpretation = """
+                **Consider:**
+                - Close monitoring
+                - Reassess frequently
+                - Look for other sepsis signs
+                """
+            else:
+                risk_level = "Low Risk"
+                color = "#28a745"  # green
+                icon = "✅"
+                interpretation = """
+                **Interpretation:**
+                - Low probability of sepsis
+                - Routine monitoring
+                - Reassess if clinical change
+                """
+            
             with col2:
                 st.markdown("### Kết quả")
                 
-                if score >= 2:
-                    st.error(f"## qSOFA = {score}")
-                    st.error("⚠️ **CONCERNING FOR SEPSIS**")
-                    interpretation = """
-                    **Action Required:**
-                    - Assess for infection source
-                    - Consider blood cultures
-                    - Start antibiotics if indicated
-                    - Monitor closely
-                    - Calculate full SOFA score
-                    """
-                elif score == 1:
-                    st.warning(f"## qSOFA = {score}")
-                    st.warning("⚡ Intermediate Risk")
-                    interpretation = """
-                    **Consider:**
-                    - Close monitoring
-                    - Reassess frequently
-                    - Look for other sepsis signs
-                    """
-                else:
-                    st.success(f"## qSOFA = {score}")
-                    st.success("✅ Low Risk")
-                    interpretation = """
-                    **Interpretation:**
-                    - Low probability of sepsis
-                    - Routine monitoring
-                    - Reassess if clinical change
-                    """
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="qSOFA Score",
+                    score=score,
+                    interpretation=risk_level,
+                    mortality=None,
+                    color=color,
+                    icon=icon,
+                    size="large"
+                )
                 
                 st.markdown(interpretation)
             
+            # Build breakdown of criteria
+            criteria_scores = {}
+            if rr >= 22:
+                criteria_scores["Nhịp thở ≥22"] = 1
+            if sbp <= 100:
+                criteria_scores["HA tâm thu ≤100"] = 1
+            if gcs < 15:
+                criteria_scores["GCS <15"] = 1
+            
+            if criteria_scores:
+                render_score_breakdown(
+                    title="Tiêu Chí qSOFA",
+                    subscores=criteria_scores,
+                    total_score=score
+                )
+            
+            st.markdown("---")
             st.markdown("### Chi tiết")
             for detail in details:
                 st.write(detail)

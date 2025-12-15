@@ -3,6 +3,7 @@ HEART Score Calculator
 """
 
 import streamlit as st
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def render():
@@ -107,31 +108,52 @@ def render():
         if st.button("🧮 Tính HEART Score", type="primary", key="heart_calc"):
             total_score = history + ecg + age + risk + troponin
             
+            # Determine risk level and color
+            if total_score <= 3:
+                risk_level = "Nguy cơ THẤP"
+                mace_risk = "0.9-1.7%"
+                color = "#28a745"  # green
+                icon = "✅"
+            elif total_score <= 6:
+                risk_level = "Nguy cơ TRUNG BÌNH"
+                mace_risk = "12-16.6%"
+                color = "#fd7e14"  # orange
+                icon = "⚠️"
+            else:
+                risk_level = "Nguy cơ CAO"
+                mace_risk = "50-65%"
+                color = "#dc3545"  # red
+                icon = "🚨"
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                if total_score <= 3:
-                    st.success(f"## HEART = {total_score}")
-                    st.success("✅ Nguy cơ THẤP")
-                    mace_risk = "0.9-1.7%"
-                    color = "success"
-                elif total_score <= 6:
-                    st.warning(f"## HEART = {total_score}")
-                    st.warning("⚠️ Nguy cơ TRUNG BÌNH")
-                    mace_risk = "12-16.6%"
-                    color = "warning"
-                else:
-                    st.error(f"## HEART = {total_score}")
-                    st.error("🚨 Nguy cơ CAO")
-                    mace_risk = "50-65%"
-                    color = "error"
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="HEART Score",
+                    score=total_score,
+                    interpretation=risk_level,
+                    mortality=f"MACE 6 tuần: {mace_risk}",
+                    color=color,
+                    icon=icon,
+                    size="large"
+                )
             
-            st.markdown("### 💡 Chi tiết điểm")
-            st.write(f"- **H** (History): {history} điểm")
-            st.write(f"- **E** (ECG): {ecg} điểm")
-            st.write(f"- **A** (Age): {age} điểm")
-            st.write(f"- **R** (Risk factors): {risk} điểm ({num_rf} yếu tố: {', '.join(risk_factors) if risk_factors else 'Không có'})")
-            st.write(f"- **T** (Troponin): {troponin} điểm")
+            # Use render_score_breakdown for component scores
+            render_score_breakdown(
+                title="Chi Tiết Điểm Số",
+                subscores={
+                    "H - History": history,
+                    "E - ECG": ecg,
+                    "A - Age": age,
+                    "R - Risk factors": risk,
+                    "T - Troponin": troponin
+                },
+                total_score=total_score
+            )
+            
+            st.markdown("---")
+            st.markdown(f"**R - Risk factors:** {risk} điểm ({num_rf} yếu tố: {', '.join(risk_factors) if risk_factors else 'Không có'})")
             
             st.markdown("---")
             st.markdown("### 💊 Khuyến cáo xử trí")

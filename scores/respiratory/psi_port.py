@@ -4,6 +4,16 @@ PSI/PORT Score (Pneumonia Severity Index)
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_respiratory_rate,
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_temperature,
+    validate_lab_value,
+    validate_range
+)
+from components.ui.validation import render_validation_errors
 
 
 def render():
@@ -267,6 +277,70 @@ def render():
         st.markdown("---")
         
         if st.button("🧮 Tính PSI/PORT Score", type="primary", use_container_width=True):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_age, age_error = validate_age(age, 0, 120)
+            if not is_valid_age:
+                validation_errors.append(age_error)
+            
+            is_valid_rr, rr_error = validate_respiratory_rate(resp_rate)
+            if not is_valid_rr:
+                validation_errors.append(rr_error)
+            
+            is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+            if not is_valid_sbp:
+                validation_errors.append(sbp_error)
+            
+            is_valid_temp, temp_error = validate_temperature(temp_c, "celsius")
+            if not is_valid_temp:
+                validation_errors.append(temp_error)
+            
+            is_valid_pulse, pulse_error = validate_heart_rate(pulse)
+            if not is_valid_pulse:
+                validation_errors.append(pulse_error)
+            
+            is_valid_ph, ph_error = validate_range(ph, 6.8, 7.8, "pH")
+            if not is_valid_ph:
+                validation_errors.append(ph_error)
+            
+            # Validate BUN
+            if "mmol/L" in bun_unit:
+                is_valid_bun, bun_error = validate_lab_value(bun_input, "Urea (mmol/L)", 0.0, 70.0)
+            else:
+                is_valid_bun, bun_error = validate_lab_value(bun_mgdl, "BUN (mg/dL)", 0.0, 200.0)
+            if not is_valid_bun:
+                validation_errors.append(bun_error)
+            
+            # Validate Sodium
+            is_valid_na, na_error = validate_lab_value(sodium, "Sodium (mEq/L)", 100.0, 180.0)
+            if not is_valid_na:
+                validation_errors.append(na_error)
+            
+            # Validate Glucose
+            if "mmol/L" in glucose_unit:
+                is_valid_glucose, glucose_error = validate_lab_value(glucose_input, "Glucose (mmol/L)", 0.0, 33.0)
+            else:
+                is_valid_glucose, glucose_error = validate_lab_value(glucose_mgdl, "Glucose (mg/dL)", 0.0, 600.0)
+            if not is_valid_glucose:
+                validation_errors.append(glucose_error)
+            
+            # Validate HCT
+            is_valid_hct, hct_error = validate_range(hct, 0.0, 70.0, "Hematocrit (%)")
+            if not is_valid_hct:
+                validation_errors.append(hct_error)
+            
+            # Validate PaO2
+            if pao2_unit == "mmHg":
+                is_valid_pao2, pao2_error = validate_range(pao2_input, 0.0, 150.0, "PaO2 (mmHg)")
+            else:
+                is_valid_pao2, pao2_error = validate_range(pao2_input, 0.0, 20.0, "PaO2 (kPa)")
+            if not is_valid_pao2:
+                validation_errors.append(pao2_error)
+            
+            if validation_errors:
+                render_validation_errors(validation_errors)
+            
             # Calculate score
             score = 0
             details = []

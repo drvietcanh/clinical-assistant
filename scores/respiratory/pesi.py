@@ -4,6 +4,15 @@ Thang điểm đánh giá mức độ nặng và tiên lượng thuyên tắc ph
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_heart_rate,
+    validate_blood_pressure,
+    validate_respiratory_rate,
+    validate_temperature,
+    validate_lab_value
+)
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def render():
@@ -193,6 +202,42 @@ def render():
     st.markdown("---")
     
     if st.button("📊 Tính điểm PESI", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_age, age_error = validate_age(age, 0, 120)
+        if not is_valid_age:
+            validation_errors.append(age_error)
+        
+        is_valid_pulse, pulse_error = validate_heart_rate(pulse)
+        if not is_valid_pulse:
+            validation_errors.append(pulse_error)
+        
+        is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+        if not is_valid_sbp:
+            validation_errors.append(sbp_error)
+        
+        is_valid_rr, rr_error = validate_respiratory_rate(rr)
+        if not is_valid_rr:
+            validation_errors.append(rr_error)
+        
+        if temp_unit == "°C":
+            is_valid_temp, temp_error = validate_temperature(temp_c, "celsius")
+        else:
+            is_valid_temp, temp_error = validate_temperature(temp_f, "fahrenheit")
+        if not is_valid_temp:
+            validation_errors.append(temp_error)
+        
+        is_valid_spo2, spo2_error = validate_lab_value(spo2, "SpO₂ (%)", 0, 100)
+        if not is_valid_spo2:
+            validation_errors.append(spo2_error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         total_score = (age_score + gender_score + cancer_score + heart_failure_score + 
                       lung_score + pulse_score + sbp_score + rr_score + temp_score + 
                       mental_score + spo2_score)
@@ -236,25 +281,53 @@ def render():
             icon = "🚨"
             treatment = "Cần điều trị nội trú, có thể cần ICU"
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h2 style='color: {color}; margin: 0; text-align: center;'>
-                {icon} PESI Class {risk_class} = {total_score} điểm
-            </h2>
-            <p style='text-align: center; font-size: 1.1em; margin-top: 10px;'>
-                {risk_level}
-            </p>
-            <p style='text-align: center; font-size: 1em; margin-top: 10px; color: #6b7280;'>
-                Tỷ lệ tử vong 30 ngày: {mortality}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        # Use render_score_result for main score display
+        render_score_result(
+            title=f"PESI Class {risk_class}",
+            score=total_score,
+            interpretation=risk_level,
+            mortality=f"Tử vong 30 ngày: {mortality}",
+            color=color,
+            icon=icon,
+            size="large"
+        )
         
         st.markdown(f"**Khuyến nghị điều trị:** {treatment}")
         
-        # Chi tiết
-        st.markdown("### 📋 Chi tiết điểm số:")
+        # Build breakdown of component scores
+        component_scores = {}
+        if age_score > 0:
+            component_scores["Tuổi"] = age_score
+        if gender_score > 0:
+            component_scores["Giới tính (Nam)"] = gender_score
+        if cancer_score > 0:
+            component_scores["Ung thư"] = cancer_score
+        if heart_failure_score > 0:
+            component_scores["Suy tim"] = heart_failure_score
+        if lung_score > 0:
+            component_scores["Bệnh phổi mạn"] = lung_score
+        if pulse_score > 0:
+            component_scores["Mạch ≥110"] = pulse_score
+        if sbp_score > 0:
+            component_scores["HA tâm thu <100"] = sbp_score
+        if rr_score > 0:
+            component_scores["Tần số thở ≥30"] = rr_score
+        if temp_score > 0:
+            component_scores["Nhiệt độ <36°C"] = temp_score
+        if mental_score > 0:
+            component_scores["Lú lẫn/Mê sảng"] = mental_score
+        if spo2_score > 0:
+            component_scores["SpO₂ <90%"] = spo2_score
+        
+        if component_scores:
+            render_score_breakdown(
+                title="Chi Tiết Điểm Số",
+                subscores=component_scores,
+                total_score=total_score
+            )
+        
+        st.markdown("---")
+        st.markdown("### 📋 Tất cả thành phần:")
         st.markdown(f"""
         - **Tuổi:** {age_score} điểm (1 điểm/năm)
         - **Giới tính (Nam):** {gender_score} điểm

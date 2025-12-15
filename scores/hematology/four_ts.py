@@ -28,6 +28,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def calculate_4ts_score(
@@ -374,20 +375,38 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết quả")
+        st.markdown("## 📊 Kết quả")
         
-        # Score box
-        col_r1, col_r2 = st.columns([1, 2])
+        # Map color emoji to hex
+        color_map_hex = {
+            "🔴": "#dc3545",
+            "🟡": "#ffc107",
+            "🟢": "#28a745"
+        }
+        score_color = color_map_hex.get(result['color'], "#6c757d")
         
-        with col_r1:
-            st.metric(
-                label="**4Ts Score**",
-                value=f"{result['score']} điểm"
-            )
+        # Use render_score_result for main score display
+        render_score_result(
+            title="4Ts Score",
+            score=result['score'],
+            interpretation=result['probability'],
+            mortality=f"Xác suất HIT: {result['probability_range']}",
+            color=score_color,
+            icon=result['color'],
+            size="large"
+        )
         
-        with col_r2:
-            st.markdown(f"### {result['color']} {result['probability']}")
-            st.markdown(f"**Xác suất HIT: {result['probability_range']}**")
+        # Use render_score_breakdown for component scores
+        render_score_breakdown(
+            title="Điểm Từng Thành Phần",
+            subscores={
+                "1️⃣ Thrombocytopenia": thrombocytopenia_category,
+                "2️⃣ Timing": timing_category,
+                "3️⃣ Thrombosis": thrombosis_category,
+                "4️⃣ oTher causes": other_causes_category
+            },
+            total_score=result['score']
+        )
         
         # Details
         with st.expander("📋 Chi tiết tính điểm", expanded=True):

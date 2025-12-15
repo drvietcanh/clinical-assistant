@@ -4,6 +4,7 @@ Nguy cơ biến chứng trong sốt giảm bạch cầu hạt
 """
 
 import streamlit as st
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def calculate_mascc(burden, hypotension, copd, solid_tumor_fungal, dehydration, outpatient, age):
@@ -99,21 +100,42 @@ def render():
         result = calculate_mascc(burden, hypotension, copd, solid_tumor_fungal, dehydration, outpatient, age)
         
         score_color = "#28a745" if result["color"] == "green" else "#dc3545"
+        icon = "✅" if result["color"] == "green" else "🚨"
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'>
-            <h2 style='color: {score_color}; margin: 0; text-align: center;'>
-                MASCC Score: {result['total_score']}/26
-            </h2>
-        </div>
-        """, unsafe_allow_html=True)
+        st.markdown("## 📊 Kết quả")
+        
+        # Use render_score_result for main score display
+        render_score_result(
+            title="MASCC Risk Index",
+            score=result['total_score'],
+            interpretation=f"Nguy cơ: {result['risk_level']}",
+            mortality=f"Tử vong: {result['mortality']}",
+            color=score_color,
+            icon=icon,
+            size="large"
+        )
+        
+        # Use render_score_breakdown for component scores
+        render_score_breakdown(
+            title="Điểm Từng Thành Phần",
+            subscores={
+                "Mức độ triệu chứng": burden,
+                "Hạ huyết áp": hypotension,
+                "COPD": copd,
+                "U đặc không nhiễm nấm": solid_tumor_fungal,
+                "Mất nước": dehydration,
+                "Khởi phát ngoại trú": outpatient,
+                "Tuổi < 60": age
+            },
+            total_score=result['total_score']
+        )
+        
+        st.markdown("---")
         
         st.markdown(f"""
         <div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'>
-            <h3 style='color: {score_color};'>🎯 Nguy cơ: {result['risk_level']}</h3>
-            <p><strong>Tử vong:</strong> {result['mortality']}</p>
-            <p style='font-size: 1.2em; font-weight: bold;'><strong>Quản lý:</strong> {result['management']}</p>
+            <h3 style='color: {score_color}; margin-top: 0;'>📋 Quản lý khuyến cáo</h3>
+            <p style='font-size: 1.2em; font-weight: bold;'>{result['management']}</p>
         </div>
         """, unsafe_allow_html=True)
         

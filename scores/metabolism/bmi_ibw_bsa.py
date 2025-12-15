@@ -5,6 +5,7 @@ Body Mass Index, Ideal Body Weight, Body Surface Area
 
 import streamlit as st
 import math
+from scores.utils.validation import validate_age, validate_range
 
 
 def calculate_bmi(weight, height_cm):
@@ -126,6 +127,27 @@ def render():
     
     # Calculate button
     if st.button("📊 Tính toán", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_height, height_error = validate_range(height_cm, 100, 250, "Chiều cao (cm)")
+        if not is_valid_height:
+            validation_errors.append(height_error)
+        
+        is_valid_weight, weight_error = validate_range(weight, 20.0, 300.0, "Cân nặng (kg)")
+        if not is_valid_weight:
+            validation_errors.append(weight_error)
+        
+        is_valid_age, age_error = validate_age(age, 0, 120)
+        if not is_valid_age:
+            validation_errors.append(age_error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         # Calculate all metrics
         bmi = calculate_bmi(weight, height_cm)
         ibw = calculate_ibw(height_cm, gender)

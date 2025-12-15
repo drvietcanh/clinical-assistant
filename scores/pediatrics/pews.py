@@ -4,6 +4,7 @@ Cảnh báo sớm suy giảm trạng thái lâm sàng ở trẻ em
 """
 
 import streamlit as st
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def calculate_pews(behavior, cardiovascular, respiratory):
@@ -134,36 +135,38 @@ def render():
     if st.button("🔬 Tính điểm PEWS", type="primary", use_container_width=True):
         result = calculate_pews(behavior, cardiovascular, respiratory)
         
-        # Display result
+        # Display result using standardized components
         st.markdown("## 📊 Kết quả đánh giá")
         
-        # Score display
-        score_color = {
+        # Map color names to hex for render_score_result
+        color_map = {
             "green": "#28a745",
             "orange": "#fd7e14", 
             "red": "#dc3545"
-        }[result["color"]]
+        }
+        score_color = color_map[result["color"]]
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'>
-            <h2 style='color: {score_color}; margin: 0; text-align: center;'>
-                Điểm PEWS: {result['total_score']}
-            </h2>
-        </div>
-        """, unsafe_allow_html=True)
+        # Use render_score_result for main score display
+        render_score_result(
+            title="PEWS Score",
+            score=result['total_score'],
+            interpretation=result['risk_level'],
+            mortality=None,
+            color=score_color,
+            icon="👶",
+            size="large"
+        )
         
-        # Detailed breakdown
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            st.metric("🧠 Hành vi", f"{behavior} điểm")
-        
-        with col2:
-            st.metric("❤️ Tim mạch", f"{cardiovascular} điểm")
-        
-        with col3:
-            st.metric("🫁 Hô hấp", f"{respiratory} điểm")
+        # Use render_score_breakdown for component scores
+        render_score_breakdown(
+            title="Điểm Từng Thành Phần",
+            subscores={
+                "🧠 Hành vi": behavior,
+                "❤️ Tim mạch": cardiovascular,
+                "🫁 Hô hấp": respiratory
+            },
+            total_score=result['total_score']
+        )
         
         st.markdown("---")
         

@@ -24,6 +24,11 @@ Clinical Utility:
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_range,
+    validate_positive
+)
+from components.ui.validation import render_validation_errors
 
 
 def calculate_bode(
@@ -359,6 +364,37 @@ def render():
     
     # Calculate button
     if st.button("🧮 Tính BODE Index", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Weight validation
+        is_valid_weight, weight_error = validate_positive(weight, "Cân nặng")
+        if not is_valid_weight:
+            validation_errors.append(f"Cân nặng: {weight_error}")
+        elif weight < 20.0:
+            validation_errors.append("Cân nặng phải ≥ 20 kg")
+        elif weight > 200.0:
+            validation_errors.append("Cân nặng phải ≤ 200 kg")
+        
+        # Height validation
+        is_valid_height, height_error = validate_range(height, 100, 250, "Chiều cao")
+        if not is_valid_height:
+            validation_errors.append(f"Chiều cao: {height_error}")
+        
+        # FEV1% validation
+        is_valid_fev1, fev1_error = validate_range(fev1_percent, 0.0, 150.0, "FEV1 % predicted")
+        if not is_valid_fev1:
+            validation_errors.append(f"FEV1 % predicted: {fev1_error}")
+        
+        # Walk distance validation
+        is_valid_walk, walk_error = validate_range(walk_distance, 0, 1000, "6-Minute Walk Distance")
+        if not is_valid_walk:
+            validation_errors.append(f"6-Minute Walk Distance: {walk_error}")
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+            return
+        
         result = calculate_bode(
             bmi=bmi,
             fev1_percent=fev1_percent,

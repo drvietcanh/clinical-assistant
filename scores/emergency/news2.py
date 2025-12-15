@@ -37,6 +37,7 @@ from scores.utils.validation import (
     validate_temperature,
     validate_lab_value
 )
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def get_respiration_score(resp_rate: float) -> int:
@@ -442,49 +443,58 @@ def render():
                 temp_unit=temp_unit
             )
             
+            # Determine color and icon based on category
+            if result['category'] == "Very High":
+                color = "#6c757d"  # dark gray
+                icon = "🚨"
+            elif result['category'] == "High":
+                color = "#dc3545"  # red
+                icon = "⚠️"
+            elif result['category'] == "Medium":
+                color = "#fd7e14"  # orange
+                icon = "⚡"
+            elif result['category'] == "Low-Medium":
+                color = "#ffc107"  # yellow
+                icon = "⚡"
+            else:
+                color = "#28a745"  # green
+                icon = "✅"
+            
             with col2:
                 st.markdown("### Kết quả")
                 
-                # Display score based on category
-                if result['category'] == "Very High":
-                    st.error(f"## NEWS2 = {result['total_score']}")
-                    st.error(f"⚠️ **{result['risk_level'].upper()}**")
-                    st.error("**BÁO ĐỘNG KHẨN CẤP**")
-                elif result['category'] == "High":
-                    st.error(f"## NEWS2 = {result['total_score']}")
-                    st.error(f"⚠️ **{result['risk_level']}**")
-                elif result['category'] == "Medium":
-                    st.warning(f"## NEWS2 = {result['total_score']}")
-                    st.warning(f"⚡ **{result['risk_level']}**")
-                elif result['category'] == "Low-Medium":
-                    st.warning(f"## NEWS2 = {result['total_score']}")
-                    st.warning(f"⚡ **{result['risk_level']}**")
-                else:
-                    st.success(f"## NEWS2 = {result['total_score']}")
-                    st.success(f"✅ **{result['risk_level']}**")
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="NEWS2 Score",
+                    score=result['total_score'],
+                    interpretation=result['risk_level'],
+                    mortality=None,
+                    color=color,
+                    icon=icon,
+                    size="large"
+                )
                 
                 st.markdown(result['action_plan'])
             
+            # Use render_score_breakdown for component scores
+            render_score_breakdown(
+                title="Điểm Từng Thông Số",
+                subscores={
+                    "Nhịp thở": result['subscores']['respiration'],
+                    "SpO₂": result['subscores']['oxygen_saturation'],
+                    "Huyết áp tâm thu": result['subscores']['blood_pressure'],
+                    "Nhịp tim": result['subscores']['pulse_rate'],
+                    "Mức độ tỉnh táo": result['subscores']['consciousness'],
+                    "Nhiệt độ": result['subscores']['temperature'],
+                    "Oxy hỗ trợ": result['subscores']['supplemental_oxygen']
+                },
+                total_score=result['total_score']
+            )
+            
+            st.markdown("---")
             st.markdown("### Chi tiết điểm số")
             for detail in result['details']:
                 st.markdown(detail)
-            
-            # Summary table
-            st.markdown("### Tóm tắt điểm số")
-            summary_data = {
-                "Thông số": ["Nhịp thở", "SpO₂", "Huyết áp tâm thu", "Nhịp tim", 
-                           "Mức độ tỉnh táo", "Nhiệt độ", "Oxy hỗ trợ"],
-                "Điểm": [
-                    result['subscores']['respiration'],
-                    result['subscores']['oxygen_saturation'],
-                    result['subscores']['blood_pressure'],
-                    result['subscores']['pulse_rate'],
-                    result['subscores']['consciousness'],
-                    result['subscores']['temperature'],
-                    result['subscores']['supplemental_oxygen']
-                ]
-            }
-            st.table(summary_data)
             
             # Export section
             st.markdown("---")

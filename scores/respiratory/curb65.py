@@ -10,6 +10,7 @@ from scores.utils.validation import (
     validate_blood_pressure,
     validate_lab_value
 )
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def render():
@@ -106,6 +107,35 @@ def render():
         )
         
         if st.button("🧮 Tính CURB-65", type="primary"):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_age, age_error = validate_age(age, 0, 120)
+            if not is_valid_age:
+                validation_errors.append(age_error)
+            
+            is_valid_rr, rr_error = validate_respiratory_rate(rr)
+            if not is_valid_rr:
+                validation_errors.append(rr_error)
+            
+            is_valid_bp, bp_error = validate_blood_pressure(sbp, dbp)
+            if not is_valid_bp:
+                validation_errors.append(bp_error)
+            
+            # Validate urea
+            if urea_unit == "mmol/L":
+                is_valid_urea, urea_error = validate_lab_value(urea_mmol, "Urea (mmol/L)", 0, 70)
+            else:
+                is_valid_urea, urea_error = validate_lab_value(urea_input, "Urea (mg/dL)", 0, 200)
+            if not is_valid_urea:
+                validation_errors.append(urea_error)
+            
+            if validation_errors:
+                st.error("**⚠️ Lỗi validation:**")
+                for error in validation_errors:
+                    st.error(f"- {error}")
+                st.stop()
+            
             score = 0
             details = []
             
@@ -129,36 +159,74 @@ def render():
                 score += 1
                 details.append(f"✓ Tuổi ≥65 ({age}) (+1)")
             
+            # Determine risk level and color
+            if score == 0:
+                risk_level = "Nguy cơ THẤP"
+                mortality = "0.7%"
+                recommendation = "Điều trị ngoại trú"
+                color = "#28a745"  # green
+                icon = "✅"
+            elif score == 1:
+                risk_level = "Nguy cơ THẤP"
+                mortality = "2.1%"
+                recommendation = "Điều trị ngoại trú hoặc theo dõi ngắn"
+                color = "#17a2b8"  # info blue
+                icon = "💡"
+            elif score == 2:
+                risk_level = "Nguy cơ TRUNG BÌNH"
+                mortality = "9.2%"
+                recommendation = "Cân nhắc nhập viện"
+                color = "#fd7e14"  # orange
+                icon = "⚠️"
+            elif score == 3:
+                risk_level = "Nguy cơ CAO"
+                mortality = "14.5%"
+                recommendation = "Nhập viện, ICU nếu cần"
+                color = "#dc3545"  # red
+                icon = "❗"
+            else:
+                risk_level = "Nguy cơ RẤT CAO"
+                mortality = "40%"
+                recommendation = "Nhập ICU ngay"
+                color = "#6c757d"  # dark gray
+                icon = "🚨"
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                if score == 0:
-                    st.success(f"## CURB-65 = {score}")
-                    st.success("✅ Nguy cơ THẤP")
-                    mortality = "0.7%"
-                    recommendation = "Điều trị ngoại trú"
-                elif score == 1:
-                    st.info(f"## CURB-65 = {score}")
-                    st.info("💡 Nguy cơ THẤP")
-                    mortality = "2.1%"
-                    recommendation = "Điều trị ngoại trú hoặc theo dõi ngắn"
-                elif score == 2:
-                    st.warning(f"## CURB-65 = {score}")
-                    st.warning("⚠️ Nguy cơ TRUNG BÌNH")
-                    mortality = "9.2%"
-                    recommendation = "Cân nhắc nhập viện"
-                elif score == 3:
-                    st.error(f"## CURB-65 = {score}")
-                    st.error("❗ Nguy cơ CAO")
-                    mortality = "14.5%"
-                    recommendation = "Nhập viện, ICU nếu cần"
-                else:
-                    st.error(f"## CURB-65 = {score}")
-                    st.error("🚨 Nguy cơ RẤT CAO")
-                    mortality = "40%"
-                    recommendation = "Nhập ICU ngay"
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="CURB-65 Score",
+                    score=score,
+                    interpretation=risk_level,
+                    mortality=f"Tử vong 30 ngày: {mortality}",
+                    color=color,
+                    icon=icon,
+                    size="large"
+                )
             
-            st.markdown("### 💡 Giải thích")
+            # Build breakdown of criteria
+            criteria_scores = {}
+            if confusion:
+                criteria_scores["C - Confusion"] = 1
+            if urea_high:
+                criteria_scores["U - Urea >7 mmol/L"] = 1
+            if rr >= 30:
+                criteria_scores["R - RR ≥30/phút"] = 1
+            if sbp < 90 or dbp <= 60:
+                criteria_scores["B - BP thấp"] = 1
+            if age >= 65:
+                criteria_scores["65 - Tuổi ≥65"] = 1
+            
+            if criteria_scores:
+                render_score_breakdown(
+                    title="Tiêu Chí Đánh Giá",
+                    subscores=criteria_scores,
+                    total_score=score
+                )
+            
+            st.markdown("---")
+            st.markdown("### 💡 Chi tiết")
             
             if details:
                 for d in details:

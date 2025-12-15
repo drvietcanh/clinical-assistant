@@ -4,6 +4,12 @@ Tính độ thanh thải creatinine - Quan trọng cho điều chỉnh liều th
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_range,
+    validate_lab_value
+)
+from components.ui.validation import render_validation_errors
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -184,6 +190,27 @@ def render():
     
     # Calculate button
     if st.button("🔬 Tính CrCl", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_age, age_error = validate_age(age, 18, 120)
+        if not is_valid_age:
+            validation_errors.append(age_error)
+        
+        is_valid_weight, weight_error = validate_range(weight, 20, 300, "Cân nặng (kg)")
+        if not is_valid_weight:
+            validation_errors.append(weight_error)
+        
+        if creatinine_unit == "µmol/L":
+            is_valid_cr, cr_error = validate_lab_value(creatinine, "Creatinine (µmol/L)", 10.0, 2000.0)
+        else:
+            is_valid_cr, cr_error = validate_lab_value(creatinine, "Creatinine (mg/dL)", 0.1, 25.0)
+        if not is_valid_cr:
+            validation_errors.append(cr_error)
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+        
         # Calculate CrCl
         crcl = calculate_crcl(age, weight_to_use, creatinine, gender, creatinine_unit)
         

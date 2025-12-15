@@ -4,6 +4,7 @@ Dự đoán đặt nội khí quản khó
 """
 
 import streamlit as st
+from scores.utils.anesthesia_validation import validate_wilson_score
 
 
 def calculate_wilson_risk(weight, head_neck_movement, jaw_movement, receding_mandible, buck_teeth):
@@ -154,40 +155,48 @@ def render():
     
     st.markdown("---")
     
-    if st.button("🔍 Tính toán", type="primary", use_container_width=True):
-        result = calculate_wilson_risk(weight, head_neck_movement, jaw_movement, receding_mandible, buck_teeth)
+    if st.button("🔬 Tính điểm Wilson Risk", type="primary", use_container_width=True):
+        # Validation
+        is_valid, error_msg = validate_wilson_score(weight, head_neck_movement, jaw_movement, receding_mandible, buck_teeth)
         
-        # Display results
-        col1, col2 = st.columns(2)
+        if not is_valid:
+            st.error(f"❌ Lỗi: {error_msg}")
+            return
         
-        with col1:
-            st.metric("Tổng điểm", f"{result['total_score']}/10")
-        
-        with col2:
-            st.metric("Nguy cơ", result['risk'])
-        
-        st.markdown("---")
-        
-        # Risk interpretation
-        if result['color'] == "green":
-            st.success(f"**{result['risk']}** - {result['difficulty']}")
-        elif result['color'] == "orange":
-            st.warning(f"**{result['risk']}** - {result['difficulty']}")
-        else:
-            st.error(f"**{result['risk']}** - {result['difficulty']}")
-        
-        st.markdown("---")
-        
-        st.subheader("💡 Khuyến nghị")
-        st.markdown(f"""
-        {result['recommendation']}
-        """)
-        
-        st.markdown("---")
-        
-        # Additional information
-        with st.expander("📚 Dụng cụ đường thở khó"):
-            st.markdown("""
+        try:
+            result = calculate_wilson_risk(weight, head_neck_movement, jaw_movement, receding_mandible, buck_teeth)
+            
+            # Display results
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.metric("Tổng điểm", f"{result['total_score']}/10")
+            
+            with col2:
+                st.metric("Nguy cơ", result['risk'])
+            
+            st.markdown("---")
+            
+            # Risk interpretation
+            if result['color'] == "green":
+                st.success(f"**{result['risk']}** - {result['difficulty']}")
+            elif result['color'] == "orange":
+                st.warning(f"**{result['risk']}** - {result['difficulty']}")
+            else:
+                st.error(f"**{result['risk']}** - {result['difficulty']}")
+            
+            st.markdown("---")
+            
+            st.subheader("💡 Khuyến nghị")
+            st.markdown(f"""
+            {result['recommendation']}
+            """)
+            
+            st.markdown("---")
+            
+            # Additional information
+            with st.expander("📚 Dụng cụ đường thở khó"):
+                st.markdown("""
             **Chuẩn bị dụng cụ khi nguy cơ cao:**
             
             1. **Video laryngoscope** (Glidescope, C-MAC, etc.)
@@ -214,4 +223,9 @@ def render():
             - Luôn có kế hoạch B và C
             - Thông báo trước cho đội ngũ phẫu thuật
             """)
+        
+        except Exception as e:
+            st.error(f"❌ Lỗi khi tính toán: {str(e)}")
+            st.exception(e)
+            return
 

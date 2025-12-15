@@ -4,6 +4,11 @@ Công thức truyền dịch cho bệnh nhân bỏng
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_range,
+    validate_positive
+)
+from components.ui.validation import render_validation_errors
 
 
 def calculate_parkland(tbsa, weight):
@@ -80,6 +85,27 @@ def render():
     st.markdown("---")
     
     if st.button("💧 Tính lượng dịch", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # TBSA validation (0-100%)
+        is_valid_tbsa, tbsa_error = validate_range(tbsa, 0.0, 100.0, "TBSA (%)")
+        if not is_valid_tbsa:
+            validation_errors.append(f"TBSA: {tbsa_error}")
+        
+        # Weight validation
+        is_valid_weight, weight_error = validate_positive(weight, "Cân nặng")
+        if not is_valid_weight:
+            validation_errors.append(f"Cân nặng: {weight_error}")
+        elif weight < 10.0:
+            validation_errors.append("Cân nặng phải ≥ 10 kg")
+        elif weight > 200.0:
+            validation_errors.append("Cân nặng phải ≤ 200 kg (kiểm tra lại)")
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+            return
+        
         result = calculate_parkland(tbsa, weight)
         
         st.markdown("## 📊 Kết quả - Parkland Formula")

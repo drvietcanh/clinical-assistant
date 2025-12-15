@@ -4,6 +4,7 @@ Phân loại tầm nhìn khi soi thanh quản
 """
 
 import streamlit as st
+from scores.utils.anesthesia_validation import validate_cormack_lehane_grade
 
 
 def get_cormack_lehane_interpretation(grade):
@@ -103,40 +104,48 @@ def render():
     
     st.markdown("---")
     
-    if st.button("🔍 Xem kết quả", type="primary", use_container_width=True):
-        result = get_cormack_lehane_interpretation(grade)
+    if st.button("🔬 Xem kết quả Cormack-Lehane", type="primary", use_container_width=True):
+        # Validation
+        is_valid, error_msg = validate_cormack_lehane_grade(grade)
         
-        # Display results
-        col1, col2 = st.columns(2)
+        if not is_valid:
+            st.error(f"❌ Lỗi: {error_msg}")
+            return
         
-        with col1:
-            st.metric("Grade", f"Grade {grade}")
-        
-        with col2:
-            st.metric("Mức độ khó", result['difficulty'])
-        
-        st.markdown("---")
-        
-        st.subheader("📋 Mô tả")
-        st.info(f"**{result['description']}**")
-        
-        st.markdown("---")
-        
-        # Recommendation
-        if result['color'] == "green":
-            st.success(f"**Khuyến nghị:** {result['recommendation']}")
-        elif result['color'] == "orange":
-            st.warning(f"**Khuyến nghị:** {result['recommendation']}")
-        else:
-            st.error(f"**Khuyến nghị:** {result['recommendation']}")
-        
-        st.markdown("---")
-        
-        # Additional information based on grade
-        if grade >= 3:
-            with st.expander("🔧 Dụng cụ hỗ trợ cho Grade 3-4"):
-                st.markdown("""
-                **Khi gặp Grade 3-4, cần chuẩn bị:**
+        try:
+            result = get_cormack_lehane_interpretation(grade)
+            
+            # Display results
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.metric("Grade", f"Grade {grade}")
+            
+            with col2:
+                st.metric("Mức độ khó", result['difficulty'])
+            
+            st.markdown("---")
+            
+            st.subheader("📋 Mô tả")
+            st.info(f"**{result['description']}**")
+            
+            st.markdown("---")
+            
+            # Recommendation
+            if result['color'] == "green":
+                st.success(f"**Khuyến nghị:** {result['recommendation']}")
+            elif result['color'] == "orange":
+                st.warning(f"**Khuyến nghị:** {result['recommendation']}")
+            else:
+                st.error(f"**Khuyến nghị:** {result['recommendation']}")
+            
+            st.markdown("---")
+            
+            # Additional information based on grade
+            if grade >= 3:
+                with st.expander("🔧 Dụng cụ hỗ trợ cho Grade 3-4"):
+                    st.markdown("""
+                    **Khi gặp Grade 3-4, cần chuẩn bị:**
                 
                 1. **Bougie (Gum elastic bougie)**
                    - Đưa vào dưới nắp thanh môn
@@ -166,19 +175,24 @@ def render():
                 - Grade 3: Thử bougie trước, nếu không được → video laryngoscope
                 - Grade 4: Video laryngoscope hoặc LMA ngay, chuẩn bị cricothyrotomy
                 """)
+            
+            # Modified classification
+            with st.expander("📊 Modified Cormack-Lehane (POGO)"):
+                st.markdown("""
+                **POGO (Percentage of Glottic Opening)** mô tả chi tiết hơn:
+                
+                - **100%:** Nhìn thấy toàn bộ thanh môn (Grade 1)
+                - **50-99%:** Nhìn thấy >50% thanh môn (Grade 2a)
+                - **1-49%:** Nhìn thấy <50% thanh môn (Grade 2b)
+                - **0%:** Không thấy thanh môn (Grade 3-4)
+                
+                **Ưu điểm:**
+                - Mô tả chính xác hơn mức độ nhìn thấy
+                - Hữu ích trong nghiên cứu và đào tạo
+                """)
         
-        # Modified classification
-        with st.expander("📊 Modified Cormack-Lehane (POGO)"):
-            st.markdown("""
-            **POGO (Percentage of Glottic Opening)** mô tả chi tiết hơn:
-            
-            - **100%:** Nhìn thấy toàn bộ thanh môn (Grade 1)
-            - **50-99%:** Nhìn thấy >50% thanh môn (Grade 2a)
-            - **1-49%:** Nhìn thấy <50% thanh môn (Grade 2b)
-            - **0%:** Không thấy thanh môn (Grade 3-4)
-            
-            **Ưu điểm:**
-            - Mô tả chính xác hơn mức độ nhìn thấy
-            - Hữu ích trong nghiên cứu và đào tạo
-            """)
+        except Exception as e:
+            st.error(f"❌ Lỗi khi tính toán: {str(e)}")
+            st.exception(e)
+            return
 

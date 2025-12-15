@@ -30,6 +30,12 @@ Clinical Utility:
 import streamlit as st
 import math
 from utils.formatters import format_number
+from scores.utils.validation import (
+    validate_blood_pressure,
+    validate_lab_value,
+    validate_range
+)
+from components.ui.validation import render_validation_errors
 
 
 def calculate_pim2(
@@ -259,6 +265,32 @@ def render():
     
     # Calculate
     if st.button("**Tính PIM2 Score**", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Validate systolic BP
+        is_valid_sbp, sbp_error = validate_blood_pressure(systolic_bp)
+        if not is_valid_sbp:
+            validation_errors.append(sbp_error)
+        
+        # Validate base excess
+        is_valid_be, be_error = validate_range(base_excess, -30, 30, "Base excess (mEq/L)")
+        if not is_valid_be:
+            validation_errors.append(be_error)
+        
+        # Validate FIO2
+        is_valid_fio2, fio2_error = validate_range(fio2, 0.21, 1.0, "FIO2")
+        if not is_valid_fio2:
+            validation_errors.append(fio2_error)
+        
+        # Validate PaO2
+        is_valid_pao2, pao2_error = validate_range(pao2, 0, 600, "PaO2 (mmHg)")
+        if not is_valid_pao2:
+            validation_errors.append(pao2_error)
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+        
         result = calculate_pim2(
             systolic_bp,
             pupils_fixed,

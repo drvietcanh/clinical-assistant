@@ -4,6 +4,7 @@ Nguy cơ buồn nôn nôn sau mổ (Postoperative Nausea and Vomiting)
 """
 
 import streamlit as st
+from scores.utils.anesthesia_validation import validate_ponv_risk_factors
 
 
 def calculate_apfel_ponv(female, non_smoker, history_ponv, opioids):
@@ -100,42 +101,50 @@ def render():
     
     st.markdown("---")
     
-    if st.button("🔍 Tính toán", type="primary", use_container_width=True):
-        result = calculate_apfel_ponv(female, non_smoker, history_ponv, opioids)
+    if st.button("🔬 Tính điểm Apfel PONV", type="primary", use_container_width=True):
+        # Validation
+        is_valid, error_msg = validate_ponv_risk_factors(female, non_smoker, history_ponv, opioids)
         
-        # Display results
-        col1, col2 = st.columns(2)
+        if not is_valid:
+            st.error(f"❌ Lỗi: {error_msg}")
+            return
         
-        with col1:
-            st.metric("Số yếu tố nguy cơ", f"{result['risk_factors']}/4")
-        
-        with col2:
-            st.metric("Nguy cơ PONV", f"{result['risk_percentage']}%")
-        
-        st.markdown("---")
-        
-        # Risk interpretation
-        if result['risk_factors'] == 0:
-            st.success(f"**{result['recommendation']}**")
-        elif result['risk_factors'] == 1:
-            st.info(f"**{result['recommendation']}**")
-        elif result['risk_factors'] == 2:
-            st.warning(f"**{result['recommendation']}**")
-        else:
-            st.error(f"**{result['recommendation']}**")
-        
-        st.markdown("---")
-        
-        st.subheader("💊 Khuyến nghị dự phòng")
-        st.markdown(f"""
-        {result['prophylaxis']}
-        """)
-        
-        st.markdown("---")
-        
-        # Additional information
-        with st.expander("📚 Thông tin bổ sung"):
-            st.markdown("""
+        try:
+            result = calculate_apfel_ponv(female, non_smoker, history_ponv, opioids)
+            
+            # Display results
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.metric("Số yếu tố nguy cơ", f"{result['risk_factors']}/4")
+            
+            with col2:
+                st.metric("Nguy cơ PONV", f"{result['risk_percentage']}%")
+            
+            st.markdown("---")
+            
+            # Risk interpretation
+            if result['risk_factors'] == 0:
+                st.success(f"**{result['recommendation']}**")
+            elif result['risk_factors'] == 1:
+                st.info(f"**{result['recommendation']}**")
+            elif result['risk_factors'] == 2:
+                st.warning(f"**{result['recommendation']}**")
+            else:
+                st.error(f"**{result['recommendation']}**")
+            
+            st.markdown("---")
+            
+            st.subheader("💊 Khuyến nghị dự phòng")
+            st.markdown(f"""
+            {result['prophylaxis']}
+            """)
+            
+            st.markdown("---")
+            
+            # Additional information
+            with st.expander("📚 Thông tin bổ sung"):
+                st.markdown("""
             **Thuốc chống nôn thường dùng:**
             
             1. **Ondansetron (5-HT₃ antagonist)**
@@ -163,4 +172,9 @@ def render():
             - Tránh N₂O (nitrous oxide) - làm tăng nguy cơ PONV
             - Đảm bảo đủ dịch truyền (giảm nguy cơ PONV)
             """)
+        
+        except Exception as e:
+            st.error(f"❌ Lỗi khi tính toán: {str(e)}")
+            st.exception(e)
+            return
 

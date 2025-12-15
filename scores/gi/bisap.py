@@ -4,6 +4,11 @@ Tiên lượng viêm tụy cấp - đơn giản, nhanh chóng
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_lab_value
+)
+from components.ui.validation import render_validation_errors
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -265,6 +270,50 @@ def render():
     
     # Calculate button
     if st.button("📊 Tính BISAP Score", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Validate BUN
+        if bun_unit == "mmol/L":
+            is_valid_bun, bun_error = validate_lab_value(bun_mmol, "BUN (mmol/L)", 0.0, 70.0)
+        else:
+            is_valid_bun, bun_error = validate_lab_value(bun, "BUN (mg/dL)", 0.0, 200.0)
+        if not is_valid_bun:
+            validation_errors.append(bun_error)
+        
+        # Validate GCS
+        from scores.utils.validation import validate_gcs
+        is_valid_gcs, gcs_error = validate_gcs(gcs)
+        if not is_valid_gcs:
+            validation_errors.append(gcs_error)
+        
+        # Validate vital signs
+        from scores.utils.validation import validate_temperature, validate_heart_rate, validate_respiratory_rate
+        is_valid_temp, temp_error = validate_temperature(temp, "celsius")
+        if not is_valid_temp:
+            validation_errors.append(temp_error)
+        
+        is_valid_hr, hr_error = validate_heart_rate(hr)
+        if not is_valid_hr:
+            validation_errors.append(hr_error)
+        
+        is_valid_rr, rr_error = validate_respiratory_rate(rr)
+        if not is_valid_rr:
+            validation_errors.append(rr_error)
+        
+        # Validate WBC
+        is_valid_wbc, wbc_error = validate_lab_value(wbc, "WBC (×10³/µL)", 0.0, 50.0)
+        if not is_valid_wbc:
+            validation_errors.append(wbc_error)
+        
+        # Validate age
+        is_valid_age, age_error = validate_age(age, 0, 120)
+        if not is_valid_age:
+            validation_errors.append(age_error)
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+        
         # Calculate total score
         bisap_score = sum([
             bun_positive,
@@ -303,20 +352,39 @@ def render():
         # Display results
         st.markdown("## 📊 Kết quả")
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 40px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h1 style='color: {color}; margin: 0; text-align: center; font-size: 3em;'>
-                {icon} BISAP = {bisap_score}
-            </h1>
-            <p style='text-align: center; font-size: 1.3em; margin-top: 15px; font-weight: bold;'>
-                Viêm tụy cấp {severity}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        # Use render_score_result for main score display
+        render_score_result(
+            title="BISAP Score",
+            score=bisap_score,
+            interpretation=f"Viêm tụy cấp {severity}",
+            mortality=f"Tử vong: {mortality}",
+            color=color,
+            icon=icon,
+            size="large"
+        )
         
-        # Chi tiết
-        st.markdown("### 📋 Chi tiết điểm số:")
+        # Build breakdown of component scores
+        component_scores = {}
+        if bun_positive:
+            component_scores["B - BUN >25"] = 1
+        if mental_impaired or (gcs < 15):
+            component_scores["I - Rối loạn ý thức"] = 1
+        if sirs_positive:
+            component_scores["S - SIRS ≥2"] = 1
+        if age_positive:
+            component_scores["A - Tuổi >60"] = 1
+        if pleural:
+            component_scores["P - Tràn dịch MP"] = 1
+        
+        if component_scores:
+            render_score_breakdown(
+                title="Tiêu Chí BISAP",
+                subscores=component_scores,
+                total_score=bisap_score
+            )
+        
+        st.markdown("---")
+        st.markdown("### 📋 Chi tiết:")
         
         components = []
         if bun_positive:

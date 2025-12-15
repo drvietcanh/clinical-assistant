@@ -4,6 +4,7 @@ Nguy cơ buồn nôn nôn sau mổ - Phiên bản mở rộng
 """
 
 import streamlit as st
+from scores.utils.anesthesia_validation import validate_surgery_duration
 
 
 def calculate_koivuranta_ponv(female, non_smoker, history_ponv, duration_surgery, type_anesthesia):
@@ -133,56 +134,69 @@ def render():
     
     st.markdown("---")
     
-    if st.button("🔍 Tính toán", type="primary", use_container_width=True):
-        result = calculate_koivuranta_ponv(female, non_smoker, history_ponv, duration_surgery, type_anesthesia)
+    if st.button("🔬 Tính điểm Koivuranta PONV", type="primary", use_container_width=True):
+        # Validation
+        is_valid, error_msg = validate_surgery_duration(duration_surgery)
         
-        # Display results
-        col1, col2 = st.columns(2)
+        if not is_valid:
+            st.error(f"❌ Lỗi: {error_msg}")
+            return
         
-        with col1:
-            st.metric("Số yếu tố nguy cơ", f"{result['risk_factors']}/5")
+        try:
+            result = calculate_koivuranta_ponv(female, non_smoker, history_ponv, duration_surgery, type_anesthesia)
+            
+            # Display results
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.metric("Số yếu tố nguy cơ", f"{result['risk_factors']}/5")
+            
+            with col2:
+                st.metric("Nguy cơ PONV", f"{result['risk_percentage']}%")
+            
+            st.markdown("---")
+            
+            # Risk interpretation
+            if result['risk_factors'] <= 1:
+                st.success(f"**{result['recommendation']}**")
+            elif result['risk_factors'] == 2:
+                st.info(f"**{result['recommendation']}**")
+            elif result['risk_factors'] == 3:
+                st.warning(f"**{result['recommendation']}**")
+            else:
+                st.error(f"**{result['recommendation']}**")
+            
+            st.markdown("---")
+            
+            st.subheader("💊 Khuyến nghị dự phòng")
+            st.markdown(f"""
+            {result['prophylaxis']}
+            """)
+            
+            st.markdown("---")
+            
+            # Show which factors are present
+            st.subheader("📋 Yếu tố nguy cơ hiện tại")
+            factors_list = []
+            if female:
+                factors_list.append("✅ Nữ giới")
+            if non_smoker:
+                factors_list.append("✅ Không hút thuốc")
+            if history_ponv:
+                factors_list.append("✅ Tiền sử PONV")
+            if duration_surgery >= 60:
+                factors_list.append(f"✅ Thời gian phẫu thuật ≥60 phút ({duration_surgery} phút)")
+            if type_anesthesia == 1:
+                factors_list.append("✅ Gây mê toàn thân")
+            
+            if factors_list:
+                for factor in factors_list:
+                    st.markdown(f"- {factor}")
+            else:
+                st.markdown("- Không có yếu tố nguy cơ")
         
-        with col2:
-            st.metric("Nguy cơ PONV", f"{result['risk_percentage']}%")
-        
-        st.markdown("---")
-        
-        # Risk interpretation
-        if result['risk_factors'] <= 1:
-            st.success(f"**{result['recommendation']}**")
-        elif result['risk_factors'] == 2:
-            st.info(f"**{result['recommendation']}**")
-        elif result['risk_factors'] == 3:
-            st.warning(f"**{result['recommendation']}**")
-        else:
-            st.error(f"**{result['recommendation']}**")
-        
-        st.markdown("---")
-        
-        st.subheader("💊 Khuyến nghị dự phòng")
-        st.markdown(f"""
-        {result['prophylaxis']}
-        """)
-        
-        st.markdown("---")
-        
-        # Show which factors are present
-        st.subheader("📋 Yếu tố nguy cơ hiện tại")
-        factors_list = []
-        if female:
-            factors_list.append("✅ Nữ giới")
-        if non_smoker:
-            factors_list.append("✅ Không hút thuốc")
-        if history_ponv:
-            factors_list.append("✅ Tiền sử PONV")
-        if duration_surgery >= 60:
-            factors_list.append(f"✅ Thời gian phẫu thuật ≥60 phút ({duration_surgery} phút)")
-        if type_anesthesia == 1:
-            factors_list.append("✅ Gây mê toàn thân")
-        
-        if factors_list:
-            for factor in factors_list:
-                st.markdown(f"- {factor}")
-        else:
-            st.markdown("- Không có yếu tố nguy cơ")
+        except Exception as e:
+            st.error(f"❌ Lỗi khi tính toán: {str(e)}")
+            st.exception(e)
+            return
 

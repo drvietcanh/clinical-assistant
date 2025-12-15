@@ -32,6 +32,7 @@ Output:
 
 import streamlit as st
 import math
+from components.ui.results import render_result_box, render_result_card
 
 
 def calculate_ascvd_male_white(
@@ -444,21 +445,31 @@ def render():
                     category_vn = result['category_vn']
                     color = result['color']
                     
-                    # Display risk with appropriate color
-                    if color == "error":
-                        st.error(f"## {risk_percent:.1f}%")
-                        st.error(f"⚠️ **Nguy cơ {category_vn}**")
-                    elif color == "warning":
-                        st.warning(f"## {risk_percent:.1f}%")
-                        st.warning(f"⚡ **Nguy cơ {category_vn}**")
-                    elif color == "info":
-                        st.info(f"## {risk_percent:.1f}%")
-                        st.info(f"💡 **Nguy cơ {category_vn}**")
-                    else:
-                        st.success(f"## {risk_percent:.1f}%")
-                        st.success(f"✅ **Nguy cơ {category_vn}**")
+                    # Map color names to component colors
+                    color_map = {
+                        "error": "error",
+                        "warning": "warning",
+                        "info": "info",
+                        "success": "success"
+                    }
+                    icon_map = {
+                        "error": "⚠️",
+                        "warning": "⚡",
+                        "info": "💡",
+                        "success": "✅"
+                    }
+                    component_color = color_map.get(color, "info")
+                    component_icon = icon_map.get(color, "💡")
                     
-                    st.markdown(f"**Nguy cơ 10 năm mắc ASCVD**")
+                    # Use render_result_box for risk percentage display
+                    render_result_box(
+                        title="Nguy cơ 10 năm mắc ASCVD",
+                        value=f"{risk_percent:.1f}%",
+                        subtitle=f"Nguy cơ {category_vn}",
+                        color=component_color,
+                        icon=component_icon,
+                        size="large"
+                    )
                     
                     st.markdown("---")
                     st.markdown("### Khuyến nghị")

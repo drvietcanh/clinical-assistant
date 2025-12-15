@@ -14,6 +14,8 @@ Arch Intern Med. 1990;150(2):311-3.
 """
 
 import streamlit as st
+from scores.utils.validation import validate_lab_value
+from components.ui.validation import render_validation_errors
 
 
 def render():
@@ -97,6 +99,29 @@ def render():
         st.markdown("---")
         
         if st.button("🧮 Tính Anion Gap", type="primary", use_container_width=True):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_na, na_error = validate_lab_value(na, "Sodium (mEq/L)", 100.0, 180.0)
+            if not is_valid_na:
+                validation_errors.append(na_error)
+            
+            is_valid_cl, cl_error = validate_lab_value(cl, "Chloride (mEq/L)", 70.0, 130.0)
+            if not is_valid_cl:
+                validation_errors.append(cl_error)
+            
+            is_valid_hco3, hco3_error = validate_lab_value(hco3, "Bicarbonate (mEq/L)", 5.0, 50.0)
+            if not is_valid_hco3:
+                validation_errors.append(hco3_error)
+            
+            if adjust_for_albumin:
+                is_valid_alb, alb_error = validate_lab_value(albumin, "Albumin (g/dL)", 1.0, 6.0)
+                if not is_valid_alb:
+                    validation_errors.append(alb_error)
+            
+            if validation_errors:
+                render_validation_errors(validation_errors)
+            
             # Calculate AG
             ag = na - (cl + hco3)
             

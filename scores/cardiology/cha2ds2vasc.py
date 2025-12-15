@@ -6,6 +6,9 @@ Stroke risk assessment in atrial fibrillation
 import streamlit as st
 from scores.references_config import get_references
 from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
@@ -13,46 +16,75 @@ def render():
     st.subheader("❤️ CHA₂DS₂-VASc Score")
     st.caption("Đánh giá Nguy cơ Đột Quỵ Trong Rung Nhĩ")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'cha2ds2vasc':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        # Pre-fill inputs from shared result (optional)
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     col1, col2 = st.columns([2, 1])
     
     with col1:
         st.markdown("### 📋 Tiêu chí Đánh giá")
         
+        # Pre-fill from shared result if available
+        shared_inputs = st.session_state.get('shared_inputs', {})
+        
         chf = st.checkbox(
             "**C** - Suy tim sung huyết / Rối loạn chức năng thất trái",
-            help="Tiền sử suy tim hoặc EF <40%"
+            help="Tiền sử suy tim hoặc EF <40%",
+            value=shared_inputs.get('CHF') == 'Có' if shared_inputs else False
         )
         
         htn = st.checkbox(
             "**H** - Tăng huyết áp",
-            help="Đang điều trị tăng huyết áp hoặc BP >140/90 mmHg"
+            help="Đang điều trị tăng huyết áp hoặc BP >140/90 mmHg",
+            value=shared_inputs.get('Hypertension') == 'Có' if shared_inputs else False
         )
         
         age_group = st.radio(
             "**A** - Tuổi",
             ["< 65 tuổi", "65-74 tuổi", "≥ 75 tuổi"],
-            horizontal=True
+            horizontal=True,
+            index=0 if not shared_inputs else ["< 65 tuổi", "65-74 tuổi", "≥ 75 tuổi"].index(shared_inputs.get('Age Group', "< 65 tuổi")) if shared_inputs.get('Age Group') in ["< 65 tuổi", "65-74 tuổi", "≥ 75 tuổi"] else 0
         )
         
         dm = st.checkbox(
             "**D** - Đái tháo đường",
-            help="Đang điều trị hoặc HbA1c ≥6.5%"
+            help="Đang điều trị hoặc HbA1c ≥6.5%",
+            value=shared_inputs.get('Diabetes') == 'Có' if shared_inputs else False
         )
         
         stroke = st.checkbox(
             "**S** - Tiền sử Đột quỵ / TIA / Huyết khối",
-            help="Đột quỵ, TIA hoặc tắc mạch hệ thống trước đây"
+            help="Đột quỵ, TIA hoặc tắc mạch hệ thống trước đây",
+            value=shared_inputs.get('Stroke/TIA') == 'Có' if shared_inputs else False
         )
         
         vasc = st.checkbox(
             "**V** - Bệnh mạch máu",
-            help="Nhồi máu cơ tim, bệnh động mạch ngoại biên, plaque động mạch chủ"
+            help="Nhồi máu cơ tim, bệnh động mạch ngoại biên, plaque động mạch chủ",
+            value=shared_inputs.get('Vascular Disease') == 'Có' if shared_inputs else False
         )
         
         sex = st.radio(
             "**Sc** - Giới tính",
             ["Nam", "Nữ"],
-            horizontal=True
+            horizontal=True,
+            index=0 if not shared_inputs else (1 if shared_inputs.get('Sex') == 'Nữ' else 0)
+        )
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="cha2ds2vasc",
+            calculator_name="CHA₂DS₂-VASc Score",
+            category="Tim Mạch",
+            show_related=True,
+            show_category=True,
+            limit=3
         )
         
         if st.button("🧮 Tính Điểm", type="primary", key="cha2ds2vasc_calc"):
@@ -183,6 +215,28 @@ def render():
                 calculator_name="CHA₂DS₂-VASc Score",
                 filename="cha2ds2vasc_result"
             )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="cha2ds2vasc",
+                calculator_name="CHA₂DS₂-VASc Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="cha2ds2vasc",
+                calculator_name="CHA₂DS₂-VASc Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="cha2ds2vasc", show_actions=True)
             
             # References section
             references = get_references("CHA2DS2-VASc")

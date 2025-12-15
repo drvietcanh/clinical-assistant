@@ -5,6 +5,7 @@ Tính QT điều chỉnh theo nhịp tim
 
 import streamlit as st
 import math
+from scores.utils.validation import validate_heart_rate, validate_range
 
 
 def calculate_qtc_bazett(qt_ms, hr):
@@ -262,6 +263,28 @@ def render():
         )
     
     if st.button("📈 Tính QTc", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Validate QT interval
+        if qt_unit == "milliseconds (ms)":
+            is_valid_qt, qt_error = validate_range(qt_input, 200.0, 800.0, "QT Interval (ms)")
+        else:
+            is_valid_qt, qt_error = validate_range(qt_input, 0.20, 0.80, "QT Interval (s)")
+        if not is_valid_qt:
+            validation_errors.append(qt_error)
+        
+        # Validate heart rate
+        is_valid_hr, hr_error = validate_heart_rate(hr)
+        if not is_valid_hr:
+            validation_errors.append(hr_error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+        
         # Calculate QTc based on selected formula
         if "Bazett" in formula:
             qtc = calculate_qtc_bazett(qt_ms, hr)

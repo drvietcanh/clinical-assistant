@@ -10,6 +10,16 @@ Crit Care Med. 2013;41(7):1761-1773.
 
 import streamlit as st
 import math
+from scores.utils.validation import (
+    validate_age,
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_gcs,
+    validate_lab_value,
+    validate_range,
+    validate_positive
+)
+from components.ui.validation import render_validation_errors
 
 
 def calculate_pelod2(
@@ -427,6 +437,92 @@ def render():
     
     # Calculate score
     if st.button("🧮 Tính PELOD-2", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Age validation (0-216 months = 0-18 years)
+        is_valid_age, age_error = validate_age(age_months, 0, 216)
+        if not is_valid_age:
+            validation_errors.append(f"Tuổi (tháng): {age_error}")
+        
+        # Weight validation
+        is_valid_weight, weight_error = validate_positive(weight_kg, "Cân nặng")
+        if not is_valid_weight:
+            validation_errors.append(f"Cân nặng: {weight_error}")
+        elif weight_kg < 0.5:
+            validation_errors.append("Cân nặng phải ≥ 0.5 kg")
+        elif weight_kg > 100.0:
+            validation_errors.append("Cân nặng phải ≤ 100 kg (kiểm tra lại)")
+        
+        # GCS validation
+        is_valid_gcs, gcs_error = validate_gcs(gcs)
+        if not is_valid_gcs:
+            validation_errors.append(f"GCS: {gcs_error}")
+        
+        # Heart rate validation
+        is_valid_hr, hr_error = validate_heart_rate(heart_rate)
+        if not is_valid_hr:
+            validation_errors.append(f"Nhịp tim: {hr_error}")
+        
+        # SBP validation
+        is_valid_sbp, sbp_error = validate_blood_pressure(systolic_bp)
+        if not is_valid_sbp:
+            validation_errors.append(f"Huyết áp tâm thu: {sbp_error}")
+        
+        # Lactate validation
+        is_valid_lactate, lactate_error = validate_lab_value(lactate, "Lactate", 0.0, 20.0)
+        if not is_valid_lactate:
+            validation_errors.append(f"Lactate: {lactate_error}")
+        
+        # Vasoactive drugs validation
+        is_valid_vaso, vaso_error = validate_range(vasoactive_drugs, 0, 5, "Số thuốc vận mạch")
+        if not is_valid_vaso:
+            validation_errors.append(f"Số thuốc vận mạch: {vaso_error}")
+        
+        # Creatinine validation
+        is_valid_cr, cr_error = validate_lab_value(creatinine, "Creatinine", 0.1, 10.0)
+        if not is_valid_cr:
+            validation_errors.append(f"Creatinine: {cr_error}")
+        
+        # Creatinine percentile validation
+        is_valid_cr_percentile, cr_percentile_error = validate_range(creatinine_percentile, 0, 100, "Creatinine percentile")
+        if not is_valid_cr_percentile:
+            validation_errors.append(f"Creatinine percentile: {cr_percentile_error}")
+        
+        # PaO2/FiO2 validation
+        is_valid_pao2_fio2, pao2_fio2_error = validate_lab_value(pao2_fio2, "PaO₂/FiO₂", 0, 600)
+        if not is_valid_pao2_fio2:
+            validation_errors.append(f"PaO₂/FiO₂: {pao2_fio2_error}")
+        
+        # Platelets validation
+        is_valid_platelets, platelets_error = validate_lab_value(platelets, "Tiểu cầu", 0, 1000)
+        if not is_valid_platelets:
+            validation_errors.append(f"Tiểu cầu: {platelets_error}")
+        
+        # WBC validation
+        is_valid_wbc, wbc_error = validate_lab_value(wbc, "Bạch cầu", 0.0, 50.0)
+        if not is_valid_wbc:
+            validation_errors.append(f"Bạch cầu: {wbc_error}")
+        
+        # D-dimer validation
+        is_valid_ddimer, ddimer_error = validate_lab_value(d_dimer, "D-dimer", 0.0, 10.0)
+        if not is_valid_ddimer:
+            validation_errors.append(f"D-dimer: {ddimer_error}")
+        
+        # Bilirubin validation
+        is_valid_bili, bili_error = validate_lab_value(bilirubin, "Bilirubin", 0.0, 30.0)
+        if not is_valid_bili:
+            validation_errors.append(f"Bilirubin: {bili_error}")
+        
+        # PT/INR validation
+        is_valid_inr, inr_error = validate_lab_value(pt_inr, "PT/INR", 0.5, 10.0)
+        if not is_valid_inr:
+            validation_errors.append(f"PT/INR: {inr_error}")
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+            return
+        
         result = calculate_pelod2(
             neurologic_score,
             cardiovascular_score,

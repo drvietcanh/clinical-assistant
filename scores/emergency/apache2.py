@@ -335,11 +335,9 @@ def render():
         if not is_valid_cr:
             validation_errors.append(cr_error)
         
-        if validation_errors:
-            st.error("**⚠️ Lỗi validation:**")
-            for error in validation_errors:
-                st.error(f"- {error}")
-            st.stop()
+            if validation_errors:
+                from components.ui.validation import render_validation_errors
+                render_validation_errors(validation_errors)
         
         params = {
             'age': age,

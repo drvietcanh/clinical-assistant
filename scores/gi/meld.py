@@ -18,6 +18,8 @@ import streamlit as st
 import math
 from scores.references_config import get_references
 from components.references import render_references_section
+from scores.utils.validation import validate_lab_value
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -185,6 +187,36 @@ def render():
         st.markdown("---")
         
         if st.button("🧮 Tính MELD Score", type="primary", use_container_width=True):
+            # Validate inputs
+            validation_errors = []
+            
+            # Validate bilirubin
+            if "mg/dL" in bili_unit:
+                is_valid_bili, bili_error = validate_lab_value(bili, "Bilirubin (mg/dL)", 0.1, 30.0)
+            else:
+                is_valid_bili, bili_error = validate_lab_value(bili, "Bilirubin (µmol/L)", 0, 500)
+            if not is_valid_bili:
+                validation_errors.append(bili_error)
+            
+            # Validate INR
+            is_valid_inr, inr_error = validate_lab_value(inr, "INR", 0.8, 10.0)
+            if not is_valid_inr:
+                validation_errors.append(inr_error)
+            
+            # Validate creatinine
+            if "µmol/L" in cr_unit:
+                is_valid_cr, cr_error = validate_lab_value(cr, "Creatinine (µmol/L)", 0, 1500)
+            else:
+                is_valid_cr, cr_error = validate_lab_value(cr, "Creatinine (mg/dL)", 0.1, 15.0)
+            if not is_valid_cr:
+                validation_errors.append(cr_error)
+            
+            if validation_errors:
+                st.error("**⚠️ Lỗi validation:**")
+                for error in validation_errors:
+                    st.error(f"- {error}")
+                st.stop()
+            
             # Calculate MELD
             meld_score = calculate_meld(bili_mgdl, inr, cr_mgdl, dialysis)
             
@@ -193,40 +225,48 @@ def render():
                 mortality_3m = "1.9%"
                 mortality_1yr = "5-10%"
                 severity = "XƠ GAN NHẸ"
-                color = "green"
+                color = "#28a745"  # green
+                icon = "🟢"
                 transplant_priority = "Thấp"
             elif meld_score < 20:
                 mortality_3m = "6.0%"
                 mortality_1yr = "15-25%"
                 severity = "XƠ GAN TRUNG BÌNH"
-                color = "orange"
+                color = "#fd7e14"  # orange
+                icon = "🟡"
                 transplant_priority = "Trung bình"
             elif meld_score < 30:
                 mortality_3m = "19.6%"
                 mortality_1yr = "40-60%"
                 severity = "XƠ GAN NẶNG"
-                color = "red"
+                color = "#dc3545"  # red
+                icon = "🔴"
                 transplant_priority = "Cao"
             else:
                 mortality_3m = "52.6%"
                 mortality_1yr = ">70%"
                 severity = "XƠ GAN RẤT NẶNG"
-                color = "darkred"
+                color = "#6c757d"  # dark gray
+                icon = "⚫"
                 transplant_priority = "Rất cao (khẩn cấp)"
             
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                st.markdown(f"""
-                <div style="background-color: {color}; padding: 20px; border-radius: 10px; text-align: center;">
-                    <h1 style="color: white; margin: 0;">MELD = {meld_score}</h1>
-                    <p style="color: white; margin: 0; font-size: 1.2rem;">Điểm 6-40</p>
-                </div>
-                """, unsafe_allow_html=True)
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="MELD Score",
+                    score=meld_score,
+                    interpretation=severity,
+                    mortality=f"Tử vong 3 tháng: {mortality_3m}",
+                    color=color,
+                    icon=icon,
+                    size="large"
+                )
                 
                 st.markdown("<br>", unsafe_allow_html=True)
                 
-                st.metric("Tử vong 3 tháng", mortality_3m)
+                st.metric("Tử vong 1 năm", mortality_1yr)
                 st.metric("Ưu tiên ghép gan", transplant_priority)
             
             st.markdown("---")

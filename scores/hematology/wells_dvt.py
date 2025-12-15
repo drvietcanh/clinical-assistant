@@ -32,6 +32,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def calculate_wells_dvt(
@@ -307,20 +308,25 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết quả")
+        st.markdown("## 📊 Kết quả")
         
-        # Score box
-        col_r1, col_r2 = st.columns([1, 2])
+        # Map color emoji to hex
+        color_map_hex = {
+            "🔴": "#dc3545",
+            "🟢": "#28a745"
+        }
+        score_color = color_map_hex.get(result['color'], "#6c757d")
         
-        with col_r1:
-            st.metric(
-                label="**Wells DVT Score**",
-                value=f"{result['score']} điểm"
-            )
-        
-        with col_r2:
-            st.markdown(f"### {result['color']} {result['probability']}")
-            st.markdown(f"**{result['probability_percent']}**")
+        # Use render_score_result for main score display
+        render_score_result(
+            title="Wells DVT Score",
+            score=result['score'],
+            interpretation=result['probability'],
+            mortality=result['probability_percent'],
+            color=score_color,
+            icon=result['color'],
+            size="large"
+        )
         
         # Details
         if result['details']:

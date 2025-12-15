@@ -6,6 +6,8 @@ Wells Score for Pulmonary Embolism
 import streamlit as st
 from scores.references_config import get_references
 from components.references import render_references_section
+from scores.utils.validation import validate_heart_rate
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def render():
@@ -74,6 +76,19 @@ def render():
         st.markdown("---")
         
         if st.button("🧮 Tính Wells PE Score", type="primary", use_container_width=True):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_hr, hr_error = validate_heart_rate(hr)
+            if not is_valid_hr:
+                validation_errors.append(hr_error)
+            
+            if validation_errors:
+                st.error("**⚠️ Lỗi validation:**")
+                for error in validation_errors:
+                    st.error(f"- {error}")
+                st.stop()
+            
             # Calculate score
             score = 0.0
             details = []
@@ -126,22 +141,57 @@ def render():
                 recommendation = "Chụp CTPA ngay"
                 detail = "Không cần D-dimer - chụp CTPA trực tiếp"
             
+            # Map color names to hex
+            color_map = {
+                "success": "#28a745",  # green
+                "warning": "#fd7e14",  # orange
+                "error": "#dc3545"     # red
+            }
+            icon_map = {
+                "success": "✅",
+                "warning": "⚠️",
+                "error": "🚨"
+            }
+            score_color = color_map[color]
+            score_icon = icon_map[color]
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                if color == "success":
-                    st.success(f"## Wells Score: {score}")
-                    st.success(f"**Xác suất {probability}**")
-                elif color == "warning":
-                    st.warning(f"## Wells Score: {score}")
-                    st.warning(f"**Xác suất {probability}**")
-                else:
-                    st.error(f"## Wells Score: {score}")
-                    st.error(f"**Xác suất {probability}**")
-                
-                st.markdown(f"""
-                **Tỷ lệ PE thực tế:** {pe_prevalence}
-                """)
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="Wells PE Score",
+                    score=round(score, 1),
+                    interpretation=f"Xác suất {probability} - PE: {pe_prevalence}",
+                    mortality=None,
+                    color=score_color,
+                    icon=score_icon,
+                    size="large"
+                )
+            
+            # Build breakdown of criteria
+            criteria_scores = {}
+            if dvt_signs:
+                criteria_scores["Dấu hiệu DVT"] = 3.0
+            if pe_likely:
+                criteria_scores["PE khả năng nhất"] = 3.0
+            if hr > 100:
+                criteria_scores["Nhịp tim >100"] = 1.5
+            if immobilization:
+                criteria_scores["Nằm bất động/Phẫu thuật"] = 1.5
+            if previous_vte:
+                criteria_scores["Tiền sử DVT/PE"] = 1.5
+            if hemoptysis:
+                criteria_scores["Ho ra máu"] = 1.0
+            if malignancy:
+                criteria_scores["Ung thư"] = 1.0
+            
+            if criteria_scores:
+                render_score_breakdown(
+                    title="Tiêu Chí Đánh Giá",
+                    subscores=criteria_scores,
+                    total_score=round(score, 1)
+                )
             
             st.markdown("---")
             st.markdown("### 💡 Chi tiết tính điểm")
@@ -152,7 +202,7 @@ def render():
             else:
                 st.write("• Không có tiêu chí nào (+0)")
             
-            st.markdown(f"**Tổng điểm: {score}**")
+            st.markdown(f"**Tổng điểm: {round(score, 1)}**")
             
             st.markdown("---")
             st.markdown("### 💊 Khuyến cáo xét nghiệm")

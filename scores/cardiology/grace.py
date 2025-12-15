@@ -9,6 +9,7 @@ from scores.utils.validation import (
     validate_blood_pressure,
     validate_lab_value
 )
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def render():
@@ -141,9 +142,9 @@ def render():
             
             # Validate creatinine
             if scr_unit == "µmol/L":
-                is_valid_scr, scr_error = validate_lab_value(scr_umol, 10, 1500, "Creatinine", "µmol/L")
+                is_valid_scr, scr_error = validate_lab_value(scr_umol, "Creatinine (µmol/L)", 10, 1500)
             else:
-                is_valid_scr, scr_error = validate_lab_value(scr_mgdl, 0.1, 15, "Creatinine", "mg/dL")
+                is_valid_scr, scr_error = validate_lab_value(scr_mgdl, "Creatinine (mg/dL)", 0.1, 15)
             if not is_valid_scr:
                 validation_errors.append(scr_error)
             
@@ -262,34 +263,67 @@ def render():
             # Risk calculation
             # In-hospital mortality risk
             if points <= 108:
-                risk_category = "thấp"
+                risk_category = "Nguy cơ THẤP"
                 hospital_mort = "<1%"
                 six_month_mort = "<3%"
-                color_class = "success"
+                color = "#28a745"  # green
+                icon = "✅"
             elif points <= 140:
-                risk_category = "trung bình"
+                risk_category = "Nguy cơ TRUNG BÌNH"
                 hospital_mort = "1-3%"
                 six_month_mort = "3-8%"
-                color_class = "warning"
+                color = "#fd7e14"  # orange
+                icon = "⚠️"
             else:
-                risk_category = "cao"
+                risk_category = "Nguy cơ CAO"
                 hospital_mort = ">3%"
                 six_month_mort = ">8%"
-                color_class = "error"
+                color = "#dc3545"  # red
+                icon = "🚨"
             
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                if color_class == "success":
-                    st.success(f"## GRACE = {points}")
-                    st.success("✅ Nguy cơ THẤP")
-                elif color_class == "warning":
-                    st.warning(f"## GRACE = {points}")
-                    st.warning("⚠️ Nguy cơ TRUNG BÌNH")
-                else:
-                    st.error(f"## GRACE = {points}")
-                    st.error("🚨 Nguy cơ CAO")
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="GRACE Score",
+                    score=points,
+                    interpretation=risk_category,
+                    mortality=f"Tử vong bệnh viện: {hospital_mort}",
+                    color=color,
+                    icon=icon,
+                    size="large"
+                )
             
+            # Build breakdown of component scores
+            component_scores = {}
+            for d in details:
+                # Parse detail string to extract component name and score
+                if "Tuổi" in d:
+                    component_scores["Tuổi"] = age_pts
+                elif "Nhịp tim" in d:
+                    component_scores["Nhịp tim"] = hr_pts
+                elif "HA tâm thu" in d:
+                    component_scores["Huyết áp tâm thu"] = sbp_pts
+                elif "Creatinine" in d:
+                    component_scores["Creatinine"] = scr_pts
+                elif "Killip" in d:
+                    component_scores["Killip Class"] = killip_pts
+                elif "Ngừng tuần hoàn" in d:
+                    component_scores["Ngừng tuần hoàn"] = 39
+                elif "ST chênh" in d:
+                    component_scores["ST chênh"] = 28
+                elif "Enzyme" in d:
+                    component_scores["Enzyme tăng"] = 14
+            
+            if component_scores:
+                render_score_breakdown(
+                    title="Chi Tiết Điểm Số",
+                    subscores=component_scores,
+                    total_score=points
+                )
+            
+            st.markdown("---")
             st.markdown("### 💡 Chi tiết điểm")
             for d in details:
                 st.write(f"- {d}")

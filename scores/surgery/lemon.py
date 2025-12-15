@@ -163,54 +163,60 @@ def render():
     
     st.markdown("---")
     
-    if st.button("🔍 Tính toán", type="primary", use_container_width=True):
-        result = calculate_lemon(look, evaluate, mallampati, obstruction, neck_mobility)
+    if st.button("🔬 Tính điểm LEMON", type="primary", use_container_width=True):
+        try:
+            result = calculate_lemon(look, evaluate, mallampati, obstruction, neck_mobility)
+            
+            # Display results
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.metric("Tổng điểm", f"{result['total_score']}/5")
+            
+            with col2:
+                st.metric("Nguy cơ", result['risk'])
+            
+            st.markdown("---")
+            
+            # Risk interpretation
+            if result['color'] == "green":
+                st.success(f"**{result['risk']}** - {result['difficulty']}")
+            elif result['color'] == "orange":
+                st.warning(f"**{result['risk']}** - {result['difficulty']}")
+            else:
+                st.error(f"**{result['risk']}** - {result['difficulty']}")
+            
+            st.markdown("---")
+            
+            st.subheader("💡 Khuyến nghị")
+            st.markdown(f"""
+            {result['recommendation']}
+            """)
+            
+            st.markdown("---")
+            
+            # Show which factors are present
+            st.subheader("📋 Yếu tố nguy cơ hiện tại")
+            factors_list = []
+            if look == 1:
+                factors_list.append("⚠️ L - Bất thường bên ngoài")
+            if evaluate == 1:
+                factors_list.append("⚠️ E - Không đạt quy tắc 3-3-2")
+            if mallampati == 1:
+                factors_list.append("⚠️ M - Mallampati III-IV")
+            if obstruction == 1:
+                factors_list.append("⚠️ O - Có tắc nghẽn đường thở")
+            if neck_mobility == 1:
+                factors_list.append("⚠️ N - Hạn chế cử động cổ")
+            
+            if factors_list:
+                for factor in factors_list:
+                    st.markdown(f"- {factor}")
+            else:
+                st.markdown("- ✅ Tất cả yếu tố bình thường")
         
-        # Display results
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.metric("Tổng điểm", f"{result['total_score']}/5")
-        
-        with col2:
-            st.metric("Nguy cơ", result['risk'])
-        
-        st.markdown("---")
-        
-        # Risk interpretation
-        if result['color'] == "green":
-            st.success(f"**{result['risk']}** - {result['difficulty']}")
-        elif result['color'] == "orange":
-            st.warning(f"**{result['risk']}** - {result['difficulty']}")
-        else:
-            st.error(f"**{result['risk']}** - {result['difficulty']}")
-        
-        st.markdown("---")
-        
-        st.subheader("💡 Khuyến nghị")
-        st.markdown(f"""
-        {result['recommendation']}
-        """)
-        
-        st.markdown("---")
-        
-        # Show which factors are present
-        st.subheader("📋 Yếu tố nguy cơ hiện tại")
-        factors_list = []
-        if look == 1:
-            factors_list.append("⚠️ L - Bất thường bên ngoài")
-        if evaluate == 1:
-            factors_list.append("⚠️ E - Không đạt quy tắc 3-3-2")
-        if mallampati == 1:
-            factors_list.append("⚠️ M - Mallampati III-IV")
-        if obstruction == 1:
-            factors_list.append("⚠️ O - Có tắc nghẽn đường thở")
-        if neck_mobility == 1:
-            factors_list.append("⚠️ N - Hạn chế cử động cổ")
-        
-        if factors_list:
-            for factor in factors_list:
-                st.markdown(f"- {factor}")
-        else:
-            st.markdown("- ✅ Tất cả yếu tố bình thường")
+        except Exception as e:
+            st.error(f"❌ Lỗi khi tính toán: {str(e)}")
+            st.exception(e)
+            return
 

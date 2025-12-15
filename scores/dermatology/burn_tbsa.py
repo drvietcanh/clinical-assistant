@@ -4,6 +4,11 @@ Tính diện tích bỏng theo Quy tắc số 9
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_range,
+    validate_positive
+)
+from components.ui.validation import render_validation_errors
 
 
 def calculate_tbsa(head, chest, abdomen, back_upper, back_lower, 
@@ -92,6 +97,27 @@ def render():
     st.markdown("---")
     
     if st.button("🔬 Tính TBSA", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Weight validation
+        is_valid_weight, weight_error = validate_positive(weight, "Cân nặng")
+        if not is_valid_weight:
+            validation_errors.append(f"Cân nặng: {weight_error}")
+        elif weight < 10.0:
+            validation_errors.append("Cân nặng phải ≥ 10 kg")
+        elif weight > 200.0:
+            validation_errors.append("Cân nặng phải ≤ 200 kg")
+        
+        # TBSA validation (should be 0-100%)
+        total_tbsa_input = head + chest + abdomen + back_upper + back_lower + arm_right + arm_left + leg_right + leg_left + genitalia
+        if total_tbsa_input > 100:
+            validation_errors.append(f"Tổng TBSA ({total_tbsa_input}%) không thể > 100%")
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+            return
+        
         result = calculate_tbsa(head, chest, abdomen, back_upper, back_lower,
                                arm_right, arm_left, leg_right, leg_left, genitalia)
         

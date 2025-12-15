@@ -18,6 +18,12 @@ Note: Shorter time horizons (5 years) more relevant for elderly with limited lif
 
 import streamlit as st
 import math
+from scores.utils.validation import (
+    validate_age,
+    validate_blood_pressure,
+    validate_lab_value
+)
+from components.ui.validation import render_validation_errors
 
 
 def calculate_score2_op(
@@ -326,9 +332,39 @@ def render():
     
     # Calculate
     if st.button("🧮 Tính Nguy cơ SCORE2-OP", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
         
-        if age < 70:
-            st.error("⚠️ SCORE2-OP dành cho người ≥70 tuổi. Sử dụng SCORE2 cho 40-69 tuổi.")
+        # Age validation (≥70 for SCORE2-OP)
+        is_valid_age, age_error = validate_age(age, 70, 100)
+        if not is_valid_age:
+            validation_errors.append(f"Tuổi: {age_error}. SCORE2-OP chỉ áp dụng cho độ tuổi ≥70. Sử dụng SCORE2 cho 40-69 tuổi.")
+        
+        # SBP validation
+        is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+        if not is_valid_sbp:
+            validation_errors.append(f"Huyết áp tâm thu: {sbp_error}")
+        
+        # Cholesterol validation (depends on unit)
+        if chol_unit == "mmol/L":
+            is_valid_tc, tc_error = validate_lab_value(total_chol, "Total Cholesterol", 2.0, 15.0)
+            if not is_valid_tc:
+                validation_errors.append(f"Total Cholesterol (mmol/L): {tc_error}")
+            
+            is_valid_hdl, hdl_error = validate_lab_value(hdl_chol, "HDL Cholesterol", 0.5, 4.0)
+            if not is_valid_hdl:
+                validation_errors.append(f"HDL Cholesterol (mmol/L): {hdl_error}")
+        else:  # mg/dL
+            is_valid_tc, tc_error = validate_lab_value(total_chol_mg, "Total Cholesterol", 80.0, 600.0)
+            if not is_valid_tc:
+                validation_errors.append(f"Total Cholesterol (mg/dL): {tc_error}")
+            
+            is_valid_hdl, hdl_error = validate_lab_value(hdl_chol_mg, "HDL Cholesterol", 20.0, 150.0)
+            if not is_valid_hdl:
+                validation_errors.append(f"HDL Cholesterol (mg/dL): {hdl_error}")
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
             return
         
         result = calculate_score2_op(

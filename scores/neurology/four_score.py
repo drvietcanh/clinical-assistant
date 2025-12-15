@@ -34,6 +34,7 @@ import streamlit as st
 from components.ui.results import render_result_box, render_result_card
 from components.ui.alerts import render_info_alert, render_warning_alert
 from scores.utils.validation import validate_positive
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def calculate_four_score(eye: int, motor: int, brainstem: int, respiration: int) -> dict:
@@ -199,15 +200,44 @@ def render():
         # Display results
         st.markdown("### 📊 Kết quả")
         
-        render_result_box(
-            "FOUR Score",
-            f"{result['total_score']}/16",
-            subtitle=f"E{result['eye']} M{result['motor']} B{result['brainstem']} R{result['respiration']}",
-            color=result['color'],
-            icon="🧠"
+        # Map color names to hex
+        color_map = {
+            "success": "#28a745",  # green
+            "warning": "#fd7e14",  # orange
+            "error": "#dc3545"     # red
+        }
+        icon_map = {
+            "success": "✅",
+            "warning": "⚠️",
+            "error": "🚨"
+        }
+        score_color = color_map.get(result['color'], "#17a2b8")
+        score_icon = icon_map.get(result['color'], "🧠")
+        
+        # Use render_score_result for main score display
+        render_score_result(
+            title="FOUR Score",
+            score=result['total_score'],
+            interpretation=result['interpretation'],
+            mortality=None,
+            color=score_color,
+            icon=score_icon,
+            size="large"
         )
         
-        st.markdown(f"**Đánh giá:** {result['interpretation']}")
+        # Use render_score_breakdown for component scores
+        render_score_breakdown(
+            title="Điểm Từng Thành Phần",
+            subscores={
+                "👁️ Eye (E)": result['eye'],
+                "💪 Motor (M)": result['motor'],
+                "🧠 Brainstem (B)": result['brainstem'],
+                "🫁 Respiration (R)": result['respiration']
+            },
+            total_score=result['total_score']
+        )
+        
+        st.markdown(f"**Chi tiết:** E{result['eye']} M{result['motor']} B{result['brainstem']} R{result['respiration']}")
         
         st.markdown("---")
         st.markdown("### 📋 Chi tiết")

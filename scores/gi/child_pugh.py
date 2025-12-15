@@ -20,6 +20,8 @@ Br J Surg. 1973;60(8):646-9.
 """
 
 import streamlit as st
+from scores.utils.validation import validate_lab_value
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def render():
@@ -233,26 +235,55 @@ def render():
     # Calculate button
     st.markdown("---")
     if st.button("🧮 Tính Child-Pugh Score", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Validate bilirubin
+        if "mg/dL" in bili_unit:
+            is_valid_bili, bili_error = validate_lab_value(bili, "Bilirubin (mg/dL)", 0.0, 30.0)
+        else:
+            is_valid_bili, bili_error = validate_lab_value(bili, "Bilirubin (µmol/L)", 0.0, 500.0)
+        if not is_valid_bili:
+            validation_errors.append(bili_error)
+        
+        # Validate albumin
+        is_valid_alb, alb_error = validate_lab_value(albumin, "Albumin (g/dL)", 1.0, 6.0)
+        if not is_valid_alb:
+            validation_errors.append(alb_error)
+        
+        # Validate INR
+        is_valid_inr, inr_error = validate_lab_value(inr, "INR", 0.8, 10.0)
+        if not is_valid_inr:
+            validation_errors.append(inr_error)
+        
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
         
         # Determine Child-Pugh Class
         if total_score <= 6:
             cp_class = "A"
             severity = "XƠ GAN BÙ TRỪ TỐT"
-            color = "green"
+            color = "#28a745"  # green
+            icon = "🟢"
             survival_1yr = "100%"
             survival_2yr = "85%"
             periop_mortality = "10%"
         elif total_score <= 9:
             cp_class = "B"
             severity = "SUY CHỨC NĂNG GAN ĐÁNG KỂ"
-            color = "orange"
+            color = "#fd7e14"  # orange
+            icon = "🟡"
             survival_1yr = "81%"
             survival_2yr = "57%"
             periop_mortality = "30%"
         else:
             cp_class = "C"
             severity = "XƠ GAN MẤT BÙ"
-            color = "red"
+            color = "#dc3545"  # red
+            icon = "🔴"
             survival_1yr = "45%"
             survival_2yr = "35%"
             periop_mortality = "82%"
@@ -261,29 +292,37 @@ def render():
         st.markdown("---")
         st.markdown("## 📊 KẾT QUẢ")
         
-        st.markdown(f"""
-        <div style="background-color: {color}; padding: 20px; border-radius: 10px; text-align: center;">
-            <h1 style="color: white; margin: 0;">Child-Pugh Class {cp_class}</h1>
-            <p style="color: white; margin: 0; font-size: 1.2rem;">{total_score} điểm</p>
-        </div>
-        """, unsafe_allow_html=True)
+        # Use render_score_result for main score display
+        render_score_result(
+            title=f"Child-Pugh Class {cp_class}",
+            score=total_score,
+            interpretation=severity,
+            mortality=f"Sống sót 1 năm: {survival_1yr}",
+            color=color,
+            icon=icon,
+            size="large"
+        )
+        
+        # Use render_score_breakdown for component scores
+        render_score_breakdown(
+            title="Điểm Từng Thành Phần",
+            subscores=score_breakdown,
+            total_score=total_score
+        )
         
         st.markdown("<br>", unsafe_allow_html=True)
         
         # Metrics
-        col1, col2, col3, col4 = st.columns(4)
+        col1, col2, col3 = st.columns(3)
         
         with col1:
-            st.metric("Child-Pugh Score", f"{total_score}/15")
+            st.metric("Sống sót 2 năm", survival_2yr)
         
         with col2:
-            st.metric("Class", cp_class)
+            st.metric("Tử vong phẫu thuật", periop_mortality)
         
         with col3:
-            st.metric("Sống sót 1 năm", survival_1yr)
-        
-        with col4:
-            st.metric("Tử vong phẫu thuật", periop_mortality)
+            st.metric("Class", cp_class)
         
         st.markdown("---")
         

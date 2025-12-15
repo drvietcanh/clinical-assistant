@@ -9,6 +9,16 @@ Pediatr Crit Care Med. 2016;17(7):671-680.
 
 import streamlit as st
 import math
+from scores.utils.validation import (
+    validate_age,
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_respiratory_rate,
+    validate_temperature,
+    validate_gcs,
+    validate_lab_value
+)
+from components.ui.validation import render_validation_errors
 
 
 def calculate_prism3(variables):
@@ -570,6 +580,91 @@ def render():
     
     # Calculate scores
     if st.button("🧮 Tính PRISM III", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Age validation (0-216 months = 0-18 years)
+        is_valid_age, age_error = validate_age(age_months, 0, 216)
+        if not is_valid_age:
+            validation_errors.append(f"Tuổi (tháng): {age_error}")
+        
+        # Blood pressure validation
+        is_valid_bp, bp_error = validate_blood_pressure(systolic_bp, diastolic_bp)
+        if not is_valid_bp:
+            validation_errors.append(f"Huyết áp: {bp_error}")
+        
+        # Heart rate validation
+        is_valid_hr, hr_error = validate_heart_rate(heart_rate)
+        if not is_valid_hr:
+            validation_errors.append(f"Nhịp tim: {hr_error}")
+        
+        # Temperature validation
+        is_valid_temp, temp_error = validate_temperature(temperature, "celsius")
+        if not is_valid_temp:
+            validation_errors.append(f"Nhiệt độ: {temp_error}")
+        
+        # GCS validation
+        is_valid_gcs, gcs_error = validate_gcs(gcs)
+        if not is_valid_gcs:
+            validation_errors.append(f"GCS: {gcs_error}")
+        
+        # Lab values validation
+        is_valid_ph, ph_error = validate_lab_value(ph, "pH", 6.5, 7.6)
+        if not is_valid_ph:
+            validation_errors.append(f"pH: {ph_error}")
+        
+        is_valid_tco2, tco2_error = validate_lab_value(total_co2, "Total CO₂", 5.0, 60.0)
+        if not is_valid_tco2:
+            validation_errors.append(f"Total CO₂: {tco2_error}")
+        
+        is_valid_pao2, pao2_error = validate_lab_value(pao2, "PaO₂", 0, 600)
+        if not is_valid_pao2:
+            validation_errors.append(f"PaO₂: {pao2_error}")
+        
+        is_valid_pao2_fio2, pao2_fio2_error = validate_lab_value(pao2_fio2, "PaO₂/FiO₂", 0, 600)
+        if not is_valid_pao2_fio2:
+            validation_errors.append(f"PaO₂/FiO₂: {pao2_fio2_error}")
+        
+        is_valid_glucose, glucose_error = validate_lab_value(glucose, "Glucose", 0, 600)
+        if not is_valid_glucose:
+            validation_errors.append(f"Glucose: {glucose_error}")
+        
+        is_valid_k, k_error = validate_lab_value(potassium, "K⁺", 0.0, 10.0)
+        if not is_valid_k:
+            validation_errors.append(f"K⁺: {k_error}")
+        
+        is_valid_cr, cr_error = validate_lab_value(creatinine, "Creatinine", 0.1, 10.0)
+        if not is_valid_cr:
+            validation_errors.append(f"Creatinine: {cr_error}")
+        
+        is_valid_bun, bun_error = validate_lab_value(bun, "BUN", 0, 200)
+        if not is_valid_bun:
+            validation_errors.append(f"BUN: {bun_error}")
+        
+        is_valid_wbc, wbc_error = validate_lab_value(wbc, "WBC", 0.0, 100.0)
+        if not is_valid_wbc:
+            validation_errors.append(f"WBC: {wbc_error}")
+        
+        is_valid_platelets, platelets_error = validate_lab_value(platelets, "Tiểu cầu", 0, 1000)
+        if not is_valid_platelets:
+            validation_errors.append(f"Tiểu cầu: {platelets_error}")
+        
+        is_valid_inr, inr_error = validate_lab_value(pt_inr, "PT/INR", 0.5, 10.0)
+        if not is_valid_inr:
+            validation_errors.append(f"PT/INR: {inr_error}")
+        
+        is_valid_ptt, ptt_error = validate_lab_value(ptt, "aPTT", 0, 200)
+        if not is_valid_ptt:
+            validation_errors.append(f"aPTT: {ptt_error}")
+        
+        is_valid_bili, bili_error = validate_lab_value(bilirubin, "Bilirubin", 0.0, 30.0)
+        if not is_valid_bili:
+            validation_errors.append(f"Bilirubin: {bili_error}")
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+            return
+        
         # Calculate component scores
         age_score = get_age_score(age_months)
         sbp_score, dbp_score = get_bp_score(systolic_bp, diastolic_bp, age_months)

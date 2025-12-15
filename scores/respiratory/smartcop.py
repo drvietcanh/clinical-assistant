@@ -21,6 +21,14 @@ Clin Infect Dis. 2008;47(3):375-84.
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_blood_pressure,
+    validate_heart_rate,
+    validate_respiratory_rate,
+    validate_lab_value
+)
+from components.ui.validation import render_validation_errors
 
 
 def render():
@@ -302,6 +310,54 @@ def render():
     # Calculate button
     st.markdown("---")
     if st.button("🧮 Tính SMART-COP Score", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Age validation
+        is_valid_age, age_error = validate_age(age, 18, 120)
+        if not is_valid_age:
+            validation_errors.append(f"Tuổi: {age_error}")
+        
+        # SBP validation
+        is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+        if not is_valid_sbp:
+            validation_errors.append(f"Huyết áp tâm thu: {sbp_error}")
+        
+        # Albumin validation
+        is_valid_alb, alb_error = validate_lab_value(albumin, "Albumin", 15.0, 60.0)
+        if not is_valid_alb:
+            validation_errors.append(f"Albumin: {alb_error}")
+        
+        # Respiratory rate validation
+        is_valid_rr, rr_error = validate_respiratory_rate(rr)
+        if not is_valid_rr:
+            validation_errors.append(f"Nhịp thở: {rr_error}")
+        
+        # Heart rate validation
+        is_valid_hr, hr_error = validate_heart_rate(hr)
+        if not is_valid_hr:
+            validation_errors.append(f"Nhịp tim: {hr_error}")
+        
+        # Oxygenation validation
+        if "PaO₂" in oxy_method:
+            is_valid_pao2, pao2_error = validate_lab_value(pao2, "PaO₂", 40, 150)
+            if not is_valid_pao2:
+                validation_errors.append(f"PaO₂: {pao2_error}")
+        else:  # SpO2
+            is_valid_spo2, spo2_error = validate_lab_value(spo2, "SpO₂", 70, 100)
+            if not is_valid_spo2:
+                validation_errors.append(f"SpO₂: {spo2_error}")
+        
+        # pH validation (if ABG available)
+        if has_abg:
+            is_valid_ph, ph_error = validate_lab_value(ph, "pH", 6.80, 7.80)
+            if not is_valid_ph:
+                validation_errors.append(f"pH: {ph_error}")
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+            return
+        
         st.session_state.total_calculations = st.session_state.get('total_calculations', 0) + 1
         
         # Display result

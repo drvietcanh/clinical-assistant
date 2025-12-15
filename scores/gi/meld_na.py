@@ -5,6 +5,11 @@ Tiên lượng bệnh gan giai đoạn cuối với điều chỉnh theo Na
 
 import streamlit as st
 import math
+from scores.utils.validation import (
+    validate_lab_value,
+    validate_range
+)
+from components.ui.validation import render_validation_errors
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -286,6 +291,43 @@ def render():
     
     # Calculate button
     if st.button("📊 Tính MELD-Na Score", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Creatinine validation (depends on unit)
+        if cre_unit == "µmol/L":
+            is_valid_cre, cre_error = validate_lab_value(cre_input, "Creatinine", 0.0, 1000.0)
+            if not is_valid_cre:
+                validation_errors.append(f"Creatinine (µmol/L): {cre_error}")
+        else:
+            is_valid_cre, cre_error = validate_lab_value(creatinine, "Creatinine", 0.0, 15.0)
+            if not is_valid_cre:
+                validation_errors.append(f"Creatinine (mg/dL): {cre_error}")
+        
+        # Bilirubin validation (depends on unit)
+        if bili_unit == "µmol/L":
+            is_valid_bili, bili_error = validate_lab_value(bili_input, "Bilirubin", 0.0, 1000.0)
+            if not is_valid_bili:
+                validation_errors.append(f"Bilirubin (µmol/L): {bili_error}")
+        else:
+            is_valid_bili, bili_error = validate_lab_value(bilirubin, "Bilirubin", 0.0, 60.0)
+            if not is_valid_bili:
+                validation_errors.append(f"Bilirubin (mg/dL): {bili_error}")
+        
+        # INR validation
+        is_valid_inr, inr_error = validate_range(inr, 0.8, 10.0, "INR")
+        if not is_valid_inr:
+            validation_errors.append(f"INR: {inr_error}")
+        
+        # Sodium validation
+        is_valid_na, na_error = validate_range(sodium, 110.0, 160.0, "Sodium")
+        if not is_valid_na:
+            validation_errors.append(f"Sodium: {na_error}")
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+            return
+        
         # Calculate
         result = calculate_meld_na(creatinine, bilirubin, inr, sodium, dialysis_twice)
         

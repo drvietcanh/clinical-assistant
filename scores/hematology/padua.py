@@ -4,6 +4,11 @@ Nguy cơ VTE ở bệnh nhân nội khoa - Chỉ định thromboprophylaxis
 """
 
 import streamlit as st
+from scores.utils.validation import (
+    validate_age,
+    validate_range
+)
+from components.ui.validation import render_validation_errors
 
 
 def render():
@@ -111,6 +116,22 @@ def render():
     st.markdown("---")
     
     if st.button("📊 Tính Padua Score", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        # Age validation
+        is_valid_age, age_error = validate_age(age, 18, 120)
+        if not is_valid_age:
+            validation_errors.append(f"Tuổi: {age_error}")
+        
+        # BMI validation
+        is_valid_bmi, bmi_error = validate_range(bmi, 10.0, 60.0, "BMI")
+        if not is_valid_bmi:
+            validation_errors.append(f"BMI: {bmi_error}")
+        
+        if validation_errors:
+            render_validation_errors(validation_errors)
+            return
         # Risk level
         if score >= 4:
             risk = "CAO"

@@ -189,6 +189,10 @@ SCORES_BY_SPECIALTY = {
         "ARISCAT": {"name": "ARISCAT - Assess Respiratory Risk in Surgical Patients", "desc": "Nguy cơ biến chứng hô hấp sau phẫu thuật", "status": "✅"},
         "CAM-ICU": {"name": "CAM-ICU - Confusion Assessment Method for ICU", "desc": "Chẩn đoán mê sảng trong ICU (DÙNG HÀNG NGÀY)", "status": "✅"},
         "4AT": {"name": "4AT - 4 A's Test for Delirium", "desc": "Sàng lọc mê sảng nhanh (2 phút)", "status": "✅"},
+        "Surgical Apgar": {"name": "Surgical Apgar Score", "desc": "Đánh giá nguy cơ biến chứng sau mổ (3 yếu tố trong mổ)", "status": "✅"},
+        "SORT": {"name": "SORT - Surgical Outcome Risk Tool", "desc": "Tiên lượng tử vong 30 ngày sau phẫu thuật không tim", "status": "✅"},
+        "Gupta Cardiac": {"name": "Gupta Perioperative Cardiac Risk Index", "desc": "Nguy cơ tim mạch phẫu thuật (NSQIP-based)", "status": "✅"},
+        "Goldman Cardiac": {"name": "Goldman Cardiac Risk Index", "desc": "Nguy cơ tim mạch phẫu thuật (Historical)", "status": "✅"},
     },
     
     "👁️ Mắt (Ophthalmology)": {

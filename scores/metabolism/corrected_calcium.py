@@ -14,6 +14,16 @@ Br Med J. 1973;4(5893):643-6.
 """
 
 import streamlit as st
+from scores.utils.validation import validate_lab_value
+from components.ui.validation import render_validation_errors
+
+
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
 
 
 def render():
@@ -92,6 +102,25 @@ def render():
         st.markdown("---")
         
         if st.button("🧮 Tính Corrected Calcium", type="primary", use_container_width=True):
+            # Validate inputs
+            validation_errors = []
+            
+            # Validate calcium
+            if "mg/dL" in ca_unit:
+                is_valid_ca, ca_error = validate_lab_value(ca, "Calcium (mg/dL)", 4.0, 16.0)
+            else:
+                is_valid_ca, ca_error = validate_lab_value(ca, "Calcium (mmol/L)", 1.0, 4.0)
+            if not is_valid_ca:
+                validation_errors.append(ca_error)
+            
+            # Validate albumin
+            is_valid_alb, alb_error = validate_lab_value(albumin, "Albumin (g/dL)", 1.0, 6.0)
+            if not is_valid_alb:
+                validation_errors.append(alb_error)
+            
+            if validation_errors:
+                render_validation_errors(validation_errors)
+            
             # Calculate corrected calcium
             ca_corrected_mgdl = ca_mgdl + 0.8 * (4.0 - albumin)
             ca_corrected_mmol = ca_corrected_mgdl / 4
