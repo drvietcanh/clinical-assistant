@@ -225,7 +225,7 @@ def render():
         
         render_result_card(
             title=f"{bmi_icon} BMI = {bmi:.1f} kg/m² - {bmi_category}",
-            metrics=metrics_list,
+            metrics_list,
             color=card_color,
             icon=bmi_icon
         )

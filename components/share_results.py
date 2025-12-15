@@ -230,7 +230,8 @@ def render_share_section(
             
             st.markdown("**QR Code:**")
             st.markdown(
-                f'<img src="data:image/png;base64,{qr_image}" style="width: 150px; height: 150px;">',
+                # qr_image already includes the data URI prefix
+                f'<img src="{qr_image}" style="width: 150px; height: 150px;">',
                 unsafe_allow_html=True
             )
     
