@@ -5,6 +5,8 @@ Management of febrile neutropenia in cancer patients
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -416,4 +418,17 @@ def render_low_risk_antibiotics():
     - Phải có khả năng liên lạc 24/7
     - Nhập viện ngay nếu không cải thiện sau 48h
     """)
+    
+    st.markdown("---")
+    
+    # References section
+    references = get_references("Febrile Neutropenia")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

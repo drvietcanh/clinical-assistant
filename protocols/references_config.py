@@ -1077,6 +1077,273 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
         }
+    ],
+    
+    "Hypocalcemia": [
+        {
+            "type": "guideline",
+            "title": "Clinical practice guidelines for hypocalcemia: systematic review and meta-analysis",
+            "authors": "Cooper MS, Gittoes NJ",
+            "journal": "Clinical Endocrinology",
+            "year": 2008,
+            "volume": "68",
+            "issue": "4",
+            "pages": "503-511",
+            "doi": "10.1111/j.1365-2265.2007.03066.x",
+            "pmid": "18070146",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Treatment of hypocalcemia",
+            "authors": "Shoback D",
+            "journal": "UpToDate",
+            "year": 2023,
+            "url": "https://www.uptodate.com/contents/treatment-of-hypocalcemia",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "Hypomagnesemia": [
+        {
+            "type": "primary",
+            "title": "Hypomagnesemia: clinical manifestations of magnesium depletion",
+            "authors": "Swaminathan R",
+            "journal": "UpToDate",
+            "year": 2023,
+            "url": "https://www.uptodate.com/contents/hypomagnesemia-clinical-manifestations-of-magnesium-depletion",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Magnesium metabolism and its disorders",
+            "authors": "Swaminathan R",
+            "journal": "Clinical Biochemistry Reviews",
+            "year": 2003,
+            "volume": "24",
+            "issue": "2",
+            "pages": "47-66",
+            "pmid": "18568054",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+    
+    "Hypophosphatemia": [
+        {
+            "type": "primary",
+            "title": "Hypophosphatemia: clinical manifestations of phosphate depletion",
+            "authors": "Gaasbeek A, Meinders AE",
+            "journal": "UpToDate",
+            "year": 2023,
+            "url": "https://www.uptodate.com/contents/hypophosphatemia-clinical-manifestations-of-phosphate-depletion",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Hypophosphatemia: an evidence-based approach to its clinical consequences and management",
+            "authors": "Gaasbeek A, Meinders AE",
+            "journal": "Nature Clinical Practice Nephrology",
+            "year": 2007,
+            "volume": "3",
+            "issue": "3",
+            "pages": "136-153",
+            "doi": "10.1038/ncpneph0404",
+            "pmid": "17322926",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+    
+    "HHS": [
+        {
+            "type": "guideline",
+            "title": "Hyperglycemic Crises in Adult Patients With Diabetes",
+            "authors": "Kitabchi AE, Umpierrez GE, Miles JM, Fisher JN",
+            "journal": "Diabetes Care",
+            "year": 2009,
+            "volume": "32",
+            "issue": "7",
+            "pages": "1335-1343",
+            "doi": "10.2337/dc09-9032",
+            "pmid": "19564476",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Standards of Medical Care in Diabetes—2023",
+            "authors": "American Diabetes Association",
+            "journal": "Diabetes Care",
+            "year": 2023,
+            "volume": "46",
+            "issue": "Supplement_1",
+            "pages": "S1-S291",
+            "doi": "10.2337/dc23-Sint",
+            "pmid": "36507649",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "Myxedema Coma": [
+        {
+            "type": "guideline",
+            "title": "2014 Guidelines of the American Thyroid Association for the diagnosis and management of thyroid disease during pregnancy and the postpartum",
+            "authors": "Stagnaro-Green A, Abalovich M, Alexander E, et al.",
+            "journal": "Thyroid",
+            "year": 2011,
+            "volume": "21",
+            "issue": "10",
+            "pages": "1081-1125",
+            "doi": "10.1089/thy.2011.0087",
+            "pmid": "21787128",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Myxedema coma: diagnosis and treatment",
+            "authors": "Wartofsky L",
+            "journal": "American Family Physician",
+            "year": 2000,
+            "volume": "62",
+            "issue": "11",
+            "pages": "2485-2490",
+            "pmid": "11130234",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+    
+    "TLS": [
+        {
+            "type": "guideline",
+            "title": "Guidelines for the Management of Tumor Lysis Syndrome in Adults and Children with Malignancy",
+            "authors": "Cairo MS, Coiffier B, Reiter A, Younes A",
+            "journal": "Clinical Lymphoma, Myeloma & Leukemia",
+            "year": 2010,
+            "volume": "10",
+            "issue": "Suppl 1",
+            "pages": "S2-S9",
+            "doi": "10.3816/CLML.2010.s.001",
+            "pmid": "20630878",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Tumor Lysis Syndrome: A Systematic Review of Case Series and Case Reports",
+            "authors": "Wilson FP, Berns JS",
+            "journal": "Oncology",
+            "year": 2012,
+            "volume": "26",
+            "issue": "12",
+            "pages": "1142-1147",
+            "pmid": "23268260",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+    
+    "C. diff": [
+        {
+            "type": "guideline",
+            "title": "Clinical Practice Guidelines for Clostridium difficile Infection in Adults and Children: 2017 Update by the Infectious Diseases Society of America (IDSA) and Society for Healthcare Epidemiology of America (SHEA)",
+            "authors": "McDonald LC, Gerding DN, Johnson S, et al.",
+            "journal": "Clinical Infectious Diseases",
+            "year": 2018,
+            "volume": "66",
+            "issue": "7",
+            "pages": "e1-e48",
+            "doi": "10.1093/cid/cix1085",
+            "pmid": "29462280",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "Acute Liver Failure": [
+        {
+            "type": "guideline",
+            "title": "AASLD Position Paper: The Management of Acute Liver Failure",
+            "authors": "Lee WM, Stravitz RT, Larson AM",
+            "journal": "Hepatology",
+            "year": 2012,
+            "volume": "56",
+            "issue": "3",
+            "pages": "965-967",
+            "doi": "10.1002/hep.25681",
+            "pmid": "22535299",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "EASL Clinical Practical Guidelines on the management of acute (fulminant) liver failure",
+            "authors": "European Association for the Study of the Liver",
+            "journal": "Journal of Hepatology",
+            "year": 2017,
+            "volume": "66",
+            "issue": "5",
+            "pages": "1047-1081",
+            "doi": "10.1016/j.jhep.2016.12.003",
+            "pmid": "28417882",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "Sedation": [
+        {
+            "type": "guideline",
+            "title": "Clinical Practice Guidelines for the Prevention and Management of Pain, Agitation/Sedation, Delirium, Immobility, and Sleep Disruption in Adult Patients in the ICU",
+            "authors": "Devlin JW, Skrobik Y, Gélinas C, et al.",
+            "journal": "Critical Care Medicine",
+            "year": 2018,
+            "volume": "46",
+            "issue": "9",
+            "pages": "e825-e873",
+            "doi": "10.1097/CCM.0000000000003299",
+            "pmid": "30113379",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "Alcohol Withdrawal": [
+        {
+            "type": "guideline",
+            "title": "The ASAM Clinical Practice Guideline on Alcohol Withdrawal Management",
+            "authors": "American Society of Addiction Medicine",
+            "journal": "Journal of Addiction Medicine",
+            "year": 2020,
+            "volume": "14",
+            "issue": "3S Suppl 1",
+            "pages": "1-72",
+            "doi": "10.1097/ADM.0000000000000668",
+            "pmid": "32511109",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Management of alcohol withdrawal delirium. An evidence-based practice guideline",
+            "authors": "Mayo-Smith MF",
+            "journal": "Archives of Internal Medicine",
+            "year": 2004,
+            "volume": "164",
+            "issue": "13",
+            "pages": "1405-1412",
+            "doi": "10.1001/archinte.164.13.1405",
+            "pmid": "15249349",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
     ]
 }
 

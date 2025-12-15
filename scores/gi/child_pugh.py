@@ -22,6 +22,11 @@ Br J Surg. 1973;60(8):646-9.
 import streamlit as st
 from scores.utils.validation import validate_lab_value
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
@@ -29,6 +34,13 @@ def render():
     
     st.subheader("🩸 Child-Pugh Score")
     st.caption("Đánh giá mức độ nặng xơ gan")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'child_pugh':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     **Child-Pugh Score** phân loại mức độ nặng của xơ gan và tiên lượng.
@@ -46,7 +58,7 @@ def render():
     score_breakdown = {}
     
     # Input section
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns([2, 1])
     
     with col1:
         st.markdown("### 🔬 Xét nghiệm")
@@ -598,8 +610,42 @@ def render():
             filename="child_pugh_result"
         )
         
-        with st.expander("📚 Tài liệu tham khảo"):
-            st.markdown("""
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="child_pugh",
+            calculator_name="Child-Pugh Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="child_pugh",
+            calculator_name="Child-Pugh Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="child_pugh", show_actions=True)
+        
+        # References section
+        references = get_references("Child-Pugh")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
+        else:
+            # Fallback to manual references if not in config
+            with st.expander("📚 Tài liệu tham khảo"):
+                st.markdown("""
             **Primary Reference:**
             - Pugh RN, Murray-Lyon IM, Dawson JL, Pietroni MC, Williams R. 
               *Transection of the oesophagus for bleeding oesophageal varices.* 
@@ -728,6 +774,17 @@ def render():
         
         **Ưu tiên ghép gan:** Dựa vào MELD score (càng cao càng ưu tiên)
         """)
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("Child-Pugh")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Footer
     st.markdown("---")

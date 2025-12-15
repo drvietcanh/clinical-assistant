@@ -12,12 +12,22 @@ from scores.utils.validation import (
     validate_respiratory_rate
 )
 from components.ui.scoring import render_score_result, render_score_breakdown
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
     """qSOFA (Quick SOFA) Calculator"""
     st.subheader("🩺 qSOFA (Quick SOFA)")
     st.caption("Tiêu chuẩn Sepsis-3 để sàng lọc nhiễm trùng huyết")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'qsofa':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     col1, col2 = st.columns([2, 1])
     
@@ -50,8 +60,19 @@ def render():
             step=1,
             help="Normal: 15; Coma: 3"
         )
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="qsofa",
+            calculator_name="qSOFA",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
-        if st.button("🔢 Tính qSOFA", type="primary"):
+        if st.button("🔢 Tính qSOFA", type="primary", use_container_width=True):
             # Validate inputs
             validation_errors = []
             
@@ -164,6 +185,52 @@ def render():
             st.markdown("### Chi tiết")
             for detail in details:
                 st.write(detail)
+            
+            # Prepare inputs and results for export/history
+            inputs_dict = {
+                "Respiratory Rate": f"{rr} /min",
+                "Systolic BP": f"{sbp} mmHg",
+                "GCS": str(gcs)
+            }
+            
+            results_dict = {
+                "qSOFA Score": f"{score}/3",
+                "Risk Level": risk_level,
+                "Details": "\n".join(details) if details else "Không có tiêu chí nào"
+            }
+            
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            render_export_section(
+                title=f"qSOFA = {score}/3",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="qSOFA",
+                filename="qsofa_result"
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="qsofa",
+                calculator_name="qSOFA",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="qsofa",
+                calculator_name="qSOFA",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="qsofa", show_actions=True)
             
             # References section
             references = get_references("qSOFA")

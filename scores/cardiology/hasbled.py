@@ -4,12 +4,24 @@ Bleeding risk assessment in patients on anticoagulation
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
     """HAS-BLED Score Calculator"""
     st.subheader("🩸 HAS-BLED Score")
     st.caption("Đánh giá Nguy cơ Chảy Máu Khi Dùng Kháng Đông")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'hasbled':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     col1, col2 = st.columns([2, 1])
     
@@ -46,8 +58,19 @@ def render():
         
         drugs = st.checkbox("Dùng thuốc chống tiểu cầu/NSAID", help="Aspirin, NSAID")
         alcohol = st.checkbox("Lạm dụng rượu", help=">8 đơn vị/tuần")
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="hasbled",
+            calculator_name="HAS-BLED Score",
+            category="Tim Mạch",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
-        if st.button("🧮 Tính Điểm HAS-BLED", type="primary", key="hasbled_calc"):
+        if st.button("🧮 Tính Điểm HAS-BLED", type="primary", key="hasbled_calc", use_container_width=True):
             score = 0
             details = []
             
@@ -129,26 +152,98 @@ def render():
                 - Theo dõi sát sao
                 """)
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown("""
-                **HAS-BLED Score**
-                
-                **Tiêu chí (1 điểm mỗi mục):**
-                - **H**: Hypertension (SBP >160 mmHg)
-                - **A**: Abnormal renal/liver function (1-2 điểm)
-                - **S**: Stroke (tiền sử đột quỵ)
-                - **B**: Bleeding history/predisposition
-                - **L**: Labile INR (TTR <60%)
-                - **E**: Elderly (>65 tuổi)
-                - **D**: Drugs (antiplatelet/NSAID) or Alcohol
-                
-                **Giải thích:**
-                - 0-2: Nguy cơ chảy máu thấp
-                - ≥3: Nguy cơ cao (cần thận trọng, KHÔNG chống chỉ định)
-                
-                **Reference:**
-                Pisters R, et al. Chest. 2010;138(5):1093-1100.
-                """)
+            # Prepare inputs and results for export/history
+            inputs_dict = {
+                "HTN Uncontrolled": "Có" if htn_uncontrolled else "Không",
+                "Renal Dysfunction": "Có" if renal else "Không",
+                "Liver Dysfunction": "Có" if liver else "Không",
+                "Stroke History": "Có" if stroke_bled else "Không",
+                "Bleeding History": "Có" if bleeding else "Không",
+                "Labile INR": "Có" if labile_inr else "Không",
+                "Age >65": "Có" if age_hasbled else "Không",
+                "Drugs": "Có" if drugs else "Không",
+                "Alcohol": "Có" if alcohol else "Không"
+            }
+            
+            risk_level_text = "THẤP" if score <= 2 else "TRUNG BÌNH" if score == 3 else "CAO"
+            results_dict = {
+                "HAS-BLED Score": f"{score} điểm",
+                "Risk Level": risk_level_text,
+                "Details": "\n".join(details) if details else "Không có yếu tố nguy cơ"
+            }
+            
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            render_export_section(
+                title=f"HAS-BLED = {score} điểm",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="HAS-BLED Score",
+                filename="hasbled_result"
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="hasbled",
+                calculator_name="HAS-BLED Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="hasbled",
+                calculator_name="HAS-BLED Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="hasbled", show_actions=True)
+            
+            # References section
+            references = get_references("HAS-BLED")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+            else:
+                # Fallback to manual references if not in config
+                with st.expander("📚 Tài liệu tham khảo"):
+                    st.markdown("""
+                    **HAS-BLED Score**
+                    
+                    **Tiêu chí (1 điểm mỗi mục):**
+                    - **H**: Hypertension (SBP >160 mmHg)
+                    - **A**: Abnormal renal/liver function (1-2 điểm)
+                    - **S**: Stroke (tiền sử đột quỵ)
+                    - **B**: Bleeding history/predisposition
+                    - **L**: Labile INR (TTR <60%)
+                    - **E**: Elderly (>65 tuổi)
+                    - **D**: Drugs (antiplatelet/NSAID) or Alcohol
+                    
+                    **Reference:**
+                    Pisters R, et al. Chest. 2010;138(5):1093-1100.
+                    """)
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("HAS-BLED")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Công cụ hỗ trợ lâm sàng - không thay thế đánh giá lâm sàng toàn diện")

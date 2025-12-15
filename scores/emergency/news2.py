@@ -595,7 +595,7 @@ def render():
             else:
                 # Fallback to manual references if not in config
                 with st.expander("📚 Tham khảo lâm sàng"):
-                st.markdown("""
+                    st.markdown("""
                 **NEWS2 (National Early Warning Score 2)**
                 
                 **Mục đích:** Hệ thống cảnh báo sớm để phát hiện suy giảm lâm sàng ở bệnh nhân nội trú
