@@ -219,18 +219,7 @@ def render_reference_item(
     evidence_badge = ""
     if show_evidence_level and "evidence_level" in reference:
         level_info = get_evidence_level_info(reference["evidence_level"])
-        evidence_badge = f"""
-        <span style="
-            background: {level_info['color']}15;
-            border: 1px solid {level_info['color']};
-            color: {level_info['color']};
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            margin-left: 8px;
-        ">{level_info['label']}</span>
-        """
+        evidence_badge = f'<span style="background: {level_info["color"]}15; border: 1px solid {level_info["color"]}; color: {level_info["color"]}; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-left: 8px;">{level_info["label"]}</span>'
     
     # Format citation
     if "citation" in reference:
@@ -270,11 +259,7 @@ def render_reference_item(
             links.append(f'<a href="{pdf_url}" target="_blank" style="text-decoration: none; color: #0066cc;">📥 Download PDF</a>')
         
         if links:
-            links_html = f"""
-            <div style="margin-top: 8px;">
-                {' | '.join(links)}
-            </div>
-            """
+            links_html = f'<div style="margin-top: 8px;">{" | ".join(links)}</div>'
     
     # Strength of recommendation
     strength_badge = ""
@@ -285,45 +270,46 @@ def render_reference_item(
             STRENGTH_WEAK: "#dc3545"
         }
         strength_color = strength_colors.get(reference["strength"], "#6c757d")
-        strength_badge = f"""
-        <span style="
-            background: {strength_color}15;
-            border: 1px solid {strength_color};
-            color: {strength_color};
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            margin-left: 8px;
-        ">Strength: {reference['strength']}</span>
-        """
+        strength_badge = f'<span style="background: {strength_color}15; border: 1px solid {strength_color}; color: {strength_color}; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-left: 8px;">Strength: {reference["strength"]}</span>'
     
-    # Render using Streamlit components to avoid HTML escaping issues
-    with st.container():
-        # Title with badges
-        title_col1, title_col2 = st.columns([1, 0.1])
-        with title_col1:
-            title_text = f"{icon} **{reference.get('title', 'Reference')}**"
-            st.markdown(title_text)
-        
-        # Evidence and strength badges
-        if evidence_badge or strength_badge:
-            badge_html = f"""
-            <div style="margin-top: 4px; margin-bottom: 8px;">
-                {evidence_badge}
-                {strength_badge}
-            </div>
-            """
-            st.markdown(badge_html, unsafe_allow_html=True)
-        
-        # Citation
-        st.markdown(f'<div style="font-size: 0.9rem; color: #495057; line-height: 1.6; margin-bottom: 8px;">{citation}</div>', unsafe_allow_html=True)
-        
-        # Links
-        if links_html:
-            st.markdown(links_html, unsafe_allow_html=True)
-        
-        st.markdown("---")
+    # Render - Build complete HTML string properly
+    # Escape HTML special characters in title to prevent XSS
+    import html
+    import re
+    
+    title_escaped = html.escape(reference.get('title', 'Reference'))
+    
+    # Convert markdown-style italic (*text*) to HTML <em> tags in citation
+    # First escape HTML, then convert markdown italic to HTML
+    citation_escaped = html.escape(citation)
+    citation_html = re.sub(r'\*([^*]+)\*', r'<em>\1</em>', citation_escaped)
+    
+    # Ensure badges and links are properly formatted (remove any potential line breaks)
+    evidence_badge_clean = evidence_badge.replace('\n', '').replace('\r', '').strip() if evidence_badge else ''
+    strength_badge_clean = strength_badge.replace('\n', '').replace('\r', '').strip() if strength_badge else ''
+    links_html_clean = links_html.replace('\n', '').replace('\r', '').strip() if links_html else ''
+    
+    # Build complete HTML as single string using string concatenation
+    # This ensures no formatting issues with f-strings or line breaks
+    reference_html = ''.join([
+        '<div style="padding: 1rem; margin: 0.75rem 0; background: #f8f9fa; border-left: 4px solid #007bff; border-radius: 4px;">',
+        '<div style="font-size: 1rem; margin-bottom: 0.5rem;">',
+        icon,
+        ' <strong>',
+        title_escaped,
+        '</strong> ',
+        evidence_badge_clean,
+        ' ',
+        strength_badge_clean,
+        '</div>',
+        '<div style="font-size: 0.9rem; color: #495057; line-height: 1.6;">',
+        citation_html,
+        '</div>',
+        links_html_clean,
+        '</div>'
+    ])
+    
+    st.markdown(reference_html, unsafe_allow_html=True)
 
 
 def render_references_section(

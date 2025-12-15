@@ -36,6 +36,11 @@ from scores.utils.validation import (
     validate_temperature
 )
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def get_sbp_score(sbp: float) -> int:
@@ -157,6 +162,13 @@ def render():
     st.subheader("🚨 MEWS - Modified Early Warning Score")
     st.caption("Early Warning System for Clinical Deterioration Detection")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'mews':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.info("""
     **MEWS** là hệ thống cảnh báo sớm để phát hiện tình trạng xấu đi của bệnh nhân trong khoa.
     Sử dụng 5 thông số sinh tồn để tính điểm và phân loại nguy cơ.
@@ -165,7 +177,7 @@ def render():
     st.markdown("---")
     
     # Input section
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns([2, 1])
     
     with col1:
         sbp = st.number_input(
@@ -210,6 +222,17 @@ def render():
             ["Alert", "Verbal", "Pain", "Unresponsive"],
             key="mews_avpu",
             help="Alert: Tỉnh táo, Verbal: Đáp ứng với lời nói, Pain: Đáp ứng với đau, Unresponsive: Không đáp ứng"
+        )
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="mews",
+            calculator_name="MEWS",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
         )
     
     st.markdown("---")
@@ -345,21 +368,92 @@ def render():
         
         st.dataframe(pd.DataFrame(risk_data), use_container_width=True, hide_index=True)
         
+        # Prepare inputs and results for export/history
+        inputs_dict = {
+            "Systolic BP": f"{sbp:.0f} mmHg",
+            "Heart Rate": f"{hr:.0f} bpm",
+            "Respiratory Rate": f"{resp_rate:.0f} /min",
+            "Temperature": f"{temp:.1f}°C",
+            "AVPU": avpu
+        }
+        
+        results_dict = {
+            "MEWS Score": f"{result['total_score']} điểm",
+            "Risk Category": result['risk_category'],
+            "Action": result['action'],
+            "Components": f"SBP:{result['sbp_score']} HR:{result['hr_score']} RR:{result['resp_score']} Temp:{result['temp_score']} AVPU:{result['avpu_score']}"
+        }
+        
+        # Export section
         st.markdown("---")
-        st.markdown("### 📚 Tài Liệu Tham Khảo")
+        from components.export import render_export_section
+        render_export_section(
+            title=f"MEWS Score = {result['total_score']} điểm",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="MEWS",
+            filename="mews_result"
+        )
         
-        st.markdown("""
-        1. **Subbe CP, et al.** Validation of a modified Early Warning Score in medical admissions.
-           QJM. 2001;94(10):521-526.
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="mews",
+            calculator_name="MEWS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
         
-        2. **Morgan RJ, et al.** An early warning scoring system for detecting developing critical illness.
-           Clin Intensive Care. 1997;8(2):100.
+        # Share section
+        render_share_section(
+            calculator_id="mews",
+            calculator_name="MEWS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
         
-        3. **Royal College of Physicians.** National Early Warning Score (NEWS) 2.
-           RCP, 2017.
-        """)
+        # History section
+        st.markdown("---")
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="mews", show_actions=True)
         
-        st.caption("⚠️ MEWS chỉ là công cụ hỗ trợ. Đánh giá lâm sàng toàn diện vẫn là quan trọng nhất.")
+        # References section
+        references = get_references("MEWS")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
+        else:
+            # Fallback to manual references if not in config
+            st.markdown("---")
+            st.markdown("### 📚 Tài Liệu Tham Khảo")
+            st.markdown("""
+            1. **Subbe CP, et al.** Validation of a modified Early Warning Score in medical admissions.
+               QJM. 2001;94(10):521-526.
+            
+            2. **Morgan RJ, et al.** An early warning scoring system for detecting developing critical illness.
+               Clin Intensive Care. 1997;8(2):100.
+            
+            3. **Royal College of Physicians.** National Early Warning Score (NEWS) 2.
+               RCP, 2017.
+            """)
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("MEWS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
+    
+    st.caption("⚠️ MEWS chỉ là công cụ hỗ trợ. Đánh giá lâm sàng toàn diện vẫn là quan trọng nhất.")
 
 
 

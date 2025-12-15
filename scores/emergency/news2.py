@@ -38,6 +38,11 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def get_respiration_score(resp_rate: float) -> int:
@@ -315,6 +320,13 @@ def render():
     st.subheader("📊 NEWS2 Score")
     st.caption("National Early Warning Score 2 - Hệ thống cảnh báo sớm cho bệnh nhân nội trú")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'news2':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     col1, col2 = st.columns([2, 1])
     
     with col1:
@@ -400,8 +412,19 @@ def render():
             "Cần oxy hỗ trợ",
             help="Bệnh nhân đang dùng oxy hỗ trợ qua mask, nasal cannula, v.v."
         )
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="news2",
+            calculator_name="NEWS2 Score",
+            category="Cấp Cứu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
-        if st.button("🔢 Tính NEWS2", type="primary"):
+        if st.button("🔢 Tính NEWS2", type="primary", use_container_width=True):
             # Validate inputs
             validation_errors = []
             
@@ -537,7 +560,41 @@ def render():
                 filename="news2_result"
             )
             
-            with st.expander("📚 Tham khảo lâm sàng"):
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="news2",
+                calculator_name="NEWS2 Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="news2",
+                calculator_name="NEWS2 Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="news2", show_actions=True)
+            
+            # References section
+            references = get_references("NEWS2")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+            else:
+                # Fallback to manual references if not in config
+                with st.expander("📚 Tham khảo lâm sàng"):
                 st.markdown("""
                 **NEWS2 (National Early Warning Score 2)**
                 
