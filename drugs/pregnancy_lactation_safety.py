@@ -374,6 +374,404 @@ PREGNANCY_SAFETY: Dict[str, Dict] = {
         "notes": "Safe in all trimesters. Used for GERD in pregnancy.",
         "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
     },
+    
+    # Additional Safe Antibiotics
+    "Cefazolin": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Commonly used for surgical prophylaxis.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Ceftriaxone": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Used for serious infections.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Erythromycin": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Avoid estolate salt (hepatotoxicity).",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Clindamycin": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Used for anaerobic infections.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Nitrofurantoin": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Avoid near term - Risk of hemolytic anemia in G6PD-deficient neonates"
+        },
+        "notes": "Safe in early pregnancy. Avoid near term (38-42 weeks) due to risk of hemolytic anemia.",
+        "references": ["ACOG Practice Bulletin No. 91"]
+    },
+    
+    # Additional Safe Cardiovascular Drugs
+    "Propranolol": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.USE_CAUTION,
+        "trimester_specific": {
+            "first": "Use with caution - Monitor",
+            "second": "Use with caution - Monitor fetal growth",
+            "third": "Use with caution - Monitor for bradycardia, hypoglycemia"
+        },
+        "notes": "May cause fetal bradycardia, hypoglycemia, IUGR. Monitor closely.",
+        "references": ["ACOG Practice Bulletin No. 203"]
+    },
+    "Nifedipine": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - Commonly used for hypertension",
+            "third": "Safe - Used for tocolysis and hypertension"
+        },
+        "notes": "Commonly used for hypertension and preterm labor prevention in pregnancy.",
+        "references": ["ACOG Practice Bulletin No. 203"]
+    },
+    "Hydralazine": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - Commonly used",
+            "third": "Safe - Commonly used for hypertensive emergencies"
+        },
+        "notes": "Commonly used for hypertensive emergencies in pregnancy.",
+        "references": ["ACOG Practice Bulletin No. 203"]
+    },
+    
+    # Additional Safe Gastrointestinal Drugs
+    "Famotidine": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. H2 receptor antagonist.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Lansoprazole": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.PROBABLY_SAFE,
+        "trimester_specific": {
+            "first": "Probably safe - Limited data",
+            "second": "Probably safe - Limited data",
+            "third": "Probably safe - Limited data"
+        },
+        "notes": "Limited data but appears safe. Used for GERD in pregnancy.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Pantoprazole": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.PROBABLY_SAFE,
+        "trimester_specific": {
+            "first": "Probably safe - Limited data",
+            "second": "Probably safe - Limited data",
+            "third": "Probably safe - Limited data"
+        },
+        "notes": "Limited data but appears safe. Used for GERD in pregnancy.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Sucralfate": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Minimal systemic absorption.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Respiratory Drugs
+    "Salbutamol": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Drug of choice for asthma in pregnancy.",
+        "references": ["NAEPP Expert Panel Report 3"]
+    },
+    "Budesonide": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Inhaled corticosteroid preferred in pregnancy.",
+        "references": ["NAEPP Expert Panel Report 3"]
+    },
+    "Beclomethasone": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Inhaled corticosteroid.",
+        "references": ["NAEPP Expert Panel Report 3"]
+    },
+    
+    # Additional Safe Antiemetics
+    "Promethazine": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Used for nausea and vomiting.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Doxylamine": {
+        "fda_category": FDAPregnancyCategory.A,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Used in combination with pyridoxine for morning sickness.",
+        "references": ["ACOG Practice Bulletin No. 189"]
+    },
+    "Pyridoxine": {
+        "fda_category": FDAPregnancyCategory.A,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - Essential vitamin",
+            "second": "Safe - Essential vitamin",
+            "third": "Safe - Essential vitamin"
+        },
+        "notes": "Safe in all trimesters. Vitamin B6, used for morning sickness.",
+        "references": ["ACOG Practice Bulletin No. 189"]
+    },
+    
+    # Additional Safe Antihistamines
+    "Diphenhydramine": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Used for allergies and as sleep aid.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Loratadine": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Non-sedating antihistamine.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Cetirizine": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Non-sedating antihistamine.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Antidiabetics
+    "Glyburide": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.USE_CAUTION,
+        "trimester_specific": {
+            "first": "Use with caution - Risk of hypoglycemia",
+            "second": "Use with caution - Used for GDM",
+            "third": "Use with caution - Used for GDM, monitor closely"
+        },
+        "notes": "May be used for gestational diabetes. Monitor blood glucose closely.",
+        "references": ["ADA Standards of Medical Care in Diabetes 2023"]
+    },
+    
+    # Additional Safe Thyroid Drugs
+    "Propylthiouracil": {
+        "fda_category": FDAPregnancyCategory.D,
+        "risk_level": PregnancyRiskLevel.USE_CAUTION,
+        "trimester_specific": {
+            "first": "Use with caution - Preferred over methimazole in 1st trimester",
+            "second": "Use with caution - Monitor thyroid function",
+            "third": "Use with caution - Monitor thyroid function"
+        },
+        "notes": "Preferred over methimazole in 1st trimester. Use lowest effective dose.",
+        "references": ["ATA Guidelines for Thyroid Disease in Pregnancy"]
+    },
+    "Methimazole": {
+        "fda_category": FDAPregnancyCategory.D,
+        "risk_level": PregnancyRiskLevel.USE_CAUTION,
+        "trimester_specific": {
+            "first": "AVOID - Risk of aplasia cutis, choanal atresia",
+            "second": "Use with caution - Monitor thyroid function",
+            "third": "Use with caution - Monitor thyroid function"
+        },
+        "notes": "Avoid in 1st trimester if possible. Use propylthiouracil in 1st trimester.",
+        "references": ["ATA Guidelines for Thyroid Disease in Pregnancy"]
+    },
+    
+    # Additional Safe Anticoagulants
+    "Dalteparin": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "LMWH does not cross placenta. Safe in all trimesters.",
+        "references": ["ACOG Practice Bulletin No. 196"]
+    },
+    "Tinzaparin": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "LMWH does not cross placenta. Safe in all trimesters.",
+        "references": ["ACOG Practice Bulletin No. 196"]
+    },
+    
+    # Additional Safe Supplements/Vitamins
+    "Folic Acid": {
+        "fda_category": FDAPregnancyCategory.A,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - Essential, prevents neural tube defects",
+            "second": "Safe - Essential",
+            "third": "Safe - Essential"
+        },
+        "notes": "Essential in pregnancy. 400-800 mcg daily recommended before and during early pregnancy.",
+        "references": ["ACOG Committee Opinion No. 762"]
+    },
+    "Iron": {
+        "fda_category": FDAPregnancyCategory.A,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - Essential",
+            "second": "Safe - Essential",
+            "third": "Safe - Essential"
+        },
+        "notes": "Essential in pregnancy. Recommended 27-30 mg daily during pregnancy.",
+        "references": ["ACOG Practice Bulletin No. 95"]
+    },
+    "Calcium": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - Essential",
+            "second": "Safe - Essential",
+            "third": "Safe - Essential"
+        },
+        "notes": "Essential in pregnancy. Recommended 1000-1300 mg daily.",
+        "references": ["IOM Dietary Reference Intakes"]
+    },
+    "Vitamin D": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - Essential",
+            "second": "Safe - Essential",
+            "third": "Safe - Essential"
+        },
+        "notes": "Essential in pregnancy. Recommended 600 IU daily.",
+        "references": ["IOM Dietary Reference Intakes"]
+    },
+    
+    # Additional Safe Laxatives
+    "Docusate": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Stool softener.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Psyllium": {
+        "fda_category": FDAPregnancyCategory.B,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Bulk-forming laxative.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Polyethylene Glycol": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - No known risk",
+            "second": "Safe - No known risk",
+            "third": "Safe - No known risk"
+        },
+        "notes": "Safe in all trimesters. Osmotic laxative.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Topical Medications
+    "Hydrocortisone": {
+        "fda_category": FDAPregnancyCategory.C,
+        "risk_level": PregnancyRiskLevel.SAFE,
+        "trimester_specific": {
+            "first": "Safe - Topical use",
+            "second": "Safe - Topical use",
+            "third": "Safe - Topical use"
+        },
+        "notes": "Safe for topical use in all trimesters. Avoid large areas or prolonged use.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
 }
 
 
@@ -412,6 +810,12 @@ LACTATION_SAFETY: Dict[str, Dict] = {
         "notes": "Compatible with breastfeeding.",
         "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
     },
+    "Azithromycin": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
     "Ciprofloxacin": {
         "briggs_category": BriggsLactationCategory.L3,
         "risk_level": LactationRiskLevel.USE_CAUTION,
@@ -426,6 +830,12 @@ LACTATION_SAFETY: Dict[str, Dict] = {
     },
     
     # Cardiovascular
+    "Atenolol": {
+        "briggs_category": BriggsLactationCategory.L3,
+        "risk_level": LactationRiskLevel.USE_CAUTION,
+        "notes": "Excreted in milk. May cause bradycardia, hypoglycemia in infant. Use with caution.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
     "Metoprolol": {
         "briggs_category": BriggsLactationCategory.L2,
         "risk_level": LactationRiskLevel.SAFE,
@@ -548,6 +958,240 @@ LACTATION_SAFETY: Dict[str, Dict] = {
         "briggs_category": BriggsLactationCategory.L2,
         "risk_level": LactationRiskLevel.SAFE,
         "notes": "Compatible with breastfeeding.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Antibiotics
+    "Cephalexin": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Cefazolin": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Ceftriaxone": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Erythromycin": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Monitor infant for GI upset.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Clindamycin": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Monitor infant for GI upset, diarrhea.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Nitrofurantoin": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Avoid in G6PD-deficient infants.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Cardiovascular Drugs
+    "Propranolol": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Monitor infant for bradycardia, hypoglycemia.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Nifedipine": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Hydralazine": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Monitor infant for hypotension.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Gastrointestinal Drugs
+    "Famotidine": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Lansoprazole": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Pantoprazole": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Sucralfate": {
+        "briggs_category": BriggsLactationCategory.L1,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal systemic absorption.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Respiratory Drugs
+    "Salbutamol": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk with inhaled form.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Budesonide": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal systemic absorption with inhaled form.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Beclomethasone": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal systemic absorption with inhaled form.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Antiemetics
+    "Promethazine": {
+        "briggs_category": BriggsLactationCategory.L3,
+        "risk_level": LactationRiskLevel.USE_CAUTION,
+        "notes": "Excreted in milk. May cause sedation in infant. Use with caution.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Doxylamine": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Pyridoxine": {
+        "briggs_category": BriggsLactationCategory.L1,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Essential vitamin.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Antihistamines
+    "Diphenhydramine": {
+        "briggs_category": BriggsLactationCategory.L3,
+        "risk_level": LactationRiskLevel.USE_CAUTION,
+        "notes": "Excreted in milk. May cause sedation, irritability in infant. Use with caution.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Loratadine": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Cetirizine": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Antidiabetics
+    "Glyburide": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Monitor infant for hypoglycemia.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Thyroid Drugs
+    "Propylthiouracil": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Monitor infant thyroid function.",
+        "references": ["ATA Guidelines for Thyroid Disease in Pregnancy"]
+    },
+    "Methimazole": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Monitor infant thyroid function.",
+        "references": ["ATA Guidelines for Thyroid Disease in Pregnancy"]
+    },
+    
+    # Additional Safe Anticoagulants
+    "Dalteparin": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Large molecule, minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Tinzaparin": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Large molecule, minimal excretion in milk.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Supplements/Vitamins
+    "Folic Acid": {
+        "briggs_category": BriggsLactationCategory.L1,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Essential vitamin.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Iron": {
+        "briggs_category": BriggsLactationCategory.L1,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Essential mineral.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Calcium": {
+        "briggs_category": BriggsLactationCategory.L1,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Essential mineral.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Vitamin D": {
+        "briggs_category": BriggsLactationCategory.L1,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Essential vitamin.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Laxatives
+    "Docusate": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal systemic absorption.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Psyllium": {
+        "briggs_category": BriggsLactationCategory.L1,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Not absorbed systemically.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    "Polyethylene Glycol": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding. Minimal systemic absorption.",
+        "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
+    },
+    
+    # Additional Safe Topical Medications
+    "Hydrocortisone": {
+        "briggs_category": BriggsLactationCategory.L2,
+        "risk_level": LactationRiskLevel.SAFE,
+        "notes": "Compatible with breastfeeding when used topically. Minimal systemic absorption.",
         "references": ["Briggs GG, et al. Drugs in Pregnancy and Lactation."]
     },
 }
