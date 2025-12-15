@@ -19,6 +19,17 @@ from protocols import (
     render_status_epilepticus,
     render_opioid_overdose,
     render_alcohol_withdrawal,
+    render_paracetamol_overdose,
+    render_salicylate_overdose,
+    render_carbon_monoxide_poisoning,
+    render_organophosphate_poisoning,
+    render_toxic_alcohol_poisoning,
+    render_malignant_arrhythmias,
+    render_pneumothorax,
+    render_traumatic_brain_injury,
+    render_drowning,
+    render_heat_stroke,
+    render_hypothermia,
     render_acute_pain,
     render_copd,
     render_asthma,
@@ -26,15 +37,19 @@ from protocols import (
     render_hf,
     render_atrial_fibrillation,
     render_dvt_pe,
+    render_bradycardia,
+    render_tachycardia,
     render_aki,
     render_cap,
     render_hap_vap,
     render_cdiff,
     render_meningitis,
+    render_endocarditis,
     render_thyrotoxic_crisis,
     render_myxedema_coma,
     render_adrenal_crisis,
     render_hhs,
+    render_hypoglycemia,
     render_acute_pancreatitis,
     render_acute_liver_failure,
     render_transfusion,
@@ -50,6 +65,9 @@ from protocols import (
     render_ibd_exacerbation
 )
 from protocols.rheumatology import render_acute_gout, render_ra_flare
+from protocols.neurology import render_serotonin_syndrome, render_neuroleptic_malignant_syndrome, render_intracranial_hypertension
+from protocols.obstetrics import render_eclampsia, render_postpartum_hemorrhage
+from protocols.dermatology import render_stevens_johnson_syndrome
 
 # Standard page setup
 setup_page(
@@ -71,12 +89,15 @@ with st.sidebar:
             "🧪 Thận (Nephrology)",
             "🦠 Nhiễm khuẩn (Infectious)",
             "⚕️ Nội tiết (Endocrinology)",
+            "🧠 Thần kinh (Neurology)",
             "🎗️ Ung thư (Oncology)",
             "💊 Đau (Pain Management)",
             "🩸 Huyết học (Hematology)",
             "🫀 Tiêu hóa (Gastroenterology)",
             "🏥 Hồi sức (Critical Care)",
-            "🦴 Thấp khớp (Rheumatology)"
+            "🦴 Thấp khớp (Rheumatology)",
+            "🤰 Sản khoa (Obstetrics)",
+            "🩹 Da liễu (Dermatology)"
         ]
     )
     
@@ -98,7 +119,18 @@ with st.sidebar:
                 "⚡ Cơn tăng huyết áp cấp cứu",
                 "🧠 Trạng thái động kinh liên tục",
                 "💉 Ngộ Độc Opioid / Naloxone",
-                "🍺 Cai rượu cấp"
+                "🍺 Cai rượu cấp",
+                "💊 Ngộ Độc Paracetamol",
+                "💊 Ngộ Độc Salicylate (Aspirin)",
+                "💨 Ngộ Độc Carbon Monoxide",
+                "☣️ Ngộ Độc Organophosphate",
+                "🍷 Ngộ Độc Alcohol Độc Hại (Methanol/Ethylene Glycol)",
+                "❤️‍🔥 Loạn nhịp nguy hiểm (Malignant Arrhythmias)",
+                "🫁 Tràn khí màng phổi (Pneumothorax)",
+                "🧠 Chấn thương sọ não (Traumatic Brain Injury)",
+                "🌊 Đuối nước (Drowning)",
+                "🌡️ Sốc Nhiệt (Heat Stroke)",
+                "❄️ Hạ Thân Nhiệt (Hypothermia)"
             ],
             label_visibility="collapsed"
         )
@@ -118,7 +150,9 @@ with st.sidebar:
                 "💔 ACS - Hội chứng vành cấp",
                 "💔 Suy tim Cấp",
                 "💓 Rung Nhĩ (Atrial Fibrillation)",
-                "🩸 DVT/PE Management"
+                "🩸 DVT/PE Management",
+                "💔 Nhịp chậm (Bradycardia)",
+                "💔 Nhịp nhanh (Tachycardia)"
             ],
             label_visibility="collapsed"
         )
@@ -137,7 +171,8 @@ with st.sidebar:
                 "🫁 CAP Management",
                 "🏥 HAP/VAP Guidelines",
                 "🦠 C. diff Treatment",
-                "🧠 Meningitis / Encephalitis"
+                "🧠 Meningitis / Encephalitis",
+                "🦠 Viêm nội tâm mạc (Endocarditis)"
             ],
             label_visibility="collapsed"
         )
@@ -148,7 +183,8 @@ with st.sidebar:
                 "⚡ Thyrotoxic Crisis",
                 "❄️ Myxedema Coma",
                 "⚡ Adrenal Crisis",
-                "🍭 HHS (Hyperglycemic Hyperosmolar State)"
+                "🍭 HHS (Hyperglycemic Hyperosmolar State)",
+                "🍭 Hạ đường huyết (Hypoglycemia)"
             ],
             label_visibility="collapsed"
         )
@@ -207,6 +243,33 @@ with st.sidebar:
             [
                 "🦴 Gout Cấp (Acute Gout Management)",
                 "🦴 RA Flare (Acute Flare of Rheumatoid Arthritis)"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Thần kinh" in specialty or "Neurology" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "🧠 Hội chứng Serotonin (Serotonin Syndrome)",
+                "🧠 Hội chứng ác tính do thuốc an thần (NMS)",
+                "🧠 Tăng áp lực nội sọ (Intracranial Hypertension)"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Sản khoa" in specialty or "Obstetrics" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "🤰 Sản giật (Eclampsia)",
+                "🩸 Xuất huyết sau sinh (Postpartum Hemorrhage)"
+            ],
+            label_visibility="collapsed"
+        )
+    elif "Da liễu" in specialty or "Dermatology" in specialty:
+        protocol = st.radio(
+            "Phác đồ:",
+            [
+                "🩹 Hội chứng Stevens-Johnson (SJS/TEN)"
             ],
             label_visibility="collapsed"
         )
@@ -273,7 +336,7 @@ elif "Tăng Huyết áp" in protocol or "Hypertensive" in protocol or "hypertens
 elif "Status Epilepticus" in protocol or "status epilepticus" in protocol.lower() or "Epilepticus" in protocol or "Trạng thái động kinh" in protocol:
     render_status_epilepticus()
 
-elif "Opioid" in protocol or "opioid" in protocol.lower() or "Naloxone" in protocol or "naloxone" in protocol.lower() or "Ngộ Độc" in protocol:
+elif "Opioid" in protocol or "opioid" in protocol.lower() or "Naloxone" in protocol or "naloxone" in protocol.lower():
     render_opioid_overdose()
 
 elif "Alcohol" in protocol or "alcohol" in protocol.lower() or "Cai rượu" in protocol or "cai rượu" in protocol.lower() or "Rượu" in protocol:
@@ -359,6 +422,69 @@ elif "RA Flare" in protocol or "rheumatoid arthritis" in protocol.lower() or "RA
 
 elif "IBD" in protocol or "ibd" in protocol.lower() or "Crohn" in protocol or "Colitis" in protocol:
     render_ibd_exacerbation()
+
+elif "Bradycardia" in protocol or "bradycardia" in protocol.lower() or "Nhịp chậm" in protocol:
+    render_bradycardia()
+
+elif "Tachycardia" in protocol or "tachycardia" in protocol.lower() or "Nhịp nhanh" in protocol:
+    render_tachycardia()
+
+elif "Endocarditis" in protocol or "endocarditis" in protocol.lower() or "Viêm nội tâm mạc" in protocol:
+    render_endocarditis()
+
+elif "Hypoglycemia" in protocol or "hypoglycemia" in protocol.lower() or "Hạ đường huyết" in protocol:
+    render_hypoglycemia()
+
+elif "Serotonin" in protocol or "serotonin" in protocol.lower():
+    render_serotonin_syndrome()
+
+elif "Neuroleptic" in protocol or "neuroleptic" in protocol.lower() or "NMS" in protocol or "ác tính do thuốc an thần" in protocol:
+    render_neuroleptic_malignant_syndrome()
+
+elif "Intracranial" in protocol or "intracranial" in protocol.lower() or "Tăng áp lực nội sọ" in protocol:
+    render_intracranial_hypertension()
+
+elif "Eclampsia" in protocol or "eclampsia" in protocol.lower() or "Sản giật" in protocol:
+    render_eclampsia()
+
+elif "Postpartum" in protocol or "postpartum" in protocol.lower() or "Xuất huyết sau sinh" in protocol:
+    render_postpartum_hemorrhage()
+
+elif "Stevens" in protocol or "stevens" in protocol.lower() or "SJS" in protocol or "TEN" in protocol:
+    render_stevens_johnson_syndrome()
+
+elif "Paracetamol" in protocol or "paracetamol" in protocol.lower() or "Acetaminophen" in protocol or "acetaminophen" in protocol.lower():
+    render_paracetamol_overdose()
+
+elif "Salicylate" in protocol or "salicylate" in protocol.lower() or "Aspirin" in protocol or "aspirin" in protocol.lower():
+    render_salicylate_overdose()
+
+elif "Carbon Monoxide" in protocol or "carbon monoxide" in protocol.lower() or "CO" in protocol or "Carbon" in protocol:
+    render_carbon_monoxide_poisoning()
+
+elif "Organophosphate" in protocol or "organophosphate" in protocol.lower():
+    render_organophosphate_poisoning()
+
+elif "Alcohol Độc Hại" in protocol or "Methanol" in protocol or "Ethylene Glycol" in protocol or "alcohol" in protocol.lower():
+    render_toxic_alcohol_poisoning()
+
+elif "Malignant Arrhythmias" in protocol or "loạn nhịp" in protocol.lower() or "VF" in protocol or "VT" in protocol:
+    render_malignant_arrhythmias()
+
+elif "Pneumothorax" in protocol or "pneumothorax" in protocol.lower() or "Tràn khí màng phổi" in protocol:
+    render_pneumothorax()
+
+elif "Traumatic Brain Injury" in protocol or "Chấn thương sọ não" in protocol or "traumatic brain injury" in protocol.lower() or "TBI" in protocol:
+    render_traumatic_brain_injury()
+
+elif "Drowning" in protocol or "drowning" in protocol.lower() or "Đuối nước" in protocol:
+    render_drowning()
+
+elif "Heat Stroke" in protocol or "heat stroke" in protocol.lower() or "Sốc Nhiệt" in protocol or "sốc nhiệt" in protocol.lower():
+    render_heat_stroke()
+
+elif "Hypothermia" in protocol or "hypothermia" in protocol.lower() or "Hạ Thân Nhiệt" in protocol or "hạ thân nhiệt" in protocol.lower():
+    render_hypothermia()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)
