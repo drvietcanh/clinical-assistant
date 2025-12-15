@@ -912,6 +912,34 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pmid": "29146535",
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "2014 Evidence-Based Guideline for the Management of High Blood Pressure in Adults: Report from the Panel Members Appointed to the Eighth Joint National Committee (JNC 8)",
+            "authors": "James PA, Oparil S, Carter BL, et al.",
+            "journal": "JAMA",
+            "year": 2014,
+            "volume": "311",
+            "issue": "5",
+            "pages": "507-520",
+            "doi": "10.1001/jama.2013.284427",
+            "pmid": "24352797",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Hypertensive Crises: Hypertensive Urgencies and Emergencies",
+            "authors": "Varon J, Marik PE",
+            "journal": "Cardiology Clinics",
+            "year": 2006,
+            "volume": "24",
+            "issue": "1",
+            "pages": "135-146",
+            "doi": "10.1016/j.ccl.2005.09.001",
+            "pmid": "16326264",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
         }
     ],
     

@@ -5,6 +5,8 @@ Acute severe hypertension with or without end-organ damage
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -210,20 +212,29 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📚 Tài liệu tham khảo")
-    
-    st.markdown("""
-    1. **AHA/ACC 2017 Hypertension Guidelines**
-       - Whelton PK, et al. Hypertension. 2018
-    
-    2. **JNC 8 Guidelines 2014**
-       - James PA, et al. JAMA. 2014
-    
-    3. **UpToDate:** Hypertensive emergencies
-       - Last updated: 2024
-    
-    4. **Medscape:** Hypertensive Crisis Management
-    """)
+    # References section
+    references = get_references("Hypertensive Emergency")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        st.markdown("### 📚 Tài liệu tham khảo")
+        st.markdown("""
+        1. **AHA/ACC 2017 Hypertension Guidelines**
+           - Whelton PK, et al. Hypertension. 2018
+        
+        2. **JNC 8 Guidelines 2014**
+           - James PA, et al. JAMA. 2014
+        
+        3. **UpToDate:** Hypertensive emergencies
+           - Last updated: 2024
+        
+        4. **Medscape:** Hypertensive Crisis Management
+        """)
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất.")
