@@ -58,6 +58,118 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         }
     ],
     
+    "BARTHEL": [
+        {
+            "type": "primary",
+            "title": "Functional evaluation: the Barthel Index",
+            "authors": "Mahoney FI, Barthel DW",
+            "journal": "Maryland State Medical Journal",
+            "year": 1965,
+            "volume": "14",
+            "issue": "",
+            "pages": "61-65",
+            "pmid": "14258950",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "ROCKALL": [
+        {
+            "type": "primary",
+            "title": "Risk assessment after acute upper gastrointestinal haemorrhage",
+            "authors": "Rockall TA, Logan RF, Devlin HB, Northfield TC",
+            "journal": "Gut",
+            "year": 1996,
+            "volume": "38",
+            "issue": "3",
+            "pages": "316-321",
+            "doi": "10.1136/gut.38.3.316",
+            "pmid": "8801197",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "RANSON": [
+        {
+            "type": "primary",
+            "title": "Prognostic signs and the role of operative management in acute pancreatitis",
+            "authors": "Ranson JHC, Rifkind KM, Roses DF, Fink SD, Eng K, Spencer FC",
+            "journal": "Surgery, Gynecology & Obstetrics",
+            "year": 1974,
+            "volume": "139",
+            "issue": "1",
+            "pages": "69-81",
+            "pmid": "4834279",
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "KILLIP": [
+        {
+            "type": "primary",
+            "title": "Treatment of myocardial infarction in a coronary care unit. A two year experience with 250 patients",
+            "authors": "Killip T, Kimball JT",
+            "journal": "American Journal of Cardiology",
+            "year": 1967,
+            "volume": "20",
+            "issue": "4",
+            "pages": "457-464",
+            "doi": "10.1016/0002-9149(67)90023-9",
+            "pmid": "6059183",
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "DUKE": [
+        {
+            "type": "primary",
+            "title": "Prognostic value of a treadmill exercise score in outpatients with suspected coronary artery disease",
+            "authors": "Mark DB, Hlatky MA, Harrell FE Jr, Lee KL, Califf RM, Pryor DB",
+            "journal": "New England Journal of Medicine",
+            "year": 1991,
+            "volume": "325",
+            "issue": "12",
+            "pages": "849-853",
+            "doi": "10.1056/NEJM199109193251204",
+            "pmid": "1883071",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "ASA Physical Status": [
+        {
+            "type": "guideline",
+            "title": "ASA Physical Status Classification System (Approved by the ASA House of Delegates, last amended 2014)",
+            "authors": "American Society of Anesthesiologists",
+            "journal": "American Society of Anesthesiologists",
+            "year": 2014,
+            "url": "https://www.asahq.org/standards-and-guidelines/asa-physical-status-classification-system",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "APGAR Score": [
+        {
+            "type": "primary",
+            "title": "A proposal for a new method of evaluation of the newborn infant",
+            "authors": "Apgar V",
+            "journal": "Current Researches in Anesthesia & Analgesia",
+            "year": 1953,
+            "volume": "32",
+            "issue": "4",
+            "pages": "260-267",
+            "pmid": "13083014",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
     "HAS-BLED": [
         {
             "type": "primary",
@@ -292,6 +404,104 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pages": "2889-2934",
             "doi": "10.1016/j.jacc.2013.11.002",
             "pmid": "24239923",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "ASCVD": [
+        {
+            "type": "guideline",
+            "title": "2013 ACC/AHA Guideline on the Assessment of Cardiovascular Risk",
+            "authors": "Goff DC Jr, Lloyd-Jones DM, Bennett G, et al.",
+            "journal": "Journal of the American College of Cardiology",
+            "year": 2014,
+            "volume": "63",
+            "issue": "25 Pt B",
+            "pages": "2935-2959",
+            "doi": "10.1016/j.jacc.2013.11.005",
+            "pmid": "24239921",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "2013 ACC/AHA Guideline on the Treatment of Blood Cholesterol to Reduce Atherosclerotic Cardiovascular Risk in Adults",
+            "authors": "Stone NJ, Robinson JG, Lichtenstein AH, et al.",
+            "journal": "Journal of the American College of Cardiology",
+            "year": 2014,
+            "volume": "63",
+            "issue": "25 Pt B",
+            "pages": "2889-2934",
+            "doi": "10.1016/j.jacc.2013.11.002",
+            "pmid": "24239923",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "TIMI": [
+        {
+            "type": "primary",
+            "title": "The TIMI risk score for unstable angina/non–ST elevation MI: A method for prognostication and therapeutic decision making",
+            "authors": "Antman EM, Cohen M, Bernink PJ, et al.",
+            "journal": "JAMA",
+            "year": 2000,
+            "volume": "284",
+            "issue": "7",
+            "pages": "835-842",
+            "doi": "10.1001/jama.284.7.835",
+            "pmid": "10938172",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "QTc": [
+        {
+            "type": "primary",
+            "title": "An analysis of the time-relations of electrocardiograms",
+            "authors": "Bazett HC",
+            "journal": "Heart",
+            "year": 1920,
+            "volume": "7",
+            "issue": "",
+            "pages": "353-370",
+            "pmid": "",
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "HEART": [
+        {
+            "type": "primary",
+            "title": "Chest pain in the emergency room: value of the HEART score",
+            "authors": "Six AJ, Backus BE, Kelder JC",
+            "journal": "Netherlands Heart Journal",
+            "year": 2008,
+            "volume": "16",
+            "issue": "6",
+            "pages": "191-196",
+            "doi": "10.1007/BF03086144",
+            "pmid": "18345366",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "GRACE": [
+        {
+            "type": "primary",
+            "title": "Predictors of hospital mortality in the Global Registry of Acute Coronary Events",
+            "authors": "Granger CB, Goldberg RJ, Dabbous O, et al.",
+            "journal": "Archives of Internal Medicine",
+            "year": 2003,
+            "volume": "163",
+            "issue": "19",
+            "pages": "2345-2353",
+            "doi": "10.1001/archinte.163.19.2345",
+            "pmid": "14581255",
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
         }
@@ -2563,21 +2773,6 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
     "SOFA-2 (2025)": [
         {
             "type": "primary",
-            "title": "SOFA-2: An Updated Sequential Organ Failure Assessment Score for Modern Critical Care",
-            "authors": "Vincent JL, Moreno R, Takala J, et al.",
-            "journal": "JAMA",
-            "year": 2025,
-            "volume": "334",
-            "issue": "17",
-            "pages": "1621-1632",
-            "doi": "10.1001/jama.2025.18234",
-            "pmid": "38908234",
-            "evidence_level": EVIDENCE_LEVEL_I,
-            "strength": STRENGTH_STRONG,
-            "url": "https://jamanetwork.com/journals/jama/fullarticle/2840822"
-        },
-        {
-            "type": "primary",
             "title": "The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure",
             "authors": "Vincent JL, Moreno R, Takala J, et al.",
             "journal": "Intensive Care Medicine",
@@ -2620,7 +2815,7 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         },
         {
             "type": "primary",
-            "title": "Modern respiratory support in critical care: High-flow nasal cannula and extracorporeal membrane oxygenation",
+            "title": "High-flow oxygen through nasal cannula in acute hypoxemic respiratory failure",
             "authors": "Frat JP, Thille AW, Mercat A, et al.",
             "journal": "New England Journal of Medicine",
             "year": 2015,
@@ -2630,7 +2825,7 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "doi": "10.1056/NEJMoa1503326",
             "pmid": "25981908",
             "evidence_level": EVIDENCE_LEVEL_I,
-            "strength": STRENGTH_STRONG
+            "strength": STRENGTH_MODERATE
         }
     ],
     
@@ -2643,6 +2838,74 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "year": 2017,
             "url": "https://ctep.cancer.gov/protocoldevelopment/electronic_applications/ctc.htm",
             "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "TRISS": [
+        {
+            "type": "primary",
+            "title": "Evaluating trauma care: the TRISS method",
+            "authors": "Boyd CR, Tolson MA, Copes WS",
+            "journal": "Journal of Trauma",
+            "year": 1987,
+            "volume": "27",
+            "issue": "4",
+            "pages": "370-378",
+            "doi": "10.1097/00005373-198704000-00005",
+            "pmid": "3106646",
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "HOSPITAL Score": [
+        {
+            "type": "primary",
+            "title": "Potentially avoidable 30-day hospital readmissions in medical patients: derivation and validation of the HOSPITAL score",
+            "authors": "Donzé J, Aujesky D, Williams D, Schnipper JL",
+            "journal": "Journal of Hospital Medicine",
+            "year": 2013,
+            "volume": "8",
+            "issue": "9",
+            "pages": "493-499",
+            "doi": "10.1002/jhm.2063",
+            "pmid": "23873718",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "LACE Index": [
+        {
+            "type": "primary",
+            "title": "Derivation of the LACE index to predict early death or unplanned readmission after discharge from hospital to the community",
+            "authors": "van Walraven C, Dhalla IA, Bell C, et al.",
+            "journal": "CMAJ",
+            "year": 2010,
+            "volume": "182",
+            "issue": "6",
+            "pages": "551-557",
+            "doi": "10.1503/cmaj.091117",
+            "pmid": "20194559",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "APACHE III": [
+        {
+            "type": "primary",
+            "title": "The APACHE III prognostic system. Risk prediction of hospital mortality for critically ill hospitalized adults",
+            "authors": "Knaus WA, Wagner DP, Draper EA, et al.",
+            "journal": "Chest",
+            "year": 1991,
+            "volume": "100",
+            "issue": "6",
+            "pages": "1619-1636",
+            "doi": "10.1378/chest.100.6.1619",
+            "pmid": "1959406",
+            "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
         }
     ],

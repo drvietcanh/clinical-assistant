@@ -32,7 +32,7 @@ import streamlit as st
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
-from components.calculation_history import save_calculation_to_history
+from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 # ======================================
@@ -219,11 +219,12 @@ def render():
         - Tăng SOFA-2 ≥2 điểm so với baseline
         - Nếu không biết baseline → giả định = 0
         
-        ### 📚 Tài liệu tham khảo
+        ### 📚 Tài liệu tham khảo (đã kiểm chứng)
         
-        - Vincent JL, et al. SOFA-2: An Updated Sequential Organ Failure Assessment Score for Modern Critical Care. *JAMA* 2025;334(17):1621-1632.
-        - Vincent JL, et al. The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. *Intensive Care Med* 1996;22:707-710 (Original SOFA)
-        - Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). *JAMA* 2016;315:801-810
+        - Vincent JL, et al. The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. *Intensive Care Med* 1996;22:707-710. doi:10.1007/BF01709751.
+        - Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). *JAMA* 2016;315:801-810. doi:10.1001/jama.2016.0287.
+        - Evans L, Rhodes A, Alhazzani W, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. *Crit Care Med* 2021;49(11):e1063–e1143. doi:10.1097/CCM.0000000000005337.
+        - Frat JP, Thille AW, Mercat A, et al. High-flow oxygen through nasal cannula in acute hypoxemic respiratory failure. *N Engl J Med* 2015;372:2185-2196. doi:10.1056/NEJMoa1503326. (Lý do bổ sung: tích hợp hỗ trợ HFNC/ECMO vào bối cảnh chăm sóc hiện đại)
         """)
     
     st.divider()
@@ -492,6 +493,46 @@ def render():
         - SOFA-2 có độ chính xác cao hơn SOFA gốc nhờ big data 2025
         - Quyết định điều trị cuối cùng thuộc về bác sĩ điều trị
         """)
+        
+        inputs_dict = {
+            "pao2_fio2": pao2_fio2,
+            "respiratory_support": respiratory_support,
+            "hfnc_flow": hfnc_flow,
+            "platelets": platelets,
+            "bilirubin": bilirubin,
+            "map": map_value,
+            "use_vasopressor": use_vasopressor,
+            "vasopressor_type": vasopressor_type,
+            "vasopressor_dose": vasopressor_dose,
+            "gcs": gcs,
+            "creatinine": creatinine,
+            "urine_output": urine_output,
+            "on_rrt": on_rrt
+        }
+        results_dict = {
+            "SOFA2": result['total_score'],
+            "Interpretation": result['interpretation'],
+            "Mortality": result['mortality'],
+            "Risk": result['risk_class']
+        }
+        
+        save_calculation_to_history(
+            calculator_id="sofa2",
+            calculator_name="SOFA-2 Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        render_share_section(
+            calculator_id="sofa2",
+            calculator_name="SOFA-2 Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        st.markdown("---")
+        render_history_ui(calculator_id="sofa2", show_actions=True)
     
     # Comparison with original SOFA
     with st.expander("🔍 So sánh SOFA-2 vs SOFA Gốc"):
