@@ -15,6 +15,17 @@ from .hypertensive_emergency import render as render_hypertensive_emergency
 from .status_epilepticus import render as render_status_epilepticus
 from .opioid_overdose import render as render_opioid_overdose
 from .alcohol_withdrawal import render as render_alcohol_withdrawal
+from .paracetamol_overdose import render as render_paracetamol_overdose
+from .salicylate_overdose import render as render_salicylate_overdose
+from .carbon_monoxide_poisoning import render as render_carbon_monoxide_poisoning
+from .organophosphate_poisoning import render as render_organophosphate_poisoning
+from .toxic_alcohol_poisoning import render as render_toxic_alcohol_poisoning
+from .malignant_arrhythmias import render as render_malignant_arrhythmias
+from .pneumothorax import render as render_pneumothorax
+from .traumatic_brain_injury import render as render_traumatic_brain_injury
+from .drowning import render as render_drowning
+from .heat_stroke import render as render_heat_stroke
+from .hypothermia import render as render_hypothermia
 
 
 __all__ = [
@@ -30,5 +41,16 @@ __all__ = [
     'render_status_epilepticus',
     'render_opioid_overdose',
     'render_alcohol_withdrawal',
+    'render_paracetamol_overdose',
+    'render_salicylate_overdose',
+    'render_carbon_monoxide_poisoning',
+    'render_organophosphate_poisoning',
+    'render_toxic_alcohol_poisoning',
+    'render_malignant_arrhythmias',
+    'render_pneumothorax',
+    'render_traumatic_brain_injury',
+    'render_drowning',
+    'render_heat_stroke',
+    'render_hypothermia',
 ]
 
