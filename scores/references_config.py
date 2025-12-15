@@ -2990,6 +2990,35 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
     ]
 }
 
+# Backup and prune unused references (not currently called in codebase)
+_UNUSED_REFERENCE_KEYS = [
+    "4Ts Score", "ACR Criteria", "AKIN", "APGAR", "ARDS Berlin", "ASA",
+    "ASCVD Risk", "Anion Gap", "BMI/IBW/BSA", "BODE Index", "Barthel Index",
+    "Bishop Score", "Braden", "Burn TBSA", "CDAI", "CIPN Grading", "Caprini",
+    "Centor", "Corrected Ca", "Corrected QT", "CrCl", "DAS28", "DIC Score",
+    "DLQI", "DN4", "Duke", "ECOG", "Epworth", "FENa", "FLACC", "FeverPAIN",
+    "Free T4 Index", "GRACE Score", "Gout Diagnostic", "HEART Score", "HbA1c",
+    "Intraocular Pressure", "KDIGO", "Karnofsky", "Killip", "MASCC",
+    "Mallampati", "Modified Bishop", "Morse", "NIPS", "NRS", "Osmolality",
+    "P-POSSUM", "PASI", "PELOD-2", "PIM2", "PRISM III", "Padua",
+    "Palliative Performance", "Parkland Formula", "Pediatric GCS",
+    "Pediatric SOFA", "Pitt Bacteremia", "Preeclampsia", "RCRI", "RIFLE",
+    "Ranson", "Rockall Score", "SCORAD", "SDAI", "SIRS", "SLEDAI", "SLICC",
+    "SMART-COP", "STOP-BANG", "TIMI Risk", "VAS", "Wells DVT",
+    "Westley Croup", "Winter Formula", "Wong-Baker", "eGFR", "mRS"
+]
+
+# Keep a backup dictionary for future use or reactivation
+UNUSED_CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
+    key: CALCULATOR_REFERENCES[key]
+    for key in _UNUSED_REFERENCE_KEYS
+    if key in CALCULATOR_REFERENCES
+}
+
+# Remove unused entries from active reference map
+for key in list(UNUSED_CALCULATOR_REFERENCES.keys()):
+    CALCULATOR_REFERENCES.pop(key, None)
+
 
 def get_references(calculator_name: str) -> List[Dict[str, Any]]:
     """
