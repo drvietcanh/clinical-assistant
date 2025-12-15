@@ -14,12 +14,25 @@ from scores.utils.validation import (
     validate_range
 )
 from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
     """PSI/PORT Score Calculator"""
     st.subheader("🫁 PSI/PORT Score")
     st.caption("Pneumonia Severity Index - Chỉ Số Mức Độ Nặng Viêm Phổi")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'psi_port':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.info("""
     **PSI/PORT Score** đánh giá nguy cơ tử vong 30 ngày ở bệnh nhân viêm phổi cộng đồng.
@@ -275,6 +288,17 @@ def render():
         )
         
         st.markdown("---")
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="psi_port",
+            calculator_name="PSI/PORT Score",
+            category="Hô Hấp",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
         if st.button("🧮 Tính PSI/PORT Score", type="primary", use_container_width=True):
             # Validate inputs
@@ -443,27 +467,36 @@ def render():
                 recommendation = "Nhập viện/ICU"
                 color = "error"
             
-            with col2:
-                st.markdown("### 📊 Kết quả")
-                
-                if color == "success":
-                    st.success(f"## PSI Score: {score}")
-                    st.success(f"**Class {risk_class}**")
-                elif color == "info":
-                    st.info(f"## PSI Score: {score}")
-                    st.info(f"**Class {risk_class}**")
-                elif color == "warning":
-                    st.warning(f"## PSI Score: {score}")
-                    st.warning(f"**Class {risk_class}**")
-                else:
-                    st.error(f"## PSI Score: {score}")
-                    st.error(f"**Class {risk_class}**")
-                
-                st.markdown(f"""
-                **Tỷ lệ tử vong 30 ngày:** {mortality}
-                
-                **Khuyến cáo:** {recommendation}
-                """)
+            st.markdown("---")
+            st.markdown("## 📊 Kết quả")
+            
+            # Map color to hex
+            color_map_hex = {
+                "success": "#28a745",
+                "info": "#17a2b8",
+                "warning": "#ffc107",
+                "error": "#dc3545"
+            }
+            score_color = color_map_hex.get(color, "#6c757d")
+            
+            icon_map = {
+                "success": "✅",
+                "info": "ℹ️",
+                "warning": "⚠️",
+                "error": "🚨"
+            }
+            icon = icon_map.get(color, "📊")
+            
+            # Use render_score_result for main score display
+            render_score_result(
+                title="PSI/PORT Score",
+                score=score,
+                interpretation=f"Class {risk_class} - {recommendation}",
+                mortality=f"Tỷ lệ tử vong 30 ngày: {mortality}",
+                color=score_color,
+                icon=icon,
+                size="large"
+            )
             
             st.markdown("---")
             st.markdown("### 💡 Chi tiết tính điểm")
@@ -521,38 +554,111 @@ def render():
                   - Septic shock
                 """)
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown(f"""
-                **PSI/PORT Score - Pneumonia Severity Index**
-                
-                **Risk Classes & Tỷ lệ tử vong 30 ngày:**
-                
-                | Class | Điểm | Tử vong | Khuyến cáo |
-                |-------|------|---------|------------|
-                | I | ≤50 | 0.1% | Ngoại trú |
-                | II | 51-70 | 0.6% | Ngoại trú |
-                | III | 71-90 | 2.8% | Ngắn ngày/Ngoại trú |
-                | IV | 91-130 | 8.2% | Nhập viện |
-                | V | >130 | 29.2% | Nhập viện/ICU |
-                
-                **Kết quả của bạn:** Class {risk_class} ({score} điểm) - {mortality} tử vong
-                
-                **Ưu điểm:**
-                - Chính xác cao hơn CURB-65
-                - Dựa trên nhiều biến số lâm sàng và xét nghiệm
-                - Validated trong nhiều nghiên cứu lớn
-                
-                **Nhược điểm:**
-                - Phức tạp, cần nhiều xét nghiệm
-                - Mất thời gian
-                - Có thể không phù hợp cấp cứu
-                
-                **Reference:**
-                Fine MJ, et al. A prediction rule to identify low-risk patients with community-acquired pneumonia. N Engl J Med. 1997;336(4):243-250.
-                
-                **Guidelines:**
-                - IDSA/ATS CAP Guidelines (2019)
-                - BTS Guidelines (2009)
-                """)
+            # Prepare inputs and results for export/history
+            inputs_dict = {
+                "Age": str(age),
+                "Gender": gender,
+                "Nursing Home": "Có" if nursing_home else "Không",
+                "Neoplastic Disease": "Có" if neoplastic else "Không",
+                "Liver Disease": "Có" if liver else "Không",
+                "CHF": "Có" if chf else "Không",
+                "CVD": "Có" if cvd else "Không",
+                "Renal Disease": "Có" if renal else "Không",
+                "Altered Mental": "Có" if altered_mental else "Không",
+                "Respiratory Rate": str(resp_rate),
+                "Systolic BP": str(sbp),
+                "Temperature": f"{temp_c:.1f}°C",
+                "Heart Rate": str(heart_rate),
+                "pH": str(ph),
+                "BUN": f"{bun_mgdl:.1f} mg/dL",
+                "Sodium": f"{sodium:.0f} mmol/L",
+                "Glucose": f"{glucose_mgdl:.0f} mg/dL",
+                "Hematocrit": f"{hct:.1f}%",
+                "PaO2": f"{pao2_mmhg:.0f} mmHg",
+                "Pleural Effusion": "Có" if pleural_effusion else "Không"
+            }
+            
+            results_dict = {
+                "PSI/PORT Score": f"{score} điểm",
+                "Risk Class": f"Class {risk_class}",
+                "Mortality": mortality,
+                "Details": "\n".join(details) if details else "Không có"
+            }
+            
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            render_export_section(
+                title=f"PSI/PORT Class {risk_class} = {score} điểm",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="PSI/PORT Score",
+                filename="psi_port_result"
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="psi_port",
+                calculator_name="PSI/PORT Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="psi_port",
+                calculator_name="PSI/PORT Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="psi_port", show_actions=True)
+            
+            # References section
+            references = get_references("PSI/PORT")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+            else:
+                # Fallback to manual references if not in config
+                with st.expander("📚 Tài liệu tham khảo"):
+                    st.markdown(f"""
+                    **PSI/PORT Score - Pneumonia Severity Index**
+                    
+                    **Risk Classes & Tỷ lệ tử vong 30 ngày:**
+                    
+                    | Class | Điểm | Tử vong | Khuyến cáo |
+                    |-------|------|---------|------------|
+                    | I | ≤50 | 0.1% | Ngoại trú |
+                    | II | 51-70 | 0.6% | Ngoại trú |
+                    | III | 71-90 | 2.8% | Ngắn ngày/Ngoại trú |
+                    | IV | 91-130 | 8.2% | Nhập viện |
+                    | V | >130 | 29.2% | Nhập viện/ICU |
+                    
+                    **Kết quả của bạn:** Class {risk_class} ({score} điểm) - {mortality} tử vong
+                    
+                    **Reference:**
+                    Fine MJ, et al. A prediction rule to identify low-risk patients with community-acquired pneumonia. N Engl J Med. 1997;336(4):243-250.
+                    """)
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("PSI/PORT")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 

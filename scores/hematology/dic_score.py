@@ -28,6 +28,7 @@ known to be associated with DIC (sepsis, trauma, malignancy, obstetric complicat
 import streamlit as st
 from scores.utils.validation import validate_lab_value, validate_range
 from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def calculate_dic_score(
@@ -432,19 +433,45 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết quả")
+        st.markdown("## 📊 Kết quả")
         
-        # Score box
-        col_r1, col_r2 = st.columns([1, 2])
+        # Map color emoji to hex
+        color_map_hex = {
+            "🔴": "#dc3545",
+            "🟡": "#ffc107"
+        }
+        score_color = color_map_hex.get(result['color'], "#6c757d")
         
-        with col_r1:
-            st.metric(
-                label="**ISTH DIC Score**",
-                value=f"{result['score']} điểm"
+        # Use render_score_result for main score display
+        render_score_result(
+            title="ISTH DIC Score",
+            score=result['score'],
+            interpretation=result['interpretation'],
+            mortality=None,
+            color=score_color,
+            icon=result['color'],
+            size="large"
+        )
+        
+        # Extract component scores from details for breakdown
+        component_scores = {}
+        for detail in result['details']:
+            if "Tiểu cầu" in detail:
+                component_scores["🩸 Tiểu cầu"] = int(detail.split("→")[1].split()[0])
+            elif "D-dimer" in detail or "FDP" in detail:
+                component_scores["🔬 D-dimer/FDP"] = int(detail.split("→")[1].split()[0])
+            elif "PT kéo dài" in detail:
+                component_scores["⏱️ PT prolongation"] = int(detail.split("→")[1].split()[0])
+            elif "Fibrinogen" in detail:
+                component_scores["🧪 Fibrinogen"] = int(detail.split("→")[1].split()[0])
+        
+        # Use render_score_breakdown for component scores
+        if component_scores:
+            render_score_breakdown(
+                title="Điểm Từng Thành Phần",
+                subscores=component_scores,
+                total_score=result['score']
             )
-        
-        with col_r2:
-            st.markdown(f"### {result['color']} {result['interpretation']}")
         
         # Details
         with st.expander("📋 Chi tiết tính điểm", expanded=True):

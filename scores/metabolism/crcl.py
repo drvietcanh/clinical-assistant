@@ -10,6 +10,7 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.validation import render_validation_errors
+from components.ui.results import render_result_box
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -243,17 +244,24 @@ def render():
         # Display results
         st.markdown("## 📊 Kết quả")
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 40px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h1 style='color: {color}; margin: 0; text-align: center; font-size: 3em;'>
-                {icon} CrCl = {crcl:.1f} mL/min
-            </h1>
-            <p style='text-align: center; font-size: 1.3em; margin-top: 15px; font-weight: bold;'>
-                {stage}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        # Map color to result box color
+        color_map = {
+            "#28a745": "success",
+            "#ffc107": "warning",
+            "#fd7e14": "warning",
+            "#dc3545": "error"
+        }
+        box_color = color_map.get(color, "info")
+        
+        # Use render_result_box for main result display
+        render_result_box(
+            title=f"{icon} Creatinine Clearance",
+            value=f"{crcl:.1f} mL/min",
+            subtitle=stage,
+            color=box_color,
+            icon=icon,
+            size="large"
+        )
         
         # Calculation breakdown
         st.markdown("### 📋 Chi tiết tính toán:")

@@ -6,6 +6,7 @@ Công thức Winter - PCO2 dự đoán trong toan chuyển hóa
 import streamlit as st
 from scores.utils.validation import validate_lab_value, validate_range
 from components.ui.validation import render_validation_errors
+from components.ui.results import render_result_box
 
 
 def calculate_expected_pco2(hco3):
@@ -244,30 +245,35 @@ def render():
         
         st.markdown("---")
         
-        # Winter's Formula Kết quảs
+        # Winter's Formula Results
         st.subheader("🔬 Winter's Formula - PCO₂ Dự Đoán")
         
-        col1, col2 = st.columns(2)
+        # Display expected PCO2
+        render_result_box(
+            title="PCO₂ Dự Đoán",
+            value=f"{expected_pco2:.1f} mmHg",
+            subtitle=f"Khoảng: {lower_limit:.1f} - {upper_limit:.1f} mmHg",
+            color="info",
+            icon="📊",
+            size="medium"
+        )
         
-        with col1:
-            st.info(f"""
-            **Công thức:**  
-            PCO₂ dự đoán = 1.5 × [{hco3:.1f}] + 8 (± 2)
-            
-            **Kết quả:**
-            - PCO₂ dự đoán: **{expected_pco2:.1f} mmHg**
-            - Khoảng chấp nhận: **{lower_limit:.1f} - {upper_limit:.1f} mmHg**
-            - PCO₂ thực tế: **{actual_pco2:.1f} mmHg**
-            """)
+        # Display actual PCO2 and compensation status
+        compensation_color_map = {
+            "🟢": "success",
+            "🔵": "info",
+            "🟠": "warning"
+        }
+        comp_color = compensation_color_map.get(result['color'], "info")
         
-        with col2:
-            # Compensation status
-            st.success(f"""
-            {result['color']} **{result['status']}**
-            
-            **Giải thích:**  
-            {result['interpretation']}
-            """)
+        render_result_box(
+            title="PCO₂ Thực Tế & Bù Thường",
+            value=f"{actual_pco2:.1f} mmHg",
+            subtitle=f"{result['status']} - {result['interpretation']}",
+            color=comp_color,
+            icon=result['color'],
+            size="large"
+        )
         
         st.markdown("---")
         

@@ -6,6 +6,7 @@ Body Mass Index, Ideal Body Weight, Body Surface Area
 import streamlit as st
 import math
 from scores.utils.validation import validate_age, validate_range
+from components.ui.results import render_result_card
 
 
 def calculate_bmi(weight, height_cm):
@@ -192,45 +193,32 @@ def render():
         # Display results
         st.markdown("## 📊 Kết quả")
         
-        # BMI Kết quả
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {bmi_color}22 0%, {bmi_color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {bmi_color}; margin: 20px 0;'>
-            <h2 style='color: {bmi_color}; margin: 0; text-align: center;'>
-                {bmi_icon} BMI = {bmi:.1f} kg/m²
-            </h2>
-            <p style='text-align: center; font-size: 1.2em; margin-top: 10px;'>
-                {bmi_category}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        # Use render_result_card for multiple metrics
+        metrics_list = [
+            {"label": "BMI", "value": f"{bmi:.1f} kg/m²", "help": f"{bmi_category}"},
+            {"label": "IBW", "value": f"{ibw:.1f} kg", "help": f"{weight - ibw:+.0f} kg so với actual"},
+            {"label": "BSA", "value": f"{bsa_mosteller:.2f} m²", "help": "Body Surface Area (Mosteller)"}
+        ]
         
-        # All metrics
-        st.markdown("### 📏 Tất cả chỉ số:")
+        if weight > ibw * 1.2:
+            metrics_list.append({"label": "ABW", "value": f"{abw:.1f} kg", "help": "Adjusted Body Weight (cho béo phì)"})
         
-        col1, col2, col3 = st.columns(3)
+        # Determine card color based on BMI
+        if bmi < 18.5:
+            card_color = "warning"
+        elif bmi < 25:
+            card_color = "success"
+        elif bmi < 30:
+            card_color = "warning"
+        else:
+            card_color = "error"
         
-        with col1:
-            st.metric(
-                "BMI",
-                f"{bmi:.1f} kg/m²",
-                help="Body Mass Index"
-            )
-        
-        with col2:
-            st.metric(
-                "IBW",
-                f"{ibw:.1f} kg",
-                delta=f"{weight - ibw:+.0f} kg so với actual",
-                help="Ideal Body Weight (Devine)"
-            )
-        
-        with col3:
-            st.metric(
-                "BSA",
-                f"{bsa_mosteller:.2f} m²",
-                help="Body Surface Area (Mosteller)"
-            )
+        render_result_card(
+            title=f"{bmi_icon} BMI = {bmi:.1f} kg/m² - {bmi_category}",
+            metrics=metrics_list,
+            color=card_color,
+            icon=bmi_icon
+        )
         
         # ABW if obese
         if weight > ibw * 1.2:  # >20% over IBW

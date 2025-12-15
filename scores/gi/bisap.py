@@ -9,6 +9,7 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def _format_num(value: float, decimals: int = 1) -> str:

@@ -6,6 +6,7 @@ Tính độ thẩm thấu huyết thanh và osmolal gap
 import streamlit as st
 from scores.utils.validation import validate_lab_value
 from components.ui.validation import render_validation_errors
+from components.ui.results import render_result_box
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -186,25 +187,26 @@ def render():
         # Calculated osmolality
         if calc_osm < 275:
             osm_status = "Thấp"
-            osm_color = "#ffc107"
+            osm_color = "warning"
+            osm_icon = "⚠️"
         elif calc_osm <= 295:
             osm_status = "Bình thường"
-            osm_color = "#28a745"
+            osm_color = "success"
+            osm_icon = "✅"
         else:
             osm_status = "Cao"
-            osm_color = "#dc3545"
+            osm_color = "error"
+            osm_icon = "🚨"
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {osm_color}22 0%, {osm_color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {osm_color}; margin: 20px 0;'>
-            <h2 style='color: {osm_color}; margin: 0; text-align: center;'>
-                Calculated Osmolality = {calc_osm:.1f} mOsm/kg
-            </h2>
-            <p style='text-align: center; font-size: 1.1em; margin-top: 10px;'>
-                ({osm_status})
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        # Use render_result_box for calculated osmolality
+        render_result_box(
+            title="Calculated Osmolality",
+            value=f"{calc_osm:.1f} mOsm/kg",
+            subtitle=osm_status,
+            color=osm_color,
+            icon=osm_icon,
+            size="large"
+        )
         
         # Chi tiết
         st.markdown("### 📋 Thành phần:")
@@ -224,28 +226,26 @@ def render():
             
             if osm_gap < 10:
                 gap_status = "Bình thường"
-                gap_color = "#28a745"
+                gap_color = "success"
                 gap_icon = "✅"
             elif osm_gap < 20:
                 gap_status = "Tăng nhẹ"
-                gap_color = "#ffc107"
+                gap_color = "warning"
                 gap_icon = "⚠️"
             else:
                 gap_status = "Tăng rõ rệt"
-                gap_color = "#dc3545"
+                gap_color = "error"
                 gap_icon = "🚨"
             
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, {gap_color}22 0%, {gap_color}44 100%); 
-                        padding: 30px; border-radius: 15px; border-left: 5px solid {gap_color}; margin: 20px 0;'>
-                <h2 style='color: {gap_color}; margin: 0; text-align: center;'>
-                    {gap_icon} Osmolal Gap = {osm_gap:.1f} mOsm/kg
-                </h2>
-                <p style='text-align: center; font-size: 1.1em; margin-top: 10px;'>
-                    {gap_status}
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
+            # Use render_result_box for osmolal gap
+            render_result_box(
+                title="Osmolal Gap",
+                value=f"{osm_gap:.1f} mOsm/kg",
+                subtitle=gap_status,
+                color=gap_color,
+                icon=gap_icon,
+                size="large"
+            )
             
             st.markdown(f"""
             **Tính toán:**

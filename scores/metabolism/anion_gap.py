@@ -16,6 +16,7 @@ Arch Intern Med. 1990;150(2):311-3.
 import streamlit as st
 from scores.utils.validation import validate_lab_value
 from components.ui.validation import render_validation_errors
+from components.ui.results import render_result_box
 
 
 def render():
@@ -150,23 +151,28 @@ def render():
                 interpretation = "TĂNG CAO"
                 color = "error"
             
-            with col2:
-                st.markdown("### 📊 Kết quả")
-                
-                if color == "success":
-                    st.success(f"## AG = {ag_display:.1f}")
-                    st.success(f"**{interpretation}**")
-                elif color == "info":
-                    st.info(f"## AG = {ag_display:.1f}")
-                    st.info(f"**{interpretation}**")
-                elif color == "warning":
-                    st.warning(f"## AG = {ag_display:.1f}")
-                    st.warning(f"**{interpretation}**")
-                else:
-                    st.error(f"## AG = {ag_display:.1f}")
-                    st.error(f"**{interpretation}**")
-                
-                st.caption("Bình thường: 8-12 mEq/L")
+            st.markdown("---")
+            st.markdown("## 📊 Kết quả")
+            
+            # Use render_result_box for main result display
+            icon_map = {
+                "success": "✅",
+                "info": "ℹ️",
+                "warning": "⚠️",
+                "error": "🚨"
+            }
+            icon = icon_map.get(color, "📊")
+            
+            render_result_box(
+                title="Anion Gap",
+                value=f"{ag_display:.1f} mEq/L",
+                subtitle=interpretation,
+                color=color,
+                icon=icon,
+                size="large"
+            )
+            
+            st.caption("Bình thường: 8-12 mEq/L")
             
             st.markdown("---")
             st.markdown("### 💡 GIẢI THÍCH & NGUYÊN NHÂN")

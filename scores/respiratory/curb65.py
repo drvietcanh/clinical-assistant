@@ -11,6 +11,11 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
@@ -18,14 +23,26 @@ def render():
     st.subheader("🫁 CURB-65")
     st.caption("Mức Độ Nặng Viêm Phổi Cộng Đồng")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'curb65':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        # Pre-fill inputs from shared result (optional)
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     col1, col2 = st.columns([2, 1])
     
     with col1:
         st.markdown("### 📋 Tiêu chí Đánh giá")
         
+        # Pre-fill from shared result if available
+        shared_inputs = st.session_state.get('shared_inputs', {})
+        
         confusion = st.checkbox(
             "**C** - Confusion (Lú lẫn)",
-            help="Mới xuất hiện hoặc AMT ≤8"
+            help="Mới xuất hiện hoặc AMT ≤8",
+            value=shared_inputs.get('Confusion') == 'Có' if shared_inputs else False
         )
         
         # Urea with unit conversion
@@ -102,11 +119,22 @@ def render():
             "Tuổi",
             min_value=0,
             max_value=120,
-            value=50,
+            value=int(shared_inputs.get('Age', 50)) if shared_inputs and shared_inputs.get('Age') else 50,
             step=1
         )
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="curb65",
+            calculator_name="CURB-65",
+            category="Hô Hấp",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
-        if st.button("🧮 Tính CURB-65", type="primary"):
+        if st.button("🧮 Tính CURB-65", type="primary", use_container_width=True):
             # Validate inputs
             validation_errors = []
             
@@ -267,27 +295,103 @@ def render():
                 - Theo dõi sát
                 """)
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown("""
-                **CURB-65 Score**
-                
-                **Tiêu chí (1 điểm mỗi mục):**
-                - **C**: Confusion (AMT ≤8)
-                - **U**: Urea >7 mmol/L (>20 mg/dL BUN)
-                - **R**: Respiratory rate ≥30/min
-                - **B**: Blood pressure (SBP <90 hoặc DBP ≤60 mmHg)
-                - **65**: Age ≥65 years
-                
-                **Tỷ lệ tử vong 30 ngày:**
-                - Score 0-1: 0.7-2.1% (điều trị ngoại trú)
-                - Score 2: 9.2% (cân nhắc nhập viện)
-                - Score 3-5: 14.5-40% (nhập viện/ICU)
-                
-                **Reference:**
-                Lim WS, et al. Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study. Thorax. 2003;58(5):377-382.
-                
-                **Guidelines:**
-                - BTS Guidelines for CAP (2009)
-                - IDSA/ATS Guidelines (2019)
-                """)
+            # Prepare inputs for export and history
+            inputs_dict = {
+                "Confusion": "Có" if confusion else "Không",
+                "Urea": f"{urea_mmol:.1f} mmol/L ({urea_input:.1f} {urea_unit})",
+                "Urea High": "Có" if urea_high else "Không",
+                "Respiratory Rate": str(rr),
+                "Systolic BP": str(sbp),
+                "Diastolic BP": str(dbp),
+                "Age": str(age)
+            }
+            
+            # Prepare results for export and history
+            results_dict = {
+                "CURB-65 Score": f"{score} điểm",
+                "Risk Level": risk_level,
+                "Mortality": mortality,
+                "Recommendation": recommendation,
+                "Details": "\n".join(details) if details else "Không có tiêu chí nào"
+            }
+            
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            render_export_section(
+                title=f"CURB-65 = {score} điểm",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="CURB-65",
+                filename="curb65_result"
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="curb65",
+                calculator_name="CURB-65",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="curb65",
+                calculator_name="CURB-65",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="curb65", show_actions=True)
+            
+            # References section
+            references = get_references("CURB-65")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+            else:
+                # Fallback to manual references if not in config
+                with st.expander("📚 Tài liệu tham khảo"):
+                    st.markdown("""
+                    **CURB-65 Score**
+                    
+                    **Tiêu chí (1 điểm mỗi mục):**
+                    - **C**: Confusion (AMT ≤8)
+                    - **U**: Urea >7 mmol/L (>20 mg/dL BUN)
+                    - **R**: Respiratory rate ≥30/min
+                    - **B**: Blood pressure (SBP <90 hoặc DBP ≤60 mmHg)
+                    - **65**: Age ≥65 years
+                    
+                    **Tỷ lệ tử vong 30 ngày:**
+                    - Score 0-1: 0.7-2.1% (điều trị ngoại trú)
+                    - Score 2: 9.2% (cân nhắc nhập viện)
+                    - Score 3-5: 14.5-40% (nhập viện/ICU)
+                    
+                    **Reference:**
+                    Lim WS, et al. Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study. Thorax. 2003;58(5):377-382.
+                    
+                    **Guidelines:**
+                    - BTS Guidelines for CAP (2009)
+                    - IDSA/ATS Guidelines (2019)
+                    """)
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("CURB-65")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

@@ -11,6 +11,11 @@ J Neurosurg. 1968;28(1):14-20.
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
@@ -19,12 +24,32 @@ def render():
     st.subheader("🧠 Hunt & Hess Scale - Xuất huyết dưới nhện")
     st.caption("Phân loại mức độ nghiêm trọng của xuất huyết dưới màng nhện")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'hunt_hess':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     **Hunt & Hess Scale** là thang điểm lâm sàng dùng để phân loại mức độ nghiêm trọng 
     của xuất huyết dưới màng nhện do vỡ phình mạch (Subarachnoid Hemorrhage - SAH).
     """)
     
     st.markdown("---")
+    
+    col1, col2 = st.columns([2, 1])
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="hunt_hess",
+            calculator_name="Hunt & Hess Scale",
+            category="Thần Kinh",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Selection
     st.markdown("### 🩺 Chọn mức độ lâm sàng")
@@ -618,6 +643,75 @@ def render():
         3. Nếu xác định SAH: **CTA hoặc DSA** để tìm phình mạch
         4. Nhập viện ICU/Stroke Unit ngay
         """)
+    
+        # Prepare inputs and results for export/history
+        inputs_dict = {
+            "Clinical Grade": selected_grade,
+            "Systemic Complications": "Có" if systemic_complications else "Không",
+            "Final Grade": f"Grade {final_grade}"
+        }
+        
+        results_dict = {
+            "Hunt & Hess Grade": f"Grade {final_grade}",
+            "Mortality": final_info["mortality"],
+            "Outcome": final_info["outcome"],
+            "Description": final_info["name"]
+        }
+        
+        # Export section
+        st.markdown("---")
+        from components.export import render_export_section
+        render_export_section(
+            title=f"Hunt & Hess Grade {final_grade}",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="Hunt & Hess Scale",
+            filename="hunt_hess_result"
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="hunt_hess",
+            calculator_name="Hunt & Hess Scale",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="hunt_hess",
+            calculator_name="Hunt & Hess Scale",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="hunt_hess", show_actions=True)
+        
+        # References section
+        references = get_references("Hunt & Hess")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("Hunt & Hess")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Footer
     st.markdown("---")

@@ -298,28 +298,32 @@ def render_reference_item(
         ">Strength: {reference['strength']}</span>
         """
     
-    # Render
-    reference_html = f"""
-    <div style="
-        padding: 1rem;
-        margin: 0.75rem 0;
-        background: #f8f9fa;
-        border-left: 4px solid #007bff;
-        border-radius: 4px;
-    ">
-        <div style="font-size: 1rem; margin-bottom: 0.5rem;">
-            {icon} <strong>{reference.get('title', 'Reference')}</strong>
-            {evidence_badge}
-            {strength_badge}
-        </div>
-        <div style="font-size: 0.9rem; color: #495057; line-height: 1.6;">
-            {citation}
-        </div>
-        {links_html}
-    </div>
-    """
-    
-    st.markdown(reference_html, unsafe_allow_html=True)
+    # Render using Streamlit components to avoid HTML escaping issues
+    with st.container():
+        # Title with badges
+        title_col1, title_col2 = st.columns([1, 0.1])
+        with title_col1:
+            title_text = f"{icon} **{reference.get('title', 'Reference')}**"
+            st.markdown(title_text)
+        
+        # Evidence and strength badges
+        if evidence_badge or strength_badge:
+            badge_html = f"""
+            <div style="margin-top: 4px; margin-bottom: 8px;">
+                {evidence_badge}
+                {strength_badge}
+            </div>
+            """
+            st.markdown(badge_html, unsafe_allow_html=True)
+        
+        # Citation
+        st.markdown(f'<div style="font-size: 0.9rem; color: #495057; line-height: 1.6; margin-bottom: 8px;">{citation}</div>', unsafe_allow_html=True)
+        
+        # Links
+        if links_html:
+            st.markdown(links_html, unsafe_allow_html=True)
+        
+        st.markdown("---")
 
 
 def render_references_section(

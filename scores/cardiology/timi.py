@@ -3,12 +3,24 @@ TIMI Risk Score Calculator
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
     """TIMI Risk Score Calculator"""
     st.subheader("💔 TIMI Risk Score")
     st.caption("Đánh giá Nguy cơ Trong UA/NSTEMI")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'timi':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.info("""
     **TIMI Risk Score** dự đoán tử vong, nhồi máu cơ tim mới hoặc cần tái can thiệp trong 14 ngày.
@@ -104,8 +116,19 @@ def render():
         if elevated_markers:
             score += 1
             details.append("✓ Marker tim tăng (+1)")
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="timi",
+            calculator_name="TIMI Risk Score",
+            category="Tim Mạch",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
-        if st.button("🧮 Tính TIMI Risk Score", type="primary", key="timi_calc"):
+        if st.button("🧮 Tính TIMI Risk Score", type="primary", key="timi_calc", use_container_width=True):
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
@@ -222,8 +245,42 @@ def render():
                 filename="timi_result"
             )
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown("""
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="timi",
+                calculator_name="TIMI Risk Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="timi",
+                calculator_name="TIMI Risk Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="timi", show_actions=True)
+            
+            # References section
+            references = get_references("TIMI")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+            else:
+                # Fallback to manual references if not in config
+                with st.expander("📚 Tài liệu tham khảo"):
+                    st.markdown("""
                 **TIMI Risk Score for UA/NSTEMI**
                 
                 **7 Tiêu chuẩn (mỗi mục 1 điểm):**
@@ -253,6 +310,17 @@ def render():
                 **Link:**
                 - https://www.mdcalc.com/timi-risk-score-ua-nstemi
                 """)
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("TIMI")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Công cụ hỗ trợ lâm sàng - không thay thế đánh giá lâm sàng toàn diện")

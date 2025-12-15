@@ -33,6 +33,7 @@ from scores.utils.validation import (
     validate_lab_value,
     safe_divide
 )
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def get_respiratory_score(pao2_fio2: float) -> int:
@@ -333,36 +334,44 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết quả")
+        st.markdown("## 📊 Kết quả")
         
-        col_r1, col_r2 = st.columns([1, 2])
+        # Map color emoji to hex
+        color_map_hex = {
+            "🟢": "#28a745",
+            "🟡": "#ffc107",
+            "🟠": "#fd7e14",
+            "🔴": "#dc3545"
+        }
+        score_color = color_map_hex.get(result['color'], "#6c757d")
         
-        with col_r1:
-            st.metric("**MODS Score**", f"{result['total_score']} điểm")
-            st.caption("0-24 điểm")
+        # Use render_score_result for main score display
+        render_score_result(
+            title="MODS Score",
+            score=result['total_score'],
+            interpretation=result['interpretation'],
+            mortality=f"Tử vong ICU: {result['mortality']}",
+            color=score_color,
+            icon=result['color'],
+            size="large"
+        )
         
-        with col_r2:
-            st.markdown(f"### {result['color']} {result['interpretation']}")
-            st.markdown(f"**Tử vong ước tính: {result['mortality']}**")
+        # Use render_score_breakdown for organ system scores
+        render_score_breakdown(
+            title="Điểm Từng Hệ Cơ Quan",
+            subscores={
+                "🫁 Hô hấp": result['subscores']['respiratory'],
+                "🫘 Thận": result['subscores']['renal'],
+                "🫀 Gan": result['subscores']['hepatic'],
+                "❤️ Tim mạch": result['subscores']['cardiovascular'],
+                "🩸 Huyết học": result['subscores']['hematologic'],
+                "🧠 Thần kinh": result['subscores']['neurologic']
+            },
+            total_score=result['total_score']
+        )
         
-        # Subscores
-        with st.expander("📋 Điểm từng hệ cơ quan", expanded=True):
-            cols = st.columns(6)
-            organs = [
-                ("Hô hấp", "respiratory"),
-                ("Thận", "renal"),
-                ("Gan", "hepatic"),
-                ("Tim mạch", "cardiovascular"),
-                ("Huyết học", "hematologic"),
-                ("Thần kinh", "neurologic")
-            ]
-            
-            for col, (name, key) in zip(cols, organs):
-                with col:
-                    st.metric(name, f"{result['subscores'][key]}")
-            
-            st.markdown("---")
-            st.markdown("**Chi tiết:**")
+        # Details
+        with st.expander("📋 Chi tiết tính điểm", expanded=True):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         

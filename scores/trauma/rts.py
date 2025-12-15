@@ -35,6 +35,7 @@ from scores.utils.validation import (
     validate_blood_pressure,
     validate_respiratory_rate
 )
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def code_gcs(gcs: int) -> int:
@@ -330,28 +331,38 @@ def render():
         result = calculate_rts(gcs=gcs, sbp=sbp, rr=rr)
         
         # Display results
-        st.subheader("📊 Kết quả")
+        st.markdown("## 📊 Kết quả")
         
-        # Score box
-        col_r1, col_r2, col_r3 = st.columns([1, 1, 1])
+        # Map color emoji to hex
+        color_map_hex = {
+            "🟢": "#28a745",
+            "🟡": "#ffc107",
+            "🟠": "#fd7e14",
+            "🔴": "#dc3545"
+        }
+        score_color = color_map_hex.get(result['color'], "#6c757d")
         
-        with col_r1:
-            st.metric(
-                label="**Revised Trauma Score**",
-                value=f"{result['rts']:.2f}"
-            )
-            st.caption("0 (tệ nhất) → 7.84 (tốt nhất)")
+        # Use render_score_result for main score display
+        render_score_result(
+            title="Revised Trauma Score (RTS)",
+            score=round(result['rts'], 2),
+            interpretation=result['interpretation'],
+            mortality=f"Tỷ lệ sống sót: {result['survival_prob']}",
+            color=score_color,
+            icon=result['color'],
+            size="large"
+        )
         
-        with col_r2:
-            st.metric(
-                label="**Tỷ Lệ Sống Sót**",
-                value=result['survival_prob']
-            )
-            st.caption("Ước tính dựa trên RTS")
-        
-        with col_r3:
-            st.markdown(f"### {result['color']}")
-            st.markdown(f"**{result['interpretation']}**")
+        # Use render_score_breakdown for component scores
+        render_score_breakdown(
+            title="Điểm Từng Thành Phần",
+            subscores={
+                "🧠 GCS": result['gcs_coded'],
+                "🫀 SBP": result['sbp_coded'],
+                "🫁 RR": result['rr_coded']
+            },
+            total_score=round(result['rts'], 2)
+        )
         
         # Coded values
         with st.expander("📋 Giá trị mã hóa & tính toán", expanded=True):

@@ -4,6 +4,11 @@ Loại trừ thuyên tắc phổi mà không cần D-dimer
 """
 
 import streamlit as st
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
@@ -13,6 +18,14 @@ def render():
     <h2 style='text-align: center; color: #0EA5E9;'>🫁 PERC Rule</h2>
     <p style='text-align: center;'><em>Pulmonary Embolism Rule-out Criteria</em></p>
     """, unsafe_allow_html=True)
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'perc':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        # Pre-fill inputs from shared result (optional)
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     # Thông tin về PERC
     with st.expander("ℹ️ Giới thiệu về PERC Rule"):
@@ -59,86 +72,111 @@ def render():
     
     st.markdown("---")
     
-    # Input form - 8 criteria
-    st.subheader("📝 Đánh giá 8 tiêu chí PERC")
+    col1, col2 = st.columns([2, 1])
     
-    st.markdown("""
-    **PERC Rule bao gồm 8 tiêu chí. Trả lời CÓ/KHÔNG cho từng tiêu chí:**
+    with col1:
+        # Input form - 8 criteria
+        st.subheader("📝 Đánh giá 8 tiêu chí PERC")
+        
+        st.markdown("""
+        **PERC Rule bao gồm 8 tiêu chí. Trả lời CÓ/KHÔNG cho từng tiêu chí:**
+        
+        *(Nếu TẤT CẢ đều KHÔNG → PERC âm → Có thể loại trừ PE)*
+        """)
+        
+        # Pre-fill from shared result if available
+        shared_inputs = st.session_state.get('shared_inputs', {})
+        
+        # Age
+        st.markdown("### 1️⃣ Tuổi tác:")
+        age_50 = st.checkbox(
+            "Tuổi ≥ 50",
+            help="Bệnh nhân từ 50 tuổi trở lên",
+            value=shared_inputs.get('Age ≥ 50') == 'Có' if shared_inputs else False
+        )
+        
+        st.markdown("---")
+        
+        # Heart rate
+        st.markdown("### 2️⃣ Mạch:")
+        hr_100 = st.checkbox(
+            "Nhịp tim ≥ 100 nhịp/phút",
+            help="Nhịp tim nhanh (tachycardia)",
+            value=shared_inputs.get('HR ≥ 100') == 'Có' if shared_inputs else False
+        )
+        
+        st.markdown("---")
+        
+        # Oxygen saturation
+        st.markdown("### 3️⃣ Oxy hóa máu:")
+        spo2_95 = st.checkbox(
+            "SpO₂ < 95% (khí phòng)",
+            help="Bão hòa oxy thấp khi thở khí phòng",
+            value=shared_inputs.get('SpO₂ < 95%') == 'Có' if shared_inputs else False
+        )
+        
+        st.markdown("---")
+        
+        # Unilateral leg swelling
+        st.markdown("### 4️⃣ Phù chân:")
+        leg_swelling = st.checkbox(
+            "Phù chân một bên",
+            help="Phù chân đơn độc (gợi ý DVT)",
+            value=shared_inputs.get('Leg Swelling') == 'Có' if shared_inputs else False
+        )
+        
+        st.markdown("---")
+        
+        # Hemoptysis
+        st.markdown("### 5️⃣ Ho ra máu:")
+        hemoptysis = st.checkbox(
+            "Ho ra máu (Hemoptysis)",
+            help="Ho ra máu tươi hoặc đờm lẫn máu",
+            value=shared_inputs.get('Hemoptysis') == 'Có' if shared_inputs else False
+        )
+        
+        st.markdown("---")
+        
+        # Recent surgery or trauma
+        st.markdown("### 6️⃣ Phẫu thuật/Chấn thương gần đây:")
+        surgery_trauma = st.checkbox(
+            "Phẫu thuật hoặc chấn thương trong 4 tuần qua",
+            help="Yêu cầu gây mê trong 4 tuần gần nhất",
+            value=shared_inputs.get('Surgery/Trauma') == 'Có' if shared_inputs else False
+        )
+        
+        st.markdown("---")
+        
+        # Prior PE or DVT
+        st.markdown("### 7️⃣ Tiền sử huyết khối:")
+        prior_vte = st.checkbox(
+            "Tiền sử PE hoặc DVT",
+            help="Từng bị thuyên tắc phổi hoặc huyết khối tĩnh mạch sâu",
+            value=shared_inputs.get('Prior VTE') == 'Có' if shared_inputs else False
+        )
+        
+        st.markdown("---")
+        
+        # Hormone use
+        st.markdown("### 8️⃣ Dùng hormone:")
+        hormone = st.checkbox(
+            "Đang dùng hormone (Estrogen)",
+            help="Thuốc tránh thai, HRT, hoặc đang mang thai",
+            value=shared_inputs.get('Hormone Use') == 'Có' if shared_inputs else False
+        )
+        
+        st.markdown("---")
     
-    *(Nếu TẤT CẢ đều KHÔNG → PERC âm → Có thể loại trừ PE)*
-    """)
-    
-    # Age
-    st.markdown("### 1️⃣ Tuổi tác:")
-    age_50 = st.checkbox(
-        "Tuổi ≥ 50",
-        help="Bệnh nhân từ 50 tuổi trở lên"
-    )
-    
-    st.markdown("---")
-    
-    # Heart rate
-    st.markdown("### 2️⃣ Mạch:")
-    hr_100 = st.checkbox(
-        "Nhịp tim ≥ 100 nhịp/phút",
-        help="Nhịp tim nhanh (tachycardia)"
-    )
-    
-    st.markdown("---")
-    
-    # Oxygen saturation
-    st.markdown("### 3️⃣ Oxy hóa máu:")
-    spo2_95 = st.checkbox(
-        "SpO₂ < 95% (khí phòng)",
-        help="Bão hòa oxy thấp khi thở khí phòng"
-    )
-    
-    st.markdown("---")
-    
-    # Unilateral leg swelling
-    st.markdown("### 4️⃣ Phù chân:")
-    leg_swelling = st.checkbox(
-        "Phù chân một bên",
-        help="Phù chân đơn độc (gợi ý DVT)"
-    )
-    
-    st.markdown("---")
-    
-    # Hemoptysis
-    st.markdown("### 5️⃣ Ho ra máu:")
-    hemoptysis = st.checkbox(
-        "Ho ra máu (Hemoptysis)",
-        help="Ho ra máu tươi hoặc đờm lẫn máu"
-    )
-    
-    st.markdown("---")
-    
-    # Recent surgery or trauma
-    st.markdown("### 6️⃣ Phẫu thuật/Chấn thương gần đây:")
-    surgery_trauma = st.checkbox(
-        "Phẫu thuật hoặc chấn thương trong 4 tuần qua",
-        help="Yêu cầu gây mê trong 4 tuần gần nhất"
-    )
-    
-    st.markdown("---")
-    
-    # Prior PE or DVT
-    st.markdown("### 7️⃣ Tiền sử huyết khối:")
-    prior_vte = st.checkbox(
-        "Tiền sử PE hoặc DVT",
-        help="Từng bị thuyên tắc phổi hoặc huyết khối tĩnh mạch sâu"
-    )
-    
-    st.markdown("---")
-    
-    # Hormone use
-    st.markdown("### 8️⃣ Dùng hormone:")
-    hormone = st.checkbox(
-        "Đang dùng hormone (Estrogen)",
-        help="Thuốc tránh thai, HRT, hoặc đang mang thai"
-    )
-    
-    st.markdown("---")
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="perc",
+            calculator_name="PERC Rule",
+            category="Hô Hấp",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Calculate button
     if st.button("🔍 Đánh giá PERC", type="primary", use_container_width=True):
@@ -155,6 +193,9 @@ def render():
         ]
         
         perc_score = sum(criteria)
+        
+        # Initialize positive_criteria list
+        positive_criteria = []
         
         # Display results
         st.markdown("## 📊 Kết quả")
@@ -216,7 +257,6 @@ def render():
             # List positive criteria
             st.markdown("### 📋 Tiêu chí dương tính:")
             
-            positive_criteria = []
             if age_50:
                 positive_criteria.append("✓ Tuổi ≥ 50")
             if hr_100:
@@ -413,25 +453,89 @@ def render():
             - Luôn kết hợp đánh giá lâm sàng tổng thể
             """)
         
-        # References
-        with st.expander("📚 Tài liệu tham khảo"):
-            st.markdown("""
-            1. **Kline JA, Mitchell AM, Kabrhel C, Richman PB, Courtney DM.** 
-               Clinical criteria to prevent unnecessary diagnostic testing in emergency department patients with suspected pulmonary embolism. 
-               *J Thromb Haemost.* 2004;2(8):1247-55.
-            
-            2. **Kline JA, Courtney DM, Kabrhel C, et al.** Prospective multicenter evaluation of the pulmonary embolism rule-out criteria. 
-               *J Thromb Haemost.* 2008;6(5):772-80.
-            
-            3. **Hugli O, Righini M, Le Gal G, et al.** The pulmonary embolism rule-out criteria (PERC) rule does not safely exclude pulmonary embolism. 
-               *J Thromb Haemost.* 2011;9(2):300-4.
-            
-            4. **Raja AS, Greenberg JO, Qaseem A, et al.** Evaluation of Patients With Suspected Acute Pulmonary Embolism: Best Practice Advice From the Clinical Guidelines Committee of the American College of Physicians. 
-               *Ann Intern Med.* 2015;163(9):701-11.
-            
-            5. **Konstantinides SV, Meyer G, Becattini C, et al.** 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). 
-               *Eur Heart J.* 2020;41(4):543-603.
-            """)
+        # Prepare inputs for export and history
+        inputs_dict = {
+            "Age ≥ 50": "Có" if age_50 else "Không",
+            "HR ≥ 100": "Có" if hr_100 else "Không",
+            "SpO₂ < 95%": "Có" if spo2_95 else "Không",
+            "Leg Swelling": "Có" if leg_swelling else "Không",
+            "Hemoptysis": "Có" if hemoptysis else "Không",
+            "Surgery/Trauma": "Có" if surgery_trauma else "Không",
+            "Prior VTE": "Có" if prior_vte else "Không",
+            "Hormone Use": "Có" if hormone else "Không"
+        }
+        
+        # Prepare results for export and history
+        results_dict = {
+            "PERC Score": f"{perc_score}/8",
+            "Result": "PERC Âm Tính - Có thể loại trừ PE" if perc_score == 0 else "PERC Dương Tính - Cần xét nghiệm thêm",
+            "PE Risk": "< 1.4%" if perc_score == 0 else "Cần đánh giá thêm",
+            "Positive Criteria": ", ".join(positive_criteria) if perc_score > 0 else "Không có"
+        }
+        
+        # Export section
+        st.markdown("---")
+        from components.export import render_export_section
+        render_export_section(
+            title=f"PERC Score = {perc_score}/8",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="PERC Rule",
+            filename="perc_result"
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="perc",
+            calculator_name="PERC Rule",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="perc",
+            calculator_name="PERC Rule",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="perc", show_actions=True)
+        
+        # References section
+        references = get_references("PERC")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
+        else:
+            # Fallback to manual references if not in config
+            with st.expander("📚 Tài liệu tham khảo"):
+                st.markdown("""
+                1. **Kline JA, Mitchell AM, Kabrhel C, Richman PB, Courtney DM.** 
+                   Clinical criteria to prevent unnecessary diagnostic testing in emergency department patients with suspected pulmonary embolism. 
+                   *J Thromb Haemost.* 2004;2(8):1247-55.
+                
+                2. **Kline JA, Courtney DM, Kabrhel C, et al.** Prospective multicenter evaluation of the pulmonary embolism rule-out criteria. 
+                   *J Thromb Haemost.* 2008;6(5):772-80.
+                
+                3. **Hugli O, Righini M, Le Gal G, et al.** The pulmonary embolism rule-out criteria (PERC) rule does not safely exclude pulmonary embolism. 
+                   *J Thromb Haemost.* 2011;9(2):300-4.
+                
+                4. **Raja AS, Greenberg JO, Qaseem A, et al.** Evaluation of Patients With Suspected Acute Pulmonary Embolism: Best Practice Advice From the Clinical Guidelines Committee of the American College of Physicians. 
+                   *Ann Intern Med.* 2015;163(9):701-11.
+                
+                5. **Konstantinides SV, Meyer G, Becattini C, et al.** 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). 
+                   *Eur Heart J.* 2020;41(4):543-603.
+                """)
     
     # Quick reference
     st.markdown("---")
@@ -467,6 +571,17 @@ def render():
     
     5. **Khi nghi ngờ** → Làm xét nghiệm, đừng bỏ sót PE!
     """)
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("PERC")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

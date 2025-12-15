@@ -31,6 +31,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from components.ui.scoring import render_score_result, render_score_breakdown
 
 
 def calculate_iss(ais_scores: dict) -> dict:
@@ -357,21 +358,34 @@ def render():
         result = calculate_iss(ais_scores)
         
         # Display results
-        st.subheader("📊 Kết quả")
+        st.markdown("## 📊 Kết quả")
         
-        # Score box
-        col_r1, col_r2 = st.columns([1, 2])
+        # Map color emoji to hex
+        color_map_hex = {
+            "🟢": "#28a745",
+            "🟡": "#ffc107",
+            "🟠": "#fd7e14",
+            "🔴": "#dc3545"
+        }
+        score_color = color_map_hex.get(result['color'], "#6c757d")
         
-        with col_r1:
-            st.metric(
-                label="**Injury Severity Score**",
-                value=result['iss']
-            )
-            st.caption("1-75 (cao = nặng hơn)")
+        # Use render_score_result for main score display
+        render_score_result(
+            title="Injury Severity Score (ISS)",
+            score=result['iss'],
+            interpretation=result['interpretation'],
+            mortality=f"Tỷ lệ tử vong: {result['mortality']}",
+            color=score_color,
+            icon=result['color'],
+            size="large"
+        )
         
-        with col_r2:
-            st.markdown(f"### {result['color']} {result['interpretation']}")
-            st.markdown(f"**Tỷ lệ tử vong ước tính: {result['mortality']}**")
+        # Use render_score_breakdown for AIS scores
+        render_score_breakdown(
+            title="AIS Scores Theo Vùng",
+            subscores=result['ais_scores'],
+            total_score=result['iss']
+        )
         
         # Calculation details
         with st.expander("📋 Chi tiết tính toán", expanded=True):

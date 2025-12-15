@@ -4,12 +4,24 @@ HEART Score Calculator
 
 import streamlit as st
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
     """HEART Score Calculator"""
     st.subheader("❤️ HEART Score")
     st.caption("Đánh giá Nguy cơ ACS Trong Đau Ngực Cấp")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'heart':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.info("""
     **HEART Score** dự đoán nguy cơ MACE (Major Adverse Cardiac Events) trong 6 tuần ở bệnh nhân đau ngực cấp.
@@ -104,8 +116,19 @@ def render():
             key="heart_troponin"
         )
         troponin = int(troponin_score[0])
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="heart",
+            calculator_name="HEART Score",
+            category="Tim Mạch",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
-        if st.button("🧮 Tính HEART Score", type="primary", key="heart_calc"):
+        if st.button("🧮 Tính HEART Score", type="primary", key="heart_calc", use_container_width=True):
             total_score = history + ecg + age + risk + troponin
             
             # Determine risk level and color
@@ -196,37 +219,77 @@ def render():
                 - ICU/CCU monitoring
                 """.format(mace_risk))
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown("""
-                **HEART Score for Major Cardiac Events**
-                
-                **Components:**
-                - **H** = History (0-2)
-                - **E** = ECG (0-2)
-                - **A** = Age (0-2)
-                - **R** = Risk factors (0-2)
-                - **T** = Troponin (0-2)
-                
-                **Total Score: 0-10**
-                
-                **Risk Stratification:**
-                - **0-3**: Low risk (0.9-1.7% MACE)
-                - **4-6**: Moderate risk (12-16.6% MACE)
-                - **7-10**: High risk (50-65% MACE)
-                
-                **MACE = Major Adverse Cardiac Events:**
-                - AMI (acute myocardial infarction)
-                - PCI (percutaneous coronary intervention)
-                - CABG (coronary artery bypass grafting)
-                - Death
-                
-                **Validation Studies:**
-                - Backus BE et al. Int J Cardiol. 2013;168(3):2153-2158.
-                - Six AJ et al. Neth Heart J. 2008;16(6):191-196.
-                
-                **Link:**
-                - Original: https://www.mdcalc.com/heart-score-major-cardiac-events
-                """)
+            # Prepare inputs for export and history
+            inputs_dict = {
+                "History": history_score,
+                "ECG": ecg_score,
+                "Age": age_score,
+                "Risk Factors": f"{risk} điểm ({num_rf} yếu tố: {', '.join(risk_factors) if risk_factors else 'Không có'})",
+                "Troponin": troponin_score
+            }
+            
+            # Prepare results for export and history
+            results_dict = {
+                "HEART Score": f"{total_score} điểm",
+                "Risk Level": risk_level,
+                "MACE Risk": mace_risk,
+                "Components": f"H:{history} E:{ecg} A:{age} R:{risk} T:{troponin}"
+            }
+            
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            render_export_section(
+                title=f"HEART Score = {total_score} điểm",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="HEART Score",
+                filename="heart_score_result"
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="heart",
+                calculator_name="HEART Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="heart",
+                calculator_name="HEART Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="heart", show_actions=True)
+            
+            # References section
+            references = get_references("HEART")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("HEART")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Công cụ hỗ trợ lâm sàng - không thay thế đánh giá lâm sàng toàn diện")

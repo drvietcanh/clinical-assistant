@@ -13,6 +13,11 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
@@ -21,6 +26,13 @@ def render():
     <h2 style='text-align: center; color: #0EA5E9;'>🫁 PESI - Pulmonary Embolism Severity Index</h2>
     <p style='text-align: center;'><em>Thang điểm đánh giá mức độ nặng và tiên lượng thuyên tắc phổi</em></p>
     """, unsafe_allow_html=True)
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'pesi':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     with st.expander("ℹ️ Giới thiệu"):
         st.markdown("""
@@ -200,6 +212,19 @@ def render():
         spo2_score = 0
     
     st.markdown("---")
+    
+    col1, col2 = st.columns([2, 1])
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="pesi",
+            calculator_name="PESI Score",
+            category="Hô Hấp",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     if st.button("📊 Tính điểm PESI", type="primary", use_container_width=True):
         # Validate inputs
@@ -429,14 +454,94 @@ def render():
             - Cân nhắc các yếu tố khác (troponin, BNP, siêu âm tim) khi quyết định điều trị
             """)
         
-        with st.expander("📚 Tài liệu tham khảo"):
-            st.markdown("""
-            1. **Aujesky D, Obrosky DS, Stone RA, et al.** Derivation and validation of a prognostic model for pulmonary embolism. 
-               *Am J Respir Crit Care Med.* 2005;172(8):1041-1046.
-            
-            2. **Jiménez D, Aujesky D, Moores L, et al.** Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. 
-               *Arch Intern Med.* 2010;170(15):1383-1389.
-            """)
+        # Prepare inputs for export and history
+        inputs_dict = {
+            "Age": str(age),
+            "Gender": gender,
+            "Cancer": "Có" if cancer else "Không",
+            "Heart Failure": "Có" if heart_failure else "Không",
+            "Lung Disease": "Có" if lung_disease else "Không",
+            "Pulse": str(pulse),
+            "Systolic BP": str(sbp),
+            "Respiratory Rate": str(rr),
+            "Temperature": f"{temp_c:.1f}°C" if temp_unit == "°C" else f"{temp_f:.1f}°F",
+            "Mental Status": mental_status,
+            "SpO₂": str(spo2)
+        }
+        
+        # Prepare results for export and history
+        results_dict = {
+            "PESI Score": f"{total_score} điểm",
+            "PESI Class": f"Class {risk_class}",
+            "Risk Level": risk_level,
+            "Mortality": mortality,
+            "Treatment": treatment
+        }
+        
+        # Export section
+        st.markdown("---")
+        from components.export import render_export_section
+        render_export_section(
+            title=f"PESI Class {risk_class} = {total_score} điểm",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="PESI Score",
+            filename="pesi_result"
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="pesi",
+            calculator_name="PESI Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="pesi",
+            calculator_name="PESI Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="pesi", show_actions=True)
+        
+        # References section
+        references = get_references("PESI")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
+        else:
+            # Fallback to manual references if not in config
+            with st.expander("📚 Tài liệu tham khảo"):
+                st.markdown("""
+                1. **Aujesky D, Obrosky DS, Stone RA, et al.** Derivation and validation of a prognostic model for pulmonary embolism. 
+                   *Am J Respir Crit Care Med.* 2005;172(8):1041-1046.
+                
+                2. **Jiménez D, Aujesky D, Moores L, et al.** Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. 
+                   *Arch Intern Med.* 2010;170(15):1383-1389.
+                """)
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("PESI")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.info("""
     💡 **Điểm quan trọng:**

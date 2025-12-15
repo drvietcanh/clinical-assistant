@@ -6,12 +6,22 @@ NIHSS - NIH Stroke Scale
 import streamlit as st
 from scores.references_config import get_references
 from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
     """NIHSS Calculator"""
     st.subheader("🧠 NIHSS - NIH Stroke Scale")
     st.caption("Thang điểm Đánh giá Mức Độ Nặng Đột Quỵ")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'nihss':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.info("""
     **NIHSS** là thang điểm chuẩn vàng đánh giá mức độ nặng của đột quỵ não.
@@ -22,6 +32,17 @@ def render():
     """)
     
     col1, col2 = st.columns([2, 1])
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="nihss",
+            calculator_name="NIHSS",
+            category="Thần Kinh",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     with col1:
         st.markdown("### 📋 Đánh giá 11 Hạng mục")
@@ -496,6 +517,64 @@ def render():
                 - Chảy máu tiêu hóa/tiết niệu <21 ngày
                 
                 """)
+            
+            # Prepare inputs and results for export/history
+            inputs_dict = {
+                "1a. LOC": loc,
+                "1b. LOC Questions": loc_questions,
+                "1c. LOC Commands": loc_commands,
+                "2. Best Gaze": gaze,
+                "3. Visual Fields": visual,
+                "4. Facial Palsy": facial,
+                "5a. Motor Arm Left": motor_arm_l,
+                "5b. Motor Arm Right": motor_arm_r,
+                "6a. Motor Leg Left": motor_leg_l,
+                "6b. Motor Leg Right": motor_leg_r,
+                "7. Limb Ataxia": ataxia,
+                "8. Sensory": sensory,
+                "9. Language": language,
+                "10. Dysarthria": dysarthria,
+                "11. Extinction": extinction
+            }
+            
+            results_dict = {
+                "NIHSS Score": f"{total_score}/42",
+                "Severity": severity,
+                "Components": f"LOC:{loc_score}+{loc_q_score}+{loc_c_score} Gaze:{gaze_score} Visual:{visual_score} Facial:{facial_score} Motor:{motor_arm_l_score}+{motor_arm_r_score}+{motor_leg_l_score}+{motor_leg_r_score} Ataxia:{ataxia_score} Sensory:{sensory_score} Language:{language_score} Dysarthria:{dysarthria_score} Extinction:{extinction_score}"
+            }
+            
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            render_export_section(
+                title=f"NIHSS = {total_score}/42",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="NIHSS",
+                filename="nihss_result"
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="nihss",
+                calculator_name="NIHSS",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="nihss",
+                calculator_name="NIHSS",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="nihss", show_actions=True)
             
             # References section
             references = get_references("NIHSS")

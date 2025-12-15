@@ -105,33 +105,25 @@
 - [x] **Wells DVT** - `render_score_result()`
 - [x] **MASCC** - `render_score_result()` + `render_score_breakdown()`
 - [x] **Pitt Bacteremia** - `render_score_result()` + `render_score_breakdown()`
+- [x] **QTc** - `render_result_box()`
+- [x] **RTS** - `render_score_result()` + `render_score_breakdown()`
+- [x] **ISS** - `render_score_result()` + `render_score_breakdown()`
+- [x] **PIM2** - `render_score_result()`
+- [x] **DIC Score** - `render_score_result()` + `render_score_breakdown()`
 
-**Cấp cứu & Hồi sức (10):**
-- [ ] APACHE II, III - `render_score_result()` + `render_score_breakdown()`
-- [ ] SAPS II, III - `render_score_result()`
-- [ ] SOFA, MODS, LODS - `render_score_result()` + `render_score_breakdown()`
-- [ ] NEWS2, MEWS, qSOFA - `render_score_result()`
+**✅ UI/UX - HOÀN THÀNH 100% (39/39 calculators)**
 
-**Tim mạch (4):**
-- [ ] GRACE - `render_score_result()` với color coding
-- [ ] ASCVD - `render_result_card()` với risk metrics
-- [ ] QTc - `render_result_box()` với interpretation
-- [ ] Framingham - `render_result_card()` với risk metrics
+**Đã hoàn thành tất cả 8 calculators còn lại trong Đợt 9:**
+- [x] **MODS** (`scores/emergency/mods.py`) - `render_score_result()` + `render_score_breakdown()`
+- [x] **PSI/PORT** (`scores/respiratory/psi_port.py`) - `render_score_result()` với risk class
+- [x] **BMI/IBW/BSA** (`scores/metabolism/bmi_ibw_bsa.py`) - `render_result_card()` với multiple metrics
+- [x] **CrCl** (`scores/metabolism/crcl.py`) - `render_result_box()` với CKD stage
+- [x] **Corrected Calcium** (`scores/metabolism/corrected_calcium.py`) - `render_result_box()`
+- [x] **Anion Gap** (`scores/metabolism/anion_gap.py`) - `render_result_box()` với interpretation
+- [x] **Winter Formula** (`scores/metabolism/winter_formula.py`) - `render_result_box()` với compensation
+- [x] **Osmolality** (`scores/metabolism/osmolality.py`) - `render_result_box()` với gap calculation
 
-**Hô hấp (4):**
-- [ ] CURB-65, Wells PE, PESI, PSI/PORT - `render_score_result()`
-
-**Tiêu hóa (6):**
-- [ ] MELD, Child-Pugh, GBS, AIMS65, BISAP, Rockall - `render_score_result()`
-
-**Chuyển hóa (6):**
-- [ ] BMI/IBW/BSA - `render_result_card()` với multiple metrics
-- [ ] Corrected Calcium, Anion Gap, Winter, Osmolality, CrCl - `render_result_box()`
-
-**Khác:**
-- [ ] GCS, FOUR Score - `render_score_result()` + breakdown
-- [ ] RTS, ISS, TRISS - `render_score_result()`
-- [ ] PIM2, DIC Score - `render_score_result()`
+**🎉 Tất cả calculators đã được cải thiện UI/UX!**
 
 ### **3. Chuẩn Hóa Format** 🟢
 

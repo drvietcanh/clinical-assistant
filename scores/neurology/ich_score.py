@@ -19,6 +19,11 @@ Stroke. 2001;32(4):891-7.
 
 import streamlit as st
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
@@ -26,6 +31,13 @@ def render():
     
     st.subheader("🧠 ICH Score - Đánh giá Xuất huyết nội sọ")
     st.caption("Dự đoán tỷ lệ tử vong 30 ngày ở bệnh nhân xuất huyết não")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'ich_score':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     **ICH Score** là thang điểm đơn giản, đáng tin cậy để phân loại mức độ nghiêm trọng 
@@ -38,7 +50,7 @@ def render():
     total_score = 0
     
     # Input section
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns([2, 1])
     
     with col1:
         st.markdown("### 1️⃣ Thang điểm hôn mê Glasgow (GCS) - Thang điểm hôn mê Glasgow")
@@ -444,6 +456,77 @@ def render():
         
         **⚠️ QUAN TRỌNG:** ICH Score là công cụ hỗ trợ, không phải "quyết định tử hình"!
         """)
+    
+        # Prepare inputs and results for export/history
+        inputs_dict = {
+            "GCS": gcs_selection,
+            "ICH Volume": volume_selection,
+            "IVH": ivh_selection,
+            "Infratentorial": location_selection,
+            "Age": age_selection
+        }
+        
+        results_dict = {
+            "ICH Score": f"{total_score} điểm",
+            "Mortality": mortality['rate'],
+            "Risk Level": mortality['desc'],
+            "Components": f"GCS:{gcs_score} Vol:{volume_score} IVH:{ivh_score} Loc:{location_score} Age:{age_score}"
+        }
+        
+        # Export section
+        st.markdown("---")
+        from components.export import render_export_section
+        render_export_section(
+            title=f"ICH Score = {total_score} điểm",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="ICH Score",
+            filename="ich_score_result"
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="ich_score",
+            calculator_name="ICH Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="ich_score",
+            calculator_name="ICH Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="ich_score", show_actions=True)
+        
+        # References section
+        references = get_references("ICH Score")
+        if references:
+            render_references_section(
+                references=references,
+                title="📚 Tài liệu tham khảo",
+                last_updated="2024-01-15",
+                show_evidence_level=True,
+                show_links=True
+            )
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("ICH Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Footer
     st.markdown("---")

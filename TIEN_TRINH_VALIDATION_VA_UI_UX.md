@@ -350,58 +350,68 @@
 
 #### **Cấp cứu & Hồi sức:**
 - [x] **APACHE II** - ✅ ĐÃ CÓ SẴN RESULT COMPONENTS
-- [ ] **APACHE III** - Sử dụng `render_score_result()` và `render_score_breakdown()`
-- [ ] **SAPS II** - Sử dụng `render_score_result()`
-- [ ] **SAPS III** - Sử dụng `render_score_result()`
+- [x] **APACHE III** - ✅ ĐÃ CÓ SẴN RESULT COMPONENTS (render_score_result + render_score_breakdown)
+- [x] **SAPS II** - ✅ ĐÃ CÓ SẴN RESULT COMPONENTS (render_score_result)
+- [x] **SAPS III** - ✅ ĐÃ CÓ SẴN RESULT COMPONENTS (render_result_box)
 - [x] **SOFA** - ✅ ĐÃ CÓ SẴN RESULT COMPONENTS
-- [ ] **MODS** - Sử dụng `render_score_result()` và `render_score_breakdown()`
-- [ ] **LODS** - Sử dụng `render_score_result()` và `render_score_breakdown()`
+- [x] **MODS** - ✅ ĐÃ CẢI THIỆN - Sử dụng `render_score_result()` và `render_score_breakdown()`
+- [x] **LODS** - ✅ ĐÃ CÓ SẴN RESULT COMPONENTS (render_result_box)
 - [x] **NEWS2** - ✅ ĐÃ CẢI THIỆN UI/UX
 - [x] **MEWS** - ✅ ĐÃ CẢI THIỆN UI/UX
 - [x] **qSOFA** - ✅ ĐÃ CẢI THIỆN UI/UX
 
 #### **Tim mạch:**
-- [ ] **GRACE** - Sử dụng `render_score_result()` với color coding
-- [ ] **ASCVD** - Sử dụng `render_result_card()` với risk metrics
-- [ ] **QTc** - Sử dụng `render_result_box()` với interpretation
-- [ ] **Framingham** - Sử dụng `render_result_card()` với risk metrics
+- [x] **GRACE** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **ASCVD** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **QTc** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **Framingham** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **HEART Score** - ✅ ĐÃ CẢI THIỆN UI/UX
 
 #### **Hô hấp:**
-- [ ] **CURB-65** - Sử dụng `render_score_result()`
-- [ ] **Wells PE** - Sử dụng `render_score_result()`
-- [ ] **PESI** - Sử dụng `render_score_result()` với class display
-- [ ] **PSI/PORT** - Sử dụng `render_score_result()` với risk class
+- [x] **CURB-65** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **Wells PE** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **PESI** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **PSI/PORT** - ✅ ĐÃ CẢI THIỆN - Sử dụng `render_score_result()` với risk class
 
 #### **Tiêu hóa:**
-- [ ] **MELD** - Sử dụng `render_score_result()` với mortality risk
-- [ ] **Child-Pugh** - Sử dụng `render_score_result()` với class (A/B/C)
-- [ ] **Glasgow-Blatchford** - Sử dụng `render_score_result()`
-- [ ] **AIMS65** - Sử dụng `render_score_result()`
-- [ ] **BISAP** - Sử dụng `render_score_result()`
-- [ ] **Rockall** - Sử dụng `render_score_result()`
+- [x] **MELD** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **Child-Pugh** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **Glasgow-Blatchford** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **AIMS65** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **BISAP** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **Rockall** - ✅ ĐÃ CẢI THIỆN UI/UX
 
 #### **Chuyển hóa:**
-- [ ] **BMI/IBW/BSA** - Sử dụng `render_result_card()` với multiple metrics
-- [ ] **Corrected Calcium** - Sử dụng `render_result_box()`
-- [ ] **Anion Gap** - Sử dụng `render_result_box()` với interpretation
-- [ ] **Winter Formula** - Sử dụng `render_result_box()` với compensation status
-- [ ] **Osmolality** - Sử dụng `render_result_box()` với gap calculation
-- [ ] **CrCl** - Sử dụng `render_result_box()` với CKD stage
+- [x] **BMI/IBW/BSA** - ✅ ĐÃ CẢI THIỆN - Sử dụng `render_result_card()` với multiple metrics
+- [x] **Corrected Calcium** - ✅ ĐÃ CẢI THIỆN - Sử dụng `render_result_box()`
+- [x] **Anion Gap** - ✅ ĐÃ CẢI THIỆN - Sử dụng `render_result_box()` với interpretation
+- [x] **Winter Formula** - ✅ ĐÃ CẢI THIỆN - Sử dụng `render_result_box()` với compensation status
+- [x] **Osmolality** - ✅ ĐÃ CẢI THIỆN - Sử dụng `render_result_box()` với gap calculation
+- [x] **CrCl** - ✅ ĐÃ CẢI THIỆN - Sử dụng `render_result_box()` với CKD stage
 
 #### **Thần kinh:**
-- [ ] **GCS** - Sử dụng `render_score_result()` với breakdown
-- [ ] **FOUR Score** - Sử dụng `render_score_result()` với breakdown
+- [x] **GCS** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **FOUR Score** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **ICH Score** - ✅ ĐÃ CẢI THIỆN UI/UX
 
 #### **Chấn thương:**
-- [ ] **RTS** - Sử dụng `render_score_result()`
-- [ ] **ISS** - Sử dụng `render_score_result()`
-- [ ] **TRISS** - Sử dụng `render_score_result()` với survival probability
+- [x] **RTS** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **ISS** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **TRISS** - ✅ ĐÃ CÓ SẴN RESULT COMPONENTS (render_result_box)
 
 #### **Nhi khoa:**
-- [ ] **PIM2** - Sử dụng `render_score_result()` với mortality risk
+- [x] **PEWS** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **Pediatric GCS** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **PIM2** - ✅ ĐÃ CẢI THIỆN UI/UX
 
 #### **Huyết học:**
-- [ ] **DIC Score** - Sử dụng `render_score_result()` với breakdown
+- [x] **DIC Score** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **Four T's (HIT)** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **Wells DVT** - ✅ ĐÃ CẢI THIỆN UI/UX
+
+#### **Nhiễm khuẩn:**
+- [x] **MASCC** - ✅ ĐÃ CẢI THIỆN UI/UX
+- [x] **Pitt Bacteremia** - ✅ ĐÃ CẢI THIỆN UI/UX
 
 ### **2. Chuẩn Hóa Format Hiển Thị** 📐
 
@@ -527,9 +537,19 @@
 
 ### **UI/UX:**
 - **Result components:** Sẵn có
-- **Calculators đã cải thiện:** 26 (PEWS, Pediatric GCS, HEART Score, ICH Score, GCS, MELD, CURB-65, SOFA*, APACHE II*, Child-Pugh, NEWS2, GRACE, MEWS, qSOFA, Wells PE, PESI, Glasgow-Blatchford, ASCVD, Framingham, AIMS65, BISAP, FOUR Score, Rockall, Four T's, Wells DVT, MASCC, Pitt Bacteremia)
-- **Cần cải thiện:** 10+ calculators
-- *SOFA và APACHE II đã có sẵn result components từ trước
+- **Calculators đã cải thiện:** 39 ✅ **HOÀN THÀNH 100%**
+- **Calculators còn cần cải thiện:** 0
+- **Tỷ lệ hoàn thành:** 100% (39/39) 🎉
+
+**Danh sách còn cần cải thiện:**
+1. 🔴 **MODS** (`scores/emergency/mods.py`) - Ưu tiên cao
+2. 🔴 **PSI/PORT** (`scores/respiratory/psi_port.py`) - Ưu tiên cao
+3. 🔴 **BMI/IBW/BSA** (`scores/metabolism/bmi_ibw_bsa.py`) - Ưu tiên cao
+4. 🟡 **CrCl** (`scores/metabolism/crcl.py`) - Ưu tiên trung bình
+5. 🟡 **Corrected Calcium** (`scores/metabolism/corrected_calcium.py`) - Ưu tiên trung bình
+6. 🟡 **Anion Gap** (`scores/metabolism/anion_gap.py`) - Ưu tiên trung bình
+7. 🟢 **Winter Formula** (`scores/metabolism/winter_formula.py`) - Ưu tiên thấp
+8. 🟢 **Osmolality** (`scores/metabolism/osmolality.py`) - Ưu tiên thấp
 
 ---
 
@@ -539,15 +559,134 @@
 - [ ] Thêm validation cho 20-30 calculators ưu tiên cao
 - [ ] Đạt coverage ~30-40%
 
-### **Phase 4: Cải Thiện UI/UX**
-- [ ] Cải thiện 10-15 calculators quan trọng nhất
-- [ ] Sử dụng result display components
-- [ ] Chuẩn hóa format
+### **Phase 4: Cải Thiện UI/UX** ✅ **HOÀN THÀNH 100%**
+- [x] Cải thiện 39 calculators ✅
+- [x] Sử dụng result display components ✅
+- [x] **Đã hoàn thành tất cả 8 calculators còn lại:**
+  - ✅ MODS, PSI/PORT, BMI/IBW/BSA (ưu tiên cao)
+  - ✅ CrCl, Corrected Calcium, Anion Gap (ưu tiên trung bình)
+  - ✅ Winter Formula, Osmolality (ưu tiên thấp)
+- [x] Chuẩn hóa format ✅
 
 ### **Phase 5: Testing & Documentation**
 - [ ] Tạo test cases
 - [ ] Document đầy đủ
 - [ ] Performance optimization
+
+---
+
+## 📋 DANH SÁCH CẦN LÀM NHANH - UI/UX (8 Calculators)
+
+### **🔴 Ưu Tiên Cao (3 calculators)**
+
+#### 1. MODS (`scores/emergency/mods.py`)
+- **Cần làm:** Sử dụng `render_score_result()` và `render_score_breakdown()`
+- **Lý do:** Calculator quan trọng trong ICU
+- **Thời gian ước tính:** 15-20 phút
+
+#### 2. PSI/PORT (`scores/respiratory/psi_port.py`)
+- **Cần làm:** Sử dụng `render_score_result()` với risk class display
+- **Lý do:** Calculator quan trọng cho viêm phổi
+- **Thời gian ước tính:** 15-20 phút
+
+#### 3. BMI/IBW/BSA (`scores/metabolism/bmi_ibw_bsa.py`)
+- **Cần làm:** Sử dụng `render_result_card()` với multiple metrics
+- **Lý do:** Calculator phổ biến, nhiều metrics cần hiển thị
+- **Thời gian ước tính:** 20-25 phút
+
+### **🟡 Ưu Tiên Trung Bình (3 calculators)**
+
+#### 4. CrCl (`scores/metabolism/crcl.py`)
+- **Cần làm:** Sử dụng `render_result_box()` với CKD stage
+- **Lý do:** Quan trọng cho điều chỉnh liều thuốc
+- **Thời gian ước tính:** 10-15 phút
+
+#### 5. Corrected Calcium (`scores/metabolism/corrected_calcium.py`)
+- **Cần làm:** Sử dụng `render_result_box()`
+- **Lý do:** Calculator phổ biến
+- **Thời gian ước tính:** 10-15 phút
+
+#### 6. Anion Gap (`scores/metabolism/anion_gap.py`)
+- **Cần làm:** Sử dụng `render_result_box()` với interpretation
+- **Lý do:** Calculator chuyển hóa quan trọng
+- **Thời gian ước tính:** 10-15 phút
+
+### **🟢 Ưu Tiên Thấp (2 calculators)**
+
+#### 7. Winter Formula (`scores/metabolism/winter_formula.py`)
+- **Cần làm:** Sử dụng `render_result_box()` với compensation status
+- **Lý do:** Calculator chuyên biệt
+- **Thời gian ước tính:** 10-15 phút
+
+#### 8. Osmolality (`scores/metabolism/osmolality.py`)
+- **Cần làm:** Sử dụng `render_result_box()` với gap calculation
+- **Lý do:** Calculator chuyên biệt
+- **Thời gian ước tính:** 10-15 phút
+
+---
+
+## ⚡ Hướng Dẫn Làm Nhanh
+
+### **Template cho render_score_result:**
+```python
+from components.ui.scoring import render_score_result, render_score_breakdown
+
+# Trong hàm render(), sau khi tính toán:
+render_score_result(
+    title="Score Name",
+    score=total_score,
+    interpretation="Interpretation text",
+    mortality="X%" if có mortality else None,
+    color="#hex_color",  # hoặc để None để auto
+    icon="🚨",  # hoặc icon phù hợp
+    size="large"
+)
+
+# Nếu có subscores:
+render_score_breakdown(
+    title="Điểm Từng Thành Phần",
+    subscores={"Component 1": score1, "Component 2": score2},
+    total_score=total_score
+)
+```
+
+### **Template cho render_result_box:**
+```python
+from components.ui.results import render_result_box
+
+# Trong hàm render(), sau khi tính toán:
+render_result_box(
+    title="Result Title",
+    value="Result Value",
+    subtitle="Subtitle/Interpretation",
+    color="success" | "warning" | "error" | "info",  # hoặc "primary"
+    icon="📊",
+    size="large"
+)
+```
+
+### **Template cho render_result_card (multiple metrics):**
+```python
+from components.ui.results import render_result_card
+
+# Trong hàm render(), sau khi tính toán:
+render_result_card(
+    title="Card Title",
+    metrics=[
+        {"label": "Metric 1", "value": "Value 1"},
+        {"label": "Metric 2", "value": "Value 2"},
+        {"label": "Metric 3", "value": "Value 3"}
+    ],
+    color="primary",
+    icon="📊"
+)
+```
+
+### **Color Mapping:**
+- Success (xanh lá): `#28a745` hoặc `"success"`
+- Warning (vàng): `#ffc107` hoặc `"warning"`
+- Error (đỏ): `#dc3545` hoặc `"error"`
+- Info (xanh dương): `#17a2b8` hoặc `"info"`
 
 ---
 
@@ -613,8 +752,25 @@
 - ✅ Cải thiện UI/UX cho **MASCC** - Sử dụng `render_score_result()` và `render_score_breakdown()`
 - ✅ Cải thiện UI/UX cho **Pitt Bacteremia** - Sử dụng `render_score_result()` và `render_score_breakdown()`
 
+**Đợt 8:**
+- ✅ Cải thiện UI/UX cho **QTc** - Sử dụng `render_result_box()`
+- ✅ Cải thiện UI/UX cho **RTS** - Sử dụng `render_score_result()` và `render_score_breakdown()`
+- ✅ Cải thiện UI/UX cho **ISS** - Sử dụng `render_score_result()` và `render_score_breakdown()`
+- ✅ Cải thiện UI/UX cho **PIM2** - Sử dụng `render_score_result()`
+- ✅ Cải thiện UI/UX cho **DIC Score** - Sử dụng `render_score_result()` và `render_score_breakdown()`
+
+**Đợt 9:**
+- ✅ Cải thiện UI/UX cho **MODS** - Sử dụng `render_score_result()` và `render_score_breakdown()`
+- ✅ Cải thiện UI/UX cho **PSI/PORT** - Sử dụng `render_score_result()` với risk class
+- ✅ Cải thiện UI/UX cho **BMI/IBW/BSA** - Sử dụng `render_result_card()` với multiple metrics
+- ✅ Cải thiện UI/UX cho **CrCl** - Sử dụng `render_result_box()` với CKD stage
+- ✅ Cải thiện UI/UX cho **Corrected Calcium** - Sử dụng `render_result_box()`
+- ✅ Cải thiện UI/UX cho **Anion Gap** - Sử dụng `render_result_box()` với interpretation
+- ✅ Cải thiện UI/UX cho **Winter Formula** - Sử dụng `render_result_box()` với compensation status
+- ✅ Cải thiện UI/UX cho **Osmolality** - Sử dụng `render_result_box()` với gap calculation
+
 **Kết quả:**
-- 26 calculators đã được cải thiện UI/UX với result display components chuẩn
+- 31 calculators đã được cải thiện UI/UX với result display components chuẩn
 - Hiển thị kết quả nhất quán và chuyên nghiệp hơn
 - Dễ đọc và dễ hiểu hơn cho người dùng
 - Tăng trải nghiệm người dùng đáng kể

@@ -6,6 +6,7 @@ Tính QT điều chỉnh theo nhịp tim
 import streamlit as st
 import math
 from scores.utils.validation import validate_heart_rate, validate_range
+from components.ui.results import render_result_box
 
 
 def calculate_qtc_bazett(qt_ms, hr):
@@ -303,72 +304,55 @@ def render():
         result = interpret_qtc(qtc, gender)
         
         st.markdown("---")
-        st.subheader("📈 Kết quả")
+        st.markdown("## 📈 Kết quả")
         
-        # Display metrics
-        col1, col2, col3 = st.columns(3)
+        # Map severity to color
+        color_map = {
+            "normal": "success",
+            "borderline": "warning",
+            "prolonged": "error",
+            "severe": "error"
+        }
+        box_color = color_map.get(result['severity'], "info")
         
+        # Use render_result_box for main result
+        render_result_box(
+            title="QTc (Corrected QT Interval)",
+            value=f"{qtc:.0f} ms",
+            subtitle=f"{result['status']} - {result['risk']}",
+            color=box_color,
+            icon=result['color'],
+            size="large"
+        )
+        
+        # Display input metrics
+        col1, col2 = st.columns(2)
         with col1:
-            st.metric(
-                "QT Interval",
-                f"{qt_ms:.0f} ms",
-                help="QT đo được từ ECG"
-            )
-        
+            st.metric("QT Interval", f"{qt_ms:.0f} ms", help="QT đo được từ ECG")
         with col2:
-            st.metric(
-                "Nhịp tim",
-                f"{hr} bpm",
-                help="Tần số tim"
-            )
-        
-        with col3:
-            delta_color = "normal" if result['severity'] == "normal" else "inverse"
-            st.metric(
-                "QTc",
-                f"{qtc:.0f} ms",
-                delta=result['status'],
-                delta_color=delta_color,
-                help=f"Sử dụng công thức {formula}"
-            )
+            st.metric("Nhịp tim", f"{hr} bpm", help="Tần số tim")
         
         st.info(f"**Công thức:** {formula_text}")
         
         st.markdown("---")
         
         # Interpretation
-        st.subheader("🎯 Phân tích & Đánh giá")
+        st.markdown("### 🎯 Phân tích & Đánh giá")
+        
+        interpretation_text = f"""
+        **QTc = {qtc:.0f} ms**
+        
+        **Đánh giá:** {result['risk']}
+        
+        **Khuyến nghị:** {result['recommendation']}
+        """
         
         if result['severity'] == "normal":
-            st.success(f"""
-            {result['color']} **{result['status']}**
-            
-            **QTc = {qtc:.0f} ms** (Bình thường < {460 if gender == "Nữ" else 450} ms cho {gender})
-            
-            **Đánh giá:** {result['risk']}
-            
-            **Khuyến nghị:** {result['recommendation']}
-            """)
+            st.success(interpretation_text)
         elif result['severity'] == "borderline":
-            st.warning(f"""
-            {result['color']} **{result['status']}**
-            
-            **QTc = {qtc:.0f} ms**
-            
-            **Đánh giá:** {result['risk']}
-            
-            **Khuyến nghị:** {result['recommendation']}
-            """)
+            st.warning(interpretation_text)
         else:
-            st.error(f"""
-            {result['color']} **{result['status']}**
-            
-            **QTc = {qtc:.0f} ms** - CẢNH BÁO!
-            
-            **Đánh giá:** {result['risk']}
-            
-            **Khuyến nghị:** {result['recommendation']}
-            """)
+            st.error(interpretation_text)
         
         # Reference values
         st.markdown("---")

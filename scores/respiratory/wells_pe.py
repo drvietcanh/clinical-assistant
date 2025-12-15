@@ -8,12 +8,23 @@ from scores.references_config import get_references
 from components.references import render_references_section
 from scores.utils.validation import validate_heart_rate
 from components.ui.scoring import render_score_result, render_score_breakdown
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
     """Wells PE Score Calculator"""
     st.subheader("🫁 Wells PE Score")
     st.caption("Wells Score - Xác Suất Tắc Mạch Phổi")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'wells_pe':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        # Pre-fill inputs from shared result (optional)
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.info("""
     **Wells PE Score** đánh giá xác suất tiền test của tắc mạch phổi (PE).
@@ -27,16 +38,21 @@ def render():
     with col1:
         st.markdown("### 📋 Tiêu chí lâm sàng")
         
+        # Pre-fill from shared result if available
+        shared_inputs = st.session_state.get('shared_inputs', {})
+        
         # Clinical signs of DVT
         dvt_signs = st.checkbox(
             "**Dấu hiệu lâm sàng của huyết khối tĩnh mạch sâu (DVT)**",
-            help="Chân sưng, đau, ấn đau dọc tĩnh mạch (+3 điểm)"
+            help="Chân sưng, đau, ấn đau dọc tĩnh mạch (+3 điểm)",
+            value=shared_inputs.get('DVT Signs') == 'Có' if shared_inputs else False
         )
         
         # PE most likely diagnosis
         pe_likely = st.checkbox(
             "**Tắc mạch phổi là chẩn đoán khả năng nhất**",
-            help="Không có chẩn đoán khác hợp lý hơn (+3 điểm)"
+            help="Không có chẩn đoán khác hợp lý hơn (+3 điểm)",
+            value=shared_inputs.get('PE Likely') == 'Có' if shared_inputs else False
         )
         
         # Heart rate
@@ -44,7 +60,7 @@ def render():
             "**Nhịp tim** (lần/phút)",
             min_value=0,
             max_value=250,
-            value=80,
+            value=int(shared_inputs.get('Heart Rate', 80)) if shared_inputs and shared_inputs.get('Heart Rate') else 80,
             step=5,
             help=">100/phút: +1.5 điểm"
         )
@@ -52,28 +68,43 @@ def render():
         # Immobilization/Surgery
         immobilization = st.checkbox(
             "**Nằm bất động ≥3 ngày HOẶC phẫu thuật trong 4 tuần qua**",
-            help="+1.5 điểm"
+            help="+1.5 điểm",
+            value=shared_inputs.get('Immobilization') == 'Có' if shared_inputs else False
         )
         
         # Previous DVT/PE
         previous_vte = st.checkbox(
             "**Tiền sử DVT hoặc PE**",
-            help="+1.5 điểm"
+            help="+1.5 điểm",
+            value=shared_inputs.get('Previous VTE') == 'Có' if shared_inputs else False
         )
         
         # Hemoptysis
         hemoptysis = st.checkbox(
             "**Ho ra máu**",
-            help="+1 điểm"
+            help="+1 điểm",
+            value=shared_inputs.get('Hemoptysis') == 'Có' if shared_inputs else False
         )
         
         # Malignancy
         malignancy = st.checkbox(
             "**Ung thư**",
-            help="Đang điều trị hoặc điều trị trong 6 tháng qua, hoặc paLiative (+1 điểm)"
+            help="Đang điều trị hoặc điều trị trong 6 tháng qua, hoặc paLiative (+1 điểm)",
+            value=shared_inputs.get('Malignancy') == 'Có' if shared_inputs else False
         )
         
         st.markdown("---")
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="wells_pe",
+            calculator_name="Wells PE Score",
+            category="Hô Hấp",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
         if st.button("🧮 Tính Wells PE Score", type="primary", use_container_width=True):
             # Validate inputs
@@ -297,6 +328,59 @@ def render():
             - Nhồi máu cơ tim
             """)
             
+            # Prepare inputs for export and history
+            inputs_dict = {
+                "DVT Signs": "Có" if dvt_signs else "Không",
+                "PE Likely": "Có" if pe_likely else "Không",
+                "Heart Rate": str(hr),
+                "Immobilization": "Có" if immobilization else "Không",
+                "Previous VTE": "Có" if previous_vte else "Không",
+                "Hemoptysis": "Có" if hemoptysis else "Không",
+                "Malignancy": "Có" if malignancy else "Không"
+            }
+            
+            # Prepare results for export and history
+            results_dict = {
+                "Wells PE Score": f"{round(score, 1)} điểm",
+                "Probability": probability,
+                "PE Prevalence": pe_prevalence,
+                "Recommendation": recommendation,
+                "Details": "\n".join(details) if details else "Không có tiêu chí nào"
+            }
+            
+            # Export section
+            st.markdown("---")
+            from components.export import render_export_section
+            render_export_section(
+                title=f"Wells PE Score = {round(score, 1)} điểm",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="Wells PE Score",
+                filename="wells_pe_result"
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="wells_pe",
+                calculator_name="Wells PE Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="wells_pe",
+                calculator_name="Wells PE Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="wells_pe", show_actions=True)
+            
             # References section
             references = get_references("Wells PE")
             if references:
@@ -318,5 +402,16 @@ def render():
             - Với massive PE/instability → Chẩn đoán và điều trị ngay!
             - Anticoagulation có nguy cơ chảy máu → Đánh giá cẩn thận
             """)
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("Wells PE")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 

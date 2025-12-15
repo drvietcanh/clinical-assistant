@@ -16,6 +16,7 @@ Br Med J. 1973;4(5893):643-6.
 import streamlit as st
 from scores.utils.validation import validate_lab_value
 from components.ui.validation import render_validation_errors
+from components.ui.results import render_result_box
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -142,41 +143,30 @@ def render():
                 interpretation = "CAO (Hypercalcemia)"
                 color = "warning"
             
-            with col2:
-                st.markdown("### 📊 Kết quả")
-                
-                st.info(f"""
-                **Ca đo được:**
-                {ca_mgdl:.1f} mg/dL
-                ({ca_mgdl/4:.2f} mmol/L)
-                """)
-                
-                if color == "success":
-                    st.success(f"""
-                    **Ca điều chỉnh:**
-                    {ca_corrected_mgdl:.1f} mg/dL
-                    ({ca_corrected_mmol:.2f} mmol/L)
-                    
-                    **{interpretation}**
-                    """)
-                elif color == "error":
-                    st.error(f"""
-                    **Ca điều chỉnh:**
-                    {ca_corrected_mgdl:.1f} mg/dL
-                    ({ca_corrected_mmol:.2f} mmol/L)
-                    
-                    **{interpretation}**
-                    """)
-                else:
-                    st.warning(f"""
-                    **Ca điều chỉnh:**
-                    {ca_corrected_mgdl:.1f} mg/dL
-                    ({ca_corrected_mmol:.2f} mmol/L)
-                    
-                    **{interpretation}**
-                    """)
-                
-                st.caption("Bình thường: 8.5-10.5 mg/dL")
+            st.markdown("---")
+            st.markdown("## 📊 Kết quả")
+            
+            # Display measured calcium
+            render_result_box(
+                title="Calcium Đo Được",
+                value=f"{ca_mgdl:.1f} mg/dL",
+                subtitle=f"{ca_mgdl/4:.2f} mmol/L",
+                color="info",
+                icon="🔬",
+                size="medium"
+            )
+            
+            # Display corrected calcium with interpretation
+            render_result_box(
+                title="Calcium Điều Chỉnh",
+                value=f"{ca_corrected_mgdl:.1f} mg/dL",
+                subtitle=f"{interpretation} ({ca_corrected_mmol:.2f} mmol/L)",
+                color=color,
+                icon="🦴" if color == "success" else "⚠️" if color == "warning" else "🚨",
+                size="large"
+            )
+            
+            st.caption("Bình thường: 8.5-10.5 mg/dL")
             
             st.markdown("---")
             

@@ -36,6 +36,7 @@ from scores.utils.validation import (
     validate_range
 )
 from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result
 
 
 def calculate_pim2(
@@ -305,20 +306,33 @@ def render():
         )
         
         # Display result
-        st.markdown("### 📊 Kết quả")
+        st.markdown("## 📊 Kết quả")
         
-        # Total score
-        st.metric("**PIM2 Score:**", f"{result['total_score']:.2f} điểm")
+        # Map color to hex
+        color_map_hex = {
+            "success": "#28a745",
+            "warning": "#ffc107",
+            "error": "#dc3545"
+        }
+        score_color = color_map_hex.get(result['color'], "#6c757d")
         
-        # Mortality risk with color
-        if result["color"] == "success":
-            st.success(f"## Nguy cơ Tử vong: {result['mortality_percent']:.1f}%")
-        elif result["color"] == "warning":
-            st.warning(f"## Nguy cơ Tử vong: {result['mortality_percent']:.1f}%")
-        else:
-            st.error(f"## Nguy cơ Tử vong: {result['mortality_percent']:.1f}%")
+        icon_map = {
+            "success": "✅",
+            "warning": "⚠️",
+            "error": "🚨"
+        }
+        icon = icon_map.get(result['color'], "📊")
         
-        st.markdown(f"**Phân loại:** {result['risk_category']}")
+        # Use render_score_result for main score display
+        render_score_result(
+            title="PIM2 Score",
+            score=round(result['total_score'], 2),
+            interpretation=f"Nguy cơ: {result['risk_category']}",
+            mortality=f"Tỷ lệ tử vong: {result['mortality_percent']:.1f}%",
+            color=score_color,
+            icon=icon,
+            size="large"
+        )
         
         st.markdown("---")
         st.markdown("### 📋 Chi tiết Điểm số")

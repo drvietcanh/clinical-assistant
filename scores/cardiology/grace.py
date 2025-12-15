@@ -10,12 +10,24 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.scoring import render_score_result, render_score_breakdown
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
     """GRACE Score Calculator"""
     st.subheader("📊 GRACE Score")
     st.caption("Tiên lượng Tử vong Trong ACS")
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'grace':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.info("""
     **GRACE Score** dự đoán tử vong trong bệnh viện và 6 tháng sau ACS (STEMI/NSTEMI).
@@ -123,8 +135,19 @@ def render():
             "**Enzyme tim tăng** (Troponin/CK-MB)",
             key="grace_enzymes"
         )
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="grace",
+            calculator_name="GRACE Score",
+            category="Tim Mạch",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
         
-        if st.button("🧮 Tính GRACE Score", type="primary", key="grace_calc"):
+        if st.button("🧮 Tính GRACE Score", type="primary", key="grace_calc", use_container_width=True):
             # Validate inputs
             validation_errors = []
             
@@ -420,8 +443,42 @@ def render():
                 filename="grace_result"
             )
             
-            with st.expander("📚 Tài liệu tham khảo"):
-                st.markdown("""
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="grace",
+                calculator_name="GRACE Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="grace",
+                calculator_name="GRACE Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="grace", show_actions=True)
+            
+            # References section
+            references = get_references("GRACE")
+            if references:
+                render_references_section(
+                    references=references,
+                    title="📚 Tài liệu tham khảo",
+                    last_updated="2024-01-15",
+                    show_evidence_level=True,
+                    show_links=True
+                )
+            else:
+                # Fallback to manual references if not in config
+                with st.expander("📚 Tài liệu tham khảo"):
+                    st.markdown("""
                 **GRACE (Global Registry of Acute Coronary Events) Risk Score**
                 
                 **8 Biến số:**
@@ -456,6 +513,17 @@ def render():
                 **Link:**
                 - https://www.mdcalc.com/grace-acs-risk-mortality-calculator
                 """)
+    
+    # Always show references at the bottom (even before calculation)
+    references = get_references("GRACE")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.caption("⚠️ Công cụ hỗ trợ lâm sàng - không thay thế đánh giá lâm sàng toàn diện")
