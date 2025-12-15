@@ -4,15 +4,26 @@ MoCA - Montreal Cognitive Assessment
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 def render():
     """Render MoCA calculator"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #7C3AED;'>🧠 MoCA - Montreal Cognitive Assessment</h2>
-    <p style='text-align: center;'><em>Đánh giá nhận thức Montreal</em></p>
-    """, unsafe_allow_html=True)
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'moca':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
+    st.title("🧠 MoCA - Montreal Cognitive Assessment")
+    st.caption("Đánh giá nhận thức Montreal - Nhạy hơn MMSE với suy giảm nhận thức nhẹ")
     
     # Introduction
     with st.expander("ℹ️ Giới thiệu về MoCA"):
@@ -35,12 +46,12 @@ def render():
     
     st.markdown("---")
     
-    # Input form
-    st.subheader("📝 Nhập điểm từng phần")
-    
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns([2, 1])
     
     with col1:
+        # Input form
+        st.subheader("📝 Nhập điểm từng phần")
+        
         visuospatial = st.number_input(
             "Thị-không gian (0-5)",
             min_value=0,
@@ -259,19 +270,76 @@ def render():
                 - Lặp lại MoCA sau 6-12 tháng
                 - Đánh giá tiến triển
                 """)
-        
-        # References
-        with st.expander("📚 Tài liệu tham khảo"):
-            st.markdown("""
-            1. **Nasreddine ZS, Phillips NA, Bédirian V, et al.** The Montreal Cognitive Assessment, MoCA: 
-               a brief screening tool for mild cognitive impairment. J Am Geriatr Soc. 2005;53(4):695-9.
             
-            2. **Davis DH, Creavin ST, Noel-Storr A, et al.** Montreal Cognitive Assessment for the diagnosis 
-               of Alzheimer's disease and other dementias. Cochrane Database Syst Rev. 2015;(10):CD010775.
+            # Prepare data for history and share
+            inputs_dict = {
+                "Thị-không gian": visuospatial,
+                "Đặt tên": naming,
+                "Chú ý": attention,
+                "Ngôn ngữ": language,
+                "Trừu tượng": abstraction,
+                "Trí nhớ": memory,
+                "Định hướng": orientation,
+                "Điều chỉnh giáo dục": "Có" if education else "Không"
+            }
             
-            3. **Carson N, Leach L, Murphy KJ.** A re-examination of Montreal Cognitive Assessment (MoCA) cutoff scores. 
-               Int J Geriatr Psychiatry. 2018;33(2):379-88.
-            """)
+            results_dict = {
+                "Tổng điểm MoCA": f"{total}/30",
+                "Mức độ": status,
+                "Giải thích": interpretation
+            }
+            
+            # Export section
+            from components.export import render_export_section
+            render_export_section(
+                calculator_id="moca",
+                calculator_name="MoCA",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="moca",
+                calculator_name="MoCA",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="moca",
+                calculator_name="MoCA",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="moca", show_actions=True)
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="moca",
+            calculator_name="MoCA",
+            category="Tâm Thần",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="moca",
+            calculator_name="MoCA",
+            category="Tâm Thần",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Quick reference
     st.markdown("---")
@@ -285,6 +353,27 @@ def render():
     - **Thời gian:** 10-15 phút
     - **Nhạy hơn MMSE** với suy giảm nhận thức nhẹ
     """)
+    
+    # References section (Phase 1)
+    st.markdown("---")
+    references = get_references("MoCA")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        st.caption("""
+        **Tài liệu tham khảo:**
+        - Nasreddine ZS, Phillips NA, Bédirian V, et al. The Montreal Cognitive Assessment, MoCA: 
+          a brief screening tool for mild cognitive impairment. J Am Geriatr Soc. 2005;53(4):695-9.
+        - Davis DH, Creavin ST, Noel-Storr A, et al. Montreal Cognitive Assessment for the diagnosis 
+          of Alzheimer's disease and other dementias. Cochrane Database Syst Rev. 2015;(10):CD010775.
+        - Carson N, Leach L, Murphy KJ. A re-examination of Montreal Cognitive Assessment (MoCA) cutoff scores. 
+          Int J Geriatr Psychiatry. 2018;33(2):379-88.
+        """)
 
 
 if __name__ == "__main__":

@@ -4,6 +4,12 @@ Sàng lọc và đánh giá rối loạn lo âu lan tỏa
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 
 
 # GAD-7 questions in Vietnamese
@@ -82,6 +88,13 @@ def interpret_gad7(total_score):
 def render():
     """Render the GAD-7 calculator"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'gad7':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("😰 GAD-7 - Generalized Anxiety Disorder")
     st.markdown("""
     ### Sàng Lọc Rối Loạn Lo Âu Lan Tỏa
@@ -105,147 +118,205 @@ def render():
     
     st.markdown("---")
     
-    # Instructions
-    st.info("""
-    **Trong 2 tuần qua**, bạn bị làm phiền bao nhiêu lần bởi các vấn đề sau?
+    col1, col2 = st.columns([2, 1])
     
-    Chọn đáp án phù hợp nhất:
-    - **0** = Không có
-    - **1** = Vài ngày
-    - **2** = Hơn nửa số ngày
-    - **3** = Gần như mỗi ngày
-    """)
-    
-    st.markdown("---")
-    
-    # Questions
-    st.subheader("📋 Bảng Câu Hỏi")
-    
-    scores = []
-    
-    for i, question in enumerate(GAD7_QUESTIONS, 1):
-        st.markdown(f"**{i}. {question}**")
+    with col1:
+        # Instructions
+        st.info("""
+        **Trong 2 tuần qua**, bạn bị làm phiền bao nhiêu lần bởi các vấn đề sau?
         
-        score = st.radio(
-            "Chọn mức độ:",
-            options=[0, 1, 2, 3],
-            format_func=lambda x: ["0 - Không có", "1 - Vài ngày", "2 - Hơn nửa số ngày", "3 - Gần như mỗi ngày"][x],
-            key=f"gad7_q{i}",
-            horizontal=True
-        )
-        scores.append(score)
-        st.markdown("---")
-    
-    # Calculate button
-    if st.button("📊 Tính Điểm & Phân tích", type="primary", use_container_width=True):
-        # Calculate total score
-        total_score = calculate_gad7(scores)
-        
-        # Get interpretation
-        result = interpret_gad7(total_score)
-        
-        st.markdown("---")
-        st.subheader("📈 Kết quả đánh giá")
-        
-        # Display total score
-        col1, col2 = st.columns([1, 2])
-        
-        with col1:
-            st.metric(
-                "Tổng Điểm GAD-7",
-                f"{total_score}/21",
-                help="Tổng điểm từ 7 câu hỏi"
-            )
-        
-        with col2:
-            if result['level'] == "minimal":
-                st.success(f"{result['color']} **{result['severity']}**")
-            elif result['level'] in ["mild", "moderate"]:
-                st.warning(f"{result['color']} **{result['severity']}**")
-            else:
-                st.error(f"{result['color']} **{result['severity']}**")
-        
-        st.markdown("---")
-        
-        # Detailed interpretation
-        st.subheader("🎯 Phân tích chi tiết")
-        
-        st.info(f"""
-        **Mức độ:** {result['severity']} (Điểm: {total_score})
-        
-        **Mô tả:** {result['description']}
-        
-        **Khuyến nghị điều trị:** {result['recommendation']}
-        
-        **Theo dõi:** {result['monitoring']}
+        Chọn đáp án phù hợp nhất:
+        - **0** = Không có
+        - **1** = Vài ngày
+        - **2** = Hơn nửa số ngày
+        - **3** = Gần như mỗi ngày
         """)
         
-        # Score breakdown
         st.markdown("---")
-        st.subheader("📊 Phân tích từng Câu Hỏi")
         
-        symptom_labels = [
-            "1. Lo lắng/căng thẳng",
-            "2. Không kiểm soát lo âu",
-            "3. Lo nhiều thứ",
-            "4. Khó thư giãn",
-            "5. Bồn chồn",
-            "6. Cáu kỉnh",
-            "7. Sợ hãi"
-        ]
+        # Questions
+        st.subheader("📋 Bảng Câu Hỏi")
         
-        for i, (label, score) in enumerate(zip(symptom_labels, scores)):
-            col1, col2 = st.columns([3, 1])
-            with col1:
-                st.write(label)
-            with col2:
-                if score == 0:
-                    st.write("🟢 0")
-                elif score == 1:
-                    st.write("🟡 1")
-                elif score == 2:
-                    st.write("🟠 2")
-                else:
-                    st.write("🔴 3")
+        scores = []
         
-        # Functional impairment
-        st.markdown("---")
-        st.subheader("🔍 Đánh giá Chức Năng")
-        
-        functional_impact = st.radio(
-            "**Các vấn đề trên đã ảnh hưởng đến công việc, việc nhà, hoặc quan hệ với người khác của bạn đến mức độ nào?**",
-            [
-                "Không khó khăn",
-                "Hơi khó khăn",
-                "Rất khó khăn",
-                "Cực kỳ khó khăn"
-            ],
-            help="Câu hỏi bổ sung đánh giá ảnh hưởng chức năng"
-        )
-        
-        if functional_impact != "Không khó khăn":
-            st.warning(f"""
-            ⚠️ **Ảnh hưởng chức năng:** {functional_impact}
+        for i, question in enumerate(GAD7_QUESTIONS, 1):
+            st.markdown(f"**{i}. {question}**")
             
-            Lo âu đang ảnh hưởng đáng kể đến cuộc sống hàng ngày.
-            Can thiệp điều trị được khuyến nghị.
-            """)
-        
-        # Comorbidity screening
-        if total_score >= 10:
+            score = st.radio(
+                "Chọn mức độ:",
+                options=[0, 1, 2, 3],
+                format_func=lambda x: ["0 - Không có", "1 - Vài ngày", "2 - Hơn nửa số ngày", "3 - Gần như mỗi ngày"][x],
+                key=f"gad7_q{i}",
+                horizontal=True
+            )
+            scores.append(score)
             st.markdown("---")
-            st.subheader("🔍 Sàng Lọc Bệnh Đồng Mắc")
+        
+        # Calculate button
+        if st.button("📊 Tính Điểm & Phân tích", type="primary", use_container_width=True):
+            # Calculate total score
+            total_score = calculate_gad7(scores)
             
-            st.warning("""
-            **Lưu ý:** Rối loạn lo âu thường đi kèm với:
-            - **Trầm cảm** (50-60%) - Nên làm thêm PHQ-9
-            - **Rối loạn hoảng sợ (Panic Disorder)**
-            - **PTSD**
-            - **Rối loạn lo âu xã hội**
-            - **OCD**
+            # Get interpretation
+            result = interpret_gad7(total_score)
             
-            Xem xét sàng lọc toàn diện nếu có triệu chứng khác.
+            st.markdown("---")
+            st.subheader("📈 Kết quả đánh giá")
+            
+            # Display total score
+            col1, col2 = st.columns([1, 2])
+            
+            with col1:
+                st.metric(
+                    "Tổng Điểm GAD-7",
+                    f"{total_score}/21",
+                    help="Tổng điểm từ 7 câu hỏi"
+                )
+            
+            with col2:
+                if result['level'] == "minimal":
+                    st.success(f"{result['color']} **{result['severity']}**")
+                elif result['level'] in ["mild", "moderate"]:
+                    st.warning(f"{result['color']} **{result['severity']}**")
+                else:
+                    st.error(f"{result['color']} **{result['severity']}**")
+            
+            st.markdown("---")
+            
+            # Detailed interpretation
+            st.subheader("🎯 Phân tích chi tiết")
+            
+            st.info(f"""
+            **Mức độ:** {result['severity']} (Điểm: {total_score})
+            
+            **Mô tả:** {result['description']}
+            
+            **Khuyến nghị điều trị:** {result['recommendation']}
+            
+            **Theo dõi:** {result['monitoring']}
             """)
+            
+            # Score breakdown
+            st.markdown("---")
+            st.subheader("📊 Phân tích từng Câu Hỏi")
+            
+            symptom_labels = [
+                "1. Lo lắng/căng thẳng",
+                "2. Không kiểm soát lo âu",
+                "3. Lo nhiều thứ",
+                "4. Khó thư giãn",
+                "5. Bồn chồn",
+                "6. Cáu kỉnh",
+                "7. Sợ hãi"
+            ]
+            
+            for i, (label, score) in enumerate(zip(symptom_labels, scores)):
+                col1, col2 = st.columns([3, 1])
+                with col1:
+                    st.write(label)
+                with col2:
+                    if score == 0:
+                        st.write("🟢 0")
+                    elif score == 1:
+                        st.write("🟡 1")
+                    elif score == 2:
+                        st.write("🟠 2")
+                    else:
+                        st.write("🔴 3")
+            
+            # Functional impairment
+            st.markdown("---")
+            st.subheader("🔍 Đánh giá Chức Năng")
+            
+            functional_impact = st.radio(
+                "**Các vấn đề trên đã ảnh hưởng đến công việc, việc nhà, hoặc quan hệ với người khác của bạn đến mức độ nào?**",
+                [
+                    "Không khó khăn",
+                    "Hơi khó khăn",
+                    "Rất khó khăn",
+                    "Cực kỳ khó khăn"
+                ],
+                help="Câu hỏi bổ sung đánh giá ảnh hưởng chức năng"
+            )
+            
+            if functional_impact != "Không khó khăn":
+                st.warning(f"""
+                ⚠️ **Ảnh hưởng chức năng:** {functional_impact}
+                
+                Lo âu đang ảnh hưởng đáng kể đến cuộc sống hàng ngày.
+                Can thiệp điều trị được khuyến nghị.
+                """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                f"Câu {i+1}": score for i, score in enumerate(scores)
+            }
+            inputs_dict["Ảnh hưởng chức năng"] = functional_impact
+            
+            results_dict = {
+                "Tổng điểm GAD-7": f"{total_score}/21",
+                "Mức độ": result['severity'],
+                "Mô tả": result['description'],
+                "Khuyến nghị": result['recommendation'],
+                "Theo dõi": result['monitoring']
+            }
+            
+            # Export section
+            from components.export import render_export_section
+            render_export_section(
+                calculator_id="gad7",
+                calculator_name="GAD-7",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="gad7",
+                calculator_name="GAD-7",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="gad7",
+                calculator_name="GAD-7",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="gad7", show_actions=True)
+            
+            # Comorbidity screening
+            if total_score >= 10:
+                st.markdown("---")
+                st.subheader("🔍 Sàng Lọc Bệnh Đồng Mắc")
+                
+                st.warning("""
+                **Lưu ý:** Rối loạn lo âu thường đi kèm với:
+                - **Trầm cảm** (50-60%) - Nên làm thêm PHQ-9
+                - **Rối loạn hoảng sợ (Panic Disorder)**
+                - **PTSD**
+                - **Rối loạn lo âu xã hội**
+                - **OCD**
+                
+                Xem xét sàng lọc toàn diện nếu có triệu chứng khác.
+                """)
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="gad7",
+            calculator_name="GAD-7",
+            category="Tâm Thần",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Educational content
     st.markdown("---")
@@ -486,15 +557,24 @@ def render():
         - Nếu tương đương → Điều trị cả hai
         """)
     
-    # References
+    # References section (Phase 1)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Spitzer RL, et al. A brief measure for assessing generalized anxiety disorder: the GAD-7. Arch Intern Med. 2006
-    - Kroenke K, et al. Anxiety disorders in primary care. Ann Intern Med. 2007
-    - Bandelow B, et al. Efficacy of treatments for anxiety disorders. Int Clin Psychopharmacol. 2015
-    - NICE Guidelines: Generalised anxiety disorder and panic disorder in adults. 2019
-    """)
+    references = get_references("GAD-7")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        st.caption("""
+        **Tài liệu tham khảo:**
+        - Spitzer RL, et al. A brief measure for assessing generalized anxiety disorder: the GAD-7. Arch Intern Med. 2006
+        - Kroenke K, et al. Anxiety disorders in primary care. Ann Intern Med. 2007
+        - Bandelow B, et al. Efficacy of treatments for anxiety disorders. Int Clin Psychopharmacol. 2015
+        - NICE Guidelines: Generalised anxiety disorder and panic disorder in adults. 2019
+        """)
 
 
 if __name__ == "__main__":
