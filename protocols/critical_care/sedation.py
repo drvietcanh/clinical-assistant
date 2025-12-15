@@ -5,6 +5,8 @@ Evidence-based sedation and analgesia management in ICU
 """
 
 import streamlit as st
+from protocols.references_config import get_references
+from components.references import render_references_section
 
 
 def render():
@@ -552,4 +554,17 @@ def render_deep_sedation():
     - Giảm dần khi cải thiện
     - Tránh kéo dài
     """)
+    
+    st.markdown("---")
+    
+    # References section
+    references = get_references("Sedation")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

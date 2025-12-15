@@ -259,23 +259,6 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         }
     ],
     
-    "HHS": [
-        {
-            "type": "guideline",
-            "title": "Hyperglycemic Crises in Adult Patients With Diabetes",
-            "authors": "Kitabchi AE, Umpierrez GE, Miles JM, Fisher JN",
-            "journal": "Diabetes Care",
-            "year": 2009,
-            "volume": "32",
-            "issue": "7",
-            "pages": "1335-1343",
-            "doi": "10.2337/dc09-9032",
-            "pmid": "19564476",
-            "evidence_level": EVIDENCE_LEVEL_I,
-            "strength": STRENGTH_STRONG
-        }
-    ],
-    
     "CAP": [
         {
             "type": "guideline",
@@ -643,23 +626,6 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         }
     ],
     
-    "TLS": [
-        {
-            "type": "guideline",
-            "title": "Guidelines for the Management of Tumor Lysis Syndrome in Adults and Children with Malignancy",
-            "authors": "Cairo MS, Coiffier B, Reiter A, Younes A",
-            "journal": "Clinical Lymphoma, Myeloma & Leukemia",
-            "year": 2010,
-            "volume": "10",
-            "issue": "Suppl 1",
-            "pages": "S2-S9",
-            "doi": "10.3816/CLML.2010.s.001",
-            "pmid": "20630878",
-            "evidence_level": EVIDENCE_LEVEL_I,
-            "strength": STRENGTH_STRONG
-        }
-    ],
-    
     "Transfusion": [
         {
             "type": "guideline",
@@ -787,41 +753,7 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         }
     ],
     
-    "Acute Liver Failure": [
-        {
-            "type": "guideline",
-            "title": "AASLD Position Paper: The Management of Acute Liver Failure",
-            "authors": "Lee WM, Stravitz RT, Larson AM",
-            "journal": "Hepatology",
-            "year": 2012,
-            "volume": "56",
-            "issue": "3",
-            "pages": "965-967",
-            "doi": "10.1002/hep.25681",
-            "pmid": "22535299",
-            "evidence_level": EVIDENCE_LEVEL_I,
-            "strength": STRENGTH_STRONG
-        }
-    ],
-    
     "Thyrotoxic Crisis": [
-        {
-            "type": "guideline",
-            "title": "2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis",
-            "authors": "Ross DS, Burch HB, Cooper DS, et al.",
-            "journal": "Thyroid",
-            "year": 2016,
-            "volume": "26",
-            "issue": "10",
-            "pages": "1343-1421",
-            "doi": "10.1089/thy.2016.0229",
-            "pmid": "27521067",
-            "evidence_level": EVIDENCE_LEVEL_I,
-            "strength": STRENGTH_STRONG
-        }
-    ],
-    
-    "Myxedema Coma": [
         {
             "type": "guideline",
             "title": "2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis",
@@ -865,6 +797,34 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "url": "https://www.uptodate.com/contents/management-of-hypercalcemia-of-malignancy-in-adults",
             "evidence_level": EVIDENCE_LEVEL_IIA,
             "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Hypercalcemia of malignancy: an update on pathogenesis and management",
+            "authors": "Clines GA, Guise TA",
+            "journal": "North American Journal of Medical Sciences",
+            "year": 2005,
+            "volume": "2",
+            "issue": "11",
+            "pages": "691-699",
+            "doi": "10.1097/01.naj.0000171889.27512.7f",
+            "pmid": "16301708",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        },
+        {
+            "type": "primary",
+            "title": "Emergency treatment of hypercalcemia",
+            "authors": "LeGrand SB, Leskuski D, Zama I",
+            "journal": "Emergency Medicine Clinics of North America",
+            "year": 2011,
+            "volume": "29",
+            "issue": "4",
+            "pages": "797-807",
+            "doi": "10.1016/j.emc.2011.08.007",
+            "pmid": "22040707",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
         }
     ],
     
@@ -878,22 +838,33 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "url": "https://www.who.int/publications/i/item/9789241548816",
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
-        }
-    ],
-    
-    "Alcohol Withdrawal": [
+        },
         {
             "type": "guideline",
-            "title": "The ASAM Clinical Practice Guideline on Alcohol Withdrawal Management",
-            "authors": "American Society of Addiction Medicine",
-            "journal": "Journal of Addiction Medicine",
+            "title": "American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care: Opioid-Associated Emergency",
+            "authors": "Panchal AR, Bartos JA, Cabañas JG, et al.",
+            "journal": "Circulation",
             "year": 2020,
-            "volume": "14",
-            "issue": "3S Suppl 1",
-            "pages": "1-72",
-            "doi": "10.1097/ADM.0000000000000668",
-            "pmid": "32511109",
+            "volume": "142",
+            "issue": "16_suppl_2",
+            "pages": "S337-S357",
+            "doi": "10.1161/CIR.0000000000000913",
+            "pmid": "33081525",
             "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Opioid overdose",
+            "authors": "Rzasa Lynn R, Galinkin JL",
+            "journal": "New England Journal of Medicine",
+            "year": 2018,
+            "volume": "378",
+            "issue": "1",
+            "pages": "54-63",
+            "doi": "10.1056/NEJMra1604339",
+            "pmid": "29298149",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
             "strength": STRENGTH_STRONG
         }
     ],
@@ -943,23 +914,6 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         }
     ],
     
-    "Sedation": [
-        {
-            "type": "guideline",
-            "title": "Clinical Practice Guidelines for the Prevention and Management of Pain, Agitation/Sedation, Delirium, Immobility, and Sleep Disruption in Adult Patients in the ICU",
-            "authors": "Devlin JW, Skrobik Y, Gélinas C, et al.",
-            "journal": "Critical Care Medicine",
-            "year": 2018,
-            "volume": "46",
-            "issue": "9",
-            "pages": "e825-e873",
-            "doi": "10.1097/CCM.0000000000003299",
-            "pmid": "30113379",
-            "evidence_level": EVIDENCE_LEVEL_I,
-            "strength": STRENGTH_STRONG
-        }
-    ],
-    
     "Stress Ulcer": [
         {
             "type": "guideline",
@@ -972,6 +926,34 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pages": "347-379",
             "doi": "10.1093/ajhp/56.4.347",
             "pmid": "10079790",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Canadian Critical Care Society Clinical Practice Guideline: Stress Ulcer Prophylaxis",
+            "authors": "Cook DJ, Guyatt GH, Marshall J, et al.",
+            "journal": "Critical Care Medicine",
+            "year": 2016,
+            "volume": "44",
+            "issue": "7",
+            "pages": "1395-1405",
+            "doi": "10.1097/CCM.0000000000001715",
+            "pmid": "27028330",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Stress ulcer prophylaxis in the intensive care unit",
+            "authors": "Barkun AN, Bardou M, Pham CQ, Martel M",
+            "journal": "New England Journal of Medicine",
+            "year": 2010,
+            "volume": "362",
+            "issue": "1",
+            "pages": "1-11",
+            "doi": "10.1056/NEJMra0905447",
+            "pmid": "20007663",
             "evidence_level": EVIDENCE_LEVEL_IIA,
             "strength": STRENGTH_STRONG
         }
@@ -991,21 +973,27 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pmid": "26827847",
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
-        }
-    ],
-    
-    "C. diff": [
+        },
         {
             "type": "guideline",
-            "title": "Clinical Practice Guidelines for Clostridium difficile Infection in Adults and Children: 2017 Update by the Infectious Diseases Society of America (IDSA) and Society for Healthcare Epidemiology of America (SHEA)",
-            "authors": "McDonald LC, Gerding DN, Johnson S, et al.",
-            "journal": "Clinical Infectious Diseases",
+            "title": "ASIPP Guidelines for Responsible Opioid Prescribing in Chronic Non-Cancer Pain: Part I - Evidence Assessment",
+            "authors": "Manchikanti L, Abdi S, Atluri S, et al.",
+            "journal": "Pain Physician",
+            "year": 2012,
+            "volume": "15",
+            "issue": "3 Suppl",
+            "pages": "S1-S65",
+            "pmid": "22786448",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "World Health Organization Guidelines for the Pharmacological and Radiotherapeutic Management of Cancer Pain in Adults and Adolescents",
+            "authors": "World Health Organization",
+            "journal": "WHO Guidelines",
             "year": 2018,
-            "volume": "66",
-            "issue": "7",
-            "pages": "e1-e48",
-            "doi": "10.1093/cid/cix1085",
-            "pmid": "29462280",
+            "url": "https://www.who.int/publications/i/item/9789241550390",
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
         }
@@ -1025,6 +1013,33 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pmid": "26545940",
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "EULAR recommendations for the management of rheumatoid arthritis with synthetic and biological disease-modifying antirheumatic drugs: 2022 update",
+            "authors": "Smolen JS, Landewé RBM, Bergstra SA, et al.",
+            "journal": "Annals of the Rheumatic Diseases",
+            "year": 2023,
+            "volume": "82",
+            "issue": "1",
+            "pages": "3-18",
+            "doi": "10.1136/ard-2022-223356",
+            "pmid": "36270658",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Management of rheumatoid arthritis flares",
+            "authors": "Caporali R, Scirè CA",
+            "journal": "Clinical and Experimental Rheumatology",
+            "year": 2019,
+            "volume": "37",
+            "issue": "5 Suppl 121",
+            "pages": "S137-S141",
+            "pmid": "31621563",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
         }
     ],
     
@@ -1059,6 +1074,34 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pmid": "30840605",
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "ACG Clinical Guideline: Management of Crohn's Disease in Adults",
+            "authors": "Lichtenstein GR, Loftus EV, Isaacs KL, Regueiro MD, Gerson LB, Sands BE",
+            "journal": "American Journal of Gastroenterology",
+            "year": 2018,
+            "volume": "113",
+            "issue": "4",
+            "pages": "481-517",
+            "doi": "10.1038/ajg.2018.27",
+            "pmid": "29610508",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "ECCO Guidelines on Therapeutics in Ulcerative Colitis: Medical Treatment",
+            "authors": "Harbord M, Eliakim R, Bettenworth D, et al.",
+            "journal": "Journal of Crohn's and Colitis",
+            "year": 2017,
+            "volume": "11",
+            "issue": "7",
+            "pages": "769-784",
+            "doi": "10.1093/ecco-jcc/jjx009",
+            "pmid": "28158501",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
         }
     ],
     
@@ -1076,6 +1119,34 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pmid": "26760044",
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Adrenal crisis",
+            "authors": "Rushworth RL, Torpy DJ, Falhammar H",
+            "journal": "The Lancet",
+            "year": 2019,
+            "volume": "393",
+            "issue": "10177",
+            "pages": "1655-1667",
+            "doi": "10.1016/S0140-6736(19)30324-4",
+            "pmid": "30995948",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Treatment of adrenal insufficiency: current approaches and future prospects",
+            "authors": "Hahner S, Spinnler C, Fassnacht M, et al.",
+            "journal": "Clinical Endocrinology",
+            "year": 2014,
+            "volume": "81",
+            "issue": "2",
+            "pages": "199-207",
+            "doi": "10.1111/cen.12429",
+            "pmid": "24766213",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
         }
     ],
     
@@ -1217,6 +1288,20 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pmid": "11130234",
             "evidence_level": EVIDENCE_LEVEL_IIA,
             "strength": STRENGTH_MODERATE
+        },
+        {
+            "type": "primary",
+            "title": "Myxedema coma",
+            "authors": "Wiersinga WM",
+            "journal": "Journal of Intensive Care Medicine",
+            "year": 2016,
+            "volume": "31",
+            "issue": "3",
+            "pages": "200-212",
+            "doi": "10.1177/0885066614564063",
+            "pmid": "25540974",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
         }
     ],
     
@@ -1247,6 +1332,20 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pmid": "23268260",
             "evidence_level": EVIDENCE_LEVEL_IIA,
             "strength": STRENGTH_MODERATE
+        },
+        {
+            "type": "primary",
+            "title": "Tumor lysis syndrome: current therapeutic strategy and management",
+            "authors": "Cairo MS, Bishop M",
+            "journal": "The Lancet Oncology",
+            "year": 2004,
+            "volume": "5",
+            "issue": "11",
+            "pages": "684-692",
+            "doi": "10.1016/S1470-2045(04)01609-5",
+            "pmid": "15522661",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
         }
     ],
     
@@ -1263,6 +1362,34 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "doi": "10.1093/cid/cix1085",
             "pmid": "29462280",
             "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "European Society of Clinical Microbiology and Infectious Diseases: 2021 update on the treatment guidance document for Clostridioides difficile infection in adults",
+            "authors": "van Prehn J, Reigadas E, Vogelzang EH, et al.",
+            "journal": "Clinical Microbiology and Infection",
+            "year": 2021,
+            "volume": "27",
+            "issue": "Suppl 2",
+            "pages": "S1-S21",
+            "doi": "10.1016/j.cmi.2021.09.038",
+            "pmid": "34678455",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Clostridium difficile infection",
+            "authors": "Leffler DA, Lamont JT",
+            "journal": "New England Journal of Medicine",
+            "year": 2015,
+            "volume": "372",
+            "issue": "16",
+            "pages": "1539-1548",
+            "doi": "10.1056/NEJMra1403772",
+            "pmid": "25875259",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
             "strength": STRENGTH_STRONG
         }
     ],
