@@ -32,11 +32,11 @@ def calculate_weight_based_dose(
     calculated_dose = weight_kg * dose_per_kg
     
     # Apply min/max constraints
-    if min_dose and calculated_dose < min_dose:
+    if min_dose is not None and calculated_dose <= min_dose:
         calculated_dose = min_dose
         adjusted = True
         reason = f"Áp dụng liều tối thiểu: {min_dose}"
-    elif max_dose and calculated_dose > max_dose:
+    elif max_dose is not None and calculated_dose >= max_dose:
         calculated_dose = max_dose
         adjusted = True
         reason = f"Áp dụng liều tối đa: {max_dose}"

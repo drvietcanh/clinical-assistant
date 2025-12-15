@@ -3,8 +3,20 @@ Share Results Component
 Generate shareable links with parameters, QR codes, and link expiration
 """
 
-import streamlit as st
-import streamlit.components.v1 as components
+try:
+    import streamlit as st
+    import streamlit.components.v1 as components
+except Exception:  # Fallback for test environments without Streamlit
+    class _DummyStreamlit:
+        def __getattr__(self, name):
+            def _noop(*args, **kwargs):
+                return None
+            return _noop
+    class _DummyComponents:
+        def html(self, *args, **kwargs):
+            return ""
+    st = _DummyStreamlit()
+    components = _DummyComponents()
 from typing import Dict, Any, Optional
 from datetime import datetime, timedelta
 import json
@@ -147,7 +159,8 @@ def generate_qr_code(data: str) -> str:
     img.save(buffered, format="PNG")
     img_str = base64.b64encode(buffered.getvalue()).decode()
     
-    return img_str
+    # Return data URI so clients can render directly
+    return f"data:image/png;base64,{img_str}"
 
 
 def render_share_section(
