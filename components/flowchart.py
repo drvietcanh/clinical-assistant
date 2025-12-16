@@ -4,6 +4,7 @@ Visual flowcharts for diagnostic algorithms and clinical decision trees
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 from typing import List, Dict, Any, Optional, Tuple
 from enum import Enum
 
@@ -267,7 +268,8 @@ def render_flowchart(
     </div>
     """
     
-    st.markdown(flowchart_html, unsafe_allow_html=True)
+    # Use components.html thay vì markdown để tránh Streamlit escape các thẻ SVG
+    components.html(flowchart_html, height=height + 100, scrolling=True)
     
     # Legend
     legend_html = """
