@@ -49,7 +49,7 @@ def render():
         
         # Pattern interpretation
         st.markdown("---")
-        st.markdown("**Phân Loại:**")
+        st.markdown("**Phân loại:**")
         if tsh < 0.4 and ft4 > 1.8:
             st.error("⚠️ CƯỜNG GIÁP NGUYÊN PHÁT (Graves, nhân độc)")
         elif tsh > 4.0 and ft4 < 0.8:

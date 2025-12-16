@@ -314,7 +314,7 @@ def render_propofol_calculator():
         target_rass = "-3"
     
     # Calculate
-    if st.button("📊 Tính Toán", key="propofol_calculate", type="primary"):
+    if st.button("📊 Tính toán", key="propofol_calculate", type="primary"):
         result = calculate_propofol_dosing(weight_kg, target_rass, current_rass)
         
         st.success(f"**Liều Propofol:**")
@@ -348,7 +348,7 @@ def render_propofol_calculator():
         
         st.markdown(f"**Chỉ định:** {drug_info['indication']}")
         st.markdown(f"**Titration:** {drug_info['titration']}")
-        st.markdown(f"**Theo Dõi:** {drug_info['monitoring']}")
+        st.markdown(f"**Theo dõi:** {drug_info['monitoring']}")
         
         render_warning_alert(
             "⚠️ Cảnh báo",
@@ -397,7 +397,7 @@ def render_midazolam_calculator():
         )
     
     # Calculate
-    if st.button("📊 Tính Toán", key="midazolam_calculate", type="primary"):
+    if st.button("📊 Tính toán", key="midazolam_calculate", type="primary"):
         result = calculate_midazolam_dosing(weight_kg, target_rass, current_rass)
         
         st.success(f"**Liều Midazolam:**")
@@ -470,7 +470,7 @@ def render_dexmedetomidine_calculator():
         )
     
     # Calculate
-    if st.button("📊 Tính Toán", key="dex_calculate", type="primary"):
+    if st.button("📊 Tính toán", key="dex_calculate", type="primary"):
         result = calculate_dexmedetomidine_dosing(weight_kg, target_rass)
         
         st.success(f"**Liều Dexmedetomidine:**")
@@ -540,7 +540,7 @@ def render_fentanyl_calculator():
         )
     
     # Calculate
-    if st.button("📊 Tính Toán", key="fentanyl_calculate", type="primary"):
+    if st.button("📊 Tính toán", key="fentanyl_calculate", type="primary"):
         result = calculate_fentanyl_dosing(weight_kg, pain_level)
         
         st.success(f"**Liều Fentanyl:**")
@@ -598,7 +598,7 @@ def render_rass_guide():
         """, unsafe_allow_html=True)
     
     st.markdown("---")
-    st.markdown("### 🎯 Mục Tiêu RASS Theo Tình huống")
+    st.markdown("### 🎯 Mục tiêu RASS Theo Tình huống")
     
     scenarios = {
         "An thần thủ thuật": "-1 to -2",

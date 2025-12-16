@@ -37,13 +37,13 @@ def render():
         **1. EPINEPHRINE - Thuốc Đầu Tay**
         
         **IM (Ưu tiên):**
-        - **Người Lớn:** 0.3-0.5 mg IM (1:1000)
+        - **Người lớn:** 0.3-0.5 mg IM (1:1000)
         - **Trẻ em:** 0.01 mg/kg IM (max 0.3 mg)
         - **Vị trí:** Mặt trước-bên đùi
         - **Lặp lại:** q5-15 phút nếu cần
         
         **IV (Nếu shock nặng):**
-        - **Người Lớn:** 0.1 mg IV (1:10,000)
+        - **Người lớn:** 0.1 mg IV (1:10,000)
         - **Trẻ em:** 0.01 mg/kg IV
         - **Truyền tĩnh mạch:** 1-4 mcg/min
         """)
@@ -66,22 +66,22 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều trị Hỗ Trợ")
+    st.markdown("### 💊 Điều trị Hỗ trợ")
     
     st.info("""
     **Sau khi đã dùng Epinephrine:**
     
     **1. Antihistamines (H1 blocker):**
-    - **Diphenhydramine:** 25-50 mg IV/IM (Người Lớn)
+    - **Diphenhydramine:** 25-50 mg IV/IM (Người lớn)
     - **Trẻ em:** 1 mg/kg IV/IM (max 50 mg)
     - **Hoặc:** Cetirizine 10 mg PO
     
     **2. H2 Blocker:**
-    - **Ranitidine:** 50 mg IV (Người Lớn)
+    - **Ranitidine:** 50 mg IV (Người lớn)
     - **Hoặc:** Famotidine 20 mg IV
     
     **3. Corticosteroids:**
-    - **Methylprednisolone:** 125 mg IV (Người Lớn)
+    - **Methylprednisolone:** 125 mg IV (Người lớn)
     - **Trẻ em:** 1-2 mg/kg IV
     - **Hoặc:** Prednisone 60 mg PO
     - **Mục đích:** Ngăn phản ứng 2 pha (biphasic)
@@ -227,7 +227,7 @@ def render_mild_anaphylaxis():
     - Không có hô hấp/tuần hoàn
     
     **Điều trị:**
-    1. **Epinephrine:** 0.3 mg IM (Người Lớn)
+    1. **Epinephrine:** 0.3 mg IM (Người lớn)
     2. **Diphenhydramine:** 25-50 mg IV/IM
     3. **Corticosteroid:** Prednisone 60 mg PO
     4. **Theo dõi:** 2-4 giờ

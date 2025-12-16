@@ -184,7 +184,7 @@ def render_lithium_tdm():
             )
         
         # Check for contraindications
-        st.markdown("#### ⚠️ Kiểm Tra Chống chỉ định")
+        st.markdown("#### ⚠️ Kiểm tra Chống chỉ định")
         has_ckd = crcl < 60
         is_elderly = age >= 65
         

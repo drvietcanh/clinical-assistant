@@ -71,7 +71,7 @@ def render_sepsis_scenario():
             st.rerun()
     
     # Step 3: Fluid Resuscitation
-    with st.expander("💧 Bước 3: Bù Dịch", expanded=True):
+    with st.expander("💧 Bước 3: Bù dịch", expanded=True):
         st.markdown("""
         **Mục tiêu:**
         - MAP ≥65 mmHg
@@ -106,7 +106,7 @@ def render_sepsis_scenario():
             st.rerun()
     
     # Step 5: Monitoring
-    with st.expander("📊 Bước 5: Theo Dõi", expanded=True):
+    with st.expander("📊 Bước 5: Theo dõi", expanded=True):
         st.markdown("""
         **Theo dõi:**
         - **Lactate clearance:** Đo lại sau 2-4 giờ
@@ -147,7 +147,7 @@ def render_ards_scenario():
     st.markdown("---")
     
     # Step 1: Diagnosis
-    with st.expander("📋 Bước 1: Chẩn Đoán ARDS", expanded=True):
+    with st.expander("📋 Bước 1: Chẩn đoán ARDS", expanded=True):
         st.markdown("""
         **Tiêu chuẩn Berlin Definition (2012):**
         
@@ -240,7 +240,7 @@ def render_ards_scenario():
         """)
     
     # Step 5: Rescue Therapies
-    with st.expander("🚨 Bước 5: Điều Trị Cứu Hộ", expanded=True):
+    with st.expander("🚨 Bước 5: Điều trị Cứu Hộ", expanded=True):
         st.markdown("""
         **Khi ARDS không đáp ứng:**
         
@@ -374,7 +374,7 @@ def render_shock_scenario():
             st.rerun()
     
     # Step 5: Monitoring
-    with st.expander("📊 Bước 5: Theo Dõi", expanded=True):
+    with st.expander("📊 Bước 5: Theo dõi", expanded=True):
         st.markdown("""
         **Theo dõi:**
         - **MAP:** ≥65 mmHg
@@ -589,7 +589,7 @@ def render_sedation_scenario():
         """)
     
     # Step 3: Sedation Strategy
-    with st.expander("💊 Bước 3: Chiến Lược An Thần", expanded=True):
+    with st.expander("💊 Bước 3: Chiến Lược An thần", expanded=True):
         st.markdown("""
         **Lựa chọn thuốc:**
         
@@ -619,7 +619,7 @@ def render_sedation_scenario():
             st.rerun()
     
     # Step 4: Analgesia
-    with st.expander("💉 Bước 4: Giảm Đau", expanded=True):
+    with st.expander("💉 Bước 4: Giảm đau", expanded=True):
         st.markdown("""
         **Thuốc giảm đau nhóm opioid:**
         
@@ -640,7 +640,7 @@ def render_sedation_scenario():
         """)
     
     # Step 5: Delirium Prevention
-    with st.expander("🧠 Bước 5: Phòng Ngừa Delirium", expanded=True):
+    with st.expander("🧠 Bước 5: Phòng ngừa Delirium", expanded=True):
         st.markdown("""
         **CAM-ICU (Confusion Assessment Method):**
         
@@ -665,7 +665,7 @@ def render_sedation_scenario():
             st.rerun()
     
     # Step 6: Daily Sedation Interruption
-    with st.expander("⏰ Bước 6: Ngừng An Thần Hàng Ngày", expanded=True):
+    with st.expander("⏰ Bước 6: Ngừng An thần Hàng Ngày", expanded=True):
         st.markdown("""
         **Daily Sedation Interruption (DSI):**
         

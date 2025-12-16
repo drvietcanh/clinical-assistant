@@ -223,7 +223,7 @@ def display_ventilator_adjustments(recommendations):
         st.success("✅ Không có khuyến nghị điều chỉnh thông số máy thở")
         return
     
-    st.markdown("### ⚙️ Khuyến nghị điều chỉnh Thông Số Máy Thở")
+    st.markdown("### ⚙️ Khuyến nghị điều chỉnh Thông số Máy Thở")
     
     # Group by parameter
     by_parameter = {}

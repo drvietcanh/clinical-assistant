@@ -63,7 +63,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 4: CHỈ ĐỊNH CT NÃO ========== #
-    st.markdown("### 📸 Chỉ Định CT Scan Não")
+    st.markdown("### 📸 Chỉ định CT Scan Não")
     st.markdown(
         """
         - GCS <15 sau 2 giờ.
@@ -90,7 +90,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 6: THUỐC & DỰ PHÒNG ========== #
-    st.markdown("### 💊 Thuốc & Dự Phòng")
+    st.markdown("### 💊 Thuốc & Dự phòng")
     st.markdown(
         """
         - **Co giật sớm (<7 ngày):** Levetiracetam 1 g IV nạp, 500–1,000 mg q12h.
@@ -103,7 +103,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 7: THEO DÕI ========== #
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     st.info(
         """
         - GCS/đồng tử mỗi 1 giờ (nặng), sinh hiệu liên tục.

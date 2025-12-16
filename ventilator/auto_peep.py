@@ -168,7 +168,7 @@ def display_auto_peep_analysis(auto_peep, plateau, peep, rr, ie_ratio, vt):
         - Áp lực dương còn lại trong phổi ở cuối thì thở ra
         - Xảy ra khi thời gian thở ra không đủ để đẩy hết khí ra ngoài
         
-        **Nguyên Nhân:**
+        **Nguyên nhân:**
         - RR quá cao
         - I:E ratio không phù hợp (thời gian thở ra ngắn)
         - Vt quá lớn
@@ -181,7 +181,7 @@ def display_auto_peep_analysis(auto_peep, plateau, peep, rr, ie_ratio, vt):
         - Ảnh hưởng huyết động
         - Barotrauma
         
-        **Điều Trị:**
+        **Điều trị:**
         - Giảm RR
         - Tăng thời gian thở ra (giảm I:E ratio)
         - Giảm Vt

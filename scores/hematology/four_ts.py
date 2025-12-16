@@ -412,7 +412,7 @@ def render():
         
         # Use render_score_breakdown for component scores
         render_score_breakdown(
-            title="Điểm Từng Thành Phần",
+            title="Điểm Từng Thành phần",
             subscores={
                 "1️⃣ Thrombocytopenia": thrombocytopenia_category,
                 "2️⃣ Timing": timing_category,

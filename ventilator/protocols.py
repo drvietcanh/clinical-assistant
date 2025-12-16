@@ -168,7 +168,7 @@ def display_protocol_recommendations(protocol_type, **kwargs):
         
         for rec in recommendations:
             st.markdown(f"**{rec['parameter']}:**")
-            st.markdown(f"- **Mục Tiêu:** {rec['target']}")
+            st.markdown(f"- **Mục tiêu:** {rec['target']}")
             if 'target_per_kg' in rec:
                 st.markdown(f"- **Theo PBW:** {rec['target_per_kg']}")
             st.markdown(f"- **Lý do:** {rec['reason']}")

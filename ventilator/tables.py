@@ -12,7 +12,7 @@ def render_peep_fio2_table():
     st.subheader("📊 Bảng PEEP/FiO2 - ARDSNet")
     st.caption("Lower PEEP/Higher FiO2 Strategy")
     
-    st.markdown("### 🎯 Mục Tiêu Oxy Hóa")
+    st.markdown("### 🎯 Mục tiêu Oxy Hóa")
     st.info("""
     **Target oxygenation:**
     - SpO2: 88-95%

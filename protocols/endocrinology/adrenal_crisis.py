@@ -166,7 +166,7 @@ def render():
     """)
     
     # Step 2: Fluid resuscitation
-    st.markdown("#### **2. Bù Dịch (Fluid Resuscitation)**")
+    st.markdown("#### **2. Bù dịch (Fluid Resuscitation)**")
     
     st.markdown("""
     **Dịch truyền:**
@@ -181,7 +181,7 @@ def render():
     """)
     
     # Step 3: Electrolyte correction
-    st.markdown("#### **3. Điều Chỉnh Điện Giải**")
+    st.markdown("#### **3. Điều chỉnh Điện giải**")
     
     col1, col2 = st.columns(2)
     
@@ -225,7 +225,7 @@ def render():
     """)
     
     # Step 5: Treat precipitating cause
-    st.markdown("#### **5. Điều trị Nguyên Nhân Thúc Đẩy**")
+    st.markdown("#### **5. Điều trị Nguyên nhân Thúc Đẩy**")
     
     st.markdown("""
     **Tìm và điều trị nguyên nhân:**
@@ -282,7 +282,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Dân Số Đặc Biệt")
+    st.markdown("### 👥 Dân số Đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -350,7 +350,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: PREVENTION ==========
-    st.markdown("### 🛡️ Phòng Ngừa")
+    st.markdown("### 🛡️ Phòng ngừa")
     
     st.markdown("""
     **Giáo dục bệnh nhân:**

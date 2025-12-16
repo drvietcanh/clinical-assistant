@@ -192,7 +192,7 @@ def render():
 
 def render_sbt():
     """Spontaneous Breathing Trial Protocol"""
-    st.success("## ✅ Spontaneous Breathing Trial (SBT) - Phương Pháp Ưu Tiên")
+    st.success("## ✅ Spontaneous Breathing Trial (SBT) - Phương Pháp Ưu tiên")
     
     st.info("""
     **SBT là phương pháp weaning ưu tiên (Evidence-based):**

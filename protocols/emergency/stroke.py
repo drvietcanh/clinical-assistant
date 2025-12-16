@@ -633,7 +633,7 @@ def render_ischemic_stroke():
             """)
     
     with tab3:
-        st.error("### 🚨 Xử tríNếu Có Xuất Huyết")
+        st.error("### 🚨 Xử tríNếu Có Xuất huyết")
         
         st.markdown("**Checklist xử trí xuất huyết:**")
         
@@ -946,7 +946,7 @@ def render_hemorrhagic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Kiểm Soát Huyết áp")
+    st.markdown("### 2️⃣ Kiểm soát Huyết áp")
     
     st.warning("""
     **Mục tiêu huyết áp:**
@@ -1030,7 +1030,7 @@ def render_hemorrhagic_stroke():
         """)
     
     st.markdown("---")
-    st.markdown("### 5️⃣ Điều trị Hỗ Trợ")
+    st.markdown("### 5️⃣ Điều trị Hỗ trợ")
     
     st.info("""
     **ICP Management (nếu có monitoring ICP):**

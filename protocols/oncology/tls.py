@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Phác đồ phòng ngừa hội chứng tan u (TLS)"""
-    st.subheader("🎗️ Phòng Ngừa Hội Chứng Tan U (TLS)")
+    st.subheader("🎗️ Phòng ngừa Hội Chứng Tan U (TLS)")
     st.caption("Hướng dẫn NCCN 2023 - Phòng ngừa và điều trị TLS")
     
     st.error("""
@@ -115,7 +115,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: PREVENTION PROTOCOL ==========
-    st.markdown("### 🛡️ Phác Đồ Phòng Ngừa")
+    st.markdown("### 🛡️ Phác Đồ Phòng ngừa")
     
     risk_level = st.radio(
         "**Mức độ nguy cơ:**",
@@ -135,19 +135,19 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: HYDRATION ==========
-    st.markdown("### 💧 Phác Đồ Bù Dịch")
+    st.markdown("### 💧 Phác Đồ Bù dịch")
     
     st.info("""
     **Bù dịch là nền tảng của phòng ngừa TLS:**
     
     **Mục tiêu:**
-    - Duy trì lượng nước tiểu >100 ml/h (Người Lớn)
+    - Duy trì lượng nước tiểu >100 ml/h (Người lớn)
     - Hoặc >2 ml/kg/h (Trẻ em)
     - Giảm nguy cơ kết tinh uric acid trong thận
     
     **Phác đồ:**
     - **Natri clorid 0.9% hoặc Dextrose 5%:** 2-3 L/m²/ngày
-    - Hoặc 200-300 ml/h (Người Lớn)
+    - Hoặc 200-300 ml/h (Người lớn)
     - Bắt đầu 24-48h trước hóa trị
     - Tiếp tục trong và sau hóa trị
     
@@ -235,7 +235,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: ELECTROLYTE MANAGEMENT ==========
-    st.markdown("### ⚡ Điều Chỉnh Điện Giải")
+    st.markdown("### ⚡ Điều chỉnh Điện giải")
     
     st.markdown("""
     **1. Tăng kali máu:**
@@ -333,7 +333,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 9: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Nhóm Bệnh nhân Đặc Biệt")
+    st.markdown("### 👥 Nhóm Bệnh nhân Đặc biệt")
     
     col1, col2 = st.columns(2)
     

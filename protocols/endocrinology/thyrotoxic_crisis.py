@@ -170,7 +170,7 @@ def render():
     """)
     
     # Step 1: Supportive Care
-    st.markdown("#### **1. Hồi Sức Hỗ Trợ (Supportive Care)**")
+    st.markdown("#### **1. Hồi sức Hỗ trợ (Supportive Care)**")
     st.markdown("""
     - **Oxygen:** Duy trì SpO2 >90%
     - **Dịch truyền:** NS 0.9% hoặc LR, bù dịch theo nhu cầu
@@ -295,7 +295,7 @@ def render():
         """)
     
     # Step 5: Corticosteroids
-    st.markdown("#### **5. Corticosteroids (Ức Chế Chuyển Đổi T4→T3 + Hỗ Trợ Thượng Thận)**")
+    st.markdown("#### **5. Corticosteroids (Ức Chế Chuyển Đổi T4→T3 + Hỗ trợ Thượng Thận)**")
     
     st.markdown("""
     **Dexamethasone hoặc Hydrocortisone:**
@@ -330,7 +330,7 @@ def render():
         """)
     
     # Step 6: Additional treatments
-    st.markdown("#### **6. Điều trị Bổ Sung**")
+    st.markdown("#### **6. Điều trị Bổ sung**")
     
     st.markdown("""
     **A. Cholestyramine (Nếu có):**
@@ -383,7 +383,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Dân Số Đặc Biệt")
+    st.markdown("### 👥 Dân số Đặc biệt")
     
     col1, col2 = st.columns(2)
     

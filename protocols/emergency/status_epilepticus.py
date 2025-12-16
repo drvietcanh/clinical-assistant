@@ -176,7 +176,7 @@ def render():
         "✅ Lorazepam 0.1 mg/kg IV (hoặc midazolam IM)",
         "✅ Fosphenytoin 20 mg PE/kg IV (nếu vẫn co giật)",
         "✅ EEG monitoring (nếu có)",
-        "✅ Tìm Nguyên Nhân (CT, LP, xét nghiệm)",
+        "✅ Tìm Nguyên nhân (CT, LP, xét nghiệm)",
         "✅ ICU nếu refractory",
         "✅ Theo dõi hô hấp, huyết động"
     ]
@@ -200,7 +200,7 @@ def render():
         **Người cao tuổi:**
         - Giảm liều benzodiazepine
         - Cẩn thận với hô hấp
-        - Tìm Nguyên Nhân (thường là đột quỵ)
+        - Tìm Nguyên nhân (thường là đột quỵ)
         """)
     
     with col2:
@@ -321,6 +321,6 @@ def render_super_refractory_se():
     
     4. **Hội chẩn:** Thần kinh, gây mê
     
-    **Mục tiêu:** Kiểm soát co giật, Tìm Nguyên Nhân
+    **Mục tiêu:** Kiểm soát co giật, Tìm Nguyên nhân
     """)
 

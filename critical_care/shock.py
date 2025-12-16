@@ -389,7 +389,7 @@ def render_fluid_responsiveness():
 
 def render_vasopressor_selection():
     """Render vasopressor selection guide"""
-    st.subheader("💉 Hướng Dẫn Chọn Vasopressor")
+    st.subheader("💉 Hướng dẫn Chọn Vasopressor")
     st.caption("Hướng dẫn chọn vasopressor cho sốc")
     
     st.markdown("""

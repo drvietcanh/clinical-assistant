@@ -383,7 +383,7 @@ def render_weaning_calculator():
             
             # Warnings
             if criteria["warnings"]:
-                st.markdown("#### ⚠️ Cảnh Báo")
+                st.markdown("#### ⚠️ Cảnh báo")
                 for criterion in criteria["warnings"]:
                     st.warning(f"⚠ {criterion}")
             

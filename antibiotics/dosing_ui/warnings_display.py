@@ -33,7 +33,7 @@ def render_warnings_section(selected_ab, crcl, age, is_pregnant, is_breastfeedin
     # Drug Interaction Checker Integration
     if other_drugs and len(other_drugs) > 0:
         st.markdown("---")
-        st.markdown("### 🔍 Kiểm Tra Tương Tác Thuốc:")
+        st.markdown("### 🔍 Kiểm tra Tương Tác Thuốc:")
         
         try:
             from drugs.interactions_data import check_interactions, normalize_drug_name, SEVERITY_MAJOR, SEVERITY_MODERATE

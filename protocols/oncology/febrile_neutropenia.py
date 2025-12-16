@@ -140,7 +140,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: EMPIRIC ANTIBIOTIC THERAPY ==========
-    st.markdown("### 💊 Kháng Sinh Điều trị Ban Đầu (Empiric Therapy)")
+    st.markdown("### 💊 Kháng sinh Điều trị Ban Đầu (Empiric Therapy)")
     
     st.error("""
     **⚠️ QUAN TRỌNG: Bắt đầu kháng sinh NGAY, không chờ kết quả cấy máu**

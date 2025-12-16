@@ -173,13 +173,13 @@ def render_vasopressor_guide():
     st.markdown("---")
     
     # Titration
-    st.markdown("### ⚙️ Điều Chỉnh Liều (Titration)")
+    st.markdown("### ⚙️ Điều chỉnh Liều (Titration)")
     st.info(vasopressor_data['titration'])
     
     st.markdown("---")
     
     # Concentration calculator
-    st.markdown("### 🧮 Tính Toán Liều")
+    st.markdown("### 🧮 Tính toán Liều")
     
     col1, col2 = st.columns(2)
     
@@ -216,7 +216,7 @@ def render_vasopressor_guide():
             {"label": "Tổng liều/giờ", "value": f"{calc_results['mg_per_hour']:.2f} mg/h", "icon": "💊"},
         ]
         
-        render_result_card("Liều Tính Toán", metrics, color="primary")
+        render_result_card("Liều Tính toán", metrics, color="primary")
         
         # Show concentration info
         if vasopressor_data.get('concentration'):
@@ -234,7 +234,7 @@ def render_vasopressor_guide():
     st.markdown("---")
     
     # Monitoring
-    st.markdown("### 📊 Theo Dõi")
+    st.markdown("### 📊 Theo dõi")
     if vasopressor_data.get('monitoring'):
         monitoring_items = vasopressor_data['monitoring'].split(', ')
         st.markdown("Theo dõi:")

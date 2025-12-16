@@ -23,7 +23,7 @@ from components.smart_suggestions import render_suggestions
 def render():
     """CURB-65 Score Calculator"""
     st.subheader("🫁 CURB-65")
-    st.caption("Mức Độ Nặng Viêm Phổi Cộng Đồng")
+    st.caption("Mức độ Nặng Viêm Phổi Cộng Đồng")
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -250,7 +250,7 @@ def render():
             
             if criteria_scores:
                 render_score_breakdown(
-                    title="Tiêu chí Đánh Giá",
+                    title="Tiêu chí Đánh giá",
                     subscores=criteria_scores,
                     total_score=score
                 )

@@ -246,7 +246,7 @@ def display_drug_info(drug_name, drug_data):
                 st.markdown(f'- {inter}')
         else:
             st.info(
-                "Không có thông tin về tương tác thuốc. Sử dụng công cụ 'Kiểm Tra Tương tác Thuốc' để kiểm tra chi tiết."
+                "Không có thông tin về tương tác thuốc. Sử dụng công cụ 'Kiểm tra Tương tác Thuốc' để kiểm tra chi tiết."
                 )
     with tab_monitoring:
         if 'monitoring' in drug_data:

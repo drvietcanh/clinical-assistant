@@ -109,7 +109,7 @@ def render_antibiotic_selection():
         )
     
     # Other drugs (for interaction checking)
-    st.markdown("#### 💊 Thuốc Đang Dùng (Để Kiểm Tra Tương Tác)")
+    st.markdown("#### 💊 Thuốc Đang Dùng (Để Kiểm tra Tương Tác)")
     other_drugs_input = st.text_input(
         "Nhập tên thuốc (cách nhau bằng dấu phẩy):",
         placeholder="Ví dụ: Gentamicin, Furosemide, Warfarin",

@@ -655,7 +655,7 @@ def render():
         - EEG patterns
         """)
     
-    with st.expander("🚨 Hồi Sức Trẻ Sơ Sinh (NRP 2020)"):
+    with st.expander("🚨 Hồi sức Trẻ Sơ Sinh (NRP 2020)"):
         st.markdown("""
         ### Thuật toán NRP cập nhật:
         

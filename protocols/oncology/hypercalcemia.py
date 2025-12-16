@@ -72,7 +72,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: CALCULATION ==========
-    st.markdown("### 🧮 Tính Toán")
+    st.markdown("### 🧮 Tính toán")
     
     col1, col2 = st.columns(2)
     

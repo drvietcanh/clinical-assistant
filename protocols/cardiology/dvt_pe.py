@@ -109,7 +109,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân Loại Nguy cơ PE")
+    st.markdown("### 📊 Phân loại Nguy cơ PE")
     
     st.info("""
     **High-Risk (Nguy cơ cao):**

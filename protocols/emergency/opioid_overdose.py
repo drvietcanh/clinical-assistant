@@ -56,7 +56,7 @@ def render():
         **Mục tiêu:** Đảo ngược ức chế hô hấp
         
         **Liều ban đầu:**
-        - **Người Lớn:** 0.4-2 mg IV/IM/IN
+        - **Người lớn:** 0.4-2 mg IV/IM/IN
         - **Trẻ em:** 0.01 mg/kg IV/IM/IN
         - **Lặp lại:** q2-3 phút nếu cần
         
@@ -138,7 +138,7 @@ def render():
     **Liều truyền:**
     - **Bolus:** 0.4-2 mg IV
     - **Truyền tĩnh mạch:** 0.4-2 mg/h
-    - **Điều Chỉnh:** Theo đáp ứng hô hấp
+    - **Điều chỉnh:** Theo đáp ứng hô hấp
     - **Mục tiêu:** Duy trì RR ≥12/min, SpO2 ≥94%
     
     **Theo dõi:**

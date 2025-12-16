@@ -17,7 +17,7 @@ def _format_num(value: float, decimals: int = 1) -> str:
 def render():
     """Vancomycin Dosing Calculator"""
     st.subheader("💉 Vancomycin - Tính liều")
-    st.caption("Liều Khởi Đầu & Theo Dõi Nồng Độ Thuốc (TDM)")
+    st.caption("Liều Khởi Đầu & Theo dõi Nồng Độ Thuốc (TDM)")
     
     st.info("""
     **Vancomycin TDM** - Hướng dẫn theo ASHP/IDSA/SIDP 2020:

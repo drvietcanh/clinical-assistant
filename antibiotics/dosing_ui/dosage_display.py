@@ -39,7 +39,7 @@ def render_renal_adjustment(result, crcl, renal_category):
         'peritoneal_dialysis': '💉 Đang lọc màng bụng (PD)'
     }
     
-    st.markdown("### 🫘 Điều Chỉnh Theo Chức Năng Thận:")
+    st.markdown("### 🫘 Điều chỉnh Theo Chức Năng Thận:")
     
     col1, col2 = st.columns([1, 2])
     
@@ -207,7 +207,7 @@ def render_icu_adjustments(result, is_icu, albumin_gdl):
     """Render ICU-specific adjustments"""
     if is_icu and result.get('icu_recommendations'):
         st.markdown("---")
-        st.markdown("### 🏥 Điều Chỉnh Cho ICU:")
+        st.markdown("### 🏥 Điều chỉnh Cho ICU:")
         
         col1, col2 = st.columns(2)
         with col1:
@@ -233,7 +233,7 @@ def render_special_population_guidance(is_hemodialysis, is_continuous_hd, is_per
     """Render special population guidance (HD/PD/CRRT)"""
     if is_hemodialysis:
         st.markdown("---")
-        st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc máu Ngắt Quãng:")
+        st.markdown("### 💉 Hướng dẫn Cho Bệnh Nhân Lọc máu Ngắt Quãng:")
         
         if hd_schedule:
             hd_freq_text = f"Lịch HD: {hd_schedule}"
@@ -255,7 +255,7 @@ def render_special_population_guidance(is_hemodialysis, is_continuous_hd, is_per
     
     if is_continuous_hd:
         st.markdown("---")
-        st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc máu Liên Tục (CRRT/CVVH):")
+        st.markdown("### 💉 Hướng dẫn Cho Bệnh Nhân Lọc máu Liên Tục (CRRT/CVVH):")
         st.warning(f"""
         **CRRT/CVVH:**
         - Liều thường cao hơn HD ngắt quãng do thời gian lọc liên tục
@@ -266,7 +266,7 @@ def render_special_population_guidance(is_hemodialysis, is_continuous_hd, is_per
     
     if is_peritoneal_dialysis:
         st.markdown("---")
-        st.markdown("### 💉 Hướng Dẫn Cho Bệnh Nhân Lọc Màng Bụng (PD):")
+        st.markdown("### 💉 Hướng dẫn Cho Bệnh Nhân Lọc Màng Bụng (PD):")
         st.info(f"""
         **Lọc màng bụng:**
         - Một số kháng sinh có thể cho vào dịch lọc màng bụng (IP - intraperitoneal)

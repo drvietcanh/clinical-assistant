@@ -7,6 +7,18 @@ Visual timeline: 24h, 48h, 7 days
 import streamlit as st
 from datetime import datetime, timedelta
 
+# Import drug database for dropdown list
+try:
+    from .drug_database import DRUG_DATABASE
+    _DRUG_DB_AVAILABLE = True
+except ImportError:
+    try:
+        from drugs.drug_database import DRUG_DATABASE
+        _DRUG_DB_AVAILABLE = True
+    except ImportError:
+        _DRUG_DB_AVAILABLE = False
+        DRUG_DATABASE = {}
+
 
 def calculate_dosing_times(start_time_str, interval_hours, duration_days):
     """
@@ -93,12 +105,59 @@ def render_dosing_schedule_generator():
     # Drug selection
     st.markdown("### 💊 Thông tin Thuốc")
     
-    drug_name = st.text_input(
-        "Tên thuốc:",
-        value=preset_drug if preset_drug else "",
-        placeholder="Ví dụ: Vancomycin, Metformin, Omeprazole...",
-        key="schedule_drug_name"
-    )
+    # Get drug list from database
+    if _DRUG_DB_AVAILABLE and DRUG_DATABASE:
+        # Get sorted list of drug names
+        drug_list = sorted(list(DRUG_DATABASE.keys()))
+        # Add "Khác..." option at the end
+        drug_options = drug_list + ["Khác..."]
+        
+        # Handle preset drug from example buttons
+        if preset_drug:
+            if preset_drug in drug_list:
+                # Set the selectbox to the preset drug
+                if 'schedule_drug_select' not in st.session_state or st.session_state.get('schedule_drug_select') != preset_drug:
+                    st.session_state['schedule_drug_select'] = preset_drug
+            else:
+                # Set to "Khác..." and fill custom input
+                if 'schedule_drug_select' not in st.session_state or st.session_state.get('schedule_drug_select') != "Khác...":
+                    st.session_state['schedule_drug_select'] = "Khác..."
+                if 'schedule_drug_custom' not in st.session_state or st.session_state.get('schedule_drug_custom') != preset_drug:
+                    st.session_state['schedule_drug_custom'] = preset_drug
+        
+        # Get current selection or default
+        current_selection = st.session_state.get('schedule_drug_select', drug_options[0] if drug_options else "")
+        
+        # Drug selection dropdown
+        selected_drug_option = st.selectbox(
+            "Tên thuốc:",
+            options=drug_options,
+            index=drug_options.index(current_selection) if current_selection in drug_options else 0,
+            key="schedule_drug_select"
+        )
+        
+        # If "Khác..." is selected, show text input
+        if selected_drug_option == "Khác...":
+            custom_drug = st.text_input(
+                "Nhập tên thuốc:",
+                value=st.session_state.get('schedule_drug_custom', preset_drug if preset_drug and preset_drug not in drug_list else ""),
+                placeholder="Ví dụ: Thuốc mới, Biệt dược...",
+                key="schedule_drug_custom"
+            )
+            drug_name = custom_drug
+        else:
+            drug_name = selected_drug_option
+            # Clear custom drug if a drug from list is selected
+            if 'schedule_drug_custom' in st.session_state:
+                st.session_state.pop('schedule_drug_custom', None)
+    else:
+        # Fallback to text input if database not available
+        drug_name = st.text_input(
+            "Tên thuốc:",
+            value=preset_drug if preset_drug else "",
+            placeholder="Ví dụ: Vancomycin, Metformin, Omeprazole...",
+            key="schedule_drug_name"
+        )
     
     # Dosing parameters
     st.markdown("### 📋 Thông số Liều dùng")
@@ -168,12 +227,20 @@ def render_dosing_schedule_generator():
     
     with col1:
         if st.button("📋 Vancomycin\n1000mg q12h x 7d", use_container_width=True, key="example_vanco"):
+            # Lưu preset (giữ nguyên cơ chế cũ để tương thích)
             st.session_state['preset_schedule_drug_name'] = "Vancomycin"
             st.session_state['preset_schedule_dose'] = "1000mg"
             st.session_state['preset_schedule_interval'] = 12
             st.session_state['preset_schedule_duration'] = 7
             st.session_state['preset_schedule_route'] = "IV (Tiêm tĩnh mạch)"
             st.session_state['preset_schedule_start_time'] = "08:00"
+            # Đồng bộ trực tiếp với các widget để Streamlit thực sự hiển thị giá trị
+            st.session_state['schedule_drug_select'] = "Vancomycin"  # For dropdown
+            st.session_state['schedule_dose'] = "1000mg"
+            st.session_state['schedule_interval'] = 12
+            st.session_state['schedule_duration'] = 7
+            st.session_state['schedule_route'] = "IV (Tiêm tĩnh mạch)"
+            st.session_state['schedule_start_time'] = "08:00"
             st.session_state['schedule_generated'] = False
             st.rerun()
     
@@ -185,6 +252,12 @@ def render_dosing_schedule_generator():
             st.session_state['preset_schedule_duration'] = 30
             st.session_state['preset_schedule_route'] = "PO (Uống)"
             st.session_state['preset_schedule_start_time'] = "08:00"
+            st.session_state['schedule_drug_select'] = "Metformin"  # For dropdown
+            st.session_state['schedule_dose'] = "500mg"
+            st.session_state['schedule_interval'] = 8
+            st.session_state['schedule_duration'] = 30
+            st.session_state['schedule_route'] = "PO (Uống)"
+            st.session_state['schedule_start_time'] = "08:00"
             st.session_state['schedule_generated'] = False
             st.rerun()
     
@@ -196,6 +269,12 @@ def render_dosing_schedule_generator():
             st.session_state['preset_schedule_duration'] = 14
             st.session_state['preset_schedule_route'] = "PO (Uống)"
             st.session_state['preset_schedule_start_time'] = "08:00"
+            st.session_state['schedule_drug_select'] = "Omeprazole"  # For dropdown
+            st.session_state['schedule_dose'] = "20mg"
+            st.session_state['schedule_interval'] = 24
+            st.session_state['schedule_duration'] = 14
+            st.session_state['schedule_route'] = "PO (Uống)"
+            st.session_state['schedule_start_time'] = "08:00"
             st.session_state['schedule_generated'] = False
             st.rerun()
     
@@ -334,7 +413,7 @@ def render_dosing_schedule_generator():
         st.markdown("---")
         
         # Instructions
-        st.markdown("### 📝 Hướng Dẫn:")
+        st.markdown("### 📝 Hướng dẫn:")
         st.info(f"""
         **Lưu ý quan trọng:**
         - ⏰ Dùng đúng giờ theo lịch trình

@@ -8,7 +8,7 @@ import streamlit as st
 
 def render_abg_panel(key_prefix="vent_abg"):
     """Panel nhập ABG trong ventilator page"""
-    st.markdown("### 💨 Thông Số Khí Máu (ABG)")
+    st.markdown("### 💨 Thông số Khí Máu (ABG)")
     
     col1, col2 = st.columns(2)
     

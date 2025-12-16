@@ -508,7 +508,7 @@ def render():
         - Đánh giá mức độ nặng (AG càng cao càng nặng)
         """)
     
-    with st.expander("🔢 Điều Chỉnh Theo Albumin"):
+    with st.expander("🔢 Điều chỉnh Theo Albumin"):
         st.markdown("""
         **Tại sao cần điều chỉnh?**
         

@@ -550,7 +550,7 @@ def render():
         - Immunocompromised
         """)
     
-    with st.expander("🌍 Hướng Dẫn Quốc Tế"):
+    with st.expander("🌍 Hướng dẫn Quốc Tế"):
         st.markdown("""
         ### So sánh các hướng dẫn:
         

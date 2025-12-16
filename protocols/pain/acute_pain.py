@@ -99,7 +99,7 @@ def render():
     **Thuốc Opioid:**
     
     **1. Morphine (Tiêu chuẩn):**
-    - **IV:** 2-5 mg q3-4h (Người Lớn)
+    - **IV:** 2-5 mg q3-4h (Người lớn)
     - **PO:** 10-30 mg q4h
     - **PCA:** 1-2 mg bolus, lockout 6-10 phút
     
@@ -290,7 +290,7 @@ def render_nrs_scale():
     **Ưu điểm:**
     - Dễ sử dụng
     - Nhanh
-    - Phù hợp Người Lớn
+    - Phù hợp Người lớn
     
     **Sử dụng:**
     - Hỏi: "Đau của bạn là bao nhiêu từ 0-10?"

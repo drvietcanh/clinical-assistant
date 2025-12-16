@@ -548,7 +548,7 @@ def render():
         - Suy thai cấp
         """)
     
-    with st.expander("📈 Tỷ Lệ Thành Công Theo Bishop"):
+    with st.expander("📈 Tỷ lệ Thành Công Theo Bishop"):
         st.markdown("""
         ### Success Rates:
         

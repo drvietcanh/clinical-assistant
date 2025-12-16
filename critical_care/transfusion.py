@@ -244,7 +244,7 @@ def render_prbc_calculator():
         )
     
     # Calculate
-    if st.button("📊 Tính Toán", key="prbc_calculate", type="primary"):
+    if st.button("📊 Tính toán", key="prbc_calculate", type="primary"):
         result = calculate_prbc_transfusion(weight_kg, current_hgb, target_hgb, hgb_units)
         
         if result["units_needed"] > 0:
@@ -272,7 +272,7 @@ def render_prbc_calculator():
             
             # Guidelines
             st.markdown("---")
-            st.markdown("### 📋 Hướng Dẫn")
+            st.markdown("### 📋 Hướng dẫn")
             
             if current_hgb < 7.0 if hgb_units == "g/dL" else current_hgb < 70:
                 render_warning_alert(
@@ -339,7 +339,7 @@ def render_platelet_calculator():
         )
     
     # Calculate
-    if st.button("📊 Tính Toán", key="platelet_calculate", type="primary"):
+    if st.button("📊 Tính toán", key="platelet_calculate", type="primary"):
         result = calculate_platelet_transfusion(weight_kg, current_platelet, target_platelet, platelet_type)
         
         if result["units_needed"] > 0:
@@ -437,7 +437,7 @@ def render_ffp_calculator():
         )
     
     # Calculate
-    if st.button("📊 Tính Toán", key="ffp_calculate", type="primary"):
+    if st.button("📊 Tính toán", key="ffp_calculate", type="primary"):
         result = calculate_ffp_transfusion(weight_kg, current_inr, target_inr)
         
         if result["units_needed"] > 0:
@@ -524,7 +524,7 @@ def render_massive_transfusion_calculator():
         )
     
     # Calculate
-    if st.button("📊 Tính Toán", key="mtp_calculate", type="primary"):
+    if st.button("📊 Tính toán", key="mtp_calculate", type="primary"):
         result = calculate_massive_transfusion(blood_loss_ml, protocol_type)
         
         st.success("**Kế hoạch truyền máu (Tỷ lệ 1:1:1):**")

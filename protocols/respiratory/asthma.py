@@ -51,7 +51,7 @@ def render():
         silent_chest = st.checkbox("Silent chest (không nghe thấy thở)", key="asthma_silent")
     
     with col2:
-        st.markdown("### 📊 Mức Độ Nặng")
+        st.markdown("### 📊 Mức độ Nặng")
         
         # Calculate severity
         severe_signs = 0
@@ -177,11 +177,11 @@ def render():
             """)
     
     with tabs[2]:  # Add-on therapy
-        st.markdown("#### Điều trị Bổ Sung")
+        st.markdown("#### Điều trị Bổ sung")
         
         st.success("""
         **Oxygen:**
-        - **Mục tiêu:** SpO₂ 93-95% (Người Lớn)
+        - **Mục tiêu:** SpO₂ 93-95% (Người lớn)
         - SpO₂ 94-98% (Trẻ em)
         - Nasal cannula hoặc mask
         

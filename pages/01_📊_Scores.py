@@ -106,7 +106,7 @@ elif "Huyết học" in specialty or "Đông máu" in specialty:
     hematology.render_hematology_calculator(selected_score_id)
 
 # Nephrology
-elif "Thận" in specialty or "Điện Giải" in specialty:
+elif "Thận" in specialty or "Điện giải" in specialty:
     nephrology.render_nephrology_calculator(selected_score_id)
 
 # Trauma

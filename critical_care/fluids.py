@@ -177,7 +177,7 @@ def calculate_maintenance_electrolytes(weight_kg: float) -> dict:
 def render_fluid_calculator():
     """Render fluid therapy calculator interface"""
     
-    st.markdown("## 💧 Tính Toán Dịch truyền")
+    st.markdown("## 💧 Tính toán Dịch truyền")
     st.markdown("""
     Công cụ tính toán dịch truyền và điện giải cho bệnh nhân.
     
@@ -262,14 +262,14 @@ def render_fluid_calculator():
             st.markdown("---")
             
             # Electrolyte requirements
-            st.markdown("### 🧪 Nhu Cầu Điện Giải (Hàng Ngày)")
+            st.markdown("### 🧪 Nhu Cầu Điện giải (Hàng Ngày)")
             
             metrics = [
                 {"label": "Natri (Na)", "value": f"{results['sodium_mmol']:.1f} mmol", "icon": "🧂"},
                 {"label": "Kali (K)", "value": f"{results['potassium_mmol']:.1f} mmol", "icon": "🥬"},
             ]
             
-            render_result_card("Nhu Cầu Điện Giải", metrics, color="info")
+            render_result_card("Nhu Cầu Điện giải", metrics, color="info")
             
             # Recommendations
             st.markdown("---")
@@ -292,7 +292,7 @@ def render_fluid_calculator():
     
     # ========== TAB 2: FLUID DEFICIT (HYPERNATREMIA) ==========
     with tab2:
-        st.markdown("### ⬆️ Tính Toán Thiếu Dịch (Tăng Natri Máu)")
+        st.markdown("### ⬆️ Tính toán Thiếu Dịch (Tăng Natri Máu)")
         
         col1, col2 = st.columns(2)
         
@@ -369,7 +369,7 @@ def render_fluid_calculator():
     
     # ========== TAB 3: HYPONATREMIA CORRECTION ==========
     with tab3:
-        st.markdown("### ⬇️ Điều Chỉnh Hạ Natri Máu")
+        st.markdown("### ⬇️ Điều chỉnh Hạ Natri Máu")
         
         col1, col2 = st.columns(2)
         
@@ -465,7 +465,7 @@ def render_fluid_calculator():
     
     # ========== TAB 4: ELECTROLYTES ==========
     with tab4:
-        st.markdown("### 🧪 Nhu Cầu Điện Giải Hàng Ngày")
+        st.markdown("### 🧪 Nhu Cầu Điện giải Hàng Ngày")
         
         weight_electrolytes = st.number_input(
             "Cân nặng (kg):",
@@ -489,7 +489,7 @@ def render_fluid_calculator():
                 {"label": "Chloride (Cl)", "value": f"{results['chloride_mmol']:.1f} mmol/ngày", "icon": "🧪"},
             ]
             
-            render_result_card("Nhu Cầu Điện Giải", metrics, color="info")
+            render_result_card("Nhu Cầu Điện giải", metrics, color="info")
             
             st.markdown("---")
             st.markdown("### 💡 Thành phần dung dịch")

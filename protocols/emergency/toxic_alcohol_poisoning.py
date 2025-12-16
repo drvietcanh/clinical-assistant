@@ -27,7 +27,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 1: ĐÁNH GIÁ TOAN – KHOẢNG TRỐNG ========== #
-    st.markdown("### 📊 Đánh Giá Toan Chuyển Hóa")
+    st.markdown("### 📊 Đánh giá Toan Chuyển Hóa")
 
     na = st.number_input("Na (mEq/L)", min_value=100.0, max_value=180.0, value=140.0, step=0.5)
     cl = st.number_input("Cl (mEq/L)", min_value=70.0, max_value=140.0, value=103.0, step=0.5)
@@ -81,7 +81,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 4: CHỈ ĐỊNH LỌC MÁU ========== #
-    st.markdown("### 🩸 Chỉ Định Lọc Máu (Hemodialysis)")
+    st.markdown("### 🩸 Chỉ định Lọc máu (Hemodialysis)")
     st.info(
         """
         **Chỉ định mạnh:**
@@ -95,7 +95,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 5: BICARBONATE & HỖ TRỢ ========== #
-    st.markdown("### 🛠️ Điều Trị Hỗ Trợ")
+    st.markdown("### 🛠️ Điều trị Hỗ trợ")
     st.markdown(
         """
         - **NaHCO₃:** Nếu pH <7.30 hoặc HCO₃⁻ <18; bolus 1–2 mEq/kg, sau đó truyền duy trì, mục tiêu pH >7.30.
@@ -109,7 +109,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 6: THEO DÕI ========== #
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     st.info(
         """
         - Khí máu, HCO₃⁻, lactate, anion gap mỗi 2–4 giờ.
@@ -123,7 +123,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 7: ĐỐI TƯỢNG ĐẶC BIỆT ========== #
-    st.markdown("### 👥 Đối Tượng Đặc Biệt")
+    st.markdown("### 👥 Đối Tượng Đặc biệt")
     col1, col2 = st.columns(2)
     with col1:
         st.markdown(

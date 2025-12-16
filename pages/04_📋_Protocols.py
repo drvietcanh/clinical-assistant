@@ -202,7 +202,7 @@ with st.sidebar:
             "Phác đồ:",
             [
                 "🫀 Viêm Tụy Cấp (Acute Pancreatitis)",
-                "🫀 Suy Gan Cấp (Acute Liver Failure)",
+                "🫀 Suy gan Cấp (Acute Liver Failure)",
                 "🩸 IBD Exacerbation (Acute Exacerbation of IBD)"
             ],
             label_visibility="collapsed"
@@ -212,7 +212,7 @@ with st.sidebar:
             "Phác đồ:",
             [
                 "🧠 Quản lý Delirium (Delirium Management)",
-                "💤 An Thần & Giảm Đau ICU (ICU Sedation & Analgesia)",
+                "💤 An thần & Giảm đau ICU (ICU Sedation & Analgesia)",
                 "🫁 ARDS Management",
                 "🫁 Ventilator Weaning",
                 "🩸 Stress Ulcer Prophylaxis"
@@ -378,13 +378,13 @@ elif "HHS" in protocol or "Hyperosmolar" in protocol or "hyperosmolar" in protoc
 elif "Pancreatitis" in protocol or "pancreatitis" in protocol.lower() or "Tụy" in protocol:
     render_acute_pancreatitis()
 
-elif "Liver Failure" in protocol or "liver failure" in protocol.lower() or "Suy Gan" in protocol:
+elif "Liver Failure" in protocol or "liver failure" in protocol.lower() or "Suy gan" in protocol:
     render_acute_liver_failure()
 
 elif "Delirium" in protocol or "delirium" in protocol.lower() or "Quản lý Delirium" in protocol:
     render_delirium()
 
-elif "Sedation" in protocol or "sedation" in protocol.lower() or "An Thần" in protocol or "Giảm Đau ICU" in protocol:
+elif "Sedation" in protocol or "sedation" in protocol.lower() or "An thần" in protocol or "Giảm đau ICU" in protocol:
     render_sedation()
 
 elif "Transfusion" in protocol or "transfusion" in protocol.lower() or "Truyền Máu" in protocol:

@@ -398,7 +398,7 @@ def render_plateau_pressure_calculator():
     
     st.markdown("""
     **Áp lực cao nguyên:** Áp lực trong phổi khi giữ hơi thở cuối thì hít vào (tạm dừng cuối thì hít vào).
-    **Mục Tiêu:** < 30 cmH2O (lung-protective ventilation)
+    **Mục tiêu:** < 30 cmH2O (lung-protective ventilation)
     """)
     
     st.markdown("---")
@@ -573,7 +573,7 @@ def render_weaning_calculator():
 def render_ventilator_calculator():
     """Main function to render ventilator management tools"""
     
-    st.markdown("## 🫁 Công Cụ Quản Lý Máy Thở")
+    st.markdown("## 🫁 Công Cụ Quản lý Máy Thở")
     st.markdown("""
     Công Cụ Quản Lý Máy Thở cho ICU:
     - Cân nặng lý tưởng (IBW) - Tính trọng lượng lý tưởng

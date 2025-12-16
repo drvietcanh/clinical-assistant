@@ -305,7 +305,7 @@ ALGORITHMS = {
             "Bắt đầu kháng sinh NGAY LẬP TỨC (trong vòng 30 phút)",
             "Lấy CSF TRƯỚC khi dùng kháng sinh",
             "Liều cao để đảm bảo thấm vào dịch não tủy",
-            "Ceftriaxone: 2g mỗi 12 giờ (Người Lớn)",
+            "Ceftriaxone: 2g mỗi 12 giờ (Người lớn)",
             "Vancomycin: Trough target 15-20 mg/L",
             "Thời gian điều trị: 7-21 ngày tùy tác nhân"
         ]
@@ -584,7 +584,7 @@ def render_algorithms_page():
         text-align: center;
         box-shadow: 0 8px 24px rgba(102,126,234,0.25);
     '>
-        <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: 700;'>🔄 Phác Đồ Điều Trị</h1>
+        <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: 700;'>🔄 Phác Đồ Điều trị</h1>
         <p style='margin: 12px 0 0 0; color: rgba(255,255,255,0.95); font-size: 1.15em;'>
             Decision trees và flowcharts hỗ trợ quyết định lâm sàng
         </p>

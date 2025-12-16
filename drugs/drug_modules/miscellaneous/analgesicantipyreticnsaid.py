@@ -132,7 +132,7 @@ ANALGESIC/ANTIPYRETIC/NSAID_DRUGS = {
         ], 'antidote':
         'Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.',
         'treatment': [
-        'Đánh giá nguy cơ: Liều >100mg/kg (Trẻ em) hoặc >7.5g (Người Lớn) = nguy cơ cao'
+        'Đánh giá nguy cơ: Liều >100mg/kg (Trẻ em) hoặc >7.5g (Người lớn) = nguy cơ cao'
         ,
         'Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)'
         , 'Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2',

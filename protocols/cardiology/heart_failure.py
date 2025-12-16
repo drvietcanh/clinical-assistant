@@ -53,7 +53,7 @@ def render():
         spo2 = st.number_input("SpO₂ (%)", 70, 100, 95, 1, format="%d", key="hf_spo2")
     
     with col2:
-        st.markdown("### 📊 Phân Loại")
+        st.markdown("### 📊 Phân loại")
         
         # Calculate severity
         congestion = sum([rales, edema, jvd, orthopnea, pnd])
@@ -234,7 +234,7 @@ def render():
             """)
     
     with tabs[3]:  # Oxygen/NIV
-        st.markdown("#### Hỗ Trợ Hô Hấp")
+        st.markdown("#### Hỗ trợ Hô Hấp")
         
         st.success("""
         **Oxygen Therapy:**

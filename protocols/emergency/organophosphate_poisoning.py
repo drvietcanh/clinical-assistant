@@ -27,7 +27,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 1: CHẨN ĐOÁN & PHÂN TẦNG ========== #
-    st.markdown("### 📋 Chẩn Đoán Nhanh")
+    st.markdown("### 📋 Chẩn đoán Nhanh")
     st.info(
         """
         **Toxidrome cholinergic (DUMBELS/SLUDGE + nicotinic):**
@@ -51,7 +51,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 2: XỬ TRÍ BAN ĐẦU ========== #
-    st.markdown("### 🏥 Xử Trí Ban Đầu (ABCD + Giải Độc)")
+    st.markdown("### 🏥 Xử trí Ban Đầu (ABCD + Giải Độc)")
     st.warning(
         """
         1) **Đảm bảo an toàn nhân viên**: PPE, tháo bỏ quần áo nhiễm độc, rửa da bằng xà phòng/nước.
@@ -115,7 +115,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 5: HỖ TRỢ & ĐIỀU TRỊ KHÁC ========== #
-    st.markdown("### 🛠️ Hỗ Trợ Khác")
+    st.markdown("### 🛠️ Hỗ trợ Khác")
     st.markdown(
         """
         - **Khử nhiễm:** Cởi bỏ quần áo, rửa da 15 phút; tránh lây nhiễm chéo.
@@ -130,7 +130,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 6: THEO DÕI & TIÊU CHÍ NGỪNG ATROPINE ========== #
-    st.markdown("### 📈 Theo Dõi & Ngừng Thuốc")
+    st.markdown("### 📈 Theo dõi & Ngừng Thuốc")
     st.info(
         """
         - Giảm truyền atropine khi hết tăng tiết ≥12–24 giờ, mạch/HA ổn định.
@@ -143,7 +143,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 7: ĐỐI TƯỢNG ĐẶC BIỆT ========== #
-    st.markdown("### 👥 Đối Tượng Đặc Biệt")
+    st.markdown("### 👥 Đối Tượng Đặc biệt")
     col1, col2 = st.columns(2)
     with col1:
         st.markdown(

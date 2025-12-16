@@ -64,14 +64,14 @@ def render():
     st.markdown("### 💊 Điều trị")
     
     treatment_tabs = st.tabs([
-        "💧 Truyền Dịch",
+        "💧 Truyền dịch",
         "💉 Insulin",
-        "⚡ Điện Giải",
-        "🩸 Phòng Ngừa Huyết Khối"
+        "⚡ Điện giải",
+        "🩸 Phòng ngừa Huyết Khối"
     ])
     
     with treatment_tabs[0]:
-        st.markdown("#### 💧 Truyền Dịch (Fluid Resuscitation)")
+        st.markdown("#### 💧 Truyền dịch (Fluid Resuscitation)")
         
         st.error("""
         **⚠️ ƯU TIÊN HÀNG ĐẦU - Truyền dịch TRƯỚC insulin**
@@ -114,7 +114,7 @@ def render():
                 key="hhs_current_na"
             )
             
-            if st.button("Tính Toán", type="primary", key="calc_hhs_fluid"):
+            if st.button("Tính toán", type="primary", key="calc_hhs_fluid"):
                 # Estimate fluid deficit (simplified)
                 fluid_deficit_l = weight_kg * 0.1  # 10% dehydration
                 
@@ -198,7 +198,7 @@ def render():
             """)
     
     with treatment_tabs[2]:
-        st.markdown("#### ⚡ Điều Chỉnh Điện Giải")
+        st.markdown("#### ⚡ Điều chỉnh Điện giải")
         
         st.info("""
         **Kali (K⁺):**
@@ -219,7 +219,7 @@ def render():
         """)
     
     with treatment_tabs[3]:
-        st.markdown("#### 🩸 Phòng Ngừa Huyết Khối")
+        st.markdown("#### 🩸 Phòng ngừa Huyết Khối")
         
         st.error("""
         **⚠️ NGUY CƠ HUYẾT KHỐI RẤT CAO**
@@ -456,11 +456,11 @@ def render():
     - Nguy cơ: Rất cao (tăng đông máu)
     - Phòng ngừa: Heparin prophylaxis
     
-    **3. Suy Thận:**
+    **3. Suy thận:**
     - Nguy cơ: Thiếu dịch nặng
     - Phòng ngừa: Truyền dịch đủ
     
-    **4. Rối Loạn Điện Giải:**
+    **4. Rối Loạn Điện giải:**
     - Nguy cơ: Kali, phosphorus, magnesium
     - Phòng ngừa: Bổ sung sớm
     """)
@@ -495,14 +495,14 @@ def render():
     checklist_items = [
         "✅ Chẩn đoán (Glucose >600, Osmolality >320, pH >7.30)",
         "✅ ABC: Đường thở, Hô hấp, Tuần hoàn",
-        "✅ Truyền Dịch ngay (0.9% NS 1-2 L giờ đầu)",
+        "✅ Truyền dịch ngay (0.9% NS 1-2 L giờ đầu)",
         "✅ Insulin 0.05-0.1 units/kg/h (sau khi đã truyền dịch)",
-        "✅ Bổ Sung Kali ngay",
+        "✅ Bổ sung Kali ngay",
         "✅ Heparin Prophylaxis (5000 units SC q8-12h)",
         "✅ Theo dõi Glucose mỗi 1-2 giờ",
         "✅ Theo dõi Osmolality mỗi 4-6 giờ",
-        "✅ Theo dõi Điện Giải mỗi 4-6 giờ",
-        "✅ Tìm Và Điều trị Nguyên Nhân (nhiễm trùng, thuốc, v.v.)"
+        "✅ Theo dõi Điện giải mỗi 4-6 giờ",
+        "✅ Tìm Và Điều trị Nguyên nhân (nhiễm trùng, thuốc, v.v.)"
     ]
     
     for item in checklist_items:

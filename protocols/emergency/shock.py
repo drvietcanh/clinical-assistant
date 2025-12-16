@@ -27,7 +27,7 @@ def render():
     # Classification tabs
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "🦠 Nhiễm Trùng",
-        "💧 Giảm Thể Tích",
+        "💧 Giảm Thể tích",
         "❤️ Tim",
         "🌊 Phân Bố",
         "🚫 Tắc Nghẽn"
@@ -103,7 +103,7 @@ def render():
         """)
     
     with tab2:
-        st.markdown("#### 💧 Sốc Giảm Thể Tích (Hypovolemic Shock)")
+        st.markdown("#### 💧 Sốc Giảm Thể tích (Hypovolemic Shock)")
         
         st.error("""
         **Chẩn đoán:**
@@ -112,7 +112,7 @@ def render():
         - Hạ huyết áp, nhịp tim nhanh
         - Lượng nước tiểu giảm
         
-        **Nguyên Nhân:**
+        **Nguyên nhân:**
         - Chảy máu (chấn thương, xuất huyết tiêu hóa, v.v.)
         - Mất dịch (bỏng, tiêu chảy, nôn, đái tháo đường)
         """)
@@ -171,7 +171,7 @@ def render():
         - Hạ huyết áp mặc dù thể tích đủ
         - Cold extremities
         
-        **Nguyên Nhân:**
+        **Nguyên nhân:**
         - Nhồi máu cơ tim cấp
         - Rối loạn nhịp tim
         - Bệnh cơ tim, van tim
@@ -244,7 +244,7 @@ def render():
         - CO có thể bình thường hoặc tăng
         - Warm extremities (trừ sốc nhiễm trùng nặng)
         
-        **Nguyên Nhân:**
+        **Nguyên nhân:**
         - Sốc nhiễm trùng (phổ biến nhất)
         - Sốc phản vệ
         - Sốc thần kinh
@@ -280,7 +280,7 @@ def render():
         - Tắc nghẽn dòng máu về hoặc đi từ tim
         - CO giảm do cơ học
         
-        **Nguyên Nhân:**
+        **Nguyên nhân:**
         - Thuyên tắc phổi lớn (massive PE)
         - Chèn ép tim (tamponade)
         - Tràn khí màng phổi áp lực (tension pneumothorax)

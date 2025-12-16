@@ -59,7 +59,7 @@ def render_aki_stage1():
     
     st.warning("## ⚠️ AKI STAGE 1 PROTOCOL")
     
-    st.markdown("### 1️⃣ Xác Định Nguyên Nhân")
+    st.markdown("### 1️⃣ Xác Định Nguyên nhân")
     
     col1, col2 = st.columns(2)
     
@@ -98,7 +98,7 @@ def render_aki_stage1():
         """)
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Điều trị Nguyên Nhân")
+    st.markdown("### 2️⃣ Điều trị Nguyên nhân")
     
     st.success("""
     **Prerenal AKI:**
@@ -185,7 +185,7 @@ def render_aki_stage2():
     """)
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Điều trị Nguyên Nhân (Tương Tự Stage 1)")
+    st.markdown("### 2️⃣ Điều trị Nguyên nhân (Tương Tự Stage 1)")
     
     st.info("""
     **Nhưng tích cực hơn:**
@@ -684,7 +684,7 @@ def render_aki_stage3():
         col1, col2 = st.columns([2, 1])
         
         with col1:
-            st.markdown("### 📊 Khuyến Nghị")
+            st.markdown("### 📊 Khuyến nghị")
             st.success(f"### ✅ **{recommended_modality}**")
             st.info(modality_reason)
             

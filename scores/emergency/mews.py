@@ -298,7 +298,7 @@ def render():
         
         # Use render_score_breakdown for component scores
         render_score_breakdown(
-            title="Điểm Từng Thông Số",
+            title="Điểm Từng Thông số",
             subscores={
                 "Huyết áp tâm thu": result['sbp_score'],
                 "Nhịp tim": result['hr_score'],

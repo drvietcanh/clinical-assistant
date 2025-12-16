@@ -203,7 +203,7 @@ def render_theophylline_tdm():
     st.markdown("---")
     
     # Tab selection
-    tab1, tab2, tab3 = st.tabs(["🧮 Tính liều", "📊 Điều Chỉnh Liều", "⏱️ Tính Half-life"])
+    tab1, tab2, tab3 = st.tabs(["🧮 Tính liều", "📊 Điều chỉnh Liều", "⏱️ Tính Half-life"])
     
     with tab1:
         st.markdown("### 📋 Thông số bệnh nhân")
@@ -304,7 +304,7 @@ def render_theophylline_tdm():
             """)
     
     with tab2:
-        st.markdown("### 📊 Điều Chỉnh Liều Theo Nồng Độ")
+        st.markdown("### 📊 Điều chỉnh Liều Theo Nồng Độ")
         
         col1, col2, col3 = st.columns(3)
         
@@ -370,7 +370,7 @@ def render_theophylline_tdm():
             if "error" in result:
                 st.error(result["error"])
             else:
-                st.markdown("### 💊 Liều Điều Chỉnh")
+                st.markdown("### 💊 Liều Điều chỉnh")
                 
                 col1, col2 = st.columns(2)
                 
@@ -406,7 +406,7 @@ def render_theophylline_tdm():
                 st.success(f"""
                 **💡 Khuyến nghị:**
                 
-                **Điều Chỉnh:** {result['current_dose_mg']:.0f} → {result['new_dose_mg']:.0f} mg/ngày
+                **Điều chỉnh:** {result['current_dose_mg']:.0f} → {result['new_dose_mg']:.0f} mg/ngày
                 
                 **Lưu ý:**
                 - Theophylline có kinetics tuyến tính (dễ điều chỉnh hơn Phenytoin)

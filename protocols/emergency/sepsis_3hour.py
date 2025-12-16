@@ -103,7 +103,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("#### **Giờ 1-3: Kháng Sinh**")
+        st.markdown("#### **Giờ 1-3: Kháng sinh**")
         st.success("""
         **Đã cho kháng sinh trong 1 giờ đầu**
         
@@ -215,7 +215,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: FLUID RESUSCITATION ==========
-    st.markdown("### 💧 Truyền Dịch (Fluid Resuscitation)")
+    st.markdown("### 💧 Truyền dịch (Fluid Resuscitation)")
     
     st.markdown("**Nguyên tắc:** 30 mL/kg crystalloid trong 3 giờ đầu")
     
@@ -295,7 +295,7 @@ def render():
     # ========== SECTION 5: VASOPRESSOR MANAGEMENT ==========
     st.markdown("### ⚠️ Quản lý Vasopressor")
     
-    st.markdown("**Chỉ định:** MAP <65 mmHg sau Truyền Dịch đầy đủ")
+    st.markdown("**Chỉ định:** MAP <65 mmHg sau Truyền dịch đầy đủ")
     
     st.error("""
     **1st line: Norepinephrine**
@@ -409,7 +409,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: RESUSCITATION GOALS ==========
-    st.markdown("### 🎯 Mục tiêu Hồi Sức (Resuscitation Goals)")
+    st.markdown("### 🎯 Mục tiêu Hồi sức (Resuscitation Goals)")
     
     st.info("""
     **Mục tiêu trong 3 giờ đầu:**
@@ -434,12 +434,12 @@ def render():
     st.markdown("### ⚠️ Các trường hợp đặc biệt")
     
     with st.expander("🔍 Xem các trường hợp đặc biệt", expanded=False):
-        st.markdown("""#### **Suy Thận:**
+        st.markdown("""#### **Suy thận:**
         - Điều chỉnh liều kháng sinh theo CrCl
         - Thận trọng với truyền dịch (nguy cơ quá tải)
         - Xem xét lọc máu sớm nếu cần
         
-        #### **Suy Gan:**
+        #### **Suy gan:**
         - Tránh kháng sinh độc gan
         - Thận trọng với truyền dịch (nguy cơ cổ trướng)
         - Xem xét albumin nếu giảm albumin nặng

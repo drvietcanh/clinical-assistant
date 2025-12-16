@@ -406,7 +406,7 @@ def render_phenytoin_tdm():
             """)
     
     with tab3:
-        st.markdown("### 📊 Điều Chỉnh Liều Theo Nồng Độ")
+        st.markdown("### 📊 Điều chỉnh Liều Theo Nồng Độ")
         
         col1, col2, col3 = st.columns(3)
         
@@ -465,7 +465,7 @@ def render_phenytoin_tdm():
             if "error" in result:
                 st.error(result["error"])
             else:
-                st.markdown("### 💊 Liều Điều Chỉnh")
+                st.markdown("### 💊 Liều Điều chỉnh")
                 
                 col1, col2 = st.columns(2)
                 
@@ -503,7 +503,7 @@ def render_phenytoin_tdm():
                 st.success(f"""
                 **💡 Khuyến nghị:**
                 
-                **Điều Chỉnh:** {result['current_dose_mg']:.0f} → {result['new_dose_mg']:.0f} mg/ngày
+                **Điều chỉnh:** {result['current_dose_mg']:.0f} → {result['new_dose_mg']:.0f} mg/ngày
                 
                 **Lưu ý:**
                 - Phenytoin có **kinetics không tuyến tính** (Michaelis-Menten)

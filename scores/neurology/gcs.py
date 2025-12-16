@@ -131,7 +131,7 @@ def render():
             
             # Use render_score_breakdown for component scores
             render_score_breakdown(
-                title="Điểm Từng Thành Phần",
+                title="Điểm Từng Thành phần",
                 subscores={
                     "👁️ Mở mắt (E)": eye_score,
                     "🗣️ Lời nói (V)": verbal_score,

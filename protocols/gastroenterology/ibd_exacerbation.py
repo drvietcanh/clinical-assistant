@@ -33,7 +33,7 @@ def render():
     st.markdown("---")
     
     # Assessment
-    st.markdown("### 1️⃣ Đánh giá Mức Độ Nặng")
+    st.markdown("### 1️⃣ Đánh giá Mức độ Nặng")
     
     col1, col2 = st.columns(2)
     

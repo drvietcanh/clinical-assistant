@@ -56,7 +56,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🔍 Phân Loại Delirium")
+    st.markdown("### 🔍 Phân loại Delirium")
     
     delirium_type = st.radio(
         "**Loại delirium:**",
@@ -75,7 +75,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🔍 Tìm Nguyên Nhân (PIMED)")
+    st.markdown("### 🔍 Tìm Nguyên nhân (PIMED)")
     
     st.warning("""
     **PIMED - Các Nguyên nhân thường gặp:**
@@ -133,7 +133,7 @@ def render():
     
     checklist_items = [
         "✅ Đánh giá CAM-ICU hàng ngày",
-        "✅ Tìm Nguyên Nhân (PIMED)",
+        "✅ Tìm Nguyên nhân (PIMED)",
         "✅ Điều trị nguyên nhân",
         "✅ Non-pharmacologic management (ABCDE bundle)",
         "✅ Đánh giá đau thường xuyên",
@@ -218,7 +218,7 @@ def render():
 
 def render_hyperactive_delirium():
     """Hyperactive delirium protocol"""
-    st.error("## 🔴 Hyperactive Delirium (Kích Động)")
+    st.error("## 🔴 Hyperactive Delirium (Kích động)")
     
     st.markdown("""
     **Triệu chứng:**
@@ -273,7 +273,7 @@ def render_hypoactive_delirium():
        - Cân nhắc quetiapine hoặc olanzapine (liều thấp)
     
     3. **Quan trọng:**
-       - Tìm Nguyên Nhân (thường là nhiễm trùng, rối loạn chuyển hóa)
+       - Tìm Nguyên nhân (thường là nhiễm trùng, rối loạn chuyển hóa)
        - Điều trị nguyên nhân
     """)
 

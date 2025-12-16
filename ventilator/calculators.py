@@ -64,7 +64,7 @@ def render_ardsnet():
                 st.markdown("### 📊 Kết quả")
                 
                 st.metric("PBW", f"{pbw} kg")
-                st.metric("Vt Mục Tiêu", f"{vt_target:.0f} mL")
+                st.metric("Vt Mục tiêu", f"{vt_target:.0f} mL")
                 
                 st.info(f"""
                 **Khoảng an toàn:**
@@ -115,7 +115,7 @@ def render_ardsnet():
             - **PEEP/FiO2:** Theo bảng PEEP/FiO2
             - **I:E:** 1:1 đến 1:3
             
-            **Mục Tiêu:**
+            **Mục tiêu:**
             - **Plateau Pressure:** ≤30 cmH2O
             - **pH:** 7.30-7.45
             - **SpO2:** 88-95%
@@ -161,7 +161,7 @@ def render_ardsnet():
 def render_initial_settings():
     """Initial Ventilator Settings Calculator"""
     st.subheader("⚙️ Cài Đặt Ban Đầu Máy Thở")
-    st.caption("Thông Số Khởi Đầu Theo Bệnh Lý")
+    st.caption("Thông số Khởi Đầu Theo Bệnh Lý")
     
     st.info("""
     **Công cụ tính toán thông số máy thở ban đầu dựa trên:**
@@ -244,7 +244,7 @@ def render_initial_settings():
     st.markdown("---")
     
     # Calculate settings based on condition
-    if st.button("🧮 Tính Thông Số Máy Thở", type="primary", key="initial_calc"):
+    if st.button("🧮 Tính Thông số Máy Thở", type="primary", key="initial_calc"):
         
         # Initialize settings dictionary
         settings = {}
@@ -415,7 +415,7 @@ def render_initial_settings():
         
         # Display results
         st.markdown("---")
-        st.markdown("### 📊 Thông Số Đề Xuất")
+        st.markdown("### 📊 Thông số Đề Xuất")
         
         col1, col2, col3 = st.columns(3)
         
@@ -447,7 +447,7 @@ def render_initial_settings():
         col1, col2 = st.columns(2)
         
         with col1:
-            st.markdown("#### 🎯 Mục Tiêu")
+            st.markdown("#### 🎯 Mục tiêu")
             st.success(f"""
             **Oxy hóa:**
             - SpO2: {settings['target_spo2']}

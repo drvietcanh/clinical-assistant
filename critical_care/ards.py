@@ -129,7 +129,7 @@ def render_ardsnet_calculator():
     st.markdown("---")
     
     # ABG/SpO2
-    st.markdown("### 🩺 Thông Số Oxy Hóa")
+    st.markdown("### 🩺 Thông số Oxy Hóa")
     
     col1, col2 = st.columns(2)
     
@@ -180,9 +180,9 @@ def render_ardsnet_calculator():
             st.markdown("### 📊 Kết quả")
             
             # ARDS Classification
-            st.markdown("#### 🏷️ Phân Loại ARDS")
+            st.markdown("#### 🏷️ Phân loại ARDS")
             render_result_box(
-                "Mức Độ ARDS",
+                "Mức độ ARDS",
                 ards_class["severity"],
                 subtitle=f"Tỷ số P/F: {pf_ratio:.0f} mmHg ({ards_class['pf_range']})",
                 color=ards_class["color"],
@@ -198,7 +198,7 @@ def render_ardsnet_calculator():
             
             with col1:
                 render_result_box(
-                    "Thể Tích Khí Lưu Thông",
+                    "Thể tích Khí Lưu Thông",
                     f"{settings['vt_ml']:.0f} ml",
                     subtitle=f"{settings['vt_liters']:.2f} L (6 ml/kg IBW)",
                     color="primary",
@@ -231,7 +231,7 @@ def render_ardsnet_calculator():
             
             # Tidal volume
             recommendations.append({
-                "title": "Thể Tích Khí Lưu Thông",
+                "title": "Thể tích Khí Lưu Thông",
                 "value": f"{settings['vt_ml']:.0f} ml",
                 "description": f"6 ml/kg IBW (IBW = {ibw:.1f} kg)"
             })
@@ -399,7 +399,7 @@ def render_prone_positioning_guide():
     
     st.markdown("---")
     
-    st.markdown("### ⚠️ Theo Dõi")
+    st.markdown("### ⚠️ Theo dõi")
     
     st.warning("""
     **Theo dõi trong khi nằm sấp:**

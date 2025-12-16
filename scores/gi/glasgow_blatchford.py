@@ -746,7 +746,7 @@ def render():
         - Rockall dự đoán tử vong tốt hơn
         """)
     
-    with st.expander("🩸 Xuất Huyết Tiêu Hóa Trên - Nguyên nhân"):
+    with st.expander("🩸 Xuất huyết Tiêu Hóa Trên - Nguyên nhân"):
         st.markdown("""
         **Nguyên nhân thường gặp UGIB:**
         

@@ -174,7 +174,7 @@ def render_history_panel():
     """Hiển thị panel quản lý lịch sử"""
     init_history_state()
     
-    st.markdown("### 📜 Lịch Sử Thông Số")
+    st.markdown("### 📜 Lịch Sử Thông số")
     
     history = get_history()
     
@@ -247,7 +247,7 @@ def render_history_panel():
                 
                 # Hiển thị thay đổi
                 if comparison['vent_changes']:
-                    st.markdown("**⚙️ Thay Đổi Thông Số Máy Thở:**")
+                    st.markdown("**⚙️ Thay Đổi Thông số Máy Thở:**")
                     for key, change in comparison['vent_changes'].items():
                         delta = change.get('delta')
                         delta_str = f" ({delta:+.1f})" if delta is not None else ""
@@ -261,7 +261,7 @@ def render_history_panel():
                         st.write(f"- **{key}:** {change['before']} → {change['after']}{delta_str}")
                 
                 if comparison['calculation_changes']:
-                    st.markdown("**📊 Thay Đổi Tính Toán:**")
+                    st.markdown("**📊 Thay Đổi Tính toán:**")
                     for key, change in comparison['calculation_changes'].items():
                         delta = change.get('delta')
                         delta_str = f" ({delta:+.1f})" if delta is not None else ""

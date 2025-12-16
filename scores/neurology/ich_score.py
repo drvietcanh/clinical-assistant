@@ -165,7 +165,7 @@ def render():
         
         # Use render_score_breakdown for component scores
         render_score_breakdown(
-            title="Điểm Từng Thành Phần",
+            title="Điểm Từng Thành phần",
             subscores={
                 "GCS": gcs_score,
                 "Thể tích ICH": volume_score,

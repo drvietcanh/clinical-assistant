@@ -256,7 +256,7 @@ def render_history_ui(calculator_id: Optional[str] = None, show_actions: bool = 
         st.info("📝 Chưa có lịch sử tính toán. Thực hiện tính toán để lưu vào lịch sử.")
         return
     
-    st.subheader(f"📊 Lịch Sử Tính Toán ({len(history)}/{st.session_state.history_max_size})")
+    st.subheader(f"📊 Lịch Sử Tính toán ({len(history)}/{st.session_state.history_max_size})")
     
     # Search and filter
     col1, col2 = st.columns([3, 1])

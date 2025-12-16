@@ -35,7 +35,7 @@ def render_interaction_checker():
         text-align: center;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     '>
-        <h1 style='margin: 0; color: white; font-size: 2.2em;'>🔍 Kiểm Tra Tương tác Thuốc</h1>
+        <h1 style='margin: 0; color: white; font-size: 2.2em;'>🔍 Kiểm tra Tương tác Thuốc</h1>
         <p style='margin: 10px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1.1em;'>
             Phát hiện tương tác thuốc-thuốc với mức độ nghiêm trọng và khuyến nghị xử trí • An toàn cho bệnh nhân
         </p>
@@ -163,7 +163,7 @@ def render_interaction_checker():
         st.markdown("---")
     
     # Check button
-    if st.button("🔍 Kiểm Tra Tương tác", type="primary", use_container_width=True):
+    if st.button("🔍 Kiểm tra Tương tác", type="primary", use_container_width=True):
         if len(drug_list) < 2:
             render_error_alert(
                 "Vui lòng nhập ít nhất 2 thuốc để kiểm tra tương tác",
@@ -194,7 +194,7 @@ def render_interaction_checker():
     # Display results
     if 'interactions' in st.session_state and st.session_state['interactions']:
         st.markdown("---")
-        st.markdown("### 📋 Kết quả Kiểm Tra")
+        st.markdown("### 📋 Kết quả Kiểm tra")
         
         interactions = st.session_state['interactions']
         checked_drugs = st.session_state.get('checked_drugs', [])

@@ -31,7 +31,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: RISK ASSESSMENT ==========
-    st.markdown("### 📊 Đánh Giá Nguy Cơ")
+    st.markdown("### 📊 Đánh giá Nguy cơ")
     
     col1, col2 = st.columns(2)
     
@@ -140,7 +140,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: CLINICAL PRESENTATION ==========
-    st.markdown("### 🔍 Triệu Chứng Lâm Sàng")
+    st.markdown("### 🔍 Triệu chứng Lâm sàng")
     
     st.markdown("""
     **Giai đoạn ngộ độc:**
@@ -168,7 +168,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: TREATMENT PROTOCOL ==========
-    st.markdown("### 💊 Phác Đồ Điều Trị")
+    st.markdown("### 💊 Phác Đồ Điều trị")
     
     treatment_indication = st.radio(
         "**Chỉ định điều trị:**",
@@ -211,7 +211,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: SPECIAL CONSIDERATIONS ==========
-    st.markdown("### 👥 Đặc Biệt")
+    st.markdown("### 👥 Đặc biệt")
     
     col1, col2 = st.columns(2)
     
@@ -244,7 +244,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     st.markdown("""
     **Trong quá trình điều trị NAC:**
@@ -288,7 +288,7 @@ def render_nac_protocol(time_since_ingestion: float):
     st.markdown("---")
     
     # IV Protocol
-    st.markdown("### 📍 Đường Tĩnh Mạch (IV) - Phổ Biến Nhất")
+    st.markdown("### 📍 Đường Tĩnh mạch (IV) - Phổ Biến Nhất")
     
     st.info("""
     **Phác đồ 21 giờ (FDA):**
@@ -374,7 +374,7 @@ def render_nac_protocol(time_since_ingestion: float):
     st.markdown("---")
     
     # Timing
-    st.markdown("### ⏰ Thời Điểm Điều Trị")
+    st.markdown("### ⏰ Thời Điểm Điều trị")
     
     if time_since_ingestion < 8:
         st.success(f"""

@@ -503,7 +503,7 @@ def render():
             
             # Use render_score_breakdown for component scores
             render_score_breakdown(
-                title="Điểm Từng Thông Số",
+                title="Điểm Từng Thông số",
                 subscores={
                     "Nhịp thở": result['subscores']['respiration'],
                     "SpO₂": result['subscores']['oxygen_saturation'],

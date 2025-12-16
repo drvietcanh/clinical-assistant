@@ -82,7 +82,7 @@ APP_CONFIG = {
         ),
         "labs": ModuleInfo(
             id="labs",
-            title="Labs & Calculators",
+            title="Xét nghiệm & Calculators",
             icon="🔬",
             page_path="pages/05_🔬_Labs_and_Calculators.py",
             description="9 panels + Calculators, Integrated workflow",

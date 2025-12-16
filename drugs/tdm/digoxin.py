@@ -385,7 +385,7 @@ def render_digoxin_tdm():
             # Adjustment guide
             if interpretation['status'] == "subtherapeutic":
                 st.markdown("---")
-                st.markdown("#### 🔼 Hướng Dẫn Tăng Liều:")
+                st.markdown("#### 🔼 Hướng dẫn Tăng Liều:")
                 
                 current_dose_mcg = st.number_input(
                     "Liều hiện tại (mcg/ngày)",
@@ -446,7 +446,7 @@ def render_digoxin_tdm():
             
             elif interpretation['status'] == "supratherapeutic":
                 st.markdown("---")
-                st.markdown("#### 🔽 Hướng Dẫn Giảm Liều:")
+                st.markdown("#### 🔽 Hướng dẫn Giảm Liều:")
                 
                 current_dose_mcg = st.number_input(
                     "Liều hiện tại (mcg/ngày)",

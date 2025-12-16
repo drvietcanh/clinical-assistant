@@ -142,14 +142,14 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: RECURRENT C. DIFF ==========
-    st.markdown("### 🔄 Điều trị Tái Phát (Recurrent C. diff)")
+    st.markdown("### 🔄 Điều trị Tái phát (Recurrent C. diff)")
     
     st.markdown("**Định Nghĩa:** Tái phát trong vòng 8 tuần sau khi ngừng điều trị")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### **Tái Phát Lần 1 (First Recurrence)**")
+        st.markdown("#### **Tái phát Lần 1 (First Recurrence)**")
         st.warning("""
         **Lựa chọn 1 (Ưu tiên):**
         - **Fidaxomicin 200mg PO BID x 10 ngày**
@@ -167,7 +167,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("#### **Tái Phát Lần 2 Trở Đi (Multiple Recurrences)**")
+        st.markdown("#### **Tái phát Lần 2 Trở Đi (Multiple Recurrences)**")
         st.error("""
         **Lựa chọn 1 (Ưu tiên):**
         - **Fidaxomicin 200mg PO BID x 10 ngày**
@@ -251,12 +251,12 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: SUPPORTIVE CARE ==========
-    st.markdown("### 🏥 Chăm Sóc Hỗ Trợ")
+    st.markdown("### 🏥 Chăm Sóc Hỗ trợ")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### **Điều Chỉnh Kháng Sinh:**")
+        st.markdown("#### **Điều chỉnh Kháng sinh:**")
         st.warning("""
         - **Ngừng kháng sinh gây bệnh** nếu có thể
         - Nếu phải tiếp tục kháng sinh:
@@ -264,7 +264,7 @@ def render():
           - Cân nhắc dùng probiotic (Lactobacillus, Saccharomyces)
         """)
         
-        st.markdown("#### **Bù Dịch Và Điện Giải:**")
+        st.markdown("#### **Bù dịch Và Điện giải:**")
         st.info("""
         - Bù dịch qua đường uống hoặc IV
         - Theo dõi điện giải (Na, K, Cl)
@@ -308,12 +308,12 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: PREVENTION ==========
-    st.markdown("### 🛡️ Phòng Ngừa")
+    st.markdown("### 🛡️ Phòng ngừa")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### **Phòng Ngừa Ban Đầu:**")
+        st.markdown("#### **Phòng ngừa ban đầu:**")
         st.success("""
         - **Sử dụng kháng sinh hợp lý:**
           - Tránh kháng sinh phổ rộng không cần thiết
@@ -326,7 +326,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("#### **Phòng Ngừa Tái Phát:**")
+        st.markdown("#### **Phòng ngừa tái phát:**")
         st.warning("""
         - **Tránh kháng sinh không cần thiết** trong 8 tuần sau điều trị
         
@@ -343,7 +343,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 9: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Dân Số Đặc Biệt")
+    st.markdown("### 👥 Dân số Đặc biệt")
     
     with st.expander("🔍 Xem hướng dẫn cho dân số đặc biệt", expanded=False):
         st.markdown("#### **Phụ nữ có thai:**")
@@ -356,7 +356,7 @@ def render():
         
         st.markdown("---")
         
-        st.markdown("#### **Suy Thận:**")
+        st.markdown("#### **Suy thận:**")
         st.info("""
         - **Vancomycin:** Không hấp thu qua đường tiêu hóa, an toàn cho suy thận
         - **Fidaxomicin:** Không cần điều chỉnh liều
@@ -365,7 +365,7 @@ def render():
         
         st.markdown("---")
         
-        st.markdown("#### **Suy Giảm Miễn Dịch:**")
+        st.markdown("#### **Suy giảm miễn dịch:**")
         st.warning("""
         - Điều trị tương tự, nhưng:
         - Cân nhắc điều trị lâu hơn (14 ngày thay vì 10 ngày)

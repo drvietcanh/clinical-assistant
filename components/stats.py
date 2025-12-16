@@ -21,7 +21,7 @@ def render_stats():
     col1.metric("Tổng Calculators", total_calcs, "Ready ✓")
     col2.metric("Yêu Thích", total_favorites, f"+{total_favorites}" if total_favorites > 0 else "Add more")
     col3.metric("Gần Đây", total_recent, "This session")
-    col4.metric("Tính Toán", session_calcs, "Times")
+    col4.metric("Tính toán", session_calcs, "Times")
     col5.metric("Modules", "5", "All active ✅")
     
     st.markdown("---")

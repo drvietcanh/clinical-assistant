@@ -32,7 +32,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: RISK ASSESSMENT ==========
-    st.markdown("### 📊 Đánh Giá Nguy Cơ")
+    st.markdown("### 📊 Đánh giá Nguy cơ")
     
     col1, col2 = st.columns(2)
     
@@ -134,7 +134,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: CLINICAL PRESENTATION ==========
-    st.markdown("### 🔍 Triệu Chứng Lâm Sàng")
+    st.markdown("### 🔍 Triệu chứng Lâm sàng")
     
     st.markdown("""
     **Triệu chứng sớm (0-6 giờ):**
@@ -191,7 +191,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: TREATMENT PROTOCOL ==========
-    st.markdown("### 💊 Phác Đồ Điều Trị")
+    st.markdown("### 💊 Phác Đồ Điều trị")
     
     severity = st.radio(
         "**Mức độ nghiêm trọng:**",
@@ -213,7 +213,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: ALKALINIZATION ==========
-    st.markdown("### 💉 Kiềm Hóa Nước Tiểu (Urine Alkalinization)")
+    st.markdown("### 💉 Kiềm Hóa Nước tiểu (Urine Alkalinization)")
     
     st.info("""
     **Mục đích:** Tăng đào thải salicylate qua thận
@@ -259,7 +259,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: HEMODIALYSIS ==========
-    st.markdown("### 🔄 Lọc Máu (Hemodialysis)")
+    st.markdown("### 🔄 Lọc máu (Hemodialysis)")
     
     st.error("""
     **Chỉ định lọc máu:**
@@ -281,7 +281,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     st.markdown("""
     **Trong quá trình điều trị:**

@@ -43,7 +43,7 @@ def render():
         comorbid = st.checkbox("Bệnh kèm theo nặng (tim, thận...)", key="copd_comorbid")
     
     with col2:
-        st.markdown("### 📊 Phân Loại")
+        st.markdown("### 📊 Phân loại")
         
         # Count severe signs
         severe_signs = sum([severe_dyspnea, rr_high, hr_high, cyanosis, confusion])
@@ -151,7 +151,7 @@ def render():
         """)
     
     with tabs[2]:  # Antibiotics
-        st.markdown("#### Kháng Sinh")
+        st.markdown("#### Kháng sinh")
         
         st.info("""
         **Chỉ định kháng sinh khi có:**

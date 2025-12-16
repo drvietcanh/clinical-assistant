@@ -496,7 +496,7 @@ def render():
         # Use render_score_breakdown for component scores
         if component_scores:
             render_score_breakdown(
-                title="Điểm Từng Thành Phần",
+                title="Điểm Từng Thành phần",
                 subscores=component_scores,
                 total_score=result['score']
             )

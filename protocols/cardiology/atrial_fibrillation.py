@@ -105,7 +105,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Thuốc Kiểm Soát Tần Số")
+    st.markdown("### 💊 Thuốc Kiểm soát Tần Số")
     
     st.warning("""
     **Mục tiêu:** Tần số thất 60-100 bpm (nghỉ ngơi), <110 bpm (vận động nhẹ)
@@ -249,7 +249,7 @@ def render():
 
 def render_rate_control():
     """Rate control strategy"""
-    st.success("## 🟢 Kiểm Soát Tần Số")
+    st.success("## 🟢 Kiểm soát Tần Số")
     
     st.markdown("""
     **Chỉ định:**

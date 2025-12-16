@@ -308,7 +308,7 @@ def render_cam_icu_calculator():
             """)
         
         st.markdown("---")
-        st.markdown("### 📋 Phân Loại Delirium")
+        st.markdown("### 📋 Phân loại Delirium")
         
         col1, col2, col3 = st.columns(3)
         

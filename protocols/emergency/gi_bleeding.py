@@ -104,7 +104,7 @@ def render_upper_gi_bleeding():
         render_rockall_calculator()
     
     st.markdown("---")
-    st.markdown("### 2️⃣ Resuscitation - Bù Dịch & Máu")
+    st.markdown("### 2️⃣ Resuscitation - Bù dịch & Máu")
     
     st.info("""
     **Fluid Resuscitation:**
@@ -453,7 +453,7 @@ def render_upper_gi_bleeding():
         """)
     
     st.markdown("---")
-    st.markdown("### 6️⃣ Quản lý Theo Nguyên Nhân")
+    st.markdown("### 6️⃣ Quản lý Theo Nguyên nhân")
     
     tab1, tab2, tab3, tab4 = st.tabs(["PUD", "Varices", "Mallory-Weiss", "Khác"])
     
@@ -524,7 +524,7 @@ def render_upper_gi_bleeding():
         """)
     
     with tab4:
-        st.markdown("#### 🔍 Nguyên Nhân Khác")
+        st.markdown("#### 🔍 Nguyên nhân Khác")
         
         st.warning("""
         **Gastritis/Erosions:**
@@ -544,7 +544,7 @@ def render_upper_gi_bleeding():
         """)
     
     st.markdown("---")
-    st.markdown("### 7️⃣ Theo dõi & Dự phòng Tái Phát")
+    st.markdown("### 7️⃣ Theo dõi & Dự phòng Tái phát")
     
     st.success("""
     **Monitoring:**
@@ -642,7 +642,7 @@ def render_lower_gi_bleeding():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Quản lý Theo Nguyên Nhân")
+    st.markdown("### 4️⃣ Quản lý Theo Nguyên nhân")
     
     tab1, tab2, tab3, tab4 = st.tabs(["Diverticular", "Angiodysplasia", "Ischemic Colitis", "Khác"])
     
@@ -703,14 +703,14 @@ def render_lower_gi_bleeding():
         - **Monitoring:** Lâm sàng, labs
         - **Surgery:** Nếu thủng, hoại tử
         
-        **Nguyên Nhân:**
+        **Nguyên nhân:**
         - Low cardiac output
         - Vasopressors
         - Mesenteric ischemia
         """)
     
     with tab4:
-        st.markdown("#### 🔍 Nguyên Nhân Khác")
+        st.markdown("#### 🔍 Nguyên nhân Khác")
         
         st.info("""
         **Colorectal Cancer:**

@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """ICU Sedation & Analgesia Protocol"""
-    st.subheader("💤 An Thần & Giảm Đau ICU (ICU Sedation & Analgesia)")
+    st.subheader("💤 An thần & Giảm đau ICU (ICU Sedation & Analgesia)")
     st.caption("SCCM 2018 Guidelines - Sedation and analgesia in critically ill patients")
     
     st.info("""
@@ -55,8 +55,8 @@ def render():
     medication_type = st.radio(
         "**Loại thuốc:**",
         [
-            "Analgesia (Giảm Đau) - Ưu tiên",
-            "Sedation (An Thần)",
+            "Analgesia (Giảm đau) - Ưu tiên",
+            "Sedation (An thần)",
             "Combined (Kết Hợp)"
         ],
         key="medication_type"
@@ -213,7 +213,7 @@ def render():
 
 def render_analgesia():
     """Analgesia protocol"""
-    st.success("## 💉 Analgesia (Giảm Đau) - Ưu tiên")
+    st.success("## 💉 Analgesia (Giảm đau) - Ưu tiên")
     
     st.markdown("""
     **Nguyên tắc: Analgesia First**
@@ -231,7 +231,7 @@ def render_analgesia():
     
     **Liều:**
     - **Loading:** 1-2 µg/kg IV
-    - **Maintenance:** 0.5-2 µg/kg/h (25-100 µg/h ở Người Lớn)
+    - **Maintenance:** 0.5-2 µg/kg/h (25-100 µg/h ở Người lớn)
     - **Bolus:** 25-50 µg IV q30-60min nếu cần
     
     **Ưu điểm:**
@@ -261,7 +261,7 @@ def render_analgesia():
     
     **Liều:**
     - **Loading:** 0.05-0.1 mg/kg IV
-    - **Maintenance:** 0.01-0.05 mg/kg/h (0.5-5 mg/h ở Người Lớn)
+    - **Maintenance:** 0.01-0.05 mg/kg/h (0.5-5 mg/h ở Người lớn)
     - **Bolus:** 2-5 mg IV q2-4h nếu cần
     
     **Ưu điểm:**
@@ -287,7 +287,7 @@ def render_analgesia():
     
     **Liều:**
     - **Loading:** 0.01-0.02 mg/kg IV
-    - **Maintenance:** 0.003-0.015 mg/kg/h (0.2-1.5 mg/h ở Người Lớn)
+    - **Maintenance:** 0.003-0.015 mg/kg/h (0.2-1.5 mg/h ở Người lớn)
     - **Bolus:** 0.5-1 mg IV q2-4h nếu cần
     
     **Ưu điểm:**
@@ -303,7 +303,7 @@ def render_analgesia():
 
 def render_sedation():
     """Sedation protocol"""
-    st.warning("## 💤 Sedation (An Thần)")
+    st.warning("## 💤 Sedation (An thần)")
     
     st.markdown("""
     **Chỉ định an thần:**
@@ -357,7 +357,7 @@ def render_sedation():
     
     **Liều:**
     - **Loading:** 0.05-0.1 mg/kg IV (max 5 mg)
-    - **Maintenance:** 0.02-0.1 mg/kg/h (0.5-5 mg/h ở Người Lớn)
+    - **Maintenance:** 0.02-0.1 mg/kg/h (0.5-5 mg/h ở Người lớn)
     - **Bolus:** 2-5 mg IV q30-60min nếu cần
     - **Mục tiêu RASS:** -2 đến -3
     

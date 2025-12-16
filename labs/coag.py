@@ -111,7 +111,7 @@ def render():
         
         ---
         
-        ### **D-dimer - Ý Nghĩa:**
+        ### **D-dimer - Ý nghĩa:**
         
         **✅ Độ nhạy cao, ✅ giá trị dự đoán âm tính cao**
         - **D-dimer bình thường → Loại trừ VTE** (với xác suất tiền test thấp/trung bình)

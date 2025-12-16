@@ -119,7 +119,7 @@ def render_comparison():
         side_effects_str = f"{len(side_effects)} tác dụng phụ chính"
         
         comparison_data.append({
-            "Kháng Sinh": ab_name,
+            "Kháng sinh": ab_name,
             "Nhóm": ab_data.get('group', 'N/A'),
             "Đường Dùng": admin_str,
             "AWaRe": aware,
@@ -243,7 +243,7 @@ def render_comparison():
     
     # Renal adjustment comparison
     with comparison_tabs[4]:
-        st.markdown("#### 🫘 Điều Chỉnh Theo Chức Năng Thận:")
+        st.markdown("#### 🫘 Điều chỉnh Theo Chức Năng Thận:")
         for ab_name in selected_antibiotics:
             if ab_name not in ANTIBIOTICS_DATABASE:
                 continue

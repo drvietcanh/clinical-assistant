@@ -55,7 +55,7 @@ GOOGLE_ANALYTICS_ID = APP_CONFIG.get("google_analytics_id", "G-XXXXXXXXXX")
 
 # ========== PAGE CONFIG ==========
 st.set_page_config(
-    page_title="Clinical Assistant",
+    page_title="Trợ lý lâm sàng",
     page_icon="🩺",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -94,7 +94,7 @@ if manifest_file.exists():
         <meta name="theme-color" content="#1976d2">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
-        <meta name="apple-mobile-web-app-title" content="Clinical Assistant">
+        <meta name="apple-mobile-web-app-title" content="Trợ lý lâm sàng">
         """,
         unsafe_allow_html=True
     )
@@ -306,7 +306,7 @@ else:
 col1, col2 = st.columns([3, 1])
 
 with col1:
-    st.markdown('<p class="main-title">🩺 Clinical Assistant</p>', unsafe_allow_html=True)
+    st.markdown('<p class="main-title">🩺 Trợ lý lâm sàng</p>', unsafe_allow_html=True)
     st.markdown('<p class="subtitle">Hệ thống công cụ hỗ trợ lâm sàng toàn diện</p>', unsafe_allow_html=True)
 
 with col2:
@@ -320,10 +320,10 @@ st.markdown("---")
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("📋 Navigation")
+    st.header("📋 Điều hướng")
     
     # Quick Links Section
-    st.subheader("⚡ Quick Links")
+    st.subheader("⚡ Liên kết nhanh")
     quick_links = [
         ("📊 Scores", "pages/01_📊_Scores.py"),
         ("🔬 Labs", "pages/05_🔬_Labs_and_Calculators.py"),
@@ -361,25 +361,25 @@ with st.sidebar:
     st.markdown("---")
     
     # Keyboard Shortcuts
-    with st.expander("⌨️ Keyboard Shortcuts"):
+    with st.expander("⌨️ Phím tắt"):
         st.markdown("""
-        - **Ctrl+K** - Focus search
-        - **Esc** - Clear search
-        - **/** - Quick search
+        - **Ctrl+K** - Tập trung vào ô tìm kiếm
+        - **Esc** - Xóa tìm kiếm
+        - **/** - Tìm kiếm nhanh
         """)
     
     st.markdown("---")
     
     # Version info & Stats
-    st.caption(f"**Version:** {APP_CONFIG['version']} 🔥")
-    st.caption(f"**Updated:** {APP_CONFIG['last_updated']}")
+    st.caption(f"**Phiên bản:** {APP_CONFIG['version']} 🔥")
+    st.caption(f"**Cập nhật:** {APP_CONFIG['last_updated']}")
     st.caption(f"**Calculators:** {len(ALL_CALCULATORS)}")
-    st.caption(f"**Favorites:** {len(st.session_state.favorites)}")
+    st.caption(f"**Yêu thích:** {len(st.session_state.favorites)}")
     
     # PWA/Offline Info
     try:
         from components.offline import render_pwa_info, render_offline_status
-        with st.expander("📱 PWA & Offline", expanded=False):
+        with st.expander("📱 PWA & Chế độ ngoại tuyến", expanded=False):
             render_offline_status()
             render_pwa_info()
     except ImportError:
@@ -536,9 +536,9 @@ with tab3:
     st.caption("Thống kê hệ thống, cập nhật mới nhất và mẹo sử dụng")
     
     # Analytics Dashboard Toggle
-    try:
+        try:
         from components.analytics import render_analytics_dashboard
-        analytics_tab, stats_tab = st.tabs(["📊 Usage Analytics", "📈 System Stats"])
+        analytics_tab, stats_tab = st.tabs(["📊 Phân tích sử dụng", "📈 Thống kê hệ thống"])
         
         with analytics_tab:
             render_analytics_dashboard()
@@ -604,4 +604,4 @@ except ImportError:
 
 # Footer
 st.markdown("---")
-st.caption("© 2025 Clinical Assistant | Made with ❤️ for healthcare workers")
+st.caption("© 2025 Trợ lý lâm sàng | Được tạo với ❤️ cho nhân viên y tế")

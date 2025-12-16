@@ -196,7 +196,7 @@ def render_rbc_protocol():
     - Phẫu thuật lớn
     
     **Liều:**
-    - **1 đơn vị:** Tăng Hb ~1 g/dL (Người Lớn)
+    - **1 đơn vị:** Tăng Hb ~1 g/dL (Người lớn)
     - **Trẻ em:** 10-15 mL/kg
     
     **Tốc Độ:**

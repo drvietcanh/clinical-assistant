@@ -383,7 +383,7 @@ def render():
         
         # Use render_score_breakdown for component scores
         render_score_breakdown(
-            title="Điểm Từng Thành Phần",
+            title="Điểm Từng Thành phần",
             subscores={
                 "🧠 GCS": result['gcs_coded'],
                 "🫀 SBP": result['sbp_coded'],

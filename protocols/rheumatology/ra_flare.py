@@ -47,7 +47,7 @@ def render():
         )
     
     with col2:
-        st.markdown("#### Đánh giá Mức Độ")
+        st.markdown("#### Đánh giá Mức độ")
         
         # Calculate severity
         symptoms_count = sum([joint_pain, joint_swelling, morning_stiffness, fatigue, fever])
@@ -115,7 +115,7 @@ def render():
         """)
     
     with tab2:
-        st.markdown("#### 🔄 Điều Chỉnh DMARDs")
+        st.markdown("#### 🔄 Điều chỉnh DMARDs")
         
         st.info("""
         **Nếu đang dùng DMARDs:**

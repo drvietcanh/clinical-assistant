@@ -186,7 +186,7 @@ def display_alerts(alerts):
     level_order = {"critical": 0, "warning": 1, "info": 2}
     sorted_alerts = sorted(alerts, key=lambda x: level_order.get(x["level"], 3))
     
-    st.markdown("### ⚠️ Hệ Thống Cảnh Báo")
+    st.markdown("### ⚠️ Hệ Thống Cảnh báo")
     
     for alert in sorted_alerts:
         if alert["level"] == "critical":

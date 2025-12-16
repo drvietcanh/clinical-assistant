@@ -69,7 +69,7 @@ def interpret_compliance(compliance):
 
 def render_comprehensive_calculator():
     """Comprehensive Ventilator Calculator"""
-    st.subheader("🫁 Máy Thở - Tính Toán Tổng Hợp")
+    st.subheader("🫁 Máy Thở - Tính toán Tổng Hợp")
     st.caption("Nhập đầy đủ thông số để có khuyến nghị chính xác")
     
     st.info("""
@@ -106,7 +106,7 @@ def render_comprehensive_calculator():
         st.caption(f"Chiều cao: {height} cm ({sex})")
     
     with col2:
-        st.markdown("### ⚙️ Thông Số Máy Thở")
+        st.markdown("### ⚙️ Thông số Máy Thở")
         mode = st.selectbox(
             "Mode", 
             ["AC/VC", "SIMV", "PSV", "CPAP", "BiPAP", "PRVC", "APRV"],
@@ -176,7 +176,7 @@ def render_comprehensive_calculator():
     st.markdown("---")
     
     # Calculate button
-    if st.button("🧮 Tính Toán & Phân tích", type="primary", use_container_width=True):
+    if st.button("🧮 Tính toán & Phân tích", type="primary", use_container_width=True):
         # Calculate all metrics
         pf_ratio = calculate_pf_ratio(abg_data["po2"], abg_data["fio2"])
         ards_class, ards_color, _ = classify_ards(pf_ratio)
@@ -204,7 +204,7 @@ def render_comprehensive_calculator():
         abg_analysis = display_abg_summary(abg_data, show_details=True)
         
         st.markdown("---")
-        st.markdown("### 📊 Kết quả Tính Toán")
+        st.markdown("### 📊 Kết quả Tính toán")
         
         # Metrics in 4 columns
         col1, col2, col3, col4 = st.columns(4)
@@ -353,7 +353,7 @@ def render_comprehensive_calculator():
         
         # Summary table
         st.markdown("---")
-        st.markdown("### 📋 Tóm Tắt Thông Số")
+        st.markdown("### 📋 Tóm Tắt Thông số")
         
         summary_data = {
             "Thông số": ["PBW", "Vt", "Vt/kg", "RR", "PEEP", "FiO₂", "Plateau", "Driving P", "P/F", "Compliance"],
@@ -400,7 +400,7 @@ def render_comprehensive_calculator():
             - **Compliance:** Vt / (Plateau - PEEP)
             - **Vt/kg:** Vt / PBW
             
-            **Mục Tiêu:**
+            **Mục tiêu:**
             - Vt/kg: ≤6-8 mL/kg PBW (lung-protective)
             - Plateau: ≤30 cmH2O
             - Driving P: ≤15 cmH2O

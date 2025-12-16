@@ -257,7 +257,7 @@ def render_analytics_setup_guide():
         border-left: 5px solid #ffc107;
         margin: 20px 0;
     ">
-        <h4 style="margin: 0 0 15px 0; color: #856404;">🔧 Hướng Dẫn Setup Google Analytics API</h4>
+        <h4 style="margin: 0 0 15px 0; color: #856404;">🔧 Hướng dẫn Setup Google Analytics API</h4>
         <p style="margin: 0 0 10px 0; color: #856404;">
             Để hiển thị số liệu thực tế, bạn cần cấu hình Google Analytics API:
         </p>

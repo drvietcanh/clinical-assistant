@@ -78,7 +78,7 @@ def render():
         st.metric("**Moderate Risk:**", f"{moderate_risk_count}/6")
     
     st.markdown("---")
-    st.markdown("### 2️⃣ SUP Agents - Thuốc Phòng Ngừa")
+    st.markdown("### 2️⃣ SUP Agents - Thuốc Phòng ngừa")
     
     if need_sup:
         agent = st.radio(
@@ -180,7 +180,7 @@ def render():
 
 def render_ppi_sup():
     """PPI for SUP"""
-    st.success("## 💊 PPI (Proton Pump Inhibitor) - Ưu Tiên")
+    st.success("## 💊 PPI (Proton Pump Inhibitor) - Ưu tiên")
     
     st.info("""
     **PPI là lựa chọn ưu tiên cho SUP:**

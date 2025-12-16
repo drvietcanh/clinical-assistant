@@ -506,7 +506,7 @@ def render_iv_compatibility_checker():
     st.markdown("---")
     
     # Check type selection
-    st.markdown("### 🔍 Loại Kiểm Tra")
+    st.markdown("### 🔍 Loại Kiểm tra")
     check_type = st.radio(
         "Chọn loại kiểm tra:",
         ["Y-site Compatibility", "Same-Syringe Compatibility"],

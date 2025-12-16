@@ -30,7 +30,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: RISK ASSESSMENT ==========
-    st.markdown("### 📊 Đánh Giá Nguy Cơ")
+    st.markdown("### 📊 Đánh giá Nguy cơ")
     
     col1, col2 = st.columns(2)
     
@@ -78,7 +78,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: CLINICAL PRESENTATION ==========
-    st.markdown("### 🔍 Triệu Chứng Lâm Sàng")
+    st.markdown("### 🔍 Triệu chứng Lâm sàng")
     
     st.markdown("""
     **Triệu chứng thần kinh (Bắt buộc để chẩn đoán):**
@@ -105,7 +105,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: DIAGNOSIS ==========
-    st.markdown("### 📋 Chẩn Đoán")
+    st.markdown("### 📋 Chẩn đoán")
     
     st.warning("""
     **Chẩn đoán sốc nhiệt khi có:**
@@ -126,7 +126,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: TREATMENT PROTOCOL ==========
-    st.markdown("### 💊 Phác Đồ Điều Trị")
+    st.markdown("### 💊 Phác Đồ Điều trị")
     
     severity = st.radio(
         "**Mức độ nghiêm trọng:**",
@@ -167,7 +167,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: MEDICAL MANAGEMENT ==========
-    st.markdown("### 💉 Điều Trị Y Tế")
+    st.markdown("### 💉 Điều trị Y Tế")
     
     st.info("""
     **Điều trị hỗ trợ:**
@@ -198,7 +198,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     st.markdown("""
     **Trong quá trình điều trị:**

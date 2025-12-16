@@ -104,7 +104,7 @@ def render():
     """)
     
     # Step 1: Supportive Care
-    st.markdown("#### **1. Hồi Sức Hỗ Trợ (Supportive Care)**")
+    st.markdown("#### **1. Hồi sức Hỗ trợ (Supportive Care)**")
     
     col1, col2 = st.columns(2)
     
@@ -177,7 +177,7 @@ def render():
         """)
     
     # Step 3: Thyroid hormone replacement
-    st.markdown("#### **3. Bổ Sung Hormone Tuyến Giáp (Levothyroxine)**")
+    st.markdown("#### **3. Bổ sung Hormone Tuyến Giáp (Levothyroxine)**")
     
     st.markdown("""
     **⚠️ Lưu ý:** Dùng SAU KHI đã dùng corticosteroids
@@ -227,7 +227,7 @@ def render():
     """)
     
     # Step 4: Additional treatments
-    st.markdown("#### **4. Điều trị Bổ Sung**")
+    st.markdown("#### **4. Điều trị Bổ sung**")
     
     st.markdown("""
     **A. Điều trị nhiễm trùng:**
@@ -284,7 +284,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: SPECIAL POPULATIONS ==========
-    st.markdown("### 👥 Dân Số Đặc Biệt")
+    st.markdown("### 👥 Dân số Đặc biệt")
     
     col1, col2 = st.columns(2)
     

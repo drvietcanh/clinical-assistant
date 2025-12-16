@@ -21,7 +21,7 @@ def render():
     """)
     
     # Type selection
-    st.markdown("### 1️⃣ Phân Loại ACS")
+    st.markdown("### 1️⃣ Phân loại ACS")
     
     acs_type = st.radio(
         "**Loại ACS:**",
