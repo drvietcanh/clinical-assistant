@@ -4,6 +4,13 @@ Centor Score (Modified Centor / McIsaac Score)
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_centor(fever, exudate, nodes, no_cough, age):
@@ -134,6 +141,13 @@ def get_antibiotic_regimen():
 
 def render():
     """Render the Centor Score calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'centor':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Centor Score')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.title("🦠 Centor Score (Modified)")
     st.markdown("""
@@ -566,6 +580,63 @@ def render():
         - RADT point-of-care
         - Antimicrobial stewardship
         """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Age": age,
+            "Fever > 38°C": "Có" if fever else "Không",
+            "Exudate": "Có" if exudate else "Không",
+            "Tender nodes": "Có" if nodes else "Không",
+            "No cough": "Có" if no_cough else "Không"
+        }
+        
+        results_dict = {
+            "Centor Score": total_score,
+            "Risk": result['risk'],
+            "Probability": result['probability'],
+            "Recommendation": result['recommendation']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="centor",
+            calculator_name="Centor Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="centor",
+            calculator_name="Centor Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="centor",
+            calculator_name="Centor Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="centor", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="centor",
+            calculator_name="Centor Score",
+            category="Nhiễm Trùng",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     with st.expander("💡 Delayed Prescription Strategy"):
         st.markdown("""
@@ -608,15 +679,24 @@ def render():
         - Tái khám nếu nặng lên
         """)
     
-    # References
+    # References section (always at bottom)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Centor RM, et al. The diagnosis of strep throat in adults in the emergency room. Med Decis Making. 1981
-    - McIsaac WJ, et al. Empirical validation of guidelines for the management of pharyngitis. JAMA. 2004
-    - Shulman ST, et al. Clinical Practice Guideline for Strep Pharyngitis. CID. 2012 (IDSA)
-    - NICE Guideline: Sore throat (acute). 2018
-    """)
+    references = get_references("Centor Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        st.caption("""
+        **Tài liệu tham khảo:**
+        - Centor RM, et al. The diagnosis of strep throat in adults in the emergency room. Med Decis Making. 1981
+        - McIsaac WJ, et al. Empirical validation of guidelines for the management of pharyngitis. JAMA. 2004
+        - Shulman ST, et al. Clinical Practice Guideline for Strep Pharyngitis. CID. 2012 (IDSA)
+        - NICE Guideline: Sore throat (acute). 2018
+        """)
 
 
 if __name__ == "__main__":

@@ -832,6 +832,18 @@ def render():
         # History section
         render_history_ui(calculator_id="prism3", show_actions=True)
     
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="prism3",
+            calculator_name="PRISM III",
+            category="Nhi Khoa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
     # References section (always at bottom)
     st.markdown("---")
     references = get_references("PRISM III")

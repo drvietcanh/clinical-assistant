@@ -4,10 +4,25 @@ Thang điểm đánh giá nguy cơ té ngã
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
     """Morse Fall Scale Calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'morse':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Morse Fall Scale')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>⚠️ Morse Fall Scale</h2>
     <p style='text-align: center;'><em>Thang điểm đánh giá nguy cơ té ngã</em></p>
@@ -235,6 +250,51 @@ def render():
                - Cân nhắc điều chỉnh liều hoặc thời gian dùng thuốc
             """)
         
+        # Prepare data for history and share
+        inputs_dict = {
+            "History of Falling": f"{history_score} điểm",
+            "Secondary Diagnosis": f"{secondary_score} điểm",
+            "Ambulatory Aid": f"{ambulatory_score} điểm",
+            "IV/Heparin Lock": f"{iv_score} điểm",
+            "Gait": f"{gait_score} điểm",
+            "Mental Status": f"{mental_score} điểm"
+        }
+        
+        results_dict = {
+            "Morse Fall Score": total_score,
+            "Risk Level": risk_level,
+            "Interpretation": interpretation
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="morse",
+            calculator_name="Morse Fall Scale",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="morse",
+            calculator_name="Morse Fall Scale",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="morse",
+            calculator_name="Morse Fall Scale",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="morse", show_actions=True)
+        
         with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
             ### 🎯 Cách đánh giá:
@@ -276,6 +336,18 @@ def render():
                *Soc Sci Med.* 1989;28(1):81-86.
             """)
     
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="morse",
+            calculator_name="Morse Fall Scale",
+            category="Điều Dưỡng",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
     st.info("""
     💡 **Điểm quan trọng:**
     
@@ -285,4 +357,24 @@ def render():
     4. **Đánh giá lại:** Tùy theo mức độ nguy cơ (24-48 giờ)
     5. **Mục tiêu:** Phòng ngừa té ngã, giảm tỷ lệ té ngã trong bệnh viện
     """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("Morse Fall Scale")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        with st.expander("📚 Tài liệu tham khảo"):
+            st.markdown("""
+            1. **Morse JM, Morse RM, Tylko SJ.** Development of a scale to identify the fall-prone patient. 
+               *Can J Aging.* 1989;8(4):366-377.
+            
+            2. **Morse JM, Black C, Oberle K, Donahue P.** A prospective study to identify the fall-prone patient. 
+               *Soc Sci Med.* 1989;28(1):81-86.
+            """)
 

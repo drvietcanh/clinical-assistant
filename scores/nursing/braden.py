@@ -4,10 +4,25 @@ Thang điểm đánh giá nguy cơ loét tì đè
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
     """Braden Scale Calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'braden':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Braden Scale')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>🛏️ Braden Scale</h2>
     <p style='text-align: center;'><em>Thang điểm đánh giá nguy cơ loét tì đè</em></p>
@@ -295,6 +310,51 @@ def render():
             - Tai (nếu nằm nghiêng)
             """)
         
+        # Prepare data for history and share
+        inputs_dict = {
+            "Sensory Perception": f"{sensory_score}/4",
+            "Moisture": f"{moisture_score}/4",
+            "Activity": f"{activity_score}/4",
+            "Mobility": f"{mobility_score}/4",
+            "Nutrition": f"{nutrition_score}/4",
+            "Friction & Shear": f"{friction_score}/3"
+        }
+        
+        results_dict = {
+            "Braden Score": f"{total_score}/23",
+            "Risk Level": risk_level,
+            "Interpretation": interpretation
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="braden",
+            calculator_name="Braden Scale",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="braden",
+            calculator_name="Braden Scale",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="braden",
+            calculator_name="Braden Scale",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="braden", show_actions=True)
+        
         with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **Bergstrom N, Braden BJ, Laguzza A, Holman V.** The Braden Scale for Predicting Pressure Sore Risk. 
@@ -303,6 +363,18 @@ def render():
             2. **National Pressure Ulcer Advisory Panel, European Pressure Ulcer Advisory Panel, Pan Pacific Pressure Injury Alliance.** Prevention and Treatment of Pressure Ulcers: Clinical Practice Guideline. 
                *Osborne Park, Australia: Cambridge Media; 2014.*
             """)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="braden",
+            calculator_name="Braden Scale",
+            category="Điều Dưỡng",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.info("""
     💡 **Điểm quan trọng:**
@@ -314,4 +386,24 @@ def render():
     5. **Đánh giá lại:** Tùy theo mức độ nguy cơ (24-72 giờ)
     6. **Mục tiêu:** Phòng ngừa loét tì đè, không để xảy ra loét
     """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("Braden Scale")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        with st.expander("📚 Tài liệu tham khảo"):
+            st.markdown("""
+            1. **Bergstrom N, Braden BJ, Laguzza A, Holman V.** The Braden Scale for Predicting Pressure Sore Risk. 
+               *Nurs Res.* 1987;36(4):205-210.
+            
+            2. **National Pressure Ulcer Advisory Panel, European Pressure Ulcer Advisory Panel, Pan Pacific Pressure Injury Alliance.** Prevention and Treatment of Pressure Ulcers: Clinical Practice Guideline. 
+               *Osborne Park, Australia: Cambridge Media; 2014.*
+            """)
 

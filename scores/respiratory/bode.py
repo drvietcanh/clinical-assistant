@@ -29,6 +29,13 @@ from scores.utils.validation import (
     validate_positive
 )
 from components.ui.validation import render_validation_errors
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_bode(
@@ -461,6 +468,62 @@ def render():
         """)
         
         st.session_state['bode_result'] = result
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "BMI": bmi,
+            "FEV1 %": fev1_percent,
+            "mMRC Dyspnea": mmrc_dyspnea,
+            "6MWD (m)": walk_distance
+        }
+        
+        results_dict = {
+            "BODE Index": f"{result['total_score']}/10",
+            "Quartile": result['quartile'],
+            "Interpretation": result['interpretation'],
+            "4-Year Mortality": result['mortality_4yr']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="bode",
+            calculator_name="BODE Index",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="bode",
+            calculator_name="BODE Index",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="bode",
+            calculator_name="BODE Index",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="bode", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="bode",
+            calculator_name="BODE Index",
+            category="Hô Hấp",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Quick reference
     with st.expander("📖 GOLD Classification & Treatment"):
@@ -493,4 +556,15 @@ def render():
         
         **Duration:** >15 hours/day (24h best)
         """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("BODE Index")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 

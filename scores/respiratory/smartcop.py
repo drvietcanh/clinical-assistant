@@ -29,10 +29,24 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.validation import render_validation_errors
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
     """Render SMART-COP Score Calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'smartcop':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'SMART-COP')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.subheader("🫁 SMART-COP Score")
     st.caption("Dự đoán nhu cầu hỗ trợ hô hấp hoặc thuốc vận mạch trong viêm phổi cộng đồng")
@@ -607,6 +621,66 @@ def render():
             - Lim WS, et al. *BTS guidelines for the management of community acquired pneumonia in adults: update 2009.* 
               Thorax. 2009;64 Suppl 3:iii1-55.
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Age": age,
+            "Systolic BP": systolic_bp,
+            "Multilobar": "Có" if multilobar else "Không",
+            "Albumin": albumin,
+            "RR": rr,
+            "HR": hr,
+            "Confusion": "Có" if "Lú lẫn" in confusion else "Không",
+            "Oxygenation": f"{pao2 if 'PaO₂' in oxy_method else spo2}",
+            "pH": ph if has_abg else "Không có"
+        }
+        
+        results_dict = {
+            "SMART-COP Score": f"{total_score}/11",
+            "Risk": risk,
+            "IRVS Risk": f"{predicted_risk:.1f}%"
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="smartcop",
+            calculator_name="SMART-COP",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="smartcop",
+            calculator_name="SMART-COP",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="smartcop",
+            calculator_name="SMART-COP",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="smartcop", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="smartcop",
+            calculator_name="SMART-COP",
+            category="Hô Hấp",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Educational content
     st.markdown("---")
@@ -700,6 +774,17 @@ def render():
         - Có biến chứng: ≥14 ngày
         - **Đủ khi:** Không sốt >48-72h, ổn định lâm sàng, PO intake tốt
         """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("SMART-COP")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Footer
     st.markdown("---")

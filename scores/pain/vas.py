@@ -185,6 +185,46 @@ def render():
             - Phù hợp cho nghiên cứu và theo dõi dài hạn
             - Khó dùng cho bệnh nhân già, rối loạn thị giác
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "VAS (mm)": vas_value
+        }
+        
+        results_dict = {
+            "VAS Score": f"{vas_value}mm",
+            "Severity": severity,
+            "NRS Equivalent": f"{nrs_equivalent}/10"
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="vas",
+            calculator_name="VAS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="vas",
+            calculator_name="VAS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="vas",
+            calculator_name="VAS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="vas", show_actions=True)
     
     st.info("""
     💡 **Điểm quan trọng:**

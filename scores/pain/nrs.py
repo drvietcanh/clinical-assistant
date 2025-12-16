@@ -4,10 +4,25 @@ Thang điểm số đánh giá đau (0-10)
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
     """NRS Pain Scale Calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'nrs':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'NRS')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>😣 NRS - Numeric Rating Scale</h2>
     <p style='text-align: center;'><em>Thang điểm số đánh giá đau (0-10)</em></p>
@@ -208,16 +223,57 @@ def render():
             - Bệnh nhân không nói được: Dùng thang điểm hành vi
             """)
         
-        with st.expander("📚 Tài liệu tham khảo"):
-            st.markdown("""
-            1. **McCaffery M, Pasero C.** Pain: Clinical Manual. 2nd ed. St. Louis: Mosby; 1999.
-            
-            2. **Herr K, Spratt KF, Garand L, Li L.** Evaluation of the Iowa Pain Thermometer and other selected pain intensity scales in younger and older adult cohorts using controlled clinical pain: a preliminary study. 
-               *Pain Med.* 2007;8(7):585-600.
-            
-            3. **Hjermstad MJ, Fayers PM, Haugen DF, et al.** Studies comparing Numerical Rating Scales, Verbal Rating Scales, and Visual Analogue Scales for assessment of pain intensity in adults: a systematic literature review. 
-               *J Pain Symptom Manage.* 2011;41(6):1073-1093.
-            """)
+        # Prepare data for history and share
+        inputs_dict = {
+            "NRS Score": pain_level
+        }
+        
+        results_dict = {
+            "NRS Score": f"{pain_level}/10",
+            "Severity": severity,
+            "Interpretation": interpretation
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="nrs",
+            calculator_name="NRS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="nrs",
+            calculator_name="NRS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="nrs",
+            calculator_name="NRS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="nrs", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="nrs",
+            calculator_name="NRS",
+            category="Đau",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.info("""
     💡 **Điểm quan trọng:**
@@ -228,6 +284,17 @@ def render():
     4. **Mục tiêu điều trị:** NRS ≤ 3
     5. **Đánh giá lại:** Sau 15-30 phút (đau nặng) hoặc 30-60 phút (đau nhẹ/vừa)
     """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("NRS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

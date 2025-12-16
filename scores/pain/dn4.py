@@ -4,10 +4,25 @@ Thang điểm chẩn đoán đau thần kinh
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
     """DN4 Neuropathic Pain Diagnostic Tool"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'dn4':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'DN4')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>🧠 DN4 - Douleur Neuropathique 4</h2>
     <p style='text-align: center;'><em>Thang điểm chẩn đoán đau thần kinh</em></p>
@@ -217,6 +232,55 @@ def render():
             - Có thể có đau hỗn hợp (đau thần kinh + đau nội tạng)
             """)
         
+        # Prepare data for history and share
+        inputs_dict = {
+            "Q1 - Bỏng rát": "Có" if q1 else "Không",
+            "Q2 - Lạnh buốt": "Có" if q2 else "Không",
+            "Q3 - Điện giật": "Có" if q3 else "Không",
+            "Q4 - Tê": "Có" if q4 else "Không",
+            "Q5 - Châm chích": "Có" if q5 else "Không",
+            "Q6 - Kiến bò": "Có" if q6 else "Không",
+            "Q7 - Ngứa": "Có" if q7 else "Không",
+            "Sign1 - Giảm cảm giác chạm": "Có" if sign1 else "Không",
+            "Sign2 - Giảm cảm giác đau": "Có" if sign2 else "Không",
+            "Sign3 - Tăng cảm giác đau": "Có" if sign3 else "Không"
+        }
+        
+        results_dict = {
+            "DN4 Score": f"{score}/10",
+            "Diagnosis": "Đau thần kinh" if is_neuropathic else "Không đau thần kinh",
+            "Severity": severity
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="dn4",
+            calculator_name="DN4",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="dn4",
+            calculator_name="DN4",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="dn4",
+            calculator_name="DN4",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="dn4", show_actions=True)
+        
         with st.expander("📚 Hướng dẫn sử dụng"):
             st.markdown("""
             ### 🎯 Cách đánh giá:
@@ -261,6 +325,18 @@ def render():
                *Pain.* 2004;108(3):248-257.
             """)
     
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="dn4",
+            calculator_name="DN4",
+            category="Đau",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
     st.info("""
     💡 **Điểm quan trọng:**
     
@@ -270,4 +346,24 @@ def render():
     4. **Lưu ý:** Đau thần kinh thường khó điều trị, cần thời gian
     5. **Có thể kết hợp:** Đau thần kinh + đau nội tạng
     """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("DN4")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        with st.expander("📚 Tài liệu tham khảo"):
+            st.markdown("""
+            1. **Bouhassira D, Attal N, Alchaar H, et al.** Comparison of pain syndromes associated with nervous or somatic lesions and development of a new neuropathic pain diagnostic questionnaire (DN4). 
+               *Pain.* 2005;114(1-2):29-36.
+            
+            2. **Bouhassira D, Attal N, Fermanian J, et al.** Development and validation of the Neuropathic Pain Symptom Inventory. 
+               *Pain.* 2004;108(3):248-257.
+            """)
 
