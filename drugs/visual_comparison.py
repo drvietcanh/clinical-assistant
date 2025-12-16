@@ -31,6 +31,29 @@ def _to_list(value):
         return []
 
 
+def _to_string_list(value_list, max_items=None):
+    """Convert list elements to strings safely, optionally limit items."""
+    if not value_list:
+        return []
+    
+    result = []
+    for item in value_list:
+        if item is None:
+            continue
+        if isinstance(item, str):
+            result.append(item)
+        elif isinstance(item, (dict, list)):
+            # For complex types, convert to string representation
+            result.append(str(item))
+        else:
+            result.append(str(item))
+        
+        if max_items and len(result) >= max_items:
+            break
+    
+    return result
+
+
 def render_visual_comparison():
     """Render visual drug comparison interface"""
     
@@ -127,12 +150,12 @@ def render_visual_comparison():
             side_effects_list = _to_list(drug_data.get('side_effects'))
             interactions_list = _to_list(drug_data.get('interactions'))
             
-            # Get key information
+            # Get key information - convert to string lists for safe joining
             group = drug_data.get('group', 'Unknown')
             vn_name = drug_data.get('vietnamese_name', '')
-            admin = ", ".join(admin_list)
-            indications = ", ".join(indications_list[:3])  # First 3
-            contraindications = ", ".join(contraindications_list[:2])  # First 2
+            admin = ", ".join(_to_string_list(admin_list))
+            indications = ", ".join(_to_string_list(indications_list, max_items=3))
+            contraindications = ", ".join(_to_string_list(contraindications_list, max_items=2))
             side_effects_count = len(side_effects_list)
             interactions_count = len(interactions_list)
             pregnancy = drug_data.get('pregnancy', 'N/A')
@@ -208,7 +231,9 @@ def render_visual_comparison():
                     st.caption(f"**Tên biệt dược:** {drug_data['vietnamese_name']}")
                 
                 if admin_list:
-                    st.caption(f"**Đường dùng:** {', '.join(admin_list)}")
+                    admin_str_list = _to_string_list(admin_list)
+                    if admin_str_list:
+                        st.caption(f"**Đường dùng:** {', '.join(admin_str_list)}")
                 
                 # Dosage
                 if 'dosage' in drug_data:
@@ -216,14 +241,16 @@ def render_visual_comparison():
                     dosage_keys = list(dosage.keys())
                     if dosage_keys:
                         first_dose_key = dosage_keys[0]
-                        st.info(f"**Liều:** {dosage[first_dose_key]}")
+                        dosage_value = dosage[first_dose_key]
+                        st.info(f"**Liều:** {str(dosage_value)}")
                 
                 # Indications (first 2)
                 if indications_list:
-                    inds = indications_list[:2]
-                    st.write("**Chỉ định:**")
-                    for ind in inds:
-                        st.write(f"- {ind}")
+                    inds = _to_string_list(indications_list, max_items=2)
+                    if inds:
+                        st.write("**Chỉ định:**")
+                        for ind in inds:
+                            st.write(f"- {ind}")
                 
                 # Side effects count
                 if side_effects_list:
