@@ -91,9 +91,9 @@ def render_results_display(
         st.metric("BSA (đã chọn)", f"{bsa:.2f} m²", delta=f"{bsa_name}", 
                  help="Diện tích da cơ thể")
         st.metric("BSA vs Mosteller", f"{bsa_mosteller:.2f}", 
-                 delta=f"{bsa - bsa_mosteller:+.3f}",
+                 delta=f"{bsa - bsa_mosteller:+.2f}",
                  help="So sánh với Mosteller")
-        st.metric("Chuyển đổi", f"{bsa / 1.73:.3f}", 
+        st.metric("Chuyển đổi", f"{bsa / 1.73:.2f}", 
                  help="BSA_actual / 1.73")
     
     # Interpretation and action
@@ -129,7 +129,7 @@ def render_results_display(
     ```
     GFR_tuyệt_đối = eGFR_chuẩn × (BSA_thực / 1.73)
     GFR_tuyệt_đối = {egfr_ckd_epi:.1f} × ({bsa:.2f} / 1.73)
-    GFR_tuyệt_đối = {egfr_ckd_epi:.1f} × {bsa / 1.73:.3f}
+    GFR_tuyệt_đối = {egfr_ckd_epi:.1f} × {bsa / 1.73:.2f}
     GFR_tuyệt_đối = {gfr_absolute_ckd_epi:.1f} mL/min
     ```
     """)

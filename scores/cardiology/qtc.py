@@ -184,7 +184,7 @@ def render():
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
-    ### QT Điều Chỉnh Theo Nhịp tim
+    ### QT Điều chỉnh Theo Nhịp tim
     
     **QT interval:**
     - Thời gian từ bắt đầu sóng Q đến kết thúc sóng T
@@ -274,7 +274,7 @@ def render():
         rr_interval = calculate_rr_interval(hr)
         st.metric(
             "RR Interval",
-            f"{rr_interval:.3f} s",
+            f"{rr_interval:.2f} s",
             help="RR = 60 / HR"
         )
         
@@ -431,7 +431,7 @@ def render():
             "Heart Rate": f"{hr} bpm",
             "Gender": gender,
             "Formula": formula,
-            "RR Interval": f"{rr_interval:.3f} s"
+            "RR Interval": f"{rr_interval:.2f} s"
         }
         
         results_dict = {

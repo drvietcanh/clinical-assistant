@@ -405,7 +405,7 @@ def render_midazolam_calculator():
         col1, col2 = st.columns(2)
         with col1:
             render_result_card(
-                f"{result['dose_mg_kg_h']:.3f} mg/kg/h",
+                f"{result['dose_mg_kg_h']:.2f} mg/kg/h",
                 "Liều truyền liên tục",
                 "blue"
             )

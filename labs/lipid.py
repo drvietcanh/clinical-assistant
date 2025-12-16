@@ -348,7 +348,7 @@ def render():
         if tg > 0 and hdl > 0:
             aip = math.log10(tg / hdl)
             st.markdown("**4. Atherogenic Index of Plasma (AIP)** = log₁₀(TG/HDL)")
-            st.info(f"**AIP:** {aip:.3f}")
+            st.info(f"**AIP:** {aip:.2f}")
             if aip < -0.3:
                 st.caption("✓ Low risk (<-0.3)")
             elif aip < 0.1:

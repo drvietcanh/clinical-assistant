@@ -403,7 +403,7 @@ def render():
             **Công thức:**
             ```
             RTS = 0.9368 × {result['gcs_coded']} + 0.7326 × {result['sbp_coded']} + 0.2908 × {result['rr_coded']}
-            RTS = {0.9368 * result['gcs_coded']:.3f} + {0.7326 * result['sbp_coded']:.3f} + {0.2908 * result['rr_coded']:.3f}
+            RTS = {0.9368 * result['gcs_coded']:.2f} + {0.7326 * result['sbp_coded']:.2f} + {0.2908 * result['rr_coded']:.2f}
             RTS = {result['rts']:.2f}
             ```
             """)

@@ -446,7 +446,7 @@ with tab1:
     for cat_name, cat_modules in categorized_modules.items():
         if cat_modules:
             st.markdown(f"#### {cat_name}")
-            st.caption(f"{len(cat_modules)} modules")
+            st.caption(f"{len(cat_modules)} module")
             
             # Use responsive columns
             num_cols = min(3, len(cat_modules))
@@ -536,7 +536,7 @@ with tab3:
     st.caption("Thống kê hệ thống, cập nhật mới nhất và mẹo sử dụng")
     
     # Analytics Dashboard Toggle
-        try:
+    try:
         from components.analytics import render_analytics_dashboard
         analytics_tab, stats_tab = st.tabs(["📊 Phân tích sử dụng", "📈 Thống kê hệ thống"])
         
@@ -573,7 +573,7 @@ with st.expander("📚 Nguồn dữ liệu & Tài liệu tham khảo"):
     - ASHP/IDSA 2020 - Vancomycin guidelines
     - ESC 2020 - Atrial fibrillation (CHA₂DS₂-VASc)
     
-    **Cập nhật:** Quarterly review cycle
+    **Cập nhật:** Chu kỳ rà soát hàng quý
     
     **Đóng góp:**
     - GitHub: [Report issues](https://github.com/YOUR_REPO/issues)
