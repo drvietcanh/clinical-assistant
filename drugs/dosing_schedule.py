@@ -133,8 +133,48 @@ def render_dosing_schedule_generator():
     
     st.markdown("---")
     
+    # Quick examples
+    st.markdown("### 💡 Ví dụ nhanh:")
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        if st.button("📋 Vancomycin\n1000mg q12h x 7d", use_container_width=True, key="example_vanco"):
+            st.session_state['schedule_drug_name'] = "Vancomycin"
+            st.session_state['schedule_dose'] = "1000mg"
+            st.session_state['schedule_interval'] = 12
+            st.session_state['schedule_duration'] = 7
+            st.session_state['schedule_route'] = "IV (Tiêm tĩnh mạch)"
+            st.session_state['schedule_start_time'] = "08:00"
+            st.session_state['schedule_generated'] = False
+            st.rerun()
+    
+    with col2:
+        if st.button("📋 Metformin\n500mg q8h x 30d", use_container_width=True, key="example_metformin"):
+            st.session_state['schedule_drug_name'] = "Metformin"
+            st.session_state['schedule_dose'] = "500mg"
+            st.session_state['schedule_interval'] = 8
+            st.session_state['schedule_duration'] = 30
+            st.session_state['schedule_route'] = "PO (Uống)"
+            st.session_state['schedule_start_time'] = "08:00"
+            st.session_state['schedule_generated'] = False
+            st.rerun()
+    
+    with col3:
+        if st.button("📋 Omeprazole\n20mg q24h x 14d", use_container_width=True, key="example_omeprazole"):
+            st.session_state['schedule_drug_name'] = "Omeprazole"
+            st.session_state['schedule_dose'] = "20mg"
+            st.session_state['schedule_interval'] = 24
+            st.session_state['schedule_duration'] = 14
+            st.session_state['schedule_route'] = "PO (Uống)"
+            st.session_state['schedule_start_time'] = "08:00"
+            st.session_state['schedule_generated'] = False
+            st.rerun()
+    
+    st.markdown("---")
+    
     # Generate schedule
     if st.button("📅 Tạo Lịch Trình", type="primary", use_container_width=True):
+        st.session_state['schedule_generated'] = True
         if not drug_name:
             st.error("Vui lòng nhập tên thuốc.")
             return
@@ -148,8 +188,10 @@ def render_dosing_schedule_generator():
         
         if not doses:
             st.error("Không thể tính lịch trình. Vui lòng kiểm tra lại thông tin.")
+            st.session_state['schedule_generated'] = False
             return
         
+        st.session_state['schedule_generated'] = True
         st.markdown("---")
         
         # Display schedule

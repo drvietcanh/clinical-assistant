@@ -523,6 +523,33 @@ def render_iv_compatibility_checker():
     
     available_drugs = sorted(IV_COMPATIBILITY_DB.keys())
     
+    # Quick examples
+    st.markdown("**💡 Ví dụ nhanh:**")
+    col_ex1, col_ex2, col_ex3 = st.columns(3)
+    
+    with col_ex1:
+        if st.button("🔍 Vanco + Pip/Taz", use_container_width=True, key="example_vanco_pip"):
+            st.session_state['iv_num_drugs'] = 2
+            st.session_state['iv_drug_0'] = "Vancomycin"
+            st.session_state['iv_drug_1'] = "Piperacillin-Tazobactam"
+            st.rerun()
+    
+    with col_ex2:
+        if st.button("🔍 Furosemide + Ceftriaxone", use_container_width=True, key="example_furo_ceft"):
+            st.session_state['iv_num_drugs'] = 2
+            st.session_state['iv_drug_0'] = "Furosemide"
+            st.session_state['iv_drug_1'] = "Ceftriaxone"
+            st.rerun()
+    
+    with col_ex3:
+        if st.button("🔍 Dopamine + Heparin", use_container_width=True, key="example_dopa_hep"):
+            st.session_state['iv_num_drugs'] = 2
+            st.session_state['iv_drug_0'] = "Dopamine"
+            st.session_state['iv_drug_1'] = "Heparin"
+            st.rerun()
+    
+    st.markdown("---")
+    
     col1, col2 = st.columns(2)
     
     selected_drugs = []
@@ -555,6 +582,23 @@ def render_iv_compatibility_checker():
             st.caption(f"... và {len(available_drugs) - 20} thuốc khác")
     
     st.markdown("---")
+    
+    # Show instructions if no drugs selected yet
+    if len(selected_drugs) < 2:
+        st.info("""
+        **📝 Hướng dẫn sử dụng:**
+        1. Chọn số lượng thuốc cần kiểm tra (tối thiểu 2 thuốc)
+        2. Chọn từng thuốc từ danh sách dropdown
+        3. Nhấn nút "Kiểm tra tương thích" để xem kết quả
+        
+        **💡 Ví dụ thường gặp:**
+        - Vancomycin + Piperacillin/Tazobactam
+        - Furosemide + Ceftriaxone
+        - Dopamine + Heparin
+        - Insulin + Norepinephrine
+        """)
+        
+        st.markdown("---")
     
     # Check compatibility
     if len(selected_drugs) >= 2:
