@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Hyperglycemic Hyperosmolar State (HHS) Protocol"""
-    st.subheader("🍭 Hội Chứng Tăng Đường Huyết Tăng Áp Lực Thẩm Thấu (HHS)")
+    st.subheader("🍭 Hội Chứng Tăng Đường Huyết Tăng Áp lực Thẩm Thấu (HHS)")
     st.caption("ADA 2023, Endocrine Society - Hyperglycemic hyperosmolar state management")
     
     st.info("""
@@ -159,7 +159,7 @@ def render():
         """)
         
         # Insulin calculator
-        with st.expander("🔢 Tính Liều Insulin", expanded=False):
+        with st.expander("🔢 Tính liều Insulin", expanded=False):
             weight_kg_ins = st.number_input(
                 "Cân nặng (kg):",
                 min_value=40.0,

@@ -51,7 +51,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều trị Chống Đông")
+    st.markdown("### 💊 Điều trị Chống đông")
     
     st.warning("""
     **DOACs (Ưu tiên cho DVT/PE):**

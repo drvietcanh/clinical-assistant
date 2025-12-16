@@ -244,7 +244,7 @@ def render_cam_icu_calculator():
         )
     
     # Feature 3: Disorganized thinking
-    st.markdown("#### 3️⃣ Tư Duy Rối Loạn")
+    st.markdown("#### 3️⃣ Tư Duy Rối loạn")
     feature3_q1 = st.checkbox(
         "Câu trả lời không mạch lạc, lan man?",
         key="cam_icu_f3_q1"

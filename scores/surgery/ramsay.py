@@ -5,6 +5,13 @@ Ramsay Sedation Scale Calculator
 
 import streamlit as st
 from scores.utils.anesthesia_validation import validate_ramsay_score
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def get_ramsay_interpretation(score):
@@ -62,6 +69,13 @@ def get_ramsay_interpretation(score):
 def render():
     """Render Ramsay Sedation Scale interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'ramsay':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>😴 Ramsay Sedation Scale</h2>
     <p style='text-align: center;'><em>Đánh giá mức độ an thần</em></p>
@@ -102,7 +116,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Chọn mức độ an thần")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Chọn mức độ an thần")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="ramsay",
+            calculator_name="Ramsay Sedation Scale",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     score = st.radio(
         "Ramsay Sedation Scale:",
@@ -215,4 +243,49 @@ def render():
             - Vẫn được sử dụng rộng rãi
             - Phù hợp khi không cần đánh giá chi tiết kích động
             """)
-
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Ramsay Score": score
+            }
+            
+            results_dict = {
+                "Ramsay Score": f"{score}/6",
+                "Mức độ": result['level'],
+                "Mô tả": result['description'],
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="ramsay",
+                calculator_name="Ramsay Sedation Scale",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="ramsay",
+                calculator_name="Ramsay Sedation Scale",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="ramsay", show_actions=True)
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("Ramsay")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )

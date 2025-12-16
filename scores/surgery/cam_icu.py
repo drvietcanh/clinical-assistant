@@ -4,6 +4,13 @@ Chẩn đoán mê sảng trong ICU (DÙNG HÀNG NGÀY)
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_cam_icu(acute_onset, inattention, disorganized_thinking, altered_consciousness):
@@ -57,6 +64,13 @@ def calculate_cam_icu(acute_onset, inattention, disorganized_thinking, altered_c
 def render():
     """Render CAM-ICU interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'cam_icu':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🧠 CAM-ICU - Confusion Assessment Method for ICU</h2>
     <p style='text-align: center;'><em>Chẩn đoán mê sảng trong ICU (DÙNG HÀNG NGÀY)</em></p>
@@ -104,7 +118,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 4 đặc điểm")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 4 đặc điểm")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="cam_icu",
+            calculator_name="CAM-ICU - Confusion Assessment Method for ICU",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.info("""
     **Lưu ý:** Đánh giá CAM-ICU cần bệnh nhân có thể giao tiếp (RASS ≥-3).
@@ -258,9 +286,56 @@ def render():
                    - Theo dõi tác dụng phụ thuốc
                    - Đánh giá lại khi có thay đổi
                     """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Khởi phát cấp tính": "Có" if acute_onset == 1 else "Không",
+                "Rối loạn chú ý": "Có" if inattention == 1 else "Không",
+                "Rối loạn tư duy": "Có" if disorganized_thinking == 1 else "Không",
+                "Thay đổi ý thức": "Có" if altered_consciousness == 1 else "Không"
+            }
+            
+            results_dict = {
+                "Kết quả": result['result'],
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="cam_icu",
+                calculator_name="CAM-ICU - Confusion Assessment Method for ICU",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="cam_icu",
+                calculator_name="CAM-ICU - Confusion Assessment Method for ICU",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="cam_icu", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("CAM-ICU")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

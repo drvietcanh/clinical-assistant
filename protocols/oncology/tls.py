@@ -115,7 +115,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: PREVENTION PROTOCOL ==========
-    st.markdown("### 🛡️ Phác Đồ Phòng ngừa")
+    st.markdown("### 🛡️ Phác đồ Phòng ngừa")
     
     risk_level = st.radio(
         "**Mức độ nguy cơ:**",
@@ -135,7 +135,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: HYDRATION ==========
-    st.markdown("### 💧 Phác Đồ Bù dịch")
+    st.markdown("### 💧 Phác đồ Bù dịch")
     
     st.info("""
     **Bù dịch là nền tảng của phòng ngừa TLS:**
@@ -262,7 +262,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 7: MONITORING ==========
-    st.markdown("### 📈 Phác Đồ Theo dõi")
+    st.markdown("### 📈 Phác đồ Theo dõi")
     
     st.markdown("""
     **Ban đầu (trước hóa trị):**

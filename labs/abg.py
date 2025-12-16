@@ -65,7 +65,7 @@ def render():
         
         # Acid-base disorder
         st.markdown("---")
-        st.markdown("**Rối Loạn Acid-Base:**")
+        st.markdown("**Rối loạn Acid-Base:**")
         
         if ph < 7.35:
             if pco2 > 45:

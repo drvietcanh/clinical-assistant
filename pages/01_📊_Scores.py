@@ -62,7 +62,7 @@ with st.sidebar:
     
     st.markdown("---")
     st.caption(f"**{len([s for specialty_scores in SCORES_BY_SPECIALTY.values() for s in specialty_scores])}** calculators")
-    st.caption("**Evidence-based**")
+    st.caption("**Dựa trên bằng chứng**")
 
 # ========== MAIN CONTENT ==========
 

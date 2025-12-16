@@ -192,8 +192,8 @@ with st.sidebar:
         protocol = st.radio(
             "Phác đồ:",
             [
-                "🩸 Truyền Máu (Transfusion)",
-                "🩸 Đảo Ngược Chống Đông (Anticoagulation Reversal)"
+                "🩸 Truyền máu (Transfusion)",
+                "🩸 Đảo Ngược Chống đông (Anticoagulation Reversal)"
             ],
             label_visibility="collapsed"
         )

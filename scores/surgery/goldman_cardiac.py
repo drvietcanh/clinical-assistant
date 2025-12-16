@@ -4,6 +4,13 @@ Goldman Cardiac Risk Index Calculator
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_goldman_cardiac(
@@ -75,6 +82,13 @@ def calculate_goldman_cardiac(
 def render():
     """Render Goldman Cardiac Risk Index interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'goldman_cardiac':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>❤️ Goldman Cardiac Risk Index</h2>
     <p style='text-align: center;'><em>Đánh giá nguy cơ tim mạch trong phẫu thuật (Historical)</em></p>
@@ -120,7 +134,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 12 yếu tố nguy cơ")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 12 yếu tố nguy cơ")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="goldman_cardiac",
+            calculator_name="Goldman Cardiac Risk Index",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.info("**Lưu ý:** Đây là thang điểm cũ. Nên dùng RCRI hoặc Gupta Index cho đánh giá chính xác hơn.")
     
@@ -187,9 +215,67 @@ def render():
             st.markdown(f"""
             {result['recommendation']}
             """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Tuổi ≥70": "Có" if age_70 else "Không",
+                "MI <6 tháng": "Có" if mi_6mo else "Không",
+                "S3/JVD": "Có" if s3_jvd else "Không",
+                "Hẹp van ĐMC": "Có" if aortic_stenosis else "Không",
+                "Nhịp không xoang": "Có" if rhythm_other_sinus else "Không",
+                "Ngoại tâm thu >5/phút": "Có" if premature_beats else "Không",
+                "PO₂<60 hoặc PCO₂>50": "Có" if po2_60_or_pco2_50 else "Không",
+                "K<3 hoặc HCO₃<20": "Có" if k_3_or_hco3_20 else "Không",
+                "BUN>50 hoặc Cr>3": "Có" if bun_50_or_cr_3 else "Không",
+                "SGOT bất thường": "Có" if abnormal_sgot else "Không",
+                "Nằm liệt giường": "Có" if bedridden else "Không",
+                "Phẫu thuật nguy cơ cao": "Có" if intraperitoneal_intrathoracic_aortic else "Không"
+            }
+            
+            results_dict = {
+                "Tổng điểm": f"{result['total_score']}/53",
+                "Risk Class": result['risk_class'],
+                "Nguy cơ": result['risk_level'],
+                "Tỷ lệ biến chứng": f"{result['risk_percentage']:.1f}%",
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="goldman_cardiac",
+                calculator_name="Goldman Cardiac Risk Index",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="goldman_cardiac",
+                calculator_name="Goldman Cardiac Risk Index",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="goldman_cardiac", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("Goldman Cardiac")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

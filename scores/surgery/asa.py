@@ -141,7 +141,7 @@ def render():
     
     st.title("🔪 ASA Physical Status Classification")
     st.markdown("""
-    ### Phân Loại Nguy cơ Phẫu Thuật
+    ### Phân loại Nguy cơ Phẫu Thuật
     
     **ASA Physical Status (American Society of Anesthesiologists):**
     - Hệ thống phân loại được sử dụng toàn cầu

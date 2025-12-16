@@ -89,7 +89,7 @@ def create_enhanced_fields_template():
 
 
 # ============================================================================
-# VALIDATION FUNCTION - Kiểm Tra Tính Hợp Lệ
+# VALIDATION FUNCTION - Kiểm tra Tính Hợp Lệ
 # ============================================================================
 
 def validate_enhanced_fields(drug_name, enhanced_fields):

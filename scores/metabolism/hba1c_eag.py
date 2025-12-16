@@ -101,11 +101,19 @@ def get_diabetes_status(hba1c_percent):
 def render():
     """Render the HbA1c - eAG Converter calculator"""
     
+    # Load shared result if available
     shared = load_shared_result_from_url()
     if shared and shared.get("calculator_id") == "hba1c_eag":
         st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'HbA1c - eAG Converter')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.title("🩺 HbA1c - eAG Converter")
+    
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        pass  # Main content will be below
     st.markdown("""
     ### Chuyển đổi HbA1c ↔ Glucose trung bình
     
@@ -196,39 +204,7 @@ def render():
             **Khuyến nghị:** {status_info['recommendation']}
             """)
             
-            inputs_dict = {
-                "eAG (mg/dL)": round(eag_value),
-                "Input Unit": unit
-            }
-            results_dict = {
-                "HbA1c (%)": round(hba1c, 1),
-                "Status": status_info["status"]
-            }
-            
-            save_calculation_to_history(
-                calculator_id="hba1c_eag",
-                calculator_name="HbA1c - eAG Converter",
-                inputs=inputs_dict,
-                results=results_dict
-            )
-            
-            render_share_section(
-                calculator_id="hba1c_eag",
-                calculator_name="HbA1c - eAG Converter",
-                inputs=inputs_dict,
-                results=results_dict,
-                show_qr=True
-            )
-            
-            render_suggestions(
-                calculator_id="hba1c_eag",
-                calculator_name="HbA1c - eAG Converter",
-                category="Nội Tiết",
-                show_related=True,
-                show_category=True,
-                limit=3
-            )
-            
+            # Prepare data for history and share
             inputs_dict = {"HbA1c (%)": hba1c}
             results_dict = {
                 "eAG (mg/dL)": round(eag_mgdl),
@@ -236,6 +212,7 @@ def render():
                 "Status": status_info["status"]
             }
             
+            # Save to history
             save_calculation_to_history(
                 calculator_id="hba1c_eag",
                 calculator_name="HbA1c - eAG Converter",
@@ -243,6 +220,7 @@ def render():
                 results=results_dict
             )
             
+            # Share section
             render_share_section(
                 calculator_id="hba1c_eag",
                 calculator_name="HbA1c - eAG Converter",
@@ -251,14 +229,10 @@ def render():
                 show_qr=True
             )
             
-            render_suggestions(
-                calculator_id="hba1c_eag",
-                calculator_name="HbA1c - eAG Converter",
-                category="Nội Tiết",
-                show_related=True,
-                show_category=True,
-                limit=3
-            )
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="hba1c_eag", show_actions=True)
             
             # Reference table
             st.markdown("---")
@@ -357,6 +331,38 @@ def render():
             
             **Khuyến nghị:** {status_info['recommendation']}
             """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "eAG (mg/dL)": round(eag_value),
+                "Input Unit": unit
+            }
+            results_dict = {
+                "HbA1c (%)": round(hba1c, 1),
+                "Status": status_info["status"]
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="hba1c_eag",
+                calculator_name="HbA1c - eAG Converter",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="hba1c_eag",
+                calculator_name="HbA1c - eAG Converter",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="hba1c_eag", show_actions=True)
     
     # Clinical notes
     st.markdown("---")

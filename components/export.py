@@ -35,7 +35,7 @@ def format_result_for_export(
     
     # Header
     lines.append("=" * 60)
-    lines.append(f"Clinical Assistant - {calculator_name}")
+    lines.append(f"Trợ lý lâm sàng - {calculator_name}")
     lines.append("=" * 60)
     if include_timestamp:
         lines.append(f"Ngày giờ: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -114,7 +114,7 @@ def generate_pdf(
         )
         
         # Header
-        story.append(Paragraph(f"Clinical Assistant - {calculator_name}", title_style))
+        story.append(Paragraph(f"Trợ lý lâm sàng - {calculator_name}", title_style))
         story.append(Paragraph(f"Ngày giờ: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", styles['Normal']))
         story.append(Spacer(1, 0.2*inch))
         
@@ -349,7 +349,7 @@ def render_batch_export(
                 calc.get('title', f'Kết quả {i}'),
                 calc.get('inputs', {}),
                 calc.get('results', {}),
-                calc.get('calculator_name', 'Unknown'),
+                calc.get('calculator_name', 'Không xác định'),
                 include_timestamp=(i == 1)  # Only include timestamp in first
             )
             all_texts.append(text)
@@ -403,7 +403,7 @@ def render_batch_export(
                     alignment=1
                 )
                 
-                story.append(Paragraph("Clinical Assistant - Batch Export", title_style))
+                story.append(Paragraph("Trợ lý lâm sàng - Xuất hàng loạt", title_style))
                 story.append(Paragraph(f"Ngày giờ: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", styles['Normal']))
                 story.append(Paragraph(f"Tổng số: {len(calculations)} kết quả", styles['Normal']))
                 story.append(Spacer(1, 0.3*inch))
@@ -413,7 +413,7 @@ def render_batch_export(
                         story.append(PageBreak())
                     
                     story.append(Paragraph(f"<b>{calc.get('title', f'Kết quả {i}')}</b>", styles['Heading2']))
-                    story.append(Paragraph(f"Calculator: {calc.get('calculator_name', 'Unknown')}", styles['Normal']))
+                    story.append(Paragraph(f"Calculator: {calc.get('calculator_name', 'Không xác định')}", styles['Normal']))
                     story.append(Spacer(1, 0.1*inch))
                     
                     # Add inputs and results (simplified for batch)

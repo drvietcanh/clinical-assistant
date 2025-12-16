@@ -160,7 +160,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🩸 Chống Đông")
+    st.markdown("### 🩸 Chống đông")
     
     st.error("""
     **DOACs (Ưu tiên):**
@@ -300,7 +300,7 @@ def render_rhythm_control():
 
 def render_anticoagulation():
     """Anticoagulation strategy"""
-    st.error("## 🔴 Chống Đông")
+    st.error("## 🔴 Chống đông")
     
     st.markdown("""
     **CHADS₂-VASc ≥1:** Cần chống đông

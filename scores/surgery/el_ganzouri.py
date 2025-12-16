@@ -5,6 +5,13 @@ El-Ganzouri Risk Index Calculator
 
 import streamlit as st
 from scores.utils.anesthesia_validation import validate_el_ganzouri_score
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_el_ganzouri(
@@ -58,6 +65,13 @@ def calculate_el_ganzouri(
 def render():
     """Render El-Ganzouri Risk Index interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'el_ganzouri':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🔍 El-Ganzouri Risk Index</h2>
     <p style='text-align: center;'><em>Đánh giá nguy cơ đặt nội khí quản khó</em></p>
@@ -92,7 +106,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 7 yếu tố")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 7 yếu tố")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="el_ganzouri",
+            calculator_name="El-Ganzouri Risk Index",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Mouth opening
     st.markdown("### 1️⃣ Mở miệng (Inter-incisor gap)")
@@ -253,9 +281,61 @@ def render():
             - Cân nhắc đặt NKQ tỉnh với fiberoptic
             - Thông báo cho đội ngũ phẫu thuật
             """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Mở miệng": {0: "≥4cm", 1: "3-4cm", 2: "<3cm"}[mouth_opening],
+                "Khoảng cách thyromental": {0: "≥6.5cm", 1: "6-6.5cm", 2: "<6cm"}[thyromental_distance],
+                "Mallampati": {0: "I-II", 1: "III", 2: "IV"}[mallampati],
+                "Cử động cổ": {0: "Bình thường", 1: "Hạn chế", 2: "Nghiêm trọng"}[neck_movement],
+                "Đưa hàm ra": {0: "Bình thường", 1: "Hạn chế", 2: "Không thể"}[jaw_protrusion],
+                "Cân nặng": "Béo phì" if weight == 1 else "Bình thường",
+                "Tiền sử đặt NKQ khó": "Có" if history_difficult_intubation == 1 else "Không"
+            }
+            
+            results_dict = {
+                "Tổng điểm": f"{result['total_score']}/11",
+                "Nguy cơ": result['risk'],
+                "Xác suất": result['probability'],
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="el_ganzouri",
+                calculator_name="El-Ganzouri Risk Index",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="el_ganzouri",
+                calculator_name="El-Ganzouri Risk Index",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="el_ganzouri", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("El-Ganzouri")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

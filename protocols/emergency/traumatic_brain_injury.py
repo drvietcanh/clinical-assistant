@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Traumatic Brain Injury Protocol"""
-    st.subheader("🧠 Chấn Thương Sọ Não (TBI) – Xử trí ban đầu")
+    st.subheader("🧠 Chấn thương Sọ Não (TBI) – Xử trí ban đầu")
     st.caption("Brain Trauma Foundation 4th ed. – ABC, CPP/ICP, chỉ định CT và chuyển tuyến")
 
     st.error(

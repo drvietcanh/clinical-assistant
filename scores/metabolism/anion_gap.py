@@ -30,7 +30,7 @@ def render():
     """Render Anion Gap Calculator"""
     
     st.subheader("🧪 Anion Gap")
-    st.caption("Khoảng Trống Anion - Đánh giá Rối Loạn Acid-Base")
+    st.caption("Khoảng Trống Anion - Đánh giá Rối loạn Acid-Base")
     shared = load_shared_result_from_url()
     if shared and shared.get("calculator_id") == "anion_gap":
         st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Anion Gap')}")

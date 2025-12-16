@@ -5,6 +5,13 @@ Sàng lọc mê sảng nhanh (2 phút)
 
 import streamlit as st
 from scores.utils.anesthesia_validation import validate_4at_components
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_4at(alertness, amt4, attention, acute_change):
@@ -46,6 +53,13 @@ def calculate_4at(alertness, amt4, attention, acute_change):
 
 def render():
     """Render 4AT interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'four_at':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🧠 4AT - 4 A's Test for Delirium</h2>
@@ -99,7 +113,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 4 thành phần")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 4 thành phần")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="four_at",
+            calculator_name="4AT - 4 A's Test for Delirium",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Alertness
     st.markdown("### 1️⃣ Alertness (Mức độ tỉnh táo)")
@@ -277,4 +305,51 @@ def render():
                - Quetiapine 25-100mg PO
                - Olanzapine 2.5-10mg PO/IM
             """)
-
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Alertness": {0: "Bình thường", 1: "Buồn ngủ", 2: "Không đánh thức được"}[alertness],
+                "AMT4": "Bình thường" if amt4 == 0 else "Bất thường",
+                "Attention": "Bình thường" if attention == 0 else "Bất thường",
+                "Acute Change": "Không" if acute_change == 0 else "Có"
+            }
+            
+            results_dict = {
+                "Tổng điểm": f"{result['total_score']}/12",
+                "Kết quả": result['result'],
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="four_at",
+                calculator_name="4AT - 4 A's Test for Delirium",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="four_at",
+                calculator_name="4AT - 4 A's Test for Delirium",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="four_at", show_actions=True)
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("4AT")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )

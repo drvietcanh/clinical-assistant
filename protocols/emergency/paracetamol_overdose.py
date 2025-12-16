@@ -168,7 +168,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: TREATMENT PROTOCOL ==========
-    st.markdown("### 💊 Phác Đồ Điều trị")
+    st.markdown("### 💊 Phác đồ Điều trị")
     
     treatment_indication = st.radio(
         "**Chỉ định điều trị:**",

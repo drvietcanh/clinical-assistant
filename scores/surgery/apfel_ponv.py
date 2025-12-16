@@ -5,6 +5,13 @@ Nguy cơ buồn nôn nôn sau mổ (Postoperative Nausea and Vomiting)
 
 import streamlit as st
 from scores.utils.anesthesia_validation import validate_ponv_risk_factors
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_apfel_ponv(female, non_smoker, history_ponv, opioids):
@@ -58,6 +65,13 @@ def calculate_apfel_ponv(female, non_smoker, history_ponv, opioids):
 def render():
     """Render Apfel PONV Risk Score interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'apfel_ponv':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🤢 Apfel PONV Risk Score</h2>
     <p style='text-align: center;'><em>Nguy cơ buồn nôn nôn sau mổ (Postoperative Nausea and Vomiting)</em></p>
@@ -91,7 +105,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 4 yếu tố nguy cơ")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 4 yếu tố nguy cơ")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="apfel_ponv",
+            calculator_name="Apfel PONV Risk Score",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Risk factors
     female = st.checkbox("1️⃣ Nữ giới", key="apfel_female")
@@ -172,9 +200,58 @@ def render():
             - Tránh N₂O (nitrous oxide) - làm tăng nguy cơ PONV
             - Đảm bảo đủ dịch truyền (giảm nguy cơ PONV)
             """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Nữ giới": "Có" if female else "Không",
+                "Không hút thuốc": "Có" if non_smoker else "Không",
+                "Tiền sử PONV": "Có" if history_ponv else "Không",
+                "Dùng opioid": "Có" if opioids else "Không"
+            }
+            
+            results_dict = {
+                "Số yếu tố nguy cơ": f"{result['risk_factors']}/4",
+                "Nguy cơ PONV": f"{result['risk_percentage']}%",
+                "Khuyến nghị": result['recommendation'],
+                "Dự phòng": result['prophylaxis']
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="apfel_ponv",
+                calculator_name="Apfel PONV Risk Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="apfel_ponv",
+                calculator_name="Apfel PONV Risk Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="apfel_ponv", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("Apfel PONV")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

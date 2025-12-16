@@ -159,7 +159,7 @@ def render():
         
         if is_complete:
             st.markdown("---")
-            st.markdown("### 🔬 Kết quả Nội Soi")
+            st.markdown("### 🔬 Kết quả Nội soi")
             
             # 4. Diagnosis
             st.markdown("#### 4. Chẩn đoán")
@@ -185,7 +185,7 @@ def render():
             st.caption(f"Điểm: {diagnosis_score}")
             
             # 5. Stigmata of recent hemorrhage
-            st.markdown("#### 5. Dấu hiệu Chảy Máu Gần Đây")
+            st.markdown("#### 5. Dấu hiệu Chảy máu Gần Đây")
             
             stigmata_options = [
                 "Không có dấu hiệu hoặc đốm đen (Forrest III)",

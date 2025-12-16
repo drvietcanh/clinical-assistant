@@ -393,7 +393,7 @@ def render():
                 st.success("✅ Chẩn đoán nguy cơ thấp")
         
         st.markdown("---")
-        st.markdown("### 📖 Bảng Điểm PIM2")
+        st.markdown("### 📖 Bảng điểm PIM2")
         
         import pandas as pd
         

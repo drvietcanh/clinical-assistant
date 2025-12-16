@@ -4,6 +4,13 @@ IOP Correction Calculator
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_corrected_iop(measured_iop, cct):
@@ -64,6 +71,14 @@ def calculate_corrected_iop(measured_iop, cct):
 def render():
     """Render IOP Correction calculator interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'iop_correction':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        # Pre-fill inputs from shared result (optional)
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #3B82F6;'>👁️ IOP Correction</h2>
     <p style='text-align: center;'><em>Điều chỉnh nhãn áp theo độ dày giác mạc (CCT)</em></p>
@@ -91,7 +106,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Nhập số liệu")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Nhập số liệu")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="iop_correction",
+            calculator_name="IOP Correction",
+            category="Mắt",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     col1, col2 = st.columns(2)
     
@@ -134,6 +163,9 @@ def render():
         """)
     
     st.markdown("---")
+    
+    # Pre-fill from shared result if available
+    shared_inputs = st.session_state.get('shared_inputs', {})
     
     if st.button("🔬 Điều chỉnh IOP", type="primary", use_container_width=True):
         result = calculate_corrected_iop(measured_iop, cct)
@@ -338,6 +370,54 @@ def render():
             
             5. **American Academy of Ophthalmology.** Primary Open-Angle Glaucoma Preferred Practice Pattern. 2020.
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "IOP đo được": f"{measured_iop:.1f} mmHg",
+            "CCT": f"{cct} μm"
+        }
+        
+        results_dict = {
+            "IOP điều chỉnh": f"{result['corrected_iop']:.1f} mmHg",
+            "Hiệu chỉnh": f"{result['correction']:.1f} mmHg",
+            "Trạng thái": result['status'],
+            "Đánh giá": result['interpretation'],
+            "CCT": result['cct_status']
+        }
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="iop_correction",
+            calculator_name="IOP Correction",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="iop_correction",
+            calculator_name="IOP Correction",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        from components.calculation_history import render_history_ui
+        render_history_ui(calculator_id="iop_correction", show_actions=True)
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("IOP Correction")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     st.markdown("---")
     st.info("""

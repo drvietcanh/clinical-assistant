@@ -263,7 +263,7 @@ def render():
         if selected_ecog >= 3:
             st.markdown("---")
             st.error("""
-            ### ⚠️ Khuyến nghị Đặc Biệt - ECOG 3-4
+            ### ⚠️ Khuyến nghị Đặc biệt - ECOG 3-4
             
             **Ưu tiên:**
             1. **Chăm sóc hỗ trợ (Supportive Care):**

@@ -20,29 +20,29 @@ ALL_CALCULATORS = {
     "qtc": {"name": "QTc - Corrected QT Interval", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
     
     # Scores - Emergency
-    "news2": {"name": "NEWS2", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "mews": {"name": "MEWS - Modified Early Warning Score", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "qsofa": {"name": "qSOFA", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "sofa": {"name": "SOFA", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "sofa2": {"name": "SOFA-2 (2025)", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "apache2": {"name": "APACHE II", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "apache3": {"name": "APACHE III", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "saps2": {"name": "SAPS II", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "saps3": {"name": "SAPS III", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "mods": {"name": "MODS", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "lods": {"name": "LODS", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "hospital_score": {"name": "HOSPITAL Score", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
-    "lace_index": {"name": "LACE Index", "category": "Cấp Cứu", "icon": "🚨", "page": "Scores"},
+    "news2": {"name": "NEWS2", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "mews": {"name": "MEWS - Modified Early Warning Score", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "qsofa": {"name": "qSOFA", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "sofa": {"name": "SOFA", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "sofa2": {"name": "SOFA-2 (2025)", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "apache2": {"name": "APACHE II", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "apache3": {"name": "APACHE III", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "saps2": {"name": "SAPS II", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "saps3": {"name": "SAPS III", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "mods": {"name": "MODS", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "lods": {"name": "LODS", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "hospital_score": {"name": "HOSPITAL Score", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "lace_index": {"name": "LACE Index", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
     
     # Scores - Respiratory
-    "perc": {"name": "PERC Rule", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
-    "curb65": {"name": "CURB-65", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
-    "psi_port": {"name": "PSI/PORT", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
-    "wells_pe": {"name": "Wells PE", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
-    "smartcop": {"name": "SMART-COP", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
-    "bode": {"name": "BODE Index", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
-    "ards_berlin": {"name": "ARDS Berlin Definition", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
-    "pesi": {"name": "PESI", "category": "Hô Hấp", "icon": "🫁", "page": "Scores"},
+    "perc": {"name": "PERC Rule", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
+    "curb65": {"name": "CURB-65", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
+    "psi_port": {"name": "PSI/PORT", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
+    "wells_pe": {"name": "Wells PE", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
+    "smartcop": {"name": "SMART-COP", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
+    "bode": {"name": "BODE Index", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
+    "ards_berlin": {"name": "ARDS Berlin Definition", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
+    "pesi": {"name": "PESI", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
     
     # Scores - Neurology
     "gcs": {"name": "GCS", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
@@ -56,14 +56,14 @@ ALL_CALCULATORS = {
     "four_score": {"name": "FOUR Score", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     
     # Scores - GI/Hepatology
-    "bisap": {"name": "BISAP Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
-    "child_pugh": {"name": "Child-Pugh Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
-    "meld": {"name": "MELD Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
-    "meld_na": {"name": "MELD-Na", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
-    "ranson": {"name": "Ranson Criteria", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
-    "rockall": {"name": "Rockall Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
-    "glasgow_blatchford": {"name": "Glasgow-Blatchford Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
-    "aims65": {"name": "AIMS65 Score", "category": "Tiêu Hóa", "icon": "🩸", "page": "Scores"},
+    "bisap": {"name": "BISAP Score", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
+    "child_pugh": {"name": "Child-Pugh Score", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
+    "meld": {"name": "MELD Score", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
+    "meld_na": {"name": "MELD-Na", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
+    "ranson": {"name": "Ranson Criteria", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
+    "rockall": {"name": "Rockall Score", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
+    "glasgow_blatchford": {"name": "Glasgow-Blatchford Score", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
+    "aims65": {"name": "AIMS65 Score", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
     
     # Scores - Nephrology
     "egfr": {"name": "eGFR - CKD-EPI & MDRD", "category": "Thận", "icon": "🧪", "page": "Scores"},
@@ -72,90 +72,90 @@ ALL_CALCULATORS = {
     "akin": {"name": "AKIN Criteria", "category": "Thận", "icon": "🧪", "page": "Scores"},
     
     # Scores - Hematology
-    "padua": {"name": "Padua Prediction Score", "category": "Huyết Học", "icon": "🩺", "page": "Scores"},
-    "wells_dvt": {"name": "Wells DVT Score", "category": "Huyết Học", "icon": "🩺", "page": "Scores"},
-    "four_ts": {"name": "4Ts Score - HIT", "category": "Huyết Học", "icon": "🩺", "page": "Scores"},
-    "dic_score": {"name": "DIC Score (ISTH)", "category": "Huyết Học", "icon": "🩺", "page": "Scores"},
+    "padua": {"name": "Padua Prediction Score", "category": "Huyết học", "icon": "🩺", "page": "Scores"},
+    "wells_dvt": {"name": "Wells DVT Score", "category": "Huyết học", "icon": "🩺", "page": "Scores"},
+    "four_ts": {"name": "4Ts Score - HIT", "category": "Huyết học", "icon": "🩺", "page": "Scores"},
+    "dic_score": {"name": "DIC Score (ISTH)", "category": "Huyết học", "icon": "🩺", "page": "Scores"},
     
     # Scores - Trauma
-    "rts": {"name": "RTS - Revised Trauma Score", "category": "Chấn Thương", "icon": "🦴", "page": "Scores"},
-    "iss": {"name": "ISS - Injury Severity Score", "category": "Chấn Thương", "icon": "🦴", "page": "Scores"},
-    "nexus": {"name": "NEXUS C-Spine", "category": "Chấn Thương", "icon": "🦴", "page": "Scores"},
-    "canadian_cspine": {"name": "Canadian C-Spine Rule", "category": "Chấn Thương", "icon": "🦴", "page": "Scores"},
-    "triss": {"name": "TRISS", "category": "Chấn Thương", "icon": "🦴", "page": "Scores"},
+    "rts": {"name": "RTS - Revised Trauma Score", "category": "Chấn thương", "icon": "🦴", "page": "Scores"},
+    "iss": {"name": "ISS - Injury Severity Score", "category": "Chấn thương", "icon": "🦴", "page": "Scores"},
+    "nexus": {"name": "NEXUS C-Spine", "category": "Chấn thương", "icon": "🦴", "page": "Scores"},
+    "canadian_cspine": {"name": "Canadian C-Spine Rule", "category": "Chấn thương", "icon": "🦴", "page": "Scores"},
+    "triss": {"name": "TRISS", "category": "Chấn thương", "icon": "🦴", "page": "Scores"},
     
     # Scores - Pediatrics
-    "apgar": {"name": "APGAR Score", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
-    "pews": {"name": "PEWS - Pediatric Early Warning Score", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
-    "pediatric_gcs": {"name": "Pediatric GCS", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
-    "westley_croup": {"name": "Westley Croup Score", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
-    "pelod2": {"name": "PELOD-2", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
-    "prism3": {"name": "PRISM III", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
-    "pim2": {"name": "PIM2 - Pediatric Index of Mortality 2", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
-    "pediatric_sofa": {"name": "Pediatric SOFA", "category": "Nhi Khoa", "icon": "👶", "page": "Scores"},
+    "apgar": {"name": "APGAR Score", "category": "Nhi khoa", "icon": "👶", "page": "Scores"},
+    "pews": {"name": "PEWS - Pediatric Early Warning Score", "category": "Nhi khoa", "icon": "👶", "page": "Scores"},
+    "pediatric_gcs": {"name": "Pediatric GCS", "category": "Nhi khoa", "icon": "👶", "page": "Scores"},
+    "westley_croup": {"name": "Westley Croup Score", "category": "Nhi khoa", "icon": "👶", "page": "Scores"},
+    "pelod2": {"name": "PELOD-2", "category": "Nhi khoa", "icon": "👶", "page": "Scores"},
+    "prism3": {"name": "PRISM III", "category": "Nhi khoa", "icon": "👶", "page": "Scores"},
+    "pim2": {"name": "PIM2 - Pediatric Index of Mortality 2", "category": "Nhi khoa", "icon": "👶", "page": "Scores"},
+    "pediatric_sofa": {"name": "Pediatric SOFA", "category": "Nhi khoa", "icon": "👶", "page": "Scores"},
     
     # Scores - Surgery/Anesthesia
-    "asa": {"name": "ASA Physical Status", "category": "Phẫu Thuật", "icon": "🔪", "page": "Scores"},
-    "aldrete": {"name": "Aldrete Score", "category": "Phẫu Thuật", "icon": "🔪", "page": "Scores"},
-    "mallampati": {"name": "Mallampati Classification", "category": "Phẫu Thuật", "icon": "🔪", "page": "Scores"},
-    "rcri": {"name": "RCRI - Revised Cardiac Risk Index", "category": "Phẫu Thuật", "icon": "🔪", "page": "Scores"},
-    "caprini": {"name": "Caprini VTE Risk Score", "category": "Phẫu Thuật", "icon": "🔪", "page": "Scores"},
-    "possum": {"name": "P-POSSUM Score", "category": "Phẫu Thuật", "icon": "🔪", "page": "Scores"},
+    "asa": {"name": "ASA Physical Status", "category": "Phẫu thuật", "icon": "🔪", "page": "Scores"},
+    "aldrete": {"name": "Aldrete Score", "category": "Phẫu thuật", "icon": "🔪", "page": "Scores"},
+    "mallampati": {"name": "Mallampati Classification", "category": "Phẫu thuật", "icon": "🔪", "page": "Scores"},
+    "rcri": {"name": "RCRI - Revised Cardiac Risk Index", "category": "Phẫu thuật", "icon": "🔪", "page": "Scores"},
+    "caprini": {"name": "Caprini VTE Risk Score", "category": "Phẫu thuật", "icon": "🔪", "page": "Scores"},
+    "possum": {"name": "P-POSSUM Score", "category": "Phẫu thuật", "icon": "🔪", "page": "Scores"},
     
     # Scores - Rheumatology
-    "das28": {"name": "DAS28 - Disease Activity Score", "category": "Thấp Khớp", "icon": "🦴", "page": "Scores"},
-    "cdai": {"name": "CDAI - Clinical Disease Activity Index", "category": "Thấp Khớp", "icon": "🦴", "page": "Scores"},
-    "sdai": {"name": "SDAI - Simplified Disease Activity Index", "category": "Thấp Khớp", "icon": "🦴", "page": "Scores"},
-    "acr_ra": {"name": "ACR/EULAR RA Classification", "category": "Thấp Khớp", "icon": "🦴", "page": "Scores"},
-    "slicc": {"name": "SLICC Criteria", "category": "Thấp Khớp", "icon": "🦴", "page": "Scores"},
-    "sledai": {"name": "SLEDAI - SLE Disease Activity Index", "category": "Thấp Khớp", "icon": "🦴", "page": "Scores"},
-    "gout": {"name": "ACR/EULAR Gout Classification", "category": "Thấp Khớp", "icon": "🦴", "page": "Scores"},
+    "das28": {"name": "DAS28 - Disease Activity Score", "category": "Thấp khớp", "icon": "🦴", "page": "Scores"},
+    "cdai": {"name": "CDAI - Clinical Disease Activity Index", "category": "Thấp khớp", "icon": "🦴", "page": "Scores"},
+    "sdai": {"name": "SDAI - Simplified Disease Activity Index", "category": "Thấp khớp", "icon": "🦴", "page": "Scores"},
+    "acr_ra": {"name": "ACR/EULAR RA Classification", "category": "Thấp khớp", "icon": "🦴", "page": "Scores"},
+    "slicc": {"name": "SLICC Criteria", "category": "Thấp khớp", "icon": "🦴", "page": "Scores"},
+    "sledai": {"name": "SLEDAI - SLE Disease Activity Index", "category": "Thấp khớp", "icon": "🦴", "page": "Scores"},
+    "gout": {"name": "ACR/EULAR Gout Classification", "category": "Thấp khớp", "icon": "🦴", "page": "Scores"},
     
     # Scores - Psychiatry
-    "phq9": {"name": "PHQ-9 - Patient Health Questionnaire", "category": "Tâm Thần", "icon": "🧠", "page": "Scores"},
-    "gad7": {"name": "GAD-7 - Generalized Anxiety Disorder", "category": "Tâm Thần", "icon": "🧠", "page": "Scores"},
-    "mmse": {"name": "MMSE - Mini Mental State Exam", "category": "Tâm Thần", "icon": "🧠", "page": "Scores"},
-    "moca": {"name": "MoCA - Montreal Cognitive Assessment", "category": "Tâm Thần", "icon": "🧠", "page": "Scores"},
-    "cam": {"name": "CAM - Confusion Assessment Method", "category": "Tâm Thần", "icon": "🧠", "page": "Scores"},
-    "ciwa": {"name": "CIWA-Ar", "category": "Tâm Thần", "icon": "🧠", "page": "Scores"},
-    "cows": {"name": "COWS - Clinical Opiate Withdrawal", "category": "Tâm Thần", "icon": "🧠", "page": "Scores"},
+    "phq9": {"name": "PHQ-9 - Patient Health Questionnaire", "category": "Tâm thần", "icon": "🧠", "page": "Scores"},
+    "gad7": {"name": "GAD-7 - Generalized Anxiety Disorder", "category": "Tâm thần", "icon": "🧠", "page": "Scores"},
+    "mmse": {"name": "MMSE - Mini Mental State Exam", "category": "Tâm thần", "icon": "🧠", "page": "Scores"},
+    "moca": {"name": "MoCA - Montreal Cognitive Assessment", "category": "Tâm thần", "icon": "🧠", "page": "Scores"},
+    "cam": {"name": "CAM - Confusion Assessment Method", "category": "Tâm thần", "icon": "🧠", "page": "Scores"},
+    "ciwa": {"name": "CIWA-Ar", "category": "Tâm thần", "icon": "🧠", "page": "Scores"},
+    "cows": {"name": "COWS - Clinical Opiate Withdrawal", "category": "Tâm thần", "icon": "🧠", "page": "Scores"},
     
     # Scores - Dermatology
-    "pasi": {"name": "PASI - Psoriasis Area Severity Index", "category": "Da Liễu", "icon": "🩹", "page": "Scores"},
-    "scorad": {"name": "SCORAD - SCORing Atopic Dermatitis", "category": "Da Liễu", "icon": "🩹", "page": "Scores"},
-    "dlqi": {"name": "DLQI - Dermatology Life Quality Index", "category": "Da Liễu", "icon": "🩹", "page": "Scores"},
-    "burn_tbsa": {"name": "TBSA - Total Body Surface Area", "category": "Da Liễu", "icon": "🩹", "page": "Scores"},
-    "parkland": {"name": "Parkland Formula", "category": "Da Liễu", "icon": "🩹", "page": "Scores"},
+    "pasi": {"name": "PASI - Psoriasis Area Severity Index", "category": "Da liễu", "icon": "🩹", "page": "Scores"},
+    "scorad": {"name": "SCORAD - SCORing Atopic Dermatitis", "category": "Da liễu", "icon": "🩹", "page": "Scores"},
+    "dlqi": {"name": "DLQI - Dermatology Life Quality Index", "category": "Da liễu", "icon": "🩹", "page": "Scores"},
+    "burn_tbsa": {"name": "TBSA - Total Body Surface Area", "category": "Da liễu", "icon": "🩹", "page": "Scores"},
+    "parkland": {"name": "Parkland Formula", "category": "Da liễu", "icon": "🩹", "page": "Scores"},
     
     # Scores - Oncology
-    "ecog": {"name": "ECOG Performance Status", "category": "Ung Thư", "icon": "🎗️", "page": "Scores"},
-    "karnofsky": {"name": "Karnofsky Performance Scale", "category": "Ung Thư", "icon": "🎗️", "page": "Scores"},
-    "pps": {"name": "PPS - Palliative Performance Scale", "category": "Ung Thư", "icon": "🎗️", "page": "Scores"},
-    "cipn": {"name": "CIPN Grading", "category": "Ung Thư", "icon": "🎗️", "page": "Scores"},
+    "ecog": {"name": "ECOG Performance Status", "category": "Ung thư", "icon": "🎗️", "page": "Scores"},
+    "karnofsky": {"name": "Karnofsky Performance Scale", "category": "Ung thư", "icon": "🎗️", "page": "Scores"},
+    "pps": {"name": "PPS - Palliative Performance Scale", "category": "Ung thư", "icon": "🎗️", "page": "Scores"},
+    "cipn": {"name": "CIPN Grading", "category": "Ung thư", "icon": "🎗️", "page": "Scores"},
     
     # Scores - Obstetrics
-    "preeclampsia": {"name": "Preeclampsia Severity", "category": "Sản Khoa", "icon": "🤰", "page": "Scores"},
-    "bishop": {"name": "Bishop Score", "category": "Sản Khoa", "icon": "🤰", "page": "Scores"},
-    "modified_bishop": {"name": "Modified Bishop Score", "category": "Sản Khoa", "icon": "🤰", "page": "Scores"},
+    "preeclampsia": {"name": "Preeclampsia Severity", "category": "Sản khoa", "icon": "🤰", "page": "Scores"},
+    "bishop": {"name": "Bishop Score", "category": "Sản khoa", "icon": "🤰", "page": "Scores"},
+    "modified_bishop": {"name": "Modified Bishop Score", "category": "Sản khoa", "icon": "🤰", "page": "Scores"},
     
     # Scores - ENT
-    "epworth": {"name": "Epworth Sleepiness Scale", "category": "Tai Mũi Họng", "icon": "👂", "page": "Scores"},
-    "stop_bang": {"name": "STOP-BANG Score", "category": "Tai Mũi Họng", "icon": "👂", "page": "Scores"},
+    "epworth": {"name": "Epworth Sleepiness Scale", "category": "Tai mũi họng", "icon": "👂", "page": "Scores"},
+    "stop_bang": {"name": "STOP-BANG Score", "category": "Tai mũi họng", "icon": "👂", "page": "Scores"},
     
     # Scores - Ophthalmology
     "iop_correction": {"name": "IOP Correction", "category": "Mắt", "icon": "👁️", "page": "Scores"},
     
     # Scores - Pain Assessment
-    "nrs": {"name": "NRS - Numeric Rating Scale", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
-    "vas": {"name": "VAS - Visual Analog Scale", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
-    "flacc": {"name": "FLACC", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
-    "nips": {"name": "NIPS - Neonatal Infant Pain Scale", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
-    "wong_baker": {"name": "Wong-Baker Faces Scale", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
-    "dn4": {"name": "DN4 - Neuropathic Pain", "category": "Đánh Giá Đau", "icon": "😣", "page": "Scores"},
+    "nrs": {"name": "NRS - Numeric Rating Scale", "category": "Đánh giá đau", "icon": "😣", "page": "Scores"},
+    "vas": {"name": "VAS - Visual Analog Scale", "category": "Đánh giá đau", "icon": "😣", "page": "Scores"},
+    "flacc": {"name": "FLACC", "category": "Đánh giá đau", "icon": "😣", "page": "Scores"},
+    "nips": {"name": "NIPS - Neonatal Infant Pain Scale", "category": "Đánh giá đau", "icon": "😣", "page": "Scores"},
+    "wong_baker": {"name": "Wong-Baker Faces Scale", "category": "Đánh giá đau", "icon": "😣", "page": "Scores"},
+    "dn4": {"name": "DN4 - Neuropathic Pain", "category": "Đánh giá đau", "icon": "😣", "page": "Scores"},
     
     # Scores - Nursing Care
-    "braden": {"name": "Braden Scale", "category": "Điều Dưỡng", "icon": "🩺", "page": "Scores"},
-    "morse": {"name": "Morse Fall Scale", "category": "Điều Dưỡng", "icon": "🩺", "page": "Scores"},
+    "braden": {"name": "Braden Scale", "category": "Điều dưỡng", "icon": "🩺", "page": "Scores"},
+    "morse": {"name": "Morse Fall Scale", "category": "Điều dưỡng", "icon": "🩺", "page": "Scores"},
     
     # Scores - Metabolism/Endocrinology
     "crcl": {"name": "CrCl - Cockcroft-Gault", "category": "Nội Tiết", "icon": "💉", "page": "Scores"},
@@ -169,11 +169,11 @@ ALL_CALCULATORS = {
     "free_t4_index": {"name": "Free T4 Index (FTI)", "category": "Nội Tiết", "icon": "💉", "page": "Scores"},
     
     # Scores - Infectious Disease
-    "sirs": {"name": "SIRS - Systemic Inflammatory Response", "category": "Nhiễm Khuẩn", "icon": "🦠", "page": "Scores"},
-    "pitt_bacteremia": {"name": "Pitt Bacteremia Score", "category": "Nhiễm Khuẩn", "icon": "🦠", "page": "Scores"},
-    "mascc": {"name": "MASCC Risk Index", "category": "Nhiễm Khuẩn", "icon": "🦠", "page": "Scores"},
-    "centor": {"name": "Centor Score", "category": "Nhiễm Khuẩn", "icon": "🦠", "page": "Scores"},
-    "feverpain": {"name": "FeverPAIN Score", "category": "Nhiễm Khuẩn", "icon": "🦠", "page": "Scores"},
+    "sirs": {"name": "SIRS - Systemic Inflammatory Response", "category": "Nhiễm khuẩn", "icon": "🦠", "page": "Scores"},
+    "pitt_bacteremia": {"name": "Pitt Bacteremia Score", "category": "Nhiễm khuẩn", "icon": "🦠", "page": "Scores"},
+    "mascc": {"name": "MASCC Risk Index", "category": "Nhiễm khuẩn", "icon": "🦠", "page": "Scores"},
+    "centor": {"name": "Centor Score", "category": "Nhiễm khuẩn", "icon": "🦠", "page": "Scores"},
+    "feverpain": {"name": "FeverPAIN Score", "category": "Nhiễm khuẩn", "icon": "🦠", "page": "Scores"},
     
     # Labs
     "cbc": {"name": "CBC", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
@@ -187,14 +187,14 @@ ALL_CALCULATORS = {
     "abg": {"name": "ABG", "category": "Xét nghiệm", "icon": "🔬", "page": "Labs"},
     
     # Ventilator
-    "ardsnet": {"name": "ARDSNet Calculator", "category": "Thở Máy", "icon": "🫁", "page": "Ventilator"},
-    "peep_fio2": {"name": "PEEP/FiO2 Table", "category": "Thở Máy", "icon": "🫁", "page": "Ventilator"},
+    "ardsnet": {"name": "ARDSNet Calculator", "category": "Thở máy", "icon": "🫁", "page": "Ventilator"},
+    "peep_fio2": {"name": "PEEP/FiO2 Table", "category": "Thở máy", "icon": "🫁", "page": "Ventilator"},
     
     # Protocols
-    "sepsis": {"name": "Sepsis Bundle", "category": "Phác Đồ", "icon": "📋", "page": "Protocols"},
-    "copd": {"name": "COPD", "category": "Phác Đồ", "icon": "📋", "page": "Protocols"},
-    "asthma": {"name": "Asthma", "category": "Phác Đồ", "icon": "📋", "page": "Protocols"},
-    "acs": {"name": "ACS", "category": "Phác Đồ", "icon": "📋", "page": "Protocols"},
-    "heart_failure": {"name": "Heart Failure", "category": "Phác Đồ", "icon": "📋", "page": "Protocols"},
+    "sepsis": {"name": "Sepsis Bundle", "category": "Phác đồ", "icon": "📋", "page": "Protocols"},
+    "copd": {"name": "COPD", "category": "Phác đồ", "icon": "📋", "page": "Protocols"},
+    "asthma": {"name": "Asthma", "category": "Phác đồ", "icon": "📋", "page": "Protocols"},
+    "acs": {"name": "ACS", "category": "Phác đồ", "icon": "📋", "page": "Protocols"},
+    "heart_failure": {"name": "Heart Failure", "category": "Phác đồ", "icon": "📋", "page": "Protocols"},
 }
 

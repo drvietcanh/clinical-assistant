@@ -126,7 +126,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: TREATMENT PROTOCOL ==========
-    st.markdown("### 💊 Phác Đồ Điều trị")
+    st.markdown("### 💊 Phác đồ Điều trị")
     
     severity = st.radio(
         "**Mức độ nghiêm trọng:**",
@@ -187,7 +187,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: CARDIAC ARREST ==========
-    st.markdown("### 💔 Ngừng Tim Do Hạ Thân Nhiệt")
+    st.markdown("### 💔 Ngừng tim Do Hạ Thân Nhiệt")
     
     st.error("""
     **Đặc điểm:**

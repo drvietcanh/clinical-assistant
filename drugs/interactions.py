@@ -228,7 +228,7 @@ def render_interaction_checker():
         # Display interactions
         if interactions:
             st.markdown("---")
-            st.markdown("### ⚠️ Phát Hiện Tương tác")
+            st.markdown("### ⚠️ Phát hiện Tương tác")
             
             # Visual Interaction Matrix
             st.markdown("#### 📊 Ma Trận Tương tác Trực Quan")

@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Malignant Arrhythmias Protocol"""
-    st.subheader("⚡ Rối Loạn Nhịp Nguy Hiểm (VF/pVT/Torsades)")
+    st.subheader("⚡ Rối loạn Nhịp Nguy Hiểm (VF/pVT/Torsades)")
     st.caption("AHA ACLS 2020/2022, ESC 2022 – Sốc điện sớm, MgSO4, tìm Hs & Ts")
 
     st.error(

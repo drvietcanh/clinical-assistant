@@ -313,7 +313,7 @@ def render_weaning_calculator():
             neuro_gcs = st.number_input("GCS", 3, 15, 15, 1, format="%d", key="weaning_neuro_gcs")
         
         st.markdown("---")
-        st.markdown("#### 📋 Yếu Tố Khác")
+        st.markdown("#### 📋 Yếu tố Khác")
         
         col1, col2, col3 = st.columns(3)
         with col1:

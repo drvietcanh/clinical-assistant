@@ -5,6 +5,13 @@ Nguy cơ biến chứng hô hấp sau phẫu thuật
 
 import streamlit as st
 from scores.utils.anesthesia_validation import validate_ariscat_components
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_ariscat(age, spo2, respiratory_infection, anemia, surgical_incision, duration_surgery, emergency):
@@ -54,6 +61,13 @@ def calculate_ariscat(age, spo2, respiratory_infection, anemia, surgical_incisio
 
 def render():
     """Render ARISCAT interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'ariscat':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🫁 ARISCAT - Assess Respiratory Risk in Surgical Patients</h2>
@@ -117,7 +131,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 7 yếu tố nguy cơ")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 7 yếu tố nguy cơ")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="ariscat",
+            calculator_name="ARISCAT - Assess Respiratory Risk in Surgical Patients",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Age
     st.markdown("### 1️⃣ Tuổi")
@@ -288,9 +316,61 @@ def render():
             - Chụp X-quang ngực nếu có triệu chứng
             - Theo dõi SpO₂ liên tục
             """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Tuổi": {0: "<50", 1: "50-80", 2: ">80"}[age],
+                "SpO₂": {0: ">95%", 1: "91-95%", 2: "<91%"}[spo2],
+                "Nhiễm trùng hô hấp": "Có" if respiratory_infection == 1 else "Không",
+                "Thiếu máu": "Có" if anemia == 1 else "Không",
+                "Vị trí đường mổ": "Bụng trên/ngực" if surgical_incision == 1 else "Ngoại vi",
+                "Thời gian phẫu thuật": {0: "<2h", 1: "2-3h", 2: ">3h"}[duration_surgery],
+                "Phẫu thuật cấp cứu": "Có" if emergency == 1 else "Không"
+            }
+            
+            results_dict = {
+                "Tổng điểm": result['total_score'],
+                "Nguy cơ": result['risk_level'],
+                "Tỷ lệ biến chứng": f"{result['risk_percentage']:.1f}%",
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="ariscat",
+                calculator_name="ARISCAT - Assess Respiratory Risk in Surgical Patients",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="ariscat",
+                calculator_name="ARISCAT - Assess Respiratory Risk in Surgical Patients",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="ariscat", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("ARISCAT")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

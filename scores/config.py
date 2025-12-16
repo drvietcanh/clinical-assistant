@@ -59,7 +59,7 @@ SCORES_BY_SPECIALTY = {
         "FOUR Score": {"name": "FOUR Score - Full Outline of UnResponsiveness", "desc": "Đánh giá mức độ ý thức - Thay thế GCS cho bệnh nhân thở máy", "status": "✅"},
     },
     
-    "🩸 Tiêu Hóa - Gan Mật (GI/Hepatology)": {
+    "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)": {
         "BISAP": {"name": "BISAP Score", "desc": "Tiên lượng viêm tụy cấp (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Child-Pugh": {"name": "Child-Pugh Score", "desc": "Mức độ xơ gan", "status": "✅"},
         "MELD": {"name": "MELD Score", "desc": "Tiên lượng bệnh gan mạn & ghép gan", "status": "✅"},
@@ -84,7 +84,7 @@ SCORES_BY_SPECIALTY = {
         "AKIN": {"name": "AKIN Criteria", "desc": "Suy thận cấp (Historical)", "status": "✅"},
     },
     
-    "🦴 Chấn Thương & Chỉnh Hình (Trauma/Orthopedics)": {
+    "🦴 Chấn thương & Chỉnh Hình (Trauma/Orthopedics)": {
         "RTS": {"name": "RTS - Revised Trauma Score", "desc": "Tiên lượng chấn thương (sinh lý)", "status": "✅"},
         "ISS": {"name": "ISS - Injury Severity Score", "desc": "Mức độ nặng đa chấn thương (giải phẫu)", "status": "✅"},
         "NEXUS": {"name": "NEXUS C-Spine", "desc": "Cần chụp X-quang cột sống cổ", "status": "✅"},
@@ -97,7 +97,7 @@ SCORES_BY_SPECIALTY = {
         "STOP-BANG": {"name": "STOP-BANG Score", "desc": "Sàng lọc OSA", "status": "✅"},
     },
     
-    "👶 Nhi Khoa (Pediatrics)": {
+    "👶 Nhi khoa (Pediatrics)": {
         "Westley Croup": {"name": "Westley Croup Score", "desc": "Mức độ nặng croup (DÙNG HÀNG NGÀY)", "status": "✅"},
         "PEWS": {"name": "PEWS - Pediatric Early Warning Score", "desc": "Cảnh báo sớm nhi", "status": "✅"},
         "APGAR": {"name": "APGAR Score", "desc": "Đánh giá trẻ sơ sinh", "status": "✅"},
@@ -126,7 +126,7 @@ SCORES_BY_SPECIALTY = {
         "Free T4 Index": {"name": "Free T4 Index (FTI)", "desc": "Chỉ số T4 tự do", "status": "✅"},
     },
     
-    "🦴 Thấp Khớp - Miễn Dịch (Rheumatology/Immunology)": {
+    "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)": {
         "DAS28": {"name": "DAS28 - Disease Activity Score", "desc": "Hoạt động bệnh viêm khớp dạng thấp", "status": "✅"},
         "CDAI": {"name": "CDAI - Clinical Disease Activity Index", "desc": "Chỉ số hoạt động lâm sàng RA", "status": "✅"},
         "SDAI": {"name": "SDAI - Simplified Disease Activity Index", "desc": "Chỉ số đơn giản hóa RA", "status": "✅"},
@@ -144,7 +144,7 @@ SCORES_BY_SPECIALTY = {
         "FeverPAIN": {"name": "FeverPAIN Score", "desc": "Viêm amidan - cần kháng sinh", "status": "✅"},
     },
     
-    "🩹 Da Liễu (Dermatology)": {
+    "🩹 Da liễu (Dermatology)": {
         "PASI": {"name": "PASI - Psoriasis Area Severity Index", "desc": "Mức độ nặng vẩy nến", "status": "✅"},
         "SCORAD": {"name": "SCORAD - SCORing Atopic Dermatitis", "desc": "Điểm viêm da cơ địa", "status": "✅"},
         "DLQI": {"name": "DLQI - Dermatology Life Quality Index", "desc": "Chất lượng cuộc sống bệnh da", "status": "✅"},
@@ -159,7 +159,7 @@ SCORES_BY_SPECIALTY = {
         "CIPN Grading": {"name": "CIPN Grading", "desc": "Phân độ tổn thương thần kinh ngoại biên", "status": "✅"},
     },
     
-    "🧠 Tâm Thần - Tâm Lý (Psychiatry/Psychology)": {
+    "🧠 Tâm thần - Tâm Lý (Psychiatry/Psychology)": {
         "PHQ-9": {"name": "PHQ-9 - Patient Health Questionnaire", "desc": "Sàng lọc trầm cảm", "status": "✅"},
         "GAD-7": {"name": "GAD-7 - Generalized Anxiety Disorder", "desc": "Rối loạn lo âu lan tỏa", "status": "✅"},
         "MMSE": {"name": "MMSE - Mini Mental State Exam", "desc": "Đánh giá nhận thức", "status": "✅"},
@@ -169,7 +169,7 @@ SCORES_BY_SPECIALTY = {
         "COWS": {"name": "COWS - Clinical Opiate Withdrawal", "desc": "Cai opioid", "status": "✅"},
     },
     
-    "🔪 Phẫu Thuật & Gây Mê (Surgery/Anesthesia)": {
+    "🔪 Phẫu thuật & Gây mê (Surgery/Anesthesia)": {
         "ASA": {"name": "ASA Physical Status", "desc": "Phân loại nguy cơ phẫu thuật", "status": "✅"},
         "P-POSSUM": {"name": "P-POSSUM Score", "desc": "Nguy cơ tử vong phẫu thuật", "status": "✅"},
         "RCRI": {"name": "RCRI - Revised Cardiac Risk Index", "desc": "Nguy cơ tim mạch phẫu thuật", "status": "✅"},

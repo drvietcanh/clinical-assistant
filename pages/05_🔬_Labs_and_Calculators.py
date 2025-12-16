@@ -34,7 +34,7 @@ from scores.nephrology.egfr import render as render_egfr
 
 # Standard page setup
 setup_page(
-    page_title="Labs & Calculators",
+    page_title="Xét nghiệm & Calculators",
     page_icon="🔬",
     description="Tra cứu giá trị xét nghiệm, giải thích kết quả và tính toán công thức lâm sàng"
 )
@@ -51,7 +51,7 @@ with st.sidebar:
             "📈 Lab Enhancement"
         ],
         index=0,
-        help="Calculators: Tính toán công thức lâm sàng\nLab Panels: Tra cứu và giải thích giá trị xét nghiệm\nLab Enhancement: Trend analysis và panel calculator"
+        help="Calculators: Tính toán công thức lâm sàng\nLab Panels: Tra cứu và giải thích giá trị xét nghiệm\nLab Enhancement: Phân tích xu hướng và calculator panel"
     )
     
     st.markdown("---")
@@ -118,9 +118,9 @@ with st.sidebar:
         
         st.info("""
         **📚 Features:**
-        - Normal ranges
-        - Critical values
-        - Interpretation guide
+        - Khoảng giá trị bình thường
+        - Giá trị nguy kịch
+        - Hướng dẫn diễn giải
         - Common patterns
         
         **💡 Tip:**
@@ -147,16 +147,16 @@ with st.sidebar:
         **Trend Analysis:**
         - Serial lab monitoring
         - Trend visualization
-        - Pattern recognition
+        - Nhận dạng mẫu
         
         **Panel Calculator:**
-        - Multi-lab interpretation
-        - Auto-pattern detection
-        - Critical value alerts
+        - Diễn giải đa xét nghiệm
+        - Tự động phát hiện mẫu
+        - Cảnh báo giá trị nguy kịch
         """)
     
     st.markdown("---")
-    st.caption("**Version:** 2.0")
+    st.caption("**Phiên bản:** 2.0")
     st.caption("**Updated:** 2025-01-31")
 
 # ========== MAIN CONTENT ==========

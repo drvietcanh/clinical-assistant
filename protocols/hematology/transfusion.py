@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Transfusion Protocols"""
-    st.subheader("🩸 Truyền Máu (Transfusion)")
+    st.subheader("🩸 Truyền máu (Transfusion)")
     st.caption("AABB 2016, ASH 2018 - Blood product transfusion guidelines")
     
     st.info("""
@@ -77,7 +77,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚠️ Phản Ứng Truyền Máu")
+    st.markdown("### ⚠️ Phản ứng Truyền máu")
     
     st.error("""
     **Phản ứng truyền máu cấp tính:**

@@ -194,7 +194,7 @@ def render_fluid_calculator():
     tab1, tab2, tab3, tab4 = st.tabs([
         "💧 Maintenance Fluids",
         "⬆️ Tăng Natri (Fluid Deficit)",
-        "⬇️ Hạ Natri (Correction)",
+        "⬇️ Hạ natri (Correction)",
         "🧪 Electrolytes"
     ])
     
@@ -369,7 +369,7 @@ def render_fluid_calculator():
     
     # ========== TAB 3: HYPONATREMIA CORRECTION ==========
     with tab3:
-        st.markdown("### ⬇️ Điều chỉnh Hạ Natri Máu")
+        st.markdown("### ⬇️ Điều chỉnh Hạ natri Máu")
         
         col1, col2 = st.columns(2)
         

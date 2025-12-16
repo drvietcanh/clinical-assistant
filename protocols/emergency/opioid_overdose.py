@@ -401,7 +401,7 @@ def render_severe_overdose():
 
 def render_respiratory_arrest():
     """Respiratory arrest protocol"""
-    st.error("## ⚫ Ngừng Thở - ACLS + Naloxone")
+    st.error("## ⚫ Ngừng thở - ACLS + Naloxone")
     
     st.markdown("""
     **Ngừng thở do ngộ độc opioid:**

@@ -144,7 +144,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: PATHOPHYSIOLOGY ==========
-    st.markdown("### 🔬 Cơ Chế Bệnh Sinh")
+    st.markdown("### 🔬 Cơ chế Bệnh Sinh")
     
     st.markdown("""
     **Hypercalcemia of Malignancy có 3 cơ chế chính:**

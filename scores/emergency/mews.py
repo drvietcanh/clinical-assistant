@@ -310,7 +310,7 @@ def render():
         )
         
         st.markdown("---")
-        st.markdown("### 📖 Bảng Điểm MEWS")
+        st.markdown("### 📖 Bảng điểm MEWS")
         
         # Scoring table
         import pandas as pd

@@ -51,7 +51,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 2: XỬ TRÍ BAN ĐẦU ========== #
-    st.markdown("### 🏥 Xử trí Ban Đầu (ABCD + Giải Độc)")
+    st.markdown("### 🏥 Xử trí Ban Đầu (ABCD + Giải độc)")
     st.warning(
         """
         1) **Đảm bảo an toàn nhân viên**: PPE, tháo bỏ quần áo nhiễm độc, rửa da bằng xà phòng/nước.

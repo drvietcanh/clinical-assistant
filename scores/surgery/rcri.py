@@ -4,6 +4,13 @@ RCRI - Revised Cardiac Risk Index Calculator
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def calculate_rcri(high_risk_surgery, ischemic_heart, chf, cvd, dm_insulin, creat):
@@ -36,6 +43,13 @@ def calculate_rcri(high_risk_surgery, ischemic_heart, chf, cvd, dm_insulin, crea
 def render():
     """Render RCRI calculator interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'rcri':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #DC2626;'>❤️ RCRI - Revised Cardiac Risk Index</h2>
     <p style='text-align: center;'><em>Nguy cơ biến chứng tim mạch phẫu thuật (Lee's Index)</em></p>
@@ -59,7 +73,22 @@ def render():
         """)
     
     st.markdown("---")
-    st.subheader("📝 Đánh giá 6 yếu tố nguy cơ")
+    
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 6 yếu tố nguy cơ")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="rcri",
+            calculator_name="RCRI - Revised Cardiac Risk Index",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     high_risk_surgery = st.checkbox(
         "Phẫu thuật nguy cơ cao",
@@ -177,6 +206,56 @@ def render():
             | 2 | Trung bình | 4-7% |
             | ≥3 | Cao | ≥9-11% |
             """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Phẫu thuật nguy cơ cao": "Có" if high_risk_surgery else "Không",
+                "Bệnh tim thiếu máu": "Có" if ischemic_heart else "Không",
+                "Suy tim": "Có" if chf else "Không",
+                "Bệnh mạch não": "Có" if cvd else "Không",
+                "ĐTĐ dùng insulin": "Có" if dm_insulin else "Không",
+                "Creatinine > 2": "Có" if creat else "Không"
+            }
+            
+            results_dict = {
+                "RCRI Score": f"{result['total_score']}/6",
+                "Nguy cơ": result['risk_level'],
+                "Tỷ lệ biến chứng": result['cardiac_event_rate']
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="rcri",
+                calculator_name="RCRI - Revised Cardiac Risk Index",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="rcri",
+                calculator_name="RCRI - Revised Cardiac Risk Index",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="rcri", show_actions=True)
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("RCRI")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

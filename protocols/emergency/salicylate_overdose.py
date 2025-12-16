@@ -161,7 +161,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: LABORATORY FINDINGS ==========
-    st.markdown("### 🧪 Xét Nghiệm")
+    st.markdown("### 🧪 Xét nghiệm")
     
     col1, col2 = st.columns(2)
     
@@ -191,7 +191,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: TREATMENT PROTOCOL ==========
-    st.markdown("### 💊 Phác Đồ Điều trị")
+    st.markdown("### 💊 Phác đồ Điều trị")
     
     severity = st.radio(
         "**Mức độ nghiêm trọng:**",

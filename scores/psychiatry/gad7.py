@@ -97,7 +97,7 @@ def render():
     
     st.title("😰 GAD-7 - Generalized Anxiety Disorder")
     st.markdown("""
-    ### Sàng Lọc Rối Loạn Lo Âu Lan Tỏa
+    ### Sàng lọc Rối Loạn Lo âu Lan Tỏa
     
     **GAD-7:**
     - Công cụ sàng lọc rối loạn lo âu được validate
@@ -294,7 +294,7 @@ def render():
             # Comorbidity screening
             if total_score >= 10:
                 st.markdown("---")
-                st.subheader("🔍 Sàng Lọc Bệnh Đồng Mắc")
+    st.subheader("🔍 Sàng lọc Bệnh Đồng Mắc")
                 
                 st.warning("""
                 **Lưu ý:** Rối loạn lo âu thường đi kèm với:
@@ -338,7 +338,7 @@ def render():
         - Cũng sàng lọc tốt cho panic disorder, social anxiety, PTSD
         """)
     
-    with st.expander("💊 Lựa Chọn Điều trị Lo Âu"):
+    with st.expander("💊 Lựa Chọn Điều trị Lo âu"):
         st.markdown("""
         ### Tâm lý trị liệu:
         
@@ -478,7 +478,7 @@ def render():
         - **Cai chất:** Alcohol, benzodiazepines
         """)
     
-    with st.expander("💡 Kỹ Thuật Tự Quản lý Lo Âu"):
+    with st.expander("💡 Kỹ Thuật Tự Quản lý Lo âu"):
         st.markdown("""
         ### Kỹ thuật hô hấp:
         

@@ -99,7 +99,7 @@ def render_multi_comparison():
             "Phối hợp MRSA": ["Vancomycin", "Piperacillin-Tazobactam"],
             "Phối hợp Pseudomonas": ["Piperacillin-Tazobactam", "Ciprofloxacin"],
             "Phối hợp nhiễm khuẩn huyết": ["Vancomycin", "Meropenem"],
-            "Phối hợp Viêm Phổi": ["Ceftriaxone", "Azithromycin"],
+            "Phối hợp Viêm phổi": ["Ceftriaxone", "Azithromycin"],
             "Phối hợp Độc Thận (CẨN THẬN)": ["Vancomycin", "Gentamicin"]
         }
         

@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Anticoagulation Reversal Protocol"""
-    st.subheader("🩸 Đảo Ngược Chống Đông (Anticoagulation Reversal)")
+    st.subheader("🩸 Đảo Ngược Chống đông (Anticoagulation Reversal)")
     st.caption("ACCP 2018, ASH 2018 - Anticoagulation reversal guidelines")
     
     st.error("""
@@ -59,7 +59,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Phân loại mức độ Chảy Máu")
+    st.markdown("### 📊 Phân loại mức độ Chảy máu")
     
     bleeding_severity = st.radio(
         "**Mức độ chảy máu:**",
@@ -458,7 +458,7 @@ def render_lmwh_reversal():
 
 def render_no_bleeding():
     """No bleeding protocol"""
-    st.success("## 🟢 INR Cao - Không Chảy Máu")
+    st.success("## 🟢 INR Cao - Không Chảy máu")
     
     st.markdown("""
     **Chỉ định đảo ngược:**
@@ -483,7 +483,7 @@ def render_no_bleeding():
 
 def render_mild_bleeding():
     """Mild bleeding protocol"""
-    st.warning("## 🟡 Chảy Máu Nhẹ")
+    st.warning("## 🟡 Chảy máu Nhẹ")
     
     st.markdown("""
     **Triệu chứng:**
@@ -509,7 +509,7 @@ def render_mild_bleeding():
 
 def render_moderate_bleeding():
     """Moderate bleeding protocol"""
-    st.error("## 🟠 Chảy Máu Trung Bình")
+    st.error("## 🟠 Chảy máu Trung Bình")
     
     st.markdown("""
     **Triệu chứng:**
@@ -541,7 +541,7 @@ def render_moderate_bleeding():
 
 def render_severe_bleeding():
     """Severe bleeding protocol"""
-    st.error("## 🔴 Chảy Máu Nặng - Cấp cứu")
+    st.error("## 🔴 Chảy máu nặng - Cấp cứu")
     
     st.markdown("""
     **Triệu chứng:**

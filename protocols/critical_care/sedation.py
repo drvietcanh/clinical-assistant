@@ -428,7 +428,7 @@ def render_combined():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Phác Đồ Kết Hợp Thường Dùng")
+    st.markdown("### 💊 Phác đồ Kết Hợp Thường Dùng")
     
     st.info("""
     **1. Fentanyl + Propofol:**

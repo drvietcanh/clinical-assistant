@@ -18,11 +18,11 @@ def render_stats():
     session_calcs = st.session_state.total_calculations
     
     col1, col2, col3, col4, col5 = st.columns(5)
-    col1.metric("Tổng Calculators", total_calcs, "Ready ✓")
-    col2.metric("Yêu Thích", total_favorites, f"+{total_favorites}" if total_favorites > 0 else "Add more")
-    col3.metric("Gần Đây", total_recent, "This session")
-    col4.metric("Tính toán", session_calcs, "Times")
-    col5.metric("Modules", "5", "All active ✅")
+    col1.metric("Tổng Calculators", total_calcs, "Sẵn sàng ✓")
+    col2.metric("Yêu Thích", total_favorites, f"+{total_favorites}" if total_favorites > 0 else "Thêm thêm")
+    col3.metric("Gần Đây", total_recent, "Phiên này")
+    col4.metric("Tính toán", session_calcs, "Lần")
+    col5.metric("Modules", "5", "Tất cả đang hoạt động ✅")
     
     st.markdown("---")
 
@@ -35,13 +35,13 @@ def render_updates():
         st.markdown("""
         ### 🎉 Tính Năng Mới:
         
-        **1. ✅ Search & Navigation:**
-        - 🔍 Global search - Tìm calculator nhanh chóng
-        - ⭐ Favorites system - Lưu calculators yêu thích
-        - 🕐 Recently used - Theo dõi lịch sử sử dụng
-        - 🚀 Quick access modules - Truy cập nhanh
+        **1. ✅ Tìm kiếm & Điều hướng:**
+        - 🔍 Tìm kiếm toàn cục - Tìm calculator nhanh chóng
+        - ⭐ Hệ thống yêu thích - Lưu calculators yêu thích
+        - 🕐 Đã sử dụng gần đây - Theo dõi lịch sử sử dụng
+        - 🚀 Modules truy cập nhanh - Truy cập nhanh
         
-        **2. ✅ Unit Conversion (SI Units mặc định):**
+        **2. ✅ Chuyển đổi đơn vị (Đơn vị SI mặc định):**
         - Creatinine: µmol/L ↔ mg/dL
         - Glucose: mmol/L ↔ mg/dL  
         - Cholesterol: mmol/L ↔ mg/dL
@@ -49,35 +49,35 @@ def render_updates():
         - Bilirubin: µmol/L ↔ mg/dL
         - BUN/Urea: mmol/L ↔ mg/dL
         
-        **3. ✅ Vietnamese Localization:**
-        - 100% interface tiếng Việt
-        - Tất cả interpretations bằng tiếng Việt
-        - Clinical guidance tiếng Việt
+        **3. ✅ Việt hóa:**
+        - 100% giao diện tiếng Việt
+        - Tất cả diễn giải bằng tiếng Việt
+        - Hướng dẫn lâm sàng tiếng Việt
         
-        **4. ✅ Labs Module (9 panels):**
+        **4. ✅ Module Xét nghiệm (9 panel):**
         - CBC, BMP, CMP, LFT
         - Lipid Panel, Cardiac Markers
         - Coagulation, Thyroid, ABG
-        - Auto-interpretation
+        - Tự động diễn giải
         
-        **5. ✅ Improved Architecture:**
-        - 100% modular design
-        - Faster performance
-        - Better mobile experience
-        - Professional UI/UX
+        **5. ✅ Kiến trúc cải tiến:**
+        - Thiết kế module 100%
+        - Hiệu suất nhanh hơn
+        - Trải nghiệm di động tốt hơn
+        - UI/UX chuyên nghiệp
         
-        ### 🎯 Next:
-        - 🚧 Drug interaction checker
-        - 🚧 Differential diagnosis generator
-        - 🚧 More calculators (70+ planned)
+        ### 🎯 Tiếp theo:
+        - 🚧 Kiểm tra tương tác thuốc
+        - 🚧 Tạo chẩn đoán phân biệt
+        - 🚧 Thêm calculators (70+ đã lên kế hoạch)
         """)
     
     with st.expander("📅 2025-10-28 - Version 1.0.0"):
         st.markdown("""
-        - ✅ Initial Streamlit deployment
-        - ✅ Basic calculators (34 tools)
-        - ✅ Modular architecture
-        - ✅ GitHub auto-deploy
+        - ✅ Triển khai Streamlit ban đầu
+        - ✅ Calculators cơ bản (34 công cụ)
+        - ✅ Kiến trúc module
+        - ✅ Tự động triển khai GitHub
         """)
     
     st.markdown("---")

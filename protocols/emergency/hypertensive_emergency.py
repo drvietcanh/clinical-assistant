@@ -264,7 +264,7 @@ def render_urgency_protocol():
 
 def render_neurologic_protocol():
     """Neurologic emergency protocol"""
-    st.error("## 🔴 Tổn Thương Não - Cấp cứu")
+    st.error("## 🔴 Tổn thương Não - Cấp cứu")
     
     st.markdown("""
     **Tình huống:**
@@ -289,7 +289,7 @@ def render_neurologic_protocol():
 
 def render_cardiac_protocol():
     """Cardiac emergency protocol"""
-    st.error("## 🔴 Tổn Thương Tim - Cấp cứu")
+    st.error("## 🔴 Tổn thương Tim - Cấp cứu")
     
     st.markdown("""
     **Tình huống:**
@@ -365,7 +365,7 @@ def render_preeclampsia_protocol():
 
 def render_renal_protocol():
     """Renal emergency protocol"""
-    st.error("## 🔴 Tổn Thương Thận - Cấp cứu")
+    st.error("## 🔴 Tổn thương Thận - Cấp cứu")
     
     st.markdown("""
     **Tình huống:**

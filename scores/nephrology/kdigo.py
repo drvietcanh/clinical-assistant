@@ -710,7 +710,7 @@ def render():
     # Quick reference
     with st.expander("📖 Bảng tham khảo Nhanh - Nguyên nhân AKI"):
         st.markdown("""
-        ### Phân Loại Nguyên Nhân AKI
+        ### Phân loại Nguyên nhân AKI
         
         #### 1. 🔽 Tiền thận (Pre-Renal) - 40-70%
         

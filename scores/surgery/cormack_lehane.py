@@ -5,6 +5,13 @@ Phân loại tầm nhìn khi soi thanh quản
 
 import streamlit as st
 from scores.utils.anesthesia_validation import validate_cormack_lehane_grade
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# ======================================
 
 
 def get_cormack_lehane_interpretation(grade):
@@ -50,6 +57,13 @@ def get_cormack_lehane_interpretation(grade):
 def render():
     """Render Cormack-Lehane Classification interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'cormack_lehane':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🔍 Cormack-Lehane Classification</h2>
     <p style='text-align: center;'><em>Phân loại tầm nhìn khi soi thanh quản</em></p>
@@ -87,7 +101,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Chọn mức độ tầm nhìn")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Chọn mức độ tầm nhìn")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="cormack_lehane",
+            calculator_name="Cormack-Lehane Classification",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     grade = st.radio(
         "Cormack-Lehane Grade:",
@@ -190,9 +218,55 @@ def render():
                 - Mô tả chính xác hơn mức độ nhìn thấy
                 - Hữu ích trong nghiên cứu và đào tạo
                 """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Cormack-Lehane Grade": f"Grade {grade}"
+            }
+            
+            results_dict = {
+                "Grade": f"{grade}",
+                "Mô tả": result['description'],
+                "Mức độ khó": result['difficulty'],
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="cormack_lehane",
+                calculator_name="Cormack-Lehane Classification",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="cormack_lehane",
+                calculator_name="Cormack-Lehane Classification",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="cormack_lehane", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("Cormack-Lehane")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

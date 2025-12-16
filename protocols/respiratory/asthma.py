@@ -222,7 +222,7 @@ def render():
         """)
     
     with tabs[3]:  # ICU criteria
-        st.markdown("#### Tiêu chí nhập ICU & Thở Máy")
+        st.markdown("#### Tiêu chí nhập ICU & Thở máy")
         
         st.error("""
         **Chỉ định nhập ICU:**

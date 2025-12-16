@@ -234,7 +234,7 @@ def render():
             """)
     
     with tabs[3]:  # Oxygen/NIV
-        st.markdown("#### Hỗ trợ Hô Hấp")
+        st.markdown("#### Hỗ trợ Hô hấp")
         
         st.success("""
         **Oxygen Therapy:**

@@ -16,7 +16,7 @@ from components.smart_suggestions import render_suggestions
 def render():
     """HAS-BLED Score Calculator"""
     st.subheader("🩸 HAS-BLED Score")
-    st.caption("Đánh giá Nguy cơ Chảy Máu Khi Dùng Kháng Đông")
+    st.caption("Đánh giá Nguy cơ Chảy máu Khi Dùng Kháng đông")
     
     # Load shared result if available
     shared = load_shared_result_from_url()

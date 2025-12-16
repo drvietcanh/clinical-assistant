@@ -128,7 +128,7 @@ def render():
         render_suggestions(
             calculator_id="glasgow_blatchford",
             calculator_name="Glasgow-Blatchford Score",
-            category="Tiêu Hóa",
+            category="Tiêu hóa",
             show_related=True,
             show_category=True,
             limit=3
@@ -435,7 +435,7 @@ def render():
                 
                 **Khuyến nghị:**
                 
-                1. **NHẬP VIỆN - Khoa Tiêu Hóa:**
+                1. **NHẬP VIỆN - Khoa Tiêu hóa:**
                    - Theo dõi sát
                    - Không nhất thiết ICU (trừ không ổn định)
                 
@@ -746,7 +746,7 @@ def render():
         - Rockall dự đoán tử vong tốt hơn
         """)
     
-    with st.expander("🩸 Xuất huyết Tiêu Hóa Trên - Nguyên nhân"):
+    with st.expander("🩸 Xuất huyết Tiêu hóa trên - Nguyên nhân"):
         st.markdown("""
         **Nguyên nhân thường gặp UGIB:**
         

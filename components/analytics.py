@@ -19,42 +19,42 @@ from io import StringIO
 # Calculator to specialty mapping
 CALCULATOR_SPECIALTY_MAP = {
     # Cardiology
-    "chads2_vasc": "Cardiology",
-    "has_bled": "Cardiology",
-    "grace": "Cardiology",
-    "timi": "Cardiology",
-    "wells": "Cardiology",
-    "perc": "Cardiology",
-    "nyha": "Cardiology",
+    "chads2_vasc": "Tim mạch",
+    "has_bled": "Tim mạch",
+    "grace": "Tim mạch",
+    "timi": "Tim mạch",
+    "wells": "Tim mạch",
+    "perc": "Tim mạch",
+    "nyha": "Tim mạch",
     
     # Emergency/Critical Care
-    "sofa": "Emergency",
-    "apache": "Emergency",
-    "news2": "Emergency",
-    "qsofa": "Emergency",
-    "sirs": "Emergency",
+    "sofa": "Cấp cứu",
+    "apache": "Cấp cứu",
+    "news2": "Cấp cứu",
+    "qsofa": "Cấp cứu",
+    "sirs": "Cấp cứu",
     
     # Nephrology
-    "egfr": "Nephrology",
-    "fena": "Nephrology",
-    "mdrd": "Nephrology",
-    "ckd_epi": "Nephrology",
+    "egfr": "Thận học",
+    "fena": "Thận học",
+    "mdrd": "Thận học",
+    "ckd_epi": "Thận học",
     
     # Neurology
-    "mrs": "Neurology",
-    "nihss": "Neurology",
-    "glasgow": "Neurology",
+    "mrs": "Thần kinh",
+    "nihss": "Thần kinh",
+    "glasgow": "Thần kinh",
     
     # Hematology
-    "four_ts": "Hematology",
-    "dic_score": "Hematology",
+    "four_ts": "Huyết học",
+    "dic_score": "Huyết học",
     
     # Metabolism
-    "bmi": "Metabolism",
-    "bsa": "Metabolism",
+    "bmi": "Chuyển hóa",
+    "bsa": "Chuyển hóa",
     
     # Default
-    "default": "Other"
+    "default": "Khác"
 }
 
 
@@ -216,8 +216,8 @@ def export_analytics_to_csv() -> str:
     
     # Header
     writer.writerow([
-        'ID', 'Calculator ID', 'Calculator Name', 'Specialty',
-        'Date', 'Hour', 'Day of Week', 'Timestamp'
+        'ID', 'ID Calculator', 'Tên Calculator', 'Chuyên khoa',
+        'Ngày', 'Giờ', 'Thứ trong tuần', 'Thời gian'
     ])
     
     # Data
@@ -505,15 +505,15 @@ def render_analytics_dashboard() -> None:
     # Info
     with st.expander("ℹ️ Giới thiệu Analytics"):
         st.info("""
-        **Analytics Tracking:**
-        - Tất cả dữ liệu được lưu locally trong session (không gửi lên server)
-        - Không lưu PHI (Protected Health Information)
-        - Chỉ track: calculator ID, timestamp, specialty
-        - Dữ liệu sẽ mất khi clear session hoặc đóng browser
+        **Theo dõi phân tích:**
+        - Tất cả dữ liệu được lưu cục bộ trong phiên (không gửi lên server)
+        - Không lưu thông tin sức khỏe được bảo vệ (PHI)
+        - Chỉ theo dõi: ID calculator, thời gian, chuyên khoa
+        - Dữ liệu sẽ mất khi xóa phiên hoặc đóng trình duyệt
         
-        **Privacy:**
-        - 100% anonymous
-        - Không track thông tin cá nhân
+        **Quyền riêng tư:**
+        - 100% ẩn danh
+        - Không theo dõi thông tin cá nhân
         - Chỉ dùng để cải thiện trải nghiệm người dùng
         """)
 

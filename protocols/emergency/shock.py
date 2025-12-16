@@ -26,11 +26,11 @@ def render():
     
     # Classification tabs
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
-        "🦠 Nhiễm Trùng",
+        "🦠 Nhiễm trùng",
         "💧 Giảm Thể tích",
         "❤️ Tim",
         "🌊 Phân Bố",
-        "🚫 Tắc Nghẽn"
+        "🚫 Tắc nghẽn"
     ])
     
     with tab1:
@@ -162,7 +162,7 @@ def render():
         """)
     
     with tab3:
-        st.markdown("#### ❤️ Sốc Tim (Cardiogenic Shock)")
+        st.markdown("#### ❤️ Sốc tim (Cardiogenic Shock)")
         
         st.error("""
         **Chẩn đoán:**

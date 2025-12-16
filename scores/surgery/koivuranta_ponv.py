@@ -71,6 +71,13 @@ def calculate_koivuranta_ponv(female, non_smoker, history_ponv, duration_surgery
 def render():
     """Render Koivuranta PONV Risk Score interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'koivuranta_ponv':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared['calculator_name']}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🤢 Koivuranta PONV Risk Score</h2>
     <p style='text-align: center;'><em>Nguy cơ buồn nôn nôn sau mổ - Phiên bản mở rộng</em></p>
@@ -106,7 +113,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 5 yếu tố nguy cơ")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 5 yếu tố nguy cơ")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="koivuranta_ponv",
+            calculator_name="Koivuranta PONV Risk Score",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Risk factors
     female = st.checkbox("1️⃣ Nữ giới", key="koivuranta_female")
@@ -194,9 +215,59 @@ def render():
                     st.markdown(f"- {factor}")
             else:
                 st.markdown("- Không có yếu tố nguy cơ")
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Nữ giới": "Có" if female else "Không",
+                "Không hút thuốc": "Có" if non_smoker else "Không",
+                "Tiền sử PONV": "Có" if history_ponv else "Không",
+                "Thời gian phẫu thuật": f"{duration_surgery} phút",
+                "Loại gây mê": "Gây mê toàn thân" if type_anesthesia == 1 else "Gây tê vùng"
+            }
+            
+            results_dict = {
+                "Số yếu tố nguy cơ": f"{result['risk_factors']}/5",
+                "Nguy cơ PONV": f"{result['risk_percentage']}%",
+                "Khuyến nghị": result['recommendation'],
+                "Dự phòng": result['prophylaxis']
+            }
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="koivuranta_ponv",
+                calculator_name="Koivuranta PONV Risk Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="koivuranta_ponv",
+                calculator_name="Koivuranta PONV Risk Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            from components.calculation_history import render_history_ui
+            render_history_ui(calculator_id="koivuranta_ponv", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (always visible)
+    st.markdown("---")
+    references = get_references("Koivuranta PONV")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

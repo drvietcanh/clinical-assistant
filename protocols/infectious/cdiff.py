@@ -251,7 +251,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: SUPPORTIVE CARE ==========
-    st.markdown("### 🏥 Chăm Sóc Hỗ trợ")
+    st.markdown("### 🏥 Chăm sóc Hỗ trợ")
     
     col1, col2 = st.columns(2)
     

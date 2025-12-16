@@ -306,7 +306,7 @@ def render():
             
             # Additional OSA screening
             st.markdown("---")
-            st.subheader("🔍 Sàng Lọc Bổ sung - Nguy cơ OSA")
+            st.subheader("🔍 Sàng lọc Bổ sung - Nguy cơ OSA")
             
             osa_questions = get_osa_screening_questions()
             

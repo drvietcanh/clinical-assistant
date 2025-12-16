@@ -321,7 +321,7 @@ def render_upper_gi_bleeding():
             """)
     
     st.markdown("---")
-    st.markdown("### 5️⃣ Chỉ định Nội Soi - Decision Tree")
+    st.markdown("### 5️⃣ Chỉ định Nội soi - Decision Tree")
     
     st.markdown("#### ⏱️ Tính toán thời điểm nội soi")
     
