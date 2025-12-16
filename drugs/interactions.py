@@ -57,6 +57,36 @@ def render_interaction_checker():
     
     st.markdown("---")
     
+    # Quick examples
+    st.markdown("### 💡 Ví dụ nhanh:")
+    col_ex1, col_ex2, col_ex3 = st.columns(3)
+    
+    with col_ex1:
+        if st.button("🔍 Warfarin + Aspirin", use_container_width=True, key="example_warf_asp"):
+            st.session_state['input_method'] = "Nhập từng thuốc"
+            st.session_state['num_drugs'] = 2
+            st.session_state['drug_0'] = "Warfarin"
+            st.session_state['drug_1'] = "Aspirin"
+            st.rerun()
+    
+    with col_ex2:
+        if st.button("🔍 Metformin + Furosemide", use_container_width=True, key="example_met_furo"):
+            st.session_state['input_method'] = "Nhập từng thuốc"
+            st.session_state['num_drugs'] = 2
+            st.session_state['drug_0'] = "Metformin"
+            st.session_state['drug_1'] = "Furosemide"
+            st.rerun()
+    
+    with col_ex3:
+        if st.button("🔍 Omeprazole + Warfarin", use_container_width=True, key="example_omep_warf"):
+            st.session_state['input_method'] = "Nhập từng thuốc"
+            st.session_state['num_drugs'] = 2
+            st.session_state['drug_0'] = "Omeprazole"
+            st.session_state['drug_1'] = "Warfarin"
+            st.rerun()
+    
+    st.markdown("---")
+    
     # Drug input section
     st.markdown("### 💊 Nhập Danh Sách Thuốc")
     
@@ -115,6 +145,22 @@ def render_interaction_checker():
         
         if drug_text:
             drug_list = [d.strip() for d in drug_text.split('\n') if d.strip()]
+    
+    # Show instructions if no drugs entered yet
+    if len(drug_list) < 2:
+        st.info("""
+        **📝 Hướng dẫn sử dụng:**
+        1. Chọn cách nhập: từng thuốc hoặc danh sách
+        2. Nhập tên thuốc (tiếng Anh hoặc tiếng Việt)
+        3. Hệ thống sẽ tự động gợi ý khi bạn nhập
+        4. Nhấn nút "Kiểm tra tương tác" để xem kết quả
+        
+        **💡 Mẹo:**
+        - Có thể nhập tên thuốc bằng tiếng Anh hoặc tiếng Việt
+        - Hệ thống tự động nhận diện thuốc ngay cả khi gõ sai chính tả
+        - Hỗ trợ class-based matching (ví dụ: nhập "SSRI" sẽ tự động kiểm tra tất cả SSRIs)
+        """)
+        st.markdown("---")
     
     # Check button
     if st.button("🔍 Kiểm Tra Tương tác", type="primary", use_container_width=True):
