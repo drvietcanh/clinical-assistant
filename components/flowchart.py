@@ -271,43 +271,49 @@ def render_flowchart(
     # Use components.html thay vì markdown để tránh Streamlit escape các thẻ SVG
     components.html(flowchart_html, height=height + 100, scrolling=True)
     
-    # Legend
-    legend_html = """
+    # Legend - Dùng components.html để render HTML đúng cách
+    st.markdown("**Chú thích:**")
+    
+    legend_items = []
+    color_map = {
+        NodeType.START: ("#28a745", "🟢 Start"),
+        NodeType.DECISION: ("#ffc107", "🟡 Decision"),
+        NodeType.ACTION: ("#17a2b8", "🔵 Action"),
+        NodeType.TEST: ("#6f42c1", "🟣 Test"),
+        NodeType.END: ("#dc3545", "🔴 End")
+    }
+    
+    for node_type in NodeType:
+        color, label = color_map.get(node_type, ("#6c757d", "Node"))
+        legend_items.append(f"""
+        <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem;">
+            <div style="
+                width: 20px;
+                height: 20px;
+                background: {color}20;
+                border: 2px solid {color};
+                border-radius: 4px;
+                flex-shrink: 0;
+            "></div>
+            <span style="font-size: 0.85rem;">{label}</span>
+        </div>
+        """)
+    
+    legend_html = f"""
     <div style="
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
-        margin: 1rem 0;
-        padding: 1rem;
+        margin: 0.5rem 0;
+        padding: 0.75rem;
         background: #f8f9fa;
         border-radius: 8px;
     ">
+        {''.join(legend_items)}
+    </div>
     """
     
-    for node_type in NodeType:
-        color_map = {
-            NodeType.START: ("#28a745", "🟢 Start"),
-            NodeType.DECISION: ("#ffc107", "🟡 Decision"),
-            NodeType.ACTION: ("#17a2b8", "🔵 Action"),
-            NodeType.TEST: ("#6f42c1", "🟣 Test"),
-            NodeType.END: ("#dc3545", "🔴 End")
-        }
-        color, label = color_map.get(node_type, ("#6c757d", "Node"))
-        legend_html += f"""
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <div style="
-                width: 24px;
-                height: 24px;
-                background: {color}15;
-                border: 2px solid {color};
-                border-radius: 4px;
-            "></div>
-            <span style="font-size: 0.9rem;">{label}</span>
-        </div>
-        """
-    
-    legend_html += "</div>"
-    st.markdown(legend_html, unsafe_allow_html=True)
+    components.html(legend_html, height=60)
 
 
 def create_chest_pain_algorithm() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
