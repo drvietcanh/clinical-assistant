@@ -87,9 +87,9 @@ if st.session_state.get('switch_to_comparison', False):
     st.session_state['switch_to_comparison'] = False
     if 'drug_db_function_type' not in st.session_state:
         st.session_state['drug_db_function_type'] = str("📊 So sánh thuốc trực quan")
-    # Preset drugs if available
+    # Preset drugs if available - use separate key to avoid widget conflict
     if 'preset_comparison_drugs' in st.session_state:
-        st.session_state['visual_selected_drugs'] = st.session_state['preset_comparison_drugs']
+        st.session_state['visual_preset_drugs'] = st.session_state['preset_comparison_drugs']
         del st.session_state['preset_comparison_drugs']
 
 # Route to appropriate function

@@ -45,10 +45,23 @@ def render_visual_comparison():
     
     all_drugs = sorted(list(DRUG_DATABASE.keys()))
     
+    # Check for preset drugs from other pages or suggestions
+    preset_drugs = st.session_state.get('visual_preset_drugs', [])
+    if preset_drugs:
+        # Clear widget state to allow default to take effect
+        if 'visual_selected_drugs' in st.session_state:
+            del st.session_state['visual_selected_drugs']
+        # Use preset drugs as default, then clear the preset
+        default_drugs = preset_drugs if isinstance(preset_drugs, list) else []
+        del st.session_state['visual_preset_drugs']
+    else:
+        # Use empty list as default - widget will maintain its own state
+        default_drugs = []
+    
     selected_drugs = st.multiselect(
         "Chọn thuốc (có thể chọn nhiều):",
         all_drugs,
-        default=[],
+        default=default_drugs,
         key="visual_selected_drugs",
         help="Chọn từ 2-5 thuốc để so sánh"
     )
@@ -67,7 +80,8 @@ def render_visual_comparison():
         
         for combo_name, combo_drugs in suggestions.items():
             if st.button(f"📋 {combo_name}: {', '.join(combo_drugs)}", key=f"visual_suggest_{combo_name}", use_container_width=True):
-                st.session_state['visual_selected_drugs'] = combo_drugs
+                # Store preset drugs in a separate key
+                st.session_state['visual_preset_drugs'] = combo_drugs
                 st.rerun()
         return
     
