@@ -20,7 +20,7 @@ def analyze_abg_for_ventilator(abg_data):
         severity = "nặng" if ph < 7.20 else "trung bình"
         recommendations.append({
             "type": "error",
-            "title": "Toan hô hấp",
+            "title": "Toan Hô Hấp",
             "message": f"PaCO₂ cao ({pco2:.1f} mmHg), pH thấp ({ph:.2f}) - {severity}",
             "actions": [
                 "Tăng RR để tăng thông khí (tăng 2-4 lần/phút)",
@@ -36,7 +36,7 @@ def analyze_abg_for_ventilator(abg_data):
     elif ph > 7.45 and pco2 < 35:
         recommendations.append({
             "type": "warning",
-            "title": "Kiềm hô hấp",
+            "title": "Kiềm Hô Hấp",
             "message": f"PaCO₂ thấp ({pco2:.1f} mmHg), pH cao ({ph:.2f})",
             "actions": [
                 "Giảm RR nếu quá cao (giảm 2-4 lần/phút)",

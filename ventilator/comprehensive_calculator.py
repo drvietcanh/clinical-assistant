@@ -21,7 +21,8 @@ from .protocols import display_protocol_recommendations
 from .compliance import (
     calculate_static_compliance,
     calculate_dynamic_compliance,
-    display_compliance_analysis
+    display_compliance_analysis,
+    interpret_compliance as _interpret_compliance,
 )
 from .auto_peep import (
     estimate_auto_peep,
@@ -53,6 +54,17 @@ def calculate_compliance(vt, plateau, peep):
 
 # Note: interpret_compliance is now imported from .compliance module
 # This function is kept for backward compatibility but should use the one from compliance.py
+
+
+def interpret_compliance(compliance):
+    """
+    Backward-compatible wrapper for tests.
+    
+    Returns:
+        Tuple[str, str]: (interpretation, color) using static compliance thresholds.
+    """
+    text, color, _ = _interpret_compliance(compliance, "static")
+    return text, color
 
 
 def render_comprehensive_calculator():
