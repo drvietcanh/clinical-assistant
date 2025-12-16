@@ -32,7 +32,7 @@ def render_results_display(selected_mrs, mrs_info):
         st.metric("Kết Cục", mrs_info["outcome"])
     
     with col3:
-        st.metric("Mức Độ Độc lập", mrs_info["independence"])
+        st.metric("Mức độ Độc lập", mrs_info["independence"])
     
     st.markdown("---")
     

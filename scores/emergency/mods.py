@@ -240,7 +240,7 @@ def render():
         render_suggestions(
             calculator_id="mods",
             calculator_name="MODS Score",
-            category="Cấp Cứu",
+            category="Cấp cứu",
             show_related=True,
             show_category=True,
             limit=3

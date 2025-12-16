@@ -69,7 +69,7 @@ def render():
         
         **Dịch sử dụng:** Ringer Lactate (RL)
         
-        **Điều Chỉnh:** Theo nước tiểu (0.5-1 ml/kg/h)
+        **Điều chỉnh:** Theo nước tiểu (0.5-1 ml/kg/h)
         """)
     
     st.markdown("---")
@@ -160,7 +160,7 @@ def render():
         
         **2. Chỉ là công thức KHỞI ĐẦU:**
         - **ĐIỀU CHỈNH** theo đáp ứng lâm sàng
-        - Mục tiêu: Nước tiểu **0.5-1 ml/kg/h** (Người Lớn)
+        - Mục tiêu: Nước tiểu **0.5-1 ml/kg/h** (Người lớn)
         - Trẻ em: 1-2 ml/kg/h
         
         **3. Theo dõi:**

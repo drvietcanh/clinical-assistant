@@ -348,7 +348,7 @@ def render():
         
         if component_scores:
             render_score_breakdown(
-                title="Chi Tiết Điểm Số",
+                title="Chi tiết điểm số",
                 subscores=component_scores,
                 total_score=total_score
             )

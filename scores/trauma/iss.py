@@ -266,7 +266,7 @@ def render():
         
         ### 📈 Phân tầng Nguy cơ
         
-        | ISS | Phân Loại | Tử vong | Xử trí|
+        | ISS | Phân loại | Tử vong | Xử trí|
         |-----|-----------|---------|--------|
         | 1-8 | Minor | <1% | Outpatient có thể |
         | 9-15 | Moderate | <5% | Admit, theo dõi |

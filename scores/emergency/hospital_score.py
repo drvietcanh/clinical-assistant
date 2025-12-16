@@ -158,7 +158,7 @@ def render():
         render_suggestions(
             calculator_id="hospital_score",
             calculator_name="HOSPITAL Score",
-            category="Cấp Cứu",
+            category="Cấp cứu",
             show_related=True,
             show_category=True,
             limit=3

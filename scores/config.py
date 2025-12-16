@@ -77,7 +77,7 @@ SCORES_BY_SPECIALTY = {
         "DIC Score": {"name": "DIC Score (ISTH)", "desc": "Đông máu rải rác trong lòng mạch", "status": "✅"},
     },
     
-    "🧪 Thận - Điện Giải (Nephrology)": {
+    "🧪 Thận - Điện giải (Nephrology)": {
         "eGFR": {"name": "eGFR - CKD-EPI & MDRD", "desc": "Tính tốc độ lọc cầu thận (DÙNG HÀNG NGÀY)", "status": "✅"},
         "KDIGO": {"name": "KDIGO Staging", "desc": "Giai đoạn AKI (Tiêu chuẩn hiện đại)", "status": "✅"},
         "RIFLE": {"name": "RIFLE Criteria", "desc": "Phân loại AKI (Historical)", "status": "✅"},

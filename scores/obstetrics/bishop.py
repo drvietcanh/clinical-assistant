@@ -4,6 +4,13 @@ Bishop Score
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_bishop_score(dilation, effacement, station, consistency, position):
@@ -128,6 +135,13 @@ def interpret_bishop_score(total_score, is_nulliparous=True):
 def render():
     """Render the Bishop Score calculator"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'bishop':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Bishop Score')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🤰 Bishop Score")
     st.markdown("""
     ### Đánh giá Độ Chín Cổ Tử Cung
@@ -145,7 +159,7 @@ def render():
     4. **D**ilation (Mở cổ tử cung)
     5. **S**oftness (Độ mềm cổ tử cung)
     
-    **Phân Loại:**
+    **Phân loại:**
     - **≤ 5:** Không thuận lợi → Cần ripening
     - **6-8:** Trung bình → Xem xét ripening
     - **> 8:** Thuận lợi → Induction thành công cao
@@ -224,7 +238,7 @@ def render():
     st.markdown("---")
     
     # 3. Station
-    st.markdown("### 3️⃣ Station - Vị Trí Thai Nhi (Lọt)")
+    st.markdown("### 3️⃣ Station - Vị trí Thai Nhi (Lọt)")
     st.caption("Station của presenting part so với ischial spines")
     
     station = st.select_slider(
@@ -262,7 +276,7 @@ def render():
     st.markdown("---")
     
     # 5. Position
-    st.markdown("### 5️⃣ Position - Vị Trí Cổ Tử Cung")
+    st.markdown("### 5️⃣ Position - Vị trí Cổ Tử Cung")
     position = st.radio(
         "Vị trí cổ tử cung:",
         options=["posterior", "mid", "anterior"],
@@ -592,17 +606,77 @@ def render():
         **Công cụ bổ sung:**
         - Transvaginal ultrasound cervical length
         - Fetal fibronectin
-        - Oxytocin challenge test
-        """)
+            - Oxytocin challenge test
+            """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Dilation": f"{dilation} cm",
+            "Effacement": f"{effacement}%",
+            "Station": f"{station:+d}",
+            "Consistency": consistency.capitalize(),
+            "Position": position.capitalize(),
+            "Parity": "Nulliparous" if is_nulliparous else "Multiparous"
+        }
+        
+        results_dict = {
+            "Bishop Score": f"{total_score}/13",
+            "Favorability": result['favorability'],
+            "Induction Success": result['induction_success'],
+            "C-section Risk": result['csection_risk']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="bishop",
+            calculator_name="Bishop Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="bishop",
+            calculator_name="Bishop Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="bishop",
+            calculator_name="Bishop Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="bishop", show_actions=True)
     
-    # References
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="bishop",
+            calculator_name="Bishop Score",
+            category="Sản khoa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    # References section (always at bottom)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Bishop EH. Pelvic scoring for elective induction. Obstet Gynecol. 1964;24:266-268
-    - ACOG Practice Bulletin No. 107: Induction of labor. Obstet Gynecol. 2009;114(2 Pt 1):386-397
-    - Laughon SK, et al. Neonatal and maternal outcomes with prolonged second stage of labor. Obstet Gynecol. 2014;124(1):57-67
-    """)
+    references = get_references("Bishop Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

@@ -420,7 +420,7 @@ def render():
         render_suggestions(
             calculator_id="news2",
             calculator_name="NEWS2 Score",
-            category="Cấp Cứu",
+            category="Cấp cứu",
             show_related=True,
             show_category=True,
             limit=3

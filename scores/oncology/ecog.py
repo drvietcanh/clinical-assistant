@@ -154,7 +154,7 @@ def render():
     st.markdown("---")
     
     # Selection section
-    st.subheader("📋 Chọn Mức Độ Thể Trạng")
+    st.subheader("📋 Chọn Mức độ Thể Trạng")
     
     st.info("""
     **Hướng dẫn:** Chọn mô tả phù hợp nhất với tình trạng hiện tại của bệnh nhân
@@ -336,7 +336,7 @@ def render():
         render_suggestions(
             calculator_id="ecog",
             calculator_name="ECOG Performance Status",
-            category="Ung Thư",
+            category="Ung thư",
             show_related=True,
             show_category=True,
             limit=3

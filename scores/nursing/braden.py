@@ -301,7 +301,7 @@ def render():
                - Sau khi chuyển khoa
                - Khi có dấu hiệu loét
             
-            ### 📋 Vị Trí Loét Tì Đè Thường gặp:
+            ### 📋 Vị trí Loét Tì Đè Thường gặp:
             - Gót chân
             - Mông, xương cùng
             - Khuỷu tay

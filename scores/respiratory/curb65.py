@@ -250,7 +250,7 @@ def render():
             
             if criteria_scores:
                 render_score_breakdown(
-                    title="Tiêu Chí Đánh Giá",
+                    title="Tiêu chí Đánh Giá",
                     subscores=criteria_scores,
                     total_score=score
                 )

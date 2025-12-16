@@ -388,7 +388,7 @@ def render():
         # Antibiotic regimens if indicated
         if result['level'] in ["moderate_high", "high"] or (result['level'] == "moderate" and total_score >= 2):
             st.markdown("---")
-            st.subheader("💊 Phác Đồ Kháng Sinh (Nếu Chỉ định)")
+            st.subheader("💊 Phác Đồ Kháng sinh (Nếu Chỉ định)")
             
             regimens = get_antibiotic_regimen()
             

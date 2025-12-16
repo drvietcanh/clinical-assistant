@@ -281,7 +281,7 @@ def render():
             # Use render_score_breakdown for component scores
             if component_scores:
                 render_score_breakdown(
-                    title="Tiêu Chí AIMS65",
+                    title="Tiêu chí AIMS65",
                     subscores=component_scores,
                     total_score=score
                 )
@@ -644,7 +644,7 @@ def render():
         - Rockall: Dự đoán tử vong tốt, cần nội soi
         """)
     
-    with st.expander("🩸 Các Yếu Tố AIMS65 - Ý Nghĩa Lâm Sàng"):
+    with st.expander("🩸 Các Yếu Tố AIMS65 - Ý nghĩa Lâm sàng"):
         st.markdown("""
         **1. Albumin < 3.0 g/dL:**
         - Phản ánh tình trạng dinh dưỡng kém

@@ -78,7 +78,7 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Chọn Mức Độ Phù Hợp Nhất Với Bệnh nhân")
+    st.subheader("📝 Chọn Mức độ Phù Hợp Nhất Với Bệnh nhân")
     
     kps_score = st.select_slider(
         "Karnofsky Performance Scale",
@@ -287,7 +287,7 @@ def render():
         render_suggestions(
             calculator_id="karnofsky",
             calculator_name="Karnofsky Performance Scale",
-            category="Ung Thư",
+            category="Ung thư",
             show_related=True,
             show_category=True,
             limit=3

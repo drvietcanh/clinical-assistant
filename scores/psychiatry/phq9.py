@@ -184,7 +184,7 @@ def render():
         st.markdown("---")
         
         # Questions
-        st.subheader("📋 Bảng Câu Hỏi")
+        st.subheader("📋 Bảng Câu hỏi")
         
         scores = []
         
@@ -296,7 +296,7 @@ def render():
         
         # Score breakdown
         st.markdown("---")
-        st.subheader("📊 Phân tích từng Câu Hỏi")
+        st.subheader("📊 Phân tích từng Câu hỏi")
         
         # Create a chart
         symptom_labels = [

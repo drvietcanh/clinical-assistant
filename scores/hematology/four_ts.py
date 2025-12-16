@@ -177,7 +177,7 @@ def calculate_4ts_score(
            - Nếu vẫn lo lắng → có thể làm ELISA (thường âm tính)
            - Tìm nguyên nhân khác: sepsis, thuốc, DIC, etc.
         
-        3. **Nguyên Nhân Khác Cần Xem Xét:**
+        3. **Nguyên nhân Khác Cần Xem Xét:**
            - **Sepsis/Infection** (phổ biến nhất)
            - **Thuốc khác:** Vancomycin, linezolid, valproate, H2-blockers, etc.
            - **DIC** (Disseminated Intravascular Coagulation)
@@ -286,7 +286,7 @@ def render():
         
         ### 📊 Phân tầng Nguy cơ
         
-        | Điểm 4Ts | Phân Loại | Xác Suất HIT | Xử trí|
+        | Điểm 4Ts | Phân loại | Xác Suất HIT | Xử trí|
         |----------|-----------|--------------|--------|
         | 6-8 | High | 50-80% | Dừng heparin NGAY, kháng đông thay thế |
         | 4-5 | Intermediate | 10-30% | Cân nhắc dừng, xét nghiệm ELISA |
@@ -380,7 +380,7 @@ def render():
     st.divider()
     
     # Calculate button
-    if st.button("🧮 Tính Toán 4Ts Score", type="primary", use_container_width=True):
+    if st.button("🧮 Tính toán 4Ts Score", type="primary", use_container_width=True):
         result = calculate_4ts_score(
             thrombocytopenia_category=thrombocytopenia_category,
             timing_category=timing_category,

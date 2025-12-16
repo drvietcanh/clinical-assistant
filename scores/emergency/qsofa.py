@@ -68,7 +68,7 @@ def render():
         render_suggestions(
             calculator_id="qsofa",
             calculator_name="qSOFA",
-            category="Cấp Cứu",
+            category="Cấp cứu",
             show_related=True,
             show_category=True,
             limit=3
@@ -178,7 +178,7 @@ def render():
             
             if criteria_scores:
                 render_score_breakdown(
-                    title="Tiêu Chí qSOFA",
+                    title="Tiêu chí qSOFA",
                     subscores=criteria_scores,
                     total_score=score
                 )

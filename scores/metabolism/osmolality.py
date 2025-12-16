@@ -384,7 +384,7 @@ def render():
             st.warning("""
             **Hypo-osmolality (Osmolality thấp)**
             
-            **Nguyên Nhân:**
+            **Nguyên nhân:**
             - **Hạ Na máu** (phổ biến nhất)
             - SIADH
             - Suy thận
@@ -399,7 +399,7 @@ def render():
             st.warning("""
             **Hyper-osmolality (Osmolality cao)**
             
-            **Nguyên Nhân:**
+            **Nguyên nhân:**
             - **Tăng Na máu:**
                 - Mất nước (tiêu chảy, lợi tiểu, sốt)
                 - Thiểu năng ADH (diabetes insipidus)

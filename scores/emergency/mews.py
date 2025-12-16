@@ -231,7 +231,7 @@ def render():
         render_suggestions(
             calculator_id="mews",
             calculator_name="MEWS",
-            category="Cấp Cứu",
+            category="Cấp cứu",
             show_related=True,
             show_category=True,
             limit=3
@@ -356,7 +356,7 @@ def render():
         st.dataframe(pd.DataFrame(scoring_data), use_container_width=True, hide_index=True)
         
         st.markdown("---")
-        st.markdown("### 🎯 Phân Loại Nguy cơ")
+        st.markdown("### 🎯 Phân loại Nguy cơ")
         
         risk_data = {
             "Điểm": ["0-4", "5-6", "≥7"],
@@ -432,7 +432,7 @@ def render():
         else:
             # Fallback to manual references if not in config
             st.markdown("---")
-            st.markdown("### 📚 Tài Liệu Tham Khảo")
+            st.markdown("### 📚 Tài liệu tham khảo")
             st.markdown("""
             1. **Subbe CP, et al.** Validation of a modified Early Warning Score in medical admissions.
                QJM. 2001;94(10):521-526.

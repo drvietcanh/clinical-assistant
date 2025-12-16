@@ -119,7 +119,7 @@ def render():
         st.markdown("""
         ### RIFLE Categories
         
-        | Phân Loại | Creatinine / GFR | Nước tiểu |
+        | Phân loại | Creatinine / GFR | Nước tiểu |
         |-----------|------------------|-----------|
         | **Risk** | SCr ×1.5 HOẶC GFR giảm >25% | <0.5 mL/kg/h × 6h |
         | **Injury** | SCr ×2 HOẶC GFR giảm >50% | <0.5 mL/kg/h × 12h |

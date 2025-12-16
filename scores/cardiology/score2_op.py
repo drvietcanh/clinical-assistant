@@ -258,7 +258,7 @@ def render():
         - **10 năm:** Tiêu chuẩn
         - **5 năm:** Phù hợp hơn nếu tuổi thọ dự kiến hạn chế
         
-        ### 🧓 Cân Nhắc Đặc Biệt Ở Người cao tuổi
+        ### 🧓 Cân Nhắc Đặc biệt Ở Người cao tuổi
         
         **Lợi ích điều trị:**
         - Giảm events (MI, stroke)

@@ -338,7 +338,7 @@ def render():
         | **PT kéo dài (s)** | <3 | 3-5.9 | ≥6 | - |
         | **Fibrinogen (mg/dL)** | ≥100 | <100 | - | - |
         
-        **Phân Loại:**
+        **Phân loại:**
         - **≥5 điểm:** Overt DIC (tương thích với DIC rõ ràng)
         - **<5 điểm:** Non-overt (gợi ý, cần theo dõi)
         
@@ -374,7 +374,7 @@ def render():
         render_suggestions(
             calculator_id="dic_score",
             calculator_name="ISTH DIC Score",
-            category="Huyết Học",
+            category="Huyết học",
             show_related=True,
             show_category=True,
             limit=3
@@ -434,7 +434,7 @@ def render():
     st.divider()
     
     # Calculate button
-    if st.button("🧮 Tính Toán ISTH DIC Score", type="primary", use_container_width=True):
+    if st.button("🧮 Tính toán ISTH DIC Score", type="primary", use_container_width=True):
         # Validate inputs
         validation_errors = []
         
@@ -665,7 +665,7 @@ def render():
         
         ### 🔍 Phân biệt DIC với bệnh khác
         
-        | Đặc Điểm | DIC | Suy Gan | TTP/HUS | ITP |
+        | Đặc Điểm | DIC | Suy gan | TTP/HUS | ITP |
         |----------|-----|---------|---------|-----|
         | Tiểu cầu | ↓↓ | ↓ | ↓↓ | ↓↓↓ |
         | PT | ↑↑ | ↑↑ | N | N |

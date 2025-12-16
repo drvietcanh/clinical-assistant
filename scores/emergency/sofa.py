@@ -214,7 +214,7 @@ def render():
         render_suggestions(
             calculator_id="sofa",
             calculator_name="SOFA Score",
-            category="Cấp Cứu",
+            category="Cấp cứu",
             show_related=True,
             show_category=True,
             limit=3
@@ -467,7 +467,7 @@ def render():
         if result['subscores']['coagulation'] >= 2:
             recommendations.append("""
             **Đông máu (Tiểu cầu <100):**
-            - Tìm Nguyên Nhân (DIC, sepsis, thuốc, HIT)
+            - Tìm Nguyên nhân (DIC, sepsis, thuốc, HIT)
             - Xem xét truyền tiểu cầu nếu chảy máu hoặc thủ thuật
             - Tránh thuốc ảnh hưởng tiểu cầu
             """)
@@ -503,7 +503,7 @@ def render():
             recommendations.append("""
             **Thận (Cr >2 hoặc UO <500 mL/24h):**
             - Đánh giá theo KDIGO AKI criteria
-            - Tìm Nguyên Nhân: pre-renal/intrinsic/post-renal
+            - Tìm Nguyên nhân: pre-renal/intrinsic/post-renal
             - Điều chỉnh liều thuốc
             - Theo dõi điện giải (K, PO4)
             - Xem xét RRT nếu chỉ định

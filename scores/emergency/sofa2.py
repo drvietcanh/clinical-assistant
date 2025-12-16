@@ -434,7 +434,7 @@ def render():
         if result['subscores'].get('coagulation', 0) >= 2:
             recommendations.append("""
             **Đông máu (Tiểu cầu <120):**
-            - Tìm Nguyên Nhân (DIC, sepsis, thuốc, HIT)
+            - Tìm Nguyên nhân (DIC, sepsis, thuốc, HIT)
             - Xem xét truyền tiểu cầu nếu chảy máu hoặc thủ thuật
             - Tránh thuốc ảnh hưởng tiểu cầu
             """)
@@ -470,7 +470,7 @@ def render():
             recommendations.append("""
             **Thận (Cr >2, UO <500, hoặc RRT):**
             - Đánh giá theo KDIGO AKI criteria
-            - Tìm Nguyên Nhân: pre-renal/intrinsic/post-renal
+            - Tìm Nguyên nhân: pre-renal/intrinsic/post-renal
             - Điều chỉnh liều thuốc
             - Theo dõi điện giải (K, PO4)
             - Xem xét RRT nếu chỉ định

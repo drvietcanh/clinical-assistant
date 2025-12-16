@@ -708,7 +708,7 @@ def render():
         )
     
     # Quick reference
-    with st.expander("📖 Bảng tham khảo Nhanh - Nguyên Nhân AKI"):
+    with st.expander("📖 Bảng tham khảo Nhanh - Nguyên nhân AKI"):
         st.markdown("""
         ### Phân Loại Nguyên Nhân AKI
         

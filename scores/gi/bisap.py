@@ -406,7 +406,7 @@ def render():
         
         if component_scores:
             render_score_breakdown(
-                title="Tiêu Chí BISAP",
+                title="Tiêu chí BISAP",
                 subscores=component_scores,
                 total_score=bisap_score
             )

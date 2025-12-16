@@ -660,7 +660,7 @@ def render():
              + Pacing tạm thời (90-110 bpm)
            - Lidocaine (ức chế depolarization sớm)
         
-        **Phòng Ngừa:**
+        **Phòng ngừa:**
         - Screening QTc trước khi dùng thuốc nguy cơ cao
         - Theo dõi điện giải đồ thường xuyên
         - Tránh kết hợp nhiều thuốc kéo dài QT

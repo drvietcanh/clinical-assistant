@@ -135,7 +135,7 @@ def render():
         st.markdown("---")
         
         # Questions
-        st.subheader("📋 Bảng Câu Hỏi")
+        st.subheader("📋 Bảng Câu hỏi")
         
         scores = []
         
@@ -198,7 +198,7 @@ def render():
             
             # Score breakdown
             st.markdown("---")
-            st.subheader("📊 Phân tích từng Câu Hỏi")
+            st.subheader("📊 Phân tích từng Câu hỏi")
             
             symptom_labels = [
                 "1. Lo lắng/căng thẳng",

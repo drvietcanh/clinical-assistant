@@ -4,10 +4,24 @@ Thang đo thể trạng chăm sóc giảm nhẹ
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
     """Render PPS calculator interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'pps':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'PPS')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #8B5CF6;'>🕊️ PPS - Palliative Performance Scale</h2>
@@ -113,6 +127,69 @@ def render():
             <p style='font-size: 1.1em;'><strong>Khuyến cáo:</strong> {care}</p>
         </div>
         """, unsafe_allow_html=True)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "PPS Score": f"{pps_score}%"
+        }
+        
+        results_dict = {
+            "PPS Score": f"{pps_score}%",
+            "Prognosis": prognosis,
+            "Care Recommendation": care
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="pps",
+            calculator_name="PPS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="pps",
+            calculator_name="PPS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="pps",
+            calculator_name="PPS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="pps", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="pps",
+            calculator_name="PPS",
+            category="Ung thư học",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("PPS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

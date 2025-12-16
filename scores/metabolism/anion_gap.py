@@ -84,7 +84,7 @@ def render():
         )
         
         st.markdown("---")
-        st.markdown("### 📊 Điều Chỉnh Theo Albumin (Optional)")
+        st.markdown("### 📊 Điều chỉnh Theo Albumin (Optional)")
         
         st.info("""
         **Lưu ý:** Albumin thấp làm giảm AG giả tạo.
@@ -232,7 +232,7 @@ def render():
                 
                 **AG = {ag_display:.1f} mEq/L**
                 
-                **Nguyên Nhân:**
+                **Nguyên nhân:**
                 
                 1. **Giảm albumin** (phổ biến nhất):
                    - Suy dinh dưỡng

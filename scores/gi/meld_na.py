@@ -421,7 +421,7 @@ def render():
         """)
         
         # Values used in calculation
-        with st.expander("📋 Thông số Sử dụng Trong Tính Toán"):
+        with st.expander("📋 Thông số Sử dụng Trong Tính toán"):
             st.markdown(f"""
             - **Creatinine:** {result['creatinine_used']} mg/dL
               {' (Set = 4.0 do dialysis)' if result['dialysis_applied'] else ''}

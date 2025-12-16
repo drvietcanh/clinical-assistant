@@ -509,7 +509,7 @@ def render():
             
             with st.expander("📊 Bảng Tỷ lệ tử vong Theo MELD"):
                 st.markdown("""
-                | MELD Score | Tử vong 3 tháng | Tử vong 1 năm | Mức Độ | Ưu tiên ghép |
+                | MELD Score | Tử vong 3 tháng | Tử vong 1 năm | Mức độ | Ưu tiên ghép |
                 |------------|-----------------|---------------|---------|--------------|
                 | <10 | 1.9% | 5-10% | 🟢 Nhẹ | Thấp |
                 | 10-14 | 6.0% | 15-25% | 🟡 Trung bình | Trung bình |

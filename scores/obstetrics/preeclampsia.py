@@ -4,10 +4,24 @@ Phân loại mức độ nặng của tiền sản giật
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
     """Render Preeclampsia Severity interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'preeclampsia':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Preeclampsia Severity')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>🤰 Preeclampsia Severity</h2>
@@ -355,6 +369,62 @@ def render():
             3. **Sibai BM.** Diagnosis, controversies, and management of the syndrome of hemolysis, elevated liver enzymes, and low platelet count. 
                *Obstet Gynecol.* 2004;103(5 Pt 1):981-91.
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "BP Systolic": f"{bp_sys} mmHg",
+            "BP Diastolic": f"{bp_dia} mmHg",
+            "Gestational Age": f"{gestational_age} weeks",
+            "Proteinuria": "Yes" if proteinuria else "No",
+            "Severe Features": len(severe_features)
+        }
+        
+        results_dict = {
+            "Severity": "Severe" if is_severe else "Mild",
+            "Severe Features Count": len(severe_features),
+            "HELLP Suspected": "Yes" if len(hellp_features) >= 2 else "No"
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="preeclampsia",
+            calculator_name="Preeclampsia Severity",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="preeclampsia",
+            calculator_name="Preeclampsia Severity",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="preeclampsia",
+            calculator_name="Preeclampsia Severity",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="preeclampsia", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="preeclampsia",
+            calculator_name="Preeclampsia Severity",
+            category="Sản khoa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Quick reference
     st.markdown("---")
@@ -380,6 +450,17 @@ def render():
     
     ⚠️ **Preeclampsia nặng = CẦN can thiệp tích cực!**
     """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("Preeclampsia")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

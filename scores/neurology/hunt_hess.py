@@ -165,7 +165,7 @@ def render():
     grade_number = int(selected_grade.split()[1])
     if serious_disease:
         final_grade = min(grade_number + 1, 5)  # Max grade 5
-        st.warning(f"**Điều Chỉnh:** {selected_grade} + 1 (biến chứng toàn thân) = **Grade {final_grade}**")
+        st.warning(f"**Điều chỉnh:** {selected_grade} + 1 (biến chứng toàn thân) = **Grade {final_grade}**")
     else:
         final_grade = grade_number
     
@@ -501,7 +501,7 @@ def render():
         **2. Tái xuất huyết - Nguy hiểm nhất:**
         - Nguy cơ cao nhất trong 24h đầu (~4%)
         - Tỷ lệ tử vong nếu tái xuất huyết: 70-80%
-        - **Phòng Ngừa:** Xử lý phình mạch SỚM (<24-72h)
+        - **Phòng ngừa:** Xử lý phình mạch SỚM (<24-72h)
         
         **3. Hydrocephalus:**
         - Cấp tính: Ngay sau SAH (cần EVD)

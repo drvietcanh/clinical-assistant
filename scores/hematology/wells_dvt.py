@@ -223,7 +223,7 @@ def render():
            - **<2 điểm:** DVT unlikely → D-dimer trước
         
         ### 📊 Độ chính xác        
-        | Điểm Wells | Tỷ Lệ DVT | Chiến Lược |
+        | Điểm Wells | Tỷ lệ DVT | Chiến Lược |
         |------------|-----------|------------|
         | ≥2 (likely) | 28-34% | Siêu âm trực tiếp |
         | <2 (unlikely) | 3-6% | D-dimer + siêu âm nếu (+) |
@@ -308,7 +308,7 @@ def render():
     st.divider()
     
     # Calculate button
-    if st.button("🧮 Tính Toán Wells DVT Score", type="primary", use_container_width=True):
+    if st.button("🧮 Tính toán Wells DVT Score", type="primary", use_container_width=True):
         result = calculate_wells_dvt(
             active_cancer=active_cancer,
             paralysis_immobilization=paralysis_immobilization,
@@ -471,7 +471,7 @@ def render():
         
         ### Phân tầng Nguy cơ
         
-        | Điểm Wells | Phân Loại | Tỷ Lệ DVT | Xử trí|
+        | Điểm Wells | Phân loại | Tỷ lệ DVT | Xử trí|
         |------------|-----------|-----------|--------|
         | ≥2 | DVT likely | 28-34% | Siêu âm trực tiếp |
         | <2 | DVT unlikely | 3-6% | D-dimer → Siêu âm nếu (+) |

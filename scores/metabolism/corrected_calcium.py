@@ -38,7 +38,7 @@ def render():
     """Render Corrected Calcium Calculator"""
     
     st.subheader("🦴 Corrected Calcium")
-    st.caption("Calcium Điều Chỉnh Theo Albumin")
+    st.caption("Calcium Điều chỉnh Theo Albumin")
     shared = load_shared_result_from_url()
     if shared and shared.get("calculator_id") == "corrected_calcium":
         st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Corrected Calcium')}")
@@ -277,7 +277,7 @@ def render():
                 - **Heart failure**
                 - Bronchospasm
                 
-                **Nguyên Nhân:**
+                **Nguyên nhân:**
                 
                 1. **Suy tuyến cận giáp:**
                    - Sau phẫu thuật tuyến giáp

@@ -4,10 +4,25 @@ Thang điểm đánh giá đau ở trẻ sơ sinh (0-2 tháng)
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
     """NIPS Pain Scale Calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'nips':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'NIPS')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>👶 NIPS - Neonatal Infant Pain Scale</h2>
     <p style='text-align: center;'><em>Thang điểm đánh giá đau ở trẻ sơ sinh (0-2 tháng)</em></p>
@@ -263,6 +278,63 @@ def render():
             2. **Nguyễn Đăng Bảo Minh.** Đánh giá độ tin cậy và giá trị của thang điểm đau NIPS ở trẻ sơ sinh. 
                *Tạp chí Y học Việt Nam.* 2018.
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Facial Expression": facial,
+            "Cry": cry,
+            "Breathing Patterns": breathing,
+            "Arms": arms,
+            "Legs": legs,
+            "State of Arousal": arousal
+        }
+        
+        results_dict = {
+            "NIPS Score": f"{total_score}/7",
+            "Severity": severity,
+            "Interpretation": interpretation
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="nips",
+            calculator_name="NIPS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="nips",
+            calculator_name="NIPS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="nips",
+            calculator_name="NIPS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="nips", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="nips",
+            calculator_name="NIPS",
+            category="Đau",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.info("""
     💡 **Điểm quan trọng:**
@@ -275,4 +347,15 @@ def render():
     6. **Đánh giá lại:** Sau 15-30 phút (đau nặng) hoặc 30-60 phút (đau nhẹ/vừa)
     7. **Cảnh báo:** Trẻ sơ sinh dễ bị ức chế hô hấp với opioid → theo dõi sát
     """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("NIPS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 

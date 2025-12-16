@@ -16,7 +16,7 @@ from components.smart_suggestions import render_suggestions
 def render():
     """NIHSS Calculator"""
     st.subheader("🧠 NIHSS - NIH Stroke Scale")
-    st.caption("Thang điểm Đánh giá Mức Độ Nặng Đột Quỵ")
+    st.caption("Thang điểm Đánh giá Mức độ Nặng Đột Quỵ")
     
     # Load shared result if available
     shared = load_shared_result_from_url()

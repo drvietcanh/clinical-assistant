@@ -197,7 +197,7 @@ def render():
     if hco3 >= 22:
         st.warning("⚠️ **Lưu ý:** Winter's Formula chỉ áp dụng cho toan chuyển hóa (HCO₃⁻ < 22 mmol/L)")
     
-    if st.button("🔬 Tính Toán & Phân tích", type="primary", use_container_width=True):
+    if st.button("🔬 Tính toán & Phân tích", type="primary", use_container_width=True):
         # Validate inputs
         validation_errors = []
         
@@ -352,7 +352,7 @@ def render():
         # Causes based on anion gap
         if anion_gap is not None:
             st.markdown("---")
-            st.subheader("🔍 Nguyên Nhân Toan Chuyển Hóa")
+            st.subheader("🔍 Nguyên nhân Toan Chuyển Hóa")
             
             causes_info = get_metabolic_acidosis_causes(anion_gap)
             

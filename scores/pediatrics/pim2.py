@@ -425,7 +425,7 @@ def render():
         st.dataframe(pd.DataFrame(scoring_data), use_container_width=True, hide_index=True)
         
         st.markdown("---")
-        st.markdown("### 🎯 Phân Loại Nguy cơ")
+        st.markdown("### 🎯 Phân loại Nguy cơ")
         
         risk_data = {
             "Nguy cơ tử vong": ["<5%", "5-15%", ">15%"],
@@ -499,7 +499,7 @@ def render():
             show_links=True
         )
     else:
-        st.markdown("### 📚 Tài Liệu Tham Khảo")
+        st.markdown("### 📚 Tài liệu tham khảo")
         st.markdown("""
         1. **Slater A, et al.** PIM2: a revised version of the Paediatric Index of Mortality.
            Intensive Care Med. 2003;29(2):278-285.

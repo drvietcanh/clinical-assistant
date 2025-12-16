@@ -157,7 +157,7 @@ def render():
     3. **Origin of Edema:** Suy hô hấp không hoàn toàn do suy tim hoặc quá tải dịch
     4. **Oxygenation:** Phân loại theo PaO₂/FiO₂ với PEEP ≥5 cmH2O
     
-    **Phân Loại:**
+    **Phân loại:**
     - **Mild ARDS:** PaO₂/FiO₂ 200-300 mmHg
     - **Moderate ARDS:** PaO₂/FiO₂ 100-200 mmHg
     - **Severe ARDS:** PaO₂/FiO₂ <100 mmHg

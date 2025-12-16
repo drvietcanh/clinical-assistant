@@ -93,7 +93,7 @@ def render():
         )
     
     # Instructions
-    st.markdown("### 📋 Hướng Dẫn Đánh giá")
+    st.markdown("### 📋 Hướng dẫn Đánh giá")
     
     with st.expander("🔍 Xem hướng dẫn đánh giá", expanded=True):
         st.markdown("""

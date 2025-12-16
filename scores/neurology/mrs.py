@@ -15,6 +15,13 @@ Scott Med J. 1957;2(5):200-15.
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 from .mrs_ui_selection import render_selection
 from .mrs_ui_results import render_results_display
@@ -32,6 +39,13 @@ from .mrs_ui_help import (
 
 def render():
     """Render Modified Rankin Scale Calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'mrs':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Modified Rankin Scale')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.subheader("🧠 mRS - Modified Rankin Scale")
     st.caption("Đánh giá mức độ khuyết tật/phụ thuộc sau đột quỵ")
@@ -64,6 +78,58 @@ def render():
         render_comparison_table()
         render_barthel_comparison()
         render_references()
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "mRS Score": selected_mrs
+        }
+        
+        results_dict = {
+            "mRS Score": f"{selected_mrs}/6",
+            "Description": mrs_info.get('description', ''),
+            "Category": mrs_info.get('category', '')
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="mrs",
+            calculator_name="Modified Rankin Scale",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="mrs",
+            calculator_name="Modified Rankin Scale",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="mrs",
+            calculator_name="Modified Rankin Scale",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="mrs", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="mrs",
+            calculator_name="Modified Rankin Scale",
+            category="Thần kinh",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Educational content
     st.markdown("---")
@@ -73,6 +139,17 @@ def render():
     render_clinical_decisions()
     render_common_mistakes()
     render_footer()
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("Modified Rankin Scale")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

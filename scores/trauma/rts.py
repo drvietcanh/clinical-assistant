@@ -261,7 +261,7 @@ def render():
         
         ### 📈 Phân tầng Nguy cơ
         
-        | RTS | Tỷ Lệ Sống Sót | Ưu tiên |
+        | RTS | Tỷ lệ Sống Sót | Ưu tiên |
         |-----|----------------|---------|
         | ≥7 | >95% | Không khẩn cấp |
         | 5-6.99 | 70-95% | Khẩn cấp |

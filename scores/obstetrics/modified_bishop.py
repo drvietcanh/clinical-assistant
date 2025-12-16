@@ -4,6 +4,13 @@ Phiên bản cải tiến của Bishop Score với thêm yếu tố lâm sàng
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_modified_bishop(dilation, effacement, station, consistency, position,
@@ -114,6 +121,13 @@ def interpret_modified_bishop(total_score, is_nulliparous=True):
 def render():
     """Render the Modified Bishop Score calculator"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'modified_bishop':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Modified Bishop Score')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🤰 Modified Bishop Score")
     st.markdown("""
     ### Phiên Bản Cải Tiến Bishop Score
@@ -219,7 +233,7 @@ def render():
     st.markdown("---")
     
     # 5. Position
-    st.markdown("### 5️⃣ Position - Vị Trí")
+    st.markdown("### 5️⃣ Position - Vị trí")
     position = st.radio(
         "Vị trí:",
         options=["posterior", "mid", "anterior"],
@@ -387,6 +401,67 @@ def render():
             
             **Đánh giá lại sau 12-24h**
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Dilation": f"{dilation} cm",
+            "Effacement": f"{effacement}%",
+            "Station": f"{station:+d}",
+            "Consistency": consistency.capitalize(),
+            "Position": position.capitalize(),
+            "Preeclampsia": "Yes" if has_preeclampsia else "No",
+            "PROM": "Yes" if has_prom else "No",
+            "Parity": "Nulliparous" if is_nulliparous else "Multiparous"
+        }
+        
+        results_dict = {
+            "Modified Bishop Score": f"{total_score}/15",
+            "Base Score": f"{base_score}/13",
+            "Modifier Score": f"+{modifier_score}",
+            "Favorability": result['favorability'],
+            "Success Rate": result['success_rate']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="modified_bishop",
+            calculator_name="Modified Bishop Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="modified_bishop",
+            calculator_name="Modified Bishop Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="modified_bishop",
+            calculator_name="Modified Bishop Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="modified_bishop", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="modified_bishop",
+            calculator_name="Modified Bishop Score",
+            category="Sản khoa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Educational content
     st.markdown("---")
@@ -517,15 +592,16 @@ def render():
         → Antibiotics + Delivery ngay
         """)
     
-    # References
+    # References section (always at bottom)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Bishop EH. Pelvic scoring for elective induction. Obstet Gynecol. 1964
-    - ACOG Practice Bulletin No. 107: Induction of labor. 2009
-    - ACOG Practice Bulletin No. 202: Gestational Hypertension and Preeclampsia. 2019
-    - ACOG Practice Bulletin No. 188: Prelabor Rupture of Membranes. 2018
-    """)
+    references = get_references("Modified Bishop Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

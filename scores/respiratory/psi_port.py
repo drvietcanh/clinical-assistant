@@ -27,7 +27,7 @@ from components.smart_suggestions import render_suggestions
 def render():
     """PSI/PORT Score Calculator"""
     st.subheader("🫁 PSI/PORT Score")
-    st.caption("Pneumonia Severity Index - Chỉ Số Mức Độ Nặng Viêm Phổi")
+    st.caption("Pneumonia Severity Index - Chỉ Số Mức độ Nặng Viêm Phổi")
     
     # Load shared result if available
     shared = load_shared_result_from_url()

@@ -166,7 +166,7 @@ def render():
             
             # Use render_score_breakdown for component scores
             render_score_breakdown(
-                title="Chi Tiết Điểm Số",
+                title="Chi tiết điểm số",
                 subscores={
                     "H - History": history,
                     "E - ECG": ecg,
