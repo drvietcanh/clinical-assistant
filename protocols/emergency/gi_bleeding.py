@@ -133,7 +133,88 @@ def render_upper_gi_bleeding():
     """)
     
     st.markdown("---")
-    st.markdown("### 3️⃣ Đảo ngược anticoagulation")
+    st.markdown("### 3️⃣ Tranexamic Acid (TXA) - Cầm máu")
+    
+    st.markdown("#### 💉 Tranexamic Acid (TXA) Protocol")
+    
+    col1, col2 = st.columns([1, 2])
+    
+    with col1:
+        st.markdown("##### 📊 Tính liều TXA")
+        
+        weight = st.number_input(
+            "**Cân nặng (kg):**",
+            min_value=40.0,
+            max_value=150.0,
+            value=70.0,
+            step=0.1,
+            key="txa_weight"
+        )
+        
+        # TXA dosing: 1g IV q8h × 3 ngày (HALT-IT trial)
+        bolus_dose = 1.0  # g
+        maintenance_dose = 1.0  # g q8h
+        
+        st.metric("**Liều bolus:**", f"{bolus_dose:.0f} g IV", help="Truyền trong 10 phút")
+        st.metric("**Liều duy trì:**", f"{maintenance_dose:.0f} g IV q8h", help="× 3 ngày (72 giờ)")
+        st.metric("**Tổng thời gian:**", "3 ngày", help="72 giờ")
+        
+        st.info("""
+        **Cách pha:**
+        - TXA 1g pha trong 100ml NS
+        - Truyền trong 10 phút
+        - Lặp lại q8h × 3 ngày
+        """)
+    
+    with col2:
+        st.markdown("##### 📋 Chỉ định & Chống chỉ định")
+        
+        st.success("""
+        **✅ Chỉ định TXA trong GI Bleeding:**
+        
+        **Theo HALT-IT trial (2019):**
+        - ✅ Xuất huyết tiêu hóa trên (UGIB) nghi ngờ hoặc xác định
+        - ✅ Có thể dùng trong vòng 8 giờ từ khi khởi phát triệu chứng
+        - ✅ Có thể dùng cho cả variceal và non-variceal bleeding
+        
+        **Lợi ích:**
+        - Giảm tỷ lệ tử vong do xuất huyết (RR 0.88)
+        - Giảm tỷ lệ tái xuất huyết
+        - An toàn, không tăng nguy cơ huyết khối trong nghiên cứu
+        
+        **Cơ chế:**
+        - Ức chế plasmin → giảm fibrinolysis
+        - Tăng cường hình thành cục máu đông
+        """)
+        
+        st.warning("""
+        **⚠️ Chống chỉ định:**
+        - ❌ Dị ứng TXA
+        - ❌ Huyết khối tĩnh mạch sâu (DVT) hoặc PE đang hoạt động
+        - ❌ Tiền sử huyết khối động mạch (MI, stroke) trong 3 tháng
+        - ❌ Suy thận nặng (CrCl <30 ml/min) - giảm liều
+        - ❌ Động kinh không kiểm soát
+        
+        **⚠️ Thận trọng:**
+        - Suy thận (giảm liều 50% nếu CrCl 30-60)
+        - Tiền sử huyết khối
+        - Rối loạn đông máu
+        """)
+        
+        st.info("""
+        **📊 Liều điều chỉnh theo chức năng thận:**
+        - **CrCl >60 ml/min:** 1g q8h (liều chuẩn)
+        - **CrCl 30-60 ml/min:** 1g q12h (giảm 50%)
+        - **CrCl <30 ml/min:** Không khuyến cáo hoặc 1g q24h
+        
+        **⏱️ Timing:**
+        - Bắt đầu càng sớm càng tốt
+        - Tốt nhất trong vòng 3 giờ từ khi khởi phát
+        - Có thể dùng đến 8 giờ
+        """)
+    
+    st.markdown("---")
+    st.markdown("### 4️⃣ Đảo ngược anticoagulation")
     
     st.error("""
     **Nếu đang dùng anticoagulation:**
@@ -157,7 +238,7 @@ def render_upper_gi_bleeding():
     """)
     
     st.markdown("---")
-    st.markdown("### 4️⃣ Phân Luồng: Variceal vs Non-Variceal")
+    st.markdown("### 5️⃣ Phân Luồng: Variceal vs Non-Variceal")
     
     bleeding_source = st.radio(
         "**Nghi ngờ nguyên nhân:**",
@@ -321,7 +402,7 @@ def render_upper_gi_bleeding():
             """)
     
     st.markdown("---")
-    st.markdown("### 5️⃣ Chỉ định Nội soi - Decision Tree")
+    st.markdown("### 6️⃣ Chỉ định Nội soi - Decision Tree")
     
     st.markdown("#### ⏱️ Tính toán thời điểm nội soi")
     
@@ -453,7 +534,7 @@ def render_upper_gi_bleeding():
         """)
     
     st.markdown("---")
-    st.markdown("### 6️⃣ Quản lý Theo Nguyên nhân")
+    st.markdown("### 7️⃣ Quản lý Theo Nguyên nhân")
     
     tab1, tab2, tab3, tab4 = st.tabs(["PUD", "Varices", "Mallory-Weiss", "Khác"])
     
@@ -481,6 +562,304 @@ def render_upper_gi_bleeding():
            - Điều trị H. pylori nếu (+)
            - Tránh NSAIDs
         """)
+        
+        st.markdown("---")
+        st.markdown("#### 🔧 Kỹ Thuật Cầm Máu Nội Soi Chi Tiết")
+        
+        endo_tab1, endo_tab2, endo_tab3, endo_tab4, endo_tab5 = st.tabs([
+            "📎 Hemostatic Clip", 
+            "🔥 Thermal Therapy", 
+            "💉 Injection Therapy", 
+            "🔀 Combination Therapy",
+            "📊 Forrest Classification"
+        ])
+        
+        with endo_tab1:
+            st.markdown("##### 📎 Hemostatic Clip (Endoscopic Clipping)")
+            
+            st.success("""
+            **Cơ chế:**
+            - Kẹp trực tiếp mạch máu đang chảy
+            - Tạo áp lực cơ học để cầm máu
+            - Ít tổn thương mô xung quanh
+            
+            **Chỉ định:**
+            - ✅ Active bleeding (Forrest Ia, Ib)
+            - ✅ Visible vessel (Forrest IIa)
+            - ✅ Dieulafoy lesion
+            - ✅ Mallory-Weiss tear
+            - ✅ Post-polypectomy bleeding
+            
+            **Kỹ thuật:**
+            1. Xác định điểm chảy máu
+            2. Rửa sạch bằng nước muối để thấy rõ
+            3. Đặt clip vuông góc với mạch máu
+            4. Đóng clip chặt, đảm bảo kẹp được mạch máu
+            5. Có thể đặt nhiều clip nếu cần
+            
+            **Ưu điểm:**
+            - ✅ Hiệu quả cao (90-95%)
+            - ✅ Ít tổn thương mô
+            - ✅ Có thể dùng cho nhiều loại tổn thương
+            - ✅ An toàn
+            
+            **Nhược điểm:**
+            - ❌ Khó đặt ở một số vị trí (góc, sau dạ dày)
+            - ❌ Có thể rơi sau vài ngày
+            - ❌ Chi phí cao hơn
+            
+            **Theo dõi:**
+            - Kiểm tra lại sau 24-48h
+            - Clip thường tự rơi sau 1-2 tuần
+            """)
+        
+        with endo_tab2:
+            st.markdown("##### 🔥 Thermal Therapy")
+            
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown("**Bipolar Electrocoagulation (BICAP):**")
+                st.info("""
+                **Cơ chế:**
+                - Dòng điện xoay chiều qua mô
+                - Tạo nhiệt làm đông máu
+                
+                **Kỹ thuật:**
+                - Đặt probe tiếp xúc với điểm chảy máu
+                - Năng lượng: 15-20W
+                - Thời gian: 1-2 giây mỗi lần
+                - Lặp lại 3-5 lần
+                
+                **Chỉ định:**
+                - Visible vessel (Forrest IIa)
+                - Active oozing (Forrest Ib)
+                - Small ulcers
+                """)
+                
+                st.markdown("**Monopolar Electrocoagulation:**")
+                st.warning("""
+                **Ít dùng hơn:**
+                - Nguy cơ thủng cao hơn
+                - Khó kiểm soát độ sâu
+                """)
+            
+            with col2:
+                st.markdown("**Argon Plasma Coagulation (APC):**")
+                st.success("""
+                **Cơ chế:**
+                - Khí argon dẫn dòng điện
+                - Đông máu bề mặt, không tiếp xúc
+                
+                **Kỹ thuật:**
+                - Khoảng cách: 2-5mm
+                - Năng lượng: 40-60W
+                - Lưu lượng khí: 1-2 L/min
+                - Quét đều bề mặt
+                
+                **Chỉ định:**
+                - ✅ AVM (Angiodysplasia)
+                - ✅ Gastric antral vascular ectasia (GAVE)
+                - ✅ Radiation colitis
+                - ✅ Superficial bleeding
+                
+                **Ưu điểm:**
+                - ✅ Không tiếp xúc trực tiếp
+                - ✅ Đồng đều, kiểm soát tốt
+                - ✅ Phù hợp tổn thương rộng
+                """)
+                
+                st.markdown("**Heater Probe:**")
+                st.info("""
+                **Cơ chế:**
+                - Nhiệt trực tiếp từ probe
+                - Đông máu + đè ép
+                
+                **Kỹ thuật:**
+                - Đè ép trước khi làm nóng
+                - Nhiệt độ: 250°C
+                - Thời gian: 1-2 giây
+                - Lặp lại 3-5 lần
+                """)
+        
+        with endo_tab3:
+            st.markdown("##### 💉 Injection Therapy")
+            
+            st.markdown("**Epinephrine Injection:**")
+            st.success("""
+            **Cơ chế:**
+            - Co mạch tại chỗ
+            - Tạo áp lực cơ học (volume effect)
+            - Kích hoạt đông máu
+            
+            **Kỹ thuật:**
+            - **Nồng độ:** 1:10,000 (0.1mg/ml) hoặc 1:20,000
+            - **Liều:** 0.5-2ml mỗi điểm
+            - **Tổng liều:** 10-20ml (không quá 30ml)
+            - **Kỹ thuật:** 4 điểm xung quanh, sau đó vào giữa
+            
+            **Chỉ định:**
+            - ✅ Active bleeding (Forrest Ia, Ib)
+            - ✅ Visible vessel (Forrest IIa)
+            - ✅ Thường dùng kết hợp với clip hoặc thermal
+            
+            **Ưu điểm:**
+            - ✅ Dễ thực hiện
+            - ✅ Hiệu quả tạm thời
+            - ✅ Giảm chảy máu để thấy rõ tổn thương
+            
+            **Nhược điểm:**
+            - ❌ Tác dụng ngắn (15-20 phút)
+            - ❌ Nên kết hợp với phương pháp khác
+            - ❌ Nguy cơ hoại tử nếu tiêm quá nhiều
+            """)
+            
+            st.markdown("---")
+            st.markdown("**Sclerosant Injection:**")
+            
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown("**Ethanol 98%:**")
+                st.warning("""
+                **Liều:** 0.1-0.2ml mỗi điểm
+                **Tổng:** Không quá 1-2ml
+                **Nguy cơ:** Hoại tử, thủng
+                **Ít dùng:** Chỉ khi không có phương pháp khác
+                """)
+            
+            with col2:
+                st.markdown("**Polidocanol:**")
+                st.info("""
+                **Nồng độ:** 1-3%
+                **Liều:** 0.5-1ml mỗi điểm
+                **An toàn hơn:** Ít nguy cơ hoại tử
+                **Chỉ định:** Variceal bleeding (sclerotherapy)
+                """)
+        
+        with endo_tab4:
+            st.markdown("##### 🔀 Combination Therapy (Ưu tiên)")
+            
+            st.error("""
+            **⚠️ QUAN TRỌNG: Combination therapy hiệu quả hơn đơn trị liệu!**
+            
+            **Tỷ lệ tái xuất huyết:**
+            - Epinephrine đơn thuần: 15-20%
+            - Clip đơn thuần: 5-10%
+            - Combination: 2-5%
+            """)
+            
+            st.markdown("**Các phác đồ kết hợp phổ biến:**")
+            
+            st.success("""
+            **1. Epinephrine + Clip (Ưu tiên nhất):**
+            - Bước 1: Tiêm epinephrine xung quanh để giảm chảy máu
+            - Bước 2: Đặt clip vào điểm chảy máu
+            - Hiệu quả: 95-98%
+            
+            **2. Epinephrine + Thermal:**
+            - Bước 1: Tiêm epinephrine
+            - Bước 2: Bipolar electrocoagulation hoặc heater probe
+            - Hiệu quả: 90-95%
+            
+            **3. Clip + Thermal:**
+            - Đặt clip trước
+            - Sau đó đốt xung quanh để củng cố
+            - Hiệu quả: 95%
+            
+            **4. Triple Therapy (Epinephrine + Clip + Thermal):**
+            - Dùng cho trường hợp nặng
+            - Hiệu quả: 98-99%
+            """)
+            
+            st.markdown("---")
+            st.markdown("**Quy trình chuẩn (Step-by-step):**")
+            
+            st.info("""
+            **Bước 1: Chuẩn bị**
+            - Rửa sạch bằng nước muối
+            - Xác định điểm chảy máu chính xác
+            - Chuẩn bị dụng cụ (clip, injector, thermal probe)
+            
+            **Bước 2: Injection (nếu cần)**
+            - Tiêm epinephrine 1:10,000
+            - 4 điểm xung quanh (0.5-1ml mỗi điểm)
+            - 1 điểm vào giữa (1-2ml)
+            - Đợi 30-60 giây để giảm chảy máu
+            
+            **Bước 3: Primary hemostasis**
+            - Đặt clip vào điểm chảy máu (ưu tiên)
+            - Hoặc dùng thermal therapy
+            - Đảm bảo cầm máu hoàn toàn
+            
+            **Bước 4: Củng cố**
+            - Nếu dùng clip: Có thể thêm thermal xung quanh
+            - Nếu dùng thermal: Có thể đặt clip để củng cố
+            
+            **Bước 5: Kiểm tra**
+            - Quan sát 5-10 phút
+            - Đảm bảo không còn chảy máu
+            - Rửa lại để xác nhận
+            """)
+        
+        with endo_tab5:
+            st.markdown("##### 📊 Forrest Classification")
+            
+            st.markdown("**Phân loại tổn thương xuất huyết:**")
+            
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.error("""
+                **Forrest Ia - Active Spurting:**
+                - Chảy máu phun thành tia
+                - Nguy cơ cao nhất
+                - Cần can thiệp ngay
+                - Tỷ lệ tái xuất huyết: 55%
+                
+                **Forrest Ib - Active Oozing:**
+                - Chảy máu rỉ rả
+                - Nguy cơ cao
+                - Cần can thiệp
+                - Tỷ lệ tái xuất huyết: 43%
+                """)
+            
+            with col2:
+                st.warning("""
+                **Forrest IIa - Visible Vessel:**
+                - Thấy mạch máu nhưng không chảy
+                - Nguy cơ trung bình-cao
+                - Nên can thiệp
+                - Tỷ lệ tái xuất huyết: 22%
+                
+                **Forrest IIb - Adherent Clot:**
+                - Cục máu đông dính
+                - Nguy cơ trung bình
+                - Có thể can thiệp
+                - Tỷ lệ tái xuất huyết: 10%
+                """)
+            
+            st.success("""
+            **Forrest IIc - Hematin Base:**
+            - Đáy loét có màu đen (hematin)
+            - Nguy cơ thấp
+            - Không cần can thiệp
+            - Tỷ lệ tái xuất huyết: 5%
+            
+            **Forrest III - Clean Base:**
+            - Đáy loét sạch, không có dấu hiệu xuất huyết
+            - Nguy cơ rất thấp
+            - Không cần can thiệp
+            - Tỷ lệ tái xuất huyết: 0-3%
+            """)
+            
+            st.info("""
+            **Khuyến nghị can thiệp:**
+            - ✅ **Forrest Ia, Ib:** Bắt buộc can thiệp
+            - ✅ **Forrest IIa:** Nên can thiệp
+            - ⚠️ **Forrest IIb:** Có thể can thiệp (rửa sạch để đánh giá lại)
+            - ❌ **Forrest IIc, III:** Không cần can thiệp
+            """)
     
     with tab2:
         st.markdown("#### 🩸 Xuất huyết do giãn tĩnh mạch")
@@ -508,6 +887,289 @@ def render_upper_gi_bleeding():
            - Beta-blocker (Propranolol, Nadolol) để giảm portal pressure
            - Band ligation mỗi 2-4 tuần đến hết varices
         """)
+        
+        st.markdown("---")
+        st.markdown("#### 🔧 Kỹ Thuật Cầm Máu Nội Soi Cho Varices")
+        
+        variceal_endo_tab1, variceal_endo_tab2 = st.tabs(["📎 Band Ligation", "💉 Sclerotherapy"])
+        
+        with variceal_endo_tab1:
+            st.markdown("##### 📎 Endoscopic Band Ligation (EBL)")
+            
+            st.success("""
+            **Cơ chế:**
+            - Thắt varices bằng dây cao su
+            - Gây hoại tử và xơ hóa
+            - Giảm nguy cơ tái xuất huyết
+            
+            **Kỹ thuật:**
+            1. Xác định varices đang chảy máu hoặc có nguy cơ cao
+            2. Hút varices vào cap
+            3. Bắn band để thắt
+            4. Có thể đặt nhiều band trong một lần nội soi
+            5. Thường đặt từ dưới lên trên
+            
+            **Chỉ định:**
+            - ✅ Variceal bleeding cấp tính
+            - ✅ Dự phòng tái phát (secondary prophylaxis)
+            - ✅ Varices lớn có nguy cơ cao
+            
+            **Ưu điểm:**
+            - ✅ Hiệu quả cao (90-95% cầm máu)
+            - ✅ Ít biến chứng hơn sclerotherapy
+            - ✅ Tỷ lệ tái xuất huyết thấp hơn
+            - ✅ Ít loét, hẹp thực quản
+            
+            **Nhược điểm:**
+            - ❌ Khó thực hiện nếu varices nhỏ hoặc phẳng
+            - ❌ Cần nội soi lại nhiều lần
+            - ❌ Có thể gây đau ngực sau thủ thuật
+            
+            **Theo dõi:**
+            - Nội soi lại sau 2-4 tuần
+            - Lặp lại cho đến khi hết varices
+            - Thường cần 2-4 lần nội soi
+            """)
+        
+        with variceal_endo_tab2:
+            st.markdown("##### 💉 Endoscopic Sclerotherapy")
+            
+            st.info("""
+            **Cơ chế:**
+            - Tiêm chất gây xơ vào varices
+            - Gây viêm và xơ hóa
+            - Tắc varices
+            
+            **Kỹ thuật:**
+            1. Xác định varices đang chảy máu
+            2. Tiêm sclerosant vào varices
+            3. Có thể tiêm intravascular hoặc paravariceal
+            4. Thường dùng: Ethanolamine oleate, Polidocanol, hoặc Sodium tetradecyl sulfate
+            
+            **Chỉ định:**
+            - ✅ Variceal bleeding cấp tính (khi không thể band)
+            - ✅ Varices nhỏ, phẳng không thể band
+            - ✅ Dự phòng tái phát (ít dùng hơn band)
+            
+            **Liều:**
+            - **Ethanolamine oleate:** 1-3ml mỗi varices
+            - **Polidocanol:** 1-3ml mỗi varices
+            - **Tổng liều:** Không quá 20ml mỗi lần
+            
+            **Ưu điểm:**
+            - ✅ Có thể dùng cho varices nhỏ
+            - ✅ Hiệu quả cầm máu tốt (85-90%)
+            - ✅ Có thể thực hiện ngay
+            
+            **Nhược điểm:**
+            - ❌ Nhiều biến chứng hơn band ligation
+            - ❌ Loét thực quản (20-30%)
+            - ❌ Hẹp thực quản (5-10%)
+            - ❌ Tỷ lệ tái xuất huyết cao hơn
+            
+            **Biến chứng:**
+            - Loét thực quản
+            - Hẹp thực quản
+            - Tràn khí màng phổi (hiếm)
+            - Nhiễm trùng (hiếm)
+            """)
+        
+        st.markdown("---")
+        st.markdown("#### 🚨 TIPS (Transjugular Intrahepatic Portosystemic Shunt) - Chỉ định Chi tiết")
+        
+        tips_tab1, tips_tab2, tips_tab3 = st.tabs(["📋 Chỉ định", "⚠️ Chống chỉ định", "📊 Đánh giá"])
+        
+        with tips_tab1:
+            st.markdown("##### ✅ Chỉ định TIPS Cho Variceal Bleeding")
+            
+            st.error("""
+            **🚨 CHỈ ĐỊNH KHẨN CẤP (Rescue TIPS):**
+            
+            **1. Xuất huyết không kiểm soát được:**
+            - ✅ Xuất huyết tiếp diễn sau điều trị nội soi
+            - ✅ Không thể cầm máu bằng band ligation/sclerotherapy
+            - ✅ Xuất huyết nặng, không đáp ứng với medical therapy
+            
+            **2. Tái xuất huyết sớm:**
+            - ✅ Tái xuất huyết trong vòng 5 ngày sau điều trị nội soi
+            - ✅ Tái xuất huyết nhiều lần sau điều trị nội soi
+            
+            **3. Không thể thực hiện nội soi:**
+            - ✅ Bệnh nhân không thể chịu đựng nội soi
+            - ✅ Không có điều kiện nội soi can thiệp
+            - ✅ Varices ở vị trí khó tiếp cận
+            """)
+            
+            st.warning("""
+            **⚠️ CHỈ ĐỊNH DỰ PHÒNG (Prophylactic TIPS):**
+            
+            **Early TIPS (Trong vòng 72 giờ):**
+            - ✅ Child-Pugh B với active bleeding tại nội soi
+            - ✅ Child-Pugh C (bất kể tình trạng bleeding)
+            - ✅ Giảm tỷ lệ tử vong và tái xuất huyết
+            
+            **Secondary Prophylaxis:**
+            - ✅ Tái xuất huyết sau điều trị nội soi + beta-blocker
+            - ✅ Không dung nạp beta-blocker
+            - ✅ Varices lớn, nguy cơ cao
+            """)
+            
+            st.info("""
+            **📊 Tiêu Chuẩn Chọn Lựa:**
+            
+            **Bệnh nhân phù hợp:**
+            - ✅ Child-Pugh score: B hoặc C
+            - ✅ MELD score: <18 (tốt nhất)
+            - ✅ Không có bệnh tim phổi nặng
+            - ✅ Không có bệnh não gan nặng (grade 3-4)
+            - ✅ Không có nhiễm trùng đang hoạt động
+            
+            **Timing:**
+            - **Early TIPS:** Trong vòng 72 giờ từ khi nhập viện
+            - **Rescue TIPS:** Khi điều trị nội soi thất bại
+            - **Elective TIPS:** Dự phòng tái phát sau khi ổn định
+            """)
+        
+        with tips_tab2:
+            st.markdown("##### ❌ Chống chỉ định TIPS")
+            
+            st.error("""
+            **🚫 CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI:**
+            
+            - ❌ **Bệnh não gan nặng (Hepatic Encephalopathy grade 3-4):**
+              * TIPS làm tăng nguy cơ bệnh não gan
+              * Cần điều trị bệnh não gan trước
+            
+            - ❌ **Nhiễm trùng đang hoạt động:**
+              * SBP (Spontaneous Bacterial Peritonitis)
+              * Nhiễm trùng huyết
+              * Viêm phổi
+              * Cần điều trị kháng sinh trước
+            
+            - ❌ **Bệnh tim phổi nặng:**
+              * Suy tim nặng (EF <30%)
+              * Tăng áp phổi (PAP >45 mmHg)
+              * TIPS làm tăng preload tim
+            
+            - ❌ **Tắc tĩnh mạch cửa hoàn toàn:**
+              * Không thể đặt TIPS
+              * Cần đánh giá bằng doppler siêu âm trước
+            
+            - ❌ **Ung thư gan tiến triển:**
+              * HCC lớn hoặc di căn
+              * Tiên lượng xấu
+            """)
+            
+            st.warning("""
+            **⚠️ CHỐNG CHỈ ĐỊNH TƯƠNG ĐỐI:**
+            
+            - ⚠️ **Child-Pugh A:**
+              * Thường không cần TIPS
+              * Điều trị nội soi + beta-blocker đủ
+            
+            - ⚠️ **MELD >18:**
+              * Nguy cơ tử vong sau TIPS cao
+              * Cân nhắc ghép gan thay vì TIPS
+            
+            - ⚠️ **Tuổi >70:**
+              * Nguy cơ biến chứng cao hơn
+              * Đánh giá từng trường hợp
+            
+            - ⚠️ **Bệnh thận mạn:**
+              * TIPS có thể làm nặng thêm
+              * Cân nhắc cẩn thận
+            
+            - ⚠️ **Đang dùng thuốc chống đông:**
+              * Nguy cơ chảy máu
+              * Cần đảo ngược trước TIPS
+            """)
+        
+        with tips_tab3:
+            st.markdown("##### 📊 Đánh giá Trước TIPS")
+            
+            st.markdown("**Workup trước TIPS:**")
+            
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.success("""
+                **1. Đánh giá chức năng gan:**
+                - Child-Pugh score
+                - MELD score
+                - Albumin, bilirubin, PT/INR
+                - LFT đầy đủ
+                
+                **2. Đánh giá giải phẫu:**
+                - **Doppler siêu âm:**
+                  * Đánh giá tĩnh mạch cửa
+                  * Đánh giá tĩnh mạch gan
+                  * Đánh giá dòng chảy
+                  * Loại trừ tắc hoàn toàn
+                
+                **3. Đánh giá tim mạch:**
+                - ECG
+                - Echo tim (nếu cần)
+                - Đánh giá chức năng tim
+                """)
+            
+            with col2:
+                st.info("""
+                **4. Đánh giá thần kinh:**
+                - Đánh giá bệnh não gan
+                - MMSE hoặc các test tâm thần
+                - Loại trừ grade 3-4
+                
+                **5. Đánh giá nhiễm trùng:**
+                - Cấy máu
+                - Cấy dịch cổ trướng (nếu có)
+                - X-quang ngực
+                - Loại trừ nhiễm trùng đang hoạt động
+                
+                **6. Đánh giá chức năng thận:**
+                - Creatinine, BUN
+                - CrCl
+                - Loại trừ suy thận nặng
+                """)
+            
+            st.markdown("---")
+            st.markdown("**Kết quả mong đợi sau TIPS:**")
+            
+            st.success("""
+            **Hiệu quả:**
+            - ✅ Cầm máu: 90-95%
+            - ✅ Giảm portal pressure: 50-60%
+            - ✅ Giảm tái xuất huyết: 70-80%
+            - ✅ Cải thiện ascites
+            
+            **Biến chứng:**
+            - ⚠️ Bệnh não gan mới hoặc nặng lên: 20-30%
+            - ⚠️ Tắc shunt: 20-30% trong 1 năm
+            - ⚠️ Suy tim: 5-10%
+            - ⚠️ Nhiễm trùng: 2-5%
+            - ⚠️ Tử vong: 5-10% (tùy Child-Pugh)
+            
+            **Theo dõi sau TIPS:**
+            - Siêu âm doppler sau 1 tuần, 1 tháng, 3 tháng, 6 tháng, 1 năm
+            - Đánh giá bệnh não gan
+            - Điều chỉnh thuốc (lactulose, rifaximin)
+            - Điều chỉnh beta-blocker (có thể giảm liều)
+            """)
+            
+            st.markdown("---")
+            st.markdown("**So sánh Early TIPS vs Standard Care:**")
+            
+            st.info("""
+            **Early TIPS (Trong 72h):**
+            - ✅ Giảm tỷ lệ tử vong: 20% → 10%
+            - ✅ Giảm tái xuất huyết: 50% → 10%
+            - ✅ Giảm thời gian nằm viện
+            - ✅ Chỉ định: Child-Pugh B với active bleeding hoặc Child-Pugh C
+            
+            **Standard Care (Nội soi + Medical):**
+            - Tỷ lệ tử vong: 20-30%
+            - Tỷ lệ tái xuất huyết: 30-50%
+            - Chỉ định: Child-Pugh A hoặc B không active bleeding
+            """)
     
     with tab3:
         st.markdown("#### 🤮 Mallory-Weiss Tear")
@@ -544,7 +1206,7 @@ def render_upper_gi_bleeding():
         """)
     
     st.markdown("---")
-    st.markdown("### 7️⃣ Theo dõi & Dự phòng Tái phát")
+    st.markdown("### 8️⃣ Theo dõi & Dự phòng Tái phát")
     
     st.success("""
     **Monitoring:**
