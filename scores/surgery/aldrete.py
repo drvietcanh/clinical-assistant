@@ -4,6 +4,10 @@ Aldrete Score Calculator
 """
 
 import streamlit as st
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+from scores.references_config import get_references
+from components.references import render_references_section
 
 
 def calculate_aldrete(activity, respiration, circulation, consciousness, color):
