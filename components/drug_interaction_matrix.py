@@ -208,43 +208,14 @@ def render_interaction_matrix(
     components.html(table_html, height=600, scrolling=True)
     
     # Legend
-    legend_html = """
-    <div style="
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin: 1rem 0;
-        padding: 1rem;
-        background: #f8f9fa;
-        border-radius: 8px;
-    ">
-    """
+    legend_html = '<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">'
     
     for severity in [SEVERITY_MAJOR, SEVERITY_MODERATE, SEVERITY_MINOR, "none"]:
         colors = get_severity_color(severity)
         label = "Không tương tác" if severity == "none" else colors["label"]
-        legend_html += f"""
-        <div style="
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        ">
-            <div style="
-                width: 28px;
-                height: 28px;
-                background: {colors["bg_color"]};
-                border: 2px solid {colors["border_color"]};
-                border-radius: 4px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 0.9rem;
-            ">{colors["icon"]}</div>
-            <span style="font-size: 0.9rem; color: #495057; font-weight: 500;">{label}</span>
-        </div>
-        """
+        legend_html += f'''<div style="display: flex; align-items: center; gap: 0.5rem;"><div style="width: 28px; height: 28px; background: {colors["bg_color"]}; border: 2px solid {colors["border_color"]}; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">{colors["icon"]}</div><span style="font-size: 0.9rem; color: #495057; font-weight: 500;">{label}</span></div>'''
     
-    legend_html += "</div>"
+    legend_html += '</div>'
     st.markdown(legend_html, unsafe_allow_html=True)
 
 
