@@ -1,5 +1,6 @@
 """DAS28 - Disease Activity Score for Rheumatoid Arthritis"""
 import streamlit as st
+import streamlit.components.v1 as components
 import math
 from scores.utils.validation import (
     validate_range,
@@ -51,6 +52,8 @@ def render():
         elif das28 < 3.2: status = "Hoạt động thấp"; color = "#28a745"
         elif das28 < 5.1: status = "Hoạt động trung bình"; color = "#fd7e14"
         else: status = "Hoạt động cao"; color = "#dc3545"
-        st.markdown(f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>DAS28: {das28:.2f}</h2><p style='text-align: center; margin-top: 10px;'>{status}</p></div>", unsafe_allow_html=True); st.info(f"**Mục tiêu điều trị:** < 2.6 (thuyên giảm) hoặc < 3.2 (hoạt động thấp)")
+        result_html = f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>DAS28: {das28:.2f}</h2><p style='text-align: center; margin-top: 10px;'>{status}</p></div>"
+        components.html(result_html, height=120, scrolling=False)
+        st.info(f"**Mục tiêu điều trị:** < 2.6 (thuyên giảm) hoặc < 3.2 (hoạt động thấp)")
 if __name__ == "__main__": render()
 

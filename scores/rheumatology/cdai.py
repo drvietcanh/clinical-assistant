@@ -1,5 +1,6 @@
 """CDAI - Clinical Disease Activity Index for RA"""
 import streamlit as st
+import streamlit.components.v1 as components
 from scores.utils.validation import (
     validate_range
 )
@@ -41,6 +42,7 @@ def render():
         elif cdai <= 10: status = "Hoạt động thấp"; color = "#28a745"
         elif cdai <= 22: status = "Hoạt động trung bình"; color = "#fd7e14"
         else: status = "Hoạt động cao"; color = "#dc3545"
-        st.markdown(f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>CDAI: {cdai:.1f}</h2><p style='text-align: center; margin-top: 10px;'>{status}</p></div>", unsafe_allow_html=True)
+        result_html = f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>CDAI: {cdai:.1f}</h2><p style='text-align: center; margin-top: 10px;'>{status}</p></div>"
+        components.html(result_html, height=120, scrolling=False)
 if __name__ == "__main__": render()
 

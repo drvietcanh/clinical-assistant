@@ -1,5 +1,6 @@
 """PASI - Psoriasis Area Severity Index"""
 import streamlit as st
+import streamlit.components.v1 as components
 from scores.utils.validation import (
     validate_range
 )
@@ -40,6 +41,7 @@ def render():
         if total < 10: severity = "Nhẹ"; color = "#28a745"
         elif total < 20: severity = "Trung bình"; color = "#fd7e14"
         else: severity = "Nặng"; color = "#dc3545"
-        st.markdown(f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>PASI: {total:.1f}/72</h2><p style='text-align: center; margin-top: 10px;'>{severity}</p></div>", unsafe_allow_html=True)
+        result_html = f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>PASI: {total:.1f}/72</h2><p style='text-align: center; margin-top: 10px;'>{severity}</p></div>"
+        components.html(result_html, height=120, scrolling=False)
 if __name__ == "__main__": render()
 

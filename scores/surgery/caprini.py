@@ -4,6 +4,7 @@ Nguy cơ huyết khối tĩnh mạch sau phẫu thuật
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 def render():
     st.markdown("<h2 style='text-align: center; color: #DC2626;'>🩸 Caprini VTE Risk Score</h2><p style='text-align: center;'><em>Nguy cơ huyết khối sau phẫu thuật</em></p>", unsafe_allow_html=True)
@@ -51,9 +52,11 @@ def render():
         
         score_color = {"green": "#28a745", "orange": "#fd7e14", "red": "#dc3545"}[color]
         
-        st.markdown(f"<div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'><h2 style='color: {score_color}; margin: 0; text-align: center;'>Caprini: {score}</h2></div>", unsafe_allow_html=True)
+        result_html1 = f"<div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'><h2 style='color: {score_color}; margin: 0; text-align: center;'>Caprini: {score}</h2></div>"
+        components.html(result_html1, height=120, scrolling=False)
         
-        st.markdown(f"<div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'><h3 style='color: {score_color};'>🎯 Nguy cơ: {risk}</h3><p style='font-size: 1.2em;'><strong>Dự phòng:</strong> {prophylaxis}</p></div>", unsafe_allow_html=True)
+        result_html2 = f"<div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'><h3 style='color: {score_color};'>🎯 Nguy cơ: {risk}</h3><p style='font-size: 1.2em;'><strong>Dự phòng:</strong> {prophylaxis}</p></div>"
+        components.html(result_html2, height=120, scrolling=False)
 
 if __name__ == "__main__":
     render()

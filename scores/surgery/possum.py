@@ -1,5 +1,6 @@
 """P-POSSUM - Portsmouth Physiological and Operative Severity Score"""
 import streamlit as st
+import streamlit.components.v1 as components
 def render():
     st.markdown("<h2 style='text-align: center; color: #DC2626;'>🏥 P-POSSUM Score</h2><p style='text-align: center;'><em>Nguy cơ tử vong phẫu thuật</em></p>", unsafe_allow_html=True)
     with st.expander("ℹ️ P-POSSUM"): st.markdown("**P-POSSUM** dự đoán tử vong sau phẫu thuật dựa trên 12 yếu tố sinh lý và 6 yếu tố phẫu thuật. Phức tạp, thường dùng trong nghiên cứu.")
@@ -9,6 +10,8 @@ def render():
         if risk_score <= 2: risk = "Thấp (<5%)"; color = "#28a745"
         elif risk_score <= 4: risk = "Trung bình (5-15%)"; color = "#fd7e14"
         else: risk = "Cao (>15%)"; color = "#dc3545"
-        st.markdown(f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>Nguy cơ: {risk}</h2></div>", unsafe_allow_html=True); st.info("💡 **Lưu ý:** Đây chỉ là ước tính đơn giản. P-POSSUM thực tế cần 18 biến số và công thức phức tạp.")
+        result_html = f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>Nguy cơ: {risk}</h2></div>"
+        components.html(result_html, height=120, scrolling=False)
+        st.info("💡 **Lưu ý:** Đây chỉ là ước tính đơn giản. P-POSSUM thực tế cần 18 biến số và công thức phức tạp.")
 if __name__ == "__main__": render()
 

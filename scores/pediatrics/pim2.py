@@ -37,6 +37,13 @@ from scores.utils.validation import (
 )
 from components.ui.validation import render_validation_errors
 from components.ui.scoring import render_score_result
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_pim2(
@@ -168,6 +175,13 @@ def render():
     st.subheader("👶 PIM2 - Pediatric Index of Mortality 2")
     st.caption("ICU Mortality Prediction for Pediatric Patients")
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'pim2':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'PIM2')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.info("""
     **PIM2** là công cụ dự đoán tử vong trong ICU cho bệnh nhân nhi.
     Sử dụng 10 biến số để tính điểm và dự đoán nguy cơ tử vong.
@@ -176,7 +190,18 @@ def render():
     st.markdown("---")
     
     # Input section
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns([2, 1])
+    
+    with col2:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="pim2",
+            calculator_name="PIM2",
+            category="Nhi Khoa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     with col1:
         systolic_bp = st.number_input(
@@ -414,9 +439,67 @@ def render():
         
         st.dataframe(pd.DataFrame(risk_data), use_container_width=True, hide_index=True)
         
-        st.markdown("---")
-        st.markdown("### 📚 Tài Liệu Tham Khảo")
+        # Prepare data for history and share
+        inputs_dict = {
+            "Huyết áp tâm thu (mmHg)": systolic_bp,
+            "Đồng tử cố định/giãn": "Có" if pupils_fixed else "Không",
+            "Base Excess (mEq/L)": base_excess,
+            "FIO2": fio2,
+            "PaO2 (mmHg)": pao2,
+            "Nhập viện theo kế hoạch": "Có" if elective_admission else "Không",
+            "Hồi phục sau phẫu thuật": "Có" if recovery_from_surgery else "Không",
+            "Phẫu thuật tim bypass": "Có" if bypass_cardiac_surgery else "Không",
+            "Chẩn đoán nguy cơ cao": "Có" if high_risk_diagnosis else "Không",
+            "Chẩn đoán nguy cơ thấp": "Có" if low_risk_diagnosis else "Không"
+        }
         
+        results_dict = {
+            "PIM2 Score": round(result['total_score'], 2),
+            "Nguy cơ tử vong": f"{result['mortality_percent']:.1f}%",
+            "Phân loại": result['risk_category']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="pim2",
+            calculator_name="PIM2",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="pim2",
+            calculator_name="PIM2",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="pim2",
+            calculator_name="PIM2",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="pim2", show_actions=True)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("PIM2")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        st.markdown("### 📚 Tài Liệu Tham Khảo")
         st.markdown("""
         1. **Slater A, et al.** PIM2: a revised version of the Paediatric Index of Mortality.
            Intensive Care Med. 2003;29(2):278-285.

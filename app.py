@@ -8,6 +8,7 @@ Date: 2025-01-30
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 from pathlib import Path
 
 # Import configuration
@@ -478,7 +479,7 @@ with tab1:
                         <div class="module-desc" style="font-size: 0.85rem; color: #666; line-height: 1.4;">{module['desc']}</div>
                     </div>
                     """
-                    st.markdown(card_html, unsafe_allow_html=True)
+                    components.html(card_html, height=200, scrolling=False)
                     
                     if st.button(f"▶️ Mở {module['title']}", key=f"{cat_name}_{module['key']}", use_container_width=True, type="primary"):
                         st.switch_page(module['page'])
@@ -515,7 +516,7 @@ with tab1:
                     <div class="module-desc" style="font-size: 0.85rem; color: #666; line-height: 1.4;">{module['desc']}</div>
                 </div>
                 """
-                st.markdown(card_html, unsafe_allow_html=True)
+                components.html(card_html, height=200, scrolling=False)
                 
                 if st.button(f"▶️ Mở {module['title']}", key=f"other_{module['key']}", use_container_width=True, type="primary"):
                     st.switch_page(module['page'])

@@ -4,6 +4,7 @@ UI components for displaying antibiotic information
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 import html
 import pandas as pd
 import re
@@ -216,7 +217,7 @@ def render_compact_antibiotic_card(ab_name, ab_data, key_prefix=""):
     card_html += indication_html
     card_html += '</div></div></div>'
     
-    st.markdown(card_html, unsafe_allow_html=True)
+    components.html(card_html, height=150, scrolling=False)
     
     # Button row with enhanced actions
     col1, col2, col3 = st.columns([2, 2, 1])

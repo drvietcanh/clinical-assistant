@@ -4,6 +4,7 @@ Visual matrix for displaying drug-drug interactions with severity levels
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 from typing import List, Dict, Any, Optional
 from drugs.interactions_data import (
     SEVERITY_MAJOR,
@@ -204,7 +205,7 @@ def render_interaction_matrix(
     </div>
     """
     
-    st.markdown(table_html, unsafe_allow_html=True)
+    components.html(table_html, height=600, scrolling=True)
     
     # Legend
     legend_html = """

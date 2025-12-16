@@ -27,6 +27,13 @@ Clinical Utility:
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_kdigo(
@@ -364,6 +371,13 @@ def calculate_kdigo(
 def render():
     """Render KDIGO AKI calculator in Streamlit"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'kdigo':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'KDIGO')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🧪 KDIGO Criteria - Acute Kidney Injury (AKI)")
     st.markdown("**Phân loại và đánh giá giai đoạn suy thận cấp**")
     
@@ -417,7 +431,21 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập dữ liệu lâm sàng")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="kdigo",
+            calculator_name="KDIGO",
+            category="Thận",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    with col_main:
+        st.subheader("📝 Nhập dữ liệu lâm sàng")
     
     # Creatinine section
     st.markdown("#### 🩺 Serum Creatinine")
@@ -607,6 +635,55 @@ def render():
               * Renal biopsy (nếu nguyên nhân không rõ + không hồi phục)
             """)
         
+        # Prepare data for history and share
+        inputs_dict = {
+            "SCr Baseline (mg/dL)": scr_baseline,
+            "SCr Hiện tại (mg/dL)": scr_current,
+            "SCr Tăng trong 48h (mg/dL)": scr_increase_48h,
+            "Nước tiểu 6h (mL)": urine_output_6h if urine_output_6h >= 0 else None,
+            "Nước tiểu 12h (mL)": urine_output_12h if urine_output_12h >= 0 else None,
+            "Nước tiểu 24h (mL)": urine_output_24h if urine_output_24h >= 0 else None,
+            "Cân nặng (kg)": weight,
+            "Đang RRT": "Có" if on_rrt else "Không"
+        }
+        
+        results_dict = {
+            "KDIGO Stage": f"Stage {result['stage']}" if result['stage'] > 0 else "Không có AKI",
+            "SCr fold increase": round(result['scr_fold'], 2) if result['scr_fold'] > 0 else None,
+            "UO rate 6h (mL/kg/h)": round(result['uo_6h_rate'], 2) if result['uo_6h_rate'] else None,
+            "UO rate 12h (mL/kg/h)": round(result['uo_12h_rate'], 2) if result['uo_12h_rate'] else None,
+            "UO rate 24h (mL/kg/h)": round(result['uo_24h_rate'], 2) if result['uo_24h_rate'] else None
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="kdigo",
+            calculator_name="KDIGO",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="kdigo",
+            calculator_name="KDIGO",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="kdigo",
+            calculator_name="KDIGO",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="kdigo", show_actions=True)
+        
         # Save to session state
         st.session_state['kdigo_result'] = result
         
@@ -618,6 +695,17 @@ def render():
         - Stage 3 AKI: Tư vấn thận ngay, xem xét RRT
         - Quyết định điều trị cuối cùng thuộc về bác sĩ điều trị
         """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("KDIGO")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Quick reference
     with st.expander("📖 Bảng tham khảo Nhanh - Nguyên Nhân AKI"):

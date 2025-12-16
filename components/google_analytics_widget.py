@@ -4,6 +4,7 @@ Hiển thị lượt truy cập và thống kê từ Google Analytics trên tran
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 from config.app_config import APP_CONFIG
 from components.google_analytics_api import (
     get_ga_credentials,
@@ -74,7 +75,7 @@ def render_google_analytics_badge():
     if not ga_id or ga_id == "G-XXXXXXXXXX":
         return
     
-    st.markdown(f"""
+    badge_html = f"""
     <div style="
         position: fixed;
         bottom: 20px;
@@ -96,7 +97,8 @@ def render_google_analytics_badge():
     >
         📊 Analytics Active
     </div>
-    """, unsafe_allow_html=True)
+    """
+    components.html(badge_html, height=0, scrolling=False)
 
 
 def render_google_analytics_counter():

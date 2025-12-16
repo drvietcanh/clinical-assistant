@@ -4,6 +4,7 @@ Color-coded interactive matrix for displaying drug compatibility
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 from typing import List, Dict, Tuple, Optional, Any
 import json
 import base64
@@ -196,7 +197,7 @@ def render_visual_compatibility_matrix(
     </div>
     """
     
-    st.markdown(table_html, unsafe_allow_html=True)
+    components.html(table_html, height=600, scrolling=True)
     
     # Legend
     legend_html = """
@@ -235,7 +236,7 @@ def render_visual_compatibility_matrix(
         """
     
     legend_html += "</div>"
-    st.markdown(legend_html, unsafe_allow_html=True)
+    components.html(legend_html, height=150, scrolling=False)
 
 
 def render_compatibility_summary(

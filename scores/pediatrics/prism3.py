@@ -19,6 +19,13 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.validation import render_validation_errors
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_prism3(variables):
@@ -324,6 +331,13 @@ def get_bilirubin_score(bilirubin, age_months):
 
 def render():
     """Render PRISM III Calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'prism3':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'PRISM III')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.subheader("🏥 PRISM III Score")
     st.caption("Pediatric Risk of Mortality - ICU Mortality Prediction")
@@ -761,24 +775,89 @@ def render():
             - Nguy cơ tử vong: {result['mortality_percent']:.1f}%
             - Tiên lượng xấu, điều trị hỗ trợ tối đa
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Tuổi (tháng)": age_months,
+            "Giới tính": gender,
+            "HA tâm thu (mmHg)": systolic_bp,
+            "HA tâm trương (mmHg)": diastolic_bp,
+            "Nhịp tim (bpm)": heart_rate,
+            "Nhiệt độ (°C)": temperature,
+            "GCS": gcs,
+            "Pupils": pupils,
+            "pH": ph if 'ph' in locals() else None,
+            "PaO2 (mmHg)": pao2 if 'pao2' in locals() else None,
+            "FIO2": fio2 if 'fio2' in locals() else None,
+            "Glucose (mg/dL)": glucose if 'glucose' in locals() else None,
+            "K+ (mEq/L)": potassium if 'potassium' in locals() else None,
+            "Creatinine (mg/dL)": creatinine if 'creatinine' in locals() else None,
+            "BUN (mg/dL)": bun if 'bun' in locals() else None,
+            "WBC (×10³/µL)": wbc if 'wbc' in locals() else None,
+            "Tiểu cầu (×10³/µL)": platelets if 'platelets' in locals() else None,
+            "Bilirubin (mg/dL)": bilirubin if 'bilirubin' in locals() else None
+        }
+        
+        results_dict = {
+            "PRISM III Score": f"{result['total_score']}/74",
+            "Nguy cơ tử vong": f"{result['mortality_percent']:.1f}%"
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="prism3",
+            calculator_name="PRISM III",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="prism3",
+            calculator_name="PRISM III",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="prism3",
+            calculator_name="PRISM III",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="prism3", show_actions=True)
     
+    # References section (always at bottom)
     st.markdown("---")
-    
-    with st.expander("📚 Tài liệu tham khảo"):
-        st.markdown("""
-        **Pollack MM, et al. The Pediatric Risk of Mortality (PRISM) III Score System.**
-        *Pediatr Crit Care Med.* 2016;17(7):671-680.
-        
-        **PRISM III Variables:**
-        - Age
-        - Vital signs (BP, HR, Temperature)
-        - Neurologic (GCS, seizures, pupils)
-        - Blood gas (pH, CO₂, PaO₂, PaO₂/FiO₂)
-        - Metabolic (Glucose, K⁺, Creatinine, BUN)
-        - Hematologic (WBC, Platelets, PT/PTT)
-        - Hepatic (Bilirubin)
-        
-        **Score Range:** 0-74
-        **Mortality Risk:** Calculated using logistic regression
-        """)
+    references = get_references("PRISM III")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        with st.expander("📚 Tài liệu tham khảo"):
+            st.markdown("""
+            **Pollack MM, et al. The Pediatric Risk of Mortality (PRISM) III Score System.**
+            *Pediatr Crit Care Med.* 2016;17(7):671-680.
+            
+            **PRISM III Variables:**
+            - Age
+            - Vital signs (BP, HR, Temperature)
+            - Neurologic (GCS, seizures, pupils)
+            - Blood gas (pH, CO₂, PaO₂, PaO₂/FiO₂)
+            - Metabolic (Glucose, K⁺, Creatinine, BUN)
+            - Hematologic (WBC, Platelets, PT/PTT)
+            - Hepatic (Bilirubin)
+            
+            **Score Range:** 0-74
+            **Mortality Risk:** Calculated using logistic regression
+            """)
 

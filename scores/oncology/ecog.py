@@ -4,6 +4,13 @@ ECOG Performance Status (Eastern Cooperative Oncology Group)
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def get_ecog_criteria():
@@ -115,6 +122,13 @@ def get_treatment_recommendations(ecog_score):
 
 def render():
     """Render the ECOG Performance Status calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'ecog':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'ECOG')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.title("🎗️ ECOG Performance Status")
     st.markdown("""
@@ -274,6 +288,59 @@ def render():
                - Advance care planning
                - Hospice care nếu thích hợp
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "ECOG Score": selected_ecog
+        }
+        
+        results_dict = {
+            "ECOG Performance Status": f"ECOG {selected_ecog}",
+            "Status": selected_info['status'],
+            "Prognosis": selected_info['prognosis'],
+            "Treatment": selected_info['treatment']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="ecog",
+            calculator_name="ECOG Performance Status",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="ecog",
+            calculator_name="ECOG Performance Status",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="ecog",
+            calculator_name="ECOG Performance Status",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="ecog", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="ecog",
+            calculator_name="ECOG Performance Status",
+            category="Ung Thư",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Educational content
     st.markdown("---")
@@ -486,15 +553,24 @@ def render():
         5. Nếu ECOG giảm xuống 3-4 → Cân nhắc best supportive care
         """)
     
-    # References
+    # References section (always at bottom)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Oken MM, et al. Toxicity and response criteria of the Eastern Cooperative Oncology Group. Am J Clin Oncol. 1982
-    - Sørensen JB, et al. Performance status assessment in cancer patients. Cancer. 1993
-    - Buccheri G, et al. Karnofsky and ECOG performance status scoring in lung cancer. Eur Respir J. 1996
-    - Conill C, et al. Performance status assessment in cancer patients. Cancer. 1990
-    """)
+    references = get_references("ECOG")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        st.caption("""
+        **Tài liệu tham khảo:**
+        - Oken MM, et al. Toxicity and response criteria of the Eastern Cooperative Oncology Group. Am J Clin Oncol. 1982
+        - Sørensen JB, et al. Performance status assessment in cancer patients. Cancer. 1993
+        - Buccheri G, et al. Karnofsky and ECOG performance status scoring in lung cancer. Eur Respir J. 1996
+        - Conill C, et al. Performance status assessment in cancer patients. Cancer. 1990
+        """)
 
 
 if __name__ == "__main__":

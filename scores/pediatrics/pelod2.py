@@ -20,6 +20,13 @@ from scores.utils.validation import (
     validate_positive
 )
 from components.ui.validation import render_validation_errors
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_pelod2(
@@ -169,6 +176,13 @@ def get_hepatic_score(bilirubin, pt_inr):
 def render():
     """Render PELOD-2 Calculator"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'pelod2':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'PELOD-2')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.subheader("🏥 PELOD-2 Score")
     st.caption("Pediatric Logistic Organ Dysfunction Score - ICU Mortality Prediction")
     
@@ -189,7 +203,21 @@ def render():
     st.markdown("---")
     
     # Input section
-    st.markdown("### 📋 Thông tin bệnh nhân")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="pelod2",
+            calculator_name="PELOD-2",
+            category="Nhi Khoa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    with col_main:
+        st.markdown("### 📋 Thông tin bệnh nhân")
     
     col1, col2 = st.columns(2)
     
@@ -611,24 +639,94 @@ def render():
             - Nguy cơ tử vong: {result['mortality_percent']:.1f}%
             - Điều trị tối đa, tiên lượng dè dặt
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Tuổi (tháng)": age_months,
+            "Cân nặng (kg)": weight_kg,
+            "GCS": gcs,
+            "Co giật": "Có" if seizures else "Không",
+            "Nhịp tim (bpm)": heart_rate,
+            "HA tâm thu (mmHg)": systolic_bp,
+            "Lactate (mmol/L)": lactate,
+            "Số thuốc vận mạch": vasoactive_drugs,
+            "Creatinine (mg/dL)": creatinine,
+            "Creatinine percentile": creatinine_percentile,
+            "PaO2/FiO2 ratio": pao2_fio2,
+            "Đang thở máy": "Có" if intubated else "Không",
+            "Tiểu cầu (×10³/µL)": platelets,
+            "Bạch cầu (×10³/µL)": wbc,
+            "D-dimer (mg/L)": d_dimer,
+            "Bilirubin (mg/dL)": bilirubin,
+            "PT/INR": pt_inr
+        }
+        
+        results_dict = {
+            "PELOD-2 Score": f"{result['total_score']}/33",
+            "Nguy cơ tử vong": f"{result['mortality_percent']:.1f}%",
+            "Điểm Thần kinh": result['neurologic_score'],
+            "Điểm Tim mạch": result['cardiovascular_score'],
+            "Điểm Thận": result['renal_score'],
+            "Điểm Hô hấp": result['respiratory_score'],
+            "Điểm Huyết học": result['hematologic_score'],
+            "Điểm Gan": result['hepatic_score']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="pelod2",
+            calculator_name="PELOD-2",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="pelod2",
+            calculator_name="PELOD-2",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="pelod2",
+            calculator_name="PELOD-2",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="pelod2", show_actions=True)
     
+    # References section (always at bottom)
     st.markdown("---")
-    
-    with st.expander("📚 Tài liệu tham khảo"):
-        st.markdown("""
-        **Leteurtre S, et al. PELOD-2: an update of the PEdiatric logistic organ dysfunction score.**
-        *Crit Care Med.* 2013;41(7):1761-1773.
-        
-        **PELOD-2 Components:**
-        - **Neurologic:** GCS (0, 4, 10 points)
-        - **Cardiovascular:** HR percentile, SBP percentile, lactate, vasoactive drugs (0, 3, 8, 13 points)
-        - **Renal:** Creatinine absolute và percentile (0, 4, 9 points)
-        - **Respiratory:** PaO₂/FiO₂ ratio, intubation status (0, 1, 5 points)
-        - **Hematologic:** Platelets, WBC, D-dimer (0, 2 points)
-        - **Hepatic:** Bilirubin, PT/INR (0, 4, 9 points)
-        
-        **Mortality Prediction:**
-        - Logit(P) = -7.6687 + (0.1559 × PELOD-2 score)
-        - P = 1 / (1 + exp(-Logit))
-        """)
+    references = get_references("PELOD-2")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
+        with st.expander("📚 Tài liệu tham khảo"):
+            st.markdown("""
+            **Leteurtre S, et al. PELOD-2: an update of the PEdiatric logistic organ dysfunction score.**
+            *Crit Care Med.* 2013;41(7):1761-1773.
+            
+            **PELOD-2 Components:**
+            - **Neurologic:** GCS (0, 4, 10 points)
+            - **Cardiovascular:** HR percentile, SBP percentile, lactate, vasoactive drugs (0, 3, 8, 13 points)
+            - **Renal:** Creatinine absolute và percentile (0, 4, 9 points)
+            - **Respiratory:** PaO₂/FiO₂ ratio, intubation status (0, 1, 5 points)
+            - **Hematologic:** Platelets, WBC, D-dimer (0, 2 points)
+            - **Hepatic:** Bilirubin, PT/INR (0, 4, 9 points)
+            
+            **Mortality Prediction:**
+            - Logit(P) = -7.6687 + (0.1559 × PELOD-2 score)
+            - P = 1 / (1 + exp(-Logit))
+            """)
 

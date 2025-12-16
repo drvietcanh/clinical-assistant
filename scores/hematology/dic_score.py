@@ -29,6 +29,13 @@ import streamlit as st
 from scores.utils.validation import validate_lab_value, validate_range
 from components.ui.validation import render_validation_errors
 from components.ui.scoring import render_score_result, render_score_breakdown
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_dic_score(
@@ -280,6 +287,13 @@ def calculate_dic_score(
 def render():
     """Render ISTH DIC Score calculator in Streamlit"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'dic_score':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'ISTH DIC Score')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🩸 ISTH DIC Score")
     st.markdown("**Chẩn đoán rối loạn đông máu nội mạch lan tỏa (Disseminated Intravascular Coagulation)**")
     
@@ -353,7 +367,21 @@ def render():
     st.divider()
     
     # Input section
-    st.subheader("📝 Nhập kết quả xét nghiệm")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="dic_score",
+            calculator_name="ISTH DIC Score",
+            category="Huyết Học",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    with col_main:
+        st.subheader("📝 Nhập kết quả xét nghiệm")
     
     col1, col2 = st.columns(2)
     
@@ -515,6 +543,49 @@ def render():
         - Nếu điều trị không đáp ứng: Xem xét lại bệnh nền, tăng cường hỗ trợ
         """)
         
+        # Prepare data for history and share
+        inputs_dict = {
+            "Tiểu cầu (×10³/μL)": platelet_count,
+            "D-dimer/FDP level": ["Không tăng", "Tăng vừa", "Tăng mạnh"][ddimer_level],
+            "PT kéo dài (giây)": pt_prolongation,
+            "Fibrinogen (mg/dL)": fibrinogen
+        }
+        
+        results_dict = {
+            "ISTH DIC Score": result['score'],
+            "Phân loại": result['interpretation'],
+            "Risk Class": result['risk_class']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="dic_score",
+            calculator_name="ISTH DIC Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="dic_score",
+            calculator_name="ISTH DIC Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="dic_score",
+            calculator_name="ISTH DIC Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="dic_score", show_actions=True)
+        
         # Save to session state
         st.session_state['dic_score_result'] = result
         
@@ -527,6 +598,17 @@ def render():
         - Heparin rất controversial - chỉ trong trường hợp đặc biệt
         - Quyết định điều trị cuối cùng thuộc về bác sĩ điều trị
         """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("ISTH DIC Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Quick reference
     with st.expander("📖 Nguyên nhân thường gặp của DIC"):

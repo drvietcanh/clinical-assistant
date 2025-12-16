@@ -4,6 +4,7 @@ Chỉ số chất lượng cuộc sống bệnh da
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 def calculate_dlqi(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
     """Tính DLQI"""
@@ -48,9 +49,11 @@ def render():
         result = calculate_dlqi(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)
         score_color = {"green": "#28a745", "orange": "#fd7e14", "red": "#dc3545"}[result["color"]]
         
-        st.markdown(f"<div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'><h2 style='color: {score_color}; margin: 0; text-align: center;'>DLQI: {result['total_score']}/30</h2></div>", unsafe_allow_html=True)
+        result_html1 = f"<div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'><h2 style='color: {score_color}; margin: 0; text-align: center;'>DLQI: {result['total_score']}/30</h2></div>"
+        components.html(result_html1, height=120, scrolling=False)
         
-        st.markdown(f"<div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'><h3 style='color: {score_color};'>🎯 Ảnh hưởng: {result['impact']}</h3></div>", unsafe_allow_html=True)
+        result_html2 = f"<div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'><h3 style='color: {score_color};'>🎯 Ảnh hưởng: {result['impact']}</h3></div>"
+        components.html(result_html2, height=100, scrolling=False)
         
         st.info("""
         **Phân loại:**

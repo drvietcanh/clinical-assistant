@@ -4,6 +4,13 @@ Hội chứng đáp ứng viêm toàn thân
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_sirs(temp_abnormal, hr_high, rr_high_pco2_low, wbc_abnormal):
@@ -55,6 +62,13 @@ def calculate_sirs(temp_abnormal, hr_high, rr_high_pco2_low, wbc_abnormal):
 def render():
     """Render SIRS calculator interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'sirs':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'SIRS')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #EF4444;'>🔥 SIRS - Systemic Inflammatory Response Syndrome</h2>
     <p style='text-align: center;'><em>Hội chứng đáp ứng viêm toàn thân</em></p>
@@ -93,7 +107,21 @@ def render():
     st.markdown("---")
     
     # Input form
-    st.subheader("📝 Đánh giá 4 Tiêu chuẩn SIRS")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="sirs",
+            calculator_name="SIRS",
+            category="Nhiễm Trùng",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 4 Tiêu chuẩn SIRS")
     
     st.markdown("""
     <div style='background-color: #FEF3C7; padding: 15px; border-radius: 10px; border-left: 4px solid #F59E0B;'>
@@ -418,7 +446,62 @@ def render():
             - Nhiễm trùng là nguyên nhân thường gặp nhất
             """)
         
-        # References
+        # Prepare data for history and share
+        inputs_dict = {
+            "Nhiệt độ (°C)": temp if 'temp' in locals() else None,
+            "Nhịp tim (bpm)": hr if 'hr' in locals() else None,
+            "Nhịp thở (lần/phút)": rr if 'rr' in locals() else None,
+            "PaCO2 (mmHg)": paco2 if 'paco2' in locals() else None,
+            "WBC (×10³/µL)": wbc if 'wbc' in locals() else None,
+            "% Bands": bands if 'bands' in locals() else None
+        }
+        
+        results_dict = {
+            "SIRS Criteria": f"{result['total_criteria']}/4",
+            "Status": result['status'],
+            "Interpretation": result['interpretation']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="sirs",
+            calculator_name="SIRS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="sirs",
+            calculator_name="SIRS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="sirs",
+            calculator_name="SIRS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="sirs", show_actions=True)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("SIRS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
+    else:
         with st.expander("📚 Tài liệu tham khảo"):
             st.markdown("""
             1. **Bone RC, Balk RA, Cerra FB, et al.** Definitions for sepsis and organ failure and 

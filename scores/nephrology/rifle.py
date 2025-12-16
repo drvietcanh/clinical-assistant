@@ -21,6 +21,13 @@ settings and has extensive historical validation data.
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_rifle(
@@ -84,6 +91,13 @@ def calculate_rifle(
 def render():
     """Render RIFLE calculator"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'rifle':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'RIFLE')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🧪 RIFLE Criteria - Acute Kidney Injury")
     st.markdown("**Hệ thống phân loại AKI (Historical - KDIGO khuyến cáo hơn)**")
     
@@ -119,7 +133,18 @@ def render():
     st.divider()
     
     # Simplified input
-    col1, col2 = st.columns(2)
+    col1, col2, col_suggestions = st.columns([1, 1, 1])
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="rifle",
+            calculator_name="RIFLE",
+            category="Thận",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     with col1:
         scr_baseline = st.number_input("SCr Baseline (mg/dL)", 0.0, 20.0, 1.0, 0.1, format="%.1f")
@@ -154,5 +179,62 @@ def render():
             - Tiêu chuẩn quốc tế hiện hành
             """)
         
+        # Prepare data for history and share
+        inputs_dict = {
+            "SCr Baseline (mg/dL)": scr_baseline,
+            "SCr Hiện tại (mg/dL)": scr_current,
+            "GFR Giảm (%)": gfr_decrease_percent,
+            "Cân nặng (kg)": weight,
+            "Nước tiểu 6h (mL)": urine_output_6h if urine_output_6h >= 0 else None,
+            "Nước tiểu 12h (mL)": urine_output_12h if urine_output_12h >= 0 else None
+        }
+        
+        results_dict = {
+            "RIFLE Category": result['category_name'],
+            "SCr fold increase": round(result['scr_fold'], 2) if result['scr_fold'] > 0 else None,
+            "UO rate 6h (mL/kg/h)": round(result['uo_6h_rate'], 2) if result['uo_6h_rate'] else None,
+            "UO rate 12h (mL/kg/h)": round(result['uo_12h_rate'], 2) if result['uo_12h_rate'] else None
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="rifle",
+            calculator_name="RIFLE",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="rifle",
+            calculator_name="RIFLE",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="rifle",
+            calculator_name="RIFLE",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="rifle", show_actions=True)
+        
         st.session_state['rifle_result'] = result
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("RIFLE")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
