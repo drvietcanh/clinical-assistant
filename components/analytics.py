@@ -244,7 +244,7 @@ def render_analytics_dashboard() -> None:
         text-align: center;
         box-shadow: 0 8px 24px rgba(102,126,234,0.25);
     '>
-        <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: 700;'>📊 Usage Analytics Dashboard</h1>
+        <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: 700;'>📊 Bảng điều khiển thống kê sử dụng</h1>
         <p style='margin: 12px 0 0 0; color: rgba(255,255,255,0.95); font-size: 1.15em;'>
             Insights và thống kê sử dụng ứng dụng
         </p>
@@ -261,7 +261,7 @@ def render_analytics_dashboard() -> None:
         }
     
     # Stats Section
-    st.markdown("### 📊 Your Stats")
+    st.markdown("### 📊 Thống kê của bạn")
     
     total_calcs = get_total_calculations()
     most_used = get_most_used_calculators(limit=1)
@@ -283,43 +283,31 @@ def render_analytics_dashboard() -> None:
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        st.metric(
-            "Total Calculations",
-            total_calcs,
-            delta=None
-        )
+        st.metric("Tổng số lần tính", total_calcs, delta=None)
     
     with col2:
         most_used_name = most_used[0]['name'] if most_used else "N/A"
         most_used_count = most_used[0]['count'] if most_used else 0
-        st.metric(
-            "Most Used",
-            most_used_name,
-            delta=f"{most_used_count}x" if most_used_count > 0 else None
-        )
+        st.metric("Dùng nhiều nhất", most_used_name, delta=f"{most_used_count}x" if most_used_count > 0 else None)
     
     with col3:
         st.metric(
-            "Specialty Focus",
+            "Chuyên khoa trọng tâm",
             specialty_focus.split(" (")[0] if "(" in specialty_focus else specialty_focus,
             delta=specialty_focus.split("(")[1].replace(")", "") if "(" in specialty_focus else None
         )
     
     with col4:
-        st.metric(
-            "This Week",
-            this_week,
-            delta="calculations"
-        )
+        st.metric("Tuần này", this_week, delta="lần")
     
     st.markdown("---")
     
     # Charts Section
-    st.markdown("### 📈 Charts")
+    st.markdown("### 📈 Biểu đồ")
     
     # Most Used Calculators
     if most_used:
-        st.markdown("#### 🏆 Most Used Calculators")
+        st.markdown("#### 🏆 Dùng nhiều nhất")
         most_used_data = get_most_used_calculators(limit=10)
         
         # Create simple bar chart using HTML
@@ -350,7 +338,7 @@ def render_analytics_dashboard() -> None:
     
     # Specialty Breakdown
     if specialty_breakdown:
-        st.markdown("#### 🏥 Specialty Breakdown")
+        st.markdown("#### 🏥 Phân bố theo chuyên khoa")
         
         specialty_data = sorted(specialty_breakdown.items(), key=lambda x: x[1], reverse=True)
         total_specialty = sum(specialty_breakdown.values())
@@ -379,7 +367,7 @@ def render_analytics_dashboard() -> None:
     st.markdown("---")
     
     # Daily Usage (Last 7 days)
-    st.markdown("#### 📅 Daily Usage (Last 7 Days)")
+    st.markdown("#### 📅 Tần suất 7 ngày gần nhất")
     daily_usage = get_daily_usage(days=7)
     
     if daily_usage:
@@ -437,7 +425,7 @@ def render_analytics_dashboard() -> None:
     st.markdown("---")
     
     # Peak Usage Hours
-    st.markdown("#### ⏰ Peak Usage Hours")
+    st.markdown("#### ⏰ Khung giờ sử dụng cao điểm")
     hour_counts = get_peak_usage_hours()
     
     if hour_counts:
@@ -480,7 +468,7 @@ def render_analytics_dashboard() -> None:
     st.markdown("---")
     
     # Export Section
-    st.markdown("### 📥 Export Data")
+    st.markdown("### 📥 Xuất dữ liệu")
     
     col1, col2 = st.columns(2)
     
@@ -495,7 +483,7 @@ def render_analytics_dashboard() -> None:
                 use_container_width=True
             )
         else:
-            st.info("No data to export")
+            st.info("Chưa có dữ liệu để xuất")
     
     with col2:
         if st.button("🗑️ Xóa Thống Kê", use_container_width=True):
@@ -506,11 +494,11 @@ def render_analytics_dashboard() -> None:
                     'specialty_counts': {},
                     'daily_counts': {}
                 }
-                st.success("Analytics cleared!")
+                st.success("Đã xóa thống kê!")
                 st.rerun()
     
     # Info
-    with st.expander("ℹ️ About Analytics"):
+    with st.expander("ℹ️ Giới thiệu Analytics"):
         st.info("""
         **Analytics Tracking:**
         - Tất cả dữ liệu được lưu locally trong session (không gửi lên server)

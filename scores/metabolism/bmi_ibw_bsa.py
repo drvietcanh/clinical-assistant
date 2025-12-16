@@ -55,8 +55,8 @@ def render():
     """Render BMI/IBW/BSA calculator interface"""
     
     st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>📏 BMI | IBW | BSA Calculator</h2>
-    <p style='text-align: center;'><em>Chỉ số cơ thể - Body Mass Index, Ideal Weight, Body Surface Area</em></p>
+    <h2 style='text-align: center; color: #0EA5E9;'>📏 Máy tính BMI | IBW | BSA</h2>
+    <p style='text-align: center;'><em>Chỉ số cơ thể - BMI, cân nặng lý tưởng, diện tích da cơ thể</em></p>
     """, unsafe_allow_html=True)
     shared = load_shared_result_from_url()
     if shared and shared.get("calculator_id") == "bmi_ibw_bsa":
@@ -168,35 +168,35 @@ def render():
         
         # Classify BMI
         if bmi < 16:
-            bmi_category = "Gầy độ III (Severe thinness)"
+            bmi_category = "Gầy độ III"
             bmi_color = "#dc3545"
             bmi_icon = "🚨"
         elif bmi < 17:
-            bmi_category = "Gầy độ II (Moderate thinness)"
+            bmi_category = "Gầy độ II"
             bmi_color = "#fd7e14"
             bmi_icon = "⚠️"
         elif bmi < 18.5:
-            bmi_category = "Gầy độ I (Mild thinness)"
+            bmi_category = "Gầy độ I"
             bmi_color = "#ffc107"
             bmi_icon = "⚠️"
         elif bmi < 25:
-            bmi_category = "Bình thường (Normal)"
+            bmi_category = "Bình thường"
             bmi_color = "#28a745"
             bmi_icon = "✅"
         elif bmi < 30:
-            bmi_category = "Thừa cân (Overweight)"
+            bmi_category = "Thừa cân"
             bmi_color = "#ffc107"
             bmi_icon = "⚠️"
         elif bmi < 35:
-            bmi_category = "Béo phì độ I (Obese class I)"
+            bmi_category = "Béo phì độ I"
             bmi_color = "#fd7e14"
             bmi_icon = "⚠️"
         elif bmi < 40:
-            bmi_category = "Béo phì độ II (Obese class II)"
+            bmi_category = "Béo phì độ II"
             bmi_color = "#dc3545"
             bmi_icon = "🚨"
         else:
-            bmi_category = "Béo phì độ III (Obese class III)"
+            bmi_category = "Béo phì độ III"
             bmi_color = "#dc3545"
             bmi_icon = "🚨"
         
@@ -206,12 +206,12 @@ def render():
         # Use render_result_card for multiple metrics
         metrics_list = [
             {"label": "BMI", "value": f"{bmi:.1f} kg/m²", "help": f"{bmi_category}"},
-            {"label": "IBW", "value": f"{ibw:.1f} kg", "help": f"{weight - ibw:+.0f} kg so với actual"},
-            {"label": "BSA", "value": f"{bsa_mosteller:.2f} m²", "help": "Body Surface Area (Mosteller)"}
+            {"label": "IBW", "value": f"{ibw:.1f} kg", "help": f"{weight - ibw:+.0f} kg so với cân nặng thực tế"},
+            {"label": "BSA", "value": f"{bsa_mosteller:.2f} m²", "help": "Diện tích cơ thể (Mosteller)"}
         ]
         
         if weight > ibw * 1.2:
-            metrics_list.append({"label": "ABW", "value": f"{abw:.1f} kg", "help": "Adjusted Body Weight (cho béo phì)"})
+            metrics_list.append({"label": "ABW", "value": f"{abw:.1f} kg", "help": "Cân nặng hiệu chỉnh (cho béo phì)"})
         
         # Determine card color based on BMI
         if bmi < 18.5:
@@ -225,24 +225,24 @@ def render():
         
         render_result_card(
             title=f"{bmi_icon} BMI = {bmi:.1f} kg/m² - {bmi_category}",
-            metrics_list,
+            metrics_list=metrics_list,
             color=card_color,
             icon=bmi_icon
         )
         
         # Phase 1: history + share + suggestions
         inputs_dict = {
-            "Height (cm)": height_cm,
-            "Weight (kg)": weight,
-            "Gender": gender,
-            "Age": age
+            "Chiều cao (cm)": height_cm,
+            "Cân nặng (kg)": weight,
+            "Giới tính": "Nam" if gender == "male" else "Nữ",
+            "Tuổi": age
         }
         results_dict = {
             "BMI": round(bmi, 1),
-            "BMI Category": bmi_category,
+            "Phân loại BMI": bmi_category,
             "IBW": round(ibw, 1),
             "ABW": round(abw, 1) if weight > ibw * 1.2 else None,
-            "BSA (Mosteller)": round(bsa_mosteller, 2)
+            "Diện tích cơ thể (Mosteller)": round(bsa_mosteller, 2)
         }
         
         save_calculation_to_history(

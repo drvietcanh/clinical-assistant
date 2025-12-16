@@ -1,6 +1,6 @@
 """
-Share Results Component
-Generate shareable links with parameters, QR codes, and link expiration
+Thành phần chia sẻ kết quả
+Tạo link chia sẻ kèm tham số, mã QR và thời gian hết hạn
 """
 
 try:
@@ -217,7 +217,7 @@ def render_share_section(
                     cursor: pointer;
                     font-size: 14px;
                 ">
-            📋 Copy Link
+            📋 Sao chép link
         </button>
         """
         st.markdown(copy_button_html, unsafe_allow_html=True)
@@ -228,7 +228,7 @@ def render_share_section(
             qr_data = share_url
             qr_image = generate_qr_code(qr_data)
             
-            st.markdown("**QR Code:**")
+            st.markdown("**Mã QR:**")
             st.markdown(
                 # qr_image already includes the data URI prefix
                 f'<img src="{qr_image}" style="width: 150px; height: 150px;">',
@@ -259,7 +259,7 @@ def render_share_section(
     with col3:
         # Copy to clipboard (JavaScript)
         st.markdown(
-            f'<button onclick="navigator.clipboard.writeText(\'{share_url}\'); alert(\'Đã copy!\');">📋 Copy</button>',
+            f'<button onclick="navigator.clipboard.writeText(\'{share_url}\'); alert(\'Đã copy!\');">📋 Sao chép</button>',
             unsafe_allow_html=True
         )
 
@@ -298,7 +298,7 @@ def render_shared_result_view(shared: Dict[str, Any]) -> None:
     st.markdown("### 📊 Kết quả")
     st.json(shared['results'])
     
-    st.markdown("### 📋 Inputs")
+    st.markdown("### 📋 Thông số nhập")
     st.json(shared['inputs'])
     
     st.markdown("### ℹ️ Thông tin")
