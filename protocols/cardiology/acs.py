@@ -145,6 +145,116 @@ def render():
         # NSTEMI/UA Protocol
         st.warning("## ⚠️ NSTEMI/UA PROTOCOL")
         
+        st.markdown("### 2️⃣ High-Sensitivity Troponin (hs-Tn) Algorithms")
+        
+        st.info("""
+        **ESC 2020, AHA 2021 Guidelines:**
+        - **High-sensitivity troponin** cho phép rule-out/rule-in nhanh
+        - **0/1h Algorithm:** Rule-out trong 1 giờ
+        - **0/2h Algorithm:** Alternative
+        - **0/3h Algorithm:** Nếu không có hs-Tn
+        """)
+        
+        troponin_algorithm = st.radio(
+            "**Chọn Algorithm:**",
+            ["0/1h Algorithm (Ưu tiên)", "0/2h Algorithm", "0/3h Algorithm (Standard)"],
+            key="troponin_algorithm"
+        )
+        
+        if troponin_algorithm == "0/1h Algorithm (Ưu tiên)":
+            st.success("""
+            **0/1h hs-Troponin Algorithm:**
+            
+            **Lấy mẫu:**
+            - **T0:** Ngay khi đến
+            - **T1:** Sau 1 giờ
+            
+            **Interpretation:**
+            
+            **Rule-Out (Loại trừ MI):**
+            - T0 < LoD (Limit of Detection) VÀ T1 < LoD
+            - Hoặc T0 < LoD VÀ delta <2 ng/L
+            - **→ Có thể xuất viện** (nếu low risk)
+            
+            **Rule-In (Chẩn đoán MI):**
+            - T0 ≥ 52 ng/L HOẶC T1 ≥ 52 ng/L
+            - Hoặc delta ≥5 ng/L
+            - **→ Chẩn đoán NSTEMI, điều trị ngay**
+            
+            **Observe Zone:**
+            - Không rule-out, không rule-in
+            - **→ Theo dõi thêm, lấy T2 (sau 2-3h)**
+            
+            **Lưu ý:** Ngưỡng có thể khác nhau tùy assay
+            """)
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                t0_troponin = st.number_input(
+                    "**T0 hs-Troponin (ng/L):**",
+                    min_value=0.0,
+                    max_value=1000.0,
+                    value=10.0,
+                    step=1.0,
+                    key="t0_troponin"
+                )
+            with col2:
+                t1_troponin = st.number_input(
+                    "**T1 hs-Troponin (ng/L):**",
+                    min_value=0.0,
+                    max_value=1000.0,
+                    value=12.0,
+                    step=1.0,
+                    key="t1_troponin"
+                )
+            
+            delta = abs(t1_troponin - t0_troponin)
+            
+            if t0_troponin < 5 and t1_troponin < 5:
+                st.success("**✅ Rule-Out: Loại trừ MI** - Có thể xuất viện nếu low risk")
+            elif t0_troponin >= 52 or t1_troponin >= 52 or delta >= 5:
+                st.error("**🚨 Rule-In: Chẩn đoán NSTEMI** - Điều trị ngay")
+            else:
+                st.warning(f"**⚠️ Observe Zone** - Delta: {delta:.1f} ng/L. Theo dõi thêm, lấy T2")
+        
+        elif troponin_algorithm == "0/2h Algorithm":
+            st.info("""
+            **0/2h hs-Troponin Algorithm:**
+            
+            **Lấy mẫu:**
+            - **T0:** Ngay khi đến
+            - **T2:** Sau 2 giờ
+            
+            **Interpretation:**
+            
+            **Rule-Out:**
+            - T0 < LoD VÀ T2 < LoD
+            - Hoặc T0 < LoD VÀ delta <3 ng/L
+            
+            **Rule-In:**
+            - T0 ≥ 52 ng/L HOẶC T2 ≥ 52 ng/L
+            - Hoặc delta ≥5 ng/L
+            
+            **Observe Zone:**
+            - Theo dõi thêm, lấy T3 (sau 3h)
+            """)
+        
+        else:  # 0/3h Algorithm
+            st.warning("""
+            **0/3h Standard Troponin Algorithm:**
+            
+            **Lấy mẫu:**
+            - **T0:** Ngay khi đến
+            - **T3:** Sau 3 giờ
+            
+            **Interpretation:**
+            - **Rule-Out:** T0 và T3 đều < URL (Upper Reference Limit)
+            - **Rule-In:** T0 hoặc T3 ≥ URL, hoặc delta ≥20% (hoặc ≥50% tùy assay)
+            
+            **Lưu ý:** Chậm hơn 0/1h và 0/2h algorithms
+            """)
+        
+        st.markdown("---")
         st.markdown("### 2️⃣ Xử tríBan Đầu")
         
         st.success("""
@@ -179,6 +289,46 @@ def render():
         
         → Xem tab **Scores > Cardiology**
         """)
+        
+        st.markdown("#### 🔍 Coronary CT Angiography (CCTA)")
+        
+        st.info("""
+        **ESC 2020 Guidelines:**
+        - **Chỉ định:** Low-intermediate risk NSTEMI/UA
+        - **Rule-out:** Nếu CCTA negative → có thể discharge
+        - **Rule-in:** Nếu CCTA positive → invasive angiography
+        """)
+        
+        use_ccta = st.radio(
+            "**Có chỉ định CCTA?**",
+            ["Có (Low-intermediate risk)", "Không (High risk hoặc đã có troponin positive)"],
+            key="use_ccta"
+        )
+        
+        if use_ccta == "Có (Low-intermediate risk)":
+            st.success("""
+            **CCTA Protocol:**
+            
+            **Chỉ định:**
+            - Low-intermediate risk (GRACE <140, TIMI 0-2)
+            - Troponin negative hoặc borderline
+            - Không có ECG changes rõ ràng
+            - Stable hemodynamics
+            
+            **Kết quả:**
+            - **CCTA Negative:** Không có hẹp >50% → Có thể discharge với follow-up
+            - **CCTA Positive:** Có hẹp >50% → Invasive angiography
+            
+            **Ưu điểm:**
+            - Rule-out nhanh, giảm nhập viện không cần thiết
+            - Non-invasive
+            
+            **Nhược điểm:**
+            - Cần contrast, radiation
+            - Không phù hợp nếu high risk
+            """)
+        
+        st.markdown("---")
         
         col_risk1, col_risk2, col_risk3 = st.columns(3)
         
@@ -217,6 +367,171 @@ def render():
             - Immediate Invasive
             - Angiography **<24h**
             - PCI/CABG khẩn cấp
+            """)
+        
+        st.markdown("---")
+        st.markdown("#### ⏱️ Early Invasive Strategy - Timing Chi Tiết (ESC 2020)")
+        
+        st.info("""
+        **ESC 2020 Guidelines - Timing của Invasive Strategy:**
+        """)
+        
+        invasive_timing = st.radio(
+            "**Chọn timing:**",
+            [
+                "Immediate (<2h)",
+                "Early (<24h)",
+                "Delayed (24-72h)",
+                "Conservative (>72h hoặc không)"
+            ],
+            key="invasive_timing"
+        )
+        
+        if invasive_timing == "Immediate (<2h)":
+            st.error("""
+            **Immediate Invasive Strategy (<2h):**
+            
+            **Chỉ định:**
+            - **Refractory angina** (đau ngực không đáp ứng với điều trị)
+            - **Hemodynamic instability** (shock, hypotension)
+            - **Life-threatening arrhythmias** (VT, VF, complete heart block)
+            - **Mechanical complications** (MR, VSD, free wall rupture)
+            
+            **Quy trình:**
+            1. Gọi cath lab NGAY
+            2. Chuẩn bị PCI/CABG
+            3. Tiếp tục DAPT + anticoagulation
+            4. Angiography trong <2h
+            
+            **Mục tiêu:** Mở mạch càng sớm càng tốt
+            """)
+        
+        elif invasive_timing == "Early (<24h)":
+            st.warning("""
+            **Early Invasive Strategy (<24h):**
+            
+            **Chỉ định:**
+            - **GRACE Score >140**
+            - **TIMI Risk Score ≥5**
+            - **Dynamic ECG changes** (ST depression, T wave inversion mới)
+            - **Elevated troponin** (hs-Tn positive)
+            - **Diabetes mellitus**
+            - **Renal dysfunction** (eGFR <60)
+            - **LVEF <40%**
+            - **Early post-infarction angina**
+            - **PCI trong 6 tháng**
+            - **CABG trước đó**
+            
+            **Quy trình:**
+            1. Điều trị nội khoa tối ưu
+            2. Angiography trong 24h
+            3. PCI nếu có chỉ định
+            4. CABG nếu không phù hợp PCI
+            
+            **Mục tiêu:** Giảm mortality và recurrent MI
+            """)
+        
+        elif invasive_timing == "Delayed (24-72h)":
+            st.info("""
+            **Delayed Invasive Strategy (24-72h):**
+            
+            **Chỉ định:**
+            - **GRACE Score 109-140**
+            - **TIMI Risk Score 3-4**
+            - **Intermediate risk** nhưng stable
+            - **Không có high-risk features**
+            
+            **Quy trình:**
+            1. Điều trị nội khoa tối ưu
+            2. Angiography trong 24-72h
+            3. PCI nếu cần
+            
+            **Mục tiêu:** Giảm nhập viện và tái phát
+            """)
+        
+        else:  # Conservative
+            st.success("""
+            **Conservative Strategy (>72h hoặc không invasive):**
+            
+            **Chỉ định:**
+            - **GRACE Score ≤108**
+            - **TIMI Risk Score 0-2**
+            - **Low risk** và stable
+            - **Troponin negative** hoặc borderline
+            
+            **Quy trình:**
+            1. Điều trị nội khoa tối ưu
+            2. Stress test hoặc CCTA ngoại trú
+            3. PCI elective nếu cần (trong vài tuần)
+            
+            **Mục tiêu:** Tránh invasive procedure không cần thiết
+            """)
+        
+        st.markdown("---")
+        st.markdown("#### 💉 Glycoprotein IIb/IIIa Inhibitors")
+        
+        st.info("""
+        **ESC 2020 Guidelines:**
+        - **Không routine:** Chỉ dùng khi có chỉ định cụ thể
+        - **Chỉ định:** High-risk PCI, high thrombus burden
+        """)
+        
+        use_gp2b3a = st.radio(
+            "**Có chỉ định GP IIb/IIIa inhibitors?**",
+            ["Có (High-risk PCI)", "Không (Routine không cần)"],
+            key="use_gp2b3a"
+        )
+        
+        if use_gp2b3a == "Có (High-risk PCI)":
+            st.warning("""
+            **Chỉ định GP IIb/IIIa Inhibitors:**
+            
+            **1. High-risk PCI:**
+            - Complex lesions (bifurcation, thrombus, long lesions)
+            - High thrombus burden trên angiography
+            - Suboptimal result sau PCI
+            
+            **2. High-risk patients:**
+            - Diabetes mellitus
+            - Elevated troponin
+            - Large territory at risk
+            
+            **Thuốc:**
+            
+            **Abciximab:**
+            - **Liều:** 0.25 mg/kg IV bolus, sau đó 0.125 mcg/kg/min × 12h
+            - **Ưu điểm:** Tác dụng mạnh, lâu dài
+            - **Nhược điểm:** Tăng nguy cơ chảy máu
+            
+            **Eptifibatide:**
+            - **Liều:** 180 mcg/kg IV bolus × 2 (10 phút apart), sau đó 2 mcg/kg/min × 18h
+            - **Ưu điểm:** Tác dụng ngắn, có thể reverse
+            - **Nhược điểm:** Cần infusion lâu
+            
+            **Tirofiban:**
+            - **Liều:** 25 mcg/kg IV bolus, sau đó 0.15 mcg/kg/min × 18h
+            - **Ưu điểm:** Tương tự eptifibatide
+            - **Nhược điểm:** Cần infusion lâu
+            
+            **Lưu ý:**
+            - Dùng kết hợp với DAPT và heparin
+            - Monitoring: Platelet count, bleeding
+            - Chống chỉ định: Active bleeding, thrombocytopenia
+            """)
+        
+        else:
+            st.success("""
+            **Không cần GP IIb/IIIa inhibitors:**
+            
+            **Lý do:**
+            - Routine PCI không cần GP IIb/IIIa inhibitors
+            - DAPT (aspirin + P2Y12) đã đủ trong hầu hết trường hợp
+            - GP IIb/IIIa chỉ tăng nguy cơ chảy máu mà không cải thiện outcomes đáng kể
+            
+            **Chỉ dùng khi:**
+            - High-risk PCI với thrombus burden cao
+            - Suboptimal result sau PCI
+            - Có chỉ định cụ thể
             """)
     
     st.markdown("---")

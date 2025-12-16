@@ -35,6 +35,7 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 # ======================================
 
 
@@ -341,6 +342,15 @@ def render():
             "Interpretation": result['interpretation'],
             "Severity": result['severity']
         }
+        
+        # Save to history
+        # Export section
+        render_export_section(
+            calculator_id="hospital_score",
+            calculator_name="HOSPITAL Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
         
         # Save to history
         save_calculation_to_history(

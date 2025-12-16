@@ -170,8 +170,8 @@ def render_bsa_comparison(
         | Công thức | Năm | BSA (m²) | Chênh lệch vs Mosteller | Đặc điểm |
         |:----------|:----|:---------|:------------------------|:---------|
         | **Mosteller** | 1987 | **{bsa_mosteller:.2f}** | - | ⭐ Đơn giản, KDIGO/FDA khuyến nghị |
-        | Du Bois | 1916 | {bsa_dubois:.2f} | {bsa_dubois - bsa_mosteller:+.3f} | Cổ điển, nền tảng 1.73m² |
-        | Haycock | 1978 | {bsa_haycock:.2f} | {bsa_haycock - bsa_mosteller:+.3f} | Tốt cho mọi lứa tuổi |
+        | Du Bois | 1916 | {bsa_dubois:.2f} | {bsa_dubois - bsa_mosteller:+.2f} | Cổ điển, nền tảng 1.73m² |
+        | Haycock | 1978 | {bsa_haycock:.2f} | {bsa_haycock - bsa_mosteller:+.2f} | Tốt cho mọi lứa tuổi |
         | Boyd | 1935 | {bsa_boyd:.2f} | {bsa_boyd - bsa_mosteller:+.2f} | Phức tạp, tốt cho BMI cực |
         | Shuter & Aslani | 2000 | {bsa_shuter:.2f} | {bsa_shuter - bsa_mosteller:+.2f} | Hiện đại, chính xác cao |
         

@@ -430,14 +430,228 @@ def render():
     
     st.markdown("---")
     
-    # ========== SECTION 9: SPECIAL CONSIDERATIONS ==========
+    # ========== SECTION 9: CORTICOSTEROIDS ==========
+    st.markdown("### 💉 Corticosteroids trong Septic Shock")
+    
+    st.warning("""
+    **Chỉ định (Surviving Sepsis Campaign 2021):**
+    - Septic shock với vasopressor không đáp ứng sau truyền dịch đầy đủ
+    - Hoặc cần vasopressor >0.1 mcg/kg/min norepinephrine
+    - Hoặc MAP <65 mmHg sau 30 mL/kg dịch
+    """)
+    
+    use_corticosteroids = st.radio(
+        "**Có chỉ định corticosteroids?**",
+        ["Có", "Không", "Không chắc chắn"],
+        key="sepsis_corticosteroids"
+    )
+    
+    if use_corticosteroids == "Có":
+        st.success("""
+        **Hydrocortisone Protocol:**
+        
+        **Liều:**
+        - **Hydrocortisone 200mg/day** (khuyến nghị)
+        - **Cách 1:** 50mg IV q6h
+        - **Cách 2:** 200mg/day continuous infusion
+        
+        **Thời gian:**
+        - 7 ngày hoặc đến khi không cần vasopressor
+        - Không cần tapering nếu <7 ngày
+        
+        **Monitoring:**
+        - Đường huyết (tăng nguy cơ hyperglycemia)
+        - Đáp ứng vasopressor (có thể giảm liều)
+        - Dấu hiệu nhiễm trùng mới
+        
+        **Lưu ý:**
+        - Không dùng nếu không có septic shock
+        - Không dùng nếu có chống chỉ định (nhiễm nấm hệ thống, v.v.)
+        """)
+    elif use_corticosteroids == "Không chắc chắn":
+        st.info("""
+        **Đánh giá lại:**
+        - MAP có <65 mmHg sau truyền dịch đầy đủ?
+        - Có cần vasopressor >0.1 mcg/kg/min?
+        - Có bằng chứng septic shock?
+        
+        **Nếu không đủ tiêu chuẩn:** Không dùng corticosteroids
+        """)
+    
+    st.markdown("---")
+    
+    # ========== SECTION 10: RENAL REPLACEMENT THERAPY ==========
+    st.markdown("### 🩸 Renal Replacement Therapy (RRT)")
+    
+    st.markdown("**Chỉ định RRT trong Sepsis:**")
+    
+    rrt_indications = st.multiselect(
+        "**Chỉ định RRT:**",
+        [
+            "AKI Stage 2-3 với oliguria/anuria",
+            "Uremia (BUN >100 mg/dL)",
+            "Acidosis nặng (pH <7.15) không đáp ứng",
+            "Quá tải dịch không đáp ứng lợi tiểu",
+            "Hyperkalemia nặng (>6.5 mEq/L)",
+            "Tăng ure máu với triệu chứng (uremic encephalopathy, pericarditis)",
+            "Khác"
+        ],
+        key="sepsis_rrt_indications"
+    )
+    
+    if rrt_indications:
+        st.error("""
+        **Chỉ định RRT đã xác định**
+        
+        **Loại RRT:**
+        - **CRRT (Continuous RRT):** Ưu tiên nếu hemodynamically unstable
+        - **IHD (Intermittent HD):** Nếu hemodynamically stable
+        - **SLED (Sustained Low-Efficiency Dialysis):** Compromise giữa CRRT và IHD
+        
+        **Timing:**
+        - **Early RRT:** Có thể cải thiện outcomes trong một số trường hợp
+        - **Standard:** Khi có chỉ định rõ ràng
+        
+        **Anticoagulation:**
+        - **CRRT:** Cần anticoagulation (heparin, citrate)
+        - **IHD:** Thường không cần nếu không có chống chỉ định
+        
+        **Monitoring:**
+        - Fluid balance
+        - Electrolytes (K, Na, Phos, Ca)
+        - Acid-base status
+        - Clearance (Kt/V cho IHD, effluent rate cho CRRT)
+        """)
+    else:
+        st.info("""
+        **Chưa có chỉ định RRT rõ ràng**
+        
+        **Theo dõi:**
+        - Creatinine, BUN
+        - Urine output
+        - Electrolytes
+        - Acid-base status
+        
+        **Xem xét RRT nếu:**
+        - Creatinine tăng nhanh
+        - Urine output giảm
+        - Có các chỉ định trên
+        """)
+    
+    st.markdown("---")
+    
+    # ========== SECTION 11: GLUCOSE MANAGEMENT ==========
+    st.markdown("### 🍭 Glucose Management")
+    
+    st.info("""
+    **Mục tiêu đường huyết (Surviving Sepsis Campaign 2021):**
+    - **140-180 mg/dL** (7.8-10.0 mmol/L)
+    - **Tránh <110 mg/dL** (tăng mortality)
+    - **Tránh >180 mg/dL** (tăng nguy cơ nhiễm trùng)
+    """)
+    
+    current_glucose = st.number_input(
+        "**Đường huyết hiện tại (mg/dL):**",
+        min_value=0.0,
+        max_value=600.0,
+        value=150.0,
+        step=1.0,
+        key="sepsis_glucose"
+    )
+    
+    if current_glucose < 110:
+        st.error("""
+        **⚠️ Đường huyết QUÁ THẤP (<110 mg/dL)**
+        
+        **Xử trí:**
+        - **D50W 50ml IV** nếu có triệu chứng
+        - **D10W infusion** nếu cần duy trì
+        - **Giảm insulin** nếu đang dùng
+        - **Mục tiêu:** 140-180 mg/dL
+        
+        **Nguy cơ:** Tăng mortality nếu đường huyết thấp kéo dài
+        """)
+    elif current_glucose > 180:
+        st.warning("""
+        **⚠️ Đường huyết CAO (>180 mg/dL)**
+        
+        **Xử trí:**
+        - **Insulin infusion:** Bắt đầu nếu >180 mg/dL
+        - **Liều:** 0.05-0.1 U/kg/h (tùy mức độ)
+        - **Titrate:** Mỗi 1-2h để đạt 140-180 mg/dL
+        - **Monitoring:** Glucose mỗi 1-2h
+        
+        **Mục tiêu:** 140-180 mg/dL
+        """)
+    else:
+        st.success("""
+        **✅ Đường huyết trong mục tiêu (140-180 mg/dL)**
+        
+        **Theo dõi:**
+        - Glucose mỗi 4-6h nếu ổn định
+        - Glucose mỗi 1-2h nếu đang điều chỉnh insulin
+        - Điều chỉnh insulin để duy trì trong mục tiêu
+        """)
+    
+    st.markdown("---")
+    
+    # ========== SECTION 12: VTE PROPHYLAXIS ==========
+    st.markdown("### 🩸 VTE Prophylaxis")
+    
+    st.info("""
+    **Khuyến nghị (Surviving Sepsis Campaign 2021):**
+    - **LMWH** hoặc **UFH** cho tất cả bệnh nhân sepsis không chống chỉ định
+    - **Bắt đầu trong 24h đầu** nếu không có chống chỉ định
+    """)
+    
+    vte_contraindications = st.multiselect(
+        "**Chống chỉ định VTE prophylaxis:**",
+        [
+            "Không có chống chỉ định",
+            "Chảy máu đang hoạt động",
+            "Rối loạn đông máu nặng",
+            "Giảm tiểu cầu nặng (<50k)",
+            "Suy gan nặng",
+            "Khác"
+        ],
+        key="sepsis_vte_contra",
+        default=["Không có chống chỉ định"]
+    )
+    
+    if "Không có chống chỉ định" in vte_contraindications and len(vte_contraindications) == 1:
+        st.success("""
+        **✅ Có chỉ định VTE Prophylaxis**
+        
+        **Lựa chọn:**
+        - **LMWH:** Enoxaparin 40mg SC q24h (ưu tiên)
+        - **UFH:** 5000 U SC q8-12h
+        - **Fondaparinux:** 2.5mg SC q24h (nếu dị ứng heparin)
+        
+        **Bắt đầu:** Trong 24h đầu
+        **Tiếp tục:** Cho đến khi xuất viện hoặc không còn nguy cơ
+        """)
+    else:
+        st.warning("""
+        **⚠️ Có chống chỉ định VTE prophylaxis**
+        
+        **Đánh giá lại:**
+        - Chống chỉ định có còn không?
+        - Có thể dùng mechanical prophylaxis (SCD, compression stockings)?
+        
+        **Nếu chống chỉ định hết:**
+        - Bắt đầu VTE prophylaxis ngay
+        """)
+    
+    st.markdown("---")
+    
+    # ========== SECTION 13: SPECIAL CONSIDERATIONS ==========
     st.markdown("### ⚠️ Các trường hợp đặc biệt")
     
     with st.expander("🔍 Xem các trường hợp đặc biệt", expanded=False):
         st.markdown("""#### **Suy thận:**
         - Điều chỉnh liều kháng sinh theo CrCl
         - Thận trọng với truyền dịch (nguy cơ quá tải)
-        - Xem xét lọc máu sớm nếu cần
+        - Xem xét lọc máu sớm nếu cần (xem section RRT)
         
         #### **Suy gan:**
         - Tránh kháng sinh độc gan
@@ -458,6 +672,10 @@ def render():
         - Thận trọng với truyền dịch (nguy cơ quá tải)
         - Điều chỉnh liều kháng sinh theo CrCl
         - Xem xét các bệnh lý kèm theo
+        
+        #### **Stress Ulcer Prophylaxis:**
+        - Xem protocol **Stress Ulcer Prophylaxis** trong Critical Care
+        - PPI hoặc H2 blocker cho bệnh nhân có nguy cơ
         """)
     
     st.markdown("---")

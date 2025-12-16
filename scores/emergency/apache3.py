@@ -44,6 +44,7 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 # ======================================
 from scores.utils.validation import (
     validate_age,
@@ -814,6 +815,15 @@ def render():
             "Age Points": f"{result['age_points']:.0f} điểm",
             "Chronic Health Points": f"{result['chronic_points']:.0f} điểm"
         }
+        
+        # Save to history
+        # Export section
+        render_export_section(
+            calculator_id="apache3",
+            calculator_name="APACHE III Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
         
         # Save to history
         save_calculation_to_history(

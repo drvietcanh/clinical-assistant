@@ -38,6 +38,7 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 # ======================================
 
 
@@ -384,6 +385,15 @@ def render():
             "C Points": result['c_points'],
             "E Points": result['e_points']
         }
+        
+        # Save to history
+        # Export section
+        render_export_section(
+            calculator_id="lace_index",
+            calculator_name="LACE Index",
+            inputs=inputs_dict,
+            results=results_dict
+        )
         
         # Save to history
         save_calculation_to_history(

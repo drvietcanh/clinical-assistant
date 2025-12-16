@@ -120,6 +120,25 @@ def render():
     - Nếu cardiac output thấp
     """)
     
+    st.markdown("---")
+    st.markdown("### 📖 Xem thêm: Sepsis 3-Hour Bundle")
+    
+    st.info("""
+    **💡 Protocol này tập trung vào 1-Hour Bundle.**
+    
+    **Để xem protocol đầy đủ hơn với:**
+    - Corticosteroids trong septic shock
+    - Renal Replacement Therapy (RRT)
+    - Glucose management
+    - VTE prophylaxis
+    - Source control chi tiết
+    - 3-hour management protocol
+    
+    **→ Chọn "Sepsis 3-Hour Bundle" trong danh sách protocol**
+    """)
+    
+    st.markdown("---")
+    
     # References section
     references = get_references("Sepsis")
     if references:

@@ -137,8 +137,51 @@ def render_ischemic_stroke():
     with col3:
         st.warning("""
         **Extended Window:**
-        - **Tenecteplase:** Đang nghiên cứu
-        - **Mechanical Thrombectomy:** <24h với imaging
+        - **Tenecteplase:** Có thể thay thế alteplase (AHA/ASA 2023)
+        - **Mechanical Thrombectomy:** <24h với imaging (DAWN/DEFUSE-3)
+        """)
+    
+    st.markdown("---")
+    
+    # Tenecteplase option
+    st.markdown("#### 💉 Tenecteplase (TNK-tPA) - Alternative to Alteplase")
+    
+    st.info("""
+    **AHA/ASA 2023 Update:**
+    - **Tenecteplase** có thể thay thế alteplase trong một số trường hợp
+    - **Ưu điểm:** Single IV bolus (không cần infusion), tiện lợi hơn
+    - **Liều:** 0.25 mg/kg IV bolus (max 25mg)
+    - **Chỉ định:** Tương tự alteplase (0-4.5h window)
+    """)
+    
+    use_tenecteplase = st.radio(
+        "**Lựa chọn thuốc thrombolytic:**",
+        ["Alteplase (tPA) - Standard", "Tenecteplase (TNK-tPA) - Alternative"],
+        key="stroke_thrombolytic_choice"
+    )
+    
+    if use_tenecteplase == "Tenecteplase (TNK-tPA) - Alternative":
+        weight_kg = st.number_input(
+            "**Cân nặng (kg):**",
+            min_value=40.0,
+            max_value=150.0,
+            value=70.0,
+            step=1.0,
+            key="tenecteplase_weight"
+        )
+        
+        tnk_dose = min(weight_kg * 0.25, 25.0)
+        
+        st.success(f"""
+        **Tenecteplase Dosing:**
+        - **Liều:** {tnk_dose:.1f} mg IV bolus
+        - **Cách dùng:** Single IV bolus trong 5-10 giây
+        - **Không cần:** Continuous infusion (khác với alteplase)
+        
+        **Monitoring:** Tương tự alteplase
+        - BP mỗi 15 phút trong 2h đầu
+        - Neurologic checks mỗi 1h trong 24h
+        - CT scan nếu có triệu chứng xuất huyết
         """)
     
     st.markdown("---")
@@ -696,6 +739,13 @@ def render_ischemic_stroke():
     
     st.markdown("#### ✅ Chỉ định MT (Endovascular Thrombectomy)")
     
+    st.info("""
+    **AHA/ASA 2023 Update - Extended Windows:**
+    - **DAWN Trial:** Up to 24h với clinical-imaging mismatch
+    - **DEFUSE-3 Trial:** Up to 16h với perfusion mismatch
+    - **CT Perfusion** hoặc **MRI DWI-FLAIR** để xác định salvageable tissue
+    """)
+    
     col1, col2 = st.columns(2)
     
     with col1:
@@ -809,38 +859,168 @@ def render_ischemic_stroke():
     st.markdown("---")
     st.markdown("### 5️⃣ Hỗ trợ y tế & quản lý huyết áp")
     
-    st.markdown("#### 💊 Quản lý Huyết áp")
+    st.markdown("#### 💊 Quản lý Huyết áp Chi Tiết (AHA/ASA Guidelines)")
+    
+    bp_scenario = st.radio(
+        "**Tình huống:**",
+        [
+            "Trước tPA/MT",
+            "Trong và sau tPA (0-24h)",
+            "Sau MT (sau reperfusion)",
+            "Không dùng tPA/MT"
+        ],
+        key="bp_scenario"
+    )
+    
+    if bp_scenario == "Trước tPA/MT":
+        st.error("""
+        **Mục tiêu:** SBP <185 mmHg, DBP <110 mmHg
+        
+        **Lý do:** Cần đạt mục tiêu này để đủ tiêu chuẩn tPA/MT
+        
+        **Thuốc điều trị:**
+        
+        **1. Labetalol (Ưu tiên):**
+        - **Liều:** 10-20mg IV bolus
+        - **Lặp lại:** Mỗi 10-15 phút nếu cần
+        - **Tối đa:** 300mg total
+        - **Ưu điểm:** Tác dụng nhanh, ít tác dụng phụ
+        
+        **2. Nicardipine:**
+        - **Liều:** 5mg/h IV infusion
+        - **Titrate:** Tăng 2.5mg/h mỗi 5-15 phút
+        - **Tối đa:** 15mg/h
+        - **Ưu điểm:** Kiểm soát tốt, có thể titrate
+        
+        **3. Clevidipine (Nếu có):**
+        - **Liều:** 1-2 mg/h IV infusion
+        - **Titrate:** Tăng 1-2 mg/h mỗi 2-5 phút
+        - **Tối đa:** 21 mg/h
+        - **Ưu điểm:** Tác dụng rất nhanh, thời gian bán hủy ngắn
+        
+        **Monitoring:**
+        - BP mỗi 5-10 phút khi đang điều trị
+        - Đánh giá đáp ứng sau mỗi liều
+        
+        **⚠️ Nếu không kiểm soát được:** Không dùng tPA
+        """)
+    
+    elif bp_scenario == "Trong và sau tPA (0-24h)":
+        st.warning("""
+        **Mục tiêu:** SBP <185 mmHg, DBP <110 mmHg (trong 24h đầu)
+        
+        **Lý do:** Giảm nguy cơ xuất huyết sau tPA
+        
+        **Theo dõi:**
+        - **0-2h:** BP mỗi 15 phút
+        - **2-8h:** BP mỗi 30 phút
+        - **8-24h:** BP mỗi 1 giờ
+        
+        **Điều trị nếu SBP >185 hoặc DBP >110:**
+        - **Labetalol:** 10-20mg IV, lặp lại mỗi 10-15 phút
+        - **Nicardipine:** 5mg/h IV, titrate đến 15mg/h
+        - **Clevidipine:** 1-2 mg/h IV, titrate
+        
+        **Tránh:**
+        - Hạ BP quá nhanh (có thể gây hypoperfusion)
+        - Nitroprusside (có thể tăng ICP)
+        
+        **Nếu BP không kiểm soát được:**
+        - CT Head ngay để loại trừ xuất huyết
+        - Xem xét đảo ngược tPA nếu có xuất huyết
+        """)
+    
+    elif bp_scenario == "Sau MT (sau reperfusion)":
+        st.info("""
+        **Mục tiêu:** SBP <180 mmHg (sau reperfusion)
+        
+        **Lý do:** 
+        - Giảm nguy cơ xuất huyết sau reperfusion
+        - Tối ưu hóa tưới máu vùng đã được tái tưới
+        
+        **Theo dõi:**
+        - **0-2h:** BP mỗi 15 phút
+        - **2-24h:** BP mỗi 30 phút - 1 giờ
+        
+        **Điều trị nếu SBP >180:**
+        - **Labetalol:** 10-20mg IV, lặp lại
+        - **Nicardipine:** 5mg/h IV, titrate
+        - **Clevidipine:** 1-2 mg/h IV, titrate
+        
+        **Đặc biệt:**
+        - Nếu TICI 2b-3 (reperfusion tốt): Có thể cho phép SBP cao hơn một chút
+        - Nếu TICI 0-2a (reperfusion kém): Cần kiểm soát BP chặt chẽ hơn
+        """)
+    
+    else:  # Không dùng tPA/MT
+        st.success("""
+        **Mục tiêu:** Cho phép SBP đến 220 mmHg (trong 24h đầu)
+        
+        **Lý do:** 
+        - Tăng tưới máu vùng penumbra (vùng thiếu máu nhưng chưa hoại tử)
+        - Permissive hypertension có thể cải thiện outcomes
+        
+        **Điều trị nếu SBP >220 mmHg:**
+        - **Điều trị từ từ:** Tránh hạ quá nhanh
+        - **Mục tiêu:** Giảm 15-25% trong 24h đầu
+        - **Thuốc:** Labetalol, nicardipine, hoặc clevidipine
+        
+        **Điều trị ngay nếu:**
+        - SBP >220 mmHg với triệu chứng (đau đầu, đau ngực)
+        - Có bằng chứng suy tim, bóc tách động mạch chủ, hoặc bệnh lý khác
+        
+        **Sau 24h:**
+        - Bắt đầu điều trị tăng huyết áp nếu BP vẫn cao
+        - Mục tiêu: SBP <140 mmHg (nếu không có chống chỉ định)
+        """)
+    
+    st.markdown("---")
+    st.markdown("#### 📊 Blood Pressure Calculator")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.warning("""
-        **Trước tPA/MT:**
-        - **Mục tiêu:** SBP <185, DBP <110 mmHg
-        - **Thuốc:**
-          * Labetalol: 10-20mg IV, lặp lại mỗi 10-15 phút
-          * Nicardipine: 5mg/h IV, tăng đến 15mg/h
-          * Clevidipine: 1-2 mg/h IV (nếu có)
-        - **Nếu không kiểm soát được:** Không dùng tPA
+        current_sbp = st.number_input(
+            "**SBP hiện tại (mmHg):**",
+            min_value=80,
+            max_value=300,
+            value=180,
+            key="bp_current_sbp"
+        )
         
-        **Trong và sau tPA:**
-        - **Mục tiêu:** SBP <185, DBP <110 mmHg
-        - **Theo dõi:** Mỗi 15 phút × 2h, sau đó mỗi 30 phút
-        - **Nếu tăng:** Điều trị ngay với labetalol hoặc nicardipine
-        """)
+        current_dbp = st.number_input(
+            "**DBP hiện tại (mmHg):**",
+            min_value=40,
+            max_value=150,
+            value=100,
+            key="bp_current_dbp"
+        )
     
     with col2:
-        st.info("""
-        **Sau MT (Sau reperfusion):**
-        - **Mục tiêu:** SBP <180 mmHg
-        - **Lý do:** Giảm nguy cơ xuất huyết sau reperfusion
-        - **Thuốc:** Tương tự như trên
+        if bp_scenario == "Trước tPA/MT":
+            target_sbp = 185
+            target_dbp = 110
+        elif bp_scenario == "Trong và sau tPA (0-24h)":
+            target_sbp = 185
+            target_dbp = 110
+        elif bp_scenario == "Sau MT (sau reperfusion)":
+            target_sbp = 180
+            target_dbp = 110
+        else:
+            target_sbp = 220
+            target_dbp = 120
         
-        **Nếu không dùng tPA/MT:**
-        - **Cho phép:** SBP đến 220 mmHg (trong 24h đầu)
-        - **Lý do:** Tăng tưới máu vùng penumbra
-        - **Nếu >220:** Điều trị từ từ (tránh hạ quá nhanh)
-        """)
+        st.metric("**Mục tiêu SBP:**", f"<{target_sbp} mmHg")
+        st.metric("**Mục tiêu DBP:**", f"<{target_dbp} mmHg")
+        
+        if current_sbp > target_sbp or current_dbp > target_dbp:
+            reduction_needed = current_sbp - target_sbp
+            st.warning(f"**Cần giảm:** ~{reduction_needed} mmHg")
+            st.info("**Khuyến nghị:** Điều trị với labetalol hoặc nicardipine")
+        else:
+            st.success("**✅ BP trong mục tiêu**")
+    
+    st.markdown("---")
     
     st.markdown("---")
     st.markdown("#### 🌡️ Quản lý sốt")
@@ -894,20 +1074,176 @@ def render_ischemic_stroke():
     st.markdown("---")
     st.markdown("### 6️⃣ Điều trị sau giai đoạn cấp")
     
-    st.success("""
-    **Antiplatelet (sau 24h nếu không dùng tPA):**
-    - Aspirin 81-325mg PO ngay (hoặc sau 24h nếu dùng tPA)
-    - Hoặc Clopidogrel 75mg PO
-    - Không dùng kết hợp trong 21 ngày đầu (trừ TIA/minor stroke với DAPT)
+    st.markdown("#### 💊 Antiplatelet Therapy - Timing & Selection")
     
-    **Statin:**
-    - Atorvastatin 80mg PO (high-intensity)
-    - Hoặc Rosuvastatin 40mg PO
+    st.info("""
+    **AHA/ASA Guidelines - Antiplatelet Timing:**
+    """)
+    
+    antiplatelet_timing = st.radio(
+        "**Tình huống:**",
+        [
+            "Đã dùng tPA",
+            "Không dùng tPA - Ischemic stroke",
+            "TIA hoặc Minor stroke (NIHSS ≤3)",
+            "Chống chỉ định aspirin"
+        ],
+        key="antiplatelet_timing"
+    )
+    
+    if antiplatelet_timing == "Đã dùng tPA":
+        st.warning("""
+        **Timing:**
+        - **KHÔNG dùng aspirin trong 24h đầu** sau tPA
+        - **Sau 24h:** Bắt đầu aspirin nếu không có xuất huyết trên CT
+        
+        **Liều:**
+        - **Aspirin 81-325mg PO** mỗi ngày
+        - **Hoặc Clopidogrel 75mg PO** mỗi ngày (nếu dị ứng aspirin)
+        
+        **Monitoring:**
+        - CT Head sau 24h để đảm bảo không có xuất huyết
+        - Nếu có xuất huyết: Không dùng antiplatelet
+        
+        **Lưu ý:**
+        - Không dùng DAPT (aspirin + clopidogrel) trong 24h đầu
+        """)
+    
+    elif antiplatelet_timing == "Không dùng tPA - Ischemic stroke":
+        st.success("""
+        **Timing:**
+        - **Có thể bắt đầu ngay** (trong 24-48h đầu)
+        - **Hoặc sau 24h** nếu muốn đợi CT Head follow-up
+        
+        **Lựa chọn:**
+        - **Aspirin 81-325mg PO** mỗi ngày (ưu tiên)
+        - **Hoặc Clopidogrel 75mg PO** mỗi ngày (nếu dị ứng aspirin)
+        
+        **Không dùng DAPT** trong 21 ngày đầu (trừ TIA/minor stroke)
+        """)
+    
+    elif antiplatelet_timing == "TIA hoặc Minor stroke (NIHSS ≤3)":
+        st.info("""
+        **Dual Antiplatelet Therapy (DAPT) - CHANCE/POINT Trials:**
+        
+        **Chỉ định:**
+        - TIA hoặc Minor ischemic stroke (NIHSS ≤3)
+        - Không có chống chỉ định
+        
+        **Liều:**
+        - **Aspirin 75-100mg PO** mỗi ngày
+        - **+ Clopidogrel 75mg PO** mỗi ngày
+        
+        **Thời gian:**
+        - **21 ngày** (CHANCE trial) hoặc **90 ngày** (POINT trial)
+        - Sau đó chuyển sang aspirin đơn độc
+        
+        **Lợi ích:**
+        - Giảm nguy cơ tái phát stroke trong 21-90 ngày đầu
+        - Tăng nguy cơ chảy máu nhẹ
+        
+        **Monitoring:**
+        - Theo dõi dấu hiệu chảy máu
+        - Đánh giá lại sau 21-90 ngày
+        """)
+    
+    else:  # Chống chỉ định aspirin
+        st.error("""
+        **Chống chỉ định Aspirin:**
+        - Dị ứng aspirin
+        - Xuất huyết đang hoạt động
+        - Rối loạn đông máu nặng
+        
+        **Lựa chọn thay thế:**
+        - **Clopidogrel 75mg PO** mỗi ngày
+        - **Hoặc Ticagrelor 90mg PO** bid (nếu có)
+        """)
+    
+    st.markdown("---")
+    st.markdown("#### 🍽️ Dysphagia Screening")
+    
+    st.warning("""
+    **⚠️ QUAN TRỌNG: Screen tất cả bệnh nhân stroke trước khi cho ăn/uống!**
+    
+    **AHA/ASA Guidelines:**
+    - Screen tất cả bệnh nhân stroke trong 24h đầu
+    - NPO cho đến khi screen negative
+    """)
+    
+    dysphagia_screen = st.radio(
+        "**Kết quả Dysphagia Screen:**",
+        ["Chưa screen", "Screen negative (an toàn)", "Screen positive (có nguy cơ)", "Không rõ"],
+        key="dysphagia_screen"
+    )
+    
+    if dysphagia_screen == "Chưa screen":
+        st.error("""
+        **🚨 CẦN SCREEN NGAY!**
+        
+        **Bedside Swallow Test:**
+        1. **Water swallow test:** 50-90ml nước
+        2. **Đánh giá:**
+           - Ho, sặc
+           - Thay đổi giọng nói (wet voice)
+           - Khó nuốt
+           - Nước chảy ra mũi
+        
+        **Nếu screen positive:** NPO, đặt NGT
+        **Nếu screen negative:** Có thể cho ăn/uống, nhưng theo dõi sát
+        """)
+    
+    elif dysphagia_screen == "Screen negative (an toàn)":
+        st.success("""
+        **✅ Screen Negative - Có thể cho ăn/uống**
+        
+        **Lưu ý:**
+        - Bắt đầu với thức ăn mềm, dễ nuốt
+        - Theo dõi sát trong 24-48h đầu
+        - Đánh giá lại nếu có triệu chứng
+        
+        **Dấu hiệu cần đánh giá lại:**
+        - Ho, sặc khi ăn/uống
+        - Thay đổi giọng nói
+        - Sốt (có thể do aspiration)
+        """)
+    
+    elif dysphagia_screen == "Screen positive (có nguy cơ)":
+        st.error("""
+        **🚨 Screen Positive - NPO, đặt NGT**
+        
+        **Xử trí:**
+        1. **NPO ngay:** Không cho ăn/uống bằng miệng
+        2. **Đặt NGT:** Cho ăn qua ống thông mũi-dạ dày
+        3. **Formal swallow evaluation:** Bởi speech therapist trong 24-48h
+        
+        **NGT Feeding:**
+        - Bắt đầu trong 24-48h đầu
+        - Đảm bảo đủ dinh dưỡng và nước
+        
+        **Đánh giá lại:**
+        - **Sau 24-48h:** Formal swallow evaluation
+        - **Nếu cải thiện:** Có thể thử ăn/uống lại
+        - **Nếu không cải thiện:** Xem xét PEG (nếu >2 tuần)
+        
+        **PEG (Percutaneous Endoscopic Gastrostomy):**
+        - Chỉ định: Dysphagia kéo dài >2 tuần
+        - Ưu điểm: Thoải mái hơn NGT, giảm nguy cơ viêm phổi
+        """)
+    
+    st.markdown("---")
+    st.markdown("#### 💊 Statin & Risk Factor Control")
+    
+    st.success("""
+    **Statin (High-Intensity):**
+    - **Atorvastatin 80mg PO** mỗi ngày (ưu tiên)
+    - **Hoặc Rosuvastatin 40mg PO** mỗi ngày
+    - **Bắt đầu:** Trong 24-48h đầu (nếu không có chống chỉ định)
     
     **Kiểm soát yếu tố nguy cơ:**
-    - Huyết áp: ACE-I hoặc ARB
-    - Đường huyết: Kiểm soát HbA1c <7%
-    - Bỏ thuốc lá
+    - **Huyết áp:** ACE-I hoặc ARB (mục tiêu <140/90)
+    - **Đường huyết:** Kiểm soát HbA1c <7% (nếu có đái tháo đường)
+    - **Bỏ thuốc lá:** Tư vấn và hỗ trợ
+    - **Lối sống:** Tập thể dục, chế độ ăn lành mạnh
     """)
     
     st.markdown("---")

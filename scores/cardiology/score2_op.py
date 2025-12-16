@@ -24,6 +24,7 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 # ======================================
 from scores.utils.validation import (
     validate_age,
@@ -493,6 +494,15 @@ def render():
             "Time horizon": f"{time_horizon} năm"
         }
         
+        # Export section
+        render_export_section(
+            calculator_id="score2_op",
+            calculator_name="SCORE2-OP",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
         save_calculation_to_history(
             calculator_id="score2_op",
             calculator_name="SCORE2-OP",
@@ -500,6 +510,7 @@ def render():
             results=results_dict
         )
         
+        # Share section
         render_share_section(
             calculator_id="score2_op",
             calculator_name="SCORE2-OP",
