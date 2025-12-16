@@ -69,3 +69,9 @@ Thumbs.db
 *(2).csv
 *_Advanced.csv
 *_Extra.csv
+
+# Vietnamese capitalization check scripts (temporary/development tools)
+fix_all_vietnamese_caps.py
+ultra_deep_scan_vietnamese_caps.py
+comprehensive_scan_vietnamese_caps.py
+VIETNAMESE_CAPITALIZATION_FINAL_REPORT.md
