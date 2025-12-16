@@ -4,10 +4,24 @@ Westley Croup Score
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def render():
     """Render Westley Croup Score interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'westley_croup':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Westley Croup Score')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>👶 Westley Croup Score</h2>
@@ -283,6 +297,61 @@ def render():
             3. **Gates A, Gates M, Vandermeer B, et al.** Glucocorticoids for croup in children. 
                *Cochrane Database Syst Rev.* 2018;8(8):CD001955.
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Consciousness": consciousness,
+            "Cyanosis": cyanosis,
+            "Stridor": stridor,
+            "Air Entry": air_entry,
+            "Retractions": retractions
+        }
+        
+        results_dict = {
+            "Westley Croup Score": f"{score}",
+            "Severity": severity
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="westley_croup",
+            calculator_name="Westley Croup Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="westley_croup",
+            calculator_name="Westley Croup Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="westley_croup",
+            calculator_name="Westley Croup Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="westley_croup", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="westley_croup",
+            calculator_name="Westley Croup Score",
+            category="Nhi khoa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.info("""
     💡 **Điểm quan trọng:**
@@ -297,6 +366,17 @@ def render():
     
     5. **Không khám họng** nếu nghi epiglottitis!
     """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("Westley Croup Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

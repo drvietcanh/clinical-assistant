@@ -4,6 +4,13 @@ Nguy cơ VTE ở bệnh nhân nội khoa - Chỉ định thromboprophylaxis
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 from scores.utils.validation import (
     validate_age,
     validate_range
@@ -13,6 +20,13 @@ from components.ui.validation import render_validation_errors
 
 def render():
     """Render Padua Score interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'padua':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Padua Score')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #0EA5E9;'>🩺 Padua Prediction Score</h2>
@@ -283,6 +297,71 @@ def render():
             3. **Schünemann HJ, Cushman M, Burnett AE, et al.** American Society of Hematology 2018 guidelines for management of venous thromboembolism: prophylaxis for hospitalized and nonhospitalized medical patients. 
                *Blood Adv.* 2018;2(22):3198-3225.
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Cancer": "Yes" if cancer else "No",
+            "Previous VTE": "Yes" if prev_vte else "No",
+            "Reduced Mobility": "Yes" if mobility else "No",
+            "Thrombophilia": "Yes" if thrombophilia else "No",
+            "Trauma/Surgery": "Yes" if trauma else "No",
+            "Age": age,
+            "Age ≥ 70": "Yes" if age_70 else "No",
+            "Heart/Respiratory Failure": "Yes" if hf_rf else "No",
+            "AMI/Stroke": "Yes" if ami_stroke else "No",
+            "Infection/Rheumatologic": "Yes" if infection else "No",
+            "BMI": f"{bmi:.1f}",
+            "Obesity": "Yes" if obesity else "No",
+            "Hormone Therapy": "Yes" if hormone else "No"
+        }
+        
+        results_dict = {
+            "Padua Score": f"{score}",
+            "Risk": risk,
+            "VTE Risk": vte_risk,
+            "Recommendation": recommendation
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="padua",
+            calculator_name="Padua Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="padua",
+            calculator_name="Padua Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="padua",
+            calculator_name="Padua Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="padua", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="padua",
+            calculator_name="Padua Score",
+            category="Huyết học",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     st.info("""
     💡 **Điểm quan trọng:**
@@ -297,6 +376,17 @@ def render():
     
     5. **Tiếp tục** cho đến xuất viện hoặc vận động tốt
     """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("Padua Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

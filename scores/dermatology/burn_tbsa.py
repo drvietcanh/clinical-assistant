@@ -4,6 +4,13 @@ Tính diện tích bỏng theo Quy tắc số 9
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 from scores.utils.validation import (
     validate_range,
     validate_positive
@@ -39,6 +46,13 @@ def calculate_tbsa(head, chest, abdomen, back_upper, back_lower,
 
 def render():
     """Render Burn TBSA calculator interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'burn_tbsa':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Burn TBSA')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #F59E0B;'>🔥 Burn TBSA - Rule of Nines</h2>
@@ -173,6 +187,82 @@ def render():
         - Điều chỉnh theo nước tiểu: Mục tiêu 0.5-1 ml/kg/h (Người Lớn)
         - Theo dõi sát: BP, HR, nước tiểu, lactate
         """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Head": f"{head}%",
+            "Chest": f"{chest}%",
+            "Abdomen": f"{abdomen}%",
+            "Back Upper": f"{back_upper}%",
+            "Back Lower": f"{back_lower}%",
+            "Arm Right": f"{arm_right}%",
+            "Arm Left": f"{arm_left}%",
+            "Leg Right": f"{leg_right}%",
+            "Leg Left": f"{leg_left}%",
+            "Genitalia": f"{genitalia}%",
+            "Weight": f"{weight} kg"
+        }
+        
+        results_dict = {
+            "TBSA": f"{result['total_tbsa']}%",
+            "Severity": result['severity'],
+            "Management": result['management'],
+            "Total Fluid 24h": f"{total_fluid:.0f} ml",
+            "First 8h": f"{first_8h:.0f} ml",
+            "Next 16h": f"{next_16h:.0f} ml"
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="burn_tbsa",
+            calculator_name="Burn TBSA",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="burn_tbsa",
+            calculator_name="Burn TBSA",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="burn_tbsa",
+            calculator_name="Burn TBSA",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="burn_tbsa", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="burn_tbsa",
+            calculator_name="Burn TBSA",
+            category="Da liễu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("Burn TBSA")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

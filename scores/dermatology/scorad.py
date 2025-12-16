@@ -1,12 +1,26 @@
 """SCORAD - SCORing Atopic Dermatitis"""
 import streamlit as st
 import streamlit.components.v1 as components
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 from scores.utils.validation import (
     validate_range
 )
 from components.ui.validation import render_validation_errors
 
 def render():
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'scorad':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'SCORAD')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("<h2 style='text-align: center; color: #EC4899;'>🩹 SCORAD</h2><p style='text-align: center;'><em>Điểm viêm da cơ địa</em></p>", unsafe_allow_html=True)
     with st.expander("ℹ️ SCORAD"): st.markdown("**SCORAD** đánh giá mức độ viêm da cơ địa. **Điểm:** 0-103")
     st.markdown("---"); extent = st.slider("A. % Diện tích bị ảnh hưởng (Rule of 9s)", 0, 100, 10); erythema = st.slider("B1. Đỏ", 0, 3, 0); edema = st.slider("B2. Phù/Sần", 0, 3, 0); oozing = st.slider("B3. Chảy nước/Vảy", 0, 3, 0); excoriation = st.slider("B4. Trầy xước", 0, 3, 0); lichenification = st.slider("B5. Dày da", 0, 3, 0); dryness = st.slider("B6. Khô da", 0, 3, 0); intensity = erythema + edema + oozing + excoriation + lichenification + dryness; itch = st.slider("C1. Ngứa (0-10)", 0, 10, 0); sleep_loss = st.slider("C2. Mất ngủ (0-10)", 0, 10, 0); subjective = itch + sleep_loss; total = extent/5 * 0.7 + intensity * 7/2 + subjective
@@ -46,5 +60,70 @@ def render():
         else: severity = "Nặng"; color = "#dc3545"
         result_html = f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>SCORAD: {total:.1f}/103</h2><p style='text-align: center; margin-top: 10px;'>{severity}</p></div>"
         components.html(result_html, height=120, scrolling=False)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Extent": f"{extent}%",
+            "Erythema": erythema, "Edema": edema, "Oozing": oozing,
+            "Excoriation": excoriation, "Lichenification": lichenification, "Dryness": dryness,
+            "Itch": itch, "Sleep Loss": sleep_loss
+        }
+        
+        results_dict = {
+            "SCORAD Score": f"{total:.1f}/103",
+            "Severity": severity
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="scorad",
+            calculator_name="SCORAD",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="scorad",
+            calculator_name="SCORAD",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="scorad",
+            calculator_name="SCORAD",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="scorad", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="scorad",
+            calculator_name="SCORAD",
+            category="Da liễu",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("SCORAD")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 if __name__ == "__main__": render()
 

@@ -4,6 +4,13 @@ Nguy cơ biến chứng trong sốt giảm bạch cầu hạt
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 from components.ui.scoring import render_score_result, render_score_breakdown
 
 
@@ -27,6 +34,13 @@ def calculate_mascc(burden, hypotension, copd, solid_tumor_fungal, dehydration, 
 
 def render():
     """Render MASCC Risk Index interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'mascc':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'MASCC Risk Index')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #8B5CF6;'>🦠 MASCC Risk Index</h2>
@@ -161,6 +175,76 @@ def render():
             - G-CSF nếu nguy cơ cao
             - Theo dõi ICU nếu cần
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Burden": burden,
+            "Hypotension": hypotension,
+            "COPD": copd,
+            "Solid Tumor/Fungal": solid_tumor_fungal,
+            "Dehydration": dehydration,
+            "Outpatient": outpatient,
+            "Age < 60": age
+        }
+        
+        results_dict = {
+            "MASCC Score": f"{result['total_score']}",
+            "Risk Level": result['risk_level'],
+            "Mortality": result['mortality'],
+            "Management": result['management']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="mascc",
+            calculator_name="MASCC Risk Index",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="mascc",
+            calculator_name="MASCC Risk Index",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="mascc",
+            calculator_name="MASCC Risk Index",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="mascc", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="mascc",
+            calculator_name="MASCC Risk Index",
+            category="Nhiễm khuẩn",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("MASCC Risk Index")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

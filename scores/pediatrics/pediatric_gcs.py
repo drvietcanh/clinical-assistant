@@ -4,6 +4,13 @@ Pediatric GCS - Pediatric Thang điểm hôn mê Glasgow Calculator
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 from components.ui.scoring import render_score_result, render_score_breakdown
 
 
@@ -49,6 +56,13 @@ def calculate_pediatric_gcs(eye, verbal, motor, age_group):
 
 def render():
     """Render Pediatric GCS calculator interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'pediatric_gcs':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Pediatric GCS')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #FF6B9D;'>👶 Pediatric GCS - Thang điểm Glasgow cho trẻ em</h2>
@@ -412,6 +426,63 @@ def render():
             5. **Kirkham FJ, Newton CR, Whitehouse W.** Paediatric coma scales. 
                Dev Med Child Neurol. 2008;50(4):267-74.
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Age Group": "Infant" if age_group == "infant" else "Child",
+            "Eye": eye,
+            "Verbal": verbal,
+            "Motor": motor
+        }
+        
+        results_dict = {
+            "Pediatric GCS": f"{result['total_score']}/15",
+            "Eye Score": result['eye_score'],
+            "Verbal Score": result['verbal_score'],
+            "Motor Score": result['motor_score'],
+            "Severity": result['severity']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="pediatric_gcs",
+            calculator_name="Pediatric GCS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="pediatric_gcs",
+            calculator_name="Pediatric GCS",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="pediatric_gcs",
+            calculator_name="Pediatric GCS",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="pediatric_gcs", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="pediatric_gcs",
+            calculator_name="Pediatric GCS",
+            category="Nhi khoa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Quick reference
     st.markdown("---")
@@ -424,6 +495,17 @@ def render():
     - **Xu hướng > Giá trị tuyệt đối:** Thay đổi GCS quan trọng hơn giá trị một lần
     - **Ghi chú đầy đủ:** E_V_M_ + các yếu tố gây nhiễu (T, C, an thần...)
     """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("Pediatric GCS")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

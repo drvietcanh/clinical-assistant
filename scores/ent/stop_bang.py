@@ -4,6 +4,13 @@ Sàng lọc nguy cơ Obstructive Sleep Apnea (OSA)
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_stop_bang(snoring, tired, observed, pressure, bmi, age, neck, gender):
@@ -54,6 +61,13 @@ def calculate_stop_bang(snoring, tired, observed, pressure, bmi, age, neck, gend
 
 def render():
     """Render STOP-BANG calculator interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'stop_bang':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'STOP-BANG')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #6366F1;'>😴 STOP-BANG Score</h2>
@@ -435,30 +449,77 @@ def render():
             - Tử vong sớm nếu OSA nặng không điều trị
             """)
         
-        # References
-        with st.expander("📚 Tài liệu tham khảo"):
-            st.markdown("""
-            1. **Chung F, Yegneswaran B, Liao P, et al.** STOP questionnaire: 
-               a tool to screen patients for obstructive sleep apnea. 
-               Anesthesiology. 2008;108(5):812-21.
-            
-            2. **Chung F, Subramanyam R, Liao P, Sasaki E, Shapiro C, Sun Y.** 
-               High STOP-Bang score indicates a high probability of obstructive sleep apnoea. 
-               Br J Anaesth. 2012;108(5):768-75.
-            
-            3. **Nagappa M, Liao P, Wong J, et al.** Validation of the STOP-Bang Questionnaire 
-               as a Screening Tool for Obstructive Sleep Apnea among Different Populations: 
-               A Systematic Review and Meta-Analysis. PLoS One. 2015;10(12):e0143697.
-            
-            4. **Chung F, Abdullah HR, Liao P.** STOP-Bang Questionnaire: 
-               A Practical Approach to Screen for Obstructive Sleep Apnea. 
-               Chest. 2016;149(3):631-8.
-            
-            5. **Luo J, Huang R, Zhong X, Xiao Y, Zhou J.** STOP-BANG questionnaire 
-               is superior to Epworth sleepiness scales, Berlin questionnaire, and 
-               STOP questionnaire in screening obstructive sleep apnea hypopnea syndrome patients. 
-               Chin Med J (Engl). 2014;127(17):3065-70.
-            """)
+        # Prepare data for history and share
+        inputs_dict = {
+            "Snoring": "Yes" if snoring_val else "No",
+            "Tired": "Yes" if tired_val else "No",
+            "Observed": "Yes" if observed_val else "No",
+            "Pressure": "Yes" if pressure_val else "No",
+            "BMI": f"{calculated_bmi:.1f}",
+            "BMI > 35": "Yes" if bmi_over_35 else "No",
+            "Age > 50": "Yes" if age_val else "No",
+            "Neck Circumference": f"{neck_circ} cm",
+            "Neck Large": "Yes" if neck_large else "No",
+            "Gender": "Male" if gender_val else "Female"
+        }
+        
+        results_dict = {
+            "STOP-BANG Score": f"{result['total_score']}/8",
+            "Risk Level": result['risk_level'],
+            "OSA Probability": result['osa_probability']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="stop_bang",
+            calculator_name="STOP-BANG",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="stop_bang",
+            calculator_name="STOP-BANG",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="stop_bang",
+            calculator_name="STOP-BANG",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="stop_bang", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="stop_bang",
+            calculator_name="STOP-BANG",
+            category="Tai mũi họng",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("STOP-BANG")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
     
     # Quick tips
     st.markdown("---")

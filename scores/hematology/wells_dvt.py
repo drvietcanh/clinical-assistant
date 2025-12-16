@@ -32,6 +32,13 @@ Clinical Utility:
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 from components.ui.scoring import render_score_result, render_score_breakdown
 
 
@@ -186,6 +193,13 @@ def calculate_wells_dvt(
 
 def render():
     """Render Wells DVT Score calculator in Streamlit"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'wells_dvt':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Wells DVT Score')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.title("🩸 Wells Score - Deep Vein Thrombosis (DVT)")
     st.markdown("**Đánh giá xác suất tiền test của huyết khối tĩnh mạch sâu**")
@@ -377,6 +391,66 @@ def render():
         - Nếu nghi ngờ thuyên tắc phổi → đánh giá thêm Wells PE hoặc PERC
         - Quyết định điều trị cuối cùng thuộc về bác sĩ điều trị
         """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Active Cancer": "Yes" if active_cancer else "No",
+            "Paralysis/Immobilization": "Yes" if paralysis_immobilization else "No",
+            "Bedridden/Surgery": "Yes" if bedridden_surgery else "No",
+            "Localized Tenderness": "Yes" if localized_tenderness else "No",
+            "Entire Leg Swollen": "Yes" if entire_leg_swollen else "No",
+            "Calf Swelling": "Yes" if calf_swelling else "No",
+            "Pitting Edema": "Yes" if pitting_edema else "No",
+            "Collateral Veins": "Yes" if collateral_veins else "No",
+            "Alternative Diagnosis": "Yes" if alternative_diagnosis else "No"
+        }
+        
+        results_dict = {
+            "Wells DVT Score": f"{result['score']}",
+            "Probability": result['probability'],
+            "Risk Class": result['risk_class']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="wells_dvt",
+            calculator_name="Wells DVT Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="wells_dvt",
+            calculator_name="Wells DVT Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="wells_dvt",
+            calculator_name="Wells DVT Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="wells_dvt", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="wells_dvt",
+            calculator_name="Wells DVT Score",
+            category="Huyết học",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Quick reference
     with st.expander("📖 Bảng tham khảo Nhanh"):
@@ -417,4 +491,15 @@ def render():
         - Hội chứng sau huyết khối
         - Bệnh lý khớp (viêm khớp, viêm bao hoạt dịch)
         """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("Wells DVT Score")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 

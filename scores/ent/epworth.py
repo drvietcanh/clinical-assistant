@@ -4,6 +4,13 @@ Epworth Sleepiness Scale (ESS)
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_epworth(scores):
@@ -128,6 +135,13 @@ ESS_SITUATIONS = [
 
 def render():
     """Render the Epworth Sleepiness Scale calculator"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'epworth':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Epworth Sleepiness Scale')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.title("😴 Epworth Sleepiness Scale")
     st.markdown("""
@@ -327,6 +341,57 @@ def render():
             - Công việc cao (xây dựng)
             - Cần đánh giá fit-to-work
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {f"Q{i+1}": score for i, score in enumerate(scores)}
+        
+        results_dict = {
+            "ESS Score": f"{total_score}/24",
+            "Level": result['level'],
+            "Severity": result['severity'],
+            "OSA Risk": result.get('osa_risk', 'N/A')
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="epworth",
+            calculator_name="Epworth Sleepiness Scale",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="epworth",
+            calculator_name="Epworth Sleepiness Scale",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="epworth",
+            calculator_name="Epworth Sleepiness Scale",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="epworth", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="epworth",
+            calculator_name="Epworth Sleepiness Scale",
+            category="Tai mũi họng",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Educational content
     st.markdown("---")
@@ -546,15 +611,16 @@ def render():
         - Kết hợp: ESS > 10 + STOP-BANG ≥ 3 → Rất khuyến cáo PSG
         """)
     
-    # References
+    # References section (always at bottom)
     st.markdown("---")
-    st.caption("""
-    **Tài liệu tham khảo:**
-    - Johns MW. A new method for measuring daytime sleepiness: the Epworth sleepiness scale. Sleep. 1991;14(6):540-545
-    - Johns MW. Reliability and factor analysis of the Epworth Sleepiness Scale. Sleep. 1992;15(4):376-381
-    - Kapur VK, et al. Clinical Practice Guideline for Diagnostic Testing for Adult OSA. JCSM. 2017
-    - Chung F, et al. STOP-BANG Questionnaire: A practical approach to screen for OSA. Chest. 2016
-    """)
+    references = get_references("Epworth Sleepiness Scale")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":

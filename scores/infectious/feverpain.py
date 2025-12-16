@@ -4,6 +4,13 @@ FeverPAIN Score Calculator
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+# =====================================
 
 
 def calculate_feverpain(fever, purulence, attend_rapidly, inflamed_tonsils, no_cough):
@@ -55,6 +62,13 @@ def calculate_feverpain(fever, purulence, attend_rapidly, inflamed_tonsils, no_c
 
 def render():
     """Render FeverPAIN calculator interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'feverpain':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'FeverPAIN')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #EF4444;'>🤒 FeverPAIN Score</h2>
@@ -382,6 +396,63 @@ def render():
             5. **Spinks A, Glasziou PP, Del Mar CB.** Antibiotics for sore throat. 
                Cochrane Database Syst Rev. 2013;(11):CD000023.
             """)
+        
+        # Prepare data for history and share
+        inputs_dict = {
+            "Fever": "Yes" if fever_val else "No",
+            "Purulence": "Yes" if purulence_val else "No",
+            "Attend Rapidly": "Yes" if attend_val else "No",
+            "Inflamed Tonsils": "Yes" if inflamed_val else "No",
+            "No Cough": "Yes" if no_cough_val else "No"
+        }
+        
+        results_dict = {
+            "FeverPAIN Score": f"{result['total_score']}/5",
+            "Risk Level": result['risk_level'],
+            "Strep Probability": result['strep_probability'],
+            "Antibiotic Advice": result['antibiotic_advice']
+        }
+        
+        # Export section
+        from components.export import render_export_section
+        render_export_section(
+            calculator_id="feverpain",
+            calculator_name="FeverPAIN",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="feverpain",
+            calculator_name="FeverPAIN",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="feverpain",
+            calculator_name="FeverPAIN",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        render_history_ui(calculator_id="feverpain", show_actions=True)
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="feverpain",
+            calculator_name="FeverPAIN",
+            category="Nhiễm khuẩn",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Quick guide
     st.markdown("---")
@@ -402,6 +473,17 @@ def render():
     
     7. **Giáo dục bệnh nhân:** Giải thích lý do dùng/không dùng kháng sinh
     """)
+    
+    # References section (always at bottom)
+    st.markdown("---")
+    references = get_references("FeverPAIN")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            show_evidence_level=True,
+            show_links=True
+        )
 
 
 if __name__ == "__main__":
