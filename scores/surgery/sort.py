@@ -4,6 +4,13 @@ Tiên lượng tử vong 30 ngày sau phẫu thuật không tim
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 
 
 def calculate_sort(surgery_severity, asa_ps, urgency, high_risk_specialty, age, cancer):
@@ -85,6 +92,13 @@ def calculate_sort(surgery_severity, asa_ps, urgency, high_risk_specialty, age, 
 def render():
     """Render SORT interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'sort':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'SORT')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>📊 SORT - Surgical Outcome Risk Tool</h2>
     <p style='text-align: center;'><em>Tiên lượng tử vong 30 ngày sau phẫu thuật không tim</em></p>
@@ -138,7 +152,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 6 yếu tố")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 6 yếu tố")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="sort",
+            calculator_name="SORT",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Surgery severity
     st.markdown("### 1️⃣ Mức độ nghiêm trọng phẫu thuật")
@@ -259,9 +287,66 @@ def render():
                 - Cân nhắc ICU sau mổ nếu risk score cao
                 - Thông báo cho bệnh nhân và gia đình về nguy cơ
                 """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Mức độ nghiêm trọng": {0: "Minor", 1: "Intermediate", 2: "Major", 3: "Major+"}[surgery_severity],
+                "ASA-PS": f"ASA {asa_ps}",
+                "Mức độ khẩn cấp": {0: "Elective", 1: "Urgent", 2: "Emergency"}[urgency],
+                "Chuyên khoa nguy cơ cao": "Có" if high_risk_specialty else "Không",
+                "Tuổi": {0: "<65", 1: "65-79", 2: "≥80"}[age],
+                "Ung thư": "Có" if cancer else "Không"
+            }
+            
+            results_dict = {
+                "Risk Score": str(result['risk_score']),
+                "Mức nguy cơ": result['risk_level'],
+                "Tử vong 30 ngày": f"{result['risk_percentage']:.1f}%"
+            }
+            
+            # Export section
+            render_export_section(
+                calculator_id="sort",
+                calculator_name="SORT",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="sort",
+                calculator_name="SORT",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="sort",
+                calculator_name="SORT",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            render_history_ui(calculator_id="sort", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (Phase 1)
+    st.markdown("---")
+    references = get_references("sort")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

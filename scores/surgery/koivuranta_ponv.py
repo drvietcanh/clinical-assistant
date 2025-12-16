@@ -4,6 +4,13 @@ Nguy cơ buồn nôn nôn sau mổ - Phiên bản mở rộng
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 from scores.utils.anesthesia_validation import validate_surgery_duration
 
 
@@ -232,6 +239,14 @@ def render():
                 "Dự phòng": result['prophylaxis']
             }
             
+            # Export section
+            render_export_section(
+                calculator_id="koivuranta_ponv",
+                calculator_name="Koivuranta PONV Risk Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
             # Save to history
             save_calculation_to_history(
                 calculator_id="koivuranta_ponv",
@@ -251,7 +266,6 @@ def render():
             
             # History section
             st.markdown("---")
-            from components.calculation_history import render_history_ui
             render_history_ui(calculator_id="koivuranta_ponv", show_actions=True)
         
         except Exception as e:
@@ -259,9 +273,9 @@ def render():
             st.exception(e)
             return
     
-    # References section (always visible)
+    # References section (Phase 1)
     st.markdown("---")
-    references = get_references("Koivuranta PONV")
+    references = get_references("koivuranta_ponv")
     if references:
         render_references_section(
             references=references,

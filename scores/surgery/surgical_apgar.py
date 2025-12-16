@@ -4,6 +4,13 @@ Surgical Apgar Score Calculator
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 
 
 def calculate_surgical_apgar(hr_min, sbp_min, blood_loss):
@@ -48,6 +55,13 @@ def calculate_surgical_apgar(hr_min, sbp_min, blood_loss):
 
 def render():
     """Render Surgical Apgar Score interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'surgical_apgar':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Surgical Apgar Score')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🏥 Surgical Apgar Score</h2>
@@ -98,7 +112,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 3 yếu tố trong mổ (mỗi yếu tố 0-2 điểm)")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 3 yếu tố trong mổ (mỗi yếu tố 0-2 điểm)")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="surgical_apgar",
+            calculator_name="Surgical Apgar Score",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # HR min
     st.markdown("### 1️⃣ Nhịp tim tối thiểu trong mổ (HR min)")
@@ -219,9 +247,64 @@ def render():
                 - Điểm 4-6: Theo dõi sát, có thể cần monitoring
                 - Điểm 0-3: Theo dõi tích cực, cân nhắc ICU
                 """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Nhịp tim tối thiểu": f"{hr_min}/2",
+                "Huyết áp tối thiểu": f"{sbp_min}/2",
+                "Mất máu": f"{blood_loss}/2"
+            }
+            
+            results_dict = {
+                "Tổng điểm": f"{result['total_score']}/10",
+                "Nguy cơ": result['risk'],
+                "Tỷ lệ biến chứng": result['complication_rate'],
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Export section
+            render_export_section(
+                calculator_id="surgical_apgar",
+                calculator_name="Surgical Apgar Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="surgical_apgar",
+                calculator_name="Surgical Apgar Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="surgical_apgar",
+                calculator_name="Surgical Apgar Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            render_history_ui(calculator_id="surgical_apgar", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (Phase 1)
+    st.markdown("---")
+    references = get_references("surgical_apgar")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

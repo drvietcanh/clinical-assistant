@@ -4,6 +4,13 @@ Thang điểm an thần/kích động
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 from scores.utils.anesthesia_validation import validate_riker_sas_score
 
 
@@ -68,6 +75,13 @@ def get_riker_sas_interpretation(score):
 def render():
     """Render Riker SAS interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'riker_sas':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Riker SAS')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>😴 Riker SAS - Sedation-Agitation Scale</h2>
     <p style='text-align: center;'><em>Thang điểm an thần/kích động</em></p>
@@ -110,7 +124,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Chọn mức độ Riker SAS")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Chọn mức độ Riker SAS")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="riker_sas",
+            calculator_name="Riker SAS",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     score = st.radio(
         "Riker SAS Score:",
@@ -191,14 +219,56 @@ def render():
             - Đánh giá lại mức độ an thần thường xuyên
             - Cân nhắc ngừng hoặc giảm thuốc an thần
             """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Riker SAS Score": str(score)
+            }
+            
+            results_dict = {
+                "Mức độ": result['level'],
+                "Mô tả": result['description'],
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Export section
+            render_export_section(
+                calculator_id="riker_sas",
+                calculator_name="Riker SAS",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="riker_sas",
+                calculator_name="Riker SAS",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="riker_sas",
+                calculator_name="Riker SAS",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            render_history_ui(calculator_id="riker_sas", show_actions=True)
+            
+            st.markdown("---")
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
-        
-        # Comparison with other scales
-        with st.expander("🔄 So sánh với các thang điểm khác"):
+    
+    # Comparison with other scales
+    with st.expander("🔄 So sánh với các thang điểm khác"):
             st.markdown("""
             | Riker SAS | RASS | Ramsay | Mô tả |
             |-----------|------|--------|-------|
@@ -215,4 +285,16 @@ def render():
             - Riker SAS đơn giản nhưng ít chi tiết hơn RASS
             - Ramsay vẫn được sử dụng rộng rãi
             """)
+    
+    # References section (Phase 1)
+    st.markdown("---")
+    references = get_references("riker_sas")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

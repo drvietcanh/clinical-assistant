@@ -4,6 +4,13 @@ Dự đoán đặt nội khí quản khó
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 from scores.utils.anesthesia_validation import validate_wilson_score
 
 
@@ -52,6 +59,13 @@ def calculate_wilson_risk(weight, head_neck_movement, jaw_movement, receding_man
 def render():
     """Render Wilson Risk Score interface"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'wilson_risk':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Wilson Risk Score')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🔍 Wilson Risk Score</h2>
     <p style='text-align: center;'><em>Dự đoán đặt nội khí quản khó</em></p>
@@ -80,7 +94,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 5 yếu tố (mỗi yếu tố 0-2 điểm)")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 5 yếu tố (mỗi yếu tố 0-2 điểm)")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="wilson_risk",
+            calculator_name="Wilson Risk Score",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Weight
     st.markdown("### 1️⃣ Cân nặng")
@@ -223,9 +251,66 @@ def render():
             - Luôn có kế hoạch B và C
             - Thông báo trước cho đội ngũ phẫu thuật
             """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Cân nặng": f"{weight}/2",
+                "Cử động đầu cổ": f"{head_neck_movement}/2",
+                "Cử động hàm": f"{jaw_movement}/2",
+                "Hàm lùi": f"{receding_mandible}/2",
+                "Răng hô": f"{buck_teeth}/2"
+            }
+            
+            results_dict = {
+                "Tổng điểm": f"{result['total_score']}/10",
+                "Nguy cơ": result['risk'],
+                "Độ khó": result['difficulty'],
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Export section
+            render_export_section(
+                calculator_id="wilson_risk",
+                calculator_name="Wilson Risk Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="wilson_risk",
+                calculator_name="Wilson Risk Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="wilson_risk",
+                calculator_name="Wilson Risk Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            render_history_ui(calculator_id="wilson_risk", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (Phase 1)
+    st.markdown("---")
+    references = get_references("wilson_risk")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

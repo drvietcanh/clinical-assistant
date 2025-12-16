@@ -4,6 +4,13 @@ Tiêu chuẩn xuất viện sau gây mê ngoại trú
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 from scores.utils.anesthesia_validation import validate_padss_components
 
 
@@ -43,6 +50,13 @@ def calculate_padss(vitals, ambulation, nausea_vomiting, pain, bleeding):
 
 def render():
     """Render PADSS interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'padss':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'PADSS')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>🏥 PADSS - Post-Anesthesia Discharge Scoring System</h2>
@@ -95,7 +109,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 5 thành phần (mỗi thành phần 0-2 điểm)")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 5 thành phần (mỗi thành phần 0-2 điểm)")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="padss",
+            calculator_name="PADSS",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Vital signs
     st.markdown("### 1️⃣ Dấu hiệu sinh tồn (Vital Signs)")
@@ -220,15 +248,59 @@ def render():
                 percentage = (score / max_score) * 100
                 st.progress(percentage / 100, text=f"{name}: {score}/{max_score}")
             
+            # Prepare data for history and share
+            inputs_dict = {
+                "Dấu hiệu sinh tồn": f"{vitals}/2",
+                "Đi lại": f"{ambulation}/2",
+                "Buồn nôn nôn": f"{nausea_vomiting}/2",
+                "Đau": f"{pain}/2",
+                "Chảy máu": f"{bleeding}/2"
+            }
+            
+            results_dict = {
+                "Tổng điểm": f"{result['total_score']}/10",
+                "Tình trạng": result['status'],
+                "Khuyến nghị": result['recommendation']
+            }
+            
+            # Export section
+            render_export_section(
+                calculator_id="padss",
+                calculator_name="PADSS",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="padss",
+                calculator_name="PADSS",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="padss",
+                calculator_name="PADSS",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            render_history_ui(calculator_id="padss", show_actions=True)
+            
             st.markdown("---")
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
-        
-        # Additional information
-        with st.expander("📚 Thông tin bổ sung"):
+    
+    # Additional information
+    with st.expander("📚 Thông tin bổ sung"):
             st.markdown("""
             **Quy trình xuất viện sau gây mê ngoại trú:**
             
@@ -255,4 +327,16 @@ def render():
             - Không có người đưa về nhà
             - Bệnh nhân từ chối xuất viện
             """)
+    
+    # References section (Phase 1)
+    st.markdown("---")
+    references = get_references("padss")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 

@@ -4,6 +4,13 @@ Gupta Perioperative Cardiac Risk Index Calculator
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
+from scores.references_config import get_references
+from components.references import render_references_section
+from components.calculation_history import save_calculation_to_history, render_history_ui
+from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
 
 
 def calculate_gupta_cardiac(age, history_cad, history_chf, history_cva, diabetes_insulin, creatinine):
@@ -59,6 +66,13 @@ def calculate_gupta_cardiac(age, history_cad, history_chf, history_cva, diabetes
 
 def render():
     """Render Gupta Cardiac Risk Index interface"""
+    
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'gupta_cardiac':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Gupta Perioperative Cardiac Risk Index')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
     <h2 style='text-align: center; color: #10B981;'>❤️ Gupta Perioperative Cardiac Risk Index</h2>
@@ -122,7 +136,21 @@ def render():
     
     st.markdown("---")
     
-    st.subheader("📝 Đánh giá 6 yếu tố nguy cơ")
+    col_main, col_suggestions = st.columns([2, 1])
+    
+    with col_main:
+        st.subheader("📝 Đánh giá 6 yếu tố nguy cơ")
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="gupta_cardiac",
+            calculator_name="Gupta Perioperative Cardiac Risk Index",
+            category="Phẫu Thuật",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Age
     st.markdown("### 1️⃣ Tuổi")
@@ -232,9 +260,66 @@ def render():
                 - Cân nhắc hoãn phẫu thuật nếu có thể
                 - Theo dõi tích cực sau mổ, có thể cần ICU
                 """)
+            
+            # Prepare data for history and share
+            inputs_dict = {
+                "Tuổi": {0: "<60 tuổi", 1: "60-74 tuổi", 2: "≥75 tuổi"}[age],
+                "Tiền sử CAD": "Có" if history_cad else "Không",
+                "Tiền sử CHF": "Có" if history_chf else "Không",
+                "Tiền sử CVA/TIA": "Có" if history_cva else "Không",
+                "Đái tháo đường dùng insulin": "Có" if diabetes_insulin else "Không",
+                "Creatinine": {0: "<1.5 mg/dL", 1: "1.5-1.9 mg/dL", 2: "≥2.0 mg/dL"}[creatinine]
+            }
+            
+            results_dict = {
+                "Risk Score": str(result['risk_score']),
+                "Mức nguy cơ": result['risk_level'],
+                "Tỷ lệ biến chứng": f"{result['risk_percentage']:.1f}%"
+            }
+            
+            # Export section
+            render_export_section(
+                calculator_id="gupta_cardiac",
+                calculator_name="Gupta Perioperative Cardiac Risk Index",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
+            save_calculation_to_history(
+                calculator_id="gupta_cardiac",
+                calculator_name="Gupta Perioperative Cardiac Risk Index",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Share section
+            render_share_section(
+                calculator_id="gupta_cardiac",
+                calculator_name="Gupta Perioperative Cardiac Risk Index",
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
+            )
+            
+            # History section
+            st.markdown("---")
+            render_history_ui(calculator_id="gupta_cardiac", show_actions=True)
         
         except Exception as e:
             st.error(f"❌ Lỗi khi tính toán: {str(e)}")
             st.exception(e)
             return
+    
+    # References section (Phase 1)
+    st.markdown("---")
+    references = get_references("gupta_cardiac")
+    if references:
+        render_references_section(
+            references=references,
+            title="📚 Tài liệu tham khảo",
+            last_updated="2024-01-15",
+            show_evidence_level=True,
+            show_links=True
+        )
 
