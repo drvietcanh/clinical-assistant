@@ -1,176 +1,203 @@
 """
-Test script để kiểm tra các calculator đã thêm Phase 1 trong session này
+Test script để kiểm tra các calculator vừa thêm Phase 1
 """
 
 import sys
-import importlib
+import traceback
 from pathlib import Path
 
-# Danh sách các calculator đã thêm Phase 1 trong session này
-PHASE1_NEW_CALCULATORS = [
-    # Pediatrics
-    ("scores.pediatrics.pim2", "PIM2"),
-    ("scores.pediatrics.pelod2", "PELOD-2"),
-    ("scores.pediatrics.prism3", "PRISM3"),
-    
-    # Nephrology
-    ("scores.nephrology.rifle", "RIFLE"),
-    ("scores.nephrology.kdigo", "KDIGO"),
-    ("scores.nephrology.akin", "AKIN"),
-    
-    # Hematology
-    ("scores.hematology.dic_score", "DIC Score"),
-    
-    # Surgery
-    ("scores.surgery.aldrete", "Aldrete Score"),
-    
-    # Infectious
-    ("scores.infectious.sirs", "SIRS"),
-    ("scores.infectious.centor", "Centor Score"),
-    
-    # Pain
-    ("scores.pain.vas", "VAS"),
-    ("scores.pain.nrs", "NRS"),
-    ("scores.pain.dn4", "DN4"),
-    
-    # Oncology
-    ("scores.oncology.ecog", "ECOG"),
-    ("scores.oncology.karnofsky", "Karnofsky"),
-    
-    # Nursing
-    ("scores.nursing.braden", "Braden Scale"),
-    ("scores.nursing.morse", "Morse Fall Scale"),
-    
-    # Rheumatology
-    ("scores.rheumatology.das28", "DAS28"),
-    ("scores.rheumatology.sledai", "SLEDAI"),
-    ("scores.rheumatology.gout", "Gout Classification"),
-    
-    # Respiratory
-    ("scores.respiratory.bode", "BODE Index"),
-    ("scores.respiratory.smartcop", "SMART-COP"),
-    ("scores.respiratory.ards_berlin", "ARDS Berlin Definition"),
+# List các calculator vừa thêm Phase 1
+CALCULATORS_TO_TEST = [
+    ("scores.surgery.koivuranta_ponv", "koivuranta_ponv"),
+    ("scores.surgery.gupta_cardiac", "gupta_cardiac"),
+    ("scores.surgery.padss", "padss"),
+    ("scores.surgery.riker_sas", "riker_sas"),
+    ("scores.surgery.wilson_risk", "wilson_risk"),
+    ("scores.surgery.sort", "sort"),
+    ("scores.surgery.surgical_apgar", "surgical_apgar"),
+    ("scores.metabolism.hba1c_eag", "hba1c_eag"),
 ]
 
-def check_phase1_imports(module_path):
-    """Kiểm tra xem module có Phase 1 imports không"""
+def test_import(module_path, calculator_name):
+    """Test import module"""
     try:
-        module = importlib.import_module(module_path)
-        source_code = Path(module.__file__).read_text(encoding='utf-8')
+        module = __import__(module_path, fromlist=[''])
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+def test_phase1_imports(module_path, calculator_name):
+    """Test Phase 1 imports có trong file không"""
+    try:
+        # Convert module path to file path
+        file_path = module_path.replace('.', '/') + '.py'
+        file_path = Path(file_path)
         
+        if not file_path.exists():
+            return False, f"File không tồn tại: {file_path}"
+        
+        content = file_path.read_text(encoding='utf-8')
+        
+        # Check Phase 1 imports
         checks = {
-            "references_config": "from scores.references_config import get_references" in source_code,
-            "references_component": "from components.references import render_references_section" in source_code,
-            "calculation_history": "from components.calculation_history import" in source_code,
-            "share_results": "from components.share_results import" in source_code,
-            "smart_suggestions": "from components.smart_suggestions import render_suggestions" in source_code,
+            "PHASE 1 IMPORTS comment": "# ========== PHASE 1 IMPORTS ==========" in content,
+            "get_references": "from scores.references_config import get_references" in content,
+            "render_references_section": "from components.references import render_references_section" in content,
+            "save_calculation_to_history": "from components.calculation_history import save_calculation_to_history" in content,
+            "render_history_ui": "render_history_ui" in content and ("from components.calculation_history import" in content or "import render_history_ui" in content),
+            "load_shared_result_from_url": "load_shared_result_from_url" in content and ("from components.share_results import" in content),
+            "render_share_section": "render_share_section" in content and ("from components.share_results import" in content),
+            "render_suggestions": "from components.smart_suggestions import render_suggestions" in content,
+            "render_export_section": "from components.export import render_export_section" in content,
         }
         
-        return checks
+        missing = [key for key, value in checks.items() if not value]
+        
+        if missing:
+            return False, f"Thiếu: {', '.join(missing)}"
+        
+        return True, "Tất cả Phase 1 imports đều có"
+        
     except Exception as e:
-        return {"error": str(e)}
+        return False, f"Lỗi đọc file: {str(e)}"
 
-def check_phase1_features(module_path):
-    """Kiểm tra xem module có Phase 1 features không"""
+def test_render_function(module_path, calculator_name):
+    """Test render function có tồn tại không"""
     try:
-        module = importlib.import_module(module_path)
-        source_code = Path(module.__file__).read_text(encoding='utf-8')
+        module = __import__(module_path, fromlist=[''])
+        
+        if not hasattr(module, 'render'):
+            return False, "Không có hàm render()"
+        
+        render_func = getattr(module, 'render')
+        if not callable(render_func):
+            return False, "render không phải là function"
+        
+        return True, "Hàm render() tồn tại"
+        
+    except Exception as e:
+        return False, f"Lỗi kiểm tra render: {str(e)}"
+
+def test_phase1_features(module_path, calculator_name):
+    """Test Phase 1 features có trong code không"""
+    try:
+        file_path = module_path.replace('.', '/') + '.py'
+        file_path = Path(file_path)
+        
+        if not file_path.exists():
+            return False, f"File không tồn tại: {file_path}"
+        
+        content = file_path.read_text(encoding='utf-8')
         
         checks = {
-            "load_shared_result": "load_shared_result_from_url" in source_code,
-            "render_suggestions": "render_suggestions(" in source_code,
-            "save_calculation": "save_calculation_to_history(" in source_code,
-            "render_share_section": "render_share_section(" in source_code,
-            "render_export_section": "render_export_section(" in source_code,
-            "render_history_ui": "render_history_ui(" in source_code,
-            "render_references_section": "render_references_section(" in source_code,
+            "load_shared_result_from_url call": "load_shared_result_from_url()" in content,
+            "save_calculation_to_history call": "save_calculation_to_history(" in content,
+            "render_share_section call": "render_share_section(" in content,
+            "render_history_ui call": "render_history_ui(" in content,
+            "render_export_section call": "render_export_section(" in content,
+            "render_suggestions call": "render_suggestions(" in content,
+            "render_references_section call": "render_references_section(" in content,
         }
         
-        return checks
+        missing = [key for key, value in checks.items() if not value]
+        
+        if missing:
+            return False, f"Thiếu features: {', '.join(missing)}"
+        
+        return True, "Tất cả Phase 1 features đều có"
+        
     except Exception as e:
-        return {"error": str(e)}
-
-def test_calculator(module_path, calculator_name):
-    """Test một calculator"""
-    print(f"\n{'='*70}")
-    print(f"Testing: {calculator_name} ({module_path})")
-    print('='*70)
-    
-    # Check imports
-    import_checks = check_phase1_imports(module_path)
-    if "error" in import_checks:
-        print(f"❌ ERROR: {import_checks['error']}")
-        return False
-    
-    print("\n📦 Phase 1 Imports:")
-    all_imports_ok = True
-    for check_name, passed in import_checks.items():
-        status = "✅" if passed else "❌"
-        print(f"   {status} {check_name}")
-        if not passed:
-            all_imports_ok = False
-    
-    # Check features
-    feature_checks = check_phase1_features(module_path)
-    if "error" in feature_checks:
-        print(f"❌ ERROR: {feature_checks['error']}")
-        return False
-    
-    print("\n🔧 Phase 1 Features:")
-    all_features_ok = True
-    for check_name, passed in feature_checks.items():
-        status = "✅" if passed else "❌"
-        print(f"   {status} {check_name}")
-        if not passed:
-            all_features_ok = False
-    
-    # Overall status
-    if all_imports_ok and all_features_ok:
-        print(f"\n✅ {calculator_name}: PASSED")
-        return True
-    else:
-        print(f"\n❌ {calculator_name}: FAILED")
-        return False
+        return False, f"Lỗi kiểm tra features: {str(e)}"
 
 def main():
     """Main test function"""
     print("="*70)
-    print("🧪 TEST PHASE 1 NEW CALCULATORS")
+    print("🧪 TEST CÁC CALCULATOR VỪA THÊM PHASE 1")
     print("="*70)
-    print(f"\nTesting {len(PHASE1_NEW_CALCULATORS)} calculators...")
+    print()
     
     results = []
-    for module_path, calculator_name in PHASE1_NEW_CALCULATORS:
-        passed = test_calculator(module_path, calculator_name)
-        results.append((calculator_name, passed))
+    
+    for module_path, calculator_name in CALCULATORS_TO_TEST:
+        print(f"📋 Testing: {calculator_name}")
+        print("-" * 70)
+        
+        # Test 1: Import
+        print("1️⃣ Test import...", end=" ")
+        import_ok, import_msg = test_import(module_path, calculator_name)
+        if import_ok:
+            print("✅ PASSED")
+        else:
+            print(f"❌ FAILED: {import_msg}")
+        results.append(("import", calculator_name, import_ok, import_msg))
+        
+        # Test 2: Phase 1 imports
+        print("2️⃣ Test Phase 1 imports...", end=" ")
+        imports_ok, imports_msg = test_phase1_imports(module_path, calculator_name)
+        if imports_ok:
+            print("✅ PASSED")
+        else:
+            print(f"❌ FAILED: {imports_msg}")
+        results.append(("imports", calculator_name, imports_ok, imports_msg))
+        
+        # Test 3: Render function
+        print("3️⃣ Test render function...", end=" ")
+        render_ok, render_msg = test_render_function(module_path, calculator_name)
+        if render_ok:
+            print("✅ PASSED")
+        else:
+            print(f"❌ FAILED: {render_msg}")
+        results.append(("render", calculator_name, render_ok, render_msg))
+        
+        # Test 4: Phase 1 features
+        print("4️⃣ Test Phase 1 features...", end=" ")
+        features_ok, features_msg = test_phase1_features(module_path, calculator_name)
+        if features_ok:
+            print("✅ PASSED")
+        else:
+            print(f"❌ FAILED: {features_msg}")
+        results.append(("features", calculator_name, features_ok, features_msg))
+        
+        print()
     
     # Summary
-    print("\n" + "="*70)
-    print("📊 TEST SUMMARY")
+    print("="*70)
+    print("📊 TỔNG KẾT")
     print("="*70)
     
-    passed_count = sum(1 for _, passed in results if passed)
-    failed_count = len(results) - passed_count
+    total_tests = len(results)
+    passed_tests = sum(1 for _, _, ok, _ in results if ok)
+    failed_tests = total_tests - passed_tests
     
-    print(f"\n✅ Passed: {passed_count}/{len(results)}")
-    print(f"❌ Failed: {failed_count}/{len(results)}")
+    print(f"Tổng số test: {total_tests}")
+    print(f"✅ PASSED: {passed_tests}")
+    print(f"❌ FAILED: {failed_tests}")
+    print(f"📈 Tỷ lệ thành công: {passed_tests/total_tests*100:.1f}%")
+    print()
     
-    if failed_count > 0:
-        print("\n❌ Failed Calculators:")
-        for name, passed in results:
-            if not passed:
-                print(f"   - {name}")
+    # Failed tests details
+    failed = [(test_type, name, msg) for test_type, name, ok, msg in results if not ok]
+    if failed:
+        print("❌ CHI TIẾT CÁC TEST FAILED:")
+        print("-" * 70)
+        for test_type, name, msg in failed:
+            print(f"  - {name} ({test_type}): {msg}")
+        print()
     
-    print("\n" + "="*70)
-    if failed_count == 0:
-        print("🎉 ALL TESTS PASSED!")
-    else:
-        print("⚠️  SOME TESTS FAILED")
+    # Group by calculator
+    print("📋 KẾT QUẢ THEO CALCULATOR:")
+    print("-" * 70)
+    for module_path, calculator_name in CALCULATORS_TO_TEST:
+        calc_results = [r for r in results if r[1] == calculator_name]
+        all_passed = all(ok for _, _, ok, _ in calc_results)
+        status = "✅ PASSED" if all_passed else "❌ FAILED"
+        print(f"  {calculator_name}: {status}")
+    
+    print()
     print("="*70)
     
-    return failed_count == 0
+    return failed_tests == 0
 
 if __name__ == "__main__":
     success = main()
     sys.exit(0 if success else 1)
-

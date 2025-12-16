@@ -4,11 +4,14 @@ Chuyển đổi giữa HbA1c và glucose trung bình ước tính
 """
 
 import streamlit as st
+# ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+from components.export import render_export_section
+from components.calculation_history import render_history_ui
 
 
 def calculate_eag_from_hba1c(hba1c_percent):
@@ -114,6 +117,17 @@ def render():
     
     with col_main:
         pass  # Main content will be below
+    
+    with col_suggestions:
+        # Smart Suggestions
+        render_suggestions(
+            calculator_id="hba1c_eag",
+            calculator_name="HbA1c - eAG Converter",
+            category="Chuyển Hóa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     st.markdown("""
     ### Chuyển đổi HbA1c ↔ Glucose trung bình
     
@@ -212,6 +226,14 @@ def render():
                 "Status": status_info["status"]
             }
             
+            # Export section
+            render_export_section(
+                calculator_id="hba1c_eag",
+                calculator_name="HbA1c - eAG Converter",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
             # Save to history
             save_calculation_to_history(
                 calculator_id="hba1c_eag",
@@ -231,7 +253,6 @@ def render():
             
             # History section
             st.markdown("---")
-            from components.calculation_history import render_history_ui
             render_history_ui(calculator_id="hba1c_eag", show_actions=True)
             
             # Reference table
@@ -342,6 +363,14 @@ def render():
                 "Status": status_info["status"]
             }
             
+            # Export section
+            render_export_section(
+                calculator_id="hba1c_eag",
+                calculator_name="HbA1c - eAG Converter",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
             # Save to history
             save_calculation_to_history(
                 calculator_id="hba1c_eag",
@@ -361,7 +390,6 @@ def render():
             
             # History section
             st.markdown("---")
-            from components.calculation_history import render_history_ui
             render_history_ui(calculator_id="hba1c_eag", show_actions=True)
     
     # Clinical notes
