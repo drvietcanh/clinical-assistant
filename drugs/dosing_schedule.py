@@ -68,12 +68,34 @@ def render_dosing_schedule_generator():
     
     st.markdown("---")
     
+    # Check for preset values from example buttons
+    preset_drug = st.session_state.get('preset_schedule_drug_name', None)
+    preset_dose = st.session_state.get('preset_schedule_dose', None)
+    preset_interval = st.session_state.get('preset_schedule_interval', None)
+    preset_duration = st.session_state.get('preset_schedule_duration', None)
+    preset_route = st.session_state.get('preset_schedule_route', None)
+    preset_start_time = st.session_state.get('preset_schedule_start_time', None)
+    
+    # Clear presets after using
+    if preset_drug:
+        st.session_state.pop('preset_schedule_drug_name', None)
+    if preset_dose:
+        st.session_state.pop('preset_schedule_dose', None)
+    if preset_interval is not None:
+        st.session_state.pop('preset_schedule_interval', None)
+    if preset_duration is not None:
+        st.session_state.pop('preset_schedule_duration', None)
+    if preset_route:
+        st.session_state.pop('preset_schedule_route', None)
+    if preset_start_time:
+        st.session_state.pop('preset_schedule_start_time', None)
+    
     # Drug selection
     st.markdown("### 💊 Thông tin Thuốc")
     
     drug_name = st.text_input(
         "Tên thuốc:",
-        value="",
+        value=preset_drug if preset_drug else "",
         placeholder="Ví dụ: Vancomycin, Metformin, Omeprazole...",
         key="schedule_drug_name"
     )
@@ -86,14 +108,14 @@ def render_dosing_schedule_generator():
     with col1:
         dose_amount = st.text_input(
             "Liều mỗi lần:",
-            value="1000mg",
+            value=preset_dose if preset_dose else "1000mg",
             placeholder="Ví dụ: 1000mg, 500mg, 1 tablet...",
             key="schedule_dose"
         )
         
         start_time = st.text_input(
             "Giờ bắt đầu:",
-            value="08:00",
+            value=preset_start_time if preset_start_time else "08:00",
             placeholder="HH:MM (ví dụ: 08:00, 14:30)",
             key="schedule_start_time",
             help="Giờ uống/tiêm lần đầu tiên"
@@ -104,7 +126,7 @@ def render_dosing_schedule_generator():
             "Khoảng cách giữa các lần (giờ):",
             min_value=1,
             max_value=48,
-            value=12,
+            value=preset_interval if preset_interval is not None else 12,
             step=1,
             key="schedule_interval"
         )
@@ -113,15 +135,22 @@ def render_dosing_schedule_generator():
             "Thời gian điều trị (ngày):",
             min_value=1,
             max_value=30,
-            value=7,
+            value=preset_duration if preset_duration is not None else 7,
             step=1,
             key="schedule_duration"
         )
     
     # Route
+    route_options = ["PO (Uống)", "IV (Tiêm tĩnh mạch)", "IM (Tiêm bắp)", "SC (Tiêm dưới da)", "Khác"]
+    if preset_route and preset_route in route_options:
+        route_index = route_options.index(preset_route)
+    else:
+        route_index = 0
+    
     route = st.selectbox(
         "Đường dùng:",
-        ["PO (Uống)", "IV (Tiêm tĩnh mạch)", "IM (Tiêm bắp)", "SC (Tiêm dưới da)", "Khác"],
+        route_options,
+        index=route_index,
         key="schedule_route"
     )
     
@@ -139,34 +168,34 @@ def render_dosing_schedule_generator():
     
     with col1:
         if st.button("📋 Vancomycin\n1000mg q12h x 7d", use_container_width=True, key="example_vanco"):
-            st.session_state['schedule_drug_name'] = "Vancomycin"
-            st.session_state['schedule_dose'] = "1000mg"
-            st.session_state['schedule_interval'] = 12
-            st.session_state['schedule_duration'] = 7
-            st.session_state['schedule_route'] = "IV (Tiêm tĩnh mạch)"
-            st.session_state['schedule_start_time'] = "08:00"
+            st.session_state['preset_schedule_drug_name'] = "Vancomycin"
+            st.session_state['preset_schedule_dose'] = "1000mg"
+            st.session_state['preset_schedule_interval'] = 12
+            st.session_state['preset_schedule_duration'] = 7
+            st.session_state['preset_schedule_route'] = "IV (Tiêm tĩnh mạch)"
+            st.session_state['preset_schedule_start_time'] = "08:00"
             st.session_state['schedule_generated'] = False
             st.rerun()
     
     with col2:
         if st.button("📋 Metformin\n500mg q8h x 30d", use_container_width=True, key="example_metformin"):
-            st.session_state['schedule_drug_name'] = "Metformin"
-            st.session_state['schedule_dose'] = "500mg"
-            st.session_state['schedule_interval'] = 8
-            st.session_state['schedule_duration'] = 30
-            st.session_state['schedule_route'] = "PO (Uống)"
-            st.session_state['schedule_start_time'] = "08:00"
+            st.session_state['preset_schedule_drug_name'] = "Metformin"
+            st.session_state['preset_schedule_dose'] = "500mg"
+            st.session_state['preset_schedule_interval'] = 8
+            st.session_state['preset_schedule_duration'] = 30
+            st.session_state['preset_schedule_route'] = "PO (Uống)"
+            st.session_state['preset_schedule_start_time'] = "08:00"
             st.session_state['schedule_generated'] = False
             st.rerun()
     
     with col3:
         if st.button("📋 Omeprazole\n20mg q24h x 14d", use_container_width=True, key="example_omeprazole"):
-            st.session_state['schedule_drug_name'] = "Omeprazole"
-            st.session_state['schedule_dose'] = "20mg"
-            st.session_state['schedule_interval'] = 24
-            st.session_state['schedule_duration'] = 14
-            st.session_state['schedule_route'] = "PO (Uống)"
-            st.session_state['schedule_start_time'] = "08:00"
+            st.session_state['preset_schedule_drug_name'] = "Omeprazole"
+            st.session_state['preset_schedule_dose'] = "20mg"
+            st.session_state['preset_schedule_interval'] = 24
+            st.session_state['preset_schedule_duration'] = 14
+            st.session_state['preset_schedule_route'] = "PO (Uống)"
+            st.session_state['preset_schedule_start_time'] = "08:00"
             st.session_state['schedule_generated'] = False
             st.rerun()
     
