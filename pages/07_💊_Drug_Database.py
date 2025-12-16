@@ -93,22 +93,25 @@ if st.session_state.get('switch_to_comparison', False):
         del st.session_state['preset_comparison_drugs']
 
 # Route to appropriate function
-if "Tra cứu thuốc" in function_type:
+# Use case-insensitive matching to avoid Unicode case issues
+function_type_lower = function_type.lower()
+
+if "tra cứu thuốc" in function_type_lower:
     render_drug_database()
 
-elif "Tính liều theo eGFR" in function_type or "CrCl" in function_type:
+elif "tính liều theo egfr" in function_type_lower or "crcl" in function_type_lower:
     render_dosing_calculator()
 
-elif "So sánh thuốc trực quan" in function_type:
+elif "so sánh thuốc trực quan" in function_type_lower:
     render_visual_comparison()
 
-elif "Lịch trình liều dùng" in function_type:
+elif "lịch trình liều dùng" in function_type_lower:
     render_dosing_schedule_generator()
 
-elif "Tương thích IV" in function_type:
+elif "tương thích iv" in function_type_lower:
     render_iv_compatibility_checker()
 
-elif "Tương tác" in function_type:
+elif "tương tác" in function_type_lower:
     render_interaction_checker()
 
 # ========== FOOTER ==========

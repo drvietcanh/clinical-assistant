@@ -52,16 +52,19 @@ with st.sidebar:
 # ========== MAIN CONTENT ==========
 
 # Route to appropriate function
-if "Tra cứu" in function_type and "dữ liệu" in function_type:
+# Use case-insensitive matching to avoid Unicode case issues
+function_type_lower = function_type.lower()
+
+if "tra cứu" in function_type_lower and "dữ liệu" in function_type_lower:
     render_database()
 
-elif "So sánh nhiều" in function_type:
+elif "so sánh nhiều" in function_type_lower:
     render_multi_comparison()
 
-elif "Side-by-Side" in function_type:
+elif "side-by-side" in function_type_lower:
     render_comparison()
 
-elif "Phác đồ" in function_type:
+elif "phác đồ" in function_type_lower:
     render_algorithms_page()
 
 # ========== FOOTER ==========
