@@ -4,6 +4,11 @@ Track and display usage statistics, charts, and insights
 """
 
 import streamlit as st
+try:
+    import streamlit.components.v1 as st_components
+    HAS_COMPONENTS = True
+except (ImportError, AttributeError):
+    HAS_COMPONENTS = False
 from typing import Dict, List, Any, Optional
 from datetime import datetime, timedelta
 import json
@@ -329,9 +334,9 @@ def render_analytics_dashboard() -> None:
             </div>
             """
         chart_html += "</div>"
-        try:
-            st.html(chart_html)
-        except AttributeError:
+        if HAS_COMPONENTS:
+            st_components.html(chart_html, height=200)
+        else:
             st.markdown(chart_html, unsafe_allow_html=True)
     
     st.markdown("---")
@@ -359,9 +364,9 @@ def render_analytics_dashboard() -> None:
             </div>
             """
         specialty_html += "</div>"
-        try:
-            st.html(specialty_html)
-        except AttributeError:
+        if HAS_COMPONENTS:
+            st_components.html(specialty_html, height=200)
+        else:
             st.markdown(specialty_html, unsafe_allow_html=True)
     
     st.markdown("---")
@@ -415,9 +420,9 @@ def render_analytics_dashboard() -> None:
             </div>
             """
         chart_html += "</div>"
-        try:
-            st.html(chart_html)
-        except AttributeError:
+        if HAS_COMPONENTS:
+            st_components.html(chart_html, height=200)
+        else:
             st.markdown(chart_html, unsafe_allow_html=True)
     else:
         st.info("📊 Chưa có dữ liệu sử dụng. Hãy sử dụng các công cụ để xem thống kê!")
@@ -458,9 +463,9 @@ def render_analytics_dashboard() -> None:
             </div>
             """
         chart_html += "</div>"
-        try:
-            st.html(chart_html)
-        except AttributeError:
+        if HAS_COMPONENTS:
+            st_components.html(chart_html, height=200)
+        else:
             st.markdown(chart_html, unsafe_allow_html=True)
     else:
         st.info("📊 Chưa có dữ liệu sử dụng theo giờ. Hãy sử dụng các công cụ để xem thống kê!")
