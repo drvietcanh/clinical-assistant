@@ -10,6 +10,27 @@ from .drug_database import DRUG_DATABASE
 from .search import search_drugs
 
 
+def _to_list(value):
+    """Safely convert common collection-like values to list."""
+    if value is None:
+        return []
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, (list, tuple, set)):
+        return list(value)
+    if isinstance(value, dict):
+        return list(value.values())
+    if hasattr(value, "tolist"):
+        try:
+            return list(value.tolist())
+        except Exception:
+            pass
+    try:
+        return list(value)
+    except Exception:
+        return []
+
+
 def render_visual_comparison():
     """Render visual drug comparison interface"""
     
@@ -100,15 +121,20 @@ def render_visual_comparison():
                 continue
             
             drug_data = DRUG_DATABASE[drug_name]
+            admin_list = _to_list(drug_data.get('administration'))
+            indications_list = _to_list(drug_data.get('indications'))
+            contraindications_list = _to_list(drug_data.get('contraindications'))
+            side_effects_list = _to_list(drug_data.get('side_effects'))
+            interactions_list = _to_list(drug_data.get('interactions'))
             
             # Get key information
             group = drug_data.get('group', 'Unknown')
             vn_name = drug_data.get('vietnamese_name', '')
-            admin = ", ".join(drug_data.get('administration', []))
-            indications = ", ".join(drug_data.get('indications', [])[:3])  # First 3
-            contraindications = ", ".join(drug_data.get('contraindications', [])[:2])  # First 2
-            side_effects_count = len(drug_data.get('side_effects', []))
-            interactions_count = len(drug_data.get('interactions', []))
+            admin = ", ".join(admin_list)
+            indications = ", ".join(indications_list[:3])  # First 3
+            contraindications = ", ".join(contraindications_list[:2])  # First 2
+            side_effects_count = len(side_effects_list)
+            interactions_count = len(interactions_list)
             pregnancy = drug_data.get('pregnancy', 'N/A')
             
             # Get dosage summary
@@ -154,6 +180,9 @@ def render_visual_comparison():
             col_idx = idx % 3
             with cols[col_idx]:
                 drug_data = DRUG_DATABASE[drug_name]
+                admin_list = _to_list(drug_data.get('administration'))
+                indications_list = _to_list(drug_data.get('indications'))
+                side_effects_list = _to_list(drug_data.get('side_effects'))
                 
                 # Card header
                 group = drug_data.get('group', 'Unknown')
@@ -178,8 +207,8 @@ def render_visual_comparison():
                 if 'vietnamese_name' in drug_data:
                     st.caption(f"**Tên biệt dược:** {drug_data['vietnamese_name']}")
                 
-                if 'administration' in drug_data:
-                    st.caption(f"**Đường dùng:** {', '.join(drug_data['administration'])}")
+                if admin_list:
+                    st.caption(f"**Đường dùng:** {', '.join(admin_list)}")
                 
                 # Dosage
                 if 'dosage' in drug_data:
@@ -190,15 +219,15 @@ def render_visual_comparison():
                         st.info(f"**Liều:** {dosage[first_dose_key]}")
                 
                 # Indications (first 2)
-                if 'indications' in drug_data:
-                    inds = drug_data['indications'][:2]
+                if indications_list:
+                    inds = indications_list[:2]
                     st.write("**Chỉ định:**")
                     for ind in inds:
                         st.write(f"- {ind}")
                 
                 # Side effects count
-                if 'side_effects' in drug_data:
-                    st.warning(f"⚠️ {len(drug_data['side_effects'])} tác dụng phụ")
+                if side_effects_list:
+                    st.warning(f"⚠️ {len(side_effects_list)} tác dụng phụ")
                 
                 # Pregnancy
                 if 'pregnancy' in drug_data:
@@ -214,7 +243,7 @@ def render_visual_comparison():
         # Side effects comparison
         side_effects_data = {
             "Thuốc": selected_drugs,
-            "Số tác dụng phụ": [len(DRUG_DATABASE[d].get('side_effects', [])) for d in selected_drugs]
+            "Số tác dụng phụ": [len(_to_list(DRUG_DATABASE[d].get('side_effects'))) for d in selected_drugs]
         }
         df_se = pd.DataFrame(side_effects_data)
         st.bar_chart(df_se.set_index("Thuốc"))
@@ -222,7 +251,7 @@ def render_visual_comparison():
         # Interactions comparison
         interactions_data = {
             "Thuốc": selected_drugs,
-            "Số tương tác": [len(DRUG_DATABASE[d].get('interactions', [])) for d in selected_drugs]
+            "Số tương tác": [len(_to_list(DRUG_DATABASE[d].get('interactions'))) for d in selected_drugs]
         }
         df_int = pd.DataFrame(interactions_data)
         st.bar_chart(df_int.set_index("Thuốc"))
@@ -232,12 +261,12 @@ def render_visual_comparison():
         st.markdown("### 💡 Tóm tắt & khuyến cáo:")
         
         # Find safest (fewest side effects)
-        side_effect_counts = {d: len(DRUG_DATABASE[d].get('side_effects', [])) for d in selected_drugs}
+        side_effect_counts = {d: len(_to_list(DRUG_DATABASE[d].get('side_effects'))) for d in selected_drugs}
         safest = min(side_effect_counts.items(), key=lambda x: x[1])
         st.success(f"✅ **Ít tác dụng phụ nhất:** {safest[0]} ({safest[1]} tác dụng phụ)")
         
         # Find most interactions
-        interaction_counts = {d: len(DRUG_DATABASE[d].get('interactions', [])) for d in selected_drugs}
+        interaction_counts = {d: len(_to_list(DRUG_DATABASE[d].get('interactions'))) for d in selected_drugs}
         most_interactions = max(interaction_counts.items(), key=lambda x: x[1])
         st.warning(f"⚠️ **Nhiều tương tác nhất:** {most_interactions[0]} ({most_interactions[1]} tương tác)")
 
