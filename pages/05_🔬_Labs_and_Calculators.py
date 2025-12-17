@@ -172,46 +172,11 @@ if category == "🧮 Calculators":
     3. Kiểm tra các panel xét nghiệm Liên quan để tra cứu khoảng giá trị tham chiếu
     """)
     
-    # Quick Links to related lab panels
-    st.markdown("### 🔗 Liên quan - Lab Panels")
-    link_cols = st.columns(5)
-    
-    if "eGFR" in calculator_type or "GFR" in calculator_type:
-        with link_cols[0]:
-            if st.button("📋 BMP (Creatinine)", use_container_width=True):
-                st.session_state.show_panel = "bmp"
-    
-    if "Anion Gap" in calculator_type:
-        with link_cols[1]:
-            if st.button("📋 BMP (Na, Cl, HCO3)", use_container_width=True):
-                st.session_state.show_panel = "bmp"
-    
-    if "Corrected" in calculator_type or "Calcium" in calculator_type:
-        with link_cols[2]:
-            if st.button("📋 CMP (Ca, Albumin)", use_container_width=True):
-                st.session_state.show_panel = "cmp"
-    
-    if "FENa" in calculator_type:
-        with link_cols[3]:
-            if st.button("📋 BMP (Na, Creatinine)", use_container_width=True):
-                st.session_state.show_panel = "bmp"
-    
-    if "T4" in calculator_type or "Free" in calculator_type:
-        with link_cols[4]:
-            if st.button("📋 Thyroid Panel", use_container_width=True):
-                st.session_state.show_panel = "thyroid"
-    
-    if "Lipid" in calculator_type:
-        with link_cols[0]:
-            if st.button("📋 Lipid Panel", use_container_width=True):
-                st.session_state.show_panel = "lipid"
-    
     st.markdown("---")
     
     # Handle show panel request
     if hasattr(st.session_state, 'show_panel'):
         panel = st.session_state.show_panel
-        st.markdown("### 🔬 Lab Panel Liên quan")
         
         if panel == "bmp":
             render_bmp()
