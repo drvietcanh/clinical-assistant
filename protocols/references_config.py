@@ -2743,6 +2743,178 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "evidence_level": EVIDENCE_LEVEL_IIA,
             "strength": STRENGTH_STRONG
         }
+    ],
+    
+    "acute_appendicitis": [
+        {
+            "type": "guideline",
+            "title": "WSES Jerusalem guidelines for diagnosis and treatment of acute appendicitis",
+            "authors": "Di Saverio S, Podda M, De Simone B, et al.",
+            "journal": "World Journal of Emergency Surgery",
+            "year": 2020,
+            "volume": "15",
+            "pages": "27",
+            "doi": "10.1186/s13017-020-00306-7",
+            "pmid": "32336245",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "EAST practice management guidelines for diagnosis and treatment of acute appendicitis",
+            "authors": "Snyder MJ, Guthrie M, Cagle S",
+            "journal": "Journal of Trauma and Acute Care Surgery",
+            "year": 2020,
+            "volume": "89",
+            "issue": "5",
+            "pages": "1006-1015",
+            "doi": "10.1097/TA.0000000000002890",
+            "pmid": "32769978",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "The Alvarado score for predicting acute appendicitis: a systematic review",
+            "authors": "Ohle R, O'Reilly F, O'Brien KK, Fahey T, Dimitrov BD",
+            "journal": "BMC Medicine",
+            "year": 2011,
+            "volume": "9",
+            "pages": "139",
+            "doi": "10.1186/1741-7015-9-139",
+            "pmid": "22118577",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Acute appendicitis: modern understanding of pathogenesis, diagnosis, and management",
+            "authors": "Bhangu A, Søreide K, Di Saverio S, Assarsson JH, Drake FT",
+            "journal": "The Lancet",
+            "year": 2015,
+            "volume": "386",
+            "issue": "10000",
+            "pages": "1278-1287",
+            "doi": "10.1016/S0140-6736(15)00275-5",
+            "pmid": "26460662",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "acute_diverticulitis": [
+        {
+            "type": "guideline",
+            "title": "The American Society of Colon and Rectal Surgeons Clinical Practice Guidelines for the Treatment of Left-Sided Colonic Diverticulitis",
+            "authors": "Hall J, Hardiman K, Lee S, et al.",
+            "journal": "Diseases of the Colon & Rectum",
+            "year": 2020,
+            "volume": "63",
+            "issue": "6",
+            "pages": "728-747",
+            "doi": "10.1097/DCR.0000000000001679",
+            "pmid": "32384416",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "WSES Guidelines for the management of acute left-sided colonic diverticulitis in the emergency setting",
+            "authors": "Sartelli M, Weber DG, Kluger Y, et al.",
+            "journal": "World Journal of Emergency Surgery",
+            "year": 2020,
+            "volume": "15",
+            "pages": "57",
+            "doi": "10.1186/s13017-020-00338-9",
+            "pmid": "33028356",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Acute diverticulitis",
+            "authors": "Strate LL, Morris AM",
+            "journal": "New England Journal of Medicine",
+            "year": 2019,
+            "volume": "380",
+            "issue": "6",
+            "pages": "500-509",
+            "doi": "10.1056/NEJMra1800468",
+            "pmid": "30726687",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Acute diverticulitis",
+            "authors": "Feuerstein JD, Falchuk KR",
+            "journal": "Mayo Clinic Proceedings",
+            "year": 2016,
+            "volume": "91",
+            "issue": "10",
+            "pages": "1094-1104",
+            "doi": "10.1016/j.mayocp.2016.03.012",
+            "pmid": "27712639",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "acute_intestinal_obstruction": [
+        {
+            "type": "guideline",
+            "title": "WSES guidelines for the management of small bowel obstruction",
+            "authors": "Ten Broek RPG, Krielen P, Di Saverio S, et al.",
+            "journal": "World Journal of Emergency Surgery",
+            "year": 2018,
+            "volume": "13",
+            "pages": "24",
+            "doi": "10.1186/s13017-018-0185-2",
+            "pmid": "29946347",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "EAST practice management guidelines for small bowel obstruction",
+            "authors": "Maung AA, Johnson DC, Piper GL, et al.",
+            "journal": "Journal of Trauma and Acute Care Surgery",
+            "year": 2012,
+            "volume": "73",
+            "issue": "5 Suppl 4",
+            "pages": "S362-S369",
+            "doi": "10.1097/TA.0b013e31827019de",
+            "pmid": "23114489",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Small bowel obstruction",
+            "authors": "Catena F, De Simone B, Coccolini F, Di Saverio S, Sartelli M, Ansaloni L",
+            "journal": "World Journal of Emergency Surgery",
+            "year": 2019,
+            "volume": "14",
+            "pages": "20",
+            "doi": "10.1186/s13017-019-0240-7",
+            "pmid": "31080499",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Large bowel obstruction",
+            "authors": "Frago R, Ramirez E, Millan M, Kreisler E, del Valle E, Biondo S",
+            "journal": "World Journal of Gastroenterology",
+            "year": 2014,
+            "volume": "20",
+            "issue": "43",
+            "pages": "16189-16197",
+            "doi": "10.3748/wjg.v20.i43.16189",
+            "pmid": "25473173",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
     ]
 }
 

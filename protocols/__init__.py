@@ -46,7 +46,7 @@ from .endocrinology import (
 from .neurology import render_serotonin_syndrome, render_neuroleptic_malignant_syndrome, render_intracranial_hypertension
 from .obstetrics import render_eclampsia, render_postpartum_hemorrhage
 from .dermatology import render_stevens_johnson_syndrome
-from .gastroenterology import render_acute_pancreatitis, render_acute_liver_failure, render_ibd_exacerbation, render_acute_mesenteric_ischemia, render_cholecystitis_cholangitis
+from .gastroenterology import render_acute_pancreatitis, render_acute_liver_failure, render_ibd_exacerbation, render_acute_mesenteric_ischemia, render_cholecystitis_cholangitis, render_acute_appendicitis, render_acute_diverticulitis, render_acute_intestinal_obstruction
 from .hematology import render_transfusion, render_anticoagulation_reversal
 from .oncology import (
     render_tls,
@@ -115,6 +115,9 @@ __all__ = [
     'render_acute_liver_failure',
     'render_acute_mesenteric_ischemia',
     'render_cholecystitis_cholangitis',
+    'render_acute_appendicitis',
+    'render_acute_diverticulitis',
+    'render_acute_intestinal_obstruction',
     'render_transfusion',
     'render_anticoagulation_reversal',
     'render_tls',

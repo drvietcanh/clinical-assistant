@@ -58,6 +58,10 @@ from protocols import (
     render_acute_pancreatitis,
     render_acute_liver_failure,
     render_acute_mesenteric_ischemia,
+    render_cholecystitis_cholangitis,
+    render_acute_appendicitis,
+    render_acute_diverticulitis,
+    render_acute_intestinal_obstruction,
     render_transfusion,
     render_anticoagulation_reversal,
     render_delirium,
@@ -215,6 +219,10 @@ with st.sidebar:
                 "🫀 Viêm Tụy Cấp (Acute Pancreatitis)",
                 "🫀 Suy gan Cấp (Acute Liver Failure)",
                 "🫀 Thiếu Máu Mạc Treo Cấp (Acute Mesenteric Ischemia)",
+                "🫀 Viêm Túi Mật / Viêm Đường Mật (Cholecystitis/Cholangitis)",
+                "🫀 Viêm Ruột Thừa Cấp (Acute Appendicitis)",
+                "🫀 Viêm Túi Thừa Cấp (Acute Diverticulitis)",
+                "🫀 Tắc Ruột Cấp (Acute Intestinal Obstruction)",
                 "🩸 IBD Exacerbation (Acute Exacerbation of IBD)"
             ],
             label_visibility="collapsed"
@@ -410,6 +418,18 @@ elif "Liver Failure" in protocol or "liver failure" in protocol.lower() or "Suy 
 
 elif "Mesenteric Ischemia" in protocol or "Thiếu Máu Mạc Treo" in protocol or "mesenteric ischemia" in protocol.lower() or "mạc treo" in protocol.lower():
     render_acute_mesenteric_ischemia()
+
+elif "Cholecystitis" in protocol or "Cholangitis" in protocol or "Túi Mật" in protocol or "Đường Mật" in protocol or "cholecystitis" in protocol.lower() or "cholangitis" in protocol.lower():
+    render_cholecystitis_cholangitis()
+
+elif "Appendicitis" in protocol or "Ruột Thừa" in protocol or "appendicitis" in protocol.lower() or "ruột thừa" in protocol.lower():
+    render_acute_appendicitis()
+
+elif "Diverticulitis" in protocol or "Túi Thừa" in protocol or "diverticulitis" in protocol.lower() or "túi thừa" in protocol.lower():
+    render_acute_diverticulitis()
+
+elif "Intestinal Obstruction" in protocol or "Tắc Ruột" in protocol or "intestinal obstruction" in protocol.lower() or "tắc ruột" in protocol.lower():
+    render_acute_intestinal_obstruction()
 
 elif "Delirium" in protocol or "delirium" in protocol.lower() or "Quản lý Delirium" in protocol:
     render_delirium()
