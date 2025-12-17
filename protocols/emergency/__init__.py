@@ -29,6 +29,9 @@ from .hypothermia import render as render_hypothermia
 from .cardiac_arrest import render as render_cardiac_arrest
 from .upper_airway_obstruction import render as render_upper_airway_obstruction
 from .spinal_cord_injury import render as render_spinal_cord_injury
+from .green_pit_viper_bite import render as render_green_pit_viper_bite
+from .cobra_bite import render as render_cobra_bite
+from .krait_bite import render as render_krait_bite
 
 
 __all__ = [
@@ -58,5 +61,8 @@ __all__ = [
     'render_cardiac_arrest',
     'render_upper_airway_obstruction',
     'render_spinal_cord_injury',
+    'render_green_pit_viper_bite',
+    'render_cobra_bite',
+    'render_krait_bite',
 ]
 

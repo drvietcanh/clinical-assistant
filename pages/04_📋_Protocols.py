@@ -33,6 +33,9 @@ from protocols import (
     render_cardiac_arrest,
     render_upper_airway_obstruction,
     render_spinal_cord_injury,
+    render_green_pit_viper_bite,
+    render_cobra_bite,
+    render_krait_bite,
     render_acute_pain,
     render_copd,
     render_asthma,
@@ -50,6 +53,8 @@ from protocols import (
     render_cdiff,
     render_meningitis,
     render_endocarditis,
+    render_parasitic_worms,
+    render_dengue_fever,
     render_thyrotoxic_crisis,
     render_myxedema_coma,
     render_adrenal_crisis,
@@ -64,6 +69,8 @@ from protocols import (
     render_acute_intestinal_obstruction,
     render_acute_hepatitis,
     render_acute_colitis,
+    render_hepatitis_b,
+    render_h_pylori_gastritis,
     render_transfusion,
     render_anticoagulation_reversal,
     render_delirium,
@@ -145,7 +152,10 @@ with st.sidebar:
                 "🧠 Chấn thương sọ não (Traumatic Brain Injury)",
                 "🌊 Đuối nước (Drowning)",
                 "🌡️ Sốc Nhiệt (Heat Stroke)",
-                "❄️ Hạ thân nhiệt (Hypothermia)"
+                "❄️ Hạ thân nhiệt (Hypothermia)",
+                "🐍 Rắn Lục Xanh Đuôi Đỏ Cắn",
+                "🐍 Rắn Hổ Mang Cắn",
+                "🐍 Rắn Cạp Nia Cắn"
             ],
             label_visibility="collapsed"
         )
@@ -189,7 +199,9 @@ with st.sidebar:
                 "🏥 HAP/VAP Guidelines",
                 "🦠 C. diff Treatment",
                 "🧠 Meningitis / Encephalitis",
-                "🦠 Viêm nội tâm mạc (Endocarditis)"
+                "🦠 Viêm nội tâm mạc (Endocarditis)",
+                "🦟 Sốt Xuất Huyết Dengue",
+                "🪱 Nhiễm Ký sinh Trùng Giun Sán (Parasitic Worms)"
             ],
             label_visibility="collapsed"
         )
@@ -227,7 +239,9 @@ with st.sidebar:
                 "🫀 Tắc Ruột Cấp (Acute Intestinal Obstruction)",
                 "🫀 Viêm Gan Cấp (Non-viral) (Acute Hepatitis)",
                 "🫀 Viêm Đại Tràng Cấp (Non-IBD) (Acute Colitis)",
-                "🩸 IBD Exacerbation (Acute Exacerbation of IBD)"
+                "🩸 IBD Exacerbation (Acute Exacerbation of IBD)",
+                "🫀 Điều Trị Viêm Gan B (Hepatitis B Treatment)",
+                "🫀 Viêm Loét Dạ Dày HP (+) (H. pylori Gastritis/Ulcer)"
             ],
             label_visibility="collapsed"
         )
@@ -441,6 +455,15 @@ elif "Hepatitis" in protocol and "Non-viral" in protocol or "Viêm Gan Cấp" in
 elif "Colitis" in protocol and "Non-IBD" in protocol or "Viêm Đại Tràng Cấp" in protocol or "colitis" in protocol.lower() and "non-ibd" in protocol.lower():
     render_acute_colitis()
 
+elif "IBD" in protocol or "ibd" in protocol.lower() or "Crohn" in protocol or "Colitis" in protocol:
+    render_ibd_exacerbation()
+
+elif "Hepatitis B" in protocol or "Viêm Gan B" in protocol or "hepatitis b" in protocol.lower() or "viêm gan b" in protocol.lower():
+    render_hepatitis_b()
+
+elif "H. pylori" in protocol or "pylori" in protocol.lower() or "HP (+)" in protocol or "HP dương" in protocol.lower() or "Viêm Loét Dạ Dày HP" in protocol:
+    render_h_pylori_gastritis()
+
 elif "Delirium" in protocol or "delirium" in protocol.lower() or "Quản lý Delirium" in protocol:
     render_delirium()
 
@@ -491,6 +514,9 @@ elif "Tachycardia" in protocol or "tachycardia" in protocol.lower() or "Nhịp n
 
 elif "Endocarditis" in protocol or "endocarditis" in protocol.lower() or "Viêm nội tâm mạc" in protocol:
     render_endocarditis()
+
+elif "Ký sinh Trùng" in protocol or "Parasitic" in protocol or "parasitic" in protocol.lower() or "Giun Sán" in protocol or "giun sán" in protocol.lower():
+    render_parasitic_worms()
 
 elif "Hypoglycemia" in protocol or "hypoglycemia" in protocol.lower() or "Hạ đường huyết" in protocol:
     render_hypoglycemia()
@@ -545,6 +571,18 @@ elif "Heat Stroke" in protocol or "heat stroke" in protocol.lower() or "Sốc Nh
 
 elif "Hypothermia" in protocol or "hypothermia" in protocol.lower() or "Hạ thân nhiệt" in protocol or "hạ thân nhiệt" in protocol.lower():
     render_hypothermia()
+
+elif "Rắn Lục Xanh" in protocol or "green pit viper" in protocol.lower() or "lục xanh đuôi đỏ" in protocol.lower():
+    render_green_pit_viper_bite()
+
+elif "Rắn Hổ Mang" in protocol or "cobra" in protocol.lower() or "hổ mang" in protocol.lower():
+    render_cobra_bite()
+
+elif "Rắn Cạp Nia" in protocol or "krait" in protocol.lower() or "cạp nia" in protocol.lower():
+    render_krait_bite()
+
+elif "Dengue" in protocol or "dengue" in protocol.lower() or "Sốt Xuất Huyết" in protocol or "sốt xuất huyết" in protocol.lower():
+    render_dengue_fever()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

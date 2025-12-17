@@ -29,13 +29,16 @@ from .emergency import (
     render_hypothermia,
     render_cardiac_arrest,
     render_upper_airway_obstruction,
-    render_spinal_cord_injury
+    render_spinal_cord_injury,
+    render_green_pit_viper_bite,
+    render_cobra_bite,
+    render_krait_bite
 )
 from .pain import render_acute_pain
 from .respiratory import render_copd, render_asthma, render_acute_respiratory_failure
 from .cardiology import render_acs, render_hf, render_acute_decompensated_hf, render_atrial_fibrillation, render_dvt_pe, render_bradycardia, render_tachycardia
 from .nephrology import render_aki
-from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis
+from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis, render_parasitic_worms
 from .endocrinology import (
     render_thyrotoxic_crisis,
     render_myxedema_coma,
@@ -83,6 +86,9 @@ __all__ = [
     'render_cardiac_arrest',
     'render_upper_airway_obstruction',
     'render_spinal_cord_injury',
+    'render_green_pit_viper_bite',
+    'render_cobra_bite',
+    'render_krait_bite',
     'render_acute_pain',
     'render_copd',
     'render_asthma',
@@ -100,6 +106,8 @@ __all__ = [
     'render_cdiff',
     'render_meningitis',
     'render_endocarditis',
+    'render_dengue_fever',
+    'render_parasitic_worms',
     'render_thyrotoxic_crisis',
     'render_myxedema_coma',
     'render_adrenal_crisis',

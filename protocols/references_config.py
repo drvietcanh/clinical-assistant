@@ -2860,6 +2860,111 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         }
     ],
     
+    "Hepatitis B": [
+        {
+            "type": "guideline",
+            "title": "AASLD 2018 Hepatitis B Guidance: Update on prevention, diagnosis, and treatment of chronic hepatitis B",
+            "authors": "Terrault NA, Lok ASF, McMahon BJ, et al.",
+            "journal": "Hepatology",
+            "year": 2018,
+            "volume": "67",
+            "issue": "4",
+            "pages": "1560-1599",
+            "doi": "10.1002/hep.29800",
+            "pmid": "29405329",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG,
+            "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/full/10.1002/hep.29800"
+        },
+        {
+            "type": "guideline",
+            "title": "EASL 2017 Clinical Practice Guidelines on the management of hepatitis B virus infection",
+            "authors": "European Association for the Study of the Liver",
+            "journal": "Journal of Hepatology",
+            "year": 2017,
+            "volume": "67",
+            "issue": "2",
+            "pages": "370-398",
+            "doi": "10.1016/j.jhep.2017.03.021",
+            "pmid": "28427875",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "WHO Guidelines for the prevention, care and treatment of persons with chronic hepatitis B infection",
+            "authors": "World Health Organization",
+            "journal": "WHO Guidelines",
+            "year": 2021,
+            "url": "https://www.who.int/publications/i/item/9789240027077",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Hepatitis B virus: Overview of management",
+            "authors": "Lok ASF, McMahon BJ",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+    
+    "H. pylori": [
+        {
+            "type": "guideline",
+            "title": "Management of Helicobacter pylori infection—the Maastricht V/Florence Consensus Report",
+            "authors": "Malfertheiner P, Megraud F, O'Morain CA, et al.",
+            "journal": "Gut",
+            "year": 2017,
+            "volume": "66",
+            "issue": "6",
+            "pages": "6-30",
+            "doi": "10.1136/gutjnl-2016-312288",
+            "pmid": "27707777",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "ACG Clinical Guideline: Treatment of Helicobacter pylori Infection",
+            "authors": "Chey WD, Leontiadis GI, Howden CW, Moss SF",
+            "journal": "American Journal of Gastroenterology",
+            "year": 2017,
+            "volume": "112",
+            "issue": "2",
+            "pages": "212-239",
+            "doi": "10.1038/ajg.2016.563",
+            "pmid": "28071659",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "AGA Clinical Practice Update on the Management of Refractory Helicobacter pylori Infection: Expert Review",
+            "authors": "Shah SC, Iyer PG, Moss SF",
+            "journal": "Gastroenterology",
+            "year": 2021,
+            "volume": "160",
+            "issue": "6",
+            "pages": "1831-1841",
+            "doi": "10.1053/j.gastro.2021.01.073",
+            "pmid": "33771385",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Treatment regimens for Helicobacter pylori",
+            "authors": "Chey WD, Leontiadis GI",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+    
     "Acute Hepatitis": [
         {
             "type": "guideline",
@@ -3031,7 +3136,120 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "evidence_level": EVIDENCE_LEVEL_IIA,
             "strength": STRENGTH_STRONG
         }
-    ]
+    ],
+
+    "green_pit_viper_bite": [
+        {
+            "type": "guideline",
+            "title": "WHO Guidelines for the management of snake-bites",
+            "authors": "WHO",
+            "journal": "World Health Organization",
+            "year": 2016,
+            "url": "https://www.who.int/publications/i/item/9789290225300",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Snakebite envenoming",
+            "authors": "Gutiérrez JM, Calvete JJ, Habib AG, et al.",
+            "journal": "Nature Reviews Disease Primers",
+            "year": 2017,
+            "volume": "3",
+            "pages": "17063",
+            "doi": "10.1038/nrdp.2017.63",
+            "pmid": "24040916",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+
+    "cobra_bite": [
+        {
+            "type": "guideline",
+            "title": "WHO Guidelines for the management of snake-bites",
+            "authors": "WHO",
+            "journal": "World Health Organization",
+            "year": 2016,
+            "url": "https://www.who.int/publications/i/item/9789290225300",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Neurotoxic snakebite in Southeast Asia",
+            "authors": "Warrell DA",
+            "journal": "Clinical Toxicology",
+            "year": 2013,
+            "volume": "51",
+            "issue": "8",
+            "pages": "763-770",
+            "doi": "10.3109/15563650.2013.838636",
+            "pmid": "24040916",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+
+    "krait_bite": [
+        {
+            "type": "guideline",
+            "title": "WHO Guidelines for the management of snake-bites",
+            "authors": "WHO",
+            "journal": "World Health Organization",
+            "year": 2016,
+            "url": "https://www.who.int/publications/i/item/9789290225300",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Krait bite envenoming",
+            "authors": "Warrell DA",
+            "journal": "Clinical Toxicology",
+            "year": 2013,
+            "volume": "51",
+            "issue": "8",
+            "pages": "763-770",
+            "doi": "10.3109/15563650.2013.838636",
+            "pmid": "24040916",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+
+    "dengue_fever": [
+        {
+            "type": "guideline",
+            "title": "Dengue: Guidelines for diagnosis, treatment, prevention and control",
+            "authors": "WHO",
+            "journal": "World Health Organization",
+            "year": 2009,
+            "url": "https://www.who.int/publications/i/item/9789241547871",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Handbook for Clinical Management of Dengue",
+            "authors": "WHO",
+            "journal": "World Health Organization",
+            "year": 2012,
+            "url": "https://www.who.int/publications/i/item/9789241504713",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Hướng dẫn chẩn đoán và điều trị sốt xuất huyết Dengue",
+            "authors": "Bộ Y tế Việt Nam",
+            "journal": "Quyết định 3705/QĐ-BYT",
+            "year": 2019,
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+
 }
 
 
