@@ -67,17 +67,18 @@ with st.sidebar:
     
     st.markdown("---")
     st.info("""
-    **📚 Cơ sở dữ liệu:**
+    **📚 Cơ sở dữ liệu thuốc chính:**
     - Tất cả các nhóm thuốc thông dụng
     - Cardiovascular, Diabetes, Analgesic
     - Respiratory, Neurology, Psychiatry
     - Tương tác thuốc, Tương thích IV
     - Lịch trình liều dùng
-    - **Tính liều theo chức năng thận (CrCl/eGFR)**
+    - **Tính liều theo chức năng thận (CrCl/eGFR)** cho kháng sinh
     
-    **💡 Lưu ý:**
-    - Tính liều theo thận hiện tại dành cho **kháng sinh**
-    - TDM: Xem module "📊 TDM" để tính toán nồng độ thuốc
+    **💡 Liên kết với module Kháng sinh:**
+    - Đây là **entry chính** cho mọi vấn đề liên quan đến thuốc.
+    - Module "💊 Kháng sinh (chuyên sâu)" cung cấp so sánh nâng cao và phác đồ điều trị.
+    - TDM: Xem module "📊 TDM" để tính toán nồng độ thuốc.
     """)
 
 # ========== MAIN CONTENT ==========

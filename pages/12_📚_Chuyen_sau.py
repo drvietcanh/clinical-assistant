@@ -5,9 +5,10 @@ Thiết kế lại với UI/UX đẹp và khoa học hơn.
 """
 
 from pathlib import Path
+import html
 import streamlit as st
 import streamlit.components.v1 as components
-from collections import Counter
+from collections import Counter, defaultdict
 
 from utils.page_helper import setup_page, render_standard_footer
 
@@ -24,13 +25,45 @@ ARTICLES = [
         "guidelines": ["ESC/ESH 2023/2024", "ACC/AHA 2024"],
         "summary": [
             "Phối hợp 2 thuốc sớm: RAASi + CCB hoặc RAASi + thiazide-like.",
-            "Đích HA đa số <140/90; xem xét <130/80 nếu dung nạp và nguy cơ cao.",
+            "Đích HA đa số <140/90; cân nhắc <130/80 nếu dung nạp/nguy cơ cao.",
             "Bước 3: RAASi + CCB + thiazide-like; kháng trị thêm spironolactone khi eGFR/K+ cho phép.",
             "Ưu tiên ACEi/ARB ở CKD/protein niệu, ĐTĐ; β-blocker khi có chỉ định tim mạch.",
             "Theo dõi K+, creatinine/eGFR; tránh triple whammy (RAASi + NSAID + lợi tiểu).",
         ],
+        "key_points": [
+            "Khởi trị đa số cần 2 thuốc: RAASi + CCB hoặc RAASi + thiazide-like.",
+            "Đích HA thường <140/90; cân nhắc <130/80 nếu dung nạp và nguy cơ cao.",
+            "Step 3: RAASi + CCB + thiazide-like; thêm spironolactone nếu eGFR/K+ cho phép.",
+            "Tránh triple whammy (RAASi + NSAID + lợi tiểu); ưu tiên ACEi/ARB ở CKD/protein niệu/ĐTĐ.",
+        ],
+        "evidence_level": "High (ESC/ESH 2023/24; ACC/AHA 2024)",
+        "recommendation_strength": "Strong",
+        "red_flags": [
+            "HA ≥180/120 kèm tổn thương cơ quan đích (HA cấp cứu): chuyển tuyến/ICU.",
+            "Tăng K+ >5.5 mmol/L hoặc creatinine tăng >30% sau RAASi/MRA.",
+            "eGFR <30: tránh thiazide-like; cân nhắc loop; theo dõi sát thể tích.",
+            "Đau ngực, khó thở, TK khu trú: loại trừ hội chứng vành/stroke.",
+        ],
+        "monitoring": [
+            "Đo HA tại nhà/ambulatory nếu có; tái kiểm 2–4 tuần sau khởi/đổi liều.",
+            "K+, creatinine/eGFR 1–2 tuần sau RAASi/MRA hoặc tăng liều; sau đó mỗi 3–6 tháng.",
+            "Điện giải (Na/K) khi dùng thiazide-like; theo dõi phù, hạ HA tư thế ở người già.",
+        ],
+        "special_populations": [
+            "CKD/protein niệu: ưu tiên ACEi/ARB; titrate chậm, theo dõi K+/creatinine.",
+            "ĐTĐ/ASCVD nguy cơ cao: cân nhắc đích <130/80 nếu dung nạp.",
+            "Người già/hạ thể tích: khởi liều thấp, theo dõi hạ HA tư thế.",
+        ],
+        "interactions": [
+            "NSAID + RAASi + lợi tiểu (triple whammy) → tăng nguy cơ AKI, tăng K+.",
+            "RAASi/MRA + bổ sung K+ hoặc thuốc giữ K+ khác → tăng K+.",
+            "ACEi/ARB + lithium → tăng nồng độ lithium; cần theo dõi hoặc tránh.",
+        ],
+        "follow_up": "Tái đánh giá sau 4 tuần (sớm hơn 1–2 tuần nếu chỉnh RAASi/MRA hoặc K+/creatinine cần theo dõi); điều chỉnh phác đồ nếu chưa đạt đích.",
         "related_calculators": ["eGFR (CKD-EPI)", "CrCl (Cockcroft-Gault)", "ASCVD 10-year", "SCORE2/SCORE2-OP", "BMI"],
         "related_protocols": ["(đề xuất) HTN management quick steps"],
+        "has_protocol": True,
+        "protocol_links": ["pages/04_📋_Protocols.py"],
     },
     {
         "id": "acid_suppression",
@@ -65,8 +98,40 @@ ARTICLES = [
             "STEMI: PCI tiên phát ưu tiên; nếu không khả dụng <120 phút → fibrinolysis rồi PCI cứu vãn.",
             "Chọn thời gian DAPT 6–12 tháng theo cân bằng thiếu máu cục bộ/chảy máu (PRECISE-DAPT).",
         ],
+        "key_points": [
+            "Dùng thang điểm (GRACE/TIMI/HEART) để phân tầng nguy cơ và quyết định thời gian PCI.",
+            "DAPT với aspirin + P2Y₁₂ (ticagrelor/prasugrel ưu tiên, clopidogrel khi có chống chỉ định/nguồn lực).",
+            "Chống đông chọn UFH/enoxaparin; fondaparinux cho NSTEMI nguy cơ chảy máu, bivalirudin nếu nguy cơ rất cao.",
+            "STEMI: ưu tiên PCI trong thời gian chuẩn (door-to-balloon); nếu không đạt, dùng fibrinolysis rồi PCI cứu vãn.",
+        ],
+        "evidence_level": "High (ESC 2023; ACC/AHA 2024–2025)",
+        "recommendation_strength": "Strong",
+        "red_flags": [
+            "Đau ngực dai dẳng, huyết động không ổn, VT/VF, sốc tim → cần PCI khẩn (cửa bóng <120 phút, càng sớm càng tốt).",
+            "STEMI kèm block nhánh trái mới, VT kéo dài, suy tim cấp (Killip III–IV).",
+            "NSTEMI nguy cơ rất cao: đau ngực không kiểm soát, rối loạn nhịp đe dọa, suy tim tiến triển, huyết động không ổn.",
+        ],
+        "monitoring": [
+            "ECG seri (ban đầu, 15–30 phút nếu đau còn), men tim (hs-Tn) theo protocol.",
+            "HA, mạch, SpO₂, nhịp thở liên tục; theo dõi dấu hiệu suy tim/phù phổi.",
+            "Theo dõi chảy máu (da, niêm, tiêu hóa, nội sọ) khi dùng DAPT/chống đông.",
+            "QTc khi dùng thuốc kéo dài QT (amiodarone, sotalol) hoặc phối hợp nhiều thuốc.",
+        ],
+        "special_populations": [
+            "Người già/suy thận: chỉnh liều enoxaparin/fondaparinux; thận trọng nguy cơ chảy máu.",
+            "Phụ nữ, ĐTĐ: triệu chứng không điển hình; cần ngưỡng nghi ngờ thấp hơn và thăm dò tích cực.",
+            "Bệnh nhân dùng kháng đông đường uống: chiến lược DAPT/anticoag phải cá thể hóa, ưu tiên giảm chảy máu.",
+        ],
+        "interactions": [
+            "Clopidogrel + omeprazole (CYP2C19) có thể giảm hiệu quả; ưu tiên pantoprazole nếu cần PPI.",
+            "Trùng lặp kháng đông (heparin + DOAC + kháng tiểu cầu mạnh) → tăng nguy cơ chảy máu nặng.",
+            "Statin (simvastatin, lovastatin) + mạnh ức chế CYP3A4 (macrolide, azole) → tăng nguy cơ độc cơ.",
+        ],
+        "follow_up": "Sau giai đoạn cấp, tối ưu điều trị nền (DAPT, statin cường độ cao, ACEi/ARB/ARNI, β-blocker) và lên kế hoạch DAPT 6–12 tháng tùy nguy cơ chảy máu; tái khám tim mạch sớm.",
         "related_calculators": ["GRACE", "TIMI", "HEART", "CrCl (Cockcroft-Gault)", "BMI"],
         "related_protocols": ["ACS protocol trong app (nếu có)", "(đề xuất) DAPT/anticoag checklist"],
+        "has_protocol": True,
+        "protocol_links": ["pages/04_📋_Protocols.py"],
     },
     {
         "id": "copd_asthma_exacerbation",
@@ -83,8 +148,41 @@ ARTICLES = [
             "Chỉnh liều kháng sinh theo eGFR; theo dõi QTc với macrolide/quinolone.",
             "Tái đánh giá sau 1–3 giờ; cân nhắc ICU nếu thất bại NIV hoặc toan nặng.",
         ],
+        "key_points": [
+            "COPD đợt cấp: ưu tiên SABA ± SAMA, steroid toàn thân ngắn ngày, cân nhắc kháng sinh theo Anthonisen và nguy cơ.",
+            "Hen đợt cấp: SABA lặp lại, thêm ipratropium nếu nặng, steroid sớm; MgSO₄ TM nếu đáp ứng kém.",
+            "SpO₂ mục tiêu 88–92% ở COPD (tránh cho quá nhiều oxy); đánh giá ABG khi nặng hoặc nghi tăng CO₂.",
+            "NIV cho COPD tăng CO₂ có toan; chuyển ICU/đặt NKQ nếu thất bại NIV hoặc toan xấu đi.",
+        ],
+        "evidence_level": "Moderate-High (GOLD 2024; GINA 2024)",
+        "recommendation_strength": "Strong",
+        "red_flags": [
+            "SpO₂ <88% dù đã oxy, dấu hiệu mệt cơ hô hấp, co kéo cơ phụ, nói từng từ.",
+            "Toan hô hấp pH <7.30, PaCO₂ tăng nhanh, hoặc ý thức xấu đi.",
+            "Hen đợt cấp: không đáp ứng SABA nhiều liều, PEF/FEV₁ rất thấp, tiền sử ICU/đặt NKQ.",
+            "Huyết động không ổn (tụt HA, loạn nhịp), nghi tràn khí màng phổi hoặc PE.",
+        ],
+        "monitoring": [
+            "SpO₂ liên tục; mục tiêu 88–92% COPD, 94–98% hen nếu không tăng CO₂ nền.",
+            "Nhịp thở, nhịp tim, huyết áp, tri giác mỗi 15–30 phút khi mới nhập/khi nặng.",
+            "ABG khi SpO₂ khó kiểm soát, COPD nặng, dùng NIV, hoặc nghi tăng CO₂.",
+            "Đánh giá đáp ứng mỗi 1–3 giờ; điều chỉnh thuốc giãn phế quản/steroid/kháng sinh.",
+        ],
+        "special_populations": [
+            "Người già/béo phì: dễ suy hô hấp và quá liều an thần; thận trọng benzodiazepine/opioid.",
+            "CKD/HC suy gan: chỉnh liều kháng sinh (quinolone, macrolide) và steroid; theo dõi đường huyết.",
+            "Tiền sử tim mạch: thận trọng beta-agonist liều cao (nhịp nhanh, rung nhĩ, thiếu máu cơ tim).",
+        ],
+        "interactions": [
+            "Macrolide/quinolone + thuốc kéo dài QT khác (amiodarone, TCA) → nguy cơ xoắn đỉnh.",
+            "Theophylline (nếu dùng) tương tác với nhiều thuốc (macrolide, quinolone, cimetidine); dễ ngộ độc.",
+            "Steroid toàn thân kéo dài + NSAID/kháng đông → tăng nguy cơ xuất huyết tiêu hóa.",
+        ],
+        "follow_up": "Đánh giá đáp ứng trong 1–3 giờ đầu; sau ổn định, lập kế hoạch giảm thuốc giãn phế quản, steroid và điều chỉnh điều trị nền; hẹn tái khám/chức năng hô hấp.",
         "related_calculators": ["PERC/Wells", "BMI", "CrCl (Cockcroft-Gault)", "ABG interpreter"],
         "related_protocols": ["COPD exacerbation protocol", "Acute asthma protocol"],
+        "has_protocol": True,
+        "protocol_links": ["pages/04_📋_Protocols.py"],
     },
     {
         "id": "ards_ventilation",
@@ -101,8 +199,42 @@ ARTICLES = [
             "Cân nhắc giãn cơ ngắn hạn khi dyssynchrony nặng; tránh kéo dài.",
             "Cứu vãn: ECMO VV khi thất bại tối ưu thông khí + prone + paralysis.",
         ],
+        "key_points": [
+            "Vt 4–6 mL/kg PBW, Pplat ≤30 cmH₂O, driving pressure ≤15 cmH₂O là nền tảng bảo vệ phổi.",
+            "Sử dụng bảng PEEP/FiO₂, tăng PEEP từng bước kèm theo dõi huyết động và oxy hóa.",
+            "Prone 12–16h/ngày cho ARDS trung bình–nặng (PaO₂/FiO₂ <150) nếu không chống chỉ định.",
+            "Giãn cơ ngắn hạn trong 24–48h có thể cân nhắc nếu dyssynchrony nặng, khó kiểm soát.",
+            "ECMO VV là biện pháp cứu vãn khi thất bại tối ưu thông khí + prone + giãn cơ.",
+        ],
+        "evidence_level": "Moderate-High (ARDSNet, ATS/ESICM/SCCM)",
+        "recommendation_strength": "Strong",
+        "red_flags": [
+            "PaO₂/FiO₂ <80 dù đã tối ưu PEEP/FiO₂ và prone.",
+            "Pplat >30 cmH₂O hoặc driving pressure >15 cmH₂O dù đã giảm Vt tối đa cho phép.",
+            "Huyết động không ổn định khi tăng PEEP (tụt HA, cần vận mạch cao).",
+            "Tăng CO₂ nặng, pH <7.15 kéo dài dù đã điều chỉnh tần số/Vt trong giới hạn an toàn.",
+        ],
+        "monitoring": [
+            "ABG định kỳ sau điều chỉnh Vt/PEEP/FiO₂; theo dõi PaO₂/FiO₂, PaCO₂, pH.",
+            "Áp lực đường thở (Pplat, driving pressure) sau mỗi thay đổi cài đặt.",
+            "Huyết động (HA, mạch, lactate, siêu âm tim nếu có) khi thay đổi PEEP hoặc prone.",
+            "Áp lực bụng/nội sọ nếu nghi tăng áp lực khoang; theo dõi loét tỳ đè khi prone kéo dài.",
+        ],
+        "special_populations": [
+            "Béo phì: cần tính PBW chính xác, PEEP thường cao hơn; theo dõi huyết động sát.",
+            "Suy tim/suy thất phải: tăng PEEP có thể xấu đi cung lượng tim; cân bằng giữa oxy hóa và huyết động.",
+            "Thai kỳ: prone khó áp dụng, cân nhắc lateral/prone modified; cần phối hợp sản khoa.",
+        ],
+        "interactions": [
+            "Sedation + giãn cơ kéo dài → yếu cơ, ICU-acquired weakness; cần chiến lược giảm liều sớm.",
+            "Thông khí áp lực cao + quá tải dịch → tăng nguy cơ barotrauma và phù phổi.",
+            "ECMO + chống đông toàn thân → tăng nguy cơ xuất huyết; cần cân bằng với thủ thuật khác.",
+        ],
+        "follow_up": "Đánh giá lại PaO₂/FiO₂, Pplat, driving pressure sau mỗi điều chỉnh lớn; rà soát hằng ngày khả năng giảm FiO₂/PEEP, cai prone và cai máy.",
         "related_calculators": ["ARDSNet tidal volume", "PEEP/FiO₂ table", "ABG interpreter", "BMI/PBW calculator"],
         "related_protocols": ["ARDSNet protocol", "ARDS prone positioning checklist"],
+        "has_protocol": True,
+        "protocol_links": ["pages/04_📋_Protocols.py"],
     },
     {
         "id": "acute_heart_failure",
@@ -119,8 +251,41 @@ ARTICLES = [
             "Theo dõi nước tiểu, cân nặng, điện giải, creatinine; điều chỉnh nhanh mỗi 6–12h.",
             "Tối ưu điều trị nền (ARNI/ACEi/ARB, β-blocker, MRA, SGLT2i) sau ổn định.",
         ],
+        "key_points": [
+            "Phân nhóm warm/cold, wet/dry để định hướng chiến lược (giảm sung huyết vs tăng tưới máu).",
+            "Lợi tiểu quai IV là nền; tăng liều/nhắc lại hoặc phối hợp thiazide-like nếu kháng lợi tiểu.",
+            "Vasodilator dùng khi HA đủ (thường SBP >100–110 mmHg); inotrope/vasopressor khi giảm tưới máu/sốc tim.",
+            "Theo dõi sát nước tiểu, cân nặng, điện giải, creatinine và đáp ứng lâm sàng; điều chỉnh mỗi 6–12h.",
+        ],
+        "evidence_level": "Moderate-High (ESC HF 2023; ACC/AHA/HFSA 2022–2024)",
+        "recommendation_strength": "Strong",
+        "red_flags": [
+            "Huyết áp tụt, lạnh đầu chi, tiểu ít, lactate tăng → nghi sốc tim, cần ICU/inotrope sớm.",
+            "Khó thở khi nghỉ, phù phổi cấp, SpO₂ thấp dù đã oxy; cần thông khí hỗ trợ (NIV/NKQ).",
+            "Natri rất thấp, K+ rối loạn nặng, toan chuyển hóa, suy đa cơ quan.",
+            "Đau ngực gợi ý ACS, sốc tim sau MI; cần can thiệp mạch vành khẩn.",
+        ],
+        "monitoring": [
+            "Dấu hiệu sung huyết (phù, tĩnh mạch cổ, ran phổi) và tưới máu (HA, lạnh đầu chi, lactate).",
+            "Nước tiểu giờ, cân nặng hàng ngày; điện giải (Na/K), creatinine mỗi 12–24h.",
+            "HA và nhịp tim liên tục nếu dùng vasodilator/inotrope/vasopressor.",
+            "ECG, men tim khi nghi ACS; siêu âm tim tại giường nếu có để đánh giá chức năng và huyết động.",
+        ],
+        "special_populations": [
+            "Người già/suy thận: giảm liều lợi tiểu/inotrope; theo dõi điện giải và creatinine sát.",
+            "HATT thấp (borderline): hạn chế vasodilator, ưu tiên chỉnh thể tích và inotrope nếu giảm tưới máu.",
+            "HFpEF vs HFrEF: chiến lược giảm sung huyết tương tự nhưng tối ưu điều trị nền khác nhau sau ổn định.",
+        ],
+        "interactions": [
+            "NSAID làm giảm hiệu quả lợi tiểu và nặng thêm suy thận; nên tránh.",
+            "ACEi/ARB/MRA + lợi tiểu quai có thể gây tụt HA, AKI, tăng K+; cần titrate thận trọng.",
+            "Inotrope (dobutamine, milrinone) + thuốc loạn nhịp/thuốc kéo dài QT → tăng nguy cơ loạn nhịp.",
+        ],
+        "follow_up": "Sau ổn định đợt cấp, chuyển sang tối ưu điều trị nền (ARNI/ACEi/ARB, β-blocker, MRA, SGLT2i) và hẹn tái khám sớm (1–2 tuần) để chỉnh liều.",
         "related_calculators": ["eGFR (CKD-EPI)", "CrCl (Cockcroft-Gault)", "BNP/NT-proBNP interpret"],
         "related_protocols": ["Acute Heart Failure protocol", "(đề xuất) Diuretic escalation checklist"],
+        "has_protocol": True,
+        "protocol_links": ["pages/04_📋_Protocols.py"],
     },
     {
         "id": "t2dm_inpatient_outpatient",
@@ -137,8 +302,39 @@ ARTICLES = [
             "Giáo dục sick-day rules, tự theo dõi, nhận diện hạ đường huyết.",
             "Chỉnh liều theo eGFR; giảm liều insulin khởi đầu ở người già/suy thận.",
         ],
+        "key_points": [
+            "Nội trú: ưu tiên insulin (basal-bolus hoặc basal + correction); tránh khởi thuốc uống mới.",
+            "Mục tiêu đường huyết nội trú đa số 140–180 mg/dL; mục tiêu chặt hơn chỉ nếu an toàn.",
+            "Dừng SGLT2i khi nhập viện/phẫu thuật; thận trọng metformin khi eGFR thấp hoặc dùng cản quang.",
+            "Ngoại trú: ưu tiên SGLT2i/GLP-1 RA nếu có ASCVD/CKD/HF/béo phì; cá thể hóa HbA1c.",
+        ],
+        "evidence_level": "Moderate-High (ADA 2025; AACE/ACE)",
+        "recommendation_strength": "Strong",
+        "red_flags": [
+            "Nghi DKA/HHS: đa niệu, khát nhiều, mệt, thở Kussmaul, ketone cao, toan máu, osmolarity cao.",
+            "Hạ đường huyết nặng (ý thức xấu, co giật) hoặc lặp lại nhiều lần.",
+            "eGFR giảm nhanh, lactate tăng ở bệnh nhân đang dùng metformin (nghi toan lactic).",
+        ],
+        "monitoring": [
+            "Đường huyết trước bữa và trước ngủ (4–7 lần/ngày) cho nội trú dùng insulin.",
+            "HbA1c mỗi 3 tháng nếu chưa đạt mục tiêu hoặc thay đổi điều trị; mỗi 6 tháng nếu ổn.",
+            "Creatinine/eGFR ít nhất 6–12 tháng/lần; thường xuyên hơn nếu CKD hoặc dùng SGLT2i/Metformin.",
+        ],
+        "special_populations": [
+            "Người già, suy thận: giảm liều insulin khởi đầu, tránh hạ đường huyết; chỉnh liều metformin/SGLT2i theo eGFR.",
+            "HF/ASCVD: ưu tiên SGLT2i/GLP-1 RA có lợi tim mạch; tránh TZD nếu HF.",
+            "Béo phì: GLP-1 RA và SGLT2i hỗ trợ giảm cân; hạn chế sulfonylurea nếu có thể.",
+        ],
+        "interactions": [
+            "β-blocker có thể che dấu triệu chứng hạ đường huyết (trừ vã mồ hôi).",
+            "Steroid toàn thân làm tăng đường huyết; cần điều chỉnh liều insulin phù hợp.",
+            "Thuốc lợi tiểu, ACEi/ARB + SGLT2i: tăng nguy cơ mất nước/hạ HA, nhất là người già.",
+        ],
+        "follow_up": "Nội trú: điều chỉnh insulin mỗi 1–2 ngày dựa trên profile đường huyết. Ngoại trú: tái khám 3 tháng đầu để tinh chỉnh phác đồ; sau đó 3–6 tháng một lần tùy kiểm soát.",
         "related_calculators": ["CrCl (Cockcroft-Gault)", "eGFR", "BMI"],
         "related_protocols": ["Inpatient glycemic control protocol", "(đề xuất) Outpatient T2DM escalation pathway"],
+        "has_protocol": True,
+        "protocol_links": ["pages/04_📋_Protocols.py"],
     },
     {
         "id": "cirrhosis_complications",
@@ -209,8 +405,42 @@ ARTICLES = [
             "Dịch truyền: 30 mL/kg crystalloid ban đầu; tránh quá tải dịch; đánh giá đáp ứng (lactate, HA, nước tiểu).",
             "Vận mạch: norepinephrine hàng đầu; thêm vasopressin/epinephrine nếu cần; mục tiêu MAP ≥65.",
         ],
+        "key_points": [
+            "Nhận diện sớm: nhiễm khuẩn + SOFA ≥2; shock = sepsis + lactate ≥2 và cần vận mạch để MAP ≥65.",
+            "Kháng sinh phổ rộng trong 1 giờ đầu; cấy máu trước kháng sinh nếu không trì hoãn.",
+            "Dịch ban đầu 30 mL/kg crystalloid; đánh giá đáp ứng, tránh quá tải dịch.",
+            "Norepinephrine là vận mạch đầu tay; thêm vasopressin/epinephrine nếu MAP chưa đạt.",
+            "De-escalation sau 48–72h khi có kết quả cấy, rút ngắn thời gian dùng phù hợp.",
+        ],
+        "evidence_level": "Moderate-High (SSC 2021/2024)",
+        "recommendation_strength": "Strong",
+        "red_flags": [
+            "MAP <65, lactate tăng hoặc không giảm sau bù dịch ban đầu.",
+            "Suy hô hấp cần oxy dòng cao/NIV hoặc đặt NKQ, PaO2/FiO2 giảm nhanh.",
+            "Thiểu niệu <0.5 mL/kg/h, tăng creatinine nhanh, toan chuyển hóa nặng.",
+            "Giảm ý thức, dấu hiệu giảm tưới máu ngoại vi, tím đầu chi.",
+        ],
+        "monitoring": [
+            "MAP, mạch, SpO2 liên tục; đo lactate ban đầu và lặp lại (2–4h) nếu cao.",
+            "Nước tiểu giờ; cân bằng dịch; creatinine/electrolytes 6–12h.",
+            "Theo dõi đáp ứng dịch: lâm sàng, lactate, siêu âm TM chủ dưới, passive leg raise nếu có.",
+            "Nếu dùng vận mạch: đặt đường trung tâm/động mạch khi có thể; theo dõi ngoại vi sát.",
+        ],
+        "special_populations": [
+            "Suy tim/CKD: bù dịch thận trọng, đánh giá quá tải; dùng vận mạch sớm hơn nếu cần.",
+            "Sản phụ/già yếu: liều dịch thấp hơn, theo dõi quá tải và HA tư thế.",
+            "Suy gan: chú ý lactate có thể cao nền; đánh giá tưới máu lâm sàng và nước tiểu.",
+        ],
+        "interactions": [
+            "Aminoglycoside + loop/vancomycin: tăng nguy cơ độc thận, cần TDM và chỉnh liều theo CrCl.",
+            "Linezolid + SSRI: nguy cơ serotonin syndrome; cân nhắc đổi thuốc hoặc theo dõi sát.",
+            "Macrolide/quinolone: kéo dài QTc, thận trọng nếu có thuốc kéo dài QT khác.",
+        ],
+        "follow_up": "Đánh giá lại sau 3–6h (lactate, MAP, tưới máu), sau 24–48h xem xét de-escalation kháng sinh; rà soát nguồn nhiễm và thời gian điều trị.",
         "related_calculators": ["SOFA", "qSOFA", "APACHE II", "SAPS II", "CrCl (Cockcroft-Gault)", "eGFR"],
         "related_protocols": ["Sepsis 1-Hour Bundle"],
+        "has_protocol": True,
+        "protocol_links": ["pages/04_📋_Protocols.py"],
     },
     {
         "id": "aki_kdigo",
@@ -227,8 +457,40 @@ ARTICLES = [
             "Xử trí: điều chỉnh nguyên nhân, bù dịch nếu prerenal, tránh nephrotoxin, chỉnh liều thuốc, cân nhắc RRT khi stage 3 hoặc quá tải dịch/toan nặng.",
             "Chỉnh liều thuốc: dùng CrCl thay vì eGFR; tránh tích lũy và độc tính.",
         ],
+        "key_points": [
+            "Xác định nhanh nguyên nhân (pre-/intra-/post-renal); ngừng nephrotoxin, tối ưu tưới máu.",
+            "Đánh giá thể tích: bù dịch nếu prerenal; tránh quá tải; theo dõi nước tiểu, cân nặng.",
+            "Chỉnh liều thuốc theo CrCl (Cockcroft-Gault); tránh tích lũy, nhất là kháng sinh/thuốc độc thận.",
+            "Stage 3 hoặc quá tải dịch/toan/k tăng/refractory: cân nhắc RRT sớm; hội chẩn thận/ICU.",
+        ],
+        "evidence_level": "Moderate (KDIGO 2012; cập nhật 2024 tham khảo)",
+        "recommendation_strength": "Moderate",
+        "red_flags": [
+            "Nước tiểu <0.3–0.5 mL/kg/h kéo dài >12h hoặc vô niệu.",
+            "Tăng K+ >6.0 mmol/L, toan chuyển hóa pH <7.1, quá tải dịch gây giảm oxy.",
+            "Creatinine tăng nhanh, triệu chứng ure huyết (lú lẫn, viêm màng ngoài tim, xuất huyết).",
+            "Thiểu niệu không đáp ứng bù dịch, nghi tắc nghẽn nhưng chưa loại trừ.",
+        ],
+        "monitoring": [
+            "Lượng nước tiểu giờ, cân nặng hàng ngày, dấu hiệu quá tải dịch.",
+            "Điện giải, pH, creatinine mỗi 6–24h tùy mức độ; lactate nếu sốc.",
+            "Thuốc độc thận (aminoglycoside, vancomycin, amphotericin B, NSAID, cản quang): tránh/giảm liều, TDM nếu có.",
+        ],
+        "special_populations": [
+            "Người già/suy tim/suy gan: dễ quá tải dịch; bù dịch thận trọng, dùng siêu âm TM chủ nếu có.",
+            "CKD nền: điều chỉnh liều sớm, theo dõi K+/creatinine sát; tránh kép nephrotoxin.",
+            "Obese: tính CrCl theo công thức hiệu chỉnh cân nặng; thận trọng liều aminoglycoside/vancomycin.",
+        ],
+        "interactions": [
+            "RAASi/ARB + NSAID + lợi tiểu (triple whammy) → AKI.",
+            "Aminoglycoside + vancomycin/loop → tăng độc thận; cần TDM/chỉnh liều.",
+            "Cản quang iod: cần đánh giá nguy cơ; bù dịch trước-sau, cân nhắc tránh nếu không bắt buộc.",
+        ],
+        "follow_up": "Đánh giá đáp ứng sau 6–24h (nước tiểu, K+, pH, creatinine); sau ổn định, tái khám chức năng thận 1–2 tuần và rà soát thuốc độc thận.",
         "related_calculators": ["KDIGO AKI", "RIFLE", "AKIN", "eGFR (CKD-EPI)", "CrCl (Cockcroft-Gault)", "FENa"],
         "related_protocols": ["(đề xuất) AKI management checklist", "(đề xuất) Drug dosing in AKI"],
+        "has_protocol": True,
+        "protocol_links": ["pages/04_📋_Protocols.py"],
     },
     {
         "id": "stroke_management",
@@ -509,6 +771,19 @@ def render_statistics_dashboard(articles: list):
 def render_article_card(article: dict, index: int):
     """Hiển thị thẻ bài viết với thiết kế đẹp và khoa học."""
     specialty = article["specialty"]
+    # Escape các phần dễ chứa ký tự đặc biệt để tránh vỡ HTML
+    safe_summary_items = [html.escape(item) for item in article.get("summary", [])]
+    safe_key_points = [html.escape(item) for item in article.get("key_points", [])]
+    safe_red_flags = [html.escape(item) for item in article.get("red_flags", [])]
+    safe_monitoring = [html.escape(item) for item in article.get("monitoring", [])]
+    safe_special_pops = [html.escape(item) for item in article.get("special_populations", [])]
+    safe_interactions = [html.escape(item) for item in article.get("interactions", [])]
+    safe_follow_up = html.escape(article.get("follow_up", "")) if article.get("follow_up") else ""
+    evidence_level = article.get("evidence_level")
+    recommendation_strength = article.get("recommendation_strength")
+    protocol_links = article.get("protocol_links", [])
+    has_protocol = article.get("has_protocol", False)
+
     gradient, border_color = get_specialty_color(specialty)
     
     # Tính toán reading time
@@ -558,11 +833,24 @@ def render_article_card(article: dict, index: int):
                 <span>🔄 {article.get('last_reviewed', 'N/A')}</span>
                 {f'<span>⏱️ {reading_time} phút đọc</span>' if reading_time > 0 else ''}
                 <span>📑 {len(article.get('guidelines', []))} guideline</span>
+                {f'<span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px;">LoE: {html.escape(evidence_level)}</span>' if evidence_level else ''}
+                {f'<span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px;">SoR: {html.escape(recommendation_strength)}</span>' if recommendation_strength else ''}
             </div>
         </div>
         
         <!-- Body -->
         <div style="padding: 20px 24px;">
+            <!-- Key Points -->
+            {""
+            if not safe_key_points else
+            '<div style="margin-bottom: 16px; background: #f3f6ff; border: 1px solid #dfe7ff; border-radius: 10px; padding: 12px 14px;">'
+            + '<div style="font-weight: 600; color: #2a3f6b; margin-bottom: 8px;">⭐ Key points</div>'
+            + '<ul style="margin: 0; padding-left: 18px; color: #455a64; line-height: 1.55;">'
+            + "".join([f'<li style="margin-bottom: 6px;">{kp}</li>' for kp in safe_key_points[:4]])
+            + '</ul>'
+            + '</div>'
+            }
+
             <!-- Guidelines badges -->
             <div style="margin-bottom: 16px;">
                 {" ".join([f'<span style="background: #e3f2fd; color: #1976d2; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; margin-right: 6px; margin-bottom: 6px; display: inline-block;">{g}</span>' for g in article.get('guidelines', [])[:3]])}
@@ -572,9 +860,19 @@ def render_article_card(article: dict, index: int):
             <div style="margin-bottom: 16px;">
                 <strong style="color: #424242; font-size: 0.95rem;">💡 Điểm cần nhớ:</strong>
                 <ul style="margin: 8px 0 0 0; padding-left: 20px; color: #616161; font-size: 0.9rem; line-height: 1.6;">
-                    {"".join([f'<li style="margin-bottom: 6px;">{item}</li>' for item in article.get('summary', [])[:3]])}
+                    {"".join([f'<li style="margin-bottom: 6px;">{item}</li>' for item in safe_summary_items[:3]])}
                 </ul>
             </div>
+
+            <!-- Red flags -->
+            {"" if not safe_red_flags else
+            '<div style="margin-bottom: 16px; background: #fff5f5; border: 1px solid #ffcdd2; border-radius: 10px; padding: 12px 14px;">'
+            + '<div style="font-weight: 600; color: #c62828; margin-bottom: 6px;">⚠️ Red flags / Khi cần escalation</div>'
+            + '<ul style="margin: 0; padding-left: 18px; color: #b71c1c; line-height: 1.5;">'
+            + "".join([f'<li style="margin-bottom: 6px;">{rf}</li>' for rf in safe_red_flags[:4]])
+            + '</ul>'
+            + '</div>'
+            }
             
             <!-- Keywords tags -->
             {f'''
@@ -584,6 +882,37 @@ def render_article_card(article: dict, index: int):
                 </div>
             </div>
             ''' if article.get('keywords') else ''}
+
+            <!-- Monitoring / Follow-up -->
+            {"" if not (safe_monitoring or safe_follow_up) else
+            '<div style="margin-bottom: 16px; background: #f9fbe7; border: 1px solid #e6ee9c; border-radius: 10px; padding: 12px 14px;">'
+            + ('' if not safe_monitoring else '<div style="font-weight:600;color:#827717;margin-bottom:6px;">🩺 Monitoring</div>'
+               + '<ul style="margin:0; padding-left:18px; color:#6d4c41; line-height:1.5;">'
+               + "".join([f'<li style="margin-bottom:6px;">{m}</li>' for m in safe_monitoring[:4]])
+               + '</ul>')
+            + ('' if not safe_follow_up else f'<div style="margin-top:8px; color:#6d4c41;"><strong>📆 Follow-up:</strong> {safe_follow_up}</div>')
+            + '</div>'
+            }
+
+            <!-- Special populations -->
+            {"" if not safe_special_pops else
+            '<div style="margin-bottom: 16px; background: #eef7ff; border: 1px solid #c5e0ff; border-radius: 10px; padding: 12px 14px;">'
+            + '<div style="font-weight:600;color:#0d47a1;margin-bottom:6px;">👪 Đối tượng đặc biệt</div>'
+            + '<ul style="margin:0; padding-left:18px; color:#37474f; line-height:1.5;">'
+            + "".join([f'<li style="margin-bottom:6px;">{sp}</li>' for sp in safe_special_pops[:4]])
+            + '</ul>'
+            + '</div>'
+            }
+
+            <!-- Interactions -->
+            {"" if not safe_interactions else
+            '<div style="margin-bottom: 16px; background: #f3e5f5; border: 1px solid #e1bee7; border-radius: 10px; padding: 12px 14px;">'
+            + '<div style="font-weight:600;color:#6a1b9a;margin-bottom:6px;">🔗 Tương tác thuốc quan trọng</div>'
+            + '<ul style="margin:0; padding-left:18px; color:#4a148c; line-height:1.5;">'
+            + "".join([f'<li style="margin-bottom:6px;">{it}</li>' for it in safe_interactions[:4]])
+            + '</ul>'
+            + '</div>'
+            }
             
             <!-- Related links -->
             <div style="
@@ -595,6 +924,7 @@ def render_article_card(article: dict, index: int):
                 <div style="font-size: 0.85rem; color: #616161;">
                     {f'<div style="margin-bottom: 8px;"><strong>📊 Calculators:</strong> {", ".join(article.get("related_calculators", [])[:3])}</div>' if article.get('related_calculators') else ''}
                     {f'<div><strong>📋 Protocols:</strong> {", ".join(article.get("related_protocols", [])[:2])}</div>' if article.get('related_protocols') else ''}
+                    {"" if not (has_protocol and protocol_links) else '<div style="margin-top:8px;">' + "".join([f'<a href="/{pl}" style="margin-right:8px; color:#1976d2; font-weight:600; text-decoration:none;">🔗 Mở protocol</a>' for pl in protocol_links[:2]]) + '</div>'}
                 </div>
             </div>
         </div>
@@ -648,6 +978,41 @@ def main():
         page_title="Bài viết chuyên sâu",
         page_icon="📚",
         description="Tổng hợp chuyên sâu theo guideline mới nhất, gắn liền calculators/protocols trong ứng dụng.",
+    )
+
+    # Hero section giống các trang kiến thức y khoa hiện đại
+    st.markdown(
+        """
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    padding: 1.5rem 2rem;
+                    border-radius: 16px;
+                    margin-bottom: 1.5rem;
+                    color: white;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;">
+            <div style="max-width: 60%; min-width: 260px;">
+                <div style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 0.25rem;">📚 Chuyên sâu theo guideline</div>
+                <h2 style="margin: 0 0 0.5rem 0; font-size: 1.6rem; font-weight: 600;">Kiến thức chuyên sâu, bám sát thực hành lâm sàng</h2>
+                <p style="margin: 0; font-size: 0.9rem; opacity: 0.95;">
+                    Tổng hợp các chủ đề tim mạch, hồi sức, hô hấp, nội tiết, gan mật, nhiễm khuẩn...
+                    kèm điểm cần nhớ, guideline gốc và liên kết trực tiếp tới calculators/protocols trong ứng dụng.
+                </p>
+            </div>
+            <div style="min-width: 200px; margin-top: 1rem;">
+                <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.85rem;">
+                    <span style="background: rgba(255,255,255,0.12); padding: 6px 10px; border-radius: 999px;">
+                        🔍 Tìm nhanh theo <strong>chuyên khoa</strong> và <strong>từ khóa</strong> ở sidebar
+                    </span>
+                    <span style="background: rgba(255,255,255,0.12); padding: 6px 10px; border-radius: 999px;">
+                        📊 Mỗi bài gắn với <strong>calculators</strong> và <strong>protocols</strong> liên quan
+                    </span>
+                </div>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
     
     # Statistics Dashboard
@@ -725,10 +1090,42 @@ def main():
     else:
         st.success(f"Tìm thấy **{len(filtered)}** bài viết phù hợp")
         st.markdown("---")
-        
-        # Display articles in grid
-        for idx, article in enumerate(filtered):
-            render_article_card(article, idx)
+
+        # Tabs để xem theo chuyên ngành hoặc danh sách phẳng
+        tab_overview, tab_list = st.tabs(["🩺 Theo chuyên ngành", "📄 Danh sách đầy đủ"])
+
+        # Nhóm bài viết theo chuyên ngành
+        grouped_by_specialty = defaultdict(list)
+        for article in filtered:
+            grouped_by_specialty[article["specialty"]].append(article)
+        specs = sorted(grouped_by_specialty.keys())
+
+        with tab_overview:
+            # Tóm tắt chuyên ngành đang có trong kết quả
+            st.markdown("### 🩺 Chuyên ngành trong kết quả")
+            spec_badges = " ".join(
+                f"<span style='background:#e3f2fd;color:#1976d2;padding:4px 10px;border-radius:12px;font-size:0.8rem;margin-right:6px;margin-bottom:6px;display:inline-block;'>{spec} ({len(grouped_by_specialty[spec])})</span>"
+                for spec in specs
+            )
+            st.markdown(spec_badges, unsafe_allow_html=True)
+            st.markdown("---")
+
+            # Hiển thị lần lượt từng chuyên ngành
+            for spec in specs:
+                st.markdown(f"### 🩺 {spec}")
+                st.caption(f"{len(grouped_by_specialty[spec])} bài viết chuyên sâu")
+
+                for idx, article in enumerate(grouped_by_specialty[spec]):
+                    render_article_card(article, idx)
+
+                st.markdown("---")
+
+        with tab_list:
+            st.markdown("### 📄 Tất cả bài viết (theo bộ lọc hiện tại)")
+            st.caption("Danh sách phẳng, sắp xếp theo thứ tự trong cấu hình ARTICLES.")
+            for idx, article in enumerate(filtered):
+                render_article_card(article, idx)
+                st.markdown("---")
     
     render_standard_footer(disclaimer=True)
 

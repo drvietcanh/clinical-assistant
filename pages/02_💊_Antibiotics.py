@@ -17,9 +17,9 @@ from antibiotics.treatment_algorithms import render_algorithms_page
 
 # Standard page setup
 setup_page(
-    page_title="Kháng sinh",
+    page_title="Kháng sinh (chuyên sâu)",
     page_icon="💊",
-    description="Tra cứu kháng sinh, so sánh liều dùng và chỉ định"
+    description="Module chuyên sâu về kháng sinh: dữ liệu chi tiết, so sánh và phác đồ điều trị"
 )
 
 # ========== SIDEBAR ==========
@@ -44,9 +44,10 @@ with st.sidebar:
     - ASHP/IDSA TDM 2020
     - WHO AWaRe Classification
     
-    **💡 Tính liều theo thận:**
-    Xem module "💊 Tra cứu kháng sinh" → 
-    "🧮 Tính liều theo eGFR/CrCl"
+    **💡 Vai trò module:**
+    - Đây là **module chuyên sâu về kháng sinh** (so sánh, phác đồ điều trị).
+    - Mọi tra cứu thuốc nói chung và tính liều theo thận xem tại module **"💊 Drug Database"**.
+    - Trong "💊 Drug Database" chọn: **"🧮 Tính liều theo eGFR/CrCl (Kháng sinh)"** để chỉnh liều kháng sinh theo chức năng thận.
     """)
 
 # ========== MAIN CONTENT ==========

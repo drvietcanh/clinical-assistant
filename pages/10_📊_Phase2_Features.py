@@ -24,9 +24,9 @@ from scores.pediatrics.pediatric_dosing import render_pediatric_dosing_calculato
 
 # Standard page setup
 setup_page(
-    page_title="Phase 2 Features",
-    page_icon="📊",
-    description="Clinical Decision Rules với Flowcharts, Pregnancy & Lactation Safety, Pediatric Dosing"
+    page_title="Decision Support",
+    page_icon="🧭",
+    description="Flowcharts, Pregnancy/Lactation safety, Pediatric dosing"
 )
 
 # ========== SIDEBAR ==========
@@ -34,14 +34,18 @@ with st.sidebar:
     st.header("📂 Chọn tính năng")
     
     feature_options = [
-        "🔄 Clinical Decision Rules (Flowcharts)",
-        "🤰 Pregnancy & Lactation Safety",
-        "👶 Pediatric Dosing Calculator"
+        "🔄 Flowcharts quyết định lâm sàng",
+        "🤰 An toàn thai kỳ & cho con bú",
+        "👶 Tính liều Nhi khoa"
     ]
+    
+    last_feature = st.session_state.get("phase2_feature_selector", feature_options[0])
+    default_index = feature_options.index(last_feature) if last_feature in feature_options else 0
     
     selected_feature = st.selectbox(
         "Tính năng:",
         feature_options,
+        index=default_index,
         key="phase2_feature_selector"
     )
     
@@ -68,7 +72,7 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
-if "Clinical Decision Rules" in selected_feature:
+if "Flowcharts" in selected_feature:
     st.header("🔄 Clinical Decision Rules với Flowcharts")
     st.caption("Flowcharts tương tác cho các clinical decision rules quan trọng")
     
@@ -202,7 +206,7 @@ if "Clinical Decision Rules" in selected_feature:
                 5. Score 3-5 → ICU
                 """)
 
-elif "Pregnancy & Lactation" in selected_feature:
+elif "thai kỳ" in selected_feature or "Lactation" in selected_feature:
     st.header("🤰 Pregnancy & Lactation Safety")
     st.caption("Thông tin an toàn thai kỳ và cho con bú cho thuốc")
     
@@ -225,7 +229,7 @@ elif "Pregnancy & Lactation" in selected_feature:
     with st.expander("➕ Thêm thuốc mới (Admin)"):
         st.info("💡 Tính năng này sẽ được mở rộng để thêm thuốc mới vào database.")
 
-elif "Pediatric Dosing" in selected_feature:
+elif "Nhi khoa" in selected_feature:
     render_pediatric_dosing_calculator()
 
 # Footer

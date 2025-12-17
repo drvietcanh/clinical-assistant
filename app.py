@@ -325,11 +325,10 @@ with st.sidebar:
     # Quick Links Section
     st.subheader("⚡ Liên kết nhanh")
     quick_links = [
-        ("📊 Scores", "pages/01_📊_Scores.py"),
-        ("🔬 Labs", "pages/05_🔬_Labs_and_Calculators.py"),
-        ("💊 Kháng sinh", "pages/02_💊_Antibiotics.py"),
-        ("💊 Tra cứu thuốc", "pages/07_💊_Drug_Database.py"),
-        ("🫁 Hồi Sức", "pages/09_🫁_Critical_Care.py"),
+        ("📊 Calculators", "pages/01_📊_Scores.py"),
+        ("💊 Drug Database", "pages/07_💊_Drug_Database.py"),
+        ("🫁 Critical Care", "pages/09_🫁_Critical_Care.py"),
+        ("🧭 Decision Support", "pages/10_📊_Phase2_Features.py"),
     ]
     
     for link_name, link_page in quick_links:
@@ -421,10 +420,12 @@ with tab1:
     
     # Define categories
     categories = {
-        "📊 Tính toán & Scores": ["scores", "labs", "tdm"],
-        "💊 Kháng sinh & Điều trị": ["antibiotics", "drug_database"],
-        "🫁 Hồi sức & Cấp cứu": ["ventilator", "critical_care"],
-        "📋 Hướng dẫn & Chẩn đoán": ["protocols", "diagnosis"]
+        "📊 Calculators & Scores": ["scores", "labs", "tdm"],
+        "💊 Thuốc & Liều dùng": ["drug_database", "antibiotics"],
+        "🫁 Hồi sức & Quy trình": ["critical_care", "ventilator", "protocols"],
+        "🧭 Decision Support": ["phase2_features"],
+        "🩺 Chẩn đoán & Bài viết": ["diagnosis", "chuyen_sau"],
+        "💉 Tiêm chủng": ["vaccination"],
     }
     
     # Organize modules by category

@@ -127,10 +127,10 @@ APP_CONFIG = {
         ),
         "phase2_features": ModuleInfo(
             id="phase2_features",
-            title="Tính năng giai đoạn 2",
-            icon="📊",
+            title="Decision Support",
+            icon="🧭",
             page_path="pages/10_📊_Phase2_Features.py",
-            description="Sơ đồ quy trình, An toàn thai kỳ, Liều dùng trẻ em",
+            description="Flowcharts, Pregnancy/Lactation, Pediatric dosing",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
         ),
@@ -142,6 +142,15 @@ APP_CONFIG = {
             description="Lịch tiêm, giá cả, phác đồ tiêm các loại vắc xin tại Việt Nam",
             color="linear-gradient(135deg, #fff9c4 0%, #fff59d 100%)",
             border="#fbc02d"
+        ),
+        "chuyen_sau": ModuleInfo(
+            id="chuyen_sau",
+            title="Bài viết chuyên sâu",
+            icon="📚",
+            page_path="pages/12_📚_Chuyen_sau.py",
+            description="Bài viết chuyên sâu theo guideline, phân tích điều trị",
+            color="linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)",
+            border="#1e88e5"
         ),
     },
     
