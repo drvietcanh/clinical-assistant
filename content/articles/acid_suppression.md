@@ -1,0 +1,159 @@
+---
+title: "Thuốc giảm tiết acid và dự phòng xuất huyết tiêu hóa do stress"
+specialty: "Tiêu hóa / Hồi sức"
+keywords: ["PPI", "H2RA", "stress ulcer prophylaxis", "ACG", "AGA", "ASHP", "ICU", "GERD", "PUD"]
+last_reviewed: 2025-01
+guideline_version:
+  - ACG/AGA GERD & PUD 2022–2024
+  - ASHP/critical care stress ulcer prophylaxis (SUP)
+  - (tham khảo) SSC/ICU care về SUP
+related_calculators: ["CrCl (Cockcroft-Gault)", "eGFR", "BMI"]
+related_protocols: ["(đề xuất) ICU Stress Ulcer Prophylaxis checklist"]
+summary:
+  - SUP chỉ định ở ICU nguy cơ cao; ngừng khi hết yếu tố nguy cơ.
+  - PPI ưu tiên trong ICU nguy cơ cao; H2RA nếu cần giảm nguy cơ C. difficile hoặc tương tác; H2RA phải chỉnh liều thận.
+  - GERD/PUD: PPI 4–8 tuần; cân nhắc step-down; diệt H. pylori khi dương tính.
+  - Ưu tiên pantoprazole nếu dùng kèm clopidogrel; theo dõi Mg/B12 nếu dùng kéo dài.
+  - Cảnh giác C. difficile, viêm phổi cộng đồng; đánh giá lại chỉ định mỗi 4–8 tuần.
+---
+
+## 1. Giới thiệu về GERD, PUD và Stress Ulcer
+
+### 1.1. Định nghĩa
+
+**GERD (Gastroesophageal Reflux Disease - Trào ngược dạ dày thực quản):**
+- Tình trạng trào ngược dịch dạ dày lên thực quản gây triệu chứng và/hoặc biến chứng.
+- Triệu chứng: ợ nóng, ợ chua, đau ngực, khó nuốt, ho mạn tính.
+
+**PUD (Peptic Ulcer Disease - Loét dạ dày tá tràng):**
+- Tổn thương niêm mạc dạ dày hoặc tá tràng do acid và pepsin.
+- Nguyên nhân: H. pylori (70–80%), NSAID (20–30%), stress, thuốc khác.
+
+**Stress Ulcer (Loét do stress):**
+- Loét dạ dày/tá tràng ở bệnh nhân ICU do stress sinh lý (sepsis, shock, chấn thương).
+- Cơ chế: Giảm tưới máu niêm mạc dạ dày → giảm bảo vệ niêm mạc → tổn thương do acid.
+
+### 1.2. Phân loại
+
+**GERD:**
+- **Theo triệu chứng:**
+  - GERD điển hình: ợ nóng, ợ chua.
+  - GERD không điển hình: Ho, khàn giọng, đau ngực.
+- **Theo tổn thương:**
+  - GERD không có tổn thương (non-erosive).
+  - GERD có tổn thương (erosive esophagitis).
+
+**PUD:**
+- **Theo vị trí:**
+  - Loét dạ dày (gastric ulcer).
+  - Loét tá tràng (duodenal ulcer).
+- **Theo nguyên nhân:**
+  - PUD do H. pylori.
+  - PUD do NSAID.
+  - PUD do stress.
+
+**Stress Ulcer:**
+- **Theo mức độ:**
+  - Loét nông (superficial).
+  - Loét sâu (deep).
+  - Xuất huyết tiêu hóa.
+  - Thủng.
+
+### 1.3. Cơ chế bệnh sinh
+
+**GERD:**
+- **Cơ chế chính:**
+  1. Giảm áp lực cơ thắt thực quản dưới (LES) → trào ngược.
+  2. Tăng áp lực trong dạ dày → trào ngược.
+  3. Giảm thanh thải acid ở thực quản → tổn thương niêm mạc.
+- **Yếu tố nguy cơ:**
+  - Béo phì, thoát vị hoành, mang thai, thuốc (anticholinergic, theophylline).
+
+**PUD:**
+- **Cơ chế chính:**
+  1. **H. pylori:**
+     - Vi khuẩn tiết urease → tạo NH₃ → trung hòa acid → sống được.
+     - Tiết độc tố → tổn thương niêm mạc → loét.
+  2. **NSAID:**
+     - Ức chế COX-1 → giảm prostaglandin → giảm bảo vệ niêm mạc → loét.
+  3. **Mất cân bằng:**
+     - Yếu tố tấn công (acid, pepsin) > yếu tố bảo vệ (mucus, bicarbonate, prostaglandin).
+
+**Stress Ulcer:**
+- **Cơ chế chính:**
+  1. **Giảm tưới máu niêm mạc:**
+     - Shock, sepsis → giảm tưới máu → thiếu oxy → tổn thương niêm mạc.
+  2. **Tăng acid:**
+     - Stress → tăng catecholamine → tăng gastrin → tăng tiết acid.
+  3. **Giảm bảo vệ:**
+     - Giảm prostaglandin, giảm mucus → dễ tổn thương.
+
+### 1.4. Biến chứng
+
+**GERD:**
+- Viêm thực quản, hẹp thực quản, Barrett thực quản, ung thư thực quản.
+
+**PUD:**
+- Xuất huyết tiêu hóa, thủng, hẹp môn vị, ung thư dạ dày (nếu do H. pylori).
+
+**Stress Ulcer:**
+- Xuất huyết tiêu hóa (nguy hiểm ở ICU), thủng.
+
+## 2. Khi nào dự phòng stress ulcer (SUP) trong ICU
+- Chỉ định mạnh: thông khí xâm lấn kéo dài, rối loạn đông máu đáng kể, bỏng rộng, chấn thương sọ não, đa chấn thương, sepsis nặng kèm nguy cơ chảy máu tiêu hóa, suy đa cơ quan.
+- Ngừng SUP khi: cai máy thành công, hết yếu tố nguy cơ, có thể chuyển sang nuôi ăn enteral đầy đủ.
+- Lựa chọn:
+  - PPI (pantoprazole/esomeprazole/omeprazole IV/PO) cho nguy cơ cao.
+  - H2RA (ranitidine/famotidine) khi lo ngại C. difficile hoặc cần ít ức chế CYP; phải chỉnh liều thận (theo eGFR/CrCl).
+
+## 2. GERD/PUD
+- Khởi trị: PPI liều chuẩn 4–8 tuần; đánh giá đáp ứng, tránh kéo dài không chỉ định.
+- PUD liên quan H. pylori: phác đồ 3/4 thuốc theo ACG 2022–2024; kiểm tra tương tác (clarithromycin, metronidazole, levofloxacin).
+- Step-down: giảm liều hoặc dùng “on-demand” khi ổn định.
+- Đau thắt ngực không do tim/ho/dạ dày: cân nhắc thử PPI ngắn hạn để chẩn đoán phân biệt.
+
+## 3. Lựa chọn thuốc & liều (gợi ý thực hành)
+- PPI: pantoprazole 40 mg PO/IV qd; esomeprazole 20–40 mg qd; omeprazole 20–40 mg qd. Ít cần chỉnh liều; lưu ý suy gan nặng.
+- H2RA: famotidine 20 mg q12h PO/IV; chỉnh liều khi eGFR <60 (ví dụ 20 mg q24h ở eGFR 30–60).
+- Thời gian SUP: tối thiểu đủ qua giai đoạn nguy cơ; dừng sớm khi có dinh dưỡng enteral ổn và hết yếu tố nguy cơ.
+
+## 4. Tương tác & an toàn
+- PPI (omeprazole/esomeprazole) ức chế CYP2C19 → giảm hoạt hóa clopidogrel; ưu tiên pantoprazole nếu phải dùng clopidogrel.
+- Thay đổi pH dạ dày → giảm hấp thu azole, atazanavir; thận trọng.
+- Nguy cơ kéo dài: C. difficile, viêm phổi cộng đồng, giảm Mg/B12/Ca (dùng dài).
+- H2RA: chú ý lú lẫn ở người già/suy thận; chỉnh liều để tránh tích lũy.
+
+## 5. Theo dõi
+- Lâm sàng: triệu chứng GERD/PUD, dấu hiệu chảy máu tiêu hóa.
+- Labs: Mg, B12 nếu dùng kéo dài; creatinine/eGFR để chỉnh H2RA; men gan nếu PPI dài hạn và có triệu chứng.
+- Thời gian dùng: mỗi 4–8 tuần đánh giá lại chỉ định; ngừng khi không còn chỉ định.
+
+## 6. Công cụ trong app
+
+- **CrCl (Cockcroft-Gault):** Chỉnh liều H2RA khi suy thận.
+- **eGFR:** Đánh giá chức năng thận.
+- **BMI:** Tư vấn dinh dưỡng, giảm cân (liên quan GERD).
+
+## 7. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**PPI:**
+- Omeprazole, Pantoprazole, Esomeprazole, Lansoprazole, Rabeprazole
+
+**H2RA:**
+- Ranitidine, Famotidine, Cimetidine
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc (tiếng Anh hoặc tiếng Việt)
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác, chỉnh liều theo thận/gan
+4. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc" (đặc biệt quan trọng với PPI + clopidogrel)
+5. So sánh thuốc: Menu "💊 Tra cứu thuốc" → "📊 So sánh thuốc trực quan"
+
+## 8. Tài liệu tham khảo
+- ACG/AGA Clinical Guideline for GERD & PUD, 2022–2024.
+- ASHP Therapeutic Guidelines on Stress Ulcer Prophylaxis in ICU (cập nhật gần nhất).
+- Surviving Sepsis/ICU care khuyến cáo về SUP (tham khảo).
+- Drug labeling và dữ liệu tương tác: Lexicomp/UpToDate/Micromedex/BNF.
+

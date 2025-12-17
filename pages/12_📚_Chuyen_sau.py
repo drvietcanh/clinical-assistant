@@ -1,11 +1,12 @@
 """
 Trang hiển thị các bài viết chuyên sâu.
-Nội dung lấy từ docs/articles/*.md với metadata khai báo trong ARTICLES.
-Thiết kế lại với UI/UX đẹp và khoa học hơn.
+
+Nguồn dữ liệu **1 mối**: content/articles/*.md (auto-discovery).
 """
 
 from pathlib import Path
 import html
+import re
 import streamlit as st
 import streamlit.components.v1 as components
 from collections import Counter, defaultdict
@@ -14,7 +15,11 @@ from utils.page_helper import setup_page, render_standard_footer
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-ARTICLES = [
+CONTENT_ARTICLES_DIR = BASE_DIR / "content" / "articles"
+
+# Legacy (docs/articles) registry is kept for backward compatibility/reference only.
+# The app runtime now uses auto-discovery from `content/articles/`.
+LEGACY_ARTICLES = [
     {
         "id": "hypertension",
         "title": "Điều trị tăng huyết áp người lớn",
@@ -705,6 +710,139 @@ ARTICLES = [
 ]
 
 
+def _extract_first_h1(markdown_text: str, fallback: str) -> str:
+    for line in markdown_text.splitlines():
+        if line.startswith("# "):
+            return line[2:].strip()
+    return fallback
+
+
+def _extract_meta_value(markdown_text: str, label: str) -> str | None:
+    """
+    Extract value from markdown meta lines like:
+    > **Cập nhật:** Tháng 12/2025
+    """
+    pattern = rf"^>\s*\*\*{re.escape(label)}\*\*:\s*(.+?)\s*$"
+    for line in markdown_text.splitlines():
+        m = re.match(pattern, line.strip())
+        if m:
+            return m.group(1).strip()
+    return None
+
+
+def _extract_guidelines(markdown_text: str) -> list[str]:
+    raw = _extract_meta_value(markdown_text, "Tài liệu tham khảo chính")
+    if not raw:
+        return []
+    # Split on commas/semicolons while being tolerant of bracketed refs.
+    parts = re.split(r"\s*[,;]\s*", raw)
+    cleaned: list[str] = []
+    for p in parts:
+        p2 = p.strip()
+        if not p2:
+            continue
+        cleaned.append(p2)
+    return cleaned[:8]
+
+
+def _extract_summary_items(markdown_text: str) -> list[str]:
+    """
+    Best-effort extraction:
+    - Prefer first 3 bullet points under '## Tóm tắt'
+    - Fallback to first 2 non-empty lines after that heading
+    """
+    lines = markdown_text.splitlines()
+    start_idx = None
+    for i, line in enumerate(lines):
+        if line.strip().lower() == "## tóm tắt":
+            start_idx = i + 1
+            break
+    if start_idx is None:
+        return []
+
+    bullets: list[str] = []
+    paras: list[str] = []
+    for line in lines[start_idx:]:
+        s = line.strip()
+        if s.startswith("## "):
+            break
+        if not s or s == "---":
+            continue
+        if s.startswith("- "):
+            bullets.append(s[2:].strip())
+        else:
+            # Avoid meta quote lines
+            if not s.startswith(">"):
+                paras.append(s)
+
+    if bullets:
+        return bullets[:3]
+    return paras[:2]
+
+
+def _infer_specialty_from_filename_and_title(filename: str, title: str) -> str:
+    hay = f"{filename} {title}".lower()
+    if any(k in hay for k in ["xo-gan", "xuat-huyet-do-gian-tinh-mach", "tang-ap-luc-tinh-mach-cua", "co-truong", "sbp", "viem-gan", "gan"]):
+        return "Tiêu hóa / Gan mật"
+    if any(k in hay for k in ["dot-quy", "xuat-huyet-nao", "ich", "ais", "tia", "than-kinh"]):
+        return "Thần kinh / Cấp cứu"
+    if any(k in hay for k in ["copd", "hen", "phe-quan", "ho-hap"]):
+        return "Hô hấp"
+    if any(k in hay for k in ["suy-tim", "tang-huyet-ap", "acs", "nvaf", "van-tim", "tim-mach", "benh-mach-vanh", "hcm", "pericarditis", "myocarditis", "aortic"]):
+        return "Tim mạch"
+    if any(k in hay for k in ["aki", "suy-than", "than"]):
+        return "Thận / Hồi sức"
+    if any(k in hay for k in ["sepsis", "nhiem-khuan"]):
+        return "Hồi sức / Nhiễm khuẩn"
+    return "Nội khoa"
+
+
+@st.cache_data(show_spinner=False)
+def get_articles_from_content() -> list[dict]:
+    """Auto-discover all markdown articles from content/articles/."""
+    if not CONTENT_ARTICLES_DIR.exists():
+        return []
+
+    articles: list[dict] = []
+    for path in sorted(CONTENT_ARTICLES_DIR.glob("*.md")):
+        try:
+            content = path.read_text(encoding="utf-8")
+        except Exception:
+            continue
+
+        title = _extract_first_h1(content, fallback=path.stem)
+        last_reviewed = _extract_meta_value(content, "Cập nhật") or ""
+        specialty = _extract_meta_value(content, "Chuyên khoa") or _infer_specialty_from_filename_and_title(path.stem, title)
+        guidelines = _extract_guidelines(content)
+        summary = _extract_summary_items(content)
+
+        articles.append(
+            {
+                "id": path.stem,
+                "title": title,
+                "specialty": specialty,
+                "keywords": [],
+                "path": path,
+                "last_reviewed": last_reviewed,
+                "guidelines": guidelines,
+                "summary": summary,
+                # Optional fields used by UI
+                "key_points": [],
+                "red_flags": [],
+                "monitoring": [],
+                "special_populations": [],
+                "interactions": [],
+                "follow_up": "",
+                "related_calculators": [],
+                "related_protocols": [],
+                "has_protocol": False,
+                "protocol_links": [],
+            }
+        )
+
+    return articles
+
+
 def load_article_content(path: Path) -> str:
     """Đọc nội dung markdown từ file; trả về chuỗi rỗng nếu thiếu."""
     try:
@@ -941,12 +1079,12 @@ def render_article_card(article: dict, index: int):
             st.warning(f"Không tìm thấy nội dung tại {article['path'].name}.")
 
 
-def filter_articles(search: str, specialties: list, selected_keywords: list):
+def filter_articles(articles: list[dict], search: str, specialties: list, selected_keywords: list):
     """Lọc bài viết theo từ khóa, chuyên khoa và keywords."""
     search_lower = search.lower()
     filtered = []
     
-    for article in ARTICLES:
+    for article in articles:
         # Filter by specialty
         if specialties and article["specialty"] not in specialties:
             continue
@@ -1015,8 +1153,15 @@ def main():
         unsafe_allow_html=True,
     )
     
+    articles = get_articles_from_content()
+    if not articles:
+        st.warning(
+            f"Chưa tìm thấy bài viết trong `{CONTENT_ARTICLES_DIR}`. "
+            "Hãy đảm bảo các bài markdown nằm trong `content/articles/`."
+        )
+
     # Statistics Dashboard
-    render_statistics_dashboard(ARTICLES)
+    render_statistics_dashboard(articles)
     
     st.markdown("---")
     
@@ -1034,7 +1179,7 @@ def main():
         st.markdown("---")
         
         st.subheader("🩺 Chuyên khoa")
-        all_specialties = sorted({article["specialty"] for article in ARTICLES})
+        all_specialties = sorted({article["specialty"] for article in articles})
         selected_specialties = st.multiselect(
             "Chọn chuyên khoa",
             options=all_specialties,
@@ -1045,9 +1190,9 @@ def main():
         st.markdown("---")
         
         st.subheader("🏷️ Từ khóa phổ biến")
-        all_keywords = sorted(set([k for a in ARTICLES for k in a.get("keywords", [])]))
+        all_keywords = sorted(set([k for a in articles for k in a.get("keywords", [])]))
         # Hiển thị top keywords
-        keyword_counts = Counter([k for a in ARTICLES for k in a.get("keywords", [])])
+        keyword_counts = Counter([k for a in articles for k in a.get("keywords", [])])
         top_keywords = [k for k, _ in keyword_counts.most_common(15)]
         
         selected_keywords = st.multiselect(
@@ -1071,11 +1216,11 @@ def main():
         st.markdown("---")
         
         # Quick stats
-        st.caption(f"**Tổng số bài viết:** {len(ARTICLES)}")
+        st.caption(f"**Tổng số bài viết:** {len(articles)}")
         st.caption(f"**Chuyên khoa:** {len(all_specialties)}")
     
     # Filter articles
-    filtered = filter_articles(search, selected_specialties, selected_keywords)
+    filtered = filter_articles(articles, search, selected_specialties, selected_keywords)
     
     # Display results
     if not filtered:
