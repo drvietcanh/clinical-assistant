@@ -283,7 +283,7 @@ def render():
         <div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); 
                     padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'>
             <h2 style='color: {score_color}; margin: 0; text-align: center;'>
-                Free T4 Index: {result['fti']:.2f}
+                Free T4 Index: {_format_num(result['fti'], 2)}
             </h2>
         </div>
         """, unsafe_allow_html=True)
@@ -298,7 +298,7 @@ def render():
             st.metric("T3 Uptake", f"{_format_num(t3_uptake, 1)}%")
         
         with col3:
-            st.metric("FTI", f"{result['fti']:.2f}")
+            st.metric("FTI", _format_num(result['fti'], 2))
         
         st.markdown("---")
         
@@ -312,6 +312,15 @@ def render():
             "Status": result["status"]
         }
         
+        # Export section
+        render_export_section(
+            calculator_id="free_t4_index",
+            calculator_name="Free T4 Index",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
         save_calculation_to_history(
             calculator_id="free_t4_index",
             calculator_name="Free T4 Index",
@@ -319,6 +328,7 @@ def render():
             results=results_dict
         )
         
+        # Share section
         render_share_section(
             calculator_id="free_t4_index",
             calculator_name="Free T4 Index",
@@ -335,6 +345,10 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="free_t4_index", show_actions=True)
         
         # Status
         st.markdown(f"""

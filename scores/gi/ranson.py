@@ -559,6 +559,15 @@ def render():
             "Recommendation": interp['recommendation']
         }
         
+        # Export section
+        render_export_section(
+            calculator_id="ranson",
+            calculator_name="Ranson Criteria",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
         save_calculation_to_history(
             calculator_id="ranson",
             calculator_name="Ranson Criteria",
@@ -566,6 +575,7 @@ def render():
             results=results_dict
         )
         
+        # Share section
         render_share_section(
             calculator_id="ranson",
             calculator_name="Ranson Criteria",

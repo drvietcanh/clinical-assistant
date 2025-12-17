@@ -301,6 +301,14 @@ def render():
                 "Khuyến nghị": result['recommendation']
             }
             
+            # Export section
+            render_export_section(
+                calculator_id="cam_icu",
+                calculator_name="CAM-ICU - Confusion Assessment Method for ICU",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
             # Save to history
             save_calculation_to_history(
                 calculator_id="cam_icu",

@@ -643,6 +643,14 @@ def render():
                 "Mortality": mortality
             }
             
+            # Export section
+            render_export_section(
+                calculator_id="glasgow_blatchford",
+                calculator_name="Glasgow-Blatchford Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
             # Save to history
             save_calculation_to_history(
                 calculator_id="glasgow_blatchford",

@@ -320,6 +320,15 @@ def render():
             }
             
             # Save to history
+            # Export section
+            render_export_section(
+                calculator_id="rass",
+                calculator_name="RASS - Richmond Agitation-Sedation Scale",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
             save_calculation_to_history(
                 calculator_id="rass",
                 calculator_name="RASS - Richmond Agitation-Sedation Scale",

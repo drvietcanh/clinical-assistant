@@ -377,14 +377,32 @@ def render_search_enhanced():
     # Search controls with better layout
     col_search, col_filter, col_clear = st.columns([5, 1.5, 0.8])
     
+    # Initialize search query state if not exists
+    if 'search_query_value' not in st.session_state:
+        st.session_state.search_query_value = ''
+    
+    # Check if we need to update search query from button clicks
+    # Use a separate key to avoid StreamlitAPIException when setting widget state
+    if 'search_box_enhanced_set_value' in st.session_state:
+        st.session_state.search_query_value = st.session_state.search_box_enhanced_set_value
+        del st.session_state.search_box_enhanced_set_value
+    
     with col_search:
-        search_query = st.text_input(
+        # Get the search query from widget or state
+        widget_value = st.text_input(
             "🔎 Tìm kiếm...",
             placeholder="Nhập từ khóa (ví dụ: SOFA, CHA2DS2VASc, tim mạch...) - Nhấn Ctrl+K để focus",
             help="Tìm kiếm calculators, drugs, protocols. Hỗ trợ fuzzy matching và real-time suggestions!",
             key="search_box_enhanced",
             label_visibility="collapsed"
         )
+        
+        # Update search query value from widget if user typed
+        if widget_value != st.session_state.search_query_value:
+            st.session_state.search_query_value = widget_value
+        
+        # Use the state value for search (handles both user input and button clicks)
+        search_query = st.session_state.search_query_value
         
         # Track search query
         if search_query:
@@ -405,7 +423,8 @@ def render_search_enhanced():
     
     with col_clear:
         if st.button("🗑️", help="Xóa tìm kiếm (Esc)", use_container_width=True, key="clear_search_enhanced"):
-            st.session_state.search_box_enhanced = ""
+            st.session_state.search_query_value = ""
+            st.session_state.search_box_enhanced_set_value = ""
             st.rerun()
     
     # Search options
@@ -441,7 +460,7 @@ def render_search_enhanced():
                     icon = icon_map.get(suggestion_type, '💡')
                     
                     if st.button(f"{icon} {suggestion_text}", key=f"suggestion_{idx}_{suggestion_text}", use_container_width=True):
-                        st.session_state.search_box_enhanced = suggestion_text
+                        st.session_state.search_box_enhanced_set_value = suggestion_text
                         _track_search(suggestion_text)
                         st.rerun()
     
@@ -536,7 +555,7 @@ def render_search_enhanced():
             for idx, hist_query in enumerate(search_history[:5]):
                 with hist_cols[idx]:
                     if st.button(f"↩️ {hist_query}", key=f"hist_{idx}_{hist_query}", use_container_width=True):
-                        st.session_state.search_box_enhanced = hist_query
+                        st.session_state.search_box_enhanced_set_value = hist_query
                         _track_search(hist_query)
                         st.rerun()
             st.markdown("---")
@@ -555,7 +574,7 @@ def render_search_enhanced():
         for idx, pop_search in enumerate(popular_searches[:5]):
             with pop_cols[idx]:
                 if st.button(pop_search, key=f"pop_search_{idx}_{pop_search}", use_container_width=True):
-                    st.session_state.search_box_enhanced = pop_search
+                    st.session_state.search_box_enhanced_set_value = pop_search
                     _track_search(pop_search)
                     st.rerun()
     

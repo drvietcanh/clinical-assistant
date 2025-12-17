@@ -191,6 +191,15 @@ def render():
                 "Interpretation": interpretation
             }
             
+            # Export section
+            render_export_section(
+                calculator_id="corrected_calcium",
+                calculator_name="Corrected Calcium",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
             save_calculation_to_history(
                 calculator_id="corrected_calcium",
                 calculator_name="Corrected Calcium",
@@ -198,6 +207,7 @@ def render():
                 results=results_dict
             )
             
+            # Share section
             render_share_section(
                 calculator_id="corrected_calcium",
                 calculator_name="Corrected Calcium",
@@ -214,6 +224,10 @@ def render():
                 show_category=True,
                 limit=3
             )
+            
+            # History section
+            st.markdown("---")
+            render_history_ui(calculator_id="corrected_calcium", show_actions=True)
             
             st.markdown("---")
             

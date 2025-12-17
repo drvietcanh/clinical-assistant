@@ -225,6 +225,15 @@ def render():
             }
             
             # Save to history
+            # Export section
+            render_export_section(
+                calculator_id="rcri",
+                calculator_name="RCRI - Revised Cardiac Risk Index",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
             save_calculation_to_history(
                 calculator_id="rcri",
                 calculator_name="RCRI - Revised Cardiac Risk Index",

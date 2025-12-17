@@ -250,6 +250,13 @@ def calculate_bode(
 def render():
     """Render BODE Index calculator"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'bode':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'BODE Index')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🫁 BODE Index")
     st.markdown("**Tiên lượng tử vong ở bệnh nhân COPD**")
     

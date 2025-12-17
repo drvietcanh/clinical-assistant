@@ -246,6 +246,15 @@ def render():
             "Diện tích cơ thể (Mosteller)": round(bsa_mosteller, 2)
         }
         
+        # Export section
+        render_export_section(
+            calculator_id="bmi_ibw_bsa",
+            calculator_name="BMI | IBW | BSA",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
         save_calculation_to_history(
             calculator_id="bmi_ibw_bsa",
             calculator_name="BMI | IBW | BSA",
@@ -253,6 +262,7 @@ def render():
             results=results_dict
         )
         
+        # Share section
         render_share_section(
             calculator_id="bmi_ibw_bsa",
             calculator_name="BMI | IBW | BSA",
@@ -269,6 +279,10 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="bmi_ibw_bsa", show_actions=True)
         
         # ABW if obese
         if weight > ibw * 1.2:  # >20% over IBW

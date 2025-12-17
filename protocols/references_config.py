@@ -2347,6 +2347,402 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "evidence_level": EVIDENCE_LEVEL_IIA,
             "strength": STRENGTH_STRONG
         }
+    ],
+    
+    "cardiac_arrest": [
+        {
+            "type": "guideline",
+            "title": "2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care",
+            "authors": "Panchal AR, Bartos JA, Cabañas JG, et al.",
+            "journal": "Circulation",
+            "year": 2020,
+            "volume": "142",
+            "issue": "16_suppl_2",
+            "pages": "S366-S468",
+            "doi": "10.1161/CIR.0000000000000916",
+            "pmid": "33081528",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG,
+            "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000916"
+        },
+        {
+            "type": "guideline",
+            "title": "European Resuscitation Council Guidelines 2021: Adult advanced life support",
+            "authors": "Soar J, Böttiger BW, Carli P, et al.",
+            "journal": "Resuscitation",
+            "year": 2021,
+            "volume": "161",
+            "pages": "115-151",
+            "doi": "10.1016/j.resuscitation.2021.02.010",
+            "pmid": "33773825",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care: Part 1: Executive Summary",
+            "authors": "Merchant RM, Topjian AA, Panchal AR, et al.",
+            "journal": "Circulation",
+            "year": 2020,
+            "volume": "142",
+            "issue": "16_suppl_2",
+            "pages": "S337-S357",
+            "doi": "10.1161/CIR.0000000000000918",
+            "pmid": "33081529",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Targeted Temperature Management for Cardiac Arrest with Nonshockable Rhythm",
+            "authors": "Lascarrou JB, Merdji H, Le Gouge A, et al.",
+            "journal": "New England Journal of Medicine",
+            "year": 2019,
+            "volume": "381",
+            "issue": "24",
+            "pages": "2327-2337",
+            "doi": "10.1056/NEJMoa1906661",
+            "pmid": "31577396",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "acute_respiratory_failure": [
+        {
+            "type": "guideline",
+            "title": "An Official American Thoracic Society/American College of Chest Physicians Clinical Practice Guideline: Liberation from Mechanical Ventilation in Critically Ill Adults",
+            "authors": "Schmidt GA, Girard TD, Kress JP, et al.",
+            "journal": "American Journal of Respiratory and Critical Care Medicine",
+            "year": 2017,
+            "volume": "195",
+            "issue": "1",
+            "pages": "120-133",
+            "doi": "10.1164/rccm.201610-2075ST",
+            "pmid": "27762595",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Noninvasive Ventilation for Acute Respiratory Failure",
+            "authors": "Rochwerg B, Brochard L, Elliott MW, et al.",
+            "journal": "European Respiratory Journal",
+            "year": 2017,
+            "volume": "50",
+            "issue": "2",
+            "pages": "1602426",
+            "doi": "10.1183/13993003.02426-2016",
+            "pmid": "28860265",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Clinical Practice Guideline: Management of Acute Respiratory Failure",
+            "authors": "SCCM Critical Care Guidelines Committee",
+            "journal": "Critical Care Medicine",
+            "year": 2017,
+            "volume": "45",
+            "issue": "3",
+            "pages": "315-341",
+            "doi": "10.1097/CCM.0000000000002254",
+            "pmid": "28114151",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Acute respiratory failure",
+            "authors": "Roussos C, Koutsoukou A",
+            "journal": "European Respiratory Journal",
+            "year": 2003,
+            "volume": "22",
+            "issue": "47_suppl",
+            "pages": "3s-14s",
+            "doi": "10.1183/09031936.03.00020103",
+            "pmid": "14621112",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "acute_decompensated_hf": [
+        {
+            "type": "guideline",
+            "title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+            "authors": "McDonagh TA, Metra M, Adamo M, et al.",
+            "journal": "European Heart Journal",
+            "year": 2021,
+            "volume": "42",
+            "issue": "36",
+            "pages": "3599-3726",
+            "doi": "10.1093/eurheartj/ehab368",
+            "pmid": "34447992",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+            "authors": "Heidenreich PA, Bozkurt B, Aguilar D, et al.",
+            "journal": "Journal of the American College of Cardiology",
+            "year": "2022",
+            "volume": "79",
+            "issue": "17",
+            "pages": "e263-e421",
+            "doi": "10.1016/j.jacc.2021.12.012",
+            "pmid": "35379503",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Acute Heart Failure: Diagnosis and Management",
+            "authors": "NICE Guideline",
+            "journal": "National Institute for Health and Care Excellence",
+            "year": 2014,
+            "url": "https://www.nice.org.uk/guidance/cg187",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Acute decompensated heart failure: update on new and emerging evidence and directions for future research",
+            "authors": "Gheorghiade M, Follath F, Ponikowski P, et al.",
+            "journal": "Journal of Cardiac Failure",
+            "year": 2013,
+            "volume": "19",
+            "issue": "6",
+            "pages": "371-389",
+            "doi": "10.1016/j.cardfail.2013.04.012",
+            "pmid": "23743484",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "upper_airway_obstruction": [
+        {
+            "type": "guideline",
+            "title": "2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care: Part 4: Adult Basic and Advanced Life Support",
+            "authors": "Panchal AR, Bartos JA, Cabañas JG, et al.",
+            "journal": "Circulation",
+            "year": 2020,
+            "volume": "142",
+            "issue": "16_suppl_2",
+            "pages": "S366-S468",
+            "doi": "10.1161/CIR.0000000000000916",
+            "pmid": "33081528",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "ATLS Advanced Trauma Life Support Student Course Manual",
+            "authors": "American College of Surgeons Committee on Trauma",
+            "journal": "ATLS",
+            "year": 2021,
+            "url": "https://www.facs.org/quality-programs/trauma/atls",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Management of acute upper airway obstruction",
+            "authors": "NICE Guideline",
+            "journal": "National Institute for Health and Care Excellence",
+            "year": 2015,
+            "url": "https://www.nice.org.uk/guidance/ng115",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Acute upper airway obstruction",
+            "authors": "Walls RM, Murphy MF",
+            "journal": "New England Journal of Medicine",
+            "year": 2010,
+            "volume": "363",
+            "issue": "8",
+            "pages": "784-791",
+            "doi": "10.1056/NEJMra0910881",
+            "pmid": "20818884",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "spinal_cord_injury": [
+        {
+            "type": "guideline",
+            "title": "Guidelines for the Management of Acute Cervical Spine and Spinal Cord Injuries",
+            "authors": "Ryb GE, Dischinger PC, Ho SM",
+            "journal": "Neurosurgery",
+            "year": 2013,
+            "volume": "72",
+            "issue": "Suppl 2",
+            "pages": "1-259",
+            "doi": "10.1227/NEU.0b013e318276ee40",
+            "pmid": "23417184",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Spinal injury: assessment and initial management",
+            "authors": "NICE Guideline",
+            "journal": "National Institute for Health and Care Excellence",
+            "year": 2016,
+            "url": "https://www.nice.org.uk/guidance/ng41",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Early Acute Management in Adults with Spinal Cord Injury: A Clinical Practice Guideline for Health-Care Professionals",
+            "authors": "Consortium for Spinal Cord Medicine",
+            "journal": "Journal of Spinal Cord Medicine",
+            "year": 2008,
+            "volume": "31",
+            "issue": "4",
+            "pages": "403-479",
+            "doi": "10.1080/10790268.2008.11760740",
+            "pmid": "18959359",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Acute spinal cord injury",
+            "authors": "Eckert MJ, Martin MJ",
+            "journal": "New England Journal of Medicine",
+            "year": 2017,
+            "volume": "376",
+            "issue": "8",
+            "pages": "765-775",
+            "doi": "10.1056/NEJMra1603589",
+            "pmid": "28225675",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "acute_mesenteric_ischemia": [
+        {
+            "type": "guideline",
+            "title": "WSES Guidelines for the management of acute mesenteric ischemia",
+            "authors": "Bala M, Kashuk J, Moore EE, et al.",
+            "journal": "World Journal of Emergency Surgery",
+            "year": 2017,
+            "volume": "12",
+            "pages": "38",
+            "doi": "10.1186/s13017-017-0150-5",
+            "pmid": "28828073",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "The Society for Vascular Surgery practice guidelines on the care of patients with an abdominal aortic aneurysm",
+            "authors": "Chaikof EL, Dalman RL, Eskandari MK, et al.",
+            "journal": "Journal of Vascular Surgery",
+            "year": 2018,
+            "volume": "67",
+            "issue": "1",
+            "pages": "2-77.e2",
+            "doi": "10.1016/j.jvs.2017.10.044",
+            "pmid": "29268916",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Acute mesenteric ischemia",
+            "authors": "Oldenburg WA, Lau LL, Rodenberg TJ, Edmonds HJ, Burger CD",
+            "journal": "Archives of Internal Medicine",
+            "year": 2004,
+            "volume": "164",
+            "issue": "10",
+            "pages": "1054-1062",
+            "doi": "10.1001/archinte.164.10.1054",
+            "pmid": "15159262",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "primary",
+            "title": "Acute mesenteric ischemia: a clinical review",
+            "authors": "Acosta S, Björck M",
+            "journal": "European Journal of Vascular and Endovascular Surgery",
+            "year": 2015,
+            "volume": "49",
+            "issue": "4",
+            "pages": "460-466",
+            "doi": "10.1016/j.ejvs.2014.11.044",
+            "pmid": "25577136",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "cholecystitis_cholangitis": [
+        {
+            "type": "guideline",
+            "title": "Tokyo Guidelines 2018: diagnostic criteria and severity grading of acute cholecystitis (with videos)",
+            "authors": "Yokoe M, Hata J, Takada T, et al.",
+            "journal": "Journal of Hepato-Biliary-Pancreatic Sciences",
+            "year": 2018,
+            "volume": "25",
+            "issue": "1",
+            "pages": "41-54",
+            "doi": "10.1002/jhbp.515",
+            "pmid": "29032610",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Tokyo Guidelines 2018: diagnostic criteria and severity grading of acute cholangitis (with videos)",
+            "authors": "Kiriyama S, Kozaka K, Takada T, et al.",
+            "journal": "Journal of Hepato-Biliary-Pancreatic Sciences",
+            "year": 2018,
+            "volume": "25",
+            "issue": "1",
+            "pages": "17-30",
+            "doi": "10.1002/jhbp.512",
+            "pmid": "29032608",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Tokyo Guidelines 2018: flowchart for the management of acute cholecystitis",
+            "authors": "Okamoto K, Suzuki K, Takada T, et al.",
+            "journal": "Journal of Hepato-Biliary-Pancreatic Sciences",
+            "year": 2018,
+            "volume": "25",
+            "issue": "1",
+            "pages": "55-72",
+            "doi": "10.1002/jhbp.516",
+            "pmid": "29032611",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Acute cholecystitis and cholangitis",
+            "authors": "Indar AA, Beckingham IJ",
+            "journal": "BMJ",
+            "year": 2002,
+            "volume": "325",
+            "issue": "7365",
+            "pages": "639-643",
+            "doi": "10.1136/bmj.325.7365.639",
+            "pmid": "12242178",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
     ]
 }
 

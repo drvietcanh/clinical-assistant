@@ -26,11 +26,14 @@ from .emergency import (
     render_traumatic_brain_injury,
     render_drowning,
     render_heat_stroke,
-    render_hypothermia
+    render_hypothermia,
+    render_cardiac_arrest,
+    render_upper_airway_obstruction,
+    render_spinal_cord_injury
 )
 from .pain import render_acute_pain
-from .respiratory import render_copd, render_asthma
-from .cardiology import render_acs, render_hf, render_atrial_fibrillation, render_dvt_pe, render_bradycardia, render_tachycardia
+from .respiratory import render_copd, render_asthma, render_acute_respiratory_failure
+from .cardiology import render_acs, render_hf, render_acute_decompensated_hf, render_atrial_fibrillation, render_dvt_pe, render_bradycardia, render_tachycardia
 from .nephrology import render_aki
 from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis
 from .endocrinology import (
@@ -43,7 +46,7 @@ from .endocrinology import (
 from .neurology import render_serotonin_syndrome, render_neuroleptic_malignant_syndrome, render_intracranial_hypertension
 from .obstetrics import render_eclampsia, render_postpartum_hemorrhage
 from .dermatology import render_stevens_johnson_syndrome
-from .gastroenterology import render_acute_pancreatitis, render_acute_liver_failure, render_ibd_exacerbation
+from .gastroenterology import render_acute_pancreatitis, render_acute_liver_failure, render_ibd_exacerbation, render_acute_mesenteric_ischemia, render_cholecystitis_cholangitis
 from .hematology import render_transfusion, render_anticoagulation_reversal
 from .oncology import (
     render_tls,
@@ -77,11 +80,16 @@ __all__ = [
     'render_drowning',
     'render_heat_stroke',
     'render_hypothermia',
+    'render_cardiac_arrest',
+    'render_upper_airway_obstruction',
+    'render_spinal_cord_injury',
     'render_acute_pain',
     'render_copd',
     'render_asthma',
+    'render_acute_respiratory_failure',
     'render_acs',
     'render_hf',
+    'render_acute_decompensated_hf',
     'render_atrial_fibrillation',
     'render_dvt_pe',
     'render_bradycardia',
@@ -105,6 +113,8 @@ __all__ = [
     'render_stevens_johnson_syndrome',
     'render_acute_pancreatitis',
     'render_acute_liver_failure',
+    'render_acute_mesenteric_ischemia',
+    'render_cholecystitis_cholangitis',
     'render_transfusion',
     'render_anticoagulation_reversal',
     'render_tls',

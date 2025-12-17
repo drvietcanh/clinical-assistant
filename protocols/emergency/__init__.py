@@ -26,6 +26,9 @@ from .traumatic_brain_injury import render as render_traumatic_brain_injury
 from .drowning import render as render_drowning
 from .heat_stroke import render as render_heat_stroke
 from .hypothermia import render as render_hypothermia
+from .cardiac_arrest import render as render_cardiac_arrest
+from .upper_airway_obstruction import render as render_upper_airway_obstruction
+from .spinal_cord_injury import render as render_spinal_cord_injury
 
 
 __all__ = [
@@ -52,5 +55,8 @@ __all__ = [
     'render_drowning',
     'render_heat_stroke',
     'render_hypothermia',
+    'render_cardiac_arrest',
+    'render_upper_airway_obstruction',
+    'render_spinal_cord_injury',
 ]
 

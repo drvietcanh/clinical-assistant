@@ -48,6 +48,18 @@ def render():
     
     st.markdown("---")
     
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="ich_score",
+            calculator_name="ICH Score",
+            category="Thần Kinh",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
     # Initialize score
     total_score = 0
     

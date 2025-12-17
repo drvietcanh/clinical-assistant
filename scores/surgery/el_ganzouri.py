@@ -302,6 +302,15 @@ def render():
             }
             
             # Save to history
+            # Export section
+            render_export_section(
+                calculator_id="el_ganzouri",
+                calculator_name="El-Ganzouri Risk Index",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
             save_calculation_to_history(
                 calculator_id="el_ganzouri",
                 calculator_name="El-Ganzouri Risk Index",

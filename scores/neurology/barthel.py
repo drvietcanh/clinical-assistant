@@ -349,6 +349,15 @@ def render():
             "Interpretation": interpretation
         }
         
+        # Export section
+        render_export_section(
+            calculator_id="barthel",
+            calculator_name="Barthel Index",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
         save_calculation_to_history(
             calculator_id="barthel",
             calculator_name="Barthel Index",
@@ -356,6 +365,7 @@ def render():
             results=results_dict
         )
         
+        # Share section
         render_share_section(
             calculator_id="barthel",
             calculator_name="Barthel Index",

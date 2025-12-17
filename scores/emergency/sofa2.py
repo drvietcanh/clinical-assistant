@@ -160,11 +160,30 @@ def calculate_sofa2(
 def render():
     """Render SOFA-2 Score calculator in Streamlit"""
     
+    # Load shared result if available
+    shared = load_shared_result_from_url()
+    if shared and shared.get('calculator_id') == 'sofa2':
+        st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'SOFA-2 Score')}")
+        if 'shared_inputs' not in st.session_state:
+            st.session_state['shared_inputs'] = shared.get('inputs', {})
+    
     st.title("🏥 SOFA-2 Score")
     st.markdown("**Sequential Organ Failure Assessment - Version 2 (2025) - Đánh giá suy đa cơ quan**")
     
     # Badge for new version
     st.info("✨ **Version 2025:** Điều chỉnh ngưỡng từ dữ liệu lớn, tích hợp hỗ trợ cơ quan hiện đại")
+    
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="sofa2",
+            calculator_name="SOFA-2 Score",
+            category="Hồi Sức",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
     
     # Educational information
     with st.expander("ℹ️ Thông tin SOFA-2 (2025) & Cách Sử dụng"):
@@ -517,6 +536,15 @@ def render():
             "Risk": result['risk_class']
         }
         
+        # Export section
+        render_export_section(
+            calculator_id="sofa2",
+            calculator_name="SOFA-2 Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
         save_calculation_to_history(
             calculator_id="sofa2",
             calculator_name="SOFA-2 Score",
@@ -524,6 +552,7 @@ def render():
             results=results_dict
         )
         
+        # Share section
         render_share_section(
             calculator_id="sofa2",
             calculator_name="SOFA-2 Score",

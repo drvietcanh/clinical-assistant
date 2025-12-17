@@ -30,11 +30,16 @@ from protocols import (
     render_drowning,
     render_heat_stroke,
     render_hypothermia,
+    render_cardiac_arrest,
+    render_upper_airway_obstruction,
+    render_spinal_cord_injury,
     render_acute_pain,
     render_copd,
     render_asthma,
+    render_acute_respiratory_failure,
     render_acs,
     render_hf,
+    render_acute_decompensated_hf,
     render_atrial_fibrillation,
     render_dvt_pe,
     render_bradycardia,
@@ -52,6 +57,7 @@ from protocols import (
     render_hypoglycemia,
     render_acute_pancreatitis,
     render_acute_liver_failure,
+    render_acute_mesenteric_ischemia,
     render_transfusion,
     render_anticoagulation_reversal,
     render_delirium,
@@ -108,6 +114,9 @@ with st.sidebar:
         protocol = st.radio(
             "Phác đồ:",
             [
+                "💔 Cardiac Arrest / ACLS",
+                "🫀 Tắc Nghẽn Đường Thở Trên (Upper Airway Obstruction)",
+                "🧠 Chấn Thương Tủy Sống (Spinal Cord Injury)",
                 "🦠 Sepsis 1-Hour Bundle",
                 "🦠 Sepsis 3-Hour Bundle",
                 "💔 Quản lý Sốc",
@@ -138,6 +147,7 @@ with st.sidebar:
         protocol = st.radio(
             "Phác đồ:",
             [
+                "🫁 Suy Hô Hấp Cấp (Acute Respiratory Failure)",
                 "🫁 COPD Exacerbation",
                 "🫁 Cơn hen cấp"
             ],
@@ -149,6 +159,7 @@ with st.sidebar:
             [
                 "💔 ACS - Hội chứng vành cấp",
                 "💔 Suy tim Cấp",
+                "💔 Suy Tim Mất Bù Cấp (ADHF)",
                 "💓 Rung Nhĩ (Atrial Fibrillation)",
                 "🩸 DVT/PE Management",
                 "💔 Nhịp chậm (Bradycardia)",
@@ -203,6 +214,7 @@ with st.sidebar:
             [
                 "🫀 Viêm Tụy Cấp (Acute Pancreatitis)",
                 "🫀 Suy gan Cấp (Acute Liver Failure)",
+                "🫀 Thiếu Máu Mạc Treo Cấp (Acute Mesenteric Ischemia)",
                 "🩸 IBD Exacerbation (Acute Exacerbation of IBD)"
             ],
             label_visibility="collapsed"
@@ -293,7 +305,16 @@ st.info(f"""
 st.markdown("---")
 
 # Route to appropriate protocol
-if "Sepsis 1-Hour" in protocol:
+if "Cardiac Arrest" in protocol or "ACLS" in protocol or "cardiac arrest" in protocol.lower() or "acls" in protocol.lower():
+    render_cardiac_arrest()
+
+elif "Upper Airway" in protocol or "Tắc Nghẽn Đường Thở" in protocol or "upper airway" in protocol.lower() or "airway obstruction" in protocol.lower():
+    render_upper_airway_obstruction()
+
+elif "Spinal Cord" in protocol or "Chấn Thương Tủy" in protocol or "spinal cord" in protocol.lower() or "tủy sống" in protocol.lower():
+    render_spinal_cord_injury()
+
+elif "Sepsis 1-Hour" in protocol:
     render_sepsis()
 elif "Sepsis 3-Hour" in protocol:
     render_sepsis_3hour()
@@ -302,6 +323,9 @@ elif "Sepsis" in protocol:
 
 elif "Sốc" in protocol:
     render_shock()
+
+elif "Respiratory Failure" in protocol or "Suy Hô Hấp" in protocol or "respiratory failure" in protocol.lower():
+    render_acute_respiratory_failure()
 
 elif "COPD" in protocol:
     render_copd()
@@ -312,8 +336,11 @@ elif "Hen" in protocol:
 elif "ACS" in protocol:
     render_acs()
 
-elif "Suy tim" in protocol:
+elif "Suy tim" in protocol and "Mất Bù" not in protocol and "ADHF" not in protocol:
     render_hf()
+
+elif "ADHF" in protocol or "Mất Bù" in protocol or "acute decompensated" in protocol.lower():
+    render_acute_decompensated_hf()
 
 elif "Stroke" in protocol:
     render_stroke()
@@ -380,6 +407,9 @@ elif "Pancreatitis" in protocol or "pancreatitis" in protocol.lower() or "Tụy"
 
 elif "Liver Failure" in protocol or "liver failure" in protocol.lower() or "Suy gan" in protocol:
     render_acute_liver_failure()
+
+elif "Mesenteric Ischemia" in protocol or "Thiếu Máu Mạc Treo" in protocol or "mesenteric ischemia" in protocol.lower() or "mạc treo" in protocol.lower():
+    render_acute_mesenteric_ischemia()
 
 elif "Delirium" in protocol or "delirium" in protocol.lower() or "Quản lý Delirium" in protocol:
     render_delirium()

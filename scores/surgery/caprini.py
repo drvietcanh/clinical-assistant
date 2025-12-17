@@ -109,6 +109,14 @@ def render():
             "Dự phòng": prophylaxis
         }
         
+        # Export section
+        render_export_section(
+            calculator_id="caprini",
+            calculator_name="Caprini VTE Risk Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
         # Save to history
         save_calculation_to_history(
             calculator_id="caprini",

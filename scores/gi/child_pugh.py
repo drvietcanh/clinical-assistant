@@ -55,6 +55,18 @@ def render():
     
     st.markdown("---")
     
+    # Smart Suggestions
+    col_main, col_suggestions = st.columns([2, 1])
+    with col_suggestions:
+        render_suggestions(
+            calculator_id="child_pugh",
+            calculator_name="Child-Pugh Score",
+            category="Tiêu Hóa",
+            show_related=True,
+            show_category=True,
+            limit=3
+        )
+    
     # Initialize score
     total_score = 0
     score_breakdown = {}

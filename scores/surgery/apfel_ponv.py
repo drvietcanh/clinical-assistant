@@ -217,6 +217,14 @@ def render():
                 "Dự phòng": result['prophylaxis']
             }
             
+            # Export section
+            render_export_section(
+                calculator_id="apfel_ponv",
+                calculator_name="Apfel PONV Risk Score",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
             # Save to history
             save_calculation_to_history(
                 calculator_id="apfel_ponv",

@@ -300,6 +300,15 @@ def render():
             "Compensation": result["status"]
         }
         
+        # Export section
+        render_export_section(
+            calculator_id="winter_formula",
+            calculator_name="Winter Formula",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
         save_calculation_to_history(
             calculator_id="winter_formula",
             calculator_name="Winter Formula",
@@ -307,6 +316,7 @@ def render():
             results=results_dict
         )
         
+        # Share section
         render_share_section(
             calculator_id="winter_formula",
             calculator_name="Winter Formula",
@@ -323,6 +333,10 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="winter_formula", show_actions=True)
         
         # Clinical interpretation
         st.subheader("🎯 Phân tích Lâm sàng")

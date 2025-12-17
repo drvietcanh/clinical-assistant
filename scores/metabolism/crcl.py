@@ -14,7 +14,7 @@ from components.ui.results import render_result_box
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
-from components.calculation_history import save_calculation_to_history
+from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 # =====================================
@@ -312,6 +312,10 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="crcl", show_actions=True)
         
         # Calculation breakdown
         st.markdown("### 📋 Chi tiết tính toán:")

@@ -364,6 +364,15 @@ def render():
         }
         
         # Save to history
+        # Export section
+        render_export_section(
+            calculator_id="four_score",
+            calculator_name="FOUR Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
         save_calculation_to_history(
             calculator_id="four_score",
             calculator_name="FOUR Score",

@@ -305,6 +305,15 @@ def render():
         }
         
         # Save to history
+        # Export section
+        render_export_section(
+            calculator_id="aspects",
+            calculator_name="ASPECTS Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Save to history
         save_calculation_to_history(
             calculator_id="aspects",
             calculator_name="ASPECTS Score",

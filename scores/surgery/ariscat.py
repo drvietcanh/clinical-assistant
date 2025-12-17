@@ -336,6 +336,14 @@ def render():
                 "Khuyến nghị": result['recommendation']
             }
             
+            # Export section
+            render_export_section(
+                calculator_id="ariscat",
+                calculator_name="ARISCAT - Assess Respiratory Risk in Surgical Patients",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
             # Save to history
             save_calculation_to_history(
                 calculator_id="ariscat",

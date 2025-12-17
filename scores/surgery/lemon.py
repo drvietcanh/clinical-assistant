@@ -261,6 +261,15 @@ def render():
             }
             
             # Save to history
+            # Export section
+            render_export_section(
+                calculator_id="lemon",
+                calculator_name="LEMON Assessment",
+                inputs=inputs_dict,
+                results=results_dict
+            )
+            
+            # Save to history
             save_calculation_to_history(
                 calculator_id="lemon",
                 calculator_name="LEMON Assessment",
