@@ -104,183 +104,20 @@ if offline_js_file.exists():
         st.markdown(f"<script>{f.read()}</script>", unsafe_allow_html=True)
 
 # ========== GOOGLE ANALYTICS ==========
-# Inject Google Analytics script vào <head>
+# Inject Google Analytics script chuẩn vào trang
 if GOOGLE_ANALYTICS_ID and GOOGLE_ANALYTICS_ID != "G-XXXXXXXXXX":
-    # Inject Google Analytics script vào head bằng cách tạo script tag động
-    # Sử dụng streamlit.components.v1.html để inject script
-    import streamlit.components.v1 as components
-    
-    # Google Analytics script - Inject vào head với retry logic
-    ga_head_script = f"""
-    <script>
-        // Inject Google Analytics script vào head với retry logic
-        (function() {{
-            let retryCount = 0;
-            const maxRetries = 5;
-            
-            function initGA() {{
-                try {{
-                    // Tạo script tag cho gtag.js
-                    var gtagScript = document.createElement('script');
-                    gtagScript.async = true;
-                    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id={GOOGLE_ANALYTICS_ID}';
-                    gtagScript.onload = function() {{
-                        // Initialize dataLayer và gtag function
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){{dataLayer.push(arguments);}}
-                        window.gtag = gtag;
-                        gtag('js', new Date());
-                        
-                        // Configure Google Analytics
-                        gtag('config', '{GOOGLE_ANALYTICS_ID}', {{
-                            'page_path': window.location.pathname,
-                            'page_location': window.location.href,
-                            'page_title': document.title,
-                            'send_page_view': true
-                        }});
-                        
-                        // Track initial page view
-                        gtag('event', 'page_view', {{
-                            'page_title': document.title,
-                            'page_location': window.location.href,
-                            'page_path': window.location.pathname
-                        }});
-                    }};
-                    gtagScript.onerror = function() {{
-                        if (retryCount < maxRetries) {{
-                            retryCount++;
-                            setTimeout(initGA, 1000 * retryCount);
-                        }}
-                    }};
-                    
-                    // Inject vào head
-                    (document.head || document.getElementsByTagName('head')[0]).appendChild(gtagScript);
-                }} catch (e) {{
-                    if (retryCount < maxRetries) {{
-                        retryCount++;
-                        setTimeout(initGA, 1000 * retryCount);
-                    }}
-                }}
-            }}
-            
-            // Khởi tạo ngay khi script load
-            if (document.readyState === 'loading') {{
-                document.addEventListener('DOMContentLoaded', initGA);
-            }} else {{
-                initGA();
-            }}
-        }})();
-    </script>
-    """
-    
-    # Inject script vào body (sẽ được execute ngay và inject vào head)
-    components.html(ga_head_script, height=0)
-    
-    # Track page views khi navigate trong Streamlit SPA
-    navigation_tracking = f"""
-    <script>
-        // Track page views khi navigate trong Streamlit SPA
-        (function() {{
-            let lastPath = window.location.pathname;
-            let lastUrl = window.location.href;
-            let isTracking = false;
-            
-            function trackPageView() {{
-                // Đợi gtag được khởi tạo với retry
-                if (typeof gtag === 'undefined' || typeof window.gtag === 'undefined') {{
-                    if (!isTracking) {{
-                        isTracking = true;
-                        setTimeout(trackPageView, 500);
-                    }}
-                    return;
-                }}
-                
-                isTracking = false;
-                
-                try {{
-                    // Update config và track page view
-                    gtag('config', '{GOOGLE_ANALYTICS_ID}', {{
-                        'page_path': window.location.pathname,
-                        'page_location': window.location.href,
-                        'page_title': document.title
-                    }});
-                    
-                    gtag('event', 'page_view', {{
-                        'page_title': document.title,
-                        'page_location': window.location.href,
-                        'page_path': window.location.pathname
-                    }});
-                }} catch (e) {{
-                    console.error('GA tracking error:', e);
-                }}
-            }}
-            
-            // Track khi trang load
-            function initTracking() {{
-                // Đợi một chút để đảm bảo gtag đã load
-                setTimeout(function() {{
-                    trackPageView();
-                }}, 1500);
-            }}
-            
-            if (document.readyState === 'loading') {{
-                document.addEventListener('DOMContentLoaded', initTracking);
-            }} else {{
-                initTracking();
-            }}
-            
-            // Track khi URL thay đổi (Streamlit navigation)
-            function checkUrlChange() {{
-                const currentPath = window.location.pathname;
-                const currentUrl = window.location.href;
-                if (currentPath !== lastPath || currentUrl !== lastUrl) {{
-                    lastPath = currentPath;
-                    lastUrl = currentUrl;
-                    setTimeout(trackPageView, 500);
-                }}
-            }}
-            
-            // Sử dụng MutationObserver để detect Streamlit navigation
-            const observer = new MutationObserver(function() {{
-                checkUrlChange();
-            }});
-            
-            // Observe changes trong document
-            if (document.body) {{
-                observer.observe(document.body, {{
-                    childList: true,
-                    subtree: true
-                }});
-            }} else {{
-                document.addEventListener('DOMContentLoaded', function() {{
-                    observer.observe(document.body, {{
-                        childList: true,
-                        subtree: true
-                    }});
-                }});
-            }}
-            
-            // Periodic check để đảm bảo không miss navigation
-            const checkInterval = setInterval(checkUrlChange, 2000);
-            
-            // Event listeners
-            window.addEventListener('hashchange', function() {{
-                setTimeout(trackPageView, 500);
-            }});
-            window.addEventListener('popstate', function() {{
-                setTimeout(trackPageView, 500);
-            }});
-            
-            // Cleanup khi page unload
-            window.addEventListener('beforeunload', function() {{
-                if (checkInterval) {{
-                    clearInterval(checkInterval);
-                }}
-            }});
-        }})();
-    </script>
-    """
-    components.html(navigation_tracking, height=0)
+    st.markdown(
+        f"""
+        <script async src="https://www.googletagmanager.com/gtag/js?id={GOOGLE_ANALYTICS_ID}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){{dataLayer.push(arguments);}}
+          gtag('js', new Date());
+          gtag('config', '{GOOGLE_ANALYTICS_ID}');
+        </script>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # Apply dark mode
 if st.session_state.dark_mode:
