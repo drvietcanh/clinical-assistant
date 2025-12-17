@@ -55,6 +55,8 @@ from protocols import (
     render_endocarditis,
     render_parasitic_worms,
     render_dengue_fever,
+    render_scrub_typhus,
+    render_malaria,
     render_thyrotoxic_crisis,
     render_myxedema_coma,
     render_adrenal_crisis,
@@ -71,6 +73,9 @@ from protocols import (
     render_acute_colitis,
     render_hepatitis_b,
     render_h_pylori_gastritis,
+    render_hepatitis_c,
+    render_gerd,
+    render_ibs,
     render_transfusion,
     render_anticoagulation_reversal,
     render_delirium,
@@ -201,6 +206,8 @@ with st.sidebar:
                 "🧠 Meningitis / Encephalitis",
                 "🦠 Viêm nội tâm mạc (Endocarditis)",
                 "🦟 Sốt Xuất Huyết Dengue",
+                "🦟 Sốt Mò (Scrub Typhus)",
+                "🦟 Sốt Rét (Malaria)",
                 "🪱 Nhiễm Ký sinh Trùng Giun Sán (Parasitic Worms)"
             ],
             label_visibility="collapsed"
@@ -241,7 +248,10 @@ with st.sidebar:
                 "🫀 Viêm Đại Tràng Cấp (Non-IBD) (Acute Colitis)",
                 "🩸 IBD Exacerbation (Acute Exacerbation of IBD)",
                 "🫀 Điều Trị Viêm Gan B (Hepatitis B Treatment)",
-                "🫀 Viêm Loét Dạ Dày HP (+) (H. pylori Gastritis/Ulcer)"
+                "🫀 Viêm Loét Dạ Dày HP (+) (H. pylori Gastritis/Ulcer)",
+                "🫀 Điều Trị Viêm Gan C (Hepatitis C Treatment)",
+                "🫀 Trào Ngược Dạ Dày Thực Quản (GERD)",
+                "🫀 Hội Chứng Ruột Kích Thích (IBS)"
             ],
             label_visibility="collapsed"
         )
@@ -464,6 +474,15 @@ elif "Hepatitis B" in protocol or "Viêm Gan B" in protocol or "hepatitis b" in 
 elif "H. pylori" in protocol or "pylori" in protocol.lower() or "HP (+)" in protocol or "HP dương" in protocol.lower() or "Viêm Loét Dạ Dày HP" in protocol:
     render_h_pylori_gastritis()
 
+elif "Hepatitis C" in protocol or "Viêm Gan C" in protocol or "hepatitis c" in protocol.lower() or "viêm gan c" in protocol.lower():
+    render_hepatitis_c()
+
+elif "GERD" in protocol or "Trào Ngược" in protocol or "gerd" in protocol.lower() or "trào ngược" in protocol.lower() or "Gastroesophageal Reflux" in protocol:
+    render_gerd()
+
+elif "IBS" in protocol or "Ruột Kích Thích" in protocol or "ibs" in protocol.lower() or "ruột kích thích" in protocol.lower() or "Irritable Bowel" in protocol:
+    render_ibs()
+
 elif "Delirium" in protocol or "delirium" in protocol.lower() or "Quản lý Delirium" in protocol:
     render_delirium()
 
@@ -514,6 +533,9 @@ elif "Tachycardia" in protocol or "tachycardia" in protocol.lower() or "Nhịp n
 
 elif "Endocarditis" in protocol or "endocarditis" in protocol.lower() or "Viêm nội tâm mạc" in protocol:
     render_endocarditis()
+
+elif "Sốt Mò" in protocol or "Scrub Typhus" in protocol or "scrub typhus" in protocol.lower() or "sốt mò" in protocol.lower():
+    render_scrub_typhus()
 
 elif "Ký sinh Trùng" in protocol or "Parasitic" in protocol or "parasitic" in protocol.lower() or "Giun Sán" in protocol or "giun sán" in protocol.lower():
     render_parasitic_worms()

@@ -38,7 +38,7 @@ from .pain import render_acute_pain
 from .respiratory import render_copd, render_asthma, render_acute_respiratory_failure
 from .cardiology import render_acs, render_hf, render_acute_decompensated_hf, render_atrial_fibrillation, render_dvt_pe, render_bradycardia, render_tachycardia
 from .nephrology import render_aki
-from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis, render_parasitic_worms
+from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis, render_parasitic_worms, render_dengue_fever, render_scrub_typhus, render_malaria
 from .endocrinology import (
     render_thyrotoxic_crisis,
     render_myxedema_coma,
@@ -49,7 +49,7 @@ from .endocrinology import (
 from .neurology import render_serotonin_syndrome, render_neuroleptic_malignant_syndrome, render_intracranial_hypertension
 from .obstetrics import render_eclampsia, render_postpartum_hemorrhage
 from .dermatology import render_stevens_johnson_syndrome
-from .gastroenterology import render_acute_pancreatitis, render_acute_liver_failure, render_ibd_exacerbation, render_acute_mesenteric_ischemia, render_cholecystitis_cholangitis, render_acute_appendicitis, render_acute_diverticulitis, render_acute_intestinal_obstruction, render_acute_hepatitis, render_acute_colitis
+from .gastroenterology import render_acute_pancreatitis, render_acute_liver_failure, render_ibd_exacerbation, render_acute_mesenteric_ischemia, render_cholecystitis_cholangitis, render_acute_appendicitis, render_acute_diverticulitis, render_acute_intestinal_obstruction, render_acute_hepatitis, render_acute_colitis, render_hepatitis_b, render_h_pylori_gastritis, render_hepatitis_c, render_gerd, render_ibs
 from .hematology import render_transfusion, render_anticoagulation_reversal
 from .oncology import (
     render_tls,
@@ -106,8 +106,10 @@ __all__ = [
     'render_cdiff',
     'render_meningitis',
     'render_endocarditis',
-    'render_dengue_fever',
     'render_parasitic_worms',
+    'render_dengue_fever',
+    'render_scrub_typhus',
+    'render_malaria',
     'render_thyrotoxic_crisis',
     'render_myxedema_coma',
     'render_adrenal_crisis',
@@ -141,5 +143,10 @@ __all__ = [
     'render_acute_gout',
     'render_ra_flare',
     'render_ibd_exacerbation',
+    'render_hepatitis_b',
+    'render_h_pylori_gastritis',
+    'render_hepatitis_c',
+    'render_gerd',
+    'render_ibs',
 ]
 

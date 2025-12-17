@@ -2965,6 +2965,132 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         }
     ],
     
+    "Hepatitis C": [
+        {
+            "type": "guideline",
+            "title": "HCV Guidance: Recommendations for Testing, Managing, and Treating Hepatitis C",
+            "authors": "AASLD/IDSA HCV Guidance Panel",
+            "journal": "Hepatology",
+            "year": 2023,
+            "url": "https://www.hcvguidelines.org",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "EASL Recommendations on Treatment of Hepatitis C",
+            "authors": "European Association for the Study of the Liver",
+            "journal": "Journal of Hepatology",
+            "year": 2023,
+            "volume": "79",
+            "issue": "2",
+            "pages": "214-239",
+            "doi": "10.1016/j.jhep.2023.05.007",
+            "pmid": "37562533",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "WHO Guidelines for the care and treatment of persons diagnosed with chronic hepatitis C virus infection",
+            "authors": "World Health Organization",
+            "journal": "WHO Guidelines",
+            "year": 2022,
+            "url": "https://www.who.int/publications/i/item/9789240051662",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Treatment of chronic hepatitis C virus infection",
+            "authors": "Lok ASF, Terrault NA",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+    
+    "GERD": [
+        {
+            "type": "guideline",
+            "title": "ACG Clinical Guideline for the Diagnosis and Management of Gastroesophageal Reflux Disease",
+            "authors": "Katz PO, Dunbar KB, Schnoll-Sussman FH, et al.",
+            "journal": "American Journal of Gastroenterology",
+            "year": 2022,
+            "volume": "117",
+            "issue": "1",
+            "pages": "27-56",
+            "doi": "10.14309/ajg.0000000000001538",
+            "pmid": "34807007",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "AGA Clinical Practice Update on the Diagnosis and Management of Gastroesophageal Reflux Disease",
+            "authors": "Gyawali CP, Kahrilas PJ, Savarino E, et al.",
+            "journal": "Gastroenterology",
+            "year": 2021,
+            "volume": "161",
+            "issue": "5",
+            "pages": "1325-1337",
+            "doi": "10.1053/j.gastro.2021.08.060",
+            "pmid": "34593314",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Medical management of gastroesophageal reflux disease in adults",
+            "authors": "Kahrilas PJ, Shaheen NJ, Vaezi MF",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+    
+    "IBS": [
+        {
+            "type": "guideline",
+            "title": "ACG Clinical Guideline: Management of Irritable Bowel Syndrome",
+            "authors": "Lacy BE, Pimentel M, Brenner DM, et al.",
+            "journal": "American Journal of Gastroenterology",
+            "year": 2021,
+            "volume": "116",
+            "issue": "1",
+            "pages": "17-44",
+            "doi": "10.14309/ajg.0000000000001036",
+            "pmid": "33315591",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Rome IV Criteria for Irritable Bowel Syndrome",
+            "authors": "Drossman DA, Hasler WL",
+            "journal": "Gastroenterology",
+            "year": 2016,
+            "volume": "150",
+            "issue": "6",
+            "pages": "1257-1260",
+            "doi": "10.1053/j.gastro.2016.03.035",
+            "pmid": "27147121",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Treatment of irritable bowel syndrome",
+            "authors": "Lacy BE, Patel NK",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+    
     "Acute Hepatitis": [
         {
             "type": "guideline",

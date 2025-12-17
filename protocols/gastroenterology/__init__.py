@@ -15,6 +15,9 @@ from .acute_hepatitis import render as render_acute_hepatitis
 from .acute_colitis import render as render_acute_colitis
 from .hepatitis_b import render as render_hepatitis_b
 from .h_pylori_gastritis import render as render_h_pylori_gastritis
+from .hepatitis_c import render as render_hepatitis_c
+from .gerd import render as render_gerd
+from .ibs import render as render_ibs
 
 
 __all__ = [
@@ -30,5 +33,8 @@ __all__ = [
     'render_acute_colitis',
     'render_hepatitis_b',
     'render_h_pylori_gastritis',
+    'render_hepatitis_c',
+    'render_gerd',
+    'render_ibs',
 ]
 

@@ -19,6 +19,7 @@ def render():
     - Giun đũa (Ascaris lumbricoides)
     - Giun tóc (Trichuris trichiura)
     - Giun móc (Hookworm - Ancylostoma/Necator)
+    - Giun lươn (Strongyloidiasis - Strongyloides stercoralis)
     - Sán lá gan (Liver fluke - Clonorchis/Opisthorchis)
     - Sán lá phổi (Paragonimiasis - Paragonimus)
     - Giun kim (Enterobius vermicularis)
@@ -38,6 +39,7 @@ def render():
             "Giun đũa (Ascaris)",
             "Giun tóc (Trichuris)",
             "Giun móc (Hookworm)",
+            "Giun lươn (Strongyloidiasis)",
             "Sán lá gan (Liver fluke)",
             "Sán lá phổi (Paragonimiasis)",
             "Giun kim (Enterobius)",
@@ -58,6 +60,8 @@ def render():
         render_trichuriasis()
     elif "Giun móc" in infection_type or "Hookworm" in infection_type:
         render_hookworm()
+    elif "Giun lươn" in infection_type or "Strongyloidiasis" in infection_type or "Strongyloides" in infection_type:
+        render_strongyloidiasis()
     elif "Sán lá gan" in infection_type or "Liver fluke" in infection_type:
         render_liver_fluke()
     elif "Sán lá phổi" in infection_type or "Paragonimiasis" in infection_type or "Paragonimus" in infection_type:
@@ -445,6 +449,175 @@ def render_hookworm():
     - Cải thiện vệ sinh môi trường
     - Điều trị định kỳ cho cộng đồng
     - Bổ sung sắt cho phụ nữ có thai và trẻ em
+    """)
+
+
+def render_strongyloidiasis():
+    """Strongyloidiasis (Giun lươn) Protocol"""
+    
+    st.success("## 🪱 GIUN LƯƠN (Strongyloidiasis - Strongyloides stercoralis)")
+    
+    st.error("""
+    **⚠️ QUAN TRỌNG: Giun lươn có thể gây nhiễm lan tỏa (disseminated) nguy hiểm!**
+    - Đặc biệt nguy hiểm ở người suy giảm miễn dịch
+    - Tỷ lệ tử vong: 50-85% nếu nhiễm lan tỏa
+    """)
+    
+    st.markdown("### 📋 Chẩn đoán")
+    
+    with st.expander("🔍 Tiêu chuẩn chẩn đoán", expanded=True):
+        st.markdown("""
+        **Triệu chứng:**
+        - Thường không có triệu chứng (light infection)
+        - Đau bụng, tiêu chảy
+        - Ngứa da (larva currens - đặc trưng)
+        - Ho, khó thở (khi ấu trùng qua phổi)
+        - Phát ban mẩn đỏ (urticaria)
+        - Thiếu máu (heavy infection)
+        
+        **Nhiễm lan tỏa (Disseminated - nguy hiểm):**
+        - Sốt, nhiễm khuẩn huyết
+        - Viêm màng não
+        - Suy đa tạng
+        - Tỷ lệ tử vong cao
+        
+        **Xét nghiệm:**
+        - Soi phân tìm ấu trùng (larvae) - khó phát hiện
+        - Nuôi cấy phân (Baermann technique)
+        - Hút dịch tá tràng (duodenal aspirate)
+        - Huyết thanh học (ELISA, IFA)
+        - Eosinophilia (thường có)
+        """)
+    
+    st.markdown("---")
+    
+    # ========== TREATMENT ==========
+    st.markdown("### 💊 Điều trị")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.success("""
+        **Điều trị Không Biến chứng:**
+        
+        **Lựa chọn 1 (Ưu tiên):**
+        - **Ivermectin** 200mcg/kg PO QD x 2 ngày
+        - Hiệu quả: 85-95%
+        - An toàn, ít tác dụng phụ
+        
+        **Lựa chọn 2:**
+        - **Albendazole** 400mg PO BID x 7 ngày
+        - Hiệu quả: 60-80%
+        - Dùng khi không có ivermectin
+        
+        **Lựa chọn 3:**
+        - **Thiabendazole** 25mg/kg PO BID x 2-3 ngày
+        - Hiệu quả: 70-90%
+        - Nhiều tác dụng phụ
+        """)
+    
+    with col2:
+        st.error("""
+        **Điều trị Nhiễm Lan Tỏa (Disseminated):**
+        
+        **CẤP CỨU - ICU:**
+        - **Ivermectin** 200mcg/kg PO QD x 7-14 ngày
+        - Hoặc **Ivermectin** 200mcg/kg NG/OG nếu không uống được
+        - Có thể cần dùng lâu hơn
+        
+        **Kết hợp:**
+        - **Albendazole** 400mg PO BID x 7-14 ngày
+        - Điều trị song song với ivermectin
+        
+        **Điều trị hỗ trợ:**
+        - Kháng sinh nếu có nhiễm khuẩn
+        - Điều trị suy đa tạng
+        - ICU monitoring
+        """)
+    
+    st.markdown("---")
+    
+    # ========== DOSING ==========
+    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    
+    import pandas as pd
+    dosing_data = {
+        "Thuốc": [
+            "Ivermectin",
+            "Albendazole",
+            "Thiabendazole"
+        ],
+        "Liều Người Lớn": [
+            "200mcg/kg PO QD x 2 ngày",
+            "400mg PO BID x 7 ngày",
+            "25mg/kg PO BID x 2-3 ngày"
+        ],
+        "Liều Trẻ Em": [
+            "200mcg/kg PO QD x 2 ngày (>15kg)",
+            "400mg PO BID x 7 ngày (>1 tuổi)",
+            "25mg/kg PO BID x 2-3 ngày"
+        ],
+        "Ghi chú": [
+            "Lựa chọn 1, an toàn, hiệu quả cao",
+            "Dùng khi không có ivermectin",
+            "Nhiều tác dụng phụ"
+        ]
+    }
+    
+    st.dataframe(pd.DataFrame(dosing_data), use_container_width=True, hide_index=True)
+    
+    st.markdown("---")
+    
+    # ========== MONITORING ==========
+    st.markdown("### 📈 Theo dõi")
+    
+    st.markdown("""
+    **Sau điều trị:**
+    - Soi phân lại sau 2-4 tuần (3 mẫu phân liên tiếp)
+    - Hút dịch tá tràng lại nếu cần
+    - Đánh giá triệu chứng
+    - Đánh giá eosinophilia
+    
+    **Dấu hiệu cảnh báo:**
+    - Triệu chứng không cải thiện
+    - Vẫn còn ấu trùng trong phân
+    - Dấu hiệu nhiễm lan tỏa
+    - Cần điều trị lại
+    """)
+    
+    st.markdown("---")
+    
+    # ========== SPECIAL POPULATIONS ==========
+    st.markdown("### 👥 Nhóm Bệnh Nhân Đặc Biệt")
+    
+    st.warning("""
+    **Người suy giảm miễn dịch (QUAN TRỌNG):**
+    - Tăng nguy cơ nhiễm lan tỏa
+    - Cần điều trị sớm và đầy đủ
+    - Có thể cần điều trị dự phòng (prophylaxis)
+    - Theo dõi sát
+    
+    **Trước khi dùng thuốc ức chế miễn dịch:**
+    - **PHẢI** kiểm tra và điều trị giun lươn trước
+    - Nếu có nhiễm, điều trị trước khi dùng steroid/immunosuppressant
+    
+    **Phụ nữ có thai:**
+    - Ivermectin: Category C (cân nhắc)
+    - Albendazole: Tránh trong 3 tháng đầu
+    - Cân nhắc lợi ích/nguy cơ
+    """)
+    
+    st.markdown("---")
+    
+    # ========== PREVENTION ==========
+    st.markdown("### 🛡️ Phòng ngừa")
+    
+    st.info("""
+    - Đi giày dép khi đi trên đất
+    - Tránh tiếp xúc trực tiếp với đất ẩm
+    - Cải thiện vệ sinh môi trường
+    - Điều trị người nhiễm để ngăn lây lan
+    - **QUAN TRỌNG:** Kiểm tra và điều trị trước khi dùng thuốc ức chế miễn dịch
     """)
 
 
