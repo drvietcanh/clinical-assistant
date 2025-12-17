@@ -426,6 +426,8 @@ with tab1:
     
     # Group modules by category
     modules = get_module_list_for_navigation()
+    # Ẩn module Kháng sinh (chuyên sâu) khỏi trang chủ, chỉ truy cập qua Cơ sở dữ liệu thuốc
+    modules = [m for m in modules if m.get("id") != "antibiotics"]
     
     # Define categories
     categories = {
