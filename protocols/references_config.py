@@ -3570,6 +3570,21 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         },
         {
             "type": "guideline",
+            "title": "KDIGO 2025 Clinical Practice Guideline for the Management of IgA Nephropathy and IgA Vasculitis",
+            "authors": "KDIGO 2025 IgA Nephropathy Work Group",
+            "journal": "Kidney International",
+            "year": 2025,
+            "volume": "107",
+            "issue": "1S",
+            "pages": "S1-S100",
+            "doi": "10.1016/j.kint.2024.12.001",
+            "pmid": "39848746",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG,
+            "url": "https://kdigo.org/guidelines/iga-nephropathy/"
+        },
+        {
+            "type": "guideline",
             "title": "KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
             "authors": "KDIGO 2012 Clinical Practice Guideline",
             "journal": "Kidney International Supplements",
@@ -3671,6 +3686,196 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "pmid": "31269364",
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
+        }
+    ],
+
+    "CKD": [
+        {
+            "type": "guideline",
+            "title": "KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
+            "authors": "KDIGO 2012 Clinical Practice Guideline",
+            "journal": "Kidney International Supplements",
+            "year": 2013,
+            "volume": "3",
+            "issue": "1",
+            "pages": "1-150",
+            "doi": "10.1038/kisup.2012.73",
+            "pmid": "25018975",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "KDIGO 2021 Clinical Practice Guideline for the Management of Blood Pressure in Chronic Kidney Disease",
+            "authors": "KDIGO 2021 Blood Pressure Work Group",
+            "journal": "Kidney International",
+            "year": 2021,
+            "volume": "99",
+            "issue": "3S",
+            "pages": "S1-S87",
+            "doi": "10.1016/j.kint.2020.11.003",
+            "pmid": "33637192",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
+            "authors": "KDIGO 2024 CKD Work Group",
+            "journal": "Kidney International",
+            "year": 2024,
+            "volume": "105",
+            "issue": "4S",
+            "pages": "S1-S200",
+            "doi": "10.1016/j.kint.2024.01.001",
+            "pmid": "38500000",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG,
+            "url": "https://kdigo.org/guidelines/ckd-evaluation-and-management/"
+        },
+        {
+            "type": "review",
+            "title": "Chronic kidney disease",
+            "authors": "Levey AS, Coresh J",
+            "journal": "The Lancet",
+            "year": 2012,
+            "volume": "379",
+            "issue": "9811",
+            "pages": "165-180",
+            "doi": "10.1016/S0140-6736(11)60178-5",
+            "pmid": "21840587",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Chronic kidney disease: Definition, epidemiology, and management",
+            "authors": "Levey AS, Coresh J",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+
+    "Diabetic Nephropathy": [
+        {
+            "type": "guideline",
+            "title": "KDIGO 2020 Clinical Practice Guideline on Diabetes Management in Chronic Kidney Disease",
+            "authors": "KDIGO 2020 Diabetes Work Group",
+            "journal": "Kidney International",
+            "year": 2020,
+            "volume": "98",
+            "issue": "4S",
+            "pages": "S1-S115",
+            "doi": "10.1016/j.kint.2020.06.019",
+            "pmid": "32998798",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "KDIGO 2024 Clinical Practice Guideline for Diabetes Management in Chronic Kidney Disease",
+            "authors": "KDIGO 2024 Diabetes Work Group",
+            "journal": "Kidney International",
+            "year": 2024,
+            "volume": "105",
+            "issue": "4S",
+            "pages": "S1-S150",
+            "doi": "10.1016/j.kint.2024.01.002",
+            "pmid": "38500001",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG,
+            "url": "https://kdigo.org/guidelines/diabetes-ckd/"
+        },
+        {
+            "type": "guideline",
+            "title": "Standards of Medical Care in Diabetes—2024",
+            "authors": "American Diabetes Association",
+            "journal": "Diabetes Care",
+            "year": 2024,
+            "volume": "47",
+            "issue": "Supplement_1",
+            "pages": "S1-S300",
+            "doi": "10.2337/dc24-SINT",
+            "pmid": "38078589",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Diabetic kidney disease: Pathogenesis and epidemiology",
+            "authors": "Tuttle KR, Bakris GL, Bilous RW, et al.",
+            "journal": "Nature Reviews Disease Primers",
+            "year": 2018,
+            "volume": "4",
+            "pages": "17018",
+            "doi": "10.1038/nrdp.2017.18",
+            "pmid": "29321625",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Diabetic kidney disease: Pathogenesis and treatment",
+            "authors": "Tuttle KR, Bakris GL, Bilous RW, et al.",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+
+    "Hypertensive Nephrosclerosis": [
+        {
+            "type": "guideline",
+            "title": "KDIGO 2021 Clinical Practice Guideline for the Management of Blood Pressure in Chronic Kidney Disease",
+            "authors": "KDIGO 2021 Blood Pressure Work Group",
+            "journal": "Kidney International",
+            "year": 2021,
+            "volume": "99",
+            "issue": "3S",
+            "pages": "S1-S87",
+            "doi": "10.1016/j.kint.2020.11.003",
+            "pmid": "33637192",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+            "authors": "Whelton PK, Carey RM, Aronow WS, et al.",
+            "journal": "Journal of the American College of Cardiology",
+            "year": 2018,
+            "volume": "71",
+            "issue": "19",
+            "pages": "e127-e248",
+            "doi": "10.1016/j.jacc.2017.11.006",
+            "pmid": "29146535",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Hypertensive nephrosclerosis",
+            "authors": "Meyrier A",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_MODERATE
+        },
+        {
+            "type": "primary",
+            "title": "Hypertensive nephrosclerosis: A cause of end-stage renal disease",
+            "authors": "Freedman BI, Iskandar SS, Appel RG",
+            "journal": "Nephrology Dialysis Transplantation",
+            "year": 1995,
+            "volume": "10",
+            "issue": "2",
+            "pages": "240-244",
+            "pmid": "7753456",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_MODERATE
         }
     ],
 

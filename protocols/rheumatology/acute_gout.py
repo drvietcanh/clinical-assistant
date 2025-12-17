@@ -1,6 +1,6 @@
 """
 Acute Gout Management Protocol
-ACR 2020, EULAR 2016 Guidelines
+ACR 2020, ACR 2023, EULAR 2016, EULAR 2023 Guidelines
 Acute Gout Attack Management
 """
 
@@ -12,7 +12,7 @@ from components.references import render_references_section
 def render():
     """Acute Gout Management Protocol"""
     st.subheader("🦴 Acute Gout Management Protocol")
-    st.caption("ACR 2020, EULAR 2016 - Acute Gout Attack Management")
+    st.caption("ACR 2020, ACR 2023, EULAR 2016, EULAR 2023 - Acute Gout Attack Management")
     
     st.info("""
     **Gout là bệnh viêm khớp do lắng đọng tinh thể monosodium urate (MSU)**

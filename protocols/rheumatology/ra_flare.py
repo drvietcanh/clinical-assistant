@@ -1,6 +1,6 @@
 """
 Acute Flare of Rheumatoid Arthritis Protocol
-ACR 2021 Guidelines, EULAR Recommendations
+ACR 2021, ACR 2023 Guidelines, EULAR 2022, EULAR 2023 Recommendations
 Management of RA Flare/Exacerbation
 """
 
@@ -12,7 +12,7 @@ from components.references import render_references_section
 def render():
     """Acute Flare of Rheumatoid Arthritis Protocol"""
     st.subheader("🦴 Acute Flare of Rheumatoid Arthritis Protocol")
-    st.caption("ACR 2021, EULAR Guidelines - RA Flare Management")
+    st.caption("ACR 2021, ACR 2023, EULAR 2022, EULAR 2023 Guidelines - RA Flare Management")
     
     st.info("""
     **RA Flare là đợt xấu đi cấp tính các triệu chứng viêm khớp dạng thấp.**

@@ -56,12 +56,42 @@ summary:
   - Non-DHP CCB + β-blocker → block nhĩ–thất/brady.
 - Lối sống: giảm muối (<5 g muối/ngày), giảm cân, vận động, hạn chế rượu, ngưng hút thuốc.
 
-## 6. Công cụ trong app (gắn link)
-- eGFR (CKD-EPI), CrCl (Cockcroft-Gault) để chỉnh liều.
-- ASCVD 10-year hoặc SCORE2/SCORE2-OP để phân tầng nguy cơ.
-- BMI để tư vấn giảm cân.
+## 6. Công cụ trong app
 
-## 7. Tài liệu tham khảo
+- **eGFR (CKD-EPI), CrCl (Cockcroft-Gault):** Chỉnh liều thuốc khi suy thận.
+- **ASCVD 10-year hoặc SCORE2/SCORE2-OP:** Phân tầng nguy cơ tim mạch.
+- **BMI:** Tư vấn giảm cân.
+
+## 7. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**ACEi:**
+- Lisinopril, Enalapril, Ramipril, Captopril, Perindopril
+
+**ARB:**
+- Losartan, Valsartan, Irbesartan, Telmisartan, Olmesartan, Candesartan
+
+**CCB:**
+- Amlodipine, Lacidipine, Nifedipine, Verapamil, Diltiazem
+
+**Thiazide/Thiazide-like:**
+- Hydrochlorothiazide (HCTZ), Chlorthalidone, Indapamide
+
+**MRA:**
+- Spironolactone, Eplerenone
+
+**β-blocker:**
+- Metoprolol, Bisoprolol, Atenolol, Carvedilol
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc (tiếng Anh hoặc tiếng Việt)
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác, chỉnh liều theo thận/gan
+4. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc" (đặc biệt quan trọng với "triple whammy": RAASi + NSAID + lợi tiểu)
+5. So sánh thuốc: Menu "💊 Tra cứu thuốc" → "📊 So sánh thuốc trực quan"
+
+## 8. Tài liệu tham khảo
 - ESC/ESH Guidelines for the management of arterial hypertension, 2023 (updates 2024).
 - ACC/AHA 2024 Hypertension guidance.
 - KDIGO 2024 CKD (liên quan mục tiêu HA và RAASi ở CKD).

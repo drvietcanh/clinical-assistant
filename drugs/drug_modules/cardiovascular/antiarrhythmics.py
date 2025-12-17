@@ -220,6 +220,354 @@ ANTIARRHYTHMICS = {
             "evidence_level": "High - Multiple RCTs (EMERALD, ARREST) and extensive clinical experience in life-threatening arrhythmias"
         }
       },
+    "Flecainide": {
+        "group": "Cardiovascular - Antiarrhythmic (Class IC)",
+        "vietnamese_name": "Flecainide, Tambocor",
+        "administration": ["PO"],
+        "indications": [
+            "Rung nhĩ (chuyển nhịp, duy trì nhịp xoang)",
+            "Nhịp nhanh trên thất (SVT)",
+            "Rối loạn nhịp thất (nếu không có bệnh tim cấu trúc)"
+        ],
+        "contraindications": [
+            "Bệnh tim cấu trúc (suy tim, bệnh mạch vành, bệnh van tim)",
+            "Block nhĩ thất độ 2-3",
+            "Hội chứng Brugada",
+            "QT kéo dài",
+            "Suy thận nặng (CrCl <50)"
+        ],
+        "dosage": {
+            "adult_po_loading": "200-300mg PO (chuyển nhịp AF)",
+            "adult_po_maintenance": "100-200mg x 2 lần/ngày",
+            "adult_max": "400mg/ngày",
+            "notes": "CHỈ dùng nếu KHÔNG có bệnh tim cấu trúc. Theo dõi ECG trước và sau khi bắt đầu."
+        },
+        "side_effects": [
+            "Rối loạn nhịp tim nặng (proarrhythmia)",
+            "Block nhĩ thất",
+            "Suy tim (nếu có bệnh tim)",
+            "Chóng mặt",
+            "Nhìn mờ",
+            "Khó thở"
+        ],
+        "interactions": [
+            "Amiodarone: tăng nồng độ flecainide",
+            "Digoxin: tăng nồng độ digoxin",
+            "Beta-blockers: tăng nguy cơ block nhĩ thất",
+            "Verapamil, Diltiazem: tăng nguy cơ block nhĩ thất"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Class IC antiarrhythmic. Ức chế mạnh kênh Na+ voltage-gated, giảm tốc độ khử cực (phase 0), giảm dẫn truyền trong tim. Không ảnh hưởng đáng kể đến thời gian khử cực (QT interval). Hiệu quả cao cho rung nhĩ và SVT, nhưng có nguy cơ proarrhythmia cao, đặc biệt ở bệnh nhân có bệnh tim cấu trúc. CHỈ dùng nếu KHÔNG có bệnh tim cấu trúc (suy tim, bệnh mạch vành, bệnh van tim).",
+        "monitoring": [
+            "ECG: trước và sau khi bắt đầu, định kỳ (theo dõi QRS width, block AV)",
+            "QRS width: tăng >25% hoặc QRS >150ms → giảm liều hoặc ngừng",
+            "Block nhĩ thất: theo dõi dấu hiệu block AV",
+            "Chức năng tim: siêu âm tim nếu có triệu chứng suy tim",
+            "Nồng độ flecainide trong máu (nếu có thể, mục tiêu 0.2-1.0 mcg/mL)",
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều ở suy thận"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI nếu có bệnh tim cấu trúc (suy tim, bệnh mạch vành, bệnh van tim) - nguy cơ proarrhythmia và suy tim cao",
+            "CHỐNG CHỈ ĐỊNH nếu có hội chứng Brugada - nguy cơ rung thất",
+            "CHỈ dùng nếu KHÔNG có bệnh tim cấu trúc - đánh giá siêu âm tim trước khi dùng",
+            "Theo dõi ECG trước và sau khi bắt đầu - tăng QRS >25% hoặc QRS >150ms → giảm liều hoặc ngừng",
+            "Theo dõi block nhĩ thất - có thể gây block AV độ 2-3",
+            "Điều chỉnh liều ở suy thận (CrCl 30-50: giảm liều 25-50%; CrCl <30: tránh dùng)",
+            "Tránh dùng với amiodarone (tăng nồng độ flecainide)",
+            "Tránh dùng với beta-blockers, verapamil, diltiazem (tăng nguy cơ block AV)",
+            "Theo dõi nồng độ digoxin nếu dùng cùng (flecainide tăng nồng độ digoxin)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12-27 giờ",
+            "onset": "1-6 giờ",
+            "duration": "Dài (do half-life dài)",
+            "protein_binding": "40-50%",
+            "clearance": "Thận (thải trừ chủ yếu nguyên dạng 30-50%), gan (chuyển hóa một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây rối loạn nhịp tim nặng (proarrhythmia) và tử vong, đặc biệt ở bệnh nhân có bệnh tim cấu trúc. CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI nếu có suy tim, bệnh mạch vành, hoặc bệnh van tim. CHỈ dùng nếu KHÔNG có bệnh tim cấu trúc. Theo dõi ECG trước và sau khi bắt đầu.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Amiodarone",
+                    "mechanism": "Amiodarone ức chế chuyển hóa flecainide, tăng nồng độ flecainide",
+                    "effect": "Tăng nồng độ flecainide, tăng nguy cơ proarrhythmia và độc tính",
+                    "management": "TRÁNH dùng chung. Nếu bắt buộc: giảm liều flecainide 50%. Theo dõi ECG và nồng độ flecainide chặt chẽ."
+                },
+                {
+                    "drug": "Beta-blockers, Verapamil, Diltiazem",
+                    "mechanism": "Tác dụng hiệp đồng ức chế dẫn truyền AV",
+                    "effect": "Tăng nguy cơ block nhĩ thất độ 2-3",
+                    "management": "Thận trọng. Theo dõi ECG chặt chẽ. Có thể cần giảm liều một trong hai thuốc."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Flecainide tăng nồng độ digoxin (ức chế P-glycoprotein)",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ ngộ độc digoxin",
+                    "management": "Theo dõi nồng độ digoxin. Có thể cần giảm liều digoxin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Bệnh tim cấu trúc (suy tim, bệnh mạch vành, bệnh van tim)",
+                "Block nhĩ thất độ 2-3",
+                "Hội chứng Brugada",
+                "QT kéo dài",
+                "Suy thận nặng (CrCl <30)"
+            ],
+            "tương_đối": [
+                "Suy thận (CrCl 30-50) - giảm liều 25-50%",
+                "Block nhĩ thất độ 1 - có thể làm nặng block",
+                "Dùng với amiodarone - tăng nồng độ flecainide",
+                "Dùng với beta-blockers, verapamil, diltiazem - tăng nguy cơ block AV"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Có thể dùng nếu lợi ích vượt quá nguy cơ. Thận trọng.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không có dữ liệu về bài tiết flecainide vào sữa mẹ. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Tránh dùng khi cho con bú nếu có thể. Nếu phải dùng, theo dõi trẻ sát."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể giảm liều nhẹ",
+            "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+            "notes": "Flecainide chuyển hóa một phần ở gan. Suy gan có thể làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Rối loạn nhịp tim nặng (proarrhythmia, rung thất)",
+                "Block nhĩ thất độ 2-3",
+                "Suy tim cấp",
+                "Chóng mặt, lú lẫn",
+                "Co giật (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị rối loạn nhịp.",
+            "treatment": [
+                "Theo dõi ECG liên tục",
+                "Hỗ trợ hô hấp nếu cần",
+                "Điều trị rối loạn nhịp tim (theo protocol ACLS)",
+                "Pacemaker nếu block AV nặng",
+                "Hỗ trợ tim mạch (IV fluids, vasopressors nếu hạ huyết áp)",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ít nhất 24-48 giờ (half-life 12-27 giờ)"
+            ],
+            "monitoring": "ECG liên tục, huyết áp, nhịp tim, hô hấp, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn.",
+                "timing": "Chia 2 lần/ngày (sáng, tối). Bắt đầu với liều thấp (100mg x 2 lần/ngày), tăng dần nếu dung nạp."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tambocor (flecainide)",
+                "UpToDate - Flecainide: Drug information",
+                "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - Multiple RCTs and clinical guidelines"
+        }
+    },
+    "Propafenone": {
+        "group": "Cardiovascular - Antiarrhythmic (Class IC)",
+        "vietnamese_name": "Propafenone, Rythmol",
+        "administration": ["PO"],
+        "indications": [
+            "Rung nhĩ (chuyển nhịp, duy trì nhịp xoang)",
+            "Nhịp nhanh trên thất (SVT)",
+            "Rối loạn nhịp thất (nếu không có bệnh tim cấu trúc)"
+        ],
+        "contraindications": [
+            "Bệnh tim cấu trúc (suy tim, bệnh mạch vành, bệnh van tim)",
+            "Block nhĩ thất độ 2-3",
+            "Hội chứng Brugada",
+            "QT kéo dài",
+            "Suy gan nặng",
+            "Suy thận nặng (CrCl <30)"
+        ],
+        "dosage": {
+            "adult_po_loading": "450-600mg PO (chuyển nhịp AF)",
+            "adult_po_maintenance": "150-300mg x 3 lần/ngày",
+            "adult_max": "900mg/ngày",
+            "notes": "CHỈ dùng nếu KHÔNG có bệnh tim cấu trúc. Theo dõi ECG trước và sau khi bắt đầu."
+        },
+        "side_effects": [
+            "Rối loạn nhịp tim nặng (proarrhythmia)",
+            "Block nhĩ thất",
+            "Suy tim (nếu có bệnh tim)",
+            "Chóng mặt",
+            "Vị kim loại",
+            "Buồn nôn"
+        ],
+        "interactions": [
+            "Amiodarone: tăng nồng độ propafenone",
+            "Digoxin: tăng nồng độ digoxin",
+            "Beta-blockers: tăng nguy cơ block nhĩ thất (propafenone có tác dụng beta-blocker)",
+            "Warfarin: tăng INR"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Class IC antiarrhythmic với tác dụng beta-blocker bổ sung. Ức chế mạnh kênh Na+ voltage-gated, giảm tốc độ khử cực (phase 0), giảm dẫn truyền trong tim. Cũng có tác dụng chẹn beta (nhẹ), có thể gây block nhĩ thất. Không ảnh hưởng đáng kể đến thời gian khử cực (QT interval). Hiệu quả cao cho rung nhĩ và SVT, nhưng có nguy cơ proarrhythmia cao, đặc biệt ở bệnh nhân có bệnh tim cấu trúc. CHỈ dùng nếu KHÔNG có bệnh tim cấu trúc.",
+        "monitoring": [
+            "ECG: trước và sau khi bắt đầu, định kỳ (theo dõi QRS width, block AV)",
+            "QRS width: tăng >25% hoặc QRS >150ms → giảm liều hoặc ngừng",
+            "Block nhĩ thất: theo dõi dấu hiệu block AV",
+            "Chức năng tim: siêu âm tim nếu có triệu chứng suy tim",
+            "Nồng độ propafenone trong máu (nếu có thể)",
+            "Chức năng gan (ALT, AST) - điều chỉnh liều ở suy gan",
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều ở suy thận"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI nếu có bệnh tim cấu trúc (suy tim, bệnh mạch vành, bệnh van tim) - nguy cơ proarrhythmia và suy tim cao",
+            "CHỐNG CHỈ ĐỊNH nếu có hội chứng Brugada - nguy cơ rung thất",
+            "CHỈ dùng nếu KHÔNG có bệnh tim cấu trúc - đánh giá siêu âm tim trước khi dùng",
+            "Theo dõi ECG trước và sau khi bắt đầu - tăng QRS >25% hoặc QRS >150ms → giảm liều hoặc ngừng",
+            "Theo dõi block nhĩ thất - có thể gây block AV độ 2-3 (do tác dụng beta-blocker)",
+            "Điều chỉnh liều ở suy gan (giảm liều 25-50%)",
+            "Điều chỉnh liều ở suy thận (CrCl 30-50: giảm liều 25-50%; CrCl <30: tránh dùng)",
+            "Tránh dùng với amiodarone (tăng nồng độ propafenone)",
+            "Tránh dùng với beta-blockers (tăng nguy cơ block AV do tác dụng hiệp đồng)",
+            "Theo dõi nồng độ digoxin nếu dùng cùng (propafenone tăng nồng độ digoxin)",
+            "Theo dõi INR nếu dùng với warfarin (propafenone tăng INR)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-10 giờ (ngắn hơn flecainide)",
+            "onset": "1-3 giờ",
+            "duration": "Ngắn hơn flecainide (do half-life ngắn hơn)",
+            "protein_binding": ">95%",
+            "clearance": "Gan (chuyển hóa qua CYP2D6, CYP3A4), thận (thải trừ một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây rối loạn nhịp tim nặng (proarrhythmia) và tử vong, đặc biệt ở bệnh nhân có bệnh tim cấu trúc. CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI nếu có suy tim, bệnh mạch vành, hoặc bệnh van tim. CHỈ dùng nếu KHÔNG có bệnh tim cấu trúc. Theo dõi ECG trước và sau khi bắt đầu.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Amiodarone",
+                    "mechanism": "Amiodarone ức chế chuyển hóa propafenone, tăng nồng độ propafenone",
+                    "effect": "Tăng nồng độ propafenone, tăng nguy cơ proarrhythmia và độc tính",
+                    "management": "TRÁNH dùng chung. Nếu bắt buộc: giảm liều propafenone 50%. Theo dõi ECG chặt chẽ."
+                },
+                {
+                    "drug": "Beta-blockers",
+                    "mechanism": "Tác dụng hiệp đồng chẹn beta (propafenone có tác dụng beta-blocker)",
+                    "effect": "Tăng nguy cơ block nhĩ thất độ 2-3, nhịp tim chậm",
+                    "management": "Thận trọng. Theo dõi ECG chặt chẽ. Có thể cần giảm liều một trong hai thuốc."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Propafenone tăng nồng độ digoxin (ức chế P-glycoprotein)",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ ngộ độc digoxin",
+                    "management": "Theo dõi nồng độ digoxin. Có thể cần giảm liều digoxin."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Propafenone ức chế chuyển hóa warfarin (CYP2C9)",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Có thể cần giảm liều warfarin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Bệnh tim cấu trúc (suy tim, bệnh mạch vành, bệnh van tim)",
+                "Block nhĩ thất độ 2-3",
+                "Hội chứng Brugada",
+                "QT kéo dài",
+                "Suy gan nặng",
+                "Suy thận nặng (CrCl <30)"
+            ],
+            "tương_đối": [
+                "Suy gan - giảm liều 25-50%",
+                "Suy thận (CrCl 30-50) - giảm liều 25-50%",
+                "Block nhĩ thất độ 1 - có thể làm nặng block",
+                "Dùng với amiodarone - tăng nồng độ propafenone",
+                "Dùng với beta-blockers - tăng nguy cơ block AV"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Có thể dùng nếu lợi ích vượt quá nguy cơ. Thận trọng.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không có dữ liệu về bài tiết propafenone vào sữa mẹ. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Tránh dùng khi cho con bú nếu có thể. Nếu phải dùng, theo dõi trẻ sát."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan",
+            "severe": "Tránh dùng. Theo dõi chức năng gan chặt chẽ",
+            "notes": "Propafenone chuyển hóa mạnh ở gan qua CYP2D6, CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Rối loạn nhịp tim nặng (proarrhythmia, rung thất)",
+                "Block nhĩ thất độ 2-3",
+                "Suy tim cấp",
+                "Chóng mặt, lú lẫn",
+                "Co giật (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị rối loạn nhịp.",
+            "treatment": [
+                "Theo dõi ECG liên tục",
+                "Hỗ trợ hô hấp nếu cần",
+                "Điều trị rối loạn nhịp tim (theo protocol ACLS)",
+                "Pacemaker nếu block AV nặng",
+                "Hỗ trợ tim mạch (IV fluids, vasopressors nếu hạ huyết áp)",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ít nhất 12-24 giờ (half-life 2-10 giờ)"
+            ],
+            "monitoring": "ECG liên tục, huyết áp, nhịp tim, hô hấp, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn.",
+                "timing": "Chia 3 lần/ngày (sáng, trưa, tối). Bắt đầu với liều thấp (150mg x 3 lần/ngày), tăng dần nếu dung nạp."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Rythmol (propafenone)",
+                "UpToDate - Propafenone: Drug information",
+                "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - Multiple RCTs and clinical guidelines"
+        }
+    }
 
 }
 

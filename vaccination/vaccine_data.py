@@ -4,7 +4,17 @@ Includes vaccines for children and adults, schedules, and prices
 """
 
 from typing import Dict, List, Optional
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+
+
+@dataclass
+class VaccineBrand:
+    """Vaccine brand/commercial name information"""
+    brand_name: str  # Tên thương mại
+    country: str  # Nước sản xuất
+    manufacturer: str  # Nhà sản xuất cụ thể
+    price: str  # Giá cụ thể (VNĐ)
+    notes: str = ""  # Ghi chú đặc biệt
 
 
 @dataclass
@@ -14,14 +24,15 @@ class Vaccine:
     name_vn: str
     category: str
     target_age: str  # "children", "adults", "both"
-    manufacturer: str
-    price_range: str  # Price in VND
+    manufacturer: str  # Tổng quát
+    price_range: str  # Price in VND (khoảng giá)
     description: str
     indications: List[str]
     contraindications: List[str]
     side_effects: List[str]
     schedule: Dict[str, str]  # Age/condition: schedule description
     notes: str = ""
+    brands: List[VaccineBrand] = field(default_factory=list)  # Danh sách tên thương mại cụ thể
 
 
 # Vaccines for Children
@@ -40,7 +51,12 @@ VACCINES_CHILDREN = [
         schedule={
             "Sơ sinh": "1 mũi ngay sau sinh hoặc trong tháng đầu"
         },
-        notes="Tiêm trong da, thường ở cánh tay trái"
+        notes="Tiêm trong da, thường ở cánh tay trái",
+        brands=[
+            VaccineBrand("BCG", "Việt Nam", "Polyvac", "Miễn phí (TCMR)", "Vắc xin trong chương trình TCMR"),
+            VaccineBrand("BCG Vaccine", "Ấn Độ", "Serum Institute", "100.000 - 150.000 VNĐ", "Vắc xin dịch vụ"),
+            VaccineBrand("BCG SSI", "Đan Mạch", "Statens Serum Institut", "150.000 - 200.000 VNĐ", "")
+        ]
     ),
     Vaccine(
         name="Hepatitis B",
@@ -58,7 +74,13 @@ VACCINES_CHILDREN = [
             "2 tháng": "Mũi 2",
             "3-4 tháng": "Mũi 3",
             "Nhắc lại": "Sau 1 năm (mũi 4)"
-        }
+        },
+        brands=[
+            VaccineBrand("Euvax B", "Hàn Quốc", "LG Life Sciences", "150.000 - 200.000 VNĐ", "Phổ biến tại Việt Nam"),
+            VaccineBrand("Engerix B", "Bỉ", "GlaxoSmithKline", "200.000 - 250.000 VNĐ", "Vắc xin chất lượng cao"),
+            VaccineBrand("Hepavax-Gene", "Hàn Quốc", "Green Cross", "180.000 - 220.000 VNĐ", ""),
+            VaccineBrand("HepB-Vac", "Việt Nam", "Polyvac", "Miễn phí (TCMR)", "Vắc xin trong chương trình TCMR")
+        ]
     ),
     Vaccine(
         name="DTP",
@@ -77,7 +99,12 @@ VACCINES_CHILDREN = [
             "4 tháng": "Mũi 3",
             "18 tháng": "Mũi 4 (nhắc lại)",
             "6-7 tuổi": "Mũi 5 (nhắc lại)"
-        }
+        },
+        brands=[
+            VaccineBrand("DTP", "Việt Nam", "Polyvac", "Miễn phí (TCMR)", "Vắc xin trong chương trình TCMR"),
+            VaccineBrand("Tritanrix HB", "Bỉ", "GlaxoSmithKline", "350.000 - 400.000 VNĐ", "Kết hợp thêm viêm gan B"),
+            VaccineBrand("Infanrix", "Bỉ", "GlaxoSmithKline", "400.000 - 450.000 VNĐ", "Ho gà vô bào, ít phản ứng phụ")
+        ]
     ),
     Vaccine(
         name="Polio",
@@ -95,7 +122,12 @@ VACCINES_CHILDREN = [
             "3 tháng": "Liều 2",
             "4 tháng": "Liều 3",
             "18 tháng": "Liều 4 (nhắc lại)"
-        }
+        },
+        brands=[
+            VaccineBrand("OPV", "Việt Nam", "Polyvac", "Miễn phí (TCMR)", "Vắc xin uống, trong chương trình TCMR"),
+            VaccineBrand("IPV", "Pháp", "Sanofi Pasteur", "200.000 - 300.000 VNĐ", "Vắc xin tiêm, an toàn hơn"),
+            VaccineBrand("Imovax Polio", "Pháp", "Sanofi Pasteur", "250.000 - 300.000 VNĐ", "")
+        ]
     ),
     Vaccine(
         name="MMR",
@@ -112,7 +144,13 @@ VACCINES_CHILDREN = [
             "9 tháng": "Mũi 1 (Sởi đơn)",
             "18 tháng": "Mũi 2 (MMR)",
             "6-7 tuổi": "Mũi 3 (MMR nhắc lại)"
-        }
+        },
+        brands=[
+            VaccineBrand("MMR II", "Mỹ", "Merck & Co", "350.000 - 400.000 VNĐ", "Vắc xin chất lượng cao"),
+            VaccineBrand("Priorix", "Bỉ", "GlaxoSmithKline", "300.000 - 350.000 VNĐ", "Phổ biến tại Việt Nam"),
+            VaccineBrand("MMR", "Ấn Độ", "Serum Institute", "200.000 - 250.000 VNĐ", "Giá rẻ, chất lượng tốt"),
+            VaccineBrand("Sởi - Quai bị - Rubella", "Việt Nam", "Polyvac", "Miễn phí (TCMR)", "Vắc xin trong chương trình TCMR")
+        ]
     ),
     Vaccine(
         name="Japanese Encephalitis",
@@ -129,7 +167,60 @@ VACCINES_CHILDREN = [
             "12 tháng": "Mũi 1",
             "13 tháng": "Mũi 2 (cách 1-2 tuần)",
             "24 tháng": "Mũi 3 (nhắc lại)"
-        }
+        },
+        brands=[
+            VaccineBrand("JE-VAX", "Việt Nam", "Polyvac", "Miễn phí (TCMR)", "Vắc xin trong chương trình TCMR"),
+            VaccineBrand("JEEV", "Ấn Độ", "Biological E", "250.000 - 300.000 VNĐ", "Vắc xin dịch vụ"),
+            VaccineBrand("Ixiaro", "Anh", "Valneva", "300.000 - 350.000 VNĐ", "Vắc xin bất hoạt, ít phản ứng phụ")
+        ]
+    ),
+    Vaccine(
+        name="5-in-1",
+        name_vn="Vắc xin 5 trong 1",
+        category="Khuyến nghị",
+        target_age="children",
+        manufacturer="Bỉ, Pháp",
+        price_range="600.000 - 800.000 VNĐ/mũi",
+        description="Vắc xin kết hợp phòng 5 bệnh: Bạch hầu, Ho gà, Uốn ván, Bại liệt, Hib",
+        indications=["Trẻ từ 2 tháng tuổi"],
+        contraindications=["Dị ứng với thành phần", "Sốt cao", "Co giật"],
+        side_effects=["Sưng đỏ tại chỗ", "Sốt", "Quấy khóc"],
+        schedule={
+            "2 tháng": "Mũi 1",
+            "3 tháng": "Mũi 2",
+            "4 tháng": "Mũi 3",
+            "16-18 tháng": "Mũi 4 (nhắc lại)"
+        },
+        notes="Giảm số lần tiêm, tiện lợi hơn so với tiêm riêng lẻ",
+        brands=[
+            VaccineBrand("Pentaxim", "Pháp", "Sanofi Pasteur", "700.000 - 800.000 VNĐ", "Phổ biến nhất tại Việt Nam, ho gà vô bào"),
+            VaccineBrand("Infanrix-IPV-Hib", "Bỉ", "GlaxoSmithKline", "750.000 - 850.000 VNĐ", "Ho gà vô bào, ít phản ứng phụ"),
+            VaccineBrand("Quinvaxem", "Hàn Quốc", "LG Life Sciences", "600.000 - 700.000 VNĐ", "Giá hợp lý, ho gà toàn tế bào")
+        ]
+    ),
+    Vaccine(
+        name="6-in-1",
+        name_vn="Vắc xin 6 trong 1",
+        category="Khuyến nghị",
+        target_age="children",
+        manufacturer="Bỉ, Pháp",
+        price_range="800.000 - 1.000.000 VNĐ/mũi",
+        description="Vắc xin kết hợp phòng 6 bệnh: Bạch hầu, Ho gà, Uốn ván, Bại liệt, Hib, Viêm gan B",
+        indications=["Trẻ từ 2 tháng tuổi"],
+        contraindications=["Dị ứng với thành phần", "Sốt cao", "Co giật"],
+        side_effects=["Sưng đỏ tại chỗ", "Sốt", "Quấy khóc"],
+        schedule={
+            "2 tháng": "Mũi 1",
+            "3 tháng": "Mũi 2",
+            "4 tháng": "Mũi 3",
+            "16-18 tháng": "Mũi 4 (nhắc lại)"
+        },
+        notes="Vắc xin kết hợp đầy đủ nhất, giảm số lần tiêm tối đa",
+        brands=[
+            VaccineBrand("Infanrix Hexa", "Bỉ", "GlaxoSmithKline", "900.000 - 1.000.000 VNĐ", "Phổ biến nhất, ho gà vô bào, ít phản ứng phụ"),
+            VaccineBrand("Hexaxim", "Pháp", "Sanofi Pasteur", "850.000 - 950.000 VNĐ", "Ho gà vô bào, chất lượng cao"),
+            VaccineBrand("Vaxelis", "Mỹ", "Merck & Co", "800.000 - 900.000 VNĐ", "")
+        ]
     ),
     Vaccine(
         name="Pneumococcal",
@@ -148,14 +239,19 @@ VACCINES_CHILDREN = [
             "12-23 tháng": "2 mũi (cách 2 tháng)",
             "2-5 tuổi": "1 mũi"
         },
-        notes="Prevenar 13 hoặc Synflorix"
+        notes="Prevenar 13 hoặc Synflorix",
+        brands=[
+            VaccineBrand("Prevenar 13", "Mỹ", "Pfizer", "1.400.000 - 1.500.000 VNĐ", "Phòng 13 chủng phế cầu, phổ biến nhất"),
+            VaccineBrand("Synflorix", "Bỉ", "GlaxoSmithKline", "1.200.000 - 1.300.000 VNĐ", "Phòng 10 chủng phế cầu"),
+            VaccineBrand("Pneumovax 23", "Mỹ", "Merck & Co", "800.000 - 1.000.000 VNĐ", "Dùng cho trẻ ≥2 tuổi và người lớn")
+        ]
     ),
     Vaccine(
         name="Rotavirus",
         name_vn="Vắc xin rota",
         category="Khuyến nghị",
         target_age="children",
-        manufacturer="Bỉ, Bỉ",
+        manufacturer="Bỉ, Mỹ",
         price_range="700.000 - 1.000.000 VNĐ/mũi",
         description="Vắc xin phòng tiêu chảy do rotavirus",
         indications=["Trẻ từ 6 tuần tuổi"],
@@ -164,7 +260,11 @@ VACCINES_CHILDREN = [
         schedule={
             "6 tuần - 6 tháng": "2-3 mũi (Rotarix: 2 mũi, Rotateq: 3 mũi), cách 1-2 tháng"
         },
-        notes="Uống, không tiêm"
+        notes="Uống, không tiêm",
+        brands=[
+            VaccineBrand("Rotarix", "Bỉ", "GlaxoSmithKline", "800.000 - 900.000 VNĐ", "2 mũi, phổ biến tại Việt Nam"),
+            VaccineBrand("Rotateq", "Mỹ", "Merck & Co", "900.000 - 1.000.000 VNĐ", "3 mũi, phòng 5 chủng")
+        ]
     ),
     Vaccine(
         name="Hib",
@@ -181,7 +281,12 @@ VACCINES_CHILDREN = [
             "2-6 tháng": "3 mũi cơ bản (cách 1-2 tháng), 1 mũi nhắc lại (12-18 tháng)",
             "7-11 tháng": "2 mũi (cách 1-2 tháng), 1 mũi nhắc lại (12-18 tháng)",
             "12-59 tháng": "1 mũi"
-        }
+        },
+        brands=[
+            VaccineBrand("Hiberix", "Bỉ", "GlaxoSmithKline", "500.000 - 600.000 VNĐ", "Vắc xin Hib đơn lẻ"),
+            VaccineBrand("ActHIB", "Pháp", "Sanofi Pasteur", "450.000 - 550.000 VNĐ", ""),
+            VaccineBrand("PedvaxHIB", "Mỹ", "Merck & Co", "400.000 - 500.000 VNĐ", "")
+        ]
     ),
     Vaccine(
         name="Varicella",
@@ -197,7 +302,12 @@ VACCINES_CHILDREN = [
         schedule={
             "12-18 tháng": "Mũi 1",
             "4-6 tuổi": "Mũi 2 (nhắc lại)"
-        }
+        },
+        brands=[
+            VaccineBrand("Varivax", "Mỹ", "Merck & Co", "500.000 - 600.000 VNĐ", "Vắc xin thủy đậu chất lượng cao"),
+            VaccineBrand("Varilrix", "Bỉ", "GlaxoSmithKline", "450.000 - 550.000 VNĐ", "Phổ biến tại Việt Nam"),
+            VaccineBrand("GC Varicella", "Hàn Quốc", "Green Cross", "400.000 - 500.000 VNĐ", "Giá hợp lý")
+        ]
     ),
     Vaccine(
         name="Hepatitis A",
@@ -214,7 +324,12 @@ VACCINES_CHILDREN = [
             "12-23 tháng": "2 mũi (cách 6-12 tháng)",
             "≥2 tuổi": "2 mũi (cách 6-12 tháng)"
         },
-        notes="Avaxim hoặc Havrix"
+        notes="Avaxim hoặc Havrix",
+        brands=[
+            VaccineBrand("Avaxim", "Pháp", "Sanofi Pasteur", "1.100.000 - 1.200.000 VNĐ", "Phổ biến tại Việt Nam"),
+            VaccineBrand("Havrix", "Bỉ", "GlaxoSmithKline", "1.200.000 - 1.300.000 VNĐ", "Vắc xin chất lượng cao"),
+            VaccineBrand("VAQTA", "Mỹ", "Merck & Co", "1.000.000 - 1.100.000 VNĐ", "")
+        ]
     ),
     Vaccine(
         name="Meningococcal",
@@ -231,7 +346,12 @@ VACCINES_CHILDREN = [
             "6-23 tháng": "2 mũi (cách 2-3 tháng)",
             "≥2 tuổi": "1 mũi, nhắc lại sau 3-5 năm"
         },
-        notes="Menactra hoặc Menveo"
+        notes="Menactra hoặc Menveo",
+        brands=[
+            VaccineBrand("Menactra", "Mỹ", "Sanofi Pasteur", "800.000 - 900.000 VNĐ", "Phòng 4 chủng A, C, Y, W-135"),
+            VaccineBrand("Menveo", "Bỉ", "GlaxoSmithKline", "700.000 - 800.000 VNĐ", "Phòng 4 chủng A, C, Y, W-135"),
+            VaccineBrand("Nimenrix", "Bỉ", "Pfizer", "750.000 - 850.000 VNĐ", "")
+        ]
     ),
     Vaccine(
         name="Influenza",
@@ -249,7 +369,13 @@ VACCINES_CHILDREN = [
             "≥3 tuổi": "1 mũi hàng năm",
             "Người lớn": "1 mũi hàng năm"
         },
-        notes="Vaxigrip Tetra hoặc Influvac"
+        notes="Vaxigrip Tetra hoặc Influvac",
+        brands=[
+            VaccineBrand("Vaxigrip Tetra", "Pháp", "Sanofi Pasteur", "350.000 - 400.000 VNĐ", "Phòng 4 chủng cúm, phổ biến nhất"),
+            VaccineBrand("Influvac", "Hà Lan", "Abbott", "300.000 - 350.000 VNĐ", "Vắc xin cúm chất lượng cao"),
+            VaccineBrand("Fluarix Tetra", "Bỉ", "GlaxoSmithKline", "400.000 - 450.000 VNĐ", ""),
+            VaccineBrand("GC Flu", "Hàn Quốc", "Green Cross", "300.000 - 350.000 VNĐ", "Giá hợp lý")
+        ]
     ),
     Vaccine(
         name="HPV",
@@ -266,7 +392,12 @@ VACCINES_CHILDREN = [
             "9-14 tuổi": "2 mũi (cách 6 tháng)",
             "≥15 tuổi": "3 mũi (0, 2, 6 tháng)"
         },
-        notes="Gardasil 9 hoặc Cervarix"
+        notes="Gardasil 9 hoặc Cervarix",
+        brands=[
+            VaccineBrand("Gardasil 9", "Mỹ", "Merck & Co", "2.200.000 - 2.500.000 VNĐ", "Phòng 9 chủng HPV, dùng cho cả nam và nữ"),
+            VaccineBrand("Cervarix", "Bỉ", "GlaxoSmithKline", "1.800.000 - 2.000.000 VNĐ", "Phòng 2 chủng HPV chính, chủ yếu cho nữ"),
+            VaccineBrand("Gardasil", "Mỹ", "Merck & Co", "2.000.000 - 2.200.000 VNĐ", "Phòng 4 chủng HPV")
+        ]
     ),
 ]
 
@@ -285,7 +416,13 @@ VACCINES_ADULTS = [
         side_effects=["Sưng đỏ", "Sốt nhẹ", "Mệt mỏi"],
         schedule={
             "Người lớn": "1 mũi hàng năm (tốt nhất vào tháng 9-11)"
-        }
+        },
+        brands=[
+            VaccineBrand("Vaxigrip Tetra", "Pháp", "Sanofi Pasteur", "350.000 - 400.000 VNĐ", "Phòng 4 chủng cúm, phổ biến nhất"),
+            VaccineBrand("Influvac", "Hà Lan", "Abbott", "300.000 - 350.000 VNĐ", "Vắc xin cúm chất lượng cao"),
+            VaccineBrand("Fluarix Tetra", "Bỉ", "GlaxoSmithKline", "400.000 - 450.000 VNĐ", ""),
+            VaccineBrand("GC Flu", "Hàn Quốc", "Green Cross", "300.000 - 350.000 VNĐ", "Giá hợp lý")
+        ]
     ),
     Vaccine(
         name="Tdap/Td",
@@ -301,7 +438,12 @@ VACCINES_ADULTS = [
         schedule={
             "Người lớn": "1 mũi Tdap, sau đó Td mỗi 10 năm",
             "Phụ nữ mang thai": "1 mũi Tdap mỗi lần mang thai (tuần 27-36)"
-        }
+        },
+        brands=[
+            VaccineBrand("Boostrix", "Bỉ", "GlaxoSmithKline", "350.000 - 400.000 VNĐ", "Tdap - có ho gà"),
+            VaccineBrand("Adacel", "Canada", "Sanofi Pasteur", "300.000 - 350.000 VNĐ", "Tdap - có ho gà"),
+            VaccineBrand("Td", "Việt Nam", "Polyvac", "200.000 - 250.000 VNĐ", "Chỉ uốn ván và bạch hầu")
+        ]
     ),
     Vaccine(
         name="Hepatitis B",
@@ -316,7 +458,12 @@ VACCINES_ADULTS = [
         side_effects=["Sưng đỏ", "Sốt nhẹ"],
         schedule={
             "Người lớn": "3 mũi (0, 1, 6 tháng) hoặc (0, 1, 2, 12 tháng)"
-        }
+        },
+        brands=[
+            VaccineBrand("Euvax B", "Hàn Quốc", "LG Life Sciences", "150.000 - 200.000 VNĐ", "Phổ biến tại Việt Nam"),
+            VaccineBrand("Engerix B", "Bỉ", "GlaxoSmithKline", "200.000 - 250.000 VNĐ", "Vắc xin chất lượng cao"),
+            VaccineBrand("Hepavax-Gene", "Hàn Quốc", "Green Cross", "180.000 - 220.000 VNĐ", "")
+        ]
     ),
     Vaccine(
         name="Hepatitis A",
@@ -331,7 +478,12 @@ VACCINES_ADULTS = [
         side_effects=["Sưng đỏ", "Sốt", "Mệt mỏi"],
         schedule={
             "Người lớn": "2 mũi (cách 6-12 tháng)"
-        }
+        },
+        brands=[
+            VaccineBrand("Avaxim", "Pháp", "Sanofi Pasteur", "1.100.000 - 1.200.000 VNĐ", "Phổ biến tại Việt Nam"),
+            VaccineBrand("Havrix", "Bỉ", "GlaxoSmithKline", "1.200.000 - 1.300.000 VNĐ", "Vắc xin chất lượng cao"),
+            VaccineBrand("VAQTA", "Mỹ", "Merck & Co", "1.000.000 - 1.100.000 VNĐ", "")
+        ]
     ),
     Vaccine(
         name="Pneumococcal",
@@ -348,7 +500,12 @@ VACCINES_ADULTS = [
             "≥65 tuổi": "1 mũi PCV13, sau 1 năm tiêm PPSV23",
             "Người có nguy cơ": "PCV13 trước, sau đó PPSV23"
         },
-        notes="PCV13 (Prevenar 13) và PPSV23 (Pneumovax 23)"
+        notes="PCV13 (Prevenar 13) và PPSV23 (Pneumovax 23)",
+        brands=[
+            VaccineBrand("Prevenar 13", "Mỹ", "Pfizer", "1.400.000 - 1.500.000 VNĐ", "PCV13 - Phòng 13 chủng, tiêm trước"),
+            VaccineBrand("Pneumovax 23", "Mỹ", "Merck & Co", "800.000 - 1.000.000 VNĐ", "PPSV23 - Phòng 23 chủng, tiêm sau PCV13"),
+            VaccineBrand("Synflorix", "Bỉ", "GlaxoSmithKline", "1.200.000 - 1.300.000 VNĐ", "PCV10 - Dùng cho trẻ em")
+        ]
     ),
     Vaccine(
         name="MMR",
@@ -394,7 +551,12 @@ VACCINES_ADULTS = [
         schedule={
             "Người lớn": "3 mũi (0, 2, 6 tháng)"
         },
-        notes="Gardasil 9 hoặc Cervarix"
+        notes="Gardasil 9 hoặc Cervarix",
+        brands=[
+            VaccineBrand("Gardasil 9", "Mỹ", "Merck & Co", "2.200.000 - 2.500.000 VNĐ", "Phòng 9 chủng HPV, dùng cho cả nam và nữ"),
+            VaccineBrand("Cervarix", "Bỉ", "GlaxoSmithKline", "1.800.000 - 2.000.000 VNĐ", "Phòng 2 chủng HPV chính, chủ yếu cho nữ"),
+            VaccineBrand("Gardasil", "Mỹ", "Merck & Co", "2.000.000 - 2.200.000 VNĐ", "Phòng 4 chủng HPV")
+        ]
     ),
     Vaccine(
         name="Meningococcal",
@@ -409,7 +571,12 @@ VACCINES_ADULTS = [
         side_effects=["Sưng đỏ", "Sốt"],
         schedule={
             "Người lớn": "1 mũi, nhắc lại sau 3-5 năm nếu có nguy cơ"
-        }
+        },
+        brands=[
+            VaccineBrand("Menactra", "Mỹ", "Sanofi Pasteur", "800.000 - 900.000 VNĐ", "Phòng 4 chủng A, C, Y, W-135"),
+            VaccineBrand("Menveo", "Bỉ", "GlaxoSmithKline", "700.000 - 800.000 VNĐ", "Phòng 4 chủng A, C, Y, W-135"),
+            VaccineBrand("Nimenrix", "Bỉ", "Pfizer", "750.000 - 850.000 VNĐ", "")
+        ]
     ),
     Vaccine(
         name="Shingles",
@@ -425,7 +592,11 @@ VACCINES_ADULTS = [
         schedule={
             "≥50 tuổi": "2 mũi (cách 2-6 tháng)"
         },
-        notes="Shingrix (ưu tiên) hoặc Zostavax"
+        notes="Shingrix (ưu tiên) hoặc Zostavax",
+        brands=[
+            VaccineBrand("Shingrix", "Bỉ", "GlaxoSmithKline", "3.000.000 - 3.500.000 VNĐ", "2 mũi, hiệu quả cao hơn, ưu tiên sử dụng"),
+            VaccineBrand("Zostavax", "Mỹ", "Merck & Co", "2.500.000 - 3.000.000 VNĐ", "1 mũi, vắc xin sống")
+        ]
     ),
     Vaccine(
         name="Typhoid",
@@ -440,7 +611,12 @@ VACCINES_ADULTS = [
         side_effects=["Sưng đỏ", "Sốt"],
         schedule={
             "Người lớn": "1 mũi, nhắc lại sau 3 năm"
-        }
+        },
+        brands=[
+            VaccineBrand("Typhim Vi", "Pháp", "Sanofi Pasteur", "400.000 - 500.000 VNĐ", "Vắc xin tiêm, phổ biến"),
+            VaccineBrand("Vivotif", "Thụy Sĩ", "Berna Biotech", "350.000 - 400.000 VNĐ", "Vắc xin uống, 4 viên"),
+            VaccineBrand("Typbar TCV", "Ấn Độ", "Bharat Biotech", "300.000 - 350.000 VNĐ", "Giá hợp lý")
+        ]
     ),
     Vaccine(
         name="Rabies",
@@ -456,7 +632,13 @@ VACCINES_ADULTS = [
         schedule={
             "Tiêm phòng": "3 mũi (0, 7, 21-28 ngày)",
             "Sau phơi nhiễm": "4-5 mũi (0, 3, 7, 14, 28 ngày) + huyết thanh"
-        }
+        },
+        brands=[
+            VaccineBrand("Verorab", "Pháp", "Sanofi Pasteur", "300.000 - 350.000 VNĐ", "Vắc xin dại chất lượng cao"),
+            VaccineBrand("Rabipur", "Đức", "Novartis", "350.000 - 400.000 VNĐ", "Phổ biến tại Việt Nam"),
+            VaccineBrand("Abhayrab", "Ấn Độ", "Human Biologicals", "200.000 - 250.000 VNĐ", "Giá hợp lý"),
+            VaccineBrand("Rabivax", "Ấn Độ", "Serum Institute", "250.000 - 300.000 VNĐ", "")
+        ]
     ),
 ]
 

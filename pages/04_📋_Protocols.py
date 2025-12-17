@@ -54,6 +54,9 @@ from protocols import (
     render_uti_pyelonephritis,
     render_chronic_glomerulonephritis,
     render_nephrotic_syndrome,
+    render_ckd,
+    render_diabetic_nephropathy,
+    render_hypertensive_nephrosclerosis,
     render_nephrolithiasis,
     render_bph_urinary_retention,
     render_cap,
@@ -100,10 +103,27 @@ from protocols import (
     render_hypercalcemia,
     render_ibd_exacerbation
 )
-from protocols.rheumatology import render_acute_gout, render_ra_flare
+from protocols.rheumatology import (
+    render_acute_gout, 
+    render_ra_flare,
+    render_osteoarthritis,
+    render_ankylosing_spondylitis,
+    render_reactive_arthritis,
+    render_psoriatic_arthritis,
+    render_sle_arthritis
+)
 from protocols.neurology import render_serotonin_syndrome, render_neuroleptic_malignant_syndrome, render_intracranial_hypertension
 from protocols.obstetrics import render_eclampsia, render_postpartum_hemorrhage
-from protocols.dermatology import render_stevens_johnson_syndrome
+from protocols.dermatology import (
+    render_stevens_johnson_syndrome,
+    render_atopic_dermatitis,
+    render_contact_dermatitis,
+    render_acne_vulgaris,
+    render_fungal_infections,
+    render_scabies,
+    render_urticaria,
+    render_psoriasis
+)
 
 # Standard page setup
 setup_page(
@@ -209,6 +229,9 @@ with st.sidebar:
             "Phác đồ:",
             [
                 "🧪 AKI Management",
+                "🫘 Suy thận mạn tính (CKD)",
+                "🍭 Bệnh thận do đái tháo đường",
+                "📈 Bệnh thận do tăng huyết áp",
                 "🚻 Nhiễm trùng tiểu / Viêm bể thận",
                 "🪨 Sỏi thận / Cơn đau quặn thận",
                 "🧔‍♂️ BPH & Bí tiểu cấp",
@@ -315,7 +338,12 @@ with st.sidebar:
             "Phác đồ:",
             [
                 "🦴 Gout Cấp (Acute Gout Management)",
-                "🦴 RA Flare (Acute Flare of Rheumatoid Arthritis)"
+                "🦴 RA Flare (Acute Flare of Rheumatoid Arthritis)",
+                "🦴 Viêm Khớp Thoái Hóa (Osteoarthritis)",
+                "🦴 Viêm Cột Sống Dính Khớp (Ankylosing Spondylitis)",
+                "🦴 Viêm Khớp Phản Ứng (Reactive Arthritis)",
+                "🦴 Viêm Khớp Vảy Nến (Psoriatic Arthritis)",
+                "🦴 Lupus - Viêm Khớp (SLE Arthritis)"
             ],
             label_visibility="collapsed"
         )
@@ -342,7 +370,14 @@ with st.sidebar:
         protocol = st.radio(
             "Phác đồ:",
             [
-                "🩹 Hội chứng Stevens-Johnson (SJS/TEN)"
+                "🩹 Hội chứng Stevens-Johnson (SJS/TEN)",
+                "🩹 Viêm da cơ địa (Atopic Dermatitis)",
+                "🩹 Viêm da tiếp xúc (Contact Dermatitis)",
+                "🩹 Mụn trứng cá (Acne Vulgaris)",
+                "🩹 Nhiễm nấm da (Fungal Skin Infections)",
+                "🩹 Ghẻ (Scabies)",
+                "🩹 Mề đay (Urticaria)",
+                "🩹 Vảy nến (Psoriasis)"
             ],
             label_visibility="collapsed"
         )
@@ -460,6 +495,12 @@ elif "Viêm cầu thận mạn" in protocol or "Glomerulonephritis" in protocol 
     render_chronic_glomerulonephritis()
 elif "Hội chứng thận hư" in protocol or "Nephrotic" in protocol or "nephrotic" in protocol.lower():
     render_nephrotic_syndrome()
+elif "Suy thận mạn" in protocol or "CKD" in protocol or "ckd" in protocol.lower():
+    render_ckd()
+elif "đái tháo đường" in protocol or "Diabetic" in protocol or "diabetic" in protocol.lower():
+    render_diabetic_nephropathy()
+elif "tăng huyết áp" in protocol or "Hypertensive" in protocol or "hypertensive" in protocol.lower() or "Nephrosclerosis" in protocol:
+    render_hypertensive_nephrosclerosis()
 
 elif "CAP" in protocol:
     render_cap()
@@ -581,6 +622,21 @@ elif "Stress Ulcer" in protocol or "stress ulcer" in protocol.lower() or "SUP" i
 elif "RA Flare" in protocol or "rheumatoid arthritis" in protocol.lower() or "RA" in protocol:
     render_ra_flare()
 
+elif "Osteoarthritis" in protocol or "osteoarthritis" in protocol.lower() or "Thoái Hóa" in protocol or "thoái hóa" in protocol.lower():
+    render_osteoarthritis()
+
+elif "Ankylosing Spondylitis" in protocol or "ankylosing" in protocol.lower() or "Dính Khớp" in protocol or "dính khớp" in protocol.lower():
+    render_ankylosing_spondylitis()
+
+elif "Reactive Arthritis" in protocol or "reactive arthritis" in protocol.lower() or "Phản Ứng" in protocol or "phản ứng" in protocol.lower():
+    render_reactive_arthritis()
+
+elif "Psoriatic Arthritis" in protocol or "psoriatic" in protocol.lower() or "Vảy Nến" in protocol or "vảy nến" in protocol.lower():
+    render_psoriatic_arthritis()
+
+elif "SLE Arthritis" in protocol or "sle arthritis" in protocol.lower() or "Lupus" in protocol and "Khớp" in protocol:
+    render_sle_arthritis()
+
 elif "IBD" in protocol or "ibd" in protocol.lower() or "Crohn" in protocol or "Colitis" in protocol:
     render_ibd_exacerbation()
 
@@ -622,6 +678,27 @@ elif "Postpartum" in protocol or "postpartum" in protocol.lower() or "Xuất huy
 
 elif "Stevens" in protocol or "stevens" in protocol.lower() or "SJS" in protocol or "TEN" in protocol:
     render_stevens_johnson_syndrome()
+
+elif "Viêm da cơ địa" in protocol or "Atopic Dermatitis" in protocol or "atopic dermatitis" in protocol.lower() or "Eczema" in protocol:
+    render_atopic_dermatitis()
+
+elif "Viêm da tiếp xúc" in protocol or "Contact Dermatitis" in protocol or "contact dermatitis" in protocol.lower():
+    render_contact_dermatitis()
+
+elif "Mụn trứng cá" in protocol or "Acne" in protocol or "acne" in protocol.lower() or "Acne Vulgaris" in protocol:
+    render_acne_vulgaris()
+
+elif "Nhiễm nấm da" in protocol or "Fungal" in protocol or "fungal" in protocol.lower() or "Nấm da" in protocol or "Lang ben" in protocol:
+    render_fungal_infections()
+
+elif "Ghẻ" in protocol or "Scabies" in protocol or "scabies" in protocol.lower():
+    render_scabies()
+
+elif "Mề đay" in protocol or "Urticaria" in protocol or "urticaria" in protocol.lower():
+    render_urticaria()
+
+elif "Vảy nến" in protocol or "Psoriasis" in protocol or "psoriasis" in protocol.lower():
+    render_psoriasis()
 
 elif "Paracetamol" in protocol or "paracetamol" in protocol.lower() or "Acetaminophen" in protocol or "acetaminophen" in protocol.lower():
     render_paracetamol_overdose()

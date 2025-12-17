@@ -1143,6 +1143,187 @@ DIURETICS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - Multiple large RCTs (EPHESUS, EMPHASIS-HF) showing mortality benefit in heart failure"
         }
+    },
+    "Chlorthalidone": {
+        "group": "Cardiovascular - Thiazide-like Diuretic",
+        "vietnamese_name": "Chlorthalidone, Hygroton",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Phù (suy tim nhẹ)"
+        ],
+        "contraindications": [
+            "Dị ứng sulfonamide",
+            "Vô niệu",
+            "Hạ kali máu nặng",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_htn": "12.5-25mg x 1 lần/ngày",
+            "adult_edema": "25-100mg x 1 lần/ngày",
+            "adult_max": "100mg/ngày",
+            "notes": "Thiazide-like diuretic, tác dụng rất dài (48-72 giờ), uống 1 lần/ngày. Ưu tiên hơn HCTZ theo ESC/ESH 2023. Hiệu quả hạ huyết áp tốt hơn HCTZ."
+        },
+        "side_effects": [
+            "Hạ kali máu",
+            "Hạ natri máu",
+            "Tăng đường huyết",
+            "Tăng acid uric",
+            "Tăng cholesterol, triglyceride",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Rối loạn cương dương"
+        ],
+        "interactions": [
+            "Digoxin: tăng nguy cơ ngộ độc digoxin (hạ kali)",
+            "Lithium: tăng nồng độ lithium",
+            "NSAID: giảm hiệu quả",
+            "Corticosteroid: tăng hạ kali máu"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Thiazide-like diuretic. Ức chế Na+/Cl- cotransporter ở đoạn xa của ống thận, tăng bài tiết Na+, Cl-, và nước. Có tác dụng giãn mạch trực tiếp. Tác dụng rất dài (48-72 giờ) do half-life dài, cho phép dùng 1 lần/ngày. Hiệu quả hạ huyết áp tốt hơn hydrochlorothiazide (HCTZ) ở liều tương đương. Theo ESC/ESH 2023 và ACC/AHA 2024, chlorthalidone được ưu tiên hơn HCTZ cho điều trị tăng huyết áp do hiệu quả tốt hơn và bằng chứng lâm sàng mạnh hơn.",
+        "monitoring": [
+            "Kali máu (mỗi 1-3 tháng) - hạ kali máu phổ biến",
+            "Natri máu - có thể gây hạ natri máu, đặc biệt ở người già",
+            "Creatinine, BUN - có thể tăng nhẹ",
+            "Đường huyết - có thể tăng đường huyết",
+            "Acid uric - có thể tăng acid uric, gây gout",
+            "Lipid máu - có thể tăng cholesterol, triglyceride nhẹ"
+        ],
+        "precautions": [
+            "Ưu tiên hơn hydrochlorothiazide (HCTZ) theo ESC/ESH 2023 và ACC/AHA 2024 - hiệu quả hạ huyết áp tốt hơn",
+            "Tác dụng rất dài (48-72 giờ) - dùng 1 lần/ngày, thuận tiện",
+            "Hạ kali máu phổ biến - theo dõi kali máu thường xuyên, bổ sung kali nếu cần",
+            "Thận trọng ở người già - tăng nguy cơ hạ natri máu, té ngã",
+            "Thận trọng ở bệnh nhân đái tháo đường (tăng đường huyết)",
+            "Thận trọng ở bệnh nhân gout (tăng acid uric)",
+            "Tránh dùng với lithium (tăng nguy cơ độc tính lithium)",
+            "Theo dõi chức năng thận - có thể tăng creatinine nhẹ",
+            "Bắt đầu với liều thấp (12.5mg/ngày) để giảm tác dụng phụ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "40-60 giờ (rất dài)",
+            "onset": "2-3 giờ",
+            "duration": "48-72 giờ (rất dài)",
+            "protein_binding": "75%",
+            "clearance": "Thận (thải trừ chủ yếu nguyên dạng), gan (chuyển hóa một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây hạ kali máu nghiêm trọng, hạ natri máu, và rối loạn điện giải. Hạ kali máu có thể làm tăng nguy cơ ngộ độc digoxin và rối loạn nhịp tim. Hạ natri máu có thể gây lú lẫn, co giật, hôn mê, đặc biệt ở người già.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Chlorthalidone gây hạ kali máu, tăng nguy cơ ngộ độc digoxin",
+                    "effect": "Tăng nguy cơ ngộ độc digoxin (nhịp tim chậm, block AV, rối loạn nhịp tim)",
+                    "management": "Theo dõi kali máu thường xuyên. Bù kali nếu cần. Theo dõi nồng độ digoxin. Theo dõi ECG."
+                },
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Chlorthalidone giảm thải trừ lithium qua thận (do giảm thể tích máu), tăng nồng độ lithium",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính lithium",
+                    "management": "TRÁNH dùng chung. Nếu bắt buộc: theo dõi nồng độ lithium chặt chẽ. Có thể cần giảm liều lithium."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac)",
+                    "mechanism": "NSAID giảm tác dụng lợi tiểu của chlorthalidone (do giảm prostaglandin, giảm lưu lượng máu thận)",
+                    "effect": "Giảm hiệu quả lợi tiểu, giảm hạ huyết áp",
+                    "management": "Thận trọng. Theo dõi đáp ứng hạ huyết áp. Có thể cần tăng liều chlorthalidone."
+                },
+                {
+                    "drug": "Corticosteroid",
+                    "mechanism": "Corticosteroid gây hạ kali máu, tác dụng hiệp đồng với chlorthalidone",
+                    "effect": "Tăng nguy cơ hạ kali máu nghiêm trọng",
+                    "management": "Theo dõi kali máu thường xuyên. Bù kali nếu cần."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng chlorthalidone hoặc sulfonamide",
+                "Vô niệu",
+                "Hạ kali máu nặng không kiểm soát",
+                "Suy gan nặng"
+            ],
+            "tương_đối": [
+                "Suy thận (CrCl <30) - giảm hiệu quả, tăng nguy cơ tác dụng phụ",
+                "Hạ kali máu - có thể làm nặng",
+                "Hạ natri máu - có thể làm nặng",
+                "Đái tháo đường - có thể tăng đường huyết",
+                "Gout - có thể tăng acid uric, gây cơn gout",
+                "Người cao tuổi - tăng nguy cơ hạ natri máu, té ngã",
+                "Dùng với digoxin - tăng nguy cơ ngộ độc digoxin",
+                "Dùng với lithium - tăng nguy cơ độc tính lithium"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "An toàn trong thai kỳ. Không có bằng chứng về dị tật bẩm sinh. Có thể dùng nếu cần thiết. Tuy nhiên, có thể gây giảm thể tích máu và giảm tưới máu nhau thai.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Chlorthalidone bài tiết vào sữa mẹ ở nồng độ thấp. Có thể gây giảm tiết sữa nhẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi lượng sữa."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể giảm liều nhẹ",
+            "severe": "Tránh dùng",
+            "notes": "Chlorthalidone chuyển hóa một phần ở gan. Suy gan nặng có thể làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ kali máu nghiêm trọng (yếu cơ, rối loạn nhịp tim)",
+                "Hạ natri máu nghiêm trọng (lú lẫn, co giật, hôn mê)",
+                "Mất nước",
+                "Hạ huyết áp",
+                "Suy thận cấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều chỉnh điện giải.",
+            "treatment": [
+                "Ngừng chlorthalidone ngay lập tức",
+                "Đo điện giải ngay (K+, Na+, Cl-)",
+                "Bù kali nếu hạ kali máu (K+ <3.5 mEq/L)",
+                "Điều chỉnh natri máu nếu hạ natri máu (Na+ <135 mEq/L) - bù dịch nước muối sinh lý hoặc nước muối 3% nếu nặng",
+                "Truyền dịch nếu mất nước hoặc hạ huyết áp",
+                "Theo dõi chức năng thận (creatinine, BUN)",
+                "Theo dõi ECG nếu có rối loạn nhịp tim",
+                "Rửa dạ dày và than hoạt tính nếu uống quá liều trong vòng 1-2 giờ",
+                "Theo dõi ít nhất 48-72 giờ do half-life rất dài (40-60 giờ)"
+            ],
+            "monitoring": "Điện giải (K+, Na+, Cl-), chức năng thận (creatinine, BUN), huyết áp, nhịp tim, ECG, cân bằng dịch vào-ra"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm kích ứng dạ dày.",
+                "timing": "Uống 1 lần/ngày vào buổi sáng. Tác dụng rất dài (48-72 giờ) nên chỉ cần dùng 1 lần/ngày. Bắt đầu với liều thấp (12.5mg/ngày), tăng dần nếu dung nạp."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Hygroton (chlorthalidone)",
+                "UpToDate - Chlorthalidone: Drug information",
+                "ESC/ESH Guidelines for the management of arterial hypertension, 2023",
+                "ACC/AHA 2024 Hypertension guidance",
+                "ALLHAT Study - JAMA (2002) - Chlorthalidone vs other antihypertensives"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - Multiple large RCTs (ALLHAT) and clinical guidelines (ESC/ESH 2023, ACC/AHA 2024)"
+        }
     }
 
 }

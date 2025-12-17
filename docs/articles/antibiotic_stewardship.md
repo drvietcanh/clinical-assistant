@@ -238,7 +238,37 @@ summary:
 - **Vancomycin TDM:** Tính liều và điều chỉnh theo trough.
 - **Aminoglycoside dosing:** Tính liều và TDM.
 
-## 8. Tài liệu tham khảo
+## 8. Tra cứu kháng sinh trong Menu Kháng sinh
+
+**Tất cả kháng sinh được đề cập trong bài viết có thể tra cứu trong Menu Kháng sinh:**
+
+**Hướng dẫn tra cứu:**
+1. **Tra cứu & dữ liệu kháng sinh:** Menu "💊 Kháng sinh" → "🔍 Tra cứu & dữ liệu kháng sinh"
+   - Tra cứu thông tin chi tiết từng kháng sinh
+   - Xem phổ kháng khuẩn, chỉ định, liều dùng
+   - Xem tác dụng phụ, tương tác thuốc
+   - Xem chỉnh liều theo thận
+
+2. **Tính liều theo eGFR/CrCl:** Menu "💊 Kháng sinh" → "🧮 Tính liều theo eGFR/CrCl"
+   - Tính liều kháng sinh theo chức năng thận
+   - Điều chỉnh liều khi suy thận
+
+3. **Vancomycin TDM:** Menu "📊 TDM" → "Vancomycin TDM"
+   - Tính liều vancomycin
+   - Điều chỉnh liều theo trough
+
+4. **Aminoglycoside dosing:** Menu "📊 TDM" hoặc Menu "💊 Kháng sinh"
+   - Tính liều aminoglycoside
+   - TDM peak/trough
+
+**Các kháng sinh chính trong bài viết:**
+- **β-lactam:** Amoxicillin-clavulanate, Piperacillin-tazobactam, Ceftriaxone, Cefepime, Ceftazidime-avibactam, Meropenem
+- **Vancomycin, Linezolid, Daptomycin**
+- **Aminoglycoside:** Gentamicin, Tobramycin, Amikacin
+- **Macrolide:** Azithromycin, Clarithromycin, Erythromycin
+- **Quinolone:** Levofloxacin, Ciprofloxacin, Moxifloxacin
+
+## 9. Tài liệu tham khảo
 
 - IDSA/ATS Guidelines for Community-Acquired Pneumonia in Adults, 2019.
 - IDSA/ATS Guidelines for Hospital-Acquired Pneumonia and Ventilator-Associated Pneumonia, 2016 (updates).

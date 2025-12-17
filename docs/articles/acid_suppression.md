@@ -46,12 +46,30 @@ summary:
 - Labs: Mg, B12 nếu dùng kéo dài; creatinine/eGFR để chỉnh H2RA; men gan nếu PPI dài hạn và có triệu chứng.
 - Thời gian dùng: mỗi 4–8 tuần đánh giá lại chỉ định; ngừng khi không còn chỉ định.
 
-## 6. Công cụ trong app (gắn link)
-- CrCl/eGFR: hỗ trợ chỉnh liều H2RA.
-- BMI: liên quan GERD và tư vấn giảm cân.
-- (Đề xuất) checklist SUP trong ICU.
+## 6. Công cụ trong app
 
-## 7. Tài liệu tham khảo
+- **CrCl (Cockcroft-Gault):** Chỉnh liều H2RA khi suy thận.
+- **eGFR:** Đánh giá chức năng thận.
+- **BMI:** Tư vấn dinh dưỡng, giảm cân (liên quan GERD).
+
+## 7. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**PPI:**
+- Omeprazole, Pantoprazole, Esomeprazole, Lansoprazole, Rabeprazole
+
+**H2RA:**
+- Ranitidine, Famotidine, Cimetidine
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc (tiếng Anh hoặc tiếng Việt)
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác, chỉnh liều theo thận/gan
+4. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc" (đặc biệt quan trọng với PPI + clopidogrel)
+5. So sánh thuốc: Menu "💊 Tra cứu thuốc" → "📊 So sánh thuốc trực quan"
+
+## 8. Tài liệu tham khảo
 - ACG/AGA Clinical Guideline for GERD & PUD, 2022–2024.
 - ASHP Therapeutic Guidelines on Stress Ulcer Prophylaxis in ICU (cập nhật gần nhất).
 - Surviving Sepsis/ICU care khuyến cáo về SUP (tham khảo).

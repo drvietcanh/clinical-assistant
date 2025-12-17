@@ -48,7 +48,12 @@ from .nephrology import (
     render_aki,
     render_uti_pyelonephritis,
     render_nephrolithiasis,
-    render_bph_urinary_retention
+    render_bph_urinary_retention,
+    render_chronic_glomerulonephritis,
+    render_nephrotic_syndrome,
+    render_ckd,
+    render_diabetic_nephropathy,
+    render_hypertensive_nephrosclerosis
 )
 from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis, render_parasitic_worms, render_dengue_fever, render_scrub_typhus, render_malaria
 from .endocrinology import (
@@ -60,7 +65,16 @@ from .endocrinology import (
 )
 from .neurology import render_serotonin_syndrome, render_neuroleptic_malignant_syndrome, render_intracranial_hypertension
 from .obstetrics import render_eclampsia, render_postpartum_hemorrhage
-from .dermatology import render_stevens_johnson_syndrome
+from .dermatology import (
+    render_stevens_johnson_syndrome,
+    render_atopic_dermatitis,
+    render_contact_dermatitis,
+    render_acne_vulgaris,
+    render_fungal_infections,
+    render_scabies,
+    render_urticaria,
+    render_psoriasis
+)
 from .gastroenterology import render_acute_pancreatitis, render_acute_liver_failure, render_ibd_exacerbation, render_acute_mesenteric_ischemia, render_cholecystitis_cholangitis, render_acute_appendicitis, render_acute_diverticulitis, render_acute_intestinal_obstruction, render_acute_hepatitis, render_acute_colitis, render_hepatitis_b, render_h_pylori_gastritis, render_hepatitis_c, render_gerd, render_ibs
 from .hematology import render_transfusion, render_anticoagulation_reversal
 from .oncology import (
@@ -119,6 +133,11 @@ __all__ = [
     'render_uti_pyelonephritis',
     'render_nephrolithiasis',
     'render_bph_urinary_retention',
+    'render_chronic_glomerulonephritis',
+    'render_nephrotic_syndrome',
+    'render_ckd',
+    'render_diabetic_nephropathy',
+    'render_hypertensive_nephrosclerosis',
     'render_cap',
     'render_hap_vap',
     'render_cdiff',
@@ -139,6 +158,13 @@ __all__ = [
     'render_eclampsia',
     'render_postpartum_hemorrhage',
     'render_stevens_johnson_syndrome',
+    'render_atopic_dermatitis',
+    'render_contact_dermatitis',
+    'render_acne_vulgaris',
+    'render_fungal_infections',
+    'render_scabies',
+    'render_urticaria',
+    'render_psoriasis',
     'render_acute_pancreatitis',
     'render_acute_liver_failure',
     'render_acute_mesenteric_ischemia',
