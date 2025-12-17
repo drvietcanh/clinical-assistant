@@ -294,7 +294,7 @@ def render():
             # Comorbidity screening
             if total_score >= 10:
                 st.markdown("---")
-    st.subheader("🔍 Sàng lọc Bệnh Đồng Mắc")
+                st.subheader("🔍 Sàng lọc Bệnh Đồng Mắc")
                 
                 st.warning("""
                 **Lưu ý:** Rối loạn lo âu thường đi kèm với:
