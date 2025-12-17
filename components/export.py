@@ -380,7 +380,11 @@ def render_export_section(
     # Add hash of title + inputs to ensure uniqueness when same calculator is called multiple times
     # This prevents duplicate key errors when the same calculator renders multiple results
     # Include inputs in hash to ensure uniqueness even when title is the same
-    unique_data = f"{title}_{str(sorted(inputs.items()))}"
+    # Filter out None values and ensure all values are serializable
+    filtered_inputs = {k: v for k, v in inputs.items() if v is not None}
+    # Convert all values to strings safely
+    inputs_str = str(sorted([(str(k), str(v)) for k, v in filtered_inputs.items()]))
+    unique_data = f"{title}_{inputs_str}"
     unique_hash = hashlib.md5(unique_data.encode()).hexdigest()[:8]
     unique_key = f"{key_prefix}_{unique_hash}"
     
@@ -400,6 +404,13 @@ def render_export_section(
         # Truncate but keep the suffix
         prefix_len = 100 - len("_export_expander")
         expander_key = unique_key[:prefix_len] + "_export_expander"
+    
+    # Final safety check - ensure expander_key is always a valid string
+    if not expander_key or not isinstance(expander_key, str):
+        expander_key = "export_expander"
+    
+    # Ensure key is sanitized (remove any invalid characters)
+    expander_key = _sanitize_key_prefix(expander_key.replace("_export_expander", "")) + "_export_expander"
     
     with st.expander("📤 Export Kết quả", expanded=False, key=expander_key):
         if show_preview:
