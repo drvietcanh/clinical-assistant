@@ -113,6 +113,18 @@ def render_dosing_schedule_generator():
         drug_options = drug_list + ["Khác..."]
         
         # Handle preset drug from example buttons
+        # Check if we need to update widget states from button clicks
+        if 'schedule_set_drug_select' in st.session_state:
+            st.session_state['schedule_drug_select'] = st.session_state['schedule_set_drug_select']
+            del st.session_state['schedule_set_drug_select']
+        if 'schedule_set_drug_custom' in st.session_state:
+            st.session_state['schedule_drug_custom'] = st.session_state['schedule_set_drug_custom']
+            del st.session_state['schedule_set_drug_custom']
+        if 'schedule_set_widgets' in st.session_state:
+            for key, value in st.session_state['schedule_set_widgets'].items():
+                st.session_state[key] = value
+            del st.session_state['schedule_set_widgets']
+        
         if preset_drug:
             if preset_drug in drug_list:
                 # Set the selectbox to the preset drug
@@ -234,13 +246,15 @@ def render_dosing_schedule_generator():
             st.session_state['preset_schedule_duration'] = 7
             st.session_state['preset_schedule_route'] = "IV (Tiêm tĩnh mạch)"
             st.session_state['preset_schedule_start_time'] = "08:00"
-            # Đồng bộ trực tiếp với các widget để Streamlit thực sự hiển thị giá trị
-            st.session_state['schedule_drug_select'] = "Vancomycin"  # For dropdown
-            st.session_state['schedule_dose'] = "1000mg"
-            st.session_state['schedule_interval'] = 12
-            st.session_state['schedule_duration'] = 7
-            st.session_state['schedule_route'] = "IV (Tiêm tĩnh mạch)"
-            st.session_state['schedule_start_time'] = "08:00"
+            # Sử dụng state riêng để tránh StreamlitAPIException
+            st.session_state['schedule_set_widgets'] = {
+                'schedule_drug_select': "Vancomycin",
+                'schedule_dose': "1000mg",
+                'schedule_interval': 12,
+                'schedule_duration': 7,
+                'schedule_route': "IV (Tiêm tĩnh mạch)",
+                'schedule_start_time': "08:00"
+            }
             st.session_state['schedule_generated'] = False
             st.rerun()
     
@@ -252,12 +266,15 @@ def render_dosing_schedule_generator():
             st.session_state['preset_schedule_duration'] = 30
             st.session_state['preset_schedule_route'] = "PO (Uống)"
             st.session_state['preset_schedule_start_time'] = "08:00"
-            st.session_state['schedule_drug_select'] = "Metformin"  # For dropdown
-            st.session_state['schedule_dose'] = "500mg"
-            st.session_state['schedule_interval'] = 8
-            st.session_state['schedule_duration'] = 30
-            st.session_state['schedule_route'] = "PO (Uống)"
-            st.session_state['schedule_start_time'] = "08:00"
+            # Sử dụng state riêng để tránh StreamlitAPIException
+            st.session_state['schedule_set_widgets'] = {
+                'schedule_drug_select': "Metformin",
+                'schedule_dose': "500mg",
+                'schedule_interval': 8,
+                'schedule_duration': 30,
+                'schedule_route': "PO (Uống)",
+                'schedule_start_time': "08:00"
+            }
             st.session_state['schedule_generated'] = False
             st.rerun()
     
@@ -269,12 +286,15 @@ def render_dosing_schedule_generator():
             st.session_state['preset_schedule_duration'] = 14
             st.session_state['preset_schedule_route'] = "PO (Uống)"
             st.session_state['preset_schedule_start_time'] = "08:00"
-            st.session_state['schedule_drug_select'] = "Omeprazole"  # For dropdown
-            st.session_state['schedule_dose'] = "20mg"
-            st.session_state['schedule_interval'] = 24
-            st.session_state['schedule_duration'] = 14
-            st.session_state['schedule_route'] = "PO (Uống)"
-            st.session_state['schedule_start_time'] = "08:00"
+            # Sử dụng state riêng để tránh StreamlitAPIException
+            st.session_state['schedule_set_widgets'] = {
+                'schedule_drug_select': "Omeprazole",
+                'schedule_dose': "20mg",
+                'schedule_interval': 24,
+                'schedule_duration': 14,
+                'schedule_route': "PO (Uống)",
+                'schedule_start_time': "08:00"
+            }
             st.session_state['schedule_generated'] = False
             st.rerun()
     

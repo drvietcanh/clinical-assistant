@@ -61,28 +61,38 @@ def render_interaction_checker():
     st.markdown("### 💡 Ví dụ nhanh:")
     col_ex1, col_ex2, col_ex3 = st.columns(3)
     
+    # Check if we need to update widget states from button clicks
+    # Use separate keys to avoid StreamlitAPIException when setting widget state
+    if 'interactions_set_input_method' in st.session_state:
+        st.session_state['input_method'] = st.session_state['interactions_set_input_method']
+        del st.session_state['interactions_set_input_method']
+    if 'interactions_set_num_drugs' in st.session_state:
+        st.session_state['num_drugs'] = st.session_state['interactions_set_num_drugs']
+        del st.session_state['interactions_set_num_drugs']
+    if 'interactions_set_drugs' in st.session_state:
+        for key, value in st.session_state['interactions_set_drugs'].items():
+            st.session_state[key] = value
+        del st.session_state['interactions_set_drugs']
+    
     with col_ex1:
         if st.button("🔍 Warfarin + Aspirin", use_container_width=True, key="example_warf_asp"):
-            st.session_state['input_method'] = "Nhập từng thuốc"
-            st.session_state['num_drugs'] = 2
-            st.session_state['drug_0'] = "Warfarin"
-            st.session_state['drug_1'] = "Aspirin"
+            st.session_state['interactions_set_input_method'] = "Nhập từng thuốc"
+            st.session_state['interactions_set_num_drugs'] = 2
+            st.session_state['interactions_set_drugs'] = {'drug_0': "Warfarin", 'drug_1': "Aspirin"}
             st.rerun()
     
     with col_ex2:
         if st.button("🔍 Metformin + Furosemide", use_container_width=True, key="example_met_furo"):
-            st.session_state['input_method'] = "Nhập từng thuốc"
-            st.session_state['num_drugs'] = 2
-            st.session_state['drug_0'] = "Metformin"
-            st.session_state['drug_1'] = "Furosemide"
+            st.session_state['interactions_set_input_method'] = "Nhập từng thuốc"
+            st.session_state['interactions_set_num_drugs'] = 2
+            st.session_state['interactions_set_drugs'] = {'drug_0': "Metformin", 'drug_1': "Furosemide"}
             st.rerun()
     
     with col_ex3:
         if st.button("🔍 Omeprazole + Warfarin", use_container_width=True, key="example_omep_warf"):
-            st.session_state['input_method'] = "Nhập từng thuốc"
-            st.session_state['num_drugs'] = 2
-            st.session_state['drug_0'] = "Omeprazole"
-            st.session_state['drug_1'] = "Warfarin"
+            st.session_state['interactions_set_input_method'] = "Nhập từng thuốc"
+            st.session_state['interactions_set_num_drugs'] = 2
+            st.session_state['interactions_set_drugs'] = {'drug_0': "Omeprazole", 'drug_1': "Warfarin"}
             st.rerun()
     
     st.markdown("---")
@@ -116,6 +126,11 @@ def render_interaction_checker():
             drug_input_key = f"drug_{i}"
             current_value = st.session_state.get(drug_input_key, "")
             
+            # Check if we need to update this drug input from button click
+            if f'interactions_set_{drug_input_key}' in st.session_state:
+                st.session_state[drug_input_key] = st.session_state[f'interactions_set_{drug_input_key}']
+                del st.session_state[f'interactions_set_{drug_input_key}']
+            
             # Show autocomplete suggestions
             if current_value and len(current_value) >= 1:
                 suggestions = get_drug_autocomplete_suggestions(current_value, max_results=5)
@@ -123,7 +138,7 @@ def render_interaction_checker():
                     with st.expander(f"💡 Gợi ý cho '{current_value}'", expanded=False):
                         for sug in suggestions:
                             if st.button(f"✓ {sug}", key=f"sug_{i}_{sug}", use_container_width=True):
-                                st.session_state[drug_input_key] = sug
+                                st.session_state[f'interactions_set_{drug_input_key}'] = sug
                                 st.rerun()
             
             drug = st.text_input(
