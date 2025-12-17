@@ -438,38 +438,13 @@ def render_export_section(
         # Fallback to simple key if anything goes wrong
         unique_key = "export"
     
-    # Construct the final key for the expander (hash is already alphanumeric, so safe)
-    expander_key = f"{unique_key}_export_expander"
-    
-    # Final validation - ensure key doesn't exceed reasonable length
-    if len(expander_key) > 100:
-        # Truncate but keep the suffix
-        prefix_len = 100 - len("_export_expander")
-        expander_key = unique_key[:prefix_len] + "_export_expander"
-    
-    # Final safety check - ensure expander_key is always a valid string
-    if not expander_key or not isinstance(expander_key, str):
-        expander_key = "export_expander"
-    
-    # Ensure key is sanitized (remove any invalid characters)
-    try:
-        # Extract prefix and sanitize it
-        prefix = expander_key.replace("_export_expander", "") if isinstance(expander_key, str) else ""
-        sanitized_prefix = _sanitize_key_prefix(prefix) if prefix else "export"
-        
-        # Ensure sanitized_prefix is not empty
-        if not sanitized_prefix or not isinstance(sanitized_prefix, str):
-            sanitized_prefix = "export"
-        
-        expander_key = f"{sanitized_prefix}_export_expander"
-    except (AttributeError, TypeError):
-        # Fallback if anything goes wrong
-        expander_key = "export_expander"
-    
     # Build a user-facing label (Streamlit expander in this version does not support `key`)
-    expander_label = "📤 Export Kết quả"
-    if calculator_name:
-        expander_label = f"{expander_label} • {calculator_name}"
+    try:
+        expander_label = "📤 Export Kết quả"
+        if calculator_name:
+            expander_label = f"{expander_label} • {calculator_name}"
+    except Exception:
+        expander_label = "📤 Export Kết quả"
     
     with st.expander(expander_label, expanded=False):
         if show_preview:
