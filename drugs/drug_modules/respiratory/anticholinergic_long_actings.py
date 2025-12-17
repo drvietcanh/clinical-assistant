@@ -129,7 +129,7 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Tiotropium'], 'last_updated': '2025-02-03',
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}}},
+        'High - FDA approved, multiple RCTs, clinical guidelines'}},
     "Aclidinium": {'group': 'Respiratory - Anticholinergic (Long-acting)',
         'vietnamese_name': 'Aclidinium, Tudorza Pressair', 'administration': [
         'Inhalation (DPI)'], 'indications': [
@@ -241,7 +241,7 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Aclidinium'], 'last_updated': '2025-02-05',
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}}},
+        'High - FDA approved, multiple RCTs, clinical guidelines'}},
     "Glycopyrronium": {'group': 'Respiratory - Anticholinergic (Long-acting)',
         'vietnamese_name': 'Glycopyrronium, Glycopyrrolate, Seebri Breezhaler',
         'administration': ['Inhalation (DPI)'], 'indications': [
@@ -355,7 +355,7 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Glycopyrronium'], 'last_updated': '2025-02-05',
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}}},
+        'High - FDA approved, multiple RCTs, clinical guidelines'}},
     "Umeclidinium": {'group': 'Respiratory - Anticholinergic (Long-acting)',
         'vietnamese_name': 'Umeclidinium, Incruse Ellipta',
         'administration': ['Inhalation (DPI)'], 'indications': [

@@ -55,7 +55,8 @@ DRUG_GROUPS = {
     ],
     "Neurology/Psychiatry": [
         "Carbamazepine", "Fluoxetine", "Sertraline", "Citalopram", "Escitalopram", "Venlafaxine", "Amitriptyline",
-        "Phenytoin", "Valproate", "Levetiracetam", "Lamotrigine", "Gabapentin", "Pregabalin"
+        "Phenytoin", "Valproate", "Levetiracetam", "Lamotrigine", "Gabapentin", "Pregabalin", "Topiramate",
+        "Donepezil", "Rivastigmine"
     ],
     "Allergy": [
         "Loratadine", "Cetirizine", "Fexofenadine", "Desloratadine", "Levocetirizine"
@@ -82,8 +83,9 @@ DRUG_GROUPS = {
         "Enoxaparin", "Heparin", "Rivaroxaban", "Fondaparinux"
     ],
     "Antifungals": [
-        "Fluconazole", "Itraconazole", "Voriconazole", "Posaconazole",
-        "Nystatin", "Amphotericin B"
+        "Fluconazole", "Itraconazole", "Voriconazole", "Posaconazole", "Isavuconazole",
+        "Nystatin", "Amphotericin B",
+        "Caspofungin", "Micafungin", "Anidulafungin"
     ]
 }
 

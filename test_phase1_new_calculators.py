@@ -18,7 +18,8 @@ CALCULATORS_TO_TEST = [
     ("scores.metabolism.hba1c_eag", "hba1c_eag"),
 ]
 
-def test_import(module_path, calculator_name):
+
+def run_import_test(module_path, calculator_name):
     """Test import module"""
     try:
         module = __import__(module_path, fromlist=[''])
@@ -26,7 +27,8 @@ def test_import(module_path, calculator_name):
     except Exception as e:
         return False, str(e)
 
-def test_phase1_imports(module_path, calculator_name):
+
+def run_phase1_imports_test(module_path, calculator_name):
     """Test Phase 1 imports có trong file không"""
     try:
         # Convert module path to file path
@@ -61,7 +63,8 @@ def test_phase1_imports(module_path, calculator_name):
     except Exception as e:
         return False, f"Lỗi đọc file: {str(e)}"
 
-def test_render_function(module_path, calculator_name):
+
+def run_render_function_test(module_path, calculator_name):
     """Test render function có tồn tại không"""
     try:
         module = __import__(module_path, fromlist=[''])
@@ -78,7 +81,8 @@ def test_render_function(module_path, calculator_name):
     except Exception as e:
         return False, f"Lỗi kiểm tra render: {str(e)}"
 
-def test_phase1_features(module_path, calculator_name):
+
+def run_phase1_features_test(module_path, calculator_name):
     """Test Phase 1 features có trong code không"""
     try:
         file_path = module_path.replace('.', '/') + '.py'
@@ -124,7 +128,7 @@ def main():
         
         # Test 1: Import
         print("1️⃣ Test import...", end=" ")
-        import_ok, import_msg = test_import(module_path, calculator_name)
+        import_ok, import_msg = run_import_test(module_path, calculator_name)
         if import_ok:
             print("✅ PASSED")
         else:
@@ -133,7 +137,7 @@ def main():
         
         # Test 2: Phase 1 imports
         print("2️⃣ Test Phase 1 imports...", end=" ")
-        imports_ok, imports_msg = test_phase1_imports(module_path, calculator_name)
+        imports_ok, imports_msg = run_phase1_imports_test(module_path, calculator_name)
         if imports_ok:
             print("✅ PASSED")
         else:
@@ -142,7 +146,7 @@ def main():
         
         # Test 3: Render function
         print("3️⃣ Test render function...", end=" ")
-        render_ok, render_msg = test_render_function(module_path, calculator_name)
+        render_ok, render_msg = run_render_function_test(module_path, calculator_name)
         if render_ok:
             print("✅ PASSED")
         else:
@@ -151,7 +155,7 @@ def main():
         
         # Test 4: Phase 1 features
         print("4️⃣ Test Phase 1 features...", end=" ")
-        features_ok, features_msg = test_phase1_features(module_path, calculator_name)
+        features_ok, features_msg = run_phase1_features_test(module_path, calculator_name)
         if features_ok:
             print("✅ PASSED")
         else:
@@ -197,6 +201,15 @@ def main():
     print("="*70)
     
     return failed_tests == 0
+
+
+def test_phase1_new_calculators_script():
+    """
+    Pytest wrapper để chạy toàn bộ kiểm tra Phase 1.
+    Thất bại nếu bất kỳ calculator Phase 1 nào thiếu import/feature.
+    """
+    assert main() is True
+
 
 if __name__ == "__main__":
     success = main()

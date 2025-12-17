@@ -196,6 +196,161 @@ ANTHELMINTICS_DRUGS = {
         'WHO Guidelines for treatment of soil-transmitted helminthiasis',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics"],
         'last_updated': '2025-02-04', 'evidence_level':
-        'High - Guidelines dựa trên chứng cứ từ WHO và FDA'}}}
+        'High - Guidelines dựa trên chứng cứ từ WHO và FDA'}},
+    "Praziquantel": {'group': 'Infectious Disease - Anthelmintic', 'vietnamese_name':
+        'Praziquantel', 'administration': ['PO'], 'indications': [
+        'Schistosomiasis (sán máng)', 'Cestodes: Taenia spp., Diphyllobothrium',
+        'Neurocysticercosis (off-label)', 'Clonorchis/Opisthorchis (sán lá gan nhỏ)']
+        , 'contraindications': [
+        'Dị ứng praziquantel', 'Ocular cysticercosis', 'Dùng rifampin đồng thời']
+        , 'dosage': {'adult_schisto': '20mg/kg x 3 lần/ngày x 1 ngày (cách 4-6 giờ)',
+        'adult_cestode': '5-10mg/kg x 1 lần (taeniasis) hoặc 25mg/kg x 3 lần/ngày x 1 ngày (cestode khác)',
+        'adult_neurocysticercosis': '50-100mg/kg/ngày chia 3 lần x 14 ngày',
+        'notes': 'Uống với thức ăn; nuốt nguyên viên, không nhai vì đắng'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Thận trọng do thiếu dữ liệu'}, 'side_effects': [
+        'Đau đầu, chóng mặt, buồn ngủ', 'Buồn nôn, đau bụng', 'Vị đắng/kim loại',
+        'Tăng men gan thoáng qua', 'Co giật/loạn cảm hiếm gặp (neurocysticercosis)']
+        , 'interactions': [
+        'Rifampin: giảm mạnh nồng độ praziquantel (tránh phối hợp)',
+        'Cimetidine, azole: tăng nồng độ praziquantel',
+        'Phenytoin/carbamazepine: giảm nồng độ praziquantel'], 'pregnancy':
+        'B - Tránh trong 3 tháng đầu, dùng được từ tam cá nguyệt 2-3 nếu cần'
+        , 'mechanism_of_action':
+        'Tăng tính thấm màng tế bào ký sinh trùng với ion Ca2+, gây co cứng cơ, liệt và chết ký sinh trùng; hiệu quả trên sán dây, sán lá, schistosoma.'
+        , 'monitoring': [
+        'Triệu chứng lâm sàng, xét nghiệm phân/nước tiểu sau điều trị',
+        'Chức năng gan nếu dùng liều cao/kéo dài', 'Theo dõi thần kinh ở bệnh nhân neurocysticercosis']
+        , 'precautions': [
+        'Tránh dùng đồng thời rifampin (giảm nồng độ, thất bại điều trị)',
+        'Thận trọng suy gan (tăng nồng độ)', 'Có thể gây ngủ gà/chóng mặt: tránh lái xe 24 giờ',
+        'Neurocysticercosis: dùng kèm corticosteroid để giảm phản ứng viêm', 'Không nhai viên do vị rất đắng'],
+        'pharmacokinetics': {'half_life': '1-2.5 giờ', 'onset': '1-3 giờ',
+        'duration': '6-8 giờ', 'protein_binding': '80%', 'clearance':
+        'Chuyển hóa gan (CYP3A4), thải trừ qua thận và mật'}, 'storage':
+        'Bảo quản nhiệt độ phòng, tránh ẩm, tránh ánh sáng', 'black_box_warnings':
+        None, 'drug_interactions': {'major': [{'drug': 'Rifampin', 'mechanism':
+        'Cảm ứng CYP3A4 mạnh, giảm nồng độ praziquantel', 'effect':
+        'Giảm hiệu quả điều trị', 'management': 'Tránh phối hợp'}], 'moderate': [
+        {'drug': 'Cimetidine, Azole', 'mechanism': 'Ức chế CYP3A4', 'effect':
+        'Tăng nồng độ praziquantel', 'management': 'Theo dõi tác dụng phụ'},
+        {'drug': 'Phenytoin, Carbamazepine', 'mechanism': 'Cảm ứng CYP',
+        'effect': 'Giảm nồng độ praziquantel', 'management': 'Cân nhắc tăng liều hoặc chọn thuốc khác'}]}
+        , 'contraindications': {'tuyệt_đối': ['Dị ứng praziquantel',
+        'Ocular cysticercosis', 'Dùng rifampin đồng thời'], 'tương_đối': [
+        'Suy gan (tăng nồng độ, thận trọng)']}, 'pregnancy_lactation': {
+        'fda_category': 'B', 'pregnancy_details':
+        'Tránh tam cá nguyệt 1; có thể dùng tam cá nguyệt 2-3 nếu lợi ích vượt nguy cơ'
+        , 'lactation': {'safety': 'Compatible', 'details':
+        'Bài tiết ít vào sữa; có thể cho bú sau 72 giờ nếu muốn giảm phơi nhiễm'
+        , 'recommendation': 'Cân nhắc tạm ngừng cho bú 72 giờ sau liều cuối trong trường hợp liều cao'}},
+        'hepatic_adjustment': {'mild': 'Không đổi, nhưng theo dõi', 'moderate':
+        'Thận trọng, có thể cần giảm liều', 'severe':
+        'Tránh hoặc dùng dưới giám sát chặt'}, 'overdose_management': {
+        'symptoms': ['Chóng mặt, buồn ngủ', 'Buồn nôn, nôn', 'Loạn cảm, ảo giác hiếm'],
+        'antidote': 'Không có', 'treatment': ['Hỗ trợ, than hoạt nếu sớm',
+        'Theo dõi huyết động, thần kinh']}, 'reversal_agents': {'available':
+        False, 'agents': None, 'notes': 'Không có thuốc giải độc đặc hiệu'},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống với thức ăn để giảm kích ứng dạ dày', 'timing':
+        'Chia liều cách nhau 4-6 giờ trong ngày điều trị', 'notes':
+        'Nuốt nguyên viên, không nhai do vị rất đắng'}}, 'references': {
+        'primary_sources': ['WHO schistosomiasis treatment guideline',
+        'UpToDate - Praziquantel', 'FDA label'], 'last_updated': '2025-02-06',
+        'evidence_level': 'High - hướng dẫn WHO/FDA'}},
+    "Ivermectin": {'group': 'Infectious Disease - Anthelmintic', 'vietnamese_name':
+        'Ivermectin', 'administration': ['PO'], 'indications': [
+        'Strongyloidiasis', 'Onchocerciasis', 'Ấu trùng di trú da', 'Ghẻ/chấy (off-label)']
+        , 'contraindications': ['Dị ứng ivermectin', 'Trẻ <15kg (thiếu dữ liệu)'],
+        'dosage': {'adult_strongyloides': '200 mcg/kg PO x 1, lặp lại sau 2 tuần nếu cần',
+        'adult_onchocerciasis': '150 mcg/kg PO mỗi 3-12 tháng', 'adult_scabies':
+        '200 mcg/kg PO, lặp lại sau 7-14 ngày (off-label)', 'notes':
+        'Uống lúc bụng đói với nước; cân nặng để tính liều'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Không đổi'}, 'side_effects': [
+        'Chóng mặt, mệt mỏi', 'Buồn nôn, tiêu chảy', 'Phản ứng Mazzotti (ngứa, ban, sốt) khi điều trị onchocerciasis'
+        ], 'interactions': ['Warfarin: tăng INR hiếm gặp', 'Thuốc ức chế P-gp: thận trọng (nguy cơ độc thần kinh)']
+        , 'pregnancy': 'C - tránh nếu có thể', 'mechanism_of_action':
+        'Gắn kênh chloride glutamate-gated của ký sinh trùng, tăng dòng chloride, gây liệt và chết ký sinh trùng; không qua hàng máu não người nên an toàn với người.'
+        , 'monitoring': [
+        'Triệu chứng lâm sàng và xét nghiệm phân (strongyloides)',
+        'Theo dõi phản ứng Mazzotti (ngứa, phát ban, sốt) khi điều trị onchocerciasis',
+        'Cân nhắc công thức máu và chức năng gan nếu điều trị nhiều đợt'],
+        'precautions': [
+        'Thận trọng đồng nhiễm Loa loa (nguy cơ viêm não do ấu trùng chết)',
+        'Tránh lái xe nếu chóng mặt/mệt', 'Không dùng cho trẻ <15kg do thiếu dữ liệu'
+        ], 'pharmacokinetics': {'half_life': '12-36 giờ', 'onset': '4-6 giờ',
+        'duration': 'Cao nhất trong 1-2 ngày', 'protein_binding': '93%',
+        'clearance': 'Chuyển hóa gan (CYP3A4), thải trừ chủ yếu qua phân'},
+        'storage': 'Bảo quản nhiệt độ phòng, tránh ẩm', 'black_box_warnings':
+        None, 'drug_interactions': {'moderate': [{'drug': 'Warfarin', 'mechanism':
+        'Tăng INR chưa rõ cơ chế', 'effect': 'Tăng nguy cơ chảy máu',
+        'management': 'Theo dõi INR khi bắt đầu/dừng ivermectin'}]}, 
+        'contraindications': {'tuyệt_đối': ['Dị ứng ivermectin'], 'tương_đối': [
+        'Trẻ <15kg', 'Đồng nhiễm Loa loa (nguy cơ biến chứng thần kinh)']},
+        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        'Tránh nếu có thể; dùng khi lợi ích vượt trội nguy cơ', 'lactation': {
+        'safety': 'Thấp', 'details':
+        'Bài tiết ít vào sữa; WHO cho phép dùng liều đơn ở phụ nữ cho con bú >1 tuần tuổi'
+        , 'recommendation': 'Có thể dùng nếu cần; theo dõi trẻ sơ sinh'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate': 'Thận trọng',
+        'severe': 'Thiếu dữ liệu, thận trọng tối đa'}, 'overdose_management': {
+        'symptoms': ['Chóng mặt, nôn', 'Hạ huyết áp, ngủ gà', 'Co giật hiếm'],
+        'antidote': 'Không có', 'treatment': ['Hỗ trợ, than hoạt nếu sớm',
+        'Theo dõi huyết áp, hô hấp', 'Điều trị triệu chứng']},
+        'reversal_agents': {'available': False, 'agents': None, 'notes':
+        'Không có thuốc giải độc đặc hiệu'}, 'administration_instructions': {
+        'oral': {'with_food': 'Uống lúc đói với nước (tăng hấp thu nhẹ)',
+        'timing': 'Uống 1 lần; lặp lại theo chỉ định', 'notes':
+        'Tính liều theo cân nặng, làm tròn theo viên 3mg/6mg nếu cần'}},
+        'references': {'primary_sources': [
+        'WHO guidelines for strongyloidiasis/onchocerciasis',
+        'UpToDate - Ivermectin', 'CDC DPDx - Ivermectin'],
+        'last_updated': '2025-02-06', 'evidence_level': 'High - WHO/CDC/UpToDate'}},
+    "Levamisole": {'group': 'Infectious Disease - Anthelmintic', 'vietnamese_name':
+        'Levamisole', 'administration': ['PO'], 'indications': [
+        'Tẩy giun (giun đũa, giun móc) - ít dùng hiện nay'], 'contraindications':
+        ['Dị ứng levamisole', 'Tiền sử giảm bạch cầu hạt', 'Có thai'],
+        'dosage': {'adult_roundworm': '150mg x 1 lần (đơn liều) sau ăn tối',
+        'notes': 'Ít dùng do nguy cơ giảm bạch cầu hạt; cân nhắc thuốc khác an toàn hơn'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Thận trọng'}, 'side_effects': [
+        'Buồn nôn, nôn, đau bụng', 'Nhức đầu, chóng mặt', 'Vị kim loại',
+        'Giảm bạch cầu hạt hiếm nhưng nghiêm trọng'], 'interactions': [
+        'Clozapine: tăng nguy cơ giảm bạch cầu hạt', 'Warfarin: có thể tăng INR'],
+        'pregnancy': 'C - tránh dùng', 'mechanism_of_action':
+        'Kích thích hạch thần kinh cơ của giun, gây liệt cơ và tống xuất giun; có tác dụng điều hòa miễn dịch nhẹ.'
+        , 'monitoring': [
+        'Công thức máu nếu dùng >1 liều hoặc có triệu chứng nhiễm trùng',
+        'Triệu chứng thần kinh/tiêu hóa'], 'precautions': [
+        'Nguy cơ giảm bạch cầu hạt: ngừng ngay nếu sốt/đau họng',
+        'Ít dùng; ưu tiên albendazole/mebendazole nếu không chống chỉ định'],
+        'pharmacokinetics': {'half_life': '3-6 giờ', 'onset': '1-2 giờ',
+        'duration': '12-24 giờ', 'protein_binding': '~20%', 'clearance':
+        'Chuyển hóa gan, thải trừ qua thận'}, 'storage':
+        'Bảo quản nhiệt độ phòng, tránh ẩm', 'black_box_warnings': None,
+        'drug_interactions': {'moderate': [{'drug': 'Clozapine', 'mechanism':
+        'Tăng nguy cơ giảm bạch cầu hạt', 'effect': 'Tăng nguy cơ nhiễm trùng',
+        'management': 'Tránh phối hợp'}, {'drug': 'Warfarin', 'mechanism':
+        'Chưa rõ, có thể tăng INR', 'effect': 'Tăng nguy cơ chảy máu',
+        'management': 'Theo dõi INR nếu phối hợp'}]}, 'contraindications': {
+        'tuyệt_đối': ['Dị ứng levamisole', 'Tiền sử giảm bạch cầu hạt', 'Có thai'],
+        'tương_đối': ['Suy gan, suy thận - thận trọng']},
+        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        'Tránh dùng; cân nhắc thuốc khác an toàn hơn', 'lactation': {
+        'safety': 'Unknown', 'details': 'Không có dữ liệu; tránh dùng nếu có thể',
+        'recommendation': 'Nếu buộc dùng, theo dõi trẻ dấu hiệu độc tính'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate': 'Thận trọng',
+        'severe': 'Tránh nếu có thể'}, 'overdose_management': {
+        'symptoms': ['Buồn nôn, nôn, chóng mặt', 'Co giật hiếm'],
+        'antidote': 'Không có', 'treatment': ['Điều trị hỗ trợ, than hoạt nếu sớm',
+        'Theo dõi CBC, dấu hiệu nhiễm trùng']}, 'reversal_agents': {
+        'available': False, 'agents': None, 'notes': 'Không có thuốc giải độc đặc hiệu'},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống sau ăn tối để giảm kích ứng dạ dày', 'timing': 'Liều đơn',
+        'notes': 'Theo dõi CBC nếu phải lặp lại hoặc nghi ngờ giảm bạch cầu'}},
+        'references': {'primary_sources': [
+        'WHO deworming guideline (historical use)', 'UpToDate - Levamisole'],
+        'last_updated': '2025-02-06', 'evidence_level': 'Moderate - dữ liệu hạn chế hiện nay'}}}
 
 __all__ = ['ANTHELMINTICS_DRUGS']

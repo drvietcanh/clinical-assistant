@@ -30,6 +30,7 @@ from .drug_modules import (
 )
 
 from .drug_utils import DRUG_GROUPS
+from .enhanced_fields_overrides import EXTRA_ENHANCED_FIELDS
 
 # Merge all drug dictionaries
 DRUG_DATABASE = {
@@ -53,6 +54,11 @@ DRUG_DATABASE = {
     **ENDOCRINOLOGY_OTHER_DRUGS,
     **MISCELLANEOUS_DRUGS,
 }
+
+# Apply enhanced-field overrides (bổ sung/chuẩn hóa 14 fields cho một số thuốc)
+for _name, _fields in EXTRA_ENHANCED_FIELDS.items():
+    if _name in DRUG_DATABASE:
+        DRUG_DATABASE[_name].update(_fields)
 
 # Calculate total
 TOTAL_DRUGS = len(DRUG_DATABASE)

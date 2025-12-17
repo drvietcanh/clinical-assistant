@@ -500,6 +500,160 @@ INFLUENZA_ANTIVIRALS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, WHO/NIH guidelines, và dữ liệu lâm sàng"
         }
+    },
+
+    "Favipiravir": {
+        "group": "Infectious Disease - Antiviral (RNA polymerase inhibitor)",
+        "vietnamese_name": "Favipiravir, Avigan",
+        "administration": ["PO"],
+        "indications": [
+            "Cúm A và B (khi không đáp ứng hoặc không dùng được neuraminidase inhibitor)",
+            "Cúm do chủng kháng oseltamivir/zanamivir",
+            "COVID-19 (off-label tùy hướng dẫn địa phương)"
+        ],
+        "contraindications": [
+            "Có thai hoặc dự định mang thai",
+            "Cho con bú",
+            "Bệnh gan tiến triển (ALT/AST >5x ULN)",
+            "Gút tiến triển hoặc tăng acid uric không kiểm soát",
+            "Dị ứng favipiravir"
+        ],
+        "dosage": {
+            "adult_influenza": "1600mg x 2 lần (ngày 1), sau đó 600mg x 2 lần/ngày (ngày 2-5)",
+            "adult_covid_off_label": "1800mg x 2 lần (ngày 1), sau đó 800mg x 2 lần/ngày (ngày 2-10) - theo phác đồ địa phương",
+            "max_duration": "5 ngày cho cúm; 10 ngày cho COVID-19 (off-label)",
+            "notes": "Uống sau ăn. Không dùng đơn trị kéo dài vì nguy cơ kháng thuốc và độc tính phôi thai."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần điều chỉnh",
+            "30_60": "Thận trọng, có thể giữ nguyên liều nhưng theo dõi chặt chẽ men gan/acid uric",
+            "under_30": "Dữ liệu hạn chế; tránh nếu có lựa chọn khác, hoặc giảm liều 50% và theo dõi sát"
+        },
+        "side_effects": [
+            "Tăng acid uric, cơn gút",
+            "Tăng men gan (ALT/AST)",
+            "Buồn nôn, nôn, tiêu chảy",
+            "Giảm bạch cầu trung tính nhẹ",
+            "Kéo dài QT (hiếm)"
+        ],
+        "interactions": [
+            "Thuốc tăng acid uric (thiazide, ciclosporin): tăng nguy cơ cơn gút",
+            "Thuốc kéo dài QT (amiodarone, fluoroquinolone): tăng nguy cơ loạn nhịp",
+            "Warfarin: có thể tăng INR, cần theo dõi"
+        ],
+        "pregnancy": "X - Chống chỉ định (gây quái thai)",
+        "mechanism_of_action": "Favipiravir là tiền thuốc, được ribosyl hóa và phosphoryl hóa nội bào thành favipiravir-RTP, ức chế RNA-dependent RNA polymerase (RdRp) của virus RNA, gây ngừng kéo dài chuỗi và đột biến thảm họa, làm ngừng nhân lên virus.",
+        "monitoring": [
+            "Men gan (ALT/AST) trước và mỗi 2-3 ngày trong quá trình dùng",
+            "Acid uric huyết thanh (nguy cơ cơn gút)",
+            "Triệu chứng tim mạch nếu phối hợp thuốc kéo dài QT",
+            "Công thức máu nếu dùng >5-10 ngày",
+            "Test thai (nữ) và tư vấn tránh thai cho cả nam và nữ trong và sau điều trị (ít nhất 7 ngày)"
+        ],
+        "precautions": [
+            "Gây quái thai: chống chỉ định tuyệt đối ở phụ nữ có thai; nam và nữ phải tránh thai hiệu quả",
+            "Theo dõi men gan; ngừng nếu ALT/AST >5x ULN hoặc có triệu chứng viêm gan",
+            "Thận trọng ở bệnh nhân gút hoặc tăng acid uric; cân nhắc allopurinol dự phòng nếu cần",
+            "Uống sau ăn để giảm buồn nôn",
+            "Không dùng đơn trị liệu cho COVID-19 ngoài phác đồ được phê duyệt"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-5 giờ (tăng theo liều do ức chế aldehyde oxidase)",
+            "onset": "Nồng độ đỉnh sau 2 giờ",
+            "duration": "Liên quan phơi nhiễm AUC; dùng chia 2 lần/ngày sau liều tải",
+            "protein_binding": "54%",
+            "clearance": "Chuyển hóa chủ yếu qua aldehyde oxidase, một phần xanthine oxidase; thải qua thận dạng không hoạt tính"
+        },
+        "storage": "Bảo quản nhiệt độ phòng, tránh ẩm và ánh sáng.",
+        "black_box_warnings": "GÂY QUÁI THAI - chống chỉ định tuyệt đối ở thai kỳ; yêu cầu tránh thai cho cả nam và nữ.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc kéo dài QT (amiodarone, sotalol, levofloxacin)",
+                    "mechanism": "Nguy cơ cộng dồn kéo dài QT",
+                    "effect": "Tăng nguy cơ xoắn đỉnh",
+                    "management": "Tránh nếu có thể; nếu bắt buộc, theo dõi ECG và điện giải."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể ức chế nhẹ chuyển hóa warfarin",
+                    "effect": "Tăng INR",
+                    "management": "Theo dõi INR và chỉnh liều warfarin khi bắt đầu/ngừng favipiravir."
+                },
+                {
+                    "drug": "Allopurinol hoặc febuxostat",
+                    "mechanism": "Tác động lên chuyển hóa purine/acid uric, có thể thay đổi nồng độ favipiravir",
+                    "effect": "Biến thiên nồng độ thuốc và acid uric",
+                    "management": "Theo dõi acid uric, lâm sàng; điều chỉnh nếu cần."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Có thai hoặc dự định mang thai",
+                "Cho con bú",
+                "Dị ứng với favipiravir",
+                "ALT/AST >5x ULN"
+            ],
+            "tương_đối": [
+                "Tăng acid uric/gút không kiểm soát",
+                "Suy gan vừa-nặng",
+                "Phối hợp thuốc kéo dài QT",
+                "CrCl <30 ml/phút (dữ liệu hạn chế)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": "Chống chỉ định tuyệt đối do gây quái thai trên động vật và cảnh báo của nhà sản xuất. Cả nam và nữ phải tránh thai hiệu quả trong điều trị và 7 ngày sau liều cuối.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Chưa rõ bài tiết vào sữa mẹ; nguy cơ độc tính phôi thai/nhũ nhi.",
+                "recommendation": "Ngừng cho con bú hoặc chọn thuốc khác."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh nhưng theo dõi men gan",
+            "moderate": "Thận trọng, cân nhắc giảm 25-50% nếu ALT/AST tăng nền",
+            "severe": "Tránh dùng nếu ALT/AST >5x ULN hoặc Child-Pugh C",
+            "notes": "Favipiravir chuyển hóa qua gan; suy gan làm tăng phơi nhiễm."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Tăng mạnh acid uric",
+                "Tăng men gan",
+                "Kéo dài QT (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc, điều trị hỗ trợ",
+                "Theo dõi ECG, điện giải nếu nghi kéo dài QT",
+                "Hydrat và dùng thuốc hạ acid uric nếu cần",
+                "Theo dõi men gan"
+            ],
+            "monitoring": "ECG, men gan, acid uric, triệu chứng lâm sàng"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống sau ăn để giảm kích ứng tiêu hóa",
+                "timing": "Liều tải ngày 1, sau đó chia 2 lần/ngày. Uống cách đều 12 giờ."
+            },
+            "iv": None
+        },
+        "references": {
+            "primary_sources": [
+                "PMDA Japan - Favipiravir Prescribing Information",
+                "WHO COVID-19 Therapeutics (off-label use)",
+                "UpToDate - Favipiravir",
+                "IDSA influenza guidance (kháng neuraminidase)"
+            ],
+            "last_updated": "2025-02-17",
+            "evidence_level": "B - Dữ liệu cấp phép tại Nhật và nghiên cứu quan sát; sử dụng off-label cần cân nhắc lợi ích/nguy cơ"
+        }
     }
 
 }

@@ -22,18 +22,21 @@ test_results = {
     "warnings": []
 }
 
-def test_passed(name: str):
+
+def record_passed(name: str):
     """Mark test as passed"""
     test_results["passed"].append(name)
     print(f"✅ PASS: {name}")
 
-def test_failed(name: str, error: str):
+
+def record_failed(name: str, error: str):
     """Mark test as failed"""
     test_results["failed"].append((name, error))
     print(f"❌ FAIL: {name}")
     print(f"   Error: {error}")
 
-def test_warning(name: str, message: str):
+
+def record_warning(name: str, message: str):
     """Mark test as warning"""
     test_results["warnings"].append((name, message))
     print(f"⚠️  WARN: {name}")
@@ -75,9 +78,9 @@ try:
     assert "Test Author" in citation
     assert "2020" in citation
     
-    test_passed("References Component")
+    record_passed("References Component")
 except Exception as e:
-    test_failed("References Component", str(e))
+    record_failed("References Component", str(e))
 
 # 2. Test References Config
 print("\n2. Testing References Config...")
@@ -93,9 +96,9 @@ try:
     assert has_references("CHA2DS2-VASc") == True
     assert has_references("NonExistentCalc") == False
     
-    test_passed("References Config")
+    record_passed("References Config")
 except Exception as e:
-    test_failed("References Config", str(e))
+    record_failed("References Config", str(e))
 
 # 3. Test Calculation History
 print("\n3. Testing Calculation History...")
@@ -124,10 +127,10 @@ try:
     
     # Test functions (without actual streamlit)
     # We'll test the logic
-    test_passed("Calculation History (structure check)")
-    test_warning("Calculation History", "Full test requires Streamlit session state")
+    record_passed("Calculation History (structure check)")
+    record_warning("Calculation History", "Full test requires Streamlit session state")
 except Exception as e:
-    test_failed("Calculation History", str(e))
+    record_failed("Calculation History", str(e))
 
 # 4. Test Share Results
 print("\n4. Testing Share Results...")
@@ -152,9 +155,9 @@ try:
     assert len(qr_image) > 0
     assert "base64" in qr_image.lower() or qr_image.startswith("data:")
     
-    test_passed("Share Results Component")
+    record_passed("Share Results Component")
 except Exception as e:
-    test_failed("Share Results Component", str(e))
+    record_failed("Share Results Component", str(e))
 
 # 5. Test Smart Suggestions
 print("\n5. Testing Smart Suggestions...")
@@ -179,9 +182,9 @@ try:
     assert isinstance(popular, list)
     assert len(popular) > 0
     
-    test_passed("Smart Suggestions Component")
+    record_passed("Smart Suggestions Component")
 except Exception as e:
-    test_failed("Smart Suggestions Component", str(e))
+    record_failed("Smart Suggestions Component", str(e))
 
 # ========== PHASE 2 TESTS ==========
 print("\n\n📋 PHASE 2: CORE FEATURES")
@@ -214,9 +217,9 @@ try:
     assert isinstance(color, str)
     assert len(color) > 0
     
-    test_passed("Flowchart Base Component")
+    record_passed("Flowchart Base Component")
 except Exception as e:
-    test_failed("Flowchart Base Component", str(e))
+    record_failed("Flowchart Base Component", str(e))
 
 # 7. Test Clinical Rules Flowcharts
 print("\n7. Testing Clinical Rules Flowcharts...")
@@ -255,9 +258,9 @@ try:
             assert edge.from_node in node_ids, f"{name}: Edge from_node '{edge.from_node}' not found"
             assert edge.to_node in node_ids, f"{name}: Edge to_node '{edge.to_node}' not found"
     
-    test_passed("Clinical Rules Flowcharts (7 algorithms)")
+    record_passed("Clinical Rules Flowcharts (7 algorithms)")
 except Exception as e:
-    test_failed("Clinical Rules Flowcharts", str(e))
+    record_failed("Clinical Rules Flowcharts", str(e))
 
 # 8. Test Pregnancy & Lactation Safety
 print("\n8. Testing Pregnancy & Lactation Safety...")
@@ -295,9 +298,9 @@ try:
     no_drug = get_pregnancy_safety("NonExistentDrug")
     assert no_drug is None
     
-    test_passed("Pregnancy & Lactation Safety Database")
+    record_passed("Pregnancy & Lactation Safety Database")
 except Exception as e:
-    test_failed("Pregnancy & Lactation Safety Database", str(e))
+    record_failed("Pregnancy & Lactation Safety Database", str(e))
 
 # 9. Test Pregnancy & Lactation Display
 print("\n9. Testing Pregnancy & Lactation Display Component...")
@@ -314,10 +317,10 @@ try:
     assert isinstance(color, str)
     assert color.startswith("#")
     
-    test_passed("Pregnancy & Lactation Display Component")
-    test_warning("Pregnancy & Lactation Display", "Full render test requires Streamlit")
+    record_passed("Pregnancy & Lactation Display Component")
+    record_warning("Pregnancy & Lactation Display", "Full render test requires Streamlit")
 except Exception as e:
-    test_failed("Pregnancy & Lactation Display Component", str(e))
+    record_failed("Pregnancy & Lactation Display Component", str(e))
 
 # 10. Test Pediatric Dosing Calculator
 print("\n10. Testing Pediatric Dosing Calculator...")
@@ -362,9 +365,9 @@ try:
     assert guidelines is not None
     assert "weight_based" in guidelines
     
-    test_passed("Pediatric Dosing Calculator")
+    record_passed("Pediatric Dosing Calculator")
 except Exception as e:
-    test_failed("Pediatric Dosing Calculator", str(e))
+    record_failed("Pediatric Dosing Calculator", str(e))
 
 # ========== INTEGRATION TESTS ==========
 print("\n\n📋 INTEGRATION TESTS")
@@ -389,12 +392,12 @@ try:
     all_passed = all(checks.values())
     
     if all_passed:
-        test_passed("Phase 1 Integration in CHA2DS2-VASc")
+        record_passed("Phase 1 Integration in CHA2DS2-VASc")
     else:
         missing = [k for k, v in checks.items() if not v]
-        test_warning("Phase 1 Integration", f"Missing in CHA2DS2-VASc: {', '.join(missing)}")
+        record_warning("Phase 1 Integration", f"Missing in CHA2DS2-VASc: {', '.join(missing)}")
 except Exception as e:
-    test_failed("Phase 1 Integration Check", str(e))
+    record_failed("Phase 1 Integration Check", str(e))
 
 # 12. Test Phase 2 Features Page
 print("\n12. Testing Phase 2 Features Page...")
@@ -415,12 +418,12 @@ try:
     all_passed = all(checks.values())
     
     if all_passed:
-        test_passed("Phase 2 Features Page")
+        record_passed("Phase 2 Features Page")
     else:
         missing = [k for k, v in checks.items() if not v]
-        test_warning("Phase 2 Features Page", f"Missing: {', '.join(missing)}")
+        record_warning("Phase 2 Features Page", f"Missing: {', '.join(missing)}")
 except Exception as e:
-    test_failed("Phase 2 Features Page", str(e))
+    record_failed("Phase 2 Features Page", str(e))
 
 # ========== SUMMARY ==========
 print("\n" + "=" * 80)

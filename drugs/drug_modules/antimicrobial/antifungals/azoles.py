@@ -826,6 +826,172 @@ AZOLES_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High (FDA-approved, extensive clinical data, IDSA guidelines)"
         }
+    },
+
+    "Isavuconazole": {
+        "group": "Infectious Disease - Antifungal (Azole - Triazole, prodrug)",
+        "vietnamese_name": "Isavuconazole (Isavuconazonium sulfate), Cresemba",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm nấm Aspergillosis xâm lấn",
+            "Nhiễm nấm Mucorales (mucormycosis) khi không dung nạp/không đáp ứng Amphotericin B",
+            "Nhiễm nấm Candida xâm lấn (off-label/backup)",
+            "Thay thế khi chống chỉ định hoặc thất bại với voriconazole/posaconazole"
+        ],
+        "contraindications": [
+            "Dị ứng isavuconazole/isavuconazonium",
+            "Hội chứng QT ngắn bẩm sinh",
+            "Dùng với chất cảm ứng mạnh CYP3A4 (rifampin, carbamazepine, phenobarbital, phenytoin, St. John's wort)",
+            "Dùng với chất ức chế mạnh CYP3A4 (ketoconazole, high-dose ritonavir, clarithromycin) do tăng nồng độ"
+        ],
+        "dosage": {
+            "adult_loading": "372mg (tương đương 200mg isavuconazole) IV/PO mỗi 8 giờ x 6 liều (48 giờ)",
+            "adult_maintenance": "372mg IV/PO mỗi 24 giờ, bắt đầu 12-24 giờ sau liều loading cuối",
+            "notes": "Không cần chỉnh liều giữa PO và IV. Không chứa cyclodextrin nên an toàn hơn ở suy thận so với voriconazole/posaconazole."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi (không chứa cyclodextrin)",
+            "hemodialysis": "Không bị loại đáng kể qua lọc máu, không cần bổ sung"
+        },
+        "side_effects": [
+            "Tăng men gan",
+            "Buồn nôn, nôn, tiêu chảy",
+            "Nhức đầu",
+            "Hạ kali máu",
+            "Phản ứng truyền (IV)",
+            "QT NGẮN (đặc trưng của isavuconazole)"
+        ],
+        "interactions": [
+            "CYP3A4 inducers mạnh (rifampin, carbamazepine, phenobarbital, phenytoin, St. John's wort): giảm nồng độ, tránh",
+            "CYP3A4 inhibitors mạnh (ketoconazole, ritonavir liều cao, clarithromycin): tăng nồng độ, tránh/giảm liều",
+            "Tacrolimus/Cyclosporine/Sirolimus: tăng nồng độ, cần giảm liều và theo dõi",
+            "Warfarin: có thể tăng nhẹ INR, theo dõi",
+            "Thuốc/nhóm gây QT ngắn: thận trọng"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Isavuconazole (hoạt chất từ tiền chất isavuconazonium sulfate) là triazole ức chế lanosterol 14α-demethylase (CYP51) của nấm, ngăn tổng hợp ergosterol → màng tế bào nấm mất ổn định. Phổ rộng: Aspergillus, Mucorales, Candida, Fusarium.",
+        "monitoring": [
+            "Chức năng gan (ALT, AST, bilirubin) trước và trong điều trị",
+            "Điện giải (đặc biệt kali) do nguy cơ QT ngắn",
+            "ECG nền và khi có triệu chứng tim mạch",
+            "Theo dõi tương tác khi phối hợp thuốc ức chế/cảm ứng CYP3A4",
+            "Đánh giá đáp ứng lâm sàng và xét nghiệm với nhiễm nấm xâm lấn"
+        ],
+        "precautions": [
+            "Có thể gây QT NGẮN (khác với azole khác gây QT dài) - tránh ở bệnh nhân có hội chứng QT ngắn",
+            "Chất nền và ức chế CYP3A4 mức trung bình → nhiều tương tác",
+            "Không cần chỉnh liều ở suy thận, không chứa cyclodextrin",
+            "Suy gan trung bình-nặng: theo dõi sát men gan, cân nhắc giảm liều nếu tăng men",
+            "Thẩm tách máu không loại bỏ đáng kể thuốc",
+            "Theo dõi phản ứng truyền khi dùng IV"
+        ],
+        "pharmacokinetics": {
+            "half_life": "≈130 giờ (rất dài) → dùng 1 lần/ngày sau liều tải",
+            "onset": "Cần liều tải để đạt nồng độ điều trị nhanh; trạng thái ổn định sau ~7 ngày",
+            "duration": "Duy trì 24 giờ/liều sau pha tải",
+            "protein_binding": "≈99%",
+            "clearance": "Chuyển hóa gan (CYP3A4/5; glucuronidation thứ cấp), thải trừ qua phân và nước tiểu dưới dạng chuyển hóa"
+        },
+        "storage": "Bảo quản viên và lọ bột ở 20-25°C, tránh ẩm. Dung dịch sau pha IV dùng trong 6 giờ ở nhiệt độ phòng hoặc 24 giờ nếu bảo quản lạnh (2-8°C).",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rifampin, Carbamazepine, Phenobarbital, Phenytoin, St. John's wort",
+                    "mechanism": "Cảm ứng mạnh CYP3A4 → giảm mạnh nồng độ isavuconazole",
+                    "effect": "Giảm hiệu quả điều trị, nguy cơ thất bại",
+                    "management": "TRÁNH dùng chung; chọn thuốc kháng nấm khác."
+                },
+                {
+                    "drug": "Ketoconazole, Ritonavir liều cao, Clarithromycin",
+                    "mechanism": "Ức chế mạnh CYP3A4 → tăng nồng độ isavuconazole",
+                    "effect": "Nguy cơ tăng độc tính (tăng men gan, rối loạn điện giải, QT ngắn)",
+                    "management": "Tránh phối hợp hoặc giảm liều và theo dõi chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Tacrolimus, Cyclosporine, Sirolimus",
+                    "mechanism": "Isavuconazole ức chế CYP3A4 mức trung bình → tăng nồng độ thuốc ức chế miễn dịch",
+                    "effect": "Tăng độc tính thận, tăng huyết áp, rối loạn điện giải",
+                    "management": "Giảm liều và theo dõi nồng độ thuốc ức chế miễn dịch."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Ảnh hưởng chuyển hóa qua CYP, có thể tăng INR",
+                    "effect": "Tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR khi bắt đầu/ngừng hoặc thay đổi liều."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng isavuconazole/isavuconazonium",
+                "Hội chứng QT ngắn bẩm sinh",
+                "Dùng cùng chất ức chế hoặc cảm ứng mạnh CYP3A4 (ketoconazole, rifampin, carbamazepine, phenobarbital, phenytoin, St. John's wort)"
+            ],
+            "tương_đối": [
+                "Suy gan trung bình-nặng (theo dõi men gan chặt chẽ)",
+                "Rối loạn điện giải (hạ kali, hạ magie) - có thể làm nặng QT ngắn",
+                "Bệnh tim nền hoặc tiền sử loạn nhịp"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu trên người hạn chế; động vật cho thấy độc tính phôi. Chỉ dùng khi lợi ích vượt trội.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Cân nhắc ngừng cho bú hoặc chọn thuốc khác.",
+                "recommendation": "Tránh hoặc theo dõi trẻ nếu phải dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh",
+            "moderate": "Thận trọng, theo dõi men gan; cân nhắc giảm liều nếu men gan tăng kéo dài",
+            "severe": "Dữ liệu hạn chế; thận trọng tối đa hoặc cân nhắc thuốc khác",
+            "notes": "Chuyển hóa qua gan (CYP3A4/5). Tăng AUC ở Child-Pugh B/C; cần giám sát lâm sàng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, chóng mặt",
+                "Tăng men gan",
+                "Rối loạn điện giải, QT ngắn"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc, điều trị hỗ trợ",
+                "Theo dõi ECG và điện giải (K, Mg)",
+                "Bù điện giải nếu cần",
+                "Thẩm tách máu không hiệu quả do gắn protein cao"
+            ],
+            "monitoring": "Theo dõi men gan, ECG, điện giải, dấu hiệu lâm sàng trong 24-48 giờ."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn",
+                "timing": "Liều tải: mỗi 8 giờ x 6 liều; sau đó 1 lần/ngày vào cùng thời điểm"
+            },
+            "iv": {
+                "reconstitution": "Pha lọ 200mg base (372mg muối) với dung môi kèm theo, sau đó pha loãng trong 250ml NS hoặc D5W",
+                "infusion_rate": "Truyền trong ≥1 giờ",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Không chứa cyclodextrin; theo dõi phản ứng truyền."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cresemba (Isavuconazonium sulfate)",
+                "IDSA Guidelines - Treatment of Aspergillosis and Mucormycosis",
+                "UpToDate - Isavuconazole: Drug Information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High (FDA-approved, IDSA guideline-endorsed)"
+        }
     }
 }
 

@@ -17,16 +17,19 @@ print()
 
 test_results = {"passed": [], "failed": [], "warnings": []}
 
-def test_passed(name: str):
+
+def record_passed(name: str):
     test_results["passed"].append(name)
     print(f"✅ PASS: {name}")
 
-def test_failed(name: str, error: str):
+
+def record_failed(name: str, error: str):
     test_results["failed"].append((name, error))
     print(f"❌ FAIL: {name}")
     print(f"   Error: {error}")
 
-def test_warning(name: str, message: str):
+
+def record_warning(name: str, message: str):
     test_results["warnings"].append((name, message))
     print(f"⚠️  WARN: {name}: {message}")
 
@@ -41,9 +44,9 @@ try:
     from components.share_results import render_share_section, generate_qr_code
     from components.smart_suggestions import render_suggestions, get_related_calculators
     from components.calculation_history import render_history_ui, save_calculation_to_history
-    test_passed("Phase 1 Components Import")
+    record_passed("Phase 1 Components Import")
 except Exception as e:
-    test_failed("Phase 1 Components Import", str(e))
+    record_failed("Phase 1 Components Import", str(e))
 
 # Test Phase 2 imports
 print("\n2. Testing Phase 2 Components...")
@@ -56,9 +59,9 @@ try:
     )
     from components.pregnancy_lactation_display import render_pregnancy_lactation_section
     from scores.pediatrics.pediatric_dosing import render_pediatric_dosing_calculator
-    test_passed("Phase 2 Components Import")
+    record_passed("Phase 2 Components Import")
 except Exception as e:
-    test_failed("Phase 2 Components Import", str(e))
+    record_failed("Phase 2 Components Import", str(e))
 
 # Test Page imports
 print("\n3. Testing Page Files...")
@@ -70,13 +73,13 @@ try:
         with open(page_path, 'r', encoding='utf-8') as f:
             content = f.read()
             if "render_pediatric_dosing_calculator" in content:
-                test_passed("Phase 2 Features Page Structure")
+                record_passed("Phase 2 Features Page Structure")
             else:
-                test_warning("Phase 2 Features Page", "Missing some imports")
+                record_warning("Phase 2 Features Page", "Missing some imports")
     else:
-        test_failed("Phase 2 Features Page", "File not found")
+        record_failed("Phase 2 Features Page", "File not found")
 except Exception as e:
-    test_failed("Phase 2 Features Page Check", str(e))
+    record_failed("Phase 2 Features Page Check", str(e))
 
 # Test Calculator integrations
 print("\n4. Testing Calculator Integrations...")
@@ -117,12 +120,12 @@ try:
         integrated_count = sum(features.values())
         total = len(features)
         if integrated_count == total:
-            test_passed(f"{calc_name} Integration ({integrated_count}/{total})")
+            record_passed(f"{calc_name} Integration ({integrated_count}/{total})")
         else:
             missing = [k for k, v in features.items() if not v]
-            test_warning(f"{calc_name} Integration", f"Missing: {', '.join(missing)} ({integrated_count}/{total})")
+            record_warning(f"{calc_name} Integration", f"Missing: {', '.join(missing)} ({integrated_count}/{total})")
 except Exception as e:
-    test_failed("Calculator Integration Check", str(e))
+    record_failed("Calculator Integration Check", str(e))
 
 # ========== TEST FUNCTIONALITY ==========
 print("\n\n📋 TESTING FUNCTIONALITY")
@@ -137,9 +140,9 @@ try:
     assert len(qr_image) > 0
     # Should be base64 encoded image
     assert "data:image" in qr_image.lower() or qr_image.startswith("data:")
-    test_passed("QR Code Generation")
+    record_passed("QR Code Generation")
 except Exception as e:
-    test_failed("QR Code Generation", str(e))
+    record_failed("QR Code Generation", str(e))
 
 # Test Flowchart creation
 print("\n6. Testing Flowchart Creation...")
@@ -153,9 +156,9 @@ try:
     for edge in edges:
         assert edge.from_node in node_ids
         assert edge.to_node in node_ids
-    test_passed("Flowchart Creation (Wells PE)")
+    record_passed("Flowchart Creation (Wells PE)")
 except Exception as e:
-    test_failed("Flowchart Creation", str(e))
+    record_failed("Flowchart Creation", str(e))
 
 # Test Pregnancy Safety
 print("\n7. Testing Pregnancy Safety Database...")
@@ -167,9 +170,9 @@ try:
     assert lact is not None
     assert "fda_category" in preg
     assert "briggs_category" in lact
-    test_passed("Pregnancy & Lactation Safety Database")
+    record_passed("Pregnancy & Lactation Safety Database")
 except Exception as e:
-    test_failed("Pregnancy & Lactation Safety", str(e))
+    record_failed("Pregnancy & Lactation Safety", str(e))
 
 # Test Pediatric Dosing
 print("\n8. Testing Pediatric Dosing Calculator...")
@@ -192,9 +195,9 @@ try:
     guidelines = get_pediatric_dosing_guidelines("Paracetamol")
     assert guidelines is not None
     
-    test_passed("Pediatric Dosing Calculator")
+    record_passed("Pediatric Dosing Calculator")
 except Exception as e:
-    test_failed("Pediatric Dosing Calculator", str(e))
+    record_failed("Pediatric Dosing Calculator", str(e))
 
 # ========== TEST APP STRUCTURE ==========
 print("\n\n📋 TESTING APP STRUCTURE")
@@ -209,13 +212,13 @@ try:
             content = f.read()
             # Check for Phase 1/2 related imports or usage
             if "Phase" in content or "phase" in content.lower():
-                test_passed("App.py Structure")
+                record_passed("App.py Structure")
             else:
-                test_warning("App.py", "May not reference Phase features directly")
+                record_warning("App.py", "May not reference Phase features directly")
     else:
-        test_failed("App.py", "File not found")
+        record_failed("App.py", "File not found")
 except Exception as e:
-    test_failed("App Structure Check", str(e))
+    record_failed("App Structure Check", str(e))
 
 # Check config
 print("\n10. Checking Config...")
@@ -223,11 +226,11 @@ try:
     from config.app_config import APP_CONFIG, get_module_info
     phase2_module = get_module_info("phase2_features")
     if phase2_module:
-        test_passed("Phase 2 Module in Config")
+        record_passed("Phase 2 Module in Config")
     else:
-        test_warning("Config", "Phase 2 module not found in config")
+        record_warning("Config", "Phase 2 module not found in config")
 except Exception as e:
-    test_failed("Config Check", str(e))
+    record_failed("Config Check", str(e))
 
 # ========== SUMMARY ==========
 print("\n" + "=" * 80)

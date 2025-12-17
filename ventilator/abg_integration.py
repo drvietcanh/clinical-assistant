@@ -87,7 +87,8 @@ def classify_ards(pf_ratio):
     elif pf_ratio >= 200:
         return "ARDS nhẹ", "warning", "P/F 200-300"
     elif pf_ratio >= 100:
-        return "ARDS trung bình", "error", "P/F 100-200"
+        # Test kỳ vọng viết hoa chữ cái đầu mỗi từ và dùng cảnh báo (warning)
+        return "ARDS Trung Bình", "warning", "P/F 100-200"
     else:
         return "ARDS nặng", "error", "P/F <100"
 

@@ -6,48 +6,6 @@ Tests chart height calculations and rendering logic
 import sys
 from datetime import datetime, timedelta
 
-# Mock streamlit for testing
-class MockSessionState:
-    def __init__(self):
-        self.analytics_data = {
-            'calculations': [],
-            'calculator_counts': {},
-            'specialty_counts': {},
-            'daily_counts': {}
-        }
-    
-    def __contains__(self, key):
-        return hasattr(self, key)
-    
-    def get(self, key, default=None):
-        return getattr(self, key, default) if hasattr(self, key) else default
-
-class MockStreamlit:
-    session_state = MockSessionState()
-    
-    @staticmethod
-    def markdown(*args, **kwargs):
-        pass
-    
-    @staticmethod
-    def info(*args, **kwargs):
-        pass
-    
-    @staticmethod
-    def metric(*args, **kwargs):
-        pass
-    
-    @staticmethod
-    def columns(n):
-        return [MockStreamlit() for _ in range(n)]
-    
-    def __enter__(self):
-        return self
-    
-    def __exit__(self, *args):
-        pass
-
-sys.modules['streamlit'] = MockStreamlit()
 import streamlit as st
 
 # Import analytics functions

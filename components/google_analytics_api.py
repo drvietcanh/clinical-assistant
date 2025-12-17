@@ -8,6 +8,7 @@ from typing import Dict, Optional, Any
 from datetime import datetime, timedelta
 import json
 import os
+import tomllib
 
 # Khi chạy test với MockStreamlit, bổ sung cache_data nếu thiếu để tránh AttributeError
 if not hasattr(st, "cache_data"):
@@ -43,6 +44,25 @@ except ImportError:
     service_account = None
 
 
+def _load_local_secrets() -> Optional[dict]:
+    """
+    Load secrets from streamlit context or fallback .streamlit/secrets.toml for non-streamlit runs (e.g., pytest).
+    """
+    # Streamlit native secrets
+    if hasattr(st, "secrets") and st.secrets:
+        return st.secrets
+
+    # Fallback: read local secrets file when running outside streamlit
+    secrets_path = os.path.join(os.getcwd(), ".streamlit", "secrets.toml")
+    if os.path.exists(secrets_path):
+        try:
+            with open(secrets_path, "rb") as f:
+                return tomllib.load(f)
+        except Exception:
+            return None
+    return None
+
+
 def get_ga_credentials() -> Optional[Any]:
     """
     Lấy Google Analytics credentials từ Streamlit secrets hoặc environment variable
@@ -55,8 +75,9 @@ def get_ga_credentials() -> Optional[Any]:
     
     # Thử lấy từ Streamlit secrets
     try:
-        if hasattr(st, 'secrets') and 'google_analytics' in st.secrets:
-            ga_secrets = st.secrets['google_analytics']
+        secrets = _load_local_secrets()
+        if secrets and 'google_analytics' in secrets:
+            ga_secrets = secrets['google_analytics']
             
             # Nếu có service account JSON
             if 'service_account_json' in ga_secrets:
@@ -101,8 +122,9 @@ def get_ga_property_id() -> Optional[str]:
     """
     # Thử lấy từ Streamlit secrets
     try:
-        if hasattr(st, 'secrets') and 'google_analytics' in st.secrets:
-            ga_secrets = st.secrets['google_analytics']
+        secrets = _load_local_secrets()
+        if secrets and 'google_analytics' in secrets:
+            ga_secrets = secrets['google_analytics']
             if 'property_id' in ga_secrets:
                 prop_id = ga_secrets['property_id']
                 # Đảm bảo format đúng

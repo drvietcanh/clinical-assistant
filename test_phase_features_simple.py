@@ -17,16 +17,19 @@ print()
 
 test_results = {"passed": [], "failed": [], "warnings": []}
 
-def test_passed(name: str):
+
+def record_passed(name: str):
     test_results["passed"].append(name)
     print(f"✅ PASS: {name}")
 
-def test_failed(name: str, error: str):
+
+def record_failed(name: str, error: str):
     test_results["failed"].append((name, error))
     print(f"❌ FAIL: {name}")
     print(f"   Error: {error}")
 
-def test_warning(name: str, message: str):
+
+def record_warning(name: str, message: str):
     test_results["warnings"].append((name, message))
     print(f"⚠️  WARN: {name}: {message}")
 
@@ -48,9 +51,9 @@ try:
     citation = format_apa_citation("Test Author", 2020, "Test Title", "Test Journal", pmid="12345678")
     assert "Test Author" in citation
     
-    test_passed("References Component")
+    record_passed("References Component")
 except Exception as e:
-    test_failed("References Component", str(e))
+    record_failed("References Component", str(e))
 
 # 2. References Config
 print("\n2. Testing References Config...")
@@ -63,9 +66,9 @@ try:
     assert has_references("CHA2DS2-VASc") == True
     assert has_references("NonExistentCalc") == False
     
-    test_passed("References Config")
+    record_passed("References Config")
 except Exception as e:
-    test_failed("References Config", str(e))
+    record_failed("References Config", str(e))
 
 # 3. Share Results (without qrcode)
 print("\n3. Testing Share Results (logic only)...")
@@ -78,10 +81,10 @@ try:
     url = generate_share_url("test_id")
     assert isinstance(url, str)
     
-    test_passed("Share Results (logic)")
-    test_warning("Share Results", "QR code test requires qrcode module")
+    record_passed("Share Results (logic)")
+    record_warning("Share Results", "QR code test requires qrcode module")
 except Exception as e:
-    test_failed("Share Results", str(e))
+    record_failed("Share Results", str(e))
 
 # 4. Smart Suggestions
 print("\n4. Testing Smart Suggestions...")
@@ -101,9 +104,9 @@ try:
     popular = get_popular_calculators(limit=5)
     assert isinstance(popular, list) and len(popular) > 0
     
-    test_passed("Smart Suggestions Component")
+    record_passed("Smart Suggestions Component")
 except Exception as e:
-    test_failed("Smart Suggestions Component", str(e))
+    record_failed("Smart Suggestions Component", str(e))
 
 # 5. Calculation History (structure)
 print("\n5. Testing Calculation History (structure)...")
@@ -113,10 +116,10 @@ try:
     assert hasattr(hist_module, 'get_calculation_history')
     assert hasattr(hist_module, 'export_history')
     
-    test_passed("Calculation History (structure)")
-    test_warning("Calculation History", "Full test requires Streamlit session state")
+    record_passed("Calculation History (structure)")
+    record_warning("Calculation History", "Full test requires Streamlit session state")
 except Exception as e:
-    test_failed("Calculation History", str(e))
+    record_failed("Calculation History", str(e))
 
 # ========== PHASE 2 TESTS ==========
 print("\n\n📋 PHASE 2: CORE FEATURES")
@@ -136,9 +139,9 @@ try:
     color = node.get_color()
     assert isinstance(color, str) and len(color) > 0
     
-    test_passed("Flowchart Base Component")
+    record_passed("Flowchart Base Component")
 except Exception as e:
-    test_failed("Flowchart Base Component", str(e))
+    record_failed("Flowchart Base Component", str(e))
 
 # 7. Clinical Rules Flowcharts
 print("\n7. Testing Clinical Rules Flowcharts...")
@@ -173,9 +176,9 @@ try:
             assert edge.from_node in node_ids, f"{name}: Invalid from_node '{edge.from_node}'"
             assert edge.to_node in node_ids, f"{name}: Invalid to_node '{edge.to_node}'"
     
-    test_passed(f"Clinical Rules Flowcharts ({len(flowcharts)} algorithms)")
+    record_passed(f"Clinical Rules Flowcharts ({len(flowcharts)} algorithms)")
 except Exception as e:
-    test_failed("Clinical Rules Flowcharts", str(e))
+    record_failed("Clinical Rules Flowcharts", str(e))
 
 # 8. Pregnancy & Lactation Safety
 print("\n8. Testing Pregnancy & Lactation Safety...")
@@ -200,9 +203,9 @@ try:
     summary = get_safety_summary("Paracetamol")
     assert summary["has_data"] == True
     
-    test_passed(f"Pregnancy & Lactation Safety ({len(PREGNANCY_SAFETY)} drugs)")
+    record_passed(f"Pregnancy & Lactation Safety ({len(PREGNANCY_SAFETY)} drugs)")
 except Exception as e:
-    test_failed("Pregnancy & Lactation Safety", str(e))
+    record_failed("Pregnancy & Lactation Safety", str(e))
 
 # 9. Pediatric Dosing Calculator
 print("\n9. Testing Pediatric Dosing Calculator...")
@@ -232,9 +235,9 @@ try:
     guidelines = get_pediatric_dosing_guidelines("Paracetamol")
     assert guidelines is not None
     
-    test_passed("Pediatric Dosing Calculator")
+    record_passed("Pediatric Dosing Calculator")
 except Exception as e:
-    test_failed("Pediatric Dosing Calculator", str(e))
+    record_failed("Pediatric Dosing Calculator", str(e))
 
 # ========== FILE EXISTENCE TESTS ==========
 print("\n\n📋 FILE EXISTENCE TESTS")
@@ -254,9 +257,9 @@ files_to_check = [
 for file_path, name in files_to_check:
     print(f"\n10.{files_to_check.index((file_path, name)) + 1}. Checking {name}...")
     if Path(file_path).exists():
-        test_passed(f"{name} file exists")
+        record_passed(f"{name} file exists")
     else:
-        test_failed(f"{name} file", "File not found")
+        record_failed(f"{name} file", "File not found")
 
 # ========== INTEGRATION CHECKS ==========
 print("\n\n📋 INTEGRATION CHECKS")
@@ -281,12 +284,12 @@ try:
     total = len(phase1_features)
     
     if integrated == total:
-        test_passed(f"Phase 1 Integration in CHA2DS2-VASc ({integrated}/{total})")
+        record_passed(f"Phase 1 Integration in CHA2DS2-VASc ({integrated}/{total})")
     else:
         missing = [k for k, v in phase1_features.items() if not v]
-        test_warning("Phase 1 Integration", f"CHA2DS2-VASc missing: {', '.join(missing)} ({integrated}/{total} integrated)")
+        record_warning("Phase 1 Integration", f"CHA2DS2-VASc missing: {', '.join(missing)} ({integrated}/{total} integrated)")
 except Exception as e:
-    test_warning("Phase 1 Integration Check", f"Could not check: {str(e)}")
+    record_warning("Phase 1 Integration Check", f"Could not check: {str(e)}")
 
 # Check Phase 2 page
 print("\n12. Checking Phase 2 Features Page...")
@@ -303,14 +306,14 @@ try:
         }
         
         if all(phase2_features.values()):
-            test_passed("Phase 2 Features Page (all features)")
+            record_passed("Phase 2 Features Page (all features)")
         else:
             missing = [k for k, v in phase2_features.items() if not v]
-            test_warning("Phase 2 Features Page", f"Missing: {', '.join(missing)}")
+            record_warning("Phase 2 Features Page", f"Missing: {', '.join(missing)}")
     else:
-        test_failed("Phase 2 Features Page", "File not found")
+        record_failed("Phase 2 Features Page", "File not found")
 except Exception as e:
-    test_failed("Phase 2 Features Page Check", str(e))
+    record_failed("Phase 2 Features Page Check", str(e))
 
 # ========== SUMMARY ==========
 print("\n" + "=" * 80)

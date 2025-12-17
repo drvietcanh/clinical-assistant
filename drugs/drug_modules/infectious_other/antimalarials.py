@@ -227,6 +227,280 @@ ANTIMALARIALS_DRUGS = {
         'CDC Guidelines for treatment of malaria',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics"],
         'last_updated': '2025-02-04', 'evidence_level':
-        'High - Guidelines dựa trên chứng cứ từ WHO và CDC'}}}
+        'High - Guidelines dựa trên chứng cứ từ WHO và CDC'}},
+    "Artemether-lumefantrine": {'group':
+        'Infectious Disease - Antimalarial (ACT)', 'vietnamese_name':
+        'Artemether-lumefantrine, Coartem', 'administration': ['PO'],
+        'indications': [
+        'Sốt rét P. falciparum không biến chứng (first-line ACT)',
+        'Sốt rét kháng chloroquine', 'Sốt rét hỗn hợp (kết hợp với primaquine để diệt thể ngủ nếu P. vivax/ovale)'],
+        'contraindications': [
+        'Dị ứng artemether hoặc lumefantrine',
+        'Sốt rét nặng cần artesunate IV',
+        'Kéo dài QT nặng hoặc loạn nhịp thất đang tồn tại'], 'dosage': {
+        'adult_uncomplicated':
+        '4 viên (20mg/120mg) lúc 0, 8, 24, 36, 48, 60 giờ (tổng 6 liều). Uống với thức ăn có chất béo để tăng hấp thu'
+        , 'pediatric_weight_based':
+        '5-<15kg: 1 viên mỗi liều x 6; 15-<25kg: 2 viên mỗi liều x 6; 25-<35kg: 3 viên mỗi liều x 6; ≥35kg: 4 viên mỗi liều x 6'
+        , 'notes':
+        'KHÔNG dùng dự phòng dài ngày. Nếu nôn trong 1 giờ sau uống, nhắc lại liều.'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Thận trọng, theo dõi ECG và điện giải'}, 'side_effects': [
+        'Nhức đầu', 'Chóng mặt', 'Buồn nôn/nôn', 'Đau bụng', 'Mất ngủ',
+        'Kéo dài QT (hiếm, liên quan lumefantrine)', 'Hồi hộp, đánh trống ngực'],
+        'interactions': [
+        'Thuốc kéo dài QT (macrolide, fluoroquinolone, haloperidol)',
+        'CYP3A4 inhibitors (ketoconazole, ritonavir): tăng nồng độ lumefantrine',
+        'CYP3A4 inducers (rifampin, carbamazepine, phenytoin): giảm hiệu quả'],
+        'pregnancy':
+        'C - Tránh 3 tháng đầu nếu có lựa chọn khác; có thể dùng tam cá nguyệt 2-3 nếu lợi ích > nguy cơ',
+        'mechanism_of_action':
+        'Artemether (artemisinin dẫn xuất) tác dụng nhanh, tạo gốc tự do phá vỡ ký sinh trùng trong hồng cầu. Lumefantrine là aryl-amino alcohol tác dụng chậm hơn, ức chế chuyển hóa heme, kéo dài hiệu quả diệt ký sinh trùng và ngăn tái phát. Phối hợp giúp giảm nguy cơ kháng thuốc và tái phát.',
+        'monitoring': [
+        'Smear/ký sinh trùng máu mỗi 12-24 giờ đến khi âm tính',
+        'ECG (QTc) nếu có yếu tố nguy cơ hoặc dùng thuốc kéo dài QT',
+        'Triệu chứng lâm sàng (sốt, nôn, đau đầu)',
+        'Điện giải (K+, Mg2+) nếu nôn nhiều hoặc tiêu chảy',
+        'Dấu hiệu tái phát trong 28 ngày'], 'precautions': [
+        'Uống cùng bữa ăn giàu chất béo (sữa, thức ăn chứa dầu) để tăng hấp thu',
+        'Không dùng để dự phòng dài hạn',
+        'Tránh dùng cùng thuốc kéo dài QT hoặc hạ K+/Mg2+',
+        'Nếu nôn trong 1 giờ: nhắc lại liều; nếu nôn nhiều lần có thể cần đổi phác đồ',
+        'Không dùng đơn độc cho sốt rét nặng (dùng artesunate IV trước)',
+        'Cân nhắc phối hợp primaquine để diệt giao bào hoặc thể ngủ (vivax/ovale)'],
+        'pharmacokinetics': {'half_life':
+        'Artemether: 1-3 giờ; Lumefantrine: 3-6 ngày', 'onset': '1-2 giờ',
+        'duration': 'Lumefantrine kéo dài tác dụng vài ngày', 'protein_binding':
+        'Artemether ~95%, Lumefantrine >99%', 'clearance':
+        'Gan (CYP3A4 chuyển hóa cả hai), thải trừ mật/ phân'}, 'storage':
+        'Bảo quản nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
+        'black_box_warnings':
+        'Nguy cơ kéo dài QT nếu dùng cùng thuốc kéo dài QT hoặc rối loạn điện giải. Phải uống đủ 6 liều và uống với thức ăn chứa chất béo để tránh thất bại điều trị.',
+        'drug_interactions': {'major': [{'drug': 'Rifampin, carbamazepine, phenytoin',
+        'mechanism': 'Cảm ứng CYP3A4, giảm nồng độ lumefantrine',
+        'effect': 'Giảm hiệu quả diệt ký sinh trùng, tăng nguy cơ thất bại điều trị',
+        'management': 'TRÁNH dùng. Nếu bắt buộc, chọn phác đồ khác'}],
+        'moderate': [{'drug': 'Macrolide/fluoroquinolone/haloperidol',
+        'mechanism': 'Kéo dài QT, cộng hưởng với lumefantrine',
+        'effect': 'Tăng nguy cơ loạn nhịp thất',
+        'management': 'Tránh phối hợp hoặc theo dõi ECG, điện giải'},
+        {'drug': 'Ritonavir/ketoconazole (ức chế CYP3A4)', 'mechanism':
+        'Tăng nồng độ lumefantrine', 'effect': 'Tăng nguy cơ kéo dài QT',
+        'management': 'Theo dõi ECG, cân nhắc phác đồ khác nếu nguy cơ cao'}],
+        'minor': [{'drug': 'Thực phẩm giàu chất béo', 'mechanism':
+        'Tăng hấp thu', 'effect': 'Tăng nồng độ thuốc (mong muốn)',
+        'management': 'Khuyến cáo uống với bữa ăn có chất béo'}]},
+        'contraindications': {'tuyệt_đối': [
+        'Dị ứng artemether, lumefantrine hoặc dẫn xuất artemisinin',
+        'Kéo dài QT rõ rệt/loạn nhịp thất đang hoạt động',
+        'Sốt rét nặng cần artesunate IV'], 'tương_đối': [
+        'Hạ kali/magie chưa chỉnh',
+        'Dùng thuốc kéo dài QT', 'Suy gan nặng', 'Suy thận nặng (ít dữ liệu)']},
+        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        'Tránh dùng trong 3 tháng đầu nếu có lựa chọn khác; có thể dùng tam cá nguyệt 2-3 nếu lợi ích vượt trội nguy cơ. WHO cho phép dùng ở T2/T3 cho sốt rét falciparum không biến chứng.'
+        , 'lactation': {'safety': 'Caution', 'details':
+        'Bài tiết một lượng nhỏ vào sữa. Chưa rõ ảnh hưởng trên trẻ bú mẹ.',
+        'recommendation': 'Thận trọng; theo dõi trẻ nếu mẹ dùng.'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
+        'Thận trọng, theo dõi chức năng gan và QT', 'severe':
+        'Tránh hoặc theo dõi sát, cân nhắc phác đồ khác', 'notes':
+        'Chuyển hóa qua CYP3A4, suy gan có thể tăng nồng độ lumefantrine'},
+        'overdose_management': {'symptoms': [
+        'Buồn nôn, nôn', 'Chóng mặt', 'Kéo dài QT, loạn nhịp', 'Hạ huyết áp'],
+        'antidote': 'Không có antidote đặc hiệu', 'treatment': [
+        'Than hoạt tính nếu uống trong 1 giờ', 'Theo dõi ECG liên tục',
+        'Sửa điện giải (K+, Mg2+)', 'Điều trị loạn nhịp theo ACLS',
+        'Điều trị hỗ trợ huyết động'], 'monitoring':
+        'ECG, điện giải, huyết áp, nhịp tim ít nhất 24 giờ nếu quá liều'},
+        'reversal_agents': {'available': False, 'agents': None, 'notes':
+        'Không có thuốc giải độc; xử trí hỗ trợ và theo dõi ECG'},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống với thức ăn nhiều chất béo hoặc sữa để tăng hấp thu',
+        'timing':
+        'Uống vào các thời điểm 0-8-24-36-48-60 giờ (tổng 6 liều), nên đặt nhắc nhở'
+        , 'notes':
+        'Nếu nôn trong 1 giờ, uống lại liều. Nếu nôn ≥2 lần, cân nhắc đổi phác đồ hoặc tiêm tĩnh mạch artesunate.'}},
+        'references': {'primary_sources': [
+        'WHO Guidelines for the treatment of malaria (uncomplicated falciparum)',
+        'CDC Malaria Treatment Guidelines',
+        'UpToDate - Artemether-lumefantrine drug information'],
+        'last_updated': '2025-02-06', 'evidence_level': 'High - WHO/CDC guidelines'}},
+    "Hydroxychloroquine": {'group':
+        'Infectious Disease - Antimalarial/Antirheumatic',
+        'vietnamese_name': 'Hydroxychloroquine, Plaquenil', 'administration': [
+        'PO'], 'indications': [
+        'Sốt rét nhạy chloroquine (phòng ngừa và điều trị)',
+        'Lupus ban đỏ hệ thống', 'Viêm khớp dạng thấp',
+        'Sốt rét do P. vivax/ovale (phối hợp primaquine để diệt thể ngủ)'],
+        'contraindications': [
+        'Dị ứng hydroxychloroquine/4-aminoquinoline',
+        'Bệnh võng mạc tiến triển', 'Thiếu G6PD nặng (nguy cơ tan máu)',
+        'Kéo dài QT có ý nghĩa'], 'dosage': {'adult_malaria_treatment':
+        '800mg base (620mg) ngày 1, sau đó 400mg base (310mg) sau 6-8 giờ, sau đó 400mg base/ngày x 2 ngày'
+        , 'adult_malaria_prophylaxis':
+        '400mg base (310mg) 1 lần/tuần, bắt đầu 1-2 tuần trước khi đi, tiếp tục trong khi ở vùng dịch và 4 tuần sau khi về'
+        , 'adult_lupus_ra': '200-400mg/ngày chia 1-2 lần', 'notes':
+        'Liều lâu dài nên ≤5mg/kg cân nặng thực để giảm nguy cơ độc võng mạc'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60':
+        'Thận trọng, cân nhắc giảm 25%', 'under_30': 'Giảm 50% hoặc giãn cách'},
+        'side_effects': [
+        'Rối loạn thị giác/độc võng mạc (ít hơn chloroquine nhưng vẫn có)',
+        'Rối loạn tiêu hóa', 'Ngứa, phát ban', 'Đau đầu, chóng mặt',
+        'Hạ đường huyết (hiếm)', 'Kéo dài QT/loạn nhịp (hiếm)'], 'interactions': [
+        'Digoxin: tăng nồng độ digoxin', 'Thuốc kéo dài QT',
+        'Antacid/kaolin: giảm hấp thu (dùng cách 4 giờ)',
+        'CYP2D6 inhibitors/inducers: thay đổi nồng độ'], 'pregnancy':
+        'C - Dùng được cho lupus/RA; có thể dùng cho sốt rét nếu lợi ích > nguy cơ',
+        'mechanism_of_action':
+        '4-aminoquinoline, tích lũy trong lysosome ký sinh trùng, tăng pH và ức chế tiêu hóa hemoglobin → diệt thể vô tính trong hồng cầu. Với lupus/RA: ổn định lysosome, giảm trình diện kháng nguyên, giảm sản xuất cytokine, tác dụng điều hòa miễn dịch.',
+        'monitoring': [
+        'Khám mắt cơ bản, sau đó mỗi năm (nguy cơ độc võng mạc tăng nếu >5 năm hoặc liều >5mg/kg/ngày)',
+        'Thị trường/visual field và OCT nếu dùng lâu dài',
+        'Chức năng gan thận định kỳ', 'CBC (hiếm gặp giảm bạch cầu)',
+        'ECG nếu dùng kèm thuốc kéo dài QT', 'Đường huyết nếu nguy cơ hạ đường huyết'],
+        'precautions': [
+        'Giới hạn liều ≤5mg/kg/ngày để giảm độc võng mạc',
+        'Tách antacid/kaolin ≥4 giờ',
+        'Thận trọng G6PD (nguy cơ tan máu nhẹ)',
+        'Theo dõi mắt định kỳ, ngừng nếu có dấu hiệu độc võng mạc',
+        'Cân nhắc điều chỉnh liều ở suy thận nặng',
+        'Theo dõi QT nếu dùng kèm thuốc kéo dài QT'], 'pharmacokinetics': {
+        'half_life': '40-50 ngày (tích lũy mô cao)', 'onset':
+        'Malaria: vài giờ; Lupus/RA: 4-12 tuần', 'duration':
+        'Kéo dài do tích lũy mô', 'protein_binding': '45%', 'clearance':
+        'Gan (chuyển hóa), thận (thải trừ ~40%)'}, 'storage':
+        'Bảo quản nhiệt độ phòng, tránh ẩm và ánh sáng',
+        'black_box_warnings':
+        'Nguy cơ độc võng mạc không hồi phục tăng khi dùng liều cao, kéo dài >5 năm, suy thận, hoặc bệnh võng mạc nền. Cần khám mắt định kỳ.',
+        'drug_interactions': {'major': [{'drug': 'Digoxin', 'mechanism':
+        'Tăng hấp thu/giảm thải trừ digoxin', 'effect':
+        'Tăng nồng độ digoxin, nguy cơ độc tính', 'management':
+        'Theo dõi digoxin level, điều chỉnh liều'}], 'moderate': [{'drug':
+        'Thuốc kéo dài QT (macrolide, fluoroquinolone, antipsychotic)',
+        'mechanism': 'Cộng hưởng kéo dài QT', 'effect': 'Nguy cơ loạn nhịp',
+        'management': 'Tránh hoặc theo dõi ECG'}, {'drug': 'Kaolin/antacid',
+        'mechanism': 'Giảm hấp thu hydroxychloroquine', 'effect':
+        'Giảm hiệu quả', 'management': 'Dùng cách nhau ≥4 giờ'}],
+        'minor': [{'drug': 'CYP2D6 substrates', 'mechanism':
+        'Hydroxychloroquine ức chế nhẹ CYP2D6', 'effect':
+        'Có thể tăng nồng độ thuốc khác', 'management':
+        'Theo dõi tác dụng phụ, điều chỉnh nếu cần'}]},
+        'contraindications': {'tuyệt_đối': [
+        'Dị ứng hydroxychloroquine hoặc 4-aminoquinoline',
+        'Bệnh võng mạc tiến triển/không hồi phục'], 'tương_đối': [
+        'Thiếu G6PD (tan máu nhẹ)', 'Suy thận nặng', 'Tiền sử kéo dài QT',
+        'Dùng thuốc kéo dài QT']}, 'pregnancy_lactation': {'fda_category': 'C',
+        'pregnancy_details':
+        'Được khuyến cáo tiếp tục ở bệnh nhân SLE để phòng đợt bùng phát; có thể dùng cho sốt rét nếu lợi ích > nguy cơ.',
+        'lactation': {'safety': 'Compatible', 'details':
+        'Bài tiết rất ít vào sữa; thường an toàn.', 'recommendation':
+        'Có thể tiếp tục, theo dõi trẻ nếu dùng liều cao kéo dài.'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
+        'Thận trọng, có thể giảm 25%', 'severe':
+        'Giảm liều hoặc giãn cách; theo dõi chức năng gan', 'notes':
+        'Chuyển hóa qua gan; suy gan có thể tăng tích lũy'}, 'overdose_management':
+        {'symptoms': ['Buồn nôn, nôn', 'Loạn nhịp, kéo dài QT', 'Co giật',
+        'Rối loạn thị giác'], 'antidote': 'Không có antidote đặc hiệu',
+        'treatment': ['Than hoạt tính sớm', 'Theo dõi ECG liên tục',
+        'Điều chỉnh điện giải', 'Điều trị loạn nhịp theo ACLS',
+        'Hỗ trợ hô hấp tuần hoàn'], 'monitoring':
+        'ECG, huyết áp, điện giải, dấu hiệu thần kinh tối thiểu 24 giờ'},
+        'reversal_agents': {'available': False, 'agents': None, 'notes':
+        'Không có thuốc giải độc; điều trị hỗ trợ'},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày',
+        'timing':
+        'Dùng đúng lịch (1 lần/tuần cho dự phòng, hằng ngày cho điều trị/autoimmune)'
+        , 'notes':
+        'Không vượt liều 5mg/kg/ngày khi dùng dài hạn. Khám mắt định kỳ.'}},
+        'references': {'primary_sources': [
+        'AAO Guidelines for hydroxychloroquine retinopathy screening',
+        'WHO malaria prophylaxis guidance', 'UpToDate - Hydroxychloroquine'],
+        'last_updated': '2025-02-06', 'evidence_level':
+        'High - guideline supported'}},
+    "Primaquine": {'group': 'Infectious Disease - Antimalarial (8-aminoquinoline)',
+        'vietnamese_name': 'Primaquine', 'administration': ['PO'],
+        'indications': [
+        'Radical cure P. vivax/ovale (diệt thể ngủ ở gan)',
+        'Diệt giao bào P. falciparum sau ACT', 'Phòng ngừa cuối đợt (terminal prophylaxis) sau phơi nhiễm'],
+        'contraindications': [
+        'Thiếu G6PD (nguy cơ tan máu nặng)',
+        'Có thai (thai nhi chưa xét nghiệm G6PD)', 'Đang cho con bú trẻ chưa xét nghiệm G6PD',
+        'Thiếu máu tán huyết, methemoglobinemia, bệnh lý bạch cầu nặng'],
+        'dosage': {'radical_cure':
+        '0.25-0.5mg base/kg/ngày (thường 15-30mg base/ngày) x 14 ngày kèm chloroquine hoặc ACT',
+        'terminal_prophylaxis':
+        '0.5mg base/kg/ngày x 14 ngày sau khi rời vùng dịch P. vivax/ovale',
+        'falciparum_gametocyte': '0.25mg base/kg liều duy nhất sau ACT',
+        'notes':
+        'BẮT BUỘC xét nghiệm G6PD trước điều trị. Uống cùng thức ăn để giảm đau bụng.'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Thận trọng, theo dõi hemolysis'}, 'side_effects': [
+        'Tan máu (đặc biệt nếu thiếu G6PD)', 'Methemoglobinemia (tím tái)',
+        'Đau bụng, buồn nôn', 'Nhức đầu', 'Sốt nhẹ'], 'interactions': [
+        'Thuốc gây tan máu khác (dapsone, nitrofurantoin)', 'Thuốc gây methemoglobinemia (benzocaine, nitrates)'],
+        'pregnancy':
+        'X - Chống chỉ định khi mang thai (nguy cơ tan máu cho thai do chưa biết G6PD)',
+        'mechanism_of_action':
+        '8-aminoquinoline; tạo các chất oxy hóa mạnh trong hồng cầu ký sinh trùng, phá hủy thể ngủ (hypnozoite) ở gan và giao bào trong máu. Cần G6PD đầy đủ để tránh tan máu.',
+        'monitoring': [
+        'Xét nghiệm G6PD trước khi dùng', 'CBC và hemoglobin mỗi 1-2 tuần',
+        'Quan sát nước tiểu sẫm màu, vàng da (dấu tan máu)',
+        'Methemoglobin nếu có triệu chứng tím tái, khó thở',
+        'Theo dõi ký sinh trùng máu cho gametocyte clearance'], 'precautions': [
+        'KHÔNG dùng nếu thiếu G6PD hoặc nghi ngờ chưa xét nghiệm',
+        'Ngừng ngay nếu có dấu hiệu tan máu (vàng da, nước tiểu sẫm)',
+        'Dùng với thức ăn để giảm khó chịu tiêu hóa',
+        'Không dùng cho phụ nữ mang thai hoặc đang cho con bú trẻ chưa xét nghiệm G6PD',
+        'Cân nhắc phác đồ thay thế (primaquine liều hàng tuần x8 tuần) nếu G6PD thiếu nhẹ và có giám sát chặt chẽ'],
+        'pharmacokinetics': {'half_life': '4-7 giờ', 'onset': 'Nhanh (vài giờ)',
+        'duration': 'Ngắn, cần dùng hàng ngày', 'protein_binding': '20-30%',
+        'clearance': 'Gan (CYP2D6 chuyển hóa thành chất hoạt tính), thận thải trừ'},
+        'storage':
+        'Bảo quản nhiệt độ phòng, tránh ẩm', 'black_box_warnings':
+        'Tan máu đe dọa tính mạng ở bệnh nhân thiếu G6PD. BẮT BUỘC xét nghiệm G6PD trước khi kê đơn. Chống chỉ định trong thai kỳ.',
+        'drug_interactions': {'major': [{'drug': 'Dapsone/nitrofurantoin',
+        'mechanism': 'Tăng stress oxy hóa trên hồng cầu', 'effect':
+        'Tăng nguy cơ tan máu nghiêm trọng', 'management':
+        'TRÁNH phối hợp nếu có thể; nếu bắt buộc phải giám sát CBC sát'}],
+        'moderate': [{'drug': 'Thuốc gây methemoglobinemia (benzocaine, nitrates)',
+        'mechanism': 'Tăng methemoglobin', 'effect':
+        'Tím tái, khó thở, giảm SpO2', 'management':
+        'Tránh phối hợp hoặc theo dõi, cân nhắc methylene blue nếu triệu chứng và G6PD bình thường'}],
+        'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'Thiếu G6PD', 'Mang thai', 'Cho con bú trẻ chưa xét nghiệm G6PD',
+        'Thiếu máu tán huyết hoặc methemoglobinemia'], 'tương_đối': [
+        'Suy thận nặng', 'Suy gan nặng', 'Thiếu máu nhẹ (cần theo dõi CBC)']},
+        'pregnancy_lactation': {'fda_category': 'X', 'pregnancy_details':
+        'Chống chỉ định trong thai kỳ do nguy cơ tan máu cho thai nhi (không biết tình trạng G6PD).',
+        'lactation': {'safety': 'Caution', 'details':
+        'Bài tiết vào sữa; nếu trẻ chưa xét nghiệm G6PD, tránh dùng.',
+        'recommendation':
+        'Tránh dùng khi cho con bú trừ khi trẻ đã xác nhận G6PD bình thường và có giám sát.'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
+        'Thận trọng, theo dõi men gan', 'severe':
+        'Tránh nếu có thể; nếu bắt buộc, giám sát sát', 'notes':
+        'Chuyển hóa qua gan; suy gan có thể tăng tích lũy và độc tính'},
+        'overdose_management': {'symptoms': [
+        'Tan máu cấp (nước tiểu cola, vàng da)', 'Methemoglobinemia (tím tái)',
+        'Buồn nôn, nôn', 'Rối loạn nhịp (hiếm)'], 'antidote':
+        'Không có antidote đặc hiệu', 'treatment': [
+        'Ngừng thuốc, truyền dịch', 'Truyền máu nếu tan máu nặng',
+        'Methylene blue nếu methemoglobinemia và G6PD bình thường',
+        'Theo dõi và điều chỉnh điện giải'], 'monitoring':
+        'CBC, hemoglobin, bilirubin, LDH, methemoglobin, dấu hiệu sinh tồn'},
+        'reversal_agents': {'available': False, 'agents': None, 'notes':
+        'Không có thuốc giải độc; điều trị hỗ trợ, có thể dùng methylene blue nếu methemoglobinemia và G6PD bình thường'},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống sau ăn để giảm khó chịu tiêu hóa', 'timing':
+        'Dùng hằng ngày trong 14 ngày cho radical cure hoặc theo liều đơn cho giao bào',
+        'notes':
+        'BẮT BUỘC xét nghiệm G6PD trước điều trị. Ngừng và báo bác sĩ nếu có nước tiểu sẫm hoặc vàng da.'}},
+        'references': {'primary_sources': [
+        'WHO Guidelines for the treatment of malaria (vivax/ovale radical cure)',
+        'CDC Yellow Book - Primaquine',
+        'UpToDate - Primaquine'],
+        'last_updated': '2025-02-06', 'evidence_level':
+        'High - WHO/CDC guidance'}}}
 
 __all__ = ['ANTIMALARIALS_DRUGS']
