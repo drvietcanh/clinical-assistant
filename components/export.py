@@ -381,9 +381,15 @@ def render_export_section(
     # This prevents duplicate key errors when the same calculator renders multiple results
     # Include inputs in hash to ensure uniqueness even when title is the same
     # Filter out None values and ensure all values are serializable
+    if not isinstance(inputs, dict):
+        inputs = {}
     filtered_inputs = {k: v for k, v in inputs.items() if v is not None}
     # Convert all values to strings safely
-    inputs_str = str(sorted([(str(k), str(v)) for k, v in filtered_inputs.items()]))
+    try:
+        inputs_str = str(sorted([(str(k), str(v)) for k, v in filtered_inputs.items()]))
+    except (TypeError, ValueError) as e:
+        # Fallback if conversion fails
+        inputs_str = str(hash(str(filtered_inputs)))
     unique_data = f"{title}_{inputs_str}"
     unique_hash = hashlib.md5(unique_data.encode()).hexdigest()[:8]
     unique_key = f"{key_prefix}_{unique_hash}"
