@@ -383,12 +383,14 @@ def render_search_enhanced():
     
     # Check if we need to update search query from button clicks
     # Use a separate key to avoid StreamlitAPIException when setting widget state
+    # We don't set widget state directly to avoid errors - widget will sync on next render
     if 'search_box_enhanced_set_value' in st.session_state:
-        st.session_state.search_query_value = st.session_state.search_box_enhanced_set_value
+        new_value = st.session_state.search_box_enhanced_set_value
+        st.session_state.search_query_value = new_value
         del st.session_state.search_box_enhanced_set_value
     
     with col_search:
-        # Get the search query from widget or state
+        # Get the search query from widget
         widget_value = st.text_input(
             "🔎 Tìm kiếm...",
             placeholder="Nhập từ khóa (ví dụ: SOFA, CHA2DS2VASc, tim mạch...) - Nhấn Ctrl+K để focus",
@@ -397,11 +399,13 @@ def render_search_enhanced():
             label_visibility="collapsed"
         )
         
-        # Update search query value from widget if user typed
+        # Update search query value from widget if user typed (widget takes priority)
+        # Widget value always takes priority when user types
         if widget_value != st.session_state.search_query_value:
             st.session_state.search_query_value = widget_value
         
         # Use the state value for search (handles both user input and button clicks)
+        # This ensures button clicks work even if widget hasn't synced yet
         search_query = st.session_state.search_query_value
         
         # Track search query
