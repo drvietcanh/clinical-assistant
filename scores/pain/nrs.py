@@ -237,11 +237,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="nrs",
-            calculator_name="NRS",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="NRS",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="NRS"
+            )
         
         # Save to history
         save_calculation_to_history(

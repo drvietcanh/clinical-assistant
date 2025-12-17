@@ -409,11 +409,12 @@ def render():
         
         # Export section
         render_export_section(
-            calculator_id="duke",
-            calculator_name="Duke Criteria",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Duke Criteria",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Duke Criteria"
+            )
         
         # Save to history
         save_calculation_to_history(

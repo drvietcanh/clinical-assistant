@@ -200,11 +200,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="vas",
-            calculator_name="VAS",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="VAS",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="VAS"
+            )
         
         # Save to history
         save_calculation_to_history(

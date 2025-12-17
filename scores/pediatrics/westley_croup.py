@@ -315,11 +315,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="westley_croup",
-            calculator_name="Westley Croup Score",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Westley Croup Score",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Westley Croup Score"
+            )
         
         # Save to history
         save_calculation_to_history(

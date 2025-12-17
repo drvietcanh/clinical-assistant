@@ -8,7 +8,7 @@ from scores.utils.anesthesia_validation import validate_ponv_risk_factors
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
-from components.calculation_history import save_calculation_to_history
+from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
@@ -219,10 +219,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="apfel_ponv",
-                calculator_name="Apfel PONV Risk Score",
+                title="Apfel PONV Risk Score",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="Apfel PONV Risk Score"
             )
             
             # Save to history
@@ -244,7 +245,6 @@ def render():
             
             # History section
             st.markdown("---")
-            from components.calculation_history import render_history_ui
             render_history_ui(calculator_id="apfel_ponv", show_actions=True)
         
         except Exception as e:

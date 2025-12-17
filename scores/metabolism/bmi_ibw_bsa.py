@@ -10,11 +10,19 @@ from components.ui.results import render_result_card
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
-from components.calculation_history import save_calculation_to_history
+from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
 # =====================================
+
+
+def _format_num(value: float, decimals: int = 1) -> str:
+    """Format số, loại bỏ số 0 thừa"""
+    rounded = round(value, decimals)
+    if rounded == int(rounded):
+        return str(int(rounded))
+    return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
 
 
 def calculate_bmi(weight, height_cm):
@@ -206,13 +214,13 @@ def render():
         
         # Use render_result_card for multiple metrics
         metrics_list = [
-            {"label": "BMI", "value": f"{bmi:.1f} kg/m²", "help": f"{bmi_category}"},
-            {"label": "IBW", "value": f"{ibw:.1f} kg", "help": f"{weight - ibw:+.0f} kg so với cân nặng thực tế"},
-            {"label": "BSA", "value": f"{bsa_mosteller:.2f} m²", "help": "Diện tích cơ thể (Mosteller)"}
+            {"label": "BMI", "value": f"{_format_num(bmi, 1)} kg/m²", "help": f"{bmi_category}"},
+            {"label": "IBW", "value": f"{_format_num(ibw, 1)} kg", "help": f"{weight - ibw:+.0f} kg so với cân nặng thực tế"},
+            {"label": "BSA", "value": f"{_format_num(bsa_mosteller, 2)} m²", "help": "Diện tích cơ thể (Mosteller)"}
         ]
         
         if weight > ibw * 1.2:
-            metrics_list.append({"label": "ABW", "value": f"{abw:.1f} kg", "help": "Cân nặng hiệu chỉnh (cho béo phì)"})
+            metrics_list.append({"label": "ABW", "value": f"{_format_num(abw, 1)} kg", "help": "Cân nặng hiệu chỉnh (cho béo phì)"})
         
         # Determine card color based on BMI
         if bmi < 18.5:
@@ -225,8 +233,8 @@ def render():
             card_color = "error"
         
         render_result_card(
-            title=f"{bmi_icon} BMI = {bmi:.1f} kg/m² - {bmi_category}",
-            metrics_list=metrics_list,
+            title_or_value=f"{bmi_icon} BMI = {_format_num(bmi, 1)} kg/m² - {bmi_category}",
+            metrics_or_label=metrics_list,
             color=card_color,
             icon=bmi_icon
         )
@@ -248,10 +256,10 @@ def render():
         
         # Export section
         render_export_section(
-            calculator_id="bmi_ibw_bsa",
-            calculator_name="BMI | IBW | BSA",
+            title=f"BMI = {_format_num(bmi, 1)} kg/m² - {bmi_category}",
             inputs=inputs_dict,
-            results=results_dict
+            results=results_dict,
+            calculator_name="BMI | IBW | BSA"
         )
         
         # Save to history
@@ -288,10 +296,10 @@ def render():
         if weight > ibw * 1.2:  # >20% over IBW
             st.markdown("---")
             st.info(f"""
-            **Adjusted Body Weight (ABW):** {abw:.1f} kg
+            **Adjusted Body Weight (ABW):** {_format_num(abw, 1)} kg
             
-            - Cân nặng thực tế **{weight:.0f} kg** cao hơn IBW **{ibw:.1f} kg**
-            - ABW = {ibw:.1f} + 0.4 × ({weight:.0f} - {ibw:.1f}) = **{abw:.1f} kg**
+            - Cân nặng thực tế **{weight:.0f} kg** cao hơn IBW **{_format_num(ibw, 1)} kg**
+            - ABW = {_format_num(ibw, 1)} + 0.4 × ({weight:.0f} - {_format_num(ibw, 1)}) = **{_format_num(abw, 1)} kg**
             - Dùng ABW cho: CrCl (béo phì), một số thuốc
             """)
         

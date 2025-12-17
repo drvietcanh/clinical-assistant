@@ -241,10 +241,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="koivuranta_ponv",
-                calculator_name="Koivuranta PONV Risk Score",
+                title="Koivuranta PONV Risk Score",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="Koivuranta PONV Risk Score"
             )
             
             # Save to history

@@ -77,11 +77,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="scorad",
-            calculator_name="SCORAD",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="SCORAD",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="SCORAD"
+            )
         
         # Save to history
         save_calculation_to_history(

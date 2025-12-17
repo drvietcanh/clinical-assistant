@@ -265,10 +265,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="padss",
-                calculator_name="PADSS",
+                title="PADSS",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="PADSS"
             )
             
             # Save to history

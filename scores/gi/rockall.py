@@ -429,10 +429,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="rockall",
-                calculator_name="Rockall Score",
+                title="Rockall Score",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="Rockall Score"
             )
             
             # Save to history

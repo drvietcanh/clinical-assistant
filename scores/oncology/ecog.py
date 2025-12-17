@@ -304,11 +304,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="ecog",
-            calculator_name="ECOG Performance Status",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="ECOG Performance Status",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="ECOG Performance Status"
+            )
         
         # Save to history
         save_calculation_to_history(

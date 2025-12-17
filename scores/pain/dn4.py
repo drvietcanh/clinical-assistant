@@ -255,11 +255,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="dn4",
-            calculator_name="DN4",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="DN4",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="DN4"
+            )
         
         # Save to history
         save_calculation_to_history(

@@ -500,11 +500,12 @@ def render():
         
         # Export section
         render_export_section(
-            calculator_id="score2",
-            calculator_name="SCORE2",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="SCORE2",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="SCORE2"
+            )
         
         # Save to history
         save_calculation_to_history(

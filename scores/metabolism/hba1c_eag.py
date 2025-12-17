@@ -7,13 +7,10 @@ import streamlit as st
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
-from components.calculation_history import save_calculation_to_history
+from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
-from components.calculation_history import render_history_ui
-
-
 def calculate_eag_from_hba1c(hba1c_percent):
     """
     Calculate eAG from HbA1c using ADAG formula
@@ -228,10 +225,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="hba1c_eag",
-                calculator_name="HbA1c - eAG Converter",
+                title="HbA1c - eAG Converter",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="HbA1c - eAG Converter"
             )
             
             # Save to history
@@ -365,10 +363,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="hba1c_eag",
-                calculator_name="HbA1c - eAG Converter",
+                title="HbA1c - eAG Converter",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="HbA1c - eAG Converter"
             )
             
             # Save to history

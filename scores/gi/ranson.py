@@ -561,11 +561,12 @@ def render():
         
         # Export section
         render_export_section(
-            calculator_id="ranson",
-            calculator_name="Ranson Criteria",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Ranson Criteria",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Ranson Criteria"
+            )
         
         # Save to history
         save_calculation_to_history(

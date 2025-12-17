@@ -39,11 +39,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="gout",
-            calculator_name="Gout Classification",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Gout Classification",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Gout Classification"
+            )
         
         # Save to history
         save_calculation_to_history(
@@ -114,10 +115,11 @@ def render():
             # Export section
             from components.export import render_export_section
             render_export_section(
-                calculator_id="gout",
-                calculator_name="Gout Classification",
+                title="Gout Classification",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="Gout Classification"
             )
             
             # Save to history

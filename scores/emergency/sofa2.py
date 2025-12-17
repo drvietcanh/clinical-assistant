@@ -538,11 +538,12 @@ def render():
         
         # Export section
         render_export_section(
-            calculator_id="sofa2",
-            calculator_name="SOFA-2 Score",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="SOFA-2 Score",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="SOFA-2 Score"
+            )
         
         # Save to history
         save_calculation_to_history(

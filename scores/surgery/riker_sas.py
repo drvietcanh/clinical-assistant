@@ -233,10 +233,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="riker_sas",
-                calculator_name="Riker SAS",
+                title="Riker SAS",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="Riker SAS"
             )
             
             # Save to history

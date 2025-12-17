@@ -12,7 +12,7 @@ from components.ui.validation import render_validation_errors
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
-from components.calculation_history import save_calculation_to_history
+from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
@@ -314,11 +314,12 @@ def render():
         
         # Export section
         render_export_section(
-            calculator_id="free_t4_index",
-            calculator_name="Free T4 Index",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Free T4 Index",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Free T4 Index"
+            )
         
         # Save to history
         save_calculation_to_history(
@@ -370,16 +371,16 @@ def render():
             if 1.0 <= result["fti"] <= 4.0 and 0.4 <= tsh_value <= 4.0:
                 st.success(f"""
                 ✅ **Chức năng giáp bình thường (Euthyroid)**
-                - FTI: {result['fti']:.2f} (bình thường)
-                - TSH: {tsh_value} {tsh_unit} (bình thường)
+                - FTI: {_format_num(result['fti'], 2)} (bình thường)
+                - TSH: {_format_num(tsh_value, 1)} {tsh_unit} (bình thường)
                 - Không cần can thiệp
                 """)
             
             elif result["fti"] > 4.0 and tsh_value < 0.4:
                 st.error(f"""
                 🔴 **Cường giáp (Hyperthyroidism)**
-                - FTI: {result['fti']:.2f} (cao)
-                - TSH: {tsh_value} {tsh_unit} (thấp)
+                - FTI: {_format_num(result['fti'], 2)} (cao)
+                - TSH: {_format_num(tsh_value, 1)} {tsh_unit} (thấp)
                 - Kết quả phù hợp với cường giáp
                 
                 **Cần làm thêm:**
@@ -392,8 +393,8 @@ def render():
             elif result["fti"] < 1.0 and tsh_value > 4.0:
                 st.info(f"""
                 🔵 **Suy giáp (Hypothyroidism)**
-                - FTI: {result['fti']:.2f} (thấp)
-                - TSH: {tsh_value} {tsh_unit} (cao)
+                - FTI: {_format_num(result['fti'], 2)} (thấp)
+                - TSH: {_format_num(tsh_value, 1)} {tsh_unit} (cao)
                 - Kết quả phù hợp với suy giáp tiên phát
                 
                 **Cần làm thêm:**
@@ -405,8 +406,8 @@ def render():
             else:
                 st.warning(f"""
                 ⚠️ **Kết quả không phù hợp / Cần đánh giá thêm**
-                - FTI: {result['fti']:.2f}
-                - TSH: {tsh_value} {tsh_unit}
+                - FTI: {_format_num(result['fti'], 2)}
+                - TSH: {_format_num(tsh_value, 1)} {tsh_unit}
                 
                 **Các khả năng:**
                 1. Suy giáp cận lâm sàng (TSH cao, FTI bình thường)

@@ -270,10 +270,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="wilson_risk",
-                calculator_name="Wilson Risk Score",
+                title="Wilson Risk Score",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="Wilson Risk Score"
             )
             
             # Save to history

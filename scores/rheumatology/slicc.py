@@ -60,11 +60,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="slicc",
-            calculator_name="SLICC Criteria",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="SLICC Criteria",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="SLICC Criteria"
+            )
         
         # Save to history
         save_calculation_to_history(

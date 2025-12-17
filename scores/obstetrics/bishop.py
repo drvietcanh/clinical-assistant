@@ -629,11 +629,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="bishop",
-            calculator_name="Bishop Score",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Bishop Score",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Bishop Score"
+            )
         
         # Save to history
         save_calculation_to_history(

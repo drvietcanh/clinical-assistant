@@ -74,11 +74,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="pasi",
-            calculator_name="PASI",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="PASI",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="PASI"
+            )
         
         # Save to history
         save_calculation_to_history(

@@ -410,11 +410,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="ards_berlin",
-            calculator_name="ARDS Berlin Definition",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="ARDS Berlin Definition",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="ARDS Berlin Definition"
+            )
         
         # Save to history
         save_calculation_to_history(

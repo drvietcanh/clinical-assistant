@@ -496,11 +496,12 @@ def render():
         
         # Export section
         render_export_section(
-            calculator_id="score2_op",
-            calculator_name="SCORE2-OP",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="SCORE2-OP",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="SCORE2-OP"
+            )
         
         # Save to history
         save_calculation_to_history(

@@ -462,11 +462,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="pim2",
-            calculator_name="PIM2",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="PIM2",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="PIM2"
+            )
         
         # Save to history
         save_calculation_to_history(

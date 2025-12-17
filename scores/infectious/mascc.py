@@ -197,11 +197,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="mascc",
-            calculator_name="MASCC Risk Index",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="MASCC Risk Index",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="MASCC Risk Index"
+            )
         
         # Save to history
         save_calculation_to_history(

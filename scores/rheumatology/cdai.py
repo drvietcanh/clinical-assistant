@@ -75,11 +75,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="cdai",
-            calculator_name="CDAI",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="CDAI",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="CDAI"
+            )
         
         # Save to history
         save_calculation_to_history(

@@ -202,11 +202,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="parkland",
-            calculator_name="Parkland Formula",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Parkland Formula",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Parkland Formula"
+            )
         
         # Save to history
         save_calculation_to_history(

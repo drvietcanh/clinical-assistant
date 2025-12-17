@@ -279,10 +279,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="gupta_cardiac",
-                calculator_name="Gupta Perioperative Cardiac Risk Index",
+                title="Gupta Perioperative Cardiac Risk Index",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="Gupta Perioperative Cardiac Risk Index"
             )
             
             # Save to history

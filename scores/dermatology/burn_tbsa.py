@@ -215,11 +215,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="burn_tbsa",
-            calculator_name="Burn TBSA",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Burn TBSA",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Burn TBSA"
+            )
         
         # Save to history
         save_calculation_to_history(

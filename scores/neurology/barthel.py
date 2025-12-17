@@ -351,11 +351,12 @@ def render():
         
         # Export section
         render_export_section(
-            calculator_id="barthel",
-            calculator_name="Barthel Index",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Barthel Index",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Barthel Index"
+            )
         
         # Save to history
         save_calculation_to_history(

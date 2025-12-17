@@ -819,11 +819,12 @@ def render():
         # Save to history
         # Export section
         render_export_section(
-            calculator_id="apache3",
-            calculator_name="APACHE III Score",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="APACHE III Score",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="APACHE III Score"
+            )
         
         # Save to history
         save_calculation_to_history(

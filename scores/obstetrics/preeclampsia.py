@@ -388,11 +388,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="preeclampsia",
-            calculator_name="Preeclampsia Severity",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Preeclampsia Severity",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Preeclampsia Severity"
+            )
         
         # Save to history
         save_calculation_to_history(

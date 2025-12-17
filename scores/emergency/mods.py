@@ -451,11 +451,12 @@ def render():
         # Save to history
         # Export section
         render_export_section(
-            calculator_id="mods",
-            calculator_name="MODS Score",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="MODS Score",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="MODS Score"
+            )
         
         # Save to history
         save_calculation_to_history(

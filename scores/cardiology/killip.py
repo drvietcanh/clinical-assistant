@@ -263,11 +263,12 @@ def render():
         
         # Export section
         render_export_section(
-            calculator_id="killip",
-            calculator_name="Killip Classification",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Killip Classification",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Killip Classification"
+            )
         
         # Save to history
         save_calculation_to_history(

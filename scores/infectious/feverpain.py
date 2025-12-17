@@ -416,11 +416,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="feverpain",
-            calculator_name="FeverPAIN",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="FeverPAIN",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="FeverPAIN"
+            )
         
         # Save to history
         save_calculation_to_history(

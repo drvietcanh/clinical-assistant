@@ -43,11 +43,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="acr_ra",
-            calculator_name="ACR/EULAR RA Classification",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="ACR/EULAR RA Classification",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="ACR/EULAR RA Classification"
+            )
         
         # Save to history
         save_calculation_to_history(

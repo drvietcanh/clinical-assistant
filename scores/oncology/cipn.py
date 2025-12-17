@@ -48,11 +48,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="cipn",
-            calculator_name="CIPN Grading",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="CIPN Grading",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="CIPN Grading"
+            )
         
         # Save to history
         save_calculation_to_history(

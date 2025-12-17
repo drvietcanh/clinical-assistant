@@ -560,11 +560,12 @@ def render():
         # Save to history
         # Export section
         render_export_section(
-            calculator_id="saps3",
-            calculator_name="SAPS III Score",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="SAPS III Score",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="SAPS III Score"
+            )
         
         # Save to history
         save_calculation_to_history(

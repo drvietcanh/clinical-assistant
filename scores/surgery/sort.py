@@ -306,10 +306,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="sort",
-                calculator_name="SORT",
+                title="SORT",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="SORT"
             )
             
             # Save to history

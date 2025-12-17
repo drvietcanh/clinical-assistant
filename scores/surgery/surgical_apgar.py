@@ -264,10 +264,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="surgical_apgar",
-                calculator_name="Surgical Apgar Score",
+                title="Surgical Apgar Score",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="Surgical Apgar Score"
             )
             
             # Save to history

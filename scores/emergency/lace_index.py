@@ -389,11 +389,12 @@ def render():
         # Save to history
         # Export section
         render_export_section(
-            calculator_id="lace_index",
-            calculator_name="LACE Index",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="LACE Index",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="LACE Index"
+            )
         
         # Save to history
         save_calculation_to_history(

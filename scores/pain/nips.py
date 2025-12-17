@@ -298,11 +298,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="nips",
-            calculator_name="NIPS",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="NIPS",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="NIPS"
+            )
         
         # Save to history
         save_calculation_to_history(

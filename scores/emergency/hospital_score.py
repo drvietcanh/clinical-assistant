@@ -346,11 +346,12 @@ def render():
         # Save to history
         # Export section
         render_export_section(
-            calculator_id="hospital_score",
-            calculator_name="HOSPITAL Score",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="HOSPITAL Score",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="HOSPITAL Score"
+            )
         
         # Save to history
         save_calculation_to_history(

@@ -413,11 +413,12 @@ def render():
         # Save to history
         # Export section
         render_export_section(
-            calculator_id="abcd2",
-            calculator_name="ABCD2 Score",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="ABCD2 Score",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="ABCD2 Score"
+            )
         
         # Save to history
         save_calculation_to_history(
@@ -438,7 +439,6 @@ def render():
         
         # History section
         st.markdown("---")
-        from components.calculation_history import render_history_ui
         render_history_ui(calculator_id="abcd2", show_actions=True)
     
     st.markdown("---")

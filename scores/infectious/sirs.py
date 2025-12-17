@@ -465,11 +465,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="sirs",
-            calculator_name="SIRS",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="SIRS",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="SIRS"
+            )
         
         # Save to history
         save_calculation_to_history(

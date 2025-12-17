@@ -446,11 +446,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="pediatric_gcs",
-            calculator_name="Pediatric GCS",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Pediatric GCS",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Pediatric GCS"
+            )
         
         # Save to history
         save_calculation_to_history(

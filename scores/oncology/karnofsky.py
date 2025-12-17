@@ -255,11 +255,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="karnofsky",
-            calculator_name="Karnofsky Performance Scale",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Karnofsky Performance Scale",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Karnofsky Performance Scale"
+            )
         
         # Save to history
         save_calculation_to_history(

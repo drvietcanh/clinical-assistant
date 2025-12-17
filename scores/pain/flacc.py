@@ -279,11 +279,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="flacc",
-            calculator_name="FLACC",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="FLACC",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="FLACC"
+            )
         
         # Save to history
         save_calculation_to_history(

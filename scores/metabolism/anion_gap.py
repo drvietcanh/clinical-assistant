@@ -20,7 +20,7 @@ from components.ui.results import render_result_box
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
-from components.calculation_history import save_calculation_to_history
+from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
@@ -202,10 +202,10 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="anion_gap",
-                calculator_name="Anion Gap",
+                title=f"Anion Gap = {anion_gap:.1f} mEq/L",
                 inputs=inputs_dict,
-                results=results_dict
+                results=results_dict,
+                calculator_name="Anion Gap"
             )
             
             # Save to history

@@ -645,10 +645,11 @@ def render():
             
             # Export section
             render_export_section(
-                calculator_id="glasgow_blatchford",
-                calculator_name="Glasgow-Blatchford Score",
+                title="Glasgow-Blatchford Score",
                 inputs=inputs_dict,
                 results=results_dict
+            ,
+                calculator_name="Glasgow-Blatchford Score"
             )
             
             # Save to history

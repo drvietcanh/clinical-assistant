@@ -199,11 +199,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="rifle",
-            calculator_name="RIFLE",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="RIFLE",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="RIFLE"
+            )
         
         # Save to history
         save_calculation_to_history(

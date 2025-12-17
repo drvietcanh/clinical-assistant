@@ -675,11 +675,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="pelod2",
-            calculator_name="PELOD-2",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="PELOD-2",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="PELOD-2"
+            )
         
         # Save to history
         save_calculation_to_history(

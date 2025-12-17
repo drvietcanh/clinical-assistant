@@ -495,11 +495,12 @@ def render():
         
         # Export section
         render_export_section(
-            calculator_id="nyha",
-            calculator_name="NYHA Classification",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="NYHA Classification",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="NYHA Classification"
+            )
         
         # Save to history
         save_calculation_to_history(

@@ -355,11 +355,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="epworth",
-            calculator_name="Epworth Sleepiness Scale",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Epworth Sleepiness Scale",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Epworth Sleepiness Scale"
+            )
         
         # Save to history
         save_calculation_to_history(

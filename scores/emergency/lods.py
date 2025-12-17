@@ -537,11 +537,12 @@ def render():
         # Save to history
         # Export section
         render_export_section(
-            calculator_id="lods",
-            calculator_name="LODS Score",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="LODS Score",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="LODS Score"
+            )
         
         # Save to history
         save_calculation_to_history(

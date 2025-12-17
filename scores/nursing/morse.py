@@ -269,11 +269,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="morse",
-            calculator_name="Morse Fall Scale",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="Morse Fall Scale",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="Morse Fall Scale"
+            )
         
         # Save to history
         save_calculation_to_history(

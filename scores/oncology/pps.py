@@ -142,11 +142,12 @@ def render():
         # Export section
         from components.export import render_export_section
         render_export_section(
-            calculator_id="pps",
-            calculator_name="PPS",
-            inputs=inputs_dict,
-            results=results_dict
-        )
+                title="PPS",
+                inputs=inputs_dict,
+                results=results_dict
+        ,
+                calculator_name="PPS"
+            )
         
         # Save to history
         save_calculation_to_history(
