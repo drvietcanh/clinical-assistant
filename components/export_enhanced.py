@@ -9,6 +9,8 @@ from io import BytesIO
 from datetime import datetime
 import json
 import base64
+import hashlib
+import re
 
 # Try to import qrcode
 try:
@@ -28,6 +30,45 @@ try:
     HAS_REPORTLAB = True
 except ImportError:
     HAS_REPORTLAB = False
+
+
+def _sanitize_key_prefix(prefix: str) -> str:
+    """
+    Sanitize a string to be used as a Streamlit key prefix.
+    Streamlit keys can only contain alphanumeric characters, underscores, and hyphens.
+    """
+    if not prefix:
+        return "export"
+    
+    prefix = str(prefix).lower()
+    prefix = re.sub(r'[\s/\\\-]+', '_', prefix)
+    prefix = re.sub(r'[^a-z0-9_-]', '', prefix)
+    prefix = prefix.strip('_-')
+    
+    if not prefix:
+        prefix = "export"
+    elif len(prefix) > 50:
+        prefix = prefix[:50]
+    
+    return prefix
+
+
+def _build_unique_key(calculator_name: str, title: str, inputs: Dict[str, Any]) -> str:
+    """
+    Build a stable, sanitized key prefix based on calculator name and inputs.
+    Filters None values and stringifies safely to avoid TypeErrors.
+    """
+    base_prefix = _sanitize_key_prefix(calculator_name or "export")
+    filtered_inputs = {k: v for k, v in (inputs or {}).items() if v is not None}
+    try:
+        inputs_str = str(sorted([(str(k), str(v)) for k, v in filtered_inputs.items()]))
+    except Exception:
+        inputs_str = str(hash(str(filtered_inputs)))
+    
+    unique_data = f"{title}_{inputs_str}"
+    unique_hash = hashlib.md5(unique_data.encode()).hexdigest()[:8]
+    key = f"{base_prefix}_{unique_hash}"
+    return key[:50] or "export"
 
 
 def generate_qr_code(data: str, size: int = 300) -> Optional[bytes]:
@@ -327,7 +368,8 @@ def render_export_buttons_enhanced(
     show_download_txt: bool = True,
     show_download_pdf: bool = True,
     show_qr_code: bool = True,
-    show_email: bool = False  # Optional, requires email setup
+    show_email: bool = False,  # Optional, requires email setup
+    key_prefix: Optional[str] = None
 ) -> None:
     """
     Render enhanced export buttons with PDF, QR code, and email options
@@ -347,9 +389,22 @@ def render_export_buttons_enhanced(
     if not inputs and not results:
         return
     
+    safe_inputs = inputs or {}
+    safe_results = results or {}
+    
+    # Build a unique, sanitized key prefix to avoid duplicate widget IDs
+    base_key = key_prefix
+    if base_key is None:
+        base_key = _build_unique_key(calculator_name, title, safe_inputs)
+    else:
+        base_key = _sanitize_key_prefix(str(base_key))
+    
+    if not base_key:
+        base_key = "export"
+    
     # Format export text
     export_text = format_result_for_export_enhanced(
-        title, inputs, results, calculator_name,
+        title, safe_inputs, safe_results, calculator_name,
         include_timestamp=True,
         include_qr_code=False
     )
@@ -373,7 +428,7 @@ def render_export_buttons_enhanced(
     # Copy button
     if show_copy:
         with cols[col_idx]:
-            if st.button("📋 Copy", use_container_width=True, key="export_copy_enhanced"):
+            if st.button("📋 Copy", use_container_width=True, key=f"{base_key}_copy"):
                 st.code(export_text, language="text")
                 st.success("✅ Đã copy! Chọn và copy từ khung trên")
         col_idx += 1
@@ -391,7 +446,7 @@ def render_export_buttons_enhanced(
                 file_name=txt_filename,
                 mime="text/plain",
                 use_container_width=True,
-                key="export_download_txt_enhanced"
+                key=f"{base_key}_download_txt"
             )
         col_idx += 1
     
@@ -413,7 +468,7 @@ def render_export_buttons_enhanced(
                     file_name=pdf_filename,
                     mime="application/pdf",
                     use_container_width=True,
-                    key="export_download_pdf_enhanced"
+                    key=f"{base_key}_download_pdf"
                 )
             else:
                 st.info("📄 PDF requires reportlab. Install: pip install reportlab")
@@ -422,12 +477,12 @@ def render_export_buttons_enhanced(
     # QR Code button
     if show_qr_code and HAS_QRCODE:
         with cols[col_idx]:
-            result_url = generate_result_url(calculator_name, inputs, results)
+            result_url = generate_result_url(calculator_name, safe_inputs, safe_results)
             qr_bytes = generate_qr_code(result_url, size=300)
             
             if qr_bytes:
                 # Display QR code
-                with st.expander("📱 QR Code", expanded=False):
+                with st.expander("📱 QR Code", expanded=False, key=f"{base_key}_qr_expander"):
                     st.image(qr_bytes, caption="Quét mã QR để xem kết quả", use_container_width=True)
                     st.caption(f"**URL:** `{result_url}`")
                     
@@ -442,7 +497,7 @@ def render_export_buttons_enhanced(
                         file_name=qr_filename,
                         mime="image/png",
                         use_container_width=True,
-                        key="export_download_qr_enhanced"
+                        key=f"{base_key}_download_qr"
                     )
             else:
                 st.info("📱 QR Code requires qrcode. Install: pip install qrcode Pillow")
@@ -451,7 +506,7 @@ def render_export_buttons_enhanced(
     # Email button (optional, requires email setup)
     if show_email:
         with cols[col_idx]:
-            if st.button("📧 Gửi Email", use_container_width=True, key="export_email_enhanced"):
+            if st.button("📧 Gửi Email", use_container_width=True, key=f"{base_key}_email"):
                 st.info("📧 Tính năng gửi email cần cấu hình email server. Sắp có!")
 
 
@@ -463,7 +518,8 @@ def render_export_section_enhanced(
     filename: Optional[str] = None,
     show_preview: bool = True,
     show_pdf: bool = True,
-    show_qr_code: bool = True
+    show_qr_code: bool = True,
+    key_prefix: Optional[str] = None
 ) -> None:
     """
     Render complete enhanced export section with preview, PDF, and QR code
@@ -478,13 +534,31 @@ def render_export_section_enhanced(
         show_pdf: Show PDF export
         show_qr_code: Show QR code
     """
+    safe_inputs = inputs or {}
+    safe_results = results or {}
+    
     export_text = format_result_for_export_enhanced(
-        title, inputs, results, calculator_name,
+        title, safe_inputs, safe_results, calculator_name,
         include_timestamp=True,
         include_qr_code=False
     )
     
-    with st.expander("📤 Export Kết quả", expanded=False):
+    # Build unique key for this export block
+    base_key = key_prefix
+    if base_key is None:
+        base_key = _build_unique_key(calculator_name, title, safe_inputs)
+    else:
+        base_key = _sanitize_key_prefix(str(key_prefix))
+    
+    if not base_key:
+        base_key = "export"
+    
+    expander_key = f"{base_key}_export_expander"
+    if len(expander_key) > 100:
+        prefix_len = 100 - len("_export_expander")
+        expander_key = f"{base_key[:prefix_len]}_export_expander"
+    
+    with st.expander("📤 Export Kết quả", expanded=False, key=expander_key):
         if show_preview:
             st.markdown("**📋 Preview:**")
             st.code(export_text, language="text")
@@ -493,15 +567,16 @@ def render_export_section_enhanced(
         # Export buttons
         render_export_buttons_enhanced(
             title=title,
-            inputs=inputs,
-            results=results,
+            inputs=safe_inputs,
+            results=safe_results,
             calculator_name=calculator_name,
             filename=filename,
             show_copy=True,
             show_download_txt=True,
             show_download_pdf=show_pdf,
             show_qr_code=show_qr_code,
-            show_email=False
+            show_email=False,
+            key_prefix=base_key
         )
 
 
