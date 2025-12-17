@@ -124,6 +124,8 @@ SCORES_BY_SPECIALTY = {
         "HbA1c": {"name": "HbA1c - eAG Converter", "desc": "Chuyển đổi HbA1c sang đường huyết trung bình", "status": "✅"},
         "Winter Formula": {"name": "Winter Formula", "desc": "PCO2 dự đoán trong toan chuyển hóa", "status": "✅"},
         "Free T4 Index": {"name": "Free T4 Index (FTI)", "desc": "Chỉ số T4 tự do", "status": "✅"},
+        "Osteoporosis DXA": {"name": "Đo loãng xương (DXA)", "desc": "Diễn giải T-score/Z-score, phân loại loãng xương, gợi ý điều trị", "status": "✅"},
+        "FRAX": {"name": "Ước tính nguy cơ gãy xương (FRAX)", "desc": "Nhập kết quả FRAX 10 năm, so ngưỡng điều trị, khuyến nghị", "status": "✅"},
     },
     
     "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)": {

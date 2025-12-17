@@ -1749,6 +1749,61 @@ CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         }
     ],
     
+    "Osteoporosis": [
+        {
+            "type": "guideline",
+            "title": "Clinician’s Guide to Prevention and Treatment of Osteoporosis",
+            "authors": "National Osteoporosis Foundation",
+            "year": 2024,
+            "url": "https://www.nof.org",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Pharmacological Management of Osteoporosis in Postmenopausal Women",
+            "authors": "Endocrine Society Clinical Practice Guideline",
+            "year": 2020,
+            "doi": "10.1210/jc.2019-00221",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "AACE/ACE Clinical Practice Guidelines for the Diagnosis and Treatment of Postmenopausal Osteoporosis",
+            "authors": "Camacho PM, et al.",
+            "year": 2020,
+            "doi": "10.4158/GL-2020-0524SUPPL",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "FRAX": [
+        {
+            "type": "primary",
+            "title": "FRAX and the assessment of fracture probability in men and women from the UK",
+            "authors": "Kanis JA, et al.",
+            "journal": "Osteoporosis International",
+            "year": 2008,
+            "volume": "19",
+            "issue": "4",
+            "pages": "385-397",
+            "doi": "10.1007/s00198-007-0543-5",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "NOGG Guideline for the Prevention and Treatment of Osteoporosis",
+            "authors": "National Osteoporosis Guideline Group",
+            "year": 2024,
+            "url": "https://www.nogg.org.uk",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
     "Framingham": [
         {
             "type": "primary",

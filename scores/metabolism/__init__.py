@@ -12,6 +12,8 @@ from .free_t4_index import render as render_free_t4_index
 from .osmolality import render as render_osmolality
 from .crcl import render as render_crcl
 from .bmi_ibw_bsa import render as render_bmi_ibw_bsa
+from .osteoporosis_dxa import render as render_osteoporosis_dxa
+from .frax_risk import render as render_frax_risk
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -32,6 +34,8 @@ def render_metabolism_calculator(calculator_id):
         "HbA1c": render_hba1c_eag,
         "Winter Formula": render_winter_formula,
         "Free T4 Index": render_free_t4_index,
+        "Osteoporosis DXA": render_osteoporosis_dxa,
+        "FRAX": render_frax_risk,
     }
     
     calculator_func = calculators.get(calculator_id)
