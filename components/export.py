@@ -21,6 +21,10 @@ def _sanitize_key_prefix(prefix: str) -> str:
     Returns:
         Sanitized string safe for use as Streamlit key
     """
+    # Handle None or non-string inputs
+    if prefix is None or not isinstance(prefix, str):
+        return "export"
+    
     if not prefix:
         return "export"
     
@@ -283,6 +287,10 @@ def render_export_buttons(
     # Ensure key_prefix is sanitized even if provided
     key_prefix = _sanitize_key_prefix(key_prefix)
     
+    # Final validation - ensure key_prefix is always a valid string before using in f-strings
+    if not key_prefix or not isinstance(key_prefix, str):
+        key_prefix = "export"
+    
     num_cols = sum([show_copy, show_download, show_pdf])
     if num_cols == 0:
         return
@@ -293,7 +301,10 @@ def render_export_buttons(
     # Copy button
     if show_copy:
         with cols[col_idx]:
-            if st.button(button_label_copy, use_container_width=True, key=f"{key_prefix}_export_copy"):
+            copy_key = f"{key_prefix}_export_copy"
+            if not copy_key or not isinstance(copy_key, str):
+                copy_key = "export_copy"
+            if st.button(button_label_copy, use_container_width=True, key=copy_key):
                 try:
                     st.code(export_text, language="text")
                     st.success("✅ Đã copy! Bạn có thể chọn và copy từ khung trên")
@@ -308,13 +319,16 @@ def render_export_buttons(
             if not txt_filename.endswith('.txt'):
                 txt_filename += '.txt'
             
+            download_key = f"{key_prefix}_export_download"
+            if not download_key or not isinstance(download_key, str):
+                download_key = "export_download"
             st.download_button(
                 label=button_label_download,
                 data=export_text,
                 file_name=txt_filename,
                 mime="text/plain",
                 use_container_width=True,
-                key=f"{key_prefix}_export_download"
+                key=download_key
             )
         col_idx += 1
     
@@ -327,13 +341,16 @@ def render_export_buttons(
                 if not pdf_filename.endswith('.pdf'):
                     pdf_filename += '.pdf'
                 
+                pdf_key = f"{key_prefix}_export_pdf"
+                if not pdf_key or not isinstance(pdf_key, str):
+                    pdf_key = "export_pdf"
                 st.download_button(
                     label=button_label_pdf,
                     data=pdf_bytes,
                     file_name=pdf_filename,
                     mime="application/pdf",
                     use_container_width=True,
-                    key=f"{key_prefix}_export_pdf"
+                    key=pdf_key
                 )
             else:
                 st.info("📄 PDF export requires reportlab library. Install with: pip install reportlab")
@@ -364,6 +381,10 @@ def render_export_section(
     """
     import hashlib
     
+    # Validate and sanitize title
+    if title is None or not isinstance(title, str):
+        title = str(title) if title is not None else "Result"
+    
     export_text = format_result_for_export(title, inputs, results, calculator_name)
     
     # Generate unique key prefix if not provided
@@ -390,7 +411,10 @@ def render_export_section(
     except (TypeError, ValueError) as e:
         # Fallback if conversion fails
         inputs_str = str(hash(str(filtered_inputs)))
-    unique_data = f"{title}_{inputs_str}"
+    
+    # Ensure title is a string for the hash
+    title_str = str(title) if title is not None else "Result"
+    unique_data = f"{title_str}_{inputs_str}"
     unique_hash = hashlib.md5(unique_data.encode()).hexdigest()[:8]
     unique_key = f"{key_prefix}_{unique_hash}"
     
@@ -416,9 +440,26 @@ def render_export_section(
         expander_key = "export_expander"
     
     # Ensure key is sanitized (remove any invalid characters)
-    expander_key = _sanitize_key_prefix(expander_key.replace("_export_expander", "")) + "_export_expander"
+    try:
+        # Extract prefix and sanitize it
+        prefix = expander_key.replace("_export_expander", "") if isinstance(expander_key, str) else ""
+        sanitized_prefix = _sanitize_key_prefix(prefix) if prefix else "export"
+        
+        # Ensure sanitized_prefix is not empty
+        if not sanitized_prefix or not isinstance(sanitized_prefix, str):
+            sanitized_prefix = "export"
+        
+        expander_key = f"{sanitized_prefix}_export_expander"
+    except (AttributeError, TypeError):
+        # Fallback if anything goes wrong
+        expander_key = "export_expander"
     
-    with st.expander("📤 Export Kết quả", expanded=False, key=expander_key):
+    # Build a user-facing label (Streamlit expander in this version does not support `key`)
+    expander_label = "📤 Export Kết quả"
+    if calculator_name:
+        expander_label = f"{expander_label} • {calculator_name}"
+    
+    with st.expander(expander_label, expanded=False):
         if show_preview:
             st.markdown("**Preview:**")
             st.code(export_text, language="text")
@@ -467,7 +508,20 @@ def render_batch_export(
     # Ensure key_prefix is sanitized even if provided
     key_prefix = _sanitize_key_prefix(key_prefix)
     
-    with st.expander("📦 Batch Export - Xuất Nhiều Kết quả", expanded=False, key=f"{key_prefix}_batch_expander"):
+    # Final validation - ensure key_prefix is always a valid string
+    if not key_prefix or not isinstance(key_prefix, str):
+        key_prefix = "batch_export"
+    
+    # Construct batch expander key
+    batch_expander_key = f"{key_prefix}_batch_expander"
+    
+    # Final validation - ensure key doesn't exceed reasonable length
+    if len(batch_expander_key) > 100:
+        prefix_len = 100 - len("_batch_expander")
+        batch_expander_key = f"{key_prefix[:prefix_len]}_batch_expander"
+    
+    # Streamlit expander in this version doesn't support `key`, so rely on label only
+    with st.expander("📦 Batch Export - Xuất Nhiều Kết quả", expanded=False):
         st.info(f"📊 Tổng số: {len(calculations)} kết quả")
         
         # Format all calculations
@@ -499,13 +553,16 @@ def render_batch_export(
             if not batch_filename.endswith('.txt'):
                 batch_filename += '.txt'
             
+            batch_txt_key = f"{key_prefix}_batch_export_txt"
+            if not batch_txt_key or not isinstance(batch_txt_key, str):
+                batch_txt_key = "batch_export_txt"
             st.download_button(
                 label="💾 Download Tất Cả (TXT)",
                 data=batch_text,
                 file_name=batch_filename,
                 mime="text/plain",
                 use_container_width=True,
-                key=f"{key_prefix}_batch_export_txt"
+                key=batch_txt_key
             )
         
         with col2:
@@ -571,13 +628,16 @@ def render_batch_export(
                 if not pdf_filename.endswith('.pdf'):
                     pdf_filename += '.pdf'
                 
+                batch_pdf_key = f"{key_prefix}_batch_export_pdf"
+                if not batch_pdf_key or not isinstance(batch_pdf_key, str):
+                    batch_pdf_key = "batch_export_pdf"
                 st.download_button(
                     label="📄 Download Tất Cả (PDF)",
                     data=pdf_bytes,
                     file_name=pdf_filename,
                     mime="application/pdf",
                     use_container_width=True,
-                    key=f"{key_prefix}_batch_export_pdf"
+                    key=batch_pdf_key
                 )
             except ImportError:
                 st.info("📄 PDF export requires reportlab. Install: pip install reportlab")
