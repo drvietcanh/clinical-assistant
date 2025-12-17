@@ -82,6 +82,10 @@ from protocols import (
     render_hepatitis_c,
     render_gerd,
     render_ibs,
+    render_cirrhosis,
+    render_nafld,
+    render_chronic_constipation,
+    render_acute_diarrhea,
     render_transfusion,
     render_anticoagulation_reversal,
     render_delirium,
@@ -264,7 +268,11 @@ with st.sidebar:
                 "🫀 Viêm Loét Dạ Dày HP (+) (H. pylori Gastritis/Ulcer)",
                 "🫀 Điều Trị Viêm Gan C (Hepatitis C Treatment)",
                 "🫀 Trào Ngược Dạ Dày Thực Quản (GERD)",
-                "🫀 Hội Chứng Ruột Kích Thích (IBS)"
+                "🫀 Hội Chứng Ruột Kích Thích (IBS)",
+                "🫀 Quản Lý Xơ Gan (Cirrhosis Management)",
+                "🫀 Bệnh Gan Nhiễm Mỡ Không Do Rượu (NAFLD/NASH)",
+                "🫀 Táo Bón Mạn Tính (Chronic Constipation)",
+                "🫀 Tiêu Chảy Cấp (Acute Diarrhea)"
             ],
             label_visibility="collapsed"
         )
@@ -513,6 +521,18 @@ elif "GERD" in protocol or "Trào Ngược" in protocol or "gerd" in protocol.lo
 
 elif "IBS" in protocol or "Ruột Kích Thích" in protocol or "ibs" in protocol.lower() or "ruột kích thích" in protocol.lower() or "Irritable Bowel" in protocol:
     render_ibs()
+
+elif "Cirrhosis" in protocol or "Xơ Gan" in protocol or "cirrhosis" in protocol.lower() or "xơ gan" in protocol.lower():
+    render_cirrhosis()
+
+elif "NAFLD" in protocol or "NASH" in protocol or "Gan Nhiễm Mỡ" in protocol or "nafld" in protocol.lower() or "nash" in protocol.lower() or "gan nhiễm mỡ" in protocol.lower():
+    render_nafld()
+
+elif "Táo Bón" in protocol or "Constipation" in protocol or "táo bón" in protocol.lower() or "constipation" in protocol.lower():
+    render_chronic_constipation()
+
+elif "Tiêu Chảy" in protocol or "Diarrhea" in protocol or "tiêu chảy" in protocol.lower() or "diarrhea" in protocol.lower():
+    render_acute_diarrhea()
 
 elif "Delirium" in protocol or "delirium" in protocol.lower() or "Quản lý Delirium" in protocol:
     render_delirium()
