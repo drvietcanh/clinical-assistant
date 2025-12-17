@@ -30,7 +30,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: CAUSES ==========
-    st.markdown("### 🔍 Nguyên Nhân")
+    st.markdown("### 🔍 Nguyên nhân")
     
     cause = st.selectbox(
         "**Nguyên nhân:**",
@@ -58,7 +58,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: INITIAL ASSESSMENT ==========
-    st.markdown("### ⚡ Đánh Giá Ban Đầu")
+    st.markdown("### ⚡ Đánh giá Ban Đầu")
     
     with st.expander("🔍 Xem đánh giá ban đầu", expanded=True):
         st.markdown("""
@@ -85,7 +85,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: IMMEDIATE MANAGEMENT ==========
-    st.markdown("### ⚡ Xử Trí Ngay Lập Tức")
+    st.markdown("### ⚡ Xử trí Ngay Lập Tức")
     
     st.markdown("""
     **1. Position:**

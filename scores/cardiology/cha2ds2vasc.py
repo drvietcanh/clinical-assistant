@@ -16,7 +16,7 @@ from components.smart_suggestions import render_suggestions
 def render():
     """CHA₂DS₂-VASc Score Calculator"""
     st.subheader("❤️ CHA₂DS₂-VASc Score")
-    st.caption("Đánh giá Nguy cơ Đột quỵ Trong Rung Nhĩ")
+    st.caption("Đánh giá nguy cơ đột quỵ Trong Rung Nhĩ")
     
     # Load shared result if available
     shared = load_shared_result_from_url()

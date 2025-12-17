@@ -107,7 +107,7 @@ def render_cholecystitis_protocol():
     """Acute Cholecystitis Protocol"""
     st.error("## 🚨 ACUTE CHOLECYSTITIS")
     
-    st.markdown("### ⚡ Xử Trí Ban Đầu")
+    st.markdown("### ⚡ Xử trí Ban Đầu")
     
     st.markdown("""
     **1. Resuscitation:**
@@ -190,7 +190,7 @@ def render_cholangitis_protocol():
     """Acute Cholangitis Protocol"""
     st.error("## 🚨 ACUTE CHOLANGITIS")
     
-    st.markdown("### ⚡ Xử Trí Ban Đầu")
+    st.markdown("### ⚡ Xử trí Ban Đầu")
     
     st.markdown("""
     **1. Resuscitation:**

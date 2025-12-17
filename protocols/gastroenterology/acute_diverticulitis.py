@@ -30,7 +30,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: CLASSIFICATION ==========
-    st.markdown("### 📊 Phân Loại")
+    st.markdown("### 📊 Phân loại")
     
     classification = st.radio(
         "**Phân loại:**",
@@ -48,7 +48,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: DIAGNOSIS ==========
-    st.markdown("### 🔍 Chẩn Đoán")
+    st.markdown("### 🔍 Chẩn đoán")
     
     with st.expander("📋 Xem tiêu chuẩn chẩn đoán", expanded=True):
         st.markdown("""

@@ -30,7 +30,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: INITIAL MANAGEMENT ==========
-    st.markdown("### ⚡ Xử Trí Ban Đầu")
+    st.markdown("### ⚡ Xử trí Ban Đầu")
     
     with st.expander("🔄 Xem quy trình xử trí ban đầu", expanded=True):
         st.markdown("""

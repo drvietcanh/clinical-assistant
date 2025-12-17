@@ -145,7 +145,7 @@ with st.sidebar:
                 "🧠 Chấn thương sọ não (Traumatic Brain Injury)",
                 "🌊 Đuối nước (Drowning)",
                 "🌡️ Sốc Nhiệt (Heat Stroke)",
-                "❄️ Hạ Thân Nhiệt (Hypothermia)"
+                "❄️ Hạ thân nhiệt (Hypothermia)"
             ],
             label_visibility="collapsed"
         )
@@ -165,7 +165,7 @@ with st.sidebar:
             [
                 "💔 ACS - Hội chứng vành cấp",
                 "💔 Suy tim Cấp",
-                "💔 Suy Tim Mất Bù Cấp (ADHF)",
+                "💔 Suy tim Mất Bù Cấp (ADHF)",
                 "💓 Rung Nhĩ (Atrial Fibrillation)",
                 "🩸 DVT/PE Management",
                 "💔 Nhịp chậm (Bradycardia)",
@@ -543,7 +543,7 @@ elif "Drowning" in protocol or "drowning" in protocol.lower() or "Đuối nướ
 elif "Heat Stroke" in protocol or "heat stroke" in protocol.lower() or "Sốc Nhiệt" in protocol or "sốc nhiệt" in protocol.lower():
     render_heat_stroke()
 
-elif "Hypothermia" in protocol or "hypothermia" in protocol.lower() or "Hạ Thân Nhiệt" in protocol or "hạ thân nhiệt" in protocol.lower():
+elif "Hypothermia" in protocol or "hypothermia" in protocol.lower() or "Hạ thân nhiệt" in protocol or "hạ thân nhiệt" in protocol.lower():
     render_hypothermia()
 
 # ========== FOOTER ==========

@@ -30,7 +30,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: CLASSIFICATION ==========
-    st.markdown("### 📊 Phân Loại")
+    st.markdown("### 📊 Phân loại")
     
     ischemia_type = st.radio(
         "**Loại thiếu máu mạc treo:**",
@@ -50,7 +50,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: INITIAL ASSESSMENT ==========
-    st.markdown("### ⚡ Đánh Giá Ban Đầu")
+    st.markdown("### ⚡ Đánh giá Ban Đầu")
     
     with st.expander("🔍 Xem đánh giá ban đầu", expanded=True):
         st.markdown("""

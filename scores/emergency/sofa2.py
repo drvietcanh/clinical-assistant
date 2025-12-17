@@ -179,7 +179,7 @@ def render():
         render_suggestions(
             calculator_id="sofa2",
             calculator_name="SOFA-2 Score",
-            category="Hồi Sức",
+            category="Hồi sức",
             show_related=True,
             show_category=True,
             limit=3

@@ -267,7 +267,7 @@ def render():
         # Suicide risk assessment
         if scores[8] > 0:
             st.markdown("---")
-            st.subheader("⚠️ Đánh giá Nguy cơ Tự Tử")
+            st.subheader("⚠️ Đánh giá nguy cơ tự tử")
             
             if suicide_risk['color'] == "🔴":
                 st.error(f"""
@@ -493,7 +493,7 @@ def render():
         - PHQ-9 định kỳ mỗi tháng × 3 tháng
         """)
     
-    with st.expander("⚠️ Đánh giá Nguy cơ Tự Tử Chi tiết"):
+    with st.expander("⚠️ Đánh giá nguy cơ tự tử Chi tiết"):
         st.markdown("""
         ### Yếu tố nguy cơ cao:
         

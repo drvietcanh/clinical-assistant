@@ -16,7 +16,7 @@ from components.smart_suggestions import render_suggestions
 def render():
     """HEART Score Calculator"""
     st.subheader("❤️ HEART Score")
-    st.caption("Đánh giá Nguy cơ ACS Trong Đau Ngực Cấp")
+    st.caption("Đánh giá nguy cơ ACS Trong Đau Ngực Cấp")
     
     # Load shared result if available
     shared = load_shared_result_from_url()

@@ -34,7 +34,7 @@ def render():
     ])
     
     with tab1:
-        st.markdown("#### 🦠 Sốc Nhiễm Trùng (Septic Shock)")
+        st.markdown("#### 🦠 Sốc nhiễm trùng (Septic Shock)")
         
         st.error("""
         **Chẩn đoán:**
@@ -103,7 +103,7 @@ def render():
         """)
     
     with tab2:
-        st.markdown("#### 💧 Sốc Giảm Thể tích (Hypovolemic Shock)")
+        st.markdown("#### 💧 Sốc giảm thể tích (Hypovolemic Shock)")
         
         st.error("""
         **Chẩn đoán:**

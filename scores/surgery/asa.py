@@ -258,7 +258,7 @@ def render():
     
     if st.button("📈 Phân tích Nguy cơ Chi tiết", type="primary", use_container_width=True):
         st.markdown("---")
-        st.subheader("🎯 Đánh giá Nguy cơ & Khuyến nghị")
+        st.subheader("🎯 Đánh giá nguy cơ & Khuyến nghị")
         
         # Display final classification
         final_classification = f"{selected_asa}{'-E' if is_emergency else ''}"

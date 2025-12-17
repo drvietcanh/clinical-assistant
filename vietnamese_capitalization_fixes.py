@@ -52,7 +52,17 @@ VIETNAMESE_CAPITALIZATION_FIXES = {
     "So sánh Các Hệ Thống Tiên lượng": "So sánh các hệ thống tiên lượng",
     "So sánh Tổng Hợp": "So sánh tổng hợp",
     "Triệu chứng Lâm Sàng": "Triệu chứng lâm sàng",
+    "Triệu chứng Lâm sàng": "Triệu chứng lâm sàng",
     "Tiền Sử & Yếu tố nguy cơ": "Tiền sử & yếu tố nguy cơ",
+    
+    # ========== HYPOTHERMIA & SHOCK TERMS ==========
+    "Hạ Thân Nhiệt": "Hạ thân nhiệt",
+    "Đánh giá Nguy cơ": "Đánh giá nguy cơ",
+    "Phác đồ Điều trị": "Phác đồ điều trị",
+    "Phương Pháp Làm Ấm": "Phương pháp làm ấm",
+    "Ngừng tim Do Hạ Thân Nhiệt": "Ngừng tim do hạ thân nhiệt",
+    "Sốc Nhiễm Trùng": "Sốc nhiễm trùng",
+    "Sốc Giảm Thể tích": "Sốc giảm thể tích",
     
     # ========== TREATMENT & STRATEGY ==========
     "Chiến Lược 2 Bước": "Chiến lược 2 bước",

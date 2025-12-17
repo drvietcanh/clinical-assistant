@@ -15,7 +15,7 @@ from components.smart_suggestions import render_suggestions
 def render():
     """TIMI Risk Score Calculator"""
     st.subheader("💔 TIMI Risk Score")
-    st.caption("Đánh giá Nguy cơ Trong UA/NSTEMI")
+    st.caption("Đánh giá nguy cơ trong UA/NSTEMI")
     
     # Load shared result if available
     shared = load_shared_result_from_url()

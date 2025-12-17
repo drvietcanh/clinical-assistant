@@ -32,7 +32,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: CLASSIFICATION ==========
-    st.markdown("### 📊 Phân Loại Theo Hemodynamics")
+    st.markdown("### 📊 Phân loại Theo Hemodynamics")
     
     hf_profile = st.radio(
         "**Hồ sơ huyết động:**",
@@ -54,7 +54,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: INITIAL ASSESSMENT ==========
-    st.markdown("### ⚡ Đánh Giá Ban Đầu")
+    st.markdown("### ⚡ Đánh giá Ban Đầu")
     
     with st.expander("🔍 Xem đánh giá ban đầu", expanded=True):
         st.markdown("""

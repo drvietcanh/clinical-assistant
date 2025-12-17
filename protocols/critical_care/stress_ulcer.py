@@ -24,7 +24,7 @@ def render():
     st.markdown("---")
     
     # Risk stratification
-    st.markdown("### 1️⃣ Risk Stratification - Đánh giá Nguy cơ")
+    st.markdown("### 1️⃣ Risk Stratification - Đánh giá nguy cơ")
     
     st.markdown("#### 📋 Chỉ định SUP (High Risk)")
     

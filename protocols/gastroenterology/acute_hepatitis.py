@@ -115,7 +115,7 @@ def render_dili():
     st.markdown("---")
     
     # Management
-    st.markdown("### 3️⃣ Điều Trị")
+    st.markdown("### 3️⃣ Điều trị")
     
     st.markdown("#### 🛑 Bước 1: Ngừng Thuốc Nghi Ngờ")
     st.error("""
@@ -143,7 +143,7 @@ def render_dili():
         - **Consider:** Nếu DILI nặng, tiến triển nhanh
         """)
     
-    st.markdown("#### 🏥 Bước 3: Hỗ Trợ & Theo Dõi")
+    st.markdown("#### 🏥 Bước 3: Hỗ trợ & Theo dõi")
     
     with st.expander("📋 Xem quy trình hỗ trợ", expanded=True):
         st.markdown("""
@@ -199,7 +199,7 @@ def render_autoimmune_hepatitis():
     
     st.error("## 🚨 AUTOIMMUNE HEPATITIS PROTOCOL")
     
-    st.markdown("### 1️⃣ Chẩn Đoán")
+    st.markdown("### 1️⃣ Chẩn đoán")
     
     st.info("""
     **Tiêu chuẩn Chẩn đoán (Simplified AIH Score):**
@@ -211,7 +211,7 @@ def render_autoimmune_hepatitis():
     - **Score ≥7:** Definite AIH
     """)
     
-    st.markdown("### 2️⃣ Điều Trị")
+    st.markdown("### 2️⃣ Điều trị")
     
     st.markdown("#### 💊 Corticosteroids")
     
@@ -233,7 +233,7 @@ def render_autoimmune_hepatitis():
     - **Contraindications:** Thiopurine methyltransferase deficiency
     """)
     
-    st.markdown("### 3️⃣ Theo Dõi")
+    st.markdown("### 3️⃣ Theo dõi")
     
     st.markdown("""
     - **LFTs:** Weekly x 1 month, then monthly
@@ -251,7 +251,7 @@ def render_ischemic_hepatitis():
     
     st.error("## 🚨 ISCHEMIC HEPATITIS PROTOCOL")
     
-    st.markdown("### 1️⃣ Chẩn Đoán")
+    st.markdown("### 1️⃣ Chẩn đoán")
     
     st.info("""
     **Đặc điểm:**
@@ -262,7 +262,7 @@ def render_ischemic_hepatitis():
     - **Recovery:** Nhanh (ALT giảm >50% trong 3-7 ngày)
     """)
     
-    st.markdown("### 2️⃣ Điều Trị")
+    st.markdown("### 2️⃣ Điều trị")
     
     st.warning("""
     **Nguyên tắc:**
@@ -291,7 +291,7 @@ def render_toxin_hepatitis():
     - **Kim loại nặng:** Arsenic, Copper
     """)
     
-    st.markdown("### 2️⃣ Điều Trị")
+    st.markdown("### 2️⃣ Điều trị")
     
     st.error("""
     **Amanita phalloides:**
@@ -300,7 +300,7 @@ def render_toxin_hepatitis():
     - **Penicillin G:** 1 million U/kg/day (controversial)
     """)
     
-    st.markdown("### 3️⃣ Hỗ Trợ")
+    st.markdown("### 3️⃣ Hỗ trợ")
     
     st.info("""
     - **Supportive care:** Như DILI
@@ -317,7 +317,7 @@ def render_unknown_hepatitis():
     
     st.warning("## ⚠️ ACUTE HEPATITIS - CHƯA XÁC ĐỊNH NGUYÊN NHÂN")
     
-    st.markdown("### 1️⃣ Đánh giá Chẩn Đoán")
+    st.markdown("### 1️⃣ Đánh giá Chẩn đoán")
     
     st.info("""
     **Cần loại trừ:**
@@ -329,7 +329,7 @@ def render_unknown_hepatitis():
     6. **Budd-Chiari:** Doppler US
     """)
     
-    st.markdown("### 2️⃣ Điều Trị Hỗ Trợ")
+    st.markdown("### 2️⃣ Điều trị Hỗ trợ")
     
     st.warning("""
     - **Supportive care:** Như DILI

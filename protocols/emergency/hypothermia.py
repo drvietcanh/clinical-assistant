@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Hypothermia Protocol"""
-    st.subheader("❄️ Hạ Thân Nhiệt (Hypothermia)")
+    st.subheader("❄️ Hạ thân nhiệt (Hypothermia)")
     st.caption("Accidental hypothermia - Low body temperature management")
     
     st.error("""
@@ -32,7 +32,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: RISK ASSESSMENT ==========
-    st.markdown("### 📊 Đánh giá Nguy cơ")
+    st.markdown("### 📊 Đánh giá nguy cơ")
     
     col1, col2 = st.columns(2)
     
@@ -82,7 +82,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: CLINICAL PRESENTATION ==========
-    st.markdown("### 🔍 Triệu chứng Lâm sàng")
+    st.markdown("### 🔍 Triệu chứng lâm sàng")
     
     st.markdown("""
     **Hạ thân nhiệt nhẹ (32-35°C):**
@@ -126,7 +126,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: TREATMENT PROTOCOL ==========
-    st.markdown("### 💊 Phác đồ Điều trị")
+    st.markdown("### 💊 Phác đồ điều trị")
     
     severity = st.radio(
         "**Mức độ nghiêm trọng:**",
@@ -148,7 +148,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: REWARMING METHODS ==========
-    st.markdown("### 🔥 Phương Pháp Làm Ấm")
+    st.markdown("### 🔥 Phương pháp làm ấm")
     
     st.info("""
     **Làm ấm ngoài (Passive & Active External):**
@@ -187,7 +187,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 6: CARDIAC ARREST ==========
-    st.markdown("### 💔 Ngừng tim Do Hạ Thân Nhiệt")
+    st.markdown("### 💔 Ngừng tim do hạ thân nhiệt")
     
     st.error("""
     **Đặc điểm:**

@@ -269,7 +269,7 @@ def render():
         )
     
     with col2:
-        st.markdown("##### 🔍 Triệu chứng Lâm sàng")
+        st.markdown("##### 🔍 Triệu chứng lâm sàng")
         localized_tenderness = st.checkbox(
             "**Đau chạm khu trú dọc hệ tĩnh mạch sâu**",
             help="Đau dọc theo đường đi của tĩnh mạch đùi hoặc tĩnh mạch khoeo"

@@ -62,7 +62,7 @@ def render():
     st.markdown("---")
     
     # DKA Precipitants
-    st.markdown("### 🔍 Tìm Nguyên Nhân Gây DKA (DKA Precipitants)")
+    st.markdown("### 🔍 Tìm Nguyên nhân Gây DKA (DKA Precipitants)")
     
     st.warning("""
     **⚠️ QUAN TRỌNG: Luôn tìm nguyên nhân gây DKA!**

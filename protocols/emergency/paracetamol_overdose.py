@@ -31,7 +31,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: RISK ASSESSMENT ==========
-    st.markdown("### 📊 Đánh giá Nguy cơ")
+    st.markdown("### 📊 Đánh giá nguy cơ")
     
     col1, col2 = st.columns(2)
     
@@ -140,7 +140,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: CLINICAL PRESENTATION ==========
-    st.markdown("### 🔍 Triệu chứng Lâm sàng")
+    st.markdown("### 🔍 Triệu chứng lâm sàng")
     
     st.markdown("""
     **Giai đoạn ngộ độc:**
@@ -168,7 +168,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: TREATMENT PROTOCOL ==========
-    st.markdown("### 💊 Phác đồ Điều trị")
+    st.markdown("### 💊 Phác đồ điều trị")
     
     treatment_indication = st.radio(
         "**Chỉ định điều trị:**",

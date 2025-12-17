@@ -195,7 +195,7 @@ def render():
     st.markdown("---")
     
     # Clinical features
-    st.markdown("### 🌡️ Các Triệu chứng Lâm sàng")
+    st.markdown("### 🌡️ Các triệu chứng lâm sàng")
     
     fever = st.checkbox(
         "**Sốt > 38°C (100.4°F)**",

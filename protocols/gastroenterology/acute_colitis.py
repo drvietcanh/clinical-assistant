@@ -57,7 +57,7 @@ def render_infectious_colitis():
     
     st.error("## 🚨 INFECTIOUS COLITIS PROTOCOL")
     
-    st.markdown("### 1️⃣ Chẩn Đoán")
+    st.markdown("### 1️⃣ Chẩn đoán")
     
     col1, col2 = st.columns(2)
     
@@ -84,7 +84,7 @@ def render_infectious_colitis():
         key="inf_colitis_pathogen"
     )
     
-    st.markdown("### 3️⃣ Điều Trị")
+    st.markdown("### 3️⃣ Điều trị")
     
     if "E. coli" in pathogen or "EHEC" in pathogen or "STEC" in pathogen:
         st.error("""
@@ -139,7 +139,7 @@ def render_infectious_colitis():
         - **Điều chỉnh theo kết quả cấy phân**
         """)
     
-    st.markdown("### 4️⃣ Hỗ Trợ")
+    st.markdown("### 4️⃣ Hỗ trợ")
     
     with st.expander("📋 Xem quy trình hỗ trợ", expanded=True):
         st.markdown("""
@@ -168,7 +168,7 @@ def render_ischemic_colitis():
     
     st.error("## 🚨 ISCHEMIC COLITIS PROTOCOL")
     
-    st.markdown("### 1️⃣ Chẩn Đoán")
+    st.markdown("### 1️⃣ Chẩn đoán")
     
     st.info("""
     **Đặc điểm:**
@@ -193,7 +193,7 @@ def render_ischemic_colitis():
         wbc = st.number_input("**WBC (×10³/μL):**", min_value=0, max_value=50, value=15, key="isch_colitis_wbc")
         crp = st.number_input("**CRP (mg/L):**", min_value=0, max_value=500, value=100, key="isch_colitis_crp")
     
-    st.markdown("### 2️⃣ Phân Loại")
+    st.markdown("### 2️⃣ Phân loại")
     
     if lactate > 4.0 or shock or wbc > 20:
         severity = "Severe"
@@ -205,9 +205,9 @@ def render_ischemic_colitis():
         severity = "Mild"
         st.success("## ✅ ISCHEMIC COLITIS NHẸ")
     
-    st.markdown("### 3️⃣ Điều Trị")
+    st.markdown("### 3️⃣ Điều trị")
     
-    st.markdown("#### 🏥 Bước 1: Hỗ Trợ")
+    st.markdown("#### 🏥 Bước 1: Hỗ trợ")
     
     st.warning("""
     **1. NPO (Nothing by mouth):**
@@ -224,7 +224,7 @@ def render_ischemic_colitis():
     - **Duration:** 7-10 days
     """)
     
-    st.markdown("#### 🔄 Bước 2: Theo Dõi")
+    st.markdown("#### 🔄 Bước 2: Theo dõi")
     
     st.info("""
     **Monitoring:**
@@ -265,7 +265,7 @@ def render_radiation_colitis():
     
     st.warning("## ⚠️ RADIATION COLITIS PROTOCOL")
     
-    st.markdown("### 1️⃣ Chẩn Đoán")
+    st.markdown("### 1️⃣ Chẩn đoán")
     
     st.info("""
     **Đặc điểm:**
@@ -281,7 +281,7 @@ def render_radiation_colitis():
         key="rad_colitis_timing"
     )
     
-    st.markdown("### 2️⃣ Điều Trị")
+    st.markdown("### 2️⃣ Điều trị")
     
     if "Acute" in timing:
         st.warning("""
@@ -310,7 +310,7 @@ def render_drug_induced_colitis():
     
     st.warning("## ⚠️ DRUG-INDUCED COLITIS PROTOCOL")
     
-    st.markdown("### 1️⃣ Chẩn Đoán")
+    st.markdown("### 1️⃣ Chẩn đoán")
     
     st.info("""
     **Thuốc thường gây viêm đại tràng:**
@@ -323,7 +323,7 @@ def render_drug_induced_colitis():
     
     drug_name = st.text_input("**Tên thuốc nghi ngờ:**", key="drug_colitis_drug")
     
-    st.markdown("### 2️⃣ Điều Trị")
+    st.markdown("### 2️⃣ Điều trị")
     
     st.warning("""
     **Nguyên tắc:**
@@ -342,7 +342,7 @@ def render_unknown_colitis():
     
     st.warning("## ⚠️ ACUTE COLITIS - CHƯA XÁC ĐỊNH NGUYÊN NHÂN")
     
-    st.markdown("### 1️⃣ Đánh giá Chẩn Đoán")
+    st.markdown("### 1️⃣ Đánh giá Chẩn đoán")
     
     st.info("""
     **Cần loại trừ:**
@@ -354,7 +354,7 @@ def render_unknown_colitis():
     6. **Drug-induced:** Medication history
     """)
     
-    st.markdown("### 2️⃣ Điều Trị Hỗ Trợ")
+    st.markdown("### 2️⃣ Điều trị Hỗ trợ")
     
     st.warning("""
     - **Supportive care:** Hydration

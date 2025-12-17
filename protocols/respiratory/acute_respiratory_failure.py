@@ -31,7 +31,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: CLASSIFICATION ==========
-    st.markdown("### 📊 Phân Loại")
+    st.markdown("### 📊 Phân loại")
     
     failure_type = st.radio(
         "**Loại suy hô hấp:**",
@@ -51,7 +51,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: CAUSES ==========
-    st.markdown("### 🔍 Nguyên Nhân")
+    st.markdown("### 🔍 Nguyên nhân")
     
     col1, col2 = st.columns(2)
     
@@ -87,7 +87,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: INITIAL ASSESSMENT ==========
-    st.markdown("### ⚡ Đánh Giá Ban Đầu")
+    st.markdown("### ⚡ Đánh giá Ban Đầu")
     
     with st.expander("🔍 Xem đánh giá ban đầu", expanded=True):
         st.markdown("""
@@ -147,7 +147,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: INTUBATION CRITERIA ==========
-    st.markdown("### 🔌 Chỉ Định Đặt Nội Khí Quản")
+    st.markdown("### 🔌 Chỉ định Đặt Nội Khí Quản")
     
     with st.expander("⚠️ Xem chỉ định đặt nội khí quản", expanded=False):
         st.markdown("""
