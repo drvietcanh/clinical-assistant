@@ -52,6 +52,8 @@ from protocols import (
     render_tachycardia,
     render_aki,
     render_uti_pyelonephritis,
+    render_chronic_glomerulonephritis,
+    render_nephrotic_syndrome,
     render_nephrolithiasis,
     render_bph_urinary_retention,
     render_cap,
@@ -209,7 +211,9 @@ with st.sidebar:
                 "🧪 AKI Management",
                 "🚻 Nhiễm trùng tiểu / Viêm bể thận",
                 "🪨 Sỏi thận / Cơn đau quặn thận",
-                "🧔‍♂️ BPH & Bí tiểu cấp"
+                "🧔‍♂️ BPH & Bí tiểu cấp",
+                "🔬 Viêm cầu thận mạn tính",
+                "💧 Hội chứng thận hư"
             ],
             label_visibility="collapsed"
         )
@@ -452,6 +456,10 @@ elif "Sỏi thận" in protocol or "quặn thận" in protocol or "renal colic" 
     render_nephrolithiasis()
 elif "BPH" in protocol or "Bí tiểu" in protocol or "bph" in protocol.lower():
     render_bph_urinary_retention()
+elif "Viêm cầu thận mạn" in protocol or "Glomerulonephritis" in protocol or "glomerulonephritis" in protocol.lower():
+    render_chronic_glomerulonephritis()
+elif "Hội chứng thận hư" in protocol or "Nephrotic" in protocol or "nephrotic" in protocol.lower():
+    render_nephrotic_syndrome()
 
 elif "CAP" in protocol:
     render_cap()
