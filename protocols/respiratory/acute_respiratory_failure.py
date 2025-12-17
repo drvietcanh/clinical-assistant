@@ -1,7 +1,8 @@
 """
 Acute Respiratory Failure Protocol
-ATS/ERS 2017, SCCM 2017
+ATS/ERS 2017, SCCM 2017, ESICM 2023-2024
 Management of acute respiratory failure (non-ARDS)
+Updated with latest guidelines 2024-2025
 """
 
 import streamlit as st
@@ -12,7 +13,7 @@ from components.references import render_references_section
 def render():
     """Acute Respiratory Failure Protocol"""
     st.subheader("🫁 Acute Respiratory Failure (Non-ARDS)")
-    st.caption("ATS/ERS 2017, SCCM 2017 - Management of acute respiratory failure")
+    st.caption("ATS/ERS 2017, SCCM 2017, ESICM 2023-2024 - Management of acute respiratory failure (Updated 2024-2025)")
     
     st.warning("""
     **⚠️ ACUTE RESPIRATORY FAILURE = URGENT ASSESSMENT REQUIRED**
@@ -133,15 +134,37 @@ def render():
         
         **2. High-flow systems:**
         - **High-flow nasal cannula (HFNC):** 20-60 L/min, FiO₂ 0.21-1.0
-          - Ưu điểm: Làm ẩm, ấm, PEEP tự nhiên
-          - Chỉ định: Type 1, Type 2 nhẹ-trung bình
+          - **Ưu điểm:** Làm ẩm, ấm, PEEP tự nhiên (2-5 cmH₂O), giảm work of breathing
+          - **Chỉ định:** 
+            - Type 1 (Hypoxemic): PaO₂/FiO₂ 150-300 mmHg
+            - Type 2 nhẹ-trung bình: pH 7.25-7.35
+            - Post-extubation support
+            - Do-not-intubate patients
+          - **Settings:**
+            - Flow: 30-60 L/min (bắt đầu 30-40 L/min)
+            - FiO₂: Bắt đầu 0.4-0.6, điều chỉnh để SpO₂ 94-98%
+            - Temperature: 37°C
+          - **Theo dõi:** Đánh giá sau 1-2h, nếu không cải thiện → cân nhắc NIV/intubation
         
         **3. Non-invasive Ventilation (NIV):**
-        - **CPAP:** Áp lực dương liên tục
+        - **CPAP:** Áp lực dương liên tục (5-10 cmH₂O)
+          - Chỉ định: Type 1 do suy tim (pulmonary edema), OSA
         - **BiPAP:** Áp lực dương hai mức
-          - IPAP: 8-20 cmH₂O
-          - EPAP: 4-8 cmH₂O
-          - Chỉ định: Type 2, Type 1 do suy tim
+          - **IPAP:** 8-20 cmH₂O (bắt đầu 8-10 cmH₂O)
+          - **EPAP:** 4-8 cmH₂O (bắt đầu 4-5 cmH₂O)
+          - **Pressure support (PS):** IPAP - EPAP = 4-10 cmH₂O
+          - **Rate:** 12-16 lần/phút (backup rate)
+          - **FiO₂:** Đủ để SpO₂ 92-96% (Type 2) hoặc 94-98% (Type 1)
+          - **Chỉ định:** 
+            - Type 2: pH <7.35 với PaCO₂ >45 mmHg (ưu tiên)
+            - Type 1 do suy tim: CPAP hoặc BiPAP
+            - Post-extubation support
+          - **Chống chỉ định:**
+            - Không bảo vệ đường thở, hôn mê
+            - Tắc nghẽn đường thở trên
+            - Nôn mửa, chướng bụng
+            - Hemodynamic instability nặng
+          - **Theo dõi:** Đánh giá sau 1-2h, nếu pH không cải thiện → cân nhắc intubation
         """)
     
     st.markdown("---")
@@ -188,24 +211,32 @@ def render():
         **Mode:** Volume Assist-Control (AC) hoặc Pressure Control (PC)
         
         **Type 1 (Hypoxemic):**
-        - **Tidal Volume:** 6-8 mL/kg IBW
-        - **Rate:** 12-20 lần/phút
-        - **FiO₂:** Bắt đầu 1.0, giảm dần
-        - **PEEP:** 5-10 cmH₂O (tăng nếu cần)
-        - **I:E ratio:** 1:2
+        - **Tidal Volume:** 6-8 mL/kg IBW (lung-protective)
+        - **Rate:** 12-20 lần/phút (bắt đầu 14-16)
+        - **FiO₂:** Bắt đầu 1.0, giảm dần để SpO₂ 94-98%
+        - **PEEP:** 5-10 cmH₂O (bắt đầu 5-8, tăng nếu PaO₂/FiO₂ <200)
+        - **I:E ratio:** 1:2 (có thể 1:1.5 nếu cần)
+        - **Flow:** 60 L/min
+        - **Plateau pressure:** <30 cmH₂O
+        - **Driving pressure (ΔP):** <15 cmH₂O (Pplat - PEEP)
         
         **Type 2 (Hypercapnic):**
         - **Tidal Volume:** 6-8 mL/kg IBW
-        - **Rate:** 12-20 lần/phút (tăng nếu cần để giảm CO₂)
-        - **FiO₂:** Đủ để SpO₂ 92-96%
-        - **PEEP:** 5-8 cmH₂O
-        - **I:E ratio:** 1:2-1:3
+        - **Rate:** 12-20 lần/phút (tăng nếu cần để giảm CO₂, nhưng tránh auto-PEEP)
+        - **FiO₂:** Đủ để SpO₂ 92-96% (tránh hyperoxia)
+        - **PEEP:** 5-8 cmH₂O (vừa đủ để chống auto-PEEP)
+        - **I:E ratio:** 1:2-1:3 (thở ra dài để tránh air trapping)
+        - **Flow:** 60-80 L/min (cao để đảm bảo thở ra đủ)
+        - **Theo dõi auto-PEEP:** Quan trọng!
         
-        **Titration:**
-        - **FiO₂:** Giảm để SpO₂ 94-98%
-        - **PEEP:** Tăng nếu PaO₂/FiO₂ < 200
-        - **Rate:** Điều chỉnh để PaCO₂ 35-45 mmHg
-        - **Tidal Volume:** Giảm nếu plateau pressure > 30 cmH₂O
+        **Titration (theo dõi q1-2h):**
+        - **FiO₂:** Giảm để SpO₂ 94-98% (92-96% nếu COPD)
+        - **PEEP:** 
+          - Type 1: Tăng nếu PaO₂/FiO₂ <200 (mỗi lần tăng 2-3 cmH₂O)
+          - Type 2: Giữ thấp (5-8 cmH₂O) để tránh auto-PEEP
+        - **Rate:** Điều chỉnh để PaCO₂ 35-45 mmHg (hoặc baseline nếu COPD)
+        - **Tidal Volume:** Giảm nếu plateau pressure >30 cmH₂O
+        - **Driving pressure:** Mục tiêu <15 cmH₂O
         """)
     
     st.markdown("---")
@@ -215,18 +246,25 @@ def render():
     
     st.markdown("""
     **Theo dõi sát:**
-    - **Hô hấp:** Tần số, độ sâu, công thở, SpO₂
-    - **ABG:** q4-6h hoặc khi thay đổi điều trị
+    - **Hô hấp:** Tần số, độ sâu, công thở, SpO₂, sử dụng cơ hô hấp phụ
+    - **ABG:** q4-6h hoặc khi thay đổi điều trị (q1-2h nếu không ổn định)
     - **Chest X-ray:** Hàng ngày hoặc khi có thay đổi
-    - **Ventilator:** Peak pressure, plateau pressure, auto-PEEP
-    - **Hemodynamics:** BP, HR, CVP (nếu có)
+    - **Ventilator:** 
+      - Peak pressure, plateau pressure
+      - Auto-PEEP (quan trọng với Type 2/COPD)
+      - Driving pressure (ΔP = Pplat - PEEP)
+      - Minute ventilation, compliance
+    - **Hemodynamics:** BP, HR, CVP (nếu có), tưới máu
+    - **Lung mechanics:** Compliance, resistance (nếu có)
     
     **Mục tiêu:**
     - **SpO₂:** 94-98% (92-96% nếu COPD)
     - **PaO₂:** 60-100 mmHg
-    - **PaCO₂:** 35-45 mmHg (hoặc baseline nếu COPD)
-    - **pH:** 7.35-7.45
-    - **Plateau pressure:** < 30 cmH₂O
+    - **PaCO₂:** 35-45 mmHg (hoặc baseline nếu COPD, cho phép permissive hypercapnia nếu pH ≥7.25)
+    - **pH:** 7.35-7.45 (cho phép ≥7.25 nếu lung-protective ventilation)
+    - **Plateau pressure:** <30 cmH₂O
+    - **Driving pressure:** <15 cmH₂O
+    - **Auto-PEEP:** <5 cmH₂O (Type 2/COPD)
     """)
     
     st.markdown("---")
@@ -236,24 +274,37 @@ def render():
     
     with st.expander("✅ Xem tiêu chuẩn cai máy thở", expanded=False):
         st.markdown("""
-        **Tiêu chuẩn cai máy thở:**
-        - Nguyên nhân suy hô hấp đã được điều trị
-        - Hemodynamically stable
-        - SpO₂ ≥ 90% với FiO₂ ≤ 0.4
-        - PEEP ≤ 8 cmH₂O
+        **Tiêu chuẩn cai máy thở (ATS/ERS 2017):**
+        - Nguyên nhân suy hô hấp đã được điều trị/ổn định
+        - Hemodynamically stable (không cần vasopressors hoặc liều thấp)
+        - SpO₂ ≥ 90% với FiO₂ ≤ 0.4-0.5
+        - PEEP ≤ 5-8 cmH₂O
         - Có phản xạ bảo vệ đường thở
-        - Không cần vasopressors liều cao
+        - Tỉnh táo, hợp tác (GCS ≥13)
+        - Không có tình trạng cấp tính khác (sốc, rối loạn nhịp nặng)
         
         **Spontaneous Breathing Trial (SBT):**
-        - **Mode:** CPAP 5 cmH₂O hoặc T-piece
-        - **Thời gian:** 30-120 phút
-        - **Theo dõi:** Tần số thở, SpO₂, công thở, ABG
+        - **Mode:** CPAP 5 cmH₂O hoặc T-piece hoặc PSV 5-7 cmH₂O
+        - **Thời gian:** 30-120 phút (thường 30-60 phút)
+        - **Theo dõi:** 
+          - Tần số thở (RR) <35 lần/phút
+          - SpO₂ ≥90% với FiO₂ ≤0.5
+          - Công thở (không tăng đáng kể)
+          - ABG sau 30-60 phút
+          - Dấu hiệu mệt mỏi cơ hô hấp
+        - **Tiêu chuẩn thất bại SBT:**
+          - RR >35 hoặc <8 lần/phút
+          - SpO₂ <90% với FiO₂ ≥0.5
+          - pH <7.32 hoặc PaCO₂ tăng >10 mmHg
+          - Dấu hiệu mệt mỏi, kích động, đổ mồ hôi
         
         **Tiêu chuẩn extubation:**
-        - SBT thành công
-        - GCS ≥ 13
+        - SBT thành công (30-120 phút)
+        - GCS ≥13 hoặc tỉnh táo, hợp tác
         - Có phản xạ ho, nuốt
-        - Secretions ít
+        - Secretions ít-trung bình, có thể hút được
+        - Có thể bảo vệ đường thở
+        - **Cân nhắc:** Cuff leak test (nếu nghi ngờ phù nề đường thở)
         """)
     
     st.markdown("---")
@@ -312,6 +363,7 @@ def render_type1_protocol():
        - Bắt đầu với nasal cannula 2-4 L/min
        - Tăng lên face mask nếu cần
        - Cân nhắc HFNC nếu SpO₂ < 90% với O₂ thông thường
+         - HFNC settings: Flow 30-60 L/min, FiO₂ 0.4-0.6, điều chỉnh để SpO₂ 94-98%
     
     2. **Nếu SpO₂ vẫn < 90% với FiO₂ ≥ 0.6:**
        - Cân nhắc NIV (CPAP/BiPAP) nếu do suy tim
@@ -322,10 +374,12 @@ def render_type1_protocol():
     
     3. **Ventilator Settings:**
        - **Mode:** Volume AC hoặc Pressure Control
-       - **Tidal Volume:** 6-8 mL/kg IBW
-       - **Rate:** 12-20 lần/phút
-       - **FiO₂:** Bắt đầu 1.0, giảm dần
-       - **PEEP:** 5-10 cmH₂O (tăng nếu cần)
+       - **Tidal Volume:** 6-8 mL/kg IBW (lung-protective)
+       - **Rate:** 12-20 lần/phút (bắt đầu 14-16)
+       - **FiO₂:** Bắt đầu 1.0, giảm dần để SpO₂ 94-98%
+       - **PEEP:** 5-10 cmH₂O (tăng nếu PaO₂/FiO₂ <200)
+       - **Driving pressure:** <15 cmH₂O
+       - **Plateau pressure:** <30 cmH₂O
     
     4. **Điều trị nguyên nhân:**
        - **Pneumonia:** Kháng sinh
@@ -337,9 +391,11 @@ def render_type1_protocol():
     st.info("""
     **💡 Mẹo quan trọng:**
     - Type 1 thường do shunt hoặc V/Q mismatch
-    - PEEP có thể cải thiện oxygenation
-    - Tránh hyperoxia không cần thiết
+    - PEEP có thể cải thiện oxygenation (recruitment)
+    - Tránh hyperoxia không cần thiết (SpO₂ >98% không cần thiết)
+    - HFNC có thể tránh intubation trong một số trường hợp
     - Điều trị nguyên nhân là quan trọng nhất
+    - Theo dõi driving pressure (ΔP) - mục tiêu <15 cmH₂O
     """)
 
 
@@ -355,12 +411,20 @@ def render_type2_protocol():
        - Bắt đầu với nasal cannula 1-2 L/min
        - Tăng từ từ nếu cần
     
-    2. **NIV (Non-invasive Ventilation):**
-       - **Chỉ định:** pH < 7.35 với PaCO₂ > 45 mmHg
-       - **Mode:** BiPAP
-       - **IPAP:** 8-20 cmH₂O
-       - **EPAP:** 4-8 cmH₂O
-       - **FiO₂:** Đủ để SpO₂ 92-96%
+    2. **NIV (Non-invasive Ventilation) - Lựa chọn đầu tay:**
+       - **Chỉ định:** pH < 7.35 với PaCO₂ > 45 mmHg (ATS/ERS 2017)
+       - **Mode:** BiPAP (ưu tiên) hoặc CPAP
+       - **Initial Settings:**
+         - **IPAP:** 8-10 cmH₂O (bắt đầu), tăng dần đến 15-20 cmH₂O nếu cần
+         - **EPAP:** 4-5 cmH₂O (bắt đầu), tăng đến 6-8 cmH₂O nếu cần
+         - **Pressure Support (PS):** IPAP - EPAP = 4-10 cmH₂O
+         - **Backup Rate:** 12-16 lần/phút
+         - **FiO₂:** Đủ để SpO₂ 92-96% (tránh hyperoxia)
+       - **Titration:**
+         - Tăng IPAP nếu PaCO₂ không giảm (mỗi lần tăng 2-3 cmH₂O)
+         - Tăng EPAP nếu SpO₂ thấp hoặc có auto-PEEP
+         - Đánh giá sau 1-2h: Nếu pH không cải thiện → cân nhắc intubation
+       - **Theo dõi:** ABG sau 1-2h, đánh giá công thở, mức độ thoải mái
     
     3. **Nếu NIV thất bại hoặc chống chỉ định:**
        - Cân nhắc intubation nếu:
@@ -369,12 +433,16 @@ def render_type2_protocol():
          - Mệt mỏi cơ hô hấp
          - Lú lẫn, hôn mê
     
-    4. **Ventilator Settings:**
+    4. **Ventilator Settings (nếu NIV thất bại):**
        - **Mode:** Volume AC hoặc Pressure Control
        - **Tidal Volume:** 6-8 mL/kg IBW
-       - **Rate:** 12-20 lần/phút (tăng nếu cần)
-       - **FiO₂:** Đủ để SpO₂ 92-96%
-       - **PEEP:** 5-8 cmH₂O
+       - **Rate:** 12-20 lần/phút (tăng nếu cần, nhưng tránh auto-PEEP)
+       - **FiO₂:** Đủ để SpO₂ 92-96% (tránh hyperoxia)
+       - **PEEP:** 5-8 cmH₂O (vừa đủ để chống auto-PEEP)
+       - **I:E ratio:** 1:2-1:3 (thở ra dài để tránh air trapping)
+       - **Flow:** 60-80 L/min (cao để đảm bảo thở ra đủ)
+       - **Theo dõi auto-PEEP:** Quan trọng! (end-expiratory pause)
+       - **Cho phép permissive hypercapnia:** pH ≥7.25
     
     5. **Điều trị nguyên nhân:**
        - **COPD:** Bronchodilators, corticosteroids
@@ -385,10 +453,12 @@ def render_type2_protocol():
     
     st.info("""
     **💡 Mẹo quan trọng:**
-    - NIV là lựa chọn đầu tay cho Type 2
-    - Cho phép hypercapnia nhẹ (pH ≥ 7.25)
-    - Tránh hyperoxia (có thể làm giảm drive thở)
-    - Điều chỉnh PaCO₂ từ từ (tránh alkalosis)
+    - NIV là lựa chọn đầu tay cho Type 2 (giảm tỷ lệ intubation và mortality)
+    - Cho phép permissive hypercapnia (pH ≥ 7.25) nếu lung-protective
+    - Tránh hyperoxia (có thể làm giảm drive thở ở COPD)
+    - Điều chỉnh PaCO₂ từ từ (tránh alkalosis và giảm K⁺)
+    - Theo dõi auto-PEEP chặt chẽ (quan trọng với COPD/asthma)
+    - Đánh giá NIV sau 1-2h: Nếu pH không cải thiện → cân nhắc intubation
     """)
 
 
@@ -404,13 +474,19 @@ def render_mixed_protocol():
        - Mục tiêu SpO₂: 94-98%
        - Cẩn thận với hyperoxia (đặc biệt nếu COPD)
     
-    2. **NIV:**
-       - Cân nhắc nếu:
-         - Type 2 component nhẹ-trung bình
+    2. **NIV (cân nhắc cẩn thận):**
+       - **Chỉ định:** 
+         - Type 2 component nhẹ-trung bình (pH 7.25-7.35)
+         - Type 1 do suy tim (pulmonary edema)
          - Không có chống chỉ định
-       - **Mode:** BiPAP
-       - **IPAP:** 10-20 cmH₂O
-       - **EPAP:** 6-10 cmH₂O
+       - **Mode:** BiPAP (ưu tiên) hoặc CPAP (nếu chỉ có Type 1 do suy tim)
+       - **Settings:**
+         - **IPAP:** 10-20 cmH₂O (bắt đầu 10-12)
+         - **EPAP:** 6-10 cmH₂O (bắt đầu 6-8)
+         - **Pressure Support:** 4-10 cmH₂O
+         - **Backup Rate:** 12-16 lần/phút
+         - **FiO₂:** Đủ để SpO₂ 94-98%
+       - **Theo dõi:** Đánh giá sau 1-2h, nếu không cải thiện → cân nhắc intubation sớm
     
     3. **Intubation:**
        - Chỉ định sớm hơn nếu:
@@ -420,10 +496,14 @@ def render_mixed_protocol():
     
     4. **Ventilator Settings:**
        - **Mode:** Volume AC hoặc Pressure Control
-       - **Tidal Volume:** 6-8 mL/kg IBW
-       - **Rate:** 14-20 lần/phút
-       - **FiO₂:** Bắt đầu 0.6-1.0, giảm dần
-       - **PEEP:** 5-10 cmH₂O
+       - **Tidal Volume:** 6-8 mL/kg IBW (lung-protective)
+       - **Rate:** 14-20 lần/phút (cân bằng giữa Type 1 và Type 2)
+       - **FiO₂:** Bắt đầu 0.6-1.0, giảm dần để SpO₂ 94-98%
+       - **PEEP:** 5-10 cmH₂O (tăng nếu Type 1 nặng, giữ thấp nếu Type 2 nặng)
+       - **I:E ratio:** 1:2 (có thể 1:2.5 nếu Type 2 component)
+       - **Driving pressure:** <15 cmH₂O
+       - **Plateau pressure:** <30 cmH₂O
+       - **Theo dõi auto-PEEP:** Quan trọng nếu có Type 2 component
     
     5. **Điều trị nguyên nhân:**
        - Điều trị cả Type 1 và Type 2 components
@@ -432,9 +512,11 @@ def render_mixed_protocol():
     
     st.info("""
     **💡 Mẹo quan trọng:**
-    - Mixed failure có tiên lượng xấu hơn
-    - Cần cân bằng giữa oxygenation và ventilation
-    - Intubation sớm có thể cần thiết
+    - Mixed failure có tiên lượng xấu hơn (cần điều trị cả 2 components)
+    - Cần cân bằng giữa oxygenation (Type 1) và ventilation (Type 2)
+    - Intubation sớm có thể cần thiết (đừng trì hoãn quá lâu)
+    - Cẩn thận với PEEP (cần cho Type 1 nhưng tránh auto-PEEP cho Type 2)
     - Điều trị nguyên nhân là quan trọng nhất
+    - Theo dõi cả PaO₂/FiO₂ và PaCO₂/pH
     """)
 
