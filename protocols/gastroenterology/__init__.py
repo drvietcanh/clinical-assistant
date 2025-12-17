@@ -18,6 +18,10 @@ from .h_pylori_gastritis import render as render_h_pylori_gastritis
 from .hepatitis_c import render as render_hepatitis_c
 from .gerd import render as render_gerd
 from .ibs import render as render_ibs
+from .cirrhosis import render as render_cirrhosis
+from .nafld import render as render_nafld
+from .chronic_constipation import render as render_chronic_constipation
+from .acute_diarrhea import render as render_acute_diarrhea
 
 
 __all__ = [
@@ -36,5 +40,9 @@ __all__ = [
     'render_hepatitis_c',
     'render_gerd',
     'render_ibs',
+    'render_cirrhosis',
+    'render_nafld',
+    'render_chronic_constipation',
+    'render_acute_diarrhea',
 ]
 

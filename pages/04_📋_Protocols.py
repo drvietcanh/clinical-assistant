@@ -537,6 +537,9 @@ elif "Endocarditis" in protocol or "endocarditis" in protocol.lower() or "Viêm 
 elif "Sốt Mò" in protocol or "Scrub Typhus" in protocol or "scrub typhus" in protocol.lower() or "sốt mò" in protocol.lower():
     render_scrub_typhus()
 
+elif "Sốt Rét" in protocol or "Malaria" in protocol or "malaria" in protocol.lower() or "sốt rét" in protocol.lower():
+    render_malaria()
+
 elif "Ký sinh Trùng" in protocol or "Parasitic" in protocol or "parasitic" in protocol.lower() or "Giun Sán" in protocol or "giun sán" in protocol.lower():
     render_parasitic_worms()
 
