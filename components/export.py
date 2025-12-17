@@ -388,42 +388,54 @@ def render_export_section(
     export_text = format_result_for_export(title, inputs, results, calculator_name)
     
     # Generate unique key prefix if not provided
-    if key_prefix is None:
-        # Use calculator name as prefix, sanitized for use as key
-        if calculator_name:
-            key_prefix = _sanitize_key_prefix(str(calculator_name))
+    try:
+        if key_prefix is None:
+            # Use calculator name as prefix, sanitized for use as key
+            if calculator_name:
+                key_prefix = _sanitize_key_prefix(str(calculator_name))
+            else:
+                key_prefix = "export"
         else:
+            # Ensure key_prefix is sanitized even if provided
+            key_prefix = _sanitize_key_prefix(str(key_prefix))
+        
+        # Final validation - ensure key_prefix is always a valid string
+        if not key_prefix or not isinstance(key_prefix, str):
             key_prefix = "export"
-    else:
-        # Ensure key_prefix is sanitized even if provided
-        key_prefix = _sanitize_key_prefix(str(key_prefix))
+    except Exception:
+        key_prefix = "export"
     
     # Add hash of title + inputs to ensure uniqueness when same calculator is called multiple times
     # This prevents duplicate key errors when the same calculator renders multiple results
     # Include inputs in hash to ensure uniqueness even when title is the same
-    # Filter out None values and ensure all values are serializable
-    if not isinstance(inputs, dict):
-        inputs = {}
-    filtered_inputs = {k: v for k, v in inputs.items() if v is not None}
-    # Convert all values to strings safely
     try:
-        inputs_str = str(sorted([(str(k), str(v)) for k, v in filtered_inputs.items()]))
-    except (TypeError, ValueError) as e:
-        # Fallback if conversion fails
-        inputs_str = str(hash(str(filtered_inputs)))
-    
-    # Ensure title is a string for the hash
-    title_str = str(title) if title is not None else "Result"
-    unique_data = f"{title_str}_{inputs_str}"
-    unique_hash = hashlib.md5(unique_data.encode()).hexdigest()[:8]
-    unique_key = f"{key_prefix}_{unique_hash}"
-    
-    # Limit length to avoid issues (Streamlit keys should be reasonable length)
-    if len(unique_key) > 50:
-        unique_key = unique_key[:50]
-    
-    # Final safety check - ensure unique_key is never empty and is a valid string
-    if not unique_key or not isinstance(unique_key, str):
+        # Filter out None values and ensure all values are serializable
+        if not isinstance(inputs, dict):
+            inputs = {}
+        filtered_inputs = {k: v for k, v in inputs.items() if v is not None}
+        
+        # Convert all values to strings safely
+        try:
+            inputs_str = str(sorted([(str(k), str(v)) for k, v in filtered_inputs.items()]))
+        except (TypeError, ValueError):
+            # Fallback if conversion fails
+            inputs_str = str(hash(str(filtered_inputs)))
+        
+        # Ensure title is a string for the hash
+        title_str = str(title) if title is not None else "Result"
+        unique_data = f"{title_str}_{inputs_str}"
+        unique_hash = hashlib.md5(unique_data.encode()).hexdigest()[:8]
+        unique_key = f"{key_prefix}_{unique_hash}"
+        
+        # Limit length to avoid issues (Streamlit keys should be reasonable length)
+        if len(unique_key) > 50:
+            unique_key = unique_key[:50]
+        
+        # Final safety check - ensure unique_key is never empty and is a valid string
+        if not unique_key or not isinstance(unique_key, str):
+            unique_key = "export"
+    except Exception:
+        # Fallback to simple key if anything goes wrong
         unique_key = "export"
     
     # Construct the final key for the expander (hash is already alphanumeric, so safe)
