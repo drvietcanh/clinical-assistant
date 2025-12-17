@@ -19,7 +19,8 @@ from critical_care import (
     render_shock_management,
     render_rrt_calculator,
     render_scenarios_calculator,
-    VENTILATOR_ADVANCED_AVAILABLE
+    render_dirc_calculator,
+    VENTILATOR_ADVANCED_AVAILABLE,
 )
 
 # Import advanced ventilator functions if available
@@ -66,7 +67,8 @@ with st.sidebar:
         "💧 Fluid Therapy",
         "💉 Vasopressors",
         "🩸 Transfusion",
-        "💤 Sedation & Analgesia"
+        "💤 Sedation & Analgesia",
+        "💉 Drug Infusion (DIRC)",
     ]
     
     # Use saved tool selection or default
@@ -242,6 +244,9 @@ elif "Transfusion" in tool_type:
     
 elif "Sedation" in tool_type or "Analgesia" in tool_type:
     render_sedation_calculator()
+
+elif "Drug Infusion" in tool_type or "DIRC" in tool_type:
+    render_dirc_calculator()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)
