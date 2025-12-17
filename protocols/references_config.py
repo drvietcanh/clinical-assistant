@@ -697,6 +697,83 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "strength": STRENGTH_STRONG
         }
     ],
+
+    "Severe Influenza": [
+        {
+            "type": "guideline",
+            "title": "Clinical Practice Guidelines by the Infectious Diseases Society of America: 2018 Update on Diagnosis, Treatment, Chemoprophylaxis, and Institutional Outbreak Management of Seasonal Influenza",
+            "authors": "Uyeki TM, Bernstein HH, Bradley JS, et al.",
+            "journal": "Clinical Infectious Diseases",
+            "year": 2019,
+            "volume": "68",
+            "issue": "6",
+            "pages": "e1-e47",
+            "doi": "10.1093/cid/ciy866",
+            "pmid": "30566567",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Clinical management of seasonal influenza, interim guidance",
+            "authors": "World Health Organization",
+            "journal": "WHO Publication",
+            "year": 2024,
+            "url": "https://www.who.int/publications/i/item/WHO-2019-nCoV-clinical-2024",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+
+    "Pulmonary TB": [
+        {
+            "type": "guideline",
+            "title": "WHO consolidated guidelines on tuberculosis: module 4: treatment - 2024 update",
+            "authors": "World Health Organization",
+            "journal": "WHO Publication",
+            "year": 2024,
+            "url": "https://www.who.int/publications/i/item/9789240094239",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "WHO operational handbook on tuberculosis: module 4: treatment - 2023 update",
+            "authors": "World Health Organization",
+            "journal": "WHO Publication",
+            "year": 2023,
+            "url": "https://www.who.int/publications/i/item/9789240061729",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+
+    "Bronchiolitis": [
+        {
+            "type": "guideline",
+            "title": "Clinical Practice Guideline: The Diagnosis, Management, and Prevention of Bronchiolitis",
+            "authors": "Ralston SL, Lieberthal AS, Meissner HC, et al.",
+            "journal": "Pediatrics",
+            "year": 2014,
+            "volume": "134",
+            "issue": "5",
+            "pages": "e1474-e1502",
+            "doi": "10.1542/peds.2014-2742",
+            "pmid": "25349312",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Bronchiolitis in children: diagnosis and management (NG9)",
+            "authors": "NICE Guideline",
+            "journal": "National Institute for Health and Care Excellence",
+            "year": 2021,
+            "url": "https://www.nice.org.uk/guidance/ng9",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
     
     "Anaphylaxis": [
         {
@@ -3373,6 +3450,106 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             "year": 2019,
             "evidence_level": EVIDENCE_LEVEL_I,
             "strength": STRENGTH_STRONG
+        }
+    ],
+
+    "UTI/Pyelonephritis": [
+        {
+            "type": "guideline",
+            "title": "EAU Guidelines on Urological Infections 2024",
+            "authors": "Bonkat G, Bartoletti R, Bruyère F, et al.",
+            "journal": "European Association of Urology",
+            "year": 2024,
+            "url": "https://uroweb.org/guidelines/urological-infections",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Clinical Practice Guideline for Acute Uncomplicated Cystitis and Pyelonephritis in Women",
+            "authors": "Gupta K, Hooton TM, Naber KG, et al.",
+            "journal": "Clinical Infectious Diseases",
+            "year": 2011,
+            "volume": "52",
+            "issue": "5",
+            "pages": "e103-e120",
+            "doi": "10.1093/cid/ciq257",
+            "pmid": "21292654",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Acute pyelonephritis in adults",
+            "authors": "Tunkel AR, Gupta K",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+
+    "Nephrolithiasis": [
+        {
+            "type": "guideline",
+            "title": "EAU Guidelines on Urolithiasis 2024",
+            "authors": "Türk C, Neisius A, Petřík A, et al.",
+            "journal": "European Association of Urology",
+            "year": 2024,
+            "url": "https://uroweb.org/guidelines/urolithiasis",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Surgical Management of Stones: AUA/Endourology Society Guideline",
+            "authors": "Assimos D, Krambeck A, Miller NL, et al.",
+            "journal": "American Urological Association",
+            "year": 2016,
+            "doi": "10.1016/j.juro.2016.05.090",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Acute management of kidney stones",
+            "authors": "Pearle MS, Goldfarb DS",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+
+    "BPH/Urinary Retention": [
+        {
+            "type": "guideline",
+            "title": "EAU Guidelines on Management of Non-neurogenic Male LUTS (incl. BPH) 2024",
+            "authors": "Gravas S, Cornu JN, Gacci M, et al.",
+            "journal": "European Association of Urology",
+            "year": 2024,
+            "url": "https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Benign Prostatic Hyperplasia (BPH) Guideline",
+            "authors": "American Urological Association",
+            "journal": "AUA Guideline",
+            "year": 2023,
+            "url": "https://www.auanet.org",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Medical treatment of benign prostatic hyperplasia",
+            "authors": "Roehrborn CG",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_MODERATE
         }
     ],
 

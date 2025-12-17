@@ -40,6 +40,9 @@ from protocols import (
     render_copd,
     render_asthma,
     render_acute_respiratory_failure,
+    render_pulmonary_tb,
+    render_severe_influenza,
+    render_bronchiolitis,
     render_acs,
     render_hf,
     render_acute_decompensated_hf,
@@ -48,6 +51,9 @@ from protocols import (
     render_bradycardia,
     render_tachycardia,
     render_aki,
+    render_uti_pyelonephritis,
+    render_nephrolithiasis,
+    render_bph_urinary_retention,
     render_cap,
     render_hap_vap,
     render_cdiff,
@@ -170,7 +176,11 @@ with st.sidebar:
             [
                 "🫁 Suy Hô Hấp Cấp (Acute Respiratory Failure)",
                 "🫁 COPD Exacerbation",
-                "🫁 Cơn hen cấp"
+                "🫁 Cơn hen cấp",
+                "🫁 Viêm phổi cộng đồng (CAP)",
+                "🦠 Cúm mùa nặng / Viêm phổi do cúm",
+                "🫁 Lao phổi (Pulmonary TB)",
+                "👶 Viêm tiểu phế quản (Bronchiolitis)"
             ],
             label_visibility="collapsed"
         )
@@ -192,7 +202,10 @@ with st.sidebar:
         protocol = st.radio(
             "Phác đồ:",
             [
-                "🧪 AKI Management"
+                "🧪 AKI Management",
+                "🚻 Nhiễm trùng tiểu / Viêm bể thận",
+                "🪨 Sỏi thận / Cơn đau quặn thận",
+                "🧔‍♂️ BPH & Bí tiểu cấp"
             ],
             label_visibility="collapsed"
         )
@@ -369,6 +382,18 @@ elif "COPD" in protocol:
 elif "Hen" in protocol:
     render_asthma()
 
+elif "Viêm phổi cộng đồng" in protocol or "CAP" in protocol:
+    render_cap()
+
+elif "Cúm" in protocol or "influenza" in protocol.lower():
+    render_severe_influenza()
+
+elif "Lao phổi" in protocol or "tuberculosis" in protocol.lower():
+    render_pulmonary_tb()
+
+elif "Tiểu phế quản" in protocol or "bronchiolitis" in protocol.lower():
+    render_bronchiolitis()
+
 elif "ACS" in protocol:
     render_acs()
 
@@ -413,6 +438,12 @@ elif "DVT" in protocol or "PE" in protocol or "dvt" in protocol.lower() or "pe" 
 
 elif "AKI" in protocol:
     render_aki()
+elif "Nhiễm trùng tiểu" in protocol or "bể thận" in protocol or "UTI" in protocol:
+    render_uti_pyelonephritis()
+elif "Sỏi thận" in protocol or "quặn thận" in protocol or "renal colic" in protocol.lower():
+    render_nephrolithiasis()
+elif "BPH" in protocol or "Bí tiểu" in protocol or "bph" in protocol.lower():
+    render_bph_urinary_retention()
 
 elif "CAP" in protocol:
     render_cap()

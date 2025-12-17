@@ -35,9 +35,21 @@ from .emergency import (
     render_krait_bite
 )
 from .pain import render_acute_pain
-from .respiratory import render_copd, render_asthma, render_acute_respiratory_failure
+from .respiratory import (
+    render_copd,
+    render_asthma,
+    render_acute_respiratory_failure,
+    render_pulmonary_tb,
+    render_severe_influenza,
+    render_bronchiolitis
+)
 from .cardiology import render_acs, render_hf, render_acute_decompensated_hf, render_atrial_fibrillation, render_dvt_pe, render_bradycardia, render_tachycardia
-from .nephrology import render_aki
+from .nephrology import (
+    render_aki,
+    render_uti_pyelonephritis,
+    render_nephrolithiasis,
+    render_bph_urinary_retention
+)
 from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis, render_parasitic_worms, render_dengue_fever, render_scrub_typhus, render_malaria
 from .endocrinology import (
     render_thyrotoxic_crisis,
@@ -93,6 +105,9 @@ __all__ = [
     'render_copd',
     'render_asthma',
     'render_acute_respiratory_failure',
+    'render_pulmonary_tb',
+    'render_severe_influenza',
+    'render_bronchiolitis',
     'render_acs',
     'render_hf',
     'render_acute_decompensated_hf',
@@ -101,6 +116,9 @@ __all__ = [
     'render_bradycardia',
     'render_tachycardia',
     'render_aki',
+    'render_uti_pyelonephritis',
+    'render_nephrolithiasis',
+    'render_bph_urinary_retention',
     'render_cap',
     'render_hap_vap',
     'render_cdiff',
