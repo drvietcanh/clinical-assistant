@@ -31,12 +31,12 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("📂 Chọn nội dung")
+    st.header("🧭 Hỗ trợ quyết định")
     
     feature_options = [
         "🔄 Flowcharts quyết định lâm sàng",
-        "🤰 An toàn thai kỳ & cho con bú",
-        "👶 Tính liều Nhi khoa"
+        "🤰 Thai kỳ & cho con bú",
+        "👶 Liều Nhi khoa"
     ]
     
     last_feature = st.session_state.get("phase2_feature_selector", feature_options[0])
@@ -51,18 +51,16 @@ with st.sidebar:
     
     st.markdown("---")
     st.info("""
-    **📚 Hỗ trợ quyết định:**
+    **📚 Nhóm 🧭 Hỗ trợ quyết định:**
     
-    **🔄 Flowcharts**
-    - Quy trình ra quyết định theo bước
-    - Trực quan, dễ theo dõi
+    **🔄 Flowcharts quyết định lâm sàng**
+    - Quy trình ra quyết định từng bước, dựa trên clinical rules (Wells, PERC, CHA₂DS₂-VASc, Sepsis-3, CURB-65...)  
     
     **🤰 Thai kỳ & cho con bú**
-    - Thông tin an toàn theo thai kỳ/cho bú (tóm tắt thực hành)
+    - Thông tin an toàn thuốc theo từng giai đoạn thai kỳ và cho con bú (tóm tắt thực hành)
     
     **👶 Liều Nhi khoa**
-    - Tính liều theo cân nặng/BSA
-    - Gợi ý liều thường dùng
+    - Tính liều theo cân nặng/BSA, gợi ý liều thường dùng cho Nhi khoa
     """)
 
 # ========== MAIN CONTENT ==========

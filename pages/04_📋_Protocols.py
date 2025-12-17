@@ -134,7 +134,8 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("📂 Chọn chuyên khoa")
+    st.header("📋 Phác đồ điều trị")
+    st.caption("Sub-module **Phác đồ điều trị** – thuộc nhóm *🫁 Hồi sức & Quy trình*.")
     
     specialty = st.selectbox(
         "Chuyên khoa:",
@@ -156,6 +157,13 @@ with st.sidebar:
             "🩹 Da liễu (Dermatology)"
         ]
     )
+    
+    st.markdown("---")
+    
+    # Liên kết nhanh về module Hồi sức
+    with st.expander("Liên kết tới module Hồi sức", expanded=False):
+        if st.button("🫁 Mở Hồi sức (ICU Tools)", use_container_width=True):
+            st.switch_page("pages/09_🫁_Critical_Care.py")
     
     st.markdown("---")
     

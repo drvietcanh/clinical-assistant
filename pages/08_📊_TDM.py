@@ -30,7 +30,28 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("⚙️ Chọn công cụ TDM")
+    st.header("📊 TDM - Theo dõi nồng độ thuốc")
+    st.caption("Sub-module **TDM** – giao điểm giữa nhóm *📊 Calculators & Scores* và *💊 Thuốc & Liều dùng*.")
+    
+    # Liên kết nhanh tới các module liên quan
+    with st.expander("Liên kết Modules liên quan", expanded=False):
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("📊 Thang điểm & Calculators", use_container_width=True):
+                st.switch_page("pages/01_📊_Scores.py")
+        with col2:
+            if st.button("🔬 Labs & Calculators", use_container_width=True):
+                st.switch_page("pages/05_🔬_Labs_and_Calculators.py")
+        col3, col4 = st.columns(2)
+        with col3:
+            if st.button("💊 Cơ sở dữ liệu thuốc", use_container_width=True):
+                st.switch_page("pages/07_💊_Drug_Database.py")
+        with col4:
+            if st.button("💊 Kháng sinh (chuyên sâu)", use_container_width=True):
+                st.switch_page("pages/02_💊_Antibiotics.py")
+    
+    st.markdown("---")
+    st.subheader("⚙️ Chọn công cụ TDM")
     
     # Check if should switch to TDM from drug detail view
     preset_drug_name = None

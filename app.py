@@ -157,51 +157,64 @@ st.markdown("---")
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("📋 Điều hướng")
+    st.header("📋 Điều hướng theo Modules")
     
-    # Quick Links Section
-    st.subheader("⚡ Liên kết nhanh")
-    quick_links = [
-        ("📊 Calculators & Thang điểm", "pages/01_📊_Scores.py"),
-        ("💊 Cơ sở dữ liệu thuốc", "pages/07_💊_Drug_Database.py"),
-        ("🫁 Hồi sức", "pages/09_🫁_Critical_Care.py"),
+    # Quick access to top-level modules
+    st.subheader("⚡ Truy cập nhanh Modules")
+    module_quick_links = [
+        ("📊 Calculators & Scores", "pages/01_📊_Scores.py"),
+        ("💊 Thuốc & Liều dùng", "pages/07_💊_Drug_Database.py"),
+        ("🫁 Hồi sức & Quy trình", "pages/09_🫁_Critical_Care.py"),
         ("🧭 Hỗ trợ quyết định", "pages/10_📊_Phase2_Features.py"),
+        ("🩺 Chẩn đoán & Bài viết", "pages/06_🩺_Diagnosis.py"),
+        ("💉 Tiêm chủng", "pages/11_💉_Vaccination.py"),
     ]
     
-    for link_name, link_page in quick_links:
+    for link_name, link_page in module_quick_links:
         if st.button(link_name, key=f"quick_{link_name}", use_container_width=True):
             st.switch_page(link_page)
     
     st.markdown("---")
     
-    st.info("""
-    **📚 Modules (theo cấu trúc mới):**
+    # Structured module overview
+    st.markdown("**📚 Cấu trúc Modules (phiên bản mới)**")
     
-    **📊 Calculators & Scores**
-    - Calculators & Thang điểm
-    - Xét nghiệm & Calculators
-    - TDM
+    with st.expander("📊 Calculators & Scores", expanded=True):
+        st.markdown("""
+        - **Calculators & Thang điểm chính** (`Calculators & Scores`)
+        - **Xét nghiệm & Calculators** (`Labs & Calculators`)
+        - **TDM - Theo dõi nồng độ thuốc** (`TDM`)
+        """)
     
-    **💊 Thuốc & Liều dùng**
-    - Cơ sở dữ liệu thuốc (entry chính)
-    - Kháng sinh (chuyên sâu)
+    with st.expander("💊 Thuốc & Liều dùng", expanded=True):
+        st.markdown("""
+        - **Cơ sở dữ liệu thuốc (entry chính)** (`Drug Database`)
+        - **Kháng sinh (chuyên sâu)** (`Antibiotics`)
+        """)
     
-    **🫁 Hồi sức & Quy trình**
-    - Hồi sức (bao gồm Ventilator)
-    - Phác đồ điều trị
+    with st.expander("🫁 Hồi sức & Quy trình", expanded=True):
+        st.markdown("""
+        - **Hồi sức (bao gồm Ventilator)** (`Critical Care`)
+        - **Phác đồ điều trị** (`Protocols`)
+        """)
     
-    **🧭 Hỗ trợ quyết định**
-    - Flowcharts
-    - Thai kỳ/cho bú
-    - Liều Nhi khoa
+    with st.expander("🧭 Hỗ trợ quyết định", expanded=True):
+        st.markdown("""
+        - **Flowcharts quyết định lâm sàng**
+        - **Thai kỳ / cho con bú**
+        - **Liều Nhi khoa**
+        """)
     
-    **🩺 Chẩn đoán & Bài viết**
-    - Chẩn đoán phân biệt
-    - Bài viết chuyên sâu
+    with st.expander("🩺 Chẩn đoán & Bài viết", expanded=False):
+        st.markdown("""
+        - **Chẩn đoán phân biệt** (`Diagnosis`)
+        - **Bài viết chuyên sâu** (`Chuyên sâu`)
+        """)
     
-    **💉 Tiêm chủng**
-    - Vắc xin & lịch tiêm
-    """)
+    with st.expander("💉 Tiêm chủng", expanded=False):
+        st.markdown("""
+        - **Vắc xin & lịch tiêm** (`Vaccination`)
+        """)
     
     st.markdown("---")
     

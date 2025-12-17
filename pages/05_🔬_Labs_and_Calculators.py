@@ -41,7 +41,21 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("📋 Chọn Loại")
+    st.header("🔬 Labs & Calculators")
+    st.caption("Sub-module **Xét nghiệm & Calculators** – thuộc nhóm *📊 Calculators & Scores*.")
+    
+    # Quick navigation giữa các sub-module cùng nhóm
+    with st.expander("Liên kết trong nhóm Calculators & Scores", expanded=False):
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("📊 Thang điểm lâm sàng", use_container_width=True):
+                st.switch_page("pages/01_📊_Scores.py")
+        with col2:
+            if st.button("📊 TDM - Nồng độ thuốc", use_container_width=True):
+                st.switch_page("pages/08_📊_TDM.py")
+    
+    st.markdown("---")
+    st.subheader("📋 Chọn Loại")
     
     category = st.radio(
         "Loại công cụ:",
@@ -156,8 +170,8 @@ with st.sidebar:
         """)
     
     st.markdown("---")
-    st.caption("**Phiên bản:** 2.0")
-    st.caption("**Updated:** 2025-01-31")
+    st.caption("**Thuộc nhóm:** 📊 Calculators & Scores")
+    st.caption("**Phiên bản module Labs:** 2.0 (cập nhật 2025-01-31)")
 
 # ========== MAIN CONTENT ==========
 

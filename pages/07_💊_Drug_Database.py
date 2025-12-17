@@ -25,7 +25,21 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("⚙️ Chọn công cụ")
+    st.header("💊 Thuốc & Liều dùng")
+    st.caption("**Cơ sở dữ liệu thuốc** – entry chính của nhóm *💊 Thuốc & Liều dùng*.")
+    
+    # Liên kết nhanh tới các sub-module cùng nhóm
+    with st.expander("Liên kết trong nhóm Thuốc & Liều dùng", expanded=False):
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("💊 Kháng sinh (chuyên sâu)", use_container_width=True):
+                st.switch_page("pages/02_💊_Antibiotics.py")
+        with col2:
+            if st.button("📊 TDM - Nồng độ thuốc", use_container_width=True):
+                st.switch_page("pages/08_📊_TDM.py")
+    
+    st.markdown("---")
+    st.subheader("⚙️ Chọn công cụ")
     
     # Check if should switch to dosing calculator from drug detail view
     if st.session_state.get('switch_to_dosing_calculator', False):
@@ -67,18 +81,17 @@ with st.sidebar:
     
     st.markdown("---")
     st.info("""
-    **📚 Cơ sở dữ liệu thuốc chính:**
-    - Tất cả các nhóm thuốc thông dụng
-    - Cardiovascular, Diabetes, Analgesic
-    - Respiratory, Neurology, Psychiatry
-    - Tương tác thuốc, Tương thích IV
-    - Lịch trình liều dùng
-    - **Tính liều theo chức năng thận (CrCl/eGFR)** cho kháng sinh
+    **📚 Cơ sở dữ liệu thuốc (entry chính):**
+    - Tra cứu toàn bộ thuốc (tên, nhóm, dược động, lưu ý lâm sàng)
+    - Tính liều theo chức năng thận (CrCl/eGFR) cho kháng sinh
+    - So sánh thuốc, lịch trình liều dùng, tương tác & tương thích IV
     
-    **💡 Liên kết với module Kháng sinh:**
-    - Đây là **entry chính** cho mọi vấn đề liên quan đến thuốc.
-    - Module "💊 Kháng sinh (chuyên sâu)" cung cấp so sánh nâng cao và phác đồ điều trị.
-    - TDM: Xem module "📊 TDM" để tính toán nồng độ thuốc.
+    **💊 Nhóm Thuốc & Liều dùng:**
+    - **Cơ sở dữ liệu thuốc (trang hiện tại)**
+    - **Kháng sinh (chuyên sâu)**: so sánh, phác đồ, stewardship
+    - **TDM - Theo dõi nồng độ thuốc**: vancomycin, aminoglycoside, thuốc độc hẹp
+    
+    **💉 Vắc xin & lịch tiêm:** xem module **\"💉 Tiêm chủng và Vắc xin\"** trong nhóm Tiêm chủng.
     """)
 
 # ========== MAIN CONTENT ==========

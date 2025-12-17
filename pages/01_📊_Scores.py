@@ -20,7 +20,22 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("Chọn chuyên khoa")
+    st.header("📊 Calculators & Scores")
+    st.caption("Module **Calculators & Thang điểm** – thuộc nhóm *Calculators & Scores*.")
+    
+    # Quick navigation giữa các sub-module trong nhóm
+    with st.expander("Liên kết trong nhóm Calculators & Scores", expanded=False):
+        col_a, col_b = st.columns(2)
+        with col_a:
+            if st.button("🔬 Labs & Calculators", use_container_width=True):
+                st.switch_page("pages/05_🔬_Labs_and_Calculators.py")
+        with col_b:
+            if st.button("📊 TDM - Nồng độ thuốc", use_container_width=True):
+                st.switch_page("pages/08_📊_TDM.py")
+    
+    st.markdown("---")
+    
+    st.subheader("Chọn chuyên khoa")
     
     specialty = st.selectbox(
         "Chuyên khoa:",
@@ -88,10 +103,10 @@ with st.sidebar:
     
     st.markdown("---")
     st.info("""
-    **Chú thích:**
-    - ✅ Hoàn thành
-    - 🚧 Đang phát triển
-    - 📋 Kế hoạch
+    **Chú thích trạng thái calculator:**
+    - ✅ Hoàn thành, có thể dùng lâm sàng
+    - 🚧 Đang cập nhật/hoàn thiện
+    - 📋 Đang trong kế hoạch
     """)
     
     st.markdown("---")

@@ -50,7 +50,8 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("📂 Chọn công cụ")
+    st.header("🫁 Hồi sức (ICU)")
+    st.caption("Module **Hồi sức** – thuộc nhóm *🫁 Hồi sức & Quy trình* (bao gồm cả Ventilator).")
     
     # Tool options with consistent naming
     tool_options = [
@@ -88,17 +89,19 @@ with st.sidebar:
     
     st.markdown("---")
     st.info("""
-    **📚 Module Hồi sức:**
-    - Tính toán dịch truyền và điện giải
-    - Hướng dẫn liều vasopressor
-    - Tính toán truyền máu và chế phẩm máu
-    - Giao thức an thần và giảm đau
+    **📚 Nhóm 🫁 Hồi sức & Quy trình:**
+    - **Hồi sức (trang hiện tại):** dịch, vasopressor, transfusion, sedation, ventilator, RRT, scenarios...
+    - **Phác đồ điều trị:** sepsis, shock, COPD, đột quỵ, AKI, ADRS, sản khoa, da liễu...
     
     **💡 Dựa trên:**
     - Surviving Sepsis Guidelines
-    - Hướng dẫn ICU quốc tế
+    - Hướng dẫn ICU và chuyên khoa quốc tế
     - Thực hành dựa trên bằng chứng
     """)
+    
+    with st.expander("Liên kết tới Phác đồ điều trị", expanded=False):
+        if st.button("📋 Mở Phác đồ điều trị", use_container_width=True):
+            st.switch_page("pages/04_📋_Protocols.py")
 
 # ========== MAIN CONTENT ==========
 

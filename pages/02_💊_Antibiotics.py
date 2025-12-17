@@ -24,7 +24,21 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("⚙️ Chọn công cụ")
+    st.header("💊 Kháng sinh (chuyên sâu)")
+    st.caption("Sub-module **Kháng sinh (chuyên sâu)** – thuộc nhóm *💊 Thuốc & Liều dùng*.")
+    
+    # Liên kết nhanh tới các module thuốc liên quan
+    with st.expander("Liên kết trong nhóm Thuốc & Liều dùng", expanded=False):
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("💊 Cơ sở dữ liệu thuốc", use_container_width=True):
+                st.switch_page("pages/07_💊_Drug_Database.py")
+        with col2:
+            if st.button("📊 TDM - Nồng độ thuốc", use_container_width=True):
+                st.switch_page("pages/08_📊_TDM.py")
+    
+    st.markdown("---")
+    st.subheader("⚙️ Chọn công cụ")
     
     function_type = st.selectbox(
         "Công cụ:",
@@ -44,10 +58,10 @@ with st.sidebar:
     - ASHP/IDSA TDM 2020
     - WHO AWaRe Classification
     
-    **💡 Vai trò module:**
-    - Đây là **module chuyên sâu về kháng sinh** (so sánh, phác đồ điều trị).
-    - Mọi tra cứu thuốc nói chung và tính liều theo thận xem tại module **"💊 Cơ sở dữ liệu thuốc"**.
-    - Trong "💊 Cơ sở dữ liệu thuốc" chọn: **"🧮 Tính liều theo eGFR/CrCl (Kháng sinh)"** để chỉnh liều kháng sinh theo chức năng thận.
+    **💊 Vai trò trong nhóm Thuốc & Liều dùng:**
+    - Đây là **module chuyên sâu về kháng sinh**: dữ liệu chi tiết, so sánh, phác đồ điều trị.
+    - **Tra cứu & tính liều cơ bản**: dùng module **\"💊 Cơ sở dữ liệu thuốc\"** (entry chính).
+    - **TDM kháng sinh (vancomycin, aminoglycoside...)**: dùng module **\"📊 TDM - Theo dõi nồng độ thuốc\"**.
     """)
 
 # ========== MAIN CONTENT ==========

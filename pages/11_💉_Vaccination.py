@@ -24,7 +24,8 @@ setup_page(
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("⚙️ Chọn chức năng")
+    st.header("💉 Tiêm chủng & Vắc xin")
+    st.caption("Module **Tiêm chủng & Vắc xin** – nhóm riêng *💉 Tiêm chủng* trong cấu trúc Modules.")
     
     function_type = st.selectbox(
         "Chức năng:",
@@ -40,20 +41,18 @@ with st.sidebar:
     
     st.markdown("---")
     st.info("""
-    **💉 Tiêm chủng:**
-    - Vắc xin cho trẻ em
-    - Vắc xin cho người lớn
-    - Lịch tiêm chủng
-    - Giá cả tham khảo
-    - Phác đồ tiêm
+    **💉 Module Tiêm chủng & Vắc xin:**
+    - Vắc xin cho **trẻ em** và **người lớn**
+    - Lịch tiêm chủng & phác đồ tiêm
+    - Giá tham khảo, so sánh giữa các cơ sở
     
     **📋 Phân loại:**
-    - Bắt buộc (TCMR)
-    - Khuyến nghị
+    - Chương trình **TCMR (bắt buộc)**
+    - Vắc xin **khuyến nghị** thêm
     
     **💡 Lưu ý:**
-    - Giá chỉ mang tính tham khảo
-    - Liên hệ cơ sở y tế để biết giá chính xác
+    - Giá chỉ mang tính tham khảo – cần xác nhận với cơ sở tiêm chủng
+    - Tham khảo thêm thông tin thuốc trong module **\"💊 Cơ sở dữ liệu thuốc\"** khi cần
     """)
 
 # ========== MAIN CONTENT ==========

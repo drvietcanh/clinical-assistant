@@ -1167,6 +1167,19 @@ def main():
     
     # Sidebar filters
     with st.sidebar:
+        st.header("📚 Bài viết chuyên sâu")
+        st.caption("Sub-module **Bài viết chuyên sâu** – thuộc nhóm *🩺 Chẩn đoán & Bài viết*.")
+        
+        with st.expander("Liên kết trong nhóm Chẩn đoán & Bài viết", expanded=False):
+            col1, col2 = st.columns(2)
+            with col1:
+                if st.button("🩺 Chẩn đoán phân biệt", use_container_width=True):
+                    st.switch_page("pages/06_🩺_Diagnosis.py")
+            with col2:
+                if st.button("📊 Thang điểm & Scores", use_container_width=True):
+                    st.switch_page("pages/01_📊_Scores.py")
+        
+        st.markdown("---")
         st.header("🔎 Tìm kiếm & Lọc")
         
         search = st.text_input(
