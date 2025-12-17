@@ -62,6 +62,8 @@ from protocols import (
     render_acute_appendicitis,
     render_acute_diverticulitis,
     render_acute_intestinal_obstruction,
+    render_acute_hepatitis,
+    render_acute_colitis,
     render_transfusion,
     render_anticoagulation_reversal,
     render_delirium,
@@ -223,6 +225,8 @@ with st.sidebar:
                 "🫀 Viêm Ruột Thừa Cấp (Acute Appendicitis)",
                 "🫀 Viêm Túi Thừa Cấp (Acute Diverticulitis)",
                 "🫀 Tắc Ruột Cấp (Acute Intestinal Obstruction)",
+                "🫀 Viêm Gan Cấp (Non-viral) (Acute Hepatitis)",
+                "🫀 Viêm Đại Tràng Cấp (Non-IBD) (Acute Colitis)",
                 "🩸 IBD Exacerbation (Acute Exacerbation of IBD)"
             ],
             label_visibility="collapsed"
@@ -430,6 +434,12 @@ elif "Diverticulitis" in protocol or "Túi Thừa" in protocol or "diverticuliti
 
 elif "Intestinal Obstruction" in protocol or "Tắc Ruột" in protocol or "intestinal obstruction" in protocol.lower() or "tắc ruột" in protocol.lower():
     render_acute_intestinal_obstruction()
+
+elif "Hepatitis" in protocol and "Non-viral" in protocol or "Viêm Gan Cấp" in protocol or "hepatitis" in protocol.lower() and "non-viral" in protocol.lower():
+    render_acute_hepatitis()
+
+elif "Colitis" in protocol and "Non-IBD" in protocol or "Viêm Đại Tràng Cấp" in protocol or "colitis" in protocol.lower() and "non-ibd" in protocol.lower():
+    render_acute_colitis()
 
 elif "Delirium" in protocol or "delirium" in protocol.lower() or "Quản lý Delirium" in protocol:
     render_delirium()

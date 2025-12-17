@@ -2860,6 +2860,122 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         }
     ],
     
+    "Acute Hepatitis": [
+        {
+            "type": "guideline",
+            "title": "AASLD Position Paper: The diagnosis and management of non-alcoholic fatty liver disease",
+            "authors": "Chalasani N, Younossi Z, Lavine JE, et al.",
+            "journal": "Hepatology",
+            "year": 2018,
+            "volume": "67",
+            "issue": "1",
+            "pages": "328-357",
+            "doi": "10.1002/hep.29367",
+            "pmid": "28714183",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "EASL Clinical Practice Guidelines: Drug-induced liver injury",
+            "authors": "European Association for the Study of the Liver",
+            "journal": "Journal of Hepatology",
+            "year": 2019,
+            "volume": "70",
+            "issue": "6",
+            "pages": "1222-1261",
+            "doi": "10.1016/j.jhep.2019.02.014",
+            "pmid": "30926241",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "AASLD Practice Guidelines: Diagnosis and management of autoimmune hepatitis",
+            "authors": "Manns MP, Czaja AJ, Gorham JD, et al.",
+            "journal": "Hepatology",
+            "year": 2010,
+            "volume": "51",
+            "issue": "6",
+            "pages": "2193-2213",
+            "doi": "10.1002/hep.23584",
+            "pmid": "20513004",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Drug-induced liver injury",
+            "authors": "Björnsson ES",
+            "journal": "Nature Reviews Disease Primers",
+            "year": 2019,
+            "volume": "5",
+            "pages": "58",
+            "doi": "10.1038/s41572-019-0105-0",
+            "pmid": "31420555",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
+    "Acute Colitis": [
+        {
+            "type": "guideline",
+            "title": "ACG Clinical Guideline: Diagnosis, treatment, and prevention of acute diarrheal infections in adults",
+            "authors": "Riddle MS, DuPont HL, Connor BA",
+            "journal": "American Journal of Gastroenterology",
+            "year": 2016,
+            "volume": "111",
+            "issue": "5",
+            "pages": "602-622",
+            "doi": "10.1038/ajg.2016.126",
+            "pmid": "27068718",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "WSES guidelines for the management of acute left-sided colonic diverticulitis in the emergency setting",
+            "authors": "Sartelli M, Weber DG, Kluger Y, et al.",
+            "journal": "World Journal of Emergency Surgery",
+            "year": 2020,
+            "volume": "15",
+            "pages": "57",
+            "doi": "10.1186/s13017-020-00335-8",
+            "pmid": "33062058",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "ACG Clinical Guideline: Management of acute pancreatitis",
+            "authors": "Tenner S, Baillie J, DeWitt J, Vege SS",
+            "journal": "American Journal of Gastroenterology",
+            "year": 2013,
+            "volume": "108",
+            "issue": "9",
+            "pages": "1400-1415",
+            "doi": "10.1038/ajg.2013.218",
+            "pmid": "23896955",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Ischemic colitis: Clinical practice in diagnosis and treatment",
+            "authors": "Brandt LJ, Feuerstadt P, Longstreth GF, Boley SJ",
+            "journal": "World Journal of Gastroenterology",
+            "year": 2011,
+            "volume": "17",
+            "issue": "46",
+            "pages": "5117-5125",
+            "doi": "10.3748/wjg.v17.i46.5117",
+            "pmid": "22158647",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+    
     "acute_intestinal_obstruction": [
         {
             "type": "guideline",
