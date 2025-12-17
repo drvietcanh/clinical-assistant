@@ -46,8 +46,8 @@ with st.sidebar:
     
     **💡 Vai trò module:**
     - Đây là **module chuyên sâu về kháng sinh** (so sánh, phác đồ điều trị).
-    - Mọi tra cứu thuốc nói chung và tính liều theo thận xem tại module **"💊 Drug Database"**.
-    - Trong "💊 Drug Database" chọn: **"🧮 Tính liều theo eGFR/CrCl (Kháng sinh)"** để chỉnh liều kháng sinh theo chức năng thận.
+    - Mọi tra cứu thuốc nói chung và tính liều theo thận xem tại module **"💊 Cơ sở dữ liệu thuốc"**.
+    - Trong "💊 Cơ sở dữ liệu thuốc" chọn: **"🧮 Tính liều theo eGFR/CrCl (Kháng sinh)"** để chỉnh liều kháng sinh theo chức năng thận.
     """)
 
 # ========== MAIN CONTENT ==========

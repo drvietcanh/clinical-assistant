@@ -325,10 +325,10 @@ with st.sidebar:
     # Quick Links Section
     st.subheader("⚡ Liên kết nhanh")
     quick_links = [
-        ("📊 Calculators", "pages/01_📊_Scores.py"),
-        ("💊 Drug Database", "pages/07_💊_Drug_Database.py"),
-        ("🫁 Critical Care", "pages/09_🫁_Critical_Care.py"),
-        ("🧭 Decision Support", "pages/10_📊_Phase2_Features.py"),
+        ("📊 Calculators & Thang điểm", "pages/01_📊_Scores.py"),
+        ("💊 Cơ sở dữ liệu thuốc", "pages/07_💊_Drug_Database.py"),
+        ("🫁 Hồi sức", "pages/09_🫁_Critical_Care.py"),
+        ("🧭 Hỗ trợ quyết định", "pages/10_📊_Phase2_Features.py"),
     ]
     
     for link_name, link_page in quick_links:
@@ -338,23 +338,32 @@ with st.sidebar:
     st.markdown("---")
     
     st.info("""
-    **📚 Tất cả modules:**
+    **📚 Modules (theo cấu trúc mới):**
     
-    **📊 Tính toán:**
-    - Scores (110 calculators)
-    - Labs & Calculators
+    **📊 Calculators & Scores**
+    - Calculators & Thang điểm
+    - Xét nghiệm & Calculators
     - TDM
     
-    **💊 Kháng sinh:**
-    - Tra cứu kháng sinh
-    - Kháng sinh (Antibiotics)
+    **💊 Thuốc & Liều dùng**
+    - Cơ sở dữ liệu thuốc (entry chính)
+    - Kháng sinh (chuyên sâu)
     
-    **🫁 Hồi sức:**
-    - Critical Care (bao gồm Ventilator Management)
+    **🫁 Hồi sức & Quy trình**
+    - Hồi sức (bao gồm Ventilator)
+    - Phác đồ điều trị
     
-    **📋 Hướng dẫn:**
-    - Protocols
-    - Diagnosis
+    **🧭 Hỗ trợ quyết định**
+    - Flowcharts
+    - Thai kỳ/cho bú
+    - Liều Nhi khoa
+    
+    **🩺 Chẩn đoán & Bài viết**
+    - Chẩn đoán phân biệt
+    - Bài viết chuyên sâu
+    
+    **💉 Tiêm chủng**
+    - Vắc xin & lịch tiêm
     """)
     
     st.markdown("---")
@@ -423,7 +432,7 @@ with tab1:
         "📊 Calculators & Scores": ["scores", "labs", "tdm"],
         "💊 Thuốc & Liều dùng": ["drug_database", "antibiotics"],
         "🫁 Hồi sức & Quy trình": ["critical_care", "ventilator", "protocols"],
-        "🧭 Decision Support": ["phase2_features"],
+        "🧭 Hỗ trợ quyết định": ["phase2_features"],
         "🩺 Chẩn đoán & Bài viết": ["diagnosis", "chuyen_sau"],
         "💉 Tiêm chủng": ["vaccination"],
     }

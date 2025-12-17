@@ -1,5 +1,5 @@
 """
-Simple Test Script for Phase 1 & Phase 2 Features
+Simple Test Script for Phase 1 & Decision Support
 Kiểm tra các tính năng đã implement (không cần Streamlit runtime)
 """
 
@@ -11,7 +11,7 @@ project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
 print("=" * 80)
-print("🧪 TEST PHASE 1 & PHASE 2 FEATURES (Simple)")
+print("🧪 TEST PHASE 1 & DECISION SUPPORT (Simple)")
 print("=" * 80)
 print()
 
@@ -251,7 +251,7 @@ files_to_check = [
     ("drugs/pregnancy_lactation_safety.py", "Pregnancy & Lactation Safety"),
     ("components/pregnancy_lactation_display.py", "Pregnancy & Lactation Display"),
     ("scores/pediatrics/pediatric_dosing.py", "Pediatric Dosing Calculator"),
-    ("pages/10_📊_Phase2_Features.py", "Phase 2 Features Page"),
+    ("pages/10_📊_Phase2_Features.py", "Decision Support Page"),
 ]
 
 for file_path, name in files_to_check:
@@ -292,7 +292,7 @@ except Exception as e:
     record_warning("Phase 1 Integration Check", f"Could not check: {str(e)}")
 
 # Check Phase 2 page
-print("\n12. Checking Phase 2 Features Page...")
+print("\n12. Checking Decision Support Page...")
 try:
     page_path = Path("pages/10_📊_Phase2_Features.py")
     if page_path.exists():
@@ -306,14 +306,14 @@ try:
         }
         
         if all(phase2_features.values()):
-            record_passed("Phase 2 Features Page (all features)")
+            record_passed("Decision Support Page (all features)")
         else:
             missing = [k for k, v in phase2_features.items() if not v]
-            record_warning("Phase 2 Features Page", f"Missing: {', '.join(missing)}")
+            record_warning("Decision Support Page", f"Missing: {', '.join(missing)}")
     else:
-        record_failed("Phase 2 Features Page", "File not found")
+        record_failed("Decision Support Page", "File not found")
 except Exception as e:
-    record_failed("Phase 2 Features Page Check", str(e))
+    record_failed("Decision Support Page Check", str(e))
 
 # ========== SUMMARY ==========
 print("\n" + "=" * 80)

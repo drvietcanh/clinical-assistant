@@ -46,7 +46,7 @@ APP_CONFIG = {
     "pages": {
         "scores": ModuleInfo(
             id="scores",
-            title="Thang điểm lâm sàng",
+            title="Calculators & Thang điểm",
             icon="📊",
             page_path="pages/01_📊_Scores.py",
             description="110 calculators, 19 specialties",
@@ -55,10 +55,10 @@ APP_CONFIG = {
         ),
         "antibiotics": ModuleInfo(
             id="antibiotics",
-            title="Kháng sinh",
+            title="Kháng sinh (chuyên sâu)",
             icon="💊",
             page_path="pages/02_💊_Antibiotics.py",
-            description="Tra cứu & so sánh kháng sinh",
+            description="So sánh & phác đồ điều trị kháng sinh",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
         ),
@@ -100,7 +100,7 @@ APP_CONFIG = {
         ),
         "drug_database": ModuleInfo(
             id="drug_database",
-            title="Tra cứu thuốc",
+            title="Cơ sở dữ liệu thuốc",
             icon="💊",
             page_path="pages/07_💊_Drug_Database.py",
             description="Database thuốc, tính liều theo thận, tương tác, IV",
@@ -127,10 +127,10 @@ APP_CONFIG = {
         ),
         "phase2_features": ModuleInfo(
             id="phase2_features",
-            title="Decision Support",
+            title="Hỗ trợ quyết định",
             icon="🧭",
             page_path="pages/10_📊_Phase2_Features.py",
-            description="Flowcharts, Pregnancy/Lactation, Pediatric dosing",
+            description="Flowcharts, thai kỳ/cho bú, liều Nhi khoa",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
         ),

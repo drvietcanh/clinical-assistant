@@ -1,8 +1,8 @@
 """
-Phase 2 Features - Core Features
-Clinical Decision Rules với Flowcharts
-Pregnancy & Lactation Safety
-Pediatric Dosing Calculator
+Hỗ trợ quyết định (Decision Support)
+- Flowcharts quyết định lâm sàng
+- An toàn thai kỳ & cho con bú
+- Tính liều Nhi khoa
 """
 
 import streamlit as st
@@ -24,14 +24,14 @@ from scores.pediatrics.pediatric_dosing import render_pediatric_dosing_calculato
 
 # Standard page setup
 setup_page(
-    page_title="Decision Support",
+    page_title="Hỗ trợ quyết định",
     page_icon="🧭",
-    description="Flowcharts, Pregnancy/Lactation safety, Pediatric dosing"
+    description="Flowcharts, thai kỳ/cho bú, liều Nhi khoa"
 )
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("📂 Chọn tính năng")
+    st.header("📂 Chọn nội dung")
     
     feature_options = [
         "🔄 Flowcharts quyết định lâm sàng",
@@ -51,29 +51,24 @@ with st.sidebar:
     
     st.markdown("---")
     st.info("""
-    **📚 Phase 2 Features:**
+    **📚 Hỗ trợ quyết định:**
     
-    **🔄 Flowcharts:**
-    - Clinical decision rules trực quan
-    - Interactive flowcharts
-    - Step-by-step algorithms
+    **🔄 Flowcharts**
+    - Quy trình ra quyết định theo bước
+    - Trực quan, dễ theo dõi
     
-    **🤰 Pregnancy & Lactation:**
-    - FDA Pregnancy Categories
-    - Briggs Lactation Categories
-    - Trimester-specific information
+    **🤰 Thai kỳ & cho con bú**
+    - Thông tin an toàn theo thai kỳ/cho bú (tóm tắt thực hành)
     
-    **👶 Pediatric Dosing:**
-    - Weight-based dosing
-    - BSA-based dosing
-    - Age-based dosing
-    - Drug-specific guidelines
+    **👶 Liều Nhi khoa**
+    - Tính liều theo cân nặng/BSA
+    - Gợi ý liều thường dùng
     """)
 
 # ========== MAIN CONTENT ==========
 
-if "Flowcharts" in selected_feature:
-    st.header("🔄 Clinical Decision Rules với Flowcharts")
+if selected_feature == feature_options[0]:
+    st.header("🔄 Flowcharts quyết định lâm sàng")
     st.caption("Flowcharts tương tác cho các clinical decision rules quan trọng")
     
     # Algorithm selector
@@ -88,7 +83,7 @@ if "Flowcharts" in selected_feature:
     }
     
     selected_algorithm = st.selectbox(
-        "Chọn Clinical Decision Rule:",
+        "Chọn flowchart:",
         list(algorithms.keys()),
         key="algorithm_selector"
     )
@@ -206,8 +201,8 @@ if "Flowcharts" in selected_feature:
                 5. Score 3-5 → ICU
                 """)
 
-elif "thai kỳ" in selected_feature or "Lactation" in selected_feature:
-    st.header("🤰 Pregnancy & Lactation Safety")
+elif selected_feature == feature_options[1]:
+    st.header("🤰 An toàn thai kỳ & cho con bú")
     st.caption("Thông tin an toàn thai kỳ và cho con bú cho thuốc")
     
     # Drug search
@@ -229,7 +224,7 @@ elif "thai kỳ" in selected_feature or "Lactation" in selected_feature:
     with st.expander("➕ Thêm thuốc mới (Admin)"):
         st.info("💡 Tính năng này sẽ được mở rộng để thêm thuốc mới vào database.")
 
-elif "Nhi khoa" in selected_feature:
+elif selected_feature == feature_options[2]:
     render_pediatric_dosing_calculator()
 
 # Footer

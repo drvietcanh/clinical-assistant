@@ -1,5 +1,5 @@
 """
-Test Script for Phase 1 & Phase 2 Features
+Test Script for Phase 1 & Decision Support
 Kiểm tra các tính năng đã implement
 """
 
@@ -11,7 +11,7 @@ project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
 print("=" * 80)
-print("🧪 TEST PHASE 1 & PHASE 2 FEATURES")
+print("🧪 TEST PHASE 1 & DECISION SUPPORT")
 print("=" * 80)
 print()
 
@@ -399,11 +399,11 @@ try:
 except Exception as e:
     record_failed("Phase 1 Integration Check", str(e))
 
-# 12. Test Phase 2 Features Page
-print("\n12. Testing Phase 2 Features Page...")
+# 12. Test Decision Support Page
+print("\n12. Testing Decision Support Page...")
 try:
     page_path = Path("pages/10_📊_Phase2_Features.py")
-    assert page_path.exists(), "Phase 2 Features page not found"
+    assert page_path.exists(), "Decision Support page not found"
     
     # Check imports
     with open(page_path, 'r', encoding='utf-8') as f:
@@ -418,12 +418,12 @@ try:
     all_passed = all(checks.values())
     
     if all_passed:
-        record_passed("Phase 2 Features Page")
+        record_passed("Decision Support Page")
     else:
         missing = [k for k, v in checks.items() if not v]
-        record_warning("Phase 2 Features Page", f"Missing: {', '.join(missing)}")
+        record_warning("Decision Support Page", f"Missing: {', '.join(missing)}")
 except Exception as e:
-    record_failed("Phase 2 Features Page", str(e))
+    record_failed("Decision Support Page", str(e))
 
 # ========== SUMMARY ==========
 print("\n" + "=" * 80)

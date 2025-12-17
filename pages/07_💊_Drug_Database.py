@@ -18,7 +18,7 @@ from antibiotics import render_dosing_calculator
 
 # Standard page setup
 setup_page(
-    page_title="Tra cứu thuốc",
+    page_title="Cơ sở dữ liệu thuốc",
     page_icon="💊",
     description="Cơ sở dữ liệu thuốc toàn diện, tính liều theo thận, kiểm tra tương tác, tương thích IV"
 )
