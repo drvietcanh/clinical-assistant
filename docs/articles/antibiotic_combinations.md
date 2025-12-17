@@ -26,9 +26,89 @@ summary:
 
 # Kháng sinh và phối hợp: Synergy, Antagonism, Phối hợp thường dùng, Tương tác
 
-## 1. Tổng quan
+## 1. Giới thiệu về nhiễm khuẩn và kháng thuốc
 
-### 1.1. Khi nào phối hợp kháng sinh
+### 1.1. Định nghĩa và dịch tễ
+
+**Nhiễm khuẩn (Bacterial Infections):**
+- Tình trạng vi khuẩn xâm nhập và gây bệnh trong cơ thể.
+- Nguyên nhân tử vong: Đóng góp đáng kể, đặc biệt ở các nước đang phát triển.
+
+**Kháng kháng sinh (Antimicrobial Resistance - AMR):**
+- Vi khuẩn kháng lại tác dụng của kháng sinh.
+- Vấn đề y tế toàn cầu: 700,000–1,000,000 tử vong/năm do AMR (ước tính tăng lên 10 triệu/năm vào 2050).
+
+**Các vi khuẩn kháng quan trọng:**
+- **MRSA (Methicillin-resistant S. aureus):** Kháng methicillin và nhiều β-lactam.
+- **VRE (Vancomycin-resistant Enterococcus):** Kháng vancomycin.
+- **ESBL (Extended-spectrum β-lactamase):** Sản xuất enzyme phá hủy β-lactam phổ rộng.
+- **CRE (Carbapenem-resistant Enterobacteriaceae):** Kháng carbapenem.
+- **MDR/XDR/PDR:** Đa kháng, siêu kháng, toàn kháng.
+
+### 1.2. Phân loại nhiễm khuẩn
+
+**Theo mức độ nặng:**
+- **Nhiễm khuẩn nhẹ:** Nhiễm trùng da, đường tiết niệu không biến chứng.
+- **Nhiễm khuẩn trung bình:** Viêm phổi cộng đồng, nhiễm trùng đường tiết niệu có biến chứng.
+- **Nhiễm khuẩn nặng:** Nhiễm khuẩn huyết, viêm màng não, viêm phổi nặng.
+
+**Theo nguồn:**
+- **Cộng đồng (Community-acquired):** Nhiễm khuẩn mắc phải ngoài bệnh viện.
+- **Bệnh viện (Hospital-acquired/Healthcare-associated):** Nhiễm khuẩn mắc phải trong bệnh viện.
+
+**Theo số lượng tác nhân:**
+- **Đơn tác nhân:** Một loại vi khuẩn.
+- **Đa tác nhân:** Nhiều loại vi khuẩn (nhiễm khuẩn ổ bụng, áp xe).
+
+**Theo vị trí:**
+- **Nhiễm khuẩn huyết (Sepsis):** Vi khuẩn trong máu.
+- **Nhiễm khuẩn tại chỗ:** Viêm phổi, viêm màng não, viêm xương tủy.
+
+### 1.3. Cơ chế kháng thuốc
+
+**1. Sản xuất enzyme phá hủy kháng sinh:**
+- **β-lactamase:** Phá hủy β-lactam (penicillin, cephalosporin).
+  - ESBL: Phá hủy cephalosporin phổ rộng.
+  - Carbapenemase: Phá hủy carbapenem.
+- **Aminoglycoside-modifying enzymes:** Bất hoạt aminoglycoside.
+
+**2. Thay đổi đích tác động:**
+- **MRSA:** Thay đổi PBP (Penicillin-Binding Protein) → không gắn β-lactam.
+- **VRE:** Thay đổi cấu trúc thành tế bào → vancomycin không gắn.
+- **Quinolone resistance:** Thay đổi DNA gyrase/topoisomerase.
+
+**3. Giảm thấm màng:**
+- **Pseudomonas:** Giảm porin → kháng β-lactam, quinolone.
+- **Gram âm:** Giảm thấm → kháng nhiều kháng sinh.
+
+**4. Bơm đẩy (Efflux pumps):**
+- Đẩy kháng sinh ra ngoài tế bào → giảm nồng độ nội bào.
+- Ví dụ: Tet efflux (tetracycline), MDR pumps.
+
+**5. Bypass con đường trao đổi chất:**
+- Tạo con đường thay thế → không cần enzyme bị ức chế.
+
+**6. Tạo biofilm:**
+- Vi khuẩn tạo màng sinh học → bảo vệ khỏi kháng sinh và miễn dịch.
+
+### 1.4. Yếu tố thúc đẩy kháng thuốc
+
+**Lạm dụng kháng sinh:**
+- Dùng không cần thiết (nhiễm virus, tự ý dùng).
+- Dùng không đủ liều, không đủ thời gian.
+
+**Phối hợp không đúng:**
+- Phối hợp không cần thiết → tăng nguy cơ kháng thuốc.
+
+**Sử dụng trong nông nghiệp:**
+- Kháng sinh trong chăn nuôi → chọn lọc vi khuẩn kháng.
+
+**Lây truyền:**
+- Lây truyền vi khuẩn kháng trong bệnh viện, cộng đồng.
+
+## 2. Tổng quan về phối hợp kháng sinh
+
+### 2.1. Khi nào phối hợp kháng sinh
 
 **Chỉ định phối hợp:**
 - **Mở rộng phổ (Empiric therapy):** Nghi ngờ nhiều tác nhân, chưa có kết quả cấy.

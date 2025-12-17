@@ -17,7 +17,89 @@ summary:
   - Cảnh giác C. difficile, viêm phổi cộng đồng; đánh giá lại chỉ định mỗi 4–8 tuần.
 ---
 
-## 1. Khi nào dự phòng stress ulcer (SUP) trong ICU
+## 1. Giới thiệu về GERD, PUD và Stress Ulcer
+
+### 1.1. Định nghĩa
+
+**GERD (Gastroesophageal Reflux Disease - Trào ngược dạ dày thực quản):**
+- Tình trạng trào ngược dịch dạ dày lên thực quản gây triệu chứng và/hoặc biến chứng.
+- Triệu chứng: ợ nóng, ợ chua, đau ngực, khó nuốt, ho mạn tính.
+
+**PUD (Peptic Ulcer Disease - Loét dạ dày tá tràng):**
+- Tổn thương niêm mạc dạ dày hoặc tá tràng do acid và pepsin.
+- Nguyên nhân: H. pylori (70–80%), NSAID (20–30%), stress, thuốc khác.
+
+**Stress Ulcer (Loét do stress):**
+- Loét dạ dày/tá tràng ở bệnh nhân ICU do stress sinh lý (sepsis, shock, chấn thương).
+- Cơ chế: Giảm tưới máu niêm mạc dạ dày → giảm bảo vệ niêm mạc → tổn thương do acid.
+
+### 1.2. Phân loại
+
+**GERD:**
+- **Theo triệu chứng:**
+  - GERD điển hình: ợ nóng, ợ chua.
+  - GERD không điển hình: Ho, khàn giọng, đau ngực.
+- **Theo tổn thương:**
+  - GERD không có tổn thương (non-erosive).
+  - GERD có tổn thương (erosive esophagitis).
+
+**PUD:**
+- **Theo vị trí:**
+  - Loét dạ dày (gastric ulcer).
+  - Loét tá tràng (duodenal ulcer).
+- **Theo nguyên nhân:**
+  - PUD do H. pylori.
+  - PUD do NSAID.
+  - PUD do stress.
+
+**Stress Ulcer:**
+- **Theo mức độ:**
+  - Loét nông (superficial).
+  - Loét sâu (deep).
+  - Xuất huyết tiêu hóa.
+  - Thủng.
+
+### 1.3. Cơ chế bệnh sinh
+
+**GERD:**
+- **Cơ chế chính:**
+  1. Giảm áp lực cơ thắt thực quản dưới (LES) → trào ngược.
+  2. Tăng áp lực trong dạ dày → trào ngược.
+  3. Giảm thanh thải acid ở thực quản → tổn thương niêm mạc.
+- **Yếu tố nguy cơ:**
+  - Béo phì, thoát vị hoành, mang thai, thuốc (anticholinergic, theophylline).
+
+**PUD:**
+- **Cơ chế chính:**
+  1. **H. pylori:**
+     - Vi khuẩn tiết urease → tạo NH₃ → trung hòa acid → sống được.
+     - Tiết độc tố → tổn thương niêm mạc → loét.
+  2. **NSAID:**
+     - Ức chế COX-1 → giảm prostaglandin → giảm bảo vệ niêm mạc → loét.
+  3. **Mất cân bằng:**
+     - Yếu tố tấn công (acid, pepsin) > yếu tố bảo vệ (mucus, bicarbonate, prostaglandin).
+
+**Stress Ulcer:**
+- **Cơ chế chính:**
+  1. **Giảm tưới máu niêm mạc:**
+     - Shock, sepsis → giảm tưới máu → thiếu oxy → tổn thương niêm mạc.
+  2. **Tăng acid:**
+     - Stress → tăng catecholamine → tăng gastrin → tăng tiết acid.
+  3. **Giảm bảo vệ:**
+     - Giảm prostaglandin, giảm mucus → dễ tổn thương.
+
+### 1.4. Biến chứng
+
+**GERD:**
+- Viêm thực quản, hẹp thực quản, Barrett thực quản, ung thư thực quản.
+
+**PUD:**
+- Xuất huyết tiêu hóa, thủng, hẹp môn vị, ung thư dạ dày (nếu do H. pylori).
+
+**Stress Ulcer:**
+- Xuất huyết tiêu hóa (nguy hiểm ở ICU), thủng.
+
+## 2. Khi nào dự phòng stress ulcer (SUP) trong ICU
 - Chỉ định mạnh: thông khí xâm lấn kéo dài, rối loạn đông máu đáng kể, bỏng rộng, chấn thương sọ não, đa chấn thương, sepsis nặng kèm nguy cơ chảy máu tiêu hóa, suy đa cơ quan.
 - Ngừng SUP khi: cai máy thành công, hết yếu tố nguy cơ, có thể chuyển sang nuôi ăn enteral đầy đủ.
 - Lựa chọn:

@@ -204,9 +204,28 @@ summary:
 - **Anion Gap:** Đánh giá toan chuyển hóa (liên quan rối loạn điện giải).
 - **Corrected Ca:** Điều chỉnh canxi theo albumin.
 - **FENa:** Phân biệt nguyên nhân hạ natri.
-- **eGFR / CrCl:** Đánh giá chức năng thận (liên quan rối loạn K+, P+).
+- **eGFR (CKD-EPI) / CrCl (Cockcroft-Gault):** Đánh giá chức năng thận (liên quan rối loạn K+, P+).
 
-## 7. Tài liệu tham khảo
+## 7. Tra cứu thuốc trong Drug Database
+
+**Các thuốc liên quan đến rối loạn điện giải có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**Thuốc gây tăng kali:**
+- ACEi/ARB, MRA (Spironolactone, Eplerenone), Trimethoprim
+
+**Thuốc gây hạ kali:**
+- Lợi tiểu (Furosemide, Thiazide), Corticosteroid, β-agonist
+
+**Thuốc bù điện giải:**
+- Kali, Canxi, Magie, Phospho (thường là thuốc bổ sung, ít khi có trong database)
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc
+3. Xem thông tin chi tiết về tác dụng phụ liên quan đến điện giải
+4. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc"
+
+## 8. Tài liệu tham khảo
 
 - KDIGO Clinical Practice Guidelines (tham khảo).
 - Endocrine Society Clinical Practice Guideline on Hyponatremia, 2014 (updates).

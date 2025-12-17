@@ -19,9 +19,74 @@ summary:
 
 # Thuốc chống dị ứng: Antihistamine, Corticosteroid, Leukotriene Modifier, Mast Cell Stabilizer
 
-## 1. Tổng quan
+## 1. Giới thiệu về bệnh dị ứng
 
-### 1.1. Phân loại thuốc chống dị ứng
+### 1.1. Định nghĩa và dịch tễ
+
+**Dị ứng (Allergy):**
+- Phản ứng quá mẫn của hệ miễn dịch với các chất thông thường (dị nguyên - allergen).
+- Tỷ lệ mắc: 20–30% dân số, tăng dần trong những thập kỷ gần đây.
+- Phổ biến ở trẻ em và thanh thiếu niên, nhưng có thể khởi phát ở mọi lứa tuổi.
+
+**Các bệnh dị ứng thường gặp:**
+- **Allergic rhinitis (Viêm mũi dị ứng):** 10–30% dân số.
+- **Urticaria (Mề đay):** 15–20% dân số (ít nhất 1 lần trong đời).
+- **Atopic dermatitis (Viêm da cơ địa):** 10–20% trẻ em, 2–10% người lớn.
+- **Allergic asthma (Hen dị ứng):** 5–10% dân số.
+- **Anaphylaxis (Phản vệ):** 0.05–2% dân số.
+
+### 1.2. Phân loại bệnh dị ứng
+
+**Theo cơ chế (Gell và Coombs):**
+- **Type I (Immediate hypersensitivity):** IgE-mediated (allergic rhinitis, urticaria, anaphylaxis).
+- **Type II (Cytotoxic):** IgG/IgM-mediated (hiếm trong dị ứng thông thường).
+- **Type III (Immune complex):** IgG/IgM + complement (hiếm).
+- **Type IV (Delayed hypersensitivity):** T-cell mediated (contact dermatitis).
+
+**Theo thời gian:**
+- **Cấp tính:** Phản ứng xảy ra ngay sau tiếp xúc (phút đến vài giờ).
+- **Mạn tính:** Phản ứng kéo dài hoặc tái phát.
+
+**Theo mức độ:**
+- **Nhẹ:** Chỉ ảnh hưởng chất lượng cuộc sống.
+- **Trung bình:** Ảnh hưởng hoạt động hàng ngày.
+- **Nặng:** Đe dọa tính mạng (anaphylaxis).
+
+### 1.3. Cơ chế bệnh sinh
+
+**Type I Hypersensitivity (IgE-mediated):**
+
+**Giai đoạn nhạy cảm (Sensitization):**
+1. Dị nguyên xâm nhập → được trình diện bởi dendritic cells.
+2. Kích hoạt T-helper 2 (Th2) → sản xuất IL-4, IL-13.
+3. B cells chuyển đổi lớp → sản xuất IgE.
+4. IgE gắn vào thụ thể FcεRI trên mast cells và basophils.
+
+**Giai đoạn kích hoạt (Activation):**
+1. Tiếp xúc lại với dị nguyên → gắn vào IgE trên mast cells/basophils.
+2. Cross-linking của FcεRI → degranulation.
+3. Phóng thích các chất trung gian:
+   - **Preformed:** Histamine, tryptase, chymase, heparin.
+   - **Newly synthesized:** Leukotriene (LTC4, LTD4, LTE4), Prostaglandin D2, Platelet-activating factor (PAF).
+
+**Giai đoạn phản ứng (Response):**
+- **Sớm (Early phase):** 5–30 phút sau tiếp xúc.
+  - Histamine → giãn mạch, tăng tính thấm mạch, co thắt cơ trơn.
+  - Leukotriene → co thắt phế quản, tăng tiết dịch.
+- **Muộn (Late phase):** 4–12 giờ sau tiếp xúc.
+  - Chemokines → thu hút eosinophils, neutrophils, T-cells.
+  - Viêm mạn tính, tổn thương mô.
+
+**Các chất trung gian chính:**
+- **Histamine:** Tác dụng qua thụ thể H1, H2, H3, H4.
+  - H1: giãn mạch, tăng tính thấm, co thắt cơ trơn, ngứa.
+  - H2: tăng tiết acid dạ dày, giãn mạch.
+- **Leukotriene:** Co thắt phế quản, tăng tiết dịch, viêm.
+- **Prostaglandin:** Giãn mạch, đau, sốt.
+
+## 2. Tổng quan thuốc chống dị ứng
+
+### 2.1. Phân loại thuốc chống dị ứng
 
 **Theo cơ chế:**
 - **Antihistamine H1:** Ức chế thụ thể H1 (thế hệ 1 và 2).

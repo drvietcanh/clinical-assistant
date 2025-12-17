@@ -199,7 +199,22 @@ summary:
 - **eGFR (CKD-EPI) / CrCl (Cockcroft-Gault):** Đánh giá chức năng thận, chỉnh liều thuốc.
 - **FENa:** Phân biệt prerenal/intrinsic.
 
-## 7. Tài liệu tham khảo
+## 7. Tra cứu thuốc trong Drug Database
+
+**Lưu ý:** Bài viết này tập trung vào chỉnh liều thuốc khi suy thận. Các thuốc cần chỉnh liều có thể tra cứu trong Drug Database.
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc cần chỉnh liều
+3. Xem phần "Chỉnh liều theo thận" trong thông tin chi tiết thuốc
+4. Sử dụng CrCl/eGFR để tính liều điều chỉnh
+
+**Thuốc thường cần chỉnh liều khi AKI:**
+- Kháng sinh: Vancomycin, Aminoglycoside, β-lactam (xem Menu "💊 Kháng sinh" để tính liều)
+- Thuốc tim mạch: Digoxin, ACEi/ARB, lợi tiểu
+- Thuốc khác: Metformin, Allopurinol
+
+## 8. Tài liệu tham khảo
 
 - KDIGO Clinical Practice Guideline for Acute Kidney Injury, 2012 (updates).
 - KDIGO 2024 CKD Guideline (tham khảo).

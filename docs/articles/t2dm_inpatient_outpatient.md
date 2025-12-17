@@ -49,12 +49,34 @@ summary:
 - Nhận diện hạ đường huyết và xử trí 15-15 rule.
 - Kế hoạch khi ốm: kiểm tra glucose/ceton thường xuyên, không tự ý ngừng insulin nền.
 
-## 7. Công cụ trong app (gắn link)
-- eGFR/CrCl: quyết định metformin, SGLT2i, chỉnh insulin ở CKD.
-- BMI: đánh giá béo phì, chọn GLP-1 RA/SGLT2i.
-- (Nếu có) calculator gợi ý liều insulin khởi đầu/điều chỉnh.
+## 7. Công cụ trong app
 
-## 8. Tài liệu tham khảo
+- **eGFR (CKD-EPI), CrCl (Cockcroft-Gault):** Quyết định metformin, SGLT2i, chỉnh insulin ở CKD.
+- **BMI:** Đánh giá béo phì, chọn GLP-1 RA/SGLT2i.
+
+## 8. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**Insulin:**
+- Insulin (các loại: basal, bolus, mixed)
+- Lưu ý: Insulin thường được quản lý tại bệnh viện, tra cứu thông tin liều dùng và chỉ định
+
+**Thuốc uống:**
+- **Metformin**
+- **SGLT2i:** Dapagliflozin, Empagliflozin, Canagliflozin
+- **GLP-1 RA:** Semaglutide, Dulaglutide, Liraglutide
+- **Sulfonylurea:** Glipizide, Glimepiride, Glyburide
+- **DPP-4 inhibitors:** Sitagliptin, Linagliptin, Saxagliptin
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc (tiếng Anh hoặc tiếng Việt)
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác, chỉnh liều theo thận/gan
+4. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc"
+5. Đặc biệt quan trọng: chỉnh liều theo eGFR/CrCl cho metformin, SGLT2i
+
+## 9. Tài liệu tham khảo
 - ADA Standards of Care 2025.
 - AACE/ACE Diabetes guidance (cập nhật gần nhất).
 

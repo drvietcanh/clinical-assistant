@@ -56,12 +56,38 @@ summary:
 - Đánh giá PRECISE-DAPT, HAS-BLED; cân bằng nguy cơ chảy máu vs thiếu máu cục bộ.
 - PPI khi dùng DAPT, nhất là nguy cơ chảy máu cao; ưu tiên pantoprazole nếu dùng clopidogrel.
 
-## 7. Công cụ trong app (gắn link)
-- GRACE, TIMI, HEART (scores đã có trong `scores/cardiology`).
-- CrCl/eGFR để chỉnh enoxaparin/fondaparinux.
-- BMI để cân chỉnh liều theo cân nặng/thể tích phân bố.
+## 7. Công cụ trong app
 
-## 8. Tài liệu tham khảo
+- **GRACE, TIMI, HEART:** Đánh giá nguy cơ, tiên lượng.
+- **CrCl (Cockcroft-Gault) / eGFR (CKD-EPI):** Chỉnh liều enoxaparin, fondaparinux.
+- **BMI:** Cân chỉnh liều theo cân nặng/thể tích phân bố.
+
+## 8. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**Kháng kết tập tiểu cầu:**
+- Aspirin, Clopidogrel, Ticagrelor, Prasugrel
+
+**Chống đông:**
+- Enoxaparin, Fondaparinux, Heparin, Bivalirudin
+- Warfarin, DOAC (nếu dùng sau ACS)
+
+**Thuốc tim mạch:**
+- β-blocker: Metoprolol, Bisoprolol
+- ACEi/ARB: Lisinopril, Enalapril, Valsartan
+- Statin: Atorvastatin, Rosuvastatin
+
+**PPI:**
+- Pantoprazole, Omeprazole (xem bài viết "Thuốc giảm tiết acid")
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc (tiếng Anh hoặc tiếng Việt)
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác, chỉnh liều theo thận/gan
+4. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc" (đặc biệt quan trọng với DAPT + PPI)
+
+## 9. Tài liệu tham khảo
 - ESC Guidelines for ACS (NSTEMI) 2023; ESC STEMI 2023.
 - ACC/AHA ACS/PCI guidance 2024–2025 (draft/updates).
 - Consensus on radial access and bleeding mitigation.

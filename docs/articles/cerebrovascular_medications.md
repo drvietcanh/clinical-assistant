@@ -21,9 +21,125 @@ summary:
 
 # Thuốc tuần hoàn não: Giãn mạch, Cải thiện chuyển hóa, Chống oxy hóa, Bảo vệ thần kinh
 
-## 1. Tổng quan
+## 1. Giới thiệu về các bệnh tuần hoàn não
 
-### 1.1. Phân loại thuốc tuần hoàn não
+### 1.1. Định nghĩa và dịch tễ
+
+**Bệnh tuần hoàn não (Cerebrovascular Diseases):**
+- Các bệnh ảnh hưởng đến mạch máu não và lưu thông máu não.
+- Nguyên nhân chính của đột quỵ, sa sút trí tuệ mạch máu, và các rối loạn nhận thức.
+
+**Đột quỵ (Stroke):**
+- Tỷ lệ mắc: 200–300/100,000 dân/năm.
+- Nguyên nhân tử vong: Đứng thứ 2–3 toàn cầu.
+- **Đột quỵ thiếu máu (Ischemic):** 80–85% (tắc mạch máu não).
+- **Đột quỵ xuất huyết (Hemorrhagic):** 15–20% (vỡ mạch máu não).
+
+**Xuất huyết dưới nhện (Subarachnoid Hemorrhage - SAH):**
+- Tỷ lệ mắc: 6–10/100,000 dân/năm.
+- Nguyên nhân: Vỡ phình mạch (80%), chấn thương, bất thường mạch máu.
+
+**Sa sút trí tuệ mạch máu (Vascular Dementia):**
+- Tỷ lệ mắc: 1–4% người >65 tuổi.
+- Nguyên nhân: Đột quỵ tái phát, bệnh mạch máu nhỏ.
+
+**Thiếu máu não mạn (Chronic Cerebral Ischemia):**
+- Giảm tưới máu não mạn tính → rối loạn nhận thức, chóng mặt.
+
+### 1.2. Phân loại
+
+**Đột quỵ thiếu máu:**
+- **Theo cơ chế:**
+  - Huyết khối tại chỗ (thrombotic).
+  - Tắc mạch (embolic): từ tim, mạch lớn.
+  - Hạ huyết áp toàn thân (hypoperfusion).
+- **Theo vị trí:**
+  - Đột quỵ vùng động mạch cảnh.
+  - Đột quỵ vùng động mạch sống-nền.
+  - Đột quỵ vùng động mạch nhỏ (lacunar).
+
+**Đột quỵ xuất huyết:**
+- **Xuất huyết trong nhu mô (Intracerebral Hemorrhage - ICH):** Vỡ mạch máu trong não.
+- **Xuất huyết dưới nhện (SAH):** Vỡ mạch máu trong khoang dưới nhện.
+
+**Sa sút trí tuệ mạch máu:**
+- **Đột quỵ đa ổ (Multi-infarct dementia).**
+- **Bệnh mạch máu nhỏ (Small vessel disease).**
+- **Bệnh Binswanger (Subcortical vascular dementia).**
+
+**Rối loạn tuần hoàn não khác:**
+- **Thiếu máu não thoáng qua (TIA - Transient Ischemic Attack).**
+- **Chóng mặt do thiếu máu não.**
+- **Đau đầu do co thắt mạch.**
+
+### 1.3. Cơ chế bệnh sinh
+
+**Đột quỵ thiếu máu:**
+
+**1. Tắc mạch:**
+- Huyết khối tại chỗ hoặc tắc mạch → giảm tưới máu → thiếu oxy/glucose → tổn thương tế bào thần kinh.
+
+**2. Cascade thiếu máu:**
+- **Giai đoạn sớm (vài phút):** Giảm ATP → rối loạn bơm Na⁺/K⁺ → phù tế bào.
+- **Giai đoạn muộn (vài giờ):** Tăng Ca²⁺ nội bào → kích hoạt enzyme → chết tế bào.
+- **Giai đoạn viêm (vài ngày):** Viêm, phù não → tổn thương thêm.
+
+**3. Vùng thiếu máu:**
+- **Vùng lõi (core):** Tổn thương không hồi phục (vài phút).
+- **Vùng bán ảnh (penumbra):** Tổn thương có thể hồi phục (vài giờ) → mục tiêu điều trị.
+
+**4. Yếu tố nguy cơ:**
+- Tăng huyết áp, đái tháo đường, rung nhĩ, xơ vữa mạch, hút thuốc.
+
+**Xuất huyết dưới nhện (SAH):**
+
+**1. Vỡ phình mạch:**
+- Phình mạch vỡ → máu vào khoang dưới nhện → tăng áp lực nội sọ.
+
+**2. Co thắt mạch (Vasospasm):**
+- Xảy ra 3–14 ngày sau SAH.
+- Cơ chế: Hemoglobin từ máu → giải phóng oxyhemoglobin → co thắt mạch.
+- Hậu quả: Thiếu máu não thứ phát → đột quỵ thiếu máu.
+
+**3. Tăng áp lực nội sọ:**
+- Máu trong khoang dưới nhện → tăng áp lực → giảm tưới máu não.
+
+**Sa sút trí tuệ mạch máu:**
+
+**1. Tổn thương mạch máu:**
+- Xơ vữa, hẹp mạch → giảm tưới máu mạn tính → thiếu oxy/glucose.
+
+**2. Tổn thương chất trắng:**
+- Bệnh mạch máu nhỏ → tổn thương chất trắng → rối loạn kết nối thần kinh.
+
+**3. Đột quỵ tái phát:**
+- Nhiều đột quỵ nhỏ → tích lũy tổn thương → sa sút trí tuệ.
+
+**Thiếu máu não mạn:**
+
+**1. Giảm tưới máu:**
+- Hẹp mạch máu, xơ vữa → giảm lưu lượng máu → thiếu oxy/glucose mạn tính.
+
+**2. Rối loạn chuyển hóa:**
+- Thiếu glucose → giảm ATP → rối loạn chức năng tế bào thần kinh.
+
+**3. Stress oxy hóa:**
+- Thiếu oxy → tăng gốc tự do → tổn thương tế bào.
+
+### 1.4. Biến chứng
+
+**Đột quỵ:**
+- Tử vong, tàn tật, sa sút trí tuệ, trầm cảm, động kinh, khó nuốt, nhiễm trùng.
+
+**SAH:**
+- Co thắt mạch, đột quỵ thiếu máu thứ phát, não úng thủy, tái xuất huyết, tử vong.
+
+**Sa sút trí tuệ mạch máu:**
+- Tiến triển, mất chức năng, phụ thuộc, tử vong.
+
+## 2. Tổng quan thuốc tuần hoàn não
+
+### 2.1. Phân loại thuốc tuần hoàn não
 
 **Theo cơ chế:**
 - **Giãn mạch não:** Nimodipine, cinnarizine, flunarizine.

@@ -21,9 +21,111 @@ summary:
 
 # Thuốc giãn phế quản điều trị COPD và Hen: SABA, LABA, SAMA, LAMA, ICS, Kết hợp
 
-## 1. Tổng quan
+## 1. Giới thiệu về COPD và Hen
 
-### 1.1. Phân loại thuốc giãn phế quản
+### 1.1. Định nghĩa và dịch tễ
+
+**COPD (Chronic Obstructive Pulmonary Disease - Bệnh phổi tắc nghẽn mạn tính):**
+- Bệnh đặc trưng bởi tắc nghẽn luồng khí thở ra không hồi phục hoàn toàn, tiến triển, liên quan phản ứng viêm bất thường của phổi với các hạt và khí độc hại (GOLD 2024).
+- Tỷ lệ mắc: 5–10% dân số trưởng thành, tăng theo tuổi.
+- Nguyên nhân chính: Hút thuốc lá (80–90%), ô nhiễm môi trường, phơi nhiễm nghề nghiệp.
+
+**Hen (Asthma - Bệnh hen phế quản):**
+- Bệnh mạn tính đặc trưng bởi viêm đường thở, co thắt phế quản có thể hồi phục, tăng phản ứng phế quản (GINA 2024).
+- Tỷ lệ mắc: 5–10% dân số, phổ biến ở trẻ em và thanh thiếu niên.
+- Nguyên nhân: Đa yếu tố (dị ứng, nhiễm trùng, môi trường, di truyền).
+
+### 1.2. Phân loại
+
+**COPD:**
+
+**Theo GOLD 2024:**
+- **Nhóm A:** Ít triệu chứng, ít đợt cấp (mMRC 0–1, CAT <10, 0–1 đợt cấp/năm).
+- **Nhóm B:** Nhiều triệu chứng, ít đợt cấp (mMRC ≥2, CAT ≥10, 0–1 đợt cấp/năm).
+- **Nhóm E:** Ít hoặc nhiều triệu chứng, nhiều đợt cấp (≥2 đợt cấp/năm hoặc ≥1 nhập viện/năm).
+
+**Theo mức độ tắc nghẽn (FEV1/FVC <0.70):**
+- **GOLD 1 (Nhẹ):** FEV1 ≥80% dự đoán.
+- **GOLD 2 (Trung bình):** FEV1 50–79% dự đoán.
+- **GOLD 3 (Nặng):** FEV1 30–49% dự đoán.
+- **GOLD 4 (Rất nặng):** FEV1 <30% dự đoán.
+
+**Theo kiểu hình:**
+- **Emphysema-predominant:** Khí phế thũng nổi trội.
+- **Chronic bronchitis-predominant:** Viêm phế quản mạn nổi trội.
+- **Asthma-COPD overlap (ACO):** Đặc điểm của cả hai.
+
+**Hen:**
+
+**Theo mức độ kiểm soát (GINA 2024):**
+- **Kiểm soát tốt:** Triệu chứng ban ngày ≤2 lần/tuần, không thức giấc ban đêm, không cần thuốc cắt cơn, hoạt động bình thường.
+- **Kiểm soát một phần:** Triệu chứng >2 lần/tuần hoặc thức giấc ban đêm hoặc cần thuốc cắt cơn >2 lần/tuần.
+- **Không kiểm soát:** Triệu chứng hàng ngày, thức giấc ban đêm thường xuyên, hạn chế hoạt động.
+
+**Theo mức độ nặng (trước điều trị):**
+- **Nhẹ gián đoạn:** Triệu chứng <2 lần/tuần, không thức giấc ban đêm.
+- **Nhẹ dai dẳng:** Triệu chứng >2 lần/tuần nhưng <1 lần/ngày.
+- **Trung bình:** Triệu chứng hàng ngày, thức giấc ban đêm ≥1 lần/tuần.
+- **Nặng:** Triệu chứng liên tục, thức giấc ban đêm thường xuyên, hạn chế hoạt động.
+
+**Theo kiểu hình:**
+- **Hen dị ứng (Allergic):** Khởi phát sớm, liên quan dị ứng, IgE tăng.
+- **Hen không dị ứng (Non-allergic):** Khởi phát muộn, không liên quan dị ứng.
+- **Hen do aspirin:** Nhạy cảm với NSAID.
+- **Hen do gắng sức:** Co thắt phế quản khi gắng sức.
+
+### 1.3. Cơ chế bệnh sinh
+
+**COPD:**
+
+**1. Viêm mạn tính:**
+- Hút thuốc, ô nhiễm → kích hoạt đại thực bào, tế bào T, neutrophils.
+- Cytokine gây viêm (TNF-α, IL-8, IL-1β) → viêm mạn tính.
+- Protease (elastase, MMP) → phá hủy mô phổi.
+
+**2. Mất cân bằng protease/antiprotease:**
+- Tăng protease (do neutrophils, macrophages) → phá hủy elastin → khí phế thũng.
+- Giảm antiprotease (α1-antitrypsin) → dễ tổn thương.
+
+**3. Stress oxy hóa:**
+- Gốc tự do từ khói thuốc → tổn thương tế bào, DNA.
+
+**4. Tái cấu trúc đường thở:**
+- Tăng tế bào cơ trơn, tăng collagen → dày thành phế quản → tắc nghẽn.
+
+**5. Mất đàn hồi phổi:**
+- Phá hủy phế nang → giảm lực đàn hồi → tăng thể tích khí cặn → khó thở.
+
+**Hen:**
+
+**1. Viêm đường thở:**
+- Dị nguyên, nhiễm trùng → kích hoạt Th2 → IL-4, IL-5, IL-13.
+- Eosinophils, mast cells → phóng thích chất trung gian (histamine, leukotriene, prostaglandin).
+
+**2. Co thắt phế quản:**
+- Histamine, leukotriene → co cơ trơn phế quản → tắc nghẽn.
+- Tăng phản ứng phế quản (bronchial hyperresponsiveness).
+
+**3. Tăng tiết dịch:**
+- Tăng sản xuất mucus → tắc nghẽn thêm.
+
+**4. Tái cấu trúc đường thở:**
+- Viêm mạn tính → dày thành phế quản → tắc nghẽn cố định (một phần).
+
+**5. Yếu tố kích phát:**
+- Dị nguyên, nhiễm trùng, gắng sức, lạnh, cảm xúc, thuốc (aspirin, beta-blocker).
+
+### 1.4. Biến chứng
+
+**COPD:**
+- Đợt cấp (exacerbation), suy hô hấp, tâm phế mạn, tràn khí màng phổi, nhiễm trùng phổi.
+
+**Hen:**
+- Đợt cấp nặng (status asthmaticus), suy hô hấp, tâm phế mạn (hiếm), tử vong (nếu không điều trị kịp thời).
+
+## 2. Tổng quan thuốc giãn phế quản
+
+### 2.1. Phân loại thuốc giãn phế quản
 
 **Theo cơ chế:**
 - **Beta-2 agonist:** Kích thích beta-2 receptor → giãn cơ trơn phế quản.

@@ -48,11 +48,38 @@ summary:
 - Dùng MELD/MELD-Na để xác định thời điểm chuyển tuyến ghép.
 - Đánh giá chống chỉ định và chuẩn bị tiêm ngừa/điều trị nhiễm trùng.
 
-## 7. Công cụ trong app (gắn link)
-- Child-Pugh, MELD/MELD-Na calculators.
-- eGFR để chỉnh liều thuốc; BMI cho dinh dưỡng.
+## 7. Công cụ trong app
 
-## 8. Tài liệu tham khảo
+- **Child-Pugh, MELD/MELD-Na calculators:** Đánh giá mức độ nặng, tiên lượng.
+- **eGFR (CKD-EPI):** Chỉnh liều thuốc khi suy thận kèm theo.
+- **BMI:** Dinh dưỡng, đánh giá bệnh gan.
+
+## 8. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**Điều trị XHTH:**
+- Octreotide, Terlipressin
+- PPI: Omeprazole, Pantoprazole (xem bài viết "Thuốc giảm tiết acid")
+
+**Điều trị báng:**
+- Lợi tiểu: Spironolactone, Furosemide
+
+**Điều trị HE:**
+- Lactulose (thuốc nhuận tràng, ít khi có trong database)
+- Rifaximin (kháng sinh, có thể tra cứu trong Menu "💊 Kháng sinh")
+
+**Dự phòng:**
+- NSBB: Propranolol, Nadolol (có thể tra cứu trong Drug Database)
+- Kháng sinh dự phòng: Ciprofloxacin, Norfloxacin (xem Menu "💊 Kháng sinh")
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác
+4. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc"
+
+## 9. Tài liệu tham khảo
 - EASL Clinical Practice Guidelines on Decompensated Cirrhosis and Portal Hypertension (bản mới nhất).
 - ACG Guidelines on Variceal Bleeding and Cirrhosis Care.
 

@@ -240,7 +240,32 @@ summary:
 - **GCS:** Đánh giá ý thức.
 - **CHADS₂-VASc:** Đánh giá nguy cơ đột quỵ do rung nhĩ.
 
-## 7. Tài liệu tham khảo
+## 7. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**Kiểm soát huyết áp:**
+- Labetalol, Nicardipine, Hydralazine
+
+**Kháng đông:**
+- **DOAC:** Apixaban, Rivaroxaban, Dabigatran, Edoxaban
+- **Warfarin**
+- **Aspirin, Clopidogrel** (kháng tiểu cầu)
+
+**Hạ đường huyết:**
+- Insulin, Acetaminophen (paracetamol) - hạ sốt
+
+**Statin:**
+- Atorvastatin, Rosuvastatin
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc (tiếng Anh hoặc tiếng Việt)
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác, chỉnh liều theo thận/gan
+4. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc" (đặc biệt quan trọng với kháng đông + thuốc khác)
+5. **Xem thêm:** Bài viết "Rung nhĩ" để tra cứu kháng đông chi tiết
+
+## 8. Tài liệu tham khảo
 
 - AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke, 2019 (updates 2021).
 - AHA/ASA Guidelines for Management of Spontaneous Intracerebral Hemorrhage, 2022.

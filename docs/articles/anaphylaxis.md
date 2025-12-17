@@ -200,9 +200,32 @@ summary:
 ## 6. Công cụ trong app
 
 - **BMI:** Tính liều adrenaline theo cân nặng (trẻ em).
-- **CrCl:** Chỉnh liều thuốc (nếu cần).
+- **CrCl (Cockcroft-Gault):** Chỉnh liều thuốc (nếu cần).
 
-## 7. Tài liệu tham khảo
+## 7. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**Adrenaline/Epinephrine:**
+- Epinephrine (dạng tiêm)
+
+**Antihistamine:**
+- Diphenhydramine
+- Cetirizine (xem bài viết "Thuốc chống dị ứng" để tra cứu các antihistamine khác)
+
+**Corticosteroid:**
+- Methylprednisolone, Hydrocortisone
+
+**H2 Antagonist:**
+- Ranitidine, Famotidine
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác
+4. **Xem thêm:** Bài viết "Thuốc chống dị ứng" để tra cứu các antihistamine chi tiết
+
+## 8. Tài liệu tham khảo
 
 - WAO (World Allergy Organization) Anaphylaxis Guidelines, 2020.
 - AAAAI (American Academy of Allergy, Asthma & Immunology) Anaphylaxis Practice Parameter, 2020.

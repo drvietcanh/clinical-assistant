@@ -49,12 +49,31 @@ summary:
 - Huyết động: tránh PEEP quá cao gây giảm cung lượng tim; phối hợp hồi sức dịch/thuốc vận mạch theo nhu cầu.
 - Biến chứng: barotrauma (tràn khí màng phổi), loét tỳ đè, tổn thương dây thần kinh khi prone.
 
-## 7. Công cụ trong app (gắn link)
-- ARDSNet tidal volume calculator (tính theo PBW/BMI).
-- PEEP/FiO₂ table (ARDSNet).
-- ABG interpreter để theo dõi toan kiềm và oxy hóa.
+## 7. Công cụ trong app
 
-## 8. Tài liệu tham khảo
+- **ARDSNet tidal volume calculator:** Tính theo PBW/BMI.
+- **PEEP/FiO₂ table (ARDSNet):** Hướng dẫn điều chỉnh thông khí.
+- **ABG interpreter:** Theo dõi toan kiềm và oxy hóa.
+
+## 8. Tra cứu thuốc trong Drug Database
+
+**Lưu ý:** Bài viết này tập trung vào thông khí cơ học, ít đề cập đến thuốc. Các thuốc có thể dùng bao gồm:
+
+**Giãn cơ:**
+- Rocuronium, Vecuronium, Cisatracurium (thuốc giãn cơ thần kinh, thường quản lý tại ICU)
+
+**Sedation:**
+- Propofol, Midazolam, Dexmedetomidine (thuốc an thần, thường quản lý tại ICU)
+
+**Vận mạch (nếu cần):**
+- Norepinephrine, Vasopressin (có thể tra cứu trong Drug Database)
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ
+
+## 9. Tài liệu tham khảo
 - ATS/ESICM/SCCM mechanical ventilation recommendations in ARDS.
 - Surviving Sepsis Campaign 2021/2024 updates (mục ARDS/thở máy).
 - ELSO guidelines for ECMO (tham khảo khi cứu vãn).

@@ -1285,6 +1285,153 @@ DIHYDROPYRIDINE_CCB = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
+    },
+
+    "Lacidipine": {
+        "group": "Cardiovascular - Calcium Channel Blocker (Dihydropyridine)",
+        "vietnamese_name": "Lacidipine, Motens",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Sốc tim",
+            "Suy tim nặng"
+        ],
+        "dosage": {
+            "adult_initial": "2-4mg x 1 lần/ngày",
+            "adult_maintenance": "4-6mg x 1 lần/ngày",
+            "adult_max": "6mg/ngày",
+            "notes": "Dihydropyridine CCB, tác dụng dài, dùng 1 lần/ngày. Ít dùng hơn amlodipine, nifedipine."
+        },
+        "side_effects": [
+            "Phù chân",
+            "Đỏ mặt",
+            "Nhức đầu",
+            "Chóng mặt",
+            "Tim đập nhanh (phản ứng)",
+            "Ít tác dụng phụ hơn một số CCB khác"
+        ],
+        "interactions": [
+            "Grapefruit juice: tăng nồng độ lacidipine",
+            "CYP3A4 inhibitors: tăng nồng độ"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Ức chế dòng calci vào tế bào cơ trơn mạch máu, gây giãn mạch, giảm kháng lực mạch máu ngoại biên. Dihydropyridine CCB, tác dụng chủ yếu trên mạch máu ngoại biên, ít tác dụng trên tim. Tác dụng dài, dùng 1 lần/ngày. Ít dùng hơn amlodipine, nifedipine nhưng có hiệu quả tương tự.",
+        "monitoring": [
+            "Huyết áp mỗi lần khám",
+            "Nhịp tim (có thể tăng nhẹ phản ứng)",
+            "Phù chân (dấu hiệu tác dụng phụ)",
+            "Chức năng gan định kỳ"
+        ],
+        "precautions": [
+            "Phù chân thường gặp, thường không nghiêm trọng nhưng có thể khó chịu",
+            "Tránh grapefruit juice (tăng nồng độ)",
+            "Có thể dùng với thức ăn hoặc không",
+            "Tác dụng chậm, đạt đỉnh sau 1-2 giờ",
+            "Ít dùng hơn amlodipine, nifedipine nhưng có hiệu quả tương tự"
+        ],
+        "pharmacokinetics": {
+            "half_life": "13-19 giờ (dài)",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ (dài, dùng 1 lần/ngày)",
+            "protein_binding": ">95%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Grapefruit juice",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ lacidipine",
+                    "effect": "Tăng tác dụng phụ",
+                    "management": "Tránh grapefruit juice."
+                },
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, clarithromycin)",
+                    "mechanism": "Ức chế chuyển hóa lacidipine",
+                    "effect": "Tăng nồng độ lacidipine",
+                    "management": "Thận trọng, có thể cần giảm liều."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng lacidipine",
+                "Sốc tim",
+                "Suy tim nặng"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C. Có thể dùng khi cần thiết.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng, giảm liều",
+            "notes": "Chuyển hóa qua gan (CYP3A4). Suy gan có thể ảnh hưởng chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nặng",
+                "Nhịp tim nhanh",
+                "Chóng mặt, ngất"
+            ],
+            "antidote": "Calcium gluconate hoặc calcium chloride (đối kháng tác dụng chẹn kênh calci)",
+            "treatment": [
+                "Hỗ trợ huyết áp: truyền dịch, nâng chân",
+                "Calcium gluconate hoặc calcium chloride IV nếu hạ huyết áp nặng",
+                "Theo dõi huyết áp, nhịp tim liên tục"
+            ],
+            "monitoring": "Theo dõi liên tục huyết áp, nhịp tim trong ít nhất 6-12 giờ"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Calcium gluconate hoặc calcium chloride",
+                    "mechanism": "Đối kháng tác dụng chẹn kênh calci",
+                    "indication": "Quá liều gây hạ huyết áp nặng",
+                    "dose": "Calcium gluconate: 1-3g IV. Calcium chloride: 1g IV.",
+                    "caution": "Truyền chậm, theo dõi ECG."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không.",
+                "timing": "Dùng 1 lần/ngày (tiện lợi). Uống cùng thời điểm mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Motens (Lacidipine)",
+                "UpToDate - Lacidipine: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved"
+        }
     }
 }
 

@@ -1186,6 +1186,307 @@ ANTIPSYCHOTICS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
+    },
+
+    "Fluphenazine": {
+        "group": "Psychiatry - Antipsychotic (Typical)",
+        "vietnamese_name": "Fluphenazine, Prolixin",
+        "administration": ["PO", "IM", "SC"],
+        "indications": [
+            "Tâm thần phân liệt",
+            "Rối loạn tâm thần khác"
+        ],
+        "contraindications": [
+            "Dị ứng phenothiazine",
+            "Coma do CNS depressants",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_po": "2.5-10mg x 2-4 lần/ngày, tăng đến 20mg/ngày",
+            "adult_im": "2.5-10mg mỗi 6-8 giờ",
+            "adult_depot": "12.5-25mg IM mỗi 2-4 tuần",
+            "adult_max": "40mg/ngày (PO)",
+            "notes": "Typical antipsychotic, nguy cơ EPS cao. Có dạng depot (long-acting)."
+        },
+        "side_effects": [
+            "Rối loạn vận động ngoại tháp (EPS) - phổ biến",
+            "Dystonia",
+            "Parkinsonism",
+            "Akathisia",
+            "Tardive dyskinesia",
+            "Hạ huyết áp",
+            "Sedation",
+            "Tăng prolactin"
+        ],
+        "interactions": [
+            "CNS depressants: tăng tác dụng an thần",
+            "Anticholinergics: giảm EPS nhưng tăng tác dụng phụ anticholinergic",
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Fluphenazine là typical antipsychotic (phenothiazine), đối kháng mạnh thụ thể dopamine D2 ở não. Ức chế dopaminergic pathway dẫn đến giảm triệu chứng tâm thần nhưng tăng nguy cơ rối loạn vận động ngoại tháp (EPS). Có dạng depot (long-acting) cho phép tiêm mỗi 2-4 tuần, cải thiện compliance. Nguy cơ EPS cao hơn atypical antipsychotics.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm triệu chứng tâm thần",
+            "EPS: dystonia, parkinsonism, akathisia, tardive dyskinesia",
+            "Huyết áp - hạ huyết áp có thể xảy ra",
+            "ECG - QT prolongation",
+            "Prolactin - tăng prolactin có thể gây vô kinh, galactorrhea"
+        ],
+        "precautions": [
+            "Nguy cơ EPS cao - cần theo dõi chặt chẽ",
+            "Tardive dyskinesia - có thể không hồi phục, cần đánh giá định kỳ",
+            "Hạ huyết áp - đặc biệt khi bắt đầu điều trị",
+            "Dạng depot - tiêm sâu vào cơ, không tiêm vào mạch máu",
+            "Không ngừng đột ngột - giảm liều dần dần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "15-30 giờ (PO), 6.8-9.6 ngày (depot)",
+            "onset": "1-2 giờ (PO), 24-72 giờ (depot)",
+            "duration": "6-8 giờ (PO), 2-4 tuần (depot)",
+            "protein_binding": ">90%",
+            "clearance": "Gan: chuyển hóa qua CYP2D6. Thận: bài tiết một phần."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dạng depot: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng.",
+        "black_box_warnings": "Tardive dyskinesia có thể không hồi phục. Nguy cơ tăng ở người cao tuổi, phụ nữ, dùng lâu dài.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "QT prolonging drugs",
+                    "mechanism": "Cả hai đều kéo dài QT",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim",
+                    "management": "Tránh dùng chung nếu có thể. Theo dõi ECG."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CNS depressants",
+                    "mechanism": "Tác dụng hiệp đồng ức chế CNS",
+                    "effect": "Tăng tác dụng an thần",
+                    "management": "Thận trọng, giảm liều nếu cần."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng fluphenazine hoặc phenothiazine",
+                "Coma do CNS depressants",
+                "Suy gan nặng"
+            ],
+            "tương_đối": [
+                "Bệnh tim - tăng nguy cơ QT prolongation",
+                "Động kinh - có thể làm tăng nguy cơ co giật",
+                "Mang thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng khi cần thiết. Thận trọng.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Bài tiết vào sữa mẹ. Có thể gây tác dụng phụ ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, giảm liều",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan (CYP2D6). Suy gan nặng là chống chỉ định."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ sâu, hôn mê",
+                "Hạ huyết áp nặng",
+                "QT prolongation, rối loạn nhịp tim",
+                "EPS nặng",
+                "Suy hô hấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ hô hấp ngay lập tức",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ",
+                "Theo dõi ECG liên tục",
+                "Điều trị hạ huyết áp",
+                "Điều trị EPS nếu có"
+            ],
+            "monitoring": "Theo dõi liên tục ECG, huyết áp, ý thức, hô hấp"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để giảm kích ứng dạ dày.",
+                "timing": "Chia 2-4 lần/ngày. Không ngừng đột ngột."
+            },
+            "im": {
+                "reconstitution": "Dùng trực tiếp từ lọ.",
+                "injection_site": "Tiêm sâu vào cơ (gluteus maximus).",
+                "notes": "Tiêm sâu vào cơ. Dạng depot: tiêm mỗi 2-4 tuần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Prolixin (Fluphenazine)",
+                "UpToDate - Fluphenazine: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved"
+        }
+    },
+
+    "Lurasidone": {
+        "group": "Psychiatry - Antipsychotic (Atypical)",
+        "vietnamese_name": "Lurasidone, Latuda",
+        "administration": ["PO"],
+        "indications": [
+            "Tâm thần phân liệt",
+            "Rối loạn lưỡng cực (depression)",
+            "Trầm cảm kháng trị (adjunct)"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "QT prolongation nặng"
+        ],
+        "dosage": {
+            "adult_schizophrenia": "40-80mg x 1 lần/ngày (tối đa 160mg/ngày)",
+            "adult_bipolar_depression": "20-60mg x 1 lần/ngày",
+            "adult_max": "160mg/ngày",
+            "notes": "Uống với thức ăn (≥350 calo) để tăng hấp thu. Atypical antipsychotic, ít tăng cân hơn các atypical khác."
+        },
+        "side_effects": [
+            "Buồn ngủ",
+            "Buồn nôn",
+            "Chóng mặt",
+            "Akathisia",
+            "QT prolongation (hiếm)",
+            "Tăng prolactin (nhẹ)",
+            "Ít tăng cân hơn các atypical khác"
+        ],
+        "interactions": [
+            "CYP3A4 inhibitors: tăng nồng độ lurasidone",
+            "CYP3A4 inducers: giảm nồng độ lurasidone",
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Lurasidone là atypical antipsychotic, đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Khác với các atypical khác, lurasidone ít gây tăng cân và tăng lipid máu. Có tác dụng chống trầm cảm, được dùng cho rối loạn lưỡng cực depression. Ưu điểm: ít tăng cân, ít tác dụng phụ chuyển hóa. Phải uống với thức ăn để tăng hấp thu.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm triệu chứng tâm thần, cải thiện trầm cảm",
+            "ECG - QT prolongation (hiếm)",
+            "Cân nặng - ít tăng cân hơn các atypical khác",
+            "Prolactin - tăng nhẹ",
+            "Akathisia - tác dụng phụ phổ biến"
+        ],
+        "precautions": [
+            "PHẢI uống với thức ăn (≥350 calo) để tăng hấp thu - nếu không hấp thu giảm 50%",
+            "Akathisia - tác dụng phụ phổ biến, có thể điều trị bằng propranolol",
+            "QT prolongation - hiếm nhưng cần theo dõi ECG",
+            "Ít tăng cân hơn các atypical khác - ưu điểm",
+            "Thận trọng với CYP3A4 inhibitors/inducers"
+        ],
+        "pharmacokinetics": {
+            "half_life": "18 giờ",
+            "onset": "1-2 tuần",
+            "duration": "24 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Nguy cơ tự sát ở trẻ em, thanh thiếu niên, và người trẻ tuổi (<25 tuổi).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, clarithromycin)",
+                    "mechanism": "Ức chế chuyển hóa lurasidone",
+                    "effect": "Tăng nồng độ lurasidone, tăng tác dụng phụ",
+                    "management": "Giảm liều lurasidone 50%. Tránh dùng với ketoconazole liều cao."
+                },
+                {
+                    "drug": "CYP3A4 inducers (carbamazepine, rifampin)",
+                    "mechanism": "Tăng chuyển hóa lurasidone",
+                    "effect": "Giảm nồng độ lurasidone, giảm hiệu quả",
+                    "management": "Tăng liều lurasidone. Hoặc tránh dùng chung."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "QT prolonging drugs",
+                    "mechanism": "Cả hai đều kéo dài QT",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim",
+                    "management": "Thận trọng, theo dõi ECG."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng lurasidone",
+                "QT prolongation nặng"
+            ],
+            "tương_đối": [
+                "Bệnh tim - tăng nguy cơ QT prolongation",
+                "Dùng với CYP3A4 inhibitors mạnh - giảm liều",
+                "Dùng với CYP3A4 inducers mạnh - tăng liều"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B - an toàn hơn category C. Có thể dùng khi cần thiết.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Giảm liều 50%",
+            "severe": "Giảm liều 50%",
+            "notes": "Chuyển hóa qua gan (CYP3A4). Suy gan làm giảm chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ sâu",
+                "QT prolongation",
+                "Hạ huyết áp",
+                "Akathisia nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi ECG liên tục",
+                "Điều trị hạ huyết áp",
+                "Điều trị akathisia nếu có"
+            ],
+            "monitoring": "Theo dõi liên tục ECG, huyết áp, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "PHẢI uống với thức ăn (≥350 calo) để tăng hấp thu - nếu không hấp thu giảm 50%",
+                "timing": "Dùng 1 lần/ngày với bữa ăn. Không ngừng đột ngột."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Latuda (Lurasidone)",
+                "UpToDate - Lurasidone: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved"
+        }
     }
 }
 

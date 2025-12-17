@@ -236,10 +236,34 @@ summary:
 
 - **SOFA / qSOFA:** Đánh giá mức độ nặng.
 - **APACHE II / SAPS II:** Tiên lượng.
-- **CrCl / eGFR:** Chỉnh liều kháng sinh.
+- **CrCl (Cockcroft-Gault), eGFR (CKD-EPI):** Chỉnh liều kháng sinh.
 - **Sepsis 1-Hour Bundle:** Checklist trong Protocols.
 
-## 9. Tài liệu tham khảo
+## 9. Tra cứu thuốc trong Drug Database và Menu Kháng sinh
+
+**Kháng sinh được đề cập trong bài viết có thể tra cứu trong Menu Kháng sinh:**
+
+**Hướng dẫn tra cứu kháng sinh:**
+1. **Tra cứu & dữ liệu kháng sinh:** Menu "💊 Kháng sinh" → "🔍 Tra cứu & dữ liệu kháng sinh"
+2. **Tính liều theo eGFR/CrCl:** Menu "💊 Kháng sinh" → "🧮 Tính liều theo eGFR/CrCl"
+3. **Phác đồ điều trị:** Menu "💊 Kháng sinh" → "🔄 Phác đồ điều trị" → "Sepsis"
+
+**Các kháng sinh chính trong bài viết:**
+- **β-lactam:** Piperacillin-tazobactam, Cefepime, Ceftriaxone, Ceftazidime-avibactam, Meropenem
+- **Vancomycin, Linezolid, Daptomycin**
+- **Aminoglycoside:** Gentamicin, Tobramycin, Amikacin
+- **Quinolone:** Levofloxacin, Ciprofloxacin
+- **Metronidazole**
+
+**Vận mạch có thể tra cứu trong Drug Database:**
+- **Norepinephrine, Epinephrine, Vasopressin, Dopamine**
+
+**Hướng dẫn tra cứu vận mạch:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ
+
+## 10. Tài liệu tham khảo
 
 - Surviving Sepsis Campaign Guidelines 2021 (SSC 2021).
 - SSC 2024 Updates.

@@ -327,6 +327,110 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Beclomethasone'], 'last_updated': '2025-02-05',
         'evidence_level':
+        'High - FDA approved, multiple RCTs, clinical guidelines'}},
+    "Ciclesonide": {'group': 'Respiratory - Inhaled Corticosteroid (ICS)',
+        'vietnamese_name': 'Ciclesonide, Alvesco', 'administration': [
+        'Inhalation'], 'indications': [
+        'Hen phế quản (kiểm soát, phòng ngừa)',
+        'COPD (nếu có nhiều đợt cấp)'], 'contraindications': [
+        'Nhiễm trùng đường hô hấp nặng chưa điều trị', 'Dị ứng'], 'dosage': {
+        'adult_inhalation_low': '80-160mcg x 2 lần/ngày',
+        'adult_inhalation_medium': '160-320mcg x 2 lần/ngày',
+        'adult_inhalation_high': '320-640mcg x 2 lần/ngày', 'notes':
+        'Súc miệng sau khi dùng để tránh nấm miệng. Không dùng cho cắt cơn cấp'
+        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Không đổi'}, 'side_effects': ['Nấm miệng (candidiasis)',
+        'Khàn tiếng', 'Ho', 'Khô miệng', 'Tác dụng toàn thân (liều cao)'],
+        'interactions': [
+        'Ritonavir: tăng nồng độ ciclesonide (tránh dùng)',
+        'Ketoconazole/Itraconazole: tăng nồng độ'], 'pregnancy': 'C',
+        'mechanism_of_action':
+        'Ciclesonide là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Ciclesonide là prodrug, được chuyển thành des-ciclesonide (hoạt chất) bởi esterase trong phổi. Des-ciclesonide gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm, giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản. Ciclesonide có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Đặc điểm: là prodrug, được kích hoạt tại phổi, ít tác dụng toàn thân hơn các ICS khác.'
+        , 'monitoring': [
+        'Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)'
+        ,
+        'Nấm miệng (candidiasis) - kiểm tra lưỡi, miệng, đặc biệt nếu không súc miệng sau khi dùng'
+        , 'Khàn tiếng, ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến',
+        'Tác dụng toàn thân (chỉ ở liều cao): ức chế trục HPA, chậm phát triển ở trẻ em'
+        , 'Chức năng gan nếu có triệu chứng (hiếm)',
+        'Tương tác với ritonavir, ketoconazole, itraconazole (tăng nồng độ)'], 'precautions': [
+        'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG'
+        ,
+        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, ciclesonide là thuốc duy trì'
+        ,
+        'Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì'
+        , 'Không ngừng đột ngột - giảm liều dần dần',
+        'Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>640mcg/ngày)'
+        ,
+        'Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước'
+        ,
+        'Tránh dùng với ritonavir (tăng đáng kể nồng độ ciclesonide, tăng nguy cơ ức chế HPA)'
+        , 'Thận trọng với ketoconazole, itraconazole (tăng nồng độ ciclesonide)',
+        'Dùng đều đặn hàng ngày, không phải khi cần'], 'pharmacokinetics': {
+        'half_life': '5-7 giờ (des-ciclesonide)', 'onset':
+        'Vài giờ đến vài ngày (tác dụng kháng viêm)', 'duration':
+        '12-24 giờ (dùng 2 lần/ngày)', 'protein_binding': '99%', 'clearance':
+        'Gan: chuyển hóa qua CYP3A4 (first-pass metabolism cao). Thận: bài tiết một phần metabolites. Ciclesonide là prodrug, được kích hoạt tại phổi thành des-ciclesonide. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản).'
+        }, 'storage':
+        'Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Kiểm tra hạn sử dụng định kỳ.'
+        , 'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
+        'Ritonavir', 'mechanism':
+        'Ức chế CYP3A4, tăng đáng kể nồng độ ciclesonide', 'effect':
+        'Tăng nguy cơ ức chế trục HPA, hội chứng Cushing, suy thượng thận',
+        'management':
+        'TRÁNH DÙNG với ritonavir. Nếu cần dùng, giảm liều ciclesonide đáng kể và theo dõi chặt chẽ.'
+        }], 'moderate': [{'drug': 'Ketoconazole, Itraconazole', 'mechanism':
+        'Ức chế CYP3A4, tăng nồng độ ciclesonide', 'effect':
+        'Tăng nguy cơ tác dụng toàn thân, ức chế HPA', 'management':
+        'Thận trọng, theo dõi tác dụng toàn thân. Có thể cần giảm liều ciclesonide.'
+        }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'Dị ứng với ciclesonide hoặc các thành phần khác',
+        'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'], 'tương_đối': [
+        'Lao phổi - cần điều trị lao trước, thận trọng',
+        'Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
+        'Dùng với ritonavir - tránh dùng',
+        'Dùng với ketoconazole, itraconazole - thận trọng']},
+        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        'Ciclesonide là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Ciclesonide được sử dụng trong thai kỳ để điều trị hen và có vẻ an toàn. Hấp thu toàn thân ít từ dạng hít (do chuyển hóa nhanh ở gan), nên tác dụng toàn thân tối thiểu. Có thể được dùng khi lợi ích vượt quá nguy cơ.'
+        , 'lactation': {'safety': 'Compatible', 'details':
+        'Ciclesonide bài tiết ít vào sữa mẹ do hấp thu toàn thân tối thiểu từ dạng hít. Nồng độ trong sữa mẹ rất thấp, không đáng kể. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.'
+        , 'recommendation':
+        'Có thể dùng an toàn khi cho con bú. Dạng hít được ưu tiên để giảm tác dụng toàn thân.'
+        }}, 'hepatic_adjustment': {'mild': 'Không đổi', 'moderate': 'Không đổi',
+        'severe':
+        'Thận trọng - ciclesonide chuyển hóa qua CYP3A4 ở gan, có thể tích lũy ở suy gan nặng'
+        , 'notes':
+        'Ciclesonide chuyển hóa nhanh qua CYP3A4 ở gan. Ở suy gan nặng, có thể tích lũy và tăng tác dụng toàn thân. Theo dõi chặt chẽ tác dụng toàn thân. Có thể cần giảm liều.'
+        }, 'overdose_management': {'symptoms': [
+        'Ức chế trục HPA (mệt mỏi, yếu, hạ huyết áp)',
+        'Hội chứng Cushing (tăng cân, mặt tròn, tăng huyết áp)',
+        'Tăng đường huyết', 'Loãng xương (liều cao kéo dài)',
+        'Chậm phát triển ở trẻ em (liều cao)', 'Nấm miệng nặng',
+        'Khàn tiếng nặng'], 'antidote': 'Không có antidote đặc hiệu', 'treatment': [
+        'Ngừng ngay ciclesonide hoặc giảm liều đáng kể',
+        'Theo dõi chức năng trục HPA (cortisol, ACTH)',
+        'Bổ sung corticosteroid nếu có suy thượng thận',
+        'Điều trị tăng đường huyết nếu cần', 'Theo dõi và điều trị triệu chứng'],
+        'monitoring':
+        'Theo dõi: chức năng trục HPA (cortisol, ACTH), đường huyết, huyết áp, cân nặng, chiều cao (ở trẻ em). Theo dõi ít nhất vài tuần do tác dụng kéo dài.'
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là ngừng thuốc, giảm liều, và hỗ trợ. Có thể cần bổ sung corticosteroid nếu có suy thượng thận.'
+        }, 'administration_instructions': {'oral': None, 'iv': None,
+        'inhalation': {'technique':
+        'Dạng hít (MDI): Lắc kỹ trước khi dùng. Hít sâu và giữ hơi thở 10 giây. Đợi 30-60 giây trước khi dùng liều thứ hai (nếu cần).'
+        , 'timing':
+        'Dùng 2 lần/ngày (sáng và tối), đều đặn hàng ngày, không phải khi cần.',
+        'after_use':
+        'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG.'
+        , 'notes':
+        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần. Ciclesonide là prodrug, được kích hoạt tại phổi.'}},
+        'references': {'primary_sources': [
+        'FDA Label: Alvesco (Ciclesonide)',
+        'UpToDate: Inhaled corticosteroids in asthma',
+        'GINA Guidelines 2024: Asthma Management',
+        "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
+        'Micromedex: Ciclesonide'], 'last_updated': '2025-02-05',
+        'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'}}}
 
 __all__ = ['INHALED_CORTICOSTEROID_ICSS_DRUGS']

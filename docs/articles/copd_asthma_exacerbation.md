@@ -51,12 +51,31 @@ summary:
 - Cai thuốc lá, vaccine cúm/pneumococcal, phục hồi chức năng phổi.
 - Kế hoạch hành động cá nhân (action plan) cho hen/COPD.
 
-## 5. Công cụ trong app (gắn link)
-- ABG interpreter; PERC/Wells khi phân biệt khó thở có nghi PE.
-- CrCl/eGFR để chỉnh liều kháng sinh.
-- BMI cho tư vấn dinh dưỡng/tuổi thọ phổi.
+## 5. Công cụ trong app
 
-## 6. Tài liệu tham khảo
+- **ABG interpreter:** Đánh giá toan kiềm, CO₂ trong đợt cấp.
+- **PERC/Wells:** Phân biệt khó thở (loại trừ PE).
+- **CrCl (Cockcroft-Gault) / eGFR (CKD-EPI):** Chỉnh liều kháng sinh.
+- **BMI:** Tư vấn dinh dưỡng/tuổi thọ phổi.
+
+## 6. Tra cứu thuốc trong Drug Database và Menu Kháng sinh
+
+**Kháng sinh được đề cập trong bài viết có thể tra cứu trong Menu Kháng sinh:**
+
+**Hướng dẫn tra cứu kháng sinh:**
+1. **Tra cứu & dữ liệu kháng sinh:** Menu "💊 Kháng sinh" → "🔍 Tra cứu & dữ liệu kháng sinh"
+2. **Tính liều theo eGFR/CrCl:** Menu "💊 Kháng sinh" → "🧮 Tính liều theo eGFR/CrCl"
+3. **Phác đồ điều trị:** Menu "💊 Kháng sinh" → "🔄 Phác đồ điều trị" → "Pneumonia"
+
+**Các kháng sinh chính trong bài viết:**
+- **CAP:** Amoxicillin-clavulanate, Ceftriaxone, Azithromycin, Levofloxacin
+- **HAP/VAP:** Piperacillin-tazobactam, Cefepime, Vancomycin, Linezolid, Meropenem
+
+**Thuốc giãn phế quản và steroid:**
+- Xem bài viết "Thuốc giãn phế quản điều trị COPD và Hen" để tra cứu chi tiết
+- Corticosteroid: Prednisone, Methylprednisolone (có thể tra cứu trong Drug Database nếu có)
+
+## 7. Tài liệu tham khảo
 - GOLD 2024 Global Strategy for COPD.
 - GINA 2024 Global Strategy for Asthma Management and Prevention.
 - ATS/ERS statements on NIV and exacerbation management.

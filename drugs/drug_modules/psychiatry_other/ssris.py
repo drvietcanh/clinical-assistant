@@ -704,6 +704,217 @@ SSRI_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "High - Multiple RCTs and systematic reviews"
         }
+    },
+    "Fluvoxamine": {
+        "group": "Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)",
+        "vietnamese_name": "Fluvoxamine, Luvox",
+        "administration": ["PO"],
+        "indications": [
+            "Rối loạn ám ảnh cưỡng chế (OCD) - chỉ định chính",
+            "Trầm cảm",
+            "Rối loạn lo âu xã hội",
+            "Rối loạn hoảng sợ"
+        ],
+        "contraindications": [
+            "Dùng MAO inhibitor",
+            "Dị ứng",
+            "Dùng với tizanidine, alosetron (chống chỉ định tuyệt đối)"
+        ],
+        "dosage": {
+            "adult_ocd": "50mg x 1 lần/ngày (buổi tối), tăng đến 100-300mg/ngày (chia 2 lần)",
+            "adult_depression": "50mg x 1 lần/ngày (buổi tối), tăng đến 100-200mg/ngày",
+            "adult_max": "300mg/ngày",
+            "notes": "Khởi đầu 50mg buổi tối, tăng dần. Liều cao chia 2 lần. Nhiều tương tác CYP450"
+        },
+        "side_effects": [
+            "Buồn nôn (thường gặp)",
+            "Buồn ngủ",
+            "Mất ngủ",
+            "Nhức đầu",
+            "Chóng mặt",
+            "Rối loạn tiêu hóa",
+            "Tăng cân",
+            "Giảm ham muốn tình dục"
+        ],
+        "interactions": [
+            "Nhiều tương tác CYP450 (CYP1A2, CYP2C9, CYP3A4) - ức chế mạnh",
+            "Tizanidine: CHỐNG CHỈ ĐỊNH - tăng nồng độ tizanidine, hạ huyết áp nặng",
+            "Alosetron: CHỐNG CHỈ ĐỊNH",
+            "Theophylline, caffeine: tăng nồng độ đáng kể",
+            "Warfarin: tăng INR",
+            "Clozapine, olanzapine: tăng nồng độ",
+            "MAO inhibitor: hội chứng serotonin"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Fluvoxamine là SSRI (Selective Serotonin Reuptake Inhibitor), ức chế tái hấp thu serotonin ở synapse, tăng nồng độ serotonin ngoại bào. Khác với các SSRI khác, fluvoxamine ức chế mạnh nhiều enzyme CYP450 (CYP1A2, CYP2C9, CYP3A4), dẫn đến nhiều tương tác thuốc. Chỉ định chính là OCD, cũng được dùng cho trầm cảm và các rối loạn lo âu. Có nhiều tương tác thuốc quan trọng cần lưu ý.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm triệu chứng OCD, trầm cảm (đánh giá sau 4-6 tuần)",
+            "Dấu hiệu tự tử: đặc biệt ở trẻ em, thanh thiếu niên, và khi bắt đầu điều trị",
+            "Tương tác thuốc: kiểm tra các thuốc đang dùng (đặc biệt tizanidine, alosetron, theophylline, warfarin)",
+            "INR nếu dùng với warfarin",
+            "Nồng độ theophylline, caffeine nếu dùng cùng",
+            "Nồng độ clozapine, olanzapine nếu dùng cùng",
+            "Dấu hiệu hội chứng serotonin: kích động, tăng thân nhiệt, co giật",
+            "Chức năng gan (chuyển hóa qua gan)"
+        ],
+        "precautions": [
+            "Nhiều tương tác CYP450 - kiểm tra tất cả thuốc đang dùng",
+            "CHỐNG CHỈ ĐỊNH với tizanidine - tăng nồng độ tizanidine, hạ huyết áp nặng, nhịp chậm, suy hô hấp",
+            "CHỐNG CHỈ ĐỊNH với alosetron",
+            "Thận trọng với theophylline, caffeine - tăng nồng độ đáng kể, có thể cần giảm liều",
+            "Thận trọng với warfarin - tăng INR, theo dõi INR thường xuyên",
+            "Thận trọng với clozapine, olanzapine - tăng nồng độ, có thể cần giảm liều 50%",
+            "Không dùng với MAO inhibitor - hội chứng serotonin",
+            "Giảm liều dần dần khi ngừng (tránh withdrawal)",
+            "Buồn nôn thường gặp - dùng với thức ăn có thể giúp",
+            "Buồn ngủ - dùng buổi tối có thể tốt hơn"
+        ],
+        "pharmacokinetics": {
+            "half_life": "15 giờ",
+            "onset": "2-4 tuần (tác dụng chống trầm cảm)",
+            "duration": "12-24 giờ (dùng 1-2 lần/ngày)",
+            "protein_binding": "80%",
+            "clearance": "Gan: chuyển hóa qua CYP2D6, CYP1A2, CYP2C9, CYP3A4. Thận: bài tiết một phần nguyên dạng. Fluvoxamine ức chế mạnh nhiều CYP450 → nhiều tương tác."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": "Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên (<24 tuổi) với các rối loạn tâm thần - theo dõi chặt chẽ khi bắt đầu điều trị. CHỐNG CHỈ ĐỊNH với tizanidine và alosetron.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Tizanidine",
+                    "mechanism": "Fluvoxamine ức chế CYP1A2 mạnh, tăng nồng độ tizanidine đáng kể",
+                    "effect": "Tăng nồng độ tizanidine, hạ huyết áp nặng, nhịp chậm, suy hô hấp, có thể tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI - không được dùng cùng"
+                },
+                {
+                    "drug": "Alosetron",
+                    "mechanism": "Fluvoxamine ức chế CYP1A2, tăng nồng độ alosetron",
+                    "effect": "Tăng nguy cơ tác dụng phụ nghiêm trọng của alosetron",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI - không được dùng cùng"
+                },
+                {
+                    "drug": "MAO inhibitors (phenelzine, tranylcypromine, selegiline, rasagiline)",
+                    "mechanism": "Cả hai đều tăng serotonin, tăng nguy cơ hội chứng serotonin",
+                    "effect": "Hội chứng serotonin (kích động, tăng thân nhiệt, co giật, có thể tử vong)",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng MAO inhibitor ít nhất 14 ngày trước khi bắt đầu fluvoxamine."
+                },
+                {
+                    "drug": "Theophylline, Caffeine",
+                    "mechanism": "Fluvoxamine ức chế CYP1A2 mạnh, tăng nồng độ theophylline và caffeine đáng kể",
+                    "effect": "Tăng nồng độ theophylline, tăng nguy cơ độc tính (co giật, loạn nhịp tim), tăng tác dụng kích thích của caffeine",
+                    "management": "Giảm liều theophylline 50-75%. Giảm lượng caffeine. Theo dõi nồng độ theophylline và dấu hiệu độc tính."
+                },
+                {
+                    "drug": "Clozapine, Olanzapine",
+                    "mechanism": "Fluvoxamine ức chế CYP1A2, tăng nồng độ clozapine và olanzapine",
+                    "effect": "Tăng nồng độ clozapine/olanzapine, tăng tác dụng phụ",
+                    "management": "Giảm liều clozapine/olanzapine 50%. Theo dõi dấu hiệu độc tính."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Fluvoxamine có thể ức chế chuyển hóa warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Benzodiazepines (alprazolam, diazepam)",
+                    "mechanism": "Fluvoxamine ức chế CYP3A4, CYP2C19, tăng nồng độ một số benzodiazepines",
+                    "effect": "Tăng tác dụng an thần, buồn ngủ",
+                    "management": "Thận trọng. Có thể cần giảm liều benzodiazepine."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Tricyclic Antidepressants (TCA)",
+                    "mechanism": "Fluvoxamine ức chế CYP2D6, CYP1A2, tăng nồng độ TCA",
+                    "effect": "Tăng nồng độ TCA, tăng tác dụng phụ",
+                    "management": "Thận trọng. Giảm liều TCA. Theo dõi dấu hiệu độc tính TCA (QT prolongation, loạn nhịp tim)."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "Dùng với tizanidine (chống chỉ định tuyệt đối)",
+                "Dùng với alosetron (chống chỉ định tuyệt đối)",
+                "Dị ứng fluvoxamine"
+            ],
+            "tương_đối": [
+                "Dùng với theophylline, caffeine - tăng nồng độ đáng kể, cần giảm liều",
+                "Dùng với warfarin - tăng INR, cần theo dõi",
+                "Dùng với clozapine, olanzapine - tăng nồng độ, cần giảm liều",
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Mang thai (phân loại C) - thận trọng, chỉ dùng nếu lợi ích > nguy cơ",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Fluvoxamine là phân loại C. Chứng cứ về an toàn trong thai kỳ còn hạn chế. Có thể có nguy cơ tăng dị tật bẩm sinh (thấp hơn paroxetine). Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Fluvoxamine bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ bú mẹ thường <5-10% nồng độ mẹ. Có thể gây buồn ngủ, bú kém ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu buồn ngủ, bú kém ở trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi hoặc giảm liều nhẹ",
+            "moderate": "Giảm liều 25-50%. Theo dõi chức năng gan",
+            "severe": "Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ",
+            "notes": "Fluvoxamine chuyển hóa chủ yếu ở gan qua CYP2D6, CYP1A2, CYP2C9, CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Buồn ngủ, hôn mê",
+                "Kích động, lú lẫn",
+                "Nhịp tim nhanh",
+                "Co giật",
+                "Hội chứng serotonin (nếu dùng với thuốc khác)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Theo dõi ECG, huyết áp, nhịp tim",
+                "Điều trị hội chứng serotonin: Cyproheptadine, benzodiazepines",
+                "Điều trị co giật: Benzodiazepines",
+                "Truyền dịch",
+                "Theo dõi ít nhất 24 giờ"
+            ],
+            "monitoring": "ECG, huyết áp, nhịp tim, ý thức, dấu hiệu co giật, dấu hiệu hội chứng serotonin"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.",
+                "timing": "Khởi đầu: 50mg buổi tối (do buồn ngủ). Liều cao: chia 2 lần (sáng và tối). Giảm liều dần dần khi ngừng (tránh withdrawal)."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Luvox (fluvoxamine)",
+                "UpToDate - Fluvoxamine: Drug information",
+                "American Psychiatric Association guidelines",
+                "Lexicomp - Fluvoxamine"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, multiple RCTs, clinical guidelines"
+        }
     }
 }
 

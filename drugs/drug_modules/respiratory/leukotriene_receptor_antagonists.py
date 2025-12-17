@@ -96,6 +96,69 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Montelukast'], 'last_updated': '2025-02-03',
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}}}
+        'High - FDA approved, multiple RCTs, clinical guidelines'}},
+    "Nedocromil": {'group': 'Respiratory - Mast Cell Stabilizer',
+        'vietnamese_name': 'Nedocromil, Tilade', 'administration': ['Inhalation'],
+        'indications': ['Hen phế quản (phòng ngừa)', 'Viêm mũi dị ứng'],
+        'contraindications': ['Dị ứng nedocromil'], 'dosage': {
+        'adult_inhalation': '4mg (2 puffs) x 2-4 lần/ngày',
+        'pediatric': '4mg (2 puffs) x 2-4 lần/ngày (từ 6 tuổi trở lên)', 'notes':
+        'Mast cell stabilizer, ít dùng hơn cromolyn. Dùng để phòng ngừa, không dùng cho cắt cơn cấp.'
+        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Không đổi'}, 'side_effects': [
+        'Vị đắng (phổ biến)', 'Ho', 'Kích ứng họng', 'Nhức đầu',
+        'Buồn nôn (hiếm)'], 'interactions': ['Ít tương tác'], 'pregnancy': 'B',
+        'mechanism_of_action':
+        'Nedocromil là mast cell stabilizer, ức chế phóng thích các chất trung gian gây viêm (histamine, leukotriene, prostaglandin) từ mast cells. Ngăn chặn degranulation của mast cells khi tiếp xúc với chất gây dị ứng, từ đó giảm co thắt phế quản, giảm viêm, và giảm triệu chứng hen. Tác dụng phòng ngừa, không dùng cho cắt cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần. Ít dùng hơn cromolyn nhưng có hiệu quả tương tự.'
+        , 'monitoring': [
+        'Đáp ứng điều trị (giảm triệu chứng hen, giảm tần suất cơn cấp)',
+        'Vị đắng - tác dụng phụ phổ biến nhưng không nghiêm trọng',
+        'Ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến',
+        'Tần suất dùng SABA (nếu tăng → cần đánh giá lại điều trị)'], 'precautions': [
+        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, nedocromil là thuốc phòng ngừa'
+        ,
+        'Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì'
+        , 'Vị đắng - tác dụng phụ phổ biến, có thể khó chịu',
+        'Súc miệng sau khi dùng để giảm vị đắng và kích ứng',
+        'Dùng đều đặn hàng ngày, không phải khi cần',
+        'Ít dùng hơn cromolyn nhưng có hiệu quả tương tự',
+        'Có thể dùng cho trẻ em từ 6 tuổi trở lên'], 'pharmacokinetics': {
+        'half_life': '3.3 giờ', 'onset':
+        'Vài ngày đến vài tuần (tác dụng phòng ngừa)', 'duration':
+        '6-12 giờ (dùng 2-4 lần/ngày)', 'protein_binding': '89%', 'clearance':
+        'Gan: chuyển hóa. Thận: bài tiết một phần. Hấp thu toàn thân ít từ dạng hít.'}, 'storage':
+        'Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh.'
+        , 'black_box_warnings': None, 'drug_interactions': {'major': [],
+        'moderate': [], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'Dị ứng với nedocromil hoặc các thành phần khác'], 'tương_đối': [
+        'Trẻ em <6 tuổi - an toàn từ 6 tuổi trở lên']},
+        'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
+        'Nedocromil là thuốc phân loại B. Có thể dùng khi lợi ích vượt quá nguy cơ.'
+        , 'lactation': {'safety': 'Compatible', 'details':
+        'Nedocromil bài tiết ít vào sữa mẹ do hấp thu toàn thân tối thiểu từ dạng hít.'
+        , 'recommendation': 'Có thể dùng an toàn khi cho con bú.'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate': 'Không đổi',
+        'severe': 'Không đổi', 'notes':
+        'Hấp thu toàn thân ít từ dạng hít. Không cần điều chỉnh liều ở suy gan.'},
+        'overdose_management': {'symptoms': [
+        'Vị đắng nặng', 'Ho nặng', 'Kích ứng họng nặng', 'Buồn nôn'], 'antidote':
+        'Không có antidote đặc hiệu', 'treatment': [
+        'Ngừng ngay nedocromil', 'Súc miệng kỹ',
+        'Hỗ trợ và điều trị triệu chứng'], 'monitoring':
+        'Theo dõi: vị đắng, ho, kích ứng họng. Theo dõi ít nhất vài giờ.'},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng.'},
+        'administration_instructions': {'oral': None, 'iv': None, 'inhalation': {
+        'technique':
+        'Dạng hít (MDI): Lắc kỹ trước khi dùng. Hít sâu và giữ hơi thở 10 giây. Đợi 30-60 giây trước khi dùng liều thứ hai (nếu cần).'
+        , 'timing': 'Dùng 2-4 lần/ngày, đều đặn hàng ngày, không phải khi cần.',
+        'after_use':
+        'Súc miệng và súc họng sau mỗi lần dùng để giảm vị đắng và kích ứng.',
+        'notes':
+        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần.'}},
+        'references': {'primary_sources': [
+        'FDA Label: Tilade (Nedocromil)',
+        'UpToDate: Mast cell stabilizers in asthma'], 'last_updated': '2025-02-05',
+        'evidence_level': 'High - FDA approved'}}}
 
 __all__ = ['LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS']

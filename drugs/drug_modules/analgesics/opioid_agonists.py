@@ -130,6 +130,127 @@ OPIOID_AGONISTS_DRUGS = {
         'Lexicomp - Tramadol monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-06', 'evidence_level':
-        'High - FDA-approved, extensive clinical data'}}}
+        'High - FDA-approved, extensive clinical data'}},
+    "Hydrocodone": {'group': 'Analgesic - Opioid Agonist',
+        'vietnamese_name': 'Hydrocodone, Vicodin (với acetaminophen)',
+        'administration': ['PO'], 'indications': [
+        'Đau trung bình đến nặng',
+        'Ho (dạng syrup, liều thấp)'], 'contraindications': [
+        'Ngộ độc cấp tính rượu, thuốc an thần, opioid',
+        'Suy hô hấp nặng', 'Tắc ruột', 'Dị ứng'], 'dosage': {
+        'adult_pain': '5-10mg mỗi 4-6 giờ (thường kết hợp với acetaminophen)',
+        'adult_max': '60mg/ngày', 'adult_cough':
+        '5mg mỗi 4-6 giờ (dạng syrup)', 'notes':
+        'Opioid yếu đến trung bình. Thường dùng kết hợp với acetaminophen (Vicodin) hoặc ibuprofen. Có tác dụng giảm ho ở liều thấp.'
+        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Thận trọng',
+        'under_30': 'Giảm liều 25-50%'}, 'side_effects': [
+        'Buồn nôn, nôn', 'Chóng mặt', 'Buồn ngủ', 'Táo bón',
+        'Ức chế hô hấp (liều cao)', 'Nguy cơ nghiện/lệ thuộc',
+        'Ngộ độc gan (nếu dùng với acetaminophen liều cao)'], 'interactions': [
+        'Thuốc an thần: tăng tác dụng an thần và ức chế hô hấp',
+        'MAO inhibitor: tăng nguy cơ phản ứng nghiêm trọng',
+        'CYP2D6 inhibitors: giảm chuyển hóa thành hydromorphone (active metabolite)'
+        ], 'pregnancy': 'C', 'mechanism_of_action':
+        'Opioid mu-receptor agonist, tác dụng yếu đến trung bình (mạnh hơn codeine nhưng yếu hơn morphine). Hydrocodone được chuyển hóa qua CYP2D6 thành hydromorphone (active metabolite mạnh hơn). Giảm đau thông qua kích thích opioid receptors ở não và tủy sống. Cũng có tác dụng giảm ho ở liều thấp. Thường dùng kết hợp với acetaminophen (Vicodin) hoặc ibuprofen để tăng hiệu quả và giảm liều opioid. Nguy cơ nghiện/lệ thuộc, đặc biệt khi dùng kéo dài.'
+        , 'monitoring': [
+        'Mức độ đau (thang điểm đau)',
+        'Nhịp thở và độ bão hòa oxy (SpO2) - nguy cơ ức chế hô hấp',
+        'Mức độ ý thức',
+        'Dấu hiệu nghiện/lệ thuộc',
+        'Chức năng gan (nếu dùng với acetaminophen)',
+        'Chức năng thận (điều chỉnh liều ở suy thận nặng)'], 'precautions': [
+        'Nguy cơ ức chế hô hấp - đặc biệt ở liều cao, người cao tuổi, suy hô hấp',
+        'Nguy cơ nghiện/lệ thuộc - chỉ dùng khi thực sự cần thiết, không dùng kéo dài'
+        ,
+        'Không dùng với rượu, benzodiazepine, thuốc an thần (tăng nguy cơ ức chế hô hấp)'
+        ,
+        'Ngộ độc gan - nếu dùng với acetaminophen, không vượt quá 4g acetaminophen/ngày'
+        , 'Giảm liều ở suy thận nặng (CrCl < 30)',
+        'Giảm liều ở suy gan nặng (giảm chuyển hóa)',
+        'Người cao tuổi: giảm liều (tăng nhạy cảm)',
+        'Không dùng cho trẻ em < 12 tuổi (nguy cơ ức chế hô hấp)',
+        'Thận trọng với CYP2D6 poor metabolizers (giảm hiệu quả)'], 'pharmacokinetics': {
+        'half_life': '3.8 giờ (hydrocodone), 2.6 giờ (hydromorphone metabolite)',
+        'onset': '30-60 phút (PO)', 'duration': '4-6 giờ', 'protein_binding':
+        '36%', 'metabolism':
+        'Gan (CYP2D6 → hydromorphone active metabolite, CYP3A4 → norhydrocodone), thận (thải trừ)'
+        }, 'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Bảo quản an toàn, tránh xa tầm tay trẻ em (nguy cơ ngộ độc).'
+        , 'black_box_warnings':
+        'Nguy cơ nghiện, lệ thuộc, và lạm dụng. Có thể gây ức chế hô hấp nghiêm trọng, đặc biệt ở liều cao hoặc khi dùng với thuốc an thần. Ngộ độc gan có thể xảy ra nếu dùng với acetaminophen liều cao (>4g/ngày).'
+        , 'drug_interactions': {'major': [{'drug':
+        'Thuốc an thần (benzodiazepine, rượu, barbiturates)', 'mechanism':
+        'Tác dụng hiệp đồng ức chế CNS', 'effect':
+        'Tăng ức chế hô hấp nghiêm trọng, có thể tử vong', 'management':
+        'TRÁNH DÙNG chung. Nếu phải dùng, giảm liều cả hai và theo dõi chặt chẽ hô hấp.'
+        }, {'drug': 'MAO inhibitors', 'mechanism':
+        'Tăng giải phóng serotonin và catecholamine', 'effect':
+        'Nguy cơ phản ứng nghiêm trọng (tăng huyết áp, hội chứng serotonin)', 'management':
+        'TRÁNH DÙNG với MAO inhibitor.'}], 'moderate': [{'drug':
+        'CYP2D6 inhibitors (paroxetine, fluoxetine, quinidine)', 'mechanism':
+        'Ức chế chuyển hóa hydrocodone thành hydromorphone', 'effect':
+        'Giảm hiệu quả giảm đau (giảm active metabolite)', 'management':
+        'Có thể cần tăng liều hydrocodone hoặc dùng opioid khác không phụ thuộc CYP2D6.'
+        }, {'drug': 'CYP3A4 inhibitors (ketoconazole, clarithromycin)',
+        'mechanism': 'Ức chế chuyển hóa hydrocodone', 'effect':
+        'Tăng nồng độ hydrocodone, tăng tác dụng phụ', 'management':
+        'Giảm liều hydrocodone. Theo dõi tác dụng phụ.'}], 'minor': []},
+        'contraindications': {'tuyệt_đối': [
+        'Dị ứng hydrocodone hoặc opioid',
+        'Ngộ độc cấp tính rượu, thuốc an thần, opioid',
+        'Suy hô hấp nặng',
+        'Tắc ruột',
+        'Dùng với MAO inhibitor'], 'tương_đối': [
+        'Suy hô hấp nhẹ đến trung bình - thận trọng, giảm liều',
+        'Suy thận nặng (CrCl <30) - giảm liều 25-50%',
+        'Suy gan nặng - giảm liều, thận trọng',
+        'Người cao tuổi - giảm liều (tăng nhạy cảm)',
+        'CYP2D6 poor metabolizers - giảm hiệu quả',
+        'Mang thai (category C) - thận trọng, có thể gây withdrawal ở trẻ sơ sinh'
+        ]}, 'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        'Category C. Có thể dùng khi cần thiết nhưng thận trọng. Có thể gây withdrawal ở trẻ sơ sinh nếu dùng gần cuối thai kỳ.'
+        , 'lactation': {'safety': 'Compatible with monitoring', 'details':
+        'Hydrocodone bài tiết vào sữa mẹ ở nồng độ thấp. Có thể gây tác dụng phụ ở trẻ (buồn ngủ, bú kém).'
+        , 'recommendation':
+        'Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém, ức chế hô hấp).'
+        }}, 'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
+        'Thận trọng, giảm liều 25-50%', 'severe':
+        'Giảm liều 50%, thận trọng', 'notes':
+        'Hydrocodone chuyển hóa ở gan qua CYP2D6 và CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ.'
+        }, 'overdose_management': {'symptoms': [
+        'Ức chế hô hấp nặng (triệu chứng chính, có thể tử vong)',
+        'Buồn ngủ sâu, hôn mê', 'Đồng tử co nhỏ (miosis)',
+        'Hạ huyết áp, nhịp tim chậm', 'Táo bón nặng',
+        'Ngộ độc gan (nếu dùng với acetaminophen liều cao)'], 'antidote':
+        'Naloxone (Narcan) - opioid antagonist, đảo ngược ức chế hô hấp', 'treatment': [
+        'Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp ngay lập tức (quan trọng nhất)'
+        ,
+        'Naloxone: 0.4-2mg IV/IM/SC, có thể lặp lại mỗi 2-3 phút nếu cần (tối đa 10mg)'
+        ,
+        'Theo dõi liên tục: ý thức, hô hấp (nhịp thở, SpO2), tim mạch',
+        'Hỗ trợ hô hấp: thở máy nếu suy hô hấp nặng',
+        'Điều trị hạ huyết áp: truyền dịch, vasopressors nếu cần',
+        'Nếu có ngộ độc acetaminophen: điều trị với N-acetylcysteine (NAC)',
+        'Theo dõi ít nhất 4-6 giờ sau liều naloxone cuối (do half-life naloxone ngắn hơn hydrocodone)'
+        ], 'monitoring':
+        'Theo dõi liên tục: ý thức, hô hấp (nhịp thở, SpO2), tim mạch (huyết áp, nhịp tim), nhiệt độ cơ thể. Theo dõi ít nhất 4-6 giờ sau liều naloxone cuối.'
+        }, 'reversal_agents': {'available': True, 'agents': [{'agent':
+        'Naloxone (Narcan)', 'mechanism':
+        'Opioid antagonist, đảo ngược tác dụng opioid', 'indication':
+        'Quá liều opioid gây ức chế hô hấp', 'dose':
+        '0.4-2mg IV/IM/SC, có thể lặp lại mỗi 2-3 phút nếu cần (tối đa 10mg)',
+        'caution':
+        'Half-life ngắn (30-90 phút) nên có thể cần lặp lại. Theo dõi ít nhất 4-6 giờ sau liều cuối.'
+        }], 'notes':
+        'Naloxone là antidote đặc hiệu cho quá liều opioid. Đảo ngược ức chế hô hấp nhanh chóng. Tuy nhiên, half-life ngắn nên có thể cần lặp lại.'
+        }, 'administration_instructions': {'oral': {'with_food':
+        'Có thể uống với thức ăn hoặc không (hấp thu tốt)', 'timing':
+        'Mỗi 4-6 giờ. Thường dùng kết hợp với acetaminophen (Vicodin) hoặc ibuprofen. Liều tối đa: 60mg/ngày.'
+        }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
+        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'}},
+        'references': {'primary_sources': [
+        'FDA Drug Label - Vicodin (Hydrocodone/Acetaminophen)',
+        'UpToDate - Hydrocodone: Drug information'], 'last_updated': '2025-02-05',
+        'evidence_level': 'High - FDA approved'}}}
 
 __all__ = ['OPIOID_AGONISTS_DRUGS']

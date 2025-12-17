@@ -404,6 +404,136 @@ SNRI_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
         }
+    },
+
+    "Desvenlafaxine": {
+        "group": "Psychiatry - SNRI (Serotonin-Norepinephrine Reuptake Inhibitor)",
+        "vietnamese_name": "Desvenlafaxine, Pristiq",
+        "administration": ["PO"],
+        "indications": [
+            "Trầm cảm",
+            "Rối loạn lo âu tổng quát (GAD)"
+        ],
+        "contraindications": [
+            "Dùng MAO inhibitor",
+            "Dị ứng"
+        ],
+        "dosage": {
+            "adult_standard": "50mg x 1 lần/ngày",
+            "adult_max": "100mg/ngày",
+            "notes": "Metabolite hoạt động của venlafaxine. Dùng 1 lần/ngày."
+        },
+        "side_effects": [
+            "Buồn nôn",
+            "Mất ngủ",
+            "Chóng mặt",
+            "Tăng huyết áp (liều cao)",
+            "Giảm ham muốn tình dục",
+            "Tăng nhịp tim"
+        ],
+        "interactions": [
+            "MAO inhibitor: chống chỉ định",
+            "Warfarin: có thể tăng tác dụng"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Desvenlafaxine là metabolite hoạt động chính của venlafaxine, thuộc nhóm SNRI (serotonin-norepinephrine reuptake inhibitor). Ức chế tái hấp thu serotonin và norepinephrine ở synap thần kinh. Khác với venlafaxine, desvenlafaxine không cần chuyển hóa qua CYP2D6 (venlafaxine cần chuyển hóa thành desvenlafaxine). Tác dụng tương tự venlafaxine nhưng dùng liều cố định 50mg/ngày, không cần tăng liều thường xuyên. Ưu điểm: dùng 1 lần/ngày, không phụ thuộc vào CYP2D6.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng trầm cảm, lo âu)",
+            "Huyết áp - tăng huyết áp ở liều cao",
+            "Nhịp tim - tăng nhịp tim có thể xảy ra",
+            "Dấu hiệu hội chứng serotonin",
+            "Dấu hiệu withdrawal khi ngừng đột ngột"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH với MAO inhibitor",
+            "Không ngừng đột ngột - giảm liều dần dần",
+            "Tăng huyết áp - nguy cơ tăng ở liều cao",
+            "Nguy cơ hội chứng serotonin",
+            "Tăng nguy cơ tự sát ở người trẻ tuổi"
+        ],
+        "pharmacokinetics": {
+            "half_life": "11 giờ",
+            "onset": "2-4 tuần",
+            "duration": "24 giờ",
+            "protein_binding": "30%",
+            "clearance": "Gan: chuyển hóa qua UGT. Thận: bài tiết chủ yếu (45% nguyên dạng)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Nguy cơ tự sát ở trẻ em, thanh thiếu niên, và người trẻ tuổi (<25 tuổi).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Nguy cơ hội chứng serotonin nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH. Phải ngừng MAO inhibitor ít nhất 14 ngày trước khi bắt đầu desvenlafaxine."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dùng MAO inhibitor (trong vòng 14 ngày)",
+                "Dị ứng desvenlafaxine"
+            ],
+            "tương_đối": [
+                "Tăng huyết áp không kiểm soát",
+                "Bệnh tim mạch",
+                "Suy thận nặng (CrCl <30) - giảm liều"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng khi lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Thận trọng",
+            "notes": "Chuyển hóa qua UGT, ít phụ thuộc gan hơn venlafaxine."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ, chóng mặt",
+                "Hội chứng serotonin",
+                "Tăng huyết áp, nhịp nhanh"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi ECG, huyết áp",
+                "Xử trí hội chứng serotonin nếu có"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, ECG"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không",
+                "timing": "Dùng 1 lần/ngày (50mg). Không ngừng đột ngột."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Label: Pristiq (Desvenlafaxine)",
+                "UpToDate: Desvenlafaxine: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved"
+        }
     }
 }
 

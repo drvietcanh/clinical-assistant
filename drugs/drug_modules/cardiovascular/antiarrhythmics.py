@@ -567,6 +567,336 @@ ANTIARRHYTHMICS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - Multiple RCTs and clinical guidelines"
         }
+    },
+
+    "Dronedarone": {
+        "group": "Cardiovascular - Antiarrhythmic (Class III)",
+        "vietnamese_name": "Dronedarone, Multaq",
+        "administration": ["PO"],
+        "indications": [
+            "Rung nhĩ",
+            "Cuồng nhĩ"
+        ],
+        "contraindications": [
+            "Suy tim nặng (NYHA class IV) hoặc suy tim không ổn định",
+            "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+            "Nhịp chậm <50 bpm",
+            "QT prolongation nặng",
+            "Bệnh gan nặng"
+        ],
+        "dosage": {
+            "adult_standard": "400mg x 2 lần/ngày (sáng và tối)",
+            "adult_max": "800mg/ngày",
+            "notes": "Dẫn xuất của amiodarone nhưng ít tác dụng phụ hơn. CHỐNG CHỈ ĐỊNH trong suy tim nặng."
+        },
+        "side_effects": [
+            "Bệnh gan (hiếm nhưng nguy hiểm)",
+            "QT prolongation",
+            "Nhịp chậm",
+            "Suy tim (CHỐNG CHỈ ĐỊNH trong suy tim nặng)",
+            "Phổi (ít hơn amiodarone)",
+            "Tăng creatinine (do ức chế creatinine transporter, không phải suy thận thực sự)"
+        ],
+        "interactions": [
+            "Digoxin: tăng nồng độ digoxin (giảm liều digoxin 50%)",
+            "Warfarin: tăng tác dụng chống đông",
+            "Statins: tăng nguy cơ tiêu cơ vân",
+            "CYP3A4 inhibitors: tăng nồng độ dronedarone"
+        ],
+        "pregnancy": "X",
+        "mechanism_of_action": "Class III antiarrhythmic, dẫn xuất của amiodarone nhưng đã loại bỏ iodine và thêm nhóm methanesulfonyl. Ức chế kênh K+ (delayed rectifier), kéo dài phase 3 của action potential, kéo dài QT interval. Cũng có tác dụng ức chế Na+ channels (class I), chẹn beta (class II), và chẹn Ca2+ (class IV). Ít tác dụng phụ hơn amiodarone (ít bệnh phổi, ít rối loạn tuyến giáp) nhưng CHỐNG CHỈ ĐỊNH trong suy tim nặng (tăng nguy cơ tử vong).",
+        "monitoring": [
+            "ECG: QT interval, nhịp tim",
+            "Chức năng gan: ALT, AST, bilirubin (mỗi 3 tháng) - nguy cơ bệnh gan hiếm nhưng nguy hiểm",
+            "Creatinine - có thể tăng do ức chế creatinine transporter (không phải suy thận thực sự)",
+            "Dấu hiệu suy tim - CHỐNG CHỈ ĐỊNH trong suy tim nặng",
+            "Chức năng phổi (ít hơn amiodarone nhưng vẫn cần theo dõi)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH trong suy tim nặng (NYHA class IV) hoặc suy tim không ổn định - tăng nguy cơ tử vong",
+            "CHỐNG CHỈ ĐỊNH trong bệnh gan nặng - nguy cơ bệnh gan hiếm nhưng nguy hiểm",
+            "Theo dõi chức năng gan mỗi 3 tháng - ngừng ngay nếu có dấu hiệu bệnh gan",
+            "Tăng creatinine - do ức chế creatinine transporter, không phải suy thận thực sự, không cần điều chỉnh liều",
+            "Giảm liều digoxin 50% khi dùng với dronedarone",
+            "Theo dõi INR nếu dùng với warfarin",
+            "Ít tác dụng phụ hơn amiodarone nhưng vẫn cần theo dõi chặt chẽ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "13-19 giờ",
+            "onset": "Vài ngày",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": ">98%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong suy tim nặng (NYHA class IV) hoặc suy tim không ổn định - tăng nguy cơ tử vong. Nguy cơ bệnh gan hiếm nhưng nguy hiểm - theo dõi chức năng gan mỗi 3 tháng, ngừng ngay nếu có dấu hiệu bệnh gan.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Giảm thải trừ digoxin qua thận",
+                    "effect": "Tăng nồng độ digoxin, tăng độc tính",
+                    "management": "Giảm liều digoxin 50%. Theo dõi nồng độ digoxin."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Ức chế chuyển hóa warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Có thể cần giảm liều warfarin."
+                },
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, clarithromycin)",
+                    "mechanism": "Ức chế chuyển hóa dronedarone",
+                    "effect": "Tăng nồng độ dronedarone, tăng tác dụng phụ",
+                    "management": "Tránh dùng chung. Nếu phải dùng, giảm liều dronedarone."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Statins (simvastatin, atorvastatin)",
+                    "mechanism": "Cả hai đều chuyển hóa qua CYP3A4",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "Thận trọng. Theo dõi CK, triệu chứng tiêu cơ vân."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Suy tim nặng (NYHA class IV) hoặc suy tim không ổn định - CHỐNG CHỈ ĐỊNH (tăng nguy cơ tử vong)",
+                "Bệnh gan nặng - CHỐNG CHỈ ĐỊNH",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+                "Nhịp chậm <50 bpm",
+                "QT prolongation nặng",
+                "Dùng với CYP3A4 inhibitors mạnh"
+            ],
+            "tương_đối": [
+                "Suy tim nhẹ đến trung bình (NYHA class I-III) - thận trọng",
+                "Suy gan nhẹ đến trung bình - thận trọng, theo dõi chặt chẽ",
+                "Suy thận - tăng creatinine có thể xảy ra (không phải suy thận thực sự)",
+                "Dùng với digoxin - giảm liều digoxin 50%",
+                "Dùng với warfarin - theo dõi INR"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": "Category X - chống chỉ định trong thai kỳ. Có thể gây dị tật thai nhi.",
+            "lactation": {
+                "safety": "Not recommended",
+                "details": "Bài tiết vào sữa mẹ. Không nên dùng khi cho con bú.",
+                "recommendation": "Tránh dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, theo dõi chặt chẽ",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan (CYP3A4). Suy gan nặng là chống chỉ định. Nguy cơ bệnh gan hiếm nhưng nguy hiểm - theo dõi chức năng gan mỗi 3 tháng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "QT prolongation nặng, rối loạn nhịp tim",
+                "Nhịp chậm nặng",
+                "Suy tim nặng",
+                "Bệnh gan",
+                "Ức chế CNS"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Theo dõi ECG liên tục (quan trọng - nguy cơ QT prolongation, rối loạn nhịp tim)",
+                "Điều trị rối loạn nhịp tim nếu có",
+                "Theo dõi chức năng gan (nguy cơ bệnh gan)",
+                "Hỗ trợ tim mạch nếu có suy tim",
+                "Lọc máu: ít hiệu quả (protein binding >98%)"
+            ],
+            "monitoring": "Theo dõi liên tục ECG, huyết áp, nhịp tim, chức năng gan trong ít nhất 24-48 giờ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để tăng hấp thu.",
+                "timing": "Dùng 2 lần/ngày (sáng và tối), cách nhau 12 giờ. Uống với bữa ăn."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Multaq (Dronedarone)",
+                "UpToDate - Dronedarone: Drug information",
+                "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, clinical guidelines"
+        }
+    },
+
+    "Procainamide": {
+        "group": "Cardiovascular - Antiarrhythmic (Class IA)",
+        "vietnamese_name": "Procainamide, Pronestyl",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Rối loạn nhịp thất",
+            "Rung nhĩ",
+            "Nhịp nhanh trên thất"
+        ],
+        "contraindications": [
+            "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+            "Suy tim nặng",
+            "Lupus ban đỏ hệ thống",
+            "Dị ứng procainamide"
+        ],
+        "dosage": {
+            "adult_po": "250-500mg mỗi 3-6 giờ (tối đa 4g/ngày)",
+            "adult_iv_loading": "15-17mg/kg IV trong 30-60 phút",
+            "adult_iv_maintenance": "2-6mg/phút",
+            "adult_max": "4g/ngày (PO), 2g/ngày (IV)",
+            "notes": "Class IA antiarrhythmic. Nguy cơ lupus ban đỏ hệ thống khi dùng lâu dài (>6 tháng)."
+        },
+        "side_effects": [
+            "Lupus ban đỏ hệ thống (khi dùng lâu dài >6 tháng)",
+            "QT prolongation, rối loạn nhịp tim",
+            "Hạ huyết áp (IV)",
+            "Block nhĩ thất",
+            "Giảm bạch cầu (hiếm)",
+            "Buồn nôn, nôn"
+        ],
+        "interactions": [
+            "Cimetidine: tăng nồng độ procainamide",
+            "Quinidine: tăng tác dụng phụ",
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Class IA antiarrhythmic. Ức chế kênh Na+ (phase 0), làm chậm dẫn truyền và kéo dài repolarization (phase 3). Kéo dài QT interval và PR interval. Hiệu quả cho rối loạn nhịp thất và trên thất. Nguy cơ lupus ban đỏ hệ thống khi dùng lâu dài (>6 tháng) do tạo autoantibodies. Active metabolite N-acetylprocainamide (NAPA) cũng có tác dụng antiarrhythmic.",
+        "monitoring": [
+            "ECG: QT interval, PR interval, QRS duration - nguy cơ QT prolongation, block nhĩ thất",
+            "Dấu hiệu lupus ban đỏ hệ thống (khi dùng lâu dài >6 tháng): đau khớp, ban da, sốt, mệt mỏi",
+            "Công thức máu - hiếm giảm bạch cầu",
+            "Huyết áp (đặc biệt khi dùng IV)",
+            "Nồng độ procainamide và NAPA (therapeutic range: procainamide 4-10mcg/ml, NAPA 10-30mcg/ml)"
+        ],
+        "precautions": [
+            "Nguy cơ lupus ban đỏ hệ thống khi dùng lâu dài (>6 tháng) - cần đánh giá định kỳ, cân nhắc chuyển thuốc khác",
+            "QT prolongation - nguy cơ rối loạn nhịp tim, cần theo dõi ECG",
+            "Hạ huyết áp - đặc biệt khi dùng IV, truyền chậm",
+            "Block nhĩ thất - thận trọng ở bệnh nhân có block nhĩ thất",
+            "Giảm bạch cầu - hiếm nhưng nguy hiểm, theo dõi công thức máu",
+            "Theo dõi nồng độ procainamide và NAPA nếu dùng lâu dài",
+            "Giảm liều ở suy thận (NAPA tích lũy)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-4 giờ (procainamide), 6-8 giờ (NAPA metabolite)",
+            "onset": "30-60 phút (PO), 5-10 phút (IV)",
+            "duration": "3-6 giờ",
+            "protein_binding": "15-20%",
+            "clearance": "Gan: chuyển hóa thành NAPA (active metabolite). Thận: bài tiết chủ yếu (50-60% nguyên dạng, 10-30% NAPA)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng IV: bảo quản ở nhiệt độ phòng, không đông lạnh.",
+        "black_box_warnings": "Nguy cơ lupus ban đỏ hệ thống khi dùng lâu dài (>6 tháng). QT prolongation có thể gây rối loạn nhịp tim nghiêm trọng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "QT prolonging drugs",
+                    "mechanism": "Cả hai đều kéo dài QT",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim",
+                    "management": "Tránh dùng chung nếu có thể. Theo dõi ECG chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Cimetidine",
+                    "mechanism": "Giảm thải trừ procainamide qua thận",
+                    "effect": "Tăng nồng độ procainamide, tăng tác dụng phụ",
+                    "management": "Giảm liều procainamide 25-50%. Theo dõi nồng độ."
+                },
+                {
+                    "drug": "Quinidine",
+                    "mechanism": "Cả hai đều là class IA, tác dụng hiệp đồng",
+                    "effect": "Tăng tác dụng phụ, tăng nguy cơ QT prolongation",
+                    "management": "Tránh dùng chung."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng procainamide",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+                "Suy tim nặng",
+                "Lupus ban đỏ hệ thống đang hoạt động"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - NAPA tích lũy, giảm liều",
+                "Suy gan nặng - thận trọng",
+                "Block nhĩ thất độ 1 - thận trọng",
+                "QT prolongation - tăng nguy cơ rối loạn nhịp tim"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C. Có thể dùng khi cần thiết.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng, giảm liều",
+            "notes": "Chuyển hóa qua gan thành NAPA. Suy gan có thể ảnh hưởng chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "QT prolongation nặng, rối loạn nhịp tim",
+                "Block nhĩ thất nặng",
+                "Hạ huyết áp nặng",
+                "Ức chế CNS"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Theo dõi ECG liên tục (quan trọng - nguy cơ QT prolongation, rối loạn nhịp tim)",
+                "Điều trị rối loạn nhịp tim nếu có",
+                "Điều trị hạ huyết áp: truyền dịch, vasopressors nếu cần",
+                "Lọc máu: có thể hiệu quả (protein binding thấp 15-20%)"
+            ],
+            "monitoring": "Theo dõi liên tục ECG, huyết áp, nhịp tim trong ít nhất 6-12 giờ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không.",
+                "timing": "Mỗi 3-6 giờ. Liều tối đa: 4g/ngày."
+            },
+            "iv": {
+                "reconstitution": "Pha trong 0.9% NaCl hoặc D5W. Nồng độ: 100mg/ml.",
+                "infusion_rate": "Loading: 15-17mg/kg trong 30-60 phút. Maintenance: 2-6mg/phút.",
+                "compatibility": ["0.9% NaCl", "D5W"],
+                "incompatibility": [],
+                "notes": "Truyền chậm để tránh hạ huyết áp. Theo dõi ECG liên tục."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Pronestyl (Procainamide)",
+                "UpToDate - Procainamide: Drug information",
+                "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, clinical guidelines"
+        }
     }
 
 }

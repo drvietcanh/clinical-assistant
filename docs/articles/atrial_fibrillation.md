@@ -258,9 +258,33 @@ summary:
 - **CHADS₂-VASc:** Đánh giá nguy cơ đột quỵ, quyết định kháng đông.
 - **HAS-BLED:** Đánh giá nguy cơ chảy máu.
 - **QTc:** Đánh giá trước khi dùng thuốc chống loạn nhịp.
-- **CrCl / eGFR:** Chỉnh liều DOAC, digoxin.
+- **CrCl (Cockcroft-Gault), eGFR (CKD-EPI):** Chỉnh liều DOAC, digoxin.
 
-## 10. Tài liệu tham khảo
+## 10. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**Kháng đông:**
+- DOAC: Apixaban, Rivaroxaban, Dabigatran, Edoxaban
+- Warfarin
+
+**Kiểm soát tần số:**
+- β-blocker: Metoprolol, Bisoprolol, Atenolol
+- Non-DHP CCB: Diltiazem, Verapamil
+- Digoxin
+
+**Kiểm soát nhịp:**
+- Amiodarone, Flecainide, Propafenone, Sotalol
+- Dofetilide
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc (tiếng Anh hoặc tiếng Việt)
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác, chỉnh liều theo thận/gan
+4. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc" (đặc biệt quan trọng với kháng đông + thuốc khác)
+5. So sánh thuốc: Menu "💊 Tra cứu thuốc" → "📊 So sánh thuốc trực quan" (so sánh DOAC, so sánh thuốc chống loạn nhịp)
+
+## 11. Tài liệu tham khảo
 
 - ESC Guidelines for Atrial Fibrillation, 2020 (updates 2022).
 - ACC/AHA/HRS Guidelines for Atrial Fibrillation, 2019 (updates 2024).

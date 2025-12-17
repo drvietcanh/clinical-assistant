@@ -50,11 +50,38 @@ summary:
 - ARNI/ACEi/ARB, β-blocker, MRA, SGLT2i nếu không chống chỉ định; khởi khi HA và thận cho phép.
 - Giáo dục tuân thủ, hạn chế muối, theo dõi cân nặng tại nhà.
 
-## 8. Công cụ trong app (gắn link)
-- eGFR/CrCl để chỉnh liều lợi tiểu, inotrope, và đánh giá nguy cơ.
-- BNP/NT-proBNP interpret (nếu module hiện có).
+## 8. Công cụ trong app
 
-## 9. Tài liệu tham khảo
+- **eGFR (CKD-EPI), CrCl (Cockcroft-Gault):** Chỉnh liều lợi tiểu, inotrope, đánh giá nguy cơ.
+- **BNP/NT-proBNP interpret:** Đánh giá suy tim.
+
+## 9. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**Lợi tiểu:**
+- Furosemide, Bumetanide, Torsemide
+- Metolazone, Chlorthalidone, Hydrochlorothiazide
+
+**Vasodilator:**
+- Nitroglycerin, Nitroprusside, Hydralazine
+
+**Inotrope:**
+- Dobutamine, Milrinone, Dopamine, Epinephrine, Norepinephrine
+
+**Điều trị nền:**
+- ACEi/ARB: Lisinopril, Enalapril, Valsartan, Losartan (xem bài viết "Điều trị tăng huyết áp")
+- β-blocker: Metoprolol, Bisoprolol, Carvedilol
+- MRA: Spironolactone, Eplerenone
+- SGLT2i: Empagliflozin, Dapagliflozin
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc (tiếng Anh hoặc tiếng Việt)
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác, chỉnh liều theo thận/gan
+4. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc"
+
+## 10. Tài liệu tham khảo
 - ESC Guidelines for Heart Failure 2023.
 - ACC/AHA/HFSA Heart Failure updates 2022–2024.
 

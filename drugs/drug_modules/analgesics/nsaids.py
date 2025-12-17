@@ -682,7 +682,103 @@ NSAIDS_DRUGS = {
         'UpToDate - Ketorolac: Drug information',
         'Lexicomp - Ketorolac monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
-        'last_updated': '2025-02-05', 'evidence_level':
-        'High - FDA-approved, extensive clinical data'}}}
+        'last_updated': '2025-02-05',         'evidence_level':
+        'High - FDA-approved, extensive clinical data'}},
+    "Etoricoxib": {'group': 'Analgesic - NSAID (COX-2 Selective)',
+        'vietnamese_name': 'Etoricoxib, Arcoxia', 'administration': ['PO'],
+        'indications': ['Đau nhẹ đến trung bình', 'Viêm khớp', 'Đau bụng kinh',
+        'Gout cấp'], 'contraindications': [
+        'Loét dạ dày tá tràng đang hoạt động', 'Suy thận nặng', 'Suy gan nặng',
+        'Có thai (3 tháng cuối)', 'Dị ứng NSAID/aspirin',
+        'Bệnh tim mạch nặng'], 'dosage': {
+        'adult_pain': '60-90mg x 1 lần/ngày',
+        'adult_arthritis': '60-90mg x 1 lần/ngày',
+        'adult_gout': '120mg x 1 lần/ngày (tối đa 5 ngày)',
+        'adult_max': '120mg/ngày', 'notes':
+        'COX-2 selective, ít tác dụng phụ dạ dày hơn NSAID không chọn lọc. Dùng 1 lần/ngày.'
+        }, 'side_effects': [
+        'Tăng nguy cơ biến cố tim mạch (nhồi máu cơ tim, đột quỵ)',
+        'Tăng huyết áp', 'Phù', 'Suy thận', 'Chóng mặt', 'Đau đầu',
+        'Ít tác dụng phụ dạ dày hơn NSAID không chọn lọc'], 'interactions': [
+        'Warfarin: tăng nguy cơ chảy máu nặng',
+        'ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận',
+        'Lithium: tăng nồng độ lithium',
+        'Methotrexate: tăng độc tính methotrexate'], 'pregnancy':
+        'C - D trong 3 tháng cuối', 'mechanism_of_action':
+        'Ức chế chọn lọc enzyme cyclooxygenase-2 (COX-2), giảm tổng hợp prostaglandin gây viêm và đau. Ít ức chế COX-1 (enzyme bảo vệ niêm mạc dạ dày) nên ít tác dụng phụ dạ dày hơn NSAID không chọn lọc. Tuy nhiên, vẫn có nguy cơ biến cố tim mạch (nhồi máu cơ tim, đột quỵ) tương tự các COX-2 selective khác. Dùng 1 lần/ngày, tiện lợi.'
+        , 'monitoring': [
+        'Dấu hiệu biến cố tim mạch (đau ngực, khó thở, yếu một bên)',
+        'Huyết áp (NSAID có thể tăng huyết áp)',
+        'Creatinine, BUN nếu dùng lâu dài hoặc bệnh nhân có nguy cơ',
+        'Dấu hiệu suy tim (giữ nước, phù)',
+        'INR nếu dùng với warfarin'], 'precautions': [
+        'Tăng nguy cơ biến cố tim mạch - không dùng ở bệnh nhân có bệnh tim mạch nặng',
+        'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày',
+        'Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp',
+        'Tránh dùng với ACE inhibitor/ARB (giảm hiệu quả, tăng nguy cơ suy thận)',
+        'Không dùng trong 3 tháng cuối thai kỳ',
+        'Theo dõi INR nếu dùng với warfarin',
+        'Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể'], 'pharmacokinetics': {
+        'half_life': '22 giờ (dài)', 'onset': '30-60 phút', 'duration':
+        '24 giờ (dài, dùng 1 lần/ngày)', 'protein_binding': '92%', 'clearance':
+        'Gan (chuyển hóa qua CYP3A4, CYP2C9, CYP2D6), thận (thải trừ)'}, 'renal_adjustment': {
+        'normal': 'Không đổi', '30_60': 'Thận trọng, giảm liều 25-50%', 'under_30':
+        'Tránh dùng hoặc giảm liều mạnh. Theo dõi chức năng thận chặt chẽ'}, 'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm', 'black_box_warnings':
+        'Tăng nguy cơ biến cố tim mạch nghiêm trọng (nhồi máu cơ tim, đột quỵ) - có thể tử vong. Nguy cơ tăng ở bệnh nhân có bệnh tim mạch. Không dùng trong 3 tháng cuối thai kỳ.'
+        , 'drug_interactions': {'major': [{'drug':
+        'Warfarin, các thuốc chống đông khác', 'mechanism':
+        'Ức chế COX-2, tăng nguy cơ chảy máu', 'effect':
+        'Tăng nguy cơ chảy máu nặng, tăng INR', 'management':
+        'Tránh dùng đồng thời. Nếu phải dùng, theo dõi INR thường xuyên, giảm liều warfarin nếu cần'
+        }], 'moderate': [{'drug': 'ACE inhibitor, ARB', 'mechanism':
+        'Giảm tổng hợp prostaglandin ở thận, giảm lưu lượng máu thận', 'effect':
+        'Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp', 'management':
+        'Thận trọng. Theo dõi creatinine, BUN. Cân nhắc ngừng etoricoxib nếu có dấu hiệu suy thận'
+        }, {'drug': 'Lithium', 'mechanism': 'Giảm thải trừ lithium qua thận',
+        'effect': 'Tăng nồng độ lithium, tăng độc tính', 'management':
+        'Theo dõi nồng độ lithium. Có thể cần giảm liều lithium.'}], 'minor': []},
+        'contraindications': {'tuyệt_đối': [
+        'Dị ứng etoricoxib hoặc NSAID/aspirin',
+        'Loét dạ dày tá tràng đang hoạt động',
+        'Tam cá nguyệt 3 thai kỳ (3 tháng cuối)',
+        'Bệnh tim mạch nặng (nhồi máu cơ tim gần đây, suy tim nặng)',
+        'Suy thận nặng (CrCl <30) và đang dùng ACE inhibitor/ARB'], 'tương_đối':
+        ['Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều',
+        'Suy gan nặng - thận trọng, giảm liều',
+        'Suy tim nặng - tăng nguy cơ giữ nước, suy tim nặng hơn',
+        'Bệnh mạch vành, tiền sử nhồi máu cơ tim - tăng nguy cơ biến cố tim mạch',
+        'Tăng huyết áp không kiểm soát - NSAID có thể tăng huyết áp',
+        'Dùng warfarin hoặc thuốc chống đông - tăng nguy cơ chảy máu']},
+        'pregnancy_lactation': {'fda_category': 'C - D trong tam cá nguyệt 3',
+        'pregnancy_details':
+        'Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi.'
+        , 'lactation': {'safety': 'Compatible', 'details':
+        'Etoricoxib bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.'
+        , 'recommendation':
+        'Có thể dùng khi cho con bú với liều ngắn hạn.'}}, 'hepatic_adjustment': {
+        'mild': 'Không đổi', 'moderate': 'Thận trọng, giảm liều 25-50%', 'severe':
+        'Tránh dùng hoặc giảm liều mạnh', 'notes':
+        'Etoricoxib chuyển hóa ở gan qua CYP3A4, CYP2C9, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.'
+        }, 'overdose_management': {'symptoms': [
+        'Buồn nôn, nôn, đau bụng', 'Chóng mặt, nhức đầu', 'Lú lẫn, buồn ngủ',
+        'Hạ huyết áp', 'Suy thận cấp', 'Chảy máu dạ dày'], 'antidote':
+        'Không có antidote đặc hiệu', 'treatment': [
+        'Rửa dạ dày nếu uống trong vòng 1-2 giờ',
+        'Than hoạt tính nếu uống trong vòng 1-2 giờ',
+        'Theo dõi chức năng thận (creatinine, BUN), điện giải',
+        'Theo dõi huyết áp, nhịp tim',
+        'Truyền dịch nếu hạ huyết áp, suy thận',
+        'Theo dõi dấu hiệu chảy máu dạ dày', 'Điều trị hỗ trợ triệu chứng'],
+        'monitoring':
+        'Huyết áp, nhịp tim, ý thức, creatinine, BUN, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 24 giờ do half-life dài (22 giờ).'
+        }, 'reversal_agents': {'available': False, 'agents': []},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày', 'timing':
+        'Dùng 1 lần/ngày (tiện lợi). Liều tối đa: 120mg/ngày.'}, 'iv': None},
+        'references': {'primary_sources': [
+        'FDA Drug Label - Arcoxia (Etoricoxib)',
+        'UpToDate - Etoricoxib: Drug information'], 'last_updated': '2025-02-05',
+        'evidence_level': 'High - FDA approved'}}}
 
 __all__ = ['NSAIDS_DRUGS']

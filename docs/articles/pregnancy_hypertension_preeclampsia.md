@@ -223,7 +223,28 @@ summary:
 - **Bishop Score / Modified Bishop:** Đánh giá cổ tử cung trước chấm dứt thai kỳ.
 - **BMI:** Đánh giá nguy cơ.
 
-## 9. Tài liệu tham khảo
+## 9. Tra cứu thuốc trong Drug Database
+
+**Các thuốc chính trong bài viết có thể tra cứu trong Drug Database (Menu "💊 Tra cứu thuốc"):**
+
+**Kiểm soát huyết áp:**
+- Labetalol, Nifedipine, Hydralazine
+- Methyldopa (ít dùng hiện nay)
+
+**MgSO₄:**
+- Magnesium sulfate (thuốc chống co giật, thường quản lý tại bệnh viện)
+
+**Corticosteroid:**
+- Betamethasone, Dexamethasone (dự phòng RDS ở trẻ sơ sinh)
+
+**Hướng dẫn tra cứu:**
+1. Vào Menu "💊 Tra cứu thuốc" → "💊 Tra cứu thuốc (Tất cả)"
+2. Tìm kiếm tên thuốc
+3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ, tương tác
+4. **Đặc biệt quan trọng:** Kiểm tra an toàn trong thai kỳ (pregnancy category) cho từng thuốc
+5. Kiểm tra tương tác thuốc: Menu "💊 Tra cứu thuốc" → "🔍 Kiểm tra tương tác thuốc"
+
+## 10. Tài liệu tham khảo
 
 - ACOG Practice Bulletin No. 222: Gestational Hypertension and Preeclampsia, 2020 (updates).
 - SMFM: Preeclampsia Management, 2023.

@@ -19,9 +19,93 @@ summary:
 
 # Thuốc giảm đau chống viêm: Paracetamol, NSAID, Corticosteroid, Opioid
 
-## 1. Tổng quan
+## 1. Giới thiệu về đau và viêm
 
-### 1.1. Phân loại thuốc giảm đau
+### 1.1. Định nghĩa đau
+
+**Đau (Pain):**
+- Đau là trải nghiệm cảm giác và cảm xúc khó chịu liên quan đến tổn thương mô thực tế hoặc tiềm ẩn (IASP - International Association for the Study of Pain).
+- Đau là dấu hiệu quan trọng, nhưng cũng là bệnh lý khi trở thành mạn tính.
+
+**Phân loại đau:**
+- **Theo thời gian:**
+  - **Đau cấp:** <3 tháng, thường do tổn thương mô (chấn thương, phẫu thuật, viêm cấp).
+  - **Đau mạn:** ≥3 tháng, có thể không liên quan tổn thương mô (đau thần kinh, đau cơ xơ hóa).
+- **Theo cơ chế:**
+  - **Đau do tổn thương mô (Nociceptive):** Đau do kích thích thụ thể đau (đau cơ xương, đau nội tạng).
+  - **Đau thần kinh (Neuropathic):** Đau do tổn thương hệ thần kinh (đau thần kinh tọa, đau sau zona).
+  - **Đau hỗn hợp:** Kết hợp cả hai.
+
+**Đánh giá đau:**
+- **Thang điểm số (NRS):** 0–10 (0 = không đau, 10 = đau tối đa).
+- **Thang điểm mặt (Faces):** Cho trẻ em, người không giao tiếp được.
+- **Thang điểm mô tả:** Nhẹ, trung bình, nặng.
+
+### 1.2. Định nghĩa viêm
+
+**Viêm (Inflammation):**
+- Phản ứng bảo vệ của cơ thể với tổn thương hoặc nhiễm trùng.
+- Đặc trưng: đỏ (rubor), nóng (calor), sưng (tumor), đau (dolor), mất chức năng (functio laesa).
+
+**Phân loại viêm:**
+- **Theo thời gian:**
+  - **Viêm cấp:** Vài ngày đến vài tuần (nhiễm trùng, chấn thương).
+  - **Viêm mạn:** Vài tuần đến vài tháng/năm (viêm khớp dạng thấp, viêm ruột).
+- **Theo nguyên nhân:**
+  - **Viêm nhiễm trùng:** Do vi khuẩn, virus, nấm.
+  - **Viêm không nhiễm trùng:** Do chấn thương, tự miễn, hóa chất.
+
+### 1.3. Cơ chế bệnh sinh đau
+
+**Con đường truyền đau:**
+1. **Kích thích (Transduction):**
+   - Tổn thương mô → giải phóng các chất gây đau (bradykinin, prostaglandin, histamine, serotonin).
+   - Kích thích thụ thể đau (nociceptors) ở da, cơ, nội tạng.
+2. **Dẫn truyền (Transmission):**
+   - Tín hiệu đau → sợi thần kinh Aδ (đau nhanh, nhọn) và C (đau chậm, âm ỉ).
+   - Tủy sống → đồi thị → vỏ não.
+3. **Điều biến (Modulation):**
+   - Hệ thống điều biến đau (endogenous opioids, serotonin, norepinephrine).
+   - Cổng kiểm soát (gate control) ở tủy sống.
+4. **Nhận thức (Perception):**
+   - Vỏ não nhận thức đau.
+   - Ảnh hưởng bởi cảm xúc, ký ức, văn hóa.
+
+**Các chất trung gian gây đau:**
+- **Prostaglandin:** Tăng nhạy cảm thụ thể đau, gây viêm.
+- **Bradykinin:** Gây đau, giãn mạch, tăng tính thấm.
+- **Histamine:** Gây đau, ngứa.
+- **Serotonin:** Gây đau, co mạch.
+- **Substance P:** Dẫn truyền đau, viêm.
+
+### 1.4. Cơ chế bệnh sinh viêm
+
+**Quá trình viêm:**
+1. **Khởi phát (Initiation):**
+   - Tổn thương mô → giải phóng DAMPs (Damage-Associated Molecular Patterns).
+   - Kích hoạt hệ thống bổ thể, đông máu, kinin.
+2. **Khuếch đại (Amplification):**
+   - Mast cells degranulation → histamine, tryptase.
+   - Macrophages → TNF-α, IL-1, IL-6.
+   - Neutrophils → enzyme phân hủy, gốc tự do.
+3. **Duy trì (Maintenance):**
+   - T-cells → cytokine (IL-17, IFN-γ).
+   - B-cells → kháng thể.
+   - Fibroblasts → collagen, sẹo.
+4. **Giải quyết (Resolution):**
+   - Lipoxins, resolvins → chấm dứt viêm.
+   - Phục hồi mô.
+
+**Các chất trung gian viêm:**
+- **Cytokine:** TNF-α, IL-1, IL-6, IL-17 (gây viêm).
+- **Chemokine:** Thu hút bạch cầu đến vị trí viêm.
+- **Prostaglandin:** PGE2 (gây đau, sốt, viêm).
+- **Leukotriene:** LTB4 (thu hút bạch cầu), LTC4/D4/E4 (co thắt, tăng tiết).
+- **Gốc tự do:** O₂⁻, OH⁻ (tổn thương mô).
+
+## 2. Tổng quan thuốc giảm đau chống viêm
+
+### 2.1. Phân loại thuốc giảm đau
 
 **Theo cơ chế:**
 - **Paracetamol (Acetaminophen):** Ức chế COX ở hệ thần kinh trung ương, giảm đau và hạ sốt (không chống viêm).

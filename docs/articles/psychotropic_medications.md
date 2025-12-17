@@ -21,9 +21,124 @@ summary:
 
 # Thuốc hướng thần tâm thần kinh: Chống trầm cảm, Chống loạn thần, Ổn định khí sắc, Chống lo âu
 
-## 1. Tổng quan
+## 1. Giới thiệu về các rối loạn tâm thần
 
-### 1.1. Phân loại thuốc hướng thần
+### 1.1. Định nghĩa và dịch tễ
+
+**Rối loạn tâm thần (Psychiatric Disorders):**
+- Các rối loạn ảnh hưởng đến suy nghĩ, cảm xúc, hành vi và chức năng xã hội.
+- Nguyên nhân: đa yếu tố (di truyền, môi trường, sinh học, tâm lý xã hội).
+
+**Dịch tễ:**
+- **Trầm cảm (Major Depressive Disorder):** 5–10% dân số, nữ > nam (2:1).
+- **Rối loạn lo âu (Anxiety Disorders):** 15–20% dân số.
+- **Rối loạn lưỡng cực (Bipolar Disorder):** 1–3% dân số.
+- **Tâm thần phân liệt (Schizophrenia):** 0.5–1% dân số.
+- **Rối loạn ADHD:** 5–10% trẻ em, 2–5% người lớn.
+- **Sa sút trí tuệ (Dementia):** 5–10% người >65 tuổi, tăng theo tuổi.
+
+### 1.2. Phân loại các rối loạn tâm thần
+
+**Theo DSM-5/ICD-11:**
+- **Rối loạn tâm trạng (Mood Disorders):**
+  - Trầm cảm (Major Depressive Disorder, Persistent Depressive Disorder).
+  - Rối loạn lưỡng cực (Bipolar I, Bipolar II, Cyclothymia).
+- **Rối loạn lo âu (Anxiety Disorders):**
+  - Rối loạn lo âu lan tỏa (GAD), Rối loạn hoảng sợ, Rối loạn ám ảnh cưỡng chế (OCD).
+- **Rối loạn loạn thần (Psychotic Disorders):**
+  - Tâm thần phân liệt, Rối loạn loạn thần ngắn, Rối loạn hoang tưởng.
+- **Rối loạn phát triển thần kinh:**
+  - ADHD, Rối loạn phổ tự kỷ, Sa sút trí tuệ.
+- **Rối loạn liên quan chất:**
+  - Lệ thuộc rượu, ma túy, thuốc.
+
+**Theo mức độ:**
+- **Nhẹ:** Ảnh hưởng ít đến hoạt động hàng ngày.
+- **Trung bình:** Ảnh hưởng đáng kể đến hoạt động.
+- **Nặng:** Ảnh hưởng nghiêm trọng, có thể cần nhập viện.
+
+### 1.3. Cơ chế bệnh sinh
+
+**Trầm cảm:**
+
+**1. Giả thuyết monoamine:**
+- Giảm nồng độ monoamine (serotonin, norepinephrine, dopamine) ở synapse.
+- Cơ chế: giảm sản xuất, tăng phân hủy, tăng tái hấp thu.
+
+**2. Giả thuyết neurotrophic:**
+- Giảm BDNF (Brain-Derived Neurotrophic Factor) → giảm tạo tế bào thần kinh mới (neurogenesis).
+- Stress mạn tính → tăng cortisol → giảm BDNF.
+
+**3. Giả thuyết viêm:**
+- Tăng cytokine gây viêm (IL-6, TNF-α) → ảnh hưởng chức năng thần kinh.
+
+**4. Yếu tố di truyền:**
+- Heritability: 40–50%.
+- Đa gen, tương tác gen-môi trường.
+
+**Rối loạn lưỡng cực:**
+
+**1. Rối loạn chức năng monoamine:**
+- Giai đoạn hưng cảm: tăng dopamine, norepinephrine.
+- Giai đoạn trầm cảm: giảm monoamine.
+
+**2. Rối loạn nhịp sinh học:**
+- Rối loạn chu kỳ ngủ-thức, melatonin.
+
+**3. Rối loạn chức năng thần kinh:**
+- Bất thường ở vỏ não trước trán, hạch nền, hệ limbic.
+
+**Tâm thần phân liệt:**
+
+**1. Giả thuyết dopamine:**
+- Tăng hoạt động dopamine ở đường mesolimbic → triệu chứng dương tính (ảo giác, hoang tưởng).
+- Giảm hoạt động dopamine ở đường mesocortical → triệu chứng âm tính (thờ ơ, giảm cảm xúc).
+
+**2. Giả thuyết glutamate:**
+- Giảm hoạt động NMDA receptor → rối loạn chức năng thần kinh.
+
+**3. Yếu tố phát triển:**
+- Bất thường phát triển thần kinh (gen, môi trường sớm).
+
+**Rối loạn lo âu:**
+
+**1. Rối loạn hệ GABA:**
+- Giảm hoạt động GABA (chất ức chế chính) → tăng lo âu.
+
+**2. Rối loạn hệ serotonin:**
+- Giảm serotonin → tăng lo âu.
+
+**3. Rối loạn hệ noradrenaline:**
+- Tăng hoạt động noradrenaline → tăng lo âu, hoảng sợ.
+
+**Sa sút trí tuệ (Alzheimer):**
+
+**1. Giảm acetylcholine:**
+- Mất tế bào thần kinh cholinergic → giảm acetylcholine → giảm trí nhớ, nhận thức.
+
+**2. Tích tụ amyloid-β và tau:**
+- Amyloid-β plaques, tau tangles → tổn thương tế bào thần kinh.
+
+**3. Viêm thần kinh:**
+- Viêm mạn tính → tổn thương thêm.
+
+### 1.4. Yếu tố nguy cơ
+
+**Chung:**
+- Tiền sử gia đình, stress mạn tính, chấn thương tâm lý, lạm dụng chất.
+
+**Trầm cảm:**
+- Nữ, tuổi trẻ-trung niên, bệnh mạn tính, thuốc (corticosteroid, interferon).
+
+**Rối loạn lưỡng cực:**
+- Tiền sử gia đình, stress, rối loạn giấc ngủ.
+
+**Tâm thần phân liệt:**
+- Tiền sử gia đình, biến chứng khi sinh, nhiễm trùng sớm, sử dụng cannabis.
+
+## 2. Tổng quan thuốc hướng thần
+
+### 2.1. Phân loại thuốc hướng thần
 
 **Theo chỉ định:**
 - **Chống trầm cảm:** SSRI, SNRI, TCA, MAOI, atypical.
