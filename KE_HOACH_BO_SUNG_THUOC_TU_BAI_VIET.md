@@ -1,7 +1,7 @@
 # 📋 Kế Hoạch Bổ Sung Thuốc Từ Các Bài Viết Chuyên Sâu
 
 **Ngày tạo:** 2025-02-05  
-**Cơ sở:** Phân tích các bài viết chuyên sâu trong `docs/articles/`  
+**Cơ sở:** Phân tích các bài viết chuyên sâu trong `content/articles/`  
 **Mục tiêu:** Bổ sung các thuốc quan trọng được đề cập trong bài viết nhưng chưa có trong database
 
 ---
@@ -593,16 +593,16 @@ python -c "from drugs.drug_database import TOTAL_DRUGS; print(f'Total: {TOTAL_DR
 
 ## 📚 TÀI LIỆU THAM KHẢO
 
-- `docs/articles/bronchodilators_copd_asthma.md`
-- `docs/articles/psychotropic_medications.md`
-- `docs/articles/pain_relief_antiinflammatory.md`
-- `docs/articles/antiallergy_medications.md`
-- `docs/articles/atrial_fibrillation.md`
-- `docs/articles/hypertension.md`
-- `docs/articles/acid_suppression.md`
-- `docs/articles/topical_medications.md`
-- `docs/articles/electrolyte_disorders.md`
-- `docs/articles/sepsis_bundle.md`
+- `content/articles/bronchodilators_copd_asthma.md`
+- `content/articles/psychotropic_medications.md`
+- `content/articles/pain_relief_antiinflammatory.md`
+- `content/articles/antiallergy_medications.md`
+- `content/articles/atrial_fibrillation.md`
+- `content/articles/hypertension.md`
+- `content/articles/acid_suppression.md`
+- `content/articles/topical_medications.md`
+- `content/articles/electrolyte_disorders.md`
+- `content/articles/sepsis_bundle.md`
 - `DANH_SACH_THUOC_CAN_BO_SUNG_2025_02_05.md`
 - `drugs/DRUG_EXPANSION_PLAN.md`
 
