@@ -1,10 +1,13 @@
 """
 Trang hiển thị các bài viết chuyên sâu.
 Nội dung lấy từ docs/articles/*.md với metadata khai báo trong ARTICLES.
+Thiết kế lại với UI/UX đẹp và khoa học hơn.
 """
 
 from pathlib import Path
 import streamlit as st
+import streamlit.components.v1 as components
+from collections import Counter
 
 from utils.page_helper import setup_page, render_standard_footer
 
@@ -448,49 +451,195 @@ def load_article_content(path: Path) -> str:
         return ""
 
 
-def render_article_card(article: dict):
-    """Hiển thị thẻ bài viết với tóm tắt và nội dung đầy đủ."""
-    header = f"{article['title']} — {article['specialty']}"
-    with st.expander(header, expanded=False):
-        st.caption(f"🔄 Cập nhật: {article.get('last_reviewed', 'N/A')}  |  📑 Hướng dẫn: {', '.join(article.get('guidelines', []))}")
+def estimate_reading_time(content: str) -> int:
+    """Ước tính thời gian đọc (phút) dựa trên số từ."""
+    words = len(content.split())
+    # Trung bình 200 từ/phút
+    return max(1, round(words / 200))
 
-        if article.get("summary"):
-            st.markdown("**Điểm cần nhớ:**")
-            for item in article["summary"]:
-                st.markdown(f"- {item}")
 
-        if article.get("related_calculators") or article.get("related_protocols"):
-            st.markdown("**Liên kết nội bộ:**")
-            if article.get("related_calculators"):
-                st.write("📊 Calculators:", ", ".join(article["related_calculators"]))
-            if article.get("related_protocols"):
-                st.write("📋 Protocols:", ", ".join(article["related_protocols"]))
+def get_specialty_color(specialty: str) -> tuple:
+    """Trả về màu gradient và border cho từng chuyên khoa."""
+    colors = {
+        "Tim mạch": ("linear-gradient(135deg, #667eea 0%, #764ba2 100%)", "#667eea"),
+        "Tim mạch cấp cứu": ("linear-gradient(135deg, #f093fb 0%, #f5576c 100%)", "#f5576c"),
+        "Tim mạch / Hồi sức": ("linear-gradient(135deg, #f093fb 0%, #f5576c 100%)", "#f5576c"),
+        "Tim mạch / Rối loạn nhịp": ("linear-gradient(135deg, #667eea 0%, #764ba2 100%)", "#667eea"),
+        "Tiêu hóa / Hồi sức": ("linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)", "#4facfe"),
+        "Tiêu hóa / Gan mật": ("linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)", "#43e97b"),
+        "Hô hấp": ("linear-gradient(135deg, #fa709a 0%, #fee140 100%)", "#fa709a"),
+        "Hồi sức / Thở máy": ("linear-gradient(135deg, #30cfd0 0%, #330867 100%)", "#30cfd0"),
+        "Hồi sức / Nhiễm khuẩn": ("linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)", "#a8edea"),
+        "Nội tiết / Chuyển hóa": ("linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)", "#fcb69f"),
+        "Nhiễm khuẩn / Dược lâm sàng": ("linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)", "#ff9a9e"),
+        "Sản khoa": ("linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)", "#ffecd2"),
+        "Thận / Hồi sức": ("linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)", "#a8edea"),
+        "Thần kinh / Cấp cứu": ("linear-gradient(135deg, #667eea 0%, #764ba2 100%)", "#667eea"),
+        "Thần kinh / Dược lâm sàng": ("linear-gradient(135deg, #667eea 0%, #764ba2 100%)", "#667eea"),
+        "Nội khoa / Hồi sức": ("linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)", "#4facfe"),
+        "Cấp cứu / Dị ứng": ("linear-gradient(135deg, #f093fb 0%, #f5576c 100%)", "#f5576c"),
+        "Dị ứng / Dược lâm sàng": ("linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)", "#ff9a9e"),
+        "Giảm đau / Dược lâm sàng": ("linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)", "#ffecd2"),
+        "Da liễu / Dược lâm sàng": ("linear-gradient(135deg, #fa709a 0%, #fee140 100%)", "#fa709a"),
+        "Tâm thần / Dược lâm sàng": ("linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)", "#a8edea"),
+        "Hô hấp / Dược lâm sàng": ("linear-gradient(135deg, #fa709a 0%, #fee140 100%)", "#fa709a"),
+    }
+    return colors.get(specialty, ("linear-gradient(135deg, #667eea 0%, #764ba2 100%)", "#667eea"))
 
-        content = load_article_content(article["path"])
+
+def render_statistics_dashboard(articles: list):
+    """Hiển thị dashboard thống kê về các bài viết."""
+    total_articles = len(articles)
+    specialties = Counter([a["specialty"] for a in articles])
+    total_guidelines = len(set([g for a in articles for g in a.get("guidelines", [])]))
+    total_keywords = len(set([k for a in articles for k in a.get("keywords", [])]))
+    
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.metric("📚 Tổng số bài viết", total_articles)
+    with col2:
+        st.metric("🩺 Chuyên khoa", len(specialties))
+    with col3:
+        st.metric("📑 Hướng dẫn", total_guidelines)
+    with col4:
+        st.metric("🏷️ Từ khóa", total_keywords)
+
+
+def render_article_card(article: dict, index: int):
+    """Hiển thị thẻ bài viết với thiết kế đẹp và khoa học."""
+    specialty = article["specialty"]
+    gradient, border_color = get_specialty_color(specialty)
+    
+    # Tính toán reading time
+    content = load_article_content(article["path"])
+    reading_time = estimate_reading_time(content) if content else 0
+    
+    # Tạo card HTML với thiết kế đẹp
+    card_id = f"article_card_{article['id']}"
+    
+    card_html = f"""
+    <div id="{card_id}" style="
+        background: white;
+        border-radius: 16px;
+        padding: 0;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border-left: 4px solid {border_color};
+        overflow: hidden;
+    " onmouseover="
+        this.style.transform='translateY(-4px)';
+        this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';
+    " onmouseout="
+        this.style.transform='translateY(0)';
+        this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';
+    ">
+        <!-- Header với gradient -->
+        <div style="
+            background: {gradient};
+            padding: 20px 24px;
+            color: white;
+        ">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                <h3 style="margin: 0; font-size: 1.3rem; font-weight: 600; color: white; line-height: 1.4;">
+                    {article['title']}
+                </h3>
+                <span style="
+                    background: rgba(255,255,255,0.2);
+                    padding: 4px 12px;
+                    border-radius: 12px;
+                    font-size: 0.85rem;
+                    white-space: nowrap;
+                    margin-left: 12px;
+                ">{specialty}</span>
+            </div>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.85rem; opacity: 0.95;">
+                <span>🔄 {article.get('last_reviewed', 'N/A')}</span>
+                {f'<span>⏱️ {reading_time} phút đọc</span>' if reading_time > 0 else ''}
+                <span>📑 {len(article.get('guidelines', []))} guideline</span>
+            </div>
+        </div>
+        
+        <!-- Body -->
+        <div style="padding: 20px 24px;">
+            <!-- Guidelines badges -->
+            <div style="margin-bottom: 16px;">
+                {" ".join([f'<span style="background: #e3f2fd; color: #1976d2; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; margin-right: 6px; margin-bottom: 6px; display: inline-block;">{g}</span>' for g in article.get('guidelines', [])[:3]])}
+            </div>
+            
+            <!-- Summary points -->
+            <div style="margin-bottom: 16px;">
+                <strong style="color: #424242; font-size: 0.95rem;">💡 Điểm cần nhớ:</strong>
+                <ul style="margin: 8px 0 0 0; padding-left: 20px; color: #616161; font-size: 0.9rem; line-height: 1.6;">
+                    {"".join([f'<li style="margin-bottom: 6px;">{item}</li>' for item in article.get('summary', [])[:3]])}
+                </ul>
+            </div>
+            
+            <!-- Keywords tags -->
+            {f'''
+            <div style="margin-bottom: 16px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    {" ".join([f'<span style="background: #f5f5f5; color: #616161; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; border: 1px solid #e0e0e0;">{k}</span>' for k in article.get('keywords', [])[:6]])}
+                </div>
+            </div>
+            ''' if article.get('keywords') else ''}
+            
+            <!-- Related links -->
+            <div style="
+                background: #f8f9fa;
+                padding: 12px 16px;
+                border-radius: 8px;
+                margin-top: 16px;
+            ">
+                <div style="font-size: 0.85rem; color: #616161;">
+                    {f'<div style="margin-bottom: 8px;"><strong>📊 Calculators:</strong> {", ".join(article.get("related_calculators", [])[:3])}</div>' if article.get('related_calculators') else ''}
+                    {f'<div><strong>📋 Protocols:</strong> {", ".join(article.get("related_protocols", [])[:2])}</div>' if article.get('related_protocols') else ''}
+                </div>
+            </div>
+        </div>
+    </div>
+    """
+    
+    components.html(card_html, height=400, scrolling=False)
+    
+    # Streamlit expander cho nội dung đầy đủ
+    with st.expander(f"📖 Đọc toàn bộ: {article['title']}", expanded=False):
         if content:
-            st.markdown("---")
             st.markdown(content)
         else:
             st.warning(f"Không tìm thấy nội dung tại {article['path'].name}.")
 
 
-def filter_articles(search: str, specialties: list):
-    """Lọc bài viết theo từ khóa và chuyên khoa."""
+def filter_articles(search: str, specialties: list, selected_keywords: list):
+    """Lọc bài viết theo từ khóa, chuyên khoa và keywords."""
     search_lower = search.lower()
     filtered = []
+    
     for article in ARTICLES:
+        # Filter by specialty
         if specialties and article["specialty"] not in specialties:
             continue
-        haystack = " ".join(
-            [
+        
+        # Filter by keywords
+        if selected_keywords:
+            article_keywords = [k.lower() for k in article.get("keywords", [])]
+            if not any(kw.lower() in article_keywords for kw in selected_keywords):
+                continue
+        
+        # Filter by search text
+        if search_lower:
+            haystack = " ".join([
                 article["title"],
                 article["specialty"],
                 " ".join(article.get("keywords", [])),
                 " ".join(article.get("summary", [])),
-            ]
-        ).lower()
-        if search_lower in haystack:
-            filtered.append(article)
+            ]).lower()
+            if search_lower not in haystack:
+                continue
+        
+        filtered.append(article)
+    
     return filtered
 
 
@@ -500,38 +649,89 @@ def main():
         page_icon="📚",
         description="Tổng hợp chuyên sâu theo guideline mới nhất, gắn liền calculators/protocols trong ứng dụng.",
     )
-
+    
+    # Statistics Dashboard
+    render_statistics_dashboard(ARTICLES)
+    
+    st.markdown("---")
+    
     # Sidebar filters
     with st.sidebar:
-        st.header("🔎 Tìm kiếm")
-        search = st.text_input("Nhập từ khóa", value="", placeholder="VD: tăng huyết áp, PPI, ICU...")
-
+        st.header("🔎 Tìm kiếm & Lọc")
+        
+        search = st.text_input(
+            "🔍 Tìm kiếm",
+            value="",
+            placeholder="VD: tăng huyết áp, PPI, ICU, sepsis...",
+            help="Tìm kiếm theo tiêu đề, chuyên khoa, từ khóa hoặc nội dung"
+        )
+        
         st.markdown("---")
-        st.header("🩺 Lọc theo chuyên khoa")
+        
+        st.subheader("🩺 Chuyên khoa")
         all_specialties = sorted({article["specialty"] for article in ARTICLES})
         selected_specialties = st.multiselect(
             "Chọn chuyên khoa",
             options=all_specialties,
             default=[],
+            help="Chọn một hoặc nhiều chuyên khoa để lọc"
         )
-
+        
         st.markdown("---")
-        st.info(
-            "Nội dung cập nhật theo guideline quốc tế (ESC/ESH, ACC/AHA, ACG/AGA, ASHP...) "
-            "và sẽ được mở rộng dần."
+        
+        st.subheader("🏷️ Từ khóa phổ biến")
+        all_keywords = sorted(set([k for a in ARTICLES for k in a.get("keywords", [])]))
+        # Hiển thị top keywords
+        keyword_counts = Counter([k for a in ARTICLES for k in a.get("keywords", [])])
+        top_keywords = [k for k, _ in keyword_counts.most_common(15)]
+        
+        selected_keywords = st.multiselect(
+            "Chọn từ khóa",
+            options=top_keywords,
+            default=[],
+            help="Chọn từ khóa để lọc bài viết liên quan"
         )
-
-    filtered = filter_articles(search, selected_specialties)
-
+        
+        st.markdown("---")
+        
+        st.info("""
+        **📚 Thông tin:**
+        
+        - Nội dung cập nhật theo guideline quốc tế mới nhất
+        - ESC/ESH, ACC/AHA, ACG/AGA, ASHP, IDSA, SSC...
+        - Tích hợp với calculators và protocols trong app
+        - Được mở rộng và cập nhật định kỳ
+        """)
+        
+        st.markdown("---")
+        
+        # Quick stats
+        st.caption(f"**Tổng số bài viết:** {len(ARTICLES)}")
+        st.caption(f"**Chuyên khoa:** {len(all_specialties)}")
+    
+    # Filter articles
+    filtered = filter_articles(search, selected_specialties, selected_keywords)
+    
+    # Display results
     if not filtered:
-        st.warning("Không tìm thấy bài viết phù hợp.")
+        st.warning("""
+        **Không tìm thấy bài viết phù hợp.**
+        
+        Thử:
+        - Xóa bộ lọc chuyên khoa
+        - Thay đổi từ khóa tìm kiếm
+        - Chọn từ khóa khác
+        """)
     else:
-        for article in filtered:
-            render_article_card(article)
-
+        st.success(f"Tìm thấy **{len(filtered)}** bài viết phù hợp")
+        st.markdown("---")
+        
+        # Display articles in grid
+        for idx, article in enumerate(filtered):
+            render_article_card(article, idx)
+    
     render_standard_footer(disclaimer=True)
 
 
 if __name__ == "__main__":
     main()
-
