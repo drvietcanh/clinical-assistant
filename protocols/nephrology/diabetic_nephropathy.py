@@ -64,9 +64,9 @@ def render():
 
 def render_diagnosis():
     """Diagnosis and screening"""
-    st.success("## 🔍 Chẩn Đoán & Tầm Soát")
+    st.success("## 🔍 Chẩn đoán & Tầm Soát")
     
-    st.markdown("### Tiêu Chuẩn Chẩn Đoán")
+    st.markdown("### Tiêu chuẩn Chẩn đoán")
     st.info("""
     **Bệnh thận do đái tháo đường khi có:**
     1. **Đái tháo đường type 1 hoặc type 2**
@@ -137,7 +137,7 @@ def render_diagnosis():
 
 def render_early_stage():
     """Early stage management (CKD G1-G2)"""
-    st.warning("## 💊 Điều Trị Bảo Tồn (Giai Đoạn Sớm)")
+    st.warning("## 💊 Điều trị Bảo Tồn (Giai Đoạn Sớm)")
     
     st.markdown("### 1. Kiểm Soát Đường Huyết")
     st.success("""
@@ -215,7 +215,7 @@ def render_early_stage():
 
 def render_advanced():
     """Advanced stage management (CKD G3-5)"""
-    st.error("## 🩸 Điều Trị Giai Đoạn Tiến Triển (CKD G3-5)")
+    st.error("## 🩸 Điều trị Giai Đoạn Tiến Triển (CKD G3-5)")
     
     st.markdown("### 1. Điều Chỉnh Thuốc Đái Tháo Đường")
     st.warning("""
@@ -238,7 +238,7 @@ def render_advanced():
     """)
     
     st.markdown("---")
-    st.markdown("### 2. Điều Trị Biến Chứng CKD")
+    st.markdown("### 2. Điều trị Biến Chứng CKD")
     st.info("""
     **Thiếu máu:**
     - Bổ sung sắt nếu ferritin <100 ng/mL
@@ -297,9 +297,9 @@ def render_advanced():
 
 def render_monitoring():
     """Monitoring and prevention"""
-    st.info("## 📊 Theo Dõi & Phòng Ngừa")
+    st.info("## 📊 Theo dõi & Phòng ngừa")
     
-    st.markdown("### Theo Dõi Định Kỳ")
+    st.markdown("### Theo dõi Định Kỳ")
     st.success("""
     **Mỗi 3-6 tháng:**
     - ACR (albumin/creatinine ratio)
@@ -321,7 +321,7 @@ def render_monitoring():
     """)
     
     st.markdown("---")
-    st.markdown("### Phòng Ngừa Tiến Triển")
+    st.markdown("### Phòng ngừa Tiến Triển")
     st.warning("""
     **Kiểm soát tốt:**
     - Đường huyết: HbA1c <7%

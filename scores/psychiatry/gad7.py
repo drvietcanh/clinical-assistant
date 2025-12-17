@@ -294,7 +294,7 @@ def render():
             # Comorbidity screening
             if total_score >= 10:
                 st.markdown("---")
-                st.subheader("🔍 Sàng lọc Bệnh Đồng Mắc")
+                st.subheader("🔍 Sàng lọc bệnh đồng mắc")
                 
                 st.warning("""
                 **Lưu ý:** Rối loạn lo âu thường đi kèm với:
@@ -478,7 +478,7 @@ def render():
         - **Cai chất:** Alcohol, benzodiazepines
         """)
     
-    with st.expander("💡 Kỹ Thuật Tự Quản lý Lo âu"):
+    with st.expander("💡 Kỹ thuật tự quản lý lo âu"):
         st.markdown("""
         ### Kỹ thuật hô hấp:
         

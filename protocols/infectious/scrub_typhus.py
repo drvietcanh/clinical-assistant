@@ -26,7 +26,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: DIAGNOSTIC CRITERIA ==========
-    st.markdown("### 📋 Tiêu Chuẩn Chẩn Đoán")
+    st.markdown("### 📋 Tiêu chuẩn Chẩn đoán")
     
     with st.expander("🔍 Tiêu chuẩn chẩn đoán", expanded=True):
         st.markdown("""
@@ -49,7 +49,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: CLINICAL CLASSIFICATION ==========
-    st.markdown("### 📊 Phân Loại Lâm Sàng")
+    st.markdown("### 📊 Phân loại Lâm Sàng")
     
     severity = st.radio(
         "**Mức độ bệnh:**",
@@ -64,7 +64,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 3: TREATMENT ==========
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
     if "Nhẹ" in severity or "Trung bình" in severity:
         render_mild_moderate()
@@ -112,7 +112,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     col1, col2 = st.columns(2)
     
@@ -216,7 +216,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: PREVENTION ==========
-    st.markdown("### 🛡️ Phòng Ngừa")
+    st.markdown("### 🛡️ Phòng ngừa")
     
     st.info("""
     **Phòng ngừa sốt mò:**
@@ -245,7 +245,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 9: DIFFERENTIAL DIAGNOSIS ==========
-    st.markdown("### 🔍 Chẩn Đoán Phân Biệt")
+    st.markdown("### 🔍 Chẩn đoán Phân Biệt")
     
     st.markdown("""
     **Các bệnh cần phân biệt:**
@@ -281,7 +281,7 @@ def render_mild_moderate():
     
     st.success("## ✅ SỐT MÒ NHẸ - TRUNG BÌNH")
     
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
     col1, col2 = st.columns(2)
     
@@ -332,7 +332,7 @@ def render_severe():
     
     st.error("## 🚨 SỐT MÒ NẶNG")
     
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
     st.error("""
     **Điều trị Khẩn Cấp:**
@@ -354,7 +354,7 @@ def render_severe():
     st.markdown("---")
     
     st.markdown("""
-    **Điều trị Hỗ Trợ:**
+    **Điều trị Hỗ trợ:**
     
     **1. Hạ sốt:**
     - Paracetamol 500-1000mg PO/IV q4-6h
@@ -397,7 +397,7 @@ def render_shock():
     **⚠️ CẤP CỨU - CẦN ĐIỀU TRỊ NGAY LẬP TỨC**
     """)
     
-    st.markdown("### 💊 Điều Trị Kháng Sinh")
+    st.markdown("### 💊 Điều trị Kháng sinh")
     
     st.error("""
     **Kháng sinh IV ngay lập tức:**
@@ -415,7 +415,7 @@ def render_shock():
     
     st.markdown("---")
     
-    st.markdown("### 💉 Điều Trị Sốc")
+    st.markdown("### 💉 Điều trị Sốc")
     
     st.error("""
     **1. Bù dịch:**
@@ -439,7 +439,7 @@ def render_shock():
     
     st.markdown("---")
     
-    st.markdown("### 🏥 Điều Trị Hỗ Trợ")
+    st.markdown("### 🏥 Điều trị Hỗ trợ")
     
     st.error("""
     **1. Hô hấp:**
@@ -473,7 +473,7 @@ def render_shock():
     
     st.markdown("---")
     
-    st.markdown("### 📈 Tiêu Chuẩn Cải Thiện")
+    st.markdown("### 📈 Tiêu chuẩn Cải Thiện")
     
     st.info("""
     **Dấu hiệu cải thiện:**

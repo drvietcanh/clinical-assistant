@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """NAFLD/NASH Management Protocol"""
-    st.subheader("🫀 Điều Trị Bệnh Gan Nhiễm Mỡ Không Do Rượu (NAFLD/NASH)")
+    st.subheader("🫀 Điều trị Bệnh Gan Nhiễm Mỡ Không Do Rượu (NAFLD/NASH)")
     st.caption("AASLD 2018, EASL 2021 - Management of NAFLD and NASH")
     
     st.info("""
@@ -33,12 +33,12 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Chẩn Đoán")
+    st.markdown("### 📊 Chẩn đoán")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Tiêu Chuẩn Chẩn Đoán")
+        st.markdown("#### Tiêu chuẩn Chẩn đoán")
         st.info("""
         **Chẩn đoán NAFLD khi:**
         1. Có mỡ trong gan (hình ảnh hoặc sinh thiết)
@@ -59,7 +59,7 @@ def render():
         )
     
     with col2:
-        st.markdown("#### Đánh Giá")
+        st.markdown("#### Đánh giá")
         bmi = st.number_input(
             "**BMI (kg/m²):**",
             min_value=15.0,
@@ -87,7 +87,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
     st.markdown("#### 1. Thay Đổi Lối Sống")
     
@@ -109,7 +109,7 @@ def render():
     - **Kết hợp:** Tốt nhất
     """)
     
-    st.markdown("#### 2. Điều Trị Bệnh Đi Kèm")
+    st.markdown("#### 2. Điều trị Bệnh Đi Kèm")
     
     st.info("""
     **Đái tháo đường:**
@@ -126,7 +126,7 @@ def render():
     - **ACE inhibitors/ARBs:** Ưu tiên
     """)
     
-    st.markdown("#### 3. Thuốc Điều Trị NASH")
+    st.markdown("#### 3. Thuốc Điều trị NASH")
     
     treatment_choice = st.selectbox(
         "**Chọn điều trị:**",
@@ -152,7 +152,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     with st.expander("📋 Xem lịch theo dõi", expanded=True):
         st.markdown("""
@@ -173,7 +173,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚠️ Tiên Lượng")
+    st.markdown("### ⚠️ Tiên lượng")
     
     col1, col2 = st.columns(2)
     
@@ -228,7 +228,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Danh Sách Kiểm Tra")
+    st.markdown("### 📋 Danh Sách Kiểm tra")
     
     checklist_items = [
         "✅ Chẩn đoán NAFLD/NASH (loại trừ nguyên nhân khác)",

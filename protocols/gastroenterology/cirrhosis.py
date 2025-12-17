@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Cirrhosis Management Protocol"""
-    st.subheader("🫀 Quản Lý Xơ Gan (Cirrhosis Management)")
+    st.subheader("🫀 Quản lý Xơ Gan (Cirrhosis Management)")
     st.caption("AASLD 2021, EASL 2018 - Management of cirrhosis and complications")
     
     st.info("""
@@ -28,12 +28,12 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Đánh Giá Ban Đầu")
+    st.markdown("### 📊 Đánh giá Ban Đầu")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Chẩn Đoán")
+        st.markdown("#### Chẩn đoán")
         st.info("""
         **Lâm sàng:**
         - Tiền sử: Viêm gan B/C, rượu, béo phì
@@ -53,7 +53,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("#### Phân Loại")
+        st.markdown("#### Phân loại")
         cirrhosis_stage = st.selectbox(
             "**Giai đoạn xơ gan:**",
             ["Compensated (Chưa mất bù)", "Decompensated (Đã mất bù)"],
@@ -82,7 +82,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều Trị Nguyên Nhân")
+    st.markdown("### 💊 Điều trị Nguyên nhân")
     
     if "Viêm gan B" in etiology:
         st.warning("""
@@ -124,7 +124,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🔴 Quản Lý Biến Chứng")
+    st.markdown("### 🔴 Quản lý Biến Chứng")
     
     complication = st.selectbox(
         "**Biến chứng:**",
@@ -156,7 +156,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Theo Dõi & Tầm Soát")
+    st.markdown("### 📋 Theo dõi & Tầm Soát")
     
     with st.expander("📋 Xem lịch theo dõi", expanded=True):
         st.markdown("""
@@ -216,7 +216,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Danh Sách Kiểm Tra")
+    st.markdown("### 📋 Danh Sách Kiểm tra")
     
     checklist_items = [
         "✅ Chẩn đoán xơ gan (lâm sàng, xét nghiệm, hình ảnh)",
@@ -270,7 +270,7 @@ def render_ascites():
     """Ascites Management"""
     st.error("## 🔴 Cổ Trướng (Ascites)")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.warning("""
     **1. Hạn chế muối:**
@@ -291,7 +291,7 @@ def render_ascites():
     - Truyền Albumin: 6-8g/L dịch rút ra
     """)
     
-    st.markdown("### Theo Dõi")
+    st.markdown("### Theo dõi")
     
     st.info("""
     - **Cân nặng:** Mỗi ngày
@@ -303,7 +303,7 @@ def render_ascites():
 
 def render_variceal_bleeding():
     """Variceal Bleeding Management"""
-    st.error("## 🔴 Xuất Huyết Giãn Tĩnh Mạch Thực Quản")
+    st.error("## 🔴 Xuất huyết Giãn Tĩnh Mạch Thực Quản")
     
     st.markdown("### Dự Phòng Sơ Cấp")
     
@@ -314,7 +314,7 @@ def render_variceal_bleeding():
     - **Hoặc:** Endoscopic variceal ligation (EVL)
     """)
     
-    st.markdown("### Điều Trị Cấp Cứu")
+    st.markdown("### Điều trị Cấp cứu")
     
     st.error("""
     **1. Hồi sức:**
@@ -338,7 +338,7 @@ def render_hepatic_encephalopathy():
     """Hepatic Encephalopathy Management"""
     st.error("## 🔴 Bệnh Não Gan (Hepatic Encephalopathy)")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.warning("""
     **1. Điều trị nguyên nhân:**
@@ -365,7 +365,7 @@ def render_hepatorenal_syndrome():
     """Hepatorenal Syndrome Management"""
     st.error("## 🔴 Hội Chứng Gan Thận (HRS)")
     
-    st.markdown("### Chẩn Đoán")
+    st.markdown("### Chẩn đoán")
     
     st.info("""
     **Tiêu chuẩn:**
@@ -375,7 +375,7 @@ def render_hepatorenal_syndrome():
     - Loại trừ: Nhiễm trùng, thuốc, bệnh thận khác
     """)
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.warning("""
     **1. Terlipressin:**
@@ -395,7 +395,7 @@ def render_spontaneous_bacterial_peritonitis():
     """SBP Management"""
     st.error("## 🔴 Viêm Phúc Mạc Tự Phát (SBP)")
     
-    st.markdown("### Chẩn Đoán")
+    st.markdown("### Chẩn đoán")
     
     st.info("""
     **Paracentesis:**
@@ -403,7 +403,7 @@ def render_spontaneous_bacterial_peritonitis():
     - Cấy dịch cổ trướng
     """)
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.warning("""
     **1. Kháng sinh:**
@@ -435,7 +435,7 @@ def render_hcc():
     - Hoặc: CT/MRI với contrast (arterial enhancement + washout)
     """)
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.warning("""
     **Theo giai đoạn (BCLC):**

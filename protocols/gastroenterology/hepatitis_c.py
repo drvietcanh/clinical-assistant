@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Hepatitis C Treatment Protocol"""
-    st.subheader("🫀 Điều Trị Viêm Gan C (Hepatitis C Treatment)")
+    st.subheader("🫀 Điều trị Viêm Gan C (Hepatitis C Treatment)")
     st.caption("AASLD/IDSA 2023, EASL 2023, WHO 2022 - DAA therapy for chronic hepatitis C")
     
     st.info("""
@@ -57,7 +57,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("#### Phân Loại Bệnh Nhân")
+        st.markdown("#### Phân loại Bệnh Nhân")
         genotype = st.selectbox(
             "**HCV Genotype:**",
             ["Genotype 1", "Genotype 2", "Genotype 3", "Genotype 4", "Genotype 5", "Genotype 6", "Chưa xác định"],
@@ -80,7 +80,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Phác Đồ Điều Trị DAA")
+    st.markdown("### 💊 Phác Đồ Điều trị DAA")
     
     st.markdown("#### Lựa Chọn Phác Đồ")
     
@@ -128,9 +128,9 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📈 Theo Dõi Điều Trị")
+    st.markdown("### 📈 Theo dõi Điều trị")
     
-    st.markdown("#### Lịch Theo Dõi")
+    st.markdown("#### Lịch Theo dõi")
     
     with st.expander("📋 Xem lịch theo dõi", expanded=True):
         st.markdown("""
@@ -216,7 +216,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Danh Sách Kiểm Tra")
+    st.markdown("### 📋 Danh Sách Kiểm tra")
     
     checklist_items = [
         "✅ Xét nghiệm HCV RNA (quantitative)",
@@ -271,7 +271,7 @@ def render():
 
 def render_genotype_1(cirrhosis, treatment_history):
     """Genotype 1 Treatment"""
-    st.success("## 💊 Điều Trị Genotype 1")
+    st.success("## 💊 Điều trị Genotype 1")
     
     if cirrhosis:
         st.warning("""
@@ -293,7 +293,7 @@ def render_genotype_1(cirrhosis, treatment_history):
 
 def render_genotype_2(cirrhosis, treatment_history):
     """Genotype 2 Treatment"""
-    st.success("## 💊 Điều Trị Genotype 2")
+    st.success("## 💊 Điều trị Genotype 2")
     
     st.info("""
     **Phác đồ ưu tiên:**
@@ -305,7 +305,7 @@ def render_genotype_2(cirrhosis, treatment_history):
 
 def render_genotype_3(cirrhosis, treatment_history):
     """Genotype 3 Treatment"""
-    st.success("## 💊 Điều Trị Genotype 3")
+    st.success("## 💊 Điều trị Genotype 3")
     
     st.warning("""
     **Genotype 3: Khó điều trị hơn**
@@ -319,7 +319,7 @@ def render_genotype_3(cirrhosis, treatment_history):
 
 def render_genotype_4(cirrhosis, treatment_history):
     """Genotype 4 Treatment"""
-    st.success("## 💊 Điều Trị Genotype 4")
+    st.success("## 💊 Điều trị Genotype 4")
     
     st.info("""
     **Phác đồ ưu tiên:**
@@ -332,7 +332,7 @@ def render_genotype_4(cirrhosis, treatment_history):
 
 def render_genotype_6(cirrhosis, treatment_history):
     """Genotype 6 Treatment (Common in Vietnam)"""
-    st.success("## 💊 Điều Trị Genotype 6 (Phổ Biến Ở Việt Nam)")
+    st.success("## 💊 Điều trị Genotype 6 (Phổ Biến Ở Việt Nam)")
     
     st.info("""
     **Genotype 6: Phổ biến ở Việt Nam và Đông Nam Á**

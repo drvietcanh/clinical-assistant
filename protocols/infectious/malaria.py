@@ -27,7 +27,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 1: CLINICAL CLASSIFICATION ==========
-    st.markdown("### 📊 Phân Loại Lâm Sàng")
+    st.markdown("### 📊 Phân loại Lâm Sàng")
     
     classification = st.radio(
         "**Phân loại sốt rét:**",
@@ -42,7 +42,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 2: DIAGNOSTIC CRITERIA ==========
-    st.markdown("### 📋 Tiêu Chuẩn Chẩn Đoán")
+    st.markdown("### 📋 Tiêu chuẩn Chẩn đoán")
     
     with st.expander("🔍 Tiêu chuẩn chẩn đoán", expanded=True):
         st.markdown("""
@@ -139,7 +139,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 5: MONITORING ==========
-    st.markdown("### 📈 Theo Dõi")
+    st.markdown("### 📈 Theo dõi")
     
     col1, col2 = st.columns(2)
     
@@ -253,7 +253,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 8: PREVENTION ==========
-    st.markdown("### 🛡️ Phòng Ngừa")
+    st.markdown("### 🛡️ Phòng ngừa")
     
     st.info("""
     **Phòng ngừa sốt rét:**
@@ -327,7 +327,7 @@ def render_uncomplicated_malaria(species):
     
     st.success("## ✅ SỐT RÉT ĐƠN GIẢN (Uncomplicated Malaria)")
     
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
     if "falciparum" in species or "Chưa" in species or "Tất cả" in species:
         st.markdown("#### **P. falciparum hoặc chưa xác định:**")
@@ -410,7 +410,7 @@ def render_severe_malaria():
     **⚠️ CẤP CỨU - CẦN ĐIỀU TRỊ NGAY LẬP TỨC**
     """)
     
-    st.markdown("### 💊 Điều Trị Kháng Sinh")
+    st.markdown("### 💊 Điều trị Kháng sinh")
     
     st.error("""
     **Kháng sinh IV ngay lập tức:**
@@ -430,7 +430,7 @@ def render_severe_malaria():
     
     st.markdown("---")
     
-    st.markdown("### 🏥 Điều Trị Hỗ Trợ")
+    st.markdown("### 🏥 Điều trị Hỗ trợ")
     
     st.error("""
     **1. Hạ sốt:**
@@ -469,7 +469,7 @@ def render_severe_malaria():
     
     st.markdown("---")
     
-    st.markdown("### 📈 Tiêu Chuẩn Cải Thiện")
+    st.markdown("### 📈 Tiêu chuẩn Cải Thiện")
     
     st.info("""
     **Dấu hiệu cải thiện:**
@@ -492,7 +492,7 @@ def render_relapsing_malaria():
     
     st.warning("## ⚠️ SỐT RÉT TÁI PHÁT (Relapsing Malaria - P. vivax/ovale)")
     
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
     st.info("""
     **Điều trị giai đoạn cấp:**

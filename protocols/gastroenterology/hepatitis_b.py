@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Hepatitis B Treatment Protocol"""
-    st.subheader("🫀 Điều Trị Viêm Gan B (Hepatitis B Treatment)")
+    st.subheader("🫀 Điều trị Viêm Gan B (Hepatitis B Treatment)")
     st.caption("AASLD 2018, EASL 2017, WHO 2021 - Management of chronic hepatitis B infection")
     
     st.info("""
@@ -58,7 +58,7 @@ def render():
         """)
     
     with col2:
-        st.markdown("#### Phân Loại Bệnh Nhân")
+        st.markdown("#### Phân loại Bệnh Nhân")
         hbeag_status = st.radio(
             "**HBeAg Status:**",
             ["HBeAg Positive", "HBeAg Negative"],
@@ -90,9 +90,9 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Chỉ Định Điều Trị")
+    st.markdown("### 💊 Chỉ định Điều trị")
     
-    st.markdown("#### ✅ Chỉ Định Điều Trị (Theo AASLD 2018)")
+    st.markdown("#### ✅ Chỉ định Điều trị (Theo AASLD 2018)")
     
     indication_checklist = st.checkbox("**Bệnh nhân có chỉ định điều trị nếu:**", key="hb_indication")
     
@@ -118,7 +118,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💉 Thuốc Điều Trị")
+    st.markdown("### 💉 Thuốc Điều trị")
     
     treatment_choice = st.radio(
         "**Lựa chọn Thuốc:**",
@@ -141,9 +141,9 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📈 Theo Dõi Điều Trị")
+    st.markdown("### 📈 Theo dõi Điều trị")
     
-    st.markdown("#### Lịch Theo Dõi")
+    st.markdown("#### Lịch Theo dõi")
     
     with st.expander("📋 Xem lịch theo dõi", expanded=True):
         st.markdown("""
@@ -167,7 +167,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Đáp Ứng Điều Trị")
+    st.markdown("### 🎯 Đáp Ứng Điều trị")
     
     response_type = st.radio(
         "**Loại Đáp Ứng:**",
@@ -273,7 +273,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Danh Sách Kiểm Tra")
+    st.markdown("### 📋 Danh Sách Kiểm tra")
     
     checklist_items = [
         "✅ Xét nghiệm HBV serology đầy đủ",

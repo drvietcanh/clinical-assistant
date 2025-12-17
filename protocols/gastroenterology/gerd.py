@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """GERD Treatment Protocol"""
-    st.subheader("🫀 Điều Trị Trào Ngược Dạ Dày Thực Quản (GERD)")
+    st.subheader("🫀 Điều trị Trào Ngược Dạ Dày Thực Quản (GERD)")
     st.caption("ACG 2022, AGA 2021 - Management of gastroesophageal reflux disease")
     
     st.info("""
@@ -28,12 +28,12 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Chẩn Đoán")
+    st.markdown("### 📊 Chẩn đoán")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Triệu Chứng")
+        st.markdown("#### Triệu chứng")
         st.info("""
         **Triệu chứng điển hình:**
         - Ợ nóng (heartburn)
@@ -54,7 +54,7 @@ def render():
         )
     
     with col2:
-        st.markdown("#### Chẩn Đoán")
+        st.markdown("#### Chẩn đoán")
         st.info("""
         **Chẩn đoán lâm sàng:**
         - Triệu chứng điển hình → Thử điều trị PPI
@@ -77,9 +77,9 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
-    st.markdown("#### Phân Loại Mức Độ")
+    st.markdown("#### Phân loại Mức độ")
     
     severity = st.radio(
         "**Mức độ GERD:**",
@@ -100,7 +100,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Phác Đồ Điều Trị Chi Tiết")
+    st.markdown("### 📋 Phác Đồ Điều trị Chi Tiết")
     
     treatment_choice = st.selectbox(
         "**Chọn phác đồ:**",
@@ -132,7 +132,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### ⚠️ Điều Trị Dài Hạn")
+    st.markdown("### ⚠️ Điều trị Dài Hạn")
     
     st.warning("""
     **Khi cần điều trị dài hạn:**
@@ -216,7 +216,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Danh Sách Kiểm Tra")
+    st.markdown("### 📋 Danh Sách Kiểm tra")
     
     checklist_items = [
         "✅ Đánh giá triệu chứng và mức độ nặng",
@@ -269,7 +269,7 @@ def render_mild_gerd():
     """Mild GERD Protocol"""
     st.success("## 🟢 GERD Nhẹ")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.info("""
     **1. Thay đổi lối sống:**
@@ -292,7 +292,7 @@ def render_moderate_gerd():
     """Moderate GERD Protocol"""
     st.warning("## 🟡 GERD Trung Bình")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.info("""
     **1. PPI liều tiêu chuẩn:**
@@ -315,7 +315,7 @@ def render_severe_gerd():
     """Severe GERD Protocol"""
     st.error("## 🔴 GERD Nặng")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.warning("""
     **1. PPI liều cao:**
@@ -350,7 +350,7 @@ def render_complicated_gerd():
         key="gerd_complication"
     )
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.warning("""
     **1. PPI liều cao:**
@@ -528,7 +528,7 @@ def render_surgery():
     """Surgery - Fundoplication"""
     st.warning("## 🔪 Phẫu Thuật - Fundoplication")
     
-    st.markdown("### Chỉ Định")
+    st.markdown("### Chỉ định")
     
     st.info("""
     **Chỉ định:**

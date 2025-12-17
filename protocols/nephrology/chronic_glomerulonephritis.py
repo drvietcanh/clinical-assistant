@@ -59,9 +59,9 @@ def render():
 
 def render_diagnosis():
     """Diagnosis and classification"""
-    st.success("## 🔍 Chẩn Đoán & Phân Loại")
+    st.success("## 🔍 Chẩn đoán & Phân loại")
     
-    st.markdown("### Tiêu Chuẩn Chẩn Đoán")
+    st.markdown("### Tiêu chuẩn Chẩn đoán")
     st.info("""
     **Lâm sàng:**
     - Protein niệu >0.5 g/24h (thường >1 g/24h)
@@ -78,7 +78,7 @@ def render_diagnosis():
     """)
     
     st.markdown("---")
-    st.markdown("### Chỉ Định Sinh Thiết Thận")
+    st.markdown("### Chỉ định Sinh Thiết Thận")
     st.warning("""
     **Chỉ định sinh thiết khi:**
     - Protein niệu >1 g/24h kéo dài >3 tháng
@@ -94,7 +94,7 @@ def render_diagnosis():
     """)
     
     st.markdown("---")
-    st.markdown("### Phân Loại Theo Nguyên Nhân")
+    st.markdown("### Phân loại Theo Nguyên Nhân")
     col1, col2 = st.columns(2)
     
     with col1:
@@ -130,7 +130,7 @@ def render_diagnosis():
 
 def render_conservative():
     """Conservative management"""
-    st.warning("## 💊 Điều Trị Bảo Tồn (Nền Tảng)")
+    st.warning("## 💊 Điều trị Bảo Tồn (Nền Tảng)")
     
     st.markdown("### 1. Kiểm Soát Huyết Áp (KDIGO 2024/2025)")
     st.success("""
@@ -182,7 +182,7 @@ def render_conservative():
     """)
     
     st.markdown("---")
-    st.markdown("### 4. Điều Trị Biến Chứng")
+    st.markdown("### 4. Điều trị Biến Chứng")
     st.success("""
     **Thiếu máu:**
     - Bổ sung sắt nếu ferritin <100 ng/mL
@@ -201,9 +201,9 @@ def render_conservative():
 
 def render_immunosuppression():
     """Immunosuppressive therapy"""
-    st.error("## 💉 Điều Trị Ức Chế Miễn Dịch")
+    st.error("## 💉 Điều trị Ức Chế Miễn Dịch")
     
-    st.markdown("### Chỉ Định")
+    st.markdown("### Chỉ định")
     st.warning("""
     **Chỉ định khi:**
     - Hội chứng thận hư (protein >3.5 g/24h)
@@ -392,9 +392,9 @@ def render_anca_protocol():
 
 def render_monitoring():
     """Monitoring and complications"""
-    st.info("## 📊 Theo Dõi & Biến Chứng")
+    st.info("## 📊 Theo dõi & Biến Chứng")
     
-    st.markdown("### Theo Dõi Định Kỳ")
+    st.markdown("### Theo dõi Định Kỳ")
     st.success("""
     **Mỗi 1-3 tháng:**
     - Creatinine, eGFR
@@ -415,7 +415,7 @@ def render_monitoring():
     """)
     
     st.markdown("---")
-    st.markdown("### Biến Chứng Cần Theo Dõi")
+    st.markdown("### Biến Chứng Cần Theo dõi")
     st.warning("""
     **Suy thận tiến triển:**
     - Chuẩn bị lọc máu khi eGFR <20

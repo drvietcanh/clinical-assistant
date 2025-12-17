@@ -65,9 +65,9 @@ def render():
 
 def render_diagnosis():
     """Diagnosis and evaluation"""
-    st.success("## 🔍 Chẩn Đoán & Đánh Giá")
+    st.success("## 🔍 Chẩn đoán & Đánh giá")
     
-    st.markdown("### Tiêu Chuẩn Chẩn Đoán")
+    st.markdown("### Tiêu chuẩn Chẩn đoán")
     st.info("""
     **Bệnh thận do tăng huyết áp khi có:**
     1. **Tăng huyết áp mạn tính:**
@@ -106,7 +106,7 @@ def render_diagnosis():
     """)
     
     st.markdown("---")
-    st.markdown("### Đánh Giá Nguyên Nhân Khác")
+    st.markdown("### Đánh giá Nguyên nhân Khác")
     st.success("""
     **Cần loại trừ:**
     - Đái tháo đường (HbA1c, đường huyết)
@@ -126,7 +126,7 @@ def render_diagnosis():
 
 def render_conservative():
     """Conservative management"""
-    st.warning("## 💊 Điều Trị Bảo Tồn")
+    st.warning("## 💊 Điều trị Bảo Tồn")
     
     st.markdown("### 1. Kiểm Soát Huyết Áp")
     st.success("""
@@ -191,7 +191,7 @@ def render_conservative():
     """)
     
     st.markdown("---")
-    st.markdown("### 4. Điều Trị Biến Chứng CKD")
+    st.markdown("### 4. Điều trị Biến Chứng CKD")
     st.success("""
     **Thiếu máu:**
     - Bổ sung sắt nếu ferritin <100 ng/mL
@@ -254,7 +254,7 @@ def render_renovascular():
     """)
     
     st.markdown("---")
-    st.markdown("### Suy Thận Tiến Triển Nhanh")
+    st.markdown("### Suy thận Tiến Triển Nhanh")
     st.error("""
     **Nghi ngờ nguyên nhân khác khi:**
     - eGFR giảm >5 mL/min/năm
@@ -275,9 +275,9 @@ def render_renovascular():
 
 def render_monitoring():
     """Monitoring and prevention"""
-    st.info("## 📊 Theo Dõi & Phòng Ngừa")
+    st.info("## 📊 Theo dõi & Phòng ngừa")
     
-    st.markdown("### Theo Dõi Định Kỳ")
+    st.markdown("### Theo dõi Định Kỳ")
     st.success("""
     **Mỗi 1-3 tháng:**
     - Huyết áp (tại nhà và tại phòng khám)
@@ -297,7 +297,7 @@ def render_monitoring():
     """)
     
     st.markdown("---")
-    st.markdown("### Phòng Ngừa Tiến Triển")
+    st.markdown("### Phòng ngừa Tiến Triển")
     st.warning("""
     **Kiểm soát tốt:**
     - Huyết áp: <130/80 (hoặc <125/75 nếu protein niệu)

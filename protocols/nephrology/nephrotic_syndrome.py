@@ -67,9 +67,9 @@ def render():
 
 def render_diagnosis():
     """Diagnosis and initial evaluation"""
-    st.success("## 🔍 Chẩn Đoán & Đánh Giá Ban Đầu")
+    st.success("## 🔍 Chẩn đoán & Đánh giá Ban Đầu")
     
-    st.markdown("### Tiêu Chuẩn Chẩn Đoán")
+    st.markdown("### Tiêu chuẩn Chẩn đoán")
     st.info("""
     **Tiêu chuẩn chính:**
     1. Protein niệu >3.5 g/24h (hoặc tỷ số protein/creatinine >3.5)
@@ -84,7 +84,7 @@ def render_diagnosis():
     """)
     
     st.markdown("---")
-    st.markdown("### Đánh Giá Ban Đầu")
+    st.markdown("### Đánh giá Ban Đầu")
     col1, col2 = st.columns(2)
     
     with col1:
@@ -122,7 +122,7 @@ def render_diagnosis():
         """)
     
     st.markdown("---")
-    st.markdown("### Phân Loại Theo Nguyên Nhân")
+    st.markdown("### Phân loại Theo Nguyên nhân")
     st.success("""
     **Nguyên phát (Primary):**
     - Minimal Change Disease (MCD) - 10-15% người lớn, 80% trẻ em
@@ -142,7 +142,7 @@ def render_diagnosis():
 
 def render_supportive():
     """Supportive care and symptom management"""
-    st.warning("## 💊 Điều Trị Triệu Chứng & Hỗ Trợ")
+    st.warning("## 💊 Điều trị Triệu chứng & Hỗ trợ")
     
     st.markdown("### 1. Kiểm Soát Phù")
     st.success("""
@@ -176,7 +176,7 @@ def render_supportive():
     """)
     
     st.markdown("---")
-    st.markdown("### 3. Điều Trị Tăng Lipid Máu")
+    st.markdown("### 3. Điều trị Tăng Lipid Máu")
     st.warning("""
     **Statin:**
     - Atorvastatin 20-40 mg/ngày HOẶC
@@ -215,9 +215,9 @@ def render_supportive():
 
 def render_immunosuppression():
     """Immunosuppressive therapy based on cause"""
-    st.error("## 💉 Điều Trị Nguyên Nhân (Ức Chế Miễn Dịch)")
+    st.error("## 💉 Điều trị Nguyên nhân (Ức Chế Miễn Dịch)")
     
-    st.markdown("### Chỉ Định Điều Trị")
+    st.markdown("### Chỉ định Điều trị")
     st.warning("""
     **Chỉ định khi:**
     - Hội chứng thận hư nguyên phát (MCD, MN, FSGS)
@@ -395,9 +395,9 @@ def render_unknown_treatment():
 
 def render_complications():
     """Complications and monitoring"""
-    st.error("## ⚠️ Biến Chứng & Theo Dõi")
+    st.error("## ⚠️ Biến Chứng & Theo dõi")
     
-    st.markdown("### Biến Chứng Cần Theo Dõi")
+    st.markdown("### Biến Chứng Cần Theo dõi")
     
     st.markdown("#### 1. Nhiễm Trùng")
     st.warning("""
@@ -456,7 +456,7 @@ def render_complications():
     """)
     
     st.markdown("---")
-    st.markdown("#### 4. Rối Loạn Điện Giải")
+    st.markdown("#### 4. Rối Loạn Điện giải")
     st.warning("""
     **Tăng kali:**
     - Do suy thận, giảm aldosterone
@@ -473,7 +473,7 @@ def render_complications():
     """)
     
     st.markdown("---")
-    st.markdown("### Theo Dõi Định Kỳ")
+    st.markdown("### Theo dõi Định Kỳ")
     st.success("""
     **Mỗi 1-2 tuần (khi mới chẩn đoán hoặc đang điều trị tích cực):**
     - Protein niệu (tỷ số P/Cr)

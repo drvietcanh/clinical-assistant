@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """IBS Treatment Protocol"""
-    st.subheader("🫀 Điều Trị Hội Chứng Ruột Kích Thích (IBS)")
+    st.subheader("🫀 Điều trị Hội Chứng Ruột Kích Thích (IBS)")
     st.caption("ACG 2021, Rome IV 2016 - Management of irritable bowel syndrome")
     
     st.info("""
@@ -30,9 +30,9 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Chẩn Đoán")
+    st.markdown("### 📊 Chẩn đoán")
     
-    st.markdown("#### Tiêu Chuẩn Rome IV")
+    st.markdown("#### Tiêu chuẩn Rome IV")
     
     st.info("""
     **Chẩn đoán IBS khi có:**
@@ -51,7 +51,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🔍 Phân Loại IBS")
+    st.markdown("### 🔍 Phân loại IBS")
     
     ibs_type = st.radio(
         "**Loại IBS:**",
@@ -72,7 +72,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều Trị Chung")
+    st.markdown("### 💊 Điều trị Chung")
     
     st.markdown("#### 1. Thay Đổi Lối Sống")
     
@@ -95,7 +95,7 @@ def render():
         - Ngủ đủ giấc
         """)
     
-    st.markdown("#### 2. Thuốc Điều Trị")
+    st.markdown("#### 2. Thuốc Điều trị")
     
     treatment_category = st.selectbox(
         "**Nhóm thuốc:**",
@@ -127,7 +127,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Phác Đồ Điều Trị Theo Loại")
+    st.markdown("### 📋 Phác Đồ Điều trị Theo Loại")
     
     st.markdown("#### IBS-D (Tiêu Chảy)")
     
@@ -207,7 +207,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Danh Sách Kiểm Tra")
+    st.markdown("### 📋 Danh Sách Kiểm tra")
     
     checklist_items = [
         "✅ Đánh giá triệu chứng theo Rome IV",
@@ -260,7 +260,7 @@ def render_ibs_d():
     """IBS-D Protocol"""
     st.success("## 💊 IBS-D (Tiêu Chảy)")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.info("""
     **1. Thay đổi lối sống:**
@@ -282,7 +282,7 @@ def render_ibs_c():
     """IBS-C Protocol"""
     st.success("## 💊 IBS-C (Táo Bón)")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.info("""
     **1. Thay đổi lối sống:**
@@ -305,7 +305,7 @@ def render_ibs_m():
     """IBS-M Protocol"""
     st.warning("## 💊 IBS-M (Hỗn Hợp)")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.info("""
     **Chiến lược:**
@@ -323,9 +323,9 @@ def render_ibs_m():
 
 def render_ibs_u():
     """IBS-U Protocol"""
-    st.info("## 💊 IBS-U (Không Phân Loại)")
+    st.info("## 💊 IBS-U (Không Phân loại)")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.info("""
     **Chiến lược:**
@@ -474,7 +474,7 @@ def render_antidepressants():
 
 def render_rifaximin():
     """Rifaximin"""
-    st.info("## 💊 Rifaximin (Kháng Sinh)")
+    st.info("## 💊 Rifaximin (Kháng sinh)")
     
     st.markdown("### Liều Dùng")
     

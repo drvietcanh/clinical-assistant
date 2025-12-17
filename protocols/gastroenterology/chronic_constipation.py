@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Chronic Constipation Treatment Protocol"""
-    st.subheader("🫀 Điều Trị Táo Bón Mạn Tính (Chronic Constipation)")
+    st.subheader("🫀 Điều trị Táo Bón Mạn Tính (Chronic Constipation)")
     st.caption("ACG 2021, AGA 2021 - Management of chronic constipation")
     
     st.info("""
@@ -33,12 +33,12 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Chẩn Đoán")
+    st.markdown("### 📊 Chẩn đoán")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Tiêu Chuẩn Rome IV")
+        st.markdown("#### Tiêu chuẩn Rome IV")
         st.info("""
         **Chẩn đoán khi có ≥2 trong số:**
         1. Đại tiện <3 lần/tuần
@@ -58,7 +58,7 @@ def render():
         )
     
     with col2:
-        st.markdown("#### Đánh Giá")
+        st.markdown("#### Đánh giá")
         frequency = st.number_input(
             "**Số lần đại tiện/tuần:**",
             min_value=0,
@@ -93,7 +93,7 @@ def render():
         - Loại trừ: Khối u, bệnh thần kinh, rối loạn chuyển hóa
         """)
     
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
     st.markdown("#### 1. Thay Đổi Lối Sống")
     
@@ -118,7 +118,7 @@ def render():
         - **Không nhịn:** Đi ngay khi có cảm giác
         """)
     
-    st.markdown("#### 2. Thuốc Điều Trị")
+    st.markdown("#### 2. Thuốc Điều trị")
     
     treatment_category = st.selectbox(
         "**Nhóm thuốc:**",
@@ -150,7 +150,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Phác Đồ Điều Trị Theo Bước")
+    st.markdown("### 📋 Phác Đồ Điều trị Theo Bước")
     
     st.markdown("#### Bước 1: Thay Đổi Lối Sống")
     
@@ -162,7 +162,7 @@ def render():
     - **Thời gian:** 4-8 tuần
     """)
     
-    st.markdown("#### Bước 2: Chất Xơ Bổ Sung")
+    st.markdown("#### Bước 2: Chất Xơ Bổ sung")
     
     st.info("""
     - **Psyllium:** 3-5g x 2-3 lần/ngày
@@ -226,7 +226,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Danh Sách Kiểm Tra")
+    st.markdown("### 📋 Danh Sách Kiểm tra")
     
     checklist_items = [
         "✅ Đánh giá triệu chứng theo Rome IV",
@@ -277,7 +277,7 @@ def render():
 
 def render_fiber():
     """Fiber Supplements"""
-    st.success("## 💊 Chất Xơ Bổ Sung (First-line)")
+    st.success("## 💊 Chất Xơ Bổ sung (First-line)")
     
     st.markdown("### Liều Dùng")
     

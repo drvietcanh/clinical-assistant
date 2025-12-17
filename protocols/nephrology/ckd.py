@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Chronic Kidney Disease Protocol"""
-    st.subheader("🫘 Suy Thận Mạn Tính (CKD)")
+    st.subheader("🫘 Suy thận Mạn Tính (CKD)")
     st.caption("KDIGO 2012, 2021, 2024 - Quản lý suy thận mạn tính, ảnh hưởng >10 triệu người tại Việt Nam")
     
     st.info("""
@@ -63,9 +63,9 @@ def render():
 
 def render_diagnosis():
     """Diagnosis and staging"""
-    st.success("## 🔍 Chẩn Đoán & Phân Giai Đoạn")
+    st.success("## 🔍 Chẩn đoán & Phân Giai Đoạn")
     
-    st.markdown("### Tiêu Chuẩn Chẩn Đoán CKD")
+    st.markdown("### Tiêu chuẩn Chẩn đoán CKD")
     st.info("""
     **CKD được định nghĩa khi có một trong hai:**
     1. **Tổn thương thận ≥3 tháng:**
@@ -117,7 +117,7 @@ def render_diagnosis():
         """)
     
     st.markdown("---")
-    st.markdown("### Nguyên Nhân Thường Gặp Tại Việt Nam")
+    st.markdown("### Nguyên nhân Thường gặp Tại Việt Nam")
     st.success("""
     **1. Đái tháo đường (30-40%):**
     - Diabetic nephropathy
@@ -145,9 +145,9 @@ def render_diagnosis():
 
 def render_conservative():
     """Conservative management for CKD stages 1-4"""
-    st.warning("## 💊 Điều Trị Bảo Tồn (CKD G1-G4)")
+    st.warning("## 💊 Điều trị Bảo Tồn (CKD G1-G4)")
     
-    st.markdown("### 1. Kiểm Soát Nguyên Nhân")
+    st.markdown("### 1. Kiểm Soát Nguyên nhân")
     st.success("""
     **Đái tháo đường:**
     - HbA1c <7% (hoặc <8% nếu nguy cơ hạ đường huyết)
@@ -226,7 +226,7 @@ def render_conservative():
     """)
     
     st.markdown("---")
-    st.markdown("### 4. Điều Trị Biến Chứng")
+    st.markdown("### 4. Điều trị Biến Chứng")
     st.success("""
     **Thiếu máu (Hb <10 g/dL):**
     - Bổ sung sắt nếu ferritin <100 ng/mL
@@ -360,9 +360,9 @@ def render_dialysis_prep():
 
 def render_monitoring():
     """Monitoring and complications"""
-    st.info("## 📊 Theo Dõi & Biến Chứng")
+    st.info("## 📊 Theo dõi & Biến Chứng")
     
-    st.markdown("### Theo Dõi Định Kỳ")
+    st.markdown("### Theo dõi Định Kỳ")
     st.success("""
     **Mỗi 1-3 tháng:**
     - Creatinine, eGFR
@@ -383,7 +383,7 @@ def render_monitoring():
     """)
     
     st.markdown("---")
-    st.markdown("### Biến Chứng Cần Theo Dõi")
+    st.markdown("### Biến Chứng Cần Theo dõi")
     st.warning("""
     **1. Thiếu máu:**
     - Tăng khi eGFR <30

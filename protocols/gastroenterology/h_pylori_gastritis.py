@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """H. pylori Gastritis/Ulcer Treatment Protocol"""
-    st.subheader("🫀 Điều Trị Viêm Loét Dạ Dày HP (+) (H. pylori Gastritis/Ulcer)")
+    st.subheader("🫀 Điều trị Viêm Loét Dạ Dày HP (+) (H. pylori Gastritis/Ulcer)")
     st.caption("Maastricht V/Florence 2016, ACG 2017, AGA 2021 - H. pylori eradication therapy")
     
     st.info("""
@@ -31,12 +31,12 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Chẩn Đoán H. pylori")
+    st.markdown("### 📊 Chẩn đoán H. pylori")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Phương Pháp Chẩn Đoán")
+        st.markdown("#### Phương Pháp Chẩn đoán")
         st.info("""
         **Xâm lấn (Cần nội soi):**
         - **CLO test (Rapid Urease Test):** Nhanh, rẻ
@@ -73,7 +73,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Phác Đồ Điều Trị")
+    st.markdown("### 💊 Phác Đồ Điều trị")
     
     st.markdown("#### Lựa Chọn Phác Đồ")
     
@@ -150,7 +150,7 @@ def render():
     - PPI liều thấp
     """)
     
-    st.markdown("### 🔄 Xử Trí Thất Bại")
+    st.markdown("### 🔄 Xử trí Thất Bại")
     
     with st.expander("📋 Xem chiến lược xử trí", expanded=True):
         st.markdown("""
@@ -173,9 +173,9 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📈 Đánh Giá Sau Điều Trị")
+    st.markdown("### 📈 Đánh giá Sau Điều trị")
     
-    st.markdown("#### Thời Điểm Đánh Giá")
+    st.markdown("#### Thời Điểm Đánh giá")
     
     st.info("""
     **Thời gian:**
@@ -248,7 +248,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Danh Sách Kiểm Tra")
+    st.markdown("### 📋 Danh Sách Kiểm tra")
     
     checklist_items = [
         "✅ Xác định chỉ định điều trị H. pylori",
@@ -301,9 +301,9 @@ def render():
 
 def render_first_line():
     """First-line Treatment"""
-    st.success("## 💊 Điều Trị Lần Đầu (First-line)")
+    st.success("## 💊 Điều trị Lần Đầu (First-line)")
     
-    st.markdown("### Khuyến Cáo")
+    st.markdown("### Khuyến cáo")
     
     st.info("""
     **Phác đồ ưu tiên (Việt Nam):**
@@ -320,7 +320,7 @@ def render_first_line():
 
 def render_second_line():
     """Second-line Treatment"""
-    st.warning("## 💊 Điều Trị Lần 2 (Second-line)")
+    st.warning("## 💊 Điều trị Lần 2 (Second-line)")
     
     st.info("""
     **Nếu thất bại phác đồ Clarithromycin:**

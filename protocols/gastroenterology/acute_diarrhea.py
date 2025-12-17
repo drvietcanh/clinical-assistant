@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Acute Diarrhea Treatment Protocol"""
-    st.subheader("🫀 Điều Trị Tiêu Chảy Cấp (Acute Diarrhea)")
+    st.subheader("🫀 Điều trị Tiêu Chảy Cấp (Acute Diarrhea)")
     st.caption("ACG 2016, IDSA 2017, WHO - Management of acute diarrhea")
     
     st.info("""
@@ -28,12 +28,12 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📊 Chẩn Đoán")
+    st.markdown("### 📊 Chẩn đoán")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Đánh Giá Lâm Sàng")
+        st.markdown("#### Đánh giá Lâm Sàng")
         st.info("""
         **Triệu chứng:**
         - Số lần đại tiện/ngày
@@ -66,7 +66,7 @@ def render():
         has_fever = st.checkbox("**Có sốt**", key="diarrhea_fever")
     
     with col2:
-        st.markdown("#### Đánh Giá Mất Nước")
+        st.markdown("#### Đánh giá Mất Nước")
         st.warning("""
         **Dấu hiệu mất nước nhẹ:**
         - Khát nước
@@ -94,16 +94,16 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💊 Điều Trị")
+    st.markdown("### 💊 Điều trị")
     
-    st.markdown("#### 1. Bù Nước & Điện Giải")
+    st.markdown("#### 1. Bù Nước & Điện giải")
     
     if "Trẻ em" in patient_age:
         render_pediatric_rehydration(dehydration_level)
     else:
         render_adult_rehydration(dehydration_level)
     
-    st.markdown("#### 2. Điều Trị Nguyên Nhân")
+    st.markdown("#### 2. Điều trị Nguyên nhân")
     
     if has_blood or has_fever or travel_history:
         st.warning("""
@@ -142,7 +142,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 💉 Thuốc Điều Trị Triệu Chứng")
+    st.markdown("### 💉 Thuốc điều trị triệu chứng")
     
     st.markdown("#### Loperamide (Imodium)")
     
@@ -223,7 +223,7 @@ def render():
     
     with col1:
         st.markdown("""
-        **Trẻ Em:**
+        **Trẻ em:**
         - Nguy cơ mất nước cao hơn
         - Bù nước ưu tiên (ORS)
         - Tiếp tục cho ăn
@@ -253,7 +253,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Danh Sách Kiểm Tra")
+    st.markdown("### 📋 Danh Sách Kiểm tra")
     
     checklist_items = [
         "✅ Đánh giá mức độ mất nước",
@@ -307,7 +307,7 @@ def render():
 
 def render_pediatric_rehydration(dehydration_level):
     """Pediatric Rehydration"""
-    st.success("## 💧 Bù Nước Trẻ Em")
+    st.success("## 💧 Bù Nước Trẻ em")
     
     if "Nặng" in dehydration_level:
         st.error("""
@@ -336,7 +336,7 @@ def render_pediatric_rehydration(dehydration_level):
 
 def render_adult_rehydration(dehydration_level):
     """Adult Rehydration"""
-    st.success("## 💧 Bù Nước Người Lớn")
+    st.success("## 💧 Bù Nước Người lớn")
     
     if "Nặng" in dehydration_level:
         st.error("""
@@ -359,7 +359,7 @@ def render_viral_diarrhea():
     """Viral Diarrhea Treatment"""
     st.info("## 🦠 Tiêu Chảy Do Virus")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.success("""
     **Nguyên nhân:**
@@ -384,7 +384,7 @@ def render_bacterial_diarrhea():
     """Bacterial Diarrhea Treatment"""
     st.warning("## 🦠 Tiêu Chảy Do Vi Khuẩn")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.info("""
     **Nguyên nhân:**
@@ -415,7 +415,7 @@ def render_parasitic_diarrhea():
     """Parasitic Diarrhea Treatment"""
     st.info("## 🪱 Tiêu Chảy Do Ký Sinh Trùng")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.info("""
     **Nguyên nhân:**
@@ -438,7 +438,7 @@ def render_drug_induced_diarrhea():
     """Drug-Induced Diarrhea Treatment"""
     st.info("## 💊 Tiêu Chảy Do Thuốc")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.warning("""
     **Nguyên nhân:**
@@ -460,9 +460,9 @@ def render_drug_induced_diarrhea():
 
 def render_unknown_diarrhea():
     """Unknown Etiology Diarrhea Treatment"""
-    st.info("## ❓ Tiêu Chảy Chưa Xác Định Nguyên Nhân")
+    st.info("## ❓ Tiêu Chảy Chưa Xác Định Nguyên nhân")
     
-    st.markdown("### Điều Trị")
+    st.markdown("### Điều trị")
     
     st.info("""
     **Chiến lược:**
