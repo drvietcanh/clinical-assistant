@@ -7,6 +7,42 @@ import streamlit as st
 from typing import Optional, Dict, Any, List
 from io import BytesIO
 from datetime import datetime
+import re
+
+
+def _sanitize_key_prefix(prefix: str) -> str:
+    """
+    Sanitize a string to be used as a Streamlit key prefix.
+    Streamlit keys can only contain alphanumeric characters, underscores, and hyphens.
+    
+    Args:
+        prefix: String to sanitize
+        
+    Returns:
+        Sanitized string safe for use as Streamlit key
+    """
+    if not prefix:
+        return "export"
+    
+    # Convert to lowercase
+    prefix = prefix.lower()
+    
+    # Replace spaces and common separators with underscores
+    prefix = re.sub(r'[\s/\\\-]+', '_', prefix)
+    
+    # Remove all characters that are not alphanumeric, underscore, or hyphen
+    prefix = re.sub(r'[^a-z0-9_-]', '', prefix)
+    
+    # Remove leading/trailing underscores and hyphens
+    prefix = prefix.strip('_-')
+    
+    # Ensure it's not empty and not too long (Streamlit has key length limits)
+    if not prefix:
+        prefix = "export"
+    elif len(prefix) > 50:
+        prefix = prefix[:50]
+    
+    return prefix
 
 
 def format_result_for_export(
@@ -228,15 +264,24 @@ def render_export_buttons(
     if key_prefix is None:
         if calculator_name:
             # Use calculator name as prefix, sanitized for use as key
-            key_prefix = calculator_name.lower().replace(" ", "_").replace("/", "_").replace("-", "_")
+            key_prefix = _sanitize_key_prefix(str(calculator_name))
         elif title:
             # Use title hash as prefix
             import hashlib
-            key_prefix = hashlib.md5(title.encode()).hexdigest()[:8]
+            key_prefix = hashlib.md5(str(title).encode()).hexdigest()[:8]
         else:
             # Fallback to timestamp-based prefix
             import time
             key_prefix = f"export_{int(time.time() * 1000) % 100000}"
+    
+    # Ensure key_prefix is always a valid string
+    if not key_prefix or not isinstance(key_prefix, str):
+        key_prefix = "export"
+    else:
+        key_prefix = _sanitize_key_prefix(str(key_prefix))
+    
+    # Ensure key_prefix is sanitized even if provided
+    key_prefix = _sanitize_key_prefix(key_prefix)
     
     num_cols = sum([show_copy, show_download, show_pdf])
     if num_cols == 0:
@@ -317,14 +362,46 @@ def render_export_section(
         show_pdf: Show PDF export button
         key_prefix: Optional prefix for unique button keys (prevents duplicate key errors)
     """
+    import hashlib
+    
     export_text = format_result_for_export(title, inputs, results, calculator_name)
     
     # Generate unique key prefix if not provided
     if key_prefix is None:
         # Use calculator name as prefix, sanitized for use as key
-        key_prefix = calculator_name.lower().replace(" ", "_").replace("/", "_").replace("-", "_")
+        if calculator_name:
+            key_prefix = _sanitize_key_prefix(str(calculator_name))
+        else:
+            key_prefix = "export"
+    else:
+        # Ensure key_prefix is sanitized even if provided
+        key_prefix = _sanitize_key_prefix(str(key_prefix))
     
-    with st.expander("📤 Export Kết quả", expanded=False, key=f"{key_prefix}_export_expander"):
+    # Add hash of title + inputs to ensure uniqueness when same calculator is called multiple times
+    # This prevents duplicate key errors when the same calculator renders multiple results
+    # Include inputs in hash to ensure uniqueness even when title is the same
+    unique_data = f"{title}_{str(sorted(inputs.items()))}"
+    unique_hash = hashlib.md5(unique_data.encode()).hexdigest()[:8]
+    unique_key = f"{key_prefix}_{unique_hash}"
+    
+    # Limit length to avoid issues (Streamlit keys should be reasonable length)
+    if len(unique_key) > 50:
+        unique_key = unique_key[:50]
+    
+    # Final safety check - ensure unique_key is never empty and is a valid string
+    if not unique_key or not isinstance(unique_key, str):
+        unique_key = "export"
+    
+    # Construct the final key for the expander (hash is already alphanumeric, so safe)
+    expander_key = f"{unique_key}_export_expander"
+    
+    # Final validation - ensure key doesn't exceed reasonable length
+    if len(expander_key) > 100:
+        # Truncate but keep the suffix
+        prefix_len = 100 - len("_export_expander")
+        expander_key = unique_key[:prefix_len] + "_export_expander"
+    
+    with st.expander("📤 Export Kết quả", expanded=False, key=expander_key):
         if show_preview:
             st.markdown("**Preview:**")
             st.code(export_text, language="text")
@@ -340,7 +417,7 @@ def render_export_section(
             show_copy=True,
             show_download=True,
             show_pdf=show_pdf,
-            key_prefix=key_prefix
+            key_prefix=unique_key
         )
 
 
@@ -369,6 +446,9 @@ def render_batch_export(
     if key_prefix is None:
         import time
         key_prefix = f"batch_export_{int(time.time() * 1000) % 100000}"
+    
+    # Ensure key_prefix is sanitized even if provided
+    key_prefix = _sanitize_key_prefix(key_prefix)
     
     with st.expander("📦 Batch Export - Xuất Nhiều Kết quả", expanded=False, key=f"{key_prefix}_batch_expander"):
         st.info(f"📊 Tổng số: {len(calculations)} kết quả")
