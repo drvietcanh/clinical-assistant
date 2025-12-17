@@ -134,6 +134,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
         ),
+        "vaccination": ModuleInfo(
+            id="vaccination",
+            title="Tiêm chủng và Vắc xin",
+            icon="💉",
+            page_path="pages/11_💉_Vaccination.py",
+            description="Lịch tiêm, giá cả, phác đồ tiêm các loại vắc xin tại Việt Nam",
+            color="linear-gradient(135deg, #fff9c4 0%, #fff59d 100%)",
+            border="#fbc02d"
+        ),
     },
     
     "navigation": {
