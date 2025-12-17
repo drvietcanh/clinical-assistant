@@ -75,7 +75,27 @@ from .dermatology import (
     render_urticaria,
     render_psoriasis
 )
-from .gastroenterology import render_acute_pancreatitis, render_acute_liver_failure, render_ibd_exacerbation, render_acute_mesenteric_ischemia, render_cholecystitis_cholangitis, render_acute_appendicitis, render_acute_diverticulitis, render_acute_intestinal_obstruction, render_acute_hepatitis, render_acute_colitis, render_hepatitis_b, render_h_pylori_gastritis, render_hepatitis_c, render_gerd, render_ibs
+from .gastroenterology import (
+    render_acute_pancreatitis,
+    render_acute_liver_failure,
+    render_ibd_exacerbation,
+    render_acute_mesenteric_ischemia,
+    render_cholecystitis_cholangitis,
+    render_acute_appendicitis,
+    render_acute_diverticulitis,
+    render_acute_intestinal_obstruction,
+    render_acute_hepatitis,
+    render_acute_colitis,
+    render_hepatitis_b,
+    render_h_pylori_gastritis,
+    render_hepatitis_c,
+    render_gerd,
+    render_ibs,
+    render_cirrhosis,
+    render_nafld,
+    render_chronic_constipation,
+    render_acute_diarrhea,
+)
 from .hematology import render_transfusion, render_anticoagulation_reversal
 from .oncology import (
     render_tls,
@@ -192,5 +212,9 @@ __all__ = [
     'render_hepatitis_c',
     'render_gerd',
     'render_ibs',
+    'render_cirrhosis',
+    'render_nafld',
+    'render_chronic_constipation',
+    'render_acute_diarrhea',
 ]
 
