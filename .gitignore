@@ -65,7 +65,10 @@ Thumbs.db
 *.xlsx~
 
 # Content drafts (not used by the app runtime)
-content/
+content/*
+# Allow published articles to be tracked
+!content/articles/
+!content/articles/**
 
 # Duplicate files
 *(1).csv
