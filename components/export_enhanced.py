@@ -37,6 +37,10 @@ def _sanitize_key_prefix(prefix: str) -> str:
     Sanitize a string to be used as a Streamlit key prefix.
     Streamlit keys can only contain alphanumeric characters, underscores, and hyphens.
     """
+    # Handle None or non-string inputs
+    if prefix is None or not isinstance(prefix, str):
+        return "export"
+    
     if not prefix:
         return "export"
     
@@ -58,6 +62,13 @@ def _build_unique_key(calculator_name: str, title: str, inputs: Dict[str, Any]) 
     Build a stable, sanitized key prefix based on calculator name and inputs.
     Filters None values and stringifies safely to avoid TypeErrors.
     """
+    # Validate and sanitize inputs
+    if calculator_name is None or not isinstance(calculator_name, str):
+        calculator_name = "export"
+    
+    if title is None or not isinstance(title, str):
+        title = "Result"
+    
     base_prefix = _sanitize_key_prefix(calculator_name or "export")
     filtered_inputs = {k: v for k, v in (inputs or {}).items() if v is not None}
     try:
@@ -65,8 +76,16 @@ def _build_unique_key(calculator_name: str, title: str, inputs: Dict[str, Any]) 
     except Exception:
         inputs_str = str(hash(str(filtered_inputs)))
     
-    unique_data = f"{title}_{inputs_str}"
-    unique_hash = hashlib.md5(unique_data.encode()).hexdigest()[:8]
+    # Ensure title is a string for the hash
+    title_str = str(title) if title is not None else "Result"
+    unique_data = f"{title_str}_{inputs_str}"
+    
+    try:
+        unique_hash = hashlib.md5(unique_data.encode()).hexdigest()[:8]
+    except Exception:
+        # Fallback if encoding fails
+        unique_hash = str(hash(unique_data))[:8]
+    
     key = f"{base_prefix}_{unique_hash}"
     return key[:50] or "export"
 
@@ -428,7 +447,10 @@ def render_export_buttons_enhanced(
     # Copy button
     if show_copy:
         with cols[col_idx]:
-            if st.button("📋 Copy", use_container_width=True, key=f"{base_key}_copy"):
+            copy_key = f"{base_key}_copy" if base_key and isinstance(base_key, str) else "export_copy"
+            if not copy_key or not isinstance(copy_key, str):
+                copy_key = "export_copy"
+            if st.button("📋 Copy", use_container_width=True, key=copy_key):
                 st.code(export_text, language="text")
                 st.success("✅ Đã copy! Chọn và copy từ khung trên")
         col_idx += 1
@@ -440,13 +462,16 @@ def render_export_buttons_enhanced(
             if not txt_filename.endswith('.txt'):
                 txt_filename += '.txt'
             
+            txt_key = f"{base_key}_download_txt" if base_key and isinstance(base_key, str) else "export_download_txt"
+            if not txt_key or not isinstance(txt_key, str):
+                txt_key = "export_download_txt"
             st.download_button(
                 label="💾 Tải TXT",
                 data=export_text,
                 file_name=txt_filename,
                 mime="text/plain",
                 use_container_width=True,
-                key=f"{base_key}_download_txt"
+                key=txt_key
             )
         col_idx += 1
     
@@ -462,13 +487,16 @@ def render_export_buttons_enhanced(
                 if not pdf_filename.endswith('.pdf'):
                     pdf_filename += '.pdf'
                 
+                pdf_key = f"{base_key}_download_pdf" if base_key and isinstance(base_key, str) else "export_download_pdf"
+                if not pdf_key or not isinstance(pdf_key, str):
+                    pdf_key = "export_download_pdf"
                 st.download_button(
                     label="📄 Tải PDF",
                     data=pdf_bytes,
                     file_name=pdf_filename,
                     mime="application/pdf",
                     use_container_width=True,
-                    key=f"{base_key}_download_pdf"
+                    key=pdf_key
                 )
             else:
                 st.info("📄 PDF requires reportlab. Install: pip install reportlab")
@@ -482,7 +510,15 @@ def render_export_buttons_enhanced(
             
             if qr_bytes:
                 # Display QR code
-                with st.expander("📱 QR Code", expanded=False, key=f"{base_key}_qr_expander"):
+                # Ensure base_key is valid for expander key
+                qr_expander_key = f"{base_key}_qr_expander" if base_key and isinstance(base_key, str) else "qr_expander"
+                if len(qr_expander_key) > 100:
+                    prefix_len = 100 - len("_qr_expander")
+                    qr_expander_key = f"{base_key[:prefix_len]}_qr_expander" if base_key else "qr_expander"
+                if not qr_expander_key or not isinstance(qr_expander_key, str):
+                    qr_expander_key = "qr_expander"
+                
+                with st.expander("📱 QR Code", expanded=False, key=qr_expander_key):
                     st.image(qr_bytes, caption="Quét mã QR để xem kết quả", use_container_width=True)
                     st.caption(f"**URL:** `{result_url}`")
                     
@@ -491,13 +527,16 @@ def render_export_buttons_enhanced(
                     if not qr_filename.endswith('.png'):
                         qr_filename += '.png'
                     
+                    qr_download_key = f"{base_key}_download_qr" if base_key and isinstance(base_key, str) else "export_download_qr"
+                    if not qr_download_key or not isinstance(qr_download_key, str):
+                        qr_download_key = "export_download_qr"
                     st.download_button(
                         label="💾 Tải QR Code",
                         data=qr_bytes,
                         file_name=qr_filename,
                         mime="image/png",
                         use_container_width=True,
-                        key=f"{base_key}_download_qr"
+                        key=qr_download_key
                     )
             else:
                 st.info("📱 QR Code requires qrcode. Install: pip install qrcode Pillow")
@@ -506,7 +545,10 @@ def render_export_buttons_enhanced(
     # Email button (optional, requires email setup)
     if show_email:
         with cols[col_idx]:
-            if st.button("📧 Gửi Email", use_container_width=True, key=f"{base_key}_email"):
+            email_key = f"{base_key}_email" if base_key and isinstance(base_key, str) else "export_email"
+            if not email_key or not isinstance(email_key, str):
+                email_key = "export_email"
+            if st.button("📧 Gửi Email", use_container_width=True, key=email_key):
                 st.info("📧 Tính năng gửi email cần cấu hình email server. Sắp có!")
 
 
@@ -553,10 +595,37 @@ def render_export_section_enhanced(
     if not base_key:
         base_key = "export"
     
+    # Ensure base_key is always a valid string
+    if not isinstance(base_key, str):
+        base_key = "export"
+    
     expander_key = f"{base_key}_export_expander"
     if len(expander_key) > 100:
         prefix_len = 100 - len("_export_expander")
         expander_key = f"{base_key[:prefix_len]}_export_expander"
+    
+    # Final safety check - ensure expander_key is always a valid string
+    if not expander_key or not isinstance(expander_key, str):
+        expander_key = "export_expander"
+    
+    # Ensure key is sanitized (remove any invalid characters)
+    try:
+        # Extract prefix and sanitize it
+        prefix = expander_key.replace("_export_expander", "") if isinstance(expander_key, str) else ""
+        sanitized_prefix = _sanitize_key_prefix(prefix) if prefix else "export"
+        
+        # Ensure sanitized_prefix is not empty
+        if not sanitized_prefix or not isinstance(sanitized_prefix, str):
+            sanitized_prefix = "export"
+        
+        expander_key = f"{sanitized_prefix}_export_expander"
+    except (AttributeError, TypeError):
+        # Fallback if anything goes wrong
+        expander_key = "export_expander"
+    
+    # Final validation before using the key
+    if not expander_key or not isinstance(expander_key, str) or len(expander_key) == 0:
+        expander_key = "export_expander"
     
     with st.expander("📤 Export Kết quả", expanded=False, key=expander_key):
         if show_preview:
