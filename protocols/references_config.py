@@ -3553,6 +3553,127 @@ PROTOCOL_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
         }
     ],
 
+    "Chronic Glomerulonephritis": [
+        {
+            "type": "guideline",
+            "title": "KDIGO 2021 Clinical Practice Guideline for the Management of Glomerular Diseases",
+            "authors": "KDIGO Glomerular Diseases Work Group",
+            "journal": "Kidney International",
+            "year": 2021,
+            "volume": "100",
+            "issue": "4S",
+            "pages": "S1-S276",
+            "doi": "10.1016/j.kint.2021.05.021",
+            "pmid": "34556256",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
+            "authors": "KDIGO 2012 Clinical Practice Guideline",
+            "journal": "Kidney International Supplements",
+            "year": 2013,
+            "volume": "3",
+            "issue": "1",
+            "pages": "1-150",
+            "doi": "10.1038/kisup.2012.73",
+            "pmid": "25018975",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Glomerulonephritis",
+            "authors": "Couser WG",
+            "journal": "The Lancet",
+            "year": 1999,
+            "volume": "353",
+            "issue": "9163",
+            "pages": "1509-1515",
+            "doi": "10.1016/S0140-6736(98)06195-9",
+            "pmid": "10232333",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Chronic glomerulonephritis",
+            "authors": "Glassock RJ, Fervenza FC, Hebert L",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_MODERATE
+        }
+    ],
+
+    "Nephrotic Syndrome": [
+        {
+            "type": "guideline",
+            "title": "KDIGO 2021 Clinical Practice Guideline for the Management of Glomerular Diseases",
+            "authors": "KDIGO Glomerular Diseases Work Group",
+            "journal": "Kidney International",
+            "year": 2021,
+            "volume": "100",
+            "issue": "4S",
+            "pages": "S1-S276",
+            "doi": "10.1016/j.kint.2021.05.021",
+            "pmid": "34556256",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "guideline",
+            "title": "Evidence-based clinical practice guidelines for nephrotic syndrome 2014",
+            "authors": "Kodner C",
+            "journal": "Pediatric Nephrology",
+            "year": 2014,
+            "volume": "29",
+            "issue": "10",
+            "pages": "1993-2005",
+            "doi": "10.1007/s00467-014-2809-4",
+            "pmid": "24752301",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Nephrotic syndrome in adults",
+            "authors": "Kodner C",
+            "journal": "American Family Physician",
+            "year": 2009,
+            "volume": "80",
+            "issue": "10",
+            "pages": "1129-1134",
+            "pmid": "19904897",
+            "evidence_level": EVIDENCE_LEVEL_IIA,
+            "strength": STRENGTH_STRONG
+        },
+        {
+            "type": "review",
+            "title": "Nephrotic syndrome in adults: Diagnosis and management",
+            "authors": "Kodner C, Thomas DB",
+            "journal": "UpToDate",
+            "year": 2024,
+            "evidence_level": EVIDENCE_LEVEL_IIB,
+            "strength": STRENGTH_MODERATE
+        },
+        {
+            "type": "primary",
+            "title": "Rituximab or Cyclosporine in the Treatment of Membranous Nephropathy",
+            "authors": "Fervenza FC, Appel GB, Barbour SJ, et al.",
+            "journal": "New England Journal of Medicine",
+            "year": 2019,
+            "volume": "381",
+            "issue": "1",
+            "pages": "36-47",
+            "doi": "10.1056/NEJMoa1814427",
+            "pmid": "31269364",
+            "evidence_level": EVIDENCE_LEVEL_I,
+            "strength": STRENGTH_STRONG
+        }
+    ],
+
 }
 
 
