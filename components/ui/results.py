@@ -179,43 +179,9 @@ def render_result_card(
             metric_label = html.escape(str(metric.get('label', '')))
             metric_value = html.escape(str(metric.get('value', '')))
             
-            metrics_html += f"""
-            <div style="
-                padding: 0.75rem;
-                border-bottom: 1px solid {THEME['colors'].get('border', '#e0e0e0')};
-            ">
-                <div style="font-size: 0.85rem; color: {THEME['colors']['text_secondary']}; margin-bottom: 0.25rem;">
-                    {metric_icon_html}{metric_label}
-                </div>
-                <div style="font-size: 1.1rem; font-weight: bold; color: {metric_color};">
-                    {metric_value}
-                </div>
-            </div>
-            """
+            metrics_html += f'<div style="padding: 0.75rem; border-bottom: 1px solid {THEME["colors"].get("border", "#e0e0e0")};"><div style="font-size: 0.85rem; color: {THEME["colors"]["text_secondary"]}; margin-bottom: 0.25rem;">{metric_icon_html}{metric_label}</div><div style="font-size: 1.1rem; font-weight: bold; color: {metric_color};">{metric_value}</div></div>'
     
-    card_html = f"""
-    <div style="
-        background: {THEME['colors']['surface']};
-        border: 2px solid {accent_color};
-        border-radius: 12px;
-        margin: 1rem 0;
-        overflow: hidden;
-        box-shadow: {THEME['shadows']['md']};
-    ">
-        <div style="
-            background: linear-gradient(135deg, {accent_color}15 0%, {accent_color}05 100%);
-            padding: 1rem;
-            border-bottom: 2px solid {accent_color};
-        ">
-            <strong style="font-size: 1.1rem; color: {THEME['colors']['text_primary']};">
-                {icon_html}{title}
-            </strong>
-        </div>
-        <div>
-            {metrics_html}
-        </div>
-    </div>
-    """
+    card_html = f'<div style="background: {THEME["colors"]["surface"]}; border: 2px solid {accent_color}; border-radius: 12px; margin: 1rem 0; overflow: hidden; box-shadow: {THEME["shadows"]["md"]};"><div style="background: linear-gradient(135deg, {accent_color}15 0%, {accent_color}05 100%); padding: 1rem; border-bottom: 2px solid {accent_color};"><strong style="font-size: 1.1rem; color: {THEME["colors"]["text_primary"]};">{icon_html}{title}</strong></div><div>{metrics_html}</div></div>'
     
     st.markdown(card_html, unsafe_allow_html=True)
 

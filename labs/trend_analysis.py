@@ -80,7 +80,7 @@ def interpret_trend(test_name: str, trend: str, values: List[float], normal_rang
     
     # Get test info
     test_info = ALL_RANGES.get(test_name, {})
-    test_label = test_info.get("label", test_name)
+    test_label = test_info.get("vn_name") or test_info.get("name") or test_name
     
     # Check if value is in normal range
     is_normal = False
@@ -155,7 +155,7 @@ def plot_lab_trend(
         Plotly figure
     """
     test_info = ALL_RANGES.get(test_name, {})
-    test_label = test_info.get("label", test_name)
+    test_label = test_info.get("vn_name") or test_info.get("name") or test_name
     unit = test_info.get("unit", "")
     
     # Get normal range
@@ -259,7 +259,10 @@ def plot_multi_trends(
     fig = make_subplots(
         rows=rows,
         cols=cols,
-        subplot_titles=[ALL_RANGES.get(name, {}).get("label", name) for name in trends_data.keys()],
+        subplot_titles=[
+            (ALL_RANGES.get(name, {}).get("vn_name") or ALL_RANGES.get(name, {}).get("name") or name) 
+            for name in trends_data.keys()
+        ],
         vertical_spacing=0.15,
         horizontal_spacing=0.1
     )
@@ -356,13 +359,25 @@ def render():
     # Test selection
     st.markdown("#### 📋 Chọn Xét nghiệm")
     
-    # Get available tests
-    available_tests = sorted([name for name in ALL_RANGES.keys() if ALL_RANGES[name].get("label")])
+    # Get available tests - use vn_name or name for display
+    available_tests = sorted([
+        name for name in ALL_RANGES.keys() 
+        if ALL_RANGES[name].get("vn_name") or ALL_RANGES[name].get("name")
+    ])
+    
+    if not available_tests:
+        st.error("⚠️ Không tìm thấy dữ liệu xét nghiệm. Vui lòng kiểm tra file lab_ranges.json")
+        return
+    
+    # Helper function to get display label
+    def get_test_label(test_key):
+        test_info = ALL_RANGES.get(test_key, {})
+        return test_info.get("vn_name") or test_info.get("name") or test_key
     
     test_name = st.selectbox(
         "Xét nghiệm:",
         available_tests,
-        format_func=lambda x: ALL_RANGES[x].get("label", x),
+        format_func=get_test_label,
         key="trend_test_select"
     )
     
