@@ -1,7 +1,11 @@
 """Validation helpers for DIRC inputs."""
 
+from __future__ import annotations
 
-def validate_positive(value: float, field_name: str | None = None) -> None:
+from typing import Optional
+
+
+def validate_positive(value: float, field_name: Optional[str] = None) -> None:
     """Validate that a numeric value is strictly positive.
 
     Raises:
