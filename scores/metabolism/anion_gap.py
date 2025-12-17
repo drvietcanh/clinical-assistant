@@ -202,7 +202,7 @@ def render():
             
             # Export section
             render_export_section(
-                title=f"Anion Gap = {anion_gap:.1f} mEq/L",
+                title=f"Anion Gap = {ag_display:.1f} mEq/L",
                 inputs=inputs_dict,
                 results=results_dict,
                 calculator_name="Anion Gap"

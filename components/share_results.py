@@ -25,6 +25,7 @@ import hashlib
 import qrcode
 from io import BytesIO
 from PIL import Image
+from urllib.parse import quote
 
 
 # In-memory storage for shared results (in production, use database)
@@ -205,9 +206,10 @@ def render_share_section(
         st.markdown("**Link chia sẻ:**")
         st.code(share_url, language=None)
         
-        # Copy button
+        # Copy button - escape JavaScript string
+        share_url_escaped = share_url.replace("'", "\\'").replace('"', '\\"')
         copy_button_html = f"""
-        <button onclick="navigator.clipboard.writeText('{share_url}')" 
+        <button onclick="navigator.clipboard.writeText('{share_url_escaped}')" 
                 style="
                     background: #007bff;
                     color: white;
@@ -247,19 +249,24 @@ def render_share_section(
         # Email
         email_subject = f"Kết quả {calculator_name}"
         email_body = f"Kết quả tính toán:\n\n{json.dumps(results, indent=2, ensure_ascii=False)}\n\nLink: {share_url}"
-        email_link = f"mailto:?subject={email_subject}&body={email_body}"
+        # URL encode để tránh lỗi hiển thị HTML
+        email_subject_encoded = quote(email_subject)
+        email_body_encoded = quote(email_body)
+        email_link = f"mailto:?subject={email_subject_encoded}&body={email_body_encoded}"
         st.markdown(f'<a href="{email_link}" style="text-decoration: none;">📧 Email</a>', unsafe_allow_html=True)
     
     with col2:
         # WhatsApp (if on mobile)
         whatsapp_text = f"Kết quả {calculator_name}: {share_url}"
-        whatsapp_link = f"https://wa.me/?text={whatsapp_text}"
+        whatsapp_text_encoded = quote(whatsapp_text)
+        whatsapp_link = f"https://wa.me/?text={whatsapp_text_encoded}"
         st.markdown(f'<a href="{whatsapp_link}" target="_blank" style="text-decoration: none;">💬 WhatsApp</a>', unsafe_allow_html=True)
     
     with col3:
-        # Copy to clipboard (JavaScript)
+        # Copy to clipboard (JavaScript) - escape JavaScript string
+        share_url_escaped = share_url.replace("'", "\\'").replace('"', '\\"')
         st.markdown(
-            f'<button onclick="navigator.clipboard.writeText(\'{share_url}\'); alert(\'Đã copy!\');">📋 Sao chép</button>',
+            f'<button onclick="navigator.clipboard.writeText(\'{share_url_escaped}\'); alert(\'Đã copy!\');">📋 Sao chép</button>',
             unsafe_allow_html=True
         )
 

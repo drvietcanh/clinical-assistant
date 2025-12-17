@@ -4,6 +4,7 @@ Components for displaying calculation results in a standardized way
 """
 
 import streamlit as st
+import html
 from typing import Optional, Dict, List, Union
 from config.theme import THEME
 
@@ -133,8 +134,8 @@ def render_result_card(
     # Detect calling pattern: if metrics_or_label is a string, it's legacy style
     if isinstance(metrics_or_label, str):
         # Legacy style: render_result_card(value, label, color)
-        value = title_or_value
-        label = metrics_or_label
+        value = html.escape(str(title_or_value))
+        label = html.escape(str(metrics_or_label))
         
         # Create a simple card with single metric
         card_html = f"""
@@ -164,7 +165,7 @@ def render_result_card(
         return
     
     # New style: render_result_card(title, metrics_list, color, icon)
-    title = title_or_value
+    title = html.escape(str(title_or_value))
     metrics = metrics_or_label
     icon_html = f"{icon} " if icon else ""
     
@@ -175,8 +176,8 @@ def render_result_card(
             metric_icon = metric.get('icon', '')
             metric_icon_html = f"{metric_icon} " if metric_icon else ""
             metric_color = metric.get('color', THEME['colors']['text_primary'])
-            metric_label = metric.get('label', '')
-            metric_value = metric.get('value', '')
+            metric_label = html.escape(str(metric.get('label', '')))
+            metric_value = html.escape(str(metric.get('value', '')))
             
             metrics_html += f"""
             <div style="

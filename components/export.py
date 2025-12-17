@@ -200,7 +200,8 @@ def render_export_buttons(
     button_label_pdf: str = "📄 Tải PDF",
     show_copy: bool = True,
     show_download: bool = True,
-    show_pdf: bool = True
+    show_pdf: bool = True,
+    key_prefix: Optional[str] = None
 ) -> None:
     """
     Render export buttons (copy, download TXT, and PDF)
@@ -218,9 +219,24 @@ def render_export_buttons(
         show_copy: Show copy button
         show_download: Show download button
         show_pdf: Show PDF button
+        key_prefix: Optional prefix for unique button keys (prevents duplicate key errors)
     """
     if not export_text:
         return
+    
+    # Generate unique key prefix if not provided
+    if key_prefix is None:
+        if calculator_name:
+            # Use calculator name as prefix, sanitized for use as key
+            key_prefix = calculator_name.lower().replace(" ", "_").replace("/", "_").replace("-", "_")
+        elif title:
+            # Use title hash as prefix
+            import hashlib
+            key_prefix = hashlib.md5(title.encode()).hexdigest()[:8]
+        else:
+            # Fallback to timestamp-based prefix
+            import time
+            key_prefix = f"export_{int(time.time() * 1000) % 100000}"
     
     num_cols = sum([show_copy, show_download, show_pdf])
     if num_cols == 0:
@@ -232,7 +248,7 @@ def render_export_buttons(
     # Copy button
     if show_copy:
         with cols[col_idx]:
-            if st.button(button_label_copy, use_container_width=True, key="export_copy"):
+            if st.button(button_label_copy, use_container_width=True, key=f"{key_prefix}_export_copy"):
                 try:
                     st.code(export_text, language="text")
                     st.success("✅ Đã copy! Bạn có thể chọn và copy từ khung trên")
@@ -253,7 +269,7 @@ def render_export_buttons(
                 file_name=txt_filename,
                 mime="text/plain",
                 use_container_width=True,
-                key="export_download"
+                key=f"{key_prefix}_export_download"
             )
         col_idx += 1
     
@@ -272,7 +288,7 @@ def render_export_buttons(
                     file_name=pdf_filename,
                     mime="application/pdf",
                     use_container_width=True,
-                    key="export_pdf"
+                    key=f"{key_prefix}_export_pdf"
                 )
             else:
                 st.info("📄 PDF export requires reportlab library. Install with: pip install reportlab")
@@ -285,7 +301,8 @@ def render_export_section(
     calculator_name: str,
     filename: Optional[str] = None,
     show_preview: bool = True,
-    show_pdf: bool = True
+    show_pdf: bool = True,
+    key_prefix: Optional[str] = None
 ) -> None:
     """
     Render complete export section with preview and buttons
@@ -298,10 +315,16 @@ def render_export_section(
         filename: Optional filename for download
         show_preview: Show preview of export text
         show_pdf: Show PDF export button
+        key_prefix: Optional prefix for unique button keys (prevents duplicate key errors)
     """
     export_text = format_result_for_export(title, inputs, results, calculator_name)
     
-    with st.expander("📤 Export Kết quả", expanded=False):
+    # Generate unique key prefix if not provided
+    if key_prefix is None:
+        # Use calculator name as prefix, sanitized for use as key
+        key_prefix = calculator_name.lower().replace(" ", "_").replace("/", "_").replace("-", "_")
+    
+    with st.expander("📤 Export Kết quả", expanded=False, key=f"{key_prefix}_export_expander"):
         if show_preview:
             st.markdown("**Preview:**")
             st.code(export_text, language="text")
@@ -316,13 +339,15 @@ def render_export_section(
             calculator_name=calculator_name,
             show_copy=True,
             show_download=True,
-            show_pdf=show_pdf
+            show_pdf=show_pdf,
+            key_prefix=key_prefix
         )
 
 
 def render_batch_export(
     calculations: List[Dict[str, Any]],
-    filename: Optional[str] = None
+    filename: Optional[str] = None,
+    key_prefix: Optional[str] = None
 ) -> None:
     """
     Render batch export for multiple calculations
@@ -334,12 +359,18 @@ def render_batch_export(
             - results: Results values dict
             - calculator_name: Calculator name
         filename: Optional filename for batch export
+        key_prefix: Optional prefix for unique button keys (prevents duplicate key errors)
     """
     if not calculations:
         st.warning("Không có kết quả nào để export")
         return
     
-    with st.expander("📦 Batch Export - Xuất Nhiều Kết quả", expanded=False):
+    # Generate unique key prefix if not provided
+    if key_prefix is None:
+        import time
+        key_prefix = f"batch_export_{int(time.time() * 1000) % 100000}"
+    
+    with st.expander("📦 Batch Export - Xuất Nhiều Kết quả", expanded=False, key=f"{key_prefix}_batch_expander"):
         st.info(f"📊 Tổng số: {len(calculations)} kết quả")
         
         # Format all calculations
@@ -377,7 +408,7 @@ def render_batch_export(
                 file_name=batch_filename,
                 mime="text/plain",
                 use_container_width=True,
-                key="batch_export_txt"
+                key=f"{key_prefix}_batch_export_txt"
             )
         
         with col2:
@@ -449,7 +480,7 @@ def render_batch_export(
                     file_name=pdf_filename,
                     mime="application/pdf",
                     use_container_width=True,
-                    key="batch_export_pdf"
+                    key=f"{key_prefix}_batch_export_pdf"
                 )
             except ImportError:
                 st.info("📄 PDF export requires reportlab. Install: pip install reportlab")
