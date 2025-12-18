@@ -307,6 +307,30 @@ EMERGENCY_DRUG_PRESETS: Dict[str, DrugPreset] = {
             "note": "Thường dùng bolus hoặc truyền ngắn; đơn vị chuẩn là mEq, không chuẩn hóa mcg/kg/phút.",
         },
     },
+    "Salbutamol": {
+        "name": "Salbutamol (Albuterol) IV",
+        "category": "Bronchodilator (asthma/COPD)",
+        "vials": [
+            {"label": "5 mg/5 mL (1 mg/mL)", "amount_mg": 5.0, "volume_ml": 5.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.1,
+            "max_mcg_kg_min": 5.0,
+            "note": "Trong hen/COPD nặng có thể dùng truyền IV 0.1–5 mcg/kg/phút tùy guideline; cần theo dõi nhịp tim và kali máu.",
+        },
+    },
+    "Esomeprazole": {
+        "name": "Esomeprazole IV",
+        "category": "PPI (GI bleeding)",
+        "vials": [
+            {"label": "40 mg/lọ (bột pha tiêm)", "amount_mg": 40.0, "volume_ml": 10.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Trong XHTH nặng thường: bolus 80 mg, sau đó truyền 8 mg/giờ; preset dùng để tính nồng độ khi pha vào 50–500 mL.",
+        },
+    },
 }
 
 
