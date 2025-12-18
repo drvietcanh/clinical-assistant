@@ -49,7 +49,8 @@ def render_dirc_calculator() -> None:
             rate = st.number_input("Tốc độ (mL/giờ):", min_value=0.0, step=0.1)
             calculator.set_input("Tốc độ", rate)
 
-        weight = st.number_input("Cân nặng (kg):", min_value=0.0, step=0.1)
+        # Hiển thị cân nặng chỉ với 1 số thập phân (tránh hiện 2 số 0 dư thừa)
+        weight = st.number_input("Cân nặng (kg):", min_value=0.0, step=0.1, format="%.1f")
         calculator.set_input("Cân nặng", weight)
 
     with col2:
