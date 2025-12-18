@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 import streamlit as st
 
 from .calculator import DIRCCalculator
@@ -99,6 +100,7 @@ def render_dirc_calculator() -> None:
         suggested_concentration = None
         container_volume_ml = st.session_state.get("dirc_container_volume", 50.0)
         vial_label = None
+        vial = None
 
         if selected_drug_key:
             vial_labels = get_vial_labels_for_drug(selected_drug_key)
@@ -206,6 +208,12 @@ def render_dirc_calculator() -> None:
         calculator.set_input("Nồng độ", concentration)
         if concentration >= 10:
             st.warning("Nồng độ cao bất thường, hãy kiểm tra lại pha loãng.")
+        if vial and concentration > 0 and vial["amount_mg"] > 0 and container_volume_ml > 0:
+            vials_needed = (concentration * container_volume_ml) / vial["amount_mg"]
+            st.caption(
+                f"Số ống cần pha (ước tính): {vials_needed:.2f} ống "
+                f"(~ {math.ceil(vials_needed)} ống nếu làm tròn lên)."
+            )
 
     st.markdown("---")
 
