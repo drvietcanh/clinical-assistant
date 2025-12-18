@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Dict, Tuple
+from typing import Dict, Tuple, Optional, Union
 
 from .conversions import mcg_kg_min_to_ml_hr, ml_hr_to_mcg_kg_min
 from .validation import validate_positive
@@ -13,9 +13,9 @@ class DIRCCalculator:
     """Main DIRC Calculator class."""
 
     def __init__(self) -> None:
-        self.conversion_type: str | None = None
+        self.conversion_type: Optional[str] = None
         self.inputs: Dict[str, float] = {}
-        self.results: Dict[str, float | str] = {}
+        self.results: Dict[str, Union[float, str]] = {}
 
     def set_conversion_type(self, type_: str) -> None:
         """Set the conversion type."""
@@ -34,7 +34,7 @@ class DIRCCalculator:
             return False, str(exc)
         return True, "Valid"
 
-    def calculate(self) -> Dict[str, float | str]:
+    def calculate(self) -> Dict[str, Union[float, str]]:
         """Perform the calculation based on `conversion_type`."""
         ok, msg = self.validate_inputs()
         if not ok:

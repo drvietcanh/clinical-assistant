@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 
-from typing import Dict, Tuple
+from typing import Dict, Tuple, Union
 
 
-def summarize_result(value: float, unit: str) -> Dict[str, float | str]:
+def summarize_result(value: float, unit: str) -> Dict[str, Union[float, str]]:
     """Return a standardized result dict for UI rendering."""
     return {"value": value, "unit": unit}
 
