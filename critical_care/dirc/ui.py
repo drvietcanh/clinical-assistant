@@ -11,7 +11,8 @@ def render_dirc_calculator() -> None:
     """Render the DIRC calculator UI."""
     st.header("💉 Drug Infusion Rate Conversion (DIRC)")
     st.caption(
-        "Chuyển đổi liều truyền giữa (mcg/kg/phút) và (mL/giờ) dựa trên cân nặng và nồng độ thuốc."
+        "Chuyển đổi liều truyền giữa (mcg/kg/phút) và (mL/giờ) dựa trên cân nặng, nồng độ thuốc "
+        "và hỗ trợ bơm tiêm 50 mL / chai 500 mL."
     )
 
     calculator = DIRCCalculator()
@@ -48,6 +49,16 @@ def render_dirc_calculator() -> None:
         concentration = st.number_input("Nồng độ thuốc (mg/mL):", min_value=0.0, step=0.1)
         calculator.set_input("Nồng độ", concentration)
 
+        container_label = st.selectbox(
+            "Loại bơm/chai",
+            options=[
+                "Bơm tiêm 50 mL",
+                "Chai 500 mL",
+            ],
+            index=0,
+        )
+        container_volume_ml = 50.0 if "50" in container_label else 500.0
+
     st.markdown("---")
 
     if st.button("Tính toán", type="primary", use_container_width=True):
@@ -63,5 +74,22 @@ def render_dirc_calculator() -> None:
             return
 
         st.success(f"Kết quả: {result['value']:.2f} {result['unit']}")
+
+        # Tính thêm thời gian truyền hết bơm/chai theo mL/giờ nếu có tốc độ
+        infusion_rate_ml_hr = None
+        if result["unit"] == "mL/giờ":
+            infusion_rate_ml_hr = float(result["value"])
+        elif calculator.conversion_type == "mL/hr to mcg/kg/min":
+            # Trong chiều này, tốc độ mL/giờ là input ban đầu
+            infusion_rate_ml_hr = float(calculator.inputs.get("Tốc độ", 0.0))
+
+        if infusion_rate_ml_hr and infusion_rate_ml_hr > 0:
+            time_hours = container_volume_ml / infusion_rate_ml_hr
+            time_minutes = time_hours * 60.0
+
+            st.info(
+                f"⏱ Thời gian truyền hết {int(container_volume_ml)} mL ở tốc độ hiện tại: "
+                f"~ {time_hours:.2f} giờ (~ {time_minutes:.0f} phút)."
+            )
 
 
