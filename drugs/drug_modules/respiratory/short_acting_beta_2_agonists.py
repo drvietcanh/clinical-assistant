@@ -40,28 +40,17 @@ SHORT_ACTING_BETA_2_AGONISTS_DRUGS = {
             'Beta-blocker: đối kháng tác dụng (tránh dùng)'
         ],
         'pregnancy': 'C',
-        'mechanism_of_action': {
-            'primary': 'Kích thích beta-2 adrenergic receptors ở cơ trơn phế quản, gây giãn phế quản',
-            'detailed': 'Salbutamol (albuterol) là chất chủ vận beta-2 adrenergic receptors chọn lọc, kích thích beta-2 receptors ở cơ trơn phế quản. Khi gắn vào beta-2 receptor, kích hoạt adenylate cyclase → tăng cAMP trong tế bào → hoạt hóa protein kinase A → phosphoryl hóa các protein → giãn cơ trơn phế quản. Salbutamol chọn lọc beta-2 hơn beta-1 (tỷ lệ ~10:1), nhưng vẫn có tác dụng tim mạch ở liều cao do kích thích beta-1 receptors. Ngoài ra, salbutamol ức chế phóng thích các chất trung gian gây viêm từ mast cells và giảm phù nề niêm mạc phế quản. Tác dụng nhanh (5-15 phút với dạng hít), ngắn (4-6 giờ), phù hợp cho cắt cơn hen cấp tính.',
-            'target': 'Beta-2 adrenergic receptors'
-        },
-        'monitoring': {
-            'labs': [
-                'Kali máu nếu dùng liều cao hoặc kéo dài',
-                'Đường huyết nếu dùng liều cao (có thể tăng đường huyết)'
-            ],
-            'vital_signs': [
-                'Nhịp tim (đặc biệt khi dùng IV hoặc liều cao)',
-                'Huyết áp (có thể tăng ở liều cao)',
-                'Nhịp thở, SpO2'
-            ],
-            'clinical': [
-                'Đáp ứng phế quản (peak flow, FEV1)',
-                'Dấu hiệu quá liều: nhịp tim nhanh >120 bpm, run cơ nặng, loạn nhịp',
-                'Dấu hiệu nghịch lý: co thắt phế quản nặng hơn (hiếm nhưng nguy hiểm)'
-            ],
-            'frequency': 'Theo dõi nhịp tim, huyết áp khi dùng IV. Theo dõi kali máu nếu dùng liều cao kéo dài.'
-        },
+        'mechanism_of_action': 'Salbutamol (albuterol) là chất chủ vận beta-2 adrenergic chọn lọc, kích thích beta-2 receptors ở cơ trơn phế quản, hoạt hóa adenylate cyclase làm tăng cAMP nội bào, dẫn đến hoạt hoá protein kinase A và giãn cơ trơn phế quản. Thuốc có tác dụng khởi phát nhanh (5-15 phút với dạng hít) và kéo dài khoảng 4-6 giờ, phù hợp cho cắt cơn hen cấp. Ở liều cao, salbutamol vẫn có thể kích thích beta-1 receptors và gây tác dụng tim mạch.',
+        'monitoring': [
+            'Kali máu nếu dùng liều cao hoặc kéo dài',
+            'Đường huyết nếu dùng liều cao (có thể tăng đường huyết)',
+            'Nhịp tim (đặc biệt khi dùng IV hoặc liều cao)',
+            'Huyết áp (có thể tăng ở liều cao)',
+            'Nhịp thở, SpO2',
+            'Đáp ứng phế quản (peak flow, FEV1)',
+            'Dấu hiệu quá liều: nhịp tim nhanh >120 bpm, run cơ nặng, loạn nhịp',
+            'Dấu hiệu nghịch lý: co thắt phế quản nặng hơn (hiếm nhưng nguy hiểm)'
+        ],
         'precautions': [
                 'Chỉ dùng khi cần (PRN) cho cắt cơn - không dùng thường xuyên',
                 'Nếu cần dùng >4 lần/ngày → cần đánh giá lại điều trị và tăng ICS',
@@ -82,11 +71,7 @@ SHORT_ACTING_BETA_2_AGONISTS_DRUGS = {
             'excretion': 'Thận (thải trừ)'
         },
         'storage': 'Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. Kiểm tra hạn sử dụng định kỳ.',
-        'black_box_warnings': [
-            'Không dùng đơn độc cho hen phế quản mạn tính - phải kết hợp với corticosteroid dạng hít',
-            'Dùng quá mức (>4 lần/ngày) có thể gây tăng nguy cơ tử vong do hen',
-            'Nếu cần dùng thường xuyên → cần đánh giá lại và tăng điều trị kiểm soát'
-        ],
+        'black_box_warnings': 'Không dùng salbutamol đơn độc cho hen phế quản mạn tính – phải kết hợp với corticosteroid dạng hít. Việc lạm dụng hoặc dùng quá mức (>4 lần/ngày) làm tăng nguy cơ đợt cấp nặng và tử vong do hen; nếu bệnh nhân cần dùng thường xuyên phải đánh giá lại và tăng điều trị kiểm soát nền.',
         'drug_interactions': {
                 'major': [
                     {

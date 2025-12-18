@@ -1,0 +1,77 @@
+Cấu trúc lộ trình (12 tháng)
+Phase 1: Quick Wins & Critical Features (Tháng 1-3)
+Tháng 1:
+Tuần 1-2: UI/UX Quick Fixes
+Tuần 3-4: Mobile Optimization
+Tuần 5-6: Drug Infusion Tools (DIRC) — ưu tiên rất cao
+Tháng 2:
+Tuần 7-8: ICU Management Tools
+Tuần 9-10: Drug Database Expansion (300+ → 500+)
+Tuần 11-12: Search Enhancement
+Tháng 3:
+Tuần 13-14: Export Improvements
+Tuần 15-16: Clinical Content Foundation
+Phase 2: Core Improvements (Tháng 4-6)
+Tháng 4:
+Tuần 17-18: Procedures (ACLS, PALS, ATLS)
+Tuần 19-20: Dịch Bệnh (COVID-19 & Dengue)
+Tháng 5:
+Tuần 21-22: Drug Database (500+ → 700+)
+Tuần 23-24: Clinical Content Expansion
+Tháng 6:
+Tuần 25-26: FCCS & CERTAIN
+Tuần 27-28: Administrative Tools
+Phase 3: Advanced Features (Tháng 7-9)
+Tháng 7:
+Tuần 29-30: Drug Database Final (700+ → 1000+)
+Tuần 31-32: Dịch Bệnh Expansion
+Tháng 8:
+Tuần 33-34: Backend Database Design
+Tuần 35-36: Authentication Design
+Tháng 9:
+Tuần 37-38: API Development
+Tuần 39-40: Clinical Content Final
+Phase 4: Infrastructure & Scale (Tháng 10-12)
+Tháng 10:
+Tuần 41-42: iOS App Development
+Tuần 43-44: iOS App Submission
+Tháng 11:
+Tuần 45-46: Android App Development
+Tuần 47-48: Android App Submission
+Tháng 12:
+Tuần 49-50: Advanced Features (AI/ML)
+Tuần 51-52: Year-End Review & Planning
+Điểm nổi bật
+Chi tiết theo tuần và ngày
+Mỗi task có timeline cụ thể
+Deliverables rõ ràng
+Success metrics đo lường được
+Ưu tiên hóa
+Ưu tiên rất cao: DIRC (Drug Infusion Tools)
+Ưu tiên cao: ICU Tools, Drug Database
+Ưu tiên trung bình: Procedures, Dịch Bệnh
+Ưu tiên thấp: Administrative Tools, AI/ML
+Metrics & Success Criteria
+User metrics (active users, retention, satisfaction)
+Feature metrics (usage, lookups, exports)
+Technical metrics (performance, uptime)
+Content metrics (drugs, calculators, articles)
+Resource Requirements
+Team structure (6 người)
+Technology stack
+Budget estimate ($130K - $260K cho 12 tháng)
+Risk Management
+Technical risks và mitigation
+Business risks và mitigation
+Checklist tổng hợp
+File có checklist đầy đủ cho:
+4 phases (12 tháng)
+52 tuần
+Hàng trăm tasks cụ thể
+Kết quả mong đợi sau 12 tháng
+10,000+ active users
+1,000+ daily active users
+1,000+ drugs, 1,000+ interactions
+140+ calculators, 150+ protocols
+iOS và Android apps
+User satisfaction 4.5+

@@ -404,6 +404,75 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
+    },
+    
+    "Vasopressin": {
+        "group": "Emergency - Vasopressor (Non-catecholamine)",
+        "vietnamese_name": "Vasopressin, Arginine vasopressin",
+        "administration": ["IV"],
+        "indications": [
+            "Sốc nhiễm khuẩn (septic shock) cần vasopressor liều cao",
+            "Sốc giãn mạch (vasodilatory shock) kháng catecholamine",
+            "Hạ huyết áp nặng trong ICU (dùng kèm norepinephrine)"
+        ],
+        "contraindications": [
+            "Thiếu máu cục bộ mô nặng (chi, ruột, tim) - thận trọng",
+            "Sốc giảm thể tích chưa bù dịch đầy đủ"
+        ],
+        "dosage": {
+            "adult_shock_fixed_dose": "0.03 units/phút IV liên tục (0.01–0.03 units/phút)",
+            "adult_shock_high_dose": "0.04–0.06 units/phút IV (tránh vượt quá nếu không có chỉ định chuyên sâu)",
+            "notes": "Dùng như thuốc bổ sung (add‑on) cho norepinephrine, KHÔNG thay thế hoàn toàn norepinephrine. Không titrate nhanh theo huyết áp như catecholamine."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Co mạch ngoại vi (lạnh đầu chi, tím đầu ngón)",
+            "Thiếu máu cục bộ chi, ruột, cơ tim (liều cao, dùng kéo dài)",
+            "Hạ natri máu (nếu dùng kéo dài)",
+            "Đau đầu, buồn nôn"
+        ],
+        "interactions": [
+            "Các vasopressor khác (norepinephrine, epinephrine, dopamine): tăng nguy cơ thiếu máu cục bộ chi",
+            "Sodium bicarbonate: KHÔNG pha chung cùng line (môi trường kiềm làm giảm hiệu lực vasopressors)"
+        ],
+        "pregnancy": "C - Có thể dùng trong cấp cứu nếu lợi ích > nguy cơ",
+        "mechanism_of_action": "Vasopressin là hormon nội sinh (arginine vasopressin). Kích thích V1a receptors trên cơ trơn mạch máu → co mạch mạnh, tăng huyết áp; kích thích V2 receptors tại ống góp thận → tăng tái hấp thu nước. Trong sốc nhiễm khuẩn, bệnh nhân thường thiếu tương đối vasopressin nội sinh, nên bổ sung liều thấp giúp phục hồi trương lực mạch mà không làm tăng nhịp tim.",
+        "monitoring": [
+            "Huyết áp động mạch (ưu tiên arterial line)",
+            "Tưới máu chi (màu da, nhiệt độ, refill mao mạch)",
+            "Dấu hiệu thiếu máu cục bộ ruột (đau bụng, chướng bụng, lactate tăng)",
+            "Điện giải, đặc biệt natri máu",
+            "Nước tiểu giờ (diuresis)"
+        ],
+        "precautions": [
+            "Không dùng đơn độc liều cao để thay norepinephrine – chỉ dùng như thuốc bổ sung.",
+            "Tránh vượt quá 0.06 units/phút trừ khi có chỉ định và theo dõi rất sát.",
+            "Thận trọng ở bệnh nhân có bệnh mạch máu ngoại vi, bệnh mạch vành, nguy cơ thiếu máu cục bộ ruột.",
+            "Bù dịch đầy đủ trước khi dùng (tránh sốc giảm thể tích).",
+            "Dùng line truyền riêng, không pha chung với sodium bicarbonate."
+        ],
+        "pharmacokinetics": {
+            "half_life": "10–20 phút",
+            "onset": "Vài phút sau khi bắt đầu truyền",
+            "duration": "Ngắn, cần truyền liên tục",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Gan, thận và phân hủy bởi peptidase."
+        },
+        "storage": "Bảo quản theo hướng dẫn chế phẩm (thường 2–8°C), tránh đông lạnh. Dung dịch đã pha: dùng trong thời gian khuyến cáo của nhà sản xuất, tránh ánh sáng trực tiếp.",
+        "black_box_warnings": None,
+        "references": {
+            "primary_sources": [
+                "Surviving Sepsis Campaign Guidelines 2021",
+                "UpToDate - Vasopressin for vasodilatory shock",
+                "FDA Drug Label - Vasopressin"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
     }
 }
 

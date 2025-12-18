@@ -1,0 +1,25 @@
+Khuyến nghị ưu tiên (3 tháng đầu)
+Tuần 1-4: Quick Wins
+UI/UX improvements — cải thiện color scheme, typography, interactions
+Mobile optimization — tối ưu touch targets, swipe gestures, performance
+Tuần 5-12: Core Improvements
+Drug database expansion — từ 300+ lên 500+ thuốc
+Search enhancement — cải thiện algorithm, thêm filters, suggestions
+Tháng 4-6: Medium Priority
+Export improvements — PDF, Excel, JSON/CSV
+Clinical content — 30+ articles, cases
+Backend planning — database design, authentication
+Điểm mạnh hiện tại
+110+ calculators (19 chuyên khoa)
+300+ thuốc với thông tin chi tiết
+100+ protocols điều trị
+Hoàn toàn miễn phí, tiếng Việt
+Offline support, PWA
+Evidence-based
+Cần cải thiện
+UI/UX cần chuyên nghiệp hơn
+Drug database cần mở rộng (300+ → 1000+)
+Chưa có backend database
+Chưa có native mobile app
+Thiếu clinical content chi tiết
+Các file đã được tạo trong thư mục gốc của project. Bạn có thể xem chi tiết trong các file markdown này.

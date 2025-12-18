@@ -84,7 +84,37 @@ def create_enhanced_fields_template():
             "primary_sources": [],  # List nguồn chính
             "last_updated": "",  # Ngày cập nhật (YYYY-MM-DD)
             "evidence_level": ""  # Mức độ chứng cứ
-        }
+        },
+
+        # === CÁC META FIELDS MỚI ===
+        "risk_flags": {
+            "high_alert": False,  # Thuốc high-alert (ISMP/ICU)
+            "narrow_therapeutic_index": False,  # Khoảng điều trị hẹp
+            "look_alike_sound_alike": [],  # Thuốc dễ nhầm tên/dạng
+            "organ_toxicity": {
+                "hepatic": "unknown",   # low / moderate / high / unknown
+                "renal": "unknown",
+                "cardiac": "unknown",   # hoặc qt_prolongation
+                "hematologic": "unknown",
+            },
+            "requires_double_check": False,  # Cần double-check độc lập
+            "icu_critical_care_only": False,  # Chủ yếu dùng ICU/HSTC
+        },
+        "guideline_tags": {
+            "who_atc": "",  # Mã ATC chính (nếu có)
+            "ahfs_category": "",  # Nhóm AHFS (tùy chọn)
+            "vietnam_essential_medicines": False,  # Thuốc thiết yếu VN
+            "international_guidelines": [],  # List dict: {source, recommendation, context}
+            "vn_guidelines": [],  # List dict: {source, recommendation, context}
+            "clinical_tags": [],  # Thẻ lâm sàng để filter nhanh
+        },
+        "availability_vietnam": {
+            "status": "unknown",  # common / limited / rare / not_available / unknown
+            "level_of_care": [],  # commune / district / provincial / central / private
+            "insurance_coverage": "unknown",  # bhyt_full / bhyt_partial / no_bhyt / unknown
+            "brand_examples": [],  # Một số biệt dược phổ biến
+            "notes": "",  # Ghi chú thêm (giới hạn sử dụng, cần hội chẩn...)
+        },
     }
 
 

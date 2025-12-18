@@ -2211,6 +2211,2171 @@ EXTRA_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
 }
 
 
+EXTRA_ENHANCED_FIELDS.update({
+    "5-Fluorouracil": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Adenosine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Alteplase": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Amikacin": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Amiodarone": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Apixaban": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Aspirin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Azathioprine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Carbamazepine": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Carboplatin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Cisplatin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Clopidogrel": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Codeine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Cyclophosphamide": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Cyclosporine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Dabigatran": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Digoxin": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Dipyridamole": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Dobutamine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Docetaxel": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Dopamine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Doxorubicin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Dronedarone": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Edoxaban": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Enoxaparin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Epinephrine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Ethosuximide": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Fentanyl": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Flecainide": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Fondaparinux": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Gabapentin": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Gemcitabine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Gentamicin": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Granisetron": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Heparin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Hydrocodone": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Hydromorphone": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Ifosfamide": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Insulin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Irinotecan": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Lacosamide": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Lamotrigine": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Levetiracetam": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Lidocaine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Methotrexate": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Morphine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Mycophenolate": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Naloxone": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Norepinephrine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Oxaliplatin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Oxcarbazepine": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Oxycodone": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Paclitaxel": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Palonosetron": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Perampanel": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Phenobarbital": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Phenytoin": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Prasugrel": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Pregabalin": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Primidone": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Procainamide": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Propafenone": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Protamine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Rivaroxaban": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Tacrolimus": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Theophylline": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Ticagrelor": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Ticlopidine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Tobramycin": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Topiramate": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Tramadol": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Valproate": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Vancomycin": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Vasopressin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Vitamin K": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Warfarin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": True,
+            "icu_critical_care_only": False,
+        },
+    },
+    "Zonisamide": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "look_alike_sound_alike": [],
+            "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
+            "requires_double_check": False,
+            "icu_critical_care_only": False,
+        },
+    },
+})
+
+
+EXTRA_ENHANCED_FIELDS.update({
+    # ======================== CARDIOVASCULAR – ACE INHIBITORS ========================
+    "Enalapril": {
+        "guideline_tags": {
+            "who_atc": "C09AA02",
+            "ahfs_category": "24.08.08 ACE Inhibitors",
+            "vietnam_essential_medicines": True,
+            "international_guidelines": [
+                {
+                    "source": "ESC 2021 Heart Failure",
+                    "recommendation": "ACE inhibitor first-line therapy for HFrEF if tolerated",
+                    "context": "Heart failure with reduced ejection fraction (HFrEF), NYHA II–III",
+                },
+                {
+                    "source": "ACC/AHA 2017 Hypertension Guideline",
+                    "recommendation": "One of the first-line options for hypertension",
+                    "context": "Primary hypertension, non-black, with or without diabetes",
+                },
+            ],
+            "vn_guidelines": [
+                {
+                    "source": "BYT – Hướng dẫn chẩn đoán và điều trị tăng huyết áp 2020",
+                    "recommendation": "Một trong các lựa chọn hàng đầu điều trị tăng huyết áp",
+                    "context": "Tăng huyết áp nguyên phát không biến chứng, ưu tiên bệnh nhân có đái tháo đường hoặc bệnh thận mạn",
+                }
+            ],
+            "clinical_tags": [
+                "first_line_htn",
+                "hfref_mortality_benefit",
+                "ckd_proteinuria_bp_control",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Enalapril STADA", "Renitec"],
+            "notes": "Rất phổ biến trong điều trị tăng huyết áp và suy tim; thường có trong danh mục BHYT.",
+        },
+    },
+    "Lisinopril": {
+        "guideline_tags": {
+            "who_atc": "C09AA03",
+            "ahfs_category": "24.08.08 ACE Inhibitors",
+            "vietnam_essential_medicines": True,
+            "international_guidelines": [
+                {
+                    "source": "ESC 2021 Heart Failure",
+                    "recommendation": "ACE inhibitor first-line therapy for HFrEF if ARNI not available",
+                    "context": "Heart failure with reduced ejection fraction (HFrEF), NYHA II–III",
+                }
+            ],
+            "vn_guidelines": [
+                {
+                    "source": "BYT – Hướng dẫn chẩn đoán và điều trị suy tim 2015",
+                    "recommendation": "Thuốc nền tảng trong điều trị suy tim HFrEF cùng với beta-blocker và mineralocorticoid receptor antagonist",
+                    "context": "Suy tim mạn HFrEF, NYHA II–IV",
+                }
+            ],
+            "clinical_tags": [
+                "first_line_htn",
+                "hfref_mortality_benefit",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Zestril", "Lisinopril STADA"],
+            "notes": "Có mặt ở hầu hết bệnh viện tuyến tỉnh trở lên; một số nơi dùng Enalapril hoặc Perindopril thay thế.",
+        },
+    },
+    "Ramipril": {
+        "guideline_tags": {
+            "who_atc": "C09AA05",
+            "ahfs_category": "24.08.08 ACE Inhibitors",
+            "vietnam_essential_medicines": False,
+            "international_guidelines": [
+                {
+                    "source": "HOPE Study / ESC Prevention Guidelines",
+                    "recommendation": "ACE inhibitor to reduce CV events in high-risk patients",
+                    "context": "Secondary prevention in patients with high cardiovascular risk (coronary artery disease, diabetes, prior stroke)",
+                }
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "cv_risk_reduction",
+                "htn_high_risk",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["provincial", "central", "private"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Tritace", "Altace"],
+            "notes": "Phổ biến hơn ở bệnh viện tuyến cuối và phòng khám tư nhân; dùng cho bệnh nhân nguy cơ tim mạch cao.",
+        },
+    },
+    "Perindopril": {
+        "guideline_tags": {
+            "who_atc": "C09AA04",
+            "ahfs_category": "24.08.08 ACE Inhibitors",
+            "vietnam_essential_medicines": False,
+            "international_guidelines": [
+                {
+                    "source": "EUROPA / PROGRESS Trials",
+                    "recommendation": "Reduction of CV events in stable coronary artery disease and stroke prevention",
+                    "context": "Stable CAD; prior stroke or TIA with hypertension",
+                }
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "htn",
+                "stable_coronary_disease",
+                "stroke_prevention",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central", "private"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Coversyl", "Perindopril STADA"],
+            "notes": "Được sử dụng rộng rãi trong điều trị tăng huyết áp và phòng ngừa biến cố tim mạch.",
+        },
+    },
+
+    # ======================== CARDIOVASCULAR – ARBs & MRA ========================
+    "Losartan": {
+        "guideline_tags": {
+            "who_atc": "C09CA01",
+            "ahfs_category": "24.08.06 Angiotensin II Receptor Blockers",
+            "vietnam_essential_medicines": True,
+            "international_guidelines": [
+                {
+                    "source": "ACC/AHA 2017 Hypertension Guideline",
+                    "recommendation": "ARB as alternative first-line when ACE inhibitors not tolerated",
+                    "context": "Primary hypertension, ACE inhibitor intolerance (e.g. cough, angioedema)",
+                }
+            ],
+            "vn_guidelines": [
+                {
+                    "source": "BYT – Hướng dẫn chẩn đoán và điều trị tăng huyết áp 2020",
+                    "recommendation": "Lựa chọn khi không dung nạp ACEI hoặc cần bảo vệ thận",
+                    "context": "Tăng huyết áp có đái tháo đường hoặc bệnh thận mạn",
+                }
+            ],
+            "clinical_tags": [
+                "first_line_htn_alt_acei",
+                "ckd_diabetic_nephropathy",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Losartan STADA", "Cozaar"],
+            "notes": "Rất phổ biến; thường dùng cho tăng huyết áp có đái tháo đường hoặc bệnh thận mạn.",
+        },
+    },
+    "Valsartan": {
+        "guideline_tags": {
+            "who_atc": "C09CA03",
+            "ahfs_category": "24.08.06 Angiotensin II Receptor Blockers",
+            "vietnam_essential_medicines": False,
+            "international_guidelines": [
+                {
+                    "source": "ESC 2021 Heart Failure",
+                    "recommendation": "ARB as alternative when ACEI not tolerated; part of ARNI when combined with sacubitril",
+                    "context": "HFrEF patients unable to take ACEI, or ARNI where available",
+                }
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "hfref_alt_acei",
+                "htn",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central", "private"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Diovan", "Valsartan STADA"],
+            "notes": "Được sử dụng rộng rãi, đặc biệt trong suy tim và tăng huyết áp kháng trị.",
+        },
+    },
+    "Spironolactone": {
+        "guideline_tags": {
+            "who_atc": "C03DA01",
+            "ahfs_category": "24.08.04 Aldosterone Antagonists",
+            "vietnam_essential_medicines": True,
+            "international_guidelines": [
+                {
+                    "source": "ESC 2021 Heart Failure",
+                    "recommendation": "Mineralocorticoid receptor antagonist to reduce mortality",
+                    "context": "HFrEF with persistent symptoms despite ACEI/ARB/ARNI and beta-blocker",
+                }
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "hfref_mortality_benefit",
+                "hyperaldosteronism",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Spironolactone STADA", "Aldactone"],
+            "notes": "Sẵn có ở đa số bệnh viện; thường dùng trong suy tim, xơ gan cổ trướng, hội chứng cường aldosterone.",
+        },
+    },
+
+    # ======================== DIABETES – METFORMIN & SGLT2 ========================
+    "Metformin": {
+        "guideline_tags": {
+            "who_atc": "A10BA02",
+            "ahfs_category": "68.20.08 Biguanides",
+            "vietnam_essential_medicines": True,
+            "international_guidelines": [
+                {
+                    "source": "ADA 2024 Standards of Care",
+                    "recommendation": "Initial pharmacologic therapy for most adults with type 2 diabetes",
+                    "context": "Type 2 diabetes without contraindications; often combined with lifestyle changes",
+                }
+            ],
+            "vn_guidelines": [
+                {
+                    "source": "BYT – Hướng dẫn chẩn đoán và điều trị đái tháo đường typ 2",
+                    "recommendation": "Thuốc đầu tay trong điều trị đái tháo đường typ 2 nếu không chống chỉ định",
+                    "context": "ĐTĐ typ 2, không suy thận nặng hoặc chống chỉ định khác",
+                }
+            ],
+            "clinical_tags": [
+                "first_line_t2dm",
+                "weight_neutral_or_loss",
+                "low_hypoglycemia_risk",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central", "private"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Metformin STADA", "Glucophage"],
+            "notes": "Thuốc nền tảng trong điều trị ĐTĐ typ 2, rất dễ tiếp cận tại Việt Nam.",
+        },
+    },
+    "Empagliflozin": {
+        "guideline_tags": {
+            "who_atc": "A10BK03",
+            "ahfs_category": "68.20.32 Sodium-Glucose Co-Transporter 2 (SGLT2) Inhibitors",
+            "vietnam_essential_medicines": False,
+            "international_guidelines": [
+                {
+                    "source": "ADA 2024 Standards of Care",
+                    "recommendation": "Preferred add-on in patients with ASCVD, HF, or CKD",
+                    "context": "Type 2 diabetes with established ASCVD, HF, or CKD",
+                },
+                {
+                    "source": "ESC 2021 Heart Failure",
+                    "recommendation": "Core therapy for HFrEF regardless of diabetes",
+                    "context": "Heart failure with reduced ejection fraction (HFrEF)",
+                },
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "t2dm_with_ascvd",
+                "hfref_mortality_benefit",
+                "ckd_progression_slowing",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["provincial", "central", "private"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Jardiance"],
+            "notes": "Thường có tại bệnh viện tuyến tỉnh/trung ương và phòng khám tư; chi phí cao hơn, BHYT chi trả một phần tuỳ hạng mục.",
+        },
+    },
+    "Dapagliflozin": {
+        "guideline_tags": {
+            "who_atc": "A10BK01",
+            "ahfs_category": "68.20.32 Sodium-Glucose Co-Transporter 2 (SGLT2) Inhibitors",
+            "vietnam_essential_medicines": False,
+            "international_guidelines": [
+                {
+                    "source": "ADA 2024 Standards of Care",
+                    "recommendation": "Add-on therapy in patients with HF or CKD",
+                    "context": "Type 2 diabetes with heart failure or CKD",
+                },
+                {
+                    "source": "ESC 2021 Heart Failure",
+                    "recommendation": "Core therapy for HFrEF, beneficial in HFpEF as well",
+                    "context": "Heart failure (HFrEF/HFpEF), with or without diabetes",
+                },
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "t2dm_with_hf",
+                "hf_mortality_benefit",
+                "ckd_progression_slowing",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["provincial", "central", "private"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Forxiga"],
+            "notes": "Tương tự Empagliflozin, chủ yếu có ở tuyến trên và cơ sở tư nhân.",
+        },
+    },
+
+    # ======================== DIABETES – INSULIN (GENERIC ENTRY) ========================
+    "Insulin": {
+        "guideline_tags": {
+            "who_atc": "A10AB",
+            "ahfs_category": "68.20.04 Insulins",
+            "vietnam_essential_medicines": True,
+            "international_guidelines": [
+                {
+                    "source": "ADA 2024 Standards of Care",
+                    "recommendation": "Mandatory in type 1 diabetes; add-on in type 2 when oral therapy inadequate",
+                    "context": "Type 1 diabetes; type 2 diabetes with severe hyperglycemia or catabolic symptoms",
+                }
+            ],
+            "vn_guidelines": [
+                {
+                    "source": "BYT – Hướng dẫn chẩn đoán và điều trị đái tháo đường typ 1 và typ 2",
+                    "recommendation": "Bắt buộc trong ĐTĐ typ 1; chỉ định khi ĐTĐ typ 2 không kiểm soát với thuốc uống",
+                    "context": "ĐTĐ typ 1; ĐTĐ typ 2 thất bại điều trị bằng thuốc uống",
+                }
+            ],
+            "clinical_tags": [
+                "mandatory_t1dm",
+                "add_on_t2dm_severe",
+                "high_hypoglycemia_risk",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Insulin Mixtard", "Actrapid", "Lantus", "Levemir"],
+            "notes": "Insulin nền và hỗn hợp có rộng rãi; một số analog mới có thể giới hạn tại bệnh viện tuyến trên.",
+        },
+    },
+
+    # ======================== HEMATOLOGY – ANTICOAGULANTS ========================
+    "Warfarin": {
+        "guideline_tags": {
+            "who_atc": "B01AA03",
+            "ahfs_category": "20.12.04 Coumarin Anticoagulants",
+            "vietnam_essential_medicines": True,
+            "international_guidelines": [
+                {
+                    "source": "ESC 2020 Atrial Fibrillation Guideline",
+                    "recommendation": "Alternative to DOACs when DOACs contraindicated or not available",
+                    "context": "Non-valvular atrial fibrillation with CHA2DS2-VASc ≥2 in men / ≥3 in women",
+                }
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "stroke_prevention_af",
+                "vte_treatment",
+                "mechanical_valve_mandatory",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Warfarin STADA", "Coumadin"],
+            "notes": "Rất phổ biến; cần theo dõi INR chặt chẽ, thường gắn với phòng khám chống đông.",
+        },
+    },
+    "Rivaroxaban": {
+        "guideline_tags": {
+            "who_atc": "B01AF01",
+            "ahfs_category": "20.12.16 Direct Factor Xa Inhibitors",
+            "vietnam_essential_medicines": False,
+            "international_guidelines": [
+                {
+                    "source": "ESC 2020 Atrial Fibrillation Guideline",
+                    "recommendation": "Preferred over VKAs in eligible non-valvular AF patients",
+                    "context": "Non-valvular AF with CHA2DS2-VASc ≥2 in men / ≥3 in women",
+                }
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "stroke_prevention_af",
+                "vte_treatment",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["provincial", "central", "private"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Xarelto"],
+            "notes": "Chi phí cao, chủ yếu dùng ở bệnh viện tuyến trên và cơ sở tư nhân; BHYT chi trả giới hạn.",
+        },
+    },
+    "Apixaban": {
+        "guideline_tags": {
+            "who_atc": "B01AF02",
+            "ahfs_category": "20.12.16 Direct Factor Xa Inhibitors",
+            "vietnam_essential_medicines": False,
+            "international_guidelines": [
+                {
+                    "source": "ESC 2020 Atrial Fibrillation Guideline",
+                    "recommendation": "Preferred DOAC option with favorable bleeding profile",
+                    "context": "Non-valvular AF; VTE treatment and secondary prevention",
+                }
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "stroke_prevention_af",
+                "vte_treatment",
+                "lower_major_bleeding_risk",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["provincial", "central", "private"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Eliquis"],
+            "notes": "Tương tự Rivaroxaban; thường được dùng khi cần ưu tiên an toàn chảy máu.",
+        },
+    },
+    "Dabigatran": {
+        "guideline_tags": {
+            "who_atc": "B01AE07",
+            "ahfs_category": "20.12.20 Direct Thrombin Inhibitors",
+            "vietnam_essential_medicines": False,
+            "international_guidelines": [
+                {
+                    "source": "ESC 2020 Atrial Fibrillation Guideline",
+                    "recommendation": "DOAC alternative to VKAs for stroke prevention in AF",
+                    "context": "Non-valvular AF; prevention of stroke and systemic embolism",
+                }
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "stroke_prevention_af",
+                "vte_treatment",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["provincial", "central", "private"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Pradaxa"],
+            "notes": "Có mặt chủ yếu tại bệnh viện tuyến tỉnh/trung ương và một số cơ sở tư nhân.",
+        },
+    },
+    "Enoxaparin": {
+        "guideline_tags": {
+            "who_atc": "B01AB05",
+            "ahfs_category": "20.12.08 Low Molecular Weight Heparins",
+            "vietnam_essential_medicines": True,
+            "international_guidelines": [
+                {
+                    "source": "ESC / ACC Guidelines on ACS and VTE",
+                    "recommendation": "Parenteral anticoagulant of choice in many ACS and VTE settings",
+                    "context": "ACS management; treatment and prophylaxis of DVT/PE",
+                }
+            ],
+            "vn_guidelines": [],
+            "clinical_tags": [
+                "vte_treatment",
+                "vte_prophylaxis",
+                "acs_management",
+            ],
+        },
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Clexane"],
+            "notes": "Được dùng rộng rãi trong dự phòng và điều trị huyết khối; thường sẵn có tại các khoa nội và ngoại.",
+        },
+    },
+})
+
+
+EXTRA_ENHANCED_FIELDS.update({
+    # ======================== EMERGENCY – VASOPRESSORS & ANTIARRHYTHMICS ========================
+    "Epinephrine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Adrenalin"],
+            "notes": "Thuốc cấp cứu thiết yếu cho sốc phản vệ, ngừng tim; luôn có sẵn tại khoa cấp cứu và hồi sức.",
+        },
+    },
+    "Norepinephrine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Norepinephrine Bitartrate"],
+            "notes": "Dùng chủ yếu tại ICU/HSTC cho sốc nhiễm trùng và sốc khác; thường không có ở tuyến xã.",
+        },
+    },
+    "Dopamine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Dopamine hydrochloride"],
+            "notes": "Vẫn được sử dụng ở nhiều bệnh viện, dù xu hướng hiện nay ưu tiên norepinephrine.",
+        },
+    },
+    "Dobutamine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Dobutamine"],
+            "notes": "Có sẵn tại ICU/HSTC cho suy tim cấp và sốc tim.",
+        },
+    },
+    "Vasopressin": {
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Vasopressin injection"],
+            "notes": "Thường có tại khoa hồi sức tuyến cuối; dùng phối hợp trong sốc nặng kháng catecholamine.",
+        },
+    },
+    "Adenosine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Adenocor"],
+            "notes": "Thuốc cấp cứu loạn nhịp trên thất; thường có tại phòng cấp cứu, can thiệp tim mạch.",
+        },
+    },
+    "Amiodarone": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Cordarone", "Amiodarone STADA"],
+            "notes": "Rất phổ biến cho loạn nhịp thất và trên thất nặng; có cả dạng PO và IV.",
+        },
+    },
+    "Lidocaine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Lidocaine 2%", "Xylocaine"],
+            "notes": "Luôn có cho gây tê tại chỗ; dạng IV dùng cho loạn nhịp thất thường có tại ICU/cấp cứu.",
+        },
+    },
+    "Naloxone": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Naloxone injection"],
+            "notes": "Thuốc cấp cứu quá liều opioid; nên có sẵn tại tất cả khoa cấp cứu và GMHS.",
+        },
+    },
+    "Protamine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Protamine sulfate"],
+            "notes": "Có tại phòng mổ, ICU, tim mạch can thiệp để đảo ngược heparin.",
+        },
+    },
+    "Vitamin K": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Vitamin K1"],
+            "notes": "Rộng rãi; dùng điều trị thiếu vitamin K và đảo ngược tác dụng warfarin.",
+        },
+    },
+
+    # ======================== ANALGESICS – OPIOIDS & TRAMADOL ========================
+    "Morphine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Morphin sulphate"],
+            "notes": "Thuốc gây nghiện được quản lý chặt chẽ; có ở khoa GMHS, ICU và điều trị đau.",
+        },
+    },
+    "Fentanyl": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Fentanyl citrate", "Durogesic patch"],
+            "notes": "Dạng tiêm dùng trong GMHS và ICU; dạng miếng dán chủ yếu tại các đơn vị đau mạn tính/tuyến trên.",
+        },
+    },
+    "Hydromorphone": {
+        "availability_vietnam": {
+            "status": "rare",
+            "level_of_care": ["central", "private"],
+            "insurance_coverage": "no_bhyt",
+            "brand_examples": [],
+            "notes": "Ít phổ biến; nếu có thường ở bệnh viện tuyến cuối hoặc cơ sở tư nhân chuyên sâu về giảm đau.",
+        },
+    },
+    "Oxycodone": {
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["central", "private"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["OxyContin"],
+            "notes": "Có ở một số bệnh viện lớn cho điều trị đau ung thư; quản lý nghiêm ngặt như morphine.",
+        },
+    },
+    "Codeine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central", "private"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Paracetamol-codeine combinations"],
+            "notes": "Thường có trong các chế phẩm phối hợp giảm đau và ho; quản lý theo quy định với opioid yếu.",
+        },
+    },
+    "Tramadol": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Tramadol STADA", "Tramal"],
+            "notes": "Dùng rất phổ biến cho đau trung bình–nặng; cần lưu ý lạm dụng và tác dụng phụ thần kinh.",
+        },
+    },
+
+    # ======================== ANTIBIOTICS – AMINOGLYCOSIDES & VANCOMYCIN ========================
+    "Gentamicin": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Gentamicin injection"],
+            "notes": "Kháng sinh kinh điển, chi phí rẻ; cần thận trọng độc tính thận và tai.",
+        },
+    },
+    "Amikacin": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Amikacin injection"],
+            "notes": "Thường dùng trong nhiễm khuẩn nặng Gram âm; thường có sẵn tại khoa hồi sức và nội.",
+        },
+    },
+    "Tobramycin": {
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Tobramycin injection", "Nebulized formulations (tùy cơ sở)"],
+            "notes": "Ít phổ biến hơn Gentamicin/Amikacin; một số trung tâm hô hấp dùng dạng hít cho bệnh nhân đặc biệt.",
+        },
+    },
+    "Vancomycin": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Vancomycin injection"],
+            "notes": "Kháng sinh quan trọng điều trị MRSA; thường yêu cầu hội chẩn nhiễm khuẩn và monitor chức năng thận.",
+        },
+    },
+})
+
+
+EXTRA_ENHANCED_FIELDS.update({
+    # ======================== ONCOLOGY – CHEMO & IMMUNOSUPPRESSANTS ========================
+    "5-Fluorouracil": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["5-FU injection"],
+            "notes": "Có mặt rộng rãi tại các trung tâm ung bướu cho điều trị ung thư đường tiêu hoá và các phác đồ khác.",
+        },
+    },
+    "Carboplatin": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Carboplatin injection"],
+            "notes": "Dùng trong nhiều phác đồ hóa trị; thường sẵn có tại khoa ung bướu.",
+        },
+    },
+    "Cisplatin": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Cisplatin injection"],
+            "notes": "Thuốc hoá trị nền tảng cho nhiều loại ung thư; cần monitor thận, điện giải và buồn nôn/nôn.",
+        },
+    },
+    "Cyclophosphamide": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Cyclophosphamide injection", "Cyclophosphamide tablets"],
+            "notes": "Dùng trong ung thư và bệnh lý tự miễn; có ở các trung tâm lớn.",
+        },
+    },
+    "Ifosfamide": {
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["central"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Ifosfamide injection"],
+            "notes": "Thường chỉ có tại trung tâm ung bướu tuyến cuối; cần theo dõi chặt độc tính thần kinh và bàng quang.",
+        },
+    },
+    "Doxorubicin": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Doxorubicin injection"],
+            "notes": "Hóa chất chính trong nhiều phác đồ (ví dụ CHOP); cần monitor độc tính tim và tuỷ xương.",
+        },
+    },
+    "Docetaxel": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Taxotere"],
+            "notes": "Dùng trong ung thư vú, phổi và một số ung thư khác; thường có tại các trung tâm ung bướu.",
+        },
+    },
+    "Paclitaxel": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Paclitaxel injection"],
+            "notes": "Thuốc chuẩn trong nhiều phác đồ; cần chuẩn bị phòng sốc phản vệ do thuốc.",
+        },
+    },
+    "Gemcitabine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Gemcitabine injection"],
+            "notes": "Dùng trong ung thư tụy, phổi, bàng quang...; phổ biến ở trung tâm ung thư.",
+        },
+    },
+    "Irinotecan": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Irinotecan injection"],
+            "notes": "Thường dùng trong phác đồ ung thư đại trực tràng; cần theo dõi tiêu chảy và suy tuỷ.",
+        },
+    },
+    "Azathioprine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Azathioprine tablets"],
+            "notes": "Dùng trong ghép tạng và bệnh tự miễn; thường có tại khoa nội miễn dịch/thận.",
+        },
+    },
+    "Cyclosporine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Sandimmun", "Cyclosporine STADA"],
+            "notes": "Thuốc nền tảng trong ghép tạng và một số bệnh tự miễn; cần monitor nồng độ thuốc và chức năng thận.",
+        },
+    },
+    "Tacrolimus": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Prograf", "Advagraf"],
+            "notes": "Chủ yếu dùng tại trung tâm ghép tạng; yêu cầu monitor nồng độ thuốc và độc tính thận/gan.",
+        },
+    },
+    "Mycophenolate": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Cellcept", "Myfortic"],
+            "notes": "Dùng rộng rãi trong ghép tạng và bệnh tự miễn khó trị; thường ở bệnh viện tuyến cuối.",
+        },
+    },
+
+    # ======================== NEUROLOGY – ANTICONVULSANTS & GABAPENTINOIDS ========================
+    "Carbamazepine": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Tegretol", "Carbamazepine STADA"],
+            "notes": "Thuốc kinh điển điều trị động kinh và đau dây V; dễ tiếp cận.",
+        },
+    },
+    "Phenytoin": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Dilantin", "Phenytoin STADA"],
+            "notes": "Dùng trong động kinh và điều trị cơn co giật cấp; có cả dạng PO và IV.",
+        },
+    },
+    "Valproate": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Depakine", "Sodium Valproate STADA"],
+            "notes": "Thuốc phổ biến điều trị động kinh và rối loạn khí sắc; cần monitor men gan và tiểu cầu.",
+        },
+    },
+    "Phenobarbital": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Phenobarbital tablets/injection"],
+            "notes": "Được sử dụng nhiều ở tuyến cơ sở cho động kinh; chi phí rẻ nhưng nhiều tác dụng phụ.",
+        },
+    },
+    "Ethosuximide": {
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["central"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": [],
+            "notes": "Chủ yếu dùng cho co giật vắng ý thức; thường chỉ có tại trung tâm thần kinh/nhi khoa lớn.",
+        },
+    },
+    "Topiramate": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Topamax"],
+            "notes": "Dùng cho động kinh và dự phòng migraine; thường có ở bệnh viện tuyến trên.",
+        },
+    },
+    "Lamotrigine": {
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Lamictal"],
+            "notes": "Có tại một số bệnh viện lớn; cần khởi liều chậm để tránh hội chứng Stevens–Johnson.",
+        },
+    },
+    "Levetiracetam": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Keppra"],
+            "notes": "Được sử dụng ngày càng nhiều do profile an toàn tốt; có cả dạng PO và IV.",
+        },
+    },
+    "Lacosamide": {
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["central"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Vimpat"],
+            "notes": "Thường chỉ có tại trung tâm động kinh/chuyên khoa thần kinh tuyến cuối.",
+        },
+    },
+    "Zonisamide": {
+        "availability_vietnam": {
+            "status": "rare",
+            "level_of_care": ["central"],
+            "insurance_coverage": "no_bhyt",
+            "brand_examples": [],
+            "notes": "Thuốc mới hơn; chỉ có ở một số ít trung tâm động kinh, chủ yếu dạng nhập khẩu.",
+        },
+    },
+    "Perampanel": {
+        "availability_vietnam": {
+            "status": "rare",
+            "level_of_care": ["central"],
+            "insurance_coverage": "no_bhyt",
+            "brand_examples": [],
+            "notes": "Thuốc chống động kinh thế hệ mới; hiện diện hạn chế tại Việt Nam.",
+        },
+    },
+    "Oxcarbazepine": {
+        "availability_vietnam": {
+            "status": "limited",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Trileptal"],
+            "notes": "Thường có ở bệnh viện tuyến trên; dùng thay thế carbamazepine trong một số trường hợp.",
+        },
+    },
+    "Gabapentin": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Neurontin", "Gabapentin STADA"],
+            "notes": "Dùng trong đau thần kinh và động kinh; khá phổ biến.",
+        },
+    },
+    "Pregabalin": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["provincial", "central", "private"],
+            "insurance_coverage": "bhyt_partial",
+            "brand_examples": ["Lyrica"],
+            "notes": "Được dùng nhiều cho đau thần kinh; phổ biến tại cơ sở tư nhân và bệnh viện tuyến trên.",
+        },
+    },
+    "Primidone": {
+        "availability_vietnam": {
+            "status": "rare",
+            "level_of_care": ["central"],
+            "insurance_coverage": "no_bhyt",
+            "brand_examples": [],
+            "notes": "Ít gặp; nếu có thường ở trung tâm thần kinh/chuyên khoa.",
+        },
+    },
+
+    # ======================== RESPIRATORY – THEOPHYLLINE ========================
+    "Theophylline": {
+        "availability_vietnam": {
+            "status": "common",
+            "level_of_care": ["district", "provincial", "central"],
+            "insurance_coverage": "bhyt_full",
+            "brand_examples": ["Theophylline retard", "Aminophylline injection"],
+            "notes": "Vẫn được sử dụng trong hen/COPD ở một số nơi; cần lưu ý khoảng điều trị hẹp và tương tác thuốc.",
+        },
+    },
+})
+
+
+EXTRA_ENHANCED_FIELDS.update({
+    # ======================================================================
+    # BỔ SUNG 8 FIELDS TÙY CHỌN CÒN THIẾU CHO 9 THUỐC ƯU TIÊN
+    # ======================================================================
+    # Lưu ý: nội dung ở mức an toàn/mặc định, có thể tinh chỉnh sau dựa trên guideline chi tiết.
+
+    "Amikacin": {
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chưa cập nhật chi tiết; tham khảo guideline và tài liệu nhà sản xuất trước khi dùng cho phụ nữ mang thai.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ mức độ bài tiết vào sữa mẹ; cân nhắc lợi ích và nguy cơ.",
+                "recommendation": "Tham khảo chuyên gia nhi/INF trước khi dùng kéo dài khi cho con bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh đáng kể; chủ yếu thải trừ qua thận.",
+            "moderate": "Không cần điều chỉnh đáng kể; theo dõi chức năng gan nếu dùng kéo dài.",
+            "severe": "Thận trọng; ưu tiên điều chỉnh theo chức năng thận.",
+            "notes": "Aminoglycoside chủ yếu thải qua thận; điều chỉnh liều dựa trên eGFR.",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "Không có antidote đặc hiệu; điều trị hỗ trợ.",
+            "treatment": [],
+            "monitoring": "Theo dõi chức năng thận, thính lực và nồng độ thuốc (nếu có) trong trường hợp nghi ngờ quá liều hoặc tích luỹ.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "",
+                "timing": "",
+            },
+            "iv": {
+                "reconstitution": "Pha theo hướng dẫn nhà sản xuất; thường pha trong NaCl 0,9% hoặc D5W.",
+                "infusion_rate": "Truyền chậm theo phác đồ; tránh bolus nhanh.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Theo dõi chức năng thận, nồng độ thuốc (nếu có điều kiện) để tránh độc tính.",
+            },
+        },
+    },
+
+    "Gentamicin": {
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chưa cập nhật chi tiết; cân nhắc lợi ích/nguy cơ và tham khảo guideline khi dùng cho phụ nữ mang thai.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ mức độ bài tiết vào sữa mẹ; nguy cơ toàn thân cho trẻ thường thấp do hấp thu kém qua đường tiêu hoá.",
+                "recommendation": "Có thể dùng ngắn hạn với theo dõi thích hợp; tham khảo chuyên gia nếu dùng kéo dài.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh đáng kể; chủ yếu thải trừ qua thận.",
+            "moderate": "Không cần điều chỉnh đáng kể.",
+            "severe": "Thận trọng; ưu tiên đánh giá và chỉnh liều theo chức năng thận.",
+            "notes": "Điều chỉnh liều chủ yếu theo eGFR/CrCl; monitor nồng độ thuốc nếu có.",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "Không có antidote đặc hiệu; điều trị hỗ trợ.",
+            "treatment": [],
+            "monitoring": "Theo dõi chức năng thận, thính lực, tiền đình và nồng độ thuốc trong trường hợp dùng liều cao/kéo dài.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "",
+                "timing": "",
+            },
+            "iv": {
+                "reconstitution": "Pha loãng trong NaCl 0,9% hoặc D5W theo khuyến cáo.",
+                "infusion_rate": "Truyền chậm trong 30–60 phút (tuỳ phác đồ).",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Không trộn chung cùng bơm tiêm với penicillin/beta-lactam khác; theo dõi chức năng thận.",
+            },
+        },
+    },
+
+    "Tobramycin": {
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chưa cập nhật chi tiết; sử dụng khi lợi ích vượt trội nguy cơ và theo dõi sát.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Hấp thu toàn thân thấp khi dùng dạng hít; cân nhắc nguy cơ/lợi ích.",
+                "recommendation": "Tham khảo chuyên gia nếu dùng kéo dài ở phụ nữ đang cho con bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh đáng kể.",
+            "moderate": "Không cần điều chỉnh đáng kể.",
+            "severe": "Thận trọng; ưu tiên điều chỉnh theo chức năng thận.",
+            "notes": "Chủ yếu thải trừ qua thận; điều chỉnh theo eGFR.",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "Không có antidote đặc hiệu; điều trị hỗ trợ.",
+            "treatment": [],
+            "monitoring": "Theo dõi chức năng thận, thính lực và nồng độ thuốc (nếu có) khi nghi ngờ tích luỹ/quá liều.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "",
+                "timing": "",
+            },
+            "iv": {
+                "reconstitution": "Pha loãng trong dung dịch truyền phù hợp (NaCl 0,9% hoặc D5W).",
+                "infusion_rate": "Truyền chậm theo phác đồ; tránh bolus nhanh.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Có thể dùng dạng hít cho bệnh lý hô hấp mạn, tuỳ phác đồ từng cơ sở.",
+            },
+        },
+    },
+
+    "Dopamine": {
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chưa cập nhật chi tiết; dùng trong bối cảnh cấp cứu khi lợi ích vượt trội nguy cơ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Thường dùng ngắn hạn trong ICU; dữ liệu cho con bú hạn chế.",
+                "recommendation": "Không phải chỉ định điều trị kéo dài; tham khảo chuyên gia khi cần.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Thận trọng; ưu tiên chỉnh theo đáp ứng huyết động và chức năng cơ quan.",
+            "notes": "Chủ yếu được chuyển hoá tại gan và thần kinh; dùng chủ yếu trong ICU với monitor liên tục.",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "Không có antidote đặc hiệu; điều trị hỗ trợ.",
+            "treatment": [],
+            "monitoring": "Theo dõi huyết áp, nhịp tim, tưới máu ngoại vi, dấu hiệu thiếu máu cơ quan đích.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "",
+                "timing": "",
+            },
+            "iv": {
+                "reconstitution": "Pha trong NaCl 0,9% hoặc D5W; truyền qua bơm tiêm điện hoặc bơm truyền.",
+                "infusion_rate": "Titration theo đáp ứng huyết áp và cung lượng tim.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Ưu tiên truyền qua đường tĩnh mạch trung tâm nếu dùng kéo dài; tránh thoát mạch.",
+            },
+        },
+    },
+
+    "Dobutamine": {
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chưa cập nhật chi tiết; dùng trong bối cảnh cấp cứu tim mạch khi cần thiết.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Dùng ngắn hạn trong ICU; dữ liệu an toàn khi cho con bú hạn chế.",
+                "recommendation": "Không dùng kéo dài; đánh giá lợi ích/nguy cơ từng trường hợp.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Thận trọng; chỉnh liều theo đáp ứng lâm sàng.",
+            "notes": "Chủ yếu dùng ngắn hạn trong ICU với monitor huyết động liên tục.",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "Không có antidote đặc hiệu; điều trị hỗ trợ.",
+            "treatment": [],
+            "monitoring": "Theo dõi huyết áp, nhịp tim, dấu hiệu thiếu máu cơ tim hoặc loạn nhịp.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "",
+                "timing": "",
+            },
+            "iv": {
+                "reconstitution": "Pha trong dung dịch truyền thích hợp (NaCl 0,9%, D5W).",
+                "infusion_rate": "Truyền liên tục với bơm tiêm điện; chỉnh liều theo cung lượng tim và huyết áp.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Theo dõi liên tục ECG, huyết áp và dấu hiệu suy tim.",
+            },
+        },
+    },
+
+    "Norepinephrine": {
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dùng chủ yếu trong cấp cứu; cân nhắc lợi ích/nguy cơ cho mẹ và thai.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Dùng ngắn hạn trong ICU; dữ liệu cho con bú rất hạn chế.",
+                "recommendation": "Không dùng kéo dài; tham khảo chuyên gia khi cần.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Thận trọng; chỉnh liều theo đáp ứng huyết động.",
+            "notes": "Truyền qua bơm tiêm điện với monitor liên tục; ưu tiên đường trung tâm.",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "Không có antidote đặc hiệu; điều trị hỗ trợ.",
+            "treatment": [],
+            "monitoring": "Theo dõi huyết áp, tưới máu ngoại vi, tổn thương đầu chi và cơ quan đích khi dùng liều cao/kéo dài.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "",
+                "timing": "",
+            },
+            "iv": {
+                "reconstitution": "Pha trong NaCl 0,9% hoặc dung dịch thích hợp; truyền qua bơm tiêm điện.",
+                "infusion_rate": "Titration theo MAP mục tiêu; thường truyền qua đường trung tâm.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Theo dõi chặt ECG, huyết áp xâm lấn (nếu có) và tưới máu ngoại vi.",
+            },
+        },
+    },
+
+    "Vasopressin": {
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chưa cập nhật chi tiết; sử dụng chủ yếu trong bối cảnh cấp cứu sốc kháng catecholamine.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Dữ liệu hạn chế; cân nhắc lợi ích/nguy cơ.",
+                "recommendation": "Chỉ dùng trong ICU với thời gian ngắn.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều riêng.",
+            "moderate": "Không cần điều chỉnh liều riêng.",
+            "severe": "Thận trọng; đánh giá toàn trạng huyết động và cơ quan đích.",
+            "notes": "Thường dùng liều cố định nhỏ; monitor huyết áp và tưới máu.",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "Không có antidote đặc hiệu; điều trị hỗ trợ.",
+            "treatment": [],
+            "monitoring": "Theo dõi huyết áp, natri máu, tưới máu chi và dấu hiệu thiếu máu ruột/cơ quan.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "",
+                "timing": "",
+            },
+            "iv": {
+                "reconstitution": "Pha trong dung dịch truyền phù hợp; truyền liên tục liều thấp.",
+                "infusion_rate": "Tốc độ cố định hoặc titration nhỏ tuỳ phác đồ; thường dùng kèm norepinephrine.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ dùng tại ICU/HSTC với monitor huyết động chặt chẽ.",
+            },
+        },
+    },
+
+    "Valsartan": {
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ do nguy cơ gây độc cho thai (giảm sản thận, thiểu ối, tử vong thai).",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa có nhiều dữ liệu; nồng độ trong sữa mẹ có thể thấp nhưng cần thận trọng.",
+                "recommendation": "Ưu tiên thuốc khác an toàn hơn khi cho con bú, đặc biệt với trẻ sơ sinh/nhũ nhi.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Có thể không cần chỉnh liều.",
+            "moderate": "Thận trọng, cân nhắc liều khởi đầu thấp hơn.",
+            "severe": "Tránh dùng hoặc dùng rất thận trọng; tham khảo guideline chuyên khoa.",
+            "notes": "Một phần chuyển hoá qua gan; cần lưu ý ở bệnh nhân suy gan rõ.",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "Không có antidote đặc hiệu; điều trị hỗ trợ.",
+            "treatment": [],
+            "monitoring": "Theo dõi huyết áp, chức năng thận và kali máu trong trường hợp dùng liều cao/quá liều.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn.",
+                "timing": "Uống 1–2 lần/ngày, cố định thời điểm trong ngày.",
+            },
+            "iv": {
+                "reconstitution": "",
+                "infusion_rate": "",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Không có dạng tiêm tĩnh mạch thường quy.",
+            },
+        },
+    },
+
+    "Vancomycin": {
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Dữ liệu hạn chế; thường được xem là có thể chấp nhận khi cần thiết trong nhiễm trùng nặng.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu qua đường tiêu hoá của trẻ kém; nồng độ toàn thân thấp.",
+                "recommendation": "Thường chấp nhận được khi cho con bú, đặc biệt khi dùng đường IV; theo dõi nếu dùng kéo dài.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều riêng.",
+            "moderate": "Không cần điều chỉnh liều riêng.",
+            "severe": "Thận trọng; điều chỉnh chủ yếu theo chức năng thận.",
+            "notes": "Thải trừ chủ yếu qua thận; cần điều chỉnh liều theo eGFR và monitor nồng độ thuốc nếu có.",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "Không có antidote đặc hiệu; điều trị hỗ trợ.",
+            "treatment": [],
+            "monitoring": "Theo dõi chức năng thận, nồng độ thuốc và dấu hiệu độc tính (ví dụ hội chứng đỏ da, độc tai).",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn khi dùng điều trị C. difficile.",
+                "timing": "Chia đều trong ngày theo phác đồ.",
+            },
+            "iv": {
+                "reconstitution": "Pha theo hướng dẫn nhà sản xuất; truyền chậm để tránh phản ứng đỏ da.",
+                "infusion_rate": "Thường truyền trong ≥60 phút (liều lớn có thể cần lâu hơn).",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Monitor nồng độ đáy (trough) ở bệnh nhân nguy cơ cao hoặc dùng kéo dài.",
+            },
+        },
+    },
+})
+
+
 __all__ = ["EXTRA_ENHANCED_FIELDS"]
 
 

@@ -12,6 +12,22 @@ from .dosing_helpers import (
 )
 from .dosing_processing import parse_dosage_text, calculate_infusion_details
 
+# Import eGFR dosing lookup module
+try:
+    from .egfr_dosing_lookup import (
+        lookup_egfr_dosing,
+        get_drug_warning,
+        get_drug_note,
+        is_drug_in_egfr_database
+    )
+    EGFR_LOOKUP_AVAILABLE = True
+except ImportError:
+    EGFR_LOOKUP_AVAILABLE = False
+    lookup_egfr_dosing = None
+    get_drug_warning = None
+    get_drug_note = None
+    is_drug_in_egfr_database = None
+
 def calculate_detailed_dose(antibiotic_name, weight_kg, ibw, abw, crcl, indication="standard", is_pediatric=False, height_cm=None):
     """
     Calculate detailed dose (mg, interval, infusion time, concentration)
@@ -139,7 +155,21 @@ def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, in
         base_info = "Liều chuẩn theo hướng dẫn"
     
     # Get renal adjustment recommendation
-    if renal_category in renal_adj:
+    # Ưu tiên sử dụng eGFR-based lookup nếu có
+    egfr_dosing_text = None
+    if EGFR_LOOKUP_AVAILABLE and egfr is not None:
+        is_dialysis = (renal_category in ['hemodialysis', 'continuous_hd', 'peritoneal_dialysis'])
+        egfr_dosing_text = lookup_egfr_dosing(antibiotic_name, egfr, is_dialysis)
+    
+    if egfr_dosing_text:
+        # Sử dụng dữ liệu từ eGFR lookup (chi tiết hơn)
+        adjustment_text = egfr_dosing_text
+        # Thêm ghi chú nếu có
+        drug_note = get_drug_note(antibiotic_name) if EGFR_LOOKUP_AVAILABLE else None
+        if drug_note:
+            adjustment_text = f"{adjustment_text}\n📝 Lưu ý: {drug_note}"
+    elif renal_category in renal_adj:
+        # Fallback về logic cũ
         adjustment_text = renal_adj[renal_category]
     elif renal_category == 'normal':
         adjustment_text = renal_adj.get('normal', 'Không đổi')
@@ -163,9 +193,25 @@ def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, in
     notes = dosage.get('notes', '')
     monitoring = ab_data.get('monitoring', '')
     
+    # Thêm cảnh báo từ eGFR database nếu có
+    if EGFR_LOOKUP_AVAILABLE:
+        drug_warning = get_drug_warning(antibiotic_name)
+        if drug_warning:
+            if drug_warning.get('critical', False):
+                notes = f"🚨 {drug_warning.get('message', '')}\n{notes}" if notes else f"🚨 {drug_warning.get('message', '')}"
+            else:
+                notes = f"{drug_warning.get('message', '')}\n{notes}" if notes else drug_warning.get('message', '')
+            
+            warning_monitoring = drug_warning.get('monitoring', '')
+            if warning_monitoring:
+                monitoring = f"{monitoring}\n{warning_monitoring}" if monitoring else warning_monitoring
+    
     # Add ICU-specific monitoring if applicable
     if is_icu:
         monitoring = f"{monitoring}\n📊 ICU: Monitor nồng độ thuốc, cân nhắc TDM" if monitoring else "📊 ICU: Monitor nồng độ thuốc, cân nhắc TDM"
+    
+    # Thêm thông tin về nguồn dữ liệu
+    data_source = "eGFR database" if egfr_dosing_text else "standard database"
     
     return {
         "antibiotic": antibiotic_name,
@@ -180,7 +226,9 @@ def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, in
         "protein_binding": icu_adjustment.get('protein_binding', 0),
         "notes": notes,
         "monitoring": monitoring,
-        "full_renal_guide": renal_adj
+        "full_renal_guide": renal_adj,
+        "data_source": data_source,
+        "egfr_based": egfr_dosing_text is not None
     }
 
 

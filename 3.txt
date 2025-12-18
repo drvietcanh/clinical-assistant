@@ -1,0 +1,39 @@
+Tính năng CA thiếu (từ HSCC):
+Drug Infusion Tools (DIRC) — ưu tiên rất cao
+Chuyển đổi (mcg/kg/phút) ↔ (mL/giờ)
+Tính thời gian truyền dịch
+Tính thể tích dịch còn lại
+Đây là tính năng quan trọng nhất mà CA thiếu
+ICU Management Tools — ưu tiên cao
+Tiêu chí nhập/rời ICU
+CERTAIN checklist
+ABCDEF Bundle
+Trauma checklist
+Procedures — ưu tiên trung bình
+ACLS, PALS, ATLS
+FCCS, CERTAIN
+Dịch bệnh — ưu tiên trung bình
+COVID-19 tools
+Sốt xuất huyết Dengue
+Cúm, Đậu mùa khỉ, Bệnh Mác-bớc, etc.
+Administrative Tools — ưu tiên thấp
+ICD-10 tra cứu
+Tỉnh/thành phố, Dân tộc, nghề nghiệp
+Điểm mạnh của CA so với HSCC:
+110+ calculators (HSCC có ~50-70)
+Hoàn toàn miễn phí (HSCC có VIP)
+Offline support (PWA)
+UI/UX có thể tốt hơn
+Khuyến nghị ưu tiên (cập nhật):
+Tuần 1-4: Quick Wins + DIRC
+UI/UX improvements
+Mobile optimization
+Drug Infusion Tools (DIRC) — mới thêm, ưu tiên rất cao
+Tuần 5-8: Core Improvements
+ICU Management Tools — mới thêm
+Drug database expansion
+Search enhancement
+Tháng 3-6: Medium Priority
+Procedures (ACLS, PALS, ATLS)
+Dịch bệnh tools
+Export improvements

@@ -85,4 +85,119 @@ EXTENDED_FIELDS = {
     "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
     'last_updated': '2024-01-15', 'evidence_level':
     'High (FDA-approved, extensive clinical data)'}]},
+
+    # === NEW META FIELDS ===
+    "risk_flags": {
+        'type': 'dict',
+        'required': False,
+        'description': 'Các cờ cảnh báo nguy cơ (high-alert, hẹp khoảng điều trị, độc tính cơ quan, LASA...)',
+        'format': 'Dictionary với các key chuẩn, ưu tiên đánh dấu nhanh các thuốc nguy cơ cao',
+        'structure': {
+            'high_alert': 'bool - Thuốc thuộc nhóm high-alert theo ISMP/ICU (heparin, insulin, opioid mạnh, thuốc vận mạch, chống loạn nhịp, hóa trị...)',
+            'narrow_therapeutic_index': 'bool - Thuốc có khoảng điều trị hẹp (vancomycin, digoxin, phenytoin, carbamazepine, theophylline, warfarin...)',
+            'look_alike_sound_alike': 'List of strings - Danh sách thuốc dễ nhầm tên hoặc dạng trình bày (LASA)',
+            'organ_toxicity': {
+                'hepatic': "string - Nguy cơ độc gan: 'low' / 'moderate' / 'high' / 'unknown'",
+                'renal': "string - Nguy cơ độc thận: 'low' / 'moderate' / 'high' / 'unknown'",
+                'cardiac': "string - Nguy cơ tim mạch: 'low' / 'moderate' / 'high' / 'qt_prolongation'",
+                'hematologic': "string - Nguy cơ huyết học (giảm bạch cầu, giảm tiểu cầu, suy tủy...): 'low' / 'moderate' / 'high' / 'unknown'"
+            },
+            'requires_double_check': 'bool - Khuyến cáo double-check độc lập trước khi dùng (dose/route/patient)',
+            'icu_critical_care_only': 'bool - Thuốc chủ yếu dùng ICU/HSTC, nên hạn chế dùng ngoài ICU',
+        },
+        'examples': [
+            {
+                'high_alert': True,
+                'narrow_therapeutic_index': True,
+                'look_alike_sound_alike': ['Heparin (IV)', 'Heparin flush'],
+                'organ_toxicity': {
+                    'hepatic': 'low',
+                    'renal': 'high',
+                    'cardiac': 'qt_prolongation',
+                    'hematologic': 'high'
+                },
+                'requires_double_check': True,
+                'icu_critical_care_only': True
+            }
+        ]
+    },
+
+    "guideline_tags": {
+        'type': 'dict',
+        'required': False,
+        'description': 'Liên kết thuốc với guideline, phân loại ATC/AHFS và nhãn lâm sàng quan trọng',
+        'format': 'Dictionary gồm các thẻ chuẩn hóa để hỗ trợ tìm kiếm theo guideline/chuyên khoa',
+        'structure': {
+            'who_atc': 'string - Mã ATC chính (vd: C09AA03 cho Enalapril) nếu có',
+            'ahfs_category': 'string - Nhóm AHFS Drug Information (tùy chọn)',
+            'vietnam_essential_medicines': 'bool - Có nằm trong Danh mục thuốc thiết yếu Việt Nam',
+            'international_guidelines': 'List of dict - Liên kết đến guideline quốc tế',
+            'vn_guidelines': 'List of dict - Liên kết đến guideline/hướng dẫn Bộ Y tế hoặc hội chuyên ngành trong nước',
+            'clinical_tags': 'List of strings - Thẻ lâm sàng hỗ trợ filter nhanh (vd: "first_line_htn", "heart_failure_hfref", "aki_high_risk")'
+        },
+        'item_structure': {
+            'international_guidelines': {
+                'source': 'Tên guideline (vd: ESC 2021 HF, KDIGO 2012 CKD, ACC/AHA 2017 HTN)',
+                'recommendation': 'Tóm tắt vai trò thuốc trong guideline (first-line / second-line / only if ...)',
+                'context': 'Ngữ cảnh: bệnh lý, mức độ nặng, line điều trị'
+            },
+            'vn_guidelines': {
+                'source': 'Tên hướng dẫn Việt Nam (vd: BYT – Hướng dẫn tăng huyết áp 2020)',
+                'recommendation': 'Vai trò thuốc trong guideline Việt Nam',
+                'context': 'Ngữ cảnh áp dụng tại VN (tuyến, chuyên khoa, đối tượng)'
+            }
+        },
+        'examples': [
+            {
+                'who_atc': 'C09AA02',
+                'ahfs_category': '24.08.08 ACE Inhibitors',
+                'vietnam_essential_medicines': True,
+                'international_guidelines': [
+                    {
+                        'source': 'ESC 2021 Heart Failure',
+                        'recommendation': 'First-line therapy for HFrEF with ACE inhibitor if tolerated',
+                        'context': 'Heart failure with reduced ejection fraction (NYHA II–III)'
+                    }
+                ],
+                'vn_guidelines': [
+                    {
+                        'source': 'BYT – Hướng dẫn chẩn đoán và điều trị tăng huyết áp 2020',
+                        'recommendation': 'Một trong các lựa chọn hàng đầu trong điều trị tăng huyết áp',
+                        'context': 'Tăng huyết áp nguyên phát, không biến chứng'
+                    }
+                ],
+                'clinical_tags': ['first_line_htn', 'hfref_mortality_benefit']
+            }
+        ]
+    },
+
+    "availability_vietnam": {
+        'type': 'dict',
+        'required': False,
+        'description': 'Thông tin về mức độ sẵn có và chi trả tại Việt Nam',
+        'format': 'Dictionary tóm tắt tình trạng lưu hành, tuyến sử dụng và BHYT',
+        'structure': {
+            'status': "string - 'common' | 'limited' | 'rare' | 'not_available' | 'unknown'",
+            'level_of_care': "List of strings - Các tuyến điều trị điển hình: 'commune', 'district', 'provincial', 'central', 'private'",
+            'insurance_coverage': "string - Tình trạng BHYT: 'bhyt_full' | 'bhyt_partial' | 'no_bhyt' | 'unknown'",
+            'brand_examples': 'List of strings - Một số tên biệt dược phổ biến tại VN (nếu có)',
+            'notes': 'string - Ghi chú thêm: yêu cầu hội chẩn, quản lý đặc biệt, giới hạn sử dụng nội trú...'
+        },
+        'examples': [
+            {
+                'status': 'common',
+                'level_of_care': ['district', 'provincial', 'central'],
+                'insurance_coverage': 'bhyt_full',
+                'brand_examples': ['Captopril STADA', 'Capoten'],
+                'notes': 'Phổ biến ở hầu hết bệnh viện, có nhiều generic. Thường có trong danh mục BHYT.'
+            },
+            {
+                'status': 'limited',
+                'level_of_care': ['provincial', 'central'],
+                'insurance_coverage': 'bhyt_partial',
+                'brand_examples': ['Linezolid Sandoz'],
+                'notes': 'Chủ yếu tuyến cuối, thường cần hội chẩn nhiễm khuẩn để sử dụng.'
+            }
+        ]
+    },
 }

@@ -46,27 +46,15 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
             'Phenytoin/Carbamazepine: tăng nguy cơ độc gan'
         ],
         'pregnancy': 'B - An toàn (dùng được trong thai kỳ)',
-        'mechanism_of_action': {
-            'primary': 'Ức chế cyclooxygenase (COX) chủ yếu ở hệ thần kinh trung ương, làm giảm tổng hợp prostaglandin E2',
-            'detailed': 'Paracetamol ức chế cyclooxygenase (COX) chủ yếu ở hệ thần kinh trung ương, làm giảm tổng hợp prostaglandin E2 trong vùng dưới đồi, từ đó giảm đau và hạ sốt. Khác với NSAID, paracetamol ít tác dụng kháng viêm ở ngoại biên vì không ức chế COX hiệu quả ở mô ngoại biên. Cơ chế chính xác vẫn chưa hoàn toàn rõ ràng, nhưng có thể liên quan đến ức chế COX-2 ở hệ thần kinh trung ương hoặc tác dụng qua con đường cannabinoid. Quan trọng: Ở liều quá cao, chuyển hóa qua CYP2E1 tạo NAPQI (N-acetyl-p-benzoquinone imine) - chất độc gây tổn thương gan nặng.',
-            'target': 'COX-2 (hệ thần kinh trung ương), CYP2E1 (chuyển hóa)'
-        },
-        'monitoring': {
-            'labs': [
-                'ALT/AST nếu nghi ngờ quá liều hoặc bệnh nhân có nguy cơ (suy gan, uống rượu, dùng isoniazid)',
-                'INR nếu dùng với warfarin liều cao kéo dài (tăng nguy cơ chảy máu)',
-                'Nồng độ paracetamol trong máu nếu quá liều (đồ thị Rumack-Matthew để quyết định điều trị N-acetylcysteine)',
-                'Đường huyết (hạ đường huyết có thể xảy ra trong quá liều)'
-            ],
-            'vital_signs': [
-                'Huyết áp',
-                'Nhịp tim'
-            ],
-            'clinical': [
-                'Dấu hiệu độc tính gan: buồn nôn, nôn, đau bụng, vàng da (xuất hiện sau 24-48h sau quá liều)'
-            ],
-            'frequency': 'Theo dõi ALT/AST sau 24-48h nếu quá liều hoặc có nguy cơ'
-        },
+        'mechanism_of_action': 'Paracetamol ức chế cyclooxygenase (COX) chủ yếu ở hệ thần kinh trung ương, làm giảm tổng hợp prostaglandin E2 trong vùng dưới đồi, từ đó giảm đau và hạ sốt. Khác với NSAID, paracetamol ít tác dụng kháng viêm ở ngoại biên vì không ức chế COX hiệu quả ở mô ngoại biên. Cơ chế chính xác vẫn chưa hoàn toàn rõ ràng, nhưng có thể liên quan đến ức chế COX-2 ở hệ thần kinh trung ương hoặc tác dụng qua con đường cannabinoid. Ở liều quá cao, paracetamol được chuyển hóa qua CYP2E1 tạo NAPQI (N-acetyl-p-benzoquinone imine) – chất chuyển hóa gây độc cho gan.',
+        'monitoring': [
+        'ALT/AST nếu nghi ngờ quá liều hoặc bệnh nhân có nguy cơ (suy gan, uống rượu, dùng isoniazid)',
+        'INR nếu dùng với warfarin liều cao kéo dài (tăng nguy cơ chảy máu)',
+        'Nồng độ paracetamol trong máu nếu quá liều (đồ thị Rumack-Matthew để quyết định điều trị N-acetylcysteine)',
+        'Đường huyết (hạ đường huyết có thể xảy ra trong quá liều)',
+        'Theo dõi huyết áp và nhịp tim ở bệnh nhân nặng hoặc có bệnh tim mạch đi kèm',
+        'Theo dõi dấu hiệu lâm sàng độc tính gan: buồn nôn, nôn, đau bụng, vàng da (xuất hiện sau 24-48h sau quá liều)'
+        ],
         'precautions': [
                 'Không vượt quá 4g/ngày ở người lớn, 60mg/kg/ngày ở trẻ em để tránh độc tính gan',
                 'Giảm liều ở bệnh nhân suy gan, suy thận nặng (khoảng cách liều 6-8 giờ)',
@@ -87,13 +75,7 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
             'excretion': 'Thận (<5% nguyên dạng), phần lớn chuyển hóa ở gan'
         },
         'storage': 'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dung dịch: tránh đông lạnh. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi dùng.',
-        'black_box_warnings': [
-            'Quá liều có thể gây độc tính gan nghiêm trọng, suy gan cấp, tử vong',
-            'Liều >150mg/kg ở trẻ em hoặc >10g ở người lớn có thể gây độc tính gan',
-            'Triệu chứng ban đầu có thể nhẹ (buồn nôn, nôn) nhưng tổn thương gan xảy ra sau 24-48 giờ',
-            'Điều trị ngay với N-acetylcysteine nếu quá liều (hiệu quả nhất trong vòng 8 giờ đầu)',
-            'Không dùng quá 4g/ngày ở người lớn'
-        ],
+        'black_box_warnings': 'Quá liều paracetamol có thể gây độc tính gan nghiêm trọng, suy gan cấp và tử vong. Liều >150mg/kg ở trẻ em hoặc >10g ở người lớn có nguy cơ cao. Triệu chứng ban đầu có thể nhẹ nhưng tổn thương gan thường xuất hiện sau 24-48 giờ. Cần điều trị ngay với N-acetylcysteine càng sớm càng tốt và tuyệt đối không dùng quá 4g/ngày ở người lớn.',
         'drug_interactions': {
                 'major': [
                     {

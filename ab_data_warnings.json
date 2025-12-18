@@ -1,0 +1,25 @@
+{
+  "warnings": {
+    "Vancomycin 0.5g": {
+      "critical": true,
+      "message": "🚨 QUAN TRỌNG: Vancomycin BẮT BUỘC phải có TDM (Therapeutic Drug Monitoring) - theo dõi nồng độ thuốc trong máu. Mục tiêu: Trough 15-20 mg/L cho nhiễm trùng nặng, 10-15 mg/L cho nhiễm trùng thông thường.",
+      "monitoring": "Theo dõi nồng độ vancomycin: Trough level trước liều thứ 4-5, Peak level nếu cần. Theo dõi chức năng thận hàng ngày."
+    },
+    "Vancomycin 1g": {
+      "critical": true,
+      "message": "🚨 QUAN TRỌNG: Vancomycin BẮT BUỘC phải có TDM (Therapeutic Drug Monitoring) - theo dõi nồng độ thuốc trong máu. Mục tiêu: Trough 15-20 mg/L cho nhiễm trùng nặng, 10-15 mg/L cho nhiễm trùng thông thường.",
+      "monitoring": "Theo dõi nồng độ vancomycin: Trough level trước liều thứ 4-5, Peak level nếu cần. Theo dõi chức năng thận hàng ngày."
+    },
+    "Colistin 2 M IU": {
+      "critical": true,
+      "message": "🚨 CẢNH BÁO: Colistin RẤT ĐỘC THẬN và độc thần kinh. Cần liều loading: 9 M IU (4.5 lọ) cho liều đầu tiên. Theo dõi chức năng thận chặt chẽ hàng ngày. Tránh dùng kéo dài nếu có thể.",
+      "monitoring": "Theo dõi chức năng thận (creatinine, eGFR) hàng ngày. Theo dõi dấu hiệu độc thần kinh (yếu cơ, tê bì). Tránh dùng với aminoglycosides hoặc vancomycin để giảm nguy cơ độc thận."
+    }
+  },
+  "notes": {
+    "Vancomycin 0.5g": "Tính liều theo cân nặng: 15-20 mg/kg mỗi liều. Điều chỉnh dựa trên TDM.",
+    "Vancomycin 1g": "Tính liều theo cân nặng: 15-20 mg/kg mỗi liều. Điều chỉnh dựa trên TDM.",
+    "Colistin 2 M IU": "Liều loading: 9 M IU (4.5 lọ) cho liều đầu tiên, sau đó dùng liều duy trì theo eGFR. Chỉ dùng khi thực sự cần thiết (nhiễm trùng đa kháng)."
+  }
+}
+

@@ -1886,6 +1886,175 @@ HEMATOLOGY_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA-approved, large RCTs (CRASH-2, WOMAN trial)"
         }
+    },
+    
+    "Alteplase": {
+        "group": "Hematology - Thrombolytic (tPA)",
+        "vietnamese_name": "Alteplase, rt-PA",
+        "administration": ["IV"],
+        "indications": [
+            "Đột quỵ thiếu máu não cấp (AIS) trong cửa sổ 3–4.5 giờ",
+            "Nhồi máu cơ tim cấp (STEMI) khi không thể PCI kịp thời",
+            "Thuyên tắc phổi (PE) nguy kịch/huyết động không ổn định"
+        ],
+        "contraindications": [
+            "Bất kỳ chảy máu nội sọ hoặc xuất huyết nội sọ trước đây",
+            "Đột quỵ xuất huyết hoặc nhồi máu não gần đây (thường <3 tháng, tùy chỉ định)",
+            "Phẫu thuật lớn, chấn thương nặng gần đây",
+            "Huyết áp rất cao không kiểm soát",
+            "Rối loạn đông máu nặng, giảm tiểu cầu rõ"
+        ],
+        "dosage": {
+            "stroke_adult": "0.9 mg/kg (tối đa 90mg): 10% bolus IV trong 1 phút, 90% truyền trong 60 phút",
+            "stemi_adult": "15mg bolus IV, sau đó 0.75mg/kg (tối đa 50mg) trong 30 phút, tiếp theo 0.5mg/kg (tối đa 35mg) trong 60 phút",
+            "pe_adult": "100mg truyền IV trong 2 giờ (hoặc protocol tại bệnh viện)",
+            "notes": "TUÂN THỦ chặt chẽ protocol từng chỉ định (AIS/STEMI/PE) và kiểm tra checklist chống chỉ định trước khi dùng."
+        },
+        "side_effects": [
+            "Chảy máu lớn (xuất huyết nội sọ, xuất huyết tiêu hóa)",
+            "Chảy máu tại vị trí chọc kim, catheter",
+            "Hạ huyết áp thoáng qua",
+            "Phản vệ (hiếm)"
+        ],
+        "interactions": [
+            "Heparin, enoxaparin, DOACs, warfarin: tăng mạnh nguy cơ chảy máu",
+            "Thuốc kháng tiểu cầu (aspirin, clopidogrel): tăng nguy cơ chảy máu"
+        ],
+        "pregnancy": "C - Cân nhắc rất thận trọng, chỉ dùng khi lợi ích vượt xa nguy cơ",
+        "mechanism_of_action": "Alteplase là tissue plasminogen activator (tPA) tái tổ hợp. Gắn vào fibrin trong cục huyết khối và chuyển plasminogen thành plasmin, từ đó phân giải fibrin và làm tan cục máu đông. Tác dụng mạnh nhất trên huyết khối mới hình thành.",
+        "monitoring": [
+            "Dấu hiệu thần kinh mỗi 15 phút trong và sau truyền (AIS)",
+            "Dấu hiệu chảy máu (da, niêm mạc, tiêu hóa, tiểu máu)",
+            "Huyết áp, mạch, SpO2 liên tục trong quá trình truyền",
+            "aPTT, INR, tiểu cầu (nếu dùng kèm hoặc sau heparin/kháng đông khác)"
+        ],
+        "precautions": [
+            "TUYỆT ĐỐI tuân thủ checklist chống chỉ định cho AIS/STEMI/PE theo guideline.",
+            "Không chọc kim, đặt catheter không cần thiết trong và 24 giờ sau truyền nếu có thể tránh.",
+            "Kiểm soát huyết áp trước và trong khi truyền (đặc biệt AIS).",
+            "Ngừng heparin/kháng đông khác trước truyền theo khuyến cáo.",
+            "Nếu nghi ngờ xuất huyết nội sọ: ngừng truyền ngay, chụp CT, xử trí cấp cứu."
+        ],
+        "storage": "Bảo quản bột đông khô trong tủ lạnh (2–8°C). Sau khi pha, dùng trong thời gian theo khuyến cáo của nhà sản xuất (thường ≤8 giờ), tránh lắc mạnh.",
+        "references": {
+            "primary_sources": [
+                "AHA/ASA Guidelines for the Early Management of Patients With Acute Ischemic Stroke",
+                "ESC STEMI Guidelines",
+                "CHEST Guidelines for VTE",
+                "FDA Drug Label - Alteplase"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Epoetin alfa": {
+        "group": "Hematology - Erythropoiesis-Stimulating Agent (ESA)",
+        "vietnamese_name": "Epoetin alfa, Erythropoietin",
+        "administration": ["IV", "SC"],
+        "indications": [
+            "Thiếu máu do suy thận mạn",
+            "Thiếu máu do hóa trị ung thư (chọn lọc bệnh nhân)",
+            "Giảm nhu cầu truyền máu trong một số phẫu thuật chọn lọc"
+        ],
+        "contraindications": [
+            "Tăng huyết áp không kiểm soát",
+            "Phản vệ với epoetin hoặc albumin người",
+            "Tiền sử pure red cell aplasia do ESA"
+        ],
+        "dosage": {
+            "ckd_hd_adult": "50–100 units/kg IV hoặc SC, 3 lần/tuần; chỉnh liều theo đáp ứng Hb",
+            "ckd_nd_adult": "75 units/kg SC/tuần hoặc chia 2–3 lần/tuần",
+            "notes": "Mục tiêu Hb thường 10–11.5 g/dL; tránh Hb >12 g/dL do tăng nguy cơ huyết khối, đột quỵ, nhồi máu cơ tim."
+        },
+        "side_effects": [
+            "Tăng huyết áp hoặc nặng lên tăng huyết áp có sẵn",
+            "Huyết khối (DVT, PE, biến cố tim mạch) nếu Hb tăng nhanh/quá cao",
+            "Đau đầu, đau cơ, triệu chứng giống cúm",
+            "Pure red cell aplasia (rất hiếm)"
+        ],
+        "interactions": [
+            "Thuốc làm tăng nguy cơ huyết khối (estrogen, thuốc tránh thai, thalidomide, lenalidomide)",
+            "Thiếu sắt, folate, B12: làm giảm đáp ứng với epoetin (cần bổ sung khi thiếu)"
+        ],
+        "pregnancy": "C - Có thể dùng nếu cần thiết trong CKD sau khi cân nhắc lợi ích/nguy cơ",
+        "mechanism_of_action": "Epoetin alfa là dạng tái tổ hợp của erythropoietin, kích thích tủy xương tăng sinh và biệt hóa dòng hồng cầu. Tăng số lượng hồng cầu, cải thiện vận chuyển oxy nhưng đồng thời làm tăng độ nhớt máu và nguy cơ huyết khối nếu Hb tăng quá cao.",
+        "monitoring": [
+            "Hemoglobin mỗi 1–2 tuần khi khởi trị, sau đó mỗi 1–3 tháng",
+            "Huyết áp thường xuyên (nguy cơ tăng huyết áp)",
+            "Ferritin, TSAT (dự trữ sắt) – bổ sung sắt nếu thiếu",
+            "Dấu hiệu huyết khối (đau ngực, khó thở, đau/sưng chân)"
+        ],
+        "precautions": [
+            "Không đẩy Hb >12 g/dL. Tăng liều từng bước nhỏ, không tăng dồn dập.",
+            "Điều chỉnh hoặc ngừng thuốc nếu Hb tăng >1 g/dL trong 2 tuần.",
+            "Đảm bảo dự trữ sắt, folate, B12 đủ trước và trong khi điều trị.",
+            "Thận trọng ở bệnh nhân có tiền sử huyết khối, bệnh mạch vành, suy tim."
+        ],
+        "storage": "Bảo quản trong tủ lạnh 2–8°C, không đông lạnh, không lắc mạnh. Tránh ánh sáng trực tiếp.",
+        "references": {
+            "primary_sources": [
+                "KDIGO Anemia in CKD Guidelines",
+                "FDA Drug Label - Epoetin alfa",
+                "ASCO/ASH Guidelines for ESA use in cancer"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Filgrastim": {
+        "group": "Hematology - G-CSF (Granulocyte Colony-Stimulating Factor)",
+        "vietnamese_name": "Filgrastim, G-CSF, Neupogen",
+        "administration": ["SC", "IV"],
+        "indications": [
+            "Giảm bạch cầu trung tính do hóa trị (ngăn ngừa nhiễm trùng)",
+            "Suy tủy/truyền ghép tủy/xương (bone marrow transplantation)",
+            "Huy động tế bào gốc ngoại vi"
+        ],
+        "contraindications": [
+            "Quá mẫn với filgrastim hoặc protein nguồn E. coli",
+            "Hội chứng suy hô hấp cấp (ARDS) đang tiến triển – thận trọng/ngừng nếu xấu đi"
+        ],
+        "dosage": {
+            "chemo_neutropenia_adult": "5 mcg/kg/ngày SC hoặc IV, bắt đầu 24–72 giờ sau hóa trị, tiếp tục đến khi ANC >10.000/mm³",
+            "stem_cell_mobilization": "10 mcg/kg/ngày SC, vài ngày trước thu thập tế bào gốc",
+            "notes": "Liều và thời gian tùy protocol ung bướu/tủy xương cụ thể."
+        },
+        "side_effects": [
+            "Đau xương (rất phổ biến)",
+            "Đau cơ, đau đầu, mệt mỏi",
+            "Tăng bạch cầu, lách to (hiếm: vỡ lách)",
+            "Tăng nhẹ men gan",
+            "Hội chứng suy hô hấp cấp (ARDS) hiếm gặp"
+        ],
+        "interactions": [
+            "Không có tương tác thuốc-được biết rõ ràng, nhưng nên tránh dùng quá gần thời điểm hóa trị gây ức chế tủy (theo khuyến cáo từng regimen)."
+        ],
+        "pregnancy": "C - Dữ liệu hạn chế; cân nhắc nếu lợi ích > nguy cơ",
+        "mechanism_of_action": "Filgrastim là dạng tái tổ hợp của yếu tố kích thích cụm bạch cầu hạt (G-CSF). Kích thích tủy xương tăng sinh, biệt hóa và giải phóng bạch cầu trung tính ra máu ngoại vi, rút ngắn thời gian giảm bạch cầu và giảm nguy cơ nhiễm trùng.",
+        "monitoring": [
+            "Công thức máu (đặc biệt ANC) thường xuyên trong khi điều trị",
+            "Kích thước lách (đau bụng trái trên, siêu âm nếu nghi ngờ)",
+            "Dấu hiệu nhiễm trùng (sốt, ớn lạnh)",
+            "Triệu chứng hô hấp (khó thở, ho, thâm nhiễm phổi – nguy cơ ARDS hiếm)"
+        ],
+        "precautions": [
+            "Thông báo cho bệnh nhân về đau xương – có thể kiểm soát bằng paracetamol hoặc NSAID nếu không chống chỉ định.",
+            "Thận trọng ở bệnh nhân có bệnh lý tủy xương ác tính (có thể kích thích tế bào ác tính).",
+            "Ngừng thuốc nếu nghi ngờ vỡ lách (đau bụng trái trên, tụt HA).",
+            "Theo dõi triệu chứng hô hấp, ngừng nếu nghi ngờ ARDS."
+        ],
+        "storage": "Bảo quản trong tủ lạnh 2–8°C, không đông lạnh, không lắc mạnh. Có thể để ở nhiệt độ phòng trong thời gian ngắn tùy chế phẩm.",
+        "references": {
+            "primary_sources": [
+                "ASCO Guidelines for G-CSF use",
+                "FDA Drug Label - Filgrastim",
+                "UpToDate - Filgrastim: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
     }
 }
 

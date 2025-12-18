@@ -11,6 +11,7 @@ from .fluoroquinolones import FLUOROQUINOLONES_DRUGS
 from .macrolides import MACROLIDES_DRUGS
 from .nitroimidazoles import NITROIMIDAZOLES_DRUGS
 from .tetracyclines import TETRACYCLINES_DRUGS
+from .antituberculars import ANTITUBERCULAR_DRUGS
 
 # Merge all categories
 INFECTIOUS_OTHER_DRUGS = {
@@ -22,6 +23,7 @@ INFECTIOUS_OTHER_DRUGS = {
     **MACROLIDES_DRUGS,
     **NITROIMIDAZOLES_DRUGS,
     **TETRACYCLINES_DRUGS,
+    **ANTITUBERCULAR_DRUGS,
 }
 
 __all__ = ['INFECTIOUS_OTHER_DRUGS']
