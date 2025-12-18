@@ -115,6 +115,66 @@ EMERGENCY_DRUG_PRESETS: Dict[str, DrugPreset] = {
             "note": "Thường 0.3–10 mcg/kg/phút; tránh liều cao kéo dài do nguy cơ ngộ độc cyanid.",
         },
     },
+    "Nitroglycerin": {
+        "name": "Nitroglycerin (Glyceryl trinitrate)",
+        "category": "Vasodilator",
+        "vials": [
+            {"label": "50 mg/10 mL", "amount_mg": 50.0, "volume_ml": 10.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.5,
+            "max_mcg_kg_min": 10.0,
+            "note": "Thường 0.5–10 mcg/kg/phút; bắt đầu thấp và tăng dần theo huyết áp / triệu chứng.",
+        },
+    },
+    "Vasopressin": {
+        "name": "Vasopressin",
+        "category": "Vasopressor",
+        "vials": [
+            {"label": "20 units/1 mL", "amount_mg": 20.0, "volume_ml": 1.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Thường tính theo đơn vị/phút (0.01–0.04 units/phút); dùng preset chủ yếu để tính nồng độ trong bơm.",
+        },
+    },
+    "Amiodarone": {
+        "name": "Amiodarone",
+        "category": "Antiarrhythmic",
+        "vials": [
+            {"label": "150 mg/3 mL", "amount_mg": 150.0, "volume_ml": 3.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Truyền duy trì thường 0.5–1 mg/phút sau liều tấn công; không chuẩn hóa theo mcg/kg/phút.",
+        },
+    },
+    "Lidocaine": {
+        "name": "Lidocaine",
+        "category": "Antiarrhythmic/Local anesthetic",
+        "vials": [
+            {"label": "100 mg/5 mL (2%)", "amount_mg": 100.0, "volume_ml": 5.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Truyền duy trì thường 1–4 mg/phút sau bolus; dùng preset chủ yếu để tính nồng độ.",
+        },
+    },
+    "MagnesiumSulfate": {
+        "name": "Magnesium sulfate",
+        "category": "Electrolyte/Emergency",
+        "vials": [
+            {"label": "10 g/100 mL (10%)", "amount_mg": 10000.0, "volume_ml": 100.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Thường truyền theo mg/kg trong thời gian nhất định (Torsades, sản giật); không chuẩn hóa mcg/kg/phút.",
+        },
+    },
 }
 
 
