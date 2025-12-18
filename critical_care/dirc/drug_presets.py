@@ -175,6 +175,54 @@ EMERGENCY_DRUG_PRESETS: Dict[str, DrugPreset] = {
             "note": "Thường truyền theo mg/kg trong thời gian nhất định (Torsades, sản giật); không chuẩn hóa mcg/kg/phút.",
         },
     },
+    "Nicardipine": {
+        "name": "Nicardipine",
+        "category": "Antihypertensive (CCB)",
+        "vials": [
+            {"label": "25 mg/10 mL", "amount_mg": 25.0, "volume_ml": 10.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.5,
+            "max_mcg_kg_min": 5.0,
+            "note": "Thường 2.5–15 mg/giờ (~0.5–5 mcg/kg/phút tùy cân nặng); chỉnh liều theo huyết áp.",
+        },
+    },
+    "Esmolol": {
+        "name": "Esmolol",
+        "category": "Beta‑blocker (short‑acting)",
+        "vials": [
+            {"label": "2.5 g/250 mL", "amount_mg": 2500.0, "volume_ml": 250.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 50.0,
+            "max_mcg_kg_min": 200.0,
+            "note": "Thường 50–200 mcg/kg/phút sau bolus; chỉnh theo nhịp tim và huyết áp.",
+        },
+    },
+    "RegularInsulin": {
+        "name": "Insulin regular (IV)",
+        "category": "Metabolic/Emergency",
+        "vials": [
+            {"label": "100 units/mL (10 mL)", "amount_mg": 100.0, "volume_ml": 1.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Thường dùng theo units/giờ (DKA, tăng kali máu); preset để tính nồng độ khi pha vào bơm.",
+        },
+    },
+    "Propofol": {
+        "name": "Propofol",
+        "category": "Sedation/Anesthesia",
+        "vials": [
+            {"label": "500 mg/50 mL (1%)", "amount_mg": 500.0, "volume_ml": 50.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 5.0,
+            "max_mcg_kg_min": 80.0,
+            "note": "An thần ICU thường 5–80 mcg/kg/phút; cần theo dõi huyết áp và hô hấp chặt chẽ.",
+        },
+    },
 }
 
 
