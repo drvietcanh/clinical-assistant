@@ -5,21 +5,28 @@ from __future__ import annotations
 import streamlit as st
 
 from .calculator import DIRCCalculator
+from .drug_presets import (
+    EMERGENCY_DRUG_PRESETS,
+    get_drug_names,
+    find_drug_key_by_name,
+    get_vial_labels_for_drug,
+    get_vial_info,
+)
 
 
 def render_dirc_calculator() -> None:
     """Render the DIRC calculator UI."""
     st.header("💉 Drug Infusion Rate Conversion (DIRC)")
     st.caption(
-        "Chuyển đổi liều truyền giữa (mcg/kg/phút) và (mL/giờ) dựa trên cân nặng, nồng độ thuốc "
-        "và hỗ trợ bơm tiêm 50 mL / chai 500 mL."
+        "Chuyển đổi liều truyền giữa (mcg/kg/phút) và (mL/giờ) dựa trên cân nặng, nồng độ thuốc. "
+        "Hỗ trợ bơm tiêm 50 mL / chai 500 mL và preset cho các thuốc cấp cứu thường dùng."
     )
 
     calculator = DIRCCalculator()
 
     # Select conversion direction
     conversion_label = st.radio(
-        "Chọn loại chuyển đổi",
+        "Chọn loại chuyển đổi chính",
         options=[
             "mcg/kg/phút → mL/giờ",
             "mL/giờ → mcg/kg/phút",
@@ -46,18 +53,70 @@ def render_dirc_calculator() -> None:
         calculator.set_input("Cân nặng", weight)
 
     with col2:
-        concentration = st.number_input("Nồng độ thuốc (mg/mL):", min_value=0.0, step=0.1)
-        calculator.set_input("Nồng độ", concentration)
-
-        container_label = st.selectbox(
-            "Loại bơm/chai",
-            options=[
-                "Bơm tiêm 50 mL",
-                "Chai 500 mL",
-            ],
-            index=0,
+        # Emergency drug presets (optional)
+        st.markdown("#### Thuốc cấp cứu (tùy chọn)")
+        drug_display_names = ["Không chọn"] + get_drug_names()
+        selected_drug_name = st.selectbox("Chọn thuốc", options=drug_display_names, index=0)
+        selected_drug_key = (
+            find_drug_key_by_name(selected_drug_name) if selected_drug_name != "Không chọn" else None
         )
-        container_volume_ml = 50.0 if "50" in container_label else 500.0
+
+        suggested_concentration = None
+
+        if selected_drug_key:
+            vial_labels = get_vial_labels_for_drug(selected_drug_key)
+            vial_label = st.selectbox("Loại ống / hàm lượng", options=vial_labels, index=0)
+            vial = get_vial_info(selected_drug_key, vial_label)
+
+            container_label = st.selectbox(
+                "Pha vào bơm/chai",
+                options=[
+                    "Bơm tiêm 50 mL",
+                    "Chai 500 mL",
+                ],
+                index=0,
+            )
+            container_volume_ml = 50.0 if "50" in container_label else 500.0
+
+            if vial:
+                base_conc = vial["amount_mg"] / vial["volume_ml"]
+                final_conc = vial["amount_mg"] / container_volume_ml
+                suggested_concentration = final_conc
+
+                st.caption(
+                    f"Hàm lượng gốc: **{vial['amount_mg']} mg / {vial['volume_ml']} mL** "
+                    f"(~ {base_conc:.2f} mg/mL). Pha vào **{int(container_volume_ml)} mL** → "
+                    f"nồng độ ~ **{final_conc:.3f} mg/mL** (copy vào ô nồng độ bên dưới)."
+                )
+
+            dose_range = EMERGENCY_DRUG_PRESETS[selected_drug_key].get("dose_range")
+            if dose_range:
+                st.info(
+                    f"Gợi ý liều: {dose_range.get('min_mcg_kg_min', 0):.2f} – "
+                    f"{dose_range.get('max_mcg_kg_min', 0):.2f} mcg/kg/phút. "
+                    f"{dose_range.get('note', '')}"
+                )
+        else:
+            container_label = st.selectbox(
+                "Loại bơm/chai",
+                options=[
+                    "Bơm tiêm 50 mL",
+                    "Chai 500 mL",
+                ],
+                index=0,
+            )
+            container_volume_ml = 50.0 if "50" in container_label else 500.0
+
+        # Concentration input (user can copy from suggestion above)
+        default_conc = suggested_concentration if suggested_concentration is not None else 0.0
+        concentration = st.number_input(
+            "Nồng độ thuốc (mg/mL):",
+            min_value=0.0,
+            step=0.01,
+            value=default_conc,
+            format="%.3f",
+        )
+        calculator.set_input("Nồng độ", concentration)
 
     st.markdown("---")
 
