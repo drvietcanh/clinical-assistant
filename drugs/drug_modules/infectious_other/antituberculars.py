@@ -734,6 +734,266 @@ ANTITUBERCULAR_DRUGS = {
             "evidence_level": "High – guideline-based, nhưng hiện ít dùng do độc tính.",
         },
     },
+
+    "Rifabutin": {
+        "group": "Infectious Disease - Antitubercular (Rifamycin, dùng trong HIV/TB và các phác đồ đặc biệt)",
+        "vietnamese_name": "Rifabutin",
+        "administration": ["PO"],
+        "indications": [
+            "Điều trị lao ở bệnh nhân HIV đang dùng phác đồ ARV có tương tác mạnh với rifampin.",
+            "Dự phòng và điều trị nhiễm Mycobacterium avium complex (MAC) ở bệnh nhân suy giảm miễn dịch nặng.",
+        ],
+        "contraindications": [
+            "Dị ứng với rifabutin hoặc các rifamycin khác.",
+            "Bệnh gan nặng tiến triển.",
+        ],
+        "dosage": {
+            "adult_tb_hiv": "300mg/ngày uống 1 lần; điều chỉnh xuống 150mg/ngày khi dùng kèm một số PI/NNRTI (theo guideline HIV/TB).",
+            "mac_prophylaxis": "300mg/ngày uống 1 lần cho bệnh nhân HIV với CD4 <50 tế bào/mm³.",
+            "notes": "Liều chính xác phụ thuộc phác đồ ARV đi kèm; cần tham khảo guideline HIV/TB cập nhật.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần điều chỉnh.",
+            "30_60": "Thường không cần điều chỉnh; theo dõi thêm độc tính.",
+            "under_30": "Thận trọng, có thể phải giảm liều hoặc kéo dài khoảng cách; tham khảo tài liệu chuyên sâu.",
+        },
+        "side_effects": [
+            "Đổi màu nước tiểu, nước mắt, mồ hôi sang vàng–cam.",
+            "Viêm màng bồ đào (uveitis), đặc biệt khi dùng liều cao hoặc phối hợp với clarithromycin, fluconazole.",
+            "Giảm bạch cầu, giảm tiểu cầu.",
+            "Tăng men gan.",
+        ],
+        "interactions": [
+            "Thuốc ARV (PI, NNRTI): tương tác phức tạp (vừa là cơ chất, vừa cảm ứng/ức chế CYP).",
+            "Clarithromycin, azole (fluconazole): tăng nồng độ rifabutin, tăng nguy cơ uveitis và độc tính.",
+        ],
+        "pregnancy": "B–C (dữ liệu hạn chế); chỉ dùng khi lợi ích vượt trội nguy cơ.",
+        "mechanism_of_action": (
+            "Rifabutin là rifamycin, ức chế RNA polymerase phụ thuộc DNA của vi khuẩn bằng cách gắn vào tiểu đơn vị β, "
+            "ngăn tổng hợp RNA và có tác dụng diệt khuẩn đối với Mycobacterium tuberculosis và một số Mycobacterium không điển hình "
+            "(như MAC). So với rifampin, rifabutin là cảm ứng CYP3A4 yếu hơn, do đó thích hợp hơn cho bệnh nhân HIV dùng ARV."
+        ),
+        "monitoring": [
+            "Men gan (ALT, AST, bilirubin) định kỳ.",
+            "Công thức máu (bạch cầu, tiểu cầu).",
+            "Triệu chứng mắt: mờ mắt, đau mắt, nhạy sáng (nghi uveitis).",
+            "Theo dõi tương tác với phác đồ ARV (tải lượng virus, CD4).",
+        ],
+        "precautions": [
+            "Thận trọng khi phối hợp với clarithromycin hoặc azole (tăng nguy cơ uveitis).",
+            "Điều chỉnh liều theo guideline HIV/TB khi phối hợp với PI/NNRTI.",
+            "Tư vấn bệnh nhân về đổi màu dịch cơ thể tương tự rifampin.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "30–40 giờ (dài hơn rifampin).",
+            "onset": "Nồng độ đỉnh sau 2–4 giờ uống.",
+            "duration": "Cho phép dùng 1 lần/ngày hoặc 3 lần/tuần tùy phác đồ.",
+            "protein_binding": "Khoảng 70%.",
+            "clearance": "Chủ yếu qua gan; bài tiết qua mật và phân, một phần nhỏ qua thận.",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ánh sáng, 15–30°C.",
+        "black_box_warnings": (
+            "Có thể gây viêm màng bồ đào, giảm bạch cầu, giảm tiểu cầu và độc gan; cần theo dõi sát, đặc biệt khi phối hợp clarithromycin hoặc azole."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Protease inhibitors (PI), NNRTI",
+                    "mechanism": "Ảnh hưởng lẫn nhau qua CYP3A4 (rifabutin là cơ chất và cảm ứng nhẹ).",
+                    "effect": "Thay đổi nồng độ cả ARV và rifabutin.",
+                    "management": "Điều chỉnh liều rifabutin (thường giảm còn 150mg/ngày hoặc 3 lần/tuần) theo guideline HIV/TB.",
+                },
+                {
+                    "drug": "Clarithromycin, fluconazole",
+                    "mechanism": "Ức chế chuyển hóa rifabutin.",
+                    "effect": "Tăng nguy cơ uveitis, độc tính toàn thân.",
+                    "management": "Theo dõi sát triệu chứng mắt và độc tính; cân nhắc giảm liều rifabutin.",
+                },
+            ],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với rifabutin hoặc rifamycin khác.",
+            ],
+            "tương_đối": [
+                "Bệnh gan mạn tính.",
+                "Tiền sử viêm màng bồ đào.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B/C (tùy tài liệu)",
+            "pregnancy_details": (
+                "Dữ liệu trên người còn hạn chế; chỉ nên dùng khi thực sự cần thiết và không có lựa chọn an toàn hơn."
+            ),
+            "lactation": {
+                "safety": "Caution",
+                "details": "Không có nhiều dữ liệu; có thể bài tiết vào sữa.",
+                "recommendation": "Cân nhắc lợi ích–nguy cơ cho mẹ và trẻ, ưu tiên thuốc có dữ liệu an toàn hơn nếu có.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Có thể dùng nhưng cần theo dõi men gan.",
+            "moderate": "Thận trọng; cân nhắc giảm liều hoặc tăng khoảng cách liều.",
+            "severe": "Tránh nếu có lựa chọn khác.",
+            "notes": "Chuyển hóa chủ yếu qua gan, nên suy gan làm tăng nguy cơ độc tính.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, đau bụng.",
+                "Vàng da, mệt mỏi.",
+                "Triệu chứng mắt (mờ, đau, đỏ).",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Điều trị hỗ trợ, bù dịch.",
+                "Theo dõi chức năng gan, công thức máu.",
+                "Tham vấn chuyên khoa mắt nếu có triệu chứng uveitis.",
+            ],
+            "monitoring": "Men gan, công thức máu, triệu chứng mắt.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc xa bữa ăn; thức ăn không ảnh hưởng đáng kể.",
+                "timing": "Uống 1 lần/ngày, nên cố định thời điểm.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "WHO Consolidated Guidelines on Tuberculosis and HIV",
+                "DHHS Guidelines for the Use of Antiretroviral Agents in Adults and Adolescents with HIV",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – guideline-based, nhưng phụ thuộc phác đồ ARV.",
+        },
+    },
+
+    "Rifapentine": {
+        "group": "Infectious Disease - Antitubercular (Long-acting rifamycin)",
+        "vietnamese_name": "Rifapentine",
+        "administration": ["PO"],
+        "indications": [
+            "Điều trị lao hoạt động (phối hợp trong một số phác đồ rút ngắn, theo nghiên cứu và guideline).",
+            "Điều trị lao tiềm ẩn (LTBI) trong phác đồ isoniazid + rifapentine 1 lần/tuần (3HP, 1HP tùy guideline).",
+        ],
+        "contraindications": [
+            "Dị ứng với rifapentine hoặc rifamycin khác.",
+            "Bệnh gan nặng tiến triển.",
+        ],
+        "dosage": {
+            "ltbi_3hp": "Isoniazid + rifapentine uống 1 lần/tuần trong 3 tháng (theo cân nặng và guideline).",
+            "active_tb": "Liều theo cân nặng, thường 10–20mg/kg dùng 1–2 lần/tuần tùy phác đồ.",
+            "notes": "Liều và lịch dùng rất phụ thuộc phác đồ cụ thể (3HP, 1HP, phác đồ rút ngắn); cần tham khảo guideline chi tiết.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần điều chỉnh.",
+            "30_60": "Thường không cần điều chỉnh; theo dõi độc tính.",
+            "under_30": "Thận trọng; dữ liệu hạn chế, tham khảo tài liệu chuyên sâu.",
+        },
+        "side_effects": [
+            "Tăng men gan, viêm gan do thuốc.",
+            "Đổi màu dịch cơ thể (đỏ–cam) tương tự rifampin.",
+            "Các triệu chứng giống cúm, đau đầu.",
+            "Ban da, ngứa.",
+        ],
+        "interactions": [
+            "Thuốc tránh thai uống, warfarin, nhiều thuốc chuyển hóa qua CYP3A4/2C8/2C9: giảm hiệu lực.",
+            "ARV: tương tác phức tạp, cần tham khảo guideline HIV/TB khi phối hợp.",
+        ],
+        "pregnancy": "Không khuyến cáo rộng rãi trong thai kỳ do dữ liệu hạn chế; tham khảo guideline.",
+        "mechanism_of_action": (
+            "Rifapentine là rifamycin tác dụng kéo dài, ức chế RNA polymerase phụ thuộc DNA của vi khuẩn bằng cách gắn vào tiểu đơn vị β, "
+            "ngăn tổng hợp RNA. Thời gian bán thải dài cho phép dùng ít lần hơn (1–2 lần/tuần) trong một số phác đồ lao hoạt động và lao tiềm ẩn."
+        ),
+        "monitoring": [
+            "Men gan định kỳ trong quá trình điều trị.",
+            "Triệu chứng viêm gan và phản ứng quá mẫn.",
+            "Tương tác với các thuốc có khoảng điều trị hẹp (warfarin, thuốc chống loạn nhịp, thuốc chống động kinh...).",
+        ],
+        "precautions": [
+            "Không dùng đơn trị trong lao hoạt động.",
+            "Đánh giá tương tác thuốc kỹ, đặc biệt ở bệnh nhân đa bệnh lý.",
+            "Thận trọng ở phụ nữ mang thai và cho con bú do dữ liệu hạn chế.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "13–25 giờ (dài hơn rifampin).",
+            "onset": "Nồng độ đỉnh sau 5–6 giờ uống.",
+            "duration": "Cho phép dùng liều hàng tuần trong một số phác đồ LTBI.",
+            "protein_binding": "Rất cao (~98%).",
+            "clearance": "Chủ yếu chuyển hóa và bài tiết qua mật, một phần qua thận.",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ánh sáng, 15–30°C.",
+        "black_box_warnings": (
+            "Nguy cơ tổn thương gan, đặc biệt khi phối hợp với các thuốc độc gan khác; cần theo dõi chức năng gan định kỳ."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc tránh thai nội tiết, warfarin, thuốc chống loạn nhịp, thuốc chống động kinh",
+                    "mechanism": "Cảm ứng CYP mạnh, tăng chuyển hóa thuốc.",
+                    "effect": "Giảm nồng độ và hiệu quả điều trị.",
+                    "management": "Cân nhắc thay thế thuốc hoặc tăng liều và theo dõi chỉ số hiệu quả (INR, ECG, kiểm soát cơn động kinh...).",
+                }
+            ],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với rifapentine hoặc rifamycin khác.",
+            ],
+            "tương_đối": [
+                "Bệnh gan mạn, uống rượu nhiều.",
+                "Dùng nhiều thuốc có khoảng điều trị hẹp chuyển hóa qua CYP.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "Chưa rõ/không phân loại rõ ràng",
+            "pregnancy_details": (
+                "Dữ liệu trên thai kỳ hạn chế; nên tránh dùng trừ khi lợi ích vượt trội nguy cơ và không có lựa chọn khác."
+            ),
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ mức độ bài tiết vào sữa mẹ.",
+                "recommendation": "Cân nhắc lợi ích–nguy cơ; nếu dùng, theo dõi trẻ về triệu chứng gan và vàng da.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Có thể dùng với theo dõi men gan.",
+            "moderate": "Thận trọng; cân nhắc giảm liều hoặc kéo dài khoảng cách liều.",
+            "severe": "Tránh dùng nếu có lựa chọn khác.",
+            "notes": "Chuyển hóa chủ yếu qua gan; suy gan làm tăng nguy cơ độc tính.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, đau bụng.",
+                "Mệt mỏi, vàng da.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Điều trị hỗ trợ, bù dịch.",
+                "Theo dõi chặt chức năng gan.",
+            ],
+            "monitoring": "Men gan, bilirubin, triệu chứng lâm sàng.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Thường dùng cùng thức ăn để cải thiện dung nạp đường tiêu hóa.",
+                "timing": "Tùy phác đồ (1 lần/tuần hoặc 1–2 lần/tuần); nên uống cố định ngày trong tuần.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "CDC/ATS/IDSA Guidelines for the Treatment of Latent Tuberculosis Infection",
+                "WHO documents on short-course rifapentine-based regimens",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – guideline and trial-based, nhưng áp dụng chọn lọc.",
+        },
+    },
 }
 
 __all__ = ["ANTITUBERCULAR_DRUGS"]
