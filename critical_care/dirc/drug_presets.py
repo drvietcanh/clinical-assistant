@@ -223,6 +223,90 @@ EMERGENCY_DRUG_PRESETS: Dict[str, DrugPreset] = {
             "note": "An thần ICU thường 5–80 mcg/kg/phút; cần theo dõi huyết áp và hô hấp chặt chẽ.",
         },
     },
+    "Atropine": {
+        "name": "Atropine sulfate",
+        "category": "Emergency (bradycardia)",
+        "vials": [
+            {"label": "0.5 mg/1 mL", "amount_mg": 0.5, "volume_ml": 1.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Thường dùng bolus 0.5–1 mg IV, không truyền duy trì; preset hỗ trợ tính nồng độ khi pha.",
+        },
+    },
+    "Diazepam": {
+        "name": "Diazepam",
+        "category": "Sedation/Anticonvulsant",
+        "vials": [
+            {"label": "10 mg/2 mL", "amount_mg": 10.0, "volume_ml": 2.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Chủ yếu dùng bolus; preset dùng để tính nồng độ nếu cần truyền.",
+        },
+    },
+    "Morphine": {
+        "name": "Morphine sulfate",
+        "category": "Analgesic/Opioid",
+        "vials": [
+            {"label": "10 mg/1 mL", "amount_mg": 10.0, "volume_ml": 1.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.5,
+            "max_mcg_kg_min": 5.0,
+            "note": "Truyền giảm đau thường 0.5–5 mcg/kg/phút; chỉnh theo đau và tác dụng phụ.",
+        },
+    },
+    "Naloxone": {
+        "name": "Naloxone",
+        "category": "Antidote (opioid)",
+        "vials": [
+            {"label": "0.4 mg/1 mL", "amount_mg": 0.4, "volume_ml": 1.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Thường dùng bolus; một số phác đồ truyền duy trì 0.25–6 mg/giờ, tùy guideline.",
+        },
+    },
+    "Furosemide": {
+        "name": "Furosemide",
+        "category": "Diuretic",
+        "vials": [
+            {"label": "20 mg/2 mL", "amount_mg": 20.0, "volume_ml": 2.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Có thể truyền liên tục (ví dụ 5–20 mg/giờ) trong một số phác đồ; kiểm tra guideline tại cơ sở.",
+        },
+    },
+    "CalciumGluconate": {
+        "name": "Calcium gluconate",
+        "category": "Electrolyte/Emergency",
+        "vials": [
+            {"label": "1 g/10 mL (10%)", "amount_mg": 1000.0, "volume_ml": 10.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Thường dùng bolus chậm; preset giúp tính nồng độ nếu truyền duy trì.",
+        },
+    },
+    "SodiumBicarbonate": {
+        "name": "Sodium bicarbonate 8.4%",
+        "category": "Buffer/Emergency",
+        "vials": [
+            {"label": "50 mEq/50 mL (8.4%)", "amount_mg": 0.0, "volume_ml": 50.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.0,
+            "max_mcg_kg_min": 0.0,
+            "note": "Thường dùng bolus hoặc truyền ngắn; đơn vị chuẩn là mEq, không chuẩn hóa mcg/kg/phút.",
+        },
+    },
 }
 
 
