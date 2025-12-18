@@ -17,6 +17,7 @@ from .diuretics import DIURETICS
 from .anticoagulants import ANTICOAGULANTS
 from .pcsk9_inhibitors import PCSK9_INHIBITORS
 from .triglyceride_lowering import TRIGLYCERIDE_LOWERING_DRUGS
+from .fixed_dose_combinations import CARDIOVASCULAR_FIXED_DOSE_COMBINATIONS
 
 # Merge all categories
 CARDIOVASCULAR_DRUGS = {
@@ -33,6 +34,7 @@ CARDIOVASCULAR_DRUGS = {
     **ANTICOAGULANTS,
     **PCSK9_INHIBITORS,
     **TRIGLYCERIDE_LOWERING_DRUGS,
+    **CARDIOVASCULAR_FIXED_DOSE_COMBINATIONS,
 }
 
 __all__ = ['CARDIOVASCULAR_DRUGS']

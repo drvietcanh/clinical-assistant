@@ -8,15 +8,17 @@ import sys
 from pathlib import Path
 
 
-def setup_page(page_title: str, page_icon: str, description: str = "", layout: str = "wide"):
+def setup_page(page_title: str, page_icon: str, description: str = "", layout: str = "wide", mobile_header: bool = True):
     """
     Standard page setup - reduces boilerplate in all page files
+    Now with mobile optimizations
     
     Args:
         page_title: Title of the page (shown in browser tab)
         page_icon: Emoji icon for the page
         description: Optional description shown below title
         layout: Page layout ("wide" or "centered")
+        mobile_header: Show mobile-optimized header (default: True)
     
     Returns:
         None (sets up page configuration)
@@ -36,7 +38,33 @@ def setup_page(page_title: str, page_icon: str, description: str = "", layout: s
         layout=layout
     )
     
-    # Render header
+    # Render mobile header if enabled
+    if mobile_header:
+        try:
+            from components.mobile_page_wrapper import render_mobile_page_header
+            render_mobile_page_header(
+                title=page_title,
+                icon=page_icon,
+                subtitle=description if description else None,
+                show_back_button=True,
+                back_url="/"
+            )
+        except ImportError:
+            # Fallback to standard header if component not available
+            pass
+    
+    # Render standard header (hidden on mobile if mobile_header is True)
+    header_style = """
+    <style>
+    @media (max-width: 768px) {
+        h1:first-of-type {
+            display: none; /* Hide standard title on mobile if mobile header is shown */
+        }
+    }
+    </style>
+    """ if mobile_header else ""
+    
+    st.markdown(header_style, unsafe_allow_html=True)
     st.title(f"{page_icon} {page_title}")
     if description:
         st.markdown(description)

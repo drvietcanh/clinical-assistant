@@ -159,7 +159,7 @@ def render():
                 "Chiều cao (cm)",
                 min_value=100.0,
                 max_value=250.0,
-                value=170.0,
+                value=160.0,
                 step=1.0,
                 help="Nhập chiều cao"
             )
@@ -169,7 +169,7 @@ def render():
                 "Cân nặng (kg)",
                 min_value=30.0,
                 max_value=300.0,
-                value=70.0,
+                value=50.0,
                 step=0.1,
                 help="Nhập cân nặng"
             )

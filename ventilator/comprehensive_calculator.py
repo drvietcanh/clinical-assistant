@@ -94,7 +94,7 @@ def render_comprehensive_calculator():
         )
         height = st.number_input(
             "Chiều cao (cm)", 
-            100, 220, 170, 1,
+            100, 220, 160, 1,
             format="%d",
             key="comp_height",
             help="Chiều cao thực tế của bệnh nhân"

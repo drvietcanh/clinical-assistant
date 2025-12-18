@@ -204,7 +204,7 @@ def render_ibw_calculator():
             "Chiều cao (cm):",
             min_value=100,
             max_value=250,
-            value=170,
+            value=160,
             step=1,
             format="%d",
             key="ibw_height"
@@ -258,7 +258,7 @@ def render_tidal_volume_calculator():
             "Cân nặng lý tưởng (kg):",
             min_value=20.0,
             max_value=150.0,
-            value=70.0,
+            value=50.0,
             step=0.1,
             format="%.1f",
             key="tidal_ibw",

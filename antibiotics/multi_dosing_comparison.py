@@ -64,8 +64,8 @@ def render_multi_comparison():
             egfr = st.number_input("eGFR (mL/min/1.73m²)", min_value=0, max_value=200, value=70, step=1, format="%d", key="multi_egfr")
     
     # Weight for dose calculation
-    weight = st.number_input("Cân nặng (kg) - để tính liều cụ thể", min_value=10.0, max_value=200.0, value=70.0, step=1.0, format="%.1f", key="multi_weight")
-    height = st.number_input("Chiều cao (cm) - để tính IBW/ABW", min_value=50, max_value=220, value=170, step=1, format="%d", key="multi_height")
+    weight = st.number_input("Cân nặng (kg) - để tính liều cụ thể", min_value=10.0, max_value=200.0, value=50.0, step=1.0, format="%.1f", key="multi_weight")
+    height = st.number_input("Chiều cao (cm) - để tính IBW/ABW", min_value=50, max_value=220, value=160, step=1, format="%d", key="multi_height")
     sex = st.radio("Giới tính", ["Nam", "Nữ"], horizontal=True, key="multi_sex")
     
     # Calculate IBW/ABW

@@ -27,7 +27,7 @@ def render_ardsnet():
             "Chiều cao (cm)",
             min_value=100,
             max_value=220,
-            value=170,
+            value=160,
             step=1,
             format="%d",
             help="Chiều cao thực tế của bệnh nhân"
@@ -189,7 +189,7 @@ def render_initial_settings():
             "Chiều cao (cm)",
             min_value=100,
             max_value=220,
-            value=170,
+            value=160,
             step=1,
             format="%d",
             help="Chiều cao thực tế của bệnh nhân",

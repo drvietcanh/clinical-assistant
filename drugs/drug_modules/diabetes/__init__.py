@@ -10,6 +10,8 @@ from .sulfonylureas import SULFONYLUREAS_DRUGS
 from .thiazolidinedione_tzds import THIAZOLIDINEDIONE_TZDS_DRUGS
 from .meglitinides import MEGLITINIDES_DRUGS
 from .alpha_glucosidase_inhibitors import ALPHA_GLUCOSIDASE_INHIBITORS_DRUGS
+from .glp1_agonists import GLP1_AGONISTS_DRUGS
+from .fixed_dose_combinations import DIABETES_FIXED_DOSE_COMBINATIONS
 
 # Merge all categories
 DIABETES_DRUGS = {
@@ -21,6 +23,8 @@ DIABETES_DRUGS = {
     **THIAZOLIDINEDIONE_TZDS_DRUGS,
     **MEGLITINIDES_DRUGS,
     **ALPHA_GLUCOSIDASE_INHIBITORS_DRUGS,
+    **GLP1_AGONISTS_DRUGS,
+    **DIABETES_FIXED_DOSE_COMBINATIONS,
 }
 
 __all__ = ['DIABETES_DRUGS']

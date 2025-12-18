@@ -256,7 +256,7 @@ def render_fluid_resuscitation():
         "Cân nặng (kg):",
         min_value=30.0,
         max_value=200.0,
-        value=70.0,
+        value=50.0,
         step=0.1,
         format="%.1f",
         key="sepsis_weight"

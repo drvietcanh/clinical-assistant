@@ -289,7 +289,7 @@ def render_vancomycin_tdm():
                 "Cân nặng (kg)",
                 min_value=30,
                 max_value=150,
-                value=70,
+                value=50,
                 step=1,
                 format="%d",
                 key="vanc_auc_weight"
@@ -428,7 +428,7 @@ def render_vancomycin_tdm():
                 "Cân nặng (kg)",
                 min_value=30,
                 max_value=150,
-                value=70,
+                value=50,
                 step=1,
                 format="%d",
                 key="vanc_trough_weight"

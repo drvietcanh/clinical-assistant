@@ -66,16 +66,23 @@ def render_mobile_bottom_nav():
             }
             
             .mobile-nav-item.active {
-                color: #1976d2;
+                color: #2D7DF6;
+                font-weight: 600;
             }
             
             [data-theme="dark"] .mobile-nav-item.active {
                 color: #64b5f6;
             }
             
+            .mobile-nav-item.active .mobile-nav-icon {
+                transform: scale(1.1);
+                transition: transform 0.2s ease;
+            }
+            
             .mobile-nav-icon {
                 font-size: 24px;
                 margin-bottom: 4px;
+                transition: transform 0.2s ease;
             }
             
             .mobile-nav-label {
@@ -86,6 +93,8 @@ def render_mobile_bottom_nav():
             /* Add padding to main content to prevent overlap */
             .main .block-container {
                 padding-bottom: 80px !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
             }
         }
         
@@ -102,21 +111,21 @@ def render_mobile_bottom_nav():
                 <div class="mobile-nav-icon">🏠</div>
                 <div class="mobile-nav-label">Trang chủ</div>
             </a>
-            <a href="/pages/01_📊_Scores.py" class="mobile-nav-item" id="nav-scores">
-                <div class="mobile-nav-icon">📊</div>
-                <div class="mobile-nav-label">Scores</div>
-            </a>
             <a href="/pages/07_💊_Drug_Database.py" class="mobile-nav-item" id="nav-drugs">
                 <div class="mobile-nav-icon">💊</div>
                 <div class="mobile-nav-label">Thuốc</div>
             </a>
-            <a href="/pages/05_🔬_Labs_and_Calculators.py" class="mobile-nav-item" id="nav-labs">
-                <div class="mobile-nav-icon">🔬</div>
-                <div class="mobile-nav-label">Labs</div>
+            <a href="/pages/01_📊_Scores.py" class="mobile-nav-item" id="nav-scores">
+                <div class="mobile-nav-icon">📊</div>
+                <div class="mobile-nav-label">Thang điểm</div>
             </a>
-            <a href="#" class="mobile-nav-item" id="nav-more" onclick="toggleMobileMenu(event)">
-                <div class="mobile-nav-icon">⚙️</div>
-                <div class="mobile-nav-label">Thêm</div>
+            <a href="/pages/04_📋_Protocols.py" class="mobile-nav-item" id="nav-guidelines">
+                <div class="mobile-nav-icon">📋</div>
+                <div class="mobile-nav-label">Guideline</div>
+            </a>
+            <a href="#" class="mobile-nav-item" id="nav-personal" onclick="toggleMobileMenu(event)">
+                <div class="mobile-nav-icon">⭐</div>
+                <div class="mobile-nav-label">Tủ cá nhân</div>
             </a>
         </nav>
         
@@ -126,9 +135,9 @@ def render_mobile_bottom_nav():
             const currentPath = window.location.pathname;
             const navItems = {
                 '/': 'nav-home',
-                '/pages/01_📊_Scores.py': 'nav-scores',
                 '/pages/07_💊_Drug_Database.py': 'nav-drugs',
-                '/pages/05_🔬_Labs_and_Calculators.py': 'nav-labs'
+                '/pages/01_📊_Scores.py': 'nav-scores',
+                '/pages/04_📋_Protocols.py': 'nav-guidelines'
             };
             
             // Find matching nav item
@@ -147,7 +156,7 @@ def render_mobile_bottom_nav():
             }
         })();
         
-        // Toggle mobile menu
+        // Toggle mobile menu (for Tủ cá nhân)
         function toggleMobileMenu(event) {
             event.preventDefault();
             // Open sidebar (Streamlit's built-in sidebar)
@@ -161,7 +170,7 @@ def render_mobile_bottom_nav():
         // Prevent default link behavior and use Streamlit navigation
         document.querySelectorAll('#mobile-bottom-nav a').forEach(link => {
             link.addEventListener('click', function(e) {
-                if (this.id === 'nav-more') {
+                if (this.id === 'nav-personal') {
                     return; // Let toggleMobileMenu handle it
                 }
                 

@@ -25,6 +25,10 @@ except ImportError:
 from components.favorites import render_favorites
 from components.recently_used import render_recently_used
 from components.stats import render_stats, render_updates, render_tips
+try:
+    from components.homepage_doctor import render_homepage_doctor
+except ImportError:
+    render_homepage_doctor = None
 
 # Offline indicator (rendered at top level)
 try:
@@ -250,25 +254,39 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
-# Hero Section with Search
-st.markdown("""
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            padding: 2rem; 
-            border-radius: 16px; 
-            margin-bottom: 2rem;
-            color: white;">
-    <h2 style="color: white; margin-bottom: 0.5rem;">🔍 Tìm kiếm nhanh</h2>
-    <p style="color: rgba(255,255,255,0.9); margin: 0;">Nhấn <kbd style="background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 4px;">Ctrl+K</kbd> để focus vào ô tìm kiếm</p>
-</div>
-""", unsafe_allow_html=True)
+# Use new homepage design for doctors if available
+if render_homepage_doctor:
+    # Render new homepage layout
+    render_homepage_doctor()
+    
+    # Search Component (integrated into homepage)
+    render_search()
+    
+    st.markdown("---")
+    
+    # Keep tabs for additional content
+    tab1, tab2, tab3 = st.tabs(["🚀 Tất cả Modules", "⭐ Yêu Thích & Gần Đây", "📊 Thống Kê & Cập Nhật"])
+else:
+    # Fallback to original design
+    # Hero Section with Search
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+                padding: 2rem; 
+                border-radius: 16px; 
+                margin-bottom: 2rem;
+                color: white;">
+        <h2 style="color: white; margin-bottom: 0.5rem;">🔍 Tìm kiếm nhanh</h2>
+        <p style="color: rgba(255,255,255,0.9); margin: 0;">Nhấn <kbd style="background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 4px;">Ctrl+K</kbd> để focus vào ô tìm kiếm</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-# Search Component
-render_search()
+    # Search Component
+    render_search()
 
-st.markdown("---")
-
-# Tabs for better organization
-tab1, tab2, tab3 = st.tabs(["🚀 Truy Cập Nhanh", "⭐ Yêu Thích & Gần Đây", "📊 Thống Kê & Cập Nhật"])
+    st.markdown("---")
+    
+    # Tabs for better organization
+    tab1, tab2, tab3 = st.tabs(["🚀 Truy Cập Nhanh", "⭐ Yêu Thích & Gần Đây", "📊 Thống Kê & Cập Nhật"])
 
 with tab1:
     st.markdown("### 📚 Tất cả modules")

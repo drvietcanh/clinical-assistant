@@ -52,7 +52,7 @@ def render():
             "Cân nặng (kg)",
             min_value=30.0,
             max_value=200.0,
-            value=70.0,
+            value=50.0,
             step=0.5,
             format="%.1f",
             key="ag_weight"
@@ -62,7 +62,7 @@ def render():
             "Chiều cao (cm)",
             min_value=120,
             max_value=220,
-            value=170,
+            value=160,
             step=1,
             format="%d",
             key="ag_height"

@@ -56,7 +56,7 @@ def render():
     # ========== SECTION 3: ANTIDOTE – ỨC CHẾ ADH ========== #
     st.markdown("### 💊 Antidote: Fomepizole (ưu tiên) hoặc Ethanol")
 
-    weight = st.number_input("Cân nặng (kg):", min_value=10.0, max_value=200.0, value=60.0, step=1.0, key="ta_weight")
+    weight = st.number_input("Cân nặng (kg):", min_value=10.0, max_value=200.0, value=50.0, step=1.0, key="ta_weight")
     fomepizole_loading = weight * 15  # mg/kg
     fomepizole_maintenance = weight * 10  # mg/kg q12h (q4h khi lọc)
 

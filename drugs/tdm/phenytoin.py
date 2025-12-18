@@ -222,7 +222,7 @@ def render_phenytoin_tdm():
                 "Cân nặng (kg)",
                 min_value=30,
                 max_value=150,
-                value=70,
+                value=50,
                 step=1,
                 format="%d",
                 key="phenytoin_loading_weight"
@@ -310,7 +310,7 @@ def render_phenytoin_tdm():
                 "Cân nặng (kg)",
                 min_value=30,
                 max_value=150,
-                value=70,
+                value=50,
                 step=1,
                 format="%d",
                 key="phenytoin_maint_weight"

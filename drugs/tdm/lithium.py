@@ -149,7 +149,7 @@ def render_lithium_tdm():
                 "Cân nặng (kg)",
                 min_value=40,
                 max_value=150,
-                value=70,
+                value=50,
                 step=1,
                 format="%d",
                 key="lithium_weight"

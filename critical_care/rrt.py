@@ -199,7 +199,7 @@ def render_crrt_calculator():
             "Cân nặng (kg):",
             min_value=30.0,
             max_value=200.0,
-            value=70.0,
+            value=50.0,
             step=0.1,
             format="%.1f",
             key="crrt_weight"
@@ -281,7 +281,7 @@ def render_ihd_calculator():
             "Cân nặng (kg):",
             min_value=30.0,
             max_value=200.0,
-            value=70.0,
+            value=50.0,
             step=0.1,
             format="%.1f",
             key="ihd_weight"
@@ -363,7 +363,7 @@ def render_sled_calculator():
             "Cân nặng (kg):",
             min_value=30.0,
             max_value=200.0,
-            value=70.0,
+            value=50.0,
             step=0.1,
             format="%.1f",
             key="sled_weight"
@@ -445,7 +445,7 @@ def render_anticoagulation_calculator():
             "Cân nặng (kg):",
             min_value=30.0,
             max_value=200.0,
-            value=70.0,
+            value=50.0,
             step=0.1,
             format="%.1f",
             key="anticoag_weight"

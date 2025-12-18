@@ -122,7 +122,7 @@ def render():
             "Cân nặng (kg)",
             min_value=20,
             max_value=300,
-            value=70,
+            value=50,
             step=1,
             help="Cân nặng thực tế của bệnh nhân"
         )
@@ -173,7 +173,7 @@ def render():
             "Chiều cao (cm) - Cần để tính ABW",
             min_value=100,
             max_value=250,
-            value=170,
+            value=160,
             step=1
         )
         

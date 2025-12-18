@@ -11,12 +11,23 @@ from utils.page_helper import setup_page, render_standard_footer
 from scores.config import SCORES_BY_SPECIALTY
 from scores import cardiology, emergency, respiratory, neurology, gi, metabolism, hematology, nephrology, trauma, psychiatry, oncology, surgery, pediatrics, infectious, ent, obstetrics, dermatology, rheumatology, ophthalmology, pain, nursing
 
-# Standard page setup
+# Standard page setup with mobile optimizations
 setup_page(
     page_title="Calculators & Thang điểm",
     page_icon="📊",
-    description="Thang điểm và calculators lâm sàng, phân loại theo chuyên khoa"
+    description="Thang điểm và calculators lâm sàng, phân loại theo chuyên khoa",
+    mobile_header=True
 )
+
+# Breadcrumbs
+try:
+    from components.mobile_page_wrapper import render_breadcrumbs
+    render_breadcrumbs([
+        ("Trang chủ", "/"),
+        ("Thang điểm", None)
+    ])
+except ImportError:
+    pass
 
 # ========== SIDEBAR ==========
 with st.sidebar:

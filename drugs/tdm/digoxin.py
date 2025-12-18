@@ -140,7 +140,7 @@ def render_digoxin_tdm():
                 "Cân nặng (kg)",
                 min_value=30,
                 max_value=150,
-                value=70,
+                value=50,
                 step=1,
                 format="%d",
                 key="digoxin_weight"

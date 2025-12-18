@@ -46,7 +46,7 @@ def render_patient_inputs():
             "Cân nặng (kg)",
             min_value=10.0,
             max_value=200.0,
-            value=70.0,
+            value=50.0,
             step=1.0,
             format="%.1f",
             key="dosing_weight"
@@ -57,7 +57,7 @@ def render_patient_inputs():
             "Chiều cao (cm)",
             min_value=50,
             max_value=220,
-            value=170,
+            value=160,
             step=1,
             format="%d",
             key="dosing_height"

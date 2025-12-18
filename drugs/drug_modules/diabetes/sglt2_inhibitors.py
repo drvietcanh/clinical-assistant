@@ -401,7 +401,147 @@ SGLT2_INHIBITORS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - Multiple large RCTs (CANVAS) showing cardiovascular benefit"
         }
-    }
+    },
+
+    "Ertugliflozin": {
+        "group": "Diabetes - SGLT2 Inhibitor",
+        "vietnamese_name": "Ertugliflozin, Steglatro",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2.",
+            "Suy tim với phân suất tống máu giảm (HFrEF) - dữ liệu hạn chế hơn empagliflozin/dapagliflozin.",
+        ],
+        "contraindications": [
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton do đái tháo đường",
+            "Suy thận nặng (eGFR <30)",
+            "Đang lọc máu",
+        ],
+        "dosage": {
+            "adult_type2_dm": "5-15mg x 1 lần/ngày",
+            "notes": "Uống bất kỳ lúc nào, không cần ăn. Có thể dùng đơn trị hoặc phối hợp.",
+        },
+        "renal_adjustment": {
+            "normal": "5-15mg/ngày",
+            "30_60": "5mg/ngày (eGFR ≥30)",
+            "under_30": "Không dùng nếu eGFR <30",
+        },
+        "side_effects": [
+            "Nhiễm trùng đường tiết niệu",
+            "Nhiễm trùng đường sinh dục (nấm âm đạo, viêm quy đầu)",
+            "Mất nước, hạ huyết áp",
+            "Nhiễm toan ceton (hiếm)",
+        ],
+        "interactions": [
+            "Insulin/Sulfonylurea: tăng nguy cơ hạ đường huyết",
+            "Diuretics: tăng nguy cơ mất nước",
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": (
+            "Ertugliflozin là chất ức chế chọn lọc SGLT2 ở ống lượn gần của thận, "
+            "ngăn chặn tái hấp thu glucose, làm tăng bài tiết glucose qua nước tiểu, "
+            "từ đó giảm đường huyết. Cơ chế không phụ thuộc insulin. "
+            "Có lợi ích tim mạch và thận tương tự các SGLT2 inhibitors khác."
+        ),
+        "monitoring": [
+            "Đường huyết (HbA1c, glucose máu)",
+            "Chức năng thận (eGFR, creatinine)",
+            "Nhiễm trùng đường tiết niệu và đường sinh dục",
+            "Dấu hiệu mất nước, hạ huyết áp",
+            "Nhiễm toan ceton nếu có triệu chứng",
+        ],
+        "precautions": [
+            "Không dùng cho đái tháo đường type 1",
+            "Không dùng nếu eGFR <30",
+            "Tăng nguy cơ nhiễm trùng đường tiết niệu và đường sinh dục",
+            "Nguy cơ nhiễm toan ceton",
+            "Nguy cơ mất nước, hạ huyết áp",
+            "Giảm liều insulin/sulfonylurea khi bắt đầu",
+        ],
+        "pharmacokinetics": {
+            "half_life": "16-17 giờ",
+            "onset": "1 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "~95%",
+            "clearance": "Gan (chuyển hóa qua UGT), thận (thải trừ một phần)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": (
+            "Nguy cơ nhiễm toan ceton (DKA) - đặc biệt ở bệnh nhân type 1, phẫu thuật, bệnh cấp tính. "
+            "Không dùng nếu eGFR <30."
+        ),
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Insulin, Sulfonylureas",
+                    "mechanism": "Tác dụng cộng dồn giảm đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Theo dõi đường huyết chặt chẽ. Có thể cần giảm liều insulin hoặc sulfonylurea.",
+                },
+                {
+                    "drug": "Diuretics",
+                    "mechanism": "Cả hai đều gây mất nước, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ mất nước, hạ huyết áp",
+                    "management": "Thận trọng. Theo dõi dấu hiệu mất nước, hạ huyết áp.",
+                },
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Suy thận nặng (eGFR <30)",
+                "Đang lọc máu",
+                "Dị ứng ertugliflozin",
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (eGFR 30-60) - dùng liều 5mg/ngày",
+                "Nhiễm trùng đường tiết niệu tái phát",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, nhưng THƯỜNG TRÁNH DÙNG.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết vào sữa mẹ",
+                "recommendation": "Thận trọng khi cho con bú",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Thận trọng, dữ liệu hạn chế",
+            "notes": "Ertugliflozin chuyển hóa qua gan (UGT) nhưng không cần chỉnh liều ở suy gan nhẹ đến trung bình",
+        },
+        "overdose_management": {
+            "symptoms": ["Hạ đường huyết", "Mất nước", "Hạ huyết áp"],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Điều trị hạ đường huyết: Glucose IV nếu cần",
+                "Bù dịch nếu mất nước, hạ huyết áp",
+                "Theo dõi đường huyết, điện giải",
+            ],
+            "monitoring": "Đường huyết, dấu hiệu sinh tồn, dấu hiệu mất nước",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống bất kỳ lúc nào, không cần ăn",
+                "timing": "Uống 1 lần/ngày, cùng giờ mỗi ngày",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Steglatro (ertugliflozin)",
+                "ADA/EASD Diabetes Guidelines 2024",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved",
+        },
+    },
 }
 
 __all__ = ['SGLT2_INHIBITORS_DRUGS']

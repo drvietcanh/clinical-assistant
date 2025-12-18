@@ -308,7 +308,7 @@ def render_scenario_dosing_calculator(antibiotic_name):
             "Cân nặng (kg)",
             min_value=10.0,
             max_value=200.0,
-            value=70.0,
+            value=50.0,
             step=1.0,
             key=f"scenario_weight_{antibiotic_name}"
         )
@@ -318,7 +318,7 @@ def render_scenario_dosing_calculator(antibiotic_name):
             "Chiều cao (cm)",
             min_value=100.0,
             max_value=250.0,
-            value=170.0,
+            value=160.0,
             step=1.0,
             key=f"scenario_height_{antibiotic_name}"
         )

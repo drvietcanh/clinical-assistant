@@ -58,7 +58,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
             "Cân nặng (kg)",
             min_value=10,
             max_value=200,
-            value=70,
+            value=50,
             step=1,
             format="%d",
             key=safe_key("dosing_weight"),
@@ -186,7 +186,7 @@ def render_quick_dosing_calculator(ab_name, ab_data, key_prefix=""):
         st.success(f"**💡 Khuyến cáo:** {result['adjustment']}")
         
         # Detailed dose calculation
-        height_default = 170  # Default for quick calc
+        height_default = 160  # Default for quick calc
         sex_default = "Nam"
         ibw = calculate_ibw(height_default, sex_default)
         bmi = calculate_bmi(weight_used, height_default)

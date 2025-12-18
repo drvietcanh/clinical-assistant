@@ -276,7 +276,7 @@ def render_weight_input(
         >>> weight = render_weight_input("Cân nặng", min_value=10.0, max_value=200.0, value=70.0)
     """
     if value is None:
-        value = 70.0
+        value = 50.0
     
     format_str = f"%.{decimals}f" if decimals > 0 else "%d"
     
@@ -323,7 +323,7 @@ def render_height_input(
         >>> height = render_height_input("Chiều cao", min_value=100, max_value=220, value=170)
     """
     if value is None:
-        value = 170
+        value = 160
     
     return int(st.number_input(
         label,

@@ -115,7 +115,7 @@ def render_ardsnet_calculator():
             "Chiều cao (cm):",
             min_value=100,
             max_value=250,
-            value=170,
+            value=160,
             step=1,
             format="%d",
             key="ards_height"

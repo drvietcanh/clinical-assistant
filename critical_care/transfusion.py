@@ -210,7 +210,7 @@ def render_prbc_calculator():
             "Cân nặng (kg)",
             min_value=1.0,
             max_value=300.0,
-            value=70.0,
+            value=50.0,
             step=0.1,
             format="%.1f",
             key="prbc_weight"
@@ -304,7 +304,7 @@ def render_platelet_calculator():
             "Cân nặng (kg)",
             min_value=1.0,
             max_value=300.0,
-            value=70.0,
+            value=50.0,
             step=0.1,
             format="%.1f",
             key="platelet_weight"
@@ -398,7 +398,7 @@ def render_ffp_calculator():
             "Cân nặng (kg)",
             min_value=1.0,
             max_value=300.0,
-            value=70.0,
+            value=50.0,
             step=0.1,
             format="%.1f",
             key="ffp_weight"
@@ -508,7 +508,7 @@ def render_massive_transfusion_calculator():
             "Cân nặng (kg)",
             min_value=1.0,
             max_value=300.0,
-            value=70.0,
+            value=50.0,
             step=0.1,
             format="%.1f",
             key="mtp_weight"

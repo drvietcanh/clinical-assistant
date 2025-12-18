@@ -209,7 +209,7 @@ def render_fluid_calculator():
                 "Cân nặng (kg):",
                 min_value=1.0,
                 max_value=300.0,
-                value=70.0,
+                value=50.0,
                 step=0.1,
                 format="%.1f",
                 key="maintenance_weight"
@@ -301,7 +301,7 @@ def render_fluid_calculator():
                 "Cân nặng (kg):",
                 min_value=1.0,
                 max_value=300.0,
-                value=70.0,
+                value=50.0,
                 step=0.1,
                 format="%.1f",
                 key="deficit_weight"
@@ -378,7 +378,7 @@ def render_fluid_calculator():
                 "Cân nặng (kg):",
                 min_value=1.0,
                 max_value=300.0,
-                value=70.0,
+                value=50.0,
                 step=0.1,
                 format="%.1f",
                 key="hyponatremia_weight"

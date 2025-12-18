@@ -166,7 +166,160 @@ CHOLESTEROL_ABSORPTION_INHIBITORS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - Multiple large RCTs (IMPROVE-IT, SHARP) showing cardiovascular benefit when combined with statin"
         }
-    }
+    },
+
+    "Bempedoic acid": {
+        "group": "Cardiovascular - ATP-Citrate Lyase Inhibitor",
+        "vietnamese_name": "Bempedoic acid, Nexletol",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng cholesterol máu tiên phát hoặc tăng cholesterol máu gia đình (heterozygous).",
+            "Dự phòng biến cố tim mạch ở bệnh nhân không dung nạp statin hoặc cần giảm LDL-C thêm.",
+            "Kết hợp với ezetimibe (Nexlizet) để tăng hiệu quả giảm LDL-C.",
+        ],
+        "contraindications": [
+            "Dị ứng với bempedoic acid.",
+            "Bệnh gút đang hoạt động hoặc tăng acid uric máu không kiểm soát.",
+        ],
+        "dosage": {
+            "adult_monotherapy": "180mg x 1 lần/ngày.",
+            "adult_with_ezetimibe": "Nexlizet: Bempedoic acid 180mg + Ezetimibe 10mg x 1 lần/ngày.",
+            "notes": "Uống bất kỳ lúc nào, có thể uống với hoặc không thức ăn. Có thể dùng cùng hoặc không cùng statin.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều.",
+            "under_30": "Thận trọng, dữ liệu hạn chế; không khuyến cáo nếu eGFR <30.",
+        },
+        "side_effects": [
+            "Tăng acid uric máu, bệnh gút (phổ biến - ~2%).",
+            "Tăng men gan (ALT, AST).",
+            "Đau cơ, đau khớp (ít hơn statin).",
+            "Nhiễm trùng đường hô hấp trên.",
+            "Đau lưng.",
+        ],
+        "interactions": [
+            "Simvastatin >20mg/ngày: tăng nguy cơ đau cơ, tăng CK (giảm liều simvastatin xuống ≤20mg/ngày).",
+            "Pravastatin >40mg/ngày: tăng nguy cơ đau cơ (giảm liều pravastatin xuống ≤40mg/ngày).",
+        ],
+        "pregnancy": "X: Chống chỉ định trong thai kỳ.",
+        "mechanism_of_action": (
+            "Bempedoic acid là tiền thuốc, được chuyển hóa thành bempedoyl-CoA trong gan, "
+            "ức chế ATP-citrate lyase (ACL), enzyme quan trọng trong tổng hợp cholesterol ở gan. "
+            "ACL chuyển đổi citrate thành acetyl-CoA, bước đầu tiên trong tổng hợp cholesterol. "
+            "Bằng cách ức chế ACL, bempedoic acid giảm tổng hợp cholesterol ở gan, "
+            "dẫn đến tăng biểu hiện thụ thể LDL và giảm LDL-C (~18-25% khi dùng đơn trị). "
+            "Khác với statin (ức chế HMG-CoA reductase), bempedoic acid chỉ hoạt động ở gan "
+            "(do cần chuyển hóa thành dạng hoạt tính), nên ít gây đau cơ hơn statin."
+        ),
+        "monitoring": [
+            "Lipid profile (LDL-C, HDL-C, TG, Total cholesterol) sau 4-8 tuần, sau đó mỗi 3-6 tháng.",
+            "Acid uric máu trước và trong điều trị (mỗi 3-6 tháng) - nguy cơ tăng acid uric và bệnh gút.",
+            "Men gan (ALT, AST) trước và trong điều trị (mỗi 3-6 tháng).",
+            "CK nếu có đau cơ (đặc biệt khi dùng với simvastatin/pravastatin).",
+            "Dấu hiệu bệnh gút (đau khớp, sưng khớp) - đặc biệt ở người có tiền sử gút.",
+        ],
+        "precautions": [
+            "Tăng acid uric máu và bệnh gút: theo dõi acid uric máu, điều trị dự phòng nếu cần.",
+            "Tăng men gan: theo dõi ALT, AST; ngừng nếu tăng >3x ULN.",
+            "Giảm liều simvastatin xuống ≤20mg/ngày khi dùng với bempedoic acid.",
+            "Giảm liều pravastatin xuống ≤40mg/ngày khi dùng với bempedoic acid.",
+            "Ít gây đau cơ hơn statin (do chỉ hoạt động ở gan).",
+            "Có thể dùng cùng hoặc không cùng statin.",
+            "Uống bất kỳ lúc nào, có thể uống với hoặc không thức ăn.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "~21 giờ.",
+            "onset": "Giảm LDL-C trong 2-4 tuần.",
+            "duration": "24 giờ (dùng 1 lần/ngày).",
+            "protein_binding": ">99%.",
+            "clearance": "Chuyển hóa ở gan thành bempedoyl-CoA (dạng hoạt tính), thải qua thận và phân.",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": (
+            "Tăng acid uric máu và bệnh gút: có thể gây bệnh gút, đặc biệt ở người có tiền sử gút. "
+            "Theo dõi acid uric máu và điều trị dự phòng nếu cần."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Simvastatin >20mg/ngày",
+                    "mechanism": "Bempedoic acid ức chế OATP1B1, làm giảm thải trừ simvastatin, tăng nồng độ simvastatin.",
+                    "effect": "Tăng nguy cơ đau cơ, tăng CK, tiêu cơ vân.",
+                    "management": "GIẢM LIỀU SIMVASTATIN XUỐNG ≤20MG/NGÀY khi dùng với bempedoic acid. Theo dõi CK và triệu chứng đau cơ.",
+                },
+                {
+                    "drug": "Pravastatin >40mg/ngày",
+                    "mechanism": "Bempedoic acid ức chế OATP1B1, làm giảm thải trừ pravastatin, tăng nồng độ pravastatin.",
+                    "effect": "Tăng nguy cơ đau cơ, tăng CK.",
+                    "management": "GIẢM LIỀU PRAVASTATIN XUỐNG ≤40MG/NGÀY khi dùng với bempedoic acid. Theo dõi CK và triệu chứng đau cơ.",
+                },
+            ],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với bempedoic acid.",
+                "Bệnh gút đang hoạt động.",
+                "Tăng acid uric máu không kiểm soát.",
+            ],
+            "tương_đối": [
+                "Tiền sử bệnh gút - tăng nguy cơ tái phát, cần điều trị dự phòng.",
+                "Suy thận nặng (eGFR <30) - thận trọng, dữ liệu hạn chế.",
+                "Suy gan nặng - thận trọng.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": (
+                "Chống chỉ định trong thai kỳ. Bempedoic acid có thể gây hại cho thai nhi. "
+                "Phụ nữ trong độ tuổi sinh đẻ phải sử dụng biện pháp tránh thai hiệu quả khi dùng bempedoic acid."
+            ),
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Không khuyến cáo dùng khi cho con bú.",
+                "recommendation": "Ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Thận trọng, theo dõi men gan.",
+            "severe": "Không khuyến cáo, dữ liệu hạn chế.",
+            "notes": "Bempedoic acid chuyển hóa ở gan thành dạng hoạt tính. Suy gan có thể ảnh hưởng đến chuyển hóa.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng acid uric máu, bệnh gút.",
+                "Tăng men gan.",
+                "Đau cơ (nếu dùng với simvastatin/pravastatin liều cao).",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng bempedoic acid nếu cần.",
+                "Điều trị bệnh gút: NSAID, colchicine, hoặc allopurinol nếu cần.",
+                "Theo dõi men gan, CK.",
+                "Điều trị hỗ trợ.",
+            ],
+            "monitoring": "Acid uric máu, men gan, CK, lipid profile, triệu chứng lâm sàng.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống bất kỳ lúc nào, có thể uống với hoặc không thức ăn.",
+                "timing": "Uống 1 lần/ngày, cùng giờ mỗi ngày. Có thể dùng cùng hoặc không cùng statin.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Nexletol (bempedoic acid), Nexlizet (bempedoic acid + ezetimibe)",
+                "CLEAR Outcomes trial - Bempedoic acid cardiovascular outcomes",
+                "ACC/AHA Guidelines - Cholesterol Management 2024",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved, large RCT (CLEAR Outcomes)",
+        },
+    },
 }
 
 __all__ = ['CHOLESTEROL_ABSORPTION_INHIBITORS']

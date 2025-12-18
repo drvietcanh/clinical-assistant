@@ -16,12 +16,23 @@ from drugs import (
 )
 from antibiotics import render_dosing_calculator
 
-# Standard page setup
+# Standard page setup with mobile optimizations
 setup_page(
     page_title="Cơ sở dữ liệu thuốc",
     page_icon="💊",
-    description="Cơ sở dữ liệu thuốc toàn diện, tính liều theo thận, kiểm tra tương tác, tương thích IV"
+    description="Cơ sở dữ liệu thuốc toàn diện, tính liều theo thận, kiểm tra tương tác, tương thích IV",
+    mobile_header=True
 )
+
+# Breadcrumbs
+try:
+    from components.mobile_page_wrapper import render_breadcrumbs
+    render_breadcrumbs([
+        ("Trang chủ", "/"),
+        ("Thuốc", None)
+    ])
+except ImportError:
+    pass
 
 # ========== SIDEBAR ==========
 with st.sidebar:

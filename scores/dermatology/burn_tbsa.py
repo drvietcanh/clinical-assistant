@@ -106,7 +106,7 @@ def render():
     
     # Weight for Parkland formula
     weight = st.number_input("⚖️ Cân nặng (kg) - để tính Parkland formula",
-                            min_value=10.0, max_value=200.0, value=70.0, step=1.0, format="%.1f")
+                            min_value=10.0, max_value=200.0, value=50.0, step=1.0, format="%.1f")
     
     st.markdown("---")
     

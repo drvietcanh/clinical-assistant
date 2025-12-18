@@ -44,7 +44,7 @@ def render_input_form():
             "Chiều cao (cm)",
             min_value=100,
             max_value=250,
-            value=170,
+            value=160,
             step=1,
             format="%d",
             help="Cần cho tính BSA và GFR tuyệt đối"
@@ -54,7 +54,7 @@ def render_input_form():
             "Cân nặng (kg)",
             min_value=20.0,
             max_value=300.0,
-            value=70.0,
+            value=50.0,
             step=1.0,
             format="%.1f",
             help="Cân nặng thực tế"

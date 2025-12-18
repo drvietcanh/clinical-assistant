@@ -125,12 +125,23 @@ from protocols.dermatology import (
     render_psoriasis
 )
 
-# Standard page setup
+# Standard page setup with mobile optimizations
 setup_page(
     page_title="Phác đồ điều trị",
     page_icon="📋",
-    description="Các phác đồ điều trị chuẩn theo hướng dẫn quốc tế"
+    description="Các phác đồ điều trị chuẩn theo hướng dẫn quốc tế",
+    mobile_header=True
 )
+
+# Breadcrumbs
+try:
+    from components.mobile_page_wrapper import render_breadcrumbs
+    render_breadcrumbs([
+        ("Trang chủ", "/"),
+        ("Guideline", None)
+    ])
+except ImportError:
+    pass
 
 # ========== SIDEBAR ==========
 with st.sidebar:
