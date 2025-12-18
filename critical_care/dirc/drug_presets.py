@@ -79,6 +79,42 @@ EMERGENCY_DRUG_PRESETS: Dict[str, DrugPreset] = {
             "note": "Thường 0.01–0.5 mcg/kg/phút; có thể cao hơn trong sốc nặng.",
         },
     },
+    "Phenylephrine": {
+        "name": "Phenylephrine",
+        "category": "Vasopressor",
+        "vials": [
+            {"label": "10 mg/1 mL", "amount_mg": 10.0, "volume_ml": 1.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.2,
+            "max_mcg_kg_min": 5.0,
+            "note": "Thường 0.2–3 mcg/kg/phút, chỉnh liều theo huyết áp và mạch.",
+        },
+    },
+    "Milrinone": {
+        "name": "Milrinone",
+        "category": "Inotrope/Vasodilator",
+        "vials": [
+            {"label": "10 mg/10 mL", "amount_mg": 10.0, "volume_ml": 10.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.25,
+            "max_mcg_kg_min": 0.75,
+            "note": "Thường 0.25–0.75 mcg/kg/phút sau liều tấn công (nếu dùng).",
+        },
+    },
+    "Nitroprusside": {
+        "name": "Sodium Nitroprusside",
+        "category": "Vasodilator",
+        "vials": [
+            {"label": "50 mg/2 mL", "amount_mg": 50.0, "volume_ml": 2.0},
+        ],
+        "dose_range": {
+            "min_mcg_kg_min": 0.3,
+            "max_mcg_kg_min": 10.0,
+            "note": "Thường 0.3–10 mcg/kg/phút; tránh liều cao kéo dài do nguy cơ ngộ độc cyanid.",
+        },
+    },
 }
 
 
