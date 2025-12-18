@@ -76,6 +76,7 @@ def render_dirc_calculator() -> None:
             step=0.1,
             format="%.1f",
             help="Cảnh báo khi <3 kg hoặc >200 kg",
+            value=st.session_state.get("dirc_weight", 50.0),
             key="dirc_weight",
         )
         calculator.set_input("Cân nặng", weight)
