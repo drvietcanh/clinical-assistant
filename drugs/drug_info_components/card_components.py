@@ -115,7 +115,7 @@ def _render_quick_facts_box(drug_data):
     facts_html = ' | '.join(facts)
     st.markdown(
         f"""
-    <div style='
+    <div class="quick-facts-box" style='
         background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
         border-left: 4px solid #0EA5E9;
         padding: 15px 20px;
@@ -135,7 +135,7 @@ def _render_black_box_warning(warning_text):
     """Render black box warning with prominent styling"""
     st.markdown(
         f"""
-    <div style='
+    <div class="black-box-warning" style='
         background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
         border: 2px solid #dc2626;
         padding: 20px;

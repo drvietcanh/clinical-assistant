@@ -17,7 +17,7 @@ def display_drug_info(drug_name, drug_data):
     """Display detailed drug information in tab-based format (Epocrates style)"""
     st.markdown(
         f"""
-    <div style='
+    <div class="drug-detail-header" style='
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
         padding: 20px;

@@ -14,8 +14,24 @@ from .detail_view import display_drug_info
 
 def render_drug_database():
     """Main function to render drug database page with search and browse"""
-    from .search import search_drugs, search_drugs_with_filters, get_drug_autocomplete_suggestions, get_recent_searches, add_recent_search, search_by_group, save_search, get_saved_searches, load_saved_search, delete_saved_search
+    from .search import (
+        search_drugs,
+        search_drugs_with_filters,
+        get_drug_autocomplete_suggestions,
+        get_recent_searches,
+        add_recent_search,
+        search_by_group,
+        save_search,
+        get_saved_searches,
+        load_saved_search,
+        delete_saved_search,
+    )
     from ..drug_database import DRUG_GROUPS
+    # Optional PPIs quick view (gastrointestinal proton pump inhibitors)
+    try:
+        from drugs.ui_ppi_view import render_ppi_quick_section
+    except ImportError:
+        render_ppi_quick_section = None
     drug_count = len(DRUG_DATABASE)
     st.markdown(
         f"""
@@ -46,8 +62,40 @@ def render_drug_database():
         - ✅ Điều chỉnh theo chức năng thận
         - ✅ Chỉ định, chống chỉ định, tác dụng phụ, tương tác
         """
-            )
+        )
+
+    # Quick PPIs overview for Gastrointestinal group (uses detailed PPI module)
+    if render_ppi_quick_section is not None:
+        render_ppi_quick_section()
     
+    # Quick Cardiovascular drugs overview (ACE, ARB, Beta-blockers)
+    try:
+        from drugs.ui_cardiovascular_view import render_cardiovascular_quick_sections
+        render_cardiovascular_quick_sections()
+    except ImportError:
+        pass
+    
+    # Quick Diabetes drugs overview (Metformin, SGLT2)
+    try:
+        from drugs.ui_diabetes_view import render_diabetes_quick_sections
+        render_diabetes_quick_sections()
+    except ImportError:
+        pass
+    
+    # Quick Analgesic drugs overview (NSAIDs, Opioids)
+    try:
+        from drugs.ui_analgesic_view import render_analgesic_quick_sections
+        render_analgesic_quick_sections()
+    except ImportError:
+        pass
+    
+    # Quick Statins overview (cholesterol-lowering)
+    try:
+        from drugs.ui_statins_view import render_statins_quick_sections
+        render_statins_quick_sections()
+    except ImportError:
+        pass
+
     # Quick filter buttons for common drug categories
     st.markdown('### ⚡ Lọc nhanh theo nhóm thuốc phổ biến')
     

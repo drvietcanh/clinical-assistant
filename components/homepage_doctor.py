@@ -173,10 +173,37 @@ def render_homepage_doctor():
     </div>
     """, unsafe_allow_html=True)
     
-    # Search component (will be rendered by app.py)
-    # This is just a placeholder - actual search is handled in app.py
-    
-    st.markdown("---")
+    # Global Search Component
+    try:
+        from components.global_search import (
+            render_global_search_bar,
+            render_search_results,
+            render_autocomplete_suggestions
+        )
+        
+        search_query = render_global_search_bar(
+            placeholder="Tìm kiếm thuốc, thang điểm, guideline... (Ctrl+K)"
+        )
+        
+        # Show autocomplete suggestions
+        if search_query and len(search_query) >= 1:
+            render_autocomplete_suggestions(search_query, max_suggestions=3)
+        
+        # Show search results if query exists
+        if search_query and len(search_query.strip()) >= 1:
+            st.markdown("---")
+            render_search_results(search_query, max_results_per_category=5)
+        else:
+            st.markdown("---")
+    except ImportError:
+        # Fallback: simple search placeholder
+        st.text_input(
+            "🔍 Tìm kiếm",
+            placeholder="Tìm kiếm thuốc, thang điểm, guideline...",
+            key="homepage_search_fallback",
+            label_visibility="collapsed"
+        )
+        st.markdown("---")
     
     # Recently Used Section
     recent_items = get_recent_items(max_items=5)
