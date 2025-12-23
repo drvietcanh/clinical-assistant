@@ -1,0 +1,491 @@
+"""Gastrointestinal Drugs - Laxatives
+Lactulose, Polyethylene glycol (PEG 3350)"""
+
+LAXATIVES_DRUGS = {
+    "Lactulose": {
+        "group": "Gastrointestinal - Osmotic Laxative (Disaccharide)",
+        "vietnamese_name": "Lactulose, Duphalac",
+        "administration": ["PO"],
+        "indications": [
+            "Táo bón mạn tính",
+            "Điều trị và dự phòng bệnh não gan (hepatic encephalopathy)",
+        ],
+        "contraindications": [
+            "Tắc ruột cơ học",
+            "Galactosemia",
+            "Không dung nạp lactose nặng (thận trọng)",
+        ],
+        "dosage": {
+            "adult_constipation": "15–30ml PO mỗi ngày, có thể điều chỉnh 10–45ml/ngày để đạt 2–3 lần đi phân mềm/ngày",
+            "adult_encephalopathy": "25ml PO mỗi 1–2 giờ cho đến khi đạt 2–3 lần đi phân mềm/ngày, sau đó chỉnh liều duy trì",
+            "notes": "Có thể pha với nước hoặc nước trái cây để dễ uống. Tác dụng thường sau 24–48 giờ.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Không cần chỉnh liều (ít hấp thu hệ thống)",
+        },
+        "side_effects": [
+            "Chướng bụng, đầy hơi (rất thường gặp khi khởi đầu hoặc tăng liều nhanh)",
+            "Đau bụng quặn",
+            "Tiêu chảy (nếu liều quá cao)",
+            "Mất nước, rối loạn điện giải nếu tiêu chảy kéo dài",
+        ],
+        "interactions": [
+            "Thuốc gây tiêu chảy khác: tăng nguy cơ mất nước, rối loạn điện giải",
+            "Thuốc kháng acid mạnh hoặc kháng sinh phổ rộng đường ruột có thể giảm hiệu quả trong bệnh não gan",
+        ],
+        "pregnancy": "B – thường được coi là an toàn trong thai kỳ cho táo bón",
+        "mechanism_of_action": (
+            "Lactulose là disaccharide tổng hợp không bị tiêu hóa/ hấp thu ở ruột non. "
+            "Vào đại tràng, lactulose được vi khuẩn lên men thành acid hữu cơ (lactic, acetic), "
+            "tăng áp lực thẩm thấu trong lòng ruột, kéo nước vào lòng đại tràng, làm mềm phân và tăng nhu động. "
+            "Trong bệnh não gan, acid hóa lòng đại tràng giúp chuyển NH3 (không ion hóa) sang NH4+ (ion hóa, khó hấp thu), "
+            "tăng thải amonia qua phân và giảm nồng độ amonia máu."
+        ),
+        "monitoring": [
+            "Tần suất và tính chất phân (mục tiêu 2–3 lần phân mềm/ngày trong bệnh não gan)",
+            "Dấu hiệu mất nước, rối loạn điện giải nếu tiêu chảy kéo dài",
+            "Amonia máu và ý thức (bệnh não gan)",
+        ],
+        "precautions": [
+            "Bắt đầu liều thấp và tăng dần để giảm đầy hơi, chướng bụng",
+            "Cân nhắc giảm liều khi đã đạt mục tiêu phân mềm; tránh tiêu chảy nặng",
+            "Thận trọng ở bệnh nhân đái tháo đường (có chứa lượng nhỏ lactose, galactose, fructose)",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (không hấp thu đáng kể)",
+            "onset": "24–48 giờ cho tác dụng nhuận tràng; vài giờ cho tác dụng trong bệnh não gan (liều tấn công cao)",
+            "duration": "Phụ thuộc tần suất dùng và đáp ứng",
+            "protein_binding": "Không áp dụng",
+            "clearance": "Lên men bởi vi khuẩn đại tràng, phần nhỏ không hấp thu thải qua phân",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng, tránh nóng; siro có thể đặc hơn nếu lạnh.",
+        "black_box_warnings": None,
+        "drug_interactions_detail": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc lợi tiểu, thuốc gây tiêu chảy khác",
+                    "mechanism": "Cộng hưởng gây mất nước và rối loạn điện giải",
+                    "effect": "Tăng nguy cơ hạ K+, hạ Na+, suy thận trước thận",
+                    "management": "Theo dõi điện giải nếu dùng kéo dài hoặc phối hợp nhiều thuốc.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": ["Tắc ruột cơ học đã xác định", "Galactosemia"],
+            "tương_đối": [
+                "Bụng cấp chưa rõ nguyên nhân",
+                "Không dung nạp lactose nặng",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Được xem là an toàn cho táo bón trong thai kỳ; ít hấp thu toàn thân.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Ít hấp thu nên rất ít vào sữa mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi (thường dùng chính trong suy gan/bệnh não gan)",
+            "notes": "Lactulose là thuốc lựa chọn hàng đầu trong bệnh não gan.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nhiều lần/ngày",
+                "Mất nước, chuột rút, choáng váng",
+            ],
+            "antidote": "Không có; điều trị hỗ trợ.",
+            "treatment": [
+                "Giảm hoặc ngừng lactulose tạm thời",
+                "Bù dịch, điện giải đường uống hoặc truyền tĩnh mạch nếu cần",
+            ],
+            "monitoring": "Điện giải, chức năng thận, dấu hiệu mất nước.",
+        },
+        "reversal_agents": {"available": False, "agents": []},
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn; có thể pha loãng với nước hoặc nước trái cây.",
+                "timing": "Dùng 1–2 lần/ngày, điều chỉnh theo đáp ứng; bệnh não gan có thể chia nhiều lần.",
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "UpToDate – Lactulose: Drug information",
+                "AASLD guidelines – Hepatic encephalopathy",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – guideline-supported in hepatic encephalopathy",
+        },
+    },
+
+    "Polyethylene glycol 3350": {
+        "group": "Gastrointestinal - Osmotic Laxative (PEG 3350)",
+        "vietnamese_name": "Polyethylene glycol 3350, PEG, Forlax, Miralax",
+        "administration": ["PO"],
+        "indications": [
+            "Táo bón mạn tính",
+            "Chuẩn bị đại tràng (liều cao + điện giải – tùy chế phẩm, ngoài phạm vi bản ghi này)",
+        ],
+        "contraindications": [
+            "Tắc ruột cơ học",
+            "Thủng ruột, viêm phúc mạc",
+            "Bệnh viêm ruột nặng trong đợt cấp (thận trọng)",
+        ],
+        "dosage": {
+            "adult_constipation": "17g bột (1 gói hoặc 1 muỗng đong) hòa trong 120–240ml nước, uống 1 lần/ngày; có thể tăng tối đa 34g/ngày theo đáp ứng",
+            "notes": "Tác dụng thường sau 24–72 giờ. Không dùng liều chuẩn bị đại tràng nếu chưa có chỉ định rõ và phác đồ riêng.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều (ít hấp thu)",
+            "under_30": "Thận trọng nếu dùng liều rất cao (chuẩn bị đại tràng có kèm điện giải)",
+        },
+        "side_effects": [
+            "Đầy hơi, chướng bụng",
+            "Đau quặn bụng nhẹ",
+            "Tiêu chảy nếu liều cao",
+        ],
+        "interactions": [
+            "Ít tương tác đáng kể; nếu tiêu chảy nhiều có thể giảm hấp thu thuốc uống khác",
+        ],
+        "pregnancy": "C (đa số dữ liệu cho thấy an toàn tương đối; dùng khi cần thiết)",
+        "mechanism_of_action": (
+            "PEG 3350 là polymer trơ, không hấp thu, giữ nước theo cơ chế thẩm thấu trong lòng ruột, "
+            "tăng lượng nước trong phân, làm mềm phân và tăng nhu động đại tràng. "
+            "Không gây mất điện giải đáng kể ở liều điều trị táo bón thông thường."
+        ),
+        "monitoring": [
+            "Tần suất và tính chất phân",
+            "Dấu hiệu mất nước nếu lạm dụng hoặc dùng liều cao",
+        ],
+        "precautions": [
+            "Không dùng kéo dài liều cao mà không đánh giá nguyên nhân táo bón",
+            "Thận trọng ở bệnh nhân có nguy cơ tắc ruột (đau bụng cấp, nôn, chướng bụng nhiều)",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (không hấp thu đáng kể)",
+            "onset": "24–72 giờ",
+            "duration": "Phụ thuộc tần suất dùng",
+            "protein_binding": "Không áp dụng",
+            "clearance": "Thải nguyên dạng qua phân",
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng, tránh ẩm; dung dịch sau pha dùng trong 24 giờ.",
+        "black_box_warnings": None,
+        "drug_interactions_detail": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tắc ruột cơ học, thủng ruột, viêm phúc mạc",
+            ],
+            "tương_đối": [
+                "Bụng cấp chưa rõ nguyên nhân",
+                "Bệnh viêm ruột nặng trong đợt cấp",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Ít hấp thu; thường được xem là lựa chọn an toàn tương đối nếu cần nhuận tràng thẩm thấu.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Không hấp thu đáng kể nên rất ít vào sữa mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Không chuyển hóa qua gan.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nhiều, mất nước",
+                "Chuột rút bụng",
+            ],
+            "antidote": "Không có; điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng PEG, bù dịch và điện giải",
+            ],
+            "monitoring": "Điện giải, chức năng thận nếu tiêu chảy kéo dài.",
+        },
+        "reversal_agents": {"available": False, "agents": []},
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Hòa tan bột trong nước, có thể uống cùng hoặc không cùng thức ăn.",
+                "timing": "Thường dùng 1 lần/ngày; có thể điều chỉnh thời điểm phù hợp thói quen đi ngoài.",
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "UpToDate – Polyethylene glycol: Drug information",
+                "AGA guidelines – Management of chronic constipation",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – guideline-recommended osmotic laxative",
+        },
+    },
+
+    "Bisacodyl": {
+        "group": "Gastrointestinal - Stimulant Laxative (Diphenylmethane)",
+        "vietnamese_name": "Bisacodyl, Dulcolax",
+        "administration": ["PO", "PR"],
+        "indications": [
+            "Táo bón cấp, táo bón do ít vận động",
+            "Chuẩn bị ruột trước phẫu thuật, nội soi (kết hợp các thuốc khác)",
+        ],
+        "contraindications": [
+            "Tắc ruột, thủng ruột, viêm phúc mạc",
+            "Đau bụng cấp chưa rõ nguyên nhân (nghi ngờ bụng ngoại khoa)",
+            "Viêm ruột cấp (viêm đại tràng nặng, bệnh Crohn đợt cấp nặng)",
+        ],
+        "dosage": {
+            "adult_po": "5–10mg PO vào buổi tối; có thể tăng tối đa 15–20mg theo chỉ định",
+            "adult_pr": "10mg đặt trực tràng (suppository) buổi sáng; tác dụng nhanh 15–60 phút",
+            "notes": "Uống nguyên viên, không nghiền/nhai; không uống cùng sữa, antacid hoặc PPI ngay trước/sau.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều; tránh lạm dụng kéo dài",
+            "under_30": "Thận trọng nếu dùng kéo dài (mất điện giải)",
+        },
+        "side_effects": [
+            "Đau quặn bụng, tiêu chảy",
+            "Buồn nôn",
+            "Kích ứng trực tràng (dạng suppository)",
+            "Mất điện giải (giảm K+, Na+) nếu lạm dụng",
+        ],
+        "interactions": [
+            "Sữa, antacid, PPI: hòa tan sớm viên bao tan trong ruột → kích ứng dạ dày",
+            "Thuốc lợi tiểu, corticosteroid: tăng nguy cơ hạ K+ khi tiêu chảy nhiều",
+        ],
+        "pregnancy": "C – dùng ngắn hạn khi cần thiết; ưu tiên thuốc an toàn hơn nếu có",
+        "mechanism_of_action": (
+            "Bisacodyl là thuốc nhuận tràng kích thích, sau khi được thủy phân ở đại tràng sẽ kích thích đám rối thần kinh "
+            "cơ trơn ruột (plexus myentericus), tăng nhu động đại tràng và tiết nước vào lòng ruột, giúp tống phân."
+        ),
+        "monitoring": [
+            "Tần suất và tính chất phân",
+            "Dấu hiệu mất nước, rối loạn điện giải nếu dùng lặp lại",
+        ],
+        "precautions": [
+            "Chỉ dùng ngắn hạn (vài ngày); không dùng kéo dài hàng tuần–tháng vì nguy cơ lệ thuộc thuốc và rối loạn điện giải.",
+            "Nếu táo bón kéo dài, cần tìm và xử lý nguyên nhân (chế độ ăn, thuốc, bệnh nền).",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không rõ (tác dụng chủ yếu tại chỗ ở đại tràng)",
+            "onset": "PO: 6–12 giờ; PR: 15–60 phút",
+            "duration": "Một liều thường có tác dụng trong ngày",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Bài tiết qua phân và nước tiểu dưới dạng chuyển hóa.",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ẩm; suppository cần bảo quản tránh nóng chảy.",
+        "black_box_warnings": None,
+        "drug_interactions_detail": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc lợi tiểu, corticosteroid",
+                    "mechanism": "Cả hai đều có thể gây hạ K+; cộng hưởng với tiêu chảy do bisacodyl",
+                    "effect": "Tăng nguy cơ hạ K+, loạn nhịp tim",
+                    "management": "Theo dõi điện giải nếu dùng nhiều lần hoặc kéo dài.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tắc ruột, thủng ruột, viêm phúc mạc",
+                "Đau bụng cấp chưa rõ nguyên nhân",
+            ],
+            "tương_đối": [
+                "Viêm ruột cấp nặng",
+                "Suy thận (tránh lạm dụng kéo dài)",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng ngắn hạn nếu các biện pháp khác thất bại; ưu tiên bulk-forming/osmotic trước.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Hấp thu toàn thân ít; chưa ghi nhận tác dụng phụ rõ ràng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng ngắn hạn, theo dõi phân của trẻ.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Tác dụng chủ yếu tại chỗ ở đại tràng.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nhiều, đau bụng, mất nước, hạ K+",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng thuốc, bù dịch và điện giải",
+                "Điều chỉnh hạ K+ nếu có",
+            ],
+            "monitoring": "Điện giải, chức năng thận, dấu hiệu mất nước.",
+        },
+        "reversal_agents": {"available": False, "agents": []},
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống nguyên viên với nước, không nghiền/nhai.",
+                "timing": "Uống buổi tối (tác dụng sau 6–12 giờ). Không uống ngay sau khi dùng sữa/antacid.",
+            },
+            "pr": {
+                "notes": "Đặt trực tràng, giữ thuốc càng lâu càng tốt (15–30 phút) cho đến khi muốn đi ngoài.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "AGA guidelines – Management of chronic constipation",
+                "UpToDate – Bisacodyl: Drug information",
+            ],
+            "last_updated": "2025-02-23",
+            "evidence_level": "High – guideline-recommended stimulant laxative",
+        },
+    },
+
+    "Senna (sennosides)": {
+        "group": "Gastrointestinal - Stimulant Laxative (Anthraquinone)",
+        "vietnamese_name": "Senna, Sennosides, thuốc nhuận tràng thảo dược (lá muồng trâu, diếp cá senna)",
+        "administration": ["PO"],
+        "indications": [
+            "Táo bón cấp hoặc ngắn hạn",
+            "Táo bón do thuốc opioid (kết hợp stool softener)",
+        ],
+        "contraindications": [
+            "Tắc ruột, thủng ruột, viêm phúc mạc",
+            "Viêm ruột cấp (viêm loét đại tràng đợt cấp nặng, Crohn nặng)",
+            "Đau bụng cấp chưa rõ nguyên nhân",
+        ],
+        "dosage": {
+            "adult_constipation": "8.6–17.2mg sennosides PO vào buổi tối; có thể tăng đến 34.4mg/ngày tùy đáp ứng (tùy chế phẩm)",
+            "notes": "Thường bắt đầu liều thấp, có thể phối hợp với docusate (stool softener) trong táo bón do opioid.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều; tránh lạm dụng kéo dài",
+            "under_30": "Thận trọng nếu sử dụng kéo dài do nguy cơ mất điện giải",
+        },
+        "side_effects": [
+            "Đau quặn bụng, tiêu chảy",
+            "Nước tiểu màu vàng–nâu (vô hại)",
+            "Mất điện giải (giảm K+) nếu lạm dụng kéo dài",
+            "Hiếm: viêm đại tràng nếu dùng quá liều kéo dài",
+        ],
+        "interactions": [
+            "Thuốc lợi tiểu, corticosteroid, digoxin: tăng nguy cơ mất K+ và độc tính digoxin",
+        ],
+        "pregnancy": "C – có thể dùng ngắn hạn; ưu tiên thuốc an toàn hơn nếu có",
+        "mechanism_of_action": (
+            "Senna chứa sennosides (glycosid anthraquinone), được vi khuẩn đại tràng chuyển thành dạng hoạt tính "
+            "kích thích đám rối thần kinh ruột, tăng nhu động đại tràng và tiết dịch, giúp tống phân. "
+            "Tác dụng sau 6–12 giờ khi uống buổi tối."
+        ),
+        "monitoring": [
+            "Số lần đi ngoài, tính chất phân",
+            "Dấu hiệu mất nước và hạ K+ nếu dùng kéo dài",
+        ],
+        "precautions": [
+            "Chỉ dùng ngắn hạn; không dùng như biện pháp điều trị táo bón mạn mà không đánh giá nguyên nhân.",
+            "Tránh lạm dụng như 'thuốc giảm cân' hoặc 'thanh lọc' vì gây rối loạn điện giải và tổn thương đại tràng.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không rõ; tác dụng chủ yếu tại đại tràng",
+            "onset": "6–12 giờ (uống buổi tối → đi ngoài sáng hôm sau)",
+            "duration": "Tác dụng trong 1 ngày",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Chuyển hóa bởi vi khuẩn ruột, thải qua phân và một phần nước tiểu.",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ẩm; tránh để trẻ em tự dùng vì dạng 'thảo dược' dễ bị lạm dụng.",
+        "black_box_warnings": None,
+        "drug_interactions_detail": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Hạ K+ do senna làm tăng nhạy cảm với độc tính digoxin",
+                    "effect": "Tăng nguy cơ loạn nhịp do digoxin",
+                    "management": "Theo dõi K+ và ECG nếu dùng cùng.",
+                },
+                {
+                    "drug": "Thuốc lợi tiểu, corticosteroid",
+                    "mechanism": "Cộng hưởng hạ K+",
+                    "effect": "Tăng nguy cơ hạ K+ và biến chứng tim mạch",
+                    "management": "Hạn chế dùng kéo dài; theo dõi điện giải.",
+                },
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tắc ruột, thủng ruột, viêm phúc mạc",
+                "Đau bụng cấp chưa rõ nguyên nhân",
+            ],
+            "tương_đối": [
+                "Viêm ruột mạn tính nặng",
+                "Suy thận (tránh lạm dụng kéo dài)",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng ngắn hạn khi cần thiết; ưu tiên các biện pháp không dùng thuốc hoặc osmotic/bulk-forming trước.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Một lượng nhỏ chất chuyển hóa có thể vào sữa; có báo cáo trẻ đi phân lỏng nhẹ.",
+                "recommendation": "Có thể dùng ngắn hạn; theo dõi phân của trẻ.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Tác dụng chủ yếu tại đại tràng.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nhiều, mất nước, hạ K+",
+                "Đau bụng quặn nhiều",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng senna",
+                "Bù dịch và điện giải; điều chỉnh hạ K+",
+            ],
+            "monitoring": "Điện giải, chức năng thận, ECG nếu có yếu tố nguy cơ.",
+        },
+        "reversal_agents": {"available": False, "agents": []},
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không với thức ăn.",
+                "timing": "Thường uống buổi tối để đi ngoài buổi sáng hôm sau.",
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "AGA guidelines – Management of chronic constipation and opioid-induced constipation",
+                "UpToDate – Senna: Drug information",
+            ],
+            "last_updated": "2025-02-23",
+            "evidence_level": "High – thuốc phổ biến, được khuyến nghị trong táo bón cấp và do opioid",
+        },
+    },
+}
+
+__all__ = ["LAXATIVES_DRUGS"]
+
+
+

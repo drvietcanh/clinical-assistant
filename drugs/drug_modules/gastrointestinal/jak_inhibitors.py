@@ -423,8 +423,154 @@ JAK_INHIBITORS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in UC and RA"
         }
-    }
+    },
+
+    "Baricitinib": {
+        "group": "Rheumatology/Gastrointestinal - JAK Inhibitor (JAK1/JAK2)",
+        "vietnamese_name": "Baricitinib, Olumiant",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm khớp dạng thấp (RA) – moderate đến severe sau thất bại DMARD khác",
+            "Viêm da cơ địa (atopic dermatitis) – moderate đến severe",
+            "Alopecia areata (rụng tóc từng mảng, patchy/bắc cầu)",
+        ],
+        "contraindications": [
+            "Dị ứng với baricitinib hoặc bất kỳ thành phần nào",
+            "Nhiễm trùng nặng đang hoạt động (lao, nhiễm nấm xâm lấn, nhiễm trùng cơ hội)",
+            "Suy giảm miễn dịch nặng",
+            "Suy thận nặng (eGFR <15 ml/phút/1.73m²) hoặc đang lọc máu",
+        ],
+        "dosage": {
+            "adult_ra": "2mg PO 1 lần/ngày; có thể 4mg/ngày ở một số bệnh nhân nguy cơ thấp (tùy guideline và cảnh báo an toàn)",
+            "adult_atopic_dermatitis": "2–4mg PO 1 lần/ngày (tùy mức độ bệnh và yếu tố nguy cơ)",
+            "adult_alopecia": "2–4mg PO 1 lần/ngày (tùy phác đồ từng nước)",
+            "notes": "Uống cùng hoặc không cùng thức ăn; không nên dùng đồng thời nhiều JAK inhibitor hoặc biologic DMARD khác trừ khi chuyên khoa chỉ định.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Giảm còn 1mg/ngày hoặc 50% liều (tùy chỉ định cụ thể)",
+            "under_30": "Không khuyến cáo/Tránh dùng (trừ khi có phác đồ chuyên khoa rõ ràng)",
+        },
+        "side_effects": [
+            "Nhiễm trùng (đường hô hấp trên, herpes zoster) – tương tự các JAK khác",
+            "Tăng lipid máu (LDL, HDL)",
+            "Tăng men gan (ALT, AST)",
+            "Giảm bạch cầu lympho, giảm hemoglobin",
+            "Huyết khối tĩnh mạch (DVT, PE) – hiếm nhưng nghiêm trọng",
+            "Nguy cơ ung thư (lymphoma, ung thư da không melanoma – hiếm)",
+        ],
+        "interactions": [
+            "Các thuốc ức chế miễn dịch mạnh khác (biologic DMARD, azathioprine, cyclosporine): tăng nguy cơ nhiễm trùng",
+            "Vaccine sống: chống chỉ định trong khi dùng và một thời gian sau khi ngừng",
+            "Strong OAT3 inhibitors (probenecid): tăng nồng độ baricitinib",
+        ],
+        "pregnancy": "C – nhìn chung tránh dùng; cân nhắc thay thế an toàn hơn",
+        "mechanism_of_action": (
+            "Baricitinib là chất ức chế chọn lọc Janus kinase 1 và 2 (JAK1/JAK2). "
+            "Bằng cách ức chế JAK1/JAK2, thuốc làm giảm truyền tín hiệu của nhiều cytokine tiền viêm (như IL-6, IFN, GM-CSF), "
+            "giảm hoạt hóa tế bào miễn dịch và quá trình viêm trong RA, viêm da cơ địa và alopecia areata."
+        ),
+        "monitoring": [
+            "CBC (bạch cầu, hemoglobin, tiểu cầu) trước và định kỳ",
+            "Lipid máu (cholesterol, triglycerides) sau 3 tháng và định kỳ",
+            "Men gan (ALT, AST)",
+            "Creatinin, eGFR để điều chỉnh liều",
+            "Sàng lọc lao (TB test) trước khi bắt đầu; sàng lọc HBV/HCV khi có yếu tố nguy cơ",
+            "Dấu hiệu nhiễm trùng, huyết khối, ung thư",
+        ],
+        "precautions": [
+            "NGUY CƠ NHIỄM TRÙNG: tăng nguy cơ nhiễm trùng nặng và cơ hội, bao gồm lao; cần sàng lọc và điều trị dự phòng khi cần.",
+            "NGUY CƠ HUYẾT KHỐI: thận trọng ở bệnh nhân có tiền sử DVT/PE hoặc nhiều yếu tố nguy cơ tim mạch.",
+            "Không phối hợp với JAK inhibitor khác hoặc biologic DMARD trừ khi có chỉ định rất rõ.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 12 giờ",
+            "onset": "Vài tuần cho cải thiện triệu chứng RA/viêm da cơ địa",
+            "duration": "Cho phép dùng 1 lần/ngày",
+            "protein_binding": "~50%",
+            "metabolism": "Ít chuyển hóa qua CYP; chủ yếu thải trừ qua thận dưới dạng không đổi",
+            "clearance": "Thận (OAT3-mediated); suy thận làm tăng nồng độ thuốc.",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": (
+            "Tương tự các JAK inhibitor khác: tăng nguy cơ nhiễm trùng nặng, huyết khối, ung thư và biến cố tim mạch lớn "
+            "ở một số nhóm nguy cơ cao; cần cân nhắc so với anti-TNF và các lựa chọn khác."
+        ),
+        "drug_interactions_detail": {
+            "major": [
+                {
+                    "drug": "Vaccine sống (MMR, varicella, zoster sống, yellow fever, BCG)",
+                    "mechanism": "Ức chế miễn dịch làm tăng nguy cơ nhiễm trùng do vaccine sống",
+                    "effect": "Nhiễm trùng từ vaccine, có thể nặng",
+                    "management": "CHỐNG CHỈ ĐỊNH. Hoàn tất vaccine sống ≥4 tuần trước khi bắt đầu baricitinib.",
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Probenecid và các OAT3 inhibitors mạnh",
+                    "mechanism": "Giảm thải trừ baricitinib qua thận",
+                    "effect": "Tăng nồng độ và nguy cơ tác dụng phụ",
+                    "management": "Cân nhắc giảm liều baricitinib.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng baricitinib",
+                "Nhiễm trùng nặng đang hoạt động",
+                "eGFR <15 ml/phút/1.73m² hoặc đang lọc máu",
+            ],
+            "tương_đối": [
+                "Tiền sử DVT/PE hoặc nhiều yếu tố nguy cơ huyết khối",
+                "Nhiễm trùng mạn tính hoặc tiền sử nhiễm trùng tái phát",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu người hạn chế; nhìn chung tránh dùng trong thai kỳ, đặc biệt tam cá nguyệt đầu.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa rõ bài tiết qua sữa; thận trọng.",
+                "recommendation": "Cân nhắc ngừng cho bú hoặc dùng thuốc thay thế an toàn hơn.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, theo dõi men gan",
+            "severe": "Dữ liệu hạn chế; tránh dùng nếu có thể",
+            "notes": "Không chuyển hóa mạnh qua gan nhưng bệnh gan nặng vẫn có thể tăng nguy cơ biến cố.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng nguy cơ nhiễm trùng, rối loạn huyết học và huyết khối (tương tự JAK khác) nếu dùng liều cao kéo dài",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng thuốc, theo dõi dấu hiệu nhiễm trùng và huyết khối",
+                "Điều trị hỗ trợ và điều trị biến chứng nếu xuất hiện",
+            ],
+            "monitoring": "CBC, lipid, men gan, creatinin/eGFR, dấu hiệu nhiễm trùng và huyết khối.",
+        },
+        "reversal_agents": {"available": False, "agents": []},
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không với thức ăn.",
+                "timing": "Uống 1 lần/ngày, cùng thời điểm mỗi ngày.",
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "ACR Guidelines – Rheumatoid arthritis and JAK inhibitors",
+                "FDA Drug Label – Baricitinib (Olumiant)",
+                "UpToDate – Baricitinib: Drug information",
+            ],
+            "last_updated": "2025-02-23",
+            "evidence_level": "A – RA; B – viêm da cơ địa, alopecia (tùy quốc gia/phê duyệt)",
+        },
+    },
 }
 
-__all__ = ['JAK_INHIBITORS_DRUGS']
+__all__ = ["JAK_INHIBITORS_DRUGS"]
+
 
