@@ -52,11 +52,11 @@ def render_input_form():
         
         weight_kg = st.number_input(
             "Cân nặng (kg)",
-            min_value=20.0,
-            max_value=300.0,
-            value=50.0,
-            step=1.0,
-            format="%.1f",
+            min_value=20,
+            max_value=300,
+            value=50,
+            step=1,
+            format="%d",
             help="Cân nặng thực tế"
         )
     

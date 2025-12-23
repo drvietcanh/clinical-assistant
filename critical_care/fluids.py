@@ -207,11 +207,11 @@ def render_fluid_calculator():
         with col1:
             weight = st.number_input(
                 "Cân nặng (kg):",
-                min_value=1.0,
-                max_value=300.0,
-                value=50.0,
-                step=0.1,
-                format="%.1f",
+                min_value=1,
+                max_value=300,
+                value=50,
+                step=1,
+                format="%d",
                 key="maintenance_weight"
             )
         
@@ -299,11 +299,11 @@ def render_fluid_calculator():
         with col1:
             weight_deficit = st.number_input(
                 "Cân nặng (kg):",
-                min_value=1.0,
-                max_value=300.0,
-                value=50.0,
-                step=0.1,
-                format="%.1f",
+                min_value=1,
+                max_value=300,
+                value=50,
+                step=1,
+                format="%d",
                 key="deficit_weight"
             )
         
@@ -376,11 +376,11 @@ def render_fluid_calculator():
         with col1:
             weight_hyponatremia = st.number_input(
                 "Cân nặng (kg):",
-                min_value=1.0,
-                max_value=300.0,
-                value=50.0,
-                step=0.1,
-                format="%.1f",
+                min_value=1,
+                max_value=300,
+                value=50,
+                step=1,
+                format="%d",
                 key="hyponatremia_weight"
             )
         
@@ -469,11 +469,11 @@ def render_fluid_calculator():
         
         weight_electrolytes = st.number_input(
             "Cân nặng (kg):",
-            min_value=1.0,
-            max_value=300.0,
-            value=70.0,
-            step=0.1,
-            format="%.1f",
+            min_value=1,
+            max_value=300,
+            value=70,
+            step=1,
+            format="%d",
             key="electrolytes_weight"
         )
         

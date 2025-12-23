@@ -321,7 +321,7 @@ def render():
     st.markdown("#### 1️⃣ B - Body Mass Index")
     col1, col2, col3 = st.columns(3)
     with col1:
-        weight = st.number_input("Cân nặng (kg)", 20.0, 200.0, 50.0, 1.0, format="%.1f")
+        weight = st.number_input("Cân nặng (kg)", 20, 200, 50, 1, format="%d")
     with col2:
         height = st.number_input("Chiều cao (cm)", 100, 250, 160, 1, format="%d")
     with col3:
