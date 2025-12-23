@@ -691,6 +691,161 @@ ARBS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - IRMA-2, IDNT studies showing benefit in diabetic nephropathy"
         }
+    },
+
+    "Azilsartan medoxomil": {
+        "group": "Cardiovascular - ARB (Angiotensin Receptor Blocker)",
+        "vietnamese_name": "Azilsartan medoxomil, Edarbi",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp (đặc biệt khi cần kiểm soát mạnh, 24 giờ)"
+        ],
+        "contraindications": [
+            "Dị ứng với azilsartan hoặc ARB",
+            "Có thai",
+            "Hẹp động mạch thận 2 bên hoặc hẹp đơn thận còn lại"
+        ],
+        "dosage": {
+            "adult_htn_initial": "40mg x 1 lần/ngày",
+            "adult_htn_max": "80mg x 1 lần/ngày",
+            "notes": "Có thể dùng đơn trị hoặc phối hợp với thiazide/thiazide-like (chlorthalidone, HCTZ). Không khuyến cáo ở suy gan nặng hoặc eGFR rất thấp nếu không theo dõi sát."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều, theo dõi creatinine/kali",
+            "under_30": "Thận trọng, cân nhắc liều thấp hơn và theo dõi sát"
+        },
+        "side_effects": [
+            "Chóng mặt",
+            "Hạ huyết áp (đặc biệt khi có lợi tiểu hoặc giảm thể tích)",
+            "Tăng kali máu (nhưng tương tự ARB khác)",
+            "Mệt mỏi",
+            "Suy thận cấp (hiếm, đặc biệt trong hẹp ĐM thận, mất nước)"
+        ],
+        "interactions": [
+            "Kali bổ sung và lợi tiểu giữ kali (spironolactone, eplerenone, amiloride, triamterene): tăng nguy cơ tăng kali máu",
+            "NSAID: giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận",
+            "Lithium: tăng nồng độ lithium"
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "mechanism_of_action": "Azilsartan medoxomil là prodrug, thủy phân ở ruột và gan thành azilsartan (hoạt chất). Azilsartan ức chế chọn lọc thụ thể angiotensin II type 1 (AT1), ngăn vasoconstriction và tiết aldosterone. Các nghiên cứu cho thấy azilsartan có thể hạ huyết áp 24 giờ mạnh hơn một số ARB khác (olmesartan, valsartan) ở liều tương đương.",
+        "monitoring": [
+            "Huyết áp (bao gồm huyết áp 24h nếu có thể)",
+            "Creatinine, BUN trước điều trị và 1-2 tuần sau khi bắt đầu/ tăng liều",
+            "Kali máu định kỳ",
+            "Dấu hiệu chóng mặt, ngất (hạ huyết áp quá mức)"
+        ],
+        "precautions": [
+            "Khởi đầu liều thấp ở người cao tuổi, bệnh nhân đang dùng lợi tiểu hoặc giảm thể tích.",
+            "Tránh phối hợp triple blockade RAAS (ACEI + ARB + aliskiren) trừ khi có chỉ định đặc biệt và theo dõi rất sát.",
+            "Ngừng thuốc trước khi mang thai hoặc ngay khi phát hiện mang thai.",
+            "Thận trọng khi phối hợp với NSAID, đặc biệt ở bệnh nhân suy thận, người cao tuổi, giảm thể tích."
+        ],
+        "pharmacokinetics": {
+            "half_life": "11-13 giờ",
+            "onset": "2-3 giờ",
+            "duration": "≥24 giờ (cho phép dùng 1 lần/ngày)",
+            "protein_binding": ">99%",
+            "metabolism": "Chuyển hóa chủ yếu qua gan (CYP2C9) thành các chất chuyển hóa ít hoạt tính",
+            "clearance": "Thải trừ qua phân (55%) và thận (42%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ: ARB (bao gồm azilsartan) có thể gây dị tật và tử vong thai nhi (thiểu ối, bất thường sọ, suy thận thai). Ngừng ngay khi phát hiện có thai.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Lợi tiểu giữ kali",
+                    "mechanism": "Giảm thải trừ kali, tác dụng cộng hưởng",
+                    "effect": "Tăng kali máu nặng, nguy cơ loạn nhịp",
+                    "management": "Tránh nếu có thể, hoặc theo dõi kali chặt chẽ và chỉnh liều."
+                },
+                {
+                    "drug": "NSAIDs",
+                    "mechanism": "Giảm prostaglandin thận, giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp.",
+                    "management": "Hạn chế phối hợp lâu dài; theo dõi creatinine và kali khi bắt đầu/ thay đổi liều."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ lithium; cân nhắc giảm liều hoặc tránh phối hợp."
+                },
+                {
+                    "drug": "Diuretics",
+                    "mechanism": "Hiệp đồng giảm thể tích và RAAS",
+                    "effect": "Hạ huyết áp quá mức, suy thận cấp",
+                    "management": "Khởi đầu liều thấp azilsartan và/hoặc giảm liều lợi tiểu, theo dõi huyết áp/creatinine."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng azilsartan hoặc ARB",
+                "Có thai",
+                "Hẹp động mạch thận 2 bên hoặc hẹp thận độc nhất",
+            ],
+            "tương_đối": [
+                "Suy thận nặng",
+                "Giảm thể tích tuần hoàn (mất nước, dùng liều cao lợi tiểu)",
+                "Tăng kali máu",
+                "Suy gan trung bình-nặng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH tuyệt đối trong thai kỳ. Nguy cơ dị tật và tử vong thai nhi cao nhất trong tam cá nguyệt 2-3.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết vào sữa; thận trọng nếu dùng cho mẹ cho con bú.",
+                "recommendation": "Nếu cần ARB ở mẹ cho con bú, ưu tiên ARB đã có dữ liệu nhiều hơn; nếu dùng azilsartan, theo dõi trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thường không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể khởi đầu liều thấp hơn (20mg/ngày)",
+            "severe": "Không khuyến cáo (thiếu dữ liệu)",
+            "notes": "Chuyển hóa qua CYP2C9; suy gan có thể tăng nồng độ thuốc."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nặng",
+                "Nhịp tim chậm hoặc nhanh phản xạ",
+                "Suy thận cấp",
+                "Tăng kali máu"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đặt bệnh nhân nằm, nâng chân, truyền dịch (NaCl 0.9%)",
+                "Vasopressor (norepinephrine) nếu tụt HA dai dẳng",
+                "Điều trị tăng kali máu nếu có",
+                "Theo dõi huyết áp, nhịp tim, creatinine, điện giải"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, chức năng thận, điện giải (đặc biệt kali)."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn.",
+                "timing": "Uống 1 lần/ngày, cùng giờ mỗi ngày. Khởi đầu 40mg, tăng lên 80mg nếu cần và dung nạp tốt."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Edarbi (azilsartan medoxomil)",
+                "UpToDate - Azilsartan: Drug information",
+                "RCTs so sánh azilsartan với valsartan/olmesartan trong tăng huyết áp",
+                "ACC/AHA Hypertension Guidelines 2024"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved, nhiều RCT chứng minh hiệu quả hạ huyết áp 24 giờ mạnh"
+        }
     }
 }
 

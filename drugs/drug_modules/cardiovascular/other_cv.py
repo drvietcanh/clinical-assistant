@@ -1079,6 +1079,409 @@ OTHER_CV_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - Large RCT (PARADIGM-HF) showing significant mortality and hospitalization benefit compared to enalapril in heart failure"
         }
+    },
+
+    "Vericiguat": {
+        "group": "Cardiovascular - Soluble Guanylate Cyclase (sGC) Stimulator",
+        "vietnamese_name": "Vericiguat, Verquvo",
+        "administration": ["PO"],
+        "indications": [
+            "Suy tim HFrEF (EF ≤40%) NYHA II-IV sau đợt mất bù gần đây dù đã tối ưu GDMT"
+        ],
+        "contraindications": [
+            "Đang dùng nitrate hữu cơ hoặc riociguat",
+            "Hạ huyết áp nặng (SBP <90 mmHg)"
+        ],
+        "dosage": {
+            "adult_hf": "Khởi 2.5 mg PO ngày 1 lần với thức ăn, tăng gấp đôi sau mỗi 2 tuần nếu dung nạp (5 mg → 10 mg) đến liều đích 10 mg PO ngày 1 lần",
+            "notes": "Nuốt nguyên viên, dùng với thức ăn để tối ưu hấp thu. Theo dõi huyết áp."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều; theo dõi tụt huyết áp",
+            "under_30": "Không cần chỉnh liều; theo dõi tụt huyết áp",
+            "dialysis": "Dữ liệu hạn chế; thận trọng"
+        },
+        "side_effects": [
+            "Tụt huyết áp, chóng mặt",
+            "Thiếu máu nhẹ",
+            "Buồn nôn",
+            "Đau đầu"
+        ],
+        "interactions": [
+            "Nitrates, riociguat (chống chỉ định)",
+            "Thuốc hạ áp khác: cộng hưởng tụt huyết áp"
+        ],
+        "pregnancy": "Tránh nếu có thể; dữ liệu hạn chế",
+        "mechanism_of_action": "Kích thích trực tiếp sGC và tăng nhạy cảm với NO → tăng cGMP → giãn mạch, giảm tiền/hậu gánh, cải thiện huyết động HF.",
+        "monitoring": [
+            "Huyết áp, triệu chứng tụt huyết áp",
+            "Hemoglobin/hematocrit",
+            "Triệu chứng suy tim, cân nặng",
+            "Chức năng thận, điện giải nếu phối hợp lợi tiểu/RAASi/SGLT2i"
+        ],
+        "precautions": [
+            "Tránh phối hợp nitrate hoặc riociguat",
+            "Thận trọng nếu SBP <100 mmHg",
+            "Theo dõi thiếu máu nhẹ",
+            "Không khởi trị khi đang mất bù huyết động"
+        ],
+        "pharmacokinetics": {
+            "half_life": "≈20 giờ",
+            "onset": "Vài giờ",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "≈98%",
+            "metabolism": "Chủ yếu UGT1A9/UGT1A1; ít CYP",
+            "clearance": "Thải qua phân và nước tiểu"
+        },
+        "storage": "Nhiệt độ phòng, khô, tránh ẩm.",
+        "black_box_warnings": "Không dùng cùng nitrate hữu cơ hoặc riociguat (tụt huyết áp nặng).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Nitrates, Riociguat",
+                    "mechanism": "Cộng dồn kích hoạt sGC",
+                    "effect": "Tụt huyết áp nghiêm trọng",
+                    "management": "Chống chỉ định phối hợp"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc hạ áp khác",
+                    "mechanism": "Cộng hưởng hạ áp",
+                    "effect": "Tụt huyết áp",
+                    "management": "Theo dõi huyết áp, chỉnh liều nếu cần"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dùng nitrate hữu cơ hoặc riociguat",
+                "SBP <90 mmHg",
+                "Quá mẫn với vericiguat"
+            ],
+            "tương_đối": [
+                "SBP 90-100 mmHg",
+                "Thiếu máu đang điều trị",
+                "Suy thận nặng cần lọc máu (dữ liệu hạn chế)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "Tránh dùng",
+            "pregnancy_details": "Dữ liệu hạn chế; tránh nếu có thể.",
+            "lactation": {
+                "safety": "Không khuyến cáo",
+                "details": "Chưa rõ bài tiết sữa mẹ.",
+                "recommendation": "Tránh hoặc ngừng cho bú nếu phải dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh",
+            "moderate": "Không cần chỉnh; theo dõi huyết áp",
+            "severe": "Dữ liệu hạn chế; thận trọng"
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tụt huyết áp",
+                "Chóng mặt",
+                "Ngất"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Nằm đầu thấp/nâng chân",
+                "Bù dịch",
+                "Vận mạch nếu cần"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, ý thức"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Dùng cùng thức ăn",
+                "timing": "1 lần/ngày, cùng giờ",
+                "notes": "Nuốt nguyên viên"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Vericiguat (Verquvo)",
+                "VICTORIA trial",
+                "ACC/AHA/HFSA Heart Failure Guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA 2021, large RCT (VICTORIA)"
+        }
+    },
+
+    "Sotagliflozin": {
+        "group": "Cardiovascular/Diabetes - Dual SGLT1/2 Inhibitor",
+        "vietnamese_name": "Sotagliflozin, Inpefa",
+        "administration": ["PO"],
+        "indications": [
+            "Suy tim (mọi EF) để giảm nhập viện do HF và biến cố CV",
+            "Đái tháo đường type 2 (ít dùng hơn do tiêu chảy)"
+        ],
+        "contraindications": [
+            "Dị ứng sotagliflozin",
+            "DKA (kể cả euglycemic)",
+            "eGFR <25 mL/min/1.73m² (không khởi trị)"
+        ],
+        "dosage": {
+            "adult_hf": "200 mg PO mỗi sáng; có thể tăng 400 mg nếu dung nạp",
+            "notes": "Uống buổi sáng. Ngưng tạm trước phẫu thuật/nhịn ăn dài để giảm nguy cơ DKA."
+        },
+        "renal_adjustment": {
+            "normal": "Không chỉnh liều",
+            "30_60": "Thận trọng; không khởi trị nếu eGFR <25",
+            "under_30": "Không khởi trị <25; nếu đang dùng và eGFR giảm, theo dõi sát"
+        },
+        "side_effects": [
+            "Tiêu chảy (ức chế SGLT1 ruột)",
+            "DKA/euglycemic DKA",
+            "Nhiễm trùng sinh dục",
+            "Mất nước, tụt huyết áp",
+            "Tăng creatinine thoáng qua",
+            "Hạ đường huyết (phối hợp insulin/SU)"
+        ],
+        "interactions": [
+            "Insulin/SU: tăng nguy cơ hạ đường huyết",
+            "Lợi tiểu/RAASi: cộng hưởng tụt huyết áp, mất nước"
+        ],
+        "pregnancy": "Tránh dùng",
+        "mechanism_of_action": "Ức chế kép SGLT2 (thận) và SGLT1 (ruột): tăng thải glucose niệu, lợi niệu thẩm thấu (giảm tiền/hậu gánh), đồng thời giảm hấp thu glucose sau ăn.",
+        "monitoring": [
+            "Huyết áp, thể tích dịch",
+            "Creatinine/eGFR",
+            "Glucose và ketone nếu triệu chứng DKA",
+            "Nhiễm trùng sinh dục/tiết niệu",
+            "Cân nặng, triệu chứng HF"
+        ],
+        "precautions": [
+            "Ngưng tạm khi nhịn ăn dài/phẫu thuật/bệnh cấp",
+            "Giáo dục dấu hiệu DKA dù glucose không cao",
+            "Theo dõi tiêu chảy và bù dịch",
+            "Thận trọng phối hợp lợi tiểu liều cao",
+            "Không khởi trị nếu eGFR <25"
+        ],
+        "pharmacokinetics": {
+            "half_life": "≈13-20 giờ",
+            "onset": "Vài giờ",
+            "duration": "24 giờ",
+            "protein_binding": "≈98%",
+            "metabolism": "Chủ yếu UGT; ít CYP",
+            "clearance": "Phân và thận"
+        },
+        "storage": "Nhiệt độ phòng, khô ráo.",
+        "black_box_warnings": "Nguy cơ DKA (kể cả euglycemic).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Insulin, Sulfonylurea",
+                    "mechanism": "Cộng hưởng hạ đường huyết",
+                    "effect": "Hạ đường huyết",
+                    "management": "Giảm liều insulin/SU khi khởi trị, theo dõi glucose"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lợi tiểu, RAASi",
+                    "mechanism": "Cộng hưởng lợi niệu/hạ áp",
+                    "effect": "Tụt huyết áp, mất nước",
+                    "management": "Theo dõi HA, creatinine; cân nhắc giảm liều lợi tiểu"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "DKA hiện tại hoặc tiền sử DKA do SGLT",
+                "Dị ứng sotagliflozin"
+            ],
+            "tương_đối": [
+                "eGFR <25 (không khởi trị)",
+                "Mất nước, tụt huyết áp",
+                "Tiền sử nhiễm nấm sinh dục tái phát",
+                "Ăn ketogenic/nhịn ăn kéo dài"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "Tránh dùng",
+            "pregnancy_details": "Thiếu dữ liệu; tránh nếu có thể.",
+            "lactation": {
+                "safety": "Không khuyến cáo",
+                "details": "Chưa rõ bài tiết sữa mẹ.",
+                "recommendation": "Tránh hoặc ngừng cho bú nếu phải dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh",
+            "moderate": "Không cần chỉnh; theo dõi",
+            "severe": "Thận trọng, dữ liệu hạn chế"
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Mất nước, tụt huyết áp",
+                "Hạ đường huyết (phối hợp insulin/SU)",
+                "Nguy cơ DKA"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Bù dịch",
+                "Glucose IV nếu hạ đường huyết",
+                "Theo dõi/điều trị DKA nếu có"
+            ],
+            "monitoring": "Huyết áp, glucose, ketone, điện giải, chức năng thận"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể cùng hoặc không cùng thức ăn",
+                "timing": "1 lần/ngày buổi sáng",
+                "notes": "Ngưng tạm trước phẫu thuật/nhịn ăn dài"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Sotagliflozin (Inpefa)",
+                "SOLOIST-WHF, SCORED trials",
+                "ACC/AHA/HFSA Heart Failure Guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA 2023, RCTs (SOLOIST/SCORED)"
+        }
+    },
+
+    "Finerenone": {
+        "group": "Cardiovascular/Metabolic - Nonsteroidal MRA",
+        "vietnamese_name": "Finerenone, Kerendia",
+        "administration": ["PO"],
+        "indications": [
+            "Bệnh thận do đái tháo đường type 2 (CKD + albumin niệu) để giảm tiến triển thận và biến cố tim mạch"
+        ],
+        "contraindications": [
+            "Kali >5.0 mEq/L trước khởi trị",
+            "eGFR <25 mL/min/1.73m²",
+            "Dùng đồng thời strong CYP3A4 inhibitors"
+        ],
+        "dosage": {
+            "adult_ckd_t2dm": "eGFR ≥60: 20 mg PO ngày 1 lần. eGFR 25-<60: 10 mg PO ngày 1 lần, có thể tăng 20 mg nếu K+ ≤4.8 sau 4 tuần.",
+            "notes": "Kiểm tra K+ và eGFR trước, 4 tuần sau khởi trị/điều chỉnh liều, sau đó định kỳ."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều nếu eGFR ≥60",
+            "30_60": "Khởi 10 mg nếu eGFR 25-<60",
+            "under_30": "Không khởi trị nếu eGFR <25"
+        },
+        "side_effects": [
+            "Tăng kali máu",
+            "Tụt huyết áp nhẹ",
+            "Tăng creatinine nhẹ"
+        ],
+        "interactions": [
+            "Strong CYP3A4 inhibitors: tăng nồng độ finerenone",
+            "ACEi/ARB, K-sparing diuretics, bổ sung K+: tăng kali"
+        ],
+        "pregnancy": "Tránh dùng nếu có thể",
+        "mechanism_of_action": "Ns-MRA chọn lọc, ức chế receptor mineralocorticoid, giảm viêm/xơ hóa thận-tim; ít tác dụng nội tiết, chứng minh giảm biến cố thận/tim (FIDELIO-DKD, FIGARO-DKD).",
+        "monitoring": [
+            "Kali máu (trước, 4 tuần sau chỉnh liều, định kỳ)",
+            "eGFR/creatinine",
+            "Huyết áp",
+            "Triệu chứng tăng kali"
+        ],
+        "precautions": [
+            "Không khởi trị nếu K+ >5.0 hoặc eGFR <25",
+            "Giảm/ngưng nếu K+ >5.5; khởi lại khi K+ ≤5.0",
+            "Thận trọng phối hợp ACEi/ARB (thường dùng nền) và thuốc giữ K+/bổ sung K+",
+            "Theo dõi sát K+ sau mỗi chỉnh liều"
+        ],
+        "pharmacokinetics": {
+            "half_life": "≈2-3 giờ",
+            "onset": "Vài giờ",
+            "duration": "24 giờ",
+            "protein_binding": "≈90%",
+            "metabolism": "Chủ yếu CYP3A4",
+            "clearance": "Phân và nước tiểu"
+        },
+        "storage": "Nhiệt độ phòng, khô ráo.",
+        "black_box_warnings": "Tăng kali máu; không khởi trị nếu K+ >5.0, theo dõi sát.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin, ritonavir)",
+                    "mechanism": "Giảm chuyển hóa finerenone",
+                    "effect": "Tăng nồng độ, tăng nguy cơ tăng kali",
+                    "management": "Chống chỉ định phối hợp"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "ACEi/ARB/ARNI, K-sparing diuretics, bổ sung K+",
+                    "mechanism": "Cộng hưởng tăng kali",
+                    "effect": "Tăng nguy cơ tăng kali",
+                    "management": "Theo dõi sát K+, điều chỉnh/giảm bổ sung K+"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "K+ >5.0 mEq/L trước khởi trị",
+                "eGFR <25 mL/min/1.73m²",
+                "Dùng strong CYP3A4 inhibitor",
+                "Dị ứng finerenone"
+            ],
+            "tương_đối": [
+                "K+ 4.8-5.0 mEq/L (khởi liều thấp, theo dõi sát)",
+                "Hạ huyết áp nền",
+                "Suy gan trung bình-nặng (dữ liệu hạn chế)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "Tránh dùng",
+            "pregnancy_details": "Thiếu dữ liệu; tránh nếu có thể.",
+            "lactation": {
+                "safety": "Không khuyến cáo",
+                "details": "Chưa rõ bài tiết sữa mẹ.",
+                "recommendation": "Tránh hoặc ngừng cho bú nếu phải dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh",
+            "moderate": "Thận trọng, theo dõi K+",
+            "severe": "Dữ liệu hạn chế; tránh nếu có thể"
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng kali máu",
+                "Tụt huyết áp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc",
+                "Xử trí tăng kali (insulin/glucose, beta-agonist, resin, lọc máu nếu cần)",
+                "Bù dịch/vasopressor nếu tụt huyết áp"
+            ],
+            "monitoring": "Kali, ECG, huyết áp, creatinine"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể cùng hoặc không cùng thức ăn",
+                "timing": "1 lần/ngày, cùng giờ",
+                "notes": "Nuốt nguyên viên"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Finerenone (Kerendia)",
+                "FIDELIO-DKD, FIGARO-DKD trials",
+                "KDIGO/ADA CKD-T2DM Guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA 2021, large RCTs"
+        }
     }
 
 }

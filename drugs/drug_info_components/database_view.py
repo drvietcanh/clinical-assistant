@@ -95,6 +95,27 @@ def render_drug_database():
         render_statins_quick_sections()
     except ImportError:
         pass
+    
+    # Quick Antibiotics overview (Beta-lactams, Fluoroquinolones, Macrolides)
+    try:
+        from drugs.ui_antibiotics_view import render_antibiotics_quick_sections
+        render_antibiotics_quick_sections()
+    except ImportError:
+        pass
+    
+    # Quick Anticoagulants overview (Warfarin, DOACs)
+    try:
+        from drugs.ui_anticoagulants_view import render_anticoagulants_quick_sections
+        render_anticoagulants_quick_sections()
+    except ImportError:
+        pass
+    
+    # Quick Antidepressants overview (SSRIs)
+    try:
+        from drugs.ui_antidepressants_view import render_antidepressants_quick_sections
+        render_antidepressants_quick_sections()
+    except ImportError:
+        pass
 
     # Quick filter buttons for common drug categories
     st.markdown('### ⚡ Lọc nhanh theo nhóm thuốc phổ biến')

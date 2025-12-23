@@ -576,6 +576,529 @@ ANTIPARKINSONIAN_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
         }
+    },
+    
+    "Pimavanserin": {
+        "group": "Neurology - Antiparkinsonian (5-HT2A Inverse Agonist)",
+        "vietnamese_name": "Pimavanserin, Nuplazid",
+        "administration": ["PO"],
+        "indications": [
+            "Ảo giác và hoang tưởng trong bệnh Parkinson (Parkinson's disease psychosis)",
+            "Ảo giác và hoang tưởng trong bệnh Alzheimer (Alzheimer's disease psychosis) - off-label"
+        ],
+        "contraindications": [
+            "Dị ứng pimavanserin hoặc bất kỳ thành phần nào",
+            "Suy gan nặng (Child-Pugh class C)",
+            "Suy thận nặng (eGFR <30 ml/min/1.73m²)"
+        ],
+        "dosage": {
+            "adult": "34mg PO mỗi ngày (1 viên)",
+            "notes": "Uống với thức ăn. Không nghiền hoặc nhai viên (phải uống nguyên viên). Bắt đầu với liều 34mg/ngày. Không cần điều chỉnh liều ở người cao tuổi."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều 50% (17mg/ngày)",
+            "under_30": "CHỐNG CHỈ ĐỊNH"
+        },
+        "side_effects": [
+            "Buồn nôn - phổ biến",
+            "Phù ngoại biên - phổ biến",
+            "Lú lẫn - phổ biến",
+            "Ảo giác - có thể xảy ra (paradoxical)",
+            "Rối loạn nhịp tim (QT kéo dài) - NGUY HIỂM",
+            "Tử vong - tăng nguy cơ ở bệnh nhân sa sút trí tuệ",
+            "Đau đầu",
+            "Mệt mỏi"
+        ],
+        "interactions": [
+            "CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin): TĂNG nguy cơ QT kéo dài - TRÁNH",
+            "CYP3A4 inducers (rifampin, carbamazepine): giảm hiệu quả - tăng liều",
+            "Thuốc kéo dài QT (amiodarone, sotalol): TĂNG nguy cơ QT kéo dài - TRÁNH",
+            "Thuốc chống đông (warfarin): có thể tăng INR - theo dõi"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Pimavanserin là chất đối vận nghịch (inverse agonist) chọn lọc thụ thể 5-HT2A (serotonin 2A receptor). Trong bệnh Parkinson, ảo giác và hoang tưởng thường do mất cân bằng dopamine và serotonin. Các thuốc chống loạn thần truyền thống (antipsychotics) ức chế thụ thể dopamine D2 → giảm ảo giác nhưng làm nặng triệu chứng Parkinson. Pimavanserin ức chế thụ thể 5-HT2A (không ảnh hưởng D2) → giảm ảo giác và hoang tưởng mà không làm nặng triệu chứng Parkinson. Dẫn đến: cải thiện ảo giác và hoang tưởng trong bệnh Parkinson mà không làm nặng triệu chứng vận động. Pimavanserin được dùng để điều trị ảo giác và hoang tưởng trong bệnh Parkinson.",
+        "monitoring": [
+            "Ảo giác và hoang tưởng - đánh giá hiệu quả điều trị",
+            "Triệu chứng Parkinson - đảm bảo không làm nặng",
+            "ECG (QT interval) - QUAN TRỌNG: theo dõi trước và trong điều trị, đặc biệt khi dùng với thuốc kéo dài QT",
+            "Chức năng gan (ALT, AST) - mỗi 3-6 tháng",
+            "Chức năng thận (creatinine, eGFR) - trước khi bắt đầu và định kỳ",
+            "Dấu hiệu lú lẫn, ảo giác (paradoxical)",
+            "Dấu hiệu phù ngoại biên"
+        ],
+        "precautions": [
+            "THEO DÕI ECG (QT INTERVAL) - tăng nguy cơ QT kéo dài, đặc biệt khi dùng với thuốc kéo dài QT",
+            "TRÁNH DÙNG VỚI CYP3A4 INHIBITORS MẠNH - tăng nguy cơ QT kéo dài",
+            "TRÁNH DÙNG VỚI THUỐC KÉO DÀI QT - tăng nguy cơ rối loạn nhịp tim",
+            "Tăng nguy cơ tử vong ở bệnh nhân sa sút trí tuệ - thận trọng",
+            "Có thể gây ảo giác (paradoxical) - ngừng nếu xảy ra",
+            "Lú lẫn - phổ biến, theo dõi",
+            "Phù ngoại biên - phổ biến, theo dõi",
+            "Giảm liều 50% ở suy thận vừa (eGFR 30-60)",
+            "CHỐNG CHỈ ĐỊNH ở suy thận nặng (eGFR <30) và suy gan nặng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "57 giờ (dao động 40-80 giờ)",
+            "onset": "Vài tuần",
+            "duration": "24 giờ (liều mỗi ngày)",
+            "protein_binding": ">95%",
+            "metabolism": "Chuyển hóa ở gan qua CYP3A4 và CYP2J2",
+            "clearance": "Chuyển hóa ở gan, thải trừ qua thận một phần. Half-life dài."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Không nghiền hoặc nhai viên (phải uống nguyên viên).",
+        "black_box_warnings": "TĂNG NGUY CƠ TỬ VONG Ở BỆNH NHÂN SA SÚT TRÍ TUỆ - tăng nguy cơ tử vong ở bệnh nhân sa sút trí tuệ. QT KÉO DÀI - tăng nguy cơ rối loạn nhịp tim. TRÁNH dùng với CYP3A4 inhibitors mạnh và thuốc kéo dài QT.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin, itraconazole)",
+                    "mechanism": "Ức chế chuyển hóa pimavanserin, tăng nồng độ, tăng nguy cơ QT kéo dài",
+                    "effect": "Tăng nguy cơ QT kéo dài, rối loạn nhịp tim (nguy hiểm)",
+                    "management": "TRÁNH dùng cùng. Nếu bắt buộc, giảm liều pimavanserin 50% và theo dõi ECG chặt chẽ."
+                },
+                {
+                    "drug": "Thuốc kéo dài QT (amiodarone, sotalol, haloperidol, quetiapine)",
+                    "mechanism": "Tác dụng cộng dồn kéo dài QT",
+                    "effect": "Tăng nguy cơ QT kéo dài, rối loạn nhịp tim (nguy hiểm)",
+                    "management": "TRÁNH dùng cùng. Nếu bắt buộc, theo dõi ECG chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 inducers (rifampin, carbamazepine, phenytoin)",
+                    "mechanism": "Tăng chuyển hóa pimavanserin, giảm nồng độ",
+                    "effect": "Giảm hiệu quả pimavanserin",
+                    "management": "Có thể cần tăng liều pimavanserin. Theo dõi hiệu quả."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Pimavanserin có thể ảnh hưởng đến đông máu",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên khi bắt đầu pimavanserin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng pimavanserin hoặc bất kỳ thành phần nào",
+                "Suy gan nặng (Child-Pugh class C)",
+                "Suy thận nặng (eGFR <30 ml/min/1.73m²)"
+            ],
+            "tương_đối": [
+                "Suy thận vừa (eGFR 30-60) - giảm liều 50%",
+                "Suy gan vừa - thận trọng",
+                "QT kéo dài - tăng nguy cơ",
+                "Sa sút trí tuệ - tăng nguy cơ tử vong",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Pimavanserin là FDA category C. Có thể dùng trong thai kỳ khi cần thiết. Một số nghiên cứu cho thấy an toàn trong thai kỳ, nhưng cần theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Pimavanserin bài tiết vào sữa mẹ. Chưa rõ an toàn cho trẻ sơ sinh.",
+                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, theo dõi tác dụng phụ",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Pimavanserin chuyển hóa ở gan qua CYP3A4. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Lú lẫn nặng",
+                "Ảo giác",
+                "QT kéo dài, rối loạn nhịp tim",
+                "Buồn nôn, nôn"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "ECG - theo dõi QT interval",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, huyết áp",
+                "Xử trí rối loạn nhịp tim nếu có",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, huyết áp, ECG (QT interval)"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để tăng hấp thu.",
+                "timing": "Uống 1 lần/ngày, cùng thời điểm mỗi ngày. KHÔNG nghiền hoặc nhai viên (phải uống nguyên viên)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Pimavanserin (Nuplazid)",
+                "UpToDate - Pimavanserin: Drug information",
+                "Lexicomp - Pimavanserin monograph",
+                "AAN Guidelines - Parkinson's Disease"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, clinical trial data, widely used"
+        }
+    },
+    
+    "Deutetrabenazine": {
+        "group": "Neurology - Movement Disorders (VMAT2 Inhibitor)",
+        "vietnamese_name": "Deutetrabenazine, Austedo",
+        "administration": ["PO"],
+        "indications": [
+            "Rối loạn vận động do Huntington (Huntington's disease chorea)",
+            "Rối loạn vận động do tardive dyskinesia"
+        ],
+        "contraindications": [
+            "Dị ứng deutetrabenazine hoặc tetrabenazine",
+            "Suy gan nặng",
+            "Dùng với MAO inhibitors (trong 14 ngày)"
+        ],
+        "dosage": {
+            "adult_huntington_initial": "6mg PO mỗi ngày, tăng dần mỗi tuần (6→12→18→24→30→36→42→48mg/ngày) đến liều hiệu quả",
+            "adult_huntington_max": "48mg/ngày (chia 2 lần)",
+            "adult_tardive_initial": "12mg PO mỗi ngày, tăng dần mỗi tuần (12→18→24→30→36mg/ngày) đến liều hiệu quả",
+            "adult_tardive_max": "36mg/ngày (chia 2 lần)",
+            "notes": "Chia 2 lần/ngày. Uống với thức ăn. Bắt đầu với liều thấp và tăng dần để giảm tác dụng phụ. Không ngừng đột ngột."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, không cần điều chỉnh liều"
+        },
+        "side_effects": [
+            "Buồn ngủ, mệt mỏi - phổ biến",
+            "Trầm cảm - phổ biến, NGUY HIỂM",
+            "Rối loạn giấc ngủ - phổ biến",
+            "Lo âu - phổ biến",
+            "Rối loạn nhịp tim (QT kéo dài) - NGUY HIỂM",
+            "Parkinsonism - có thể xảy ra",
+            "Buồn nôn",
+            "Chóng mặt"
+        ],
+        "interactions": [
+            "MAO inhibitors: CHỐNG CHỈ ĐỊNH - tăng nguy cơ serotonin syndrome",
+            "Thuốc kéo dài QT (amiodarone, sotalol): TĂNG nguy cơ QT kéo dài - TRÁNH",
+            "CYP2D6 inhibitors (paroxetine, fluoxetine): tăng nồng độ - giảm liều",
+            "Reserpine: tăng nguy cơ tác dụng phụ - TRÁNH"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Deutetrabenazine là chất ức chế VMAT2 (vesicular monoamine transporter 2) với deuterium substitution. VMAT2 là protein vận chuyển monoamine (dopamine, serotonin, norepinephrine) vào túi tiết (vesicles) trong tế bào thần kinh. Ức chế VMAT2 → giảm vận chuyển monoamine vào túi tiết → giảm giải phóng monoamine → giảm hoạt động dopamine trong não → giảm rối loạn vận động (chorea, tardive dyskinesia). Deutetrabenazine có deuterium substitution → chuyển hóa chậm hơn tetrabenazine → half-life dài hơn, liều thấp hơn, tác dụng phụ ít hơn. Dẫn đến: giảm rối loạn vận động trong bệnh Huntington và tardive dyskinesia. Deutetrabenazine được dùng để điều trị rối loạn vận động do Huntington và tardive dyskinesia.",
+        "monitoring": [
+            "Rối loạn vận động (chorea, tardive dyskinesia) - đánh giá hiệu quả điều trị",
+            "Trầm cảm - QUAN TRỌNG: theo dõi chặt chẽ, đặc biệt khi bắt đầu hoặc tăng liều",
+            "ECG (QT interval) - theo dõi trước và trong điều trị, đặc biệt khi dùng với thuốc kéo dài QT",
+            "Parkinsonism - theo dõi triệu chứng",
+            "Rối loạn giấc ngủ - theo dõi",
+            "Chức năng gan (ALT, AST) - mỗi 3-6 tháng",
+            "Dấu hiệu serotonin syndrome (nếu dùng với MAO inhibitors)"
+        ],
+        "precautions": [
+            "THEO DÕI TRẦM CẢM CHẶT CHẼ - tăng nguy cơ, đặc biệt khi bắt đầu hoặc tăng liều, ngừng ngay nếu có ý tưởng tự tử",
+            "THEO DÕI ECG (QT INTERVAL) - tăng nguy cơ QT kéo dài, đặc biệt khi dùng với thuốc kéo dài QT",
+            "CHỐNG CHỈ ĐỊNH với MAO inhibitors (trong 14 ngày) - tăng nguy cơ serotonin syndrome",
+            "TRÁNH dùng với reserpine - tăng nguy cơ tác dụng phụ",
+            "Buồn ngủ, mệt mỏi - phổ biến, tránh lái xe hoặc vận hành máy móc",
+            "Parkinsonism - có thể xảy ra, giảm liều nếu có",
+            "Không ngừng đột ngột - giảm dần dần",
+            "Giảm liều 50% ở bệnh nhân dùng CYP2D6 inhibitors mạnh"
+        ],
+        "pharmacokinetics": {
+            "half_life": "9-10 giờ (dao động 6-15 giờ)",
+            "onset": "Vài ngày đến vài tuần",
+            "duration": "12 giờ (chia 2 lần/ngày)",
+            "protein_binding": "Không rõ",
+            "metabolism": "Chuyển hóa ở gan qua CYP2D6 và CYP1A2",
+            "clearance": "Chuyển hóa ở gan, thải trừ qua thận một phần. Half-life dài hơn tetrabenazine nhờ deuterium substitution."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "TRẦM CẢM VÀ Ý TƯỞNG TỰ TỬ - tăng nguy cơ trầm cảm và ý tưởng tự tử. Theo dõi chặt chẽ, đặc biệt khi bắt đầu hoặc tăng liều. Ngừng ngay nếu có ý tưởng tự tử. QT KÉO DÀI - tăng nguy cơ rối loạn nhịp tim. TRÁNH dùng với thuốc kéo dài QT.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors (phenelzine, tranylcypromine, selegiline)",
+                    "mechanism": "Ức chế chuyển hóa monoamine, tăng nguy cơ serotonin syndrome",
+                    "effect": "Tăng nguy cơ serotonin syndrome (nguy hiểm)",
+                    "management": "CHỐNG CHỈ ĐỊNH - không được dùng cùng. Ngừng MAO inhibitors ít nhất 14 ngày trước khi dùng deutetrabenazine."
+                },
+                {
+                    "drug": "Thuốc kéo dài QT (amiodarone, sotalol, haloperidol)",
+                    "mechanism": "Tác dụng cộng dồn kéo dài QT",
+                    "effect": "Tăng nguy cơ QT kéo dài, rối loạn nhịp tim (nguy hiểm)",
+                    "management": "TRÁNH dùng cùng. Nếu bắt buộc, theo dõi ECG chặt chẽ."
+                },
+                {
+                    "drug": "Reserpine",
+                    "mechanism": "Tác dụng cộng dồn ức chế VMAT2",
+                    "effect": "Tăng nguy cơ tác dụng phụ",
+                    "management": "TRÁNH dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP2D6 inhibitors mạnh (paroxetine, fluoxetine, quinidine)",
+                    "mechanism": "Ức chế chuyển hóa deutetrabenazine, tăng nồng độ",
+                    "effect": "Tăng tác dụng phụ",
+                    "management": "Giảm liều deutetrabenazine 50%. Theo dõi tác dụng phụ chặt chẽ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng deutetrabenazine hoặc tetrabenazine",
+                "Suy gan nặng",
+                "Dùng với MAO inhibitors (trong 14 ngày)"
+            ],
+            "tương_đối": [
+                "Suy gan vừa - thận trọng",
+                "Trầm cảm hoặc tiền sử trầm cảm - tăng nguy cơ",
+                "QT kéo dài - tăng nguy cơ",
+                "Parkinsonism - có thể làm nặng",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Deutetrabenazine là FDA category C. Có thể dùng trong thai kỳ khi cần thiết. Một số nghiên cứu cho thấy an toàn trong thai kỳ, nhưng cần theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Deutetrabenazine bài tiết vào sữa mẹ. Chưa rõ an toàn cho trẻ sơ sinh.",
+                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, theo dõi tác dụng phụ",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Deutetrabenazine chuyển hóa ở gan qua CYP2D6 và CYP1A2. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng, hôn mê",
+                "Trầm cảm nặng, ý tưởng tự tử",
+                "QT kéo dài, rối loạn nhịp tim",
+                "Parkinsonism nặng",
+                "Serotonin syndrome (nếu dùng với MAO inhibitors)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "ECG - theo dõi QT interval",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, huyết áp",
+                "Xử trí trầm cảm, ý tưởng tự tử - tư vấn tâm thần",
+                "Xử trí rối loạn nhịp tim nếu có",
+                "Xử trí serotonin syndrome nếu có (cyproheptadine, cooling)",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, huyết áp, ECG (QT interval), dấu hiệu trầm cảm, ý tưởng tự tử"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để tăng hấp thu.",
+                "timing": "Chia 2 lần/ngày, uống cùng thời điểm mỗi ngày. Bắt đầu với liều thấp và tăng dần mỗi tuần để giảm tác dụng phụ. Không ngừng đột ngột - giảm dần dần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Deutetrabenazine (Austedo)",
+                "UpToDate - Deutetrabenazine: Drug information",
+                "Lexicomp - Deutetrabenazine monograph",
+                "AAN Guidelines - Huntington's Disease"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, clinical trial data, widely used"
+        }
+    },
+    
+    "Tetrabenazine": {
+        "group": "Neurology - Movement Disorders (VMAT2 Inhibitor)",
+        "vietnamese_name": "Tetrabenazine, Xenazine",
+        "administration": ["PO"],
+        "indications": [
+            "Rối loạn vận động do Huntington (Huntington's disease chorea)"
+        ],
+        "contraindications": [
+            "Dị ứng tetrabenazine",
+            "Suy gan nặng",
+            "Trầm cảm nặng hoặc ý tưởng tự tử",
+            "Dùng với MAO inhibitors (trong 14 ngày)"
+        ],
+        "dosage": {
+            "adult_initial": "12.5mg PO mỗi ngày, tăng dần mỗi 3-5 ngày (12.5→25→37.5→50→62.5→75→87.5→100mg/ngày) đến liều hiệu quả",
+            "adult_max": "100mg/ngày (chia 3 lần)",
+            "notes": "Chia 3 lần/ngày. Uống với thức ăn. Bắt đầu với liều thấp và tăng dần để giảm tác dụng phụ. Không ngừng đột ngột. Giảm liều 50% ở bệnh nhân dùng CYP2D6 inhibitors mạnh."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, không cần điều chỉnh liều"
+        },
+        "side_effects": [
+            "Buồn ngủ, mệt mỏi - phổ biến",
+            "Trầm cảm - phổ biến, NGUY HIỂM",
+            "Rối loạn giấc ngủ - phổ biến",
+            "Lo âu - phổ biến",
+            "Rối loạn nhịp tim (QT kéo dài) - NGUY HIỂM",
+            "Parkinsonism - có thể xảy ra",
+            "Buồn nôn",
+            "Chóng mặt"
+        ],
+        "interactions": [
+            "MAO inhibitors: CHỐNG CHỈ ĐỊNH - tăng nguy cơ serotonin syndrome",
+            "Thuốc kéo dài QT (amiodarone, sotalol): TĂNG nguy cơ QT kéo dài - TRÁNH",
+            "CYP2D6 inhibitors (paroxetine, fluoxetine): tăng nồng độ - giảm liều 50%",
+            "Reserpine: tăng nguy cơ tác dụng phụ - TRÁNH"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Tetrabenazine là chất ức chế VMAT2 (vesicular monoamine transporter 2). VMAT2 là protein vận chuyển monoamine (dopamine, serotonin, norepinephrine) vào túi tiết (vesicles) trong tế bào thần kinh. Ức chế VMAT2 → giảm vận chuyển monoamine vào túi tiết → giảm giải phóng monoamine → giảm hoạt động dopamine trong não → giảm rối loạn vận động (chorea). Dẫn đến: giảm rối loạn vận động trong bệnh Huntington. Tetrabenazine được dùng để điều trị rối loạn vận động do Huntington. Lưu ý: Deutetrabenazine là dạng cải tiến của tetrabenazine với deuterium substitution → half-life dài hơn, liều thấp hơn, tác dụng phụ ít hơn.",
+        "monitoring": [
+            "Rối loạn vận động (chorea) - đánh giá hiệu quả điều trị",
+            "Trầm cảm - QUAN TRỌNG: theo dõi chặt chẽ, đặc biệt khi bắt đầu hoặc tăng liều",
+            "ECG (QT interval) - theo dõi trước và trong điều trị, đặc biệt khi dùng với thuốc kéo dài QT",
+            "Parkinsonism - theo dõi triệu chứng",
+            "Rối loạn giấc ngủ - theo dõi",
+            "Chức năng gan (ALT, AST) - mỗi 3-6 tháng",
+            "Dấu hiệu serotonin syndrome (nếu dùng với MAO inhibitors)"
+        ],
+        "precautions": [
+            "THEO DÕI TRẦM CẢM CHẶT CHẼ - tăng nguy cơ, đặc biệt khi bắt đầu hoặc tăng liều, ngừng ngay nếu có ý tưởng tự tử",
+            "CHỐNG CHỈ ĐỊNH ở trầm cảm nặng hoặc ý tưởng tự tử",
+            "THEO DÕI ECG (QT INTERVAL) - tăng nguy cơ QT kéo dài, đặc biệt khi dùng với thuốc kéo dài QT",
+            "CHỐNG CHỈ ĐỊNH với MAO inhibitors (trong 14 ngày) - tăng nguy cơ serotonin syndrome",
+            "TRÁNH dùng với reserpine - tăng nguy cơ tác dụng phụ",
+            "Buồn ngủ, mệt mỏi - phổ biến, tránh lái xe hoặc vận hành máy móc",
+            "Parkinsonism - có thể xảy ra, giảm liều nếu có",
+            "Không ngừng đột ngột - giảm dần dần",
+            "Giảm liều 50% ở bệnh nhân dùng CYP2D6 inhibitors mạnh"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5-8 giờ (dao động 3-12 giờ)",
+            "onset": "Vài ngày đến vài tuần",
+            "duration": "8 giờ (chia 3 lần/ngày)",
+            "protein_binding": "Không rõ",
+            "metabolism": "Chuyển hóa ở gan qua CYP2D6 và CYP1A2",
+            "clearance": "Chuyển hóa ở gan, thải trừ qua thận một phần. Half-life ngắn hơn deutetrabenazine."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "TRẦM CẢM VÀ Ý TƯỞNG TỰ TỬ - tăng nguy cơ trầm cảm và ý tưởng tự tử. CHỐNG CHỈ ĐỊNH ở trầm cảm nặng hoặc ý tưởng tự tử. Theo dõi chặt chẽ, đặc biệt khi bắt đầu hoặc tăng liều. Ngừng ngay nếu có ý tưởng tự tử. QT KÉO DÀI - tăng nguy cơ rối loạn nhịp tim. TRÁNH dùng với thuốc kéo dài QT.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors (phenelzine, tranylcypromine, selegiline)",
+                    "mechanism": "Ức chế chuyển hóa monoamine, tăng nguy cơ serotonin syndrome",
+                    "effect": "Tăng nguy cơ serotonin syndrome (nguy hiểm)",
+                    "management": "CHỐNG CHỈ ĐỊNH - không được dùng cùng. Ngừng MAO inhibitors ít nhất 14 ngày trước khi dùng tetrabenazine."
+                },
+                {
+                    "drug": "Thuốc kéo dài QT (amiodarone, sotalol, haloperidol)",
+                    "mechanism": "Tác dụng cộng dồn kéo dài QT",
+                    "effect": "Tăng nguy cơ QT kéo dài, rối loạn nhịp tim (nguy hiểm)",
+                    "management": "TRÁNH dùng cùng. Nếu bắt buộc, theo dõi ECG chặt chẽ."
+                },
+                {
+                    "drug": "Reserpine",
+                    "mechanism": "Tác dụng cộng dồn ức chế VMAT2",
+                    "effect": "Tăng nguy cơ tác dụng phụ",
+                    "management": "TRÁNH dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP2D6 inhibitors mạnh (paroxetine, fluoxetine, quinidine)",
+                    "mechanism": "Ức chế chuyển hóa tetrabenazine, tăng nồng độ",
+                    "effect": "Tăng tác dụng phụ",
+                    "management": "Giảm liều tetrabenazine 50%. Theo dõi tác dụng phụ chặt chẽ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng tetrabenazine",
+                "Suy gan nặng",
+                "Trầm cảm nặng hoặc ý tưởng tự tử",
+                "Dùng với MAO inhibitors (trong 14 ngày)"
+            ],
+            "tương_đối": [
+                "Suy gan vừa - thận trọng",
+                "Trầm cảm hoặc tiền sử trầm cảm - tăng nguy cơ",
+                "QT kéo dài - tăng nguy cơ",
+                "Parkinsonism - có thể làm nặng",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Tetrabenazine là FDA category C. Có thể dùng trong thai kỳ khi cần thiết. Một số nghiên cứu cho thấy an toàn trong thai kỳ, nhưng cần theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Tetrabenazine bài tiết vào sữa mẹ. Chưa rõ an toàn cho trẻ sơ sinh.",
+                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, theo dõi tác dụng phụ",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Tetrabenazine chuyển hóa ở gan qua CYP2D6 và CYP1A2. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng, hôn mê",
+                "Trầm cảm nặng, ý tưởng tự tử",
+                "QT kéo dài, rối loạn nhịp tim",
+                "Parkinsonism nặng",
+                "Serotonin syndrome (nếu dùng với MAO inhibitors)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "ECG - theo dõi QT interval",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, huyết áp",
+                "Xử trí trầm cảm, ý tưởng tự tử - tư vấn tâm thần",
+                "Xử trí rối loạn nhịp tim nếu có",
+                "Xử trí serotonin syndrome nếu có (cyproheptadine, cooling)",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, huyết áp, ECG (QT interval), dấu hiệu trầm cảm, ý tưởng tự tử"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để tăng hấp thu.",
+                "timing": "Chia 3 lần/ngày, uống cùng thời điểm mỗi ngày. Bắt đầu với liều thấp và tăng dần mỗi 3-5 ngày để giảm tác dụng phụ. Không ngừng đột ngột - giảm dần dần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tetrabenazine (Xenazine)",
+                "UpToDate - Tetrabenazine: Drug information",
+                "Lexicomp - Tetrabenazine monograph",
+                "AAN Guidelines - Huntington's Disease"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, clinical trial data, widely used"
+        }
     }
 }
 

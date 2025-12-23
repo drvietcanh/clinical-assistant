@@ -251,7 +251,7 @@ files_to_check = [
     ("drugs/pregnancy_lactation_safety.py", "Pregnancy & Lactation Safety"),
     ("components/pregnancy_lactation_display.py", "Pregnancy & Lactation Display"),
     ("scores/pediatrics/pediatric_dosing.py", "Pediatric Dosing Calculator"),
-    ("pages/10_📊_Phase2_Features.py", "Decision Support Page"),
+    ("pages/10_🧭_Decision_Support.py", "Decision Support Page"),
 ]
 
 for file_path, name in files_to_check:
@@ -294,7 +294,7 @@ except Exception as e:
 # Check Phase 2 page
 print("\n12. Checking Decision Support Page...")
 try:
-    page_path = Path("pages/10_📊_Phase2_Features.py")
+    page_path = Path("pages/10_🧭_Decision_Support.py")
     if page_path.exists():
         with open(page_path, 'r', encoding='utf-8') as f:
             content = f.read()

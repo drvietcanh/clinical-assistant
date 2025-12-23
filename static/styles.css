@@ -805,3 +805,264 @@ body {
     }
 }
 
+/* Skeleton Loaders */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.skeleton-loader {
+    background: linear-gradient(
+        90deg,
+        var(--border) 0%,
+        rgba(255, 255, 255, 0.5) 50%,
+        var(--border) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+    border-radius: 8px;
+}
+
+.skeleton-text {
+    height: 16px;
+    background: var(--border);
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-title {
+    height: 24px;
+    background: var(--border);
+    border-radius: 4px;
+    margin-bottom: 12px;
+    width: 60%;
+}
+
+.skeleton-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply animations to cards */
+.antibiotic-quick-card,
+.anticoagulant-quick-card,
+.ppi-quick-card,
+.antidepressant-quick-card {
+    animation: fadeIn 0.3s ease-out;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.antibiotic-quick-card:hover,
+.anticoagulant-quick-card:hover,
+.ppi-quick-card:hover,
+.antidepressant-quick-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-hover);
+}
+
+/* Mobile touch optimizations */
+@media (max-width: 768px) {
+    /* Larger touch targets */
+    .antibiotic-quick-card,
+    .anticoagulant-quick-card,
+    .ppi-quick-card,
+    .antidepressant-quick-card {
+        min-height: 48px;
+        padding: 14px !important;
+        -webkit-tap-highlight-color: rgba(45, 125, 246, 0.1);
+    }
+    
+    /* Remove hover effects on touch devices */
+    @media (hover: none) {
+        .antibiotic-quick-card:hover,
+        .anticoagulant-quick-card:hover,
+        .ppi-quick-card:hover,
+        .antidepressant-quick-card:hover {
+            transform: none;
+        }
+    }
+    
+    /* Active state for touch */
+    .antibiotic-quick-card:active,
+    .anticoagulant-quick-card:active,
+    .ppi-quick-card:active,
+    .antidepressant-quick-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+}
+
+/* Stagger animation for quick view cards */
+.antibiotic-quick-card:nth-child(1) { animation-delay: 0.05s; }
+.antibiotic-quick-card:nth-child(2) { animation-delay: 0.1s; }
+.antibiotic-quick-card:nth-child(3) { animation-delay: 0.15s; }
+.antibiotic-quick-card:nth-child(4) { animation-delay: 0.2s; }
+
+.anticoagulant-quick-card:nth-child(1) { animation-delay: 0.05s; }
+.anticoagulant-quick-card:nth-child(2) { animation-delay: 0.1s; }
+.anticoagulant-quick-card:nth-child(3) { animation-delay: 0.15s; }
+.anticoagulant-quick-card:nth-child(4) { animation-delay: 0.2s; }
+
+.antidepressant-quick-card:nth-child(1) { animation-delay: 0.05s; }
+.antidepressant-quick-card:nth-child(2) { animation-delay: 0.1s; }
+.antidepressant-quick-card:nth-child(3) { animation-delay: 0.15s; }
+.antidepressant-quick-card:nth-child(4) { animation-delay: 0.2s; }
+.antidepressant-quick-card:nth-child(5) { animation-delay: 0.25s; }
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading spinner improvements */
+.stSpinner > div {
+    border-color: var(--primary) transparent transparent transparent;
+}
+
+/* Search result animations */
+.search-result-item {
+    animation: slideIn 0.3s ease-out;
+}
+
+.search-result-item:nth-child(1) { animation-delay: 0.05s; }
+.search-result-item:nth-child(2) { animation-delay: 0.1s; }
+.search-result-item:nth-child(3) { animation-delay: 0.15s; }
+.search-result-item:nth-child(4) { animation-delay: 0.2s; }
+.search-result-item:nth-child(5) { animation-delay: 0.25s; }
+
+/* Pull-to-refresh indicator (for future implementation) */
+.pull-to-refresh {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    background: var(--primary);
+    color: white;
+    border-radius: 0 0 12px 12px;
+    font-size: 0.85rem;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pull-to-refresh.active {
+    opacity: 1;
+}
+
+/* Swipe gesture hints (for mobile) */
+@media (max-width: 768px) {
+    .swipe-hint {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        opacity: 0.6;
+        animation: fadeInOut 3s infinite;
+    }
+    
+    @keyframes fadeInOut {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 0.2; }
+    }
+}
+
+/* Improved focus states for accessibility */
+.stTextInput > div > div > input:focus,
+.stSelectbox > div > div > select:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-color: var(--primary);
+}
+
+/* Better button states */
+.stButton > button:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.stButton > button:active {
+    transform: scale(0.98);
+}
+
+/* Improved expander animations */
+.streamlit-expanderHeader {
+    transition: all 0.2s ease;
+}
+
+.streamlit-expanderHeader:hover {
+    background-color: rgba(45, 125, 246, 0.05);
+}
+
+/* Card hover improvements */
+.module-card,
+.antibiotic-quick-card,
+.anticoagulant-quick-card,
+.ppi-quick-card,
+.antidepressant-quick-card {
+    will-change: transform, box-shadow;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+

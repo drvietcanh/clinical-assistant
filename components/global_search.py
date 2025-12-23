@@ -92,9 +92,66 @@ def render_global_search_modal():
     """, unsafe_allow_html=True)
 
 
+def get_search_history(max_items: int = 5) -> List[str]:
+    """Get recent search history"""
+    if 'global_search_history' not in st.session_state:
+        st.session_state.global_search_history = []
+    return st.session_state.global_search_history[:max_items]
+
+
+def add_to_search_history(query: str):
+    """Add query to search history"""
+    if 'global_search_history' not in st.session_state:
+        st.session_state.global_search_history = []
+    
+    query = query.strip()
+    if query and query not in st.session_state.global_search_history:
+        st.session_state.global_search_history.insert(0, query)
+        # Keep only last 10 searches
+        st.session_state.global_search_history = st.session_state.global_search_history[:10]
+
+
 def render_global_search_bar(placeholder: str = "Tìm kiếm thuốc, thang điểm, guideline... (Ctrl+K)"):
-    """Render global search bar with autocomplete"""
+    """Render global search bar with autocomplete and debounce"""
     render_global_search_modal()
+    
+    # Initialize debounced search state
+    if 'global_search_debounced' not in st.session_state:
+        st.session_state.global_search_debounced = ''
+    
+    # Search input with debounce JavaScript (only add once)
+    if 'debounce_script_added' not in st.session_state:
+        st.session_state.debounce_script_added = True
+        st.markdown("""
+        <script>
+        // Debounce function
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // Initialize debounce for search input
+        window.addEventListener('load', function() {
+            const searchInput = document.querySelector('input[placeholder*="Tìm kiếm"], input[placeholder*="tìm kiếm"]');
+            if (searchInput) {
+                const debouncedSearch = debounce(function() {
+                    // Trigger Streamlit rerun after debounce
+                    const event = new Event('input', { bubbles: true });
+                    searchInput.dispatchEvent(event);
+                }, 300); // 300ms debounce
+                
+                searchInput.addEventListener('input', debouncedSearch);
+            }
+        });
+        </script>
+        """, unsafe_allow_html=True)
     
     # Search input
     search_query = st.text_input(
@@ -105,19 +162,60 @@ def render_global_search_bar(placeholder: str = "Tìm kiếm thuốc, thang đi�
         label_visibility="collapsed"
     )
     
-    # Update session state
+    # Update session state and add to history if query changed
     if search_query != st.session_state.get('global_search_query', ''):
         st.session_state.global_search_query = search_query
+        if search_query and len(search_query.strip()) >= 2:
+            add_to_search_history(search_query)
+    
+    # Show search history if no query
+    if not search_query and len(get_search_history()) > 0:
+        history = get_search_history()
+        st.caption("🔍 Tìm kiếm gần đây:")
+        history_cols = st.columns(min(5, len(history)))
+        for idx, hist_query in enumerate(history[:5]):
+            with history_cols[idx]:
+                if st.button(f"↩️ {hist_query[:15]}", key=f"history_{idx}", use_container_width=True):
+                    st.session_state.global_search_query = hist_query
+                    st.rerun()
     
     return search_query
 
 
-def render_search_results(query: str, max_results_per_category: int = 5):
+def render_skeleton_loader():
+    """Render skeleton loader for search results"""
+    st.markdown("""
+    <div class="skeleton-loader" style="
+        background: var(--card-bg);
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 8px;
+        animation: pulse 1.5s ease-in-out infinite;
+    ">
+        <div style="height: 20px; background: var(--border); border-radius: 4px; margin-bottom: 8px; width: 60%;"></div>
+        <div style="height: 16px; background: var(--border); border-radius: 4px; width: 40%;"></div>
+    </div>
+    <style>
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+
+def render_search_results(query: str, max_results_per_category: int = 5, show_loading: bool = False):
     """Render unified search results for drugs, calculators, and protocols"""
     if not query or len(query.strip()) < 1:
         return
     
     query = query.strip()
+    
+    # Show loading skeleton if needed
+    if show_loading:
+        with st.spinner("Đang tìm kiếm..."):
+            render_skeleton_loader()
+            return
     
     # Search drugs
     drug_results = search_drugs(query, max_results=max_results_per_category)

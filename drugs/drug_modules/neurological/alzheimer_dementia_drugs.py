@@ -324,7 +324,436 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
         ], 'last_updated': '2024-12-19', 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }}
+        }},
+
+    "Lecanemab": {
+        "group": "Neurology - Anti-amyloid Monoclonal Antibody",
+        "vietnamese_name": "Lecanemab, Leqembi",
+        "administration": ["IV"],
+        "indications": [
+            "Bệnh Alzheimer giai đoạn đầu (mild cognitive impairment hoặc mild dementia) với bằng chứng tích tụ amyloid (PET hoặc CSF)"
+        ],
+        "contraindications": [
+            "Dị ứng lecanemab hoặc thành phần thuốc",
+            "Bệnh nhân không có bằng chứng amyloid (không nên dùng)"
+        ],
+        "dosage": {
+            "adult_standard": "10 mg/kg IV mỗi 2 tuần",
+            "notes": "Truyền trong khoảng 1 giờ. Cần MRI nền (baseline) và theo dõi định kỳ để phát hiện ARIA."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều; dữ liệu hạn chế, theo dõi",
+            "under_30": "Dữ liệu hạn chế; thận trọng"
+        },
+        "side_effects": [
+            "ARIA-E ( phù mạch não liên quan amyloid )",
+            "ARIA-H (vi xuất huyết, lắng đọng hemosiderin)",
+            "Nhức đầu",
+            "Đau tại vị trí truyền",
+            "Buồn nôn",
+            "Các triệu chứng giống cúm sau truyền"
+        ],
+        "interactions": [
+            "Thuốc chống đông/kháng tiểu cầu liều cao: có thể tăng nguy cơ xuất huyết não khi ARIA-H",
+        ],
+        "pregnancy": "Chưa có dữ liệu, tránh dùng nếu có thể",
+        "mechanism_of_action": "Lecanemab là kháng thể đơn dòng người hóa, nhắm vào dạng protofibril hòa tan của amyloid-beta. Gắn kết và thúc đẩy thanh thải amyloid-beta khỏi não, làm giảm mảng amyloid trên PET và làm chậm suy giảm nhận thức trong Alzheimer giai đoạn sớm.",
+        "monitoring": [
+            "MRI não trước khi bắt đầu điều trị",
+            "MRI não định kỳ (ví dụ sau 3, 6, 12 tháng hoặc khi có triệu chứng) để phát hiện ARIA",
+            "Triệu chứng thần kinh mới: đau đầu nặng, lú lẫn, nhìn đôi, mất thăng bằng, co giật",
+            "Dấu hiệu xuất huyết nội sọ (đột ngột đau đầu, yếu liệt khu trú)",
+        ],
+        "precautions": [
+            "Nguy cơ ARIA cao hơn ở bệnh nhân mang APOE ε4 (đặc biệt đồng hợp tử)",
+            "Ngừng hoặc hoãn liều nếu phát hiện ARIA-E/ARIA-H mức độ vừa-nặng trên MRI",
+            "Thận trọng khi phối hợp thuốc chống đông hoặc kháng tiểu cầu liều cao",
+            "Không khuyến cáo ở bệnh Alzheimer tiến triển (moderate-severe) hoặc không có bằng chứng amyloid"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 5–7 ngày",
+            "onset": "Giảm amyloid trên PET trong vài tháng; hiệu quả lâm sàng sau nhiều tháng",
+            "duration": "Dùng duy trì lâu dài mỗi 2 tuần",
+            "protein_binding": "IgG1 monoclonal antibody",
+            "metabolism": "Thoái hóa thành peptide/acid amin qua RES",
+            "clearance": "Không phụ thuộc gan thận đáng kể"
+        },
+        "storage": "Bảo quản lọ thuốc trong tủ lạnh (2–8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng dùng trong thời gian theo khuyến cáo hãng (thường ≤24 giờ ở 2–8°C).",
+        "black_box_warnings": "Nguy cơ ARIA (phù mạch/mikro xuất huyết não); có báo cáo xuất huyết não nghiêm trọng, đặc biệt khi dùng cùng thuốc chống đông.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc chống đông (warfarin, DOACs)",
+                    "mechanism": "Kết hợp với ARIA-H làm tăng nguy cơ xuất huyết não",
+                    "effect": "Tăng nguy cơ chảy máu nội sọ",
+                    "management": "Chỉ dùng khi thật cần; cân nhắc tránh phối hợp hoặc theo dõi MRI sát"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Kháng tiểu cầu liều cao",
+                    "mechanism": "Tăng nguy cơ xuất huyết",
+                    "effect": "Tăng nguy cơ vi xuất huyết/máu tụ",
+                    "management": "Dùng liều thấp nhất có hiệu quả; theo dõi lâm sàng và MRI"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng lecanemab",
+                "Tiền sử phản vệ với kháng thể đơn dòng tương tự"
+            ],
+            "tương_đối": [
+                "Tiền sử xuất huyết nội sọ",
+                "Nhiều vi xuất huyết hoặc tổn thương hemosiderin lan tỏa trên MRI",
+                "Đang dùng chống đông",
+                "Bệnh Alzheimer không có amyloid trên PET/CSF"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "Chưa phân loại; tránh dùng",
+            "pregnancy_details": "Thiếu dữ liệu trên người; về lý thuyết có thể đi qua nhau thai như IgG khác, nên tránh trừ khi lợi ích vượt trội.",
+            "lactation": {
+                "safety": "Không rõ",
+                "details": "Chưa rõ bài tiết sữa mẹ; kháng thể lớn, hấp thu qua đường tiêu hóa trẻ có thể hạn chế.",
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều; dữ liệu hạn chế",
+            "severe": "Dữ liệu hạn chế; dùng thận trọng"
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng nguy cơ ARIA",
+                "Triệu chứng thần kinh khu trú hoặc toàn thể"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc",
+                "MRI não khẩn để tìm ARIA/ xuất huyết",
+                "Điều trị hỗ trợ thần kinh, ICU nếu cần"
+            ],
+            "monitoring": "Triệu chứng thần kinh, MRI, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha loãng trong dung dịch NaCl 0.9% theo hướng dẫn hãng, đạt nồng độ khuyến cáo.",
+                "infusion_rate": "Truyền trong khoảng 1 giờ; theo dõi trong và sau truyền.",
+                "compatibility": ["NaCl 0.9%"],
+                "incompatibility": ["Không pha lẫn thuốc khác cùng đường truyền"],
+                "notes": "Theo dõi phản ứng quá mẫn, ARIA; cần MRI baseline và định kỳ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lecanemab (Leqembi)",
+                "NEJM 2023 - Phase 3 lecanemab trial",
+                "AAN/Alzheimer Association practice updates"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved 2023, large phase 3 RCT"
+        }
+    },
+
+    "Donanemab": {
+        "group": "Neurology - Anti-amyloid Monoclonal Antibody",
+        "vietnamese_name": "Donanemab, Kisunla",
+        "administration": ["IV"],
+        "indications": [
+            "Bệnh Alzheimer giai đoạn sớm (MCI hoặc mild dementia) với bằng chứng tích tụ amyloid và tau"
+        ],
+        "contraindications": [
+            "Dị ứng donanemab hoặc thành phần thuốc",
+            "Không có bằng chứng amyloid/tau (không nên dùng)"
+        ],
+        "dosage": {
+            "adult_standard": "Dùng IV mỗi 4 tuần, liều tăng dần theo phác đồ hãng (ví dụ 700 mg → 1400 mg mỗi 4 tuần). Có thể ngừng sau khi đạt mức giảm amyloid mục tiêu trên PET.",
+            "notes": "Cần theo đúng phác đồ từng giai đoạn; cần MRI baseline và theo dõi định kỳ ARIA."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều; theo dõi",
+            "under_30": "Dữ liệu hạn chế; thận trọng"
+        },
+        "side_effects": [
+            "ARIA-E, ARIA-H (phù/vi xuất huyết não liên quan amyloid)",
+            "Nhức đầu",
+            "Các triệu chứng giống cúm sau truyền",
+            "Buồn nôn",
+            "Phản ứng quá mẫn liên quan truyền"
+        ],
+        "interactions": [
+            "Thuốc chống đông/kháng tiểu cầu: lý thuyết tăng nguy cơ xuất huyết khi ARIA-H"
+        ],
+        "pregnancy": "Chưa có dữ liệu, tránh dùng nếu có thể",
+        "mechanism_of_action": "Donanemab là kháng thể đơn dòng nhắm vào dạng amyloid-beta đã biến đổi (p3) trong mảng amyloid trưởng thành. Gắn và thúc đẩy thanh thải mảng amyloid khỏi não, làm giảm tín hiệu PET và làm chậm suy giảm nhận thức trong Alzheimer giai đoạn sớm.",
+        "monitoring": [
+            "MRI não trước điều trị",
+            "MRI định kỳ trong năm đầu (ví dụ trước vài liều đầu) để phát hiện ARIA",
+            "Triệu chứng thần kinh khu trú, co giật, thay đổi ý thức",
+            "Dấu hiệu xuất huyết nội sọ"
+        ],
+        "precautions": [
+            "ARIA là biến chứng chính; nguy cơ tăng ở APOE ε4 carriers",
+            "Tạm ngừng hoặc ngừng hẳn nếu ARIA mức độ vừa-nặng hoặc có triệu chứng",
+            "Thận trọng với thuốc chống đông/kháng tiểu cầu liều cao",
+            "Chỉ dùng cho bệnh nhân có xác nhận amyloid (và thường cả tau) trên chẩn đoán hình ảnh/dịch não tủy"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Vài ngày đến ~2 tuần (kháng thể IgG)",
+            "onset": "Giảm amyloid trên PET sau vài tháng; hiệu quả lâm sàng dần xuất hiện",
+            "duration": "Hiệu ứng kéo dài sau khi dừng nếu amyloid đã giảm đáng kể",
+            "protein_binding": "IgG1 monoclonal antibody",
+            "metabolism": "Thoái hóa qua RES thành peptide/acid amin",
+            "clearance": "Không phụ thuộc gan thận đáng kể"
+        },
+        "storage": "Bảo quản lọ trong tủ lạnh (2–8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng dùng trong thời gian khuyến cáo.",
+        "black_box_warnings": "ARIA (phù/ xuất huyết não) và xuất huyết nội sọ hiếm nhưng nghiêm trọng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc chống đông đường uống",
+                    "mechanism": "Giảm dự trữ đông máu trong bối cảnh ARIA-H",
+                    "effect": "Tăng nguy cơ chảy máu nội sọ",
+                    "management": "Tránh nếu có thể; nếu bắt buộc, theo dõi MRI/triệu chứng sát"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Kháng tiểu cầu",
+                    "mechanism": "Tăng nguy cơ xuất huyết",
+                    "effect": "Tăng nguy cơ vi xuất huyết/máu tụ",
+                    "management": "Dùng liều thấp nhất, theo dõi lâm sàng/MRI"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng donanemab",
+                "Tiền sử phản vệ với kháng thể đơn dòng tương tự"
+            ],
+            "tương_đối": [
+                "Tiền sử xuất huyết nội sọ hoặc nhiều vi xuất huyết trên MRI",
+                "Đang dùng chống đông",
+                "Không có bằng chứng amyloid/tau"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "Chưa phân loại; tránh dùng",
+            "pregnancy_details": "Thiếu dữ liệu; cân nhắc tránh.",
+            "lactation": {
+                "safety": "Không rõ",
+                "details": "Chưa rõ bài tiết sữa mẹ; hấp thu ở trẻ có thể thấp.",
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh; dữ liệu hạn chế",
+            "severe": "Thận trọng, dữ liệu hạn chế"
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Gia tăng nguy cơ ARIA",
+                "Triệu chứng thần kinh cấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc",
+                "MRI não khẩn",
+                "Điều trị hỗ trợ, ICU nếu cần"
+            ],
+            "monitoring": "Triệu chứng thần kinh, MRI, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha với NaCl 0.9% theo khuyến cáo hãng.",
+                "infusion_rate": "Truyền tĩnh mạch trong ≥30–60 phút (tùy liều); theo dõi trong và sau truyền.",
+                "compatibility": ["NaCl 0.9%"],
+                "incompatibility": ["Không pha chung với thuốc khác"],
+                "notes": "Theo dõi phản ứng truyền, ARIA; cần MRI baseline và định kỳ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Donanemab (Kisunla)",
+                "NEJM 2024 - Phase 3 donanemab trial",
+                "AAN/Alzheimer Association practice updates"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved 2024, large phase 3 RCT"
+        }
+    },
+
+    "Aducanumab": {
+        "group": "Neurology - Anti-amyloid Monoclonal Antibody",
+        "vietnamese_name": "Aducanumab, Aduhelm",
+        "administration": ["IV"],
+        "indications": [
+            "Bệnh Alzheimer giai đoạn sớm (mild cognitive impairment hoặc mild dementia) với bằng chứng tích tụ amyloid (PET hoặc CSF)"
+        ],
+        "contraindications": [
+            "Dị ứng aducanumab hoặc thành phần thuốc",
+            "Bệnh nhân không có bằng chứng amyloid (không nên dùng)"
+        ],
+        "dosage": {
+            "adult_standard": "10mg/kg IV mỗi 4 tuần",
+            "notes": "Truyền trong khoảng 1 giờ. Cần MRI nền (baseline) và theo dõi định kỳ để phát hiện ARIA. Liều tăng dần từ 1mg/kg → 3mg/kg → 6mg/kg → 10mg/kg."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều; dữ liệu hạn chế, theo dõi",
+            "under_30": "Dữ liệu hạn chế; thận trọng"
+        },
+        "side_effects": [
+            "ARIA-E (phù mạch não liên quan amyloid) - phổ biến, có thể nghiêm trọng",
+            "ARIA-H (vi xuất huyết, lắng đọng hemosiderin) - phổ biến, có thể nghiêm trọng",
+            "Nhức đầu",
+            "Đau tại vị trí truyền",
+            "Buồn nôn",
+            "Các triệu chứng giống cúm sau truyền",
+            "Lú lẫn",
+            "Co giật (hiếm)"
+        ],
+        "interactions": [
+            "Thuốc chống đông/kháng tiểu cầu liều cao: có thể tăng nguy cơ xuất huyết não khi ARIA-H"
+        ],
+        "pregnancy": "Chưa có dữ liệu, tránh dùng nếu có thể",
+        "mechanism_of_action": (
+            "Aducanumab là kháng thể đơn dòng kháng amyloid-beta (human monoclonal antibody). "
+            "Aducanumab gắn với các dạng amyloid-beta (monomer, oligomer, và fibril) trong não, "
+            "đặc biệt ưu tiên gắn với các dạng độc hại (toxic forms) của amyloid. "
+            "Bằng cách gắn với amyloid-beta, aducanumab thúc đẩy thanh thải amyloid-beta khỏi não "
+            "thông qua microglia (tế bào miễn dịch trong não) và các cơ chế khác, "
+            "làm giảm mảng amyloid trên PET và làm chậm suy giảm nhận thức trong Alzheimer giai đoạn sớm. "
+            "Aducanumab được FDA phê duyệt năm 2021 dựa trên surrogate endpoint (giảm amyloid), "
+            "mặc dù có tranh cãi về hiệu quả lâm sàng. "
+            "Cơ chế này tương tự lecanemab và donanemab, nhưng aducanumab là thuốc đầu tiên được phê duyệt."
+        ),
+        "monitoring": [
+            "MRI não trước khi bắt đầu điều trị",
+            "MRI não định kỳ (ví dụ sau 3, 6, 12 tháng hoặc khi có triệu chứng) để phát hiện ARIA",
+            "Triệu chứng thần kinh mới: đau đầu nặng, lú lẫn, nhìn đôi, mất thăng bằng, co giật",
+            "Dấu hiệu xuất huyết nội sọ (đột ngột đau đầu, yếu liệt khu trú)"
+        ],
+        "precautions": [
+            "Nguy cơ ARIA cao hơn ở bệnh nhân mang APOE ε4 (đặc biệt đồng hợp tử)",
+            "Ngừng hoặc hoãn liều nếu phát hiện ARIA-E/ARIA-H mức độ vừa-nặng trên MRI",
+            "Thận trọng khi phối hợp thuốc chống đông hoặc kháng tiểu cầu liều cao",
+            "Không khuyến cáo ở bệnh Alzheimer tiến triển (moderate-severe) hoặc không có bằng chứng amyloid",
+            "Liều tăng dần từ 1mg/kg → 3mg/kg → 6mg/kg → 10mg/kg để giảm nguy cơ ARIA"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 24 ngày",
+            "onset": "Giảm amyloid trên PET trong vài tháng; hiệu quả lâm sàng sau nhiều tháng",
+            "duration": "Dùng duy trì lâu dài mỗi 4 tuần",
+            "protein_binding": "IgG1 monoclonal antibody",
+            "metabolism": "Thoái hóa thành peptide/acid amin qua RES",
+            "clearance": "Không phụ thuộc gan thận đáng kể"
+        },
+        "storage": "Bảo quản lọ thuốc trong tủ lạnh (2–8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng dùng trong thời gian theo khuyến cáo hãng (thường ≤24 giờ ở 2–8°C).",
+        "black_box_warnings": (
+            "Nguy cơ ARIA (phù mạch/mikro xuất huyết não); có báo cáo xuất huyết não nghiêm trọng, "
+            "đặc biệt khi dùng cùng thuốc chống đông. "
+            "Cần theo dõi MRI trước và trong điều trị. "
+            "Nguy cơ ARIA cao hơn ở bệnh nhân có 2 allele APOE ε4/ε4."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc chống đông (warfarin, DOACs)",
+                    "mechanism": "Kết hợp với ARIA-H làm tăng nguy cơ xuất huyết não",
+                    "effect": "Tăng nguy cơ chảy máu nội sọ",
+                    "management": "Chỉ dùng khi thật cần; cân nhắc tránh phối hợp hoặc theo dõi MRI sát"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Kháng tiểu cầu liều cao",
+                    "mechanism": "Tăng nguy cơ xuất huyết",
+                    "effect": "Tăng nguy cơ vi xuất huyết/máu tụ",
+                    "management": "Dùng liều thấp nhất có hiệu quả; theo dõi lâm sàng và MRI"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng aducanumab",
+                "Tiền sử phản vệ với kháng thể đơn dòng tương tự"
+            ],
+            "tương_đối": [
+                "Tiền sử xuất huyết nội sọ",
+                "Nhiều vi xuất huyết hoặc tổn thương hemosiderin lan tỏa trên MRI",
+                "Đang dùng chống đông",
+                "Bệnh Alzheimer không có amyloid trên PET/CSF"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "Chưa phân loại; tránh dùng",
+            "pregnancy_details": "Thiếu dữ liệu trên người; về lý thuyết có thể đi qua nhau thai như IgG khác, nên tránh trừ khi lợi ích vượt trội.",
+            "lactation": {
+                "safety": "Không rõ",
+                "details": "Chưa rõ bài tiết sữa mẹ; kháng thể lớn, hấp thu qua đường tiêu hóa trẻ có thể hạn chế.",
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều; dữ liệu hạn chế",
+            "severe": "Dữ liệu hạn chế; dùng thận trọng",
+            "notes": "Aducanumab chuyển hóa qua RES, không phụ thuộc gan đáng kể."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng nguy cơ ARIA",
+                "Triệu chứng thần kinh khu trú hoặc toàn thể"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc",
+                "MRI não khẩn để tìm ARIA/ xuất huyết",
+                "Điều trị hỗ trợ thần kinh, ICU nếu cần"
+            ],
+            "monitoring": "Triệu chứng thần kinh, MRI, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha loãng trong dung dịch NaCl 0.9% theo hướng dẫn hãng, đạt nồng độ khuyến cáo.",
+                "infusion_rate": "Truyền tĩnh mạch trong khoảng 1 giờ; theo dõi trong và sau truyền.",
+                "compatibility": ["NaCl 0.9%"],
+                "incompatibility": ["Không pha lẫn thuốc khác cùng đường truyền"],
+                "notes": "Theo dõi phản ứng quá mẫn, ARIA; cần MRI baseline và định kỳ. Liều tăng dần: 1mg/kg → 3mg/kg → 6mg/kg → 10mg/kg."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Aducanumab (Aduhelm)",
+                "UpToDate - Aducanumab: Drug information",
+                "Lexicomp - Aducanumab monograph",
+                "AAN/Alzheimer Association practice updates"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "B - FDA-approved 2021 based on surrogate endpoint (amyloid reduction), controversial clinical benefit"
+        }
+    }
 }
 
 __all__ = ['ALZHEIMER_DEMENTIA_DRUGS']

@@ -402,7 +402,7 @@ except Exception as e:
 # 12. Test Decision Support Page
 print("\n12. Testing Decision Support Page...")
 try:
-    page_path = Path("pages/10_📊_Phase2_Features.py")
+    page_path = Path("pages/10_🧭_Decision_Support.py")
     assert page_path.exists(), "Decision Support page not found"
     
     # Check imports

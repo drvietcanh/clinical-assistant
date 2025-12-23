@@ -129,7 +129,7 @@ APP_CONFIG = {
             id="phase2_features",
             title="Hỗ trợ quyết định",
             icon="🧭",
-            page_path="pages/10_📊_Phase2_Features.py",
+            page_path="pages/10_🧭_Decision_Support.py",
             description="Flowcharts, thai kỳ/cho bú, liều Nhi khoa",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
@@ -143,11 +143,11 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #fff9c4 0%, #fff59d 100%)",
             border="#fbc02d"
         ),
-        "chuyen_sau": ModuleInfo(
-            id="chuyen_sau",
+        "in_depth_articles": ModuleInfo(
+            id="in_depth_articles",
             title="Bài viết chuyên sâu",
             icon="📚",
-            page_path="pages/12_📚_Chuyen_sau.py",
+            page_path="pages/12_📚_In_Depth_Articles.py",
             description="Bài viết chuyên sâu theo guideline, phân tích điều trị",
             color="linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)",
             border="#1e88e5"

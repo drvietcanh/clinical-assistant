@@ -10,6 +10,7 @@ from .proton_pump_inhibitor_ppis import PROTON_PUMP_INHIBITOR_PPIS_DRUGS
 from .prokinetic_antiemetics import PROKINETIC_ANTIEMETICS_DRUGS
 from .antiemetic_5_ht3_antagonists import ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS
 from .pcab import PCAB_DRUGS
+from .jak_inhibitors import JAK_INHIBITORS_DRUGS
 
 # Merge all categories
 GASTROINTESTINAL_DRUGS = {
@@ -21,6 +22,7 @@ GASTROINTESTINAL_DRUGS = {
     **PROKINETIC_ANTIEMETICS_DRUGS,
     **ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS,
     **PCAB_DRUGS,
+    **JAK_INHIBITORS_DRUGS,
 }
 
 __all__ = ['GASTROINTESTINAL_DRUGS']

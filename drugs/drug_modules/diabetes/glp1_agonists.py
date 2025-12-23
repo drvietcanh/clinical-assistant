@@ -598,6 +598,171 @@ GLP1_AGONISTS_DRUGS = {
             "evidence_level": "High – FDA-approved",
         },
     },
+
+    "Tirzepatide": {
+        "group": "Diabetes - GIP/GLP-1 Dual Agonist",
+        "vietnamese_name": "Tirzepatide, Mounjaro, Zepbound",
+        "administration": ["SC"],
+        "indications": [
+            "Đái tháo đường type 2 (Mounjaro).",
+            "Giảm cân ở bệnh nhân béo phì (Zepbound - liều cao hơn).",
+        ],
+        "contraindications": [
+            "Dị ứng với tirzepatide hoặc tá dược.",
+            "Tiền sử hoặc nguy cơ cao ung thư tuyến giáp thể tủy (MTC) hoặc MEN-2.",
+            "Đái tháo đường type 1.",
+            "Nhiễm toan ceton do đái tháo đường.",
+        ],
+        "dosage": {
+            "sc_dm_initial": "2.5mg SC mỗi tuần x 4 tuần.",
+            "sc_dm_maintenance": "5mg SC mỗi tuần; có thể tăng lên 7.5mg, 10mg, hoặc 15mg mỗi tuần nếu cần.",
+            "sc_weight_loss": "Zepbound: 2.5mg SC mỗi tuần x 4 tuần, sau đó tăng dần đến 5mg, 7.5mg, 10mg, hoặc 12.5mg mỗi tuần.",
+            "notes": "SC: tiêm dưới da bụng, đùi hoặc cánh tay, bất kỳ ngày nào trong tuần, cùng giờ mỗi tuần.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; thận trọng ở suy thận nặng.",
+            "under_30": "Thận trọng, dữ liệu hạn chế; cân nhắc giảm liều hoặc tránh.",
+        },
+        "side_effects": [
+            "Buồn nôn, nôn, tiêu chảy (thường giảm sau vài tuần, có thể nghiêm trọng hơn so với GLP-1 đơn thuần).",
+            "Giảm cảm giác thèm ăn, giảm cân (hiệu quả cao hơn GLP-1 đơn thuần).",
+            "Viêm tụy (hiếm nhưng nghiêm trọng).",
+            "Bệnh lý túi mật (sỏi mật, viêm túi mật).",
+            "Tăng nhịp tim.",
+            "Suy thận cấp (hiếm, thường do mất nước).",
+        ],
+        "interactions": [
+            "Insulin/Sulfonylurea: tăng nguy cơ hạ đường huyết (cần giảm liều).",
+            "Thuốc chậm làm rỗng dạ dày: có thể làm chậm hấp thu thuốc khác.",
+        ],
+        "pregnancy": "C: thận trọng, chỉ dùng khi lợi ích vượt trội nguy cơ.",
+        "mechanism_of_action": (
+            "Tirzepatide là chất chủ vận kép thụ thể GIP (glucose-dependent insulinotropic polypeptide) và GLP-1 "
+            "(glucagon-like peptide-1), thuốc đầu tiên trong nhóm này. GIP và GLP-1 đều là incretin hormones "
+            "được giải phóng từ ruột khi có thức ăn. Tirzepatide kích thích cả hai thụ thể → tăng giải phóng insulin "
+            "phụ thuộc glucose, ức chế giải phóng glucagon, làm chậm làm rỗng dạ dày, và tăng cảm giác no. "
+            "Tác dụng kép này cho hiệu quả giảm đường huyết và giảm cân cao hơn so với GLP-1 đơn thuần. "
+            "Tirzepatide có thời gian bán thải ~5 ngày nhờ gắn với albumin, cho phép tiêm 1 lần/tuần. "
+            "Hiệu quả giảm HbA1c và giảm cân cao nhất trong các thuốc điều trị đái tháo đường hiện tại."
+        ),
+        "monitoring": [
+            "Đường huyết (HbA1c, glucose máu) để đánh giá hiệu quả.",
+            "Cân nặng, BMI.",
+            "Dấu hiệu viêm tụy (đau bụng trên, buồn nôn, nôn).",
+            "Dấu hiệu bệnh lý túi mật (đau bụng trên bên phải).",
+            "Nhịp tim, ECG nếu có triệu chứng tim mạch.",
+            "Chức năng thận (creatinine, eGFR) nếu có triệu chứng mất nước.",
+            "Dấu hiệu hạ đường huyết khi dùng với insulin/sulfonylurea.",
+        ],
+        "precautions": [
+            "Không dùng cho đái tháo đường type 1 hoặc nhiễm toan ceton.",
+            "Nguy cơ viêm tụy: ngừng ngay nếu có đau bụng trên nghiêm trọng.",
+            "Nguy cơ bệnh lý túi mật: theo dõi triệu chứng đau bụng trên bên phải.",
+            "Giảm liều insulin/sulfonylurea khi bắt đầu tirzepatide để tránh hạ đường huyết.",
+            "SC: luân phiên vị trí tiêm (bụng, đùi, cánh tay).",
+            "Bắt đầu liều thấp và tăng dần để giảm tác dụng phụ tiêu hóa (có thể nghiêm trọng hơn GLP-1 đơn thuần).",
+            "Theo dõi chặt chẽ tác dụng phụ tiêu hóa - có thể nghiêm trọng hơn so với GLP-1 đơn thuần.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "~5 ngày.",
+            "onset": "Giảm đường huyết trong vài ngày đến 1 tuần.",
+            "duration": "1 tuần (tiêm 1 lần/tuần).",
+            "protein_binding": ">99% (gắn với albumin).",
+            "clearance": "Chuyển hóa qua protease và thải qua thận.",
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C) trước khi mở; sau khi mở có thể bảo quản ở nhiệt độ phòng (≤30°C) tối đa 56 ngày.",
+        "black_box_warnings": (
+            "Nguy cơ ung thư tuyến giáp thể tủy (MTC) ở động vật thí nghiệm. "
+            "Không dùng ở bệnh nhân có tiền sử MTC hoặc MEN-2. "
+            "Nguy cơ viêm tụy cấp (có thể tử vong)."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Insulin, Sulfonylurea (glibenclamide, gliclazide)",
+                    "mechanism": "Tác dụng hiệp đồng giảm đường huyết.",
+                    "effect": "Tăng nguy cơ hạ đường huyết.",
+                    "management": "Giảm liều insulin/sulfonylurea khi bắt đầu tirzepatide. Theo dõi đường huyết chặt chẽ.",
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc chậm làm rỗng dạ dày (atropine, opioid)",
+                    "mechanism": "Tirzepatide làm chậm làm rỗng dạ dày, có thể làm chậm hấp thu thuốc khác.",
+                    "effect": "Giảm hấp thu thuốc khác, giảm hiệu quả.",
+                    "management": "Thận trọng với thuốc có cửa sổ hẹp. Có thể cần điều chỉnh thời gian dùng.",
+                },
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với tirzepatide hoặc tá dược.",
+                "Tiền sử ung thư tuyến giáp thể tủy (MTC) hoặc MEN-2.",
+                "Đái tháo đường type 1.",
+                "Nhiễm toan ceton do đái tháo đường.",
+            ],
+            "tương_đối": [
+                "Tiền sử viêm tụy.",
+                "Tiền sử bệnh lý túi mật.",
+                "Suy thận nặng (eGFR <30) - thận trọng.",
+                "Suy tim nặng - thận trọng.",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ tiêu hóa.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": (
+                "Dữ liệu hạn chế ở người. Chỉ dùng khi lợi ích vượt trội nguy cơ. "
+                "Có thể gây hạ đường huyết ở thai nhi. Theo dõi đường huyết chặt chẽ trong thai kỳ."
+            ),
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Không cần chỉnh liều.",
+            "severe": "Thận trọng, dữ liệu hạn chế.",
+            "notes": "Tirzepatide chuyển hóa qua protease, không phụ thuộc gan đáng kể.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn nặng.",
+                "Hạ đường huyết (nếu dùng với insulin/sulfonylurea).",
+                "Đau bụng, viêm tụy.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Điều trị hỗ trợ: bù dịch nếu mất nước.",
+                "Điều trị hạ đường huyết: glucose IV nếu cần.",
+                "Theo dõi viêm tụy: ngừng thuốc, điều trị hỗ trợ.",
+            ],
+            "monitoring": "Đường huyết, điện giải, dấu hiệu viêm tụy, dấu hiệu sinh tồn.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "sc": {
+                "reconstitution": "Dung dịch tiêm sẵn dùng trong bút tiêm.",
+                "injection_site": "Tiêm dưới da bụng, đùi hoặc cánh tay. Luân phiên vị trí tiêm.",
+                "timing": "Tiêm 1 lần/tuần, bất kỳ ngày nào trong tuần, cùng giờ mỗi tuần.",
+                "notes": "Bảo quản trong tủ lạnh trước khi mở; sau khi mở có thể bảo quản ở nhiệt độ phòng ≤30°C tối đa 56 ngày.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Mounjaro (tirzepatide), Zepbound (tirzepatide)",
+                "SURPASS trials - Tirzepatide efficacy and safety",
+                "SURMOUNT trials - Tirzepatide for weight loss",
+                "ADA/EASD Diabetes Guidelines 2024",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved (2022), multiple large RCTs, highest efficacy",
+        },
+    },
 }
 
 __all__ = ["GLP1_AGONISTS_DRUGS"]

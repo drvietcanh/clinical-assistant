@@ -169,7 +169,7 @@ with st.sidebar:
         ("📊 Calculators & Scores", "pages/01_📊_Scores.py"),
         ("💊 Thuốc & Liều dùng", "pages/07_💊_Drug_Database.py"),
         ("🫁 Hồi sức & Quy trình", "pages/09_🫁_Critical_Care.py"),
-        ("🧭 Hỗ trợ quyết định", "pages/10_📊_Phase2_Features.py"),
+        ("🧭 Hỗ trợ quyết định", "pages/10_🧭_Decision_Support.py"),
         ("🩺 Chẩn đoán & Bài viết", "pages/06_🩺_Diagnosis.py"),
         ("💉 Tiêm chủng", "pages/11_💉_Vaccination.py"),
     ]
@@ -303,7 +303,7 @@ with tab1:
         "💊 Thuốc & Liều dùng": ["drug_database", "antibiotics"],
         "🫁 Hồi sức & Quy trình": ["critical_care", "ventilator", "protocols"],
         "🧭 Hỗ trợ quyết định": ["phase2_features"],
-        "🩺 Chẩn đoán & Bài viết": ["diagnosis", "chuyen_sau"],
+        "🩺 Chẩn đoán & Bài viết": ["diagnosis", "in_depth_articles"],
         "💉 Tiêm chủng": ["vaccination"],
     }
     

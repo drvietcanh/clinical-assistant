@@ -67,7 +67,7 @@ except Exception as e:
 print("\n3. Testing Page Files...")
 try:
     # Check if Phase 2 page exists and can be imported
-    page_path = Path("pages/10_📊_Phase2_Features.py")
+    page_path = Path("pages/10_🧭_Decision_Support.py")
     if page_path.exists():
         # Try to read and check structure
         with open(page_path, 'r', encoding='utf-8') as f:

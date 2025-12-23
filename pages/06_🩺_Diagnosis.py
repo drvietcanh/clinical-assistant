@@ -24,7 +24,7 @@ with st.sidebar:
         col1, col2 = st.columns(2)
         with col1:
             if st.button("📚 Bài viết chuyên sâu", use_container_width=True):
-                st.switch_page("pages/12_📚_Chuyen_sau.py")
+                st.switch_page("pages/12_📚_In_Depth_Articles.py")
         with col2:
             if st.button("📊 Thang điểm & Scores", use_container_width=True):
                 st.switch_page("pages/01_📊_Scores.py")

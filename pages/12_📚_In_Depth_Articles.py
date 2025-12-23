@@ -12,6 +12,11 @@ import streamlit.components.v1 as components
 from collections import Counter, defaultdict
 
 from utils.page_helper import setup_page, render_standard_footer
+from config.article_protocol_mapping import (
+    get_protocol_for_article,
+    has_protocol as check_has_protocol,
+    get_protocol_deep_link
+)
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -815,10 +820,35 @@ def get_articles_from_content() -> list[dict]:
         specialty = _extract_meta_value(content, "Chuyên khoa") or _infer_specialty_from_filename_and_title(path.stem, title)
         guidelines = _extract_guidelines(content)
         summary = _extract_summary_items(content)
+        
+        # Check for protocol mapping
+        article_id = path.stem
+        protocol_info = get_protocol_for_article(article_id)
+        has_protocol_mapping = protocol_info is not None
+        
+        # Get related protocols from metadata if exists
+        related_protocols_meta = _extract_meta_value(content, "related_protocols")
+        related_protocols = []
+        if related_protocols_meta and isinstance(related_protocols_meta, str):
+            # Parse comma-separated string
+            related_protocols = [p.strip() for p in related_protocols_meta.split(",") if p.strip()]
+        
+        # If mapping exists, add protocol display name to related_protocols
+        protocol_links = []
+        if has_protocol_mapping and protocol_info:
+            protocol_display = protocol_info.get("protocol_display", "")
+            if protocol_display and protocol_display not in related_protocols:
+                related_protocols.insert(0, protocol_display)
+            # Store protocol info for deep linking
+            protocol_links.append({
+                "page": protocol_info.get("specialty_selector", ""),
+                "protocol": protocol_info.get("protocol_display", ""),
+                "function": protocol_info.get("protocol_function", "")
+            })
 
         articles.append(
             {
-                "id": path.stem,
+                "id": article_id,
                 "title": title,
                 "specialty": specialty,
                 "keywords": [],
@@ -834,9 +864,10 @@ def get_articles_from_content() -> list[dict]:
                 "interactions": [],
                 "follow_up": "",
                 "related_calculators": [],
-                "related_protocols": [],
-                "has_protocol": False,
-                "protocol_links": [],
+                "related_protocols": related_protocols,
+                "has_protocol": has_protocol_mapping,
+                "protocol_links": protocol_links,
+                "protocol_info": protocol_info,  # Store full protocol info
             }
         )
 
@@ -1062,7 +1093,6 @@ def render_article_card(article: dict, index: int):
                 <div style="font-size: 0.85rem; color: #616161;">
                     {f'<div style="margin-bottom: 8px;"><strong>📊 Calculators:</strong> {", ".join(article.get("related_calculators", [])[:3])}</div>' if article.get('related_calculators') else ''}
                     {f'<div><strong>📋 Protocols:</strong> {", ".join(article.get("related_protocols", [])[:2])}</div>' if article.get('related_protocols') else ''}
-                    {"" if not (has_protocol and protocol_links) else '<div style="margin-top:8px;">' + "".join([f'<a href="/{pl}" style="margin-right:8px; color:#1976d2; font-weight:600; text-decoration:none;">🔗 Mở protocol</a>' for pl in protocol_links[:2]]) + '</div>'}
                 </div>
             </div>
         </div>
@@ -1071,8 +1101,30 @@ def render_article_card(article: dict, index: int):
     
     components.html(card_html, height=400, scrolling=False)
     
+    # Protocol deep link button (Streamlit button)
+    protocol_info = article.get("protocol_info")
+    if protocol_info:
+        col1, col2 = st.columns([1, 3])
+        with col1:
+            if st.button(
+                "📋 Mở Protocol",
+                key=f"protocol_btn_{article['id']}",
+                use_container_width=True,
+                help=f"Mở protocol: {protocol_info.get('protocol_display', '')}",
+                type="primary"
+            ):
+                # Store protocol selection in session state for Protocols page
+                st.session_state['protocol_specialty'] = protocol_info.get("specialty_selector")
+                st.session_state['protocol_to_open'] = protocol_info.get("protocol_display")
+                st.session_state['protocol_function'] = protocol_info.get("protocol_function")
+                st.switch_page("pages/04_📋_Protocols.py")
+        with col2:
+            st.caption(f"💡 Có protocol tương ứng: **{protocol_info.get('protocol_display', '')}**")
+    
     # Streamlit expander cho nội dung đầy đủ
-    with st.expander(f"📖 Đọc toàn bộ: {article['title']}", expanded=False):
+    expand_key = f"article_expand_{article['id']}"
+    expanded = st.session_state.get(f"expand_article_{article['id']}", False)
+    with st.expander(f"📖 Đọc toàn bộ: {article['title']}", expanded=expanded):
         if content:
             st.markdown(content)
         else:
@@ -1231,6 +1283,22 @@ def main():
         # Quick stats
         st.caption(f"**Tổng số bài viết:** {len(articles)}")
         st.caption(f"**Chuyên khoa:** {len(all_specialties)}")
+    
+    # Check for deep link from Protocols page
+    article_to_open = st.session_state.get('article_to_open')
+    if article_to_open:
+        # Find and highlight the article
+        target_article = next((a for a in articles if a['id'] == article_to_open), None)
+        if target_article:
+            st.success(f"📚 **Đang hiển thị bài viết:** {target_article['title']}")
+            st.caption("💡 Bài viết sẽ tự động mở rộng bên dưới")
+            # Auto-expand the article
+            st.session_state[f"expand_article_{article_to_open}"] = True
+        else:
+            st.warning(f"⚠️ Không tìm thấy bài viết với ID: `{article_to_open}`")
+        # Clear deep link state
+        if 'article_to_open' in st.session_state:
+            del st.session_state['article_to_open']
     
     # Filter articles
     filtered = filter_articles(articles, search, selected_specialties, selected_keywords)

@@ -2055,6 +2055,502 @@ HEMATOLOGY_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
+    },
+
+    "Emicizumab": {
+        "group": "Hematology - Bispecific Monoclonal Antibody",
+        "vietnamese_name": "Emicizumab, Hemlibra",
+        "administration": ["SC"],
+        "indications": [
+            "Hemophilia A (với hoặc không có chất ức chế factor VIII)",
+            "Phòng ngừa chảy máu ở bệnh nhân hemophilia A"
+        ],
+        "contraindications": [
+            "Dị ứng emicizumab hoặc bất kỳ thành phần nào",
+            "Đang có huyết khối đang hoạt động"
+        ],
+        "dosage": {
+            "adult_loading": "3mg/kg SC tuần 1, 2, 4",
+            "adult_maintenance": "1.5mg/kg SC mỗi tuần, hoặc 3mg/kg SC mỗi 2 tuần, hoặc 6mg/kg SC mỗi 4 tuần",
+            "notes": "Tiêm dưới da (SC) ở vùng bụng, đùi, hoặc cánh tay. Có thể tự tiêm sau khi được hướng dẫn."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Không cần chỉnh liều"
+        },
+        "side_effects": [
+            "Phản ứng tại chỗ tiêm (đau, đỏ, ngứa) - phổ biến",
+            "Nhức đầu",
+            "Mệt mỏi",
+            "Buồn nôn",
+            "Tăng nguy cơ huyết khối (thrombosis) - hiếm nhưng nghiêm trọng, đặc biệt khi dùng với activated prothrombin complex concentrate (aPCC)",
+            "Dị ứng (hiếm)"
+        ],
+        "interactions": [
+            "Activated prothrombin complex concentrate (aPCC): tăng nguy cơ huyết khối nghiêm trọng",
+            "Recombinant factor VIIa: có thể tăng nguy cơ huyết khối"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": (
+            "Emicizumab là bispecific monoclonal antibody (humanized) gắn đồng thời với factor IXa và factor X. "
+            "Trong hemophilia A, thiếu factor VIII dẫn đến không thể hình thành phức hợp tenase (factor VIIIa/factor IXa) "
+            "cần thiết để kích hoạt factor X thành factor Xa, dẫn đến rối loạn đông máu và chảy máu. "
+            "Emicizumab bắt chước chức năng của factor VIIIa bằng cách gắn với factor IXa và factor X, "
+            "tạo thành phức hợp tương tự tenase mà không cần factor VIII. "
+            "Dẫn đến: kích hoạt factor X thành factor Xa, hình thành thrombin, và đông máu bình thường. "
+            "Emicizumab được dùng để phòng ngừa chảy máu ở bệnh nhân hemophilia A, "
+            "đặc biệt hiệu quả ở bệnh nhân có chất ức chế factor VIII (kháng thể kháng factor VIII) "
+            "vì các thuốc thay thế factor VIII truyền thống không hiệu quả ở những bệnh nhân này. "
+            "Emicizumab có half-life dài, cho phép dùng 1-4 tuần một lần (tùy phác đồ)."
+        ),
+        "monitoring": [
+            "Tần suất và mức độ nghiêm trọng của chảy máu (theo dõi nhật ký chảy máu)",
+            "Phản ứng tại chỗ tiêm",
+            "Dấu hiệu huyết khối (đau ngực, khó thở, đau chân, sưng chân) - đặc biệt khi dùng với aPCC",
+            "Dấu hiệu dị ứng (phát ban, khó thở, phù mạch)",
+            "Chức năng gan (ALT, AST) - theo dõi định kỳ"
+        ],
+        "precautions": [
+            "NGUY CƠ HUYẾT KHỐI - đặc biệt khi dùng với activated prothrombin complex concentrate (aPCC), "
+            "cần theo dõi chặt chẽ dấu hiệu huyết khối",
+            "Tránh dùng aPCC với emicizumab nếu có thể - nếu cần dùng, dùng liều thấp nhất và theo dõi chặt chẽ",
+            "Có thể tự tiêm sau khi được hướng dẫn đúng cách",
+            "Không dùng để điều trị cấp tính chảy máu nặng (cần dùng factor VIII hoặc bypassing agents)",
+            "Thận trọng ở bệnh nhân có tiền sử huyết khối",
+            "Có thể mất vài tuần để đạt hiệu quả đầy đủ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "~4-5 tuần (rất dài, cho phép dùng 1-4 tuần một lần)",
+            "onset": "Vài tuần (tác dụng chậm)",
+            "duration": "Dài (do half-life rất dài)",
+            "protein_binding": "IgG4 bispecific monoclonal antibody",
+            "metabolism": "Chuyển hóa qua hệ thống reticuloendothelial (RES)",
+            "clearance": "Không phụ thuộc gan thận đáng kể"
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Có thể để ở nhiệt độ phòng (≤25°C) tối đa 7 ngày. Không làm nóng hoặc lắc mạnh.",
+        "black_box_warnings": (
+            "NGUY CƠ HUYẾT KHỐI - đặc biệt khi dùng với activated prothrombin complex concentrate (aPCC). "
+            "Có báo cáo huyết khối tĩnh mạch sâu (DVT), thuyên tắc phổi (PE), và huyết khối động mạch. "
+            "Tránh dùng aPCC với emicizumab nếu có thể. Nếu cần dùng, dùng liều thấp nhất và theo dõi chặt chẽ dấu hiệu huyết khối."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Activated prothrombin complex concentrate (aPCC, FEIBA)",
+                    "mechanism": "Tăng nguy cơ huyết khối khi dùng với emicizumab",
+                    "effect": "Tăng nguy cơ huyết khối nghiêm trọng (DVT, PE, huyết khối động mạch)",
+                    "management": "Tránh dùng nếu có thể. Nếu cần dùng, dùng liều thấp nhất (≤50 U/kg/24h) và theo dõi chặt chẽ dấu hiệu huyết khối."
+                },
+                {
+                    "drug": "Recombinant factor VIIa (rFVIIa)",
+                    "mechanism": "Có thể tăng nguy cơ huyết khối",
+                    "effect": "Tăng nguy cơ huyết khối",
+                    "management": "Thận trọng. Theo dõi chặt chẽ dấu hiệu huyết khối."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng emicizumab hoặc bất kỳ thành phần nào",
+                "Đang có huyết khối đang hoạt động"
+            ],
+            "tương_đối": [
+                "Tiền sử huyết khối - tăng nguy cơ huyết khối",
+                "Đang dùng aPCC - tăng nguy cơ huyết khối nghiêm trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu hạn chế. Có thể dùng trong thai kỳ khi lợi ích vượt trội nguy cơ. Theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Kháng thể lớn, hấp thu qua đường tiêu hóa trẻ có thể hạn chế.",
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Emicizumab chuyển hóa qua RES, không phụ thuộc gan đáng kể."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng nguy cơ huyết khối",
+                "Phản ứng tại chỗ tiêm nặng hơn",
+                "Dị ứng (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Theo dõi dấu hiệu huyết khối chặt chẽ",
+                "Xử trí huyết khối nếu có (anticoagulation, thrombectomy nếu cần)",
+                "Xử trí phản ứng dị ứng nếu có (antihistamine, corticosteroid, epinephrine nếu cần)"
+            ],
+            "monitoring": "Dấu hiệu huyết khối, phản ứng tại chỗ tiêm, dấu hiệu dị ứng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "sc": {
+                "reconstitution": "Dùng trực tiếp từ bút tiêm hoặc ống tiêm đã pha sẵn.",
+                "injection_site": "Vùng bụng, đùi, hoặc cánh tay. Thay đổi vị trí tiêm mỗi lần.",
+                "injection_technique": "Tiêm dưới da (SC), không tiêm vào cơ hoặc tĩnh mạch.",
+                "notes": "Có thể tự tiêm sau khi được hướng dẫn. Lưu trữ trong tủ lạnh, để ở nhiệt độ phòng 30 phút trước khi tiêm. Phác đồ: 3mg/kg tuần 1, 2, 4 (loading), sau đó 1.5mg/kg/tuần, 3mg/kg/2 tuần, hoặc 6mg/kg/4 tuần (maintenance)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Emicizumab (Hemlibra)",
+                "UpToDate - Emicizumab: Drug information",
+                "Lexicomp - Emicizumab monograph",
+                "ASH Guidelines - Hemophilia A"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, large RCTs showing benefit in hemophilia A prevention"
+        }
+    },
+
+    "Eltrombopag": {
+        "group": "Hematology - TPO Receptor Agonist",
+        "vietnamese_name": "Eltrombopag, Promacta",
+        "administration": ["PO"],
+        "indications": [
+            "Thiếu máu giảm tiểu cầu miễn dịch (ITP) - chronic",
+            "Thiếu máu giảm tiểu cầu ở bệnh nhân viêm gan C",
+            "Thiếu máu giảm tiểu cầu ở bệnh nhân suy tủy xương nặng (severe aplastic anemia)",
+            "Thiếu máu giảm tiểu cầu ở bệnh nhân ung thư hóa trị liệu"
+        ],
+        "contraindications": [
+            "Dị ứng eltrombopag hoặc bất kỳ thành phần nào",
+            "Bệnh gan nặng (Child-Pugh class C)"
+        ],
+        "dosage": {
+            "adult_itp": "50mg PO mỗi ngày (có thể tăng đến 75mg/ngày nếu cần)",
+            "adult_hepatitis_c": "25mg PO mỗi ngày (có thể tăng đến 100mg/ngày nếu cần)",
+            "adult_aplastic_anemia": "150mg PO mỗi ngày (có thể tăng đến 300mg/ngày nếu cần)",
+            "notes": "Uống khi đói (ít nhất 1 giờ trước hoặc 2 giờ sau bữa ăn). Không uống với sữa, canxi, hoặc antacids. Điều chỉnh liều theo số lượng tiểu cầu."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Thận trọng, dữ liệu hạn chế"
+        },
+        "side_effects": [
+            "Nhức đầu - phổ biến",
+            "Mệt mỏi",
+            "Buồn nôn",
+            "Tiêu chảy",
+            "Tăng men gan (ALT, AST) - phổ biến, có thể nghiêm trọng",
+            "Tăng bilirubin - có thể nghiêm trọng",
+            "Tăng nguy cơ huyết khối (thrombosis) - do tăng số lượng tiểu cầu",
+            "Tăng nguy cơ xơ tủy xương (bone marrow fibrosis) - với dùng dài ngày",
+            "Đục thủy tinh thể (cataract) - với dùng dài ngày"
+        ],
+        "interactions": [
+            "Sữa, canxi, antacids, sắt: giảm hấp thu (uống cách xa ít nhất 2 giờ)",
+            "Cholestyramine: giảm hấp thu",
+            "Thuốc chống đông/kháng tiểu cầu: tăng nguy cơ huyết khối do tăng số lượng tiểu cầu"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": (
+            "Eltrombopag là chất chủ vận thụ thể thrombopoietin (TPO receptor agonist, non-peptide). "
+            "Thrombopoietin là hormone tự nhiên kích thích sản xuất tiểu cầu từ megakaryocytes trong tủy xương. "
+            "Trong ITP và các tình trạng giảm tiểu cầu khác, có sự thiếu hụt hoặc giảm đáp ứng với TPO. "
+            "Eltrombopag gắn với thụ thể TPO trên megakaryocytes → kích thích tăng sinh và biệt hóa megakaryocytes → "
+            "tăng sản xuất tiểu cầu từ tủy xương. "
+            "Dẫn đến: tăng số lượng tiểu cầu trong máu, giảm nguy cơ chảy máu. "
+            "Eltrombopag được dùng để điều trị giảm tiểu cầu trong ITP, viêm gan C, suy tủy xương, và ung thư hóa trị liệu. "
+            "Khác với romiplostim (peptide TPO mimetic), eltrombopag là non-peptide, dùng đường uống, "
+            "và có tương tác với thức ăn (giảm hấp thu với sữa, canxi, antacids)."
+        ),
+        "monitoring": [
+            "Số lượng tiểu cầu - theo dõi thường xuyên (hàng tuần khi bắt đầu, sau đó định kỳ)",
+            "Chức năng gan (ALT, AST, bilirubin) - theo dõi định kỳ, tăng men gan phổ biến",
+            "Dấu hiệu huyết khối (đau ngực, khó thở, đau chân, sưng chân) - do tăng số lượng tiểu cầu",
+            "Dấu hiệu xơ tủy xương (bone marrow fibrosis) - với dùng dài ngày",
+            "Khám mắt định kỳ - theo dõi đục thủy tinh thể với dùng dài ngày"
+        ],
+        "precautions": [
+            "TĂNG MEN GAN - phổ biến và có thể nghiêm trọng, cần theo dõi chức năng gan định kỳ",
+            "CHỐNG CHỈ ĐỊNH ở bệnh nhân có bệnh gan nặng (Child-Pugh class C)",
+            "NGUY CƠ HUYẾT KHỐI - do tăng số lượng tiểu cầu, đặc biệt khi số lượng tiểu cầu >400,000/μL",
+            "Uống khi đói (ít nhất 1 giờ trước hoặc 2 giờ sau bữa ăn) - quan trọng để tăng hấp thu",
+            "Không uống với sữa, canxi, antacids, sắt - giảm hấp thu, uống cách xa ít nhất 2 giờ",
+            "Điều chỉnh liều theo số lượng tiểu cầu - giảm liều nếu số lượng tiểu cầu >400,000/μL",
+            "Thận trọng khi dùng với thuốc chống đông/kháng tiểu cầu - tăng nguy cơ huyết khối",
+            "Ngừng thuốc nếu tăng men gan nặng hoặc tăng bilirubin"
+        ],
+        "pharmacokinetics": {
+            "half_life": "~26-35 giờ (dài)",
+            "onset": "1-2 tuần (tác dụng chậm)",
+            "duration": "Dài (do half-life dài)",
+            "protein_binding": ">99%",
+            "metabolism": "Gan (chuyển hóa qua CYP1A2, CYP2C8, UGT1A1, UGT1A3)",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ một phần). Cần điều chỉnh liều ở suy gan."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": (
+            "NGUY CƠ TĂNG MEN GAN - có thể nghiêm trọng. Cần theo dõi chức năng gan (ALT, AST, bilirubin) định kỳ. "
+            "CHỐNG CHỈ ĐỊNH ở bệnh nhân có bệnh gan nặng (Child-Pugh class C). "
+            "Ngừng thuốc nếu tăng men gan nặng hoặc tăng bilirubin. "
+            "NGUY CƠ HUYẾT KHỐI - do tăng số lượng tiểu cầu, đặc biệt khi số lượng tiểu cầu >400,000/μL. "
+            "Điều chỉnh liều để tránh số lượng tiểu cầu quá cao."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Sữa, canxi, antacids, sắt",
+                    "mechanism": "Giảm hấp thu eltrombopag",
+                    "effect": "Giảm hiệu quả eltrombopag",
+                    "management": "Uống cách xa ít nhất 2 giờ. Uống eltrombopag khi đói (ít nhất 1 giờ trước hoặc 2 giờ sau bữa ăn)."
+                },
+                {
+                    "drug": "Cholestyramine",
+                    "mechanism": "Giảm hấp thu eltrombopag",
+                    "effect": "Giảm hiệu quả eltrombopag",
+                    "management": "Uống cách xa ít nhất 4 giờ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc chống đông/kháng tiểu cầu (warfarin, aspirin, clopidogrel)",
+                    "mechanism": "Tăng số lượng tiểu cầu + chống đông/kháng tiểu cầu",
+                    "effect": "Tăng nguy cơ huyết khối",
+                    "management": "Thận trọng. Theo dõi số lượng tiểu cầu và dấu hiệu huyết khối."
+                },
+                {
+                    "drug": "CYP1A2 inhibitors (fluvoxamine, ciprofloxacin)",
+                    "mechanism": "Ức chế chuyển hóa eltrombopag",
+                    "effect": "Tăng nồng độ eltrombopag, tăng tác dụng phụ",
+                    "management": "Thận trọng. Có thể cần giảm liều eltrombopag."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng eltrombopag hoặc bất kỳ thành phần nào",
+                "Bệnh gan nặng (Child-Pugh class C)"
+            ],
+            "tương_đối": [
+                "Bệnh gan (Child-Pugh class A-B) - tăng nguy cơ tăng men gan",
+                "Tiền sử huyết khối - tăng nguy cơ huyết khối do tăng số lượng tiểu cầu",
+                "Đang dùng thuốc chống đông/kháng tiểu cầu - tăng nguy cơ huyết khối"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu hạn chế. Có thể dùng trong thai kỳ khi lợi ích vượt trội nguy cơ. Theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Giảm liều 50%. Theo dõi chức năng gan chặt chẽ",
+            "severe": "CHỐNG CHỈ ĐỊNH (Child-Pugh class C)",
+            "notes": "Eltrombopag chuyển hóa ở gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tăng men gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng số lượng tiểu cầu quá cao (>400,000/μL) - tăng nguy cơ huyết khối",
+                "Tăng men gan nặng",
+                "Tăng bilirubin nặng",
+                "Nhức đầu, mệt mỏi, buồn nôn nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng thuốc ngay",
+                "Theo dõi số lượng tiểu cầu - có thể cần phlebotomy nếu quá cao",
+                "Theo dõi chức năng gan chặt chẽ",
+                "Xử trí huyết khối nếu có (anticoagulation nếu cần)",
+                "Điều trị hỗ trợ triệu chứng"
+            ],
+            "monitoring": "Số lượng tiểu cầu, chức năng gan (ALT, AST, bilirubin), dấu hiệu huyết khối"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống khi đói (ít nhất 1 giờ trước hoặc 2 giờ sau bữa ăn) - QUAN TRỌNG để tăng hấp thu",
+                "timing": "Uống 1 lần/ngày khi đói. Không uống với sữa, canxi, antacids, sắt (uống cách xa ít nhất 2 giờ).",
+                "notes": "Uống khi đói để tăng hấp thu. Không uống với sữa, canxi, antacids, sắt. Điều chỉnh liều theo số lượng tiểu cầu."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Eltrombopag (Promacta)",
+                "UpToDate - Eltrombopag: Drug information",
+                "Lexicomp - Eltrombopag monograph",
+                "ASH Guidelines - ITP"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, large RCTs showing benefit in ITP"
+        }
+    },
+
+    "Romiplostim": {
+        "group": "Hematology - TPO Mimetic",
+        "vietnamese_name": "Romiplostim, Nplate",
+        "administration": ["SC"],
+        "indications": [
+            "Thiếu máu giảm tiểu cầu miễn dịch (ITP) - chronic",
+            "Thiếu máu giảm tiểu cầu ở bệnh nhân ung thư hóa trị liệu"
+        ],
+        "contraindications": [
+            "Dị ứng romiplostim hoặc bất kỳ thành phần nào"
+        ],
+        "dosage": {
+            "adult_itp": "1mcg/kg SC mỗi tuần (có thể tăng đến 10mcg/kg/tuần nếu cần)",
+            "adult_chemotherapy": "Liều tùy theo phác đồ hóa trị",
+            "notes": "Tiêm dưới da (SC) ở vùng bụng, đùi, hoặc cánh tay. Điều chỉnh liều theo số lượng tiểu cầu. Cần được thực hiện bởi nhân viên y tế."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Không cần chỉnh liều"
+        },
+        "side_effects": [
+            "Nhức đầu - phổ biến",
+            "Mệt mỏi",
+            "Chóng mặt",
+            "Đau khớp",
+            "Đau cơ",
+            "Phản ứng tại chỗ tiêm (đau, đỏ, ngứa)",
+            "Tăng nguy cơ huyết khối (thrombosis) - do tăng số lượng tiểu cầu",
+            "Tăng nguy cơ xơ tủy xương (bone marrow fibrosis) - với dùng dài ngày",
+            "Tăng nguy cơ tăng sinh tế bào tủy xương (myeloproliferative disorders) - với dùng dài ngày"
+        ],
+        "interactions": [
+            "Thuốc chống đông/kháng tiểu cầu: tăng nguy cơ huyết khối do tăng số lượng tiểu cầu"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": (
+            "Romiplostim là TPO mimetic (thrombopoietin mimetic peptide) - một protein tái tổ hợp có cấu trúc tương tự thrombopoietin. "
+            "Thrombopoietin là hormone tự nhiên kích thích sản xuất tiểu cầu từ megakaryocytes trong tủy xương. "
+            "Trong ITP và các tình trạng giảm tiểu cầu khác, có sự thiếu hụt hoặc giảm đáp ứng với TPO. "
+            "Romiplostim gắn với thụ thể TPO trên megakaryocytes → kích thích tăng sinh và biệt hóa megakaryocytes → "
+            "tăng sản xuất tiểu cầu từ tủy xương. "
+            "Dẫn đến: tăng số lượng tiểu cầu trong máu, giảm nguy cơ chảy máu. "
+            "Romiplostim được dùng để điều trị giảm tiểu cầu trong ITP và ung thư hóa trị liệu. "
+            "Khác với eltrombopag (non-peptide, đường uống), romiplostim là peptide, dùng đường tiêm dưới da (SC), "
+            "và không có tương tác với thức ăn. "
+            "Romiplostim có cấu trúc Fc fusion protein, cho phép half-life dài hơn."
+        ),
+        "monitoring": [
+            "Số lượng tiểu cầu - theo dõi thường xuyên (hàng tuần khi bắt đầu, sau đó định kỳ)",
+            "Dấu hiệu huyết khối (đau ngực, khó thở, đau chân, sưng chân) - do tăng số lượng tiểu cầu",
+            "Dấu hiệu xơ tủy xương (bone marrow fibrosis) - với dùng dài ngày",
+            "Dấu hiệu tăng sinh tế bào tủy xương (myeloproliferative disorders) - với dùng dài ngày",
+            "Phản ứng tại chỗ tiêm"
+        ],
+        "precautions": [
+            "NGUY CƠ HUYẾT KHỐI - do tăng số lượng tiểu cầu, đặc biệt khi số lượng tiểu cầu >400,000/μL",
+            "Điều chỉnh liều theo số lượng tiểu cầu - giảm liều nếu số lượng tiểu cầu >400,000/μL",
+            "Thận trọng khi dùng với thuốc chống đông/kháng tiểu cầu - tăng nguy cơ huyết khối",
+            "NGUY CƠ XƠ TỦY XƯƠNG - với dùng dài ngày, cần theo dõi tủy xương định kỳ",
+            "NGUY CƠ TĂNG SINH TẾ BÀO TỦY XƯƠNG - với dùng dài ngày, cần theo dõi",
+            "Cần được thực hiện bởi nhân viên y tế (không tự tiêm như eltrombopag)",
+            "Ngừng thuốc nếu số lượng tiểu cầu >400,000/μL hoặc có dấu hiệu xơ tủy xương"
+        ],
+        "pharmacokinetics": {
+            "half_life": "~1-2 tuần (dài, do Fc fusion protein)",
+            "onset": "1-2 tuần (tác dụng chậm)",
+            "duration": "Dài (do half-life dài)",
+            "protein_binding": "Fc fusion protein",
+            "metabolism": "Chuyển hóa qua hệ thống reticuloendothelial (RES)",
+            "clearance": "Không phụ thuộc gan thận đáng kể"
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Không làm nóng hoặc lắc mạnh. Dung dịch pha loãng: dùng trong 24 giờ ở 2-8°C.",
+        "black_box_warnings": (
+            "NGUY CƠ HUYẾT KHỐI - do tăng số lượng tiểu cầu, đặc biệt khi số lượng tiểu cầu >400,000/μL. "
+            "Điều chỉnh liều để tránh số lượng tiểu cầu quá cao. "
+            "NGUY CƠ XƠ TỦY XƯƠNG - với dùng dài ngày, có thể dẫn đến xơ tủy xương và suy tủy xương. "
+            "Cần theo dõi tủy xương định kỳ. "
+            "NGUY CƠ TĂNG SINH TẾ BÀO TỦY XƯƠNG - với dùng dài ngày, có thể dẫn đến myeloproliferative disorders."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc chống đông/kháng tiểu cầu (warfarin, aspirin, clopidogrel)",
+                    "mechanism": "Tăng số lượng tiểu cầu + chống đông/kháng tiểu cầu",
+                    "effect": "Tăng nguy cơ huyết khối",
+                    "management": "Thận trọng. Theo dõi số lượng tiểu cầu và dấu hiệu huyết khối."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng romiplostim hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Tiền sử huyết khối - tăng nguy cơ huyết khối do tăng số lượng tiểu cầu",
+                "Đang dùng thuốc chống đông/kháng tiểu cầu - tăng nguy cơ huyết khối",
+                "Tiền sử xơ tủy xương hoặc myeloproliferative disorders - tăng nguy cơ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu hạn chế. Có thể dùng trong thai kỳ khi lợi ích vượt trội nguy cơ. Theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Protein lớn, hấp thu qua đường tiêu hóa trẻ có thể hạn chế.",
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Romiplostim chuyển hóa qua RES, không phụ thuộc gan đáng kể."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng số lượng tiểu cầu quá cao (>400,000/μL) - tăng nguy cơ huyết khối",
+                "Nhức đầu, mệt mỏi, chóng mặt nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng thuốc ngay",
+                "Theo dõi số lượng tiểu cầu - có thể cần phlebotomy nếu quá cao",
+                "Xử trí huyết khối nếu có (anticoagulation nếu cần)",
+                "Điều trị hỗ trợ triệu chứng"
+            ],
+            "monitoring": "Số lượng tiểu cầu, dấu hiệu huyết khối"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "sc": {
+                "reconstitution": "Pha loãng trong nước cất vô trùng theo hướng dẫn hãng.",
+                "injection_site": "Vùng bụng, đùi, hoặc cánh tay. Thay đổi vị trí tiêm mỗi lần.",
+                "injection_technique": "Tiêm dưới da (SC), không tiêm vào cơ hoặc tĩnh mạch.",
+                "notes": "Cần được thực hiện bởi nhân viên y tế. Lưu trữ trong tủ lạnh. Điều chỉnh liều theo số lượng tiểu cầu (bắt đầu 1mcg/kg/tuần, có thể tăng đến 10mcg/kg/tuần)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Romiplostim (Nplate)",
+                "UpToDate - Romiplostim: Drug information",
+                "Lexicomp - Romiplostim monograph",
+                "ASH Guidelines - ITP"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, large RCTs showing benefit in ITP"
+        }
     }
 }
 
