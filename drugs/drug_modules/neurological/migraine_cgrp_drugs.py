@@ -508,6 +508,313 @@ MIGRAINE_CGRP_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in migraine prevention"
         }
+    },
+    
+    "Ubrogepant": {
+        "group": "Neurology - Anti-CGRP Receptor Antagonist (Gepant)",
+        "vietnamese_name": "Ubrogepant, Ubrelvy",
+        "administration": ["PO"],
+        "indications": [
+            "Điều trị cấp tính cơn migraine (acute migraine treatment) ở người lớn",
+            "Migraine có tiền triệu (aura) hoặc không"
+        ],
+        "contraindications": [
+            "Dị ứng ubrogepant hoặc bất kỳ thành phần nào",
+            "Suy gan nặng (Child-Pugh C) - CHỐNG CHỈ ĐỊNH",
+            "Dùng với CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin, itraconazole) - CHỐNG CHỈ ĐỊNH"
+        ],
+        "dosage": {
+            "adult_standard": "50-100mg PO x 1 liều khi có cơn migraine",
+            "adult_repeat": "Có thể lặp lại sau 2 giờ nếu cần (tối đa 200mg/24 giờ)",
+            "adult_with_ugt_inhibitor": "50mg PO x 1 liều (giảm liều nếu dùng với UGT inhibitors)",
+            "notes": "Ubrogepant là CGRP receptor antagonist (gepant), điều trị cấp tính cơn migraine. Dùng khi có cơn migraine, không dùng để phòng ngừa. Uống với hoặc không thức ăn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, giảm liều nếu cần"
+        },
+        "side_effects": [
+            "Buồn nôn - phổ biến",
+            "Buồn ngủ (somnolence) - phổ biến",
+            "Khô miệng",
+            "Đau đầu (hiếm, có thể do migraine không đáp ứng)",
+            "Tăng transaminase (hiếm)",
+            "Dị ứng (hiếm)"
+        ],
+        "interactions": [
+            "CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin, itraconazole): CHỐNG CHỈ ĐỊNH - tăng nồng độ ubrogepant",
+            "CYP3A4 inducers mạnh (rifampin, carbamazepine): giảm nồng độ ubrogepant",
+            "UGT inhibitors: tăng nồng độ ubrogepant - giảm liều"
+        ],
+        "pregnancy": "C - Thận trọng",
+        "mechanism_of_action": "Ubrogepant là CGRP receptor antagonist (gepant), đối kháng cạnh tranh với CGRP tại thụ thể CGRP. CGRP là một neuropeptide được giải phóng từ các terminal thần kinh trigeminal trong cơn migraine, gây giãn mạch máu não và kích hoạt quá trình viêm thần kinh, dẫn đến đau migraine. Ubrogepant gắn với thụ thể CGRP → ngăn chặn CGRP gắn với thụ thể → ức chế tác dụng giãn mạch và viêm của CGRP. Dẫn đến: giảm đau migraine. ĐẶC ĐIỂM: (1) CGRP receptor antagonist (gepant), điều trị cấp tính cơn migraine, (2) Không gây co mạch (ưu điểm so với triptan), (3) Dùng khi có cơn migraine, không dùng để phòng ngừa, (4) CHỐNG CHỈ ĐỊNH ở suy gan nặng và với CYP3A4 inhibitors mạnh, (5) Buồn nôn và buồn ngủ phổ biến, (6) Uống với hoặc không thức ăn.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm đau migraine trong 2 giờ",
+            "Dấu hiệu buồn nôn, buồn ngủ - phổ biến",
+            "Chức năng gan (ALT, AST) - hiếm, nhưng CHỐNG CHỈ ĐỊNH ở suy gan nặng",
+            "Dấu hiệu dị ứng (phát ban, khó thở, phù mạch)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH ở suy gan nặng (Child-Pugh C)",
+            "CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin, itraconazole)",
+            "Buồn nôn và buồn ngủ phổ biến - không lái xe hoặc vận hành máy móc",
+            "Dùng khi có cơn migraine, không dùng để phòng ngừa",
+            "Có thể lặp lại sau 2 giờ nếu cần (tối đa 200mg/24 giờ)",
+            "Uống với hoặc không thức ăn",
+            "Thận trọng khi dùng với CYP3A4 inducers mạnh - giảm nồng độ",
+            "Giảm liều nếu dùng với UGT inhibitors"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5-7 giờ",
+            "onset": "1-2 giờ",
+            "duration": "4-6 giờ",
+            "protein_binding": "87%",
+            "metabolism": "Chuyển hóa ở gan (CYP3A4, UGT)",
+            "clearance": "Thải trừ qua gan (70%) và thận (30%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở suy gan nặng (Child-Pugh C). CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh. Buồn nôn và buồn ngủ phổ biến - không lái xe hoặc vận hành máy móc.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 Inhibitors mạnh (Ketoconazole, Clarithromycin, Itraconazole)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ ubrogepant",
+                    "effect": "Tăng nồng độ ubrogepant, tăng nguy cơ tác dụng phụ",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không dùng ubrogepant với CYP3A4 inhibitors mạnh."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 Inducers mạnh (Rifampin, Carbamazepine, Phenytoin)",
+                    "mechanism": "Cảm ứng CYP3A4, giảm nồng độ ubrogepant",
+                    "effect": "Giảm nồng độ ubrogepant, giảm hiệu quả",
+                    "management": "Thận trọng. Có thể cần tăng liều ubrogepant. Theo dõi đáp ứng điều trị."
+                },
+                {
+                    "drug": "UGT Inhibitors",
+                    "mechanism": "Ức chế UGT, tăng nồng độ ubrogepant",
+                    "effect": "Tăng nồng độ ubrogepant, tăng nguy cơ tác dụng phụ",
+                    "management": "Giảm liều ubrogepant (50mg thay vì 100mg). Theo dõi dấu hiệu tác dụng phụ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng ubrogepant hoặc bất kỳ thành phần nào",
+                "Suy gan nặng (Child-Pugh C) - CHỐNG CHỈ ĐỊNH",
+                "Dùng với CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin, itraconazole) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy gan nhẹ đến trung bình - thận trọng, giảm liều nếu cần",
+                "Suy thận nặng - thận trọng, giảm liều nếu cần",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Ubrogepant là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Ubrogepant bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ về dấu hiệu buồn nôn, buồn ngủ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, giảm liều nếu cần",
+            "severe": "CHỐNG CHỈ ĐỊNH. Ubrogepant chuyển hóa ở gan, tích lũy ở suy gan nặng.",
+            "notes": "Ubrogepant chuyển hóa ở gan (CYP3A4, UGT) và thải trừ qua gan (70%). Suy gan nặng có thể làm tích lũy ubrogepant, tăng nguy cơ tác dụng phụ. CHỐNG CHỈ ĐỊNH ở suy gan nặng (Child-Pugh C)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn nặng",
+                "Buồn ngủ nặng",
+                "Tăng transaminase"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay ubrogepant",
+                "Điều trị buồn nôn, nôn: Antiemetic (ondansetron, metoclopramide)",
+                "Theo dõi: Dấu hiệu sinh tồn, chức năng gan"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST) trong ít nhất 24 giờ."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng bởi thức ăn.",
+                "timing": "50-100mg PO x 1 liều khi có cơn migraine. Có thể lặp lại sau 2 giờ nếu cần (tối đa 200mg/24 giờ). Dùng ngay khi có triệu chứng migraine."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ubrogepant (Ubrelvy)",
+                "UpToDate - Ubrogepant: Drug Information",
+                "Medscape - Ubrogepant Drug Reference",
+                "AHS Guidelines - Acute Migraine Treatment"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
+    "Rimegepant": {
+        "group": "Neurology - Anti-CGRP Receptor Antagonist (Gepant)",
+        "vietnamese_name": "Rimegepant, Nurtec ODT",
+        "administration": ["PO"],
+        "indications": [
+            "Điều trị cấp tính cơn migraine (acute migraine treatment) ở người lớn",
+            "Phòng ngừa migraine (episodic migraine) ở người lớn - dạng ODT",
+            "Migraine có tiền triệu (aura) hoặc không"
+        ],
+        "contraindications": [
+            "Dị ứng rimegepant hoặc bất kỳ thành phần nào",
+            "Suy gan nặng (Child-Pugh C) - CHỐNG CHỈ ĐỊNH",
+            "Dùng với CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin, itraconazole) - CHỐNG CHỈ ĐỊNH"
+        ],
+        "dosage": {
+            "adult_acute": "75mg PO x 1 liều khi có cơn migraine (dạng ODT - orally disintegrating tablet)",
+            "adult_acute_repeat": "Có thể lặp lại sau 2 giờ nếu cần (tối đa 75mg/24 giờ)",
+            "adult_prevention": "75mg PO mỗi ngày hoặc mỗi 2 ngày (phòng ngừa episodic migraine)",
+            "notes": "Rimegepant là CGRP receptor antagonist (gepant), có cả tác dụng điều trị cấp tính và phòng ngừa migraine. Dạng ODT (orally disintegrating tablet) - đặt trên lưỡi, để tan tự nhiên. Uống với hoặc không thức ăn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, giảm liều nếu cần"
+        },
+        "side_effects": [
+            "Buồn nôn - phổ biến",
+            "Buồn ngủ (somnolence) - phổ biến",
+            "Khô miệng",
+            "Đau đầu (hiếm, có thể do migraine không đáp ứng)",
+            "Tăng transaminase (hiếm)",
+            "Dị ứng (hiếm)"
+        ],
+        "interactions": [
+            "CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin, itraconazole): CHỐNG CHỈ ĐỊNH - tăng nồng độ rimegepant",
+            "CYP3A4 inducers mạnh (rifampin, carbamazepine): giảm nồng độ rimegepant",
+            "P-glycoprotein inhibitors: tăng nồng độ rimegepant"
+        ],
+        "pregnancy": "C - Thận trọng",
+        "mechanism_of_action": "Rimegepant là CGRP receptor antagonist (gepant), đối kháng cạnh tranh với CGRP tại thụ thể CGRP. CGRP là một neuropeptide được giải phóng từ các terminal thần kinh trigeminal trong cơn migraine, gây giãn mạch máu não và kích hoạt quá trình viêm thần kinh, dẫn đến đau migraine. Rimegepant gắn với thụ thể CGRP → ngăn chặn CGRP gắn với thụ thể → ức chế tác dụng giãn mạch và viêm của CGRP. Dẫn đến: giảm đau migraine (điều trị cấp tính) và giảm tần suất cơn migraine (phòng ngừa). ĐẶC ĐIỂM: (1) CGRP receptor antagonist (gepant), có cả tác dụng điều trị cấp tính và phòng ngừa migraine, (2) Dạng ODT (orally disintegrating tablet) - thuận tiện, (3) Không gây co mạch (ưu điểm so với triptan), (4) CHỐNG CHỈ ĐỊNH ở suy gan nặng và với CYP3A4 inhibitors mạnh, (5) Buồn nôn và buồn ngủ phổ biến, (6) Uống với hoặc không thức ăn.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm đau migraine trong 2 giờ (điều trị cấp tính)",
+            "Tần suất cơn migraine (phòng ngừa)",
+            "Dấu hiệu buồn nôn, buồn ngủ - phổ biến",
+            "Chức năng gan (ALT, AST) - hiếm, nhưng CHỐNG CHỈ ĐỊNH ở suy gan nặng",
+            "Dấu hiệu dị ứng (phát ban, khó thở, phù mạch)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH ở suy gan nặng (Child-Pugh C)",
+            "CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin, itraconazole)",
+            "Buồn nôn và buồn ngủ phổ biến - không lái xe hoặc vận hành máy móc",
+            "Dạng ODT: đặt trên lưỡi, để tan tự nhiên, không cần nước",
+            "Có thể dùng để điều trị cấp tính hoặc phòng ngừa migraine",
+            "Có thể lặp lại sau 2 giờ nếu cần (tối đa 75mg/24 giờ)",
+            "Uống với hoặc không thức ăn",
+            "Thận trọng khi dùng với CYP3A4 inducers mạnh - giảm nồng độ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "11 giờ",
+            "onset": "1-2 giờ",
+            "duration": "4-6 giờ",
+            "protein_binding": "96%",
+            "metabolism": "Chuyển hóa ở gan (CYP3A4, CYP2C9)",
+            "clearance": "Thải trừ qua gan (60%) và thận (40%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Dạng ODT: bảo quản trong bao bì kín, tránh ẩm.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở suy gan nặng (Child-Pugh C). CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh. Buồn nôn và buồn ngủ phổ biến - không lái xe hoặc vận hành máy móc.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 Inhibitors mạnh (Ketoconazole, Clarithromycin, Itraconazole)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ rimegepant",
+                    "effect": "Tăng nồng độ rimegepant, tăng nguy cơ tác dụng phụ",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không dùng rimegepant với CYP3A4 inhibitors mạnh."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 Inducers mạnh (Rifampin, Carbamazepine, Phenytoin)",
+                    "mechanism": "Cảm ứng CYP3A4, giảm nồng độ rimegepant",
+                    "effect": "Giảm nồng độ rimegepant, giảm hiệu quả",
+                    "management": "Thận trọng. Có thể cần tăng liều rimegepant. Theo dõi đáp ứng điều trị."
+                },
+                {
+                    "drug": "P-glycoprotein Inhibitors",
+                    "mechanism": "Ức chế P-glycoprotein, tăng nồng độ rimegepant",
+                    "effect": "Tăng nồng độ rimegepant, tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng. Theo dõi dấu hiệu tác dụng phụ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng rimegepant hoặc bất kỳ thành phần nào",
+                "Suy gan nặng (Child-Pugh C) - CHỐNG CHỈ ĐỊNH",
+                "Dùng với CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin, itraconazole) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy gan nhẹ đến trung bình - thận trọng, giảm liều nếu cần",
+                "Suy thận nặng - thận trọng, giảm liều nếu cần",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Rimegepant là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Rimegepant bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ về dấu hiệu buồn nôn, buồn ngủ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, giảm liều nếu cần",
+            "severe": "CHỐNG CHỈ ĐỊNH. Rimegepant chuyển hóa ở gan, tích lũy ở suy gan nặng.",
+            "notes": "Rimegepant chuyển hóa ở gan (CYP3A4, CYP2C9) và thải trừ qua gan (60%). Suy gan nặng có thể làm tích lũy rimegepant, tăng nguy cơ tác dụng phụ. CHỐNG CHỈ ĐỊNH ở suy gan nặng (Child-Pugh C)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn nặng",
+                "Buồn ngủ nặng",
+                "Tăng transaminase"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay rimegepant",
+                "Điều trị buồn nôn, nôn: Antiemetic (ondansetron, metoclopramide)",
+                "Theo dõi: Dấu hiệu sinh tồn, chức năng gan"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST) trong ít nhất 24 giờ."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng bởi thức ăn.",
+                "timing": "75mg PO x 1 liều khi có cơn migraine (điều trị cấp tính) hoặc 75mg PO mỗi ngày hoặc mỗi 2 ngày (phòng ngừa). Có thể lặp lại sau 2 giờ nếu cần (tối đa 75mg/24 giờ)."
+            },
+            "odt": {
+                "technique": "Dạng ODT (orally disintegrating tablet): Đặt trên lưỡi, để tan tự nhiên, không cần nước. Nuốt nước bọt sau khi tan.",
+                "timing": "75mg ODT x 1 liều khi có cơn migraine (điều trị cấp tính) hoặc 75mg ODT mỗi ngày hoặc mỗi 2 ngày (phòng ngừa).",
+                "notes": "Thuận tiện hơn dạng uống thông thường, không cần nước. Bảo quản trong bao bì kín, tránh ẩm."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Rimegepant (Nurtec ODT)",
+                "UpToDate - Rimegepant: Drug Information",
+                "Medscape - Rimegepant Drug Reference",
+                "AHS Guidelines - Acute Migraine Treatment, Migraine Prevention"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     }
 }
 

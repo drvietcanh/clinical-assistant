@@ -1099,6 +1099,500 @@ ANTIPARKINSONIAN_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, clinical trial data, widely used"
         }
+    },
+    
+    "Safinamide": {
+        "group": "Neurology - Antiparkinsonian (MAO-B Inhibitor + Glutamate Release Inhibitor)",
+        "vietnamese_name": "Safinamide, Xadago",
+        "administration": ["PO"],
+        "indications": [
+            "Parkinson's disease - điều trị bổ sung với levodopa/carbidopa",
+            "Giảm 'off' time (thời gian không đáp ứng với levodopa)",
+            "Tăng 'on' time (thời gian đáp ứng với levodopa)"
+        ],
+        "contraindications": [
+            "Dị ứng safinamide",
+            "Dùng với MAO inhibitors không chọn lọc (trong 14 ngày) - CHỐNG CHỈ ĐỊNH",
+            "Dùng với meperidine, tramadol, methadone, propoxyphene, dextromethorphan (trong 14 ngày) - CHỐNG CHỈ ĐỊNH",
+            "Dùng với St. John's wort (trong 14 ngày) - CHỐNG CHỈ ĐỊNH",
+            "Suy gan nặng - CHỐNG CHỈ ĐỊNH"
+        ],
+        "dosage": {
+            "adult_initial": "50mg PO x 1 lần/ngày",
+            "adult_max": "100mg PO x 1 lần/ngày (tăng sau 2 tuần nếu cần)",
+            "notes": "Safinamide là MAO-B inhibitor và glutamate release inhibitor. Dùng 1 lần/ngày. Bắt đầu với 50mg, có thể tăng đến 100mg sau 2 tuần nếu cần. Dùng với hoặc không thức ăn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, giảm liều nếu cần"
+        },
+        "side_effects": [
+            "Dyskinesia (rối loạn vận động) - phổ biến",
+            "Buồn nôn",
+            "Mất ngủ",
+            "Chóng mặt",
+            "Lo lắng",
+            "Tăng huyết áp - hiếm",
+            "Ảo giác - hiếm",
+            "Rối loạn hành vi (impulse control disorders) - hiếm"
+        ],
+        "interactions": [
+            "MAO inhibitors không chọn lọc: CHỐNG CHỈ ĐỊNH - tăng nguy cơ tăng huyết áp nặng",
+            "Meperidine, tramadol, methadone, propoxyphene, dextromethorphan: CHỐNG CHỈ ĐỊNH - tăng nguy cơ serotonin syndrome",
+            "St. John's wort: CHỐNG CHỈ ĐỊNH - tăng nguy cơ serotonin syndrome",
+            "SSRI/SNRI: tăng nguy cơ serotonin syndrome",
+            "Tyramine: có thể tăng huyết áp (nhưng ít hơn MAO-A inhibitor)"
+        ],
+        "pregnancy": "C - Thận trọng",
+        "mechanism_of_action": "Safinamide là thuốc kép: (1) MAO-B inhibitor - ức chế monoamine oxidase B, giảm phân hủy dopamine, tăng nồng độ dopamine trong não, (2) Glutamate release inhibitor - ức chế giải phóng glutamate, giảm kích thích quá mức của glutamate receptors (NMDA, AMPA). Dẫn đến: tăng dopamine (giảm triệu chứng Parkinson) và giảm glutamate (giảm dyskinesia, tăng hiệu quả levodopa). ĐẶC ĐIỂM: (1) MAO-B inhibitor + glutamate release inhibitor (cơ chế kép), (2) Giảm 'off' time và tăng 'on' time với levodopa, (3) Dùng 1 lần/ngày, (4) CHỐNG CHỈ ĐỊNH với MAO inhibitors không chọn lọc và một số thuốc (meperidine, tramadol, methadone, propoxyphene, dextromethorphan), (5) Dyskinesia phổ biến, (6) CHỐNG CHỈ ĐỊNH ở suy gan nặng.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm 'off' time, tăng 'on' time với levodopa",
+            "Dyskinesia - phổ biến, có thể cần giảm liều levodopa",
+            "Huyết áp - hiếm tăng huyết áp",
+            "Dấu hiệu serotonin syndrome (nếu dùng với SSRI/SNRI): kích động, tăng thân nhiệt, tăng phản xạ",
+            "Dấu hiệu ảo giác, lú lẫn - hiếm",
+            "Dấu hiệu rối loạn hành vi (impulse control disorders) - hiếm",
+            "Chức năng gan (ALT, AST) - CHỐNG CHỈ ĐỊNH ở suy gan nặng"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH với MAO inhibitors không chọn lọc (trong 14 ngày) - tăng nguy cơ tăng huyết áp nặng",
+            "CHỐNG CHỈ ĐỊNH với meperidine, tramadol, methadone, propoxyphene, dextromethorphan (trong 14 ngày) - tăng nguy cơ serotonin syndrome",
+            "CHỐNG CHỈ ĐỊNH với St. John's wort (trong 14 ngày) - tăng nguy cơ serotonin syndrome",
+            "CHỐNG CHỈ ĐỊNH ở suy gan nặng",
+            "Dyskinesia phổ biến - có thể cần giảm liều levodopa",
+            "Thận trọng khi dùng với SSRI/SNRI - tăng nguy cơ serotonin syndrome",
+            "Tránh tyramine cao (phô mai lên men, thịt chế biến) - có thể tăng huyết áp (nhưng ít hơn MAO-A inhibitor)",
+            "Dùng 1 lần/ngày, với hoặc không thức ăn",
+            "Không ngừng đột ngột - giảm dần dần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "20-26 giờ",
+            "onset": "Vài ngày đến 1 tuần",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "90%",
+            "metabolism": "Chuyển hóa ở gan (CYP3A4, MAO-B)",
+            "clearance": "Thải trừ qua thận (50%) và phân (50%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với MAO inhibitors không chọn lọc và một số thuốc (meperidine, tramadol, methadone, propoxyphene, dextromethorphan) trong 14 ngày. CHỐNG CHỈ ĐỊNH ở suy gan nặng. Tăng nguy cơ serotonin syndrome khi dùng với SSRI/SNRI.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO Inhibitors không chọn lọc (Phenelzine, Tranylcypromine, Isocarboxazid)",
+                    "mechanism": "Cả hai đều ức chế MAO, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ tăng huyết áp nặng, đe dọa tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không dùng safinamide trong 14 ngày sau khi ngừng MAO inhibitor không chọn lọc."
+                },
+                {
+                    "drug": "Meperidine, Tramadol, Methadone, Propoxyphene, Dextromethorphan",
+                    "mechanism": "Tăng giải phóng serotonin, tác dụng cộng dồn với MAO-B inhibition",
+                    "effect": "Tăng nguy cơ serotonin syndrome, đe dọa tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không dùng safinamide trong 14 ngày sau khi ngừng các thuốc này."
+                },
+                {
+                    "drug": "St. John's Wort",
+                    "mechanism": "Tăng giải phóng serotonin, tác dụng cộng dồn với MAO-B inhibition",
+                    "effect": "Tăng nguy cơ serotonin syndrome",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không dùng safinamide trong 14 ngày sau khi ngừng St. John's wort."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "SSRI/SNRI (Fluoxetine, Sertraline, Paroxetine, Venlafaxine, Duloxetine)",
+                    "mechanism": "Tăng giải phóng serotonin, tác dụng cộng dồn với MAO-B inhibition",
+                    "effect": "Tăng nguy cơ serotonin syndrome",
+                    "management": "Thận trọng. Theo dõi dấu hiệu serotonin syndrome (kích động, tăng thân nhiệt, tăng phản xạ). Có thể cần giảm liều SSRI/SNRI hoặc tránh dùng cùng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng safinamide",
+                "Dùng với MAO inhibitors không chọn lọc (trong 14 ngày) - CHỐNG CHỈ ĐỊNH (tăng nguy cơ tăng huyết áp nặng)",
+                "Dùng với meperidine, tramadol, methadone, propoxyphene, dextromethorphan (trong 14 ngày) - CHỐNG CHỈ ĐỊNH (tăng nguy cơ serotonin syndrome)",
+                "Dùng với St. John's wort (trong 14 ngày) - CHỐNG CHỈ ĐỊNH (tăng nguy cơ serotonin syndrome)",
+                "Suy gan nặng - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Dùng với SSRI/SNRI - thận trọng, tăng nguy cơ serotonin syndrome",
+                "Suy thận nặng - thận trọng, giảm liều nếu cần",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Safinamide là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Safinamide bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ về dấu hiệu buồn nôn, mất ngủ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, giảm liều nếu cần",
+            "severe": "CHỐNG CHỈ ĐỊNH. Safinamide chuyển hóa ở gan, tích lũy ở suy gan nặng.",
+            "notes": "Safinamide chuyển hóa ở gan (CYP3A4, MAO-B). Suy gan nặng có thể làm tích lũy safinamide, tăng nguy cơ tác dụng phụ. CHỐNG CHỈ ĐỊNH ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng huyết áp nặng",
+                "Serotonin syndrome (nếu dùng với SSRI/SNRI): kích động, tăng thân nhiệt, tăng phản xạ, co giật",
+                "Dyskinesia nặng",
+                "Ảo giác, lú lẫn"
+            ],
+            "antidote": "Phentolamine hoặc nitroprusside cho tăng huyết áp. Cyproheptadine cho serotonin syndrome.",
+            "treatment": [
+                "Ngừng ngay safinamide",
+                "Nếu tăng huyết áp nặng:",
+                "  - Phentolamine 5-10mg IV",
+                "  - Nitroprusside IV nếu cần",
+                "  - Theo dõi huyết áp chặt chẽ",
+                "Nếu serotonin syndrome:",
+                "  - Cyproheptadine 4-8mg PO/NG, lặp lại mỗi 4 giờ",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "  - Điều trị co giật nếu có",
+                "Theo dõi: Dấu hiệu sinh tồn, huyết áp, dấu hiệu serotonin syndrome"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, huyết áp, dấu hiệu serotonin syndrome trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Phentolamine",
+                    "mechanism": "Alpha-blocker, đối kháng tác dụng tăng huyết áp",
+                    "indication": "Tăng huyết áp nặng do safinamide",
+                    "dose": "5-10mg IV, lặp lại nếu cần"
+                },
+                {
+                    "agent": "Cyproheptadine",
+                    "mechanism": "Serotonin antagonist, đối kháng serotonin syndrome",
+                    "indication": "Serotonin syndrome do safinamide",
+                    "dose": "4-8mg PO/NG, lặp lại mỗi 4 giờ"
+                }
+            ],
+            "notes": "Phentolamine đối kháng tăng huyết áp. Cyproheptadine đối kháng serotonin syndrome."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng bởi thức ăn.",
+                "timing": "50mg PO x 1 lần/ngày. Có thể tăng đến 100mg sau 2 tuần nếu cần. Uống cùng thời điểm mỗi ngày. Không ngừng đột ngột - giảm dần dần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Safinamide (Xadago)",
+                "UpToDate - Safinamide: Drug Information",
+                "Medscape - Safinamide Drug Reference",
+                "MDS Guidelines - Parkinson's Disease Treatment"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
+    "Opicapone": {
+        "group": "Neurology - Antiparkinsonian (COMT Inhibitor)",
+        "vietnamese_name": "Opicapone, Ongentys",
+        "administration": ["PO"],
+        "indications": [
+            "Parkinson's disease - điều trị bổ sung với levodopa/carbidopa",
+            "Giảm 'off' time (thời gian không đáp ứng với levodopa)",
+            "Tăng 'on' time (thời gian đáp ứng với levodopa)"
+        ],
+        "contraindications": [
+            "Dị ứng opicapone",
+            "Pheochromocytoma - CHỐNG CHỈ ĐỊNH",
+            "Dùng với non-selective MAO inhibitors (trong 14 ngày) - CHỐNG CHỈ ĐỊNH"
+        ],
+        "dosage": {
+            "adult_standard": "50mg PO x 1 lần/ngày (buổi tối, trước khi đi ngủ)",
+            "notes": "Opicapone là COMT inhibitor, ức chế catechol-O-methyltransferase. Dùng 1 lần/ngày, buổi tối, trước khi đi ngủ. Uống với hoặc không thức ăn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, giảm liều nếu cần"
+        },
+        "side_effects": [
+            "Dyskinesia (rối loạn vận động) - phổ biến",
+            "Tăng transaminase (ALT, AST) - phổ biến",
+            "Buồn nôn",
+            "Chóng mặt",
+            "Mất ngủ",
+            "Tăng creatine kinase (CK) - hiếm",
+            "Rhabdomyolysis - hiếm nhưng nghiêm trọng",
+            "Ảo giác - hiếm",
+            "Rối loạn hành vi (impulse control disorders) - hiếm"
+        ],
+        "interactions": [
+            "Non-selective MAO inhibitors: CHỐNG CHỈ ĐỊNH - tăng nguy cơ tăng huyết áp nặng",
+            "Levodopa: tăng nồng độ levodopa (tác dụng mong muốn, nhưng có thể tăng dyskinesia)",
+            "UDP-glucuronosyltransferase (UGT) inhibitors: tăng nồng độ opicapone"
+        ],
+        "pregnancy": "C - Thận trọng",
+        "mechanism_of_action": "Opicapone là COMT inhibitor (catechol-O-methyltransferase inhibitor), ức chế enzyme COMT ở ngoại biên và não. COMT chuyển hóa levodopa thành 3-O-methyldopa (không hoạt động) và dopamine thành 3-methoxytyramine. Ức chế COMT → giảm chuyển hóa levodopa và dopamine → tăng nồng độ levodopa và dopamine trong não → tăng hiệu quả levodopa. Dẫn đến: giảm 'off' time và tăng 'on' time với levodopa. ĐẶC ĐIỂM: (1) COMT inhibitor (tương tự entacapone, tolcapone), (2) Dùng 1 lần/ngày, buổi tối (ưu điểm so với entacapone - q8h), (3) Giảm 'off' time và tăng 'on' time với levodopa, (4) Dyskinesia phổ biến (có thể cần giảm liều levodopa), (5) Tăng transaminase phổ biến - theo dõi chức năng gan, (6) Nguy cơ rhabdomyolysis - hiếm nhưng nghiêm trọng.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm 'off' time, tăng 'on' time với levodopa",
+            "Dyskinesia - phổ biến, có thể cần giảm liều levodopa",
+            "Chức năng gan (ALT, AST) - QUAN TRỌNG: theo dõi định kỳ (tăng transaminase phổ biến)",
+            "Creatine kinase (CK) - theo dõi nếu có dấu hiệu rhabdomyolysis (đau cơ, yếu cơ, nước tiểu sẫm màu)",
+            "Dấu hiệu rhabdomyolysis - hiếm nhưng nghiêm trọng: đau cơ, yếu cơ, nước tiểu sẫm màu, tăng CK",
+            "Dấu hiệu ảo giác, lú lẫn - hiếm",
+            "Dấu hiệu rối loạn hành vi (impulse control disorders) - hiếm"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH với non-selective MAO inhibitors (trong 14 ngày) - tăng nguy cơ tăng huyết áp nặng",
+            "CHỐNG CHỈ ĐỊNH ở pheochromocytoma - tăng nguy cơ tăng huyết áp nặng",
+            "Dyskinesia phổ biến - có thể cần giảm liều levodopa",
+            "Tăng transaminase phổ biến - theo dõi chức năng gan định kỳ",
+            "Nguy cơ rhabdomyolysis - hiếm nhưng nghiêm trọng, theo dõi CK nếu có dấu hiệu",
+            "Dùng 1 lần/ngày, buổi tối, trước khi đi ngủ",
+            "Uống với hoặc không thức ăn",
+            "Không ngừng đột ngột - giảm dần dần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-2 giờ (ngắn), nhưng tác dụng ức chế COMT kéo dài 24 giờ",
+            "onset": "Vài ngày đến 1 tuần",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "99.9%",
+            "metabolism": "Chuyển hóa ở gan (UGT1A9, UGT2B7)",
+            "clearance": "Thải trừ qua thận (50%) và phân (50%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với non-selective MAO inhibitors trong 14 ngày. CHỐNG CHỈ ĐỊNH ở pheochromocytoma. Tăng transaminase phổ biến - theo dõi chức năng gan định kỳ. Nguy cơ rhabdomyolysis - hiếm nhưng nghiêm trọng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Non-selective MAO Inhibitors (Phenelzine, Tranylcypromine, Isocarboxazid)",
+                    "mechanism": "Cả hai đều ức chế chuyển hóa catecholamine, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ tăng huyết áp nặng, đe dọa tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không dùng opicapone trong 14 ngày sau khi ngừng non-selective MAO inhibitor."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "UDP-glucuronosyltransferase (UGT) Inhibitors",
+                    "mechanism": "Ức chế UGT, tăng nồng độ opicapone",
+                    "effect": "Tăng nồng độ opicapone, tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng. Theo dõi dấu hiệu tác dụng phụ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng opicapone",
+                "Pheochromocytoma - CHỐNG CHỈ ĐỊNH (tăng nguy cơ tăng huyết áp nặng)",
+                "Dùng với non-selective MAO inhibitors (trong 14 ngày) - CHỐNG CHỈ ĐỊNH (tăng nguy cơ tăng huyết áp nặng)"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng, tăng nguy cơ tăng transaminase",
+                "Suy thận nặng - thận trọng, giảm liều nếu cần",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Opicapone là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Opicapone bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ về dấu hiệu buồn nôn, chóng mặt."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, theo dõi chức năng gan chặt chẽ",
+            "severe": "Thận trọng, theo dõi chức năng gan chặt chẽ, có thể cần giảm liều",
+            "notes": "Opicapone chuyển hóa ở gan (UGT1A9, UGT2B7). Suy gan có thể làm tích lũy opicapone, tăng nguy cơ tăng transaminase. Theo dõi chức năng gan chặt chẽ ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Dyskinesia nặng",
+                "Tăng transaminase nặng",
+                "Rhabdomyolysis - đau cơ, yếu cơ, nước tiểu sẫm màu, tăng CK",
+                "Tăng huyết áp nặng (nếu dùng với MAO inhibitor)",
+                "Ảo giác, lú lẫn"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay opicapone",
+                "Nếu rhabdomyolysis:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải",
+                "  - Theo dõi CK, creatinine, myoglobin",
+                "  - Lọc máu nếu cần",
+                "Nếu tăng huyết áp nặng:",
+                "  - Phentolamine 5-10mg IV",
+                "  - Nitroprusside IV nếu cần",
+                "Theo dõi: Dấu hiệu sinh tồn, chức năng gan, CK, dấu hiệu rhabdomyolysis"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST), CK, dấu hiệu rhabdomyolysis (đau cơ, yếu cơ, nước tiểu sẫm màu) trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có rhabdomyolysis."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng bởi thức ăn.",
+                "timing": "50mg PO x 1 lần/ngày, buổi tối, trước khi đi ngủ. Uống cùng thời điểm mỗi ngày. Không ngừng đột ngột - giảm dần dần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Opicapone (Ongentys)",
+                "UpToDate - Opicapone: Drug Information",
+                "Medscape - Opicapone Drug Reference",
+                "MDS Guidelines - Parkinson's Disease Treatment"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
+    "Istradefylline": {
+        "group": "Neurology - Antiparkinsonian (Adenosine A2A Receptor Antagonist)",
+        "vietnamese_name": "Istradefylline, Nourianz",
+        "administration": ["PO"],
+        "indications": [
+            "Parkinson's disease - điều trị bổ sung với levodopa/carbidopa",
+            "Giảm 'off' time (thời gian không đáp ứng với levodopa)",
+            "Tăng 'on' time (thời gian đáp ứng với levodopa)"
+        ],
+        "contraindications": [
+            "Dị ứng istradefylline",
+            "Suy gan nặng - CHỐNG CHỈ ĐỊNH"
+        ],
+        "dosage": {
+            "adult_initial": "20mg PO x 1 lần/ngày",
+            "adult_max": "40mg PO x 1 lần/ngày (tăng sau 2 tuần nếu cần)",
+            "notes": "Istradefylline là adenosine A2A receptor antagonist. Dùng 1 lần/ngày. Bắt đầu với 20mg, có thể tăng đến 40mg sau 2 tuần nếu cần. Uống với hoặc không thức ăn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi (thải trừ qua gan)"
+        },
+        "side_effects": [
+            "Dyskinesia (rối loạn vận động) - phổ biến",
+            "Buồn nôn",
+            "Chóng mặt",
+            "Mất ngủ",
+            "Ảo giác - hiếm",
+            "Rối loạn hành vi (impulse control disorders) - hiếm",
+            "Tăng transaminase (hiếm)"
+        ],
+        "interactions": [
+            "CYP1A1 inhibitors: tăng nồng độ istradefylline",
+            "CYP3A4 inhibitors: tăng nồng độ istradefylline",
+            "CYP3A4 inducers: giảm nồng độ istradefylline"
+        ],
+        "pregnancy": "C - Thận trọng",
+        "mechanism_of_action": "Istradefylline là adenosine A2A receptor antagonist. Adenosine A2A receptors có mặt ở vùng striatum (basal ganglia), ức chế hoạt động của dopamine D2 receptors. Istradefylline ức chế adenosine A2A receptors → giảm ức chế dopamine D2 receptors → tăng hoạt động dopamine → tăng hiệu quả levodopa. Dẫn đến: giảm 'off' time và tăng 'on' time với levodopa. ĐẶC ĐIỂM: (1) Adenosine A2A receptor antagonist (cơ chế mới, khác với MAO-B inhibitor và COMT inhibitor), (2) Giảm 'off' time và tăng 'on' time với levodopa, (3) Dùng 1 lần/ngày, (4) Dyskinesia phổ biến (có thể cần giảm liều levodopa), (5) CHỐNG CHỈ ĐỊNH ở suy gan nặng.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm 'off' time, tăng 'on' time với levodopa",
+            "Dyskinesia - phổ biến, có thể cần giảm liều levodopa",
+            "Dấu hiệu ảo giác, lú lẫn - hiếm",
+            "Dấu hiệu rối loạn hành vi (impulse control disorders) - hiếm",
+            "Chức năng gan (ALT, AST) - hiếm, nhưng CHỐNG CHỈ ĐỊNH ở suy gan nặng"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH ở suy gan nặng",
+            "Dyskinesia phổ biến - có thể cần giảm liều levodopa",
+            "Dùng 1 lần/ngày, với hoặc không thức ăn",
+            "Thận trọng khi dùng với CYP3A4 inhibitors mạnh - tăng nồng độ",
+            "Thận trọng khi dùng với CYP3A4 inducers mạnh - giảm nồng độ",
+            "Không ngừng đột ngột - giảm dần dần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "83 giờ (rất dài)",
+            "onset": "Vài ngày đến 1 tuần",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "99.8%",
+            "metabolism": "Chuyển hóa ở gan (CYP1A1, CYP3A4)",
+            "clearance": "Thải trừ qua gan (90%) và thận (10%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở suy gan nặng. Istradefylline chuyển hóa ở gan, tích lũy ở suy gan nặng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 Inhibitors mạnh (Ketoconazole, Clarithromycin, Itraconazole)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ istradefylline",
+                    "effect": "Tăng nồng độ istradefylline, tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng. Có thể cần giảm liều istradefylline. Theo dõi dấu hiệu tác dụng phụ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 Inducers mạnh (Rifampin, Carbamazepine, Phenytoin)",
+                    "mechanism": "Cảm ứng CYP3A4, giảm nồng độ istradefylline",
+                    "effect": "Giảm nồng độ istradefylline, giảm hiệu quả",
+                    "management": "Thận trọng. Có thể cần tăng liều istradefylline. Theo dõi đáp ứng điều trị."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng istradefylline",
+                "Suy gan nặng - CHỐNG CHỈ ĐỊNH (tích lũy, tăng nguy cơ tác dụng phụ)"
+            ],
+            "tương_đối": [
+                "Suy gan nhẹ đến trung bình - thận trọng, theo dõi chức năng gan",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Istradefylline là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Istradefylline bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ về dấu hiệu buồn nôn, chóng mặt."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, theo dõi chức năng gan chặt chẽ",
+            "severe": "CHỐNG CHỈ ĐỊNH. Istradefylline chuyển hóa ở gan, tích lũy ở suy gan nặng.",
+            "notes": "Istradefylline chuyển hóa ở gan (CYP1A1, CYP3A4) và thải trừ qua gan (90%). Suy gan nặng có thể làm tích lũy istradefylline, tăng nguy cơ tác dụng phụ. CHỐNG CHỈ ĐỊNH ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Dyskinesia nặng",
+                "Ảo giác, lú lẫn nặng",
+                "Buồn nôn, nôn nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay istradefylline",
+                "Điều trị triệu chứng:",
+                "  - Antiemetic cho buồn nôn, nôn",
+                "  - Antipsychotic cho ảo giác (thận trọng, có thể làm nặng Parkinson)",
+                "Theo dõi: Dấu hiệu sinh tồn, dấu hiệu ảo giác, dyskinesia"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu ảo giác, dyskinesia trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (do half-life dài - 83 giờ)."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng bởi thức ăn.",
+                "timing": "20mg PO x 1 lần/ngày. Có thể tăng đến 40mg sau 2 tuần nếu cần. Uống cùng thời điểm mỗi ngày. Không ngừng đột ngột - giảm dần dần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Istradefylline (Nourianz)",
+                "UpToDate - Istradefylline: Drug Information",
+                "Medscape - Istradefylline Drug Reference",
+                "MDS Guidelines - Parkinson's Disease Treatment"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     }
 }
 

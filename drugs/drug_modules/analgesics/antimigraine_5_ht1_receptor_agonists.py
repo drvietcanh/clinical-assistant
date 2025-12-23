@@ -267,6 +267,165 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Rizatriptan'], 'last_updated': '2025-02-05',
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}}}
+        'High - FDA approved, multiple RCTs, clinical guidelines'}},
+    
+    "Lasmiditan": {
+        "group": "Analgesic - Antimigraine (5-HT1F Receptor Agonist)",
+        "vietnamese_name": "Lasmiditan, Reyvow",
+        "administration": ["PO"],
+        "indications": [
+            "Điều trị cấp tính cơn migraine (acute migraine treatment) ở người lớn",
+            "Migraine có tiền triệu (aura) hoặc không"
+        ],
+        "contraindications": [
+            "Dị ứng lasmiditan hoặc bất kỳ thành phần nào",
+            "Suy gan nặng (Child-Pugh C) - CHỐNG CHỈ ĐỊNH",
+            "Dùng với rượu (alcohol) - CHỐNG CHỈ ĐỊNH (tăng nguy cơ buồn ngủ, suy giảm nhận thức)"
+        ],
+        "dosage": {
+            "adult_standard": "50-100mg PO x 1 liều khi có cơn migraine",
+            "adult_max": "200mg PO x 1 liều (liều tối đa)",
+            "adult_repeat": "Có thể lặp lại sau 2 giờ nếu cần (tối đa 200mg/24 giờ)",
+            "notes": "Lasmiditan là 5-HT1F receptor agonist, điều trị cấp tính cơn migraine. Dùng khi có cơn migraine, không dùng để phòng ngừa. Uống với hoặc không thức ăn. KHÔNG lái xe hoặc vận hành máy móc trong ít nhất 8 giờ sau khi dùng."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, giảm liều nếu cần"
+        },
+        "side_effects": [
+            "Buồn ngủ (somnolence) - phổ biến, nghiêm trọng",
+            "Chóng mặt (dizziness) - phổ biến",
+            "Mệt mỏi (fatigue) - phổ biến",
+            "Buồn nôn",
+            "Cảm giác tê, ngứa ran (paresthesia) - phổ biến",
+            "Suy giảm nhận thức (cognitive impairment) - phổ biến",
+            "Lo lắng (anxiety) - hiếm",
+            "Tăng transaminase (hiếm)",
+            "Dị ứng (hiếm)"
+        ],
+        "interactions": [
+            "Rượu (alcohol): CHỐNG CHỈ ĐỊNH - tăng nguy cơ buồn ngủ, suy giảm nhận thức",
+            "CNS depressants (benzodiazepine, opioid, barbiturate): tăng nguy cơ buồn ngủ, suy giảm nhận thức",
+            "CYP3A4 inhibitors: tăng nồng độ lasmiditan",
+            "CYP3A4 inducers: giảm nồng độ lasmiditan"
+        ],
+        "pregnancy": "C - Thận trọng",
+        "mechanism_of_action": "Lasmiditan là 5-HT1F receptor agonist (selective serotonin receptor agonist). Khác với triptans (5-HT1B/1D receptor agonists), lasmiditan chỉ kích thích 5-HT1F receptors. 5-HT1F receptors có mặt trên các terminal thần kinh trigeminal, ức chế phóng thích chất trung gian gây viêm (CGRP, substance P) từ dây thần kinh trigeminal. Giảm đau migraine thông qua ức chế viêm thần kinh. KHÔNG gây co mạch (ưu điểm so với triptan - không có 5-HT1B receptor activation). ĐẶC ĐIỂM: (1) 5-HT1F receptor agonist (khác với triptan - 5-HT1B/1D), (2) KHÔNG gây co mạch (ưu điểm so với triptan), (3) Dùng khi có cơn migraine, không dùng để phòng ngừa, (4) Buồn ngủ và suy giảm nhận thức phổ biến, nghiêm trọng - KHÔNG lái xe trong ít nhất 8 giờ, (5) CHỐNG CHỈ ĐỊNH với rượu và ở suy gan nặng, (6) Uống với hoặc không thức ăn.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm đau migraine trong 2 giờ",
+            "Buồn ngủ, chóng mặt, mệt mỏi - phổ biến, nghiêm trọng",
+            "Suy giảm nhận thức - phổ biến",
+            "Chức năng gan (ALT, AST) - hiếm, nhưng CHỐNG CHỈ ĐỊNH ở suy gan nặng",
+            "Dấu hiệu dị ứng (phát ban, khó thở, phù mạch)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH với rượu (alcohol) - tăng nguy cơ buồn ngủ, suy giảm nhận thức",
+            "CHỐNG CHỈ ĐỊNH ở suy gan nặng (Child-Pugh C)",
+            "KHÔNG lái xe hoặc vận hành máy móc trong ít nhất 8 giờ sau khi dùng - buồn ngủ và suy giảm nhận thức phổ biến, nghiêm trọng",
+            "Dùng khi có cơn migraine, không dùng để phòng ngừa",
+            "Có thể lặp lại sau 2 giờ nếu cần (tối đa 200mg/24 giờ)",
+            "Uống với hoặc không thức ăn",
+            "Thận trọng khi dùng với CNS depressants - tăng nguy cơ buồn ngủ, suy giảm nhận thức",
+            "Thận trọng khi dùng với CYP3A4 inhibitors - tăng nồng độ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5.7 giờ",
+            "onset": "1-2 giờ",
+            "duration": "4-6 giờ",
+            "protein_binding": "55-60%",
+            "metabolism": "Chuyển hóa ở gan (CYP3A4, UGT)",
+            "clearance": "Thải trừ qua gan (70%) và thận (30%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "KHÔNG lái xe hoặc vận hành máy móc trong ít nhất 8 giờ sau khi dùng. Lasmiditan gây buồn ngủ và suy giảm nhận thức phổ biến, nghiêm trọng. CHỐNG CHỈ ĐỊNH với rượu (alcohol). CHỐNG CHỈ ĐỊNH ở suy gan nặng (Child-Pugh C).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rượu (Alcohol)",
+                    "mechanism": "Cả hai đều ức chế CNS, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ buồn ngủ, suy giảm nhận thức nặng, đe dọa tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không dùng lasmiditan với rượu hoặc trong 8 giờ sau khi uống rượu."
+                },
+                {
+                    "drug": "CNS Depressants (Benzodiazepine, Opioid, Barbiturate)",
+                    "mechanism": "Cả hai đều ức chế CNS, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ buồn ngủ, suy giảm nhận thức nặng",
+                    "management": "TRÁNH DÙNG CÙNG. Nếu bắt buộc, theo dõi chặt chẽ. KHÔNG lái xe trong ít nhất 8 giờ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 Inhibitors (Ketoconazole, Clarithromycin, Itraconazole)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ lasmiditan",
+                    "effect": "Tăng nồng độ lasmiditan, tăng nguy cơ tác dụng phụ (buồn ngủ, suy giảm nhận thức)",
+                    "management": "Thận trọng. Có thể cần giảm liều lasmiditan. Theo dõi dấu hiệu buồn ngủ, suy giảm nhận thức."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng lasmiditan hoặc bất kỳ thành phần nào",
+                "Dùng với rượu (alcohol) - CHỐNG CHỈ ĐỊNH (tăng nguy cơ buồn ngủ, suy giảm nhận thức nặng)",
+                "Suy gan nặng (Child-Pugh C) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy gan nhẹ đến trung bình - thận trọng, giảm liều nếu cần",
+                "Suy thận nặng - thận trọng, giảm liều nếu cần",
+                "Dùng với CNS depressants - tăng nguy cơ buồn ngủ, suy giảm nhận thức",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Lasmiditan là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Lasmiditan bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ về dấu hiệu buồn ngủ, suy giảm nhận thức."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, giảm liều nếu cần",
+            "severe": "CHỐNG CHỈ ĐỊNH. Lasmiditan chuyển hóa ở gan, tích lũy ở suy gan nặng.",
+            "notes": "Lasmiditan chuyển hóa ở gan (CYP3A4, UGT) và thải trừ qua gan (70%). Suy gan nặng có thể làm tích lũy lasmiditan, tăng nguy cơ tác dụng phụ (buồn ngủ, suy giảm nhận thức). CHỐNG CHỈ ĐỊNH ở suy gan nặng (Child-Pugh C)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Suy giảm nhận thức nặng",
+                "Chóng mặt nặng",
+                "Tăng transaminase"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay lasmiditan",
+                "Theo dõi dấu hiệu sinh tồn",
+                "KHÔNG lái xe hoặc vận hành máy móc trong ít nhất 8 giờ",
+                "Theo dõi: Dấu hiệu sinh tồn, chức năng gan"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST), dấu hiệu buồn ngủ, suy giảm nhận thức trong ít nhất 8-12 giờ."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng bởi thức ăn.",
+                "timing": "50-100mg PO x 1 liều khi có cơn migraine. Có thể lặp lại sau 2 giờ nếu cần (tối đa 200mg/24 giờ). Dùng ngay khi có triệu chứng migraine. QUAN TRỌNG: KHÔNG lái xe hoặc vận hành máy móc trong ít nhất 8 giờ sau khi dùng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lasmiditan (Reyvow)",
+                "UpToDate - Lasmiditan: Drug Information",
+                "Medscape - Lasmiditan Drug Reference",
+                "AHS Guidelines - Acute Migraine Treatment"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    }
+}
 
 __all__ = ['ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS']
