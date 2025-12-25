@@ -44,6 +44,13 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "Không thay thế điều trị chuẩn cho đột quỵ hoặc bệnh mạch máu não.",
             "Tránh dùng ở phụ nữ có thai, cho con bú.",
         ],
+        "pharmacokinetics": {
+            "half_life": "Piracetam: 4-5 giờ; Vinpocetine: 1-2 giờ",
+            "onset": "Vài giờ sau khi uống",
+            "duration": "Tác dụng kéo dài nhờ piracetam",
+            "protein_binding": "Piracetam: <10%; Vinpocetine: ~66%",
+            "clearance": "Piracetam: thải trừ chủ yếu qua thận (dạng nguyên dạng); Vinpocetine: chuyển hóa gan, thải qua thận"
+        },
     },
     "Citicoline/Piracetam": {
         "group": "Neurology - Combination (Neuroprotective + Nootropic)",
@@ -83,6 +90,13 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
         "precautions": [
             "Hiệu quả dài hạn còn gây tranh cãi; cân nhắc thời gian điều trị.",
         ],
+        "pharmacokinetics": {
+            "half_life": "Citicoline: 3-4 giờ; Piracetam: 4-5 giờ",
+            "onset": "Vài giờ sau khi uống",
+            "duration": "Tác dụng kéo dài nhờ piracetam",
+            "protein_binding": "Citicoline: thấp; Piracetam: <10%",
+            "clearance": "Citicoline: chuyển hóa thành choline và cytidine, thải qua thận; Piracetam: thải trừ chủ yếu qua thận (dạng nguyên dạng)"
+        },
     },
     "Ginkgo biloba/Vinpocetine": {
         "group": "Neurology - Combination (Herbal vasomodulator + Cerebral vasodilator)",
@@ -123,6 +137,13 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "Không dùng ở bệnh nhân có nguy cơ chảy máu cao.",
             "Ngưng trước phẫu thuật.",
         ],
+        "pharmacokinetics": {
+            "half_life": "Ginkgo biloba: 4-6 giờ; Vinpocetine: 1-2 giờ",
+            "onset": "Vài giờ sau khi uống",
+            "duration": "Tác dụng kéo dài nhờ ginkgo biloba",
+            "protein_binding": "Ginkgo biloba: không rõ; Vinpocetine: ~66%",
+            "clearance": "Ginkgo biloba: chuyển hóa gan, thải qua thận; Vinpocetine: chuyển hóa gan, thải qua thận"
+        },
     },
     "Olanzapine/Fluoxetine": {
         "group": "Psychiatry - Combination (Atypical antipsychotic + SSRI)",
@@ -168,6 +189,13 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "Theo dõi hội chứng serotonin khi dùng với các thuốc serotonergic khác.",
             "Theo dõi sát chuyển hóa (tăng cân, tăng đường, tăng lipid).",
         ],
+        "pharmacokinetics": {
+            "half_life": "Olanzapine: 30 giờ; Fluoxetine: 4-6 ngày (chất chuyển hóa norfluoxetine: 4-16 ngày)",
+            "onset": "Vài tuần để đạt hiệu quả đầy đủ",
+            "duration": "Dùng 1 lần/ngày nhờ half-life dài",
+            "protein_binding": "Olanzapine: 93%; Fluoxetine: 94.5%",
+            "clearance": "Olanzapine: chuyển hóa gan (CYP1A2, CYP2D6), thải qua thận; Fluoxetine: chuyển hóa gan (CYP2D6, CYP2C9) thành norfluoxetine (hoạt tính), thải qua thận"
+        },
     },
 }
 

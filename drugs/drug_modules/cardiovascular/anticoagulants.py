@@ -1691,9 +1691,24 @@ ANTICOAGULANTS = {
                 "Lexicomp - Rivaroxaban monograph",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th ed"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, multiple RCTs, clinical guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": {"hepatic": "Moderate"}
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
+            "CHEST Guidelines - VTE Treatment and Prophylaxis",
+            "ESC Guidelines - Atrial Fibrillation",
+            "ROCKET AF Study - Atrial Fibrillation",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     "Apixaban": {
         "group": "Cardiovascular - Anticoagulant (Direct Factor Xa Inhibitor - DOAC)",
@@ -1863,9 +1878,24 @@ ANTICOAGULANTS = {
                 "Lexicomp - Apixaban monograph",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th ed"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, multiple RCTs, clinical guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": {"hepatic": "Moderate"}
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
+            "CHEST Guidelines - VTE Treatment and Prophylaxis",
+            "ESC Guidelines - Atrial Fibrillation",
+            "ARISTOTLE Study - Atrial Fibrillation",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Dabigatran": {
@@ -2042,9 +2072,25 @@ ANTICOAGULANTS = {
                 "RE-COVER Study - New England Journal of Medicine (2009) - Dabigatran trong DVT/PE",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th ed"
             ],
-            "last_updated": "2025-12-24",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, multiple large RCTs (RE-LY, RE-COVER), clinical guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": {"gastrointestinal": "Moderate", "cardiac": "Moderate (MI risk)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
+            "CHEST Guidelines - VTE Treatment and Prophylaxis",
+            "ESC Guidelines - Atrial Fibrillation",
+            "RE-LY Study - Atrial Fibrillation",
+            "RE-COVER Study - VTE Treatment",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Edoxaban": {
@@ -2222,7 +2268,23 @@ ANTICOAGULANTS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, multiple large RCTs (ENGAGE AF-TIMI 48, Hokusai-VTE), clinical guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": {"hepatic": "Moderate"}
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
+            "CHEST Guidelines - VTE Treatment and Prophylaxis",
+            "ESC Guidelines - Atrial Fibrillation",
+            "ENGAGE AF-TIMI 48 Study - Atrial Fibrillation",
+            "Hokusai-VTE Study - VTE Treatment",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 
 }

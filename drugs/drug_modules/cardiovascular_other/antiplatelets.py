@@ -204,9 +204,24 @@ ANTIPLATELETS_DRUGS = {
                 "UpToDate - Aspirin: Drug information",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (Antithrombotic Trialists' Collaboration) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": {"gastrointestinal": "High (GI bleeding, ulcers)", "renal": "Moderate (high dose)", "hepatic": "Moderate (Reye syndrome in children)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Primary and Secondary Prevention",
+            "ACC/AHA Guidelines - Acute Coronary Syndrome",
+            "ESC Guidelines - Cardiovascular Disease Prevention",
+            "Antithrombotic Trialists' Collaboration",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Clopidogrel": {
@@ -383,9 +398,24 @@ ANTIPLATELETS_DRUGS = {
                 "UpToDate - Clopidogrel: Drug information",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Large RCTs (CURE, CAPRIE studies) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": {"hematologic": "Moderate (TTP rare)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Acute Coronary Syndrome",
+            "ACC/AHA Guidelines - Dual Antiplatelet Therapy",
+            "CURE Study - Acute Coronary Syndrome",
+            "CAPRIE Study - Secondary Prevention",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Ticagrelor": {
@@ -563,9 +593,24 @@ ANTIPLATELETS_DRUGS = {
                 "UpToDate - Ticagrelor: Drug information",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Large RCT (PLATO study)"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": {"respiratory": "Moderate (dyspnea)", "cardiac": "Moderate (bradycardia)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Acute Coronary Syndrome",
+            "ACC/AHA Guidelines - Dual Antiplatelet Therapy",
+            "PLATO Study - Acute Coronary Syndrome",
+            "ESC Guidelines - Acute Coronary Syndrome",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Prasugrel": {
@@ -732,9 +777,24 @@ ANTIPLATELETS_DRUGS = {
                 "UpToDate - Prasugrel: Drug information",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Large RCT (TRITON-TIMI 38 study)"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": {"hematologic": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Acute Coronary Syndrome",
+            "ACC/AHA Guidelines - Dual Antiplatelet Therapy",
+            "TRITON-TIMI 38 Study - Acute Coronary Syndrome",
+            "ESC Guidelines - Acute Coronary Syndrome",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Ticlopidine": {
@@ -891,9 +951,21 @@ ANTIPLATELETS_DRUGS = {
                 "UpToDate - Ticlopidine: Drug Information",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
             ],
-            "last_updated": "2025-02-04",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": {"hematologic": "High (neutropenia, TTP)", "hepatic": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Secondary Prevention",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Dipyridamole": {
@@ -1045,9 +1117,22 @@ ANTIPLATELETS_DRUGS = {
                 "UpToDate - Dipyridamole: Drug Information",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
             ],
-            "last_updated": "2025-02-04",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Moderate",
+            "organ_toxicity": {"cardiovascular": "Moderate (hypotension, angina)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Secondary Prevention",
+            "ESPRIT Study - Stroke Prevention",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 }
 

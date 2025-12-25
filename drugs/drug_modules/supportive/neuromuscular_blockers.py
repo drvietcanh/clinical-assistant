@@ -34,6 +34,17 @@ NEUROMUSCULAR_BLOCKERS_DRUGS = {
             "Thuốc chống co giật mạn: có thể cần liều cao hơn.",
         ],
         "pregnancy": "C – dùng khi cần đặt NKQ/phẫu thuật.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Difficult Airway Guidelines",
+            "SCCM ICU Sedation Guidelines"
+        ],
         "mechanism_of_action": "Chẹn cạnh tranh thụ thể nicotinic, không khử cực, gây giãn cơ.",
         "monitoring": [
             "TOF (Train-of-Four).",
@@ -140,6 +151,17 @@ NEUROMUSCULAR_BLOCKERS_DRUGS = {
             "Aminoglycoside, magnesium, thuốc mê hô hấp: tăng block.",
         ],
         "pregnancy": "C – dùng khi cần đặt NKQ/phẫu thuật.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Difficult Airway Guidelines",
+            "SCCM ICU Sedation Guidelines"
+        ],
         "mechanism_of_action": "Chẹn cạnh tranh thụ thể nicotinic, không khử cực.",
         "monitoring": ["TOF", "HA, nhịp tim, SpO2, EtCO2."],
         "precautions": [
@@ -242,6 +264,17 @@ NEUROMUSCULAR_BLOCKERS_DRUGS = {
             "Aminoglycoside, magnesium, thuốc mê hô hấp: tăng block.",
         ],
         "pregnancy": "B–C; dùng khi cần đặt NKQ/phẫu thuật.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Difficult Airway Guidelines",
+            "SCCM ICU Sedation Guidelines"
+        ],
         "mechanism_of_action": "Chẹn cạnh tranh thụ thể nicotinic; phân hủy qua Hofmann và ester hydrolysis.",
         "monitoring": ["TOF", "HA/nhịp tim, SpO2, EtCO2."],
         "precautions": [
@@ -350,6 +383,18 @@ NEUROMUSCULAR_BLOCKERS_DRUGS = {
             "Magnesium/aminoglycoside: thay đổi đáp ứng block.",
         ],
         "pregnancy": "C – dùng khi cần RSI; chuẩn bị atropine cho mẹ/thai nếu nhịp chậm.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True, "metabolic": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Difficult Airway Guidelines",
+            "SCCM ICU Sedation Guidelines",
+            "Malignant Hyperthermia Association Guidelines"
+        ],
         "mechanism_of_action": (
             "Chủ vận nicotinic gây khử cực kéo dài tại bản vận động, dẫn đến giãn cơ ngắn; bị thủy phân bởi pseudocholinesterase huyết tương."
         ),

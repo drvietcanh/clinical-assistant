@@ -210,7 +210,22 @@ TETRACYCLINE_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"dental": "High (children <8, pregnancy)", "hepatic": "Moderate", "neurological": "Low (pseudotumor cerebri)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Lyme Disease",
+            "IDSA Guidelines - Sexually Transmitted Diseases (Chlamydia)",
+            "CDC Guidelines - Malaria Prevention",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Minocycline": {
@@ -380,7 +395,21 @@ TETRACYCLINE_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"dental": "High (children <8, pregnancy)", "neurological": "Moderate (vestibular toxicity)", "hepatic": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Acne Treatment",
+            "IDSA Guidelines - Lyme Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Tetracycline": {
@@ -545,7 +574,21 @@ TETRACYCLINE_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"dental": "High (children <8, pregnancy)", "hepatic": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Acne Treatment",
+            "IDSA Guidelines - Chlamydia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 }
 

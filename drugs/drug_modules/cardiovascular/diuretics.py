@@ -208,9 +208,24 @@ DIURETICS = {
                 "DOSE Study - New England Journal of Medicine (2011) - Furosemide trong suy tim cấp",
                 "American Heart Association/American College of Cardiology guidelines - Heart failure"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Extensive clinical experience and RCTs (DOSE study) in acute heart failure"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate (hypoperfusion)", "ototoxicity": "Moderate (high dose IV)", "metabolic": "High (electrolyte disturbances)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA Guidelines - Heart Failure",
+            "ESC Guidelines - Heart Failure",
+            "DOSE Study - Acute Heart Failure",
+            "KDIGO Guidelines - Acute Kidney Injury",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Hydrochlorothiazide": {
@@ -407,9 +422,23 @@ DIURETICS = {
                   "ALLHAT Study - JAMA (2002) - Thiazide trong tăng huyết áp",
                   "American Heart Association/American College of Cardiology guidelines - Hypertension"
               ],
-              "last_updated": "2024-12-19",
+              "last_updated": "2025-02-18",
               "evidence_level": "High - Extensive clinical experience and large RCTs (ALLHAT) in hypertension"
-          }
+          },
+          "risk_flags": {
+              "high_alert": False,
+              "narrow_therapeutic_index": False,
+              "icu_critical_care_only": False,
+              "bleeding_risk": "Low",
+              "organ_toxicity": {"metabolic": "Moderate (electrolyte disturbances, hyperglycemia, hyperuricemia)"}
+          },
+          "guideline_tags": [
+              "ACC/AHA Guidelines - Hypertension",
+              "ALLHAT Study - Hypertension",
+              "ESC/ESH Guidelines - Hypertension",
+              "WHO Essential Medicines List"
+          ],
+          "last_updated": "2025-02-18",
       },
 
     "Spironolactone": {
@@ -661,10 +690,24 @@ DIURETICS = {
                 "American Heart Association/American College of Cardiology guidelines - Heart failure management",
                 "Goodman & Gilman's Pharmacological Basis of Therapeutics - Diuretics"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (RALES, EPHESUS) showing mortality benefit in heart failure"
-        }
-
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "High (hyperkalemia)", "endocrine": "Moderate (gynecomastia, menstrual irregularities)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+            "ESC Guidelines - Heart Failure",
+            "RALES Study - Heart Failure",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Bumetanide": {

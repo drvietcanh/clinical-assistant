@@ -195,8 +195,23 @@ INSULINS_DRUGS = {
         'UKPDS Study - Lancet (1998) - Intensive glucose control in type 2 diabetes'
         ,
         "Goodman & Gilman's Pharmacological Basis of Therapeutics - Insulin and oral hypoglycemic agents"
-        ], 'last_updated': '2024-12-19', 'evidence_level':
+        ], 'last_updated': '2025-02-18', 'evidence_level':
         'High - Multiple large RCTs (DCCT, UKPDS) showing benefit of intensive glucose control'
-        }}}
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "High (hypoglycemia)"}
+        },
+        "guideline_tags": [
+            "ADA Standards of Medical Care in Diabetes",
+            "AACE/ACE Diabetes Guidelines",
+            "IDF Diabetes Guidelines",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+        }}
 
 __all__ = ['INSULINS_DRUGS']

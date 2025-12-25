@@ -62,6 +62,20 @@ PENICILLIN_ANTIBIOTICS = {
         },
         "storage": "Bảo quản viên ở nhiệt độ phòng, tránh ẩm.",
         "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Acute Bacterial Sinusitis",
+            "IDSA Guidelines - Acute Otitis Media",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Ampicillin": {
@@ -109,6 +123,19 @@ PENICILLIN_ANTIBIOTICS = {
             "clearance": "Thận (chủ yếu)",
         },
         "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Infective Endocarditis (Enterococcus)",
+            "IDSA Guidelines - Listeria monocytogenes Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Amoxicillin-clavulanate": {
@@ -155,6 +182,20 @@ PENICILLIN_ANTIBIOTICS = {
             "clearance": "Thận (cả hai thành phần)",
         },
         "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Moderate", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Acute Bacterial Sinusitis",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Ampicillin-sulbactam": {
@@ -200,6 +241,19 @@ PENICILLIN_ANTIBIOTICS = {
             "clearance": "Thận",
         },
         "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Intra-abdominal Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Nafcillin": {
@@ -239,6 +293,19 @@ PENICILLIN_ANTIBIOTICS = {
             "clearance": "Chủ yếu gan (mật), không cần chỉnh thận",
         },
         "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Moderate", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Infective Endocarditis (MSSA)",
+            "IDSA Guidelines - Staphylococcus aureus Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Oxacillin": {
@@ -277,6 +344,19 @@ PENICILLIN_ANTIBIOTICS = {
             "clearance": "Chủ yếu gan (mật)",
         },
         "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Moderate", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Infective Endocarditis (MSSA)",
+            "IDSA Guidelines - Staphylococcus aureus Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 }
 

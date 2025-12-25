@@ -97,6 +97,22 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm và ánh sáng.",
         "black_box_warnings": "Nguy cơ viêm gân/đứt gân, bệnh thần kinh ngoại biên, tác dụng phụ thần kinh trung ương, và làm nặng thêm nhược cơ.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"musculoskeletal": "High (tendon rupture)", "cardiac": "Moderate (QT prolongation)", "neurological": "Moderate", "metabolic": "Moderate (glucose dysregulation)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Traveler's Diarrhea",
+            "CDC Guidelines - Anthrax Treatment",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Norfloxacin": {
@@ -390,7 +406,7 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
         "range": "10,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)",
         "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Levofloxacin generic thường rẻ hơn (10,000-30,000 VND/viên 500mg). Tavanic (brand) thường đắt hơn (30,000-50,000 VND/viên 500mg). Dạng IV: 80,000-150,000 VND/lọ 500mg."
     },
-    "references": {
+        "references": {
         "primary_sources": [
             "FDA Drug Label - Levofloxacin (Tavanic)",
             "UpToDate - Levofloxacin: Drug Information",
@@ -400,9 +416,24 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
             "Micromedex - Levofloxacin Drug Information",
             "IDSA Guidelines - Antimicrobial Therapy"
         ],
-        "last_updated": "2024-12-19",
+        "last_updated": "2025-02-18",
         "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-    }
+    },
+    "risk_flags": {
+        "high_alert": True,
+        "narrow_therapeutic_index": False,
+        "icu_critical_care_only": False,
+        "bleeding_risk": "Low",
+        "organ_toxicity": {"musculoskeletal": "High (tendon rupture)", "cardiac": "Moderate (QT prolongation)", "neurological": "Moderate"}
+    },
+    "guideline_tags": [
+        "IDSA Guidelines - Community-Acquired Pneumonia",
+        "IDSA Guidelines - Complicated Urinary Tract Infections",
+        "IDSA Guidelines - Skin and Soft Tissue Infections",
+        "IDSA Guidelines - Acute Bacterial Sinusitis",
+        "WHO Essential Medicines List"
+    ],
+    "last_updated": "2025-02-18",
     },
     
     "Moxifloxacin": {
@@ -628,9 +659,23 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
                 "Micromedex - Moxifloxacin Drug Information",
                 "IDSA Guidelines - Community-Acquired Pneumonia"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"musculoskeletal": "High (tendon rupture)", "cardiac": "High (QT prolongation)", "neurological": "Moderate", "hepatic": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Complicated Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Complicated Intra-abdominal Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 }
 

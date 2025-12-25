@@ -196,7 +196,22 @@ MACROLIDE_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiac": "High (QT prolongation, torsades de pointes)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "CDC Guidelines - Sexually Transmitted Diseases (Chlamydia, Gonorrhea)",
+            "IDSA Guidelines - Traveler's Diarrhea",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Clarithromycin": {
@@ -394,7 +409,21 @@ MACROLIDE_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiac": "High (QT prolongation, torsades de pointes)", "hepatic": "Moderate", "musculoskeletal": "Moderate (rhabdomyolysis with statins)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "ACG Guidelines - Helicobacter pylori Treatment",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Erythromycin": {
@@ -613,7 +642,21 @@ MACROLIDE_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiac": "High (QT prolongation, torsades de pointes)", "hepatic": "Moderate", "gastrointestinal": "High (GI side effects)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "AHA Guidelines - Infective Endocarditis Prophylaxis",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 }
 

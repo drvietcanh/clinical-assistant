@@ -241,9 +241,25 @@ SULFONAMIDE_ANTIBIOTICS = {
             "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
             "Sanford Guide to Antimicrobial Therapy"
         ],
-        "last_updated": "2025-02-03",
+        "last_updated": "2025-02-18",
         "evidence_level": "Level 1 - FDA approved, multiple clinical trials, extensive clinical experience"
-    }
+    },
+    "risk_flags": {
+        "high_alert": True,
+        "narrow_therapeutic_index": False,
+        "icu_critical_care_only": False,
+        "bleeding_risk": "Low",
+        "organ_toxicity": {"dermatologic": "High (SJS/TEN)", "renal": "Moderate", "hematologic": "Moderate", "metabolic": "Moderate (hyperkalemia)"}
+    },
+    "guideline_tags": [
+        "IDSA Guidelines - Complicated Urinary Tract Infections",
+        "IDSA Guidelines - Pneumocystis jirovecii Pneumonia",
+        "IDSA Guidelines - Toxoplasma gondii Infection",
+        "IDSA Guidelines - Methicillin-Resistant Staphylococcus aureus Infections",
+        "CDC Guidelines - Opportunistic Infections in HIV",
+        "WHO Essential Medicines List"
+    ],
+    "last_updated": "2025-02-18",
     }
 }
 

@@ -209,9 +209,24 @@ ARBS = {
                 "LIFE Study - The Lancet",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (ELITE-2, LIFE) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+            "ESC Guidelines - Heart Failure",
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Valsartan": {
@@ -294,9 +309,24 @@ ARBS = {
                 "UpToDate - Valsartan: Drug Information",
                 "VALIANT Trial - The New England Journal of Medicine"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+            "ESC Guidelines - Heart Failure",
+            "ACC/AHA Guidelines - Hypertension",
+            "VALIANT Trial - Post-Myocardial Infarction",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Telmisartan": {
@@ -502,9 +532,24 @@ ARBS = {
                 "TRANSCEND Study - The Lancet",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (ONTARGET, TRANSCEND) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ONTARGET Study - Cardiovascular Risk Reduction",
+            "TRANSCEND Study - Cardiovascular Risk Reduction",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Olmesartan": {
@@ -573,9 +618,22 @@ ARBS = {
                 "FDA Drug Label - Benicar (olmesartan)",
                 "UpToDate - Olmesartan: Drug Information"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "gastrointestinal": "Moderate (sprue-like enteropathy)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Candesartan": {
@@ -645,9 +703,24 @@ ARBS = {
                 "UpToDate - Candesartan: Drug Information",
                 "CHARM Study - The Lancet"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - CHARM Study showing benefit in heart failure"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+            "ESC Guidelines - Heart Failure",
+            "CHARM Study - Heart Failure",
+            "ACC/AHA Guidelines - Hypertension",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Irbesartan": {
@@ -721,9 +794,24 @@ ARBS = {
                 "IRMA-2 Study - The New England Journal of Medicine",
                 "IDNT Study - The New England Journal of Medicine"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - IRMA-2, IDNT studies showing benefit in diabetic nephropathy"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "KDIGO Guidelines - Diabetic Kidney Disease",
+            "IRMA-2 Study - Diabetic Nephropathy",
+            "IDNT Study - Diabetic Nephropathy",
+            "ACC/AHA Guidelines - Hypertension",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Azilsartan medoxomil": {
@@ -878,7 +966,20 @@ ARBS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, nhiều RCT chứng minh hiệu quả hạ huyết áp 24 giờ mạnh"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 }
 

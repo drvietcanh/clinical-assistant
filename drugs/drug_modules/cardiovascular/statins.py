@@ -244,9 +244,23 @@ STATINS = {
                 "NLA Guidelines - Statin Safety (2014)",
                 "Goodman & Gilman's Pharmacological Basis of Therapeutics - Lipid-lowering drugs"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (ASCOT, CARDS, PROVE-IT) showing cardiovascular benefit"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"musculoskeletal": "High (rhabdomyolysis)", "hepatic": "Moderate", "metabolic": "Moderate (hyperglycemia)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Blood Cholesterol Management",
+            "ESC/EAS Guidelines - Dyslipidemia Management",
+            "NLA Guidelines - Statin Safety",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Simvastatin": {
@@ -606,9 +620,23 @@ STATINS = {
                 "4S Study - The Lancet",
                 "HPS Study - The Lancet"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Multiple large RCTs (4S, HPS) showing cardiovascular benefit"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"musculoskeletal": "High (rhabdomyolysis)", "hepatic": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Blood Cholesterol Management",
+            "ESC/EAS Guidelines - Dyslipidemia Management",
+            "NLA Guidelines - Statin Safety",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Lovastatin": {
@@ -789,9 +817,23 @@ STATINS = {
                 "AFCAPS/TexCAPS Study - JAMA",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - FDA approved, multiple large RCTs showing cardiovascular benefit"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"musculoskeletal": "High (rhabdomyolysis)", "hepatic": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Blood Cholesterol Management",
+            "ESC/EAS Guidelines - Dyslipidemia Management",
+            "NLA Guidelines - Statin Safety",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Pravastatin": {
@@ -966,9 +1008,23 @@ STATINS = {
                 "WOSCOPS Study - New England Journal of Medicine (1995)",
                 "LIPID Study - New England Journal of Medicine (1998)"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (WOSCOPS, LIPID) showing cardiovascular benefit"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"musculoskeletal": "Moderate (rhabdomyolysis)", "hepatic": "Low"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Blood Cholesterol Management",
+            "ESC/EAS Guidelines - Dyslipidemia Management",
+            "NLA Guidelines - Statin Safety",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Rosuvastatin": {
@@ -1152,9 +1208,23 @@ STATINS = {
                 "JUPITER Study - New England Journal of Medicine (2008)",
                 "HOPE-3 Study - New England Journal of Medicine (2016)"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (JUPITER, HOPE-3) showing cardiovascular benefit"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"musculoskeletal": "High (rhabdomyolysis)", "hepatic": "Moderate", "renal": "Moderate (proteinuria)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Blood Cholesterol Management",
+            "ESC/EAS Guidelines - Dyslipidemia Management",
+            "NLA Guidelines - Statin Safety",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Fluvastatin": {

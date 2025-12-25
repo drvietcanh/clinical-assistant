@@ -205,10 +205,24 @@ LINCOSAMIDE_ANTIBIOTICS = {
                 "Micromedex - Clindamycin Drug Information",
                 "IDSA Guidelines - Skin and Soft Tissue Infections, Anaerobic Infections"
             ],
-            "last_updated": "2025-02-03",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
-
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"gastrointestinal": "High (C. difficile colitis)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Anaerobic Infections",
+            "IDSA Guidelines - Clostridium difficile Infection",
+            "IDSA Guidelines - Odontogenic Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 }
 

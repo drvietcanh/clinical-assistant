@@ -212,10 +212,25 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "Micromedex - Piperacillin-Tazobactam Drug Information",
                 "IDSA Guidelines - Hospital-Acquired Pneumonia, Intra-abdominal Infections"
             ],
-            "last_updated": "2025-02-03",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
-
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Moderate",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low", "hematologic": "Moderate (giảm prothrombin)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Ventilator-Associated Pneumonia",
+            "IDSA Guidelines - Intra-abdominal Infections",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Meropenem": {
@@ -409,10 +424,25 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "Lexicomp Online - Meropenem Monograph",
                 "Micromedex - Meropenem Drug Information"
             ],
-            "last_updated": "2025-02-03",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
-
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"neurological": "Moderate (seizures)", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Ventilator-Associated Pneumonia",
+            "IDSA Guidelines - Complicated Intra-abdominal Infections",
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Febrile Neutropenia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Imipenem-cilastatin": {
@@ -639,9 +669,25 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "Lexicomp Online - Imipenem-cilastatin Monograph",
                 "Micromedex - Imipenem-cilastatin Drug Information"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"neurological": "High (seizures)", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Ventilator-Associated Pneumonia",
+            "IDSA Guidelines - Complicated Intra-abdominal Infections",
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Febrile Neutropenia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Ertapenem": {
@@ -1033,9 +1079,24 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "CDC Guidelines - Syphilis Treatment",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều thập kỷ"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low", "neurological": "Moderate (co giật ở liều cao/suy thận)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Infective Endocarditis",
+            "IDSA Guidelines - Bacterial Meningitis",
+            "CDC Guidelines - Syphilis Treatment",
+            "WHO Essential Medicines List",
+            "IDSA Guidelines - Skin and Soft Tissue Infections"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Aztreonam": {

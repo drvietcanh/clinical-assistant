@@ -217,9 +217,24 @@ ACE_INHIBITORS = {
                 "SAVE Study - New England Journal of Medicine",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (SOLVD, SAVE) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+            "ESC Guidelines - Heart Failure",
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Enalapril": {
@@ -431,9 +446,24 @@ ACE_INHIBITORS = {
                 "CONSENSUS Study - New England Journal of Medicine",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (SOLVD, CONSENSUS) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+            "ESC Guidelines - Heart Failure",
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Benazepril": {
@@ -596,7 +626,20 @@ ACE_INHIBITORS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, sử dụng rộng rãi trong tăng huyết áp"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Lisinopril": {
@@ -806,9 +849,24 @@ ACE_INHIBITORS = {
                 "GISSI-3 Study - The Lancet",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (ATLAS, GISSI-3) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+            "ESC Guidelines - Heart Failure",
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Ramipril": {
@@ -993,9 +1051,23 @@ ACE_INHIBITORS = {
                 "HOPE Study - New England Journal of Medicine",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - HOPE study (large RCT) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "HOPE Study - Cardiovascular Risk Reduction",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Perindopril": {
@@ -1166,9 +1238,24 @@ ACE_INHIBITORS = {
                 "EUROPA Study - The Lancet",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - PROGRESS and EUROPA studies (large RCTs) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ESC Guidelines - Cardiovascular Disease Prevention",
+            "PROGRESS Study - Stroke Prevention",
+            "EUROPA Study - Cardiovascular Risk Reduction",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 
 }

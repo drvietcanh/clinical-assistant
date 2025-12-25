@@ -39,6 +39,18 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "Thuốc hạ huyết áp, thuốc lợi tiểu: tăng nguy cơ tụt huyết áp.",
         ],
         "pregnancy": "B–C: thường dùng trong gây mê ngắn hạn; tránh trong an thần kéo dài thai kỳ nếu có lựa chọn khác.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True, "metabolic": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "SCCM ICU Sedation Guidelines",
+            "ASA Practice Guidelines for Sedation and Analgesia",
+            "PADIS Guidelines"
+        ],
         # === 6 ENHANCED FIELDS CƠ BẢN ===
         "mechanism_of_action": (
             "Propofol là thuốc gây mê đường tĩnh mạch, tăng cường hoạt tính của GABA tại thụ thể GABA_A, "
@@ -179,6 +191,18 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "Thuốc cảm ứng CYP3A4 (rifampin, phenytoin): giảm hiệu quả an thần.",
         ],
         "pregnancy": "D khi dùng kéo dài; có thể dùng liều đơn trong tiền mê khi cần thiết.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"respiratory": True, "neurologic": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "SCCM ICU Sedation Guidelines",
+            "ASA Practice Guidelines for Sedation and Analgesia",
+            "PADIS Guidelines"
+        ],
         "mechanism_of_action": (
             "Midazolam là benzodiazepine, gắn vào vị trí đặc hiệu trên thụ thể GABA_A, "
             "tăng tần suất mở kênh chloride khi GABA gắn, làm tăng ức chế sau synap. "
@@ -488,6 +512,18 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "Thuốc an thần khác (opioid, propofol, benzo): hiệp đồng an thần, có thể giảm nhu cầu opioid.",
         ],
         "pregnancy": "C: thận trọng, chỉ dùng khi lợi ích vượt trội.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "SCCM ICU Sedation Guidelines",
+            "ASA Practice Guidelines for Sedation and Analgesia",
+            "PADIS Guidelines"
+        ],
         "mechanism_of_action": (
             "Dexmedetomidine là chất chủ vận chọn lọc alpha-2 adrenergic trung ương, "
             "giảm phóng thích norepinephrine, gây an thần kiểu ngủ sinh lý, giảm lo âu và giảm đau nhẹ, "
@@ -627,6 +663,18 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "Thuốc ức chế tổng hợp steroid (ketoconazole): có thể tăng ức chế thượng thận.",
         ],
         "pregnancy": "C: cân nhắc khi lợi ích vượt trội; thường tránh truyền kéo dài.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"endocrine": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "SCCM ICU Sedation Guidelines",
+            "ASA Practice Guidelines for Sedation and Analgesia",
+            "Difficult Airway Guidelines"
+        ],
         "mechanism_of_action": (
             "Etomidate tăng cường dẫn truyền GABA tại thụ thể GABA_A, gây gây mê nhanh với tối thiểu ảnh hưởng đến huyết động; "
             "không có tác dụng giảm đau đáng kể."
@@ -763,6 +811,18 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "Warfarin: tăng tác dụng (ức chế chuyển hóa)"
         ],
         "pregnancy": "C - Thận trọng trong thai kỳ",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"respiratory": True, "cardiac": True, "neurologic": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "SCCM ICU Sedation Guidelines",
+            "ASA Practice Guidelines for Sedation and Analgesia",
+            "Brain Trauma Foundation Guidelines (ICP management)"
+        ],
         "mechanism_of_action": "Thiopental là barbiturate tác dụng ngắn. Tăng cường hoạt tính của GABA tại thụ thể GABA_A, làm tăng dòng chloride vào tế bào thần kinh, gây ưu phân cực màng và ức chế dẫn truyền thần kinh. Thiopental có khởi phát rất nhanh (30-60 giây) do phân bố nhanh vào não, nhưng tác dụng ngắn (5-10 phút) do phân bố lại vào mô mỡ. Khi dùng liều cao, kéo dài (barbiturate coma), thuốc tích lũy ở mô mỡ và có thể có tác dụng kéo dài. Thiopental làm giảm chuyển hóa não, giảm lưu lượng máu não, giảm áp lực nội sọ (ICP) - có lợi trong tăng áp lực nội sọ.",
         "monitoring": [
             "Huyết áp liên tục (arterial line nếu có thể)",

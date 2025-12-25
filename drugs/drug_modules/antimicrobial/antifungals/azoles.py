@@ -679,6 +679,19 @@ AZOLES_DRUGS = {
             "Midazolam, Triazolam: tăng nồng độ - giảm liều"
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True, "cardiac": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "IDSA Invasive Aspergillosis Guidelines 2024",
+            "IDSA Candidiasis Guidelines 2024",
+            "ECMM-ERCMID-ERS Invasive Fungal Disease Guidelines",
+            "WHO Guidelines for Invasive Fungal Infections"
+        ],
         "mechanism_of_action": "Posaconazole là triazole antifungal, ức chế enzyme lanosterol 14-alpha-demethylase (CYP51), ngăn chặn chuyển đổi lanosterol thành ergosterol (thành phần chính của màng tế bào nấm). Thiếu ergosterol → màng tế bào nấm không ổn định → chết tế bào nấm. Phổ kháng nấm rộng: Aspergillus, Candida, Mucor, Fusarium, Scedosporium. Đặc biệt hiệu quả trên Mucor (mucormycosis) - hiệu quả hơn các azole khác. Ức chế CYP3A4 mạnh → nhiều tương tác thuốc.",
         "monitoring": [
             "Chức năng gan (ALT, AST) - trước và trong điều trị",
@@ -871,6 +884,19 @@ AZOLES_DRUGS = {
             "Thuốc/nhóm gây QT ngắn: thận trọng"
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True, "cardiac": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "IDSA Invasive Aspergillosis Guidelines 2024",
+            "IDSA Candidiasis Guidelines 2024",
+            "ECMM-ERCMID-ERS Invasive Fungal Disease Guidelines",
+            "WHO Guidelines for Invasive Fungal Infections"
+        ],
         "mechanism_of_action": "Isavuconazole (hoạt chất từ tiền chất isavuconazonium sulfate) là triazole ức chế lanosterol 14α-demethylase (CYP51) của nấm, ngăn tổng hợp ergosterol → màng tế bào nấm mất ổn định. Phổ rộng: Aspergillus, Mucorales, Candida, Fusarium.",
         "monitoring": [
             "Chức năng gan (ALT, AST, bilirubin) trước và trong điều trị",

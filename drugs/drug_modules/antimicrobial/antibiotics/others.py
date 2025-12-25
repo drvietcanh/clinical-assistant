@@ -163,7 +163,21 @@ OTHER_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Uncomplicated Urinary Tract Infections",
+            "IDSA Guidelines - Multidrug-Resistant Gram-Negative Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Nitrofurantoin": {
@@ -355,7 +369,20 @@ OTHER_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"pulmonary": "High (acute pneumonitis)", "neurological": "High (peripheral neuropathy)", "hepatic": "Moderate", "hematologic": "Moderate (hemolytic anemia in G6PD deficiency)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Uncomplicated Urinary Tract Infections",
+            "IDSA Guidelines - Urinary Tract Infection Prophylaxis",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Fidaxomicin": {
@@ -500,7 +527,20 @@ OTHER_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA/SHEA guidelines 2021, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"gastrointestinal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA/SHEA Guidelines - Clostridioides difficile Infection",
+            "IDSA Guidelines - Clostridium difficile Infection",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Eravacycline": {

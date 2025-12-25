@@ -132,9 +132,23 @@ POLYMYXIN_ANTIBIOTICS = {
                 "Lexicomp Online - Colistin Monograph",
                 "Micromedex - Colistin Drug Information"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": True,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "High", "neurological": "High (neurotoxicity, neuromuscular blockade)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Multidrug-Resistant Gram-Negative Infections",
+            "IDSA Guidelines - Carbapenem-Resistant Enterobacteriaceae",
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Polymyxin B": {
@@ -367,7 +381,21 @@ POLYMYXIN_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": True,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "High", "neurological": "High (neurotoxicity, neuromuscular blockade)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Multidrug-Resistant Gram-Negative Infections",
+            "IDSA Guidelines - Carbapenem-Resistant Enterobacteriaceae",
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 }
 

@@ -27,8 +27,18 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'Hoại tử (nếu tiêm ngoài mạch)'], 'interactions': [
         'Beta-blockers: đối kháng tác dụng', 'MAOIs: tăng tác dụng',
         'Tricyclic antidepressants: tăng tác dụng',
-        'Digoxin: tăng nguy cơ loạn nhịp'], 'pregnancy':
-        'C - An toàn trong cấp cứu', 'mechanism_of_action':
+        'Digoxin: tăng nguy cơ loạn nhịp'],         'pregnancy':
+        'C - An toàn trong cấp cứu', 'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'organ_toxicity': {'cardiac': True},
+            'icu_critical_care_only': False,
+            'look_alike_sound_alike': []
+        }, 'guideline_tags': [
+            'AHA ACLS Guidelines',
+            'Anaphylaxis Guidelines (WAO, AAAAI)',
+            'SCCM Shock Management Guidelines'
+        ], 'mechanism_of_action':
         'Non-selective alpha và beta-adrenergic receptor agonist. Kích thích alpha-1 receptors → co mạch ngoại vi, tăng huyết áp. Kích thích beta-1 receptors → tăng nhịp tim, tăng co bóp cơ tim, tăng cung lượng tim. Kích thích beta-2 receptors → giãn phế quản, giãn mạch cơ xương. Trong ngừng tim: tăng áp lực tưới máu vành, tăng khả năng khử rung thành công.'
         , 'monitoring': ['Nhịp tim và huyết áp liên tục',
         'Điện tâm đồ (ECG) - theo dõi rối loạn nhịp',
@@ -223,6 +233,18 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "Beta-blockers: tăng huyết áp nặng"
         ],
         "pregnancy": "C - An toàn trong cấp cứu",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "Surviving Sepsis Campaign Guidelines 2021",
+            "SCCM Shock Management Guidelines",
+            "AHA ACLS Guidelines"
+        ],
         "mechanism_of_action": "Chủ yếu alpha-adrenergic receptor agonist (alpha-1 và alpha-2), một số tác dụng beta-1. Kích thích alpha-1 receptors → co mạch ngoại vi mạnh, tăng huyết áp. Kích thích beta-1 receptors → tăng nhịp tim và co bóp cơ tim nhẹ. Không có tác dụng beta-2 (không giãn phế quản). Trong sốc: tăng huyết áp và tưới máu cơ quan quan trọng.",
         "monitoring": [
             "Huyết áp liên tục (arterial line nếu có thể)",
@@ -298,6 +320,17 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "Beta-blockers: tăng huyết áp"
         ],
         "pregnancy": "C - An toàn trong cấp cứu",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "Surviving Sepsis Campaign Guidelines 2021",
+            "SCCM Shock Management Guidelines"
+        ],
         "mechanism_of_action": "Tác dụng phụ thuộc liều: Liều thấp (1-3 mcg/kg/phút): kích thích dopamine receptors → tăng tưới máu thận (không khuyến cáo, không có bằng chứng). Liều trung bình (3-10 mcg/kg/phút): kích thích beta-1 receptors → tăng nhịp tim, tăng co bóp cơ tim, tăng cung lượng tim. Liều cao (10-20 mcg/kg/phút): kích thích alpha-1 receptors → co mạch, tăng huyết áp.",
         "monitoring": [
             "Huyết áp liên tục",
@@ -371,6 +404,18 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "MAOIs: tăng tác dụng"
         ],
         "pregnancy": "C - An toàn trong cấp cứu",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "AHA ACLS Guidelines",
+            "SCCM Shock Management Guidelines",
+            "ACC/AHA Heart Failure Guidelines"
+        ],
         "mechanism_of_action": "Chủ yếu beta-1-adrenergic receptor agonist, một số tác dụng beta-2 và alpha-1. Kích thích beta-1 receptors → tăng nhịp tim, tăng co bóp cơ tim mạnh, tăng cung lượng tim. Kích thích beta-2 receptors → giãn mạch nhẹ. Kích thích alpha-1 receptors → co mạch nhẹ. Kết quả: tăng cung lượng tim, giảm áp lực đổ đầy tim, ít ảnh hưởng đến huyết áp.",
         "monitoring": [
             "Huyết áp liên tục",
@@ -440,6 +485,17 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "Sodium bicarbonate: KHÔNG pha chung cùng line (môi trường kiềm làm giảm hiệu lực vasopressors)"
         ],
         "pregnancy": "C - Có thể dùng trong cấp cứu nếu lợi ích > nguy cơ",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True, "renal": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "Surviving Sepsis Campaign Guidelines 2021",
+            "SCCM Shock Management Guidelines"
+        ],
         "mechanism_of_action": "Vasopressin là hormon nội sinh (arginine vasopressin). Kích thích V1a receptors trên cơ trơn mạch máu → co mạch mạnh, tăng huyết áp; kích thích V2 receptors tại ống góp thận → tăng tái hấp thu nước. Trong sốc nhiễm khuẩn, bệnh nhân thường thiếu tương đối vasopressin nội sinh, nên bổ sung liều thấp giúp phục hồi trương lực mạch mà không làm tăng nhịp tim.",
         "monitoring": [
             "Huyết áp động mạch (ưu tiên arterial line)",
@@ -518,6 +574,17 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "Alpha-blockers: đối kháng tác dụng"
         ],
         "pregnancy": "C - An toàn trong cấp cứu và gây mê",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Anesthesia Guidelines",
+            "SCCM Shock Management Guidelines"
+        ],
         "mechanism_of_action": "Phenylephrine là alpha-1-adrenergic receptor agonist thuần túy (không có tác dụng beta). Kích thích alpha-1 receptors trên cơ trơn mạch máu → co mạch ngoại vi mạnh, tăng huyết áp. Không có tác dụng beta-1 (không tăng nhịp tim, không tăng co bóp cơ tim) và không có tác dụng beta-2 (không giãn phế quản). Tăng huyết áp có thể kích hoạt phản xạ baroreceptor → nhịp chậm phản xạ. Trong gây mê: tăng huyết áp nhanh mà không tăng nhịp tim (ưu điểm so với epinephrine).",
         "monitoring": [
             "Huyết áp liên tục (arterial line nếu có thể)",
@@ -727,6 +794,17 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "Digoxin: không có tương tác đáng kể"
         ],
         "pregnancy": "C - Thận trọng trong thai kỳ",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ACC/AHA Heart Failure Guidelines",
+            "SCCM Shock Management Guidelines"
+        ],
         "mechanism_of_action": "Milrinone là chất ức chế phosphodiesterase-3 (PDE-3), enzyme phân hủy cAMP trong tế bào cơ tim và mạch máu. Bằng cách ức chế PDE-3, milrinone tăng nồng độ cAMP trong tế bào, dẫn đến: (1) Tăng co bóp cơ tim (inotropic effect) - do tăng calcium trong tế bào cơ tim, (2) Giãn mạch (vasodilatory effect) - do giãn cơ trơn mạch máu. Kết quả: tăng cung lượng tim, giảm áp lực đổ đầy tim (preload và afterload), cải thiện huyết động. Khác với dobutamine (catecholamine), milrinone không tác động qua beta-receptors và không bị ức chế bởi beta-blockers.",
         "monitoring": [
             "Huyết áp liên tục (arterial line nếu có thể)",

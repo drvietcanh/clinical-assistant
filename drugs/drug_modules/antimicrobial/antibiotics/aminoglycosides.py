@@ -121,9 +121,24 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
                 "Lexicomp Online - Gentamicin Monograph",
                 "Micromedex - Gentamicin Drug Information"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "High", "neurological": "High (ototoxicity, vestibular toxicity)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Infective Endocarditis",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Amikacin": {
@@ -207,9 +222,23 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
                 "UpToDate - Amikacin: Drug Information",
                 "Medscape - Amikacin Drug Reference"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "High", "neurological": "High (ototoxicity, vestibular toxicity)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Multidrug-Resistant Gram-Negative Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Tobramycin": {
@@ -334,9 +363,24 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
                 "Lexicomp Online - Tobramycin Monograph",
                 "Micromedex - Tobramycin Drug Information"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "High", "neurological": "High (ototoxicity, vestibular toxicity)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Pseudomonas aeruginosa Infections",
+            "Cystic Fibrosis Foundation Guidelines - Pseudomonas Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Plazomicin": {

@@ -45,6 +45,13 @@ COMBINATION_INHALERS_DRUGS = {
             "Không dùng LABA đơn độc cho hen – luôn đi kèm ICS.",
             "Trong phác đồ SMART/MART: cần hướng dẫn rõ cho bệnh nhân về tối đa số hít/ngày.",
         ],
+        "pharmacokinetics": {
+            "half_life": "Budesonide: 2-3 giờ; Formoterol: 10 giờ",
+            "onset": "Formoterol: 1-3 phút (khởi phát nhanh); Budesonide: vài giờ",
+            "duration": "Formoterol: 12 giờ; Budesonide: tác dụng tại chỗ kéo dài",
+            "protein_binding": "Budesonide: 88-90%; Formoterol: 50-65%",
+            "clearance": "Budesonide: chuyển hóa gan (CYP3A4) thành chất không hoạt tính, thải qua thận; Formoterol: chuyển hóa gan (CYP2D6, CYP2C19), thải qua thận và phân"
+        },
     },
     "Fluticasone/Salmeterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (ICS/LABA)",
@@ -87,6 +94,13 @@ COMBINATION_INHALERS_DRUGS = {
             "Không dùng LABA đơn độc cho hen.",
             "Tránh dùng với ritonavir nếu có thể.",
         ],
+        "pharmacokinetics": {
+            "half_life": "Fluticasone: 7.8 giờ; Salmeterol: 5.5 giờ",
+            "onset": "Salmeterol: 10-20 phút; Fluticasone: vài giờ",
+            "duration": "Salmeterol: 12 giờ; Fluticasone: tác dụng tại chỗ kéo dài",
+            "protein_binding": "Fluticasone: 91%; Salmeterol: 96%",
+            "clearance": "Fluticasone: chuyển hóa gan (CYP3A4) thành chất không hoạt tính, thải qua phân; Salmeterol: chuyển hóa gan (CYP3A4), thải qua phân"
+        },
     },
     "Ipratropium/Salbutamol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (SAMA/SABA)",
@@ -126,6 +140,13 @@ COMBINATION_INHALERS_DRUGS = {
             "Tránh thuốc vào mắt (nguy cơ tăng nhãn áp).",
             "Thận trọng ở bệnh nhân tim mạch, loạn nhịp.",
         ],
+        "pharmacokinetics": {
+            "half_life": "Ipratropium: 2 giờ; Salbutamol: 3.8 giờ",
+            "onset": "Salbutamol: 5-15 phút; Ipratropium: 15-30 phút",
+            "duration": "Salbutamol: 3-6 giờ; Ipratropium: 4-6 giờ",
+            "protein_binding": "Ipratropium: <20%; Salbutamol: 10%",
+            "clearance": "Ipratropium: thải trừ chủ yếu qua thận (dạng nguyên dạng); Salbutamol: chuyển hóa gan (sulfation), thải qua thận"
+        },
     },
     "Tiotropium/Olodaterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (LAMA/LABA)",
@@ -164,6 +185,13 @@ COMBINATION_INHALERS_DRUGS = {
             "Không dùng để cắt cơn; cần SABA dự phòng.",
             "Tránh để thuốc vào mắt (nguy cơ tăng nhãn áp).",
         ],
+        "pharmacokinetics": {
+            "half_life": "Tiotropium: 5-6 ngày (rất dài); Olodaterol: 22 giờ",
+            "onset": "Olodaterol: 5 phút; Tiotropium: 30 phút",
+            "duration": "Cả hai: 24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "Tiotropium: 72%; Olodaterol: 60%",
+            "clearance": "Tiotropium: thải trừ chủ yếu qua thận (dạng nguyên dạng), một phần qua gan; Olodaterol: chuyển hóa gan (UGT, O-methylation), thải qua phân và thận"
+        },
     },
     "Umeclidinium/Vilanterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (LAMA/LABA)",
@@ -200,6 +228,13 @@ COMBINATION_INHALERS_DRUGS = {
             "Không dùng cho hen phế quản nếu không có ICS kèm.",
             "Tránh thuốc vào mắt.",
         ],
+        "pharmacokinetics": {
+            "half_life": "Umeclidinium: 11 giờ; Vilanterol: 11 giờ",
+            "onset": "Vilanterol: 5 phút; Umeclidinium: 5-15 phút",
+            "duration": "Cả hai: 24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "Umeclidinium: 89%; Vilanterol: 94%",
+            "clearance": "Umeclidinium: chuyển hóa gan (CYP2D6), thải qua phân và thận; Vilanterol: chuyển hóa gan (CYP3A4), thải qua phân và thận"
+        },
     },
     "Fluticasone/Umeclidinium/Vilanterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (ICS/LAMA/LABA)",
@@ -239,6 +274,13 @@ COMBINATION_INHALERS_DRUGS = {
             "Súc miệng sau khi dùng.",
             "Không dùng với ritonavir.",
         ],
+        "pharmacokinetics": {
+            "half_life": "Fluticasone: 7.8 giờ; Umeclidinium: 11 giờ; Vilanterol: 11 giờ",
+            "onset": "Vilanterol: 5 phút; Umeclidinium: 5-15 phút; Fluticasone: vài giờ",
+            "duration": "Cả ba: 24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "Fluticasone: 91%; Umeclidinium: 89%; Vilanterol: 94%",
+            "clearance": "Fluticasone: chuyển hóa gan (CYP3A4), thải qua phân; Umeclidinium: chuyển hóa gan (CYP2D6), thải qua phân và thận; Vilanterol: chuyển hóa gan (CYP3A4), thải qua phân và thận"
+        },
     },
 }
 

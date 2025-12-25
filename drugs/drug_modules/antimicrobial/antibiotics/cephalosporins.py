@@ -159,7 +159,21 @@ CEPHALOSPORIN_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Surgical Site Infection Prevention",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Cephalexin": {
@@ -478,7 +492,23 @@ CEPHALOSPORIN_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low", "neurological": "High (kernicterus ở trẻ sơ sinh)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Bacterial Meningitis",
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "CDC Guidelines - Sexually Transmitted Diseases (Gonorrhea)",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Cefepime": {
@@ -646,7 +676,22 @@ CEPHALOSPORIN_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low", "neurological": "High (co giật ở suy thận nặng)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Ventilator-Associated Pneumonia",
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Febrile Neutropenia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 }
 

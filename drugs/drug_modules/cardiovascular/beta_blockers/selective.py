@@ -226,9 +226,24 @@ SELECTIVE_BETA_BLOCKERS = {
                 "Goteborg Metoprolol Trial - The Lancet",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (MERIT-HF, Goteborg) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+            "ESC Guidelines - Heart Failure",
+            "ACC/AHA Guidelines - Hypertension",
+            "ACC/AHA Guidelines - Post-Myocardial Infarction",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Atenolol": {
@@ -458,9 +473,22 @@ SELECTIVE_BETA_BLOCKERS = {
               "ISIS-1 Study - Lancet (1986) - Beta-blocker sau nhồi máu cơ tim",
               "American Heart Association/American College of Cardiology guidelines - Beta-blockers in hypertension and heart failure"
           ],
-          "last_updated": "2024-12-19",
+          "last_updated": "2025-02-18",
           "evidence_level": "High - Multiple large RCTs (ISIS-1) and extensive clinical experience"
-      }
+      },
+      "risk_flags": {
+          "high_alert": False,
+          "narrow_therapeutic_index": False,
+          "icu_critical_care_only": False,
+          "bleeding_risk": "Low",
+          "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"}
+      },
+      "guideline_tags": [
+          "ACC/AHA Guidelines - Post-Myocardial Infarction",
+          "ACC/AHA Guidelines - Hypertension",
+          "WHO Essential Medicines List"
+      ],
+      "last_updated": "2025-02-18",
     },
 
     "Bisoprolol": {
@@ -706,9 +734,24 @@ SELECTIVE_BETA_BLOCKERS = {
               "CIBIS-II Study - Lancet (1999) - Bisoprolol trong suy tim",
               "American Heart Association/American College of Cardiology guidelines - Beta-blockers in heart failure"
           ],
-          "last_updated": "2024-12-19",
+          "last_updated": "2025-02-18",
           "evidence_level": "High - Large RCT (CIBIS-II) showing mortality benefit in heart failure and extensive clinical experience"
-      }
+      },
+      "risk_flags": {
+          "high_alert": False,
+          "narrow_therapeutic_index": False,
+          "icu_critical_care_only": False,
+          "bleeding_risk": "Low",
+          "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"}
+      },
+      "guideline_tags": [
+          "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+          "ESC Guidelines - Heart Failure",
+          "CIBIS-II Study - Heart Failure",
+          "ACC/AHA Guidelines - Hypertension",
+          "WHO Essential Medicines List"
+      ],
+      "last_updated": "2025-02-18",
     },
     
     "Nebivolol": {
@@ -887,9 +930,24 @@ SELECTIVE_BETA_BLOCKERS = {
                 "SENIORS Study - Journal of the American College of Cardiology (2005) - Nebivolol trong suy tim ở người cao tuổi",
                 "American Heart Association/American College of Cardiology guidelines - Beta-blockers in heart failure"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Large RCT (SENIORS) showing mortality benefit in heart failure and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+            "ESC Guidelines - Heart Failure",
+            "SENIORS Study - Heart Failure in Elderly",
+            "ACC/AHA Guidelines - Hypertension",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Timolol": {

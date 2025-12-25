@@ -188,9 +188,24 @@ DIHYDROPYRIDINE_CCB = {
                 "ASCOT Study - The Lancet",
                 "American Heart Association/American College of Cardiology guidelines"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs (ALLHAT, ASCOT) and extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiovascular": "Moderate (peripheral edema, reflex tachycardia)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ALLHAT Study - Hypertension",
+            "ASCOT Study - Hypertension",
+            "ESC/ESH Guidelines - Hypertension",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Nifedipine": {
@@ -395,9 +410,22 @@ DIHYDROPYRIDINE_CCB = {
                 "SPRINT Study - New England Journal of Medicine (2015) - Blood pressure targets",
                 "American Heart Association/American College of Cardiology guidelines - Hypertension"
             ],
-            "last_updated": "2024-12-19",
+            "last_updated": "2025-02-18",
             "evidence_level": "High - Multiple large RCTs and extensive clinical experience. Strong warning against immediate-release formulation."
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiovascular": "High (immediate-release: MI, stroke risk)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ESC/ESH Guidelines - Hypertension",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
 
     "Felodipine": {

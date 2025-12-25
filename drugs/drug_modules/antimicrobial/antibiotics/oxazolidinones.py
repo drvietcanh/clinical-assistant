@@ -237,9 +237,24 @@ OXAZOLIDINONE_ANTIBIOTICS = {
                 "Lexicomp Online - Linezolid Monograph",
                 "Micromedex - Linezolid Drug Information"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hematologic": "High (thrombocytopenia)", "neurological": "High (peripheral/optic neuropathy)", "metabolic": "High (serotonin syndrome)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Vancomycin-Resistant Enterococcus Infections",
+            "IDSA Guidelines - Methicillin-Resistant Staphylococcus aureus Infections",
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     }
 }
 
