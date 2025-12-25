@@ -44,6 +44,17 @@ ACE_INHIBITORS = {
             "Lithium: tăng nồng độ lithium"
         ],
         "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["hyperkalemia", "renal_impairment", "angioedema"]
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA HFrEF ACEi Class I",
+            "ESC HFrEF ACEi Class I"
+        ],
         "mechanism_of_action": "Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp",
         "monitoring": [
             "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
@@ -247,6 +258,17 @@ ACE_INHIBITORS = {
             "NSAID: giảm hiệu quả"
         ],
         "pregnancy": "D",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["hyperkalemia", "renal_impairment", "angioedema"]
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA HFrEF ACEi Class I",
+            "ESC HFrEF ACEi Class I"
+        ],
         "mechanism_of_action": "Enalapril là prodrug, chuyển hóa thành enalaprilat (hoạt chất) trong gan. Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp",
         "monitoring": [
             "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
@@ -611,6 +633,17 @@ ACE_INHIBITORS = {
             "NSAID: giảm hiệu quả"
         ],
         "pregnancy": "D",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["hyperkalemia", "renal_impairment", "angioedema"]
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA HFrEF ACEi Class I",
+            "ESC HFrEF ACEi Class I"
+        ],
         "mechanism_of_action": "Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp. Không phải prodrug (khác với enalapril), tác dụng trực tiếp",
         "monitoring": [
             "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
@@ -823,6 +856,17 @@ ACE_INHIBITORS = {
             "Diuretics: tăng nguy cơ hạ huyết áp"
         ],
         "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["hyperkalemia", "renal_impairment", "angioedema"]
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA HFrEF ACEi Class I",
+            "ESC HFrEF ACEi Class I"
+        ],
         "mechanism_of_action": "Ramipril là prodrug, được chuyển hóa thành ramiprilat (hoạt chất). Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp. Ramipril có half-life dài hơn so với captopril và enalapril, cho phép dùng 1 lần/ngày. Có bằng chứng mạnh về bảo vệ tim mạch và thận (HOPE study).",
         "monitoring": [
             "Creatinine, BUN sau 1-2 tuần khi bắt đầu",

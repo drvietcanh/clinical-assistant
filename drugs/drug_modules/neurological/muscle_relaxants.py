@@ -387,6 +387,556 @@ MUSCLE_RELAXANTS_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
         }
+    },
+
+    "Cyclobenzaprine": {
+        "group": "Neurology - Muscle Relaxant (Skeletal)",
+        "vietnamese_name": "Cyclobenzaprine, Flexeril",
+        "administration": ["PO"],
+        "indications": [
+            "Co thắt cơ xương khớp (muscle spasm) - ngắn hạn",
+            "Đau cơ xương (musculoskeletal pain)",
+            "Đau lưng cấp tính"
+        ],
+        "contraindications": [
+            "Dị ứng cyclobenzaprine",
+            "Dùng MAO inhibitor trong 14 ngày",
+            "Giai đoạn cấp tính sau nhồi máu cơ tim",
+            "Suy tim nặng",
+            "Block nhĩ thất độ 2-3",
+            "Cường giáp",
+            "Dùng với thuốc ức chế tái hấp thu serotonin"
+        ],
+        "dosage": {
+            "adult_standard": "5mg x 3 lần/ngày, có thể tăng đến 10mg x 3 lần/ngày (tối đa 30mg/ngày)",
+            "adult_extended": "15-30mg x 1 lần/ngày (dạng extended release)",
+            "adult_max": "30mg/ngày",
+            "notes": "CHỈ dùng ngắn hạn (2-3 tuần). Cấu trúc tương tự tricyclic antidepressants. Có tác dụng an thần."
+        },
+        "side_effects": [
+            "Buồn ngủ (rất phổ biến)",
+            "Khô miệng (phổ biến)",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Nhìn mờ",
+            "Táo bón",
+            "Hạ huyết áp tư thế"
+        ],
+        "interactions": [
+            "MAO inhibitor: CHỐNG CHỈ ĐỊNH",
+            "Thuốc ức chế tái hấp thu serotonin (SSRI, SNRI): tăng nguy cơ hội chứng serotonin",
+            "Alcohol: tăng tác dụng an thần",
+            "Thuốc chống trầm cảm tricyclic: tác dụng cộng dồn",
+            "Thuốc chống loạn thần: tăng tác dụng an thần"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Cyclobenzaprine là thuốc giãn cơ xương khớp, có cấu trúc tương tự tricyclic antidepressants (TCA). Cơ chế chính xác chưa rõ, nhưng có thể tác động lên brainstem để giảm phản xạ cơ xương. Cyclobenzaprine KHÔNG tác động trực tiếp lên cơ xương như thuốc giãn cơ khác. Có tác dụng an thần mạnh (do cấu trúc tương tự TCA). CHỈ dùng ngắn hạn (2-3 tuần) cho co thắt cơ xương khớp.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm co thắt cơ, giảm đau",
+            "Dấu hiệu an thần quá mức (buồn ngủ, mệt mỏi)",
+            "Dấu hiệu hội chứng serotonin (khi dùng với SSRI/SNRI)",
+            "Huyết áp (hạ huyết áp tư thế)"
+        ],
+        "precautions": [
+            "CHỈ dùng ngắn hạn (2-3 tuần) - không hiệu quả trong dùng lâu dài",
+            "Buồn ngủ rất phổ biến - tránh lái xe, vận hành máy móc",
+            "CHỐNG CHỈ ĐỊNH với MAO inhibitor",
+            "Thận trọng với SSRI/SNRI - tăng nguy cơ hội chứng serotonin",
+            "Tránh rượu - tăng tác dụng an thần",
+            "Cấu trúc tương tự TCA - có thể có tác dụng phụ tương tự TCA",
+            "Không dùng cho trẻ em <15 tuổi"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-3 ngày (dài, tích lũy)",
+            "onset": "1 giờ",
+            "duration": "12-24 giờ",
+            "protein_binding": "93%",
+            "clearance": "Gan (chuyển hóa qua CYP3A4, CYP1A2), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với MAO inhibitor. Nguy cơ hội chứng serotonin khi dùng với SSRI/SNRI. Buồn ngủ có thể ảnh hưởng đến khả năng lái xe và vận hành máy móc.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nguy cơ phản ứng nghiêm trọng",
+                    "effect": "Có thể gây hội chứng serotonin, tăng huyết áp, nguy hiểm tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH. Ngừng MAOI ít nhất 14 ngày trước khi dùng cyclobenzaprine."
+                },
+                {
+                    "drug": "SSRI/SNRI (Fluoxetine, Sertraline, Venlafaxine)",
+                    "mechanism": "Tăng nồng độ serotonin",
+                    "effect": "Tăng nguy cơ hội chứng serotonin",
+                    "management": "Tránh dùng chung. Nếu bắt buộc, theo dõi dấu hiệu hội chứng serotonin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Alcohol, Benzodiazepines",
+                    "mechanism": "Tăng tác dụng an thần",
+                    "effect": "Tăng buồn ngủ, chóng mặt",
+                    "management": "Tránh rượu. Thận trọng với benzodiazepines."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng cyclobenzaprine",
+                "Dùng MAO inhibitor trong vòng 14 ngày",
+                "Giai đoạn cấp tính sau nhồi máu cơ tim",
+                "Suy tim nặng",
+                "Block nhĩ thất độ 2-3",
+                "Cường giáp"
+            ],
+            "tương_đối": [
+                "Dùng với SSRI/SNRI - tăng nguy cơ hội chứng serotonin",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ",
+                "Bệnh tim mạch - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B. Có thể dùng nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Cyclobenzaprine bài tiết vào sữa mẹ. Có thể gây tác dụng phụ ở trẻ.",
+                "recommendation": "Thận trọng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng, có thể giảm liều",
+            "notes": "Cyclobenzaprine chuyển hóa qua gan. Suy gan có thể ảnh hưởng đến chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Lú lẫn, hôn mê",
+                "Nhịp tim nhanh",
+                "Hạ huyết áp",
+                "Co giật"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn",
+                "Rửa dạ dày",
+                "Than hoạt tính",
+                "Theo dõi hỗ trợ",
+                "Điều trị co giật nếu có"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không",
+                "timing": "5mg x 3 lần/ngày, có thể tăng đến 10mg x 3 lần/ngày. CHỈ dùng ngắn hạn (2-3 tuần)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cyclobenzaprine (Flexeril)",
+                "UpToDate - Cyclobenzaprine: Drug information"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved"
+        }
+    },
+
+    "Metaxalone": {
+        "group": "Neurology - Muscle Relaxant (Skeletal)",
+        "vietnamese_name": "Metaxalone, Skelaxin",
+        "administration": ["PO"],
+        "indications": [
+            "Co thắt cơ xương khớp (muscle spasm) - ngắn hạn",
+            "Đau cơ xương (musculoskeletal pain)"
+        ],
+        "contraindications": [
+            "Dị ứng metaxalone",
+            "Suy thận nặng",
+            "Suy gan nặng",
+            "Thiếu máu nặng"
+        ],
+        "dosage": {
+            "adult_standard": "800mg x 3-4 lần/ngày",
+            "adult_max": "3200mg/ngày",
+            "notes": "CHỈ dùng ngắn hạn. Ít tác dụng an thần hơn cyclobenzaprine."
+        },
+        "side_effects": [
+            "Buồn ngủ (ít hơn cyclobenzaprine)",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Buồn nôn",
+            "Nôn",
+            "Thiếu máu (hiếm)"
+        ],
+        "interactions": [
+            "Alcohol: tăng tác dụng an thần",
+            "CNS depressants: tăng tác dụng ức chế"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Metaxalone là thuốc giãn cơ xương khớp. Cơ chế chính xác chưa rõ. CHỈ dùng ngắn hạn cho co thắt cơ xương khớp. Ít tác dụng an thần hơn cyclobenzaprine.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm co thắt cơ",
+            "Dấu hiệu an thần (buồn ngủ, mệt mỏi)",
+            "Công thức máu (thiếu máu - hiếm)"
+        ],
+        "precautions": [
+            "CHỈ dùng ngắn hạn",
+            "Tránh rượu - tăng tác dụng an thần",
+            "Thiếu máu - hiếm nhưng có thể xảy ra, theo dõi công thức máu",
+            "Thận trọng ở suy thận, suy gan"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ",
+            "onset": "1 giờ",
+            "duration": "4-6 giờ",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Alcohol, CNS depressants",
+                    "mechanism": "Tăng tác dụng ức chế CNS",
+                    "effect": "Tăng buồn ngủ, chóng mặt",
+                    "management": "Tránh rượu. Thận trọng với CNS depressants."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng metaxalone",
+                "Suy thận nặng",
+                "Suy gan nặng",
+                "Thiếu máu nặng"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan trung bình - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C. Có thể dùng nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa biết metaxalone có bài tiết vào sữa mẹ hay không.",
+                "recommendation": "Thận trọng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Metaxalone chuyển hóa qua gan. Suy gan nặng là chống chỉ định."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Lú lẫn",
+                "Ức chế hô hấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn",
+                "Rửa dạ dày",
+                "Than hoạt tính",
+                "Theo dõi hỗ trợ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không",
+                "timing": "800mg x 3-4 lần/ngày. CHỈ dùng ngắn hạn."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Metaxalone (Skelaxin)",
+                "UpToDate - Metaxalone: Drug information"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved"
+        }
+    },
+
+    "Carisoprodol": {
+        "group": "Neurology - Muscle Relaxant (Skeletal)",
+        "vietnamese_name": "Carisoprodol, Soma",
+        "administration": ["PO"],
+        "indications": [
+            "Co thắt cơ xương khớp (muscle spasm) - ngắn hạn",
+            "Đau cơ xương (musculoskeletal pain)"
+        ],
+        "contraindications": [
+            "Dị ứng carisoprodol",
+            "Porphyria",
+            "Dị ứng với meprobamate (metabolite)"
+        ],
+        "dosage": {
+            "adult_standard": "250-350mg x 3-4 lần/ngày",
+            "adult_max": "1400mg/ngày",
+            "notes": "CHỈ dùng ngắn hạn (2-3 tuần). Chuyển hóa thành meprobamate (controlled substance, nguy cơ nghiện)."
+        },
+        "side_effects": [
+            "Buồn ngủ (phổ biến)",
+            "Chóng mặt",
+            "Đau đầu",
+            "Nguy cơ nghiện/lệ thuộc (do meprobamate)",
+            "Hội chứng cai khi ngừng"
+        ],
+        "interactions": [
+            "Alcohol: tăng tác dụng an thần, nguy cơ ức chế hô hấp",
+            "CNS depressants: tăng tác dụng ức chế",
+            "CYP2C19 inhibitors: tăng nồng độ carisoprodol"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Carisoprodol là thuốc giãn cơ xương khớp, được chuyển hóa thành meprobamate (controlled substance, có nguy cơ nghiện). Cơ chế chính xác chưa rõ. CHỈ dùng ngắn hạn (2-3 tuần). Có nguy cơ nghiện/lệ thuộc do meprobamate.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm co thắt cơ",
+            "Dấu hiệu nghiện/lệ thuộc",
+            "Dấu hiệu cai khi ngừng"
+        ],
+        "precautions": [
+            "CHỈ dùng ngắn hạn (2-3 tuần)",
+            "NGUY CƠ NGHIỆN/LỆ THUỘC - do meprobamate (controlled substance)",
+            "Không ngừng đột ngột - có thể gây hội chứng cai",
+            "Tránh rượu - tăng tác dụng an thần, nguy cơ ức chế hô hấp",
+            "Thận trọng ở bệnh nhân có tiền sử nghiện/lạm dụng chất"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 giờ (carisoprodol), 10 giờ (meprobamate)",
+            "onset": "30 phút",
+            "duration": "4-6 giờ",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Gan (chuyển hóa thành meprobamate qua CYP2C19), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Controlled substance - cần bảo quản an toàn.",
+        "black_box_warnings": "NGUY CƠ NGHIỆN, LẠM DỤNG, VÀ LỆ THUỘC - carisoprodol chuyển hóa thành meprobamate (controlled substance). Chỉ dùng ngắn hạn (2-3 tuần).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Alcohol, CNS depressants",
+                    "mechanism": "Tăng tác dụng ức chế CNS",
+                    "effect": "Tăng buồn ngủ, nguy cơ ức chế hô hấp",
+                    "management": "Tránh rượu. Thận trọng với CNS depressants."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP2C19 inhibitors (Omeprazole, Fluoxetine)",
+                    "mechanism": "Ức chế chuyển hóa carisoprodol",
+                    "effect": "Tăng nồng độ carisoprodol",
+                    "management": "Thận trọng. Có thể cần giảm liều carisoprodol."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng carisoprodol",
+                "Porphyria",
+                "Dị ứng với meprobamate"
+            ],
+            "tương_đối": [
+                "Tiền sử nghiện/lạm dụng chất - tăng nguy cơ nghiện",
+                "Bệnh gan nặng - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C. Có thể dùng nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Carisoprodol và meprobamate bài tiết vào sữa mẹ.",
+                "recommendation": "Thận trọng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng",
+            "notes": "Carisoprodol chuyển hóa qua gan. Suy gan có thể ảnh hưởng đến chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Ức chế hô hấp",
+                "Hôn mê",
+                "Hạ huyết áp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn",
+                "Hỗ trợ hô hấp",
+                "Rửa dạ dày",
+                "Than hoạt tính",
+                "Theo dõi hỗ trợ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không",
+                "timing": "250-350mg x 3-4 lần/ngày. CHỈ dùng ngắn hạn (2-3 tuần)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Carisoprodol (Soma)",
+                "UpToDate - Carisoprodol: Drug information"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, controlled substance"
+        }
+    },
+
+    "Methocarbamol": {
+        "group": "Neurology - Muscle Relaxant (Skeletal)",
+        "vietnamese_name": "Methocarbamol, Robaxin",
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Co thắt cơ xương khớp (muscle spasm) - ngắn hạn",
+            "Đau cơ xương (musculoskeletal pain)"
+        ],
+        "contraindications": [
+            "Dị ứng methocarbamol"
+        ],
+        "dosage": {
+            "adult_po": "1.5g x 4 lần/ngày trong 2-3 ngày, sau đó 1g x 4 lần/ngày hoặc 750mg mỗi 4 giờ",
+            "adult_iv_im": "1-3g IV/IM, có thể lặp lại mỗi 8 giờ (tối đa 3g/ngày IV/IM)",
+            "adult_max": "8g/ngày PO",
+            "notes": "CHỈ dùng ngắn hạn. Liều khởi đầu cao, sau đó giảm. Có thể gây nước tiểu màu xanh/đen (vô hại)."
+        },
+        "side_effects": [
+            "Buồn ngủ",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Nhìn mờ",
+            "Nước tiểu màu xanh/đen (vô hại)",
+            "Phản ứng tại chỗ tiêm (IV/IM)"
+        ],
+        "interactions": [
+            "Alcohol: tăng tác dụng an thần",
+            "CNS depressants: tăng tác dụng ức chế"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Methocarbamol là thuốc giãn cơ xương khớp. Cơ chế chính xác chưa rõ, có thể tác động lên CNS để giảm phản xạ cơ xương. CHỈ dùng ngắn hạn cho co thắt cơ xương khớp. Có thể gây nước tiểu màu xanh/đen (vô hại).",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm co thắt cơ",
+            "Dấu hiệu an thần (buồn ngủ, mệt mỏi)",
+            "Màu nước tiểu (xanh/đen - vô hại, không cần điều trị)"
+        ],
+        "precautions": [
+            "CHỈ dùng ngắn hạn",
+            "Nước tiểu màu xanh/đen - vô hại, không cần điều trị, giải thích cho bệnh nhân",
+            "Tránh rượu - tăng tác dụng an thần",
+            "IV/IM: có thể gây phản ứng tại chỗ tiêm, phù phổi (hiếm)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-2 giờ",
+            "onset": "30 phút (PO)",
+            "duration": "4-6 giờ",
+            "protein_binding": "46-50%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Alcohol, CNS depressants",
+                    "mechanism": "Tăng tác dụng ức chế CNS",
+                    "effect": "Tăng buồn ngủ, chóng mặt",
+                    "management": "Tránh rượu. Thận trọng với CNS depressants."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng methocarbamol"
+            ],
+            "tương_đối": [
+                "Bệnh gan nặng - thận trọng",
+                "Bệnh thận nặng - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C. Có thể dùng nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa biết methocarbamol có bài tiết vào sữa mẹ hay không.",
+                "recommendation": "Thận trọng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng",
+            "notes": "Methocarbamol chuyển hóa qua gan. Suy gan có thể ảnh hưởng đến chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Lú lẫn",
+                "Ức chế hô hấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn",
+                "Hỗ trợ hô hấp",
+                "Rửa dạ dày",
+                "Than hoạt tính",
+                "Theo dõi hỗ trợ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không",
+                "timing": "Khởi đầu: 1.5g x 4 lần/ngày trong 2-3 ngày, sau đó 1g x 4 lần/ngày hoặc 750mg mỗi 4 giờ. CHỈ dùng ngắn hạn."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W",
+                "infusion_rate": "Truyền chậm, không quá 3ml/phút",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "1-3g IV, có thể lặp lại mỗi 8 giờ. Truyền chậm để tránh phản ứng tại chỗ. Có thể gây phù phổi (hiếm)."
+            },
+            "im": {
+                "notes": "1-3g IM, có thể lặp lại mỗi 8 giờ. Có thể gây đau tại chỗ tiêm."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Methocarbamol (Robaxin)",
+                "UpToDate - Methocarbamol: Drug information"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved"
+        }
     }
 }
 

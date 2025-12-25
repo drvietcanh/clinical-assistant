@@ -11,9 +11,10 @@ except ImportError:
     ANTIBIOTICS_DATABASE = {}
 
 def render_compact_drug_card(drug_name, drug_data, key_prefix='',
-    search_query=''):
+    search_query='', card_index=None):
     """Render a compact drug card in list view with optional search highlighting"""
     from .search import highlight_search_term
+    import hashlib
     vn_name = drug_data.get('vietnamese_name', '')
     group = drug_data.get('group', 'Unknown')
     admin = drug_data.get('administration', [])
@@ -59,16 +60,26 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
     col1, col2, col3 = st.columns([1, 1, 2])
     with col1:
         safe_drug_name = str(drug_name).replace(' ', '_').replace('-', '_'
-            ).replace('/', '_')
-        view_key = (f'{key_prefix}view_{safe_drug_name}' if key_prefix else
-            f'view_{safe_drug_name}')
+            ).replace('/', '_').replace('(', '_').replace(')', '_')
+        # Generate unique key using drug name, index, and a hash of the data
+        # Always include both card_index and data hash to ensure uniqueness
+        if card_index is not None:
+            # Use both index and hash to ensure uniqueness even if index repeats
+            data_hash = hashlib.md5(f"{drug_name}_{str(drug_data)}".encode()).hexdigest()[:8]
+            unique_suffix = f'_{card_index}_{data_hash}'
+        else:
+            # Fallback: use hash of drug name + data to ensure uniqueness
+            data_hash = hashlib.md5(f"{drug_name}_{str(drug_data)}".encode()).hexdigest()[:8]
+            unique_suffix = f'_{data_hash}'
+        view_key = (f'{key_prefix}view_{safe_drug_name}{unique_suffix}' if key_prefix else
+            f'view_{safe_drug_name}{unique_suffix}')
         if st.button('📖 Xem chi tiết', key=view_key, use_container_width=True):
             st.session_state['selected_drug'] = str(drug_name)
             st.session_state['show_detail'] = True
             st.rerun()
     with col2:
-        compare_key = (f'{key_prefix}compare_{safe_drug_name}' if
-            key_prefix else f'compare_{safe_drug_name}')
+        compare_key = (f'{key_prefix}compare_{safe_drug_name}{unique_suffix}' if
+            key_prefix else f'compare_{safe_drug_name}{unique_suffix}')
         if st.button('🔄 So sánh', key=compare_key, use_container_width=True):
             if 'drug_comparison_list' not in st.session_state:
                 st.session_state['drug_comparison_list'] = []

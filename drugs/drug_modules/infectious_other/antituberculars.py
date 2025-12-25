@@ -994,6 +994,847 @@ ANTITUBERCULAR_DRUGS = {
             "evidence_level": "High – guideline and trial-based, nhưng áp dụng chọn lọc.",
         },
     },
+
+    "Linezolid (lao MDR/XDR)": {
+        "group": "Infectious Disease - Oxazolidinone (Second-line antitubercular, MDR/XDR-TB)",
+        "vietnamese_name": "Linezolid",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Điều trị lao kháng đa thuốc (MDR-TB) hoặc lao kháng rộng (XDR-TB) theo phác đồ WHO mới (group A drug).",
+            "Một số nhiễm trùng Gram dương nặng (MRSA, VRE) – ngoài phạm vi lao.",
+        ],
+        "contraindications": [
+            "Dị ứng với linezolid hoặc oxazolidinone khác.",
+            "Đang dùng hoặc trong vòng 14 ngày sau khi dùng IMAO khác.",
+            "Không kiểm soát được tình trạng suy tủy nặng.",
+        ],
+        "dosage": {
+            "adult_mdr_tb": "600mg uống hoặc IV mỗi 24 giờ (nhiều phác đồ hiện giảm còn 600mg cách ngày hoặc 300mg/ngày sau giai đoạn đầu để giảm độc tính).",
+            "adult_severe_infection": "600mg IV/PO mỗi 12 giờ (chỉ định ngoài lao).",
+            "notes": "Trong MDR/XDR-TB ưu tiên liều thấp hơn hoặc giảm tần suất sau vài tháng để giảm độc tính thần kinh/huyết học; luôn theo phác đồ chuyên khoa.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều; tuy nhiên các chất chuyển hóa có thể tích lũy khi suy thận.",
+            "30_60": "Thận trọng; theo dõi tác dụng phụ huyết học và thần kinh.",
+            "under_30": "Không cần chỉnh liều chính, nhưng nên theo dõi chặt CBC và triệu chứng ngoại biên/thị giác.",
+        },
+        "side_effects": [
+            "Ức chế tủy xương: thiếu máu, giảm bạch cầu, giảm tiểu cầu (phụ thuộc liều và thời gian).",
+            "Bệnh lý thần kinh ngoại biên và thị giác (dùng kéo dài nhiều tháng).",
+            "Nhiễm acid lactic, toan chuyển hóa (hiếm nhưng nặng).",
+            "Buồn nôn, tiêu chảy, đau đầu.",
+            "Hội chứng serotonin khi phối hợp SSRI, SNRI, TCA, triptan.",
+        ],
+        "interactions": [
+            "SSRI, SNRI, TCA, MAOI, triptan: tăng nguy cơ hội chứng serotonin.",
+            "Thuốc gây ức chế tủy xương khác (chemotherapy, zidovudine): tăng nguy cơ suy tủy.",
+        ],
+        "pregnancy": "C – dữ liệu hạn chế; chỉ dùng trong MDR/XDR-TB khi lợi ích vượt trội nguy cơ.",
+        "mechanism_of_action": (
+            "Linezolid là kháng sinh oxazolidinone, ức chế bước khởi đầu tổng hợp protein bằng cách gắn vào vị trí 23S của tiểu đơn vị 50S "
+            "ribosome, ngăn hình thành phức hợp 70S. Đối với Mycobacterium tuberculosis, linezolid có tác dụng kìm khuẩn hoặc diệt khuẩn "
+            "chậm, được xếp nhóm A trong phác đồ MDR/XDR-TB mới."
+        ),
+        "monitoring": [
+            "Công thức máu (Hb, bạch cầu, tiểu cầu) hàng tuần trong giai đoạn đầu, sau đó ít nhất hàng tháng khi điều trị kéo dài.",
+            "Triệu chứng thần kinh ngoại biên (tê bì, đau bỏng rát chi) và thị giác (mờ mắt, giảm thị lực màu).",
+            "Lactate, toan chuyển hóa nếu có triệu chứng mệt nhiều, thở nhanh, đau bụng không giải thích được.",
+        ],
+        "precautions": [
+            "Giới hạn thời gian dùng ở liều cao; giảm liều hoặc giãn cách sau vài tháng trong MDR-TB để giảm độc tính.",
+            "Tránh phối hợp với thuốc serotoninergic mạnh nếu có thể; nếu bắt buộc, theo dõi sát hội chứng serotonin.",
+            "Ngừng thuốc nếu có bệnh lý thần kinh thị giác tiến triển.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "khoảng 5–7 giờ.",
+            "onset": "Nồng độ đỉnh sau 1–2 giờ (PO).",
+            "duration": "Dùng 1–2 lần/ngày tùy chỉ định.",
+            "protein_binding": "Khoảng 30%.",
+            "clearance": "Gan (oxy hóa không qua CYP) và thận; chuyển hóa thành chất không hoạt tính.",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ánh sáng, 20–25°C.",
+        "black_box_warnings": (
+            "Nguy cơ ức chế tủy xương, bệnh lý thần kinh ngoại biên/thị giác và nhiễm acid lactic khi điều trị kéo dài; "
+            "cần theo dõi sát CBC và thần kinh."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "SSRI, SNRI, TCA, MAOI, triptan",
+                    "mechanism": "Tác dụng giống IMAO nhẹ của linezolid cộng hưởng với thuốc serotoninergic.",
+                    "effect": "Nguy cơ hội chứng serotonin (sốt, run, cứng cơ, thay đổi ý thức).",
+                    "management": "Tránh phối hợp nếu có thể; nếu bắt buộc, theo dõi sát và giáo dục bệnh nhân về triệu chứng.",
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc ức chế tủy xương (chemotherapy, zidovudine)",
+                    "mechanism": "Hiệp đồng gây suy tủy.",
+                    "effect": "Tăng nguy cơ thiếu máu, giảm bạch cầu, giảm tiểu cầu.",
+                    "management": "Theo dõi CBC thường xuyên; cân nhắc giảm liều hoặc thay thuốc.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với linezolid.",
+                "Đang dùng IMAO khác hoặc trong vòng 14 ngày sau ngừng IMAO.",
+            ],
+            "tương_đối": [
+                "Tiền sử suy tủy, thiếu máu nặng.",
+                "Bệnh thần kinh ngoại biên hoặc bệnh lý mắt nền.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu người hạn chế; chỉ dùng trong MDR/XDR-TB khi không có lựa chọn an toàn hơn.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ mức bài tiết; cân nhắc ngừng cho bú khi điều trị kéo dài.",
+                "recommendation": "Ưu tiên tránh nếu có lựa chọn khác; nếu dùng cần theo dõi trẻ.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh.",
+            "moderate": "Thận trọng; theo dõi độc tính.",
+            "severe": "Dữ liệu hạn chế; chỉ dùng khi thật cần.",
+            "notes": "Chuyển hóa không đáng kể qua CYP; suy gan trung bình có thể ít ảnh hưởng, nhưng dữ liệu dài hạn hạn chế.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng ức chế tủy (giảm tiểu cầu, thiếu máu).",
+                "Hội chứng serotonin nếu phối hợp thuốc khác.",
+                "Nôn, tiêu chảy, đau đầu.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng thuốc, điều trị hỗ trợ.",
+                "Điều trị hội chứng serotonin nếu có (benzodiazepine, hỗ trợ hô hấp, cyproheptadine).",
+            ],
+            "monitoring": "CBC, dấu hiệu thần kinh, dấu hiệu sống.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn; thức ăn không ảnh hưởng đáng kể.",
+                "timing": "Uống 1 hoặc 2 lần/ngày tùy phác đồ; cố định giờ.",
+            },
+            "iv": {
+                "reconstitution": "Dùng dung dịch sẵn pha hoặc pha loãng theo hướng dẫn nhà sản xuất.",
+                "infusion_rate": "Truyền trong 30–120 phút.",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "WHO Consolidated Guidelines on Drug-Resistant Tuberculosis Treatment (Linezolid as Group A drug).",
+                "NEJM and Lancet trials on linezolid-containing MDR-TB regimens.",
+            ],
+            "last_updated": "2025-03-02",
+            "evidence_level": "High – guideline and RCT-based trong MDR/XDR-TB.",
+        },
+    },
+
+    "Clofazimine": {
+        "group": "Infectious Disease - Riminophenazine dye (Second-line antitubercular, MDR-TB; leprosy drug)",
+        "vietnamese_name": "Clofazimine",
+        "administration": ["PO"],
+        "indications": [
+            "Điều trị lao kháng đa thuốc (MDR-TB) trong các phác đồ nền mới (group B/C).",
+            "Điều trị phong (Hansen) đa khuẩn (thuốc chuẩn trong phác đồ WHO).",
+        ],
+        "contraindications": [
+            "Dị ứng với clofazimine hoặc các dẫn xuất tương tự.",
+            "Bệnh nhân có tiền sử rối loạn nhịp thất nặng hoặc QTc kéo dài không kiểm soát.",
+        ],
+        "dosage": {
+            "adult_mdr_tb": "100mg uống 1 lần/ngày (một số phác đồ dùng 50–100mg/ngày tùy cân nặng).",
+            "adult_leprosy": "50mg/ngày kết hợp liều cao 300mg mỗi tháng (theo phác đồ WHO).",
+            "notes": "Trong lao MDR, dùng kết hợp với nhiều thuốc khác trong thời gian 6–20 tháng theo phác đồ quốc gia/WHO.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh.",
+            "30_60": "Không cần chỉnh; theo dõi tác dụng phụ tiêu hóa và da.",
+            "under_30": "Không cần chỉnh liều, nhưng dữ liệu hạn chế; theo dõi sát.",
+        },
+        "side_effects": [
+            "Tăng sắc tố da (da, niêm mạc, kết mạc màu nâu–đỏ, tím) và đổi màu phân; có thể kéo dài sau ngừng thuốc.",
+            "Rối loạn tiêu hóa: đau bụng, buồn nôn, nôn, tiêu chảy.",
+            "Khô da, ngứa, bong vảy.",
+            "QTc kéo dài, xoắn đỉnh (hiếm, thường khi phối hợp nhiều thuốc kéo dài QT).",
+        ],
+        "interactions": [
+            "Thuốc kéo dài QT khác (bedaquiline, moxifloxacin, delamanid): tăng nguy cơ loạn nhịp.",
+        ],
+        "pregnancy": "C – dữ liệu hạn chế; dùng khi lợi ích vượt nguy cơ, thường trong MDR-TB nặng.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True, "dermatologic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Consolidated Guidelines on Drug-Resistant TB Treatment 2022",
+            "Group B/C - MDR/XDR-TB Regimens"
+        ],
+        "mechanism_of_action": (
+            "Clofazimine là thuốc nhuộm riminophenazine, tích lũy trong đại thực bào và tổ chức, có hoạt tính "
+            "kháng Mycobacterium leprae và M. tuberculosis. Cơ chế chưa hoàn toàn rõ, có thể liên quan đến sinh các "
+            "gốc oxy và can thiệp vận chuyển ion, làm tổn thương vách tế bào và DNA vi khuẩn."
+        ),
+        "monitoring": [
+            "Điện tâm đồ (QTc) trước và định kỳ khi phối hợp với thuốc kéo dài QT khác.",
+            "Triệu chứng tiêu hóa và giảm cân.",
+            "Thay đổi sắc tố da và ảnh hưởng tâm lý (tự ti, trầm cảm).",
+        ],
+        "precautions": [
+            "Tư vấn trước về thay đổi màu da/niêm mạc để giảm lo lắng và cải thiện tuân thủ.",
+            "Thận trọng khi phối hợp với bedaquiline, delamanid, fluoroquinolone do cộng hưởng kéo dài QT.",
+            "Tránh dùng ở bệnh nhân có QTc >500 ms hoặc rối loạn nhịp thất không ổn định.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Rất dài (~70 ngày) do tích lũy mô.",
+            "onset": "Tác dụng tích lũy dần sau vài tuần.",
+            "duration": "Hiệu ứng kéo dài nhiều tháng sau ngừng thuốc.",
+            "protein_binding": "Rất cao, phân bố nhiều ở mô mỡ và mô liên kết.",
+            "clearance": "Chủ yếu qua mật và phân; rất ít qua thận.",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ánh sáng, 15–30°C.",
+        "black_box_warnings": (
+            "Có thể gây tăng sắc tố da dai dẳng và kéo dài QT; cần theo dõi ECG khi phối hợp các thuốc kéo dài QT khác."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Bedaquiline, Delamanid, Fluoroquinolones",
+                    "mechanism": "Cộng hưởng kéo dài QT.",
+                    "effect": "Tăng nguy cơ xoắn đỉnh, rung thất.",
+                    "management": "Theo dõi ECG định kỳ, điều chỉnh phác đồ nếu QTc >500 ms.",
+                }
+            ],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "QTc kéo dài nặng, loạn nhịp thất không kiểm soát.",
+            ],
+            "tương_đối": [
+                "Tiền sử trầm cảm nặng (do thay đổi sắc tố gây ảnh hưởng tâm lý).",
+                "Bệnh gan mạn tính (do chuyển hóa mật).",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu hạn chế; chỉ dùng khi cần trong MDR-TB, tránh trong thai kỳ nhẹ/ổn định.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Có thể bài tiết vào sữa; nguy cơ đổi màu da trẻ.",
+                "recommendation": "Cân nhắc lợi ích–nguy cơ; theo dõi da trẻ nếu dùng.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng; theo dõi men gan.",
+            "moderate": "Giảm liều hoặc kéo dài khoảng cách liều nếu có dấu hiệu độc gan.",
+            "severe": "Tránh dùng nếu có thể.",
+            "notes": "Thải trừ chủ yếu qua mật; suy gan có thể tăng tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, đau bụng.",
+                "Rối loạn nhịp tim, QT kéo dài.",
+                "Tăng sắc tố da rõ.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Điều trị hỗ trợ, theo dõi ECG.",
+                "Sửa rối loạn điện giải (K+, Mg2+).",
+            ],
+            "monitoring": "ECG, men gan, triệu chứng lâm sàng.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên uống cùng bữa ăn để giảm kích ứng tiêu hóa và tăng hấp thu.",
+                "timing": "Uống 1 lần/ngày, cố định giờ.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "WHO Consolidated Guidelines on Drug-Resistant Tuberculosis Treatment (Clofazimine as Group B/C).",
+                "Clinical trials of clofazimine-containing MDR-TB regimens.",
+            ],
+            "last_updated": "2025-03-02",
+            "evidence_level": "Moderate–High trong MDR-TB; High trong phong.",
+        },
+    },
+
+    "Bedaquiline": {
+        "group": "Infectious Disease - Diarylquinoline (Group A second-line antitubercular for MDR/XDR-TB)",
+        "vietnamese_name": "Bedaquiline",
+        "administration": ["PO"],
+        "indications": [
+            "Điều trị lao kháng đa thuốc (MDR-TB) hoặc XDR-TB trong phác đồ ngắn/ngắn mở rộng theo WHO (Group A).",
+        ],
+        "contraindications": [
+            "Dị ứng với bedaquiline.",
+            "QTc >500 ms hoặc tiền sử loạn nhịp thất nặng.",
+            "Bệnh gan nặng tiến triển (Child-Pugh C) không kiểm soát.",
+        ],
+        "dosage": {
+            "adult_mdr_tb": "Tuần 1–2: 400mg/ngày; tuần 3–24: 200mg uống 3 lần/tuần (cách ngày), tổng tối đa 24 tuần.",
+            "notes": "Luôn dùng cùng bữa ăn (tăng hấp thu); không vượt quá thời gian 6 tháng trừ khi có chỉ định đặc biệt.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh.",
+            "30_60": "Không cần chỉnh; theo dõi tác dụng phụ.",
+            "under_30": "Dữ liệu hạn chế; thận trọng và theo dõi sát.",
+        },
+        "side_effects": [
+            "QTc kéo dài, nguy cơ xoắn đỉnh.",
+            "Tăng men gan, viêm gan do thuốc.",
+            "Đau đầu, buồn nôn, đau khớp.",
+        ],
+        "interactions": [
+            "Thuốc kéo dài QT khác (clofazimine, moxifloxacin, delamanid): tăng nguy cơ loạn nhịp.",
+            "CYP3A4 inducers (rifampin, efavirenz): giảm nồng độ bedaquiline, giảm hiệu quả.",
+            "CYP3A4 inhibitors mạnh (ketoconazole, protease inhibitor): tăng nồng độ, tăng độc tính.",
+        ],
+        "pregnancy": "Không khuyến cáo rộng rãi; cân nhắc chỉ dùng khi không có lựa chọn an toàn hơn trong MDR/XDR-TB nặng.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True, "hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Consolidated Guidelines on Drug-Resistant TB Treatment 2022",
+            "Group A - MDR/XDR-TB Regimens"
+        ],
+        "mechanism_of_action": (
+            "Bedaquiline ức chế ATP synthase (subunit c) đặc hiệu của Mycobacterium tuberculosis, "
+            "làm mất khả năng tạo ATP và gây chết vi khuẩn, bao gồm cả vi khuẩn đang nhân lên chậm hoặc ngủ. "
+            "Được xếp Group A trong phác đồ MDR/XDR-TB hiện đại."
+        ),
+        "monitoring": [
+            "ECG (QTc) trước điều trị và định kỳ (ví dụ mỗi tháng) hoặc khi thêm thuốc kéo dài QT khác.",
+            "Men gan (ALT, AST, bilirubin) trước và định kỳ.",
+            "Triệu chứng loạn nhịp (hồi hộp, ngất, chóng mặt).",
+        ],
+        "precautions": [
+            "Tránh phối hợp với rifampin hoặc cảm ứng CYP3A4 mạnh (giảm hiệu quả rõ).",
+            "Hạn chế phối hợp nhiều thuốc kéo dài QT; nếu cần, theo dõi ECG sát và chỉnh phác đồ khi QTc >500 ms.",
+            "Ngừng thuốc nếu xuất hiện loạn nhịp thất nguy hiểm hoặc tăng QTc rõ rệt không hồi phục sau chỉnh điện giải.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "~5.5 tháng (rất dài do phân bố mô mạnh).",
+            "onset": "Tích lũy dần; hiệu quả thấy sau vài tuần.",
+            "duration": "Tác dụng kéo dài nhiều tháng do half-life dài.",
+            "protein_binding": ">99%.",
+            "clearance": "Gan (CYP3A4); thải trừ chủ yếu qua mật và phân.",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ánh sáng, 15–30°C.",
+        "black_box_warnings": (
+            "Nguy cơ tử vong tăng trong một số nghiên cứu ban đầu (không giải thích rõ) và QTc kéo dài đáng kể; "
+            "chỉ dùng khi lợi ích vượt trội và theo dõi ECG chặt chẽ."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rifampin, Rifapentine, Efavirenz",
+                    "mechanism": "Cảm ứng CYP3A4 mạnh, giảm nồng độ bedaquiline.",
+                    "effect": "Giảm hiệu quả điều trị MDR-TB.",
+                    "management": "Tránh phối hợp; nếu bắt buộc, tham khảo phác đồ chuyên khoa và theo dõi sát.",
+                },
+                {
+                    "drug": "Ketoconazole, Protease inhibitors",
+                    "mechanism": "Ức chế CYP3A4 mạnh.",
+                    "effect": "Tăng nồng độ bedaquiline và nguy cơ QT kéo dài/độc gan.",
+                    "management": "Tránh phối hợp hoặc theo dõi sát ECG và men gan.",
+                },
+            ],
+            "moderate": [
+                {
+                    "drug": "Clofazimine, Delamanid, Fluoroquinolones",
+                    "mechanism": "Cộng hưởng kéo dài QT.",
+                    "effect": "Tăng nguy cơ loạn nhịp thất.",
+                    "management": "Theo dõi ECG định kỳ, giảm bớt thuốc kéo dài QT khác nếu có thể.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "QTc >500 ms.",
+                "Loạn nhịp thất nặng chưa kiểm soát.",
+            ],
+            "tương_đối": [
+                "Bệnh gan mạn tiến triển.",
+                "Dùng đồng thời nhiều thuốc kéo dài QT.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C (theo tương đương)",
+            "pregnancy_details": "Dữ liệu người rất ít; chỉ dùng trong MDR/XDR-TB đe dọa tính mạng và không có lựa chọn khác.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ mức bài tiết; nên thận trọng.",
+                "recommendation": "Cân nhắc ngừng cho bú nếu dùng kéo dài.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Có thể dùng với theo dõi men gan.",
+            "moderate": "Thận trọng; tăng tần suất theo dõi men gan.",
+            "severe": "Tránh dùng nếu có lựa chọn khác.",
+            "notes": "Chuyển hóa mạnh qua gan; suy gan làm tăng nguy cơ độc tính.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "QT kéo dài, loạn nhịp thất.",
+                "Tăng men gan, vàng da.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Điều trị hỗ trợ, theo dõi tại ICU nếu loạn nhịp.",
+                "Sửa rối loạn điện giải (K+, Mg2+, Ca2+).",
+                "Theo dõi ECG liên tục.",
+            ],
+            "monitoring": "ECG, men gan, dấu hiệu sinh tồn.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "BẮT BUỘC dùng cùng thức ăn giàu mỡ để tăng hấp thu (gấp ~2 lần).",
+                "timing": "Theo đúng lịch tải/duy trì (tuần 1–2 hằng ngày, sau đó 3 lần/tuần).",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "WHO Consolidated Guidelines on Drug-Resistant Tuberculosis Treatment (Bedaquiline as Group A).",
+                "NEJM trials on bedaquiline-containing MDR-TB regimens.",
+            ],
+            "last_updated": "2025-03-02",
+            "evidence_level": "High trong MDR/XDR-TB (guideline- and trial-based).",
+        },
+    },
+
+    "Delamanid": {
+        "group": "Infectious Disease - Nitroimidazole (Group C second-line antitubercular for MDR/XDR-TB)",
+        "vietnamese_name": "Delamanid",
+        "administration": ["PO"],
+        "indications": [
+            "Điều trị lao kháng đa thuốc (MDR-TB) và XDR-TB phối hợp với phác đồ nền phù hợp.",
+        ],
+        "contraindications": [
+            "Dị ứng với delamanid.",
+            "QTc >500 ms hoặc loạn nhịp thất nặng.",
+            "Albumin máu rất thấp (<2.8 g/dL) do tăng nguy cơ QT kéo dài.",
+        ],
+        "dosage": {
+            "adult_mdr_tb": "100mg uống 2 lần/ngày trong 24 tuần, cùng phác đồ nền MDR/XDR-TB.",
+            "notes": "Dùng cùng thức ăn để tăng hấp thu; kéo dài hơn 24 tuần chỉ khi có chỉ định chuyên khoa.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh.",
+            "30_60": "Không cần chỉnh; dữ liệu hạn chế.",
+            "under_30": "Chưa có dữ liệu rõ; thận trọng và theo dõi sát nếu bắt buộc dùng.",
+        },
+        "side_effects": [
+            "QTc kéo dài, loạn nhịp thất (nguy cơ tăng nếu albumin thấp).",
+            "Buồn nôn, nôn, đau đầu.",
+            "Giảm cân, kém ăn.",
+        ],
+        "interactions": [
+            "Thuốc kéo dài QT (bedaquiline, clofazimine, fluoroquinolones): cộng hưởng kéo dài QT.",
+            "Inducer CYP3A4 mạnh (rifampin): có thể giảm nồng độ delamanid.",
+        ],
+        "pregnancy": "Dữ liệu hạn chế; không khuyến cáo thường quy, chỉ dùng khi lợi ích vượt trội nguy cơ.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Consolidated Guidelines on Drug-Resistant TB Treatment 2022",
+            "Group C - MDR/XDR-TB Regimens"
+        ],
+        "mechanism_of_action": (
+            "Delamanid là dẫn xuất nitro-dihydro-imidazooxazole; sau khi được nitroreductase của vi khuẩn hoạt hóa, "
+            "thuốc ức chế tổng hợp acid mycolic (methoxy- và keto-mycolic acid), thành phần vách tế bào Mycobacterium tuberculosis, "
+            "dẫn tới rối loạn vách và chết vi khuẩn."
+        ),
+        "monitoring": [
+            "ECG (QTc) trước điều trị, sau 2 tuần, rồi định kỳ.",
+            "Albumin huyết thanh; thận trọng nếu <2.8 g/dL.",
+            "Triệu chứng tim mạch (hồi hộp, ngất).",
+        ],
+        "precautions": [
+            "Hạn chế phối hợp với nhiều thuốc kéo dài QT; nếu cần, tăng tần suất theo dõi ECG.",
+            "Điều chỉnh dinh dưỡng và điều trị albumin thấp nếu có thể.",
+            "Không dùng đơn trị; luôn phối hợp nhiều thuốc hoạt lực cao trong MDR/XDR-TB.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "~30–38 giờ.",
+            "onset": "Hấp thu tăng rõ với thức ăn giàu mỡ.",
+            "duration": "Dùng 2 lần/ngày.",
+            "protein_binding": ">99% (phụ thuộc albumin).",
+            "clearance": "Chuyển hóa nhiều qua albumin và CYP; thải trừ chủ yếu qua phân.",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ánh sáng, 15–30°C.",
+        "black_box_warnings": (
+            "Nguy cơ QTc kéo dài đáng kể, đặc biệt khi albumin thấp hoặc phối hợp thuốc kéo dài QT khác; "
+            "cần theo dõi ECG và albumin sát."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Bedaquiline, Clofazimine, Fluoroquinolones",
+                    "mechanism": "Cộng hưởng kéo dài QT.",
+                    "effect": "Tăng nguy cơ xoắn đỉnh.",
+                    "management": "Theo dõi ECG sát, cân nhắc giảm số thuốc kéo dài QT trong phác đồ.",
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Rifampin và các cảm ứng CYP mạnh",
+                    "mechanism": "Tăng chuyển hóa delamanid.",
+                    "effect": "Giảm nồng độ và hiệu quả.",
+                    "management": "Tránh phối hợp; sử dụng phác đồ khác nếu cần rifampin.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "QTc >500 ms.",
+                "Albumin rất thấp không cải thiện được.",
+            ],
+            "tương_đối": [
+                "Tiền sử bệnh tim mạch cấu trúc, loạn nhịp thất.",
+                "Dùng đồng thời nhiều thuốc kéo dài QT.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C (áp dụng theo mức độ dữ liệu hạn chế).",
+            "pregnancy_details": "Chỉ dùng khi MDR/XDR-TB nặng, sau khi cân nhắc lợi ích–nguy cơ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết sữa; thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc tạm ngừng cho bú trong giai đoạn dùng delamanid.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Có thể dùng; theo dõi men gan.",
+            "moderate": "Thận trọng, tăng tần suất theo dõi.",
+            "severe": "Tránh dùng nếu có lựa chọn khác.",
+            "notes": "Chuyển hóa qua gan; suy gan nặng có thể tăng nồng độ.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "QT kéo dài, loạn nhịp.",
+                "Buồn nôn, nôn, chóng mặt.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Điều trị hỗ trợ, theo dõi ECG liên tục.",
+                "Sửa điện giải, dùng magnesi IV nếu có xoắn đỉnh.",
+            ],
+            "monitoring": "ECG, men gan, dấu hiệu sinh tồn.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Dùng cùng thức ăn để tăng hấp thu.",
+                "timing": "100mg x 2 lần/ngày, cách nhau 12 giờ.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "WHO Consolidated Guidelines on Drug-Resistant Tuberculosis Treatment (Delamanid as Group C).",
+                "Phase II & III delamanid MDR-TB trials.",
+            ],
+            "last_updated": "2025-03-02",
+            "evidence_level": "Moderate–High trong MDR/XDR-TB (trial- and guideline-based).",
+        },
+    },
+
+    "Cycloserine / Terizidone": {
+        "group": "Infectious Disease - Second-line antitubercular (D-alanine analog, MDR-TB)",
+        "vietnamese_name": "Cycloserine, Terizidone",
+        "administration": ["PO"],
+        "indications": [
+            "Điều trị MDR/XDR-TB khi không đủ số thuốc nhóm A/B; thường nhóm C.",
+        ],
+        "contraindications": [
+            "Động kinh không kiểm soát.",
+            "Rối loạn tâm thần nặng (trầm cảm, loạn thần) không kiểm soát.",
+            "Suy thận nặng không chỉnh được liều.",
+        ],
+        "dosage": {
+            "adult_mdr_tb": "Usual 10–15mg/kg/ngày chia 2 lần (tối đa 750–1000mg/ngày), điều chỉnh theo dung nạp và chức năng thận.",
+            "notes": "Bổ sung pyridoxine (vitamin B6) để giảm độc tính thần kinh; chia liều để giảm dao động nồng độ.",
+        },
+        "renal_adjustment": {
+            "normal": "Dùng liều chuẩn chia 2 lần/ngày.",
+            "30_60": "Giảm liều hoặc kéo dài khoảng cách liều (ví dụ 250mg mỗi 12–24 giờ).",
+            "under_30": "Giảm đáng kể liều, có thể 250mg mỗi 24–48 giờ; tham khảo phác đồ chuyên khoa.",
+        },
+        "side_effects": [
+            "Độc tính thần kinh trung ương: kích thích, mất ngủ, loạn thần, trầm cảm, ý tưởng tự sát.",
+            "Co giật (đặc biệt khi không chỉnh liều ở suy thận hoặc không dùng B6).",
+            "Nhức đầu, run tay.",
+            "Buồn nôn, nôn.",
+        ],
+        "interactions": [
+            "Rượu, thuốc hướng thần (SSRI, TCA, antipsychotic): có thể làm nặng triệu chứng tâm thần.",
+            "Thuốc làm giảm ngưỡng co giật (tramadol, fluoroquinolone): tăng nguy cơ co giật.",
+        ],
+        "pregnancy": "Dữ liệu hạn chế; chỉ dùng khi MDR/XDR-TB nặng và không có lựa chọn khác.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"neurologic": True, "psychiatric": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Consolidated Guidelines on Drug-Resistant TB Treatment 2022",
+            "Group C - MDR/XDR-TB Regimens"
+        ],
+        "mechanism_of_action": (
+            "Cycloserine là chất tương tự D-alanine, ức chế enzyme alanine racemase và D-alanine:D-alanine ligase, "
+            "ngăn tổng hợp peptidoglycan của vách tế bào Mycobacterium tuberculosis, dẫn đến rối loạn vách và chết vi khuẩn."
+        ),
+        "monitoring": [
+            "Đánh giá tâm thần kinh cơ bản (trầm cảm, lo âu, tiền sử co giật) trước khi bắt đầu.",
+            "Theo dõi triệu chứng tâm thần (mất ngủ nặng, loạn thần, ý tưởng tự sát) mỗi lần tái khám.",
+            "Chức năng thận định kỳ để điều chỉnh liều.",
+        ],
+        "precautions": [
+            "Luôn bổ sung pyridoxine để giảm độc thần kinh.",
+            "Ngừng thuốc nếu xuất hiện loạn thần nặng hoặc ý tưởng tự sát; điều trị chuyên khoa tâm thần.",
+            "Tránh rượu và các chất kích thích thần kinh.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "~10 giờ (kéo dài khi suy thận).",
+            "onset": "Hấp thu tốt qua đường uống.",
+            "duration": "Dùng 1–2 lần/ngày.",
+            "protein_binding": "Thấp.",
+            "clearance": "Thải trừ chủ yếu qua thận ở dạng không chuyển hóa.",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ánh sáng, 15–30°C.",
+        "black_box_warnings": (
+            "Nguy cơ cao gây rối loạn tâm thần và co giật, đặc biệt khi dùng liều cao hoặc suy thận; "
+            "cần sàng lọc và theo dõi tâm thần chặt chẽ."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rượu, thuốc kích thích thần kinh",
+                    "mechanism": "Tăng kích thích CNS.",
+                    "effect": "Tăng nguy cơ loạn thần, co giật.",
+                    "management": "Tránh hoàn toàn rượu; thận trọng với thuốc hướng thần.",
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc làm giảm ngưỡng co giật (tramadol, fluoroquinolone)",
+                    "mechanism": "Cộng hưởng kích thích CNS.",
+                    "effect": "Tăng nguy cơ co giật.",
+                    "management": "Hạn chế phối hợp; nếu bắt buộc, theo dõi sát và cân nhắc giảm liều.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Động kinh không kiểm soát.",
+                "Rối loạn tâm thần nặng hiện tại.",
+            ],
+            "tương_đối": [
+                "Tiền sử trầm cảm, ý tưởng tự sát.",
+                "Suy thận trung bình–nặng.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C/D (dữ liệu hạn chế, nghiêng về thận trọng cao).",
+            "pregnancy_details": "Chỉ dùng khi MDR/XDR-TB đe dọa tính mạng và cuối cùng không có thuốc khác.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ mức bài tiết; cân nhắc thận trọng.",
+                "recommendation": "Thảo luận nguy cơ–lợi ích; có thể ưu tiên ngừng cho bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh; chủ yếu theo dõi thận.",
+            "moderate": "Không cần chỉnh liều riêng, nhưng cân nhắc toàn bộ phác đồ.",
+            "severe": "Ảnh hưởng hạn chế; điều chỉnh theo thận là chính.",
+            "notes": "Thải trừ qua thận; suy gan ít ảnh hưởng.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích thích, loạn thần nặng.",
+                "Co giật.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Điều trị co giật bằng benzodiazepine.",
+                "An thần và điều trị hỗ trợ tâm thần.",
+                "Lọc máu có thể giúp loại bỏ thuốc (do thải qua thận).",
+            ],
+            "monitoring": "Trạng thái tâm thần, dấu hiệu sinh tồn, chức năng thận.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn.",
+                "timing": "Chia 1–2 lần/ngày; tránh dùng tối muộn nếu gây mất ngủ.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "WHO Consolidated Guidelines on Drug-Resistant Tuberculosis Treatment (Cycloserine/Terizidone as Group C).",
+            ],
+            "last_updated": "2025-03-02",
+            "evidence_level": "Moderate – sử dụng rộng rãi nhưng độc tính thần kinh cao.",
+        },
+    },
+
+    "PAS (para-aminosalicylic acid)": {
+        "group": "Infectious Disease - Second-line antitubercular (folate antagonist, MDR-TB)",
+        "vietnamese_name": "Acid para-aminosalicylic (PAS)",
+        "administration": ["PO"],
+        "indications": [
+            "Điều trị MDR/XDR-TB khi không đủ lựa chọn khác (thường Group C/D).",
+        ],
+        "contraindications": [
+            "Dị ứng với PAS hoặc salicylate nặng.",
+            "Suy gan nặng tiến triển.",
+        ],
+        "dosage": {
+            "adult_mdr_tb": "8–12g/ngày chia 2–3 lần, thường dùng dạng hạt phóng thích chậm theo khuyến cáo nhà sản xuất.",
+            "notes": "Luôn dùng phối hợp với nhiều thuốc khác; điều chỉnh liều giảm nếu dung nạp kém.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh.",
+            "30_60": "Thận trọng; theo dõi chức năng thận và dung nạp.",
+            "under_30": "Dữ liệu hạn chế; có thể cần giảm liều hoặc tăng khoảng cách; tham khảo chuyên khoa.",
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa nặng: buồn nôn, nôn, tiêu chảy, đau bụng.",
+            "Viêm gan do thuốc.",
+            "Dị ứng: phát ban, sốt, hiếm gặp hội chứng giống lupus.",
+        ],
+        "interactions": [
+            "Thuốc gây độc gan khác: tăng nguy cơ viêm gan.",
+        ],
+        "pregnancy": "Dữ liệu hạn chế; không dùng thường quy, chỉ khi cần trong MDR/XDR-TB nặng.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True, "gastrointestinal": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Consolidated Guidelines on Drug-Resistant TB Treatment 2022",
+            "Group C/D - MDR/XDR-TB Regimens"
+        ],
+        "mechanism_of_action": (
+            "PAS là chất tương tự PABA, ức chế tổng hợp acid folic ở Mycobacterium tuberculosis; "
+            "đồng thời làm giảm hấp thu/hoạt tính một số thuốc chống lao khác nếu dùng sai cách, nên cần tuân thủ hướng dẫn phối hợp."
+        ),
+        "monitoring": [
+            "Men gan định kỳ.",
+            "Triệu chứng tiêu hóa và cân nặng.",
+            "Dấu hiệu dị ứng (ban, sốt).",
+        ],
+        "precautions": [
+            "Cho bệnh nhân dùng thuốc cùng thức ăn để giảm kích ứng dạ dày.",
+            "Giảm liều hoặc chuyển dạng bào chế phóng thích chậm nếu tiêu hóa kém.",
+            "Ngừng thuốc nếu có viêm gan lâm sàng rõ hoặc phản ứng dị ứng nặng.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "~1 giờ (ngắn).",
+            "onset": "Hấp thu tương đối nhanh, nhưng dung nạp phụ thuộc dạng bào chế.",
+            "duration": "Cần chia liều 2–3 lần/ngày.",
+            "protein_binding": "Trung bình.",
+            "clearance": "Chủ yếu qua thận (liên hợp acetyl, glucuronid).",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ẩm và ánh sáng; dạng hạt cần bảo quản theo hướng dẫn đặc biệt.",
+        "black_box_warnings": (
+            "Nguy cơ viêm gan và rối loạn tiêu hóa nặng có thể dẫn tới bỏ điều trị; cần theo dõi và can thiệp sớm."
+        ),
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc độc gan (INH, RIF, PZA, alcohol)",
+                    "mechanism": "Tăng gánh nặng gan.",
+                    "effect": "Tăng nguy cơ viêm gan.",
+                    "management": "Theo dõi men gan sát; tư vấn tránh rượu.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng nặng với PAS.",
+                "Viêm gan cấp tiến triển.",
+            ],
+            "tương_đối": [
+                "Bệnh gan mạn.",
+                "Tiền sử rối loạn tiêu hóa nặng.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C (thận trọng).",
+            "pregnancy_details": "Chỉ dùng khi cần thiết trong MDR/XDR-TB và không có thuốc khác an toàn hơn.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Có thể bài tiết vào sữa; dữ liệu hạn chế.",
+                "recommendation": "Cân nhắc lợi ích–nguy cơ, theo dõi trẻ tiêu chảy hoặc vàng da.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Theo dõi men gan; cân nhắc giảm liều nếu tăng men gan.",
+            "moderate": "Thận trọng; chỉ dùng khi thật cần, với theo dõi sát.",
+            "severe": "Tránh dùng nếu có thể.",
+            "notes": "PAS có độc tính gan; suy gan làm tăng nguy cơ.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Nôn, tiêu chảy nặng, đau bụng.",
+                "Tăng men gan, vàng da.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Điều trị hỗ trợ, bù dịch, điều chỉnh điện giải.",
+                "Theo dõi và điều trị suy gan nếu có.",
+            ],
+            "monitoring": "Men gan, chức năng thận, điện giải, tình trạng lâm sàng.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên uống cùng thức ăn để giảm kích ứng dạ dày.",
+                "timing": "Chia 2–3 lần/ngày theo chỉ định.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "WHO Consolidated Guidelines on Drug-Resistant Tuberculosis Treatment (PAS as Group C/D).",
+            ],
+            "last_updated": "2025-03-02",
+            "evidence_level": "Moderate (ít dùng hơn do dung nạp kém).",
+        }
+    }
 }
 
 __all__ = ["ANTITUBERCULAR_DRUGS"]

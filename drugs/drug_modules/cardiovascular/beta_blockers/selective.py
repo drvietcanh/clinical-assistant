@@ -39,6 +39,17 @@ SELECTIVE_BETA_BLOCKERS = {
             "NSAID: giảm hiệu quả"
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["cardiac_bradycardia", "cardiac_av_block"]
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA HFrEF GDMT (metoprolol succinate)",
+            "ESC HFrEF Class I (metoprolol succinate)"
+        ],
         "mechanism_of_action": "Ức chế thụ thể beta-1 chọn lọc, giảm nhịp tim, lực co bóp cơ tim, và dẫn truyền nhĩ thất",
         "monitoring": [
             "Huyết áp, nhịp tim mỗi lần khám",
@@ -490,6 +501,17 @@ SELECTIVE_BETA_BLOCKERS = {
           "Insulin: che dấu triệu chứng hạ đường huyết"
       ],
       "pregnancy": "C",
+      "risk_flags": {
+          "high_alert": False,
+          "narrow_therapeutic_index": False,
+          "icu_critical_care_only": False,
+          "bleeding_risk": "Low",
+          "organ_toxicity": ["cardiac_bradycardia", "cardiac_av_block"]
+      },
+      "guideline_tags": [
+          "ACC/AHA/HFSA HFrEF GDMT",
+          "ESC HFrEF Class I"
+      ],
       "mechanism_of_action": "Selective beta-1 adrenergic receptor blocker. Ức chế tác dụng của catecholamines trên beta-1 receptors ở tim, giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp. Có bằng chứng mạnh làm giảm tỷ lệ tử vong và nhập viện trong suy tim mạn tính (NYHA class II-IV). Thải qua cả thận và gan (50-50%).",
       "monitoring": [
           "Nhịp tim và huyết áp (trước và sau khi bắt đầu, đặc biệt ở bệnh nhân suy tim)",

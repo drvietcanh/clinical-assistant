@@ -140,12 +140,16 @@ elif "Ventilator Management" in tool_type:
     
     # Sub-menu for ventilator tools - Organized into 4 clear tabs
     if VENTILATOR_ADVANCED_AVAILABLE:
-        vent_tabs = st.tabs([
+        vent_tab_labels = [
             "🚀 Quick Tools",
             "🫁 Comprehensive Analysis",
             "📊 Protocols & Settings",
             "🔄 Weaning & Extubation"
-        ], selected=default_vent_tab if default_vent_tab < 4 else None)
+        ]
+        if default_vent_tab is not None and 0 <= default_vent_tab < len(vent_tab_labels):
+            vent_tabs = st.tabs(vent_tab_labels, selected=default_vent_tab)
+        else:
+            vent_tabs = st.tabs(vent_tab_labels)
         
         # Tab 1: Quick Tools - For fast decisions
         with vent_tabs[0]:

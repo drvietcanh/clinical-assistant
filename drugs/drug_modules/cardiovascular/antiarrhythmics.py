@@ -897,8 +897,1278 @@ ANTIARRHYTHMICS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, clinical guidelines"
         }
-    }
+    },
+    
+    "Sotalol": {
+        "group": "Cardiovascular - Antiarrhythmic (Class III)",
+        "vietnamese_name": "Sotalol, Betapace",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Rung nhĩ (atrial fibrillation) - duy trì nhịp xoang",
+            "Cuồng nhĩ (atrial flutter) - duy trì nhịp xoang",
+            "Nhịp nhanh trên thất (SVT)",
+            "Rối loạn nhịp thất (ventricular arrhythmias)",
+            "Rung thất (ventricular fibrillation) - dự phòng",
+            "Nhịp nhanh thất (ventricular tachycardia) - dự phòng"
+        ],
+        "contraindications": [
+            "Dị ứng sotalol",
+            "QT kéo dài (QTc >450ms) - CHỐNG CHỈ ĐỊNH",
+            "Torsades de pointes - CHỐNG CHỈ ĐỊNH",
+            "Suy tim nặng (NYHA class IV) - CHỐNG CHỈ ĐỊNH",
+            "Block nhĩ thất độ 2-3 không có máy tạo nhịp - CHỐNG CHỈ ĐỊNH",
+            "Hạ kali máu, hạ magie máu - CHỐNG CHỈ ĐỊNH (phải điều chỉnh trước)",
+            "Hạ huyết áp nặng",
+            "Hen phế quản nặng (do tác dụng chẹn beta)"
+        ],
+        "dosage": {
+            "adult_po_loading": "80mg PO x 2 lần/ngày, tăng dần mỗi 3 ngày",
+            "adult_po_maintenance": "80-160mg PO x 2 lần/ngày (tối đa 320mg/ngày)",
+            "adult_po_max": "320mg/ngày (160mg x 2 lần/ngày)",
+            "adult_iv": "75-150mg IV trong 5 phút, sau đó 10mg/phút IV infusion",
+            "pediatric_po": "2mg/kg/ngày PO chia 2 lần (tối đa 160mg/ngày)",
+            "notes": "PHẢI bắt đầu trong bệnh viện với monitoring ECG 3 ngày (nguy cơ torsades de pointes). Điều chỉnh liều theo QTc và chức năng thận. Phải đảm bảo K+ và Mg2+ bình thường trước khi dùng."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50% hoặc tăng khoảng cách (q12h → q24h)",
+            "under_30": "Giảm liều 75% hoặc tăng khoảng cách đáng kể (q24-48h)",
+            "hemodialysis": "Liều sau lọc máu, cần điều chỉnh theo QTc"
+        },
+        "side_effects": [
+            "Torsades de pointes (nguy hiểm tính mạng) - nguy cơ cao trong 3 ngày đầu",
+            "Kéo dài QT interval (QTc >500ms nguy hiểm)",
+            "Nhịp chậm (bradycardia) - do tác dụng chẹn beta",
+            "Block nhĩ thất (AV block)",
+            "Suy tim (heart failure) - do tác dụng chẹn beta",
+            "Hạ huyết áp",
+            "Mệt mỏi, yếu cơ",
+            "Khó thở (do chẹn beta)",
+            "Co thắt phế quản (ở bệnh nhân hen)"
+        ],
+        "interactions": [
+            "Thuốc kéo dài QT: tăng nguy cơ torsades de pointes",
+            "Digoxin: tăng nguy cơ block AV",
+            "Calcium channel blockers (verapamil, diltiazem): tăng nguy cơ block AV, nhịp chậm",
+            "Thuốc lợi tiểu: tăng nguy cơ hạ K+/Mg2+, tăng nguy cơ torsades"
+        ],
+        "pregnancy": "B - Thận trọng trong thai kỳ",
+        "mechanism_of_action": "Sotalol là class III antiarrhythmic với tác dụng chẹn beta (non-selective beta-blocker). Có hai tác dụng chính: (1) Class III: ức chế kênh K+ (delayed rectifier IKr), kéo dài phase 3 của action potential, kéo dài QT interval và effective refractory period (ERP), (2) Chẹn beta: ức chế beta-1 và beta-2 receptors, giảm nhịp tim, giảm co bóp cơ tim. Kết quả: giảm nhịp tim, kéo dài QT interval, tăng nguy cơ torsades de pointes (đặc biệt trong 3 ngày đầu). Phổ: hiệu quả với rung nhĩ, cuồng nhĩ, rối loạn nhịp thất. ĐẶC ĐIỂM: PHẢI bắt đầu trong bệnh viện với monitoring ECG 3 ngày (nguy cơ torsades de pointes cao trong 3 ngày đầu).",
+        "monitoring": [
+            "ECG liên tục trong 3 ngày đầu (BẮT BUỘC) - theo dõi QTc, torsades de pointes",
+            "QTc interval - MỤC TIÊU: <450ms, NGUY HIỂM: >500ms hoặc tăng >60ms",
+            "Nhịp tim và huyết áp - theo dõi nhịp chậm, hạ huyết áp",
+            "Điện giải (K+, Mg2+) - PHẢI bình thường trước khi dùng, theo dõi định kỳ",
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều theo thận",
+            "Dấu hiệu suy tim (khó thở, phù, tăng cân) - do tác dụng chẹn beta",
+            "Dấu hiệu block AV (nhịp chậm, block nhĩ thất)",
+            "Dấu hiệu torsades de pointes (ngất, rối loạn nhịp) - NGỪNG NGAY nếu có"
+        ],
+        "precautions": [
+            "PHẢI bắt đầu trong bệnh viện với monitoring ECG 3 ngày (nguy cơ torsades de pointes cao trong 3 ngày đầu)",
+            "CHỐNG CHỈ ĐỊNH nếu QTc >450ms hoặc có tiền sử torsades de pointes",
+            "PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng (giảm K+/Mg2+ tăng nguy cơ torsades)",
+            "Điều chỉnh liều theo chức năng thận (eGFR) - QUAN TRỌNG",
+            "NGỪNG NGAY nếu QTc >500ms hoặc tăng >60ms",
+            "NGỪNG NGAY nếu có torsades de pointes",
+            "CHỐNG CHỈ ĐỊNH trong suy tim nặng (NYHA class IV) - do tác dụng chẹn beta",
+            "CHỐNG CHỈ ĐỊNH trong block AV độ 2-3 không có máy tạo nhịp",
+            "Thận trọng ở bệnh nhân hen phế quản (chẹn beta có thể gây co thắt phế quản)",
+            "Tránh dùng với thuốc kéo dài QT khác",
+            "Tránh dùng với thuốc lợi tiểu (tăng nguy cơ hạ K+/Mg2+)",
+            "Theo dõi chức năng thận định kỳ (thải trừ qua thận)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12 giờ",
+            "onset": "1-2 giờ (PO), ngay lập tức (IV)",
+            "duration": "12 giờ (liều q12h)",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Thận (80-90% bài tiết nguyên dạng qua nước tiểu), cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Nguy cơ torsades de pointes (rối loạn nhịp tim đe dọa tính mạng), đặc biệt trong 3 ngày đầu. PHẢI bắt đầu trong bệnh viện với monitoring ECG 3 ngày. CHỐNG CHỈ ĐỊNH nếu QTc >450ms, có tiền sử torsades de pointes, suy tim nặng (NYHA class IV), hoặc block AV độ 2-3. PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc kéo dài QT (Quinidine, Procainamide, Disopyramide, Amiodarone, Ibutilide, Dofetilide, Haloperidol, Chlorpromazine, Methadone, Macrolides, Fluoroquinolones)",
+                    "mechanism": "Tác dụng hiệp đồng kéo dài QT interval",
+                    "effect": "Tăng nguy cơ torsades de pointes, rối loạn nhịp tim đe dọa tính mạng",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: theo dõi ECG sát, đảm bảo K+ và Mg2+ bình thường, theo dõi QTc chặt chẽ."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Sotalol (chẹn beta) và digoxin đều làm chậm nhịp tim, tăng block AV",
+                    "effect": "Tăng nguy cơ block AV, nhịp chậm nặng",
+                    "management": "Thận trọng. Theo dõi ECG chặt chẽ. Có thể cần giảm liều digoxin hoặc sotalol."
+                },
+                {
+                    "drug": "Calcium Channel Blockers (Verapamil, Diltiazem)",
+                    "mechanism": "Cả hai đều làm chậm nhịp tim và dẫn truyền AV",
+                    "effect": "Tăng nguy cơ block AV, nhịp chậm nặng, suy tim",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: theo dõi ECG và huyết động chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc lợi tiểu (Furosemide, Thiazide)",
+                    "mechanism": "Thuốc lợi tiểu gây hạ K+ và Mg2+, tăng nguy cơ torsades de pointes khi dùng với sotalol",
+                    "effect": "Tăng nguy cơ torsades de pointes",
+                    "management": "Theo dõi K+ và Mg2+ chặt chẽ. Bổ sung K+ và Mg2+ nếu cần. Có thể cần giảm liều thuốc lợi tiểu."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng sotalol",
+                "QT kéo dài (QTc >450ms) - CHỐNG CHỈ ĐỊNH",
+                "Torsades de pointes - CHỐNG CHỈ ĐỊNH",
+                "Suy tim nặng (NYHA class IV) - CHỐNG CHỈ ĐỊNH (do tác dụng chẹn beta)",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp - CHỐNG CHỈ ĐỊNH",
+                "Hạ kali máu, hạ magie máu - CHỐNG CHỈ ĐỊNH (phải điều chỉnh trước)",
+                "Hạ huyết áp nặng"
+            ],
+            "tương_đối": [
+                "Suy tim (NYHA class I-III) - thận trọng, có thể làm nặng",
+                "Hen phế quản - thận trọng (chẹn beta có thể gây co thắt phế quản)",
+                "Bệnh phổi tắc nghẽn mạn tính (COPD) - thận trọng",
+                "Suy thận nặng (CrCl <30) - giảm liều 75%",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm, tăng nguy cơ tác dụng phụ",
+                "Dùng với digoxin - tăng nguy cơ block AV",
+                "Dùng với calcium channel blockers - tăng nguy cơ block AV"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Sotalol là thuốc phân loại B. Không có bằng chứng về nguy cơ dị tật thai nhi trong các nghiên cứu trên động vật. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh rõ ràng. Tuy nhiên, sotalol có thể qua nhau thai và có thể gây nhịp chậm ở thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong điều trị rối loạn nhịp đe dọa tính mạng.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Sotalol bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ, nhưng có thể gây nhịp chậm nhẹ.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ bú mẹ về dấu hiệu nhịp chậm."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Không cần điều chỉnh liều (thải trừ chủ yếu qua thận)",
+            "notes": "Sotalol thải trừ chủ yếu qua thận (80-90% bài tiết nguyên dạng). Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Torsades de pointes (rối loạn nhịp tim đe dọa tính mạng)",
+                "Nhịp chậm nặng (<40 bpm)",
+                "Block AV độ 2-3",
+                "Suy tim cấp",
+                "Hạ huyết áp nặng",
+                "Ngất, rối loạn ý thức"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Magnesium có thể giúp điều trị torsades de pointes.",
+            "treatment": [
+                "Ngừng ngay sotalol",
+                "Theo dõi ECG liên tục",
+                "Nếu torsades de pointes:",
+                "  - Magnesium sulfate 1-2g IV bolus, sau đó 1-2g/giờ IV infusion",
+                "  - Overdrive pacing nếu cần",
+                "  - Isoproterenol IV nếu cần (tăng nhịp tim)",
+                "Nếu nhịp chậm nặng hoặc block AV:",
+                "  - Atropine 0.5-1mg IV (có thể không hiệu quả do chẹn beta)",
+                "  - Isoproterenol IV (đối kháng chẹn beta)",
+                "  - Glucagon 1-5mg IV (đối kháng chẹn beta)",
+                "  - Máy tạo nhịp tạm thời nếu cần",
+                "Nếu suy tim cấp:",
+                "  - Inotrope (dobutamine, milrinone)",
+                "  - Hỗ trợ hô hấp",
+                "Nếu hạ huyết áp nặng:",
+                "  - Bù dịch (NS, LR)",
+                "  - Vasopressor (norepinephrine, epinephrine)",
+                "Lọc máu (hemodialysis) - sotalol có thể được loại bỏ một phần",
+                "Theo dõi: ECG, huyết áp, nhịp tim, QTc liên tục"
+            ],
+            "monitoring": "Theo dõi ECG, huyết áp, nhịp tim, QTc liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (torsades de pointes, block AV, suy tim)."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Isoproterenol",
+                    "mechanism": "Beta-agonist, đối kháng tác dụng chẹn beta của sotalol",
+                    "indication": "Nhịp chậm nặng, block AV do sotalol",
+                    "dose": "1-5 mcg/phút IV infusion, tăng dần đến khi đạt nhịp tim mục tiêu",
+                    "caution": "Có thể gây tăng nhịp tim, rối loạn nhịp. Theo dõi ECG chặt chẽ."
+                },
+                {
+                    "agent": "Glucagon",
+                    "mechanism": "Đối kháng tác dụng chẹn beta (cơ chế không rõ ràng)",
+                    "indication": "Nhịp chậm nặng, block AV do sotalol",
+                    "dose": "1-5mg IV bolus, sau đó 1-5mg/giờ IV infusion",
+                    "caution": "Có thể gây buồn nôn, nôn. Theo dõi đường huyết."
+                },
+                {
+                    "agent": "Magnesium sulfate",
+                    "mechanism": "Điều trị torsades de pointes",
+                    "indication": "Torsades de pointes do sotalol",
+                    "dose": "1-2g IV bolus, sau đó 1-2g/giờ IV infusion",
+                    "caution": "Điều trị hỗ trợ cho torsades de pointes."
+                }
+            ],
+            "notes": "Isoproterenol và glucagon có thể đối kháng tác dụng chẹn beta. Magnesium điều trị torsades de pointes."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với hoặc không thức ăn. Có thể uống không thức ăn nếu cần.",
+                "timing": "80-160mg PO x 2 lần/ngày (q12h). Bắt đầu với 80mg x 2 lần/ngày, tăng dần mỗi 3 ngày nếu cần. Tối đa: 320mg/ngày (160mg x 2 lần/ngày).",
+                "notes": "QUAN TRỌNG: 1) PHẢI bắt đầu trong bệnh viện với monitoring ECG 3 ngày, 2) Điều chỉnh liều theo chức năng thận (CrCl <30: giảm liều 75%), 3) PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng, 4) NGỪNG NGAY nếu QTc >500ms hoặc có torsades de pointes, 5) Theo dõi QTc định kỳ."
+            },
+            "iv": {
+                "reconstitution": "Pha trong NS hoặc D5W.",
+                "infusion_rate": "Loading: 75-150mg IV trong 5 phút. Maintenance: 10mg/phút IV infusion. Điều chỉnh theo đáp ứng và QTc.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Dùng đường truyền riêng."
+                ],
+                "notes": "QUAN TRỌNG: 1) PHẢI monitoring ECG liên tục, 2) Theo dõi QTc chặt chẽ, 3) PHẢI đảm bảo K+ và Mg2+ bình thường, 4) NGỪNG NGAY nếu QTc >500ms hoặc có torsades de pointes."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Sotalol (Betapace)",
+                "ACC/AHA/ESC Guidelines for Atrial Fibrillation",
+                "UpToDate - Sotalol: Drug Information",
+                "Medscape - Sotalol Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
+    "Dofetilide": {
+        "group": "Cardiovascular - Antiarrhythmic (Class III)",
+        "vietnamese_name": "Dofetilide, Tikosyn",
+        "administration": ["PO"],
+        "indications": [
+            "Rung nhĩ (atrial fibrillation) - chuyển nhịp và duy trì nhịp xoang",
+            "Cuồng nhĩ (atrial flutter) - chuyển nhịp và duy trì nhịp xoang"
+        ],
+        "contraindications": [
+            "Dị ứng dofetilide",
+            "QT kéo dài (QTc >440ms) - CHỐNG CHỈ ĐỊNH",
+            "Torsades de pointes - CHỐNG CHỈ ĐỊNH",
+            "Suy thận nặng (CrCl <20) - CHỐNG CHỈ ĐỊNH",
+            "Dùng với thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH",
+            "Dùng với cimetidine, verapamil, ketoconazole, trimethoprim - CHỐNG CHỈ ĐỊNH"
+        ],
+        "dosage": {
+            "adult_po_crcl_>60": "500mcg PO x 2 lần/ngày",
+            "adult_po_crcl_40_60": "250mcg PO x 2 lần/ngày",
+            "adult_po_crcl_20_40": "125mcg PO x 2 lần/ngày",
+            "adult_po_crcl_<20": "CHỐNG CHỈ ĐỊNH",
+            "notes": "PHẢI bắt đầu trong bệnh viện với monitoring ECG 3 ngày (nguy cơ torsades de pointes). Điều chỉnh liều theo chức năng thận (CrCl). PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng. CHỈ được kê đơn bởi bác sĩ đã được đào tạo về dofetilide."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi (CrCl >60: 500mcg x 2 lần/ngày)",
+            "30_60": "Giảm liều 50% (CrCl 40-60: 250mcg x 2 lần/ngày)",
+            "under_30": "Giảm liều 75% (CrCl 20-40: 125mcg x 2 lần/ngày), CHỐNG CHỈ ĐỊNH nếu CrCl <20"
+        },
+        "side_effects": [
+            "Torsades de pointes (nguy hiểm tính mạng) - nguy cơ cao trong 3 ngày đầu",
+            "Kéo dài QT interval (QTc >500ms nguy hiểm)",
+            "Nhịp chậm (bradycardia)",
+            "Đau đầu",
+            "Chóng mặt",
+            "Đau ngực",
+            "Khó thở"
+        ],
+        "interactions": [
+            "Cimetidine: tăng nồng độ dofetilide (CHỐNG CHỈ ĐỊNH)",
+            "Verapamil: tăng nồng độ dofetilide (CHỐNG CHỈ ĐỊNH)",
+            "Ketoconazole: tăng nồng độ dofetilide (CHỐNG CHỈ ĐỊNH)",
+            "Trimethoprim: tăng nồng độ dofetilide (CHỐNG CHỈ ĐỊNH)",
+            "Thuốc kéo dài QT: tăng nguy cơ torsades de pointes (CHỐNG CHỈ ĐỊNH)",
+            "Thuốc lợi tiểu: tăng nguy cơ hạ K+/Mg2+, tăng nguy cơ torsades"
+        ],
+        "pregnancy": "C - Thận trọng trong thai kỳ",
+        "mechanism_of_action": "Dofetilide là class III antiarrhythmic thuần túy. Ức chế kênh K+ (delayed rectifier IKr), kéo dài phase 3 của action potential, kéo dài QT interval và effective refractory period (ERP). Khác với sotalol (có tác dụng chẹn beta), dofetilide chỉ có tác dụng class III. Phổ: hiệu quả với rung nhĩ và cuồng nhĩ (chuyển nhịp và duy trì nhịp xoang). ĐẶC ĐIỂM: (1) PHẢI bắt đầu trong bệnh viện với monitoring ECG 3 ngày (nguy cơ torsades de pointes cao trong 3 ngày đầu), (2) CHỈ được kê đơn bởi bác sĩ đã được đào tạo về dofetilide, (3) Điều chỉnh liều theo chức năng thận (CrCl) - QUAN TRỌNG, (4) CHỐNG CHỈ ĐỊNH nếu CrCl <20, (5) CHỐNG CHỈ ĐỊNH với nhiều thuốc (cimetidine, verapamil, ketoconazole, trimethoprim), (6) PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng.",
+        "monitoring": [
+            "ECG liên tục trong 3 ngày đầu (BẮT BUỘC) - theo dõi QTc, torsades de pointes",
+            "QTc interval - MỤC TIÊU: <440ms, NGUY HIỂM: >500ms hoặc tăng >15%",
+            "Nhịp tim và huyết áp - theo dõi nhịp chậm",
+            "Điện giải (K+, Mg2+) - PHẢI bình thường trước khi dùng, theo dõi định kỳ",
+            "Chức năng thận (creatinine, CrCl) - điều chỉnh liều theo thận, QUAN TRỌNG",
+            "Dấu hiệu torsades de pointes (ngất, rối loạn nhịp) - NGỪNG NGAY nếu có"
+        ],
+        "precautions": [
+            "PHẢI bắt đầu trong bệnh viện với monitoring ECG 3 ngày (nguy cơ torsades de pointes cao trong 3 ngày đầu)",
+            "CHỈ được kê đơn bởi bác sĩ đã được đào tạo về dofetilide",
+            "CHỐNG CHỈ ĐỊNH nếu QTc >440ms hoặc có tiền sử torsades de pointes",
+            "CHỐNG CHỈ ĐỊNH nếu CrCl <20",
+            "PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng (giảm K+/Mg2+ tăng nguy cơ torsades)",
+            "Điều chỉnh liều theo chức năng thận (CrCl) - QUAN TRỌNG",
+            "NGỪNG NGAY nếu QTc >500ms hoặc tăng >15%",
+            "NGỪNG NGAY nếu có torsades de pointes",
+            "CHỐNG CHỈ ĐỊNH với cimetidine, verapamil, ketoconazole, trimethoprim (tăng nồng độ dofetilide)",
+            "CHỐNG CHỈ ĐỊNH với thuốc kéo dài QT khác",
+            "Tránh dùng với thuốc lợi tiểu (tăng nguy cơ hạ K+/Mg2+)",
+            "Theo dõi chức năng thận định kỳ (thải trừ qua thận)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10 giờ",
+            "onset": "2-3 giờ",
+            "duration": "12 giờ (liều q12h)",
+            "protein_binding": "60-70%",
+            "clearance": "Thận (80% bài tiết nguyên dạng qua nước tiểu), cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Nguy cơ torsades de pointes (rối loạn nhịp tim đe dọa tính mạng), đặc biệt trong 3 ngày đầu. PHẢI bắt đầu trong bệnh viện với monitoring ECG 3 ngày. CHỐNG CHỈ ĐỊNH nếu QTc >440ms, có tiền sử torsades de pointes, hoặc CrCl <20. CHỈ được kê đơn bởi bác sĩ đã được đào tạo về dofetilide. PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Cimetidine, Verapamil, Ketoconazole, Trimethoprim",
+                    "mechanism": "Ức chế CYP3A4 và P-gp, tăng nồng độ dofetilide",
+                    "effect": "Tăng nồng độ dofetilide đáng kể, tăng nguy cơ torsades de pointes, nguy hiểm tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH tuyệt đối. KHÔNG được dùng đồng thời với dofetilide."
+                },
+                {
+                    "drug": "Thuốc kéo dài QT (Quinidine, Procainamide, Disopyramide, Amiodarone, Sotalol, Ibutilide, Haloperidol, Chlorpromazine, Methadone, Macrolides, Fluoroquinolones)",
+                    "mechanism": "Tác dụng hiệp đồng kéo dài QT interval",
+                    "effect": "Tăng nguy cơ torsades de pointes, rối loạn nhịp tim đe dọa tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH. KHÔNG được dùng đồng thời với dofetilide."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc lợi tiểu (Furosemide, Thiazide)",
+                    "mechanism": "Thuốc lợi tiểu gây hạ K+ và Mg2+, tăng nguy cơ torsades de pointes khi dùng với dofetilide",
+                    "effect": "Tăng nguy cơ torsades de pointes",
+                    "management": "Theo dõi K+ và Mg2+ chặt chẽ. Bổ sung K+ và Mg2+ nếu cần. Có thể cần giảm liều thuốc lợi tiểu hoặc ngừng tạm thời."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng dofetilide",
+                "QT kéo dài (QTc >440ms) - CHỐNG CHỈ ĐỊNH",
+                "Torsades de pointes - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng (CrCl <20) - CHỐNG CHỈ ĐỊNH",
+                "Dùng với cimetidine, verapamil, ketoconazole, trimethoprim - CHỐNG CHỈ ĐỊNH",
+                "Dùng với thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH",
+                "Hạ kali máu, hạ magie máu - CHỐNG CHỈ ĐỊNH (phải điều chỉnh trước)"
+            ],
+            "tương_đối": [
+                "Suy thận (CrCl 20-40) - giảm liều 75%",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm, tăng nguy cơ tác dụng phụ",
+                "Dùng với thuốc lợi tiểu - tăng nguy cơ hạ K+/Mg2+"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dofetilide là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Dofetilide có thể qua nhau thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong điều trị rối loạn nhịp đe dọa tính mạng.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết dofetilide có bài tiết vào sữa mẹ hay không. Thời gian bán thải 10 giờ, protein binding 60-70%. Có thể bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Không cần điều chỉnh liều (thải trừ chủ yếu qua thận)",
+            "notes": "Dofetilide thải trừ chủ yếu qua thận (80% bài tiết nguyên dạng). Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Torsades de pointes (rối loạn nhịp tim đe dọa tính mạng)",
+                "Kéo dài QT interval nặng (QTc >500ms)",
+                "Nhịp chậm nặng",
+                "Ngất, rối loạn ý thức"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Magnesium có thể giúp điều trị torsades de pointes.",
+            "treatment": [
+                "Ngừng ngay dofetilide",
+                "Theo dõi ECG liên tục",
+                "Nếu torsades de pointes:",
+                "  - Magnesium sulfate 1-2g IV bolus, sau đó 1-2g/giờ IV infusion",
+                "  - Overdrive pacing nếu cần",
+                "  - Isoproterenol IV nếu cần (tăng nhịp tim)",
+                "Lọc máu (hemodialysis) - dofetilide có thể được loại bỏ một phần",
+                "Theo dõi: ECG, QTc liên tục"
+            ],
+            "monitoring": "Theo dõi ECG, QTc liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (torsades de pointes)."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Magnesium sulfate",
+                    "mechanism": "Điều trị torsades de pointes",
+                    "indication": "Torsades de pointes do dofetilide",
+                    "dose": "1-2g IV bolus, sau đó 1-2g/giờ IV infusion",
+                    "caution": "Điều trị hỗ trợ cho torsades de pointes."
+                }
+            ],
+            "notes": "Magnesium điều trị torsades de pointes. Lọc máu có thể giúp loại bỏ dofetilide."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với hoặc không thức ăn. Có thể uống không thức ăn nếu cần.",
+                "timing": "Điều chỉnh liều theo CrCl: CrCl >60: 500mcg x 2 lần/ngày, CrCl 40-60: 250mcg x 2 lần/ngày, CrCl 20-40: 125mcg x 2 lần/ngày. Uống đều đặn, cách đều nhau trong ngày (q12h).",
+                "notes": "QUAN TRỌNG: 1) PHẢI bắt đầu trong bệnh viện với monitoring ECG 3 ngày, 2) CHỈ được kê đơn bởi bác sĩ đã được đào tạo về dofetilide, 3) Điều chỉnh liều theo chức năng thận (CrCl) - QUAN TRỌNG, 4) CHỐNG CHỈ ĐỊNH nếu CrCl <20, 5) PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng, 6) NGỪNG NGAY nếu QTc >500ms hoặc có torsades de pointes, 7) CHỐNG CHỈ ĐỊNH với cimetidine, verapamil, ketoconazole, trimethoprim."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Dofetilide (Tikosyn)",
+                "ACC/AHA/ESC Guidelines for Atrial Fibrillation",
+                "UpToDate - Dofetilide: Drug Information",
+                "Medscape - Dofetilide Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
 
+    "Adenosine": {
+        "group": "Cardiovascular - Antiarrhythmic (Class V - Purinergic Agonist)",
+        "vietnamese_name": "Adenosine, Adenocard",
+        "administration": ["IV"],
+        "indications": [
+            "Nhịp nhanh trên thất (SVT) - chuyển nhịp cấp tính",
+            "Chẩn đoán rối loạn nhịp tim (unmasking underlying rhythm)",
+            "Stress test (pharmacologic stress testing)"
+        ],
+        "contraindications": [
+            "Dị ứng adenosine",
+            "Block nhĩ thất độ 2-3 (trừ khi có máy tạo nhịp)",
+            "Hội chứng sick sinus (trừ khi có máy tạo nhịp)",
+            "Hen phế quản nặng",
+            "COPD nặng",
+            "Dùng với dipyridamole (tăng tác dụng adenosine)"
+        ],
+        "dosage": {
+            "adult_svt_initial": "6mg IV bolus nhanh (trong 1-2 giây)",
+            "adult_svt_repeat": "12mg IV bolus nhanh (nếu không đáp ứng sau 1-2 phút), có thể lặp lại 12mg thêm 1 lần",
+            "adult_max": "12mg x 2 lần (tổng 30mg)",
+            "adult_stress_test": "140 mcg/kg/phút IV infusion trong 6 phút",
+            "notes": "Tiêm IV bolus NHANH (trong 1-2 giây) vào tĩnh mạch lớn (antecubital), sau đó rửa ngay bằng 10-20ml NS. Tác dụng rất ngắn (half-life <10 giây)."
+        },
+        "side_effects": [
+            "Nhịp tim chậm thoáng qua (phổ biến, thường tự hết trong vài giây)",
+            "Block nhĩ thất thoáng qua (phổ biến, thường tự hết)",
+            "Khó thở, cảm giác nghẹt thở (phổ biến, thường tự hết)",
+            "Đau ngực (phổ biến, thường tự hết)",
+            "Đỏ mặt",
+            "Chóng mặt",
+            "Rối loạn nhịp tim (hiếm)",
+            "Co thắt phế quản (ở bệnh nhân hen)"
+        ],
+        "interactions": [
+            "Dipyridamole: tăng tác dụng adenosine (giảm liều adenosine 50-75%)",
+            "Theophylline, Caffeine: giảm tác dụng adenosine (có thể cần tăng liều)",
+            "Carbamazepine: tăng tác dụng adenosine",
+            "Digoxin: tăng nguy cơ block nhĩ thất"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Adenosine là purine nucleoside, gắn với thụ thể A1 adenosine receptor trên tế bào nút nhĩ thất (AV node) và tế bào cơ tim. Kích hoạt thụ thể A1 → hoạt hóa kênh K+ (IKACh) → tăng dòng K+ ra ngoài → tăng phân cực màng tế bào → ức chế dẫn truyền qua nút nhĩ thất. Kết quả: (1) Block nhĩ thất thoáng qua (transient AV block), (2) Chuyển nhịp SVT về nhịp xoang (do ức chế reentry pathway qua AV node), (3) Unmasking underlying rhythm (chẩn đoán). ĐẶC ĐIỂM: (1) Tác dụng cực nhanh (khởi phát trong vài giây), (2) Thời gian tác dụng cực ngắn (half-life <10 giây, tác dụng kéo dài 10-20 giây), (3) Tiêm IV bolus NHANH (trong 1-2 giây) vào tĩnh mạch lớn, (4) Rửa ngay bằng NS sau khi tiêm, (5) Tác dụng phụ thoáng qua (thường tự hết trong vài giây), (6) An toàn và hiệu quả cao cho SVT.",
+        "monitoring": [
+            "ECG liên tục - QUAN TRỌNG, theo dõi chuyển nhịp, block AV",
+            "Nhịp tim - nhịp tim chậm thoáng qua phổ biến",
+            "Huyết áp - hạ huyết áp thoáng qua có thể xảy ra",
+            "Dấu hiệu khó thở, co thắt phế quản (ở bệnh nhân hen)",
+            "Dấu hiệu đau ngực (thường tự hết)"
+        ],
+        "precautions": [
+            "Tiêm IV bolus NHANH (trong 1-2 giây) vào tĩnh mạch lớn (antecubital) - QUAN TRỌNG",
+            "Rửa ngay bằng 10-20ml NS sau khi tiêm - QUAN TRỌNG (đảm bảo thuốc vào tim)",
+            "CHỐNG CHỈ ĐỊNH nếu block AV độ 2-3 không có máy tạo nhịp",
+            "CHỐNG CHỈ ĐỊNH nếu hội chứng sick sinus không có máy tạo nhịp",
+            "Thận trọng ở bệnh nhân hen phế quản - có thể gây co thắt phế quản",
+            "Thận trọng ở bệnh nhân COPD nặng - có thể gây co thắt phế quản",
+            "Giảm liều 50-75% nếu dùng với dipyridamole (tăng tác dụng adenosine)",
+            "Có thể cần tăng liều nếu dùng với theophylline, caffeine (giảm tác dụng adenosine)",
+            "Tác dụng phụ thoáng qua - thường tự hết trong vài giây đến vài phút",
+            "Theo dõi ECG liên tục - QUAN TRỌNG"
+        ],
+        "pharmacokinetics": {
+            "half_life": "<10 giây (cực ngắn)",
+            "onset": "Vài giây",
+            "duration": "10-20 giây (cực ngắn)",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Tế bào: chuyển hóa nhanh thành inosine và adenosine monophosphate (AMP) bởi adenosine deaminase. Thời gian bán thải cực ngắn."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh. Dung dịch: ổn định ở nhiệt độ phòng.",
+        "black_box_warnings": "Có thể gây block nhĩ thất nặng, nhịp tim chậm nặng, và rối loạn nhịp tim. CHỐNG CHỈ ĐỊNH nếu block AV độ 2-3 hoặc hội chứng sick sinus không có máy tạo nhịp. Có thể gây co thắt phế quản ở bệnh nhân hen.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Dipyridamole",
+                    "mechanism": "Dipyridamole ức chế adenosine deaminase và tái hấp thu adenosine, tăng nồng độ và tác dụng adenosine",
+                    "effect": "Tăng tác dụng adenosine đáng kể, tăng nguy cơ block AV, nhịp tim chậm",
+                    "management": "GIẢM LIỀU ADENOSINE 50-75% nếu dùng với dipyridamole. Hoặc ngừng dipyridamole 24 giờ trước khi dùng adenosine."
+                },
+                {
+                    "drug": "Theophylline, Caffeine",
+                    "mechanism": "Theophylline và caffeine đối kháng thụ thể adenosine, giảm tác dụng adenosine",
+                    "effect": "Giảm tác dụng adenosine, có thể không chuyển nhịp SVT",
+                    "management": "Có thể cần tăng liều adenosine hoặc dùng thuốc khác. Ngừng caffeine trước khi dùng adenosine nếu có thể."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Carbamazepine",
+                    "mechanism": "Carbamazepine có thể tăng tác dụng adenosine",
+                    "effect": "Tăng nguy cơ block AV, nhịp tim chậm",
+                    "management": "Thận trọng. Theo dõi ECG chặt chẽ."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Digoxin và adenosine đều ức chế dẫn truyền AV",
+                    "effect": "Tăng nguy cơ block nhĩ thất",
+                    "management": "Thận trọng. Theo dõi ECG chặt chẽ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng adenosine",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp - CHỐNG CHỈ ĐỊNH",
+                "Hội chứng sick sinus không có máy tạo nhịp - CHỐNG CHỈ ĐỊNH",
+                "Hen phế quản nặng - CHỐNG CHỈ ĐỊNH (có thể gây co thắt phế quản nặng)",
+                "COPD nặng - CHỐNG CHỈ ĐỊNH (có thể gây co thắt phế quản nặng)"
+            ],
+            "tương_đối": [
+                "Hen phế quản nhẹ - thận trọng, có thể gây co thắt phế quản",
+                "COPD nhẹ - thận trọng",
+                "Dùng với dipyridamole - giảm liều adenosine 50-75%",
+                "Dùng với theophylline, caffeine - có thể cần tăng liều adenosine"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Adenosine là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong SVT đe dọa tính mạng.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết adenosine có bài tiết vào sữa mẹ hay không. Thời gian bán thải cực ngắn (<10 giây).",
+                "recommendation": "Có thể dùng khi cho con bú do thời gian bán thải cực ngắn."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Không cần điều chỉnh liều (chuyển hóa nhanh, không phụ thuộc gan)",
+            "notes": "Adenosine chuyển hóa nhanh bởi adenosine deaminase trong tế bào. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Block nhĩ thất nặng",
+                "Nhịp tim chậm nặng",
+                "Rối loạn nhịp tim",
+                "Co thắt phế quản nặng (ở bệnh nhân hen)",
+                "Hạ huyết áp nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Theophylline có thể đối kháng tác dụng adenosine.",
+            "treatment": [
+                "Ngừng adenosine ngay (nếu đang truyền)",
+                "Theo dõi ECG liên tục",
+                "Nếu block AV nặng hoặc nhịp tim chậm nặng:",
+                "  - Atropine 0.5-1mg IV (có thể không hiệu quả do cơ chế khác)",
+                "  - Máy tạo nhịp tạm thời nếu cần",
+                "Nếu co thắt phế quản:",
+                "  - Albuterol nebulizer",
+                "  - Epinephrine IM nếu nặng",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "Nếu hạ huyết áp nặng:",
+                "  - Truyền dịch (NS, LR)",
+                "  - Vasopressor (norepinephrine) nếu cần",
+                "Theo dõi: ECG, huyết áp, nhịp tim, hô hấp liên tục",
+                "Lưu ý: Half-life cực ngắn (<10 giây), tác dụng thường tự hết trong vài phút"
+            ],
+            "monitoring": "Theo dõi ECG, huyết áp, nhịp tim, hô hấp liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (block AV, co thắt phế quản)."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Theophylline",
+                    "mechanism": "Đối kháng thụ thể adenosine",
+                    "indication": "Block AV nặng, nhịp tim chậm nặng do adenosine",
+                    "dose": "100-200mg IV (nếu có)",
+                    "caution": "Có thể đối kháng tác dụng adenosine."
+                }
+            ],
+            "notes": "Theophylline có thể đối kháng tác dụng adenosine. Tuy nhiên, do half-life cực ngắn của adenosine (<10 giây), tác dụng thường tự hết trong vài phút."
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Dung dịch sẵn sàng sử dụng: 3mg/ml. Không cần pha loãng.",
+                "infusion_rate": "Tiêm IV bolus NHANH (trong 1-2 giây) vào tĩnh mạch lớn (antecubital). Sau đó rửa ngay bằng 10-20ml NS.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Dùng đường truyền riêng."
+                ],
+                "notes": "QUAN TRỌNG: 1) Tiêm IV bolus NHANH (trong 1-2 giây) vào tĩnh mạch lớn (antecubital), 2) Rửa ngay bằng 10-20ml NS sau khi tiêm, 3) Theo dõi ECG liên tục, 4) Liều: 6mg lần đầu, 12mg lần 2 (nếu không đáp ứng), 12mg lần 3 (nếu cần)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Adenosine (Adenocard)",
+                "ACC/AHA/ESC Guidelines for Supraventricular Tachycardia",
+                "UpToDate - Adenosine: Drug Information",
+                "Medscape - Adenosine Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+
+    "Quinidine": {
+        "group": "Cardiovascular - Antiarrhythmic (Class IA)",
+        "vietnamese_name": "Quinidine, Quinaglute, Cardioquin",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Rung nhĩ (atrial fibrillation) - chuyển nhịp và duy trì nhịp xoang",
+            "Cuồng nhĩ (atrial flutter) - chuyển nhịp và duy trì nhịp xoang",
+            "Nhịp nhanh trên thất (SVT)",
+            "Rối loạn nhịp thất (ventricular arrhythmias)",
+            "Sốt rét (malaria) - ít dùng hiện nay"
+        ],
+        "contraindications": [
+            "Dị ứng quinidine",
+            "QT kéo dài (QTc >500ms) - CHỐNG CHỈ ĐỊNH",
+            "Torsades de pointes - CHỐNG CHỈ ĐỊNH",
+            "Block nhĩ thất độ 2-3 không có máy tạo nhịp - CHỐNG CHỈ ĐỊNH",
+            "Suy tim nặng",
+            "Bệnh gan nặng",
+            "Hạ kali máu, hạ magie máu - CHỐNG CHỈ ĐỊNH (phải điều chỉnh trước)",
+            "Myasthenia gravis - CHỐNG CHỈ ĐỊNH"
+        ],
+        "dosage": {
+            "adult_po_immediate": "200-400mg PO mỗi 6 giờ",
+            "adult_po_extended": "300-600mg PO mỗi 8-12 giờ (dạng extended release)",
+            "adult_po_loading": "200-400mg PO mỗi 2 giờ x 3-5 lần (chuyển nhịp AF)",
+            "adult_iv": "6-10mg/kg IV trong 30 phút, sau đó 0.5-1mg/kg/phút IV infusion",
+            "adult_max": "3-4g/ngày (PO)",
+            "notes": "Class IA antiarrhythmic. PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng. Theo dõi QTc chặt chẽ. Nguy cơ torsades de pointes."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, có thể giảm liều",
+            "under_30": "Giảm liều 25-50%, theo dõi chặt chẽ"
+        },
+        "side_effects": [
+            "Torsades de pointes (nguy hiểm tính mạng) - nguy cơ cao",
+            "Kéo dài QT interval (QTc >500ms nguy hiểm)",
+            "Rối loạn nhịp tim (proarrhythmia)",
+            "Block nhĩ thất",
+            "Hạ huyết áp (đặc biệt IV)",
+            "Rối loạn tiêu hóa (tiêu chảy, buồn nôn, nôn) - phổ biến",
+            "Nhức đầu, chóng mặt",
+            "Ù tai, mất thính giác (cinchonism)",
+            "Thị lực mờ",
+            "Giảm tiểu cầu (thrombocytopenia) - hiếm",
+            "Ban da, sốt (hypersensitivity)"
+        ],
+        "interactions": [
+            "Thuốc kéo dài QT: tăng nguy cơ torsades de pointes",
+            "Digoxin: tăng nồng độ digoxin (giảm liều digoxin 50%)",
+            "Warfarin: tăng tác dụng chống đông",
+            "Amiodarone: tăng nguy cơ torsades de pointes",
+            "Verapamil, Diltiazem: tăng nguy cơ block AV",
+            "CYP3A4 inhibitors: tăng nồng độ quinidine"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Quinidine là class IA antiarrhythmic. Ức chế kênh Na+ voltage-gated (phase 0), làm chậm dẫn truyền và kéo dài repolarization (phase 3). Kéo dài QT interval và PR interval. Quinidine cũng có tác dụng chẹn alpha-adrenergic (gây hạ huyết áp) và chẹn muscarinic (gây nhịp tim nhanh phản ứng). Hiệu quả cho rối loạn nhịp thất và trên thất. ĐẶC ĐIỂM: (1) Nguy cơ torsades de pointes cao (do kéo dài QT), (2) PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng, (3) Theo dõi QTc chặt chẽ, (4) Rối loạn tiêu hóa phổ biến (tiêu chảy), (5) Cinchonism (ù tai, mất thính giác) với liều cao, (6) Tăng nồng độ digoxin (giảm liều digoxin 50%), (7) Ít dùng hiện nay do tác dụng phụ và nguy cơ torsades de pointes.",
+        "monitoring": [
+            "ECG liên tục khi bắt đầu - theo dõi QTc, torsades de pointes",
+            "QTc interval - MỤC TIÊU: <450ms, NGUY HIỂM: >500ms hoặc tăng >60ms",
+            "Nhịp tim và huyết áp - theo dõi nhịp tim nhanh phản ứng, hạ huyết áp",
+            "Điện giải (K+, Mg2+) - PHẢI bình thường trước khi dùng, theo dõi định kỳ",
+            "Nồng độ quinidine trong máu (nếu có thể, therapeutic range: 2-5 mcg/ml)",
+            "Nồng độ digoxin nếu dùng cùng (quinidine tăng nồng độ digoxin)",
+            "INR nếu dùng với warfarin (quinidine tăng tác dụng warfarin)",
+            "Công thức máu - hiếm giảm tiểu cầu",
+            "Dấu hiệu cinchonism (ù tai, mất thính giác) - với liều cao",
+            "Dấu hiệu torsades de pointes (ngất, rối loạn nhịp) - NGỪNG NGAY nếu có"
+        ],
+        "precautions": [
+            "PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng (giảm K+/Mg2+ tăng nguy cơ torsades)",
+            "CHỐNG CHỈ ĐỊNH nếu QTc >500ms hoặc có tiền sử torsades de pointes",
+            "Theo dõi QTc chặt chẽ - NGỪNG NGAY nếu QTc >500ms hoặc tăng >60ms",
+            "NGỪNG NGAY nếu có torsades de pointes",
+            "Rối loạn tiêu hóa phổ biến (tiêu chảy) - có thể cần giảm liều hoặc ngừng",
+            "Giảm liều digoxin 50% khi dùng với quinidine (quinidine tăng nồng độ digoxin)",
+            "Theo dõi INR nếu dùng với warfarin (quinidine tăng tác dụng warfarin)",
+            "CHỐNG CHỈ ĐỊNH trong myasthenia gravis - có thể làm nặng bệnh",
+            "CHỐNG CHỈ ĐỊNH trong block AV độ 2-3 không có máy tạo nhịp",
+            "Thận trọng ở bệnh nhân suy tim nặng - có thể làm nặng",
+            "Thận trọng ở bệnh nhân suy gan nặng - tăng nguy cơ tích lũy",
+            "Tránh dùng với thuốc kéo dài QT khác",
+            "Tránh dùng với thuốc lợi tiểu (tăng nguy cơ hạ K+/Mg2+)",
+            "Ít dùng hiện nay do tác dụng phụ và nguy cơ torsades de pointes"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6-8 giờ",
+            "onset": "1-3 giờ (PO), 5-10 phút (IV)",
+            "duration": "6-8 giờ",
+            "protein_binding": "80-90%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4, CYP2D6. Thận: bài tiết một phần nguyên dạng (20-50%)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": "Nguy cơ torsades de pointes (rối loạn nhịp tim đe dọa tính mạng), đặc biệt ở bệnh nhân có QT kéo dài, hạ K+/Mg2+, hoặc dùng với thuốc kéo dài QT khác. PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng. Theo dõi QTc chặt chẽ. NGỪNG NGAY nếu QTc >500ms hoặc có torsades de pointes.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc kéo dài QT (Amiodarone, Sotalol, Dofetilide, Procainamide, Disopyramide, Haloperidol, Chlorpromazine, Methadone, Macrolides, Fluoroquinolones)",
+                    "mechanism": "Tác dụng hiệp đồng kéo dài QT interval",
+                    "effect": "Tăng nguy cơ torsades de pointes, rối loạn nhịp tim đe dọa tính mạng",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: theo dõi ECG sát, đảm bảo K+ và Mg2+ bình thường, theo dõi QTc chặt chẽ."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Quinidine ức chế P-glycoprotein, giảm thải trừ digoxin, tăng nồng độ digoxin",
+                    "effect": "Tăng nồng độ digoxin 50-100%, tăng nguy cơ ngộ độc digoxin",
+                    "management": "GIẢM LIỀU DIGOXIN 50% ngay khi bắt đầu quinidine. Theo dõi nồng độ digoxin chặt chẽ. Có thể cần giảm liều digoxin thêm."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Quinidine ức chế chuyển hóa warfarin (CYP2C9), tăng nồng độ warfarin",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên khi bắt đầu quinidine. Có thể cần giảm liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Amiodarone",
+                    "mechanism": "Cả hai đều kéo dài QT và ức chế CYP3A4",
+                    "effect": "Tăng nguy cơ torsades de pointes, tăng nồng độ quinidine",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: theo dõi ECG sát, đảm bảo K+ và Mg2+ bình thường."
+                },
+                {
+                    "drug": "Verapamil, Diltiazem",
+                    "mechanism": "Cả hai đều làm chậm dẫn truyền AV",
+                    "effect": "Tăng nguy cơ block nhĩ thất",
+                    "management": "Thận trọng. Theo dõi ECG chặt chẽ. Có thể cần giảm liều một trong hai thuốc."
+                },
+                {
+                    "drug": "CYP3A4 inhibitors (Ketoconazole, Clarithromycin, Erythromycin)",
+                    "mechanism": "Ức chế chuyển hóa quinidine, tăng nồng độ quinidine",
+                    "effect": "Tăng nồng độ quinidine, tăng tác dụng phụ",
+                    "management": "Thận trọng. Theo dõi nồng độ quinidine. Có thể cần giảm liều quinidine."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng quinidine",
+                "QT kéo dài (QTc >500ms) - CHỐNG CHỈ ĐỊNH",
+                "Torsades de pointes - CHỐNG CHỈ ĐỊNH",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp - CHỐNG CHỈ ĐỊNH",
+                "Suy tim nặng",
+                "Bệnh gan nặng",
+                "Hạ kali máu, hạ magie máu - CHỐNG CHỈ ĐỊNH (phải điều chỉnh trước)",
+                "Myasthenia gravis - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy tim (nhẹ đến trung bình) - thận trọng, có thể làm nặng",
+                "Suy gan (nhẹ đến trung bình) - thận trọng, tăng nguy cơ tích lũy",
+                "Suy thận nặng - giảm liều 25-50%",
+                "Dùng với digoxin - giảm liều digoxin 50%",
+                "Dùng với warfarin - theo dõi INR",
+                "Dùng với thuốc kéo dài QT - tránh dùng chung"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Quinidine là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong điều trị rối loạn nhịp đe dọa tính mạng.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Quinidine bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ bú mẹ về dấu hiệu rối loạn nhịp tim hoặc rối loạn tiêu hóa."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "CHỐNG CHỈ ĐỊNH hoặc dùng rất thận trọng, giảm liều đáng kể",
+            "notes": "Quinidine chuyển hóa ở gan qua CYP3A4, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Torsades de pointes (rối loạn nhịp tim đe dọa tính mạng)",
+                "Kéo dài QT interval nặng (QTc >500ms)",
+                "Block nhĩ thất nặng",
+                "Hạ huyết áp nặng",
+                "Rối loạn tiêu hóa nặng (tiêu chảy, nôn)",
+                "Cinchonism (ù tai, mất thính giác, thị lực mờ)",
+                "Co giật (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Magnesium có thể giúp điều trị torsades de pointes.",
+            "treatment": [
+                "Ngừng ngay quinidine",
+                "Theo dõi ECG liên tục",
+                "Nếu torsades de pointes:",
+                "  - Magnesium sulfate 1-2g IV bolus, sau đó 1-2g/giờ IV infusion",
+                "  - Overdrive pacing nếu cần",
+                "  - Isoproterenol IV nếu cần (tăng nhịp tim)",
+                "Nếu block AV nặng:",
+                "  - Atropine 0.5-1mg IV",
+                "  - Máy tạo nhịp tạm thời nếu cần",
+                "Nếu hạ huyết áp nặng:",
+                "  - Truyền dịch (NS, LR)",
+                "  - Vasopressor (norepinephrine) nếu cần",
+                "Điều trị rối loạn tiêu hóa:",
+                "  - Bù dịch nếu tiêu chảy nặng",
+                "  - Chống nôn nếu nôn nặng",
+                "Lọc máu (hemodialysis) - ít hiệu quả (protein binding 80-90%)",
+                "Theo dõi: ECG, huyết áp, nhịp tim, QTc liên tục"
+            ],
+            "monitoring": "Theo dõi ECG, huyết áp, nhịp tim, QTc liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (torsades de pointes, block AV)."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Magnesium sulfate",
+                    "mechanism": "Điều trị torsades de pointes",
+                    "indication": "Torsades de pointes do quinidine",
+                    "dose": "1-2g IV bolus, sau đó 1-2g/giờ IV infusion",
+                    "caution": "Điều trị hỗ trợ cho torsades de pointes."
+                }
+            ],
+            "notes": "Magnesium điều trị torsades de pointes. Lọc máu ít hiệu quả do protein binding cao."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không. Uống với thức ăn có thể giảm rối loạn tiêu hóa.",
+                "timing": "Dạng immediate release: 200-400mg PO mỗi 6 giờ. Dạng extended release: 300-600mg PO mỗi 8-12 giờ. Loading dose: 200-400mg PO mỗi 2 giờ x 3-5 lần (chuyển nhịp AF)."
+            },
+            "iv": {
+                "reconstitution": "Pha trong NS hoặc D5W. Nồng độ: 16mg/ml.",
+                "infusion_rate": "Loading: 6-10mg/kg IV trong 30 phút. Maintenance: 0.5-1mg/kg/phút IV infusion. Theo dõi ECG và huyết áp liên tục.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Dùng đường truyền riêng."
+                ],
+                "notes": "QUAN TRỌNG: 1) PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng, 2) Theo dõi ECG và QTc chặt chẽ, 3) NGỪNG NGAY nếu QTc >500ms hoặc có torsades de pointes, 4) Theo dõi huyết áp (hạ huyết áp phổ biến với IV)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Quinidine (Quinaglute, Cardioquin)",
+                "ACC/AHA/ESC Guidelines for Atrial Fibrillation",
+                "UpToDate - Quinidine: Drug Information",
+                "Medscape - Quinidine Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+
+    "Ibutilide": {
+        "group": "Cardiovascular - Antiarrhythmic (Class III)",
+        "vietnamese_name": "Ibutilide, Corvert",
+        "administration": ["IV"],
+        "indications": [
+            "Rung nhĩ (atrial fibrillation) - chuyển nhịp cấp tính",
+            "Cuồng nhĩ (atrial flutter) - chuyển nhịp cấp tính"
+        ],
+        "contraindications": [
+            "Dị ứng ibutilide",
+            "QT kéo dài (QTc >440ms) - CHỐNG CHỈ ĐỊNH",
+            "Torsades de pointes - CHỐNG CHỈ ĐỊNH",
+            "Hạ kali máu, hạ magie máu - CHỐNG CHỈ ĐỊNH (phải điều chỉnh trước)",
+            "Dùng với thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH"
+        ],
+        "dosage": {
+            "adult_iv_weight_>60kg": "1mg IV trong 10 phút",
+            "adult_iv_weight_<60kg": "0.01mg/kg IV trong 10 phút",
+            "adult_iv_repeat": "Có thể lặp lại 1 lần sau 10 phút nếu không chuyển nhịp",
+            "adult_max": "2mg (tổng)",
+            "notes": "PHẢI bắt đầu trong bệnh viện với monitoring ECG 4 giờ (nguy cơ torsades de pointes). PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng. Chỉ dùng IV, không có dạng PO."
+        },
+        "side_effects": [
+            "Torsades de pointes (nguy hiểm tính mạng) - nguy cơ cao (3-5%)",
+            "Kéo dài QT interval (QTc >500ms nguy hiểm)",
+            "Rối loạn nhịp tim (proarrhythmia)",
+            "Nhịp tim chậm",
+            "Hạ huyết áp",
+            "Đau đầu",
+            "Buồn nôn"
+        ],
+        "interactions": [
+            "Thuốc kéo dài QT: tăng nguy cơ torsades de pointes (CHỐNG CHỈ ĐỊNH)",
+            "Digoxin: tăng nguy cơ rối loạn nhịp tim",
+            "Beta-blockers: tăng nguy cơ nhịp tim chậm"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Ibutilide là class III antiarrhythmic. Ức chế kênh K+ (delayed rectifier IKr), kéo dài phase 3 của action potential, kéo dài QT interval và effective refractory period (ERP). Kết quả: chuyển nhịp rung nhĩ/cuồng nhĩ về nhịp xoang. ĐẶC ĐIỂM: (1) PHẢI bắt đầu trong bệnh viện với monitoring ECG 4 giờ (nguy cơ torsades de pointes cao), (2) Chỉ dùng IV, không có dạng PO, (3) PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng, (4) Nguy cơ torsades de pointes cao (3-5%), (5) Hiệu quả cao cho chuyển nhịp AF/AFL cấp tính (60-70%).",
+        "monitoring": [
+            "ECG liên tục trong 4 giờ sau khi tiêm (BẮT BUỘC) - theo dõi QTc, torsades de pointes",
+            "QTc interval - MỤC TIÊU: <440ms, NGUY HIỂM: >500ms hoặc tăng >60ms",
+            "Nhịp tim và huyết áp",
+            "Điện giải (K+, Mg2+) - PHẢI bình thường trước khi dùng",
+            "Dấu hiệu torsades de pointes (ngất, rối loạn nhịp) - NGỪNG NGAY nếu có"
+        ],
+        "precautions": [
+            "PHẢI bắt đầu trong bệnh viện với monitoring ECG 4 giờ (nguy cơ torsades de pointes cao)",
+            "CHỐNG CHỈ ĐỊNH nếu QTc >440ms hoặc có tiền sử torsades de pointes",
+            "PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng (giảm K+/Mg2+ tăng nguy cơ torsades)",
+            "CHỐNG CHỈ ĐỊNH với thuốc kéo dài QT khác",
+            "NGỪNG NGAY nếu QTc >500ms hoặc có torsades de pointes",
+            "Chỉ dùng IV, không có dạng PO",
+            "Hiệu quả cao cho chuyển nhịp AF/AFL cấp tính (60-70%)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6 giờ",
+            "onset": "Vài phút (IV)",
+            "duration": "Ngắn (do half-life ngắn)",
+            "protein_binding": "40%",
+            "clearance": "Gan (chuyển hóa), thận (bài tiết một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh. Dung dịch: ổn định.",
+        "black_box_warnings": "Nguy cơ torsades de pointes (rối loạn nhịp tim đe dọa tính mạng), nguy cơ cao (3-5%). PHẢI bắt đầu trong bệnh viện với monitoring ECG 4 giờ. CHỐNG CHỈ ĐỊNH nếu QTc >440ms, có tiền sử torsades de pointes, hoặc dùng với thuốc kéo dài QT. PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc kéo dài QT (Quinidine, Procainamide, Disopyramide, Amiodarone, Sotalol, Dofetilide, Haloperidol, Chlorpromazine, Methadone, Macrolides, Fluoroquinolones)",
+                    "mechanism": "Tác dụng hiệp đồng kéo dài QT interval",
+                    "effect": "Tăng nguy cơ torsades de pointes, rối loạn nhịp tim đe dọa tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH. KHÔNG được dùng đồng thời với ibutilide."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Cả hai đều có thể gây rối loạn nhịp tim",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi ECG chặt chẽ."
+                },
+                {
+                    "drug": "Beta-blockers",
+                    "mechanism": "Cả hai đều làm chậm nhịp tim",
+                    "effect": "Tăng nguy cơ nhịp tim chậm",
+                    "management": "Thận trọng. Theo dõi ECG chặt chẽ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng ibutilide",
+                "QT kéo dài (QTc >440ms) - CHỐNG CHỈ ĐỊNH",
+                "Torsades de pointes - CHỐNG CHỈ ĐỊNH",
+                "Hạ kali máu, hạ magie máu - CHỐNG CHỈ ĐỊNH (phải điều chỉnh trước)",
+                "Dùng với thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy tim nặng - thận trọng",
+                "Dùng với digoxin - tăng nguy cơ rối loạn nhịp tim",
+                "Dùng với beta-blockers - tăng nguy cơ nhịp tim chậm"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Ibutilide là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong chuyển nhịp AF/AFL đe dọa tính mạng.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết ibutilide có bài tiết vào sữa mẹ hay không. Thời gian bán thải 6 giờ.",
+                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Ibutilide chuyển hóa ở gan. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Torsades de pointes (rối loạn nhịp tim đe dọa tính mạng)",
+                "Kéo dài QT interval nặng (QTc >500ms)",
+                "Nhịp tim chậm nặng",
+                "Hạ huyết áp nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Magnesium có thể giúp điều trị torsades de pointes.",
+            "treatment": [
+                "Ngừng ngay ibutilide nếu đang truyền",
+                "Theo dõi ECG liên tục",
+                "Nếu torsades de pointes:",
+                "  - Magnesium sulfate 1-2g IV bolus, sau đó 1-2g/giờ IV infusion",
+                "  - Overdrive pacing nếu cần",
+                "  - Isoproterenol IV nếu cần (tăng nhịp tim)",
+                "Nếu nhịp tim chậm nặng:",
+                "  - Atropine 0.5-1mg IV",
+                "  - Máy tạo nhịp tạm thời nếu cần",
+                "Nếu hạ huyết áp nặng:",
+                "  - Truyền dịch (NS, LR)",
+                "  - Vasopressor (norepinephrine) nếu cần",
+                "Theo dõi: ECG, huyết áp, nhịp tim, QTc liên tục"
+            ],
+            "monitoring": "Theo dõi ECG, huyết áp, nhịp tim, QTc liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (torsades de pointes)."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Magnesium sulfate",
+                    "mechanism": "Điều trị torsades de pointes",
+                    "indication": "Torsades de pointes do ibutilide",
+                    "dose": "1-2g IV bolus, sau đó 1-2g/giờ IV infusion",
+                    "caution": "Điều trị hỗ trợ cho torsades de pointes."
+                }
+            ],
+            "notes": "Magnesium điều trị torsades de pointes."
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Dung dịch sẵn sàng sử dụng: 0.1mg/ml. Không cần pha loãng.",
+                "infusion_rate": "Truyền IV trong 10 phút. Cân nặng >60kg: 1mg. Cân nặng <60kg: 0.01mg/kg. Có thể lặp lại 1 lần sau 10 phút nếu không chuyển nhịp.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Dùng đường truyền riêng."
+                ],
+                "notes": "QUAN TRỌNG: 1) PHẢI bắt đầu trong bệnh viện với monitoring ECG 4 giờ, 2) PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng, 3) Theo dõi QTc chặt chẽ, 4) NGỪNG NGAY nếu QTc >500ms hoặc có torsades de pointes."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ibutilide (Corvert)",
+                "ACC/AHA/ESC Guidelines for Atrial Fibrillation",
+                "UpToDate - Ibutilide: Drug Information",
+                "Medscape - Ibutilide Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+
+    "Disopyramide": {
+        "group": "Cardiovascular - Antiarrhythmic (Class IA)",
+        "vietnamese_name": "Disopyramide, Norpace",
+        "administration": ["PO"],
+        "indications": [
+            "Rung nhĩ (atrial fibrillation) - duy trì nhịp xoang",
+            "Cuồng nhĩ (atrial flutter) - duy trì nhịp xoang",
+            "Nhịp nhanh trên thất (SVT)",
+            "Rối loạn nhịp thất (ventricular arrhythmias)"
+        ],
+        "contraindications": [
+            "Dị ứng disopyramide",
+            "QT kéo dài (QTc >500ms) - CHỐNG CHỈ ĐỊNH",
+            "Torsades de pointes - CHỐNG CHỈ ĐỊNH",
+            "Block nhĩ thất độ 2-3 không có máy tạo nhịp - CHỐNG CHỈ ĐỊNH",
+            "Suy tim nặng - CHỐNG CHỈ ĐỊNH",
+            "Hạ kali máu, hạ magie máu - CHỐNG CHỈ ĐỊNH (phải điều chỉnh trước)",
+            "Myasthenia gravis - CHỐNG CHỈ ĐỊNH",
+            "Glaucoma góc đóng - CHỐNG CHỈ ĐỊNH"
+        ],
+        "dosage": {
+            "adult_po_immediate": "150-200mg PO mỗi 6 giờ",
+            "adult_po_extended": "200-300mg PO mỗi 12 giờ (dạng extended release)",
+            "adult_po_loading": "300mg PO, sau đó 150-200mg mỗi 6 giờ",
+            "adult_max": "800mg/ngày",
+            "notes": "Class IA antiarrhythmic. PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng. Theo dõi QTc chặt chẽ. Nguy cơ torsades de pointes. Có tác dụng chống muscarinic (khô miệng, táo bón, bí tiểu)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50-75%, theo dõi chặt chẽ"
+        },
+        "side_effects": [
+            "Torsades de pointes (nguy hiểm tính mạng) - nguy cơ cao",
+            "Kéo dài QT interval (QTc >500ms nguy hiểm)",
+            "Rối loạn nhịp tim (proarrhythmia)",
+            "Block nhĩ thất",
+            "Suy tim (do tác dụng ức chế co bóp cơ tim - negative inotropy)",
+            "Hạ huyết áp",
+            "Khô miệng (do chống muscarinic)",
+            "Táo bón (do chống muscarinic)",
+            "Bí tiểu (do chống muscarinic)",
+            "Nhìn mờ (do chống muscarinic)",
+            "Glaucoma góc đóng (do chống muscarinic)"
+        ],
+        "interactions": [
+            "Thuốc kéo dài QT: tăng nguy cơ torsades de pointes",
+            "Digoxin: tăng nồng độ digoxin",
+            "Warfarin: tăng tác dụng chống đông",
+            "Beta-blockers: tăng nguy cơ suy tim (cả hai đều ức chế co bóp cơ tim)"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Disopyramide là class IA antiarrhythmic. Ức chế kênh Na+ voltage-gated (phase 0), làm chậm dẫn truyền và kéo dài repolarization (phase 3). Kéo dài QT interval và PR interval. Disopyramide cũng có tác dụng chống muscarinic (anticholinergic) mạnh → khô miệng, táo bón, bí tiểu, nhìn mờ, và có thể gây glaucoma góc đóng. Disopyramide cũng có tác dụng ức chế co bóp cơ tim (negative inotropy) → có thể làm nặng suy tim. Hiệu quả cho rối loạn nhịp thất và trên thất. ĐẶC ĐIỂM: (1) Nguy cơ torsades de pointes cao (do kéo dài QT), (2) PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng, (3) Theo dõi QTc chặt chẽ, (4) Tác dụng chống muscarinic mạnh (khô miệng, táo bón, bí tiểu), (5) CHỐNG CHỈ ĐỊNH trong suy tim nặng (do negative inotropy), (6) CHỐNG CHỈ ĐỊNH trong glaucoma góc đóng (do chống muscarinic), (7) Ít dùng hiện nay do tác dụng phụ.",
+        "monitoring": [
+            "ECG liên tục khi bắt đầu - theo dõi QTc, torsades de pointes",
+            "QTc interval - MỤC TIÊU: <450ms, NGUY HIỂM: >500ms hoặc tăng >60ms",
+            "Nhịp tim và huyết áp - theo dõi nhịp tim chậm, hạ huyết áp",
+            "Điện giải (K+, Mg2+) - PHẢI bình thường trước khi dùng, theo dõi định kỳ",
+            "Chức năng tim (siêu âm tim nếu có triệu chứng suy tim) - disopyramide có thể làm nặng suy tim",
+            "Nồng độ disopyramide trong máu (nếu có thể, therapeutic range: 2-5 mcg/ml)",
+            "Nồng độ digoxin nếu dùng cùng (disopyramide tăng nồng độ digoxin)",
+            "Dấu hiệu chống muscarinic (khô miệng, táo bón, bí tiểu, nhìn mờ)",
+            "Dấu hiệu glaucoma góc đóng (đau mắt, nhìn mờ, đỏ mắt)",
+            "Dấu hiệu torsades de pointes (ngất, rối loạn nhịp) - NGỪNG NGAY nếu có"
+        ],
+        "precautions": [
+            "PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng (giảm K+/Mg2+ tăng nguy cơ torsades)",
+            "CHỐNG CHỈ ĐỊNH nếu QTc >500ms hoặc có tiền sử torsades de pointes",
+            "Theo dõi QTc chặt chẽ - NGỪNG NGAY nếu QTc >500ms hoặc tăng >60ms",
+            "NGỪNG NGAY nếu có torsades de pointes",
+            "CHỐNG CHỈ ĐỊNH trong suy tim nặng - disopyramide có thể làm nặng suy tim (negative inotropy)",
+            "CHỐNG CHỈ ĐỊNH trong glaucoma góc đóng - disopyramide có thể gây glaucoma góc đóng (chống muscarinic)",
+            "Tác dụng chống muscarinic mạnh - khô miệng, táo bón, bí tiểu, nhìn mờ phổ biến",
+            "Giảm liều digoxin 50% khi dùng với disopyramide (disopyramide tăng nồng độ digoxin)",
+            "Theo dõi INR nếu dùng với warfarin (disopyramide tăng tác dụng warfarin)",
+            "Tránh dùng với thuốc kéo dài QT khác",
+            "Tránh dùng với thuốc lợi tiểu (tăng nguy cơ hạ K+/Mg2+)",
+            "Điều chỉnh liều theo chức năng thận - QUAN TRỌNG",
+            "Ít dùng hiện nay do tác dụng phụ và nguy cơ torsades de pointes"
+        ],
+        "pharmacokinetics": {
+            "half_life": "4-10 giờ",
+            "onset": "30-60 phút (PO)",
+            "duration": "6-8 giờ",
+            "protein_binding": "50-65%",
+            "clearance": "Gan: chuyển hóa một phần. Thận: bài tiết chủ yếu nguyên dạng (50-60%). Cần điều chỉnh liều ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén/nang: bảo quản trong bao bì kín.",
+        "black_box_warnings": "Nguy cơ torsades de pointes (rối loạn nhịp tim đe dọa tính mạng), đặc biệt ở bệnh nhân có QT kéo dài, hạ K+/Mg2+, hoặc dùng với thuốc kéo dài QT khác. PHẢI đảm bảo K+ và Mg2+ bình thường trước khi dùng. Theo dõi QTc chặt chẽ. NGỪNG NGAY nếu QTc >500ms hoặc có torsades de pointes. CHỐNG CHỈ ĐỊNH trong suy tim nặng và glaucoma góc đóng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc kéo dài QT (Quinidine, Procainamide, Amiodarone, Sotalol, Dofetilide, Haloperidol, Chlorpromazine, Methadone, Macrolides, Fluoroquinolones)",
+                    "mechanism": "Tác dụng hiệp đồng kéo dài QT interval",
+                    "effect": "Tăng nguy cơ torsades de pointes, rối loạn nhịp tim đe dọa tính mạng",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: theo dõi ECG sát, đảm bảo K+ và Mg2+ bình thường, theo dõi QTc chặt chẽ."
+                },
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Disopyramide ức chế P-glycoprotein, giảm thải trừ digoxin, tăng nồng độ digoxin",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ ngộ độc digoxin",
+                    "management": "GIẢM LIỀU DIGOXIN 50% ngay khi bắt đầu disopyramide. Theo dõi nồng độ digoxin chặt chẽ."
+                },
+                {
+                    "drug": "Beta-blockers",
+                    "mechanism": "Cả hai đều ức chế co bóp cơ tim (negative inotropy)",
+                    "effect": "Tăng nguy cơ suy tim, hạ huyết áp",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: theo dõi chức năng tim chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Disopyramide có thể tăng tác dụng warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Có thể cần giảm liều warfarin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng disopyramide",
+                "QT kéo dài (QTc >500ms) - CHỐNG CHỈ ĐỊNH",
+                "Torsades de pointes - CHỐNG CHỈ ĐỊNH",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp - CHỐNG CHỈ ĐỊNH",
+                "Suy tim nặng - CHỐNG CHỈ ĐỊNH (do negative inotropy)",
+                "Hạ kali máu, hạ magie máu - CHỐNG CHỈ ĐỊNH (phải điều chỉnh trước)",
+                "Myasthenia gravis - CHỐNG CHỈ ĐỊNH (do chống muscarinic)",
+                "Glaucoma góc đóng - CHỐNG CHỈ ĐỊNH (do chống muscarinic)"
+            ],
+            "tương_đối": [
+                "Suy tim (nhẹ đến trung bình) - thận trọng, có thể làm nặng",
+                "Suy thận nặng - giảm liều 50-75%",
+                "Dùng với digoxin - giảm liều digoxin 50%",
+                "Dùng với beta-blockers - tránh dùng chung",
+                "Dùng với thuốc kéo dài QT - tránh dùng chung"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Disopyramide là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong điều trị rối loạn nhịp đe dọa tính mạng.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Disopyramide bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ bú mẹ về dấu hiệu chống muscarinic (khô miệng, táo bón)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều",
+            "notes": "Disopyramide chuyển hóa một phần ở gan. Suy gan có thể ảnh hưởng đến chuyển hóa, nhưng thải trừ chủ yếu qua thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Torsades de pointes (rối loạn nhịp tim đe dọa tính mạng)",
+                "Kéo dài QT interval nặng (QTc >500ms)",
+                "Block nhĩ thất nặng",
+                "Suy tim cấp (do negative inotropy)",
+                "Hạ huyết áp nặng",
+                "Tác dụng chống muscarinic nặng (khô miệng, táo bón, bí tiểu, nhìn mờ)",
+                "Glaucoma góc đóng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Magnesium có thể giúp điều trị torsades de pointes.",
+            "treatment": [
+                "Ngừng ngay disopyramide",
+                "Theo dõi ECG liên tục",
+                "Nếu torsades de pointes:",
+                "  - Magnesium sulfate 1-2g IV bolus, sau đó 1-2g/giờ IV infusion",
+                "  - Overdrive pacing nếu cần",
+                "  - Isoproterenol IV nếu cần (tăng nhịp tim)",
+                "Nếu block AV nặng:",
+                "  - Atropine 0.5-1mg IV",
+                "  - Máy tạo nhịp tạm thời nếu cần",
+                "Nếu suy tim cấp:",
+                "  - Inotrope (dobutamine, milrinone)",
+                "  - Hỗ trợ hô hấp",
+                "Nếu hạ huyết áp nặng:",
+                "  - Truyền dịch (NS, LR)",
+                "  - Vasopressor (norepinephrine) nếu cần",
+                "Nếu glaucoma góc đóng:",
+                "  - Pilocarpine mắt",
+                "  - Tư vấn bác sĩ mắt ngay",
+                "Lọc máu (hemodialysis) - có thể hiệu quả (protein binding 50-65%)",
+                "Theo dõi: ECG, huyết áp, nhịp tim, QTc liên tục"
+            ],
+            "monitoring": "Theo dõi ECG, huyết áp, nhịp tim, QTc liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (torsades de pointes, block AV, suy tim)."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Magnesium sulfate",
+                    "mechanism": "Điều trị torsades de pointes",
+                    "indication": "Torsades de pointes do disopyramide",
+                    "dose": "1-2g IV bolus, sau đó 1-2g/giờ IV infusion",
+                    "caution": "Điều trị hỗ trợ cho torsades de pointes."
+                }
+            ],
+            "notes": "Magnesium điều trị torsades de pointes. Lọc máu có thể giúp loại bỏ disopyramide."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không. Uống với thức ăn có thể giảm rối loạn tiêu hóa.",
+                "timing": "Dạng immediate release: 150-200mg PO mỗi 6 giờ. Dạng extended release: 200-300mg PO mỗi 12 giờ. Loading dose: 300mg PO, sau đó 150-200mg mỗi 6 giờ."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Disopyramide (Norpace)",
+                "ACC/AHA/ESC Guidelines for Atrial Fibrillation",
+                "UpToDate - Disopyramide: Drug Information",
+                "Medscape - Disopyramide Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    }
 }
 
 __all__ = ['ANTIARRHYTHMICS']

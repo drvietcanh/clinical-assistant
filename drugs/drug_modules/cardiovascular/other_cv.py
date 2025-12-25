@@ -913,6 +913,18 @@ OTHER_CV_DRUGS = {
             "Lithium: tăng nồng độ lithium"
         ],
         "pregnancy": "D",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": "Low",
+            "icu_critical_care_only": False,
+            "organ_toxicity": {"renal": True, "electrolyte_hyperkalemia": True},
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA 2022 HFrEF Class I",
+            "ESC 2023 HFrEF Class I"
+        ],
         "mechanism_of_action": "Sacubitril-valsartan là phối hợp của sacubitril (ức chế neprilysin) và valsartan (ức chế thụ thể angiotensin II). Sacubitril ức chế neprilysin → tăng nồng độ natriuretic peptides (ANP, BNP) → giãn mạch, lợi tiểu, giảm tái hấp thu natri. Valsartan ức chế thụ thể angiotensin II → giảm tác dụng của angiotensin II (co mạch, giữ natri). Kết hợp: giảm tiền tải và hậu tải, cải thiện chức năng tim. Có bằng chứng mạnh giảm tỷ lệ tử vong và nhập viện trong suy tim (PARADIGM-HF study) - tốt hơn enalapril.",
         "monitoring": [
             "Huyết áp (theo dõi chặt chẽ khi bắt đầu, đặc biệt 2 tuần đầu)",
@@ -1076,7 +1088,7 @@ OTHER_CV_DRUGS = {
                 "PARADIGM-HF Study - New England Journal of Medicine (2014) - Sacubitril-valsartan trong suy tim",
                 "American Heart Association/American College of Cardiology guidelines - Heart failure (Class I recommendation)"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-12-24",
             "evidence_level": "High - Large RCT (PARADIGM-HF) showing significant mortality and hospitalization benefit compared to enalapril in heart failure"
         }
     },
@@ -1481,6 +1493,162 @@ OTHER_CV_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA 2021, large RCTs"
+        }
+    },
+
+    "Doxazosin": {
+        "group": "Cardiovascular - Alpha-1 Blocker",
+        "vietnamese_name": "Doxazosin, Cardura",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Phì đại tuyến tiền liệt lành tính (BPH - Benign Prostatic Hyperplasia)",
+            "Rối loạn tiểu tiện do BPH"
+        ],
+        "contraindications": [
+            "Dị ứng doxazosin hoặc bất kỳ thành phần nào",
+            "Hạ huyết áp nặng",
+            "Suy tim nặng"
+        ],
+        "dosage": {
+            "adult_hypertension": "1mg PO x 1 lần/ngày, tăng dần đến 2-4mg/ngày (tối đa 16mg/ngày)",
+            "adult_bph": "1mg PO x 1 lần/ngày, tăng dần đến 4-8mg/ngày (tối đa 8mg/ngày)",
+            "adult_max": "16mg/ngày (hypertension), 8mg/ngày (BPH)",
+            "notes": "Khởi đầu với liều thấp (1mg) để tránh hạ huyết áp tư thế. Tăng dần mỗi 1-2 tuần. Uống buổi tối để giảm tác dụng phụ hạ huyết áp."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Hạ huyết áp tư thế (orthostatic hypotension) - phổ biến, đặc biệt liều đầu tiên",
+            "Chóng mặt, ngất",
+            "Nhức đầu",
+            "Mệt mỏi",
+            "Buồn nôn",
+            "Phù ngoại biên (hiếm)",
+            "Rối loạn cương dương (hiếm)"
+        ],
+        "interactions": [
+            "Thuốc hạ huyết áp khác: tăng tác dụng hạ huyết áp",
+            "Sildenafil, Tadalafil, Vardenafil: tăng nguy cơ hạ huyết áp",
+            "Rượu: tăng tác dụng hạ huyết áp"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Doxazosin là alpha-1 adrenergic receptor blocker chọn lọc. Ức chế alpha-1 receptors trên cơ trơn mạch máu và cơ trơn tuyến tiền liệt. Kết quả: (1) Giãn mạch ngoại biên → giảm huyết áp, (2) Giãn cơ trơn tuyến tiền liệt và cổ bàng quang → cải thiện triệu chứng BPH (tiểu khó, tiểu rắt, tiểu đêm). Doxazosin chọn lọc alpha-1 hơn alpha-2 → ít tác dụng phụ hơn alpha-blocker không chọn lọc. Tác dụng: điều trị tăng huyết áp và BPH. Tác dụng phụ: hạ huyết áp tư thế (phổ biến, đặc biệt liều đầu tiên).",
+        "monitoring": [
+            "Huyết áp - hạ huyết áp tư thế phổ biến, đặc biệt liều đầu tiên",
+            "Triệu chứng BPH (tiểu khó, tiểu rắt, tiểu đêm) - đánh giá hiệu quả",
+            "Dấu hiệu hạ huyết áp tư thế (chóng mặt khi đứng dậy, ngất)",
+            "Chức năng thận (creatinine, eGFR) - không cần điều chỉnh liều"
+        ],
+        "precautions": [
+            "Hạ huyết áp tư thế - phổ biến, đặc biệt liều đầu tiên (first-dose effect), khởi đầu với liều thấp (1mg)",
+            "Uống buổi tối để giảm tác dụng phụ hạ huyết áp",
+            "Tránh đứng dậy đột ngột - tăng nguy cơ ngất",
+            "Khởi đầu với liều thấp (1mg) và tăng dần mỗi 1-2 tuần",
+            "Thận trọng ở bệnh nhân suy tim nặng - có thể làm nặng",
+            "Thận trọng khi dùng với thuốc hạ huyết áp khác (tăng tác dụng)",
+            "Thận trọng khi dùng với sildenafil, tadalafil, vardenafil (tăng nguy cơ hạ huyết áp)",
+            "Tránh rượu - tăng tác dụng hạ huyết áp",
+            "Có thể dùng cho cả tăng huyết áp và BPH (2 chỉ định)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "19-22 giờ",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "98%",
+            "clearance": "Gan (chuyển hóa qua CYP3A4), thận (bài tiết một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây hạ huyết áp tư thế nghiêm trọng, đặc biệt liều đầu tiên (first-dose effect). Khởi đầu với liều thấp (1mg) và uống buổi tối. Tránh đứng dậy đột ngột.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Sildenafil, Tadalafil, Vardenafil (PDE-5 inhibitors)",
+                    "mechanism": "Cả hai đều gây giãn mạch, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ hạ huyết áp nghiêm trọng, ngất",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều doxazosin hoặc tránh dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Beta-blockers, Diuretics)",
+                    "mechanism": "Tác dụng cộng dồn hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức, hạ huyết áp tư thế",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều các thuốc hạ huyết áp khác."
+                },
+                {
+                    "drug": "Rượu",
+                    "mechanism": "Rượu gây giãn mạch, tác dụng cộng dồn với doxazosin",
+                    "effect": "Tăng tác dụng hạ huyết áp, tăng nguy cơ ngất",
+                    "management": "Tránh rượu khi dùng doxazosin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng doxazosin hoặc bất kỳ thành phần nào",
+                "Hạ huyết áp nặng (systolic <90 mmHg)"
+            ],
+            "tương_đối": [
+                "Suy tim nặng - thận trọng, có thể làm nặng",
+                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp",
+                "Dùng với sildenafil, tadalafil, vardenafil - tăng nguy cơ hạ huyết áp"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Doxazosin là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết doxazosin có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều",
+            "notes": "Doxazosin chuyển hóa ở gan qua CYP3A4. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng, ngất",
+                "Chóng mặt nặng",
+                "Nhịp tim nhanh phản ứng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng doxazosin ngay",
+                "Đặt bệnh nhân nằm ngửa, nâng chân cao",
+                "Truyền dịch nếu cần (normal saline)",
+                "Nếu hạ huyết áp nặng: thuốc vận mạch (norepinephrine, phenylephrine)",
+                "Theo dõi huyết áp, nhịp tim liên tục"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu đáng kể.",
+                "timing": "Uống 1 lần/ngày, tốt nhất vào BUỔI TỐI để giảm tác dụng phụ hạ huyết áp. Khởi đầu với liều thấp (1mg) và tăng dần mỗi 1-2 tuần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Doxazosin (Cardura)",
+                "UpToDate - Doxazosin: Drug Information",
+                "ACC/AHA Hypertension Guidelines 2024",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, clinical guidelines"
         }
     }
 

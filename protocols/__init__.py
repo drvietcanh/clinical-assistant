@@ -32,7 +32,14 @@ from .emergency import (
     render_spinal_cord_injury,
     render_green_pit_viper_bite,
     render_cobra_bite,
-    render_krait_bite
+    render_krait_bite,
+    render_acute_pulmonary_edema,
+    render_tca_overdose,
+    render_digoxin_toxicity,
+    render_severe_hypoglycemia,
+    render_chest_trauma,
+    render_abdominal_trauma,
+    render_burn_management
 )
 from .pain import render_acute_pain
 from .respiratory import (
@@ -43,7 +50,7 @@ from .respiratory import (
     render_severe_influenza,
     render_bronchiolitis
 )
-from .cardiology import render_acs, render_hf, render_acute_decompensated_hf, render_atrial_fibrillation, render_dvt_pe, render_bradycardia, render_tachycardia
+from .cardiology import render_acs, render_hf, render_acute_decompensated_hf, render_atrial_fibrillation, render_dvt_pe, render_bradycardia, render_tachycardia, render_stemi, render_nstemi, render_cardiac_tamponade, render_aortic_dissection
 from .nephrology import (
     render_aki,
     render_uti_pyelonephritis,
@@ -53,7 +60,9 @@ from .nephrology import (
     render_nephrotic_syndrome,
     render_ckd,
     render_diabetic_nephropathy,
-    render_hypertensive_nephrosclerosis
+    render_hypertensive_nephrosclerosis,
+    render_hepatorenal_syndrome,
+    render_emergency_dialysis
 )
 from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis, render_parasitic_worms, render_dengue_fever, render_scrub_typhus, render_malaria
 from .endocrinology import (
@@ -64,7 +73,7 @@ from .endocrinology import (
     render_hypoglycemia
 )
 from .neurology import render_serotonin_syndrome, render_neuroleptic_malignant_syndrome, render_intracranial_hypertension
-from .obstetrics import render_eclampsia, render_postpartum_hemorrhage
+from .obstetrics import render_eclampsia, render_postpartum_hemorrhage, render_preeclampsia, render_hellp_syndrome, render_chorioamnionitis, render_placental_abruption, render_uterine_rupture
 from .dermatology import (
     render_stevens_johnson_syndrome,
     render_atopic_dermatitis,
@@ -95,14 +104,18 @@ from .gastroenterology import (
     render_nafld,
     render_chronic_constipation,
     render_acute_diarrhea,
+    render_lower_gi_bleeding,
+    render_perforated_peptic_ulcer,
+    render_biliary_obstruction,
+    render_decompensated_cirrhosis,
 )
-from .hematology import render_transfusion, render_anticoagulation_reversal
+from .hematology import render_transfusion, render_anticoagulation_reversal, render_itp, render_ttp_hus, render_dic
 from .oncology import (
     render_tls,
     render_febrile_neutropenia,
     render_hypercalcemia
 )
-from .critical_care import render_delirium, render_sedation, render_ards, render_ventilator_weaning, render_stress_ulcer
+from .critical_care import render_delirium, render_sedation, render_ards, render_ventilator_weaning, render_stress_ulcer, render_icp_management, render_crrt
 from .rheumatology import render_acute_gout, render_ra_flare
 
 __all__ = [
@@ -177,6 +190,11 @@ __all__ = [
     'render_intracranial_hypertension',
     'render_eclampsia',
     'render_postpartum_hemorrhage',
+    'render_preeclampsia',
+    'render_hellp_syndrome',
+    'render_chorioamnionitis',
+    'render_placental_abruption',
+    'render_uterine_rupture',
     'render_stevens_johnson_syndrome',
     'render_atopic_dermatitis',
     'render_contact_dermatitis',
@@ -216,5 +234,27 @@ __all__ = [
     'render_nafld',
     'render_chronic_constipation',
     'render_acute_diarrhea',
+    'render_lower_gi_bleeding',
+    'render_perforated_peptic_ulcer',
+    'render_biliary_obstruction',
+    'render_decompensated_cirrhosis',
+    'render_icp_management',
+    'render_crrt',
+    'render_stemi',
+    'render_nstemi',
+    'render_cardiac_tamponade',
+    'render_aortic_dissection',
+    'render_itp',
+    'render_ttp_hus',
+    'render_dic',
+    'render_hepatorenal_syndrome',
+    'render_emergency_dialysis',
+    'render_acute_pulmonary_edema',
+    'render_tca_overdose',
+    'render_digoxin_toxicity',
+    'render_severe_hypoglycemia',
+    'render_chest_trauma',
+    'render_abdominal_trauma',
+    'render_burn_management',
 ]
 

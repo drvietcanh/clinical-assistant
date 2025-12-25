@@ -12,6 +12,8 @@ from .nephrotic_syndrome import render as render_nephrotic_syndrome
 from .ckd import render as render_ckd
 from .diabetic_nephropathy import render as render_diabetic_nephropathy
 from .hypertensive_nephrosclerosis import render as render_hypertensive_nephrosclerosis
+from .hepatorenal_syndrome import render as render_hepatorenal_syndrome
+from .emergency_dialysis import render as render_emergency_dialysis
 
 
 __all__ = [
@@ -24,5 +26,7 @@ __all__ = [
     'render_ckd',
     'render_diabetic_nephropathy',
     'render_hypertensive_nephrosclerosis',
+    'render_hepatorenal_syndrome',
+    'render_emergency_dialysis',
 ]
 

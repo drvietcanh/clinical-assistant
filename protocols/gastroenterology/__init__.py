@@ -22,6 +22,10 @@ from .cirrhosis import render as render_cirrhosis
 from .nafld import render as render_nafld
 from .chronic_constipation import render as render_chronic_constipation
 from .acute_diarrhea import render as render_acute_diarrhea
+from .lower_gi_bleeding import render as render_lower_gi_bleeding
+from .perforated_peptic_ulcer import render as render_perforated_peptic_ulcer
+from .biliary_obstruction import render as render_biliary_obstruction
+from .decompensated_cirrhosis import render as render_decompensated_cirrhosis
 
 
 __all__ = [
@@ -44,5 +48,9 @@ __all__ = [
     'render_nafld',
     'render_chronic_constipation',
     'render_acute_diarrhea',
+    'render_lower_gi_bleeding',
+    'render_perforated_peptic_ulcer',
+    'render_biliary_obstruction',
+    'render_decompensated_cirrhosis',
 ]
 

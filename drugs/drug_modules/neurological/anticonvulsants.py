@@ -2032,6 +2032,198 @@ ANTICONVULSANTS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
+    },
+    
+    "Fosphenytoin": {
+        "group": "Neurology - Anticonvulsant (Phenytoin Prodrug)",
+        "vietnamese_name": "Fosphenytoin, Cerebyx",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Status epilepticus (thay thế phenytoin IV khi không thể dùng phenytoin)",
+            "Động kinh (khi không thể dùng phenytoin PO)",
+            "Dự phòng co giật trong phẫu thuật thần kinh",
+            "Điều trị co giật khi không có đường uống"
+        ],
+        "contraindications": [
+            "Dị ứng fosphenytoin hoặc phenytoin",
+            "Suy gan nặng",
+            "Block nhĩ thất độ II hoặc III",
+            "Hội chứng bệnh lympho",
+            "Porphyria"
+        ],
+        "dosage": {
+            "adult_status_epilepticus_iv": "15-20 mg PE/kg IV (PE = phenytoin equivalents, tối đa 1.5g PE)",
+            "adult_status_epilepticus_im": "15-20 mg PE/kg IM (khi không có đường IV)",
+            "adult_maintenance_iv": "4-6 mg PE/kg/ngày IV chia 2-3 lần",
+            "adult_maintenance_im": "4-6 mg PE/kg/ngày IM chia 2-3 lần",
+            "pediatric_status_epilepticus": "15-20 mg PE/kg IV hoặc IM",
+            "notes": "Fosphenytoin được chuyển đổi thành phenytoin trong cơ thể. Liều tính theo PE (phenytoin equivalents): 1.5mg fosphenytoin = 1mg phenytoin. Tốc độ truyền: tối đa 150 mg PE/phút IV (nhanh hơn phenytoin)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25%",
+            "under_30": "Giảm liều 50%"
+        },
+        "side_effects": [
+            "Tương tự phenytoin nhưng ít hơn:",
+            "Hạ huyết áp (ít hơn phenytoin IV)",
+            "Rối loạn nhịp tim (ít hơn phenytoin IV)",
+            "Đau, kích ứng tại chỗ tiêm (ít hơn phenytoin IV)",
+            "Ngứa, cảm giác nóng rát (đặc biệt ở vùng háng, bẹn) - do phosphate",
+            "Chóng mặt, buồn nôn",
+            "Nystagmus, ataxia (liều cao)",
+            "Ban da (có thể nặng - SJS/TEN)",
+            "Hạ bạch cầu, tăng men gan"
+        ],
+        "interactions": [
+            "Tương tự phenytoin:",
+            "Warfarin: giảm tác dụng warfarin",
+            "Oral contraceptives: giảm hiệu quả",
+            "Folic acid: giảm nồng độ phenytoin",
+            "Many drugs: cảm ứng CYP450"
+        ],
+        "pregnancy": "D - Nguy cơ dị tật thai nhi (tương tự phenytoin)",
+        "mechanism_of_action": "Fosphenytoin là prodrug (tiền chất) của phenytoin. Fosphenytoin được chuyển đổi thành phenytoin trong cơ thể bởi enzyme phosphatase (chuyển đổi nhanh, thời gian bán thải chuyển đổi 8-15 phút). Sau khi chuyển đổi, fosphenytoin có tác dụng giống hệt phenytoin: ức chế kênh natri voltage-gated trong màng tế bào thần kinh, ngăn cản sự lan truyền của các xung động bất thường. ƯU ĐIỂM so với phenytoin IV: (1) Có thể truyền nhanh hơn (tối đa 150 mg PE/phút so với 50 mg/phút của phenytoin), (2) Ít gây kích ứng mạch máu (pH trung tính so với pH kiềm của phenytoin), (3) Có thể dùng IM (phenytoin không dùng được IM), (4) Ít gây hạ huyết áp và rối loạn nhịp tim hơn.",
+        "monitoring": [
+            "Nồng độ phenytoin trong máu (therapeutic range: 10-20 mcg/ml, free: 1-2 mcg/ml) - QUAN TRỌNG",
+            "Tần suất và mức độ co giật",
+            "Dấu hiệu độc tính (nystagmus, ataxia, lú lẫn)",
+            "Huyết áp và nhịp tim (ít hơn phenytoin IV nhưng vẫn cần theo dõi)",
+            "Chức năng gan (ALT, AST, bilirubin)",
+            "Công thức máu (giảm bạch cầu, giảm tiểu cầu)",
+            "Dấu hiệu hội chứng Stevens-Johnson (phát ban nặng)",
+            "Ngứa, cảm giác nóng rát (đặc biệt ở vùng háng, bẹn) - do phosphate"
+        ],
+        "precautions": [
+            "Liều tính theo PE (phenytoin equivalents): 1.5mg fosphenytoin = 1mg phenytoin",
+            "Tốc độ truyền: tối đa 150 mg PE/phút IV (nhanh hơn phenytoin)",
+            "Có thể dùng IM (ưu điểm so với phenytoin)",
+            "Ít gây kích ứng mạch máu hơn phenytoin IV (pH trung tính)",
+            "Ít gây hạ huyết áp và rối loạn nhịp tim hơn phenytoin IV",
+            "Ngứa, cảm giác nóng rát (đặc biệt ở vùng háng, bẹn) - do phosphate, thường tự hết",
+            "Theo dõi nồng độ phenytoin trong máu (sau khi chuyển đổi)",
+            "Tương tác thuốc tương tự phenytoin"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Chuyển đổi: 8-15 phút (fosphenytoin → phenytoin). Phenytoin: 22 giờ (sau chuyển đổi)",
+            "onset": "15-30 phút (sau khi chuyển đổi thành phenytoin)",
+            "duration": "Dài (phụ thuộc liều, tương tự phenytoin)",
+            "protein_binding": "Fosphenytoin: 95-99% (tạm thời), Phenytoin: 90% (sau chuyển đổi)",
+            "clearance": "Chuyển đổi nhanh thành phenytoin bởi phosphatase, sau đó chuyển hóa ở gan (CYP2C9, CYP2C19)"
+        },
+        "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh. Dung dịch đã pha: ổn định trong 24 giờ ở nhiệt độ phòng.",
+        "black_box_warnings": "Nguy cơ hội chứng Stevens-Johnson và hoại tử thượng bì nhiễm độc (TEN), có thể tử vong. Ngừng ngay nếu có phát ban. Nguy cơ tự sát và hành vi tự sát. Giảm bạch cầu, giảm tiểu cầu có thể nặng. Ngừng đột ngột có thể gây status epilepticus. (Tương tự phenytoin)",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Phenytoin (sau chuyển đổi) cảm ứng CYP2C9, tăng chuyển hóa warfarin",
+                    "effect": "Giảm tác dụng chống đông, giảm INR",
+                    "management": "Tăng liều warfarin, theo dõi INR thường xuyên."
+                },
+                {
+                    "drug": "Oral contraceptives",
+                    "mechanism": "Phenytoin cảm ứng CYP3A4, tăng chuyển hóa estrogen và progestin",
+                    "effect": "Giảm hiệu quả tránh thai, tăng nguy cơ mang thai",
+                    "management": "Sử dụng biện pháp tránh thai bổ sung hoặc chuyển sang thuốc tránh thai liều cao hơn."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Valproate",
+                    "mechanism": "Ức chế chuyển hóa phenytoin, tăng nồng độ free phenytoin",
+                    "effect": "Tăng nồng độ free phenytoin, tăng nguy cơ độc tính",
+                    "management": "Giảm liều fosphenytoin 25-50%, theo dõi nồng độ free phenytoin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng fosphenytoin hoặc phenytoin",
+                "Suy gan nặng (Child-Pugh C)",
+                "Block nhĩ thất độ II hoặc III",
+                "Hội chứng bệnh lympho",
+                "Porphyria",
+                "Tiền sử hội chứng Stevens-Johnson do phenytoin"
+            ],
+            "tương_đối": [
+                "Suy gan nhẹ đến trung bình - giảm liều, theo dõi chặt chẽ",
+                "Suy thận nặng - giảm liều 50%",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm, giảm liều"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Fosphenytoin là thuốc phân loại D (tương tự phenytoin). Có bằng chứng về nguy cơ dị tật thai nhi (hội chứng fetal hydantoin). Tuy nhiên, trong status epilepticus, lợi ích cứu sống mẹ vượt quá nguy cơ cho thai nhi. Status epilepticus có thể gây tử vong cho cả mẹ và thai nhi nếu không điều trị.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Phenytoin (sau chuyển đổi) bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ bú mẹ về dấu hiệu an thần."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng (chuyển hóa ở gan sau chuyển đổi)",
+            "severe": "Thận trọng, giảm liều (giảm chuyển hóa phenytoin)",
+            "notes": "Fosphenytoin chuyển đổi thành phenytoin, sau đó chuyển hóa ở gan. Suy gan làm giảm chuyển hóa phenytoin, tăng nồng độ và tác dụng. Giảm liều ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tương tự phenytoin:",
+                "Nystagmus (>20 mcg/ml)",
+                "Ataxia (>30 mcg/ml)",
+                "Lú lẫn (>40 mcg/ml)",
+                "Hạ huyết áp (ít hơn phenytoin IV)",
+                "Rối loạn nhịp tim (ít hơn phenytoin IV)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng fosphenytoin",
+                "Theo dõi nồng độ phenytoin trong máu",
+                "Nếu hạ huyết áp:",
+                "  - Bù dịch (NS, LR)",
+                "  - Vasopressor nếu cần",
+                "Nếu rối loạn nhịp tim:",
+                "  - Điều trị theo protocol rối loạn nhịp",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Theo dõi: Nồng độ phenytoin, huyết áp, nhịp tim, ECG"
+            ],
+            "monitoring": "Theo dõi nồng độ phenytoin, huyết áp, nhịp tim, ECG liên tục cho đến khi hồi phục."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có reversal agent đặc hiệu. Điều trị hỗ trợ. Fosphenytoin tự chuyển đổi thành phenytoin và được chuyển hóa."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Dùng trực tiếp dung dịch đã pha sẵn (50 mg PE/ml).",
+                "infusion_rate": "Status epilepticus: 15-20 mg PE/kg IV, tốc độ tối đa 150 mg PE/phút (nhanh hơn phenytoin). Maintenance: 4-6 mg PE/kg/ngày IV chia 2-3 lần.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion."
+                ],
+                "notes": "QUAN TRỌNG: 1) Liều tính theo PE (phenytoin equivalents): 1.5mg fosphenytoin = 1mg phenytoin, 2) Tốc độ truyền: tối đa 150 mg PE/phút IV (nhanh hơn phenytoin 50 mg/phút), 3) Ít gây kích ứng mạch máu hơn phenytoin IV (pH trung tính), 4) Ít gây hạ huyết áp và rối loạn nhịp tim hơn phenytoin IV, 5) Ngứa, cảm giác nóng rát (đặc biệt ở vùng háng, bẹn) - do phosphate, thường tự hết, 6) Theo dõi nồng độ phenytoin trong máu (sau khi chuyển đổi)."
+            },
+            "im": {
+                "reconstitution": "Dùng trực tiếp dung dịch đã pha sẵn (50 mg PE/ml).",
+                "injection_site": "Cơ lớn (đùi, cánh tay).",
+                "notes": "IM: 15-20 mg PE/kg (status epilepticus), 4-6 mg PE/kg/ngày chia 2-3 lần (maintenance). Tác dụng chậm hơn IV (30-45 phút). Ưu điểm: có thể dùng khi không có đường IV (phenytoin không dùng được IM)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Fosphenytoin (Cerebyx)",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "Status Epilepticus Guidelines",
+                "UpToDate - Fosphenytoin: Drug Information",
+                "Medscape - Fosphenytoin Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, status epilepticus guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     }
 }
 

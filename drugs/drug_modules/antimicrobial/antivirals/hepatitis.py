@@ -21,6 +21,13 @@ HEPATITIS_ANTIVIRALS = {
             "Thiếu máu nặng",
             "Dị ứng"
         ],
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hematologic": True, "teratogenic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
         "dosage": {
             "adult_hcv": "800-1200mg/ngày chia 2 lần (tùy genotype và trọng lượng)",
             "adult_hcv_sofosbuvir": "1000mg/ngày (nếu >75kg) hoặc 800mg/ngày (<75kg)",
@@ -46,6 +53,10 @@ HEPATITIS_ANTIVIRALS = {
             "Azathioprine: tăng độc tính"
         ],
         "pregnancy": "X - Chống chỉ định tuyệt đối",
+        "guideline_tags": [
+            "AASLD/IDSA HCV 2024",
+            "WHO viral hepatitis 2024"
+        ],
         "mechanism_of_action": "Ribavirin là nucleoside analog (guanosine), ức chế tổng hợp RNA và DNA của virus. Thuốc được phosphoryl hóa trong tế bào thành ribavirin triphosphate, ức chế RNA polymerase của virus, gây đột biến và ngăn chặn sao chép virus. Ribavirin cũng ức chế inosine monophosphate dehydrogenase (IMPDH), làm giảm GTP nội bào, ảnh hưởng đến tổng hợp RNA virus. Thuốc có tác dụng phổ rộng trên nhiều virus RNA, đặc biệt hiệu quả trong điều trị viêm gan C khi kết hợp với interferon hoặc sofosbuvir. Ribavirin rất độc, gây thiếu máu, dị tật thai nhi, và các tác dụng phụ nghiêm trọng khác.",
         "monitoring": [
             "Công thức máu (CBC) - theo dõi thiếu máu, giảm bạch cầu, giảm tiểu cầu - mỗi 2-4 tuần",
@@ -171,7 +182,7 @@ HEPATITIS_ANTIVIRALS = {
                 "UpToDate - Ribavirin Drug Information",
                 "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
             ],
-            "last_updated": "2025-01-15",
+            "last_updated": "2025-12-24",
             "evidence_level": "High (FDA-approved, extensive clinical data)"
         }
     }
@@ -207,6 +218,17 @@ HEPATITIS_ANTIVIRALS = {
             "Ít tương tác đáng kể; thận trọng với thuốc độc thận"
         ],
         "pregnancy": "C (ưu tiên tenofovir ở phụ nữ mang thai)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "AASLD 2024 HBV",
+            "EASL 2023 HBV"
+        ],
         "mechanism_of_action": "Nucleoside analog (guanosine) ức chế HBV DNA polymerase/reverse transcriptase, gây kết thúc chuỗi.",
         "monitoring": [
             "HBV DNA, ALT mỗi 3-6 tháng",
@@ -285,7 +307,7 @@ HEPATITIS_ANTIVIRALS = {
                 "EASL 2023 HBV Guidelines",
                 "Baraclude Prescribing Information"
             ],
-            "last_updated": "2025-02-17",
+            "last_updated": "2025-12-24",
             "evidence_level": "A - Dữ liệu thử nghiệm lâm sàng và hướng dẫn chuyên ngành"
         }
     },
@@ -324,6 +346,18 @@ HEPATITIS_ANTIVIRALS = {
             "P-gp inducers/inhibitors ảnh hưởng hấp thu TAF"
         ],
         "pregnancy": "B (TDF được khuyến cáo cho thai kỳ HBV/HIV)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"renal": True, "bone": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": ["TDF vs TAF"]
+        },
+        "guideline_tags": [
+            "AASLD 2024 HBV",
+            "EASL 2023 HBV",
+            "WHO HIV 2024"
+        ],
         "mechanism_of_action": "Nucleotide analog (adenosine monophosphate) ức chế HBV DNA polymerase và HIV reverse transcriptase, gây kết thúc chuỗi.",
         "monitoring": [
             "Creatinine, eGFR mỗi 3-6 tháng",
@@ -411,7 +445,7 @@ HEPATITIS_ANTIVIRALS = {
                 "EASL 2023 HBV Guidelines",
                 "WHO consolidated HIV guidelines 2024"
             ],
-            "last_updated": "2025-02-17",
+            "last_updated": "2025-12-24",
             "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu thử nghiệm lâm sàng"
         }
     },
@@ -449,6 +483,17 @@ HEPATITIS_ANTIVIRALS = {
             "Acid giảm dạ dày ít ảnh hưởng khi đơn thành phần"
         ],
         "pregnancy": "B (nhưng phụ thuộc thuốc phối hợp, ví dụ ribavirin = X)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "AASLD/IDSA HCV 2024",
+            "EASL HCV 2024"
+        ],
         "mechanism_of_action": "Nucleotide analog ức chế NS5B RNA-dependent RNA polymerase của HCV, gây kết thúc chuỗi.",
         "monitoring": [
             "HCV RNA, ALT mỗi 4-8 tuần",
@@ -533,7 +578,7 @@ HEPATITIS_ANTIVIRALS = {
                 "AASLD/IDSA HCV Guidance 2024",
                 "Sovaldi Prescribing Information"
             ],
-            "last_updated": "2025-02-17",
+            "last_updated": "2025-12-24",
             "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu pha 3"
         }
     },
@@ -572,6 +617,17 @@ HEPATITIS_ANTIVIRALS = {
             "Amiodarone: nguy cơ nhịp chậm (do sofosbuvir thành phần)"
         ],
         "pregnancy": "B (không phối hợp ribavirin); tránh nếu phác đồ có ribavirin",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "AASLD/IDSA HCV 2024",
+            "EASL HCV 2024"
+        ],
         "mechanism_of_action": "Ức chế NS5A của HCV, chặn nhân lên và lắp ráp virus; dùng phối hợp với sofosbuvir để ngăn đề kháng.",
         "monitoring": [
             "HCV RNA, ALT",
@@ -663,7 +719,148 @@ HEPATITIS_ANTIVIRALS = {
                 "AASLD/IDSA HCV Guidance 2024",
                 "Harvoni Prescribing Information"
             ],
-            "last_updated": "2025-02-17",
+            "last_updated": "2025-12-24",
+            "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu pha 3"
+        }
+    },
+
+    "Sofosbuvir/Velpatasvir": {
+        "group": "Infectious Disease - Antiviral (HCV NS5B + NS5A inhibitor FDC)",
+        "vietnamese_name": "Sofosbuvir/Velpatasvir (Epclusa)",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm gan C mạn tất cả genotype (1–6), có hoặc không xơ gan.",
+            "Kết hợp ribavirin ở xơ gan mất bù nếu cần."
+        ],
+        "contraindications": [
+            "Dị ứng thành phần.",
+            "Dùng với amiodarone (nguy cơ nhịp chậm nặng qua sofosbuvir).",
+            "Cảm ứng mạnh P-gp/CYP (rifampin, carbamazepine, St. John’s wort)."
+        ],
+        "dosage": {
+            "adult": "Sofosbuvir 400mg + Velpatasvir 100mg x 1 lần/ngày, 12 tuần.",
+            "decomp_cirrhosis": "Thêm ribavirin và/hoặc kéo dài theo hướng dẫn chuyên khoa.",
+            "notes": "Uống cùng hoặc không cùng thức ăn."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh.",
+            "30_60": "Thận trọng; theo dõi.",
+            "under_30": "Tránh hoặc tham khảo chuyên khoa (dữ liệu hạn chế ở eGFR <30)."
+        },
+        "side_effects": [
+            "Đau đầu, mệt.",
+            "Buồn nôn.",
+            "Nhịp chậm khi phối hợp amiodarone (tránh)."
+        ],
+        "interactions": [
+            "Amiodarone: nhịp chậm nặng (tránh).",
+            "P-gp/CYP inducers (rifampin, carbamazepine, phenytoin, St. John’s wort): giảm nồng độ.",
+            "Acid giảm dạ dày (PPI/antacid): giảm hấp thu velpatasvir."
+        ],
+        "pregnancy": "B nếu không có ribavirin; nếu phối hợp ribavirin: chống chỉ định thai kỳ.",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "AASLD/IDSA HCV 2024",
+            "EASL HCV 2024"
+        ],
+        "mechanism_of_action": "FDC ức chế NS5B (sofosbuvir) và NS5A (velpatasvir), chặn sao chép và lắp ráp HCV, hiệu quả pangenotypic.",
+        "monitoring": [
+            "HCV RNA, ALT mỗi 4-8 tuần.",
+            "Nhịp tim nếu buộc dùng amiodarone (tránh).",
+            "HBV serology/HBV DNA (nguy cơ bùng phát HBV)."
+        ],
+        "precautions": [
+            "Sàng lọc HBV trước điều trị; theo dõi bùng phát HBV.",
+            "Tránh amiodarone; nếu buộc dùng, theo dõi ECG liên tục 48–72 giờ.",
+            "PPI/antacid: dùng omeprazole ≤20mg cùng thời điểm trước ăn; antacid cách ≥4 giờ."
+        ],
+        "pharmacokinetics": {
+            "half_life": "Sofosbuvir 0.4h (tiền thuốc), chất chuyển hóa 27h; Velpatasvir ~15h.",
+            "onset": "Giảm HCV RNA nhanh trong tuần đầu.",
+            "duration": "1 lần/ngày.",
+            "protein_binding": "Sofosbuvir ~61–65%; Velpatasvir ~99%.",
+            "clearance": "Sofosbuvir chuyển hóa gan, thải thận chất chuyển hóa; Velpatasvir thải qua mật/phân."
+        },
+        "storage": "Nhiệt độ phòng, khô ráo.",
+        "black_box_warnings": "Nguy cơ bùng phát HBV khi điều trị HCV – sàng lọc HBV trước điều trị.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Amiodarone",
+                    "mechanism": "Cộng hưởng gây nhịp chậm nặng (qua sofosbuvir).",
+                    "effect": "Nguy cơ block/nhịp chậm nghiêm trọng.",
+                    "management": "TRÁNH; nếu bắt buộc, theo dõi ECG liên tục 48–72 giờ."
+                },
+                {
+                    "drug": "Rifampin, carbamazepine, phenytoin, St. John’s wort",
+                    "mechanism": "Cảm ứng P-gp/CYP giảm nồng độ sofosbuvir/velpatasvir.",
+                    "effect": "Thất bại điều trị.",
+                    "management": "CHỐNG CHỈ ĐỊNH."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "PPI/antacid",
+                    "mechanism": "Tăng pH giảm hấp thu velpatasvir.",
+                    "effect": "Giảm hiệu quả.",
+                    "management": "PPI: omeprazole ≤20mg dùng cùng thời điểm trước ăn; antacid cách ≥4 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": ["Dị ứng", "Phối hợp amiodarone", "Phối hợp rifampin/carbamazepine/phenytoin/St. John’s wort"],
+            "tương_đối": [
+                "Suy thận nặng (eGFR <30)",
+                "Phụ nữ có thai nếu phác đồ kèm ribavirin",
+                "Đồng nhiễm HBV chưa điều trị"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B (không ribavirin); X nếu có ribavirin",
+            "pregnancy_details": "An toàn tương đối nếu không dùng ribavirin; nếu kèm ribavirin thì chống chỉ định thai kỳ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa rõ bài tiết; cân nhắc ngừng cho bú.",
+                "recommendation": "Đánh giá lợi ích/nguy cơ; tránh nếu kèm ribavirin."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh.",
+            "moderate": "Không cần chỉnh.",
+            "severe": "Thận trọng ở Child-Pugh B/C; tham khảo chuyên khoa (thường cần ribavirin/xem xét kéo dài).",
+            "notes": "Chuyển hóa gan; dữ liệu có ở xơ gan mất bù khi phối hợp ribavirin."
+        },
+        "overdose_management": {
+            "symptoms": ["Buồn nôn, đau đầu; nhịp chậm nếu có amiodarone."],
+            "antidote": "Không có.",
+            "treatment": [
+                "Điều trị hỗ trợ.",
+                "Theo dõi ECG.",
+                "Thẩm tách loại bỏ một phần chất chuyển hóa sofosbuvir."
+            ],
+            "monitoring": "ECG, dấu hiệu sinh tồn, HCV RNA/ALT theo dõi đáp ứng."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể với hoặc không.",
+                "timing": "1 lần/ngày; tránh antacid gần thời điểm uống; tuân thủ đủ 12 tuần."
+            },
+            "iv": None
+        },
+        "references": {
+            "primary_sources": [
+                "AASLD/IDSA HCV Guidance 2024",
+                "Epclusa Prescribing Information"
+            ],
+            "last_updated": "2025-12-24",
             "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu pha 3"
         }
     }

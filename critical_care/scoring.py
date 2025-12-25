@@ -516,7 +516,7 @@ def render_scoring_calculator():
             del st.session_state['scoring_calc_to_open']
     
     # Tab selection
-    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
+    tab_labels = [
         "📊 APACHE II",
         "📊 SOFA",
         "📊 SAPS II",
@@ -524,7 +524,11 @@ def render_scoring_calculator():
         "📊 RASS",
         "🧠 CAM-ICU",
         "🧪 AKI Staging"
-    ], selected=default_tab if default_tab < 7 else None)
+    ]
+    if default_tab is not None and 0 <= default_tab < len(tab_labels):
+        tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(tab_labels, selected=default_tab)
+    else:
+        tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(tab_labels)
     
     # Tab 1: APACHE II
     with tab1:

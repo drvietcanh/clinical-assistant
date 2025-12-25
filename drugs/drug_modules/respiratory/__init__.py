@@ -9,6 +9,9 @@ from .anticholinergic_short_actings import ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS
 from .anticholinergic_long_actings import ANTICHOLINERGIC_LONG_ACTINGS_DRUGS
 from .inhaled_corticosteroid_icss import INHALED_CORTICOSTEROID_ICSS_DRUGS
 from .methylxanthines import METHYLXANTHINES_DRUGS
+from .respiratory_biologics import RESPIRATORY_BIOLOGICS_DRUGS
+from .pde4_inhibitors import PDE4_INHIBITORS_DRUGS
+from .combination_inhalers import COMBINATION_INHALERS_DRUGS
 
 # Merge all categories
 RESPIRATORY_DRUGS = {
@@ -19,6 +22,9 @@ RESPIRATORY_DRUGS = {
     **ANTICHOLINERGIC_LONG_ACTINGS_DRUGS,
     **INHALED_CORTICOSTEROID_ICSS_DRUGS,
     **METHYLXANTHINES_DRUGS,
+    **RESPIRATORY_BIOLOGICS_DRUGS,
+    **PDE4_INHIBITORS_DRUGS,
+    **COMBINATION_INHALERS_DRUGS,
 }
 
 __all__ = ['RESPIRATORY_DRUGS']

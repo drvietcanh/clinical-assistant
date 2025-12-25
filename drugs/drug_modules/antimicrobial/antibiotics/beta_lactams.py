@@ -1036,6 +1036,493 @@ BETA_LACTAM_ANTIBIOTICS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều thập kỷ"
         }
+    },
+    
+    "Aztreonam": {
+        "group": "Antibiotic - Monobactam",
+        "vietnamese_name": "Aztreonam, Azactam",
+        "administration": ["IV", "IM", "Inhaled"],
+        "indications": [
+            "Nhiễm khuẩn Gram âm nặng (bệnh viện)",
+            "Nhiễm khuẩn huyết do Gram âm",
+            "Viêm phổi bệnh viện do Gram âm",
+            "Nhiễm khuẩn đường tiết niệu phức tạp",
+            "Nhiễm khuẩn ổ bụng (kết hợp với thuốc kỵ khí)",
+            "Viêm phổi do Pseudomonas aeruginosa (kháng sinh mạn tính) - dạng hít",
+            "Bệnh nhân dị ứng penicillin (KHÔNG có phản ứng chéo)"
+        ],
+        "contraindications": [
+            "Dị ứng aztreonam",
+            "Dị ứng beta-lactam (thận trọng, nhưng thường an toàn)"
+        ],
+        "dosage": {
+            "adult_iv_standard": "1-2g IV mỗi 8-12 giờ",
+            "adult_iv_severe": "2g IV mỗi 6-8 giờ",
+            "adult_iv_max": "2g IV mỗi 6 giờ (tối đa 8g/ngày)",
+            "adult_im": "1g IM mỗi 8-12 giờ",
+            "adult_inhaled": "75mg x 3 lần/ngày (dạng hít, cho viêm phổi mạn tính do Pseudomonas)",
+            "pediatric_iv": "30mg/kg IV mỗi 6-8 giờ (tối đa 120mg/kg/ngày)",
+            "notes": "Pha trong 50-100ml NS hoặc D5W, truyền trong 20-60 phút. KHÔNG có phản ứng chéo với penicillin (an toàn cho bệnh nhân dị ứng penicillin)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "1-2g IV mỗi 12 giờ",
+            "under_30": "0.5-1g IV mỗi 12 giờ",
+            "hemodialysis": "0.5-1g IV sau mỗi lần lọc máu"
+        },
+        "side_effects": [
+            "Phát ban (hiếm)",
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Tăng men gan (hiếm)",
+            "Giảm tiểu cầu (hiếm)",
+            "Phản ứng tại chỗ tiêm (IM)"
+        ],
+        "interactions": [
+            "Aminoglycosides: tác dụng hiệp đồng (có thể dùng kết hợp)",
+            "Clindamycin, Metronidazole: dùng kết hợp cho nhiễm khuẩn hỗn hợp (Gram âm + kỵ khí)"
+        ],
+        "pregnancy": "B - An toàn trong thai kỳ",
+        "mechanism_of_action": "Aztreonam là monobactam (chỉ có vòng beta-lactam đơn, không có vòng thiazolidine như penicillin hoặc dihydrothiazine như cephalosporin). Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding protein 3 (PBP-3) của vi khuẩn Gram âm. Phổ kháng khuẩn: chỉ hiệu quả với vi khuẩn Gram âm (Enterobacteriaceae, Pseudomonas aeruginosa, Haemophilus influenzae, Neisseria), KHÔNG hiệu quả với vi khuẩn Gram dương hoặc kỵ khí. ĐẶC ĐIỂM QUAN TRỌNG: KHÔNG có phản ứng chéo với penicillin hoặc cephalosporin (cấu trúc khác), nên an toàn cho bệnh nhân dị ứng penicillin. Đây là lựa chọn quan trọng cho bệnh nhân dị ứng penicillin cần điều trị nhiễm khuẩn Gram âm.",
+        "monitoring": [
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều theo thận",
+            "Chức năng gan (ALT, AST, bilirubin) - hiếm tăng men gan",
+            "Công thức máu (tiểu cầu) - hiếm giảm tiểu cầu",
+            "Dấu hiệu dị ứng (phát ban) - hiếm nhưng cần theo dõi",
+            "Đáp ứng điều trị (sốt, triệu chứng nhiễm khuẩn)"
+        ],
+        "precautions": [
+            "KHÔNG có phản ứng chéo với penicillin - an toàn cho bệnh nhân dị ứng penicillin",
+            "Chỉ hiệu quả với vi khuẩn Gram âm - KHÔNG dùng đơn độc cho nhiễm khuẩn hỗn hợp",
+            "Nhiễm khuẩn hỗn hợp (Gram âm + kỵ khí): kết hợp với clindamycin hoặc metronidazole",
+            "Nhiễm khuẩn hỗn hợp (Gram âm + Gram dương): kết hợp với vancomycin hoặc linezolid",
+            "Điều chỉnh liều theo chức năng thận",
+            "Dạng hít: chỉ dùng cho viêm phổi mạn tính do Pseudomonas (cystic fibrosis)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1.5-2 giờ",
+            "onset": "Ngay lập tức sau khi truyền",
+            "duration": "8-12 giờ (phụ thuộc liều và chức năng thận)",
+            "protein_binding": "56%",
+            "clearance": "Thận (60-70% thải trừ qua thận dạng nguyên dạng), gan (30-40% chuyển hóa)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch đã pha: ổn định trong 24 giờ ở nhiệt độ phòng, 48 giờ ở 2-8°C.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Aminoglycosides (gentamicin, tobramycin, amikacin)",
+                    "mechanism": "Tác dụng hiệp đồng chống vi khuẩn Gram âm",
+                    "effect": "Tăng hiệu quả điều trị (synergistic effect)",
+                    "management": "Có thể dùng kết hợp cho nhiễm khuẩn Gram âm nặng. Theo dõi chức năng thận (cả hai đều độc với thận)."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng aztreonam"
+            ],
+            "tương_đối": [
+                "Dị ứng beta-lactam - thận trọng, nhưng thường an toàn (không có phản ứng chéo)",
+                "Suy thận nặng - giảm liều",
+                "Suy gan nặng - thận trọng (chuyển hóa một phần ở gan)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Aztreonam là thuốc phân loại B. Không có bằng chứng về nguy cơ dị tật thai nhi trong các nghiên cứu trên động vật. Không có nghiên cứu đầy đủ trên phụ nữ có thai, nhưng aztreonam được sử dụng trong thai kỳ và có vẻ an toàn. Nhiễm khuẩn nặng có thể gây nguy hiểm cho cả mẹ và thai nhi nếu không điều trị.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Aztreonam bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Aztreonam bài tiết vào sữa mẹ ở nồng độ thấp và không gây hại cho trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng (chuyển hóa một phần ở gan)",
+            "severe": "Thận trọng, có thể tăng tác dụng (giảm chuyển hóa)",
+            "notes": "Aztreonam chuyển hóa một phần ở gan (30-40%). Suy gan có thể làm giảm chuyển hóa, nhưng ảnh hưởng ít hơn so với suy thận (thải trừ chủ yếu qua thận)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Co giật (hiếm, thường ở suy thận nặng)",
+                "Rối loạn thần kinh (hiếm)",
+                "Tăng men gan (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng aztreonam",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Nếu co giật:",
+                "  - Benzodiazepine (diazepam, lorazepam) IV",
+                "  - Phenytoin hoặc fosphenytoin IV nếu cần",
+                "Lọc máu (hemodialysis) nếu suy thận nặng và tích lũy",
+                "Theo dõi: Chức năng thận, gan, thần kinh"
+            ],
+            "monitoring": "Theo dõi chức năng thận, gan, thần kinh liên tục cho đến khi hồi phục."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có reversal agent đặc hiệu. Điều trị hỗ trợ."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha bột: 1g trong 10ml NS = 100mg/ml, sau đó pha loãng trong 50-100ml NS hoặc D5W.",
+                "infusion_rate": "Standard: 1-2g IV mỗi 8-12 giờ, truyền trong 20-60 phút. Severe: 2g IV mỗi 6-8 giờ. Tối đa: 2g IV mỗi 6 giờ (8g/ngày).",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "LR (Lactated Ringer's)"],
+                "incompatibility": [
+                    "Không trộn với nafcillin, metronidazole (kết tủa). Dùng đường truyền riêng."
+                ],
+                "notes": "QUAN TRỌNG: 1) KHÔNG có phản ứng chéo với penicillin - an toàn cho bệnh nhân dị ứng penicillin, 2) Chỉ hiệu quả với vi khuẩn Gram âm, 3) Nhiễm khuẩn hỗn hợp: kết hợp với clindamycin/metronidazole (kỵ khí) hoặc vancomycin/linezolid (Gram dương), 4) Điều chỉnh liều theo chức năng thận, 5) Pha trong 50-100ml NS hoặc D5W, truyền trong 20-60 phút."
+            },
+            "im": {
+                "reconstitution": "Pha bột: 1g trong 3ml NS = 333mg/ml.",
+                "injection_site": "Cơ lớn (đùi, cánh tay).",
+                "notes": "IM: 1g mỗi 8-12 giờ. Tiêm sâu vào cơ, không tiêm vào mỡ dưới da. Có thể gây đau tại chỗ tiêm."
+            },
+            "inhaled": {
+                "reconstitution": "Dùng dạng hít sẵn có (75mg/lần).",
+                "dose": "75mg x 3 lần/ngày (cách nhau 4 giờ), khí dung qua nebulizer.",
+                "notes": "Chỉ dùng cho viêm phổi mạn tính do Pseudomonas (cystic fibrosis). Không dùng cho nhiễm khuẩn cấp tính. Theo dõi chức năng phổi."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Aztreonam (Azactam)",
+                "IDSA Guidelines - Antimicrobial Therapy",
+                "UpToDate - Aztreonam: Drug Information",
+                "Allergy Guidelines - Beta-lactam Allergy",
+                "Medscape - Aztreonam Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, allergy guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
+    "Doripenem": {
+        "group": "Antibiotic - Carbapenem",
+        "vietnamese_name": "Doripenem, Doribax",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn ổ bụng phức tạp",
+            "Nhiễm khuẩn đường tiết niệu phức tạp (bao gồm viêm bể thận)",
+            "Viêm phổi bệnh viện",
+            "Nhiễm khuẩn nặng đa kháng",
+            "Nhiễm khuẩn do Pseudomonas aeruginosa"
+        ],
+        "contraindications": [
+            "Dị ứng doripenem",
+            "Dị ứng carbapenem",
+            "Dị ứng beta-lactam nặng"
+        ],
+        "dosage": {
+            "adult_standard": "500mg IV mỗi 8 giờ",
+            "adult_severe": "500mg IV mỗi 6 giờ hoặc 1g IV mỗi 8 giờ",
+            "adult_pneumonia": "500mg IV mỗi 8 giờ",
+            "adult_uti": "500mg IV mỗi 8 giờ",
+            "notes": "Truyền trong 60 phút (liều 500mg) hoặc 120 phút (liều 1g). Tương tự meropenem nhưng có thể hiệu quả hơn với một số chủng Pseudomonas kháng meropenem."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "250mg IV mỗi 8 giờ",
+            "under_30": "250mg IV mỗi 12 giờ",
+            "hemodialysis": "250mg IV sau mỗi lần lọc máu"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Buồn nôn, nôn",
+            "Phát ban",
+            "Đau đầu",
+            "Co giật (hiếm, ít hơn imipenem)",
+            "Tăng men gan (hiếm)",
+            "Viêm tĩnh mạch tại chỗ tiêm"
+        ],
+        "interactions": [
+            "Valproate: giảm nồng độ valproate (có thể gây co giật)",
+            "Probenecid: tăng nồng độ doripenem"
+        ],
+        "pregnancy": "B - An toàn trong thai kỳ",
+        "mechanism_of_action": "Doripenem là carbapenem kháng sinh beta-lactam, tương tự meropenem. Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs), đặc biệt PBP-2 và PBP-3, dẫn đến ly giải tế bào vi khuẩn. Phổ kháng khuẩn rộng, bao phủ cả vi khuẩn Gram-dương, Gram-âm (bao gồm Pseudomonas aeruginosa), và kỵ khí. Kháng được nhiều beta-lactamase do có cấu trúc vòng beta-lactam bền vững. Đặc điểm: (1) Tương tự meropenem về phổ và hiệu quả, (2) Có thể hiệu quả hơn với một số chủng Pseudomonas kháng meropenem, (3) Ít gây co giật hơn imipenem, (4) Truyền trong 60-120 phút (chậm hơn meropenem), (5) Không cần cilastatin (không bị phân hủy bởi dehydropeptidase I).",
+        "monitoring": [
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều theo thận",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Dấu hiệu nhiễm C. difficile",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Dấu hiệu co giật (hiếm, ít hơn imipenem)",
+            "Nồng độ valproate nếu đang dùng (doripenem làm giảm nồng độ valproate)"
+        ],
+        "precautions": [
+            "PHẢI điều chỉnh liều theo chức năng thận (eGFR) - quan trọng",
+            "Truyền trong 60 phút (liều 500mg) hoặc 120 phút (liều 1g) - chậm hơn meropenem",
+            "Nguy cơ co giật tăng ở suy thận nặng và bệnh nhân có tiền sử co giật (ít hơn imipenem)",
+            "TRÁNH dùng với valproate (giảm nồng độ valproate, tăng nguy cơ co giật)",
+            "Theo dõi nhiễm C. difficile",
+            "Không pha trộn với các thuốc khác",
+            "Có thể hiệu quả hơn với một số chủng Pseudomonas kháng meropenem"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1 giờ",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "8 giờ (liều q8h)",
+            "protein_binding": "8%",
+            "clearance": "Thận (70% bài tiết nguyên dạng qua nước tiểu), cần điều chỉnh thận"
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 1 giờ, hoặc trong tủ lạnh 8 giờ. Dùng ngay sau khi pha.",
+        "black_box_warnings": "Nguy cơ co giật, đặc biệt ở suy thận nặng và bệnh nhân có tiền sử co giật. TRÁNH dùng với valproate (giảm nồng độ valproate, tăng nguy cơ co giật).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Valproate (Valproic acid)",
+                    "mechanism": "Doripenem ức chế hấp thu valproate và tăng chuyển hóa valproate, làm giảm nồng độ valproate trong máu đáng kể",
+                    "effect": "Giảm nồng độ valproate 60-90%, tăng nguy cơ co giật (nguy hiểm tính mạng ở bệnh nhân động kinh)",
+                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc: (1) Theo dõi nồng độ valproate thường xuyên, (2) Tăng liều valproate 2-3 lần, (3) Cân nhắc dùng thuốc chống co giật khác (phenytoin, levetiracetam), (4) Theo dõi dấu hiệu co giật chặt chẽ, (5) Cân nhắc dừng doripenem nếu có thể."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết doripenem ở ống thận, tăng nồng độ doripenem",
+                    "effect": "Tăng nồng độ doripenem, tăng nguy cơ tác dụng phụ",
+                    "management": "Tránh dùng đồng thời. Nếu bắt buộc, giảm liều doripenem."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng doripenem",
+                "Dị ứng carbapenem",
+                "Dị ứng beta-lactam nặng (sốc phản vệ)"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều",
+                "Dùng với valproate - giảm nồng độ valproate đáng kể, tăng nguy cơ co giật",
+                "Bệnh nhân có tiền sử co giật - tăng nguy cơ co giật",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Doripenem là thuốc phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Carbapenem được sử dụng trong nhiễm trùng nặng ở phụ nữ có thai và được coi là an toàn khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Doripenem bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Doripenem bài tiết vào sữa mẹ ở nồng độ thấp và không gây tác dụng phụ ở trẻ bú mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Không cần điều chỉnh liều (thải trừ chủ yếu qua thận)",
+            "notes": "Doripenem thải trừ chủ yếu qua thận (70% bài tiết nguyên dạng). Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy",
+                "Triệu chứng thần kinh: Đau đầu, chóng mặt, co giật (hiếm)",
+                "Triệu chứng thận: Suy thận cấp, tăng creatinine (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay doripenem nếu đang truyền",
+                "Nếu co giật:",
+                "  - Benzodiazepine (diazepam, lorazepam) IV",
+                "  - Phenytoin hoặc fosphenytoin IV nếu cần",
+                "Điều trị suy thận cấp nếu có:",
+                "  - Bù dịch đầy đủ",
+                "  - Lọc máu nếu cần (hemodialysis có thể loại bỏ doripenem)",
+                "Theo dõi: Dấu hiệu sinh tồn, chức năng thận, thần kinh"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, thần kinh trong 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có reversal agent đặc hiệu. Điều trị hỗ trợ."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha bột khô trong NS hoặc D5W: 500mg pha trong 10ml = 50mg/ml. Sau đó pha loãng trong 100ml NS hoặc D5W để truyền.",
+                "infusion_rate": "Truyền IV trong 60 phút (liều 500mg) hoặc 120 phút (liều 1g). Không truyền nhanh hơn. Liều: 500mg IV mỗi 8 giờ (bình thường), 250mg IV mỗi 8-12 giờ (suy thận).",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Dùng đường truyền riêng hoặc flush trước/sau khi truyền thuốc khác."
+                ],
+                "notes": "QUAN TRỌNG: 1) PHẢI điều chỉnh liều theo chức năng thận (eGFR), 2) Truyền trong 60-120 phút (chậm hơn meropenem), 3) Nguy cơ co giật tăng ở suy thận nặng, 4) TRÁNH dùng với valproate (giảm nồng độ valproate), 5) Theo dõi nhiễm C. difficile, 6) Có thể hiệu quả hơn với một số chủng Pseudomonas kháng meropenem."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Doripenem (Doribax)",
+                "IDSA Guidelines - Antimicrobial Therapy",
+                "UpToDate - Doripenem: Drug Information",
+                "Medscape - Doripenem Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
+    "Cefiderocol": {
+        "group": "Antibiotic - Siderophore Cephalosporin",
+        "vietnamese_name": "Cefiderocol, Fetroja",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn đường tiết niệu phức tạp (cUTI) - Gram-âm kháng thuốc",
+            "Viêm phổi bệnh viện (HABP/VABP) - Gram-âm kháng thuốc",
+            "Nhiễm khuẩn Gram-âm kháng carbapenem (CRE) - Acinetobacter, Pseudomonas, Enterobacteriaceae",
+            "Nhiễm khuẩn Gram-âm đa kháng (MDR) - khi các kháng sinh khác không hiệu quả"
+        ],
+        "contraindications": [
+            "Dị ứng cefiderocol hoặc cephalosporin",
+            "Dị ứng beta-lactam nặng"
+        ],
+        "dosage": {
+            "adult_cuti": "2g IV mỗi 8 giờ (truyền trong 3 giờ)",
+            "adult_habp_vabp": "2g IV mỗi 8 giờ (truyền trong 3 giờ)",
+            "notes": "Cefiderocol là kháng sinh mới (FDA 2019), đặc biệt hiệu quả với Gram-âm kháng carbapenem. Truyền trong 3 giờ để tối ưu hóa hiệu quả. Điều chỉnh liều theo chức năng thận."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi (CrCl ≥60: 2g IV mỗi 8 giờ)",
+            "30_60": "1.5g IV mỗi 8 giờ (CrCl 30-59)",
+            "under_30": "1g IV mỗi 8 giờ (CrCl 15-29), 0.75g IV mỗi 8 giờ (CrCl <15)",
+            "hemodialysis": "0.75g IV mỗi 8 giờ (sau lọc máu)"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Buồn nôn, nôn",
+            "Phát ban",
+            "Tăng men gan",
+            "Viêm tĩnh mạch tại chỗ tiêm",
+            "Nhiễm C. difficile",
+            "Tăng nguy cơ tử vong (trong HABP/VABP) - FDA warning"
+        ],
+        "interactions": [
+            "Aminoglycosides: tác dụng hiệp đồng",
+            "Probenecid: tăng nồng độ cefiderocol"
+        ],
+        "pregnancy": "B - Thận trọng",
+        "mechanism_of_action": "Cefiderocol là siderophore cephalosporin (kháng sinh beta-lactam mới, FDA 2019). Có cơ chế đặc biệt: (1) Cephalosporin: ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs), (2) Siderophore: cefiderocol có nhóm siderophore, gắn với sắt (Fe3+), được vận chuyển vào tế bào vi khuẩn qua hệ thống vận chuyển sắt (iron transport system) của vi khuẩn. Cơ chế này cho phép cefiderocol vượt qua các cơ chế kháng thuốc (porin loss, efflux pumps, beta-lactamase) và đạt nồng độ cao trong tế bào vi khuẩn. ĐẶC ĐIỂM: (1) Đặc biệt hiệu quả với Gram-âm kháng carbapenem (CRE) - Acinetobacter baumannii, Pseudomonas aeruginosa, Enterobacteriaceae (Klebsiella, E. coli), (2) Phổ rộng Gram-âm (bao gồm ESBL, AmpC, carbapenemase-producing), (3) Truyền trong 3 giờ để tối ưu hóa hiệu quả, (4) FDA warning về tăng nguy cơ tử vong trong HABP/VABP (cần cân nhắc kỹ), (5) Điều chỉnh liều theo chức năng thận (CrCl).",
+        "monitoring": [
+            "Chức năng thận (creatinine, eGFR, CrCl) - điều chỉnh liều theo thận, QUAN TRỌNG",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, CRP)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Dấu hiệu nhiễm C. difficile",
+            "Dấu hiệu tử vong (trong HABP/VABP) - FDA warning"
+        ],
+        "precautions": [
+            "FDA warning về tăng nguy cơ tử vong trong HABP/VABP - cần cân nhắc kỹ trước khi dùng",
+            "PHẢI điều chỉnh liều theo chức năng thận (CrCl) - QUAN TRỌNG",
+            "Truyền trong 3 giờ (không nhanh hơn) để tối ưu hóa hiệu quả",
+            "Chỉ dùng cho nhiễm khuẩn Gram-âm kháng thuốc khi các kháng sinh khác không hiệu quả",
+            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy",
+            "Theo dõi nhiễm nấm thứ phát khi dùng kéo dài",
+            "Pha trong NS hoặc D5W, truyền qua đường truyền riêng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (bình thường), kéo dài ở suy thận",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "8 giờ (liều q8h)",
+            "protein_binding": "40-60%",
+            "metabolism": "Chuyển hóa tối thiểu",
+            "clearance": "Chủ yếu qua thận (60-70% bài tiết nguyên dạng), cần điều chỉnh thận",
+            "volume_of_distribution": "0.2-0.3 L/kg"
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C), tránh ánh sáng. Sau khi pha: bảo quản ở nhiệt độ phòng 4 giờ, hoặc trong tủ lạnh 24 giờ.",
+        "black_box_warnings": "FDA warning: Tăng nguy cơ tử vong trong viêm phổi bệnh viện (HABP/VABP) so với các kháng sinh khác. Cần cân nhắc kỹ trước khi dùng cho HABP/VABP. Chỉ dùng khi các kháng sinh khác không phù hợp.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết cefiderocol ở thận, làm tăng nồng độ cefiderocol.",
+                    "effect": "Tăng nồng độ cefiderocol, tăng nguy cơ tác dụng phụ",
+                    "management": "Không khuyến cáo dùng đồng thời. Nếu bắt buộc, giảm liều cefiderocol và theo dõi sát."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Aminoglycosides (Gentamicin, Amikacin, Tobramycin)",
+                    "mechanism": "Tác dụng hiệp đồng chống lại vi khuẩn Gram-âm.",
+                    "effect": "Tăng hiệu quả kháng khuẩn",
+                    "management": "Có thể dùng kết hợp để tăng hiệu quả. Theo dõi chức năng thận và nồng độ aminoglycoside."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng cefiderocol hoặc cephalosporin",
+                "Dị ứng beta-lactam nặng (phản ứng chéo có thể xảy ra)"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <15) - cần giảm liều đáng kể",
+                "HABP/VABP - FDA warning về tăng nguy cơ tử vong, cần cân nhắc kỹ",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Cefiderocol là thuốc phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Cefiderocol được sử dụng trong nhiễm trùng nặng ở phụ nữ có thai và được coi là an toàn khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Cefiderocol bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Cefiderocol bài tiết vào sữa mẹ ở nồng độ thấp và không gây tác dụng phụ ở trẻ bú mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Cefiderocol chuyển hóa tối thiểu qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Thải trừ chủ yếu qua thận, không tích lũy ở suy gan.",
+            "notes": "Cefiderocol chuyển hóa tối thiểu qua gan, thải trừ chủ yếu qua thận (60-70% bài tiết nguyên dạng). Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Co giật",
+                "Tăng men gan",
+                "Phát ban",
+                "Tiêu chảy"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay cefiderocol nếu đang truyền",
+                "Điều trị co giật: Benzodiazepine (diazepam, lorazepam)",
+                "Hỗ trợ hô hấp nếu cần",
+                "Lọc máu: Hemodialysis có thể loại bỏ cefiderocol nếu suy thận nặng",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, chức năng gan, dấu hiệu co giật trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha bột khô với nước cất vô trùng hoặc NS. Nồng độ thường dùng: 50 mg/ml. Lắc kỹ để hòa tan hoàn toàn.",
+                "infusion_rate": "Truyền IV trong 3 giờ (QUAN TRỌNG: không nhanh hơn). Không truyền nhanh hơn 3 giờ.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Dùng đường truyền riêng hoặc flush kỹ giữa các thuốc."
+                ],
+                "notes": "QUAN TRỌNG: 1) Truyền trong 3 giờ (không nhanh hơn), 2) Điều chỉnh liều theo chức năng thận (CrCl), 3) FDA warning về tăng nguy cơ tử vong trong HABP/VABP, 4) Chỉ dùng cho nhiễm khuẩn Gram-âm kháng thuốc."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cefiderocol (Fetroja)",
+                "IDSA Guidelines - Antimicrobial Therapy",
+                "UpToDate - Cefiderocol: Drug Information",
+                "Medscape - Cefiderocol Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels (2019), IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     }
 }
 

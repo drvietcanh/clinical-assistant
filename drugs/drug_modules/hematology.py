@@ -37,6 +37,17 @@ HEMATOLOGY_DRUGS = {
             "Strong CYP3A4 inhibitors: tăng nồng độ (tránh dùng)"
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": ["bradycardia_dyspnea"]
+        },
+        "guideline_tags": [
+            "ACC/AHA ACS DAPT",
+            "ESC ACS DAPT"
+        ],
         "mechanism_of_action": "Ticagrelor là chất ức chế P2Y12 receptor chọn lọc, đối kháng có thể đảo ngược (reversible) với P2Y12 receptor trên tiểu cầu. P2Y12 receptor là một thụ thể adenosine diphosphate (ADP) quan trọng trong quá trình hoạt hóa và kết tập tiểu cầu. Khác với clopidogrel và prasugrel (irreversible inhibitors), ticagrelor gắn trực tiếp với P2Y12 receptor mà không cần chuyển hóa thành metabolite hoạt động, và có thể đảo ngược (reversible). Ticagrelor ức chế kết tập tiểu cầu do ADP, giảm nguy cơ huyết khối trong hội chứng mạch vành cấp và sau can thiệp mạch vành. Ticagrelor cũng ức chế tái hấp thu adenosine (adenosine reuptake inhibitor), làm tăng nồng độ adenosine ngoại bào, có thể gây khó thở (dyspnea) và bradycardia. Tác dụng khởi phát nhanh hơn clopidogrel và hiệu quả hơn trong một số nghiên cứu.",
         "monitoring": [
             "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu tại vị trí tiêm)",
@@ -213,6 +224,17 @@ HEMATOLOGY_DRUGS = {
             "Warfarin: tăng nguy cơ chảy máu"
         ],
         "pregnancy": "B",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": []
+        },
+        "guideline_tags": [
+            "ACC/AHA ACS DAPT (PCI)",
+            "ESC ACS DAPT (PCI)"
+        ],
         "mechanism_of_action": "Prasugrel là chất ức chế P2Y12 receptor, đối kháng không thể đảo ngược (irreversible) với P2Y12 receptor trên tiểu cầu. P2Y12 receptor là một thụ thể adenosine diphosphate (ADP) quan trọng trong quá trình hoạt hóa và kết tập tiểu cầu. Prasugrel là một prodrug, được chuyển hóa nhanh chóng qua CYP3A4 và CYP2B6 thành metabolite hoạt động. Metabolite hoạt động gắn không thể đảo ngược với P2Y12 receptor, ức chế kết tập tiểu cầu do ADP. Prasugrel mạnh hơn và có tác dụng nhanh hơn clopidogrel, với ít biến thể di truyền (genetic variation) hơn. Prasugrel giảm nguy cơ huyết khối trong hội chứng mạch vành cấp cần can thiệp mạch vành (PCI), nhưng tăng nguy cơ chảy máu lớn so với clopidogrel, đặc biệt ở bệnh nhân có tiền sử TIA/đột quỵ hoặc tuổi ≥75.",
         "monitoring": [
             "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu tại vị trí tiêm)",
@@ -442,6 +464,17 @@ HEMATOLOGY_DRUGS = {
             "Warfarin: tăng nguy cơ chảy máu"
         ],
         "pregnancy": "B",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Medium",
+            "organ_toxicity": ["vasodilation_headache"]
+        },
+        "guideline_tags": [
+            "AHA/ASA stroke secondary prevention",
+            "ESC antiplatelet (secondary prevention)"
+        ],
         "mechanism_of_action": "Dipyridamole ức chế phosphodiesterase và adenosine deaminase, làm tăng nồng độ cAMP và adenosine trong tiểu cầu, ức chế aggregation tiểu cầu. Thuốc cũng ức chế tái hấp thu adenosine, làm giãn mạch vành. Dipyridamole thường dùng kết hợp với aspirin để phòng ngừa đột quỵ/TIA sau stroke hoặc TIA. Thuốc có tác dụng chống đông và giãn mạch, nhưng có thể gây nhức đầu do giãn mạch. Thường dùng dạng modified-release để giảm tác dụng phụ.",
         "monitoring": [
             "Dấu hiệu chảy máu (xuất huyết, chảy máu chân răng, chảy máu cam)",
@@ -506,6 +539,19 @@ HEMATOLOGY_DRUGS = {
             "Thrombolytics: tăng nguy cơ chảy máu"
         ],
         "pregnancy": "B - Tương đối an toàn",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hematologic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ACCP/Antithrombotic Therapy Guidelines",
+            "ESC VTE Guidelines",
+            "AHA/ACC ACS Guidelines",
+            "ISTH HIT Guidelines"
+        ],
         "mechanism_of_action": "Enoxaparin là low molecular weight heparin (LMWH), ức chế yếu tố Xa và yếu tố IIa (thrombin) thông qua antithrombin III. Enoxaparin có tỷ lệ anti-Xa/anti-IIa cao hơn heparin không phân đoạn (UFH), nên ức chế Xa mạnh hơn. Enoxaparin có thời gian bán thải dài hơn, dự đoán được hơn, và ít gây HIT hơn UFH. Thuốc được thải trừ chủ yếu qua thận, nên cần điều chỉnh liều ở suy thận. Enoxaparin không cần theo dõi aPTT thường xuyên như UFH, nhưng có thể theo dõi anti-Xa nếu cần.",
         "monitoring": [
             "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu)",
@@ -635,7 +681,183 @@ HEMATOLOGY_DRUGS = {
                 "UpToDate - Enoxaparin: Drug information",
                 "American College of Chest Physicians (ACCP) guidelines"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
+    },
+    
+    "Fondaparinux": {
+        "group": "Hematology - Anticoagulant (Synthetic Factor Xa Inhibitor)",
+        "vietnamese_name": "Fondaparinux, Arixtra",
+        "administration": ["SC"],
+        "indications": [
+            "Phòng ngừa DVT sau phẫu thuật hông/gối",
+            "Điều trị DVT/PE cấp",
+            "Hội chứng mạch vành cấp (với aspirin)"
+        ],
+        "contraindications": [
+            "Chảy máu đang hoạt động",
+            "Giảm tiểu cầu nặng (<100,000/μL)",
+            "Dị ứng fondaparinux",
+            "Suy thận nặng (CrCl <30) - chống chỉ định"
+        ],
+        "dosage": {
+            "adult_prophylaxis": "2.5mg SC x 1 lần/ngày",
+            "adult_treatment_dvt_pe": "5mg SC x 1 lần/ngày (<50kg: 5mg; 50-100kg: 7.5mg; >100kg: 10mg)",
+            "adult_acs": "2.5mg SC x 1 lần/ngày (với aspirin)",
+            "notes": "Liều cố định cho prophylaxis; điều chỉnh theo cân nặng cho điều trị DVT/PE. Không cần theo dõi anti-Xa thường xuyên."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng; cân nhắc giảm liều",
+            "under_30": "CHỐNG CHỈ ĐỊNH - không dùng",
+            "hemodialysis": "CHỐNG CHỈ ĐỊNH"
+        },
+        "side_effects": [
+            "Chảy máu (phổ biến)",
+            "Phản ứng tại chỗ tiêm (đau, ban đỏ)",
+            "Giảm tiểu cầu (hiếm, ít hơn heparin)",
+            "Tăng men gan (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu",
+            "Aspirin/NSAID: tăng nguy cơ chảy máu",
+            "Thrombolytics: tăng nguy cơ chảy máu"
+        ],
+        "pregnancy": "B - Tương đối an toàn",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hematologic": True, "renal": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ACCP/Antithrombotic Therapy Guidelines",
+            "ESC VTE Guidelines",
+            "AHA/ACC ACS Guidelines"
+        ],
+        "mechanism_of_action": (
+            "Fondaparinux là synthetic pentasaccharide, ức chế chọn lọc yếu tố Xa thông qua antithrombin III. "
+            "Khác với heparin/LMWH, fondaparinux chỉ ức chế Xa (không ức chế IIa/thrombin). "
+            "Thuốc có thời gian bán thải dài (~17 giờ), dự đoán được, và không gây HIT (heparin-induced thrombocytopenia). "
+            "Thải trừ chủ yếu qua thận (100%), nên CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30)."
+        ),
+        "monitoring": [
+            "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu)",
+            "Công thức máu (tiểu cầu) - ít gây HIT hơn heparin",
+            "Chức năng thận (CrCl) - CHỐNG CHỈ ĐỊNH nếu CrCl <30",
+            "Anti-Xa (fondaparinux-specific) nếu cần (hiếm khi cần)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30) - tích lũy và tăng nguy cơ chảy máu",
+            "Không có antidote đặc hiệu (khác với heparin có protamine)",
+            "Thời gian bán thải dài (~17 giờ) - tác dụng kéo dài",
+            "Không cần theo dõi anti-Xa thường xuyên (khác heparin)",
+            "Ngừng 24-36 giờ trước phẫu thuật lớn (do half-life dài)",
+            "Thận trọng ở bệnh nhân có nguy cơ chảy máu cao"
+        ],
+        "pharmacokinetics": {
+            "half_life": "~17 giờ (dài hơn LMWH)",
+            "onset": "2-3 giờ (SC)",
+            "duration": "24 giờ",
+            "protein_binding": ">94% (gắn với antithrombin III)",
+            "clearance": "Thận (100% - thải trừ nguyên dạng). CHỐNG CHỈ ĐỊNH ở suy thận nặng."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu. Không rung lắc.",
+        "black_box_warnings": "Nguy cơ chảy máu nghiêm trọng, có thể gây tử vong. CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30) - tích lũy và tăng nguy cơ chảy máu. Không có antidote đặc hiệu.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Tác dụng hiệp đồng chống đông",
+                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng",
+                    "management": "Theo dõi INR, dấu hiệu chảy máu. Dùng đồng thời trong quá trình khởi đầu warfarin."
+                },
+                {
+                    "drug": "Thrombolytics (alteplase, tenecteplase)",
+                    "mechanism": "Tác dụng hiệp đồng chống đông",
+                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng",
+                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Aspirin, NSAIDs",
+                    "mechanism": "Tác dụng hiệp đồng chống đông",
+                    "effect": "Tăng nguy cơ chảy máu",
+                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Chảy máu đang hoạt động",
+                "Suy thận nặng (CrCl <30 mL/phút) - CHỐNG CHỈ ĐỊNH",
+                "Giảm tiểu cầu nặng (<100,000/μL)",
+                "Dị ứng fondaparinux"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-50) - thận trọng, cân nhắc giảm liều",
+                "Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng",
+                "Phẫu thuật lớn - cần ngừng 24-36 giờ trước phẫu thuật",
+                "Có thai - tương đối an toàn nhưng thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Tương đối an toàn trong thai kỳ. Fondaparinux không qua nhau thai do kích thước phân tử lớn. Có thể dùng trong thai kỳ nếu cần chống đông. Theo dõi chặt chẽ dấu hiệu chảy máu.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Fondaparinux không bài tiết vào sữa mẹ do kích thước phân tử lớn. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Thận trọng (không chuyển hóa qua gan nhưng có thể ảnh hưởng đến đông máu)",
+            "notes": "Fondaparinux không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan. Thận trọng ở suy gan nặng do có thể ảnh hưởng đến đông máu."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Chảy máu: chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu nội sọ",
+                "Chảy máu có thể nghiêm trọng và đe dọa tính mạng"
+            ],
+            "antidote": "KHÔNG CÓ ANTIDOTE ĐẶC HIỆU (khác với heparin có protamine)",
+            "treatment": [
+                "Ngừng fondaparinux ngay lập tức",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi dấu hiệu sống, công thức máu, dấu hiệu chảy máu",
+                "Điều trị chảy máu: truyền máu, tiểu cầu, huyết tương tươi đông lạnh nếu cần",
+                "Cân nhắc recombinant factor VIIa (rFVIIa) trong chảy máu đe dọa tính mạng (off-label)",
+                "Theo dõi ít nhất 48 giờ (do half-life ~17 giờ)"
+            ],
+            "monitoring": "Dấu hiệu sống, công thức máu (tiểu cầu, hemoglobin), dấu hiệu chảy máu, anti-Xa (fondaparinux-specific) nếu có"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "KHÔNG CÓ ANTIDOTE ĐẶC HIỆU. Protamine không đảo ngược fondaparinux. Cân nhắc rFVIIa trong chảy máu đe dọa tính mạng (off-label)."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "sc": {
+                "reconstitution": "Dùng trực tiếp, không cần pha",
+                "injection_site": "Vùng bụng (tránh rốn 5cm), đùi ngoài, hoặc cánh tay",
+                "technique": "Tiêm SC sâu, không xoa bóp sau tiêm",
+                "notes": "Tiêm SC sâu. Không xoa bóp sau tiêm. Xoay vị trí tiêm. Prophylaxis: 2.5mg SC x 1 lần/ngày. Treatment DVT/PE: 5mg SC (<50kg), 7.5mg SC (50-100kg), 10mg SC (>100kg) x 1 lần/ngày."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Arixtra (Fondaparinux)",
+                "ACCP/Antithrombotic Therapy Guidelines",
+                "ESC VTE Guidelines",
+                "UpToDate - Fondaparinux: Drug information"
+            ],
+            "last_updated": "2025-02-18",
             "evidence_level": "High (FDA-approved, extensive clinical data)"
         }
     },
@@ -842,6 +1064,18 @@ HEMATOLOGY_DRUGS = {
             "Aspirin/NSAID: tăng nguy cơ chảy máu"
         ],
         "pregnancy": "C - Tránh dùng",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": []
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS AF stroke prevention",
+            "ISTH VTE treatment/prophylaxis",
+            "ESC AF guidelines"
+        ],
         "mechanism_of_action": "Dabigatran là direct thrombin inhibitor (DTI), ức chế trực tiếp thrombin (yếu tố IIa) mà không cần antithrombin III. Dabigatran gắn trực tiếp với thrombin, ngăn chặn chuyển đổi fibrinogen thành fibrin, ức chế hình thành cục máu đông. Thuốc là DOAC (direct oral anticoagulant), không cần theo dõi INR/aPTT thường xuyên như warfarin. Dabigatran được thải trừ chủ yếu qua thận (80%), nên cần điều chỉnh liều ở suy thận. Có antidote đặc hiệu: idarucizumab (Praxbind).",
         "monitoring": [
             "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu)",
@@ -935,6 +1169,7 @@ HEMATOLOGY_DRUGS = {
                 "Theo dõi dấu hiệu sống, công thức máu, dấu hiệu chảy máu",
                 "Rửa dạ dày nếu uống trong vòng 2 giờ",
                 "Than hoạt tính",
+                "Nếu không có idarucizumab: PCC 4 yếu tố (≈50 IU/kg) ± than hoạt; lọc máu có thể giúp do thải qua thận",
                 "Điều trị chảy máu: truyền máu, tiểu cầu, huyết tương tươi đông lạnh nếu cần",
                 "Theo dõi ít nhất 24 giờ (do half-life 12-17 giờ)"
             ],
@@ -1004,6 +1239,18 @@ HEMATOLOGY_DRUGS = {
             "Aspirin/NSAID: tăng nguy cơ chảy máu"
         ],
         "pregnancy": "C - Tránh dùng",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": []
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS AF stroke prevention",
+            "ISTH VTE treatment/prophylaxis",
+            "ESC AF guidelines"
+        ],
         "mechanism_of_action": "Rivaroxaban là direct factor Xa inhibitor, ức chế trực tiếp yếu tố Xa mà không cần antithrombin III. Rivaroxaban gắn trực tiếp với Xa, ngăn chặn chuyển đổi prothrombin thành thrombin, ức chế hình thành cục máu đông. Thuốc là DOAC (direct oral anticoagulant), không cần theo dõi INR/aPTT thường xuyên như warfarin. Rivaroxaban được thải trừ một phần qua thận (33%) và một phần qua gan (66%), nên cần điều chỉnh liều ở suy thận. Có antidote đặc hiệu: andexanet alfa (Andexxa).",
         "monitoring": [
             "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu)",
@@ -1097,6 +1344,7 @@ HEMATOLOGY_DRUGS = {
                 "Theo dõi dấu hiệu sống, công thức máu, dấu hiệu chảy máu",
                 "Rửa dạ dày nếu uống trong vòng 2 giờ",
                 "Than hoạt tính",
+                "Nếu không có andexanet: PCC 4 yếu tố (≈50 IU/kg) + than hoạt sớm",
                 "Điều trị chảy máu: truyền máu, tiểu cầu, huyết tương tươi đông lạnh nếu cần",
                 "Theo dõi ít nhất 24 giờ (do half-life 5-9 giờ)"
             ],
@@ -1166,6 +1414,17 @@ HEMATOLOGY_DRUGS = {
             "Aspirin/NSAID: tăng nguy cơ chảy máu"
         ],
         "pregnancy": "C - Tránh dùng",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": "High",
+            "icu_critical_care_only": False
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS AF stroke prevention",
+            "ESC AF guidelines",
+            "ISTH VTE treatment/prophylaxis"
+        ],
         "mechanism_of_action": "Apixaban là direct factor Xa inhibitor, ức chế trực tiếp yếu tố Xa mà không cần antithrombin III. Apixaban gắn trực tiếp với Xa, ngăn chặn chuyển đổi prothrombin thành thrombin, ức chế hình thành cục máu đông. Thuốc là DOAC (direct oral anticoagulant), không cần theo dõi INR/aPTT thường xuyên như warfarin. Apixaban được thải trừ một phần qua thận (25%) và một phần qua gan (75%), nên cần điều chỉnh liều ở suy thận nặng. Có antidote đặc hiệu: andexanet alfa (Andexxa).",
         "monitoring": [
             "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu)",
@@ -1259,6 +1518,7 @@ HEMATOLOGY_DRUGS = {
                 "Theo dõi dấu hiệu sống, công thức máu, dấu hiệu chảy máu",
                 "Rửa dạ dày nếu uống trong vòng 2 giờ",
                 "Than hoạt tính",
+                "Nếu không có andexanet: PCC 4 yếu tố (50 IU/kg) + than hoạt sớm",
                 "Điều trị chảy máu: truyền máu, tiểu cầu, huyết tương tươi đông lạnh nếu cần",
                 "Theo dõi ít nhất 24 giờ (do half-life 12 giờ)"
             ],
@@ -1323,6 +1583,17 @@ HEMATOLOGY_DRUGS = {
             "Aspirin/NSAID: tăng nguy cơ chảy máu"
         ],
         "pregnancy": "C - Tránh dùng",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": "High",
+            "icu_critical_care_only": False
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS AF stroke prevention",
+            "ISTH VTE treatment/prophylaxis",
+            "ESC AF guidelines"
+        ],
         "mechanism_of_action": "Edoxaban là direct factor Xa inhibitor, ức chế trực tiếp yếu tố Xa mà không cần antithrombin III. Edoxaban gắn trực tiếp với Xa, ngăn chặn chuyển đổi prothrombin thành thrombin, ức chế hình thành cục máu đông. Thuốc là DOAC (direct oral anticoagulant), không cần theo dõi INR/aPTT thường xuyên như warfarin. Edoxaban được thải trừ chủ yếu qua thận (50%) và một phần qua gan (50%), nên cần điều chỉnh liều ở suy thận. Không có antidote đặc hiệu (khác apixaban, rivaroxaban).",
         "monitoring": [
             "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu)",
@@ -1411,6 +1682,7 @@ HEMATOLOGY_DRUGS = {
             "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
             "treatment": [
                 "Ngừng edoxaban ngay lập tức",
+                "Nếu không có andexanet: PCC 4 yếu tố (≈50 IU/kg) + than hoạt sớm nếu mới uống",
                 "Hỗ trợ hô hấp và tuần hoàn nếu cần",
                 "Theo dõi dấu hiệu sống, công thức máu, dấu hiệu chảy máu",
                 "Rửa dạ dày nếu uống trong vòng 2 giờ",
@@ -1921,6 +2193,18 @@ HEMATOLOGY_DRUGS = {
             "Thuốc kháng tiểu cầu (aspirin, clopidogrel): tăng nguy cơ chảy máu"
         ],
         "pregnancy": "C - Cân nhắc rất thận trọng, chỉ dùng khi lợi ích vượt xa nguy cơ",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": True,
+            "bleeding_risk": "Very High",
+            "organ_toxicity": []
+        },
+        "guideline_tags": [
+            "AHA/ASA AIS tPA (0.9 mg/kg)",
+            "ESC STEMI thrombolysis",
+            "CHEST PE thrombolysis"
+        ],
         "mechanism_of_action": "Alteplase là tissue plasminogen activator (tPA) tái tổ hợp. Gắn vào fibrin trong cục huyết khối và chuyển plasminogen thành plasmin, từ đó phân giải fibrin và làm tan cục máu đông. Tác dụng mạnh nhất trên huyết khối mới hình thành.",
         "monitoring": [
             "Dấu hiệu thần kinh mỗi 15 phút trong và sau truyền (AIS)",
@@ -1935,7 +2219,15 @@ HEMATOLOGY_DRUGS = {
             "Ngừng heparin/kháng đông khác trước truyền theo khuyến cáo.",
             "Nếu nghi ngờ xuất huyết nội sọ: ngừng truyền ngay, chụp CT, xử trí cấp cứu."
         ],
+        "pharmacokinetics": {
+            "half_life": "4-5 phút (nhanh, do bị ức chế bởi PAI-1 và α2-antiplasmin)",
+            "onset": "Ngay lập tức sau khi bắt đầu truyền",
+            "duration": "Tác dụng kéo dài sau khi ngừng truyền do plasmin đã được tạo ra",
+            "protein_binding": "Gắn với fibrin trong cục máu đông",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ một phần). Bị ức chế bởi PAI-1 và α2-antiplasmin trong huyết tương."
+        },
         "storage": "Bảo quản bột đông khô trong tủ lạnh (2–8°C). Sau khi pha, dùng trong thời gian theo khuyến cáo của nhà sản xuất (thường ≤8 giờ), tránh lắc mạnh.",
+        "black_box_warnings": "Nguy cơ xuất huyết nội sọ nghiêm trọng, có thể tử vong. TUYỆT ĐỐI tuân thủ checklist chống chỉ định. Không dùng ở bệnh nhân có xuất huyết nội sọ, đột quỵ xuất huyết, hoặc chống chỉ định khác.",
         "references": {
             "primary_sources": [
                 "AHA/ASA Guidelines for the Early Management of Patients With Acute Ischemic Stroke",
@@ -1943,9 +2235,164 @@ HEMATOLOGY_DRUGS = {
                 "CHEST Guidelines for VTE",
                 "FDA Drug Label - Alteplase"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A"
         }
+    },
+    
+    "Tenecteplase": {
+        "group": "Hematology - Fibrin-specific thrombolytic (tPA variant)",
+        "vietnamese_name": "Tenecteplase, TNK-tPA",
+        "administration": ["IV"],
+        "indications": [
+            "Đột quỵ thiếu máu não cấp (AIS) trong cửa sổ 4.5 giờ – thay thế alteplase ở một số trung tâm",
+            "Nhồi máu cơ tim cấp (STEMI) khi không thể PCI kịp thời",
+            "Thuyên tắc phổi nguy kịch/huyết động không ổn định (off-label tại nhiều nơi)"
+        ],
+        "contraindications": [
+            "Tiền sử hoặc bằng chứng xuất huyết nội sọ",
+            "Đột quỵ xuất huyết hoặc nhồi máu não gần đây (thường <3 tháng, tùy chỉ định)",
+            "Phẫu thuật lớn hoặc chấn thương nặng gần đây",
+            "Huyết áp rất cao không kiểm soát",
+            "Rối loạn đông máu nặng, giảm tiểu cầu rõ",
+        ],
+        "dosage": {
+            "stroke_adult": "0.25 mg/kg IV bolus (tối đa 25mg) một lần duy nhất trong AIS; không khuyến cáo liều 0.4 mg/kg do nguy cơ xuất huyết cao hơn",
+            "stemi_adult": "Bolus IV duy nhất: <60kg: 30mg; 60-69kg: 35mg; 70-79kg: 40mg; 80-89kg: 45mg; ≥90kg: 50mg",
+            "pe_adult": "0.5 mg/kg IV bolus (tối đa 50mg) – off-label, tùy protocol bệnh viện",
+            "notes": "Đảm bảo đáp ứng checklist chống chỉ định trước dùng. Không pha chung với heparin/kháng đông khác trong cùng đường truyền.",
+        },
+        "side_effects": [
+            "Xuất huyết nội sọ (nguy cơ thấp nhưng nghiêm trọng)",
+            "Chảy máu tiêu hóa, chảy máu chỗ chọc kim",
+            "Hạ huyết áp thoáng qua",
+            "Phản vệ (rất hiếm)",
+        ],
+        "interactions": [
+            "Heparin, enoxaparin, DOACs, warfarin: tăng nguy cơ chảy máu",
+            "Thuốc kháng tiểu cầu (aspirin, clopidogrel): tăng nguy cơ chảy máu",
+        ],
+        "pregnancy": "C - Cân nhắc thận trọng, chỉ dùng khi lợi ích vượt trội nguy cơ",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": True,
+            "bleeding_risk": "Very High",
+            "organ_toxicity": []
+        },
+        "guideline_tags": [
+            "AHA/ASA AIS thrombolysis (0.25 mg/kg bolus centers)",
+            "ESC STEMI thrombolysis",
+            "CHEST/PE off-label (institutional protocols)"
+        ],
+        "mechanism_of_action": (
+            "Tenecteplase là biến thể tái tổ hợp của tPA với ái lực fibrin cao hơn và kháng PAI-1, "
+            "chuyển plasminogen thành plasmin tại cục huyết khối, phân giải fibrin và làm tan huyết khối."
+        ),
+        "monitoring": [
+            "Dấu hiệu thần kinh và NIHSS (AIS) mỗi 15 phút trong và sau bolus, sau đó thưa dần",
+            "Huyết áp, mạch, SpO2 liên tục trong 24 giờ đầu",
+            "Dấu hiệu chảy máu (da, niêm mạc, tiêu hóa, tiểu máu)",
+            "aPTT/INR/tiểu cầu nếu dùng hoặc dự định dùng kháng đông khác",
+        ],
+        "precautions": [
+            "Tuân thủ checklist chống chỉ định tương tự alteplase cho AIS/STEMI.",
+            "Tránh chọc kim/đặt catheter không cần thiết trong 24 giờ sau dùng.",
+            "Kiểm soát huyết áp trước và sau tiêm (AIS: mục tiêu <185/110 mmHg trước dùng).",
+            "Nếu nghi ngờ xuất huyết nội sọ: dừng ngay, chụp CT, xử trí cấp cứu.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Pha alpha ~20 phút; pha beta ~90-130 phút (dài hơn alteplase)",
+            "onset": "Ngay sau bolus",
+            "duration": "Hiệu ứng tiêu sợi huyết kéo dài vài giờ",
+            "protein_binding": "Gắn fibrin tại huyết khối",
+            "clearance": "Gan (chuyển hóa), thận thải trừ một phần",
+        },
+        "storage": "Bảo quản bột đông khô ở 2–8°C. Sau pha theo hướng dẫn chế phẩm, dùng trong thời gian khuyến cáo; tránh lắc mạnh.",
+        "black_box_warnings": "Nguy cơ xuất huyết nội sọ và chảy máu lớn. Chỉ dùng khi đáp ứng tiêu chuẩn lựa chọn và không có chống chỉ định.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Heparin/Enoxaparin/DOACs/Warfarin",
+                    "mechanism": "Tăng hiệu ứng chống đông trên nền tiêu sợi huyết",
+                    "effect": "Tăng mạnh nguy cơ chảy máu",
+                    "management": "Tránh chồng lấp không cần thiết. Nếu phải dùng, theo dõi sát chảy máu và xét nghiệm đông máu.",
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Aspirin, Clopidogrel, Ticagrelor",
+                    "mechanism": "Cộng hưởng ức chế kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu",
+                    "management": "Thận trọng; giám sát chảy máu. Thường vẫn dùng sau tái tưới máu theo guideline nhưng cần kiểm soát nguy cơ.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Xuất huyết nội sọ hoặc xuất huyết hoạt động",
+                "Đột quỵ xuất huyết/nhồi máu não trong 3 tháng (trừ AIS hiện tại)",
+                "Phẫu thuật lớn hoặc chấn thương nặng trong 3 tuần gần đây",
+                "U não, dị dạng mạch não, phình mạch chưa xử trí",
+                "Tiểu cầu <100.000/mm³, INR >1.7 (không do dùng thuốc), aPTT kéo dài không rõ nguyên nhân",
+            ],
+            "tương_đối": [
+                "HA >185/110 mmHg (AIS) hoặc >180/110 (STEMI) chưa kiểm soát",
+                "Đái tháo đường kèm đột quỵ cũ (tùy guideline AIS)",
+                "Mang thai hoặc hậu sản <10 ngày",
+                "Viêm nội tâm mạc nhiễm khuẩn nghi ngờ",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu rất hạn chế; cân nhắc nếu lợi ích cứu mạng vượt nguy cơ chảy máu cho mẹ/thai.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Không rõ bài tiết sữa; phân tử lớn, hấp thu đường tiêu hóa kém ở trẻ.",
+                "recommendation": "Có thể tiếp tục cho bú sau 24 giờ nếu mẹ ổn định; theo dõi chảy máu ở trẻ.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh",
+            "moderate": "Không cần chỉnh nhưng thận trọng",
+            "severe": "Tránh nếu có rối loạn đông máu nặng do suy gan",
+        },
+        "overdose_management": {
+            "symptoms": ["Chảy máu lớn, xuất huyết nội sọ, tụt huyết áp"],
+            "antidote": "Không có antidote đặc hiệu; có thể dùng các sản phẩm máu/thuốc chống tiêu sợi huyết",
+            "treatment": [
+                "Ngừng thuốc, ép chặt vị trí chảy máu nếu có",
+                "Truyền cryoprecipitate hoặc fibrinogen concentrate nếu giảm fibrinogen",
+                "Truyền tiểu cầu nếu giảm tiểu cầu hoặc dùng kháng tiểu cầu gần đây",
+                "Cân nhắc tranexamic acid hoặc aminocaproic acid trong xuất huyết nặng",
+                "Hồi sức tích cực, kiểm soát huyết áp, chụp CT nếu nghi xuất huyết nội sọ",
+            ],
+            "monitoring": "Huyết động, Hb/Hct, tiểu cầu, fibrinogen, aPTT/INR, đánh giá thần kinh lặp lại",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": ["Tranexamic acid (supportive)", "Cryoprecipitate/fibrinogen concentrate"],
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha bột theo hướng dẫn chế phẩm; thường pha với nước pha tiêm rồi pha loãng nếu cần",
+                "infusion_rate": "Tiêm IV bolus chậm trong 5–10 giây (AIS/STEMI)",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": ["Không truyền chung heparin/kháng đông cùng đường IV"],
+                "notes": "Chuẩn bị sẵn bộ hồi sức và phương án xử trí xuất huyết.",
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "AHA/ASA 2023–2024 updates on Tenecteplase for AIS (0.25 mg/kg bolus)",
+                "ESC STEMI Guidelines (tenecteplase bolus)",
+                "CHEST/Institutional protocols for PE thrombolysis (off-label)",
+                "FDA Drug Label - Tenecteplase (STEMI)",
+            ],
+            "last_updated": "2025-03-02",
+            "evidence_level": "A (STEMI), B (AIS – trung tâm chọn lọc)",
+        },
     },
     
     "Epoetin alfa": {
@@ -1991,7 +2438,15 @@ HEMATOLOGY_DRUGS = {
             "Đảm bảo dự trữ sắt, folate, B12 đủ trước và trong khi điều trị.",
             "Thận trọng ở bệnh nhân có tiền sử huyết khối, bệnh mạch vành, suy tim."
         ],
+        "pharmacokinetics": {
+            "half_life": "IV: 4-13 giờ; SC: 24-48 giờ (dài hơn do hấp thu chậm)",
+            "onset": "Tăng reticulocyte sau 7-10 ngày, tăng Hb sau 2-4 tuần",
+            "duration": "Tác dụng kéo dài sau khi ngừng thuốc",
+            "protein_binding": "Không gắn protein đáng kể",
+            "clearance": "Thận (chủ yếu), gan (một phần). Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình."
+        },
         "storage": "Bảo quản trong tủ lạnh 2–8°C, không đông lạnh, không lắc mạnh. Tránh ánh sáng trực tiếp.",
+        "black_box_warnings": "Nguy cơ tăng huyết áp, huyết khối, đột quỵ, nhồi máu cơ tim, và tử vong nếu Hb tăng quá cao (>12 g/dL) hoặc tăng quá nhanh. Không đẩy Hb >12 g/dL. Điều chỉnh hoặc ngừng thuốc nếu Hb tăng >1 g/dL trong 2 tuần.",
         "references": {
             "primary_sources": [
                 "KDIGO Anemia in CKD Guidelines",
@@ -2045,7 +2500,15 @@ HEMATOLOGY_DRUGS = {
             "Ngừng thuốc nếu nghi ngờ vỡ lách (đau bụng trái trên, tụt HA).",
             "Theo dõi triệu chứng hô hấp, ngừng nếu nghi ngờ ARDS."
         ],
+        "pharmacokinetics": {
+            "half_life": "3.5 giờ (IV), 3-4 giờ (SC)",
+            "onset": "Tăng ANC sau 1-2 ngày, đạt đỉnh sau 5-7 ngày",
+            "duration": "Tác dụng kéo dài trong thời gian điều trị",
+            "protein_binding": "Không gắn protein đáng kể",
+            "clearance": "Thận (chủ yếu), gan (một phần). Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình."
+        },
         "storage": "Bảo quản trong tủ lạnh 2–8°C, không đông lạnh, không lắc mạnh. Có thể để ở nhiệt độ phòng trong thời gian ngắn tùy chế phẩm.",
+        "black_box_warnings": None,
         "references": {
             "primary_sources": [
                 "ASCO Guidelines for G-CSF use",
@@ -2550,6 +3013,286 @@ HEMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in ITP"
+        }
+    },
+
+    "Idarucizumab": {
+        "group": "Hematology - DOAC Reversal Agent (Dabigatran)",
+        "vietnamese_name": "Idarucizumab, Praxbind",
+        "administration": ["IV"],
+        "indications": [
+            "Đảo ngược tác dụng chống đông của dabigatran trong trường hợp chảy máu đe dọa tính mạng",
+            "Đảo ngược tác dụng dabigatran trước phẫu thuật khẩn cấp hoặc thủ thuật xâm lấn",
+            "Quá liều dabigatran có triệu chứng"
+        ],
+        "contraindications": [
+            "Dị ứng với idarucizumab hoặc các thành phần",
+            "Không có chỉ định đảo ngược dabigatran"
+        ],
+        "dosage": {
+            "adult_standard": "5g IV (2 lọ 2.5g), tiêm nhanh liên tiếp hoặc truyền trong 5-10 phút",
+            "notes": "Liều cố định, không cần điều chỉnh theo tuổi, cân nặng, hoặc chức năng thận/gan. Tác dụng ngay lập tức."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Không cần chỉnh liều",
+            "hemodialysis": "Không cần chỉnh liều"
+        },
+        "side_effects": [
+            "Phản ứng dị ứng/phản vệ (hiếm)",
+            "Huyết khối tái phát (sau khi đảo ngược)",
+            "Hạ kali máu nhẹ (hiếm)"
+        ],
+        "interactions": [
+            "Không có tương tác thuốc đáng kể",
+            "Sau khi đảo ngược: có thể dùng lại dabigatran sau 24 giờ nếu cần"
+        ],
+        "pregnancy": "C - Dữ liệu hạn chế; chỉ dùng khi lợi ích vượt nguy cơ",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ISTH 2020 DOAC Reversal Guidelines",
+            "ACC/AHA/HRS AF Guidelines",
+            "FDA Drug Label - Praxbind"
+        ],
+        "mechanism_of_action": (
+            "Idarucizumab là kháng thể đơn dòng humanized (Fab fragment) gắn đặc hiệu và với ái lực cao "
+            "với dabigatran và các chất chuyển hóa của nó. Gắn với dabigatran tạo phức hợp không hoạt tính, "
+            "đảo ngược tác dụng chống đông ngay lập tức. Tác dụng đảo ngược hoàn toàn và có thể đo được "
+            "bằng aPTT và dTT (dilute thrombin time)."
+        ),
+        "monitoring": [
+            "aPTT, dTT (dilute thrombin time) trước và sau khi dùng để xác nhận đảo ngược",
+            "Dấu hiệu chảy máu (nếu dùng cho chảy máu)",
+            "Dấu hiệu huyết khối tái phát sau đảo ngược (đặc biệt nếu đã ngừng dabigatran)",
+            "Huyết áp, mạch trong quá trình tiêm"
+        ],
+        "precautions": [
+            "Chỉ dùng khi thật sự cần đảo ngược dabigatran (chảy máu đe dọa tính mạng hoặc phẫu thuật khẩn cấp)",
+            "Sau đảo ngược: nguy cơ huyết khối tái phát nếu bệnh nhân vẫn cần chống đông",
+            "Có thể dùng lại dabigatran sau 24 giờ nếu cần",
+            "Chuẩn bị sẵn phương tiện hồi sức cho phản ứng dị ứng (hiếm)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "~10 giờ (Fab fragment)",
+            "onset": "Ngay lập tức sau khi tiêm",
+            "duration": "Đảo ngược hoàn toàn trong vài phút, kéo dài vài giờ",
+            "protein_binding": "Gắn với dabigatran",
+            "clearance": "Thải trừ qua thận (không chuyển hóa)"
+        },
+        "storage": "Bảo quản lạnh 2-8°C, tránh đông lạnh. Sau khi pha, dùng trong 1 giờ ở nhiệt độ phòng hoặc 24 giờ ở 2-8°C.",
+        "black_box_warnings": (
+            "Sau khi đảo ngược dabigatran, nguy cơ huyết khối tái phát tăng lên. "
+            "Cân nhắc dùng lại chống đông sau khi đảo ngược nếu bệnh nhân vẫn có chỉ định chống đông."
+        ),
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với idarucizumab hoặc các thành phần"
+            ],
+            "tương_đối": [
+                "Không có chỉ định đảo ngược dabigatran rõ ràng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu hạn chế; chỉ dùng khi lợi ích vượt nguy cơ (chảy máu đe dọa tính mạng hoặc phẫu thuật khẩn cấp).",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Không rõ bài tiết sữa; phân tử lớn, hấp thu đường tiêu hóa kém ở trẻ.",
+                "recommendation": "Có thể tiếp tục cho bú; theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Idarucizumab không chuyển hóa qua gan; không cần điều chỉnh liều."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Phản ứng dị ứng/phản vệ (hiếm)",
+                "Huyết khối tái phát (nếu đã đảo ngược quá mức)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Xử trí phản ứng dị ứng: epinephrine, diphenhydramine, hydrocortisone nếu cần",
+                "Nếu huyết khối tái phát: cân nhắc dùng lại chống đông (dabigatran hoặc thuốc khác) sau 24 giờ"
+            ],
+            "monitoring": "Huyết động, dấu hiệu dị ứng, dấu hiệu huyết khối trong 24-48 giờ"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha mỗi lọ 2.5g với 50ml NS hoặc D5W (tổng 100ml cho 2 lọ)",
+                "infusion_rate": "Tiêm nhanh liên tiếp hoặc truyền trong 5-10 phút",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Liều cố định 5g (2 lọ 2.5g). Không cần điều chỉnh liều. Tác dụng ngay lập tức."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "ISTH 2020 Guidelines for DOAC Reversal",
+                "ACC/AHA/HRS AF Guidelines",
+                "FDA Drug Label - Praxbind (Idarucizumab)",
+                "RE-VERSE AD Study"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, guideline-supported"
+        }
+    },
+
+    "Andexanet alfa": {
+        "group": "Hematology - DOAC Reversal Agent (Factor Xa Inhibitors)",
+        "vietnamese_name": "Andexanet alfa, Andexxa",
+        "administration": ["IV"],
+        "indications": [
+            "Đảo ngược tác dụng chống đông của apixaban hoặc rivaroxaban trong trường hợp chảy máu đe dọa tính mạng",
+            "Đảo ngược tác dụng apixaban/rivaroxaban trước phẫu thuật khẩn cấp hoặc thủ thuật xâm lấn",
+            "Quá liều apixaban/rivaroxaban có triệu chứng"
+        ],
+        "contraindications": [
+            "Dị ứng với andexanet alfa hoặc các thành phần",
+            "Không có chỉ định đảo ngược factor Xa inhibitor"
+        ],
+        "dosage": {
+            "adult_low_dose": "400mg IV bolus, sau đó truyền 4mg/phút x 2 giờ (cho apixaban ≤5mg hoặc rivaroxaban ≤10mg, hoặc không biết liều)",
+            "adult_high_dose": "800mg IV bolus, sau đó truyền 8mg/phút x 2 giờ (cho apixaban >5mg hoặc rivaroxaban >10mg)",
+            "notes": "Liều dựa trên liều DOAC cuối cùng và thời gian từ liều cuối. Tác dụng đảo ngược trong vài phút."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Không cần chỉnh liều",
+            "hemodialysis": "Không cần chỉnh liều"
+        },
+        "side_effects": [
+            "Phản ứng dị ứng/phản vệ (hiếm)",
+            "Huyết khối tái phát (sau khi đảo ngược) - nguy cơ cao hơn idarucizumab",
+            "Tăng men gan (hiếm)"
+        ],
+        "interactions": [
+            "Không có tương tác thuốc đáng kể",
+            "Sau khi đảo ngược: có thể dùng lại DOAC sau 24 giờ nếu cần"
+        ],
+        "pregnancy": "C - Dữ liệu hạn chế; chỉ dùng khi lợi ích vượt nguy cơ",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ISTH 2020 DOAC Reversal Guidelines",
+            "ACC/AHA/HRS AF Guidelines",
+            "FDA Drug Label - Andexxa"
+        ],
+        "mechanism_of_action": (
+            "Andexanet alfa là protein tái tổ hợp (modified factor Xa) gắn với các direct factor Xa inhibitors "
+            "(apixaban, rivaroxaban, edoxaban, betrixaban) với ái lực cao, tạo phức hợp không hoạt tính. "
+            "Andexanet alfa không có hoạt tính procoagulant do thiếu vị trí hoạt hóa. Đảo ngược tác dụng "
+            "chống đông trong vài phút, có thể đo được bằng anti-factor Xa activity."
+        ),
+        "monitoring": [
+            "Anti-factor Xa activity (apixaban/rivaroxaban-specific) trước và sau khi dùng",
+            "Dấu hiệu chảy máu (nếu dùng cho chảy máu)",
+            "Dấu hiệu huyết khối tái phát sau đảo ngược (nguy cơ cao hơn idarucizumab)",
+            "Men gan (ALT/AST) nếu dùng kéo dài hoặc có bệnh gan nền",
+            "Huyết áp, mạch trong quá trình truyền"
+        ],
+        "precautions": [
+            "Chỉ dùng khi thật sự cần đảo ngược factor Xa inhibitor (chảy máu đe dọa tính mạng hoặc phẫu thuật khẩn cấp)",
+            "Sau đảo ngược: nguy cơ huyết khối tái phát cao hơn idarucizumab - cân nhắc dùng lại chống đông sau 24 giờ",
+            "Có thể dùng lại DOAC sau 24 giờ nếu cần",
+            "Chuẩn bị sẵn phương tiện hồi sức cho phản ứng dị ứng",
+            "Theo dõi men gan nếu có bệnh gan nền"
+        ],
+        "pharmacokinetics": {
+            "half_life": "~1 giờ (ngắn)",
+            "onset": "Vài phút sau khi bắt đầu bolus",
+            "duration": "Đảo ngược trong vài phút, kéo dài trong thời gian truyền (2 giờ)",
+            "protein_binding": "Gắn với factor Xa inhibitors",
+            "clearance": "Chuyển hóa qua gan và thải trừ qua thận"
+        },
+        "storage": "Bảo quản lạnh 2-8°C, tránh đông lạnh. Sau khi pha, dùng trong 8 giờ ở nhiệt độ phòng hoặc 24 giờ ở 2-8°C.",
+        "black_box_warnings": (
+            "Sau khi đảo ngược factor Xa inhibitor, nguy cơ huyết khối tái phát tăng lên đáng kể. "
+            "Cân nhắc dùng lại chống đông sau khi đảo ngược nếu bệnh nhân vẫn có chỉ định chống đông. "
+            "Theo dõi sát dấu hiệu huyết khối trong 24-48 giờ sau đảo ngược."
+        ),
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với andexanet alfa hoặc các thành phần"
+            ],
+            "tương_đối": [
+                "Không có chỉ định đảo ngược factor Xa inhibitor rõ ràng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu hạn chế; chỉ dùng khi lợi ích vượt nguy cơ (chảy máu đe dọa tính mạng hoặc phẫu thuật khẩn cấp).",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Không rõ bài tiết sữa; phân tử lớn, hấp thu đường tiêu hóa kém ở trẻ.",
+                "recommendation": "Có thể tiếp tục cho bú; theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều; theo dõi men gan",
+            "severe": "Thận trọng; theo dõi men gan",
+            "notes": "Andexanet alfa chuyển hóa qua gan; suy gan có thể ảnh hưởng đến thanh thải nhưng không cần điều chỉnh liều."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Phản ứng dị ứng/phản vệ (hiếm)",
+                "Huyết khối tái phát (nếu đã đảo ngược quá mức)",
+                "Tăng men gan (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Xử trí phản ứng dị ứng: epinephrine, diphenhydramine, hydrocortisone nếu cần",
+                "Nếu huyết khối tái phát: cân nhắc dùng lại chống đông (DOAC hoặc thuốc khác) sau 24 giờ",
+                "Theo dõi men gan nếu có tăng men gan"
+            ],
+            "monitoring": "Huyết động, dấu hiệu dị ứng, dấu hiệu huyết khối, men gan trong 24-48 giờ"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha bột theo hướng dẫn chế phẩm với NS hoặc D5W",
+                "infusion_rate": "Bolus: 400mg hoặc 800mg trong 15-30 phút, sau đó truyền liên tục 4mg/phút (low-dose) hoặc 8mg/phút (high-dose) x 2 giờ",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Liều dựa trên liều DOAC cuối cùng. Low-dose: 400mg bolus + 4mg/phút x 2h. High-dose: 800mg bolus + 8mg/phút x 2h."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "ISTH 2020 Guidelines for DOAC Reversal",
+                "ACC/AHA/HRS AF Guidelines",
+                "FDA Drug Label - Andexxa (Andexanet alfa)",
+                "ANNEXA-4 Study"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, guideline-supported"
         }
     }
 }

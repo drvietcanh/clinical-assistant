@@ -1155,6 +1155,387 @@ STATINS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - Multiple large RCTs (JUPITER, HOPE-3) showing cardiovascular benefit"
         }
+    },
+
+    "Fluvastatin": {
+        "group": "Cardiovascular - Statin (HMG-CoA Reductase Inhibitor)",
+        "vietnamese_name": "Fluvastatin, Lescol",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng cholesterol máu",
+            "Dự phòng biến cố tim mạch",
+            "Sau nhồi máu cơ tim",
+            "Bệnh động mạch vành"
+        ],
+        "contraindications": [
+            "Bệnh gan hoạt động",
+            "Có thai",
+            "Cho con bú",
+            "Tiêu cơ vân đang hoạt động"
+        ],
+        "dosage": {
+            "adult_standard": "20-40mg x 1 lần/ngày (buổi tối)",
+            "adult_extended_release": "80mg x 1 lần/ngày (buổi tối)",
+            "adult_max": "80mg/ngày",
+            "notes": "Uống buổi tối (cholesterol tổng hợp nhiều vào ban đêm). Ít tương tác với CYP3A4 (an toàn hơn với các thuốc ức chế CYP3A4)."
+        },
+        "side_effects": [
+            "Đau cơ",
+            "Tiêu cơ vân (hiếm nhưng nguy hiểm)",
+            "Tăng men gan",
+            "Tăng đường huyết (nhẹ)",
+            "Suy giảm trí nhớ (hiếm)"
+        ],
+        "interactions": [
+            "Ít tương tác với CYP3A4 inhibitors (an toàn hơn với clarithromycin, azole antifungals)",
+            "Cyclosporine: vẫn tăng nguy cơ tiêu cơ vân (nhưng ít hơn statin khác)",
+            "Gemfibrozil: tăng nguy cơ tiêu cơ vân - tránh dùng chung",
+            "Cholestyramine: giảm hấp thu fluvastatin - dùng cách xa ít nhất 4 giờ"
+        ],
+        "pregnancy": "X",
+        "mechanism_of_action": "Ức chế HMG-CoA reductase, enzyme chính trong tổng hợp cholesterol, dẫn đến giảm LDL-cholesterol và tăng HDL-cholesterol. Fluvastatin không chuyển hóa qua CYP3A4 (khác với atorvastatin, simvastatin) → ít tương tác thuốc hơn, an toàn hơn khi dùng với các thuốc ức chế CYP3A4 (clarithromycin, azole antifungals, amiodarone). Fluvastatin chuyển hóa qua CYP2C9. Ưu điểm: ít tương tác với CYP3A4 inhibitors.",
+        "monitoring": [
+            "Lipid profile (LDL, HDL, TG) sau 6-8 tuần, sau đó mỗi 3-6 tháng",
+            "AST/ALT trước điều trị, sau 12 tuần, sau đó mỗi 6-12 tháng",
+            "CK nếu có đau cơ, yếu cơ",
+            "HbA1c/đường huyết (statin có thể tăng đường huyết)"
+        ],
+        "precautions": [
+            "Uống buổi tối để tối ưu hiệu quả (cholesterol tổng hợp nhiều vào ban đêm)",
+            "Kiểm tra CK nếu đau cơ hoặc yếu cơ (ngừng nếu CK >10 lần ULN)",
+            "Ngừng nếu ALT >3 lần ULN",
+            "Ưu điểm: ít tương tác với CYP3A4 inhibitors (an toàn hơn với clarithromycin, azole antifungals, amiodarone)",
+            "Thận trọng với bệnh nhân đái tháo đường (có thể tăng đường huyết)",
+            "Dùng cách xa cholestyramine ít nhất 4 giờ (giảm hấp thu fluvastatin)",
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ và cho con bú (category X)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (immediate release), 9 giờ (extended release)",
+            "onset": "1-2 tuần",
+            "duration": "24 giờ",
+            "protein_binding": "98%",
+            "metabolism": "Gan (CYP2C9, không phải CYP3A4) - ít tương tác",
+            "clearance": "Chủ yếu qua gan (metabolism), một phần qua thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Tiêu cơ vân - có thể gây suy thận cấp và tử vong. Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Gemfibrozil",
+                    "mechanism": "Tăng nồng độ fluvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu cần: dùng liều fluvastatin thấp nhất, theo dõi CK chặt chẽ."
+                },
+                {
+                    "drug": "Cyclosporine",
+                    "mechanism": "Tăng nồng độ fluvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "Giảm liều fluvastatin xuống tối đa 20mg/ngày. Theo dõi CK chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Cholestyramine, Colestipol",
+                    "mechanism": "Cholestyramine giảm hấp thu fluvastatin",
+                    "effect": "Giảm nồng độ fluvastatin, giảm hiệu quả",
+                    "management": "Dùng cách xa ít nhất 4 giờ. Dùng fluvastatin trước hoặc sau cholestyramine ít nhất 4 giờ."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Fluvastatin có thể tăng nhẹ tác dụng warfarin",
+                    "effect": "Tăng INR nhẹ",
+                    "management": "Thận trọng. Theo dõi INR."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "CYP3A4 inhibitors (Clarithromycin, Azole antifungals, Amiodarone)",
+                    "mechanism": "Fluvastatin không chuyển hóa qua CYP3A4",
+                    "effect": "Ít tương tác (ưu điểm so với atorvastatin, simvastatin)",
+                    "management": "An toàn hơn khi dùng với CYP3A4 inhibitors. Không cần giảm liều."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Bệnh gan hoạt động",
+                "Có thai",
+                "Cho con bú",
+                "Tiêu cơ vân đang hoạt động"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - thận trọng",
+                "Dùng với cyclosporine - giảm liều",
+                "Dùng với gemfibrozil - tránh dùng chung"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": "Chống chỉ định tuyệt đối trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi.",
+            "lactation": {
+                "safety": "Contraindicated",
+                "details": "Chống chỉ định khi cho con bú. Fluvastatin bài tiết vào sữa mẹ và có thể gây hại cho trẻ sơ sinh.",
+                "recommendation": "Không dùng khi cho con bú. Chọn phương pháp điều trị khác hoặc ngừng cho con bú nếu cần dùng fluvastatin."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Nhưng theo dõi chức năng gan.",
+            "moderate": "Thận trọng. Có thể cần giảm liều. Theo dõi chức năng gan chặt chẽ.",
+            "severe": "Chống chỉ định nếu bệnh gan hoạt động.",
+            "notes": "Fluvastatin chuyển hóa qua gan (CYP2C9). Bệnh gan hoạt động là chống chỉ định."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Đau cơ nặng",
+                "Yếu cơ",
+                "Nước tiểu sẫm màu (myoglobinuria)",
+                "Suy thận cấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay fluvastatin",
+                "Bù dịch đầy đủ",
+                "Lọc máu nếu suy thận cấp",
+                "Theo dõi CK, creatinine"
+            ],
+            "monitoring": "Theo dõi CK, creatinine, chức năng thận, điện giải"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1 lần/ngày vào BUỔI TỐI (cholesterol được tổng hợp nhiều vào ban đêm). Dùng cách xa cholestyramine ít nhất 4 giờ."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Fluvastatin chỉ có dạng uống (PO)."
+            }
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <10 tuổi",
+            "infants": "Không khuyến cáo cho trẻ <10 tuổi",
+            "children": "10-17 tuổi: 20mg x 1 lần/ngày vào buổi tối, tăng dần đến 40mg/ngày nếu cần. Chỉ dùng cho tăng cholesterol máu gia đình.",
+            "adolescents": "20-40mg x 1 lần/ngày vào buổi tối. Liều người lớn.",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng cholesterol máu gia đình ở trẻ ≥10 tuổi."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ. Suy gan, suy thận phổ biến hơn.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (20mg x 1 lần/ngày). Tăng dần chậm hơn.",
+            "monitoring": "Theo dõi men gan, CK thường xuyên hơn. Cảnh báo về triệu chứng đau cơ, yếu cơ."
+        },
+        "brand_names": {
+            "vietnam": ["Lescol", "Fluvastatin", "Fluvastatin Stada"],
+            "common": ["Lescol", "Fluvastatin"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "10,000 - 35,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Fluvastatin generic thường rẻ hơn (10,000-25,000 VND/viên 40mg)."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lescol (fluvastatin)",
+                "UpToDate - Fluvastatin: Drug information",
+                "ACC/AHA Guidelines - Cholesterol Management (2018)",
+                "LIPS Study - The Lancet (2002) - Fluvastatin sau PCI",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics - Lipid-lowering drugs"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, multiple RCTs (LIPS) showing cardiovascular benefit"
+        }
+    },
+
+    "Pitavastatin": {
+        "group": "Cardiovascular - Statin (HMG-CoA Reductase Inhibitor)",
+        "vietnamese_name": "Pitavastatin, Livalo, Zypitamag",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng cholesterol máu",
+            "Dự phòng biến cố tim mạch",
+            "Tăng cholesterol máu gia đình"
+        ],
+        "contraindications": [
+            "Bệnh gan hoạt động",
+            "Có thai",
+            "Cho con bú",
+            "Tiêu cơ vân đang hoạt động"
+        ],
+        "dosage": {
+            "adult_standard": "1-2mg x 1 lần/ngày",
+            "adult_high_intensity": "2-4mg x 1 lần/ngày",
+            "adult_max": "4mg/ngày",
+            "notes": "Uống bất kỳ lúc nào trong ngày, có thể uống với thức ăn. Không chuyển hóa qua CYP3A4 → ít tương tác. Statin thế hệ mới, mạnh hơn fluvastatin."
+        },
+        "side_effects": [
+            "Đau cơ",
+            "Tiêu cơ vân (hiếm nhưng nguy hiểm)",
+            "Tăng men gan",
+            "Tăng đường huyết (nhẹ)",
+            "Suy giảm trí nhớ (hiếm)"
+        ],
+        "interactions": [
+            "Ít tương tác với CYP3A4 inhibitors (an toàn hơn với clarithromycin, azole antifungals)",
+            "Cyclosporine: tăng nguy cơ tiêu cơ vân - giảm liều pitavastatin xuống tối đa 1mg/ngày",
+            "Gemfibrozil: tăng nguy cơ tiêu cơ vân - tránh dùng chung",
+            "Erythromycin, Rifampin: tăng nồng độ pitavastatin"
+        ],
+        "pregnancy": "X",
+        "mechanism_of_action": "Ức chế HMG-CoA reductase, enzyme chính trong tổng hợp cholesterol, dẫn đến giảm LDL-cholesterol và tăng HDL-cholesterol. Pitavastatin là statin thế hệ mới, không chuyển hóa qua CYP3A4 (khác với atorvastatin, simvastatin) → ít tương tác thuốc hơn, an toàn hơn khi dùng với các thuốc ức chế CYP3A4. Pitavastatin chuyển hóa qua CYP2C9 và glucuronidation. Ưu điểm: (1) Ít tương tác với CYP3A4 inhibitors, (2) Mạnh hơn fluvastatin (1-2mg pitavastatin ≈ 20-40mg fluvastatin), (3) Statin thế hệ mới.",
+        "monitoring": [
+            "Lipid profile (LDL, HDL, TG) sau 4-8 tuần, sau đó mỗi 3-6 tháng",
+            "AST/ALT trước điều trị, sau 12 tuần, sau đó mỗi 6-12 tháng",
+            "CK nếu có đau cơ, yếu cơ",
+            "HbA1c/đường huyết (statin có thể tăng đường huyết)"
+        ],
+        "precautions": [
+            "Kiểm tra CK nếu đau cơ hoặc yếu cơ (ngừng nếu CK >10 lần ULN)",
+            "Ngừng nếu ALT >3 lần ULN",
+            "Ưu điểm: ít tương tác với CYP3A4 inhibitors (an toàn hơn với clarithromycin, azole antifungals, amiodarone)",
+            "Thận trọng với bệnh nhân đái tháo đường (có thể tăng đường huyết)",
+            "Giảm liều xuống tối đa 1mg/ngày khi dùng với cyclosporine",
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ và cho con bú (category X)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12 giờ",
+            "onset": "1-2 tuần",
+            "duration": "24 giờ",
+            "protein_binding": ">99%",
+            "metabolism": "Gan (CYP2C9, glucuronidation, không phải CYP3A4) - ít tương tác",
+            "clearance": "Chủ yếu qua gan (metabolism), một phần qua thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Tiêu cơ vân - có thể gây suy thận cấp và tử vong. Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Cyclosporine",
+                    "mechanism": "Tăng nồng độ pitavastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "Giảm liều pitavastatin xuống TỐI ĐA 1MG/NGÀY. Theo dõi CK chặt chẽ."
+                },
+                {
+                    "drug": "Gemfibrozil",
+                    "mechanism": "Tăng nồng độ pitavastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu cần: dùng liều pitavastatin thấp nhất, theo dõi CK chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Erythromycin, Rifampin",
+                    "mechanism": "Có thể tăng nồng độ pitavastatin",
+                    "effect": "Tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng. Theo dõi CK và triệu chứng đau cơ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "CYP3A4 inhibitors (Clarithromycin, Azole antifungals, Amiodarone)",
+                    "mechanism": "Pitavastatin không chuyển hóa qua CYP3A4",
+                    "effect": "Ít tương tác (ưu điểm so với atorvastatin, simvastatin)",
+                    "management": "An toàn hơn khi dùng với CYP3A4 inhibitors. Không cần giảm liều."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Bệnh gan hoạt động",
+                "Có thai",
+                "Cho con bú",
+                "Tiêu cơ vân đang hoạt động"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - thận trọng",
+                "Dùng với cyclosporine - giảm liều tối đa 1mg/ngày",
+                "Dùng với gemfibrozil - tránh dùng chung"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": "Chống chỉ định tuyệt đối trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi.",
+            "lactation": {
+                "safety": "Contraindicated",
+                "details": "Chống chỉ định khi cho con bú. Pitavastatin bài tiết vào sữa mẹ và có thể gây hại cho trẻ sơ sinh.",
+                "recommendation": "Không dùng khi cho con bú. Chọn phương pháp điều trị khác hoặc ngừng cho con bú nếu cần dùng pitavastatin."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Nhưng theo dõi chức năng gan.",
+            "moderate": "Thận trọng. Có thể cần giảm liều. Theo dõi chức năng gan chặt chẽ.",
+            "severe": "Chống chỉ định nếu bệnh gan hoạt động.",
+            "notes": "Pitavastatin chuyển hóa qua gan (CYP2C9, glucuronidation). Bệnh gan hoạt động là chống chỉ định."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Đau cơ nặng",
+                "Yếu cơ",
+                "Nước tiểu sẫm màu (myoglobinuria)",
+                "Suy thận cấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay pitavastatin",
+                "Bù dịch đầy đủ",
+                "Lọc máu nếu suy thận cấp",
+                "Theo dõi CK, creatinine"
+            ],
+            "monitoring": "Theo dõi CK, creatinine, chức năng thận, điện giải"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày. Uống cùng một giờ mỗi ngày để nhớ."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Pitavastatin chỉ có dạng uống (PO)."
+            }
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <10 tuổi",
+            "infants": "Không khuyến cáo cho trẻ <10 tuổi",
+            "children": "10-17 tuổi: 1-2mg x 1 lần/ngày. Chỉ dùng cho tăng cholesterol máu gia đình.",
+            "adolescents": "1-2mg x 1 lần/ngày. Liều người lớn.",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng cholesterol máu gia đình ở trẻ ≥10 tuổi."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ. Suy gan, suy thận phổ biến hơn.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (1mg x 1 lần/ngày). Tăng dần chậm hơn.",
+            "monitoring": "Theo dõi men gan, CK thường xuyên hơn. Cảnh báo về triệu chứng đau cơ, yếu cơ."
+        },
+        "brand_names": {
+            "vietnam": ["Livalo", "Pitavastatin", "Zypitamag"],
+            "common": ["Livalo", "Pitavastatin", "Zypitamag"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "20,000 - 60,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Pitavastatin là statin thế hệ mới, thường đắt hơn các statin khác."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Livalo (pitavastatin), Zypitamag (pitavastatin)",
+                "UpToDate - Pitavastatin: Drug information",
+                "ACC/AHA Guidelines - Cholesterol Management (2018)",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics - Lipid-lowering drugs"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, clinical guidelines"
+        }
     }
 
 }

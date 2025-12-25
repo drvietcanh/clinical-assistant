@@ -452,13 +452,17 @@ def render_sepsis_protocols():
             del st.session_state['sepsis_tool_to_open']
     
     # Tab selection
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    tab_labels = [
         "🔍 Recognition",
         "⏱️ 1-Hour Bundle",
         "💊 Antibiotics",
         "💧 Fluid Resuscitation",
         "📊 Lactate Monitoring"
-    ], selected=default_tab if default_tab < 5 else None)
+    ]
+    if default_tab is not None and 0 <= default_tab < len(tab_labels):
+        tab1, tab2, tab3, tab4, tab5 = st.tabs(tab_labels, selected=default_tab)
+    else:
+        tab1, tab2, tab3, tab4, tab5 = st.tabs(tab_labels)
     
     with tab1:
         render_sepsis_recognition()

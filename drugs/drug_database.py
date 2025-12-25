@@ -21,6 +21,9 @@ from .drug_modules import (
     ONCOLOGY_DRUGS,
     EMERGENCY_DRUGS,
     OTHER_DRUGS,
+    DERMATOLOGY_DRUGS,
+    OPHTHALMOLOGY_DRUGS,
+    UROLOGY_DRUGS,
     # Split modules from other.py (already included in OTHER_DRUGS, but available separately)
     CARDIOVASCULAR_OTHER_DRUGS,
     INFECTIOUS_OTHER_DRUGS,
@@ -47,6 +50,9 @@ DRUG_DATABASE = {
     **ONCOLOGY_DRUGS,
     **EMERGENCY_DRUGS,
     **OTHER_DRUGS,
+    **DERMATOLOGY_DRUGS,
+    **OPHTHALMOLOGY_DRUGS,
+    **UROLOGY_DRUGS,
     # Additional modules
     **INFECTIOUS_OTHER_DRUGS,
     **CARDIOVASCULAR_OTHER_DRUGS,

@@ -53,7 +53,14 @@ PROTOCOL_LISTS = {
         "❄️ Hạ thân nhiệt (Hypothermia)",
         "🐍 Rắn Lục Xanh Đuôi Đỏ Cắn",
         "🐍 Rắn Hổ Mang Cắn",
-        "🐍 Rắn Cạp Nia Cắn"
+        "🐍 Rắn Cạp Nia Cắn",
+        "🫁 Phù Phổi Cấp (Acute Pulmonary Edema)",
+        "💊 Ngộ Độc TCA (Tricyclic Antidepressant)",
+        "💊 Ngộ Độc Digoxin (Digoxin Toxicity)",
+        "🍭 Hạ Đường Huyết Cấp Cứu (Severe Hypoglycemia)",
+        "🫁 Chấn Thương Ngực (Chest Trauma)",
+        "🫀 Chấn Thương Bụng (Abdominal Trauma)",
+        "🔥 Bỏng (Burn Management)"
     ],
     "Hô hấp": [
         "🫁 Suy Hô Hấp Cấp (Acute Respiratory Failure)",
@@ -66,6 +73,10 @@ PROTOCOL_LISTS = {
     ],
     "Tim mạch": [
         "💔 ACS - Hội chứng vành cấp",
+        "💔 STEMI (ST-Elevation Myocardial Infarction)",
+        "💔 NSTEMI (Non-ST-Elevation Myocardial Infarction)",
+        "💔 Chèn Ép Tim (Cardiac Tamponade)",
+        "💔 Bóc Tách Động Mạch Chủ (Aortic Dissection)",
         "💔 Suy tim Cấp",
         "💔 Suy tim Mất Bù Cấp (ADHF)",
         "💓 Rung Nhĩ (Atrial Fibrillation)",
@@ -82,7 +93,9 @@ PROTOCOL_LISTS = {
         "🪨 Sỏi thận / Cơn đau quặn thận",
         "🧔‍♂️ BPH & Bí tiểu cấp",
         "🔬 Viêm cầu thận mạn tính",
-        "💧 Hội chứng thận hư"
+        "💧 Hội chứng thận hư",
+        "🧪 Hội Chứng Gan Thận (Hepatorenal Syndrome)",
+        "🧪 Lọc Máu Cấp Cứu (Emergency Dialysis)"
     ],
     "Nhiễm khuẩn": [
         "🫁 CAP Management",
@@ -104,7 +117,10 @@ PROTOCOL_LISTS = {
     ],
     "Huyết học": [
         "🩸 Truyền máu (Transfusion)",
-        "🩸 Đảo Ngược Chống đông (Anticoagulation Reversal)"
+        "🩸 Đảo Ngược Chống đông (Anticoagulation Reversal)",
+        "🩸 Xuất Huyết Giảm Tiểu Cầu Miễn Dịch (ITP)",
+        "🩸 TTP/HUS (Thrombotic Thrombocytopenic Purpura)",
+        "🩸 DIC (Disseminated Intravascular Coagulation)"
     ],
     "Tiêu hóa": [
         "🫀 Viêm Tụy Cấp (Acute Pancreatitis)",
@@ -125,14 +141,20 @@ PROTOCOL_LISTS = {
         "🫀 Quản lý Xơ Gan (Cirrhosis Management)",
         "🫀 Bệnh Gan Nhiễm Mỡ Không Do Rượu (NAFLD/NASH)",
         "🫀 Táo Bón Mạn Tính (Chronic Constipation)",
-        "🫀 Tiêu Chảy Cấp (Acute Diarrhea)"
+        "🫀 Tiêu Chảy Cấp (Acute Diarrhea)",
+        "🩸 Xuất Huyết Tiêu Hóa Dưới (Lower GI Bleeding)",
+        "🫀 Thủng Dạ Dày Tá Tràng (Perforated Peptic Ulcer)",
+        "🫀 Tắc Mật (Biliary Obstruction)",
+        "🫀 Xơ Gan Mất Bù (Decompensated Cirrhosis)"
     ],
     "Hồi sức": [
         "🧠 Quản lý Delirium (Delirium Management)",
         "💤 An thần & Giảm đau ICU (ICU Sedation & Analgesia)",
         "🫁 ARDS Management",
         "🫁 Ventilator Weaning",
-        "🩸 Stress Ulcer Prophylaxis"
+        "🩸 Stress Ulcer Prophylaxis",
+        "🧠 Quản Lý Áp Lực Nội Sọ (ICP Management)",
+        "🧪 CRRT (Continuous Renal Replacement Therapy)"
     ],
     "Ung thư": [
         "🎗️ Tumor Lysis Syndrome",
@@ -158,7 +180,12 @@ PROTOCOL_LISTS = {
     ],
     "Sản khoa": [
         "🤰 Sản giật (Eclampsia)",
-        "🩸 Xuất huyết sau sinh (Postpartum Hemorrhage)"
+        "🩸 Xuất huyết sau sinh (Postpartum Hemorrhage)",
+        "🤰 Tiền Sản Giật (Preeclampsia)",
+        "🤰 HELLP Syndrome",
+        "🤰 Nhiễm Trùng Ối (Chorioamnionitis)",
+        "🤰 Nhau Bong Non (Placental Abruption)",
+        "🤰 Vỡ Tử Cung (Uterine Rupture)"
     ],
     "Da liễu": [
         "🩹 Hội chứng Stevens-Johnson (SJS/TEN)",

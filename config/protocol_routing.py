@@ -6,6 +6,13 @@ Dictionary-based routing for protocols to replace long if-elif chains
 from typing import Callable, Dict, List, Optional, Tuple
 # Import all render functions from protocols module
 from protocols import (
+    render_acute_pulmonary_edema,
+    render_tca_overdose,
+    render_digoxin_toxicity,
+    render_severe_hypoglycemia,
+    render_chest_trauma,
+    render_abdominal_trauma,
+    render_burn_management,
     render_sepsis,
     render_sepsis_3hour,
     render_shock,
@@ -43,6 +50,10 @@ from protocols import (
     render_severe_influenza,
     render_bronchiolitis,
     render_acs,
+    render_stemi,
+    render_nstemi,
+    render_cardiac_tamponade,
+    render_aortic_dissection,
     render_hf,
     render_acute_decompensated_hf,
     render_atrial_fibrillation,
@@ -58,6 +69,8 @@ from protocols import (
     render_ckd,
     render_diabetic_nephropathy,
     render_hypertensive_nephrosclerosis,
+    render_hepatorenal_syndrome,
+    render_emergency_dialysis,
     render_cap,
     render_hap_vap,
     render_cdiff,
@@ -90,13 +103,22 @@ from protocols import (
     render_nafld,
     render_chronic_constipation,
     render_acute_diarrhea,
+    render_lower_gi_bleeding,
+    render_perforated_peptic_ulcer,
+    render_biliary_obstruction,
+    render_decompensated_cirrhosis,
     render_transfusion,
     render_anticoagulation_reversal,
+    render_itp,
+    render_ttp_hus,
+    render_dic,
     render_delirium,
     render_sedation,
     render_ards,
     render_ventilator_weaning,
     render_stress_ulcer,
+    render_icp_management,
+    render_crrt,
     render_tls,
     render_febrile_neutropenia,
     render_hypercalcemia,
@@ -106,6 +128,11 @@ from protocols import (
     render_intracranial_hypertension,
     render_eclampsia,
     render_postpartum_hemorrhage,
+    render_preeclampsia,
+    render_hellp_syndrome,
+    render_chorioamnionitis,
+    render_placental_abruption,
+    render_uterine_rupture,
     render_stevens_johnson_syndrome,
     render_atopic_dermatitis,
     render_contact_dermatitis,
@@ -325,6 +352,24 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "has_article": False,
         "priority": 8
     },
+    "chest_trauma": {
+        "keywords": ["Chấn thương ngực", "Chest Trauma", "chest trauma", "chấn thương ngực"],
+        "render": render_chest_trauma,
+        "has_article": False,
+        "priority": 9
+    },
+    "abdominal_trauma": {
+        "keywords": ["Chấn thương bụng", "Abdominal Trauma", "abdominal trauma", "chấn thương bụng"],
+        "render": render_abdominal_trauma,
+        "has_article": False,
+        "priority": 9
+    },
+    "burn_management": {
+        "keywords": ["Bỏng", "Burn", "burn", "Burn Management"],
+        "render": render_burn_management,
+        "has_article": False,
+        "priority": 9
+    },
     
     # Respiratory
     "acute_respiratory_failure": {
@@ -373,6 +418,30 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
     },
     
     # Cardiology
+    "stemi": {
+        "keywords": ["STEMI", "stemi", "ST-Elevation", "ST Elevation"],
+        "render": render_stemi,
+        "has_article": False,
+        "priority": 10
+    },
+    "nstemi": {
+        "keywords": ["NSTEMI", "nstemi", "Non-ST-Elevation", "Non ST Elevation"],
+        "render": render_nstemi,
+        "has_article": False,
+        "priority": 10
+    },
+    "cardiac_tamponade": {
+        "keywords": ["Chèn Ép Tim", "Cardiac Tamponade", "cardiac tamponade", "chèn ép tim"],
+        "render": render_cardiac_tamponade,
+        "has_article": False,
+        "priority": 10
+    },
+    "aortic_dissection": {
+        "keywords": ["Bóc Tách Động Mạch Chủ", "Aortic Dissection", "aortic dissection", "bóc tách"],
+        "render": render_aortic_dissection,
+        "has_article": False,
+        "priority": 10
+    },
     "acs": {
         "keywords": ["ACS"],
         "render": render_acs,
@@ -429,6 +498,18 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "has_article": True,
         "article_function": "render_aki",
         "priority": 10
+    },
+    "hepatorenal_syndrome": {
+        "keywords": ["Hội Chứng Gan Thận", "Hepatorenal Syndrome", "hepatorenal syndrome", "hội chứng gan thận"],
+        "render": render_hepatorenal_syndrome,
+        "has_article": False,
+        "priority": 9
+    },
+    "emergency_dialysis": {
+        "keywords": ["Lọc Máu Cấp Cứu", "Emergency Dialysis", "emergency dialysis", "lọc máu"],
+        "render": render_emergency_dialysis,
+        "has_article": False,
+        "priority": 9
     },
     "uti_pyelonephritis": {
         "keywords": ["Nhiễm trùng tiểu", "bể thận", "UTI"],
@@ -680,6 +761,30 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "has_article": False,
         "priority": 8
     },
+    "lower_gi_bleeding": {
+        "keywords": ["Xuất Huyết Tiêu Hóa Dưới", "Lower GI Bleeding", "lower gi bleeding", "xuất huyết tiêu hóa dưới"],
+        "render": render_lower_gi_bleeding,
+        "has_article": False,
+        "priority": 9
+    },
+    "perforated_peptic_ulcer": {
+        "keywords": ["Thủng Dạ Dày Tá Tràng", "Perforated Peptic Ulcer", "perforated peptic ulcer", "thủng dạ dày"],
+        "render": render_perforated_peptic_ulcer,
+        "has_article": False,
+        "priority": 10
+    },
+    "biliary_obstruction": {
+        "keywords": ["Tắc Mật", "Biliary Obstruction", "biliary obstruction", "tắc mật"],
+        "render": render_biliary_obstruction,
+        "has_article": False,
+        "priority": 9
+    },
+    "decompensated_cirrhosis": {
+        "keywords": ["Xơ Gan Mất Bù", "Decompensated Cirrhosis", "decompensated cirrhosis", "xơ gan mất bù"],
+        "render": render_decompensated_cirrhosis,
+        "has_article": False,
+        "priority": 9
+    },
     
     # Critical Care
     "delirium": {
@@ -713,6 +818,18 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "has_article": False,
         "priority": 8
     },
+    "icp_management": {
+        "keywords": ["Quản Lý Áp Lực Nội Sọ", "ICP Management", "icp management", "áp lực nội sọ"],
+        "render": render_icp_management,
+        "has_article": False,
+        "priority": 10
+    },
+    "crrt": {
+        "keywords": ["CRRT", "crrt", "Continuous Renal Replacement", "Lọc Máu Liên Tục"],
+        "render": render_crrt,
+        "has_article": False,
+        "priority": 9
+    },
     
     # Hematology
     "transfusion": {
@@ -726,6 +843,24 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "render": render_anticoagulation_reversal,
         "has_article": False,
         "priority": 8
+    },
+    "itp": {
+        "keywords": ["ITP", "itp", "Giảm Tiểu Cầu", "Immune Thrombocytopenic"],
+        "render": render_itp,
+        "has_article": False,
+        "priority": 8
+    },
+    "ttp_hus": {
+        "keywords": ["TTP", "HUS", "ttp", "hus", "Thrombotic Thrombocytopenic", "Hemolytic Uremic"],
+        "render": render_ttp_hus,
+        "has_article": False,
+        "priority": 9
+    },
+    "dic": {
+        "keywords": ["DIC", "dic", "Disseminated Intravascular", "Đông máu rải rác"],
+        "render": render_dic,
+        "has_article": False,
+        "priority": 9
     },
     
     # Oncology
@@ -833,6 +968,36 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "render": render_postpartum_hemorrhage,
         "has_article": False,
         "priority": 8
+    },
+    "preeclampsia": {
+        "keywords": ["Tiền Sản Giật", "Preeclampsia", "preeclampsia", "tiền sản giật"],
+        "render": render_preeclampsia,
+        "has_article": False,
+        "priority": 9
+    },
+    "hellp_syndrome": {
+        "keywords": ["HELLP", "hellp", "HELLP Syndrome", "hellp syndrome"],
+        "render": render_hellp_syndrome,
+        "has_article": False,
+        "priority": 10
+    },
+    "chorioamnionitis": {
+        "keywords": ["Nhiễm Trùng Ối", "Chorioamnionitis", "chorioamnionitis", "nhiễm trùng ối"],
+        "render": render_chorioamnionitis,
+        "has_article": False,
+        "priority": 10
+    },
+    "placental_abruption": {
+        "keywords": ["Nhau Bong Non", "Placental Abruption", "placental abruption", "nhau bong non"],
+        "render": render_placental_abruption,
+        "has_article": False,
+        "priority": 10
+    },
+    "uterine_rupture": {
+        "keywords": ["Vỡ Tử Cung", "Uterine Rupture", "uterine rupture", "vỡ tử cung"],
+        "render": render_uterine_rupture,
+        "has_article": False,
+        "priority": 10
     },
     
     # Dermatology

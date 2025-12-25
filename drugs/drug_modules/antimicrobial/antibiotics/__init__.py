@@ -4,6 +4,10 @@ Combines all antibiotic categories
 """
 
 from .beta_lactams import BETA_LACTAM_ANTIBIOTICS
+from .penicillins import PENICILLIN_ANTIBIOTICS
+from .cephalosporins import CEPHALOSPORIN_ANTIBIOTICS
+from .macrolides import MACROLIDE_ANTIBIOTICS
+from .tetracyclines import TETRACYCLINE_ANTIBIOTICS
 from .lincosamides import LINCOSAMIDE_ANTIBIOTICS
 from .sulfonamides import SULFONAMIDE_ANTIBIOTICS
 from .fluoroquinolones import FLUOROQUINOLONE_ANTIBIOTICS
@@ -11,10 +15,15 @@ from .aminoglycosides import AMINOGLYCOSIDE_ANTIBIOTICS
 from .glycopeptides import GLYCOPEPTIDE_ANTIBIOTICS
 from .oxazolidinones import OXAZOLIDINONE_ANTIBIOTICS
 from .polymyxins import POLYMYXIN_ANTIBIOTICS
+from .others import OTHER_ANTIBIOTICS
 
 # Merge all antibiotic categories
 ANTIMICROBIAL_ANTIBIOTICS = {
     **BETA_LACTAM_ANTIBIOTICS,
+    **PENICILLIN_ANTIBIOTICS,
+    **CEPHALOSPORIN_ANTIBIOTICS,
+    **MACROLIDE_ANTIBIOTICS,
+    **TETRACYCLINE_ANTIBIOTICS,
     **LINCOSAMIDE_ANTIBIOTICS,
     **SULFONAMIDE_ANTIBIOTICS,
     **FLUOROQUINOLONE_ANTIBIOTICS,
@@ -22,6 +31,7 @@ ANTIMICROBIAL_ANTIBIOTICS = {
     **GLYCOPEPTIDE_ANTIBIOTICS,
     **OXAZOLIDINONE_ANTIBIOTICS,
     **POLYMYXIN_ANTIBIOTICS,
+    **OTHER_ANTIBIOTICS,
 }
 
 __all__ = ['ANTIMICROBIAL_ANTIBIOTICS']

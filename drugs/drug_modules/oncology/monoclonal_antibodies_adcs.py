@@ -927,6 +927,475 @@ MONOCLONAL_ANTIBODIES_ADCS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in thyroid eye disease"
         }
+    },
+
+    "Cetuximab": {
+        "group": "Oncology - Anti-EGFR Monoclonal Antibody",
+        "vietnamese_name": "Cetuximab, Erbitux",
+        "administration": ["IV"],
+        "indications": [
+            "Ung thư đại trực tràng (metastatic) - KRAS wild-type",
+            "Ung thư đầu cổ (squamous cell carcinoma) - locally advanced hoặc recurrent/metastatic"
+        ],
+        "contraindications": [
+            "Dị ứng cetuximab hoặc bất kỳ thành phần nào",
+            "KRAS mutation positive (ung thư đại trực tràng) - không hiệu quả"
+        ],
+        "dosage": {
+            "adult_initial": "400mg/m² IV (liều đầu tiên, truyền 120 phút)",
+            "adult_maintenance": "250mg/m² IV mỗi tuần (truyền 60 phút)",
+            "notes": "Cần premedication với diphenhydramine để giảm phản ứng truyền. Chỉ dùng cho KRAS wild-type (không có KRAS mutation) trong ung thư đại trực tràng."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Phản ứng truyền (infusion-related reactions) - phổ biến, có thể nghiêm trọng",
+            "Phát ban (rash) - RẤT PHỔ BIẾN (75-90%), đặc trưng (acneiform rash)",
+            "Ngứa - phổ biến",
+            "Khô da - phổ biến",
+            "Viêm móng (paronychia) - phổ biến",
+            "Mệt mỏi - phổ biến",
+            "Buồn nôn, nôn - phổ biến",
+            "Tiêu chảy - phổ biến",
+            "Tăng men gan (ALT, AST) - phổ biến",
+            "Hạ magne máu (hypomagnesemia) - phổ biến, có thể nặng",
+            "Viêm phổi kẽ (interstitial lung disease - ILD) - hiếm nhưng NGUY HIỂM",
+            "Xuất huyết (chảy máu) - hiếm"
+        ],
+        "interactions": [
+            "Không có tương tác dược động học quan trọng",
+            "Có thể dùng cùng với các thuốc hóa trị khác"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Cetuximab là kháng thể đơn dòng kháng EGFR (Epidermal Growth Factor Receptor, chimeric monoclonal antibody IgG1). EGFR là thụ thể trên bề mặt tế bào, khi được kích hoạt bởi EGF hoặc các ligands khác, kích hoạt tín hiệu tăng sinh tế bào (RAS-RAF-MEK-ERK pathway và PI3K-AKT pathway). Trong ung thư đại trực tràng và đầu cổ, EGFR thường được biểu hiện quá mức, dẫn đến tăng sinh tế bào ung thư. Cetuximab gắn với EGFR trên tế bào ung thư → ngăn chặn EGF gắn với EGFR → ức chế hoạt tính kinase của EGFR → ngăn chặn tín hiệu tăng sinh và gây chết tế bào ung thư. Cetuximab cũng kích hoạt antibody-dependent cell-mediated cytotoxicity (ADCC) và complement-dependent cytotoxicity (CDC). ĐẶC ĐIỂM: (1) Anti-EGFR mAb, hiệu quả với ung thư đại trực tràng KRAS wild-type và ung thư đầu cổ, (2) Phát ban (rash) - RẤT PHỔ BIẾN (75-90%), đặc trưng (acneiform rash), có thể là dấu hiệu đáp ứng điều trị, (3) Hạ magne máu - phổ biến, có thể nặng, cần bổ sung magne, (4) CHỐNG CHỈ ĐỊNH ở KRAS mutation positive (không hiệu quả), (5) Phản ứng truyền - phổ biến, cần premedication.",
+        "monitoring": [
+            "Phản ứng truyền (infusion-related reactions) - theo dõi trong và sau truyền",
+            "Phát ban (rash) - RẤT PHỔ BIẾN (75-90%), đặc trưng (acneiform rash), có thể là dấu hiệu đáp ứng điều trị",
+            "Magne máu - QUAN TRỌNG (hạ magne phổ biến, có thể nặng), theo dõi mỗi chu kỳ",
+            "Chức năng gan (ALT, AST, bilirubin) trước và trong điều trị",
+            "Dấu hiệu viêm phổi kẽ (ILD) - hiếm nhưng NGUY HIỂM",
+            "Dấu hiệu xuất huyết (chảy máu) - hiếm",
+            "Đáp ứng điều trị: CT scan mỗi 2-3 tháng",
+            "Test KRAS mutation trước điều trị (ung thư đại trực tràng)"
+        ],
+        "precautions": [
+            "PHẢN ỨNG TRUYỀN - phổ biến, có thể nghiêm trọng, cần premedication với diphenhydramine",
+            "PHÁT BAN (RASH) - RẤT PHỔ BIẾN (75-90%), đặc trưng (acneiform rash), có thể là dấu hiệu đáp ứng điều trị, điều trị với corticosteroid tại chỗ hoặc kháng sinh nếu nhiễm trùng",
+            "HẠ MAGNE MÁU - phổ biến, có thể nặng, cần bổ sung magne định kỳ",
+            "CHỐNG CHỈ ĐỊNH ở KRAS mutation positive (ung thư đại trực tràng) - không hiệu quả, cần test KRAS trước điều trị",
+            "VIÊM PHỔI KẼ (ILD) - hiếm nhưng NGUY HIỂM - NGỪNG NGAY nếu có khó thở, ho, sốt",
+            "Theo dõi chức năng gan chặt chẽ (tăng men gan phổ biến)",
+            "Có thể dùng kết hợp với các thuốc hóa trị khác (FOLFIRI, FOLFOX)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "112 giờ (4.7 ngày)",
+            "onset": "Vài tuần (tác dụng lâm sàng)",
+            "duration": "Dài (do half-life dài)",
+            "protein_binding": "IgG1 monoclonal antibody",
+            "metabolism": "Chuyển hóa qua hệ thống reticuloendothelial (RES)",
+            "clearance": "Không phụ thuộc gan thận đáng kể"
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng: dùng trong 12 giờ ở 2-8°C hoặc 8 giờ ở nhiệt độ phòng.",
+        "black_box_warnings": "PHẢN ỨNG TRUYỀN (infusion-related reactions) - có thể nghiêm trọng và đe dọa tính mạng. Cần premedication với diphenhydramine. Theo dõi chặt chẽ trong và sau truyền. VIÊM PHỔI KẼ (Interstitial Lung Disease - ILD) - hiếm nhưng NGUY HIỂM, có thể tử vong. Ngừng ngay cetuximab nếu có khó thở, ho, sốt.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng cetuximab hoặc bất kỳ thành phần nào",
+                "KRAS mutation positive (ung thư đại trực tràng) - CHỐNG CHỈ ĐỊNH (không hiệu quả)"
+            ],
+            "tương_đối": [
+                "Viêm phổi kẽ đang hoạt động - tăng nguy cơ ILD",
+                "Bệnh phổi - tăng nguy cơ ILD"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Cetuximab phân loại C - thận trọng trong thai kỳ. Không có dữ liệu đầy đủ trên phụ nữ có thai. Không khuyến cáo dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết cetuximab có bài tiết vào sữa mẹ hay không. Không khuyến cáo dùng khi cho con bú.",
+                "recommendation": "Tránh dùng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Cetuximab không chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Phản ứng truyền nặng (sốc phản vệ)",
+                "Phát ban nặng",
+                "Hạ magne máu nặng",
+                "Viêm phổi kẽ nặng (khó thở, ho, sốt)",
+                "Tăng men gan nặng",
+                "Xuất huyết (chảy máu)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay cetuximab",
+                "Xử trí phản ứng truyền: epinephrine, diphenhydramine, corticosteroid, H2 blocker, hỗ trợ hô hấp",
+                "Nếu viêm phổi kẽ: ngừng ngay, chụp X-quang ngực, corticosteroid, hỗ trợ hô hấp nếu cần",
+                "Bổ sung magne nếu hạ magne máu",
+                "Điều trị phát ban: corticosteroid tại chỗ, kháng sinh nếu nhiễm trùng",
+                "Supportive care: bù dịch, điều trị nhiễm trùng"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, chức năng gan, magne máu, X-quang ngực, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu viêm phổi kẽ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha loãng trong NS hoặc D5W. Nồng độ cuối: 0.4-2mg/ml. Không lọc.",
+                "infusion_rate": "Liều đầu tiên: 400mg/m² IV truyền trong 120 phút. Liều duy trì: 250mg/m² IV truyền trong 60 phút mỗi tuần.",
+                "premedication": "CẦN PREMEDICATION: Diphenhydramine 50mg IV trước truyền để giảm phản ứng truyền.",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": ["Không pha với các thuốc khác"],
+                "notes": "Theo dõi chặt chẽ trong và sau truyền (phản ứng truyền). Có thể phối hợp với FOLFIRI hoặc FOLFOX (ung thư đại trực tràng)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cetuximab (Erbitux)",
+                "UpToDate - Cetuximab: Drug Information",
+                "NCCN Guidelines - Colorectal Cancer, Head and Neck Cancer",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data, effective for KRAS wild-type colorectal cancer and head and neck cancer"
+        }
+    },
+
+    "Bevacizumab": {
+        "group": "Oncology - Anti-VEGF Monoclonal Antibody",
+        "vietnamese_name": "Bevacizumab, Avastin",
+        "administration": ["IV"],
+        "indications": [
+            "Ung thư đại trực tràng (metastatic) - kết hợp với hóa trị",
+            "Ung thư phổi không tế bào nhỏ (NSCLC - non-squamous) - kết hợp với hóa trị",
+            "Ung thư thận (metastatic renal cell carcinoma)",
+            "Ung thư buồng trứng (recurrent)",
+            "Ung thư cổ tử cung (persistent, recurrent, or metastatic)",
+            "Ung thư não (glioblastoma - recurrent)"
+        ],
+        "contraindications": [
+            "Dị ứng bevacizumab hoặc bất kỳ thành phần nào",
+            "Phẫu thuật gần đây (trong vòng 28 ngày)",
+            "Vết thương hở chưa lành",
+            "Xuất huyết nặng đang hoạt động"
+        ],
+        "dosage": {
+            "adult_colorectal": "5mg/kg IV mỗi 2 tuần hoặc 7.5mg/kg IV mỗi 3 tuần (với FOLFOX)",
+            "adult_nsclc": "15mg/kg IV mỗi 3 tuần (với hóa trị)",
+            "adult_renal": "10mg/kg IV mỗi 2 tuần",
+            "adult_ovarian": "15mg/kg IV mỗi 3 tuần (với hóa trị)",
+            "notes": "Truyền tĩnh mạch trong 30-90 phút (liều đầu tiên 90 phút, liều sau 30-60 phút). Bevacizumab là anti-VEGF mAb, ức chế angiogenesis (tạo mạch máu mới)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Xuất huyết (chảy máu) - phổ biến, có thể nghiêm trọng",
+            "Huyết khối động mạch (arterial thrombosis) - hiếm nhưng NGUY HIỂM",
+            "Huyết khối tĩnh mạch (venous thrombosis) - phổ biến",
+            "Tăng huyết áp - phổ biến",
+            "Protein niệu (proteinuria) - phổ biến, có thể nặng",
+            "Thủng đường tiêu hóa (GI perforation) - hiếm nhưng NGUY HIỂM, có thể tử vong",
+            "Lỗ rò (fistula) - hiếm nhưng NGUY HIỂM",
+            "Chậm lành vết thương (wound healing impairment) - phổ biến",
+            "Phản ứng truyền (infusion-related reactions) - hiếm",
+            "Mệt mỏi - phổ biến",
+            "Buồn nôn, nôn - phổ biến",
+            "Tiêu chảy - phổ biến",
+            "Độc tim (suy tim) - hiếm",
+            "Hội chứng não sau (posterior reversible encephalopathy syndrome - PRES) - hiếm nhưng NGUY HIỂM"
+        ],
+        "interactions": [
+            "Không có tương tác dược động học quan trọng",
+            "Có thể dùng cùng với các thuốc hóa trị khác"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Bevacizumab là kháng thể đơn dòng kháng VEGF (Vascular Endothelial Growth Factor, humanized monoclonal antibody IgG1). VEGF là cytokine quan trọng trong quá trình angiogenesis (tạo mạch máu mới), kích thích tăng sinh tế bào nội mô mạch máu và tạo mạch máu mới. Trong ung thư, khối u cần mạch máu mới để cung cấp oxy và chất dinh dưỡng cho sự phát triển. Bevacizumab gắn với VEGF (VEGF-A) → ngăn chặn VEGF gắn với thụ thể VEGFR trên tế bào nội mô → ức chế angiogenesis → giảm cung cấp máu cho khối u → khối u thiếu oxy và chất dinh dưỡng → chết tế bào ung thư và giảm kích thước khối u. Bevacizumab cũng làm bình thường hóa mạch máu khối u, tăng hiệu quả của hóa trị. ĐẶC ĐIỂM: (1) Anti-VEGF mAb, ức chế angiogenesis, (2) Xuất huyết - phổ biến, có thể nghiêm trọng, (3) Thủng đường tiêu hóa - hiếm nhưng NGUY HIỂM, có thể tử vong, (4) Chậm lành vết thương - phổ biến, CHỐNG CHỈ ĐỊNH phẫu thuật gần đây, (5) Tăng huyết áp và protein niệu - phổ biến, (6) Hiệu quả với nhiều loại ung thư khi dùng kết hợp với hóa trị.",
+        "monitoring": [
+            "Huyết áp - QUAN TRỌNG (tăng huyết áp phổ biến), theo dõi mỗi chu kỳ",
+            "Protein niệu - QUAN TRỌNG (protein niệu phổ biến, có thể nặng), theo dõi mỗi chu kỳ",
+            "Dấu hiệu xuất huyết (chảy máu) - phổ biến, có thể nghiêm trọng",
+            "Dấu hiệu thủng đường tiêu hóa (đau bụng, nôn, sốt) - hiếm nhưng NGUY HIỂM",
+            "Dấu hiệu lỗ rò (fistula) - hiếm nhưng NGUY HIỂM",
+            "Dấu hiệu huyết khối (đau ngực, khó thở, sưng chân) - phổ biến",
+            "Dấu hiệu độc tim (suy tim) - hiếm",
+            "Dấu hiệu hội chứng não sau (PRES) - đau đầu, co giật, rối loạn thị giác - hiếm nhưng NGUY HIỂM",
+            "Đáp ứng điều trị: CT scan mỗi 2-3 tháng"
+        ],
+        "precautions": [
+            "XUẤT HUYẾT - phổ biến, có thể nghiêm trọng, ngừng ngay nếu có xuất huyết nặng",
+            "THỦNG ĐƯỜNG TIÊU HÓA - hiếm nhưng NGUY HIỂM, có thể tử vong - NGỪNG NGAY nếu có đau bụng, nôn, sốt",
+            "CHẬM LÀNH VẾT THƯƠNG - phổ biến, CHỐNG CHỈ ĐỊNH phẫu thuật gần đây (trong vòng 28 ngày) và vết thương hở chưa lành",
+            "TĂNG HUYẾT ÁP - phổ biến, điều trị với thuốc hạ huyết áp nếu cần",
+            "PROTEIN NIỆU - phổ biến, có thể nặng, ngừng nếu protein niệu nặng (>3.5g/24h)",
+            "HUYẾT KHỐI - phổ biến (tĩnh mạch), hiếm nhưng NGUY HIỂM (động mạch), điều trị với thuốc chống đông nếu cần",
+            "Độc tim (suy tim) - hiếm, ngừng nếu có",
+            "Hội chứng não sau (PRES) - hiếm nhưng NGUY HIỂM, ngừng ngay nếu có",
+            "Có thể dùng kết hợp với các thuốc hóa trị khác"
+        ],
+        "pharmacokinetics": {
+            "half_life": "20 ngày",
+            "onset": "Vài tuần (tác dụng lâm sàng)",
+            "duration": "Dài (do half-life dài)",
+            "protein_binding": "IgG1 monoclonal antibody",
+            "metabolism": "Chuyển hóa qua hệ thống reticuloendothelial (RES)",
+            "clearance": "Không phụ thuộc gan thận đáng kể"
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng: dùng trong 8 giờ ở 2-8°C hoặc 4 giờ ở nhiệt độ phòng.",
+        "black_box_warnings": "XUẤT HUYẾT (chảy máu) - phổ biến, có thể nghiêm trọng và đe dọa tính mạng. Ngừng ngay bevacizumab nếu có xuất huyết nặng. THỦNG ĐƯỜNG TIÊU HÓA (GI perforation) - hiếm nhưng NGUY HIỂM, có thể tử vong. Ngừng ngay bevacizumab nếu có đau bụng, nôn, sốt. CHẬM LÀNH VẾT THƯƠNG (wound healing impairment) - phổ biến. CHỐNG CHỈ ĐỊNH phẫu thuật gần đây (trong vòng 28 ngày) và vết thương hở chưa lành.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng bevacizumab hoặc bất kỳ thành phần nào",
+                "Phẫu thuật gần đây (trong vòng 28 ngày) - CHỐNG CHỈ ĐỊNH",
+                "Vết thương hở chưa lành - CHỐNG CHỈ ĐỊNH",
+                "Xuất huyết nặng đang hoạt động - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Tăng huyết áp không kiểm soát - điều trị trước khi dùng",
+                "Protein niệu nặng (>3.5g/24h) - ngừng bevacizumab",
+                "Huyết khối động mạch gần đây - tăng nguy cơ",
+                "Bệnh tim - tăng nguy cơ độc tim"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Bevacizumab phân loại C - thận trọng trong thai kỳ. Không có dữ liệu đầy đủ trên phụ nữ có thai. Bevacizumab ức chế angiogenesis, có thể gây hại cho thai nhi. Không khuyến cáo dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết bevacizumab có bài tiết vào sữa mẹ hay không. Không khuyến cáo dùng khi cho con bú.",
+                "recommendation": "Tránh dùng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Bevacizumab không chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Xuất huyết nặng (chảy máu)",
+                "Thủng đường tiêu hóa nặng (đau bụng, nôn, sốt)",
+                "Tăng huyết áp nặng",
+                "Protein niệu nặng",
+                "Huyết khối nặng",
+                "Độc tim (suy tim)",
+                "Hội chứng não sau (PRES)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay bevacizumab",
+                "Nếu xuất huyết nặng: truyền máu, điều trị hỗ trợ",
+                "Nếu thủng đường tiêu hóa: phẫu thuật khẩn cấp nếu cần",
+                "Nếu tăng huyết áp nặng: thuốc hạ huyết áp",
+                "Nếu huyết khối: thuốc chống đông",
+                "Nếu độc tim: hỗ trợ tim mạch",
+                "Nếu PRES: điều trị hỗ trợ, có thể cần điều trị co giật",
+                "Supportive care: bù dịch, điều trị nhiễm trùng"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, huyết áp, protein niệu, dấu hiệu xuất huyết, dấu hiệu thủng đường tiêu hóa, dấu hiệu huyết khối, ECG, dấu hiệu độc tim, dấu hiệu PRES"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha loãng trong NS hoặc D5W. Nồng độ cuối: 1.4-16.5mg/ml. Không lọc.",
+                "infusion_rate": "Liều đầu tiên: truyền trong 90 phút. Liều sau: truyền trong 30-60 phút nếu dung nạp tốt.",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": ["Không pha với các thuốc khác"],
+                "notes": "Theo dõi chặt chẽ trong và sau truyền (phản ứng truyền hiếm). Có thể phối hợp với FOLFIRI, FOLFOX, hoặc các phác đồ hóa trị khác."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Bevacizumab (Avastin)",
+                "UpToDate - Bevacizumab: Drug Information",
+                "NCCN Guidelines - Colorectal Cancer, Non-Small Cell Lung Cancer",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data, effective for multiple cancer types when combined with chemotherapy"
+        }
+    },
+
+    "Trastuzumab": {
+        "group": "Oncology - Anti-HER2 Monoclonal Antibody",
+        "vietnamese_name": "Trastuzumab, Herceptin",
+        "administration": ["IV", "SC"],
+        "indications": [
+            "Ung thư vú (HER2-positive) - adjuvant và metastatic",
+            "Ung thư dạ dày (HER2-positive) - metastatic"
+        ],
+        "contraindications": [
+            "Dị ứng trastuzumab hoặc bất kỳ thành phần nào"
+        ],
+        "dosage": {
+            "adult_iv_initial": "4mg/kg IV (liều đầu tiên, truyền 90 phút)",
+            "adult_iv_maintenance": "2mg/kg IV mỗi tuần (truyền 30 phút)",
+            "adult_iv_3weekly": "8mg/kg IV mỗi 3 tuần (truyền 90 phút) sau liều đầu tiên 6mg/kg",
+            "adult_sc": "600mg SC mỗi 3 tuần (tiêm dưới da)",
+            "notes": "Cần test HER2 trước điều trị (IHC 3+ hoặc FISH positive). Trastuzumab là anti-HER2 mAb, hiệu quả với ung thư vú và dạ dày HER2-positive."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Độc tim (suy tim, rối loạn nhịp) - phổ biến, NGUY HIỂM",
+            "Phản ứng truyền (infusion-related reactions) - phổ biến, có thể nghiêm trọng",
+            "Mệt mỏi - phổ biến",
+            "Buồn nôn, nôn - phổ biến",
+            "Tiêu chảy - phổ biến",
+            "Đau đầu - phổ biến",
+            "Phát ban - phổ biến",
+            "Giảm bạch cầu, tiểu cầu (myelosuppression) - phổ biến (khi dùng với hóa trị)",
+            "Viêm phổi kẽ (interstitial lung disease - ILD) - hiếm nhưng NGUY HIỂM",
+            "Phản ứng tại chỗ tiêm (với dạng SC) - phổ biến"
+        ],
+        "interactions": [
+            "Anthracyclines (doxorubicin, epirubicin): tăng độc tim - TRÁNH DÙNG CHUNG",
+            "Không có tương tác dược động học quan trọng khác"
+        ],
+        "pregnancy": "D",
+        "mechanism_of_action": "Trastuzumab là kháng thể đơn dòng kháng HER2 (Human Epidermal Growth Factor Receptor 2, humanized monoclonal antibody IgG1). HER2 là thụ thể tyrosine kinase trên bề mặt tế bào, một thành viên của EGFR family. Trong ung thư vú và dạ dày, một số bệnh nhân có HER2 overexpression (20-30% ung thư vú), dẫn đến tăng sinh tế bào ung thư. Trastuzumab gắn với HER2 trên tế bào ung thư → ngăn chặn dimerization của HER2 với các thụ thể khác (EGFR, HER3, HER4) → ức chế hoạt tính kinase → ngăn chặn tín hiệu tăng sinh (RAS-RAF-MEK-ERK pathway và PI3K-AKT pathway) và gây chết tế bào ung thư. Trastuzumab cũng kích hoạt antibody-dependent cell-mediated cytotoxicity (ADCC) và complement-dependent cytotoxicity (CDC). ĐẶC ĐIỂM: (1) Anti-HER2 mAb, hiệu quả với ung thư vú và dạ dày HER2-positive, (2) Độc tim - phổ biến, NGUY HIỂM, cần theo dõi chức năng tim chặt chẽ, (3) TRÁNH DÙNG CHUNG với anthracyclines (tăng độc tim), (4) Cần test HER2 trước điều trị (IHC 3+ hoặc FISH positive), (5) Có cả dạng IV và SC (dạng SC tiện lợi hơn), (6) Hiệu quả cao với ung thư vú HER2-positive (tăng tỷ lệ sống).",
+        "monitoring": [
+            "Chức năng tim - QUAN TRỌNG (độc tim phổ biến, NGUY HIỂM), theo dõi trước điều trị, mỗi 3 tháng trong năm đầu, sau đó mỗi 6 tháng:",
+            "  - LVEF (Left Ventricular Ejection Fraction) - echo hoặc MUGA scan",
+            "  - Dấu hiệu suy tim (khó thở, phù, mệt mỏi)",
+            "Phản ứng truyền (infusion-related reactions) - theo dõi trong và sau truyền",
+            "Dấu hiệu viêm phổi kẽ (ILD) - hiếm nhưng NGUY HIỂM",
+            "Công thức máu toàn phần (CBC) - khi dùng với hóa trị",
+            "Đáp ứng điều trị: CT scan mỗi 2-3 tháng",
+            "Test HER2 trước điều trị (IHC 3+ hoặc FISH positive)"
+        ],
+        "precautions": [
+            "ĐỘC TIM - phổ biến, NGUY HIỂM - theo dõi chức năng tim chặt chẽ (LVEF trước điều trị, mỗi 3 tháng trong năm đầu, sau đó mỗi 6 tháng)",
+            "Ngừng trastuzumab nếu LVEF giảm >10% từ baseline hoặc LVEF <50%",
+            "TRÁNH DÙNG CHUNG với anthracyclines (doxorubicin, epirubicin) - tăng độc tim nghiêm trọng",
+            "Cần test HER2 trước điều trị (IHC 3+ hoặc FISH positive) - chỉ hiệu quả với HER2-positive",
+            "Phản ứng truyền - phổ biến, có thể nghiêm trọng, cần theo dõi chặt chẽ",
+            "VIÊM PHỔI KẼ (ILD) - hiếm nhưng NGUY HIỂM - NGỪNG NGAY nếu có khó thở, ho, sốt",
+            "Dạng SC: phản ứng tại chỗ tiêm - phổ biến",
+            "Có thể dùng kết hợp với các thuốc hóa trị khác (paclitaxel, docetaxel, carboplatin)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "28 ngày",
+            "onset": "Vài tuần (tác dụng lâm sàng)",
+            "duration": "Dài (do half-life dài)",
+            "protein_binding": "IgG1 monoclonal antibody",
+            "metabolism": "Chuyển hóa qua hệ thống reticuloendothelial (RES)",
+            "clearance": "Không phụ thuộc gan thận đáng kể"
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng: dùng trong 28 ngày ở 2-8°C hoặc 24 giờ ở nhiệt độ phòng.",
+        "black_box_warnings": "ĐỘC TIM (suy tim, rối loạn nhịp) - phổ biến và NGUY HIỂM. Theo dõi chức năng tim chặt chẽ (LVEF trước điều trị, mỗi 3 tháng trong năm đầu, sau đó mỗi 6 tháng). Ngừng trastuzumab nếu LVEF giảm >10% từ baseline hoặc LVEF <50%. TRÁNH DÙNG CHUNG với anthracyclines (doxorubicin, epirubicin) - tăng độc tim nghiêm trọng. VIÊM PHỔI KẼ (Interstitial Lung Disease - ILD) - hiếm nhưng NGUY HIỂM, có thể tử vong. Ngừng ngay trastuzumab nếu có khó thở, ho, sốt.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Anthracyclines (Doxorubicin, Epirubicin)",
+                    "mechanism": "Cả hai đều có độc tính tim, tác dụng cộng dồn",
+                    "effect": "Tăng độc tim nghiêm trọng, tăng nguy cơ suy tim",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc, theo dõi chức năng tim chặt chẽ. Có thể dùng trastuzumab sau khi hoàn thành anthracyclines."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng trastuzumab hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Suy tim nặng (LVEF <50%) - ngừng trastuzumab",
+                "Viêm phổi kẽ đang hoạt động - tăng nguy cơ ILD",
+                "Bệnh tim - tăng nguy cơ độc tim",
+                "HER2-negative - không hiệu quả, cần test HER2 trước điều trị"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Trastuzumab phân loại D - có thể gây hại cho thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ. Có thể gây dị tật thai nhi. Tránh thai hiệu quả trong và sau điều trị.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Trastuzumab bài tiết vào sữa mẹ. Không dùng khi cho con bú.",
+                "recommendation": "Không dùng khi cho con bú. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Trastuzumab không chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Độc tim nặng (suy tim, rối loạn nhịp)",
+                "Phản ứng truyền nặng (sốc phản vệ)",
+                "Viêm phổi kẽ nặng (khó thở, ho, sốt)",
+                "Giảm bạch cầu, tiểu cầu nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay trastuzumab",
+                "Nếu độc tim: điều trị suy tim (ACE inhibitor, beta-blocker, diuretic), hỗ trợ tim mạch nếu cần",
+                "Xử trí phản ứng truyền: epinephrine, diphenhydramine, corticosteroid, H2 blocker, hỗ trợ hô hấp",
+                "Nếu viêm phổi kẽ: ngừng ngay, chụp X-quang ngực, corticosteroid, hỗ trợ hô hấp nếu cần",
+                "Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, chức năng tim (LVEF, ECG), X-quang ngực, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu viêm phổi kẽ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha loãng trong NS hoặc D5W. Nồng độ cuối: 0.4-2mg/ml. Không lọc.",
+                "infusion_rate": "Liều đầu tiên: 4mg/kg IV truyền trong 90 phút. Liều duy trì hàng tuần: 2mg/kg IV truyền trong 30 phút. Liều 3 tuần: 8mg/kg IV truyền trong 90 phút sau liều đầu tiên 6mg/kg.",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": ["Không pha với các thuốc khác"],
+                "notes": "Theo dõi chặt chẽ trong và sau truyền (phản ứng truyền). Có thể phối hợp với paclitaxel, docetaxel, carboplatin, hoặc các thuốc hóa trị khác."
+            },
+            "sc": {
+                "reconstitution": "Không cần pha loãng. Dung dịch tiêm sẵn.",
+                "injection_site": "Tiêm dưới da (bụng, đùi). Thay đổi vị trí tiêm.",
+                "notes": "600mg SC mỗi 3 tuần. Tiêm dưới da. Có thể gây phản ứng tại chỗ tiêm. Dạng SC tiện lợi hơn dạng IV."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Trastuzumab (Herceptin)",
+                "UpToDate - Trastuzumab: Drug Information",
+                "NCCN Guidelines - Breast Cancer, Gastric Cancer",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, revolutionized HER2-positive breast cancer treatment, extensive clinical data"
+        }
     }
 }
 

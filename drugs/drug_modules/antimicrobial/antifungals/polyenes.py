@@ -184,6 +184,18 @@ POLYENES_DRUGS = {
             "Flucytosine: tác dụng hiệp đồng (dùng cùng trong điều trị cryptococcal meningitis)"
         ],
         "pregnancy": "B",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"renal": True, "hepatic": True, "cardiac": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "IDSA Antifungal Guidelines 2024",
+            "ESCMID-ECMM-ERS Aspergillosis Guidelines",
+            "WHO Guidelines for Invasive Fungal Infections"
+        ],
         "mechanism_of_action": "Amphotericin B là polyene antifungal, gắn với ergosterol trong màng tế bào nấm, tạo lỗ thủng trong màng, làm rò rỉ các ion và chất dinh dưỡng, dẫn đến chết tế bào nấm. Thuốc có ái lực cao với ergosterol (có trong nấm) nhưng cũng gắn một phần với cholesterol (có trong tế bào người), gây độc tính. Phổ kháng nấm rất rộng: Candida, Aspergillus, Cryptococcus, Mucor, Histoplasma, Coccidioides, Blastomyces, Sporothrix. Đây là thuốc tiêu chuẩn vàng (gold standard) cho nhiễm nấm hệ thống nặng, nhưng có độc tính thận đáng kể. Liposomal formulation (AmBisome) có ít độc tính thận hơn nhưng đắt hơn.",
         "monitoring": [
             "Chức năng thận (creatinine, BUN, CrCl) - TRƯỚC, TRONG, và SAU điều trị - đặc biệt quan trọng",
@@ -334,7 +346,7 @@ POLYENES_DRUGS = {
                 "Medscape - Amphotericin B Drug Reference",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều thập kỷ (gold standard cho nhiễm nấm hệ thống)"
         }
     }

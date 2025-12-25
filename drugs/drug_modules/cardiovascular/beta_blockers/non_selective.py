@@ -263,6 +263,17 @@ NON_SELECTIVE_BETA_BLOCKERS = {
           "CYP2D6 inhibitors: tăng nồng độ carvedilol"
       ],
       "pregnancy": "C",
+      "risk_flags": {
+          "high_alert": False,
+          "narrow_therapeutic_index": False,
+          "icu_critical_care_only": False,
+          "bleeding_risk": "Low",
+          "organ_toxicity": ["cardiac_bradycardia", "cardiac_av_block", "hypotension"]
+      },
+      "guideline_tags": [
+          "ACC/AHA/HFSA HFrEF GDMT",
+          "ESC HFrEF Class I"
+      ],
       "mechanism_of_action": "Non-selective beta-adrenergic receptor blocker (beta1 và beta2) kết hợp với alpha-1 adrenergic receptor blocker. Ức chế beta receptors làm giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp. Block alpha-1 receptors gây giãn mạch, giảm hậu gánh, cải thiện tuần hoàn. Có bằng chứng mạnh làm giảm tỷ lệ tử vong và nhập viện trong suy tim mạn tính (NYHA class II-IV).",
       "monitoring": [
           "Nhịp tim và huyết áp (trước và sau khi bắt đầu, đặc biệt ở bệnh nhân suy tim - có thể gây hạ huyết áp)",

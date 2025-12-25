@@ -473,6 +473,390 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
+    },
+    
+    "Phenylephrine": {
+        "group": "Emergency - Alpha-1 Adrenergic Agonist (Pure)",
+        "vietnamese_name": "Phenylephrine, Neosynephrine",
+        "administration": ["IV"],
+        "indications": [
+            "Hạ huyết áp trong gây mê (anesthesia-induced hypotension)",
+            "Sốc giảm thể tích (sau khi bù dịch)",
+            "Hạ huyết áp do gây tê tủy sống/ngoài màng cứng",
+            "Sốc nhiễm khuẩn (thay thế hoặc bổ sung norepinephrine trong một số trường hợp)",
+            "Hạ huyết áp nặng trong ICU"
+        ],
+        "contraindications": [
+            "Thiếu máu cục bộ mô nặng (chi, ruột, tim) - thận trọng",
+            "Sốc giảm thể tích chưa bù dịch đầy đủ",
+            "Bệnh mạch máu ngoại biên nặng"
+        ],
+        "dosage": {
+            "adult_anesthesia": "0.5-1.5 mcg/kg/phút IV infusion (khởi đầu)",
+            "adult_shock": "0.5-6 mcg/kg/phút IV infusion",
+            "adult_max": "10 mcg/kg/phút IV infusion (không vượt quá)",
+            "adult_bolus": "50-200 mcg IV bolus (trong gây mê)",
+            "notes": "Pha 10mg trong 250ml NS = 40 mcg/ml. Khởi đầu 0.5-1.5 mcg/kg/phút, tăng dần theo đáp ứng. Thuốc lựa chọn trong gây mê. Ít dùng trong ICU so với norepinephrine."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Phản xạ nhịp chậm (baroreceptor reflex - do tăng huyết áp)",
+            "Co mạch ngoại vi (thiếu máu cục bộ chi, ruột)",
+            "Tăng huyết áp nặng (nếu liều cao)",
+            "Giảm tưới máu thận (với liều cao)",
+            "Hoại tử mô (nếu rò rỉ ngoài mạch)",
+            "Đau đầu, buồn nôn"
+        ],
+        "interactions": [
+            "MAOIs: tăng tác dụng",
+            "TCAs: tăng tác dụng",
+            "Beta-blockers: tăng huyết áp nặng (do không đối kháng alpha)",
+            "Alpha-blockers: đối kháng tác dụng"
+        ],
+        "pregnancy": "C - An toàn trong cấp cứu và gây mê",
+        "mechanism_of_action": "Phenylephrine là alpha-1-adrenergic receptor agonist thuần túy (không có tác dụng beta). Kích thích alpha-1 receptors trên cơ trơn mạch máu → co mạch ngoại vi mạnh, tăng huyết áp. Không có tác dụng beta-1 (không tăng nhịp tim, không tăng co bóp cơ tim) và không có tác dụng beta-2 (không giãn phế quản). Tăng huyết áp có thể kích hoạt phản xạ baroreceptor → nhịp chậm phản xạ. Trong gây mê: tăng huyết áp nhanh mà không tăng nhịp tim (ưu điểm so với epinephrine).",
+        "monitoring": [
+            "Huyết áp liên tục (arterial line nếu có thể)",
+            "Nhịp tim và ECG (theo dõi nhịp chậm phản xạ)",
+            "Tưới máu mô (da, thận, chi) - nguy cơ thiếu máu cục bộ",
+            "Lactate máu (tưới máu mô)",
+            "Dấu hiệu hoại tử tại chỗ tiêm",
+            "Nước tiểu giờ (diuresis - có thể giảm với liều cao)"
+        ],
+        "precautions": [
+            "Truyền qua đường tĩnh mạch trung tâm (nguy cơ hoại tử nếu rò rỉ)",
+            "Bù dịch đầy đủ trước khi dùng (tránh sốc giảm thể tích)",
+            "Theo dõi nhịp chậm phản xạ (có thể cần atropine nếu nhịp chậm nặng)",
+            "Thận trọng ở bệnh nhân có bệnh mạch máu ngoại biên, bệnh mạch vành",
+            "Giảm liều khi huyết áp đã ổn định",
+            "Ít dùng trong ICU so với norepinephrine (do không tăng cung lượng tim)",
+            "Thuốc lựa chọn trong gây mê (tăng huyết áp mà không tăng nhịp tim)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (dài hơn catecholamine)",
+            "onset": "Ngay lập tức sau khi bắt đầu truyền",
+            "duration": "Ngắn, cần truyền liên tục",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Chuyển hóa ở gan (MAO), thải trừ qua thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh. Kiểm tra màu sắc trước dùng.",
+        "black_box_warnings": "Hoại tử mô nếu rò rỉ ngoài mạch - phải truyền qua đường tĩnh mạch trung tâm.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Beta-blockers (non-selective)",
+                    "mechanism": "Beta-blockers không đối kháng tác dụng alpha của phenylephrine, nhưng ngăn chặn phản xạ nhịp chậm. Kết quả: tăng huyết áp nặng mà không có nhịp chậm bù trừ.",
+                    "effect": "Tăng huyết áp nặng, nguy cơ đột quỵ, nhồi máu cơ tim",
+                    "management": "TRÁNH dùng phenylephrine với beta-blockers non-selective. Nếu cần: dùng liều thấp, theo dõi huyết áp chặt chẽ."
+                },
+                {
+                    "drug": "MAOIs (Monoamine Oxidase Inhibitors)",
+                    "mechanism": "MAOIs ức chế enzyme MAO chuyển hóa phenylephrine, làm tăng nồng độ và thời gian tác dụng.",
+                    "effect": "Tăng tác dụng và thời gian tác dụng, tăng nguy cơ tăng huyết áp nặng",
+                    "management": "GIẢM LIỀU phenylephrine xuống 10-25% liều thông thường. Theo dõi huyết áp chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Tricyclic Antidepressants (TCAs)",
+                    "mechanism": "TCAs ức chế tái hấp thu norepinephrine, tăng tác dụng của phenylephrine.",
+                    "effect": "Tăng tác dụng, tăng nguy cơ tăng huyết áp nặng",
+                    "management": "Thận trọng, giảm liều. Theo dõi huyết áp chặt chẽ."
+                },
+                {
+                    "drug": "Alpha-blockers",
+                    "mechanism": "Alpha-blockers đối kháng tác dụng alpha của phenylephrine.",
+                    "effect": "Giảm hiệu quả điều trị, có thể cần liều cao hơn",
+                    "management": "Có thể cần tăng liều. Theo dõi đáp ứng điều trị."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng phenylephrine (hiếm)",
+                "Thiếu máu cục bộ mô nặng (chi, ruột, tim) - thận trọng"
+            ],
+            "tương_đối": [
+                "Sốc giảm thể tích chưa bù dịch đầy đủ - bù dịch trước",
+                "Bệnh mạch máu ngoại biên nặng - tăng nguy cơ thiếu máu cục bộ",
+                "Bệnh mạch vành - tăng nguy cơ thiếu máu cục bộ cơ tim",
+                "Suy thận nặng - có thể giảm tưới máu thận",
+                "Dùng với beta-blockers non-selective - tăng huyết áp nặng",
+                "Dùng với MAOIs - tăng tác dụng, cần giảm liều",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm với tác dụng phụ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Phenylephrine là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Phenylephrine có thể qua nhau thai và có thể gây co mạch, giảm tưới máu nhau thai. Tuy nhiên, trong cấp cứu và gây mê, lợi ích vượt quá nguy cơ. Phenylephrine được sử dụng rộng rãi trong gây mê sản khoa để điều trị hạ huyết áp do gây tê tủy sống/ngoài màng cứng.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Phenylephrine có thời gian bán thải 2-3 giờ và chuyển hóa ở gan. Không có khả năng bài tiết vào sữa mẹ ở nồng độ đáng kể. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Phenylephrine không bài tiết vào sữa mẹ ở nồng độ đáng kể."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng (chuyển hóa ở gan)",
+            "severe": "Thận trọng, có thể tăng tác dụng (giảm chuyển hóa)",
+            "notes": "Phenylephrine chuyển hóa ở gan bởi MAO. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng. Tuy nhiên, do thời gian bán thải dài (2-3 giờ), tích lũy ít hơn so với catecholamine."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng huyết áp nặng (có thể >200/120 mmHg)",
+                "Nhịp chậm phản xạ (do tăng huyết áp)",
+                "Thiếu máu cục bộ chi, ruột, cơ tim",
+                "Nhồi máu cơ tim",
+                "Đột quỵ",
+                "Hoại tử mô (nếu rò rỉ ngoài mạch)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Có thể dùng thuốc giãn mạch (phentolamine, nitroglycerin) để đối kháng tác dụng alpha. Atropine có thể dùng nếu nhịp chậm nặng.",
+            "treatment": [
+                "Ngừng ngay phenylephrine nếu đang truyền",
+                "Theo dõi ECG và huyết áp liên tục",
+                "Nếu tăng huyết áp nặng:",
+                "  - Phentolamine 5-10mg IV (đối kháng alpha, giảm huyết áp)",
+                "  - Hoặc Nitroglycerin IV (giãn mạch, giảm huyết áp)",
+                "Nếu nhịp chậm nặng:",
+                "  - Atropine 0.5-1mg IV (chống nhịp chậm phản xạ)",
+                "Nếu thiếu máu cục bộ:",
+                "  - Ngừng phenylephrine",
+                "  - Điều trị hỗ trợ (giảm đau, chống đông nếu cần)",
+                "Nếu hoại tử mô (tiêm ngoài mạch):",
+                "  - Phentolamine 5-10mg pha trong 10-15ml NS tiêm quanh vùng hoại tử (trong vòng 12 giờ)",
+                "  - Chườm ấm",
+                "  - Có thể cần phẫu thuật nếu hoại tử nặng",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, ECG trong ít nhất 2-4 giờ"
+            ],
+            "monitoring": "Theo dõi ECG, huyết áp, nhịp tim liên tục trong ít nhất 2-4 giờ sau khi dùng. Theo dõi tưới máu mô (da, chi, thận). Theo dõi lâu hơn nếu có biến chứng (nhồi máu cơ tim, đột quỵ, thiếu máu cục bộ)."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Phentolamine",
+                    "mechanism": "Alpha-blocker, đối kháng tác dụng alpha của phenylephrine (co mạch, tăng huyết áp)",
+                    "indication": "Tăng huyết áp nặng do quá liều phenylephrine, hoại tử mô do tiêm ngoài mạch",
+                    "dose": "5-10mg IV cho tăng huyết áp, 5-10mg pha trong 10-15ml NS tiêm quanh vùng hoại tử (trong vòng 12 giờ)"
+                },
+                {
+                    "agent": "Nitroglycerin",
+                    "mechanism": "Giãn mạch, giảm huyết áp",
+                    "indication": "Tăng huyết áp nặng do quá liều phenylephrine",
+                    "dose": "5-10mcg/phút IV, tăng dần đến khi đạt huyết áp mục tiêu"
+                },
+                {
+                    "agent": "Atropine",
+                    "mechanism": "Chống nhịp chậm phản xạ (do tăng huyết áp)",
+                    "indication": "Nhịp chậm nặng do phản xạ baroreceptor",
+                    "dose": "0.5-1mg IV, lặp lại nếu cần"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha 10mg trong 250ml NS = 40 mcg/ml. Hoặc pha 10mg trong 100ml NS = 100 mcg/ml.",
+                "infusion_rate": "Khởi đầu 0.5-1.5 mcg/kg/phút IV infusion. Tăng dần 0.5 mcg/kg/phút mỗi 10 phút theo đáp ứng. Liều thường dùng: 0.5-6 mcg/kg/phút. Tối đa: 10 mcg/kg/phút.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion."
+                ],
+                "notes": "QUAN TRỌNG: 1) Pha đúng nồng độ: 10mg/250ml NS = 40 mcg/ml, 2) TUYỆT ĐỐI phải truyền qua đường tĩnh mạch trung tâm (nguy cơ hoại tử nếu rò rỉ), 3) Khởi đầu liều thấp (0.5-1.5 mcg/kg/phút), 4) Theo dõi huyết áp và nhịp tim chặt chẽ (nhịp chậm phản xạ), 5) Bù dịch đầy đủ trước khi dùng, 6) Thuốc lựa chọn trong gây mê (tăng huyết áp mà không tăng nhịp tim)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Phenylephrine",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "Surviving Sepsis Campaign Guidelines",
+                "UpToDate - Phenylephrine: Drug Information",
+                "Anesthesia Guidelines - Phenylephrine for spinal/epidural hypotension",
+                "Medscape - Phenylephrine Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
+    "Milrinone": {
+        "group": "Emergency - Phosphodiesterase-3 Inhibitor (Inotrope)",
+        "vietnamese_name": "Milrinone, Primacor",
+        "administration": ["IV"],
+        "indications": [
+            "Suy tim cấp (acute heart failure)",
+            "Sốc tim (cardiogenic shock)",
+            "Suy tim mạn tính mất bù (decompensated heart failure)",
+            "Sau phẫu thuật tim (post-cardiac surgery)",
+            "Bệnh nhân không đáp ứng với dobutamine"
+        ],
+        "contraindications": [
+            "Dị ứng với milrinone",
+            "Sốc giảm thể tích (chưa bù dịch)",
+            "Hẹp động mạch chủ nặng",
+            "Rối loạn nhịp tim nặng"
+        ],
+        "dosage": {
+            "adult_loading": "50 mcg/kg IV bolus trong 10 phút (tùy chọn)",
+            "adult_maintenance": "0.375-0.75 mcg/kg/phút IV infusion",
+            "adult_max": "1.13 mcg/kg/phút (không vượt quá)",
+            "notes": "Pha 20mg trong 100ml D5W = 200 mcg/ml. Có thể bắt đầu với loading dose hoặc chỉ dùng maintenance. Điều chỉnh liều theo đáp ứng huyết động."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50% (CrCl 30-50: 0.25-0.5 mcg/kg/phút)",
+            "under_30": "Giảm liều 50-75% (CrCl <30: 0.125-0.375 mcg/kg/phút)"
+        },
+        "side_effects": [
+            "Rối loạn nhịp tim (nhịp nhanh thất, rung nhĩ)",
+            "Hạ huyết áp (do giãn mạch)",
+            "Đau đầu",
+            "Buồn nôn",
+            "Giảm tiểu cầu (hiếm)",
+            "Tăng men gan (hiếm)"
+        ],
+        "interactions": [
+            "Thuốc lợi tiểu: tăng nguy cơ mất nước, hạ huyết áp",
+            "Thuốc hạ huyết áp: tăng nguy cơ hạ huyết áp",
+            "Digoxin: không có tương tác đáng kể"
+        ],
+        "pregnancy": "C - Thận trọng trong thai kỳ",
+        "mechanism_of_action": "Milrinone là chất ức chế phosphodiesterase-3 (PDE-3), enzyme phân hủy cAMP trong tế bào cơ tim và mạch máu. Bằng cách ức chế PDE-3, milrinone tăng nồng độ cAMP trong tế bào, dẫn đến: (1) Tăng co bóp cơ tim (inotropic effect) - do tăng calcium trong tế bào cơ tim, (2) Giãn mạch (vasodilatory effect) - do giãn cơ trơn mạch máu. Kết quả: tăng cung lượng tim, giảm áp lực đổ đầy tim (preload và afterload), cải thiện huyết động. Khác với dobutamine (catecholamine), milrinone không tác động qua beta-receptors và không bị ức chế bởi beta-blockers.",
+        "monitoring": [
+            "Huyết áp liên tục (arterial line nếu có thể)",
+            "Nhịp tim và ECG (rối loạn nhịp tim)",
+            "Cung lượng tim (nếu có thể đo)",
+            "Áp lực đổ đầy tim (CVP, PCWP)",
+            "Lactate máu (tưới máu mô)",
+            "Chức năng thận (creatinine, nước tiểu giờ)",
+            "Tiểu cầu (nếu dùng kéo dài)"
+        ],
+        "precautions": [
+            "Bù dịch đầy đủ trước khi dùng (tránh hạ huyết áp do giãn mạch)",
+            "Theo dõi rối loạn nhịp tim (tăng nguy cơ nhịp nhanh thất)",
+            "Thận trọng ở bệnh nhân bệnh mạch vành (tăng nhu cầu oxy cơ tim)",
+            "Giảm liều ở suy thận (thải trừ qua thận)",
+            "Không dùng trong sốc giảm thể tích",
+            "Có thể dùng kết hợp với dobutamine hoặc dopamine",
+            "Không bị ức chế bởi beta-blockers (ưu điểm so với dobutamine)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (dài hơn dobutamine)",
+            "onset": "5-15 phút sau khi bắt đầu truyền",
+            "duration": "Ngắn, cần truyền liên tục",
+            "protein_binding": "70%",
+            "clearance": "Thận (80-90% thải trừ qua thận dạng nguyên dạng)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch đã pha: ổn định trong 24 giờ ở nhiệt độ phòng.",
+        "black_box_warnings": "Có thể gây rối loạn nhịp tim nặng (nhịp nhanh thất, rung nhĩ). Theo dõi ECG chặt chẽ.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc lợi tiểu (furosemide, thiazide)",
+                    "mechanism": "Milrinone giãn mạch và tăng lợi tiểu, thuốc lợi tiểu tăng mất nước",
+                    "effect": "Tăng nguy cơ mất nước, hạ huyết áp, suy thận",
+                    "management": "Thận trọng. Theo dõi huyết áp, cân nặng, chức năng thận. Có thể cần giảm liều thuốc lợi tiểu hoặc bù dịch."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc hạ huyết áp (ACE inhibitors, ARBs, nitrates)",
+                    "mechanism": "Tác dụng hiệp đồng giãn mạch",
+                    "effect": "Tăng nguy cơ hạ huyết áp",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều thuốc hạ huyết áp."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng milrinone",
+                "Sốc giảm thể tích chưa bù dịch đầy đủ"
+            ],
+            "tương_đối": [
+                "Hẹp động mạch chủ nặng - tăng nguy cơ thiếu máu cục bộ",
+                "Rối loạn nhịp tim nặng - tăng nguy cơ rối loạn nhịp",
+                "Bệnh mạch vành - tăng nhu cầu oxy cơ tim",
+                "Suy thận nặng (CrCl <30) - giảm liều 50-75%",
+                "Suy gan nặng - thận trọng (chuyển hóa một phần ở gan)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Milrinone là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Milrinone có thể qua nhau thai. Trong cấp cứu (suy tim cấp, sốc tim), lợi ích cứu sống mẹ vượt quá nguy cơ cho thai nhi. Suy tim cấp và sốc tim có thể gây tử vong cho cả mẹ và thai nhi nếu không điều trị.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết milrinone có bài tiết vào sữa mẹ hay không. Thời gian bán thải 2-3 giờ, protein binding 70%. Có thể bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng (chuyển hóa một phần ở gan)",
+            "severe": "Thận trọng, có thể tăng tác dụng (giảm chuyển hóa)",
+            "notes": "Milrinone chuyển hóa một phần ở gan, nhưng chủ yếu thải trừ qua thận (80-90%). Suy gan có thể làm giảm chuyển hóa, nhưng ảnh hưởng ít hơn so với suy thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nặng (do giãn mạch quá mức)",
+                "Rối loạn nhịp tim nặng (nhịp nhanh thất, rung nhĩ, rung thất)",
+                "Nhịp tim nhanh nặng (>150 bpm)",
+                "Thiếu máu cục bộ cơ tim (đau ngực, thay đổi ST)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Có thể dùng thuốc co mạch (norepinephrine) để đối kháng tác dụng giãn mạch. Điều trị rối loạn nhịp tim theo protocol.",
+            "treatment": [
+                "Ngừng ngay milrinone nếu đang truyền",
+                "Theo dõi ECG và huyết áp liên tục",
+                "Nếu hạ huyết áp nặng:",
+                "  - Bù dịch (NS, LR) nếu chưa đủ",
+                "  - Norepinephrine 0.05-2 mcg/kg/phút IV (co mạch, tăng huyết áp)",
+                "  - Hoặc Vasopressin 0.03-0.04 units/phút IV",
+                "Nếu rối loạn nhịp tim:",
+                "  - Điều trị theo protocol rối loạn nhịp",
+                "  - Nhịp nhanh thất: Amiodarone, Lidocaine",
+                "  - Rung nhĩ: Rate control hoặc rhythm control",
+                "Nếu nhịp tim nhanh nặng:",
+                "  - Beta-blocker (metoprolol, esmolol) - THẬN TRỌNG nếu có hạ huyết áp",
+                "  - Hoặc Diltiazem, Verapamil - THẬN TRỌNG",
+                "Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, ECG trong ít nhất 4-6 giờ"
+            ],
+            "monitoring": "Theo dõi ECG, huyết áp, nhịp tim liên tục trong ít nhất 4-6 giờ sau khi dùng. Theo dõi lâu hơn nếu có biến chứng (rối loạn nhịp, nhồi máu cơ tim)."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có reversal agent đặc hiệu. Ngừng truyền và điều trị hỗ trợ (bù dịch, vasopressor nếu hạ huyết áp, điều trị rối loạn nhịp)."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha 20mg trong 100ml D5W = 200 mcg/ml. Hoặc pha 20mg trong 250ml D5W = 80 mcg/ml.",
+                "infusion_rate": "Loading dose (tùy chọn): 50 mcg/kg IV bolus trong 10 phút. Maintenance: 0.375-0.75 mcg/kg/phút IV infusion. Tối đa: 1.13 mcg/kg/phút. Điều chỉnh liều theo đáp ứng huyết động. Giảm liều ở suy thận.",
+                "compatibility": ["D5W (5% Dextrose)", "NS (0.9% NaCl) - có thể dùng nhưng D5W ưu tiên"],
+                "incompatibility": [
+                    "Không trộn với furosemide (kết tủa). Dùng đường truyền riêng."
+                ],
+                "notes": "QUAN TRỌNG: 1) Pha đúng nồng độ: 20mg/100ml D5W = 200 mcg/ml, 2) Có thể bắt đầu với loading dose hoặc chỉ dùng maintenance, 3) Bù dịch đầy đủ trước khi dùng (tránh hạ huyết áp), 4) Theo dõi huyết áp và ECG chặt chẽ (rối loạn nhịp), 5) Giảm liều ở suy thận (CrCl 30-50: giảm 25-50%, CrCl <30: giảm 50-75%), 6) Không trộn với furosemide (kết tủa)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Milrinone (Primacor)",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "Heart Failure Guidelines - ACC/AHA",
+                "UpToDate - Milrinone: Drug Information",
+                "Medscape - Milrinone Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
     }
 }
 

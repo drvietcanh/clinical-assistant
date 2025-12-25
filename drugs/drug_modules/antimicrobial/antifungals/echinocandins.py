@@ -40,6 +40,18 @@ ECHINOCANDINS_DRUGS = {
             "Tacrolimus: giảm nhẹ nồng độ tacrolimus, theo dõi"
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "IDSA Candidiasis Guidelines 2024",
+            "IDSA Aspergillosis Guidelines 2024",
+            "ESCMID-ECMM-ERS Guidelines"
+        ],
         "mechanism_of_action": "Echinocandin ức chế enzyme 1,3-β-D-glucan synthase, giảm tổng hợp β-D-glucan - thành phần chính của vách tế bào nấm. Thành tế bào suy yếu → ly giải. Diệt nấm Candida, kìm nấm Aspergillus.",
         "monitoring": [
             "Men gan (ALT/AST) trước và định kỳ",
@@ -189,6 +201,17 @@ ECHINOCANDINS_DRUGS = {
             "Ít tương tác qua CYP (không ức chế/cảm ứng đáng kể)"
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "IDSA Candidiasis Guidelines 2024",
+            "IDSA Aspergillosis Guidelines 2024"
+        ],
         "mechanism_of_action": "Echinocandin ức chế 1,3-β-D-glucan synthase → giảm tổng hợp vách tế bào nấm. Diệt nấm Candida, kìm nấm Aspergillus.",
         "monitoring": [
             "Men gan định kỳ",
@@ -286,7 +309,7 @@ ECHINOCANDINS_DRUGS = {
                 "IDSA Guidelines - Candidiasis",
                 "UpToDate - Micafungin: Drug Information"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High (FDA-approved, guideline-supported)"
         }
     },
@@ -326,6 +349,17 @@ ECHINOCANDINS_DRUGS = {
             "Không cần chỉnh liều với cyclosporine, tacrolimus, rifampin"
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "IDSA Candidiasis Guidelines 2024",
+            "IDSA Aspergillosis Guidelines 2024"
+        ],
         "mechanism_of_action": "Echinocandin ức chế 1,3-β-D-glucan synthase → giảm tổng hợp thành tế bào nấm. Diệt nấm Candida, kìm nấm Aspergillus.",
         "monitoring": [
             "Men gan định kỳ",
@@ -410,7 +444,7 @@ ECHINOCANDINS_DRUGS = {
                 "IDSA Guidelines - Candidiasis",
                 "UpToDate - Anidulafungin: Drug Information"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "High (FDA-approved, guideline-supported)"
         }
     }

@@ -10,6 +10,7 @@ from .benzodiazepines import BENZODIAZEPINES_DRUGS
 from .muscle_relaxants import MUSCLE_RELAXANTS_DRUGS
 from .antiparkinsonian import ANTIPARKINSONIAN_DRUGS
 from .cerebral_circulation import CEREBRAL_CIRCULATION_DRUGS
+from .neurological_combinations import NEUROLOGICAL_COMBINATIONS_DRUGS
 from .migraine_cgrp_drugs import MIGRAINE_CGRP_DRUGS
 from .multiple_sclerosis_drugs import MULTIPLE_SCLEROSIS_DRUGS
 
@@ -23,6 +24,7 @@ NEUROLOGICAL_DRUGS = {
     **MUSCLE_RELAXANTS_DRUGS,
     **ANTIPARKINSONIAN_DRUGS,
     **CEREBRAL_CIRCULATION_DRUGS,
+    **NEUROLOGICAL_COMBINATIONS_DRUGS,
     **MIGRAINE_CGRP_DRUGS,
     **MULTIPLE_SCLEROSIS_DRUGS,
 }

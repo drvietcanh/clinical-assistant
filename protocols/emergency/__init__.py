@@ -32,6 +32,13 @@ from .spinal_cord_injury import render as render_spinal_cord_injury
 from .green_pit_viper_bite import render as render_green_pit_viper_bite
 from .cobra_bite import render as render_cobra_bite
 from .krait_bite import render as render_krait_bite
+from .acute_pulmonary_edema import render as render_acute_pulmonary_edema
+from .tca_overdose import render as render_tca_overdose
+from .digoxin_toxicity import render as render_digoxin_toxicity
+from .severe_hypoglycemia import render as render_severe_hypoglycemia
+from .chest_trauma import render as render_chest_trauma
+from .abdominal_trauma import render as render_abdominal_trauma
+from .burn_management import render as render_burn_management
 
 
 __all__ = [
@@ -64,5 +71,12 @@ __all__ = [
     'render_green_pit_viper_bite',
     'render_cobra_bite',
     'render_krait_bite',
+    'render_acute_pulmonary_edema',
+    'render_tca_overdose',
+    'render_digoxin_toxicity',
+    'render_severe_hypoglycemia',
+    'render_chest_trauma',
+    'render_abdominal_trauma',
+    'render_burn_management',
 ]
 

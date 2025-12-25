@@ -719,6 +719,185 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "evidence_level": "High – guideline-based",
         },
     },
+    
+    "Thiopental": {
+        "group": "Supportive - Barbiturate Anesthetic (ICU)",
+        "vietnamese_name": "Thiopental, Thiopentone, Pentothal",
+        "administration": ["IV"],
+        "indications": [
+            "Gây mê khởi đầu (induction of anesthesia)",
+            "Barbiturate coma trong tăng áp lực nội sọ (intracranial hypertension)",
+            "Status epilepticus kháng trị",
+            "Bảo vệ não trong phẫu thuật tim (cerebral protection)"
+        ],
+        "contraindications": [
+            "Dị ứng thiopental hoặc barbiturates",
+            "Porphyria (bệnh porphyria) - chống chỉ định tuyệt đối",
+            "Suy hô hấp nặng không có hỗ trợ thông khí",
+            "Sốc nặng (shock)"
+        ],
+        "dosage": {
+            "adult_induction": "3-5 mg/kg IV bolus (thường 4 mg/kg)",
+            "adult_barbiturate_coma_loading": "10-20 mg/kg IV (truyền trong 30-60 phút)",
+            "adult_barbiturate_coma_maintenance": "1-3 mg/kg/giờ IV infusion",
+            "adult_status_epilepticus": "10-20 mg/kg IV bolus, sau đó 1-3 mg/kg/giờ",
+            "pediatric_induction": "3-5 mg/kg IV bolus",
+            "notes": "Tác dụng nhanh (30-60 giây), ngắn (5-10 phút sau liều đơn). Barbiturate coma: chỉ dùng khi các biện pháp khác thất bại, cần theo dõi ICP, EEG."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng (có thể tích lũy)",
+            "under_30": "Thận trọng, giảm liều (tích lũy, tác dụng kéo dài)"
+        },
+        "side_effects": [
+            "Ức chế hô hấp nặng (phải hỗ trợ thông khí)",
+            "Hạ huyết áp (do giãn mạch, ức chế tim)",
+            "Ức chế tim (giảm cung lượng tim)",
+            "Co thắt phế quản (hiếm)",
+            "Phản ứng dị ứng (hiếm nhưng nguy hiểm)",
+            "Tích lũy ở mô mỡ (tác dụng kéo dài khi dùng liều cao, kéo dài)"
+        ],
+        "interactions": [
+            "Thuốc ức chế TKTW: tăng tác dụng",
+            "Thuốc hạ huyết áp: tăng nguy cơ hạ huyết áp",
+            "Warfarin: tăng tác dụng (ức chế chuyển hóa)"
+        ],
+        "pregnancy": "C - Thận trọng trong thai kỳ",
+        "mechanism_of_action": "Thiopental là barbiturate tác dụng ngắn. Tăng cường hoạt tính của GABA tại thụ thể GABA_A, làm tăng dòng chloride vào tế bào thần kinh, gây ưu phân cực màng và ức chế dẫn truyền thần kinh. Thiopental có khởi phát rất nhanh (30-60 giây) do phân bố nhanh vào não, nhưng tác dụng ngắn (5-10 phút) do phân bố lại vào mô mỡ. Khi dùng liều cao, kéo dài (barbiturate coma), thuốc tích lũy ở mô mỡ và có thể có tác dụng kéo dài. Thiopental làm giảm chuyển hóa não, giảm lưu lượng máu não, giảm áp lực nội sọ (ICP) - có lợi trong tăng áp lực nội sọ.",
+        "monitoring": [
+            "Huyết áp liên tục (arterial line nếu có thể)",
+            "Nhịp tim và ECG",
+            "Hô hấp (phải hỗ trợ thông khí)",
+            "Áp lực nội sọ (ICP) - nếu dùng cho barbiturate coma",
+            "EEG (nếu dùng cho barbiturate coma - mục tiêu burst suppression)",
+            "Nồng độ thiopental trong máu (nếu có thể)",
+            "Chức năng gan, thận"
+        ],
+        "precautions": [
+            "PHẢI hỗ trợ thông khí (bệnh nhân không thể thở tự nhiên)",
+            "TUYỆT ĐỐI KHÔNG dùng ở bệnh nhân porphyria (có thể gây cơn porphyria nặng, tử vong)",
+            "Thận trọng ở sốc (hạ huyết áp nặng)",
+            "Thận trọng ở suy tim (ức chế tim)",
+            "Thận trọng ở suy gan, suy thận (tích lũy, tác dụng kéo dài)",
+            "Barbiturate coma: chỉ dùng khi các biện pháp khác thất bại, cần theo dõi ICP, EEG",
+            "Mục tiêu barbiturate coma: burst suppression trên EEG",
+            "Có thể gây phản ứng dị ứng nặng (hiếm)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10-12 giờ (sau phân bố lại), có thể dài hơn khi dùng liều cao, kéo dài",
+            "onset": "30-60 giây (rất nhanh)",
+            "duration": "5-10 phút (liều đơn), kéo dài khi dùng liều cao, kéo dài",
+            "protein_binding": "80-85%",
+            "clearance": "Gan (chuyển hóa chậm), tích lũy ở mô mỡ"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch đã pha: ổn định trong 24 giờ ở nhiệt độ phòng.",
+        "black_box_warnings": "TUYỆT ĐỐI KHÔNG dùng ở bệnh nhân porphyria - có thể gây cơn porphyria nặng, tử vong. Ức chế hô hấp nặng - PHẢI hỗ trợ thông khí.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Thiopental ức chế CYP2C9, giảm chuyển hóa warfarin",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Giảm liều warfarin nếu cần."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc ức chế TKTW (benzodiazepines, opioids, propofol)",
+                    "mechanism": "Tác dụng hiệp đồng ức chế TKTW",
+                    "effect": "Tăng ức chế hô hấp, hạ huyết áp",
+                    "management": "Thận trọng. Giảm liều các thuốc. Theo dõi hô hấp, huyết áp chặt chẽ."
+                },
+                {
+                    "drug": "Thuốc hạ huyết áp",
+                    "mechanism": "Tác dụng hiệp đồng giãn mạch",
+                    "effect": "Tăng nguy cơ hạ huyết áp",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng thiopental hoặc barbiturates",
+                "Porphyria (bệnh porphyria) - chống chỉ định tuyệt đối, có thể gây cơn porphyria nặng, tử vong",
+                "Suy hô hấp nặng không có hỗ trợ thông khí"
+            ],
+            "tương_đối": [
+                "Sốc nặng - tăng nguy cơ hạ huyết áp",
+                "Suy tim - ức chế tim",
+                "Suy gan nặng - tích lũy, tác dụng kéo dài",
+                "Suy thận nặng - tích lũy, tác dụng kéo dài",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm, tác dụng kéo dài"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Thiopental là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Thiopental có thể qua nhau thai. Được sử dụng trong gây mê sản khoa và có vẻ an toàn. Trong cấp cứu, lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết thiopental có bài tiết vào sữa mẹ hay không. Thời gian bán thải 10-12 giờ, protein binding 80-85%. Có thể bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng (chuyển hóa ở gan)",
+            "severe": "Thận trọng, giảm liều (tích lũy, tác dụng kéo dài)",
+            "notes": "Thiopental chuyển hóa ở gan. Suy gan làm giảm chuyển hóa, tăng nồng độ và kéo dài tác dụng. Giảm liều ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp nặng (ngừng thở)",
+                "Hạ huyết áp nặng",
+                "Ức chế tim (giảm cung lượng tim)",
+                "Hôn mê sâu",
+                "Tích lũy ở mô mỡ (tác dụng kéo dài)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Hỗ trợ thông khí và huyết động.",
+            "treatment": [
+                "Hỗ trợ thông khí: Đặt nội khí quản, thở máy cho đến khi hồi phục",
+                "Hỗ trợ huyết động:",
+                "  - Bù dịch (NS, LR) nếu chưa đủ",
+                "  - Vasopressor (norepinephrine, epinephrine) nếu hạ huyết áp nặng",
+                "  - Inotrope (dobutamine, milrinone) nếu ức chế tim",
+                "Theo dõi: Huyết áp, nhịp tim, ECG, hô hấp liên tục",
+                "Nếu tích lũy (dùng liều cao, kéo dài):",
+                "  - Hỗ trợ thông khí và huyết động cho đến khi hồi phục (có thể >24 giờ)",
+                "  - Có thể cần lọc máu (hemodialysis) nếu tích lũy nặng"
+            ],
+            "monitoring": "Theo dõi huyết áp, nhịp tim, ECG, hô hấp liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có tích lũy (dùng liều cao, kéo dài)."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có reversal agent đặc hiệu. Hỗ trợ thông khí và huyết động cho đến khi hồi phục."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha bột: 500mg-1g trong 20-40ml NS = 25mg/ml. Hoặc dùng dung dịch đã pha sẵn.",
+                "infusion_rate": "Induction: 3-5 mg/kg IV bolus chậm (30-60 giây). Barbiturate coma: Loading 10-20 mg/kg IV truyền trong 30-60 phút, sau đó 1-3 mg/kg/giờ IV infusion. Status epilepticus: 10-20 mg/kg IV bolus, sau đó 1-3 mg/kg/giờ.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion."
+                ],
+                "notes": "QUAN TRỌNG: 1) PHẢI hỗ trợ thông khí (bệnh nhân không thể thở tự nhiên), 2) TUYỆT ĐỐI KHÔNG dùng ở bệnh nhân porphyria, 3) Thận trọng ở sốc (hạ huyết áp nặng), 4) Barbiturate coma: chỉ dùng khi các biện pháp khác thất bại, theo dõi ICP, EEG, 5) Mục tiêu barbiturate coma: burst suppression trên EEG."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Thiopental (Pentothal)",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "Intracranial Hypertension Guidelines",
+                "UpToDate - Thiopental: Drug Information",
+                "Anesthesia Guidelines - Barbiturate Anesthetics",
+                "Medscape - Thiopental Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
 }
 
 __all__ = ["SEDATIVES_ANESTHETICS_ICU_DRUGS"]

@@ -225,7 +225,181 @@ ANTIMETABOLITES_DRUGS = {
         'UpToDate - Gemcitabine Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-02-05', 'evidence_level':
-        'High (FDA-approved, extensive clinical data)'}}}
+        'High (FDA-approved, extensive clinical data)'}},
+    "Capecitabine": {
+        "group": "Oncology - Antimetabolite",
+        "vietnamese_name": "Capecitabine, Xeloda",
+        "administration": ["PO"],
+        "indications": [
+            "Ung thư đại trực tràng (adjuvant và metastatic)",
+            "Ung thư vú (metastatic)",
+            "Ung thư dạ dày (metastatic)",
+            "Ung thư tụy (metastatic)"
+        ],
+        "contraindications": [
+            "Dị ứng capecitabine",
+            "Thiếu hụt DPD (dihydropyrimidine dehydrogenase) nặng",
+            "Giảm bạch cầu/tiểu cầu nặng",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_standard": "1250mg/m² PO x 2 lần/ngày (ngày 1-14, mỗi 21 ngày)",
+            "adult_reduced": "1000mg/m² PO x 2 lần/ngày nếu độc tính",
+            "notes": "Uống với thức ăn (30 phút sau bữa ăn). Capecitabine là prodrug của 5-FU, chuyển hóa thành 5-FU trong tế bào ung thư. Dạng uống, tiện lợi hơn 5-FU IV."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25%",
+            "under_30": "CHỐNG CHỈ ĐỊNH (CrCl <30)"
+        },
+        "side_effects": [
+            "Loét miệng (stomatitis - phổ biến)",
+            "Tiêu chảy (phổ biến, có thể nặng)",
+            "Hội chứng bàn tay-bàn chân (hand-foot syndrome - phổ biến, đặc trưng)",
+            "Giảm bạch cầu, tiểu cầu (myelosuppression)",
+            "Buồn nôn, nôn",
+            "Mệt mỏi",
+            "Độc tim (hiếm nhưng nguy hiểm)",
+            "Tăng bilirubin"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu - theo dõi INR",
+            "Phenytoin: tăng nồng độ phenytoin",
+            "Leucovorin: tăng hiệu quả và độc tính"
+        ],
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Capecitabine là prodrug của 5-fluorouracil (5-FU), được chuyển hóa thành 5-FU trong tế bào ung thư qua 3 bước: (1) Capecitabine → 5'-deoxy-5-fluorocytidine (5'-DFCR) bởi carboxylesterase ở gan, (2) 5'-DFCR → 5'-deoxy-5-fluorouridine (5'-DFUR) bởi cytidine deaminase, (3) 5'-DFUR → 5-FU bởi thymidine phosphorylase (TP) trong tế bào ung thư. 5-FU sau đó chuyển hóa thành 5-fluorodeoxyuridine monophosphate (FdUMP) và 5-fluorouridine triphosphate (FUTP). FdUMP ức chế thymidylate synthase (TS), ngăn tổng hợp thymidine (thành phần DNA). FUTP tích hợp vào RNA, gây rối loạn tổng hợp protein. ĐẶC ĐIỂM: (1) Dạng uống của 5-FU, tiện lợi hơn 5-FU IV, (2) Chuyển hóa thành 5-FU trong tế bào ung thư (do TP cao hơn ở tế bào ung thư), (3) Tác dụng phụ tương tự 5-FU: loét miệng, tiêu chảy, myelosuppression, (4) Hội chứng bàn tay-bàn chân (hand-foot syndrome) - đặc trưng của capecitabine, (5) CHỐNG CHỈ ĐỊNH ở thiếu hụt DPD nặng (tương tự 5-FU).",
+        "monitoring": [
+            "Công thức máu toàn phần (CBC) trước mỗi chu kỳ và giữa các chu kỳ",
+            "Chức năng gan (ALT, AST, bilirubin) trước và trong điều trị",
+            "Dấu hiệu loét miệng (stomatitis) - phổ biến",
+            "Dấu hiệu tiêu chảy - phổ biến, có thể nặng",
+            "Hội chứng bàn tay-bàn chân (hand-foot syndrome) - phổ biến, đặc trưng",
+            "Dấu hiệu độc tim (đau ngực, khó thở, rối loạn nhịp) - hiếm nhưng nguy hiểm",
+            "Test DPD trước điều trị nếu có thể (thiếu hụt DPD gây độc tính nặng)",
+            "INR nếu dùng với warfarin"
+        ],
+        "precautions": [
+            "Test DPD trước điều trị nếu có thể (thiếu hụt DPD gây độc tính nặng, có thể tử vong)",
+            "Uống với thức ăn (30 phút sau bữa ăn) để tăng hấp thu",
+            "Hội chứng bàn tay-bàn chân (hand-foot syndrome) - phổ biến, đặc trưng, giảm liều hoặc ngừng nếu nặng",
+            "Giảm liều hoặc ngừng nếu có loét miệng nặng hoặc tiêu chảy nặng",
+            "CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30)",
+            "Theo dõi sát công thức máu (nguy cơ giảm bạch cầu, tiểu cầu)",
+            "Tương tác với warfarin (tăng nguy cơ chảy máu - theo dõi INR)",
+            "Giảm liều 25% nếu suy thận (CrCl 30-60)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "0.5-1 giờ (capecitabine), 10-20 phút (5-FU)",
+            "onset": "1-2 tuần (tác dụng lâm sàng)",
+            "duration": "Dài (do chuyển hóa thành 5-FU trong tế bào)",
+            "protein_binding": "Minimal",
+            "metabolism": "Gan (carboxylesterase, cytidine deaminase), sau đó chuyển hóa thành 5-FU trong tế bào ung thư (thymidine phosphorylase), cuối cùng chuyển hóa 5-FU qua DPD",
+            "clearance": "Gan, thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Thiếu hụt DPD (dihydropyrimidine dehydrogenase) có thể gây độc tính nặng và tử vong. Nên test DPD trước điều trị nếu có thể. Theo dõi sát độc tính và ngừng ngay nếu có dấu hiệu độc tính nặng. CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Capecitabine/5-FU có thể ức chế chuyển hóa warfarin",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu hoặc ngừng capecitabine. Có thể cần giảm liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Capecitabine/5-FU có thể ức chế chuyển hóa phenytoin",
+                    "effect": "Tăng nồng độ phenytoin, tăng độc tính phenytoin",
+                    "management": "Theo dõi nồng độ phenytoin và dấu hiệu độc tính. Có thể cần giảm liều phenytoin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng capecitabine",
+                "Thiếu hụt DPD (dihydropyrimidine dehydrogenase) nặng - CHỐNG CHỈ ĐỊNH (có thể tử vong)",
+                "Có thai - CHỐNG CHỈ ĐỊNH (category D)",
+                "Đang cho con bú - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng (CrCl <30) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị",
+                "Suy thận (CrCl 30-60) - giảm liều 25%",
+                "Suy gan - thận trọng",
+                "Bệnh nhân cao tuổi - tăng nguy cơ độc tính"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Capecitabine (chuyển hóa thành 5-FU) gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Capecitabine và 5-FU bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.",
+                "recommendation": "Không cho con bú khi dùng capecitabine. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều 25-50%",
+            "notes": "Capecitabine chuyển hóa qua gan (carboxylesterase, cytidine deaminase). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Loét miệng nặng (stomatitis)",
+                "Tiêu chảy nặng, mất nước",
+                "Hội chứng bàn tay-bàn chân nặng",
+                "Giảm bạch cầu, tiểu cầu nặng (nhiễm trùng, chảy máu)",
+                "Độc tim (hiếm)",
+                "Tăng bilirubin"
+            ],
+            "antidote": "Uridine triacetate (Vistogard) - antidote đặc hiệu cho quá liều 5-FU do thiếu hụt DPD",
+            "treatment": [
+                "Ngừng ngay capecitabine",
+                "Nếu có thiếu hụt DPD và quá liều: dùng uridine triacetate (Vistogard) càng sớm càng tốt",
+                "Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần",
+                "Theo dõi CBC, chức năng gan, chức năng thận",
+                "Điều trị loét miệng (súc miệng, thuốc giảm đau)",
+                "Điều trị tiêu chảy (loperamide, bù dịch)",
+                "Điều trị hội chứng bàn tay-bàn chân (giảm liều, thuốc bôi)"
+            ],
+            "monitoring": "CBC mỗi ngày, chức năng gan, chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu độc tim"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Uridine triacetate (Vistogard)",
+                    "indication": "Quá liều capecitabine/5-FU do thiếu hụt DPD hoặc quá liều do lỗi dùng thuốc",
+                    "dose": "10g PO x 3 lần/ngày x 5 ngày (bắt đầu càng sớm càng tốt)",
+                    "notes": "Antidote đặc hiệu cho quá liều 5-FU. Hiệu quả nhất khi dùng trong vòng 96 giờ sau quá liều."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn (30 phút sau bữa ăn) để tăng hấp thu.",
+                "timing": "1250mg/m² PO x 2 lần/ngày (ngày 1-14, mỗi 21 ngày). Uống với thức ăn (30 phút sau bữa ăn). Có thể giảm liều xuống 1000mg/m² x 2 lần/ngày nếu độc tính.",
+                "notes": "QUAN TRỌNG: 1) Uống với thức ăn (30 phút sau bữa ăn), 2) Hội chứng bàn tay-bàn chân - phổ biến, đặc trưng, 3) Test DPD trước điều trị nếu có thể, 4) CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30), 5) Theo dõi INR nếu dùng với warfarin."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Capecitabine (Xeloda)",
+                "UpToDate - Capecitabine: Drug Information",
+                "NCCN Guidelines - Colorectal Cancer",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data"
+        }
+    }
+}
 
 # Import antimetabolite antifolates
 from .antimetabolite_antifolates import ANTIMETABOLITE_ANTIFOLATES_DRUGS

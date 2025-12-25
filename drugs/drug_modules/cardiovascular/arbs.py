@@ -38,6 +38,17 @@ ARBS = {
             "NSAID: giảm hiệu quả"
         ],
         "pregnancy": "D",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["hyperkalemia", "renal_impairment", "angioedema"]
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA HFrEF ARB Class I/IIa (ACEi intolerant)",
+            "ESC HFrEF ARB Class I/IIa (ACEi intolerant)"
+        ],
         "mechanism_of_action": "Losartan là prodrug, chuyển hóa thành EXP-3174 (hoạt chất) trong gan. Ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin",
         "monitoring": [
             "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
@@ -242,6 +253,17 @@ ARBS = {
             "Lithium: tăng nồng độ lithium"
         ],
         "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["hyperkalemia", "renal_impairment", "angioedema"]
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA HFrEF ARB Class I/IIa (ACEi intolerant)",
+            "ESC HFrEF ARB Class I/IIa (ACEi intolerant)"
+        ],
         "mechanism_of_action": "Ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin.",
         "monitoring": [
             "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
@@ -315,6 +337,17 @@ ARBS = {
             "Digoxin: có thể tăng nồng độ digoxin"
         ],
         "pregnancy": "D",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["hyperkalemia", "renal_impairment", "angioedema"]
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA HFrEF ARB Class I/IIa (ACEi intolerant)",
+            "ESC HFrEF ARB Class I/IIa (ACEi intolerant)"
+        ],
         "mechanism_of_action": "Telmisartan ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Không phải prodrug (khác với losartan), tác dụng trực tiếp. Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin. Đặc điểm: half-life dài nhất trong các ARB (24 giờ), cho phép dùng 1 lần/ngày. Có tác dụng kích hoạt PPAR-gamma (peroxisome proliferator-activated receptor gamma) nhẹ, có thể có lợi ích chuyển hóa.",
         "monitoring": [
             "Creatinine, BUN sau 1-2 tuần khi bắt đầu",

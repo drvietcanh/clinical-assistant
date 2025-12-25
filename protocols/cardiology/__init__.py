@@ -10,6 +10,10 @@ from .atrial_fibrillation import render as render_atrial_fibrillation
 from .dvt_pe import render as render_dvt_pe
 from .bradycardia import render as render_bradycardia
 from .tachycardia import render as render_tachycardia
+from .stemi import render as render_stemi
+from .nstemi import render as render_nstemi
+from .cardiac_tamponade import render as render_cardiac_tamponade
+from .aortic_dissection import render as render_aortic_dissection
 
 
 __all__ = [
@@ -20,5 +24,9 @@ __all__ = [
     'render_dvt_pe',
     'render_bradycardia',
     'render_tachycardia',
+    'render_stemi',
+    'render_nstemi',
+    'render_cardiac_tamponade',
+    'render_aortic_dissection',
 ]
 

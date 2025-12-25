@@ -41,6 +41,17 @@ DIURETICS = {
             "Lithium: tăng nồng độ lithium"
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["renal_hypoperfusion", "ototoxicity", "electrolyte_disturbance"]
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA HFrEF diuretic",
+            "ESC HFrEF diuretic"
+        ],
         "mechanism_of_action": "Ức chế đồng vận chuyển Na-K-2Cl ở quai Henle, tăng thải natri, kali, clo, và nước",
         "monitoring": [
             "Điện giải (K, Na, Cl) trước điều trị và định kỳ",
@@ -168,7 +179,7 @@ DIURETICS = {
                 "Theo dõi điện giải thường xuyên (K, Na, Mg, Ca, Cl)",
                 "Theo dõi chức năng thận (creatinine, BUN, nước tiểu)",
                 "Theo dõi huyết áp, nhịp tim, ECG",
-                "Nếu có điếc (với IV): Ngừng ngay, có thể không hồi phục",
+                "Nếu có điếc (với IV): Ngừng ngay, phần lớn hồi phục nhưng có thể không hoàn toàn ở liều rất cao",
                 "Theo dõi ít nhất 12-24 giờ"
             ],
             "monitoring": "Điện giải (K, Na, Mg, Ca, Cl), chức năng thận (creatinine, BUN, nước tiểu), huyết áp, nhịp tim, ECG, cân bằng dịch, thính giác (nếu IV liều cao)"
@@ -441,6 +452,17 @@ DIURETICS = {
         "Digoxin: tăng nồng độ digoxin"
     ],
     "pregnancy": "D",
+    "risk_flags": {
+        "high_alert": False,
+        "narrow_therapeutic_index": False,
+        "icu_critical_care_only": False,
+        "bleeding_risk": "Low",
+        "organ_toxicity": ["hyperkalemia", "endocrine_gynecomastia"]
+    },
+    "guideline_tags": [
+        "ACC/AHA/HFSA HFrEF MRA Class I",
+        "ESC HFrEF MRA Class I"
+    ],
         "mechanism_of_action": "Potassium-sparing diuretic, aldosterone antagonist. Đối kháng cạnh tranh với aldosterone tại mineralocorticoid receptor trong ống lượn xa và ống góp. Ngăn cản tác dụng của aldosterone (tái hấp thu natri, bài tiết kali). Dẫn đến tăng bài tiết natri và nước, giữ kali (không gây hạ kali). Có tác dụng chống androgen nhẹ (gây tác dụng phụ ở nam giới). Được dùng trong suy tim (giảm tử vong), xơ gan với cổ trướng, hội chứng Conn (cường aldosterone nguyên phát), và tăng huyết áp. Thường dùng kết hợp với loop diuretic hoặc thiazide để tránh hạ kali.",
         "monitoring": [
             "Điện giải (natri, kali) - tăng kali máu là tác dụng phụ chính (nguy hiểm)",
@@ -989,6 +1011,17 @@ DIURETICS = {
             "NSAID: tăng nguy cơ tăng kali máu"
         ],
         "pregnancy": "B",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["hyperkalemia"]
+        },
+        "guideline_tags": [
+            "ACC/AHA/HFSA HFrEF MRA Class I",
+            "ESC HFrEF MRA Class I"
+        ],
         "mechanism_of_action": "Potassium-sparing diuretic, selective aldosterone antagonist. Đối kháng với aldosterone tại mineralocorticoid receptor trong ống lượn xa và ống góp. Khác với spironolactone: eplerenone chọn lọc hơn, ít tác dụng trên androgen và progesterone receptors, do đó ít gây tác dụng phụ nội tiết (không gây vú to ở nam, rối loạn kinh nguyệt ở nữ). Có bằng chứng mạnh làm giảm tỷ lệ tử vong và nhập viện trong suy tim sau nhồi máu cơ tim (EPHESUS study) và suy tim mạn tính (EMPHASIS-HF study).",
         "monitoring": [
             "Điện giải (natri, kali) - tăng kali máu là tác dụng phụ chính (nguy hiểm)",

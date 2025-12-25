@@ -460,6 +460,157 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "evidence_level": "High – FDA-approved, large RCTs (DECLARE-TIMI 58)",
         },
     },
+
+    "Metformin/Glibenclamide": {
+        "group": "Diabetes - Biguanide + Sulfonylurea (Fixed-Dose Combination)",
+        "vietnamese_name": "Metformin/Glibenclamide, Glucovance",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2 (khi cần phối hợp metformin và glibenclamide).",
+        ],
+        "contraindications": [
+            "Dị ứng với metformin, glibenclamide, hoặc sulfonylurea.",
+            "Đái tháo đường type 1.",
+            "Nhiễm toan ceton do đái tháo đường.",
+            "Suy thận nặng (CrCl <30 ml/min/1.73m²).",
+            "Nhiễm toan lactic.",
+            "Suy gan nặng.",
+        ],
+        "dosage": {
+            "adult_initial": "Metformin 500mg/Glibenclamide 2.5mg PO x 2 lần/ngày với bữa ăn.",
+            "adult_maintenance": "Metformin 500mg/Glibenclamide 5mg PO x 2 lần/ngày với bữa ăn.",
+            "notes": "Uống với bữa ăn. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Giảm liều metformin; thận trọng với glibenclamide.",
+            "under_30": "CHỐNG CHỈ ĐỊNH - không dùng nếu CrCl <30 ml/min/1.73m².",
+        },
+        "side_effects": [
+            "Buồn nôn, nôn, tiêu chảy (do metformin).",
+            "Hạ đường huyết (do glibenclamide) - phổ biến và nghiêm trọng.",
+            "Tăng cân (do glibenclamide).",
+            "Nhiễm toan lactic (do metformin) - hiếm nhưng nghiêm trọng.",
+        ],
+        "interactions": [
+            "Rượu: tăng nguy cơ hạ đường huyết và nhiễm toan lactic.",
+            "Beta-blocker: che dấu triệu chứng hạ đường huyết.",
+        ],
+        "pregnancy": "B: metformin; C: glibenclamide - thận trọng trong thai kỳ.",
+        "mechanism_of_action": (
+            "Metformin giảm sản xuất glucose ở gan, tăng sử dụng glucose ở ngoại vi. "
+            "Glibenclamide kích thích tế bào beta tiết insulin. "
+            "Phối hợp hai thuốc có tác dụng hiệp đồng giảm đường huyết."
+        ),
+        "monitoring": [
+            "Đường huyết (HbA1c, glucose máu) trước và trong điều trị.",
+            "Chức năng thận (creatinine, CrCl) - QUAN TRỌNG.",
+            "Dấu hiệu hạ đường huyết - phổ biến và nghiêm trọng.",
+            "Dấu hiệu nhiễm toan lactic.",
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH nếu CrCl <30 ml/min/1.73m².",
+            "Nguy cơ hạ đường huyết cao (do glibenclamide) - theo dõi chặt chẽ.",
+            "Nguy cơ nhiễm toan lactic - ngừng ngay nếu có triệu chứng.",
+            "Uống với bữa ăn.",
+            "TRÁNH RƯỢU hoàn toàn.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Metformin: ~6.2 giờ; Glibenclamide: ~10 giờ.",
+            "onset": "Glibenclamide: 2-4 giờ; Metformin: vài ngày.",
+            "duration": "12 giờ (dùng 2 lần/ngày).",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm.",
+        "black_box_warnings": (
+            "Nhiễm toan lactic: metformin có thể gây nhiễm toan lactic. "
+            "Hạ đường huyết: glibenclamide có thể gây hạ đường huyết nghiêm trọng."
+        ),
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Glucovance (metformin/glibenclamide)",
+                "ADA/EASD Diabetes Guidelines 2024",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved",
+        },
+    },
+
+    "Metformin/Pioglitazone": {
+        "group": "Diabetes - Biguanide + Thiazolidinedione (Fixed-Dose Combination)",
+        "vietnamese_name": "Metformin/Pioglitazone, Actoplus Met",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2 (khi cần phối hợp metformin và pioglitazone).",
+        ],
+        "contraindications": [
+            "Dị ứng với metformin, pioglitazone, hoặc TZD.",
+            "Đái tháo đường type 1.",
+            "Suy tim (NYHA class III-IV).",
+            "Suy thận nặng (CrCl <30 ml/min/1.73m²).",
+            "Nhiễm toan lactic.",
+            "Suy gan nặng.",
+            "Ung thư bàng quang.",
+        ],
+        "dosage": {
+            "adult_initial": "Metformin 500mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn.",
+            "adult_maintenance": "Metformin 500mg/Pioglitazone 15mg hoặc Metformin 850mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn.",
+            "notes": "Uống với bữa ăn. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Giảm liều metformin.",
+            "under_30": "CHỐNG CHỈ ĐỊNH - không dùng nếu CrCl <30 ml/min/1.73m².",
+        },
+        "side_effects": [
+            "Buồn nôn, nôn, tiêu chảy (do metformin).",
+            "Giữ nước, phù (do pioglitazone) - tăng nguy cơ suy tim.",
+            "Tăng cân (do pioglitazone).",
+            "Gãy xương (phụ nữ có nguy cơ tăng).",
+            "Nhiễm toan lactic (do metformin).",
+            "Ung thư bàng quang (tăng nhẹ nguy cơ do pioglitazone).",
+        ],
+        "interactions": [
+            "Insulin: tăng nguy cơ suy tim, phù.",
+        ],
+        "pregnancy": "B: metformin; C: pioglitazone - thận trọng trong thai kỳ.",
+        "mechanism_of_action": (
+            "Metformin giảm sản xuất glucose ở gan, tăng sử dụng glucose ở ngoại vi. "
+            "Pioglitazone tăng nhạy cảm với insulin ở mô ngoại vi. "
+            "Phối hợp hai thuốc có tác dụng hiệp đồng giảm đường huyết."
+        ),
+        "monitoring": [
+            "Đường huyết (HbA1c, glucose máu) trước và trong điều trị.",
+            "Chức năng thận (creatinine, CrCl) - QUAN TRỌNG.",
+            "Dấu hiệu suy tim, phù (do pioglitazone).",
+            "Dấu hiệu nhiễm toan lactic.",
+            "Gãy xương (đặc biệt ở phụ nữ).",
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH nếu suy tim (NYHA class III-IV).",
+            "CHỐNG CHỈ ĐỊNH nếu CrCl <30 ml/min/1.73m².",
+            "Nguy cơ giữ nước, phù, suy tim - ngừng ngay nếu có dấu hiệu.",
+            "Nguy cơ nhiễm toan lactic.",
+            "Uống với bữa ăn.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Metformin: ~6.2 giờ; Pioglitazone: 16-24 giờ.",
+            "onset": "Metformin: vài ngày; Pioglitazone: 2-4 tuần.",
+            "duration": "12 giờ (dùng 2 lần/ngày).",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm.",
+        "black_box_warnings": (
+            "Suy tim: pioglitazone có thể gây suy tim. "
+            "Nhiễm toan lactic: metformin có thể gây nhiễm toan lactic."
+        ),
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Actoplus Met (metformin/pioglitazone)",
+                "ADA/EASD Diabetes Guidelines 2024",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved",
+        },
+    },
 }
 
 __all__ = ["DIABETES_FIXED_DOSE_COMBINATIONS"]

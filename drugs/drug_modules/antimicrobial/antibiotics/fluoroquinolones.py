@@ -24,6 +24,194 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
         "adult_pneumonia": "500-750mg x 1 lần/ngày x 7-14 ngày",
         "notes": "Uống với nhiều nước. Tránh antacid, sắt trong 2 giờ"
     },
+    
+    "Ciprofloxacin": {
+        "group": "Antibiotic - Fluoroquinolone",
+        "vietnamese_name": "Ciprofloxacin, Cipro",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm khuẩn đường tiết niệu (UTI)",
+            "Viêm bể thận",
+            "Nhiễm khuẩn đường tiêu hóa (tiêu chảy do vi khuẩn, thương hàn)",
+            "Nhiễm khuẩn da và mô mềm do Gram âm",
+            "Nhiễm khuẩn xương và khớp do Gram âm",
+            "Viêm phổi bệnh viện do Gram âm (bao gồm Pseudomonas)",
+            "Dự phòng và điều trị bệnh than (anthrax) dạng hít"
+        ],
+        "contraindications": [
+            "Dị ứng fluoroquinolone",
+            "Trẻ em <18 tuổi (trừ chỉ định đặc biệt)",
+            "Có thai",
+            "QT kéo dài hoặc rối loạn nhịp tim nặng"
+        ],
+        "dosage": {
+            "adult_uti_uncomplicated": "250mg PO mỗi 12 giờ x 3 ngày",
+            "adult_uti_complicated": "500mg PO mỗi 12 giờ x 7-14 ngày",
+            "adult_pyelo": "500-750mg PO mỗi 12 giờ x 7-14 ngày",
+            "adult_iv": "400mg IV mỗi 8-12 giờ",
+            "adult_anthrax": "500mg PO mỗi 12 giờ x 60 ngày",
+            "notes": "Uống với nhiều nước. Tránh antacid, sắt, kẽm 2 giờ trước/sau. Không phải lựa chọn đầu tay cho viêm phổi cộng đồng (kém hơn levo/moxi với Streptococcus pneumoniae)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "250-500mg mỗi 12 giờ",
+            "under_30": "250-500mg mỗi 24 giờ",
+            "hemodialysis": "250-500mg sau mỗi lần lọc"
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa",
+            "Nhức đầu, chóng mặt",
+            "Rối loạn gân (viêm gân, đứt gân)",
+            "QT kéo dài",
+            "Rối loạn đường huyết",
+            "Ảo giác, kích động (hiếm, chủ yếu ở người già)"
+        ],
+        "interactions": [
+            "Antacid/Sắt/Kẽm: giảm hấp thu (cách 2 giờ)",
+            "Warfarin: tăng nguy cơ chảy máu (tăng INR)",
+            "Theophylline: tăng nồng độ theophylline",
+            "NSAID: tăng nguy cơ co giật"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Fluoroquinolone thế hệ 2, ức chế DNA gyrase (Gram âm) và topoisomerase IV (Gram dương), ngăn sao chép và sửa chữa DNA. Phổ: Gram âm mạnh (Enterobacteriaceae, Pseudomonas aeruginosa), một số Gram dương và vi khuẩn không điển hình; Gram dương yếu hơn levo/moxi.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng và đáp ứng điều trị",
+            "Đau gân, đặc biệt gân Achilles (ngừng ngay nếu có)",
+            "ECG nếu có nguy cơ QT kéo dài hoặc dùng thuốc kéo dài QT",
+            "Đường huyết (đặc biệt ở bệnh nhân đái tháo đường)",
+            "Triệu chứng thần kinh (kích động, ảo giác) ở người cao tuổi"
+        ],
+        "precautions": [
+            "Nguy cơ viêm gân/đứt gân (tăng ở >60 tuổi, dùng corticosteroid, ghép tạng)",
+            "Nguy cơ QT kéo dài và rối loạn nhịp",
+            "Không dùng thường quy cho viêm phổi cộng đồng (SPN kháng cao hơn)",
+            "Tránh dùng cho trẻ em nếu có thể (nguy cơ tổn thương sụn)",
+            "Tránh dùng đồng thời antacid, sắt, kẽm",
+        ],
+        "pharmacokinetics": {
+            "half_life": "4 giờ",
+            "onset": "1-2 giờ (PO)",
+            "duration": "q12h",
+            "protein_binding": "20-40%",
+            "clearance": "Chủ yếu qua thận, cần chỉnh liều ở suy thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm và ánh sáng.",
+        "black_box_warnings": "Nguy cơ viêm gân/đứt gân, bệnh thần kinh ngoại biên, tác dụng phụ thần kinh trung ương, và làm nặng thêm nhược cơ.",
+    },
+    
+    "Norfloxacin": {
+        "group": "Antibiotic - Fluoroquinolone",
+        "vietnamese_name": "Norfloxacin, Noroxin",
+        "administration": ["PO"],
+        "indications": [
+            "Nhiễm khuẩn đường tiết niệu không biến chứng",
+            "Dự phòng nhiễm khuẩn đường tiết niệu tái phát",
+            "Dự phòng nhiễm khuẩn ở bệnh nhân xơ gan cổ trướng (SBP prophylaxis - ít dùng hơn hiện nay)"
+        ],
+        "contraindications": [
+            "Dị ứng fluoroquinolone",
+            "Trẻ em <18 tuổi",
+            "Có thai",
+            "QT kéo dài"
+        ],
+        "dosage": {
+            "adult_uti": "400mg PO mỗi 12 giờ x 3-7 ngày",
+            "adult_prophylaxis_uti": "200-400mg PO mỗi ngày",
+            "adult_sbp_prophylaxis": "400mg PO mỗi ngày",
+            "notes": "Sinh khả dụng kém hơn ciprofloxacin; chủ yếu dùng cho UTI không biến chứng và một số chỉ định dự phòng."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "400mg mỗi 24 giờ",
+            "under_30": "200-400mg mỗi 24-48 giờ"
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa",
+            "Nhức đầu",
+            "Chóng mặt",
+            "Rối loạn gân",
+            "QT kéo dài"
+        ],
+        "interactions": [
+            "Antacid/Sắt/Kẽm: giảm hấp thu (cách 2 giờ)",
+            "Warfarin: tăng INR",
+            "NSAID: tăng nguy cơ co giật"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Fluoroquinolone thế hệ 2, ức chế DNA gyrase/topoisomerase IV. Phổ chủ yếu Gram âm ở đường tiết niệu; ít dùng hiện nay do tác dụng phụ và có lựa chọn an toàn hơn.",
+        "monitoring": [
+            "Đau gân",
+            "ECG nếu có yếu tố nguy cơ",
+        ],
+        "precautions": [
+            "Không dùng kéo dài nếu có lựa chọn khác",
+            "Nguy cơ tác dụng phụ lớp fluoroquinolone giống ciprofloxacin",
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-4 giờ",
+            "clearance": "Chủ yếu qua thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng.",
+        "black_box_warnings": "Như các fluoroquinolone khác: gân, thần kinh, tâm thần, nhược cơ.",
+    },
+    
+    "Ofloxacin": {
+        "group": "Antibiotic - Fluoroquinolone",
+        "vietnamese_name": "Ofloxacin, Tarivid",
+        "administration": ["PO", "IV", "Ophthalmic", "Otic"],
+        "indications": [
+            "Nhiễm khuẩn đường tiết niệu",
+            "Viêm bể thận",
+            "Nhiễm khuẩn da và mô mềm",
+            "Viêm phế quản cấp",
+            "Nhiễm khuẩn mắt/ tai (dạng nhỏ)",
+        ],
+        "contraindications": [
+            "Dị ứng fluoroquinolone",
+            "Trẻ em <18 tuổi",
+            "Có thai",
+            "QT kéo dài"
+        ],
+        "dosage": {
+            "adult_po": "200-400mg PO mỗi 12 giờ",
+            "adult_iv": "200-400mg IV mỗi 12 giờ",
+            "adult_uti": "200mg PO mỗi 12 giờ x 3-7 ngày",
+            "notes": "Tiền thân của levofloxacin (levo là đồng phân L). Ít dùng hơn hiện nay, thường được thay bằng levofloxacin."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "200mg mỗi 12 giờ",
+            "under_30": "200mg mỗi 24 giờ"
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa",
+            "Nhức đầu",
+            "Rối loạn giấc ngủ",
+            "Rối loạn gân",
+            "QT kéo dài"
+        ],
+        "interactions": [
+            "Antacid/Sắt/Kẽm: giảm hấp thu (cách 2 giờ)",
+            "Warfarin: tăng INR",
+            "Corticosteroid: tăng nguy cơ đứt gân"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Fluoroquinolone thế hệ 2, ức chế DNA gyrase/topoisomerase IV. Phổ tương tự ciprofloxacin nhưng Gram dương tốt hơn một chút, kém hơn levo/moxi.",
+        "monitoring": [
+            "Đau gân",
+            "ECG nếu có nguy cơ QT kéo dài",
+        ],
+        "precautions": [
+            "Tương tự các fluoroquinolone khác về gân, thần kinh, đường huyết",
+            "Không ưu tiên khi có levofloxacin thay thế",
+        ],
+        "pharmacokinetics": {
+            "half_life": "6-8 giờ",
+            "clearance": "Chủ yếu qua thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng.",
+        "black_box_warnings": "Như lớp fluoroquinolone khác.",
+    },
     "renal_adjustment": {
         "normal": "Không đổi",
         "30_60": "Giảm liều 50%",

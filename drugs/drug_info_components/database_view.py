@@ -262,13 +262,13 @@ def render_drug_database():
             end_idx = start_idx + page_size
             page_results = filter_results[start_idx:end_idx]
             
-            for drug_name, drug_data in page_results:
-                render_compact_drug_card(drug_name, drug_data, search_query='')
+            for idx, (drug_name, drug_data) in enumerate(page_results):
+                render_compact_drug_card(drug_name, drug_data, search_query='', card_index=start_idx + idx)
                 selected_key = 'selected_drug'
                 show_detail_key = 'show_detail'
                 if st.session_state.get(selected_key) == drug_name and st.session_state.get(show_detail_key, False):
                     display_drug_info(drug_name, drug_data)
-                    safe_close_key = f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                    safe_close_key = f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}_{start_idx + idx}"
                     if st.button('✖️ Đóng', key=safe_close_key):
                         if selected_key in st.session_state:
                             del st.session_state[selected_key]
@@ -467,9 +467,9 @@ def render_drug_database():
                 start_idx = current_page * page_size
                 end_idx = start_idx + page_size
                 page_results = results[start_idx:end_idx]
-                for drug_name, drug_data in page_results:
+                for idx, (drug_name, drug_data) in enumerate(page_results):
                     render_compact_drug_card(drug_name, drug_data, search_query
-                        =effective_query)
+                        =effective_query, card_index=start_idx + idx)
                     selected_key = 'selected_drug'
                     show_detail_key = 'show_detail'
                     if st.session_state.get(selected_key
@@ -477,7 +477,7 @@ def render_drug_database():
                         False):
                         display_drug_info(drug_name, drug_data)
                         safe_close_key = (
-                            f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                            f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}_{start_idx + idx}"
                             )
                         if st.button('✖️ Đóng', key=safe_close_key):
                             if selected_key in st.session_state:
@@ -533,8 +533,8 @@ def render_drug_database():
             start_idx = current_page * page_size
             end_idx = start_idx + page_size
             page_drugs = all_drugs[start_idx:end_idx]
-            for drug_name, drug_data in page_drugs:
-                render_compact_drug_card(drug_name, drug_data, search_query='')
+            for idx, (drug_name, drug_data) in enumerate(page_drugs):
+                render_compact_drug_card(drug_name, drug_data, search_query='', card_index=start_idx + idx)
                 selected_key = 'selected_drug'
                 show_detail_key = 'show_detail'
                 if st.session_state.get(selected_key
@@ -542,7 +542,7 @@ def render_drug_database():
                     ):
                     display_drug_info(drug_name, drug_data)
                     safe_close_key = (
-                        f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                        f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}_{start_idx + idx}"
                         )
                     if st.button('✖️ Đóng', key=safe_close_key):
                         if selected_key in st.session_state:

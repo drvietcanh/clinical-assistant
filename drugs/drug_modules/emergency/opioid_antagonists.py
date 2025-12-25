@@ -134,6 +134,105 @@ OPIOID_ANTAGONISTS_DRUGS = {
         'Micromedex - Naloxone Drug Information'], 'last_updated': '2025-02-03',
         'evidence_level':
         'A - Dựa trên FDA drug labels, ACLS guidelines, opioid overdose guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-        }}}
+        }},
+    "Naltrexone": {'group': 'Emergency - Opioid Antagonist',
+        'vietnamese_name': 'Naltrexone, Revia, Vivitrol (IM extended release)',
+        'administration': ['PO', 'IM'], 'indications': [
+        'Cai nghiện opioid (maintenance therapy)',
+        'Cai nghiện rượu (alcohol dependence)',
+        'Dự phòng tái nghiện opioid'], 'contraindications': [
+        'Đang dùng opioid (phải ngừng ít nhất 7-10 ngày trước)',
+        'Suy gan nặng', 'Viêm gan cấp', 'Suy thận nặng',
+        'Có thai'], 'dosage': {'adult_opioid_po':
+        '25mg ngày đầu, sau đó 50mg/ngày PO',
+        'adult_opioid_im': '380mg IM mỗi 4 tuần (Vivitrol)',
+        'adult_alcohol_po': '50mg/ngày PO',
+        'adult_alcohol_im': '380mg IM mỗi 4 tuần (Vivitrol)', 'notes':
+        'Opioid antagonist dài hạn. Phải ngừng opioid ít nhất 7-10 ngày trước khi bắt đầu. Dùng cho cai nghiện opioid và rượu. Có thể gây độc gan.'}, 'renal_adjustment':
+        {'normal': 'Không đổi', '30_60': 'Thận trọng', 'under_30':
+        'Thận trọng, có thể cần giảm liều'}, 'side_effects': [
+        'Độc gan (tăng ALT/AST, vàng da)',
+        'Buồn nôn, nôn', 'Đau đầu', 'Mất ngủ', 'Chán ăn',
+        'Đau khớp, đau cơ', 'Lo lắng, trầm cảm',
+        'Phản ứng tại chỗ tiêm (dạng IM)'], 'interactions': [
+        'Opioids: đảo ngược tác dụng, CHỐNG CHỈ ĐỊNH dùng chung',
+        'Disulfiram (cai nghiện rượu): tăng nguy cơ độc gan',
+        'Thuốc gây độc gan: tăng nguy cơ'], 'pregnancy': 'C',
+        'mechanism_of_action':
+        'Opioid receptor antagonist cạnh tranh. Gắn với ái lực cao vào mu-opioid receptor (và kappa, delta receptors), chặn tác dụng của opioid. Khác với naloxone: naltrexone có thời gian tác dụng dài (half-life 4-10 giờ), dùng uống được, dùng cho cai nghiện opioid và rượu dài hạn. Naltrexone cũng có thể giảm craving rượu (cơ chế không rõ ràng). Dùng cho cai nghiện opioid: chặn tác dụng của opioid → giảm craving và tái nghiện. Dùng cho cai nghiện rượu: có thể giảm craving và tiêu thụ rượu.',
+        'monitoring': [
+        'Chức năng gan (ALT, AST, bilirubin) trước và trong điều trị - QUAN TRỌNG (nguy cơ độc gan)',
+        'Dấu hiệu độc gan (vàng da, mệt mỏi, đau bụng)',
+        'Dấu hiệu cai nghiện opioid/rượu',
+        'Tác dụng phụ (buồn nôn, đau đầu, mất ngủ)'], 'precautions': [
+        'PHẢI ngừng opioid ít nhất 7-10 ngày trước khi bắt đầu naltrexone (CHỐNG CHỈ ĐỊNH dùng chung)',
+        'NGUY CƠ ĐỘC GAN - theo dõi ALT/AST trước và trong điều trị',
+        'CHỐNG CHỈ ĐỊNH ở suy gan nặng, viêm gan cấp',
+        'CHỐNG CHỈ ĐỊNH với opioid - đảo ngược tác dụng, có thể gây hội chứng cai',
+        'Dùng cho cai nghiện: phải được quản lý bởi chương trình điều trị chuyên khoa',
+        'Dạng IM (Vivitrol): tiện lợi hơn (mỗi 4 tuần), giảm nguy cơ không tuân thủ'], 'pharmacokinetics':
+        {'half_life': '4-10 giờ (PO), 5-10 ngày (IM extended release)', 'onset':
+        '1 giờ (PO)', 'duration': '24-48 giờ (PO), 4 tuần (IM extended release)',
+        'protein_binding': '21%', 'clearance':
+        'Gan (chuyển hóa thành 6-beta-naltrexol - active metabolite), thận (thải trừ)'},
+        'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Viên nén: bảo quản trong bao bì kín.',
+        'black_box_warnings':
+        'NGUY CƠ ĐỘC GAN có thể nghiêm trọng, có thể tử vong. Theo dõi ALT/AST trước và trong điều trị. CHỐNG CHỈ ĐỊNH ở suy gan nặng, viêm gan cấp. CHỐNG CHỈ ĐỊNH với opioid - phải ngừng opioid ít nhất 7-10 ngày trước khi bắt đầu.',
+        'drug_interactions': {'major': [{'drug':
+        'Opioids (Morphine, Fentanyl, Heroin, Methadone, Buprenorphine, Codeine, Oxycodone, Hydrocodone, Tramadol, etc.)',
+        'mechanism':
+        'Naltrexone là opioid receptor antagonist cạnh tranh, chặn hoàn toàn tác dụng của opioid.',
+        'effect':
+        'Đảo ngược/chặn tác dụng opioid (giảm đau, ức chế hô hấp). Có thể gây hội chứng cai opioid ở bệnh nhân nghiện. CHỐNG CHỈ ĐỊNH dùng chung.',
+        'management':
+        'CHỐNG CHỈ ĐỊNH dùng chung. Phải ngừng opioid ít nhất 7-10 ngày trước khi bắt đầu naltrexone. Nếu cần dùng opioid trong điều trị (ví dụ: phẫu thuật, đau nặng): ngừng naltrexone, chờ ít nhất 24-48 giờ, sau đó mới dùng opioid (nhưng cần opioid liều cao hơn do naltrexone đã chặn receptors).'}, {
+        'drug': 'Disulfiram (cai nghiện rượu)', 'mechanism':
+        'Cả hai đều có nguy cơ độc gan, tác dụng hiệp đồng',
+        'effect': 'Tăng nguy cơ độc gan nghiêm trọng', 'management':
+        'Tránh dùng chung. Theo dõi chức năng gan chặt chẽ nếu bắt buộc.'}]}, 'contraindications': {'tuyệt_đối': [
+        'Đang dùng opioid (phải ngừng ít nhất 7-10 ngày trước) - CHỐNG CHỈ ĐỊNH',
+        'Suy gan nặng - CHỐNG CHỈ ĐỊNH',
+        'Viêm gan cấp - CHỐNG CHỈ ĐỊNH',
+        'Có thai'], 'tương_đối': [
+        'Suy thận nặng - thận trọng, có thể cần giảm liều',
+        'Suy gan trung bình - thận trọng, theo dõi chức năng gan chặt chẽ']},
+        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        'Category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng nếu lợi ích > nguy cơ, nhưng thận trọng.',
+        'lactation': {'safety': 'Caution', 'details':
+        'Naltrexone và 6-beta-naltrexol bài tiết vào sữa mẹ. Có thể gây tác dụng phụ ở trẻ.',
+        'recommendation': 'Thận trọng khi cho con bú.'}}, 'hepatic_adjustment': {'mild':
+        'Thận trọng, theo dõi chức năng gan', 'moderate':
+        'Thận trọng, theo dõi chức năng gan chặt chẽ', 'severe':
+        'CHỐNG CHỈ ĐỊNH', 'notes':
+        'NGUY CƠ ĐỘC GAN CAO. Naltrexone chuyển hóa ở gan. Suy gan nặng, viêm gan cấp là chống chỉ định. Phải theo dõi ALT/AST trước và trong điều trị.'},
+        'overdose_management': {'symptoms': [
+        'Độc gan (vàng da, mệt mỏi, đau bụng, tăng ALT/AST)',
+        'Buồn nôn, nôn nặng', 'Hội chứng cai opioid (nếu dùng cùng với opioid)',
+        'Co giật (hiếm)'], 'antidote':
+        'Không có antidote đặc hiệu cho naltrexone. Nếu độc gan: ngừng ngay, điều trị hỗ trợ.',
+        'treatment': [
+        'Ngừng ngay naltrexone nếu có độc gan',
+        'Theo dõi chức năng gan chặt chẽ (ALT, AST, bilirubin)',
+        'Điều trị độc gan hỗ trợ (nếu có)',
+        'Điều trị triệu chứng (buồn nôn, nôn)',
+        'Nếu hội chứng cai opioid (do dùng cùng với opioid): điều trị hỗ trợ',
+        'Theo dõi dấu hiệu sinh tồn'], 'monitoring':
+        'Chức năng gan (ALT, AST, bilirubin), dấu hiệu độc gan, triệu chứng lâm sàng, dấu hiệu sinh tồn'},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có reversal agent cho naltrexone. Nếu cần dùng opioid (ví dụ: phẫu thuật, đau nặng): ngừng naltrexone, chờ ít nhất 24-48 giờ, sau đó mới dùng opioid (nhưng cần opioid liều cao hơn do naltrexone đã chặn receptors).'},
+        'administration_instructions': {'oral': {'with_food':
+        'Có thể uống với thức ăn hoặc không. Uống với thức ăn có thể giảm buồn nôn.',
+        'timing':
+        'Cai nghiện opioid: 25mg ngày đầu, sau đó 50mg/ngày. Cai nghiện rượu: 50mg/ngày. Uống cùng giờ mỗi ngày.'},
+        'im': {'reconstitution':
+        'Dạng IM extended release (Vivitrol): 380mg, pha với diluent đi kèm.',
+        'injection_site': 'Cơ mông (gluteal muscle).', 'notes':
+        'Dạng IM extended release: 380mg IM mỗi 4 tuần. Tiêm vào cơ mông. Có thể gây phản ứng tại chỗ tiêm (đau, sưng, đỏ). Tiện lợi hơn dạng uống (giảm nguy cơ không tuân thủ).'}},
+        'references': {'primary_sources': [
+        'FDA Drug Label - Naltrexone (Revia, Vivitrol)',
+        'UpToDate - Naltrexone: Drug information', 'SAMHSA Guidelines',
+        'American Psychiatric Association Guidelines - Opioid Use Disorder'],
+        'last_updated': '2025-02-18', 'evidence_level': 'High - FDA-approved'}}}
 
 __all__ = ['OPIOID_ANTAGONISTS_DRUGS']

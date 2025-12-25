@@ -6,6 +6,36 @@ Standardized page setup to reduce boilerplate code
 import streamlit as st
 import sys
 from pathlib import Path
+from config.app_config import APP_CONFIG
+
+
+def inject_google_analytics():
+    """
+    Inject Google Analytics (GA4) script once per session.
+    Works for all Streamlit pages that call setup_page.
+    """
+    ga_id = APP_CONFIG.get("google_analytics_id", "")
+    if not ga_id or ga_id == "G-XXXXXXXXXX":
+        return
+
+    # Avoid injecting multiple times in the same session
+    if st.session_state.get("_ga_injected"):
+        return
+
+    ga_snippet = f"""
+    <script async src="https://www.googletagmanager.com/gtag/js?id={ga_id}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', '{ga_id}', {{
+        'send_page_view': true,
+        'page_path': window.location.pathname + window.location.search
+      }});
+    </script>
+    """
+    st.markdown(ga_snippet, unsafe_allow_html=True)
+    st.session_state["_ga_injected"] = True
 
 
 def setup_page(page_title: str, page_icon: str, description: str = "", layout: str = "wide", mobile_header: bool = True):
@@ -26,6 +56,9 @@ def setup_page(page_title: str, page_icon: str, description: str = "", layout: s
     Example:
         >>> setup_page("Scores", "📊", "Clinical scoring systems by specialty")
     """
+    # Inject GA as early as possible on every page
+    inject_google_analytics()
+
     # Add parent directory to path for imports
     parent_dir = Path(__file__).parent.parent
     if str(parent_dir) not in sys.path:

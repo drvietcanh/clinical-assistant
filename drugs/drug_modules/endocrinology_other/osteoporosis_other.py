@@ -708,6 +708,124 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "evidence_level": "High – FDA-approved, large RCTs (MORE)",
         },
     },
+
+    "Calcitonin": {
+        "group": "Endocrinology - Calcitonin (Osteoporosis, Hypercalcemia)",
+        "vietnamese_name": "Calcitonin, Calcitonin cá hồi (salmon calcitonin)",
+        "administration": ["SC", "IM", "IN"],
+        "indications": [
+            "Tăng calci máu cấp do ác tính (hỗ trợ ngắn hạn)",
+            "Loãng xương sau mãn kinh khi các lựa chọn khác không phù hợp (vai trò hạn chế hiện nay)",
+            "Đau do gãy xương lún đốt sống cấp (giảm đau ngắn hạn)",
+        ],
+        "contraindications": [
+            "Dị ứng với calcitonin, đặc biệt calcitonin cá hồi",
+        ],
+        "dosage": {
+            "hypercalcemia_sc_im": "4 IU/kg SC/IM mỗi 12 giờ (có thể tăng đến 8 IU/kg mỗi 6 giờ nếu cần)",
+            "osteoporosis_in": "200 IU xịt mũi 1 lần/ngày, luân phiên bên mũi",
+            "notes": "Hiệu quả loãng xương yếu hơn nhiều so với bisphosphonate/denosumab/PTH analog; chủ yếu dùng giảm đau gãy lún đốt sống cấp.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Không cần chỉnh liều, nhưng dữ liệu hạn chế",
+        },
+        "side_effects": [
+            "Buồn nôn, nôn (SC/IM)",
+            "Đỏ bừng mặt, cảm giác nóng bừng",
+            "Kích ứng, chảy máu, khô mũi (dạng xịt mũi)",
+            "Dị ứng, phản vệ (hiếm)",
+            "Có báo cáo tăng nhẹ nguy cơ ung thư với dùng kéo dài dạng xịt mũi",
+        ],
+        "interactions": [],
+        "pregnancy": "C – tránh dùng trừ khi lợi ích vượt trội nguy cơ",
+        "mechanism_of_action": (
+            "Calcitonin là hormone do tế bào C tuyến giáp tiết, làm giảm calci máu bằng cách ức chế hoạt động tế bào hủy xương "
+            "và tăng thải calci qua thận. Trong tăng calci máu cấp, calcitonin cho tác dụng nhanh nhưng dung nạp giảm sau vài ngày. "
+            "Trong loãng xương, hiệu quả tăng mật độ xương yếu, nên hiện ít được khuyến cáo như lựa chọn hàng đầu."
+        ),
+        "monitoring": [
+            "Calci máu (đặc biệt trong điều trị tăng calci máu)",
+            "Triệu chứng dị ứng, phản vệ (mề đay, khó thở)",
+            "Đau xương/gãy lún đốt sống (đánh giá giảm đau)",
+        ],
+        "precautions": [
+            "Không dùng kéo dài dạng xịt mũi cho loãng xương nếu có lựa chọn tốt hơn do lo ngại tăng nhẹ nguy cơ ung thư.",
+            "Có thể cân nhắc test dị ứng trước khi dùng SC/IM nếu nghi ngờ cơ địa dị ứng.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 1 giờ (SC/IM); dạng xịt mũi hấp thu biến thiên",
+            "onset": "Vài giờ cho tác dụng hạ calci",
+            "duration": "Hiệu quả hạ calci kéo dài khoảng 6–8 giờ; xuất hiện hiện tượng nhờn thuốc sau vài ngày",
+            "protein_binding": "N/A (peptide)",
+            "clearance": "Chuyển hóa nhanh tại thận và mô; thải qua thận",
+        },
+        "storage": "Bảo quản trong tủ lạnh (2–8°C) theo hướng dẫn; một số chế phẩm có thể để nhiệt độ phòng trong thời gian giới hạn.",
+        "black_box_warnings": (
+            "Một số nghiên cứu cho thấy tăng nhẹ nguy cơ ung thư khi dùng calcitonin đường mũi kéo dài; "
+            "chỉ dùng khi lợi ích vượt trội nguy cơ và không có lựa chọn tốt hơn."
+        ),
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với calcitonin cá hồi hoặc thành phần chế phẩm",
+            ],
+            "tương_đối": [
+                "Tiền sử ung thư – cân nhắc kỹ nếu dùng kéo dài dạng xịt mũi",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dùng khi thật cần thiết (tăng calci máu cấp) dưới giám sát chuyên khoa.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết vào sữa; nguy cơ lý thuyết thấp do peptide bị phân hủy trong tiêu hóa.",
+                "recommendation": "Cân nhắc lợi ích–nguy cơ, ưu tiên điều trị thay thế nếu có.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Không chuyển hóa qua gan đáng kể.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ calci máu (hiếm do thời gian bán thải ngắn)",
+                "Buồn nôn, nôn nặng, hạ huyết áp",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng calcitonin",
+                "Điều trị hạ calci máu nếu có (calcium IV/PO)",
+                "Hỗ trợ tuần hoàn nếu tụt huyết áp",
+            ],
+            "monitoring": "Calci máu, huyết áp, triệu chứng dị ứng.",
+        },
+        "reversal_agents": {"available": False, "agents": []},
+        "administration_instructions": {
+            "sc": {
+                "injection_site": "Tiêm dưới da vùng đùi, bụng hoặc cánh tay, luân phiên vị trí tiêm.",
+                "timing": "Mỗi 12–24 giờ tùy chỉ định.",
+            },
+            "in": {
+                "notes": "Xịt mũi, luân phiên bên mũi, không hít sâu khi xịt.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "Endocrine Society guideline on osteoporosis",
+                "UpToDate – Calcitonin in hypercalcemia and osteoporosis",
+            ],
+            "last_updated": "2025-02-23",
+            "evidence_level": "B – vai trò hạn chế, dùng chọn lọc",
+        },
+    },
 }
 
 __all__ = ["OSTEOPOROSIS_OTHER_DRUGS"]

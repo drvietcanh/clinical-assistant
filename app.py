@@ -15,6 +15,7 @@ from pathlib import Path
 from config.calculators import ALL_CALCULATORS
 from config.app_config import get_module_list_for_navigation, APP_CONFIG
 from config.theme import get_module_style
+from utils.page_helper import inject_google_analytics
 
 # Import UI components
 try:
@@ -56,6 +57,8 @@ except ImportError:
 # Google Analytics 4 (GA4) tracking
 # Cấu hình trong config/app_config.py hoặc set environment variable GOOGLE_ANALYTICS_ID
 GOOGLE_ANALYTICS_ID = APP_CONFIG.get("google_analytics_id", "G-XXXXXXXXXX")
+# Inject GA globally (works for all Streamlit pages)
+inject_google_analytics()
 
 # ========== PAGE CONFIG ==========
 st.set_page_config(
@@ -106,22 +109,6 @@ if manifest_file.exists():
 if offline_js_file.exists():
     with open(offline_js_file, "r", encoding="utf-8") as f:
         st.markdown(f"<script>{f.read()}</script>", unsafe_allow_html=True)
-
-# ========== GOOGLE ANALYTICS ==========
-# Inject Google Analytics script chuẩn vào trang
-if GOOGLE_ANALYTICS_ID and GOOGLE_ANALYTICS_ID != "G-XXXXXXXXXX":
-    st.markdown(
-        f"""
-        <script async src="https://www.googletagmanager.com/gtag/js?id={GOOGLE_ANALYTICS_ID}"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){{dataLayer.push(arguments);}}
-          gtag('js', new Date());
-          gtag('config', '{GOOGLE_ANALYTICS_ID}');
-        </script>
-        """,
-        unsafe_allow_html=True,
-    )
 
 # Apply dark mode
 if st.session_state.dark_mode:

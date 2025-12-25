@@ -692,6 +692,375 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA-approved, extensive clinical data"
         }
+    },
+
+    "Methadone": {
+        "group": "Analgesic - Opioid Agonist (Strong)",
+        "vietnamese_name": "Methadone, Dolophine",
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Đau nặng",
+            "Cai nghiện opioid (maintenance therapy)",
+            "Đau mạn tính",
+            "Đau ung thư"
+        ],
+        "contraindications": [
+            "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+            "Suy hô hấp nặng",
+            "Dùng MAO inhibitor trong 14 ngày",
+            "Tắc ruột cơ học",
+            "Tăng áp lực nội sọ"
+        ],
+        "dosage": {
+            "adult_pain_po": "2.5-10mg mỗi 6-8 giờ (khởi đầu), điều chỉnh theo đáp ứng",
+            "adult_pain_iv_im": "2.5-10mg IV/IM mỗi 6-8 giờ",
+            "adult_maintenance": "20-120mg/ngày PO (cai nghiện opioid)",
+            "notes": "Half-life dài (15-60 giờ) → tích lũy, nguy cơ quá liều. Khởi đầu thấp, tăng dần chậm. QT kéo dài có thể xảy ra."
+        },
+        "side_effects": [
+            "Ức chế hô hấp (nguy hiểm, có thể kéo dài do half-life dài)",
+            "Kéo dài QT interval (nguy cơ torsades de pointes)",
+            "Buồn nôn, nôn",
+            "Táo bón",
+            "Buồn ngủ, lú lẫn",
+            "Tích lũy (do half-life dài) → nguy cơ quá liều",
+            "Nguy cơ nghiện/lệ thuộc"
+        ],
+        "interactions": [
+            "Benzodiazepine: tăng nguy cơ ức chế hô hấp nặng",
+            "MAO inhibitor: chống chỉ định",
+            "Thuốc kéo dài QT: tăng nguy cơ torsades de pointes",
+            "CYP3A4 inhibitors: tăng nồng độ methadone",
+            "Rifampin: giảm nồng độ methadone"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Opioid mu-receptor agonist mạnh, tương tự morphine. Methadone có đặc điểm: (1) Half-life dài (15-60 giờ) → tích lũy, nguy cơ quá liều, nhưng hiệu quả kéo dài, (2) Có thể kéo dài QT interval → nguy cơ torsades de pointes, (3) Chuyển hóa qua CYP3A4, CYP2B6, CYP2D6, (4) Dùng cho cai nghiện opioid (maintenance therapy) do tác dụng kéo dài và giảm craving. Được dùng cho đau nặng và cai nghiện opioid.",
+        "monitoring": [
+            "Nhịp thở và độ bão hòa oxy (SpO2) liên tục - QUAN TRỌNG (nguy cơ tích lũy)",
+            "ECG - theo dõi QT interval (nguy cơ kéo dài QT, torsades de pointes)",
+            "Mức độ đau",
+            "Mức độ ý thức",
+            "Dấu hiệu tích lũy/quá liều (tăng buồn ngủ, giảm nhịp thở)",
+            "Chức năng thận, gan (chuyển hóa qua gan)"
+        ],
+        "precautions": [
+            "Half-life dài (15-60 giờ) → TÍCH LŨY, nguy cơ quá liều cao, đặc biệt trong vài ngày đầu",
+            "Khởi đầu với liều thấp (2.5-10mg), tăng dần CHẬM (mỗi 5-7 ngày)",
+            "NGUY CƠ QUÁ LIỀY cao trong 1-2 tuần đầu do tích lũy",
+            "Kéo dài QT interval → theo dõi ECG, nguy cơ torsades de pointes",
+            "CHỐNG CHỈ ĐỊNH với MAO inhibitor",
+            "Tránh dùng với benzodiazepine, rượu (tăng nguy cơ ức chế hô hấp nặng)",
+            "Tránh dùng với thuốc kéo dài QT khác",
+            "Cần có naloxone sẵn sàng (nhưng half-life methadone dài → có thể cần nhiều liều naloxone)",
+            "Dùng cho cai nghiện: phải được quản lý bởi chương trình điều trị chuyên khoa"
+        ],
+        "pharmacokinetics": {
+            "half_life": "15-60 giờ (rất dài, tích lũy)",
+            "onset": "30-60 phút (PO), 10-20 phút (IV/IM)",
+            "duration": "4-8 giờ (đau), nhưng tích lũy do half-life dài",
+            "protein_binding": "85-90%",
+            "clearance": "Gan (chuyển hóa qua CYP3A4, CYP2B6, CYP2D6), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Bảo quản an toàn, tránh xa tầm tay trẻ em (nguy cơ quá liều gây tử vong).",
+        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt khi dùng với benzodiazepine hoặc rượu. Half-life dài (15-60 giờ) → tích lũy, nguy cơ quá liều cao trong vài ngày đầu. Nguy cơ kéo dài QT interval và torsades de pointes.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Benzodiazepine, thuốc an thần, rượu",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng nguy cơ ức chế hô hấp nặng, có thể tử vong",
+                    "management": "TRÁNH DÙNG ĐỒNG THỜI. Nếu phải dùng, giảm liều methadone, theo dõi hô hấp liên tục."
+                },
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nguy cơ phản ứng nghiêm trọng",
+                    "effect": "Có thể gây hội chứng serotonin, tăng huyết áp, nguy hiểm tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH. Ngừng MAOI ít nhất 14 ngày trước khi dùng methadone."
+                },
+                {
+                    "drug": "Thuốc kéo dài QT (Amiodarone, Sotalol, Haloperidol, Chlorpromazine, Macrolides)",
+                    "mechanism": "Tác dụng hiệp đồng kéo dài QT interval",
+                    "effect": "Tăng nguy cơ torsades de pointes",
+                    "management": "Tránh dùng chung. Nếu bắt buộc: theo dõi ECG sát, đảm bảo K+ và Mg2+ bình thường."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 inhibitors (Ketoconazole, Clarithromycin, Erythromycin, Ritonavir)",
+                    "mechanism": "Ức chế chuyển hóa methadone",
+                    "effect": "Tăng nồng độ methadone, tăng tác dụng phụ",
+                    "management": "Giảm liều methadone. Theo dõi tác dụng phụ."
+                },
+                {
+                    "drug": "Rifampin, Carbamazepine, Phenytoin",
+                    "mechanism": "Cảm ứng enzyme chuyển hóa methadone",
+                    "effect": "Giảm nồng độ methadone, giảm hiệu quả",
+                    "management": "Có thể cần tăng liều methadone. Theo dõi đáp ứng."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng methadone hoặc opioid",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Suy hô hấp nặng",
+                "Dùng MAO inhibitor trong vòng 14 ngày",
+                "Tắc ruột cơ học",
+                "Tăng áp lực nội sọ"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - thận trọng, giảm liều",
+                "Suy gan nặng - thận trọng, giảm liều (chuyển hóa qua gan)",
+                "QT kéo dài - tránh dùng hoặc theo dõi ECG sát",
+                "Dùng với thuốc kéo dài QT - tránh dùng chung",
+                "Người cao tuổi - giảm liều (tăng nhạy cảm, tăng nguy cơ tích lũy)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C. Có thể dùng nếu lợi ích > nguy cơ. Khi dùng cho cai nghiện opioid trong thai kỳ: có thể giảm nguy cơ hội chứng cai ở trẻ sơ sinh so với tiếp tục dùng heroin/opioid khác. Tuy nhiên, vẫn có nguy cơ hội chứng cai ở trẻ sơ sinh nếu dùng gần cuối thai kỳ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Methadone bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ tương đương khoảng 1-3% liều mẹ. Có thể gây tác dụng phụ ở trẻ (buồn ngủ, bú kém, ức chế hô hấp).",
+                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém, ức chế hô hấp). Đặc biệt thận trọng ở trẻ sơ sinh."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều (chuyển hóa qua gan)",
+            "notes": "Methadone chuyển hóa ở gan qua CYP3A4, CYP2B6, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp nặng (triệu chứng chính, có thể kéo dài do half-life dài)",
+                "Buồn ngủ sâu, hôn mê",
+                "Đồng tử co nhỏ (miosis)",
+                "Hạ huyết áp, nhịp tim chậm",
+                "Kéo dài QT interval, torsades de pointes (hiếm)"
+            ],
+            "antidote": "Naloxone (Narcan) - opioid antagonist, nhưng có thể cần nhiều liều do half-life methadone dài",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp ngay lập tức (quan trọng nhất)",
+                "Naloxone: 0.4-2mg IV/IM/SC, có thể lặp lại mỗi 2-3 phút nếu cần",
+                "Do half-life methadone dài → có thể cần truyền naloxone liên tục hoặc lặp lại nhiều lần",
+                "Theo dõi liên tục: ý thức, hô hấp (nhịp thở, SpO2), tim mạch, ECG (QT interval)",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp nặng",
+                "Điều trị hạ huyết áp: truyền dịch, vasopressors nếu cần",
+                "Theo dõi ít nhất 24-48 giờ do half-life methadone dài (15-60 giờ)"
+            ],
+            "monitoring": "Theo dõi liên tục: ý thức, hô hấp (nhịp thở, SpO2), tim mạch, ECG (QT interval). Theo dõi ít nhất 24-48 giờ do half-life dài."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Naloxone (Narcan)",
+                    "mechanism": "Opioid antagonist, đảo ngược tác dụng opioid",
+                    "indication": "Quá liều methadone gây ức chế hô hấp",
+                    "dose": "0.4-2mg IV/IM/SC, có thể lặp lại mỗi 2-3 phút. Có thể cần truyền liên tục do half-life methadone dài.",
+                    "caution": "Half-life naloxone ngắn (30-90 phút) nhưng half-life methadone dài (15-60 giờ) → có thể cần nhiều liều hoặc truyền liên tục."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không",
+                "timing": "Mỗi 6-8 giờ. Khởi đầu với liều thấp (2.5-10mg), tăng dần CHẬM (mỗi 5-7 ngày). Dùng cho cai nghiện: phải được quản lý bởi chương trình điều trị chuyên khoa."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W",
+                "infusion_rate": "Tiêm IV chậm (2-3 phút). Hoặc truyền liên tục.",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Theo dõi hô hấp chặt chẽ. Khởi đầu với liều thấp."
+            },
+            "im": {
+                "notes": "Tiêm bắp sâu. Theo dõi hô hấp chặt chẽ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Methadone (Dolophine)",
+                "UpToDate - Methadone: Drug information",
+                "SAMHSA Guidelines - Opioid Treatment Programs"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data"
+        }
+    },
+
+    "Meperidine": {
+        "group": "Analgesic - Opioid Agonist (Strong)",
+        "vietnamese_name": "Meperidine, Pethidine, Demerol",
+        "administration": ["PO", "IV", "IM", "SC"],
+        "indications": [
+            "Đau nặng",
+            "Đau sau phẫu thuật",
+            "Đau cấp tính"
+        ],
+        "contraindications": [
+            "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+            "Suy hô hấp nặng",
+            "Dùng MAO inhibitor trong 14 ngày",
+            "Suy thận nặng",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_po": "50-150mg mỗi 3-4 giờ (tối đa 600mg/ngày)",
+            "adult_iv_im": "25-100mg IV/IM mỗi 3-4 giờ",
+            "notes": "Ít dùng hiện nay do tích lũy normeperidine (active metabolite độc, gây co giật). Chỉ dùng ngắn hạn (<48 giờ)."
+        },
+        "side_effects": [
+            "Ức chế hô hấp",
+            "Co giật (do tích lũy normeperidine, đặc biệt ở suy thận)",
+            "Buồn nôn, nôn",
+            "Táo bón",
+            "Buồn ngủ, lú lẫn",
+            "Nguy cơ nghiện/lệ thuộc",
+            "Tích lũy normeperidine ở suy thận → nguy cơ co giật cao"
+        ],
+        "interactions": [
+            "MAO inhibitor: CHỐNG CHỈ ĐỊNH (nguy cơ phản ứng nghiêm trọng)",
+            "Benzodiazepine: tăng nguy cơ ức chế hô hấp",
+            "Rifampin: giảm nồng độ meperidine"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Opioid mu-receptor agonist, tác dụng tương tự morphine nhưng ngắn hơn. Meperidine được chuyển hóa thành normeperidine (active metabolite) → tích lũy ở suy thận → gây co giật. ĐẶC ĐIỂM: (1) Ít dùng hiện nay do nguy cơ co giật (tích lũy normeperidine), (2) CHỈ dùng ngắn hạn (<48 giờ), (3) CHỐNG CHỈ ĐỊNH ở suy thận (tích lũy normeperidine), (4) CHỐNG CHỈ ĐỊNH với MAO inhibitor (phản ứng nghiêm trọng).",
+        "monitoring": [
+            "Nhịp thở và độ bão hòa oxy (SpO2)",
+            "Mức độ đau",
+            "Mức độ ý thức",
+            "Dấu hiệu co giật (đặc biệt ở suy thận, dùng >48 giờ)",
+            "Chức năng thận (creatinine, BUN) - QUAN TRỌNG (tích lũy normeperidine)"
+        ],
+        "precautions": [
+            "CHỈ dùng ngắn hạn (<48 giờ) - CHỐNG CHỈ ĐỊNH dùng lâu dài",
+            "CHỐNG CHỈ ĐỊNH ở suy thận (tích lũy normeperidine → co giật)",
+            "CHỐNG CHỈ ĐỊNH với MAO inhibitor (phản ứng nghiêm trọng)",
+            "Nguy cơ co giật do tích lũy normeperidine - đặc biệt ở suy thận, dùng >48 giờ",
+            "Ít dùng hiện nay - ưu tiên dùng morphine hoặc opioid khác",
+            "Khởi đầu với liều thấp",
+            "Tránh dùng với benzodiazepine, rượu"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-4 giờ (meperidine), 15-20 giờ (normeperidine - tích lũy)",
+            "onset": "10-15 phút (IV), 30-45 phút (PO)",
+            "duration": "2-4 giờ",
+            "protein_binding": "60-80%",
+            "clearance": "Gan (chuyển hóa thành normeperidine), thận (thải trừ normeperidine - tích lũy ở suy thận)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Bảo quản an toàn, tránh xa tầm tay trẻ em.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH dùng lâu dài (>48 giờ) - tích lũy normeperidine gây co giật. CHỐNG CHỈ ĐỊNH ở suy thận - tích lũy normeperidine. CHỐNG CHỈ ĐỊNH với MAO inhibitor - phản ứng nghiêm trọng. Nguy cơ nghiện, lạm dụng, và lệ thuộc.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nguy cơ phản ứng nghiêm trọng",
+                    "effect": "Có thể gây tăng thân nhiệt, tăng huyết áp, co giật, nguy hiểm tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng MAOI ít nhất 14 ngày trước khi dùng meperidine."
+                },
+                {
+                    "drug": "Benzodiazepine, thuốc an thần, rượu",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng nguy cơ ức chế hô hấp nặng",
+                    "management": "TRÁNH DÙNG ĐỒNG THỜI."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Rifampin",
+                    "mechanism": "Cảm ứng enzyme chuyển hóa meperidine",
+                    "effect": "Giảm nồng độ meperidine, giảm hiệu quả",
+                    "management": "Có thể cần tăng liều meperidine."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng meperidine hoặc opioid",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Suy hô hấp nặng",
+                "Dùng MAO inhibitor trong vòng 14 ngày - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng - CHỐNG CHỈ ĐỊNH (tích lũy normeperidine)",
+                "Dùng lâu dài (>48 giờ) - CHỐNG CHỈ ĐỊNH (tích lũy normeperidine)"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng, tránh dùng",
+                "Suy gan nặng - thận trọng",
+                "Người cao tuổi - giảm liều"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C. Có thể dùng nếu lợi ích > nguy cơ, nhưng chỉ dùng ngắn hạn (<48 giờ).",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Meperidine và normeperidine bài tiết vào sữa mẹ. Có thể gây tác dụng phụ ở trẻ.",
+                "recommendation": "Thận trọng khi cho con bú. Tránh dùng lâu dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng, giảm liều (chuyển hóa qua gan)",
+            "notes": "Meperidine chuyển hóa ở gan thành normeperidine. Suy gan có thể ảnh hưởng đến chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp nặng",
+                "Buồn ngủ sâu, hôn mê",
+                "Co giật (do tích lũy normeperidine)",
+                "Đồng tử co nhỏ (miosis)",
+                "Hạ huyết áp"
+            ],
+            "antidote": "Naloxone (Narcan) - opioid antagonist, nhưng không đảo ngược co giật do normeperidine",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp ngay lập tức",
+                "Naloxone: 0.4-2mg IV/IM/SC, có thể lặp lại mỗi 2-3 phút",
+                "Nếu co giật: benzodiazepine (diazepam, lorazepam)",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp nặng",
+                "Lưu ý: Naloxone đảo ngược tác dụng opioid nhưng không đảo ngược co giật do normeperidine"
+            ],
+            "monitoring": "Theo dõi liên tục: ý thức, hô hấp (nhịp thở, SpO2), tim mạch, dấu hiệu co giật. Theo dõi ít nhất 4-6 giờ sau liều naloxone cuối."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Naloxone (Narcan)",
+                    "mechanism": "Opioid antagonist, đảo ngược tác dụng opioid",
+                    "indication": "Quá liều meperidine gây ức chế hô hấp",
+                    "dose": "0.4-2mg IV/IM/SC, có thể lặp lại mỗi 2-3 phút",
+                    "caution": "Naloxone đảo ngược tác dụng opioid nhưng không đảo ngược co giật do normeperidine. Cần điều trị co giật riêng nếu có."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với thức ăn hoặc không",
+                "timing": "Mỗi 3-4 giờ. CHỈ dùng ngắn hạn (<48 giờ). Liều tối đa: 600mg/ngày."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W",
+                "infusion_rate": "Tiêm IV chậm (2-3 phút)",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "CHỈ dùng ngắn hạn (<48 giờ). Theo dõi hô hấp chặt chẽ."
+            },
+            "im": {
+                "notes": "Tiêm bắp sâu. CHỈ dùng ngắn hạn (<48 giờ)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Meperidine (Demerol)",
+                "UpToDate - Meperidine: Drug information"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, nhưng ít dùng hiện nay"
+        }
     }
 }
 

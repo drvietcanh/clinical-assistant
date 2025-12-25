@@ -375,7 +375,241 @@ VITAMINS_DRUGS = {
             'last_updated': '2025-02-05',
             'evidence_level': 'High - Guidelines dựa trên chứng cứ từ WHO và FDA'
         }
-    }
+    },
+
+    "Vitamin D3 (Cholecalciferol)": {
+        "group": "Vitamins/Supplements - Vitamin D",
+        "vietnamese_name": "Vitamin D3, Cholecalciferol",
+        "administration": ["PO"],
+        "indications": [
+            "Thiếu vitamin D, còi xương ở trẻ em",
+            "Hỗ trợ điều trị loãng xương, người cao tuổi",
+            "Phòng ngừa thiếu vitamin D ở người ít tiếp xúc ánh nắng, bệnh nhân mạn tính",
+        ],
+        "contraindications": [
+            "Tăng calci máu",
+            "Sỏi thận calci tái phát",
+            "Nhiễm độc vitamin D trước đó",
+        ],
+        "dosage": {
+            "adult_deficiency": "800–2000 IU/ngày, có thể dùng liều nạp 50.000 IU/tuần trong 6–8 tuần theo phác đồ chuyên khoa",
+            "adult_osteoporosis_support": "800–1000 IU/ngày kết hợp calcium",
+            "pediatric": "400–1000 IU/ngày tùy tuổi và tình trạng thiếu hụt",
+            "notes": "Điều chỉnh liều theo nồng độ 25(OH)D huyết thanh, mục tiêu thường 30–50 ng/mL.",
+        },
+        "side_effects": [
+            "Thường dung nạp tốt ở liều sinh lý",
+            "Quá liều kéo dài: tăng calci máu, buồn nôn, nôn, khát nhiều, tiểu nhiều, sỏi thận",
+        ],
+        "interactions": [
+            "Thiazide: tăng nguy cơ tăng calci máu khi dùng kèm vitamin D liều cao và calcium",
+            "Digitalis (digoxin): tăng nguy cơ loạn nhịp nếu tăng calci máu",
+        ],
+        "pregnancy": "A/B – thường an toàn ở liều sinh lý (400–2000 IU/ngày)",
+        "mechanism_of_action": (
+            "Vitamin D3 được chuyển hóa ở gan thành 25-hydroxyvitamin D [25(OH)D], sau đó ở thận thành dạng hoạt động "
+            "1,25-dihydroxyvitamin D [1,25(OH)2D]. Dạng hoạt động tăng hấp thu calci và phospho tại ruột, "
+            "tăng tái hấp thu calci tại thận và điều hòa chuyển hóa xương, giúp duy trì nồng độ calci, phospho và sức khỏe xương."
+        ),
+        "monitoring": [
+            "Nồng độ 25(OH)D huyết thanh nếu điều trị thiếu hụt nặng hoặc dùng liều cao",
+            "Calci máu, creatinin (đặc biệt nếu dùng cùng calcium và thiazide)",
+        ],
+        "precautions": [
+            "Tránh lạm dụng liều rất cao kéo dài (ví dụ >4000 IU/ngày mà không theo dõi)",
+            "Thận trọng ở bệnh nhân có sỏi thận calci, tăng calci máu, cường cận giáp",
+        ],
+        "pharmacokinetics": {
+            "half_life": "25(OH)D có t1/2 khoảng 2–3 tuần",
+            "onset": "Vài tuần để điều chỉnh nồng độ 25(OH)D",
+            "duration": "Hiệu quả kéo dài vài tuần–tháng do dự trữ trong mô mỡ",
+            "protein_binding": "Gắn với vitamin D–binding protein trong huyết tương",
+            "clearance": "Chuyển hóa ở gan, thận; thải qua mật/phân",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ánh sáng.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thiazide diuretics",
+                    "mechanism": "Giảm thải calci qua thận + tăng hấp thu calci do vitamin D",
+                    "effect": "Tăng nguy cơ tăng calci máu",
+                    "management": "Theo dõi calci máu nếu dùng chung với liều vitamin D và calcium cao.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tăng calci máu",
+                "Nhiễm độc vitamin D trước đó",
+            ],
+            "tương_đối": [
+                "Sỏi thận calci tái phát",
+                "Cường cận giáp, sarcoidosis (tăng sản xuất vitamin D nội sinh)",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "A/B",
+            "pregnancy_details": "Liều sinh lý (400–2000 IU/ngày) an toàn và được khuyến nghị trong thai kỳ nếu thiếu hụt.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Vitamin D vào sữa mẹ ở nồng độ thấp; thường cần bổ sung riêng cho trẻ.",
+                "recommendation": "Có thể dùng an toàn ở liều sinh lý.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Thận trọng, điều chỉnh theo nồng độ 25(OH)D",
+            "notes": "Chuyển hóa ở gan; suy gan nặng có thể giảm hoạt hóa vitamin D.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng calci máu (buồn nôn, nôn, khát, tiểu nhiều, lú lẫn)",
+                "Sỏi thận, vôi hóa mô mềm (dùng liều rất cao kéo dài)",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng vitamin D và calcium",
+                "Bù dịch, lợi tiểu, corticosteroid hoặc bisphosphonate nếu tăng calci máu nặng",
+            ],
+            "monitoring": "Calci, phospho, creatinin huyết thanh.",
+        },
+        "reversal_agents": {"available": False, "agents": []},
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên dùng với bữa ăn có chất béo nhẹ để tăng hấp thu.",
+                "timing": "1 lần/ngày hoặc 1 lần/tuần/tháng tùy dạng chế phẩm và phác đồ.",
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Endocrine Society guideline on vitamin D deficiency",
+                "UpToDate – Vitamin D supplementation",
+            ],
+            "last_updated": "2025-02-23",
+            "evidence_level": "High – guideline-based",
+        },
+    },
+
+    "Calcium (elemental)": {
+        "group": "Vitamins/Supplements - Calcium",
+        "vietnamese_name": "Calci bổ sung (calcium carbonate/citrate)",
+        "administration": ["PO"],
+        "indications": [
+            "Thiếu calci, co cứng cơ do hạ calci máu nhẹ",
+            "Hỗ trợ điều trị loãng xương (kết hợp vitamin D và thuốc chống loãng xương)",
+            "Phụ nữ mang thai, cho con bú, người cao tuổi có nguy cơ thiếu calci",
+        ],
+        "contraindications": [
+            "Tăng calci máu",
+            "Sỏi thận calci hoạt động",
+            "Tăng calci niệu nặng",
+        ],
+        "dosage": {
+            "adult_osteoporosis_support": "Tổng lượng calci nguyên tố từ chế độ ăn + thuốc ~1000–1200mg/ngày (tùy tuổi và giới), chia 1–2 lần",
+            "notes": "Ưu tiên calci từ thức ăn; chỉ bổ sung lượng thiếu. Calcium carbonate nên dùng cùng bữa ăn, calcium citrate có thể dùng xa bữa ăn.",
+        },
+        "side_effects": [
+            "Táo bón, đầy bụng",
+            "Tăng calci máu nếu dùng liều cao kéo dài (đặc biệt kèm vitamin D liều cao)",
+            "Sỏi thận calci (nguy cơ tăng nhẹ nếu dùng liều cao lâu dài)",
+        ],
+        "interactions": [
+            "Bisphosphonates đường uống, levothyroxine, tetracyclines, fluoroquinolones, sắt: giảm hấp thu khi dùng cùng lúc",
+            "Thiazide: tăng nguy cơ tăng calci máu",
+        ],
+        "pregnancy": "A/B – an toàn nếu dùng trong giới hạn khuyến cáo",
+        "mechanism_of_action": (
+            "Cung cấp calci nguyên tố cần thiết cho khoáng hóa xương, co cơ, dẫn truyền thần kinh và đông máu. "
+            "Trong loãng xương, bổ sung calci (kèm vitamin D) giúp tối ưu hiệu quả thuốc chống loãng xương và hạn chế mất xương."
+        ),
+        "monitoring": [
+            "Calci máu và chức năng thận nếu dùng liều cao hoặc ở bệnh nhân nguy cơ cao",
+            "Tiền sử và triệu chứng sỏi thận",
+        ],
+        "precautions": [
+            "Không vượt quá tổng calci nguyên tố 1500mg/ngày (từ tất cả nguồn) trừ khi có chỉ định đặc biệt",
+            "Tránh dùng đồng thời với thuốc dễ tạo phức; cách ít nhất 2 giờ trước hoặc 4 giờ sau",
+            "Bổ sung nước đầy đủ để giảm nguy cơ sỏi thận",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (ion sinh lý)",
+            "onset": "Vài ngày–tuần để cải thiện thiếu hụt",
+            "duration": "Phụ thuộc dự trữ xương và chế độ ăn",
+            "protein_binding": "N/A",
+            "clearance": "Thải qua thận và đường tiêu hóa",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Bisphosphonates, levothyroxine, tetracyclines, fluoroquinolones, sắt",
+                    "mechanism": "Tạo phức, giảm hấp thu thuốc",
+                    "effect": "Giảm hiệu quả điều trị",
+                    "management": "Dùng thuốc kia ít nhất 2 giờ trước hoặc 4 giờ sau calcium.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tăng calci máu",
+                "Sỏi thận calci hoạt động",
+            ],
+            "tương_đối": [
+                "Tiền sử sỏi thận calci",
+                "Tăng calci niệu",
+                "Dùng đồng thời nhiều nguồn calci, vitamin D liều cao, hoặc thiazide",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "A/B",
+            "pregnancy_details": "Khuyến nghị bổ sung calci vừa phải trong thai kỳ (thường 1000–1300mg/ngày tổng cộng).",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Calci là khoáng chất thiết yếu; an toàn trong giới hạn khuyến cáo.",
+                "recommendation": "Có thể dùng an toàn.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Không phụ thuộc chuyển hóa gan.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng calci máu: buồn nôn, nôn, táo bón, đa niệu, khát nhiều, lú lẫn",
+                "Sỏi thận, vôi hóa mô mềm (dùng liều rất cao kéo dài)",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng tất cả nguồn calci và vitamin D",
+                "Bù dịch, lợi tiểu quai (furosemide) sau khi đủ dịch để tăng thải calci",
+            ],
+            "monitoring": "Calci máu, creatinin, tình trạng nước–điện giải.",
+        },
+        "reversal_agents": {"available": False, "agents": []},
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Calcium carbonate nên dùng cùng thức ăn; calcium citrate có thể dùng cùng hoặc xa bữa ăn.",
+                "timing": "Chia 1–2 lần/ngày, ưu tiên dùng buổi tối nếu chỉ uống 1 lần.",
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "NOF Guidelines 2024 – Calcium and vitamin D",
+                "UpToDate – Calcium supplementation",
+            ],
+            "last_updated": "2025-02-23",
+            "evidence_level": "High – guideline-based",
+        },
+    },
 }
 
-__all__ = ['VITAMINS_DRUGS']
+__all__ = ["VITAMINS_DRUGS"]

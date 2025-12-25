@@ -11,11 +11,16 @@ from .respiratory import RESPIRATORY_DRUGS
 from .neurological import NEUROLOGICAL_DRUGS
 from .hematology import HEMATOLOGY_DRUGS
 from .supportive import SUPPORTIVE_DRUGS
+from .ent_oral_nasal_combinations import ENT_ORAL_NASAL_COMBINATIONS_DRUGS
 from .antimicrobial import ANTIMICROBIAL_DRUGS
 from .metabolic import METABOLIC_DRUGS
 from .oncology import ONCOLOGY_DRUGS
 from .emergency import EMERGENCY_DRUGS
 from .other import OTHER_DRUGS
+from .urology import UROLOGY_DRUGS
+from .dermatology import DERMATOLOGY_DRUGS
+from .ophthalmology import OPHTHALMOLOGY_DRUGS
+from .obstetrics_gynecology import OBSTETRICS_GYNECOLOGY_DRUGS
 
 # Import split modules from other.py
 from .cardiovascular_other import CARDIOVASCULAR_OTHER_DRUGS
@@ -33,11 +38,16 @@ __all__ = [
     'NEUROLOGICAL_DRUGS',
     'HEMATOLOGY_DRUGS',
     'SUPPORTIVE_DRUGS',
+    'ENT_ORAL_NASAL_COMBINATIONS_DRUGS',
     'ANTIMICROBIAL_DRUGS',
     'METABOLIC_DRUGS',
     'ONCOLOGY_DRUGS',
     'EMERGENCY_DRUGS',
     'OTHER_DRUGS',
+    'UROLOGY_DRUGS',
+    'DERMATOLOGY_DRUGS',
+    'OPHTHALMOLOGY_DRUGS',
+    'OBSTETRICS_GYNECOLOGY_DRUGS',
     # Split modules from other.py
     'CARDIOVASCULAR_OTHER_DRUGS',
     'INFECTIOUS_OTHER_DRUGS',
