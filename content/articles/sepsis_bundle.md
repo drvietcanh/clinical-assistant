@@ -2,7 +2,7 @@
 title: "Sepsis và Septic Shock: 1-Hour Bundle, kháng sinh, dịch truyền, vận mạch"
 specialty: "Hồi sức / Nhiễm khuẩn"
 keywords: ["sepsis", "septic shock", "SSC 2021", "1-hour bundle", "lactate", "norepinephrine", "vasopressin"]
-last_reviewed: 2025-01
+last_reviewed: 2025-02
 guideline_version:
   - Surviving Sepsis Campaign (SSC) Guidelines 2021
   - SSC 2024 Updates

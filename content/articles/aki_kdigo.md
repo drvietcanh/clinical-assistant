@@ -2,7 +2,7 @@
 title: "Suy thận cấp (AKI): KDIGO, phân loại, xử trí, chỉnh liều thuốc"
 specialty: "Thận / Hồi sức"
 keywords: ["AKI", "KDIGO", "RIFLE", "AKIN", "suy thận cấp", "lọc máu", "chỉnh liều thuốc"]
-last_reviewed: 2025-01
+last_reviewed: 2025-02
 guideline_version:
   - KDIGO Clinical Practice Guideline for Acute Kidney Injury 2012 (updates)
   - KDIGO 2024 CKD (tham khảo)

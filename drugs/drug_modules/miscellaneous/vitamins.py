@@ -83,7 +83,23 @@ VITAMINS_DRUGS = {
         'WHO Guidelines for folic acid supplementation',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics"],
         'last_updated': '2025-02-04', 'evidence_level':
-        'High - Guidelines dựa trên chứng cứ từ CDC, WHO và FDA'}},
+        'High - Guidelines dựa trên chứng cứ từ CDC, WHO và FDA'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['May mask vitamin B12 deficiency (high doses >1mg/day)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Hemoglobin, MCV (for anemia treatment)', 'Vitamin B12 levels - CRITICAL (to avoid masking B12 deficiency)', 'Folate levels (if needed)', 'Clinical response']
+        },
+        'guideline_tags': [
+            'CDC Guidelines - Folic Acid Supplementation in Pregnancy',
+            'WHO Guidelines - Folic Acid Supplementation',
+            'ACOG Guidelines - Neural Tube Defect Prevention',
+            'FDA Drug Information - Folic Acid'
+        ]},
     "Vitamin C": {
         'group': 'Vitamins/Supplements - Vitamin C',
         'vietnamese_name': 'Vitamin C, Ascorbic Acid',
@@ -465,6 +481,13 @@ VITAMINS_DRUGS = {
             "severe": "Thận trọng, điều chỉnh theo nồng độ 25(OH)D",
             "notes": "Chuyển hóa ở gan; suy gan nặng có thể giảm hoạt hóa vitamin D.",
         },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Có thể cần dạng hoạt hóa (calcitriol) nếu suy thận nặng",
+            "under_30": "Dùng calcitriol (dạng hoạt hóa) thay vì vitamin D3 thường",
+            "hemodialysis": "Dùng calcitriol (dạng hoạt hóa) thay vì vitamin D3 thường",
+            "notes": "Vitamin D3 được chuyển hóa ở thận thành dạng hoạt động 1,25(OH)2D (calcitriol). Suy thận nặng làm giảm chuyển hóa này, nên cần dùng calcitriol (dạng hoạt hóa) thay vì vitamin D3 thường. Theo dõi nồng độ 25(OH)D và calci máu."
+        },
         "overdose_management": {
             "symptoms": [
                 "Tăng calci máu (buồn nôn, nôn, khát, tiểu nhiều, lú lẫn)",
@@ -581,6 +604,13 @@ VITAMINS_DRUGS = {
             "moderate": "Không cần chỉnh liều",
             "severe": "Không cần chỉnh liều",
             "notes": "Không phụ thuộc chuyển hóa gan.",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, theo dõi calci máu và chức năng thận",
+            "under_30": "Thận trọng, giảm liều nếu cần. Theo dõi calci máu và chức năng thận chặt chẽ",
+            "hemodialysis": "Thận trọng, có thể cần giảm liều. Theo dõi calci máu và chức năng thận chặt chẽ",
+            "notes": "Calcium thải trừ qua thận. Suy thận có thể làm giảm thải trừ calci, tăng nguy cơ tăng calci máu. Theo dõi calci máu và chức năng thận chặt chẽ ở bệnh nhân suy thận."
         },
         "overdose_management": {
             "symptoms": [

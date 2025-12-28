@@ -166,7 +166,24 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["HBV reactivation (can cause fatal liver failure) - CRITICAL", "PML (progressive multifocal leukoencephalopathy) - rare but serious", "Serious infections (especially opportunistic infections)", "Cardiac toxicity (heart failure, arrhythmias)", "Infusion reactions (can be fatal)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["HBV screening (HBsAg, anti-HBc) before treatment - CRITICAL", "Infusion reactions - CRITICAL (during and after infusion, especially first time)", "CBC (WBC, lymphocyte, platelet) - myelosuppression", "Signs of infection - increased risk, especially opportunistic", "PML symptoms (neurological changes, cognitive decline) - CRITICAL", "Cardiac function (ECG, echo if symptoms) - cardiac toxicity rare", "Signs of opportunistic infections (PCP, CMV, herpes, fungal)"]
+        },
+        "guideline_tags": [
+            "NCCN Guidelines - Non-Hodgkin Lymphoma",
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "FDA Black Box Warning - Rituximab and HBV Reactivation",
+            "FDA Black Box Warning - Rituximab and PML",
+            "FDA Black Box Warning - Rituximab and Infusion Reactions"
+        ]
     },
     
     "Trastuzumab": {
@@ -500,7 +517,23 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": True,
+            "organ_toxicity": ["GI perforation (life-threatening)", "Wound healing complications", "Hypertension", "Proteinuria (may progress to nephrotic syndrome)", "Arterial/venous thromboembolism", "Heart failure"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Blood pressure - CRITICAL (hypertension common)", "Proteinuria (urine protein/creatinine ratio or 24h urine protein) - CRITICAL", "Signs of bleeding - CRITICAL", "Signs of GI perforation - CRITICAL (life-threatening)", "Signs of thromboembolism", "Wound healing (stop 28 days before/after major surgery)"]
+        },
+        "guideline_tags": [
+            "NCCN Guidelines - Multiple Cancer Types",
+            "ASCO Guidelines - Anti-VEGF Therapy",
+            "FDA Black Box Warning - Bevacizumab and GI Perforation",
+            "FDA Black Box Warning - Bevacizumab and Wound Healing"
+        ]
     },
     
     "Pembrolizumab": {
@@ -1052,7 +1085,23 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Immune-related adverse events (irAEs) - life-threatening", "Pneumonitis (can be fatal)", "Colitis (can be fatal)", "Hepatitis (can be fatal)", "Myocarditis (rare but serious)", "Endocrinopathies (may be permanent)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of irAEs - CRITICAL (pneumonitis, colitis, hepatitis, endocrinopathies)", "Hepatic function (ALT, AST, bilirubin) - each cycle", "Thyroid function (TSH, T4) - each cycle", "Cortisol, glucose - each cycle", "Chest X-ray if respiratory symptoms", "ECG, troponin if cardiac symptoms"]
+        },
+        "guideline_tags": [
+            "NCCN Guidelines - Multiple Cancer Types",
+            "ASCO Guidelines - Immune Checkpoint Inhibitors",
+            "FDA Black Box Warning - Immune Checkpoint Inhibitors and irAEs",
+            "ESMO Guidelines - Immunotherapy"
+        ]
     },
     
     "Durvalumab": {
@@ -1749,7 +1798,24 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections (opportunistic infections, TB)", "Hepatotoxicity", "Heart failure exacerbation", "Malignancy (lymphoma, skin cancer)", "Demyelinating disease"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of infection - CRITICAL", "TB screening (PPD/IGRA) before treatment", "Hepatic function (ALT, AST)", "CBC", "Signs of heart failure", "Signs of malignancy"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "ACR Guidelines - Psoriatic Arthritis",
+            "FDA Black Box Warning - TNF-α Blockers and Serious Infections/TB",
+            "FDA Black Box Warning - TNF-α Blockers and Malignancy",
+            "ECCO Guidelines - Inflammatory Bowel Disease"
+        ]
     },
     
     "Infliximab": {
@@ -1927,7 +1993,26 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections (especially TB and opportunistic infections)", "Malignancy (lymphoma, skin cancer)", "Heart failure exacerbation", "Demyelinating disease", "Infusion reactions (can be severe)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Infusion reactions - CRITICAL (during and after infusion)", "Signs of infection - CRITICAL", "TB screening (PPD or IGRA) before treatment - CRITICAL", "Delayed hypersensitivity reactions (3-12 days after infusion)", "CBC", "Hepatic function (ALT, AST)", "Symptoms of heart failure", "Neurological symptoms"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "ECCO Guidelines - Inflammatory Bowel Disease",
+            "AAD Guidelines - Psoriasis",
+            "FDA Black Box Warning - Infliximab and Serious Infections",
+            "FDA Black Box Warning - Infliximab and TB",
+            "FDA Black Box Warning - Infliximab and Infusion Reactions",
+            "FDA Black Box Warning - Infliximab and Malignancy"
+        ]
     },
     
     "Etanercept": {
@@ -2095,7 +2180,25 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections (especially TB and opportunistic infections)", "Malignancy (lymphoma, skin cancer)", "Heart failure exacerbation", "Demyelinating disease"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of infection - CRITICAL", "TB screening (PPD or IGRA) before treatment - CRITICAL", "CBC", "Hepatic function (ALT, AST)", "Symptoms of heart failure", "Neurological symptoms"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "ACR Guidelines - Psoriatic Arthritis",
+            "AAD Guidelines - Psoriasis",
+            "FDA Black Box Warning - Etanercept and Serious Infections",
+            "FDA Black Box Warning - Etanercept and TB",
+            "FDA Black Box Warning - Etanercept and Malignancy"
+        ]
     },
     
     "Golimumab": {
@@ -2268,7 +2371,25 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections (especially TB and opportunistic infections)", "Malignancy (lymphoma, skin cancer)", "Heart failure exacerbation", "Demyelinating disease"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of infection - CRITICAL", "TB screening (PPD or IGRA) before treatment - CRITICAL", "CBC", "Hepatic function (ALT, AST)", "Symptoms of heart failure", "Neurological symptoms"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "ACR Guidelines - Psoriatic Arthritis",
+            "ECCO Guidelines - Inflammatory Bowel Disease",
+            "FDA Black Box Warning - Golimumab and Serious Infections",
+            "FDA Black Box Warning - Golimumab and TB",
+            "FDA Black Box Warning - Golimumab and Malignancy"
+        ]
     },
     
     "Certolizumab pegol": {
@@ -2588,7 +2709,24 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections", "Inflammatory bowel disease (IBD, especially Crohn) - increased risk", "Candida infections - increased risk"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of infection - CRITICAL", "TB screening (PPD or IGRA) before treatment - CRITICAL", "Candida infections", "IBD symptoms (especially Crohn) - CRITICAL", "CBC", "Hepatic function (ALT, AST)", "Injection site reactions"]
+        },
+        "guideline_tags": [
+            "AAD Guidelines - Psoriasis",
+            "ACR Guidelines - Psoriatic Arthritis",
+            "ACR Guidelines - Ankylosing Spondylitis",
+            "FDA Black Box Warning - Secukinumab and Serious Infections",
+            "FDA Black Box Warning - Secukinumab and IBD"
+        ]
     },
     
     "Ixekizumab": {
@@ -2742,7 +2880,24 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections", "Inflammatory bowel disease (IBD, especially Crohn) - increased risk", "Candida infections - increased risk"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of infection - CRITICAL", "TB screening (PPD or IGRA) before treatment - CRITICAL", "Candida infections", "IBD symptoms (especially Crohn) - CRITICAL", "CBC", "Hepatic function (ALT, AST)", "Injection site reactions"]
+        },
+        "guideline_tags": [
+            "AAD Guidelines - Psoriasis",
+            "ACR Guidelines - Psoriatic Arthritis",
+            "ACR Guidelines - Ankylosing Spondylitis",
+            "FDA Black Box Warning - Ixekizumab and Serious Infections",
+            "FDA Black Box Warning - Ixekizumab and IBD"
+        ]
     },
     
     "Ustekinumab": {
@@ -3204,7 +3359,23 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of infection - CRITICAL", "TB screening (PPD or IGRA) before treatment - CRITICAL", "CBC", "Hepatic function (ALT, AST)", "Injection site reactions"]
+        },
+        "guideline_tags": [
+            "AAD Guidelines - Psoriasis",
+            "ACR Guidelines - Psoriatic Arthritis",
+            "FDA Black Box Warning - Guselkumab and Serious Infections",
+            "FDA Black Box Warning - Guselkumab and TB"
+        ]
     },
     
     "Risankizumab": {
@@ -3359,7 +3530,24 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of infection - CRITICAL", "TB screening (PPD or IGRA) before treatment - CRITICAL", "CBC", "Hepatic function (ALT, AST)", "Injection site reactions or infusion reactions"]
+        },
+        "guideline_tags": [
+            "AAD Guidelines - Psoriasis",
+            "ACR Guidelines - Psoriatic Arthritis",
+            "ECCO Guidelines - Inflammatory Bowel Disease",
+            "FDA Black Box Warning - Risankizumab and Serious Infections",
+            "FDA Black Box Warning - Risankizumab and TB"
+        ]
     },
     
     "Tocilizumab": {
@@ -3700,7 +3888,23 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections", "Neutropenia (ANC <500/mm³) - CRITICAL", "Thrombocytopenia (<50,000/mm³) - CRITICAL", "Hepatotoxicity (ALT/AST elevation - common)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of infection - CRITICAL", "TB screening (PPD or IGRA) before treatment - CRITICAL", "CBC (ANC, platelet) - CRITICAL (neutropenia, thrombocytopenia common)", "Hepatic function (ALT, AST) - CRITICAL (common elevation, stop if >5x ULN)", "Injection site reactions"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "FDA Black Box Warning - Sarilumab and Serious Infections",
+            "FDA Black Box Warning - Sarilumab and Neutropenia/Thrombocytopenia",
+            "FDA Black Box Warning - Sarilumab and Hepatotoxicity"
+        ]
     },
     
     "Eculizumab": {
@@ -4519,7 +4723,24 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Autoimmune disorders (ITP, thyroid disorders, nephropathies, cytopenias) - common and serious", "HBV reactivation (life-threatening)", "PML (progressive multifocal leukoencephalopathy) - rare but serious", "Malignancy (thyroid cancer, melanoma, lymphoma)", "Serious infections (opportunistic infections)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Autoimmune disorders - CRITICAL (monthly monitoring for at least 48 months after last dose)", "CBC (platelet, WBC) - CRITICAL (monthly for at least 48 months)", "Thyroid function (TSH, T4) - monthly for at least 48 months", "Renal function (creatinine, proteinuria) - monthly for at least 48 months", "HBV screening (HBsAg, anti-HBc) before treatment - CRITICAL", "HIV, TB screening before treatment", "Signs of infection - CRITICAL", "Signs of PML"]
+        },
+        "guideline_tags": [
+            "AAN Guidelines - Multiple Sclerosis",
+            "FDA Black Box Warning - Alemtuzumab and Autoimmune Disorders",
+            "FDA Black Box Warning - Alemtuzumab and HBV Reactivation",
+            "FDA Black Box Warning - Alemtuzumab and PML",
+            "EAN Guidelines - Multiple Sclerosis"
+        ]
     },
     
     "Belimumab": {
@@ -4677,7 +4898,23 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections", "Malignancy (slight increase)", "Depression/suicide risk"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of infection - CRITICAL", "Infusion reactions (IV) - especially first dose", "SLE disease activity (SLEDAI, BILAG)", "Signs of depression/suicide", "CBC"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Systemic Lupus Erythematosus",
+            "EULAR Guidelines - Systemic Lupus Erythematosus",
+            "FDA Black Box Warning - Belimumab and Serious Infections",
+            "FDA Black Box Warning - Belimumab and Depression/Suicide"
+        ]
     },
     
     "Anifrolumab": {
@@ -4823,7 +5060,23 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections (especially herpes zoster)", "Malignancy (slight increase)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of infection - CRITICAL (especially herpes zoster)", "Infusion reactions (IV) - especially first dose", "SLE disease activity (SLEDAI, BILAG)", "CBC"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Systemic Lupus Erythematosus",
+            "EULAR Guidelines - Systemic Lupus Erythematosus",
+            "FDA Black Box Warning - Anifrolumab and Serious Infections",
+            "FDA Black Box Warning - Anifrolumab and Malignancy"
+        ]
     },
     
     "Tezepelumab": {
@@ -4953,7 +5206,21 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections (rare)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Injection site reactions (pain, redness, swelling)", "Respiratory function (FEV1) - assess treatment response", "Asthma exacerbation frequency - reduction in asthma attacks", "ICS use - may reduce dose", "Signs of respiratory infection", "Signs of serious infection"]
+        },
+        "guideline_tags": [
+            "GINA Guidelines - Severe Asthma",
+            "FDA Drug Information - Tezepelumab"
+        ]
     },
     
     "Reslizumab": {
@@ -5092,7 +5359,22 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Infusion reactions (can be severe, fatal) - CRITICAL", "Serious infections"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Infusion reactions - CRITICAL (during and after infusion, especially first time)", "Respiratory function (FEV1) - assess treatment response", "Blood eosinophil count - significant decrease (usually 50-80% reduction)", "Asthma exacerbation frequency - reduction in asthma attacks", "ICS use - may reduce dose", "Signs of respiratory infection", "Signs of allergic reactions", "Creatine kinase (CK) - if muscle pain symptoms"]
+        },
+        "guideline_tags": [
+            "GINA Guidelines - Severe Asthma",
+            "FDA Black Box Warning - Reslizumab and Infusion Reactions",
+            "FDA Drug Information - Reslizumab"
+        ]
     },
     
     "Efgartigimod": {
@@ -5387,7 +5669,23 @@ BIOLOGICAL_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Meningococcal infections (life-threatening) - CRITICAL", "Serious infections"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Meningococcal infection signs (fever, headache, neck stiffness, rash) - CRITICAL", "Infusion reactions - CRITICAL (during and after infusion, especially first time)", "PNH: LDH, hemoglobin, haptoglobin, reticulocyte", "aHUS: Creatinine, eGFR, LDH, platelet, hemoglobin", "Meningococcal vaccination status - CRITICAL (must be vaccinated before starting)"]
+        },
+        "guideline_tags": [
+            "ASH Guidelines - Paroxysmal Nocturnal Hemoglobinuria",
+            "ASH Guidelines - Atypical Hemolytic Uremic Syndrome",
+            "FDA Black Box Warning - Ravulizumab and Meningococcal Infections",
+            "FDA Black Box Warning - Ravulizumab and Vaccination Requirement"
+        ]
     },
     
     "Caplacizumab": {

@@ -218,7 +218,23 @@ CMV_ANTIVIRALS = {
             ],
             "last_updated": "2025-02-04",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Bone marrow suppression (severe neutropenia, thrombocytopenia, anemia) - CRITICAL", "Nephrotoxicity", "Neurotoxicity (confusion, seizures, hallucinations)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["CBC (neutrophils, platelets, hemoglobin) - CRITICAL (2-3 times/week when IV)", "Renal function (creatinine, BUN) - for dose adjustment", "Neurological status (confusion, seizures)", "Signs of infection (due to neutropenia)", "Signs of bleeding (due to thrombocytopenia)"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Cytomegalovirus Infection",
+            "FDA Black Box Warning - Ganciclovir and Bone Marrow Suppression",
+            "FDA Black Box Warning - Ganciclovir and Pregnancy (Category D)",
+            "FDA Black Box Warning - Ganciclovir and Neurotoxicity"
+        ]
     }
 }
 

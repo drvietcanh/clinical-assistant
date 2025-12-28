@@ -395,7 +395,11 @@ HIV_ARVS = {
             ],
             "monitoring": "Dấu hiệu lâm sàng, men gan, tải lượng virus (sau ổn định).",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ, than hoạt nếu uống quá liều gần đây, theo dõi ECG và dấu hiệu sinh tồn. DTG gắn protein cao, lọc máu ít hiệu quả."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống cùng hoặc không cùng thức ăn.",
@@ -540,7 +544,11 @@ HIV_ARVS = {
             ],
             "monitoring": "Dấu hiệu thần kinh, men gan, ECG nếu nguy cơ kéo dài QT (hiếm).",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là than hoạt nếu uống quá liều sớm, hỗ trợ triệu chứng, theo dõi thần kinh và men gan."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống lúc đói hoặc bữa ít chất béo để giảm tác dụng phụ thần kinh.",
@@ -935,7 +943,11 @@ HIV_ARVS = {
             ],
             "monitoring": "Dấu hiệu sinh tồn, men gan.",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ, than hoạt nếu mới uống."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể với hoặc không.",
@@ -1075,7 +1087,11 @@ HIV_ARVS = {
             ],
             "monitoring": "Dấu hiệu sinh tồn, men gan, tương tác thuốc kèm.",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ, than hoạt nếu mới uống, theo dõi ECG, men gan, và dấu hiệu độc tính thuốc phối hợp."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Theo thuốc đích (đa số PI cần thức ăn).",
@@ -1213,7 +1229,11 @@ HIV_ARVS = {
             ],
             "monitoring": "ECG, men gan, glucose, lipid.",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là than hoạt nếu uống gần đây, theo dõi ECG, điện giải, và dấu hiệu sinh tồn."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với thức ăn để giảm rối loạn tiêu hóa.",
@@ -1901,7 +1921,11 @@ HIV_ARVS = {
             ],
             "monitoring": "ECG, men gan, triệu chứng thần kinh/tâm lý."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ, than hoạt nếu mới uống, theo dõi ECG nếu nghi kéo dài QT."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "PHẢI uống cùng bữa ăn đủ calo.",
@@ -2050,7 +2074,11 @@ HIV_ARVS = {
             ],
             "monitoring": "ECG, men gan, dấu hiệu tương tác thuốc kèm."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là than hoạt nếu mới uống, điều trị hỗ trợ, theo dõi ECG và men gan."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "PHẢI uống với thức ăn để tăng hấp thu.",
@@ -2213,7 +2241,11 @@ HIV_ARVS = {
             ],
             "monitoring": "ECG, men gan, bilirubin."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là than hoạt nếu mới uống, theo dõi ECG, bilirubin, và men gan, điều trị hỗ trợ."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "PHẢI uống với thức ăn.",
@@ -2355,7 +2387,11 @@ HIV_ARVS = {
             ],
             "monitoring": "ECG, men gan, triệu chứng lâm sàng."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ. Với dạng IM: không thể loại bỏ nhanh do depot, cần theo dõi lâu dài. Với dạng oral: than hoạt nếu mới uống, theo dõi ECG và men gan."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Lead-in/bridge: uống cùng thức ăn (RPV cần bữa ăn).",

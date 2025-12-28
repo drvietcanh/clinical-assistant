@@ -301,7 +301,22 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Metabolic acidosis (if systemic absorption)", "Hepatotoxicity (contraindicated in severe hepatic impairment)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Intraocular pressure (IOP)", "Renal function (CrCl) - contraindicated if CrCl <30", "Hepatic function - contraindicated in severe impairment", "Electrolytes (if systemic absorption)"]
+        },
+        "guideline_tags": [
+            "AAO Guidelines - Glaucoma",
+            "FDA Drug Information - Brinzolamide",
+            "European Glaucoma Society Guidelines"
+        ]
     },
     
     "Timolol eye drops": {
@@ -736,6 +751,20 @@ OPHTHALMOLOGY_DRUGS = {
                 "Có thai (category C) - thận trọng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng dexamethasone hoặc corticosteroid",
+                "Nhiễm trùng mắt do virus (herpes simplex, varicella) - CHỐNG CHỈ ĐỊNH (có thể làm nặng)",
+                "Nhiễm trùng mắt do nấm - CHỐNG CHỈ ĐỊNH (có thể làm nặng)",
+                "Nhiễm trùng mắt do vi khuẩn chưa điều trị - CHỐNG CHỈ ĐỊNH (có thể làm nặng)"
+            ],
+            "tương_đối": [
+                "Tăng nhãn áp (glaucoma) - thận trọng, theo dõi nhãn áp định kỳ",
+                "Đục thủy tinh thể (cataract) - thận trọng, có thể làm nặng",
+                "Bệnh nhân đeo kính áp tròng - thận trọng (benzalkonium chloride)",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Dexamethasone là thuốc phân loại C. Dexamethasone có thể hấp thu toàn thân và qua nhau thai. Corticosteroid có thể gây dị tật bẩm sinh ở động vật. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
@@ -774,7 +803,11 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi thị lực, nhãn áp, dấu hiệu viêm, dấu hiệu nhiễm trùng cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (tăng nhãn áp, đục thủy tinh thể, nhiễm trùng)."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là rửa mắt và điều trị hỗ trợ. Nếu tăng nhãn áp nặng: ngừng thuốc và điều trị tăng nhãn áp. Nếu nhiễm trùng mắt: ngừng thuốc và điều trị nhiễm trùng."
+        },
         "administration_instructions": {
             "oral": None,
             "ophthalmic": {
@@ -915,7 +948,23 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (improvement in dry eye symptoms)", "Signs of eye irritation (rare)"]
+        },
+        "guideline_tags": [
+            "AAO Guidelines - Dry Eye Syndrome",
+            "TFOS DEWS II Report",
+            "FDA Drug Information - Artificial Tears",
+            "UpToDate - Dry Eye Syndrome Treatment"
+        ]
     },
     
     "Olopatadine eye drops": {
@@ -1446,6 +1495,20 @@ OPHTHALMOLOGY_DRUGS = {
                 "Có thai (category C) - thận trọng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng prednisolone hoặc corticosteroid",
+                "Nhiễm trùng mắt do virus (herpes simplex, varicella) - CHỐNG CHỈ ĐỊNH (có thể làm nặng)",
+                "Nhiễm trùng mắt do nấm - CHỐNG CHỈ ĐỊNH (có thể làm nặng)",
+                "Nhiễm trùng mắt do vi khuẩn chưa điều trị - CHỐNG CHỈ ĐỊNH (có thể làm nặng)"
+            ],
+            "tương_đối": [
+                "Tăng nhãn áp (glaucoma) - thận trọng, theo dõi nhãn áp định kỳ",
+                "Đục thủy tinh thể (cataract) - thận trọng, có thể làm nặng",
+                "Bệnh nhân đeo kính áp tròng - thận trọng (benzalkonium chloride)",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Prednisolone là thuốc phân loại C. Prednisolone có thể hấp thu toàn thân và qua nhau thai. Corticosteroid có thể gây dị tật bẩm sinh ở động vật. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
@@ -1484,7 +1547,11 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi thị lực, nhãn áp, dấu hiệu viêm, dấu hiệu nhiễm trùng cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (tăng nhãn áp, đục thủy tinh thể, nhiễm trùng)."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là rửa mắt và điều trị hỗ trợ. Nếu tăng nhãn áp nặng: ngừng thuốc và điều trị tăng nhãn áp. Nếu nhiễm trùng mắt: ngừng thuốc và điều trị nhiễm trùng."
+        },
         "administration_instructions": {
             "oral": None,
             "ophthalmic": {
@@ -1504,7 +1571,23 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Increased intraocular pressure (glaucoma) - CRITICAL (common with prolonged use)", "Cataract formation - CRITICAL (common with prolonged use)", "Ocular infections (if used long-term, immunosuppression)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Intraocular pressure (IOP) - CRITICAL (periodic monitoring, especially with prolonged use)", "Vision and eye examination", "Signs of cataract (decreased vision, blurred vision) - if used long-term", "Signs of ocular infection (redness, discharge, pain) - dangerous if used long-term", "Signs of eye irritation"]
+        },
+        "guideline_tags": [
+            "AAO Guidelines - Uveitis",
+            "AAO Guidelines - Postoperative Inflammation",
+            "FDA Black Box Warning - Prednisolone Eye Drops and Glaucoma/Cataract",
+            "FDA Drug Information - Prednisolone Eye Drops"
+        ]
     },
     
     "Pilocarpine eye drops": {
@@ -1600,6 +1683,18 @@ OPHTHALMOLOGY_DRUGS = {
             "minor": []
         },
         "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng pilocarpine hoặc cholinergic"
+            ],
+            "tương_đối": [
+                "Bệnh nhân có tiền sử viêm màng bồ đào - thận trọng, có thể làm nặng",
+                "Bệnh nhân có tiền sử bong võng mạc - thận trọng, có thể làm nặng",
+                "Bệnh nhân hen phế quản - thận trọng, nguy cơ co thắt phế quản",
+                "Bệnh nhân đeo kính áp tròng - thận trọng (benzalkonium chloride)",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng pilocarpine hoặc cholinergic"
             ],
@@ -1933,7 +2028,22 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in redness, swelling, pain)", "Signs of eye irritation", "Visual acuity (temporary blurring after application)"]
+        },
+        "guideline_tags": [
+            "AAO Guidelines - Herpetic Keratitis",
+            "FDA Drug Information - Acyclovir Ophthalmic",
+            "UpToDate - Herpetic Keratitis Treatment"
+        ]
     },
     
     "Bimatoprost": {
@@ -2075,7 +2185,22 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Permanent iris color change (increased pigmentation)", "Macular edema (rare, in patients with history)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Intraocular pressure (IOP) - target <21 mmHg", "Eye examination (iris color changes, eyelash changes)", "Visual acuity", "Signs of macular edema (in patients with history)"]
+        },
+        "guideline_tags": [
+            "AAO Guidelines - Glaucoma",
+            "FDA Drug Information - Bimatoprost",
+            "European Glaucoma Society Guidelines"
+        ]
     },
     
     "Travoprost": {
@@ -2350,7 +2475,22 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in redness, swelling, corneal ulcer)", "Signs of eye irritation", "Visual acuity", "Signs of recurrence"]
+        },
+        "guideline_tags": [
+            "AAO Guidelines - Herpetic Keratitis",
+            "FDA Drug Information - Acyclovir Ophthalmic",
+            "UpToDate - Herpetic Keratitis Treatment"
+        ]
     },
     
     "Ganciclovir eye drops": {
@@ -2485,7 +2625,23 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Local eye irritation", "Temporary blurred vision (due to gel)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in redness, swelling, corneal ulcer)", "Signs of eye irritation", "Signs of infection (if not improving)", "Vision and eye examination"]
+        },
+        "guideline_tags": [
+            "AAO Guidelines - CMV Retinitis",
+            "AAO Guidelines - Herpetic Keratitis",
+            "IDSA Guidelines - Cytomegalovirus Infection",
+            "FDA Drug Information - Ganciclovir Eye Drops"
+        ]
     },
     
     "Brimonidine": {
@@ -2669,7 +2825,22 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["CNS depression (especially in children <2 years)", "Hypotension", "Bradycardia"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Intraocular pressure (IOP) - target <21 mmHg", "Signs of CNS depression (especially in children <2 years) - CRITICAL", "Blood pressure", "Heart rate", "Signs of allergic conjunctivitis (after months of use)"]
+        },
+        "guideline_tags": [
+            "AAO Guidelines - Glaucoma",
+            "FDA Black Box Warning - Brimonidine and CNS Depression in Children",
+            "FDA Drug Information - Brimonidine Ophthalmic"
+        ]
     },
     
     "Ketorolac eye drops": {
@@ -2801,6 +2972,24 @@ OPHTHALMOLOGY_DRUGS = {
                 "Trẻ em <3 tuổi - thận trọng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng ketorolac hoặc NSAID",
+                "Loét dạ dày tá tràng hoạt động - CHỐNG CHỈ ĐỊNH",
+                "Xuất huyết tiêu hóa gần đây - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng (CrCl <30 mL/min) - CHỐNG CHỈ ĐỊNH",
+                "Suy gan nặng - CHỐNG CHỈ ĐỊNH",
+                "Rối loạn đông máu nặng - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60 mL/min) - thận trọng, theo dõi chức năng thận",
+                "Bệnh nhân cao tuổi - tăng nguy cơ tác dụng phụ",
+                "Dùng với NSAID đường uống - tăng nguy cơ loét dạ dày, suy thận",
+                "Dùng với warfarin, thuốc chống đông - tăng nguy cơ xuất huyết",
+                "Dùng với ACE inhibitors, ARBs - tăng nguy cơ suy thận",
+                "Trẻ em <3 tuổi - thận trọng"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Ketorolac là thuốc phân loại C. NSAID có thể qua nhau thai và gây tác dụng phụ ở thai nhi (đóng sớm ống động mạch, suy thận). Tránh dùng trong tam cá nguyệt thứ ba. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong tam cá nguyệt thứ nhất và thứ hai.",
@@ -2840,7 +3029,11 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, lượng nước tiểu, chức năng thận, dấu hiệu xuất huyết cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (xuất huyết tiêu hóa, suy thận cấp)."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là rửa mắt và điều trị hỗ trợ. Nếu hấp thu toàn thân nặng: ngừng thuốc, điều trị xuất huyết tiêu hóa (PPI, hỗ trợ huyết động), suy thận cấp (hỗ trợ huyết động, lọc máu nếu cần)."
+        },
         "administration_instructions": {
             "ophthalmic": {
                 "preparation": "Dạng dung dịch nhỏ mắt 0.4% hoặc 0.5%.",
@@ -3048,7 +3241,23 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Systemic anticholinergic effects (dry mouth, tachycardia, urinary retention, confusion)", "Increased intraocular pressure (if narrow-angle glaucoma)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Intraocular pressure (IOP) - CRITICAL (contraindicated in narrow-angle glaucoma)", "Systemic anticholinergic effects (dry mouth, tachycardia, urinary retention, confusion)", "Signs of CNS depression in elderly/children"]
+        },
+        "guideline_tags": [
+            "AAO Guidelines - Uveitis",
+            "AAO Guidelines - Cycloplegia",
+            "FDA Drug Information - Atropine Ophthalmic",
+            "FDA Black Box Warning - Atropine and Narrow-Angle Glaucoma"
+        ]
     },
     
     "Cyclopentolate eye drops": {
@@ -4166,7 +4375,22 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in itching, redness, swelling)", "Signs of eye irritation", "Systemic effects (drowsiness, fatigue) if systemic absorption"]
+        },
+        "guideline_tags": [
+            "AAO Guidelines - Allergic Conjunctivitis",
+            "EAACI Guidelines - Allergic Conjunctivitis",
+            "FDA Drug Information - Azelastine Ophthalmic"
+        ]
     },
     
     "Diclofenac eye drops": {
@@ -4298,6 +4522,24 @@ OPHTHALMOLOGY_DRUGS = {
                 "Trẻ em <3 tuổi - thận trọng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng diclofenac hoặc NSAID",
+                "Loét dạ dày tá tràng hoạt động - CHỐNG CHỈ ĐỊNH",
+                "Xuất huyết tiêu hóa gần đây - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng (CrCl <30 mL/min) - CHỐNG CHỈ ĐỊNH",
+                "Suy gan nặng - CHỐNG CHỈ ĐỊNH",
+                "Rối loạn đông máu nặng - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60 mL/min) - thận trọng, theo dõi chức năng thận",
+                "Bệnh nhân cao tuổi - tăng nguy cơ tác dụng phụ",
+                "Dùng với NSAID đường uống - tăng nguy cơ loét dạ dày, suy thận",
+                "Dùng với warfarin, thuốc chống đông - tăng nguy cơ xuất huyết",
+                "Dùng với ACE inhibitors, ARBs - tăng nguy cơ suy thận",
+                "Trẻ em <3 tuổi - thận trọng"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Diclofenac là thuốc phân loại C. NSAID có thể qua nhau thai và gây tác dụng phụ ở thai nhi (đóng sớm ống động mạch, suy thận). Tránh dùng trong tam cá nguyệt thứ ba. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong tam cá nguyệt thứ nhất và thứ hai.",
@@ -4337,7 +4579,11 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, lượng nước tiểu, chức năng thận, dấu hiệu xuất huyết cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (xuất huyết tiêu hóa, suy thận cấp)."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là rửa mắt và điều trị hỗ trợ. Nếu hấp thu toàn thân nặng: ngừng thuốc, điều trị xuất huyết tiêu hóa (PPI, hỗ trợ huyết động), suy thận cấp (hỗ trợ huyết động, lọc máu nếu cần)."
+        },
         "administration_instructions": {
             "ophthalmic": {
                 "preparation": "Dạng dung dịch nhỏ mắt 0.1%.",
@@ -4484,6 +4730,23 @@ OPHTHALMOLOGY_DRUGS = {
                 "Dùng với ACE inhibitors, ARBs - tăng nguy cơ suy thận"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng nepafenac hoặc NSAID",
+                "Loét dạ dày tá tràng hoạt động - CHỐNG CHỈ ĐỊNH",
+                "Xuất huyết tiêu hóa gần đây - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng (CrCl <30 mL/min) - CHỐNG CHỈ ĐỊNH",
+                "Suy gan nặng - CHỐNG CHỈ ĐỊNH",
+                "Rối loạn đông máu nặng - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60 mL/min) - thận trọng, theo dõi chức năng thận",
+                "Bệnh nhân cao tuổi - tăng nguy cơ tác dụng phụ",
+                "Dùng với NSAID đường uống - tăng nguy cơ loét dạ dày, suy thận",
+                "Dùng với warfarin, thuốc chống đông - tăng nguy cơ xuất huyết",
+                "Dùng với ACE inhibitors, ARBs - tăng nguy cơ suy thận"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Nepafenac là thuốc phân loại C. NSAID có thể qua nhau thai và gây tác dụng phụ ở thai nhi (đóng sớm ống động mạch, suy thận). Tránh dùng trong tam cá nguyệt thứ ba. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong tam cá nguyệt thứ nhất và thứ hai.",
@@ -4523,7 +4786,11 @@ OPHTHALMOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, lượng nước tiểu, chức năng thận, dấu hiệu xuất huyết cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (xuất huyết tiêu hóa, suy thận cấp)."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là rửa mắt và điều trị hỗ trợ. Nếu hấp thu toàn thân nặng: ngừng thuốc, điều trị xuất huyết tiêu hóa (PPI, hỗ trợ huyết động), suy thận cấp (hỗ trợ huyết động, lọc máu nếu cần)."
+        },
         "administration_instructions": {
             "ophthalmic": {
                 "preparation": "Dạng dung dịch nhỏ mắt 0.1%.",

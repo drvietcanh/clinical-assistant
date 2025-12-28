@@ -51,6 +51,18 @@ NEUROMUSCULAR_BLOCKERS_DRUGS = {
             "Lidocaine: tăng tác dụng nhẹ"
         ],
         "pregnancy": "C - An toàn trong cấp cứu và gây mê",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True, "metabolic": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Difficult Airway Guidelines",
+            "SCCM ICU Sedation Guidelines",
+            "Malignant Hyperthermia Association Guidelines"
+        ],
         "mechanism_of_action": "Succinylcholine là chất chủ vận (agonist) của nicotinic acetylcholine receptors tại junction thần kinh-cơ. Khác với non-depolarizing blockers (ức chế receptor), succinylcholine kích thích receptor và gây khử cực màng tế bào cơ (depolarization). Khử cực ban đầu gây co cơ (fasciculations), sau đó receptor bị desensitize và không đáp ứng với acetylcholine → giãn cơ. Succinylcholine bị phân hủy bởi pseudocholinesterase trong huyết tương (thời gian bán thải 2-3 phút), nên tác dụng ngắn (5-10 phút). Ở bệnh nhân thiếu pseudocholinesterase (di truyền hoặc mắc phải), tác dụng kéo dài (có thể >1 giờ).",
         "monitoring": [
             "ECG liên tục (theo dõi nhịp chậm, rối loạn nhịp do tăng kali máu)",
@@ -255,6 +267,17 @@ NEUROMUSCULAR_BLOCKERS_DRUGS = {
             "Corticosteroids: có thể giảm tác dụng nhẹ"
         ],
         "pregnancy": "C - An toàn trong cấp cứu và gây mê",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Difficult Airway Guidelines",
+            "SCCM ICU Sedation Guidelines"
+        ],
         "mechanism_of_action": "Rocuronium là non-depolarizing neuromuscular blocker (aminosteroid). Ức chế cạnh tranh nicotinic acetylcholine receptors tại junction thần kinh-cơ, ngăn chặn acetylcholine gắn với receptor. Kết quả: giãn cơ xương. Khác với succinylcholine (depolarizing), rocuronium không gây khử cực và không gây fasciculations. Rocuronium có tác dụng nhanh (60-90 giây với liều cao 1.2 mg/kg), phù hợp cho RSI. Thời gian tác dụng trung bình (30-60 phút). Thải trừ chủ yếu qua gan (70%), một phần qua thận (30%).",
         "monitoring": [
             "TOF (train-of-four) monitoring liên tục (quan trọng)",
@@ -435,6 +458,17 @@ NEUROMUSCULAR_BLOCKERS_DRUGS = {
             "Corticosteroids: có thể giảm tác dụng nhẹ"
         ],
         "pregnancy": "C - An toàn trong cấp cứu và gây mê",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Difficult Airway Guidelines",
+            "SCCM ICU Sedation Guidelines"
+        ],
         "mechanism_of_action": "Vecuronium là non-depolarizing neuromuscular blocker (aminosteroid). Ức chế cạnh tranh nicotinic acetylcholine receptors tại junction thần kinh-cơ, ngăn chặn acetylcholine gắn với receptor. Kết quả: giãn cơ xương. Vecuronium không giải phóng histamine (ưu điểm so với atracurium). Thời gian tác dụng trung bình (30-45 phút). Thải trừ chủ yếu qua gan (70-80%), một phần qua thận (20-30%).",
         "monitoring": [
             "TOF (train-of-four) monitoring liên tục (quan trọng)",
@@ -613,6 +647,17 @@ NEUROMUSCULAR_BLOCKERS_DRUGS = {
             "Volatile anesthetics: tăng tác dụng"
         ],
         "pregnancy": "C - An toàn trong cấp cứu và gây mê",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Difficult Airway Guidelines",
+            "SCCM ICU Sedation Guidelines"
+        ],
         "mechanism_of_action": "Cisatracurium là non-depolarizing neuromuscular blocker (benzylisoquinolinium). Ức chế cạnh tranh nicotinic acetylcholine receptors tại junction thần kinh-cơ, ngăn chặn acetylcholine gắn với receptor. Kết quả: giãn cơ xương. Cisatracurium là đồng phân của atracurium, nhưng mạnh hơn 3 lần và ít giải phóng histamine hơn. ĐẶC ĐIỂM QUAN TRỌNG: Cisatracurium bị phân hủy bởi Hofmann elimination (phản ứng hóa học tự phát ở nhiệt độ và pH cơ thể), KHÔNG phụ thuộc gan/thận. Đây là ưu điểm lớn so với vecuronium/rocuronium. Thời gian tác dụng trung bình (40-60 phút).",
         "monitoring": [
             "TOF (train-of-four) monitoring liên tục (quan trọng)",

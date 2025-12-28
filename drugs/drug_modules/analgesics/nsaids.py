@@ -118,13 +118,29 @@ NSAIDS_DRUGS = {
         'unit': 'VND',
         'range': '3,000 - 15,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Ibuprofen generic thường rẻ hơn (3,000-8,000 VND/viên 400mg).'
-    }, 'references': {'primary_sources': [
+    },         'references': {'primary_sources': [
         'FDA Drug Label - Advil, Motrin (ibuprofen)',
         'UpToDate - Ibuprofen: Drug information',
         'Lexicomp - Ibuprofen monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-02-04', 'evidence_level':
-        'High - FDA-approved, extensive clinical data'}},
+        'High - FDA-approved, extensive clinical data'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': True,
+            'organ_toxicity': ['GI bleeding/ulceration', 'Renal toxicity (especially with ACE inhibitors)', 'Hepatotoxicity (rare)', 'Cardiovascular events (MI, stroke)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': True,
+            'requires_monitoring': ['Signs of GI bleeding', 'Renal function (CrCl, BUN) if long-term use', 'Blood pressure', 'Signs of heart failure']
+        },
+        'guideline_tags': [
+            'FDA Drug Safety Communication - NSAIDs and Cardiovascular Risk',
+            'ACR Guidelines - NSAID Use in Arthritis',
+            'FDA Black Box Warning - NSAIDs and Pregnancy (3rd trimester)',
+            'ISMP High Alert Medications - NSAIDs in Elderly'
+        ]},
     "Naproxen": {'group': 'Analgesic - NSAID', 'vietnamese_name': 'Naproxen, Naprosyn',
         'administration': ['PO'], 'indications': ['Đau nhẹ đến trung bình',
         'Viêm khớp dạng thấp', 'Viêm khớp xương khớp',
@@ -242,7 +258,23 @@ NSAIDS_DRUGS = {
         'Lexicomp - Naproxen monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-06', 'evidence_level':
-        'High - FDA-approved, extensive clinical data'}},
+        'High - FDA-approved, extensive clinical data'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': True,
+            'organ_toxicity': ['GI bleeding/ulceration', 'Renal toxicity', 'Hepatotoxicity (higher risk than other NSAIDs)', 'Cardiovascular events (MI, stroke)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': True,
+            'nephrotoxicity': True,
+            'requires_monitoring': ['Signs of GI bleeding', 'Hepatic function (ALT, AST) - CRITICAL', 'Renal function (CrCl, BUN)', 'Blood pressure']
+        },
+        'guideline_tags': [
+            'FDA Drug Safety Communication - NSAIDs and Cardiovascular Risk',
+            'FDA Drug Safety Communication - Diclofenac and Hepatotoxicity',
+            'ACR Guidelines - NSAID Use in Arthritis',
+            'FDA Black Box Warning - NSAIDs and Pregnancy (3rd trimester)'
+        ]},
     "Diclofenac": {'group': 'Analgesic - NSAID', 'vietnamese_name': 'Diclofenac, Voltaren',
         'administration': ['PO', 'IM', 'Topical'], 'indications': [
         'Đau nhẹ đến trung bình', 'Viêm khớp dạng thấp', 'Viêm khớp xương khớp',
@@ -361,7 +393,22 @@ NSAIDS_DRUGS = {
         'Lexicomp - Diclofenac monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-06', 'evidence_level':
-        'High - FDA-approved, extensive clinical data'}},
+        'High - FDA-approved, extensive clinical data'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': True,
+            'organ_toxicity': ['GI bleeding/ulceration (less than non-selective NSAIDs)', 'Renal toxicity', 'Cardiovascular events (MI, stroke)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': True,
+            'requires_monitoring': ['Signs of GI bleeding', 'Renal function (CrCl, BUN)', 'Blood pressure']
+        },
+        'guideline_tags': [
+            'FDA Drug Safety Communication - NSAIDs and Cardiovascular Risk',
+            'ACR Guidelines - NSAID Use in Arthritis',
+            'FDA Black Box Warning - NSAIDs and Pregnancy (3rd trimester)'
+        ]},
     "Meloxicam": {'group': 'Analgesic - NSAID', 'vietnamese_name': 'Meloxicam, Mobic',
         'administration': ['PO'], 'indications': ['Đau nhẹ đến trung bình',
         'Viêm khớp dạng thấp', 'Viêm khớp xương khớp', 'Đau bụng kinh'],
@@ -456,7 +503,23 @@ NSAIDS_DRUGS = {
         'Lexicomp - Meloxicam monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-02-05', 'evidence_level':
-        'High - FDA-approved, extensive clinical data'}},
+        'High - FDA-approved, extensive clinical data'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['GI bleeding/ulceration (lower risk than non-selective NSAIDs)', 'Renal toxicity', 'Cardiovascular events (MI, stroke - similar to non-selective NSAIDs)', 'Sulfonamide allergy (contraindicated)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': True,
+            'requires_monitoring': ['Signs of GI bleeding', 'Renal function (CrCl, BUN)', 'Blood pressure', 'Signs of cardiovascular events']
+        },
+        'guideline_tags': [
+            'FDA Drug Safety Communication - NSAIDs and Cardiovascular Risk',
+            'FDA Drug Safety Communication - COX-2 Inhibitors and Cardiovascular Risk',
+            'ACR Guidelines - NSAID Use in Arthritis',
+            'FDA Black Box Warning - NSAIDs and Pregnancy (3rd trimester)'
+        ]},
     "Celecoxib": {'group': 'Analgesic - NSAID (COX-2 Selective)', 'vietnamese_name':
         'Celecoxib, Celebrex', 'administration': ['PO'], 'indications': [
         'Đau nhẹ đến trung bình', 'Viêm khớp dạng thấp', 'Viêm khớp xương khớp',
@@ -683,7 +746,23 @@ NSAIDS_DRUGS = {
         'Lexicomp - Ketorolac monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-02-05',         'evidence_level':
-        'High - FDA-approved, extensive clinical data'}},
+        'High - FDA-approved, extensive clinical data'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': True,
+            'organ_toxicity': ['GI bleeding/ulceration', 'Renal toxicity (especially with long-term use)', 'Acute kidney injury (higher risk than other NSAIDs)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': True,
+            'requires_monitoring': ['Renal function (CrCl, BUN) - CRITICAL (max 5 days use)', 'Signs of GI bleeding', 'Blood pressure', 'Signs of acute kidney injury']
+        },
+        'guideline_tags': [
+            'FDA Drug Safety Communication - NSAIDs and Renal Risk',
+            'ISMP High Alert Medications - Ketorolac',
+            'FDA Black Box Warning - Ketorolac and Renal/GI Toxicity',
+            'ACR Guidelines - NSAID Use in Arthritis'
+        ]},
     "Etoricoxib": {'group': 'Analgesic - NSAID (COX-2 Selective)',
         'vietnamese_name': 'Etoricoxib, Arcoxia', 'administration': ['PO'],
         'indications': ['Đau nhẹ đến trung bình', 'Viêm khớp', 'Đau bụng kinh',

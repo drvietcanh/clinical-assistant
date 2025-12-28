@@ -171,6 +171,22 @@ IRONS_DRUGS = {
         'UpToDate - Iron deficiency anemia treatment',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
         ], 'last_updated': '2025-02-04', 'evidence_level':
-        'A - Dựa trên FDA drug labels, ASH/WHO guidelines, và dữ liệu lâm sàng'}}}
+        'A - Dựa trên FDA drug labels, ASH/WHO guidelines, và dữ liệu lâm sàng'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Iron overload (with long-term, high-dose use)', 'GI irritation (constipation, nausea, abdominal pain)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Hemoglobin (target: increase 1-2 g/dL per month)', 'Ferritin (target: >50 ng/mL)', 'TIBC, transferrin saturation', 'MCV (increases with successful treatment)', 'Clinical response', 'Signs of iron overload (if used long-term, high-dose)']
+        },
+        'guideline_tags': [
+            'ASH Guidelines - Iron Deficiency Anemia',
+            'WHO Guidelines - Iron Supplementation in Pregnancy',
+            'ACOG Guidelines - Iron Supplementation in Pregnancy',
+            'FDA Drug Information - Iron'
+        ]}}
 
 __all__ = ['IRONS_DRUGS']

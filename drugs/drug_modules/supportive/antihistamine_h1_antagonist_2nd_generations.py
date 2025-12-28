@@ -91,11 +91,18 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Alcohol: có thể tăng buồn ngủ'], 'pregnancy': 'B',
         'mechanism_of_action':
         'Cetirizine là metabolite của hydroxyzine, là antihistamine thế hệ thứ hai, đối kháng chọn lọc và có ái lực cao với thụ thể H1 ở ngoại biên. Cetirizine ít qua hàng rào máu-não (do là zwitterion ở pH sinh lý) nên ít gây buồn ngủ hơn so với antihistamine thế hệ thứ nhất, nhưng vẫn có thể gây buồn ngủ ở một số người (10-15%). Cetirizine ức chế phóng thích histamine từ mast cells và basophils, ngăn chặn tác dụng của histamine trên các thụ thể H1. Ngoài ra, cetirizine có tác dụng kháng viêm nhẹ do ức chế phóng thích các chất trung gian gây viêm và ức chế chemotaxis của eosinophils. Tác dụng tốt cho cả allergic rhinitis và urticaria.'
-        , 'monitoring': ['Đáp ứng điều trị (giảm triệu chứng dị ứng)',
+        ,         'monitoring': ['Đáp ứng điều trị (giảm triệu chứng dị ứng)',
         'Buồn ngủ (10-15% người dùng, mặc dù là thế hệ thứ hai)',
         'Chức năng thận (creatinine) - cần điều chỉnh liều ở suy thận',
         'Tác dụng phụ (khô miệng, nhức đầu, mệt mỏi)',
-        'Tương tác với alcohol (có thể tăng buồn ngủ)'], 'precautions': [
+        'Tương tác với alcohol (có thể tăng buồn ngủ)'], 'contraindications_detail': {
+        'tuyệt_đối': [
+        'Dị ứng cetirizine hoặc hydroxyzine',
+        'Suy thận nặng (CrCl <30) - chống chỉ định hoặc dùng liều rất thấp'],
+        'tương_đối': [
+        'Suy thận nhẹ đến trung bình (CrCl 30-60) - giảm liều 50%',
+        'Người cao tuổi - có thể tăng nguy cơ buồn ngủ',
+        'Bệnh nhân có nguy cơ bí tiểu - tăng nguy cơ']}, 'precautions': [
         'Có thể gây buồn ngủ ở một số người (10-15%) - thận trọng khi lái xe hoặc vận hành máy móc'
         ,
         'Cần điều chỉnh liều ở suy thận: CrCl 30-60 → 5mg/ngày, CrCl <30 → 5mg cách ngày'
@@ -151,12 +158,27 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Dùng 1 lần/ngày (tác dụng kéo dài 24 giờ). Có thể dùng buổi sáng hoặc tối. CẦN ĐIỀU CHỈNH LIỀU Ở SUY THẬN: CrCl 30-60 → 5mg/ngày, CrCl <30 → 5mg cách ngày.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Zyrtec (cetirizine)',
         'UpToDate - Cetirizine: Drug information',
         'Allergy & Clinical Immunology guidelines'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs and systematic reviews'}},
+        'High - Multiple RCTs and systematic reviews'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': [],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Renal function (CrCl) - dose adjustment needed', 'Sedation (10-15% of users)']
+        },
+        'guideline_tags': [
+            'EAACI Guidelines - Allergic Rhinitis',
+            'AAAAI Guidelines - Urticaria',
+            'FDA Drug Information - Cetirizine'
+        ]},
     "Fexofenadine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Fexofenadine, Allegra', 'administration': ['PO'],
         'indications': ['Dị ứng (allergic rhinitis)', 'Mề đay (urticaria)',
@@ -228,12 +250,27 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Dùng 1-2 lần/ngày tùy liều (180mg x 1 lần/ngày hoặc 60mg x 2 lần/ngày). Cách xa fruit juices 1-2 giờ. Cách xa antacids 2 giờ.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Allegra (fexofenadine)',
         'UpToDate - Fexofenadine: Drug information',
         'Allergy & Clinical Immunology guidelines'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs and systematic reviews'}},
+        'High - Multiple RCTs and systematic reviews'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': [],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Clinical response (reduction in allergy symptoms)', 'Interaction with fruit juices and antacids (decreased absorption)']
+        },
+        'guideline_tags': [
+            'EAACI Guidelines - Allergic Rhinitis',
+            'AAAAI Guidelines - Urticaria',
+            'FDA Drug Information - Fexofenadine'
+        ]},
     "Desloratadine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Desloratadine, Aerius', 'administration': ['PO'],
         'indications': ['Dị ứng (allergic rhinitis)', 'Mề đay (urticaria)',
@@ -318,9 +355,16 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Có thể dùng với thức ăn hoặc không'], 'pharmacokinetics': {'half_life':
         '8 giờ', 'onset': '1 giờ', 'duration': '24 giờ', 'protein_binding':
         '91%', 'clearance':
-        'Thận (thải trừ chủ yếu - 85%), gan (chuyển hóa - 15%)'}, 'storage':
+        'Thận (thải trừ chủ yếu - 85%), gan (chuyển hóa - 15%)'},         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm', 'black_box_warnings':
-        None, 'drug_interactions': {'major': [], 'moderate': [{'drug':
+        None, 'contraindications_detail': {
+        'tuyệt_đối': [
+        'Dị ứng levocetirizine hoặc cetirizine',
+        'Suy thận nặng (CrCl <10) - chống chỉ định'], 'tương_đối': [
+        'Suy thận (CrCl 30-60) - giảm liều (5mg cách ngày)',
+        'Suy thận (CrCl 10-30) - giảm liều (5mg mỗi 3 ngày)',
+        'Có thai - category B, thận trọng', 'Trẻ em <6 tuổi - không khuyến cáo'
+        ]}, 'drug_interactions': {'major': [], 'moderate': [{'drug':
         'Alcohol', 'mechanism':
         'Cả hai đều ức chế hệ thần kinh trung ương, tác dụng cộng dồn.',
         'effect': 'Tăng buồn ngủ, giảm khả năng lái xe', 'management':

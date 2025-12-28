@@ -208,6 +208,25 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "Không có chống chỉ định tuyệt đối trong cấp cứu",
             "Thiếu máu cục bộ mô (nếu có thể tránh)"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [
+                "Thiếu máu cục bộ mô - có thể làm nặng",
+                "Pheochromocytoma - thận trọng",
+                "Bệnh mạch vành nặng - có thể gây thiếu máu cục bộ"
+            ]
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Phentolamine",
+                    "mechanism": "Đối kháng alpha-adrenergic receptors",
+                    "dose": "5-10mg pha loãng tiêm tại chỗ nếu rò rỉ ngoài mạch"
+                }
+            ],
+            "notes": "Nếu rò rỉ ngoài mạch: ngừng truyền ngay, tiêm phentolamine tại chỗ để giảm co mạch và hoại tử. Điều trị quá liều: ngừng truyền, hỗ trợ huyết động."
+        },
         "dosage": {
             "adult_shock": "0.05-2 mcg/kg/phút IV infusion (khởi đầu 0.05-0.1 mcg/kg/phút)",
             "adult_septic_shock": "0.05-2 mcg/kg/phút IV infusion",
@@ -296,6 +315,27 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "Rối loạn nhịp tim nặng",
             "Không dùng liều thấp cho suy thận (không có bằng chứng)"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Pheochromocytoma - có thể gây tăng huyết áp nặng"
+            ],
+            "tương_đối": [
+                "Rối loạn nhịp tim nặng - có thể làm nặng",
+                "Bệnh mạch vành nặng - tăng nguy cơ thiếu máu cục bộ",
+                "Suy thận - không dùng liều thấp cho suy thận (không có bằng chứng)"
+            ]
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Phentolamine",
+                    "mechanism": "Đối kháng alpha-adrenergic receptors",
+                    "dose": "5-10mg pha loãng tiêm tại chỗ nếu rò rỉ ngoài mạch"
+                }
+            ],
+            "notes": "Nếu rò rỉ ngoài mạch: ngừng truyền ngay, tiêm phentolamine tại chỗ. Điều trị quá liều: ngừng truyền, hỗ trợ huyết động, điều trị rối loạn nhịp tim nếu có."
+        },
         "dosage": {
             "adult_renal_dose": "1-3 mcg/kg/phút IV (tăng tưới máu thận - không khuyến cáo)",
             "adult_cardiac_dose": "3-10 mcg/kg/phút IV (tăng cung lượng tim)",
@@ -381,6 +421,21 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "Rối loạn nhịp tim nặng",
             "Sốc giảm thể tích (chưa bù dịch)"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Hẹp động mạch chủ nặng - có thể gây suy tim nặng",
+                "Sốc giảm thể tích (chưa bù dịch) - bù dịch trước"
+            ],
+            "tương_đối": [
+                "Rối loạn nhịp tim nặng - có thể làm nặng",
+                "Bệnh mạch vành nặng - tăng nguy cơ thiếu máu cục bộ"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều: ngừng truyền ngay, hỗ trợ huyết động, điều trị rối loạn nhịp tim nếu có. Half-life rất ngắn (2 phút) nên tác dụng sẽ giảm nhanh sau khi ngừng."
+        },
         "dosage": {
             "adult_heart_failure": "2.5-15 mcg/kg/phút IV infusion",
             "adult_cardiogenic_shock": "2.5-20 mcg/kg/phút IV infusion",

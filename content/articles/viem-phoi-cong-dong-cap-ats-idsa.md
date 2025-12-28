@@ -1,7 +1,7 @@
 # Viêm phổi cộng đồng (Community-Acquired Pneumonia – CAP) ở người lớn: chẩn đoán, phân tầng nặng và điều trị theo ATS/IDSA
 
 > **Đối tượng:** Bác sĩ nội khoa, hô hấp, cấp cứu, ICU  
-> **Cập nhật:** Tháng 12/2025  
+> **Cập nhật:** Tháng 2/2025  
 > **Tài liệu tham khảo chính:** ATS/IDSA CAP Guideline 2019 [1], WHO AWaRe 2023 (kháng sinh hợp lý) [2]
 
 ---

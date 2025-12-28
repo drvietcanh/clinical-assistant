@@ -1,0 +1,301 @@
+{
+  "pediatric_dosing": {
+    "Adrenaline": {
+      "neonatal": {
+        "dose_range": "0.01–0.3 mcg/kg/min",
+        "initial_dose": "0.05–0.1 mcg/kg/min",
+        "max_dose": "0.5 mcg/kg/min",
+        "notes": "Dùng liều thấp hơn người lớn, theo dõi sát"
+      },
+      "infant": {
+        "dose_range": "0.01–0.5 mcg/kg/min",
+        "initial_dose": "0.05–0.1 mcg/kg/min",
+        "max_dose": "1 mcg/kg/min",
+        "notes": "1-12 tháng tuổi"
+      },
+      "child": {
+        "dose_range": "0.01–0.5 mcg/kg/min",
+        "initial_dose": "0.05–0.1 mcg/kg/min",
+        "max_dose": "1–2 mcg/kg/min",
+        "notes": "1-12 tuổi, liều gần như người lớn"
+      },
+      "adolescent": {
+        "dose_range": "0.01–0.5 mcg/kg/min",
+        "initial_dose": "0.05–0.1 mcg/kg/min",
+        "max_dose": "1–2 mcg/kg/min",
+        "notes": "12-18 tuổi, dùng như người lớn"
+      },
+      "preparation_pediatric": {
+        "syringe_pump_50ml": {
+          "standard_volume": 50,
+          "standard_concentration_mcg_ml": 20,
+          "preparation": "1mg pha trong 50ml NS = 20 mcg/ml (giống người lớn)"
+        },
+        "syringe_pump_20ml": {
+          "standard_volume": 20,
+          "standard_concentration_mcg_ml": 50,
+          "preparation": "1mg pha trong 20ml NS = 50 mcg/ml (cho trẻ nhỏ)"
+        }
+      },
+      "special_notes": "Trẻ em cần theo dõi sát hơn, đặc biệt là trẻ sơ sinh"
+    },
+    "Noradrenaline": {
+      "neonatal": {
+        "dose_range": "0.05–0.5 mcg/kg/min",
+        "initial_dose": "0.05–0.1 mcg/kg/min",
+        "max_dose": "1 mcg/kg/min",
+        "notes": "Dùng liều thấp hơn người lớn"
+      },
+      "infant": {
+        "dose_range": "0.05–1 mcg/kg/min",
+        "initial_dose": "0.05–0.1 mcg/kg/min",
+        "max_dose": "2 mcg/kg/min",
+        "notes": "1-12 tháng tuổi"
+      },
+      "child": {
+        "dose_range": "0.05–2 mcg/kg/min",
+        "initial_dose": "0.05–0.1 mcg/kg/min",
+        "max_dose": "3–5 mcg/kg/min",
+        "notes": "1-12 tuổi"
+      },
+      "adolescent": {
+        "dose_range": "0.05–2 mcg/kg/min",
+        "initial_dose": "0.05–0.1 mcg/kg/min",
+        "max_dose": "3–5 mcg/kg/min",
+        "notes": "12-18 tuổi, dùng như người lớn"
+      },
+      "preparation_pediatric": {
+        "syringe_pump_50ml": {
+          "standard_volume": 50,
+          "standard_concentration_mcg_ml": 20,
+          "preparation": "1mg pha trong 50ml NS = 20 mcg/ml"
+        },
+        "syringe_pump_20ml": {
+          "standard_volume": 20,
+          "standard_concentration_mcg_ml": 50,
+          "preparation": "1mg pha trong 20ml NS = 50 mcg/ml"
+        }
+      },
+      "special_notes": "Theo dõi sát huyết áp và tưới máu ngoại vi"
+    },
+    "Dopamine": {
+      "neonatal": {
+        "dose_range": "2–20 mcg/kg/min",
+        "initial_dose": "5–10 mcg/kg/min",
+        "max_dose": "20 mcg/kg/min",
+        "notes": "Liều thấp hơn người lớn"
+      },
+      "infant": {
+        "dose_range": "2–20 mcg/kg/min",
+        "initial_dose": "5–10 mcg/kg/min",
+        "max_dose": "20 mcg/kg/min",
+        "notes": "1-12 tháng tuổi"
+      },
+      "child": {
+        "dose_range": "2–20 mcg/kg/min",
+        "initial_dose": "5–10 mcg/kg/min",
+        "max_dose": "20 mcg/kg/min",
+        "notes": "1-12 tuổi"
+      },
+      "adolescent": {
+        "dose_range": "2–20 mcg/kg/min",
+        "initial_dose": "5–10 mcg/kg/min",
+        "max_dose": "20 mcg/kg/min",
+        "notes": "12-18 tuổi, dùng như người lớn"
+      },
+      "preparation_pediatric": {
+        "syringe_pump_50ml": {
+          "standard_volume": 50,
+          "standard_concentration_mcg_ml": 400,
+          "preparation": "20mg pha trong 50ml NS = 400 mcg/ml"
+        },
+        "syringe_pump_20ml": {
+          "standard_volume": 20,
+          "standard_concentration_mcg_ml": 1000,
+          "preparation": "20mg pha trong 20ml NS = 1000 mcg/ml"
+        }
+      },
+      "special_notes": "Theo dõi nhịp tim và tưới máu"
+    },
+    "Dobutamine": {
+      "neonatal": {
+        "dose_range": "2–15 mcg/kg/min",
+        "initial_dose": "5–10 mcg/kg/min",
+        "max_dose": "15 mcg/kg/min",
+        "notes": "Liều thấp hơn người lớn"
+      },
+      "infant": {
+        "dose_range": "2–20 mcg/kg/min",
+        "initial_dose": "5–10 mcg/kg/min",
+        "max_dose": "20 mcg/kg/min",
+        "notes": "1-12 tháng tuổi"
+      },
+      "child": {
+        "dose_range": "2–20 mcg/kg/min",
+        "initial_dose": "5–10 mcg/kg/min",
+        "max_dose": "20 mcg/kg/min",
+        "notes": "1-12 tuổi"
+      },
+      "adolescent": {
+        "dose_range": "2–20 mcg/kg/min",
+        "initial_dose": "5–10 mcg/kg/min",
+        "max_dose": "20 mcg/kg/min",
+        "notes": "12-18 tuổi, dùng như người lớn"
+      },
+      "preparation_pediatric": {
+        "syringe_pump_50ml": {
+          "standard_volume": 50,
+          "standard_concentration_mcg_ml": 500,
+          "preparation": "25mg pha trong 50ml NS = 500 mcg/ml"
+        },
+        "syringe_pump_20ml": {
+          "standard_volume": 20,
+          "standard_concentration_mcg_ml": 1250,
+          "preparation": "25mg pha trong 20ml NS = 1250 mcg/ml"
+        }
+      },
+      "special_notes": "Theo dõi nhịp tim và huyết áp"
+    },
+    "Vasopressin": {
+      "neonatal": {
+        "dose_range": "0.0003–0.002 units/kg/min",
+        "initial_dose": "0.0003–0.0005 units/kg/min",
+        "max_dose": "0.002 units/kg/min",
+        "notes": "Liều thấp hơn người lớn"
+      },
+      "infant": {
+        "dose_range": "0.0003–0.002 units/kg/min",
+        "initial_dose": "0.0003–0.0005 units/kg/min",
+        "max_dose": "0.002 units/kg/min",
+        "notes": "1-12 tháng tuổi"
+      },
+      "child": {
+        "dose_range": "0.0003–0.002 units/kg/min",
+        "initial_dose": "0.0003–0.0005 units/kg/min",
+        "max_dose": "0.002 units/kg/min",
+        "notes": "1-12 tuổi"
+      },
+      "adolescent": {
+        "dose_range": "0.0003–0.002 units/kg/min",
+        "initial_dose": "0.0003–0.0005 units/kg/min",
+        "max_dose": "0.002 units/kg/min",
+        "notes": "12-18 tuổi, dùng như người lớn"
+      },
+      "preparation_pediatric": {
+        "syringe_pump_50ml": {
+          "standard_volume": 50,
+          "standard_concentration_units_ml": 0.1,
+          "preparation": "5 units pha trong 50ml NS = 0.1 units/ml"
+        },
+        "syringe_pump_20ml": {
+          "standard_volume": 20,
+          "standard_concentration_units_ml": 0.25,
+          "preparation": "5 units pha trong 20ml NS = 0.25 units/ml"
+        }
+      },
+      "special_notes": "Theo dõi sát tưới máu ngoại vi"
+    },
+    "Milrinone": {
+      "neonatal": {
+        "dose_range": "0.25–0.75 mcg/kg/min",
+        "initial_dose": "0.25–0.5 mcg/kg/min",
+        "max_dose": "0.75 mcg/kg/min",
+        "notes": "Liều thấp hơn người lớn"
+      },
+      "infant": {
+        "dose_range": "0.25–0.75 mcg/kg/min",
+        "initial_dose": "0.25–0.5 mcg/kg/min",
+        "max_dose": "0.75 mcg/kg/min",
+        "notes": "1-12 tháng tuổi"
+      },
+      "child": {
+        "dose_range": "0.25–0.75 mcg/kg/min",
+        "initial_dose": "0.25–0.5 mcg/kg/min",
+        "max_dose": "0.75 mcg/kg/min",
+        "notes": "1-12 tuổi"
+      },
+      "adolescent": {
+        "dose_range": "0.25–0.75 mcg/kg/min",
+        "initial_dose": "0.25–0.5 mcg/kg/min",
+        "max_dose": "0.75 mcg/kg/min",
+        "notes": "12-18 tuổi, dùng như người lớn"
+      },
+      "preparation_pediatric": {
+        "syringe_pump_50ml": {
+          "standard_volume": 50,
+          "standard_concentration_mcg_ml": 20,
+          "preparation": "1mg pha trong 50ml NS = 20 mcg/ml"
+        },
+        "syringe_pump_20ml": {
+          "standard_volume": 20,
+          "standard_concentration_mcg_ml": 50,
+          "preparation": "1mg pha trong 20ml NS = 50 mcg/ml"
+        }
+      },
+      "special_notes": "Theo dõi nhịp tim và huyết áp"
+    },
+    "Nitroglycerin": {
+      "neonatal": {
+        "dose_range": "0.5–5 mcg/kg/min",
+        "initial_dose": "0.5–1 mcg/kg/min",
+        "max_dose": "5 mcg/kg/min",
+        "notes": "Liều thấp hơn người lớn"
+      },
+      "infant": {
+        "dose_range": "0.5–5 mcg/kg/min",
+        "initial_dose": "0.5–1 mcg/kg/min",
+        "max_dose": "5 mcg/kg/min",
+        "notes": "1-12 tháng tuổi"
+      },
+      "child": {
+        "dose_range": "0.5–5 mcg/kg/min",
+        "initial_dose": "0.5–1 mcg/kg/min",
+        "max_dose": "5 mcg/kg/min",
+        "notes": "1-12 tuổi"
+      },
+      "adolescent": {
+        "dose_range": "0.5–5 mcg/kg/min",
+        "initial_dose": "0.5–1 mcg/kg/min",
+        "max_dose": "5 mcg/kg/min",
+        "notes": "12-18 tuổi, dùng như người lớn"
+      },
+      "preparation_pediatric": {
+        "syringe_pump_50ml": {
+          "standard_volume": 50,
+          "standard_concentration_mcg_ml": 100,
+          "preparation": "5mg pha trong 50ml NS = 100 mcg/ml"
+        },
+        "syringe_pump_20ml": {
+          "standard_volume": 20,
+          "standard_concentration_mcg_ml": 250,
+          "preparation": "5mg pha trong 20ml NS = 250 mcg/ml"
+        }
+      },
+      "special_notes": "Theo dõi huyết áp và tưới máu"
+    }
+  },
+  "age_groups": {
+    "neonatal": {
+      "age_range": "0–28 ngày",
+      "description": "Trẻ sơ sinh"
+    },
+    "infant": {
+      "age_range": "1–12 tháng",
+      "description": "Trẻ nhũ nhi"
+    },
+    "child": {
+      "age_range": "1–12 tuổi",
+      "description": "Trẻ em"
+    },
+    "adolescent": {
+      "age_range": "12–18 tuổi",
+      "description": "Thanh thiếu niên"
+    }
+  },
+  "notes": {
+    "general": "Liều pediatric thường thấp hơn người lớn, đặc biệt là trẻ sơ sinh",
+    "monitoring": "Theo dõi sát hơn ở trẻ em, đặc biệt là trẻ sơ sinh",
+    "preparation": "Có thể dùng bơm nhỏ hơn (20ml) cho trẻ nhỏ để tăng độ chính xác"
+  }
+}
+

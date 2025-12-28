@@ -75,7 +75,7 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
         'Cimetidine', 'mechanism': 'Giảm nhẹ thải trừ qua thận', 'effect':
         'Tăng nhẹ nồng độ gabapentin', 'management':
         'Không cần điều chỉnh liều thường xuyên, nhưng theo dõi tác dụng phụ.'}
-        ]}, 'contraindications': {'tuyệt_đối': [
+        ]},         'contraindications': {'tuyệt_đối': [
         'Dị ứng gabapentin hoặc các thành phần khác'], 'tương_đối': [
         'Suy thận (CrCl <30) - giảm liều đáng kể, tăng khoảng cách liều',
         'Suy thận nặng (CrCl <15) - giảm liều rất nhiều, có thể cách ngày',
@@ -83,7 +83,18 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
         'Mang thai (chứng cứ hạn chế) - chỉ dùng nếu lợi ích > nguy cơ',
         'Tiền sử lệ thuộc thuốc (có thể gây lệ thuộc)',
         'Bệnh hô hấp (COPD, sleep apnea) - tăng nguy cơ suy hô hấp khi dùng với opioids/benzodiazepines'
-        ]}, 'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        ]},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng gabapentin hoặc các thành phần khác'], 'tương_đối': [
+        'Suy thận (CrCl <30) - giảm liều đáng kể, tăng khoảng cách liều',
+        'Suy thận nặng (CrCl <15) - giảm liều rất nhiều, có thể cách ngày',
+        'Bệnh nhân lớn tuổi có suy thận - giảm liều thêm',
+        'Mang thai (chứng cứ hạn chế) - chỉ dùng nếu lợi ích > nguy cơ',
+        'Tiền sử lệ thuộc thuốc (có thể gây lệ thuộc)',
+        'Bệnh hô hấp (COPD, sleep apnea) - tăng nguy cơ suy hô hấp khi dùng với opioids/benzodiazepines'
+        ]},
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes': 'Không có antidote đặc hiệu. Điều trị quá liều gabapentin chủ yếu là hỗ trợ. Lọc máu có thể hiệu quả (không gắn protein, bài tiết qua thận).'}, 'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
         'Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh và kết quả thai kỳ kém, nhưng chứng cứ không rõ ràng. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ.'
         , 'lactation': {'safety': 'Compatible', 'details':
         'Gabapentin bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình (nồng độ trong sữa mẹ khoảng 30-70% nồng độ trong huyết thanh mẹ). Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.'

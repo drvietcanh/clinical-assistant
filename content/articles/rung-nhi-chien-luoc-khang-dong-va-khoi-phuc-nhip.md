@@ -1,7 +1,7 @@
 # Rung nhĩ: chiến lược kháng đông, kiểm soát tần số và khôi phục nhịp theo ESC 2024/ACC-AHA 2023
 
 > **Đối tượng:** Bác sĩ tim mạch, nội khoa, hồi sức  
-> **Cập nhật:** Tháng 12/2025  
+> **Cập nhật:** Tháng 2/2025  
 > **Tài liệu tham khảo chính:** ESC Atrial Fibrillation Guidelines 2024 [1], ACC/AHA/ACCP/HRS AF Guideline 2023 [2]
 
 ---

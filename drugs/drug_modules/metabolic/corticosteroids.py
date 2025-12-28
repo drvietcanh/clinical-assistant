@@ -167,6 +167,31 @@ CORTICOSTEROIDS_DRUGS = {
                 "Suy thận - không cần điều chỉnh liều nhưng thận trọng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Nhiễm nấm hệ thống không điều trị (cryptococcosis, histoplasmosis, coccidioidomycosis) - corticosteroid làm nặng nhiễm nấm",
+                "Dị ứng prednisone hoặc các corticosteroid khác",
+                "Nhiễm virus hoạt động (herpes simplex keratitis, varicella zoster lan tỏa) - trừ khi chỉ định đặc biệt"
+            ],
+            "tương_đối": [
+                "Nhiễm trùng đang hoạt động - có thể làm nặng, che dấu triệu chứng",
+                "Đái tháo đường - tăng đường huyết, cần theo dõi và điều chỉnh",
+                "Tăng huyết áp - có thể tăng huyết áp, giữ nước",
+                "Suy tim - giữ nước, có thể làm nặng",
+                "Loãng xương - tăng nguy cơ gãy xương",
+                "Loét dạ dày tá tràng - tăng nguy cơ loét",
+                "Rối loạn tâm thần - có thể làm nặng",
+                "Glaucoma - có thể tăng nhãn áp",
+                "Có thai - có thể ảnh hưởng đến thai nhi",
+                "Suy gan - prednisone cần chuyển hóa ở gan thành prednisolone, có thể giảm hiệu quả ở suy gan nặng",
+                "Suy thận - không cần điều chỉnh liều nhưng thận trọng"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Không ngừng đột ngột nếu đã dùng >2 tuần - phải giảm dần."
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Prednisone là thuốc phân loại C. Corticosteroid có thể đi qua nhau thai và có thể ảnh hưởng đến thai nhi. Dùng lâu dài hoặc liều cao trong thai kỳ có thể gây ức chế thượng thận ở trẻ sơ sinh, chậm phát triển, tăng nguy cơ sứt môi/vòm miệng (khi dùng trong tam cá nguyệt đầu), và các tác dụng phụ khác. Tuy nhiên, prednisone được sử dụng trong thai kỳ để điều trị một số bệnh tự miễn và hen phế quản. Nên dùng liều thấp nhất hiệu quả và thời gian ngắn nhất có thể. Tránh dùng liều cao kéo dài trong thai kỳ nếu có thể.",

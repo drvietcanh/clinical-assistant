@@ -1,0 +1,220 @@
+====================================================================================================
+DANH SÁCH THUỐC THIẾU ENHANCED FIELDS
+====================================================================================================
+
+
+contraindications_detail - Thiếu 346 thuốc (52.0%):
+----------------------------------------------------------------------------------------------------
+  • Benazepril
+  • Candesartan
+  • Captopril
+  • Clonidine
+  • Digoxin
+  • Doxazosin
+  • Enalapril
+  • Hydralazine
+  • Isosorbide mononitrate
+  • Ivabradine
+  • Labetalol
+  • Lisinopril
+  • Losartan
+  • Methyldopa
+  • Nesiritide
+  • Nitroglycerin
+  • Nitroprusside
+  • Olmesartan
+  • Sacubitril-valsartan
+  • Telmisartan
+  ... và 326 thuốc khác
+
+reversal_agents - Thiếu 175 thuốc (26.3%):
+----------------------------------------------------------------------------------------------------
+  • Amlodipine/Olmesartan
+  • Amlodipine/Valsartan
+  • Bempedoic acid
+  • Bumetanide
+  • Clevidipine
+  • Finerenone
+  • Insulin Aspart
+  • Insulin Detemir
+  • Insulin Glargine
+  • Insulin Glulisine
+  • Insulin Lispro
+  • Insulin NPH
+  • Insulin Regular
+  • Lisinopril/Hydrochlorothiazide
+  • Losartan/Hydrochlorothiazide
+  • Nesiritide
+  • Simvastatin
+  • Sotagliflozin
+  • Torsemide
+  • Vericiguat
+  ... và 155 thuốc khác
+
+black_box_warnings - Thiếu 138 thuốc (20.7%):
+----------------------------------------------------------------------------------------------------
+  • Acarbose
+  • Adenosine
+  • Alogliptin
+  • Aluminum hydroxide/Magnesium hydroxide
+  • Bromocriptine
+  • Calcium carbonate
+  • Clevidipine
+  • Colesevelam
+  • Dapagliflozin
+  • Empagliflozin
+  • Ezetimibe
+  • Hydrochlorothiazide
+  • Indapamide
+  • Lacidipine
+  • Linagliptin
+  • Miglitol
+  • Nebivolol
+  • Nesiritide
+  • Saxagliptin
+  • Sitagliptin
+  ... và 118 thuốc khác
+
+renal_adjustment - Thiếu 43 thuốc (6.5%):
+----------------------------------------------------------------------------------------------------
+  • Bromocriptine
+  • Carbamazepine
+  • Colesevelam
+  • Hydrochlorothiazide
+  • Indapamide
+  • Insulin Aspart
+  • Insulin Degludec
+  • Insulin Detemir
+  • Insulin Glargine
+  • Insulin Glulisine
+  • Insulin Lispro
+  • Insulin NPH
+  • Insulin Regular
+  • Lacidipine
+  • Metaxalone
+  • Methocarbamol
+  • Omeprazole
+  • Oxcarbazepine
+  • Pantoprazole
+  • Ranitidine
+  ... và 23 thuốc khác
+
+hepatic_adjustment - Thiếu 33 thuốc (5.0%):
+----------------------------------------------------------------------------------------------------
+  • Bromocriptine
+  • Budesonide/Formoterol inhaler
+  • Bumetanide
+  • Colesevelam
+  • Fluticasone/Salmeterol inhaler
+  • Insulin Aspart
+  • Insulin Degludec
+  • Insulin Detemir
+  • Insulin Glargine
+  • Insulin Glulisine
+  • Insulin Lispro
+  • Insulin NPH
+  • Insulin Regular
+  • Ipratropium/Salbutamol inhaler
+  • Metformin/Glibenclamide
+  • Metformin/Pioglitazone
+  • Simvastatin
+  • Tiotropium/Olodaterol inhaler
+  • Torsemide
+  • Valsartan
+  ... và 13 thuốc khác
+
+drug_interactions - Thiếu 32 thuốc (4.8%):
+----------------------------------------------------------------------------------------------------
+  • Baricitinib
+  • Bromocriptine
+  • Budesonide/Formoterol inhaler
+  • Bumetanide
+  • Colesevelam
+  • Fluticasone/Salmeterol inhaler
+  • Insulin Aspart
+  • Insulin Degludec
+  • Insulin Detemir
+  • Insulin Glargine
+  • Insulin Glulisine
+  • Insulin Lispro
+  • Insulin NPH
+  • Insulin Regular
+  • Ipratropium/Salbutamol inhaler
+  • Metformin/Glibenclamide
+  • Metformin/Pioglitazone
+  • Tiotropium/Olodaterol inhaler
+  • Torsemide
+  • Valsartan
+  ... và 12 thuốc khác
+
+pregnancy_lactation - Thiếu 29 thuốc (4.4%):
+----------------------------------------------------------------------------------------------------
+  • Bromocriptine
+  • Budesonide/Formoterol inhaler
+  • Bumetanide
+  • Colesevelam
+  • Fluticasone/Salmeterol inhaler
+  • Insulin Aspart
+  • Insulin Degludec
+  • Insulin Detemir
+  • Insulin Glargine
+  • Insulin Glulisine
+  • Insulin Lispro
+  • Insulin NPH
+  • Insulin Regular
+  • Ipratropium/Salbutamol inhaler
+  • Metformin/Glibenclamide
+  • Metformin/Pioglitazone
+  • Simvastatin
+  • Tiotropium/Olodaterol inhaler
+  • Torsemide
+  • Valsartan
+  ... và 9 thuốc khác
+
+overdose_management - Thiếu 29 thuốc (4.4%):
+----------------------------------------------------------------------------------------------------
+  • Bromocriptine
+  • Budesonide/Formoterol inhaler
+  • Bumetanide
+  • Colesevelam
+  • Fluticasone/Salmeterol inhaler
+  • Insulin Aspart
+  • Insulin Degludec
+  • Insulin Detemir
+  • Insulin Glargine
+  • Insulin Glulisine
+  • Insulin Lispro
+  • Insulin NPH
+  • Insulin Regular
+  • Ipratropium/Salbutamol inhaler
+  • Metformin/Glibenclamide
+  • Metformin/Pioglitazone
+  • Simvastatin
+  • Tiotropium/Olodaterol inhaler
+  • Torsemide
+  • Valsartan
+  ... và 9 thuốc khác
+
+administration_instructions - Thiếu 29 thuốc (4.4%):
+----------------------------------------------------------------------------------------------------
+  • Bromocriptine
+  • Budesonide/Formoterol inhaler
+  • Bumetanide
+  • Colesevelam
+  • Fluticasone/Salmeterol inhaler
+  • Insulin Aspart
+  • Insulin Degludec
+  • Insulin Detemir
+  • Insulin Glargine
+  • Insulin Glulisine
+  • Insulin Lispro
+  • Insulin NPH
+  • Insulin Regular
+  • Ipratropium/Salbutamol inhaler
+  • Metformin/Glibenclamide
+  • Metformin/Pioglitazone
+  • Simvastatin
+  • Tiotropium/Olodaterol inhaler
+  • Torsemide
+  • Valsartan
+  ... và 9 thuốc khác

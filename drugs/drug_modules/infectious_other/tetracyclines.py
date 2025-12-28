@@ -101,6 +101,18 @@ TETRACYCLINES_DRUGS = {
         'Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu',
         'Bệnh nhân đang dùng digoxin - tăng nguy cơ độc tính digoxin',
         'Nhạy cảm với ánh sáng - tăng nguy cơ phản ứng quang hóa']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng doxycycline hoặc tetracycline',
+        'Có thai (3 tháng cuối) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)'
+        ,
+        'Trẻ em < 8 tuổi - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (trừ trường hợp đe dọa tính mạng như sốt rét, rickettsia) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương'
+        ], 'tương_đối': [
+        'Có thai (3 tháng đầu và giữa) - nguy cơ ố vàng răng, chậm phát triển xương ở trẻ, chỉ dùng khi thực sự cần thiết'
+        , 'Suy gan nặng - tăng nguy cơ độc gan',
+        'Tăng áp lực nội sọ giả - có thể làm nặng thêm',
+        'Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu',
+        'Bệnh nhân đang dùng digoxin - tăng nguy cơ độc tính digoxin',
+        'Nhạy cảm với ánh sáng - tăng nguy cơ phản ứng quang hóa']},
         'pregnancy_lactation': {'fda_category': 'D', 'pregnancy_details':
         'Doxycycline là thuốc phân loại D. Các nghiên cứu trên động vật và người cho thấy nguy cơ ố vàng răng vĩnh viễn và chậm phát triển xương ở trẻ khi dùng trong thai kỳ, đặc biệt trong tam cá nguyệt thứ hai và thứ ba. Chống chỉ định trong tam cá nguyệt thứ hai và thứ ba. Tránh dùng trong tam cá nguyệt đầu tiên nếu có thể. Chỉ dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong các trường hợp đe dọa tính mạng như sốt rét, rickettsia.'
         , 'lactation': {'safety': 'Compatible', 'details':
@@ -149,7 +161,10 @@ TETRACYCLINES_DRUGS = {
         'Lọc máu: Hemodialysis không hiệu quả do protein binding cao (80-90%)'],
         'monitoring':
         'Theo dõi dấu hiệu tiêu hóa (buồn nôn, nôn, viêm thực quản), dấu hiệu tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị), dấu hiệu phản ứng quang hóa (phát ban, bỏng da), chức năng gan (ALT, AST), PT/INR (nếu dùng với warfarin), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có tăng áp lực nội sọ giả hoặc độc gan.'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay doxycycline, điều trị viêm thực quản nếu có, điều trị tăng áp lực nội sọ giả nếu có (acetazolamide hoặc mannitol), điều trị phản ứng quang hóa nếu có, điều trị chảy máu nếu có (vitamin K, FFP), điều trị độc gan nếu có, điều trị dị ứng nếu có (epinephrine nếu sốc phản vệ), lọc máu không hiệu quả do protein binding cao.'},
+        'administration_instructions': {'oral': {
         'with_food':
         'Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhưng giảm hấp thu một phần. Tránh uống với sữa hoặc thực phẩm giàu canxi (giảm hấp thu đáng kể).'
         , 'timing':
@@ -315,6 +330,23 @@ TETRACYCLINES_DRUGS = {
                 "Chóng mặt, mất thăng bằng - thận trọng khi lái xe hoặc vận hành máy móc"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng minocycline hoặc tetracycline",
+                "Có thai (3 tháng cuối) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)",
+                "Trẻ em < 8 tuổi - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (trừ trường hợp đe dọa tính mạng như sốt rét, rickettsia) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương",
+                "Viêm gan tự miễn do minocycline trước đây - nguy cơ tái phát cao, có thể gây tử vong"
+            ],
+            "tương_đối": [
+                "Có thai (3 tháng đầu và giữa) - nguy cơ ố vàng răng, chậm phát triển xương ở trẻ, chỉ dùng khi thực sự cần thiết",
+                "Suy gan nặng - tăng nguy cơ độc gan và viêm gan tự miễn",
+                "Tăng áp lực nội sọ giả - có thể làm nặng thêm",
+                "Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu",
+                "Bệnh nhân đang dùng digoxin - tăng nguy cơ độc tính digoxin",
+                "Nhạy cảm với ánh sáng - tăng nguy cơ phản ứng quang hóa",
+                "Chóng mặt, mất thăng bằng - thận trọng khi lái xe hoặc vận hành máy móc"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "D",
             "pregnancy_details": "Minocycline là thuốc phân loại D. Các nghiên cứu trên động vật và người cho thấy nguy cơ ố vàng răng vĩnh viễn và chậm phát triển xương ở trẻ khi dùng trong thai kỳ, đặc biệt trong tam cá nguyệt thứ hai và thứ ba. Chống chỉ định trong tam cá nguyệt thứ hai và thứ ba. Tránh dùng trong tam cá nguyệt đầu tiên nếu có thể. Chỉ dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong các trường hợp đe dọa tính mạng như sốt rét, rickettsia.",
@@ -376,7 +408,11 @@ TETRACYCLINES_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu tiêu hóa (buồn nôn, nôn, viêm thực quản), chức năng gan (ALT, AST, bilirubin) - QUAN TRỌNG (nguy cơ viêm gan tự miễn), dấu hiệu tăng sắc tố da/vàng da, dấu hiệu chóng mặt/mất thăng bằng, dấu hiệu tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị), PT/INR (nếu dùng với warfarin), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có viêm gan tự miễn, tăng áp lực nội sọ giả, hoặc độc gan."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay minocycline, điều trị viêm gan tự miễn nếu có (theo dõi chức năng gan, điều trị hỗ trợ gan, có thể cần corticosteroid hoặc ghép gan), điều trị viêm thực quản nếu có, điều trị tăng áp lực nội sọ giả nếu có (acetazolamide hoặc mannitol), điều trị phản ứng quang hóa/tăng sắc tố da nếu có, điều trị chảy máu nếu có (vitamin K, FFP), điều trị dị ứng nếu có (epinephrine nếu sốc phản vệ), lọc máu không hiệu quả do protein binding cao."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhưng giảm hấp thu một phần. Tránh uống với sữa hoặc thực phẩm giàu canxi (giảm hấp thu đáng kể).",
@@ -671,6 +707,19 @@ TETRACYCLINES_DRUGS = {
                 "Tăng áp lực nội sọ giả - có thể làm nặng thêm"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng tetracycline",
+                "Có thai (3 tháng cuối) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
+                "Trẻ em < 8 tuổi - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (trừ trường hợp đe dọa tính mạng)",
+                "Suy thận nặng (CrCl <30) - TÍCH LŨY, tăng độc tính"
+            ],
+            "tương_đối": [
+                "Có thai (3 tháng đầu và giữa) - nguy cơ ố vàng răng, chỉ dùng khi thực sự cần thiết",
+                "Suy gan nặng - tăng nguy cơ độc gan",
+                "Tăng áp lực nội sọ giả - có thể làm nặng thêm"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "D",
             "pregnancy_details": "Chống chỉ định trong 3 tháng cuối thai kỳ - nguy cơ ố vàng răng vĩnh viễn và chậm phát triển xương ở trẻ. Không dùng trong 3 tháng đầu và giữa trừ khi thực sự cần thiết.",
@@ -704,7 +753,11 @@ TETRACYCLINES_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, dấu hiệu thần kinh trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay tetracycline, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa, theo dõi chức năng thận (đặc biệt quan trọng ở suy thận do tích lũy), điều trị tăng áp lực nội sọ giả nếu có."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với thức ăn để giảm kích ứng dạ dày (nhưng giảm hấp thu một phần). Uống với nhiều nước (ít nhất 200ml).",

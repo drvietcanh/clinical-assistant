@@ -110,7 +110,7 @@ SGLT2_INHIBITORS_DRUGS = {
         'Uống 1 lần/ngày, bất kỳ lúc nào trong ngày. Nên uống vào cùng một thời điểm mỗi ngày để dễ nhớ.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Jardiance (empagliflozin)',
         'EMPA-REG OUTCOME Study - New England Journal of Medicine',
         'EMPEROR-Reduced Study - New England Journal of Medicine',
@@ -118,7 +118,25 @@ SGLT2_INHIBITORS_DRUGS = {
         'UpToDate - Empagliflozin: Drug information'], 'last_updated':
         '2024-12-19', 'evidence_level':
         'High - Multiple large RCTs (EMPA-REG OUTCOME, EMPEROR-Reduced, EMPEROR-Preserved)'
-        }},
+        },
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Diabetic ketoacidosis (rare)', 'Fournier gangrene (rare but serious)', 'Acute kidney injury (rare, usually due to dehydration)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Blood glucose', 'Renal function (eGFR - do not use if <20)', 'Signs of UTI/genital infections', 'Signs of DKA', 'Blood pressure', 'Volume status']
+        },
+        'guideline_tags': [
+            'ADA Diabetes Guidelines',
+            'AACE/ACE Diabetes Guidelines',
+            'EMPA-REG OUTCOME Study',
+            'EMPEROR-Reduced Study',
+            'EMPEROR-Preserved Study',
+            'FDA Drug Safety Communication - SGLT2 Inhibitors and DKA'
+        ]},
     "Dapagliflozin": {'group': 'Diabetes - SGLT2 Inhibitor', 'vietnamese_name':
         'Dapagliflozin, Forxiga', 'administration': ['PO'], 'indications': [
         'Đái tháo đường type 2', 'Suy tim với phân suất tống máu giảm (HFrEF)',
@@ -220,13 +238,30 @@ SGLT2_INHIBITORS_DRUGS = {
         'Uống 1 lần/ngày, bất kỳ lúc nào trong ngày. Nên uống vào cùng một thời điểm mỗi ngày để dễ nhớ.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Forxiga (dapagliflozin)',
         'DECLARE-TIMI 58 Study - New England Journal of Medicine',
         'DAPA-HF Study - New England Journal of Medicine',
         'UpToDate - Dapagliflozin: Drug information'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - Multiple large RCTs (DECLARE-TIMI 58, DAPA-HF)'}},
+        'High - Multiple large RCTs (DECLARE-TIMI 58, DAPA-HF)'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Diabetic ketoacidosis (rare)', 'Fournier gangrene (rare but serious)', 'Acute kidney injury (rare, usually due to dehydration)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Blood glucose', 'Renal function (eGFR - do not use if <25)', 'Signs of UTI/genital infections', 'Signs of DKA', 'Blood pressure', 'Volume status']
+        },
+        'guideline_tags': [
+            'ADA Diabetes Guidelines',
+            'AACE/ACE Diabetes Guidelines',
+            'DECLARE-TIMI 58 Study',
+            'DAPA-HF Study',
+            'FDA Drug Safety Communication - SGLT2 Inhibitors and DKA'
+        ]},
     
     "Canagliflozin": {
         "group": "Diabetes - SGLT2 Inhibitor",
@@ -400,7 +435,23 @@ SGLT2_INHIBITORS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - Multiple large RCTs (CANVAS) showing cardiovascular benefit"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Diabetic ketoacidosis (rare)", "Fournier gangrene (rare but serious)", "Lower limb amputation (slight increased risk)", "Acute kidney injury (rare, usually due to dehydration)", "Bone fractures (slight increased risk)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Renal function (eGFR - do not use if <30)", "Signs of UTI/genital infections", "Signs of DKA", "Blood pressure", "Volume status", "Signs of lower limb infection/ulceration"]
+        },
+        "guideline_tags": [
+            "ADA Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "CANVAS Study",
+            "FDA Drug Safety Communication - SGLT2 Inhibitors and DKA, Lower Limb Amputation"
+        ]
     },
 
     "Ertugliflozin": {
@@ -541,6 +592,21 @@ SGLT2_INHIBITORS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Diabetic ketoacidosis (rare)", "Fournier gangrene (rare but serious)", "Acute kidney injury (rare, usually due to dehydration)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Renal function (eGFR - do not use if <30)", "Signs of UTI/genital infections", "Signs of DKA", "Blood pressure", "Volume status"]
+        },
+        "guideline_tags": [
+            "ADA/EASD Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "FDA Drug Safety Communication - SGLT2 Inhibitors and DKA"
+        ],
     },
 }
 

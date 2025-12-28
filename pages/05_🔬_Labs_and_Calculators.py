@@ -62,10 +62,12 @@ with st.sidebar:
         [
             "🧮 Calculators",
             "🔬 Lab Panels",
-            "📈 Lab Enhancement"
+            "📈 Lab Enhancement",
+            "🔄 Unit Converter",
+            "🧪 Anion Gap Calculator"
         ],
         index=0,
-        help="Calculators: Tính toán công thức lâm sàng\nLab Panels: Tra cứu và giải thích giá trị xét nghiệm\nLab Enhancement: Phân tích xu hướng và calculator panel"
+        help="Calculators: Tính toán công thức lâm sàng\nLab Panels: Tra cứu và giải thích giá trị xét nghiệm\nLab Enhancement: Phân tích xu hướng và calculator panel\nUnit Converter: Chuyển đổi đơn vị y khoa"
     )
     
     st.markdown("---")
@@ -167,6 +169,26 @@ with st.sidebar:
         - Diễn giải đa xét nghiệm
         - Tự động phát hiện mẫu
         - Cảnh báo giá trị nguy kịch
+        """)
+    
+    elif category == "🔄 Unit Converter":
+        st.subheader("🔄 Unit Converter")
+        st.caption("Chuyển đổi đơn vị y khoa với auto-detection")
+        
+        st.markdown("---")
+        
+        st.info("""
+        **🔄 Enhanced Unit Converter:**
+        
+        **Tính năng:**
+        - Auto-detection: Tự động phát hiện đơn vị từ input
+        - Context-aware: Chuyển đổi theo ngữ cảnh
+        - Hỗ trợ nhiều loại đơn vị y khoa
+        
+        **Hỗ trợ:**
+        - Creatinine, Glucose, Cholesterol
+        - Bilirubin, BUN, Triglycerides
+        - Hemoglobin, Albumin
         """)
     
     st.markdown("---")
@@ -306,6 +328,14 @@ elif category == "📈 Lab Enhancement":
         render_trend_analysis()
     elif "Panel Calculator" in enhancement_type:
         render_panel_calculator()
+
+elif category == "🔄 Unit Converter":
+    try:
+        from components.unit_converter_enhanced import render_enhanced_unit_converter
+        render_enhanced_unit_converter()
+    except ImportError as e:
+        st.error(f"Không thể tải Enhanced Unit Converter: {str(e)}")
+        st.info("Vui lòng kiểm tra file components/unit_converter_enhanced.py")
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=True)

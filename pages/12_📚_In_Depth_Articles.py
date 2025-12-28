@@ -1121,6 +1121,13 @@ def render_article_card(article: dict, index: int):
         with col2:
             st.caption(f"💡 Có protocol tương ứng: **{protocol_info.get('protocol_display', '')}**")
     
+    # Score links
+    try:
+        from components.score_links_from_content import render_score_links_from_article
+        render_score_links_from_article(article['id'])
+    except ImportError:
+        pass
+    
     # Streamlit expander cho nội dung đầy đủ
     expand_key = f"article_expand_{article['id']}"
     expanded = st.session_state.get(f"expand_article_{article['id']}", False)

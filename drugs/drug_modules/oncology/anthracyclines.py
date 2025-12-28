@@ -78,7 +78,18 @@ ANTHRACYCLINES_DRUGS = {
         'Tổng liều tích lũy >450-550mg/m² - nguy cơ độc tim cao, nên ngừng',
         'Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục',
         'Suy gan - thận trọng, có thể cần giảm liều',
-        'Suy thận - thận trọng, có thể cần giảm liều']}, 'pregnancy_lactation':
+        'Suy thận - thận trọng, có thể cần giảm liều']}, 'contraindications_detail': {
+        'tuyệt_đối': [
+        'Dị ứng doxorubicin', 'Suy tim nặng - chống chỉ định tuyệt đối',
+        'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
+        'Đang cho con bú - chống chỉ định'], 'tương_đối': [
+        'Bệnh tim tiềm ẩn - thận trọng, theo dõi chức năng tim chặt chẽ',
+        'Tổng liều tích lũy >450-550mg/m² - nguy cơ độc tim cao, nên ngừng',
+        'Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục',
+        'Suy gan - thận trọng, có thể cần giảm liều',
+        'Suy thận - thận trọng, có thể cần giảm liều']}, 'reversal_agents': {
+        'available': False, 'agents': [],
+        'notes': 'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Nếu có extravasation: ngừng truyền ngay, không rút kim, chườm lạnh, tham khảo phẫu thuật.'}, 'pregnancy_lactation':
         {'fda_category': 'D', 'pregnancy_details':
         'Chống chỉ định trong thai kỳ. Doxorubicin gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.'
         , 'lactation': {'safety': 'Incompatible', 'details':

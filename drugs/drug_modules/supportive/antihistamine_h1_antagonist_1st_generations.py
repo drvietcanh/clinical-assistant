@@ -365,7 +365,22 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             ],
             'last_updated': '2025-02-05',
             'evidence_level': 'High - Multiple RCTs and systematic reviews'
-        }
+        },
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['CNS depression (sedation, drowsiness)', 'Anticholinergic effects (dry mouth, blurred vision, urinary retention)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Sedation/drowsiness (especially when driving or operating machinery)', 'Anticholinergic symptoms (dry mouth, blurred vision, urinary retention)', 'Blood pressure (especially with IM administration)', 'Heart rate']
+        },
+        'guideline_tags': [
+            'EAACI Guidelines - Allergic Rhinitis',
+            'AAAAI Guidelines - Urticaria',
+            'FDA Drug Information - Hydroxyzine'
+        ]
     },
     "Hydroxyzine": {
         'group': 'Allergy - Antihistamine (H1 Antagonist, 1st generation)',
@@ -550,7 +565,22 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             ],
             'last_updated': '2025-02-05',
             'evidence_level': 'High - Multiple RCTs and systematic reviews'
-        }
+        },
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['CNS depression (sedation, drowsiness)', 'Anticholinergic effects (dry mouth, blurred vision, urinary retention)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Sedation/drowsiness (especially when driving or operating machinery) - CRITICAL', 'Anticholinergic symptoms (dry mouth, blurred vision, urinary retention)', 'Blood pressure (especially with IM administration)', 'Heart rate']
+        },
+        'guideline_tags': [
+            'EAACI Guidelines - Allergic Rhinitis',
+            'AAAAI Guidelines - Urticaria',
+            'FDA Drug Information - Hydroxyzine'
+        ]
     }
 }
 

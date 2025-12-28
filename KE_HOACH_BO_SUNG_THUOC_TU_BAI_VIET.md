@@ -487,33 +487,33 @@ python -c "from drugs.drug_database import TOTAL_DRUGS; print(f'Total: {TOTAL_DR
 
 ## ✅ CHECKLIST TIẾN ĐỘ
 
-### **Phase 1: Ưu tiên cao (30 thuốc)**
-- [ ] Salmeterol
-- [ ] Terbutaline
-- [ ] Bupropion
-- [ ] Mirtazapine
-- [ ] Trazodone
-- [ ] Donepezil
-- [ ] Rivastigmine
-- [ ] Memantine
-- [ ] Diphenhydramine
-- [ ] Chlorpheniramine
-- [ ] Hydroxyzine
-- [ ] Flecainide
-- [ ] Propafenone
-- [ ] Chlorthalidone
-- [ ] Indapamide
-- [ ] Mupirocin
-- [ ] Terbinafine
-- [ ] Nystatin
-- [ ] Tretinoin
-- [ ] Tacrolimus (topical)
-- [ ] Benzoyl Peroxide
-- [ ] Permethrin
-- [ ] Calcium Gluconate
-- [ ] Sodium Bicarbonate
-- [ ] Magnesium Sulfate
-- [ ] Vasopressin
+### **Phase 1: Ưu tiên cao (30 thuốc)** ✅ HOÀN THÀNH
+- [x] Salmeterol ✅ Đã có đầy đủ 14 fields
+- [x] Terbutaline ✅ Đã có đầy đủ 14 fields
+- [x] Bupropion ✅ Đã có đầy đủ 14 fields
+- [x] Mirtazapine ✅ Đã có đầy đủ 14 fields
+- [x] Trazodone ✅ Đã có đầy đủ 14 fields
+- [x] Donepezil ✅ Đã có đầy đủ 14 fields
+- [x] Rivastigmine ✅ Đã có đầy đủ 14 fields
+- [x] Memantine ✅ Đã có đầy đủ 14 fields
+- [x] Diphenhydramine ✅ Đã có đầy đủ 14 fields
+- [x] Chlorpheniramine ✅ Đã có đầy đủ 14 fields
+- [x] Hydroxyzine ✅ Đã có đầy đủ 14 fields
+- [x] Flecainide ✅ Đã có đầy đủ 14 fields
+- [x] Propafenone ✅ Đã có đầy đủ 14 fields
+- [x] Chlorthalidone ✅ Đã có đầy đủ 14 fields
+- [x] Indapamide ✅ Đã có đầy đủ 14 fields
+- [x] Mupirocin ✅ Đã có đầy đủ 14 fields
+- [x] Terbinafine ✅ Đã có đầy đủ 14 fields
+- [x] Nystatin ✅ Đã có đầy đủ 14 fields
+- [x] Tretinoin ✅ Đã có đầy đủ 14 fields
+- [x] Tacrolimus (topical) ✅ Đã có đầy đủ 14 fields
+- [x] Benzoyl Peroxide ✅ Đã có đầy đủ 14 fields
+- [x] Permethrin ✅ Đã có đầy đủ 14 fields
+- [x] Calcium Gluconate ✅ Đã có đầy đủ 14 fields
+- [x] Sodium Bicarbonate ✅ Đã có đầy đủ 14 fields
+- [x] Magnesium Sulfate ✅ Đã có đầy đủ 14 fields
+- [x] Vasopressin ✅ Đã có đầy đủ 14 fields
 
 ### **Phase 2: Ưu tiên trung bình (35 thuốc)**
 - [ ] Indacaterol

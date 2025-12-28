@@ -155,7 +155,21 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Orthostatic hypotension", "Syncope (rare but dangerous)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure (especially orthostatic hypotension) - CRITICAL", "BPH symptoms (difficulty urinating, weak stream, nocturia, urgency)", "Signs of syncope", "Signs of retrograde ejaculation"]
+        },
+        "guideline_tags": [
+            "AUA Guidelines - Benign Prostatic Hyperplasia",
+            "FDA Drug Information - Tamsulosin"
+        ]
     },
     
     "Finasteride": {
@@ -237,6 +251,17 @@ UROLOGY_DRUGS = {
                 "Tiền sử ung thư tuyến tiền liệt - thận trọng (nguy cơ ung thư thể xâm lấn cao tăng nhẹ)"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng finasteride",
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (nguy cơ dị tật thai nhi nam)",
+                "Phụ nữ có thể mang thai - CHỐNG CHỈ ĐỊNH (phải dùng biện pháp tránh thai)"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng (chuyển hóa qua gan)",
+                "Tiền sử ung thư tuyến tiền liệt - thận trọng (nguy cơ ung thư thể xâm lấn cao tăng nhẹ)"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "X",
             "pregnancy_details": "Finasteride là thuốc phân loại X - CHỐNG CHỈ ĐỊNH trong thai kỳ. Finasteride có thể gây dị tật thai nhi nam (bất thường cơ quan sinh dục ngoài). Phụ nữ có thai hoặc có thể mang thai KHÔNG được dùng hoặc xử lý viên nang vỡ.",
@@ -265,7 +290,11 @@ UROLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu rối loạn chức năng tình dục, trầm cảm, lo âu cho đến khi hồi phục."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Tác dụng của finasteride có thể kéo dài sau khi ngừng do thời gian bán thải dài."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với hoặc không thức ăn. Có thể uống không thức ăn nếu cần.",
@@ -282,7 +311,23 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["High-grade prostate cancer (slight increase)", "Sexual dysfunction (decreased libido, erectile dysfunction, decreased ejaculate volume)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["PSA (decreases by 50% - need to adjust interpretation)", "Prostate size (ultrasound, DRE)", "BPH symptoms", "Sexual function", "Depression/anxiety symptoms"]
+        },
+        "guideline_tags": [
+            "AUA Guidelines - Benign Prostatic Hyperplasia",
+            "FDA Black Box Warning - Finasteride and High-Grade Prostate Cancer",
+            "FDA Black Box Warning - Finasteride and Pregnancy (Category X)",
+            "UpToDate - Finasteride Drug Information"
+        ]
     },
     
     "Sildenafil": {
@@ -413,6 +458,22 @@ UROLOGY_DRUGS = {
                 "Suy gan/thận nặng - giảm liều"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng sildenafil",
+                "Dùng với nitrate (nitroglycerin, isosorbide) - CHỐNG CHỈ ĐỊNH (nguy cơ hạ huyết áp nặng, tử vong)",
+                "Dùng với riociguat - CHỐNG CHỈ ĐỊNH",
+                "Bệnh tim nặng không ổn định (nhồi máu cơ tim gần đây, đau thắt ngực không ổn định) - CHỐNG CHỈ ĐỊNH",
+                "Hạ huyết áp nặng - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Bệnh tim ổn định - thận trọng, đánh giá nguy cơ tim mạch trước khi dùng",
+                "Đột quỵ gần đây - thận trọng",
+                "Mất thị lực một mắt do NAION - thận trọng (nguy cơ mất thị lực mắt còn lại)",
+                "Dùng với alpha-blockers - tăng nguy cơ hạ huyết áp",
+                "Suy gan/thận nặng - giảm liều"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "Không áp dụng",
             "pregnancy_details": "Sildenafil chỉ dùng cho nam giới. Không áp dụng cho phụ nữ có thai.",
@@ -464,7 +525,23 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Sudden vision loss (NAION) - CRITICAL", "Sudden hearing loss - CRITICAL", "Hypotension (especially with nitrates) - CRITICAL"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of hypotension (dizziness, syncope) - CRITICAL", "Signs of vision changes (blurred vision, color vision changes)", "Signs of sudden vision loss (NAION) - CRITICAL (STOP immediately)", "Signs of sudden hearing loss - CRITICAL (STOP immediately)", "Signs of chest pain, dyspnea (cardiac disease)"]
+        },
+        "guideline_tags": [
+            "AUA Guidelines - Erectile Dysfunction",
+            "FDA Black Box Warning - Sildenafil and Nitrates (Contraindicated)",
+            "FDA Black Box Warning - Sildenafil and Vision Loss (NAION)",
+            "FDA Black Box Warning - Sildenafil and Hearing Loss"
+        ]
     },
     
     "Tadalafil": {
@@ -600,6 +677,23 @@ UROLOGY_DRUGS = {
                 "Suy gan/thận (CrCl 30-60) - giảm liều"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng tadalafil",
+                "Dùng với nitrate (nitroglycerin, isosorbide) - CHỐNG CHỈ ĐỊNH (nguy cơ hạ huyết áp nặng, tử vong)",
+                "Dùng với riociguat - CHỐNG CHỈ ĐỊNH",
+                "Bệnh tim nặng không ổn định (nhồi máu cơ tim gần đây, đau thắt ngực không ổn định) - CHỐNG CHỈ ĐỊNH",
+                "Hạ huyết áp nặng - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng (CrCl <30) - CHỐNG CHỈ ĐỊNH hoặc dùng rất thận trọng"
+            ],
+            "tương_đối": [
+                "Bệnh tim ổn định - thận trọng, đánh giá nguy cơ tim mạch trước khi dùng",
+                "Đột quỵ gần đây - thận trọng",
+                "Mất thị lực một mắt do NAION - thận trọng (nguy cơ mất thị lực mắt còn lại)",
+                "Dùng với alpha-blockers - tăng nguy cơ hạ huyết áp",
+                "Suy gan/thận (CrCl 30-60) - giảm liều"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "Không áp dụng",
             "pregnancy_details": "Tadalafil chỉ dùng cho nam giới. Không áp dụng cho phụ nữ có thai.",
@@ -635,7 +729,11 @@ UROLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi huyết áp, nhịp tim, ECG liên tục cho đến khi hồi phục. Thời gian bán thải dài (17.5 giờ), cần theo dõi lâu hơn."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Nếu hạ huyết áp nặng: nằm đầu thấp, truyền dịch, thuốc vận mạch (norepinephrine, phenylephrine) nếu cần. Half-life dài (17.5 giờ) nên tác dụng sẽ kéo dài."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với hoặc không thức ăn. Có thể uống không thức ăn nếu cần.",
@@ -652,7 +750,24 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Sudden vision loss (NAION) - CRITICAL", "Sudden hearing loss - CRITICAL", "Hypotension (especially with nitrates) - CRITICAL"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of hypotension (dizziness, syncope) - CRITICAL", "Signs of vision changes (blurred vision, color vision changes)", "Signs of sudden vision loss (NAION) - CRITICAL (STOP immediately)", "Signs of sudden hearing loss - CRITICAL (STOP immediately)", "BPH symptoms (if used for BPH)", "Signs of chest pain, dyspnea (cardiac disease)"]
+        },
+        "guideline_tags": [
+            "AUA Guidelines - Erectile Dysfunction",
+            "AUA Guidelines - Benign Prostatic Hyperplasia",
+            "FDA Black Box Warning - Tadalafil and Nitrates (Contraindicated)",
+            "FDA Black Box Warning - Tadalafil and Vision Loss (NAION)",
+            "FDA Black Box Warning - Tadalafil and Hearing Loss"
+        ]
     },
 
     "Dutasteride": {
@@ -735,6 +850,17 @@ UROLOGY_DRUGS = {
                 "Tiền sử ung thư tuyến tiền liệt - thận trọng (nguy cơ ung thư thể xâm lấn cao tăng nhẹ)"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng dutasteride",
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (nguy cơ dị tật thai nhi nam)",
+                "Phụ nữ có thể mang thai - CHỐNG CHỈ ĐỊNH (phải dùng biện pháp tránh thai)"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng (chuyển hóa qua gan)",
+                "Tiền sử ung thư tuyến tiền liệt - thận trọng (nguy cơ ung thư thể xâm lấn cao tăng nhẹ)"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "X",
             "pregnancy_details": "Dutasteride là thuốc phân loại X - CHỐNG CHỈ ĐỊNH trong thai kỳ. Dutasteride có thể gây dị tật thai nhi nam (bất thường cơ quan sinh dục ngoài). Phụ nữ có thai hoặc có thể mang thai KHÔNG được dùng hoặc xử lý viên nang vỡ.",
@@ -764,7 +890,11 @@ UROLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu rối loạn chức năng tình dục, trầm cảm, lo âu cho đến khi hồi phục. Half-life rất dài, cần theo dõi lâu hơn."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Tác dụng của dutasteride có thể kéo dài rất lâu do half-life rất dài (5 tuần)."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với hoặc không thức ăn. Có thể uống không thức ăn nếu cần.",
@@ -935,7 +1065,22 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure (orthostatic hypotension) - CRITICAL", "Signs of syncope", "BPH symptoms improvement"]
+        },
+        "guideline_tags": [
+            "AUA Guidelines - Benign Prostatic Hyperplasia",
+            "EAU Guidelines - Lower Urinary Tract Symptoms",
+            "FDA Drug Safety Communication - Alpha-blockers and Orthostatic Hypotension"
+        ]
     },
 
     "Vardenafil": {
@@ -1062,6 +1207,22 @@ UROLOGY_DRUGS = {
                 "Suy gan/thận nặng - giảm liều"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng vardenafil",
+                "Dùng với nitrate (nitroglycerin, isosorbide) - CHỐNG CHỈ ĐỊNH (nguy cơ hạ huyết áp nặng, tử vong)",
+                "Dùng với riociguat - CHỐNG CHỈ ĐỊNH",
+                "Bệnh tim nặng không ổn định (nhồi máu cơ tim gần đây, đau thắt ngực không ổn định) - CHỐNG CHỈ ĐỊNH",
+                "Hạ huyết áp nặng - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Bệnh tim ổn định - thận trọng, đánh giá nguy cơ tim mạch trước khi dùng",
+                "Đột quỵ gần đây - thận trọng",
+                "Mất thị lực một mắt do NAION - thận trọng (nguy cơ mất thị lực mắt còn lại)",
+                "Dùng với alpha-blockers - tăng nguy cơ hạ huyết áp",
+                "Suy gan/thận nặng - giảm liều"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "Không áp dụng",
             "pregnancy_details": "Vardenafil chỉ dùng cho nam giới. Không áp dụng cho phụ nữ có thai.",
@@ -1096,7 +1257,11 @@ UROLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi huyết áp, nhịp tim, ECG liên tục cho đến khi hồi phục."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Nếu hạ huyết áp nặng: nằm đầu thấp, truyền dịch, thuốc vận mạch (norepinephrine, phenylephrine) nếu cần. Half-life 4-5 giờ nên tác dụng sẽ giảm sau vài giờ."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với hoặc không thức ăn. Có thể uống không thức ăn nếu cần.",
@@ -1217,6 +1382,21 @@ UROLOGY_DRUGS = {
             "minor": []
         },
         "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng oxybutynin",
+                "Bí tiểu (urinary retention) - CHỐNG CHỈ ĐỊNH",
+                "Tăng nhãn áp góc đóng (narrow-angle glaucoma) - CHỐNG CHỈ ĐỊNH",
+                "Bệnh nhược cơ (myasthenia gravis) - CHỐNG CHỈ ĐỊNH",
+                "Tắc nghẽn đường tiêu hóa (GI obstruction) - CHỐNG CHỈ ĐỊNH",
+                "Megacolon độc tính (toxic megacolon) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Người cao tuổi - tăng nguy cơ rối loạn nhận thức",
+                "Suy gan/thận nặng - thận trọng, giảm liều",
+                "Bệnh tim - thận trọng (nhịp tim nhanh)"
+            ]
+        },
+        "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng oxybutynin",
                 "Bí tiểu (urinary retention) - CHỐNG CHỈ ĐỊNH",
@@ -1412,6 +1592,21 @@ UROLOGY_DRUGS = {
                 "Dùng với CYP3A4 inhibitors - giảm liều"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng tolterodine",
+                "Bí tiểu (urinary retention) - CHỐNG CHỈ ĐỊNH",
+                "Tăng nhãn áp góc đóng (narrow-angle glaucoma) - CHỐNG CHỈ ĐỊNH",
+                "Bệnh nhược cơ (myasthenia gravis) - CHỐNG CHỈ ĐỊNH",
+                "Tắc nghẽn đường tiêu hóa (GI obstruction) - CHỐNG CHỈ ĐỊNH",
+                "Suy gan nặng - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Người cao tuổi - tăng nguy cơ rối loạn nhận thức",
+                "Suy gan/thận trung bình - thận trọng, giảm liều",
+                "Dùng với CYP3A4 inhibitors - giảm liều"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Tolterodine phân loại C - thận trọng trong thai kỳ. Không có dữ liệu đầy đủ trên phụ nữ có thai. Không khuyến cáo dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ.",
@@ -1578,6 +1773,22 @@ UROLOGY_DRUGS = {
                 "Dùng với CYP3A4 inhibitors - không vượt quá 5mg/ngày"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng solifenacin",
+                "Bí tiểu (urinary retention) - CHỐNG CHỈ ĐỊNH",
+                "Tăng nhãn áp góc đóng (narrow-angle glaucoma) - CHỐNG CHỈ ĐỊNH",
+                "Bệnh nhược cơ (myasthenia gravis) - CHỐNG CHỈ ĐỊNH",
+                "Tắc nghẽn đường tiêu hóa (GI obstruction) - CHỐNG CHỈ ĐỊNH",
+                "Suy gan nặng - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng (CrCl <30) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Người cao tuổi - tăng nguy cơ rối loạn nhận thức",
+                "Suy gan/thận trung bình (CrCl 30-60) - không vượt quá 5mg/ngày",
+                "Dùng với CYP3A4 inhibitors - không vượt quá 5mg/ngày"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Solifenacin phân loại C - thận trọng trong thai kỳ. Không có dữ liệu đầy đủ trên phụ nữ có thai. Không khuyến cáo dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ.",
@@ -1635,7 +1846,21 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Urinary retention (contraindicated)", "Narrow-angle glaucoma (contraindicated)", "Cognitive impairment (less than oxybutynin/tolterodine)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["OAB symptoms (urgency, frequency, incontinence, nocturia)", "Signs of urinary retention (difficulty urinating, lower abdominal pain) - CRITICAL", "Signs of narrow-angle glaucoma (eye pain, blurred vision) - CRITICAL", "Signs of cognitive impairment (especially in elderly)", "Constipation", "Dry mouth", "Renal function (creatinine, eGFR) - CONTRAINDICATED if CrCl <30"]
+        },
+        "guideline_tags": [
+            "AUA Guidelines - Overactive Bladder",
+            "FDA Drug Information - Solifenacin"
+        ]
     },
 
     "Mirabegron": {
@@ -1735,6 +1960,19 @@ UROLOGY_DRUGS = {
                 "Dùng với digoxin - theo dõi nồng độ digoxin"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng mirabegron",
+                "Tăng huyết áp không kiểm soát - CHỐNG CHỈ ĐỊNH",
+                "Bệnh tim nặng không ổn định - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Tăng huyết áp ổn định - thận trọng, theo dõi huyết áp",
+                "Bệnh tim ổn định - thận trọng (nhịp tim nhanh)",
+                "Suy gan/thận nặng - không vượt quá 25mg/ngày",
+                "Dùng với digoxin - theo dõi nồng độ digoxin"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Mirabegron phân loại C - thận trọng trong thai kỳ. Không có dữ liệu đầy đủ trên phụ nữ có thai. Không khuyến cáo dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ.",
@@ -1772,7 +2010,8 @@ UROLOGY_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Nếu tăng huyết áp nặng: thuốc hạ huyết áp (labetalol, esmolol). Nếu nhịp tim nhanh: beta-blocker (metoprolol, esmolol). Half-life rất dài (50 giờ) nên tác dụng sẽ kéo dài."
         },
         "administration_instructions": {
             "oral": {
@@ -1942,7 +2181,21 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Orthostatic hypotension", "Syncope (rare)", "Retrograde ejaculation (more common than tamsulosin)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure (especially orthostatic hypotension)", "BPH symptoms (difficulty urinating, weak stream, nocturia, urgency)", "Signs of syncope", "Signs of retrograde ejaculation", "Renal function (CrCl) - CONTRAINDICATED if CrCl <30 mL/min"]
+        },
+        "guideline_tags": [
+            "AUA Guidelines - Benign Prostatic Hyperplasia",
+            "FDA Drug Information - Silodosin"
+        ]
     },
     
     "Avanafil": {
@@ -2079,6 +2332,24 @@ UROLOGY_DRUGS = {
                 "Dùng với alpha-blockers - tăng nguy cơ hạ huyết áp"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng avanafil",
+                "Dùng nitrate (nitroglycerin, isosorbide) - CHỐNG CHỈ ĐỊNH tuyệt đối",
+                "Dùng riociguat - CHỐNG CHỈ ĐỊNH tuyệt đối",
+                "Bệnh tim nặng không ổn định - CHỐNG CHỈ ĐỊNH",
+                "Đột quỵ hoặc nhồi máu cơ tim gần đây (<6 tháng) - CHỐNG CHỈ ĐỊNH",
+                "Hạ huyết áp nặng (<90/50 mmHg) - CHỐNG CHỈ ĐỊNH",
+                "Mất thị lực một mắt do NAION - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Bệnh tim ổn định - thận trọng",
+                "Tăng huyết áp - thận trọng",
+                "Suy gan trung bình đến nặng - giảm liều",
+                "Suy thận trung bình đến nặng - giảm liều",
+                "Dùng với alpha-blockers - tăng nguy cơ hạ huyết áp"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "Không áp dụng",
             "pregnancy_details": "Avanafil chỉ dùng cho nam giới. Không áp dụng cho phụ nữ có thai.",
@@ -2114,7 +2385,11 @@ UROLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi huyết áp, nhịp tim, dấu hiệu sinh tồn, thị giác, thính giác cho đến khi hồi phục."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Nếu hạ huyết áp nặng: nằm ngửa, nâng chân, truyền dịch, thuốc tăng huyết áp (phenylephrine, norepinephrine) nếu cần. Half-life 3-5 giờ nên tác dụng sẽ giảm sau vài giờ."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với hoặc không thức ăn. Có thể uống không thức ăn.",
@@ -2131,7 +2406,23 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure - CRITICAL (contraindicated with nitrates)", "Signs of vision/hearing loss (NAION, sudden hearing loss)", "Cardiovascular status"]
+        },
+        "guideline_tags": [
+            "AUA Guidelines - Erectile Dysfunction",
+            "EAU Guidelines - Erectile Dysfunction",
+            "FDA Black Box Warning - PDE-5 Inhibitors and Nitrates",
+            "FDA Drug Safety Communication - PDE-5 Inhibitors and Vision Loss"
+        ]
     },
     
     "Fesoterodine": {
@@ -2310,7 +2601,22 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Urinary retention", "Cognitive impairment (especially in elderly)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["OAB symptoms (urgency, frequency, incontinence)", "Signs of urinary retention - CRITICAL", "Cognitive function (especially in elderly)", "Dry mouth, constipation", "Heart rate (if history of arrhythmias)"]
+        },
+        "guideline_tags": [
+            "AUA Guidelines - Management of Overactive Bladder",
+            "FDA Drug Information - Fesoterodine",
+            "UpToDate - Overactive Bladder Treatment"
+        ]
     }
 }
 

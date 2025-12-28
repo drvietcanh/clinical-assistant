@@ -181,6 +181,23 @@ GLP1_AGONISTS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, multiple large RCTs",
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Pancreatitis (rare but serious)", "Thyroid C-cell tumors (MTC risk in animals)", "Acute kidney injury (rare, usually due to dehydration)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Signs of pancreatitis", "Thyroid function (if symptoms)", "Renal function (if dehydration)", "Weight", "Heart rate"]
+        },
+        "guideline_tags": [
+            "ADA/EASD Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "SUSTAIN Trials",
+            "STEP Trials",
+            "FDA Black Box Warning - Thyroid C-cell tumors"
+        ],
     },
 
     "Liraglutide": {
@@ -322,6 +339,22 @@ GLP1_AGONISTS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCT (LEADER)",
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Pancreatitis (rare but serious)", "Thyroid C-cell tumors (MTC risk in animals)", "Acute kidney injury (rare, usually due to dehydration)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Signs of pancreatitis", "Thyroid function (if symptoms)", "Renal function (if dehydration)", "Weight", "Heart rate"]
+        },
+        "guideline_tags": [
+            "ADA/EASD Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "LEADER Trial",
+            "FDA Black Box Warning - Thyroid C-cell tumors"
+        ],
     },
 
     "Dulaglutide": {
@@ -458,6 +491,22 @@ GLP1_AGONISTS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCT (REWIND)",
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Pancreatitis (rare but serious)", "Thyroid C-cell tumors (MTC risk in animals)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Signs of pancreatitis", "Thyroid function (if symptoms)", "Weight", "Heart rate"]
+        },
+        "guideline_tags": [
+            "ADA/EASD Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "REWIND Trial",
+            "FDA Black Box Warning - Thyroid C-cell tumors"
+        ],
     },
 
     "Exenatide": {
@@ -597,6 +646,21 @@ GLP1_AGONISTS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Pancreatitis (rare but serious)", "Thyroid C-cell tumors (MTC risk in animals)", "Acute kidney injury (contraindicated if eGFR <30)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Blood glucose", "Renal function (CrCl, eGFR) - CRITICAL", "Signs of pancreatitis", "Thyroid function (if symptoms)", "Weight"]
+        },
+        "guideline_tags": [
+            "ADA/EASD Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "FDA Black Box Warning - Thyroid C-cell tumors and Renal Impairment"
+        ],
     },
 
     "Tirzepatide": {
@@ -762,6 +826,23 @@ GLP1_AGONISTS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved (2022), multiple large RCTs, highest efficacy",
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Pancreatitis (rare but serious)", "Thyroid C-cell tumors (MTC risk in animals)", "Acute kidney injury (rare, usually due to dehydration)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Signs of pancreatitis", "Thyroid function (if symptoms)", "Renal function (if dehydration)", "Weight", "Heart rate", "GI symptoms (may be more severe than GLP-1 alone)"]
+        },
+        "guideline_tags": [
+            "ADA/EASD Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "SURPASS Trials",
+            "SURMOUNT Trials",
+            "FDA Black Box Warning - Thyroid C-cell tumors"
+        ],
     },
 }
 

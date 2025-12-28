@@ -1,7 +1,7 @@
 # Hội chứng mạch vành cấp (ACS): chẩn đoán, phân tầng nguy cơ và điều trị theo guideline ESC/Mỹ
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tim mạch  
-> **Cập nhật:** Tháng 12/2025  
+> **Cập nhật:** Tháng 2/2025  
 > **Tài liệu tham khảo chính:** ESC Guidelines for ACS with ST-elevation (STEMI) 2017 + cập nhật, ESC Guidelines for NSTE-ACS 2020 [1,2], ACC/AHA ACS Guidelines & Updates [3]
 
 ---

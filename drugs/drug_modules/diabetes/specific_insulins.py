@@ -53,6 +53,18 @@ SPECIFIC_INSULINS_DRUGS = {
             "peak": "30-90 phút"
         },
         "storage": "Chưa mở: Tủ lạnh (2-8°C). Đang dùng: Nhiệt độ phòng (<30°C), dùng trong 28 ngày.",
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng có thể gây hôn mê, co giật, tử vong. Phải theo dõi đường huyết thường xuyên và có glucagon sẵn.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ADA Guidelines (American Diabetes Association)",
+            "AACE/ACE Guidelines (American Association of Clinical Endocrinologists)"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Humalog (insulin lispro)",
@@ -108,6 +120,18 @@ SPECIFIC_INSULINS_DRUGS = {
             "peak": "30-90 phút"
         },
         "storage": "Chưa mở: Tủ lạnh (2-8°C). Đang dùng: Nhiệt độ phòng (<30°C), dùng trong 28 ngày.",
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng có thể gây hôn mê, co giật, tử vong. Phải theo dõi đường huyết thường xuyên và có glucagon sẵn.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ADA Guidelines (American Diabetes Association)",
+            "AACE/ACE Guidelines (American Association of Clinical Endocrinologists)"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Novolog (insulin aspart), Fiasp",
@@ -161,6 +185,18 @@ SPECIFIC_INSULINS_DRUGS = {
             "peak": "30-90 phút"
         },
         "storage": "Chưa mở: Tủ lạnh (2-8°C). Đang dùng: Nhiệt độ phòng (<30°C), dùng trong 28 ngày.",
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng có thể gây hôn mê, co giật, tử vong. Phải theo dõi đường huyết thường xuyên và có glucagon sẵn.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ADA Guidelines (American Diabetes Association)",
+            "AACE/ACE Guidelines (American Association of Clinical Endocrinologists)"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Apidra (insulin glulisine)",
@@ -219,6 +255,18 @@ SPECIFIC_INSULINS_DRUGS = {
             "peak": "2-4 giờ"
         },
         "storage": "Chưa mở: Tủ lạnh (2-8°C). Đang dùng: Nhiệt độ phòng (<30°C), dùng trong 28 ngày.",
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng có thể gây hôn mê, co giật, tử vong. Phải theo dõi đường huyết thường xuyên và có glucagon sẵn.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ADA Guidelines (American Diabetes Association)",
+            "AACE/ACE Guidelines (American Association of Clinical Endocrinologists)"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Humulin R, Novolin R",
@@ -275,6 +323,18 @@ SPECIFIC_INSULINS_DRUGS = {
             "peak": "2-8 giờ sau tiêm"
         },
         "storage": "Chưa mở: Tủ lạnh (2-8°C). Đang dùng: Nhiệt độ phòng (<30°C), dùng trong 28 ngày.",
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng có thể gây hôn mê, co giật, tử vong. Phải theo dõi đường huyết thường xuyên và có glucagon sẵn.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ADA Guidelines (American Diabetes Association)",
+            "AACE/ACE Guidelines (American Association of Clinical Endocrinologists)"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Humulin N, Novolin N",
@@ -334,6 +394,18 @@ SPECIFIC_INSULINS_DRUGS = {
             "peak": "KHÔNG có peak (flat profile)"
         },
         "storage": "Chưa mở: Tủ lạnh (2-8°C). Đang dùng: Nhiệt độ phòng (<30°C), dùng trong 28 ngày.",
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng có thể gây hôn mê, co giật, tử vong. Phải theo dõi đường huyết thường xuyên và có glucagon sẵn.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ADA Guidelines (American Diabetes Association)",
+            "AACE/ACE Guidelines (American Association of Clinical Endocrinologists)"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Lantus (insulin glargine), Basaglar, Toujeo",
@@ -390,6 +462,18 @@ SPECIFIC_INSULINS_DRUGS = {
             "peak": "KHÔNG có peak (flat profile)"
         },
         "storage": "Chưa mở: Tủ lạnh (2-8°C). Đang dùng: Nhiệt độ phòng (<30°C), dùng trong 42 ngày.",
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng có thể gây hôn mê, co giật, tử vong. Phải theo dõi đường huyết thường xuyên và có glucagon sẵn.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ADA Guidelines (American Diabetes Association)",
+            "AACE/ACE Guidelines (American Association of Clinical Endocrinologists)"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Levemir (insulin detemir)",
@@ -446,6 +530,18 @@ SPECIFIC_INSULINS_DRUGS = {
             "peak": "KHÔNG có peak (flat profile)"
         },
         "storage": "Chưa mở: Tủ lạnh (2-8°C). Đang dùng: Nhiệt độ phòng (<30°C), dùng trong 56 ngày.",
+        "black_box_warnings": "Nguy cơ hạ đường huyết nghiêm trọng có thể gây hôn mê, co giật, tử vong. Phải theo dõi đường huyết thường xuyên và có glucagon sẵn.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ADA Guidelines (American Diabetes Association)",
+            "AACE/ACE Guidelines (American Association of Clinical Endocrinologists)"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Tresiba (insulin degludec)",

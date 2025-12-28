@@ -150,14 +150,30 @@ SULFONYLUREAS_DRUGS = {
         'Daonil', 'Glibenclamide', 'Glyburide']}, 'cost_estimate': {'unit': 'VND',
         'range': '2,000 - 10,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Glibenclamide generic thường rẻ hơn (2,000-5,000 VND/viên 5mg). Daonil (brand) thường đắt hơn (5,000-10,000 VND/viên 5mg).'}, 'references': {'primary_sources': [
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Glibenclamide generic thường rẻ hơn (2,000-5,000 VND/viên 5mg). Daonil (brand) thường đắt hơn (5,000-10,000 VND/viên 5mg).'},         'references': {'primary_sources': [
         'FDA Drug Label - Glyburide (glibenclamide)',
         'UpToDate - Glyburide: Drug information',
         'UK Prospective Diabetes Study (UKPDS)',
         'American Diabetes Association guidelines',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
         'last_updated': '2024-12-19', 'evidence_level':
-        'High - Multiple large RCTs (UKPDS) and extensive clinical experience'}},
+        'High - Multiple large RCTs (UKPDS) and extensive clinical experience'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': [],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Blood glucose (frequent)', 'Signs of hypoglycemia', 'Renal function (CrCl, eGFR)']
+        },
+        'guideline_tags': [
+            'ADA Diabetes Guidelines',
+            'AACE/ACE Diabetes Guidelines',
+            'UKPDS Study',
+            'ISMP High Alert Medications'
+        ]},
     "Gliclazide": {'group': 'Diabetes - Sulfonylurea', 'vietnamese_name':
         'Gliclazide, Diamicron', 'administration': ['PO'], 'indications': [
         'Đái tháo đường type 2'], 'contraindications': ['Đái tháo đường type 1',
@@ -275,14 +291,30 @@ SULFONYLUREAS_DRUGS = {
         'Diamicron', 'Gliclazide']}, 'cost_estimate': {'unit': 'VND',
         'range': '3,000 - 15,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Gliclazide generic thường rẻ hơn (3,000-8,000 VND/viên 80mg). Diamicron (brand) thường đắt hơn (8,000-15,000 VND/viên 80mg).'}, 'references': {'primary_sources': [
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Gliclazide generic thường rẻ hơn (3,000-8,000 VND/viên 80mg). Diamicron (brand) thường đắt hơn (8,000-15,000 VND/viên 80mg).'},         'references': {'primary_sources': [
         'FDA Drug Label - Diamicron (gliclazide)',
         'UpToDate - Gliclazide: Drug information',
         'UK Prospective Diabetes Study (UKPDS)',
         'American Diabetes Association guidelines',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
         'last_updated': '2024-12-19', 'evidence_level':
-        'High - Multiple large RCTs (UKPDS) and extensive clinical experience'}},
+        'High - Multiple large RCTs (UKPDS) and extensive clinical experience'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': [],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Blood glucose (frequent)', 'Signs of hypoglycemia', 'Renal function (CrCl, eGFR)']
+        },
+        'guideline_tags': [
+            'ADA Diabetes Guidelines',
+            'AACE/ACE Diabetes Guidelines',
+            'UKPDS Study',
+            'ISMP High Alert Medications'
+        ]},
     
     "Glimepiride": {
         "group": "Diabetes - Sulfonylurea (3rd Generation)",
@@ -466,7 +498,22 @@ SULFONYLUREAS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs, extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose (frequent)", "Signs of hypoglycemia", "Renal function (CrCl, eGFR)"]
+        },
+        "guideline_tags": [
+            "ADA Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "ISMP High Alert Medications"
+        ]
     }
 }
 

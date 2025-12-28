@@ -432,7 +432,26 @@ HEMATOLOGY_DRUGS = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Nguy cơ giảm bạch cầu và giảm tiểu cầu nghiêm trọng, đe dọa tính mạng. Nguy cơ TTP (thrombotic thrombocytopenic purpura) có thể tử vong. Cần theo dõi công thức máu thường xuyên"
+        "black_box_warnings": "Nguy cơ giảm bạch cầu và giảm tiểu cầu nghiêm trọng, đe dọa tính mạng. Nguy cơ TTP (thrombotic thrombocytopenic purpura) có thể tử vong. Cần theo dõi công thức máu thường xuyên",
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Giảm bạch cầu/giảm tiểu cầu",
+                "Chảy máu đang hoạt động",
+                "Suy gan nặng"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - thận trọng",
+                "Phẫu thuật lớn - cần ngừng trước phẫu thuật",
+                "Dùng với aspirin/warfarin - tăng nguy cơ chảy máu"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Ticlopidine không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Ticlopidine thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy."
+        }
     },
     
     "Dipyridamole": {
@@ -962,6 +981,26 @@ HEMATOLOGY_DRUGS = {
                 "Suy gan nặng - thận trọng",
                 "Có thai - tương đối an toàn nhưng thận trọng"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Chảy máu đang hoạt động",
+                "Giảm tiểu cầu do heparin (HIT) đang hoạt động hoặc tiền sử",
+                "Dị ứng heparin"
+            ],
+            "tương_đối": [
+                "Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng",
+                "Phẫu thuật lớn - cần ngừng trước phẫu thuật",
+                "Suy gan nặng - thận trọng",
+                "Có thai - tương đối an toàn nhưng thận trọng"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ một phần qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Heparin không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Heparin thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy."
         },
         "pregnancy_lactation": {
             "fda_category": "C",
@@ -1788,6 +1827,23 @@ HEMATOLOGY_DRUGS = {
                 "Bệnh nhân có tiền sử phản ứng dị ứng nặng - thận trọng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng protamine",
+                "Dị ứng cá (tăng nguy cơ phản ứng dị ứng)"
+            ],
+            "tương_đối": [
+                "Đã dùng protamine trước đó - tăng nguy cơ phản ứng",
+                "Bệnh nhân có tiền sử phản ứng dị ứng nặng - thận trọng"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Thận trọng, có thể cần giảm liều",
+            "dialysis": "Thận trọng, giảm liều. Protamine thải trừ qua thận.",
+            "notes": "Protamine thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy."
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Có thể dùng trong thai kỳ nếu cần thiết. Protamine được dùng để đảo ngược heparin trong phẫu thuật tim mạch ở phụ nữ có thai.",
@@ -1842,7 +1898,23 @@ HEMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA-approved, widely used in clinical practice"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Severe allergic reactions (anaphylaxis) - CRITICAL", "Hypotension", "Respiratory depression"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure - CRITICAL (during and after injection)", "aPTT (after 5-15 minutes to confirm reversal)", "Signs of allergic reaction (rash, dyspnea, anaphylaxis) - CRITICAL", "Heart rate (bradycardia)", "Signs of bleeding (check if bleeding persists after reversal)"]
+        },
+        "guideline_tags": [
+            "ACCP Guidelines - Anticoagulant Reversal",
+            "AHA/ACC Guidelines - Anticoagulant Reversal",
+            "FDA Black Box Warning - Protamine and Anaphylaxis",
+            "FDA Drug Information - Protamine"
+        ]
     },
     
     "Vitamin K": {
@@ -1932,6 +2004,22 @@ HEMATOLOGY_DRUGS = {
             "tương_đối": [
                 "Trẻ sơ sinh - thận trọng với liều cao (tăng bilirubin)"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng vitamin K",
+                "Tiêm IV nhanh - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Trẻ sơ sinh - thận trọng với liều cao (tăng bilirubin)"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Không cần chỉnh liều",
+            "dialysis": "Không cần chỉnh liều",
+            "notes": "Vitamin K chủ yếu chuyển hóa ở gan, không cần điều chỉnh liều ở suy thận."
         },
         "pregnancy_lactation": {
             "fda_category": "C",
@@ -2098,6 +2186,25 @@ HEMATOLOGY_DRUGS = {
                 "Bệnh nhân có nguy cơ huyết khối (ung thư, bất động, suy tim) - thận trọng",
                 "Liều cao IV - tăng nguy cơ co giật"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Huyết khối đang hoạt động",
+                "Tiền sử huyết khối",
+                "Dị ứng tranexamic acid"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng, giảm liều 75%",
+                "Bệnh nhân có nguy cơ huyết khối (ung thư, bất động, suy tim) - thận trọng",
+                "Liều cao IV - tăng nguy cơ co giật"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Giảm liều 75%",
+            "dialysis": "Giảm liều 75%. Tranexamic acid được lọc sạch qua thẩm phân máu, bổ sung liều sau lọc.",
+            "notes": "Tranexamic acid thải trừ chủ yếu qua thận (90% nguyên dạng). Suy thận cần điều chỉnh liều rõ ràng."
         },
         "pregnancy_lactation": {
             "fda_category": "B",
@@ -2455,7 +2562,23 @@ HEMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Thromboembolism (DVT, PE, cardiovascular events)", "Hypertension"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hemoglobin - CRITICAL (target 10-11.5 g/dL, avoid >12 g/dL)", "Blood pressure - CRITICAL (hypertension common)", "Ferritin, TSAT (iron stores)", "Signs of thrombosis (chest pain, dyspnea, leg pain/swelling)"]
+        },
+        "guideline_tags": [
+            "KDIGO Guidelines - Anemia in CKD",
+            "ASCO/ASH Guidelines - ESA Use in Cancer",
+            "FDA Black Box Warning - Epoetin alfa and Thrombosis/Cardiovascular Events",
+            "FDA Black Box Warning - Epoetin alfa and Hypertension"
+        ]
     },
     
     "Filgrastim": {
@@ -2517,7 +2640,23 @@ HEMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Splenic rupture (rare)", "ARDS (rare)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC (ANC) - CRITICAL (frequent during treatment)", "Spleen size (left upper quadrant pain, ultrasound if suspected)", "Signs of infection", "Respiratory symptoms (dyspnea, cough, pulmonary infiltrates - ARDS risk)"]
+        },
+        "guideline_tags": [
+            "ASCO Guidelines - G-CSF Use",
+            "FDA Drug Information - Filgrastim",
+            "NCCN Guidelines - Myeloid Growth Factors",
+            "UpToDate - Filgrastim Drug Information"
+        ]
     },
 
     "Emicizumab": {
@@ -3013,9 +3152,25 @@ HEMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in ITP"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Thrombosis (due to increased platelet count) - CRITICAL", "Bone marrow fibrosis (with long-term use) - CRITICAL", "Myeloproliferative disorders (with long-term use)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Platelet count - CRITICAL (frequently when starting, then periodically)", "Signs of thrombosis (chest pain, dyspnea, leg pain, leg swelling) - CRITICAL (due to increased platelet count)", "Signs of bone marrow fibrosis (with long-term use) - CRITICAL", "Signs of myeloproliferative disorders (with long-term use)", "Injection site reactions"]
+        },
+        "guideline_tags": [
+            "ASH Guidelines - Immune Thrombocytopenia",
+            "FDA Black Box Warning - Romiplostim and Thrombosis",
+            "FDA Black Box Warning - Romiplostim and Bone Marrow Fibrosis",
+            "FDA Drug Information - Romiplostim"
+        ]
     },
-
+    
     "Idarucizumab": {
         "group": "Hematology - DOAC Reversal Agent (Dabigatran)",
         "vietnamese_name": "Idarucizumab, Praxbind",

@@ -93,6 +93,17 @@ INFLUENZA_ANTIVIRALS = {
                 "Trẻ em <1 tuổi - không khuyến cáo"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng oseltamivir hoặc các thành phần khác"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều nghiêm ngặt",
+                "Có thai - category C, thận trọng",
+                "Trẻ em <1 tuổi - không khuyến cáo"
+            ]
+        },
+        "black_box_warnings": None,
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Oseltamivir là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Cúm trong thai kỳ có thể gây biến chứng nghiêm trọng (viêm phổi, suy hô hấp, tử vong). Oseltamivir được khuyến cáo để điều trị cúm trong thai kỳ nếu có chỉ định.",
@@ -499,7 +510,24 @@ INFLUENZA_ANTIVIRALS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, WHO/NIH guidelines, và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity (ALT, AST elevation - common) - CRITICAL", "Infusion reactions (anaphylaxis, anaphylactic shock) - CRITICAL"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hepatic function (ALT, AST) - CRITICAL (baseline and every 2-3 days)", "Renal function (creatinine, eGFR) - CRITICAL (baseline and periodically)", "Infusion reactions (anaphylaxis, anaphylactic shock) - CRITICAL (during and after infusion)", "Vital signs (blood pressure, heart rate) - during and after infusion", "COVID-19 symptoms - assess treatment response", "Viral load (if available) - monitor treatment response"]
+        },
+        "guideline_tags": [
+            "WHO Guidelines - COVID-19 Treatment",
+            "NIH Guidelines - COVID-19 Treatment",
+            "FDA Black Box Warning - Remdesivir and Infusion Reactions",
+            "FDA Black Box Warning - Remdesivir and Hepatotoxicity",
+            "FDA Drug Information - Remdesivir"
+        ]
     },
 
     "Favipiravir": {
@@ -605,6 +633,25 @@ INFLUENZA_ANTIVIRALS = {
                 "CrCl <30 ml/phút (dữ liệu hạn chế)"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Có thai hoặc dự định mang thai",
+                "Cho con bú",
+                "Dị ứng với favipiravir",
+                "ALT/AST >5x ULN"
+            ],
+            "tương_đối": [
+                "Tăng acid uric/gút không kiểm soát",
+                "Suy gan vừa-nặng",
+                "Phối hợp thuốc kéo dài QT",
+                "CrCl <30 ml/phút (dữ liệu hạn chế)"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
         "pregnancy_lactation": {
             "fda_category": "X",
             "pregnancy_details": "Chống chỉ định tuyệt đối do gây quái thai trên động vật và cảnh báo của nhà sản xuất. Cả nam và nữ phải tránh thai hiệu quả trong điều trị và 7 ngày sau liều cuối.",
@@ -636,7 +683,6 @@ INFLUENZA_ANTIVIRALS = {
             ],
             "monitoring": "ECG, men gan, acid uric, triệu chứng lâm sàng"
         },
-        "reversal_agents": None,
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống sau ăn để giảm kích ứng tiêu hóa",
@@ -653,7 +699,23 @@ INFLUENZA_ANTIVIRALS = {
             ],
             "last_updated": "2025-02-17",
             "evidence_level": "B - Dữ liệu cấp phép tại Nhật và nghiên cứu quan sát; sử dụng off-label cần cân nhắc lợi ích/nguy cơ"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Teratogenicity (category X) - CRITICAL", "Hepatotoxicity", "Hyperuricemia/gout attacks", "QT prolongation (rare)"],
+            "qt_prolongation": True,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hepatic function (ALT, AST) - CRITICAL (before and every 2-3 days)", "Uric acid levels - CRITICAL (gout risk)", "ECG if co-administered with QT-prolonging drugs", "Pregnancy test (women) and contraception counseling (both sexes) - CRITICAL", "CBC if used >5-10 days"]
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Influenza Antiviral Treatment",
+            "FDA Black Box Warning - Favipiravir and Teratogenicity",
+            "FDA Black Box Warning - Favipiravir and Pregnancy (Category X)",
+            "IDSA Guidelines - Influenza Treatment"
+        ]
     }
 
 }

@@ -283,6 +283,22 @@ POLYENES_DRUGS = {
                 "Thiếu máu nặng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng amphotericin B (phản ứng nghiêm trọng)"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (cân nhắc lợi ích/nguy cơ, có thể dùng liposomal - AmBisome)",
+                "Suy gan nặng (hiếm độc tính gan)",
+                "Rối loạn điện giải nặng (hạ kali, hạ magie)",
+                "Thiếu máu nặng"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: bù điện giải, điều chỉnh chức năng thận."
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Amphotericin B được coi là tương đối an toàn trong thai kỳ. Đã được sử dụng trong thai kỳ cho nhiễm nấm hệ thống nặng. Cân nhắc lợi ích/nguy cơ. Lựa chọn đầu tay cho nhiễm nấm hệ thống nặng trong thai kỳ.",

@@ -49,7 +49,12 @@ VITAMIN_B12S_DRUGS = {
         'Gắn với transcobalamin', 'clearance':
         'Dự trữ trong gan, thải trừ qua mật và nước tiểu'}, 'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng, tránh nhiệt độ cao',
-        'black_box_warnings': None, 'drug_interactions': {'major': [],
+        'black_box_warnings': None, 'contraindications_detail': {
+        'tuyệt_đối': ['Dị ứng vitamin B12 hoặc cobalt',
+        "Leber's disease (thoái hóa thần kinh thị giác di truyền) - B12 có thể làm nặng bệnh"
+        ], 'tương_đối': [
+        'Thiếu B12 do thiếu intrinsic factor (pernicious anemia) - cần dùng IM, không dùng PO'
+        , 'Thiếu hấp thu ở ruột - cần dùng IM, không dùng PO']}, 'drug_interactions': {'major': [],
         'moderate': [{'drug': 'Metformin', 'mechanism':
         'Metformin dùng lâu dài có thể giảm hấp thu vitamin B12 ở ruột, dẫn đến thiếu B12.'
         , 'effect': 'Giảm nồng độ B12, tăng nguy cơ thiếu B12', 'management':

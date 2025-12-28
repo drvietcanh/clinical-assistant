@@ -54,6 +54,11 @@ ANTISPASMODICS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15–30°C), tránh ẩm.",
         "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
         "drug_interactions_detail": {
             "major": [],
             "moderate": [],
@@ -159,6 +164,18 @@ ANTISPASMODICS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm, tránh ánh sáng.",
         "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc ức chế thần kinh trung ương",
+                    "mechanism": "Tác dụng cộng dồn an thần",
+                    "effect": "Tăng buồn ngủ, chóng mặt",
+                    "management": "Thận trọng khi phối hợp, đặc biệt khi lái xe/vận hành máy móc."
+                }
+            ],
+            "minor": [],
+        },
         "drug_interactions_detail": {
             "major": [],
             "moderate": [],
@@ -277,6 +294,24 @@ ANTISPASMODICS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm, tránh ánh sáng.",
         "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc kháng cholinergic khác (TCAs, kháng H1 thế hệ 1, antipsychotics cổ điển)",
+                    "mechanism": "Tác dụng cộng dồn kháng cholinergic",
+                    "effect": "Tăng nguy cơ bí tiểu, táo bón nặng, nhìn mờ, lú lẫn",
+                    "management": "Thận trọng, tránh phối hợp nếu có thể, đặc biệt ở người già.",
+                },
+                {
+                    "drug": "Thuốc tăng nhịp tim (β-agonists)",
+                    "mechanism": "Tác dụng cộng dồn tăng nhịp tim",
+                    "effect": "Tăng nhịp tim nhiều hơn",
+                    "management": "Thận trọng, theo dõi mạch."
+                }
+            ],
+            "minor": [],
+        },
         "drug_interactions_detail": {
             "major": [],
             "moderate": [

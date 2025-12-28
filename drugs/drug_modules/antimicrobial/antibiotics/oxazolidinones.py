@@ -143,6 +143,22 @@ OXAZOLIDINONE_ANTIBIOTICS = {
                 "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng linezolid",
+                "Dùng với MAO inhibitors (phenelzine, tranylcypromine, selegiline) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI, tăng nguy cơ hội chứng serotonin nghiêm trọng, có thể tử vong",
+                "Dùng với pimozide, buspirone - tăng nguy cơ hội chứng serotonin"
+            ],
+            "tương_đối": [
+                "Dùng với SSRI/SNRI - tăng nguy cơ hội chứng serotonin, TRÁNH DÙNG nếu có thể",
+                "Dùng với tramadol - tăng nguy cơ hội chứng serotonin",
+                "Dùng >28 ngày - tăng nguy cơ độc tính (giảm tiểu cầu, viêm dây thần kinh)",
+                "Bệnh nhân có tiền sử giảm tiểu cầu - tăng nguy cơ",
+                "Bệnh nhân có tiền sử viêm dây thần kinh - tăng nguy cơ",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Linezolid phân loại C - thận trọng trong thai kỳ. Các nghiên cứu trên động vật cho thấy một số nguy cơ. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong nhiễm trùng nặng do VRE hoặc MRSA. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết.",

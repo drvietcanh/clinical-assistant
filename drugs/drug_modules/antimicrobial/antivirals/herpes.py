@@ -195,7 +195,23 @@ HERPES_ANTIVIRALS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Nephrotoxicity (IV, especially with high doses)", "Neurotoxicity (IV, rare)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Renal function (CrCl, creatinine, BUN) - CRITICAL for IV", "Signs of neurotoxicity (confusion, seizures) with IV", "IV site for phlebitis"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Herpes Simplex Virus Infections",
+            "IDSA Guidelines - Varicella-Zoster Virus Infections",
+            "FDA Drug Safety Communication - Acyclovir and Renal Toxicity",
+            "UpToDate - Acyclovir Drug Information"
+        ]
     },
 
     "Valacyclovir": {

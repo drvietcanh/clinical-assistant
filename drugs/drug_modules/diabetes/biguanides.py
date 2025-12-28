@@ -118,13 +118,30 @@ BIGUANIDES_DRUGS = {
         'unit': 'VND',
         'range': '2,000 - 10,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Metformin generic thường rẻ hơn (2,000-5,000 VND/viên 500mg).'
-    }, 'references': {'primary_sources': [
+    },         'references': {'primary_sources': [
         'FDA Drug Label - Glucophage (metformin)',
         'UpToDate - Metformin: Drug information',
         'UK Prospective Diabetes Study (UKPDS)',
         'American Diabetes Association guidelines',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
         'last_updated': '2024-12-19', 'evidence_level':
-        'High - Multiple large RCTs (UKPDS) and extensive clinical experience'}}}
+        'High - Multiple large RCTs (UKPDS) and extensive clinical experience'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Lactic acidosis (rare but serious)', 'Renal toxicity (contraindicated if CrCl <30)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': True,
+            'requires_monitoring': ['Renal function (CrCl, eGFR)', 'Lactate levels if symptoms', 'Vitamin B12 (long-term use)']
+        },
+        'guideline_tags': [
+            'ADA Diabetes Guidelines',
+            'AACE/ACE Diabetes Guidelines',
+            'EASD Guidelines',
+            'UKPDS Study',
+            'FDA Drug Safety Communication - Metformin and Contrast Media'
+        ]}}
 
 __all__ = ['BIGUANIDES_DRUGS']

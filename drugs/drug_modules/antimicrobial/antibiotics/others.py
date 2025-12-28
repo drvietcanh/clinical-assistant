@@ -99,6 +99,17 @@ OTHER_ANTIBIOTICS = {
                 "Suy thận (CrCl 10-30) - giảm liều IV"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng fosfomycin"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <10) - tránh dùng IV",
+                "Trẻ em <12 tuổi - PO (dạng hạt không dùng được)",
+                "Suy thận (CrCl 10-30) - giảm liều IV"
+            ]
+        },
+        "black_box_warnings": None,
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Fosfomycin là thuốc phân loại B. Không có bằng chứng về nguy cơ dị tật thai nhi trong các nghiên cứu trên động vật. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Được sử dụng trong thai kỳ để điều trị UTI và có vẻ an toàn. UTI trong thai kỳ có thể gây nguy hiểm cho cả mẹ và thai nhi nếu không điều trị.",
@@ -474,6 +485,15 @@ OTHER_ANTIBIOTICS = {
                 "Có thai - thận trọng (phân loại B, nhưng dữ liệu còn hạn chế)"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng fidaxomicin"
+            ],
+            "tương_đối": [
+                "Trẻ em <18 tuổi - chưa có dữ liệu an toàn",
+                "Có thai - thận trọng (phân loại B, nhưng dữ liệu còn hạn chế)"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Fidaxomicin là thuốc phân loại B. Không có bằng chứng về nguy cơ dị tật thai nhi trong các nghiên cứu trên động vật. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh rõ ràng, nhưng dữ liệu còn hạn chế. Fidaxomicin không hấp thu vào máu (chỉ tác dụng tại ruột), nên ít có khả năng ảnh hưởng đến thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong điều trị C. diff nặng. C. diff trong thai kỳ có thể gây nguy hiểm cho cả mẹ và thai nhi nếu không điều trị.",
@@ -559,6 +579,17 @@ OTHER_ANTIBIOTICS = {
             "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)",
             "Phụ nữ đang cho con bú - thận trọng"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng eravacycline hoặc tetracycline",
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)"
+            ],
+            "tương_đối": [
+                "Trẻ em <18 tuổi - chưa được nghiên cứu",
+                "Phụ nữ đang cho con bú - thận trọng"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "dosage": {
             "adult_standard": "1mg/kg IV mỗi 12 giờ trong 4-14 ngày",
             "adult_ciai": "1mg/kg IV mỗi 12 giờ trong 4-14 ngày",
@@ -676,7 +707,7 @@ OTHER_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST) trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {"available": False, "agents": []},
         "administration_instructions": {
             "oral": None,
             "iv": {
@@ -843,7 +874,7 @@ OTHER_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST) trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {"available": False, "agents": []},
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống khi đói (4 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu",

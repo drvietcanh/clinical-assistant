@@ -1,0 +1,32 @@
+====================================================================================================
+DANH SÁCH LỖI CẦN SỬA THEO MỨC ĐỘ ƯU TIÊN
+====================================================================================================
+
+
+HIGH - Sai kiểu dữ liệu (5 lỗi):
+----------------------------------------------------------------------------------------------------
+  • Enalapril: ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+  • Lisinopril: ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+  • Losartan: ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+  • Spironolactone: ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+  • Metformin: ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+
+HIGH - Cấu trúc sai (10 lỗi):
+----------------------------------------------------------------------------------------------------
+  • Alirocumab: ❌ overdose_management phải là dictionary
+  • Alirocumab: ❌ administration_instructions phải là dictionary
+  • Evolocumab: ❌ overdose_management phải là dictionary
+  • Evolocumab: ❌ administration_instructions phải là dictionary
+  • Inclisiran: ❌ overdose_management phải là dictionary
+  • Inclisiran: ❌ administration_instructions phải là dictionary
+  • Vonoprazan: ❌ overdose_management phải là dictionary
+  • Vonoprazan: ❌ administration_instructions phải là dictionary
+  • Tegoprazan: ❌ overdose_management phải là dictionary
+  • Tegoprazan: ❌ administration_instructions phải là dictionary
+
+MEDIUM - Field rỗng (4 lỗi):
+----------------------------------------------------------------------------------------------------
+  • Amlodipine/Olmesartan: ⚠️  Field rỗng: interactions
+  • Abaloparatide: ⚠️  Field rỗng: interactions
+  • Romosozumab: ⚠️  Field rỗng: interactions
+  • Calcitonin: ⚠️  Field rỗng: interactions

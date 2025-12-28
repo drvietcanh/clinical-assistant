@@ -1,0 +1,105 @@
+{
+  "renal_dosing": {
+    "Adrenaline": {
+      "adjustment_needed": false,
+      "notes": "Không cần điều chỉnh liều khi suy thận",
+      "reason": "Chuyển hóa chủ yếu ở gan và mô, không phụ thuộc thận"
+    },
+    "Noradrenaline": {
+      "adjustment_needed": false,
+      "notes": "Không cần điều chỉnh liều khi suy thận",
+      "reason": "Chuyển hóa chủ yếu ở gan và mô"
+    },
+    "Dopamine": {
+      "adjustment_needed": true,
+      "egfr_threshold": 30,
+      "adjustment": {
+        "egfr_30_50": {
+          "multiplier": 0.75,
+          "notes": "Giảm 25% liều khi eGFR 30-50 ml/min/1.73m²"
+        },
+        "egfr_15_30": {
+          "multiplier": 0.5,
+          "notes": "Giảm 50% liều khi eGFR 15-30 ml/min/1.73m²"
+        },
+        "egfr_below_15": {
+          "multiplier": 0.25,
+          "notes": "Giảm 75% liều khi eGFR < 15 ml/min/1.73m² hoặc dialysis"
+        }
+      },
+      "notes": "Cần điều chỉnh liều khi suy thận nặng"
+    },
+    "Dobutamine": {
+      "adjustment_needed": false,
+      "notes": "Không cần điều chỉnh liều khi suy thận",
+      "reason": "Chuyển hóa chủ yếu ở gan"
+    },
+    "Vasopressin": {
+      "adjustment_needed": false,
+      "notes": "Không cần điều chỉnh liều khi suy thận",
+      "reason": "Chuyển hóa chủ yếu ở gan"
+    },
+    "Milrinone": {
+      "adjustment_needed": true,
+      "egfr_threshold": 50,
+      "adjustment": {
+        "egfr_30_50": {
+          "multiplier": 0.75,
+          "notes": "Giảm 25% liều khi eGFR 30-50 ml/min/1.73m²"
+        },
+        "egfr_15_30": {
+          "multiplier": 0.5,
+          "notes": "Giảm 50% liều khi eGFR 15-30 ml/min/1.73m²"
+        },
+        "egfr_below_15": {
+          "multiplier": 0.25,
+          "notes": "Giảm 75% liều khi eGFR < 15 ml/min/1.73m² hoặc dialysis"
+        }
+      },
+      "notes": "Cần điều chỉnh liều khi suy thận, đặc biệt là suy thận nặng"
+    },
+    "Nitroglycerin": {
+      "adjustment_needed": false,
+      "notes": "Không cần điều chỉnh liều khi suy thận",
+      "reason": "Chuyển hóa chủ yếu ở gan"
+    }
+  },
+  "egfr_categories": {
+    "normal": {
+      "range": "≥ 90",
+      "description": "Chức năng thận bình thường",
+      "adjustment": "Không cần điều chỉnh"
+    },
+    "mild": {
+      "range": "60-89",
+      "description": "Suy thận nhẹ",
+      "adjustment": "Hầu hết thuốc không cần điều chỉnh"
+    },
+    "moderate": {
+      "range": "30-59",
+      "description": "Suy thận trung bình",
+      "adjustment": "Một số thuốc cần giảm liều"
+    },
+    "severe": {
+      "range": "15-29",
+      "description": "Suy thận nặng",
+      "adjustment": "Nhiều thuốc cần giảm liều đáng kể"
+    },
+    "kidney_failure": {
+      "range": "< 15",
+      "description": "Suy thận giai đoạn cuối",
+      "adjustment": "Cần giảm liều mạnh hoặc tránh dùng"
+    },
+    "dialysis": {
+      "range": "Dialysis",
+      "description": "Đang lọc máu",
+      "adjustment": "Cần điều chỉnh liều đặc biệt"
+    }
+  },
+  "notes": {
+    "general": "Điều chỉnh liều dựa trên eGFR hoặc CrCl. Một số thuốc không cần điều chỉnh vì chuyển hóa chủ yếu ở gan.",
+    "monitoring": "Theo dõi sát chức năng thận và tác dụng phụ khi dùng thuốc ở bệnh nhân suy thận.",
+    "dialysis": "Bệnh nhân đang lọc máu cần điều chỉnh liều đặc biệt, có thể cần bổ sung liều sau lọc máu."
+  }
+}
+

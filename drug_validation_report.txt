@@ -1,0 +1,262 @@
+BÁO CÁO KIỂM TRA DỮ LIỆU THUỐC
+====================================================================================================
+
+Tổng số thuốc: 666
+Thuốc hoàn chỉnh: 160
+Thuốc chưa hoàn chỉnh: 506
+Tổng số lỗi: 19
+Tổng số cảnh báo: 971
+
+HOÀN THÀNH CÁC ENHANCED FIELDS:
+  mechanism_of_action: 666/666 (100.0%)
+  monitoring: 666/666 (100.0%)
+  precautions: 666/666 (100.0%)
+  pharmacokinetics: 666/666 (100.0%)
+  storage: 666/666 (100.0%)
+  black_box_warnings: 528/666 (79.3%)
+  drug_interactions: 634/666 (95.2%)
+  contraindications_detail: 320/666 (48.0%)
+  pregnancy_lactation: 637/666 (95.6%)
+  hepatic_adjustment: 633/666 (95.0%)
+  renal_adjustment: 623/666 (93.5%)
+  overdose_management: 637/666 (95.6%)
+  reversal_agents: 491/666 (73.7%)
+  administration_instructions: 637/666 (95.6%)
+
+THUỐC CÓ LỖI (14):
+
+  Abaloparatide:
+    ⚠️  Field rỗng: interactions
+
+  Alirocumab:
+    ❌ overdose_management phải là dictionary
+    ❌ administration_instructions phải là dictionary
+
+  Amlodipine/Olmesartan:
+    ⚠️  Field rỗng: interactions
+
+  Calcitonin:
+    ⚠️  Field rỗng: interactions
+
+  Enalapril:
+    ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+
+  Evolocumab:
+    ❌ overdose_management phải là dictionary
+    ❌ administration_instructions phải là dictionary
+
+  Inclisiran:
+    ❌ overdose_management phải là dictionary
+    ❌ administration_instructions phải là dictionary
+
+  Lisinopril:
+    ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+
+  Losartan:
+    ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+
+  Metformin:
+    ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+
+  Romosozumab:
+    ⚠️  Field rỗng: interactions
+
+  Spironolactone:
+    ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+
+  Tegoprazan:
+    ❌ overdose_management phải là dictionary
+    ❌ administration_instructions phải là dictionary
+
+  Vonoprazan:
+    ❌ overdose_management phải là dictionary
+    ❌ administration_instructions phải là dictionary
+
+THUỐC CÓ CẢNH BÁO (526):
+
+  5-Fluorouracil:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Abaloparatide:
+    ⚠️  Enhanced field rỗng: reversal_agents
+
+  Abiraterone:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Acarbose:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+
+  Acebutolol:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Aclidinium:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Acyclovir:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Enhanced field rỗng: reversal_agents
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Acyclovir eye drops:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Enhanced field rỗng: reversal_agents
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Acyclovir eye ointment:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Enhanced field rỗng: reversal_agents
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Adalimumab:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Adenosine:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+
+  Albendazole:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Alemtuzumab:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Alendronate:
+    ⚠️  Enhanced field rỗng: reversal_agents
+
+  Alfuzosin:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Enhanced field rỗng: reversal_agents
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Alirocumab:
+    ⚠️  pregnancy_lactation thiếu fda_category
+
+  Allopurinol:
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Alogliptin:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Alteplase:
+    ⚠️  Thiếu enhanced field: drug_interactions
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Thiếu enhanced field: pregnancy_lactation
+    ⚠️  Thiếu enhanced field: hepatic_adjustment
+    ⚠️  Thiếu enhanced field: renal_adjustment
+
+  Aluminum hydroxide/Magnesium hydroxide:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+
+  Amikacin:
+    ⚠️  Enhanced field rỗng: reversal_agents
+
+  Amlodipine/Olmesartan:
+    ⚠️  Enhanced field rỗng: reversal_agents
+
+  Amlodipine/Valsartan:
+    ⚠️  Enhanced field rỗng: reversal_agents
+
+  Amoxicillin suspension:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+
+  Amphotericin B:
+    ⚠️  Enhanced field rỗng: reversal_agents
+
+  Anastrozole:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Andexanet alfa:
+    ⚠️  Enhanced field rỗng: reversal_agents
+
+  Anidulafungin:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Enhanced field rỗng: reversal_agents
+
+  Anifrolumab:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Aripiprazole:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Artemether-lumefantrine:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Artesunate:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Artificial tears (Carboxymethylcellulose):
+    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Enhanced field rỗng: reversal_agents
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Aspirin:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Aspirin/Carisoprodol:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Atazanavir (boosted with ritonavir/cobicistat):
+    ⚠️  Enhanced field rỗng: black_box_warnings
+
+  Atenolol:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Atezolizumab:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Atropine:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+
+  Atropine eye drops:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Avanafil:
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Azathioprine:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Azelaic acid topical:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Enhanced field rỗng: reversal_agents
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Azelastine eye drops:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Enhanced field rỗng: reversal_agents
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Azilsartan medoxomil:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Aztreonam:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+
+  Baclofen:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Baricitinib:
+    ⚠️  Thiếu enhanced field: drug_interactions
+
+  Beclomethasone inhaled:
+    ⚠️  Enhanced field rỗng: black_box_warnings
+
+  Bedaquiline:
+    ⚠️  Enhanced field rỗng: reversal_agents

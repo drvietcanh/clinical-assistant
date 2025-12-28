@@ -188,7 +188,25 @@ METHYLXANTHINES_DRUGS = {
             ],
             "monitoring": "Nồng độ theophylline trong máu mỗi 2-4 giờ cho đến khi <20 mcg/mL. Dấu hiệu sinh tồn, nhịp tim, dấu hiệu thần kinh (co giật) trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng theophylline hoặc methylxanthines (caffeine, theobromine)",
+                "Rối loạn nhịp tim nặng (rung nhĩ, rung thất)",
+                "Động kinh không kiểm soát",
+                "Loét dạ dày tá tràng hoạt động"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - giảm clearance, tăng nguy cơ độc tính",
+                "Suy thận nặng - giảm clearance nhẹ",
+                "Suy tim - giảm clearance",
+                "Sốt cao - có thể giảm clearance",
+                "Trẻ sơ sinh - clearance chậm, half-life dài",
+                "Người già - clearance giảm",
+                "Hút thuốc - tăng clearance, cần tăng liều",
+                "Dùng với ciprofloxacin, erythromycin, cimetidine - tăng nồng độ"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị quá liều theophylline chủ yếu là hỗ trợ và thanh lọc máu (hemodialysis, hemoperfusion) ở nồng độ cao (>40 mcg/mL)."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không có thức ăn. Tránh thức ăn giàu chất béo (có thể tăng hấp thu).",
@@ -343,7 +361,24 @@ METHYLXANTHINES_DRUGS = {
             ],
             "monitoring": "Nồng độ theophylline, dấu hiệu sinh tồn, dấu hiệu thần kinh"
         },
-        "reversal_agents": None,
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng theophylline hoặc ethylenediamine",
+                "Rối loạn nhịp tim nặng (rung nhĩ, rung thất)",
+                "Động kinh không kiểm soát",
+                "Loét dạ dày tá tràng hoạt động"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - giảm clearance, tăng nguy cơ độc tính",
+                "Suy thận nặng - giảm clearance nhẹ",
+                "Suy tim - giảm clearance",
+                "Sốt cao - có thể giảm clearance",
+                "Trẻ sơ sinh - clearance chậm, half-life dài",
+                "Người già - clearance giảm",
+                "Dùng với ciprofloxacin, erythromycin, cimetidine - tăng nồng độ"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị quá liều aminophylline chủ yếu là hỗ trợ và thanh lọc máu (hemodialysis, hemoperfusion) ở nồng độ cao (>40 mcg/mL theophylline)."},
         "administration_instructions": {
             "oral": {
                 "with_food": "N/A - Chỉ có dạng IV",

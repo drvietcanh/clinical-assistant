@@ -8,6 +8,7 @@ from utils.page_helper import setup_page, render_standard_footer
 from config.protocol_routing import render_protocol_by_name
 from components.protocols_sidebar import render_protocols_sidebar
 from components.protocols_article_link import render_article_link
+from components.score_links_from_content import render_score_links_from_protocol
 
 # Standard page setup with mobile optimizations
 setup_page(
@@ -56,9 +57,10 @@ st.info(info_text)
 st.markdown("---")
 
 # render_article_link is now imported from components.protocols_article_link
+# render_score_links_from_protocol is now imported from components.score_links_from_content
 
 # Route to appropriate protocol using dictionary-based routing
-protocol_rendered = render_protocol_by_name(protocol, render_article_link)
+protocol_rendered = render_protocol_by_name(protocol, render_article_link, render_score_links_from_protocol)
 
 if not protocol_rendered:
     # Default case: Protocol not found

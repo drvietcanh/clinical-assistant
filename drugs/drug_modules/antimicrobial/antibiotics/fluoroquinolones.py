@@ -44,6 +44,20 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
             "Có thai",
             "QT kéo dài hoặc rối loạn nhịp tim nặng"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng fluoroquinolone",
+                "Trẻ em <18 tuổi (trừ chỉ định đặc biệt)",
+                "Có thai",
+                "QT kéo dài hoặc rối loạn nhịp tim nặng"
+            ],
+            "tương_đối": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay ciprofloxacin, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa, theo dõi ECG nếu có nguy cơ QT kéo dài, theo dõi đường huyết, theo dõi triệu chứng thần kinh, lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
+        },
         "dosage": {
             "adult_uti_uncomplicated": "250mg PO mỗi 12 giờ x 3 ngày",
             "adult_uti_complicated": "500mg PO mỗi 12 giờ x 7-14 ngày",
@@ -334,6 +348,24 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
             "Hoạt động thể lực nặng - tăng nguy cơ đứt gân"
         ]
     },
+    "contraindications_detail": {
+        "tuyệt_đối": [
+            "Dị ứng levofloxacin hoặc các fluoroquinolone khác",
+            "Có thai - chống chỉ định tuyệt đối, nguy cơ tổn thương sụn thai nhi",
+            "Trẻ em < 18 tuổi (trừ trường hợp đặc biệt) - nguy cơ tổn thương sụn, viêm khớp",
+            "QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ loạn nhịp tim nghiêm trọng"
+        ],
+        "tương_đối": [
+            "Bệnh nhân > 60 tuổi - tăng nguy cơ đứt gân, viêm gân",
+            "Dùng corticosteroid - tăng nguy cơ đứt gân",
+            "Ghép cơ quan - tăng nguy cơ đứt gân",
+            "Tiền sử co giật - tăng nguy cơ co giật",
+            "Suy thận nặng (CrCl <30) - giảm liều đáng kể",
+            "Dùng với warfarin - tăng nguy cơ chảy máu",
+            "Hoạt động thể lực nặng - tăng nguy cơ đứt gân"
+        ]
+    },
+    "reversal_agents": {"available": False, "agents": []},
     "pregnancy_lactation": {
         "fda_category": "C",
         "pregnancy_details": "Levofloxacin là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể gây tổn thương sụn ở khớp ở thai nhi. Có báo cáo về tổn thương sụn ở trẻ em khi dùng trong thai kỳ. CHỐNG CHỈ ĐỊNH trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn khác. Nhiễm trùng nặng có thể gây nguy hiểm cho thai nhi, nhưng nên dùng kháng sinh khác nếu có thể.",
@@ -406,7 +438,7 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
         "range": "10,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)",
         "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Levofloxacin generic thường rẻ hơn (10,000-30,000 VND/viên 500mg). Tavanic (brand) thường đắt hơn (30,000-50,000 VND/viên 500mg). Dạng IV: 80,000-150,000 VND/lọ 500mg."
     },
-        "references": {
+    "references": {
         "primary_sources": [
             "FDA Drug Label - Levofloxacin (Tavanic)",
             "UpToDate - Levofloxacin: Drug Information",
@@ -577,6 +609,26 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
                 "Hoạt động thể lực nặng - tăng nguy cơ đứt gân"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng moxifloxacin hoặc các fluoroquinolone khác",
+                "Có thai - chống chỉ định tuyệt đối, nguy cơ tổn thương sụn thai nhi",
+                "Trẻ em < 18 tuổi (trừ trường hợp đặc biệt) - nguy cơ tổn thương sụn, viêm khớp",
+                "QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ loạn nhịp tim nghiêm trọng",
+                "Dùng với thuốc kéo dài QT - chống chỉ định tuyệt đối"
+            ],
+            "tương_đối": [
+                "Bệnh nhân > 60 tuổi - tăng nguy cơ đứt gân, viêm gân, QT kéo dài",
+                "Dùng corticosteroid - tăng nguy cơ đứt gân",
+                "Ghép cơ quan - tăng nguy cơ đứt gân",
+                "Tiền sử co giật - tăng nguy cơ co giật",
+                "Suy tim - tăng nguy cơ QT kéo dài, rối loạn nhịp tim",
+                "Suy gan nặng - có thể tích lũy (thải qua gan)",
+                "Dùng với warfarin - tăng nguy cơ chảy máu",
+                "Hoạt động thể lực nặng - tăng nguy cơ đứt gân"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Moxifloxacin là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể gây tổn thương sụn ở khớp ở thai nhi. Có báo cáo về tổn thương sụn ở trẻ em khi dùng trong thai kỳ. CHỐNG CHỈ ĐỊNH trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn khác. Nhiễm trùng nặng có thể gây nguy hiểm cho thai nhi, nhưng nên dùng kháng sinh khác nếu có thể.",
@@ -614,7 +666,7 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, ECG (QT interval) liên tục, dấu hiệu thần kinh, dấu hiệu gân, đường huyết trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (loạn nhịp, co giật, đứt gân)."
         },
-        "reversal_agents": None,
+        "reversal_agents": {"available": False, "agents": []},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ (ít nhất 1-2 ly nước) để tránh kết tinh trong nước tiểu.",

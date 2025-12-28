@@ -132,6 +132,20 @@ MACROLIDE_ANTIBIOTICS = {
                 "Dùng với digoxin - tăng độc tính digoxin"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng azithromycin hoặc macrolide",
+                "QT kéo dài hoặc rối loạn nhịp tim nặng",
+                "Dùng với thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy tim - tăng nguy cơ QT kéo dài",
+                "Bệnh nhân >60 tuổi - tăng nguy cơ QT kéo dài",
+                "Dùng với warfarin - tăng nguy cơ chảy máu",
+                "Dùng với digoxin - tăng độc tính digoxin"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Azithromycin là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Được sử dụng trong thai kỳ để điều trị chlamydia và các nhiễm trùng khác.",
@@ -170,7 +184,7 @@ MACROLIDE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi ECG (QT interval), dấu hiệu sinh tồn, điện giải (K+, Mg2+) trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {"available": False, "agents": []},
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu. Có thể uống với thức ăn nếu kích ứng dạ dày nhưng giảm hấp thu.",
@@ -357,6 +371,21 @@ MACROLIDE_ANTIBIOTICS = {
                 "Dùng với các thuốc chuyển hóa qua CYP3A4 - tăng nồng độ"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng clarithromycin hoặc macrolide",
+                "Dùng với cisapride, pimozide, terfenadine - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
+                "QT kéo dài hoặc rối loạn nhịp tim nặng",
+                "Dùng với thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - giảm liều",
+                "Suy gan nặng - thận trọng",
+                "Dùng với warfarin - tăng nguy cơ chảy máu",
+                "Dùng với statins - tăng nguy cơ tiêu cơ vân",
+                "Dùng với các thuốc chuyển hóa qua CYP3A4 - tăng nồng độ"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Clarithromycin là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy một số nguy cơ. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ.",
@@ -393,7 +422,7 @@ MACROLIDE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi ECG (QT interval), dấu hiệu sinh tồn trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {"available": False, "agents": []},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
@@ -577,6 +606,22 @@ MACROLIDE_ANTIBIOTICS = {
                 "Dùng với các thuốc chuyển hóa qua CYP3A4 - tăng nồng độ"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng erythromycin hoặc macrolide",
+                "Dùng với cisapride, pimozide, terfenadine - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
+                "QT kéo dài hoặc rối loạn nhịp tim nặng",
+                "Dùng với thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH",
+                "Suy gan nặng (với dạng estolate)"
+            ],
+            "tương_đối": [
+                "Suy gan - thận trọng, đặc biệt với dạng estolate",
+                "Dùng với warfarin - tăng nguy cơ chảy máu",
+                "Dùng với statins - tăng nguy cơ tiêu cơ vân",
+                "Dùng với các thuốc chuyển hóa qua CYP3A4 - tăng nồng độ"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Erythromycin là thuốc phân loại B. An toàn trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ.",
@@ -617,7 +662,7 @@ MACROLIDE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi ECG (QT interval), dấu hiệu sinh tồn, chức năng gan trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {"available": False, "agents": []},
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu. Dạng enteric-coated (eryc) có thể uống với thức ăn.",

@@ -140,14 +140,31 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
         'Tiêm bắp sâu. Có thể gây đau tại chỗ tiêm. Tác dụng bắt đầu 15-30 phút.'
         }, 'sc': {'notes':
         'Tiêm dưới da. Có thể gây kích ứng tại chỗ. Tác dụng bắt đầu 15-30 phút.'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Morphine sulfate',
         'UpToDate - Morphine: Drug information',
         'Lexicomp - Morphine monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-06', 'evidence_level':
         'High - FDA-approved, extensive clinical data, gold standard for severe pain'
-        }},
+        },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Respiratory depression (life-threatening)', 'Accumulation of active metabolite (morphine-6-glucuronide) in renal failure'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Respiratory rate and SpO2 - CRITICAL', 'Level of consciousness', 'Blood pressure', 'Renal function (CrCl) - accumulation risk']
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Opioid Addiction and Respiratory Depression',
+            'ISMP High Alert Medications - Opioids',
+            'WHO Guidelines - Cancer Pain Management',
+            'CDC Guidelines - Opioid Prescribing',
+            'ASHP Guidelines - Opioid Safety'
+        ]},
     
     "Fentanyl": {
         "group": "Analgesic - Opioid Agonist (Strong)",
@@ -373,7 +390,24 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA-approved, extensive clinical data, widely used in anesthesia and pain management"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Respiratory depression (life-threatening)", "Accumulation with transdermal patch (up to 24h after removal)", "Rigid chest syndrome (with high IV doses)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Respiratory rate and SpO2 - CRITICAL (especially with transdermal)", "Level of consciousness", "Blood pressure", "Signs of rigid chest (with IV high doses)"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Opioid Addiction and Respiratory Depression",
+            "FDA Drug Safety Communication - Fentanyl Transdermal Patch",
+            "ISMP High Alert Medications - Opioids",
+            "WHO Guidelines - Cancer Pain Management",
+            "CDC Guidelines - Opioid Prescribing"
+        ]
     },
     "Oxycodone": {
         "group": "Analgesic - Opioid Agonist (Strong)",
@@ -691,7 +725,24 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA-approved, extensive clinical data"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Respiratory depression (life-threatening)", "5x more potent than morphine - dose adjustment critical"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Respiratory rate and SpO2 - CRITICAL", "Level of consciousness", "Blood pressure"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Opioid Addiction and Respiratory Depression",
+            "ISMP High Alert Medications - Opioids",
+            "DEA Schedule II Controlled Substance",
+            "WHO Guidelines - Cancer Pain Management",
+            "CDC Guidelines - Opioid Prescribing"
+        ]
     },
 
     "Methadone": {
@@ -815,6 +866,30 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
                 "Dùng với thuốc kéo dài QT - tránh dùng chung",
                 "Người cao tuổi - giảm liều (tăng nhạy cảm, tăng nguy cơ tích lũy)"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng methadone hoặc opioid",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Suy hô hấp nặng",
+                "Dùng MAO inhibitor trong vòng 14 ngày",
+                "Tắc ruột cơ học",
+                "Tăng áp lực nội sọ"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - thận trọng, giảm liều",
+                "Suy gan nặng - thận trọng, giảm liều (chuyển hóa qua gan)",
+                "QT kéo dài - tránh dùng hoặc theo dõi ECG sát",
+                "Dùng với thuốc kéo dài QT - tránh dùng chung",
+                "Người cao tuổi - giảm liều (tăng nhạy cảm, tăng nguy cơ tích lũy)"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Methadone không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Methadone thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy, đặc biệt khi kết hợp với half-life dài. Giảm liều và theo dõi chặt chẽ ở suy thận."
         },
         "pregnancy_lactation": {
             "fda_category": "C",
@@ -990,6 +1065,28 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
                 "Suy gan nặng - thận trọng",
                 "Người cao tuổi - giảm liều"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng meperidine hoặc opioid",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Suy hô hấp nặng",
+                "Dùng MAO inhibitor trong vòng 14 ngày - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng - CHỐNG CHỈ ĐỊNH (tích lũy normeperidine)",
+                "Dùng lâu dài (>48 giờ) - CHỐNG CHỈ ĐỊNH (tích lũy normeperidine)"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng, tránh dùng",
+                "Suy gan nặng - thận trọng",
+                "Người cao tuổi - giảm liều"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "CHỐNG CHỈ ĐỊNH - tránh dùng (tích lũy normeperidine)",
+            "under_30": "CHỐNG CHỈ ĐỊNH - tránh dùng (tích lũy normeperidine → co giật)",
+            "dialysis": "CHỐNG CHỈ ĐỊNH - tránh dùng",
+            "notes": "CHỐNG CHỈ ĐỊNH ở suy thận. Meperidine chuyển hóa thành normeperidine (active metabolite) tích lũy ở suy thận và gây co giật. Dùng thuốc opioid khác (morphine, fentanyl) thay thế."
         },
         "pregnancy_lactation": {
             "fda_category": "C",

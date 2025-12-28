@@ -116,6 +116,29 @@ GOUT_MEDICATIONS_DRUGS = {
                 "Người cao tuổi - tăng nguy cơ độc tính"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng colchicine",
+                "Suy thận nặng (CrCl <30)",
+                "Suy gan nặng",
+                "Đang dùng strong CYP3A4 inhibitors",
+                "Đang dùng P-gp inhibitors mạnh",
+                "Có thai (category D)"
+            ],
+            "tương_đối": [
+                "Suy thận (CrCl 30-60) - giảm liều 50%",
+                "Suy gan nhẹ-trung bình - thận trọng",
+                "Đang dùng statins hoặc fibrates - tăng nguy cơ tiêu cơ vân",
+                "Người cao tuổi - tăng nguy cơ độc tính"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, giảm liều 50%",
+            "under_30": "CHỐNG CHỈ ĐỊNH hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ",
+            "dialysis": "CHỐNG CHỈ ĐỊNH hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ. Colchicine không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Colchicine thải trừ một phần qua thận. Suy thận làm tăng nguy cơ tích lũy và độc tính nghiêm trọng. Phạm vi điều trị hẹp, cần điều chỉnh liều chặt chẽ ở suy thận."
+        },
         "pregnancy_lactation": {
             "fda_category": "D",
             "pregnancy_details": "Chống chỉ định trong thai kỳ. Colchicine có thể gây dị tật thai nhi. Chỉ dùng trong trường hợp đe dọa tính mạng nếu không có lựa chọn thay thế.",
@@ -326,7 +349,23 @@ GOUT_MEDICATIONS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA-approved, ACR guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Uric acid kidney stones (if inadequate hydration)", "Hepatotoxicity (rare)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Uric acid levels (target <6 mg/dL)", "Renal function (creatinine, eGFR)", "Signs of kidney stones (back pain, abdominal pain, hematuria) - CRITICAL", "Penicillin/cephalosporin levels if co-administered", "Hepatic function (ALT, AST)"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Gout Management",
+            "EULAR Guidelines - Gout Management",
+            "FDA Drug Information - Probenecid",
+            "UpToDate - Gout Treatment"
+        ]
     },
     
     "Febuxostat": {
@@ -418,6 +457,24 @@ GOUT_MEDICATIONS_DRUGS = {
                 "Suy gan nặng - thận trọng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng febuxostat",
+                "Đang dùng azathioprine hoặc 6-mercaptopurine",
+                "Có thai (category C)"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch - cân nhắc dùng allopurinol thay vì febuxostat",
+                "Suy gan nặng - thận trọng"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều (khác với allopurinol)",
+            "under_30": "Không cần chỉnh liều (khác với allopurinol)",
+            "dialysis": "Không cần chỉnh liều. Febuxostat không được lọc sạch hiệu quả qua thẩm phân máu nhưng không cần điều chỉnh liều.",
+            "notes": "Febuxostat chuyển hóa chủ yếu qua gan (UGT), không cần điều chỉnh liều ở suy thận (khác với allopurinol)."
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Không có dữ liệu đầy đủ về an toàn trong thai kỳ.",
@@ -468,7 +525,24 @@ GOUT_MEDICATIONS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA-approved, large RCT (CARES trial), ACR guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Cardiovascular events (increased risk vs allopurinol)", "Hepatotoxicity", "Severe cutaneous adverse reactions (SJS/TEN)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Uric acid levels (target <6 mg/dL)", "Hepatic function (ALT, AST) - common elevation", "Cardiovascular symptoms (chest pain, dyspnea)", "Skin reactions (rare but can be SJS/TEN)", "Acute gout attacks (may occur at initiation)"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Gout Management",
+            "EULAR Guidelines - Gout Management",
+            "FDA Black Box Warning - Febuxostat and Cardiovascular Risk",
+            "FDA Black Box Warning - Febuxostat and Azathioprine/6-Mercaptopurine Interaction",
+            "CARES Trial - Cardiovascular Risk"
+        ]
     }
 }
 

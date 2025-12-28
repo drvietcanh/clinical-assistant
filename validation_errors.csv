@@ -1,0 +1,176 @@
+﻿Thuốc,Loại Lỗi,Mô Tả
+Abaloparatide,LỖI,⚠️  Field rỗng: interactions
+Alirocumab,LỖI,❌ overdose_management phải là dictionary
+Alirocumab,LỖI,❌ administration_instructions phải là dictionary
+Amlodipine/Olmesartan,LỖI,⚠️  Field rỗng: interactions
+Calcitonin,LỖI,⚠️  Field rỗng: interactions
+Enalapril,LỖI,"❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)"
+Evolocumab,LỖI,❌ overdose_management phải là dictionary
+Evolocumab,LỖI,❌ administration_instructions phải là dictionary
+Inclisiran,LỖI,❌ overdose_management phải là dictionary
+Inclisiran,LỖI,❌ administration_instructions phải là dictionary
+Lisinopril,LỖI,"❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)"
+Losartan,LỖI,"❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)"
+Metformin,LỖI,"❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)"
+Romosozumab,LỖI,⚠️  Field rỗng: interactions
+Spironolactone,LỖI,"❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)"
+Tegoprazan,LỖI,❌ overdose_management phải là dictionary
+Tegoprazan,LỖI,❌ administration_instructions phải là dictionary
+Vonoprazan,LỖI,❌ overdose_management phải là dictionary
+Vonoprazan,LỖI,❌ administration_instructions phải là dictionary
+5-Fluorouracil,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Abaloparatide,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Abiraterone,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Acarbose,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Acebutolol,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Aclidinium,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Acyclovir,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Acyclovir,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Acyclovir,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Acyclovir eye drops,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Acyclovir eye drops,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Acyclovir eye drops,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Acyclovir eye ointment,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Acyclovir eye ointment,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Acyclovir eye ointment,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Adalimumab,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Adalimumab,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Adenosine,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Albendazole,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Albendazole,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Alemtuzumab,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Alemtuzumab,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Alendronate,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Alfuzosin,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Alfuzosin,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Alfuzosin,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Alirocumab,CẢNH BÁO,⚠️  pregnancy_lactation thiếu fda_category
+Allopurinol,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Alogliptin,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Alogliptin,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Alteplase,CẢNH BÁO,⚠️  Thiếu enhanced field: drug_interactions
+Alteplase,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Alteplase,CẢNH BÁO,⚠️  Thiếu enhanced field: pregnancy_lactation
+Aluminum hydroxide/Magnesium hydroxide,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Amikacin,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Amlodipine/Olmesartan,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Amlodipine/Valsartan,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Amoxicillin suspension,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Amphotericin B,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Anastrozole,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Andexanet alfa,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Anidulafungin,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Anidulafungin,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Anidulafungin,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Anifrolumab,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Anifrolumab,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Aripiprazole,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Artemether-lumefantrine,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Artemether-lumefantrine,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Artesunate,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Artesunate,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Artificial tears (Carboxymethylcellulose),CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Artificial tears (Carboxymethylcellulose),CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Artificial tears (Carboxymethylcellulose),CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Aspirin,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Aspirin/Carisoprodol,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Atazanavir (boosted with ritonavir/cobicistat),CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Atenolol,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Atezolizumab,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Atezolizumab,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Atropine,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Atropine eye drops,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Atropine eye drops,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Avanafil,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Azathioprine,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Azathioprine,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Azelaic acid topical,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Azelaic acid topical,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Azelaic acid topical,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Azelastine eye drops,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Azelastine eye drops,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Azelastine eye drops,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Azilsartan medoxomil,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Aztreonam,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Baclofen,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Baricitinib,CẢNH BÁO,⚠️  Thiếu enhanced field: drug_interactions
+Beclomethasone inhaled,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Bedaquiline,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Belimumab,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Belimumab,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Bempedoic acid,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Benazepril,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Benralizumab,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Benzoyl peroxide topical,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Benzoyl peroxide topical,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Benzoyl peroxide topical,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Betamethasone,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Betamethasone,CẢNH BÁO,⚠️  Thiếu enhanced field: renal_adjustment
+Betamethasone,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Betamethasone/Clotrimazole topical,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Betamethasone/Clotrimazole topical,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Betamethasone/Clotrimazole topical,CẢNH BÁO,⚠️  Thiếu enhanced field: hepatic_adjustment
+Betaxolol,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Bevacizumab,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Bevacizumab,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Bictegravir (BIC),CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Bictegravir/Emtricitabine/Tenofovir alafenamide (BIC/FTC/TAF),CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Bimatoprost,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Bimatoprost,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Bimatoprost,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Bisoprolol,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Brimonidine,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Brimonidine,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Brinzolamide,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Brinzolamide,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Brinzolamide,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Brodalumab,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Bromocriptine,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Bromocriptine,CẢNH BÁO,⚠️  Thiếu enhanced field: drug_interactions
+Bromocriptine,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Budesonide inhaled,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Budesonide/Formoterol inhaler,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Budesonide/Formoterol inhaler,CẢNH BÁO,⚠️  Thiếu enhanced field: drug_interactions
+Budesonide/Formoterol inhaler,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Bumetanide,CẢNH BÁO,⚠️  Thiếu enhanced field: drug_interactions
+Bumetanide,CẢNH BÁO,⚠️  Thiếu enhanced field: pregnancy_lactation
+Bumetanide,CẢNH BÁO,⚠️  Thiếu enhanced field: hepatic_adjustment
+Buprenorphine,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Bupropion,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cabotegravir + Rilpivirine (Long-acting IM),CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Calcium,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Calcium (elemental),CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Calcium carbonate,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Calcium chloride,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Canagliflozin,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Canagliflozin,CẢNH BÁO,⚠️  risk_flags thiếu key: icu_critical_care_only
+Candesartan,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Capecitabine,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Caplacizumab,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Captopril,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Carbamazepine,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Carbamazepine,CẢNH BÁO,⚠️  Thiếu enhanced field: renal_adjustment
+Carbamazepine,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Carboplatin,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Carboprost,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Carvedilol,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Caspofungin,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Caspofungin,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Caspofungin,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Cefaclor,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cefazolin,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cefdinir,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cefepime,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cefixime,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cefotaxime,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cefpirome,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Ceftazidime,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cefuroxime,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Celecoxib,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cemiplimab,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cephalexin,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Cephalexin,CẢNH BÁO,⚠️  Thiếu enhanced field: contraindications_detail
+Cephalexin,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents
+Cerebrolysin,CẢNH BÁO,⚠️  Enhanced field rỗng: black_box_warnings
+Cerebrolysin,CẢNH BÁO,⚠️  Thiếu enhanced field: drug_interactions
+Cerebrolysin,CẢNH BÁO,⚠️  Enhanced field rỗng: reversal_agents

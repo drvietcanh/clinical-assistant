@@ -8,6 +8,7 @@ from .snris import SNRI_DRUGS
 from .tcas import TCA_DRUGS
 from .antipsychotics import ANTIPSYCHOTICS_DRUGS
 from .antidepressants import OTHER_ANTIDEPRESSANTS_DRUGS
+from .adhd_anxiolytics import ADHD_ANXIOLYTICS_DRUGS
 
 # Merge all categories
 PSYCHIATRY_OTHER_DRUGS = {
@@ -16,6 +17,7 @@ PSYCHIATRY_OTHER_DRUGS = {
     **TCA_DRUGS,
     **ANTIPSYCHOTICS_DRUGS,
     **OTHER_ANTIDEPRESSANTS_DRUGS,
+    **ADHD_ANXIOLYTICS_DRUGS,
 }
 
 __all__ = ['PSYCHIATRY_OTHER_DRUGS']

@@ -115,6 +115,22 @@ FLUOROQUINOLONES_DRUGS = {
         'Dùng với warfarin - tăng nguy cơ chảy máu',
         'Dùng với theophylline - tăng độc tính theophylline',
         'Hoạt động thể lực nặng - tăng nguy cơ đứt gân']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng ciprofloxacin hoặc các fluoroquinolone khác',
+        'Có thai - chống chỉ định tuyệt đối, nguy cơ tổn thương sụn thai nhi',
+        'Trẻ em < 18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác) - nguy cơ tổn thương sụn, viêm khớp'
+        ,
+        'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ loạn nhịp tim nghiêm trọng'
+        , 'Bệnh nhược cơ nặng - có thể làm nặng bệnh'], 'tương_đối': [
+        'Bệnh nhân > 60 tuổi - tăng nguy cơ đứt gân, viêm gân',
+        'Dùng corticosteroid - tăng nguy cơ đứt gân',
+        'Ghép cơ quan - tăng nguy cơ đứt gân',
+        'Tiền sử co giật - tăng nguy cơ co giật',
+        'Suy thận nặng (CrCl <30) - giảm liều đáng kể',
+        'Suy gan - thận trọng, có thể giảm chuyển hóa',
+        'Dùng với warfarin - tăng nguy cơ chảy máu',
+        'Dùng với theophylline - tăng độc tính theophylline',
+        'Hoạt động thể lực nặng - tăng nguy cơ đứt gân']},
         'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
         'Ciprofloxacin là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể gây tổn thương sụn ở khớp ở thai nhi. Có báo cáo về tổn thương sụn ở trẻ em khi dùng trong thai kỳ. CHỐNG CHỈ ĐỊNH trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn khác. Nhiễm trùng nặng có thể gây nguy hiểm cho thai nhi, nhưng nên dùng kháng sinh khác nếu có thể.'
         , 'lactation': {'safety': 'Compatible (với thận trọng)', 'details':
@@ -153,7 +169,10 @@ FLUOROQUINOLONES_DRUGS = {
         'Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2'],
         'monitoring':
         'Theo dõi dấu hiệu sinh tồn, ECG, dấu hiệu thần kinh, dấu hiệu gân, đường huyết trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (loạn nhịp, co giật, đứt gân).'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay ciprofloxacin, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn và ECG, điều trị co giật nếu có (benzodiazepine), điều trị rối loạn nhịp tim nếu có, điều trị đau gân nếu có (nghỉ ngơi, chườm lạnh), điều trị hạ đường huyết nếu có (truyền glucose), điều trị triệu chứng tiêu hóa.'},
+        'administration_instructions': {'oral': {
         'with_food':
         'Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ (ít nhất 1-2 ly nước) để tránh kết tinh trong nước tiểu. KHÔNG uống với sữa hoặc sản phẩm sữa (giảm hấp thu).'
         , 'timing':

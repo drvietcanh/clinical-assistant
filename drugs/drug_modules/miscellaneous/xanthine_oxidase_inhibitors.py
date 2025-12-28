@@ -72,13 +72,27 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
         'Allopurinol có thể ức chế chuyển hóa cyclophosphamide, làm tăng độc tính.'
         , 'effect': 'Tăng độc tính cyclophosphamide', 'management':
         'Thận trọng khi dùng đồng thời. Theo dõi công thức máu và chức năng gan, thận.'
-        }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        }], 'minor': []},         'contraindications': {'tuyệt_đối': [
         'Dị ứng allopurinol', 'Có thai (category C)', 'Đang cho con bú',
         'Phản ứng da nghiêm trọng trước đây với allopurinol (SJS, TEN)'],
         'tương_đối': ['Suy thận (giảm liều theo CrCl)',
         'Suy gan (thận trọng, theo dõi chức năng gan)',
         'Đang dùng azathioprine/6-mercaptopurine (cần giảm liều 75%)',
         'Đang dùng ampicillin/amoxicillin (tăng nguy cơ ban da)']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng allopurinol', 'Có thai (category C)', 'Đang cho con bú',
+        'Phản ứng da nghiêm trọng trước đây với allopurinol (SJS, TEN)'],
+        'tương_đối': ['Suy thận (giảm liều theo CrCl)',
+        'Suy gan (thận trọng, theo dõi chức năng gan)',
+        'Đang dùng azathioprine/6-mercaptopurine (cần giảm liều 75%)',
+        'Đang dùng ampicillin/amoxicillin (tăng nguy cơ ban da)']},
+        'renal_adjustment': {
+        'normal': 'Không cần chỉnh liều',
+        '30_60': 'Thận trọng, giảm liều 50%',
+        'under_30': 'Thận trọng, giảm liều 75% (thải trừ qua thận)',
+        'dialysis': 'Thận trọng, giảm liều 75%. Allopurinol và oxypurinol không được lọc sạch hiệu quả qua thẩm phân máu.',
+        'notes': 'Allopurinol và metabolite oxypurinol thải trừ chủ yếu qua thận. Suy thận làm tăng nguy cơ tích lũy oxypurinol (half-life dài 15-18 giờ). Cần giảm liều theo CrCl.'
+        },
         'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
         'Allopurinol là category C. Không có dữ liệu đầy đủ về an toàn trong thai kỳ. Chỉ dùng nếu lợi ích > nguy cơ. Cân nhắc dùng liều thấp nhất hiệu quả.'
         , 'lactation': {'safety': 'Incompatible', 'details':
@@ -111,7 +125,7 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
         'Uống 1 lần/ngày sau bữa ăn. Uống với nhiều nước (2-3L/ngày) để tránh sỏi thận. Uống cùng thời điểm mỗi ngày.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Allopurinol (Zyloric, Aloprim)',
         'American College of Rheumatology Guidelines - Gout Management',
         'UpToDate - Allopurinol drug information',
@@ -119,6 +133,22 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
         'Lexicomp Online - Allopurinol Monograph'], 'last_updated':
         '2024-12-19', 'evidence_level':
         'A - Dựa trên FDA drug labels, ACR guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-        }}}
+        },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Severe skin reactions (SJS/TEN - life-threatening)', 'Hepatotoxicity', 'Bone marrow suppression (rare)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': True,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Skin rash - CRITICAL (stop immediately if rash occurs)', 'Hepatic function (ALT, AST)', 'CBC if long-term use', 'Uric acid levels']
+        },
+        'guideline_tags': [
+            'ACR Guidelines - Gout Management',
+            'FDA Black Box Warning - Allopurinol and Severe Skin Reactions',
+            'EULAR Guidelines - Gout',
+            'FDA Drug Safety Communication - Allopurinol and SJS/TEN'
+        ]}}
 
 __all__ = ['XANTHINE_OXIDASE_INHIBITORS_DRUGS']

@@ -250,6 +250,19 @@ DERMATOLOGY_DRUGS = {
                 "Phụ nữ có thai - thận trọng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng pimecrolimus hoặc tacrolimus",
+                "Nhiễm trùng da (bacterial, fungal, viral) - không dùng trừ khi có kháng sinh/kháng nấm",
+                "Trẻ em <2 tuổi - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Ức chế miễn dịch (HIV, transplant) - thận trọng, tăng nguy cơ nhiễm trùng",
+                "Ung thư da - thận trọng, tăng nguy cơ",
+                "Dùng diện rộng (>20% diện tích cơ thể) - nguy cơ hấp thu toàn thân",
+                "Phụ nữ có thai - thận trọng"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Pimecrolimus là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Pimecrolimus có thể hấp thu toàn thân và qua nhau thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
@@ -283,7 +296,11 @@ DERMATOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu nhiễm trùng (nếu có hấp thu toàn thân) cho đến khi hồi phục."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là ngừng thuốc và điều trị hỗ trợ. Nếu có hấp thu toàn thân: theo dõi dấu hiệu nhiễm trùng và điều trị nếu cần."
+        },
         "administration_instructions": {
             "oral": None,
             "topical": {
@@ -373,6 +390,21 @@ DERMATOLOGY_DRUGS = {
             "moderate": [],
             "minor": []
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Skin atrophy (rare, only with prolonged use)", "Systemic absorption (rare, only with large surface area, prolonged use)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in redness, swelling, itching)", "Signs of skin irritation", "Signs of skin infection", "Signs of skin atrophy (if used long-term)"]
+        },
+        "guideline_tags": [
+            "AAD Guidelines - Atopic Dermatitis",
+            "AAD Guidelines - Contact Dermatitis",
+            "FDA Drug Information - Hydrocortisone Topical"
+        ],
         "contraindications": {
             "tuyệt_đối": [
                 "Dị ứng hydrocortisone hoặc corticosteroid",
@@ -550,7 +582,23 @@ DERMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-23",
             "evidence_level": "B - Hướng dẫn lâm sàng và kinh nghiệm thực hành"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Skin atrophy (from betamethasone with prolonged use)", "HPA axis suppression (if used on large areas/long-term)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (improvement in itching, redness, scaling)", "Signs of skin atrophy (if used >2-4 weeks)", "Signs of fungal recurrence after stopping", "HPA axis function if used on large areas/long-term"]
+        },
+        "guideline_tags": [
+            "AAD Guidelines - Topical Antifungal Treatment",
+            "AAD Guidelines - Topical Combination Therapy",
+            "FDA Drug Information - Topical Combinations",
+            "UpToDate - Dermatophyte Infections Treatment"
+        ]
     },
     
     "Fusidic acid/Betamethasone topical": {
@@ -882,7 +930,22 @@ DERMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-23",
             "evidence_level": "B - Dữ liệu thực hành và tờ hướng dẫn thuốc"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Skin atrophy (from betamethasone with prolonged use)", "Contact dermatitis (especially from gentamicin)", "Systemic absorption of gentamicin (if used on large areas/burns)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (improvement in redness, itching, discharge)", "Signs of skin irritation or contact dermatitis", "Signs of skin atrophy (if used >2 weeks)", "Systemic effects if used on large areas/burns"]
+        },
+        "guideline_tags": [
+            "AAD Guidelines - Topical Combination Therapy",
+            "FDA Drug Information - Topical Combinations",
+            "Clinical Practice Guidelines - Dermatitis Treatment"
+        ]
     },
     
     "Tacrolimus topical": {
@@ -987,6 +1050,19 @@ DERMATOLOGY_DRUGS = {
                 "Phụ nữ có thai - thận trọng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng tacrolimus",
+                "Nhiễm trùng da (bacterial, fungal, viral) - không dùng trừ khi có kháng sinh/kháng nấm",
+                "Trẻ em <2 tuổi - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Ức chế miễn dịch (HIV, transplant) - thận trọng, tăng nguy cơ nhiễm trùng",
+                "Ung thư da - thận trọng, tăng nguy cơ",
+                "Dùng diện rộng (>20% diện tích cơ thể) - nguy cơ hấp thu toàn thân",
+                "Phụ nữ có thai - thận trọng"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Tacrolimus là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Tacrolimus có thể hấp thu toàn thân và qua nhau thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
@@ -1020,7 +1096,11 @@ DERMATOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu nhiễm trùng (nếu có hấp thu toàn thân) cho đến khi hồi phục."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là ngừng thuốc và điều trị hỗ trợ. Nếu có hấp thu toàn thân: theo dõi dấu hiệu nhiễm trùng và điều trị nếu cần."
+        },
         "administration_instructions": {
             "oral": None,
             "topical": {
@@ -1031,6 +1111,22 @@ DERMATOLOGY_DRUGS = {
                 "notes": "QUAN TRỌNG: 1) Chỉ dùng cho viêm da dị ứng trung bình đến nặng, 2) CHỐNG CHỈ ĐỊNH ở trẻ em <2 tuổi, 3) Tránh ánh nắng mặt trời, 4) Tránh bôi lên vùng da bị loét, nhiễm trùng, 5) FDA warning về nguy cơ ung thư da, 6) Kích ứng da tại chỗ phổ biến trong vài ngày đầu."
             }
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Skin cancer (lymphoma, skin cancer) - slight increased risk (FDA warning) - CRITICAL", "Skin infections (herpes simplex, varicella zoster) - increased risk"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in redness, swelling, itching)", "Signs of skin irritation (increased redness, burning, itching, stinging)", "Signs of skin infection (pus, increased redness/swelling, herpes) - CRITICAL", "Signs of skin cancer (new lesions, changes in existing lesions) - CRITICAL", "Treatment area (avoid >20% body surface area)"]
+        },
+        "guideline_tags": [
+            "AAD Guidelines - Atopic Dermatitis",
+            "FDA Black Box Warning - Tacrolimus Topical and Skin Cancer",
+            "FDA Black Box Warning - Tacrolimus Topical and Age Restriction (<2 years)",
+            "FDA Drug Information - Tacrolimus Topical"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Tacrolimus (Protopic)",
@@ -1279,6 +1375,19 @@ DERMATOLOGY_DRUGS = {
                 "Đang dùng các sản phẩm làm khô da - tăng kích ứng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng tretinoin hoặc retinoid",
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category X, gây dị tật bẩm sinh)",
+                "Eczema nặng - CHỐNG CHỈ ĐỊNH",
+                "Viêm da nặng - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Phụ nữ đang cho con bú - thận trọng",
+                "Da nhạy cảm - bắt đầu với nồng độ thấp",
+                "Đang dùng các sản phẩm làm khô da - tăng kích ứng"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "X",
             "pregnancy_details": "Tretinoin là thuốc phân loại X. CHỐNG CHỈ ĐỊNH ở phụ nữ có thai. Tretinoin gây dị tật bẩm sinh ở động vật. Phụ nữ trong độ tuổi sinh đẻ phải sử dụng biện pháp tránh thai hiệu quả khi dùng tretinoin.",
@@ -1310,7 +1419,11 @@ DERMATOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu kích ứng da, dấu hiệu nhạy cảm với ánh sáng cho đến khi hồi phục."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là ngừng thuốc và điều trị hỗ trợ. Dưỡng ẩm da, tránh ánh nắng mặt trời, bôi kem chống nắng (SPF ≥30)."
+        },
         "administration_instructions": {
             "oral": None,
             "topical": {
@@ -1471,7 +1584,22 @@ DERMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in acne)", "Signs of skin irritation (redness, dryness, peeling)", "Signs of allergic reaction"]
+        },
+        "guideline_tags": [
+            "AAD Guidelines - Acne Treatment",
+            "FDA Drug Information - Benzoyl Peroxide",
+            "UpToDate - Acne Treatment"
+        ]
     },
     
     "Triamcinolone topical": {
@@ -1740,7 +1868,23 @@ DERMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in acne, rosacea)", "Signs of skin irritation (redness, dryness, peeling) - common in first few weeks", "Signs of allergic reaction"]
+        },
+        "guideline_tags": [
+            "AAD Guidelines - Acne Treatment",
+            "AAD Guidelines - Rosacea Treatment",
+            "FDA Drug Information - Azelaic Acid",
+            "UpToDate - Acne Treatment"
+        ]
     },
     
     "Metronidazole topical": {
@@ -1870,6 +2014,1882 @@ DERMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
+    "Terbinafine topical": {
+        "group": "Dermatology - Topical Antifungal",
+        "vietnamese_name": "Terbinafine, Lamisil",
+        "administration": ["Topical"],
+        "indications": [
+            "Nấm da (tinea corporis, tinea cruris, tinea pedis)",
+            "Nấm móng (onychomycosis) - dạng uống hiệu quả hơn",
+            "Nhiễm nấm da do dermatophytes"
+        ],
+        "contraindications": [
+            "Dị ứng terbinafine",
+            "Nhiễm trùng da do vi khuẩn (không dùng trừ khi có kháng sinh)"
+        ],
+        "dosage": {
+            "adult_topical_cream": "Bôi mỏng 1-2 lần/ngày lên vùng da bị ảnh hưởng và vùng da xung quanh 2cm",
+            "adult_topical_spray": "Xịt 1-2 lần/ngày lên vùng da bị ảnh hưởng",
+            "adult_duration": "1-4 tuần tùy theo loại nấm (tinea pedis: 4 tuần)",
+            "notes": "Terbinafine là allylamine antifungal, hiệu quả cao với dermatophytes. Dùng 1-2 lần/ngày trong 1-4 tuần. Rửa tay sau khi bôi."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Kích ứng da nhẹ (đỏ, ngứa, bỏng rát) - phổ biến",
+            "Khô da",
+            "Phát ban",
+            "Dị ứng da (hiếm)"
+        ],
+        "interactions": [
+            "Không có tương tác đáng kể với thuốc khác (topical)"
+        ],
+        "pregnancy": "B - An toàn khi dùng tại chỗ",
+        "mechanism_of_action": "Terbinafine là allylamine antifungal, ức chế enzyme squalene epoxidase trong quá trình tổng hợp ergosterol (thành phần màng tế bào nấm). Ức chế squalene epoxidase → tích tụ squalene (độc cho nấm) và giảm ergosterol → màng tế bào nấm bị tổn thương → chết tế bào nấm. Terbinafine có ái lực cao với enzyme của nấm, ít ảnh hưởng đến enzyme của người. Hiệu quả cao với dermatophytes (Trichophyton, Microsporum, Epidermophyton). ĐẶC ĐIỂM: (1) Allylamine antifungal, (2) Hiệu quả cao với dermatophytes, (3) Dùng 1-2 lần/ngày trong 1-4 tuần, (4) Ít tác dụng phụ, (5) An toàn khi dùng tại chỗ.",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm đỏ, ngứa, vảy da)",
+            "Dấu hiệu kích ứng da (đỏ, ngứa, bỏng rát tăng)",
+            "Dấu hiệu nhiễm trùng da (mủ, đỏ, sưng tăng)"
+        ],
+        "precautions": [
+            "Bôi mỏng lên vùng da bị ảnh hưởng và vùng da xung quanh 2cm",
+            "Rửa tay sau khi bôi (tránh lây lan)",
+            "Dùng đều đặn 1-2 lần/ngày trong 1-4 tuần",
+            "Không dùng trên vùng da bị loét, nhiễm trùng",
+            "Nếu không đáp ứng sau 2-4 tuần → cần đánh giá lại chẩn đoán",
+            "Trẻ em: thận trọng, giảm liều nếu cần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày",
+            "duration": "Phụ thuộc tần suất dùng",
+            "protein_binding": "Không áp dụng (topical)",
+            "metabolism": "Chuyển hóa tại da (nếu hấp thu toàn thân: gan)",
+            "clearance": "Thải trừ qua nước tiểu (nếu hấp thu toàn thân)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Đóng nắp kín sau khi dùng.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng terbinafine",
+                "Nhiễm trùng da do vi khuẩn (không dùng trừ khi có kháng sinh)"
+            ],
+            "tương_đối": [
+                "Trẻ em - thận trọng, giảm liều nếu cần",
+                "Vùng da bị loét - tránh dùng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Terbinafine là thuốc phân loại B. Terbinafine tại chỗ hấp thu toàn thân tối thiểu. An toàn khi dùng tại chỗ trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Terbinafine tại chỗ hấp thu toàn thân tối thiểu, không bài tiết vào sữa mẹ. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Không cần điều chỉnh liều",
+            "notes": "Terbinafine tại chỗ hấp thu toàn thân tối thiểu. Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng (đỏ, ngứa, bỏng rát)",
+                "Phát ban",
+                "Dị ứng da"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng terbinafine ngay lập tức",
+                "Rửa sạch vùng da đã bôi",
+                "Điều trị triệu chứng (kem dưỡng ẩm, corticosteroid tại chỗ nếu cần)"
+            ],
+            "monitoring": "Theo dõi dấu hiệu kích ứng da và dị ứng."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": None,
+            "topical": {
+                "preparation": "Dạng cream 1% hoặc spray 1%.",
+                "application": "Bôi mỏng 1-2 lần/ngày lên vùng da bị ảnh hưởng và vùng da xung quanh 2cm. Massage nhẹ cho đến khi thấm. Rửa tay sau khi bôi.",
+                "area": "Bôi lên vùng da bị nấm và vùng da xung quanh 2cm. Tránh bôi lên vùng da bị loét, nhiễm trùng.",
+                "timing": "1-2 lần/ngày (thường 2 lần/ngày cho tinea pedis, 1 lần/ngày cho tinea corporis/cruris).",
+                "duration": "1-4 tuần tùy theo loại nấm (tinea pedis: 4 tuần, tinea corporis/cruris: 1-2 tuần).",
+                "notes": "QUAN TRỌNG: 1) Dùng 1-2 lần/ngày, 2) Bôi lên vùng da bị ảnh hưởng và vùng da xung quanh 2cm, 3) Rửa tay sau khi bôi, 4) Dùng đều đặn trong 1-4 tuần, 5) Nếu không đáp ứng sau 2-4 tuần → cần đánh giá lại chẩn đoán."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Terbinafine (Lamisil)",
+                "UpToDate - Terbinafine: Drug Information",
+                "Medscape - Terbinafine Drug Reference",
+                "AAD Guidelines - Fungal Skin Infections"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng"
+        }
+    },
+    
+    "Permethrin topical": {
+        "group": "Dermatology - Topical Antiparasitic",
+        "vietnamese_name": "Permethrin, Elimite, Nix",
+        "administration": ["Topical"],
+        "indications": [
+            "Ghẻ (scabies)",
+            "Chấy (head lice, pubic lice)",
+            "Nhiễm ký sinh trùng da (Sarcoptes scabiei, Pediculus humanus)"
+        ],
+        "contraindications": [
+            "Dị ứng permethrin hoặc pyrethroid",
+            "Trẻ sơ sinh <2 tháng tuổi (thận trọng)"
+        ],
+        "dosage": {
+            "adult_scabies": "Bôi từ cổ xuống toàn bộ cơ thể (kể cả lòng bàn tay, bàn chân), để 8-14 giờ, sau đó tắm rửa sạch. Lặp lại sau 1 tuần nếu cần.",
+            "adult_lice": "Bôi lên tóc và da đầu (nếu chấy đầu) hoặc vùng lông mu (nếu chấy mu), để 10 phút, sau đó gội đầu. Lặp lại sau 7-10 ngày nếu cần.",
+            "pediatric_scabies_2mo_2yr": "Bôi từ cổ xuống toàn bộ cơ thể, để 6-8 giờ, sau đó tắm rửa sạch. Lặp lại sau 1 tuần nếu cần.",
+            "pediatric_scabies_2yr_plus": "Bôi từ cổ xuống toàn bộ cơ thể, để 8-14 giờ, sau đó tắm rửa sạch. Lặp lại sau 1 tuần nếu cần.",
+            "notes": "Permethrin là pyrethroid, ức chế kênh Na+ của ký sinh trùng. Dùng 1 lần, lặp lại sau 1 tuần (ghẻ) hoặc 7-10 ngày (chấy) nếu cần. Điều trị tất cả người tiếp xúc cùng lúc."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Kích ứng da nhẹ (đỏ, ngứa, bỏng rát) - phổ biến",
+            "Ngứa tiếp tục sau điều trị (do phản ứng dị ứng với xác ký sinh trùng) - phổ biến",
+            "Phát ban",
+            "Dị ứng da (hiếm)",
+            "Tê, ngứa ran (hiếm, nếu hấp thu toàn thân)"
+        ],
+        "interactions": [
+            "Không có tương tác đáng kể với thuốc khác (topical)"
+        ],
+        "pregnancy": "B - An toàn khi dùng tại chỗ",
+        "mechanism_of_action": "Permethrin là pyrethroid (synthetic pyrethrin), ức chế kênh Na+ của ký sinh trùng, gây tăng kích thích thần kinh, co giật, và chết. Permethrin có ái lực cao với kênh Na+ của ký sinh trùng (Sarcoptes scabiei, Pediculus humanus), ít ảnh hưởng đến kênh Na+ của người. Permethrin cũng có tác dụng độc với ty thể của ký sinh trùng. ĐẶC ĐIỂM: (1) Pyrethroid antiparasitic, (2) Hiệu quả cao với ghẻ và chấy, (3) Dùng 1 lần, lặp lại sau 1 tuần nếu cần, (4) An toàn khi dùng tại chỗ, (5) Điều trị tất cả người tiếp xúc cùng lúc.",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm ngứa, giảm tổn thương da)",
+            "Dấu hiệu kích ứng da (đỏ, ngứa, bỏng rát tăng)",
+            "Dấu hiệu nhiễm trùng da thứ phát (mủ, đỏ, sưng tăng)",
+            "Ngứa tiếp tục (có thể do phản ứng dị ứng với xác ký sinh trùng, không phải do thuốc)"
+        ],
+        "precautions": [
+            "Điều trị tất cả người tiếp xúc cùng lúc (tránh tái nhiễm)",
+            "Bôi từ cổ xuống toàn bộ cơ thể (kể cả lòng bàn tay, bàn chân) cho ghẻ",
+            "Để 8-14 giờ (người lớn) hoặc 6-8 giờ (trẻ 2 tháng-2 tuổi) cho ghẻ",
+            "Tắm rửa sạch sau khi để đủ thời gian",
+            "Giặt quần áo, ga gối, khăn tắm ở nhiệt độ cao (60°C) hoặc cách ly 3-7 ngày",
+            "Lặp lại sau 1 tuần (ghẻ) hoặc 7-10 ngày (chấy) nếu cần",
+            "Ngứa có thể tiếp tục 2-4 tuần sau điều trị (do phản ứng dị ứng với xác ký sinh trùng, không phải do thuốc)",
+            "Trẻ sơ sinh <2 tháng tuổi: thận trọng, giảm thời gian để (6 giờ)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Ngay lập tức sau khi bôi",
+            "duration": "8-14 giờ (thời gian để trên da)",
+            "protein_binding": "Không áp dụng (topical)",
+            "metabolism": "Chuyển hóa tại da (nếu hấp thu toàn thân: gan, esterase)",
+            "clearance": "Thải trừ qua nước tiểu (nếu hấp thu toàn thân)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Đóng nắp kín sau khi dùng.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng permethrin hoặc pyrethroid"
+            ],
+            "tương_đối": [
+                "Trẻ sơ sinh <2 tháng tuổi - thận trọng, giảm thời gian để (6 giờ)",
+                "Phụ nữ có thai - thận trọng, chỉ dùng khi cần thiết"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Permethrin là thuốc phân loại B. Permethrin tại chỗ hấp thu toàn thân tối thiểu. An toàn khi dùng tại chỗ trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Permethrin tại chỗ hấp thu toàn thân tối thiểu, không bài tiết vào sữa mẹ. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Không cần điều chỉnh liều",
+            "notes": "Permethrin tại chỗ hấp thu toàn thân tối thiểu. Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng (đỏ, ngứa, bỏng rát)",
+                "Phát ban",
+                "Dị ứng da",
+                "Tê, ngứa ran (nếu hấp thu toàn thân)",
+                "Co giật (nếu hấp thu toàn thân rất nhiều)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng permethrin ngay lập tức",
+                "Rửa sạch vùng da đã bôi",
+                "Điều trị triệu chứng (kem dưỡng ẩm, corticosteroid tại chỗ nếu cần)",
+                "Nếu hấp thu toàn thân: hỗ trợ hô hấp, điều trị co giật"
+            ],
+            "monitoring": "Theo dõi dấu hiệu kích ứng da, dị ứng, và triệu chứng thần kinh nếu hấp thu toàn thân."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": None,
+            "topical": {
+                "preparation": "Dạng cream 5% (ghẻ) hoặc lotion 1% (chấy).",
+                "application": "GHẺ: Bôi từ cổ xuống toàn bộ cơ thể (kể cả lòng bàn tay, bàn chân), để 8-14 giờ (người lớn) hoặc 6-8 giờ (trẻ 2 tháng-2 tuổi), sau đó tắm rửa sạch. CHẤY: Bôi lên tóc và da đầu (nếu chấy đầu) hoặc vùng lông mu (nếu chấy mu), để 10 phút, sau đó gội đầu.",
+                "area": "GHẺ: Toàn bộ cơ thể từ cổ xuống (kể cả lòng bàn tay, bàn chân). CHẤY: Tóc và da đầu (chấy đầu) hoặc vùng lông mu (chấy mu).",
+                "timing": "GHẺ: 1 lần, lặp lại sau 1 tuần nếu cần. CHẤY: 1 lần, lặp lại sau 7-10 ngày nếu cần.",
+                "duration": "GHẺ: Để 8-14 giờ (người lớn) hoặc 6-8 giờ (trẻ 2 tháng-2 tuổi). CHẤY: Để 10 phút.",
+                "notes": "QUAN TRỌNG: 1) Điều trị tất cả người tiếp xúc cùng lúc, 2) Giặt quần áo, ga gối, khăn tắm ở nhiệt độ cao (60°C) hoặc cách ly 3-7 ngày, 3) Ngứa có thể tiếp tục 2-4 tuần sau điều trị (do phản ứng dị ứng với xác ký sinh trùng), 4) Lặp lại sau 1 tuần (ghẻ) hoặc 7-10 ngày (chấy) nếu cần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Permethrin (Elimite, Nix)",
+                "UpToDate - Permethrin: Drug Information",
+                "Medscape - Permethrin Drug Reference",
+                "CDC Guidelines - Scabies and Lice Treatment"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels, CDC guidelines, và dữ liệu lâm sàng"
+        }
+    },
+    
+    "Clindamycin topical": {
+        "group": "Dermatology - Topical Antibiotic",
+        "vietnamese_name": "Clindamycin topical, Cleocin T",
+        "administration": ["Topical"],
+        "indications": [
+            "Mụn trứng cá (acne vulgaris)",
+            "Nhiễm khuẩn da",
+            "Viêm nang lông do vi khuẩn"
+        ],
+        "contraindications": [
+            "Dị ứng clindamycin hoặc lincomycin",
+            "Viêm đại tràng (tiền sử viêm đại tràng do kháng sinh)",
+            "Nhiễm khuẩn nặng (cần kháng sinh toàn thân)"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 2 lần/ngày lên vùng da bị ảnh hưởng",
+            "pediatric": "Bôi mỏng 2 lần/ngày (từ 12 tuổi trở lên)",
+            "notes": "Dùng cho mụn trứng cá. Bôi lên vùng da sạch, khô. Tránh mắt, miệng, niêm mạc."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (đỏ, rát, khô) - phổ biến",
+            "Bong tróc da",
+            "Ngứa",
+            "Viêm đại tràng (hiếm, nếu hấp thu toàn thân)",
+            "Nhiễm C. difficile (hiếm, nếu hấp thu toàn thân)"
+        ],
+        "interactions": [
+            "Erythromycin tại chỗ: đối kháng, tránh dùng cùng",
+            "Benzoyl peroxide: có thể dùng kết hợp (tăng hiệu quả)"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Clindamycin là lincosamide antibiotic, ức chế tổng hợp protein vi khuẩn bằng cách gắn với 50S ribosomal subunit. Tác dụng với Propionibacterium acnes (vi khuẩn gây mụn trứng cá) và các vi khuẩn Gram-dương khác. Dạng tại chỗ hấp thu toàn thân tối thiểu, giảm nguy cơ tác dụng phụ toàn thân. Được dùng cho mụn trứng cá, đặc biệt mụn viêm.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm mụn trứng cá)",
+            "Kích ứng da tại chỗ (đỏ, rát, khô)",
+            "Dấu hiệu viêm đại tràng (tiêu chảy, đau bụng) - hiếm",
+            "Dấu hiệu nhiễm C. difficile - hiếm"
+        ],
+        "precautions": [
+            "Kích ứng da tại chỗ - phổ biến, thường tự khỏi sau vài ngày",
+            "Tránh mắt, miệng, niêm mạc",
+            "Bôi lên vùng da sạch, khô",
+            "Có thể dùng kết hợp với benzoyl peroxide (tăng hiệu quả)",
+            "Tránh dùng với erythromycin tại chỗ (đối kháng)",
+            "Nguy cơ viêm đại tràng nếu hấp thu toàn thân (hiếm)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày đến vài tuần",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu. Nếu hấp thu: gan (chuyển hóa), thận (thải trừ)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Nguy cơ viêm đại tràng do C. difficile nếu hấp thu toàn thân (hiếm với dạng tại chỗ).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Erythromycin tại chỗ",
+                    "mechanism": "Đối kháng tác dụng",
+                    "effect": "Giảm hiệu quả cả hai",
+                    "management": "Tránh dùng cùng."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng clindamycin hoặc lincomycin",
+                "Viêm đại tràng (tiền sử viêm đại tràng do kháng sinh)"
+            ],
+            "tương_đối": [
+                "Nhiễm khuẩn nặng - cần kháng sinh toàn thân",
+                "Trẻ em <12 tuổi - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B - an toàn hơn category C. Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Bài tiết vào sữa mẹ ở nồng độ rất thấp.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng",
+                "Viêm đại tràng (nếu hấp thu toàn thân)",
+                "Tiêu chảy (nếu hấp thu toàn thân)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay clindamycin tại chỗ",
+                "Rửa sạch vùng da",
+                "Hỗ trợ và điều trị triệu chứng",
+                "Nếu có dấu hiệu viêm đại tràng: điều trị theo protocol"
+            ],
+            "monitoring": "Theo dõi kích ứng da, dấu hiệu viêm đại tràng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 2 lần/ngày lên vùng da sạch, khô. Tránh mắt, miệng, niêm mạc.",
+                "timing": "Dùng 2 lần/ngày, đều đặn. Có thể dùng kết hợp với benzoyl peroxide.",
+                "notes": "Dùng cho mụn trứng cá. Bôi lên vùng da sạch, khô trước khi đi ngủ và buổi sáng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cleocin T (clindamycin topical)",
+                "UpToDate - Topical antibiotics for acne"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Fusidic Acid": {
+        "group": "Dermatology - Topical Antibiotic",
+        "vietnamese_name": "Fusidic acid, Fucidin",
+        "administration": ["Topical"],
+        "indications": [
+            "Nhiễm khuẩn da do Staphylococcus (bao gồm MRSA)",
+            "Viêm nang lông do vi khuẩn",
+            "Chốc lở (impetigo)",
+            "Nhiễm khuẩn vết thương"
+        ],
+        "contraindications": [
+            "Dị ứng fusidic acid",
+            "Nhiễm khuẩn nặng (cần kháng sinh toàn thân)"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 3 lần/ngày lên vùng da bị ảnh hưởng",
+            "pediatric": "Bôi mỏng 3 lần/ngày (từ 1 tuổi trở lên)",
+            "notes": "Hiệu quả với Staphylococcus, bao gồm MRSA. Bôi lên vùng da sạch, khô."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (đỏ, rát) - hiếm",
+            "Ngứa",
+            "Kháng thuốc (nếu dùng kéo dài)"
+        ],
+        "interactions": [
+            "Ít tương tác thuốc"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Fusidic acid là antibiotic, ức chế tổng hợp protein vi khuẩn bằng cách gắn với elongation factor G (EF-G) trên ribosome. Tác dụng chủ yếu với Staphylococcus (bao gồm MRSA) và một số vi khuẩn Gram-dương khác. Đặc điểm: hiệu quả với MRSA, ít kháng thuốc, hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm nhiễm khuẩn)",
+            "Kích ứng da tại chỗ",
+            "Dấu hiệu kháng thuốc (nếu dùng kéo dài)"
+        ],
+        "precautions": [
+            "Kích ứng da tại chỗ - hiếm",
+            "Nguy cơ kháng thuốc nếu dùng kéo dài - dùng đủ thời gian, không dùng quá lâu",
+            "Bôi lên vùng da sạch, khô",
+            "Hiệu quả với MRSA - ưu điểm"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày",
+            "duration": "8 giờ (dùng 3 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng fusidic acid"
+            ],
+            "tương_đối": [
+                "Nhiễm khuẩn nặng - cần kháng sinh toàn thân",
+                "Trẻ em <1 tuổi - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B - an toàn hơn category C. Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay fusidic acid",
+                "Rửa sạch vùng da",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 3 lần/ngày lên vùng da sạch, khô.",
+                "timing": "Dùng 3 lần/ngày, đều đặn. Dùng đủ thời gian, không dùng quá lâu.",
+                "notes": "Hiệu quả với Staphylococcus, bao gồm MRSA."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Fucidin (fusidic acid)",
+                "UpToDate - Topical antibiotics for skin infections"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Metronidazole topical": {
+        "group": "Dermatology - Topical Antibiotic/Antiparasitic",
+        "vietnamese_name": "Metronidazole topical, Metrogel, Metrocream",
+        "administration": ["Topical"],
+        "indications": [
+            "Rosacea (đỏ mặt, mụn mủ)",
+            "Viêm da quanh miệng (perioral dermatitis)",
+            "Nhiễm khuẩn da do kỵ khí"
+        ],
+        "contraindications": [
+            "Dị ứng metronidazole",
+            "Nhiễm khuẩn nặng (cần kháng sinh toàn thân)"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 1-2 lần/ngày lên vùng da bị ảnh hưởng",
+            "notes": "Dùng cho rosacea. Bôi lên vùng da sạch, khô. Tránh mắt, miệng."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (đỏ, rát, khô) - phổ biến",
+            "Bong tróc da",
+            "Ngứa",
+            "Khô da"
+        ],
+        "interactions": [
+            "Rượu: có thể gây phản ứng disulfiram-like (hiếm với dạng tại chỗ)",
+            "Warfarin: có thể tăng INR (hiếm với dạng tại chỗ)"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Metronidazole là nitroimidazole antibiotic/antiparasitic. Ức chế DNA synthesis của vi khuẩn kỵ khí và ký sinh trùng. Tác dụng với Demodex mites (có thể liên quan đến rosacea) và vi khuẩn kỵ khí. Dạng tại chỗ hấp thu toàn thân tối thiểu, giảm nguy cơ tác dụng phụ toàn thân. Được dùng chủ yếu cho rosacea (đỏ mặt, mụn mủ).",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm rosacea)",
+            "Kích ứng da tại chỗ (đỏ, rát, khô)",
+            "Dấu hiệu nhiễm khuẩn (nếu có)"
+        ],
+        "precautions": [
+            "Kích ứng da tại chỗ - phổ biến, thường tự khỏi sau vài ngày",
+            "Tránh mắt, miệng",
+            "Bôi lên vùng da sạch, khô",
+            "Tránh rượu (có thể gây phản ứng disulfiram-like, hiếm với dạng tại chỗ)",
+            "Dùng đều đặn hàng ngày"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày đến vài tuần",
+            "duration": "12-24 giờ (dùng 1-2 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Rượu",
+                    "mechanism": "Có thể gây phản ứng disulfiram-like",
+                    "effect": "Buồn nôn, nôn, đỏ mặt (hiếm với dạng tại chỗ)",
+                    "management": "Tránh rượu (hiếm với dạng tại chỗ)."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng metronidazole"
+            ],
+            "tương_đối": [
+                "Nhiễm khuẩn nặng - cần kháng sinh toàn thân"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B - an toàn hơn category C. Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay metronidazole tại chỗ",
+                "Rửa sạch vùng da",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 1-2 lần/ngày lên vùng da sạch, khô. Tránh mắt, miệng.",
+                "timing": "Dùng 1-2 lần/ngày, đều đặn hàng ngày.",
+                "notes": "Dùng cho rosacea. Bôi lên vùng da sạch, khô trước khi đi ngủ và/hoặc buổi sáng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Metrogel, Metrocream (metronidazole topical)",
+                "UpToDate - Topical metronidazole for rosacea"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Clotrimazole topical": {
+        "group": "Dermatology - Topical Antifungal",
+        "vietnamese_name": "Clotrimazole topical, Lotrimin, Canesten",
+        "administration": ["Topical"],
+        "indications": [
+            "Nấm da (tinea corporis, tinea cruris, tinea pedis)",
+            "Nấm móng (onychomycosis) - dạng bôi",
+            "Nấm âm đạo (vulvovaginal candidiasis) - dạng kem/viên đặt",
+            "Nấm miệng (oral thrush) - dạng viên ngậm"
+        ],
+        "contraindications": [
+            "Dị ứng clotrimazole"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 2 lần/ngày lên vùng da bị ảnh hưởng, dùng 2-4 tuần",
+            "adult_vaginal": "1% cream hoặc 100mg viên đặt âm đạo x 1 lần/ngày, dùng 3-7 ngày",
+            "adult_oral": "10mg viên ngậm x 5 lần/ngày, dùng 14 ngày",
+            "notes": "Dùng cho nấm da, nấm móng, nấm âm đạo, nấm miệng. Dùng đủ thời gian để tránh tái phát."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (đỏ, rát, ngứa) - hiếm",
+            "Bong tróc da",
+            "Kích ứng âm đạo (khi dùng dạng đặt)"
+        ],
+        "interactions": [
+            "Ít tương tác thuốc"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Clotrimazole là imidazole antifungal, ức chế tổng hợp ergosterol (thành phần chính của màng tế bào nấm) bằng cách ức chế enzyme lanosterol 14-alpha-demethylase (CYP51). Thiếu ergosterol làm màng tế bào nấm bị rò rỉ, dẫn đến chết tế bào. Tác dụng với Candida, dermatophytes (Trichophyton, Microsporum, Epidermophyton), và một số nấm khác. Dạng tại chỗ hấp thu toàn thân tối thiểu.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm nấm)",
+            "Kích ứng da tại chỗ",
+            "Dấu hiệu tái phát"
+        ],
+        "precautions": [
+            "Kích ứng da tại chỗ - hiếm",
+            "Dùng đủ thời gian (2-4 tuần cho nấm da) để tránh tái phát",
+            "Bôi lên vùng da sạch, khô",
+            "Tránh mắt, miệng (trừ khi dùng dạng viên ngậm cho nấm miệng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng clotrimazole"
+            ],
+            "tương_đối": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B - an toàn hơn category C. Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay clotrimazole",
+                "Rửa sạch vùng da",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 2 lần/ngày lên vùng da sạch, khô. Tránh mắt, miệng.",
+                "timing": "Dùng 2 lần/ngày, đều đặn. Dùng đủ thời gian (2-4 tuần cho nấm da).",
+                "notes": "Dùng cho nấm da, nấm móng, nấm âm đạo, nấm miệng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lotrimin, Canesten (clotrimazole)",
+                "UpToDate - Topical antifungals for skin infections"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Miconazole topical": {
+        "group": "Dermatology - Topical Antifungal",
+        "vietnamese_name": "Miconazole topical, Monistat, Micatin",
+        "administration": ["Topical"],
+        "indications": [
+            "Nấm da (tinea corporis, tinea cruris, tinea pedis)",
+            "Nấm âm đạo (vulvovaginal candidiasis)",
+            "Nhiễm nấm da do Candida"
+        ],
+        "contraindications": [
+            "Dị ứng miconazole"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 2 lần/ngày lên vùng da bị ảnh hưởng, dùng 2-4 tuần",
+            "adult_vaginal": "2% cream hoặc 100-200mg viên đặt âm đạo x 1 lần/ngày, dùng 3-7 ngày",
+            "notes": "Dùng cho nấm da, nấm âm đạo. Dùng đủ thời gian để tránh tái phát."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (đỏ, rát, ngứa) - hiếm",
+            "Bong tróc da",
+            "Kích ứng âm đạo (khi dùng dạng đặt)"
+        ],
+        "interactions": [
+            "Warfarin: có thể tăng INR (hiếm với dạng tại chỗ)"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Miconazole là imidazole antifungal, ức chế tổng hợp ergosterol (thành phần chính của màng tế bào nấm) bằng cách ức chế enzyme lanosterol 14-alpha-demethylase (CYP51). Thiếu ergosterol làm màng tế bào nấm bị rò rỉ, dẫn đến chết tế bào. Tác dụng với Candida, dermatophytes, và một số nấm khác. Dạng tại chỗ hấp thu toàn thân tối thiểu.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm nấm)",
+            "Kích ứng da tại chỗ",
+            "Dấu hiệu tái phát"
+        ],
+        "precautions": [
+            "Kích ứng da tại chỗ - hiếm",
+            "Dùng đủ thời gian (2-4 tuần cho nấm da) để tránh tái phát",
+            "Bôi lên vùng da sạch, khô",
+            "Thận trọng với warfarin (có thể tăng INR, hiếm với dạng tại chỗ)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể ức chế chuyển hóa warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu (hiếm với dạng tại chỗ)",
+                    "management": "Theo dõi INR nếu dùng cùng (hiếm với dạng tại chỗ)."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng miconazole"
+            ],
+            "tương_đối": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Có thể dùng khi lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay miconazole",
+                "Rửa sạch vùng da",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 2 lần/ngày lên vùng da sạch, khô.",
+                "timing": "Dùng 2 lần/ngày, đều đặn. Dùng đủ thời gian (2-4 tuần cho nấm da).",
+                "notes": "Dùng cho nấm da, nấm âm đạo."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Monistat, Micatin (miconazole)",
+                "UpToDate - Topical antifungals for skin infections"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Ketoconazole topical": {
+        "group": "Dermatology - Topical Antifungal",
+        "vietnamese_name": "Ketoconazole topical, Nizoral",
+        "administration": ["Topical", "Shampoo"],
+        "indications": [
+            "Nấm da (tinea corporis, tinea cruris, tinea pedis)",
+            "Nấm da đầu (tinea capitis)",
+            "Gàu, viêm da tiết bã (seborrheic dermatitis) - dạng dầu gội",
+            "Nhiễm nấm da do Candida"
+        ],
+        "contraindications": [
+            "Dị ứng ketoconazole"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 1-2 lần/ngày lên vùng da bị ảnh hưởng, dùng 2-4 tuần",
+            "adult_shampoo": "Dầu gội 2% x 2 lần/tuần, để 5 phút rồi rửa sạch",
+            "notes": "Dùng cho nấm da, gàu, viêm da tiết bã. Dùng đủ thời gian để tránh tái phát."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (đỏ, rát, ngứa) - hiếm",
+            "Bong tróc da",
+            "Khô da (khi dùng dầu gội)"
+        ],
+        "interactions": [
+            "Ít tương tác thuốc (dạng tại chỗ)"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Ketoconazole là imidazole antifungal, ức chế tổng hợp ergosterol (thành phần chính của màng tế bào nấm) bằng cách ức chế enzyme lanosterol 14-alpha-demethylase (CYP51). Thiếu ergosterol làm màng tế bào nấm bị rò rỉ, dẫn đến chết tế bào. Tác dụng với Candida, dermatophytes, Malassezia (gây gàu, viêm da tiết bã), và một số nấm khác. Dạng tại chỗ hấp thu toàn thân tối thiểu. Có dạng kem và dầu gội.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm nấm, gàu)",
+            "Kích ứng da tại chỗ",
+            "Dấu hiệu tái phát"
+        ],
+        "precautions": [
+            "Kích ứng da tại chỗ - hiếm",
+            "Dùng đủ thời gian (2-4 tuần cho nấm da) để tránh tái phát",
+            "Bôi lên vùng da sạch, khô",
+            "Dầu gội: để 5 phút rồi rửa sạch",
+            "Tránh mắt, miệng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày",
+            "duration": "12-24 giờ (dùng 1-2 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng ketoconazole"
+            ],
+            "tương_đối": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Có thể dùng khi lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay ketoconazole",
+                "Rửa sạch vùng da",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 1-2 lần/ngày lên vùng da sạch, khô. Tránh mắt, miệng.",
+                "timing": "Dùng 1-2 lần/ngày, đều đặn. Dùng đủ thời gian (2-4 tuần cho nấm da).",
+                "notes": "Dùng cho nấm da, gàu, viêm da tiết bã. Dầu gội: để 5 phút rồi rửa sạch."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Nizoral (ketoconazole topical)",
+                "UpToDate - Topical antifungals for skin infections"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Adapalene": {
+        "group": "Dermatology - Topical Retinoid",
+        "vietnamese_name": "Adapalene, Differin",
+        "administration": ["Topical"],
+        "indications": [
+            "Mụn trứng cá (acne vulgaris)",
+            "Mụn trứng cá viêm",
+            "Mụn đầu đen, mụn đầu trắng"
+        ],
+        "contraindications": [
+            "Dị ứng adapalene",
+            "Mang thai (category C)"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 1 lần/ngày buổi tối lên vùng da bị ảnh hưởng",
+            "pediatric": "Bôi mỏng 1 lần/ngày buổi tối (từ 12 tuổi trở lên)",
+            "notes": "Retinoid tại chỗ, bôi buổi tối. Tránh ánh nắng mặt trời. Kích ứng da phổ biến khi bắt đầu."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (đỏ, rát, khô, bong tróc) - phổ biến khi bắt đầu",
+            "Khô da",
+            "Nhạy cảm với ánh nắng (tăng nguy cơ cháy nắng)",
+            "Ngứa",
+            "Đỏ da"
+        ],
+        "interactions": [
+            "Các retinoid khác (tretinoin, isotretinoin): tăng kích ứng da",
+            "Benzoyl peroxide: có thể dùng kết hợp (tăng hiệu quả)",
+            "Ánh nắng mặt trời: tăng nhạy cảm"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Adapalene là retinoid tại chỗ thế hệ 3, gắn với retinoic acid receptors (RAR-beta, RAR-gamma). Kích thích tế bào sừng biệt hóa, giảm sự dính kết của tế bào sừng, giảm hình thành microcomedone (tiền thân của mụn). Cũng có tác dụng chống viêm. Đặc điểm: ít kích ứng da hơn tretinoin, ổn định hơn với ánh nắng, có thể dùng kết hợp với benzoyl peroxide. Tác dụng phát huy sau vài tuần.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm mụn trứng cá)",
+            "Kích ứng da tại chỗ (đỏ, rát, khô, bong tróc)",
+            "Nhạy cảm với ánh nắng",
+            "Dấu hiệu quá kích ứng (ngừng nếu quá nặng)"
+        ],
+        "precautions": [
+            "Kích ứng da tại chỗ - phổ biến khi bắt đầu, thường tự khỏi sau vài tuần",
+            "Nhạy cảm với ánh nắng - TRÁNH ánh nắng mặt trời, dùng kem chống nắng",
+            "Bôi buổi tối để tránh ánh nắng",
+            "Bắt đầu với tần suất thấp (cách ngày) nếu kích ứng nhiều",
+            "Có thể dùng kết hợp với benzoyl peroxide (tăng hiệu quả)",
+            "Tránh dùng với các retinoid khác (tăng kích ứng)",
+            "Không dùng khi mang thai (category C)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài tuần",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Không dùng khi mang thai (category C). Tránh ánh nắng mặt trời.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Các retinoid khác (tretinoin, isotretinoin)",
+                    "mechanism": "Tác dụng cộng dồn",
+                    "effect": "Tăng kích ứng da",
+                    "management": "Tránh dùng cùng."
+                },
+                {
+                    "drug": "Ánh nắng mặt trời",
+                    "mechanism": "Tăng nhạy cảm với ánh nắng",
+                    "effect": "Tăng nguy cơ cháy nắng",
+                    "management": "TRÁNH ánh nắng mặt trời, dùng kem chống nắng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng adapalene",
+                "Mang thai (category C)"
+            ],
+            "tương_đối": [
+                "Da nhạy cảm - thận trọng, bắt đầu với tần suất thấp",
+                "Đang dùng các retinoid khác - tránh dùng cùng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Không nên dùng khi mang thai.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng (đỏ, rát, bong tróc)",
+                "Cháy nắng nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay adapalene",
+                "Rửa sạch vùng da",
+                "Điều trị kích ứng da: dưỡng ẩm, tránh ánh nắng",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da, cháy nắng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 1 lần/ngày buổi tối lên vùng da sạch, khô. Tránh mắt, miệng.",
+                "timing": "Dùng 1 lần/ngày buổi tối. Bắt đầu với tần suất thấp (cách ngày) nếu kích ứng nhiều. TRÁNH ánh nắng mặt trời, dùng kem chống nắng.",
+                "notes": "Dùng cho mụn trứng cá. Bôi buổi tối để tránh ánh nắng. Có thể dùng kết hợp với benzoyl peroxide."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Differin (adapalene)",
+                "UpToDate - Topical retinoids for acne"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Calcipotriol": {
+        "group": "Dermatology - Topical Vitamin D Analog",
+        "vietnamese_name": "Calcipotriol, Calcipotriene, Dovonex",
+        "administration": ["Topical"],
+        "indications": [
+            "Vảy nến (psoriasis) - mảng bám",
+            "Vảy nến thể mảng",
+            "Vảy nến da đầu"
+        ],
+        "contraindications": [
+            "Dị ứng calcipotriol",
+            "Tăng calci máu",
+            "Rối loạn chuyển hóa calci",
+            "Trẻ em <12 tuổi"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 2 lần/ngày lên vùng da bị ảnh hưởng, tối đa 100g/tuần",
+            "adult_scalp": "Dung dịch bôi da đầu 2 lần/ngày",
+            "notes": "Vitamin D analog tại chỗ. Tối đa 100g/tuần để tránh tăng calci máu. Dùng đủ thời gian (4-8 tuần)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng (tăng nguy cơ tăng calci máu)",
+            "under_30": "Thận trọng (tăng nguy cơ tăng calci máu)"
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (đỏ, rát, ngứa) - phổ biến",
+            "Bong tróc da",
+            "Tăng calci máu (nếu dùng quá liều hoặc diện rộng)",
+            "Khô da"
+        ],
+        "interactions": [
+            "Thiazide diuretics: tăng nguy cơ tăng calci máu",
+            "Calcium supplements: tăng nguy cơ tăng calci máu"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Calcipotriol là vitamin D3 analog tại chỗ. Gắn với vitamin D receptor (VDR), điều chỉnh sự biệt hóa và tăng sinh tế bào sừng. Ức chế tăng sinh tế bào sừng (giảm tốc độ tăng trưởng), tăng biệt hóa tế bào sừng (cải thiện chất lượng), và giảm viêm. Được dùng cho vảy nến (psoriasis) - mảng bám. Đặc điểm: tác dụng chậm (4-8 tuần), tối đa 100g/tuần để tránh tăng calci máu, có thể dùng kết hợp với corticosteroid tại chỗ.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm vảy nến)",
+            "Kích ứng da tại chỗ",
+            "Calci máu (nếu dùng diện rộng hoặc lâu dài) - quan trọng",
+            "Dấu hiệu tăng calci máu: mệt mỏi, buồn nôn, táo bón"
+        ],
+        "precautions": [
+            "TĂNG CALCI MÁU - tối đa 100g/tuần để tránh tăng calci máu",
+            "Theo dõi calci máu nếu dùng diện rộng hoặc lâu dài",
+            "Kích ứng da tại chỗ - phổ biến, thường tự khỏi sau vài ngày",
+            "Dùng đủ thời gian (4-8 tuần) để đạt hiệu quả",
+            "Có thể dùng kết hợp với corticosteroid tại chỗ (tăng hiệu quả)",
+            "Thận trọng với thiazide diuretics, calcium supplements (tăng nguy cơ tăng calci máu)",
+            "Tránh mắt, miệng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "4-8 tuần (chậm)",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Nếu hấp thu: chuyển hóa nhanh thành chất không hoạt động."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Tăng calci máu nếu dùng quá liều hoặc diện rộng. Tối đa 100g/tuần.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thiazide diuretics (hydrochlorothiazide, chlorthalidone)",
+                    "mechanism": "Tăng tái hấp thu calci ở thận",
+                    "effect": "Tăng nguy cơ tăng calci máu",
+                    "management": "Thận trọng. Theo dõi calci máu."
+                },
+                {
+                    "drug": "Calcium supplements",
+                    "mechanism": "Tăng calci máu",
+                    "effect": "Tăng nguy cơ tăng calci máu",
+                    "management": "Thận trọng. Theo dõi calci máu."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng calcipotriol",
+                "Tăng calci máu",
+                "Rối loạn chuyển hóa calci",
+                "Trẻ em <12 tuổi"
+            ],
+            "tương_đối": [
+                "Suy thận - tăng nguy cơ tăng calci máu",
+                "Dùng với thiazide diuretics - tăng nguy cơ tăng calci máu"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Có thể dùng khi lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng",
+                "Tăng calci máu: mệt mỏi, buồn nôn, táo bón, nhịp tim chậm"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay calcipotriol",
+                "Rửa sạch vùng da",
+                "Nếu tăng calci máu: điều trị theo protocol (truyền dịch, furosemide, calcitonin nếu cần)",
+                "Theo dõi calci máu",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi calci máu, kích ứng da"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 2 lần/ngày lên vùng da sạch, khô. Tránh mắt, miệng.",
+                "timing": "Dùng 2 lần/ngày, đều đặn. Tối đa 100g/tuần. Dùng đủ thời gian (4-8 tuần).",
+                "notes": "Dùng cho vảy nến. Tối đa 100g/tuần để tránh tăng calci máu. Có thể dùng kết hợp với corticosteroid tại chỗ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Dovonex (calcipotriol)",
+                "UpToDate - Topical vitamin D analogs for psoriasis"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Diclofenac gel": {
+        "group": "Dermatology - Topical NSAID",
+        "vietnamese_name": "Diclofenac gel, Voltaren gel, Pennsaid",
+        "administration": ["Topical"],
+        "indications": [
+            "Đau khớp (osteoarthritis) - tại chỗ",
+            "Đau cơ xương - tại chỗ",
+            "Viêm gân (tendinitis) - tại chỗ",
+            "Đau do chấn thương - tại chỗ"
+        ],
+        "contraindications": [
+            "Dị ứng diclofenac hoặc NSAIDs",
+            "Dị ứng aspirin (nếu có hội chứng dị ứng aspirin)",
+            "Loét dạ dày tá tràng nặng",
+            "Suy thận nặng",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 4 lần/ngày lên vùng da bị ảnh hưởng, tối đa 32g/ngày",
+            "notes": "NSAID tại chỗ. Bôi lên vùng da sạch, khô. Tránh mắt, miệng, niêm mạc. Hấp thu toàn thân tối thiểu."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (đỏ, rát, ngứa) - phổ biến",
+            "Bong tróc da",
+            "Khô da",
+            "Phát ban",
+            "Tác dụng phụ toàn thân (hiếm, nếu hấp thu nhiều): đau dạ dày, tăng huyết áp"
+        ],
+        "interactions": [
+            "NSAIDs đường uống: tăng nguy cơ tác dụng phụ",
+            "Aspirin: tăng nguy cơ chảy máu",
+            "Warfarin: có thể tăng INR (hiếm với dạng tại chỗ)"
+        ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": "Diclofenac là NSAID (nonsteroidal anti-inflammatory drug), ức chế enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Prostaglandin là chất trung gian gây viêm, đau, và sốt. Ức chế COX → giảm prostaglandin → giảm viêm, giảm đau. Dạng gel tại chỗ hấp thu toàn thân tối thiểu, giảm nguy cơ tác dụng phụ toàn thân (đau dạ dày, tổn thương thận) so với NSAID đường uống. Được dùng cho đau khớp, đau cơ xương tại chỗ.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm đau, viêm)",
+            "Kích ứng da tại chỗ",
+            "Dấu hiệu tác dụng phụ toàn thân (hiếm): đau dạ dày, tăng huyết áp"
+        ],
+        "precautions": [
+            "Kích ứng da tại chỗ - phổ biến, thường tự khỏi sau vài ngày",
+            "Tránh mắt, miệng, niêm mạc",
+            "Bôi lên vùng da sạch, khô",
+            "Tối đa 32g/ngày",
+            "Thận trọng với NSAIDs đường uống (tăng nguy cơ tác dụng phụ)",
+            "Thận trọng với aspirin, warfarin (tăng nguy cơ chảy máu, hiếm với dạng tại chỗ)",
+            "Không dùng trong 3 tháng cuối thai kỳ (category D)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical, hấp thu toàn thân tối thiểu)",
+            "onset": "Vài giờ",
+            "duration": "6 giờ (dùng 4 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng gel. Nếu hấp thu: gan (chuyển hóa), thận (thải trừ)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Không dùng trong 3 tháng cuối thai kỳ (category D). Nguy cơ đau dạ dày, tổn thương thận nếu hấp thu toàn thân (hiếm với dạng tại chỗ).",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "NSAIDs đường uống (ibuprofen, naproxen)",
+                    "mechanism": "Tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ tác dụng phụ (đau dạ dày, tổn thương thận)",
+                    "management": "Thận trọng. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "Aspirin, Warfarin",
+                    "mechanism": "Tăng nguy cơ chảy máu",
+                    "effect": "Tăng nguy cơ chảy máu (hiếm với dạng tại chỗ)",
+                    "management": "Thận trọng. Theo dõi INR nếu dùng với warfarin (hiếm với dạng tại chỗ)."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng diclofenac hoặc NSAIDs",
+                "Dị ứng aspirin (nếu có hội chứng dị ứng aspirin)",
+                "Loét dạ dày tá tràng nặng",
+                "Suy thận nặng",
+                "Suy gan nặng",
+                "3 tháng cuối thai kỳ (category D)"
+            ],
+            "tương_đối": [
+                "Suy thận nhẹ đến trung bình - thận trọng",
+                "Suy gan nhẹ đến trung bình - thận trọng",
+                "Dùng với NSAIDs đường uống - tăng nguy cơ tác dụng phụ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong 3 tháng cuối",
+            "pregnancy_details": "Category C trong 1-2 tháng đầu, Category D trong 3 tháng cuối. Không dùng trong 3 tháng cuối thai kỳ (nguy cơ đóng ống động mạch thai nhi). Hấp thu toàn thân tối thiểu từ dạng gel.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng gel. Bài tiết vào sữa mẹ ở nồng độ rất thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "CHỐNG CHỈ ĐỊNH (nguy cơ tổn thương gan)",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng gel. Nếu hấp thu: chuyển hóa qua gan. Suy gan làm giảm chuyển hóa và tăng nguy cơ tổn thương gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng",
+                "Tác dụng phụ toàn thân (nếu hấp thu nhiều): đau dạ dày, tổn thương thận"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay diclofenac gel",
+                "Rửa sạch vùng da",
+                "Nếu có tác dụng phụ toàn thân: điều trị theo protocol NSAID overdose",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da, dấu hiệu tác dụng phụ toàn thân"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 4 lần/ngày lên vùng da sạch, khô. Tránh mắt, miệng, niêm mạc.",
+                "timing": "Dùng 4 lần/ngày, đều đặn. Tối đa 32g/ngày.",
+                "notes": "Dùng cho đau khớp, đau cơ xương tại chỗ. Bôi lên vùng da sạch, khô. Hấp thu toàn thân tối thiểu."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Voltaren gel, Pennsaid (diclofenac gel)",
+                "UpToDate - Topical NSAIDs for pain"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Hydrocortisone topical": {
+        "group": "Dermatology - Topical Corticosteroid (Low Potency)",
+        "vietnamese_name": "Hydrocortisone topical, Cortaid, Cortizone",
+        "administration": ["Topical"],
+        "indications": [
+            "Viêm da dị ứng (atopic dermatitis) nhẹ",
+            "Viêm da tiếp xúc (contact dermatitis) nhẹ",
+            "Eczema nhẹ",
+            "Phát ban nhẹ",
+            "Vùng da nhạy cảm (mặt, nách, bẹn)"
+        ],
+        "contraindications": [
+            "Dị ứng hydrocortisone hoặc corticosteroid",
+            "Nhiễm trùng da (bacterial, fungal, viral) - không dùng trừ khi có kháng sinh/kháng nấm"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 2-4 lần/ngày lên vùng da bị ảnh hưởng",
+            "pediatric": "Bôi mỏng 2-4 lần/ngày (từ 2 tuổi trở lên)",
+            "notes": "Corticosteroid yếu nhất (low potency). An toàn cho vùng da nhạy cảm. Có thể dùng kéo dài hơn các corticosteroid mạnh."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (hiếm)",
+            "Teo da (hiếm, nếu dùng kéo dài)",
+            "Nhiễm trùng da thứ phát (hiếm)"
+        ],
+        "interactions": [
+            "Không có tương tác đáng kể"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Hydrocortisone là corticosteroid tự nhiên, low potency (nhóm VII - yếu nhất). Gắn với thụ thể glucocorticoid, ức chế viêm, ức chế miễn dịch, co mạch. Đặc điểm: yếu nhất, an toàn cho vùng da nhạy cảm (mặt, nách, bẹn), có thể dùng kéo dài hơn các corticosteroid mạnh, ít nguy cơ teo da.",
+        "monitoring": [
+            "Đáp ứng lâm sàng",
+            "Kích ứng da tại chỗ (hiếm)",
+            "Dấu hiệu teo da (nếu dùng kéo dài)"
+        ],
+        "precautions": [
+            "Corticosteroid yếu nhất - chỉ dùng cho tổn thương nhẹ",
+            "An toàn cho vùng da nhạy cảm (mặt, nách, bẹn)",
+            "Có thể dùng kéo dài hơn các corticosteroid mạnh",
+            "Ít nguy cơ teo da",
+            "Tránh dùng trên vùng da bị loét, nhiễm trùng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày",
+            "duration": "6-12 giờ (dùng 2-4 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng hydrocortisone hoặc corticosteroid",
+                "Nhiễm trùng da (bacterial, fungal, viral) - không dùng trừ khi có kháng sinh/kháng nấm"
+            ],
+            "tương_đối": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay hydrocortisone",
+                "Rửa sạch vùng da",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 2-4 lần/ngày lên vùng da sạch, khô.",
+                "timing": "Dùng 2-4 lần/ngày, đều đặn. Có thể dùng kéo dài hơn các corticosteroid mạnh.",
+                "notes": "Corticosteroid yếu nhất. An toàn cho vùng da nhạy cảm (mặt, nách, bẹn)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cortaid, Cortizone (hydrocortisone topical)",
+                "UpToDate - Topical corticosteroids for skin disorders"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Triamcinolone topical": {
+        "group": "Dermatology - Topical Corticosteroid (Medium-High Potency)",
+        "vietnamese_name": "Triamcinolone topical, Kenalog, Aristocort",
+        "administration": ["Topical"],
+        "indications": [
+            "Viêm da dị ứng (atopic dermatitis)",
+            "Vảy nến (psoriasis)",
+            "Viêm da tiếp xúc (contact dermatitis)",
+            "Eczema",
+            "Lichen planus"
+        ],
+        "contraindications": [
+            "Dị ứng triamcinolone hoặc corticosteroid",
+            "Nhiễm trùng da (bacterial, fungal, viral) - không dùng trừ khi có kháng sinh/kháng nấm"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 2-4 lần/ngày lên vùng da bị ảnh hưởng",
+            "notes": "Medium-high potency (nhóm III-IV). Không dùng >2 tuần liên tục. Tránh dùng trên mặt, nách, bẹn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Teo da (skin atrophy) - phổ biến nếu dùng kéo dài",
+            "Giãn mạch (telangiectasia)",
+            "Rạn da (striae)",
+            "Kích ứng da tại chỗ",
+            "Nhiễm trùng da thứ phát"
+        ],
+        "interactions": [
+            "Không có tương tác đáng kể"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Triamcinolone là corticosteroid tổng hợp, medium-high potency (nhóm III-IV). Gắn với thụ thể glucocorticoid, ức chế viêm, ức chế miễn dịch, co mạch. Đặc điểm: medium-high potency, hiệu quả với nhiều bệnh da, nhưng có nguy cơ teo da nếu dùng kéo dài.",
+        "monitoring": [
+            "Đáp ứng lâm sàng",
+            "Dấu hiệu teo da",
+            "Dấu hiệu nhiễm trùng da"
+        ],
+        "precautions": [
+            "Medium-high potency - không dùng >2 tuần liên tục",
+            "Tránh dùng trên mặt, nách, bẹn",
+            "Nguy cơ teo da nếu dùng kéo dài",
+            "Tránh dùng trên vùng da bị loét, nhiễm trùng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày",
+            "duration": "6-12 giờ (dùng 2-4 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng triamcinolone hoặc corticosteroid",
+                "Nhiễm trùng da (bacterial, fungal, viral) - không dùng trừ khi có kháng sinh/kháng nấm"
+            ],
+            "tương_đối": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Teo da nặng",
+                "Kích ứng da nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay triamcinolone",
+                "Rửa sạch vùng da",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da, teo da"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 2-4 lần/ngày lên vùng da sạch, khô.",
+                "timing": "Dùng 2-4 lần/ngày, đều đặn. Không dùng >2 tuần liên tục.",
+                "notes": "Medium-high potency. Tránh dùng trên mặt, nách, bẹn."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Kenalog, Aristocort (triamcinolone topical)",
+                "UpToDate - Topical corticosteroids for skin disorders"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Betamethasone topical": {
+        "group": "Dermatology - Topical Corticosteroid (High Potency)",
+        "vietnamese_name": "Betamethasone topical, Diprolene, Celestone",
+        "administration": ["Topical"],
+        "indications": [
+            "Viêm da dị ứng (atopic dermatitis) nặng",
+            "Vảy nến (psoriasis) nặng",
+            "Viêm da tiếp xúc (contact dermatitis) nặng",
+            "Eczema nặng"
+        ],
+        "contraindications": [
+            "Dị ứng betamethasone hoặc corticosteroid",
+            "Nhiễm trùng da (bacterial, fungal, viral) - không dùng trừ khi có kháng sinh/kháng nấm"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 1-2 lần/ngày lên vùng da bị ảnh hưởng",
+            "notes": "High potency (nhóm II). Không dùng >2 tuần liên tục. Tránh dùng trên mặt, nách, bẹn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Teo da (skin atrophy) - phổ biến nếu dùng kéo dài",
+            "Giãn mạch (telangiectasia)",
+            "Rạn da (striae)",
+            "Kích ứng da tại chỗ",
+            "Nhiễm trùng da thứ phát"
+        ],
+        "interactions": [
+            "Không có tương tác đáng kể"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Betamethasone là corticosteroid tổng hợp, high potency (nhóm II). Gắn với thụ thể glucocorticoid, ức chế viêm, ức chế miễn dịch, co mạch. Đặc điểm: high potency, hiệu quả với tổn thương nặng, nhưng có nguy cơ teo da cao nếu dùng kéo dài.",
+        "monitoring": [
+            "Đáp ứng lâm sàng",
+            "Dấu hiệu teo da",
+            "Dấu hiệu nhiễm trùng da"
+        ],
+        "precautions": [
+            "High potency - không dùng >2 tuần liên tục",
+            "Tránh dùng trên mặt, nách, bẹn",
+            "Nguy cơ teo da cao nếu dùng kéo dài",
+            "Tránh dùng trên vùng da bị loét, nhiễm trùng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày",
+            "duration": "12-24 giờ (dùng 1-2 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng betamethasone hoặc corticosteroid",
+                "Nhiễm trùng da (bacterial, fungal, viral) - không dùng trừ khi có kháng sinh/kháng nấm"
+            ],
+            "tương_đối": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Teo da nặng",
+                "Kích ứng da nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay betamethasone",
+                "Rửa sạch vùng da",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da, teo da"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 1-2 lần/ngày lên vùng da sạch, khô.",
+                "timing": "Dùng 1-2 lần/ngày, đều đặn. Không dùng >2 tuần liên tục.",
+                "notes": "High potency. Tránh dùng trên mặt, nách, bẹn."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Diprolene, Celestone (betamethasone topical)",
+                "UpToDate - Topical corticosteroids for skin disorders"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Mometasone topical": {
+        "group": "Dermatology - Topical Corticosteroid (High Potency)",
+        "vietnamese_name": "Mometasone topical, Elocon",
+        "administration": ["Topical"],
+        "indications": [
+            "Viêm da dị ứng (atopic dermatitis)",
+            "Vảy nến (psoriasis)",
+            "Viêm da tiếp xúc (contact dermatitis)",
+            "Eczema"
+        ],
+        "contraindications": [
+            "Dị ứng mometasone hoặc corticosteroid",
+            "Nhiễm trùng da (bacterial, fungal, viral) - không dùng trừ khi có kháng sinh/kháng nấm"
+        ],
+        "dosage": {
+            "adult_topical": "Bôi mỏng 1 lần/ngày lên vùng da bị ảnh hưởng",
+            "notes": "High potency (nhóm II). Dùng 1 lần/ngày. Không dùng >2 tuần liên tục. Tránh dùng trên mặt, nách, bẹn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Teo da (skin atrophy) - phổ biến nếu dùng kéo dài",
+            "Giãn mạch (telangiectasia)",
+            "Rạn da (striae)",
+            "Kích ứng da tại chỗ",
+            "Nhiễm trùng da thứ phát"
+        ],
+        "interactions": [
+            "Không có tương tác đáng kể"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Mometasone là corticosteroid tổng hợp, high potency (nhóm II). Gắn với thụ thể glucocorticoid, ức chế viêm, ức chế miễn dịch, co mạch. Đặc điểm: high potency, dùng 1 lần/ngày (ưu điểm), hiệu quả với nhiều bệnh da, nhưng có nguy cơ teo da nếu dùng kéo dài.",
+        "monitoring": [
+            "Đáp ứng lâm sàng",
+            "Dấu hiệu teo da",
+            "Dấu hiệu nhiễm trùng da"
+        ],
+        "precautions": [
+            "High potency - không dùng >2 tuần liên tục",
+            "Dùng 1 lần/ngày - ưu điểm",
+            "Tránh dùng trên mặt, nách, bẹn",
+            "Nguy cơ teo da nếu dùng kéo dài",
+            "Tránh dùng trên vùng da bị loét, nhiễm trùng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Vài ngày",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng mometasone hoặc corticosteroid",
+                "Nhiễm trùng da (bacterial, fungal, viral) - không dùng trừ khi có kháng sinh/kháng nấm"
+            ],
+            "tương_đối": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Teo da nặng",
+                "Kích ứng da nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay mometasone",
+                "Rửa sạch vùng da",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi kích ứng da, teo da"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Bôi mỏng 1 lần/ngày lên vùng da sạch, khô.",
+                "timing": "Dùng 1 lần/ngày, đều đặn. Không dùng >2 tuần liên tục.",
+                "notes": "High potency. Dùng 1 lần/ngày - ưu điểm. Tránh dùng trên mặt, nách, bẹn."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Elocon (mometasone topical)",
+                "UpToDate - Topical corticosteroids for skin disorders"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
         }
     }
 }

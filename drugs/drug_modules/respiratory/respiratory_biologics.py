@@ -715,7 +715,21 @@ RESPIRATORY_BIOLOGICS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections (rare)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Injection site reactions (pain, redness, swelling)", "Respiratory function (FEV1) - assess treatment response", "Asthma exacerbation frequency - reduction in asthma attacks", "ICS use - may reduce dose", "Signs of respiratory infection", "Signs of serious infection"]
+        },
+        "guideline_tags": [
+            "GINA Guidelines - Severe Asthma",
+            "FDA Drug Information - Tezepelumab"
+        ]
     }
 }
 

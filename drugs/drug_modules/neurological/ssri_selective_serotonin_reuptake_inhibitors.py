@@ -80,7 +80,7 @@ SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
         [{'drug': 'CYP2D6 substrates (codeine, metoprolol)', 'mechanism':
         'Ức chế CYP2D6', 'effect':
         'Tăng nồng độ các thuốc chuyển hóa qua CYP2D6', 'management':
-        'Thận trọng. Điều chỉnh liều nếu cần.'}]}, 'contraindications': {
+        'Thận trọng. Điều chỉnh liều nếu cần.'}]},         'contraindications': {
         'tuyệt_đối': ['Dùng MAO inhibitor (chống chỉ định tuyệt đối)',
         'Dị ứng fluoxetine', 'Hội chứng serotonin đang diễn ra'], 'tương_đối':
         ['Suy gan nặng - giảm liều', 'Suy thận nặng (CrCl <30) - giảm liều',
@@ -88,6 +88,17 @@ SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
         'Có ý định tự tử - chỉ kê đơn số lượng ít', 'Bệnh tim - thận trọng',
         'Rối loạn đông máu - tăng nguy cơ chảy máu',
         'Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin']},
+        'contraindications_detail': {
+        'tuyệt_đối': ['Dùng MAO inhibitor (chống chỉ định tuyệt đối)',
+        'Dị ứng fluoxetine', 'Hội chứng serotonin đang diễn ra'], 'tương_đối':
+        ['Suy gan nặng - giảm liều', 'Suy thận nặng (CrCl <30) - giảm liều',
+        'Trẻ em <18 tuổi - tăng nguy cơ tự tử',
+        'Có ý định tự tử - chỉ kê đơn số lượng ít', 'Bệnh tim - thận trọng',
+        'Rối loạn đông máu - tăng nguy cơ chảy máu',
+        'Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin']},
+        'renal_adjustment': {'normal': 'Không cần chỉnh liều', '30_60': 'Thận trọng, có thể cần giảm liều',
+        'under_30': 'Giảm liều 25-50%', 'dialysis': 'Thận trọng, giảm liều. Fluoxetine không được lọc sạch hiệu quả qua thẩm phân máu.',
+        'notes': 'Fluoxetine chuyển hóa chủ yếu ở gan. Suy thận có thể ảnh hưởng nhẹ đến thải trừ. Giảm liều ở suy thận nặng.'},
         'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
         'Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Một số nghiên cứu gợi ý tăng nguy cơ dị tật thai nhi (dị tật tim, dị tật chi) khi dùng trong 3 tháng đầu, nhưng chứng cứ không rõ ràng. Có thể gây tăng huyết áp phổi ở trẻ sơ sinh (PPHN) - nguy cơ thấp. Có thể gây hội chứng cai ở trẻ sơ sinh (kích động, khó thở, run) nếu dùng gần ngày sinh. Theo dõi trẻ sơ sinh sau sinh.'
         , 'lactation': {'safety': 'Compatible', 'details':

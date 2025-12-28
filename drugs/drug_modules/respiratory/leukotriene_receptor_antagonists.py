@@ -62,11 +62,19 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Giảm hiệu quả montelukast, có thể không kiểm soát được hen',
         'management':
         'Theo dõi đáp ứng điều trị. Có thể cần tăng liều montelukast hoặc xem xét thuốc thay thế.'
-        }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        }], 'minor': []},         'contraindications': {'tuyệt_đối': [
         'Dị ứng với montelukast hoặc các thành phần khác'], 'tương_đối': [
         'Rối loạn tâm thần (trầm cảm, lo âu, rối loạn hành vi) - thận trọng, theo dõi chặt chẽ'
         , 'Tiền sử tự sát - thận trọng, theo dõi chặt chẽ',
         'Dùng với phenobarbital, rifampin - có thể giảm hiệu quả']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng với montelukast hoặc các thành phần khác'], 'tương_đối': [
+        'Rối loạn tâm thần (trầm cảm, lo âu, rối loạn hành vi) - thận trọng, theo dõi chặt chẽ'
+        , 'Tiền sử tự sát - thận trọng, theo dõi chặt chẽ',
+        'Dùng với phenobarbital, rifampin - có thể giảm hiệu quả']},
+        'renal_adjustment': {'normal': 'Không cần chỉnh liều', '30_60': 'Không cần chỉnh liều',
+        'under_30': 'Không cần chỉnh liều', 'dialysis': 'Không cần chỉnh liều',
+        'notes': 'Montelukast chuyển hóa qua gan, thải trừ một phần qua thận. Không cần điều chỉnh liều ở suy thận.'},
         'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
         'Montelukast là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Montelukast được sử dụng trong thai kỳ để điều trị hen và có vẻ an toàn. Có thể được dùng khi lợi ích vượt quá nguy cơ.'
         , 'lactation': {'safety': 'Compatible', 'details':
@@ -128,8 +136,11 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         '6-12 giờ (dùng 2-4 lần/ngày)', 'protein_binding': '89%', 'clearance':
         'Gan: chuyển hóa. Thận: bài tiết một phần. Hấp thu toàn thân ít từ dạng hít.'}, 'storage':
         'Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh.'
-        , 'black_box_warnings': None, 'drug_interactions': {'major': [],
+        ,         'black_box_warnings': None, 'drug_interactions': {'major': [],
         'moderate': [], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'Dị ứng với nedocromil hoặc các thành phần khác'], 'tương_đối': [
+        'Trẻ em <6 tuổi - an toàn từ 6 tuổi trở lên']},
+        'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng với nedocromil hoặc các thành phần khác'], 'tương_đối': [
         'Trẻ em <6 tuổi - an toàn từ 6 tuổi trở lên']},
         'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
@@ -159,6 +170,306 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'references': {'primary_sources': [
         'FDA Label: Tilade (Nedocromil)',
         'UpToDate: Mast cell stabilizers in asthma'], 'last_updated': '2025-02-05',
-        'evidence_level': 'High - FDA approved'}}}
+        'evidence_level': 'High - FDA approved'}},
+    
+    "Zafirlukast": {
+        "group": "Respiratory - Leukotriene Receptor Antagonist",
+        "vietnamese_name": "Zafirlukast, Accolate",
+        "administration": ["PO"],
+        "indications": [
+            "Hen phế quản (phòng ngừa)",
+            "Viêm mũi dị ứng"
+        ],
+        "contraindications": [
+            "Dị ứng zafirlukast",
+            "Suy gan nặng",
+            "Dùng warfarin (tăng nguy cơ chảy máu)"
+        ],
+        "dosage": {
+            "adult": "20mg x 2 lần/ngày (trước bữa ăn 1 giờ hoặc sau bữa ăn 2 giờ)",
+            "pediatric_7_11": "10mg x 2 lần/ngày",
+            "notes": "PHẢI uống trước bữa ăn 1 giờ hoặc sau bữa ăn 2 giờ (thức ăn giảm hấp thu 40%). Tăng nguy cơ tổn thương gan."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Buồn nôn",
+            "Tiêu chảy",
+            "Tổn thương gan (hiếm nhưng nguy hiểm)",
+            "Tăng nguy cơ chảy máu (nếu dùng với warfarin)"
+        ],
+        "interactions": [
+            "Warfarin: tăng INR, tăng nguy cơ chảy máu",
+            "Aspirin: tăng nồng độ zafirlukast",
+            "Erythromycin, Theophylline: giảm nồng độ zafirlukast",
+            "Thức ăn: giảm hấp thu 40%"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Zafirlukast là leukotriene receptor antagonist (LTRA), đối kháng chọn lọc thụ thể leukotriene D4 và E4 (CysLT1 receptor). Leukotriene là các chất trung gian gây viêm được tổng hợp từ acid arachidonic, gây co thắt phế quản, tăng tính thấm mạch máu, phù nề, và tăng tiết chất nhầy. Zafirlukast ức chế leukotriene gắn vào CysLT1 receptor, ngăn chặn các tác dụng này, từ đó giảm co thắt phế quản, giảm viêm, và giảm triệu chứng hen. Tác dụng phòng ngừa hen, đặc biệt hen do dị ứng. Không dùng cho cắt cơn cấp. Đặc điểm: PHẢI uống trước bữa ăn 1 giờ hoặc sau bữa ăn 2 giờ (thức ăn giảm hấp thu 40%), tăng nguy cơ tổn thương gan, tương tác với warfarin (tăng INR).",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng hen, giảm tần suất cơn cấp)",
+            "Chức năng gan (ALT, AST) - QUAN TRỌNG (nguy cơ tổn thương gan)",
+            "Dấu hiệu tổn thương gan: vàng da, đau bụng, mệt mỏi, nước tiểu sẫm màu",
+            "INR nếu dùng với warfarin (tăng nguy cơ chảy máu)",
+            "Nhức đầu, buồn nôn, tiêu chảy - tác dụng phụ phổ biến"
+        ],
+        "precautions": [
+            "TỔN THƯƠNG GAN - hiếm nhưng nguy hiểm, theo dõi ALT/AST định kỳ",
+            "Ngừng ngay nếu có dấu hiệu tổn thương gan (vàng da, đau bụng, mệt mỏi)",
+            "PHẢI uống trước bữa ăn 1 giờ hoặc sau bữa ăn 2 giờ (thức ăn giảm hấp thu 40%)",
+            "Tương tác với warfarin - tăng INR, tăng nguy cơ chảy máu, theo dõi INR thường xuyên",
+            "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp",
+            "Tác dụng phát huy sau vài giờ đến vài ngày",
+            "Dùng 2 lần/ngày, đều đặn hàng ngày"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10 giờ",
+            "onset": "Vài giờ đến vài ngày (tác dụng phòng ngừa)",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "99%",
+            "clearance": "Gan: chuyển hóa qua CYP2C9, CYP3A4. Thận: bài tiết một phần. Thức ăn giảm hấp thu 40%."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Tổn thương gan - hiếm nhưng nguy hiểm, có thể tử vong. Ngừng ngay nếu có dấu hiệu tổn thương gan. Tương tác với warfarin - tăng INR, tăng nguy cơ chảy máu.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Zafirlukast ức chế chuyển hóa warfarin qua CYP2C9",
+                    "effect": "Tăng nồng độ warfarin, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng zafirlukast). Có thể cần giảm liều warfarin. Đặc biệt thận trọng."
+                },
+                {
+                    "drug": "Thức ăn",
+                    "mechanism": "Thức ăn giảm hấp thu zafirlukast",
+                    "effect": "Giảm hấp thu 40%, giảm nồng độ, giảm hiệu quả",
+                    "management": "PHẢI uống trước bữa ăn 1 giờ hoặc sau bữa ăn 2 giờ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Aspirin",
+                    "mechanism": "Tăng nồng độ zafirlukast",
+                    "effect": "Tăng nồng độ zafirlukast, tăng tác dụng phụ",
+                    "management": "Thận trọng. Theo dõi dấu hiệu tổn thương gan."
+                },
+                {
+                    "drug": "Erythromycin, Theophylline",
+                    "mechanism": "Giảm nồng độ zafirlukast",
+                    "effect": "Giảm nồng độ zafirlukast, giảm hiệu quả",
+                    "management": "Có thể cần tăng liều zafirlukast."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng zafirlukast",
+                "Suy gan nặng (Child-Pugh C)",
+                "Dùng warfarin (tăng nguy cơ chảy máu nghiêm trọng)"
+            ],
+            "tương_đối": [
+                "Suy gan nhẹ đến trung bình - tăng nguy cơ tổn thương gan",
+                "Tiền sử tổn thương gan - tăng nguy cơ",
+                "Dùng với aspirin - tăng nồng độ zafirlukast"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B - an toàn hơn category C. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Zafirlukast bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng, theo dõi ALT/AST định kỳ",
+            "moderate": "Thận trọng, theo dõi ALT/AST định kỳ",
+            "severe": "CHỐNG CHỈ ĐỊNH (nguy cơ tổn thương gan)",
+            "notes": "Zafirlukast chuyển hóa qua gan (CYP2C9, CYP3A4). Suy gan làm giảm chuyển hóa và tăng nguy cơ tổn thương gan. Nguy cơ tổn thương gan hiếm nhưng nguy hiểm."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Nhức đầu",
+                "Buồn nôn, nôn",
+                "Tiêu chảy",
+                "Tổn thương gan (có thể chậm)",
+                "Chảy máu (nếu dùng với warfarin)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay zafirlukast",
+                "Theo dõi chức năng gan (ALT/AST)",
+                "Hỗ trợ và điều trị triệu chứng",
+                "Nếu dùng với warfarin: theo dõi INR, điều trị chảy máu nếu có"
+            ],
+            "monitoring": "Theo dõi chức năng gan (ALT/AST), INR (nếu dùng với warfarin), triệu chứng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "PHẢI uống trước bữa ăn 1 giờ hoặc sau bữa ăn 2 giờ (thức ăn giảm hấp thu 40%)",
+                "timing": "Dùng 2 lần/ngày, đều đặn hàng ngày. Không dùng cho cắt cơn cấp. QUAN TRỌNG: Theo dõi chức năng gan (ALT/AST) định kỳ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Accolate (zafirlukast)",
+                "UpToDate - Leukotriene receptor antagonists in asthma"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Cromolyn": {
+        "group": "Respiratory - Mast Cell Stabilizer",
+        "vietnamese_name": "Cromolyn, Cromolyn Sodium, Intal",
+        "administration": ["Inhalation", "Nasal", "Ophthalmic"],
+        "indications": [
+            "Hen phế quản (phòng ngừa)",
+            "Viêm mũi dị ứng",
+            "Viêm kết mạc dị ứng"
+        ],
+        "contraindications": [
+            "Dị ứng cromolyn",
+            "Hen phế quản cấp tính (không dùng cho cắt cơn cấp)"
+        ],
+        "dosage": {
+            "adult_inhalation": "20mg (2 puffs) x 4 lần/ngày, có thể giảm xuống 2-3 lần/ngày khi kiểm soát tốt",
+            "adult_nasal": "5.2mg (1 spray) mỗi lỗ mũi x 3-4 lần/ngày",
+            "adult_ophthalmic": "1-2 giọt mỗi mắt x 4-6 lần/ngày",
+            "pediatric_inhalation": "20mg (2 puffs) x 4 lần/ngày (từ 2 tuổi trở lên)",
+            "notes": "Mast cell stabilizer, dùng để phòng ngừa, không dùng cho cắt cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Ho (phổ biến khi hít)",
+            "Kích ứng họng",
+            "Vị đắng (khi hít)",
+            "Hắt hơi (khi dùng mũi)",
+            "Kích ứng mắt (khi dùng mắt)",
+            "Nhức đầu",
+            "Buồn nôn (hiếm)"
+        ],
+        "interactions": [
+            "Ít tương tác thuốc"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Cromolyn là mast cell stabilizer, ức chế phóng thích các chất trung gian gây viêm (histamine, leukotriene, prostaglandin, tryptase) từ mast cells. Ngăn chặn degranulation của mast cells khi tiếp xúc với chất gây dị ứng, từ đó giảm co thắt phế quản, giảm viêm, và giảm triệu chứng hen. Tác dụng phòng ngừa hen, đặc biệt hen do dị ứng và hen do gắng sức. Tác dụng phát huy sau vài ngày đến vài tuần. Không dùng cho cắt cơn cấp. Có dạng hít (inhalation), mũi (nasal), và mắt (ophthalmic).",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng hen, giảm tần suất cơn cấp)",
+            "Ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến",
+            "Tần suất dùng SABA (nếu tăng → cần đánh giá lại điều trị)",
+            "Kỹ thuật hít (nếu dùng dạng hít)"
+        ],
+        "precautions": [
+            "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, cromolyn là thuốc phòng ngừa",
+            "Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì",
+            "Dùng đều đặn hàng ngày, không phải khi cần",
+            "Ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến, có thể giảm sau vài ngày",
+            "Súc miệng sau khi hít để giảm vị đắng và kích ứng",
+            "Có thể dùng cho trẻ em từ 2 tuổi trở lên (dạng hít)",
+            "Hiệu quả với hen do dị ứng và hen do gắng sức"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1.3 giờ",
+            "onset": "Vài ngày đến vài tuần (tác dụng phòng ngừa)",
+            "duration": "6-8 giờ (dùng 3-4 lần/ngày)",
+            "protein_binding": "65%",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Thận: bài tiết một phần."
+        },
+        "storage": "Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Dạng mũi/mắt: bảo quản ở nhiệt độ phòng, tránh ẩm.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, không dùng cho cắt cơn cấp.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng cromolyn",
+                "Hen phế quản cấp tính (không dùng cho cắt cơn cấp)"
+            ],
+            "tương_đối": [
+                "Trẻ em <2 tuổi (dạng hít) - an toàn từ 2 tuổi trở lên"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B - an toàn hơn category C. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Cromolyn hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Bài tiết vào sữa mẹ ở nồng độ rất thấp.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ho nặng",
+                "Kích ứng họng nặng",
+                "Buồn nôn",
+                "Nhức đầu"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay cromolyn",
+                "Súc miệng kỹ",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi triệu chứng, ho, kích ứng họng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": None,
+            "inhalation": {
+                "technique": "Dạng hít (MDI): Lắc kỹ trước khi dùng. Hít sâu và giữ hơi thở 10 giây. Đợi 30-60 giây trước khi dùng liều thứ hai (nếu cần).",
+                "timing": "Dùng 3-4 lần/ngày, đều đặn hàng ngày, không phải khi cần.",
+                "after_use": "Súc miệng và súc họng sau mỗi lần dùng để giảm vị đắng và kích ứng.",
+                "notes": "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần."
+            },
+            "nasal": {
+                "technique": "Dạng mũi: Lắc kỹ trước khi dùng. Xịt vào mỗi lỗ mũi.",
+                "timing": "Dùng 3-4 lần/ngày, đều đặn hàng ngày.",
+                "notes": "Hiệu quả với viêm mũi dị ứng."
+            },
+            "ophthalmic": {
+                "technique": "Dạng mắt: Nhỏ 1-2 giọt vào mỗi mắt.",
+                "timing": "Dùng 4-6 lần/ngày, đều đặn hàng ngày.",
+                "notes": "Hiệu quả với viêm kết mạc dị ứng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Intal (cromolyn sodium)",
+                "UpToDate - Mast cell stabilizers in asthma"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    }
+}
 
 __all__ = ['LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS']

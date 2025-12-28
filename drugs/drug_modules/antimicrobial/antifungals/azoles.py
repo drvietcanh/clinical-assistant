@@ -150,6 +150,28 @@ AZOLES_DRUGS = {
                 "Dùng với phenytoin - tăng độc tính phenytoin"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng fluconazole hoặc các azole antifungals khác",
+                "Có thai (3 tháng đầu) - chống chỉ định tuyệt đối, có thể gây dị tật thai nhi",
+                "Dùng terfenadine hoặc astemizole với liều fluconazole ≥400mg/ngày - tăng nguy cơ QT kéo dài, loạn nhịp tim nghiêm trọng"
+            ],
+            "tương_đối": [
+                "Có thai (tam cá nguyệt 2-3) - thận trọng, chỉ dùng khi thực sự cần thiết",
+                "Suy thận nặng (CrCl <30) - giảm liều đáng kể, theo dõi chặt chẽ",
+                "Suy gan - thận trọng, có thể giảm chuyển hóa",
+                "QT kéo dài hoặc loạn nhịp tim - tăng nguy cơ QT kéo dài với liều cao",
+                "Dùng với warfarin - tăng nguy cơ chảy máu, cần theo dõi INR",
+                "Dùng với cyclosporine/tacrolimus - tăng độc tính, cần giảm liều",
+                "Dùng với statins - tăng nguy cơ độc cơ",
+                "Dùng với phenytoin - tăng độc tính phenytoin"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
         "pregnancy_lactation": {
             "fda_category": "C (tam cá nguyệt 2-3), D (tam cá nguyệt đầu)",
             "pregnancy_details": "Tam cá nguyệt đầu: Thuốc phân loại D - CHỐNG CHỈ ĐỊNH. Các nghiên cứu trên động vật cho thấy fluconazole liều cao có thể gây dị tật thai nhi (dị tật xương, sứt môi/vòm miệng). Có báo cáo về dị tật bẩm sinh ở người khi dùng liều cao trong tam cá nguyệt đầu. Tam cá nguyệt 2-3: Thuốc phân loại C. Có thể dùng khi lợi ích vượt quá nguy cơ, nhưng nên tránh nếu không cần thiết. Nhiễm nấm có thể gây nguy hiểm cho thai nhi. Dùng liều thấp nhất hiệu quả.",
@@ -224,7 +246,23 @@ AZOLES_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity", "QT prolongation (high doses ≥400mg/day)"],
+            "qt_prolongation": True,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hepatic function (ALT, AST) - especially with high doses or prolonged use", "Renal function (creatinine, BUN) - for dose adjustment", "ECG if high doses ≥400mg/day", "INR if co-administered with warfarin - CRITICAL", "Blood glucose if co-administered with sulfonylureas", "Phenytoin levels if co-administered"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Antifungal Therapy",
+            "FDA Black Box Warning - Fluconazole and Pregnancy (Category D in 1st trimester)",
+            "FDA Drug Information - Fluconazole",
+            "UpToDate - Fluconazole Drug Information"
+        ]
     },
 
     "Itraconazole": {
@@ -367,6 +405,24 @@ AZOLES_DRUGS = {
                 "Bệnh nhân cao tuổi - tăng nguy cơ độc tính, suy tim"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng itraconazole hoặc azole",
+                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
+                "Suy tim sung huyết hoặc có tiền sử suy tim - itraconazole có thể gây suy tim, đặc biệt ở liều cao"
+            ],
+            "tương_đối": [
+                "Suy thận (CrCl <30) khi dùng IV - không dùng IV (chứa cyclodextrin, tích lũy ở suy thận), có thể dùng PO",
+                "Suy gan - thận trọng, theo dõi chức năng gan, ngừng nếu có suy gan",
+                "Dùng với PPI, H2 blocker, antacid - giảm hấp thu (cần acid dạ dày), có thể cần tăng liều hoặc dùng solution",
+                "Bệnh nhân cao tuổi - tăng nguy cơ độc tính, suy tim"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
         "pregnancy_lactation": {
             "fda_category": "D",
             "pregnancy_details": "Chống chỉ định trong thai kỳ. Itraconazole gây dị tật thai nhi, đặc biệt trong 3 tháng đầu. Có thể gây sẩy thai, dị tật tim, dị tật xương. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
@@ -425,7 +481,23 @@ AZOLES_DRUGS = {
             ],
             "last_updated": "2025-01-15",
             "evidence_level": "High (FDA-approved, extensive clinical data)"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Heart failure (contraindicated in CHF) - CRITICAL", "Hepatotoxicity", "QT prolongation"],
+            "qt_prolongation": True,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Signs of heart failure (edema, dyspnea, weight gain) - CRITICAL", "Hepatic function (ALT, AST, bilirubin) - common elevation", "ECG if co-administered with QT-prolonging drugs", "INR if co-administered with warfarin", "Digoxin levels if co-administered", "Phenytoin levels if co-administered", "Clinical response"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Antifungal Therapy",
+            "FDA Black Box Warning - Itraconazole and Heart Failure",
+            "FDA Black Box Warning - Itraconazole and Pregnancy (Category D)",
+            "FDA Black Box Warning - Itraconazole and Drug Interactions (CYP3A4)"
+        ]
     },
 
     "Voriconazole": {
@@ -573,6 +645,25 @@ AZOLES_DRUGS = {
                 "Bệnh nhân có tiền sử rối loạn nhịp tim - nguy cơ QT kéo dài"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng voriconazole",
+                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
+                "Dùng với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine - chống chỉ định"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <50) khi dùng IV - không dùng IV (chứa cyclodextrin, tích lũy), có thể dùng PO",
+                "Suy gan - thận trọng, theo dõi chức năng gan, ngừng nếu có suy gan",
+                "Rối loạn chuyển hóa CYP2C19 (poor metabolizer) - tăng nồng độ, tăng độc tính, cần giảm liều",
+                "Rối loạn chuyển hóa CYP2C19 (extensive metabolizer) - giảm nồng độ, có thể cần tăng liều",
+                "Bệnh nhân có tiền sử rối loạn nhịp tim - nguy cơ QT kéo dài"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
         "pregnancy_lactation": {
             "fda_category": "D",
             "pregnancy_details": "Chống chỉ định trong thai kỳ. Voriconazole gây dị tật thai nhi, đặc biệt trong 3 tháng đầu. Có thể gây sẩy thai, dị tật xương, dị tật tim. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
@@ -650,6 +741,25 @@ AZOLES_DRUGS = {
             "Dùng với ergot alkaloids (tăng nguy cơ co thắt mạch)",
             "Dùng với pimozide, quinidine (tăng nguy cơ QT kéo dài)"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng posaconazole",
+                "Dùng với sirolimus - CHỐNG CHỈ ĐỊNH (tăng nồng độ sirolimus nghiêm trọng)",
+                "Dùng với ergot alkaloids - CHỐNG CHỈ ĐỊNH (tăng nguy cơ co thắt mạch)",
+                "Dùng với pimozide, quinidine - CHỐNG CHỈ ĐỊNH (tăng nguy cơ QT kéo dài)"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) khi dùng IV - thận trọng (chứa cyclodextrin, tích lũy)",
+                "Suy gan - thận trọng, theo dõi chức năng gan",
+                "QT kéo dài hoặc rối loạn nhịp tim - tăng nguy cơ QT kéo dài",
+                "Dùng với cyclosporine/tacrolimus - tăng nồng độ, cần giảm liều 50%"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
         "dosage": {
             "adult_prophylaxis": "300mg x 2 lần/ngày (ngày đầu), sau đó 300mg x 1 lần/ngày",
             "adult_treatment": "300mg x 2 lần/ngày (ngày đầu), sau đó 300mg x 1 lần/ngày",

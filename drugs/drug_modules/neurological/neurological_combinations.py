@@ -35,6 +35,14 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "Thuốc chống đông/kháng tiểu cầu: lý thuyết tăng nguy cơ chảy máu",
         ],
         "pregnancy": "Contraindicated (đặc biệt do vinpocetine)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [],
         "mechanism_of_action": "Kết hợp nootropic (piracetam – cải thiện chuyển hóa thần kinh/vi tuần hoàn) và giãn mạch não (vinpocetine). Bằng chứng lâm sàng về cải thiện kết cục dài hạn còn hạn chế, chủ yếu dùng hỗ trợ.",
         "monitoring": [
             "Huyết áp, nhịp tim ở bệnh nhân lớn tuổi",
@@ -51,6 +59,8 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "protein_binding": "Piracetam: <10%; Vinpocetine: ~66%",
             "clearance": "Piracetam: thải trừ chủ yếu qua thận (dạng nguyên dạng); Vinpocetine: chuyển hóa gan, thải qua thận"
         },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": None,
     },
     "Citicoline/Piracetam": {
         "group": "Neurology - Combination (Neuroprotective + Nootropic)",
@@ -82,6 +92,14 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "Ít tương tác đáng kể; thận trọng khi phối hợp với nhiều nootropic khác.",
         ],
         "pregnancy": "C - tránh dùng thường quy",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [],
         "mechanism_of_action": "Citicoline ổn định màng tế bào thần kinh, piracetam cải thiện tính linh động màng và huyết lưu não. Phối hợp được dùng rộng rãi như thuốc hỗ trợ trong phục hồi thần kinh.",
         "monitoring": [
             "Đánh giá chức năng thần kinh, nhận thức",
@@ -97,6 +115,8 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "protein_binding": "Citicoline: thấp; Piracetam: <10%",
             "clearance": "Citicoline: chuyển hóa thành choline và cytidine, thải qua thận; Piracetam: thải trừ chủ yếu qua thận (dạng nguyên dạng)"
         },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": None,
     },
     "Ginkgo biloba/Vinpocetine": {
         "group": "Neurology - Combination (Herbal vasomodulator + Cerebral vasodilator)",
@@ -128,6 +148,14 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "Warfarin, DOACs, Aspirin, Clopidogrel: tăng nguy cơ chảy máu.",
         ],
         "pregnancy": "Contraindicated",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hematologic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [],
         "mechanism_of_action": "Ginkgo biloba có tác dụng chống oxy hóa, điều hòa trương lực mạch và ức chế kết tập tiểu cầu nhẹ; vinpocetine giãn mạch não. Phối hợp chủ yếu mang tính hỗ trợ, không thay thế điều trị chuẩn.",
         "monitoring": [
             "Dấu hiệu chảy máu (bầm tím, chảy máu cam, phân đen…) nếu dùng kèm chống đông.",
@@ -144,6 +172,8 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "protein_binding": "Ginkgo biloba: không rõ; Vinpocetine: ~66%",
             "clearance": "Ginkgo biloba: chuyển hóa gan, thải qua thận; Vinpocetine: chuyển hóa gan, thải qua thận"
         },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": "Nguy cơ chảy máu khi dùng kèm thuốc chống đông/kháng tiểu cầu. Ngưng trước phẫu thuật 5-7 ngày.",
     },
     "Olanzapine/Fluoxetine": {
         "group": "Psychiatry - Combination (Atypical antipsychotic + SSRI)",
@@ -178,6 +208,17 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "Thuốc kéo dài QT: tăng nguy cơ loạn nhịp.",
         ],
         "pregnancy": "C/D (tùy tam cá nguyệt và chỉ định) – dùng khi lợi ích vượt trội nguy cơ.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"metabolic": True, "cardiac": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "APA Guidelines (American Psychiatric Association)",
+            "CANMAT Guidelines (Canadian Network for Mood and Anxiety Treatments)"
+        ],
         "mechanism_of_action": "Olanzapine đối kháng D2/5-HT2A; fluoxetine ức chế tái thu hồi serotonin. Phối hợp tăng hiệu quả điều trị trầm cảm lưỡng cực/kháng trị nhưng tăng nguy cơ tác dụng phụ chuyển hóa.",
         "monitoring": [
             "Cân nặng, BMI, vòng bụng",
@@ -196,6 +237,8 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "protein_binding": "Olanzapine: 93%; Fluoxetine: 94.5%",
             "clearance": "Olanzapine: chuyển hóa gan (CYP1A2, CYP2D6), thải qua thận; Fluoxetine: chuyển hóa gan (CYP2D6, CYP2C9) thành norfluoxetine (hoạt tính), thải qua thận"
         },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": "Nguy cơ tăng cân, tăng đường huyết, tăng lipid máu (do olanzapine). Nguy cơ hội chứng serotonin khi dùng với các thuốc serotonergic khác. Tăng nguy cơ tự sát ở trẻ em, thanh thiếu niên và người trẻ tuổi.",
     },
 }
 

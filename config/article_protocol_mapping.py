@@ -221,6 +221,15 @@ ARTICLE_TO_PROTOCOL: Dict[str, Dict[str, str]] = {
         "specialty_selector": "🤰 Sản khoa (Obstetrics)",
         "protocol_display": "🤰 Sản giật (Eclampsia)"
     },
+    
+    # Rheumatology
+    "gout-chan-doan-va-dieu-tri-acr-eular": {
+        "protocol_function": "render_acute_gout",
+        "protocol_name": "Gout Cấp",
+        "specialty": "Thấp khớp",
+        "specialty_selector": "🦴 Thấp khớp (Rheumatology)",
+        "protocol_display": "🦴 Gout Cấp (Acute Gout Management)"
+    },
 }
 
 # Reverse mapping: protocol_function -> article_id(s)

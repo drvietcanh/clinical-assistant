@@ -299,7 +299,15 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Oxaliplatin có thể giảm nồng độ phenytoin trong máu.', 'effect':
         'Giảm nồng độ phenytoin, giảm hiệu quả chống co giật', 'management':
         'Theo dõi nồng độ phenytoin. Có thể cần tăng liều phenytoin.'}],
-        'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'minor': []},         'contraindications': {'tuyệt_đối': [
+        'Dị ứng oxaliplatin hoặc platinum compounds',
+        'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
+        'Đang cho con bú - chống chỉ định'], 'tương_đối': [
+        'Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục',
+        'Suy thận nặng (CrCl <30) - giảm liều 25-50%, theo dõi chặt chẽ',
+        'Suy gan nặng - thận trọng, có thể cần giảm liều',
+        'Bệnh nhân có tiền sử độc thần kinh - tăng nguy cơ độc thần kinh nặng']
+        }, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng oxaliplatin hoặc platinum compounds',
         'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
         'Đang cho con bú - chống chỉ định'], 'tương_đối': [
@@ -330,7 +338,8 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Điều trị tiêu chảy (loperamide, bù dịch)',
         'Theo dõi và điều trị phản ứng dị ứng nếu có'], 'monitoring':
         'CBC, chức năng thận, chức năng gan, dấu hiệu độc lạnh, dấu hiệu độc thần kinh, dấu hiệu nhiễm trùng'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        }, 'reversal_agents': {'available': False, 'agents': [],
+        'notes': 'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Tránh tiếp xúc với lạnh (quan trọng).'}, 'administration_instructions': {'oral': {
         'with_food': 'Không áp dụng', 'timing':
         'Không có dạng uống (chỉ có IV)'}, 'iv': {'reconstitution':
         'Pha với D5W (không dùng NS - có thể làm tăng độc tính) theo hướng dẫn nhà sản xuất'

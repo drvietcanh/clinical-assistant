@@ -152,6 +152,28 @@ SULFONAMIDE_ANTIBIOTICS = {
             "Có thai (tam cá nguyệt 1-2) - thận trọng, chỉ dùng khi thực sự cần thiết"
         ]
     },
+    "contraindications_detail": {
+        "tuyệt_đối": [
+            "Dị ứng trimethoprim, sulfamethoxazole, hoặc các sulfonamide khác - phản ứng chéo cao",
+            "Suy thận nặng (CrCl <15) - tăng nguy cơ tác dụng phụ, không hiệu quả",
+            "Suy gan nặng - tăng nguy cơ độc tính",
+            "Thiếu máu do thiếu folate - tăng nguy cơ thiếu máu nặng, giảm bạch cầu",
+            "Có thai (gần sinh, 3 tháng cuối) - nguy cơ kernicterus ở trẻ sơ sinh",
+            "Tiền sử SJS/TEN do sulfonamide - nguy cơ tái phát cao, có thể tử vong"
+        ],
+        "tương_đối": [
+            "Dị ứng sulfonamide nhẹ - thận trọng, có thể dùng nếu cần thiết nhưng theo dõi chặt chẽ",
+            "Suy thận (CrCl 15-30) - cần giảm liều 50%, theo dõi chặt chẽ",
+            "Suy gan - thận trọng, có thể giảm chuyển hóa",
+            "Thiếu folate - bổ sung folate trước và trong khi dùng",
+            "Người cao tuổi - tăng nguy cơ tăng kali máu, tác dụng phụ",
+            "Dùng với ACE inhibitor/ARB - tăng nguy cơ tăng kali máu",
+            "Dùng với warfarin - tăng nguy cơ chảy máu",
+            "Dùng với phenytoin - tăng độc tính phenytoin",
+            "Dùng với methotrexate - tăng độc tính methotrexate nghiêm trọng",
+            "Có thai (tam cá nguyệt 1-2) - thận trọng, chỉ dùng khi thực sự cần thiết"
+        ]
+    },
     "pregnancy_lactation": {
         "fda_category": "C (tam cá nguyệt 1-2), D (tam cá nguyệt 3)",
         "pregnancy_details": "Tam cá nguyệt 1-2: Thuốc phân loại C - thận trọng. Các nghiên cứu trên động vật cho thấy một số nguy cơ. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh rõ ràng, nhưng dữ liệu còn hạn chế. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong điều trị PJP hoặc nhiễm trùng nặng. Tam cá nguyệt 3 (gần sinh): Thuốc phân loại D - CHỐNG CHỈ ĐỊNH. Sulfamethoxazole có thể gây kernicterus ở trẻ sơ sinh (vàng da nặng, tổn thương não). Không dùng trong 3 tháng cuối thai kỳ. Nếu cần điều trị, dùng thuốc khác hoặc trì hoãn đến sau sinh.",
@@ -211,7 +233,7 @@ SULFONAMIDE_ANTIBIOTICS = {
         ],
         "monitoring": "Theo dõi dấu hiệu sinh tồn, công thức máu (CBC), điện giải (natri, kali), chức năng thận (creatinine, BUN, lượng nước tiểu), chức năng gan (ALT, AST, bilirubin), dấu hiệu da (SJS/TEN) trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (SJS/TEN, suy thận, viêm gan, thiếu máu)."
     },
-    "reversal_agents": None,
+    "reversal_agents": {"available": False, "agents": []},
     "administration_instructions": {
         "oral": {
             "with_food": "Uống với thức ăn để giảm kích ứng dạ dày. Có thể uống không thức ăn nếu cần nhưng không khuyến nghị.",

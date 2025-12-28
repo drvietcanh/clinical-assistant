@@ -85,7 +85,7 @@ BETA_LACTAMS_DRUGS = {
         'Antacids có thể giảm nhẹ hấp thu amoxicillin.', 'effect':
         'Giảm nhẹ hấp thu amoxicillin', 'management':
         'Cách 2 giờ nếu có thể. Không ảnh hưởng đáng kể ở liều điều trị thông thường.'
-        }]}, 'contraindications': {'tuyệt_đối': [
+        }]},         'contraindications': {'tuyệt_đối': [
         'Dị ứng amoxicillin, clavulanate, hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam'
         ,
         'Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao'
@@ -98,7 +98,22 @@ BETA_LACTAMS_DRUGS = {
         'Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)',
         'Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát',
         'Dùng với methotrexate - tăng độc tính methotrexate',
-        'Dùng với allopurinol - tăng nguy cơ phát ban']}, 'pregnancy_lactation':
+        'Dùng với allopurinol - tăng nguy cơ phát ban']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng amoxicillin, clavulanate, hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam'
+        ,
+        'Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao'
+        ,
+        'Viêm gan do amoxicillin-clavulanate trước đây - nguy cơ tái phát cao, có thể nặng hơn'
+        ], 'tương_đối': [
+        'Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng',
+        'Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách',
+        'Suy gan - thận trọng, có thể giảm chuyển hóa',
+        'Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)',
+        'Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát',
+        'Dùng với methotrexate - tăng độc tính methotrexate',
+        'Dùng với allopurinol - tăng nguy cơ phát ban']},
+        'pregnancy_lactation':
         {'fda_category': 'B', 'pregnancy_details':
         'Amoxicillin-clavulanate phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết.'
         , 'lactation': {'safety': 'Compatible', 'details':
@@ -138,7 +153,10 @@ BETA_LACTAMS_DRUGS = {
         , 'Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2'],
         'monitoring':
         'Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST, bilirubin), chức năng thận (creatinine, BUN, lượng nước tiểu), dấu hiệu da trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (suy gan, suy thận, co giật).'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay amoxicillin-clavulanate, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa và thần kinh, điều trị tăng men gan/viêm gan nếu có, lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy.'},
+        'administration_instructions': {'oral': {
         'with_food':
         'Uống với thức ăn để giảm kích ứng dạ dày, giảm tiêu chảy, và tăng hấp thu. Có thể uống không thức ăn nếu cần nhưng không khuyến nghị.'
         , 'timing':
@@ -252,6 +270,15 @@ BETA_LACTAMS_DRUGS = {
         'management':
         'Dùng biện pháp tránh thai dự phòng (bao cao su) trong thời gian dùng amoxicillin và 7 ngày sau.'
         }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'Dị ứng penicillin - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (phản ứng chéo với cephalosporin ~5-10%)'
+        , 'Dị ứng beta-lactam', 'Sốc phản vệ với penicillin trước đây'],
+        'tương_đối': [
+        'Dị ứng cephalosporin - thận trọng (phản ứng chéo ~5-10%)',
+        'Nhiễm C. difficile trước đây - tăng nguy cơ tái phát',
+        'Suy thận nặng - giảm liều hoặc tăng khoảng cách',
+        'Đang dùng methotrexate - tăng độc tính methotrexate',
+        'Đang dùng allopurinol - tăng nguy cơ phát ban']},
+        'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng penicillin - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (phản ứng chéo với cephalosporin ~5-10%)'
         , 'Dị ứng beta-lactam', 'Sốc phản vệ với penicillin trước đây'],
         'tương_đối': [
@@ -435,6 +462,21 @@ BETA_LACTAMS_DRUGS = {
                 "Dùng với allopurinol - tăng nguy cơ phát ban"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng ampicillin, sulbactam, hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
+                "Suy gan - thận trọng, có thể giảm chuyển hóa",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Dùng với methotrexate - tăng độc tính methotrexate",
+                "Dùng với allopurinol - tăng nguy cơ phát ban"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Ampicillin-sulbactam phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết.",
@@ -475,7 +517,11 @@ BETA_LACTAMS_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận (creatinine, BUN, lượng nước tiểu), dấu hiệu da, dấu hiệu dị ứng trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (suy thận cấp, co giật)."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay ampicillin-sulbactam, điều trị co giật nếu có, điều trị dị ứng nếu có (epinephrine nếu sốc phản vệ), điều trị suy thận cấp nếu có, lọc máu có thể loại bỏ ampicillin và sulbactam nếu suy thận nặng."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "N/A - chỉ có dạng IV/IM",
@@ -665,6 +711,21 @@ BETA_LACTAMS_DRUGS = {
                 "Dùng với allopurinol - tăng nguy cơ phát ban"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng amoxicillin hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
+                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Dùng với methotrexate - tăng độc tính methotrexate",
+                "Dùng với allopurinol - tăng nguy cơ phát ban"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Amoxicillin phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết.",
@@ -698,7 +759,11 @@ BETA_LACTAMS_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận (creatinine, BUN, lượng nước tiểu), dấu hiệu da trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay amoxicillin, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa và thần kinh, lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",
@@ -856,6 +921,21 @@ BETA_LACTAMS_DRUGS = {
                 "Dùng với allopurinol - tăng nguy cơ phát ban"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng ampicillin hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
+                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Dùng với methotrexate - tăng độc tính methotrexate",
+                "Dùng với allopurinol - tăng nguy cơ phát ban"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Ampicillin phân loại B - an toàn trong thai kỳ. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng.",
@@ -888,7 +968,11 @@ BETA_LACTAMS_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, dấu hiệu da trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay ampicillin, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa và thần kinh, lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "N/A - Chỉ có dạng IV/IM",
@@ -1029,6 +1113,19 @@ BETA_LACTAMS_DRUGS = {
                 "Dùng với methotrexate - tăng độc tính methotrexate"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng penicillin V hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Dùng với methotrexate - tăng độc tính methotrexate"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Penicillin V phân loại B - an toàn trong thai kỳ. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng.",
@@ -1062,7 +1159,11 @@ BETA_LACTAMS_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, dấu hiệu da trong ít nhất 24 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",

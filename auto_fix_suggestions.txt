@@ -1,0 +1,81 @@
+====================================================================================================
+GỢI Ý SỬA LỖI TỰ ĐỘNG
+====================================================================================================
+
+Các thuốc sau đã được sửa trong bộ nhớ:
+
+
+Enalapril:
+  guideline_tags: ['C09AA02', '24.08.08 ACE Inhibitors', 'vietnam_essential_medicines: True', {'source': 'ESC 2021 Heart Failure', 'recommendation': 'ACE inhibitor first-line therapy for HFrEF if tolerated', 'context': 'Heart failure with reduced ejection fraction (HFrEF), NYHA II–III'}, {'source': 'ACC/AHA 2017 Hypertension Guideline', 'recommendation': 'One of the first-line options for hypertension', 'context': 'Primary hypertension, non-black, with or without diabetes'}, {'source': 'BYT – Hướng dẫn chẩn đoán và điều trị tăng huyết áp 2020', 'recommendation': 'Một trong các lựa chọn hàng đầu điều trị tăng huyết áp', 'context': 'Tăng huyết áp nguyên phát không biến chứng, ưu tiên bệnh nhân có đái tháo đường hoặc bệnh thận mạn'}, 'first_line_htn', 'hfref_mortality_benefit', 'ckd_proteinuria_bp_control']
+  interactions: ['Kali: tăng kali máu', 'Diuretics: tăng nguy cơ hạ huyết áp', 'NSAID: giảm hiệu quả']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Lisinopril:
+  guideline_tags: ['C09AA03', '24.08.08 ACE Inhibitors', 'vietnam_essential_medicines: True', {'source': 'ESC 2021 Heart Failure', 'recommendation': 'ACE inhibitor first-line therapy for HFrEF if ARNI not available', 'context': 'Heart failure with reduced ejection fraction (HFrEF), NYHA II–III'}, {'source': 'BYT – Hướng dẫn chẩn đoán và điều trị suy tim 2015', 'recommendation': 'Thuốc nền tảng trong điều trị suy tim HFrEF cùng với beta-blocker và mineralocorticoid receptor antagonist', 'context': 'Suy tim mạn HFrEF, NYHA II–IV'}, 'first_line_htn', 'hfref_mortality_benefit']
+  interactions: ['Kali: tăng kali máu', 'NSAID: giảm hiệu quả']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Losartan:
+  guideline_tags: ['C09CA01', '24.08.06 Angiotensin II Receptor Blockers', 'vietnam_essential_medicines: True', {'source': 'ACC/AHA 2017 Hypertension Guideline', 'recommendation': 'ARB as alternative first-line when ACE inhibitors not tolerated', 'context': 'Primary hypertension, ACE inhibitor intolerance (e.g. cough, angioedema)'}, {'source': 'BYT – Hướng dẫn chẩn đoán và điều trị tăng huyết áp 2020', 'recommendation': 'Lựa chọn khi không dung nạp ACEI hoặc cần bảo vệ thận', 'context': 'Tăng huyết áp có đái tháo đường hoặc bệnh thận mạn'}, 'first_line_htn_alt_acei', 'ckd_diabetic_nephropathy']
+  interactions: ['Kali: tăng kali máu', 'NSAID: giảm hiệu quả']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Spironolactone:
+  guideline_tags: ['C03DA01', '24.08.04 Aldosterone Antagonists', 'vietnam_essential_medicines: True', {'source': 'ESC 2021 Heart Failure', 'recommendation': 'Mineralocorticoid receptor antagonist to reduce mortality', 'context': 'HFrEF with persistent symptoms despite ACEI/ARB/ARNI and beta-blocker'}, 'hfref_mortality_benefit', 'hyperaldosteronism']
+  interactions: ['ACE inhibitor/ARB: tăng kali máu đáng kể', 'Kali bổ sung: tăng kali máu', 'Digoxin: tăng nồng độ digoxin']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Alirocumab:
+  interactions: ['Có thể dùng cùng với statin', 'Có thể dùng cùng với ezetimibe', 'Không có tương tác với CYP450', 'Không có tương tác với warfarin']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Evolocumab:
+  interactions: ['Có thể dùng cùng với statin', 'Có thể dùng cùng với ezetimibe', 'Không có tương tác với CYP450', 'Không có tương tác với warfarin']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Inclisiran:
+  interactions: ['Có thể dùng cùng với statin', 'Có thể dùng cùng với ezetimibe', 'Không có tương tác với CYP450', 'Không có tương tác với warfarin']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Amlodipine/Olmesartan:
+  interactions: ['Chưa có báo cáo tương tác thuốc đáng kể']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Metformin:
+  guideline_tags: ['A10BA02', '68.20.08 Biguanides', 'vietnam_essential_medicines: True', {'source': 'ADA 2024 Standards of Care', 'recommendation': 'Initial pharmacologic therapy for most adults with type 2 diabetes', 'context': 'Type 2 diabetes without contraindications; often combined with lifestyle changes'}, {'source': 'BYT – Hướng dẫn chẩn đoán và điều trị đái tháo đường typ 2', 'recommendation': 'Thuốc đầu tay trong điều trị đái tháo đường typ 2 nếu không chống chỉ định', 'context': 'ĐTĐ typ 2, không suy thận nặng hoặc chống chỉ định khác'}, 'first_line_t2dm', 'weight_neutral_or_loss', 'low_hypoglycemia_risk']
+  interactions: ['Thuốc cản quang: tăng nguy cơ nhiễm toan lactic - ngừng 48h trước và sau', 'Rượu: tăng nguy cơ nhiễm toan lactic', 'Furosemide: có thể tăng nồng độ metformin']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Vonoprazan:
+  interactions: ['Ít tương tác với CYP450 hơn PPI', 'Có thể tương tác với warfarin (theo dõi INR)', 'Có thể ảnh hưởng đến hấp thu các thuốc cần môi trường acid (ketoconazole, itraconazole)']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Tegoprazan:
+  interactions: ['Ít tương tác với CYP450 hơn PPI', 'Có thể tương tác với warfarin (theo dõi INR)', 'Có thể ảnh hưởng đến hấp thu các thuốc cần môi trường acid']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Abaloparatide:
+  interactions: ['Chưa có báo cáo tương tác thuốc đáng kể']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Romosozumab:
+  interactions: ['Chưa có báo cáo tương tác thuốc đáng kể']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)
+
+Calcitonin:
+  interactions: ['Chưa có báo cáo tương tác thuốc đáng kể']
+  overdose_management: (đã chuyển thành dict)
+  administration_instructions: (đã chuyển thành dict)

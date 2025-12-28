@@ -1,8 +1,8 @@
 # Đột quỵ thiếu máu não cấp (Acute Ischemic Stroke – AIS): chẩn đoán và điều trị theo AHA/ASA, ESO
 
 > **Đối tượng:** Bác sĩ cấp cứu, nội thần kinh, hồi sức, nội khoa  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke [1,2], ESO Guidelines for Management of Ischaemic Stroke and Transient Ischaemic Attack [3], các khuyến cáo cập nhật về tiêu sợi huyết và lấy huyết khối cơ học [4,5]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke 2021 + Updates [1,2], ESO Guidelines for Management of Ischaemic Stroke and Transient Ischaemic Attack 2021 [3], các khuyến cáo cập nhật về tiêu sợi huyết và lấy huyết khối cơ học [4,5]
 
 ---
 

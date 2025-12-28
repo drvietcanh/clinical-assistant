@@ -66,7 +66,19 @@ CALCIUMS_DRUGS = {
         'Thận: bài tiết qua nước tiểu (tái hấp thu ở ống thận dưới tác dụng của PTH). Xương: lưu trữ dài hạn. Ruột: bài tiết qua phân (phần không hấp thu).'
         }, 'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Để nơi khô ráo, tránh xa tầm tay trẻ em.'
-        , 'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
+        , 'black_box_warnings': None, 'contraindications_detail': {
+        'tuyệt_đối': [
+        'Tăng calci máu (hypercalcemia) - calcium làm nặng thêm',
+        'Tăng calci niệu (hypercalciuria) nặng - tăng nguy cơ sỏi thận',
+        'Sỏi thận calci đang hoạt động - tăng nguy cơ tái phát',
+        'Suy thận nặng với tăng calci máu'], 'tương_đối': [
+        'Suy thận nặng - tăng nguy cơ tăng calci máu, sỏi thận',
+        'Sỏi thận calci (tiền sử) - thận trọng, theo dõi calci niệu',
+        'Bệnh sarcoidosis - tăng nhạy cảm với calcium, tăng nguy cơ tăng calci máu'
+        ,
+        'Bệnh cường cận giáp (hyperparathyroidism) - có thể làm nặng tăng calci máu'
+        , 'Dùng thiazide diuretics - tăng nguy cơ tăng calci máu',
+        'Suy tim - calcium carbonate có thể gây đầy hơi, táo bón']}, 'drug_interactions': {'major': [{'drug':
         'Levothyroxine', 'mechanism':
         'Calcium gắn với levothyroxine trong ruột, tạo phức hợp không hấp thu được, giảm hấp thu levothyroxine.'
         , 'effect':

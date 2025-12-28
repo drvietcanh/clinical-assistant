@@ -289,7 +289,19 @@ LAXATIVES_DRUGS = {
             "clearance": "Bài tiết qua phân và nước tiểu dưới dạng chuyển hóa.",
         },
         "storage": "Bảo quản nơi khô mát, tránh ẩm; suppository cần bảo quản tránh nóng chảy.",
-        "black_box_warnings": None,
+        "black_box_warnings": "Không có cảnh báo hộp đen đặc biệt. Tuy nhiên, lạm dụng kéo dài có thể gây lệ thuộc thuốc và rối loạn điện giải.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc lợi tiểu, corticosteroid",
+                    "mechanism": "Cả hai đều có thể gây hạ K+; cộng hưởng với tiêu chảy do bisacodyl",
+                    "effect": "Tăng nguy cơ hạ K+, loạn nhịp tim",
+                    "management": "Theo dõi điện giải nếu dùng nhiều lần hoặc kéo dài.",
+                }
+            ],
+            "minor": [],
+        },
         "drug_interactions_detail": {
             "major": [],
             "moderate": [
@@ -411,7 +423,25 @@ LAXATIVES_DRUGS = {
             "clearance": "Chuyển hóa bởi vi khuẩn ruột, thải qua phân và một phần nước tiểu.",
         },
         "storage": "Bảo quản nơi khô mát, tránh ẩm; tránh để trẻ em tự dùng vì dạng 'thảo dược' dễ bị lạm dụng.",
-        "black_box_warnings": None,
+        "black_box_warnings": "Không có cảnh báo hộp đen đặc biệt. Tuy nhiên, lạm dụng kéo dài có thể gây lệ thuộc thuốc, rối loạn điện giải và tổn thương đại tràng.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Hạ K+ do senna làm tăng nhạy cảm với độc tính digoxin",
+                    "effect": "Tăng nguy cơ loạn nhịp do digoxin",
+                    "management": "Theo dõi K+ và ECG nếu dùng cùng.",
+                },
+                {
+                    "drug": "Thuốc lợi tiểu, corticosteroid",
+                    "mechanism": "Cộng hưởng hạ K+",
+                    "effect": "Tăng nguy cơ hạ K+ và biến chứng tim mạch",
+                    "management": "Hạn chế dùng kéo dài; theo dõi điện giải.",
+                },
+            ],
+            "minor": [],
+        },
         "drug_interactions_detail": {
             "major": [],
             "moderate": [

@@ -490,6 +490,23 @@ DMARDS_RHEUMATOLOGY_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "A – lâu năm, guideline-recommended background therapy",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Retinal toxicity (irreversible, dose and duration dependent) - CRITICAL", "QT prolongation", "Hepatotoxicity (rare)"],
+            "qt_prolongation": True,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Retinal examination (baseline within 1 year, then annually after 5 years) - CRITICAL", "Visual acuity and symptoms (blurred vision, bull's-eye maculopathy)", "ECG if co-administered with QT-prolonging drugs", "Hepatic function (ALT, AST) if used long-term", "Blood glucose if co-administered with insulin/sulfonylureas"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "ACR Guidelines - Systemic Lupus Erythematosus",
+            "EULAR Guidelines - Rheumatoid Arthritis",
+            "FDA Drug Information - Hydroxychloroquine",
+            "AAO Guidelines - Retinal Toxicity Screening"
+        ]
     },
 }
 

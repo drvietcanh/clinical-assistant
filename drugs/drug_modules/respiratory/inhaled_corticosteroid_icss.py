@@ -52,7 +52,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~85-90% bị chuyển hóa). Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản).'
         }, 'storage':
         'Dạng hít (MDI/DPI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Nebulizer suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng, dùng trong vòng 2 giờ sau khi mở gói. Bảo quản trong tủ lạnh nếu không dùng ngay (2-8°C), để nhiệt độ phòng trước khi dùng.'
-        , 'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
+        ,         'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
         'Ritonavir', 'mechanism':
         'Ức chế CYP3A4, tăng đáng kể nồng độ budesonide', 'effect':
         'Tăng nguy cơ ức chế trục HPA, hội chứng Cushing, suy thượng thận',
@@ -63,6 +63,13 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Tăng nguy cơ tác dụng toàn thân, ức chế HPA', 'management':
         'Thận trọng, theo dõi tác dụng toàn thân. Có thể cần giảm liều budesonide.'
         }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'Dị ứng với budesonide hoặc các thành phần khác',
+        'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'],
+        'tương_đối': ['Lao phổi - cần điều trị lao trước, thận trọng',
+        'Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
+        'Dùng với ritonavir - tránh dùng',
+        'Dùng với ketoconazole, itraconazole - thận trọng']},
+        'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng với budesonide hoặc các thành phần khác',
         'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'],
         'tương_đối': ['Lao phổi - cần điều trị lao trước, thận trọng',
@@ -287,6 +294,13 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
         'Dùng với ritonavir - tránh dùng',
         'Dùng với ketoconazole, itraconazole - thận trọng']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng với beclomethasone hoặc các thành phần khác',
+        'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'], 'tương_đối': [
+        'Lao phổi - cần điều trị lao trước, thận trọng',
+        'Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
+        'Dùng với ritonavir - tránh dùng',
+        'Dùng với ketoconazole, itraconazole - thận trọng']},
         'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
         'Beclomethasone là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Beclomethasone được sử dụng trong thai kỳ để điều trị hen và có vẻ an toàn. Hấp thu toàn thân ít từ dạng hít (do chuyển hóa nhanh ở gan), nên tác dụng toàn thân tối thiểu. Có thể được dùng khi lợi ích vượt quá nguy cơ.'
         , 'lactation': {'safety': 'Compatible', 'details':
@@ -383,7 +397,14 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Ức chế CYP3A4, tăng nồng độ ciclesonide', 'effect':
         'Tăng nguy cơ tác dụng toàn thân, ức chế HPA', 'management':
         'Thận trọng, theo dõi tác dụng toàn thân. Có thể cần giảm liều ciclesonide.'
-        }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        }],         'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'Dị ứng với ciclesonide hoặc các thành phần khác',
+        'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'], 'tương_đối': [
+        'Lao phổi - cần điều trị lao trước, thận trọng',
+        'Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
+        'Dùng với ritonavir - tránh dùng',
+        'Dùng với ketoconazole, itraconazole - thận trọng']},
+        'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng với ciclesonide hoặc các thành phần khác',
         'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'], 'tương_đối': [
         'Lao phổi - cần điều trị lao trước, thận trọng',

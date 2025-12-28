@@ -182,24 +182,24 @@ python -c "from drugs.drug_database import TOTAL_DRUGS; print(f'Total: {TOTAL_DR
 
 ### **Antibiotics (4 thuốc)**
 - [x] ~~Moxifloxacin~~ ✅ Đã có
-- [ ] Cefotetan
-- [ ] Cefoxitin
-- [ ] Cefoperazone
-- [ ] Cefpirome
+- [x] Cefotetan ✅ Đã có đầy đủ 14 fields
+- [x] Cefoxitin ✅ Đã có đầy đủ 14 fields
+- [x] Cefoperazone ✅ Đã có
+- [x] Cefpirome ✅ Đã có
 
 ### **Cardiovascular (3-5 thuốc)**
-- [ ] Nadolol
-- [ ] Timolol
-- [ ] Acebutolol
-- [ ] Betaxolol
-- [ ] Felodipine
+- [x] Nadolol ✅ Đã có đầy đủ 14 fields
+- [x] Timolol ✅ Đã có đầy đủ 14 fields
+- [x] Acebutolol ✅ Đã có đầy đủ 14 fields
+- [x] Betaxolol ✅ Đã có đầy đủ 14 fields
+- [x] Felodipine ✅ Đã có đầy đủ 14 fields
 
 ### **Neurology (3-5 thuốc)**
 - [x] Ethosuximide ✅ Đã bổ sung
-- [ ] Primidone
-- [ ] Zonisamide
-- [ ] Lacosamide
-- [ ] Perampanel
+- [x] Primidone ✅ Đã có đầy đủ 14 fields
+- [x] Zonisamide ✅ Đã có đầy đủ 14 fields
+- [x] Lacosamide ✅ Đã có đầy đủ 14 fields
+- [x] Perampanel ✅ Đã có đầy đủ 14 fields
 
 ### **Psychiatry (2-3 thuốc)**
 - [ ] Mirtazapine
@@ -207,9 +207,9 @@ python -c "from drugs.drug_database import TOTAL_DRUGS; print(f'Total: {TOTAL_DR
 - [ ] Trazodone
 
 ### **Gastrointestinal (2-3 thuốc)**
-- [ ] Domperidone
-- [ ] Sucralfate
-- [ ] Misoprostol
+- [x] ~~Domperidone~~ ✅ Đã có
+- [x] Sucralfate ✅ Đã có đầy đủ 14 fields
+- [x] Misoprostol ✅ Đã có đầy đủ 14 fields
 
 ### **Respiratory (0 thuốc)**
 - [x] ~~Albuterol (Salbutamol)~~ ✅ Đã có
@@ -228,7 +228,7 @@ python -c "from drugs.drug_database import TOTAL_DRUGS; print(f'Total: {TOTAL_DR
 
 ### **Other Miscellaneous (1 thuốc)**
 - [x] ~~Allopurinol~~ ✅ Đã có
-- [ ] Probenecid
+- [x] Probenecid ✅ Đã có đầy đủ 14 fields
 - [x] ~~Cyclosporine~~ ✅ Đã có
 - [x] ~~Tacrolimus~~ ✅ Đã có
 - [x] ~~Mycophenolate~~ ✅ Đã có

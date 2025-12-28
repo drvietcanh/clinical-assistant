@@ -34,6 +34,17 @@ COMBINATION_INHALERS_DRUGS = {
             "Theophylline: tăng tác dụng phụ tim mạch",
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "GINA Guidelines (Global Initiative for Asthma)",
+            "GOLD Guidelines (Global Initiative for Chronic Obstructive Lung Disease)"
+        ],
         "mechanism_of_action": "Phối hợp ICS (budesonide) kháng viêm tại chỗ và LABA (formoterol) giãn phế quản kéo dài, khởi phát nhanh. Dùng vừa để kiểm soát vừa để cắt cơn (SMART/MART).",
         "monitoring": [
             "Triệu chứng hen/COPD, số lần cơn cấp, nhu cầu SABA",
@@ -52,6 +63,8 @@ COMBINATION_INHALERS_DRUGS = {
             "protein_binding": "Budesonide: 88-90%; Formoterol: 50-65%",
             "clearance": "Budesonide: chuyển hóa gan (CYP3A4) thành chất không hoạt tính, thải qua thận; Formoterol: chuyển hóa gan (CYP2D6, CYP2C19), thải qua thận và phân"
         },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": None,
     },
     "Fluticasone/Salmeterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (ICS/LABA)",
@@ -83,6 +96,17 @@ COMBINATION_INHALERS_DRUGS = {
             "Beta-blocker: đối kháng tác dụng salmeterol",
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "GINA Guidelines (Global Initiative for Asthma)",
+            "GOLD Guidelines (Global Initiative for Chronic Obstructive Lung Disease)"
+        ],
         "mechanism_of_action": "ICS (fluticasone) kháng viêm + LABA (salmeterol) giãn phế quản kéo dài 12 giờ. Cải thiện kiểm soát hen/COPD khi đơn trị ICS hoặc LABA không đủ.",
         "monitoring": [
             "Triệu chứng hen/COPD, FEV1",
@@ -101,6 +125,8 @@ COMBINATION_INHALERS_DRUGS = {
             "protein_binding": "Fluticasone: 91%; Salmeterol: 96%",
             "clearance": "Fluticasone: chuyển hóa gan (CYP3A4) thành chất không hoạt tính, thải qua phân; Salmeterol: chuyển hóa gan (CYP3A4), thải qua phân"
         },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": "Không dùng LABA đơn độc cho hen phế quản - luôn phải kết hợp với ICS. Tăng nguy cơ tử vong do hen khi dùng LABA không kèm ICS.",
     },
     "Ipratropium/Salbutamol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (SAMA/SABA)",
@@ -130,6 +156,17 @@ COMBINATION_INHALERS_DRUGS = {
             "Beta-blocker: giảm tác dụng salbutamol",
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "GINA Guidelines (Global Initiative for Asthma)",
+            "GOLD Guidelines (Global Initiative for Chronic Obstructive Lung Disease)"
+        ],
         "mechanism_of_action": "Hiệp đồng SABA (salbutamol – kích thích beta-2) và SAMA (ipratropium – ức chế muscarinic), giãn phế quản mạnh trong đợt cấp COPD/hen.",
         "monitoring": [
             "Nhịp tim, huyết áp",
@@ -147,6 +184,8 @@ COMBINATION_INHALERS_DRUGS = {
             "protein_binding": "Ipratropium: <20%; Salbutamol: 10%",
             "clearance": "Ipratropium: thải trừ chủ yếu qua thận (dạng nguyên dạng); Salbutamol: chuyển hóa gan (sulfation), thải qua thận"
         },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": None,
     },
     "Tiotropium/Olodaterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (LAMA/LABA)",
@@ -175,6 +214,16 @@ COMBINATION_INHALERS_DRUGS = {
             "Beta-blocker: đối kháng tác dụng olodaterol",
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "GOLD Guidelines (Global Initiative for Chronic Obstructive Lung Disease)"
+        ],
         "mechanism_of_action": "Kết hợp LAMA (tiotropium) và LABA (olodaterol) giúp giãn phế quản tối ưu và kéo dài 24 giờ cho COPD.",
         "monitoring": [
             "Triệu chứng COPD, FEV1",
@@ -192,6 +241,8 @@ COMBINATION_INHALERS_DRUGS = {
             "protein_binding": "Tiotropium: 72%; Olodaterol: 60%",
             "clearance": "Tiotropium: thải trừ chủ yếu qua thận (dạng nguyên dạng), một phần qua gan; Olodaterol: chuyển hóa gan (UGT, O-methylation), thải qua phân và thận"
         },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": None,
     },
     "Umeclidinium/Vilanterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (LAMA/LABA)",
@@ -219,6 +270,16 @@ COMBINATION_INHALERS_DRUGS = {
             "Beta-blocker: đối kháng tác dụng vilanterol",
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "GOLD Guidelines (Global Initiative for Chronic Obstructive Lung Disease)"
+        ],
         "mechanism_of_action": "LAMA (umeclidinium) + LABA (vilanterol) cho giãn phế quản kéo dài 24 giờ, cải thiện triệu chứng COPD.",
         "monitoring": [
             "Triệu chứng COPD, FEV1",
@@ -235,6 +296,8 @@ COMBINATION_INHALERS_DRUGS = {
             "protein_binding": "Umeclidinium: 89%; Vilanterol: 94%",
             "clearance": "Umeclidinium: chuyển hóa gan (CYP2D6), thải qua phân và thận; Vilanterol: chuyển hóa gan (CYP3A4), thải qua phân và thận"
         },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": None,
     },
     "Fluticasone/Umeclidinium/Vilanterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (ICS/LAMA/LABA)",
@@ -264,6 +327,17 @@ COMBINATION_INHALERS_DRUGS = {
             "Ketoconazole/itraconazole: tăng nồng độ fluticasone",
         ],
         "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "GINA Guidelines (Global Initiative for Asthma)",
+            "GOLD Guidelines (Global Initiative for Chronic Obstructive Lung Disease)"
+        ],
         "mechanism_of_action": "Phối hợp 3 trong 1: ICS (fluticasone) kháng viêm, LAMA (umeclidinium) và LABA (vilanterol) giãn phế quản kéo dài, tối ưu hóa kiểm soát COPD/hen nặng.",
         "monitoring": [
             "Triệu chứng hen/COPD, FEV1",
@@ -281,6 +355,8 @@ COMBINATION_INHALERS_DRUGS = {
             "protein_binding": "Fluticasone: 91%; Umeclidinium: 89%; Vilanterol: 94%",
             "clearance": "Fluticasone: chuyển hóa gan (CYP3A4), thải qua phân; Umeclidinium: chuyển hóa gan (CYP2D6), thải qua phân và thận; Vilanterol: chuyển hóa gan (CYP3A4), thải qua phân và thận"
         },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": "Không dùng với ritonavir do tăng mạnh nồng độ fluticasone gây tác dụng phụ nghiêm trọng. Không dùng LABA đơn độc cho hen phế quản.",
     },
 }
 

@@ -103,6 +103,17 @@ NITROIMIDAZOLES_DRUGS = {
         'Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu',
         'Bệnh nhân đang dùng lithium - tăng nguy cơ độc tính lithium',
         'Nhiễm trùng do vi khuẩn hiếu khí - không hiệu quả']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng metronidazole hoặc nitroimidazole',
+        'Đang dùng disulfiram hoặc đã dùng disulfiram trong vòng 14 ngày - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI'
+        ], 'tương_đối': [
+        'Có thai (3 tháng đầu) - nguy cơ dị tật thai nhi, chỉ dùng khi thực sự cần thiết'
+        , 'Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tác dụng phụ thần kinh',
+        'Bệnh thần kinh ngoại biên - tăng nguy cơ tổn thương thần kinh',
+        'Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu',
+        'Bệnh nhân đang dùng lithium - tăng nguy cơ độc tính lithium',
+        'Nhiễm trùng do vi khuẩn hiếu khí - không hiệu quả']},
+        'reversal_agents': {'available': False, 'agents': []},
         'pregnancy_lactation': {'fda_category': 'B (D trong 3 tháng đầu)',
         'pregnancy_details':
         'Metronidazole là thuốc phân loại B trong tam cá nguyệt thứ hai và thứ ba, nhưng phân loại D trong tam cá nguyệt đầu tiên. Các nghiên cứu trên động vật cho thấy nguy cơ dị tật bẩm sinh khi dùng trong tam cá nguyệt đầu tiên. Các nghiên cứu trên người cho thấy nguy cơ dị tật tăng nhẹ khi dùng trong tam cá nguyệt đầu tiên. Tránh dùng trong tam cá nguyệt đầu tiên nếu có thể. Nếu cần thiết, chỉ dùng khi lợi ích vượt quá nguy cơ. Có thể dùng trong tam cá nguyệt thứ hai và thứ ba khi cần thiết.'
@@ -147,7 +158,7 @@ NITROIMIDAZOLES_DRUGS = {
         'Lọc máu: Hemodialysis có thể loại bỏ metronidazole một phần (protein binding <20%), nhưng không hiệu quả lắm do chuyển hóa chủ yếu qua gan.'
         ], 'monitoring':
         'Theo dõi dấu hiệu thần kinh (co giật, ý thức, dị cảm, viêm dây thần kinh), dấu hiệu Disulfiram-like (nếu uống rượu), PT/INR (nếu dùng với warfarin), chức năng gan (ALT, AST), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có tổn thương thần kinh hoặc suy gan.'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        }, 'reversal_agents': {'available': False, 'agents': []}, 'administration_instructions': {'oral': {
         'with_food':
         'Nên uống với thức ăn để giảm kích ứng dạ dày và vị kim loại. Uống với thức ăn không ảnh hưởng đáng kể đến hấp thu.'
         , 'timing':

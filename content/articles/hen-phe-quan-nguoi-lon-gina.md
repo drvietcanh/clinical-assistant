@@ -1,7 +1,7 @@
 # Hen phế quản ở người lớn: chẩn đoán, phân bậc và điều trị theo GINA
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ hô hấp  
-> **Cập nhật:** Tháng 12/2025  
+> **Cập nhật:** Tháng 2/2025  
 > **Tài liệu tham khảo chính:** GINA Report 2024 [1], hướng dẫn hô hấp quốc gia
 
 ---

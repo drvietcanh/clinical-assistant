@@ -1,7 +1,7 @@
 # Bệnh phổi tắc nghẽn mạn tính (COPD) ở người lớn: chẩn đoán, phân nhóm và điều trị theo GOLD
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ hô hấp  
-> **Cập nhật:** Tháng 12/2025  
+> **Cập nhật:** Tháng 2/2025  
 > **Tài liệu tham khảo chính:** GOLD Report 2024 [1], các hướng dẫn hô hấp quốc gia
 
 ---

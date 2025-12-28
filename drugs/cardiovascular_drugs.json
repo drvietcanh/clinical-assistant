@@ -1,0 +1,262 @@
+{
+  "Adrenaline": {
+    "name": "Adrenaline",
+    "name_vn": "Adrenaline",
+    "group": "Vasopressor",
+    "dose_range": "0.01–0.5 mcg/kg/min",
+    "initial_dose": "0.05–0.1 mcg/kg/min",
+    "max_dose": "1–2 mcg/kg/min",
+    "vials": [
+      {
+        "size": "1mg/1ml",
+        "volume_ml": 1,
+        "concentration_mg_ml": 1.0,
+        "total_mg": 1.0,
+        "common": true
+      },
+      {
+        "size": "1mg/10ml",
+        "volume_ml": 10,
+        "concentration_mg_ml": 0.1,
+        "total_mg": 1.0,
+        "common": false
+      }
+    ],
+    "infusion_methods": {
+      "syringe_pump_50ml": {
+        "standard_volume": 50,
+        "standard_concentration_mcg_ml": 20,
+        "preparation": "1mg pha trong 50ml NS = 20 mcg/ml"
+      },
+      "iv_bag_500ml": {
+        "standard_volume": 500,
+        "standard_concentration_mcg_ml": 4,
+        "preparation": "2mg pha trong 500ml NS = 4 mcg/ml"
+      }
+    },
+    "indication": "Sốc phản vệ, ngừng tim, sốc tim",
+    "contraindication": "Dị ứng, tăng áp nặng không kiểm soát, loạn nhịp tim nặng",
+    "side_effects": "Tăng áp, loạn nhịp, tăng đường huyết, thiếu máu cục bộ",
+    "monitoring": "MAP, HR, ngón tay chân, lactate, glucose",
+    "solvent": "NaCl 0.9%",
+    "notes": "Dùng trong sốc phản vệ, ngừng tim. Theo dõi sát huyết áp và nhịp tim"
+  },
+  "Noradrenaline": {
+    "name": "Noradrenaline",
+    "name_vn": "Noradrenaline",
+    "group": "Vasopressor",
+    "dose_range": "0.05–2 mcg/kg/min",
+    "initial_dose": "0.05–0.1 mcg/kg/min",
+    "max_dose": "3–5 mcg/kg/min",
+    "vials": [
+      {
+        "size": "4mg/4ml",
+        "volume_ml": 4,
+        "concentration_mg_ml": 1.0,
+        "total_mg": 4.0,
+        "common": true
+      },
+      {
+        "size": "8mg/4ml",
+        "volume_ml": 4,
+        "concentration_mg_ml": 2.0,
+        "total_mg": 8.0,
+        "common": true
+      }
+    ],
+    "infusion_methods": {
+      "syringe_pump_50ml": {
+        "standard_volume": 50,
+        "standard_concentration_mcg_ml": 64,
+        "preparation": "16mg pha trong 50ml NS = 64 mcg/ml"
+      },
+      "iv_bag_500ml": {
+        "standard_volume": 500,
+        "standard_concentration_mcg_ml": 64,
+        "preparation": "16mg pha trong 250ml NS = 64 mcg/ml"
+      }
+    },
+    "indication": "Sốc nhiễm khuẩn, sốc tim, sốc phản vệ",
+    "contraindication": "Dị ứng, tăng áp nặng không kiểm soát",
+    "side_effects": "Tăng áp lực, loạn nhịp tim, thiếu máu cục bộ ngón tay/chân",
+    "monitoring": "MAP, HR, ngón tay chân, lactate, ScvO2",
+    "solvent": "NaCl 0.9%",
+    "notes": "Thuốc lựa chọn đầu tiên trong sốc nhiễm khuẩn (Surviving Sepsis 2021)"
+  },
+  "Dopamine": {
+    "name": "Dopamine",
+    "name_vn": "Dopamine",
+    "group": "Inotrope/Vasopressor",
+    "dose_range": "2–20 mcg/kg/min",
+    "initial_dose": "2–5 mcg/kg/min",
+    "max_dose": "20–30 mcg/kg/min",
+    "vials": [
+      {
+        "size": "200mg/5ml",
+        "volume_ml": 5,
+        "concentration_mg_ml": 40.0,
+        "total_mg": 200.0,
+        "common": true
+      }
+    ],
+    "infusion_methods": {
+      "syringe_pump_50ml": {
+        "standard_volume": 50,
+        "standard_concentration_mcg_ml": 1600,
+        "preparation": "400mg pha trong 50ml NS = 1600 mcg/ml"
+      },
+      "iv_bag_500ml": {
+        "standard_volume": 500,
+        "standard_concentration_mcg_ml": 1600,
+        "preparation": "400mg pha trong 250ml NS = 1600 mcg/ml"
+      }
+    },
+    "indication": "Sốc tim, suy thận (liều thấp)",
+    "contraindication": "Dị ứng, loạn nhịp tim nặng, pheochromocytoma",
+    "side_effects": "Loạn nhịp tim, tăng áp, thiếu máu cục bộ",
+    "monitoring": "MAP, HR, ngón tay chân, lactate",
+    "solvent": "NaCl 0.9%",
+    "notes": "Liều thấp (1-3 mcg/kg/min): tăng lưu lượng thận. Hiện ít dùng do tăng tỷ lệ tử vong"
+  },
+  "Dobutamine": {
+    "name": "Dobutamine",
+    "name_vn": "Dobutamine",
+    "group": "Inotrope",
+    "dose_range": "2.5–15 mcg/kg/min",
+    "initial_dose": "2.5–5 mcg/kg/min",
+    "max_dose": "20 mcg/kg/min",
+    "vials": [
+      {
+        "size": "250mg/5ml",
+        "volume_ml": 5,
+        "concentration_mg_ml": 50.0,
+        "total_mg": 250.0,
+        "common": true
+      }
+    ],
+    "infusion_methods": {
+      "syringe_pump_50ml": {
+        "standard_volume": 50,
+        "standard_concentration_mcg_ml": 1000,
+        "preparation": "250mg pha trong 50ml D5W = 1000 mcg/ml"
+      },
+      "iv_bag_500ml": {
+        "standard_volume": 500,
+        "standard_concentration_mcg_ml": 1000,
+        "preparation": "250mg pha trong 250ml D5W = 1000 mcg/ml"
+      }
+    },
+    "indication": "Suy tim, sốc tim, giảm cung lượng tim",
+    "contraindication": "Dị ứng, loạn nhịp tim nặng, tắc nghẽn đường ra thất trái",
+    "side_effects": "Loạn nhịp tim, tăng HR, đau ngực",
+    "monitoring": "MAP, HR, CVP, ScvO2, lactate",
+    "solvent": "D5W",
+    "notes": "Dobutamine là inotrope, không phải vasopressor. Dùng trong suy tim, giảm cung lượng tim"
+  },
+  "Vasopressin": {
+    "name": "Vasopressin",
+    "name_vn": "Vasopressin",
+    "group": "Vasopressor",
+    "dose_range": "0.03–0.04 units/min",
+    "initial_dose": "0.03–0.04 units/min",
+    "max_dose": "0.04 units/min (không tăng hơn)",
+    "vials": [
+      {
+        "size": "20 units/1ml",
+        "volume_ml": 1,
+        "concentration_units_ml": 20.0,
+        "total_units": 20.0,
+        "common": true
+      }
+    ],
+    "infusion_methods": {
+      "syringe_pump_50ml": {
+        "standard_volume": 50,
+        "standard_concentration_units_ml": 0.2,
+        "preparation": "20 units pha trong 100ml NS = 0.2 units/ml"
+      },
+      "iv_bag_500ml": {
+        "standard_volume": 500,
+        "standard_concentration_units_ml": 0.2,
+        "preparation": "20 units pha trong 100ml NS = 0.2 units/ml"
+      }
+    },
+    "indication": "Sốc nhiễm khuẩn kháng thuốc, sốc do giảm thể tích",
+    "contraindication": "Dị ứng, thiếu máu cục bộ nặng",
+    "side_effects": "Thiếu máu cục bộ (ngón tay, chân), thiếu máu mạc treo",
+    "monitoring": "MAP, lactate, ngón tay chân",
+    "solvent": "NaCl 0.9%",
+    "notes": "Dùng như thuốc thứ 2 khi norepinephrine không đủ. Liều cố định 0.03-0.04 units/min"
+  },
+  "Milrinone": {
+    "name": "Milrinone",
+    "name_vn": "Milrinone",
+    "group": "Inotrope/Vasodilator",
+    "dose_range": "0.25–0.75 mcg/kg/min",
+    "initial_dose": "0.25–0.5 mcg/kg/min",
+    "max_dose": "0.75 mcg/kg/min",
+    "vials": [
+      {
+        "size": "10mg/10ml",
+        "volume_ml": 10,
+        "concentration_mg_ml": 1.0,
+        "total_mg": 10.0,
+        "common": true
+      }
+    ],
+    "infusion_methods": {
+      "syringe_pump_50ml": {
+        "standard_volume": 50,
+        "standard_concentration_mcg_ml": 200,
+        "preparation": "10mg pha trong 50ml NS = 200 mcg/ml"
+      },
+      "iv_bag_500ml": {
+        "standard_volume": 500,
+        "standard_concentration_mcg_ml": 200,
+        "preparation": "10mg pha trong 50ml NS = 200 mcg/ml"
+      }
+    },
+    "indication": "Suy tim cấp, sốc tim",
+    "contraindication": "Dị ứng, hạ huyết áp nặng",
+    "side_effects": "Hạ huyết áp, loạn nhịp tim",
+    "monitoring": "MAP, HR, CVP",
+    "solvent": "NaCl 0.9%",
+    "notes": "Thường 0.25–0.75 mcg/kg/phút sau liều tấn công (nếu dùng)"
+  },
+  "Nitroglycerin": {
+    "name": "Nitroglycerin",
+    "name_vn": "Nitroglycerin",
+    "group": "Vasodilator",
+    "dose_range": "0.1–10 mcg/kg/min",
+    "initial_dose": "0.1–0.5 mcg/kg/min",
+    "max_dose": "10 mcg/kg/min",
+    "vials": [
+      {
+        "size": "50mg/10ml",
+        "volume_ml": 10,
+        "concentration_mg_ml": 5.0,
+        "total_mg": 50.0,
+        "common": true
+      }
+    ],
+    "infusion_methods": {
+      "syringe_pump_50ml": {
+        "standard_volume": 50,
+        "standard_concentration_mcg_ml": 1000,
+        "preparation": "50mg pha trong 50ml D5W = 1000 mcg/ml"
+      },
+      "iv_bag_500ml": {
+        "standard_volume": 500,
+        "standard_concentration_mcg_ml": 100,
+        "preparation": "50mg pha trong 500ml D5W = 100 mcg/ml"
+      }
+    },
+    "indication": "Đau thắt ngực, suy tim, tăng huyết áp",
+    "contraindication": "Dị ứng, hạ huyết áp nặng, dùng sildenafil/tadalafil",
+    "side_effects": "Hạ huyết áp, nhức đầu, nhịp tim nhanh phản ứng",
+    "monitoring": "MAP, HR, triệu chứng đau ngực",
+    "solvent": "D5W",
+    "notes": "Thường 0.5–10 mcg/kg/phút; bắt đầu thấp và tăng dần theo huyết áp / triệu chứng"
+  }
+}
+

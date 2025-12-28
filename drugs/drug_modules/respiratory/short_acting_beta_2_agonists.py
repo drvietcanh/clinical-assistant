@@ -110,6 +110,20 @@ SHORT_ACTING_BETA_2_AGONISTS_DRUGS = {
                 'Hạ kali máu - có thể làm nặng'
             ]
         },
+        'contraindications_detail': {
+            'tuyệt_đối': [
+                'Dị ứng salbutamol hoặc các thành phần trong chế phẩm',
+                'Nhịp tim nhanh nặng không kiểm soát (>120 bpm)',
+                'Rối loạn nhịp tim nặng (rung nhĩ, rung thất không kiểm soát)'
+            ],
+            'tương_đối': [
+                'Bệnh tim mạch (suy tim, bệnh mạch vành) - thận trọng, theo dõi chặt chẽ',
+                'Tăng huyết áp không kiểm soát - có thể tăng huyết áp',
+                'Loạn nhịp tim nhẹ - có thể làm nặng',
+                'Đái tháo đường - có thể tăng đường huyết',
+                'Hạ kali máu - có thể làm nặng'
+            ]
+        },
         'pregnancy_lactation': {
                 'fda_category': 'C',
                 'pregnancy_details': 'Salbutamol là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Salbutamol được sử dụng rộng rãi trong thai kỳ để điều trị hen và có vẻ an toàn. Hen phế quản không kiểm soát có thể gây nguy hiểm cho cả mẹ và thai nhi (thiếu oxy, suy thai). Salbutamol có thể được dùng khi lợi ích vượt quá nguy cơ. Dạng hít được ưu tiên hơn dạng uống hoặc IV để giảm tác dụng toàn thân.',
@@ -143,7 +157,7 @@ SHORT_ACTING_BETA_2_AGONISTS_DRUGS = {
                 ],
             'monitoring': 'Theo dõi dấu hiệu sinh tồn, ECG, kali máu, đường huyết trong ít nhất 4-6 giờ.'
         },
-        'reversal_agents': [],  # Không có reversal agent đặc hiệu
+        'reversal_agents': {'available': False, 'agents': []},  # Không có reversal agent đặc hiệu
         'administration_instructions': {
                 'oral': {
                     'with_food': 'Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ.',

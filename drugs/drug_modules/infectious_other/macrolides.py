@@ -88,7 +88,22 @@ MACROLIDES_DRUGS = {
         'Dùng với thuốc kéo dài QT khác - tác dụng cộng dồn',
         'Suy gan nặng - thận trọng, có thể giảm chuyển hóa',
         'Suy thận nặng - thận trọng, mặc dù không cần điều chỉnh liều thường quy'
-        ]}, 'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
+        ]},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng azithromycin hoặc các macrolide khác (erythromycin, clarithromycin)'
+        ,
+        'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ torsades de pointes'
+        ,
+        'Dùng với pimozide, terfenadine, astemizole - tăng nguy cơ loạn nhịp tim nghiêm trọng'
+        ], 'tương_đối': [
+        'Suy tim - tăng nguy cơ QT kéo dài, torsades de pointes',
+        'Hạ kali máu, hạ magie máu - tăng nguy cơ QT kéo dài, torsades de pointes',
+        'Nhịp tim chậm - tăng nguy cơ QT kéo dài',
+        'Dùng với thuốc kéo dài QT khác - tác dụng cộng dồn',
+        'Suy gan nặng - thận trọng, có thể giảm chuyển hóa',
+        'Suy thận nặng - thận trọng, mặc dù không cần điều chỉnh liều thường quy'
+        ]},
+        'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
         'Azithromycin phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Macrolide là một trong những kháng sinh an toàn nhất trong thai kỳ (sau penicillin). Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng, đặc biệt Chlamydia. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết.'
         , 'lactation': {'safety': 'Compatible', 'details':
         'Azithromycin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Macrolide là một trong những kháng sinh an toàn nhất khi cho con bú.'
@@ -125,7 +140,10 @@ MACROLIDES_DRUGS = {
         'Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2, ECG'],
         'monitoring':
         'Theo dõi dấu hiệu sinh tồn, ECG (QT interval), điện giải (kali, magie), dấu hiệu thính giác trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (QT kéo dài, torsades de pointes, rối loạn thính giác).'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay azithromycin, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn và ECG, điều trị triệu chứng tiêu hóa, điều trị QT kéo dài/torsades de pointes nếu có (magnesium sulfate IV, pacing), điều trị rối loạn thính giác nếu có.'},
+        'administration_instructions': {'oral': {
         'with_food':
         'Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày và buồn nôn. Có thể uống không thức ăn nếu cần.'
         , 'timing':
@@ -286,7 +304,23 @@ MACROLIDES_DRUGS = {
         'Dùng với warfarin - tăng nguy cơ chảy máu',
         'Dùng với digoxin - tăng độc tính digoxin',
         'Suy thận nặng (CrCl <30) - cần giảm liều 50-75%',
-        'Suy gan - thận trọng, có thể giảm chuyển hóa']}, 'pregnancy_lactation':
+        'Suy gan - thận trọng, có thể giảm chuyển hóa']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng clarithromycin hoặc các macrolide khác (erythromycin, azithromycin)'
+        ,
+        'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ tử vong do tim mạch'
+        ,
+        'Dùng với pimozide, terfenadine, astemizole - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI, tăng nguy cơ loạn nhịp tim nghiêm trọng, tử vong'
+        , 'Bệnh tim mạch nặng - tăng nguy cơ tử vong do tim mạch'], 'tương_đối':
+        ['Suy tim - tăng nguy cơ QT kéo dài, tử vong do tim mạch',
+        'Hạ kali máu, hạ magie máu - tăng nguy cơ QT kéo dài, torsades de pointes',
+        'Dùng với thuốc kéo dài QT khác - tác dụng cộng dồn',
+        'Dùng với simvastatin, lovastatin - tăng nguy cơ tiêu cơ vân',
+        'Dùng với warfarin - tăng nguy cơ chảy máu',
+        'Dùng với digoxin - tăng độc tính digoxin',
+        'Suy thận nặng (CrCl <30) - cần giảm liều 50-75%',
+        'Suy gan - thận trọng, có thể giảm chuyển hóa']},
+        'pregnancy_lactation':
         {'fda_category': 'C', 'pregnancy_details':
         'Clarithromycin phân loại C - thận trọng trong thai kỳ. Các nghiên cứu trên động vật cho thấy một số nguy cơ (giảm cân, chậm phát triển xương). Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh rõ ràng, nhưng dữ liệu còn hạn chế. Macrolide nói chung an toàn hơn nhiều kháng sinh khác trong thai kỳ. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong điều trị H. pylori hoặc nhiễm trùng nặng. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết. Azithromycin có thể là lựa chọn an toàn hơn trong thai kỳ (phân loại B).'
         , 'lactation': {'safety': 'Compatible', 'details':
@@ -325,7 +359,10 @@ MACROLIDES_DRUGS = {
         'Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2, ECG'],
         'monitoring':
         'Theo dõi dấu hiệu sinh tồn, ECG (QT interval), điện giải (kali, magie), dấu hiệu thính giác trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (QT kéo dài, torsades de pointes, rối loạn thính giác).'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay clarithromycin, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn và ECG, điều trị triệu chứng tiêu hóa, điều trị QT kéo dài/torsades de pointes nếu có (magnesium sulfate IV, pacing), điều trị rối loạn thính giác nếu có.'},
+        'administration_instructions': {'oral': {
         'with_food':
         'Uống với thức ăn để giảm kích ứng dạ dày, giảm buồn nôn, nôn. Có thể uống không thức ăn nếu cần nhưng không khuyến nghị.'
         , 'timing':
@@ -455,6 +492,19 @@ MACROLIDES_DRUGS = {
                 "Dùng với CYP3A4 substrates - nhiều tương tác"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng erythromycin/macrolide",
+                "QT kéo dài",
+                "Dùng pimozide, terfenadine, astemizole",
+                "Suy gan nặng"
+            ],
+            "tương_đối": [
+                "Suy gan trung bình - thận trọng",
+                "Dùng với thuốc kéo dài QT - tăng nguy cơ",
+                "Dùng với CYP3A4 substrates - nhiều tương tác"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "An toàn trong thai kỳ. Phân loại B.",
@@ -486,7 +536,11 @@ MACROLIDES_DRUGS = {
             ],
             "monitoring": "ECG, chức năng gan, dấu hiệu sống"
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng erythromycin, rửa dạ dày nếu uống trong vòng 1-2 giờ, than hoạt tính, theo dõi ECG và chức năng gan."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với thức ăn để giảm tác dụng phụ tiêu hóa (nhưng có thể giảm hấp thu)",

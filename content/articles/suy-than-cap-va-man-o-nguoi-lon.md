@@ -1,8 +1,8 @@
 # Suy thận cấp và suy thận mạn ở người lớn: định nghĩa, phân độ và nguyên tắc xử trí theo KDIGO
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ hồi sức, bác sĩ thận học  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** KDIGO Clinical Practice Guideline for Acute Kidney Injury 2012 + updates [1], KDIGO 2012 CKD Guideline + updates [2], các hội thận quốc gia
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** KDIGO Clinical Practice Guideline for Acute Kidney Injury 2012 + updates [1], KDIGO 2012 CKD Guideline + KDIGO 2024 CKD Updates [2], các hội thận quốc gia
 
 ---
 

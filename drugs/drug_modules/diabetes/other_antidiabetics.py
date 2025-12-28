@@ -58,6 +58,17 @@ OTHER_ANTIDIABETICS_DRUGS = {
             "clearance": "Gan (chuyển hóa qua CYP3A4)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiovascular": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ADA Guidelines (American Diabetes Association)"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Cycloset (bromocriptine)",
@@ -122,6 +133,18 @@ OTHER_ANTIDIABETICS_DRUGS = {
             "clearance": "Không hấp thu, thải qua phân"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ADA Guidelines (American Diabetes Association)",
+            "AHA/ACC Guidelines (American Heart Association/American College of Cardiology)"
+        ],
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Welchol (colesevelam)",

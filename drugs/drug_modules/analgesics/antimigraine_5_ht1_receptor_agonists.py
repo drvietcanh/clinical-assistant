@@ -408,7 +408,20 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST), dấu hiệu buồn ngủ, suy giảm nhận thức trong ít nhất 8-12 giờ."
         },
-        "reversal_agents": None,
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng lasmiditan hoặc bất kỳ thành phần nào",
+                "Dùng với rượu (alcohol) - CHỐNG CHỈ ĐỊNH (tăng nguy cơ buồn ngủ, suy giảm nhận thức nặng)",
+                "Suy gan nặng (Child-Pugh C) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy gan nhẹ đến trung bình - thận trọng, giảm liều nếu cần",
+                "Suy thận nặng - thận trọng, giảm liều nếu cần",
+                "Dùng với CNS depressants - tăng nguy cơ buồn ngủ, suy giảm nhận thức",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng bởi thức ăn.",

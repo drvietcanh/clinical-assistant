@@ -62,6 +62,14 @@ PENICILLIN_ANTIBIOTICS = {
         },
         "storage": "Bảo quản viên ở nhiệt độ phòng, tránh ẩm.",
         "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng penicillin hoặc beta-lactam",
+                "Tiền sử phản vệ với penicillin",
+            ],
+            "tương_đối": []
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
@@ -123,6 +131,14 @@ PENICILLIN_ANTIBIOTICS = {
             "clearance": "Thận (chủ yếu)",
         },
         "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng penicillin/beta-lactam",
+                "Tiền sử phản vệ với penicillin",
+            ],
+            "tương_đối": []
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
@@ -182,6 +198,14 @@ PENICILLIN_ANTIBIOTICS = {
             "clearance": "Thận (cả hai thành phần)",
         },
         "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng penicillin/beta-lactam",
+                "Tiền sử vàng da ứ mật do amoxicillin-clavulanate",
+            ],
+            "tương_đối": []
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
@@ -241,6 +265,14 @@ PENICILLIN_ANTIBIOTICS = {
             "clearance": "Thận",
         },
         "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng penicillin/beta-lactam",
+                "Tiền sử phản vệ với penicillin",
+            ],
+            "tương_đối": []
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,

@@ -128,6 +128,27 @@ HEPATITIS_ANTIVIRALS = {
                 "Bệnh nhân cao tuổi - tăng nguy cơ độc tính"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Có thai (nam và nữ) - chống chỉ định tuyệt đối, gây dị tật thai nhi và tử vong thai nhi",
+                "Suy thận nặng (CrCl <50 ml/min) - không dùng",
+                "Bệnh tim nặng (suy tim, bệnh mạch vành không ổn định) - nguy cơ thiếu máu làm nặng bệnh tim",
+                "Thiếu máu nặng (Hb <8.5g/dL) - không bắt đầu điều trị",
+                "Dị ứng ribavirin"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-50) - giảm liều 50%, theo dõi chặt chẽ",
+                "Bệnh tim nhẹ đến trung bình - thận trọng, theo dõi sát hemoglobin",
+                "Thiếu máu nhẹ đến trung bình (Hb 8.5-10g/dL) - có thể cần giảm liều hoặc truyền máu",
+                "Tiền sử rối loạn tâm thần - tăng nguy cơ rối loạn tâm thần, đặc biệt khi dùng với interferon",
+                "Bệnh nhân cao tuổi - tăng nguy cơ độc tính"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu có thể giúp loại bỏ ribavirin (half-life dài, tích tụ trong tế bào)."
+        },
         "pregnancy_lactation": {
             "fda_category": "X",
             "pregnancy_details": "Chống chỉ định tuyệt đối trong thai kỳ (nam và nữ). Ribavirin gây dị tật thai nhi nghiêm trọng, tử vong thai nhi, và sẩy thai. Nam và nữ phải dùng biện pháp tránh thai hiệu quả trong và 6 tháng sau khi ngừng thuốc. Kiểm tra thai trước khi bắt đầu điều trị (nam và nữ).",
@@ -269,6 +290,19 @@ HEPATITIS_ANTIVIRALS = {
                 "Xơ gan mất bù (theo dõi toan lactic)"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": ["Dị ứng entecavir"],
+            "tương_đối": [
+                "Đồng nhiễm HIV chưa điều trị",
+                "Suy thận (cần chỉnh liều)",
+                "Xơ gan mất bù (theo dõi toan lactic)"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu có thể loại bỏ entecavir một phần."
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Ưu tiên tenofovir nếu có thai. Dữ liệu hạn chế.",
@@ -407,6 +441,19 @@ HEPATITIS_ANTIVIRALS = {
                 "Nghi ngờ/đồng nhiễm HIV chưa điều trị (không đơn trị)"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": ["Dị ứng tenofovir"],
+            "tương_đối": [
+                "Suy thận hoặc dùng thuốc độc thận",
+                "Nguy cơ loãng xương cao (ưu tiên TAF)",
+                "Nghi ngờ/đồng nhiễm HIV chưa điều trị (không đơn trị)"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu loại bỏ TDF; TAF dữ liệu hạn chế."
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "TDF an toàn và khuyến cáo cho thai kỳ HBV/HIV; dữ liệu về TAF ít hơn nhưng có vẻ an toàn.",
@@ -540,6 +587,19 @@ HEPATITIS_ANTIVIRALS = {
                 "Phụ nữ có thai nếu phác đồ chứa ribavirin (X)",
                 "Đồng nhiễm HBV chưa được điều trị (nguy cơ bùng phát)"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": ["Dị ứng", "Phối hợp amiodarone"],
+            "tương_đối": [
+                "Suy thận nặng (eGFR <30)",
+                "Phụ nữ có thai nếu phác đồ chứa ribavirin (X)",
+                "Đồng nhiễm HBV chưa được điều trị (nguy cơ bùng phát)"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Thẩm tách loại bỏ chất chuyển hóa một phần."
         },
         "pregnancy_lactation": {
             "fda_category": "B (đơn thành phần)",
@@ -675,12 +735,25 @@ HEPATITIS_ANTIVIRALS = {
             "minor": []
         },
         "contraindications": {
-            "tuyệt_đối": ["Dị ứng", "Phối hợp rifampin/carbamazepine/St. John’s wort"],
+            "tuyệt_đối": ["Dị ứng", "Phối hợp rifampin/carbamazepine/St. John's wort"],
             "tương_đối": [
                 "Suy thận nặng (eGFR <30)",
                 "Dùng PPI/antacid liều cao",
                 "Đồng nhiễm HBV chưa điều trị"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": ["Dị ứng", "Phối hợp rifampin/carbamazepine/St. John's wort"],
+            "tương_đối": [
+                "Suy thận nặng (eGFR <30)",
+                "Dùng PPI/antacid liều cao",
+                "Đồng nhiễm HBV chưa điều trị"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
         },
         "pregnancy_lactation": {
             "fda_category": "B",
@@ -815,12 +888,25 @@ HEPATITIS_ANTIVIRALS = {
             "minor": []
         },
         "contraindications": {
-            "tuyệt_đối": ["Dị ứng", "Phối hợp amiodarone", "Phối hợp rifampin/carbamazepine/phenytoin/St. John’s wort"],
+            "tuyệt_đối": ["Dị ứng", "Phối hợp amiodarone", "Phối hợp rifampin/carbamazepine/phenytoin/St. John's wort"],
             "tương_đối": [
                 "Suy thận nặng (eGFR <30)",
                 "Phụ nữ có thai nếu phác đồ kèm ribavirin",
                 "Đồng nhiễm HBV chưa điều trị"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": ["Dị ứng", "Phối hợp amiodarone", "Phối hợp rifampin/carbamazepine/phenytoin/St. John's wort"],
+            "tương_đối": [
+                "Suy thận nặng (eGFR <30)",
+                "Phụ nữ có thai nếu phác đồ kèm ribavirin",
+                "Đồng nhiễm HBV chưa điều trị"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
         },
         "pregnancy_lactation": {
             "fda_category": "B (không ribavirin); X nếu có ribavirin",

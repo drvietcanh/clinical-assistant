@@ -895,6 +895,21 @@ ANTIPLATELETS_DRUGS = {
                 "Đang dùng aspirin hoặc warfarin - tăng nguy cơ chảy máu"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Giảm bạch cầu nặng (<3500/μL)",
+                "Giảm tiểu cầu nặng (<100,000/μL)",
+                "Chảy máu đang hoạt động",
+                "TTP (thrombotic thrombocytopenic purpura) trước đây",
+                "Dị ứng ticlopidine"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ độc tính",
+                "Suy thận nặng - thận trọng",
+                "Có thai - category B, thận trọng",
+                "Đang dùng aspirin hoặc warfarin - tăng nguy cơ chảy máu"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Ticlopidine là category B. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Thận trọng, đặc biệt trong tam cá nguyệt thứ ba (tăng nguy cơ chảy máu ở mẹ và thai nhi).",
@@ -909,6 +924,13 @@ ANTIPLATELETS_DRUGS = {
             "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan và công thức máu chặt chẽ.",
             "severe": "Chống chỉ định hoặc thận trọng tối đa. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ độc tính.",
             "notes": "Ticlopidine là prodrug, chuyển hóa ở gan thành chất hoạt động. Suy gan làm giảm chuyển hóa, có thể giảm hiệu quả hoặc tăng độc tính."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, theo dõi chức năng thận và công thức máu",
+            "under_30": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng thận và công thức máu chặt chẽ",
+            "hemodialysis": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng thận và công thức máu chặt chẽ",
+            "notes": "Ticlopidine thải trừ qua thận. Suy thận có thể làm tăng nồng độ thuốc, tăng nguy cơ tác dụng phụ. Theo dõi công thức máu chặt chẽ ở bệnh nhân suy thận."
         },
         "overdose_management": {
             "symptoms": [

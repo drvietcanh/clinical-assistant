@@ -139,6 +139,20 @@ TETRACYCLINE_ANTIBIOTICS = {
                 "Tiền sử tăng áp lực nội sọ - tăng nguy cơ"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng doxycycline hoặc tetracycline",
+                "Trẻ em <8 tuổi - CHỐNG CHỈ ĐỊNH (gây răng vàng và ức chế xương)",
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D, gây răng vàng và ức chế xương ở thai nhi)"
+            ],
+            "tương_đối": [
+                "Phụ nữ đang cho con bú - thận trọng (có thể gây răng vàng ở trẻ)",
+                "Suy gan nặng - thận trọng",
+                "Nhạy cảm với ánh sáng - tránh ánh nắng mặt trời",
+                "Tiền sử tăng áp lực nội sọ - tăng nguy cơ"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "pregnancy_lactation": {
             "fda_category": "D",
             "pregnancy_details": "Doxycycline là thuốc phân loại D. CHỐNG CHỈ ĐỊNH trong thai kỳ. Tetracycline gây răng vàng và ức chế xương ở thai nhi. Không dùng trong thai kỳ.",
@@ -184,7 +198,11 @@ TETRACYCLINE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST), dấu hiệu thần kinh (tăng áp lực nội sọ) trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhưng giảm hấp thu nhẹ. Uống với nhiều nước (ít nhất 200ml) để giảm kích ứng thực quản.",
@@ -247,6 +265,17 @@ TETRACYCLINE_ANTIBIOTICS = {
             "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)",
             "Phụ nữ đang cho con bú - thận trọng"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng minocycline hoặc tetracycline",
+                "Trẻ em <8 tuổi - CHỐNG CHỈ ĐỊNH",
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)"
+            ],
+            "tương_đối": [
+                "Phụ nữ đang cho con bú - thận trọng"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "dosage": {
             "adult_standard": "100mg PO x 2 lần/ngày",
             "adult_severe": "100mg PO x 2 lần/ngày hoặc 200mg PO x 1 lần/ngày",
@@ -370,7 +399,11 @@ TETRACYCLINE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan, thần kinh trong 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Uống với nhiều nước.",
@@ -431,6 +464,18 @@ TETRACYCLINE_ANTIBIOTICS = {
             "Phụ nữ đang cho con bú - thận trọng",
             "Suy thận nặng - CHỐNG CHỈ ĐỊNH (tích lũy, tăng độc tính)"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng tetracycline",
+                "Trẻ em <8 tuổi - CHỐNG CHỈ ĐỊNH",
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)",
+                "Suy thận nặng - CHỐNG CHỈ ĐỊNH (tích lũy, tăng độc tính)"
+            ],
+            "tương_đối": [
+                "Phụ nữ đang cho con bú - thận trọng"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "dosage": {
             "adult_standard": "250-500mg PO x 4 lần/ngày",
             "adult_severe": "500mg PO x 4 lần/ngày",
@@ -559,7 +604,11 @@ TETRACYCLINE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan, thận trong 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu. Uống với nhiều nước (ít nhất 200ml).",

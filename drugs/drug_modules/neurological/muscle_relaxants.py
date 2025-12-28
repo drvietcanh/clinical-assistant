@@ -494,6 +494,30 @@ MUSCLE_RELAXANTS_DRUGS = {
                 "Bệnh tim mạch - thận trọng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng cyclobenzaprine",
+                "Dùng MAO inhibitor trong vòng 14 ngày",
+                "Giai đoạn cấp tính sau nhồi máu cơ tim",
+                "Suy tim nặng",
+                "Block nhĩ thất độ 2-3",
+                "Cường giáp"
+            ],
+            "tương_đối": [
+                "Dùng với SSRI/SNRI - tăng nguy cơ hội chứng serotonin",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ",
+                "Bệnh tim mạch - thận trọng",
+                "Suy thận nặng - thận trọng, giảm liều",
+                "Suy gan nặng - thận trọng, giảm liều"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Cyclobenzaprine không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Cyclobenzaprine thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy, đặc biệt với half-life dài (1-3 ngày). Giảm liều và theo dõi chặt chẽ ở suy thận."
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Category B. Có thể dùng nếu lợi ích > nguy cơ.",
@@ -754,6 +778,25 @@ MUSCLE_RELAXANTS_DRUGS = {
                 "Tiền sử nghiện/lạm dụng chất - tăng nguy cơ nghiện",
                 "Bệnh gan nặng - thận trọng"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng carisoprodol",
+                "Porphyria",
+                "Dị ứng với meprobamate"
+            ],
+            "tương_đối": [
+                "Tiền sử nghiện/lạm dụng chất - tăng nguy cơ nghiện",
+                "Bệnh gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng, giảm liều"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Carisoprodol và meprobamate không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Carisoprodol chuyển hóa thành meprobamate ở gan, sau đó thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy meprobamate. Giảm liều và theo dõi chặt chẽ ở suy thận."
         },
         "pregnancy_lactation": {
             "fda_category": "C",

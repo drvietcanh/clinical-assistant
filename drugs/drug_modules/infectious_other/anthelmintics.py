@@ -95,22 +95,38 @@ ANTHELMINTICS_DRUGS = {
         'Điều trị triệu chứng: Thuốc chống nôn, giảm đau nếu cần'],
         'monitoring':
         'Chức năng gan (ALT, AST, bilirubin), công thức máu (CBC), triệu chứng lâm sàng'
-        }, 'reversal_agents': {'available': False, 'agents': None, 'notes':
-        'Không có thuốc giải độc đặc hiệu. Điều trị hỗ trợ và theo dõi'},
+        },         'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có thuốc giải độc đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: rửa dạ dày nếu sớm, than hoạt tính, theo dõi chức năng gan và công thức máu, điều trị triệu chứng.'},
         'administration_instructions': {'oral': {'with_food':
         'BẮT BUỘC uống với thức ăn béo (bữa ăn có chất béo) để tăng hấp thu. Uống với thức ăn béo tăng nồng độ trong máu lên 5 lần so với uống khi đói'
         , 'timing':
         'Uống với bữa ăn chính (sáng, trưa, tối). Với hydatid disease và neurocysticercosis: 400mg x 2 lần/ngày với bữa ăn'
         , 'notes':
         'Với neurocysticercosis: dùng kèm corticosteroid (dexamethasone) để giảm phản ứng viêm. Với hydatid disease: có thể cần lặp lại chu kỳ 28 ngày'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Albendazole (Albenza)',
         'UpToDate - Albendazole drug information',
         'WHO Guidelines for treatment of echinococcosis',
         'WHO Guidelines for treatment of neurocysticercosis',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics"],
         'last_updated': '2025-02-04', 'evidence_level':
-        'High - Guidelines dựa trên chứng cứ từ WHO và FDA'}},
+        'High - Guidelines dựa trên chứng cứ từ WHO và FDA'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Hepatotoxicity (especially with long-term use)', 'Bone marrow suppression (leukopenia)', 'Teratogenicity (pregnancy category D)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': True,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Hepatic function (ALT, AST, bilirubin) - CRITICAL for long-term use', 'CBC (leukopenia) - especially long-term', 'Pregnancy test before treatment']
+        },
+        'guideline_tags': [
+            'WHO Guidelines - Echinococcosis Treatment',
+            'WHO Guidelines - Neurocysticercosis Treatment',
+            'FDA Black Box Warning - Albendazole and Pregnancy (Category D)',
+            'CDC Guidelines - Parasitic Infections'
+        ]},
     "Mebendazole": {'group': 'Infectious Disease - Anthelmintic', 'vietnamese_name':
         'Mebendazole, Vermox', 'administration': ['PO'], 'indications': [
         'Giun sán (giun đũa, giun móc, giun tóc, giun kim)', 'Sán dây',
@@ -182,8 +198,8 @@ ANTHELMINTICS_DRUGS = {
         'Theo dõi công thức máu nếu dùng liều cao, lâu dài',
         'Theo dõi chức năng gan nếu có triệu chứng'], 'monitoring':
         'Triệu chứng lâm sàng, công thức máu (nếu dùng liều cao), chức năng gan (nếu có triệu chứng)'
-        }, 'reversal_agents': {'available': False, 'agents': None, 'notes':
-        'Không có thuốc giải độc đặc hiệu. Điều trị hỗ trợ và theo dõi'},
+        },         'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có thuốc giải độc đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: rửa dạ dày nếu sớm, than hoạt tính, điều trị triệu chứng, theo dõi công thức máu và chức năng gan nếu cần.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể uống với thức ăn hoặc không (không ảnh hưởng nhiều do hấp thu kém). Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ'
         , 'timing':
@@ -238,7 +254,11 @@ ANTHELMINTICS_DRUGS = {
         'effect': 'Giảm nồng độ praziquantel', 'management': 'Cân nhắc tăng liều hoặc chọn thuốc khác'}]}
         , 'contraindications': {'tuyệt_đối': ['Dị ứng praziquantel',
         'Ocular cysticercosis', 'Dùng rifampin đồng thời'], 'tương_đối': [
-        'Suy gan (tăng nồng độ, thận trọng)']}, 'pregnancy_lactation': {
+        'Suy gan (tăng nồng độ, thận trọng)']}, 'contraindications_detail': {
+        'tuyệt_đối': ['Dị ứng praziquantel',
+        'Ocular cysticercosis', 'Dùng rifampin đồng thời'], 'tương_đối': [
+        'Suy gan (tăng nồng độ, thận trọng)']}, 'black_box_warnings': None,
+        'pregnancy_lactation': {
         'fda_category': 'B', 'pregnancy_details':
         'Tránh tam cá nguyệt 1; có thể dùng tam cá nguyệt 2-3 nếu lợi ích vượt nguy cơ'
         , 'lactation': {'safety': 'Compatible', 'details':
@@ -288,6 +308,9 @@ ANTHELMINTICS_DRUGS = {
         'management': 'Theo dõi INR khi bắt đầu/dừng ivermectin'}]}, 
         'contraindications': {'tuyệt_đối': ['Dị ứng ivermectin'], 'tương_đối': [
         'Trẻ <15kg', 'Đồng nhiễm Loa loa (nguy cơ biến chứng thần kinh)']},
+        'contraindications_detail': {'tuyệt_đối': ['Dị ứng ivermectin'], 'tương_đối': [
+        'Trẻ <15kg', 'Đồng nhiễm Loa loa (nguy cơ biến chứng thần kinh)']},
+        'black_box_warnings': None,
         'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
         'Tránh nếu có thể; dùng khi lợi ích vượt trội nguy cơ', 'lactation': {
         'safety': 'Thấp', 'details':
@@ -298,15 +321,31 @@ ANTHELMINTICS_DRUGS = {
         'symptoms': ['Chóng mặt, nôn', 'Hạ huyết áp, ngủ gà', 'Co giật hiếm'],
         'antidote': 'Không có', 'treatment': ['Hỗ trợ, than hoạt nếu sớm',
         'Theo dõi huyết áp, hô hấp', 'Điều trị triệu chứng']},
-        'reversal_agents': {'available': False, 'agents': None, 'notes':
-        'Không có thuốc giải độc đặc hiệu'}, 'administration_instructions': {
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có thuốc giải độc đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ, than hoạt nếu sớm, theo dõi huyết áp, hô hấp, và điều trị triệu chứng.'}, 'administration_instructions': {
         'oral': {'with_food': 'Uống lúc đói với nước (tăng hấp thu nhẹ)',
         'timing': 'Uống 1 lần; lặp lại theo chỉ định', 'notes':
         'Tính liều theo cân nặng, làm tròn theo viên 3mg/6mg nếu cần'}},
         'references': {'primary_sources': [
         'WHO guidelines for strongyloidiasis/onchocerciasis',
         'UpToDate - Ivermectin', 'CDC DPDx - Ivermectin'],
-        'last_updated': '2025-02-06', 'evidence_level': 'High - WHO/CDC/UpToDate'}},
+        'last_updated': '2025-02-06', 'evidence_level': 'High - WHO/CDC/UpToDate'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Mazzotti reaction (itching, rash, fever) when treating onchocerciasis', 'Neurological toxicity (rare, with P-gp inhibitors)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Clinical symptoms and stool examination (for strongyloidiasis)', 'Mazzotti reaction (itching, rash, fever) when treating onchocerciasis', 'INR if co-administered with warfarin', 'CBC and hepatic function if multiple courses']
+        },
+        'guideline_tags': [
+            'WHO Guidelines - Strongyloidiasis Treatment',
+            'WHO Guidelines - Onchocerciasis Treatment',
+            'CDC Guidelines - Parasitic Infections',
+            'FDA Drug Information - Ivermectin'
+        ]},
     "Levamisole": {'group': 'Infectious Disease - Anthelmintic', 'vietnamese_name':
         'Levamisole', 'administration': ['PO'], 'indications': [
         'Tẩy giun (giun đũa, giun móc) - ít dùng hiện nay'], 'contraindications':
@@ -333,7 +372,10 @@ ANTHELMINTICS_DRUGS = {
         'Tăng nguy cơ giảm bạch cầu hạt', 'effect': 'Tăng nguy cơ nhiễm trùng',
         'management': 'Tránh phối hợp'}, {'drug': 'Warfarin', 'mechanism':
         'Chưa rõ, có thể tăng INR', 'effect': 'Tăng nguy cơ chảy máu',
-        'management': 'Theo dõi INR nếu phối hợp'}]}, 'contraindications': {
+        'management': 'Theo dõi INR nếu phối hợp'}]},         'contraindications': {
+        'tuyệt_đối': ['Dị ứng levamisole', 'Tiền sử giảm bạch cầu hạt', 'Có thai'],
+        'tương_đối': ['Suy gan, suy thận - thận trọng']},
+        'contraindications_detail': {
         'tuyệt_đối': ['Dị ứng levamisole', 'Tiền sử giảm bạch cầu hạt', 'Có thai'],
         'tương_đối': ['Suy gan, suy thận - thận trọng']},
         'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
@@ -344,8 +386,8 @@ ANTHELMINTICS_DRUGS = {
         'severe': 'Tránh nếu có thể'}, 'overdose_management': {
         'symptoms': ['Buồn nôn, nôn, chóng mặt', 'Co giật hiếm'],
         'antidote': 'Không có', 'treatment': ['Điều trị hỗ trợ, than hoạt nếu sớm',
-        'Theo dõi CBC, dấu hiệu nhiễm trùng']}, 'reversal_agents': {
-        'available': False, 'agents': None, 'notes': 'Không có thuốc giải độc đặc hiệu'},
+        'Theo dõi CBC, dấu hiệu nhiễm trùng']},         'reversal_agents': {
+        'available': False, 'agents': [], 'notes': 'Không có thuốc giải độc đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ, than hoạt nếu sớm, theo dõi CBC và dấu hiệu nhiễm trùng.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống sau ăn tối để giảm kích ứng dạ dày', 'timing': 'Liều đơn',
         'notes': 'Theo dõi CBC nếu phải lặp lại hoặc nghi ngờ giảm bạch cầu'}},

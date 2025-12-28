@@ -4375,6 +4375,3222 @@ EXTRA_ENHANCED_FIELDS.update({
     },
 })
 
+# ======================== BATCH 1: 30 DRUGS MISSING 2 FIELDS (Session 4) ========================
+EXTRA_ENHANCED_FIELDS.update({
+    "Ramipril": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng ramipril hoặc các ACE inhibitor khác', 'Có thai (tất cả các tam cá nguyệt) - gây dị tật thai nhi', 'Hẹp động mạch thận 2 bên hoặc hẹp động mạch thận ở thận đơn độc', 'Phù mạch trước đây với ACE inhibitor'],
+            "tương_đối": ['Suy thận nặng (CrCl <30) - cần giảm liều', 'Suy gan - thận trọng', 'Hẹp van động mạch chủ nặng', 'Tăng kali máu', 'Dùng với kali-sparing diuretics hoặc kali bổ sung'],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị hỗ trợ triệu chứng.",
+        },
+    },
+    "Perindopril": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng perindopril hoặc các ACE inhibitor khác', 'Có thai (tất cả các tam cá nguyệt)', 'Hẹp động mạch thận 2 bên', 'Phù mạch trước đây với ACE inhibitor'],
+            "tương_đối": ['Suy thận nặng (CrCl <30) - cần giảm liều', 'Suy gan - thận trọng', 'Tăng kali máu', 'Dùng với kali-sparing diuretics'],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị hỗ trợ triệu chứng.",
+        },
+    },
+    "Valsartan": {
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị hỗ trợ triệu chứng.",
+        },
+    },
+    "Metoprolol": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Hen phế quản nặng', 'Block nhĩ thất độ 2-3', 'Suy tim cấp không bù', 'Nhịp tim chậm nặng (<50 bpm)', 'Sốc tim', 'Hội chứng sick sinus (trừ khi có máy tạo nhịp)'],
+            "tương_đối": ['COPD (thận trọng, có thể dùng liều thấp)', 'Đái tháo đường (che dấu triệu chứng hạ đường huyết)', 'Bệnh mạch máu ngoại biên (có thể làm nặng)', 'Suy gan (giảm chuyển hóa)', 'Dùng với verapamil/diltiazem (tăng nguy cơ block AV)'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Nebivolol": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Hen phế quản nặng - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI', 'Block nhĩ thất độ 2-3 - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI', 'Suy tim cấp không bù - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI', 'Nhịp tim chậm nặng (<60 bpm) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI', 'Suy gan nặng - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI'],
+            "tương_đối": ['Suy thận nặng (CrCl <30) - thận trọng, khởi đầu 2.5mg/ngày, tối đa 10mg/ngày', 'Suy thận trung bình (CrCl 30-60) - thận trọng, khởi đầu 2.5mg/ngày', 'COPD - thận trọng (selective beta-1, ít ảnh hưởng hơn non-selective)', 'Đái tháo đường - che dấu triệu chứng hạ đường huyết', 'Dùng với verapamil/diltiazem - tăng nguy cơ block nhĩ thất'],
+        },
+    },
+    "Propranolol": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Hen phế quản', 'Suy tim cấp', 'Block nhĩ thất độ 2-3', 'Nhịp tim chậm nặng (<50 bpm)', 'Sốc tim', 'Hội chứng sick sinus (trừ khi có máy tạo nhịp)'],
+            "tương_đối": ['COPD (thận trọng, có thể dùng liều thấp nhưng nguy cơ co thắt phế quản cao hơn)', 'Đái tháo đường (che dấu triệu chứng hạ đường huyết)', 'Bệnh mạch máu ngoại biên (có thể làm nặng)', 'Suy gan (giảm chuyển hóa, extensive first-pass)', 'Dùng với verapamil/diltiazem (tăng nguy cơ block AV)'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Atorvastatin": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Bệnh gan hoạt động (active liver disease) - tăng men gan kéo dài, viêm gan', 'Có thai (pregnancy) - FDA category X, gây dị tật thai nhi', 'Cho con bú (lactation) - bài tiết vào sữa mẹ', 'Tiêu cơ vân đang hoạt động (active myopathy/rhabdomyolysis)', 'Dị ứng với atorvastatin hoặc bất kỳ thành phần nào', 'Dùng cùng cyclosporine, itraconazole, ketoconazole (tăng nguy cơ tiêu cơ vân nghiêm trọng)'],
+            "tương_đối": ['Suy thận - thận trọng, giảm liều nếu cần', 'Suy gan - thận trọng, theo dõi men gan thường xuyên', 'Uống rượu nhiều - tăng nguy cơ viêm gan', 'Bệnh nhân Châu Á - tăng nồng độ atorvastatin, có thể cần liều thấp hơn', 'Người cao tuổi - tăng nguy cơ đau cơ, tiêu cơ vân', 'Đái tháo đường - statins có thể tăng đường huyết nhẹ', 'Bệnh tuyến giáp - tăng nguy cơ đau cơ', 'Dùng cùng thuốc ức chế CYP3A4 - giảm liều atorvastatin'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Simvastatin": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Bệnh gan hoạt động (active liver disease) - tăng men gan kéo dài, viêm gan', 'Có thai (pregnancy) - FDA category X, gây dị tật thai nhi', 'Cho con bú (lactation) - bài tiết vào sữa mẹ', 'Tiêu cơ vân đang hoạt động (active myopathy/rhabdomyolysis)', 'Dị ứng với simvastatin hoặc bất kỳ thành phần nào', 'Dùng cùng cyclosporine, itraconazole, ketoconazole (tăng nguy cơ tiêu cơ vân nghiêm trọng)', 'Dùng grapefruit juice'],
+            "tương_đối": ['Suy thận - thận trọng, giảm liều nếu cần', 'Suy gan - thận trọng, theo dõi men gan thường xuyên', 'Uống rượu nhiều - tăng nguy cơ viêm gan', 'Người cao tuổi - tăng nguy cơ đau cơ, tiêu cơ vân', 'Đái tháo đường - statins có thể tăng đường huyết nhẹ', 'Bệnh tuyến giáp - tăng nguy cơ đau cơ', 'Dùng cùng thuốc ức chế CYP3A4 - giảm liều simvastatin', 'Liều cao (>40mg/ngày) - tăng nguy cơ tiêu cơ vân'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Pravastatin": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Bệnh gan hoạt động', 'Có thai', 'Cho con bú', 'Tiêu cơ vân đang hoạt động'],
+            "tương_đối": ['Suy thận nặng - cần điều chỉnh liều', 'Dùng với cyclosporine - giảm liều', 'Dùng với gemfibrozil - tránh dùng chung'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Fluvastatin": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Bệnh gan hoạt động', 'Có thai', 'Cho con bú', 'Tiêu cơ vân đang hoạt động'],
+            "tương_đối": ['Suy thận nặng - thận trọng', 'Dùng với cyclosporine - giảm liều', 'Dùng với gemfibrozil - tránh dùng chung'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Pitavastatin": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Bệnh gan hoạt động', 'Có thai', 'Cho con bú', 'Tiêu cơ vân đang hoạt động'],
+            "tương_đối": ['Suy thận nặng - thận trọng', 'Dùng với cyclosporine - giảm liều tối đa 1mg/ngày', 'Dùng với gemfibrozil - tránh dùng chung'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Ezetimibe": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng ezetimibe'],
+            "tương_đối": ['Bệnh gan hoạt động (khi dùng với statin) - chống chỉ định statin, nhưng có thể dùng ezetimibe đơn trị', 'Có thai (khi dùng với statin) - statin chống chỉ định trong thai kỳ', 'Dùng với cyclosporine - giảm liều ezetimibe xuống 5mg/ngày', 'Dùng với fibrates - tăng nguy cơ sỏi mật'],
+        },
+    },
+    "Amiodarone": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Block nhĩ thất độ 2-3 không có máy tạo nhịp', 'Rối loạn chức năng tuyến giáp không kiểm soát được', 'Bệnh phổi mạn tính nặng (COPD, ILD)', 'Bệnh gan nặng (Child-Pugh C)', 'Có thai (category D)', 'Hạ K+ hoặc Mg2+ nặng (tăng nguy cơ torsades de pointes)'],
+            "tương_đối": ['Suy thận nặng (thận trọng, theo dõi chức năng thận)', 'Nhịp tim chậm (tăng nguy cơ block AV)', 'Bệnh phổi nhẹ (theo dõi chức năng phổi chặt chẽ)', 'Rối loạn chức năng tuyến giáp nhẹ (theo dõi TSH chặt chẽ)', 'Đang dùng warfarin hoặc digoxin (cần giảm liều)'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Flecainide": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Bệnh tim cấu trúc (suy tim, bệnh mạch vành, bệnh van tim)', 'Block nhĩ thất độ 2-3', 'Hội chứng Brugada', 'QT kéo dài', 'Suy thận nặng (CrCl <30)'],
+            "tương_đối": ['Suy thận (CrCl 30-50) - giảm liều 25-50%', 'Block nhĩ thất độ 1 - có thể làm nặng block', 'Dùng với amiodarone - tăng nồng độ flecainide', 'Dùng với beta-blockers, verapamil, diltiazem - tăng nguy cơ block AV'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Propafenone": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Bệnh tim cấu trúc (suy tim, bệnh mạch vành, bệnh van tim)', 'Block nhĩ thất độ 2-3', 'Hội chứng Brugada', 'QT kéo dài', 'Suy gan nặng', 'Suy thận nặng (CrCl <30)'],
+            "tương_đối": ['Suy gan - giảm liều 25-50%', 'Suy thận (CrCl 30-50) - giảm liều 25-50%', 'Block nhĩ thất độ 1 - có thể làm nặng block', 'Dùng với amiodarone - tăng nồng độ propafenone', 'Dùng với beta-blockers - tăng nguy cơ block AV'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Dronedarone": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Suy tim nặng (NYHA class IV) hoặc suy tim không ổn định - CHỐNG CHỈ ĐỊNH (tăng nguy cơ tử vong)', 'Bệnh gan nặng - CHỐNG CHỈ ĐỊNH', 'Block nhĩ thất độ 2-3 không có máy tạo nhịp', 'Nhịp chậm <50 bpm', 'QT prolongation nặng', 'Dùng với CYP3A4 inhibitors mạnh'],
+            "tương_đối": ['Suy tim nhẹ đến trung bình (NYHA class I-III) - thận trọng', 'Suy gan nhẹ đến trung bình - thận trọng, theo dõi chặt chẽ', 'Suy thận - tăng creatinine có thể xảy ra (không phải suy thận thực sự)', 'Dùng với digoxin - giảm liều digoxin 50%', 'Dùng với warfarin - theo dõi INR'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Procainamide": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng procainamide', 'Block nhĩ thất độ 2-3 không có máy tạo nhịp', 'Suy tim nặng', 'Lupus ban đỏ hệ thống đang hoạt động'],
+            "tương_đối": ['Suy thận nặng - NAPA tích lũy, giảm liều', 'Suy gan nặng - thận trọng', 'Block nhĩ thất độ 1 - thận trọng', 'QT prolongation - tăng nguy cơ rối loạn nhịp tim'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Adenosine": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Block nhĩ thất độ 2-3 (AV block) không có máy tạo nhịp', 'Hội chứng sick sinus (sick sinus syndrome) không có máy tạo nhịp', 'Hen phế quản nặng hoặc co thắt phế quản nặng', 'Dị ứng adenosine', 'Rung nhĩ/rung thất (không phải chỉ định)'],
+            "tương_đối": ['Block AV độ 1 - thận trọng, có thể làm nặng', 'Hen phế quản nhẹ đến trung bình - thận trọng, có thể gây co thắt phế quản', 'Suy tim - thận trọng, có thể gây ngừng tim kéo dài', 'Suy thận nặng - không cần điều chỉnh liều nhưng thận trọng', 'Dùng với dipyridamole - giảm liều 50-75%', 'Dùng với theophylline/caffeine - có thể không hiệu quả', 'Nhịp tim chậm (<50 bpm) - thận trọng, có thể gây ngừng tim'],
+        },
+    },
+    "Ibutilide": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng ibutilide', 'QT kéo dài (QTc >440ms) - CHỐNG CHỈ ĐỊNH', 'Torsades de pointes - CHỐNG CHỈ ĐỊNH', 'Hạ kali máu, hạ magie máu - CHỐNG CHỈ ĐỊNH (phải điều chỉnh trước)', 'Dùng với thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH'],
+            "tương_đối": ['Suy tim nặng - thận trọng', 'Dùng với digoxin - tăng nguy cơ rối loạn nhịp tim', 'Dùng với beta-blockers - tăng nguy cơ nhịp tim chậm'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Amlodipine": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng amlodipine hoặc dihydropyridine calcium channel blockers', 'Sốc tim', 'Suy tim mất bù nặng (NYHA class IV)'],
+            "tương_đối": ['Hẹp van động mạch chủ nặng - có thể gây suy tim', 'Suy gan - giảm chuyển hóa, tăng nồng độ', 'Suy tim nhẹ đến trung bình - thận trọng', 'Phù ngoại biên - tác dụng phụ thường gặp nhưng không nguy hiểm'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Furosemide": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Vô niệu', 'Mất nước nặng', 'Hạ kali máu nặng', 'Dị ứng sulfonamide', 'Dị ứng furosemide'],
+            "tương_đối": ['Suy thận nặng - có thể cần liều cao hơn (nhưng thận trọng với IV liều cao - nguy cơ điếc)', 'Suy gan nặng - thận trọng (thải một phần qua gan)', 'Hạ natri máu - điều chỉnh trước khi dùng', 'Hạ magie máu - bù magie trước khi dùng', 'Dùng với digoxin - tăng nguy cơ ngộ độc digoxin', 'Dùng với aminoglycosides - tăng nguy cơ điếc', 'Dùng với lithium - tăng nồng độ lithium'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Bumetanide": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Vô niệu', 'Mất nước nặng', 'Hạ kali máu nặng', 'Dị ứng sulfonamide'],
+            "tương_đối": ['Suy thận nặng - có thể cần liều cao hơn nhưng thận trọng', 'Suy gan nặng - thận trọng', 'Đang dùng digoxin - tăng nguy cơ ngộ độc digoxin'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Torsemide": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Vô niệu', 'Mất nước nặng', 'Hạ kali máu nặng', 'Dị ứng sulfonamide'],
+            "tương_đối": ['Suy thận nặng - có thể cần liều cao hơn nhưng thận trọng', 'Suy gan nặng - thận trọng', 'Đang dùng digoxin - tăng nguy cơ ngộ độc digoxin'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Chlorthalidone": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng chlorthalidone hoặc sulfonamide', 'Vô niệu', 'Hạ kali máu nặng không kiểm soát', 'Suy gan nặng'],
+            "tương_đối": ['Suy thận (CrCl <30) - giảm hiệu quả, tăng nguy cơ tác dụng phụ', 'Hạ kali máu - có thể làm nặng', 'Hạ natri máu - có thể làm nặng', 'Đái tháo đường - có thể tăng đường huyết', 'Gout - có thể tăng acid uric, gây cơn gout', 'Người cao tuổi - tăng nguy cơ hạ natri máu, té ngã', 'Dùng với digoxin - tăng nguy cơ ngộ độc digoxin', 'Dùng với lithium - tăng nguy cơ độc tính lithium'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Warfarin": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Chảy máu đang hoạt động', 'Có thai (3 tháng đầu và cuối - category X)', 'Bệnh gan nặng (Child-Pugh C)', 'Thiếu protein C hoặc S bẩm sinh (tăng nguy cơ hoại tử da)', 'Không tuân thủ điều trị'],
+            "tương_đối": ['Bệnh gan nhẹ-trung bình (thận trọng, theo dõi chức năng gan)', 'Suy thận nặng (thận trọng)', 'Người già (>75 tuổi - tăng nguy cơ chảy máu)', 'Tiền sử loét dạ dày tá tràng (tăng nguy cơ chảy máu)', 'Đang dùng aspirin/NSAIDs (tăng nguy cơ chảy máu)', 'Rối loạn đông máu (hemophilia, von Willebrand disease)'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Clopidogrel": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Chảy máu đang hoạt động', 'Xuất huyết nội sọ đang hoạt động', 'Dị ứng clopidogrel'],
+            "tương_đối": ['Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng', 'Suy gan nặng - thận trọng', 'Suy thận nặng - thận trọng', 'Phẫu thuật lớn - cần ngừng trước phẫu thuật', 'Poor metabolizers CYP2C19 - có thể giảm đáp ứng, cân nhắc dùng prasugrel/ticagrelor'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Ticagrelor": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Chảy máu đang hoạt động', 'Xuất huyết nội sọ đang hoạt động', 'Dị ứng ticagrelor', 'Dùng strong CYP3A4 inhibitors (ketoconazole, itraconazole, clarithromycin, ritonavir)'],
+            "tương_đối": ['Suy gan nặng - chống chỉ định', 'Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng', 'Tiền sử nhịp tim chậm hoặc block nhĩ thất - tăng nguy cơ bradycardia', 'Suy thận nặng - thận trọng', 'Phẫu thuật lớn - cần ngừng trước phẫu thuật'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Prasugrel": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Chảy máu đang hoạt động', 'Tiền sử TIA hoặc đột quỵ', 'Dị ứng prasugrel'],
+            "tương_đối": ['Tuổi ≥75 (trừ nguy cơ cao) - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày', 'Cân nặng <60kg (trừ nguy cơ cao) - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày', 'Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng', 'Phẫu thuật lớn - cần ngừng trước phẫu thuật', 'Suy gan nặng - thận trọng', 'Suy thận nặng - thận trọng'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Enoxaparin": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Chảy máu đang hoạt động', 'Giảm tiểu cầu do heparin (HIT) đang hoạt động hoặc tiền sử', 'Dị ứng heparin/enoxaparin'],
+            "tương_đối": ['Suy thận nặng (CrCl <30) - giảm liều hoặc dùng UFH thay thế', 'Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng', 'Phẫu thuật lớn - cần ngừng trước phẫu thuật', 'Có thai - tương đối an toàn nhưng thận trọng'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Rivaroxaban": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Chảy máu đang hoạt động', 'Suy thận nặng (CrCl <15) - chống chỉ định', 'Dị ứng rivaroxaban', 'Dùng CYP3A4 và P-gp inhibitors mạnh (ketoconazole, ritonavir)'],
+            "tương_đối": ['Suy thận (CrCl 15-50) - giảm liều (15mg x 1 lần/ngày cho AFib)', 'Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng', 'Phẫu thuật lớn - cần ngừng trước phẫu thuật', 'Có thai - tránh dùng'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+})
+# ======================== END BATCH 1 ========================
+
+# ======================== BATCH 2: 30 DRUGS (31-60) ========================
+EXTRA_ENHANCED_FIELDS.update({
+    "Apixaban": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Chảy máu đang hoạt động', 'Suy thận nặng (CrCl <15) - chống chỉ định', 'Dị ứng apixaban', 'Dùng CYP3A4 và P-gp inhibitors mạnh (ketoconazole, ritonavir)'],
+            "tương_đối": ['Suy thận (CrCl 15-30) - thận trọng, có thể cần giảm liều', 'Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng', 'Phẫu thuật lớn - cần ngừng trước phẫu thuật', 'Có thai - tránh dùng'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Dabigatran": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Chảy máu đang hoạt động', 'Suy thận nặng (CrCl <30) - chống chỉ định', 'Dị ứng dabigatran', 'Dùng P-gp inhibitors mạnh (ketoconazole, dronedarone)'],
+            "tương_đối": ['Suy thận (CrCl 30-50) - giảm liều (110mg x 2 lần/ngày)', 'Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng', 'Phẫu thuật lớn - cần ngừng trước phẫu thuật', 'Có thai - tránh dùng'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Edoxaban": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Chảy máu đang hoạt động', 'Suy thận nặng (CrCl <15) - chống chỉ định', 'Dị ứng edoxaban'],
+            "tương_đối": ['Suy thận (CrCl 15-50) - giảm liều xuống 30mg x 1 lần/ngày', 'Cân nặng ≤60kg - giảm liều xuống 30mg x 1 lần/ngày', 'Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng', 'Phẫu thuật lớn - cần ngừng trước phẫu thuật', 'Có thai - tránh dùng'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Alirocumab": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng với alirocumab hoặc bất kỳ thành phần nào', 'Dị ứng với protein tái tổ hợp'],
+            "tương_đối": ['Suy gan nặng - chưa có dữ liệu đầy đủ', 'Suy thận nặng - không cần chỉnh liều nhưng thận trọng'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Thận trọng, chưa có dữ liệu đầy đủ.",
+            "severe": "Thiếu dữ liệu; cân nhắc thuốc khác nếu có thể.",
+            "notes": "Alirocumab là monoclonal antibody, không chuyển hóa qua gan nhưng thải trừ qua hệ thống reticuloendothelial.",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Half-life rất dài (17-20 ngày), tác dụng sẽ giảm dần theo thời gian.",
+        },
+    },
+    "Evolocumab": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng với evolocumab hoặc bất kỳ thành phần nào', 'Dị ứng với protein tái tổ hợp'],
+            "tương_đối": ['Suy gan nặng - chưa có dữ liệu đầy đủ', 'Suy thận nặng - không cần chỉnh liều nhưng thận trọng'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Thận trọng, chưa có dữ liệu đầy đủ.",
+            "severe": "Thiếu dữ liệu; cân nhắc thuốc khác nếu có thể.",
+            "notes": "Evolocumab là monoclonal antibody, không chuyển hóa qua gan nhưng thải trừ qua hệ thống reticuloendothelial.",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Half-life rất dài (11-17 ngày), tác dụng sẽ giảm dần theo thời gian.",
+        },
+    },
+    "Inclisiran": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng với inclisiran hoặc bất kỳ thành phần nào'],
+            "tương_đối": ['Suy gan nặng - chưa có dữ liệu đầy đủ', 'Suy thận nặng - không cần chỉnh liều nhưng thận trọng'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Thận trọng, chưa có dữ liệu đầy đủ.",
+            "severe": "Thiếu dữ liệu; cân nhắc thuốc khác nếu có thể.",
+            "notes": "Inclisiran là siRNA, không chuyển hóa qua gan nhưng thải trừ qua hệ thống nội bào.",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Tác dụng kéo dài 6 tháng sau liều thứ 2.",
+        },
+    },
+    "Sitagliptin": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Đái tháo đường type 1', 'Nhiễm toan ceton do đái tháo đường', 'Dị ứng sitagliptin', 'Viêm tụy cấp đang diễn ra'],
+            "tương_đối": ['Suy thận nặng (CrCl <30) - cần giảm liều (25mg/ngày)', 'Suy thận trung bình (CrCl 30-50) - cần giảm liều (50mg/ngày)', 'Tiền sử viêm tụy cấp - tăng nguy cơ', 'Tiền sử suy tim - tăng nhẹ nguy cơ suy tim', 'Đau khớp nghiêm trọng - ngừng thuốc nếu xảy ra'],
+        },
+    },
+    "Linagliptin": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Đái tháo đường type 1', 'Nhiễm toan ceton do đái tháo đường', 'Dị ứng linagliptin hoặc DPP-4 inhibitor'],
+            "tương_đối": ['Suy thận - không cần điều chỉnh liều (ưu điểm)', 'Suy gan - thận trọng', 'Có thai - category B, an toàn'],
+        },
+    },
+    "Saxagliptin": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Đái tháo đường type 1', 'Nhiễm toan ceton do đái tháo đường', 'Dị ứng saxagliptin hoặc DPP-4 inhibitor'],
+            "tương_đối": ['Suy thận - cần điều chỉnh liều (CrCl ≤50 → 2.5mg/ngày)', 'Suy gan - thận trọng', 'Có thai - category B, an toàn'],
+        },
+    },
+    "Alogliptin": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Đái tháo đường type 1', 'Nhiễm toan ceton do đái tháo đường', 'Dị ứng alogliptin hoặc DPP-4 inhibitor'],
+            "tương_đối": ['Suy thận - cần điều chỉnh liều (CrCl 30-60 → 12.5mg/ngày, CrCl <30 → 6.25mg/ngày)', 'Suy gan - thận trọng', 'Có thai - category B, an toàn'],
+        },
+    },
+    "Insulin": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Hạ đường huyết (hypoglycemia) - không được dùng khi đường huyết thấp', 'Dị ứng insulin hoặc bất kỳ thành phần nào trong chế phẩm insulin', 'Hôn mê do hạ đường huyết - không được dùng insulin cho đến khi hồi phục'],
+            "tương_đối": ['Suy thận - giảm clearance insulin, giảm liều insulin', 'Suy gan - giảm gluconeogenesis, tăng nguy cơ hạ đường huyết, giảm liều insulin', 'Suy tim - thận trọng, có thể cần điều chỉnh liều', 'Người cao tuổi - tăng nguy cơ hạ đường huyết, cần liều thấp hơn', 'Bệnh nhân không có khả năng tự quản lý - cần người chăm sóc', 'Bệnh nhân không có khả năng nhận biết hạ đường huyết - tăng nguy cơ', 'Thai kỳ - điều chỉnh liều thường xuyên (tăng nhu cầu trong tam cá nguyệt 2-3)'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Empagliflozin": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Đái tháo đường type 1', 'Nhiễm toan ceton do đái tháo đường', 'Suy thận nặng (eGFR <20)', 'Đang lọc máu', 'Dị ứng empagliflozin'],
+            "tương_đối": ['Nhiễm trùng đường tiết niệu tái phát - tăng nguy cơ nhiễm trùng', 'Suy tim nặng - tăng nguy cơ mất nước', 'Người cao tuổi - tăng nguy cơ mất nước, hạ huyết áp', 'Dùng diuretics - tăng nguy cơ mất nước', 'Nhiễm trùng đường sinh dục tái phát - tăng nguy cơ nhiễm trùng'],
+        },
+    },
+    "Dapagliflozin": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Đái tháo đường type 1', 'Nhiễm toan ceton do đái tháo đường', 'Suy thận nặng (eGFR <25)', 'Đang lọc máu', 'Dị ứng dapagliflozin'],
+            "tương_đối": ['Nhiễm trùng đường tiết niệu tái phát - tăng nguy cơ nhiễm trùng', 'Suy tim nặng - tăng nguy cơ mất nước', 'Người cao tuổi - tăng nguy cơ mất nước, hạ huyết áp', 'Dùng diuretics - tăng nguy cơ mất nước', 'Nhiễm trùng đường sinh dục tái phát - tăng nguy cơ nhiễm trùng'],
+        },
+    },
+    "Glibenclamide": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Đái tháo đường type 1', 'Nhiễm toan ceton do đái tháo đường', 'Dị ứng glibenclamide hoặc sulfonylurea', 'Suy thận nặng (CrCl <30) - tăng nguy cơ hạ đường huyết nghiêm trọng'],
+            "tương_đối": ['Suy gan nặng - tăng nguy cơ hạ đường huyết', 'Người cao tuổi - tăng nguy cơ hạ đường huyết', 'Suy thận trung bình (CrCl 30-60) - giảm liều, theo dõi sát', 'Có thai - có thể gây hạ đường huyết ở trẻ sơ sinh', 'Bỏ bữa thường xuyên - tăng nguy cơ hạ đường huyết', 'Uống rượu - tăng nguy cơ hạ đường huyết nghiêm trọng', 'Dùng beta-blocker - che dấu triệu chứng hạ đường huyết'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Gliclazide": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Đái tháo đường type 1', 'Nhiễm toan ceton do đái tháo đường', 'Dị ứng gliclazide hoặc sulfonylurea', 'Suy thận nặng (CrCl <30) - tăng nguy cơ hạ đường huyết'],
+            "tương_đối": ['Suy gan nặng - tăng nguy cơ hạ đường huyết', 'Người cao tuổi - tăng nguy cơ hạ đường huyết', 'Suy thận trung bình (CrCl 30-60) - giảm liều, theo dõi sát', 'Có thai - có thể gây hạ đường huyết ở trẻ sơ sinh', 'Bỏ bữa thường xuyên - tăng nguy cơ hạ đường huyết', 'Uống rượu - tăng nguy cơ hạ đường huyết'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Acarbose": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Đái tháo đường type 1', 'Nhiễm toan ceton do đái tháo đường', 'Bệnh viêm ruột (Crohn, viêm loét đại tràng)', 'Tắc ruột', 'Suy gan nặng', 'Suy thận nặng (CrCl <25) - CHỐNG CHỈ ĐỊNH', 'Dị ứng acarbose'],
+            "tương_đối": ['Suy thận trung bình (CrCl 25-60) - thận trọng, có thể cần giảm liều', 'Suy gan nhẹ-trung bình - thận trọng', 'Có thai - category B, an toàn'],
+        },
+    },
+    "Miglitol": {
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": ['Đái tháo đường type 1', 'Nhiễm toan ceton do đái tháo đường', 'Bệnh viêm ruột (Crohn, viêm loét đại tràng)', 'Tắc ruột', 'Suy thận nặng (CrCl <25) - CHỐNG CHỈ ĐỊNH', 'Dị ứng miglitol'],
+            "tương_đối": ['Suy thận trung bình (CrCl 25-60) - thận trọng, có thể cần giảm liều', 'Có thai - category B, an toàn'],
+        },
+    },
+    "Loperamide": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng loperamide', 'Tiêu chảy nhiễm khuẩn nặng (C. difficile, E. coli O157:H7) - có thể giữ vi khuẩn trong ruột', 'Viêm đại tràng giả mạc - có thể làm nặng thêm', 'Tắc ruột cơ học', 'Trẻ em <2 tuổi - nguy cơ ức chế hô hấp', 'Liều cao với CYP3A4 inhibitors - CHỐNG CHỈ ĐỊNH'],
+            "tương_đối": ['Suy gan nặng - giảm liều, tăng nguy cơ tích lũy', 'Suy thận nặng - giảm liều, tăng nguy cơ tích lũy', 'Tiêu chảy nhiễm khuẩn nhẹ - thận trọng, đã điều trị kháng sinh', 'Trẻ em 2-6 tuổi - thận trọng, giảm liều', 'Đang dùng opioids - tăng nguy cơ tác dụng phụ'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Bismuth subsalicylate": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng aspirin hoặc salicylates', 'Trẻ em <12 tuổi - nguy cơ hội chứng Reye (nguy hiểm tính mạng)', 'Dùng aspirin hoặc thuốc chống đông (warfarin) - tăng nguy cơ chảy máu nghiêm trọng', 'Suy thận nặng - tích lũy bismuth và salicylate'],
+            "tương_đối": ['Suy thận nhẹ đến trung bình - thận trọng, tích lũy bismuth và salicylate', 'Loét dạ dày - salicylate có thể kích ứng', 'Mang thai - salicylate có thể ảnh hưởng thai nhi', 'Dùng với tetracycline, quinolone - giảm hấp thu, cần cách xa 2 giờ'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+    },
+    "Cimetidine": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng cimetidine hoặc H2 blocker khác'],
+            "tương_đối": ['Suy thận nặng (CrCl <30) - cần giảm liều 75%', 'Suy gan nặng - thận trọng', 'Người già - tăng nguy cơ lú lẫn', 'Dùng với warfarin, theophylline, phenytoin, lidocaine - tăng nguy cơ độc tính', 'Nhiễm C. difficile - tăng nguy cơ nhẹ'],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị hỗ trợ triệu chứng.",
+        },
+    },
+    "Sucralfate": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng sucralfate', 'Suy thận nặng (CrCl <30) - CHỐNG CHỈ ĐỊNH do tích tụ nhôm'],
+            "tương_đối": ['Suy thận trung bình (CrCl 30-60) - thận trọng, giảm liều, theo dõi chức năng thận', 'Táo bón nặng - có thể làm nặng thêm', 'Đang dùng nhiều thuốc - tăng nguy cơ tương tác hấp thu'],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị hỗ trợ triệu chứng.",
+        },
+    },
+    "Lansoprazole": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng lansoprazole hoặc PPI khác', 'Dùng cùng atazanavir (HIV protease inhibitor)'],
+            "tương_đối": ['Suy gan nặng (Child-Pugh C) - giảm liều tối đa 15mg/ngày', 'Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng', 'Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài', 'Nhiễm C. difficile - tăng nguy cơ', 'Thiếu vitamin B12 - bổ sung nếu dùng lâu dài', 'Thiếu magnesium - bổ sung nếu dùng lâu dài'],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị hỗ trợ triệu chứng.",
+        },
+    },
+    "Esomeprazole": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng esomeprazole hoặc PPI khác', 'Dùng cùng atazanavir (HIV protease inhibitor)'],
+            "tương_đối": ['Suy gan nặng (Child-Pugh C) - giảm liều tối đa 20mg/ngày', 'Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng', 'Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài', 'Nhiễm C. difficile - tăng nguy cơ', 'Thiếu vitamin B12 - bổ sung nếu dùng lâu dài', 'Thiếu magnesium - bổ sung nếu dùng lâu dài'],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị hỗ trợ triệu chứng.",
+        },
+    },
+    "Metoclopramide": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng metoclopramide', 'Tắc ruột cơ học', 'Xuất huyết tiêu hóa', 'Thủng dạ dày-ruột', 'Pheochromocytoma (tăng nguy cơ tăng huyết áp)', 'Rối loạn vận động (Parkinson, dystonia, tardive dyskinesia)'],
+            "tương_đối": ['Suy thận (CrCl <30) - giảm liều 50-75%', 'Suy gan nặng - thận trọng, có thể giảm liều', 'Trẻ em và thanh niên - tăng nguy cơ dystonia, parkinsonism', 'Epilepsy - có thể làm nặng co giật', 'Đang dùng SSRI/SNRI - tăng nguy cơ hội chứng serotonin', 'Đang dùng antipsychotics - tăng nguy cơ rối loạn vận động'],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị hỗ trợ triệu chứng.",
+        },
+    },
+    "Domperidone": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng domperidone', 'Chảy máu dạ dày', 'Tắc ruột cơ học', 'Prolactinoma', 'Dùng với các thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH tuyệt đối', 'QT kéo dài (QTc >450ms ở nam, >470ms ở nữ) - CHỐNG CHỈ ĐỊNH'],
+            "tương_đối": ['Suy thận nặng (CrCl <30) - giảm liều 50%', 'Suy gan nặng - giảm liều, tăng nguy cơ QT kéo dài', 'Hạ kali, hạ magie - tăng nguy cơ QT kéo dài', 'Người già - thận trọng, giảm liều', 'Rối loạn nhịp tim - thận trọng'],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị hỗ trợ triệu chứng.",
+        },
+    },
+    "Ondansetron": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng ondansetron', 'Dùng với apomorphine - CHỐNG CHỈ ĐỊNH tuyệt đối', 'QT kéo dài (QTc >450ms ở nam, >470ms ở nữ) - CHỐNG CHỈ ĐỊNH'],
+            "tương_đối": ['Suy gan nặng - giảm liều 50% (tối đa 8mg/ngày)', 'Hạ kali, hạ magie - tăng nguy cơ QT kéo dài, bổ sung trước khi dùng', 'Đang dùng thuốc kéo dài QT - thận trọng, giảm liều', 'Người già - thận trọng, giảm liều', 'Rối loạn nhịp tim - thận trọng'],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị hỗ trợ triệu chứng.",
+        },
+    },
+    "Vonoprazan": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng vonoprazan hoặc PCAB'],
+            "tương_đối": ['Suy gan nặng', 'Loãng xương'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Thận trọng.",
+            "severe": "Thận trọng, có thể giảm liều.",
+            "notes": "Vonoprazan chuyển hóa qua gan.",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu.",
+        },
+    },
+    "Tegoprazan": {
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng tegoprazan hoặc PCAB'],
+            "tương_đối": ['Suy gan nặng', 'Loãng xương'],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Thận trọng.",
+            "severe": "Thận trọng, có thể giảm liều.",
+            "notes": "Tegoprazan chuyển hóa qua gan.",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu.",
+        },
+    },
+    "Lactulose": {
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+    },
+    "Polyethylene glycol 3350": {
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+    },
+    # ======================== PHIÊN 7: Neurological drugs ========================
+    "Istradefylline": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với istradefylline hoặc bất kỳ thành phần nào",
+            ],
+            "tương_đối": [
+                "Suy gan vừa-nặng - thận trọng",
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Bệnh nhân cao tuổi - tăng nguy cơ tác dụng phụ",
+            ],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Xử trí quá liều chủ yếu là hỗ trợ triệu chứng và ngừng thuốc.",
+        },
+    },
+    "Lamotrigine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với lamotrigine",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng, có thể cần giảm liều",
+                "Suy gan vừa-nặng - cần giảm liều",
+                "Có thai - thận trọng, cân nhắc lợi ích/nguy cơ",
+                "Đang cho con bú - thận trọng",
+                "Tiền sử phát ban nặng do thuốc",
+            ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Không đổi liều",
+            "under_30": "Thận trọng, có thể cần giảm liều",
+            "hemodialysis": "Có thể cần bổ sung liều sau mỗi lần lọc máu",
+        },
+    },
+    "Levetiracetam": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với levetiracetam hoặc bất kỳ thành phần nào",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần giảm liều",
+                "Suy gan nặng - thận trọng",
+                "Bệnh nhân cao tuổi - tăng nguy cơ tác dụng phụ",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Tiền sử rối loạn tâm thần - tăng nguy cơ kích động, trầm cảm",
+            ],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Xử trí quá liều chủ yếu là hỗ trợ triệu chứng và ngừng thuốc.",
+        },
+    },
+    "Levodopa/Carbidopa": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với levodopa, carbidopa hoặc bất kỳ thành phần nào",
+                "Đang dùng hoặc đã dùng MAO inhibitor không chọn lọc trong vòng 14 ngày",
+                "Glaucoma góc đóng không được điều trị",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Suy gan vừa-nặng - thận trọng",
+                "Bệnh tim mạch - thận trọng, có thể gây rối loạn nhịp tim",
+                "Loét dạ dày tá tràng - thận trọng",
+                "Tiền sử rối loạn tâm thần - tăng nguy cơ ảo giác, rối loạn tâm thần",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Không đổi liều",
+            "under_30": "Thận trọng, có thể cần giảm liều",
+            "hemodialysis": "Không đổi liều",
+        },
+    },
+    "Lorazepam": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với lorazepam hoặc benzodiazepine",
+                "Bệnh nhược cơ nặng",
+                "Hội chứng ngưng thở khi ngủ nặng",
+                "Suy hô hấp nặng",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Suy gan vừa-nặng - cần giảm liều",
+                "Bệnh nhân cao tuổi - tăng nguy cơ tác dụng phụ, giảm liều",
+                "Có thai - tránh dùng trong tam cá nguyệt đầu, thận trọng sau đó",
+                "Đang cho con bú - thận trọng",
+                "Tiền sử lạm dụng chất",
+                "Trầm cảm nặng - có thể tăng nguy cơ tự tử",
+            ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Không đổi liều",
+            "under_30": "Thận trọng, có thể tích tụ",
+            "hemodialysis": "Không đổi liều",
+        },
+    },
+    "Memantine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với memantine hoặc bất kỳ thành phần nào",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần giảm liều",
+                "Suy gan vừa-nặng - thận trọng",
+                "Rối loạn nhịp tim, block nhĩ thất",
+                "Động kinh hoặc tiền sử động kinh",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Giảm liều 50%",
+            "hemodialysis": "Không đổi liều",
+        },
+    },
+    "Opicapone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với opicapone hoặc bất kỳ thành phần nào",
+                "Pheochromocytoma",
+                "Đang dùng non-selective MAO inhibitor",
+            ],
+            "tương_đối": [
+                "Suy gan vừa-nặng - thận trọng",
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Rối loạn nhịp tim",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Xử trí quá liều chủ yếu là hỗ trợ triệu chứng và ngừng thuốc.",
+        },
+    },
+    "Phenobarbital": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với phenobarbital hoặc barbiturate",
+                "Porphyria cấp tính",
+                "Suy hô hấp nặng",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Suy gan vừa-nặng - cần giảm liều",
+                "Bệnh nhân cao tuổi - tăng nguy cơ tác dụng phụ, giảm liều",
+                "Có thai - thận trọng, có thể gây dị tật bẩm sinh",
+                "Đang cho con bú - thận trọng",
+                "Tiền sử lạm dụng chất",
+                "Trầm cảm nặng - có thể tăng nguy cơ tự tử",
+            ],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Xử trí quá liều chủ yếu là hỗ trợ hô hấp, huyết động và ngừng thuốc.",
+        },
+    },
+    "Phenytoin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với phenytoin hoặc bất kỳ thành phần nào",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Suy gan vừa-nặng - cần giảm liều",
+                "Bệnh nhân cao tuổi - tăng nguy cơ tác dụng phụ",
+                "Có thai - thận trọng, có thể gây dị tật bẩm sinh",
+                "Đang cho con bú - thận trọng",
+                "Rối loạn nhịp tim, block nhĩ thất",
+                "Tiền sử phát ban nặng do thuốc",
+            ],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Xử trí quá liều chủ yếu là hỗ trợ triệu chứng, theo dõi nồng độ trong máu và ngừng thuốc.",
+        },
+    },
+    "Piracetam": {
+        "black_box_warnings": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Xử trí quá liều chủ yếu là hỗ trợ triệu chứng.",
+        },
+    },
+    "Pregabalin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với pregabalin hoặc bất kỳ thành phần nào",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần giảm liều",
+                "Suy gan vừa-nặng - thận trọng",
+                "Bệnh nhân cao tuổi - tăng nguy cơ tác dụng phụ",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Tiền sử lạm dụng chất - có nguy cơ nghiện",
+                "Suy tim sung huyết - thận trọng",
+            ],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Xử trí quá liều chủ yếu là hỗ trợ triệu chứng và ngừng thuốc.",
+        },
+    },
+    "Rimegepant": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với rimegepant hoặc bất kỳ thành phần nào",
+                "Đang dùng thuốc ức chế CYP3A4 mạnh (ketoconazole, itraconazole, clarithromycin) - CHỐNG CHỈ ĐỊNH tuyệt đối",
+            ],
+            "tương_đối": [
+                "Suy gan vừa-nặng - thận trọng, có thể cần giảm liều",
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Bệnh tim mạch - thận trọng",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Xử trí quá liều chủ yếu là hỗ trợ triệu chứng và ngừng thuốc.",
+        },
+    },
+    # ======================== PHIÊN 8: Neurological drugs ========================
+    "Rivastigmine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với rivastigmine hoặc bất kỳ thành phần nào",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Suy gan vừa-nặng - thận trọng",
+                "Rối loạn nhịp tim, block nhĩ thất",
+                "Bệnh phổi tắc nghẽn mạn tính (COPD) nặng",
+                "Động kinh hoặc tiền sử động kinh",
+                "Loét dạ dày tá tràng - thận trọng",
+            ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Không đổi liều",
+            "under_30": "Thận trọng, có thể cần giảm liều",
+            "hemodialysis": "Không đổi liều",
+        },
+    },
+    "Ropinirole": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với ropinirole hoặc bất kỳ thành phần nào",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Suy gan vừa-nặng - thận trọng",
+                "Hạ huyết áp tư thế - thận trọng",
+                "Rối loạn nhịp tim",
+                "Tiền sử rối loạn tâm thần - tăng nguy cơ ảo giác, rối loạn tâm thần",
+                "Buồn ngủ ban ngày quá mức, rối loạn giấc ngủ",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Không đổi liều",
+            "under_30": "Thận trọng, có thể cần giảm liều",
+            "hemodialysis": "Không đổi liều",
+        },
+    },
+    "Tizanidine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với tizanidine hoặc bất kỳ thành phần nào",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần giảm liều",
+                "Suy gan vừa-nặng - cần giảm liều",
+                "Bệnh nhân cao tuổi - tăng nguy cơ tác dụng phụ, giảm liều",
+                "Hạ huyết áp - thận trọng",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Không đổi liều",
+            "under_30": "Giảm liều, thận trọng",
+            "hemodialysis": "Không đổi liều",
+        },
+    },
+    "Topiramate": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với topiramate hoặc bất kỳ thành phần nào",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần giảm liều",
+                "Suy gan vừa-nặng - thận trọng",
+                "Sỏi thận - tăng nguy cơ sỏi thận",
+                "Tăng nhãn áp - thận trọng",
+                "Có thai - thận trọng, có thể gây dị tật bẩm sinh",
+                "Đang cho con bú - thận trọng",
+                "Rối loạn chuyển hóa acid-base",
+            ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Không đổi liều",
+            "under_30": "Giảm liều 50%",
+            "hemodialysis": "Có thể cần bổ sung liều sau mỗi lần lọc máu",
+        },
+    },
+    "Ubrogepant": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với ubrogepant hoặc bất kỳ thành phần nào",
+                "Đang dùng thuốc ức chế CYP3A4 mạnh (ketoconazole, itraconazole, clarithromycin) - CHỐNG CHỈ ĐỊNH tuyệt đối",
+            ],
+            "tương_đối": [
+                "Suy gan vừa-nặng - thận trọng, có thể cần giảm liều",
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Bệnh tim mạch - thận trọng",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Xử trí quá liều chủ yếu là hỗ trợ triệu chứng và ngừng thuốc.",
+        },
+    },
+    "Valproate": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với valproate hoặc bất kỳ thành phần nào",
+                "Bệnh gan nặng hoặc rối loạn chức năng gan nặng",
+                "Rối loạn chu trình urea",
+                "Bệnh ty thể (mitochondrial disease)",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng, có thể cần giảm liều",
+                "Suy gan vừa - thận trọng, theo dõi chức năng gan sát",
+                "Có thai - thận trọng, có thể gây dị tật bẩm sinh và giảm IQ ở trẻ",
+                "Đang cho con bú - thận trọng",
+                "Rối loạn đông máu - tăng nguy cơ chảy máu",
+                "Tiền sử viêm tụy - tăng nguy cơ viêm tụy",
+            ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Không đổi liều",
+            "under_30": "Thận trọng, có thể cần giảm liều",
+            "hemodialysis": "Có thể cần bổ sung liều sau mỗi lần lọc máu",
+        },
+    },
+    "Vinpocetine": {
+        "black_box_warnings": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu. Xử trí quá liều chủ yếu là hỗ trợ triệu chứng.",
+        },
+    },
+})
+# ======================== END BATCH 2 ========================
+
+# Auto-generated fixes from validation
+# Generated by apply_auto_fixes_to_file.py
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Abaloparatide": {
+        "interactions": ['Chưa có báo cáo tương tác thuốc đáng kể'],
+    },
+    "Alirocumab": {
+        "overdose_management": {
+            "symptoms": ['Cần đánh giá lâm sàng'],
+            "antidote": 'Không có antidote đặc hiệu',
+            "treatment": ['Chưa có báo cáo quá liều. Nếu tiêm quá liều, theo dõi các tác dụng phụ và điều trị hỗ trợ.'],
+            "monitoring": 'Theo dõi dấu hiệu sinh tồn và triệu chứng',
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": 'Tiêm dưới da (bụng, đùi, hoặc cánh tay). Để ở nhiệt độ phòng 30 phút trước khi tiêm. Không lắc. Luân phiên vị trí tiêm. Có thể tự tiêm sau khi được hướng dẫn.',
+                "timing": 'Theo chỉ định của bác sĩ',
+            },
+            "iv": {
+                "reconstitution": 'N/A',
+                "infusion_rate": 'N/A',
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": 'N/A',
+            },
+        },
+    },
+    "Amlodipine/Olmesartan": {
+        "interactions": ['Chưa có báo cáo tương tác thuốc đáng kể'],
+    },
+    "Calcitonin": {
+        "interactions": ['Chưa có báo cáo tương tác thuốc đáng kể'],
+    },
+    "Enalapril": {
+        "guideline_tags": ['C09AA02', '24.08.08 ACE Inhibitors', 'vietnam_essential_medicines: True', {'source': 'ESC 2021 Heart Failure', 'recommendation': 'ACE inhibitor first-line therapy for HFrEF if tolerated', 'context': 'Heart failure with reduced ejection fraction (HFrEF), NYHA II–III'}, {'source': 'ACC/AHA 2017 Hypertension Guideline', 'recommendation': 'One of the first-line options for hypertension', 'context': 'Primary hypertension, non-black, with or without diabetes'}, {'source': 'BYT – Hướng dẫn chẩn đoán và điều trị tăng huyết áp 2020', 'recommendation': 'Một trong các lựa chọn hàng đầu điều trị tăng huyết áp', 'context': 'Tăng huyết áp nguyên phát không biến chứng, ưu tiên bệnh nhân có đái tháo đường hoặc bệnh thận mạn'}, 'first_line_htn', 'hfref_mortality_benefit', 'ckd_proteinuria_bp_control'],
+    },
+    "Evolocumab": {
+        "overdose_management": {
+            "symptoms": ['Cần đánh giá lâm sàng'],
+            "antidote": 'Không có antidote đặc hiệu',
+            "treatment": ['Chưa có báo cáo quá liều. Nếu tiêm quá liều, theo dõi các tác dụng phụ và điều trị hỗ trợ.'],
+            "monitoring": 'Theo dõi dấu hiệu sinh tồn và triệu chứng',
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": 'Tiêm dưới da (bụng, đùi, hoặc cánh tay). Để ở nhiệt độ phòng 30 phút trước khi tiêm. Không lắc. Luân phiên vị trí tiêm. Có thể tự tiêm sau khi được hướng dẫn.',
+                "timing": 'Theo chỉ định của bác sĩ',
+            },
+            "iv": {
+                "reconstitution": 'N/A',
+                "infusion_rate": 'N/A',
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": 'N/A',
+            },
+        },
+    },
+    "Inclisiran": {
+        "overdose_management": {
+            "symptoms": ['Cần đánh giá lâm sàng'],
+            "antidote": 'Không có antidote đặc hiệu',
+            "treatment": ['Chưa có báo cáo quá liều. Nếu tiêm quá liều, theo dõi các tác dụng phụ và điều trị hỗ trợ.'],
+            "monitoring": 'Theo dõi dấu hiệu sinh tồn và triệu chứng',
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": 'Tiêm dưới da (bụng, đùi, hoặc cánh tay). Để ở nhiệt độ phòng 30 phút trước khi tiêm. Không lắc. Luân phiên vị trí tiêm. Có thể tự tiêm sau khi được hướng dẫn. Lịch tiêm: Liều đầu tiên, sau đó liều thứ 2 sau 3 tháng, sau đó mỗi 6 tháng.',
+                "timing": 'Theo chỉ định của bác sĩ',
+            },
+            "iv": {
+                "reconstitution": 'N/A',
+                "infusion_rate": 'N/A',
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": 'N/A',
+            },
+        },
+    },
+    "Lisinopril": {
+        "guideline_tags": ['C09AA03', '24.08.08 ACE Inhibitors', 'vietnam_essential_medicines: True', {'source': 'ESC 2021 Heart Failure', 'recommendation': 'ACE inhibitor first-line therapy for HFrEF if ARNI not available', 'context': 'Heart failure with reduced ejection fraction (HFrEF), NYHA II–III'}, {'source': 'BYT – Hướng dẫn chẩn đoán và điều trị suy tim 2015', 'recommendation': 'Thuốc nền tảng trong điều trị suy tim HFrEF cùng với beta-blocker và mineralocorticoid receptor antagonist', 'context': 'Suy tim mạn HFrEF, NYHA II–IV'}, 'first_line_htn', 'hfref_mortality_benefit'],
+    },
+    "Losartan": {
+        "guideline_tags": ['C09CA01', '24.08.06 Angiotensin II Receptor Blockers', 'vietnam_essential_medicines: True', {'source': 'ACC/AHA 2017 Hypertension Guideline', 'recommendation': 'ARB as alternative first-line when ACE inhibitors not tolerated', 'context': 'Primary hypertension, ACE inhibitor intolerance (e.g. cough, angioedema)'}, {'source': 'BYT – Hướng dẫn chẩn đoán và điều trị tăng huyết áp 2020', 'recommendation': 'Lựa chọn khi không dung nạp ACEI hoặc cần bảo vệ thận', 'context': 'Tăng huyết áp có đái tháo đường hoặc bệnh thận mạn'}, 'first_line_htn_alt_acei', 'ckd_diabetic_nephropathy'],
+    },
+    "Metformin": {
+        "guideline_tags": ['A10BA02', '68.20.08 Biguanides', 'vietnam_essential_medicines: True', {'source': 'ADA 2024 Standards of Care', 'recommendation': 'Initial pharmacologic therapy for most adults with type 2 diabetes', 'context': 'Type 2 diabetes without contraindications; often combined with lifestyle changes'}, {'source': 'BYT – Hướng dẫn chẩn đoán và điều trị đái tháo đường typ 2', 'recommendation': 'Thuốc đầu tay trong điều trị đái tháo đường typ 2 nếu không chống chỉ định', 'context': 'ĐTĐ typ 2, không suy thận nặng hoặc chống chỉ định khác'}, 'first_line_t2dm', 'weight_neutral_or_loss', 'low_hypoglycemia_risk'],
+    },
+    "Romosozumab": {
+        "interactions": ['Chưa có báo cáo tương tác thuốc đáng kể'],
+    },
+    "Spironolactone": {
+        "guideline_tags": ['C03DA01', '24.08.04 Aldosterone Antagonists', 'vietnam_essential_medicines: True', {'source': 'ESC 2021 Heart Failure', 'recommendation': 'Mineralocorticoid receptor antagonist to reduce mortality', 'context': 'HFrEF with persistent symptoms despite ACEI/ARB/ARNI and beta-blocker'}, 'hfref_mortality_benefit', 'hyperaldosteronism'],
+    },
+    "Tegoprazan": {
+        "overdose_management": {
+            "symptoms": ['Cần đánh giá lâm sàng'],
+            "antidote": 'Không có antidote đặc hiệu',
+            "treatment": ['Triệu chứng: Buồn nôn, nôn, đau bụng. Điều trị: Hỗ trợ, rửa dạ dày nếu mới uống.'],
+            "monitoring": 'Theo dõi dấu hiệu sinh tồn và triệu chứng',
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": 'Uống với hoặc không có thức ăn. Nuốt nguyên viên, không nhai hoặc nghiền.',
+                "timing": 'Theo chỉ định của bác sĩ',
+            },
+            "iv": {
+                "reconstitution": 'N/A',
+                "infusion_rate": 'N/A',
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": 'Chỉ có dạng uống',
+            },
+        },
+    },
+    "Vonoprazan": {
+        "overdose_management": {
+            "symptoms": ['Cần đánh giá lâm sàng'],
+            "antidote": 'Không có antidote đặc hiệu',
+            "treatment": ['Triệu chứng: Buồn nôn, nôn, đau bụng. Điều trị: Hỗ trợ, rửa dạ dày nếu mới uống. Không có chất đối kháng đặc hiệu.'],
+            "monitoring": 'Theo dõi dấu hiệu sinh tồn và triệu chứng',
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": 'Uống với hoặc không có thức ăn. Không cần uống trước bữa ăn như PPI. Nuốt nguyên viên, không nhai hoặc nghiền.',
+                "timing": 'Theo chỉ định của bác sĩ',
+            },
+            "iv": {
+                "reconstitution": 'N/A',
+                "infusion_rate": 'N/A',
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": 'Chỉ có dạng uống',
+            },
+        },
+    },
+})
+
+# ======================== BATCH 1: ICU/EMERGENCY DRUGS ========================
+# Bổ sung contraindications_detail cho các thuốc ICU/emergency quan trọng
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Alteplase": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với alteplase hoặc bất kỳ thành phần nào",
+                "Xuất huyết nội sọ đang hoạt động",
+                "Tiền sử đột quỵ xuất huyết",
+                "Chấn thương đầu hoặc phẫu thuật đầu gần đây (3 tháng)",
+                "Xuất huyết tiêu hóa hoặc tiết niệu trong 21 ngày",
+                "Rối loạn đông máu",
+                "Huyết áp tâm thu >185 mmHg hoặc tâm trương >110 mmHg không kiểm soát được",
+            ],
+            "tương_đối": [
+                "Tuổi >80 tuổi - tăng nguy cơ xuất huyết",
+                "Điểm NIHSS >25 - nguy cơ cao",
+                "Điều trị kháng đông trong 48 giờ",
+                "Tiểu cầu <100,000/mm³",
+                "INR >1.7 hoặc PT >15 giây",
+                "Đường huyết <50 mg/dL hoặc >400 mg/dL",
+                "Đột quỵ nhẹ hoặc TIA trong 3 tháng",
+            ],
+        },
+    },
+    "Aspirin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với aspirin hoặc NSAID",
+                "Tiền sử hen suyễn do aspirin",
+                "Xuất huyết tiêu hóa đang hoạt động",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Rối loạn đông máu (hemophilia, von Willebrand)",
+                "Suy gan nặng",
+                "Suy thận nặng (CrCl <30)",
+                "Trẻ em <16 tuổi (nguy cơ hội chứng Reye)",
+            ],
+            "tương_đối": [
+                "Tiền sử loét dạ dày tá tràng",
+                "Đang dùng thuốc chống đông",
+                "Suy thận vừa (CrCl 30-60)",
+                "Suy gan vừa",
+                "Có thai (3 tháng cuối)",
+                "Đang cho con bú",
+                "Gout - có thể làm tăng acid uric",
+            ],
+        },
+    },
+    "Epinephrine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với epinephrine hoặc bất kỳ thành phần nào",
+                "Rối loạn nhịp tim nặng không kiểm soát được",
+                "Phẫu thuật tim gần đây",
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch nặng",
+                "Tăng huyết áp nặng",
+                "Đái tháo đường",
+                "Cường giáp",
+                "Glaucoma góc đóng",
+                "Bệnh mạch máu ngoại biên",
+                "Người cao tuổi - tăng nhạy cảm",
+            ],
+        },
+    },
+    "Morphine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với morphine hoặc opioid",
+                "Suy hô hấp nặng không có hỗ trợ thở máy",
+                "Hen suyễn nặng không kiểm soát",
+                "Tắc ruột cơ học",
+                "Tăng áp lực nội sọ",
+                "Ức chế hô hấp nặng",
+            ],
+            "tương_đối": [
+                "Suy hô hấp vừa",
+                "Suy gan nặng",
+                "Suy thận nặng (CrCl <30)",
+                "Người cao tuổi - giảm liều",
+                "Có thai - nguy cơ ức chế hô hấp ở trẻ sơ sinh",
+                "Đang cho con bú",
+                "Tiền sử lạm dụng chất",
+                "Bệnh động kinh",
+            ],
+        },
+    },
+    "Metformin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với metformin",
+                "Suy thận nặng (CrCl <30 mL/min)",
+                "Nhiễm toan lactic",
+                "Suy gan nặng",
+                "Suy tim nặng cần điều trị bằng thuốc",
+                "Nhiễm trùng nặng hoặc mất nước nặng",
+            ],
+            "tương_đối": [
+                "Suy thận vừa (CrCl 30-45) - giảm liều",
+                "Suy gan vừa - thận trọng",
+                "Người cao tuổi >80 tuổi - giảm liều",
+                "Nghiện rượu",
+                "Phẫu thuật lớn hoặc thủ thuật có cản quang - tạm ngừng",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Naloxone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với naloxone hoặc bất kỳ thành phần nào",
+            ],
+            "tương_đối": [
+                "Bệnh nhân phụ thuộc opioid - có thể gây hội chứng cai nghiện nặng",
+                "Bệnh tim mạch - có thể gây rối loạn nhịp tim",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Flumazenil": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với flumazenil hoặc benzodiazepine",
+                "Bệnh nhân phụ thuộc benzodiazepine - nguy cơ co giật",
+                "Đang dùng thuốc gây co giật (TCA, bupropion)",
+            ],
+            "tương_đối": [
+                "Bệnh nhân có tiền sử co giật",
+                "Tổn thương não",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Suy gan nặng - thời gian tác dụng kéo dài",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 1 ========================
+
+# ======================== BATCH 2: CARDIOVASCULAR DRUGS ========================
+# Bổ sung contraindications_detail cho các thuốc tim mạch quan trọng
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Atenolol": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với atenolol hoặc beta-blocker",
+                "Suy tim nặng không được điều trị",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+                "Sick sinus syndrome không có máy tạo nhịp",
+                "Nhịp tim chậm nặng (<50 bpm)",
+                "Sốc tim",
+                "Hen suyễn nặng hoặc COPD nặng",
+            ],
+            "tương_đối": [
+                "Suy tim vừa - cần điều trị trước",
+                "Nhịp tim chậm vừa (50-60 bpm)",
+                "Block nhĩ thất độ 1",
+                "Bệnh mạch máu ngoại biên",
+                "Đái tháo đường - che dấu triệu chứng hạ đường huyết",
+                "Cường giáp - không dùng đơn độc",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Bisoprolol": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với bisoprolol hoặc beta-blocker",
+                "Suy tim nặng không được điều trị",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+                "Sick sinus syndrome không có máy tạo nhịp",
+                "Nhịp tim chậm nặng (<50 bpm)",
+                "Sốc tim",
+                "Hen suyễn nặng hoặc COPD nặng",
+            ],
+            "tương_đối": [
+                "Suy tim vừa - cần điều trị trước",
+                "Nhịp tim chậm vừa (50-60 bpm)",
+                "Block nhĩ thất độ 1",
+                "Bệnh mạch máu ngoại biên",
+                "Đái tháo đường - che dấu triệu chứng hạ đường huyết",
+                "Cường giáp - không dùng đơn độc",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Suy gan nặng - giảm liều",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Carvedilol": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với carvedilol hoặc beta-blocker",
+                "Suy tim nặng không được điều trị (NYHA IV)",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+                "Sick sinus syndrome không có máy tạo nhịp",
+                "Nhịp tim chậm nặng (<50 bpm)",
+                "Sốc tim",
+                "Hen suyễn nặng hoặc COPD nặng",
+                "Suy gan nặng",
+            ],
+            "tương_đối": [
+                "Suy tim vừa - bắt đầu với liều thấp",
+                "Nhịp tim chậm vừa (50-60 bpm)",
+                "Block nhĩ thất độ 1",
+                "Hạ huyết áp tư thế",
+                "Bệnh mạch máu ngoại biên",
+                "Đái tháo đường - che dấu triệu chứng hạ đường huyết",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Suy gan vừa - giảm liều",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Nifedipine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với nifedipine hoặc dihydropyridine",
+                "Sốc tim",
+                "Hẹp van động mạch chủ nặng",
+                "Suy tim nặng không được điều trị",
+            ],
+            "tương_đối": [
+                "Suy tim vừa - thận trọng",
+                "Hạ huyết áp",
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng - thận trọng",
+                "Có thai - thận trọng, có thể gây hạ huyết áp",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nhạy cảm",
+            ],
+        },
+    },
+    "Diltiazem": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với diltiazem",
+                "Sick sinus syndrome không có máy tạo nhịp",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+                "Suy tim nặng (EF <30%)",
+                "Sốc tim",
+                "Hạ huyết áp nặng (SBP <90 mmHg)",
+            ],
+            "tương_đối": [
+                "Suy tim vừa - thận trọng",
+                "Nhịp tim chậm",
+                "Block nhĩ thất độ 1",
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng - thận trọng",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Verapamil": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với verapamil",
+                "Sick sinus syndrome không có máy tạo nhịp",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+                "Suy tim nặng (EF <30%)",
+                "Sốc tim",
+                "Hạ huyết áp nặng (SBP <90 mmHg)",
+            ],
+            "tương_đối": [
+                "Suy tim vừa - thận trọng",
+                "Nhịp tim chậm",
+                "Block nhĩ thất độ 1",
+                "Suy gan nặng - giảm liều đáng kể",
+                "Suy thận nặng - thận trọng",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Hydrochlorothiazide": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với hydrochlorothiazide hoặc sulfonamide",
+                "Vô niệu",
+                "Suy thận nặng (CrCl <30)",
+                "Hạ kali máu nặng không điều chỉnh được",
+                "Tăng calci máu nặng",
+            ],
+            "tương_đối": [
+                "Suy thận vừa (CrCl 30-60) - thận trọng",
+                "Hạ kali máu - cần bổ sung kali",
+                "Tăng calci máu vừa",
+                "Gout - có thể làm tăng acid uric",
+                "Đái tháo đường - có thể làm tăng đường huyết",
+                "Suy gan - nguy cơ hôn mê gan",
+                "Có thai - thận trọng, có thể gây giảm thể tích",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Spironolactone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với spironolactone",
+                "Suy thận nặng (CrCl <30)",
+                "Tăng kali máu",
+                "Vô niệu",
+                "Bệnh Addison",
+            ],
+            "tương_đối": [
+                "Suy thận vừa (CrCl 30-60) - thận trọng, theo dõi kali",
+                "Đang dùng kali bổ sung hoặc thuốc giữ kali",
+                "Đái tháo đường - tăng nguy cơ tăng kali máu",
+                "Suy gan - nguy cơ hôn mê gan",
+                "Có thai - thận trọng, có thể gây dị tật",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nguy cơ tăng kali máu",
+            ],
+        },
+    },
+    "Captopril": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với captopril hoặc ACE inhibitor",
+                "Tiền sử phù mạch do ACE inhibitor",
+                "Có thai (2-3 tháng giữa và cuối)",
+                "Hẹp động mạch thận hai bên",
+                "Hẹp động mạch thận một bên với thận độc nhất",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Suy gan nặng - thận trọng",
+                "Hạ huyết áp",
+                "Tăng kali máu",
+                "Đang dùng thuốc giữ kali hoặc kali bổ sung",
+                "Có thai (3 tháng đầu) - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nhạy cảm",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 2 ========================
+
+# ======================== BATCH 3: ANTIBIOTICS ========================
+# Bổ sung contraindications_detail cho Cefazolin
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Cefazolin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với cefazolin hoặc cephalosporin",
+                "Tiền sử phản ứng phản vệ với beta-lactam",
+            ],
+            "tương_đối": [
+                "Dị ứng với penicillin - thận trọng (phản ứng chéo 5-10%)",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 3 ========================
+
+# ======================== BATCH 4: GI & NEUROLOGICAL DRUGS ========================
+# Bổ sung contraindications_detail cho các thuốc tiêu hóa và thần kinh
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Omeprazole": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với omeprazole hoặc PPI",
+            ],
+            "tương_đối": [
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng - không cần giảm liều nhưng thận trọng",
+                "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
+                "Thiếu vitamin B12 - giảm hấp thu khi dùng lâu dài",
+                "Nhiễm Clostridium difficile - tăng nguy cơ",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Pantoprazole": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với pantoprazole hoặc PPI",
+            ],
+            "tương_đối": [
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng - không cần giảm liều nhưng thận trọng",
+                "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
+                "Thiếu vitamin B12 - giảm hấp thu khi dùng lâu dài",
+                "Nhiễm Clostridium difficile - tăng nguy cơ",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Ranitidine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với ranitidine hoặc H2 blocker",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <50) - giảm liều",
+                "Suy gan nặng - thận trọng",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Famotidine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với famotidine hoặc H2 blocker",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <50) - giảm liều",
+                "Suy gan nặng - thận trọng",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Paracetamol": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với paracetamol",
+                "Suy gan nặng",
+                "Nghiện rượu nặng",
+            ],
+            "tương_đối": [
+                "Suy gan vừa - giảm liều tối đa",
+                "Suy thận nặng - thận trọng",
+                "Thiếu G6PD - thận trọng",
+                "Suy dinh dưỡng - tăng nguy cơ độc tính",
+                "Có thai - thận trọng, nhưng an toàn tương đối",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Ibuprofen": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với ibuprofen hoặc NSAID",
+                "Tiền sử hen suyễn do aspirin/NSAID",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Xuất huyết tiêu hóa đang hoạt động",
+                "Suy tim nặng (NYHA III-IV)",
+                "Có thai (3 tháng cuối) - nguy cơ đóng ống động mạch sớm",
+            ],
+            "tương_đối": [
+                "Tiền sử loét dạ dày tá tràng",
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Suy gan nặng - thận trọng",
+                "Suy tim vừa - thận trọng",
+                "Tăng huyết áp không kiểm soát",
+                "Đang dùng thuốc chống đông",
+                "Có thai (1-2 tháng đầu và giữa) - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ",
+            ],
+        },
+    },
+    "Diclofenac": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với diclofenac hoặc NSAID",
+                "Tiền sử hen suyễn do aspirin/NSAID",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Xuất huyết tiêu hóa đang hoạt động",
+                "Suy tim nặng (NYHA III-IV)",
+                "Suy gan nặng",
+                "Suy thận nặng (CrCl <30)",
+                "Có thai (3 tháng cuối) - nguy cơ đóng ống động mạch sớm",
+            ],
+            "tương_đối": [
+                "Tiền sử loét dạ dày tá tràng",
+                "Suy thận vừa (CrCl 30-60) - thận trọng",
+                "Suy gan vừa - thận trọng",
+                "Suy tim vừa - thận trọng",
+                "Tăng huyết áp không kiểm soát",
+                "Đang dùng thuốc chống đông",
+                "Có thai (1-2 tháng đầu và giữa) - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ",
+            ],
+        },
+    },
+    "Carbamazepine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với carbamazepine",
+                "Block nhĩ thất độ 2-3",
+                "Suy gan nặng",
+                "Tiền sử tủy xương bị ức chế",
+                "Đang dùng MAO inhibitor",
+            ],
+            "tương_đối": [
+                "Suy gan vừa - thận trọng, theo dõi chức năng gan",
+                "Suy thận nặng - thận trọng",
+                "Bệnh tim mạch - tăng nguy cơ block AV",
+                "Bệnh nhân có tiền sử rối loạn tâm thần",
+                "Glaucoma góc đóng",
+                "Có thai - thận trọng, có thể gây dị tật",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nhạy cảm",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 4 ========================
+
+# ======================== BATCH 5: ENDOCRINE DRUGS ========================
+# Bổ sung contraindications_detail cho các thuốc nội tiết
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Levothyroxine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với levothyroxine",
+                "Cường giáp không được điều trị",
+                "Nhồi máu cơ tim cấp",
+                "Viêm cơ tim",
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch - bắt đầu với liều thấp",
+                "Suy thượng thận - cần điều trị trước",
+                "Đái tháo đường - có thể cần điều chỉnh liều insulin",
+                "Có thai - cần tăng liều",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - bắt đầu với liều thấp",
+            ],
+        },
+    },
+    "Methimazole": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với methimazole",
+            ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng",
+                "Giảm bạch cầu - nguy cơ agranulocytosis",
+                "Có thai (3 tháng đầu) - thận trọng, có thể gây dị tật",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ",
+            ],
+        },
+    },
+    "Propylthiouracil": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với propylthiouracil",
+            ],
+            "tương_đối": [
+                "Suy gan nặng - nguy cơ viêm gan",
+                "Giảm bạch cầu - nguy cơ agranulocytosis",
+                "Có thai (3 tháng đầu) - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ",
+            ],
+        },
+    },
+    "Hydrocortisone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với hydrocortisone hoặc corticosteroid",
+                "Nhiễm trùng hệ thống không được điều trị",
+                "Nhiễm nấm toàn thân",
+            ],
+            "tương_đối": [
+                "Đái tháo đường - tăng đường huyết",
+                "Tăng huyết áp",
+                "Loãng xương",
+                "Loét dạ dày tá tràng",
+                "Suy tim nặng",
+                "Suy gan nặng",
+                "Suy thận nặng",
+                "Có thai - thận trọng, có thể gây dị tật",
+                "Đang cho con bú - thận trọng",
+                "Trẻ em - ảnh hưởng đến tăng trưởng",
+            ],
+        },
+    },
+    "Dexamethasone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với dexamethasone hoặc corticosteroid",
+                "Nhiễm trùng hệ thống không được điều trị",
+                "Nhiễm nấm toàn thân",
+            ],
+            "tương_đối": [
+                "Đái tháo đường - tăng đường huyết",
+                "Tăng huyết áp",
+                "Loãng xương",
+                "Loét dạ dày tá tràng",
+                "Suy tim nặng",
+                "Suy gan nặng",
+                "Suy thận nặng",
+                "Có thai - thận trọng, có thể gây dị tật",
+                "Đang cho con bú - thận trọng",
+                "Trẻ em - ảnh hưởng đến tăng trưởng",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 5 ========================
+
+# ======================== BATCH 6: ANTIHISTAMINE & ANTIVIRAL ========================
+# Bổ sung contraindications_detail cho các thuốc kháng histamine và kháng virus
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Diphenhydramine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với diphenhydramine hoặc antihistamine",
+                "Trẻ sơ sinh <2 tháng tuổi",
+            ],
+            "tương_đối": [
+                "Bệnh nhược cơ - tăng yếu cơ",
+                "Tăng nhãn áp góc đóng",
+                "Loét dạ dày tá tràng",
+                "Tắc nghẽn đường tiết niệu",
+                "Bệnh tim mạch - tăng nguy cơ rối loạn nhịp",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ",
+            ],
+        },
+    },
+    "Loratadine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với loratadine",
+            ],
+            "tương_đối": [
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng - thận trọng",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Chlorpheniramine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với chlorpheniramine hoặc antihistamine",
+                "Trẻ sơ sinh <2 tháng tuổi",
+            ],
+            "tương_đối": [
+                "Bệnh nhược cơ - tăng yếu cơ",
+                "Tăng nhãn áp góc đóng",
+                "Loét dạ dày tá tràng",
+                "Tắc nghẽn đường tiết niệu",
+                "Bệnh tim mạch - tăng nguy cơ rối loạn nhịp",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ",
+            ],
+        },
+    },
+    "Acyclovir": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với acyclovir",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <25) - giảm liều",
+                "Mất nước - tăng nguy cơ độc tính thận",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nguy cơ độc tính thận",
+            ],
+        },
+    },
+    "Valacyclovir": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với valacyclovir hoặc acyclovir",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Mất nước - tăng nguy cơ độc tính thận",
+                "Suy gan nặng - thận trọng",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+                "Người cao tuổi - tăng nguy cơ độc tính thận",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 6 ========================
+
+# ======================== BATCH 7: MIXED IMPORTANT DRUGS ========================
+# Bổ sung contraindications_detail cho các thuốc quan trọng đa dạng
+
+EXTRA_ENHANCED_FIELDS.update({
+    "5-Fluorouracil": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với 5-fluorouracil",
+                "Suy thận nặng (CrCl <30)",
+                "Suy gan nặng",
+                "Thiếu DPD (dihydropyrimidine dehydrogenase)",
+                "Có thai",
+                "Đang cho con bú",
+            ],
+            "tương_đối": [
+                "Suy thận vừa (CrCl 30-60) - giảm liều",
+                "Suy gan vừa - thận trọng",
+                "Người cao tuổi - tăng nguy cơ độc tính",
+                "Bệnh tim mạch - tăng nguy cơ thiếu máu cơ tim",
+            ],
+        },
+    },
+    "Abiraterone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với abiraterone",
+                "Suy gan nặng",
+                "Có thai",
+            ],
+            "tương_đối": [
+                "Suy gan vừa - thận trọng",
+                "Suy thận nặng - thận trọng",
+                "Bệnh tim mạch - tăng nguy cơ",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Acebutolol": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với acebutolol hoặc beta-blocker",
+                "Suy tim nặng không được điều trị",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+                "Sick sinus syndrome không có máy tạo nhịp",
+                "Nhịp tim chậm nặng (<50 bpm)",
+                "Sốc tim",
+                "Hen suyễn nặng hoặc COPD nặng",
+            ],
+            "tương_đối": [
+                "Suy tim vừa - cần điều trị trước",
+                "Nhịp tim chậm vừa (50-60 bpm)",
+                "Block nhĩ thất độ 1",
+                "Bệnh mạch máu ngoại biên",
+                "Đái tháo đường - che dấu triệu chứng hạ đường huyết",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Aclidinium": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với aclidinium",
+                "Tăng nhãn áp góc đóng",
+            ],
+            "tương_đối": [
+                "Tăng nhãn áp góc mở - thận trọng",
+                "Bệnh tim mạch - thận trọng",
+                "Tắc nghẽn đường tiết niệu",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Acyclovir eye drops": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với acyclovir",
+            ],
+            "tương_đối": [
+                "Tổn thương giác mạc nặng",
+                "Nhiễm trùng mắt không được điều trị",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Acyclovir eye ointment": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với acyclovir",
+            ],
+            "tương_đối": [
+                "Tổn thương giác mạc nặng",
+                "Nhiễm trùng mắt không được điều trị",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Adalimumab": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với adalimumab",
+                "Nhiễm trùng nặng đang hoạt động",
+                "Suy tim nặng (NYHA III-IV)",
+            ],
+            "tương_đối": [
+                "Nhiễm trùng vừa - cần điều trị trước",
+                "Suy tim vừa - thận trọng",
+                "Bệnh thần kinh đã biết",
+                "Ung thư - tăng nguy cơ",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Albendazole": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với albendazole",
+                "Có thai",
+            ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng",
+                "Giảm bạch cầu - nguy cơ giảm thêm",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Alemtuzumab": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với alemtuzumab",
+                "Nhiễm trùng nặng đang hoạt động",
+                "HIV dương tính",
+            ],
+            "tương_đối": [
+                "Nhiễm trùng vừa - cần điều trị trước",
+                "Bệnh tự miễn - tăng nguy cơ",
+                "Ung thư - tăng nguy cơ",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Alfuzosin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với alfuzosin",
+                "Suy gan nặng",
+                "Hạ huyết áp nặng",
+            ],
+            "tương_đối": [
+                "Suy gan vừa - thận trọng",
+                "Hạ huyết áp",
+                "Bệnh tim mạch - thận trọng",
+                "Có thai - không áp dụng",
+                "Đang cho con bú - không áp dụng",
+            ],
+        },
+    },
+    "Anastrozole": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với anastrozole",
+                "Phụ nữ tiền mãn kinh",
+                "Có thai",
+            ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng",
+                "Loãng xương - tăng nguy cơ",
+                "Đang cho con bú - không áp dụng",
+            ],
+        },
+    },
+    "Anidulafungin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với anidulafungin hoặc echinocandin",
+            ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - không cần giảm liều",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Anifrolumab": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với anifrolumab",
+                "Nhiễm trùng nặng đang hoạt động",
+            ],
+            "tương_đối": [
+                "Nhiễm trùng vừa - cần điều trị trước",
+                "Bệnh tự miễn khác - tăng nguy cơ",
+                "Ung thư - tăng nguy cơ",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Aripiprazole": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với aripiprazole",
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch - tăng nguy cơ kéo dài QT",
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng - thận trọng",
+                "Động kinh - có thể gây co giật",
+                "Đái tháo đường - tăng nguy cơ tăng đường huyết",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Artemether-lumefantrine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với artemether hoặc lumefantrine",
+                "Rối loạn nhịp tim nặng",
+                "Có thai (3 tháng đầu)",
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch - tăng nguy cơ kéo dài QT",
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng",
+                "Có thai (3 tháng giữa và cuối) - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 7 ========================
+
+# ======================== BATCH 8: MIXED IMPORTANT DRUGS (CONTINUED) ========================
+# Bổ sung contraindications_detail cho các thuốc quan trọng đa dạng
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Artesunate": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với artesunate",
+                "Có thai (3 tháng đầu)",
+            ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng",
+                "Bệnh tim mạch - thận trọng",
+                "Có thai (3 tháng giữa và cuối) - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Artificial tears (Carboxymethylcellulose)": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với carboxymethylcellulose hoặc thành phần",
+            ],
+            "tương_đối": [
+                "Nhiễm trùng mắt đang hoạt động",
+                "Tổn thương giác mạc nặng",
+            ],
+        },
+    },
+    "Azelaic acid topical": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với azelaic acid",
+            ],
+            "tương_đối": [
+                "Da bị kích ứng nặng",
+                "Vết thương hở tại vùng điều trị",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Azelastine eye drops": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với azelastine",
+            ],
+            "tương_đối": [
+                "Nhiễm trùng mắt đang hoạt động",
+                "Tổn thương giác mạc",
+                "Đeo kính áp tròng mềm",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Benzoyl peroxide topical": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với benzoyl peroxide",
+            ],
+            "tương_đối": [
+                "Da bị kích ứng nặng",
+                "Vết thương hở tại vùng điều trị",
+                "Da nhạy cảm với ánh sáng",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Betamethasone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với betamethasone hoặc corticosteroid",
+                "Nhiễm trùng hệ thống không được điều trị",
+                "Nhiễm nấm toàn thân",
+            ],
+            "tương_đối": [
+                "Đái tháo đường - tăng đường huyết",
+                "Tăng huyết áp",
+                "Loãng xương",
+                "Loét dạ dày tá tràng",
+                "Suy tim nặng",
+                "Suy gan nặng",
+                "Suy thận nặng",
+                "Có thai - thận trọng, có thể gây dị tật",
+                "Đang cho con bú - thận trọng",
+                "Trẻ em - ảnh hưởng đến tăng trưởng",
+            ],
+        },
+    },
+    "Ceftazidime": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với ceftazidime hoặc cephalosporin",
+                "Tiền sử phản ứng phản vệ với beta-lactam",
+            ],
+            "tương_đối": [
+                "Dị ứng với penicillin - thận trọng",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Suy gan nặng - thận trọng",
+                "Có thai - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+    "Celecoxib": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với celecoxib hoặc sulfonamide",
+                "Tiền sử hen suyễn do aspirin/NSAID",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Xuất huyết tiêu hóa đang hoạt động",
+                "Suy tim nặng (NYHA III-IV)",
+                "Có thai (3 tháng cuối)",
+            ],
+            "tương_đối": [
+                "Tiền sử loét dạ dày tá tràng",
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Suy gan nặng - thận trọng",
+                "Suy tim vừa - thận trọng",
+                "Tăng huyết áp không kiểm soát",
+                "Đang dùng thuốc chống đông",
+                "Có thai (1-2 tháng đầu và giữa) - thận trọng",
+                "Đang cho con bú - thận trọng",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 8 ========================
+
+# ======================== BATCH PRIORITY: CONTRAINDICATIONS_DETAIL ========================
+# Bổ sung contraindications_detail cho 15 thuốc ưu tiên (ICU/Emergency/Phổ biến)
+# Generated automatically by add_batch_contraindications_priority.py
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Digoxin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với digoxin hoặc digitalis glycosides",
+                "Block nhĩ-thất độ 2-3 không có máy tạo nhịp",
+                "Hội chứng Wolff-Parkinson-White (WPW) với rung nhĩ",
+                "Rối loạn nhịp thất nặng (ventricular fibrillation, ventricular tachycardia không kiểm soát)",
+            ],
+            "tương_đối": [
+                "Suy thận mức độ vừa-nặng (cần giảm liều và theo dõi nồng độ)",
+                "Suy tim cấp mất bù (cần ổn định trước khi dùng)",
+                "Hạ kali máu, hạ magie máu (tăng nguy cơ độc tính)",
+                "Nhịp tim chậm <60 lần/phút (trừ khi có máy tạo nhịp)",
+            ],
+        },
+    },
+    "Fentanyl": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với fentanyl hoặc opioid",
+                "Suy hô hấp nặng không có hỗ trợ thở máy",
+                "Bệnh nhân đang dùng MAO inhibitors (trong vòng 14 ngày)",
+            ],
+            "tương_đối": [
+                "Suy hô hấp mạn tính, COPD nặng (cần thận trọng, theo dõi sát)",
+                "Tăng áp lực nội sọ, chấn thương sọ não",
+                "Suy gan nặng (giảm chuyển hóa, tăng nguy cơ tích tụ)",
+                "Phụ nữ có thai (category C, tránh dùng kéo dài)",
+            ],
+        },
+    },
+    "Hydromorphone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với hydromorphone hoặc opioid",
+                "Suy hô hấp nặng không có hỗ trợ thở máy",
+                "Tắc ruột cơ học, liệt ruột",
+            ],
+            "tương_đối": [
+                "Suy hô hấp mạn tính, COPD nặng",
+                "Tăng áp lực nội sọ",
+                "Suy gan nặng (giảm chuyển hóa)",
+                "Suy thận nặng (tích tụ chất chuyển hóa)",
+            ],
+        },
+    },
+    "Insulin Regular": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với insulin hoặc bất kỳ thành phần nào",
+                "Hạ đường huyết nặng đang diễn ra",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (cần điều chỉnh liều, theo dõi sát)",
+                "Suy gan nặng (giảm chuyển hóa glucose, tăng nguy cơ hạ đường huyết)",
+                "Bệnh nhân không có khả năng tự theo dõi đường huyết",
+            ],
+        },
+    },
+    "Nitroglycerin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với nitroglycerin hoặc nitrate",
+                "Hạ huyết áp nặng (systolic <90 mmHg)",
+                "Thiếu máu cơ tim cấp do hẹp động mạch chủ nặng",
+                "Viêm màng ngoài tim co thắt",
+                "Đang dùng phosphodiesterase-5 inhibitors (sildenafil, tadalafil, vardenafil) - nguy cơ hạ huyết áp đe dọa tính mạng",
+            ],
+            "tương_đối": [
+                "Hạ huyết áp nhẹ-vừa (theo dõi sát, có thể cần giảm liều)",
+                "Thiếu máu nặng (giảm tải oxy)",
+                "Tăng áp lực nội sọ",
+                "Suy thận nặng (tích tụ chất chuyển hóa)",
+            ],
+        },
+    },
+    "Phenylephrine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với phenylephrine",
+                "Tăng huyết áp nặng không kiểm soát",
+                "Bệnh mạch vành không ổn định, nhồi máu cơ tim cấp",
+            ],
+            "tương_đối": [
+                "Tăng huyết áp vừa (theo dõi sát)",
+                "Bệnh mạch vành, rối loạn nhịp tim",
+                "Cường giáp (tăng nhạy cảm với catecholamine)",
+                "Bệnh nhân đang dùng MAO inhibitors",
+            ],
+        },
+    },
+    "Vasopressin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với vasopressin",
+            ],
+            "tương_đối": [
+                "Bệnh mạch vành (có thể gây co mạch vành, thiếu máu cơ tim)",
+                "Bệnh mạch máu ngoại biên nặng",
+                "Suy thận nặng (giảm tưới máu thận)",
+                "Hạ natri máu nặng (vasopressin có thể làm nặng thêm)",
+            ],
+        },
+    },
+    "Milrinone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với milrinone",
+                "Rối loạn nhịp thất nặng không kiểm soát",
+            ],
+            "tương_đối": [
+                "Hạ huyết áp nặng (milrinone có thể gây giãn mạch)",
+                "Rối loạn nhịp nhĩ hoặc thất (tăng nguy cơ)",
+                "Suy thận nặng (giảm thải trừ, tăng nguy cơ tích tụ)",
+                "Bệnh mạch vành không ổn định",
+            ],
+        },
+    },
+    "Nesiritide": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với nesiritide",
+                "Hạ huyết áp nặng (systolic <90 mmHg)",
+                "Sốc tim",
+            ],
+            "tương_đối": [
+                "Hạ huyết áp vừa (theo dõi sát)",
+                "Bệnh mạch vành không ổn định",
+                "Suy thận nặng (giảm thải trừ)",
+                "Hẹp van động mạch chủ nặng",
+            ],
+        },
+    },
+    "Clevidipine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với clevidipine hoặc soy/egg (chứa trong dung dịch)",
+                "Suy gan nặng",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (theo dõi sát)",
+                "Bệnh mạch vành không ổn định (có thể gây phản xạ nhịp nhanh)",
+                "Hạ huyết áp nhẹ-vừa (theo dõi sát)",
+            ],
+        },
+    },
+    "Nitroprusside": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với nitroprusside",
+                "Thiếu máu cơ tim cấp do hẹp động mạch chủ nặng",
+                "Thiếu hụt bẩm sinh cytochrome b5 reductase (nguy cơ nhiễm độc cyanide)",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (tích tụ thiocyanate, nguy cơ độc tính)",
+                "Suy gan nặng (giảm chuyển hóa cyanide)",
+                "Thiếu vitamin B12 (tăng nguy cơ nhiễm độc cyanide)",
+                "Tăng áp lực nội sọ",
+            ],
+        },
+    },
+    "Rocuronium": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với rocuronium hoặc aminosteroid neuromuscular blocking agents",
+            ],
+            "tương_đối": [
+                "Bệnh nhược cơ (myasthenia gravis) - cần giảm liều mạnh",
+                "Rối loạn chức năng thần kinh cơ khác",
+                "Suy thận nặng (kéo dài thời gian tác dụng)",
+                "Suy gan nặng (kéo dài thời gian tác dụng)",
+            ],
+        },
+    },
+    "Succinylcholine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với succinylcholine",
+                "Tiền sử hoặc nguy cơ tăng kali máu nặng (bỏng nặng, chấn thương lớn, liệt tủy sống, bệnh cơ)",
+                "Bệnh nhược cơ (myasthenia gravis) - có thể gây block kéo dài",
+                "Rối loạn di truyền pseudocholinesterase (block kéo dài, nguy cơ ngừng thở)",
+            ],
+            "tương_đối": [
+                "Tăng nhãn áp (có thể làm tăng áp lực nội nhãn)",
+                "Tăng áp lực nội sọ",
+                "Bệnh cơ di truyền (malignant hyperthermia, Duchenne muscular dystrophy)",
+                "Suy gan nặng (giảm chuyển hóa)",
+            ],
+        },
+    },
+    "Vecuronium": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với vecuronium hoặc aminosteroid neuromuscular blocking agents",
+            ],
+            "tương_đối": [
+                "Bệnh nhược cơ (myasthenia gravis) - cần giảm liều mạnh",
+                "Rối loạn chức năng thần kinh cơ khác",
+                "Suy thận nặng (kéo dài thời gian tác dụng)",
+                "Suy gan nặng (kéo dài thời gian tác dụng)",
+            ],
+        },
+    },
+    "Thiopental": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với thiopental hoặc barbiturate",
+                "Porphyria cấp (có thể gây cơn porphyria)",
+                "Suy hô hấp nặng không có hỗ trợ thở máy",
+            ],
+            "tương_đối": [
+                "Suy hô hấp mạn tính",
+                "Suy tim nặng (có thể gây hạ huyết áp)",
+                "Suy gan nặng (kéo dài thời gian tác dụng)",
+                "Suy thận nặng (tích tụ)",
+            ],
+        },
+    },
+})
+# ======================== END BATCH PRIORITY ========================
+
+# ======================== BATCH PRIORITY: REVERSAL_AGENTS ========================
+# Bổ sung reversal_agents cho Alteplase (thuốc quan trọng còn thiếu)
+# Generated automatically by add_batch_reversal_agents_priority.py
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Alteplase": {
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu cho alteplase. Xử trí: ngừng truyền ngay, hỗ trợ huyết động, truyền máu và các chế phẩm máu nếu chảy máu nặng. Có thể cân nhắc tranexamic acid hoặc aminocaproic acid trong trường hợp chảy máu đe dọa tính mạng (theo guideline chuyên ngành).",
+        },
+    },
+})
+# ======================== END BATCH PRIORITY ========================
+
+# ======================== BATCH 2: CONTRAINDICATIONS_DETAIL ========================
+# Bổ sung contraindications_detail cho 15 thuốc quan trọng (Kháng sinh, Tim mạch, Thần kinh)
+# Generated automatically by add_batch_contraindications_batch2.py
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Cefepime": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với cefepime hoặc cephalosporin",
+                "Dị ứng nặng với penicillin (phản ứng chéo có thể xảy ra)",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (cần điều chỉnh liều)",
+                "Tiền sử viêm đại tràng do Clostridium difficile",
+                "Rối loạn đông máu (cefepime có thể gây giảm prothrombin)",
+            ],
+        },
+    },
+    "Cefotaxime": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với cefotaxime hoặc cephalosporin",
+                "Dị ứng nặng với penicillin",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (cần điều chỉnh liều)",
+                "Tiền sử viêm đại tràng do C. difficile",
+                "Rối loạn đông máu",
+            ],
+        },
+    },
+    "Cefuroxime": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với cefuroxime hoặc cephalosporin",
+                "Dị ứng nặng với penicillin",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (cần điều chỉnh liều)",
+                "Tiền sử viêm đại tràng do C. difficile",
+            ],
+        },
+    },
+    "Cephalexin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với cephalexin hoặc cephalosporin",
+                "Dị ứng nặng với penicillin",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (cần điều chỉnh liều)",
+                "Tiền sử viêm đại tràng do C. difficile",
+            ],
+        },
+    },
+    "Caspofungin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với caspofungin hoặc echinocandin",
+            ],
+            "tương_đối": [
+                "Suy gan nặng (cần điều chỉnh liều)",
+                "Đang dùng cyclosporine (tăng nguy cơ độc tính gan)",
+            ],
+        },
+    },
+    "Cisplatin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với cisplatin hoặc platinum compounds",
+                "Suy thận nặng (eGFR <30 mL/min)",
+                "Giảm thính lực nặng",
+            ],
+            "tương_đối": [
+                "Suy thận vừa (cần điều chỉnh liều và theo dõi sát)",
+                "Suy tim, bệnh mạch vành",
+                "Giảm bạch cầu hoặc tiểu cầu nặng",
+                "Bệnh thần kinh ngoại biên",
+            ],
+        },
+    },
+    "Carboplatin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với carboplatin hoặc platinum compounds",
+                "Suy thận nặng (eGFR <30 mL/min)",
+            ],
+            "tương_đối": [
+                "Suy thận vừa (cần điều chỉnh liều theo AUC)",
+                "Giảm bạch cầu hoặc tiểu cầu nặng",
+                "Suy gan nặng",
+            ],
+        },
+    },
+    "Baclofen": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với baclofen",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (tăng nguy cơ độc tính, cần giảm liều)",
+                "Động kinh không kiểm soát",
+                "Rối loạn tâm thần",
+                "Loét dạ dày tá tràng",
+            ],
+        },
+    },
+    "Bupropion": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với bupropion",
+                "Động kinh hoặc tiền sử động kinh",
+                "Đang dùng MAO inhibitors (trong vòng 14 ngày)",
+                "Rối loạn ăn uống (anorexia nervosa, bulimia nervosa)",
+            ],
+            "tương_đối": [
+                "Tiền sử động kinh hoặc yếu tố nguy cơ co giật",
+                "Chấn thương đầu, u não",
+                "Rối loạn gan nặng",
+                "Tăng huyết áp không kiểm soát",
+            ],
+        },
+    },
+    "Buprenorphine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với buprenorphine hoặc opioid",
+                "Suy hô hấp nặng không có hỗ trợ thở máy",
+                "Đang dùng MAO inhibitors (trong vòng 14 ngày)",
+            ],
+            "tương_đối": [
+                "Suy hô hấp mạn tính, COPD nặng",
+                "Suy gan nặng (giảm chuyển hóa)",
+                "Tăng áp lực nội sọ",
+                "Phụ nữ có thai (category C)",
+            ],
+        },
+    },
+    "Candesartan": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với candesartan hoặc ARB",
+                "Phụ nữ có thai (tháng 2-3, category D)",
+                "Hẹp động mạch thận hai bên hoặc một bên ở bệnh nhân một thận",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (theo dõi chức năng thận)",
+                "Hạ huyết áp",
+                "Tăng kali máu",
+                "Hẹp động mạch thận một bên",
+            ],
+        },
+    },
+    "Benazepril": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với benazepril hoặc ACE inhibitor",
+                "Phụ nữ có thai (tháng 2-3, category D)",
+                "Phù mạch do ACE inhibitor trước đó",
+                "Hẹp động mạch thận hai bên hoặc một bên ở bệnh nhân một thận",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (theo dõi chức năng thận)",
+                "Hạ huyết áp",
+                "Tăng kali máu",
+                "Bệnh mô liên kết (tăng nguy cơ neutropenia)",
+            ],
+        },
+    },
+    "Canagliflozin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với canagliflozin hoặc SGLT2 inhibitor",
+                "Suy thận nặng (eGFR <30 mL/min)",
+                "Nhiễm toan ceton do đái tháo đường",
+            ],
+            "tương_đối": [
+                "Suy thận vừa (eGFR 30-60, cần điều chỉnh liều)",
+                "Suy tim nặng",
+                "Nhiễm trùng đường tiết niệu tái phát",
+                "Nhiễm nấm sinh dục",
+            ],
+        },
+    },
+    "Chlorpromazine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với chlorpromazine hoặc phenothiazine",
+                "Coma do thuốc ức chế thần kinh trung ương",
+                "Giảm bạch cầu nặng",
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch nặng",
+                "Động kinh",
+                "Bệnh gan",
+                "Parkinson",
+                "Glaucoma góc đóng",
+            ],
+        },
+    },
+    "Chloroquine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với chloroquine",
+                "Bệnh võng mạc do chloroquine",
+                "Rối loạn nhịp tim nặng",
+            ],
+            "tương_đối": [
+                "Bệnh gan nặng",
+                "Bệnh thận nặng",
+                "Bệnh cơ (myopathy)",
+                "Bệnh máu (porphyria)",
+                "Rối loạn tâm thần",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 2 ========================
+
+# ======================== BATCH 3: CONTRAINDICATIONS_DETAIL ========================
+# Bổ sung contraindications_detail cho 15 thuốc quan trọng (Tim mạch, Nội tiết, Kháng sinh, Huyết học)
+# Generated automatically by add_batch_contraindications_batch3.py
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Codeine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với codeine hoặc opioid",
+                "Suy hô hấp nặng không có hỗ trợ thở máy",
+                "Đang dùng MAO inhibitors (trong vòng 14 ngày)",
+            ],
+            "tương_đối": [
+                "Suy hô hấp mạn tính, COPD nặng",
+                "Tăng áp lực nội sọ",
+                "Suy gan nặng (giảm chuyển hóa)",
+                "Suy thận nặng",
+            ],
+        },
+    },
+    "Dipyridamole": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với dipyridamole",
+            ],
+            "tương_đối": [
+                "Hạ huyết áp nặng",
+                "Bệnh mạch vành không ổn định",
+                "Suy tim nặng",
+                "Rối loạn đông máu",
+            ],
+        },
+    },
+    "Disopyramide": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với disopyramide",
+                "Suy tim nặng, sốc tim",
+                "Block nhĩ-thất độ 2-3 không có máy tạo nhịp",
+                "Suy thận nặng (eGFR <30 mL/min)",
+            ],
+            "tương_đối": [
+                "Suy tim vừa",
+                "Suy thận vừa (cần điều chỉnh liều)",
+                "Bệnh mạch vành",
+                "Glaucoma góc đóng",
+            ],
+        },
+    },
+    "Dofetilide": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với dofetilide",
+                "Suy thận nặng (CrCl <20 mL/min)",
+                "QT kéo dài (QTc >500 ms)",
+                "Đang dùng thuốc gây kéo dài QT",
+            ],
+            "tương_đối": [
+                "Suy thận vừa (cần điều chỉnh liều)",
+                "QT kéo dài nhẹ-vừa",
+                "Rối loạn điện giải (hạ kali, hạ magie)",
+            ],
+        },
+    },
+    "Doxazosin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với doxazosin hoặc alpha-blocker",
+            ],
+            "tương_đối": [
+                "Hạ huyết áp nặng",
+                "Suy gan nặng",
+                "Suy thận nặng",
+            ],
+        },
+    },
+    "Eplerenone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với eplerenone",
+                "Suy thận nặng (CrCl <30 mL/min)",
+                "Tăng kali máu nặng (>5.5 mEq/L)",
+                "Đang dùng thuốc ức chế CYP3A4 mạnh (ketoconazole, itraconazole)",
+            ],
+            "tương_đối": [
+                "Suy thận vừa (theo dõi kali máu)",
+                "Tăng kali máu nhẹ-vừa",
+                "Suy gan nặng",
+            ],
+        },
+    },
+    "Felodipine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với felodipine hoặc dihydropyridine calcium channel blocker",
+            ],
+            "tương_đối": [
+                "Hạ huyết áp nặng",
+                "Suy gan nặng (tăng nồng độ)",
+                "Suy tim nặng",
+            ],
+        },
+    },
+    "Fenofibrate": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với fenofibrate hoặc fibrate",
+                "Bệnh gan hoạt động",
+                "Suy thận nặng (eGFR <30 mL/min)",
+                "Bệnh túi mật",
+            ],
+            "tương_đối": [
+                "Suy gan vừa",
+                "Suy thận vừa (cần điều chỉnh liều)",
+                "Rối loạn chức năng tuyến giáp",
+            ],
+        },
+    },
+    "Filgrastim": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với filgrastim hoặc G-CSF",
+            ],
+            "tương_đối": [
+                "Bệnh bạch cầu cấp (AML) ở trẻ em",
+                "Hội chứng rối loạn hô hấp cấp (ARDS)",
+                "Lách to",
+            ],
+        },
+    },
+    "Fludrocortisone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với fludrocortisone hoặc corticosteroid",
+                "Nhiễm nấm hệ thống không điều trị",
+            ],
+            "tương_đối": [
+                "Suy tim nặng",
+                "Tăng huyết áp nặng",
+                "Phù nề",
+                "Loãng xương",
+            ],
+        },
+    },
+    "Fosphenytoin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với fosphenytoin hoặc phenytoin",
+                "Block nhĩ-thất độ 2-3",
+            ],
+            "tương_đối": [
+                "Suy gan nặng (giảm chuyển hóa)",
+                "Suy thận nặng",
+                "Bệnh tim",
+                "Rối loạn chức năng tuyến giáp",
+            ],
+        },
+    },
+    "Ganciclovir": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với ganciclovir",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (cần điều chỉnh liều)",
+                "Giảm bạch cầu hoặc tiểu cầu nặng",
+                "Suy gan nặng",
+            ],
+        },
+    },
+    "Gemfibrozil": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với gemfibrozil hoặc fibrate",
+                "Bệnh gan hoạt động",
+                "Suy thận nặng (eGFR <30 mL/min)",
+                "Bệnh túi mật",
+            ],
+            "tương_đối": [
+                "Suy gan vừa",
+                "Suy thận vừa",
+                "Rối loạn chức năng tuyến giáp",
+            ],
+        },
+    },
+    "Glimepiride": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với glimepiride hoặc sulfonylurea",
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Suy thận nặng (eGFR <30 mL/min)",
+            ],
+            "tương_đối": [
+                "Suy gan nặng (tăng nguy cơ hạ đường huyết)",
+                "Suy thận vừa (cần điều chỉnh liều)",
+                "Người cao tuổi (tăng nguy cơ hạ đường huyết)",
+            ],
+        },
+    },
+    "Hydralazine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với hydralazine",
+                "Bệnh mạch vành nặng",
+                "Nhồi máu cơ tim cấp",
+            ],
+            "tương_đối": [
+                "Suy tim nặng",
+                "Bệnh mạch vành",
+                "Suy gan nặng",
+                "Suy thận nặng",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 3 ========================
+
+# ======================== BATCH 4: CONTRAINDICATIONS_DETAIL ========================
+# Bổ sung contraindications_detail cho 15 thuốc quan trọng (Kháng sinh, Tim mạch, Ung thư, Thần kinh)
+# Generated automatically by add_batch_contraindications_batch4.py
+
+EXTRA_ENHANCED_FIELDS.update({
+    "Hydrocodone": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với hydrocodone hoặc opioid",
+                "Suy hô hấp nặng không có hỗ trợ thở máy",
+                "Đang dùng MAO inhibitors (trong vòng 14 ngày)",
+            ],
+            "tương_đối": [
+                "Suy hô hấp mạn tính, COPD nặng",
+                "Tăng áp lực nội sọ",
+                "Suy gan nặng (giảm chuyển hóa)",
+                "Suy thận nặng",
+            ],
+        },
+    },
+    "Hydroxyzine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với hydroxyzine hoặc piperazine",
+                "Phụ nữ có thai sớm (category C)",
+            ],
+            "tương_đối": [
+                "Suy gan nặng",
+                "Suy thận nặng",
+                "Bệnh tim",
+                "Glaucoma góc đóng",
+            ],
+        },
+    },
+    "Indapamide": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với indapamide hoặc sulfonamide",
+                "Suy thận nặng (eGFR <30 mL/min)",
+                "Tăng kali máu nặng",
+            ],
+            "tương_đối": [
+                "Suy gan nặng",
+                "Suy thận vừa (theo dõi điện giải)",
+                "Đái tháo đường",
+                "Gout",
+            ],
+        },
+    },
+    "Indomethacin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với indomethacin hoặc NSAID",
+                "Loét dạ dày tá tràng tiến triển",
+                "Suy thận nặng",
+                "Suy tim nặng",
+            ],
+            "tương_đối": [
+                "Suy thận vừa",
+                "Suy gan vừa",
+                "Tăng huyết áp",
+                "Bệnh mạch vành",
+            ],
+        },
+    },
+    "Irbesartan": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với irbesartan hoặc ARB",
+                "Phụ nữ có thai (tháng 2-3, category D)",
+                "Hẹp động mạch thận hai bên hoặc một bên ở bệnh nhân một thận",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (theo dõi chức năng thận)",
+                "Hạ huyết áp",
+                "Tăng kali máu",
+            ],
+        },
+    },
+    "Isosorbide mononitrate": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với isosorbide mononitrate hoặc nitrate",
+                "Hạ huyết áp nặng (systolic <90 mmHg)",
+                "Thiếu máu cơ tim cấp do hẹp động mạch chủ nặng",
+                "Đang dùng phosphodiesterase-5 inhibitors",
+            ],
+            "tương_đối": [
+                "Hạ huyết áp nhẹ-vừa",
+                "Thiếu máu nặng",
+                "Tăng áp lực nội sọ",
+            ],
+        },
+    },
+    "Isradipine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với isradipine hoặc dihydropyridine calcium channel blocker",
+            ],
+            "tương_đối": [
+                "Hạ huyết áp nặng",
+                "Suy gan nặng",
+                "Suy tim nặng",
+            ],
+        },
+    },
+    "Ivabradine": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với ivabradine",
+                "Nhịp tim chậm <60 lần/phút",
+                "Suy tim cấp",
+                "Hạ huyết áp nặng",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <15 mL/min)",
+                "Suy gan vừa-nặng",
+                "Rối loạn nhịp tim",
+            ],
+        },
+    },
+    "Ketoprofen": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với ketoprofen hoặc NSAID",
+                "Loét dạ dày tá tràng tiến triển",
+                "Suy thận nặng",
+                "Suy tim nặng",
+            ],
+            "tương_đối": [
+                "Suy thận vừa",
+                "Suy gan vừa",
+                "Tăng huyết áp",
+                "Bệnh mạch vành",
+            ],
+        },
+    },
+    "Ketorolac": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với ketorolac hoặc NSAID",
+                "Loét dạ dày tá tràng tiến triển",
+                "Suy thận nặng",
+                "Chảy máu đang hoạt động",
+                "Phẫu thuật bắc cầu động mạch vành",
+            ],
+            "tương_đối": [
+                "Suy thận vừa",
+                "Suy gan vừa",
+                "Người cao tuổi (>65 tuổi)",
+                "Rối loạn đông máu",
+            ],
+        },
+    },
+    "Labetalol": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với labetalol hoặc beta-blocker",
+                "Block nhĩ-thất độ 2-3 không có máy tạo nhịp",
+                "Suy tim mất bù cấp",
+                "Hen phế quản nặng",
+            ],
+            "tương_đối": [
+                "Nhịp tim chậm",
+                "Hạ huyết áp",
+                "Suy tim vừa",
+                "COPD vừa",
+            ],
+        },
+    },
+    "Lacosamide": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với lacosamide",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30 mL/min, cần điều chỉnh liều)",
+                "Suy gan nặng",
+                "Rối loạn nhịp tim",
+                "Bệnh tim",
+            ],
+        },
+    },
+    "Lisinopril": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với lisinopril hoặc ACE inhibitor",
+                "Phụ nữ có thai (tháng 2-3, category D)",
+                "Phù mạch do ACE inhibitor trước đó",
+                "Hẹp động mạch thận hai bên hoặc một bên ở bệnh nhân một thận",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (theo dõi chức năng thận)",
+                "Hạ huyết áp",
+                "Tăng kali máu",
+                "Bệnh mô liên kết",
+            ],
+        },
+    },
+    "Losartan": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với losartan hoặc ARB",
+                "Phụ nữ có thai (tháng 2-3, category D)",
+                "Hẹp động mạch thận hai bên hoặc một bên ở bệnh nhân một thận",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (theo dõi chức năng thận)",
+                "Hạ huyết áp",
+                "Tăng kali máu",
+            ],
+        },
+    },
+    "Lovastatin": {
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với lovastatin hoặc statin",
+                "Bệnh gan hoạt động",
+                "Phụ nữ có thai hoặc cho con bú",
+                "Đang dùng thuốc ức chế CYP3A4 mạnh (cyclosporine, itraconazole, ketoconazole)",
+            ],
+            "tương_đối": [
+                "Suy gan vừa",
+                "Suy thận nặng",
+                "Rối loạn chức năng tuyến giáp",
+                "Tiền sử bệnh cơ",
+            ],
+        },
+    },
+})
+# ======================== END BATCH 4 ========================
 
 __all__ = ["EXTRA_ENHANCED_FIELDS"]
 

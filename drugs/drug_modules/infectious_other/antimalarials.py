@@ -227,7 +227,22 @@ ANTIMALARIALS_DRUGS = {
         'CDC Guidelines for treatment of malaria',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics"],
         'last_updated': '2025-02-04', 'evidence_level':
-        'High - Guidelines dựa trên chứng cứ từ WHO và CDC'}},
+        'High - Guidelines dựa trên chứng cứ từ WHO và CDC'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Neurotoxicity (rare, with long-term high doses)', 'Hepatotoxicity (rare)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Parasite count (blood smear) - every 6-12 hours in severe malaria', 'Clinical symptoms (fever, symptoms)', 'Blood glucose (if IV - can cause hypoglycemia)', 'ECG if bradycardia symptoms']
+        },
+        'guideline_tags': [
+            'WHO Guidelines - Malaria Treatment',
+            'WHO Guidelines - ACT (Artemisinin-based Combination Therapy)',
+            'CDC Guidelines - Malaria Treatment'
+        ]},
     "Artemether-lumefantrine": {'group':
         'Infectious Disease - Antimalarial (ACT)', 'vietnamese_name':
         'Artemether-lumefantrine, Coartem', 'administration': ['PO'],
@@ -324,7 +339,22 @@ ANTIMALARIALS_DRUGS = {
         'WHO Guidelines for the treatment of malaria (uncomplicated falciparum)',
         'CDC Malaria Treatment Guidelines',
         'UpToDate - Artemether-lumefantrine drug information'],
-        'last_updated': '2025-02-06', 'evidence_level': 'High - WHO/CDC guidelines'}},
+        'last_updated': '2025-02-06', 'evidence_level': 'High - WHO/CDC guidelines'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['QT prolongation (lumefantrine component)', 'Hepatotoxicity (rare)'],
+            'qt_prolongation': True,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['ECG (QTc) if risk factors or co-administered QT-prolonging drugs', 'Parasite count (blood smear)', 'Clinical symptoms', 'Electrolytes (K+, Mg2+)']
+        },
+        'guideline_tags': [
+            'WHO Guidelines - Malaria Treatment',
+            'CDC Guidelines - Malaria Treatment',
+            'FDA Drug Safety Communication - QT Prolongation'
+        ]},
     "Hydroxychloroquine": {'group':
         'Infectious Disease - Antimalarial/Antirheumatic',
         'vietnamese_name': 'Hydroxychloroquine, Plaquenil', 'administration': [
@@ -501,6 +531,23 @@ ANTIMALARIALS_DRUGS = {
         'CDC Yellow Book - Primaquine',
         'UpToDate - Primaquine'],
         'last_updated': '2025-02-06', 'evidence_level':
-        'High - WHO/CDC guidance'}}}
+        'High - WHO/CDC guidance'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Hemolysis (life-threatening in G6PD deficiency) - CRITICAL', 'Methemoglobinemia'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['G6PD test before treatment - CRITICAL (MANDATORY)', 'CBC and hemoglobin (every 1-2 weeks) - CRITICAL', 'Urine color (dark urine, jaundice - signs of hemolysis) - CRITICAL', 'Methemoglobin if symptoms of cyanosis, dyspnea', 'Parasitemia for gametocyte clearance']
+        },
+        'guideline_tags': [
+            'WHO Guidelines - Treatment of Malaria (Vivax/Ovale Radical Cure)',
+            'CDC Guidelines - Malaria Treatment',
+            'FDA Black Box Warning - Primaquine and G6PD Deficiency',
+            'FDA Black Box Warning - Primaquine and Hemolysis',
+            'FDA Black Box Warning - Primaquine and Pregnancy (Category X)'
+        ]}}
 
 __all__ = ['ANTIMALARIALS_DRUGS']

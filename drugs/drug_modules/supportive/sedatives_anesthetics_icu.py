@@ -365,6 +365,18 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "Benzodiazepine/propofol/opioid: có thể giảm ảo giác và cải thiện an thần nhưng tăng nguy cơ ức chế hô hấp.",
         ],
         "pregnancy": "B–C: có thể dùng khi lợi ích vượt trội, tránh lạm dụng; thận trọng ở quý 1.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True, "neurologic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "SCCM ICU Sedation Guidelines",
+            "ASA Practice Guidelines for Sedation and Anesthesia",
+            "ACEP Clinical Policy for Procedural Sedation"
+        ],
         "mechanism_of_action": (
             "Ketamine là thuốc gây mê phân ly, đối kháng thụ thể NMDA, giảm dẫn truyền glutamate "
             "và hoạt hóa nhẹ thụ thể opioid/monoamine, tạo tác dụng gây mê, giảm đau và amnestic. "

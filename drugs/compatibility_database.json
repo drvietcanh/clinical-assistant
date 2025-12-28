@@ -1,0 +1,238 @@
+{
+  "compatibility": {
+    "Adrenaline": {
+      "compatible": [
+        "Noradrenaline",
+        "Dopamine",
+        "Dobutamine",
+        "Vasopressin",
+        "Milrinone",
+        "Nitroglycerin",
+        "Furosemide",
+        "Morphine",
+        "Fentanyl",
+        "Midazolam",
+        "Propofol",
+        "Dexmedetomidine"
+      ],
+      "incompatible": [
+        "Sodium bicarbonate",
+        "Alkaline solutions",
+        "Calcium chloride",
+        "Calcium gluconate"
+      ],
+      "conditional": [
+        "Dobutamine": "Có thể trộn nhưng cần theo dõi sát",
+        "Milrinone": "Có thể trộn nhưng cần theo dõi sát"
+      ],
+      "notes": "Không trộn với sodium bicarbonate hoặc các dung dịch kiềm. Có thể trộn với hầu hết các vasopressor khác.",
+      "y_site": {
+        "compatible": true,
+        "notes": "Có thể dùng Y-site với các thuốc tương thích"
+      }
+    },
+    "Noradrenaline": {
+      "compatible": [
+        "Adrenaline",
+        "Dopamine",
+        "Dobutamine",
+        "Vasopressin",
+        "Milrinone",
+        "Nitroglycerin",
+        "Furosemide",
+        "Morphine",
+        "Fentanyl",
+        "Midazolam",
+        "Propofol",
+        "Dexmedetomidine"
+      ],
+      "incompatible": [
+        "Sodium bicarbonate",
+        "Alkaline solutions",
+        "Calcium chloride",
+        "Calcium gluconate"
+      ],
+      "conditional": [],
+      "notes": "Tương thích tốt với hầu hết các thuốc. Không trộn với sodium bicarbonate.",
+      "y_site": {
+        "compatible": true,
+        "notes": "Có thể dùng Y-site"
+      }
+    },
+    "Dopamine": {
+      "compatible": [
+        "Adrenaline",
+        "Noradrenaline",
+        "Dobutamine",
+        "Vasopressin",
+        "Milrinone",
+        "Furosemide",
+        "Morphine",
+        "Fentanyl",
+        "Midazolam",
+        "Propofol"
+      ],
+      "incompatible": [
+        "Sodium bicarbonate",
+        "Alkaline solutions",
+        "Calcium chloride",
+        "Calcium gluconate",
+        "Nitroglycerin"
+      ],
+      "conditional": [],
+      "notes": "Không tương thích với nitroglycerin. Không trộn với sodium bicarbonate.",
+      "y_site": {
+        "compatible": true,
+        "notes": "Có thể dùng Y-site nhưng tránh nitroglycerin"
+      }
+    },
+    "Dobutamine": {
+      "compatible": [
+        "Adrenaline",
+        "Noradrenaline",
+        "Dopamine",
+        "Vasopressin",
+        "Milrinone",
+        "Furosemide",
+        "Morphine",
+        "Fentanyl",
+        "Midazolam",
+        "Propofol"
+      ],
+      "incompatible": [
+        "Sodium bicarbonate",
+        "Alkaline solutions",
+        "Calcium chloride",
+        "Calcium gluconate",
+        "Nitroglycerin"
+      ],
+      "conditional": [
+        "Adrenaline": "Có thể trộn nhưng cần theo dõi sát",
+        "Milrinone": "Có thể trộn nhưng cần theo dõi sát"
+      ],
+      "notes": "Không tương thích với nitroglycerin. Có thể trộn với adrenaline và milrinone nhưng cần theo dõi.",
+      "y_site": {
+        "compatible": true,
+        "notes": "Có thể dùng Y-site"
+      }
+    },
+    "Vasopressin": {
+      "compatible": [
+        "Adrenaline",
+        "Noradrenaline",
+        "Dopamine",
+        "Dobutamine",
+        "Milrinone",
+        "Furosemide",
+        "Morphine",
+        "Fentanyl",
+        "Midazolam",
+        "Propofol"
+      ],
+      "incompatible": [
+        "Sodium bicarbonate",
+        "Alkaline solutions"
+      ],
+      "conditional": [],
+      "notes": "Tương thích tốt với hầu hết các vasopressor. Không trộn với sodium bicarbonate.",
+      "y_site": {
+        "compatible": true,
+        "notes": "Có thể dùng Y-site"
+      }
+    },
+    "Milrinone": {
+      "compatible": [
+        "Adrenaline",
+        "Noradrenaline",
+        "Dopamine",
+        "Dobutamine",
+        "Vasopressin",
+        "Furosemide",
+        "Morphine",
+        "Fentanyl",
+        "Midazolam",
+        "Propofol"
+      ],
+      "incompatible": [
+        "Sodium bicarbonate",
+        "Alkaline solutions",
+        "Furosemide"
+      ],
+      "conditional": [
+        "Adrenaline": "Có thể trộn nhưng cần theo dõi sát",
+        "Dobutamine": "Có thể trộn nhưng cần theo dõi sát"
+      ],
+      "notes": "Có thể trộn với hầu hết các vasopressor nhưng cần theo dõi. Tránh trộn với furosemide.",
+      "y_site": {
+        "compatible": true,
+        "notes": "Có thể dùng Y-site"
+      }
+    },
+    "Nitroglycerin": {
+      "compatible": [
+        "Adrenaline",
+        "Noradrenaline",
+        "Vasopressin",
+        "Furosemide",
+        "Morphine",
+        "Fentanyl",
+        "Midazolam",
+        "Propofol"
+      ],
+      "incompatible": [
+        "Dopamine",
+        "Dobutamine",
+        "Sodium bicarbonate",
+        "Alkaline solutions"
+      ],
+      "conditional": [],
+      "notes": "Không tương thích với dopamine và dobutamine. Không trộn với sodium bicarbonate.",
+      "y_site": {
+        "compatible": true,
+        "notes": "Có thể dùng Y-site nhưng tránh dopamine và dobutamine"
+      }
+    }
+  },
+  "common_incompatibilities": {
+    "Sodium bicarbonate": [
+      "Adrenaline",
+      "Noradrenaline",
+      "Dopamine",
+      "Dobutamine",
+      "Vasopressin",
+      "Milrinone",
+      "Nitroglycerin"
+    ],
+    "Alkaline solutions": [
+      "Adrenaline",
+      "Noradrenaline",
+      "Dopamine",
+      "Dobutamine",
+      "Vasopressin",
+      "Milrinone",
+      "Nitroglycerin"
+    ],
+    "Calcium chloride": [
+      "Adrenaline",
+      "Noradrenaline",
+      "Dopamine",
+      "Dobutamine"
+    ],
+    "Calcium gluconate": [
+      "Adrenaline",
+      "Noradrenaline",
+      "Dopamine",
+      "Dobutamine"
+    ]
+  },
+  "y_site_guidelines": {
+    "general": "Y-site mixing có thể được sử dụng với các thuốc tương thích. Luôn kiểm tra compatibility trước khi trộn.",
+    "precautions": [
+      "Kiểm tra compatibility trước khi trộn",
+      "Theo dõi sát khi trộn các thuốc conditional",
+      "Tránh trộn với sodium bicarbonate",
+      "Kiểm tra màu sắc và độ trong của dung dịch sau khi trộn"
+    ]
+  }
+}
+

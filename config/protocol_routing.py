@@ -895,7 +895,7 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
     "acute_gout": {
         "keywords": ["Gout", "gout"],
         "render": render_acute_gout,
-        "has_article": False,
+        "has_article": True,
         "priority": 8
     },
     "ra_flare": {
@@ -1094,13 +1094,14 @@ def match_protocol(protocol_name: str) -> Optional[Tuple[str, Dict]]:
     return None
 
 
-def render_protocol_by_name(protocol_name: str, render_article_link_func: Callable):
+def render_protocol_by_name(protocol_name: str, render_article_link_func: Callable, render_score_link_func: Callable = None):
     """
     Render protocol based on name using routing dictionary.
     
     Args:
         protocol_name: The protocol name to render
         render_article_link_func: Function to render article link
+        render_score_link_func: Optional function to render score links
     """
     match_result = match_protocol(protocol_name)
     
@@ -1110,6 +1111,12 @@ def render_protocol_by_name(protocol_name: str, render_article_link_func: Callab
         has_article = config.get("has_article", False)
         article_function = config.get("article_function")
         
+        # Get protocol_function from config or extract from render function name
+        protocol_function = config.get("protocol_function")
+        if not protocol_function and render_func:
+            # Extract function name from render function
+            protocol_function = render_func.__name__ if hasattr(render_func, '__name__') else None
+        
         # Render article link if exists
         if has_article and article_function:
             render_article_link_func(article_function)
@@ -1117,6 +1124,11 @@ def render_protocol_by_name(protocol_name: str, render_article_link_func: Callab
         # Render protocol
         if render_func:
             render_func()
+            
+            # Render score links if function provided and protocol_function exists
+            if render_score_link_func and protocol_function:
+                render_score_link_func(protocol_function)
+            
             return True
     
     return False

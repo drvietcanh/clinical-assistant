@@ -1,0 +1,131 @@
+{
+  "common_doses": {
+    "Adrenaline": {
+      "low_dose": "0.05-0.1 mcg/kg/min",
+      "medium_dose": "0.1-0.3 mcg/kg/min",
+      "high_dose": "0.3-0.5 mcg/kg/min",
+      "max_dose": "1-2 mcg/kg/min",
+      "typical_use": "Sốc phản vệ, ngừng tim"
+    },
+    "Noradrenaline": {
+      "low_dose": "0.05-0.1 mcg/kg/min",
+      "medium_dose": "0.1-1 mcg/kg/min",
+      "high_dose": "1-2 mcg/kg/min",
+      "max_dose": "3-5 mcg/kg/min",
+      "typical_use": "Sốc nhiễm khuẩn, sốc tim"
+    },
+    "Dopamine": {
+      "low_dose": "2-5 mcg/kg/min",
+      "medium_dose": "5-10 mcg/kg/min",
+      "high_dose": "10-20 mcg/kg/min",
+      "max_dose": "20-30 mcg/kg/min",
+      "typical_use": "Sốc tim, suy thận (liều thấp)"
+    },
+    "Dobutamine": {
+      "low_dose": "2.5-5 mcg/kg/min",
+      "medium_dose": "5-10 mcg/kg/min",
+      "high_dose": "10-15 mcg/kg/min",
+      "max_dose": "20 mcg/kg/min",
+      "typical_use": "Suy tim, sốc tim"
+    },
+    "Vasopressin": {
+      "low_dose": "0.03 units/min",
+      "medium_dose": "0.03-0.04 units/min",
+      "high_dose": "0.04 units/min",
+      "max_dose": "0.04 units/min",
+      "typical_use": "Sốc nhiễm khuẩn kháng thuốc"
+    },
+    "Milrinone": {
+      "low_dose": "0.25-0.375 mcg/kg/min",
+      "medium_dose": "0.375-0.5 mcg/kg/min",
+      "high_dose": "0.5-0.75 mcg/kg/min",
+      "max_dose": "0.75 mcg/kg/min",
+      "typical_use": "Suy tim, giảm cung lượng tim"
+    },
+    "Nitroglycerin": {
+      "low_dose": "0.5-1 mcg/kg/min",
+      "medium_dose": "1-3 mcg/kg/min",
+      "high_dose": "3-5 mcg/kg/min",
+      "max_dose": "5 mcg/kg/min",
+      "typical_use": "Đau thắt ngực, suy tim"
+    }
+  },
+  "standard_preparations": {
+    "Adrenaline": {
+      "syringe_pump_50ml": "1mg pha trong 50ml NS = 20 mcg/ml",
+      "syringe_pump_20ml": "1mg pha trong 20ml NS = 50 mcg/ml",
+      "iv_bag_500ml": "2mg pha trong 500ml NS = 4 mcg/ml"
+    },
+    "Noradrenaline": {
+      "syringe_pump_50ml": "4mg pha trong 50ml NS = 80 mcg/ml",
+      "syringe_pump_20ml": "4mg pha trong 20ml NS = 200 mcg/ml",
+      "iv_bag_500ml": "16mg pha trong 500ml NS = 32 mcg/ml"
+    },
+    "Dopamine": {
+      "syringe_pump_50ml": "20mg pha trong 50ml NS = 400 mcg/ml",
+      "syringe_pump_20ml": "20mg pha trong 20ml NS = 1000 mcg/ml",
+      "iv_bag_500ml": "400mg pha trong 500ml NS = 800 mcg/ml"
+    },
+    "Dobutamine": {
+      "syringe_pump_50ml": "25mg pha trong 50ml NS = 500 mcg/ml",
+      "syringe_pump_20ml": "25mg pha trong 20ml NS = 1250 mcg/ml",
+      "iv_bag_500ml": "250mg pha trong 500ml NS = 500 mcg/ml"
+    },
+    "Vasopressin": {
+      "syringe_pump_50ml": "5 units pha trong 50ml NS = 0.1 units/ml",
+      "syringe_pump_20ml": "5 units pha trong 20ml NS = 0.25 units/ml",
+      "iv_bag_500ml": "20 units pha trong 500ml NS = 0.04 units/ml"
+    },
+    "Milrinone": {
+      "syringe_pump_50ml": "1mg pha trong 50ml NS = 20 mcg/ml",
+      "syringe_pump_20ml": "1mg pha trong 20ml NS = 50 mcg/ml",
+      "iv_bag_500ml": "5mg pha trong 500ml NS = 10 mcg/ml"
+    },
+    "Nitroglycerin": {
+      "syringe_pump_50ml": "5mg pha trong 50ml NS = 100 mcg/ml",
+      "syringe_pump_20ml": "5mg pha trong 20ml NS = 250 mcg/ml",
+      "iv_bag_500ml": "25mg pha trong 500ml NS = 50 mcg/ml"
+    }
+  },
+  "typical_rates": {
+    "Adrenaline": {
+      "70kg_patient": {
+        "0.1_mcg_kg_min": "21 ml/h",
+        "0.2_mcg_kg_min": "42 ml/h",
+        "0.3_mcg_kg_min": "63 ml/h"
+      }
+    },
+    "Noradrenaline": {
+      "70kg_patient": {
+        "0.1_mcg_kg_min": "5.25 ml/h",
+        "0.5_mcg_kg_min": "26.25 ml/h",
+        "1_mcg_kg_min": "52.5 ml/h"
+      }
+    }
+  },
+  "drop_rate_reference": {
+    "10_gtt_ml": {
+      "description": "Macro drip (10-15 gtt/ml)",
+      "use": "Dịch truyền thông thường"
+    },
+    "15_gtt_ml": {
+      "description": "Macro drip (15 gtt/ml)",
+      "use": "Dịch truyền thông thường"
+    },
+    "20_gtt_ml": {
+      "description": "Standard drip (20 gtt/ml)",
+      "use": "Dịch truyền tiêu chuẩn"
+    },
+    "60_gtt_ml": {
+      "description": "Micro drip (60 gtt/ml)",
+      "use": "Dịch truyền chính xác, thuốc"
+    }
+  },
+  "conversion_factors": {
+    "mcg_to_mg": 0.001,
+    "mg_to_mcg": 1000,
+    "mcg_kg_min_to_mg_hour": "multiply by weight_kg × 60 / 1000",
+    "ml_hour_to_drops_min": "multiply by drop_factor / 60"
+  }
+}
+

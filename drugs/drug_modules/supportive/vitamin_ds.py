@@ -66,7 +66,18 @@ VITAMIN_DS_DRUGS = {
         'Gan: chuyển hóa 25(OH)D thành các metabolites không hoạt động. Thận: chuyển hóa 25(OH)D thành 1,25(OH)2D (dưới tác dụng của PTH), và bài tiết các metabolites. Tích lũy trong mô mỡ (dự trữ dài hạn).'
         }, 'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để nơi khô ráo, tránh xa tầm tay trẻ em. Một số dạng có thể bảo quản trong tủ lạnh (xem hướng dẫn trên nhãn).'
-        , 'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
+        , 'black_box_warnings': None, 'contraindications_detail': {
+        'tuyệt_đối': [
+        'Tăng calci máu (hypercalcemia) - vitamin D làm nặng thêm',
+        'Tăng calci niệu (hypercalciuria) nặng - tăng nguy cơ sỏi thận',
+        'Sỏi thận calci đang hoạt động - tăng nguy cơ tái phát',
+        'Quá liều vitamin D đang điều trị'], 'tương_đối': [
+        'Suy thận nặng - có thể cần dùng calcitriol (dạng hoạt hóa) thay vì vitamin D thường'
+        , 'Sỏi thận calci (tiền sử) - thận trọng, theo dõi calci niệu',
+        'Bệnh sarcoidosis - tăng nhạy cảm với vitamin D, tăng nguy cơ tăng calci máu'
+        ,
+        'Bệnh cường cận giáp (hyperparathyroidism) - có thể làm nặng tăng calci máu'
+        , 'Dùng thiazide diuretics - tăng nguy cơ tăng calci máu']}, 'drug_interactions': {'major': [{'drug':
         'Thiazide diuretics (Hydrochlorothiazide, Chlorthalidone)', 'mechanism':
         'Thiazide diuretics giảm bài tiết calcium qua thận, kết hợp với vitamin D tăng hấp thu calcium, dẫn đến tăng calci máu.'
         , 'effect':

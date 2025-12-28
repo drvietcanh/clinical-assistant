@@ -192,7 +192,11 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "treatment": ["Điều trị triệu chứng"],
             "monitoring": "Triệu chứng lâm sàng."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị triệu chứng: ngừng thuốc, điều trị đau đầu, kích thích, mất ngủ, rối loạn tiêu hóa."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn",
@@ -418,7 +422,11 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "treatment": ["Ngừng thuốc, điều trị hỗ trợ", "Điều trị chảy máu nếu có"],
             "monitoring": "Dấu hiệu chảy máu, huyết đồ, chức năng gan/thận nếu cần."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là ngừng thuốc và điều trị hỗ trợ. Nếu có chảy máu: điều trị chảy máu (truyền máu, vitamin K nếu cần, ngừng các thuốc chống đông/kháng tiểu cầu)."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn.",
@@ -778,7 +786,11 @@ CEREBRAL_CIRCULATION_DRUGS = {
             ],
             "monitoring": "HA, mạch, SpO2, chức năng thận, men gan",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là ngừng truyền ngay, hỗ trợ hô hấp và tuần hoàn nếu phản vệ, bù dịch, theo dõi creatinine. Lọc máu nếu suy thận nặng."
+        },
         "administration_instructions": {
             "iv": {
                 "reconstitution": "Pha 30mg vào 100ml NaCl 0.9%",
@@ -893,7 +905,11 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "treatment": ["Ngừng truyền, điều trị triệu chứng, xử trí phản vệ nếu có"],
             "monitoring": "HA, mạch, hô hấp, dấu hiệu dị ứng",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng truyền ngay, điều trị triệu chứng (kích thích, nhức đầu, nôn), xử trí phản vệ nếu có (epinephrine, corticosteroids, antihistamines), theo dõi dấu hiệu sinh tồn."
+        },
         "administration_instructions": {
             "iv": {
                 "reconstitution": "Pha 10–30ml vào 100ml NaCl 0.9%",

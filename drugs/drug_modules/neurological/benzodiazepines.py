@@ -136,6 +136,31 @@ BENZODIAZEPINES_DRUGS = {
                 "Dùng với CYP3A4 inducers - tăng liều diazepam"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng diazepam hoặc các thành phần khác",
+                "Myasthenia gravis nặng - làm yếu cơ",
+                "Glaucoma góc đóng - tăng nhãn áp",
+                "Suy hô hấp nặng - tăng nguy cơ suy hô hấp",
+                "Ức chế hệ thần kinh trung ương nặng"
+            ],
+            "tương_đối": [
+                "Bệnh gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Bệnh thận nặng - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ, té ngã, lú lẫn, giảm liều 50%",
+                "Mang thai (nguy cơ dị tật bẩm sinh, withdrawal ở trẻ sơ sinh) - tránh dùng nếu có thể",
+                "Dùng với alcohol hoặc opioids - tăng nguy cơ suy hô hấp",
+                "Dùng với CYP3A4 inhibitors - giảm liều diazepam",
+                "Dùng với CYP3A4 inducers - tăng liều diazepam"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Diazepam không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Diazepam thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy, đặc biệt với active metabolite. Giảm liều và theo dõi chặt chẽ ở suy thận."
+        },
         "pregnancy_lactation": {
             "fda_category": "D",
             "pregnancy_details": "Có nguy cơ dị tật bẩm sinh (cleft lip/palate, heart defects). Trẻ sơ sinh có thể có withdrawal syndrome (khó chịu, run, khó thở, co giật) nếu mẹ dùng diazepam trong thai kỳ, đặc biệt gần cuối thai kỳ. Tránh dùng trong thai kỳ nếu có thể. Nếu dùng, cần tư vấn di truyền và theo dõi chặt chẽ. Theo dõi trẻ sơ sinh về dấu hiệu withdrawal.",
@@ -544,6 +569,32 @@ BENZODIAZEPINES_DRUGS = {
                 "Dùng với CYP3A4 inducers - tăng liều clonazepam",
                 "Dùng với valproate - giảm liều clonazepam"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng clonazepam hoặc các thành phần khác",
+                "Myasthenia gravis nặng - làm yếu cơ",
+                "Glaucoma góc đóng - tăng nhãn áp",
+                "Suy hô hấp nặng - tăng nguy cơ suy hô hấp",
+                "Ức chế hệ thần kinh trung ương nặng"
+            ],
+            "tương_đối": [
+                "Bệnh gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Bệnh thận nặng - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ, té ngã, lú lẫn, ataxia, giảm liều 50%",
+                "Mang thai (nguy cơ dị tật bẩm sinh, withdrawal ở trẻ sơ sinh) - tránh dùng nếu có thể",
+                "Dùng với alcohol hoặc opioids - tăng nguy cơ suy hô hấp",
+                "Dùng với CYP3A4 inhibitors - giảm liều clonazepam",
+                "Dùng với CYP3A4 inducers - tăng liều clonazepam",
+                "Dùng với valproate - giảm liều clonazepam"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Clonazepam không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Clonazepam thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy, đặc biệt với half-life dài (18-50 giờ). Giảm liều và theo dõi chặt chẽ ở suy thận."
         },
         "pregnancy_lactation": {
             "fda_category": "D",

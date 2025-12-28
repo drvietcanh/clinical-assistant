@@ -119,6 +119,26 @@ SSRI_DRUGS = {
                 "Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "Dị ứng sertraline"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử",
+                "Có ý định tự tử - chỉ kê đơn số lượng ít",
+                "Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Sertraline không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Sertraline thải trừ một phần qua thận. Suy thận có thể ảnh hưởng nhẹ đến thải trừ. Giảm liều ở suy thận nặng."
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Một số nghiên cứu gợi ý tăng nguy cơ dị tật thai nhi (dị tật tim) khi dùng trong 3 tháng đầu, nhưng chứng cứ không rõ ràng. Có thể gây tăng huyết áp phổi ở trẻ sơ sinh (PPHN) - nguy cơ thấp. Có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng gần ngày sinh. Theo dõi trẻ sơ sinh sau sinh.",
@@ -291,6 +311,29 @@ SSRI_DRUGS = {
                 "Trẻ em <18 tuổi - tăng nguy cơ tự tử"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "QT prolongation",
+                "Dị ứng citalopram",
+                "Liều >40mg/ngày (chống chỉ định do QT prolongation)"
+            ],
+            "tương_đối": [
+                "Người già >60 tuổi - giới hạn 20mg/ngày",
+                "Bệnh tim - tăng nguy cơ QT prolongation",
+                "Rối loạn điện giải (hạ kali, hạ magne) - tăng nguy cơ QT prolongation",
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Citalopram không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Citalopram thải trừ một phần qua thận. Suy thận có thể ảnh hưởng nhẹ đến thải trừ. Giảm liều ở suy thận nặng."
+        },
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Một số nghiên cứu gợi ý tăng nguy cơ dị tật thai nhi (dị tật tim) khi dùng trong 3 tháng đầu, nhưng chứng cứ không rõ ràng. Có thể gây tăng huyết áp phổi ở trẻ sơ sinh (PPHN) - nguy cơ thấp. Có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng gần ngày sinh. Theo dõi trẻ sơ sinh sau sinh.",
@@ -454,6 +497,25 @@ SSRI_DRUGS = {
                 "Trẻ em <18 tuổi - tăng nguy cơ tự tử",
                 "Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "Dị ứng escitalopram"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử",
+                "Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Escitalopram không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Escitalopram thải trừ một phần qua thận. Suy thận có thể ảnh hưởng nhẹ đến thải trừ. Giảm liều ở suy thận nặng."
         },
         "pregnancy_lactation": {
             "fda_category": "C",
@@ -640,6 +702,28 @@ SSRI_DRUGS = {
                 "Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin",
                 "Dùng với CYP2D6 substrates - tăng nồng độ các thuốc"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "Dị ứng paroxetine"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - giảm liều",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử",
+                "Có ý định tự tử - chỉ kê đơn số lượng ít",
+                "Mang thai (phân loại D - nguy cơ dị tật bẩm sinh) - tránh dùng nếu có thể",
+                "Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin",
+                "Dùng với CYP2D6 substrates - tăng nồng độ các thuốc"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Paroxetine không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Paroxetine thải trừ một phần qua thận. Suy thận có thể ảnh hưởng nhẹ đến thải trừ. Giảm liều ở suy thận nặng."
         },
         "pregnancy_lactation": {
             "fda_category": "D",
@@ -850,6 +934,30 @@ SSRI_DRUGS = {
                 "Mang thai (phân loại C) - thận trọng, chỉ dùng nếu lợi ích > nguy cơ",
                 "Trẻ em <18 tuổi - tăng nguy cơ tự tử"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dùng MAO inhibitor (chống chỉ định tuyệt đối)",
+                "Dùng với tizanidine (chống chỉ định tuyệt đối)",
+                "Dùng với alosetron (chống chỉ định tuyệt đối)",
+                "Dị ứng fluvoxamine"
+            ],
+            "tương_đối": [
+                "Dùng với theophylline, caffeine - tăng nồng độ đáng kể, cần giảm liều",
+                "Dùng với warfarin - tăng INR, cần theo dõi",
+                "Dùng với clozapine, olanzapine - tăng nồng độ, cần giảm liều",
+                "Suy gan nặng - giảm liều",
+                "Suy thận nặng (CrCl <30) - thận trọng",
+                "Mang thai (phân loại C) - thận trọng, chỉ dùng nếu lợi ích > nguy cơ",
+                "Trẻ em <18 tuổi - tăng nguy cơ tự tử"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Fluvoxamine không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Fluvoxamine thải trừ một phần qua thận. Suy thận có thể ảnh hưởng nhẹ đến thải trừ. Giảm liều ở suy thận nặng."
         },
         "pregnancy_lactation": {
             "fda_category": "C",

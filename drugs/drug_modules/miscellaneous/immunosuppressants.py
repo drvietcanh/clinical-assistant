@@ -420,7 +420,24 @@ IMMUNOSUPPRESSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used in transplantation"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Nephrotoxicity (common, can be permanent) - CRITICAL", "Hypertension", "Post-transplant diabetes", "Hyperlipidemia", "Neurotoxicity (seizures, confusion - rare)", "Hepatotoxicity (rare)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Tacrolimus trough levels (target 5-15 ng/mL depending on indication and time post-transplant) - CRITICAL", "Renal function (creatinine, eGFR) - CRITICAL (nephrotoxicity common, can be permanent)", "Blood pressure - hypertension common", "Blood glucose - post-transplant diabetes", "Lipid panel (cholesterol, triglycerides)", "Hepatic function (ALT, AST, bilirubin) - hepatotoxicity rare", "CBC (leukocytes, platelets) - rare", "Signs of infection - increased risk", "Signs of malignancy (lymphoma, skin cancer) - increased risk", "Signs of neurotoxicity (seizures, confusion) - rare", "Drug interactions - CRITICAL (many CYP3A4 inhibitors/inducers)"]
+        },
+        "guideline_tags": [
+            "AST Guidelines - Organ Transplantation",
+            "KDIGO Guidelines - Kidney Transplantation",
+            "FDA Black Box Warning - Tacrolimus and Nephrotoxicity",
+            "FDA Black Box Warning - Tacrolimus and Post-transplant Diabetes",
+            "FDA Black Box Warning - Tacrolimus and Drug Interactions (CYP3A4)"
+        ]
     },
     
     "Mycophenolate": {
@@ -788,7 +805,24 @@ IMMUNOSUPPRESSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used in transplantation and autoimmune diseases"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Bone marrow suppression (myelosuppression) - common", "Hepatotoxicity", "Pancreatitis (rare)", "Malignancy (lymphoma, skin cancer, blood cancer)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC (WBC, platelet, hemoglobin) - CRITICAL, especially first 3 months", "TPMT testing before treatment if possible", "Hepatic function (ALT, AST, bilirubin)", "Signs of infection", "Signs of malignancy"]
+        },
+        "guideline_tags": [
+            "AST Guidelines - Organ Transplantation",
+            "ACR Guidelines - Autoimmune Diseases",
+            "FDA Black Box Warning - Azathioprine and Myelosuppression",
+            "FDA Black Box Warning - Azathioprine and Allopurinol Interaction",
+            "ECCO Guidelines - Inflammatory Bowel Disease"
+        ]
     }
 }
 

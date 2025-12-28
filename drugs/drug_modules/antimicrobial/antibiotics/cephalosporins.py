@@ -434,6 +434,19 @@ CEPHALOSPORIN_ANTIBIOTICS = {
                 "Dùng kéo dài (>14 ngày) - nguy cơ sỏi mật"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng ceftriaxone hoặc cephalosporin",
+                "Dị ứng penicillin nặng (sốc phản vệ)",
+                "Trẻ sơ sinh <28 ngày tuổi có tăng bilirubin - CHỐNG CHỈ ĐỊNH (nguy cơ kernicterus)"
+            ],
+            "tương_đối": [
+                "Dị ứng penicillin nhẹ - thận trọng",
+                "Tiền sử nhiễm C. difficile",
+                "Dùng kéo dài (>14 ngày) - nguy cơ sỏi mật"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Ceftriaxone là thuốc phân loại B. An toàn trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ.",

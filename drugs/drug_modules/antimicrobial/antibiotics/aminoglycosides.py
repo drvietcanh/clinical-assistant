@@ -21,6 +21,15 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
             "Suy thận nặng (CrCl <10)",
             "Myasthenia gravis"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng aminoglycoside",
+                "Suy thận nặng (CrCl <10)",
+                "Myasthenia gravis"
+            ],
+            "tương_đối": []
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "dosage": {
             "adult_standard": "3-5 mg/kg/ngày IV/IM, chia 1-3 lần",
             "adult_severe": "5-7 mg/kg/ngày IV/IM",
@@ -158,6 +167,15 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
             "Suy thận nặng (CrCl <10)",
             "Myasthenia gravis"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng aminoglycoside",
+                "Suy thận nặng (CrCl <10)",
+                "Myasthenia gravis"
+            ],
+            "tương_đối": []
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "dosage": {
             "adult_standard": "15 mg/kg/ngày IV/IM, chia 1-3 lần",
             "adult_severe": "15-20 mg/kg/ngày IV/IM",
@@ -259,6 +277,15 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
             "Suy thận nặng (CrCl <10)",
             "Myasthenia gravis"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng aminoglycoside",
+                "Suy thận nặng (CrCl <10)",
+                "Myasthenia gravis"
+            ],
+            "tương_đối": []
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "dosage": {
             "adult_standard": "3-5 mg/kg/ngày IV/IM, chia 1-3 lần",
             "adult_severe": "5-7 mg/kg/ngày IV/IM",

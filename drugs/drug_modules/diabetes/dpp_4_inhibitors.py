@@ -112,13 +112,29 @@ DPP_4_INHIBITORS_DRUGS = {
         'Januvia', 'Sitagliptin']}, 'cost_estimate': {'unit': 'VND',
         'range': '20,000 - 60,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Sitagliptin generic thường rẻ hơn (20,000-40,000 VND/viên 100mg). Januvia (brand) thường đắt hơn (40,000-60,000 VND/viên 100mg).'}, 'references': {'primary_sources': [
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Sitagliptin generic thường rẻ hơn (20,000-40,000 VND/viên 100mg). Januvia (brand) thường đắt hơn (40,000-60,000 VND/viên 100mg).'},         'references': {'primary_sources': [
         'FDA Drug Label - Januvia (sitagliptin)',
         'UpToDate - Sitagliptin: Drug information',
         'TECOS Study - New England Journal of Medicine',
         'American Diabetes Association guidelines'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs and systematic reviews (TECOS study)'}},
+        'High - Multiple RCTs and systematic reviews (TECOS study)'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Pancreatitis (rare)', 'Heart failure (slight increased risk)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Blood glucose', 'Renal function (CrCl for dose adjustment)', 'Signs of pancreatitis']
+        },
+        'guideline_tags': [
+            'ADA Diabetes Guidelines',
+            'AACE/ACE Diabetes Guidelines',
+            'TECOS Study',
+            'FDA Drug Safety Communication - DPP-4 Inhibitors and Heart Failure'
+        ]},
     "Vildagliptin": {'group': 'Diabetes - DPP-4 Inhibitor', 'vietnamese_name':
         'Vildagliptin, Galvus', 'administration': ['PO'], 'indications': [
         'Đái tháo đường type 2'], 'contraindications': ['Đái tháo đường type 1',
@@ -189,12 +205,27 @@ DPP_4_INHIBITORS_DRUGS = {
         'timing': 'Uống 2 lần/ngày (sáng và tối), cách đều, với bữa ăn.'}, 'iv':
         {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Vildagliptin (Galvus)',
         'UpToDate - Vildagliptin: Drug Information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
         ], 'last_updated': '2025-02-04', 'evidence_level':
-        'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}},
+        'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Pancreatitis (rare)', 'Hepatotoxicity (contraindicated in severe hepatic impairment)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': True,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Blood glucose', 'Hepatic function (ALT, AST)', 'Signs of pancreatitis']
+        },
+        'guideline_tags': [
+            'ADA Diabetes Guidelines',
+            'AACE/ACE Diabetes Guidelines',
+            'FDA Drug Safety Communication - DPP-4 Inhibitors and Pancreatitis'
+        ]},
     
     "Linagliptin": {
         "group": "Diabetes - DPP-4 Inhibitor",
@@ -338,7 +369,22 @@ DPP_4_INHIBITORS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Pancreatitis (rare)", "Heart failure (slight increased risk)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Signs of pancreatitis", "Signs of heart failure"]
+        },
+        "guideline_tags": [
+            "ADA Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "FDA Drug Safety Communication - DPP-4 Inhibitors and Heart Failure"
+        ]
     },
     
     "Saxagliptin": {
@@ -494,7 +540,23 @@ DPP_4_INHIBITORS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs (SAVOR-TIMI 53)"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Pancreatitis (rare)", "Heart failure (slight increased risk)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Renal function (CrCl for dose adjustment)", "Signs of pancreatitis", "Signs of heart failure"]
+        },
+        "guideline_tags": [
+            "ADA Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "SAVOR-TIMI 53 Study",
+            "FDA Drug Safety Communication - DPP-4 Inhibitors and Heart Failure"
+        ]
     },
     
     "Alogliptin": {
@@ -642,7 +704,23 @@ DPP_4_INHIBITORS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs (EXAMINE)"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Pancreatitis (rare)", "Heart failure (slight increased risk)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Renal function (CrCl for dose adjustment)", "Signs of pancreatitis", "Signs of heart failure"]
+        },
+        "guideline_tags": [
+            "ADA Diabetes Guidelines",
+            "AACE/ACE Diabetes Guidelines",
+            "EXAMINE Study",
+            "FDA Drug Safety Communication - DPP-4 Inhibitors and Heart Failure"
+        ]
     }
 }
 

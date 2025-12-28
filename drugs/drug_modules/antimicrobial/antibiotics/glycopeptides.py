@@ -24,6 +24,15 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
             "Dị ứng vancomycin",
             "Suy thận nặng (CrCl <10) - thận trọng, cần điều chỉnh liều"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng vancomycin"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <10) - thận trọng, cần điều chỉnh liều"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": []},
         "dosage": {
             "adult_iv_standard": "15-20 mg/kg IV mỗi 8-12 giờ (dựa trên trọng lượng thực tế)",
             "adult_iv_severe": "15-20 mg/kg IV mỗi 8-12 giờ",

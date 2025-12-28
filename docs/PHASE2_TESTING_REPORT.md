@@ -1,210 +1,161 @@
-# 📋 Báo Cáo Test Phase 2 - Tính Năng Mới
+# 📊 PHASE 2 TESTING REPORT
+## Cardiovascular Drugs Calculator
 
-**Ngày:** 2025-01-XX  
-**Trạng thái:** ✅ TẤT CẢ TEST PASSED
-
----
-
-## ✅ KẾT QUẢ TEST TỰ ĐỘNG
-
-### **1. MIC Breakpoints & Susceptibility** ✅
-- ✅ Import module thành công
-- ✅ Dữ liệu MIC cho Vancomycin có đầy đủ
-- ✅ Có organisms data
-- ✅ Có common_susceptibility data
-- ✅ Function `get_mic_breakpoints()` hoạt động
-- ✅ Function `get_common_susceptibility()` hoạt động
-
-### **2. Resistance Patterns (Việt Nam)** ✅
-- ✅ Import module thành công
-- ✅ Dữ liệu resistance cho E. coli và Ceftriaxone có đầy đủ
-- ✅ Function `get_resistance_pattern()` hoạt động
-- ✅ Function `get_organism_resistance()` hoạt động
-- ✅ Function `get_antibiotic_resistance_summary()` hoạt động
-
-### **3. Condition-Based Search** ✅
-- ✅ Import module thành công
-- ✅ Dữ liệu Sepsis có đầy đủ
-- ✅ Có empiric_therapy data
-- ✅ Function `search_by_condition()` hoạt động
-- ✅ Function `get_all_conditions()` hoạt động
-- ✅ Function `get_condition_antibiotics()` hoạt động
-
-### **4. Side-by-Side Comparison** ✅
-- ✅ Import module thành công
-- ✅ Function `render_comparison()` tồn tại
-- ✅ Database có antibiotics để so sánh
-
-### **5. Treatment Algorithms** ✅
-- ✅ Import module thành công
-- ✅ Có 4 algorithms: Sepsis, Pneumonia, UTI, Meningitis
-- ✅ Mỗi algorithm có steps structure đầy đủ
-- ✅ Function `render_algorithm()` tồn tại
-- ✅ Function `render_algorithms_page()` tồn tại
-
-### **6. Database Integration** ✅
-- ✅ Tích hợp MIC breakpoints vào detail view
-- ✅ Tích hợp resistance patterns vào detail view
-- ✅ Database display functions hoạt động
+**Ngày test:** 2025-02-05  
+**Mục tiêu:** Verify tính chính xác và so sánh với Medical Calculator
 
 ---
 
-## 🧪 CHECKLIST TEST THỦ CÔNG
+## ✅ TEST CASES
 
-### **Test 1: MIC Breakpoints trong Detail View**
+### Test 1: Adrenaline - Basic Calculation
+**Input:**
+- Drug: Adrenaline
+- Dose: 0.1 mcg/kg/min
+- Weight: 70 kg
+- Method: IV bag 500ml (4 mcg/ml)
 
-1. ✅ Vào trang "🔍 Tra Cứu & Dữ Liệu Kháng Sinh"
-2. ✅ Tìm kiếm "Vancomycin"
-3. ✅ Click "📖 Chi tiết"
-4. ✅ Kiểm tra section "📊 MIC Breakpoints & Độ Nhạy"
-5. ✅ Xác nhận có:
-   - Độ nhạy thường gặp với color coding
-   - Bảng giá trị MIC (S/I/R)
-   - Dữ liệu cho các organisms
+**Expected (Medical Calculator):**
+- Total dose/min: 7 mcg/min
+- Total dose/hour: 420 mcg/h
+- Infusion rate: 105 ml/h
 
-**Kháng sinh để test:**
-- Vancomycin
-- Ceftriaxone
-- Meropenem
-- Piperacillin-Tazobactam
+**Result:** ✅ PASS
 
 ---
 
-### **Test 2: Resistance Patterns trong Detail View**
+### Test 2: Drop Rate Calculation
+**Input:**
+- Infusion rate: 105 ml/h
+- Drop factor: 20 gtt/ml
 
-1. ✅ Vào detail view của một kháng sinh (ví dụ: Ceftriaxone)
-2. ✅ Scroll xuống section "🦠 Tỷ Lệ Kháng Thuốc (Việt Nam, 2024)"
-3. ✅ Xác nhận có:
-   - Tỷ lệ kháng (R) với color coding
-   - Tỷ lệ nhạy cảm (S)
-   - Dữ liệu cho các organisms phổ biến
+**Expected:**
+- Drop rate: 35 gtt/min
 
-**Kháng sinh để test:**
-- Ceftriaxone (có nhiều resistance data)
-- Ciprofloxacin
-- Meropenem
+**Formula:** (105 × 20) / 60 = 35
+
+**Result:** ✅ PASS
 
 ---
 
-### **Test 3: Condition-Based Search**
+### Test 3: Infusion Time Calculation
+**Input:**
+- Volume: 50 ml
+- Rate: 105 ml/h
 
-1. ✅ Vào trang "🔍 Tra Cứu & Dữ Liệu Kháng Sinh"
-2. ✅ Chọn "🏥 Theo bệnh lý" trong search mode
-3. ✅ Chọn từng bệnh lý và kiểm tra:
-   - **Sepsis**: Có 4+ khuyến cáo điều trị
-   - **UTI**: Có phân loại đơn giản/phức tạp
-   - **Pneumonia**: Có CAP và HAP
-   - **Meningitis**: Có theo tuổi
-   - **Intra-abdominal**: Có khuyến cáo
-   - **Skin/Soft Tissue**: Có khuyến cáo
+**Expected:**
+- Time: 0.476 hours = 28.6 minutes
 
-4. ✅ Kiểm tra mỗi khuyến cáo có:
-   - Lý do (rationale)
-   - Liều dùng
-   - Priority badge (First-line, Alternative, etc.)
-   - Button "📖 Xem chi tiết" hoạt động
+**Formula:** 50 / 105 = 0.476
+
+**Result:** ✅ PASS
 
 ---
 
-### **Test 4: Side-by-Side Comparison**
+### Test 4: Complete Infusion
+**Input:**
+- Drug: Adrenaline
+- Dose: 0.1 mcg/kg/min
+- Weight: 70 kg
+- Method: IV bag 500ml
+- Drop factor: 20
 
-1. ✅ Vào menu "📊 So Sánh Side-by-Side"
-2. ✅ Chọn 2 kháng sinh (ví dụ: Vancomycin và Ceftriaxone)
-3. ✅ Kiểm tra bảng so sánh tổng hợp có:
-   - Nhóm
-   - Đường dùng
-   - AWaRe
-   - Liều dùng
-   - Chỉ định
-   - Độ nhạy
-   - Tác dụng phụ
+**Expected:**
+- All fields present
+- Drop rate: 35 gtt/min
+- Time: ~28.6 minutes
 
-4. ✅ Click vào các tabs:
-   - **💉 Liều Dùng**: So sánh liều chi tiết
-   - **📋 Chỉ Định**: So sánh chỉ định
-   - **🦠 Độ Nhạy**: So sánh độ nhạy với color coding
-   - **⚠️ Tác Dụng Phụ**: So sánh tác dụng phụ
-   - **🫘 Điều Chỉnh Thận**: So sánh bảng điều chỉnh
-
-5. ✅ Test với 3-4 kháng sinh
-6. ✅ Kiểm tra buttons "📖 Chi tiết" hoạt động
+**Result:** ✅ PASS
 
 ---
 
-### **Test 5: Treatment Algorithms**
+## 🔍 SO SÁNH VỚI MEDICAL CALCULATOR
 
-1. ✅ Vào menu "🔄 Phác Đồ Điều Trị"
-2. ✅ Test từng algorithm:
+### Adrenaline Test Case:
+| Metric | Medical Calculator | Our Calculator | Match |
+|--------|-------------------|----------------|-------|
+| Total dose/min | 7 mcg/min | 7.0 mcg/min | ✅ |
+| Total dose/hour | 420 mcg/h | 420.0 mcg/h | ✅ |
+| Infusion rate | 105 ml/h | 105.0 ml/h | ✅ |
 
-   **Sepsis:**
-   - Chọn "Có" cho sốc nhiễm khuẩn
-   - Chọn các nguồn nhiễm khuẩn khác nhau
-   - Xác nhận có khuyến cáo với lý do
-
-   **Pneumonia:**
-   - Chọn CAP hoặc HAP
-   - Chọn mức độ nặng
-   - Xác nhận có khuyến cáo phù hợp
-
-   **UTI:**
-   - Chọn đơn giản hoặc phức tạp
-   - Chọn mức độ nặng
-   - Xác nhận có khuyến cáo
-
-   **Meningitis:**
-   - Chọn tuổi bệnh nhân
-   - Chọn tác nhân nghi ngờ
-   - Xác nhận có khuyến cáo
-
-3. ✅ Kiểm tra section "📝 Lưu Ý Quan Trọng" có hiển thị
+**Kết luận:** ✅ Khớp 100%
 
 ---
 
-### **Test 6: Integration với Existing Features**
+### Noradrenaline Test Case:
+| Metric | Medical Calculator | Our Calculator | Match |
+|--------|-------------------|----------------|-------|
+| Total dose/min | 7 mcg/min | 7.0 mcg/min | ✅ |
+| Infusion rate | ~6.56 ml/h | ~6.56 ml/h | ✅ |
 
-1. ✅ Từ Condition Search → Click "📖 Xem chi tiết" → Xác nhận chuyển đến detail view
-2. ✅ Từ Comparison → Click "📖 Chi tiết" → Xác nhận chuyển đến detail view
-3. ✅ Trong detail view → Xác nhận có MIC và Resistance data
-4. ✅ Từ detail view → Click "🧮 Tính liều" → Xác nhận calculator hoạt động
-
----
-
-## 🐛 CÁC VẤN ĐỀ ĐÃ PHÁT HIỆN
-
-### **Không có lỗi nghiêm trọng** ✅
-
-Tất cả các test đều pass. Không có lỗi import, syntax, hoặc runtime errors.
+**Kết luận:** ✅ Khớp 100%
 
 ---
 
-## 📊 THỐNG KÊ
+## 📝 FORMULA VERIFICATION
 
-- **Tổng số test:** 6 modules
-- **Test passed:** 6/6 (100%)
-- **Tính năng mới:** 5
-- **Files mới:** 5
-- **Lines of code:** ~1500+
+### Formula 1: mcg/kg/min → ml/hr
+```
+ml/hr = (mcg/kg/min × kg × 60) / (mg/ml × 1000)
+```
 
----
-
-## ✅ KẾT LUẬN
-
-**Phase 2 đã hoàn thành thành công!**
-
-Tất cả các tính năng mới đã được:
-- ✅ Implement đầy đủ
-- ✅ Test tự động pass
-- ✅ Tích hợp vào giao diện
-- ✅ Sẵn sàng sử dụng
-
-**Các tính năng sẵn sàng để:**
-- Test thủ công trên giao diện
-- Sử dụng trong production
-- Mở rộng thêm dữ liệu
+**Test:**
+- Input: 0.1 mcg/kg/min, 70kg, 4 mcg/ml
+- Calculation: (0.1 × 70 × 60) / (0.004 × 1000) = 420 / 4 = 105 ml/h
+- **Result:** ✅ Correct
 
 ---
 
-**Ngày test:** 2025-01-XX  
-**Tester:** Automated + Manual Checklist  
-**Status:** ✅ READY FOR USE
+### Formula 2: Drop Rate
+```
+gtt/min = (ml/hr × drop_factor) / 60
+```
 
+**Test:**
+- Input: 105 ml/h, 20 gtt/ml
+- Calculation: (105 × 20) / 60 = 35 gtt/min
+- **Result:** ✅ Correct
+
+---
+
+### Formula 3: Infusion Time
+```
+time_hours = volume_ml / infusion_rate_ml_hour
+```
+
+**Test:**
+- Input: 50 ml, 105 ml/h
+- Calculation: 50 / 105 = 0.476 hours
+- **Result:** ✅ Correct
+
+---
+
+## ✅ TESTING SUMMARY
+
+| Test Case | Status | Notes |
+|-----------|--------|-------|
+| Adrenaline basic | ✅ PASS | Khớp với Medical Calculator |
+| Noradrenaline basic | ✅ PASS | Khớp với Medical Calculator |
+| Dopamine | ✅ PASS | Calculation correct |
+| Drop rate | ✅ PASS | Formula verified |
+| Infusion time | ✅ PASS | Formula verified |
+| Complete infusion | ✅ PASS | All fields present |
+| Dose validation | ✅ PASS | Warning works |
+| Edge cases | ✅ PASS | Handles extremes |
+
+**Overall:** ✅ **ALL TESTS PASSED**
+
+---
+
+## 🎯 KẾT LUẬN
+
+1. ✅ **Công thức tính toán chính xác** - Khớp với Medical Calculator
+2. ✅ **Tất cả functions hoạt động đúng** - Test cases pass
+3. ✅ **Edge cases được xử lý** - Validation và error handling tốt
+4. ✅ **So sánh với Medical Calculator** - Kết quả khớp 100%
+
+**Phase 2: Cardiovascular Drugs Calculator - ✅ HOÀN THÀNH**
+
+---
+
+*© 2025 - Phase 2 Testing Report*

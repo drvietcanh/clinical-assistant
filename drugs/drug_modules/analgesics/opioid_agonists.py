@@ -86,7 +86,19 @@ OPIOID_AGONISTS_DRUGS = {
         'Dùng SSRI/SNRI - tăng nguy cơ co giật và hội chứng serotonin',
         'Tiền sử co giật - tăng nguy cơ',
         'Trẻ em <12 tuổi - nguy cơ ức chế hô hấp', 'Người cao tuổi - giảm liều'
-        ]}, 'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        ]}, 'contraindications_detail': {'tuyệt_đối': [
+        'Dùng MAO inhibitor trong vòng 14 ngày',
+        'Ngộ độc cấp tính rượu, thuốc an thần, opioid',
+        'Co giật không kiểm soát', 'Suy hô hấp nặng hoặc suy hô hấp cấp tính',
+        'Dị ứng tramadol'], 'tương_đối': [
+        'Suy thận nặng (CrCl <30) - giảm liều 50%',
+        'Suy gan nặng - giảm liều 50%',
+        'Dùng SSRI/SNRI - tăng nguy cơ co giật và hội chứng serotonin',
+        'Tiền sử co giật - tăng nguy cơ',
+        'Trẻ em <12 tuổi - nguy cơ ức chế hô hấp', 'Người cao tuổi - giảm liều'
+        ]}, 'renal_adjustment': {'normal': 'Không đổi', '30_60':
+        'Giảm liều 25-50%', 'under_30': 'Giảm liều 50% hoặc tránh dùng', 'notes':
+        'Tramadol và active metabolite (O-desmethyltramadol) thải trừ chủ yếu qua thận. Suy thận làm giảm thải trừ, tăng nguy cơ tích lũy và tác dụng phụ. Cần giảm liều ở suy thận nặng.'}, 'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
         'Có thể dùng nếu lợi ích > nguy cơ. Nguy cơ ức chế hô hấp ở trẻ sơ sinh nếu dùng gần ngày sinh. Có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng kéo dài trong thai kỳ. Tránh dùng trong 3 tháng cuối nếu có thể.'
         , 'lactation': {'safety': 'Caution', 'details':
         'Tramadol và O-desmethyltramadol bài tiết vào sữa mẹ. Nồng độ trong sữa mẹ tương đương khoảng 0.1% liều mẹ. Có thể gây ức chế hô hấp và buồn ngủ ở trẻ bú mẹ.'

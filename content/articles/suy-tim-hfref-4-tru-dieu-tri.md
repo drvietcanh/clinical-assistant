@@ -1,7 +1,7 @@
 # Quản lý suy tim phân suất tống máu giảm (HFrEF): Chiến lược "4 trụ" và tối ưu hóa điều trị
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tim mạch  
-> **Cập nhật:** Tháng 12/2025  
+> **Cập nhật:** Tháng 2/2025  
 > **Tài liệu tham khảo chính:** ESC HF Guidelines 2021 + ESC Focused Update 2023 [1,2], ACC/AHA/HFSA HF Guideline 2022 [3], các RCT: PARADIGM-HF, DAPA-HF, EMPEROR-Reduced [4–6]
 
 ---

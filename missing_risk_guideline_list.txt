@@ -1,0 +1,1084 @@
+DANH SÁCH THUỐC THIẾU CẢ HAI FIELD: risk_flags + guideline_tags
+================================================================================
+Tổng số: 477 thuốc
+
+PHÂN LOẠI THEO MODULE:
+--------------------------------------------------------------------------------
+
+Other: 121 thuốc
+  - Brodalumab
+  - Calcium
+  - Calcium (elemental)
+  - Caplacizumab
+  - Cemiplimab
+  - Certolizumab pegol
+  - Chloroquine
+  - Chlorpheniramine
+  - Clobetasol
+  - Colchicine
+  - Cyclopentolate eye drops
+  - Cyclosporine
+  - Desloratadine
+  - Dexamethasone eye drops
+  - Diclofenac eye drops
+  - Diphenhydramine
+  - Dorzolamide
+  - Dostarlimab
+  - Durvalumab
+  - Dutasteride
+  - Eculizumab
+  - Efgartigimod
+  - Eltrombopag
+  - Emicizumab
+  - Epoetin alfa
+  - Etanercept
+  - Ethambutol
+  - Favipiravir
+  - Febuxostat
+  - Fesoterodine
+  - Fexofenadine
+  - Filgrastim
+  - Finasteride
+  - Fluconazole
+  - Folic Acid
+  - Folic acid
+  - Ganciclovir
+  - Ganciclovir eye drops
+  - Golimumab
+  - Guselkumab
+  - Hydrocortisone topical
+  - Hydroxychloroquine
+  - Hydroxyzine
+  - Infliximab
+  - Iron
+  - Isoniazid
+  - Itraconazole
+  - Ivermectin
+  - Ixekizumab
+  - Ketorolac eye drops
+  - Ketotifen eye drops
+  - Lanadelumab
+  - Latanoprost
+  - Leflunomide
+  - Levamisole
+  - Levocetirizine
+  - Linezolid (lao MDR/XDR)
+  - Loratadine
+  - Mebendazole
+  - Miconazole/Hydrocortisone topical
+  - Mirabegron
+  - Mycophenolate
+  - Natalizumab
+  - Nepafenac eye drops
+  - Nivolumab
+  - Nystatin
+  - Ocrelizumab
+  - Olopatadine eye drops
+  - Oseltamivir
+  - Oxybutynin
+  - Pembrolizumab
+  - Phenylephrine eye drops
+  - Pilocarpine eye drops
+  - Pimecrolimus
+  - Praziquantel
+  - Prednisolone eye drops
+  - Primaquine
+  - Probenecid
+  - Protamine
+  - Pyrazinamide
+  - Ravulizumab
+  - Remdesivir
+  - Reslizumab
+  - Rifabutin
+  - Rifampin
+  - Rifapentine
+  - Risankizumab
+  - Rituximab
+  - Romiplostim
+  - Sarilumab
+  - Secukinumab
+  - Sildenafil
+  - Silodosin
+  - Solifenacin
+  - Streptomycin
+  - Tacrolimus
+  - Tacrolimus topical
+  - Tadalafil
+  - Tamsulosin
+  - Tezepelumab
+  - Timolol eye drops
+  - Tocilizumab
+  - Tolterodine
+  - Tranexamic acid
+  - Trastuzumab
+  - Travoprost
+  - Tretinoin topical
+  - Triamcinolone topical
+  - Tropicamide eye drops
+  - Ustekinumab
+  - Valacyclovir
+  - Vardenafil
+  - Vedolizumab
+  - Vitamin B12
+  - Vitamin C
+  - Vitamin D
+  - Vitamin D3 (Cholecalciferol)
+  - Vitamin E
+  - Vitamin K
+  - Voriconazole
+  - Zanamivir
+
+Neurological: 60 thuốc
+  - Aducanumab
+  - Baclofen
+  - Carbamazepine
+  - Carisoprodol
+  - Cerebrolysin
+  - Cerebroprotein hydrolysate (khác)
+  - Citicoline
+  - Citicoline/Piracetam
+  - Clonazepam
+  - Cyclobenzaprine
+  - Deutetrabenazine
+  - Diazepam
+  - Dimethyl fumarate
+  - Donanemab
+  - Donepezil
+  - Edaravone
+  - Eptinezumab
+  - Erenumab
+  - Ethosuximide
+  - Fingolimod
+  - Fosphenytoin
+  - Fremanezumab
+  - Gabapentin
+  - Galcanezumab
+  - Ginkgo biloba extract
+  - Ginkgo biloba/Vinpocetine
+  - Istradefylline
+  - Lacosamide
+  - Lamotrigine
+  - Lecanemab
+  - Levetiracetam
+  - Levodopa/Carbidopa
+  - Lorazepam
+  - Memantine
+  - Metaxalone
+  - Methocarbamol
+  - Nicergoline
+  - Nimodipine
+  - Ofatumumab
+  - Opicapone
+  - Oxcarbazepine
+  - Perampanel
+  - Phenobarbital
+  - Phenytoin
+  - Pimavanserin
+  - Piracetam
+  - Pramipexole
+  - Pregabalin
+  - Primidone
+  - Rimegepant
+  - Rivastigmine
+  - Ropinirole
+  - Safinamide
+  - Tetrabenazine
+  - Tizanidine
+  - Topiramate
+  - Ubrogepant
+  - Valproate
+  - Vinpocetine
+  - Zonisamide
+
+Cardiovascular: 58 thuốc
+  - Acebutolol
+  - Alirocumab
+  - Amiodarone
+  - Amlodipine/Olmesartan
+  - Amlodipine/Valsartan
+  - Bempedoic acid
+  - Betaxolol
+  - Bumetanide
+  - Chlorthalidone
+  - Clevidipine
+  - Clonidine
+  - Diltiazem
+  - Disopyramide
+  - Dofetilide
+  - Doxazosin
+  - Enalaprilat
+  - Evinacumab
+  - Evolocumab
+  - Ezetimibe
+  - Felodipine
+  - Fenofibrate
+  - Finerenone
+  - Fluvastatin
+  - Gemfibrozil
+  - High-intensity statin (đột quỵ/TIA)
+  - Hydralazine
+  - Ibutilide
+  - Icosapent ethyl
+  - Inclisiran
+  - Indapamide
+  - Isosorbide mononitrate
+  - Isradipine
+  - Ivabradine
+  - Labetalol
+  - Lacidipine
+  - Lisinopril/Hydrochlorothiazide
+  - Losartan/Hydrochlorothiazide
+  - Methyldopa
+  - Nadolol
+  - Nesiritide
+  - Niacin
+  - Nicardipine
+  - Nisoldipine
+  - Nitroglycerin
+  - Nitroprusside
+  - Omega-3 acid ethyl esters
+  - Pemafibrate
+  - Pitavastatin
+  - Plozasiran
+  - Propranolol
+  - Quinidine
+  - Rosuvastatin
+  - Sotagliflozin
+  - Sotalol
+  - Timolol
+  - Torsemide
+  - Verapamil
+  - Vericiguat
+
+Antimicrobial: 54 thuốc
+  - Amoxicillin
+  - Amoxicillin suspension
+  - Amoxicillin-clavulanate
+  - Ampicillin
+  - Ampicillin-sulbactam
+  - Azithromycin
+  - Aztreonam
+  - Cefaclor
+  - Cefadroxil
+  - Cefazolin
+  - Cefdinir
+  - Cefepime
+  - Cefiderocol
+  - Cefixime
+  - Cefoperazone
+  - Cefotaxime
+  - Cefotetan
+  - Cefoxitin
+  - Cefpirome
+  - Ceftazidime
+  - Ceftriaxone
+  - Cefuroxime
+  - Cephalexin
+  - Ciprofloxacin
+  - Ciprofloxacin eye drops
+  - Clarithromycin
+  - Dicloxacillin
+  - Doripenem
+  - Doxycycline
+  - Eravacycline
+  - Ertapenem
+  - Erythromycin
+  - Erythromycin eye ointment
+  - Fusidic acid/Betamethasone topical
+  - Gemifloxacin
+  - Gentamicin eye drops
+  - Lefamulin
+  - Metronidazole
+  - Metronidazole topical
+  - Minocycline
+  - Moxifloxacin eye drops
+  - Mupirocin topical
+  - Nafcillin
+  - Norfloxacin
+  - Ofloxacin
+  - Omadacycline
+  - Oxacillin
+  - Penicillin V
+  - Plazomicin
+  - Polymyxin B/Trimethoprim eye drops
+  - Sparfloxacin
+  - Tetracycline
+  - Tigecycline
+  - Tobramycin eye drops
+
+Gastrointestinal: 34 thuốc
+  - Aluminum hydroxide/Magnesium hydroxide
+  - Baricitinib
+  - Bisacodyl
+  - Bismuth subsalicylate
+  - Calcium carbonate
+  - Cimetidine
+  - Dexlansoprazole
+  - Domperidone
+  - Esomeprazole
+  - Famotidine
+  - Hyoscine butylbromide
+  - Ilaprazole
+  - Lactulose
+  - Lansoprazole
+  - Loperamide
+  - Mebeverine
+  - Mesalazine
+  - Metoclopramide
+  - Misoprostol
+  - Omeprazole
+  - Ondansetron
+  - Pantoprazole
+  - Polyethylene glycol 3350
+  - Rabeprazole
+  - Ranitidine
+  - Senna (sennosides)
+  - Simethicone
+  - Sucralfate
+  - Sulfasalazine
+  - Tegoprazan
+  - Tofacitinib
+  - Trimebutine
+  - Upadacitinib
+  - Vonoprazan
+
+Oncology: 28 thuốc
+  - 5-Fluorouracil
+  - Abiraterone
+  - Anastrozole
+  - Brentuximab vedotin
+  - Capecitabine
+  - Carboplatin
+  - Cetuximab
+  - Cisplatin
+  - Cyclophosphamide
+  - Daratumumab
+  - Docetaxel
+  - Doxorubicin
+  - Enzalutamide
+  - Erlotinib
+  - Etoposide
+  - Gefitinib
+  - Gemcitabine
+  - Ifosfamide
+  - Imatinib
+  - Irinotecan
+  - Paclitaxel
+  - Sacituzumab govitecan
+  - Tamoxifen
+  - Teprotumumab
+  - Topotecan
+  - Trastuzumab deruxtecan
+  - Vincristine
+  - Zoledronic acid
+
+Respiratory: 24 thuốc
+  - Aclidinium
+  - Aminophylline
+  - Beclomethasone inhaled
+  - Benralizumab
+  - Budesonide inhaled
+  - Ciclesonide
+  - Dupilumab
+  - Fluticasone inhaled
+  - Formoterol
+  - Glycopyrronium
+  - Indacaterol
+  - Ipratropium
+  - Mepolizumab
+  - Montelukast
+  - Nedocromil
+  - Olodaterol
+  - Omalizumab
+  - Roflumilast
+  - Salbutamol
+  - Salmeterol
+  - Theophylline
+  - Tiotropium
+  - Umeclidinium
+  - Vilanterol
+
+Diabetes: 22 thuốc
+  - Acarbose
+  - Bromocriptine
+  - Colesevelam
+  - Insulin Aspart
+  - Insulin Degludec
+  - Insulin Detemir
+  - Insulin Glargine
+  - Insulin Glulisine
+  - Insulin Lispro
+  - Insulin NPH
+  - Insulin Regular
+  - Metformin/Dapagliflozin
+  - Metformin/Empagliflozin
+  - Metformin/Glibenclamide
+  - Metformin/Pioglitazone
+  - Metformin/Sitagliptin
+  - Miglitol
+  - Nateglinide
+  - Pioglitazone
+  - Repaglinide
+  - Rosiglitazone
+  - Teplizumab
+
+Analgesics: 22 thuốc
+  - Aspirin/Carisoprodol
+  - Buprenorphine
+  - Celecoxib
+  - Codeine
+  - Etoricoxib
+  - Indomethacin
+  - Ketoprofen
+  - Lasmiditan
+  - Meperidine
+  - Methadone
+  - Nimesulide
+  - Oxycodone
+  - Paracetamol
+  - Paracetamol/Carisoprodol
+  - Paracetamol/Chlorzoxazone
+  - Paracetamol/Methocarbamol
+  - Paracetamol/Orphenadrine
+  - Piroxicam
+  - Rizatriptan
+  - Sumatriptan
+  - Tapentadol
+  - Tramadol
+
+Psychiatry: 22 thuốc
+  - Amitriptyline
+  - Aripiprazole
+  - Bupropion
+  - Chlorpromazine
+  - Citalopram
+  - Desvenlafaxine
+  - Duloxetine
+  - Escitalopram
+  - Fluoxetine
+  - Fluphenazine
+  - Fluvoxamine
+  - Haloperidol
+  - Lurasidone
+  - Mirtazapine
+  - Olanzapine
+  - Olanzapine/Fluoxetine
+  - Paroxetine
+  - Quetiapine
+  - Risperidone
+  - Sertraline
+  - Trazodone
+  - Venlafaxine
+
+Endocrinology: 20 thuốc
+  - Abaloparatide
+  - Alendronate
+  - Betamethasone
+  - Calcitonin
+  - Denosumab
+  - Dexamethasone
+  - Fludrocortisone
+  - Hydrocortisone
+  - Ibandronate
+  - Levothyroxine
+  - Methimazole
+  - Methylprednisolone
+  - Prednisolone
+  - Prednisone
+  - Propylthiouracil
+  - Raloxifene
+  - Risedronate
+  - Romosozumab
+  - Teriparatide
+  - Testosterone
+
+Emergency: 12 thuốc
+  - Adenosine
+  - Atropine
+  - Calcium chloride
+  - Carboprost
+  - Dinoprostone
+  - Flumazenil
+  - Lidocaine
+  - Magnesium sulfate
+  - Methylergonovine
+  - Naloxone
+  - Naltrexone
+  - Oxytocin
+
+================================================================================
+CHIA THÀNH CÁC PHIÊN XỬ LÝ:
+================================================================================
+
+PHIÊN 1: 25 thuốc
+--------------------------------------------------------------------------------
+  [Other] 25 thuốc:
+    - Brodalumab
+    - Calcium
+    - Calcium (elemental)
+    - Caplacizumab
+    - Cemiplimab
+    - Certolizumab pegol
+    - Chloroquine
+    - Chlorpheniramine
+    - Clobetasol
+    - Colchicine
+    - Cyclopentolate eye drops
+    - Cyclosporine
+    - Desloratadine
+    - Dexamethasone eye drops
+    - Diclofenac eye drops
+    - Diphenhydramine
+    - Dorzolamide
+    - Dostarlimab
+    - Durvalumab
+    - Dutasteride
+    - Eculizumab
+    - Efgartigimod
+    - Eltrombopag
+    - Emicizumab
+    - Epoetin alfa
+
+PHIÊN 2: 25 thuốc
+--------------------------------------------------------------------------------
+  [Other] 25 thuốc:
+    - Etanercept
+    - Ethambutol
+    - Favipiravir
+    - Febuxostat
+    - Fesoterodine
+    - Fexofenadine
+    - Filgrastim
+    - Finasteride
+    - Fluconazole
+    - Folic Acid
+    - Folic acid
+    - Ganciclovir
+    - Ganciclovir eye drops
+    - Golimumab
+    - Guselkumab
+    - Hydrocortisone topical
+    - Hydroxychloroquine
+    - Hydroxyzine
+    - Infliximab
+    - Iron
+    - Isoniazid
+    - Itraconazole
+    - Ivermectin
+    - Ixekizumab
+    - Ketorolac eye drops
+
+PHIÊN 3: 25 thuốc
+--------------------------------------------------------------------------------
+  [Other] 25 thuốc:
+    - Ketotifen eye drops
+    - Lanadelumab
+    - Latanoprost
+    - Leflunomide
+    - Levamisole
+    - Levocetirizine
+    - Linezolid (lao MDR/XDR)
+    - Loratadine
+    - Mebendazole
+    - Miconazole/Hydrocortisone topical
+    - Mirabegron
+    - Mycophenolate
+    - Natalizumab
+    - Nepafenac eye drops
+    - Nivolumab
+    - Nystatin
+    - Ocrelizumab
+    - Olopatadine eye drops
+    - Oseltamivir
+    - Oxybutynin
+    - Pembrolizumab
+    - Phenylephrine eye drops
+    - Pilocarpine eye drops
+    - Pimecrolimus
+    - Praziquantel
+
+PHIÊN 4: 25 thuốc
+--------------------------------------------------------------------------------
+  [Other] 25 thuốc:
+    - Prednisolone eye drops
+    - Primaquine
+    - Probenecid
+    - Protamine
+    - Pyrazinamide
+    - Ravulizumab
+    - Remdesivir
+    - Reslizumab
+    - Rifabutin
+    - Rifampin
+    - Rifapentine
+    - Risankizumab
+    - Rituximab
+    - Romiplostim
+    - Sarilumab
+    - Secukinumab
+    - Sildenafil
+    - Silodosin
+    - Solifenacin
+    - Streptomycin
+    - Tacrolimus
+    - Tacrolimus topical
+    - Tadalafil
+    - Tamsulosin
+    - Tezepelumab
+
+PHIÊN 5: 21 thuốc
+--------------------------------------------------------------------------------
+  [Other] 21 thuốc:
+    - Timolol eye drops
+    - Tocilizumab
+    - Tolterodine
+    - Tranexamic acid
+    - Trastuzumab
+    - Travoprost
+    - Tretinoin topical
+    - Triamcinolone topical
+    - Tropicamide eye drops
+    - Ustekinumab
+    - Valacyclovir
+    - Vardenafil
+    - Vedolizumab
+    - Vitamin B12
+    - Vitamin C
+    - Vitamin D
+    - Vitamin D3 (Cholecalciferol)
+    - Vitamin E
+    - Vitamin K
+    - Voriconazole
+    - Zanamivir
+
+PHIÊN 6: 25 thuốc
+--------------------------------------------------------------------------------
+  [Neurological] 25 thuốc:
+    - Aducanumab
+    - Baclofen
+    - Carbamazepine
+    - Carisoprodol
+    - Cerebrolysin
+    - Cerebroprotein hydrolysate (khác)
+    - Citicoline
+    - Citicoline/Piracetam
+    - Clonazepam
+    - Cyclobenzaprine
+    - Deutetrabenazine
+    - Diazepam
+    - Dimethyl fumarate
+    - Donanemab
+    - Donepezil
+    - Edaravone
+    - Eptinezumab
+    - Erenumab
+    - Ethosuximide
+    - Fingolimod
+    - Fosphenytoin
+    - Fremanezumab
+    - Gabapentin
+    - Galcanezumab
+    - Ginkgo biloba extract
+
+PHIÊN 7: 25 thuốc
+--------------------------------------------------------------------------------
+  [Neurological] 25 thuốc:
+    - Ginkgo biloba/Vinpocetine
+    - Istradefylline
+    - Lacosamide
+    - Lamotrigine
+    - Lecanemab
+    - Levetiracetam
+    - Levodopa/Carbidopa
+    - Lorazepam
+    - Memantine
+    - Metaxalone
+    - Methocarbamol
+    - Nicergoline
+    - Nimodipine
+    - Ofatumumab
+    - Opicapone
+    - Oxcarbazepine
+    - Perampanel
+    - Phenobarbital
+    - Phenytoin
+    - Pimavanserin
+    - Piracetam
+    - Pramipexole
+    - Pregabalin
+    - Primidone
+    - Rimegepant
+
+PHIÊN 8: 10 thuốc
+--------------------------------------------------------------------------------
+  [Neurological] 10 thuốc:
+    - Rivastigmine
+    - Ropinirole
+    - Safinamide
+    - Tetrabenazine
+    - Tizanidine
+    - Topiramate
+    - Ubrogepant
+    - Valproate
+    - Vinpocetine
+    - Zonisamide
+
+PHIÊN 9: 25 thuốc
+--------------------------------------------------------------------------------
+  [Cardiovascular] 25 thuốc:
+    - Acebutolol
+    - Alirocumab
+    - Amiodarone
+    - Amlodipine/Olmesartan
+    - Amlodipine/Valsartan
+    - Bempedoic acid
+    - Betaxolol
+    - Bumetanide
+    - Chlorthalidone
+    - Clevidipine
+    - Clonidine
+    - Diltiazem
+    - Disopyramide
+    - Dofetilide
+    - Doxazosin
+    - Enalaprilat
+    - Evinacumab
+    - Evolocumab
+    - Ezetimibe
+    - Felodipine
+    - Fenofibrate
+    - Finerenone
+    - Fluvastatin
+    - Gemfibrozil
+    - High-intensity statin (đột quỵ/TIA)
+
+PHIÊN 10: 25 thuốc
+--------------------------------------------------------------------------------
+  [Cardiovascular] 25 thuốc:
+    - Hydralazine
+    - Ibutilide
+    - Icosapent ethyl
+    - Inclisiran
+    - Indapamide
+    - Isosorbide mononitrate
+    - Isradipine
+    - Ivabradine
+    - Labetalol
+    - Lacidipine
+    - Lisinopril/Hydrochlorothiazide
+    - Losartan/Hydrochlorothiazide
+    - Methyldopa
+    - Nadolol
+    - Nesiritide
+    - Niacin
+    - Nicardipine
+    - Nisoldipine
+    - Nitroglycerin
+    - Nitroprusside
+    - Omega-3 acid ethyl esters
+    - Pemafibrate
+    - Pitavastatin
+    - Plozasiran
+    - Propranolol
+
+PHIÊN 11: 8 thuốc
+--------------------------------------------------------------------------------
+  [Cardiovascular] 8 thuốc:
+    - Quinidine
+    - Rosuvastatin
+    - Sotagliflozin
+    - Sotalol
+    - Timolol
+    - Torsemide
+    - Verapamil
+    - Vericiguat
+
+PHIÊN 12: 25 thuốc
+--------------------------------------------------------------------------------
+  [Antimicrobial] 25 thuốc:
+    - Amoxicillin
+    - Amoxicillin suspension
+    - Amoxicillin-clavulanate
+    - Ampicillin
+    - Ampicillin-sulbactam
+    - Azithromycin
+    - Aztreonam
+    - Cefaclor
+    - Cefadroxil
+    - Cefazolin
+    - Cefdinir
+    - Cefepime
+    - Cefiderocol
+    - Cefixime
+    - Cefoperazone
+    - Cefotaxime
+    - Cefotetan
+    - Cefoxitin
+    - Cefpirome
+    - Ceftazidime
+    - Ceftriaxone
+    - Cefuroxime
+    - Cephalexin
+    - Ciprofloxacin
+    - Ciprofloxacin eye drops
+
+PHIÊN 13: 25 thuốc
+--------------------------------------------------------------------------------
+  [Antimicrobial] 25 thuốc:
+    - Clarithromycin
+    - Dicloxacillin
+    - Doripenem
+    - Doxycycline
+    - Eravacycline
+    - Ertapenem
+    - Erythromycin
+    - Erythromycin eye ointment
+    - Fusidic acid/Betamethasone topical
+    - Gemifloxacin
+    - Gentamicin eye drops
+    - Lefamulin
+    - Metronidazole
+    - Metronidazole topical
+    - Minocycline
+    - Moxifloxacin eye drops
+    - Mupirocin topical
+    - Nafcillin
+    - Norfloxacin
+    - Ofloxacin
+    - Omadacycline
+    - Oxacillin
+    - Penicillin V
+    - Plazomicin
+    - Polymyxin B/Trimethoprim eye drops
+
+PHIÊN 14: 4 thuốc
+--------------------------------------------------------------------------------
+  [Antimicrobial] 4 thuốc:
+    - Sparfloxacin
+    - Tetracycline
+    - Tigecycline
+    - Tobramycin eye drops
+
+PHIÊN 15: 25 thuốc
+--------------------------------------------------------------------------------
+  [Gastrointestinal] 25 thuốc:
+    - Aluminum hydroxide/Magnesium hydroxide
+    - Baricitinib
+    - Bisacodyl
+    - Bismuth subsalicylate
+    - Calcium carbonate
+    - Cimetidine
+    - Dexlansoprazole
+    - Domperidone
+    - Esomeprazole
+    - Famotidine
+    - Hyoscine butylbromide
+    - Ilaprazole
+    - Lactulose
+    - Lansoprazole
+    - Loperamide
+    - Mebeverine
+    - Mesalazine
+    - Metoclopramide
+    - Misoprostol
+    - Omeprazole
+    - Ondansetron
+    - Pantoprazole
+    - Polyethylene glycol 3350
+    - Rabeprazole
+    - Ranitidine
+
+PHIÊN 16: 9 thuốc
+--------------------------------------------------------------------------------
+  [Gastrointestinal] 9 thuốc:
+    - Senna (sennosides)
+    - Simethicone
+    - Sucralfate
+    - Sulfasalazine
+    - Tegoprazan
+    - Tofacitinib
+    - Trimebutine
+    - Upadacitinib
+    - Vonoprazan
+
+PHIÊN 17: 25 thuốc
+--------------------------------------------------------------------------------
+  [Oncology] 25 thuốc:
+    - 5-Fluorouracil
+    - Abiraterone
+    - Anastrozole
+    - Brentuximab vedotin
+    - Capecitabine
+    - Carboplatin
+    - Cetuximab
+    - Cisplatin
+    - Cyclophosphamide
+    - Daratumumab
+    - Docetaxel
+    - Doxorubicin
+    - Enzalutamide
+    - Erlotinib
+    - Etoposide
+    - Gefitinib
+    - Gemcitabine
+    - Ifosfamide
+    - Imatinib
+    - Irinotecan
+    - Paclitaxel
+    - Sacituzumab govitecan
+    - Tamoxifen
+    - Teprotumumab
+    - Topotecan
+
+PHIÊN 18: 3 thuốc
+--------------------------------------------------------------------------------
+  [Oncology] 3 thuốc:
+    - Trastuzumab deruxtecan
+    - Vincristine
+    - Zoledronic acid
+
+PHIÊN 19: 24 thuốc
+--------------------------------------------------------------------------------
+  [Respiratory] 24 thuốc:
+    - Aclidinium
+    - Aminophylline
+    - Beclomethasone inhaled
+    - Benralizumab
+    - Budesonide inhaled
+    - Ciclesonide
+    - Dupilumab
+    - Fluticasone inhaled
+    - Formoterol
+    - Glycopyrronium
+    - Indacaterol
+    - Ipratropium
+    - Mepolizumab
+    - Montelukast
+    - Nedocromil
+    - Olodaterol
+    - Omalizumab
+    - Roflumilast
+    - Salbutamol
+    - Salmeterol
+    - Theophylline
+    - Tiotropium
+    - Umeclidinium
+    - Vilanterol
+
+PHIÊN 20: 22 thuốc
+--------------------------------------------------------------------------------
+  [Diabetes] 22 thuốc:
+    - Acarbose
+    - Bromocriptine
+    - Colesevelam
+    - Insulin Aspart
+    - Insulin Degludec
+    - Insulin Detemir
+    - Insulin Glargine
+    - Insulin Glulisine
+    - Insulin Lispro
+    - Insulin NPH
+    - Insulin Regular
+    - Metformin/Dapagliflozin
+    - Metformin/Empagliflozin
+    - Metformin/Glibenclamide
+    - Metformin/Pioglitazone
+    - Metformin/Sitagliptin
+    - Miglitol
+    - Nateglinide
+    - Pioglitazone
+    - Repaglinide
+    - Rosiglitazone
+    - Teplizumab
+
+PHIÊN 21: 22 thuốc
+--------------------------------------------------------------------------------
+  [Analgesics] 22 thuốc:
+    - Aspirin/Carisoprodol
+    - Buprenorphine
+    - Celecoxib
+    - Codeine
+    - Etoricoxib
+    - Indomethacin
+    - Ketoprofen
+    - Lasmiditan
+    - Meperidine
+    - Methadone
+    - Nimesulide
+    - Oxycodone
+    - Paracetamol
+    - Paracetamol/Carisoprodol
+    - Paracetamol/Chlorzoxazone
+    - Paracetamol/Methocarbamol
+    - Paracetamol/Orphenadrine
+    - Piroxicam
+    - Rizatriptan
+    - Sumatriptan
+    - Tapentadol
+    - Tramadol
+
+PHIÊN 22: 22 thuốc
+--------------------------------------------------------------------------------
+  [Psychiatry] 22 thuốc:
+    - Amitriptyline
+    - Aripiprazole
+    - Bupropion
+    - Chlorpromazine
+    - Citalopram
+    - Desvenlafaxine
+    - Duloxetine
+    - Escitalopram
+    - Fluoxetine
+    - Fluphenazine
+    - Fluvoxamine
+    - Haloperidol
+    - Lurasidone
+    - Mirtazapine
+    - Olanzapine
+    - Olanzapine/Fluoxetine
+    - Paroxetine
+    - Quetiapine
+    - Risperidone
+    - Sertraline
+    - Trazodone
+    - Venlafaxine
+
+PHIÊN 23: 20 thuốc
+--------------------------------------------------------------------------------
+  [Endocrinology] 20 thuốc:
+    - Abaloparatide
+    - Alendronate
+    - Betamethasone
+    - Calcitonin
+    - Denosumab
+    - Dexamethasone
+    - Fludrocortisone
+    - Hydrocortisone
+    - Ibandronate
+    - Levothyroxine
+    - Methimazole
+    - Methylprednisolone
+    - Prednisolone
+    - Prednisone
+    - Propylthiouracil
+    - Raloxifene
+    - Risedronate
+    - Romosozumab
+    - Teriparatide
+    - Testosterone
+
+PHIÊN 24: 12 thuốc
+--------------------------------------------------------------------------------
+  [Emergency] 12 thuốc:
+    - Adenosine
+    - Atropine
+    - Calcium chloride
+    - Carboprost
+    - Dinoprostone
+    - Flumazenil
+    - Lidocaine
+    - Magnesium sulfate
+    - Methylergonovine
+    - Naloxone
+    - Naltrexone
+    - Oxytocin

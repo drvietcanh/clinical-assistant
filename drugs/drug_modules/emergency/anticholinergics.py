@@ -68,7 +68,7 @@ ANTICHOLINERGICS_DRUGS = {
         }], 'minor': [{'drug': 'Ketamine', 'mechanism':
         'Atropine có thể làm tăng nhịp tim, có thể tương tác với ketamine.',
         'effect': 'Tăng nhịp tim', 'management':
-        'Theo dõi nhịp tim khi dùng đồng thời.'}]}, 'contraindications': {
+        'Theo dõi nhịp tim khi dùng đồng thời.'}]},         'contraindications': {
         'tuyệt_đối': [
         'Glaucoma góc đóng (có thể gây tăng nhãn áp đe dọa thị giác)',
         'Tắc nghẽn đường tiểu (có thể làm nặng thêm bí tiểu)',
@@ -77,6 +77,16 @@ ANTICHOLINERGICS_DRUGS = {
         'Người già (tăng nguy cơ lú lẫn, bí tiểu)',
         'Bệnh mạch vành (tăng nhịp tim có thể làm nặng thêm)',
         'Bệnh phổi tắc nghẽn mạn tính (COPD) - có thể làm tăng độ nhớt đờm']},
+        'contraindications_detail': {
+        'tuyệt_đối': [
+        'Glaucoma góc đóng (có thể gây tăng nhãn áp đe dọa thị giác)',
+        'Tắc nghẽn đường tiểu (có thể làm nặng thêm bí tiểu)',
+        'Nhịp tim nhanh (có thể làm tăng nhịp tim hơn nữa)', 'Dị ứng atropine'],
+        'tương_đối': ['Sốt (có thể làm tăng nhiệt độ do giảm tiết mồ hôi)',
+        'Người già (tăng nguy cơ lú lẫn, bí tiểu)',
+        'Bệnh mạch vành (tăng nhịp tim có thể làm nặng thêm)',
+        'Bệnh phổi tắc nghẽn mạn tính (COPD) - có thể làm tăng độ nhớt đờm']},
+        'black_box_warnings': None,
         'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
         'Atropine là category C. Có thể đi qua nhau thai nhưng thường an toàn trong thai kỳ khi dùng với liều điều trị. Dùng được trong cấp cứu. Dùng liều thấp nhất hiệu quả.'
         , 'lactation': {'safety': 'Compatible', 'details':

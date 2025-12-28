@@ -88,7 +88,7 @@ CEPHALOSPORINS_DRUGS = {
         'Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)',
         'management':
         'Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng.'
-        }]}, 'contraindications': {'tuyệt_đối': [
+        }]},         'contraindications': {'tuyệt_đối': [
         'Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)'
         ,
         'Trẻ sơ sinh < 28 ngày tuổi đang dùng calci IV - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ kết tủa tử vong)'
@@ -98,7 +98,19 @@ CEPHALOSPORINS_DRUGS = {
         'Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát',
         'Rối loạn đông máu - tăng nguy cơ chảy máu khi dùng với warfarin',
         'Sỏi mật - tăng nguy cơ sỏi mật (ceftriaxone-calcium complex), đặc biệt ở trẻ em, dùng liều cao'
-        ]}, 'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
+        ]},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)'
+        ,
+        'Trẻ sơ sinh < 28 ngày tuổi đang dùng calci IV - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ kết tủa tử vong)'
+        ], 'tương_đối': [
+        'Dị ứng penicillin (phản ứng chéo ~5-10%) - thận trọng, có thể dùng nếu phản ứng nhẹ'
+        , 'Suy gan nặng kèm suy thận (CrCl <10) - cần giảm liều',
+        'Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát',
+        'Rối loạn đông máu - tăng nguy cơ chảy máu khi dùng với warfarin',
+        'Sỏi mật - tăng nguy cơ sỏi mật (ceftriaxone-calcium complex), đặc biệt ở trẻ em, dùng liều cao'
+        ]},
+        'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
         'Ceftriaxone là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh, nhưng không có nghiên cứu đầy đủ trên phụ nữ có thai. Cephalosporins nói chung được coi là an toàn trong thai kỳ và được sử dụng rộng rãi. Ceftriaxone có thể được dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong nhiễm khuẩn nặng như viêm màng não. Tuy nhiên, cần thận trọng với nguy cơ sỏi mật và tương tác với calci. Nên tránh dùng kéo dài nếu có thể.'
         , 'lactation': {'safety': 'Compatible', 'details':
         'Ceftriaxone bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Cephalosporins nói chung được coi là an toàn khi cho con bú.'
@@ -139,7 +151,10 @@ CEPHALOSPORINS_DRUGS = {
         'Lọc máu: Hemodialysis có thể loại bỏ ceftriaxone một phần (40% thải qua thận), nhưng không hiệu quả bằng các cephalosporin khác do thải trừ chủ yếu qua mật.'
         ], 'monitoring':
         'Theo dõi dấu hiệu thần kinh (co giật, ý thức), chức năng gan (bilirubin, ALT, AST), dấu hiệu sỏi mật (đau bụng), chức năng thận (creatinine, BUN, lượng nước tiểu), PT/INR (nếu dùng với warfarin), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có suy thận cấp hoặc sỏi mật.'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay ceftriaxone, điều trị co giật nếu có, điều trị sỏi mật nếu có, điều trị chảy máu nếu có (bổ sung vitamin K, FFP), điều trị suy thận cấp nếu có, điều trị dị ứng nếu có (epinephrine nếu sốc phản vệ), lọc máu có thể loại bỏ một phần nhưng không hiệu quả bằng các cephalosporin khác do thải trừ chủ yếu qua mật.'},
+        'administration_instructions': {'oral': {
         'with_food': 'Không áp dụng - chỉ có dạng IV và IM', 'timing':
         'Không áp dụng - chỉ có dạng IV và IM'}, 'iv': {'reconstitution':
         "Pha với NS (0.9% NaCl), D5W (5% Dextrose), hoặc Ringer's Lactate. Nồng độ pha: 10-40mg/ml. Pha 1g trong 10ml = 100mg/ml (quá đậm, không dùng). Pha 1g trong 50ml = 20mg/ml. Pha 2g trong 50ml = 40mg/ml. Lắc kỹ để hòa tan hoàn toàn. KHÔNG pha với calci IV."
@@ -938,6 +953,18 @@ CEPHALOSPORINS_DRUGS = {
                 "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng cefadroxil hoặc các cephalosporin khác",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với cephalosporin hoặc penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng penicillin - phản ứng chéo 5-10%, thận trọng",
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Cefadroxil phân loại B - an toàn trong thai kỳ. Cephalosporin là một trong những kháng sinh an toàn nhất trong thai kỳ.",
@@ -969,7 +996,11 @@ CEPHALOSPORINS_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận trong ít nhất 24 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp.",
@@ -1107,6 +1138,19 @@ CEPHALOSPORINS_DRUGS = {
                 "Đang dùng warfarin - tăng nguy cơ chảy máu"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)",
+                "Rối loạn đông máu nặng (tăng nguy cơ chảy máu do giảm prothrombin)"
+            ],
+            "tương_đối": [
+                "Dị ứng penicillin (phản ứng chéo ~5-10%) - thận trọng",
+                "Suy thận nặng (CrCl <10) - cần điều chỉnh liều",
+                "Suy gan nặng - tăng nguy cơ giảm prothrombin",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Đang dùng warfarin - tăng nguy cơ chảy máu"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Cefotetan phân loại B - an toàn trong thai kỳ. Cephalosporin là một trong những kháng sinh an toàn nhất trong thai kỳ.",
@@ -1143,7 +1187,11 @@ CEPHALOSPORINS_DRUGS = {
             ],
             "monitoring": "Theo dõi PT/INR, dấu hiệu chảy máu, dấu hiệu thần kinh (co giật), dấu hiệu sinh tồn trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Nếu có chảy máu do giảm prothrombin: bổ sung vitamin K (10mg IV/IM) hoặc truyền huyết tương tươi đông lạnh (FFP). Lọc máu có thể loại bỏ một phần."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "N/A - Chỉ có dạng IV và IM",
@@ -1287,6 +1335,17 @@ CEPHALOSPORINS_DRUGS = {
                 "Rối loạn đông máu - tăng nguy cơ chảy máu khi dùng với warfarin"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)"
+            ],
+            "tương_đối": [
+                "Dị ứng penicillin (phản ứng chéo ~5-10%) - thận trọng",
+                "Suy thận nặng (CrCl <10) - cần điều chỉnh liều",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Rối loạn đông máu - tăng nguy cơ chảy máu khi dùng với warfarin"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Cefoxitin phân loại B - an toàn trong thai kỳ. Cephalosporin là một trong những kháng sinh an toàn nhất trong thai kỳ.",
@@ -1320,7 +1379,11 @@ CEPHALOSPORINS_DRUGS = {
             ],
             "monitoring": "Theo dõi dấu hiệu thần kinh (co giật), chức năng thận (creatinine, BUN, lượng nước tiểu), dấu hiệu sinh tồn trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "N/A - Chỉ có dạng IV và IM",
@@ -1465,6 +1528,18 @@ CEPHALOSPORINS_DRUGS = {
                 "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)"
+            ],
+            "tương_đối": [
+                "Dị ứng penicillin (phản ứng chéo ~5-10%) - thận trọng",
+                "Suy gan nặng - tăng nguy cơ giảm prothrombin",
+                "Suy thận nặng (CrCl <10) kèm suy gan - cần giảm liều",
+                "Rối loạn đông máu - tăng nguy cơ chảy máu khi dùng với warfarin",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Cefoperazone phân loại B - an toàn trong thai kỳ. Cephalosporin là một trong những kháng sinh an toàn nhất trong thai kỳ.",
@@ -1501,7 +1576,11 @@ CEPHALOSPORINS_DRUGS = {
             ],
             "monitoring": "Theo dõi PT/INR, dấu hiệu chảy máu, dấu hiệu thần kinh (co giật), dấu hiệu sinh tồn trong ít nhất 24-48 giờ"
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay cefoperazone, điều trị chảy máu nếu có (bổ sung vitamin K, FFP), điều trị co giật nếu có, điều trị dị ứng nếu có (epinephrine nếu sốc phản vệ), lọc máu có thể loại bỏ một phần (25-30% thải qua thận)."
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "N/A - Chỉ có dạng IV và IM",
@@ -1634,6 +1713,17 @@ CEPHALOSPORINS_DRUGS = {
             "minor": []
         },
         "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)"
+            ],
+            "tương_đối": [
+                "Dị ứng penicillin (phản ứng chéo ~5-10%) - thận trọng",
+                "Suy thận nặng (CrCl <10) - cần điều chỉnh liều",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Rối loạn đông máu - tăng nguy cơ chảy máu khi dùng với warfarin"
+            ]
+        },
+        "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)"
             ],

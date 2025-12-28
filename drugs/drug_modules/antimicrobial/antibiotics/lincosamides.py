@@ -122,6 +122,19 @@ LINCOSAMIDE_ANTIBIOTICS = {
                 "Nhiễm trùng do vi khuẩn Gram-âm - không hiệu quả"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng clindamycin hoặc lincomycin",
+                "Viêm đại tràng giả mạc trước đây do C. difficile (tiền sử)"
+            ],
+            "tương_đối": [
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tác dụng phụ",
+                "Bệnh nhân đang dùng thuốc giãn cơ - tăng nguy cơ tê liệt kéo dài",
+                "Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu",
+                "Nhiễm trùng do vi khuẩn Gram-âm - không hiệu quả"
+            ]
+        },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Clindamycin là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh, nhưng không có nghiên cứu đầy đủ trên phụ nữ có thai. Clindamycin được sử dụng rộng rãi trong thai kỳ và có vẻ an toàn. Có thể được dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong nhiễm khuẩn kỵ khí. Tuy nhiên, cần thận trọng với nguy cơ nhiễm C. difficile, có thể nghiêm trọng trong thai kỳ.",
@@ -171,7 +184,7 @@ LINCOSAMIDE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu C. difficile (tiêu chảy, đau bụng, sốt), dấu hiệu thần kinh (co giật, ý thức), chức năng hô hấp (nếu dùng với thuốc giãn cơ), PT/INR (nếu dùng với warfarin), chức năng gan (ALT, AST), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có C. difficile hoặc suy hô hấp."
         },
-        "reversal_agents": None,
+        "reversal_agents": {"available": False, "agents": []},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhưng không ảnh hưởng đáng kể đến hấp thu.",

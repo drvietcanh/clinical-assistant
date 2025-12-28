@@ -1,0 +1,11 @@
+Add auto-link scores system: components, scripts, and auto-generated mapping
+
+- Add score_links.py component for linking to existing scores
+- Add score_links_from_content.py for articles/protocols
+- Add auto_link_scores_to_content.py script for auto-detection
+- Auto-generate article_protocol_score_mapping.py (301 links: 74 articles, 9 protocols)
+- Integrate score links into Articles and Protocols pages
+- Update protocol_routing.py to support score links
+- Add update_score_links.bat for quick updates
+- Add documentation for score links system
+

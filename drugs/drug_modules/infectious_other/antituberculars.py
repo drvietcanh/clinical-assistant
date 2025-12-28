@@ -166,6 +166,22 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based with extensive clinical experience",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity (can be severe, fatal) - CRITICAL", "Peripheral neuropathy"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hepatic function (ALT, AST) - CRITICAL (baseline and periodically, especially first 3 months)", "Symptoms of hepatitis (fatigue, anorexia, jaundice, dark urine) - CRITICAL", "Symptoms of peripheral neuropathy (numbness, tingling in hands/feet)", "Clinical response and adherence to TB treatment regimen"]
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Tuberculosis Treatment",
+            "CDC Guidelines - Treatment of Latent Tuberculosis Infection",
+            "ATS/IDSA/CDC Guidelines - Tuberculosis Treatment",
+            "FDA Black Box Warning - Isoniazid and Hepatotoxicity"
+        ]
     },
 
     "Rifampin": {
@@ -327,6 +343,23 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based with extensive clinical experience",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity (can be severe, especially when combined with other TB drugs) - CRITICAL", "Multiple drug interactions (strong CYP3A4 inducer)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hepatic function (ALT, AST, bilirubin) - CRITICAL (baseline and periodically, especially when combined with other hepatotoxic drugs)", "Symptoms of hepatitis (fatigue, jaundice, dark urine, itching) - CRITICAL", "CBC if intermittent dosing or bleeding symptoms", "Drug interactions - CRITICAL (oral contraceptives, warfarin, ARV, many CYP3A4 substrates)", "Adherence and clinical response to TB treatment"]
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Tuberculosis Treatment",
+            "CDC Guidelines - Tuberculosis Treatment",
+            "ATS/IDSA/CDC Guidelines - Tuberculosis Treatment",
+            "FDA Black Box Warning - Rifampin and Hepatotoxicity",
+            "FDA Black Box Warning - Rifampin and Drug Interactions (CYP3A4)"
+        ]
     },
 
     "Pyrazinamide": {
@@ -464,6 +497,22 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity (can be severe) - CRITICAL", "Hyperuricemia/gout attacks"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hepatic function (ALT, AST) - CRITICAL (baseline and periodically during PZA phase)", "Uric acid levels (especially in patients with gout history)", "Symptoms of hepatitis (fatigue, jaundice, anorexia)", "Joint pain, muscle pain (gout symptoms)", "Clinical response and adherence to TB treatment regimen"]
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Tuberculosis Treatment",
+            "CDC Guidelines - Tuberculosis Treatment",
+            "ATS/IDSA/CDC Guidelines - Tuberculosis Treatment",
+            "FDA Black Box Warning - Pyrazinamide and Hepatotoxicity"
+        ]
     },
 
     "Ethambutol": {
@@ -582,6 +631,22 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Optic neuritis (irreversible if not detected early) - CRITICAL", "Hepatotoxicity (when combined with other TB drugs)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Visual acuity and color vision (red-green) - CRITICAL (baseline and monthly)", "Renal function (creatinine, eGFR) - for dose adjustment", "Symptoms of vision changes (blurred vision, color vision loss)"]
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Tuberculosis Treatment",
+            "CDC Guidelines - Tuberculosis Treatment",
+            "ATS/IDSA/CDC Guidelines - Tuberculosis Treatment",
+            "FDA Black Box Warning - Ethambutol and Optic Neuritis"
+        ]
     },
 
     "Streptomycin": {
@@ -733,6 +798,23 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based, nhưng hiện ít dùng do độc tính.",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Ototoxicity (cochlear, vestibular damage - irreversible) - CRITICAL", "Nephrotoxicity (renal tubular damage) - CRITICAL"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Serum creatinine, eGFR - CRITICAL (baseline and periodically during treatment)", "Hearing (audiometry if possible) and symptoms (tinnitus, hearing loss, dizziness) - CRITICAL", "Signs of balance disorders (dizziness, unsteadiness, staggering gait)"]
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Drug-resistant Tuberculosis Treatment",
+            "CDC Guidelines - Tuberculosis Treatment",
+            "FDA Black Box Warning - Streptomycin and Ototoxicity",
+            "FDA Black Box Warning - Streptomycin and Nephrotoxicity",
+            "FDA Black Box Warning - Streptomycin and Pregnancy (Category D)"
+        ]
     },
 
     "Rifabutin": {
@@ -868,6 +950,22 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based, nhưng phụ thuộc phác đồ ARV.",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Uveitis (especially with high doses or when combined with clarithromycin, fluconazole) - CRITICAL", "Hematologic toxicity (leukopenia, thrombocytopenia)", "Hepatotoxicity"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hepatic function (ALT, AST, bilirubin) - periodically", "CBC (leukocytes, platelets)", "Eye symptoms (blurred vision, eye pain, photophobia) - CRITICAL (uveitis)", "ARV interactions (viral load, CD4) - when combined with PI/NNRTI"]
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Tuberculosis and HIV",
+            "DHHS Guidelines - Antiretroviral Agents in HIV",
+            "CDC Guidelines - Tuberculosis Treatment",
+            "FDA Black Box Warning - Rifabutin and Uveitis"
+        ]
     },
 
     "Rifapentine": {
@@ -993,6 +1091,22 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline and trial-based, nhưng áp dụng chọn lọc.",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity (can be severe, especially when combined with other hepatotoxic drugs) - CRITICAL", "Multiple drug interactions (strong CYP inducer)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hepatic function (ALT, AST, bilirubin) - CRITICAL (periodically during treatment)", "Symptoms of hepatitis and hypersensitivity reactions", "Drug interactions with narrow therapeutic index drugs (warfarin, antiarrhythmics, anticonvulsants) - CRITICAL"]
+        },
+        "guideline_tags": [
+            "CDC/ATS/IDSA Guidelines - Treatment of Latent Tuberculosis Infection",
+            "WHO Guidelines - Tuberculosis Treatment",
+            "FDA Black Box Warning - Rifapentine and Hepatotoxicity",
+            "FDA Black Box Warning - Rifapentine and Drug Interactions (CYP)"
+        ]
     },
 
     "Linezolid (lao MDR/XDR)": {

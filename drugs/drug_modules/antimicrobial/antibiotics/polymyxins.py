@@ -27,6 +27,16 @@ POLYMYXIN_ANTIBIOTICS = {
             "Suy thận nặng (CrCl <30) - thận trọng, cần điều chỉnh liều",
             "Suy thận cấp - thận trọng"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng colistin hoặc polymyxin",
+                "Myasthenia gravis - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng, cần điều chỉnh liều",
+                "Suy thận cấp - thận trọng"
+            ]
+        },
         "dosage": {
             "adult_iv_standard": "2.5-5 mg/kg/ngày IV (tính theo colistin base), chia 2-3 lần",
             "adult_iv_severe": "5-6 mg/kg/ngày IV, chia 2-3 lần",

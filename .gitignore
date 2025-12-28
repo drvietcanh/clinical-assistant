@@ -1,3 +1,7 @@
+# Reports
+reports/
+*.md.bak
+
 # Python
 __pycache__/
 *.py[cod]
@@ -7,77 +11,36 @@ __pycache__/
 env/
 venv/
 ENV/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+.venv
 
-# Virtual Environment
-venv/
-ENV/
-env/
-
-# IDEs
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
-.DS_Store
-
-# Streamlit
-.streamlit/secrets.toml
-.streamlit/config_local.toml
-
-# Google Analytics Credentials
-*service-account*.json
-ga-credentials.json
-google-analytics-*.json
-ordinal-tower-*.json
-*4a63b90a1b41.json
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-*.bak
-*.swp
 *~
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Data
-*.csv~
-*.xlsx~
+# Temporary files
+*.tmp
+*.log
 
-# Content drafts (not used by the app runtime)
-content/*
-# Allow published articles to be tracked
-!content/articles/
-!content/articles/**
-
-# Duplicate files
-*(1).csv
-*(2).csv
-*_Advanced.csv
-*_Extra.csv
-
-# Vietnamese capitalization check scripts (temporary/development tools)
-fix_all_vietnamese_caps.py
-ultra_deep_scan_vietnamese_caps.py
-comprehensive_scan_vietnamese_caps.py
-VIETNAMESE_CAPITALIZATION_FINAL_REPORT.md
+# Secrets
+.streamlit/secrets.toml
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!tsconfig.*.json
+!**/package.json
+!**/package-lock.json
+!**/tsconfig.json
+!**/tsconfig.*.json
+ordinal-tower-*.json
+*-*.json
+!drugs/*.json
+!data/*.json
+!config/*.json

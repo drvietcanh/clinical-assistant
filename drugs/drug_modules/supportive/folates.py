@@ -46,7 +46,12 @@ FOLATES_DRUGS = {
         'clearance': 'Thận (thải trừ qua nước tiểu), một phần dự trữ trong gan'
         }, 'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
-        'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
+        'black_box_warnings': None, 'contraindications_detail': {
+        'tuyệt_đối': ['Dị ứng folic acid',
+        'Ung thư đang điều trị bằng methotrexate (trừ khi dùng để điều trị độc tính methotrexate)'
+        ], 'tương_đối': [
+        'Ung thư (không điều trị) - folic acid có thể kích thích tế bào ung thư',
+        'Thiếu B12 chưa được điều trị - folic acid có thể che dấu thiếu B12']}, 'drug_interactions': {'major': [{'drug':
         'Methotrexate', 'mechanism':
         'Folic acid đối kháng với tác dụng của methotrexate (methotrexate ức chế dihydrofolate reductase, folic acid bổ sung folate).'
         , 'effect':
@@ -118,6 +123,22 @@ FOLATES_DRUGS = {
         , 'UpToDate - Folic acid deficiency',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
         ], 'last_updated': '2025-02-04', 'evidence_level':
-        'A - Dựa trên FDA drug labels, CDC/ACOG guidelines, và dữ liệu lâm sàng'}}}
+        'A - Dựa trên FDA drug labels, CDC/ACOG guidelines, và dữ liệu lâm sàng'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['May mask vitamin B12 deficiency (high doses >1mg/day)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Hemoglobin, MCV (for anemia treatment)', 'Vitamin B12 levels - CRITICAL (to avoid masking B12 deficiency)', 'Folate levels (if needed)', 'Clinical response']
+        },
+        'guideline_tags': [
+            'CDC Guidelines - Folic Acid for Prevention of Neural Tube Defects',
+            'ACOG Guidelines - Folic Acid Supplementation',
+            'WHO Guidelines - Folic Acid Supplementation',
+            'FDA Drug Information - Folic Acid'
+        ]}}
 
 __all__ = ['FOLATES_DRUGS']

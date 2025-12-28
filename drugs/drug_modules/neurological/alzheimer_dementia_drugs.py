@@ -80,7 +80,20 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy',
         'Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy',
         'Dùng với beta-blockers - tăng nguy cơ chậm nhịp tim',
-        'Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ']}, 'pregnancy_lactation': {
+        'Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng donepezil hoặc các thành phần khác',
+        'Bệnh tim nặng (block nhĩ thất độ II-III, rối loạn nhịp nặng)'], 'tương_đối': [
+        'Bệnh tim mạch (suy tim, block nhĩ thất độ I) - tăng nguy cơ chậm nhịp tim',
+        'Loét dạ dày - tăng acid dạ dày, có thể làm nặng loét',
+        'Bệnh phổi (COPD, hen) - tăng co thắt phế quản',
+        'Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy',
+        'Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy',
+        'Dùng với beta-blockers - tăng nguy cơ chậm nhịp tim',
+        'Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ']},
+        'renal_adjustment': {'normal': 'Không cần chỉnh liều', '30_60': 'Thận trọng, có thể cần giảm liều',
+        'under_30': 'Thận trọng, giảm liều (thải trừ qua thận)', 'dialysis': 'Thận trọng, giảm liều. Donepezil không được lọc sạch hiệu quả qua thẩm phân máu.',
+        'notes': 'Donepezil thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy, đặc biệt với half-life dài (70 giờ). Giảm liều và theo dõi chặt chẽ ở suy thận.'}, 'pregnancy_lactation': {
         'fda_category': 'C', 'pregnancy_details':
         'Chứng cứ về an toàn trong thai kỳ còn hạn chế. Donepezil thường không được dùng trong thai kỳ vì bệnh Alzheimer chủ yếu ở người già. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ.'
         , 'lactation': {'safety': 'Unknown', 'details':
