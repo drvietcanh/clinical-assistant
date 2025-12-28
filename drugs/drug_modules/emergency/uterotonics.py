@@ -179,7 +179,11 @@ UTEROTONICS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based",
         },
-    },
+             "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
     
     "Methylergonovine": {
         "group": "Emergency - Obstetric uterotonic (Ergot alkaloid)",

@@ -365,7 +365,7 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
             "Hoạt động thể lực nặng - tăng nguy cơ đứt gân"
         ]
     },
-    "reversal_agents": {"available": False, "agents": []},
+    "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có triệu chứng đứt gân, QT kéo dài, hoặc co giật."},
     "pregnancy_lactation": {
         "fda_category": "C",
         "pregnancy_details": "Levofloxacin là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể gây tổn thương sụn ở khớp ở thai nhi. Có báo cáo về tổn thương sụn ở trẻ em khi dùng trong thai kỳ. CHỐNG CHỈ ĐỊNH trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn khác. Nhiễm trùng nặng có thể gây nguy hiểm cho thai nhi, nhưng nên dùng kháng sinh khác nếu có thể.",
@@ -628,7 +628,7 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
                 "Hoạt động thể lực nặng - tăng nguy cơ đứt gân"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có triệu chứng đứt gân, QT kéo dài, hoặc co giật."},
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Moxifloxacin là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể gây tổn thương sụn ở khớp ở thai nhi. Có báo cáo về tổn thương sụn ở trẻ em khi dùng trong thai kỳ. CHỐNG CHỈ ĐỊNH trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn khác. Nhiễm trùng nặng có thể gây nguy hiểm cho thai nhi, nhưng nên dùng kháng sinh khác nếu có thể.",
@@ -666,7 +666,7 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, ECG (QT interval) liên tục, dấu hiệu thần kinh, dấu hiệu gân, đường huyết trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (loạn nhịp, co giật, đứt gân)."
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có triệu chứng đứt gân, QT kéo dài, hoặc co giật."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ (ít nhất 1-2 ly nước) để tránh kết tinh trong nước tiểu.",

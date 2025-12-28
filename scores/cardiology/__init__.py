@@ -11,11 +11,23 @@ from .score2_op import render as render_score2_op
 from .heart import render as render_heart_score
 from .timi import render as render_timi_risk
 from .grace import render as render_grace_score
+from .crusade import render as render_crusade
 from .framingham import render as render_framingham
+from .precise_dapt import render as render_precise_dapt
+from .dapt_score import render as render_dapt_score
 from .qtc import render as render_qtc
 from .nyha import render as render_nyha
 from .killip import render as render_killip
 from .duke import render as render_duke
+from .arc_hbr import render as render_arc_hbr
+from .pcp_hf import render as render_pcp_hf
+# Cardio-Oncology calculators
+from .cardio_oncology.hfa_icos_multiple_myeloma import render as render_hfa_icos_multiple_myeloma
+from .cardio_oncology.hfa_icos_cml import render as render_hfa_icos_cml
+from .cardio_oncology.hfa_icos_raf_mek import render as render_hfa_icos_raf_mek
+from .cardio_oncology.hfa_icos_vegf import render as render_hfa_icos_vegf
+from .cardio_oncology.hfa_icos_her2 import render as render_hfa_icos_her2
+from .cardio_oncology.hfa_icos_anthracycline import render as render_hfa_icos_anthracycline
 
 
 def render_cardiology_calculator(calculator_id):
@@ -39,8 +51,20 @@ def render_cardiology_calculator(calculator_id):
         "HEART Score": render_heart_score,
         "TIMI Risk": render_timi_risk,
         "GRACE Score": render_grace_score,
+        "CRUSADE Score": render_crusade,
         "Framingham": render_framingham,
         "Corrected QT": render_qtc,
+        "PRECISE-DAPT": render_precise_dapt,
+        "DAPT Score": render_dapt_score,
+        "ARC-HBR Criteria": render_arc_hbr,
+        "PCP-HF Risk Score": render_pcp_hf,
+        # Cardio-Oncology
+        "HFA-ICOS Multiple Myeloma": render_hfa_icos_multiple_myeloma,
+        "HFA-ICOS CML TKI": render_hfa_icos_cml,
+        "HFA-ICOS RAF/MEK": render_hfa_icos_raf_mek,
+        "HFA-ICOS VEGF": render_hfa_icos_vegf,
+        "HFA-ICOS HER2": render_hfa_icos_her2,
+        "HFA-ICOS Anthracycline": render_hfa_icos_anthracycline,
     }
     
     from utils.errors import safe_render_calculator, CalculatorNotFoundError
@@ -64,6 +88,7 @@ __all__ = [
     'render_heart_score',
     'render_timi_risk',
     'render_grace_score',
+    'render_crusade',
     'render_framingham',
     'render_qtc',
 ]

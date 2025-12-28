@@ -100,6 +100,10 @@ ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'FDA Safety Communication - Ondansetron QT prolongation (2012)'],
         'last_updated': '2024-12-19', 'evidence_level':
-        'High - FDA approved, multiple RCTs, safety warnings (QT prolongation)'}}}
+        'High - FDA approved, multiple RCTs, safety warnings (QT prolongation)'}         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+}}
 
 __all__ = ['ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS']

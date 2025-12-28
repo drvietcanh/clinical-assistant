@@ -165,7 +165,8 @@ ALPHA_GLUCOSIDASE_INHIBITORS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs (STOP-NIDDM)"
         }
-    },
+             "black_box_warnings": None,
+},
     
     "Miglitol": {
         "group": "Diabetes - Alpha-Glucosidase Inhibitor",

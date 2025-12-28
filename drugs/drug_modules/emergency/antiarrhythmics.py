@@ -142,6 +142,7 @@ ANTIARRHYTHMICS_DRUGS = {
         'Micromedex - Adenosine Drug Information'], 'last_updated':
         '2024-12-19', 'evidence_level':
         'A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-        }}}
+        }         "black_box_warnings": None,
+}}
 
 __all__ = ['ANTIARRHYTHMICS_DRUGS']

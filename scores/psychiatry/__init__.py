@@ -10,6 +10,7 @@ from .moca import render as render_moca
 from .cam import render as render_cam
 from .ciwa import render as render_ciwa
 from .cows import render as render_cows
+from .gmaws import render as render_gmaws
 
 
 def render_psychiatry_calculator(calculator_id):
@@ -29,6 +30,7 @@ def render_psychiatry_calculator(calculator_id):
         "CAM": render_cam,
         "CIWA-Ar": render_ciwa,
         "COWS": render_cows,
+        "GMAWS": render_gmaws,
     }
     
     calculator_func = calculators.get(calculator_id)

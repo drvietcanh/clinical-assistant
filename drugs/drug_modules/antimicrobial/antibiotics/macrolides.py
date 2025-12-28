@@ -145,7 +145,7 @@ MACROLIDE_ANTIBIOTICS = {
                 "Dùng với digoxin - tăng độc tính digoxin"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có QT kéo dài hoặc phản ứng dị ứng nghiêm trọng."},
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Azithromycin là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Được sử dụng trong thai kỳ để điều trị chlamydia và các nhiễm trùng khác.",
@@ -184,7 +184,7 @@ MACROLIDE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi ECG (QT interval), dấu hiệu sinh tồn, điện giải (K+, Mg2+) trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có QT kéo dài hoặc phản ứng dị ứng nghiêm trọng."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu. Có thể uống với thức ăn nếu kích ứng dạ dày nhưng giảm hấp thu.",
@@ -422,7 +422,7 @@ MACROLIDE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi ECG (QT interval), dấu hiệu sinh tồn trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có QT kéo dài hoặc phản ứng dị ứng nghiêm trọng."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
@@ -621,7 +621,7 @@ MACROLIDE_ANTIBIOTICS = {
                 "Dùng với các thuốc chuyển hóa qua CYP3A4 - tăng nồng độ"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có QT kéo dài hoặc phản ứng dị ứng nghiêm trọng."},
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Erythromycin là thuốc phân loại B. An toàn trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ.",
@@ -662,7 +662,7 @@ MACROLIDE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi ECG (QT interval), dấu hiệu sinh tồn, chức năng gan trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có QT kéo dài, độc tính gan, hoặc phản ứng dị ứng nghiêm trọng."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu. Dạng enteric-coated (eryc) có thể uống với thức ăn.",

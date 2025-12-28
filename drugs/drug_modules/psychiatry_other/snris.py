@@ -199,7 +199,11 @@ SNRI_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
         }
-    },
+             "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
 
     "Duloxetine": {
         "group": "Psychiatry - SNRI (Serotonin-Norepinephrine Reuptake Inhibitor)",
@@ -404,7 +408,11 @@ SNRI_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
         }
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Desvenlafaxine": {
         "group": "Psychiatry - SNRI (Serotonin-Norepinephrine Reuptake Inhibitor)",
@@ -534,7 +542,11 @@ SNRI_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved"
         }
-    }
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+}
 }
 
 __all__ = ['SNRI_DRUGS']

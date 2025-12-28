@@ -99,7 +99,8 @@ CORTICOSTEROID_(INHALED)S_DRUGS = {
         'Theo dõi chức năng thượng thận nếu có dấu hiệu ức chế HPA'],
         'monitoring':
         'Đường huyết, huyết áp, dấu hiệu ức chế HPA, dấu hiệu nhiễm trùng, nấm miệng'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay hoặc giảm liều đáng kể. Có thể cần bổ sung corticosteroid nếu có suy thượng thận.'},
         'administration_instructions': {'oral': {'with_food': 'N/A - dạng hít',
         'timing': 'N/A - dạng hít'}, 'iv': {'reconstitution':
         'N/A - chỉ có dạng hít', 'infusion_rate': 'N/A', 'compatibility': [],

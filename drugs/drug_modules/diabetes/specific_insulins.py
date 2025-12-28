@@ -73,7 +73,88 @@ SPECIFIC_INSULINS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved, extensive clinical use"
         }
-    },
+             "drug_interactions": {
+             "major": [],
+             "moderate": [],
+             "minor": [
+                 {
+                     "drug": "Beta-blocker: che dấu triệu chứng hạ đường huyết",
+                     "mechanism": "Tương tác lâm sàng"
+                 },
+                 {
+                     "drug": "Corticosteroid: tăng đường huyết",
+                     "mechanism": "Tương tác lâm sàng"
+                 },
+                 {
+                     "drug": "Rượu: tăng nguy cơ hạ đường huyết",
+                     "mechanism": "Tương tác lâm sàng"
+                 }
+             ]
+         },
+         "pregnancy_lactation": {
+             "fda_category": "B",
+             "pregnancy_details": "Insulin là lựa chọn an toàn trong thai kỳ. Cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ.",
+             "lactation": {
+                 "safety": "Compatible",
+                 "details": "Insulin không bài tiết vào sữa mẹ với lượng đáng kể.",
+                 "recommendation": "An toàn khi cho con bú."
+             }
+         },
+         "hepatic_adjustment": {
+             "mild": "Không đổi",
+             "moderate": "Không đổi",
+             "severe": "Không đổi",
+             "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
+         },
+         "overdose_management": {
+             "symptoms": [
+                 "Hạ đường huyết nặng",
+                 "Đổ mồ hôi, run, lo âu",
+                 "Lú lẫn, co giật",
+                 "Hôn mê"
+             ],
+             "antidote": "Glucagon 1mg IM/SC hoặc Dextrose 50% IV",
+             "treatment": [
+                 "Nếu tỉnh: uống glucose 15-20g",
+                 "Nếu không tỉnh: Glucagon 1mg IM/SC hoặc Dextrose 50% 50ml IV",
+                 "Theo dõi đường huyết mỗi 15-30 phút",
+                 "Có thể cần truyền Dextrose 10% liên tục"
+             ],
+             "monitoring": "Theo dõi đường huyết liên tục, dấu hiệu sinh tồn"
+         },
+         "reversal_agents": {
+             "available": True,
+             "agents": [
+                 {
+                     "agent": "Glucagon",
+                     "dose": "1mg IM/SC",
+                     "indication": "Hạ đường huyết do insulin"
+                 },
+                 {
+                     "agent": "Dextrose 50%",
+                     "dose": "50ml IV",
+                     "indication": "Hạ đường huyết nặng"
+                 }
+             ]
+         },
+         "administration_instructions": {
+             "iv": {
+                 "reconstitution": "Dùng insulin regular, không cần pha loãng",
+                 "infusion_rate": "Theo chỉ định (ví dụ: 0.1 đơn vị/kg/giờ trong DKA)",
+                 "compatibility": [
+                     "Normal saline",
+                     "Dextrose 5%"
+                 ],
+                 "incompatibility": [],
+                 "notes": "Chỉ dùng trong bệnh viện với theo dõi chặt chẽ. Theo dõi đường huyết mỗi 1-2 giờ."
+             },
+             "sc": {
+                 "technique": "Tiêm dưới da, luân phiên vị trí tiêm",
+                 "timing": "30-60 phút trước bữa ăn (regular), ngay trước bữa ăn (rapid-acting), hoặc theo chỉ định (basal)",
+                 "notes": "Tránh tiêm vào vùng có lipodystrophy. Luân phiên vị trí tiêm."
+             }
+         },
+},
 
     "Insulin Aspart": {
         "group": "Diabetes - Rapid-Acting Insulin",
@@ -140,7 +221,84 @@ SPECIFIC_INSULINS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved"
         }
-    },
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Beta-blocker: che dấu triệu chứng hạ đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Corticosteroid: tăng đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "B",
+              "pregnancy_details": "Insulin là lựa chọn an toàn trong thai kỳ. Cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ.",
+              "lactation": {
+                  "safety": "Compatible",
+                  "details": "Insulin không bài tiết vào sữa mẹ với lượng đáng kể.",
+                  "recommendation": "An toàn khi cho con bú."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Không đổi",
+              "severe": "Không đổi",
+              "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Hạ đường huyết nặng",
+                  "Đổ mồ hôi, run, lo âu",
+                  "Lú lẫn, co giật",
+                  "Hôn mê"
+              ],
+              "antidote": "Glucagon 1mg IM/SC hoặc Dextrose 50% IV",
+              "treatment": [
+                  "Nếu tỉnh: uống glucose 15-20g",
+                  "Nếu không tỉnh: Glucagon 1mg IM/SC hoặc Dextrose 50% 50ml IV",
+                  "Theo dõi đường huyết mỗi 15-30 phút",
+                  "Có thể cần truyền Dextrose 10% liên tục"
+              ],
+              "monitoring": "Theo dõi đường huyết liên tục, dấu hiệu sinh tồn"
+          },
+          "reversal_agents": {
+              "available": True,
+              "agents": [
+                  {
+                      "agent": "Glucagon",
+                      "dose": "1mg IM/SC",
+                      "indication": "Hạ đường huyết do insulin"
+                  },
+                  {
+                      "agent": "Dextrose 50%",
+                      "dose": "50ml IV",
+                      "indication": "Hạ đường huyết nặng"
+                  }
+              ]
+          },
+          "administration_instructions": {
+              "iv": {
+                  "reconstitution": "Dùng insulin regular, không cần pha loãng",
+                  "infusion_rate": "Theo chỉ định (ví dụ: 0.1 đơn vị/kg/giờ trong DKA)",
+                  "compatibility": [
+                      "Normal saline",
+                      "Dextrose 5%"
+                  ],
+                  "incompatibility": [],
+                  "notes": "Chỉ dùng trong bệnh viện với theo dõi chặt chẽ. Theo dõi đường huyết mỗi 1-2 giờ."
+              },
+              "sc": {
+                  "technique": "Tiêm dưới da, luân phiên vị trí tiêm",
+                  "timing": "30-60 phút trước bữa ăn (regular), ngay trước bữa ăn (rapid-acting), hoặc theo chỉ định (basal)",
+                  "notes": "Tránh tiêm vào vùng có lipodystrophy. Luân phiên vị trí tiêm."
+              }
+          },
+},
 
     "Insulin Glulisine": {
         "group": "Diabetes - Rapid-Acting Insulin",
@@ -205,7 +363,84 @@ SPECIFIC_INSULINS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved"
         }
-    },
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Beta-blocker: che dấu triệu chứng hạ đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Corticosteroid: tăng đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "B",
+              "pregnancy_details": "Insulin là lựa chọn an toàn trong thai kỳ. Cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ.",
+              "lactation": {
+                  "safety": "Compatible",
+                  "details": "Insulin không bài tiết vào sữa mẹ với lượng đáng kể.",
+                  "recommendation": "An toàn khi cho con bú."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Không đổi",
+              "severe": "Không đổi",
+              "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Hạ đường huyết nặng",
+                  "Đổ mồ hôi, run, lo âu",
+                  "Lú lẫn, co giật",
+                  "Hôn mê"
+              ],
+              "antidote": "Glucagon 1mg IM/SC hoặc Dextrose 50% IV",
+              "treatment": [
+                  "Nếu tỉnh: uống glucose 15-20g",
+                  "Nếu không tỉnh: Glucagon 1mg IM/SC hoặc Dextrose 50% 50ml IV",
+                  "Theo dõi đường huyết mỗi 15-30 phút",
+                  "Có thể cần truyền Dextrose 10% liên tục"
+              ],
+              "monitoring": "Theo dõi đường huyết liên tục, dấu hiệu sinh tồn"
+          },
+          "reversal_agents": {
+              "available": True,
+              "agents": [
+                  {
+                      "agent": "Glucagon",
+                      "dose": "1mg IM/SC",
+                      "indication": "Hạ đường huyết do insulin"
+                  },
+                  {
+                      "agent": "Dextrose 50%",
+                      "dose": "50ml IV",
+                      "indication": "Hạ đường huyết nặng"
+                  }
+              ]
+          },
+          "administration_instructions": {
+              "iv": {
+                  "reconstitution": "Dùng insulin regular, không cần pha loãng",
+                  "infusion_rate": "Theo chỉ định (ví dụ: 0.1 đơn vị/kg/giờ trong DKA)",
+                  "compatibility": [
+                      "Normal saline",
+                      "Dextrose 5%"
+                  ],
+                  "incompatibility": [],
+                  "notes": "Chỉ dùng trong bệnh viện với theo dõi chặt chẽ. Theo dõi đường huyết mỗi 1-2 giờ."
+              },
+              "sc": {
+                  "technique": "Tiêm dưới da, luân phiên vị trí tiêm",
+                  "timing": "30-60 phút trước bữa ăn (regular), ngay trước bữa ăn (rapid-acting), hoặc theo chỉ định (basal)",
+                  "notes": "Tránh tiêm vào vùng có lipodystrophy. Luân phiên vị trí tiêm."
+              }
+          },
+},
 
     "Insulin Regular": {
         "group": "Diabetes - Short-Acting Insulin",
@@ -275,7 +510,84 @@ SPECIFIC_INSULINS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved, extensive clinical use"
         }
-    },
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Beta-blocker: che dấu triệu chứng hạ đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Corticosteroid: tăng đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "B",
+              "pregnancy_details": "Insulin là lựa chọn an toàn trong thai kỳ. Cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ.",
+              "lactation": {
+                  "safety": "Compatible",
+                  "details": "Insulin không bài tiết vào sữa mẹ với lượng đáng kể.",
+                  "recommendation": "An toàn khi cho con bú."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Không đổi",
+              "severe": "Không đổi",
+              "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Hạ đường huyết nặng",
+                  "Đổ mồ hôi, run, lo âu",
+                  "Lú lẫn, co giật",
+                  "Hôn mê"
+              ],
+              "antidote": "Glucagon 1mg IM/SC hoặc Dextrose 50% IV",
+              "treatment": [
+                  "Nếu tỉnh: uống glucose 15-20g",
+                  "Nếu không tỉnh: Glucagon 1mg IM/SC hoặc Dextrose 50% 50ml IV",
+                  "Theo dõi đường huyết mỗi 15-30 phút",
+                  "Có thể cần truyền Dextrose 10% liên tục"
+              ],
+              "monitoring": "Theo dõi đường huyết liên tục, dấu hiệu sinh tồn"
+          },
+          "reversal_agents": {
+              "available": True,
+              "agents": [
+                  {
+                      "agent": "Glucagon",
+                      "dose": "1mg IM/SC",
+                      "indication": "Hạ đường huyết do insulin"
+                  },
+                  {
+                      "agent": "Dextrose 50%",
+                      "dose": "50ml IV",
+                      "indication": "Hạ đường huyết nặng"
+                  }
+              ]
+          },
+          "administration_instructions": {
+              "iv": {
+                  "reconstitution": "Dùng insulin regular, không cần pha loãng",
+                  "infusion_rate": "Theo chỉ định (ví dụ: 0.1 đơn vị/kg/giờ trong DKA)",
+                  "compatibility": [
+                      "Normal saline",
+                      "Dextrose 5%"
+                  ],
+                  "incompatibility": [],
+                  "notes": "Chỉ dùng trong bệnh viện với theo dõi chặt chẽ. Theo dõi đường huyết mỗi 1-2 giờ."
+              },
+              "sc": {
+                  "technique": "Tiêm dưới da, luân phiên vị trí tiêm",
+                  "timing": "30-60 phút trước bữa ăn (regular), ngay trước bữa ăn (rapid-acting), hoặc theo chỉ định (basal)",
+                  "notes": "Tránh tiêm vào vùng có lipodystrophy. Luân phiên vị trí tiêm."
+              }
+          },
+},
 
     "Insulin NPH": {
         "group": "Diabetes - Intermediate-Acting Insulin",
@@ -343,7 +655,74 @@ SPECIFIC_INSULINS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved, extensive clinical use"
         }
-    },
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Beta-blocker: che dấu triệu chứng hạ đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Corticosteroid: tăng đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "B",
+              "pregnancy_details": "Insulin là lựa chọn an toàn trong thai kỳ. Cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ.",
+              "lactation": {
+                  "safety": "Compatible",
+                  "details": "Insulin không bài tiết vào sữa mẹ với lượng đáng kể.",
+                  "recommendation": "An toàn khi cho con bú."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Không đổi",
+              "severe": "Không đổi",
+              "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Hạ đường huyết nặng",
+                  "Đổ mồ hôi, run, lo âu",
+                  "Lú lẫn, co giật",
+                  "Hôn mê"
+              ],
+              "antidote": "Glucagon 1mg IM/SC hoặc Dextrose 50% IV",
+              "treatment": [
+                  "Nếu tỉnh: uống glucose 15-20g",
+                  "Nếu không tỉnh: Glucagon 1mg IM/SC hoặc Dextrose 50% 50ml IV",
+                  "Theo dõi đường huyết mỗi 15-30 phút",
+                  "Có thể cần truyền Dextrose 10% liên tục"
+              ],
+              "monitoring": "Theo dõi đường huyết liên tục, dấu hiệu sinh tồn"
+          },
+          "reversal_agents": {
+              "available": True,
+              "agents": [
+                  {
+                      "agent": "Glucagon",
+                      "dose": "1mg IM/SC",
+                      "indication": "Hạ đường huyết do insulin"
+                  },
+                  {
+                      "agent": "Dextrose 50%",
+                      "dose": "50ml IV",
+                      "indication": "Hạ đường huyết nặng"
+                  }
+              ]
+          },
+          "administration_instructions": {
+              "sc": {
+                  "technique": "Tiêm dưới da, luân phiên vị trí tiêm",
+                  "timing": "30-60 phút trước bữa ăn (regular), ngay trước bữa ăn (rapid-acting), hoặc theo chỉ định (basal)",
+                  "notes": "Tránh tiêm vào vùng có lipodystrophy. Luân phiên vị trí tiêm."
+              }
+          },
+},
 
     "Insulin Glargine": {
         "group": "Diabetes - Long-Acting Insulin",
@@ -414,7 +793,74 @@ SPECIFIC_INSULINS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved, extensive clinical use"
         }
-    },
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Beta-blocker: che dấu triệu chứng hạ đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Corticosteroid: tăng đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "B",
+              "pregnancy_details": "Insulin là lựa chọn an toàn trong thai kỳ. Cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ.",
+              "lactation": {
+                  "safety": "Compatible",
+                  "details": "Insulin không bài tiết vào sữa mẹ với lượng đáng kể.",
+                  "recommendation": "An toàn khi cho con bú."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Không đổi",
+              "severe": "Không đổi",
+              "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Hạ đường huyết nặng",
+                  "Đổ mồ hôi, run, lo âu",
+                  "Lú lẫn, co giật",
+                  "Hôn mê"
+              ],
+              "antidote": "Glucagon 1mg IM/SC hoặc Dextrose 50% IV",
+              "treatment": [
+                  "Nếu tỉnh: uống glucose 15-20g",
+                  "Nếu không tỉnh: Glucagon 1mg IM/SC hoặc Dextrose 50% 50ml IV",
+                  "Theo dõi đường huyết mỗi 15-30 phút",
+                  "Có thể cần truyền Dextrose 10% liên tục"
+              ],
+              "monitoring": "Theo dõi đường huyết liên tục, dấu hiệu sinh tồn"
+          },
+          "reversal_agents": {
+              "available": True,
+              "agents": [
+                  {
+                      "agent": "Glucagon",
+                      "dose": "1mg IM/SC",
+                      "indication": "Hạ đường huyết do insulin"
+                  },
+                  {
+                      "agent": "Dextrose 50%",
+                      "dose": "50ml IV",
+                      "indication": "Hạ đường huyết nặng"
+                  }
+              ]
+          },
+          "administration_instructions": {
+              "sc": {
+                  "technique": "Tiêm dưới da, luân phiên vị trí tiêm",
+                  "timing": "30-60 phút trước bữa ăn (regular), ngay trước bữa ăn (rapid-acting), hoặc theo chỉ định (basal)",
+                  "notes": "Tránh tiêm vào vùng có lipodystrophy. Luân phiên vị trí tiêm."
+              }
+          },
+},
 
     "Insulin Detemir": {
         "group": "Diabetes - Long-Acting Insulin",
@@ -482,7 +928,74 @@ SPECIFIC_INSULINS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved"
         }
-    },
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Beta-blocker: che dấu triệu chứng hạ đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Corticosteroid: tăng đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "B",
+              "pregnancy_details": "Insulin là lựa chọn an toàn trong thai kỳ. Cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ.",
+              "lactation": {
+                  "safety": "Compatible",
+                  "details": "Insulin không bài tiết vào sữa mẹ với lượng đáng kể.",
+                  "recommendation": "An toàn khi cho con bú."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Không đổi",
+              "severe": "Không đổi",
+              "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Hạ đường huyết nặng",
+                  "Đổ mồ hôi, run, lo âu",
+                  "Lú lẫn, co giật",
+                  "Hôn mê"
+              ],
+              "antidote": "Glucagon 1mg IM/SC hoặc Dextrose 50% IV",
+              "treatment": [
+                  "Nếu tỉnh: uống glucose 15-20g",
+                  "Nếu không tỉnh: Glucagon 1mg IM/SC hoặc Dextrose 50% 50ml IV",
+                  "Theo dõi đường huyết mỗi 15-30 phút",
+                  "Có thể cần truyền Dextrose 10% liên tục"
+              ],
+              "monitoring": "Theo dõi đường huyết liên tục, dấu hiệu sinh tồn"
+          },
+          "reversal_agents": {
+              "available": True,
+              "agents": [
+                  {
+                      "agent": "Glucagon",
+                      "dose": "1mg IM/SC",
+                      "indication": "Hạ đường huyết do insulin"
+                  },
+                  {
+                      "agent": "Dextrose 50%",
+                      "dose": "50ml IV",
+                      "indication": "Hạ đường huyết nặng"
+                  }
+              ]
+          },
+          "administration_instructions": {
+              "sc": {
+                  "technique": "Tiêm dưới da, luân phiên vị trí tiêm",
+                  "timing": "30-60 phút trước bữa ăn (regular), ngay trước bữa ăn (rapid-acting), hoặc theo chỉ định (basal)",
+                  "notes": "Tránh tiêm vào vùng có lipodystrophy. Luân phiên vị trí tiêm."
+              }
+          },
+},
 
     "Insulin Degludec": {
         "group": "Diabetes - Ultra-Long-Acting Insulin",
@@ -550,7 +1063,74 @@ SPECIFIC_INSULINS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved"
         }
-    }
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Beta-blocker: che dấu triệu chứng hạ đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Corticosteroid: tăng đường huyết",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "B",
+              "pregnancy_details": "Insulin là lựa chọn an toàn trong thai kỳ. Cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ.",
+              "lactation": {
+                  "safety": "Compatible",
+                  "details": "Insulin không bài tiết vào sữa mẹ với lượng đáng kể.",
+                  "recommendation": "An toàn khi cho con bú."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Không đổi",
+              "severe": "Không đổi",
+              "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Hạ đường huyết nặng",
+                  "Đổ mồ hôi, run, lo âu",
+                  "Lú lẫn, co giật",
+                  "Hôn mê"
+              ],
+              "antidote": "Glucagon 1mg IM/SC hoặc Dextrose 50% IV",
+              "treatment": [
+                  "Nếu tỉnh: uống glucose 15-20g",
+                  "Nếu không tỉnh: Glucagon 1mg IM/SC hoặc Dextrose 50% 50ml IV",
+                  "Theo dõi đường huyết mỗi 15-30 phút",
+                  "Có thể cần truyền Dextrose 10% liên tục"
+              ],
+              "monitoring": "Theo dõi đường huyết liên tục, dấu hiệu sinh tồn"
+          },
+          "reversal_agents": {
+              "available": True,
+              "agents": [
+                  {
+                      "agent": "Glucagon",
+                      "dose": "1mg IM/SC",
+                      "indication": "Hạ đường huyết do insulin"
+                  },
+                  {
+                      "agent": "Dextrose 50%",
+                      "dose": "50ml IV",
+                      "indication": "Hạ đường huyết nặng"
+                  }
+              ]
+          },
+          "administration_instructions": {
+              "sc": {
+                  "technique": "Tiêm dưới da, luân phiên vị trí tiêm",
+                  "timing": "30-60 phút trước bữa ăn (regular), ngay trước bữa ăn (rapid-acting), hoặc theo chỉ định (basal)",
+                  "notes": "Tránh tiêm vào vùng có lipodystrophy. Luân phiên vị trí tiêm."
+              }
+          },
+}
 }
 
 __all__ = ['SPECIFIC_INSULINS_DRUGS']

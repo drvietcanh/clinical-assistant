@@ -12,12 +12,20 @@ SCORES_BY_SPECIALTY = {
         "SOFA-2 (2025)": {"name": "SOFA-2 (2025) ⭐", "desc": "SOFA cập nhật 2025 - HFNC, ECMO, RRT, vasopressor mới", "status": "✅"},
         "APACHE II": {"name": "APACHE II", "desc": "Dự đoán tử vong ICU", "status": "✅"},
         "APACHE III": {"name": "APACHE III - Acute Physiology and Chronic Health Evaluation III", "desc": "Dự đoán tử vong ICU - Phiên bản cập nhật (chính xác hơn APACHE II)", "status": "✅"},
+        "APACHE IV": {"name": "APACHE IV ⭐", "desc": "Dự đoán tử vong ICU - Phiên bản mới nhất 2006 (chính xác nhất)", "status": "✅"},
         "SAPS II": {"name": "SAPS II - Simplified Acute Physiology Score", "desc": "Độ nặng bệnh nhân ICU", "status": "✅"},
         "SAPS III": {"name": "SAPS III - Simplified Acute Physiology Score III", "desc": "Dự đoán tử vong ICU - Phiên bản cập nhật (chính xác hơn SAPS II)", "status": "✅"},
         "MODS": {"name": "MODS - Multiple Organ Dysfunction Score", "desc": "Rối loạn đa cơ quan", "status": "✅"},
         "LODS": {"name": "LODS - Logistic Organ Dysfunction Score", "desc": "Đánh giá suy cơ quan trong ICU", "status": "✅"},
         "HOSPITAL Score": {"name": "HOSPITAL Score", "desc": "Dự đoán tái nhập viện 30 ngày", "status": "✅"},
         "LACE Index": {"name": "LACE Index", "desc": "Dự đoán tái nhập viện hoặc tử vong 30 ngày", "status": "✅"},
+        "Alvarado Score": {"name": "Alvarado Score ⭐", "desc": "Dự đoán viêm ruột thừa cấp (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "ROX Index": {"name": "ROX Index ⭐", "desc": "Dự đoán thất bại HFNC (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "Lactate Clearance": {"name": "Lactate Clearance ⭐", "desc": "Đánh giá hiệu quả hồi sức sốc (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "Charlson Index": {"name": "Charlson Comorbidity Index ⭐", "desc": "Dự đoán tử vong 10 năm dựa trên bệnh lý mạn tính (DÙNG RỘNG RÃI)", "status": "✅"},
+        "CRB-65 Score": {"name": "CRB-65 Score ⭐", "desc": "Phân tầng mức độ nặng viêm phổi cộng đồng - Quyết định nội trú/ngoại trú (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "SCORTEN Score": {"name": "SCORTEN Score ⭐", "desc": "Ước tính nguy cơ tử vong ở bệnh nhân SJS/TEN", "status": "✅"},
+        "RDOS": {"name": "RDOS ⭐", "desc": "Định lượng suy hô hấp ở bệnh nhân không thể tự báo cáo triệu chứng", "status": "✅"},
     },
     
     "❤️ Tim mạch (Cardiology)": {
@@ -32,8 +40,19 @@ SCORES_BY_SPECIALTY = {
         "HEART Score": {"name": "HEART Score", "desc": "Đau ngực cấp - nguy cơ ACS", "status": "✅"},
         "TIMI Risk": {"name": "TIMI Risk Score", "desc": "Nguy cơ NSTEMI/STEMI", "status": "✅"},
         "GRACE Score": {"name": "GRACE Score", "desc": "Tiên lượng ACS", "status": "✅"},
+        "CRUSADE Score": {"name": "CRUSADE Bleeding Risk Score ⭐", "desc": "Nguy cơ chảy máu trong ACS (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "PRECISE-DAPT": {"name": "PRECISE-DAPT Score ⭐", "desc": "Nguy cơ chảy máu khi dùng DAPT (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "DAPT Score": {"name": "DAPT Score ⭐", "desc": "Thời gian dùng DAPT sau PCI (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "ARC-HBR Criteria": {"name": "ARC-HBR Criteria ⭐⭐", "desc": "Xác định nguy cơ chảy máu cao ở bệnh nhân PCI (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "PCP-HF Risk Score": {"name": "PCP-HF Risk Score ⭐", "desc": "Ước tính nguy cơ 10 năm của suy tim mới khởi phát ở người lớn không có triệu chứng", "status": "✅"},
         "Framingham": {"name": "Framingham Risk Score", "desc": "Nguy cơ tim mạch 10 năm (Historical)", "status": "✅"},
         "Corrected QT": {"name": "QTc - Corrected QT Interval", "desc": "QT điều chỉnh theo nhịp tim", "status": "✅"},
+        "HFA-ICOS Multiple Myeloma": {"name": "HFA-ICOS Multiple Myeloma Risk ⭐⭐⭐", "desc": "Đánh giá nguy cơ tim mạch trước điều trị đa u tủy xương (MỚI 2024-2025)", "status": "✅"},
+        "HFA-ICOS CML TKI": {"name": "HFA-ICOS CML TKI Risk ⭐⭐⭐", "desc": "Đánh giá nguy cơ tim mạch trước điều trị CML bằng TKI (MỚI 2024-2025)", "status": "✅"},
+        "HFA-ICOS RAF/MEK": {"name": "HFA-ICOS RAF/MEK Inhibitors Risk ⭐⭐⭐", "desc": "Đánh giá nguy cơ tim mạch trước điều trị RAF/MEK inhibitors (MỚI 2024-2025)", "status": "✅"},
+        "HFA-ICOS VEGF": {"name": "HFA-ICOS VEGF Inhibitors Risk ⭐⭐⭐", "desc": "Đánh giá nguy cơ tim mạch trước điều trị VEGF inhibitors (MỚI 2024-2025)", "status": "✅"},
+        "HFA-ICOS HER2": {"name": "HFA-ICOS HER2-Targeted Therapies Risk ⭐⭐⭐", "desc": "Đánh giá nguy cơ tim mạch trước điều trị HER2-targeted therapies (MỚI 2024-2025)", "status": "✅"},
+        "HFA-ICOS Anthracycline": {"name": "HFA-ICOS Anthracycline Risk ⭐⭐⭐", "desc": "Đánh giá nguy cơ tim mạch trước điều trị anthracycline (MỚI 2024-2025)", "status": "✅"},
     },
     
     "🫁 Hô hấp (Respiratory)": {
@@ -45,6 +64,8 @@ SCORES_BY_SPECIALTY = {
         "SMART-COP": {"name": "SMART-COP", "desc": "Cần hỗ trợ hô hấp trong viêm phổi", "status": "✅"},
         "BODE Index": {"name": "BODE Index", "desc": "Tiên lượng COPD", "status": "✅"},
         "ARDS Berlin": {"name": "ARDS Berlin Definition", "desc": "Tiêu chuẩn chẩn đoán ARDS (Berlin 2012)", "status": "✅"},
+        "mMRC": {"name": "mMRC Dyspnea Scale ⭐", "desc": "Đánh giá mức độ khó thở ở COPD (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "ACT": {"name": "Asthma Control Test (ACT) ⭐", "desc": "Đánh giá mức độ kiểm soát hen phế quản (DÙNG HÀNG NGÀY)", "status": "✅"},
     },
     
     "🧠 Thần kinh (Neurology)": {
@@ -57,6 +78,13 @@ SCORES_BY_SPECIALTY = {
         "ABCD2": {"name": "ABCD2 Score", "desc": "Phân tầng nguy cơ đột quỵ sau TIA", "status": "✅"},
         "Barthel Index": {"name": "Barthel Index", "desc": "Đánh giá chức năng hoạt động hàng ngày (ADL)", "status": "✅"},
         "FOUR Score": {"name": "FOUR Score - Full Outline of UnResponsiveness", "desc": "Đánh giá mức độ ý thức - Thay thế GCS cho bệnh nhân thở máy", "status": "✅"},
+        "Canadian CT Head": {"name": "Canadian CT Head Rule ⭐", "desc": "Quyết định chụp CT đầu ở chấn thương đầu nhẹ (người lớn)", "status": "✅"},
+        "FAST-ED": {"name": "FAST-ED Score ⭐⭐", "desc": "Xác định đột quỵ tắc mạch lớn (LVOS) trong môi trường tiền viện (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "ICANS Consensus Grading": {"name": "ICANS Consensus Grading ⭐⭐⭐", "desc": "Phân độ mức độ nặng của độc tính thần kinh gây ra bởi liệu pháp tế bào hiệu ứng miễn dịch như CAR T-cell (MỚI, QUAN TRỌNG)", "status": "✅"},
+        "Sudbury Vertigo Risk Score": {"name": "Sudbury Vertigo Risk Score ⭐", "desc": "Xác định bệnh nhân chóng mặt có nguy cơ tăng cao chẩn đoán trung ương nghiêm trọng", "status": "✅"},
+        "MGFA Clinical Classification": {"name": "MGFA Clinical Classification ⭐", "desc": "Phân loại mức độ nặng của bệnh nhược cơ", "status": "✅"},
+        "MG-ADL": {"name": "MG-ADL ⭐", "desc": "Đánh giá mức độ nặng bệnh ở bệnh nhân nhược cơ (MG)", "status": "✅"},
+        "ICE Score": {"name": "ICE Score ⭐", "desc": "Đánh giá độc tính thần kinh ở bệnh nhân điều trị CAR T-cell (Immune Effector Cell Encephalopathy)", "status": "✅"},
     },
     
     "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)": {
@@ -68,6 +96,10 @@ SCORES_BY_SPECIALTY = {
         "Rockall Score": {"name": "Rockall Score", "desc": "UGIB - tiên lượng tử vong", "status": "✅"},
         "MELD-Na": {"name": "MELD-Na", "desc": "MELD điều chỉnh theo Na", "status": "✅"},
         "Ranson": {"name": "Ranson Criteria", "desc": "Tiên lượng viêm tụy cấp", "status": "✅"},
+        "FIB-4": {"name": "FIB-4 Index ⭐", "desc": "Đánh giá xơ hóa gan không xâm lấn (HCV, HBV, NAFLD)", "status": "✅"},
+        "Acute Pancreatitis Prediction": {"name": "Acute Pancreatitis Prediction Model ⭐", "desc": "Ước tính khả năng viêm tụy cấp ở bệnh nhân có lipase tăng cao trước khi xác nhận bằng hình ảnh", "status": "✅"},
+        "SAFE Score": {"name": "SAFE Score ⭐", "desc": "Ước tính nguy cơ xơ hóa gan trung bình đến tiến triển (F2+) ở bệnh nhân MASLD", "status": "✅"},
+        "EREFS": {"name": "EREFS ⭐", "desc": "Đánh giá mức độ nặng của các phát hiện nội soi ở bệnh nhân viêm thực quản tăng bạch cầu ái toan (EoE)", "status": "✅"},
     },
     
     "🩺 Huyết học & Đông máu (Hematology)": {
@@ -106,6 +138,8 @@ SCORES_BY_SPECIALTY = {
         "PRISM III": {"name": "PRISM III - Pediatric Risk of Mortality", "desc": "Nguy cơ tử vong ICU nhi", "status": "✅"},
         "PIM2": {"name": "PIM2 - Pediatric Index of Mortality 2", "desc": "Dự đoán tử vong ICU nhi (10 biến số)", "status": "✅"},
         "Pediatric SOFA": {"name": "Pediatric SOFA (pSOFA)", "desc": "Suy đa cơ quan ICU nhi - Điều chỉnh theo tuổi", "status": "✅"},
+        "PECARN": {"name": "PECARN Pediatric Head Injury ⭐", "desc": "Dự đoán nhu cầu chụp CT đầu ở trẻ chấn thương đầu", "status": "✅"},
+        "DHAKA Score": {"name": "DHAKA Score ⭐", "desc": "Phân loại mất nước ở trẻ em <5 tuổi bị tiêu chảy cấp", "status": "✅"},
     },
     
     "🤰 Sản khoa (Obstetrics)": {
@@ -126,6 +160,13 @@ SCORES_BY_SPECIALTY = {
         "Free T4 Index": {"name": "Free T4 Index (FTI)", "desc": "Chỉ số T4 tự do", "status": "✅"},
         "Osteoporosis DXA": {"name": "Đo loãng xương (DXA)", "desc": "Diễn giải T-score/Z-score, phân loại loãng xương, gợi ý điều trị", "status": "✅"},
         "FRAX": {"name": "Ước tính nguy cơ gãy xương (FRAX)", "desc": "Nhập kết quả FRAX 10 năm, so ngưỡng điều trị, khuyến nghị", "status": "✅"},
+        "HOMA-IR": {"name": "HOMA-IR ⭐", "desc": "Đánh giá đề kháng insulin (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "FINDRISC": {"name": "FINDRISC ⭐", "desc": "Dự đoán nguy cơ đái tháo đường type 2 (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "MAP": {"name": "MAP - Mean Arterial Pressure", "desc": "Tính huyết áp trung bình động mạch (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "Maintenance Fluids": {"name": "Maintenance Fluids Calculator", "desc": "Tính nhu cầu dịch duy trì hàng ngày (4-2-1 rule)", "status": "✅"},
+        "Sodium Correction Hyperglycemia": {"name": "Sodium Correction for Hyperglycemia", "desc": "Điều chỉnh Na khi tăng đường huyết (Katz formula)", "status": "✅"},
+        "Free Water Deficit": {"name": "Free Water Deficit in Hypernatremia", "desc": "Tính thiếu nước tự do trong tăng natri máu", "status": "✅"},
+        "Weight-based Levothyroxine": {"name": "Weight-based Levothyroxine Dose Calculator ⭐", "desc": "Xác định liều levothyroxine dựa trên cân nặng để điều trị suy giáp nguyên phát ở người lớn", "status": "✅"},
     },
     
     "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)": {
@@ -159,6 +200,7 @@ SCORES_BY_SPECIALTY = {
         "Karnofsky": {"name": "Karnofsky Performance Scale", "desc": "Thang đo thể trạng", "status": "✅"},
         "Palliative Performance": {"name": "PPS - Palliative Performance Scale", "desc": "Thể trạng chăm sóc giảm nhẹ", "status": "✅"},
         "CIPN Grading": {"name": "CIPN Grading", "desc": "Phân độ tổn thương thần kinh ngoại biên", "status": "✅"},
+        "MSKCC RCC Risk": {"name": "MSKCC Risk of Recurrence ⭐", "desc": "Dự đoán nguy cơ tái phát sau cắt thận ở ung thư thận (RCC)", "status": "✅"},
     },
     
     "🧠 Tâm thần - Tâm Lý (Psychiatry/Psychology)": {
@@ -169,6 +211,7 @@ SCORES_BY_SPECIALTY = {
         "CAM": {"name": "CAM - Confusion Assessment Method", "desc": "Đánh giá hôn mê lú lẫn", "status": "✅"},
         "CIWA-Ar": {"name": "CIWA-Ar", "desc": "Cai rượu - mức độ nặng", "status": "✅"},
         "COWS": {"name": "COWS - Clinical Opiate Withdrawal", "desc": "Cai opioid", "status": "✅"},
+        "GMAWS": {"name": "GMAWS ⭐", "desc": "Đánh giá và theo dõi mức độ nặng của các triệu chứng cai rượu (AWS)", "status": "✅"},
     },
     
     "🔪 Phẫu thuật & Gây mê (Surgery/Anesthesia)": {
@@ -195,6 +238,10 @@ SCORES_BY_SPECIALTY = {
         "SORT": {"name": "SORT - Surgical Outcome Risk Tool", "desc": "Tiên lượng tử vong 30 ngày sau phẫu thuật không tim", "status": "✅"},
         "Gupta Cardiac": {"name": "Gupta Perioperative Cardiac Risk Index", "desc": "Nguy cơ tim mạch phẫu thuật (NSQIP-based)", "status": "✅"},
         "Goldman Cardiac": {"name": "Goldman Cardiac Risk Index", "desc": "Nguy cơ tim mạch phẫu thuật (Historical)", "status": "✅"},
+        "Clavien-Dindo": {"name": "Clavien-Dindo Classification ⭐", "desc": "Phân loại biến chứng sau phẫu thuật (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "RHMP-30": {"name": "RHMP-30 ⭐", "desc": "Dự đoán nguy cơ tử vong 30 ngày sau phẫu thuật gãy xương hông", "status": "✅"},
+        "WIFI Classification": {"name": "WIFI Classification ⭐", "desc": "Đánh giá mức độ nặng đe dọa chi ở bệnh nhân bệnh chi dưới", "status": "✅"},
+        "Perioperative Anticoagulation": {"name": "Perioperative Anticoagulation Management ⭐⭐⭐", "desc": "Quản lý kháng đông trong phẫu thuật - Hướng dẫn ngừng và khởi động lại (MỚI, QUAN TRỌNG)", "status": "✅"},
     },
     
     "👁️ Mắt (Ophthalmology)": {

@@ -1450,7 +1450,11 @@ ANTIPARKINSONIAN_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-    },
+                  "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+},
     
     "Istradefylline": {
         "group": "Neurology - Antiparkinsonian (Adenosine A2A Receptor Antagonist)",
@@ -1593,7 +1597,11 @@ ANTIPARKINSONIAN_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-    }
+                  "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+}
 }
 
 __all__ = ['ANTIPARKINSONIAN_DRUGS']

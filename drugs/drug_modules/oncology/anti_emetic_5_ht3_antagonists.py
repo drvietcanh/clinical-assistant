@@ -79,7 +79,11 @@ ANTI_EMETIC_5_HT3_ANTAGONISTS_DRUGS = {
         'UpToDate - Granisetron Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-15', 'evidence_level':
-        'High (FDA-approved, extensive clinical data)'}},
+        'High (FDA-approved, extensive clinical data)'}         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
     "Palonosetron": {'group': 'Oncology - Anti-emetic (5-HT3 Antagonist)', 'vietnamese_name':
         'Palonosetron, Aloxi', 'administration': ['IV'], 'indications': [
         'Phòng nôn do hóa trị (ngắn và trung hạn)', 'Phòng nôn sau phẫu thuật'],
@@ -145,6 +149,10 @@ ANTI_EMETIC_5_HT3_ANTAGONISTS_DRUGS = {
         'UpToDate - Palonosetron Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-15', 'evidence_level':
-        'High (FDA-approved, extensive clinical data)'}}}
+        'High (FDA-approved, extensive clinical data)'}         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+}}
 
 __all__ = ['ANTI_EMETIC_5_HT3_ANTAGONISTS_DRUGS']

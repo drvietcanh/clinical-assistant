@@ -116,7 +116,8 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Theo dõi thính lực (audiometry)',
         'Điều trị hỗ trợ: Chống nhiễm trùng, chống chảy máu'], 'monitoring':
         'Creatinine, BUN, lượng nước tiểu, công thức máu, thính lực, dấu hiệu độc thần kinh, magne máu, ECG, huyết áp'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Hydration đầy đủ để tăng thải trừ. Điều trị độc thận, độc thần kinh hỗ trợ.'},
         'administration_instructions': {'oral': {'with_food': 'N/A', 'timing':
         'N/A'}, 'iv': {'reconstitution':
         'Pha với NS 0.9% để nồng độ 0.5-1mg/mL. Không dùng D5W (không ổn định)',
@@ -231,7 +232,8 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Điều trị nôn mửa: Antiemetics (ondansetron, aprepitant)',
         'Hydration đầy đủ để tăng thải trừ'], 'monitoring':
         'Công thức máu (CBC), chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, magne máu'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Hydration đầy đủ để tăng thải trừ. Điều trị độc thận, độc thần kinh hỗ trợ.'},
         'administration_instructions': {'oral': {'with_food': 'N/A', 'timing':
         'N/A'}, 'iv': {'reconstitution':
         'Pha với D5W hoặc NS để nồng độ 0.5-2mg/mL', 'infusion_rate':

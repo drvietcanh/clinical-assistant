@@ -184,7 +184,7 @@ LINCOSAMIDE_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu C. difficile (tiêu chảy, đau bụng, sốt), dấu hiệu thần kinh (co giật, ý thức), chức năng hô hấp (nếu dùng với thuốc giãn cơ), PT/INR (nếu dùng với warfarin), chức năng gan (ALT, AST), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có C. difficile hoặc suy hô hấp."
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có C. difficile hoặc phản ứng dị ứng nghiêm trọng. Điều trị C. difficile nếu có."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhưng không ảnh hưởng đáng kể đến hấp thu.",

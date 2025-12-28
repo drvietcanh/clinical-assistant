@@ -589,7 +589,7 @@ OTHER_ANTIBIOTICS = {
                 "Phụ nữ đang cho con bú - thận trọng"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Hydration đầy đủ để tăng thải trừ."},
         "dosage": {
             "adult_standard": "1mg/kg IV mỗi 12 giờ trong 4-14 ngày",
             "adult_ciai": "1mg/kg IV mỗi 12 giờ trong 4-14 ngày",
@@ -707,7 +707,7 @@ OTHER_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST) trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có độc tính gan nặng."},
         "administration_instructions": {
             "oral": None,
             "iv": {
@@ -874,7 +874,7 @@ OTHER_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST) trong ít nhất 24-48 giờ."
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có độc tính gan nặng."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống khi đói (4 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu",

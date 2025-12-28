@@ -105,7 +105,8 @@ VITAMIN_B12S_DRUGS = {
         '  - Corticosteroid nếu phản ứng nặng', 'Theo dõi dấu hiệu sinh tồn',
         'Điều trị phản ứng tại chỗ tiêm: chườm lạnh, giảm đau'], 'monitoring':
         'Dấu hiệu phản ứng dị ứng, dấu hiệu sinh tồn, phản ứng tại chỗ tiêm'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể uống với hoặc không thức ăn. Hấp thu tốt trong cả hai trường hợp.',
         'timing':
@@ -130,6 +131,7 @@ VITAMIN_B12S_DRUGS = {
         'American Society of Hematology Guidelines - Vitamin B12 Deficiency',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
         ], 'last_updated': '2025-02-04', 'evidence_level':
-        'A - Dựa trên FDA drug labels, ASH guidelines, và dữ liệu lâm sàng'}}}
+        'A - Dựa trên FDA drug labels, ASH guidelines, và dữ liệu lâm sàng'}         "black_box_warnings": None,
+}}
 
 __all__ = ['VITAMIN_B12S_DRUGS']

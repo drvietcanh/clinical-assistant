@@ -108,7 +108,7 @@ LAXATIVES_DRUGS = {
             ],
             "monitoring": "Điện giải, chức năng thận, dấu hiệu mất nước.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Bù nước và điện giải nếu mất nước."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống cùng hoặc không cùng thức ăn; có thể pha loãng với nước hoặc nước trái cây.",
@@ -123,7 +123,38 @@ LAXATIVES_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-supported in hepatic encephalopathy",
         },
-    },
+             "drug_interactions": {
+             "major": [],
+             "moderate": [],
+             "minor": [
+                 {
+                     "drug": "Thuốc gây tiêu chảy khác: tăng nguy cơ mất nước, rối loạn điện giải",
+                     "mechanism": "Tương tác lâm sàng"
+                 },
+                 {
+                     "drug": "Thuốc kháng acid mạnh hoặc kháng sinh phổ rộng đường ruột có thể giảm hiệu quả trong bệnh não gan",
+                     "mechanism": "Tương tác lâm sàng"
+                 }
+             ]
+         },
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
+},
 
     "Polyethylene glycol 3350": {
         "group": "Gastrointestinal - Osmotic Laxative (PEG 3350)",
@@ -218,7 +249,7 @@ LAXATIVES_DRUGS = {
             ],
             "monitoring": "Điện giải, chức năng thận nếu tiêu chảy kéo dài.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Bù nước và điện giải nếu mất nước."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Hòa tan bột trong nước, có thể uống cùng hoặc không cùng thức ăn.",
@@ -233,7 +264,34 @@ LAXATIVES_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-recommended osmotic laxative",
         },
-    },
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Ít tương tác đáng kể; nếu tiêu chảy nhiều có thể giảm hấp thu thuốc uống khác",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": "Không có",
+},
 
     "Bisacodyl": {
         "group": "Gastrointestinal - Stimulant Laxative (Diphenylmethane)",
@@ -350,7 +408,7 @@ LAXATIVES_DRUGS = {
             ],
             "monitoring": "Điện giải, chức năng thận, dấu hiệu mất nước.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Bù nước và điện giải nếu mất nước."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống nguyên viên với nước, không nghiền/nhai.",
@@ -497,7 +555,7 @@ LAXATIVES_DRUGS = {
             ],
             "monitoring": "Điện giải, chức năng thận, ECG nếu có yếu tố nguy cơ.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Bù nước và điện giải nếu mất nước. Theo dõi ECG nếu có yếu tố nguy cơ."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không với thức ăn.",

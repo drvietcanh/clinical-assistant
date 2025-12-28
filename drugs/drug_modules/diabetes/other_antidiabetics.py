@@ -159,7 +159,8 @@ OTHER_ANTIDIABETICS_DRUGS = {
                 "notes": "QUAN TRỌNG: Uống với thức ăn để giảm buồn nôn. Bắt đầu với liều thấp và tăng dần."
             }
         }
-    },
+             "black_box_warnings": None,
+},
 
     "Colesevelam": {
         "group": "Diabetes - Bile Acid Sequestrant",
@@ -306,7 +307,8 @@ OTHER_ANTIDIABETICS_DRUGS = {
                 "notes": "QUAN TRỌNG: 1) Uống với thức ăn và nhiều nước, 2) Dùng cách xa các thuốc khác ít nhất 4 giờ để tránh giảm hấp thu."
             }
         }
-    }
+              "black_box_warnings": None,
+}
 }
 
 __all__ = ['OTHER_ANTIDIABETICS_DRUGS']

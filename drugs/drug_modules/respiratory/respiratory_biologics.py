@@ -278,7 +278,8 @@ RESPIRATORY_BIOLOGICS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."
         },
         "administration_instructions": {
             "sc": {
@@ -413,7 +414,8 @@ RESPIRATORY_BIOLOGICS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."
         },
         "administration_instructions": {
             "sc": {
@@ -560,7 +562,8 @@ RESPIRATORY_BIOLOGICS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."
         },
         "administration_instructions": {
             "sc": {
@@ -697,7 +700,8 @@ RESPIRATORY_BIOLOGICS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."
         },
         "administration_instructions": {
             "sc": {

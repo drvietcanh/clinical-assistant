@@ -138,6 +138,7 @@ ANTICHOLINERGICS_DRUGS = {
         'Lexicomp Online - Atropine Monograph'], 'last_updated': '2024-12-19',
         'evidence_level':
         'A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-        }}}
+        }         "black_box_warnings": None,
+}}
 
 __all__ = ['ANTICHOLINERGICS_DRUGS']

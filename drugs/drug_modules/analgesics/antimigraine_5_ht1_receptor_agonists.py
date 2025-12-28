@@ -421,7 +421,7 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
                 "Có thai (category C) - thận trọng"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Theo dõi tim mạch và triệu chứng thần kinh."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng bởi thức ăn.",

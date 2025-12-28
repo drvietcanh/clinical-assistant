@@ -32,7 +32,7 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
                 "Suy thận nặng (CrCl <10) - thận trọng, cần điều chỉnh liều"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có độc tính thận hoặc phản ứng dị ứng nghiêm trọng (Red man syndrome)."},
         "dosage": {
             "adult_iv_standard": "15-20 mg/kg IV mỗi 8-12 giờ (dựa trên trọng lượng thực tế)",
             "adult_iv_severe": "15-20 mg/kg IV mỗi 8-12 giờ",

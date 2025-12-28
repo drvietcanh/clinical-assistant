@@ -233,7 +233,7 @@ SULFONAMIDE_ANTIBIOTICS = {
         ],
         "monitoring": "Theo dõi dấu hiệu sinh tồn, công thức máu (CBC), điện giải (natri, kali), chức năng thận (creatinine, BUN, lượng nước tiểu), chức năng gan (ALT, AST, bilirubin), dấu hiệu da (SJS/TEN) trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (SJS/TEN, suy thận, viêm gan, thiếu máu)."
     },
-    "reversal_agents": {"available": False, "agents": []},
+    "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có SJS/TEN hoặc phản ứng dị ứng nghiêm trọng. Hydration đầy đủ để tăng thải trừ."},
     "administration_instructions": {
         "oral": {
             "with_food": "Uống với thức ăn để giảm kích ứng dạ dày. Có thể uống không thức ăn nếu cần nhưng không khuyến nghị.",

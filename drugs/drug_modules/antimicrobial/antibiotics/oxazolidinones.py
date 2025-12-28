@@ -158,7 +158,7 @@ OXAZOLIDINONE_ANTIBIOTICS = {
                 "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có độc tính tủy xương nặng hoặc tổn thương thần kinh."},
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Linezolid phân loại C - thận trọng trong thai kỳ. Các nghiên cứu trên động vật cho thấy một số nguy cơ. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong nhiễm trùng nặng do VRE hoặc MRSA. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết.",

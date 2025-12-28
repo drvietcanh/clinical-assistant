@@ -152,7 +152,11 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (FREEDOM)",
         },
-    },
+             "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
 
     "Teriparatide": {
         "group": "Endocrinology - PTH Analog (Osteoporosis - Anabolic)",
@@ -299,7 +303,11 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Abaloparatide": {
         "group": "Endocrinology - PTHrP Analog (Osteoporosis - Anabolic)",
@@ -424,7 +432,11 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Romosozumab": {
         "group": "Endocrinology - Sclerostin Inhibitor (Osteoporosis - Anabolic)",
@@ -558,7 +570,11 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (FRAME)",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Raloxifene": {
         "group": "Endocrinology - SERM (Selective Estrogen Receptor Modulator)",
@@ -707,7 +723,11 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (MORE)",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Calcitonin": {
         "group": "Endocrinology - Calcitonin (Osteoporosis, Hypercalcemia)",
@@ -807,7 +827,7 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             ],
             "monitoring": "Calci máu, huyết áp, triệu chứng dị ứng.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng hoặc tăng calci máu nặng."},
         "administration_instructions": {
             "sc": {
                 "injection_site": "Tiêm dưới da vùng đùi, bụng hoặc cánh tay, luân phiên vị trí tiêm.",

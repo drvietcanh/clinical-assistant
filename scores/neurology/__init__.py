@@ -12,6 +12,13 @@ from .aspects import render as render_aspects
 from .abcd2 import render as render_abcd2
 from .barthel import render as render_barthel
 from .four_score import render as render_four_score
+from .canadian_ct_head import render as render_canadian_ct_head
+from .fast_ed import render as render_fast_ed
+from .icans import render as render_icans
+from .sudbury_vertigo import render as render_sudbury_vertigo
+from .mgfa import render as render_mgfa
+from .mg_adl import render as render_mg_adl
+from .ice_score import render as render_ice_score
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -32,6 +39,13 @@ def render_neurology_calculator(calculator_id):
         "ABCD2": render_abcd2,
         "Barthel Index": render_barthel,
         "FOUR Score": render_four_score,
+        "Canadian CT Head": render_canadian_ct_head,
+        "FAST-ED": render_fast_ed,
+        "ICANS Consensus Grading": render_icans,
+        "Sudbury Vertigo Risk Score": render_sudbury_vertigo,
+        "MGFA Clinical Classification": render_mgfa,
+        "MG-ADL": render_mg_adl,
+        "ICE Score": render_ice_score,
     }
     
     calculator_func = calculators.get(calculator_id)

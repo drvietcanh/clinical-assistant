@@ -20,7 +20,7 @@ COMBINATION_INHALERS_DRUGS = {
             "adult_copd": "160/4.5mcg: 2 hít x 2 lần/ngày",
             "notes": "Dùng đều đặn hàng ngày. Trong phác đồ SMART/MART, có thể dùng thêm để cắt cơn nhẹ thay SABA.",
         },
-        "renal_adjustment": {"normal": "Không đổi", "30_60": "Không đổi", "under_30": "Không đổi"},
+        "renal_adjustment": {"normal": "Không đổi", "30_60": "Không đổi", "under_30": "Không đổi", "dialysis": "Không đổi", "notes": "Hấp thu toàn thân ít từ dạng hít. Không cần điều chỉnh liều ở suy thận."},
         "side_effects": [
             "Nấm miệng (do ICS)",
             "Khàn tiếng",
@@ -133,7 +133,8 @@ COMBINATION_INHALERS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Có thể cần bổ sung corticosteroid nếu có suy thượng thận do ICS."
         },
         "administration_instructions": {
             "inhalation": {
@@ -151,7 +152,25 @@ COMBINATION_INHALERS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
-    },
+             "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
+},
     "Fluticasone/Salmeterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (ICS/LABA)",
         "vietnamese_name": "Fluticasone/Salmeterol, Seretide, Advair",
@@ -169,7 +188,7 @@ COMBINATION_INHALERS_DRUGS = {
             "adult_copd": "250/50mcg: 1 hít x 2 lần/ngày",
             "notes": "Không dùng để cắt cơn; cần SABA kèm theo.",
         },
-        "renal_adjustment": {"normal": "Không đổi", "30_60": "Không đổi", "under_30": "Không đổi"},
+        "renal_adjustment": {"normal": "Không đổi", "30_60": "Không đổi", "under_30": "Không đổi", "dialysis": "Không đổi", "notes": "Hấp thu toàn thân ít từ dạng hít. Không cần điều chỉnh liều ở suy thận."},
         "side_effects": [
             "Nấm miệng, khàn tiếng (ICS)",
             "Tim đập nhanh, run cơ (LABA)",
@@ -213,7 +232,67 @@ COMBINATION_INHALERS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
         "black_box_warnings": "Không dùng LABA đơn độc cho hen phế quản - luôn phải kết hợp với ICS. Tăng nguy cơ tử vong do hen khi dùng LABA không kèm ICS.",
-    },
+             "drug_interactions": {
+             "major": [],
+             "moderate": [],
+             "minor": [
+                 {
+                     "drug": "Ritonavir: tăng mạnh nồng độ fluticasone (tránh dùng)",
+                     "mechanism": "Tương tác lâm sàng"
+                 },
+                 {
+                     "drug": "Ketoconazole/itraconazole: tăng nồng độ fluticasone",
+                     "mechanism": "Tương tác lâm sàng"
+                 },
+                 {
+                     "drug": "Beta-blocker: đối kháng tác dụng salmeterol",
+                     "mechanism": "Tương tác lâm sàng"
+                 }
+             ]
+         },
+         "pregnancy_lactation": {
+             "fda_category": "C",
+             "pregnancy_details": "Category C - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+             "lactation": {
+                 "safety": "Compatible with monitoring",
+                 "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                 "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+             }
+         },
+         "hepatic_adjustment": {
+             "mild": "Không đổi",
+             "moderate": "Thận trọng",
+             "severe": "Thận trọng, có thể giảm liều",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+         },
+         "overdose_management": {
+             "symptoms": [
+                 "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+             ],
+             "antidote": "Không có antidote đặc hiệu",
+             "treatment": [
+                 "Ngừng ngay thuốc",
+                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                 "Than hoạt tính",
+                 "Điều trị hỗ trợ và điều trị triệu chứng",
+                 "Theo dõi dấu hiệu sinh tồn"
+             ],
+             "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+         },
+         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+         "administration_instructions": {},
+         "references": {
+             "primary_sources": [
+                 "FDA Drug Label - Fluticasone/Salmeterol inhaler",
+                 "UpToDate - Cần cập nhật"
+             ],
+             "last_updated": "2025-12-28",
+             "evidence_level": "C - Cần tra cứu và cập nhật"
+         },
+},
     "Ipratropium/Salbutamol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (SAMA/SABA)",
         "vietnamese_name": "Ipratropium/Salbutamol, Combivent, Duoneb",
@@ -231,7 +310,7 @@ COMBINATION_INHALERS_DRUGS = {
             "adult_nebulizer": "2.5mg salbutamol + 0.5mg ipratropium mỗi 4-6 giờ",
             "notes": "Thường dùng trong cấp cứu/đợt cấp; theo dõi sát nhịp tim và hô hấp.",
         },
-        "renal_adjustment": {"normal": "Không đổi", "30_60": "Không đổi", "under_30": "Không đổi"},
+        "renal_adjustment": {"normal": "Không đổi", "30_60": "Không đổi", "under_30": "Không đổi", "dialysis": "Không đổi", "notes": "Hấp thu toàn thân ít từ dạng hít. Không cần điều chỉnh liều ở suy thận."},
         "side_effects": [
             "Tim đập nhanh, run cơ (SABA)",
             "Khô miệng, đắng miệng (SAMA)",
@@ -334,7 +413,8 @@ COMBINATION_INHALERS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Physostigmine có thể đối kháng tác dụng anticholinergic nhưng thận trọng."
         },
         "administration_instructions": {
             "inhalation": {
@@ -357,7 +437,24 @@ COMBINATION_INHALERS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
-    },
+             "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
+},
     "Tiotropium/Olodaterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (LAMA/LABA)",
         "vietnamese_name": "Tiotropium/Olodaterol, Spiolto Respimat, Stiolto Respimat",
@@ -374,7 +471,7 @@ COMBINATION_INHALERS_DRUGS = {
             "adult_copd": "2 puffs (5/5mcg) x 1 lần/ngày",
             "notes": "Dùng đều đặn 1 lần/ngày, không dùng để cắt cơn.",
         },
-        "renal_adjustment": {"normal": "Không đổi", "30_60": "Thận trọng", "under_30": "Tránh dùng hoặc theo dõi rất sát"},
+        "renal_adjustment": {"normal": "Không đổi", "30_60": "Thận trọng", "under_30": "Tránh dùng hoặc theo dõi rất sát", "dialysis": "Thận trọng", "notes": "LAMA thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy."},
         "side_effects": [
             "Khô miệng, bí tiểu (LAMA)",
             "Tim đập nhanh, run cơ (LABA – hiếm)",
@@ -477,7 +574,8 @@ COMBINATION_INHALERS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Physostigmine có thể đối kháng tác dụng anticholinergic nhưng thận trọng."
         },
         "administration_instructions": {
             "inhalation": {
@@ -494,7 +592,23 @@ COMBINATION_INHALERS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
-    },
+             "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
+},
     "Umeclidinium/Vilanterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (LAMA/LABA)",
         "vietnamese_name": "Umeclidinium/Vilanterol, Anoro Ellipta",
@@ -510,7 +624,7 @@ COMBINATION_INHALERS_DRUGS = {
             "adult_copd": "62.5/25mcg: 1 hít x 1 lần/ngày",
             "notes": "Dùng đều đặn 1 lần/ngày, không dùng cho hen đơn độc.",
         },
-        "renal_adjustment": {"normal": "Không đổi", "30_60": "Thận trọng", "under_30": "Thận trọng"},
+        "renal_adjustment": {"normal": "Không đổi", "30_60": "Thận trọng", "under_30": "Thận trọng", "dialysis": "Thận trọng", "notes": "LAMA thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy."},
         "side_effects": [
             "Khô miệng, bí tiểu",
             "Tim đập nhanh, run cơ",
@@ -618,7 +732,8 @@ COMBINATION_INHALERS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Có thể cần bổ sung corticosteroid nếu có suy thượng thận do ICS."
         },
         "administration_instructions": {
             "inhalation": {
@@ -635,7 +750,22 @@ COMBINATION_INHALERS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
-    },
+             "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
+},
     "Fluticasone/Umeclidinium/Vilanterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (ICS/LAMA/LABA)",
         "vietnamese_name": "Fluticasone/Umeclidinium/Vilanterol, Trelegy Ellipta",
@@ -653,7 +783,7 @@ COMBINATION_INHALERS_DRUGS = {
             "adult_asthma": "200/62.5/25mcg: 1 hít x 1 lần/ngày (tùy mức độ)",
             "notes": "Dùng đều đặn 1 lần/ngày; không dùng để cắt cơn.",
         },
-        "renal_adjustment": {"normal": "Không đổi", "30_60": "Thận trọng", "under_30": "Thận trọng"},
+        "renal_adjustment": {"normal": "Không đổi", "30_60": "Thận trọng", "under_30": "Thận trọng", "dialysis": "Thận trọng", "notes": "LAMA thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy."},
         "side_effects": [
             "Nấm miệng, khàn tiếng (ICS)",
             "Khô miệng, bí tiểu (LAMA)",
@@ -694,7 +824,63 @@ COMBINATION_INHALERS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
         "black_box_warnings": "Không dùng với ritonavir do tăng mạnh nồng độ fluticasone gây tác dụng phụ nghiêm trọng. Không dùng LABA đơn độc cho hen phế quản.",
-    },
+             "drug_interactions": {
+             "major": [],
+             "moderate": [],
+             "minor": [
+                 {
+                     "drug": "Ritonavir: chống chỉ định (tăng mạnh nồng độ fluticasone)",
+                     "mechanism": "Tương tác lâm sàng"
+                 },
+                 {
+                     "drug": "Ketoconazole/itraconazole: tăng nồng độ fluticasone",
+                     "mechanism": "Tương tác lâm sàng"
+                 }
+             ]
+         },
+         "pregnancy_lactation": {
+             "fda_category": "C",
+             "pregnancy_details": "Category C - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+             "lactation": {
+                 "safety": "Compatible with monitoring",
+                 "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                 "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+             }
+         },
+         "hepatic_adjustment": {
+             "mild": "Không đổi",
+             "moderate": "Thận trọng",
+             "severe": "Thận trọng, có thể giảm liều",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+         },
+         "overdose_management": {
+             "symptoms": [
+                 "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+             ],
+             "antidote": "Không có antidote đặc hiệu",
+             "treatment": [
+                 "Ngừng ngay thuốc",
+                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                 "Than hoạt tính",
+                 "Điều trị hỗ trợ và điều trị triệu chứng",
+                 "Theo dõi dấu hiệu sinh tồn"
+             ],
+             "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+         },
+         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+         "administration_instructions": {},
+         "references": {
+             "primary_sources": [
+                 "FDA Drug Label - Fluticasone/Umeclidinium/Vilanterol inhaler",
+                 "UpToDate - Cần cập nhật"
+             ],
+             "last_updated": "2025-12-28",
+             "evidence_level": "C - Cần tra cứu và cập nhật"
+         },
+},
 }
 
 __all__ = ["COMBINATION_INHALERS_DRUGS"]

@@ -29,9 +29,7 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
             ],
             "tương_đối": []
         },
-        "reversal_agents": {"available": False, "agents": []},
-        "dosage": {
-            "adult_standard": "3-5 mg/kg/ngày IV/IM, chia 1-3 lần",
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc tính thận và thần kinh hỗ trợ. Có thể cần lọc máu để loại bỏ thuốc."},
             "adult_severe": "5-7 mg/kg/ngày IV/IM",
             "adult_once_daily": "5-7 mg/kg IV x 1 lần/ngày (phổ biến)",
             "adult_pneumonia": "5-7 mg/kg IV x 1 lần/ngày",
@@ -175,7 +173,7 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
             ],
             "tương_đối": []
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc tính thận và thần kinh hỗ trợ. Có thể cần lọc máu để loại bỏ thuốc."},
         "dosage": {
             "adult_standard": "15 mg/kg/ngày IV/IM, chia 1-3 lần",
             "adult_severe": "15-20 mg/kg/ngày IV/IM",
@@ -285,9 +283,7 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
             ],
             "tương_đối": []
         },
-        "reversal_agents": {"available": False, "agents": []},
-        "dosage": {
-            "adult_standard": "3-5 mg/kg/ngày IV/IM, chia 1-3 lần",
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc tính thận và thần kinh hỗ trợ. Có thể cần lọc máu để loại bỏ thuốc."},
             "adult_severe": "5-7 mg/kg/ngày IV/IM",
             "adult_once_daily": "5-7 mg/kg IV x 1 lần/ngày (phổ biến)",
             "adult_pseudomonas": "5-7 mg/kg IV x 1 lần/ngày",

@@ -196,7 +196,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'last_updated': '2025-02-05',
             'evidence_level': 'High - Multiple RCTs and systematic reviews'
         }
-    },
+             "black_box_warnings": None,
+},
     "Chlorpheniramine": {
         'group': 'Allergy - Antihistamine (H1 Antagonist, 1st generation)',
         'vietnamese_name': 'Chlorpheniramine, Chlor-Trimeton',
@@ -381,7 +382,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Hydroxyzine'
         ]
-    },
+             "black_box_warnings": None,
+},
     "Hydroxyzine": {
         'group': 'Allergy - Antihistamine (H1 Antagonist, 1st generation)',
         'vietnamese_name': 'Hydroxyzine, Atarax, Vistaril',
@@ -581,7 +583,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Hydroxyzine'
         ]
-    }
+             "black_box_warnings": None,
+}
 }
 
 __all__ = ['ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS']

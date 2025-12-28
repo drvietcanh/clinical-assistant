@@ -1,0 +1,271 @@
+================================================================================
+LOG BO SUNG FIELDS CHO THUOC
+================================================================================
+Thoi gian: 2025-12-28 15:33:26
+Tong so thuoc can xu ly: 46
+
+
+Dipyridamole:
+  File: D:\1 medical\drugs\drug_modules\cardiovascular_other\antiplatelets.py
+  Thieu 1 required, 1 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Aluminum hydroxide/Magnesium hydroxide:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antacids.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Azelastine/Fluticasone nasal spray:
+  File: D:\1 medical\drugs\drug_modules\ent_oral_nasal_combinations.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Bismuth subsalicylate:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antidiarrheals.py
+  Thieu 0 required, 1 optional fields
+
+Budesonide/Formoterol inhaler:
+  File: D:\1 medical\drugs\drug_modules\respiratory\combination_inhalers.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Calcium carbonate:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antacids.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Cerebrolysin:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Cerebroprotein hydrolysate (khác):
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Cetirizine/Pseudoephedrine:
+  File: D:\1 medical\drugs\drug_modules\ent_oral_nasal_combinations.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Cisatracurium:
+  File: D:\1 medical\drugs\drug_modules\supportive\neuromuscular_blockers.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Citicoline:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Citicoline/Piracetam:
+  File: D:\1 medical\drugs\drug_modules\neurological\neurological_combinations.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Clopidogrel:
+  File: D:\1 medical\drugs\drug_modules\cardiovascular_other\antiplatelets.py
+  Thieu 0 required, 1 optional fields
+
+Doxorubicin:
+  File: D:\1 medical\drugs\drug_modules\oncology\anthracyclines.py
+  Thieu 0 required, 1 optional fields
+  [=] reversal_agents: Field da ton tai va co gia tri
+  -> Added: 0, Skipped: 1, Failed: 0
+
+Edaravone:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Fexofenadine/Pseudoephedrine:
+  File: D:\1 medical\drugs\drug_modules\ent_oral_nasal_combinations.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Ginkgo biloba extract:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Glibenclamide:
+  File: D:\1 medical\drugs\drug_modules\diabetes\sulfonylureas.py
+  Thieu 0 required, 1 optional fields
+
+Gliclazide:
+  File: D:\1 medical\drugs\drug_modules\diabetes\sulfonylureas.py
+  Thieu 0 required, 1 optional fields
+
+Hyoscine butylbromide:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antispasmodics.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Insulin:
+  File: D:\1 medical\drugs\drug_modules\diabetes\insulins.py
+  Thieu 0 required, 1 optional fields
+
+Ipratropium/Salbutamol inhaler:
+  File: D:\1 medical\drugs\drug_modules\respiratory\combination_inhalers.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Lactulose:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\laxatives.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Loperamide:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antidiarrheals.py
+  Thieu 0 required, 1 optional fields
+
+Loratadine/Pseudoephedrine:
+  File: D:\1 medical\drugs\drug_modules\ent_oral_nasal_combinations.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Lorazepam:
+  File: D:\1 medical\drugs\drug_modules\neurological\benzodiazepines.py
+  Thieu 0 required, 1 optional fields
+
+Mebeverine:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antispasmodics.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Memantine:
+  File: D:\1 medical\drugs\drug_modules\neurological\alzheimer_dementia_drugs.py
+  Thieu 0 required, 1 optional fields
+
+Mesalazine:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\ibd_5asa.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Nicergoline:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Nimodipine:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Piracetam:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Piracetam/Vinpocetine:
+  File: D:\1 medical\drugs\drug_modules\neurological\neurological_combinations.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Polyethylene glycol 3350:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\laxatives.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Prasugrel:
+  File: D:\1 medical\drugs\drug_modules\cardiovascular_other\antiplatelets.py
+  Thieu 0 required, 1 optional fields
+
+Prednisone:
+  File: D:\1 medical\drugs\drug_modules\metabolic\corticosteroids.py
+  Thieu 0 required, 1 optional fields
+  [=] reversal_agents: Field da ton tai va co gia tri
+  -> Added: 0, Skipped: 1, Failed: 0
+
+Rivastigmine:
+  File: D:\1 medical\drugs\drug_modules\neurological\alzheimer_dementia_drugs.py
+  Thieu 0 required, 1 optional fields
+
+Rocuronium:
+  File: D:\1 medical\drugs\drug_modules\supportive\neuromuscular_blockers.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Simethicone:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antiflatulents.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Sulfasalazine:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\ibd_5asa.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Ticagrelor:
+  File: D:\1 medical\drugs\drug_modules\cardiovascular_other\antiplatelets.py
+  Thieu 0 required, 1 optional fields
+
+Tiotropium/Olodaterol inhaler:
+  File: D:\1 medical\drugs\drug_modules\respiratory\combination_inhalers.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Trimebutine:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antispasmodics.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Umeclidinium/Vilanterol inhaler:
+  File: D:\1 medical\drugs\drug_modules\respiratory\combination_inhalers.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Vecuronium:
+  File: D:\1 medical\drugs\drug_modules\supportive\neuromuscular_blockers.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Vinpocetine:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+  [+] black_box_warnings: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+================================================================================
+TONG KET
+================================================================================
+Da cap nhat 35 thuoc
+Tong so fields da them: 33
+Tong so fields da bo qua (da ton tai): 2
+Tong so fields that bai: 0
+
+Luu y: Cac fields da duoc them voi template co ban.
+Can kiem tra va bo sung thong tin chi tiet tu nguon tin cay.

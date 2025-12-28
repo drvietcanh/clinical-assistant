@@ -584,7 +584,67 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
-    },
+                  "drug_interactions": {
+                  "major": [],
+                  "moderate": [],
+                  "minor": [
+                      {
+                          "drug": "Các vasopressor khác (norepinephrine, epinephrine, dopamine): tăng nguy cơ thiếu máu cục bộ chi",
+                          "mechanism": "Tương tác lâm sàng"
+                      },
+                      {
+                          "drug": "Sodium bicarbonate: KHÔNG pha chung cùng line (môi trường kiềm làm giảm hiệu lực vasopressors)",
+                          "mechanism": "Tương tác lâm sàng"
+                      }
+                  ]
+              },
+              "pregnancy_lactation": {
+                  "fda_category": "C - Có thể dùng trong cấp cứu nếu lợi ích > nguy cơ",
+                  "pregnancy_details": "Category C - Có thể dùng trong cấp cứu nếu lợi ích > nguy cơ - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+                  "lactation": {
+                      "safety": "Use with caution",
+                      "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                      "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+                  }
+              },
+              "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng",
+                  "severe": "Thận trọng, có thể giảm liều",
+                  "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+              },
+              "overdose_management": {
+                  "symptoms": [
+                      "Tăng huyết áp nặng",
+                      "Thiếu máu cục bộ chi, ruột",
+                      "Loạn nhịp tim",
+                      "Phù phổi"
+                  ],
+                  "antidote": "Không có antidote đặc hiệu",
+                  "treatment": [
+                      "Ngừng ngay thuốc",
+                      "Điều trị hỗ trợ: hạ huyết áp nếu cần",
+                      "Theo dõi tưới máu chi, ruột",
+                      "Điều trị triệu chứng"
+                  ],
+                  "monitoring": "Theo dõi huyết áp, tưới máu chi, dấu hiệu thiếu máu cục bộ"
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "administration_instructions": {
+                  "iv": {
+                      "reconstitution": "Cần tra cứu",
+                      "infusion_rate": "Cần tra cứu",
+                      "compatibility": [
+                          "Cần tra cứu"
+                      ],
+                      "incompatibility": [],
+                      "notes": "Cần tra cứu thêm thông tin chi tiết."
+                  }
+              },
+},
     
     "Phenylephrine": {
         "group": "Emergency - Alpha-1 Adrenergic Agonist (Pure)",

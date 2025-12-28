@@ -150,7 +150,8 @@ VITAMIN_DS_DRUGS = {
         'Theo dõi ít nhất 1-2 tuần sau khi ngừng vitamin D (do tích lũy)'],
         'monitoring':
         'Nồng độ calcium trong máu (ionized và total), phosphate, creatinine, eGFR, ECG, dấu hiệu lâm sàng tăng calci máu. Theo dõi ít nhất 1-2 tuần sau khi ngừng vitamin D.'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều chỉnh calci máu nếu tăng calci máu (hydration, loop diuretics, calcitonin, bisphosphonates nếu cần).'},
         'administration_instructions': {'oral': {'with_food':
         'Nên uống với thức ăn có chất béo để tăng hấp thu (vitamin D tan trong dầu). Có thể uống với sữa, dầu ăn, hoặc bữa ăn có chất béo.'
         , 'timing':
@@ -169,6 +170,7 @@ VITAMIN_DS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
         ], 'last_updated': '2025-02-04', 'evidence_level':
         'A - Dựa trên FDA drug labels, Endocrine Society guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-        }}}
+        }         "black_box_warnings": None,
+}}
 
 __all__ = ['VITAMIN_DS_DRUGS']

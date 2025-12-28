@@ -95,7 +95,8 @@ NSAIDS_DRUGS = {
         'Theo dõi dấu hiệu chảy máu dạ dày', 'Điều trị hỗ trợ triệu chứng'],
         'monitoring':
         'Huyết áp, nhịp tim, ý thức, creatinine, BUN, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 4-6 giờ do half-life ngắn (2-4 giờ)'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị chảy máu dạ dày nếu có. Bù nước và điện giải nếu cần.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày', 'timing':
         'Mỗi 4-6 giờ (do half-life ngắn). Dùng với bữa ăn để giảm tác dụng phụ dạ dày. Liều tối đa: 2.4g/ngày (đau) hoặc 3.2g/ngày (viêm khớp).'
@@ -246,7 +247,8 @@ NSAIDS_DRUGS = {
         'Theo dõi dấu hiệu chảy máu dạ dày', 'Điều trị hỗ trợ triệu chứng'],
         'monitoring':
         'Huyết áp, nhịp tim, ý thức, creatinine, BUN, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 12-24 giờ do half-life dài (12-17 giờ)'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị chảy máu dạ dày nếu có. Bù nước và điện giải nếu cần.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày', 'timing':
         'Mỗi 8-12 giờ (do half-life dài). Có thể dùng 2 lần/ngày. Dùng với bữa ăn để giảm tác dụng phụ dạ dày.'
@@ -378,7 +380,8 @@ NSAIDS_DRUGS = {
         'Theo dõi dấu hiệu chảy máu dạ dày', 'Điều trị hỗ trợ triệu chứng'],
         'monitoring':
         'Huyết áp, nhịp tim, ý thức, creatinine, BUN, ALT/AST, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 12-24 giờ'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị chảy máu dạ dày và độc tính gan nếu có. Bù nước và điện giải nếu cần.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày (quan trọng với diclofenac do nguy cơ cao)'
         , 'timing':
@@ -491,7 +494,8 @@ NSAIDS_DRUGS = {
         'Theo dõi dấu hiệu chảy máu dạ dày', 'Điều trị hỗ trợ triệu chứng'],
         'monitoring':
         'Huyết áp, nhịp tim, ý thức, creatinine, BUN, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 24-48 giờ do half-life dài (15-20 giờ)'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị chảy máu dạ dày nếu có. Bù nước và điện giải nếu cần.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày', 'timing':
         '1 lần/ngày (do half-life dài). Có thể dùng vào buổi sáng hoặc tối. Dùng với bữa ăn để giảm tác dụng phụ dạ dày.'
@@ -612,7 +616,8 @@ NSAIDS_DRUGS = {
         'Theo dõi dấu hiệu chảy máu dạ dày', 'Điều trị hỗ trợ triệu chứng'],
         'monitoring':
         'Huyết áp, nhịp tim, ECG, ý thức, creatinine, BUN, điện giải, dấu hiệu chảy máu, dấu hiệu biến cố tim mạch. Theo dõi ít nhất 24 giờ do half-life (11 giờ)'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị chảy máu dạ dày và biến cố tim mạch nếu có. Bù nước và điện giải nếu cần.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày', 'timing':
         '1-2 lần/ngày. Có thể dùng vào buổi sáng và tối. Dùng với bữa ăn để giảm tác dụng phụ dạ dày. Liều tối đa: 400mg/ngày.'
@@ -729,7 +734,8 @@ NSAIDS_DRUGS = {
         'Điều trị chảy máu nếu có (truyền máu, điều trị hỗ trợ)',
         'Điều trị hỗ trợ triệu chứng'], 'monitoring':
         'Huyết áp, nhịp tim, ý thức, creatinine, BUN (mỗi ngày), công thức máu, dấu hiệu chảy máu (dạ dày, niêm mạc, chảy máu nói chung). Theo dõi ít nhất 24-48 giờ do nguy cơ chảy máu và suy thận cao.'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị chảy máu nghiêm trọng nếu có (truyền máu, điều trị hỗ trợ). Bù nước và điện giải nếu cần.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày', 'timing':
         'Mỗi 4-6 giờ. CHỈ dùng tối đa 5 ngày. Dùng với bữa ăn để giảm tác dụng phụ dạ dày. Liều tối đa: 40mg/ngày (PO).'
@@ -851,7 +857,8 @@ NSAIDS_DRUGS = {
         'Theo dõi dấu hiệu chảy máu dạ dày', 'Điều trị hỗ trợ triệu chứng'],
         'monitoring':
         'Huyết áp, nhịp tim, ý thức, creatinine, BUN, điện giải, dấu hiệu chảy máu. Theo dõi ít nhất 24 giờ do half-life dài (22 giờ).'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị chảy máu dạ dày nếu có. Bù nước và điện giải nếu cần.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày', 'timing':
         'Dùng 1 lần/ngày (tiện lợi). Liều tối đa: 120mg/ngày.'}, 'iv': None},

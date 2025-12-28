@@ -315,7 +315,8 @@ BETA_LACTAMS_DRUGS = {
         'Điều chỉnh điện giải nếu cần', 'Hỗ trợ hô hấp và tuần hoàn nếu cần',
         'Theo dõi dấu hiệu sinh tồn'], 'monitoring':
         'Dấu hiệu sinh tồn, dấu hiệu dị ứng, tiêu chảy, điện giải, dấu hiệu nhiễm C. difficile'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể uống với hoặc không thức ăn. Hấp thu tốt, không bị ảnh hưởng bởi thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.'
         , 'timing':
@@ -1258,7 +1259,62 @@ BETA_LACTAMS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
-    },
+                  "drug_interactions": {
+                  "major": [
+                      {
+                          "drug": "Warfarin: có thể tăng INR",
+                          "mechanism": "Tăng nguy cơ chảy máu"
+                      }
+                  ],
+                  "moderate": [],
+                  "minor": [
+                      {
+                          "drug": "Probenecid: tăng nồng độ dicloxacillin",
+                          "mechanism": "Tương tác lâm sàng"
+                      }
+                  ]
+              },
+              "pregnancy_lactation": {
+                  "fda_category": "B - An toàn",
+                  "pregnancy_details": "Category B - An toàn - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+                  "lactation": {
+                      "safety": "Use with caution",
+                      "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                      "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+                  }
+              },
+              "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng, có thể giảm liều",
+                  "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+                  "notes": "Nhiều kháng sinh chuyển hóa qua gan, cần điều chỉnh liều ở suy gan nặng."
+              },
+              "overdose_management": {
+                  "symptoms": [
+                      "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+                  ],
+                  "antidote": "Không có antidote đặc hiệu",
+                  "treatment": [
+                      "Ngừng ngay thuốc",
+                      "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                      "Than hoạt tính",
+                      "Điều trị hỗ trợ và điều trị triệu chứng",
+                      "Theo dõi dấu hiệu sinh tồn"
+                  ],
+                  "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "administration_instructions": {
+                  "oral": {
+                      "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                      "timing": "Theo chỉ định của bác sĩ",
+                      "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+                  }
+              },
+},
     
     "Nafcillin": {
         "group": "Antibiotic - Beta-lactam (Penicillinase-resistant Penicillin)",
@@ -1334,7 +1390,66 @@ BETA_LACTAMS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
-    },
+                  "drug_interactions": {
+                  "major": [
+                      {
+                          "drug": "Warfarin: có thể tăng INR",
+                          "mechanism": "Tăng nguy cơ chảy máu"
+                      }
+                  ],
+                  "moderate": [],
+                  "minor": [
+                      {
+                          "drug": "Aminoglycosides: không pha chung",
+                          "mechanism": "Tương tác lâm sàng"
+                      }
+                  ]
+              },
+              "pregnancy_lactation": {
+                  "fda_category": "B - An toàn",
+                  "pregnancy_details": "Category B - An toàn - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+                  "lactation": {
+                      "safety": "Use with caution",
+                      "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                      "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+                  }
+              },
+              "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng, có thể giảm liều",
+                  "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+                  "notes": "Nhiều kháng sinh chuyển hóa qua gan, cần điều chỉnh liều ở suy gan nặng."
+              },
+              "overdose_management": {
+                  "symptoms": [
+                      "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+                  ],
+                  "antidote": "Không có antidote đặc hiệu",
+                  "treatment": [
+                      "Ngừng ngay thuốc",
+                      "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                      "Than hoạt tính",
+                      "Điều trị hỗ trợ và điều trị triệu chứng",
+                      "Theo dõi dấu hiệu sinh tồn"
+                  ],
+                  "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "administration_instructions": {
+                  "iv": {
+                      "reconstitution": "Cần tra cứu",
+                      "infusion_rate": "Cần tra cứu",
+                      "compatibility": [
+                          "Cần tra cứu"
+                      ],
+                      "incompatibility": [],
+                      "notes": "Cần tra cứu thêm thông tin chi tiết."
+                  }
+              },
+},
     
     "Oxacillin": {
         "group": "Antibiotic - Beta-lactam (Penicillinase-resistant Penicillin)",
@@ -1411,7 +1526,66 @@ BETA_LACTAMS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
-    }
+                  "drug_interactions": {
+                  "major": [
+                      {
+                          "drug": "Warfarin: có thể tăng INR",
+                          "mechanism": "Tăng nguy cơ chảy máu"
+                      }
+                  ],
+                  "moderate": [],
+                  "minor": [
+                      {
+                          "drug": "Aminoglycosides: không pha chung",
+                          "mechanism": "Tương tác lâm sàng"
+                      }
+                  ]
+              },
+              "pregnancy_lactation": {
+                  "fda_category": "B - An toàn",
+                  "pregnancy_details": "Category B - An toàn - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+                  "lactation": {
+                      "safety": "Use with caution",
+                      "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                      "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+                  }
+              },
+              "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng, có thể giảm liều",
+                  "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+                  "notes": "Nhiều kháng sinh chuyển hóa qua gan, cần điều chỉnh liều ở suy gan nặng."
+              },
+              "overdose_management": {
+                  "symptoms": [
+                      "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+                  ],
+                  "antidote": "Không có antidote đặc hiệu",
+                  "treatment": [
+                      "Ngừng ngay thuốc",
+                      "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                      "Than hoạt tính",
+                      "Điều trị hỗ trợ và điều trị triệu chứng",
+                      "Theo dõi dấu hiệu sinh tồn"
+                  ],
+                  "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "administration_instructions": {
+                  "iv": {
+                      "reconstitution": "Cần tra cứu",
+                      "infusion_rate": "Cần tra cứu",
+                      "compatibility": [
+                          "Cần tra cứu"
+                      ],
+                      "incompatibility": [],
+                      "notes": "Cần tra cứu thêm thông tin chi tiết."
+                  }
+              },
+}
 }
 
 __all__ = ['BETA_LACTAMS_DRUGS']

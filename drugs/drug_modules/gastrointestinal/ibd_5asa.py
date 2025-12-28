@@ -138,7 +138,7 @@ IBD_5ASA_DRUGS = {
             ],
             "monitoring": "Theo dõi triệu chứng, creatinin, men gan; theo dõi nước tiểu.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có độc tính thận hoặc phản ứng dị ứng nghiêm trọng."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống cùng hoặc không cùng thức ăn; uống với nhiều nước.",
@@ -157,7 +157,24 @@ IBD_5ASA_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - guideline-recommended first-line therapy in mild-moderate UC",
         },
-    },
+             "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
+},
 
     "Sulfasalazine": {
         "group": "Gastrointestinal - 5-ASA (Aminosalicylate prodrug) + Sulfonamide",
@@ -291,7 +308,7 @@ IBD_5ASA_DRUGS = {
             ],
             "monitoring": "Theo dõi CBC, men gan, creatinin, dấu hiệu tán huyết.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có tán huyết, độc tính thận, hoặc phản ứng dị ứng nghiêm trọng."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống cùng thức ăn để giảm kích ứng dạ dày và buồn nôn.",
@@ -308,7 +325,23 @@ IBD_5ASA_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - guideline-supported therapy in mild-moderate UC",
         },
-    },
+              "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": "Không có",
+},
 }
 
 __all__ = ["IBD_5ASA_DRUGS"]

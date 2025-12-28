@@ -161,7 +161,11 @@ ANTICONVULSANTS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
         ], 'last_updated': '2024-12-19', 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }},
+        }         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
     "Phenytoin": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
         'Phenytoin, Dilantin', 'administration': ['PO', 'IV'], 'indications': [
         'Động kinh (tổng quát, cục bộ)', 'Status epilepticus',
@@ -468,7 +472,8 @@ ANTICONVULSANTS_DRUGS = {
         'Điều trị hỗ trợ: chống nôn, truyền dịch, theo dõi điện giải'],
         'monitoring':
         'Nồng độ valproate trong máu, ALT/AST, bilirubin, tiểu cầu, ammonia máu, điện giải, ECG, huyết áp, nhịp tim, ý thức'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc tính gan và hạ tiểu cầu nếu có. Có thể cần lọc máu để loại bỏ thuốc.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn'
         , 'timing':
@@ -707,7 +712,8 @@ ANTICONVULSANTS_DRUGS = {
         'Theo dõi ECG nếu có triệu chứng tim mạch', 'Điều trị co giật nếu có',
         'Hỗ trợ hô hấp và tuần hoàn nếu cần'], 'monitoring':
         'Dấu hiệu ban da (SJS/TEN), ECG, ý thức, dấu hiệu co giật, điện giải'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có SJS/TEN. Điều trị SJS/TEN tại ICU nếu có.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn', 'timing':
         'Chia 2 lần/ngày (do half-life dài). Có thể dùng cùng bữa ăn để giảm kích ứng dạ dày'
@@ -829,7 +835,8 @@ ANTICONVULSANTS_DRUGS = {
         'Lọc máu: có thể hiệu quả (70% bài tiết qua thận nguyên dạng), xem xét ở trường hợp nặng'
         ], 'monitoring':
         'Theo dõi ý thức, hô hấp, tim mạch, điện giải (bicarbonate, anion gap), chức năng thận'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Lọc máu có thể hiệu quả (70% bài tiết qua thận nguyên dạng) ở trường hợp nặng.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn', 'timing':
         'Chia 2 lần/ngày (sáng, tối). Tăng liều chậm để giảm tác dụng phụ. Uống nhiều nước (2-3L/ngày) để giảm nguy cơ sỏi thận. KHÔNG ngừng đột ngột - giảm liều dần dần.'
@@ -966,7 +973,11 @@ ANTICONVULSANTS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
         ], 'last_updated': '2025-02-05', 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }},
+        }         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
     "Phenobarbital": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
         'Phenobarbital, Luminal', 'administration': ['PO', 'IV', 'IM'],
         'indications': ['Động kinh (nhiều loại)', 'Status epilepticus',

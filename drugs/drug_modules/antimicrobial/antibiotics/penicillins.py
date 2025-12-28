@@ -69,7 +69,7 @@ PENICILLIN_ANTIBIOTICS = {
             ],
             "tương_đối": []
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."},
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
@@ -138,7 +138,7 @@ PENICILLIN_ANTIBIOTICS = {
             ],
             "tương_đối": []
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."},
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
@@ -205,7 +205,7 @@ PENICILLIN_ANTIBIOTICS = {
             ],
             "tương_đối": []
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."},
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
@@ -272,7 +272,7 @@ PENICILLIN_ANTIBIOTICS = {
             ],
             "tương_đối": []
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."},
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,

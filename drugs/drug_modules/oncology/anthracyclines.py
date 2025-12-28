@@ -113,7 +113,7 @@ ANTHRACYCLINES_DRUGS = {
         'Theo dõi CBC, chức năng tim, chức năng gan',
         'Điều trị nôn mửa (ondansetron, granisetron)'], 'monitoring':
         'Chức năng tim (echo, ECG), CBC, chức năng gan, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu extravasation'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        }, 'administration_instructions': {'oral': {
         'with_food': 'Không áp dụng', 'timing':
         'Không có dạng uống (chỉ có IV)'}, 'iv': {'reconstitution':
         'Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất', 'infusion_rate':

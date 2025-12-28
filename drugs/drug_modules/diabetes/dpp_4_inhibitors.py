@@ -86,7 +86,8 @@ DPP_4_INHIBITORS_DRUGS = {
         'Nếu có dấu hiệu viêm tụy cấp: ngừng thuốc, điều trị hỗ trợ, theo dõi amylase/lipase'
         , 'Điều trị hỗ trợ'], 'monitoring':
         'Đường huyết, chức năng thận, dấu hiệu viêm tụy (đau bụng, amylase/lipase), đau khớp'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có viêm tụy cấp. Điều trị viêm tụy hỗ trợ nếu có.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.',
         'timing':
@@ -199,7 +200,8 @@ DPP_4_INHIBITORS_DRUGS = {
         'Nếu viêm tụy cấp: điều trị hỗ trợ, nhịn ăn, truyền dịch, giảm đau, theo dõi chức năng tụy'
         , 'Theo dõi đường huyết, chức năng gan, chức năng tụy'], 'monitoring':
         'Đường huyết, dấu hiệu viêm tụy cấp, chức năng gan, dấu hiệu sinh tồn'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có viêm tụy cấp. Điều trị viêm tụy hỗ trợ nếu có.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống với bữa ăn (tăng hấp thu). Có thể uống sáng và tối với bữa ăn.',
         'timing': 'Uống 2 lần/ngày (sáng và tối), cách đều, với bữa ăn.'}, 'iv':
@@ -721,7 +723,8 @@ DPP_4_INHIBITORS_DRUGS = {
             "EXAMINE Study",
             "FDA Drug Safety Communication - DPP-4 Inhibitors and Heart Failure"
         ]
-    }
+                  "black_box_warnings": None,
+}
 }
 
 __all__ = ['DPP_4_INHIBITORS_DRUGS']

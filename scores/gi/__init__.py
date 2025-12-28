@@ -11,6 +11,10 @@ from .rockall import render as render_rockall
 from .glasgow_blatchford import render as render_glasgow_blatchford
 from .bisap import render as render_bisap
 from .aims65 import render as render_aims65
+from .fib4 import render as render_fib4
+from .acute_pancreatitis import render as render_acute_pancreatitis
+from .safe_score import render as render_safe_score
+from .erefs import render as render_erefs
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -30,6 +34,10 @@ def render_gi_calculator(calculator_id):
         "Rockall Score": render_rockall,
         "Glasgow-Blatchford": render_glasgow_blatchford,
         "AIMS65": render_aims65,
+        "FIB-4": render_fib4,
+        "Acute Pancreatitis Prediction": render_acute_pancreatitis,
+        "SAFE Score": render_safe_score,
+        "EREFS": render_erefs,
     }
     
     calculator_func = calculators.get(calculator_id)

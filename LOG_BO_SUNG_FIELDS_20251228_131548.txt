@@ -1,0 +1,249 @@
+================================================================================
+LOG BO SUNG FIELDS CHO THUOC
+================================================================================
+Thoi gian: 2025-12-28 13:15:48
+Tong so thuoc can xu ly: 50
+
+
+Carbamazepine:
+  File: D:\1 medical\drugs\drug_modules\neurological\anticonvulsants.py
+  Thieu 0 required, 2 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Cerebrolysin:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 1 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Chlorpheniramine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py
+  Thieu 1 required, 1 optional fields
+
+Desloratadine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+  Thieu 1 required, 1 optional fields
+
+Desvenlafaxine:
+  File: D:\1 medical\drugs\drug_modules\psychiatry_other\snris.py
+  Thieu 0 required, 2 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Diphenhydramine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py
+  Thieu 1 required, 1 optional fields
+
+Dipyridamole:
+  File: D:\1 medical\drugs\drug_modules\cardiovascular_other\antiplatelets.py
+  Thieu 1 required, 1 optional fields
+
+Duloxetine:
+  File: D:\1 medical\drugs\drug_modules\psychiatry_other\snris.py
+  Thieu 0 required, 2 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Fexofenadine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+  Thieu 1 required, 1 optional fields
+
+Folic Acid:
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\vitamins.py
+  Thieu 1 required, 1 optional fields
+
+Granisetron:
+  File: D:\1 medical\drugs\drug_modules\oncology\anti_emetic_5_ht3_antagonists.py
+  Thieu 1 required, 1 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Hydroxyzine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py
+  Thieu 1 required, 1 optional fields
+
+Loratadine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+  Thieu 1 required, 1 optional fields
+
+Metaxalone:
+  File: D:\1 medical\drugs\drug_modules\neurological\muscle_relaxants.py
+  Thieu 1 required, 1 optional fields
+
+Methocarbamol:
+  File: D:\1 medical\drugs\drug_modules\neurological\muscle_relaxants.py
+  Thieu 1 required, 1 optional fields
+
+Nicergoline:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 1 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Nimodipine:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 1 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Omeprazole:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py
+  Thieu 0 required, 2 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Oxcarbazepine:
+  File: D:\1 medical\drugs\drug_modules\neurological\anticonvulsants.py
+  Thieu 0 required, 2 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Palonosetron:
+  File: D:\1 medical\drugs\drug_modules\oncology\anti_emetic_5_ht3_antagonists.py
+  Thieu 1 required, 1 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Piracetam:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 1 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Probenecid:
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\gout_medications.py
+  Thieu 1 required, 1 optional fields
+
+Venlafaxine:
+  File: D:\1 medical\drugs\drug_modules\psychiatry_other\snris.py
+  Thieu 0 required, 2 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Vinpocetine:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 1 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Vitamin C:
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\vitamins.py
+  Thieu 1 required, 1 optional fields
+
+Vitamin E:
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\vitamins.py
+  Thieu 1 required, 1 optional fields
+
+Abaloparatide:
+  File: D:\1 medical\drugs\drug_modules\endocrinology_other\osteoporosis_other.py
+  Thieu 0 required, 1 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Acarbose:
+  File: D:\1 medical\drugs\drug_modules\diabetes\alpha_glucosidase_inhibitors.py
+  Thieu 1 required, 0 optional fields
+
+Adenosine:
+  File: D:\1 medical\drugs\drug_modules\emergency\antiarrhythmics.py
+  Thieu 1 required, 0 optional fields
+
+Alendronate:
+  File: D:\1 medical\drugs\drug_modules\endocrinology_other\osteoporosis_bisphosphonates.py
+  Thieu 0 required, 1 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Alogliptin:
+  File: D:\1 medical\drugs\drug_modules\diabetes\dpp_4_inhibitors.py
+  Thieu 1 required, 0 optional fields
+
+Aluminum hydroxide/Magnesium hydroxide:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antacids.py
+  Thieu 1 required, 0 optional fields
+
+Atropine:
+  File: D:\1 medical\drugs\drug_modules\emergency\anticholinergics.py
+  Thieu 1 required, 0 optional fields
+
+Azelastine/Fluticasone nasal spray:
+  File: D:\1 medical\drugs\drug_modules\ent_oral_nasal_combinations.py
+  Thieu 1 required, 0 optional fields
+
+Beclomethasone inhaled:
+  File: D:\1 medical\drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py
+  Thieu 1 required, 0 optional fields
+
+Bedaquiline:
+  File: D:\1 medical\drugs\drug_modules\infectious_other\antituberculars.py
+  Thieu 0 required, 1 optional fields
+  [+] reversal_agents: Thanh cong
+  -> Added: 1, Skipped: 0, Failed: 0
+
+Bismuth subsalicylate:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antidiarrheals.py
+  Thieu 0 required, 1 optional fields
+
+Bromocriptine:
+  File: D:\1 medical\drugs\drug_modules\diabetes\other_antidiabetics.py
+  Thieu 1 required, 0 optional fields
+
+Budesonide inhaled:
+  File: D:\1 medical\drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py
+  Thieu 1 required, 0 optional fields
+
+Budesonide/Formoterol inhaler:
+  File: D:\1 medical\drugs\drug_modules\respiratory\combination_inhalers.py
+  Thieu 1 required, 0 optional fields
+
+Calcium:
+  File: D:\1 medical\drugs\drug_modules\supportive\calciums.py
+  Thieu 1 required, 0 optional fields
+
+Calcium (elemental):
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\vitamins.py
+  Thieu 1 required, 0 optional fields
+
+Calcium carbonate:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antacids.py
+  Thieu 1 required, 0 optional fields
+
+Cerebroprotein hydrolysate (khác):
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+
+Cetirizine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+  Thieu 1 required, 0 optional fields
+
+Cetirizine/Pseudoephedrine:
+  File: D:\1 medical\drugs\drug_modules\ent_oral_nasal_combinations.py
+  Thieu 1 required, 0 optional fields
+
+Ciclesonide:
+  File: D:\1 medical\drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py
+  Thieu 1 required, 0 optional fields
+
+Cisatracurium:
+  File: D:\1 medical\drugs\drug_modules\supportive\neuromuscular_blockers.py
+  Thieu 1 required, 0 optional fields
+
+Citicoline:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+
+Citicoline/Piracetam:
+  File: D:\1 medical\drugs\drug_modules\neurological\neurological_combinations.py
+  Thieu 1 required, 0 optional fields
+
+================================================================================
+TONG KET
+================================================================================
+Da cap nhat 16 thuoc
+Tong so fields da them: 16
+Tong so fields da bo qua (da ton tai): 0
+Tong so fields that bai: 0
+
+Luu y: Cac fields da duoc them voi template co ban.
+Can kiem tra va bo sung thong tin chi tiet tu nguon tin cay.

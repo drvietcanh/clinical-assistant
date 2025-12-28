@@ -152,7 +152,7 @@ TETRACYCLINE_ANTIBIOTICS = {
                 "Tiền sử tăng áp lực nội sọ - tăng nguy cơ"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Hydration đầy đủ để tăng thải trừ."},
         "pregnancy_lactation": {
             "fda_category": "D",
             "pregnancy_details": "Doxycycline là thuốc phân loại D. CHỐNG CHỈ ĐỊNH trong thai kỳ. Tetracycline gây răng vàng và ức chế xương ở thai nhi. Không dùng trong thai kỳ.",
@@ -275,7 +275,7 @@ TETRACYCLINE_ANTIBIOTICS = {
                 "Phụ nữ đang cho con bú - thận trọng"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Hydration đầy đủ để tăng thải trừ."},
         "dosage": {
             "adult_standard": "100mg PO x 2 lần/ngày",
             "adult_severe": "100mg PO x 2 lần/ngày hoặc 200mg PO x 1 lần/ngày",
@@ -475,7 +475,7 @@ TETRACYCLINE_ANTIBIOTICS = {
                 "Phụ nữ đang cho con bú - thận trọng"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Hydration đầy đủ để tăng thải trừ."},
         "dosage": {
             "adult_standard": "250-500mg PO x 4 lần/ngày",
             "adult_severe": "500mg PO x 4 lần/ngày",

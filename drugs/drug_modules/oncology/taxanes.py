@@ -97,7 +97,8 @@ TAXANES_DRUGS = {
         'Theo dõi CBC, chức năng gan, chức năng thận',
         'Theo dõi và điều trị triệu chứng'], 'monitoring':
         'CBC mỗi ngày, chức năng gan, chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu độc thần kinh, dấu hiệu độc tim'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc tính máu, độc thần kinh, độc tim, và nhiễm trùng hỗ trợ.'},
         'administration_instructions': {'oral': None, 'iv': {'reconstitution':
         'Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất. Nồng độ cuối: 0.3-1.2mg/ml. Dùng filter không chứa DEHP (Cremophor EL có thể hòa tan DEHP).',
         'infusion_rate':
@@ -207,7 +208,8 @@ TAXANES_DRUGS = {
         'Theo dõi CBC, chức năng gan, chức năng thận',
         'Theo dõi và điều trị triệu chứng'], 'monitoring':
         'CBC mỗi ngày, chức năng gan, chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu độc thần kinh, dấu hiệu giữ nước (cân nặng, phù)'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc tính máu, độc thần kinh, giữ nước, và nhiễm trùng hỗ trợ.'},
         'administration_instructions': {'oral': None, 'iv': {'reconstitution':
         'Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất. Nồng độ cuối: 0.3-0.9mg/ml.',
         'infusion_rate':

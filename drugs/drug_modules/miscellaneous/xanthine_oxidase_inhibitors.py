@@ -118,7 +118,8 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
         'Nếu SJS/TEN: điều trị tại ICU, có thể cần corticosteroid, IVIG'],
         'monitoring':
         'Dấu hiệu ban da, chức năng gan, thận, dấu hiệu dị ứng. Nếu SJS/TEN: theo dõi tại ICU.'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có dấu hiệu SJS/TEN. Hydration đầy đủ để tăng thải trừ.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.'
         , 'timing':

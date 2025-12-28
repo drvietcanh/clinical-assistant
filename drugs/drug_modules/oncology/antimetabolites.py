@@ -215,7 +215,8 @@ ANTIMETABOLITES_DRUGS = {
         'Điều trị độc phổi: corticosteroid nếu có viêm phổi kẽ',
         'Theo dõi và điều trị triệu chứng'], 'monitoring':
         'CBC mỗi ngày, chức năng gan, chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu độc phổi'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc phổi (corticosteroid nếu có viêm phổi kẽ), độc tính máu, và nhiễm trùng hỗ trợ.'},
         'administration_instructions': {'oral': None, 'iv': {'reconstitution':
         'Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất. Nồng độ cuối: ≤40mg/ml.',
         'infusion_rate': 'Truyền trong 30 phút (tốc độ tiêu chuẩn)',

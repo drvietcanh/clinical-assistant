@@ -154,7 +154,8 @@ PDE4_INHIBITORS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có dấu hiệu trầm cảm hoặc ý tưởng tự tử."
         },
         "administration_instructions": {
             "oral": {

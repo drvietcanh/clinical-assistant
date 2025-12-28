@@ -94,7 +94,8 @@ BIGUANIDES_DRUGS = {
         'Điều trị hạ đường huyết nếu có: Glucose IV',
         'Theo dõi ít nhất 24-48 giờ'], 'monitoring':
         'Lactate máu, pH máu, điện giải, chức năng thận, glucose máu, dấu hiệu sống, ý thức'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị nhiễm toan lactic nếu có (bicarbonate IV, lọc máu nếu cần). Điều trị hạ đường huyết nếu có.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống với bữa ăn để giảm buồn nôn, tiêu chảy. Có thể giảm tác dụng phụ đường tiêu hóa.'
         , 'timing':

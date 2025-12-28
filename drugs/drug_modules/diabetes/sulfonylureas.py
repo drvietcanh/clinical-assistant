@@ -173,7 +173,13 @@ SULFONYLUREAS_DRUGS = {
             'AACE/ACE Diabetes Guidelines',
             'UKPDS Study',
             'ISMP High Alert Medications'
-        ]},
+        ]         "renal_adjustment": {
+             "normal": "Không đổi",
+             "30_60": "Thận trọng, có thể giảm liều",
+             "under_30": "Giảm liều hoặc tránh dùng",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+         },
+},
     "Gliclazide": {'group': 'Diabetes - Sulfonylurea', 'vietnamese_name':
         'Gliclazide, Diamicron', 'administration': ['PO'], 'indications': [
         'Đái tháo đường type 2'], 'contraindications': ['Đái tháo đường type 1',
@@ -314,7 +320,13 @@ SULFONYLUREAS_DRUGS = {
             'AACE/ACE Diabetes Guidelines',
             'UKPDS Study',
             'ISMP High Alert Medications'
-        ]},
+        ]         "renal_adjustment": {
+             "normal": "Không đổi",
+             "30_60": "Thận trọng, có thể giảm liều",
+             "under_30": "Giảm liều hoặc tránh dùng",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+         },
+},
     
     "Glimepiride": {
         "group": "Diabetes - Sulfonylurea (3rd Generation)",

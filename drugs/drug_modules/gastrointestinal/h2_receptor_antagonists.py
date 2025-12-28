@@ -162,7 +162,70 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
-    },
+                  "drug_interactions": {
+                  "major": [],
+                  "moderate": [],
+                  "minor": [
+                      {
+                          "drug": "Ít tương tác thuốc hơn cimetidine và ranitidine",
+                          "mechanism": "Tương tác lâm sàng"
+                      },
+                      {
+                          "drug": "Ketoconazole/Itraconazole: giảm hấp thu (cách 2 giờ)",
+                          "mechanism": "Tương tác lâm sàng"
+                      }
+                  ]
+              },
+              "pregnancy_lactation": {
+                  "fda_category": "B - An toàn",
+                  "pregnancy_details": "Category B - An toàn - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+                  "lactation": {
+                      "safety": "Use with caution",
+                      "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                      "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+                  }
+              },
+              "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng",
+                  "severe": "Thận trọng, có thể giảm liều",
+                  "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+              },
+              "overdose_management": {
+                  "symptoms": [
+                      "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+                  ],
+                  "antidote": "Không có antidote đặc hiệu",
+                  "treatment": [
+                      "Ngừng ngay thuốc",
+                      "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                      "Than hoạt tính",
+                      "Điều trị hỗ trợ và điều trị triệu chứng",
+                      "Theo dõi dấu hiệu sinh tồn"
+                  ],
+                  "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "administration_instructions": {
+                  "oral": {
+                      "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                      "timing": "Theo chỉ định của bác sĩ",
+                      "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+                  },
+                  "iv": {
+                      "reconstitution": "Cần tra cứu",
+                      "infusion_rate": "Cần tra cứu",
+                      "compatibility": [
+                          "Cần tra cứu"
+                      ],
+                      "incompatibility": [],
+                      "notes": "Cần tra cứu thêm thông tin chi tiết."
+                  }
+              },
+},
     
     "Cimetidine": {
         "group": "Gastrointestinal - H2 Receptor Antagonist",

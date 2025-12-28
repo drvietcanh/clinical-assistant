@@ -61,7 +61,82 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
         "black_box_warnings": None,
-    },
+             "drug_interactions": {
+             "major": [
+                 {
+                     "drug": "Thuốc chống đông/kháng tiểu cầu: lý thuyết tăng nguy cơ chảy máu",
+                     "mechanism": "Tăng nguy cơ chảy máu"
+                 }
+             ],
+             "moderate": [],
+             "minor": []
+         },
+         "pregnancy_lactation": {
+             "fda_category": "Contraindicated (đặc biệt do vinpocetine)",
+             "pregnancy_details": "Category Contraindicated (đặc biệt do vinpocetine) - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+             "lactation": {
+                 "safety": "Use with caution",
+                 "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                 "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+             }
+         },
+         "hepatic_adjustment": {
+             "mild": "Không đổi",
+             "moderate": "Thận trọng",
+             "severe": "Thận trọng, có thể giảm liều",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+         },
+         "overdose_management": {
+             "symptoms": [
+                 "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+             ],
+             "antidote": "Không có antidote đặc hiệu",
+             "treatment": [
+                 "Ngừng ngay thuốc",
+                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                 "Than hoạt tính",
+                 "Điều trị hỗ trợ và điều trị triệu chứng",
+                 "Theo dõi dấu hiệu sinh tồn"
+             ],
+             "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+         },
+         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+         "administration_instructions": {
+             "oral": {
+                 "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                 "timing": "Theo chỉ định của bác sĩ",
+                 "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+             }
+         },
+         "references": {
+             "primary_sources": [
+                 "FDA Drug Label - Piracetam/Vinpocetine",
+                 "UpToDate - Cần cập nhật"
+             ],
+             "last_updated": "2025-12-28",
+             "evidence_level": "C - Cần tra cứu và cập nhật"
+         },
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
+},
     "Citicoline/Piracetam": {
         "group": "Neurology - Combination (Neuroprotective + Nootropic)",
         "vietnamese_name": "Citicoline/Piracetam (phối hợp tuần hoàn não)",
@@ -188,7 +263,25 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "C - Bằng chứng hạn chế"
         },
-    },
+             "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
+},
     "Ginkgo biloba/Vinpocetine": {
         "group": "Neurology - Combination (Herbal vasomodulator + Cerebral vasodilator)",
         "vietnamese_name": "Ginkgo biloba/Vinpocetine (phối hợp mạch não)",
@@ -245,7 +338,65 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
         "black_box_warnings": "Nguy cơ chảy máu khi dùng kèm thuốc chống đông/kháng tiểu cầu. Ngưng trước phẫu thuật 5-7 ngày.",
-    },
+             "drug_interactions": {
+             "major": [
+                 {
+                     "drug": "Warfarin, DOACs, Aspirin, Clopidogrel: tăng nguy cơ chảy máu.",
+                     "mechanism": "Tăng nguy cơ chảy máu"
+                 }
+             ],
+             "moderate": [],
+             "minor": []
+         },
+         "pregnancy_lactation": {
+             "fda_category": "Contraindicated",
+             "pregnancy_details": "Category Contraindicated - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+             "lactation": {
+                 "safety": "Use with caution",
+                 "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                 "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+             }
+         },
+         "hepatic_adjustment": {
+             "mild": "Không đổi",
+             "moderate": "Thận trọng",
+             "severe": "Thận trọng, có thể giảm liều",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+         },
+         "overdose_management": {
+             "symptoms": [
+                 "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+             ],
+             "antidote": "Không có antidote đặc hiệu",
+             "treatment": [
+                 "Ngừng ngay thuốc",
+                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                 "Than hoạt tính",
+                 "Điều trị hỗ trợ và điều trị triệu chứng",
+                 "Theo dõi dấu hiệu sinh tồn"
+             ],
+             "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+         },
+         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+         "administration_instructions": {
+             "oral": {
+                 "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                 "timing": "Theo chỉ định của bác sĩ",
+                 "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+             }
+         },
+         "references": {
+             "primary_sources": [
+                 "FDA Drug Label - Ginkgo biloba/Vinpocetine",
+                 "UpToDate - Cần cập nhật"
+             ],
+             "last_updated": "2025-12-28",
+             "evidence_level": "C - Cần tra cứu và cập nhật"
+         },
+},
     "Olanzapine/Fluoxetine": {
         "group": "Psychiatry - Combination (Atypical antipsychotic + SSRI)",
         "vietnamese_name": "Olanzapine/Fluoxetine, Symbyax",
@@ -310,7 +461,69 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
         "black_box_warnings": "Nguy cơ tăng cân, tăng đường huyết, tăng lipid máu (do olanzapine). Nguy cơ hội chứng serotonin khi dùng với các thuốc serotonergic khác. Tăng nguy cơ tự sát ở trẻ em, thanh thiếu niên và người trẻ tuổi.",
-    },
+             "drug_interactions": {
+             "major": [],
+             "moderate": [],
+             "minor": [
+                 {
+                     "drug": "MAOIs, linezolid, triptan, other serotonergic drugs: nguy cơ serotonin syndrome.",
+                     "mechanism": "Tương tác lâm sàng"
+                 },
+                 {
+                     "drug": "Thuốc kéo dài QT: tăng nguy cơ loạn nhịp.",
+                     "mechanism": "Tương tác lâm sàng"
+                 }
+             ]
+         },
+         "pregnancy_lactation": {
+             "fda_category": "C/D (tùy tam cá nguyệt và chỉ định) – dùng khi lợi ích vượt trội nguy cơ.",
+             "pregnancy_details": "Category C/D (tùy tam cá nguyệt và chỉ định) – dùng khi lợi ích vượt trội nguy cơ. - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+             "lactation": {
+                 "safety": "Use with caution",
+                 "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                 "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+             }
+         },
+         "hepatic_adjustment": {
+             "mild": "Không đổi",
+             "moderate": "Thận trọng",
+             "severe": "Thận trọng, có thể giảm liều",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+         },
+         "overdose_management": {
+             "symptoms": [
+                 "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+             ],
+             "antidote": "Không có antidote đặc hiệu",
+             "treatment": [
+                 "Ngừng ngay thuốc",
+                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                 "Than hoạt tính",
+                 "Điều trị hỗ trợ và điều trị triệu chứng",
+                 "Theo dõi dấu hiệu sinh tồn"
+             ],
+             "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+         },
+         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+         "administration_instructions": {
+             "oral": {
+                 "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                 "timing": "Theo chỉ định của bác sĩ",
+                 "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+             }
+         },
+         "references": {
+             "primary_sources": [
+                 "FDA Drug Label - Olanzapine/Fluoxetine",
+                 "UpToDate - Cần cập nhật"
+             ],
+             "last_updated": "2025-12-28",
+             "evidence_level": "C - Cần tra cứu và cập nhật"
+         },
+},
 }
 
 __all__ = ["NEUROLOGICAL_COMBINATIONS_DRUGS"]

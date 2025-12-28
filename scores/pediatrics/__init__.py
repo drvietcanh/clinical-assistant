@@ -12,6 +12,8 @@ from .prism3 import render as render_prism3
 from .pim2 import render as render_pim2
 from .pediatric_sofa import render as render_pediatric_sofa
 from .pediatric_dosing import render_pediatric_dosing_calculator
+from .pecarn import render as render_pecarn
+from .dhaka import render as render_dhaka
 
 
 def render_pediatrics_calculator(calculator_id):
@@ -32,6 +34,8 @@ def render_pediatrics_calculator(calculator_id):
         "PRISM III": render_prism3,
         "PIM2": render_pim2,
         "Pediatric SOFA": render_pediatric_sofa,
+        "PECARN": render_pecarn,
+        "DHAKA Score": render_dhaka,
     }
     
     calculator_func = calculators.get(calculator_id)

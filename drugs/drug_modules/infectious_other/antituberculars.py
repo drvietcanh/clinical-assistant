@@ -647,7 +647,11 @@ ANTITUBERCULAR_DRUGS = {
             "ATS/IDSA/CDC Guidelines - Tuberculosis Treatment",
             "FDA Black Box Warning - Ethambutol and Optic Neuritis"
         ]
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Streptomycin": {
         "group": "Infectious Disease - Antitubercular (Injectable aminoglycoside, second-line in many regimens)",
@@ -1384,7 +1388,11 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-03-02",
             "evidence_level": "Moderate–High trong MDR-TB; High trong phong.",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Bedaquiline": {
         "group": "Infectious Disease - Diarylquinoline (Group A second-line antitubercular for MDR/XDR-TB)",
@@ -1534,7 +1542,11 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-03-02",
             "evidence_level": "High trong MDR/XDR-TB (guideline- and trial-based).",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Delamanid": {
         "group": "Infectious Disease - Nitroimidazole (Group C second-line antitubercular for MDR/XDR-TB)",
@@ -1676,7 +1688,11 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-03-02",
             "evidence_level": "Moderate–High trong MDR/XDR-TB (trial- and guideline-based).",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Cycloserine / Terizidone": {
         "group": "Infectious Disease - Second-line antitubercular (D-alanine analog, MDR-TB)",
@@ -1818,7 +1834,11 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-03-02",
             "evidence_level": "Moderate – sử dụng rộng rãi nhưng độc tính thần kinh cao.",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "PAS (para-aminosalicylic acid)": {
         "group": "Infectious Disease - Second-line antitubercular (folate antagonist, MDR-TB)",

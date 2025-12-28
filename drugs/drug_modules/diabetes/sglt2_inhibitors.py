@@ -103,7 +103,8 @@ SGLT2_INHIBITORS_DRUGS = {
         'Theo dõi chức năng thận',
         'Nếu có nhiễm toan ceton: điều trị theo protocol DKA'], 'monitoring':
         'Đường huyết, huyết áp, cân nặng, chức năng thận, điện giải, dấu hiệu nhiễm toan ceton'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị nhiễm toan ceton theo protocol DKA nếu có. Bù nước và điện giải nếu cần.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.',
         'timing':
@@ -136,7 +137,8 @@ SGLT2_INHIBITORS_DRUGS = {
             'EMPEROR-Reduced Study',
             'EMPEROR-Preserved Study',
             'FDA Drug Safety Communication - SGLT2 Inhibitors and DKA'
-        ]},
+        ]         "black_box_warnings": None,
+},
     "Dapagliflozin": {'group': 'Diabetes - SGLT2 Inhibitor', 'vietnamese_name':
         'Dapagliflozin, Forxiga', 'administration': ['PO'], 'indications': [
         'Đái tháo đường type 2', 'Suy tim với phân suất tống máu giảm (HFrEF)',
@@ -231,7 +233,8 @@ SGLT2_INHIBITORS_DRUGS = {
         'Theo dõi chức năng thận',
         'Nếu có nhiễm toan ceton: điều trị theo protocol DKA'], 'monitoring':
         'Đường huyết, huyết áp, cân nặng, chức năng thận, điện giải, dấu hiệu nhiễm toan ceton'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị nhiễm toan ceton theo protocol DKA nếu có. Bù nước và điện giải nếu cần.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.',
         'timing':
@@ -261,7 +264,8 @@ SGLT2_INHIBITORS_DRUGS = {
             'DECLARE-TIMI 58 Study',
             'DAPA-HF Study',
             'FDA Drug Safety Communication - SGLT2 Inhibitors and DKA'
-        ]},
+        ]         "black_box_warnings": None,
+},
     
     "Canagliflozin": {
         "group": "Diabetes - SGLT2 Inhibitor",
@@ -607,7 +611,11 @@ SGLT2_INHIBITORS_DRUGS = {
             "AACE/ACE Diabetes Guidelines",
             "FDA Drug Safety Communication - SGLT2 Inhibitors and DKA"
         ],
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 }
 
 __all__ = ['SGLT2_INHIBITORS_DRUGS']

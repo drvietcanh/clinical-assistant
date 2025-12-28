@@ -11,6 +11,8 @@ from .bode import render as render_bode
 from .perc import render as render_perc
 from .ards_berlin import render as render_ards_berlin
 from .pesi import render as render_pesi
+from .mmrc import render as render_mmrc
+from .act import render as render_act
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -30,6 +32,8 @@ def render_respiratory_calculator(calculator_id):
         "PERC": render_perc,
         "ARDS Berlin": render_ards_berlin,
         "PESI": render_pesi,
+        "mMRC": render_mmrc,
+        "ACT": render_act,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -49,5 +53,7 @@ __all__ = [
     'render_perc',
     'render_ards_berlin',
     'render_pesi',
+    'render_mmrc',
+    'render_act',
 ]
 

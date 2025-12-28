@@ -416,7 +416,13 @@ ANTIPLATELETS_DRUGS = {
             "WHO Essential Medicines List"
         ],
         "last_updated": "2025-02-18",
-    },
+              "renal_adjustment": {
+              "normal": "Không đổi",
+              "30_60": "Thận trọng, có thể giảm liều",
+              "under_30": "Giảm liều hoặc tránh dùng",
+              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+          },
+},
 
     "Ticagrelor": {
         "group": "Cardiovascular - Antiplatelet (P2Y12 Inhibitor)",
@@ -611,7 +617,13 @@ ANTIPLATELETS_DRUGS = {
             "WHO Essential Medicines List"
         ],
         "last_updated": "2025-02-18",
-    },
+              "renal_adjustment": {
+              "normal": "Không đổi",
+              "30_60": "Thận trọng, có thể giảm liều",
+              "under_30": "Giảm liều hoặc tránh dùng",
+              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+          },
+},
 
     "Prasugrel": {
         "group": "Cardiovascular - Antiplatelet (P2Y12 Inhibitor)",
@@ -795,7 +807,13 @@ ANTIPLATELETS_DRUGS = {
             "WHO Essential Medicines List"
         ],
         "last_updated": "2025-02-18",
-    },
+              "renal_adjustment": {
+              "normal": "Không đổi",
+              "30_60": "Thận trọng, có thể giảm liều",
+              "under_30": "Giảm liều hoặc tránh dùng",
+              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+          },
+},
 
     "Ticlopidine": {
         "group": "Cardiovascular - Antiplatelet",
@@ -1155,7 +1173,31 @@ ANTIPLATELETS_DRUGS = {
             "WHO Essential Medicines List"
         ],
         "last_updated": "2025-02-18",
-    }
+              "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "renal_adjustment": {
+              "normal": "Không đổi",
+              "30_60": "Thận trọng, có thể giảm liều",
+              "under_30": "Giảm liều hoặc tránh dùng",
+              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+          },
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": "Không có",
+}
 }
 
 __all__ = ['ANTIPLATELETS_DRUGS']

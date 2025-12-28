@@ -165,7 +165,8 @@ CALCIUMS_DRUGS = {
         'Theo dõi ECG (loạn nhịp tim do tăng calci máu, đặc biệt với digoxin)',
         'Điều trị sỏi thận nếu có'], 'monitoring':
         'Nồng độ calcium trong máu (ionized và total), phosphate, creatinine, eGFR, ECG, dấu hiệu lâm sàng tăng calci máu.'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều chỉnh calci máu nếu tăng calci máu (hydration, loop diuretics, calcitonin, bisphosphonates nếu cần).'},
         'administration_instructions': {'oral': {'with_food':
         'Nên uống với thức ăn để tăng hấp thu và giảm tác dụng phụ (táo bón, đầy hơi).'
         , 'timing':
@@ -185,6 +186,7 @@ CALCIUMS_DRUGS = {
         'UpToDate - Calcium supplementation',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
         ], 'last_updated': '2025-02-04', 'evidence_level':
-        'A - Dựa trên FDA drug labels, IOM/NOF guidelines, và dữ liệu lâm sàng'}}}
+        'A - Dựa trên FDA drug labels, IOM/NOF guidelines, và dữ liệu lâm sàng'}         "black_box_warnings": None,
+}}
 
 __all__ = ['CALCIUMS_DRUGS']

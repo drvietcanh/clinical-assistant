@@ -212,6 +212,12 @@ INSULINS_DRUGS = {
             "WHO Essential Medicines List"
         ],
         "last_updated": "2025-02-18",
-        }}
+                 "renal_adjustment": {
+             "normal": "Không đổi",
+             "30_60": "Không đổi",
+             "under_30": "Thận trọng, có thể giảm liều",
+             "notes": "Insulin chủ yếu chuyển hóa ở gan, nhưng cần thận trọng ở suy thận nặng."
+         },
+}}
 
 __all__ = ['INSULINS_DRUGS']

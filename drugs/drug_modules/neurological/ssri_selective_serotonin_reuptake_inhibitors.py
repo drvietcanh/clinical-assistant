@@ -123,7 +123,8 @@ SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
         'Truyền dịch', 'Theo dõi ít nhất 24-48 giờ (do half-life dài)'],
         'monitoring':
         'ECG, huyết áp, nhịp tim, nhiệt độ, ý thức, dấu hiệu co giật, điện giải'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Theo dõi ít nhất 24-48 giờ do half-life dài.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn'
         , 'timing':

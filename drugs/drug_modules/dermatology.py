@@ -599,7 +599,13 @@ DERMATOLOGY_DRUGS = {
             "FDA Drug Information - Topical Combinations",
             "UpToDate - Dermatophyte Infections Treatment"
         ]
-    },
+                  "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng",
+                  "severe": "Thận trọng, có thể giảm liều",
+                  "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+              },
+},
     
     "Fusidic acid/Betamethasone topical": {
         "group": "Dermatology - Topical Combination (Antibiotic + Corticosteroid)",
@@ -713,7 +719,13 @@ DERMATOLOGY_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "B - Hướng dẫn lâm sàng và dữ liệu thực hành"
         }
-    },
+                  "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng, có thể giảm liều",
+                  "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+                  "notes": "Nhiều kháng sinh chuyển hóa qua gan, cần điều chỉnh liều ở suy gan nặng."
+              },
+},
     
     "Miconazole/Hydrocortisone topical": {
         "group": "Dermatology - Topical Combination (Antifungal + Low-potency Corticosteroid)",
@@ -817,7 +829,13 @@ DERMATOLOGY_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "B - Dựa trên dữ liệu thực hành và tờ hướng dẫn thuốc"
         }
-    },
+                  "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng",
+                  "severe": "Thận trọng, có thể giảm liều",
+                  "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+              },
+},
     
     "Gentamicin/Betamethasone/Clotrimazole topical": {
         "group": "Dermatology - Topical Combination (Antibiotic + Corticosteroid + Antifungal)",
@@ -946,7 +964,13 @@ DERMATOLOGY_DRUGS = {
             "FDA Drug Information - Topical Combinations",
             "Clinical Practice Guidelines - Dermatitis Treatment"
         ]
-    },
+                  "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng, có thể giảm liều",
+                  "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+                  "notes": "Nhiều kháng sinh chuyển hóa qua gan, cần điều chỉnh liều ở suy gan nặng."
+              },
+},
     
     "Tacrolimus topical": {
         "group": "Dermatology - Topical Calcineurin Inhibitor",

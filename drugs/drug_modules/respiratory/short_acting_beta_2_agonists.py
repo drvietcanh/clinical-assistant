@@ -157,7 +157,7 @@ SHORT_ACTING_BETA_2_AGONISTS_DRUGS = {
                 ],
             'monitoring': 'Theo dõi dấu hiệu sinh tồn, ECG, kali máu, đường huyết trong ít nhất 4-6 giờ.'
         },
-        'reversal_agents': {'available': False, 'agents': []},  # Không có reversal agent đặc hiệu
+        'reversal_agents': {'available': False, 'agents': [], 'notes': 'Không có antidote đặc hiệu. Beta-blocker chọn lọc có thể đối kháng tác dụng nhưng thận trọng vì có thể gây co thắt phế quản.'},
         'administration_instructions': {
                 'oral': {
                     'with_food': 'Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ.',

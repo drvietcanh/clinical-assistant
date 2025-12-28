@@ -1,0 +1,221 @@
+================================================================================
+LOG BO SUNG FIELDS CHO THUOC
+================================================================================
+Thoi gian: 2025-12-28 15:26:16
+Tong so thuoc can xu ly: 50
+
+
+Chlorpheniramine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py
+  Thieu 1 required, 1 optional fields
+
+Desloratadine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+  Thieu 1 required, 1 optional fields
+
+Diphenhydramine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py
+  Thieu 1 required, 1 optional fields
+
+Dipyridamole:
+  File: D:\1 medical\drugs\drug_modules\cardiovascular_other\antiplatelets.py
+  Thieu 1 required, 1 optional fields
+
+Fexofenadine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+  Thieu 1 required, 1 optional fields
+
+Folic Acid:
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\vitamins.py
+  Thieu 1 required, 1 optional fields
+
+Hydroxyzine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py
+  Thieu 1 required, 1 optional fields
+
+Loratadine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+  Thieu 1 required, 1 optional fields
+
+Metaxalone:
+  File: D:\1 medical\drugs\drug_modules\neurological\muscle_relaxants.py
+  Thieu 1 required, 1 optional fields
+
+Methocarbamol:
+  File: D:\1 medical\drugs\drug_modules\neurological\muscle_relaxants.py
+  Thieu 1 required, 1 optional fields
+
+Probenecid:
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\gout_medications.py
+  Thieu 1 required, 1 optional fields
+
+Vitamin C:
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\vitamins.py
+  Thieu 1 required, 1 optional fields
+
+Vitamin E:
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\vitamins.py
+  Thieu 1 required, 1 optional fields
+
+Acarbose:
+  File: D:\1 medical\drugs\drug_modules\diabetes\alpha_glucosidase_inhibitors.py
+  Thieu 1 required, 0 optional fields
+
+Adenosine:
+  File: D:\1 medical\drugs\drug_modules\emergency\antiarrhythmics.py
+  Thieu 1 required, 0 optional fields
+
+Alogliptin:
+  File: D:\1 medical\drugs\drug_modules\diabetes\dpp_4_inhibitors.py
+  Thieu 1 required, 0 optional fields
+
+Aluminum hydroxide/Magnesium hydroxide:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antacids.py
+  Thieu 1 required, 0 optional fields
+
+Atropine:
+  File: D:\1 medical\drugs\drug_modules\emergency\anticholinergics.py
+  Thieu 1 required, 0 optional fields
+
+Azelastine/Fluticasone nasal spray:
+  File: D:\1 medical\drugs\drug_modules\ent_oral_nasal_combinations.py
+  Thieu 1 required, 0 optional fields
+
+Beclomethasone inhaled:
+  File: D:\1 medical\drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py
+  Thieu 1 required, 0 optional fields
+
+Bismuth subsalicylate:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antidiarrheals.py
+  Thieu 0 required, 1 optional fields
+
+Bromocriptine:
+  File: D:\1 medical\drugs\drug_modules\diabetes\other_antidiabetics.py
+  Thieu 1 required, 0 optional fields
+
+Budesonide inhaled:
+  File: D:\1 medical\drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py
+  Thieu 1 required, 0 optional fields
+
+Budesonide/Formoterol inhaler:
+  File: D:\1 medical\drugs\drug_modules\respiratory\combination_inhalers.py
+  Thieu 1 required, 0 optional fields
+
+Calcium:
+  File: D:\1 medical\drugs\drug_modules\supportive\calciums.py
+  Thieu 1 required, 0 optional fields
+
+Calcium (elemental):
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\vitamins.py
+  Thieu 1 required, 0 optional fields
+
+Calcium carbonate:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antacids.py
+  Thieu 1 required, 0 optional fields
+
+Cerebrolysin:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+
+Cerebroprotein hydrolysate (khác):
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+
+Cetirizine:
+  File: D:\1 medical\drugs\drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+  Thieu 1 required, 0 optional fields
+
+Cetirizine/Pseudoephedrine:
+  File: D:\1 medical\drugs\drug_modules\ent_oral_nasal_combinations.py
+  Thieu 1 required, 0 optional fields
+
+Ciclesonide:
+  File: D:\1 medical\drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py
+  Thieu 1 required, 0 optional fields
+
+Cisatracurium:
+  File: D:\1 medical\drugs\drug_modules\supportive\neuromuscular_blockers.py
+  Thieu 1 required, 0 optional fields
+
+Citicoline:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+
+Citicoline/Piracetam:
+  File: D:\1 medical\drugs\drug_modules\neurological\neurological_combinations.py
+  Thieu 1 required, 0 optional fields
+
+Clopidogrel:
+  File: D:\1 medical\drugs\drug_modules\cardiovascular_other\antiplatelets.py
+  Thieu 0 required, 1 optional fields
+
+Colesevelam:
+  File: D:\1 medical\drugs\drug_modules\diabetes\other_antidiabetics.py
+  Thieu 1 required, 0 optional fields
+
+Dapagliflozin:
+  File: D:\1 medical\drugs\drug_modules\diabetes\sglt2_inhibitors.py
+  Thieu 1 required, 0 optional fields
+
+Doxorubicin:
+  File: D:\1 medical\drugs\drug_modules\oncology\anthracyclines.py
+  Thieu 0 required, 1 optional fields
+  [=] reversal_agents: Field da ton tai va co gia tri
+  -> Added: 0, Skipped: 1, Failed: 0
+
+Edaravone:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+
+Empagliflozin:
+  File: D:\1 medical\drugs\drug_modules\diabetes\sglt2_inhibitors.py
+  Thieu 1 required, 0 optional fields
+
+Fexofenadine/Pseudoephedrine:
+  File: D:\1 medical\drugs\drug_modules\ent_oral_nasal_combinations.py
+  Thieu 1 required, 0 optional fields
+
+Folic acid:
+  File: D:\1 medical\drugs\drug_modules\supportive\folates.py
+  Thieu 1 required, 0 optional fields
+
+Gabapentin:
+  File: D:\1 medical\drugs\drug_modules\neurological\anticonvulsant_alpha_2_delta_ligands.py
+  Thieu 0 required, 1 optional fields
+  [=] reversal_agents: Field da ton tai va co gia tri
+  -> Added: 0, Skipped: 1, Failed: 0
+
+Ginkgo biloba extract:
+  File: D:\1 medical\drugs\drug_modules\neurological\cerebral_circulation.py
+  Thieu 1 required, 0 optional fields
+
+Glibenclamide:
+  File: D:\1 medical\drugs\drug_modules\diabetes\sulfonylureas.py
+  Thieu 0 required, 1 optional fields
+
+Gliclazide:
+  File: D:\1 medical\drugs\drug_modules\diabetes\sulfonylureas.py
+  Thieu 0 required, 1 optional fields
+
+Hydroxychloroquine:
+  File: D:\1 medical\drugs\drug_modules\miscellaneous\dmards_rheumatology.py
+  Thieu 1 required, 0 optional fields
+
+Hyoscine butylbromide:
+  File: D:\1 medical\drugs\drug_modules\gastrointestinal\antispasmodics.py
+  Thieu 1 required, 0 optional fields
+
+Insulin:
+  File: D:\1 medical\drugs\drug_modules\diabetes\insulins.py
+  Thieu 0 required, 1 optional fields
+
+================================================================================
+TONG KET
+================================================================================
+Da cap nhat 2 thuoc
+Tong so fields da them: 0
+Tong so fields da bo qua (da ton tai): 2
+Tong so fields that bai: 0
+
+Luu y: Cac fields da duoc them voi template co ban.
+Can kiem tra va bo sung thong tin chi tiet tu nguon tin cay.

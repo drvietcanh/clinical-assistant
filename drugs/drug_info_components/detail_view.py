@@ -13,58 +13,115 @@ except ImportError:
     ANTIBIOTICS_DATABASE = {}
 from .card_components import _render_quick_facts_box, _render_black_box_warning
 
-def display_drug_info(drug_name, drug_data):
-    """Display detailed drug information in tab-based format (Epocrates style)"""
-    st.markdown(
-        f"""
-    <div class="drug-detail-header" style='
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    '>
-        <h2 style='margin: 0; color: white; font-size: 1.8em;'>💊 {drug_name}</h2>
-        {f"<p style='margin: 8px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1em;'>{drug_data.get('vietnamese_name', '')}</p>" if drug_data.get('vietnamese_name') else ''}
-    </div>
+def display_drug_info(drug_name, drug_data, show_header=True):
+    """Display detailed drug information in tab-based format (Epocrates style)
+    
+    Args:
+        drug_name: Name of the drug
+        drug_data: Dictionary containing drug information
+        show_header: Whether to show the drug header (default: True, set False when used in dedicated page)
     """
-        , unsafe_allow_html=True)
-    (tab_overview, tab_dosing, tab_safety, tab_interactions, tab_monitoring
-        ) = (st.tabs(['📋 Overview', '💊 Dosing', '⚠️ Safety',
-        '🔗 Interactions', '📊 Monitoring']))
+    if show_header:
+        st.markdown(
+            f"""
+        <div class="drug-detail-header" style='
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        '>
+            <h2 style='margin: 0; color: white; font-size: 1.8em;'>💊 {drug_name}</h2>
+            {f"<p style='margin: 8px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1em;'>{drug_data.get('vietnamese_name', '')}</p>" if drug_data.get('vietnamese_name') else ''}
+        </div>
+        """
+            , unsafe_allow_html=True)
+    # Enhanced tabs with better styling
+    tab_names = ['📋 Overview', '💊 Dosing', '⚠️ Safety', '🔗 Interactions', '📊 Monitoring']
+    (tab_overview, tab_dosing, tab_safety, tab_interactions, tab_monitoring) = st.tabs(tab_names)
     with tab_overview:
         if 'black_box_warnings' in drug_data:
             _render_black_box_warning(drug_data['black_box_warnings'])
         _render_quick_facts_box(drug_data)
-        col1, col2 = st.columns([2, 1])
-        with col1:
+        # Enhanced info cards layout
+        info_cols = st.columns(3)
+        with info_cols[0]:
             if 'vietnamese_name' in drug_data:
                 st.markdown(
-                    f"**📝 Tên biệt dược:** {drug_data['vietnamese_name']}")
+                    f"""
+                    <div style='background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0EA5E9; margin-bottom: 10px;'>
+                        <div style='color: #0369a1; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>📝 Tên biệt dược</div>
+                        <div style='color: #0c4a6e; font-size: 1em;'>{drug_data['vietnamese_name']}</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+        with info_cols[1]:
             if 'group' in drug_data:
-                st.markdown(f"**🏷️ Nhóm:** {drug_data['group']}")
-        with col2:
+                st.markdown(
+                    f"""
+                    <div style='background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B; margin-bottom: 10px;'>
+                        <div style='color: #92400e; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>🏷️ Nhóm</div>
+                        <div style='color: #78350f; font-size: 1em;'>{drug_data['group']}</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+        with info_cols[2]:
             if 'administration' in drug_data:
                 admin_icons = {'IV': '💉', 'IM': '💊', 'PO': '🍽️',
                     'Inhalation': '🌬️', 'SC': '💉', 'Rectal': '📦'}
                 admin_display = ' / '.join([
                     f"{admin_icons.get(route, '')} {route}" for route in
                     drug_data['administration']])
-                st.markdown(f'**💊 Đường dùng:** {admin_display}')
+                st.markdown(
+                    f"""
+                    <div style='background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10B981; margin-bottom: 10px;'>
+                        <div style='color: #065f46; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>💊 Đường dùng</div>
+                        <div style='color: #047857; font-size: 1em;'>{admin_display}</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
             if 'pregnancy' in drug_data:
                 preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
                 preg = drug_data['pregnancy']
-                st.markdown(f"**🤰 Thai kỳ:** {preg_icons.get(preg, '')} {preg}"
-                    )
+                preg_desc = {'A': 'An toàn', 'B': 'Khá an toàn', 'C': 'Thận trọng', 'D': 'Nguy cơ', 'X': 'Chống chỉ định'}
+                st.markdown(
+                    f"""
+                    <div style='background: #fce7f3; padding: 15px; border-radius: 8px; border-left: 4px solid #EC4899; margin-top: 10px;'>
+                        <div style='color: #831843; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>🤰 Thai kỳ</div>
+                        <div style='color: #9f1239; font-size: 1em;'>{preg_icons.get(preg, '')} {preg} - {preg_desc.get(preg, '')}</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
         st.markdown('---')
         if 'indications' in drug_data:
-            st.markdown('### 📋 Chỉ định:')
+            st.markdown('### 📋 Chỉ định')
+            indications_html = '<ul style="margin: 10px 0; padding-left: 20px;">'
             for ind in drug_data['indications']:
-                st.markdown(f'- {ind}')
+                indications_html += f'<li style="margin: 8px 0; color: #1e293b; font-size: 1em; line-height: 1.6;">{ind}</li>'
+            indications_html += '</ul>'
+            st.markdown(
+                f"""
+                <div style='background: #f8fafc; padding: 20px; border-radius: 10px; border-left: 4px solid #3B82F6; margin: 15px 0;'>
+                    {indications_html}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         if 'mechanism_of_action' in drug_data:
             st.markdown('---')
-            st.markdown('### 🔬 Cơ chế tác động:')
-            st.info(drug_data['mechanism_of_action'])
+            st.markdown('### 🔬 Cơ chế tác động')
+            st.markdown(
+                f"""
+                <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 10px; border-left: 4px solid #0EA5E9; margin: 15px 0;'>
+                    <p style='color: #0c4a6e; font-size: 1em; line-height: 1.8; margin: 0;'>{drug_data['mechanism_of_action']}</p>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         if 'pharmacokinetics' in drug_data:
             st.markdown('---')
             st.markdown('### 📈 Dược động học (Pharmacokinetics):')
@@ -86,8 +143,24 @@ def display_drug_info(drug_name, drug_data):
                 pk_data.append({'Thông số': 'Thanh thải', 'Giá trị': pk[
                     'clearance']})
             if pk_data:
-                st.dataframe(pd.DataFrame(pk_data), use_container_width=
-                    True, hide_index=True)
+                # Enhanced pharmacokinetics display with visual cards
+                pk_df = pd.DataFrame(pk_data)
+                st.markdown(
+                    f"""
+                    <div style='background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                        <h4 style='color: #0c4a6e; margin: 0 0 15px 0; font-size: 1.1em;'>📈 Dược động học</h4>
+                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px;'>
+                            {''.join([f"""
+                            <div style='background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #0EA5E9;'>
+                                <div style='color: #0369a1; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>{row['Thông số']}</div>
+                                <div style='color: #0c4a6e; font-size: 1em; font-weight: 500;'>{row['Giá trị']}</div>
+                            </div>
+                            """ for _, row in pk_df.iterrows()])}
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
         if 'storage' in drug_data:
             st.markdown('---')
             st.markdown('### 📦 Bảo quản:')
@@ -126,21 +199,55 @@ def display_drug_info(drug_name, drug_data):
                 adult_doses.append(
                     f"**Liều duy trì:** {dosage['adult_maintenance']}")
             if adult_doses:
-                col1, col2 = st.columns(2)
-                mid = len(adult_doses) // 2 + len(adult_doses) % 2
-                for i, dose in enumerate(adult_doses[:mid]):
-                    with col1:
-                        st.info(dose)
-                for i, dose in enumerate(adult_doses[mid:], start=mid):
-                    with col2:
-                        st.info(dose)
+                # Enhanced dosing display with better visual design
+                st.markdown(
+                    f"""
+                    <div style='background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                        <h4 style='color: #166534; margin: 0 0 15px 0; font-size: 1.1em;'>💊 Liều dùng người lớn</h4>
+                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
+                            {''.join([f"""
+                            <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #10B981;'>
+                                <div style='color: #047857; font-size: 0.95em; line-height: 1.6;'>{dose.replace('**', '').replace(':', ':</strong>').replace('**', '<strong>')}</div>
+                            </div>
+                            """ for dose in adult_doses])}
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
             if 'notes' in dosage:
                 st.caption(f"💡 {dosage['notes']}")
-        if 'dosage' in drug_data and 'pediatric' in drug_data['dosage']:
-            st.markdown('---')
-            st.markdown('### 👶 Liều dùng trẻ em:')
-            ped_dose = drug_data['dosage']['pediatric']
-            st.info(ped_dose)
+        if 'dosage' in drug_data:
+            # Enhanced pediatric dosing display
+            ped_doses = []
+            if 'pediatric' in drug_data['dosage']:
+                ped_doses.append(('Tổng quát', drug_data['dosage']['pediatric']))
+            if 'pediatric_6_14' in drug_data['dosage']:
+                ped_doses.append(('6-14 tuổi', drug_data['dosage']['pediatric_6_14']))
+            if 'pediatric_2_5' in drug_data['dosage']:
+                ped_doses.append(('2-5 tuổi', drug_data['dosage']['pediatric_2_5']))
+            if 'pediatric_under_2' in drug_data['dosage']:
+                ped_doses.append(('< 2 tuổi', drug_data['dosage']['pediatric_under_2']))
+            
+            if ped_doses:
+                st.markdown('---')
+                st.markdown('### 👶 Liều dùng trẻ em')
+                st.markdown(
+                    f"""
+                    <div style='background: #fef3c7; border: 1px solid #fcd34d; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                        <h4 style='color: #92400e; margin: 0 0 15px 0; font-size: 1.1em;'>👶 Liều dùng theo độ tuổi</h4>
+                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
+                            {''.join([f"""
+                            <div style='background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B;'>
+                                <div style='font-weight: bold; color: #92400e; margin-bottom: 8px; font-size: 0.95em;'>{age_group}</div>
+                                <div style='color: #78350f; font-size: 0.9em; line-height: 1.6;'>{dose}</div>
+                            </div>
+                            """ for age_group, dose in ped_doses])}
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
         if 'renal_adjustment' in drug_data:
             st.markdown('---')
             st.markdown('### 🫘 Điều chỉnh theo chức năng thận:')
@@ -165,62 +272,197 @@ def display_drug_info(drug_name, drug_data):
                 renal_data.append({'CrCl (mL/min)': 'Lọc máu', 'Điều chỉnh':
                     renal['hemodialysis']})
             if renal_data:
-                st.dataframe(pd.DataFrame(renal_data), use_container_width=
-                    True, hide_index=True)
+                # Enhanced renal adjustment display with visual cards
+                st.markdown(
+                    f"""
+                    <div style='background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                        <h4 style='color: #1e293b; margin: 0 0 15px 0; font-size: 1.1em;'>🫘 Điều chỉnh theo chức năng thận</h4>
+                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;'>
+                            {''.join([f"""
+                            <div style='background: {'#d1fae5' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#fef3c7' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#fee2e2' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) else 'white'}; padding: 15px; border-radius: 8px; border-left: 4px solid {'#10B981' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#F59E0B' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#DC2626' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) else '#64748b'};'>
+                                <div style='font-weight: bold; color: #1e293b; margin-bottom: 5px; font-size: 0.95em;'>{row['CrCl (mL/min)']}</div>
+                                <div style='color: #475569; font-size: 0.9em; line-height: 1.5;'>{row['Điều chỉnh']}</div>
+                            </div>
+                            """ for row in renal_data])}
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
         is_antibiotic = drug_name in ANTIBIOTICS_DATABASE
         if is_antibiotic:
             st.markdown('---')
             st.markdown('### 🧮 Tính liều theo CrCl/eGFR')
-            col1, col2 = st.columns([2, 1])
-            with col1:
-                st.info(
-                    f"""
-                **💡 Tính liều tự động cho {drug_name}:**
-                - Dựa trên chức năng thận (CrCl/eGFR)
-                - Hỗ trợ HD, PD, béo phì, trẻ em
-                - Tính liều chi tiết và cảnh báo tự động
-                """
-                    )
-            with col2:
-                safe_calc_key = (
-                    f"calc_dose_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
-                    )
-                if st.button('🧮 Tính liều theo CrCl', key=safe_calc_key,
-                    use_container_width=True, type='primary'):
-                    st.session_state['preset_antibiotic_name'] = drug_name
-                    st.session_state['switch_to_dosing_calculator'] = True
-                    st.rerun()
+            
+            # Enhanced dosing calculator section
+            st.markdown(
+                f"""
+                <div style='background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 1px solid #86efac; border-radius: 10px; padding: 25px; margin: 15px 0;'>
+                    <div style='display: flex; align-items: start; gap: 20px; flex-wrap: wrap;'>
+                        <div style='flex: 1; min-width: 250px;'>
+                            <h4 style='color: #166534; margin: 0 0 12px 0; font-size: 1.2em;'>💡 Tính liều tự động cho {drug_name}</h4>
+                            <ul style='color: #047857; margin: 0; padding-left: 20px; line-height: 1.8;'>
+                                <li>Dựa trên chức năng thận (CrCl/eGFR)</li>
+                                <li>Hỗ trợ HD, PD, béo phì, trẻ em</li>
+                                <li>Tính liều chi tiết và cảnh báo tự động</li>
+                                <li>Tích hợp với calculator chuyên dụng</li>
+                            </ul>
+                        </div>
+                        <div style='min-width: 150px;'>
+                            <div style='background: white; padding: 15px; border-radius: 8px; border: 2px solid #10B981; text-align: center;'>
+                                <div style='font-size: 2em; margin-bottom: 8px;'>🧮</div>
+                                <div style='color: #166534; font-weight: bold; font-size: 0.9em;'>Calculator</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            
+            safe_calc_key = (
+                f"calc_dose_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+                )
+            if st.button('🧮 Mở Calculator Tính Liều', key=safe_calc_key,
+                use_container_width=True, type='primary'):
+                st.session_state['preset_antibiotic_name'] = drug_name
+                st.session_state['switch_to_dosing_calculator'] = True
+                st.rerun()
             st.caption(
                 '💡 Click nút trên để mở calculator với thuốc này đã được chọn sẵn'
                 )
     with tab_safety:
         if 'contraindications' in drug_data:
-            st.markdown('### ⛔ Chống chỉ định:')
+            st.markdown('### ⛔ Chống chỉ định')
             contraindications = drug_data['contraindications']
             if isinstance(contraindications, dict):
-                if 'tuyệt_đối' in contraindications and contraindications[
-                    'tuyệt_đối']:
-                    st.markdown('**🔴 Tuyệt đối:**')
-                    for contra in contraindications['tuyệt_đối']:
-                        st.markdown(f'- {contra}')
-                if 'tương_đối' in contraindications and contraindications[
-                    'tương_đối']:
-                    st.markdown('**🟡 Tương đối:**')
-                    for contra in contraindications['tương_đối']:
-                        st.markdown(f'- {contra}')
+                # Enhanced contraindications display
+                if 'tuyệt_đối' in contraindications and contraindications['tuyệt_đối']:
+                    st.markdown(
+                        f"""
+                        <div style='background: #fee2e2; border-left: 4px solid #DC2626; padding: 20px; border-radius: 10px; margin: 15px 0;'>
+                            <h4 style='color: #991b1b; margin: 0 0 15px 0; font-size: 1.1em; font-weight: bold;'>🔴 Tuyệt đối</h4>
+                            <ul style='margin: 0; padding-left: 20px; color: #7f1d1d;'>
+                                {''.join([f'<li style="margin: 8px 0; font-weight: 500; line-height: 1.6;">{contra}</li>' for contra in contraindications['tuyệt_đối']])}
+                            </ul>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+                if 'tương_đối' in contraindications and contraindications['tương_đối']:
+                    st.markdown(
+                        f"""
+                        <div style='background: #fef3c7; border-left: 4px solid #F59E0B; padding: 20px; border-radius: 10px; margin: 15px 0;'>
+                            <h4 style='color: #92400e; margin: 0 0 15px 0; font-size: 1.1em; font-weight: bold;'>🟡 Tương đối - Thận trọng</h4>
+                            <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
+                                {''.join([f'<li style="margin: 8px 0; line-height: 1.6;">{contra}</li>' for contra in contraindications['tương_đối']])}
+                            </ul>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
             else:
-                for contra in contraindications:
-                    st.markdown(f'- {contra}')
+                # Fallback for simple list
+                st.markdown(
+                    f"""
+                    <div style='background: #f1f5f9; border-left: 4px solid #64748b; padding: 20px; border-radius: 10px; margin: 15px 0;'>
+                        <ul style='margin: 0; padding-left: 20px; color: #475569;'>
+                            {''.join([f'<li style="margin: 8px 0; line-height: 1.6;">{contra}</li>' for contra in contraindications])}
+                        </ul>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
         if 'side_effects' in drug_data:
             st.markdown('---')
-            st.markdown('### ⚠️ Tác dụng phụ:')
-            for se in drug_data['side_effects']:
-                st.markdown(f'- {se}')
+            st.markdown('### ⚠️ Tác dụng phụ')
+            
+            # Categorize side effects (inspired by Drugs.com)
+            # Note: In real implementation, we'd have severity data, but for now we'll use heuristics
+            side_effects = drug_data['side_effects']
+            if isinstance(side_effects, list) and len(side_effects) > 0:
+                # Keywords for serious side effects
+                serious_keywords = ['tử vong', 'nguy hiểm', 'nghiêm trọng', 'suy gan', 'suy thận', 
+                                  'phản ứng dị ứng nặng', 'sốc phản vệ', 'xuất huyết', 'chảy máu nặng',
+                                  'rối loạn nhịp tim', 'nhồi máu', 'đột quỵ', 'huyết khối']
+                
+                # Separate into categories (simplified - in production would use structured data)
+                common_effects = []
+                serious_effects = []
+                other_effects = []
+                
+                for se in side_effects:
+                    se_lower = se.lower()
+                    if any(keyword in se_lower for keyword in serious_keywords):
+                        serious_effects.append(se)
+                    elif len(se) < 50:  # Shorter descriptions often indicate common effects
+                        common_effects.append(se)
+                    else:
+                        other_effects.append(se)
+                
+                # If no categorization worked, show all as common
+                if not common_effects and not serious_effects:
+                    common_effects = side_effects
+                
+                # Display categorized
+                if common_effects:
+                    st.markdown(
+                        f"""
+                        <div style='background: #fef3c7; border-left: 4px solid #F59E0B; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                            <div style='color: #92400e; font-weight: bold; margin-bottom: 8px; font-size: 1em;'>🟡 Phổ biến (≥1%)</div>
+                            <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
+                                {''.join([f'<li style="margin: 5px 0;">{se}</li>' for se in common_effects])}
+                            </ul>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+                
+                if serious_effects:
+                    st.markdown(
+                        f"""
+                        <div style='background: #fee2e2; border-left: 4px solid #DC2626; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                            <div style='color: #991b1b; font-weight: bold; margin-bottom: 8px; font-size: 1em;'>🔴 Nghiêm trọng - Cần báo bác sĩ ngay</div>
+                            <ul style='margin: 0; padding-left: 20px; color: #7f1d1d;'>
+                                {''.join([f'<li style="margin: 5px 0; font-weight: 500;">{se}</li>' for se in serious_effects])}
+                            </ul>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+                
+                if other_effects and (common_effects or serious_effects):
+                    st.markdown(
+                        f"""
+                        <div style='background: #f1f5f9; border-left: 4px solid #64748b; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                            <div style='color: #475569; font-weight: bold; margin-bottom: 8px; font-size: 1em;'>⚪ Khác</div>
+                            <ul style='margin: 0; padding-left: 20px; color: #334155;'>
+                                {''.join([f'<li style="margin: 5px 0;">{se}</li>' for se in other_effects])}
+                            </ul>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+            else:
+                # Fallback for non-list or empty
+                st.info(str(side_effects) if side_effects else "Không có thông tin về tác dụng phụ")
         if 'precautions' in drug_data:
             st.markdown('---')
-            st.markdown('### ⚠️ Thận trọng:')
-            for prec in drug_data['precautions']:
-                st.markdown(f'- {prec}')
+            st.markdown('### ⚠️ Thận trọng')
+            precautions = drug_data['precautions']
+            if isinstance(precautions, list) and len(precautions) > 0:
+                st.markdown(
+                    f"""
+                    <div style='background: #fffbeb; border-left: 4px solid #F59E0B; padding: 20px; border-radius: 10px; margin: 15px 0;'>
+                        <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
+                            {''.join([f'<li style="margin: 10px 0; line-height: 1.7; font-size: 0.95em;">{prec}</li>' for prec in precautions])}
+                        </ul>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            else:
+                st.info(str(precautions) if precautions else "Không có thông tin về thận trọng")
         if 'pregnancy' in drug_data:
             st.markdown('---')
             preg = drug_data['pregnancy']
@@ -250,13 +492,30 @@ def display_drug_info(drug_name, drug_data):
                 )
     with tab_monitoring:
         if 'monitoring' in drug_data:
-            st.markdown('### 📊 Theo dõi (Monitoring):')
+            st.markdown('### 📊 Theo dõi (Monitoring)')
             monitoring_list = drug_data['monitoring']
-            if isinstance(monitoring_list, list):
-                for mon in monitoring_list:
-                    st.markdown(f'- ✅ {mon}')
+            if isinstance(monitoring_list, list) and len(monitoring_list) > 0:
+                # Enhanced monitoring display with categorized items
+                st.markdown(
+                    f"""
+                    <div style='background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                        <h4 style='color: #1e293b; margin: 0 0 15px 0; font-size: 1.1em;'>📊 Các thông số cần theo dõi</h4>
+                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
+                            {''.join([f"""
+                            <div style='background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #8B5CF6;'>
+                                <div style='color: #1e293b; font-size: 0.95em; line-height: 1.6; display: flex; align-items: start;'>
+                                    <span style='font-size: 1.2em; margin-right: 8px; color: #8B5CF6;'>✅</span>
+                                    <span>{mon}</span>
+                                </div>
+                            </div>
+                            """ for mon in monitoring_list])}
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
             else:
-                st.info(monitoring_list)
+                st.info(str(monitoring_list) if monitoring_list else "Không có thông tin về monitoring")
         try:
             from drugs.drug_utils.tdm_mapping import get_tdm_info, has_tdm
             if has_tdm(drug_name):

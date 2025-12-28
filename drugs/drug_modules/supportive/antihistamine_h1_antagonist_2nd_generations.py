@@ -76,7 +76,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'UpToDate - Loratadine: Drug information',
         'Allergy & Clinical Immunology guidelines'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs and systematic reviews'}},
+        'High - Multiple RCTs and systematic reviews'}         "black_box_warnings": None,
+},
     "Cetirizine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Cetirizine, Zyrtec', 'administration': ['PO'],
         'indications': ['Dị ứng (allergic rhinitis)', 'Mề đay (urticaria)',
@@ -178,7 +179,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Cetirizine'
-        ]},
+        ]         "black_box_warnings": None,
+},
     "Fexofenadine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Fexofenadine, Allegra', 'administration': ['PO'],
         'indications': ['Dị ứng (allergic rhinitis)', 'Mề đay (urticaria)',
@@ -270,7 +272,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Fexofenadine'
-        ]},
+        ]         "black_box_warnings": None,
+},
     "Desloratadine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Desloratadine, Aerius', 'administration': ['PO'],
         'indications': ['Dị ứng (allergic rhinitis)', 'Mề đay (urticaria)',
@@ -319,7 +322,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Ngừng desloratadine ngay lập tức', 'Theo dõi dấu hiệu sinh tồn',
         'Hỗ trợ hô hấp nếu cần', 'Theo dõi trong 24-48 giờ (half-life dài)'],
         'monitoring': 'Dấu hiệu sinh tồn, mức độ ý thức, dấu hiệu buồn ngủ'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Theo dõi trong 24-48 giờ do half-life dài.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu.',
         'timing': 'Uống 1 lần/ngày, bất kỳ lúc nào, cùng thời điểm mỗi ngày.'},
@@ -393,9 +397,10 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Mệt mỏi', 'Khô miệng', 'Chóng mặt'], 'antidote':
         'Không có antidote đặc hiệu. Điều trị hỗ trợ.', 'treatment': [
         'Ngừng levocetirizine ngay lập tức', 'Theo dõi dấu hiệu sinh tồn',
-        'Hỗ trợ hô hấp nếu cần', 'Theo dõi trong 24-48 giờ'], 'monitoring':
+        'Hỗ trợ hô hấp nếu cần', 'Theo dõi trong 24-48 giờ'],         'monitoring':
         'Dấu hiệu sinh tồn, mức độ ý thức, dấu hiệu buồn ngủ'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Theo dõi trong 24-48 giờ do half-life dài.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu.',
         'timing':

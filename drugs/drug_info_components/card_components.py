@@ -74,9 +74,9 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
         view_key = (f'{key_prefix}view_{safe_drug_name}{unique_suffix}' if key_prefix else
             f'view_{safe_drug_name}{unique_suffix}')
         if st.button('📖 Xem chi tiết', key=view_key, use_container_width=True):
-            st.session_state['selected_drug'] = str(drug_name)
-            st.session_state['show_detail'] = True
-            st.rerun()
+            # Navigate to dedicated drug detail page
+            st.session_state['view_drug_name'] = str(drug_name)
+            st.switch_page("pages/Drug_Detail.py")
     with col2:
         compare_key = (f'{key_prefix}compare_{safe_drug_name}{unique_suffix}' if
             key_prefix else f'compare_{safe_drug_name}{unique_suffix}')
@@ -96,51 +96,100 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
         st.empty()
 
 def _render_quick_facts_box(drug_data):
-    """Render quick facts box with key information"""
-    facts = []
+    """Render enhanced quick facts box with key information (inspired by Epocrates)"""
+    facts_cards = []
+    
+    # Pregnancy
     if 'pregnancy' in drug_data:
         preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
         preg = drug_data['pregnancy']
-        facts.append(f"**Thai kỳ:** {preg_icons.get(preg, '')} {preg}")
-    if 'lactation' in drug_data:
-        facts.append(f"**Cho con bú:** {drug_data['lactation']}")
-    if 'pharmacokinetics' in drug_data and 'half_life' in drug_data[
-        'pharmacokinetics']:
+        preg_colors = {'A': '#10B981', 'B': '#F59E0B', 'C': '#F97316', 'D': '#EF4444', 'X': '#1F2937'}
+        facts_cards.append(f"""
+            <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid {preg_colors.get(preg, "#64748b")}; flex: 1; min-width: 150px;'>
+                <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>🤰 Thai kỳ</div>
+                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{preg_icons.get(preg, '')} {preg}</div>
+            </div>
+        """)
+    
+    # Lactation
+    if 'pregnancy_lactation' in drug_data and 'lactation' in drug_data['pregnancy_lactation']:
+        lactation = drug_data['pregnancy_lactation']['lactation']
+        safety = lactation.get('safety', 'Unknown') if isinstance(lactation, dict) else str(lactation)
+        safety_icons = {'Compatible': '✅', 'Compatible with monitoring': '⚠️', 'Unknown': '❓'}
+        facts_cards.append(f"""
+            <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #8B5CF6; flex: 1; min-width: 150px;'>
+                <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>🤱 Cho con bú</div>
+                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{safety_icons.get(safety, '❓')} {safety}</div>
+            </div>
+        """)
+    elif 'lactation' in drug_data:
+        lactation = drug_data['lactation']
+        facts_cards.append(f"""
+            <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #8B5CF6; flex: 1; min-width: 150px;'>
+                <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>🤱 Cho con bú</div>
+                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{lactation}</div>
+            </div>
+        """)
+    
+    # Half-life
+    if 'pharmacokinetics' in drug_data and 'half_life' in drug_data['pharmacokinetics']:
         half_life = drug_data['pharmacokinetics']['half_life']
-        facts.append(f'**Half-life:** {half_life}')
+        facts_cards.append(f"""
+            <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #3B82F6; flex: 1; min-width: 150px;'>
+                <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>⏱️ Half-life</div>
+                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{half_life}</div>
+            </div>
+        """)
+    
+    # Administration
+    if 'administration' in drug_data:
+        admin_icons = {'IV': '💉', 'IM': '💊', 'PO': '🍽️', 'Inhalation': '🌬️', 'SC': '💉', 'Rectal': '📦'}
+        admin_routes = drug_data['administration'][:3]  # Limit to 3
+        admin_display = ' '.join([f"{admin_icons.get(route, '💊')}" for route in admin_routes])
+        facts_cards.append(f"""
+            <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #10B981; flex: 1; min-width: 150px;'>
+                <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>💊 Đường dùng</div>
+                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{admin_display}</div>
+            </div>
+        """)
+    
+    # Monitoring summary
     if 'monitoring' in drug_data:
         monitoring_list = drug_data['monitoring']
         if isinstance(monitoring_list, list) and len(monitoring_list) > 0:
-            summary = ', '.join(monitoring_list[:3])
-            if len(monitoring_list) > 3:
-                summary += '...'
-            facts.append(f'**Theo dõi:** {summary}')
-    if 'administration' in drug_data:
-        admin_icons = {'IV': '💉', 'IM': '💊', 'PO': '🍽️', 'Inhalation': '🌬️',
-            'SC': '💉', 'Rectal': '📦'}
-        admin_display = ' / '.join([f"{admin_icons.get(route, '')} {route}" for
-            route in drug_data['administration']])
-        facts.append(f'**Đường dùng:** {admin_display}')
-    if not facts:
+            count = len(monitoring_list)
+            facts_cards.append(f"""
+                <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #8B5CF6; flex: 1; min-width: 150px;'>
+                    <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>📊 Theo dõi</div>
+                    <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{count} mục cần theo dõi</div>
+                </div>
+            """)
+    
+    if not facts_cards:
         return
-    facts_html = ' | '.join(facts)
+    
     st.markdown(
         f"""
-    <div class="quick-facts-box" style='
-        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-        border-left: 4px solid #0EA5E9;
-        padding: 15px 20px;
-        border-radius: 8px;
-        margin: 15px 0;
-        box-shadow: 0 2px 4px rgba(14, 165, 233, 0.1);
-    '>
-        <h4 style='margin: 0 0 10px 0; color: #0369a1; font-size: 1.1em;'>📊 Quick Facts</h4>
-        <div style='color: #0c4a6e; font-size: 0.95em; line-height: 1.8;'>
-            {facts_html}
+        <div class="quick-facts-box" style='
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 2px solid #e2e8f0;
+            border-left: 5px solid #3B82F6;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        '>
+            <h4 style='margin: 0 0 15px 0; color: #1e293b; font-size: 1.2em; display: flex; align-items: center;'>
+                <span style='font-size: 1.3em; margin-right: 8px;'>⚡</span>
+                Quick Facts
+            </h4>
+            <div style='display: flex; flex-wrap: wrap; gap: 12px;'>
+                {''.join(facts_cards)}
+            </div>
         </div>
-    </div>
-    """
-        , unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True
+    )
 
 def _render_black_box_warning(warning_text):
     """Render black box warning with prominent styling"""

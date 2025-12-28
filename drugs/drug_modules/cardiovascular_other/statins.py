@@ -166,7 +166,11 @@ STATINS_DRUGS = {
             "last_updated": "2025-03-02",
             "evidence_level": "A (giảm tái phát đột quỵ/tim mạch)",
         },
-    },
+             "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
     "Rosuvastatin": {
         "group": "Cardiovascular - Statin (HMG-CoA Reductase Inhibitor)",
         "vietnamese_name": "Rosuvastatin, Crestor",

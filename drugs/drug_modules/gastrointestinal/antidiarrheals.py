@@ -103,7 +103,13 @@ ANTIDIARRHEALS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'FDA Safety Communication - Loperamide abuse and overdose (2016)'],
         'last_updated': '2024-12-19', 'evidence_level':
-        'High - FDA approved, multiple RCTs, safety warnings'}},
+        'High - FDA approved, multiple RCTs, safety warnings'}         "renal_adjustment": {
+             "normal": "Không đổi",
+             "30_60": "Thận trọng, có thể giảm liều",
+             "under_30": "Giảm liều hoặc tránh dùng",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+         },
+},
     "Bismuth subsalicylate": {'group': 'Gastrointestinal - Antidiarrheal',
         'vietnamese_name': 'Bismuth subsalicylate, Pepto-Bismol', 'administration': [
         'PO'], 'indications': [
@@ -205,6 +211,12 @@ ANTIDIARRHEALS_DRUGS = {
         'UpToDate - Bismuth subsalicylate: Drug information', 'Micromedex - Bismuth subsalicylate',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}}}
+        'High - FDA approved, multiple RCTs, clinical guidelines'}         "renal_adjustment": {
+             "normal": "Không đổi",
+             "30_60": "Thận trọng, có thể giảm liều",
+             "under_30": "Giảm liều hoặc tránh dùng",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+         },
+}}
 
 __all__ = ['ANTIDIARRHEALS_DRUGS']

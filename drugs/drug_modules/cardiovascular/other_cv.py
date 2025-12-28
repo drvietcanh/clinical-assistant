@@ -344,7 +344,65 @@ OTHER_CV_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - Extensive clinical experience in hypertension and opioid withdrawal"
         }
-    },
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Beta-blocker: tăng nguy cơ nhịp tim chậm, block AV khi ngừng clonidine",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Tricyclic antidepressants: giảm hiệu quả clonidine",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Alcohol, sedatives: tăng tác dụng an thần",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "C",
+              "pregnancy_details": "Category C - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+              "lactation": {
+                  "safety": "Compatible with monitoring",
+                  "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                  "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Thận trọng",
+              "severe": "Thận trọng, có thể giảm liều",
+              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+              ],
+              "antidote": "Không có antidote đặc hiệu",
+              "treatment": [
+                  "Ngừng ngay thuốc",
+                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                  "Than hoạt tính",
+                  "Điều trị hỗ trợ và điều trị triệu chứng",
+                  "Theo dõi dấu hiệu sinh tồn"
+              ],
+              "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+          },
+          "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                  "timing": "Theo chỉ định của bác sĩ",
+                  "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+              }
+          },
+},
 
     "Methyldopa": {
         "group": "Cardiovascular - Central Alpha-2 Agonist",
@@ -444,7 +502,63 @@ OTHER_CV_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - Extensive clinical experience, especially in pregnancy (category B, preferred for pregnancy hypertension)"
         }
-    },
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "MAO inhibitors: tăng tác dụng, nguy hiểm",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Lithium: tăng nguy cơ độc tính lithium",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Iron: giảm hấp thu methyldopa",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Antidepressants: có thể giảm hiệu quả",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+              ],
+              "antidote": "Không có antidote đặc hiệu",
+              "treatment": [
+                  "Ngừng ngay thuốc",
+                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                  "Than hoạt tính",
+                  "Điều trị hỗ trợ và điều trị triệu chứng",
+                  "Theo dõi dấu hiệu sinh tồn"
+              ],
+              "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+          },
+          "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                  "timing": "Theo chỉ định của bác sĩ",
+                  "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+              },
+              "iv": {
+                  "reconstitution": "Cần tra cứu",
+                  "infusion_rate": "Cần tra cứu",
+                  "compatibility": [
+                      "Cần tra cứu"
+                  ],
+                  "incompatibility": [],
+                  "notes": "Cần tra cứu thêm thông tin chi tiết."
+              }
+          },
+},
 
     "Labetalol": {
         "group": "Cardiovascular - Alpha-Beta Blocker",

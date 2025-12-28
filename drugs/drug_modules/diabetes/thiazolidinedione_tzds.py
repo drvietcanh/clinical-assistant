@@ -88,7 +88,8 @@ THIAZOLIDINEDIONE_TZDS_DRUGS = {
         'Theo dõi dấu hiệu sinh tồn, chức năng gan, chức năng tim'],
         'monitoring':
         'Dấu hiệu suy tim, phù, đường huyết, chức năng gan, công thức máu, dấu hiệu sinh tồn'
-        }, 'reversal_agents': {'available': False, 'agents': []},
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có suy tim, độc tính gan, hoặc phản ứng dị ứng nghiêm trọng.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu.',
         'timing': 'Uống 1 lần/ngày, bất kỳ lúc nào, cùng thời điểm mỗi ngày.'},

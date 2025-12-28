@@ -1086,7 +1086,7 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi cải thiện kích ứng tại chỗ.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Rửa sạch vùng âm đạo nếu cần."},
         "administration_instructions": {
             "vaginal": {
                 "with_food": "Không liên quan bữa ăn.",
@@ -1189,7 +1189,7 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi triệu chứng kích ứng.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Rửa sạch vùng âm đạo nếu cần."},
         "administration_instructions": {
             "vaginal": {
                 "with_food": "Không liên quan bữa ăn.",
@@ -1295,7 +1295,7 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             ],
             "monitoring": "Theo dõi giảm kích ứng; nếu không cải thiện, khám phụ khoa.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Rửa sạch vùng âm đạo nếu cần."},
         "administration_instructions": {
             "vaginal": {
                 "with_food": "Không liên quan bữa ăn.",

@@ -366,7 +366,8 @@ GOUT_MEDICATIONS_DRUGS = {
             "FDA Drug Information - Probenecid",
             "UpToDate - Gout Treatment"
         ]
-    },
+                  "black_box_warnings": None,
+},
     
     "Febuxostat": {
         "group": "Metabolism - Gout Medication (Xanthine Oxidase Inhibitor)",

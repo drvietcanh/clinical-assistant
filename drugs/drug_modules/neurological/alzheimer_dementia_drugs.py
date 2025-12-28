@@ -244,7 +244,13 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
         ], 'last_updated': '2024-12-19', 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }},
+        }         "renal_adjustment": {
+             "normal": "Không đổi",
+             "30_60": "Thận trọng, có thể giảm liều",
+             "under_30": "Giảm liều hoặc tránh dùng",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+         },
+},
     "Memantine": {'group': 'Neurology - NMDA Receptor Antagonist',
         'vietnamese_name': 'Memantine, Namenda', 'administration': ['PO'],
         'indications': [
@@ -325,7 +331,8 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Acid hóa nước tiểu (vitamin C, ammonium chloride) để tăng thải trừ memantine'
         , 'Hỗ trợ hô hấp nếu cần'], 'monitoring':
         'Theo dõi ý thức, hô hấp, tim mạch, dấu hiệu co giật'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Acid hóa nước tiểu có thể tăng thải trừ.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn', 'timing':
         'Chia 2 lần/ngày (sáng, tối). Tăng liều chậm: 5mg/ngày x 1 tuần → 5mg x 2 lần/ngày x 1 tuần → 10mg buổi sáng + 5mg buổi tối x 1 tuần → 10mg x 2 lần/ngày. Có thể dùng kết hợp với donepezil.'
@@ -337,7 +344,13 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
         ], 'last_updated': '2024-12-19', 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }},
+        }         "renal_adjustment": {
+             "normal": "Không đổi",
+             "30_60": "Thận trọng, có thể giảm liều",
+             "under_30": "Giảm liều hoặc tránh dùng",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+         },
+},
 
     "Lecanemab": {
         "group": "Neurology - Anti-amyloid Monoclonal Antibody",

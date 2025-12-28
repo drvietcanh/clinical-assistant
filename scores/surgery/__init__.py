@@ -26,6 +26,10 @@ from .surgical_apgar import render as render_surgical_apgar
 from .sort import render as render_sort
 from .gupta_cardiac import render as render_gupta_cardiac
 from .goldman_cardiac import render as render_goldman_cardiac
+from .clavien_dindo import render as render_clavien_dindo
+from .rhmp30 import render as render_rhmp30
+from .wifi import render as render_wifi
+from .perioperative_anticoagulation import render as render_perioperative_anticoagulation
 
 
 def render_surgery_calculator(calculator_id):
@@ -61,6 +65,10 @@ def render_surgery_calculator(calculator_id):
         "SORT": render_sort,
         "Gupta Cardiac": render_gupta_cardiac,
         "Goldman Cardiac": render_goldman_cardiac,
+        "Clavien-Dindo": render_clavien_dindo,
+        "RHMP-30": render_rhmp30,
+        "WIFI Classification": render_wifi,
+        "Perioperative Anticoagulation": render_perioperative_anticoagulation,
     }
     
     calculator_func = calculators.get(calculator_id)

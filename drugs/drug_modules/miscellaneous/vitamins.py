@@ -99,7 +99,8 @@ VITAMINS_DRUGS = {
             'WHO Guidelines - Folic Acid Supplementation',
             'ACOG Guidelines - Neural Tube Defect Prevention',
             'FDA Drug Information - Folic Acid'
-        ]},
+        ]         "black_box_warnings": None,
+},
     "Vitamin C": {
         'group': 'Vitamins/Supplements - Vitamin C',
         'vietnamese_name': 'Vitamin C, Ascorbic Acid',
@@ -243,7 +244,8 @@ VITAMINS_DRUGS = {
             'last_updated': '2025-02-05',
             'evidence_level': 'High - Guidelines dựa trên chứng cứ từ WHO và FDA'
         }
-    },
+             "black_box_warnings": None,
+},
     "Vitamin E": {
         'group': 'Vitamins/Supplements - Vitamin E',
         'vietnamese_name': 'Vitamin E, Alpha-tocopherol',
@@ -391,7 +393,8 @@ VITAMINS_DRUGS = {
             'last_updated': '2025-02-05',
             'evidence_level': 'High - Guidelines dựa trên chứng cứ từ WHO và FDA'
         }
-    },
+             "black_box_warnings": None,
+},
 
     "Vitamin D3 (Cholecalciferol)": {
         "group": "Vitamins/Supplements - Vitamin D",
@@ -500,7 +503,7 @@ VITAMINS_DRUGS = {
             ],
             "monitoring": "Calci, phospho, creatinin huyết thanh.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc và điều chỉnh calci máu nếu cần."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Nên dùng với bữa ăn có chất béo nhẹ để tăng hấp thu.",
@@ -624,7 +627,7 @@ VITAMINS_DRUGS = {
             ],
             "monitoring": "Calci máu, creatinin, tình trạng nước–điện giải.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc và điều chỉnh calci máu nếu tăng calci máu."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Calcium carbonate nên dùng cùng thức ăn; calcium citrate có thể dùng cùng hoặc xa bữa ăn.",
@@ -639,7 +642,8 @@ VITAMINS_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "High – guideline-based",
         },
-    },
+              "black_box_warnings": None,
+},
 }
 
 __all__ = ["VITAMINS_DRUGS"]

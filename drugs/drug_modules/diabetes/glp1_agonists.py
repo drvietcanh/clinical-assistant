@@ -198,7 +198,11 @@ GLP1_AGONISTS_DRUGS = {
             "STEP Trials",
             "FDA Black Box Warning - Thyroid C-cell tumors"
         ],
-    },
+             "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
 
     "Liraglutide": {
         "group": "Diabetes - GLP-1 Receptor Agonist",
@@ -355,7 +359,11 @@ GLP1_AGONISTS_DRUGS = {
             "LEADER Trial",
             "FDA Black Box Warning - Thyroid C-cell tumors"
         ],
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Dulaglutide": {
         "group": "Diabetes - GLP-1 Receptor Agonist",
@@ -507,7 +515,11 @@ GLP1_AGONISTS_DRUGS = {
             "REWIND Trial",
             "FDA Black Box Warning - Thyroid C-cell tumors"
         ],
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Exenatide": {
         "group": "Diabetes - GLP-1 Receptor Agonist",
@@ -661,7 +673,11 @@ GLP1_AGONISTS_DRUGS = {
             "AACE/ACE Diabetes Guidelines",
             "FDA Black Box Warning - Thyroid C-cell tumors and Renal Impairment"
         ],
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Tirzepatide": {
         "group": "Diabetes - GIP/GLP-1 Dual Agonist",
@@ -843,7 +859,11 @@ GLP1_AGONISTS_DRUGS = {
             "SURMOUNT Trials",
             "FDA Black Box Warning - Thyroid C-cell tumors"
         ],
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 }
 
 __all__ = ["GLP1_AGONISTS_DRUGS"]

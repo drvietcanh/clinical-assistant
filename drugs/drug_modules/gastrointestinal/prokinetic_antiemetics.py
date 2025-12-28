@@ -218,6 +218,10 @@ PROKINETIC_ANTIEMETICS_DRUGS = {
         'European Medicines Agency - Domperidone safety review',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
         'last_updated': '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs, safety warnings (QT prolongation)'}}}
+        'High - Multiple RCTs, safety warnings (QT prolongation)'}         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+}}
 
 __all__ = ['PROKINETIC_ANTIEMETICS_DRUGS']

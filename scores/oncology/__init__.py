@@ -7,6 +7,7 @@ from .ecog import render as render_ecog
 from .karnofsky import render as render_karnofsky
 from .pps import render as render_pps
 from .cipn import render as render_cipn
+from .mskcc_rcc import render as render_mskcc_rcc
 
 
 def render_oncology_calculator(calculator_id):
@@ -23,6 +24,7 @@ def render_oncology_calculator(calculator_id):
         "Karnofsky": render_karnofsky,
         "Palliative Performance": render_pps,
         "CIPN Grading": render_cipn,
+        "MSKCC RCC Risk": render_mskcc_rcc,
     }
     
     calculator_func = calculators.get(calculator_id)

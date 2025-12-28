@@ -446,7 +446,7 @@ CEPHALOSPORIN_ANTIBIOTICS = {
                 "Dùng kéo dài (>14 ngày) - nguy cơ sỏi mật"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng hoặc C. difficile."},
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Ceftriaxone là thuốc phân loại B. An toàn trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ.",

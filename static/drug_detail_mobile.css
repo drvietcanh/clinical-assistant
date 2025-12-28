@@ -1,0 +1,69 @@
+/* Mobile Optimizations for Drug Detail Page */
+
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .drug-detail-header h1 {
+        font-size: 1.8em !important;
+    }
+    
+    /* Quick facts grid */
+    .quick-facts-box > div {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Action buttons */
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Cards responsive */
+    .drug-card {
+        min-width: 100% !important;
+    }
+    
+    /* Tables */
+    .drug-table {
+        font-size: 0.85em;
+    }
+    
+    /* Related drugs grid */
+    .related-drugs-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller text on very small screens */
+    .drug-detail-header h1 {
+        font-size: 1.5em !important;
+    }
+    
+    /* Compact cards */
+    .drug-card {
+        padding: 10px !important;
+    }
+    
+    /* Stack all columns */
+    .drug-section-columns {
+        flex-direction: column !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .action-buttons,
+    .sidebar,
+    .related-drugs {
+        display: none !important;
+    }
+    
+    .drug-detail-header {
+        page-break-after: avoid;
+    }
+    
+    .drug-section {
+        page-break-inside: avoid;
+    }
+}
+

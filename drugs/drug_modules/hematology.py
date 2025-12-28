@@ -2890,6 +2890,7 @@ HEMATOLOGY_DRUGS = {
             "normal": "Không đổi",
             "30_60": "Không đổi",
             "under_30": "Thận trọng",
+            "dialysis": "Thận trọng",
             "notes": "Filgrastim thải trừ chủ yếu qua thận. Suy thận nặng có thể làm chậm thải trừ."
         },
         "overdose_management": {

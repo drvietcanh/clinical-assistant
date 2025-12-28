@@ -152,7 +152,7 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng hoặc C. difficile."},
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Piperacillin-tazobactam là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh, nhưng không có nghiên cứu đầy đủ trên phụ nữ có thai. Penicillins nói chung được coi là an toàn trong thai kỳ và được sử dụng rộng rãi. Piperacillin-tazobactam có thể được dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong nhiễm khuẩn nặng. Tuy nhiên, cần thận trọng với hàm lượng natri cao và nguy cơ giảm prothrombin. Nên tránh dùng kéo dài nếu có thể.",
@@ -603,7 +603,7 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có co giật, phản ứng dị ứng nghiêm trọng, hoặc C. difficile."},
         "pregnancy_lactation": {
             "fda_category": "C",
             "pregnancy_details": "Imipenem-cilastatin phân loại C - thận trọng trong thai kỳ. Các nghiên cứu trên động vật cho thấy một số nguy cơ (co giật ở thai nhi). Không có nghiên cứu đầy đủ trên phụ nữ có thai. Carbapenem có thể qua nhau thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong nhiễm trùng nặng. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết. Meropenem có thể là lựa chọn an toàn hơn trong thai kỳ (phân loại B).",
@@ -850,7 +850,7 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát"
             ]
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng hoặc C. difficile."},
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Ertapenem phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Carbapenem được sử dụng trong nhiễm trùng nặng ở phụ nữ có thai và được coi là an toàn khi lợi ích vượt quá nguy cơ. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết.",
@@ -972,7 +972,7 @@ BETA_LACTAM_ANTIBIOTICS = {
             ],
             "tương_đối": []
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."},
         "dosage": {
             "adult_standard": "1-4 triệu đơn vị IV mỗi 4-6 giờ",
             "adult_severe": "4-6 triệu đơn vị IV mỗi 4 giờ",
@@ -1638,7 +1638,7 @@ BETA_LACTAM_ANTIBIOTICS = {
             ],
             "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, chức năng gan, dấu hiệu co giật trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng."
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có co giật, phản ứng dị ứng nghiêm trọng, hoặc C. difficile."},
         "administration_instructions": {
             "oral": None,
             "iv": {

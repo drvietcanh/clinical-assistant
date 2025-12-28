@@ -14,6 +14,13 @@ from .crcl import render as render_crcl
 from .bmi_ibw_bsa import render as render_bmi_ibw_bsa
 from .osteoporosis_dxa import render as render_osteoporosis_dxa
 from .frax_risk import render as render_frax_risk
+from .homa_ir import render as render_homa_ir
+from .findrisc import render as render_findrisc
+from .map import render as render_map
+from .maintenance_fluids import render as render_maintenance_fluids
+from .sodium_correction_hyperglycemia import render as render_sodium_correction_hyperglycemia
+from .free_water_deficit import render as render_free_water_deficit
+from .levothyroxine_dose import render as render_levothyroxine_dose
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -36,6 +43,13 @@ def render_metabolism_calculator(calculator_id):
         "Free T4 Index": render_free_t4_index,
         "Osteoporosis DXA": render_osteoporosis_dxa,
         "FRAX": render_frax_risk,
+        "HOMA-IR": render_homa_ir,
+        "FINDRISC": render_findrisc,
+        "MAP": render_map,
+        "Maintenance Fluids": render_maintenance_fluids,
+        "Sodium Correction Hyperglycemia": render_sodium_correction_hyperglycemia,
+        "Free Water Deficit": render_free_water_deficit,
+        "Weight-based Levothyroxine": render_levothyroxine_dose,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -52,5 +66,7 @@ __all__ = [
     'render_fena',
     'render_hba1c_eag',
     'render_winter_formula',
+    'render_homa_ir',
+    'render_findrisc',
 ]
 

@@ -106,7 +106,8 @@ FOLATES_DRUGS = {
         'Kiểm tra B12 nếu nghi ngờ che dấu thiếu B12',
         'Theo dõi dấu hiệu sinh tồn'], 'monitoring':
         'Dấu hiệu phản ứng dị ứng, nồng độ B12 nếu nghi ngờ che dấu thiếu B12'},
-        'reversal_agents': {'available': False, 'agents': []},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể uống với hoặc không thức ăn. Hấp thu tốt trong cả hai trường hợp.',
         'timing':
@@ -139,6 +140,7 @@ FOLATES_DRUGS = {
             'ACOG Guidelines - Folic Acid Supplementation',
             'WHO Guidelines - Folic Acid Supplementation',
             'FDA Drug Information - Folic Acid'
-        ]}}
+        ]         "black_box_warnings": None,
+}}
 
 __all__ = ['FOLATES_DRUGS']

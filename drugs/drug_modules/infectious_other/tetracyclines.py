@@ -582,7 +582,51 @@ TETRACYCLINES_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-    },
+                  "pregnancy_lactation": {
+                  "fda_category": "D - Sử dụng nếu lợi ích > nguy cơ",
+                  "pregnancy_details": "Category D - Sử dụng nếu lợi ích > nguy cơ - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+                  "lactation": {
+                      "safety": "Use with caution",
+                      "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                      "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+                  }
+              },
+              "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng, có thể giảm liều",
+                  "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+                  "notes": "Nhiều kháng sinh chuyển hóa qua gan, cần điều chỉnh liều ở suy gan nặng."
+              },
+              "overdose_management": {
+                  "symptoms": [
+                      "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+                  ],
+                  "antidote": "Không có antidote đặc hiệu",
+                  "treatment": [
+                      "Ngừng ngay thuốc",
+                      "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                      "Than hoạt tính",
+                      "Điều trị hỗ trợ và điều trị triệu chứng",
+                      "Theo dõi dấu hiệu sinh tồn"
+                  ],
+                  "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "administration_instructions": {
+                  "iv": {
+                      "reconstitution": "Cần tra cứu",
+                      "infusion_rate": "Cần tra cứu",
+                      "compatibility": [
+                          "Cần tra cứu"
+                      ],
+                      "incompatibility": [],
+                      "notes": "Cần tra cứu thêm thông tin chi tiết."
+                  }
+              },
+},
     
     "Tetracycline": {
         "group": "Infectious Disease - Tetracycline Antibiotic",

@@ -475,7 +475,7 @@ DMARDS_RHEUMATOLOGY_DRUGS = {
             ],
             "monitoring": "ECG, huyết áp, dấu hiệu thần kinh, đường huyết.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc tính thần kinh và tim mạch hỗ trợ nếu có."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Nên uống cùng thức ăn hoặc sữa để giảm kích ứng tiêu hóa.",
@@ -507,7 +507,8 @@ DMARDS_RHEUMATOLOGY_DRUGS = {
             "FDA Drug Information - Hydroxychloroquine",
             "AAO Guidelines - Retinal Toxicity Screening"
         ]
-    },
+              "black_box_warnings": None,
+},
 }
 
 __all__ = ["DMARDS_RHEUMATOLOGY_DRUGS"]

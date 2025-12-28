@@ -164,7 +164,11 @@ BISPHOSPHONATES_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (FIT)",
         },
-    },
+             "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
 
     "Risedronate": {
         "group": "Endocrinology - Bisphosphonate (Osteoporosis)",
@@ -296,7 +300,11 @@ BISPHOSPHONATES_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Ibandronate": {
         "group": "Endocrinology - Bisphosphonate (Osteoporosis)",
@@ -425,7 +433,11 @@ BISPHOSPHONATES_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Zoledronic acid": {
         "group": "Endocrinology - Bisphosphonate (Osteoporosis/Cancer)",
@@ -586,7 +598,11 @@ BISPHOSPHONATES_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (HORIZON-PFT)",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 }
 
 __all__ = ["BISPHOSPHONATES_DRUGS"]

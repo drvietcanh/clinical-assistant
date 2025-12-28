@@ -152,7 +152,11 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based",
         },
-    },
+             "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
 
     "Midazolam (IV/ICU)": {
         "group": "Supportive - Benzodiazepine (IV Sedation/ICU)",
@@ -486,7 +490,11 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Dexmedetomidine": {
         "group": "Supportive - Alpha-2 agonist sedative (ICU/Procedural)",
@@ -639,7 +647,11 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
 
     "Etomidate": {
         "group": "Supportive - IV anesthetic for induction (hemodynamic stability)",
@@ -778,7 +790,11 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
     
     "Thiopental": {
         "group": "Supportive - Barbiturate Anesthetic (ICU)",

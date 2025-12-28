@@ -94,7 +94,7 @@ ANTIFLATULENTS_DRUGS = {
             ],
             "monitoring": "Triệu chứng tiêu hóa và lâm sàng chung.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Thường dùng sau bữa ăn và trước khi đi ngủ.",
@@ -109,7 +109,23 @@ ANTIFLATULENTS_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "High – thuốc không kê đơn, kinh nghiệm lâm sàng rộng rãi",
         },
-    },
+             "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
+},
 }
 
 __all__ = ["ANTIFLATULENTS_DRUGS"]

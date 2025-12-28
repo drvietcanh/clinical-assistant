@@ -552,7 +552,7 @@ JAK_INHIBITORS_DRUGS = {
             ],
             "monitoring": "CBC, lipid, men gan, creatinin/eGFR, dấu hiệu nhiễm trùng và huyết khối.",
         },
-        "reversal_agents": {"available": False, "agents": []},
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có nhiễm trùng nặng, huyết khối, hoặc độc tính máu nghiêm trọng."},
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể dùng với hoặc không với thức ăn.",
@@ -568,7 +568,25 @@ JAK_INHIBITORS_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "A – RA; B – viêm da cơ địa, alopecia (tùy quốc gia/phê duyệt)",
         },
-    },
+              "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Các thuốc ức chế miễn dịch mạnh khác (biologic DMARD, azathioprine, cyclosporine): tăng nguy cơ nhiễm trùng",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Vaccine sống: chống chỉ định trong khi dùng và một thời gian sau khi ngừng",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Strong OAT3 inhibitors (probenecid): tăng nồng độ baricitinib",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+},
 }
 
 __all__ = ["JAK_INHIBITORS_DRUGS"]

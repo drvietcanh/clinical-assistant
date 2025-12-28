@@ -106,7 +106,28 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "Low–Moderate (bằng chứng hạn chế, không phải chuẩn điều trị chính)",
         },
-    },
+             "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
+},
 
     "Citicoline": {
         "group": "Neurology - Neuroprotective / Nootropic",
@@ -211,7 +232,25 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "Low–Moderate (thuốc hỗ trợ, không thay thế điều trị chuẩn)"
         },
-    },
+              "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": "Không có",
+},
 
     "Vinpocetine": {
         "group": "Neurology - Cerebral vasodilator (controversial evidence)",
@@ -319,7 +358,26 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "Low (bằng chứng yếu, chủ yếu dùng theo thói quen lâm sàng tại một số nước)"
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": "Không có",
+},
 
     "Ginkgo biloba extract": {
         "group": "Neurology - Herbal cerebral vasomodulator (Ginkgo biloba)",
@@ -441,7 +499,25 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "Low–Moderate (herbal, bằng chứng hạn chế)"
         },
-    },
+              "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": "Không có",
+},
     
     "Cerebrolysin": {
         "group": "Neurology - Neuropeptide preparation (Stroke adjunct / Neurorecovery, controversial evidence)",
@@ -573,7 +649,43 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "Low–Moderate (thuốc hỗ trợ, không thay thế điều trị chuẩn)",
         },
-    },
+                  "drug_interactions": {
+                  "major": [],
+                  "moderate": [],
+                  "minor": [
+                      {
+                          "drug": "Thuốc hướng thần kinh (SSRI, SNRI, TCA, antipsychotic): có thể tăng kích thích nhẹ – theo dõi lâm sàng",
+                          "mechanism": "Tương tác lâm sàng"
+                      },
+                      {
+                          "drug": "Không có tương tác dược động học lớn được chứng minh rõ; chủ yếu thận trọng khi phối hợp nhiều thuốc hướng thần kinh.",
+                          "mechanism": "Tương tác lâm sàng"
+                      }
+                  ]
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": "Không có",
+},
     
     "Nicergoline": {
         "group": "Neurology - Ergot-derived cerebral vasodilator",
@@ -677,7 +789,43 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "Low–Moderate (bằng chứng hạn chế, không phải chuẩn guideline)",
         },
-    },
+                  "drug_interactions": {
+                  "major": [
+                      {
+                          "drug": "Chống đông/kháng tiểu cầu: lý thuyết tăng chảy máu (hiếm)",
+                          "mechanism": "Tăng nguy cơ chảy máu"
+                      }
+                  ],
+                  "moderate": [],
+                  "minor": [
+                      {
+                          "drug": "Thuốc hạ huyết áp: tăng nguy cơ tụt huyết áp",
+                          "mechanism": "Tương tác lâm sàng"
+                      }
+                  ]
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": "Không có",
+},
     
     "Edaravone": {
         "group": "Neurology - Free-radical scavenger (AIS adjunct, Japan guideline)",
@@ -809,7 +957,25 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "last_updated": "2025-03-02",
             "evidence_level": "Moderate (nhật có khuyến cáo, chưa phải chuẩn toàn cầu)",
         },
-    },
+                  "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": "Không có",
+},
     
     "Cerebroprotein hydrolysate (khác)": {
         "group": "Neurology - Neuropeptide/cerebroprotein hydrolysate (adjunct, evidence limited)",
@@ -927,7 +1093,25 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "last_updated": "2025-03-02",
             "evidence_level": "Low–Moderate (bằng chứng hạn chế, không phải chuẩn guideline)",
         },
-    },
+                  "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": "Không có",
+},
     
     "Nimodipine": {
         "group": "Neurology - Calcium channel blocker (cerebral vasospasm prophylaxis)",
@@ -1041,7 +1225,47 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "High (điều trị chuẩn trong aSAH)",
         },
-    },
+                  "drug_interactions": {
+                  "major": [],
+                  "moderate": [
+                      {
+                          "drug": "CYP3A4 inhibitors (azole, macrolide, protease inhibitor): tăng nồng độ nimodipine",
+                          "mechanism": "Tương tác chuyển hóa"
+                      },
+                      {
+                          "drug": "CYP3A4 inducers (phenytoin, carbamazepine, rifampin): giảm nồng độ",
+                          "mechanism": "Tương tác chuyển hóa"
+                      }
+                  ],
+                  "minor": [
+                      {
+                          "drug": "Thuốc hạ huyết áp khác: cộng hưởng tụt HA",
+                          "mechanism": "Tương tác lâm sàng"
+                      }
+                  ]
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": None,
+              "black_box_warnings": "Không có",
+},
 }
 
 __all__ = ["CEREBRAL_CIRCULATION_DRUGS"]

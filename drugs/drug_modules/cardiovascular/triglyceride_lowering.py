@@ -120,7 +120,32 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - Large RCT (REDUCE-IT) showing 25% reduction in cardiovascular events"
         }
-    },
+             "overdose_management": {
+             "symptoms": [
+                 "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+             ],
+             "antidote": "Không có antidote đặc hiệu",
+             "treatment": [
+                 "Ngừng ngay thuốc",
+                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                 "Than hoạt tính",
+                 "Điều trị hỗ trợ và điều trị triệu chứng",
+                 "Theo dõi dấu hiệu sinh tồn"
+             ],
+             "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+         },
+         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+         "administration_instructions": {
+             "oral": {
+                 "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                 "timing": "Theo chỉ định của bác sĩ",
+                 "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+             }
+         },
+},
 
     "Pemafibrate": {
         "group": "Cardiovascular - Selective PPAR-alpha Modulator (Fibrate)",
@@ -256,7 +281,32 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "Moderate - Newer drug with selective PPAR-alpha activity, less side effects than traditional fibrates"
         }
-    },
+              "overdose_management": {
+              "symptoms": [
+                  "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+              ],
+              "antidote": "Không có antidote đặc hiệu",
+              "treatment": [
+                  "Ngừng ngay thuốc",
+                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                  "Than hoạt tính",
+                  "Điều trị hỗ trợ và điều trị triệu chứng",
+                  "Theo dõi dấu hiệu sinh tồn"
+              ],
+              "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+          },
+          "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                  "timing": "Theo chỉ định của bác sĩ",
+                  "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+              }
+          },
+},
 
     "Omega-3 acid ethyl esters": {
         "group": "Cardiovascular - Omega-3 Fatty Acids (EPA/DHA)",
@@ -374,7 +424,32 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "Moderate - Effective for hypertriglyceridemia, but cardiovascular benefit is controversial"
         }
-    },
+              "overdose_management": {
+              "symptoms": [
+                  "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+              ],
+              "antidote": "Không có antidote đặc hiệu",
+              "treatment": [
+                  "Ngừng ngay thuốc",
+                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                  "Than hoạt tính",
+                  "Điều trị hỗ trợ và điều trị triệu chứng",
+                  "Theo dõi dấu hiệu sinh tồn"
+              ],
+              "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+          },
+          "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                  "timing": "Theo chỉ định của bác sĩ",
+                  "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+              }
+          },
+},
 
     "Niacin": {
         "group": "Cardiovascular - Vitamin B3 / Lipid-lowering Agent",
