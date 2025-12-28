@@ -1,0 +1,1202 @@
+================================================================================
+BAO CAO KIEM TRA 14 ENHANCED FIELDS CHO TAT CA THUOC
+================================================================================
+
+Tong so thuoc: 574
+Thuoc co du 14 fields: 297 (51.7%)
+Thuoc thieu fields: 277 (48.3%)
+
+================================================================================
+THONG KE THEO SO FIELD THIEU
+================================================================================
+
+Thieu 8 fields: 9 thuoc
+Thieu 7 fields: 15 thuoc
+Thieu 6 fields: 14 thuoc
+Thieu 5 fields: 4 thuoc
+Thieu 4 fields: 1 thuoc
+Thieu 3 fields: 12 thuoc
+Thieu 2 fields: 60 thuoc
+Thieu 1 fields: 162 thuoc
+
+================================================================================
+DANH SACH CHI TIET THUOC THIEU FIELDS
+================================================================================
+
+Bromocriptine:
+  Thieu 8 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Budesonide/Formoterol inhaler:
+  Thieu 8 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+
+Citicoline/Piracetam:
+  Thieu 8 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+
+Colesevelam:
+  Thieu 8 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Filgrastim:
+  Thieu 8 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Ipratropium/Salbutamol inhaler:
+  Thieu 8 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+
+Piracetam/Vinpocetine:
+  Thieu 8 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+
+Tiotropium/Olodaterol inhaler:
+  Thieu 8 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+
+Umeclidinium/Vilanterol inhaler:
+  Thieu 8 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+
+Alteplase:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Epoetin alfa:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Fluticasone/Salmeterol inhaler:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+
+Fluticasone/Umeclidinium/Vilanterol inhaler:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+
+Ginkgo biloba/Vinpocetine:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+
+Insulin Aspart:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Insulin Degludec:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Insulin Detemir:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Insulin Glargine:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Insulin Glulisine:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Insulin Lispro:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Insulin NPH:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Insulin Regular:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, renal_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Olanzapine/Fluoxetine:
+  Thieu 7 fields
+  Optional fields thieu (7): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+
+Vasopressin:
+  Thieu 7 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Cefaclor:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Cefazolin:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Cefdinir:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Cefepime:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Cefixime:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Cefotaxime:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Ceftazidime:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Cefuroxime:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Clonidine:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Dicloxacillin:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Famotidine:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Nafcillin:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Oxacillin:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Rabeprazole:
+  Thieu 6 fields
+  Optional fields thieu (6): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Dobutamine:
+  Thieu 5 fields
+  Optional fields thieu (5): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, administration_instructions
+
+Dopamine:
+  Thieu 5 fields
+  Optional fields thieu (5): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, administration_instructions
+
+Norepinephrine:
+  Thieu 5 fields
+  Optional fields thieu (5): drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, administration_instructions
+
+Tigecycline:
+  Thieu 5 fields
+  Optional fields thieu (5): pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+
+Methyldopa:
+  Thieu 4 fields
+  Optional fields thieu (4): drug_interactions, overdose_management, reversal_agents, administration_instructions
+
+Betamethasone/Clotrimazole topical:
+  Thieu 3 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (2): hepatic_adjustment, reversal_agents
+
+Cerebrolysin:
+  Thieu 3 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (2): drug_interactions, reversal_agents
+
+Fusidic acid/Betamethasone topical:
+  Thieu 3 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (2): hepatic_adjustment, reversal_agents
+
+Gentamicin/Betamethasone/Clotrimazole topical:
+  Thieu 3 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (2): hepatic_adjustment, reversal_agents
+
+Icosapent ethyl:
+  Thieu 3 fields
+  Optional fields thieu (3): overdose_management, reversal_agents, administration_instructions
+
+Miconazole/Hydrocortisone topical:
+  Thieu 3 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (2): hepatic_adjustment, reversal_agents
+
+Nicergoline:
+  Thieu 3 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (2): drug_interactions, reversal_agents
+
+Nimodipine:
+  Thieu 3 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (2): drug_interactions, reversal_agents
+
+Omega-3 acid ethyl esters:
+  Thieu 3 fields
+  Optional fields thieu (3): overdose_management, reversal_agents, administration_instructions
+
+Pemafibrate:
+  Thieu 3 fields
+  Optional fields thieu (3): overdose_management, reversal_agents, administration_instructions
+
+Tegoprazan:
+  Thieu 3 fields
+  Optional fields thieu (3): hepatic_adjustment, renal_adjustment, reversal_agents
+
+Vonoprazan:
+  Thieu 3 fields
+  Optional fields thieu (3): hepatic_adjustment, renal_adjustment, reversal_agents
+
+Acyclovir eye drops:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Acyclovir eye ointment:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Alfuzosin:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Anidulafungin:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Artificial tears (Carboxymethylcellulose):
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Azelaic acid topical:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Azelastine eye drops:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Benzoyl peroxide topical:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Bimatoprost:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Brinzolamide:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Carbamazepine:
+  Thieu 2 fields
+  Optional fields thieu (2): renal_adjustment, reversal_agents
+
+Caspofungin:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Chlorpheniramine:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Ciprofloxacin eye drops:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Clobetasol:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Desloratadine:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Desvenlafaxine:
+  Thieu 2 fields
+  Optional fields thieu (2): renal_adjustment, reversal_agents
+
+Diphenhydramine:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Dipyridamole:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Dorzolamide:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Duloxetine:
+  Thieu 2 fields
+  Optional fields thieu (2): renal_adjustment, reversal_agents
+
+Erythromycin eye ointment:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Fesoterodine:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Fexofenadine:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Folic Acid:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Ganciclovir eye drops:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Gentamicin eye drops:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Granisetron:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Hydroxyzine:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Isavuconazole:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Ketotifen eye drops:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Lactulose:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): drug_interactions
+
+Latanoprost:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Levonorgestrel:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Loratadine:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Metaxalone:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Methocarbamol:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Micafungin:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Moxifloxacin eye drops:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Mupirocin topical:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Nystatin:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Olopatadine eye drops:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Omeprazole:
+  Thieu 2 fields
+  Optional fields thieu (2): renal_adjustment, reversal_agents
+
+Oxcarbazepine:
+  Thieu 2 fields
+  Optional fields thieu (2): renal_adjustment, reversal_agents
+
+Palonosetron:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Pantoprazole:
+  Thieu 2 fields
+  Optional fields thieu (2): renal_adjustment, reversal_agents
+
+Piracetam:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Polyethylene glycol 3350:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): drug_interactions
+
+Polymyxin B/Trimethoprim eye drops:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Probenecid:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Progesterone:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Ranitidine:
+  Thieu 2 fields
+  Optional fields thieu (2): renal_adjustment, reversal_agents
+
+Silodosin:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Tamsulosin:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Tobramycin eye drops:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Travoprost:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Venlafaxine:
+  Thieu 2 fields
+  Optional fields thieu (2): renal_adjustment, reversal_agents
+
+Vinpocetine:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): reversal_agents
+
+Vitamin C:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Vitamin E:
+  Thieu 2 fields
+  Required fields thieu (1): black_box_warnings
+  Optional fields thieu (1): renal_adjustment
+
+Abaloparatide:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Acarbose:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Adenosine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Alendronate:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Alogliptin:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Aluminum hydroxide/Magnesium hydroxide:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Amoxicillin suspension:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Amphotericin B:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Andexanet alfa:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Apixaban:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Atropine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Azelaic Acid:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Azelastine/Fluticasone nasal spray:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Baricitinib:
+  Thieu 1 fields
+  Optional fields thieu (1): drug_interactions
+
+Beclomethasone inhaled:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Bedaquiline:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Betamethasone topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Bismuth subsalicylate:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Budesonide inhaled:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Calcium:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Calcium (elemental):
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Calcium carbonate:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Cefpirome:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Cerebroprotein hydrolysate (khác):
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Cetirizine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Cetirizine/Pseudoephedrine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Ciclesonide:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Cimetidine:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Cisatracurium:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Citicoline:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Clofazimine:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Clopidogrel:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Clotrimazole (vaginal):
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Clotrimazole topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Cycloserine / Terizidone:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Dabigatran:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Dapagliflozin:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Delamanid:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Denosumab:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Dexlansoprazole:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Dexmedetomidine:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Domperidone:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Doxorubicin:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Dulaglutide:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Econazole topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Edaravone:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Edoxaban:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Empagliflozin:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Enoxaparin:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Ertugliflozin:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Erythromycin topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Esomeprazole:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Estradiol:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Ethambutol:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Ethinyl estradiol + Levonorgestrel:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Etomidate:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Exenatide:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Fexofenadine/Pseudoephedrine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Finerenone:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Fluconazole:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Folic acid:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Fusidic Acid:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Gabapentin:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Ginkgo biloba extract:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Glibenclamide:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Gliclazide:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+High-intensity statin (đột quỵ/TIA):
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Hydrocortisone topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Hydroxychloroquine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Hyoscine butylbromide:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Ibandronate:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Idarucizumab:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Ilaprazole:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Insulin:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Istradefylline:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Itraconazole:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Ivermectin:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Ivermectin cream:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Ketamine:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Ketoconazole topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Lamotrigine:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Lansoprazole:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Levamisole:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Levetiracetam:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Levocetirizine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Levodopa/Carbidopa:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Linagliptin:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Linezolid (lao MDR/XDR):
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Liraglutide:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Loperamide:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Loratadine/Pseudoephedrine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Lorazepam:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Mebeverine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Medroxyprogesterone:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Memantine:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Mesalazine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Metoclopramide:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Metronidazole (vaginal gel):
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Metronidazole topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Miconazole (vaginal):
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Miconazole topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Miglitol:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Mirabegron:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Mometasone topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Nedocromil:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Ondansetron:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Opicapone:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Oxybutynin:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Oxytocin:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+PAS (para-aminosalicylic acid):
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Permethrin topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Phenobarbital:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Phenytoin:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Pilocarpine eye drops:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Posaconazole:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Prasugrel:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Praziquantel:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Prednisone:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Pregabalin:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Propofol:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Pyrazinamide:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Raloxifene:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Rifabutin:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Rifampin:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Rifapentine:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Rimegepant:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Risedronate:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Rivaroxaban:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Rivastigmine:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Rocuronium:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Romosozumab:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Ropinirole:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Saxagliptin:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Semaglutide:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Sildenafil:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Simethicone:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Sitagliptin:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Solifenacin:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Sotagliflozin:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Streptomycin:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Succinylcholine:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Sucralfate:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Sulfasalazine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Tenecteplase:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Terbinafine topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Teriparatide:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Ticagrelor:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Tirzepatide:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Tizanidine:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Tolterodine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Topiramate:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Triamcinolone topical:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Trimebutine:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Ubrogepant:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Valproate:
+  Thieu 1 fields
+  Optional fields thieu (1): renal_adjustment
+
+Vecuronium:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Vericiguat:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Vitamin B12:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Vitamin D:
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Vitamin D3 (Cholecalciferol):
+  Thieu 1 fields
+  Required fields thieu (1): black_box_warnings
+
+Voriconazole:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+
+Zoledronic acid:
+  Thieu 1 fields
+  Optional fields thieu (1): reversal_agents
+

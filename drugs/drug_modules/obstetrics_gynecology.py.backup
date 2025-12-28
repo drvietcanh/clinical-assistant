@@ -152,11 +152,6 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/WHO guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Ethinyl estradiol + Levonorgestrel": {
@@ -369,10 +364,6 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/WHO guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Medroxyprogesterone": {
@@ -559,10 +550,6 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/WHO guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Estradiol": {
@@ -780,10 +767,6 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/NAMS guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Progesterone": {
@@ -989,11 +972,6 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/ASRM guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
 
     "Clotrimazole (vaginal)": {
@@ -1101,7 +1079,6 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "High – guideline-based local therapy",
         },
-        "black_box_warnings": "Cần xem xét black box warnings",
     },
 
     "Miconazole (vaginal)": {
@@ -1204,7 +1181,6 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "High – widely used local antifungal",
         },
-        "black_box_warnings": "Cần xem xét black box warnings",
     },
 
     "Metronidazole (vaginal gel)": {

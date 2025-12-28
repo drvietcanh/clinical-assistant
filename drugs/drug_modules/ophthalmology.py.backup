@@ -143,11 +143,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Brinzolamide": {
@@ -322,11 +317,6 @@ OPHTHALMOLOGY_DRUGS = {
             "FDA Drug Information - Brinzolamide",
             "European Glaucoma Society Guidelines"
         ]
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Timolol eye drops": {
@@ -665,11 +655,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Dexamethasone eye drops": {
@@ -980,11 +965,6 @@ OPHTHALMOLOGY_DRUGS = {
             "FDA Drug Information - Artificial Tears",
             "UpToDate - Dry Eye Syndrome Treatment"
         ]
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Olopatadine eye drops": {
@@ -1111,11 +1091,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Tropicamide eye drops": {
@@ -1424,11 +1399,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Prednisolone eye drops": {
@@ -1805,7 +1775,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
     },
     
     "Moxifloxacin eye drops": {
@@ -1935,11 +1904,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Acyclovir eye ointment": {
@@ -2080,11 +2044,6 @@ OPHTHALMOLOGY_DRUGS = {
             "FDA Drug Information - Acyclovir Ophthalmic",
             "UpToDate - Herpetic Keratitis Treatment"
         ]
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Bimatoprost": {
@@ -2242,11 +2201,6 @@ OPHTHALMOLOGY_DRUGS = {
             "FDA Drug Information - Bimatoprost",
             "European Glaucoma Society Guidelines"
         ]
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Travoprost": {
@@ -2388,11 +2342,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Acyclovir eye drops": {
@@ -2542,11 +2491,6 @@ OPHTHALMOLOGY_DRUGS = {
             "FDA Drug Information - Acyclovir Ophthalmic",
             "UpToDate - Herpetic Keratitis Treatment"
         ]
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Ganciclovir eye drops": {
@@ -2698,11 +2642,6 @@ OPHTHALMOLOGY_DRUGS = {
             "IDSA Guidelines - Cytomegalovirus Infection",
             "FDA Drug Information - Ganciclovir Eye Drops"
         ]
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Brimonidine": {
@@ -3881,11 +3820,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Gentamicin eye drops": {
@@ -4027,11 +3961,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Erythromycin eye ointment": {
@@ -4170,11 +4099,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Ketotifen eye drops": {
@@ -4313,11 +4237,6 @@ OPHTHALMOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Azelastine eye drops": {
@@ -4472,11 +4391,6 @@ OPHTHALMOLOGY_DRUGS = {
             "EAACI Guidelines - Allergic Conjunctivitis",
             "FDA Drug Information - Azelastine Ophthalmic"
         ]
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
     
     "Diclofenac eye drops": {

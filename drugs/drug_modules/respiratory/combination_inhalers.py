@@ -65,6 +65,92 @@ COMBINATION_INHALERS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
         "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Ritonavir, ketoconazole, itraconazole",
+                    "mechanism": "Ức chế CYP3A4, tăng chuyển hóa budesonide",
+                    "effect": "Tăng nồng độ budesonide toàn thân, tăng nguy cơ ức chế HPA",
+                    "management": "Thận trọng. Theo dõi dấu hiệu ức chế HPA. Có thể cần giảm liều."
+                },
+                {
+                    "drug": "Beta-blockers",
+                    "mechanism": "Đối kháng tác dụng formoterol",
+                    "effect": "Giảm hiệu quả giãn phế quản",
+                    "management": "Thận trọng. Tránh beta-blockers không chọn lọc. Có thể dùng beta-blockers chọn lọc tim mạch khi cần."
+                },
+                {
+                    "drug": "Theophylline",
+                    "mechanism": "Tác dụng cộng dồn trên tim mạch",
+                    "effect": "Tăng tác dụng phụ tim mạch (nhịp tim nhanh, run cơ)",
+                    "management": "Thận trọng. Theo dõi nhịp tim, dấu hiệu lâm sàng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với budesonide, formoterol hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Hen phế quản cấp - không dùng đơn độc để cắt cơn nếu không theo phác đồ SMART/MART",
+                "Dùng với ritonavir, ketoconazole - thận trọng (tăng nguy cơ ức chế HPA)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Budesonide và formoterol có thể ảnh hưởng đến thai nhi. Hấp thu toàn thân từ dạng hít: tối thiểu, giảm nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Budesonide và formoterol bài tiết vào sữa mẹ ở nồng độ thấp. Hấp thu toàn thân từ dạng hít: tối thiểu.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng",
+            "notes": "Budesonide và formoterol chuyển hóa qua gan (CYP3A4, CYP2D6, CYP2C19). Suy gan có thể làm giảm chuyển hóa. Tuy nhiên, hấp thu toàn thân từ dạng hít: tối thiểu, nên ít ảnh hưởng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Nhịp tim nhanh, run cơ (do formoterol)",
+                "Tăng đường huyết (do formoterol)",
+                "Hạ kali máu (do formoterol)",
+                "Ức chế HPA (nếu hấp thu nhiều budesonide)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Beta-blockers (selective) có thể đối kháng một phần tác dụng của formoterol.",
+            "treatment": [
+                "Ngừng ngay thuốc",
+                "Theo dõi nhịp tim, huyết áp",
+                "Nếu nhịp tim nhanh nặng: beta-blockers (selective) nếu cần, nhưng thận trọng ở bệnh nhân hen",
+                "Nếu hạ kali máu: bổ sung kali",
+                "Theo dõi đường huyết, kali máu",
+                "Theo dõi dấu hiệu ức chế HPA nếu hấp thu nhiều budesonide"
+            ],
+            "monitoring": "Nhịp tim, huyết áp, đường huyết, kali máu, dấu hiệu ức chế HPA"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "inhalation": {
+                "technique": "Lắc kỹ trước khi dùng. Thở ra hoàn toàn. Đặt ống hít vào miệng, bắt đầu hít sâu và chậm, đồng thời ấn nút. Giữ hơi 10 giây. Thở ra từ từ. Súc miệng sau khi dùng.",
+                "timing": "2 lần/ngày (sáng, tối) hoặc theo phác đồ SMART/MART",
+                "notes": "QUAN TRỌNG: 1) Súc miệng sau khi dùng để tránh nấm miệng, 2) Không dùng LABA đơn độc cho hen, 3) Trong phác đồ SMART/MART: tối đa 12 hít/ngày."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Symbicort (budesonide/formoterol)",
+                "GINA Guidelines - Global Initiative for Asthma",
+                "GOLD Guidelines - Global Initiative for Chronic Obstructive Lung Disease"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        },
     },
     "Fluticasone/Salmeterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (ICS/LABA)",
@@ -186,6 +272,91 @@ COMBINATION_INHALERS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
         "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Beta-blockers",
+                    "mechanism": "Đối kháng tác dụng salbutamol",
+                    "effect": "Giảm hiệu quả giãn phế quản",
+                    "management": "Thận trọng. Tránh beta-blockers không chọn lọc."
+                },
+                {
+                    "drug": "Anticholinergics khác",
+                    "mechanism": "Tác dụng cộng dồn",
+                    "effect": "Tăng tác dụng phụ anticholinergic (khô miệng, bí tiểu)",
+                    "management": "Thận trọng. Theo dõi dấu hiệu anticholinergic."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với ipratropium, atropine, salbutamol"
+            ],
+            "tương_đối": [
+                "Glaucoma góc đóng - thận trọng",
+                "Phì đại tuyến tiền liệt - thận trọng",
+                "Bệnh tim mạch - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Ipratropium và salbutamol có thể ảnh hưởng đến thai nhi. Hấp thu toàn thân từ dạng hít: tối thiểu, giảm nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Ipratropium và salbutamol bài tiết vào sữa mẹ ở nồng độ thấp. Hấp thu toàn thân từ dạng hít: tối thiểu.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng (salbutamol chuyển hóa qua gan)",
+            "severe": "Thận trọng",
+            "notes": "Salbutamol chuyển hóa qua gan (sulfation). Ipratropium thải trừ chủ yếu qua thận. Suy gan có thể ảnh hưởng đến salbutamol. Tuy nhiên, hấp thu toàn thân từ dạng hít: tối thiểu."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Nhịp tim nhanh, run cơ (do salbutamol)",
+                "Khô miệng, bí tiểu (do ipratropium)",
+                "Tăng đường huyết (do salbutamol)",
+                "Hạ kali máu (do salbutamol)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Beta-blockers (selective) có thể đối kháng một phần tác dụng của salbutamol.",
+            "treatment": [
+                "Ngừng ngay thuốc",
+                "Theo dõi nhịp tim, huyết áp",
+                "Nếu nhịp tim nhanh nặng: beta-blockers (selective) nếu cần, nhưng thận trọng ở bệnh nhân hen/COPD",
+                "Nếu hạ kali máu: bổ sung kali",
+                "Theo dõi đường huyết, kali máu"
+            ],
+            "monitoring": "Nhịp tim, huyết áp, đường huyết, kali máu, dấu hiệu anticholinergic"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "inhalation": {
+                "technique": "Lắc kỹ trước khi dùng. Thở ra hoàn toàn. Đặt ống hít vào miệng, bắt đầu hít sâu và chậm, đồng thời ấn nút. Giữ hơi 10 giây. Thở ra từ từ.",
+                "timing": "3-4 lần/ngày khi cần (cho cơn cấp)",
+                "notes": "Dùng cho COPD đợt cấp, cơn hen nặng. Không dùng thường quy, chỉ dùng khi cần."
+            },
+            "nebulizer": {
+                "technique": "Pha trong Normal saline, phun sương qua máy phun sương",
+                "timing": "3-4 lần/ngày khi cần",
+                "notes": "Dùng cho COPD đợt cấp nặng, cơn hen nặng. Theo protocol cụ thể."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Combivent, Duoneb (ipratropium/salbutamol)",
+                "GINA Guidelines - Global Initiative for Asthma",
+                "GOLD Guidelines - Global Initiative for Chronic Obstructive Lung Disease"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        },
     },
     "Tiotropium/Olodaterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (LAMA/LABA)",
@@ -243,6 +414,86 @@ COMBINATION_INHALERS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
         "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Anticholinergics khác",
+                    "mechanism": "Tác dụng cộng dồn",
+                    "effect": "Tăng tác dụng phụ anticholinergic (khô miệng, bí tiểu)",
+                    "management": "Thận trọng. Theo dõi dấu hiệu anticholinergic."
+                },
+                {
+                    "drug": "Beta-blockers",
+                    "mechanism": "Đối kháng tác dụng olodaterol",
+                    "effect": "Giảm hiệu quả giãn phế quản",
+                    "management": "Thận trọng. Tránh beta-blockers không chọn lọc."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với tiotropium, olodaterol",
+                "Glaucoma góc đóng",
+                "Hen phế quản cấp - không dùng để cắt cơn"
+            ],
+            "tương_đối": [
+                "Phì đại tuyến tiền liệt nặng - thận trọng",
+                "Bệnh tim mạch - thận trọng",
+                "Suy thận nặng - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Tiotropium và olodaterol có thể ảnh hưởng đến thai nhi. Hấp thu toàn thân từ dạng hít: tối thiểu, giảm nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Tiotropium và olodaterol bài tiết vào sữa mẹ ở nồng độ thấp. Hấp thu toàn thân từ dạng hít: tối thiểu.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng (olodaterol chuyển hóa qua gan)",
+            "severe": "Thận trọng",
+            "notes": "Olodaterol chuyển hóa qua gan (UGT, O-methylation). Tiotropium thải trừ chủ yếu qua thận. Suy gan có thể ảnh hưởng đến olodaterol. Tuy nhiên, hấp thu toàn thân từ dạng hít: tối thiểu."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Khô miệng, bí tiểu nặng (do tiotropium)",
+                "Nhịp tim nhanh, run cơ (do olodaterol)",
+                "Tăng nhãn áp (do tiotropium nếu vào mắt)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Beta-blockers (selective) có thể đối kháng một phần tác dụng của olodaterol.",
+            "treatment": [
+                "Ngừng ngay thuốc",
+                "Rửa mắt nếu thuốc vào mắt (nguy cơ tăng nhãn áp)",
+                "Theo dõi nhịp tim, huyết áp",
+                "Nếu bí tiểu: đặt thông tiểu nếu cần",
+                "Nếu nhịp tim nhanh nặng: beta-blockers (selective) nếu cần, nhưng thận trọng ở bệnh nhân COPD"
+            ],
+            "monitoring": "Nhịp tim, huyết áp, dấu hiệu anticholinergic, nhãn áp nếu thuốc vào mắt"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "inhalation": {
+                "technique": "Đặt ống hít vào miệng. Thở ra hoàn toàn. Bắt đầu hít sâu và chậm, đồng thời ấn nút. Giữ hơi 10 giây. Thở ra từ từ. QUAN TRỌNG: Tránh để thuốc vào mắt (nguy cơ tăng nhãn áp).",
+                "timing": "1 lần/ngày (sáng hoặc tối)",
+                "notes": "QUAN TRỌNG: 1) Dùng đều đặn 1 lần/ngày, không dùng để cắt cơn, 2) Tránh để thuốc vào mắt (nguy cơ tăng nhãn áp), 3) Cần SABA dự phòng cho cơn cấp."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Spiolto Respimat, Stiolto Respimat (tiotropium/olodaterol)",
+                "GOLD Guidelines - Global Initiative for Chronic Obstructive Lung Disease"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        },
     },
     "Umeclidinium/Vilanterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (LAMA/LABA)",
@@ -298,6 +549,92 @@ COMBINATION_INHALERS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
         "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Anticholinergics khác",
+                    "mechanism": "Tác dụng cộng dồn",
+                    "effect": "Tăng tác dụng phụ anticholinergic (khô miệng, bí tiểu)",
+                    "management": "Thận trọng. Theo dõi dấu hiệu anticholinergic."
+                },
+                {
+                    "drug": "Beta-blockers",
+                    "mechanism": "Đối kháng tác dụng vilanterol",
+                    "effect": "Giảm hiệu quả giãn phế quản",
+                    "management": "Thận trọng. Tránh beta-blockers không chọn lọc."
+                },
+                {
+                    "drug": "Strong CYP3A4 inhibitors (ketoconazole, ritonavir)",
+                    "mechanism": "Ức chế CYP3A4, tăng chuyển hóa vilanterol",
+                    "effect": "Tăng nồng độ vilanterol toàn thân (ít quan trọng về mặt lâm sàng do hấp thu tối thiểu)",
+                    "management": "Thận trọng. Theo dõi tác dụng phụ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với umeclidinium, vilanterol",
+                "Glaucoma góc đóng"
+            ],
+            "tương_đối": [
+                "Phì đại tuyến tiền liệt nặng - thận trọng",
+                "Bệnh tim mạch - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Umeclidinium và vilanterol có thể ảnh hưởng đến thai nhi. Hấp thu toàn thân từ dạng hít: tối thiểu, giảm nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Umeclidinium và vilanterol bài tiết vào sữa mẹ ở nồng độ thấp. Hấp thu toàn thân từ dạng hít: tối thiểu.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng",
+            "notes": "Umeclidinium và vilanterol chuyển hóa qua gan (CYP2D6, CYP3A4). Suy gan có thể làm giảm chuyển hóa. Tuy nhiên, hấp thu toàn thân từ dạng hít: tối thiểu, nên ít ảnh hưởng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Khô miệng, bí tiểu nặng (do umeclidinium)",
+                "Nhịp tim nhanh, run cơ (do vilanterol)",
+                "Tăng đường huyết (do vilanterol)",
+                "Hạ kali máu (do vilanterol)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Beta-blockers (selective) có thể đối kháng một phần tác dụng của vilanterol.",
+            "treatment": [
+                "Ngừng ngay thuốc",
+                "Theo dõi nhịp tim, huyết áp",
+                "Nếu bí tiểu: đặt thông tiểu nếu cần",
+                "Nếu nhịp tim nhanh nặng: beta-blockers (selective) nếu cần, nhưng thận trọng ở bệnh nhân COPD",
+                "Nếu hạ kali máu: bổ sung kali",
+                "Theo dõi đường huyết, kali máu"
+            ],
+            "monitoring": "Nhịp tim, huyết áp, đường huyết, kali máu, dấu hiệu anticholinergic"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "inhalation": {
+                "technique": "Đặt ống hít Ellipta vào miệng. Thở ra hoàn toàn. Bắt đầu hít sâu và chậm, đồng thời kéo thanh trượt. Giữ hơi 10 giây. Thở ra từ từ.",
+                "timing": "1 lần/ngày (sáng hoặc tối)",
+                "notes": "QUAN TRỌNG: 1) Dùng đều đặn 1 lần/ngày, không dùng để cắt cơn, 2) Cần SABA dự phòng cho cơn cấp."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Anoro Ellipta (umeclidinium/vilanterol)",
+                "GOLD Guidelines - Global Initiative for Chronic Obstructive Lung Disease"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        },
     },
     "Fluticasone/Umeclidinium/Vilanterol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (ICS/LAMA/LABA)",

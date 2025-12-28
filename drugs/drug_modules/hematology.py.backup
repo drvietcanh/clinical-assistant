@@ -452,57 +452,6 @@ HEMATOLOGY_DRUGS = {
             "dialysis": "Thận trọng, giảm liều. Ticlopidine không được lọc sạch hiệu quả qua thẩm phân máu.",
             "notes": "Ticlopidine thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy."
         }
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Category B - cần xem xét dữ liệu an toàn thai kỳ.",
-            "lactation": {
-            "safety": "Compatible with monitoring",
-            "details": "Cần xem xét dữ liệu an toàn khi cho con bú.",
-            "recommendation": "Thận trọng khi cho con bú.",
-        },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng",
-            "severe": "Thận trọng",
-            "notes": "Cần xem xét chuyển hóa qua gan.",
-        },
-        "overdose_management": {
-            "symptoms": [
-            "Cần xem xét triệu chứng quá liều",
-        ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-            "Ngừng ngay thuốc",
-            "Hỗ trợ và điều trị triệu chứng",
-            "Theo dõi dấu hiệu sinh tồn",
-        ],
-            "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu lâm sàng",
-        },
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
-        "administration_instructions": {
-            "oral": {
-            "with_food": "Cần xem xét uống với hoặc không có thức ăn",
-            "timing": "Cần xem xét thời điểm dùng",
-            "notes": "Cần xem xét hướng dẫn cụ thể",
-        },
-        },
-        "references": {
-            "primary_sources": [
-            "FDA Drug Label - Ticlopidine, Ticlid",
-            "UpToDate - Drug information",
-        ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A",
-        },
     },
     
     "Dipyridamole": {
@@ -572,58 +521,6 @@ HEMATOLOGY_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
         "black_box_warnings": None
-        "black_box_warnings": "Cần xem xét black box warnings",
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Category B - cần xem xét dữ liệu an toàn thai kỳ.",
-            "lactation": {
-            "safety": "Compatible with monitoring",
-            "details": "Cần xem xét dữ liệu an toàn khi cho con bú.",
-            "recommendation": "Thận trọng khi cho con bú.",
-        },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng",
-            "severe": "Thận trọng",
-            "notes": "Cần xem xét chuyển hóa qua gan.",
-        },
-        "overdose_management": {
-            "symptoms": [
-            "Cần xem xét triệu chứng quá liều",
-        ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-            "Ngừng ngay thuốc",
-            "Hỗ trợ và điều trị triệu chứng",
-            "Theo dõi dấu hiệu sinh tồn",
-        ],
-            "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu lâm sàng",
-        },
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
-        "administration_instructions": {
-            "oral": {
-            "with_food": "Cần xem xét uống với hoặc không có thức ăn",
-            "timing": "Cần xem xét thời điểm dùng",
-            "notes": "Cần xem xét hướng dẫn cụ thể",
-        },
-        },
-        "references": {
-            "primary_sources": [
-            "FDA Drug Label - Dipyridamole, Persantine",
-            "UpToDate - Drug information",
-        ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A",
-        },
     },
     
     "Enoxaparin": {
@@ -2448,55 +2345,6 @@ HEMATOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A"
         }
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C - Cân nhắc rất thận trọng, chỉ dùng khi lợi ích vượt xa nguy cơ",
-            "pregnancy_details": "Category C - Cân nhắc rất thận trọng, chỉ dùng khi lợi ích vượt xa nguy cơ - cần xem xét dữ liệu an toàn thai kỳ.",
-            "lactation": {
-            "safety": "Compatible with monitoring",
-            "details": "Cần xem xét dữ liệu an toàn khi cho con bú.",
-            "recommendation": "Thận trọng khi cho con bú.",
-        },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng",
-            "severe": "Thận trọng",
-            "notes": "Cần xem xét chuyển hóa qua gan.",
-        },
-        "overdose_management": {
-            "symptoms": [
-            "Cần xem xét triệu chứng quá liều",
-        ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-            "Ngừng ngay thuốc",
-            "Hỗ trợ và điều trị triệu chứng",
-            "Theo dõi dấu hiệu sinh tồn",
-        ],
-            "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu lâm sàng",
-        },
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
-        "administration_instructions": {
-            "iv": {
-            "reconstitution": "Cần xem xét cách pha",
-            "infusion_rate": "Cần xem xét tốc độ truyền",
-            "compatibility": [
-            "Cần xem xét",
-        ],
-            "incompatibility": [
-            "Cần xem xét",
-        ],
-            "notes": "Cần xem xét hướng dẫn cụ thể",
-        },
-        },
     },
     
     "Tenecteplase": {
@@ -2731,55 +2579,6 @@ HEMATOLOGY_DRUGS = {
             "FDA Black Box Warning - Epoetin alfa and Thrombosis/Cardiovascular Events",
             "FDA Black Box Warning - Epoetin alfa and Hypertension"
         ]
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C - Có thể dùng nếu cần thiết trong CKD sau khi cân nhắc lợi ích/nguy cơ",
-            "pregnancy_details": "Category C - Có thể dùng nếu cần thiết trong CKD sau khi cân nhắc lợi ích/nguy cơ - cần xem xét dữ liệu an toàn thai kỳ.",
-            "lactation": {
-            "safety": "Compatible with monitoring",
-            "details": "Cần xem xét dữ liệu an toàn khi cho con bú.",
-            "recommendation": "Thận trọng khi cho con bú.",
-        },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng",
-            "severe": "Thận trọng",
-            "notes": "Cần xem xét chuyển hóa qua gan.",
-        },
-        "overdose_management": {
-            "symptoms": [
-            "Cần xem xét triệu chứng quá liều",
-        ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-            "Ngừng ngay thuốc",
-            "Hỗ trợ và điều trị triệu chứng",
-            "Theo dõi dấu hiệu sinh tồn",
-        ],
-            "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu lâm sàng",
-        },
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
-        "administration_instructions": {
-            "iv": {
-            "reconstitution": "Cần xem xét cách pha",
-            "infusion_rate": "Cần xem xét tốc độ truyền",
-            "compatibility": [
-            "Cần xem xét",
-        ],
-            "incompatibility": [
-            "Cần xem xét",
-        ],
-            "notes": "Cần xem xét hướng dẫn cụ thể",
-        },
-        },
     },
     
     "Filgrastim": {
@@ -2857,82 +2656,7 @@ HEMATOLOGY_DRUGS = {
             "FDA Drug Information - Filgrastim",
             "NCCN Guidelines - Myeloid Growth Factors",
             "UpToDate - Filgrastim Drug Information"
-        ],
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Quá mẫn với filgrastim hoặc protein nguồn E. coli"
-            ],
-            "tương_đối": [
-                "Hội chứng suy hô hấp cấp (ARDS) đang tiến triển - thận trọng/ngừng nếu xấu đi"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Category C - dữ liệu hạn chế, cân nhắc nếu lợi ích > nguy cơ. Filgrastim là protein tái tổ hợp, dữ liệu an toàn thai kỳ hạn chế.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Filgrastim bài tiết vào sữa mẹ ở nồng độ thấp. Dữ liệu hạn chế.",
-                "recommendation": "Thận trọng khi cho con bú. Cân nhắc lợi ích và nguy cơ."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Không đổi",
-            "severe": "Không đổi",
-            "notes": "Filgrastim thải trừ chủ yếu qua thận, một phần qua gan. Không cần điều chỉnh liều ở suy gan nhẹ đến trung bình."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Thận trọng",
-            "notes": "Filgrastim thải trừ chủ yếu qua thận. Suy thận nặng có thể làm chậm thải trừ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Tăng bạch cầu nặng",
-                "Đau xương nặng",
-                "Lách to, nguy cơ vỡ lách",
-                "Hội chứng suy hô hấp cấp (ARDS)"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Ngừng ngay filgrastim",
-                "Theo dõi công thức máu",
-                "Nếu vỡ lách: điều trị cấp cứu (truyền máu, phẫu thuật nếu cần)",
-                "Nếu ARDS: hỗ trợ hô hấp, điều trị triệu chứng",
-                "Theo dõi dấu hiệu sinh tồn"
-            ],
-            "monitoring": "Công thức máu, kích thước lách, dấu hiệu sinh tồn, triệu chứng hô hấp"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "sc": {
-                "technique": "Tiêm dưới da, thường ở bụng, đùi, hoặc cánh tay",
-                "timing": "Bắt đầu 24-72 giờ sau hóa trị, tiếp tục đến khi ANC >10.000/mm³",
-                "notes": "Theo protocol ung bướu/tủy xương cụ thể. Lưu ý: đau xương là tác dụng phụ phổ biến."
-            },
-            "iv": {
-                "reconstitution": "Pha trong Normal saline hoặc D5W theo hướng dẫn",
-                "infusion_rate": "Truyền trong 15-30 phút",
-                "compatibility": ["Normal saline (0.9% NaCl)", "D5W"],
-                "incompatibility": [],
-                "notes": "Có thể truyền IV, nhưng SC phổ biến hơn. Theo protocol cụ thể."
-            }
-        },
-            "incompatibility": [
-            "Cần xem xét",
-        ],
-            "notes": "Cần xem xét hướng dẫn cụ thể",
-        },
-        },
+        ]
     },
 
     "Emicizumab": {
@@ -3582,10 +3306,6 @@ HEMATOLOGY_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, guideline-supported"
         }
-        "reversal_agents": {
-            "available": false,
-            "agents": [],
-        },
     },
 
     "Andexanet alfa": {

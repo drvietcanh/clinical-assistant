@@ -522,6 +522,367 @@ OTHER_ANTIDEPRESSANTS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
+    },
+    
+    "Phenelzine": {
+        "group": "Psychiatry - MAO Inhibitor (MAOI)",
+        "vietnamese_name": "Phenelzine, Nardil",
+        "administration": ["PO"],
+        "indications": [
+            "Trầm cảm kháng trị",
+            "Trầm cảm không điển hình (atypical depression)",
+            "Panic disorder",
+            "Social anxiety disorder"
+        ],
+        "contraindications": [
+            "Dị ứng phenelzine",
+            "Pheochromocytoma",
+            "Suy gan nặng",
+            "Suy tim nặng",
+            "Dùng các thuốc tương tác (xem drug_interactions)"
+        ],
+        "dosage": {
+            "adult_initial": "15mg x 3 lần/ngày, tăng dần",
+            "adult_maintenance": "45-90mg/ngày chia 3 lần",
+            "adult_max": "90mg/ngày",
+            "notes": "MAOI, ức chế MAO-A và MAO-B. Tác dụng chậm (2-4 tuần). Cần chế độ ăn kiêng tyramine (tránh thực phẩm lên men, phô mai, rượu vang đỏ)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Hạ huyết áp tư thế (phổ biến)",
+            "Mất ngủ",
+            "Chóng mặt",
+            "Khô miệng",
+            "Tăng cân",
+            "Phù",
+            "Rối loạn chức năng tình dục",
+            "Nguy cơ tăng huyết áp nặng (nếu ăn thực phẩm chứa tyramine)",
+            "Nguy cơ serotonin syndrome (nếu dùng với SSRI/SNRI)"
+        ],
+        "interactions": [
+            "SSRIs, SNRIs: CHỐNG CHỈ ĐỊNH (nguy cơ serotonin syndrome)",
+            "TCAs: CHỐNG CHỈ ĐỊNH (nguy cơ tăng huyết áp)",
+            "Tyramine (thực phẩm): tăng huyết áp nặng",
+            "Sympathomimetics: tăng huyết áp nặng",
+            "Meperidine: CHỐNG CHỈ ĐỊNH (nguy hiểm)"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Phenelzine là MAO inhibitor (MAOI) không chọn lọc, ức chế enzyme monoamine oxidase (MAO-A và MAO-B). MAO chuyển hóa các chất dẫn truyền thần kinh monoamine (serotonin, norepinephrine, dopamine, tyramine). Ức chế MAO → tăng nồng độ các chất dẫn truyền thần kinh → tác dụng chống trầm cảm. Đặc điểm: hiệu quả với trầm cảm kháng trị và trầm cảm không điển hình, nhưng có nhiều tương tác thuốc và thực phẩm (tyramine), nguy cơ tăng huyết áp nặng nếu ăn thực phẩm chứa tyramine.",
+        "monitoring": [
+            "Triệu chứng trầm cảm, lo âu",
+            "Huyết áp (hạ huyết áp tư thế phổ biến)",
+            "Dấu hiệu tăng huyết áp nặng (nếu ăn thực phẩm chứa tyramine): nhức đầu dữ dội, đau ngực, nhịp tim nhanh",
+            "Dấu hiệu serotonin syndrome (nếu dùng với SSRI/SNRI): sốt, kích động, co giật",
+            "Chức năng gan (hiếm viêm gan)",
+            "Cân nặng (tăng cân phổ biến)"
+        ],
+        "precautions": [
+            "CHẾ ĐỘ ĂN KIÊNG TYRAMINE - tránh thực phẩm lên men, phô mai, rượu vang đỏ, thịt xông khói, cá hun khói",
+            "Nguy cơ tăng huyết áp nặng nếu ăn thực phẩm chứa tyramine - cấp cứu",
+            "KHÔNG dùng với SSRIs, SNRIs, TCAs (chống chỉ định tuyệt đối)",
+            "Hạ huyết áp tư thế - phổ biến, thận trọng khi đứng dậy",
+            "Tác dụng chậm (2-4 tuần) - không mong đợi tác dụng tức thì",
+            "Ngừng ít nhất 14 ngày trước khi bắt đầu SSRI/SNRI/TCA",
+            "Thận trọng với sympathomimetics (tăng huyết áp nặng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "11.6 giờ",
+            "onset": "2-4 tuần (chậm)",
+            "duration": "Dài (do ức chế MAO không hồi phục)",
+            "protein_binding": "Không rõ",
+            "clearance": "Gan (chuyển hóa qua acetylation), thận (thải trừ). Ức chế MAO không hồi phục (cần tổng hợp MAO mới)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Nguy cơ tăng huyết áp nặng nếu ăn thực phẩm chứa tyramine. Nguy cơ serotonin syndrome nếu dùng với SSRI/SNRI/TCA. Chống chỉ định với nhiều thuốc.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "SSRIs, SNRIs, TCAs",
+                    "mechanism": "Cả hai đều tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin nghiêm trọng: sốt, kích động, co giật, rối loạn ý thức, có thể tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng phenelzine ít nhất 14 ngày trước khi bắt đầu SSRI/SNRI/TCA."
+                },
+                {
+                    "drug": "Tyramine (thực phẩm: phô mai, rượu vang đỏ, thịt xông khói, cá hun khói)",
+                    "mechanism": "MAO chuyển hóa tyramine. Ức chế MAO → tyramine tích lũy → giải phóng norepinephrine → tăng huyết áp nặng",
+                    "effect": "Tăng huyết áp nghiêm trọng: nhức đầu dữ dội, đau ngực, nhịp tim nhanh, có thể tử vong",
+                    "management": "CHẾ ĐỘ ĂN KIÊNG TYRAMINE. Tránh thực phẩm lên men, phô mai, rượu vang đỏ, thịt xông khói, cá hun khói. Nếu có dấu hiệu tăng huyết áp: điều trị ngay (phentolamine, nifedipine)."
+                },
+                {
+                    "drug": "Sympathomimetics (epinephrine, norepinephrine, pseudoephedrine)",
+                    "mechanism": "Tăng nồng độ catecholamines",
+                    "effect": "Tăng huyết áp nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH. Tránh dùng."
+                },
+                {
+                    "drug": "Meperidine",
+                    "mechanism": "Tương tác nguy hiểm",
+                    "effect": "Sốt cao, kích động, co giật, có thể tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antihistamines",
+                    "mechanism": "Tăng tác dụng anticholinergic",
+                    "effect": "Tăng khô miệng, táo bón, nhìn mờ",
+                    "management": "Thận trọng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng phenelzine",
+                "Pheochromocytoma",
+                "Dùng SSRI, SNRI, TCA (chống chỉ định tuyệt đối)",
+                "Dùng meperidine (chống chỉ định tuyệt đối)",
+                "Suy gan nặng",
+                "Suy tim nặng"
+            ],
+            "tương_đối": [
+                "Suy gan nhẹ đến trung bình - thận trọng",
+                "Suy tim nhẹ đến trung bình - thận trọng",
+                "Hạ huyết áp - có thể làm nặng",
+                "Dùng với sympathomimetics - tránh"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Có thể dùng khi lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Phenelzine bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Thận trọng, có thể giảm liều",
+            "severe": "CHỐNG CHỈ ĐỊNH (chuyển hóa qua gan)",
+            "notes": "Phenelzine chuyển hóa qua gan (acetylation). Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích động, lo âu",
+                "Tăng huyết áp nghiêm trọng (nếu ăn tyramine)",
+                "Hạ huyết áp (nếu quá liều)",
+                "Sốt (nếu dùng với meperidine)",
+                "Co giật",
+                "Hôn mê"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị tăng huyết áp: phentolamine, nifedipine.",
+            "treatment": [
+                "Nếu tăng huyết áp: Phentolamine 5mg IV, hoặc nifedipine 10mg ngậm",
+                "Nếu hạ huyết áp: Truyền dịch, vận mạch nếu cần",
+                "Điều trị co giật: Benzodiazepines",
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi huyết áp, ECG liên tục"
+            ],
+            "monitoring": "Huyết áp, ECG, ý thức, nhiệt độ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn",
+                "timing": "Dùng 3 lần/ngày. Khởi đầu 15mg x 3 lần/ngày, tăng dần. QUAN TRỌNG: Chế độ ăn kiêng tyramine. KHÔNG ngừng đột ngột."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Nardil (phenelzine)",
+                "UpToDate - Phenelzine: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Tranylcypromine": {
+        "group": "Psychiatry - MAO Inhibitor (MAOI)",
+        "vietnamese_name": "Tranylcypromine, Parnate",
+        "administration": ["PO"],
+        "indications": [
+            "Trầm cảm kháng trị",
+            "Trầm cảm không điển hình (atypical depression)",
+            "Panic disorder"
+        ],
+        "contraindications": [
+            "Dị ứng tranylcypromine",
+            "Pheochromocytoma",
+            "Suy gan nặng",
+            "Suy tim nặng",
+            "Dùng các thuốc tương tác (xem drug_interactions)"
+        ],
+        "dosage": {
+            "adult_initial": "10mg x 2 lần/ngày, tăng dần",
+            "adult_maintenance": "30-60mg/ngày chia 2-3 lần",
+            "adult_max": "60mg/ngày",
+            "notes": "MAOI, ức chế MAO-A và MAO-B. Tác dụng chậm (2-4 tuần). Cần chế độ ăn kiêng tyramine (tránh thực phẩm lên men, phô mai, rượu vang đỏ)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Hạ huyết áp tư thế (phổ biến)",
+            "Mất ngủ",
+            "Chóng mặt",
+            "Khô miệng",
+            "Tăng cân",
+            "Phù",
+            "Rối loạn chức năng tình dục",
+            "Nguy cơ tăng huyết áp nặng (nếu ăn thực phẩm chứa tyramine)",
+            "Nguy cơ serotonin syndrome (nếu dùng với SSRI/SNRI)"
+        ],
+        "interactions": [
+            "SSRIs, SNRIs: CHỐNG CHỈ ĐỊNH (nguy cơ serotonin syndrome)",
+            "TCAs: CHỐNG CHỈ ĐỊNH (nguy cơ tăng huyết áp)",
+            "Tyramine (thực phẩm): tăng huyết áp nặng",
+            "Sympathomimetics: tăng huyết áp nặng",
+            "Meperidine: CHỐNG CHỈ ĐỊNH (nguy hiểm)"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Tranylcypromine là MAO inhibitor (MAOI) không chọn lọc, ức chế enzyme monoamine oxidase (MAO-A và MAO-B). MAO chuyển hóa các chất dẫn truyền thần kinh monoamine (serotonin, norepinephrine, dopamine, tyramine). Ức chế MAO → tăng nồng độ các chất dẫn truyền thần kinh → tác dụng chống trầm cảm. Đặc điểm: hiệu quả với trầm cảm kháng trị và trầm cảm không điển hình, nhưng có nhiều tương tác thuốc và thực phẩm (tyramine), nguy cơ tăng huyết áp nặng nếu ăn thực phẩm chứa tyramine. Tương tự phenelzine nhưng có cấu trúc amphetamine-like.",
+        "monitoring": [
+            "Triệu chứng trầm cảm, lo âu",
+            "Huyết áp (hạ huyết áp tư thế phổ biến)",
+            "Dấu hiệu tăng huyết áp nặng (nếu ăn thực phẩm chứa tyramine): nhức đầu dữ dội, đau ngực, nhịp tim nhanh",
+            "Dấu hiệu serotonin syndrome (nếu dùng với SSRI/SNRI): sốt, kích động, co giật",
+            "Chức năng gan (hiếm viêm gan)",
+            "Cân nặng (tăng cân phổ biến)"
+        ],
+        "precautions": [
+            "CHẾ ĐỘ ĂN KIÊNG TYRAMINE - tránh thực phẩm lên men, phô mai, rượu vang đỏ, thịt xông khói, cá hun khói",
+            "Nguy cơ tăng huyết áp nặng nếu ăn thực phẩm chứa tyramine - cấp cứu",
+            "KHÔNG dùng với SSRIs, SNRIs, TCAs (chống chỉ định tuyệt đối)",
+            "Hạ huyết áp tư thế - phổ biến, thận trọng khi đứng dậy",
+            "Tác dụng chậm (2-4 tuần) - không mong đợi tác dụng tức thì",
+            "Ngừng ít nhất 14 ngày trước khi bắt đầu SSRI/SNRI/TCA",
+            "Thận trọng với sympathomimetics (tăng huyết áp nặng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2.5 giờ",
+            "onset": "2-4 tuần (chậm)",
+            "duration": "Dài (do ức chế MAO không hồi phục)",
+            "protein_binding": "Không rõ",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ). Ức chế MAO không hồi phục (cần tổng hợp MAO mới)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Nguy cơ tăng huyết áp nặng nếu ăn thực phẩm chứa tyramine. Nguy cơ serotonin syndrome nếu dùng với SSRI/SNRI/TCA. Chống chỉ định với nhiều thuốc.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "SSRIs, SNRIs, TCAs",
+                    "mechanism": "Cả hai đều tăng nồng độ serotonin",
+                    "effect": "Hội chứng serotonin nghiêm trọng: sốt, kích động, co giật, rối loạn ý thức, có thể tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng tranylcypromine ít nhất 14 ngày trước khi bắt đầu SSRI/SNRI/TCA."
+                },
+                {
+                    "drug": "Tyramine (thực phẩm: phô mai, rượu vang đỏ, thịt xông khói, cá hun khói)",
+                    "mechanism": "MAO chuyển hóa tyramine. Ức chế MAO → tyramine tích lũy → giải phóng norepinephrine → tăng huyết áp nặng",
+                    "effect": "Tăng huyết áp nghiêm trọng: nhức đầu dữ dội, đau ngực, nhịp tim nhanh, có thể tử vong",
+                    "management": "CHẾ ĐỘ ĂN KIÊNG TYRAMINE. Tránh thực phẩm lên men, phô mai, rượu vang đỏ, thịt xông khói, cá hun khói. Nếu có dấu hiệu tăng huyết áp: điều trị ngay (phentolamine, nifedipine)."
+                },
+                {
+                    "drug": "Sympathomimetics (epinephrine, norepinephrine, pseudoephedrine)",
+                    "mechanism": "Tăng nồng độ catecholamines",
+                    "effect": "Tăng huyết áp nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH. Tránh dùng."
+                },
+                {
+                    "drug": "Meperidine",
+                    "mechanism": "Tương tác nguy hiểm",
+                    "effect": "Sốt cao, kích động, co giật, có thể tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antihistamines",
+                    "mechanism": "Tăng tác dụng anticholinergic",
+                    "effect": "Tăng khô miệng, táo bón, nhìn mờ",
+                    "management": "Thận trọng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng tranylcypromine",
+                "Pheochromocytoma",
+                "Dùng SSRI, SNRI, TCA (chống chỉ định tuyệt đối)",
+                "Dùng meperidine (chống chỉ định tuyệt đối)",
+                "Suy gan nặng",
+                "Suy tim nặng"
+            ],
+            "tương_đối": [
+                "Suy gan nhẹ đến trung bình - thận trọng",
+                "Suy tim nhẹ đến trung bình - thận trọng",
+                "Hạ huyết áp - có thể làm nặng",
+                "Dùng với sympathomimetics - tránh"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Có thể dùng khi lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Tranylcypromine bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Thận trọng, có thể giảm liều",
+            "severe": "CHỐNG CHỈ ĐỊNH (chuyển hóa qua gan)",
+            "notes": "Tranylcypromine chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích động, lo âu",
+                "Tăng huyết áp nghiêm trọng (nếu ăn tyramine)",
+                "Hạ huyết áp (nếu quá liều)",
+                "Sốt (nếu dùng với meperidine)",
+                "Co giật",
+                "Hôn mê"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị tăng huyết áp: phentolamine, nifedipine.",
+            "treatment": [
+                "Nếu tăng huyết áp: Phentolamine 5mg IV, hoặc nifedipine 10mg ngậm",
+                "Nếu hạ huyết áp: Truyền dịch, vận mạch nếu cần",
+                "Điều trị co giật: Benzodiazepines",
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi huyết áp, ECG liên tục"
+            ],
+            "monitoring": "Huyết áp, ECG, ý thức, nhiệt độ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn",
+                "timing": "Dùng 2-3 lần/ngày. Khởi đầu 10mg x 2 lần/ngày, tăng dần. QUAN TRỌNG: Chế độ ăn kiêng tyramine. KHÔNG ngừng đột ngột."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Parnate (tranylcypromine)",
+                "UpToDate - Tranylcypromine: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
     }
 }
 

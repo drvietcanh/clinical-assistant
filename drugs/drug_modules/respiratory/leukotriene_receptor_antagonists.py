@@ -113,7 +113,8 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'pediatric': '4mg (2 puffs) x 2-4 lần/ngày (từ 6 tuổi trở lên)', 'notes':
         'Mast cell stabilizer, ít dùng hơn cromolyn. Dùng để phòng ngừa, không dùng cho cắt cơn cấp.'
         }, 'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
-        'under_30': 'Không đổi'}, 'side_effects': [
+        'under_30': 'Không đổi', 'dialysis': 'Không đổi', 'notes':
+        'Hấp thu toàn thân ít từ dạng hít. Không cần điều chỉnh liều ở suy thận.'}, 'side_effects': [
         'Vị đắng (phổ biến)', 'Ho', 'Kích ứng họng', 'Nhức đầu',
         'Buồn nôn (hiếm)'], 'interactions': ['Ít tương tác'], 'pregnancy': 'B',
         'mechanism_of_action':
@@ -193,7 +194,9 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Không đổi",
-            "under_30": "Không đổi"
+            "under_30": "Không đổi",
+            "dialysis": "Không đổi",
+            "notes": "Zafirlukast chuyển hóa qua gan, thải trừ một phần qua thận. Không cần điều chỉnh liều ở suy thận."
         },
         "side_effects": [
             "Nhức đầu",
@@ -312,7 +315,8 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng."
         },
         "administration_instructions": {
             "oral": {
@@ -353,7 +357,9 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Không đổi",
-            "under_30": "Không đổi"
+            "under_30": "Không đổi",
+            "dialysis": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Không cần điều chỉnh liều ở suy thận."
         },
         "side_effects": [
             "Ho (phổ biến khi hít)",
@@ -439,7 +445,8 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng."
         },
         "administration_instructions": {
             "oral": None,

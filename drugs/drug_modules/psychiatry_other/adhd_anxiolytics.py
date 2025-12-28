@@ -487,6 +487,350 @@ ADHD_ANXIOLYTICS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
+    },
+    
+    "Dextroamphetamine": {
+        "group": "Psychiatry - ADHD Medication (Stimulant)",
+        "vietnamese_name": "Dextroamphetamine, Dexedrine, Adderall (dextroamphetamine + levoamphetamine)",
+        "administration": ["PO"],
+        "indications": [
+            "ADHD (Attention Deficit Hyperactivity Disorder)",
+            "Narcolepsy"
+        ],
+        "contraindications": [
+            "Glaucoma",
+            "Tics hoặc Tourette's syndrome",
+            "Dùng MAO inhibitor",
+            "Bệnh tim nặng",
+            "Tăng huyết áp nặng",
+            "Dị ứng amphetamine"
+        ],
+        "dosage": {
+            "adult_adhd": "5-10mg x 1-2 lần/ngày, tăng đến 20-40mg/ngày",
+            "adult_narcolepsy": "10-20mg x 1-2 lần/ngày",
+            "pediatric_adhd": "2.5-5mg x 1-2 lần/ngày, tăng đến 20-30mg/ngày",
+            "adult_max": "40mg/ngày",
+            "notes": "Stimulant, tác dụng nhanh. Có dạng immediate release (IR) và extended release (ER). Dùng buổi sáng và trưa, tránh buổi tối (gây mất ngủ)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Mất ngủ (phổ biến)",
+            "Giảm cảm giác thèm ăn",
+            "Nhức đầu",
+            "Đau bụng",
+            "Tăng huyết áp",
+            "Nhịp tim nhanh",
+            "Kích động",
+            "Tics (có thể làm nặng)",
+            "Tăng nguy cơ lạm dụng (stimulant)"
+        ],
+        "interactions": [
+            "MAO inhibitors: chống chỉ định (nguy hiểm)",
+            "Thuốc tăng huyết áp: tăng tác dụng",
+            "Antacids: tăng hấp thu dextroamphetamine"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Dextroamphetamine là stimulant, ức chế tái hấp thu dopamine và norepinephrine ở synap thần kinh, và tăng giải phóng dopamine và norepinephrine từ presynaptic terminals. Tăng nồng độ các chất dẫn truyền thần kinh này. Tăng sự chú ý, giảm hiếu động, cải thiện hành vi ở ADHD. Tác dụng nhanh (30-60 phút). Có dạng immediate release (IR) và extended release (ER). Đặc điểm: tác dụng nhanh, hiệu quả cao với ADHD, nhưng có nguy cơ lạm dụng (stimulant).",
+        "monitoring": [
+            "Triệu chứng ADHD (sự chú ý, hiếu động)",
+            "Huyết áp, nhịp tim (tăng huyết áp, nhịp tim nhanh)",
+            "Cân nặng (giảm cảm giác thèm ăn)",
+            "Giấc ngủ (mất ngủ)",
+            "Tics (có thể làm nặng)",
+            "Dấu hiệu lạm dụng",
+            "Chức năng tim (nếu có bệnh tim)"
+        ],
+        "precautions": [
+            "NGUY CƠ LẠM DỤNG - stimulant, cần theo dõi sát",
+            "Tăng huyết áp, nhịp tim nhanh - theo dõi định kỳ",
+            "Mất ngủ - tránh dùng buổi tối",
+            "Giảm cảm giác thèm ăn - theo dõi cân nặng",
+            "Tics - có thể làm nặng, thận trọng",
+            "Không dùng với MAO inhibitors",
+            "Thận trọng ở bệnh nhân có bệnh tim",
+            "Dùng buổi sáng và trưa, tránh buổi tối"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10-12 giờ (IR), 10-13 giờ (ER)",
+            "onset": "30-60 phút (IR), 1-2 giờ (ER)",
+            "duration": "4-6 giờ (IR), 8-12 giờ (ER)",
+            "protein_binding": "20%",
+            "clearance": "Gan: chuyển hóa một phần. Thận: bài tiết một phần (pH-dependent)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Bảo quản an toàn (nguy cơ lạm dụng).",
+        "black_box_warnings": "Nguy cơ lạm dụng và lệ thuộc. Chỉ dùng cho ADHD hoặc narcolepsy được chẩn đoán. Tăng huyết áp và nhịp tim. Tics. Chống chỉ định với MAO inhibitors.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors (phenelzine, tranylcypromine)",
+                    "mechanism": "Tăng nồng độ catecholamines",
+                    "effect": "Tăng huyết áp nghiêm trọng, sốt cao, co giật, tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng MAO inhibitor ít nhất 14 ngày trước khi bắt đầu dextroamphetamine."
+                },
+                {
+                    "drug": "Thuốc tăng huyết áp (epinephrine, norepinephrine)",
+                    "mechanism": "Tác dụng hiệp đồng",
+                    "effect": "Tăng huyết áp nghiêm trọng",
+                    "management": "Thận trọng. Theo dõi huyết áp sát."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antacids",
+                    "mechanism": "Tăng pH dạ dày, tăng hấp thu dextroamphetamine",
+                    "effect": "Tăng nồng độ dextroamphetamine",
+                    "management": "Cách thời gian ít nhất 1 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Glaucoma",
+                "Tics hoặc Tourette's syndrome",
+                "Dùng MAO inhibitor",
+                "Bệnh tim nặng",
+                "Tăng huyết áp nặng",
+                "Dị ứng amphetamine"
+            ],
+            "tương_đối": [
+                "Bệnh tim nhẹ đến trung bình - thận trọng, theo dõi ECG",
+                "Tăng huyết áp nhẹ đến trung bình - thận trọng, theo dõi huyết áp",
+                "Tiền sử lạm dụng chất - tăng nguy cơ lạm dụng",
+                "Lo âu nặng - có thể làm nặng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Chỉ dùng nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Dextroamphetamine bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng, có thể giảm liều",
+            "notes": "Dextroamphetamine chuyển hóa một phần qua gan. Suy gan có thể làm giảm chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích động, lo âu",
+                "Tăng huyết áp nghiêm trọng",
+                "Nhịp tim nhanh",
+                "Sốt",
+                "Co giật",
+                "Hôn mê",
+                "Rối loạn nhịp tim"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi ECG liên tục",
+                "Điều trị tăng huyết áp: Labetalol, phentolamine",
+                "Điều trị co giật: Benzodiazepines",
+                "Hạ nhiệt nếu sốt",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính"
+            ],
+            "monitoring": "Theo dõi liên tục ECG, huyết áp, nhịp tim, ý thức, nhiệt độ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn",
+                "timing": "Dùng buổi sáng và trưa, tránh buổi tối (gây mất ngủ). IR: 1-2 lần/ngày. ER: 1 lần/ngày buổi sáng. QUAN TRỌNG: Bảo quản an toàn (nguy cơ lạm dụng)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Dexedrine (dextroamphetamine), Adderall (amphetamine salts)",
+                "UpToDate - Dextroamphetamine: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Lisdexamfetamine": {
+        "group": "Psychiatry - ADHD Medication (Stimulant - Prodrug)",
+        "vietnamese_name": "Lisdexamfetamine, Vyvanse",
+        "administration": ["PO"],
+        "indications": [
+            "ADHD (Attention Deficit Hyperactivity Disorder)",
+            "Binge eating disorder"
+        ],
+        "contraindications": [
+            "Glaucoma",
+            "Tics hoặc Tourette's syndrome",
+            "Dùng MAO inhibitor",
+            "Bệnh tim nặng",
+            "Tăng huyết áp nặng",
+            "Dị ứng amphetamine"
+        ],
+        "dosage": {
+            "adult_adhd": "30mg/ngày, tăng đến 50-70mg/ngày",
+            "adult_binge_eating": "30mg/ngày, tăng đến 50-70mg/ngày",
+            "pediatric_adhd": "20-30mg/ngày, tăng đến 50-70mg/ngày",
+            "adult_max": "70mg/ngày",
+            "notes": "Prodrug của dextroamphetamine. Chuyển hóa thành dextroamphetamine trong cơ thể. Tác dụng kéo dài (10-12 giờ), dùng 1 lần/ngày. Ít nguy cơ lạm dụng hơn dextroamphetamine (do là prodrug)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Thận trọng, có thể giảm liều"
+        },
+        "side_effects": [
+            "Mất ngủ (phổ biến)",
+            "Giảm cảm giác thèm ăn",
+            "Nhức đầu",
+            "Đau bụng",
+            "Tăng huyết áp",
+            "Nhịp tim nhanh",
+            "Kích động",
+            "Tics (có thể làm nặng)",
+            "Tăng nguy cơ lạm dụng (ít hơn dextroamphetamine)"
+        ],
+        "interactions": [
+            "MAO inhibitors: chống chỉ định (nguy hiểm)",
+            "Thuốc tăng huyết áp: tăng tác dụng",
+            "Antacids: tăng hấp thu lisdexamfetamine"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Lisdexamfetamine là prodrug của dextroamphetamine. Sau khi uống, lisdexamfetamine được chuyển hóa thành dextroamphetamine trong cơ thể (qua enzyme trong hồng cầu). Dextroamphetamine ức chế tái hấp thu dopamine và norepinephrine, và tăng giải phóng các chất dẫn truyền thần kinh này. Tăng sự chú ý, giảm hiếu động, cải thiện hành vi ở ADHD. Đặc điểm: prodrug, tác dụng kéo dài (10-12 giờ), dùng 1 lần/ngày, ít nguy cơ lạm dụng hơn dextroamphetamine (do là prodrug, không thể tiêm hoặc hít).",
+        "monitoring": [
+            "Triệu chứng ADHD (sự chú ý, hiếu động)",
+            "Huyết áp, nhịp tim (tăng huyết áp, nhịp tim nhanh)",
+            "Cân nặng (giảm cảm giác thèm ăn)",
+            "Giấc ngủ (mất ngủ)",
+            "Tics (có thể làm nặng)",
+            "Dấu hiệu lạm dụng (ít hơn dextroamphetamine)",
+            "Chức năng tim (nếu có bệnh tim)"
+        ],
+        "precautions": [
+            "NGUY CƠ LẠM DỤNG - stimulant, nhưng ít hơn dextroamphetamine (do là prodrug)",
+            "Tăng huyết áp, nhịp tim nhanh - theo dõi định kỳ",
+            "Mất ngủ - tránh dùng buổi tối",
+            "Giảm cảm giác thèm ăn - theo dõi cân nặng",
+            "Tics - có thể làm nặng, thận trọng",
+            "Không dùng với MAO inhibitors",
+            "Thận trọng ở bệnh nhân có bệnh tim",
+            "Dùng buổi sáng, tránh buổi tối (tác dụng kéo dài 10-12 giờ)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1 giờ (lisdexamfetamine), 10-12 giờ (dextroamphetamine sau chuyển hóa)",
+            "onset": "1-2 giờ (chậm hơn dextroamphetamine do là prodrug)",
+            "duration": "10-12 giờ (dài, dùng 1 lần/ngày)",
+            "protein_binding": "20% (dextroamphetamine)",
+            "clearance": "Chuyển hóa thành dextroamphetamine trong hồng cầu. Dextroamphetamine: gan (chuyển hóa một phần), thận (bài tiết một phần)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Bảo quản an toàn (nguy cơ lạm dụng).",
+        "black_box_warnings": "Nguy cơ lạm dụng và lệ thuộc. Chỉ dùng cho ADHD hoặc binge eating disorder được chẩn đoán. Tăng huyết áp và nhịp tim. Tics. Chống chỉ định với MAO inhibitors.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAO inhibitors (phenelzine, tranylcypromine)",
+                    "mechanism": "Tăng nồng độ catecholamines",
+                    "effect": "Tăng huyết áp nghiêm trọng, sốt cao, co giật, tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng MAO inhibitor ít nhất 14 ngày trước khi bắt đầu lisdexamfetamine."
+                },
+                {
+                    "drug": "Thuốc tăng huyết áp (epinephrine, norepinephrine)",
+                    "mechanism": "Tác dụng hiệp đồng",
+                    "effect": "Tăng huyết áp nghiêm trọng",
+                    "management": "Thận trọng. Theo dõi huyết áp sát."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antacids",
+                    "mechanism": "Tăng pH dạ dày, tăng hấp thu lisdexamfetamine",
+                    "effect": "Tăng nồng độ lisdexamfetamine",
+                    "management": "Cách thời gian ít nhất 1 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Glaucoma",
+                "Tics hoặc Tourette's syndrome",
+                "Dùng MAO inhibitor",
+                "Bệnh tim nặng",
+                "Tăng huyết áp nặng",
+                "Dị ứng amphetamine"
+            ],
+            "tương_đối": [
+                "Bệnh tim nhẹ đến trung bình - thận trọng, theo dõi ECG",
+                "Tăng huyết áp nhẹ đến trung bình - thận trọng, theo dõi huyết áp",
+                "Tiền sử lạm dụng chất - tăng nguy cơ lạm dụng",
+                "Lo âu nặng - có thể làm nặng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Chỉ dùng nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Lisdexamfetamine (và dextroamphetamine sau chuyển hóa) bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng, có thể giảm liều",
+            "notes": "Lisdexamfetamine chuyển hóa thành dextroamphetamine. Dextroamphetamine chuyển hóa một phần qua gan. Suy gan có thể làm giảm chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích động, lo âu",
+                "Tăng huyết áp nghiêm trọng",
+                "Nhịp tim nhanh",
+                "Sốt",
+                "Co giật",
+                "Hôn mê",
+                "Rối loạn nhịp tim"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi ECG liên tục",
+                "Điều trị tăng huyết áp: Labetalol, phentolamine",
+                "Điều trị co giật: Benzodiazepines",
+                "Hạ nhiệt nếu sốt",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính"
+            ],
+            "monitoring": "Theo dõi liên tục ECG, huyết áp, nhịp tim, ý thức, nhiệt độ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn",
+                "timing": "Dùng 1 lần/ngày buổi sáng. Tác dụng kéo dài 10-12 giờ. Tránh buổi tối (gây mất ngủ). QUAN TRỌNG: Bảo quản an toàn (nguy cơ lạm dụng)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Vyvanse (lisdexamfetamine)",
+                "UpToDate - Lisdexamfetamine: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
     }
 }
 

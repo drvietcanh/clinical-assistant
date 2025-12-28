@@ -117,6 +117,77 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
         "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Suy thận nặng (do piracetam)",
+                "Xuất huyết não đang hoạt động",
+                "Dị ứng với bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Suy thận nhẹ đến trung bình - giảm liều piracetam 50%"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - tránh dùng thường quy. Dữ liệu an toàn thai kỳ hạn chế.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Dữ liệu hạn chế.",
+                "recommendation": "Thận trọng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng",
+            "notes": "Citicoline và piracetam chủ yếu thải trừ qua thận. Suy gan ít ảnh hưởng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Đau đầu nặng",
+                "Buồn nôn nặng",
+                "Rối loạn tiêu hóa nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay thuốc",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Điều trị hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Triệu chứng lâm sàng, chức năng thận"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn",
+                "timing": "Chia 2-3 lần/ngày (tùy chế phẩm)",
+                "notes": "Dùng như thuốc hỗ trợ, không thay thế điều trị chuẩn. Hiệu quả dài hạn còn gây tranh cãi."
+            },
+            "iv": {
+                "reconstitution": "Pha trong Normal saline hoặc D5W theo hướng dẫn",
+                "infusion_rate": "Truyền trong 30-60 phút",
+                "compatibility": ["Normal saline (0.9% NaCl)", "D5W"],
+                "incompatibility": [],
+                "notes": "Theo protocol cụ thể. Dùng như thuốc hỗ trợ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cần cập nhật",
+                "UpToDate - Cần cập nhật"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "C - Bằng chứng hạn chế"
+        },
     },
     "Ginkgo biloba/Vinpocetine": {
         "group": "Neurology - Combination (Herbal vasomodulator + Cerebral vasodilator)",

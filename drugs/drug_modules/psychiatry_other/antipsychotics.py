@@ -1959,6 +1959,166 @@ ANTIPSYCHOTICS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
+    },
+    
+    "Pimozide": {
+        "group": "Psychiatry - Antipsychotic (Typical)",
+        "vietnamese_name": "Pimozide, Orap",
+        "administration": ["PO"],
+        "indications": [
+            "Tourette's syndrome",
+            "Tics nặng",
+            "Tâm thần phân liệt (ít dùng)"
+        ],
+        "contraindications": [
+            "QT prolongation nặng (QTc >500ms)",
+            "Rối loạn nhịp tim",
+            "Dùng với QT prolonging drugs",
+            "Dùng với CYP3A4 inhibitors mạnh",
+            "Dị ứng pimozide"
+        ],
+        "dosage": {
+            "adult_tourette": "1-2mg/ngày, tăng dần đến 4-8mg/ngày",
+            "adult_max": "10mg/ngày",
+            "notes": "Typical antipsychotic, hiệu quả với Tourette's syndrome. QT prolongation - cần theo dõi ECG. Tương tác nhiều với CYP3A4 inhibitors."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Thận trọng, có thể giảm liều"
+        },
+        "side_effects": [
+            "QT prolongation (QUAN TRỌNG - cần theo dõi ECG)",
+            "Rối loạn vận động ngoại tháp (EPS) - phổ biến",
+            "Buồn ngủ",
+            "Chóng mặt",
+            "Khô miệng",
+            "Tăng prolactin",
+            "Rối loạn nhịp tim (torsades de pointes)"
+        ],
+        "interactions": [
+            "CYP3A4 inhibitors: tăng nồng độ pimozide đáng kể (nguy hiểm)",
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
+            "Macrolides, azoles: CHỐNG CHỈ ĐỊNH (tăng nồng độ pimozide)"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Pimozide là typical antipsychotic, đối kháng thụ thể dopamine D2 mạnh. Ức chế dopamine ở vùng nigrostriatal → giảm tics trong Tourette's syndrome. Đối kháng D2 ở vùng mesolimbic → tác dụng chống loạn thần. Đặc điểm: hiệu quả với Tourette's syndrome và tics nặng, nhưng có nguy cơ QT prolongation cao, rối loạn vận động ngoại tháp (EPS) phổ biến, tương tác nhiều với CYP3A4 inhibitors (tăng nồng độ đáng kể, nguy hiểm).",
+        "monitoring": [
+            "ECG trước khi bắt đầu và định kỳ (QT prolongation) - QUAN TRỌNG",
+            "Triệu chứng Tourette's (tics)",
+            "Dấu hiệu rối loạn vận động ngoại tháp (EPS): parkinsonism, dystonia, akathisia",
+            "Dấu hiệu rối loạn nhịp tim (torsades de pointes)",
+            "Prolactin (tăng prolactin phổ biến)"
+        ],
+        "precautions": [
+            "QT PROLONGATION - cần theo dõi ECG trước và định kỳ",
+            "Rối loạn vận động ngoại tháp (EPS) - phổ biến, có thể điều trị bằng anticholinergics",
+            "Tương tác với CYP3A4 inhibitors - tăng nồng độ pimozide đáng kể, nguy hiểm",
+            "CHỐNG CHỈ ĐỊNH với macrolides, azoles (tăng nồng độ pimozide)",
+            "Tránh dùng với QT prolonging drugs",
+            "Thận trọng ở bệnh nhân có bệnh tim",
+            "Tăng prolactin - phổ biến"
+        ],
+        "pharmacokinetics": {
+            "half_life": "55 giờ (rất dài)",
+            "onset": "Vài ngày đến vài tuần",
+            "duration": "Dài (do half-life dài)",
+            "protein_binding": "99%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4, CYP2D6. Thận: bài tiết một phần."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "QT prolongation - có thể gây rối loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Cần theo dõi ECG. Chống chỉ định với CYP3A4 inhibitors mạnh (macrolides, azoles).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, erythromycin)",
+                    "mechanism": "Ức chế chuyển hóa pimozide",
+                    "effect": "Tăng nồng độ pimozide đáng kể (10-20 lần), tăng nguy cơ QT prolongation, rối loạn nhịp tim, tử vong",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Tránh dùng cùng."
+                },
+                {
+                    "drug": "QT prolonging drugs (amiodarone, sotalol, haloperidol, thioridazine)",
+                    "mechanism": "Cả hai đều kéo dài QT",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim nghiêm trọng (torsades de pointes)",
+                    "management": "TRÁNH dùng cùng. Nếu cần, theo dõi ECG sát."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP2D6 inhibitors (fluoxetine, paroxetine, quinidine)",
+                    "mechanism": "Ức chế chuyển hóa pimozide",
+                    "effect": "Tăng nồng độ pimozide, tăng tác dụng phụ",
+                    "management": "Thận trọng. Giảm liều pimozide 50%."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "QT prolongation nặng (QTc >500ms)",
+                "Rối loạn nhịp tim",
+                "Dùng với CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, erythromycin)",
+                "Dùng với QT prolonging drugs",
+                "Dị ứng pimozide"
+            ],
+            "tương_đối": [
+                "Bệnh tim - tăng nguy cơ QT prolongation",
+                "Dùng với CYP2D6 inhibitors - giảm liều",
+                "Suy gan nặng - tăng nguy cơ tích lũy"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Có thể dùng khi lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Pimozide bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể giảm liều",
+            "severe": "CHỐNG CHỈ ĐỊNH (chuyển hóa qua gan)",
+            "notes": "Pimozide chuyển hóa qua gan (CYP3A4, CYP2D6). Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "QT prolongation nặng",
+                "Rối loạn nhịp tim (torsades de pointes)",
+                "Rối loạn vận động ngoại tháp nặng",
+                "Buồn ngủ sâu, hôn mê",
+                "Hạ huyết áp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi ECG liên tục (QT prolongation)",
+                "Điều trị rối loạn nhịp tim: Magnesium sulfate, isoproterenol nếu cần",
+                "Điều trị rối loạn vận động: Anticholinergics (benztropine, diphenhydramine)",
+                "Điều trị hạ huyết áp: Truyền dịch, vận mạch",
+                "Lọc máu KHÔNG hiệu quả do protein binding cao (99%)"
+            ],
+            "monitoring": "Theo dõi liên tục ECG, huyết áp, ý thức, dấu hiệu rối loạn vận động"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn",
+                "timing": "Dùng 1 lần/ngày. Khởi đầu 1-2mg/ngày, tăng dần. QUAN TRỌNG: Theo dõi ECG trước và định kỳ. KHÔNG ngừng đột ngột."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Orap (pimozide)",
+                "UpToDate - Pimozide: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
     }
 }
 
