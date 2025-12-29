@@ -126,8 +126,32 @@ st.markdown(
 )
 
 # Enhanced Breadcrumbs with back button (inspired by medical reference sites)
-# Get drug name first to avoid NameError
-drug_name = st.session_state.get('view_drug_name')
+# Get drug name first to avoid NameError - CRITICAL: Must be at the very top
+drug_name = st.session_state.get('view_drug_name', None)
+
+# Validate drug_name early
+if not drug_name:
+    st.error("❌ Không tìm thấy thông tin thuốc. Vui lòng quay lại trang tra cứu thuốc.")
+    col1, col2 = st.columns([1, 1])
+    with col1:
+        if st.button("🔙 Quay lại trang tra cứu thuốc", use_container_width=True, type="primary"):
+            st.switch_page("pages/07_💊_Drug_Database.py")
+    with col2:
+        if st.button("🏠 Về trang chủ", use_container_width=True):
+            st.switch_page("Home")
+    st.stop()
+
+# Validate drug exists in database
+if drug_name not in DRUG_DATABASE:
+    st.error(f"❌ Không tìm thấy thông tin cho thuốc: **{drug_name}**")
+    col1, col2 = st.columns([1, 1])
+    with col1:
+        if st.button("🔙 Quay lại trang tra cứu thuốc", use_container_width=True, type="primary"):
+            st.switch_page("pages/07_💊_Drug_Database.py")
+    with col2:
+        if st.button("🏠 Về trang chủ", use_container_width=True):
+            st.switch_page("Home")
+    st.stop()
 
 # Back button using Streamlit navigation (more reliable than history.back())
 col1, col2 = st.columns([1, 10])
@@ -139,39 +163,26 @@ with col2:
         f"""
         <div style='margin-bottom: 15px; padding-top: 8px;'>
             <span style='color: #64748b; font-size: 0.95em;'>
-                💊 Cơ sở dữ liệu thuốc {f"→ {drug_name}" if drug_name else "→ Chi tiết"}
+                💊 Cơ sở dữ liệu thuốc → {drug_name}
             </span>
         </div>
         """,
         unsafe_allow_html=True
     )
 
-# Breadcrumbs (if component available) - drug_name already defined above
+# Breadcrumbs (if component available) - drug_name already validated above
 try:
     from components.mobile_page_wrapper import render_breadcrumbs
     render_breadcrumbs([
         ("Trang chủ", "/"),
         ("💊 Cơ sở dữ liệu thuốc", "pages/07_💊_Drug_Database.py"),
-        (drug_name if drug_name else "Chi tiết", None)
+        (drug_name, None)
     ])
 except ImportError:
     pass
 
-# If still no drug name, show error
-if not drug_name:
-    st.error("❌ Không tìm thấy thông tin thuốc. Vui lòng quay lại trang tra cứu thuốc.")
-    if st.button("🔙 Quay lại trang tra cứu thuốc"):
-        st.switch_page("pages/07_💊_Drug_Database.py")
-    st.stop()
-
-# Get drug data
+# Get drug data - drug_name already validated above
 drug_data = DRUG_DATABASE.get(drug_name)
-
-if not drug_data:
-    st.error(f"❌ Không tìm thấy thông tin cho thuốc: **{drug_name}**")
-    if st.button("🔙 Quay lại trang tra cứu thuốc"):
-        st.switch_page("pages/07_💊_Drug_Database.py")
-    st.stop()
 
 # ========== SIDEBAR ==========
 with st.sidebar:

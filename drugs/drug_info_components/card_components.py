@@ -110,8 +110,25 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
         # Primary action button - more prominent
         if st.button('📖 Xem chi tiết', key=view_key, use_container_width=True, type='primary'):
             # Navigate to dedicated drug detail page
-            st.session_state['view_drug_name'] = str(drug_name)
-            st.switch_page("pages/Drug_Detail.py")
+            # Ensure drug_name is a valid string and exists in database
+            try:
+                drug_name_str = str(drug_name).strip()
+                if not drug_name_str:
+                    st.error("❌ Lỗi: Tên thuốc không hợp lệ")
+                    return
+                
+                # Validate drug exists in database
+                if drug_name_str not in DRUG_DATABASE:
+                    st.error(f"❌ Lỗi: Không tìm thấy thuốc '{drug_name_str}' trong database")
+                    st.info(f"💡 Tên thuốc bạn đang tìm: **{drug_name_str}**")
+                    return
+                
+                # Set session state and navigate
+                st.session_state['view_drug_name'] = drug_name_str
+                st.switch_page("pages/Drug_Detail.py")
+            except Exception as e:
+                st.error(f"❌ Lỗi khi mở chi tiết thuốc: {str(e)}")
+                st.info("💡 Vui lòng thử lại hoặc liên hệ admin nếu lỗi tiếp tục xảy ra")
     with col2:
         compare_key = (f'{key_prefix}compare_{safe_drug_name}{unique_suffix}' if
             key_prefix else f'compare_{safe_drug_name}{unique_suffix}')
