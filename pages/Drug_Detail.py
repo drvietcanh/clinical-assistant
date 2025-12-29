@@ -125,13 +125,24 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Enhanced Breadcrumbs with back button (inspired by medical reference sites)
-# Get drug name first to avoid NameError - CRITICAL: Must be at the very top
-drug_name = st.session_state.get('view_drug_name', None)
+# ========== CRITICAL: Get and validate drug_name FIRST ==========
+# Get drug name from session state - MUST be at the very top to avoid NameError
+drug_name = None
+try:
+    drug_name = st.session_state.get('view_drug_name', None)
+    # Ensure it's a string and strip whitespace
+    if drug_name:
+        drug_name = str(drug_name).strip()
+        if not drug_name:  # Empty string after strip
+            drug_name = None
+except Exception as e:
+    st.error(f"❌ Lỗi khi đọc thông tin thuốc: {str(e)}")
+    drug_name = None
 
-# Validate drug_name early
+# Validate drug_name early - show error page if invalid
 if not drug_name:
     st.error("❌ Không tìm thấy thông tin thuốc. Vui lòng quay lại trang tra cứu thuốc.")
+    st.info("💡 **Hướng dẫn:** Chọn một thuốc từ danh sách để xem chi tiết")
     col1, col2 = st.columns([1, 1])
     with col1:
         if st.button("🔙 Quay lại trang tra cứu thuốc", use_container_width=True, type="primary"):
@@ -144,6 +155,20 @@ if not drug_name:
 # Validate drug exists in database
 if drug_name not in DRUG_DATABASE:
     st.error(f"❌ Không tìm thấy thông tin cho thuốc: **{drug_name}**")
+    st.info(f"💡 Thuốc '{drug_name}' không có trong database. Có thể tên thuốc đã thay đổi hoặc bị xóa.")
+    col1, col2 = st.columns([1, 1])
+    with col1:
+        if st.button("🔙 Quay lại trang tra cứu thuốc", use_container_width=True, type="primary"):
+            st.switch_page("pages/07_💊_Drug_Database.py")
+    with col2:
+        if st.button("🏠 Về trang chủ", use_container_width=True):
+            st.switch_page("Home")
+    st.stop()
+
+# Get drug data - drug_name is now validated
+drug_data = DRUG_DATABASE.get(drug_name)
+if not drug_data:
+    st.error(f"❌ Dữ liệu thuốc '{drug_name}' không hợp lệ")
     col1, col2 = st.columns([1, 1])
     with col1:
         if st.button("🔙 Quay lại trang tra cứu thuốc", use_container_width=True, type="primary"):
