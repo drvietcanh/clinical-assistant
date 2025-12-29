@@ -206,6 +206,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #fff9c4 0%, #fff59d 100%)",
             border="#fbc02d"
         ),
+        "patient_education": ModuleInfo(
+            id="patient_education",
+            title="Giáo dục Bệnh nhân",
+            icon="👥",
+            page_path="pages/19_👥_Patient_Education.py",
+            description="Tài liệu giáo dục bệnh nhân với ngôn ngữ đơn giản, dễ hiểu, có thể in",
+            color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
+            border="#0288d1"
+        ),
     },
     
     "navigation": {
