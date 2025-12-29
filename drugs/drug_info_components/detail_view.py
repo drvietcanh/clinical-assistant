@@ -289,29 +289,85 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     """,
                     unsafe_allow_html=True
                 )
+        
+        # Enhanced: Display hepatic adjustment if available (inspired by UpToDate)
+        if 'hepatic_adjustment' in drug_data:
+            st.markdown('---')
+            st.markdown('### 🔶 Điều chỉnh theo chức năng gan:')
+            hepatic = drug_data['hepatic_adjustment']
+            hepatic_data = []
+            
+            # Handle different formats (dict or simple structure)
+            if isinstance(hepatic, dict):
+                if 'mild' in hepatic:
+                    hepatic_data.append({'Mức độ': 'Suy gan nhẹ', 'Điều chỉnh': hepatic['mild']})
+                if 'moderate' in hepatic:
+                    hepatic_data.append({'Mức độ': 'Suy gan trung bình', 'Điều chỉnh': hepatic['moderate']})
+                if 'severe' in hepatic:
+                    hepatic_data.append({'Mức độ': 'Suy gan nặng', 'Điều chỉnh': hepatic['severe']})
+                if 'cirrhosis' in hepatic:
+                    hepatic_data.append({'Mức độ': 'Xơ gan', 'Điều chỉnh': hepatic['cirrhosis']})
+            
+            if hepatic_data:
+                # Enhanced hepatic adjustment display with visual cards
+                st.markdown(
+                    f"""
+                    <div style='background: #fefce8; border: 1px solid #fde047; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                        <h4 style='color: #713f12; margin: 0 0 15px 0; font-size: 1.1em;'>🔶 Điều chỉnh theo chức năng gan</h4>
+                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;'>
+                            {''.join([f"""
+                            <div style='background: {'#d1fae5' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#fef3c7' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#fee2e2' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) or 'không dùng' in str(row['Điều chỉnh']).lower() else 'white'}; padding: 15px; border-radius: 8px; border-left: 4px solid {'#10B981' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#F59E0B' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#DC2626' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) or 'không dùng' in str(row['Điều chỉnh']).lower() else '#F59E0B'};'>
+                                <div style='font-weight: bold; color: #1e293b; margin-bottom: 5px; font-size: 0.95em;'>{row['Mức độ']}</div>
+                                <div style='color: #475569; font-size: 0.9em; line-height: 1.5;'>{row['Điều chỉnh']}</div>
+                            </div>
+                            """ for row in hepatic_data])}
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
         is_antibiotic = drug_name in ANTIBIOTICS_DATABASE
         if is_antibiotic:
             st.markdown('---')
             st.markdown('### 🧮 Tính liều theo CrCl/eGFR')
             
-            # Enhanced dosing calculator section
+            # Enhanced dosing calculator section with comprehensive features (inspired by Epocrates)
             st.markdown(
                 f"""
                 <div style='background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 1px solid #86efac; border-radius: 10px; padding: 25px; margin: 15px 0;'>
                     <div style='display: flex; align-items: start; gap: 20px; flex-wrap: wrap;'>
                         <div style='flex: 1; min-width: 250px;'>
-                            <h4 style='color: #166534; margin: 0 0 12px 0; font-size: 1.2em;'>💡 Tính liều tự động cho {drug_name}</h4>
-                            <ul style='color: #047857; margin: 0; padding-left: 20px; line-height: 1.8;'>
-                                <li>Dựa trên chức năng thận (CrCl/eGFR)</li>
-                                <li>Hỗ trợ HD, PD, béo phì, trẻ em</li>
-                                <li>Tính liều chi tiết và cảnh báo tự động</li>
+                            <h4 style='color: #166534; margin: 0 0 15px 0; font-size: 1.2em;'>💡 Tính liều tự động cho {drug_name}</h4>
+                            <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 15px;'>
+                                <div style='background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #10B981;'>
+                                    <div style='color: #065f46; font-size: 0.85em; font-weight: bold; margin-bottom: 4px;'>🫘 Chức năng thận</div>
+                                    <div style='color: #047857; font-size: 0.9em;'>CrCl/eGFR adjustments</div>
+                                </div>
+                                <div style='background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #10B981;'>
+                                    <div style='color: #065f46; font-size: 0.85em; font-weight: bold; margin-bottom: 4px;'>⚖️ Béo phì</div>
+                                    <div style='color: #047857; font-size: 0.9em;'>ABW/IBW calculations</div>
+                                </div>
+                                <div style='background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #10B981;'>
+                                    <div style='color: #065f46; font-size: 0.85em; font-weight: bold; margin-bottom: 4px;'>👶 Trẻ em</div>
+                                    <div style='color: #047857; font-size: 0.9em;'>Pediatric dosing</div>
+                                </div>
+                                <div style='background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #10B981;'>
+                                    <div style='color: #065f46; font-size: 0.85em; font-weight: bold; margin-bottom: 4px;'>💉 HD/PD</div>
+                                    <div style='color: #047857; font-size: 0.9em;'>Dialysis support</div>
+                                </div>
+                            </div>
+                            <ul style='color: #047857; margin: 0; padding-left: 20px; line-height: 1.8; font-size: 0.95em;'>
+                                <li>Tính liều chi tiết dựa trên nhiều thông số</li>
+                                <li>Cảnh báo tự động và hướng dẫn lâm sàng</li>
+                                <li>Hỗ trợ nhiều chỉ định và phác đồ</li>
                                 <li>Tích hợp với calculator chuyên dụng</li>
                             </ul>
                         </div>
                         <div style='min-width: 150px;'>
-                            <div style='background: white; padding: 15px; border-radius: 8px; border: 2px solid #10B981; text-align: center;'>
-                                <div style='font-size: 2em; margin-bottom: 8px;'>🧮</div>
-                                <div style='color: #166534; font-weight: bold; font-size: 0.9em;'>Calculator</div>
+                            <div style='background: white; padding: 20px; border-radius: 8px; border: 2px solid #10B981; text-align: center; box-shadow: 0 2px 4px rgba(16,185,129,0.2);'>
+                                <div style='font-size: 2.5em; margin-bottom: 8px;'>🧮</div>
+                                <div style='color: #166534; font-weight: bold; font-size: 0.95em;'>Calculator</div>
+                                <div style='color: #047857; font-size: 0.8em; margin-top: 4px;'>Advanced</div>
                             </div>
                         </div>
                     </div>
