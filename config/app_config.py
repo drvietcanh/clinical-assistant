@@ -161,15 +161,6 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%)",
             border="#689f38"
         ),
-        "medical_news": ModuleInfo(
-            id="medical_news",
-            title="Tin tức y khoa",
-            icon="📰",
-            page_path="pages/14_📰_Medical_News.py",
-            description="Tin tức y khoa mới nhất từ Medscape, Healthline, PubMed, NEJM",
-            color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
-            border="#ff9800"
-        ),
         "guidelines_tracker": ModuleInfo(
             id="guidelines_tracker",
             title="Theo dõi Guidelines",
@@ -197,15 +188,6 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)",
             border="#f44336"
         ),
-        "drug_formulary": ModuleInfo(
-            id="drug_formulary",
-            title="Danh mục Thuốc BHYT",
-            icon="💰",
-            page_path="pages/18_💰_Drug_Formulary.py",
-            description="Thông tin về thuốc trong danh mục BHYT, giá tham khảo, generic alternatives, coverage",
-            color="linear-gradient(135deg, #fff9c4 0%, #fff59d 100%)",
-            border="#fbc02d"
-        ),
         "patient_education": ModuleInfo(
             id="patient_education",
             title="Giáo dục Bệnh nhân",
@@ -214,15 +196,6 @@ APP_CONFIG = {
             description="Tài liệu giáo dục bệnh nhân với ngôn ngữ đơn giản, dễ hiểu, có thể in",
             color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
             border="#0288d1"
-        ),
-        "medical_images": ModuleInfo(
-            id="medical_images",
-            title="Thư viện Hình ảnh Y khoa",
-            icon="🖼️",
-            page_path="pages/20_🖼️_Medical_Images.py",
-            description="Thư viện hình ảnh y khoa: X-ray, CT, MRI, Ultrasound, ECG, Clinical photos, Pathology",
-            color="linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%)",
-            border="#7b1fa2"
         ),
         "pill_identifier": ModuleInfo(
             id="pill_identifier",

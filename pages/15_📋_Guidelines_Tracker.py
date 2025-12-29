@@ -4,17 +4,22 @@ Track and monitor clinical practice guidelines updates
 """
 
 import streamlit as st
+import html
+from collections import Counter
 from utils.page_helper import setup_page, render_standard_footer
 from guidelines.tracker import (
-    get_all_guidelines,
-    get_guidelines_by_category,
-    get_guidelines_by_organization,
     search_guidelines,
     get_recent_guidelines,
     check_guideline_updates,
     get_guideline_info
 )
-from guidelines.data import get_category_list, get_organization_list
+from guidelines.data import (
+    get_all_guidelines,
+    get_guidelines_by_category,
+    get_guidelines_by_organization,
+    get_category_list,
+    get_organization_list
+)
 
 # Standard page setup
 setup_page(
@@ -22,6 +27,183 @@ setup_page(
     page_icon="📋",
     description="Theo dõi và cập nhật các hướng dẫn thực hành lâm sàng"
 )
+
+# Inject custom CSS for modern UI
+st.markdown("""
+<style>
+.guideline-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+.guideline-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+.org-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-right: 8px;
+    margin-bottom: 6px;
+}
+.year-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: #e3f2fd;
+    color: #1976d2;
+}
+.category-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# ========== HELPER FUNCTIONS ==========
+
+def get_category_color(category: str) -> tuple:
+    """Trả về màu gradient và border cho từng category"""
+    colors = {
+        "Cardiology": ("linear-gradient(135deg, #667eea 0%, #764ba2 100%)", "#667eea"),
+        "Infectious": ("linear-gradient(135deg, #f093fb 0%, #f5576c 100%)", "#f5576c"),
+        "Respiratory": ("linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)", "#4facfe"),
+        "Nephrology": ("linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)", "#43e97b"),
+        "Endocrinology": ("linear-gradient(135deg, #fa709a 0%, #fee140 100%)", "#fa709a"),
+        "Neurology": ("linear-gradient(135deg, #30cfd0 0%, #330867 100%)", "#30cfd0"),
+        "Critical Care": ("linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)", "#a8edea"),
+        "Emergency": ("linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)", "#fcb69f"),
+    }
+    return colors.get(category, ("linear-gradient(135deg, #667eea 0%, #764ba2 100%)", "#667eea"))
+
+
+def get_org_color(organization: str) -> str:
+    """Trả về màu cho organization badge"""
+    org_colors = {
+        "AHA": "#c62828",
+        "ACC": "#1976d2",
+        "ESC": "#0d47a1",
+        "IDSA": "#f57c00",
+        "KDIGO": "#388e3c",
+        "GOLD": "#0288d1",
+        "GINA": "#7b1fa2",
+        "SSC": "#d32f2f",
+        "ADA": "#00796b",
+        "ATS": "#455a64",
+    }
+    for org_key, color in org_colors.items():
+        if org_key in organization:
+            return color
+    return "#616161"
+
+
+def render_guideline_card(guideline, index: int):
+    """Render guideline card với UI đẹp"""
+    gradient, border_color = get_category_color(guideline.category)
+    org_color = get_org_color(guideline.organization)
+    
+    # Xác định năm có cần cập nhật không
+    current_year = 2025
+    is_old = guideline.year < 2020
+    year_badge_class = "year-badge-old" if is_old else "year-badge"
+    
+    card_html = f"""
+    <div class="guideline-card" style="border-left-color: {border_color};">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+            <h3 style="margin: 0; font-size: 1.2rem; font-weight: 600; color: #1a1a1a; flex: 1;">
+                {html.escape(guideline.title_vn)}
+            </h3>
+            <span class="year-badge" style="background: {'#ffebee' if is_old else '#e3f2fd'}; color: {'#c62828' if is_old else '#1976d2'};">
+                {guideline.year}
+            </span>
+        </div>
+        
+        <div style="margin-bottom: 12px;">
+            <span class="org-badge" style="background: {org_color}20; color: {org_color}; border: 1px solid {org_color}40;">
+                {html.escape(guideline.organization)}
+            </span>
+            <span class="category-badge">
+                {html.escape(guideline.category)}
+            </span>
+            {f'<span style="font-size: 0.8rem; color: #c62828; margin-left: 8px;">⚠️ Cần cập nhật</span>' if is_old else ''}
+        </div>
+        
+        {f'<p style="color: #616161; margin: 8px 0; font-size: 0.9rem;">{html.escape(guideline.description)}</p>' if guideline.description else ''}
+        
+        {f'''
+        <div style="margin: 12px 0; padding: 10px; background: #f3f6ff; border-left: 3px solid {border_color}; border-radius: 6px;">
+            <div style="font-weight: 600; color: #2a3f6b; margin-bottom: 6px; font-size: 0.85rem;">⭐ Khuyến nghị chính:</div>
+            <ul style="margin: 0; padding-left: 20px; color: #455a64; font-size: 0.85rem; line-height: 1.6;">
+                {''.join([f'<li style="margin-bottom: 4px;">{html.escape(rec)}</li>' for rec in guideline.key_recommendations[:5]])}
+            </ul>
+        </div>
+        ''' if guideline.key_recommendations else ''}
+        
+        <div style="margin-top: 12px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+            {f'<a href="{guideline.url}" target="_blank" style="color: #1976d2; text-decoration: none; font-size: 0.9rem; font-weight: 500;">🔗 Xem guideline đầy đủ</a>' if guideline.url else ''}
+            {f'<span style="color: #616161; font-size: 0.9rem;">📋 Protocol: <strong>{html.escape(guideline.related_protocol)}</strong></span>' if guideline.related_protocol else ''}
+            {f'<span style="color: #757575; font-size: 0.85rem;">🔄 Cập nhật: {html.escape(guideline.last_updated)}</span>' if guideline.last_updated else ''}
+        </div>
+    </div>
+    """
+    st.markdown(card_html, unsafe_allow_html=True)
+    
+    # Protocol deep link button
+    if guideline.related_protocol:
+        col1, col2 = st.columns([1, 4])
+        with col1:
+            if st.button(
+                "📋 Mở Protocol",
+                key=f"protocol_btn_{guideline.id}_{index}",
+                use_container_width=True,
+                help=f"Mở protocol: {html.escape(guideline.related_protocol)}",
+                type="primary"
+            ):
+                # Store protocol selection in session state
+                st.session_state['protocol_specialty'] = guideline.category
+                st.session_state['protocol_to_open'] = guideline.related_protocol
+                st.switch_page("pages/04_📋_Protocols.py")
+        with col2:
+            st.caption(f"💡 Có protocol tương ứng: **{html.escape(guideline.related_protocol)}**")
+    
+    st.markdown("---")
+
+
+def render_statistics_dashboard(guidelines):
+    """Hiển thị dashboard thống kê"""
+    total = len(guidelines)
+    categories = Counter([g.category for g in guidelines])
+    organizations = Counter([g.organization for g in guidelines])
+    years = [g.year for g in guidelines]
+    recent_count = len([y for y in years if y >= 2020])
+    old_count = len([y for y in years if y < 2020])
+    
+    col1, col2, col3, col4, col5 = st.columns(5)
+    
+    with col1:
+        st.metric("📋 Tổng số", total)
+    with col2:
+        st.metric("🩺 Chuyên khoa", len(categories))
+    with col3:
+        st.metric("🏢 Tổ chức", len(organizations))
+    with col4:
+        st.metric("🆕 Gần đây (≥2020)", recent_count)
+    with col5:
+        st.metric("⚠️ Cần cập nhật (<2020)", old_count)
+
 
 # ========== SIDEBAR ==========
 with st.sidebar:
@@ -47,6 +229,21 @@ with st.sidebar:
             ["Tất cả"] + get_organization_list(),
             key="guidelines_org_filter"
         )
+        
+        # Year filter
+        all_years = sorted(set([g.year for g in get_all_guidelines()]), reverse=True)
+        year_filter = st.selectbox(
+            "Lọc theo năm:",
+            ["Tất cả"] + [str(y) for y in all_years],
+            key="guidelines_year_filter"
+        )
+        
+        # Sort options
+        sort_by = st.selectbox(
+            "Sắp xếp theo:",
+            ["Năm (mới nhất)", "Năm (cũ nhất)", "Tổ chức", "Chuyên khoa", "Tên"],
+            key="guidelines_sort"
+        )
     
     st.markdown("---")
     st.info("""
@@ -64,12 +261,21 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
-st.markdown("## 📋 Theo dõi Guidelines")
+# Hero section
 st.markdown("""
-**Theo dõi và cập nhật các hướng dẫn thực hành lâm sàng từ các tổ chức uy tín**
-
-Guidelines từ: AHA/ACC, ESC, IDSA, KDIGO, GOLD, GINA, SSC, ADA, và nhiều tổ chức khác
-""")
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            color: white;">
+    <div style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 0.25rem;">📋 Theo dõi hướng dẫn lâm sàng</div>
+    <h2 style="margin: 0 0 0.5rem 0; font-size: 1.6rem; font-weight: 600;">Clinical Guidelines Tracker</h2>
+    <p style="margin: 0; font-size: 0.9rem; opacity: 0.95;">
+        Theo dõi và cập nhật các hướng dẫn thực hành lâm sàng từ các tổ chức uy tín:
+        AHA/ACC, ESC, IDSA, KDIGO, GOLD, GINA, SSC, ADA, và nhiều tổ chức khác
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 # Display based on view mode
 if view_mode == "Tất cả":
@@ -78,6 +284,7 @@ if view_mode == "Tất cả":
     # Apply filters
     category = None if category_filter == "Tất cả" else category_filter
     org = None if org_filter == "Tất cả" else org_filter
+    year = None if year_filter == "Tất cả" else int(year_filter)
     
     if category:
         guidelines = get_guidelines_by_category(category)
@@ -86,63 +293,51 @@ if view_mode == "Tất cả":
     else:
         guidelines = get_all_guidelines()
     
+    # Apply multiple filters
     if org and category:
-        # Filter by both
+        guidelines = [g for g in guidelines if org in g.organization]
+    elif org:
         guidelines = [g for g in guidelines if org in g.organization]
     
+    if year:
+        guidelines = [g for g in guidelines if g.year == year]
+    
+    # Sort guidelines
+    if sort_by == "Năm (mới nhất)":
+        guidelines.sort(key=lambda x: x.year, reverse=True)
+    elif sort_by == "Năm (cũ nhất)":
+        guidelines.sort(key=lambda x: x.year)
+    elif sort_by == "Tổ chức":
+        guidelines.sort(key=lambda x: x.organization)
+    elif sort_by == "Chuyên khoa":
+        guidelines.sort(key=lambda x: x.category)
+    elif sort_by == "Tên":
+        guidelines.sort(key=lambda x: x.title_vn)
+    
+    # Statistics dashboard
     if guidelines:
+        render_statistics_dashboard(guidelines)
+        st.markdown("---")
         st.success(f"✅ Tìm thấy {len(guidelines)} guidelines")
         
-        # Display guidelines
-        for guideline in guidelines:
-            with st.expander(f"**{guideline.title_vn}** ({guideline.year})", expanded=False):
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.markdown(f"**Tổ chức:** {guideline.organization}")
-                    st.markdown(f"**Năm:** {guideline.year}")
-                    st.markdown(f"**Phiên bản:** {guideline.version}")
-                    st.markdown(f"**Chuyên khoa:** {guideline.category}")
-                with col2:
-                    if guideline.last_updated:
-                        st.markdown(f"**Cập nhật:** {guideline.last_updated}")
-                    if guideline.url:
-                        st.markdown(f"[🔗 Xem guideline đầy đủ]({guideline.url})")
-                    if guideline.related_protocol:
-                        st.markdown(f"**Protocol liên quan:** {guideline.related_protocol}")
-                
-                if guideline.description:
-                    st.markdown(f"**Mô tả:** {guideline.description}")
-                
-                if guideline.key_recommendations:
-                    st.markdown("**Khuyến nghị chính:**")
-                    for rec in guideline.key_recommendations:
-                        st.markdown(f"- {rec}")
+        # Display guidelines with cards
+        for idx, guideline in enumerate(guidelines):
+            render_guideline_card(guideline, idx)
     else:
         st.warning("Không tìm thấy guidelines với bộ lọc đã chọn.")
 
 elif view_mode == "Gần đây":
     st.markdown("### 🆕 Guidelines Gần Đây")
     
-    recent = get_recent_guidelines(limit=20, min_year=2020)
+    recent = get_recent_guidelines(limit=50, min_year=2020)
     
     if recent:
+        render_statistics_dashboard(recent)
+        st.markdown("---")
         st.success(f"✅ Tìm thấy {len(recent)} guidelines gần đây (từ 2020)")
         
-        for guideline in recent:
-            with st.expander(f"**{guideline.title_vn}** ({guideline.year})", expanded=False):
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.markdown(f"**Tổ chức:** {guideline.organization}")
-                    st.markdown(f"**Năm:** {guideline.year}")
-                    st.markdown(f"**Chuyên khoa:** {guideline.category}")
-                with col2:
-                    if guideline.url:
-                        st.markdown(f"[🔗 Xem guideline đầy đủ]({guideline.url})")
-                    if guideline.related_protocol:
-                        st.markdown(f"**Protocol liên quan:** {guideline.related_protocol}")
-                
-                if guideline.description:
-                    st.markdown(f"**Mô tả:** {guideline.description}")
+        for idx, guideline in enumerate(recent):
+            render_guideline_card(guideline, idx)
     else:
         st.warning("Không tìm thấy guidelines gần đây.")
 
@@ -151,24 +346,15 @@ elif view_mode == "Cần cập nhật":
     st.info("Guidelines cũ hơn 2020 có thể cần được cập nhật. Vui lòng kiểm tra phiên bản mới nhất.")
     
     old_guidelines = check_guideline_updates(year_threshold=2020)
+    old_guidelines.sort(key=lambda x: x.year)  # Sort by year (oldest first)
     
     if old_guidelines:
+        render_statistics_dashboard(old_guidelines)
+        st.markdown("---")
         st.warning(f"⚠️ Tìm thấy {len(old_guidelines)} guidelines có thể cần cập nhật")
         
-        for guideline in old_guidelines:
-            with st.expander(f"**{guideline.title_vn}** ({guideline.year}) ⚠️", expanded=False):
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.markdown(f"**Tổ chức:** {guideline.organization}")
-                    st.markdown(f"**Năm:** {guideline.year} ⚠️")
-                    st.markdown(f"**Chuyên khoa:** {guideline.category}")
-                with col2:
-                    if guideline.url:
-                        st.markdown(f"[🔗 Kiểm tra cập nhật]({guideline.url})")
-                    if guideline.related_protocol:
-                        st.markdown(f"**Protocol liên quan:** {guideline.related_protocol}")
-                
-                st.info("💡 Vui lòng kiểm tra website của tổ chức để xem phiên bản mới nhất.")
+        for idx, guideline in enumerate(old_guidelines):
+            render_guideline_card(guideline, idx)
     else:
         st.success("✅ Tất cả guidelines đều gần đây (từ 2020 trở lên).")
 
@@ -177,33 +363,24 @@ else:  # Tìm kiếm
     
     search_query = st.text_input(
         "Nhập từ khóa tìm kiếm:",
-        placeholder="Ví dụ: Heart failure, Sepsis, Diabetes...",
+        placeholder="Ví dụ: Heart failure, Sepsis, Diabetes, Hypertension...",
         key="guidelines_search_query"
     )
     
     if search_query:
         results = search_guidelines(search_query)
+        results.sort(key=lambda x: x.year, reverse=True)  # Sort by year (newest first)
         
         if results:
-            st.success(f"✅ Tìm thấy {len(results)} kết quả")
+            render_statistics_dashboard(results)
+            st.markdown("---")
+            st.success(f"✅ Tìm thấy {len(results)} kết quả cho '{search_query}'")
             
-            for guideline in results:
-                with st.expander(f"**{guideline.title_vn}** ({guideline.year})", expanded=False):
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        st.markdown(f"**Tổ chức:** {guideline.organization}")
-                        st.markdown(f"**Năm:** {guideline.year}")
-                        st.markdown(f"**Chuyên khoa:** {guideline.category}")
-                    with col2:
-                        if guideline.url:
-                            st.markdown(f"[🔗 Xem guideline đầy đủ]({guideline.url})")
-                        if guideline.related_protocol:
-                            st.markdown(f"**Protocol liên quan:** {guideline.related_protocol}")
-                    
-                    if guideline.description:
-                        st.markdown(f"**Mô tả:** {guideline.description}")
+            for idx, guideline in enumerate(results):
+                render_guideline_card(guideline, idx)
         else:
             st.warning("Không tìm thấy kết quả. Vui lòng thử lại với từ khóa khác.")
+            st.info("💡 Gợi ý: Thử tìm kiếm theo tên bệnh, chuyên khoa, hoặc tên tổ chức (VD: AHA, ESC, IDSA)")
 
 # Additional information
 st.markdown("---")

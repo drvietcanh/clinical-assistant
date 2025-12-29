@@ -287,10 +287,10 @@ with tab1:
     # Define categories
     categories = {
         "📊 Calculators & Scores": ["scores", "labs", "tdm"],
-        "💊 Thuốc & Liều dùng": ["drug_database", "antibiotics", "drug_formulary", "pill_identifier"],
+        "💊 Thuốc & Liều dùng": ["drug_database", "antibiotics", "pill_identifier"],
         "🫁 Hồi sức & Quy trình": ["critical_care", "ventilator", "protocols", "guidelines_tracker"],
         "🧭 Hỗ trợ quyết định": ["phase2_features"],
-        "🩺 Chẩn đoán & Bài viết": ["diagnosis", "in_depth_articles", "icd10_lookup", "medical_news", "disease_encyclopedia", "symptom_checker", "patient_education", "medical_images"],
+        "🩺 Chẩn đoán & Bài viết": ["diagnosis", "in_depth_articles", "icd10_lookup", "disease_encyclopedia", "symptom_checker", "patient_education"],
         "💉 Tiêm chủng": ["vaccination"],
     }
     
