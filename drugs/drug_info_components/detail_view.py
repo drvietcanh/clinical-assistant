@@ -226,26 +226,11 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                 adult_doses.append(("Liều nạp", dosage['adult_loading']))
             if 'adult_maintenance' in dosage:
                 adult_doses.append(("Liều duy trì", dosage['adult_maintenance']))
+
             if adult_doses:
-                # Enhanced dosing display with better visual design
-                st.markdown(
-                    textwrap.dedent(
-                        f"""
-                        <div style='background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 20px; margin: 15px 0;'>
-                            <h4 style='color: #166534; margin: 0 0 15px 0; font-size: 1.1em;'>💊 Liều dùng người lớn</h4>
-                            <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
-                                {''.join([
-                                    "<div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #10B981;'>"
-                                    f"<div style='color: #047857; font-size: 0.95em; line-height: 1.6;'><strong>{escape_html(str(label))}:</strong> {safe_render_html(value)}</div>"
-                                    "</div>"
-                                    for label, value in adult_doses
-                                ])}
-                            </div>
-                        </div>
-                        """
-                    ),
-                    unsafe_allow_html=True
-                )
+                for label, value in adult_doses:
+                    st.markdown(f"- **{escape_html(str(label))}:** {safe_render_html(value)}")
+
             if 'notes' in dosage:
                 st.caption(f"💡 {dosage['notes']}")
         if 'dosage' in drug_data:
