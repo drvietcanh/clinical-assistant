@@ -54,6 +54,13 @@ with st.sidebar:
     st.header("🫁 Hồi sức (ICU)")
     st.caption("Module **Hồi sức** – thuộc nhóm *🫁 Hồi sức & Quy trình* (bao gồm cả Ventilator).")
     
+    # Đồng bộ lựa chọn từ các nút truy cập nhanh (dashboard) với selectbox bên trái
+    # Khi user click "Mở Fluid Therapy" / "Mở Vasopressors"..., hàm render_clickable_dashboard_card
+    # sẽ set st.session_state['critical_care_tool_selection'] và st.rerun().
+    # Ở đây ta đảm bảo selectbox dùng cùng giá trị đó để hiển thị đúng và route tới công cụ tương ứng.
+    if "critical_care_tool_selection" in st.session_state:
+        st.session_state["critical_care_tool_selector"] = st.session_state["critical_care_tool_selection"]
+    
     # Tool options with consistent naming
     tool_options = [
         "🏠 Dashboard",

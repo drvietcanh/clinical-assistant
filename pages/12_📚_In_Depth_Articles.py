@@ -963,26 +963,23 @@ def render_article_card(article: dict, index: int):
     card_id = f"article_card_{article['id']}"
     
     card_html = f"""
-    <div id="{card_id}" style="
-        background: white;
-        border-radius: 16px;
-        padding: 0;
-        margin-bottom: 24px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-        border-left: 4px solid {border_color};
-        overflow: hidden;
-    " onmouseover="
-        this.style.transform='translateY(-4px)';
-        this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';
-    " onmouseout="
-        this.style.transform='translateY(0)';
-        this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';
-    ">
+    <div id="{card_id}" style="max-width: 980px; margin: 0 auto 24px auto;">
+      <div style="
+          background: white;
+          border-radius: 16px;
+          padding: 0;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+          transition: all 0.25s ease;
+          border-left: 4px solid {border_color};
+          overflow: hidden;
+        "
+        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 30px rgba(15,23,42,0.12)';"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.06)';"
+      >
         <!-- Header với gradient -->
         <div style="
             background: {gradient};
-            padding: 20px 24px;
+            padding: 18px 22px;
             color: white;
         ">
             <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
@@ -1008,7 +1005,7 @@ def render_article_card(article: dict, index: int):
         </div>
         
         <!-- Body -->
-        <div style="padding: 20px 24px;">
+        <div style="padding: 18px 22px 20px 22px;">
             <!-- Key Points -->
             {""
             if not safe_key_points else
@@ -1096,10 +1093,12 @@ def render_article_card(article: dict, index: int):
                 </div>
             </div>
         </div>
+      </div>
     </div>
     """
-    
-    components.html(card_html, height=400, scrolling=False)
+
+    # Dùng markdown trực tiếp để card co giãn tự nhiên theo nội dung (thân thiện mobile hơn)
+    st.markdown(card_html, unsafe_allow_html=True)
     
     # Protocol deep link button (Streamlit button)
     protocol_info = article.get("protocol_info")
@@ -1321,7 +1320,25 @@ def main():
         - Chọn từ khóa khác
         """)
     else:
+        # Tóm tắt nhanh bộ lọc đang dùng giống thanh "active filters" trên các trang y khoa hiện đại
+        active_filters = []
+        if search:
+            active_filters.append(f"🔍 \"{search}\"")
+        if selected_specialties:
+            active_filters.append("🩺 " + ", ".join(selected_specialties))
+        if selected_keywords:
+            active_filters.append("🏷️ " + ", ".join(selected_keywords))
+
         st.success(f"Tìm thấy **{len(filtered)}** bài viết phù hợp")
+        if active_filters:
+            chips = " ".join(
+                f"<span style='background:#eef2ff;color:#3730a3;padding:4px 10px;border-radius:999px;font-size:0.8rem;margin-right:6px;margin-bottom:4px;display:inline-block;'>{html.escape(f)}</span>"
+                for f in active_filters
+            )
+            st.markdown(
+                f"<div style='margin-top:0.35rem;margin-bottom:0.75rem;'>{chips}</div>",
+                unsafe_allow_html=True,
+            )
         st.markdown("---")
 
         # Tabs để xem theo chuyên ngành hoặc danh sách phẳng
