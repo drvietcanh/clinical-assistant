@@ -26,6 +26,105 @@ try:
 except:
     pass
 
+# Enhanced mobile swipe gestures for drug detail page
+st.markdown(
+    """
+    <script>
+    // Enhanced swipe gestures for drug detail page
+    (function() {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let touchStartY = 0;
+        let touchEndY = 0;
+        let isSwipe = false;
+        
+        const minSwipeDistance = 80;
+        const maxVerticalDistance = 50; // Max vertical movement to consider it a swipe
+        
+        // Only enable on mobile
+        if (window.innerWidth > 768) return;
+        
+        document.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+            isSwipe = false;
+        }, { passive: true });
+        
+        document.addEventListener('touchmove', function(e) {
+            const currentX = e.changedTouches[0].screenX;
+            const currentY = e.changedTouches[0].screenY;
+            const deltaX = currentX - touchStartX;
+            const deltaY = currentY - touchStartY;
+            
+            // Show swipe indicator
+            if (Math.abs(deltaX) > 30 && Math.abs(deltaX) > Math.abs(deltaY)) {
+                isSwipe = true;
+                const indicator = document.getElementById('swipe-indicator');
+                if (indicator) {
+                    indicator.classList.add('show');
+                    if (deltaX > 0) {
+                        indicator.className = 'swipe-indicator show right';
+                        indicator.innerHTML = '← Quay lại';
+                    } else {
+                        indicator.className = 'swipe-indicator show left';
+                        indicator.innerHTML = 'Tiếp theo →';
+                    }
+                }
+            }
+        }, { passive: true });
+        
+        document.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+            
+            // Hide swipe indicator
+            const indicator = document.getElementById('swipe-indicator');
+            if (indicator) {
+                indicator.classList.remove('show');
+            }
+            
+            // Only handle horizontal swipes
+            if (isSwipe && Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance && Math.abs(deltaY) < maxVerticalDistance) {
+                if (deltaX > 0) {
+                    // Swipe right - Go back
+                    window.history.back();
+                } else {
+                    // Swipe left - Could implement forward navigation if needed
+                    // For now, do nothing or show hint
+                }
+            }
+            
+            isSwipe = false;
+        }, { passive: true });
+        
+        // Create swipe indicator element
+        const indicator = document.createElement('div');
+        indicator.id = 'swipe-indicator';
+        indicator.className = 'swipe-indicator';
+        document.body.appendChild(indicator);
+        
+        // Show swipe hint on first visit (only once per session)
+        if (!sessionStorage.getItem('drugDetailSwipeHintShown')) {
+            setTimeout(function() {
+                const hint = document.createElement('div');
+                hint.className = 'swipe-hint';
+                hint.innerHTML = '👆 Vuốt sang phải để quay lại';
+                document.body.appendChild(hint);
+                setTimeout(function() {
+                    hint.remove();
+                }, 3000);
+                sessionStorage.setItem('drugDetailSwipeHintShown', 'true');
+            }, 1000);
+        }
+    })();
+    </script>
+    """,
+    unsafe_allow_html=True
+)
+
 # Enhanced Breadcrumbs with back button (inspired by medical reference sites)
 st.markdown(
     """
@@ -234,7 +333,7 @@ st.markdown(
 
 # Quick Action Buttons (inspired by Epocrates)
 st.markdown("---")
-action_cols = st.columns([1, 1, 1, 1])
+action_cols = st.columns([1, 1, 1, 1, 1])
 with action_cols[0]:
     if st.button("📊 So sánh", use_container_width=True, type="secondary"):
         st.session_state['switch_to_comparison'] = True
@@ -270,6 +369,36 @@ with action_cols[3]:
         st.session_state['switch_to_interaction_checker'] = True
         st.session_state['preset_interaction_drugs'] = [drug_name]
         st.switch_page("pages/07_💊_Drug_Database.py")
+with action_cols[4]:
+    # Print button
+    st.markdown(
+        """
+        <style>
+        .print-button {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+        }
+        .print-button:hover {
+            background-color: #e0e0e0;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    if st.button("🖨️ In", use_container_width=True, type="secondary"):
+        st.markdown(
+            """
+            <script>
+            window.print();
+            </script>
+            """,
+            unsafe_allow_html=True
+        )
 
 st.markdown("---")
 

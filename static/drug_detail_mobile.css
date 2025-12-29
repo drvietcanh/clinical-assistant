@@ -50,6 +50,70 @@
     }
 }
 
+/* Enhanced Swipe Gestures for Drug Detail Page */
+@media (max-width: 768px) {
+    /* Swipe indicator */
+    .swipe-indicator {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        z-index: 10000;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    .swipe-indicator.show {
+        opacity: 1;
+    }
+    
+    .swipe-indicator.left {
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    .swipe-indicator.right {
+        text-align: right;
+        padding-right: 20px;
+    }
+    
+    /* Touch-friendly buttons */
+    .stButton > button {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 12px 16px;
+    }
+    
+    /* Better card touch targets */
+    .drug-card,
+    .compact-drug-card {
+        min-height: 60px;
+        padding: 12px;
+    }
+    
+    /* Swipe hint */
+    .swipe-hint {
+        position: fixed;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        z-index: 9998;
+        opacity: 0;
+        animation: fadeInOut 3s ease-in-out;
+    }
+    
+    @keyframes fadeInOut {
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+    }
+}
+
 /* Print styles */
 @media print {
     .action-buttons,
