@@ -146,10 +146,7 @@ with col2:
         unsafe_allow_html=True
     )
 
-# Get drug name from session state (must be before breadcrumbs)
-drug_name = st.session_state.get('view_drug_name')
-
-# Breadcrumbs (if component available)
+# Breadcrumbs (if component available) - drug_name already defined above
 try:
     from components.mobile_page_wrapper import render_breadcrumbs
     render_breadcrumbs([
