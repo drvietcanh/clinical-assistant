@@ -224,6 +224,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%)",
             border="#7b1fa2"
         ),
+        "pill_identifier": ModuleInfo(
+            id="pill_identifier",
+            title="Nhận diện Thuốc",
+            icon="💊",
+            page_path="pages/21_💊_Pill_Identifier.py",
+            description="Nhận diện thuốc qua đặc điểm vật lý: màu sắc, hình dạng, ký hiệu, kích thước",
+            color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
+            border="#4caf50"
+        ),
     },
     
     "navigation": {
