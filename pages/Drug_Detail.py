@@ -454,51 +454,135 @@ if top_indications or standard_dose:
 # Display drug information using the enhanced detail view (without duplicate header)
 display_drug_info(drug_name, drug_data, show_header=False)
 
-# Related Drugs Section (suggest drugs from same group)
+# Enhanced Related Drugs Section (inspired by Epocrates & UpToDate)
 st.markdown("---")
 drug_group = drug_data.get('group', '')
+drug_indications = drug_data.get('indications', [])
+
+# Find related drugs: same group
+same_group_drugs = []
 if drug_group:
-    # Find drugs in the same group (DRUG_DATABASE already imported at top)
-    related_drugs = [
+    same_group_drugs = [
         (name, data) for name, data in DRUG_DATABASE.items()
         if name != drug_name and data.get('group', '') == drug_group
     ]
+    same_group_drugs = same_group_drugs[:6]  # Limit to 6
+
+# Find alternative drugs: same indications but different group
+alternative_drugs = []
+if drug_indications:
+    # Get first indication to find alternatives
+    if len(drug_indications) > 0:
+        primary_indication = drug_indications[0].lower()
+        alternative_drugs = [
+            (name, data) for name, data in DRUG_DATABASE.items()
+            if name != drug_name 
+            and data.get('group', '') != drug_group  # Different group
+            and 'indications' in data
+            and any(primary_indication in ind.lower() for ind in data['indications'])
+        ]
+        alternative_drugs = alternative_drugs[:6]  # Limit to 6
+
+# Display same group drugs
+if same_group_drugs:
+    st.markdown("### 💊 Thuốc cùng nhóm")
+    st.caption(f"Các thuốc khác trong nhóm **{drug_group}**")
     
-    if related_drugs:
-        # Limit to 6 related drugs
-        related_drugs = related_drugs[:6]
-        st.markdown("### 💊 Thuốc cùng nhóm")
-        st.caption(f"Các thuốc khác trong nhóm **{drug_group}**")
-        
-        # Display as cards in grid
-        num_cols = 3
-        cols = st.columns(num_cols)
-        for idx, (rel_name, rel_data) in enumerate(related_drugs):
-            with cols[idx % num_cols]:
-                rel_vn_name = rel_data.get('vietnamese_name', '')
-                st.markdown(
-                    f"""
-                    <div style='
-                        background: white;
-                        border: 1px solid #e2e8f0;
-                        border-radius: 8px;
-                        padding: 15px;
-                        margin: 8px 0;
-                        cursor: pointer;
-                        transition: all 0.2s;
-                        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-                    ' onmouseover="this.style.borderColor='#3B82F6'; this.style.boxShadow='0 2px 6px rgba(59,130,246,0.2)';"
-                       onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
-                        <div style='color: #1e40af; font-weight: bold; font-size: 1em; margin-bottom: 5px;'>💊 {rel_name}</div>
-                        {f"<div style='color: #64748b; font-size: 0.85em; margin-bottom: 8px;'>{rel_vn_name}</div>" if rel_vn_name else ""}
-                        <div style='color: #94a3b8; font-size: 0.8em;'>{drug_group.split(' - ')[0] if ' - ' in drug_group else drug_group}</div>
+    # Display as enhanced cards in grid
+    num_cols = 3
+    cols = st.columns(num_cols)
+    for idx, (rel_name, rel_data) in enumerate(same_group_drugs):
+        with cols[idx % num_cols]:
+            rel_vn_name = rel_data.get('vietnamese_name', '')
+            rel_group = rel_data.get('group', '')
+            
+            # Visual indicators for related drug
+            indicators = []
+            if 'pregnancy' in rel_data:
+                preg = rel_data['pregnancy']
+                preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
+                indicators.append(f"<span style='font-size: 0.8em;'>{preg_icons.get(preg, '')}</span>")
+            if 'black_box_warnings' in rel_data and rel_data.get('black_box_warnings'):
+                indicators.append("<span style='font-size: 0.8em;'>⚠️</span>")
+            indicators_html = ' '.join(indicators)
+            
+            st.markdown(
+                f"""
+                <div style='
+                    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+                    border: 2px solid #e2e8f0;
+                    border-radius: 10px;
+                    padding: 15px;
+                    margin: 8px 0;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+                ' onmouseover="this.style.borderColor='#3B82F6'; this.style.boxShadow='0 4px 12px rgba(59,130,246,0.25)'; this.style.transform='translateY(-2px)';"
+                   onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)';">
+                    <div style='display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;'>
+                        <div style='color: #1e40af; font-weight: bold; font-size: 1em; flex: 1;'>💊 {rel_name}</div>
+                        <div style='display: flex; gap: 4px; align-items: center;'>{indicators_html}</div>
                     </div>
-                    """,
-                    unsafe_allow_html=True
-                )
-                if st.button(f"Xem {rel_name}", key=f"related_{rel_name}", use_container_width=True):
-                    st.session_state['view_drug_name'] = rel_name
-                    st.rerun()
+                    {f"<div style='color: #64748b; font-size: 0.85em; margin-bottom: 6px;'>{rel_vn_name}</div>" if rel_vn_name else ""}
+                    <div style='color: #94a3b8; font-size: 0.75em; background: #f1f5f9; padding: 4px 8px; border-radius: 4px; display: inline-block;'>{rel_group.split(' - ')[0] if ' - ' in rel_group else rel_group}</div>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            if st.button(f"Xem {rel_name}", key=f"related_same_group_{rel_name}", use_container_width=True):
+                st.session_state['view_drug_name'] = rel_name
+                st.rerun()
+
+# Display alternative drugs (same indication, different group)
+if alternative_drugs:
+    st.markdown("---")
+    st.markdown("### 🔄 Thuốc thay thế (cùng chỉ định)")
+    st.caption(f"Các thuốc khác có chỉ định **{drug_indications[0] if drug_indications else 'tương tự'}** nhưng khác nhóm")
+    
+    # Display as enhanced cards
+    num_cols = 3
+    cols = st.columns(num_cols)
+    for idx, (alt_name, alt_data) in enumerate(alternative_drugs):
+        with cols[idx % num_cols]:
+            alt_vn_name = alt_data.get('vietnamese_name', '')
+            alt_group = alt_data.get('group', '')
+            
+            # Visual indicators
+            indicators = []
+            if 'pregnancy' in alt_data:
+                preg = alt_data['pregnancy']
+                preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
+                indicators.append(f"<span style='font-size: 0.8em;'>{preg_icons.get(preg, '')}</span>")
+            if 'black_box_warnings' in alt_data and alt_data.get('black_box_warnings'):
+                indicators.append("<span style='font-size: 0.8em;'>⚠️</span>")
+            indicators_html = ' '.join(indicators)
+            
+            st.markdown(
+                f"""
+                <div style='
+                    background: linear-gradient(135deg, #fef3c7 0%, #ffffff 100%);
+                    border: 2px solid #fcd34d;
+                    border-radius: 10px;
+                    padding: 15px;
+                    margin: 8px 0;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+                ' onmouseover="this.style.borderColor='#F59E0B'; this.style.boxShadow='0 4px 12px rgba(245,158,11,0.25)'; this.style.transform='translateY(-2px)';"
+                   onmouseout="this.style.borderColor='#fcd34d'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)';">
+                    <div style='display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;'>
+                        <div style='color: #92400e; font-weight: bold; font-size: 1em; flex: 1;'>💊 {alt_name}</div>
+                        <div style='display: flex; gap: 4px; align-items: center;'>{indicators_html}</div>
+                    </div>
+                    {f"<div style='color: #78350f; font-size: 0.85em; margin-bottom: 6px;'>{alt_vn_name}</div>" if alt_vn_name else ""}
+                    <div style='color: #92400e; font-size: 0.75em; background: #fef3c7; padding: 4px 8px; border-radius: 4px; display: inline-block; font-weight: 500;'>{alt_group.split(' - ')[0] if ' - ' in alt_group else alt_group}</div>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            if st.button(f"Xem {alt_name}", key=f"related_alternative_{alt_name}", use_container_width=True):
+                st.session_state['view_drug_name'] = alt_name
+                st.rerun()
 
 # Sticky Footer Navigation (inspired by medical reference sites)
 st.markdown("---")

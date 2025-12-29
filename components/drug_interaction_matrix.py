@@ -181,20 +181,33 @@ def render_interaction_matrix(
         
         rows_html += "</tr>"
     
-    # Full table HTML
+    # Enhanced table HTML with better styling (inspired by Drugs.com & Epocrates)
     table_html = f"""
     <div style="
         margin: 1.5rem 0;
         overflow-x: auto;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        background: white;
+        border: 1px solid #e2e8f0;
     ">
-        <table style="
-            border-collapse: collapse;
-            width: 100%;
-            background: white;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        ">
+        <style>
+            .interaction-matrix-table {{
+                border-collapse: collapse;
+                width: 100%;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            }}
+            .interaction-matrix-table th {{
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            }}
+            .interaction-matrix-table td:hover {{
+                z-index: 100 !important;
+            }}
+        </style>
+        <table class="interaction-matrix-table">
             <thead>
                 {header_html}
             </thead>
@@ -205,7 +218,9 @@ def render_interaction_matrix(
     </div>
     """
     
-    components.html(table_html, height=600, scrolling=True)
+    # Calculate height dynamically based on number of drugs
+    matrix_height = min(600, max(300, len(drugs) * 80 + 100))
+    components.html(table_html, height=matrix_height, scrolling=True)
     
     # Legend
     legend_html = '<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">'
