@@ -14,6 +14,10 @@ from .interactions_data import (
     SEVERITY_MINOR,
     DRUG_ALIASES
 )
+from .interactions_food_alcohol import (
+    check_food_interactions,
+    check_alcohol_interactions
+)
 from components.ui.alerts import render_error_alert, render_warning_alert, render_info_alert
 from components.ui.results import render_result_card
 from components.drug_interaction_matrix import (
@@ -400,6 +404,62 @@ def render_interaction_checker():
         else:
             st.success("✅ **Không phát hiện tương tác thuốc trong danh sách này**")
             st.info("💡 Lưu ý: Database hiện tại chỉ bao gồm các tương tác phổ biến. Vẫn cần tham khảo nguồn đáng tin cậy.")
+        
+        # Food and Alcohol Interactions
+        st.markdown("---")
+        st.markdown("### 🍽️ Tương tác với Thực phẩm & Rượu")
+        
+        # Check food interactions
+        food_interactions = check_food_interactions(checked_drugs)
+        alcohol_interactions = check_alcohol_interactions(checked_drugs)
+        
+        if food_interactions or alcohol_interactions:
+            # Food interactions
+            if food_interactions:
+                st.markdown("#### 🥗 Tương tác với Thực phẩm")
+                for drug, food_data in food_interactions.items():
+                    if 'foods' in food_data:
+                        with st.expander(f"**{drug}** - Tương tác với thực phẩm", expanded=False):
+                            for food_name, interaction_info in food_data['foods'].items():
+                                severity = interaction_info.get('severity', SEVERITY_MODERATE)
+                                severity_icon = "🔴" if severity == SEVERITY_MAJOR else "🟡" if severity == SEVERITY_MODERATE else "🔵"
+                                
+                                st.markdown(f"##### {severity_icon} **{food_name}** - {severity}")
+                                st.markdown(f"**🔬 Cơ chế:** {interaction_info.get('mechanism', 'N/A')}")
+                                st.markdown(f"**📝 Mô tả:** {interaction_info.get('description', 'N/A')}")
+                                
+                                if 'foods_list' in interaction_info:
+                                    st.markdown(f"**📋 Thực phẩm cần tránh:** {', '.join(interaction_info['foods_list'])}")
+                                
+                                st.markdown("**📋 Hướng xử trí:**")
+                                if severity == SEVERITY_MAJOR:
+                                    st.error(interaction_info.get('management', 'N/A'))
+                                elif severity == SEVERITY_MODERATE:
+                                    st.warning(interaction_info.get('management', 'N/A'))
+                                else:
+                                    st.info(interaction_info.get('management', 'N/A'))
+            
+            # Alcohol interactions
+            if alcohol_interactions:
+                st.markdown("#### 🍷 Tương tác với Rượu")
+                for drug, interaction_info in alcohol_interactions.items():
+                    severity = interaction_info.get('severity', SEVERITY_MODERATE)
+                    severity_icon = "🔴" if severity == SEVERITY_MAJOR else "🟡" if severity == SEVERITY_MODERATE else "🔵"
+                    
+                    with st.expander(f"**{drug}** - Tương tác với rượu {severity_icon}", expanded=True if severity == SEVERITY_MAJOR else False):
+                        st.markdown(f"**Mức độ:** {severity}")
+                        st.markdown(f"**🔬 Cơ chế:** {interaction_info.get('mechanism', 'N/A')}")
+                        st.markdown(f"**📝 Mô tả:** {interaction_info.get('description', 'N/A')}")
+                        
+                        st.markdown("**📋 Hướng xử trí:**")
+                        if severity == SEVERITY_MAJOR:
+                            st.error(interaction_info.get('management', 'N/A'))
+                        elif severity == SEVERITY_MODERATE:
+                            st.warning(interaction_info.get('management', 'N/A'))
+                        else:
+                            st.info(interaction_info.get('management', 'N/A'))
+        else:
+            st.info("✅ **Không phát hiện tương tác với thực phẩm hoặc rượu** cho các thuốc đã kiểm tra.")
         
         # Clear button
         if st.button("🗑️ Xóa kết quả", use_container_width=True):
