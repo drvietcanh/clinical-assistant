@@ -215,6 +215,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
             border="#0288d1"
         ),
+        "medical_images": ModuleInfo(
+            id="medical_images",
+            title="Thư viện Hình ảnh Y khoa",
+            icon="🖼️",
+            page_path="pages/20_🖼️_Medical_Images.py",
+            description="Thư viện hình ảnh y khoa: X-ray, CT, MRI, Ultrasound, ECG, Clinical photos, Pathology",
+            color="linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%)",
+            border="#7b1fa2"
+        ),
     },
     
     "navigation": {
