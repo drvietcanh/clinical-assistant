@@ -310,7 +310,7 @@ has_black_box = 'black_box_warnings' in drug_data and drug_data.get('black_box_w
 # Pregnancy category badge
 preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
 preg = drug_data.get('pregnancy', '')
-preg_badge = f"<span style='background: rgba(255,255,255,0.3); padding: 4px 10px; border-radius: 12px; font-size: 0.85em; margin-left: 10px;'>{preg_icons.get(preg, '')} Thai kỳ: {preg}</span>" if preg else ""
+preg_badge = f"<span style='background: rgba(255,255,255,0.3); padding: 4px 10px; border-radius: 12px; font-size: 0.85em; margin-left: 10px;'>{preg_icons.get(preg, '')} Thai kỳ: {escape_html(preg)}</span>" if preg else ""
 
 # Administration badges
 admin_icons = {'IV': '💉', 'IM': '💊', 'PO': '🍽️', 'Inhalation': '🌬️', 'SC': '💉', 'Rectal': '📦'}

@@ -52,7 +52,7 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
         preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
         preg_colors = {'A': '#10B981', 'B': '#F59E0B', 'C': '#F97316', 'D': '#EF4444', 'X': '#1F2937'}
         preg_color = preg_colors.get(preg, '#64748b')
-        indicators.append(f'<span style="background: {preg_color}; color: white; padding: 2px 6px; border-radius: 8px; font-size: 0.7em; margin-right: 4px;" title="Thai kỳ: {preg}">{preg_icons.get(preg, "")} {preg}</span>')
+        indicators.append(f'<span style="background: {preg_color}; color: white; padding: 2px 6px; border-radius: 8px; font-size: 0.7em; margin-right: 4px;" title="Thai kỳ: {escape_html(preg)}">{preg_icons.get(preg, "")} {escape_html(preg)}</span>')
     
     # Black box warning indicator
     if 'black_box_warnings' in drug_data and drug_data.get('black_box_warnings'):
