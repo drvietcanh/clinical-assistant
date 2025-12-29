@@ -12,6 +12,13 @@ from components.share_results import render_share_section, load_shared_result_fr
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
 # ======================================
+
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
+
 from scores.utils.validation import validate_gcs as validate_gcs_score
 from components.ui.scoring import render_score_result, render_score_breakdown
 
@@ -105,19 +112,30 @@ def render():
             # Determine severity and color
             if total_score >= 14:
                 severity = "Chấn thương sọ não nhẹ (Mild TBI)"
+                risk_level_code = "low"
                 color = "#28a745"  # green
                 icon = "✅"
             elif total_score >= 9:
                 severity = "Chấn thương sọ não trung bình (Moderate TBI)"
+                risk_level_code = "moderate"
                 color = "#fd7e14"  # orange
                 icon = "⚠️"
             else:
                 severity = "Chấn thương sọ não nặng (Severe TBI)"
+                risk_level_code = "very_high"
                 color = "#dc3545"  # red
                 icon = "🚨"
             
             with col2:
                 st.markdown("### 📊 Kết quả")
+                
+                # Display score with color coding badge
+                st.markdown(f"## GCS Score = {total_score}/15")
+                render_risk_badge(
+                    risk_level=risk_level_code,
+                    label=severity,
+                    value=total_score
+                )
                 
                 # Use render_score_result for main score display
                 render_score_result(
@@ -140,6 +158,37 @@ def render():
                 },
                 total_score=total_score
             )
+            
+            # Visual Charts
+            st.markdown("---")
+            st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+            col_chart1, col_chart2 = st.columns(2)
+            
+            with col_chart1:
+                render_risk_gauge_chart(
+                    value=total_score,
+                    min_value=3,
+                    max_value=15,
+                    thresholds={
+                        'Severe': 8,
+                        'Moderate': 13,
+                        'Mild': 14
+                    },
+                    title="GCS Score"
+                )
+            
+            with col_chart2:
+                render_risk_bar_chart(
+                    value=total_score,
+                    thresholds={
+                        'Severe': 8,
+                        'Moderate': 13,
+                        'Mild': 14
+                    },
+                    max_value=15,
+                    title="Severity Level",
+                    show_value=True
+                )
             
             st.markdown("---")
             st.markdown(f"**Chi tiết:** E{eye_score} V{verbal_score} M{motor_score}")
@@ -236,18 +285,30 @@ def render():
             }
             
             results_dict = {
-                "GCS Total": total_score,
+                "GCS Total": f"{total_score}/15",
                 "Severity": severity,
-                "Details": f"E{eye_score} V{verbal_score} M{motor_score}"
+                "Risk Level": risk_level_code,
+                "Details": f"E{eye_score} V{verbal_score} M{motor_score}",
+                "Eye Score": eye_score,
+                "Verbal Score": verbal_score,
+                "Motor Score": motor_score
             }
             
-            # Save to history
-            # Export section
+            # Export section (new component)
+            st.markdown("---")
+            render_scores_export(
+                calculator_name="GCS Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                specialty="Thần kinh"
+            )
+            
+            # Keep old export for compatibility
+            st.markdown("---")
             render_export_section(
                 title="GCS Score",
                 inputs=inputs_dict,
-                results=results_dict
-            ,
+                results=results_dict,
                 calculator_name="GCS Score"
             )
             

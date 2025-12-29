@@ -12,6 +12,12 @@ from components.share_results import render_share_section, load_shared_result_fr
 from components.smart_suggestions import render_suggestions
 # ======================================
 
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
+
 
 def render():
     """HAS-BLED Score Calculator"""
@@ -104,17 +110,33 @@ def render():
                 score += 1
                 details.append("✓ Lạm dụng rượu (+1)")
             
+            # Determine risk level for color coding
+            if score <= 2:
+                risk_level_code = 'low'
+                risk_text = "THẤP"
+            elif score == 3:
+                risk_level_code = 'moderate'
+                risk_text = "TRUNG BÌNH"
+            else:
+                risk_level_code = 'high'
+                risk_text = "CAO"
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
+                # Display score with color coding badge
+                st.markdown(f"## HAS-BLED = {score}")
+                render_risk_badge(
+                    risk_level=risk_level_code,
+                    label=f"Nguy cơ chảy máu: {risk_text}",
+                    value=score
+                )
+                
                 if score <= 2:
-                    st.success(f"## HAS-BLED = {score}")
                     st.success("✅ Nguy cơ chảy máu THẤP")
                 elif score == 3:
-                    st.warning(f"## HAS-BLED = {score}")
                     st.warning("⚠️ Nguy cơ TRUNG BÌNH")
                 else:
-                    st.error(f"## HAS-BLED = {score}")
                     st.error("🚨 Nguy cơ chảy máu CAO")
             
             st.markdown("### 💡 Giải thích")
@@ -122,6 +144,37 @@ def render():
             if details:
                 for d in details:
                     st.write(f"- {d}")
+            
+            # Visual Charts
+            st.markdown("---")
+            st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+            col_chart1, col_chart2 = st.columns(2)
+            
+            with col_chart1:
+                render_risk_gauge_chart(
+                    value=score,
+                    min_value=0,
+                    max_value=9,
+                    thresholds={
+                        'Low': 2,
+                        'Moderate': 3,
+                        'High': 4
+                    },
+                    title="HAS-BLED Score"
+                )
+            
+            with col_chart2:
+                render_risk_bar_chart(
+                    value=score,
+                    thresholds={
+                        'Low': 2,
+                        'Moderate': 3,
+                        'High': 4
+                    },
+                    max_value=9,
+                    title="Risk Level",
+                    show_value=True
+                )
             
             st.markdown("---")
             st.markdown("### 💊 Khuyến cáo")
@@ -174,7 +227,15 @@ def render():
                 "Details": "\n".join(details) if details else "Không có yếu tố nguy cơ"
             }
             
-            # Export section
+            # Export section (new component)
+            render_scores_export(
+                calculator_name="HAS-BLED Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                specialty="Tim mạch"
+            )
+            
+            # Keep old export for compatibility
             st.markdown("---")
             from components.export import render_export_section
             render_export_section(

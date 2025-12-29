@@ -35,6 +35,13 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 # ======================================
+
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
+
 from .apache2_lookup import (
     get_temp_score,
     get_map_score,
@@ -391,6 +398,26 @@ def render():
         # Display results
         st.subheader("📊 Kết quả")
         
+        # Determine risk level for color coding
+        if result['total_score'] < 10:
+            risk_level_code = "low"
+        elif result['total_score'] < 15:
+            risk_level_code = "moderate"
+        elif result['total_score'] < 20:
+            risk_level_code = "high"
+        elif result['total_score'] < 25:
+            risk_level_code = "very_high"
+        else:
+            risk_level_code = "critical"
+        
+        # Display score with color coding badge
+        st.markdown(f"## APACHE II Score = {result['total_score']}/71")
+        render_risk_badge(
+            risk_level=risk_level_code,
+            label=result['interpretation'],
+            value=result['total_score']
+        )
+        
         # Color-coded score result (MDCalc style)
         mortality_text = f"{result['predicted_mortality']:.1f}% (Khoảng: {result['mortality_range']})"
         render_score_result(
@@ -441,30 +468,38 @@ def render():
             - Thảo luận với gia đình về mục tiêu điều trị
             """)
         
-        # Save to history
-        save_calculation_to_history(
-            calculator_id="apache2",
-            calculator_name="APACHE II Score",
-            inputs=inputs_dict,
-            results=results_dict
-        )
-        
-        # Share section
-        render_share_section(
-            calculator_id="apache2",
-            calculator_name="APACHE II Score",
-            inputs=inputs_dict,
-            results=results_dict,
-            show_qr=True
-        )
-        
-        # History section
+        # Visual Charts
         st.markdown("---")
-        render_history_ui(calculator_id="apache2", show_actions=True)
+        st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+        col_chart1, col_chart2 = st.columns(2)
         
-        # Export section
-        st.markdown("---")
-        from components.export import render_export_section
+        with col_chart1:
+            render_risk_gauge_chart(
+                value=result['total_score'],
+                min_value=0,
+                max_value=71,
+                thresholds={
+                    'Low': 10,
+                    'Moderate': 15,
+                    'High': 20,
+                    'Very High': 25
+                },
+                title="APACHE II Score"
+            )
+        
+        with col_chart2:
+            render_risk_bar_chart(
+                value=result['total_score'],
+                thresholds={
+                    'Low': 10,
+                    'Moderate': 15,
+                    'High': 20,
+                    'Very High': 25
+                },
+                max_value=71,
+                title="Risk Level",
+                show_value=True
+            )
         
         # Prepare inputs for export
         # Format chronic health status
@@ -499,15 +534,28 @@ def render():
         
         # Prepare results for export
         results_dict = {
-            "APACHE II Score": f"{result['total_score']} điểm",
+            "APACHE II Score": f"{result['total_score']}/71",
             "Predicted Mortality": f"{result['predicted_mortality']:.1f}%",
             "Mortality Range": result['mortality_range'],
             "Interpretation": result['interpretation'],
+            "Risk Level": risk_level_code,
             "APS": f"{result['aps']}/60 điểm",
             "Age Points": f"{result['age_points']}/6 điểm",
             "Chronic Health Points": f"{result['chronic_points']}/5 điểm"
         }
         
+        # Export section (new component)
+        st.markdown("---")
+        render_scores_export(
+            calculator_name="APACHE II Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            specialty="Cấp cứu & Hồi sức"
+        )
+        
+        # Keep old export for compatibility
+        st.markdown("---")
+        from components.export import render_export_section
         render_export_section(
             title=f"APACHE II = {result['total_score']} điểm",
             inputs=inputs_dict,
@@ -515,6 +563,27 @@ def render():
             calculator_name="APACHE II Score",
             filename="apache2_result"
         )
+        
+        # Save to history
+        save_calculation_to_history(
+            calculator_id="apache2",
+            calculator_name="APACHE II Score",
+            inputs=inputs_dict,
+            results=results_dict
+        )
+        
+        # Share section
+        render_share_section(
+            calculator_id="apache2",
+            calculator_name="APACHE II Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            show_qr=True
+        )
+        
+        # History section
+        st.markdown("---")
+        render_history_ui(calculator_id="apache2", show_actions=True)
         
         st.warning("""
         ⚠️ **Lưu ý:**

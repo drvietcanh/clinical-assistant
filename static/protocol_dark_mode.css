@@ -1,0 +1,245 @@
+/* ============================================
+   PROTOCOL PAGE DARK MODE STYLES
+   Dark theme for medical interface
+   ============================================ */
+
+/* Dark Mode Variables */
+:root[data-theme="dark"] {
+    /* Primary Medical Colors - Adjusted for dark */
+    --protocol-primary-blue: #4A9EFF;
+    --protocol-primary-blue-light: #1A3A5C;
+    --protocol-primary-blue-dark: #6BB3FF;
+    
+    /* Status Colors - Adjusted for dark */
+    --protocol-urgent-red: #FF6B6B;
+    --protocol-warning-yellow: #FFD93D;
+    --protocol-success-green: #6BCF7F;
+    --protocol-info-blue: #4ECDC4;
+    
+    /* Neutral Colors - Dark Theme */
+    --protocol-text-primary: #E8E8E8;
+    --protocol-text-secondary: #B0B0B0;
+    --protocol-bg-light: #1E1E1E;
+    --protocol-bg-main: #121212;
+    --protocol-border-color: #333333;
+    
+    /* Special Highlights - Dark Theme */
+    --protocol-dosing-bg: #3D2F1F;
+    --protocol-monitoring-bg: #1A2E3A;
+    --protocol-reference-bg: #1A2A3A;
+    --protocol-card-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Dark Mode Body Background */
+[data-theme="dark"] .stApp {
+    background-color: var(--protocol-bg-main);
+    color: var(--protocol-text-primary);
+}
+
+/* Dark Mode Headers */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: var(--protocol-primary-blue);
+}
+
+/* Dark Mode Text */
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] div[data-testid="stMarkdownContainer"] {
+    color: var(--protocol-text-primary);
+}
+
+/* Dark Mode Code and Dosing */
+[data-theme="dark"] code,
+[data-theme="dark"] .dosing-info {
+    background: var(--protocol-dosing-bg);
+    color: #FFD93D;
+    border: 1px solid #555;
+}
+
+/* Dark Mode Section Headers */
+[data-theme="dark"] .protocol-section-header {
+    background: linear-gradient(135deg, var(--protocol-primary-blue-light) 0%, var(--protocol-bg-light) 100%);
+    border-left-color: var(--protocol-primary-blue);
+    color: var(--protocol-text-primary);
+}
+
+[data-theme="dark"] .protocol-section-header.level-1 {
+    background: linear-gradient(135deg, var(--protocol-primary-blue) 0%, var(--protocol-primary-blue-light) 100%);
+    color: white;
+}
+
+/* Dark Mode Cards */
+[data-theme="dark"] .protocol-card {
+    background: var(--protocol-bg-light);
+    border: 1px solid var(--protocol-border-color);
+    color: var(--protocol-text-primary);
+}
+
+[data-theme="dark"] .protocol-card.dosing {
+    background: var(--protocol-dosing-bg);
+    border-left-color: var(--protocol-warning-yellow);
+}
+
+[data-theme="dark"] .protocol-card.monitoring {
+    background: var(--protocol-monitoring-bg);
+    border-left-color: var(--protocol-info-blue);
+}
+
+[data-theme="dark"] .protocol-card.reference {
+    background: var(--protocol-reference-bg);
+    border-left-color: var(--protocol-primary-blue);
+}
+
+/* Dark Mode Evidence Badges */
+[data-theme="dark"] .evidence-badge.level-A {
+    background: #1A3A1F;
+    color: #6BCF7F;
+    border-color: #6BCF7F;
+}
+
+[data-theme="dark"] .evidence-badge.level-B {
+    background: #3D2F1F;
+    color: #FFD93D;
+    border-color: #FFD93D;
+}
+
+[data-theme="dark"] .evidence-badge.level-C {
+    background: #3A1F1F;
+    color: #FF6B6B;
+    border-color: #FF6B6B;
+}
+
+/* Dark Mode Dividers */
+[data-theme="dark"] .protocol-divider {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--protocol-primary-blue-light) 20%, 
+        var(--protocol-primary-blue) 50%, 
+        var(--protocol-primary-blue-light) 80%, 
+        transparent 100%);
+}
+
+/* Dark Mode Tables */
+[data-theme="dark"] .protocol-table thead {
+    background: var(--protocol-primary-blue);
+    color: white;
+}
+
+[data-theme="dark"] .protocol-table td {
+    border-bottom-color: var(--protocol-border-color);
+    color: var(--protocol-text-primary);
+}
+
+[data-theme="dark"] .protocol-table tbody tr:hover {
+    background: var(--protocol-primary-blue-light);
+}
+
+[data-theme="dark"] .protocol-table tbody tr:nth-child(even) {
+    background: var(--protocol-bg-light);
+}
+
+/* Dark Mode Timeline */
+[data-theme="dark"] .protocol-timeline::before {
+    background: var(--protocol-primary-blue);
+}
+
+[data-theme="dark"] .protocol-timeline-item::before {
+    border-color: var(--protocol-bg-main);
+    box-shadow: 0 0 0 2px var(--protocol-primary-blue);
+}
+
+/* Dark Mode Buttons */
+[data-theme="dark"] .protocol-button {
+    background: var(--protocol-primary-blue);
+    color: white;
+}
+
+[data-theme="dark"] .protocol-button:hover {
+    background: var(--protocol-primary-blue-dark);
+}
+
+/* Dark Mode Sidebar */
+[data-theme="dark"] [data-testid="stSidebar"] {
+    background: var(--protocol-bg-light);
+    color: var(--protocol-text-primary);
+}
+
+/* Dark Mode Streamlit Components Override */
+[data-theme="dark"] .stAlert {
+    background-color: var(--protocol-bg-light);
+    border-color: var(--protocol-border-color);
+}
+
+[data-theme="dark"] .stInfo {
+    background-color: var(--protocol-reference-bg);
+    border-left-color: var(--protocol-info-blue);
+}
+
+[data-theme="dark"] .stSuccess {
+    background-color: #1A3A1F;
+    border-left-color: var(--protocol-success-green);
+}
+
+[data-theme="dark"] .stWarning {
+    background-color: #3D2F1F;
+    border-left-color: var(--protocol-warning-yellow);
+}
+
+[data-theme="dark"] .stError {
+    background-color: #3A1F1F;
+    border-left-color: var(--protocol-urgent-red);
+}
+
+/* Dark Mode Expanders */
+[data-theme="dark"] .streamlit-expanderHeader {
+    background-color: var(--protocol-bg-light);
+    color: var(--protocol-text-primary);
+}
+
+[data-theme="dark"] .streamlit-expanderContent {
+    background-color: var(--protocol-bg-main);
+    color: var(--protocol-text-primary);
+}
+
+/* Dark Mode Selectboxes and Inputs */
+[data-theme="dark"] .stSelectbox label,
+[data-theme="dark"] .stTextInput label,
+[data-theme="dark"] .stNumberInput label {
+    color: var(--protocol-text-primary);
+}
+
+[data-theme="dark"] .stSelectbox > div > div,
+[data-theme="dark"] .stTextInput > div > div > input {
+    background-color: var(--protocol-bg-light);
+    color: var(--protocol-text-primary);
+    border-color: var(--protocol-border-color);
+}
+
+/* Dark Mode Radio Buttons */
+[data-theme="dark"] .stRadio label {
+    color: var(--protocol-text-primary);
+}
+
+/* Dark Mode Checkboxes */
+[data-theme="dark"] .stCheckbox label {
+    color: var(--protocol-text-primary);
+}
+
+/* Smooth Transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Print Styles - Always Light for Printing */
+@media print {
+    [data-theme="dark"] * {
+        background: white !important;
+        color: black !important;
+    }
+}
+

@@ -6,12 +6,18 @@ Surviving Sepsis Campaign 2021
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.protocol_timeline import render_sepsis_1hour_timeline
+from components.protocol_progress import render_sepsis_progress
+from components.protocol_version import render_version_badge, render_version_history
 
 
 def render():
     """Sepsis 1-Hour Bundle Protocol"""
     st.subheader("🦠 Sepsis 1-Hour Bundle")
     st.caption("Surviving Sepsis Campaign 2021")
+    
+    # Version badge
+    render_version_badge("Sepsis 1-Hour Bundle")
     
     st.info("""
     **Chẩn đoán Sepsis:**
@@ -23,6 +29,11 @@ def render():
     st.markdown("---")
     
     st.markdown("### ⏱️ Sepsis 1-Hour Bundle")
+    
+    # Render timeline visualization
+    render_sepsis_1hour_timeline()
+    
+    st.markdown("---")
     
     st.error("""
     **Thực hiện NGAY trong vòng 1 GIỜ:**
@@ -77,6 +88,11 @@ def render():
         - Piperacillin-Tazobactam 4.5g IV q6h
         + Vancomycin
         """)
+    
+    st.markdown("---")
+    
+    # Progress tracking checklist
+    render_sepsis_progress("Sepsis 1-Hour Bundle")
     
     st.markdown("---")
     

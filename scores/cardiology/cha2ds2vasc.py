@@ -12,6 +12,12 @@ from components.share_results import render_share_section, load_shared_result_fr
 from components.smart_suggestions import render_suggestions
 # ======================================
 
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
+
 
 def render():
     """CHA₂DS₂-VASc Score Calculator"""
@@ -118,31 +124,75 @@ def render():
                 score += 1
                 details.append("✓ Giới tính nữ (+1)")
             
+            # Determine risk level for color coding
+            if score == 0:
+                risk_level = 'very_low'
+                risk_text = "THẤP"
+                risk = "0-0.2%/năm"
+            elif score == 1:
+                risk_level = 'low'
+                risk_text = "TRUNG BÌNH"
+                risk = "0.6-2.0%/năm"
+            elif score == 2:
+                risk_level = 'moderate'
+                risk_text = "TRUNG BÌNH-CAO"
+                risk = "2.2%/năm"
+            elif score <= 4:
+                risk_level = 'high'
+                risk_text = "CAO"
+                if score <= 5:
+                    risk = f"{2.2 + (score-2)*1.5:.1f}%/năm"
+                else:
+                    risk = ">10%/năm"
+            else:
+                risk_level = 'very_high'
+                risk_text = "RẤT CAO"
+                risk = ">10%/năm"
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                if score == 0:
-                    st.success(f"## CHA₂DS₂-VASc = {score}")
-                    st.success("✅ Nguy cơ THẤP")
-                    risk = "0-0.2%/năm"
-                elif score == 1:
-                    st.warning(f"## CHA₂DS₂-VASc = {score}")
-                    st.warning("⚡ Nguy cơ TRUNG BÌNH")
-                    risk = "0.6-2.0%/năm"
-                elif score == 2:
-                    st.warning(f"## CHA₂DS₂-VASc = {score}")
-                    st.warning("⚠️ Nguy cơ TRUNG BÌNH-CAO")
-                    risk = "2.2%/năm"
-                else:
-                    st.error(f"## CHA₂DS₂-VASc = {score}")
-                    st.error("🚨 Nguy cơ CAO")
-                    if score <= 5:
-                        risk = f"{2.2 + (score-2)*1.5:.1f}%/năm"
-                    else:
-                        risk = ">10%/năm"
+                # Display score with color coding
+                st.markdown(f"## CHA₂DS₂-VASc = {score}")
+                render_risk_badge(
+                    risk_level=risk_level,
+                    label=f"Nguy cơ: {risk_text}",
+                    value=score
+                )
             
             st.markdown("### 💡 Giải thích & Khuyến cáo")
             st.markdown(f"**Nguy cơ đột quỵ hàng năm:** {risk}")
+            
+            # Visual Charts
+            st.markdown("---")
+            st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+            col_chart1, col_chart2 = st.columns(2)
+            
+            with col_chart1:
+                render_risk_gauge_chart(
+                    value=score,
+                    min_value=0,
+                    max_value=9,
+                    thresholds={
+                        'Low': 1,
+                        'Moderate': 2,
+                        'High': 4
+                    },
+                    title="CHA₂DS₂-VASc Score"
+                )
+            
+            with col_chart2:
+                render_risk_bar_chart(
+                    value=score,
+                    thresholds={
+                        'Low': 1,
+                        'Moderate': 2,
+                        'High': 4
+                    },
+                    max_value=9,
+                    title="Risk Level",
+                    show_value=True
+                )
             
             st.markdown("**Chi tiết điểm:**")
             if details:
@@ -187,10 +237,6 @@ def render():
                 - Thai kỳ
                 """)
             
-            # Export section
-            st.markdown("---")
-            from components.export import render_export_section
-            
             # Prepare inputs for export
             inputs_dict = {
                 "CHF": "Có" if chf else "Không",
@@ -206,10 +252,21 @@ def render():
             results_dict = {
                 "CHA₂DS₂-VASc Score": f"{score} điểm",
                 "Stroke Risk": risk,
-                "Risk Level": "THẤP" if score == 0 else "TRUNG BÌNH" if score == 1 else "CAO",
+                "Risk Level": risk_text,
                 "Details": "\n".join(details) if details else "Không có yếu tố nguy cơ"
             }
             
+            # Export section (new component)
+            render_scores_export(
+                calculator_name="CHA₂DS₂-VASc Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                specialty="Tim mạch"
+            )
+            
+            # Keep old export for compatibility
+            st.markdown("---")
+            from components.export import render_export_section
             render_export_section(
                 title=f"CHA₂DS₂-VASc = {score} điểm",
                 inputs=inputs_dict,

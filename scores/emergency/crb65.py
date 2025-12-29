@@ -42,6 +42,12 @@ from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
 # ======================================
 
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
+
 
 def calculate_crb65(
     age: int,
@@ -236,6 +242,22 @@ def render():
             st.markdown("---")
             st.markdown("### 📋 Kết quả CRB-65")
             
+            # Determine risk level for color coding
+            if result['score'] == 0:
+                risk_level_code = "low"
+            elif result['score'] <= 2:
+                risk_level_code = "moderate"
+            else:
+                risk_level_code = "high"
+            
+            # Display score with color coding badge
+            st.markdown(f"## CRB-65 Score = {result['score']}/4")
+            render_risk_badge(
+                risk_level=risk_level_code,
+                label=result['risk_category'],
+                value=result['score']
+            )
+            
             col1, col2, col3 = st.columns(3)
             
             with col1:
@@ -247,7 +269,39 @@ def render():
             with col3:
                 st.metric("Nguy cơ tử vong", result['mortality_risk'])
             
+            # Visual Charts
+            st.markdown("---")
+            st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+            col_chart1, col_chart2 = st.columns(2)
+            
+            with col_chart1:
+                render_risk_gauge_chart(
+                    value=result['score'],
+                    min_value=0,
+                    max_value=4,
+                    thresholds={
+                        'Low': 0,
+                        'Moderate': 1,
+                        'High': 3
+                    },
+                    title="CRB-65 Score"
+                )
+            
+            with col_chart2:
+                render_risk_bar_chart(
+                    value=result['score'],
+                    thresholds={
+                        'Low': 0,
+                        'Moderate': 1,
+                        'High': 3
+                    },
+                    max_value=4,
+                    title="Risk Level",
+                    show_value=True
+                )
+            
             # Details
+            st.markdown("---")
             st.markdown("### 📝 Chi tiết tính điểm")
             for detail in result['details']:
                 st.markdown(f"- {detail}")
@@ -283,42 +337,57 @@ def render():
                 - Đánh giá ICU nếu cần
                 """)
             
+            # Prepare inputs and results for export
+            inputs_dict = {
+                "Tuổi": f"{age}",
+                "Lú lẫn": "Có" if confusion else "Không",
+                "Tần số thở": f"{respiratory_rate}/phút",
+                "Huyết áp": f"{sbp}/{dbp} mmHg"
+            }
+            
+            results_dict = {
+                "CRB-65 Score": f"{result['score']}/4",
+                "Nguy cơ": result['risk_category'],
+                "Risk Level Code": risk_level_code,
+                "Nguy cơ tử vong": result['mortality_risk'],
+                "Điều trị": result['treatment'],
+                "Chi tiết": "\n".join(result['details'])
+            }
+            
+            # Export section (new component)
+            st.markdown("---")
+            render_scores_export(
+                calculator_name="CRB-65 Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                specialty="Cấp cứu & Hô hấp"
+            )
+            
+            # Keep old export for compatibility
+            st.markdown("---")
+            render_export_section(
+                title=f"CRB-65 = {result['score']}/4",
+                inputs=inputs_dict,
+                results=results_dict,
+                calculator_name="CRB-65 Score",
+                filename="crb65_result"
+            )
+            
             # Save to history
             save_calculation_to_history(
                 calculator_id="crb65",
                 calculator_name="CRB-65 Score",
-                inputs={
-                    "Tuổi": f"{age}",
-                    "Lú lẫn": "Có" if confusion else "Không",
-                    "Tần số thở": f"{respiratory_rate}/phút",
-                    "Huyết áp": f"{sbp}/{dbp} mmHg"
-                },
-                result={
-                    "Điểm": f"{result['score']}/4",
-                    "Nguy cơ": result['risk_category'],
-                    "Điều trị": result['treatment']
-                }
+                inputs=inputs_dict,
+                results=results_dict
             )
             
-            # Share and export
+            # Share section
             render_share_section(
                 calculator_id="crb65",
-                calculator_name="CRB-65 Score"
-            )
-            
-            render_export_section(
-                calculator_id="crb65",
                 calculator_name="CRB-65 Score",
-                data={
-                    "inputs": {
-                        "age": age,
-                        "confusion": confusion,
-                        "respiratory_rate": respiratory_rate,
-                        "sbp": sbp,
-                        "dbp": dbp
-                    },
-                    "result": result
-                }
+                inputs=inputs_dict,
+                results=results_dict,
+                show_qr=True
             )
     
     # History

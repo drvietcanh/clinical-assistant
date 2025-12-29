@@ -18,6 +18,12 @@ from components.share_results import render_share_section, load_shared_result_fr
 from components.smart_suggestions import render_suggestions
 # ======================================
 
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
+
 
 def render():
     """GRACE Score Calculator"""
@@ -289,18 +295,21 @@ def render():
             # In-hospital mortality risk
             if points <= 108:
                 risk_category = "Nguy cơ THẤP"
+                risk_level_code = "low"
                 hospital_mort = "<1%"
                 six_month_mort = "<3%"
                 color = "#28a745"  # green
                 icon = "✅"
             elif points <= 140:
                 risk_category = "Nguy cơ TRUNG BÌNH"
+                risk_level_code = "moderate"
                 hospital_mort = "1-3%"
                 six_month_mort = "3-8%"
                 color = "#fd7e14"  # orange
                 icon = "⚠️"
             else:
                 risk_category = "Nguy cơ CAO"
+                risk_level_code = "high"
                 hospital_mort = ">3%"
                 six_month_mort = ">8%"
                 color = "#dc3545"  # red
@@ -308,6 +317,14 @@ def render():
             
             with col2:
                 st.markdown("### 📊 Kết quả")
+                
+                # Display score with color coding badge
+                st.markdown(f"## GRACE Score = {points}/372")
+                render_risk_badge(
+                    risk_level=risk_level_code,
+                    label=risk_category,
+                    value=points
+                )
                 
                 # Use render_score_result for main score display
                 render_score_result(
@@ -352,6 +369,37 @@ def render():
             st.markdown("### 💡 Chi tiết điểm")
             for d in details:
                 st.write(f"- {d}")
+            
+            # Visual Charts
+            st.markdown("---")
+            st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+            col_chart1, col_chart2 = st.columns(2)
+            
+            with col_chart1:
+                render_risk_gauge_chart(
+                    value=points,
+                    min_value=1,
+                    max_value=372,
+                    thresholds={
+                        'Low': 108,
+                        'Moderate': 140,
+                        'High': 200
+                    },
+                    title="GRACE Score"
+                )
+            
+            with col_chart2:
+                render_risk_bar_chart(
+                    value=points,
+                    thresholds={
+                        'Low': 108,
+                        'Moderate': 140,
+                        'High': 200
+                    },
+                    max_value=372,
+                    title="Risk Level",
+                    show_value=True
+                )
             
             st.markdown("---")
             st.markdown("### 📈 Nguy cơ tử vong")
@@ -412,10 +460,6 @@ def render():
                 - Hội chẩn đa chuyên khoa
                 """)
             
-            # Export section
-            st.markdown("---")
-            from components.export import render_export_section
-            
             # Prepare inputs for export
             inputs_dict = {
                 "Age": f"{age} tuổi",
@@ -430,13 +474,26 @@ def render():
             
             # Prepare results for export
             results_dict = {
-                "GRACE Score": f"{points} điểm",
+                "GRACE Score": f"{points}/372",
                 "Risk Category": risk_category.upper(),
+                "Risk Level Code": risk_level_code,
                 "Hospital Mortality": hospital_mort,
                 "6-Month Mortality": six_month_mort,
                 "Details": "\n".join(details)
             }
             
+            # Export section (new component)
+            st.markdown("---")
+            render_scores_export(
+                calculator_name="GRACE Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                specialty="Tim mạch"
+            )
+            
+            # Keep old export for compatibility
+            st.markdown("---")
+            from components.export import render_export_section
             render_export_section(
                 title=f"GRACE = {points} điểm",
                 inputs=inputs_dict,

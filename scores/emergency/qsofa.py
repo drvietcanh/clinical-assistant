@@ -18,6 +18,12 @@ from components.share_results import render_share_section, load_shared_result_fr
 from components.smart_suggestions import render_suggestions
 # ======================================
 
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
+
 
 def render():
     """qSOFA (Quick SOFA) Calculator"""
@@ -119,6 +125,7 @@ def render():
             
             # Determine risk level and color
             if score >= 2:
+                risk_level_code = "very_high"  # For color coding component
                 risk_level = "CONCERNING FOR SEPSIS"
                 color = "#dc3545"  # red
                 icon = "⚠️"
@@ -131,6 +138,7 @@ def render():
                 - Calculate full SOFA score
                 """
             elif score == 1:
+                risk_level_code = "moderate"  # For color coding component
                 risk_level = "Intermediate Risk"
                 color = "#fd7e14"  # orange
                 icon = "⚡"
@@ -141,6 +149,7 @@ def render():
                 - Look for other sepsis signs
                 """
             else:
+                risk_level_code = "low"  # For color coding component
                 risk_level = "Low Risk"
                 color = "#28a745"  # green
                 icon = "✅"
@@ -153,6 +162,14 @@ def render():
             
             with col2:
                 st.markdown("### Kết quả")
+                
+                # Display score with color coding badge
+                st.markdown(f"## qSOFA = {score}/3")
+                render_risk_badge(
+                    risk_level=risk_level_code,
+                    label=risk_level,
+                    value=score
+                )
                 
                 # Use render_score_result for main score display
                 render_score_result(
@@ -183,6 +200,37 @@ def render():
                     total_score=score
                 )
             
+            # Visual Charts
+            st.markdown("---")
+            st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+            col_chart1, col_chart2 = st.columns(2)
+            
+            with col_chart1:
+                render_risk_gauge_chart(
+                    value=score,
+                    min_value=0,
+                    max_value=3,
+                    thresholds={
+                        'Low': 0,
+                        'Moderate': 1,
+                        'High': 2
+                    },
+                    title="qSOFA Score"
+                )
+            
+            with col_chart2:
+                render_risk_bar_chart(
+                    value=score,
+                    thresholds={
+                        'Low': 0,
+                        'Moderate': 1,
+                        'High': 2
+                    },
+                    max_value=3,
+                    title="Risk Level",
+                    show_value=True
+                )
+            
             st.markdown("---")
             st.markdown("### Chi tiết")
             for detail in details:
@@ -201,7 +249,15 @@ def render():
                 "Details": "\n".join(details) if details else "Không có tiêu chí nào"
             }
             
-            # Export section
+            # Export section (new component)
+            render_scores_export(
+                calculator_name="qSOFA",
+                inputs=inputs_dict,
+                results=results_dict,
+                specialty="Cấp cứu & Hồi sức"
+            )
+            
+            # Keep old export for compatibility
             st.markdown("---")
             from components.export import render_export_section
             render_export_section(

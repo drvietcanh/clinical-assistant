@@ -41,6 +41,12 @@ from components.smart_suggestions import render_suggestions
 # =====================================
 from components.ui.scoring import render_score_result, render_score_breakdown
 
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
+
 
 def calculate_wells_dvt(
     active_cancer: bool,
@@ -324,6 +330,20 @@ def render():
         # Display results
         st.markdown("## 📊 Kết quả")
         
+        # Determine risk level for color coding
+        if result['score'] >= 2:
+            risk_level_code = 'high'  # DVT likely
+        else:
+            risk_level_code = 'low'  # DVT unlikely
+        
+        # Display score with color coding badge
+        st.markdown(f"## Wells DVT Score = {result['score']}")
+        render_risk_badge(
+            risk_level=risk_level_code,
+            label=result['probability'],
+            value=result['score']
+        )
+        
         # Map color emoji to hex
         color_map_hex = {
             "🔴": "#dc3545",
@@ -341,6 +361,37 @@ def render():
             icon=result['color'],
             size="large"
         )
+        
+        # Visual Charts
+        st.markdown("---")
+        st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+        col_chart1, col_chart2 = st.columns(2)
+        
+        with col_chart1:
+            render_risk_gauge_chart(
+                value=result['score'],
+                min_value=-2,  # Wells can be negative
+                max_value=9,
+                thresholds={
+                    'Low': 0,
+                    'Moderate': 1,
+                    'High': 2
+                },
+                title="Wells DVT Score"
+            )
+        
+        with col_chart2:
+            render_risk_bar_chart(
+                value=result['score'],
+                thresholds={
+                    'Low': 0,
+                    'Moderate': 1,
+                    'High': 2
+                },
+                max_value=9,
+                title="Risk Level",
+                show_value=True
+            )
         
         # Details
         if result['details']:
@@ -411,15 +462,23 @@ def render():
             "Risk Class": result['risk_class']
         }
         
-        # Export section
+        # Export section (new component)
+        render_scores_export(
+            calculator_name="Wells DVT Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            specialty="Huyết học & Đông máu"
+        )
+        
+        # Keep old export for compatibility
+        st.markdown("---")
         from components.export import render_export_section
         render_export_section(
-                title="Wells DVT Score",
-                inputs=inputs_dict,
-                results=results_dict
-        ,
-                calculator_name="Wells DVT Score"
-            )
+            title="Wells DVT Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="Wells DVT Score"
+        )
         
         # Save to history
         save_calculation_to_history(

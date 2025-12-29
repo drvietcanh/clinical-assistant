@@ -11,6 +11,12 @@ from components.share_results import render_share_section, load_shared_result_fr
 from components.smart_suggestions import render_suggestions
 # ======================================
 
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
+
 
 def render():
     """TIMI Risk Score Calculator"""
@@ -131,21 +137,37 @@ def render():
         )
         
         if st.button("🧮 Tính TIMI Risk Score", type="primary", key="timi_calc", use_container_width=True):
+            # Determine risk level for color coding
+            if score <= 2:
+                risk_level = "thấp"
+                risk_level_code = "low"
+            elif score <= 4:
+                risk_level = "trung bình"
+                risk_level_code = "moderate"
+            else:
+                risk_level = "cao"
+                risk_level_code = "high"
+            
             with col2:
                 st.markdown("### 📊 Kết quả")
+                
+                # Display score with color coding badge
+                st.markdown(f"## TIMI Score = {score}/7")
+                render_risk_badge(
+                    risk_level=risk_level_code,
+                    label=f"Nguy cơ {risk_level.upper()}",
+                    value=score
+                )
                 
                 if score <= 2:
                     st.success(f"## TIMI = {score}")
                     st.success("✅ Nguy cơ THẤP")
-                    risk_level = "thấp"
                 elif score <= 4:
                     st.warning(f"## TIMI = {score}")
                     st.warning("⚠️ Nguy cơ TRUNG BÌNH")
-                    risk_level = "trung bình"
                 else:
                     st.error(f"## TIMI = {score}")
                     st.error("🚨 Nguy cơ CAO")
-                    risk_level = "cao"
             
             # Risk percentages based on score
             risk_data = {
@@ -165,6 +187,37 @@ def render():
                     st.write(f"- {d}")
             else:
                 st.write("- Không có yếu tố nguy cơ")
+            
+            # Visual Charts
+            st.markdown("---")
+            st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+            col_chart1, col_chart2 = st.columns(2)
+            
+            with col_chart1:
+                render_risk_gauge_chart(
+                    value=score,
+                    min_value=0,
+                    max_value=7,
+                    thresholds={
+                        'Low': 2,
+                        'Moderate': 4,
+                        'High': 5
+                    },
+                    title="TIMI Risk Score"
+                )
+            
+            with col_chart2:
+                render_risk_bar_chart(
+                    value=score,
+                    thresholds={
+                        'Low': 2,
+                        'Moderate': 4,
+                        'High': 5
+                    },
+                    max_value=7,
+                    title="Risk Level",
+                    show_value=True
+                )
             
             st.markdown("---")
             st.markdown("### 📈 Nguy cơ tử vong/MI/Tái can thiệp (14 Ngày)")
@@ -216,10 +269,6 @@ def render():
                 - Chuẩn bị PCI/CABG
                 """)
             
-            # Export section
-            st.markdown("---")
-            from components.export import render_export_section
-            
             # Prepare inputs for export
             inputs_dict = {
                 "Age ≥65": "Có" if age_65 else "Không",
@@ -233,12 +282,25 @@ def render():
             
             # Prepare results for export
             results_dict = {
-                "TIMI Score": f"{score} điểm",
+                "TIMI Score": f"{score}/7",
                 "Risk Level": risk_level.upper(),
+                "Risk Level Code": risk_level_code,
                 "14-Day Event Risk": risk_data.get(score, ">65%"),
                 "Details": "\n".join(details) if details else "Không có yếu tố nguy cơ"
             }
             
+            # Export section (new component)
+            st.markdown("---")
+            render_scores_export(
+                calculator_name="TIMI Risk Score",
+                inputs=inputs_dict,
+                results=results_dict,
+                specialty="Tim mạch"
+            )
+            
+            # Keep old export for compatibility
+            st.markdown("---")
+            from components.export import render_export_section
             render_export_section(
                 title=f"TIMI = {score} điểm",
                 inputs=inputs_dict,

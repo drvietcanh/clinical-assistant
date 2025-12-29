@@ -47,6 +47,13 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 # ======================================
+
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
+
 from scores.utils.validation import (
     validate_gcs,
     validate_blood_pressure,
@@ -390,6 +397,26 @@ def render():
         # Display results
         st.subheader("📊 Kết quả")
         
+        # Determine risk level for color coding
+        if result['total_score'] == 0:
+            risk_level_code = "very_low"
+        elif result['total_score'] <= 6:
+            risk_level_code = "low"
+        elif result['total_score'] <= 11:
+            risk_level_code = "moderate"
+        elif result['total_score'] <= 14:
+            risk_level_code = "high"
+        else:
+            risk_level_code = "very_high"
+        
+        # Display score with color coding badge
+        st.markdown(f"## SOFA Score = {result['total_score']}/24")
+        render_risk_badge(
+            risk_level=risk_level_code,
+            label=result['interpretation'],
+            value=result['total_score']
+        )
+        
         # Color-coded score result (MDCalc style)
         render_score_result(
             title="SOFA Score",
@@ -449,6 +476,37 @@ def render():
             - Xem xét mức độ chăm sóc và tiên lượng
             - Thảo luận với gia đình về mục tiêu điều trị
             """)
+        
+        # Visual Charts
+        st.markdown("---")
+        st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+        col_chart1, col_chart2 = st.columns(2)
+        
+        with col_chart1:
+            render_risk_gauge_chart(
+                value=result['total_score'],
+                min_value=0,
+                max_value=24,
+                thresholds={
+                    'Low': 6,
+                    'Moderate': 11,
+                    'High': 14
+                },
+                title="SOFA Score"
+            )
+        
+        with col_chart2:
+            render_risk_bar_chart(
+                value=result['total_score'],
+                thresholds={
+                    'Low': 6,
+                    'Moderate': 11,
+                    'High': 14
+                },
+                max_value=24,
+                title="Risk Level",
+                show_value=True
+            )
         
         # Management recommendations
         st.markdown("---")
@@ -518,9 +576,8 @@ def render():
         # Save to session state
         st.session_state['sofa_result'] = result
         
-        # Export section
+        # Export section (new component)
         st.markdown("---")
-        from components.export import render_export_section
         
         # Prepare inputs for export
         inputs_dict = {
@@ -536,9 +593,10 @@ def render():
         
         # Prepare results for export
         results_dict = {
-            "SOFA Score": f"{result['total_score']} điểm",
+            "SOFA Score": f"{result['total_score']}/24",
             "Interpretation": result['interpretation'],
             "Mortality Risk": result['mortality'],
+            "Risk Level": risk_level_code,
             "Subscores": {
                 "Respiratory": result['subscores']['respiratory'],
                 "Coagulation": result['subscores']['coagulation'],
@@ -549,6 +607,17 @@ def render():
             }
         }
         
+        # New export component
+        render_scores_export(
+            calculator_name="SOFA Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            specialty="Cấp cứu & Hồi sức"
+        )
+        
+        # Keep old export for compatibility
+        st.markdown("---")
+        from components.export import render_export_section
         render_export_section(
             title=f"SOFA Score = {result['total_score']} điểm",
             inputs=inputs_dict,

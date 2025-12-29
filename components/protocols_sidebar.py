@@ -6,6 +6,12 @@ Helper functions for rendering protocol sidebar
 import streamlit as st
 from typing import Optional
 from config.protocol_lists import SPECIALTY_LIST, get_protocol_list
+from components.protocol_favorites import (
+    render_favorites_section,
+    is_favorite,
+    render_favorite_button
+)
+from components.protocol_dark_mode import render_theme_toggle
 
 
 def get_default_protocol_index(protocol_list: list, deep_link: str) -> int:
@@ -94,6 +100,11 @@ def render_protocols_sidebar() -> tuple[str, str, bool]:
     
     st.markdown("---")
     
+    # ========== FAVORITES SECTION ==========
+    render_favorites_section()
+    
+    st.markdown("---")
+    
     # Liên kết nhanh về module Hồi sức
     with st.expander("Liên kết tới module Hồi sức", expanded=False):
         if st.button("🫁 Mở Hồi sức (ICU Tools)", use_container_width=True):
@@ -104,9 +115,43 @@ def render_protocols_sidebar() -> tuple[str, str, bool]:
     # Get protocol list for selected specialty
     protocol_list = get_protocol_list(specialty)
     
+    # ========== SEARCH/FILTER PROTOCOL ==========
+    if protocol_list:
+        # Search box
+        search_term = st.text_input(
+            "🔍 Tìm protocol...",
+            key=f"protocol_search_{specialty}",
+            placeholder="Nhập tên protocol để tìm..."
+        )
+        
+        # Filter protocols based on search
+        if search_term:
+            search_lower = search_term.lower()
+            # Remove emoji and search in text
+            filtered_list = [
+                p for p in protocol_list
+                if search_lower in p.lower() or 
+                   search_lower in p.split(' ', 1)[-1].lower() if ' ' in p else False
+            ]
+            
+            if filtered_list:
+                protocol_list = filtered_list
+                st.caption(f"📊 Tìm thấy {len(filtered_list)} protocol(s)")
+            else:
+                st.warning(f"⚠️ Không tìm thấy protocol nào với từ khóa '{search_term}'")
+                protocol_list = []  # Show empty list
+        else:
+            # Show protocol count when not searching
+            st.caption(f"📊 Tổng cộng: {len(protocol_list)} protocol(s)")
+    
     if protocol_list:
         # Use helper function for consistency
         protocol = render_protocol_selector(protocol_list, use_deep_link, deep_link_protocol)
+        
+        # Show favorite button for selected protocol
+        if protocol and protocol != "Không có protocol nào":
+            st.markdown("---")
+            render_favorite_button(protocol, key_suffix=specialty)
     else:
         # Fallback: show empty selector
         protocol = st.radio(
@@ -116,6 +161,12 @@ def render_protocols_sidebar() -> tuple[str, str, bool]:
         )
     
     st.markdown("---")
+    
+    # ========== THEME TOGGLE ==========
+    render_theme_toggle()
+    
+    st.markdown("---")
+    
     st.info("""
     **📚 Căn cứ:**
     - International Guidelines
