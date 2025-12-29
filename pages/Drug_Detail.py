@@ -26,13 +26,38 @@ try:
 except:
     pass
 
-# Breadcrumbs
+# Enhanced Breadcrumbs with back button (inspired by medical reference sites)
+st.markdown(
+    """
+    <div style='margin-bottom: 15px;'>
+        <a href='#' onclick='window.history.back(); return false;' style='
+            color: #1976D2; 
+            text-decoration: none; 
+            font-size: 0.95em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            transition: all 0.2s;
+        ' onmouseover="this.style.background='#e0f2fe'; this.style.borderColor='#7dd3fc';" 
+           onmouseout="this.style.background='#f0f9ff'; this.style.borderColor='#bae6fd';">
+            ← Quay lại danh sách thuốc
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Breadcrumbs (if component available)
 try:
     from components.mobile_page_wrapper import render_breadcrumbs
     render_breadcrumbs([
         ("Trang chủ", "/"),
-        ("Thuốc", "pages/07_💊_Drug_Database.py"),
-        ("Chi tiết", None)
+        ("💊 Cơ sở dữ liệu thuốc", "pages/07_💊_Drug_Database.py"),
+        (drug_name if drug_name else "Chi tiết", None)
     ])
 except ImportError:
     pass
@@ -60,14 +85,16 @@ if not drug_data:
 with st.sidebar:
     st.header("💊 Chi tiết thuốc")
     
-    # Quick actions
-    st.subheader("⚡ Thao tác nhanh")
+    # Quick actions - more prominent
+    st.markdown("### ⚡ Thao tác nhanh")
     
-    if st.button("🔙 Quay lại", use_container_width=True, type="primary"):
+    if st.button("🔙 Quay lại danh sách", use_container_width=True, type="primary"):
         st.switch_page("pages/07_💊_Drug_Database.py")
     
-    if st.button("🔍 Tìm thuốc khác", use_container_width=True):
+    if st.button("🔍 Tìm thuốc khác", use_container_width=True, type="secondary"):
         st.switch_page("pages/07_💊_Drug_Database.py")
+    
+    st.markdown("---")
     
     st.markdown("---")
     
@@ -344,26 +371,45 @@ if drug_group:
                     st.session_state['view_drug_name'] = rel_name
                     st.rerun()
 
-# Footer with navigation
+# Sticky Footer Navigation (inspired by medical reference sites)
 st.markdown("---")
+st.markdown(
+    """
+    <div style='
+        position: sticky;
+        bottom: 0;
+        background: white;
+        border-top: 2px solid #e2e8f0;
+        padding: 15px 0;
+        margin-top: 30px;
+        box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+        z-index: 100;
+    '>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
-    if st.button("🔙 Quay lại", use_container_width=True):
+    if st.button("🔙 Quay lại danh sách", use_container_width=True, type="primary"):
         st.switch_page("pages/07_💊_Drug_Database.py")
 with col2:
-    if st.button("🔍 Tìm thuốc khác", use_container_width=True):
+    if st.button("🔍 Tìm thuốc khác", use_container_width=True, type="secondary"):
         st.switch_page("pages/07_💊_Drug_Database.py")
 with col3:
     try:
         from antibiotics.antibiotics_data import ANTIBIOTICS_DATABASE
         is_antibiotic = drug_name in ANTIBIOTICS_DATABASE
         if is_antibiotic:
-            if st.button("🧮 Tính liều", use_container_width=True):
+            if st.button("🧮 Tính liều", use_container_width=True, type="secondary"):
                 st.session_state['preset_antibiotic_name'] = drug_name
                 st.session_state['switch_to_dosing_calculator'] = True
                 st.switch_page("pages/07_💊_Drug_Database.py")
+        else:
+            st.empty()
     except ImportError:
-        pass
+        st.empty()
 
 # Standard footer
 render_standard_footer(disclaimer=True)

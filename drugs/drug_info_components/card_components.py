@@ -34,30 +34,36 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
             break
     group_split = group.split(' - ')[0] if ' - ' in group else group
     group_badge = f'<span style="background-color: {badge_color}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; margin-left: 8px;">{group_split}</span>'
+    # Make card more clickable with hover effect (inspired by medical reference sites)
     card_html = f"""
     <div style='
         background: white;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        padding: 12px 15px;
-        margin: 8px 0;
-        transition: all 0.2s;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    '>
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 15px 18px;
+        margin: 10px 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        cursor: pointer;
+    ' 
+    onmouseover="this.style.borderColor='#1976D2'; this.style.boxShadow='0 4px 12px rgba(25,118,210,0.2)'; this.style.transform='translateY(-2px)';"
+    onmouseout="this.style.borderColor='#e0e0e0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)';">
         <div style='display: flex; justify-content: space-between; align-items: start;'>
             <div style='flex: 1;'>
-                <div style='display: flex; align-items: center; margin-bottom: 6px;'>
-                    <strong style='color: #1976D2; font-size: 1.05em; margin-right: 8px;'>{highlighted_name}</strong>
+                <div style='display: flex; align-items: center; margin-bottom: 8px;'>
+                    <strong style='color: #1976D2; font-size: 1.1em; margin-right: 8px; cursor: pointer;'>{highlighted_name}</strong>
                     {group_badge}
                 </div>
-                {f"<div style='color: #666; font-size: 0.9em; margin-bottom: 4px;'>{highlighted_vn_name}</div>" if vn_name else ''}
+                {f"<div style='color: #666; font-size: 0.9em; margin-bottom: 5px;'>{highlighted_vn_name}</div>" if vn_name else ''}
                 <div style='color: #888; font-size: 0.85em;'>{admin_str} | {group}</div>
             </div>
+            <div style='color: #1976D2; font-size: 1.2em; margin-left: 10px;'>→</div>
         </div>
     </div>
     """
     st.markdown(card_html, unsafe_allow_html=True)
-    col1, col2, col3 = st.columns([1, 1, 2])
+    # Action buttons row - optimized layout (inspired by Epocrates/Drugs.com)
+    col1, col2, col3 = st.columns([2, 1.5, 1])
     with col1:
         safe_drug_name = str(drug_name).replace(' ', '_').replace('-', '_'
             ).replace('/', '_').replace('(', '_').replace(')', '_')
@@ -73,14 +79,15 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
             unique_suffix = f'_{data_hash}'
         view_key = (f'{key_prefix}view_{safe_drug_name}{unique_suffix}' if key_prefix else
             f'view_{safe_drug_name}{unique_suffix}')
-        if st.button('📖 Xem chi tiết', key=view_key, use_container_width=True):
+        # Primary action button - more prominent
+        if st.button('📖 Xem chi tiết', key=view_key, use_container_width=True, type='primary'):
             # Navigate to dedicated drug detail page
             st.session_state['view_drug_name'] = str(drug_name)
             st.switch_page("pages/Drug_Detail.py")
     with col2:
         compare_key = (f'{key_prefix}compare_{safe_drug_name}{unique_suffix}' if
             key_prefix else f'compare_{safe_drug_name}{unique_suffix}')
-        if st.button('🔄 So sánh', key=compare_key, use_container_width=True):
+        if st.button('🔄 So sánh', key=compare_key, use_container_width=True, type='secondary'):
             if 'drug_comparison_list' not in st.session_state:
                 st.session_state['drug_comparison_list'] = []
             if drug_name not in st.session_state['drug_comparison_list']:

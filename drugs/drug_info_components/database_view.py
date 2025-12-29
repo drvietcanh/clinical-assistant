@@ -10,7 +10,6 @@ try:
 except ImportError:
     ANTIBIOTICS_DATABASE = {}
 from .card_components import render_compact_drug_card
-from .detail_view import display_drug_info
 
 def render_drug_database():
     """Main function to render drug database page with search and browse"""
@@ -264,17 +263,6 @@ def render_drug_database():
             
             for idx, (drug_name, drug_data) in enumerate(page_results):
                 render_compact_drug_card(drug_name, drug_data, search_query='', card_index=start_idx + idx)
-                selected_key = 'selected_drug'
-                show_detail_key = 'show_detail'
-                if st.session_state.get(selected_key) == drug_name and st.session_state.get(show_detail_key, False):
-                    display_drug_info(drug_name, drug_data)
-                    safe_close_key = f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}_{start_idx + idx}"
-                    if st.button('✖️ Đóng', key=safe_close_key):
-                        if selected_key in st.session_state:
-                            del st.session_state[selected_key]
-                        if show_detail_key in st.session_state:
-                            st.session_state[show_detail_key] = False
-                        st.rerun()
             
             if len(filter_results) > page_size:
                 total_pages = (len(filter_results) + page_size - 1) // page_size
@@ -470,21 +458,6 @@ def render_drug_database():
                 for idx, (drug_name, drug_data) in enumerate(page_results):
                     render_compact_drug_card(drug_name, drug_data, search_query
                         =effective_query, card_index=start_idx + idx)
-                    selected_key = 'selected_drug'
-                    show_detail_key = 'show_detail'
-                    if st.session_state.get(selected_key
-                        ) == drug_name and st.session_state.get(show_detail_key,
-                        False):
-                        display_drug_info(drug_name, drug_data)
-                        safe_close_key = (
-                            f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}_{start_idx + idx}"
-                            )
-                        if st.button('✖️ Đóng', key=safe_close_key):
-                            if selected_key in st.session_state:
-                                del st.session_state[selected_key]
-                            if show_detail_key in st.session_state:
-                                st.session_state[show_detail_key] = False
-                            st.rerun()
                 if len(results) > page_size:
                     total_pages = (len(results) + page_size - 1) // page_size
                     st.markdown('---')
@@ -535,21 +508,6 @@ def render_drug_database():
             page_drugs = all_drugs[start_idx:end_idx]
             for idx, (drug_name, drug_data) in enumerate(page_drugs):
                 render_compact_drug_card(drug_name, drug_data, search_query='', card_index=start_idx + idx)
-                selected_key = 'selected_drug'
-                show_detail_key = 'show_detail'
-                if st.session_state.get(selected_key
-                    ) == drug_name and st.session_state.get(show_detail_key, False
-                    ):
-                    display_drug_info(drug_name, drug_data)
-                    safe_close_key = (
-                        f"close_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}_{start_idx + idx}"
-                        )
-                    if st.button('✖️ Đóng', key=safe_close_key):
-                        if selected_key in st.session_state:
-                            del st.session_state[selected_key]
-                        if show_detail_key in st.session_state:
-                            st.session_state[show_detail_key] = False
-                        st.rerun()
             if len(all_drugs) > page_size:
                 total_pages = (len(all_drugs) + page_size - 1) // page_size
                 st.markdown('---')
