@@ -197,6 +197,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)",
             border="#f44336"
         ),
+        "drug_formulary": ModuleInfo(
+            id="drug_formulary",
+            title="Danh mục Thuốc BHYT",
+            icon="💰",
+            page_path="pages/18_💰_Drug_Formulary.py",
+            description="Thông tin về thuốc trong danh mục BHYT, giá tham khảo, generic alternatives, coverage",
+            color="linear-gradient(135deg, #fff9c4 0%, #fff59d 100%)",
+            border="#fbc02d"
+        ),
     },
     
     "navigation": {

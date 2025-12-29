@@ -287,7 +287,7 @@ with tab1:
     # Define categories
     categories = {
         "📊 Calculators & Scores": ["scores", "labs", "tdm"],
-        "💊 Thuốc & Liều dùng": ["drug_database", "antibiotics"],
+        "💊 Thuốc & Liều dùng": ["drug_database", "antibiotics", "drug_formulary"],
         "🫁 Hồi sức & Quy trình": ["critical_care", "ventilator", "protocols", "guidelines_tracker"],
         "🧭 Hỗ trợ quyết định": ["phase2_features"],
         "🩺 Chẩn đoán & Bài viết": ["diagnosis", "in_depth_articles", "icd10_lookup", "medical_news", "disease_encyclopedia", "symptom_checker"],
