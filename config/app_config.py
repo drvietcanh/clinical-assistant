@@ -170,6 +170,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
             border="#ff9800"
         ),
+        "guidelines_tracker": ModuleInfo(
+            id="guidelines_tracker",
+            title="Theo dõi Guidelines",
+            icon="📋",
+            page_path="pages/15_📋_Guidelines_Tracker.py",
+            description="Theo dõi và cập nhật guidelines từ AHA/ACC, ESC, IDSA, KDIGO, GOLD, GINA",
+            color="linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
+            border="#9c27b0"
+        ),
     },
     
     "navigation": {
