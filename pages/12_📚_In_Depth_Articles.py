@@ -993,7 +993,9 @@ def render_article_card(article: dict, index: int):
     reading_time = estimate_reading_time(content) if content else 0
     
     # Tạo card HTML với thiết kế đẹp - tối ưu mobile
-    card_id = f"article_card_{article['id']}"
+    # Sanitize ID để đảm bảo an toàn cho HTML ID attribute
+    safe_id = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in str(article['id']))
+    card_id = f"article_card_{safe_id}"
     
     card_html = f"""
     <div id="{card_id}" style="max-width: 980px; margin: 0 auto 24px auto;">
@@ -1017,7 +1019,7 @@ def render_article_card(article: dict, index: int):
         ">
             <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; width: 100%;">
                 <h3 class="article-card-title" style="margin: 0; font-size: 1.3rem; font-weight: 600; color: white; line-height: 1.4; flex: 1;">
-                    {article['title']}
+                    {html.escape(article['title'])}
                 </h3>
                 <span class="article-card-specialty" style="
                     background: rgba(255,255,255,0.2);
@@ -1026,10 +1028,10 @@ def render_article_card(article: dict, index: int):
                     font-size: 0.85rem;
                     white-space: nowrap;
                     margin-left: 12px;
-                ">{specialty}</span>
+                ">{html.escape(specialty)}</span>
             </div>
             <div class="article-card-meta" style="display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.85rem; opacity: 0.95;">
-                <span>🔄 {article.get('last_reviewed', 'N/A')}</span>
+                <span>🔄 {html.escape(str(article.get('last_reviewed', 'N/A')))}</span>
                 {f'<span>⏱️ {reading_time} phút đọc</span>' if reading_time > 0 else ''}
                 <span>📑 {len(article.get('guidelines', []))} guideline</span>
                 {f'<span class="article-badge" style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px;">LoE: {html.escape(evidence_level)}</span>' if evidence_level else ''}
@@ -1052,7 +1054,7 @@ def render_article_card(article: dict, index: int):
 
             <!-- Guidelines badges -->
             <div style="margin-bottom: 16px;">
-                {" ".join([f'<span class="article-badge" style="background: #e3f2fd; color: #1976d2; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; margin-right: 6px; margin-bottom: 6px; display: inline-block;">{g}</span>' for g in article.get('guidelines', [])[:3]])}
+                {" ".join([f'<span class="article-badge" style="background: #e3f2fd; color: #1976d2; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; margin-right: 6px; margin-bottom: 6px; display: inline-block;">{html.escape(g)}</span>' for g in article.get('guidelines', [])[:3]])}
             </div>
             
             <!-- Summary points -->
@@ -1077,7 +1079,7 @@ def render_article_card(article: dict, index: int):
             {f'''
             <div style="margin-bottom: 16px;">
                 <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                    {" ".join([f'<span class="article-tag" style="background: #f5f5f5; color: #616161; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; border: 1px solid #e0e0e0;">{k}</span>' for k in article.get('keywords', [])[:6]])}
+                    {" ".join([f'<span class="article-tag" style="background: #f5f5f5; color: #616161; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; border: 1px solid #e0e0e0;">{html.escape(k)}</span>' for k in article.get('keywords', [])[:6]])}
                 </div>
             </div>
             ''' if article.get('keywords') else ''}
@@ -1121,8 +1123,8 @@ def render_article_card(article: dict, index: int):
                 margin-top: 16px;
             ">
                 <div style="font-size: 0.85rem; color: #616161;">
-                    {f'<div style="margin-bottom: 8px;"><strong>📊 Calculators:</strong> {", ".join(article.get("related_calculators", [])[:3])}</div>' if article.get('related_calculators') else ''}
-                    {f'<div><strong>📋 Protocols:</strong> {", ".join(article.get("related_protocols", [])[:2])}</div>' if article.get('related_protocols') else ''}
+                    {f'<div style="margin-bottom: 8px;"><strong>📊 Calculators:</strong> {html.escape(", ".join(article.get("related_calculators", [])[:3]))}</div>' if article.get('related_calculators') else ''}
+                    {f'<div><strong>📋 Protocols:</strong> {html.escape(", ".join(article.get("related_protocols", [])[:2]))}</div>' if article.get('related_protocols') else ''}
                 </div>
             </div>
         </div>
@@ -1142,7 +1144,7 @@ def render_article_card(article: dict, index: int):
                 "📋 Mở Protocol",
                 key=f"protocol_btn_{article['id']}_{index}",
                 use_container_width=True,
-                help=f"Mở protocol: {protocol_info.get('protocol_display', '')}",
+                help=f"Mở protocol: {html.escape(protocol_info.get('protocol_display', ''))}",
                 type="primary"
             ):
                 # Store protocol selection in session state for Protocols page
@@ -1151,7 +1153,7 @@ def render_article_card(article: dict, index: int):
                 st.session_state['protocol_function'] = protocol_info.get("protocol_function")
                 st.switch_page("pages/04_📋_Protocols.py")
         with col2:
-            st.caption(f"💡 Có protocol tương ứng: **{protocol_info.get('protocol_display', '')}**")
+            st.caption(f"💡 Có protocol tương ứng: **{html.escape(protocol_info.get('protocol_display', ''))}**")
     
     # Score links
     try:
@@ -1163,12 +1165,12 @@ def render_article_card(article: dict, index: int):
     # Streamlit expander cho nội dung đầy đủ - với class cho mobile optimization
     expand_key = f"article_expand_{article['id']}_{index}"
     expanded = st.session_state.get(f"expand_article_{article['id']}", False)
-    with st.expander(f"📖 Đọc toàn bộ: {article['title']}", expanded=expanded, key=expand_key):
+    with st.expander(f"📖 Đọc toàn bộ: {html.escape(article['title'])}", expanded=expanded, key=expand_key):
         st.markdown('<div class="article-expander-content">', unsafe_allow_html=True)
         if content:
             st.markdown(content)
         else:
-            st.warning(f"Không tìm thấy nội dung tại {article['path'].name}.")
+            st.warning(f"Không tìm thấy nội dung tại {html.escape(article['path'].name)}.")
         st.markdown('</div>', unsafe_allow_html=True)
 
 
@@ -1480,12 +1482,12 @@ def main():
         # Find and highlight the article
         target_article = next((a for a in articles if a['id'] == article_to_open), None)
         if target_article:
-            st.success(f"📚 **Đang hiển thị bài viết:** {target_article['title']}")
+            st.success(f"📚 **Đang hiển thị bài viết:** {html.escape(target_article['title'])}")
             st.caption("💡 Bài viết sẽ tự động mở rộng bên dưới")
             # Auto-expand the article
             st.session_state[f"expand_article_{article_to_open}"] = True
         else:
-            st.warning(f"⚠️ Không tìm thấy bài viết với ID: `{article_to_open}`")
+            st.warning(f"⚠️ Không tìm thấy bài viết với ID: `{html.escape(article_to_open)}`")
         # Clear deep link state
         if 'article_to_open' in st.session_state:
             del st.session_state['article_to_open']
@@ -1538,7 +1540,7 @@ def main():
             # Tóm tắt chuyên ngành đang có trong kết quả
             st.markdown("### 🩺 Chuyên ngành trong kết quả")
             spec_badges = " ".join(
-                f"<span style='background:#e3f2fd;color:#1976d2;padding:4px 10px;border-radius:12px;font-size:0.8rem;margin-right:6px;margin-bottom:6px;display:inline-block;'>{spec} ({len(grouped_by_specialty[spec])})</span>"
+                f"<span style='background:#e3f2fd;color:#1976d2;padding:4px 10px;border-radius:12px;font-size:0.8rem;margin-right:6px;margin-bottom:6px;display:inline-block;'>{html.escape(spec)} ({len(grouped_by_specialty[spec])})</span>"
                 for spec in specs
             )
             st.markdown(spec_badges, unsafe_allow_html=True)
@@ -1546,7 +1548,7 @@ def main():
 
             # Hiển thị lần lượt từng chuyên ngành
             for spec in specs:
-                st.markdown(f"### 🩺 {spec}")
+                st.markdown(f"### 🩺 {html.escape(spec)}")
                 st.caption(f"{len(grouped_by_specialty[spec])} bài viết chuyên sâu")
 
                 for idx, article in enumerate(grouped_by_specialty[spec]):

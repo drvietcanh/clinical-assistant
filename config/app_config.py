@@ -152,6 +152,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)",
             border="#1e88e5"
         ),
+        "icd10_lookup": ModuleInfo(
+            id="icd10_lookup",
+            title="Tra cứu mã ICD-10",
+            icon="🏷️",
+            page_path="pages/13_🏷️_ICD10_Lookup.py",
+            description="Tra cứu mã ICD-10 theo tên bệnh, mã code, hoặc chuyên khoa",
+            color="linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%)",
+            border="#689f38"
+        ),
     },
     
     "navigation": {

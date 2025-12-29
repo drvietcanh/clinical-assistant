@@ -5,6 +5,7 @@ Auto-generate TOC from protocol content
 
 import streamlit as st
 import re
+import html
 from typing import List, Dict, Tuple
 
 

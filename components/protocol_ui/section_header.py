@@ -4,6 +4,7 @@ Enhanced section headers with icons and styling
 """
 
 import streamlit as st
+import html
 
 
 def render_section_header(
@@ -25,10 +26,10 @@ def render_section_header(
     
     html = f"""
     <div class="protocol-section-header {level_class}">
-        <span class="section-icon">{icon}</span>
+        <span class="section-icon">{html.escape(icon)}</span>
         <div style="flex: 1;">
-            <span class="section-title">{title}</span>
-            {f'<p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--protocol-text-secondary);">{description}</p>' if description else ''}
+            <span class="section-title">{html.escape(title)}</span>
+            {f'<p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--protocol-text-secondary);">{html.escape(description)}</p>' if description else ''}
         </div>
     </div>
     """
@@ -52,12 +53,14 @@ def render_evidence_badge(
         guideline: Guideline name
     """
     year_text = f" {year}" if year else ""
-    guideline_text = f" - {guideline}" if guideline else ""
+    guideline_text = f" - {html.escape(guideline)}" if guideline else ""
+    # Sanitize level for CSS class
+    safe_level = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in str(level))
     
     html = f"""
-    <div class="evidence-badge level-{level}">
-        <span class="badge-label">Evidence Level {level}</span>
-        <span class="badge-source">{source}{year_text}{guideline_text}</span>
+    <div class="evidence-badge level-{safe_level}">
+        <span class="badge-label">Evidence Level {html.escape(str(level))}</span>
+        <span class="badge-source">{html.escape(source)}{year_text}{guideline_text}</span>
     </div>
     """
     
@@ -77,10 +80,12 @@ def render_protocol_card(
         card_type: Card type (default, dosing, monitoring, reference)
         title: Optional card title
     """
-    title_html = f'<h4 style="margin-top: 0;">{title}</h4>' if title else ""
+    # Sanitize card_type for CSS class
+    safe_card_type = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in str(card_type))
+    title_html = f'<h4 style="margin-top: 0;">{html.escape(title)}</h4>' if title else ""
     
     html = f"""
-    <div class="protocol-card {card_type}">
+    <div class="protocol-card {safe_card_type}">
         {title_html}
         {content}
     </div>
