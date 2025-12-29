@@ -316,7 +316,7 @@ preg_badge = f"<span style='background: rgba(255,255,255,0.3); padding: 4px 10px
 admin_icons = {'IV': '💉', 'IM': '💊', 'PO': '🍽️', 'Inhalation': '🌬️', 'SC': '💉', 'Rectal': '📦'}
 admin_routes = drug_data.get('administration', [])
 admin_badges = ' '.join([
-    f"<span style='background: rgba(255,255,255,0.25); padding: 4px 8px; border-radius: 8px; font-size: 0.8em; margin-right: 5px;'>{admin_icons.get(route, '')} {route}</span>"
+    f"<span style='background: rgba(255,255,255,0.25); padding: 4px 8px; border-radius: 8px; font-size: 0.8em; margin-right: 5px;'>{admin_icons.get(route, '')} {escape_html(str(route))}</span>"
     for route in admin_routes[:3]
 ])
 

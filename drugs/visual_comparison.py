@@ -6,6 +6,7 @@ Enhanced version for general drugs (beyond antibiotics)
 
 import streamlit as st
 import pandas as pd
+import html
 from .drug_database import DRUG_DATABASE
 from .search import search_drugs
 
@@ -219,10 +220,12 @@ def render_visual_comparison():
                 elif "Analgesic" in group:
                     group_color = "#F44336"
                 
+                escaped_drug_name = html.escape(str(drug_name))
+                escaped_group = html.escape(str(group.split(' - ')[-1] if ' - ' in group else group))
                 st.markdown(f"""
                 <div style='background: linear-gradient(135deg, {group_color} 0%, {group_color}dd 100%); color: white; padding: 15px; border-radius: 10px; margin: 10px 0;'>
-                    <h3 style='margin: 0; color: white; font-size: 1.2em;'>💊 {drug_name}</h3>
-                    <p style='margin: 5px 0 0 0; font-size: 0.9em; opacity: 0.9;'>{group.split(' - ')[-1] if ' - ' in group else group}</p>
+                    <h3 style='margin: 0; color: white; font-size: 1.2em;'>💊 {escaped_drug_name}</h3>
+                    <p style='margin: 5px 0 0 0; font-size: 0.9em; opacity: 0.9;'>{escaped_group}</p>
                 </div>
                 """, unsafe_allow_html=True)
                 

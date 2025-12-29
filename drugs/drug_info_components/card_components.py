@@ -167,7 +167,7 @@ def _render_quick_facts_box(drug_data):
         facts_cards.append(f"""
             <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid {preg_colors.get(preg, "#64748b")}; flex: 1; min-width: 150px;'>
                 <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>🤰 Thai kỳ</div>
-                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{preg_icons.get(preg, '')} {preg}</div>
+                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{preg_icons.get(preg, '')} {escape_html(str(preg))}</div>
             </div>
         """)
     
@@ -179,7 +179,7 @@ def _render_quick_facts_box(drug_data):
         facts_cards.append(f"""
             <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #8B5CF6; flex: 1; min-width: 150px;'>
                 <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>🤱 Cho con bú</div>
-                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{safety_icons.get(safety, '❓')} {safety}</div>
+                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{safety_icons.get(safety, '❓')} {escape_html(str(safety))}</div>
             </div>
         """)
     elif 'lactation' in drug_data:
@@ -187,7 +187,7 @@ def _render_quick_facts_box(drug_data):
         facts_cards.append(f"""
             <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #8B5CF6; flex: 1; min-width: 150px;'>
                 <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>🤱 Cho con bú</div>
-                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{lactation}</div>
+                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{escape_html(str(lactation))}</div>
             </div>
         """)
     
@@ -197,7 +197,7 @@ def _render_quick_facts_box(drug_data):
         facts_cards.append(f"""
             <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #3B82F6; flex: 1; min-width: 150px;'>
                 <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>⏱️ Half-life</div>
-                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{half_life}</div>
+                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{escape_html(str(half_life))}</div>
             </div>
         """)
     
@@ -268,7 +268,7 @@ def _render_black_box_warning(warning_text):
             CẢNH BÁO HỘP ĐEN
         </h3>
         <p style='color: #991b1b; font-size: 1.05em; margin: 0; line-height: 1.6; font-weight: 500;'>
-            {warning_text}
+            {escape_html(str(warning_text))}
         </p>
     </div>
     """

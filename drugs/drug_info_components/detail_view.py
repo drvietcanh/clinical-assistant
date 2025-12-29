@@ -40,7 +40,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             margin-bottom: 20px;
         '>
             <h2 style='margin: 0; color: white; font-size: 1.8em;'>💊 {drug_name}</h2>
-            {f"<p style='margin: 8px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1em;'>{drug_data.get('vietnamese_name', '')}</p>" if drug_data.get('vietnamese_name') else ''}
+            {f"<p style='margin: 8px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1em;'>{escape_html(str(drug_data.get('vietnamese_name', '')))}</p>" if drug_data.get('vietnamese_name') else ''}
         </div>
         """
             , unsafe_allow_html=True)
@@ -59,7 +59,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     f"""
                     <div style='background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0EA5E9; margin-bottom: 10px;'>
                         <div style='color: #0369a1; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>📝 Tên biệt dược</div>
-                        <div style='color: #0c4a6e; font-size: 1em;'>{drug_data['vietnamese_name']}</div>
+                        <div style='color: #0c4a6e; font-size: 1em;'>{escape_html(str(drug_data['vietnamese_name']))}</div>
                     </div>
                     """,
                     unsafe_allow_html=True
@@ -70,7 +70,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     f"""
                     <div style='background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B; margin-bottom: 10px;'>
                         <div style='color: #92400e; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>🏷️ Nhóm</div>
-                        <div style='color: #78350f; font-size: 1em;'>{drug_data['group']}</div>
+                        <div style='color: #78350f; font-size: 1em;'>{escape_html(str(drug_data['group']))}</div>
                     </div>
                     """,
                     unsafe_allow_html=True
@@ -80,7 +80,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                 admin_icons = {'IV': '💉', 'IM': '💊', 'PO': '🍽️',
                     'Inhalation': '🌬️', 'SC': '💉', 'Rectal': '📦'}
                 admin_display = ' / '.join([
-                    f"{admin_icons.get(route, '')} {route}" for route in
+                    f"{admin_icons.get(route, '')} {escape_html(str(route))}" for route in
                     drug_data['administration']])
                 st.markdown(
                     f"""
@@ -99,7 +99,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     f"""
                     <div style='background: #fce7f3; padding: 15px; border-radius: 8px; border-left: 4px solid #EC4899; margin-top: 10px;'>
                         <div style='color: #831843; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>🤰 Thai kỳ</div>
-                        <div style='color: #9f1239; font-size: 1em;'>{preg_icons.get(preg, '')} {preg} - {preg_desc.get(preg, '')}</div>
+                        <div style='color: #9f1239; font-size: 1em;'>{preg_icons.get(preg, '')} {escape_html(str(preg))} - {escape_html(str(preg_desc.get(preg, '')))}</div>
                     </div>
                     """,
                     unsafe_allow_html=True
@@ -109,7 +109,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             st.markdown('### 📋 Chỉ định')
             indications_html = '<ul style="margin: 10px 0; padding-left: 20px;">'
             for ind in drug_data['indications']:
-                indications_html += f'<li style="margin: 8px 0; color: #1e293b; font-size: 1em; line-height: 1.6;">{ind}</li>'
+                indications_html += f'<li style="margin: 8px 0; color: #1e293b; font-size: 1em; line-height: 1.6;">{escape_html(str(ind))}</li>'
             indications_html += '</ul>'
             st.markdown(
                 f"""
@@ -125,7 +125,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             st.markdown(
                 f"""
                 <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 10px; border-left: 4px solid #0EA5E9; margin: 15px 0;'>
-                    <p style='color: #0c4a6e; font-size: 1em; line-height: 1.8; margin: 0;'>{drug_data['mechanism_of_action']}</p>
+                    <p style='color: #0c4a6e; font-size: 1em; line-height: 1.8; margin: 0;'>{escape_html(str(drug_data['mechanism_of_action']))}</p>
                 </div>
                 """,
                 unsafe_allow_html=True
@@ -160,8 +160,8 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                         <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px;'>
                             {''.join([f"""
                             <div style='background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #0EA5E9;'>
-                                <div style='color: #0369a1; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>{row['Thông số']}</div>
-                                <div style='color: #0c4a6e; font-size: 1em; font-weight: 500;'>{row['Giá trị']}</div>
+                                <div style='color: #0369a1; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>{escape_html(str(row['Thông số']))}</div>
+                                <div style='color: #0c4a6e; font-size: 1em; font-weight: 500;'>{escape_html(str(row['Giá trị']))}</div>
                             </div>
                             """ for _, row in pk_df.iterrows()])}
                         </div>
@@ -215,7 +215,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                         <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
                             {''.join([f"""
                             <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #10B981;'>
-                                <div style='color: #047857; font-size: 0.95em; line-height: 1.6;'>{dose.replace('**', '').replace(':', ':</strong>').replace('**', '<strong>')}</div>
+                                <div style='color: #047857; font-size: 0.95em; line-height: 1.6;'>{escape_html(dose.replace('**', '').replace(':', ':</strong>').replace('**', '<strong>'))}</div>
                             </div>
                             """ for dose in adult_doses])}
                         </div>
@@ -247,8 +247,8 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                         <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
                             {''.join([f"""
                             <div style='background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B;'>
-                                <div style='font-weight: bold; color: #92400e; margin-bottom: 8px; font-size: 0.95em;'>{age_group}</div>
-                                <div style='color: #78350f; font-size: 0.9em; line-height: 1.6;'>{dose}</div>
+                                <div style='font-weight: bold; color: #92400e; margin-bottom: 8px; font-size: 0.95em;'>{escape_html(str(age_group))}</div>
+                                <div style='color: #78350f; font-size: 0.9em; line-height: 1.6;'>{escape_html(str(dose))}</div>
                             </div>
                             """ for age_group, dose in ped_doses])}
                         </div>
@@ -288,8 +288,8 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                         <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;'>
                             {''.join([f"""
                             <div style='background: {'#d1fae5' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#fef3c7' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#fee2e2' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) else 'white'}; padding: 15px; border-radius: 8px; border-left: 4px solid {'#10B981' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#F59E0B' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#DC2626' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) else '#64748b'};'>
-                                <div style='font-weight: bold; color: #1e293b; margin-bottom: 5px; font-size: 0.95em;'>{row['CrCl (mL/min)']}</div>
-                                <div style='color: #475569; font-size: 0.9em; line-height: 1.5;'>{row['Điều chỉnh']}</div>
+                                <div style='font-weight: bold; color: #1e293b; margin-bottom: 5px; font-size: 0.95em;'>{escape_html(str(row['CrCl (mL/min)']))}</div>
+                                <div style='color: #475569; font-size: 0.9em; line-height: 1.5;'>{escape_html(str(row['Điều chỉnh']))}</div>
                             </div>
                             """ for row in renal_data])}
                         </div>
@@ -325,8 +325,8 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                         <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;'>
                             {''.join([f"""
                             <div style='background: {'#d1fae5' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#fef3c7' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#fee2e2' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) or 'không dùng' in str(row['Điều chỉnh']).lower() else 'white'}; padding: 15px; border-radius: 8px; border-left: 4px solid {'#10B981' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#F59E0B' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#DC2626' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) or 'không dùng' in str(row['Điều chỉnh']).lower() else '#F59E0B'};'>
-                                <div style='font-weight: bold; color: #1e293b; margin-bottom: 5px; font-size: 0.95em;'>{row['Mức độ']}</div>
-                                <div style='color: #475569; font-size: 0.9em; line-height: 1.5;'>{row['Điều chỉnh']}</div>
+                                <div style='font-weight: bold; color: #1e293b; margin-bottom: 5px; font-size: 0.95em;'>{escape_html(str(row['Mức độ']))}</div>
+                                <div style='color: #475569; font-size: 0.9em; line-height: 1.5;'>{escape_html(str(row['Điều chỉnh']))}</div>
                             </div>
                             """ for row in hepatic_data])}
                         </div>
@@ -407,7 +407,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                         <div style='background: #fee2e2; border-left: 4px solid #DC2626; padding: 20px; border-radius: 10px; margin: 15px 0;'>
                             <h4 style='color: #991b1b; margin: 0 0 15px 0; font-size: 1.1em; font-weight: bold;'>🔴 Tuyệt đối</h4>
                             <ul style='margin: 0; padding-left: 20px; color: #7f1d1d;'>
-                                {''.join([f'<li style="margin: 8px 0; font-weight: 500; line-height: 1.6;">{contra}</li>' for contra in contraindications['tuyệt_đối']])}
+                                {''.join([f'<li style="margin: 8px 0; font-weight: 500; line-height: 1.6;">{escape_html(str(contra))}</li>' for contra in contraindications['tuyệt_đối']])}
                             </ul>
                         </div>
                         """,
@@ -419,7 +419,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                         <div style='background: #fef3c7; border-left: 4px solid #F59E0B; padding: 20px; border-radius: 10px; margin: 15px 0;'>
                             <h4 style='color: #92400e; margin: 0 0 15px 0; font-size: 1.1em; font-weight: bold;'>🟡 Tương đối - Thận trọng</h4>
                             <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
-                                {''.join([f'<li style="margin: 8px 0; line-height: 1.6;">{contra}</li>' for contra in contraindications['tương_đối']])}
+                                {''.join([f'<li style="margin: 8px 0; line-height: 1.6;">{escape_html(str(contra))}</li>' for contra in contraindications['tương_đối']])}
                             </ul>
                         </div>
                         """,
@@ -431,7 +431,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     f"""
                     <div style='background: #f1f5f9; border-left: 4px solid #64748b; padding: 20px; border-radius: 10px; margin: 15px 0;'>
                         <ul style='margin: 0; padding-left: 20px; color: #475569;'>
-                            {''.join([f'<li style="margin: 8px 0; line-height: 1.6;">{contra}</li>' for contra in contraindications])}
+                            {''.join([f'<li style="margin: 8px 0; line-height: 1.6;">{escape_html(str(contra))}</li>' for contra in contraindications])}
                         </ul>
                     </div>
                     """,
@@ -462,7 +462,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                                 Phổ biến (≥1%)
                             </div>
                             <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
-                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in common_effects])}
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{escape_html(str(se))}</li>' for se in common_effects])}
                             </ul>
                         </div>
                         """,
@@ -478,7 +478,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                                 Ít gặp (0.1-1%)
                             </div>
                             <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
-                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in uncommon_effects])}
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{escape_html(str(se))}</li>' for se in uncommon_effects])}
                             </ul>
                         </div>
                         """,
@@ -494,7 +494,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                                 Hiếm gặp (&lt;0.1%)
                             </div>
                             <ul style='margin: 0; padding-left: 20px; color: #334155;'>
-                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in rare_effects])}
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{escape_html(str(se))}</li>' for se in rare_effects])}
                             </ul>
                         </div>
                         """,
@@ -510,7 +510,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                                 Nghiêm trọng - Cần báo bác sĩ ngay
                             </div>
                             <ul style='margin: 0; padding-left: 20px; color: #7f1d1d;'>
-                                {''.join([f'<li style="margin: 5px 0; font-weight: 500; line-height: 1.6;">{se}</li>' for se in serious_effects])}
+                                {''.join([f'<li style="margin: 5px 0; font-weight: 500; line-height: 1.6;">{escape_html(str(se))}</li>' for se in serious_effects])}
                             </ul>
                         </div>
                         """,
@@ -559,7 +559,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                                 Phổ biến (≥1%)
                             </div>
                             <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
-                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in common_effects])}
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{escape_html(str(se))}</li>' for se in common_effects])}
                             </ul>
                         </div>
                         """,
@@ -575,7 +575,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                                 Ít gặp (0.1-1%)
                             </div>
                             <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
-                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in uncommon_effects])}
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{escape_html(str(se))}</li>' for se in uncommon_effects])}
                             </ul>
                         </div>
                         """,
@@ -591,7 +591,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                                 Nghiêm trọng - Cần báo bác sĩ ngay
                             </div>
                             <ul style='margin: 0; padding-left: 20px; color: #7f1d1d;'>
-                                {''.join([f'<li style="margin: 5px 0; font-weight: 500; line-height: 1.6;">{se}</li>' for se in serious_effects])}
+                                {''.join([f'<li style="margin: 5px 0; font-weight: 500; line-height: 1.6;">{escape_html(str(se))}</li>' for se in serious_effects])}
                             </ul>
                         </div>
                         """,
@@ -625,7 +625,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     f"""
                     <div style='background: #fffbeb; border-left: 4px solid #F59E0B; padding: 20px; border-radius: 10px; margin: 15px 0;'>
                         <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
-                            {''.join([f'<li style="margin: 10px 0; line-height: 1.7; font-size: 0.95em;">{prec}</li>' for prec in precautions])}
+                            {''.join([f'<li style="margin: 10px 0; line-height: 1.7; font-size: 0.95em;">{escape_html(str(prec))}</li>' for prec in precautions])}
                         </ul>
                     </div>
                     """,
@@ -650,7 +650,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
         if 'lactation' in drug_data:
             st.markdown('---')
             st.markdown(
-                f"### 🤱 **An toàn cho con bú:** {drug_data['lactation']}")
+                f"### 🤱 **An toàn cho con bú:** {escape_html(str(drug_data['lactation']))}")
     with tab_interactions:
         if 'interactions' in drug_data:
             st.markdown('### 🔗 Tương tác thuốc:')
@@ -675,7 +675,7 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                             <div style='background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #8B5CF6;'>
                                 <div style='color: #1e293b; font-size: 0.95em; line-height: 1.6; display: flex; align-items: start;'>
                                     <span style='font-size: 1.2em; margin-right: 8px; color: #8B5CF6;'>✅</span>
-                                    <span>{mon}</span>
+                                    <span>{escape_html(str(mon))}</span>
                                 </div>
                             </div>
                             """ for mon in monitoring_list])}
