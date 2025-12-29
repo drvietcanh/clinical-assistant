@@ -224,8 +224,6 @@ with st.sidebar:
     
     st.markdown("---")
     
-    st.markdown("---")
-    
     # Drug quick info
     st.subheader("📋 Thông tin nhanh")
     
