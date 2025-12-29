@@ -1140,7 +1140,7 @@ def render_article_card(article: dict, index: int):
         with col1:
             if st.button(
                 "📋 Mở Protocol",
-                key=f"protocol_btn_{article['id']}",
+                key=f"protocol_btn_{article['id']}_{index}",
                 use_container_width=True,
                 help=f"Mở protocol: {protocol_info.get('protocol_display', '')}",
                 type="primary"
@@ -1161,9 +1161,9 @@ def render_article_card(article: dict, index: int):
         pass
     
     # Streamlit expander cho nội dung đầy đủ - với class cho mobile optimization
-    expand_key = f"article_expand_{article['id']}"
+    expand_key = f"article_expand_{article['id']}_{index}"
     expanded = st.session_state.get(f"expand_article_{article['id']}", False)
-    with st.expander(f"📖 Đọc toàn bộ: {article['title']}", expanded=expanded):
+    with st.expander(f"📖 Đọc toàn bộ: {article['title']}", expanded=expanded, key=expand_key):
         st.markdown('<div class="article-expander-content">', unsafe_allow_html=True)
         if content:
             st.markdown(content)
@@ -1415,10 +1415,10 @@ def main():
         with st.expander("Liên kết trong nhóm Chẩn đoán & Bài viết", expanded=False):
             col1, col2 = st.columns(2)
             with col1:
-                if st.button("🩺 Chẩn đoán phân biệt", use_container_width=True):
+                if st.button("🩺 Chẩn đoán phân biệt", use_container_width=True, key="sidebar_btn_diagnosis"):
                     st.switch_page("pages/06_🩺_Diagnosis.py")
             with col2:
-                if st.button("📊 Thang điểm & Scores", use_container_width=True):
+                if st.button("📊 Thang điểm & Scores", use_container_width=True, key="sidebar_btn_scores"):
                     st.switch_page("pages/01_📊_Scores.py")
         
         st.markdown("---")
