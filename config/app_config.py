@@ -179,6 +179,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
             border="#9c27b0"
         ),
+        "disease_encyclopedia": ModuleInfo(
+            id="disease_encyclopedia",
+            title="Bách khoa Bệnh lý",
+            icon="📖",
+            page_path="pages/16_📖_Disease_Encyclopedia.py",
+            description="Thông tin toàn diện về các bệnh lý phổ biến: định nghĩa, nguyên nhân, triệu chứng, chẩn đoán, điều trị",
+            color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
+            border="#4caf50"
+        ),
     },
     
     "navigation": {
