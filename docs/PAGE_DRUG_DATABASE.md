@@ -2,7 +2,7 @@
 
 **Last Updated:** 2025-02-18  
 **Status:** ✅ Active  
-**Version:** 1.0
+**Version:** 1.1
 
 > **⚠️ QUAN TRỌNG:** Đọc file này TRƯỚC KHI làm bất kỳ thay đổi nào trong trang thuốc để tránh sai sót.
 
@@ -372,9 +372,12 @@ drugs/drug_info_components/database_view.py
 
 ### 2. Navigation Flow
 - ⚠️ **Drug cards** phải navigate đến `Drug_Detail.py`, không hiển thị inline
-- ⚠️ Sử dụng `st.switch_page("Drug_Detail.py")` để navigate
+- ⚠️ Sử dụng `st.switch_page("Drug_Detail.py")` để navigate - **KHÔNG dùng `st.rerun()`**
 - ⚠️ Set `st.session_state['view_drug_name']` trước khi navigate
-- ⚠️ **CRITICAL:** Trong `Drug_Detail.py`, phải get `drug_name` từ session_state TRƯỚC khi sử dụng trong breadcrumbs (dòng ~165 phải ở trước breadcrumbs ~159)
+- ⚠️ **CRITICAL:** Trong `Drug_Detail.py`, phải get `drug_name` từ session_state TRƯỚC khi sử dụng trong breadcrumbs
+- ⚠️ **CRITICAL:** Validate drug_name có trong DRUG_DATABASE trước khi navigate (cả trong card_components và related drugs)
+- ⚠️ **CRITICAL:** `drug_data` chỉ được get 1 lần (dòng 169), không duplicate
+- ⚠️ **Mobile swipe:** Sử dụng `window.location.href` thay vì `window.history.back()` cho reliability
 
 ### 3. Search Implementation
 - ⚠️ Search functions trong `drugs/search.py` hỗ trợ 4 loại search
@@ -400,9 +403,12 @@ drugs/drug_info_components/database_view.py
 - ⚠️ Same Group: Tìm thuốc cùng `group`
 - ⚠️ Alternative Drugs: Tìm thuốc cùng `indications` nhưng khác `group`
 - ⚠️ Limit số lượng hiển thị (6 drugs mỗi section)
+- ⚠️ **CRITICAL:** Validate drug có trong DRUG_DATABASE trước khi navigate
+- ⚠️ **CRITICAL:** Sử dụng `st.switch_page("pages/Drug_Detail.py")` thay vì `st.rerun()` cho navigation
 
 ### 8. Mobile & Print
 - ⚠️ Mobile: Swipe gestures chỉ hoạt động trên mobile (<768px)
+- ⚠️ **CRITICAL:** Swipe gesture sử dụng `window.location.href = '/pages/07_💊_Drug_Database'` thay vì `window.history.back()`
 - ⚠️ Print: CSS ẩn sidebar, buttons, và các elements không cần
 - ⚠️ Print button trong Drug_Detail.py
 
@@ -454,6 +460,18 @@ drugs/drug_info_components/database_view.py
 ---
 
 ## 📝 CHANGELOG
+
+### 2025-02-18 - Comprehensive Fix & Review
+**Rà soát kỹ và sửa lỗi triệt để:**
+- ✅ Fixed: `window.history.back()` trong swipe gesture → Thay bằng `window.location.href` cho reliability
+- ✅ Fixed: Duplicate `drug_data` get (dòng 169 và 210) → Removed duplicate, chỉ get 1 lần
+- ✅ Fixed: Related drugs navigation dùng `st.rerun()` → Thay bằng `st.switch_page()` cho consistency
+- ✅ Added: Validation cho related drugs trước khi navigate (kiểm tra drug có trong database)
+- ✅ Improved: Error handling cho related drugs navigation
+- ✅ Improved: Navigation consistency - tất cả navigation dùng `st.switch_page()`
+
+**Files Modified:**
+- `pages/Drug_Detail.py` - Fixed navigation, removed duplicate code, improved error handling
 
 ### 2025-02-18 - Bug Fix
 - Fixed: NameError trong Drug_Detail.py - drug_name được sử dụng trước khi định nghĩa

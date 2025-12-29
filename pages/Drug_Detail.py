@@ -89,8 +89,9 @@ st.markdown(
             // Only handle horizontal swipes
             if (isSwipe && Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance && Math.abs(deltaY) < maxVerticalDistance) {
                 if (deltaX > 0) {
-                    // Swipe right - Go back
-                    window.history.back();
+                    // Swipe right - Go back to drug database
+                    // Use Streamlit navigation instead of history.back() for reliability
+                    window.location.href = '/pages/07_💊_Drug_Database';
                 } else {
                     // Swipe left - Could implement forward navigation if needed
                     // For now, do nothing or show hint
@@ -206,8 +207,7 @@ try:
 except ImportError:
     pass
 
-# Get drug data - drug_name already validated above
-drug_data = DRUG_DATABASE.get(drug_name)
+# Note: drug_data already retrieved and validated at line 169
 
 # ========== SIDEBAR ==========
 with st.sidebar:
@@ -559,8 +559,12 @@ if same_group_drugs:
                 unsafe_allow_html=True
             )
             if st.button(f"Xem {rel_name}", key=f"related_same_group_{rel_name}", use_container_width=True):
-                st.session_state['view_drug_name'] = rel_name
-                st.rerun()
+                # Validate related drug exists before navigation
+                if rel_name in DRUG_DATABASE:
+                    st.session_state['view_drug_name'] = rel_name
+                    st.switch_page("pages/Drug_Detail.py")
+                else:
+                    st.error(f"❌ Không tìm thấy thuốc '{rel_name}' trong database")
 
 # Display alternative drugs (same indication, different group)
 if alternative_drugs:
@@ -610,8 +614,12 @@ if alternative_drugs:
                 unsafe_allow_html=True
             )
             if st.button(f"Xem {alt_name}", key=f"related_alternative_{alt_name}", use_container_width=True):
-                st.session_state['view_drug_name'] = alt_name
-                st.rerun()
+                # Validate alternative drug exists before navigation
+                if alt_name in DRUG_DATABASE:
+                    st.session_state['view_drug_name'] = alt_name
+                    st.switch_page("pages/Drug_Detail.py")
+                else:
+                    st.error(f"❌ Không tìm thấy thuốc '{alt_name}' trong database")
 
 # Sticky Footer Navigation (inspired by medical reference sites)
 st.markdown("---")
