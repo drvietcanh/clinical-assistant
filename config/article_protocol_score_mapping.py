@@ -529,41 +529,361 @@ ARTICLE_TO_SCORES: Dict[str, List[Dict[str, str]]] = {
 
 # Mapping: protocol_function -> list of score IDs
 PROTOCOL_TO_SCORES: Dict[str, List[Dict[str, str]]] = {
+    "render_abdominal_trauma": [
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Đánh giá mức độ ý thức"},
+    ],
+
+    "render_acs": [
+        {"score_id": "TIMI Risk", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "GRACE Score", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "HEART Score", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CRUSADE Score", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "PRECISE-DAPT", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "DAPT Score", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+    ],
+
     "render_acute_appendicitis": [
+        {"score_id": "Alvarado Score", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
         {"score_id": "DIC Score", "specialty": "🩺 Huyết học & Đông máu (Hematology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "4Ts Score", "specialty": "🩺 Huyết học & Đông máu (Hematology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_acute_decompensated_hf": [
+        {"score_id": "NYHA", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Killip", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
     ],
 
     "render_acute_gout": [
         {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)", "reason": "Liên quan đến protocol"},
     ],
 
+    "render_acute_liver_failure": [
+        {"score_id": "MELD", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "MELD-Na", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Child-Pugh", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_acute_pancreatitis": [
+        {"score_id": "BISAP", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Ranson", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_acute_respiratory_failure": [
+        {"score_id": "ROX Index", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "ARDS Berlin", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SOFA", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_adrenal_crisis": [
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Cần để chỉnh liều thuốc"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để chỉnh liều thuốc"},
+    ],
+
+    "render_aki": [
+        {"score_id": "KDIGO", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "RIFLE", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "AKIN", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_anaphylaxis": [
+        {"score_id": "BMI/IBW/BSA", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_aortic_dissection": [
+        {"score_id": "NYHA", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+    ],
+
     "render_ards": [
         {"score_id": "ARDS Berlin", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SOFA", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "APACHE II", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_asthma": [
+        {"score_id": "ACT", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_atrial_fibrillation": [
+        {"score_id": "CHA2DS2-VASc", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "HAS-BLED", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Corrected QT", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_cap": [
+        {"score_id": "CURB-65", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CRB-65 Score", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "PSI/PORT", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SMART-COP", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_carbon_monoxide_poisoning": [
+        {"score_id": "BMI/IBW/BSA", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để tính liều theo cân nặng"},
+    ],
+
+    "render_cardiac_arrest": [
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "APACHE II", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_cardiac_tamponade": [
+        {"score_id": "NYHA", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_chest_trauma": [
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Đánh giá mức độ ý thức"},
+    ],
+
+    "render_cirrhosis": [
+        {"score_id": "MELD", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "MELD-Na", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Child-Pugh", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_ckd": [
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "KDIGO", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để chỉnh liều thuốc"},
+    ],
+
+    "render_copd": [
+        {"score_id": "BODE Index", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "mMRC", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CURB-65", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_decompensated_cirrhosis": [
+        {"score_id": "MELD", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "MELD-Na", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Child-Pugh", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_diabetic_nephropathy": [
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Cần để chỉnh liều thuốc"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để chỉnh liều thuốc"},
     ],
 
     "render_dic": [
+        {"score_id": "Alvarado Score", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
         {"score_id": "DIC Score", "specialty": "🩺 Huyết học & Đông máu (Hematology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "4Ts Score", "specialty": "🩺 Huyết học & Đông máu (Hematology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_dka": [
+        {"score_id": "Anion Gap", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Liên quan đến protocol"},
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_dvt_pe": [
+        {"score_id": "Wells PE", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "PERC", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "PESI", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Wells DVT", "specialty": "🩺 Huyết học & Đông máu (Hematology)", "reason": "Liên quan đến protocol"},
     ],
 
     "render_eclampsia": [
-        {"score_id": "PSI/PORT", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Preeclampsia", "specialty": "🤰 Sản khoa (Obstetrics)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Bishop Score", "specialty": "🤰 Sản khoa (Obstetrics)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Modified Bishop", "specialty": "🤰 Sản khoa (Obstetrics)", "reason": "Liên quan đến protocol"},
     ],
 
-    "render_hypercalcemia": [
-        {"score_id": "PERC", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+    "render_emergency_dialysis": [
+        {"score_id": "KDIGO", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để chỉnh liều thuốc"},
+    ],
+
+    "render_endocarditis": [
+        {"score_id": "Duke", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_gi_bleeding": [
+        {"score_id": "Glasgow-Blatchford", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Rockall Score", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "AIMS65", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_hap_vap": [
+        {"score_id": "SOFA", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "APACHE II", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CURB-65", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_heat_stroke": [
+        {"score_id": "NIHSS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "mRS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "ICH Score", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "ASPECTS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "ABCD2", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_hepatorenal_syndrome": [
+        {"score_id": "MELD", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "MELD-Na", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Child-Pugh", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Cần để chỉnh liều thuốc"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để chỉnh liều thuốc"},
+    ],
+
+    "render_hf": [
+        {"score_id": "NYHA", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Killip", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_hhs": [
+        {"score_id": "Anion Gap", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Liên quan đến protocol"},
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_hypertensive_emergency": [
+        {"score_id": "ASCVD Risk", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SCORE2", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SCORE2-OP", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_hypertensive_nephrosclerosis": [
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Cần để chỉnh liều thuốc"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để chỉnh liều thuốc"},
+    ],
+
+    "render_hypoglycemia": [
+        {"score_id": "HbA1c", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_intracranial_hypertension": [
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "ICH Score", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_lower_gi_bleeding": [
+        {"score_id": "Glasgow-Blatchford", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Rockall Score", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "AIMS65", "specialty": "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_meningitis": [
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_nephrolithiasis": [
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Cần để chỉnh liều thuốc"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để chỉnh liều thuốc"},
+    ],
+
+    "render_nephrotic_syndrome": [
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Cần để chỉnh liều thuốc"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để chỉnh liều thuốc"},
+    ],
+
+    "render_nstemi": [
+        {"score_id": "TIMI Risk", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "GRACE Score", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Killip", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "HEART Score", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CRUSADE Score", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_opioid_overdose": [
+        {"score_id": "BMI/IBW/BSA", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để tính liều theo cân nặng"},
+    ],
+
+    "render_organophosphate_poisoning": [
+        {"score_id": "BMI/IBW/BSA", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để tính liều theo cân nặng"},
+    ],
+
+    "render_paracetamol_overdose": [
+        {"score_id": "BMI/IBW/BSA", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để tính liều theo cân nặng"},
     ],
 
     "render_preeclampsia": [
-        {"score_id": "PSI/PORT", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
         {"score_id": "Preeclampsia", "specialty": "🤰 Sản khoa (Obstetrics)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Bishop Score", "specialty": "🤰 Sản khoa (Obstetrics)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Modified Bishop", "specialty": "🤰 Sản khoa (Obstetrics)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_salicylate_overdose": [
+        {"score_id": "BMI/IBW/BSA", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để tính liều theo cân nặng"},
     ],
 
     "render_sepsis": [
-        {"score_id": "PSI/PORT", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SOFA", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "qSOFA", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "APACHE II", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SAPS II", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SAPS III", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "APACHE III", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "APACHE IV", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Lactate Clearance", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Liên quan đến protocol"},
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
     ],
 
     "render_sepsis_3hour": [
-        {"score_id": "PSI/PORT", "specialty": "🫁 Hô hấp (Respiratory)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SOFA", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "qSOFA", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "APACHE II", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SAPS II", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "SAPS III", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "APACHE III", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "APACHE IV", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Lactate Clearance", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Liên quan đến protocol"},
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_shock": [
+        {"score_id": "SOFA", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Lactate Clearance", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+        {"score_id": "APACHE II", "specialty": "🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_status_epilepticus": [
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_stemi": [
+        {"score_id": "TIMI Risk", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "GRACE Score", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Killip", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "HEART Score", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CRUSADE Score", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_stroke": [
+        {"score_id": "NIHSS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "mRS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "ICH Score", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "ASPECTS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "ABCD2", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_thyrotoxic_crisis": [
+        {"score_id": "Corrected QT", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_toxic_alcohol_poisoning": [
+        {"score_id": "BMI/IBW/BSA", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để tính liều theo cân nặng"},
+    ],
+
+    "render_transfusion": [
+        {"score_id": "DIC Score", "specialty": "🩺 Huyết học & Đông máu (Hematology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_traumatic_brain_injury": [
+        {"score_id": "GCS", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Canadian CT Head", "specialty": "🧠 Thần kinh (Neurology)", "reason": "Liên quan đến protocol"},
+    ],
+
+    "render_uti_pyelonephritis": [
+        {"score_id": "eGFR", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Cần để chỉnh liều thuốc"},
     ],
 
 }

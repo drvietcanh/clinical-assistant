@@ -937,17 +937,50 @@ def render_statistics_dashboard(articles: list):
         st.metric("🏷️ Từ khóa", total_keywords)
 
 
+def markdown_to_safe_html(text: str) -> str:
+    """
+    Convert markdown syntax cơ bản thành HTML an toàn.
+    Xử lý: **bold**, *italic*, \< escape sequences, và escape HTML nguy hiểm.
+    """
+    if not text:
+        return ""
+    
+    # Thay thế markdown escape sequences trước (ví dụ: \< thành <)
+    text = text.replace(r'\<', '<').replace(r'\>', '>')
+    
+    # Convert markdown syntax thành HTML TRƯỚC KHI escape
+    # **bold** -> <strong>bold</strong>
+    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    # *italic* -> <em>italic</em> (chỉ khi không phải **)
+    text = re.sub(r'(?<!\*)\*([^*]+?)\*(?!\*)', r'<em>\1</em>', text)
+    
+    # Escape HTML để tránh XSS, nhưng giữ lại các HTML tags an toàn đã tạo
+    # Bảo vệ các tags an toàn trước khi escape
+    text = text.replace('<strong>', '___STRONG_OPEN___').replace('</strong>', '___STRONG_CLOSE___')
+    text = text.replace('<em>', '___EM_OPEN___').replace('</em>', '___EM_CLOSE___')
+    
+    # Escape HTML
+    text = html.escape(text)
+    
+    # Khôi phục các tags an toàn
+    text = text.replace('___STRONG_OPEN___', '<strong>').replace('___STRONG_CLOSE___', '</strong>')
+    text = text.replace('___EM_OPEN___', '<em>').replace('___EM_CLOSE___', '</em>')
+    
+    return text
+
+
 def render_article_card(article: dict, index: int):
     """Hiển thị thẻ bài viết với thiết kế đẹp và khoa học."""
     specialty = article["specialty"]
-    # Escape các phần dễ chứa ký tự đặc biệt để tránh vỡ HTML
-    safe_summary_items = [html.escape(item) for item in article.get("summary", [])]
-    safe_key_points = [html.escape(item) for item in article.get("key_points", [])]
-    safe_red_flags = [html.escape(item) for item in article.get("red_flags", [])]
-    safe_monitoring = [html.escape(item) for item in article.get("monitoring", [])]
-    safe_special_pops = [html.escape(item) for item in article.get("special_populations", [])]
-    safe_interactions = [html.escape(item) for item in article.get("interactions", [])]
-    safe_follow_up = html.escape(article.get("follow_up", "")) if article.get("follow_up") else ""
+    
+    # Xử lý các text items: convert markdown thành HTML an toàn
+    safe_summary_items = [markdown_to_safe_html(item) for item in article.get("summary", [])]
+    safe_key_points = [markdown_to_safe_html(item) for item in article.get("key_points", [])]
+    safe_red_flags = [markdown_to_safe_html(item) for item in article.get("red_flags", [])]
+    safe_monitoring = [markdown_to_safe_html(item) for item in article.get("monitoring", [])]
+    safe_special_pops = [markdown_to_safe_html(item) for item in article.get("special_populations", [])]
+    safe_interactions = [markdown_to_safe_html(item) for item in article.get("interactions", [])]
+    safe_follow_up = markdown_to_safe_html(article.get("follow_up", "") or "")
     evidence_level = article.get("evidence_level")
     recommendation_strength = article.get("recommendation_strength")
     protocol_links = article.get("protocol_links", [])
