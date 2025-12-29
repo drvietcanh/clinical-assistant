@@ -126,29 +126,25 @@ st.markdown(
 )
 
 # Enhanced Breadcrumbs with back button (inspired by medical reference sites)
-st.markdown(
-    """
-    <div style='margin-bottom: 15px;'>
-        <a href='#' onclick='window.history.back(); return false;' style='
-            color: #1976D2; 
-            text-decoration: none; 
-            font-size: 0.95em;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 8px 12px;
-            border-radius: 6px;
-            background: #f0f9ff;
-            border: 1px solid #bae6fd;
-            transition: all 0.2s;
-        ' onmouseover="this.style.background='#e0f2fe'; this.style.borderColor='#7dd3fc';" 
-           onmouseout="this.style.background='#f0f9ff'; this.style.borderColor='#bae6fd';">
-            ← Quay lại danh sách thuốc
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# Get drug name first to avoid NameError
+drug_name = st.session_state.get('view_drug_name')
+
+# Back button using Streamlit navigation (more reliable than history.back())
+col1, col2 = st.columns([1, 10])
+with col1:
+    if st.button("←", help="Quay lại danh sách thuốc", key="back_to_drug_list"):
+        st.switch_page("pages/07_💊_Drug_Database.py")
+with col2:
+    st.markdown(
+        f"""
+        <div style='margin-bottom: 15px; padding-top: 8px;'>
+            <span style='color: #64748b; font-size: 0.95em;'>
+                💊 Cơ sở dữ liệu thuốc {f"→ {drug_name}" if drug_name else "→ Chi tiết"}
+            </span>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 # Get drug name from session state (must be before breadcrumbs)
 drug_name = st.session_state.get('view_drug_name')
