@@ -374,6 +374,7 @@ drugs/drug_info_components/database_view.py
 - ⚠️ **Drug cards** phải navigate đến `Drug_Detail.py`, không hiển thị inline
 - ⚠️ Sử dụng `st.switch_page("Drug_Detail.py")` để navigate
 - ⚠️ Set `st.session_state['view_drug_name']` trước khi navigate
+- ⚠️ **CRITICAL:** Trong `Drug_Detail.py`, phải get `drug_name` từ session_state TRƯỚC khi sử dụng trong breadcrumbs (dòng ~165 phải ở trước breadcrumbs ~159)
 
 ### 3. Search Implementation
 - ⚠️ Search functions trong `drugs/search.py` hỗ trợ 4 loại search
