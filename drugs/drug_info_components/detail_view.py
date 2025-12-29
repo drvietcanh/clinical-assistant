@@ -16,22 +16,23 @@ def escape_html(text):
         return ""
     return html.escape(str(text))
 
-# Helper function to detect and safely render HTML content
+# Helper function to sanitize text that may contain HTML
 def safe_render_html(text):
-    """Detect if text contains HTML tags and render safely, otherwise escape"""
+    """
+    Convert possible HTML content into safe display text.
+
+    - Nếu chỉ là text thường: escape HTML như bình thường.
+    - Nếu chứa thẻ HTML (ví dụ các block <div style=...>): loại bỏ toàn bộ thẻ,
+      chỉ giữ lại nội dung chữ, rồi escape để hiển thị sạch sẽ, không bị in code HTML.
+    """
     if text is None:
         return ""
     text_str = str(text)
-    # Check if text contains HTML tags (simple detection)
-    html_pattern = r'<[a-z][\s\S]*?>'
-    has_html = bool(re.search(html_pattern, text_str, re.IGNORECASE))
-    
-    if has_html:
-        # If it contains HTML, return as-is (will be rendered with unsafe_allow_html=True)
-        return text_str
-    else:
-        # Otherwise, escape it
-        return html.escape(text_str)
+    # Nếu có dấu hiệu HTML tag, strip toàn bộ tag đi
+    if "<" in text_str and ">" in text_str:
+        text_str = re.sub(r"<[^>]+>", "", text_str)
+    # Escape để đảm bảo an toàn
+    return html.escape(text_str.strip())
 
 # Check if drug is antibiotic
 try:
