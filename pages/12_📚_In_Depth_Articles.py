@@ -959,12 +959,12 @@ def render_article_card(article: dict, index: int):
     content = load_article_content(article["path"])
     reading_time = estimate_reading_time(content) if content else 0
     
-    # Tạo card HTML với thiết kế đẹp
+    # Tạo card HTML với thiết kế đẹp - tối ưu mobile
     card_id = f"article_card_{article['id']}"
     
     card_html = f"""
     <div id="{card_id}" style="max-width: 980px; margin: 0 auto 24px auto;">
-      <div style="
+      <div class="article-card" style="
           background: white;
           border-radius: 16px;
           padding: 0;
@@ -977,16 +977,16 @@ def render_article_card(article: dict, index: int):
         onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.06)';"
       >
         <!-- Header với gradient -->
-        <div style="
+        <div class="article-card-header" style="
             background: {gradient};
             padding: 18px 22px;
             color: white;
         ">
-            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
-                <h3 style="margin: 0; font-size: 1.3rem; font-weight: 600; color: white; line-height: 1.4;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; width: 100%;">
+                <h3 class="article-card-title" style="margin: 0; font-size: 1.3rem; font-weight: 600; color: white; line-height: 1.4; flex: 1;">
                     {article['title']}
                 </h3>
-                <span style="
+                <span class="article-card-specialty" style="
                     background: rgba(255,255,255,0.2);
                     padding: 4px 12px;
                     border-radius: 12px;
@@ -995,22 +995,22 @@ def render_article_card(article: dict, index: int):
                     margin-left: 12px;
                 ">{specialty}</span>
             </div>
-            <div style="display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.85rem; opacity: 0.95;">
+            <div class="article-card-meta" style="display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.85rem; opacity: 0.95;">
                 <span>🔄 {article.get('last_reviewed', 'N/A')}</span>
                 {f'<span>⏱️ {reading_time} phút đọc</span>' if reading_time > 0 else ''}
                 <span>📑 {len(article.get('guidelines', []))} guideline</span>
-                {f'<span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px;">LoE: {html.escape(evidence_level)}</span>' if evidence_level else ''}
-                {f'<span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px;">SoR: {html.escape(recommendation_strength)}</span>' if recommendation_strength else ''}
+                {f'<span class="article-badge" style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px;">LoE: {html.escape(evidence_level)}</span>' if evidence_level else ''}
+                {f'<span class="article-badge" style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px;">SoR: {html.escape(recommendation_strength)}</span>' if recommendation_strength else ''}
             </div>
         </div>
         
         <!-- Body -->
-        <div style="padding: 18px 22px 20px 22px;">
+        <div class="article-card-body" style="padding: 18px 22px 20px 22px;">
             <!-- Key Points -->
             {""
             if not safe_key_points else
-            '<div style="margin-bottom: 16px; background: #f3f6ff; border: 1px solid #dfe7ff; border-radius: 10px; padding: 12px 14px;">'
-            + '<div style="font-weight: 600; color: #2a3f6b; margin-bottom: 8px;">⭐ Key points</div>'
+            '<div class="article-content-box" style="margin-bottom: 16px; background: #f3f6ff; border: 1px solid #dfe7ff; border-radius: 10px; padding: 12px 14px;">'
+            + '<div class="article-content-box-title" style="font-weight: 600; color: #2a3f6b; margin-bottom: 8px;">⭐ Key points</div>'
             + '<ul style="margin: 0; padding-left: 18px; color: #455a64; line-height: 1.55;">'
             + "".join([f'<li style="margin-bottom: 6px;">{kp}</li>' for kp in safe_key_points[:4]])
             + '</ul>'
@@ -1019,7 +1019,7 @@ def render_article_card(article: dict, index: int):
 
             <!-- Guidelines badges -->
             <div style="margin-bottom: 16px;">
-                {" ".join([f'<span style="background: #e3f2fd; color: #1976d2; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; margin-right: 6px; margin-bottom: 6px; display: inline-block;">{g}</span>' for g in article.get('guidelines', [])[:3]])}
+                {" ".join([f'<span class="article-badge" style="background: #e3f2fd; color: #1976d2; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; margin-right: 6px; margin-bottom: 6px; display: inline-block;">{g}</span>' for g in article.get('guidelines', [])[:3]])}
             </div>
             
             <!-- Summary points -->
@@ -1032,8 +1032,8 @@ def render_article_card(article: dict, index: int):
 
             <!-- Red flags -->
             {"" if not safe_red_flags else
-            '<div style="margin-bottom: 16px; background: #fff5f5; border: 1px solid #ffcdd2; border-radius: 10px; padding: 12px 14px;">'
-            + '<div style="font-weight: 600; color: #c62828; margin-bottom: 6px;">⚠️ Red flags / Khi cần escalation</div>'
+            '<div class="article-content-box" style="margin-bottom: 16px; background: #fff5f5; border: 1px solid #ffcdd2; border-radius: 10px; padding: 12px 14px;">'
+            + '<div class="article-content-box-title" style="font-weight: 600; color: #c62828; margin-bottom: 6px;">⚠️ Red flags / Khi cần escalation</div>'
             + '<ul style="margin: 0; padding-left: 18px; color: #b71c1c; line-height: 1.5;">'
             + "".join([f'<li style="margin-bottom: 6px;">{rf}</li>' for rf in safe_red_flags[:4]])
             + '</ul>'
@@ -1044,15 +1044,15 @@ def render_article_card(article: dict, index: int):
             {f'''
             <div style="margin-bottom: 16px;">
                 <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                    {" ".join([f'<span style="background: #f5f5f5; color: #616161; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; border: 1px solid #e0e0e0;">{k}</span>' for k in article.get('keywords', [])[:6]])}
+                    {" ".join([f'<span class="article-tag" style="background: #f5f5f5; color: #616161; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; border: 1px solid #e0e0e0;">{k}</span>' for k in article.get('keywords', [])[:6]])}
                 </div>
             </div>
             ''' if article.get('keywords') else ''}
 
             <!-- Monitoring / Follow-up -->
             {"" if not (safe_monitoring or safe_follow_up) else
-            '<div style="margin-bottom: 16px; background: #f9fbe7; border: 1px solid #e6ee9c; border-radius: 10px; padding: 12px 14px;">'
-            + ('' if not safe_monitoring else '<div style="font-weight:600;color:#827717;margin-bottom:6px;">🩺 Monitoring</div>'
+            '<div class="article-content-box" style="margin-bottom: 16px; background: #f9fbe7; border: 1px solid #e6ee9c; border-radius: 10px; padding: 12px 14px;">'
+            + ('' if not safe_monitoring else '<div class="article-content-box-title" style="font-weight:600;color:#827717;margin-bottom:6px;">🩺 Monitoring</div>'
                + '<ul style="margin:0; padding-left:18px; color:#6d4c41; line-height:1.5;">'
                + "".join([f'<li style="margin-bottom:6px;">{m}</li>' for m in safe_monitoring[:4]])
                + '</ul>')
@@ -1062,8 +1062,8 @@ def render_article_card(article: dict, index: int):
 
             <!-- Special populations -->
             {"" if not safe_special_pops else
-            '<div style="margin-bottom: 16px; background: #eef7ff; border: 1px solid #c5e0ff; border-radius: 10px; padding: 12px 14px;">'
-            + '<div style="font-weight:600;color:#0d47a1;margin-bottom:6px;">👪 Đối tượng đặc biệt</div>'
+            '<div class="article-content-box" style="margin-bottom: 16px; background: #eef7ff; border: 1px solid #c5e0ff; border-radius: 10px; padding: 12px 14px;">'
+            + '<div class="article-content-box-title" style="font-weight:600;color:#0d47a1;margin-bottom:6px;">👪 Đối tượng đặc biệt</div>'
             + '<ul style="margin:0; padding-left:18px; color:#37474f; line-height:1.5;">'
             + "".join([f'<li style="margin-bottom:6px;">{sp}</li>' for sp in safe_special_pops[:4]])
             + '</ul>'
@@ -1072,8 +1072,8 @@ def render_article_card(article: dict, index: int):
 
             <!-- Interactions -->
             {"" if not safe_interactions else
-            '<div style="margin-bottom: 16px; background: #f3e5f5; border: 1px solid #e1bee7; border-radius: 10px; padding: 12px 14px;">'
-            + '<div style="font-weight:600;color:#6a1b9a;margin-bottom:6px;">🔗 Tương tác thuốc quan trọng</div>'
+            '<div class="article-content-box" style="margin-bottom: 16px; background: #f3e5f5; border: 1px solid #e1bee7; border-radius: 10px; padding: 12px 14px;">'
+            + '<div class="article-content-box-title" style="font-weight:600;color:#6a1b9a;margin-bottom:6px;">🔗 Tương tác thuốc quan trọng</div>'
             + '<ul style="margin:0; padding-left:18px; color:#4a148c; line-height:1.5;">'
             + "".join([f'<li style="margin-bottom:6px;">{it}</li>' for it in safe_interactions[:4]])
             + '</ul>'
@@ -1127,14 +1127,16 @@ def render_article_card(article: dict, index: int):
     except ImportError:
         pass
     
-    # Streamlit expander cho nội dung đầy đủ
+    # Streamlit expander cho nội dung đầy đủ - với class cho mobile optimization
     expand_key = f"article_expand_{article['id']}"
     expanded = st.session_state.get(f"expand_article_{article['id']}", False)
     with st.expander(f"📖 Đọc toàn bộ: {article['title']}", expanded=expanded):
+        st.markdown('<div class="article-expander-content">', unsafe_allow_html=True)
         if content:
             st.markdown(content)
         else:
             st.warning(f"Không tìm thấy nội dung tại {article['path'].name}.")
+        st.markdown('</div>', unsafe_allow_html=True)
 
 
 def filter_articles(articles: list[dict], search: str, specialties: list, selected_keywords: list):
@@ -1176,10 +1178,159 @@ def main():
         description="Tổng hợp chuyên sâu theo guideline mới nhất, gắn liền calculators/protocols trong ứng dụng.",
     )
 
-    # Hero section giống các trang kiến thức y khoa hiện đại
+    # Inject mobile-optimized CSS
+    st.markdown("""
+    <style>
+    /* Mobile-first responsive styles */
+    @media (max-width: 768px) {
+        /* Hero section mobile */
+        .article-hero {
+            padding: 1rem 1.25rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+        .article-hero > div {
+            max-width: 100% !important;
+            min-width: 100% !important;
+        }
+        .article-hero h2 {
+            font-size: 1.35rem !important;
+            line-height: 1.3 !important;
+        }
+        .article-hero p {
+            font-size: 0.875rem !important;
+            line-height: 1.5 !important;
+        }
+        
+        /* Card mobile optimization */
+        .article-card {
+            margin-bottom: 20px !important;
+            border-radius: 12px !important;
+        }
+        .article-card-header {
+            padding: 16px 18px !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+        .article-card-title {
+            font-size: 1.15rem !important;
+            line-height: 1.4 !important;
+            margin-bottom: 8px !important;
+            width: 100% !important;
+        }
+        .article-card-specialty {
+            margin-left: 0 !important;
+            margin-top: 8px !important;
+            font-size: 0.8rem !important;
+            padding: 5px 10px !important;
+        }
+        .article-card-meta {
+            flex-direction: column !important;
+            gap: 8px !important;
+            font-size: 0.8rem !important;
+        }
+        .article-card-body {
+            padding: 16px 18px !important;
+        }
+        
+        /* Typography mobile */
+        .article-card-body ul,
+        .article-card-body ol {
+            padding-left: 20px !important;
+            line-height: 1.6 !important;
+        }
+        .article-card-body li {
+            margin-bottom: 8px !important;
+            font-size: 0.9rem !important;
+        }
+        .article-card-body strong {
+            font-size: 0.95rem !important;
+        }
+        
+        /* Content boxes mobile */
+        .article-content-box {
+            padding: 10px 12px !important;
+            margin-bottom: 12px !important;
+            border-radius: 8px !important;
+        }
+        .article-content-box-title {
+            font-size: 0.9rem !important;
+            margin-bottom: 6px !important;
+        }
+        
+        /* Badges and tags mobile */
+        .article-badge,
+        .article-tag {
+            font-size: 0.75rem !important;
+            padding: 5px 9px !important;
+            margin-right: 4px !important;
+            margin-bottom: 6px !important;
+        }
+        
+        /* Filter chips mobile */
+        .filter-chip {
+            font-size: 0.8rem !important;
+            padding: 6px 10px !important;
+            margin-right: 6px !important;
+            margin-bottom: 6px !important;
+        }
+        
+        /* Reading content mobile */
+        .article-expander-content {
+            font-size: 1rem !important;
+            line-height: 1.7 !important;
+        }
+        .article-expander-content p {
+            margin-bottom: 1rem !important;
+        }
+        .article-expander-content h1,
+        .article-expander-content h2,
+        .article-expander-content h3 {
+            font-size: 1.25rem !important;
+            line-height: 1.4 !important;
+            margin-top: 1.5rem !important;
+            margin-bottom: 0.75rem !important;
+        }
+        
+        /* Touch targets - minimum 44x44px */
+        button[data-testid*="protocol_btn"],
+        button[data-testid*="stButton"] {
+            min-height: 44px !important;
+            padding: 10px 16px !important;
+        }
+        
+        /* Statistics dashboard mobile */
+        .stMetric {
+            padding: 0.75rem !important;
+        }
+    }
+    
+    /* Tablet optimization (768px - 1024px) */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .article-card {
+            max-width: 95% !important;
+        }
+        .article-card-header {
+            padding: 18px 20px !important;
+        }
+        .article-card-body {
+            padding: 18px 20px !important;
+        }
+    }
+    
+    /* Ensure good reading experience on all devices */
+    .article-expander-content {
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Hero section giống các trang kiến thức y khoa hiện đại - với class cho CSS
     st.markdown(
         """
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        <div class="article-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                     padding: 1.5rem 2rem;
                     border-radius: 16px;
                     margin-bottom: 1.5rem;
@@ -1332,7 +1483,7 @@ def main():
         st.success(f"Tìm thấy **{len(filtered)}** bài viết phù hợp")
         if active_filters:
             chips = " ".join(
-                f"<span style='background:#eef2ff;color:#3730a3;padding:4px 10px;border-radius:999px;font-size:0.8rem;margin-right:6px;margin-bottom:4px;display:inline-block;'>{html.escape(f)}</span>"
+                f"<span class='filter-chip' style='background:#eef2ff;color:#3730a3;padding:4px 10px;border-radius:999px;font-size:0.8rem;margin-right:6px;margin-bottom:4px;display:inline-block;'>{html.escape(f)}</span>"
                 for f in active_filters
             )
             st.markdown(
