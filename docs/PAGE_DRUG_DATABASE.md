@@ -2,7 +2,7 @@
 
 **Last Updated:** 2025-02-18  
 **Status:** ✅ Active  
-**Version:** 1.1
+**Version:** 1.2
 
 > **⚠️ QUAN TRỌNG:** Đọc file này TRƯỚC KHI làm bất kỳ thay đổi nào trong trang thuốc để tránh sai sót.
 
@@ -361,6 +361,23 @@ drugs/drug_info_components/database_view.py
 - `components/offline.py` - Enhanced offline indicators
 - `static/offline.html` - Drug database offline info
 
+### Phase 4: HTML Security & Escaping (2025-02-18)
+**Changes:**
+- ✅ Added HTML escaping function (`escape_html()`) trong tất cả files
+- ✅ Escaped tất cả user input trong HTML (drug_name, vietnamese_name, group, indications, etc.)
+- ✅ Fixed HTML injection vulnerabilities
+- ✅ Improved HTML validation và security
+
+**Files Modified:**
+- `pages/Drug_Detail.py` - Added escape_html(), escaped 14 fields
+- `drugs/drug_info_components/card_components.py` - Added escape_html(), escaped user inputs
+- `drugs/drug_info_components/detail_view.py` - Added escape_html(), escaped user inputs
+
+**Security Improvements:**
+- ✅ Giảm nguy cơ XSS injection
+- ✅ Tất cả user input được escape trước khi render vào HTML
+- ✅ HTML validation được cải thiện
+
 ---
 
 ## ⚠️ LƯU Ý KHI LÀM VIỆC
@@ -417,12 +434,20 @@ drugs/drug_info_components/database_view.py
 - ⚠️ Drug database hoạt động với cached data
 - ⚠️ Service worker handles caching
 
-### 10. Testing
+### 10. HTML Security
+- ⚠️ **CRITICAL:** Tất cả user input phải được escape bằng `escape_html()` trước khi render vào HTML
+- ⚠️ Sử dụng `escape_html()` cho: drug_name, vietnamese_name, group, indications, doses, và tất cả user-generated content
+- ⚠️ Không escape: Static HTML, CSS values, JavaScript code (nhưng cẩn thận với user input trong JS)
+- ⚠️ Files có `escape_html()` function: `Drug_Detail.py`, `card_components.py`, `detail_view.py`
+- ⚠️ Pattern: `{escape_html(user_input)}` trong f-strings với `unsafe_allow_html=True`
+
+### 11. Testing
 - ⚠️ Test với cả structured và legacy data formats
 - ⚠️ Test navigation flow (card click → detail page)
 - ⚠️ Test search với Vietnamese characters
 - ⚠️ Test mobile swipe gestures
 - ⚠️ Test print layout
+- ⚠️ Test HTML escaping với special characters (<, >, &, quotes)
 
 ---
 
@@ -461,6 +486,25 @@ drugs/drug_info_components/database_view.py
 
 ## 📝 CHANGELOG
 
+### 2025-02-18 - HTML Security & Escaping Fixes
+**Security improvements:**
+- ✅ Added: `escape_html()` helper function trong tất cả files (Drug_Detail.py, card_components.py, detail_view.py)
+- ✅ Fixed: HTML injection vulnerabilities - escaped tất cả user input
+- ✅ Escaped: drug_name, vietnamese_name, group, indications, standard_dose, related drugs names, pregnancy category, admin routes
+- ✅ Improved: HTML validation và security
+- ✅ Created: Test scripts (test_html_escaping.py, test_html_patterns.py)
+- ✅ Created: HTML_FIX_SUMMARY.md documentation
+
+**Files Modified:**
+- `pages/Drug_Detail.py` - Added escape_html(), escaped 14 fields
+- `drugs/drug_info_components/card_components.py` - Added escape_html(), escaped user inputs
+- `drugs/drug_info_components/detail_view.py` - Added escape_html(), escaped user inputs
+
+**Test Results:**
+- ✅ All HTML escaping tests passed
+- ✅ All imports successful
+- ✅ HTML structure validated
+
 ### 2025-02-18 - Comprehensive Fix & Review
 **Rà soát kỹ và sửa lỗi triệt để:**
 - ✅ Fixed: `window.history.back()` trong swipe gesture → Thay bằng `window.location.href` cho reliability
@@ -493,6 +537,7 @@ drugs/drug_info_components/database_view.py
 
 - `FINAL_SUMMARY.md` - Tổng kết all improvements
 - `TEST_GUIDE_ALL_PHASES.md` - Test guide
+- `HTML_FIX_SUMMARY.md` - HTML escaping fixes summary
 - `drugs/README_ENHANCED_FIELDS.md` - Enhanced fields documentation
 - `drugs/DRUG_EXPANSION_PLAN.md` - Drug expansion plan
 
