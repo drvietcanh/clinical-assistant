@@ -1,5 +1,43 @@
 # 📋 Changelog - Tối Ưu Hóa Giao Diện & Chức Năng
 
+**Version:** 2.3.1  
+**Ngày:** 2025-02-18  
+**Mục đích:** Tối ưu hóa giao diện, sắp xếp lại nội dung, cải thiện trải nghiệm người dùng
+
+---
+
+## 🔧 Bug Fixes - 2025-02-18
+
+### ✅ Fix HTML Escaping trong Trang Chi Tiết Thuốc
+
+**Vấn đề:**
+- HTML được hiển thị dạng raw text thay vì được render
+- Dữ liệu thuốc chứa ký tự đặc biệt không được escape
+- Gây lỗi hiển thị trong Quick Facts, Dược động học, và các sections khác
+
+**Giải pháp:**
+- ✅ Thêm `escape_html()` cho tất cả dữ liệu người dùng trong `card_components.py`
+- ✅ Thêm `escape_html()` cho tất cả dữ liệu trong `detail_view.py` (tất cả tabs)
+- ✅ Thêm `escape_html()` cho drug names và groups trong `visual_comparison.py`
+- ✅ Thêm `escape_html()` cho tất cả dữ liệu trong `Drug_Detail.py`
+
+**Files đã sửa:**
+1. `drugs/drug_info_components/card_components.py` - Quick Facts, Black Box warnings
+2. `drugs/drug_info_components/detail_view.py` - Overview, Dosing, Safety, Monitoring tabs
+3. `drugs/visual_comparison.py` - Comparison cards
+4. `pages/Drug_Detail.py` - Header, Quick Facts, Related drugs sections
+
+**Kết quả:**
+- ✅ HTML render đúng thay vì hiển thị raw text
+- ✅ Tất cả dữ liệu được escape an toàn
+- ✅ Không còn lỗi hiển thị HTML trong trang chi tiết thuốc
+
+**Commit:** `d89229e` - Fix: Escape HTML characters in drug detail pages
+
+---
+
+## 📋 Changelog - Tối Ưu Hóa Giao Diện & Chức Năng (Previous)
+
 **Version:** 2.3.0  
 **Ngày:** 2025-01-30  
 **Mục đích:** Tối ưu hóa giao diện, sắp xếp lại nội dung, cải thiện trải nghiệm người dùng

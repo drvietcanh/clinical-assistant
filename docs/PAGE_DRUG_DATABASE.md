@@ -2,7 +2,7 @@
 
 **Last Updated:** 2025-02-18  
 **Status:** ✅ Active  
-**Version:** 1.2
+**Version:** 1.2.1 (HTML Escaping Fix)
 
 > **⚠️ QUAN TRỌNG:** Đọc file này TRƯỚC KHI làm bất kỳ thay đổi nào trong trang thuốc để tránh sai sót.
 
@@ -486,24 +486,41 @@ drugs/drug_info_components/database_view.py
 
 ## 📝 CHANGELOG
 
-### 2025-02-18 - HTML Security & Escaping Fixes
-**Security improvements:**
-- ✅ Added: `escape_html()` helper function trong tất cả files (Drug_Detail.py, card_components.py, detail_view.py)
-- ✅ Fixed: HTML injection vulnerabilities - escaped tất cả user input
-- ✅ Escaped: drug_name, vietnamese_name, group, indications, standard_dose, related drugs names, pregnancy category, admin routes
-- ✅ Improved: HTML validation và security
-- ✅ Created: Test scripts (test_html_escaping.py, test_html_patterns.py)
-- ✅ Created: HTML_FIX_SUMMARY.md documentation
+### 2025-02-18 - HTML Escaping Fix (Comprehensive Review & Fix)
+**Vấn đề phát hiện:**
+- HTML được hiển thị dạng raw text thay vì được render đúng
+- Dữ liệu thuốc chứa ký tự đặc biệt (<, >, &, ", ') không được escape
+- Gây lỗi hiển thị trong Quick Facts, Dược động học, Điều chỉnh thận/gan, và các sections khác
+
+**Giải pháp triệt để:**
+- ✅ **card_components.py:** Escape HTML cho pregnancy, lactation, half_life, black_box_warning trong Quick Facts box
+- ✅ **detail_view.py:** Escape HTML cho TẤT CẢ dữ liệu trong tất cả tabs:
+  - Overview: vietnamese_name, group, administration, indications, mechanism_of_action, pharmacokinetics
+  - Dosing: adult/pediatric dosage, renal_adjustment, hepatic_adjustment
+  - Safety: contraindications, side_effects (common/uncommon/rare/serious), precautions
+  - Monitoring: monitoring list items
+- ✅ **visual_comparison.py:** Escape HTML cho drug_name và group trong comparison cards
+- ✅ **Drug_Detail.py:** Escape HTML cho header (drug_name, vietnamese_name, group), administration badges, Quick Facts (indications, standard_dose), related drugs (rel_name, rel_vn_name, rel_group, alt_name, alt_vn_name, alt_group)
 
 **Files Modified:**
-- `pages/Drug_Detail.py` - Added escape_html(), escaped 14 fields
-- `drugs/drug_info_components/card_components.py` - Added escape_html(), escaped user inputs
-- `drugs/drug_info_components/detail_view.py` - Added escape_html(), escaped user inputs
+- `pages/Drug_Detail.py` - Added escape_html() for all drug data (header, Quick Facts, related drugs)
+- `drugs/drug_info_components/card_components.py` - Added escape_html() for Quick Facts and Black Box warnings
+- `drugs/drug_info_components/detail_view.py` - Added escape_html() for all user data in all tabs
+- `drugs/visual_comparison.py` - Added escape_html() for drug names and groups
+
+**Kết quả:**
+- ✅ HTML render đúng thay vì hiển thị raw text
+- ✅ Tất cả dữ liệu được escape an toàn, không còn lỗi HTML injection
+- ✅ Không còn lỗi hiển thị HTML trong trang chi tiết thuốc
+- ✅ Tất cả sections (Quick Facts, Dược động học, Điều chỉnh thận/gan, Monitoring) hiển thị đúng
+
+**Commit:** `d89229e` - Fix: Escape HTML characters in drug detail pages to prevent raw HTML display
 
 **Test Results:**
 - ✅ All HTML escaping tests passed
 - ✅ All imports successful
 - ✅ HTML structure validated
+- ✅ All drug data properly escaped across all components
 
 ### 2025-02-18 - Comprehensive Fix & Review
 **Rà soát kỹ và sửa lỗi triệt để:**
