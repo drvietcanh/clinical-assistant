@@ -150,7 +150,8 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
         'Lancet - Proton pump inhibitors and risk of fractures (2006)',
         'JAMA - Clopidogrel-omeprazole interaction (2010)'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - FDA approved, multiple RCTs, systematic reviews'}         "reversal_agents": {
+        'High - FDA approved, multiple RCTs, systematic reviews'},
+        "reversal_agents": {
              "available": False,
              "agents": []
          },

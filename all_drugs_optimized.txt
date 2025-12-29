@@ -1,0 +1,724 @@
+# DANH SACH THUOC TIM THAY (TOI UU)
+# Tong so: 721
+
+5-Fluorouracil
+Abaloparatide
+Abiraterone
+Acarbose
+Acebutolol
+Aclidinium
+Acyclovir
+Acyclovir eye drops
+Acyclovir eye ointment
+Adalimumab
+Adapalene
+Adenosine
+Aducanumab
+Albendazole
+Alemtuzumab
+Alendronate
+Alfuzosin
+Alirocumab
+Allopurinol
+Alogliptin
+Alteplase
+Aluminum hydroxide/Magnesium hydroxide
+Amikacin
+Aminophylline
+Amiodarone
+Amitriptyline
+Amlodipine
+Amlodipine/Olmesartan
+Amlodipine/Valsartan
+Amoxicillin
+Amoxicillin suspension
+Amoxicillin-clavulanate
+Amphotericin B
+Ampicillin
+Ampicillin-sulbactam
+Anastrozole
+Andexanet alfa
+Anidulafungin
+Anifrolumab
+Apixaban
+Aripiprazole
+Artemether-lumefantrine
+Artesunate
+Artificial tears (Carboxymethylcellulose)
+Aspirin
+Aspirin/Carisoprodol
+Atazanavir (boosted with ritonavir/cobicistat)
+Atenolol
+Atezolizumab
+Atomoxetine
+Atorvastatin
+Atropine
+Atropine eye drops
+Avanafil
+Azathioprine
+Azelaic Acid
+Azelaic acid topical
+Azelastine eye drops
+Azelastine/Fluticasone nasal spray
+Azilsartan medoxomil
+Azithromycin
+Aztreonam
+Baclofen
+Baricitinib
+Beclomethasone inhaled
+Bedaquiline
+Belimumab
+Bempedoic acid
+Benazepril
+Benralizumab
+Benzoyl peroxide topical
+Betamethasone
+Betamethasone topical
+Betamethasone/Clotrimazole topical
+Betaxolol
+Bevacizumab
+Bictegravir (BIC)
+Bictegravir/Emtricitabine/Tenofovir alafenamide (BIC/FTC/TAF)
+Bimatoprost
+Bisacodyl
+Bismuth subsalicylate
+Bisoprolol
+Brentuximab vedotin
+Brimonidine
+Brinzolamide
+Brodalumab
+Bromocriptine
+Budesonide
+Budesonide inhaled
+Budesonide/Formoterol inhaler
+Bumetanide
+Buprenorphine
+Bupropion
+Buspirone
+Cabotegravir + Rilpivirine (Long-acting IM)
+Calcipotriol
+Calcitonin
+Calcitriol topical
+Calcium
+Calcium (elemental)
+Calcium carbonate
+Calcium chloride
+Calcium gluconate
+Canagliflozin
+Candesartan
+Capecitabine
+Caplacizumab
+Captopril
+Carbamazepine
+Carboplatin
+Carboprost
+Carisoprodol
+Carvedilol
+Caspofungin
+Cefaclor
+Cefadroxil
+Cefazolin
+Cefdinir
+Cefepime
+Cefiderocol
+Cefixime
+Cefoperazone
+Cefotaxime
+Cefotetan
+Cefoxitin
+Cefpirome
+Ceftazidime
+Ceftriaxone
+Cefuroxime
+Celecoxib
+Cemiplimab
+Cephalexin
+Cerebrolysin
+Cerebroprotein hydrolysate (khác)
+Certolizumab pegol
+Cetirizine
+Cetirizine/Pseudoephedrine
+Cetuximab
+Chloroquine
+Chlorpheniramine
+Chlorpromazine
+Chlorthalidone
+Ciclesonide
+Cimetidine
+Ciprofloxacin
+Ciprofloxacin eye drops
+Cisatracurium
+Cisplatin
+Citalopram
+Citicoline
+Citicoline/Piracetam
+Clarithromycin
+Clevidipine
+Clindamycin
+Clindamycin topical
+Clobetasol
+Clofazimine
+Clomipramine
+Clonazepam
+Clonidine
+Clopidogrel
+Clotrimazole (vaginal)
+Clotrimazole topical
+Clozapine
+Cobicistat (COBI)
+Codeine
+Colchicine
+Colesevelam
+Colistin
+Cromolyn
+Cyclobenzaprine
+Cyclopentolate eye drops
+Cyclophosphamide
+Cycloserine / Terizidone
+Cyclosporine
+Dabigatran
+Dapagliflozin
+Daptomycin
+Daratumumab
+Darunavir (boosted with ritonavir/cobicistat)
+Delamanid
+Demeclocycline
+Denosumab
+Desloratadine
+Desvenlafaxine
+Deutetrabenazine
+Dexamethasone
+Dexamethasone eye drops
+Dexlansoprazole
+Dexmedetomidine
+Dextroamphetamine
+Diazepam
+Diclofenac
+Diclofenac eye drops
+Diclofenac gel
+Dicloxacillin
+Digoxin
+Diltiazem
+Dimethyl fumarate
+Dinoprostone
+Diphenhydramine
+Dipyridamole
+Disopyramide
+Dobutamine
+Docetaxel
+Dofetilide
+Dolutegravir (DTG)
+Domperidone
+Donanemab
+Donepezil
+Dopamine
+Doripenem
+Dorzolamide
+Dostarlimab
+Doxazosin
+Doxorubicin
+Doxycycline
+Dronedarone
+Dulaglutide
+Duloxetine
+Dupilumab
+Durvalumab
+Dutasteride
+Econazole topical
+Eculizumab
+Edaravone
+Edoxaban
+Efavirenz (EFV)
+Efavirenz/Tenofovir disoproxil fumarate/Emtricitabine (EFV/TDF/FTC)
+Efgartigimod
+Eltrombopag
+Emicizumab
+Empagliflozin
+Emtricitabine (FTC)
+Enalapril
+Enalaprilat
+Enoxaparin
+Entecavir
+Enzalutamide
+Epinephrine
+Eplerenone
+Epoetin alfa
+Eptinezumab
+Eravacycline
+Erenumab
+Erlotinib
+Ertapenem
+Ertugliflozin
+Erythromycin
+Erythromycin eye ointment
+Erythromycin topical
+Escitalopram
+Esomeprazole
+Estradiol
+Etanercept
+Ethambutol
+Ethinyl estradiol + Levonorgestrel
+Ethosuximide
+Etomidate
+Etoposide
+Etoricoxib
+Evinacumab
+Evolocumab
+Exenatide
+Ezetimibe
+Famotidine
+Favipiravir
+Febuxostat
+Felodipine
+Fenofibrate
+Fentanyl
+Fesoterodine
+Fexofenadine
+Fexofenadine/Pseudoephedrine
+Fidaxomicin
+Filgrastim
+Finasteride
+Finerenone
+Fingolimod
+Flecainide
+Fluconazole
+Fludrocortisone
+Flumazenil
+Fluoxetine
+Fluphenazine
+Fluticasone inhaled
+Fluticasone/Salmeterol inhaler
+Fluticasone/Umeclidinium/Vilanterol inhaler
+Fluvastatin
+Fluvoxamine
+Folic Acid
+Folic acid
+Fondaparinux
+Formoterol
+Fosfomycin
+Fosphenytoin
+Fremanezumab
+Furosemide
+Fusidic Acid
+Fusidic acid/Betamethasone topical
+Gabapentin
+Galcanezumab
+Ganciclovir
+Ganciclovir eye drops
+Gefitinib
+Gemcitabine
+Gemfibrozil
+Gemifloxacin
+Gentamicin
+Gentamicin eye drops
+Gentamicin/Betamethasone/Clotrimazole topical
+Ginkgo biloba extract
+Ginkgo biloba/Vinpocetine
+Glibenclamide
+Gliclazide
+Glimepiride
+Glycopyrronium
+Golimumab
+Granisetron
+Guselkumab
+Haloperidol
+Heparin
+High-intensity statin (đột quỵ/TIA)
+Hydralazine
+Hydrochlorothiazide
+Hydrocodone
+Hydrocortisone
+Hydrocortisone topical
+Hydromorphone
+Hydroxychloroquine
+Hydroxyzine
+Hyoscine butylbromide
+Ibandronate
+Ibuprofen
+Ibutilide
+Icosapent ethyl
+Idarucizumab
+Ifosfamide
+Ilaprazole
+Imatinib
+Imipenem-cilastatin
+Inclisiran
+Indacaterol
+Indapamide
+Indomethacin
+Infliximab
+Insulin
+Insulin Aspart
+Insulin Degludec
+Insulin Detemir
+Insulin Glargine
+Insulin Glulisine
+Insulin Lispro
+Insulin NPH
+Insulin Regular
+Ipratropium
+Ipratropium/Salbutamol inhaler
+Irbesartan
+Irinotecan
+Iron
+Isavuconazole
+Isoniazid
+Isosorbide mononitrate
+Isradipine
+Istradefylline
+Itraconazole
+Ivabradine
+Ivermectin
+Ivermectin cream
+Ixekizumab
+Ketamine
+Ketoconazole topical
+Ketoprofen
+Ketoprofen gel
+Ketorolac
+Ketorolac eye drops
+Ketotifen eye drops
+Labetalol
+Lacidipine
+Lacosamide
+Lactulose
+Lamivudine (3TC)
+Lamotrigine
+Lanadelumab
+Lansoprazole
+Lasmiditan
+Latanoprost
+Lecanemab
+Ledipasvir
+Lefamulin
+Leflunomide
+Levamisole
+Levetiracetam
+Levocetirizine
+Levodopa/Carbidopa
+Levofloxacin
+Levonorgestrel
+Levothyroxine
+Lidocaine
+Linagliptin
+Linezolid
+Linezolid (lao MDR/XDR)
+Liraglutide
+Lisdexamfetamine
+Lisinopril
+Lisinopril/Hydrochlorothiazide
+Loperamide
+Loratadine
+Loratadine/Pseudoephedrine
+Lorazepam
+Losartan
+Losartan/Hydrochlorothiazide
+Lovastatin
+Lurasidone
+Magnesium oxide
+Magnesium sulfate
+Mebendazole
+Mebeverine
+Medroxyprogesterone
+Meloxicam
+Memantine
+Meperidine
+Mepolizumab
+Meropenem
+Mesalazine
+Metaxalone
+Metformin
+Metformin/Dapagliflozin
+Metformin/Empagliflozin
+Metformin/Glibenclamide
+Metformin/Pioglitazone
+Metformin/Sitagliptin
+Methadone
+Methimazole
+Methocarbamol
+Methotrexate
+Methyldopa
+Methylergonovine
+Methylphenidate
+Methylprednisolone
+Metoclopramide
+Metoprolol
+Metronidazole
+Metronidazole (vaginal gel)
+Metronidazole topical
+Micafungin
+Miconazole (vaginal)
+Miconazole topical
+Miconazole/Hydrocortisone topical
+Midazolam (IV/ICU)
+Miglitol
+Milrinone
+Minocycline
+Mirabegron
+Mirtazapine
+Misoprostol
+Mometasone topical
+Montelukast
+Morphine
+Moxifloxacin
+Moxifloxacin eye drops
+Mupirocin topical
+Mycophenolate
+Nadolol
+Nafcillin
+Naloxone
+Naltrexone
+Naproxen
+Natalizumab
+Nateglinide
+Nebivolol
+Nedocromil
+Nepafenac eye drops
+Nesiritide
+Niacin
+Nicardipine
+Nicergoline
+Nifedipine
+Nimesulide
+Nimodipine
+Nisoldipine
+Nitrofurantoin
+Nitroglycerin
+Nitroprusside
+Nivolumab
+Norepinephrine
+Norfloxacin
+Nystatin
+Ocrelizumab
+Ofatumumab
+Ofloxacin
+Olanzapine
+Olanzapine/Fluoxetine
+Olmesartan
+Olodaterol
+Olopatadine eye drops
+Omadacycline
+Omalizumab
+Omega-3 acid ethyl esters
+Omeprazole
+Ondansetron
+Opicapone
+Oseltamivir
+Oxacillin
+Oxaliplatin
+Oxcarbazepine
+Oxybutynin
+Oxycodone
+Oxytocin
+PAS (para-aminosalicylic acid)
+Paclitaxel
+Palonosetron
+Pamidronate
+Pantoprazole
+Paracetamol
+Paracetamol/Carisoprodol
+Paracetamol/Chlorzoxazone
+Paracetamol/Methocarbamol
+Paracetamol/Orphenadrine
+Paroxetine
+Pemafibrate
+Pembrolizumab
+Penicillin G
+Penicillin V
+Perampanel
+Perindopril
+Permethrin topical
+Phenelzine
+Phenobarbital
+Phenylephrine
+Phenylephrine eye drops
+Phenytoin
+Pilocarpine eye drops
+Pimavanserin
+Pimecrolimus
+Pimozide
+Pioglitazone
+Piperacillin-tazobactam
+Piracetam
+Piracetam/Vinpocetine
+Piroxicam
+Pitavastatin
+Plazomicin
+Plozasiran
+Polyethylene glycol 3350
+Polymyxin B
+Polymyxin B/Trimethoprim eye drops
+Posaconazole
+Potassium phosphate
+Pramipexole
+Prasugrel
+Pravastatin
+Praziquantel
+Prednisolone
+Prednisolone eye drops
+Prednisone
+Pregabalin
+Primaquine
+Primidone
+Probenecid
+Procainamide
+Progesterone
+Propafenone
+Propofol
+Propranolol
+Propylthiouracil
+Protamine
+Pyrazinamide
+Quetiapine
+Quinidine
+Rabeprazole
+Raloxifene
+Ramipril
+Ranitidine
+Ravulizumab
+Remdesivir
+Repaglinide
+Reslizumab
+Ribavirin
+Rifabutin
+Rifampin
+Rifapentine
+Rilpivirine (RPV)
+Rimegepant
+Risankizumab
+Risedronate
+Risperidone
+Ritonavir (low-dose booster)
+Rituximab
+Rivaroxaban
+Rivastigmine
+Rizatriptan
+Rocuronium
+Roflumilast
+Romiplostim
+Romosozumab
+Ropinirole
+Rosiglitazone
+Rosuvastatin
+Sacituzumab govitecan
+Sacubitril-valsartan
+Safinamide
+Salbutamol
+Salicylic Acid
+Salmeterol
+Sarilumab
+Saxagliptin
+Secukinumab
+Semaglutide
+Senna (sennosides)
+Sertraline
+Sildenafil
+Silodosin
+Simethicone
+Simvastatin
+Sitagliptin
+Sodium bicarbonate
+Sodium phosphate
+Sodium polystyrene sulfonate
+Sofosbuvir
+Sofosbuvir/Velpatasvir
+Solifenacin
+Sotagliflozin
+Sotalol
+Sparfloxacin
+Spironolactone
+Streptomycin
+Succinylcholine
+Sucralfate
+Sulfasalazine
+Sumatriptan
+Tacrolimus
+Tacrolimus topical
+Tadalafil
+Tamoxifen
+Tamsulosin
+Tapentadol
+Tazarotene
+Tegoprazan
+Teicoplanin
+Telmisartan
+Tenecteplase
+Tenofovir
+Tenofovir alafenamide (TAF)
+Tenofovir alafenamide/Emtricitabine (TAF/FTC)
+Tenofovir disoproxil fumarate (TDF)
+Tenofovir disoproxil fumarate/Emtricitabine (TDF/FTC)
+Teplizumab
+Teprotumumab
+Terbinafine topical
+Terbutaline
+Teriparatide
+Testosterone
+Tetrabenazine
+Tetracycline
+Tezepelumab
+Theophylline
+Thiopental
+Ticagrelor
+Ticlopidine
+Tigecycline
+Timolol
+Timolol eye drops
+Tiotropium
+Tiotropium/Olodaterol inhaler
+Tirzepatide
+Tizanidine
+Tobramycin
+Tobramycin eye drops
+Tocilizumab
+Tofacitinib
+Tolterodine
+Topiramate
+Topotecan
+Torsemide
+Tramadol
+Tranexamic acid
+Tranylcypromine
+Trastuzumab
+Trastuzumab deruxtecan
+Travoprost
+Trazodone
+Tretinoin topical
+Triamcinolone topical
+Trimebutine
+Trimethoprim-sulfamethoxazole
+Tropicamide eye drops
+Ubrogepant
+Umeclidinium
+Umeclidinium/Vilanterol inhaler
+Upadacitinib
+Ustekinumab
+Valacyclovir
+Valproate
+Valsartan
+Vancomycin
+Vardenafil
+Vasopressin
+Vecuronium
+Vedolizumab
+Venlafaxine
+Verapamil
+Vericiguat
+Vilanterol
+Vildagliptin
+Vincristine
+Vinpocetine
+Vitamin B12
+Vitamin C
+Vitamin D
+Vitamin D3 (Cholecalciferol)
+Vitamin E
+Vitamin K
+Vonoprazan
+Voriconazole
+Warfarin
+Zafirlukast
+Zanamivir
+Ziprasidone
+Zoledronic acid
+Zonisamide

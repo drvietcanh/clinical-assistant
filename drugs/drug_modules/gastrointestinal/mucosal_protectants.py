@@ -98,7 +98,8 @@ MUCOSAL_PROTECTANTS_DRUGS = {
         'UpToDate - Sucralfate: Drug information', 'Micromedex - Sucralfate',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
         'last_updated': '2024-12-19', 'evidence_level':
-        'High - FDA approved, multiple RCTs'}         "reversal_agents": {
+        'High - FDA approved, multiple RCTs'},
+        "reversal_agents": {
              "available": False,
              "agents": []
          },

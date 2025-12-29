@@ -119,8 +119,19 @@ PENICILLIN_ANTIBIOTICS = {
             "Buồn nôn",
             "Tăng men gan nhẹ",
         ],
+        "interactions": [
+            "Probenecid: tăng nồng độ ampicillin (giảm bài tiết thận)",
+            "Allopurinol: tăng nguy cơ phát ban",
+            "Warfarin: có thể tăng INR",
+        ],
         "pregnancy": "B",
         "mechanism_of_action": "Aminopenicillin, ức chế tổng hợp thành tế bào. Phổ: Streptococcus, Enterococcus, Listeria, H. influenzae không sinh beta-lactamase, một số Gram âm đường ruột; bị phá bởi beta-lactamase.",
+        "monitoring": [
+            "Dấu hiệu dị ứng (phát ban, phản vệ)",
+            "Chức năng thận khi cần chỉnh liều",
+            "Dấu hiệu nhiễm C. difficile nếu tiêu chảy kéo dài",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+        ],
         "precautions": [
             "Phản ứng chéo với cephalosporin ~5-10%",
             "Điều chỉnh liều ở suy thận",
@@ -130,6 +141,7 @@ PENICILLIN_ANTIBIOTICS = {
             "half_life": "1-1.5 giờ",
             "clearance": "Thận (chủ yếu)",
         },
+        "storage": "Bảo quản ở nhiệt độ phòng. Dung dịch pha IV: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày.",
         "black_box_warnings": None,
         "contraindications_detail": {
             "tuyệt_đối": [
@@ -186,8 +198,21 @@ PENICILLIN_ANTIBIOTICS = {
             "Phát ban",
             "Tăng men gan, vàng da ứ mật (hiếm)",
         ],
+        "interactions": [
+            "Probenecid: tăng nồng độ amoxicillin",
+            "Allopurinol: tăng nguy cơ phát ban",
+            "Warfarin: có thể tăng INR",
+            "Thuốc tránh thai: có thể giảm hiệu quả (hiếm)",
+        ],
         "pregnancy": "B",
         "mechanism_of_action": "Amoxicillin ức chế thành tế bào; clavulanate ức chế beta-lactamase, mở rộng phổ tới vi khuẩn sinh beta-lactamase (H. influenzae, Moraxella, một số Enterobacteriaceae, MSSA).",
+        "monitoring": [
+            "Dấu hiệu dị ứng (phát ban, phản vệ)",
+            "Chức năng gan (men gan, bilirubin) - đặc biệt quan trọng do nguy cơ vàng da ứ mật",
+            "Chức năng thận khi cần chỉnh liều",
+            "Dấu hiệu nhiễm C. difficile nếu tiêu chảy kéo dài",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+        ],
         "precautions": [
             "Tiêu chảy do clavulanate - dùng liều clavulanate thấp hơn (875/125 hoặc 2000/125)",
             "Uống với thức ăn",
@@ -197,6 +222,7 @@ PENICILLIN_ANTIBIOTICS = {
             "half_life": "1-1.5 giờ",
             "clearance": "Thận (cả hai thành phần)",
         },
+        "storage": "Bảo quản viên ở nhiệt độ phòng, tránh ẩm. Dung dịch pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày.",
         "black_box_warnings": None,
         "contraindications_detail": {
             "tuyệt_đối": [
@@ -254,8 +280,19 @@ PENICILLIN_ANTIBIOTICS = {
             "Phát ban",
             "Tăng men gan nhẹ",
         ],
+        "interactions": [
+            "Probenecid: tăng nồng độ ampicillin",
+            "Warfarin: có thể tăng INR",
+            "Aminoglycosides: không pha chung (bất hoạt)",
+        ],
         "pregnancy": "B",
         "mechanism_of_action": "Ampicillin ức chế thành tế bào; sulbactam ức chế beta-lactamase, mở rộng phổ tới vi khuẩn sinh beta-lactamase (H. influenzae, Moraxella, MSSA, một số Enterobacteriaceae).",
+        "monitoring": [
+            "Dấu hiệu dị ứng (phát ban, phản vệ)",
+            "Chức năng thận khi cần chỉnh liều",
+            "Dấu hiệu nhiễm C. difficile nếu tiêu chảy kéo dài",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+        ],
         "precautions": [
             "Điều chỉnh liều ở suy thận",
             "Không pha chung aminoglycoside",
@@ -264,6 +301,7 @@ PENICILLIN_ANTIBIOTICS = {
             "half_life": "1 giờ",
             "clearance": "Thận",
         },
+        "storage": "Bảo quản ở nhiệt độ phòng. Dung dịch pha IV: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày. Không đông lạnh.",
         "black_box_warnings": None,
         "contraindications_detail": {
             "tuyệt_đối": [
@@ -314,8 +352,19 @@ PENICILLIN_ANTIBIOTICS = {
             "Giảm bạch cầu (hiếm)",
             "Phát ban",
         ],
+        "interactions": [
+            "Probenecid: tăng nồng độ nafcillin",
+            "Warfarin: có thể tăng INR",
+        ],
         "pregnancy": "B",
         "mechanism_of_action": "Penicillin kháng penicillinase, bền với beta-lactamase của MSSA. Phổ: MSSA, Streptococcus; không hiệu quả với MRSA, Enterococcus, Gram âm.",
+        "monitoring": [
+            "Dấu hiệu dị ứng (phát ban, phản vệ)",
+            "Chức năng gan (men gan, bilirubin) - đặc biệt quan trọng do nguy cơ ứ mật",
+            "Dấu hiệu viêm tĩnh mạch tại chỗ tiêm",
+            "Công thức máu (giảm bạch cầu)",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+        ],
         "precautions": [
             "Theo dõi chức năng gan (có thể gây ứ mật)",
             "Theo dõi viêm tĩnh mạch, nên dùng đường truyền trung tâm nếu kéo dài",
@@ -324,6 +373,7 @@ PENICILLIN_ANTIBIOTICS = {
             "half_life": "0.5-1 giờ",
             "clearance": "Chủ yếu gan (mật), không cần chỉnh thận",
         },
+        "storage": "Bảo quản ở nhiệt độ phòng. Dung dịch pha IV: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày. Không đông lạnh.",
         "black_box_warnings": None,
         "risk_flags": {
             "high_alert": False,
@@ -365,8 +415,19 @@ PENICILLIN_ANTIBIOTICS = {
             "Giảm bạch cầu (hiếm)",
             "Phát ban",
         ],
+        "interactions": [
+            "Probenecid: tăng nồng độ oxacillin",
+            "Warfarin: có thể tăng INR",
+        ],
         "pregnancy": "B",
         "mechanism_of_action": "Penicillin kháng penicillinase, bền với beta-lactamase của MSSA. Phổ: MSSA, Streptococcus; không hiệu quả với MRSA, Enterococcus, Gram âm.",
+        "monitoring": [
+            "Dấu hiệu dị ứng (phát ban, phản vệ)",
+            "Chức năng gan (men gan, bilirubin) - đặc biệt quan trọng do nguy cơ ứ mật",
+            "Dấu hiệu viêm tĩnh mạch tại chỗ tiêm",
+            "Công thức máu (giảm bạch cầu)",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+        ],
         "precautions": [
             "Theo dõi chức năng gan (ứ mật)",
             "Theo dõi viêm tĩnh mạch",
@@ -375,6 +436,7 @@ PENICILLIN_ANTIBIOTICS = {
             "half_life": "0.5-1 giờ",
             "clearance": "Chủ yếu gan (mật)",
         },
+        "storage": "Bảo quản ở nhiệt độ phòng. Dung dịch pha IV: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày. Không đông lạnh.",
         "black_box_warnings": None,
         "risk_flags": {
             "high_alert": False,

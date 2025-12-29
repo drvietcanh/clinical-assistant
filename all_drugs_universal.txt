@@ -1,0 +1,724 @@
+# DANH SACH THUOC TIM THAY (PHO QUAT - MOI CAU TRUC)
+# Tong so: 721
+
+5-Fluorouracil | drug_modules\oncology\antimetabolites.py | full_structure | 23 fields
+Abaloparatide | drug_modules\endocrinology_other\osteoporosis_other.py | full_structure | 24 fields
+Abiraterone | drug_modules\oncology\hormone_therapy.py | full_structure | 23 fields
+Acarbose | drug_modules\diabetes\alpha_glucosidase_inhibitors.py | full_structure | 23 fields
+Acebutolol | drug_modules\cardiovascular\beta_blockers\selective.py | full_structure | 23 fields
+Aclidinium | drug_modules\respiratory\anticholinergic_long_actings.py | full_structure | 23 fields
+Acyclovir | drug_modules\antimicrobial\antivirals\herpes.py | full_structure | 25 fields
+Acyclovir eye drops | drug_modules\ophthalmology.py | full_structure | 25 fields
+Acyclovir eye ointment | drug_modules\ophthalmology.py | full_structure | 25 fields
+Adalimumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Adapalene | drug_modules\dermatology.py | full_structure | 23 fields
+Adenosine | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 22 fields
+Aducanumab | drug_modules\neurological\alzheimer_dementia_drugs.py | full_structure | 24 fields
+Albendazole | drug_modules\infectious_other\anthelmintics.py | full_structure | 25 fields
+Alemtuzumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Alendronate | drug_modules\endocrinology_other\osteoporosis_bisphosphonates.py | full_structure | 24 fields
+Alfuzosin | drug_modules\urology.py | full_structure | 25 fields
+Alirocumab | drug_modules\cardiovascular\pcsk9_inhibitors.py | full_structure | 22 fields
+Allopurinol | drug_modules\miscellaneous\xanthine_oxidase_inhibitors.py | full_structure | 26 fields
+Alogliptin | drug_modules\diabetes\dpp_4_inhibitors.py | full_structure | 25 fields
+Alteplase | drug_modules\hematology.py | full_structure | 24 fields
+Aluminum hydroxide/Magnesium hydroxide | drug_modules\gastrointestinal\antacids.py | full_structure | 24 fields
+Amikacin | drug_modules\antimicrobial\antibiotics\aminoglycosides.py | full_structure | 27 fields
+Aminophylline | drug_modules\respiratory\methylxanthines.py | full_structure | 24 fields
+Amiodarone | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 22 fields
+Amitriptyline | drug_modules\psychiatry_other\tcas.py | full_structure | 24 fields
+Amlodipine | drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py | full_structure | 29 fields
+Amlodipine/Olmesartan | drug_modules\cardiovascular\fixed_dose_combinations.py | full_structure | 24 fields
+Amlodipine/Valsartan | drug_modules\cardiovascular\fixed_dose_combinations.py | full_structure | 24 fields
+Amoxicillin | drug_modules\antimicrobial\antibiotics\penicillins.py | full_structure | 21 fields
+Amoxicillin suspension | drug_modules\infectious_other\beta_lactams.py | full_structure | 24 fields
+Amoxicillin-clavulanate | drug_modules\antimicrobial\antibiotics\penicillins.py | full_structure | 18 fields
+Amphotericin B | drug_modules\antimicrobial\antifungals\polyenes.py | full_structure | 26 fields
+Ampicillin | drug_modules\antimicrobial\antibiotics\penicillins.py | full_structure | 18 fields
+Ampicillin-sulbactam | drug_modules\antimicrobial\antibiotics\penicillins.py | full_structure | 18 fields
+Anastrozole | drug_modules\oncology\hormone_therapy.py | full_structure | 23 fields
+Andexanet alfa | drug_modules\hematology.py | full_structure | 26 fields
+Anidulafungin | drug_modules\antimicrobial\antifungals\echinocandins.py | full_structure | 25 fields
+Anifrolumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Apixaban | drug_modules\cardiovascular\anticoagulants.py | full_structure | 26 fields
+Aripiprazole | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 23 fields
+Artemether-lumefantrine | drug_modules\infectious_other\antimalarials.py | full_structure | 25 fields
+Artesunate | drug_modules\infectious_other\antimalarials.py | full_structure | 25 fields
+Artificial tears (Carboxymethylcellulose) | drug_modules\ophthalmology.py | full_structure | 25 fields
+Aspirin | drug_modules\analgesics\nsaids.py | full_structure | 23 fields
+Aspirin/Carisoprodol | drug_modules\analgesics\pain_muscle_relaxant_combinations.py | full_structure | 23 fields
+Atazanavir (boosted with ritonavir/cobicistat) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Atenolol | drug_modules\cardiovascular\beta_blockers\selective.py | full_structure | 30 fields
+Atezolizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Atomoxetine | drug_modules\psychiatry_other\adhd_anxiolytics.py | full_structure | 23 fields
+Atorvastatin | drug_modules\cardiovascular\statins.py | full_structure | 29 fields
+Atropine | drug_modules\emergency\anticholinergics.py | full_structure | 24 fields
+Atropine eye drops | drug_modules\ophthalmology.py | full_structure | 25 fields
+Avanafil | drug_modules\urology.py | full_structure | 26 fields
+Azathioprine | drug_modules\miscellaneous\immunosuppressants.py | full_structure | 25 fields
+Azelaic Acid | drug_modules\dermatology.py | full_structure | 23 fields
+Azelaic acid topical | drug_modules\dermatology.py | full_structure | 25 fields
+Azelastine eye drops | drug_modules\ophthalmology.py | full_structure | 25 fields
+Azelastine/Fluticasone nasal spray | drug_modules\ent_oral_nasal_combinations.py | full_structure | 23 fields
+Azilsartan medoxomil | drug_modules\cardiovascular\arbs.py | full_structure | 26 fields
+Azithromycin | drug_modules\antimicrobial\antibiotics\macrolides.py | full_structure | 27 fields
+Aztreonam | drug_modules\antimicrobial\antibiotics\beta_lactams.py | full_structure | 24 fields
+Baclofen | drug_modules\neurological\muscle_relaxants.py | full_structure | 23 fields
+Baricitinib | drug_modules\gastrointestinal\jak_inhibitors.py | full_structure | 25 fields
+Beclomethasone inhaled | drug_modules\respiratory\inhaled_corticosteroid_icss.py | full_structure | 24 fields
+Bedaquiline | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Belimumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Bempedoic acid | drug_modules\cardiovascular\cholesterol_absorption_inhibitors.py | full_structure | 24 fields
+Benazepril | drug_modules\cardiovascular\ace_inhibitors.py | full_structure | 26 fields
+Benralizumab | drug_modules\respiratory\respiratory_biologics.py | full_structure | 23 fields
+Benzoyl peroxide topical | drug_modules\dermatology.py | full_structure | 25 fields
+Betamethasone | drug_modules\endocrinology_other\corticosteroids\long_acting.py | full_structure | 22 fields
+Betamethasone topical | drug_modules\dermatology.py | full_structure | 23 fields
+Betamethasone/Clotrimazole topical | drug_modules\dermatology.py | full_structure | 25 fields
+Betaxolol | drug_modules\cardiovascular\beta_blockers\selective.py | full_structure | 23 fields
+Bevacizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Bictegravir (BIC) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Bictegravir/Emtricitabine/Tenofovir alafenamide (BIC/FTC/TAF) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Bimatoprost | drug_modules\ophthalmology.py | full_structure | 25 fields
+Bisacodyl | drug_modules\gastrointestinal\laxatives.py | full_structure | 25 fields
+Bismuth subsalicylate | drug_modules\gastrointestinal\antidiarrheals.py | full_structure | 23 fields
+Bisoprolol | drug_modules\cardiovascular\beta_blockers\selective.py | full_structure | 30 fields
+Brentuximab vedotin | drug_modules\oncology\monoclonal_antibodies_adcs.py | full_structure | 24 fields
+Brimonidine | drug_modules\ophthalmology.py | full_structure | 25 fields
+Brinzolamide | drug_modules\ophthalmology.py | full_structure | 25 fields
+Brodalumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Bromocriptine | drug_modules\diabetes\other_antidiabetics.py | full_structure | 25 fields
+Budesonide | drug_modules\miscellaneous\corticosteroid_inhaleds.py | full_structure | 23 fields
+Budesonide inhaled | drug_modules\respiratory\inhaled_corticosteroid_icss.py | full_structure | 24 fields
+Budesonide/Formoterol inhaler | drug_modules\respiratory\combination_inhalers.py | full_structure | 25 fields
+Bumetanide | drug_modules\cardiovascular\diuretics.py | full_structure | 16 fields
+Buprenorphine | drug_modules\analgesics\opioid_agonists.py | full_structure | 23 fields
+Bupropion | drug_modules\psychiatry_other\antidepressants.py | full_structure | 23 fields
+Buspirone | drug_modules\psychiatry_other\adhd_anxiolytics.py | full_structure | 23 fields
+Cabotegravir + Rilpivirine (Long-acting IM) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Calcipotriol | drug_modules\dermatology.py | full_structure | 23 fields
+Calcitonin | drug_modules\endocrinology_other\osteoporosis_other.py | full_structure | 24 fields
+Calcitriol topical | drug_modules\dermatology.py | full_structure | 23 fields
+Calcium | drug_modules\supportive\calciums.py | full_structure | 24 fields
+Calcium (elemental) | drug_modules\miscellaneous\vitamins.py | full_structure | 24 fields
+Calcium carbonate | drug_modules\gastrointestinal\antacids.py | full_structure | 24 fields
+Calcium chloride | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Calcium gluconate | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Canagliflozin | drug_modules\diabetes\sglt2_inhibitors.py | full_structure | 25 fields
+Candesartan | drug_modules\cardiovascular\arbs.py | full_structure | 26 fields
+Capecitabine | drug_modules\oncology\antimetabolites.py | full_structure | 23 fields
+Caplacizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Captopril | drug_modules\cardiovascular\ace_inhibitors.py | full_structure | 30 fields
+Carbamazepine | drug_modules\neurological\anticonvulsants.py | full_structure | 26 fields
+Carboplatin | drug_modules\oncology\platinum_compounds.py | full_structure | 23 fields
+Carboprost | drug_modules\emergency\uterotonics.py | full_structure | 23 fields
+Carisoprodol | drug_modules\neurological\muscle_relaxants.py | full_structure | 24 fields
+Carvedilol | drug_modules\cardiovascular\beta_blockers\non_selective.py | full_structure | 29 fields
+Caspofungin | drug_modules\antimicrobial\antifungals\echinocandins.py | full_structure | 25 fields
+Cefaclor | drug_modules\infectious_other\cephalosporins.py | full_structure | 23 fields
+Cefadroxil | drug_modules\infectious_other\cephalosporins.py | full_structure | 24 fields
+Cefazolin | drug_modules\antimicrobial\antibiotics\cephalosporins.py | full_structure | 26 fields
+Cefdinir | drug_modules\infectious_other\cephalosporins.py | full_structure | 23 fields
+Cefepime | drug_modules\antimicrobial\antibiotics\cephalosporins.py | full_structure | 26 fields
+Cefiderocol | drug_modules\antimicrobial\antibiotics\beta_lactams.py | full_structure | 24 fields
+Cefixime | drug_modules\infectious_other\cephalosporins.py | full_structure | 23 fields
+Cefoperazone | drug_modules\infectious_other\cephalosporins.py | full_structure | 24 fields
+Cefotaxime | drug_modules\infectious_other\cephalosporins.py | full_structure | 23 fields
+Cefotetan | drug_modules\infectious_other\cephalosporins.py | full_structure | 24 fields
+Cefoxitin | drug_modules\infectious_other\cephalosporins.py | full_structure | 24 fields
+Cefpirome | drug_modules\infectious_other\cephalosporins.py | full_structure | 24 fields
+Ceftazidime | drug_modules\infectious_other\cephalosporins.py | full_structure | 23 fields
+Ceftriaxone | drug_modules\antimicrobial\antibiotics\cephalosporins.py | full_structure | 27 fields
+Cefuroxime | drug_modules\infectious_other\cephalosporins.py | full_structure | 23 fields
+Celecoxib | drug_modules\analgesics\nsaids.py | full_structure | 23 fields
+Cemiplimab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Cephalexin | drug_modules\antimicrobial\antibiotics\cephalosporins.py | full_structure | 23 fields
+Cerebrolysin | drug_modules\neurological\cerebral_circulation.py | full_structure | 25 fields
+Cerebroprotein hydrolysate (khác) | drug_modules\neurological\cerebral_circulation.py | full_structure | 24 fields
+Certolizumab pegol | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Cetirizine | drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py | full_structure | 26 fields
+Cetirizine/Pseudoephedrine | drug_modules\ent_oral_nasal_combinations.py | full_structure | 23 fields
+Cetuximab | drug_modules\oncology\monoclonal_antibodies_adcs.py | full_structure | 23 fields
+Chloroquine | drug_modules\infectious_other\antimalarials.py | full_structure | 23 fields
+Chlorpheniramine | drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py | full_structure | 24 fields
+Chlorpromazine | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 23 fields
+Chlorthalidone | drug_modules\cardiovascular\diuretics.py | full_structure | 22 fields
+Ciclesonide | drug_modules\respiratory\inhaled_corticosteroid_icss.py | full_structure | 24 fields
+Cimetidine | drug_modules\gastrointestinal\h2_receptor_antagonists.py | full_structure | 23 fields
+Ciprofloxacin | drug_modules\antimicrobial\antibiotics\fluoroquinolones.py | full_structure | 21 fields
+Ciprofloxacin eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Cisatracurium | drug_modules\emergency\neuromuscular_blockers.py | full_structure | 25 fields
+Cisplatin | drug_modules\oncology\platinum_compounds.py | full_structure | 23 fields
+Citalopram | drug_modules\psychiatry_other\ssris.py | full_structure | 24 fields
+Citicoline | drug_modules\neurological\cerebral_circulation.py | full_structure | 24 fields
+Citicoline/Piracetam | drug_modules\neurological\neurological_combinations.py | full_structure | 25 fields
+Clarithromycin | drug_modules\antimicrobial\antibiotics\macrolides.py | full_structure | 27 fields
+Clevidipine | drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py | full_structure | 23 fields
+Clindamycin | drug_modules\antimicrobial\antibiotics\lincosamides.py | full_structure | 27 fields
+Clindamycin topical | drug_modules\dermatology.py | full_structure | 23 fields
+Clobetasol | drug_modules\dermatology.py | full_structure | 23 fields
+Clofazimine | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Clomipramine | drug_modules\psychiatry_other\tcas.py | full_structure | 23 fields
+Clonazepam | drug_modules\neurological\benzodiazepines.py | full_structure | 24 fields
+Clonidine | drug_modules\cardiovascular\other_cv.py | full_structure | 23 fields
+Clopidogrel | drug_modules\cardiovascular\anticoagulants.py | full_structure | 24 fields
+Clotrimazole (vaginal) | drug_modules\obstetrics_gynecology.py | full_structure | 24 fields
+Clotrimazole topical | drug_modules\dermatology.py | full_structure | 23 fields
+Clozapine | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 23 fields
+Cobicistat (COBI) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Codeine | drug_modules\analgesics\opioid_agonist_weaks.py | full_structure | 23 fields
+Colchicine | drug_modules\miscellaneous\gout_medications.py | full_structure | 24 fields
+Colesevelam | drug_modules\diabetes\other_antidiabetics.py | full_structure | 25 fields
+Colistin | drug_modules\antimicrobial\antibiotics\polymyxins.py | full_structure | 27 fields
+Cromolyn | drug_modules\respiratory\leukotriene_receptor_antagonists.py | full_structure | 23 fields
+Cyclobenzaprine | drug_modules\neurological\muscle_relaxants.py | full_structure | 24 fields
+Cyclopentolate eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Cyclophosphamide | drug_modules\oncology\alkylating_agents.py | full_structure | 23 fields
+Cycloserine / Terizidone | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Cyclosporine | drug_modules\miscellaneous\immunosuppressants.py | full_structure | 23 fields
+Dabigatran | drug_modules\cardiovascular\anticoagulants.py | full_structure | 26 fields
+Dapagliflozin | drug_modules\diabetes\sglt2_inhibitors.py | full_structure | 25 fields
+Daptomycin | drug_modules\antimicrobial\antibiotics\glycopeptides.py | full_structure | 26 fields
+Daratumumab | drug_modules\oncology\monoclonal_antibodies_adcs.py | full_structure | 24 fields
+Darunavir (boosted with ritonavir/cobicistat) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Delamanid | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Demeclocycline | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Denosumab | drug_modules\endocrinology_other\osteoporosis_other.py | full_structure | 24 fields
+Desloratadine | drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py | full_structure | 22 fields
+Desvenlafaxine | drug_modules\psychiatry_other\snris.py | full_structure | 22 fields
+Deutetrabenazine | drug_modules\neurological\antiparkinsonian.py | full_structure | 23 fields
+Dexamethasone | drug_modules\endocrinology_other\corticosteroids\long_acting.py | full_structure | 22 fields
+Dexamethasone eye drops | drug_modules\ophthalmology.py | full_structure | 24 fields
+Dexlansoprazole | drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py | full_structure | 24 fields
+Dexmedetomidine | drug_modules\supportive\sedatives_anesthetics_icu.py | full_structure | 26 fields
+Dextroamphetamine | drug_modules\psychiatry_other\adhd_anxiolytics.py | full_structure | 23 fields
+Diazepam | drug_modules\neurological\benzodiazepines.py | full_structure | 24 fields
+Diclofenac | drug_modules\analgesics\nsaids.py | full_structure | 25 fields
+Diclofenac eye drops | drug_modules\ophthalmology.py | full_structure | 24 fields
+Diclofenac gel | drug_modules\dermatology.py | full_structure | 23 fields
+Dicloxacillin | drug_modules\infectious_other\beta_lactams.py | full_structure | 23 fields
+Digoxin | drug_modules\cardiovascular\other_cv.py | full_structure | 27 fields
+Diltiazem | drug_modules\cardiovascular\calcium_blockers\non_dihydropyridines.py | full_structure | 23 fields
+Dimethyl fumarate | drug_modules\neurological\multiple_sclerosis_drugs.py | full_structure | 24 fields
+Dinoprostone | drug_modules\emergency\uterotonics.py | full_structure | 23 fields
+Diphenhydramine | drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py | full_structure | 22 fields
+Dipyridamole | drug_modules\cardiovascular_other\antiplatelets.py | full_structure | 26 fields
+Disopyramide | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 23 fields
+Dobutamine | drug_modules\emergency\catecholamine_alpha__beta_agonists.py | full_structure | 21 fields
+Docetaxel | drug_modules\oncology\taxanes.py | full_structure | 23 fields
+Dofetilide | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 23 fields
+Dolutegravir (DTG) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Domperidone | drug_modules\gastrointestinal\prokinetic_antiemetics.py | full_structure | 23 fields
+Donanemab | drug_modules\neurological\alzheimer_dementia_drugs.py | full_structure | 24 fields
+Donepezil | drug_modules\neurological\alzheimer_dementia_drugs.py | full_structure | 24 fields
+Dopamine | drug_modules\emergency\catecholamine_alpha__beta_agonists.py | full_structure | 21 fields
+Doripenem | drug_modules\antimicrobial\antibiotics\beta_lactams.py | full_structure | 23 fields
+Dorzolamide | drug_modules\ophthalmology.py | full_structure | 23 fields
+Dostarlimab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Doxazosin | drug_modules\cardiovascular\other_cv.py | full_structure | 23 fields
+Doxorubicin | drug_modules\oncology\anthracyclines.py | full_structure | 24 fields
+Doxycycline | drug_modules\antimicrobial\antibiotics\tetracyclines.py | full_structure | 27 fields
+Dronedarone | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 22 fields
+Dulaglutide | drug_modules\diabetes\glp1_agonists.py | full_structure | 26 fields
+Duloxetine | drug_modules\psychiatry_other\snris.py | full_structure | 22 fields
+Dupilumab | drug_modules\respiratory\respiratory_biologics.py | full_structure | 23 fields
+Durvalumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Dutasteride | drug_modules\urology.py | full_structure | 24 fields
+Econazole topical | drug_modules\dermatology.py | full_structure | 23 fields
+Eculizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Edaravone | drug_modules\neurological\cerebral_circulation.py | full_structure | 24 fields
+Edoxaban | drug_modules\cardiovascular\anticoagulants.py | full_structure | 26 fields
+Efavirenz (EFV) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Efavirenz/Tenofovir disoproxil fumarate/Emtricitabine (EFV/TDF/FTC) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Efgartigimod | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Eltrombopag | drug_modules\hematology.py | full_structure | 24 fields
+Emicizumab | drug_modules\hematology.py | full_structure | 24 fields
+Empagliflozin | drug_modules\diabetes\sglt2_inhibitors.py | full_structure | 25 fields
+Emtricitabine (FTC) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Enalapril | drug_modules\cardiovascular\ace_inhibitors.py | full_structure | 30 fields
+Enalaprilat | drug_modules\cardiovascular_other\ace_inhibitors_iv.py | full_structure | 23 fields
+Enoxaparin | drug_modules\cardiovascular\anticoagulants.py | full_structure | 23 fields
+Entecavir | drug_modules\antimicrobial\antivirals\hepatitis.py | full_structure | 26 fields
+Enzalutamide | drug_modules\oncology\hormone_therapy.py | full_structure | 23 fields
+Epinephrine | drug_modules\emergency\catecholamine_alpha__beta_agonists.py | full_structure | 25 fields
+Eplerenone | drug_modules\cardiovascular\diuretics.py | full_structure | 25 fields
+Epoetin alfa | drug_modules\hematology.py | full_structure | 24 fields
+Eptinezumab | drug_modules\neurological\migraine_cgrp_drugs.py | full_structure | 24 fields
+Eravacycline | drug_modules\antimicrobial\antibiotics\others.py | full_structure | 24 fields
+Erenumab | drug_modules\neurological\migraine_cgrp_drugs.py | full_structure | 24 fields
+Erlotinib | drug_modules\oncology\targeted_therapy_tkis.py | full_structure | 23 fields
+Ertapenem | drug_modules\antimicrobial\antibiotics\beta_lactams.py | full_structure | 28 fields
+Ertugliflozin | drug_modules\diabetes\sglt2_inhibitors.py | full_structure | 26 fields
+Erythromycin | drug_modules\antimicrobial\antibiotics\macrolides.py | full_structure | 27 fields
+Erythromycin eye ointment | drug_modules\ophthalmology.py | full_structure | 23 fields
+Erythromycin topical | drug_modules\dermatology.py | full_structure | 23 fields
+Escitalopram | drug_modules\psychiatry_other\ssris.py | full_structure | 24 fields
+Esomeprazole | drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py | full_structure | 23 fields
+Estradiol | drug_modules\obstetrics_gynecology.py | full_structure | 24 fields
+Etanercept | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Ethambutol | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Ethinyl estradiol + Levonorgestrel | drug_modules\obstetrics_gynecology.py | full_structure | 24 fields
+Ethosuximide | drug_modules\neurological\anticonvulsants.py | full_structure | 27 fields
+Etomidate | drug_modules\supportive\sedatives_anesthetics_icu.py | full_structure | 26 fields
+Etoposide | drug_modules\oncology\topoisomerase_inhibitors.py | full_structure | 23 fields
+Etoricoxib | drug_modules\analgesics\nsaids.py | full_structure | 23 fields
+Evinacumab | drug_modules\cardiovascular\triglyceride_lowering.py | full_structure | 23 fields
+Evolocumab | drug_modules\cardiovascular\pcsk9_inhibitors.py | full_structure | 22 fields
+Exenatide | drug_modules\diabetes\glp1_agonists.py | full_structure | 26 fields
+Ezetimibe | drug_modules\cardiovascular\cholesterol_absorption_inhibitors.py | full_structure | 23 fields
+Famotidine | drug_modules\gastrointestinal\h2_receptor_antagonists.py | full_structure | 23 fields
+Favipiravir | drug_modules\antimicrobial\antivirals\influenza.py | full_structure | 26 fields
+Febuxostat | drug_modules\miscellaneous\gout_medications.py | full_structure | 26 fields
+Felodipine | drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py | full_structure | 27 fields
+Fenofibrate | drug_modules\cardiovascular\triglyceride_lowering.py | full_structure | 23 fields
+Fentanyl | drug_modules\analgesics\opioid_agonist_strongs.py | full_structure | 25 fields
+Fesoterodine | drug_modules\urology.py | full_structure | 25 fields
+Fexofenadine | drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py | full_structure | 24 fields
+Fexofenadine/Pseudoephedrine | drug_modules\ent_oral_nasal_combinations.py | full_structure | 23 fields
+Fidaxomicin | drug_modules\antimicrobial\antibiotics\others.py | full_structure | 27 fields
+Filgrastim | drug_modules\hematology.py | full_structure | 25 fields
+Finasteride | drug_modules\urology.py | full_structure | 26 fields
+Finerenone | drug_modules\cardiovascular\other_cv.py | full_structure | 24 fields
+Fingolimod | drug_modules\neurological\multiple_sclerosis_drugs.py | full_structure | 24 fields
+Flecainide | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 22 fields
+Fluconazole | drug_modules\antimicrobial\antifungals\azoles.py | full_structure | 26 fields
+Fludrocortisone | drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py | full_structure | 23 fields
+Flumazenil | drug_modules\emergency\benzodiazepine_antagonists.py | full_structure | 23 fields
+Fluoxetine | drug_modules\neurological\ssri_selective_serotonin_reuptake_inhibitors.py | full_structure | 24 fields
+Fluphenazine | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 24 fields
+Fluticasone inhaled | drug_modules\respiratory\inhaled_corticosteroid_icss.py | full_structure | 23 fields
+Fluticasone/Salmeterol inhaler | drug_modules\respiratory\combination_inhalers.py | full_structure | 25 fields
+Fluticasone/Umeclidinium/Vilanterol inhaler | drug_modules\respiratory\combination_inhalers.py | full_structure | 25 fields
+Fluvastatin | drug_modules\cardiovascular\statins.py | full_structure | 26 fields
+Fluvoxamine | drug_modules\psychiatry_other\ssris.py | full_structure | 24 fields
+Folic Acid | drug_modules\miscellaneous\vitamins.py | full_structure | 24 fields
+Folic acid | drug_modules\supportive\folates.py | full_structure | 26 fields
+Fondaparinux | drug_modules\cardiovascular\anticoagulants.py | full_structure | 23 fields
+Formoterol | drug_modules\respiratory\long_acting_beta_2_agonist_labas.py | full_structure | 23 fields
+Fosfomycin | drug_modules\antimicrobial\antibiotics\others.py | full_structure | 27 fields
+Fosphenytoin | drug_modules\neurological\anticonvulsants.py | full_structure | 23 fields
+Fremanezumab | drug_modules\neurological\migraine_cgrp_drugs.py | full_structure | 24 fields
+Furosemide | drug_modules\cardiovascular\diuretics.py | full_structure | 25 fields
+Fusidic Acid | drug_modules\dermatology.py | full_structure | 23 fields
+Fusidic acid/Betamethasone topical | drug_modules\dermatology.py | full_structure | 23 fields
+Gabapentin | drug_modules\neurological\anticonvulsant_alpha_2_delta_ligands.py | full_structure | 24 fields
+Galcanezumab | drug_modules\neurological\migraine_cgrp_drugs.py | full_structure | 24 fields
+Ganciclovir | drug_modules\antimicrobial\antivirals\cmv.py | full_structure | 25 fields
+Ganciclovir eye drops | drug_modules\ophthalmology.py | full_structure | 25 fields
+Gefitinib | drug_modules\oncology\targeted_therapy_tkis.py | full_structure | 23 fields
+Gemcitabine | drug_modules\oncology\antimetabolites.py | full_structure | 23 fields
+Gemfibrozil | drug_modules\cardiovascular\triglyceride_lowering.py | full_structure | 23 fields
+Gemifloxacin | drug_modules\infectious_other\fluoroquinolones.py | full_structure | 23 fields
+Gentamicin | drug_modules\antimicrobial\antibiotics\aminoglycosides.py | full_structure | 26 fields
+Gentamicin eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Gentamicin/Betamethasone/Clotrimazole topical | drug_modules\dermatology.py | full_structure | 26 fields
+Ginkgo biloba extract | drug_modules\neurological\cerebral_circulation.py | full_structure | 24 fields
+Ginkgo biloba/Vinpocetine | drug_modules\neurological\neurological_combinations.py | full_structure | 25 fields
+Glibenclamide | drug_modules\diabetes\sulfonylureas.py | full_structure | 29 fields
+Gliclazide | drug_modules\diabetes\sulfonylureas.py | full_structure | 29 fields
+Glimepiride | drug_modules\diabetes\sulfonylureas.py | full_structure | 25 fields
+Glycopyrronium | drug_modules\respiratory\anticholinergic_long_actings.py | full_structure | 23 fields
+Golimumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Granisetron | drug_modules\oncology\anti_emetic_5_ht3_antagonists.py | full_structure | 23 fields
+Guselkumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Haloperidol | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 24 fields
+Heparin | drug_modules\hematology.py | full_structure | 24 fields
+High-intensity statin (đột quỵ/TIA) | drug_modules\cardiovascular_other\statins.py | full_structure | 24 fields
+Hydralazine | drug_modules\cardiovascular\vasodilators.py | full_structure | 23 fields
+Hydrochlorothiazide | drug_modules\cardiovascular\diuretics.py | full_structure | 25 fields
+Hydrocodone | drug_modules\analgesics\opioid_agonists.py | full_structure | 23 fields
+Hydrocortisone | drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py | full_structure | 22 fields
+Hydrocortisone topical | drug_modules\dermatology.py | full_structure | 25 fields
+Hydromorphone | drug_modules\analgesics\opioid_agonist_strongs.py | full_structure | 25 fields
+Hydroxychloroquine | drug_modules\infectious_other\antimalarials.py | full_structure | 23 fields
+Hydroxyzine | drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py | full_structure | 24 fields
+Hyoscine butylbromide | drug_modules\gastrointestinal\antispasmodics.py | full_structure | 25 fields
+Ibandronate | drug_modules\endocrinology_other\osteoporosis_bisphosphonates.py | full_structure | 24 fields
+Ibuprofen | drug_modules\analgesics\nsaids.py | full_structure | 29 fields
+Ibutilide | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 22 fields
+Icosapent ethyl | drug_modules\cardiovascular\triglyceride_lowering.py | full_structure | 23 fields
+Idarucizumab | drug_modules\hematology.py | full_structure | 26 fields
+Ifosfamide | drug_modules\oncology\alkylating_agents.py | full_structure | 23 fields
+Ilaprazole | drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py | full_structure | 24 fields
+Imatinib | drug_modules\oncology\targeted_therapy_tkis.py | full_structure | 23 fields
+Imipenem-cilastatin | drug_modules\antimicrobial\antibiotics\beta_lactams.py | full_structure | 31 fields
+Inclisiran | drug_modules\cardiovascular\pcsk9_inhibitors.py | full_structure | 22 fields
+Indacaterol | drug_modules\respiratory\long_acting_beta_2_agonist_labas.py | full_structure | 23 fields
+Indapamide | drug_modules\cardiovascular\diuretics.py | full_structure | 22 fields
+Indomethacin | drug_modules\analgesics\nsaids.py | full_structure | 23 fields
+Infliximab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Insulin | drug_modules\diabetes\insulins.py | full_structure | 26 fields
+Insulin Aspart | drug_modules\diabetes\specific_insulins.py | full_structure | 24 fields
+Insulin Degludec | drug_modules\diabetes\specific_insulins.py | full_structure | 24 fields
+Insulin Detemir | drug_modules\diabetes\specific_insulins.py | full_structure | 24 fields
+Insulin Glargine | drug_modules\diabetes\specific_insulins.py | full_structure | 24 fields
+Insulin Glulisine | drug_modules\diabetes\specific_insulins.py | full_structure | 24 fields
+Insulin Lispro | drug_modules\diabetes\specific_insulins.py | full_structure | 24 fields
+Insulin NPH | drug_modules\diabetes\specific_insulins.py | full_structure | 24 fields
+Insulin Regular | drug_modules\diabetes\specific_insulins.py | full_structure | 24 fields
+Ipratropium | drug_modules\respiratory\anticholinergic_short_actings.py | full_structure | 23 fields
+Ipratropium/Salbutamol inhaler | drug_modules\respiratory\combination_inhalers.py | full_structure | 25 fields
+Irbesartan | drug_modules\cardiovascular\arbs.py | full_structure | 26 fields
+Irinotecan | drug_modules\oncology\topoisomerase_inhibitors.py | full_structure | 23 fields
+Iron | drug_modules\supportive\irons.py | full_structure | 25 fields
+Isavuconazole | drug_modules\antimicrobial\antifungals\azoles.py | full_structure | 25 fields
+Isoniazid | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Isosorbide mononitrate | drug_modules\cardiovascular\vasodilators.py | full_structure | 23 fields
+Isradipine | drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py | full_structure | 27 fields
+Istradefylline | drug_modules\neurological\antiparkinsonian.py | full_structure | 23 fields
+Itraconazole | drug_modules\antimicrobial\antifungals\azoles.py | full_structure | 26 fields
+Ivabradine | drug_modules\cardiovascular\other_cv.py | full_structure | 27 fields
+Ivermectin | drug_modules\infectious_other\anthelmintics.py | full_structure | 26 fields
+Ivermectin cream | drug_modules\dermatology.py | full_structure | 23 fields
+Ixekizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Ketamine | drug_modules\supportive\sedatives_anesthetics_icu.py | full_structure | 26 fields
+Ketoconazole topical | drug_modules\dermatology.py | full_structure | 23 fields
+Ketoprofen | drug_modules\analgesics\nsaids.py | full_structure | 23 fields
+Ketoprofen gel | drug_modules\dermatology.py | full_structure | 23 fields
+Ketorolac | drug_modules\analgesics\nsaids.py | full_structure | 25 fields
+Ketorolac eye drops | drug_modules\ophthalmology.py | full_structure | 24 fields
+Ketotifen eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Labetalol | drug_modules\cardiovascular\other_cv.py | full_structure | 27 fields
+Lacidipine | drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py | full_structure | 22 fields
+Lacosamide | drug_modules\neurological\anticonvulsants.py | full_structure | 23 fields
+Lactulose | drug_modules\gastrointestinal\laxatives.py | full_structure | 25 fields
+Lamivudine (3TC) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Lamotrigine | drug_modules\neurological\anticonvulsants.py | full_structure | 22 fields
+Lanadelumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Lansoprazole | drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py | full_structure | 23 fields
+Lasmiditan | drug_modules\analgesics\antimigraine_5_ht1_receptor_agonists.py | full_structure | 24 fields
+Latanoprost | drug_modules\ophthalmology.py | full_structure | 23 fields
+Lecanemab | drug_modules\neurological\alzheimer_dementia_drugs.py | full_structure | 24 fields
+Ledipasvir | drug_modules\antimicrobial\antivirals\hepatitis.py | full_structure | 26 fields
+Lefamulin | drug_modules\antimicrobial\antibiotics\others.py | full_structure | 23 fields
+Leflunomide | drug_modules\miscellaneous\dmards_rheumatology.py | full_structure | 24 fields
+Levamisole | drug_modules\infectious_other\anthelmintics.py | full_structure | 24 fields
+Levetiracetam | drug_modules\neurological\anticonvulsants.py | full_structure | 23 fields
+Levocetirizine | drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py | full_structure | 24 fields
+Levodopa/Carbidopa | drug_modules\neurological\antiparkinsonian.py | full_structure | 22 fields
+Levofloxacin | drug_modules\antimicrobial\antibiotics\fluoroquinolones.py | full_structure | 34 fields
+Levonorgestrel | drug_modules\obstetrics_gynecology.py | full_structure | 23 fields
+Levothyroxine | drug_modules\metabolic\thyroid_hormones.py | full_structure | 23 fields
+Lidocaine | drug_modules\emergency\local_anesthetic__antiarrhythmic_class_ibs.py | full_structure | 23 fields
+Linagliptin | drug_modules\diabetes\dpp_4_inhibitors.py | full_structure | 25 fields
+Linezolid | drug_modules\antimicrobial\antibiotics\oxazolidinones.py | full_structure | 31 fields
+Linezolid (lao MDR/XDR) | drug_modules\infectious_other\antituberculars.py | full_structure | 24 fields
+Liraglutide | drug_modules\diabetes\glp1_agonists.py | full_structure | 26 fields
+Lisdexamfetamine | drug_modules\psychiatry_other\adhd_anxiolytics.py | full_structure | 23 fields
+Lisinopril | drug_modules\cardiovascular\ace_inhibitors.py | full_structure | 30 fields
+Lisinopril/Hydrochlorothiazide | drug_modules\cardiovascular\fixed_dose_combinations.py | full_structure | 24 fields
+Loperamide | drug_modules\gastrointestinal\antidiarrheals.py | full_structure | 23 fields
+Loratadine | drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py | full_structure | 22 fields
+Loratadine/Pseudoephedrine | drug_modules\ent_oral_nasal_combinations.py | full_structure | 23 fields
+Lorazepam | drug_modules\neurological\benzodiazepines.py | full_structure | 23 fields
+Losartan | drug_modules\cardiovascular\arbs.py | full_structure | 30 fields
+Losartan/Hydrochlorothiazide | drug_modules\cardiovascular\fixed_dose_combinations.py | full_structure | 24 fields
+Lovastatin | drug_modules\cardiovascular\statins.py | full_structure | 26 fields
+Lurasidone | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 24 fields
+Magnesium oxide | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Magnesium sulfate | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Mebendazole | drug_modules\infectious_other\anthelmintics.py | full_structure | 23 fields
+Mebeverine | drug_modules\gastrointestinal\antispasmodics.py | full_structure | 25 fields
+Medroxyprogesterone | drug_modules\obstetrics_gynecology.py | full_structure | 24 fields
+Meloxicam | drug_modules\analgesics\nsaids.py | full_structure | 25 fields
+Memantine | drug_modules\neurological\alzheimer_dementia_drugs.py | full_structure | 23 fields
+Meperidine | drug_modules\analgesics\opioid_agonist_strongs.py | full_structure | 24 fields
+Mepolizumab | drug_modules\respiratory\respiratory_biologics.py | full_structure | 23 fields
+Meropenem | drug_modules\antimicrobial\antibiotics\beta_lactams.py | full_structure | 26 fields
+Mesalazine | drug_modules\gastrointestinal\ibd_5asa.py | full_structure | 24 fields
+Metaxalone | drug_modules\neurological\muscle_relaxants.py | full_structure | 22 fields
+Metformin | drug_modules\diabetes\biguanides.py | full_structure | 29 fields
+Metformin/Dapagliflozin | drug_modules\diabetes\fixed_dose_combinations.py | full_structure | 24 fields
+Metformin/Empagliflozin | drug_modules\diabetes\fixed_dose_combinations.py | full_structure | 24 fields
+Metformin/Glibenclamide | drug_modules\diabetes\fixed_dose_combinations.py | full_structure | 23 fields
+Metformin/Pioglitazone | drug_modules\diabetes\fixed_dose_combinations.py | full_structure | 23 fields
+Metformin/Sitagliptin | drug_modules\diabetes\fixed_dose_combinations.py | full_structure | 24 fields
+Methadone | drug_modules\analgesics\opioid_agonist_strongs.py | full_structure | 24 fields
+Methimazole | drug_modules\metabolic\antithyroid.py | full_structure | 23 fields
+Methocarbamol | drug_modules\neurological\muscle_relaxants.py | full_structure | 22 fields
+Methotrexate | drug_modules\miscellaneous\dmards_rheumatology.py | full_structure | 24 fields
+Methyldopa | drug_modules\cardiovascular\other_cv.py | full_structure | 23 fields
+Methylergonovine | drug_modules\emergency\uterotonics.py | full_structure | 23 fields
+Methylphenidate | drug_modules\psychiatry_other\adhd_anxiolytics.py | full_structure | 23 fields
+Methylprednisolone | drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py | full_structure | 22 fields
+Metoclopramide | drug_modules\gastrointestinal\prokinetic_antiemetics.py | full_structure | 23 fields
+Metoprolol | drug_modules\cardiovascular\beta_blockers\selective.py | full_structure | 29 fields
+Metronidazole | drug_modules\infectious_other\nitroimidazoles.py | full_structure | 24 fields
+Metronidazole (vaginal gel) | drug_modules\obstetrics_gynecology.py | full_structure | 24 fields
+Metronidazole topical | drug_modules\dermatology.py | full_structure | 23 fields
+Micafungin | drug_modules\antimicrobial\antifungals\echinocandins.py | full_structure | 25 fields
+Miconazole (vaginal) | drug_modules\obstetrics_gynecology.py | full_structure | 24 fields
+Miconazole topical | drug_modules\dermatology.py | full_structure | 23 fields
+Miconazole/Hydrocortisone topical | drug_modules\dermatology.py | full_structure | 24 fields
+Midazolam (IV/ICU) | drug_modules\supportive\sedatives_anesthetics_icu.py | full_structure | 26 fields
+Miglitol | drug_modules\diabetes\alpha_glucosidase_inhibitors.py | full_structure | 23 fields
+Milrinone | drug_modules\emergency\catecholamine_alpha__beta_agonists.py | full_structure | 25 fields
+Minocycline | drug_modules\antimicrobial\antibiotics\tetracyclines.py | full_structure | 27 fields
+Mirabegron | drug_modules\urology.py | full_structure | 24 fields
+Mirtazapine | drug_modules\psychiatry_other\antidepressants.py | full_structure | 23 fields
+Misoprostol | drug_modules\gastrointestinal\mucosal_protectants.py | full_structure | 23 fields
+Mometasone topical | drug_modules\dermatology.py | full_structure | 23 fields
+Montelukast | drug_modules\respiratory\leukotriene_receptor_antagonists.py | full_structure | 24 fields
+Morphine | drug_modules\analgesics\opioid_agonist_strongs.py | full_structure | 25 fields
+Moxifloxacin | drug_modules\antimicrobial\antibiotics\fluoroquinolones.py | full_structure | 31 fields
+Moxifloxacin eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Mupirocin topical | drug_modules\dermatology.py | full_structure | 23 fields
+Mycophenolate | drug_modules\miscellaneous\immunosuppressants.py | full_structure | 23 fields
+Nadolol | drug_modules\cardiovascular\beta_blockers\non_selective.py | full_structure | 23 fields
+Nafcillin | drug_modules\antimicrobial\antibiotics\penicillins.py | full_structure | 16 fields
+Naloxone | drug_modules\emergency\opioid_antagonists.py | full_structure | 23 fields
+Naltrexone | drug_modules\emergency\opioid_antagonists.py | full_structure | 23 fields
+Naproxen | drug_modules\analgesics\nsaids.py | full_structure | 25 fields
+Natalizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Nateglinide | drug_modules\diabetes\meglitinides.py | full_structure | 23 fields
+Nebivolol | drug_modules\cardiovascular\beta_blockers\selective.py | full_structure | 26 fields
+Nedocromil | drug_modules\respiratory\leukotriene_receptor_antagonists.py | full_structure | 24 fields
+Nepafenac eye drops | drug_modules\ophthalmology.py | full_structure | 24 fields
+Nesiritide | drug_modules\cardiovascular\vasodilators.py | full_structure | 23 fields
+Niacin | drug_modules\cardiovascular\triglyceride_lowering.py | full_structure | 23 fields
+Nicardipine | drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py | full_structure | 23 fields
+Nicergoline | drug_modules\neurological\cerebral_circulation.py | full_structure | 25 fields
+Nifedipine | drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py | full_structure | 26 fields
+Nimesulide | drug_modules\analgesics\nsaids.py | full_structure | 23 fields
+Nimodipine | drug_modules\neurological\cerebral_circulation.py | full_structure | 25 fields
+Nisoldipine | drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py | full_structure | 23 fields
+Nitrofurantoin | drug_modules\antimicrobial\antibiotics\others.py | full_structure | 26 fields
+Nitroglycerin | drug_modules\cardiovascular\vasodilators.py | full_structure | 23 fields
+Nitroprusside | drug_modules\cardiovascular\vasodilators.py | full_structure | 23 fields
+Nivolumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Norepinephrine | drug_modules\emergency\catecholamine_alpha__beta_agonists.py | full_structure | 21 fields
+Norfloxacin | drug_modules\antimicrobial\antibiotics\fluoroquinolones.py | full_structure | 16 fields
+Nystatin | drug_modules\antimicrobial\antifungals\polyenes.py | full_structure | 23 fields
+Ocrelizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Ofatumumab | drug_modules\neurological\multiple_sclerosis_drugs.py | full_structure | 24 fields
+Ofloxacin | drug_modules\antimicrobial\antibiotics\fluoroquinolones.py | full_structure | 16 fields
+Olanzapine | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 24 fields
+Olanzapine/Fluoxetine | drug_modules\neurological\neurological_combinations.py | full_structure | 25 fields
+Olmesartan | drug_modules\cardiovascular\arbs.py | full_structure | 26 fields
+Olodaterol | drug_modules\respiratory\long_acting_beta_2_agonist_labas.py | full_structure | 23 fields
+Olopatadine eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Omadacycline | drug_modules\antimicrobial\antibiotics\others.py | full_structure | 23 fields
+Omalizumab | drug_modules\respiratory\respiratory_biologics.py | full_structure | 23 fields
+Omega-3 acid ethyl esters | drug_modules\cardiovascular\triglyceride_lowering.py | full_structure | 23 fields
+Omeprazole | drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py | full_structure | 26 fields
+Ondansetron | drug_modules\gastrointestinal\antiemetic_5_ht3_antagonists.py | full_structure | 23 fields
+Opicapone | drug_modules\neurological\antiparkinsonian.py | full_structure | 23 fields
+Oseltamivir | drug_modules\antimicrobial\antivirals\influenza.py | full_structure | 24 fields
+Oxacillin | drug_modules\antimicrobial\antibiotics\penicillins.py | full_structure | 16 fields
+Oxaliplatin | drug_modules\oncology\platinum_compounds.py | full_structure | 24 fields
+Oxcarbazepine | drug_modules\neurological\anticonvulsants.py | full_structure | 26 fields
+Oxybutynin | drug_modules\urology.py | full_structure | 24 fields
+Oxycodone | drug_modules\analgesics\opioid_agonist_strongs.py | full_structure | 23 fields
+Oxytocin | drug_modules\emergency\uterotonics.py | full_structure | 24 fields
+PAS (para-aminosalicylic acid) | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Paclitaxel | drug_modules\oncology\taxanes.py | full_structure | 23 fields
+Palonosetron | drug_modules\oncology\anti_emetic_5_ht3_antagonists.py | full_structure | 23 fields
+Pamidronate | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Pantoprazole | drug_modules\gastrointestinal\proton_pump_inhibitors.py | full_structure | 26 fields
+Paracetamol | drug_modules\analgesics\analgesic_antipyretic.py | full_structure | 27 fields
+Paracetamol/Carisoprodol | drug_modules\analgesics\pain_muscle_relaxant_combinations.py | full_structure | 23 fields
+Paracetamol/Chlorzoxazone | drug_modules\analgesics\pain_muscle_relaxant_combinations.py | full_structure | 23 fields
+Paracetamol/Methocarbamol | drug_modules\analgesics\pain_muscle_relaxant_combinations.py | full_structure | 23 fields
+Paracetamol/Orphenadrine | drug_modules\analgesics\pain_muscle_relaxant_combinations.py | full_structure | 23 fields
+Paroxetine | drug_modules\psychiatry_other\ssris.py | full_structure | 24 fields
+Pemafibrate | drug_modules\cardiovascular\triglyceride_lowering.py | full_structure | 23 fields
+Pembrolizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Penicillin G | drug_modules\antimicrobial\antibiotics\beta_lactams.py | full_structure | 27 fields
+Penicillin V | drug_modules\infectious_other\beta_lactams.py | full_structure | 24 fields
+Perampanel | drug_modules\neurological\anticonvulsants.py | full_structure | 23 fields
+Perindopril | drug_modules\cardiovascular\ace_inhibitors.py | full_structure | 26 fields
+Permethrin topical | drug_modules\dermatology.py | full_structure | 23 fields
+Phenelzine | drug_modules\psychiatry_other\antidepressants.py | full_structure | 23 fields
+Phenobarbital | drug_modules\neurological\anticonvulsants.py | full_structure | 27 fields
+Phenylephrine | drug_modules\emergency\catecholamine_alpha__beta_agonists.py | full_structure | 25 fields
+Phenylephrine eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Phenytoin | drug_modules\neurological\anticonvulsants.py | full_structure | 27 fields
+Pilocarpine eye drops | drug_modules\ophthalmology.py | full_structure | 24 fields
+Pimavanserin | drug_modules\neurological\antiparkinsonian.py | full_structure | 23 fields
+Pimecrolimus | drug_modules\dermatology.py | full_structure | 24 fields
+Pimozide | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 23 fields
+Pioglitazone | drug_modules\diabetes\thiazolidinedione_tzds.py | full_structure | 23 fields
+Piperacillin-tazobactam | drug_modules\antimicrobial\antibiotics\beta_lactams.py | full_structure | 27 fields
+Piracetam | drug_modules\neurological\cerebral_circulation.py | full_structure | 24 fields
+Piracetam/Vinpocetine | drug_modules\neurological\neurological_combinations.py | full_structure | 25 fields
+Piroxicam | drug_modules\analgesics\nsaids.py | full_structure | 23 fields
+Pitavastatin | drug_modules\cardiovascular\statins.py | full_structure | 26 fields
+Plazomicin | drug_modules\antimicrobial\antibiotics\aminoglycosides.py | full_structure | 23 fields
+Plozasiran | drug_modules\cardiovascular\triglyceride_lowering.py | full_structure | 23 fields
+Polyethylene glycol 3350 | drug_modules\gastrointestinal\laxatives.py | full_structure | 25 fields
+Polymyxin B | drug_modules\antimicrobial\antibiotics\polymyxins.py | full_structure | 26 fields
+Polymyxin B/Trimethoprim eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Posaconazole | drug_modules\antimicrobial\antifungals\azoles.py | full_structure | 26 fields
+Potassium phosphate | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Pramipexole | drug_modules\neurological\antiparkinsonian.py | full_structure | 23 fields
+Prasugrel | drug_modules\cardiovascular\anticoagulants.py | full_structure | 27 fields
+Pravastatin | drug_modules\cardiovascular\statins.py | full_structure | 29 fields
+Praziquantel | drug_modules\infectious_other\anthelmintics.py | full_structure | 24 fields
+Prednisolone | drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py | full_structure | 22 fields
+Prednisolone eye drops | drug_modules\ophthalmology.py | full_structure | 26 fields
+Prednisone | drug_modules\metabolic\corticosteroids.py | full_structure | 24 fields
+Pregabalin | drug_modules\neurological\anticonvulsant_alpha_2_delta_ligands.py | full_structure | 23 fields
+Primaquine | drug_modules\infectious_other\antimalarials.py | full_structure | 25 fields
+Primidone | drug_modules\neurological\anticonvulsants.py | full_structure | 23 fields
+Probenecid | drug_modules\miscellaneous\gout_medications.py | full_structure | 24 fields
+Procainamide | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 22 fields
+Progesterone | drug_modules\obstetrics_gynecology.py | full_structure | 24 fields
+Propafenone | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 22 fields
+Propofol | drug_modules\supportive\sedatives_anesthetics_icu.py | full_structure | 26 fields
+Propranolol | drug_modules\cardiovascular\beta_blockers\non_selective.py | full_structure | 26 fields
+Propylthiouracil | drug_modules\metabolic\antithyroid.py | full_structure | 23 fields
+Protamine | drug_modules\hematology.py | full_structure | 26 fields
+Pyrazinamide | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Quetiapine | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 24 fields
+Quinidine | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 23 fields
+Rabeprazole | drug_modules\gastrointestinal\proton_pump_inhibitors.py | full_structure | 23 fields
+Raloxifene | drug_modules\endocrinology_other\osteoporosis_other.py | full_structure | 24 fields
+Ramipril | drug_modules\cardiovascular\ace_inhibitors.py | full_structure | 26 fields
+Ranitidine | drug_modules\gastrointestinal\h2_receptor_antagonists.py | full_structure | 22 fields
+Ravulizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Remdesivir | drug_modules\antimicrobial\antivirals\influenza.py | full_structure | 29 fields
+Repaglinide | drug_modules\diabetes\meglitinides.py | full_structure | 23 fields
+Reslizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Ribavirin | drug_modules\antimicrobial\antivirals\hepatitis.py | full_structure | 26 fields
+Rifabutin | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Rifampin | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Rifapentine | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Rilpivirine (RPV) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Rimegepant | drug_modules\neurological\migraine_cgrp_drugs.py | full_structure | 23 fields
+Risankizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Risedronate | drug_modules\endocrinology_other\osteoporosis_bisphosphonates.py | full_structure | 24 fields
+Risperidone | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 24 fields
+Ritonavir (low-dose booster) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Rituximab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Rivaroxaban | drug_modules\cardiovascular\anticoagulants.py | full_structure | 26 fields
+Rivastigmine | drug_modules\neurological\alzheimer_dementia_drugs.py | full_structure | 23 fields
+Rizatriptan | drug_modules\analgesics\antimigraine_5_ht1_receptor_agonists.py | full_structure | 23 fields
+Rocuronium | drug_modules\emergency\neuromuscular_blockers.py | full_structure | 25 fields
+Roflumilast | drug_modules\respiratory\pde4_inhibitors.py | full_structure | 23 fields
+Romiplostim | drug_modules\hematology.py | full_structure | 26 fields
+Romosozumab | drug_modules\endocrinology_other\osteoporosis_other.py | full_structure | 24 fields
+Ropinirole | drug_modules\neurological\antiparkinsonian.py | full_structure | 22 fields
+Rosiglitazone | drug_modules\diabetes\thiazolidinedione_tzds.py | full_structure | 23 fields
+Rosuvastatin | drug_modules\cardiovascular\statins.py | full_structure | 29 fields
+Sacituzumab govitecan | drug_modules\oncology\monoclonal_antibodies_adcs.py | full_structure | 24 fields
+Sacubitril-valsartan | drug_modules\cardiovascular\other_cv.py | full_structure | 29 fields
+Safinamide | drug_modules\neurological\antiparkinsonian.py | full_structure | 23 fields
+Salbutamol | drug_modules\miscellaneous\beta_2_agonist_short_actings.py | full_structure | 23 fields
+Salicylic Acid | drug_modules\dermatology.py | full_structure | 23 fields
+Salmeterol | drug_modules\respiratory\long_acting_beta_2_agonist_labas.py | full_structure | 23 fields
+Sarilumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Saxagliptin | drug_modules\diabetes\dpp_4_inhibitors.py | full_structure | 25 fields
+Secukinumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Semaglutide | drug_modules\diabetes\glp1_agonists.py | full_structure | 26 fields
+Senna (sennosides) | drug_modules\gastrointestinal\laxatives.py | full_structure | 25 fields
+Sertraline | drug_modules\psychiatry_other\ssris.py | full_structure | 24 fields
+Sildenafil | drug_modules\urology.py | full_structure | 26 fields
+Silodosin | drug_modules\urology.py | full_structure | 25 fields
+Simethicone | drug_modules\gastrointestinal\antiflatulents.py | full_structure | 24 fields
+Simvastatin | drug_modules\cardiovascular\statins.py | full_structure | 26 fields
+Sitagliptin | drug_modules\diabetes\dpp_4_inhibitors.py | full_structure | 29 fields
+Sodium bicarbonate | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Sodium phosphate | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Sodium polystyrene sulfonate | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Sofosbuvir | drug_modules\antimicrobial\antivirals\hepatitis.py | full_structure | 26 fields
+Sofosbuvir/Velpatasvir | drug_modules\antimicrobial\antivirals\hepatitis.py | full_structure | 26 fields
+Solifenacin | drug_modules\urology.py | full_structure | 26 fields
+Sotagliflozin | drug_modules\cardiovascular\other_cv.py | full_structure | 24 fields
+Sotalol | drug_modules\cardiovascular\antiarrhythmics.py | full_structure | 23 fields
+Sparfloxacin | drug_modules\infectious_other\fluoroquinolones.py | full_structure | 23 fields
+Spironolactone | drug_modules\cardiovascular\diuretics.py | full_structure | 30 fields
+Streptomycin | drug_modules\infectious_other\antituberculars.py | full_structure | 26 fields
+Succinylcholine | drug_modules\emergency\neuromuscular_blockers.py | full_structure | 25 fields
+Sucralfate | drug_modules\gastrointestinal\mucosal_protectants.py | full_structure | 23 fields
+Sulfasalazine | drug_modules\gastrointestinal\ibd_5asa.py | full_structure | 24 fields
+Sumatriptan | drug_modules\analgesics\antimigraine_5_ht1_receptor_agonists.py | full_structure | 23 fields
+Tacrolimus | drug_modules\miscellaneous\immunosuppressants.py | full_structure | 25 fields
+Tacrolimus topical | drug_modules\dermatology.py | full_structure | 26 fields
+Tadalafil | drug_modules\urology.py | full_structure | 26 fields
+Tamoxifen | drug_modules\oncology\hormone_therapy.py | full_structure | 23 fields
+Tamsulosin | drug_modules\urology.py | full_structure | 25 fields
+Tapentadol | drug_modules\analgesics\opioid_agonists.py | full_structure | 23 fields
+Tazarotene | drug_modules\dermatology.py | full_structure | 23 fields
+Tegoprazan | drug_modules\gastrointestinal\pcab.py | full_structure | 22 fields
+Teicoplanin | drug_modules\antimicrobial\antibiotics\glycopeptides.py | full_structure | 26 fields
+Telmisartan | drug_modules\cardiovascular\arbs.py | full_structure | 30 fields
+Tenecteplase | drug_modules\hematology.py | full_structure | 25 fields
+Tenofovir | drug_modules\antimicrobial\antivirals\hepatitis.py | full_structure | 26 fields
+Tenofovir alafenamide (TAF) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Tenofovir alafenamide/Emtricitabine (TAF/FTC) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Tenofovir disoproxil fumarate (TDF) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Tenofovir disoproxil fumarate/Emtricitabine (TDF/FTC) | drug_modules\antimicrobial\antivirals\hiv_arvs.py | full_structure | 26 fields
+Teplizumab | drug_modules\diabetes\t1dm_prevention.py | full_structure | 23 fields
+Teprotumumab | drug_modules\oncology\monoclonal_antibodies_adcs.py | full_structure | 24 fields
+Terbinafine topical | drug_modules\dermatology.py | full_structure | 23 fields
+Terbutaline | drug_modules\respiratory\short_acting_beta_2_agonist_sabas.py | full_structure | 22 fields
+Teriparatide | drug_modules\endocrinology_other\osteoporosis_other.py | full_structure | 24 fields
+Testosterone | drug_modules\endocrinology_other\sex_hormones.py | full_structure | 23 fields
+Tetrabenazine | drug_modules\neurological\antiparkinsonian.py | full_structure | 23 fields
+Tetracycline | drug_modules\antimicrobial\antibiotics\tetracyclines.py | full_structure | 27 fields
+Tezepelumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 25 fields
+Theophylline | drug_modules\respiratory\methylxanthines.py | full_structure | 24 fields
+Thiopental | drug_modules\supportive\sedatives_anesthetics_icu.py | full_structure | 25 fields
+Ticagrelor | drug_modules\cardiovascular\anticoagulants.py | full_structure | 27 fields
+Ticlopidine | drug_modules\cardiovascular_other\antiplatelets.py | full_structure | 27 fields
+Tigecycline | drug_modules\infectious_other\tetracyclines.py | full_structure | 23 fields
+Timolol | drug_modules\cardiovascular\beta_blockers\non_selective.py | full_structure | 23 fields
+Timolol eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Tiotropium | drug_modules\respiratory\anticholinergic_long_actings.py | full_structure | 23 fields
+Tiotropium/Olodaterol inhaler | drug_modules\respiratory\combination_inhalers.py | full_structure | 25 fields
+Tirzepatide | drug_modules\diabetes\glp1_agonists.py | full_structure | 26 fields
+Tizanidine | drug_modules\neurological\muscle_relaxants.py | full_structure | 22 fields
+Tobramycin | drug_modules\antimicrobial\antibiotics\aminoglycosides.py | full_structure | 27 fields
+Tobramycin eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Tocilizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Tofacitinib | drug_modules\gastrointestinal\jak_inhibitors.py | full_structure | 24 fields
+Tolterodine | drug_modules\urology.py | full_structure | 24 fields
+Topiramate | drug_modules\neurological\anticonvulsants.py | full_structure | 22 fields
+Topotecan | drug_modules\oncology\topoisomerase_inhibitors.py | full_structure | 23 fields
+Torsemide | drug_modules\cardiovascular\diuretics.py | full_structure | 16 fields
+Tramadol | drug_modules\analgesics\opioid_agonists.py | full_structure | 24 fields
+Tranexamic acid | drug_modules\hematology.py | full_structure | 24 fields
+Tranylcypromine | drug_modules\psychiatry_other\antidepressants.py | full_structure | 23 fields
+Trastuzumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Trastuzumab deruxtecan | drug_modules\oncology\monoclonal_antibodies_adcs.py | full_structure | 24 fields
+Travoprost | drug_modules\ophthalmology.py | full_structure | 23 fields
+Trazodone | drug_modules\psychiatry_other\antidepressants.py | full_structure | 23 fields
+Tretinoin topical | drug_modules\dermatology.py | full_structure | 24 fields
+Triamcinolone topical | drug_modules\dermatology.py | full_structure | 23 fields
+Trimebutine | drug_modules\gastrointestinal\antispasmodics.py | full_structure | 25 fields
+Trimethoprim-sulfamethoxazole | drug_modules\antimicrobial\antibiotics\sulfonamides.py | full_structure | 27 fields
+Tropicamide eye drops | drug_modules\ophthalmology.py | full_structure | 23 fields
+Ubrogepant | drug_modules\neurological\migraine_cgrp_drugs.py | full_structure | 23 fields
+Umeclidinium | drug_modules\respiratory\anticholinergic_long_actings.py | full_structure | 23 fields
+Umeclidinium/Vilanterol inhaler | drug_modules\respiratory\combination_inhalers.py | full_structure | 25 fields
+Upadacitinib | drug_modules\gastrointestinal\jak_inhibitors.py | full_structure | 24 fields
+Ustekinumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Valacyclovir | drug_modules\antimicrobial\antivirals\herpes.py | full_structure | 23 fields
+Valproate | drug_modules\neurological\anticonvulsants.py | full_structure | 26 fields
+Valsartan | drug_modules\cardiovascular\arbs.py | full_structure | 26 fields
+Vancomycin | drug_modules\antimicrobial\antibiotics\glycopeptides.py | full_structure | 27 fields
+Vardenafil | drug_modules\urology.py | full_structure | 24 fields
+Vasopressin | drug_modules\emergency\catecholamine_alpha__beta_agonists.py | full_structure | 25 fields
+Vecuronium | drug_modules\emergency\neuromuscular_blockers.py | full_structure | 25 fields
+Vedolizumab | drug_modules\miscellaneous\biological_drugs.py | full_structure | 23 fields
+Venlafaxine | drug_modules\psychiatry_other\snris.py | full_structure | 22 fields
+Verapamil | drug_modules\cardiovascular\calcium_blockers\non_dihydropyridines.py | full_structure | 23 fields
+Vericiguat | drug_modules\cardiovascular\other_cv.py | full_structure | 24 fields
+Vilanterol | drug_modules\respiratory\long_acting_beta_2_agonist_labas.py | full_structure | 23 fields
+Vildagliptin | drug_modules\diabetes\dpp_4_inhibitors.py | full_structure | 25 fields
+Vincristine | drug_modules\oncology\vinca_alkaloids.py | full_structure | 23 fields
+Vinpocetine | drug_modules\neurological\cerebral_circulation.py | full_structure | 24 fields
+Vitamin B12 | drug_modules\supportive\vitamin_b12s.py | full_structure | 24 fields
+Vitamin C | drug_modules\miscellaneous\vitamins.py | full_structure | 22 fields
+Vitamin D | drug_modules\supportive\vitamin_ds.py | full_structure | 24 fields
+Vitamin D3 (Cholecalciferol) | drug_modules\miscellaneous\vitamins.py | full_structure | 24 fields
+Vitamin E | drug_modules\miscellaneous\vitamins.py | full_structure | 22 fields
+Vitamin K | drug_modules\hematology.py | full_structure | 24 fields
+Vonoprazan | drug_modules\gastrointestinal\pcab.py | full_structure | 22 fields
+Voriconazole | drug_modules\antimicrobial\antifungals\azoles.py | full_structure | 24 fields
+Warfarin | drug_modules\cardiovascular\anticoagulants.py | full_structure | 24 fields
+Zafirlukast | drug_modules\respiratory\leukotriene_receptor_antagonists.py | full_structure | 23 fields
+Zanamivir | drug_modules\antimicrobial\antivirals\influenza.py | full_structure | 27 fields
+Ziprasidone | drug_modules\psychiatry_other\antipsychotics.py | full_structure | 23 fields
+Zoledronic acid | drug_modules\emergency\electrolytes.py | full_structure | 23 fields
+Zonisamide | drug_modules\neurological\anticonvulsants.py | full_structure | 23 fields

@@ -2,7 +2,7 @@
 
 # Beta-2 Agonist (Short-acting)s
 
-BETA_2_AGONIST_(SHORT_ACTING)S_DRUGS = {
+BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
     "Salbutamol": {'group': 'Respiratory - Beta-2 Agonist (Short-acting)', 'vietnamese_name':
         'Salbutamol, Albuterol, Ventolin, Salbutamol', 'administration': ['INH',
         'IV', 'PO', 'NEB'], 'indications': ['Hen phế quản', 'COPD',
@@ -181,4 +181,4 @@ BETA_2_AGONIST_(SHORT_ACTING)S_DRUGS = {
         'A - Dựa trên FDA drug labels, GINA guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         }}}
 
-__all__ = ['BETA_2_AGONIST_(SHORT_ACTING)S_DRUGS']
+__all__ = ['BETA_2_AGONIST_SHORT_ACTING_DRUGS']

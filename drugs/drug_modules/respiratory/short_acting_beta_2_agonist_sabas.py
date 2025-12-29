@@ -3,7 +3,7 @@ Active module - contains all respiratory drug data"""
 
 # Short-acting Beta-2 Agonist (SABA)s
 
-SHORT_ACTING_BETA_2_AGONIST_(SABA)S_DRUGS = {
+SHORT_ACTING_BETA_2_AGONIST_SABA_DRUGS = {
     "Salbutamol": {'group': 'Respiratory - Short-acting Beta-2 Agonist (SABA)',
         'vietnamese_name': 'Salbutamol, Ventolin', 'administration': [
         'Inhalation', 'IV', 'PO'], 'indications': ['Hen phế quản (cắt cơn)',
@@ -38,10 +38,10 @@ SHORT_ACTING_BETA_2_AGONIST_(SABA)S_DRUGS = {
         'protein_binding': '10%', 'clearance':
         'Gan (chuyển hóa qua sulfation, một phần qua CYP450), thận (thải trừ)'},
         'storage':
-        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. Kiểm tra hạn sử dụng định kỳ.'
-        ,         'black_box_warnings':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. Kiểm tra hạn sử dụng định kỳ.',
+        'black_box_warnings':
         'Không dùng đơn độc cho hen phế quản mạn tính - phải kết hợp với corticosteroid dạng hít. Dùng quá mức (>4 lần/ngày) có thể gây tăng nguy cơ tử vong do hen. Nếu cần dùng thường xuyên → cần đánh giá lại và tăng điều trị kiểm soát.'
-        }},
+    },
     "Terbutaline": {'group': 'Respiratory - Short-acting Beta-2 Agonist (SABA)',
         'vietnamese_name': 'Terbutaline, Bricanyl', 'administration': [
         'Inhalation', 'SC', 'PO'], 'indications': ['Hen phế quản (cắt cơn)',
@@ -80,7 +80,43 @@ SHORT_ACTING_BETA_2_AGONIST_(SABA)S_DRUGS = {
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. Kiểm tra hạn sử dụng định kỳ.'
         , 'black_box_warnings':
-        'Không dùng đơn độc cho hen phế quản mạn tính - phải kết hợp với corticosteroid dạng hít. Dùng quá mức (>4 lần/ngày) có thể gây tăng nguy cơ tử vong do hen. Nếu cần dùng thường xuyên → cần đánh giá lại và tăng điều trị kiểm soát.'
-        }}
+        'Không dùng đơn độc cho hen phế quản mạn tính - phải kết hợp với corticosteroid dạng hít. Dùng quá mức (>4 lần/ngày) có thể gây tăng nguy cơ tử vong do hen. Nếu cần dùng thường xuyên → cần đánh giá lại và tăng điều trị kiểm soát.',
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation_details": ""
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "treatment": "",
+            "antidote": None
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": ""
+        },
+        "administration_instructions": {
+            "preparation": "",
+            "administration": "",
+            "monitoring": []
+        },
+        "references": {
+            "primary": [],
+            "guidelines": [],
+            "other": []
+        },
+        }
+    }
 
-__all__ = ['SHORT_ACTING_BETA_2_AGONIST_(SABA)S_DRUGS']
+__all__ = ['SHORT_ACTING_BETA_2_AGONIST_SABA_DRUGS']

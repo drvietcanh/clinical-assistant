@@ -1,88 +1,66 @@
 # 🚀 BẮT ĐẦU TẠI ĐÂY
 
-## 📋 Cho Phiên Mới
-
-**Bạn mới bắt đầu? Đọc các file này theo thứ tự:**
-
-1. **`HUONG_DAN_PHIEN_SAU.md`** ⭐ - Hướng dẫn chi tiết cho phiên sau
-2. **`TIEN_TRINH_VALIDATION_CHI_TIET.md`** ⭐ - Tiến trình chi tiết
-3. **`priority_tasks.md`** - Danh sách công việc ưu tiên
+**Chỉ cần đọc file này để bắt đầu!**
 
 ---
 
-## ⚡ Quick Start
+## ⚡ LỆNH NHANH (3 lệnh quan trọng nhất)
 
+### 1. Kiểm tra trạng thái:
 ```bash
-# 1. Kiểm tra trạng thái
-python quick_validation_check.py
+python comprehensive_drug_management_system.py stats
+```
 
-# 2. Xem báo cáo
-# Mở drug_validation_report.html trong trình duyệt
+### 2. Tìm kiếm thuốc:
+```bash
+python comprehensive_drug_management_system.py search <tên>
+```
 
-# 3. Xem công việc
-# Mở priority_tasks.md
-
-# 4. Bắt đầu làm việc
-# Làm theo hướng dẫn trong HUONG_DAN_PHIEN_SAU.md
+### 3. Cập nhật danh sách (sau khi sửa):
+```bash
+python create_drug_lists.py
 ```
 
 ---
 
-## 📊 Trạng Thái Hiện Tại
+## 📊 TRẠNG THÁI HIỆN TẠI
 
-- ✅ **Bộ công cụ:** Hoàn thành 100%
-- ✅ **Lỗi nghiêm trọng:** 0 (sau auto fix)
-- ⏳ **Áp dụng auto fix:** Chưa làm
-- ⏳ **Bổ sung enhanced fields:** Chưa bắt đầu
+- **721 thuốc** đã được quản lý
+- **716 thuốc** (99%) có đủ 14 field
+- **5 thuốc** cần bổ sung field
 
-**Database:** 666 thuốc, 161 hoàn chỉnh (24.2%)
-
----
-
-## 🎯 Công Việc Ưu Tiên
-
-1. **Áp dụng auto fix** (HIGH)
-   - File: `auto_fix_code_to_add.py`
-   - Hướng dẫn: `HUONG_DAN_PHIEN_SAU.md` - Bước 2
-
-2. **Bổ sung contraindications_detail** (HIGH)
-   - Thiếu: 346 thuốc (52%)
-   - Hướng dẫn: `HUONG_DAN_PHIEN_SAU.md` - Bước 3.1
-
-3. **Bổ sung reversal_agents** (HIGH)
-   - Thiếu: 175 thuốc (26%)
-   - Hướng dẫn: `HUONG_DAN_PHIEN_SAU.md` - Bước 3.2
+### Xem thuốc cần sửa:
+→ Mở file: `drugs_missing_fields.txt`
 
 ---
 
-## 📁 File Quan Trọng
+## 📁 FILE QUAN TRỌNG
 
-### Để Bắt Đầu
-- `HUONG_DAN_PHIEN_SAU.md` ⭐⭐⭐
-- `TIEN_TRINH_VALIDATION_CHI_TIET.md` ⭐⭐⭐
-- `priority_tasks.md` ⭐⭐
+### Tìm kiếm nhanh:
+→ `drugs_list_simple.txt` - Ctrl+F để tìm
 
-### Để Làm Việc
-- `auto_fix_code_to_add.py` ⭐⭐
-- `drug_validation_report.html` ⭐
-- `validation_errors.csv` ⭐
+### Xem chi tiết:
+→ `drugs_list_detailed.txt`
 
-### Để Tham Khảo
-- `QUICK_START_VALIDATION.md`
-- `README_DRUG_VALIDATION.md`
-- `COMPLETE_VALIDATION_TOOLKIT.md`
+### Xem cần sửa:
+→ `drugs_missing_fields.txt`
 
 ---
 
-## ✅ Checklist
+## 📖 TÀI LIỆU ĐẦY ĐỦ
 
-- [ ] Đã đọc `HUONG_DAN_PHIEN_SAU.md`
-- [ ] Đã đọc `TIEN_TRINH_VALIDATION_CHI_TIET.md`
-- [ ] Đã chạy `quick_validation_check.py`
-- [ ] Đã xem `priority_tasks.md`
-- [ ] Đã chọn công việc để bắt đầu
+→ Xem: `MASTER_GUIDE.md` - Chứa tất cả thông tin chi tiết
 
 ---
 
-**Cập nhật:** 2025-02-18
+## ✅ QUY TRÌNH LÀM VIỆC
 
+1. Chạy `stats` → Xem trạng thái
+2. Mở `drugs_missing_fields.txt` → Xem cần sửa
+3. Sửa thuốc
+4. Chạy `create_drug_lists.py` → Cập nhật
+5. Chạy `stats` → Kiểm tra lại
+
+---
+
+**Xem chi tiết**: `MASTER_GUIDE.md`

@@ -365,8 +365,8 @@ GOUT_MEDICATIONS_DRUGS = {
             "EULAR Guidelines - Gout Management",
             "FDA Drug Information - Probenecid",
             "UpToDate - Gout Treatment"
-        ]
-                  "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 },
     
     "Febuxostat": {

@@ -137,7 +137,8 @@ SGLT2_INHIBITORS_DRUGS = {
             'EMPEROR-Reduced Study',
             'EMPEROR-Preserved Study',
             'FDA Drug Safety Communication - SGLT2 Inhibitors and DKA'
-        ]         "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 },
     "Dapagliflozin": {'group': 'Diabetes - SGLT2 Inhibitor', 'vietnamese_name':
         'Dapagliflozin, Forxiga', 'administration': ['PO'], 'indications': [
@@ -264,7 +265,8 @@ SGLT2_INHIBITORS_DRUGS = {
             'DECLARE-TIMI 58 Study',
             'DAPA-HF Study',
             'FDA Drug Safety Communication - SGLT2 Inhibitors and DKA'
-        ]         "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 },
     
     "Canagliflozin": {

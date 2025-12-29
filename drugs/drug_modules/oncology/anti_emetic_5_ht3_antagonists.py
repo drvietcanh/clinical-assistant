@@ -79,7 +79,8 @@ ANTI_EMETIC_5_HT3_ANTAGONISTS_DRUGS = {
         'UpToDate - Granisetron Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-15', 'evidence_level':
-        'High (FDA-approved, extensive clinical data)'}         "reversal_agents": {
+        'High (FDA-approved, extensive clinical data)'},
+        "reversal_agents": {
              "available": False,
              "agents": []
          },
@@ -149,7 +150,8 @@ ANTI_EMETIC_5_HT3_ANTAGONISTS_DRUGS = {
         'UpToDate - Palonosetron Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-15', 'evidence_level':
-        'High (FDA-approved, extensive clinical data)'}         "reversal_agents": {
+        'High (FDA-approved, extensive clinical data)'},
+        "reversal_agents": {
              "available": False,
              "agents": []
          },

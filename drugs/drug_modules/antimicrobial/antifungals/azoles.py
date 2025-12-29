@@ -262,9 +262,9 @@ AZOLES_DRUGS = {
             "FDA Black Box Warning - Fluconazole and Pregnancy (Category D in 1st trimester)",
             "FDA Drug Information - Fluconazole",
             "UpToDate - Fluconazole Drug Information"
-        ]
+        ],
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -501,9 +501,9 @@ AZOLES_DRUGS = {
             "FDA Black Box Warning - Itraconazole and Heart Failure",
             "FDA Black Box Warning - Itraconazole and Pregnancy (Category D)",
             "FDA Black Box Warning - Itraconazole and Drug Interactions (CYP3A4)"
-        ]
+        ],
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -730,9 +730,9 @@ AZOLES_DRUGS = {
             ],
             "last_updated": "2025-01-15",
             "evidence_level": "High (FDA-approved, extensive clinical data)"
-        }
+        },
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -960,9 +960,9 @@ AZOLES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High (FDA-approved, extensive clinical data, IDSA guidelines)"
-        }
+        },
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },

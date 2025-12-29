@@ -2,7 +2,7 @@
 
 # Analgesic/Antipyretic/NSAID
 
-ANALGESIC/ANTIPYRETIC/NSAID_DRUGS = {
+ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
     "Ibuprofen": {'group': 'Analgesic/Antipyretic/NSAID', 'vietnamese_name':
         'Ibuprofen, Brufen, Advil', 'administration': ['PO', 'IV'],
         'indications': ['Sốt', 'Đau nhẹ đến trung bình', 'Viêm khớp',
@@ -170,4 +170,4 @@ ANALGESIC/ANTIPYRETIC/NSAID_DRUGS = {
         'A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         }}}
 
-__all__ = ['ANALGESIC/ANTIPYRETIC/NSAID_DRUGS']
+__all__ = ['ANALGESIC_ANTIPYRETIC_NSAID_DRUGS']

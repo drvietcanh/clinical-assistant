@@ -186,7 +186,8 @@ CALCIUMS_DRUGS = {
         'UpToDate - Calcium supplementation',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
         ], 'last_updated': '2025-02-04', 'evidence_level':
-        'A - Dựa trên FDA drug labels, IOM/NOF guidelines, và dữ liệu lâm sàng'}         "black_box_warnings": None,
+        'A - Dựa trên FDA drug labels, IOM/NOF guidelines, và dữ liệu lâm sàng'},
+        "black_box_warnings": None,
 }}
 
 __all__ = ['CALCIUMS_DRUGS']

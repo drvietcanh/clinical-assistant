@@ -1449,8 +1449,8 @@ ANTIPARKINSONIAN_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
-                  "reversal_agents": {
+        },
+        "reversal_agents": {
                   "available": False,
                   "agents": []
               },
@@ -1596,8 +1596,8 @@ ANTIPARKINSONIAN_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
-                  "reversal_agents": {
+        },
+        "reversal_agents": {
                   "available": False,
                   "agents": []
               },

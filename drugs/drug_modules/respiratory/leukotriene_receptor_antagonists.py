@@ -171,7 +171,8 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'references': {'primary_sources': [
         'FDA Label: Tilade (Nedocromil)',
         'UpToDate: Mast cell stabilizers in asthma'], 'last_updated': '2025-02-05',
-        'evidence_level': 'High - FDA approved'}         "black_box_warnings": None,
+        'evidence_level': 'High - FDA approved'},
+        "black_box_warnings": None,
 },
     
     "Zafirlukast": {

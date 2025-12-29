@@ -1,0 +1,175 @@
+# DANH SACH THUOC TIM THAY BANG NHIEU PHUONG PHAP
+# Tong so: 172
+
+5-Fluorouracil | drugs\drug_modules\oncology\antimetabolites.py | Methods: method1, method2, method3, method4
+Acyclovir eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Acyclovir eye ointment | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Aluminum hydroxide/Magnesium hydroxide | drugs\drug_modules\gastrointestinal\antacids.py | Methods: method1, method2, method3, method4, method5
+Amlodipine/Olmesartan | drugs\drug_modules\cardiovascular\fixed_dose_combinations.py | Methods: method2, method3, method4, method5
+Amlodipine/Valsartan | drugs\drug_modules\cardiovascular\fixed_dose_combinations.py | Methods: method2, method3, method4, method5
+Amoxicillin suspension | drugs\drug_modules\infectious_other\beta_lactams.py | Methods: method1, method2, method3, method4
+Amoxicillin-clavulanate | drugs\drug_modules\antimicrobial\antibiotics\penicillins.py | Methods: method2, method3, method4, method5, method1
+Amphotericin B | drugs\drug_modules\antimicrobial\antifungals\polyenes.py | Methods: method1, method2, method3, method4
+Ampicillin-sulbactam | drugs\drug_modules\antimicrobial\antibiotics\penicillins.py | Methods: method2, method3, method4, method5, method1
+Andexanet alfa | drugs\drug_modules\hematology.py | Methods: method1, method2, method3, method4, method5
+Artemether-lumefantrine | drugs\drug_modules\infectious_other\antimalarials.py | Methods: method1, method2, method3, method4, method5
+Artificial tears (Carboxymethylcellulose) | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Aspirin/Carisoprodol | drugs\drug_modules\analgesics\pain_muscle_relaxant_combinations.py | Methods: method1, method2, method3, method4, method5
+Atazanavir (boosted with ritonavir/cobicistat) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Atropine eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Azelaic Acid | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Azelaic acid topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Azelastine eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Azelastine/Fluticasone nasal spray | drugs\drug_modules\ent_oral_nasal_combinations.py | Methods: method1, method2, method3, method4, method5
+Azilsartan medoxomil | drugs\drug_modules\cardiovascular\arbs.py | Methods: method2, method3, method4, method5
+Beclomethasone inhaled | drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py | Methods: method1, method2, method3, method4, method5
+Bempedoic acid | drugs\drug_modules\cardiovascular\cholesterol_absorption_inhibitors.py | Methods: method2, method3, method4, method5
+Benzoyl peroxide topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Betamethasone topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Betamethasone/Clotrimazole topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Bictegravir (BIC) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Bictegravir/Emtricitabine/Tenofovir alafenamide (BIC/FTC/TAF) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Bismuth subsalicylate | drugs\drug_modules\gastrointestinal\antidiarrheals.py | Methods: method1, method2, method3, method4, method5
+Brentuximab vedotin | drugs\drug_modules\oncology\monoclonal_antibodies_adcs.py | Methods: method1, method2, method3, method4
+Budesonide inhaled | drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py | Methods: method1, method2, method3, method4, method5
+Budesonide/Formoterol inhaler | drugs\drug_modules\respiratory\combination_inhalers.py | Methods: method1, method2, method3, method4, method5
+Cabotegravir + Rilpivirine (Long-acting IM) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Calcitriol topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Calcium (elemental) | drugs\drug_modules\miscellaneous\vitamins.py | Methods: method1, method2, method3, method4, method5
+Calcium carbonate | drugs\drug_modules\gastrointestinal\antacids.py | Methods: method1, method2, method3, method4, method5
+Calcium chloride | drugs\drug_modules\emergency\electrolytes.py | Methods: method1, method2, method3, method4, method5
+Calcium gluconate | drugs\drug_modules\emergency\electrolytes.py | Methods: method1, method2, method3, method4
+Cerebroprotein hydrolysate (khác) | drugs\drug_modules\neurological\cerebral_circulation.py | Methods: method1, method2, method3, method4, method5
+Certolizumab pegol | drugs\drug_modules\miscellaneous\biological_drugs.py | Methods: method1, method2, method3, method4, method5
+Cetirizine/Pseudoephedrine | drugs\drug_modules\ent_oral_nasal_combinations.py | Methods: method1, method2, method3, method4, method5
+Ciprofloxacin eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Citicoline/Piracetam | drugs\drug_modules\neurological\neurological_combinations.py | Methods: method1, method2, method3, method4, method5
+Clindamycin topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Clotrimazole (vaginal) | drugs\drug_modules\obstetrics_gynecology.py | Methods: method1, method2, method3, method4, method5
+Clotrimazole topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Cobicistat (COBI) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Cyclopentolate eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Cycloserine / Terizidone | drugs\drug_modules\infectious_other\antituberculars.py | Methods: method1, method2, method3, method4, method5
+Darunavir (boosted with ritonavir/cobicistat) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Dexamethasone eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Diclofenac eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Diclofenac gel | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Dimethyl fumarate | drugs\drug_modules\neurological\multiple_sclerosis_drugs.py | Methods: method1, method2, method3, method4, method5
+Dolutegravir (DTG) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Econazole topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Efavirenz (EFV) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Efavirenz/Tenofovir disoproxil fumarate/Emtricitabine (EFV/TDF/FTC) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Emtricitabine (FTC) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Epoetin alfa | drugs\drug_modules\hematology.py | Methods: method1, method2, method3, method4, method5
+Erythromycin eye ointment | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Erythromycin topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Ethinyl estradiol + Levonorgestrel | drugs\drug_modules\obstetrics_gynecology.py | Methods: method1, method2, method3, method4
+Fexofenadine/Pseudoephedrine | drugs\drug_modules\ent_oral_nasal_combinations.py | Methods: method1, method2, method3, method4, method5
+Fluticasone inhaled | drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py | Methods: method1, method2, method3, method4, method5
+Fluticasone/Salmeterol inhaler | drugs\drug_modules\respiratory\combination_inhalers.py | Methods: method1, method2, method3, method4, method5
+Fluticasone/Umeclidinium/Vilanterol inhaler | drugs\drug_modules\respiratory\combination_inhalers.py | Methods: method1, method2, method3, method4, method5
+Folic Acid | drugs\drug_modules\miscellaneous\vitamins.py | Methods: method1, method2, method3, method4, method5
+Folic acid | drugs\drug_modules\supportive\folates.py | Methods: method1, method2, method3, method4
+Fusidic Acid | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Fusidic acid/Betamethasone topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Ganciclovir eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Gentamicin eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Gentamicin/Betamethasone/Clotrimazole topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Ginkgo biloba extract | drugs\drug_modules\neurological\cerebral_circulation.py | Methods: method1, method2, method3, method4, method5
+Ginkgo biloba/Vinpocetine | drugs\drug_modules\neurological\neurological_combinations.py | Methods: method1, method2, method3, method4, method5
+High-intensity statin (đột quỵ/TIA) | drugs\drug_modules\cardiovascular_other\statins.py | Methods: method1, method2, method3, method4, method5
+Hydrocortisone topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Hyoscine butylbromide | drugs\drug_modules\gastrointestinal\antispasmodics.py | Methods: method1, method2, method3, method4, method5
+Icosapent ethyl | drugs\drug_modules\cardiovascular\triglyceride_lowering.py | Methods: method1, method2, method3, method4, method5
+Imipenem-cilastatin | drugs\drug_modules\antimicrobial\antibiotics\beta_lactams.py | Methods: method2, method3, method4
+Insulin Aspart | drugs\drug_modules\diabetes\specific_insulins.py | Methods: method1, method2, method3, method4, method5
+Insulin Degludec | drugs\drug_modules\diabetes\specific_insulins.py | Methods: method1, method2, method3, method4, method5
+Insulin Detemir | drugs\drug_modules\diabetes\specific_insulins.py | Methods: method1, method2, method3, method4, method5
+Insulin Glargine | drugs\drug_modules\diabetes\specific_insulins.py | Methods: method1, method2, method3, method4, method5
+Insulin Glulisine | drugs\drug_modules\diabetes\specific_insulins.py | Methods: method1, method2, method3, method4, method5
+Insulin Lispro | drugs\drug_modules\diabetes\specific_insulins.py | Methods: method1, method2, method3, method4, method5
+Insulin NPH | drugs\drug_modules\diabetes\specific_insulins.py | Methods: method1, method2, method3, method4, method5
+Insulin Regular | drugs\drug_modules\diabetes\specific_insulins.py | Methods: method1, method2, method3, method4, method5
+Ipratropium/Salbutamol inhaler | drugs\drug_modules\respiratory\combination_inhalers.py | Methods: method1, method2, method3, method4, method5
+Isosorbide mononitrate | drugs\drug_modules\cardiovascular\vasodilators.py | Methods: method2, method3, method4
+Ivermectin cream | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Ketoconazole topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Ketoprofen gel | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Ketorolac eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Ketotifen eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Lamivudine (3TC) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Levodopa/Carbidopa | drugs\drug_modules\neurological\antiparkinsonian.py | Methods: method1, method2, method3, method4
+Linezolid (lao MDR/XDR) | drugs\drug_modules\infectious_other\antituberculars.py | Methods: method1, method2, method3, method4, method5
+Lisinopril/Hydrochlorothiazide | drugs\drug_modules\cardiovascular\fixed_dose_combinations.py | Methods: method2, method3, method4, method5
+Loratadine/Pseudoephedrine | drugs\drug_modules\ent_oral_nasal_combinations.py | Methods: method1, method2, method3, method4, method5
+Losartan/Hydrochlorothiazide | drugs\drug_modules\cardiovascular\fixed_dose_combinations.py | Methods: method2, method3, method4, method5
+Magnesium oxide | drugs\drug_modules\emergency\electrolytes.py | Methods: method1, method2, method3, method4, method5
+Magnesium sulfate | drugs\drug_modules\emergency\electrolytes.py | Methods: method1, method2, method3, method4
+Metformin/Dapagliflozin | drugs\drug_modules\diabetes\fixed_dose_combinations.py | Methods: method2, method3, method4, method5
+Metformin/Empagliflozin | drugs\drug_modules\diabetes\fixed_dose_combinations.py | Methods: method2, method3, method4, method5
+Metformin/Glibenclamide | drugs\drug_modules\diabetes\fixed_dose_combinations.py | Methods: method2, method3, method4, method5
+Metformin/Pioglitazone | drugs\drug_modules\diabetes\fixed_dose_combinations.py | Methods: method2, method3, method4, method5
+Metformin/Sitagliptin | drugs\drug_modules\diabetes\fixed_dose_combinations.py | Methods: method2, method3, method4, method5
+Metronidazole (vaginal gel) | drugs\drug_modules\obstetrics_gynecology.py | Methods: method1, method2, method3, method4, method5
+Metronidazole topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Miconazole (vaginal) | drugs\drug_modules\obstetrics_gynecology.py | Methods: method1, method2, method3, method4, method5
+Miconazole topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Miconazole/Hydrocortisone topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Midazolam (IV/ICU) | drugs\drug_modules\supportive\sedatives_anesthetics_icu.py | Methods: method1, method2, method3, method4, method5
+Mometasone topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Moxifloxacin eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Mupirocin topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Nepafenac eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Olanzapine/Fluoxetine | drugs\drug_modules\neurological\neurological_combinations.py | Methods: method1, method2, method3, method4, method5
+Olopatadine eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Omega-3 acid ethyl esters | drugs\drug_modules\cardiovascular\triglyceride_lowering.py | Methods: method1, method2, method3, method4, method5
+PAS (para-aminosalicylic acid) | drugs\drug_modules\infectious_other\antituberculars.py | Methods: method1, method2, method3, method4, method5
+Paracetamol/Carisoprodol | drugs\drug_modules\analgesics\pain_muscle_relaxant_combinations.py | Methods: method1, method2, method3, method4, method5
+Paracetamol/Chlorzoxazone | drugs\drug_modules\analgesics\pain_muscle_relaxant_combinations.py | Methods: method1, method2, method3, method4, method5
+Paracetamol/Methocarbamol | drugs\drug_modules\analgesics\pain_muscle_relaxant_combinations.py | Methods: method1, method2, method3, method4, method5
+Paracetamol/Orphenadrine | drugs\drug_modules\analgesics\pain_muscle_relaxant_combinations.py | Methods: method1, method2, method3, method4, method5
+Penicillin G | drugs\drug_modules\antimicrobial\antibiotics\beta_lactams.py | Methods: method2, method3, method4
+Penicillin V | drugs\drug_modules\infectious_other\beta_lactams.py | Methods: method1, method2, method3, method4
+Permethrin topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Phenylephrine eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Pilocarpine eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Piperacillin-tazobactam | drugs\drug_modules\antimicrobial\antibiotics\beta_lactams.py | Methods: method2, method3, method4
+Piracetam/Vinpocetine | drugs\drug_modules\neurological\neurological_combinations.py | Methods: method1, method2, method3, method4, method5
+Polyethylene glycol 3350 | drugs\drug_modules\gastrointestinal\laxatives.py | Methods: method1, method2, method3, method4, method5
+Polymyxin B | drugs\drug_modules\antimicrobial\antibiotics\polymyxins.py | Methods: method2, method3, method4
+Polymyxin B/Trimethoprim eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Potassium phosphate | drugs\drug_modules\emergency\electrolytes.py | Methods: method1, method2, method3, method4, method5
+Prednisolone eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Rilpivirine (RPV) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Ritonavir (low-dose booster) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Sacituzumab govitecan | drugs\drug_modules\oncology\monoclonal_antibodies_adcs.py | Methods: method1, method2, method3, method4
+Sacubitril-valsartan | drugs\drug_modules\cardiovascular\other_cv.py | Methods: method1, method2, method3, method4
+Salicylic Acid | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Senna (sennosides) | drugs\drug_modules\gastrointestinal\laxatives.py | Methods: method1, method2, method3, method4, method5
+Sodium bicarbonate | drugs\drug_modules\emergency\electrolytes.py | Methods: method1, method2, method3, method4, method5
+Sodium phosphate | drugs\drug_modules\emergency\electrolytes.py | Methods: method1, method2, method3, method4, method5
+Sodium polystyrene sulfonate | drugs\drug_modules\emergency\electrolytes.py | Methods: method1, method2, method3, method4, method5
+Sofosbuvir/Velpatasvir | drugs\drug_modules\antimicrobial\antivirals\hepatitis.py | Methods: method2, method3, method4, method5
+Tacrolimus topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4
+Tenofovir alafenamide (TAF) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Tenofovir alafenamide/Emtricitabine (TAF/FTC) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Tenofovir disoproxil fumarate (TDF) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Tenofovir disoproxil fumarate/Emtricitabine (TDF/FTC) | drugs\drug_modules\antimicrobial\antivirals\hiv_arvs.py | Methods: method2, method3, method4, method5
+Terbinafine topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Timolol eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Tiotropium/Olodaterol inhaler | drugs\drug_modules\respiratory\combination_inhalers.py | Methods: method1, method2, method3, method4, method5
+Tobramycin eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4, method5
+Tranexamic acid | drugs\drug_modules\hematology.py | Methods: method1, method2, method3, method4, method5
+Trastuzumab deruxtecan | drugs\drug_modules\oncology\monoclonal_antibodies_adcs.py | Methods: method1, method2, method3, method4
+Tretinoin topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Triamcinolone topical | drugs\drug_modules\dermatology.py | Methods: method1, method2, method3, method4, method5
+Trimethoprim-sulfamethoxazole | drugs\drug_modules\antimicrobial\antibiotics\sulfonamides.py | Methods: method2, method3, method4
+Tropicamide eye drops | drugs\drug_modules\ophthalmology.py | Methods: method1, method2, method3, method4
+Umeclidinium/Vilanterol inhaler | drugs\drug_modules\respiratory\combination_inhalers.py | Methods: method1, method2, method3, method4, method5
+Vitamin B12 | drugs\drug_modules\supportive\vitamin_b12s.py | Methods: method1, method2, method3, method4, method5
+Vitamin C | drugs\drug_modules\miscellaneous\vitamins.py | Methods: method1, method2, method3, method4, method5
+Vitamin D | drugs\drug_modules\supportive\vitamin_ds.py | Methods: method1, method2, method3, method4
+Vitamin D3 (Cholecalciferol) | drugs\drug_modules\miscellaneous\vitamins.py | Methods: method1, method2, method3, method4, method5
+Vitamin E | drugs\drug_modules\miscellaneous\vitamins.py | Methods: method1, method2, method3, method4, method5
+Vitamin K | drugs\drug_modules\hematology.py | Methods: method1, method2, method3, method4, method5
+Zoledronic acid | drugs\drug_modules\emergency\electrolytes.py | Methods: method1, method2, method3, method4, method5

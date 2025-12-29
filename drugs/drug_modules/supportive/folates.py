@@ -140,7 +140,8 @@ FOLATES_DRUGS = {
             'ACOG Guidelines - Folic Acid Supplementation',
             'WHO Guidelines - Folic Acid Supplementation',
             'FDA Drug Information - Folic Acid'
-        ]         "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 }}
 
 __all__ = ['FOLATES_DRUGS']

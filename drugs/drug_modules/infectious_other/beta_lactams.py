@@ -1258,8 +1258,8 @@ BETA_LACTAMS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
-                  "drug_interactions": {
+        },
+        "drug_interactions": {
                   "major": [
                       {
                           "drug": "Warfarin: có thể tăng INR",
@@ -1389,8 +1389,8 @@ BETA_LACTAMS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
-                  "drug_interactions": {
+        },
+        "drug_interactions": {
                   "major": [
                       {
                           "drug": "Warfarin: có thể tăng INR",
@@ -1525,8 +1525,8 @@ BETA_LACTAMS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
-                  "drug_interactions": {
+        },
+        "drug_interactions": {
                   "major": [
                       {
                           "drug": "Warfarin: có thể tăng INR",

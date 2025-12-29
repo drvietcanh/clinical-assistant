@@ -581,8 +581,8 @@ TETRACYCLINES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
-                  "pregnancy_lactation": {
+        },
+        "pregnancy_lactation": {
                   "fda_category": "D - Sử dụng nếu lợi ích > nguy cơ",
                   "pregnancy_details": "Category D - Sử dụng nếu lợi ích > nguy cơ - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
                   "lactation": {

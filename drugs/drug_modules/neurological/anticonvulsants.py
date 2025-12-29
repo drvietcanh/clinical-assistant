@@ -161,7 +161,8 @@ ANTICONVULSANTS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
         ], 'last_updated': '2024-12-19', 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }         "reversal_agents": {
+        },
+        "reversal_agents": {
              "available": False,
              "agents": []
          },
@@ -973,7 +974,8 @@ ANTICONVULSANTS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
         ], 'last_updated': '2025-02-05', 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }         "reversal_agents": {
+        },
+        "reversal_agents": {
              "available": False,
              "agents": []
          },

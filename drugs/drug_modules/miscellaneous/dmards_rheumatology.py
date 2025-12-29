@@ -506,8 +506,8 @@ DMARDS_RHEUMATOLOGY_DRUGS = {
             "EULAR Guidelines - Rheumatoid Arthritis",
             "FDA Drug Information - Hydroxychloroquine",
             "AAO Guidelines - Retinal Toxicity Screening"
-        ]
-              "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 },
 }
 

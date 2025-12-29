@@ -85,7 +85,17 @@ PCSK9_INHIBITORS = {
         },
         "overdose_management": "Chưa có báo cáo quá liều. Nếu tiêm quá liều, theo dõi các tác dụng phụ và điều trị hỗ trợ.",
         "administration_instructions": "Tiêm dưới da (bụng, đùi, hoặc cánh tay). Để ở nhiệt độ phòng 30 phút trước khi tiêm. Không lắc. Luân phiên vị trí tiêm. Có thể tự tiêm sau khi được hướng dẫn.",
-        "references": "FDA Label (Praluent), UpToDate - PCSK9 Inhibitors, AHA/ACC Guidelines 2018 - Cholesterol Management"
+        "references": "FDA Label (Praluent), UpToDate - PCSK9 Inhibitors, AHA/ACC Guidelines 2018 - Cholesterol Management",
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": ""
+        },
     },
     
     "Evolocumab": {
@@ -172,7 +182,17 @@ PCSK9_INHIBITORS = {
         },
         "overdose_management": "Chưa có báo cáo quá liều. Nếu tiêm quá liều, theo dõi các tác dụng phụ và điều trị hỗ trợ.",
         "administration_instructions": "Tiêm dưới da (bụng, đùi, hoặc cánh tay). Để ở nhiệt độ phòng 30 phút trước khi tiêm. Không lắc. Luân phiên vị trí tiêm. Có thể tự tiêm sau khi được hướng dẫn.",
-        "references": "FDA Label (Repatha), UpToDate - PCSK9 Inhibitors, AHA/ACC Guidelines 2018 - Cholesterol Management"
+        "references": "FDA Label (Repatha), UpToDate - PCSK9 Inhibitors, AHA/ACC Guidelines 2018 - Cholesterol Management",
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": ""
+        },
     },
     
     "Inclisiran": {
@@ -255,7 +275,17 @@ PCSK9_INHIBITORS = {
         },
         "overdose_management": "Chưa có báo cáo quá liều. Nếu tiêm quá liều, theo dõi các tác dụng phụ và điều trị hỗ trợ.",
         "administration_instructions": "Tiêm dưới da (bụng, đùi, hoặc cánh tay). Để ở nhiệt độ phòng 30 phút trước khi tiêm. Không lắc. Luân phiên vị trí tiêm. Có thể tự tiêm sau khi được hướng dẫn. Lịch tiêm: Liều đầu tiên, sau đó liều thứ 2 sau 3 tháng, sau đó mỗi 6 tháng.",
-        "references": "FDA Label (Leqvio), UpToDate - PCSK9 Inhibitors, AHA/ACC Guidelines 2018 - Cholesterol Management"
+        "references": "FDA Label (Leqvio), UpToDate - PCSK9 Inhibitors, AHA/ACC Guidelines 2018 - Cholesterol Management",
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": ""
+        },
     }
 }
 

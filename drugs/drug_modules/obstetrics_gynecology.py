@@ -151,10 +151,10 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/WHO guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
         "black_box_warnings": "Cần xem xét black box warnings",
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -368,9 +368,9 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/WHO guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -558,9 +558,9 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/WHO guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -779,9 +779,9 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/NAMS guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -988,10 +988,10 @@ OBSTETRICS_GYNECOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/ASRM guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
         "black_box_warnings": "Cần xem xét black box warnings",
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },

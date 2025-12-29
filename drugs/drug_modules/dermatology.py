@@ -598,7 +598,7 @@ DERMATOLOGY_DRUGS = {
             "AAD Guidelines - Topical Combination Therapy",
             "FDA Drug Information - Topical Combinations",
             "UpToDate - Dermatophyte Infections Treatment"
-        ]
+        ],
                   "hepatic_adjustment": {
                   "mild": "Không đổi",
                   "moderate": "Thận trọng",
@@ -718,8 +718,8 @@ DERMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-23",
             "evidence_level": "B - Hướng dẫn lâm sàng và dữ liệu thực hành"
-        }
-                  "hepatic_adjustment": {
+        },
+        "hepatic_adjustment": {
                   "mild": "Không đổi",
                   "moderate": "Thận trọng, có thể giảm liều",
                   "severe": "Thận trọng, giảm liều hoặc tránh dùng",
@@ -828,8 +828,8 @@ DERMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-23",
             "evidence_level": "B - Dựa trên dữ liệu thực hành và tờ hướng dẫn thuốc"
-        }
-                  "hepatic_adjustment": {
+        },
+        "hepatic_adjustment": {
                   "mild": "Không đổi",
                   "moderate": "Thận trọng",
                   "severe": "Thận trọng, có thể giảm liều",
@@ -963,7 +963,7 @@ DERMATOLOGY_DRUGS = {
             "AAD Guidelines - Topical Combination Therapy",
             "FDA Drug Information - Topical Combinations",
             "Clinical Practice Guidelines - Dermatitis Treatment"
-        ]
+        ],
                   "hepatic_adjustment": {
                   "mild": "Không đổi",
                   "moderate": "Thận trọng, có thể giảm liều",

@@ -72,8 +72,8 @@ SPECIFIC_INSULINS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved, extensive clinical use"
-        }
-             "drug_interactions": {
+        },
+        "drug_interactions": {
              "major": [],
              "moderate": [],
              "minor": [
@@ -220,8 +220,8 @@ SPECIFIC_INSULINS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved"
-        }
-              "drug_interactions": {
+        },
+        "drug_interactions": {
               "major": [],
               "moderate": [],
               "minor": [
@@ -362,8 +362,8 @@ SPECIFIC_INSULINS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved"
-        }
-              "drug_interactions": {
+        },
+        "drug_interactions": {
               "major": [],
               "moderate": [],
               "minor": [
@@ -509,8 +509,8 @@ SPECIFIC_INSULINS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved, extensive clinical use"
-        }
-              "drug_interactions": {
+        },
+        "drug_interactions": {
               "major": [],
               "moderate": [],
               "minor": [
@@ -654,8 +654,8 @@ SPECIFIC_INSULINS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved, extensive clinical use"
-        }
-              "drug_interactions": {
+        },
+        "drug_interactions": {
               "major": [],
               "moderate": [],
               "minor": [
@@ -792,8 +792,8 @@ SPECIFIC_INSULINS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved, extensive clinical use"
-        }
-              "drug_interactions": {
+        },
+        "drug_interactions": {
               "major": [],
               "moderate": [],
               "minor": [
@@ -927,8 +927,8 @@ SPECIFIC_INSULINS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved"
-        }
-              "drug_interactions": {
+        },
+        "drug_interactions": {
               "major": [],
               "moderate": [],
               "minor": [
@@ -1062,8 +1062,8 @@ SPECIFIC_INSULINS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA approved"
-        }
-              "drug_interactions": {
+        },
+        "drug_interactions": {
               "major": [],
               "moderate": [],
               "minor": [

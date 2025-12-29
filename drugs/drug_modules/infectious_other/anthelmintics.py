@@ -393,7 +393,8 @@ ANTHELMINTICS_DRUGS = {
         'notes': 'Theo dõi CBC nếu phải lặp lại hoặc nghi ngờ giảm bạch cầu'}},
         'references': {'primary_sources': [
         'WHO deworming guideline (historical use)', 'UpToDate - Levamisole'],
-        'last_updated': '2025-02-06', 'evidence_level': 'Moderate - dữ liệu hạn chế hiện nay'}         "black_box_warnings": None,
+        'last_updated': '2025-02-06', 'evidence_level': 'Moderate - dữ liệu hạn chế hiện nay'},
+        "black_box_warnings": None,
 }}
 
 __all__ = ['ANTHELMINTICS_DRUGS']

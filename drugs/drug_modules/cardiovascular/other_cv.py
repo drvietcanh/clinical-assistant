@@ -343,8 +343,8 @@ OTHER_CV_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - Extensive clinical experience in hypertension and opioid withdrawal"
-        }
-              "drug_interactions": {
+        },
+        "drug_interactions": {
               "major": [],
               "moderate": [],
               "minor": [
@@ -501,8 +501,8 @@ OTHER_CV_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - Extensive clinical experience, especially in pregnancy (category B, preferred for pregnancy hypertension)"
-        }
-              "drug_interactions": {
+        },
+        "drug_interactions": {
               "major": [],
               "moderate": [],
               "minor": [

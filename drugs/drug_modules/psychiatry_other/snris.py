@@ -198,8 +198,8 @@ SNRI_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
-        }
-             "reversal_agents": {
+        },
+        "reversal_agents": {
              "available": False,
              "agents": []
          },
@@ -407,8 +407,8 @@ SNRI_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
-        }
-              "reversal_agents": {
+        },
+        "reversal_agents": {
               "available": False,
               "agents": []
           },
@@ -541,8 +541,8 @@ SNRI_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved"
-        }
-              "reversal_agents": {
+        },
+        "reversal_agents": {
               "available": False,
               "agents": []
           },

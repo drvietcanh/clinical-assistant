@@ -119,8 +119,8 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - Large RCT (REDUCE-IT) showing 25% reduction in cardiovascular events"
-        }
-             "overdose_management": {
+        },
+        "overdose_management": {
              "symptoms": [
                  "Cần tra cứu thêm thông tin về triệu chứng quá liều"
              ],
@@ -280,8 +280,8 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "Moderate - Newer drug with selective PPAR-alpha activity, less side effects than traditional fibrates"
-        }
-              "overdose_management": {
+        },
+        "overdose_management": {
               "symptoms": [
                   "Cần tra cứu thêm thông tin về triệu chứng quá liều"
               ],
@@ -423,8 +423,8 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "Moderate - Effective for hypertriglyceridemia, but cardiovascular benefit is controversial"
-        }
-              "overdose_management": {
+        },
+        "overdose_management": {
               "symptoms": [
                   "Cần tra cứu thêm thông tin về triệu chứng quá liều"
               ],

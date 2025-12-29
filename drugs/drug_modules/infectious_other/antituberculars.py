@@ -646,7 +646,7 @@ ANTITUBERCULAR_DRUGS = {
             "CDC Guidelines - Tuberculosis Treatment",
             "ATS/IDSA/CDC Guidelines - Tuberculosis Treatment",
             "FDA Black Box Warning - Ethambutol and Optic Neuritis"
-        ]
+        ],
               "reversal_agents": {
               "available": False,
               "agents": []

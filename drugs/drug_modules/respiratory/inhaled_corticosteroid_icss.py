@@ -122,7 +122,8 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Budesonide'], 'last_updated': '2025-02-03',
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}         "black_box_warnings": None,
+        'High - FDA approved, multiple RCTs, clinical guidelines'},
+        "black_box_warnings": None,
 },
     "Fluticasone inhaled": {'group': 'Respiratory - Inhaled Corticosteroid (ICS)', 'vietnamese_name':
         'Fluticasone, Flixotide', 'administration': ['Inhalation'],
@@ -342,7 +343,8 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Beclomethasone'], 'last_updated': '2025-02-05',
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}         "black_box_warnings": None,
+        'High - FDA approved, multiple RCTs, clinical guidelines'},
+        "black_box_warnings": None,
 },
     "Ciclesonide": {'group': 'Respiratory - Inhaled Corticosteroid (ICS)',
         'vietnamese_name': 'Ciclesonide, Alvesco', 'administration': [
@@ -454,7 +456,8 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Ciclesonide'], 'last_updated': '2025-02-05',
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}         "black_box_warnings": None,
+        'High - FDA approved, multiple RCTs, clinical guidelines'},
+        "black_box_warnings": None,
 }}
 
 __all__ = ['INHALED_CORTICOSTEROID_ICSS_DRUGS']

@@ -169,10 +169,10 @@ UROLOGY_DRUGS = {
         "guideline_tags": [
             "AUA Guidelines - Benign Prostatic Hyperplasia",
             "FDA Drug Information - Tamsulosin"
-        ]
+        ],
         "black_box_warnings": "Cần xem xét black box warnings",
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -546,9 +546,9 @@ UROLOGY_DRUGS = {
             "FDA Black Box Warning - Sildenafil and Nitrates (Contraindicated)",
             "FDA Black Box Warning - Sildenafil and Vision Loss (NAION)",
             "FDA Black Box Warning - Sildenafil and Hearing Loss"
-        ]
+        ],
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -1089,10 +1089,10 @@ UROLOGY_DRUGS = {
             "AUA Guidelines - Benign Prostatic Hyperplasia",
             "EAU Guidelines - Lower Urinary Tract Symptoms",
             "FDA Drug Safety Communication - Alpha-blockers and Orthostatic Hypotension"
-        ]
+        ],
         "black_box_warnings": "Cần xem xét black box warnings",
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -1489,7 +1489,7 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
         "black_box_warnings": "Cần xem xét black box warnings",
     },
 
@@ -1678,7 +1678,7 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
         "black_box_warnings": "Cần xem xét black box warnings",
     },
 
@@ -1876,7 +1876,7 @@ UROLOGY_DRUGS = {
         "guideline_tags": [
             "AUA Guidelines - Overactive Bladder",
             "FDA Drug Information - Solifenacin"
-        ]
+        ],
         "black_box_warnings": "Cần xem xét black box warnings",
     },
 
@@ -2046,7 +2046,7 @@ UROLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
         "black_box_warnings": "Cần xem xét black box warnings",
     },
     
@@ -2213,10 +2213,10 @@ UROLOGY_DRUGS = {
         "guideline_tags": [
             "AUA Guidelines - Benign Prostatic Hyperplasia",
             "FDA Drug Information - Silodosin"
-        ]
+        ],
         "black_box_warnings": "Cần xem xét black box warnings",
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },

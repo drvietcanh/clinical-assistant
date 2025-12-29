@@ -195,8 +195,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             ],
             'last_updated': '2025-02-05',
             'evidence_level': 'High - Multiple RCTs and systematic reviews'
-        }
-             "black_box_warnings": None,
+        },
+        "black_box_warnings": None,
 },
     "Chlorpheniramine": {
         'group': 'Allergy - Antihistamine (H1 Antagonist, 1st generation)',
@@ -381,8 +381,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Hydroxyzine'
-        ]
-             "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 },
     "Hydroxyzine": {
         'group': 'Allergy - Antihistamine (H1 Antagonist, 1st generation)',
@@ -582,8 +582,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Hydroxyzine'
-        ]
-             "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 }
 }
 

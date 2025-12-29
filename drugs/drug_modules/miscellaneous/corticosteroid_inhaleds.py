@@ -2,7 +2,7 @@
 
 # Corticosteroid (Inhaled)s
 
-CORTICOSTEROID_(INHALED)S_DRUGS = {
+CORTICOSTEROID_INHALED_DRUGS = {
     "Budesonide": {'group': 'Respiratory - Corticosteroid (Inhaled)', 'vietnamese_name':
         'Budesonide inhaled, Pulmicort', 'administration': ['INH', 'NEB'],
         'indications': ['Hen phế quản (duy trì)', 'COPD', 'Viêm mũi dị ứng',
@@ -123,4 +123,4 @@ CORTICOSTEROID_(INHALED)S_DRUGS = {
         ], 'last_updated': '2025-02-04', 'evidence_level':
         'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}}}
 
-__all__ = ['CORTICOSTEROID_(INHALED)S_DRUGS']
+__all__ = ['CORTICOSTEROID_INHALED_DRUGS']

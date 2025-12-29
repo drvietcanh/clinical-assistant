@@ -1,0 +1,1515 @@
+# DANH SACH THUOC THEO FILE
+# Tong so: 721 thuoc trong 158 files
+# Ngay tao: 2025-12-29 07:49:52
+
+
+======================================================================
+FILE: drug_modules\analgesics\analgesic_antipyretic.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Paracetamol (27 fields)
+
+======================================================================
+FILE: drug_modules\analgesics\antimigraine_5_ht1_receptor_agonists.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Lasmiditan (24 fields)
+  2. ✅ Rizatriptan (23 fields)
+  3. ✅ Sumatriptan (23 fields)
+
+======================================================================
+FILE: drug_modules\analgesics\nsaids.py
+So luong: 12 thuoc
+======================================================================
+  1. ✅ Aspirin (23 fields)
+  2. ✅ Celecoxib (23 fields)
+  3. ✅ Diclofenac (25 fields)
+  4. ✅ Etoricoxib (23 fields)
+  5. ✅ Ibuprofen (29 fields)
+  6. ✅ Indomethacin (23 fields)
+  7. ✅ Ketoprofen (23 fields)
+  8. ✅ Ketorolac (25 fields)
+  9. ✅ Meloxicam (25 fields)
+ 10. ✅ Naproxen (25 fields)
+ 11. ✅ Nimesulide (23 fields)
+ 12. ✅ Piroxicam (23 fields)
+
+======================================================================
+FILE: drug_modules\analgesics\opioid_agonist_strongs.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Fentanyl (25 fields)
+  2. ✅ Hydromorphone (25 fields)
+  3. ✅ Meperidine (24 fields)
+  4. ✅ Methadone (24 fields)
+  5. ✅ Morphine (25 fields)
+  6. ✅ Oxycodone (23 fields)
+
+======================================================================
+FILE: drug_modules\analgesics\opioid_agonist_weaks.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Codeine (23 fields)
+
+======================================================================
+FILE: drug_modules\analgesics\opioid_agonists.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Buprenorphine (23 fields)
+  2. ✅ Hydrocodone (23 fields)
+  3. ✅ Tapentadol (23 fields)
+  4. ✅ Tramadol (24 fields)
+
+======================================================================
+FILE: drug_modules\analgesics\pain_muscle_relaxant_combinations.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Aspirin/Carisoprodol (23 fields)
+  2. ✅ Paracetamol/Carisoprodol (23 fields)
+  3. ✅ Paracetamol/Chlorzoxazone (23 fields)
+  4. ✅ Paracetamol/Methocarbamol (23 fields)
+  5. ✅ Paracetamol/Orphenadrine (23 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\aminoglycosides.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Amikacin (27 fields)
+  2. ✅ Gentamicin (26 fields)
+  3. ✅ Plazomicin (23 fields)
+  4. ✅ Tobramycin (27 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\beta_lactams.py
+So luong: 8 thuoc
+======================================================================
+  1. ✅ Aztreonam (24 fields)
+  2. ✅ Cefiderocol (24 fields)
+  3. ✅ Doripenem (23 fields)
+  4. ✅ Ertapenem (28 fields)
+  5. ✅ Imipenem-cilastatin (31 fields)
+  6. ✅ Meropenem (26 fields)
+  7. ✅ Penicillin G (27 fields)
+  8. ✅ Piperacillin-tazobactam (27 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\cephalosporins.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Cefazolin (26 fields)
+  2. ✅ Cefepime (26 fields)
+  3. ✅ Ceftriaxone (27 fields)
+  4. ✅ Cephalexin (23 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\fluoroquinolones.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Ciprofloxacin (21 fields)
+  2. ✅ Levofloxacin (34 fields)
+  3. ✅ Moxifloxacin (31 fields)
+  4. ✅ Norfloxacin (16 fields)
+  5. ✅ Ofloxacin (16 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\glycopeptides.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Daptomycin (26 fields)
+  2. ✅ Teicoplanin (26 fields)
+  3. ✅ Vancomycin (27 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\lincosamides.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Clindamycin (27 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\macrolides.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Azithromycin (27 fields)
+  2. ✅ Clarithromycin (27 fields)
+  3. ✅ Erythromycin (27 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\others.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Eravacycline (24 fields)
+  2. ✅ Fidaxomicin (27 fields)
+  3. ✅ Fosfomycin (27 fields)
+  4. ✅ Lefamulin (23 fields)
+  5. ✅ Nitrofurantoin (26 fields)
+  6. ✅ Omadacycline (23 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\oxazolidinones.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Linezolid (31 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\penicillins.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Amoxicillin (21 fields)
+  2. ✅ Amoxicillin-clavulanate (21 fields)
+  3. ✅ Ampicillin (21 fields)
+  4. ✅ Ampicillin-sulbactam (21 fields)
+  5. ✅ Nafcillin (19 fields)
+  6. ✅ Oxacillin (19 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\polymyxins.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Colistin (27 fields)
+  2. ✅ Polymyxin B (26 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\sulfonamides.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Trimethoprim-sulfamethoxazole (27 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antibiotics\tetracyclines.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Doxycycline (27 fields)
+  2. ✅ Minocycline (27 fields)
+  3. ✅ Tetracycline (27 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antifungals\azoles.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Fluconazole (26 fields)
+  2. ✅ Isavuconazole (25 fields)
+  3. ✅ Itraconazole (26 fields)
+  4. ✅ Posaconazole (26 fields)
+  5. ✅ Voriconazole (24 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antifungals\echinocandins.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Anidulafungin (25 fields)
+  2. ✅ Caspofungin (25 fields)
+  3. ✅ Micafungin (25 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antifungals\polyenes.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Amphotericin B (26 fields)
+  2. ✅ Nystatin (23 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antivirals\cmv.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Ganciclovir (25 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antivirals\hepatitis.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Entecavir (26 fields)
+  2. ✅ Ledipasvir (26 fields)
+  3. ✅ Ribavirin (26 fields)
+  4. ✅ Sofosbuvir (26 fields)
+  5. ✅ Sofosbuvir/Velpatasvir (26 fields)
+  6. ✅ Tenofovir (26 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antivirals\herpes.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Acyclovir (25 fields)
+  2. ✅ Valacyclovir (23 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+So luong: 17 thuoc
+======================================================================
+  1. ✅ Atazanavir (boosted with ritonavir/cobicistat) (26 fields)
+  2. ✅ Bictegravir (BIC) (26 fields)
+  3. ✅ Bictegravir/Emtricitabine/Tenofovir alafenamide (BIC/FTC/TAF) (26 fields)
+  4. ✅ Cabotegravir + Rilpivirine (Long-acting IM) (26 fields)
+  5. ✅ Cobicistat (COBI) (26 fields)
+  6. ✅ Darunavir (boosted with ritonavir/cobicistat) (26 fields)
+  7. ✅ Dolutegravir (DTG) (26 fields)
+  8. ✅ Efavirenz (EFV) (26 fields)
+  9. ✅ Efavirenz/Tenofovir disoproxil fumarate/Emtricitabine (EFV/TDF/FTC) (26 fields)
+ 10. ✅ Emtricitabine (FTC) (26 fields)
+ 11. ✅ Lamivudine (3TC) (26 fields)
+ 12. ✅ Rilpivirine (RPV) (26 fields)
+ 13. ✅ Ritonavir (low-dose booster) (26 fields)
+ 14. ✅ Tenofovir alafenamide (TAF) (26 fields)
+ 15. ✅ Tenofovir alafenamide/Emtricitabine (TAF/FTC) (26 fields)
+ 16. ✅ Tenofovir disoproxil fumarate (TDF) (26 fields)
+ 17. ✅ Tenofovir disoproxil fumarate/Emtricitabine (TDF/FTC) (26 fields)
+
+======================================================================
+FILE: drug_modules\antimicrobial\antivirals\influenza.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Favipiravir (26 fields)
+  2. ✅ Oseltamivir (24 fields)
+  3. ✅ Remdesivir (29 fields)
+  4. ✅ Zanamivir (27 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\ace_inhibitors.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Benazepril (26 fields)
+  2. ✅ Captopril (30 fields)
+  3. ✅ Enalapril (30 fields)
+  4. ✅ Lisinopril (30 fields)
+  5. ✅ Perindopril (26 fields)
+  6. ✅ Ramipril (26 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\antiarrhythmics.py
+So luong: 11 thuoc
+======================================================================
+  1. ✅ Adenosine (22 fields)
+  2. ✅ Amiodarone (22 fields)
+  3. ✅ Disopyramide (23 fields)
+  4. ✅ Dofetilide (23 fields)
+  5. ✅ Dronedarone (22 fields)
+  6. ✅ Flecainide (22 fields)
+  7. ✅ Ibutilide (22 fields)
+  8. ✅ Procainamide (22 fields)
+  9. ✅ Propafenone (22 fields)
+ 10. ✅ Quinidine (23 fields)
+ 11. ✅ Sotalol (23 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\anticoagulants.py
+So luong: 10 thuoc
+======================================================================
+  1. ✅ Apixaban (26 fields)
+  2. ✅ Clopidogrel (24 fields)
+  3. ✅ Dabigatran (26 fields)
+  4. ✅ Edoxaban (26 fields)
+  5. ✅ Enoxaparin (23 fields)
+  6. ✅ Fondaparinux (23 fields)
+  7. ✅ Prasugrel (27 fields)
+  8. ✅ Rivaroxaban (26 fields)
+  9. ✅ Ticagrelor (27 fields)
+ 10. ✅ Warfarin (24 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\arbs.py
+So luong: 7 thuoc
+======================================================================
+  1. ✅ Azilsartan medoxomil (26 fields)
+  2. ✅ Candesartan (26 fields)
+  3. ✅ Irbesartan (26 fields)
+  4. ✅ Losartan (30 fields)
+  5. ✅ Olmesartan (26 fields)
+  6. ✅ Telmisartan (30 fields)
+  7. ✅ Valsartan (26 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\beta_blockers\non_selective.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Carvedilol (29 fields)
+  2. ✅ Nadolol (23 fields)
+  3. ✅ Propranolol (26 fields)
+  4. ✅ Timolol (23 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\beta_blockers\selective.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Acebutolol (23 fields)
+  2. ✅ Atenolol (30 fields)
+  3. ✅ Betaxolol (23 fields)
+  4. ✅ Bisoprolol (30 fields)
+  5. ✅ Metoprolol (29 fields)
+  6. ✅ Nebivolol (26 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py
+So luong: 8 thuoc
+======================================================================
+  1. ✅ Amlodipine (29 fields)
+  2. ✅ Clevidipine (23 fields)
+  3. ✅ Felodipine (27 fields)
+  4. ✅ Isradipine (27 fields)
+  5. ✅ Lacidipine (22 fields)
+  6. ✅ Nicardipine (23 fields)
+  7. ✅ Nifedipine (26 fields)
+  8. ✅ Nisoldipine (23 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\calcium_blockers\non_dihydropyridines.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Diltiazem (23 fields)
+  2. ✅ Verapamil (23 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\cholesterol_absorption_inhibitors.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Bempedoic acid (24 fields)
+  2. ✅ Ezetimibe (23 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\diuretics.py
+So luong: 8 thuoc
+======================================================================
+  1. ✅ Bumetanide (16 fields)
+  2. ✅ Chlorthalidone (22 fields)
+  3. ✅ Eplerenone (25 fields)
+  4. ✅ Furosemide (25 fields)
+  5. ✅ Hydrochlorothiazide (25 fields)
+  6. ✅ Indapamide (22 fields)
+  7. ✅ Spironolactone (30 fields)
+  8. ✅ Torsemide (16 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\fixed_dose_combinations.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Amlodipine/Olmesartan (24 fields)
+  2. ✅ Amlodipine/Valsartan (24 fields)
+  3. ✅ Lisinopril/Hydrochlorothiazide (24 fields)
+  4. ✅ Losartan/Hydrochlorothiazide (24 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\other_cv.py
+So luong: 10 thuoc
+======================================================================
+  1. ✅ Clonidine (23 fields)
+  2. ✅ Digoxin (27 fields)
+  3. ✅ Doxazosin (23 fields)
+  4. ✅ Finerenone (24 fields)
+  5. ✅ Ivabradine (27 fields)
+  6. ✅ Labetalol (27 fields)
+  7. ✅ Methyldopa (23 fields)
+  8. ✅ Sacubitril-valsartan (29 fields)
+  9. ✅ Sotagliflozin (24 fields)
+ 10. ✅ Vericiguat (24 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\pcsk9_inhibitors.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Alirocumab (22 fields)
+  2. ✅ Evolocumab (22 fields)
+  3. ✅ Inclisiran (22 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\statins.py
+So luong: 7 thuoc
+======================================================================
+  1. ✅ Atorvastatin (29 fields)
+  2. ✅ Fluvastatin (26 fields)
+  3. ✅ Lovastatin (26 fields)
+  4. ✅ Pitavastatin (26 fields)
+  5. ✅ Pravastatin (29 fields)
+  6. ✅ Rosuvastatin (29 fields)
+  7. ✅ Simvastatin (26 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\triglyceride_lowering.py
+So luong: 8 thuoc
+======================================================================
+  1. ✅ Evinacumab (23 fields)
+  2. ✅ Fenofibrate (23 fields)
+  3. ✅ Gemfibrozil (23 fields)
+  4. ✅ Icosapent ethyl (23 fields)
+  5. ✅ Niacin (23 fields)
+  6. ✅ Omega-3 acid ethyl esters (23 fields)
+  7. ✅ Pemafibrate (23 fields)
+  8. ✅ Plozasiran (23 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular\vasodilators.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Hydralazine (23 fields)
+  2. ✅ Isosorbide mononitrate (23 fields)
+  3. ✅ Nesiritide (23 fields)
+  4. ✅ Nitroglycerin (23 fields)
+  5. ✅ Nitroprusside (23 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular_other\ace_inhibitors_iv.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Enalaprilat (23 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular_other\antiplatelets.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Dipyridamole (26 fields)
+  2. ✅ Ticlopidine (27 fields)
+
+======================================================================
+FILE: drug_modules\cardiovascular_other\statins.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ High-intensity statin (đột quỵ/TIA) (24 fields)
+
+======================================================================
+FILE: drug_modules\dermatology.py
+So luong: 34 thuoc
+======================================================================
+  1. ✅ Adapalene (23 fields)
+  2. ✅ Azelaic Acid (23 fields)
+  3. ✅ Azelaic acid topical (25 fields)
+  4. ✅ Benzoyl peroxide topical (25 fields)
+  5. ✅ Betamethasone topical (23 fields)
+  6. ✅ Betamethasone/Clotrimazole topical (25 fields)
+  7. ✅ Calcipotriol (23 fields)
+  8. ✅ Calcitriol topical (23 fields)
+  9. ✅ Clindamycin topical (23 fields)
+ 10. ✅ Clobetasol (23 fields)
+ 11. ✅ Clotrimazole topical (23 fields)
+ 12. ✅ Diclofenac gel (23 fields)
+ 13. ✅ Econazole topical (23 fields)
+ 14. ✅ Erythromycin topical (23 fields)
+ 15. ✅ Fusidic Acid (23 fields)
+ 16. ✅ Fusidic acid/Betamethasone topical (23 fields)
+ 17. ✅ Gentamicin/Betamethasone/Clotrimazole topical (26 fields)
+ 18. ✅ Hydrocortisone topical (25 fields)
+ 19. ✅ Ivermectin cream (23 fields)
+ 20. ✅ Ketoconazole topical (23 fields)
+ 21. ✅ Ketoprofen gel (23 fields)
+ 22. ✅ Metronidazole topical (23 fields)
+ 23. ✅ Miconazole topical (23 fields)
+ 24. ✅ Miconazole/Hydrocortisone topical (24 fields)
+ 25. ✅ Mometasone topical (23 fields)
+ 26. ✅ Mupirocin topical (23 fields)
+ 27. ✅ Permethrin topical (23 fields)
+ 28. ✅ Pimecrolimus (24 fields)
+ 29. ✅ Salicylic Acid (23 fields)
+ 30. ✅ Tacrolimus topical (26 fields)
+ 31. ✅ Tazarotene (23 fields)
+ 32. ✅ Terbinafine topical (23 fields)
+ 33. ✅ Tretinoin topical (24 fields)
+ 34. ✅ Triamcinolone topical (23 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\alpha_glucosidase_inhibitors.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Acarbose (23 fields)
+  2. ✅ Miglitol (23 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\biguanides.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Metformin (29 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\dpp_4_inhibitors.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Alogliptin (25 fields)
+  2. ✅ Linagliptin (25 fields)
+  3. ✅ Saxagliptin (25 fields)
+  4. ✅ Sitagliptin (29 fields)
+  5. ✅ Vildagliptin (25 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\fixed_dose_combinations.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Metformin/Dapagliflozin (24 fields)
+  2. ✅ Metformin/Empagliflozin (24 fields)
+  3. ✅ Metformin/Glibenclamide (23 fields)
+  4. ✅ Metformin/Pioglitazone (23 fields)
+  5. ✅ Metformin/Sitagliptin (24 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\glp1_agonists.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Dulaglutide (26 fields)
+  2. ✅ Exenatide (26 fields)
+  3. ✅ Liraglutide (26 fields)
+  4. ✅ Semaglutide (26 fields)
+  5. ✅ Tirzepatide (26 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\insulins.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Insulin (26 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\meglitinides.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Nateglinide (23 fields)
+  2. ✅ Repaglinide (23 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\other_antidiabetics.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Bromocriptine (25 fields)
+  2. ✅ Colesevelam (25 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\sglt2_inhibitors.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Canagliflozin (25 fields)
+  2. ✅ Dapagliflozin (25 fields)
+  3. ✅ Empagliflozin (25 fields)
+  4. ✅ Ertugliflozin (26 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\specific_insulins.py
+So luong: 8 thuoc
+======================================================================
+  1. ✅ Insulin Aspart (24 fields)
+  2. ✅ Insulin Degludec (24 fields)
+  3. ✅ Insulin Detemir (24 fields)
+  4. ✅ Insulin Glargine (24 fields)
+  5. ✅ Insulin Glulisine (24 fields)
+  6. ✅ Insulin Lispro (24 fields)
+  7. ✅ Insulin NPH (24 fields)
+  8. ✅ Insulin Regular (24 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\sulfonylureas.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Glibenclamide (29 fields)
+  2. ✅ Gliclazide (29 fields)
+  3. ✅ Glimepiride (25 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\t1dm_prevention.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Teplizumab (23 fields)
+
+======================================================================
+FILE: drug_modules\diabetes\thiazolidinedione_tzds.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Pioglitazone (23 fields)
+  2. ✅ Rosiglitazone (23 fields)
+
+======================================================================
+FILE: drug_modules\emergency\anticholinergics.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Atropine (24 fields)
+
+======================================================================
+FILE: drug_modules\emergency\benzodiazepine_antagonists.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Flumazenil (23 fields)
+
+======================================================================
+FILE: drug_modules\emergency\catecholamine_alpha__beta_agonists.py
+So luong: 7 thuoc
+======================================================================
+  1. ✅ Dobutamine (21 fields)
+  2. ✅ Dopamine (21 fields)
+  3. ✅ Epinephrine (25 fields)
+  4. ✅ Milrinone (25 fields)
+  5. ✅ Norepinephrine (21 fields)
+  6. ✅ Phenylephrine (25 fields)
+  7. ✅ Vasopressin (25 fields)
+
+======================================================================
+FILE: drug_modules\emergency\electrolytes.py
+So luong: 11 thuoc
+======================================================================
+  1. ✅ Calcium chloride (23 fields)
+  2. ✅ Calcium gluconate (23 fields)
+  3. ✅ Demeclocycline (23 fields)
+  4. ✅ Magnesium oxide (23 fields)
+  5. ✅ Magnesium sulfate (23 fields)
+  6. ✅ Pamidronate (23 fields)
+  7. ✅ Potassium phosphate (23 fields)
+  8. ✅ Sodium bicarbonate (23 fields)
+  9. ✅ Sodium phosphate (23 fields)
+ 10. ✅ Sodium polystyrene sulfonate (23 fields)
+ 11. ✅ Zoledronic acid (23 fields)
+
+======================================================================
+FILE: drug_modules\emergency\local_anesthetic__antiarrhythmic_class_ibs.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Lidocaine (23 fields)
+
+======================================================================
+FILE: drug_modules\emergency\neuromuscular_blockers.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Cisatracurium (25 fields)
+  2. ✅ Rocuronium (25 fields)
+  3. ✅ Succinylcholine (25 fields)
+  4. ✅ Vecuronium (25 fields)
+
+======================================================================
+FILE: drug_modules\emergency\opioid_antagonists.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Naloxone (23 fields)
+  2. ✅ Naltrexone (23 fields)
+
+======================================================================
+FILE: drug_modules\emergency\uterotonics.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Carboprost (23 fields)
+  2. ✅ Dinoprostone (23 fields)
+  3. ✅ Methylergonovine (23 fields)
+  4. ✅ Oxytocin (24 fields)
+
+======================================================================
+FILE: drug_modules\endocrinology_other\corticosteroids\long_acting.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Betamethasone (22 fields)
+  2. ✅ Dexamethasone (22 fields)
+
+======================================================================
+FILE: drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Fludrocortisone (23 fields)
+  2. ✅ Hydrocortisone (22 fields)
+  3. ✅ Methylprednisolone (22 fields)
+  4. ✅ Prednisolone (22 fields)
+
+======================================================================
+FILE: drug_modules\endocrinology_other\osteoporosis_bisphosphonates.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Alendronate (24 fields)
+  2. ✅ Ibandronate (24 fields)
+  3. ✅ Risedronate (24 fields)
+
+======================================================================
+FILE: drug_modules\endocrinology_other\osteoporosis_other.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Abaloparatide (24 fields)
+  2. ✅ Calcitonin (24 fields)
+  3. ✅ Denosumab (24 fields)
+  4. ✅ Raloxifene (24 fields)
+  5. ✅ Romosozumab (24 fields)
+  6. ✅ Teriparatide (24 fields)
+
+======================================================================
+FILE: drug_modules\endocrinology_other\sex_hormones.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Testosterone (23 fields)
+
+======================================================================
+FILE: drug_modules\ent_oral_nasal_combinations.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Azelastine/Fluticasone nasal spray (23 fields)
+  2. ✅ Cetirizine/Pseudoephedrine (23 fields)
+  3. ✅ Fexofenadine/Pseudoephedrine (23 fields)
+  4. ✅ Loratadine/Pseudoephedrine (23 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\antacids.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Aluminum hydroxide/Magnesium hydroxide (24 fields)
+  2. ✅ Calcium carbonate (24 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\antidiarrheals.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Bismuth subsalicylate (23 fields)
+  2. ✅ Loperamide (23 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\antiemetic_5_ht3_antagonists.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Ondansetron (23 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\antiflatulents.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Simethicone (24 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\antispasmodics.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Hyoscine butylbromide (25 fields)
+  2. ✅ Mebeverine (25 fields)
+  3. ✅ Trimebutine (25 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\h2_receptor_antagonists.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Cimetidine (23 fields)
+  2. ✅ Famotidine (23 fields)
+  3. ✅ Ranitidine (22 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\ibd_5asa.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Mesalazine (24 fields)
+  2. ✅ Sulfasalazine (24 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\jak_inhibitors.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Baricitinib (25 fields)
+  2. ✅ Tofacitinib (24 fields)
+  3. ✅ Upadacitinib (24 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\laxatives.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Bisacodyl (25 fields)
+  2. ✅ Lactulose (25 fields)
+  3. ✅ Polyethylene glycol 3350 (25 fields)
+  4. ✅ Senna (sennosides) (25 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\mucosal_protectants.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Misoprostol (23 fields)
+  2. ✅ Sucralfate (23 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\pcab.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Tegoprazan (22 fields)
+  2. ✅ Vonoprazan (22 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\prokinetic_antiemetics.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Domperidone (23 fields)
+  2. ✅ Metoclopramide (23 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Dexlansoprazole (24 fields)
+  2. ✅ Esomeprazole (23 fields)
+  3. ✅ Ilaprazole (24 fields)
+  4. ✅ Lansoprazole (23 fields)
+  5. ✅ Omeprazole (26 fields)
+
+======================================================================
+FILE: drug_modules\gastrointestinal\proton_pump_inhibitors.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Pantoprazole (26 fields)
+  2. ✅ Rabeprazole (23 fields)
+
+======================================================================
+FILE: drug_modules\hematology.py
+So luong: 13 thuoc
+======================================================================
+  1. ✅ Alteplase (24 fields)
+  2. ✅ Andexanet alfa (26 fields)
+  3. ✅ Eltrombopag (24 fields)
+  4. ✅ Emicizumab (24 fields)
+  5. ✅ Epoetin alfa (24 fields)
+  6. ✅ Filgrastim (25 fields)
+  7. ✅ Heparin (24 fields)
+  8. ✅ Idarucizumab (26 fields)
+  9. ✅ Protamine (26 fields)
+ 10. ✅ Romiplostim (26 fields)
+ 11. ✅ Tenecteplase (25 fields)
+ 12. ✅ Tranexamic acid (24 fields)
+ 13. ✅ Vitamin K (24 fields)
+
+======================================================================
+FILE: drug_modules\infectious_other\anthelmintics.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Albendazole (25 fields)
+  2. ✅ Ivermectin (26 fields)
+  3. ✅ Levamisole (24 fields)
+  4. ✅ Mebendazole (23 fields)
+  5. ✅ Praziquantel (24 fields)
+
+======================================================================
+FILE: drug_modules\infectious_other\antimalarials.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Artemether-lumefantrine (25 fields)
+  2. ✅ Artesunate (25 fields)
+  3. ✅ Chloroquine (23 fields)
+  4. ✅ Hydroxychloroquine (23 fields)
+  5. ✅ Primaquine (25 fields)
+
+======================================================================
+FILE: drug_modules\infectious_other\antituberculars.py
+So luong: 13 thuoc
+======================================================================
+  1. ✅ Bedaquiline (26 fields)
+  2. ✅ Clofazimine (26 fields)
+  3. ✅ Cycloserine / Terizidone (26 fields)
+  4. ✅ Delamanid (26 fields)
+  5. ✅ Ethambutol (26 fields)
+  6. ✅ Isoniazid (26 fields)
+  7. ✅ Linezolid (lao MDR/XDR) (24 fields)
+  8. ✅ PAS (para-aminosalicylic acid) (26 fields)
+  9. ✅ Pyrazinamide (26 fields)
+ 10. ✅ Rifabutin (26 fields)
+ 11. ✅ Rifampin (26 fields)
+ 12. ✅ Rifapentine (26 fields)
+ 13. ✅ Streptomycin (26 fields)
+
+======================================================================
+FILE: drug_modules\infectious_other\beta_lactams.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Amoxicillin suspension (24 fields)
+  2. ✅ Dicloxacillin (23 fields)
+  3. ✅ Penicillin V (24 fields)
+
+======================================================================
+FILE: drug_modules\infectious_other\cephalosporins.py
+So luong: 11 thuoc
+======================================================================
+  1. ✅ Cefaclor (23 fields)
+  2. ✅ Cefadroxil (24 fields)
+  3. ✅ Cefdinir (23 fields)
+  4. ✅ Cefixime (23 fields)
+  5. ✅ Cefoperazone (24 fields)
+  6. ✅ Cefotaxime (23 fields)
+  7. ✅ Cefotetan (24 fields)
+  8. ✅ Cefoxitin (24 fields)
+  9. ✅ Cefpirome (24 fields)
+ 10. ✅ Ceftazidime (23 fields)
+ 11. ✅ Cefuroxime (23 fields)
+
+======================================================================
+FILE: drug_modules\infectious_other\fluoroquinolones.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Gemifloxacin (23 fields)
+  2. ✅ Sparfloxacin (23 fields)
+
+======================================================================
+FILE: drug_modules\infectious_other\nitroimidazoles.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Metronidazole (24 fields)
+
+======================================================================
+FILE: drug_modules\infectious_other\tetracyclines.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Tigecycline (23 fields)
+
+======================================================================
+FILE: drug_modules\metabolic\antithyroid.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Methimazole (23 fields)
+  2. ✅ Propylthiouracil (23 fields)
+
+======================================================================
+FILE: drug_modules\metabolic\corticosteroids.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Prednisone (24 fields)
+
+======================================================================
+FILE: drug_modules\metabolic\thyroid_hormones.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Levothyroxine (23 fields)
+
+======================================================================
+FILE: drug_modules\miscellaneous\beta_2_agonist_short_actings.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Salbutamol (23 fields)
+
+======================================================================
+FILE: drug_modules\miscellaneous\biological_drugs.py
+So luong: 35 thuoc
+======================================================================
+  1. ✅ Adalimumab (25 fields)
+  2. ✅ Alemtuzumab (25 fields)
+  3. ✅ Anifrolumab (25 fields)
+  4. ✅ Atezolizumab (25 fields)
+  5. ✅ Belimumab (25 fields)
+  6. ✅ Bevacizumab (25 fields)
+  7. ✅ Brodalumab (23 fields)
+  8. ✅ Caplacizumab (23 fields)
+  9. ✅ Cemiplimab (23 fields)
+ 10. ✅ Certolizumab pegol (23 fields)
+ 11. ✅ Dostarlimab (23 fields)
+ 12. ✅ Durvalumab (23 fields)
+ 13. ✅ Eculizumab (23 fields)
+ 14. ✅ Efgartigimod (23 fields)
+ 15. ✅ Etanercept (25 fields)
+ 16. ✅ Golimumab (25 fields)
+ 17. ✅ Guselkumab (25 fields)
+ 18. ✅ Infliximab (25 fields)
+ 19. ✅ Ixekizumab (25 fields)
+ 20. ✅ Lanadelumab (23 fields)
+ 21. ✅ Natalizumab (23 fields)
+ 22. ✅ Nivolumab (23 fields)
+ 23. ✅ Ocrelizumab (23 fields)
+ 24. ✅ Pembrolizumab (23 fields)
+ 25. ✅ Ravulizumab (25 fields)
+ 26. ✅ Reslizumab (25 fields)
+ 27. ✅ Risankizumab (25 fields)
+ 28. ✅ Rituximab (25 fields)
+ 29. ✅ Sarilumab (25 fields)
+ 30. ✅ Secukinumab (25 fields)
+ 31. ✅ Tezepelumab (25 fields)
+ 32. ✅ Tocilizumab (23 fields)
+ 33. ✅ Trastuzumab (23 fields)
+ 34. ✅ Ustekinumab (23 fields)
+ 35. ✅ Vedolizumab (23 fields)
+
+======================================================================
+FILE: drug_modules\miscellaneous\corticosteroid_inhaleds.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Budesonide (23 fields)
+
+======================================================================
+FILE: drug_modules\miscellaneous\dmards_rheumatology.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Leflunomide (24 fields)
+  2. ✅ Methotrexate (24 fields)
+
+======================================================================
+FILE: drug_modules\miscellaneous\gout_medications.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Colchicine (24 fields)
+  2. ✅ Febuxostat (26 fields)
+  3. ✅ Probenecid (24 fields)
+
+======================================================================
+FILE: drug_modules\miscellaneous\immunosuppressants.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Azathioprine (25 fields)
+  2. ✅ Cyclosporine (23 fields)
+  3. ✅ Mycophenolate (23 fields)
+  4. ✅ Tacrolimus (25 fields)
+
+======================================================================
+FILE: drug_modules\miscellaneous\vitamins.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Calcium (elemental) (24 fields)
+  2. ✅ Folic Acid (24 fields)
+  3. ✅ Vitamin C (22 fields)
+  4. ✅ Vitamin D3 (Cholecalciferol) (24 fields)
+  5. ✅ Vitamin E (22 fields)
+
+======================================================================
+FILE: drug_modules\miscellaneous\xanthine_oxidase_inhibitors.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Allopurinol (26 fields)
+
+======================================================================
+FILE: drug_modules\neurological\alzheimer_dementia_drugs.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Aducanumab (24 fields)
+  2. ✅ Donanemab (24 fields)
+  3. ✅ Donepezil (24 fields)
+  4. ✅ Lecanemab (24 fields)
+  5. ✅ Memantine (23 fields)
+  6. ✅ Rivastigmine (23 fields)
+
+======================================================================
+FILE: drug_modules\neurological\anticonvulsant_alpha_2_delta_ligands.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Gabapentin (24 fields)
+  2. ✅ Pregabalin (23 fields)
+
+======================================================================
+FILE: drug_modules\neurological\anticonvulsants.py
+So luong: 14 thuoc
+======================================================================
+  1. ✅ Carbamazepine (26 fields)
+  2. ✅ Ethosuximide (27 fields)
+  3. ✅ Fosphenytoin (23 fields)
+  4. ✅ Lacosamide (23 fields)
+  5. ✅ Lamotrigine (22 fields)
+  6. ✅ Levetiracetam (23 fields)
+  7. ✅ Oxcarbazepine (26 fields)
+  8. ✅ Perampanel (23 fields)
+  9. ✅ Phenobarbital (27 fields)
+ 10. ✅ Phenytoin (27 fields)
+ 11. ✅ Primidone (23 fields)
+ 12. ✅ Topiramate (22 fields)
+ 13. ✅ Valproate (26 fields)
+ 14. ✅ Zonisamide (23 fields)
+
+======================================================================
+FILE: drug_modules\neurological\antiparkinsonian.py
+So luong: 9 thuoc
+======================================================================
+  1. ✅ Deutetrabenazine (23 fields)
+  2. ✅ Istradefylline (23 fields)
+  3. ✅ Levodopa/Carbidopa (22 fields)
+  4. ✅ Opicapone (23 fields)
+  5. ✅ Pimavanserin (23 fields)
+  6. ✅ Pramipexole (23 fields)
+  7. ✅ Ropinirole (22 fields)
+  8. ✅ Safinamide (23 fields)
+  9. ✅ Tetrabenazine (23 fields)
+
+======================================================================
+FILE: drug_modules\neurological\benzodiazepines.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Clonazepam (24 fields)
+  2. ✅ Diazepam (24 fields)
+  3. ✅ Lorazepam (23 fields)
+
+======================================================================
+FILE: drug_modules\neurological\cerebral_circulation.py
+So luong: 9 thuoc
+======================================================================
+  1. ✅ Cerebrolysin (25 fields)
+  2. ✅ Cerebroprotein hydrolysate (khác) (24 fields)
+  3. ✅ Citicoline (24 fields)
+  4. ✅ Edaravone (24 fields)
+  5. ✅ Ginkgo biloba extract (24 fields)
+  6. ✅ Nicergoline (25 fields)
+  7. ✅ Nimodipine (25 fields)
+  8. ✅ Piracetam (24 fields)
+  9. ✅ Vinpocetine (24 fields)
+
+======================================================================
+FILE: drug_modules\neurological\migraine_cgrp_drugs.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Eptinezumab (24 fields)
+  2. ✅ Erenumab (24 fields)
+  3. ✅ Fremanezumab (24 fields)
+  4. ✅ Galcanezumab (24 fields)
+  5. ✅ Rimegepant (23 fields)
+  6. ✅ Ubrogepant (23 fields)
+
+======================================================================
+FILE: drug_modules\neurological\multiple_sclerosis_drugs.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Dimethyl fumarate (24 fields)
+  2. ✅ Fingolimod (24 fields)
+  3. ✅ Ofatumumab (24 fields)
+
+======================================================================
+FILE: drug_modules\neurological\muscle_relaxants.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Baclofen (23 fields)
+  2. ✅ Carisoprodol (24 fields)
+  3. ✅ Cyclobenzaprine (24 fields)
+  4. ✅ Metaxalone (22 fields)
+  5. ✅ Methocarbamol (22 fields)
+  6. ✅ Tizanidine (22 fields)
+
+======================================================================
+FILE: drug_modules\neurological\neurological_combinations.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Citicoline/Piracetam (25 fields)
+  2. ✅ Ginkgo biloba/Vinpocetine (25 fields)
+  3. ✅ Olanzapine/Fluoxetine (25 fields)
+  4. ✅ Piracetam/Vinpocetine (25 fields)
+
+======================================================================
+FILE: drug_modules\neurological\ssri_selective_serotonin_reuptake_inhibitors.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Fluoxetine (24 fields)
+
+======================================================================
+FILE: drug_modules\obstetrics_gynecology.py
+So luong: 8 thuoc
+======================================================================
+  1. ✅ Clotrimazole (vaginal) (24 fields)
+  2. ✅ Estradiol (24 fields)
+  3. ✅ Ethinyl estradiol + Levonorgestrel (24 fields)
+  4. ✅ Levonorgestrel (23 fields)
+  5. ✅ Medroxyprogesterone (24 fields)
+  6. ✅ Metronidazole (vaginal gel) (24 fields)
+  7. ✅ Miconazole (vaginal) (24 fields)
+  8. ✅ Progesterone (24 fields)
+
+======================================================================
+FILE: drug_modules\oncology\alkylating_agents.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Cyclophosphamide (23 fields)
+  2. ✅ Ifosfamide (23 fields)
+
+======================================================================
+FILE: drug_modules\oncology\anthracyclines.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Doxorubicin (24 fields)
+
+======================================================================
+FILE: drug_modules\oncology\anti_emetic_5_ht3_antagonists.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Granisetron (23 fields)
+  2. ✅ Palonosetron (23 fields)
+
+======================================================================
+FILE: drug_modules\oncology\antimetabolites.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ 5-Fluorouracil (23 fields)
+  2. ✅ Capecitabine (23 fields)
+  3. ✅ Gemcitabine (23 fields)
+
+======================================================================
+FILE: drug_modules\oncology\hormone_therapy.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Abiraterone (23 fields)
+  2. ✅ Anastrozole (23 fields)
+  3. ✅ Enzalutamide (23 fields)
+  4. ✅ Tamoxifen (23 fields)
+
+======================================================================
+FILE: drug_modules\oncology\monoclonal_antibodies_adcs.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Brentuximab vedotin (24 fields)
+  2. ✅ Cetuximab (23 fields)
+  3. ✅ Daratumumab (24 fields)
+  4. ✅ Sacituzumab govitecan (24 fields)
+  5. ✅ Teprotumumab (24 fields)
+  6. ✅ Trastuzumab deruxtecan (24 fields)
+
+======================================================================
+FILE: drug_modules\oncology\platinum_compounds.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Carboplatin (23 fields)
+  2. ✅ Cisplatin (23 fields)
+  3. ✅ Oxaliplatin (24 fields)
+
+======================================================================
+FILE: drug_modules\oncology\targeted_therapy_tkis.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Erlotinib (23 fields)
+  2. ✅ Gefitinib (23 fields)
+  3. ✅ Imatinib (23 fields)
+
+======================================================================
+FILE: drug_modules\oncology\taxanes.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Docetaxel (23 fields)
+  2. ✅ Paclitaxel (23 fields)
+
+======================================================================
+FILE: drug_modules\oncology\topoisomerase_inhibitors.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Etoposide (23 fields)
+  2. ✅ Irinotecan (23 fields)
+  3. ✅ Topotecan (23 fields)
+
+======================================================================
+FILE: drug_modules\oncology\vinca_alkaloids.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Vincristine (23 fields)
+
+======================================================================
+FILE: drug_modules\ophthalmology.py
+So luong: 30 thuoc
+======================================================================
+  1. ✅ Acyclovir eye drops (25 fields)
+  2. ✅ Acyclovir eye ointment (25 fields)
+  3. ✅ Artificial tears (Carboxymethylcellulose) (25 fields)
+  4. ✅ Atropine eye drops (25 fields)
+  5. ✅ Azelastine eye drops (25 fields)
+  6. ✅ Bimatoprost (25 fields)
+  7. ✅ Brimonidine (25 fields)
+  8. ✅ Brinzolamide (25 fields)
+  9. ✅ Ciprofloxacin eye drops (23 fields)
+ 10. ✅ Cyclopentolate eye drops (23 fields)
+ 11. ✅ Dexamethasone eye drops (24 fields)
+ 12. ✅ Diclofenac eye drops (24 fields)
+ 13. ✅ Dorzolamide (23 fields)
+ 14. ✅ Erythromycin eye ointment (23 fields)
+ 15. ✅ Ganciclovir eye drops (25 fields)
+ 16. ✅ Gentamicin eye drops (23 fields)
+ 17. ✅ Ketorolac eye drops (24 fields)
+ 18. ✅ Ketotifen eye drops (23 fields)
+ 19. ✅ Latanoprost (23 fields)
+ 20. ✅ Moxifloxacin eye drops (23 fields)
+ 21. ✅ Nepafenac eye drops (24 fields)
+ 22. ✅ Olopatadine eye drops (23 fields)
+ 23. ✅ Phenylephrine eye drops (23 fields)
+ 24. ✅ Pilocarpine eye drops (24 fields)
+ 25. ✅ Polymyxin B/Trimethoprim eye drops (23 fields)
+ 26. ✅ Prednisolone eye drops (26 fields)
+ 27. ✅ Timolol eye drops (23 fields)
+ 28. ✅ Tobramycin eye drops (23 fields)
+ 29. ✅ Travoprost (23 fields)
+ 30. ✅ Tropicamide eye drops (23 fields)
+
+======================================================================
+FILE: drug_modules\psychiatry_other\adhd_anxiolytics.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Atomoxetine (23 fields)
+  2. ✅ Buspirone (23 fields)
+  3. ✅ Dextroamphetamine (23 fields)
+  4. ✅ Lisdexamfetamine (23 fields)
+  5. ✅ Methylphenidate (23 fields)
+
+======================================================================
+FILE: drug_modules\psychiatry_other\antidepressants.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Bupropion (23 fields)
+  2. ✅ Mirtazapine (23 fields)
+  3. ✅ Phenelzine (23 fields)
+  4. ✅ Tranylcypromine (23 fields)
+  5. ✅ Trazodone (23 fields)
+
+======================================================================
+FILE: drug_modules\psychiatry_other\antipsychotics.py
+So luong: 11 thuoc
+======================================================================
+  1. ✅ Aripiprazole (23 fields)
+  2. ✅ Chlorpromazine (23 fields)
+  3. ✅ Clozapine (23 fields)
+  4. ✅ Fluphenazine (24 fields)
+  5. ✅ Haloperidol (24 fields)
+  6. ✅ Lurasidone (24 fields)
+  7. ✅ Olanzapine (24 fields)
+  8. ✅ Pimozide (23 fields)
+  9. ✅ Quetiapine (24 fields)
+ 10. ✅ Risperidone (24 fields)
+ 11. ✅ Ziprasidone (23 fields)
+
+======================================================================
+FILE: drug_modules\psychiatry_other\snris.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Desvenlafaxine (22 fields)
+  2. ✅ Duloxetine (22 fields)
+  3. ✅ Venlafaxine (22 fields)
+
+======================================================================
+FILE: drug_modules\psychiatry_other\ssris.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Citalopram (24 fields)
+  2. ✅ Escitalopram (24 fields)
+  3. ✅ Fluvoxamine (24 fields)
+  4. ✅ Paroxetine (24 fields)
+  5. ✅ Sertraline (24 fields)
+
+======================================================================
+FILE: drug_modules\psychiatry_other\tcas.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Amitriptyline (24 fields)
+  2. ✅ Clomipramine (23 fields)
+
+======================================================================
+FILE: drug_modules\respiratory\anticholinergic_long_actings.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Aclidinium (23 fields)
+  2. ✅ Glycopyrronium (23 fields)
+  3. ✅ Tiotropium (23 fields)
+  4. ✅ Umeclidinium (23 fields)
+
+======================================================================
+FILE: drug_modules\respiratory\anticholinergic_short_actings.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Ipratropium (23 fields)
+
+======================================================================
+FILE: drug_modules\respiratory\combination_inhalers.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Budesonide/Formoterol inhaler (25 fields)
+  2. ✅ Fluticasone/Salmeterol inhaler (25 fields)
+  3. ✅ Fluticasone/Umeclidinium/Vilanterol inhaler (25 fields)
+  4. ✅ Ipratropium/Salbutamol inhaler (25 fields)
+  5. ✅ Tiotropium/Olodaterol inhaler (25 fields)
+  6. ✅ Umeclidinium/Vilanterol inhaler (25 fields)
+
+======================================================================
+FILE: drug_modules\respiratory\inhaled_corticosteroid_icss.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Beclomethasone inhaled (24 fields)
+  2. ✅ Budesonide inhaled (24 fields)
+  3. ✅ Ciclesonide (24 fields)
+  4. ✅ Fluticasone inhaled (23 fields)
+
+======================================================================
+FILE: drug_modules\respiratory\leukotriene_receptor_antagonists.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Cromolyn (23 fields)
+  2. ✅ Montelukast (24 fields)
+  3. ✅ Nedocromil (24 fields)
+  4. ✅ Zafirlukast (23 fields)
+
+======================================================================
+FILE: drug_modules\respiratory\long_acting_beta_2_agonist_labas.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Formoterol (23 fields)
+  2. ✅ Indacaterol (23 fields)
+  3. ✅ Olodaterol (23 fields)
+  4. ✅ Salmeterol (23 fields)
+  5. ✅ Vilanterol (23 fields)
+
+======================================================================
+FILE: drug_modules\respiratory\methylxanthines.py
+So luong: 2 thuoc
+======================================================================
+  1. ✅ Aminophylline (24 fields)
+  2. ✅ Theophylline (24 fields)
+
+======================================================================
+FILE: drug_modules\respiratory\pde4_inhibitors.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Roflumilast (23 fields)
+
+======================================================================
+FILE: drug_modules\respiratory\respiratory_biologics.py
+So luong: 4 thuoc
+======================================================================
+  1. ✅ Benralizumab (23 fields)
+  2. ✅ Dupilumab (23 fields)
+  3. ✅ Mepolizumab (23 fields)
+  4. ✅ Omalizumab (23 fields)
+
+======================================================================
+FILE: drug_modules\respiratory\short_acting_beta_2_agonist_sabas.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Terbutaline (22 fields)
+
+======================================================================
+FILE: drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py
+So luong: 3 thuoc
+======================================================================
+  1. ✅ Chlorpheniramine (24 fields)
+  2. ✅ Diphenhydramine (22 fields)
+  3. ✅ Hydroxyzine (24 fields)
+
+======================================================================
+FILE: drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+So luong: 5 thuoc
+======================================================================
+  1. ✅ Cetirizine (26 fields)
+  2. ✅ Desloratadine (22 fields)
+  3. ✅ Fexofenadine (24 fields)
+  4. ✅ Levocetirizine (24 fields)
+  5. ✅ Loratadine (22 fields)
+
+======================================================================
+FILE: drug_modules\supportive\calciums.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Calcium (24 fields)
+
+======================================================================
+FILE: drug_modules\supportive\folates.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Folic acid (26 fields)
+
+======================================================================
+FILE: drug_modules\supportive\irons.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Iron (25 fields)
+
+======================================================================
+FILE: drug_modules\supportive\sedatives_anesthetics_icu.py
+So luong: 6 thuoc
+======================================================================
+  1. ✅ Dexmedetomidine (26 fields)
+  2. ✅ Etomidate (26 fields)
+  3. ✅ Ketamine (26 fields)
+  4. ✅ Midazolam (IV/ICU) (26 fields)
+  5. ✅ Propofol (26 fields)
+  6. ✅ Thiopental (25 fields)
+
+======================================================================
+FILE: drug_modules\supportive\vitamin_b12s.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Vitamin B12 (24 fields)
+
+======================================================================
+FILE: drug_modules\supportive\vitamin_ds.py
+So luong: 1 thuoc
+======================================================================
+  1. ✅ Vitamin D (24 fields)
+
+======================================================================
+FILE: drug_modules\urology.py
+So luong: 14 thuoc
+======================================================================
+  1. ✅ Alfuzosin (25 fields)
+  2. ✅ Avanafil (26 fields)
+  3. ✅ Dutasteride (24 fields)
+  4. ✅ Fesoterodine (25 fields)
+  5. ✅ Finasteride (26 fields)
+  6. ✅ Mirabegron (24 fields)
+  7. ✅ Oxybutynin (24 fields)
+  8. ✅ Sildenafil (26 fields)
+  9. ✅ Silodosin (25 fields)
+ 10. ✅ Solifenacin (26 fields)
+ 11. ✅ Tadalafil (26 fields)
+ 12. ✅ Tamsulosin (25 fields)
+ 13. ✅ Tolterodine (24 fields)
+ 14. ✅ Vardenafil (24 fields)

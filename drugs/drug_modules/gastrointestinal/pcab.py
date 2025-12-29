@@ -98,8 +98,8 @@ PCAB_DRUGS = {
         },
         "overdose_management": "Triệu chứng: Buồn nôn, nôn, đau bụng. Điều trị: Hỗ trợ, rửa dạ dày nếu mới uống. Không có chất đối kháng đặc hiệu.",
         "administration_instructions": "Uống với hoặc không có thức ăn. Không cần uống trước bữa ăn như PPI. Nuốt nguyên viên, không nhai hoặc nghiền.",
-        "references": "FDA Label (Voquezna), UpToDate - Vonoprazan, ACG Guidelines 2024 - H. pylori Treatment"
-             "hepatic_adjustment": {
+        "references": "FDA Label (Voquezna), UpToDate - Vonoprazan, ACG Guidelines 2024 - H. pylori Treatment",
+        "hepatic_adjustment": {
              "mild": "Không đổi",
              "moderate": "Thận trọng",
              "severe": "Thận trọng, có thể giảm liều",
@@ -184,8 +184,8 @@ PCAB_DRUGS = {
         },
         "overdose_management": "Triệu chứng: Buồn nôn, nôn, đau bụng. Điều trị: Hỗ trợ, rửa dạ dày nếu mới uống.",
         "administration_instructions": "Uống với hoặc không có thức ăn. Nuốt nguyên viên, không nhai hoặc nghiền.",
-        "references": "Clinical Trials (Phase 3), Cinclus Pharma Q3 2025 Report"
-                  "hepatic_adjustment": {
+        "references": "Clinical Trials (Phase 3), Cinclus Pharma Q3 2025 Report",
+        "hepatic_adjustment": {
                   "mild": "Không đổi",
                   "moderate": "Thận trọng",
                   "severe": "Thận trọng, có thể giảm liều",

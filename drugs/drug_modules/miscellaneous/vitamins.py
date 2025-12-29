@@ -99,7 +99,8 @@ VITAMINS_DRUGS = {
             'WHO Guidelines - Folic Acid Supplementation',
             'ACOG Guidelines - Neural Tube Defect Prevention',
             'FDA Drug Information - Folic Acid'
-        ]         "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 },
     "Vitamin C": {
         'group': 'Vitamins/Supplements - Vitamin C',
@@ -243,8 +244,8 @@ VITAMINS_DRUGS = {
             ],
             'last_updated': '2025-02-05',
             'evidence_level': 'High - Guidelines dựa trên chứng cứ từ WHO và FDA'
-        }
-             "black_box_warnings": None,
+        },
+        "black_box_warnings": None,
 },
     "Vitamin E": {
         'group': 'Vitamins/Supplements - Vitamin E',
@@ -392,8 +393,8 @@ VITAMINS_DRUGS = {
             ],
             'last_updated': '2025-02-05',
             'evidence_level': 'High - Guidelines dựa trên chứng cứ từ WHO và FDA'
-        }
-             "black_box_warnings": None,
+        },
+        "black_box_warnings": None,
 },
 
     "Vitamin D3 (Cholecalciferol)": {

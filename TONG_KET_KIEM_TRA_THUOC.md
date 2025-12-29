@@ -113,5 +113,10 @@
 
 ---
 
-**Trạng thái:** ⚠️ Đang kiểm tra - Cần tìm thêm ~370 thuốc
+**Trạng thái:** ⚠️ Đã kiểm tra - Tìm thấy 296 thuốc (có thể còn thiếu do lỗi syntax trong một số file lớn)
+
+### ⚠️ Vấn đề phát hiện:
+- Một số file lớn có lỗi syntax (dermatology.py, hematology.py, etc.) nên không load được
+- Cần sửa lỗi syntax trước khi có thể đếm chính xác
+- Có thể có thuốc trong các file này chưa được tính
 

@@ -722,8 +722,8 @@ DPP_4_INHIBITORS_DRUGS = {
             "AACE/ACE Diabetes Guidelines",
             "EXAMINE Study",
             "FDA Drug Safety Communication - DPP-4 Inhibitors and Heart Failure"
-        ]
-                  "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 }
 }
 

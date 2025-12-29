@@ -76,7 +76,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'UpToDate - Loratadine: Drug information',
         'Allergy & Clinical Immunology guidelines'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs and systematic reviews'}         "black_box_warnings": None,
+        'High - Multiple RCTs and systematic reviews'},
+        "black_box_warnings": None,
 },
     "Cetirizine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Cetirizine, Zyrtec', 'administration': ['PO'],
@@ -179,7 +180,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Cetirizine'
-        ]         "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 },
     "Fexofenadine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Fexofenadine, Allegra', 'administration': ['PO'],
@@ -272,7 +274,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Fexofenadine'
-        ]         "black_box_warnings": None,
+        ],
+        "black_box_warnings": None,
 },
     "Desloratadine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Desloratadine, Aerius', 'administration': ['PO'],

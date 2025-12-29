@@ -1,0 +1,2888 @@
+# DANH SACH THUOC - CHI TIET
+# Tong so: 721
+# Ngay tao: 2025-12-29 07:49:52
+
+✅ 5-Fluorouracil
+   File: drug_modules\oncology\antimetabolites.py
+   Fields: 23 (14/14)
+
+✅ Abaloparatide
+   File: drug_modules\endocrinology_other\osteoporosis_other.py
+   Fields: 24 (14/14)
+
+✅ Abiraterone
+   File: drug_modules\oncology\hormone_therapy.py
+   Fields: 23 (14/14)
+
+✅ Acarbose
+   File: drug_modules\diabetes\alpha_glucosidase_inhibitors.py
+   Fields: 23 (14/14)
+
+✅ Acebutolol
+   File: drug_modules\cardiovascular\beta_blockers\selective.py
+   Fields: 23 (14/14)
+
+✅ Aclidinium
+   File: drug_modules\respiratory\anticholinergic_long_actings.py
+   Fields: 23 (14/14)
+
+✅ Acyclovir
+   File: drug_modules\antimicrobial\antivirals\herpes.py
+   Fields: 25 (14/14)
+
+✅ Acyclovir eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 25 (14/14)
+
+✅ Acyclovir eye ointment
+   File: drug_modules\ophthalmology.py
+   Fields: 25 (14/14)
+
+✅ Adalimumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Adapalene
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Adenosine
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 22 (14/14)
+
+✅ Aducanumab
+   File: drug_modules\neurological\alzheimer_dementia_drugs.py
+   Fields: 24 (14/14)
+
+✅ Albendazole
+   File: drug_modules\infectious_other\anthelmintics.py
+   Fields: 25 (14/14)
+
+✅ Alemtuzumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Alendronate
+   File: drug_modules\endocrinology_other\osteoporosis_bisphosphonates.py
+   Fields: 24 (14/14)
+
+✅ Alfuzosin
+   File: drug_modules\urology.py
+   Fields: 25 (14/14)
+
+✅ Alirocumab
+   File: drug_modules\cardiovascular\pcsk9_inhibitors.py
+   Fields: 22 (14/14)
+
+✅ Allopurinol
+   File: drug_modules\miscellaneous\xanthine_oxidase_inhibitors.py
+   Fields: 26 (14/14)
+
+✅ Alogliptin
+   File: drug_modules\diabetes\dpp_4_inhibitors.py
+   Fields: 25 (14/14)
+
+✅ Alteplase
+   File: drug_modules\hematology.py
+   Fields: 24 (14/14)
+
+✅ Aluminum hydroxide/Magnesium hydroxide
+   File: drug_modules\gastrointestinal\antacids.py
+   Fields: 24 (14/14)
+
+✅ Amikacin
+   File: drug_modules\antimicrobial\antibiotics\aminoglycosides.py
+   Fields: 27 (14/14)
+
+✅ Aminophylline
+   File: drug_modules\respiratory\methylxanthines.py
+   Fields: 24 (14/14)
+
+✅ Amiodarone
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 22 (14/14)
+
+✅ Amitriptyline
+   File: drug_modules\psychiatry_other\tcas.py
+   Fields: 24 (14/14)
+
+✅ Amlodipine
+   File: drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py
+   Fields: 29 (14/14)
+
+✅ Amlodipine/Olmesartan
+   File: drug_modules\cardiovascular\fixed_dose_combinations.py
+   Fields: 24 (14/14)
+
+✅ Amlodipine/Valsartan
+   File: drug_modules\cardiovascular\fixed_dose_combinations.py
+   Fields: 24 (14/14)
+
+✅ Amoxicillin
+   File: drug_modules\antimicrobial\antibiotics\penicillins.py
+   Fields: 21 (14/14)
+
+✅ Amoxicillin suspension
+   File: drug_modules\infectious_other\beta_lactams.py
+   Fields: 24 (14/14)
+
+✅ Amoxicillin-clavulanate
+   File: drug_modules\antimicrobial\antibiotics\penicillins.py
+   Fields: 21 (14/14)
+
+✅ Amphotericin B
+   File: drug_modules\antimicrobial\antifungals\polyenes.py
+   Fields: 26 (14/14)
+
+✅ Ampicillin
+   File: drug_modules\antimicrobial\antibiotics\penicillins.py
+   Fields: 21 (14/14)
+
+✅ Ampicillin-sulbactam
+   File: drug_modules\antimicrobial\antibiotics\penicillins.py
+   Fields: 21 (14/14)
+
+✅ Anastrozole
+   File: drug_modules\oncology\hormone_therapy.py
+   Fields: 23 (14/14)
+
+✅ Andexanet alfa
+   File: drug_modules\hematology.py
+   Fields: 26 (14/14)
+
+✅ Anidulafungin
+   File: drug_modules\antimicrobial\antifungals\echinocandins.py
+   Fields: 25 (14/14)
+
+✅ Anifrolumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Apixaban
+   File: drug_modules\cardiovascular\anticoagulants.py
+   Fields: 26 (14/14)
+
+✅ Aripiprazole
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 23 (14/14)
+
+✅ Artemether-lumefantrine
+   File: drug_modules\infectious_other\antimalarials.py
+   Fields: 25 (14/14)
+
+✅ Artesunate
+   File: drug_modules\infectious_other\antimalarials.py
+   Fields: 25 (14/14)
+
+✅ Artificial tears (Carboxymethylcellulose)
+   File: drug_modules\ophthalmology.py
+   Fields: 25 (14/14)
+
+✅ Aspirin
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 23 (14/14)
+
+✅ Aspirin/Carisoprodol
+   File: drug_modules\analgesics\pain_muscle_relaxant_combinations.py
+   Fields: 23 (14/14)
+
+✅ Atazanavir (boosted with ritonavir/cobicistat)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Atenolol
+   File: drug_modules\cardiovascular\beta_blockers\selective.py
+   Fields: 30 (14/14)
+
+✅ Atezolizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Atomoxetine
+   File: drug_modules\psychiatry_other\adhd_anxiolytics.py
+   Fields: 23 (14/14)
+
+✅ Atorvastatin
+   File: drug_modules\cardiovascular\statins.py
+   Fields: 29 (14/14)
+
+✅ Atropine
+   File: drug_modules\emergency\anticholinergics.py
+   Fields: 24 (14/14)
+
+✅ Atropine eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 25 (14/14)
+
+✅ Avanafil
+   File: drug_modules\urology.py
+   Fields: 26 (14/14)
+
+✅ Azathioprine
+   File: drug_modules\miscellaneous\immunosuppressants.py
+   Fields: 25 (14/14)
+
+✅ Azelaic Acid
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Azelaic acid topical
+   File: drug_modules\dermatology.py
+   Fields: 25 (14/14)
+
+✅ Azelastine eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 25 (14/14)
+
+✅ Azelastine/Fluticasone nasal spray
+   File: drug_modules\ent_oral_nasal_combinations.py
+   Fields: 23 (14/14)
+
+✅ Azilsartan medoxomil
+   File: drug_modules\cardiovascular\arbs.py
+   Fields: 26 (14/14)
+
+✅ Azithromycin
+   File: drug_modules\antimicrobial\antibiotics\macrolides.py
+   Fields: 27 (14/14)
+
+✅ Aztreonam
+   File: drug_modules\antimicrobial\antibiotics\beta_lactams.py
+   Fields: 24 (14/14)
+
+✅ Baclofen
+   File: drug_modules\neurological\muscle_relaxants.py
+   Fields: 23 (14/14)
+
+✅ Baricitinib
+   File: drug_modules\gastrointestinal\jak_inhibitors.py
+   Fields: 25 (14/14)
+
+✅ Beclomethasone inhaled
+   File: drug_modules\respiratory\inhaled_corticosteroid_icss.py
+   Fields: 24 (14/14)
+
+✅ Bedaquiline
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Belimumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Bempedoic acid
+   File: drug_modules\cardiovascular\cholesterol_absorption_inhibitors.py
+   Fields: 24 (14/14)
+
+✅ Benazepril
+   File: drug_modules\cardiovascular\ace_inhibitors.py
+   Fields: 26 (14/14)
+
+✅ Benralizumab
+   File: drug_modules\respiratory\respiratory_biologics.py
+   Fields: 23 (14/14)
+
+✅ Benzoyl peroxide topical
+   File: drug_modules\dermatology.py
+   Fields: 25 (14/14)
+
+✅ Betamethasone
+   File: drug_modules\endocrinology_other\corticosteroids\long_acting.py
+   Fields: 22 (14/14)
+
+✅ Betamethasone topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Betamethasone/Clotrimazole topical
+   File: drug_modules\dermatology.py
+   Fields: 25 (14/14)
+
+✅ Betaxolol
+   File: drug_modules\cardiovascular\beta_blockers\selective.py
+   Fields: 23 (14/14)
+
+✅ Bevacizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Bictegravir (BIC)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Bictegravir/Emtricitabine/Tenofovir alafenamide (BIC/FTC/TAF)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Bimatoprost
+   File: drug_modules\ophthalmology.py
+   Fields: 25 (14/14)
+
+✅ Bisacodyl
+   File: drug_modules\gastrointestinal\laxatives.py
+   Fields: 25 (14/14)
+
+✅ Bismuth subsalicylate
+   File: drug_modules\gastrointestinal\antidiarrheals.py
+   Fields: 23 (14/14)
+
+✅ Bisoprolol
+   File: drug_modules\cardiovascular\beta_blockers\selective.py
+   Fields: 30 (14/14)
+
+✅ Brentuximab vedotin
+   File: drug_modules\oncology\monoclonal_antibodies_adcs.py
+   Fields: 24 (14/14)
+
+✅ Brimonidine
+   File: drug_modules\ophthalmology.py
+   Fields: 25 (14/14)
+
+✅ Brinzolamide
+   File: drug_modules\ophthalmology.py
+   Fields: 25 (14/14)
+
+✅ Brodalumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Bromocriptine
+   File: drug_modules\diabetes\other_antidiabetics.py
+   Fields: 25 (14/14)
+
+✅ Budesonide
+   File: drug_modules\miscellaneous\corticosteroid_inhaleds.py
+   Fields: 23 (14/14)
+
+✅ Budesonide inhaled
+   File: drug_modules\respiratory\inhaled_corticosteroid_icss.py
+   Fields: 24 (14/14)
+
+✅ Budesonide/Formoterol inhaler
+   File: drug_modules\respiratory\combination_inhalers.py
+   Fields: 25 (14/14)
+
+✅ Bumetanide
+   File: drug_modules\cardiovascular\diuretics.py
+   Fields: 16 (14/14)
+
+✅ Buprenorphine
+   File: drug_modules\analgesics\opioid_agonists.py
+   Fields: 23 (14/14)
+
+✅ Bupropion
+   File: drug_modules\psychiatry_other\antidepressants.py
+   Fields: 23 (14/14)
+
+✅ Buspirone
+   File: drug_modules\psychiatry_other\adhd_anxiolytics.py
+   Fields: 23 (14/14)
+
+✅ Cabotegravir + Rilpivirine (Long-acting IM)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Calcipotriol
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Calcitonin
+   File: drug_modules\endocrinology_other\osteoporosis_other.py
+   Fields: 24 (14/14)
+
+✅ Calcitriol topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Calcium
+   File: drug_modules\supportive\calciums.py
+   Fields: 24 (14/14)
+
+✅ Calcium (elemental)
+   File: drug_modules\miscellaneous\vitamins.py
+   Fields: 24 (14/14)
+
+✅ Calcium carbonate
+   File: drug_modules\gastrointestinal\antacids.py
+   Fields: 24 (14/14)
+
+✅ Calcium chloride
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Calcium gluconate
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Canagliflozin
+   File: drug_modules\diabetes\sglt2_inhibitors.py
+   Fields: 25 (14/14)
+
+✅ Candesartan
+   File: drug_modules\cardiovascular\arbs.py
+   Fields: 26 (14/14)
+
+✅ Capecitabine
+   File: drug_modules\oncology\antimetabolites.py
+   Fields: 23 (14/14)
+
+✅ Caplacizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Captopril
+   File: drug_modules\cardiovascular\ace_inhibitors.py
+   Fields: 30 (14/14)
+
+✅ Carbamazepine
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 26 (14/14)
+
+✅ Carboplatin
+   File: drug_modules\oncology\platinum_compounds.py
+   Fields: 23 (14/14)
+
+✅ Carboprost
+   File: drug_modules\emergency\uterotonics.py
+   Fields: 23 (14/14)
+
+✅ Carisoprodol
+   File: drug_modules\neurological\muscle_relaxants.py
+   Fields: 24 (14/14)
+
+✅ Carvedilol
+   File: drug_modules\cardiovascular\beta_blockers\non_selective.py
+   Fields: 29 (14/14)
+
+✅ Caspofungin
+   File: drug_modules\antimicrobial\antifungals\echinocandins.py
+   Fields: 25 (14/14)
+
+✅ Cefaclor
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 23 (14/14)
+
+✅ Cefadroxil
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 24 (14/14)
+
+✅ Cefazolin
+   File: drug_modules\antimicrobial\antibiotics\cephalosporins.py
+   Fields: 26 (14/14)
+
+✅ Cefdinir
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 23 (14/14)
+
+✅ Cefepime
+   File: drug_modules\antimicrobial\antibiotics\cephalosporins.py
+   Fields: 26 (14/14)
+
+✅ Cefiderocol
+   File: drug_modules\antimicrobial\antibiotics\beta_lactams.py
+   Fields: 24 (14/14)
+
+✅ Cefixime
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 23 (14/14)
+
+✅ Cefoperazone
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 24 (14/14)
+
+✅ Cefotaxime
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 23 (14/14)
+
+✅ Cefotetan
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 24 (14/14)
+
+✅ Cefoxitin
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 24 (14/14)
+
+✅ Cefpirome
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 24 (14/14)
+
+✅ Ceftazidime
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 23 (14/14)
+
+✅ Ceftriaxone
+   File: drug_modules\antimicrobial\antibiotics\cephalosporins.py
+   Fields: 27 (14/14)
+
+✅ Cefuroxime
+   File: drug_modules\infectious_other\cephalosporins.py
+   Fields: 23 (14/14)
+
+✅ Celecoxib
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 23 (14/14)
+
+✅ Cemiplimab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Cephalexin
+   File: drug_modules\antimicrobial\antibiotics\cephalosporins.py
+   Fields: 23 (14/14)
+
+✅ Cerebrolysin
+   File: drug_modules\neurological\cerebral_circulation.py
+   Fields: 25 (14/14)
+
+✅ Cerebroprotein hydrolysate (khác)
+   File: drug_modules\neurological\cerebral_circulation.py
+   Fields: 24 (14/14)
+
+✅ Certolizumab pegol
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Cetirizine
+   File: drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+   Fields: 26 (14/14)
+
+✅ Cetirizine/Pseudoephedrine
+   File: drug_modules\ent_oral_nasal_combinations.py
+   Fields: 23 (14/14)
+
+✅ Cetuximab
+   File: drug_modules\oncology\monoclonal_antibodies_adcs.py
+   Fields: 23 (14/14)
+
+✅ Chloroquine
+   File: drug_modules\infectious_other\antimalarials.py
+   Fields: 23 (14/14)
+
+✅ Chlorpheniramine
+   File: drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py
+   Fields: 24 (14/14)
+
+✅ Chlorpromazine
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 23 (14/14)
+
+✅ Chlorthalidone
+   File: drug_modules\cardiovascular\diuretics.py
+   Fields: 22 (14/14)
+
+✅ Ciclesonide
+   File: drug_modules\respiratory\inhaled_corticosteroid_icss.py
+   Fields: 24 (14/14)
+
+✅ Cimetidine
+   File: drug_modules\gastrointestinal\h2_receptor_antagonists.py
+   Fields: 23 (14/14)
+
+✅ Ciprofloxacin
+   File: drug_modules\antimicrobial\antibiotics\fluoroquinolones.py
+   Fields: 21 (14/14)
+
+✅ Ciprofloxacin eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Cisatracurium
+   File: drug_modules\emergency\neuromuscular_blockers.py
+   Fields: 25 (14/14)
+
+✅ Cisplatin
+   File: drug_modules\oncology\platinum_compounds.py
+   Fields: 23 (14/14)
+
+✅ Citalopram
+   File: drug_modules\psychiatry_other\ssris.py
+   Fields: 24 (14/14)
+
+✅ Citicoline
+   File: drug_modules\neurological\cerebral_circulation.py
+   Fields: 24 (14/14)
+
+✅ Citicoline/Piracetam
+   File: drug_modules\neurological\neurological_combinations.py
+   Fields: 25 (14/14)
+
+✅ Clarithromycin
+   File: drug_modules\antimicrobial\antibiotics\macrolides.py
+   Fields: 27 (14/14)
+
+✅ Clevidipine
+   File: drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py
+   Fields: 23 (14/14)
+
+✅ Clindamycin
+   File: drug_modules\antimicrobial\antibiotics\lincosamides.py
+   Fields: 27 (14/14)
+
+✅ Clindamycin topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Clobetasol
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Clofazimine
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Clomipramine
+   File: drug_modules\psychiatry_other\tcas.py
+   Fields: 23 (14/14)
+
+✅ Clonazepam
+   File: drug_modules\neurological\benzodiazepines.py
+   Fields: 24 (14/14)
+
+✅ Clonidine
+   File: drug_modules\cardiovascular\other_cv.py
+   Fields: 23 (14/14)
+
+✅ Clopidogrel
+   File: drug_modules\cardiovascular\anticoagulants.py
+   Fields: 24 (14/14)
+
+✅ Clotrimazole (vaginal)
+   File: drug_modules\obstetrics_gynecology.py
+   Fields: 24 (14/14)
+
+✅ Clotrimazole topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Clozapine
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 23 (14/14)
+
+✅ Cobicistat (COBI)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Codeine
+   File: drug_modules\analgesics\opioid_agonist_weaks.py
+   Fields: 23 (14/14)
+
+✅ Colchicine
+   File: drug_modules\miscellaneous\gout_medications.py
+   Fields: 24 (14/14)
+
+✅ Colesevelam
+   File: drug_modules\diabetes\other_antidiabetics.py
+   Fields: 25 (14/14)
+
+✅ Colistin
+   File: drug_modules\antimicrobial\antibiotics\polymyxins.py
+   Fields: 27 (14/14)
+
+✅ Cromolyn
+   File: drug_modules\respiratory\leukotriene_receptor_antagonists.py
+   Fields: 23 (14/14)
+
+✅ Cyclobenzaprine
+   File: drug_modules\neurological\muscle_relaxants.py
+   Fields: 24 (14/14)
+
+✅ Cyclopentolate eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Cyclophosphamide
+   File: drug_modules\oncology\alkylating_agents.py
+   Fields: 23 (14/14)
+
+✅ Cycloserine / Terizidone
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Cyclosporine
+   File: drug_modules\miscellaneous\immunosuppressants.py
+   Fields: 23 (14/14)
+
+✅ Dabigatran
+   File: drug_modules\cardiovascular\anticoagulants.py
+   Fields: 26 (14/14)
+
+✅ Dapagliflozin
+   File: drug_modules\diabetes\sglt2_inhibitors.py
+   Fields: 25 (14/14)
+
+✅ Daptomycin
+   File: drug_modules\antimicrobial\antibiotics\glycopeptides.py
+   Fields: 26 (14/14)
+
+✅ Daratumumab
+   File: drug_modules\oncology\monoclonal_antibodies_adcs.py
+   Fields: 24 (14/14)
+
+✅ Darunavir (boosted with ritonavir/cobicistat)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Delamanid
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Demeclocycline
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Denosumab
+   File: drug_modules\endocrinology_other\osteoporosis_other.py
+   Fields: 24 (14/14)
+
+✅ Desloratadine
+   File: drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+   Fields: 22 (14/14)
+
+✅ Desvenlafaxine
+   File: drug_modules\psychiatry_other\snris.py
+   Fields: 22 (14/14)
+
+✅ Deutetrabenazine
+   File: drug_modules\neurological\antiparkinsonian.py
+   Fields: 23 (14/14)
+
+✅ Dexamethasone
+   File: drug_modules\endocrinology_other\corticosteroids\long_acting.py
+   Fields: 22 (14/14)
+
+✅ Dexamethasone eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 24 (14/14)
+
+✅ Dexlansoprazole
+   File: drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py
+   Fields: 24 (14/14)
+
+✅ Dexmedetomidine
+   File: drug_modules\supportive\sedatives_anesthetics_icu.py
+   Fields: 26 (14/14)
+
+✅ Dextroamphetamine
+   File: drug_modules\psychiatry_other\adhd_anxiolytics.py
+   Fields: 23 (14/14)
+
+✅ Diazepam
+   File: drug_modules\neurological\benzodiazepines.py
+   Fields: 24 (14/14)
+
+✅ Diclofenac
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 25 (14/14)
+
+✅ Diclofenac eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 24 (14/14)
+
+✅ Diclofenac gel
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Dicloxacillin
+   File: drug_modules\infectious_other\beta_lactams.py
+   Fields: 23 (14/14)
+
+✅ Digoxin
+   File: drug_modules\cardiovascular\other_cv.py
+   Fields: 27 (14/14)
+
+✅ Diltiazem
+   File: drug_modules\cardiovascular\calcium_blockers\non_dihydropyridines.py
+   Fields: 23 (14/14)
+
+✅ Dimethyl fumarate
+   File: drug_modules\neurological\multiple_sclerosis_drugs.py
+   Fields: 24 (14/14)
+
+✅ Dinoprostone
+   File: drug_modules\emergency\uterotonics.py
+   Fields: 23 (14/14)
+
+✅ Diphenhydramine
+   File: drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py
+   Fields: 22 (14/14)
+
+✅ Dipyridamole
+   File: drug_modules\cardiovascular_other\antiplatelets.py
+   Fields: 26 (14/14)
+
+✅ Disopyramide
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 23 (14/14)
+
+✅ Dobutamine
+   File: drug_modules\emergency\catecholamine_alpha__beta_agonists.py
+   Fields: 21 (14/14)
+
+✅ Docetaxel
+   File: drug_modules\oncology\taxanes.py
+   Fields: 23 (14/14)
+
+✅ Dofetilide
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 23 (14/14)
+
+✅ Dolutegravir (DTG)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Domperidone
+   File: drug_modules\gastrointestinal\prokinetic_antiemetics.py
+   Fields: 23 (14/14)
+
+✅ Donanemab
+   File: drug_modules\neurological\alzheimer_dementia_drugs.py
+   Fields: 24 (14/14)
+
+✅ Donepezil
+   File: drug_modules\neurological\alzheimer_dementia_drugs.py
+   Fields: 24 (14/14)
+
+✅ Dopamine
+   File: drug_modules\emergency\catecholamine_alpha__beta_agonists.py
+   Fields: 21 (14/14)
+
+✅ Doripenem
+   File: drug_modules\antimicrobial\antibiotics\beta_lactams.py
+   Fields: 23 (14/14)
+
+✅ Dorzolamide
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Dostarlimab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Doxazosin
+   File: drug_modules\cardiovascular\other_cv.py
+   Fields: 23 (14/14)
+
+✅ Doxorubicin
+   File: drug_modules\oncology\anthracyclines.py
+   Fields: 24 (14/14)
+
+✅ Doxycycline
+   File: drug_modules\antimicrobial\antibiotics\tetracyclines.py
+   Fields: 27 (14/14)
+
+✅ Dronedarone
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 22 (14/14)
+
+✅ Dulaglutide
+   File: drug_modules\diabetes\glp1_agonists.py
+   Fields: 26 (14/14)
+
+✅ Duloxetine
+   File: drug_modules\psychiatry_other\snris.py
+   Fields: 22 (14/14)
+
+✅ Dupilumab
+   File: drug_modules\respiratory\respiratory_biologics.py
+   Fields: 23 (14/14)
+
+✅ Durvalumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Dutasteride
+   File: drug_modules\urology.py
+   Fields: 24 (14/14)
+
+✅ Econazole topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Eculizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Edaravone
+   File: drug_modules\neurological\cerebral_circulation.py
+   Fields: 24 (14/14)
+
+✅ Edoxaban
+   File: drug_modules\cardiovascular\anticoagulants.py
+   Fields: 26 (14/14)
+
+✅ Efavirenz (EFV)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Efavirenz/Tenofovir disoproxil fumarate/Emtricitabine (EFV/TDF/FTC)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Efgartigimod
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Eltrombopag
+   File: drug_modules\hematology.py
+   Fields: 24 (14/14)
+
+✅ Emicizumab
+   File: drug_modules\hematology.py
+   Fields: 24 (14/14)
+
+✅ Empagliflozin
+   File: drug_modules\diabetes\sglt2_inhibitors.py
+   Fields: 25 (14/14)
+
+✅ Emtricitabine (FTC)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Enalapril
+   File: drug_modules\cardiovascular\ace_inhibitors.py
+   Fields: 30 (14/14)
+
+✅ Enalaprilat
+   File: drug_modules\cardiovascular_other\ace_inhibitors_iv.py
+   Fields: 23 (14/14)
+
+✅ Enoxaparin
+   File: drug_modules\cardiovascular\anticoagulants.py
+   Fields: 23 (14/14)
+
+✅ Entecavir
+   File: drug_modules\antimicrobial\antivirals\hepatitis.py
+   Fields: 26 (14/14)
+
+✅ Enzalutamide
+   File: drug_modules\oncology\hormone_therapy.py
+   Fields: 23 (14/14)
+
+✅ Epinephrine
+   File: drug_modules\emergency\catecholamine_alpha__beta_agonists.py
+   Fields: 25 (14/14)
+
+✅ Eplerenone
+   File: drug_modules\cardiovascular\diuretics.py
+   Fields: 25 (14/14)
+
+✅ Epoetin alfa
+   File: drug_modules\hematology.py
+   Fields: 24 (14/14)
+
+✅ Eptinezumab
+   File: drug_modules\neurological\migraine_cgrp_drugs.py
+   Fields: 24 (14/14)
+
+✅ Eravacycline
+   File: drug_modules\antimicrobial\antibiotics\others.py
+   Fields: 24 (14/14)
+
+✅ Erenumab
+   File: drug_modules\neurological\migraine_cgrp_drugs.py
+   Fields: 24 (14/14)
+
+✅ Erlotinib
+   File: drug_modules\oncology\targeted_therapy_tkis.py
+   Fields: 23 (14/14)
+
+✅ Ertapenem
+   File: drug_modules\antimicrobial\antibiotics\beta_lactams.py
+   Fields: 28 (14/14)
+
+✅ Ertugliflozin
+   File: drug_modules\diabetes\sglt2_inhibitors.py
+   Fields: 26 (14/14)
+
+✅ Erythromycin
+   File: drug_modules\antimicrobial\antibiotics\macrolides.py
+   Fields: 27 (14/14)
+
+✅ Erythromycin eye ointment
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Erythromycin topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Escitalopram
+   File: drug_modules\psychiatry_other\ssris.py
+   Fields: 24 (14/14)
+
+✅ Esomeprazole
+   File: drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py
+   Fields: 23 (14/14)
+
+✅ Estradiol
+   File: drug_modules\obstetrics_gynecology.py
+   Fields: 24 (14/14)
+
+✅ Etanercept
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Ethambutol
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Ethinyl estradiol + Levonorgestrel
+   File: drug_modules\obstetrics_gynecology.py
+   Fields: 24 (14/14)
+
+✅ Ethosuximide
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 27 (14/14)
+
+✅ Etomidate
+   File: drug_modules\supportive\sedatives_anesthetics_icu.py
+   Fields: 26 (14/14)
+
+✅ Etoposide
+   File: drug_modules\oncology\topoisomerase_inhibitors.py
+   Fields: 23 (14/14)
+
+✅ Etoricoxib
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 23 (14/14)
+
+✅ Evinacumab
+   File: drug_modules\cardiovascular\triglyceride_lowering.py
+   Fields: 23 (14/14)
+
+✅ Evolocumab
+   File: drug_modules\cardiovascular\pcsk9_inhibitors.py
+   Fields: 22 (14/14)
+
+✅ Exenatide
+   File: drug_modules\diabetes\glp1_agonists.py
+   Fields: 26 (14/14)
+
+✅ Ezetimibe
+   File: drug_modules\cardiovascular\cholesterol_absorption_inhibitors.py
+   Fields: 23 (14/14)
+
+✅ Famotidine
+   File: drug_modules\gastrointestinal\h2_receptor_antagonists.py
+   Fields: 23 (14/14)
+
+✅ Favipiravir
+   File: drug_modules\antimicrobial\antivirals\influenza.py
+   Fields: 26 (14/14)
+
+✅ Febuxostat
+   File: drug_modules\miscellaneous\gout_medications.py
+   Fields: 26 (14/14)
+
+✅ Felodipine
+   File: drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py
+   Fields: 27 (14/14)
+
+✅ Fenofibrate
+   File: drug_modules\cardiovascular\triglyceride_lowering.py
+   Fields: 23 (14/14)
+
+✅ Fentanyl
+   File: drug_modules\analgesics\opioid_agonist_strongs.py
+   Fields: 25 (14/14)
+
+✅ Fesoterodine
+   File: drug_modules\urology.py
+   Fields: 25 (14/14)
+
+✅ Fexofenadine
+   File: drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+   Fields: 24 (14/14)
+
+✅ Fexofenadine/Pseudoephedrine
+   File: drug_modules\ent_oral_nasal_combinations.py
+   Fields: 23 (14/14)
+
+✅ Fidaxomicin
+   File: drug_modules\antimicrobial\antibiotics\others.py
+   Fields: 27 (14/14)
+
+✅ Filgrastim
+   File: drug_modules\hematology.py
+   Fields: 25 (14/14)
+
+✅ Finasteride
+   File: drug_modules\urology.py
+   Fields: 26 (14/14)
+
+✅ Finerenone
+   File: drug_modules\cardiovascular\other_cv.py
+   Fields: 24 (14/14)
+
+✅ Fingolimod
+   File: drug_modules\neurological\multiple_sclerosis_drugs.py
+   Fields: 24 (14/14)
+
+✅ Flecainide
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 22 (14/14)
+
+✅ Fluconazole
+   File: drug_modules\antimicrobial\antifungals\azoles.py
+   Fields: 26 (14/14)
+
+✅ Fludrocortisone
+   File: drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py
+   Fields: 23 (14/14)
+
+✅ Flumazenil
+   File: drug_modules\emergency\benzodiazepine_antagonists.py
+   Fields: 23 (14/14)
+
+✅ Fluoxetine
+   File: drug_modules\neurological\ssri_selective_serotonin_reuptake_inhibitors.py
+   Fields: 24 (14/14)
+
+✅ Fluphenazine
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 24 (14/14)
+
+✅ Fluticasone inhaled
+   File: drug_modules\respiratory\inhaled_corticosteroid_icss.py
+   Fields: 23 (14/14)
+
+✅ Fluticasone/Salmeterol inhaler
+   File: drug_modules\respiratory\combination_inhalers.py
+   Fields: 25 (14/14)
+
+✅ Fluticasone/Umeclidinium/Vilanterol inhaler
+   File: drug_modules\respiratory\combination_inhalers.py
+   Fields: 25 (14/14)
+
+✅ Fluvastatin
+   File: drug_modules\cardiovascular\statins.py
+   Fields: 26 (14/14)
+
+✅ Fluvoxamine
+   File: drug_modules\psychiatry_other\ssris.py
+   Fields: 24 (14/14)
+
+✅ Folic Acid
+   File: drug_modules\miscellaneous\vitamins.py
+   Fields: 24 (14/14)
+
+✅ Folic acid
+   File: drug_modules\supportive\folates.py
+   Fields: 26 (14/14)
+
+✅ Fondaparinux
+   File: drug_modules\cardiovascular\anticoagulants.py
+   Fields: 23 (14/14)
+
+✅ Formoterol
+   File: drug_modules\respiratory\long_acting_beta_2_agonist_labas.py
+   Fields: 23 (14/14)
+
+✅ Fosfomycin
+   File: drug_modules\antimicrobial\antibiotics\others.py
+   Fields: 27 (14/14)
+
+✅ Fosphenytoin
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 23 (14/14)
+
+✅ Fremanezumab
+   File: drug_modules\neurological\migraine_cgrp_drugs.py
+   Fields: 24 (14/14)
+
+✅ Furosemide
+   File: drug_modules\cardiovascular\diuretics.py
+   Fields: 25 (14/14)
+
+✅ Fusidic Acid
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Fusidic acid/Betamethasone topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Gabapentin
+   File: drug_modules\neurological\anticonvulsant_alpha_2_delta_ligands.py
+   Fields: 24 (14/14)
+
+✅ Galcanezumab
+   File: drug_modules\neurological\migraine_cgrp_drugs.py
+   Fields: 24 (14/14)
+
+✅ Ganciclovir
+   File: drug_modules\antimicrobial\antivirals\cmv.py
+   Fields: 25 (14/14)
+
+✅ Ganciclovir eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 25 (14/14)
+
+✅ Gefitinib
+   File: drug_modules\oncology\targeted_therapy_tkis.py
+   Fields: 23 (14/14)
+
+✅ Gemcitabine
+   File: drug_modules\oncology\antimetabolites.py
+   Fields: 23 (14/14)
+
+✅ Gemfibrozil
+   File: drug_modules\cardiovascular\triglyceride_lowering.py
+   Fields: 23 (14/14)
+
+✅ Gemifloxacin
+   File: drug_modules\infectious_other\fluoroquinolones.py
+   Fields: 23 (14/14)
+
+✅ Gentamicin
+   File: drug_modules\antimicrobial\antibiotics\aminoglycosides.py
+   Fields: 26 (14/14)
+
+✅ Gentamicin eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Gentamicin/Betamethasone/Clotrimazole topical
+   File: drug_modules\dermatology.py
+   Fields: 26 (14/14)
+
+✅ Ginkgo biloba extract
+   File: drug_modules\neurological\cerebral_circulation.py
+   Fields: 24 (14/14)
+
+✅ Ginkgo biloba/Vinpocetine
+   File: drug_modules\neurological\neurological_combinations.py
+   Fields: 25 (14/14)
+
+✅ Glibenclamide
+   File: drug_modules\diabetes\sulfonylureas.py
+   Fields: 29 (14/14)
+
+✅ Gliclazide
+   File: drug_modules\diabetes\sulfonylureas.py
+   Fields: 29 (14/14)
+
+✅ Glimepiride
+   File: drug_modules\diabetes\sulfonylureas.py
+   Fields: 25 (14/14)
+
+✅ Glycopyrronium
+   File: drug_modules\respiratory\anticholinergic_long_actings.py
+   Fields: 23 (14/14)
+
+✅ Golimumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Granisetron
+   File: drug_modules\oncology\anti_emetic_5_ht3_antagonists.py
+   Fields: 23 (14/14)
+
+✅ Guselkumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Haloperidol
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 24 (14/14)
+
+✅ Heparin
+   File: drug_modules\hematology.py
+   Fields: 24 (14/14)
+
+✅ High-intensity statin (đột quỵ/TIA)
+   File: drug_modules\cardiovascular_other\statins.py
+   Fields: 24 (14/14)
+
+✅ Hydralazine
+   File: drug_modules\cardiovascular\vasodilators.py
+   Fields: 23 (14/14)
+
+✅ Hydrochlorothiazide
+   File: drug_modules\cardiovascular\diuretics.py
+   Fields: 25 (14/14)
+
+✅ Hydrocodone
+   File: drug_modules\analgesics\opioid_agonists.py
+   Fields: 23 (14/14)
+
+✅ Hydrocortisone
+   File: drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py
+   Fields: 22 (14/14)
+
+✅ Hydrocortisone topical
+   File: drug_modules\dermatology.py
+   Fields: 25 (14/14)
+
+✅ Hydromorphone
+   File: drug_modules\analgesics\opioid_agonist_strongs.py
+   Fields: 25 (14/14)
+
+✅ Hydroxychloroquine
+   File: drug_modules\infectious_other\antimalarials.py
+   Fields: 23 (14/14)
+
+✅ Hydroxyzine
+   File: drug_modules\supportive\antihistamine_h1_antagonist_1st_generations.py
+   Fields: 24 (14/14)
+
+✅ Hyoscine butylbromide
+   File: drug_modules\gastrointestinal\antispasmodics.py
+   Fields: 25 (14/14)
+
+✅ Ibandronate
+   File: drug_modules\endocrinology_other\osteoporosis_bisphosphonates.py
+   Fields: 24 (14/14)
+
+✅ Ibuprofen
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 29 (14/14)
+
+✅ Ibutilide
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 22 (14/14)
+
+✅ Icosapent ethyl
+   File: drug_modules\cardiovascular\triglyceride_lowering.py
+   Fields: 23 (14/14)
+
+✅ Idarucizumab
+   File: drug_modules\hematology.py
+   Fields: 26 (14/14)
+
+✅ Ifosfamide
+   File: drug_modules\oncology\alkylating_agents.py
+   Fields: 23 (14/14)
+
+✅ Ilaprazole
+   File: drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py
+   Fields: 24 (14/14)
+
+✅ Imatinib
+   File: drug_modules\oncology\targeted_therapy_tkis.py
+   Fields: 23 (14/14)
+
+✅ Imipenem-cilastatin
+   File: drug_modules\antimicrobial\antibiotics\beta_lactams.py
+   Fields: 31 (14/14)
+
+✅ Inclisiran
+   File: drug_modules\cardiovascular\pcsk9_inhibitors.py
+   Fields: 22 (14/14)
+
+✅ Indacaterol
+   File: drug_modules\respiratory\long_acting_beta_2_agonist_labas.py
+   Fields: 23 (14/14)
+
+✅ Indapamide
+   File: drug_modules\cardiovascular\diuretics.py
+   Fields: 22 (14/14)
+
+✅ Indomethacin
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 23 (14/14)
+
+✅ Infliximab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Insulin
+   File: drug_modules\diabetes\insulins.py
+   Fields: 26 (14/14)
+
+✅ Insulin Aspart
+   File: drug_modules\diabetes\specific_insulins.py
+   Fields: 24 (14/14)
+
+✅ Insulin Degludec
+   File: drug_modules\diabetes\specific_insulins.py
+   Fields: 24 (14/14)
+
+✅ Insulin Detemir
+   File: drug_modules\diabetes\specific_insulins.py
+   Fields: 24 (14/14)
+
+✅ Insulin Glargine
+   File: drug_modules\diabetes\specific_insulins.py
+   Fields: 24 (14/14)
+
+✅ Insulin Glulisine
+   File: drug_modules\diabetes\specific_insulins.py
+   Fields: 24 (14/14)
+
+✅ Insulin Lispro
+   File: drug_modules\diabetes\specific_insulins.py
+   Fields: 24 (14/14)
+
+✅ Insulin NPH
+   File: drug_modules\diabetes\specific_insulins.py
+   Fields: 24 (14/14)
+
+✅ Insulin Regular
+   File: drug_modules\diabetes\specific_insulins.py
+   Fields: 24 (14/14)
+
+✅ Ipratropium
+   File: drug_modules\respiratory\anticholinergic_short_actings.py
+   Fields: 23 (14/14)
+
+✅ Ipratropium/Salbutamol inhaler
+   File: drug_modules\respiratory\combination_inhalers.py
+   Fields: 25 (14/14)
+
+✅ Irbesartan
+   File: drug_modules\cardiovascular\arbs.py
+   Fields: 26 (14/14)
+
+✅ Irinotecan
+   File: drug_modules\oncology\topoisomerase_inhibitors.py
+   Fields: 23 (14/14)
+
+✅ Iron
+   File: drug_modules\supportive\irons.py
+   Fields: 25 (14/14)
+
+✅ Isavuconazole
+   File: drug_modules\antimicrobial\antifungals\azoles.py
+   Fields: 25 (14/14)
+
+✅ Isoniazid
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Isosorbide mononitrate
+   File: drug_modules\cardiovascular\vasodilators.py
+   Fields: 23 (14/14)
+
+✅ Isradipine
+   File: drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py
+   Fields: 27 (14/14)
+
+✅ Istradefylline
+   File: drug_modules\neurological\antiparkinsonian.py
+   Fields: 23 (14/14)
+
+✅ Itraconazole
+   File: drug_modules\antimicrobial\antifungals\azoles.py
+   Fields: 26 (14/14)
+
+✅ Ivabradine
+   File: drug_modules\cardiovascular\other_cv.py
+   Fields: 27 (14/14)
+
+✅ Ivermectin
+   File: drug_modules\infectious_other\anthelmintics.py
+   Fields: 26 (14/14)
+
+✅ Ivermectin cream
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Ixekizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Ketamine
+   File: drug_modules\supportive\sedatives_anesthetics_icu.py
+   Fields: 26 (14/14)
+
+✅ Ketoconazole topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Ketoprofen
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 23 (14/14)
+
+✅ Ketoprofen gel
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Ketorolac
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 25 (14/14)
+
+✅ Ketorolac eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 24 (14/14)
+
+✅ Ketotifen eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Labetalol
+   File: drug_modules\cardiovascular\other_cv.py
+   Fields: 27 (14/14)
+
+✅ Lacidipine
+   File: drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py
+   Fields: 22 (14/14)
+
+✅ Lacosamide
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 23 (14/14)
+
+✅ Lactulose
+   File: drug_modules\gastrointestinal\laxatives.py
+   Fields: 25 (14/14)
+
+✅ Lamivudine (3TC)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Lamotrigine
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 22 (14/14)
+
+✅ Lanadelumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Lansoprazole
+   File: drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py
+   Fields: 23 (14/14)
+
+✅ Lasmiditan
+   File: drug_modules\analgesics\antimigraine_5_ht1_receptor_agonists.py
+   Fields: 24 (14/14)
+
+✅ Latanoprost
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Lecanemab
+   File: drug_modules\neurological\alzheimer_dementia_drugs.py
+   Fields: 24 (14/14)
+
+✅ Ledipasvir
+   File: drug_modules\antimicrobial\antivirals\hepatitis.py
+   Fields: 26 (14/14)
+
+✅ Lefamulin
+   File: drug_modules\antimicrobial\antibiotics\others.py
+   Fields: 23 (14/14)
+
+✅ Leflunomide
+   File: drug_modules\miscellaneous\dmards_rheumatology.py
+   Fields: 24 (14/14)
+
+✅ Levamisole
+   File: drug_modules\infectious_other\anthelmintics.py
+   Fields: 24 (14/14)
+
+✅ Levetiracetam
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 23 (14/14)
+
+✅ Levocetirizine
+   File: drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+   Fields: 24 (14/14)
+
+✅ Levodopa/Carbidopa
+   File: drug_modules\neurological\antiparkinsonian.py
+   Fields: 22 (14/14)
+
+✅ Levofloxacin
+   File: drug_modules\antimicrobial\antibiotics\fluoroquinolones.py
+   Fields: 34 (14/14)
+
+✅ Levonorgestrel
+   File: drug_modules\obstetrics_gynecology.py
+   Fields: 23 (14/14)
+
+✅ Levothyroxine
+   File: drug_modules\metabolic\thyroid_hormones.py
+   Fields: 23 (14/14)
+
+✅ Lidocaine
+   File: drug_modules\emergency\local_anesthetic__antiarrhythmic_class_ibs.py
+   Fields: 23 (14/14)
+
+✅ Linagliptin
+   File: drug_modules\diabetes\dpp_4_inhibitors.py
+   Fields: 25 (14/14)
+
+✅ Linezolid
+   File: drug_modules\antimicrobial\antibiotics\oxazolidinones.py
+   Fields: 31 (14/14)
+
+✅ Linezolid (lao MDR/XDR)
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 24 (14/14)
+
+✅ Liraglutide
+   File: drug_modules\diabetes\glp1_agonists.py
+   Fields: 26 (14/14)
+
+✅ Lisdexamfetamine
+   File: drug_modules\psychiatry_other\adhd_anxiolytics.py
+   Fields: 23 (14/14)
+
+✅ Lisinopril
+   File: drug_modules\cardiovascular\ace_inhibitors.py
+   Fields: 30 (14/14)
+
+✅ Lisinopril/Hydrochlorothiazide
+   File: drug_modules\cardiovascular\fixed_dose_combinations.py
+   Fields: 24 (14/14)
+
+✅ Loperamide
+   File: drug_modules\gastrointestinal\antidiarrheals.py
+   Fields: 23 (14/14)
+
+✅ Loratadine
+   File: drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+   Fields: 22 (14/14)
+
+✅ Loratadine/Pseudoephedrine
+   File: drug_modules\ent_oral_nasal_combinations.py
+   Fields: 23 (14/14)
+
+✅ Lorazepam
+   File: drug_modules\neurological\benzodiazepines.py
+   Fields: 23 (14/14)
+
+✅ Losartan
+   File: drug_modules\cardiovascular\arbs.py
+   Fields: 30 (14/14)
+
+✅ Losartan/Hydrochlorothiazide
+   File: drug_modules\cardiovascular\fixed_dose_combinations.py
+   Fields: 24 (14/14)
+
+✅ Lovastatin
+   File: drug_modules\cardiovascular\statins.py
+   Fields: 26 (14/14)
+
+✅ Lurasidone
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 24 (14/14)
+
+✅ Magnesium oxide
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Magnesium sulfate
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Mebendazole
+   File: drug_modules\infectious_other\anthelmintics.py
+   Fields: 23 (14/14)
+
+✅ Mebeverine
+   File: drug_modules\gastrointestinal\antispasmodics.py
+   Fields: 25 (14/14)
+
+✅ Medroxyprogesterone
+   File: drug_modules\obstetrics_gynecology.py
+   Fields: 24 (14/14)
+
+✅ Meloxicam
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 25 (14/14)
+
+✅ Memantine
+   File: drug_modules\neurological\alzheimer_dementia_drugs.py
+   Fields: 23 (14/14)
+
+✅ Meperidine
+   File: drug_modules\analgesics\opioid_agonist_strongs.py
+   Fields: 24 (14/14)
+
+✅ Mepolizumab
+   File: drug_modules\respiratory\respiratory_biologics.py
+   Fields: 23 (14/14)
+
+✅ Meropenem
+   File: drug_modules\antimicrobial\antibiotics\beta_lactams.py
+   Fields: 26 (14/14)
+
+✅ Mesalazine
+   File: drug_modules\gastrointestinal\ibd_5asa.py
+   Fields: 24 (14/14)
+
+✅ Metaxalone
+   File: drug_modules\neurological\muscle_relaxants.py
+   Fields: 22 (14/14)
+
+✅ Metformin
+   File: drug_modules\diabetes\biguanides.py
+   Fields: 29 (14/14)
+
+✅ Metformin/Dapagliflozin
+   File: drug_modules\diabetes\fixed_dose_combinations.py
+   Fields: 24 (14/14)
+
+✅ Metformin/Empagliflozin
+   File: drug_modules\diabetes\fixed_dose_combinations.py
+   Fields: 24 (14/14)
+
+✅ Metformin/Glibenclamide
+   File: drug_modules\diabetes\fixed_dose_combinations.py
+   Fields: 23 (14/14)
+
+✅ Metformin/Pioglitazone
+   File: drug_modules\diabetes\fixed_dose_combinations.py
+   Fields: 23 (14/14)
+
+✅ Metformin/Sitagliptin
+   File: drug_modules\diabetes\fixed_dose_combinations.py
+   Fields: 24 (14/14)
+
+✅ Methadone
+   File: drug_modules\analgesics\opioid_agonist_strongs.py
+   Fields: 24 (14/14)
+
+✅ Methimazole
+   File: drug_modules\metabolic\antithyroid.py
+   Fields: 23 (14/14)
+
+✅ Methocarbamol
+   File: drug_modules\neurological\muscle_relaxants.py
+   Fields: 22 (14/14)
+
+✅ Methotrexate
+   File: drug_modules\miscellaneous\dmards_rheumatology.py
+   Fields: 24 (14/14)
+
+✅ Methyldopa
+   File: drug_modules\cardiovascular\other_cv.py
+   Fields: 23 (14/14)
+
+✅ Methylergonovine
+   File: drug_modules\emergency\uterotonics.py
+   Fields: 23 (14/14)
+
+✅ Methylphenidate
+   File: drug_modules\psychiatry_other\adhd_anxiolytics.py
+   Fields: 23 (14/14)
+
+✅ Methylprednisolone
+   File: drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py
+   Fields: 22 (14/14)
+
+✅ Metoclopramide
+   File: drug_modules\gastrointestinal\prokinetic_antiemetics.py
+   Fields: 23 (14/14)
+
+✅ Metoprolol
+   File: drug_modules\cardiovascular\beta_blockers\selective.py
+   Fields: 29 (14/14)
+
+✅ Metronidazole
+   File: drug_modules\infectious_other\nitroimidazoles.py
+   Fields: 24 (14/14)
+
+✅ Metronidazole (vaginal gel)
+   File: drug_modules\obstetrics_gynecology.py
+   Fields: 24 (14/14)
+
+✅ Metronidazole topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Micafungin
+   File: drug_modules\antimicrobial\antifungals\echinocandins.py
+   Fields: 25 (14/14)
+
+✅ Miconazole (vaginal)
+   File: drug_modules\obstetrics_gynecology.py
+   Fields: 24 (14/14)
+
+✅ Miconazole topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Miconazole/Hydrocortisone topical
+   File: drug_modules\dermatology.py
+   Fields: 24 (14/14)
+
+✅ Midazolam (IV/ICU)
+   File: drug_modules\supportive\sedatives_anesthetics_icu.py
+   Fields: 26 (14/14)
+
+✅ Miglitol
+   File: drug_modules\diabetes\alpha_glucosidase_inhibitors.py
+   Fields: 23 (14/14)
+
+✅ Milrinone
+   File: drug_modules\emergency\catecholamine_alpha__beta_agonists.py
+   Fields: 25 (14/14)
+
+✅ Minocycline
+   File: drug_modules\antimicrobial\antibiotics\tetracyclines.py
+   Fields: 27 (14/14)
+
+✅ Mirabegron
+   File: drug_modules\urology.py
+   Fields: 24 (14/14)
+
+✅ Mirtazapine
+   File: drug_modules\psychiatry_other\antidepressants.py
+   Fields: 23 (14/14)
+
+✅ Misoprostol
+   File: drug_modules\gastrointestinal\mucosal_protectants.py
+   Fields: 23 (14/14)
+
+✅ Mometasone topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Montelukast
+   File: drug_modules\respiratory\leukotriene_receptor_antagonists.py
+   Fields: 24 (14/14)
+
+✅ Morphine
+   File: drug_modules\analgesics\opioid_agonist_strongs.py
+   Fields: 25 (14/14)
+
+✅ Moxifloxacin
+   File: drug_modules\antimicrobial\antibiotics\fluoroquinolones.py
+   Fields: 31 (14/14)
+
+✅ Moxifloxacin eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Mupirocin topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Mycophenolate
+   File: drug_modules\miscellaneous\immunosuppressants.py
+   Fields: 23 (14/14)
+
+✅ Nadolol
+   File: drug_modules\cardiovascular\beta_blockers\non_selective.py
+   Fields: 23 (14/14)
+
+✅ Nafcillin
+   File: drug_modules\antimicrobial\antibiotics\penicillins.py
+   Fields: 19 (14/14)
+
+✅ Naloxone
+   File: drug_modules\emergency\opioid_antagonists.py
+   Fields: 23 (14/14)
+
+✅ Naltrexone
+   File: drug_modules\emergency\opioid_antagonists.py
+   Fields: 23 (14/14)
+
+✅ Naproxen
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 25 (14/14)
+
+✅ Natalizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Nateglinide
+   File: drug_modules\diabetes\meglitinides.py
+   Fields: 23 (14/14)
+
+✅ Nebivolol
+   File: drug_modules\cardiovascular\beta_blockers\selective.py
+   Fields: 26 (14/14)
+
+✅ Nedocromil
+   File: drug_modules\respiratory\leukotriene_receptor_antagonists.py
+   Fields: 24 (14/14)
+
+✅ Nepafenac eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 24 (14/14)
+
+✅ Nesiritide
+   File: drug_modules\cardiovascular\vasodilators.py
+   Fields: 23 (14/14)
+
+✅ Niacin
+   File: drug_modules\cardiovascular\triglyceride_lowering.py
+   Fields: 23 (14/14)
+
+✅ Nicardipine
+   File: drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py
+   Fields: 23 (14/14)
+
+✅ Nicergoline
+   File: drug_modules\neurological\cerebral_circulation.py
+   Fields: 25 (14/14)
+
+✅ Nifedipine
+   File: drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py
+   Fields: 26 (14/14)
+
+✅ Nimesulide
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 23 (14/14)
+
+✅ Nimodipine
+   File: drug_modules\neurological\cerebral_circulation.py
+   Fields: 25 (14/14)
+
+✅ Nisoldipine
+   File: drug_modules\cardiovascular\calcium_blockers\dihydropyridines.py
+   Fields: 23 (14/14)
+
+✅ Nitrofurantoin
+   File: drug_modules\antimicrobial\antibiotics\others.py
+   Fields: 26 (14/14)
+
+✅ Nitroglycerin
+   File: drug_modules\cardiovascular\vasodilators.py
+   Fields: 23 (14/14)
+
+✅ Nitroprusside
+   File: drug_modules\cardiovascular\vasodilators.py
+   Fields: 23 (14/14)
+
+✅ Nivolumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Norepinephrine
+   File: drug_modules\emergency\catecholamine_alpha__beta_agonists.py
+   Fields: 21 (14/14)
+
+✅ Norfloxacin
+   File: drug_modules\antimicrobial\antibiotics\fluoroquinolones.py
+   Fields: 16 (14/14)
+
+✅ Nystatin
+   File: drug_modules\antimicrobial\antifungals\polyenes.py
+   Fields: 23 (14/14)
+
+✅ Ocrelizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Ofatumumab
+   File: drug_modules\neurological\multiple_sclerosis_drugs.py
+   Fields: 24 (14/14)
+
+✅ Ofloxacin
+   File: drug_modules\antimicrobial\antibiotics\fluoroquinolones.py
+   Fields: 16 (14/14)
+
+✅ Olanzapine
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 24 (14/14)
+
+✅ Olanzapine/Fluoxetine
+   File: drug_modules\neurological\neurological_combinations.py
+   Fields: 25 (14/14)
+
+✅ Olmesartan
+   File: drug_modules\cardiovascular\arbs.py
+   Fields: 26 (14/14)
+
+✅ Olodaterol
+   File: drug_modules\respiratory\long_acting_beta_2_agonist_labas.py
+   Fields: 23 (14/14)
+
+✅ Olopatadine eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Omadacycline
+   File: drug_modules\antimicrobial\antibiotics\others.py
+   Fields: 23 (14/14)
+
+✅ Omalizumab
+   File: drug_modules\respiratory\respiratory_biologics.py
+   Fields: 23 (14/14)
+
+✅ Omega-3 acid ethyl esters
+   File: drug_modules\cardiovascular\triglyceride_lowering.py
+   Fields: 23 (14/14)
+
+✅ Omeprazole
+   File: drug_modules\gastrointestinal\proton_pump_inhibitor_ppis.py
+   Fields: 26 (14/14)
+
+✅ Ondansetron
+   File: drug_modules\gastrointestinal\antiemetic_5_ht3_antagonists.py
+   Fields: 23 (14/14)
+
+✅ Opicapone
+   File: drug_modules\neurological\antiparkinsonian.py
+   Fields: 23 (14/14)
+
+✅ Oseltamivir
+   File: drug_modules\antimicrobial\antivirals\influenza.py
+   Fields: 24 (14/14)
+
+✅ Oxacillin
+   File: drug_modules\antimicrobial\antibiotics\penicillins.py
+   Fields: 19 (14/14)
+
+✅ Oxaliplatin
+   File: drug_modules\oncology\platinum_compounds.py
+   Fields: 24 (14/14)
+
+✅ Oxcarbazepine
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 26 (14/14)
+
+✅ Oxybutynin
+   File: drug_modules\urology.py
+   Fields: 24 (14/14)
+
+✅ Oxycodone
+   File: drug_modules\analgesics\opioid_agonist_strongs.py
+   Fields: 23 (14/14)
+
+✅ Oxytocin
+   File: drug_modules\emergency\uterotonics.py
+   Fields: 24 (14/14)
+
+✅ PAS (para-aminosalicylic acid)
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Paclitaxel
+   File: drug_modules\oncology\taxanes.py
+   Fields: 23 (14/14)
+
+✅ Palonosetron
+   File: drug_modules\oncology\anti_emetic_5_ht3_antagonists.py
+   Fields: 23 (14/14)
+
+✅ Pamidronate
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Pantoprazole
+   File: drug_modules\gastrointestinal\proton_pump_inhibitors.py
+   Fields: 26 (14/14)
+
+✅ Paracetamol
+   File: drug_modules\analgesics\analgesic_antipyretic.py
+   Fields: 27 (14/14)
+
+✅ Paracetamol/Carisoprodol
+   File: drug_modules\analgesics\pain_muscle_relaxant_combinations.py
+   Fields: 23 (14/14)
+
+✅ Paracetamol/Chlorzoxazone
+   File: drug_modules\analgesics\pain_muscle_relaxant_combinations.py
+   Fields: 23 (14/14)
+
+✅ Paracetamol/Methocarbamol
+   File: drug_modules\analgesics\pain_muscle_relaxant_combinations.py
+   Fields: 23 (14/14)
+
+✅ Paracetamol/Orphenadrine
+   File: drug_modules\analgesics\pain_muscle_relaxant_combinations.py
+   Fields: 23 (14/14)
+
+✅ Paroxetine
+   File: drug_modules\psychiatry_other\ssris.py
+   Fields: 24 (14/14)
+
+✅ Pemafibrate
+   File: drug_modules\cardiovascular\triglyceride_lowering.py
+   Fields: 23 (14/14)
+
+✅ Pembrolizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Penicillin G
+   File: drug_modules\antimicrobial\antibiotics\beta_lactams.py
+   Fields: 27 (14/14)
+
+✅ Penicillin V
+   File: drug_modules\infectious_other\beta_lactams.py
+   Fields: 24 (14/14)
+
+✅ Perampanel
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 23 (14/14)
+
+✅ Perindopril
+   File: drug_modules\cardiovascular\ace_inhibitors.py
+   Fields: 26 (14/14)
+
+✅ Permethrin topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Phenelzine
+   File: drug_modules\psychiatry_other\antidepressants.py
+   Fields: 23 (14/14)
+
+✅ Phenobarbital
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 27 (14/14)
+
+✅ Phenylephrine
+   File: drug_modules\emergency\catecholamine_alpha__beta_agonists.py
+   Fields: 25 (14/14)
+
+✅ Phenylephrine eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Phenytoin
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 27 (14/14)
+
+✅ Pilocarpine eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 24 (14/14)
+
+✅ Pimavanserin
+   File: drug_modules\neurological\antiparkinsonian.py
+   Fields: 23 (14/14)
+
+✅ Pimecrolimus
+   File: drug_modules\dermatology.py
+   Fields: 24 (14/14)
+
+✅ Pimozide
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 23 (14/14)
+
+✅ Pioglitazone
+   File: drug_modules\diabetes\thiazolidinedione_tzds.py
+   Fields: 23 (14/14)
+
+✅ Piperacillin-tazobactam
+   File: drug_modules\antimicrobial\antibiotics\beta_lactams.py
+   Fields: 27 (14/14)
+
+✅ Piracetam
+   File: drug_modules\neurological\cerebral_circulation.py
+   Fields: 24 (14/14)
+
+✅ Piracetam/Vinpocetine
+   File: drug_modules\neurological\neurological_combinations.py
+   Fields: 25 (14/14)
+
+✅ Piroxicam
+   File: drug_modules\analgesics\nsaids.py
+   Fields: 23 (14/14)
+
+✅ Pitavastatin
+   File: drug_modules\cardiovascular\statins.py
+   Fields: 26 (14/14)
+
+✅ Plazomicin
+   File: drug_modules\antimicrobial\antibiotics\aminoglycosides.py
+   Fields: 23 (14/14)
+
+✅ Plozasiran
+   File: drug_modules\cardiovascular\triglyceride_lowering.py
+   Fields: 23 (14/14)
+
+✅ Polyethylene glycol 3350
+   File: drug_modules\gastrointestinal\laxatives.py
+   Fields: 25 (14/14)
+
+✅ Polymyxin B
+   File: drug_modules\antimicrobial\antibiotics\polymyxins.py
+   Fields: 26 (14/14)
+
+✅ Polymyxin B/Trimethoprim eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Posaconazole
+   File: drug_modules\antimicrobial\antifungals\azoles.py
+   Fields: 26 (14/14)
+
+✅ Potassium phosphate
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Pramipexole
+   File: drug_modules\neurological\antiparkinsonian.py
+   Fields: 23 (14/14)
+
+✅ Prasugrel
+   File: drug_modules\cardiovascular\anticoagulants.py
+   Fields: 27 (14/14)
+
+✅ Pravastatin
+   File: drug_modules\cardiovascular\statins.py
+   Fields: 29 (14/14)
+
+✅ Praziquantel
+   File: drug_modules\infectious_other\anthelmintics.py
+   Fields: 24 (14/14)
+
+✅ Prednisolone
+   File: drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py
+   Fields: 22 (14/14)
+
+✅ Prednisolone eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 26 (14/14)
+
+✅ Prednisone
+   File: drug_modules\metabolic\corticosteroids.py
+   Fields: 24 (14/14)
+
+✅ Pregabalin
+   File: drug_modules\neurological\anticonvulsant_alpha_2_delta_ligands.py
+   Fields: 23 (14/14)
+
+✅ Primaquine
+   File: drug_modules\infectious_other\antimalarials.py
+   Fields: 25 (14/14)
+
+✅ Primidone
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 23 (14/14)
+
+✅ Probenecid
+   File: drug_modules\miscellaneous\gout_medications.py
+   Fields: 24 (14/14)
+
+✅ Procainamide
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 22 (14/14)
+
+✅ Progesterone
+   File: drug_modules\obstetrics_gynecology.py
+   Fields: 24 (14/14)
+
+✅ Propafenone
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 22 (14/14)
+
+✅ Propofol
+   File: drug_modules\supportive\sedatives_anesthetics_icu.py
+   Fields: 26 (14/14)
+
+✅ Propranolol
+   File: drug_modules\cardiovascular\beta_blockers\non_selective.py
+   Fields: 26 (14/14)
+
+✅ Propylthiouracil
+   File: drug_modules\metabolic\antithyroid.py
+   Fields: 23 (14/14)
+
+✅ Protamine
+   File: drug_modules\hematology.py
+   Fields: 26 (14/14)
+
+✅ Pyrazinamide
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Quetiapine
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 24 (14/14)
+
+✅ Quinidine
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 23 (14/14)
+
+✅ Rabeprazole
+   File: drug_modules\gastrointestinal\proton_pump_inhibitors.py
+   Fields: 23 (14/14)
+
+✅ Raloxifene
+   File: drug_modules\endocrinology_other\osteoporosis_other.py
+   Fields: 24 (14/14)
+
+✅ Ramipril
+   File: drug_modules\cardiovascular\ace_inhibitors.py
+   Fields: 26 (14/14)
+
+✅ Ranitidine
+   File: drug_modules\gastrointestinal\h2_receptor_antagonists.py
+   Fields: 22 (14/14)
+
+✅ Ravulizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Remdesivir
+   File: drug_modules\antimicrobial\antivirals\influenza.py
+   Fields: 29 (14/14)
+
+✅ Repaglinide
+   File: drug_modules\diabetes\meglitinides.py
+   Fields: 23 (14/14)
+
+✅ Reslizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Ribavirin
+   File: drug_modules\antimicrobial\antivirals\hepatitis.py
+   Fields: 26 (14/14)
+
+✅ Rifabutin
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Rifampin
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Rifapentine
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Rilpivirine (RPV)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Rimegepant
+   File: drug_modules\neurological\migraine_cgrp_drugs.py
+   Fields: 23 (14/14)
+
+✅ Risankizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Risedronate
+   File: drug_modules\endocrinology_other\osteoporosis_bisphosphonates.py
+   Fields: 24 (14/14)
+
+✅ Risperidone
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 24 (14/14)
+
+✅ Ritonavir (low-dose booster)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Rituximab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Rivaroxaban
+   File: drug_modules\cardiovascular\anticoagulants.py
+   Fields: 26 (14/14)
+
+✅ Rivastigmine
+   File: drug_modules\neurological\alzheimer_dementia_drugs.py
+   Fields: 23 (14/14)
+
+✅ Rizatriptan
+   File: drug_modules\analgesics\antimigraine_5_ht1_receptor_agonists.py
+   Fields: 23 (14/14)
+
+✅ Rocuronium
+   File: drug_modules\emergency\neuromuscular_blockers.py
+   Fields: 25 (14/14)
+
+✅ Roflumilast
+   File: drug_modules\respiratory\pde4_inhibitors.py
+   Fields: 23 (14/14)
+
+✅ Romiplostim
+   File: drug_modules\hematology.py
+   Fields: 26 (14/14)
+
+✅ Romosozumab
+   File: drug_modules\endocrinology_other\osteoporosis_other.py
+   Fields: 24 (14/14)
+
+✅ Ropinirole
+   File: drug_modules\neurological\antiparkinsonian.py
+   Fields: 22 (14/14)
+
+✅ Rosiglitazone
+   File: drug_modules\diabetes\thiazolidinedione_tzds.py
+   Fields: 23 (14/14)
+
+✅ Rosuvastatin
+   File: drug_modules\cardiovascular\statins.py
+   Fields: 29 (14/14)
+
+✅ Sacituzumab govitecan
+   File: drug_modules\oncology\monoclonal_antibodies_adcs.py
+   Fields: 24 (14/14)
+
+✅ Sacubitril-valsartan
+   File: drug_modules\cardiovascular\other_cv.py
+   Fields: 29 (14/14)
+
+✅ Safinamide
+   File: drug_modules\neurological\antiparkinsonian.py
+   Fields: 23 (14/14)
+
+✅ Salbutamol
+   File: drug_modules\miscellaneous\beta_2_agonist_short_actings.py
+   Fields: 23 (14/14)
+
+✅ Salicylic Acid
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Salmeterol
+   File: drug_modules\respiratory\long_acting_beta_2_agonist_labas.py
+   Fields: 23 (14/14)
+
+✅ Sarilumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Saxagliptin
+   File: drug_modules\diabetes\dpp_4_inhibitors.py
+   Fields: 25 (14/14)
+
+✅ Secukinumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Semaglutide
+   File: drug_modules\diabetes\glp1_agonists.py
+   Fields: 26 (14/14)
+
+✅ Senna (sennosides)
+   File: drug_modules\gastrointestinal\laxatives.py
+   Fields: 25 (14/14)
+
+✅ Sertraline
+   File: drug_modules\psychiatry_other\ssris.py
+   Fields: 24 (14/14)
+
+✅ Sildenafil
+   File: drug_modules\urology.py
+   Fields: 26 (14/14)
+
+✅ Silodosin
+   File: drug_modules\urology.py
+   Fields: 25 (14/14)
+
+✅ Simethicone
+   File: drug_modules\gastrointestinal\antiflatulents.py
+   Fields: 24 (14/14)
+
+✅ Simvastatin
+   File: drug_modules\cardiovascular\statins.py
+   Fields: 26 (14/14)
+
+✅ Sitagliptin
+   File: drug_modules\diabetes\dpp_4_inhibitors.py
+   Fields: 29 (14/14)
+
+✅ Sodium bicarbonate
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Sodium phosphate
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Sodium polystyrene sulfonate
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Sofosbuvir
+   File: drug_modules\antimicrobial\antivirals\hepatitis.py
+   Fields: 26 (14/14)
+
+✅ Sofosbuvir/Velpatasvir
+   File: drug_modules\antimicrobial\antivirals\hepatitis.py
+   Fields: 26 (14/14)
+
+✅ Solifenacin
+   File: drug_modules\urology.py
+   Fields: 26 (14/14)
+
+✅ Sotagliflozin
+   File: drug_modules\cardiovascular\other_cv.py
+   Fields: 24 (14/14)
+
+✅ Sotalol
+   File: drug_modules\cardiovascular\antiarrhythmics.py
+   Fields: 23 (14/14)
+
+✅ Sparfloxacin
+   File: drug_modules\infectious_other\fluoroquinolones.py
+   Fields: 23 (14/14)
+
+✅ Spironolactone
+   File: drug_modules\cardiovascular\diuretics.py
+   Fields: 30 (14/14)
+
+✅ Streptomycin
+   File: drug_modules\infectious_other\antituberculars.py
+   Fields: 26 (14/14)
+
+✅ Succinylcholine
+   File: drug_modules\emergency\neuromuscular_blockers.py
+   Fields: 25 (14/14)
+
+✅ Sucralfate
+   File: drug_modules\gastrointestinal\mucosal_protectants.py
+   Fields: 23 (14/14)
+
+✅ Sulfasalazine
+   File: drug_modules\gastrointestinal\ibd_5asa.py
+   Fields: 24 (14/14)
+
+✅ Sumatriptan
+   File: drug_modules\analgesics\antimigraine_5_ht1_receptor_agonists.py
+   Fields: 23 (14/14)
+
+✅ Tacrolimus
+   File: drug_modules\miscellaneous\immunosuppressants.py
+   Fields: 25 (14/14)
+
+✅ Tacrolimus topical
+   File: drug_modules\dermatology.py
+   Fields: 26 (14/14)
+
+✅ Tadalafil
+   File: drug_modules\urology.py
+   Fields: 26 (14/14)
+
+✅ Tamoxifen
+   File: drug_modules\oncology\hormone_therapy.py
+   Fields: 23 (14/14)
+
+✅ Tamsulosin
+   File: drug_modules\urology.py
+   Fields: 25 (14/14)
+
+✅ Tapentadol
+   File: drug_modules\analgesics\opioid_agonists.py
+   Fields: 23 (14/14)
+
+✅ Tazarotene
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Tegoprazan
+   File: drug_modules\gastrointestinal\pcab.py
+   Fields: 22 (14/14)
+
+✅ Teicoplanin
+   File: drug_modules\antimicrobial\antibiotics\glycopeptides.py
+   Fields: 26 (14/14)
+
+✅ Telmisartan
+   File: drug_modules\cardiovascular\arbs.py
+   Fields: 30 (14/14)
+
+✅ Tenecteplase
+   File: drug_modules\hematology.py
+   Fields: 25 (14/14)
+
+✅ Tenofovir
+   File: drug_modules\antimicrobial\antivirals\hepatitis.py
+   Fields: 26 (14/14)
+
+✅ Tenofovir alafenamide (TAF)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Tenofovir alafenamide/Emtricitabine (TAF/FTC)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Tenofovir disoproxil fumarate (TDF)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Tenofovir disoproxil fumarate/Emtricitabine (TDF/FTC)
+   File: drug_modules\antimicrobial\antivirals\hiv_arvs.py
+   Fields: 26 (14/14)
+
+✅ Teplizumab
+   File: drug_modules\diabetes\t1dm_prevention.py
+   Fields: 23 (14/14)
+
+✅ Teprotumumab
+   File: drug_modules\oncology\monoclonal_antibodies_adcs.py
+   Fields: 24 (14/14)
+
+✅ Terbinafine topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Terbutaline
+   File: drug_modules\respiratory\short_acting_beta_2_agonist_sabas.py
+   Fields: 22 (14/14)
+
+✅ Teriparatide
+   File: drug_modules\endocrinology_other\osteoporosis_other.py
+   Fields: 24 (14/14)
+
+✅ Testosterone
+   File: drug_modules\endocrinology_other\sex_hormones.py
+   Fields: 23 (14/14)
+
+✅ Tetrabenazine
+   File: drug_modules\neurological\antiparkinsonian.py
+   Fields: 23 (14/14)
+
+✅ Tetracycline
+   File: drug_modules\antimicrobial\antibiotics\tetracyclines.py
+   Fields: 27 (14/14)
+
+✅ Tezepelumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 25 (14/14)
+
+✅ Theophylline
+   File: drug_modules\respiratory\methylxanthines.py
+   Fields: 24 (14/14)
+
+✅ Thiopental
+   File: drug_modules\supportive\sedatives_anesthetics_icu.py
+   Fields: 25 (14/14)
+
+✅ Ticagrelor
+   File: drug_modules\cardiovascular\anticoagulants.py
+   Fields: 27 (14/14)
+
+✅ Ticlopidine
+   File: drug_modules\cardiovascular_other\antiplatelets.py
+   Fields: 27 (14/14)
+
+✅ Tigecycline
+   File: drug_modules\infectious_other\tetracyclines.py
+   Fields: 23 (14/14)
+
+✅ Timolol
+   File: drug_modules\cardiovascular\beta_blockers\non_selective.py
+   Fields: 23 (14/14)
+
+✅ Timolol eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Tiotropium
+   File: drug_modules\respiratory\anticholinergic_long_actings.py
+   Fields: 23 (14/14)
+
+✅ Tiotropium/Olodaterol inhaler
+   File: drug_modules\respiratory\combination_inhalers.py
+   Fields: 25 (14/14)
+
+✅ Tirzepatide
+   File: drug_modules\diabetes\glp1_agonists.py
+   Fields: 26 (14/14)
+
+✅ Tizanidine
+   File: drug_modules\neurological\muscle_relaxants.py
+   Fields: 22 (14/14)
+
+✅ Tobramycin
+   File: drug_modules\antimicrobial\antibiotics\aminoglycosides.py
+   Fields: 27 (14/14)
+
+✅ Tobramycin eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Tocilizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Tofacitinib
+   File: drug_modules\gastrointestinal\jak_inhibitors.py
+   Fields: 24 (14/14)
+
+✅ Tolterodine
+   File: drug_modules\urology.py
+   Fields: 24 (14/14)
+
+✅ Topiramate
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 22 (14/14)
+
+✅ Topotecan
+   File: drug_modules\oncology\topoisomerase_inhibitors.py
+   Fields: 23 (14/14)
+
+✅ Torsemide
+   File: drug_modules\cardiovascular\diuretics.py
+   Fields: 16 (14/14)
+
+✅ Tramadol
+   File: drug_modules\analgesics\opioid_agonists.py
+   Fields: 24 (14/14)
+
+✅ Tranexamic acid
+   File: drug_modules\hematology.py
+   Fields: 24 (14/14)
+
+✅ Tranylcypromine
+   File: drug_modules\psychiatry_other\antidepressants.py
+   Fields: 23 (14/14)
+
+✅ Trastuzumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Trastuzumab deruxtecan
+   File: drug_modules\oncology\monoclonal_antibodies_adcs.py
+   Fields: 24 (14/14)
+
+✅ Travoprost
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Trazodone
+   File: drug_modules\psychiatry_other\antidepressants.py
+   Fields: 23 (14/14)
+
+✅ Tretinoin topical
+   File: drug_modules\dermatology.py
+   Fields: 24 (14/14)
+
+✅ Triamcinolone topical
+   File: drug_modules\dermatology.py
+   Fields: 23 (14/14)
+
+✅ Trimebutine
+   File: drug_modules\gastrointestinal\antispasmodics.py
+   Fields: 25 (14/14)
+
+✅ Trimethoprim-sulfamethoxazole
+   File: drug_modules\antimicrobial\antibiotics\sulfonamides.py
+   Fields: 27 (14/14)
+
+✅ Tropicamide eye drops
+   File: drug_modules\ophthalmology.py
+   Fields: 23 (14/14)
+
+✅ Ubrogepant
+   File: drug_modules\neurological\migraine_cgrp_drugs.py
+   Fields: 23 (14/14)
+
+✅ Umeclidinium
+   File: drug_modules\respiratory\anticholinergic_long_actings.py
+   Fields: 23 (14/14)
+
+✅ Umeclidinium/Vilanterol inhaler
+   File: drug_modules\respiratory\combination_inhalers.py
+   Fields: 25 (14/14)
+
+✅ Upadacitinib
+   File: drug_modules\gastrointestinal\jak_inhibitors.py
+   Fields: 24 (14/14)
+
+✅ Ustekinumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Valacyclovir
+   File: drug_modules\antimicrobial\antivirals\herpes.py
+   Fields: 23 (14/14)
+
+✅ Valproate
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 26 (14/14)
+
+✅ Valsartan
+   File: drug_modules\cardiovascular\arbs.py
+   Fields: 26 (14/14)
+
+✅ Vancomycin
+   File: drug_modules\antimicrobial\antibiotics\glycopeptides.py
+   Fields: 27 (14/14)
+
+✅ Vardenafil
+   File: drug_modules\urology.py
+   Fields: 24 (14/14)
+
+✅ Vasopressin
+   File: drug_modules\emergency\catecholamine_alpha__beta_agonists.py
+   Fields: 25 (14/14)
+
+✅ Vecuronium
+   File: drug_modules\emergency\neuromuscular_blockers.py
+   Fields: 25 (14/14)
+
+✅ Vedolizumab
+   File: drug_modules\miscellaneous\biological_drugs.py
+   Fields: 23 (14/14)
+
+✅ Venlafaxine
+   File: drug_modules\psychiatry_other\snris.py
+   Fields: 22 (14/14)
+
+✅ Verapamil
+   File: drug_modules\cardiovascular\calcium_blockers\non_dihydropyridines.py
+   Fields: 23 (14/14)
+
+✅ Vericiguat
+   File: drug_modules\cardiovascular\other_cv.py
+   Fields: 24 (14/14)
+
+✅ Vilanterol
+   File: drug_modules\respiratory\long_acting_beta_2_agonist_labas.py
+   Fields: 23 (14/14)
+
+✅ Vildagliptin
+   File: drug_modules\diabetes\dpp_4_inhibitors.py
+   Fields: 25 (14/14)
+
+✅ Vincristine
+   File: drug_modules\oncology\vinca_alkaloids.py
+   Fields: 23 (14/14)
+
+✅ Vinpocetine
+   File: drug_modules\neurological\cerebral_circulation.py
+   Fields: 24 (14/14)
+
+✅ Vitamin B12
+   File: drug_modules\supportive\vitamin_b12s.py
+   Fields: 24 (14/14)
+
+✅ Vitamin C
+   File: drug_modules\miscellaneous\vitamins.py
+   Fields: 22 (14/14)
+
+✅ Vitamin D
+   File: drug_modules\supportive\vitamin_ds.py
+   Fields: 24 (14/14)
+
+✅ Vitamin D3 (Cholecalciferol)
+   File: drug_modules\miscellaneous\vitamins.py
+   Fields: 24 (14/14)
+
+✅ Vitamin E
+   File: drug_modules\miscellaneous\vitamins.py
+   Fields: 22 (14/14)
+
+✅ Vitamin K
+   File: drug_modules\hematology.py
+   Fields: 24 (14/14)
+
+✅ Vonoprazan
+   File: drug_modules\gastrointestinal\pcab.py
+   Fields: 22 (14/14)
+
+✅ Voriconazole
+   File: drug_modules\antimicrobial\antifungals\azoles.py
+   Fields: 24 (14/14)
+
+✅ Warfarin
+   File: drug_modules\cardiovascular\anticoagulants.py
+   Fields: 24 (14/14)
+
+✅ Zafirlukast
+   File: drug_modules\respiratory\leukotriene_receptor_antagonists.py
+   Fields: 23 (14/14)
+
+✅ Zanamivir
+   File: drug_modules\antimicrobial\antivirals\influenza.py
+   Fields: 27 (14/14)
+
+✅ Ziprasidone
+   File: drug_modules\psychiatry_other\antipsychotics.py
+   Fields: 23 (14/14)
+
+✅ Zoledronic acid
+   File: drug_modules\emergency\electrolytes.py
+   Fields: 23 (14/14)
+
+✅ Zonisamide
+   File: drug_modules\neurological\anticonvulsants.py
+   Fields: 23 (14/14)
+

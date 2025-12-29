@@ -2,7 +2,7 @@
 
 # Analgesic/Antipyretic
 
-ANALGESIC/ANTIPYRETIC_DRUGS = {
+ANALGESIC_ANTIPYRETIC_DRUGS = {
     "Paracetamol": {'group': 'Analgesic/Antipyretic', 'vietnamese_name':
         'Paracetamol, Acetaminophen, Tylenol, Efferalgan', 'administration': [
         'PO', 'IV', 'PR'], 'indications': ['Sốt', 'Đau nhẹ đến trung bình',
@@ -136,4 +136,4 @@ ANALGESIC/ANTIPYRETIC_DRUGS = {
         ], 'last_updated': '2024-12-19', 'evidence_level':
         'High - RCTs và guidelines dựa trên chứng cứ'}}}
 
-__all__ = ['ANALGESIC/ANTIPYRETIC_DRUGS']
+__all__ = ['ANALGESIC_ANTIPYRETIC_DRUGS']

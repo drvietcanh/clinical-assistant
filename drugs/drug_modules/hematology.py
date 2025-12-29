@@ -451,7 +451,7 @@ HEMATOLOGY_DRUGS = {
             "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
             "dialysis": "Thận trọng, giảm liều. Ticlopidine không được lọc sạch hiệu quả qua thẩm phân máu.",
             "notes": "Ticlopidine thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy."
-        }
+        },
         "drug_interactions": {
             "major": [],
             "moderate": [],
@@ -485,7 +485,7 @@ HEMATOLOGY_DRUGS = {
             "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu lâm sàng",
         },
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
         "administration_instructions": {
@@ -571,7 +571,6 @@ HEMATOLOGY_DRUGS = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ)"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": None
         "black_box_warnings": "Cần xem xét black box warnings",
         "drug_interactions": {
             "major": [],
@@ -606,7 +605,7 @@ HEMATOLOGY_DRUGS = {
             "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu lâm sàng",
         },
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
         "administration_instructions": {
@@ -2447,7 +2446,7 @@ HEMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
         "drug_interactions": {
             "major": [],
             "moderate": [],
@@ -2481,7 +2480,7 @@ HEMATOLOGY_DRUGS = {
             "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu lâm sàng",
         },
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
         "administration_instructions": {
@@ -2730,7 +2729,7 @@ HEMATOLOGY_DRUGS = {
             "ASCO/ASH Guidelines - ESA Use in Cancer",
             "FDA Black Box Warning - Epoetin alfa and Thrombosis/Cardiovascular Events",
             "FDA Black Box Warning - Epoetin alfa and Hypertension"
-        ]
+        ],
         "drug_interactions": {
             "major": [],
             "moderate": [],
@@ -2764,7 +2763,7 @@ HEMATOLOGY_DRUGS = {
             "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu lâm sàng",
         },
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
         "administration_instructions": {
@@ -2927,13 +2926,7 @@ HEMATOLOGY_DRUGS = {
                 "incompatibility": [],
                 "notes": "Có thể truyền IV, nhưng SC phổ biến hơn. Theo protocol cụ thể."
             }
-        },
-            "incompatibility": [
-            "Cần xem xét",
-        ],
-            "notes": "Cần xem xét hướng dẫn cụ thể",
-        },
-        },
+        }
     },
 
     "Emicizumab": {
@@ -3582,9 +3575,9 @@ HEMATOLOGY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, guideline-supported"
-        }
+        },
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },

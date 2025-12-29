@@ -158,8 +158,8 @@ OTHER_ANTIDIABETICS_DRUGS = {
                 "timing": "Uống buổi sáng với thức ăn",
                 "notes": "QUAN TRỌNG: Uống với thức ăn để giảm buồn nôn. Bắt đầu với liều thấp và tăng dần."
             }
-        }
-             "black_box_warnings": None,
+        },
+        "black_box_warnings": None,
 },
 
     "Colesevelam": {
@@ -306,8 +306,8 @@ OTHER_ANTIDIABETICS_DRUGS = {
                 "timing": "Chia 1-2 lần với bữa ăn",
                 "notes": "QUAN TRỌNG: 1) Uống với thức ăn và nhiều nước, 2) Dùng cách xa các thuốc khác ít nhất 4 giờ để tránh giảm hấp thu."
             }
-        }
-              "black_box_warnings": None,
+        },
+        "black_box_warnings": None,
 }
 }
 

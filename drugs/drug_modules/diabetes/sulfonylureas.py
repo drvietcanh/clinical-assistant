@@ -173,7 +173,8 @@ SULFONYLUREAS_DRUGS = {
             'AACE/ACE Diabetes Guidelines',
             'UKPDS Study',
             'ISMP High Alert Medications'
-        ]         "renal_adjustment": {
+        ],
+        "renal_adjustment": {
              "normal": "Không đổi",
              "30_60": "Thận trọng, có thể giảm liều",
              "under_30": "Giảm liều hoặc tránh dùng",
@@ -320,7 +321,8 @@ SULFONYLUREAS_DRUGS = {
             'AACE/ACE Diabetes Guidelines',
             'UKPDS Study',
             'ISMP High Alert Medications'
-        ]         "renal_adjustment": {
+        ],
+        "renal_adjustment": {
              "normal": "Không đổi",
              "30_60": "Thận trọng, có thể giảm liều",
              "under_30": "Giảm liều hoặc tránh dùng",

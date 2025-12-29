@@ -694,8 +694,8 @@ MUSCLE_RELAXANTS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved"
-        }
-              "black_box_warnings": None,
+        },
+        "black_box_warnings": None,
 },
 
     "Carisoprodol": {
@@ -980,8 +980,8 @@ MUSCLE_RELAXANTS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved"
-        }
-              "black_box_warnings": None,
+        },
+        "black_box_warnings": None,
 }
 }
 

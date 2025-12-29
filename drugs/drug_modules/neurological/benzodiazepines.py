@@ -438,8 +438,8 @@ BENZODIAZEPINES_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
-        }
-             "renal_adjustment": {
+        },
+        "renal_adjustment": {
              "normal": "Không đổi",
              "30_60": "Thận trọng, có thể giảm liều",
              "under_30": "Giảm liều hoặc tránh dùng",

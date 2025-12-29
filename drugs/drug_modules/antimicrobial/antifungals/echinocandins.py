@@ -160,10 +160,10 @@ ECHINOCANDINS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High (FDA-approved, guideline-supported)"
-        }
+        },
         "black_box_warnings": "Cần xem xét black box warnings",
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },
@@ -316,10 +316,10 @@ ECHINOCANDINS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High (FDA-approved, guideline-supported)"
-        }
+        },
         "black_box_warnings": "Cần xem xét black box warnings",
         "reversal_agents": {
-            "available": false,
+            "available": False,
             "agents": [],
         },
     },

@@ -8,57 +8,66 @@ File này import và merge tất cả modules để giữ backward compatibility
 """
 
 from .drug_modules import (
-    CARDIOVASCULAR_DRUGS,
+    # Main organized modules (reorganized for better access)
+    CARDIOVASCULAR_DRUGS,  # Now includes cardiovascular_other
     DIABETES_DRUGS,
     GASTROINTESTINAL_DRUGS,
     ANALGESICS_DRUGS,
     RESPIRATORY_DRUGS,
-    NEUROLOGICAL_DRUGS,
+    NEUROLOGICAL_DRUGS,  # Now includes psychiatry_other
     HEMATOLOGY_DRUGS,
     SUPPORTIVE_DRUGS,
-    ANTIMICROBIAL_DRUGS,
+    ANTIMICROBIAL_DRUGS,  # Now includes infectious_other
     METABOLIC_DRUGS,
+    ENDOCRINOLOGY_DRUGS,  # Renamed from endocrinology_other
     ONCOLOGY_DRUGS,
     EMERGENCY_DRUGS,
-    OTHER_DRUGS,
+    UROLOGY_DRUGS,
     DERMATOLOGY_DRUGS,
     OPHTHALMOLOGY_DRUGS,
-    UROLOGY_DRUGS,
-    # Split modules from other.py (already included in OTHER_DRUGS, but available separately)
+    OBSTETRICS_GYNECOLOGY_DRUGS,
+    ENT_ORAL_NASAL_COMBINATIONS_DRUGS,
+    MISCELLANEOUS_DRUGS,
+    # Deprecated modules (kept for backward compatibility, but already merged above)
     CARDIOVASCULAR_OTHER_DRUGS,
     INFECTIOUS_OTHER_DRUGS,
     PSYCHIATRY_OTHER_DRUGS,
     ENDOCRINOLOGY_OTHER_DRUGS,
-    MISCELLANEOUS_DRUGS,
+    OTHER_DRUGS,
 )
 
 from .drug_utils import DRUG_GROUPS
 from .enhanced_fields_overrides import EXTRA_ENHANCED_FIELDS
 
 # Merge all drug dictionaries
+# Note: CARDIOVASCULAR_DRUGS now includes cardiovascular_other
+#       ANTIMICROBIAL_DRUGS now includes infectious_other
+#       NEUROLOGICAL_DRUGS now includes psychiatry_other
+#       ENDOCRINOLOGY_DRUGS renamed from endocrinology_other
 DRUG_DATABASE = {
-    **CARDIOVASCULAR_DRUGS,
+    **CARDIOVASCULAR_DRUGS,  # Includes cardiovascular_other
     **DIABETES_DRUGS,
     **GASTROINTESTINAL_DRUGS,
     **ANALGESICS_DRUGS,
     **RESPIRATORY_DRUGS,
-    **NEUROLOGICAL_DRUGS,
+    **NEUROLOGICAL_DRUGS,  # Includes psychiatry_other
     **HEMATOLOGY_DRUGS,
     **SUPPORTIVE_DRUGS,
-    **ANTIMICROBIAL_DRUGS,
+    **ANTIMICROBIAL_DRUGS,  # Includes infectious_other
     **METABOLIC_DRUGS,
+    **ENDOCRINOLOGY_DRUGS,  # Renamed from endocrinology_other
     **ONCOLOGY_DRUGS,
     **EMERGENCY_DRUGS,
-    **OTHER_DRUGS,
+    **UROLOGY_DRUGS,
     **DERMATOLOGY_DRUGS,
     **OPHTHALMOLOGY_DRUGS,
-    **UROLOGY_DRUGS,
-    # Additional modules
-    **INFECTIOUS_OTHER_DRUGS,
-    **CARDIOVASCULAR_OTHER_DRUGS,
-    **PSYCHIATRY_OTHER_DRUGS,
-    **ENDOCRINOLOGY_OTHER_DRUGS,
+    **OBSTETRICS_GYNECOLOGY_DRUGS,
+    **ENT_ORAL_NASAL_COMBINATIONS_DRUGS,
     **MISCELLANEOUS_DRUGS,
+    # Note: Deprecated modules (CARDIOVASCULAR_OTHER_DRUGS, INFECTIOUS_OTHER_DRUGS,
+    #       PSYCHIATRY_OTHER_DRUGS, ENDOCRINOLOGY_OTHER_DRUGS, OTHER_DRUGS)
+    #       are already included in the main modules above, so we don't merge them again
+    #       to avoid duplicates
 }
 
 # Apply enhanced-field overrides (bổ sung/chuẩn hóa 14 fields cho một số thuốc)
