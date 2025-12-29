@@ -53,6 +53,13 @@ python drug_structure_standardizer.py
 ```
 **Lưu ý**: Hiện tại không còn thuốc nào thiếu field (100% đã đủ 14 field)
 
+### 5. Thêm thuốc mới:
+**📌 File cần đọc**: `DRUG_REFERENCE_GUIDE.md` ⭐
+- Xem template thuốc mẫu
+- Xem danh sách nhóm và file
+- Xem hướng dẫn 5 bước chi tiết
+- Hoặc xem: `HOW_TO_ADD_NEW_DRUG.md` - Hướng dẫn nhanh
+
 ### 5. Tạo lại danh sách thuốc (sau khi sửa):
 ```bash
 python create_drug_lists.py

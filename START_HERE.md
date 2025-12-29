@@ -51,6 +51,11 @@ python create_drug_lists.py
 
 → Xem: `MASTER_GUIDE.md` - Chứa tất cả thông tin chi tiết
 
+## ➕ THÊM THUỐC MỚI
+
+→ Xem: `DRUG_REFERENCE_GUIDE.md` ⭐ - File tham chiếu đầy đủ
+→ Hoặc: `HOW_TO_ADD_NEW_DRUG.md` - Hướng dẫn nhanh
+
 ---
 
 ## ✅ QUY TRÌNH LÀM VIỆC

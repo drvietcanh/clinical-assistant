@@ -63,11 +63,10 @@ with st.sidebar:
             "🧮 Calculators",
             "🔬 Lab Panels",
             "📈 Lab Enhancement",
-            "🔄 Unit Converter",
-            "🧪 Anion Gap Calculator"
+            "🔄 Unit Converter"
         ],
         index=0,
-        help="Calculators: Tính toán công thức lâm sàng\nLab Panels: Tra cứu và giải thích giá trị xét nghiệm\nLab Enhancement: Phân tích xu hướng và calculator panel\nUnit Converter: Chuyển đổi đơn vị y khoa"
+        help="Calculators: Tính toán công thức lâm sàng (bao gồm Anion Gap)\nLab Panels: Tra cứu và giải thích giá trị xét nghiệm\nLab Enhancement: Phân tích xu hướng và calculator panel\nUnit Converter: Chuyển đổi đơn vị y khoa"
     )
     
     st.markdown("---")
