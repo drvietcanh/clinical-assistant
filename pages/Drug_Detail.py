@@ -317,11 +317,7 @@ admin_badges = ' '.join([
 # Black box warning indicator
 bb_warning_badge = ""
 if has_black_box:
-    bb_warning_badge = """
-    <div style='background: #DC2626; color: white; padding: 8px 15px; border-radius: 8px; margin-top: 15px; display: inline-block; font-weight: bold; font-size: 0.9em;'>
-        ⚠️ CẢNH BÁO HỘP ĐEN
-    </div>
-    """
+    bb_warning_badge = "<div style='background: #DC2626; color: white; padding: 8px 15px; border-radius: 8px; margin-top: 15px; display: inline-block; font-weight: bold; font-size: 0.9em;'>⚠️ CẢNH BÁO HỘP ĐEN</div>"
 
 st.markdown(
     f"""
