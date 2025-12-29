@@ -202,12 +202,9 @@ def render_info_card(
     }
     accent_color = color_map.get(color, THEME['colors']['info'])
     
-    # Build attributes
-    attrs = " ".join([f'{k}="{v}"' for k, v in kwargs.items()])
-    border_style = f"border-left: 4px solid {accent_color};" if border_left else ""
-    
     # Build attributes with escaped values
     attrs = " ".join([f'{k}="{html.escape(str(v))}"' for k, v in kwargs.items()])
+    border_style = f"border-left: 4px solid {accent_color};" if border_left else ""
     card_html = f"""
     <div class="info-card" 
          style="background: {THEME['colors']['background_secondary']}; padding: 1rem; border-radius: 8px; margin: 1rem 0; {border_style} {attrs}">
