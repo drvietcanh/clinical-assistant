@@ -454,6 +454,10 @@ drugs/drug_info_components/database_view.py
 
 ## 📝 CHANGELOG
 
+### 2025-02-18 - Bug Fix
+- Fixed: NameError trong Drug_Detail.py - drug_name được sử dụng trước khi định nghĩa
+- Fix: Di chuyển việc get drug_name lên trước breadcrumbs
+
 ### 2025-02-18 - Phase 1, 2, 3 Improvements
 - Added: Side effects frequency data
 - Added: Enhanced search (4 types)
