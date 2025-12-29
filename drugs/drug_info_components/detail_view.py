@@ -248,20 +248,24 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             if ped_doses:
                 st.markdown('---')
                 st.markdown('### 👶 Liều dùng trẻ em')
+                cards_html = [
+                    "<div style='background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B;'>"
+                    f"<div style='font-weight: bold; color: #92400e; margin-bottom: 8px; font-size: 0.95em;'>{safe_render_html(age_group)}</div>"
+                    f"<div style='color: #78350f; font-size: 0.9em; line-height: 1.6;'>{safe_render_html(dose)}</div>"
+                    "</div>"
+                    for age_group, dose in ped_doses
+                ]
                 st.markdown(
-                    f"""
-                    <div style='background: #fef3c7; border: 1px solid #fcd34d; border-radius: 10px; padding: 20px; margin: 15px 0;'>
-                        <h4 style='color: #92400e; margin: 0 0 15px 0; font-size: 1.1em;'>👶 Liều dùng theo độ tuổi</h4>
-                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
-                            {''.join([f"""
-                            <div style='background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B;'>
-                                <div style='font-weight: bold; color: #92400e; margin-bottom: 8px; font-size: 0.95em;'>{safe_render_html(age_group)}</div>
-                                <div style='color: #78350f; font-size: 0.9em; line-height: 1.6;'>{safe_render_html(dose)}</div>
+                    textwrap.dedent(
+                        f"""
+                        <div style='background: #fef3c7; border: 1px solid #fcd34d; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                            <h4 style='color: #92400e; margin: 0 0 15px 0; font-size: 1.1em;'>👶 Liều dùng theo độ tuổi</h4>
+                            <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
+                                {''.join(cards_html)}
                             </div>
-                            """ for age_group, dose in ped_doses])}
                         </div>
-                    </div>
-                    """,
+                        """
+                    ),
                     unsafe_allow_html=True
                 )
         if 'renal_adjustment' in drug_data:
