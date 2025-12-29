@@ -34,59 +34,80 @@
 - **Last Updated:** 2025-02-18
 - **Description:** Cơ sở dữ liệu thuốc, tra cứu, tính liều, tương tác
 
+#### 2. 🔬 Labs & Calculators
+- **File:** `docs/PAGE_LABS_CALCULATORS.md`
+- **Page:** `pages/05_🔬_Labs_and_Calculators.py`
+- **Status:** ✅ Complete
+- **Last Updated:** 2025-02-18
+- **Description:** Xét nghiệm, calculators, lab panels, unit converter
+
+#### 3. 📊 Scores
+- **File:** `docs/PAGE_SCORES.md`
+- **Page:** `pages/01_📊_Scores.py`
+- **Status:** ✅ Complete
+- **Last Updated:** 2025-02-18
+- **Description:** Thang điểm và calculators lâm sàng theo chuyên khoa
+
+#### 4. 💊 Antibiotics
+- **File:** `docs/PAGE_ANTIBIOTICS.md`
+- **Page:** `pages/02_💊_Antibiotics.py`
+- **Status:** ✅ Complete
+- **Last Updated:** 2025-02-18
+- **Description:** Module chuyên sâu về kháng sinh
+
+#### 5. 📋 Protocols
+- **File:** `docs/PAGE_PROTOCOLS.md`
+- **Page:** `pages/04_📋_Protocols.py`
+- **Status:** ✅ Complete
+- **Last Updated:** 2025-02-18
+- **Description:** Phác đồ điều trị chuẩn theo hướng dẫn quốc tế
+
+#### 6. 📊 TDM
+- **File:** `docs/PAGE_TDM.md`
+- **Page:** `pages/08_📊_TDM.py`
+- **Status:** ✅ Complete
+- **Last Updated:** 2025-02-18
+- **Description:** Theo dõi nồng độ thuốc
+
+#### 7. 🫁 Critical Care
+- **File:** `docs/PAGE_CRITICAL_CARE.md`
+- **Page:** `pages/09_🫁_Critical_Care.py`
+- **Status:** ✅ Complete
+- **Last Updated:** 2025-02-18
+- **Description:** Công cụ hỗ trợ hồi sức cấp cứu và ICU
+
+#### 8. 🩺 Diagnosis
+- **File:** `docs/PAGE_DIAGNOSIS.md`
+- **Page:** `pages/06_🩺_Diagnosis.py`
+- **Status:** ✅ Complete
+- **Last Updated:** 2025-02-18
+- **Description:** Chẩn đoán phân biệt
+
+#### 9. 🧭 Decision Support
+- **File:** `docs/PAGE_DECISION_SUPPORT.md`
+- **Page:** `pages/10_🧭_Decision_Support.py`
+- **Status:** ✅ Complete
+- **Last Updated:** 2025-02-18
+- **Description:** Flowcharts, thai kỳ/cho bú, liều Nhi khoa
+
+#### 10. 💉 Vaccination
+- **File:** `docs/PAGE_VACCINATION.md`
+- **Page:** `pages/11_💉_Vaccination.py`
+- **Status:** ✅ Complete
+- **Last Updated:** 2025-02-18
+- **Description:** Tiêm chủng và Vắc xin
+
+#### 11. 📚 In-Depth Articles
+- **File:** `docs/PAGE_ARTICLES.md`
+- **Page:** `pages/12_📚_In_Depth_Articles.py`
+- **Status:** ✅ Complete
+- **Last Updated:** 2025-02-18
+- **Description:** Bài viết chuyên sâu
+
 ---
 
 ### ⏳ Pending (To be created)
 
-#### 2. 📊 Scores
-- **File:** `docs/PAGE_SCORES.md` (chưa có)
-- **Page:** `pages/01_📊_Scores.py`
-- **Status:** ⏳ Pending
-
-#### 3. 💊 Antibiotics
-- **File:** `docs/PAGE_ANTIBIOTICS.md` (chưa có)
-- **Page:** `pages/02_💊_Antibiotics.py`
-- **Status:** ⏳ Pending
-
-#### 4. 📋 Protocols
-- **File:** `docs/PAGE_PROTOCOLS.md` (chưa có)
-- **Page:** `pages/04_📋_Protocols.py`
-- **Status:** ⏳ Pending
-
-#### 5. 🔬 Labs and Calculators
-- **File:** `docs/PAGE_LABS_CALCULATORS.md` (chưa có)
-- **Page:** `pages/05_🔬_Labs_and_Calculators.py`
-- **Status:** ⏳ Pending
-
-#### 6. 🩺 Diagnosis
-- **File:** `docs/PAGE_DIAGNOSIS.md` (chưa có)
-- **Page:** `pages/06_🩺_Diagnosis.py`
-- **Status:** ⏳ Pending
-
-#### 7. 📊 TDM
-- **File:** `docs/PAGE_TDM.md` (chưa có)
-- **Page:** `pages/08_📊_TDM.py`
-- **Status:** ⏳ Pending
-
-#### 8. 🫁 Critical Care
-- **File:** `docs/PAGE_CRITICAL_CARE.md` (chưa có)
-- **Page:** `pages/09_🫁_Critical_Care.py`
-- **Status:** ⏳ Pending
-
-#### 9. 🧭 Decision Support
-- **File:** `docs/PAGE_DECISION_SUPPORT.md` (chưa có)
-- **Page:** `pages/10_🧭_Decision_Support.py`
-- **Status:** ⏳ Pending
-
-#### 10. 💉 Vaccination
-- **File:** `docs/PAGE_VACCINATION.md` (chưa có)
-- **Page:** `pages/11_💉_Vaccination.py`
-- **Status:** ⏳ Pending
-
-#### 11. 📚 In-Depth Articles
-- **File:** `docs/PAGE_ARTICLES.md` (chưa có)
-- **Page:** `pages/12_📚_In_Depth_Articles.py`
-- **Status:** ⏳ Pending
 
 ---
 
@@ -194,8 +215,8 @@ Khi tạo documentation cho các pages còn lại, ưu tiên theo thứ tự:
 ## 📊 STATISTICS
 
 - **Total Pages:** 11 pages
-- **Documented:** 1/11 (9%)
-- **Pending:** 10/11 (91%)
+- **Documented:** 11/11 (100%)
+- **Pending:** 0/11 (0%)
 
 ---
 
