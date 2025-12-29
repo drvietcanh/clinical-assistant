@@ -336,13 +336,32 @@ def render_drug_database():
                         if '_quick_filter_name' in st.session_state:
                             del st.session_state['_quick_filter_name']
                         st.rerun()
-        col1, col2 = st.columns([3, 1])
-        with col1:
-            search_query = st.text_input('Nhập tên thuốc, nhóm, hoặc chỉ định',
-                key='drug_search_input', placeholder=
-                'Ví dụ: Metformin, Omeprazole, tăng huyết áp...', value=st.
-                session_state.get('drug_search_input', ''))
-        with col2:
+        # Enhanced search with search type selector
+        col_search_type, col_search_input, col_search_btn = st.columns([1.5, 2.5, 1])
+        
+        with col_search_type:
+            search_type = st.selectbox(
+                'Tìm theo:',
+                options=['Tên thuốc', 'Chỉ định', 'Tác dụng phụ', 'Chống chỉ định'],
+                key='drug_search_type',
+                help='Chọn loại tìm kiếm: Tên thuốc, Chỉ định, Tác dụng phụ, hoặc Chống chỉ định'
+            )
+        
+        with col_search_input:
+            placeholder_map = {
+                'Tên thuốc': 'Ví dụ: Metformin, Omeprazole...',
+                'Chỉ định': 'Ví dụ: tăng huyết áp, đái tháo đường...',
+                'Tác dụng phụ': 'Ví dụ: buồn nôn, chóng mặt...',
+                'Chống chỉ định': 'Ví dụ: suy thận, mang thai...'
+            }
+            search_query = st.text_input(
+                'Nhập từ khóa',
+                key='drug_search_input',
+                placeholder=placeholder_map.get(search_type, 'Nhập từ khóa...'),
+                value=st.session_state.get('drug_search_input', '')
+            )
+        
+        with col_search_btn:
             st.markdown('<br>', unsafe_allow_html=True)
             search_button = st.button('🔍 Tìm', use_container_width=True)
     with st.expander('🔍 Advanced Filters', expanded=False):
@@ -441,10 +460,90 @@ def render_drug_database():
             auto_search_query = st.session_state.pop('_auto_search_trigger')
         effective_query = auto_search_query if auto_search_query else search_query
         filters = st.session_state.get('drug_filters', {})
+        
+        # Get search type (default to 'Tên thuốc' if not set)
+        current_search_type = st.session_state.get('drug_search_type', 'Tên thuốc')
+        
         if effective_query or search_button or any(filters.values()):
             if effective_query:
                 add_recent_search(effective_query)
-            results = search_drugs_with_filters(effective_query, filters)
+            
+            # Enhanced search based on search type
+            from .search import search_by_indication, search_by_side_effect, search_by_contraindication
+            
+            if current_search_type == 'Chỉ định':
+                # Search by indication
+                indication_results = search_by_indication(effective_query)
+                # Apply filters to indication results
+                filtered_results = []
+                for drug_name, drug_data in indication_results:
+                    # Apply same filters as search_drugs_with_filters
+                    if filters.get('groups') and 'group' in drug_data:
+                        if not any(fg.lower() in drug_data['group'].lower() for fg in filters['groups']):
+                            continue
+                    if filters.get('routes') and 'administration' in drug_data:
+                        if not any(fr in drug_data['administration'] for fr in filters['routes']):
+                            continue
+                    if filters.get('pregnancy') and filters['pregnancy'] != 'All':
+                        if drug_data.get('pregnancy') != filters['pregnancy']:
+                            continue
+                    if filters.get('requires_monitoring') and not drug_data.get('monitoring'):
+                        continue
+                    if filters.get('has_renal_adjustment') and not drug_data.get('renal_adjustment'):
+                        continue
+                    if filters.get('has_black_box') and not drug_data.get('black_box_warnings'):
+                        continue
+                    filtered_results.append((drug_name, drug_data))
+                results = filtered_results
+            elif current_search_type == 'Tác dụng phụ':
+                # Search by side effect
+                side_effect_results = search_by_side_effect(effective_query)
+                # Apply filters
+                filtered_results = []
+                for drug_name, drug_data in side_effect_results:
+                    if filters.get('groups') and 'group' in drug_data:
+                        if not any(fg.lower() in drug_data['group'].lower() for fg in filters['groups']):
+                            continue
+                    if filters.get('routes') and 'administration' in drug_data:
+                        if not any(fr in drug_data['administration'] for fr in filters['routes']):
+                            continue
+                    if filters.get('pregnancy') and filters['pregnancy'] != 'All':
+                        if drug_data.get('pregnancy') != filters['pregnancy']:
+                            continue
+                    if filters.get('requires_monitoring') and not drug_data.get('monitoring'):
+                        continue
+                    if filters.get('has_renal_adjustment') and not drug_data.get('renal_adjustment'):
+                        continue
+                    if filters.get('has_black_box') and not drug_data.get('black_box_warnings'):
+                        continue
+                    filtered_results.append((drug_name, drug_data))
+                results = filtered_results
+            elif current_search_type == 'Chống chỉ định':
+                # Search by contraindication
+                contraindication_results = search_by_contraindication(effective_query)
+                # Apply filters
+                filtered_results = []
+                for drug_name, drug_data in contraindication_results:
+                    if filters.get('groups') and 'group' in drug_data:
+                        if not any(fg.lower() in drug_data['group'].lower() for fg in filters['groups']):
+                            continue
+                    if filters.get('routes') and 'administration' in drug_data:
+                        if not any(fr in drug_data['administration'] for fr in filters['routes']):
+                            continue
+                    if filters.get('pregnancy') and filters['pregnancy'] != 'All':
+                        if drug_data.get('pregnancy') != filters['pregnancy']:
+                            continue
+                    if filters.get('requires_monitoring') and not drug_data.get('monitoring'):
+                        continue
+                    if filters.get('has_renal_adjustment') and not drug_data.get('renal_adjustment'):
+                        continue
+                    if filters.get('has_black_box') and not drug_data.get('black_box_warnings'):
+                        continue
+                    filtered_results.append((drug_name, drug_data))
+                results = filtered_results
+            else:
+                # Default: search by name (original behavior)
+                results = search_drugs_with_filters(effective_query, filters)
             if results:
                 st.markdown(f'### 📊 Kết quả tìm kiếm ({len(results)} thuốc)')
                 page_size = 20

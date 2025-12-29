@@ -377,41 +377,60 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             st.markdown('---')
             st.markdown('### ⚠️ Tác dụng phụ')
             
-            # Categorize side effects (inspired by Drugs.com)
-            # Note: In real implementation, we'd have severity data, but for now we'll use heuristics
+            # Enhanced side effects display with frequency data (inspired by Drugs.com & Epocrates)
             side_effects = drug_data['side_effects']
-            if isinstance(side_effects, list) and len(side_effects) > 0:
-                # Keywords for serious side effects
-                serious_keywords = ['tử vong', 'nguy hiểm', 'nghiêm trọng', 'suy gan', 'suy thận', 
-                                  'phản ứng dị ứng nặng', 'sốc phản vệ', 'xuất huyết', 'chảy máu nặng',
-                                  'rối loạn nhịp tim', 'nhồi máu', 'đột quỵ', 'huyết khối']
+            
+            # Check if side_effects is structured data with frequency
+            if isinstance(side_effects, dict):
+                # Structured format: {'common': [...], 'uncommon': [...], 'rare': [...], 'serious': [...]}
+                common_effects = side_effects.get('common', [])
+                uncommon_effects = side_effects.get('uncommon', [])
+                rare_effects = side_effects.get('rare', [])
+                serious_effects = side_effects.get('serious', [])
                 
-                # Separate into categories (simplified - in production would use structured data)
-                common_effects = []
-                serious_effects = []
-                other_effects = []
-                
-                for se in side_effects:
-                    se_lower = se.lower()
-                    if any(keyword in se_lower for keyword in serious_keywords):
-                        serious_effects.append(se)
-                    elif len(se) < 50:  # Shorter descriptions often indicate common effects
-                        common_effects.append(se)
-                    else:
-                        other_effects.append(se)
-                
-                # If no categorization worked, show all as common
-                if not common_effects and not serious_effects:
-                    common_effects = side_effects
-                
-                # Display categorized
+                # Display with frequency labels
                 if common_effects:
                     st.markdown(
                         f"""
                         <div style='background: #fef3c7; border-left: 4px solid #F59E0B; padding: 15px; border-radius: 8px; margin: 10px 0;'>
-                            <div style='color: #92400e; font-weight: bold; margin-bottom: 8px; font-size: 1em;'>🟡 Phổ biến (≥1%)</div>
+                            <div style='color: #92400e; font-weight: bold; margin-bottom: 8px; font-size: 1em; display: flex; align-items: center;'>
+                                <span style='font-size: 1.2em; margin-right: 8px;'>🟡</span>
+                                Phổ biến (≥1%)
+                            </div>
                             <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
-                                {''.join([f'<li style="margin: 5px 0;">{se}</li>' for se in common_effects])}
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in common_effects])}
+                            </ul>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+                
+                if uncommon_effects:
+                    st.markdown(
+                        f"""
+                        <div style='background: #fef3c7; border-left: 4px solid #F59E0B; padding: 15px; border-radius: 8px; margin: 10px 0; opacity: 0.8;'>
+                            <div style='color: #92400e; font-weight: bold; margin-bottom: 8px; font-size: 1em; display: flex; align-items: center;'>
+                                <span style='font-size: 1.2em; margin-right: 8px;'>🟠</span>
+                                Ít gặp (0.1-1%)
+                            </div>
+                            <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in uncommon_effects])}
+                            </ul>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+                
+                if rare_effects:
+                    st.markdown(
+                        f"""
+                        <div style='background: #f1f5f9; border-left: 4px solid #64748b; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                            <div style='color: #475569; font-weight: bold; margin-bottom: 8px; font-size: 1em; display: flex; align-items: center;'>
+                                <span style='font-size: 1.2em; margin-right: 8px;'>⚪</span>
+                                Hiếm gặp (&lt;0.1%)
+                            </div>
+                            <ul style='margin: 0; padding-left: 20px; color: #334155;'>
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in rare_effects])}
                             </ul>
                         </div>
                         """,
@@ -422,22 +441,109 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     st.markdown(
                         f"""
                         <div style='background: #fee2e2; border-left: 4px solid #DC2626; padding: 15px; border-radius: 8px; margin: 10px 0;'>
-                            <div style='color: #991b1b; font-weight: bold; margin-bottom: 8px; font-size: 1em;'>🔴 Nghiêm trọng - Cần báo bác sĩ ngay</div>
+                            <div style='color: #991b1b; font-weight: bold; margin-bottom: 8px; font-size: 1em; display: flex; align-items: center;'>
+                                <span style='font-size: 1.2em; margin-right: 8px;'>🔴</span>
+                                Nghiêm trọng - Cần báo bác sĩ ngay
+                            </div>
                             <ul style='margin: 0; padding-left: 20px; color: #7f1d1d;'>
-                                {''.join([f'<li style="margin: 5px 0; font-weight: 500;">{se}</li>' for se in serious_effects])}
+                                {''.join([f'<li style="margin: 5px 0; font-weight: 500; line-height: 1.6;">{se}</li>' for se in serious_effects])}
+                            </ul>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+            
+            elif isinstance(side_effects, list) and len(side_effects) > 0:
+                # Legacy format: simple list - use heuristics to categorize
+                # Keywords for serious side effects
+                serious_keywords = ['tử vong', 'nguy hiểm', 'nghiêm trọng', 'suy gan', 'suy thận', 
+                                  'phản ứng dị ứng nặng', 'sốc phản vệ', 'xuất huyết', 'chảy máu nặng',
+                                  'rối loạn nhịp tim', 'nhồi máu', 'đột quỵ', 'huyết khối', 'sốc',
+                                  'phù mạch', 'hội chứng stevens-johnson', 'hoại tử biểu bì']
+                
+                # Keywords for uncommon effects (longer descriptions, specific conditions)
+                uncommon_keywords = ['hiếm', 'ít gặp', 'rất hiếm', 'đôi khi', 'thỉnh thoảng']
+                
+                # Separate into categories
+                common_effects = []
+                uncommon_effects = []
+                serious_effects = []
+                other_effects = []
+                
+                for se in side_effects:
+                    se_lower = se.lower()
+                    if any(keyword in se_lower for keyword in serious_keywords):
+                        serious_effects.append(se)
+                    elif any(keyword in se_lower for keyword in uncommon_keywords) or len(se) > 60:
+                        uncommon_effects.append(se)
+                    elif len(se) < 50:  # Shorter descriptions often indicate common effects
+                        common_effects.append(se)
+                    else:
+                        other_effects.append(se)
+                
+                # If no categorization worked, show all as common
+                if not common_effects and not serious_effects and not uncommon_effects:
+                    common_effects = side_effects
+                
+                # Display categorized with frequency estimates
+                if common_effects:
+                    st.markdown(
+                        f"""
+                        <div style='background: #fef3c7; border-left: 4px solid #F59E0B; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                            <div style='color: #92400e; font-weight: bold; margin-bottom: 8px; font-size: 1em; display: flex; align-items: center;'>
+                                <span style='font-size: 1.2em; margin-right: 8px;'>🟡</span>
+                                Phổ biến (≥1%)
+                            </div>
+                            <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in common_effects])}
                             </ul>
                         </div>
                         """,
                         unsafe_allow_html=True
                     )
                 
-                if other_effects and (common_effects or serious_effects):
+                if uncommon_effects:
+                    st.markdown(
+                        f"""
+                        <div style='background: #fef3c7; border-left: 4px solid #F59E0B; padding: 15px; border-radius: 8px; margin: 10px 0; opacity: 0.8;'>
+                            <div style='color: #92400e; font-weight: bold; margin-bottom: 8px; font-size: 1em; display: flex; align-items: center;'>
+                                <span style='font-size: 1.2em; margin-right: 8px;'>🟠</span>
+                                Ít gặp (0.1-1%)
+                            </div>
+                            <ul style='margin: 0; padding-left: 20px; color: #78350f;'>
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in uncommon_effects])}
+                            </ul>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+                
+                if serious_effects:
+                    st.markdown(
+                        f"""
+                        <div style='background: #fee2e2; border-left: 4px solid #DC2626; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                            <div style='color: #991b1b; font-weight: bold; margin-bottom: 8px; font-size: 1em; display: flex; align-items: center;'>
+                                <span style='font-size: 1.2em; margin-right: 8px;'>🔴</span>
+                                Nghiêm trọng - Cần báo bác sĩ ngay
+                            </div>
+                            <ul style='margin: 0; padding-left: 20px; color: #7f1d1d;'>
+                                {''.join([f'<li style="margin: 5px 0; font-weight: 500; line-height: 1.6;">{se}</li>' for se in serious_effects])}
+                            </ul>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+                
+                if other_effects and (common_effects or serious_effects or uncommon_effects):
                     st.markdown(
                         f"""
                         <div style='background: #f1f5f9; border-left: 4px solid #64748b; padding: 15px; border-radius: 8px; margin: 10px 0;'>
-                            <div style='color: #475569; font-weight: bold; margin-bottom: 8px; font-size: 1em;'>⚪ Khác</div>
+                            <div style='color: #475569; font-weight: bold; margin-bottom: 8px; font-size: 1em; display: flex; align-items: center;'>
+                                <span style='font-size: 1.2em; margin-right: 8px;'>⚪</span>
+                                Khác
+                            </div>
                             <ul style='margin: 0; padding-left: 20px; color: #334155;'>
-                                {''.join([f'<li style="margin: 5px 0;">{se}</li>' for se in other_effects])}
+                                {''.join([f'<li style="margin: 5px 0; line-height: 1.6;">{se}</li>' for se in other_effects])}
                             </ul>
                         </div>
                         """,

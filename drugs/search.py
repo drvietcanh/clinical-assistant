@@ -64,6 +64,46 @@ def search_drugs(query, max_results=None):
                         score = 0.5
                         results.append((drug_name, drug_data, score))
                         break
+            
+            # Search in side effects (new)
+            if 'side_effects' in drug_data:
+                side_effects = drug_data['side_effects']
+                # Handle both list and dict formats
+                if isinstance(side_effects, dict):
+                    # Structured format: check all categories
+                    for category in ['common', 'uncommon', 'rare', 'serious']:
+                        if category in side_effects:
+                            for se in side_effects[category]:
+                                if query_lower in se.lower():
+                                    score = 0.4
+                                    results.append((drug_name, drug_data, score))
+                                    break
+                elif isinstance(side_effects, list):
+                    for se in side_effects:
+                        if query_lower in se.lower():
+                            score = 0.4
+                            results.append((drug_name, drug_data, score))
+                            break
+            
+            # Search in contraindications (new)
+            if 'contraindications' in drug_data:
+                contraindications = drug_data['contraindications']
+                # Handle both list and dict formats
+                if isinstance(contraindications, dict):
+                    # Structured format: check both absolute and relative
+                    for category in ['tuyệt_đối', 'tương_đối']:
+                        if category in contraindications:
+                            for contra in contraindications[category]:
+                                if query_lower in contra.lower():
+                                    score = 0.4
+                                    results.append((drug_name, drug_data, score))
+                                    break
+                elif isinstance(contraindications, list):
+                    for contra in contraindications:
+                        if query_lower in contra.lower():
+                            score = 0.4
+                            results.append((drug_name, drug_data, score))
+                            break
     
         # Sort by score (descending)
         results.sort(key=lambda x: x[2], reverse=True)
@@ -185,6 +225,58 @@ def search_by_indication(indication_query):
                 if indication_lower in indication.lower():
                     results.append((drug_name, drug_data))
                     break
+    
+    return results
+
+
+def search_by_side_effect(side_effect_query):
+    """Search drugs by side effect"""
+    query_lower = side_effect_query.lower()
+    results = []
+    
+    for drug_name, drug_data in DRUG_DATABASE.items():
+        if 'side_effects' in drug_data:
+            side_effects = drug_data['side_effects']
+            # Handle both list and dict formats
+            if isinstance(side_effects, dict):
+                # Structured format: check all categories
+                for category in ['common', 'uncommon', 'rare', 'serious']:
+                    if category in side_effects:
+                        for se in side_effects[category]:
+                            if query_lower in se.lower():
+                                results.append((drug_name, drug_data))
+                                break
+            elif isinstance(side_effects, list):
+                for se in side_effects:
+                    if query_lower in se.lower():
+                        results.append((drug_name, drug_data))
+                        break
+    
+    return results
+
+
+def search_by_contraindication(contraindication_query):
+    """Search drugs by contraindication"""
+    query_lower = contraindication_query.lower()
+    results = []
+    
+    for drug_name, drug_data in DRUG_DATABASE.items():
+        if 'contraindications' in drug_data:
+            contraindications = drug_data['contraindications']
+            # Handle both list and dict formats
+            if isinstance(contraindications, dict):
+                # Structured format: check both absolute and relative
+                for category in ['tuyệt_đối', 'tương_đối']:
+                    if category in contraindications:
+                        for contra in contraindications[category]:
+                            if query_lower in contra.lower():
+                                results.append((drug_name, drug_data))
+                                break
+            elif isinstance(contraindications, list):
+                for contra in contraindications:
+                    if query_lower in contra.lower():
+                        results.append((drug_name, drug_data))
+                        break
     
     return results
 

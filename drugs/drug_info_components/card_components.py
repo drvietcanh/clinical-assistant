@@ -34,6 +34,33 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
             break
     group_split = group.split(' - ')[0] if ' - ' in group else group
     group_badge = f'<span style="background-color: {badge_color}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; margin-left: 8px;">{group_split}</span>'
+    
+    # Visual indicators (inspired by Epocrates & Drugs.com)
+    indicators = []
+    
+    # Pregnancy category indicator
+    if 'pregnancy' in drug_data:
+        preg = drug_data['pregnancy']
+        preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
+        preg_colors = {'A': '#10B981', 'B': '#F59E0B', 'C': '#F97316', 'D': '#EF4444', 'X': '#1F2937'}
+        preg_color = preg_colors.get(preg, '#64748b')
+        indicators.append(f'<span style="background: {preg_color}; color: white; padding: 2px 6px; border-radius: 8px; font-size: 0.7em; margin-right: 4px;" title="Thai kỳ: {preg}">{preg_icons.get(preg, "")} {preg}</span>')
+    
+    # Black box warning indicator
+    if 'black_box_warnings' in drug_data and drug_data.get('black_box_warnings'):
+        indicators.append('<span style="background: #DC2626; color: white; padding: 2px 6px; border-radius: 8px; font-size: 0.7em; margin-right: 4px;" title="Cảnh báo hộp đen">⚠️ BBW</span>')
+    
+    # Monitoring required indicator
+    if 'monitoring' in drug_data and drug_data.get('monitoring'):
+        if isinstance(drug_data['monitoring'], list) and len(drug_data['monitoring']) > 0:
+            indicators.append('<span style="background: #8B5CF6; color: white; padding: 2px 6px; border-radius: 8px; font-size: 0.7em; margin-right: 4px;" title="Cần theo dõi">📊 Monitor</span>')
+    
+    # Renal adjustment indicator
+    if 'renal_adjustment' in drug_data and drug_data.get('renal_adjustment'):
+        indicators.append('<span style="background: #0EA5E9; color: white; padding: 2px 6px; border-radius: 8px; font-size: 0.7em; margin-right: 4px;" title="Có điều chỉnh theo thận">🫘 Renal</span>')
+    
+    indicators_html = ''.join(indicators) if indicators else ''
+    
     # Make card more clickable with hover effect (inspired by medical reference sites)
     card_html = f"""
     <div style='
@@ -50,9 +77,10 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
     onmouseout="this.style.borderColor='#e0e0e0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)';">
         <div style='display: flex; justify-content: space-between; align-items: start;'>
             <div style='flex: 1;'>
-                <div style='display: flex; align-items: center; margin-bottom: 8px;'>
+                <div style='display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 8px; gap: 6px;'>
                     <strong style='color: #1976D2; font-size: 1.1em; margin-right: 8px; cursor: pointer;'>{highlighted_name}</strong>
                     {group_badge}
+                    {indicators_html}
                 </div>
                 {f"<div style='color: #666; font-size: 0.9em; margin-bottom: 5px;'>{highlighted_vn_name}</div>" if vn_name else ''}
                 <div style='color: #888; font-size: 0.85em;'>{admin_str} | {group}</div>
