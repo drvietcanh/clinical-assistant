@@ -60,13 +60,15 @@ def generate_toc_from_headers(headers: List[Dict[str, str]]) -> str:
     for header in headers:
         indent = (header['level'] - 2) * 20  # Indent based on level (h2 = 0, h3 = 20px, etc.)
         style = f'margin-left: {indent}px;' if indent > 0 else ''
+        # Sanitize anchor for HTML ID attribute
+        safe_anchor = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in header['anchor'])
         
         toc_html += f'''
         <li style="{style} margin-bottom: 0.5rem;">
-            <a href="#{header['anchor']}" 
+            <a href="#{safe_anchor}" 
                style="text-decoration: none; color: var(--protocol-primary-blue);"
-               onclick="document.getElementById('{header['anchor']}').scrollIntoView({{behavior: 'smooth'}}); return false;">
-                {header['text']}
+               onclick="document.getElementById('{safe_anchor}').scrollIntoView({{behavior: 'smooth'}}); return false;">
+                {html.escape(header['text'])}
             </a>
         </li>
         '''
@@ -127,8 +129,10 @@ def add_anchors_to_content(content: str, headers: List[Dict[str, str]] = None) -
         match = re.match(r'^(#{1,6})\s+(.+)$', line.strip())
         if match and header_idx < len(headers):
             header = headers[header_idx]
+            # Sanitize anchor for HTML ID attribute
+            safe_anchor = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in header["anchor"])
             # Add anchor ID before header
-            result_lines.append(f'<div id="{header["anchor"]}"></div>')
+            result_lines.append(f'<div id="{safe_anchor}"></div>')
             result_lines.append(line)
             header_idx += 1
         else:
@@ -159,8 +163,10 @@ def render_simple_toc(protocol_sections: List[Tuple[str, str]] = None):
     
     with st.expander("📋 Mục Lục", expanded=False):
         for section_name, anchor in protocol_sections:
+            # Sanitize anchor for HTML ID attribute
+            safe_anchor = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in str(anchor))
             st.markdown(
-                f'<a href="#{anchor}" style="text-decoration: none; color: var(--protocol-primary-blue); display: block; margin-bottom: 0.5rem;">{section_name}</a>',
+                f'<a href="#{safe_anchor}" style="text-decoration: none; color: var(--protocol-primary-blue); display: block; margin-bottom: 0.5rem;">{html.escape(section_name)}</a>',
                 unsafe_allow_html=True
             )
 

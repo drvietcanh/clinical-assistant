@@ -161,6 +161,15 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%)",
             border="#689f38"
         ),
+        "medical_news": ModuleInfo(
+            id="medical_news",
+            title="Tin tức y khoa",
+            icon="📰",
+            page_path="pages/14_📰_Medical_News.py",
+            description="Tin tức y khoa mới nhất từ Medscape, Healthline, PubMed, NEJM",
+            color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
+            border="#ff9800"
+        ),
     },
     
     "navigation": {

@@ -4,6 +4,7 @@ Reusable card components for modules, calculators, and info display
 """
 
 import streamlit as st
+import html
 from typing import Optional, Dict
 from config.theme import get_module_style, THEME
 
@@ -49,17 +50,17 @@ def render_module_card(
         gradient = gradient or THEME['module_gradients']['scores']
         border = border or THEME['module_borders']['scores']
     
-    # Build additional attributes
-    attrs = " ".join([f'{k}="{v}"' for k, v in kwargs.items()])
-    onclick_attr = f'onclick="{onclick}"' if onclick else ''
+    # Build additional attributes with escaped values
+    attrs = " ".join([f'{k}="{html.escape(str(v))}"' for k, v in kwargs.items()])
+    onclick_attr = f'onclick="{html.escape(onclick)}"' if onclick else ''
     
     card_html = f"""
     <div class="module-card" 
          style="background: {gradient}; border: 2px solid {border}; text-align: center; padding: 1.5rem; border-radius: 12px; margin: 0.5rem 0; cursor: pointer; transition: all 0.3s ease; {attrs}"
          {onclick_attr}>
-        <div class="module-icon" style="font-size: 2.5rem; margin-bottom: 0.5rem;">{icon}</div>
-        <div class="module-title" style="font-weight: bold; font-size: 1.2rem; margin-bottom: 0.5rem; color: {THEME['colors']['text_primary']};">{title}</div>
-        <div class="module-desc" style="font-size: 0.9rem; color: {THEME['colors']['text_secondary']}; line-height: 1.5;">{description}</div>
+        <div class="module-icon" style="font-size: 2.5rem; margin-bottom: 0.5rem;">{html.escape(icon)}</div>
+        <div class="module-title" style="font-weight: bold; font-size: 1.2rem; margin-bottom: 0.5rem; color: {THEME['colors']['text_primary']};">{html.escape(title)}</div>
+        <div class="module-desc" style="font-size: 0.9rem; color: {THEME['colors']['text_secondary']}; line-height: 1.5;">{html.escape(description)}</div>
     </div>
     """
     
@@ -106,16 +107,18 @@ def render_calculator_card(
     elif is_recent:
         card_class = "recent-card"
     
+    # Sanitize card_class for CSS class
+    safe_card_class = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in card_class)
     # Render card
     st.markdown(f"""
-    <div class="{card_class}">
+    <div class="{safe_card_class}">
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-            <span style="font-size: 1.5rem;">{icon}</span>
-            <strong style="font-size: 1rem; color: {THEME['colors']['text_primary']};">{name}</strong>
+            <span style="font-size: 1.5rem;">{html.escape(icon)}</span>
+            <strong style="font-size: 1rem; color: {THEME['colors']['text_primary']};">{html.escape(name)}</strong>
         </div>
         <div style="font-size: 0.85rem; color: {THEME['colors']['text_secondary']}; margin-bottom: 12px;">
-            📂 {category}<br/>
-            📄 {page}
+            📂 {html.escape(category)}<br/>
+            📄 {html.escape(page)}
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -203,13 +206,15 @@ def render_info_card(
     attrs = " ".join([f'{k}="{v}"' for k, v in kwargs.items()])
     border_style = f"border-left: 4px solid {accent_color};" if border_left else ""
     
+    # Build attributes with escaped values
+    attrs = " ".join([f'{k}="{html.escape(str(v))}"' for k, v in kwargs.items()])
     card_html = f"""
     <div class="info-card" 
          style="background: {THEME['colors']['background_secondary']}; padding: 1rem; border-radius: 8px; margin: 1rem 0; {border_style} {attrs}">
         <div style="display: flex; align-items: start; gap: 12px;">
-            <span style="font-size: 1.5rem;">{icon}</span>
+            <span style="font-size: 1.5rem;">{html.escape(icon)}</span>
             <div style="flex: 1;">
-                <strong style="color: {THEME['colors']['text_primary']}; font-size: 1rem; display: block; margin-bottom: 0.5rem;">{title}</strong>
+                <strong style="color: {THEME['colors']['text_primary']}; font-size: 1rem; display: block; margin-bottom: 0.5rem;">{html.escape(title)}</strong>
                 <div style="color: {THEME['colors']['text_secondary']}; font-size: 0.9rem; line-height: 1.6;">{content}</div>
             </div>
         </div>
@@ -279,13 +284,17 @@ def render_clickable_dashboard_card(
         """, unsafe_allow_html=True)
         st.session_state['dashboard_card_styles_injected'] = True
     
+    # Sanitize action_key and title for CSS selector
+    safe_action_key = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in str(action_key))
+    safe_title = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in str(title))
+    
     # Render card HTML with wrapper
     card_html = f"""
     <div class="dashboard-card-wrapper">
         <div class="dashboard-card" style="background: {gradient};">
-            <div style="font-size: 2.5rem; margin-bottom: 10px;">{icon}</div>
-            <div style="font-weight: bold; font-size: 1.1rem;">{title}</div>
-            <div style="font-size: 0.9rem; margin-top: 5px; opacity: 0.95;">{description}</div>
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">{html.escape(icon)}</div>
+            <div style="font-weight: bold; font-size: 1.1rem;">{html.escape(title)}</div>
+            <div style="font-size: 0.9rem; margin-top: 5px; opacity: 0.95;">{html.escape(description)}</div>
         </div>
     </div>
     """
@@ -294,7 +303,7 @@ def render_clickable_dashboard_card(
     # Button below card for navigation - styled to match card
     button_style = f"""
     <style>
-    div[data-testid*="{action_key}_{title}"] button {{
+    div[data-testid*="{safe_action_key}_{safe_title}"] button {{
         background: {gradient} !important;
         color: white !important;
         border: none !important;
@@ -302,7 +311,7 @@ def render_clickable_dashboard_card(
         transition: all 0.2s ease !important;
     }}
     
-    div[data-testid*="{action_key}_{title}"] button:hover {{
+    div[data-testid*="{safe_action_key}_{safe_title}"] button:hover {{
         transform: translateY(-2px) !important;
         box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
     }}
@@ -310,7 +319,7 @@ def render_clickable_dashboard_card(
     """
     st.markdown(button_style, unsafe_allow_html=True)
     
-    if st.button(f"▶️ Mở {title}", key=f"dashboard_card_{action_key}_{title}", use_container_width=True, help=tooltip):
+    if st.button(f"▶️ Mở {html.escape(title)}", key=f"dashboard_card_{safe_action_key}_{safe_title}", use_container_width=True, help=tooltip):
         # Set session state to trigger navigation
         st.session_state[action_key] = action_value
         st.rerun()

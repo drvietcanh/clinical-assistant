@@ -4,6 +4,7 @@ Visual timeline for time-sensitive protocols
 """
 
 import streamlit as st
+import html
 from typing import List, Dict, Optional
 from datetime import datetime, timedelta
 
@@ -25,7 +26,9 @@ def render_timeline_item(
         status: Status (pending, completed, urgent)
         icon: Icon for the step
     """
-    status_class = f"timeline-{status}"
+    # Sanitize status for CSS class
+    safe_status = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in str(status))
+    status_class = f"timeline-{safe_status}"
     status_colors = {
         "pending": "#6C757D",
         "completed": "#28A745",
@@ -44,7 +47,7 @@ def render_timeline_item(
                     border-radius: 8px;
                     font-weight: 600;
                     font-size: 0.875rem;
-                ">{time_label}</div>
+                ">{html.escape(time_label)}</div>
             </div>
             <div style="flex: 1;">
                 <div style="
@@ -53,10 +56,10 @@ def render_timeline_item(
                     gap: 0.5rem;
                     margin-bottom: 0.5rem;
                 ">
-                    <span style="font-size: 1.25rem;">{icon}</span>
-                    <h4 style="margin: 0; color: {color}; font-size: 1.1rem;">{title}</h4>
+                    <span style="font-size: 1.25rem;">{html.escape(icon)}</span>
+                    <h4 style="margin: 0; color: {color}; font-size: 1.1rem;">{html.escape(title)}</h4>
                 </div>
-                <p style="margin: 0; color: #6C757D; line-height: 1.6;">{description}</p>
+                <p style="margin: 0; color: #6C757D; line-height: 1.6;">{html.escape(description)}</p>
             </div>
         </div>
     </div>

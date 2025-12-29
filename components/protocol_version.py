@@ -4,6 +4,7 @@ Display version information and update history
 """
 
 import streamlit as st
+import html
 from typing import Dict, Optional
 from datetime import datetime
 
@@ -149,12 +150,12 @@ def render_version_badge(protocol_name: str):
                 border-radius: 12px;
                 font-size: 0.875rem;
                 font-weight: 600;
-            ">v{version}</span>
+            ">v{html.escape(str(version))}</span>
             <span style="color: #6C757D; font-size: 0.875rem;">
-                📅 Cập nhật: <strong>{formatted_date}</strong>
+                📅 Cập nhật: <strong>{html.escape(formatted_date)}</strong>
             </span>
             <span style="color: #6C757D; font-size: 0.875rem;">
-                📚 {guideline} {guideline_year}
+                📚 {html.escape(guideline)} {html.escape(str(guideline_year))}
             </span>
         </div>
     </div>
