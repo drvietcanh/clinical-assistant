@@ -4,9 +4,17 @@ Trang riêng biệt hiển thị thông tin chi tiết từng thuốc
 """
 
 import streamlit as st
+import html
 from utils.page_helper import setup_page, render_standard_footer
 from drugs.drug_database import DRUG_DATABASE
 from drugs.drug_info_components.detail_view import display_drug_info
+
+# Helper function to safely escape HTML
+def escape_html(text):
+    """Escape HTML special characters"""
+    if text is None:
+        return ""
+    return html.escape(str(text))
 
 # Standard page setup
 setup_page(
@@ -189,7 +197,7 @@ with col2:
         f"""
         <div style='margin-bottom: 15px; padding-top: 8px;'>
             <span style='color: #64748b; font-size: 0.95em;'>
-                💊 Cơ sở dữ liệu thuốc → {drug_name}
+                💊 Cơ sở dữ liệu thuốc → {escape_html(drug_name)}
             </span>
         </div>
         """,
@@ -331,12 +339,12 @@ st.markdown(
             <div style='flex: 1; min-width: 300px;'>
                 <div style='display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;'>
                     <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: bold;'>
-                        💊 {drug_name}
+                        💊 {escape_html(drug_name)}
                     </h1>
                     {preg_badge}
                 </div>
-                {f"<p style='margin: 8px 0 12px 0; color: rgba(255,255,255,0.95); font-size: 1.3em; font-weight: 500;'>{drug_data.get('vietnamese_name', '')}</p>" if drug_data.get('vietnamese_name') else ''}
-                {f"<p style='margin: 0 0 15px 0; color: rgba(255,255,255,0.9); font-size: 1.05em;'>{drug_data.get('group', '')}</p>" if drug_data.get('group') else ''}
+                {f"<p style='margin: 8px 0 12px 0; color: rgba(255,255,255,0.95); font-size: 1.3em; font-weight: 500;'>{escape_html(drug_data.get('vietnamese_name', ''))}</p>" if drug_data.get('vietnamese_name') else ''}
+                {f"<p style='margin: 0 0 15px 0; color: rgba(255,255,255,0.9); font-size: 1.05em;'>{escape_html(drug_data.get('group', ''))}</p>" if drug_data.get('group') else ''}
                 <div style='margin: 15px 0;'>
                     {admin_badges}
                 </div>
@@ -458,14 +466,14 @@ if top_indications or standard_dose:
                 <div style='background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10B981;'>
                     <div style='color: #065f46; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>📋 Chỉ định chính</div>
                     <ul style='margin: 0; padding-left: 20px; color: #047857;'>
-                        {''.join([f'<li style="margin: 5px 0;">{ind}</li>' for ind in top_indications])}
+                        {''.join([f'<li style="margin: 5px 0;">{escape_html(ind)}</li>' for ind in top_indications])}
                     </ul>
                 </div>
                 """ if top_indications else ""}
                 {f"""
                 <div style='background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #3B82F6;'>
                     <div style='color: #1e40af; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>💊 Liều chuẩn người lớn</div>
-                    <div style='color: #1e3a8a; font-size: 1em; font-weight: 500;'>{standard_dose}</div>
+                    <div style='color: #1e3a8a; font-size: 1em; font-weight: 500;'>{escape_html(standard_dose)}</div>
                 </div>
                 """ if standard_dose else ""}
             </div>
@@ -543,11 +551,11 @@ if same_group_drugs:
                 ' onmouseover="this.style.borderColor='#3B82F6'; this.style.boxShadow='0 4px 12px rgba(59,130,246,0.25)'; this.style.transform='translateY(-2px)';"
                    onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)';">
                     <div style='display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;'>
-                        <div style='color: #1e40af; font-weight: bold; font-size: 1em; flex: 1;'>💊 {rel_name}</div>
+                        <div style='color: #1e40af; font-weight: bold; font-size: 1em; flex: 1;'>💊 {escape_html(rel_name)}</div>
                         <div style='display: flex; gap: 4px; align-items: center;'>{indicators_html}</div>
                     </div>
-                    {f"<div style='color: #64748b; font-size: 0.85em; margin-bottom: 6px;'>{rel_vn_name}</div>" if rel_vn_name else ""}
-                    <div style='color: #94a3b8; font-size: 0.75em; background: #f1f5f9; padding: 4px 8px; border-radius: 4px; display: inline-block;'>{rel_group.split(' - ')[0] if ' - ' in rel_group else rel_group}</div>
+                    {f"<div style='color: #64748b; font-size: 0.85em; margin-bottom: 6px;'>{escape_html(rel_vn_name)}</div>" if rel_vn_name else ""}
+                    <div style='color: #94a3b8; font-size: 0.75em; background: #f1f5f9; padding: 4px 8px; border-radius: 4px; display: inline-block;'>{escape_html(rel_group.split(' - ')[0] if ' - ' in rel_group else rel_group)}</div>
                 </div>
                 """,
                 unsafe_allow_html=True
@@ -598,11 +606,11 @@ if alternative_drugs:
                 ' onmouseover="this.style.borderColor='#F59E0B'; this.style.boxShadow='0 4px 12px rgba(245,158,11,0.25)'; this.style.transform='translateY(-2px)';"
                    onmouseout="this.style.borderColor='#fcd34d'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)';">
                     <div style='display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;'>
-                        <div style='color: #92400e; font-weight: bold; font-size: 1em; flex: 1;'>💊 {alt_name}</div>
+                        <div style='color: #92400e; font-weight: bold; font-size: 1em; flex: 1;'>💊 {escape_html(alt_name)}</div>
                         <div style='display: flex; gap: 4px; align-items: center;'>{indicators_html}</div>
                     </div>
-                    {f"<div style='color: #78350f; font-size: 0.85em; margin-bottom: 6px;'>{alt_vn_name}</div>" if alt_vn_name else ""}
-                    <div style='color: #92400e; font-size: 0.75em; background: #fef3c7; padding: 4px 8px; border-radius: 4px; display: inline-block; font-weight: 500;'>{alt_group.split(' - ')[0] if ' - ' in alt_group else alt_group}</div>
+                    {f"<div style='color: #78350f; font-size: 0.85em; margin-bottom: 6px;'>{escape_html(alt_vn_name)}</div>" if alt_vn_name else ""}
+                    <div style='color: #92400e; font-size: 0.75em; background: #fef3c7; padding: 4px 8px; border-radius: 4px; display: inline-block; font-weight: 500;'>{escape_html(alt_group.split(' - ')[0] if ' - ' in alt_group else alt_group)}</div>
                 </div>
                 """,
                 unsafe_allow_html=True

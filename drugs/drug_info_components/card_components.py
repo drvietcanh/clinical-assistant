@@ -2,7 +2,15 @@
 
 import streamlit as st
 import pandas as pd
+import html
 from ..drug_database import DRUG_DATABASE
+
+# Helper function to safely escape HTML
+def escape_html(text):
+    """Escape HTML special characters"""
+    if text is None:
+        return ""
+    return html.escape(str(text))
 
 # Check if drug is antibiotic
 try:
