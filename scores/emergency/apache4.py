@@ -46,6 +46,12 @@ from components.share_results import render_share_section, load_shared_result_fr
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
 # ======================================
+
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
 from scores.utils.validation import (
     validate_age,
     validate_gcs,
@@ -698,51 +704,90 @@ def render():
         
         # Display results
         st.subheader("📊 Kết quả")
-        
+
+        # Risk category
+        if estimated_mortality < 5:
+            risk_category = "Thấp"
+            risk_level_code = "low"
+        elif estimated_mortality < 15:
+            risk_category = "Trung bình"
+            risk_level_code = "moderate"
+        elif estimated_mortality < 30:
+            risk_category = "Cao"
+            risk_level_code = "high"
+        else:
+            risk_category = "Rất cao"
+            risk_level_code = "very_high"
+
+        # Display score with color coding badge
+        st.markdown(f"## APACHE IV Score = {total_score:.0f}")
+        render_risk_badge(
+            risk_level=risk_level_code,
+            label=f"Nguy cơ {risk_category}",
+            value=total_score,
+        )
+
         col_r1, col_r2, col_r3 = st.columns(3)
-        
+
         with col_r1:
             st.metric(
                 "**APACHE IV Score**",
-                f"{total_score:.0f}"
+                f"{total_score:.0f}",
             )
-        
+
         with col_r2:
             st.metric(
                 "**APS**",
                 f"{aps:.0f}",
-                help="Acute Physiology Score"
+                help="Acute Physiology Score",
             )
-        
+
         with col_r3:
             st.metric(
                 "**Dự đoán tử vong**",
                 f"{estimated_mortality:.1f}%",
-                delta=f"{diagnosis_category}"
+                delta=f"{diagnosis_category}",
             )
-        
-        # Risk category
-        if estimated_mortality < 5:
-            risk_category = "Thấp"
-            color = "success"
-        elif estimated_mortality < 15:
-            risk_category = "Trung bình"
-            color = "warning"
-        elif estimated_mortality < 30:
-            risk_category = "Cao"
-            color = "error"
-        else:
-            risk_category = "Rất cao"
-            color = "error"
-        
+
         st.markdown(f"### {risk_category.upper()}")
         
+        # Visual Charts
+        st.markdown("---")
+        st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+        col_chart1, col_chart2 = st.columns(2)
+
+        with col_chart1:
+            render_risk_gauge_chart(
+                value=total_score,
+                min_value=0,
+                max_value=150,
+                thresholds={
+                    "Low": 40,
+                    "Moderate": 60,
+                    "High": 100,
+                },
+                title="APACHE IV Score",
+            )
+
+        with col_chart2:
+            render_risk_bar_chart(
+                value=total_score,
+                thresholds={
+                    "Low": 40,
+                    "Moderate": 60,
+                    "High": 100,
+                },
+                max_value=150,
+                title="Risk Level",
+                show_value=True,
+            )
+
         # Score breakdown
         with st.expander("📋 Chi tiết điểm số", expanded=True):
             st.markdown("#### Acute Physiology Score (APS)")
             for detail in details[:12]:  # First 12 are APS components
                 st.markdown(f"- {detail}")
-            
+
             st.markdown("#### Điểm bổ sung")
             for detail in details[12:]:  # Age and chronic health
                 st.markdown(f"- {detail}")
@@ -789,15 +834,26 @@ def render():
             "APACHE IV Score": f"{total_score:.0f}",
             "APS": f"{aps:.0f}",
             "Estimated Mortality": f"{estimated_mortality:.1f}%",
-            "Risk Category": risk_category
+            "Risk Category": risk_category,
+            "Risk Level Code": risk_level_code,
         }
-        
-        # Export section
+
+        # Export section (new component)
+        st.markdown("---")
+        render_scores_export(
+            calculator_name="APACHE IV",
+            inputs=inputs_dict,
+            results=results_dict,
+            specialty="Cấp cứu & Hồi sức",
+        )
+
+        # Keep old export for compatibility
+        st.markdown("---")
         render_export_section(
             title="APACHE IV",
             inputs=inputs_dict,
             results=results_dict,
-            calculator_name="APACHE IV"
+            calculator_name="APACHE IV",
         )
         
         # Save to history

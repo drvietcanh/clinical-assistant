@@ -2,7 +2,7 @@
 
 **Report Date:** 2025-02-18  
 **Status:** 🟡 In Progress  
-**Overall Progress:** 3.3% (10/300+ calculators integrated)
+**Overall Progress:** 2.3% (7/300+ calculators integrated)
 
 ---
 
@@ -11,13 +11,13 @@
 ### Current Status
 - ✅ **Phase 1 & 2 Complete:** All 10 features implemented (100%)
 - ✅ **Components Ready:** 8 reusable components created
-- 🟡 **Integration In Progress:** 10 calculators integrated (3.3%)
-- ⏳ **Remaining:** 290+ calculators pending integration
+- 🟡 **Integration In Progress:** 7 calculators integrated (2.3%)
+- ⏳ **Remaining:** 293+ calculators pending integration
 
 ### Key Metrics
 - **Feature Completion:** 10/10 (100%)
 - **Component Creation:** 8/8 (100%)
-- **Calculator Integration:** 10/300+ (3.3%)
+- **Calculator Integration:** 7/300+ (2.3%)
 - **Documentation:** 100% complete
 - **Code Quality:** ✅ No linting errors
 
@@ -51,7 +51,7 @@
 
 ## 🎯 INTEGRATION STATUS
 
-### ✅ Integrated Calculators (10/300+)
+### ✅ Integrated Calculators (7/300+)
 
 #### 1. CHA2DS2-VASc Score ✅
 - **File:** `scores/cardiology/cha2ds2vasc.py`
@@ -116,38 +116,14 @@
   - ✅ Export (TXT, CSV, Print)
 - **Status:** ✅ Complete (2025-02-18)
 
-#### 8. TIMI Risk Score ✅
-- **File:** `scores/cardiology/timi.py`
-- **Specialty:** Tim mạch
-- **Components:**
-  - ✅ Color Coding (risk badges)
-  - ✅ Visual Charts (gauge, bar)
-  - ✅ Export (TXT, CSV, Print)
-- **Status:** ✅ Complete (2025-02-18)
+### ⏳ Pending Integration (293+ calculators)
 
-#### 9. GRACE Score ✅
-- **File:** `scores/cardiology/grace.py`
-- **Specialty:** Tim mạch
-- **Components:**
-  - ✅ Color Coding (risk badges)
-  - ✅ Visual Charts (gauge, bar)
-  - ✅ Export (TXT, CSV, Print)
-- **Status:** ✅ Complete (2025-02-18)
-
-#### 10. CURB-65 Score ✅
-- **File:** `scores/emergency/crb65.py`
-- **Specialty:** Cấp cứu & Hô hấp
-- **Components:**
-  - ✅ Color Coding (risk badges)
-  - ✅ Visual Charts (gauge, bar)
-  - ✅ Export (TXT, CSV, Print)
-- **Status:** ✅ Complete (2025-02-18)
-
-### ⏳ Pending Integration (290+ calculators)
-
-#### Priority High (2 calculators remaining)
+#### Priority High (5 calculators remaining)
 1. ⏳ APACHE III (`scores/emergency/apache3.py`)
 2. ⏳ APACHE IV (`scores/emergency/apache4.py`)
+3. ⏳ TIMI Risk Score (`scores/cardiology/timi.py`)
+4. ⏳ GRACE Score (`scores/cardiology/grace.py`)
+5. ⏳ CURB-65 Score (`scores/emergency/crb65.py`)
 
 #### Priority Medium (20 calculators)
 9. ⏳ NEWS2 Score (`scores/emergency/news2.py`)
@@ -178,17 +154,17 @@
 ### By Component Type
 | Component | Integrated | Total | Progress |
 |-----------|------------|-------|----------|
-| Color Coding | 10 | 300+ | 3.3% |
-| Visual Charts | 10 | 300+ | 3.3% |
-| Export | 10 | 300+ | 3.3% |
+| Color Coding | 4 | 300+ | 1.3% |
+| Visual Charts | 4 | 300+ | 1.3% |
+| Export | 4 | 300+ | 1.3% |
 
 ### By Specialty
 | Specialty | Integrated | Total | Progress |
 |-----------|------------|-------|----------|
-| Tim mạch | 4 | 20+ | 20% |
-| Cấp cứu | 4 | 30+ | 13.3% |
+| Tim mạch | 2 | 20+ | 10% |
+| Cấp cứu | 1 | 30+ | 3.3% |
 | Huyết học | 1 | 10+ | 10% |
-| Thần kinh | 1 | 20+ | 5% |
+| Thần kinh | 0 | 20+ | 0% |
 | Tiêu hóa | 0 | 15+ | 0% |
 | Hô hấp | 0 | 11+ | 0% |
 | Nội tiết | 0 | 20+ | 0% |
@@ -196,9 +172,9 @@
 | Khác | 0 | 240+ | 0% |
 
 ### Overall Progress
-- **Completed:** 10 calculators (3.3%)
+- **Completed:** 4 calculators (1.3%)
 - **In Progress:** 0 calculators
-- **Pending:** 290+ calculators (96.7%)
+- **Pending:** 296+ calculators (98.7%)
 
 ---
 
@@ -208,19 +184,15 @@
 **Timeline:** 1-2 weeks  
 **Target:** Complete integration of 10 most-used calculators
 
-**Completed (10 calculators):**
-1. ✅ CHA2DS2-VASc Score
-2. ✅ qSOFA Score
-3. ✅ Wells DVT Score
-4. ✅ HAS-BLED Score
-5. ✅ SOFA Score
-6. ✅ APACHE II
-7. ✅ GCS Score
-8. ✅ TIMI Risk Score
-9. ✅ GRACE Score
-10. ✅ CURB-65 Score
+**Remaining (6 calculators):**
+1. ⏳ SOFA Score
+2. ⏳ APACHE II
+3. ⏳ APACHE III
+4. ⏳ APACHE IV
+5. ⏳ GCS Score
+6. ⏳ TIMI Risk Score
 
-**Status:** 10/10 complete (100%) ✅
+**Status:** 4/10 complete (40%)
 
 ### Phase 2: Medium Priority (20 calculators)
 **Timeline:** 2-3 weeks  

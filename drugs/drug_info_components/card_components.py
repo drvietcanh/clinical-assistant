@@ -3,6 +3,7 @@
 import streamlit as st
 import pandas as pd
 import html
+import textwrap
 from ..drug_database import DRUG_DATABASE
 
 # Helper function to safely escape HTML
@@ -229,25 +230,27 @@ def _render_quick_facts_box(drug_data):
         return
     
     st.markdown(
-        f"""
-        <div class="quick-facts-box" style='
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            border: 2px solid #e2e8f0;
-            border-left: 5px solid #3B82F6;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        '>
-            <h4 style='margin: 0 0 15px 0; color: #1e293b; font-size: 1.2em; display: flex; align-items: center;'>
-                <span style='font-size: 1.3em; margin-right: 8px;'>⚡</span>
-                Quick Facts
-            </h4>
-            <div style='display: flex; flex-wrap: wrap; gap: 12px;'>
-                {''.join(facts_cards)}
+        textwrap.dedent(
+            f"""
+            <div class="quick-facts-box" style='
+                background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+                border: 2px solid #e2e8f0;
+                border-left: 5px solid #3B82F6;
+                padding: 20px;
+                border-radius: 12px;
+                margin: 20px 0;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            '>
+                <h4 style='margin: 0 0 15px 0; color: #1e293b; font-size: 1.2em; display: flex; align-items: center;'>
+                    <span style='font-size: 1.3em; margin-right: 8px;'>⚡</span>
+                    Quick Facts
+                </h4>
+                <div style='display: flex; flex-wrap: wrap; gap: 12px;'>
+                    {''.join(facts_cards)}
+                </div>
             </div>
-        </div>
-        """,
+            """
+        ),
         unsafe_allow_html=True
     )
 

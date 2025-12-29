@@ -5,6 +5,8 @@ Trang riêng biệt hiển thị thông tin chi tiết từng thuốc
 
 import streamlit as st
 import html
+import re
+import textwrap
 from utils.page_helper import setup_page, render_standard_footer
 from drugs.drug_database import DRUG_DATABASE
 from drugs.drug_info_components.detail_view import display_drug_info
@@ -15,6 +17,23 @@ def escape_html(text):
     if text is None:
         return ""
     return html.escape(str(text))
+
+# Helper function to detect and safely render HTML content
+def safe_render_html(text):
+    """Detect if text contains HTML tags and render safely, otherwise escape"""
+    if text is None:
+        return ""
+    text_str = str(text)
+    # Check if text contains HTML tags (simple detection)
+    html_pattern = r'<[a-z][\s\S]*?>'
+    has_html = bool(re.search(html_pattern, text_str, re.IGNORECASE))
+    
+    if has_html:
+        # If it contains HTML, return as-is (will be rendered with unsafe_allow_html=True)
+        return text_str
+    else:
+        # Otherwise, escape it
+        return html.escape(text_str)
 
 # Standard page setup
 setup_page(
@@ -447,38 +466,40 @@ if 'dosage' in drug_data:
 
 if top_indications or standard_dose:
     st.markdown(
-        f"""
-        <div style='
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            border: 2px solid #e2e8f0;
-            border-left: 5px solid #3B82F6;
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        '>
-            <h3 style='margin: 0 0 15px 0; color: #1e293b; font-size: 1.3em; display: flex; align-items: center;'>
-                <span style='font-size: 1.5em; margin-right: 10px;'>⚡</span>
-                Thông Tin Nhanh
-            </h3>
-            <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;'>
-                {f"""
-                <div style='background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10B981;'>
-                    <div style='color: #065f46; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>📋 Chỉ định chính</div>
-                    <ul style='margin: 0; padding-left: 20px; color: #047857;'>
-                        {''.join([f'<li style="margin: 5px 0;">{escape_html(ind)}</li>' for ind in top_indications])}
-                    </ul>
+        textwrap.dedent(
+            f"""
+            <div style='
+                background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+                border: 2px solid #e2e8f0;
+                border-left: 5px solid #3B82F6;
+                padding: 25px;
+                border-radius: 12px;
+                margin-bottom: 25px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            '>
+                <h3 style='margin: 0 0 15px 0; color: #1e293b; font-size: 1.3em; display: flex; align-items: center;'>
+                    <span style='font-size: 1.5em; margin-right: 10px;'>⚡</span>
+                    Thông Tin Nhanh
+                </h3>
+                <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;'>
+                    {(
+                        "<div style='background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10B981;'>"
+                        "<div style='color: #065f46; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>📋 Chỉ định chính</div>"
+                        "<ul style='margin: 0; padding-left: 20px; color: #047857;'>"
+                        f"{''.join([f'<li style=\"margin: 5px 0;\">{safe_render_html(ind)}</li>' for ind in top_indications])}"
+                        "</ul>"
+                        "</div>"
+                    ) if top_indications else ""}
+                    {(
+                        "<div style='background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #3B82F6;'>"
+                        "<div style='color: #1e40af; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>💊 Liều chuẩn người lớn</div>"
+                        f"<div style='color: #1e3a8a; font-size: 1em; font-weight: 500;'>{safe_render_html(standard_dose)}</div>"
+                        "</div>"
+                    ) if standard_dose else ""}
                 </div>
-                """ if top_indications else ""}
-                {f"""
-                <div style='background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #3B82F6;'>
-                    <div style='color: #1e40af; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>💊 Liều chuẩn người lớn</div>
-                    <div style='color: #1e3a8a; font-size: 1em; font-weight: 500;'>{escape_html(standard_dose)}</div>
-                </div>
-                """ if standard_dose else ""}
             </div>
-        </div>
-        """,
+            """
+        ),
         unsafe_allow_html=True
     )
 

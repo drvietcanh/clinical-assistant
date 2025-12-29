@@ -46,6 +46,12 @@ from components.share_results import render_share_section, load_shared_result_fr
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
 # ======================================
+
+# ========== NEW COMPONENTS (Phase 1 & 2) ==========
+from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
+from components.scores_export import render_export_section as render_scores_export
+# ===================================================
 from scores.utils.validation import (
     validate_age,
     validate_gcs,
@@ -722,7 +728,27 @@ def render():
         
         # Display results
         st.subheader("📊 Kết quả")
-        
+
+        # Determine risk level for color coding
+        if result['total_score'] < 30:
+            risk_level_code = "low"
+        elif result['total_score'] < 50:
+            risk_level_code = "moderate"
+        elif result['total_score'] < 70:
+            risk_level_code = "high"
+        elif result['total_score'] < 100:
+            risk_level_code = "very_high"
+        else:
+            risk_level_code = "critical"
+
+        # Display score with color coding badge
+        st.markdown(f"## APACHE III Score = {result['total_score']:.1f}")
+        render_risk_badge(
+            risk_level=risk_level_code,
+            label=result['interpretation'],
+            value=result['total_score']
+        )
+
         # Color-coded score result
         mortality_text = f"{result['predicted_mortality']:.1f}% (Khoảng: {result['mortality_range']})"
         render_score_result(
@@ -752,7 +778,40 @@ def render():
         with st.expander("📝 Chi tiết từng biến số", expanded=False):
             for detail in result['details']:
                 st.markdown(f"- {detail}")
-        
+
+        # Visual Charts
+        st.markdown("---")
+        st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+        col_chart1, col_chart2 = st.columns(2)
+
+        with col_chart1:
+            render_risk_gauge_chart(
+                value=result['total_score'],
+                min_value=0,
+                max_value=150,
+                thresholds={
+                    "Low": 30,
+                    "Moderate": 50,
+                    "High": 70,
+                    "Very High": 100,
+                },
+                title="APACHE III Score",
+            )
+
+        with col_chart2:
+            render_risk_bar_chart(
+                value=result['total_score'],
+                thresholds={
+                    "Low": 30,
+                    "Moderate": 50,
+                    "High": 70,
+                    "Very High": 100,
+                },
+                max_value=150,
+                title="Risk Level",
+                show_value=True,
+            )
+
         # Warning about simplified calculation
         st.warning("""
         **⚠️ Lưu ý quan trọng:**
@@ -807,24 +866,33 @@ def render():
         }
         
         results_dict = {
-            "APACHE III Score": f"{result['total_score']:.1f} điểm",
+            "APACHE III Score": f"{result['total_score']:.1f}",
             "Predicted Mortality": f"{result['predicted_mortality']:.1f}%",
             "Mortality Range": result['mortality_range'],
             "Interpretation": result['interpretation'],
+            "Risk Level Code": risk_level_code,
             "APS": f"{result['aps']:.0f} điểm",
             "Age Points": f"{result['age_points']:.0f} điểm",
-            "Chronic Health Points": f"{result['chronic_points']:.0f} điểm"
+            "Chronic Health Points": f"{result['chronic_points']:.0f} điểm",
         }
-        
-        # Save to history
-        # Export section
+
+        # Export section (new component)
+        st.markdown("---")
+        render_scores_export(
+            calculator_name="APACHE III Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            specialty="Cấp cứu & Hồi sức",
+        )
+
+        # Keep old export for compatibility
+        st.markdown("---")
         render_export_section(
-                title="APACHE III Score",
-                inputs=inputs_dict,
-                results=results_dict
-        ,
-                calculator_name="APACHE III Score"
-            )
+            title="APACHE III Score",
+            inputs=inputs_dict,
+            results=results_dict,
+            calculator_name="APACHE III Score",
+        )
         
         # Save to history
         save_calculation_to_history(
