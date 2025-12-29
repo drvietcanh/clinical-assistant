@@ -215,35 +215,35 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             dosage = drug_data['dosage']
             adult_doses = []
             if 'adult_htn' in dosage:
-                adult_doses.append(f"**Tăng huyết áp:** {dosage['adult_htn']}")
+                adult_doses.append(("Tăng huyết áp", dosage['adult_htn']))
             if 'adult_po' in dosage:
-                adult_doses.append(f"**Uống (PO):** {dosage['adult_po']}")
+                adult_doses.append(("Uống (PO)", dosage['adult_po']))
             if 'adult_iv' in dosage:
-                adult_doses.append(
-                    f"**Tiêm tĩnh mạch (IV):** {dosage['adult_iv']}")
+                adult_doses.append(("Tiêm tĩnh mạch (IV)", dosage['adult_iv']))
             if 'adult_standard' in dosage:
-                adult_doses.append(
-                    f"**Liều chuẩn:** {dosage['adult_standard']}")
+                adult_doses.append(("Liều chuẩn", dosage['adult_standard']))
             if 'adult_loading' in dosage:
-                adult_doses.append(f"**Liều nạp:** {dosage['adult_loading']}")
+                adult_doses.append(("Liều nạp", dosage['adult_loading']))
             if 'adult_maintenance' in dosage:
-                adult_doses.append(
-                    f"**Liều duy trì:** {dosage['adult_maintenance']}")
+                adult_doses.append(("Liều duy trì", dosage['adult_maintenance']))
             if adult_doses:
                 # Enhanced dosing display with better visual design
                 st.markdown(
-                    f"""
-                    <div style='background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 20px; margin: 15px 0;'>
-                        <h4 style='color: #166534; margin: 0 0 15px 0; font-size: 1.1em;'>💊 Liều dùng người lớn</h4>
-                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
-                            {''.join([f"""
-                            <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #10B981;'>
-                                <div style='color: #047857; font-size: 0.95em; line-height: 1.6;'>{escape_html(dose.replace('**', '').replace(':', ':</strong>').replace('**', '<strong>'))}</div>
+                    textwrap.dedent(
+                        f"""
+                        <div style='background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                            <h4 style='color: #166534; margin: 0 0 15px 0; font-size: 1.1em;'>💊 Liều dùng người lớn</h4>
+                            <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
+                                {''.join([
+                                    "<div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #10B981;'>"
+                                    f"<div style='color: #047857; font-size: 0.95em; line-height: 1.6;'><strong>{escape_html(str(label))}:</strong> {safe_render_html(value)}</div>"
+                                    "</div>"
+                                    for label, value in adult_doses
+                                ])}
                             </div>
-                            """ for dose in adult_doses])}
                         </div>
-                    </div>
-                    """,
+                        """
+                    ),
                     unsafe_allow_html=True
                 )
             if 'notes' in dosage:
@@ -304,20 +304,47 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     renal['hemodialysis']})
             if renal_data:
                 # Enhanced renal adjustment display with visual cards
+                cards_html = []
+                for row in renal_data:
+                    adjust_text = str(row['Điều chỉnh'])
+                    bg_color = (
+                        '#d1fae5' if 'không' in adjust_text.lower()
+                        or 'normal' in adjust_text.lower()
+                        or 'không đổi' in adjust_text
+                        else '#fef3c7' if 'giảm' in adjust_text.lower()
+                        or 'thận trọng' in adjust_text.lower()
+                        else '#fee2e2' if 'chống chỉ định' in adjust_text
+                        or 'tránh' in adjust_text
+                        else 'white'
+                    )
+                    border_color = (
+                        '#10B981' if 'không' in adjust_text.lower()
+                        or 'normal' in adjust_text.lower()
+                        or 'không đổi' in adjust_text
+                        else '#F59E0B' if 'giảm' in adjust_text.lower()
+                        or 'thận trọng' in adjust_text.lower()
+                        else '#DC2626' if 'chống chỉ định' in adjust_text
+                        or 'tránh' in adjust_text
+                        else '#64748b'
+                    )
+                    cards_html.append(
+                        "<div style='background: "
+                        f"{bg_color}; padding: 15px; border-radius: 8px; border-left: 4px solid {border_color};'>"
+                        f"<div style='font-weight: bold; color: #1e293b; margin-bottom: 5px; font-size: 0.95em;'>{safe_render_html(row['CrCl (mL/min)'])}</div>"
+                        f"<div style='color: #475569; font-size: 0.9em; line-height: 1.5;'>{safe_render_html(row['Điều chỉnh'])}</div>"
+                        "</div>"
+                    )
                 st.markdown(
-                    f"""
-                    <div style='background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; margin: 15px 0;'>
-                        <h4 style='color: #1e293b; margin: 0 0 15px 0; font-size: 1.1em;'>🫘 Điều chỉnh theo chức năng thận</h4>
-                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;'>
-                            {''.join([f"""
-                            <div style='background: {'#d1fae5' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#fef3c7' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#fee2e2' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) else 'white'}; padding: 15px; border-radius: 8px; border-left: 4px solid {'#10B981' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#F59E0B' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#DC2626' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) else '#64748b'};'>
-                                <div style='font-weight: bold; color: #1e293b; margin-bottom: 5px; font-size: 0.95em;'>{safe_render_html(row['CrCl (mL/min)'])}</div>
-                                <div style='color: #475569; font-size: 0.9em; line-height: 1.5;'>{safe_render_html(row['Điều chỉnh'])}</div>
+                    textwrap.dedent(
+                        f"""
+                        <div style='background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                            <h4 style='color: #1e293b; margin: 0 0 15px 0; font-size: 1.1em;'>🫘 Điều chỉnh theo chức năng thận</h4>
+                            <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;'>
+                                {''.join(cards_html)}
                             </div>
-                            """ for row in renal_data])}
                         </div>
-                    </div>
-                    """,
+                        """
+                    ),
                     unsafe_allow_html=True
                 )
         
@@ -341,20 +368,49 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             
             if hepatic_data:
                 # Enhanced hepatic adjustment display with visual cards
+                cards_html = []
+                for row in hepatic_data:
+                    adjust_text = str(row['Điều chỉnh'])
+                    bg_color = (
+                        '#d1fae5' if 'không' in adjust_text.lower()
+                        or 'normal' in adjust_text.lower()
+                        or 'không đổi' in adjust_text
+                        else '#fef3c7' if 'giảm' in adjust_text.lower()
+                        or 'thận trọng' in adjust_text.lower()
+                        else '#fee2e2' if 'chống chỉ định' in adjust_text
+                        or 'tránh' in adjust_text
+                        or 'không dùng' in adjust_text.lower()
+                        else 'white'
+                    )
+                    border_color = (
+                        '#10B981' if 'không' in adjust_text.lower()
+                        or 'normal' in adjust_text.lower()
+                        or 'không đổi' in adjust_text
+                        else '#F59E0B' if 'giảm' in adjust_text.lower()
+                        or 'thận trọng' in adjust_text.lower()
+                        else '#DC2626' if 'chống chỉ định' in adjust_text
+                        or 'tránh' in adjust_text
+                        or 'không dùng' in adjust_text.lower()
+                        else '#F59E0B'
+                    )
+                    cards_html.append(
+                        "<div style='background: "
+                        f"{bg_color}; padding: 15px; border-radius: 8px; border-left: 4px solid {border_color};'>"
+                        f"<div style='font-weight: bold; color: #1e293b; margin-bottom: 5px; font-size: 0.95em;'>{safe_render_html(row['Mức độ'])}</div>"
+                        f"<div style='color: #475569; font-size: 0.9em; line-height: 1.5;'>{safe_render_html(row['Điều chỉnh'])}</div>"
+                        "</div>"
+                    )
                 st.markdown(
-                    f"""
-                    <div style='background: #fefce8; border: 1px solid #fde047; border-radius: 10px; padding: 20px; margin: 15px 0;'>
-                        <h4 style='color: #713f12; margin: 0 0 15px 0; font-size: 1.1em;'>🔶 Điều chỉnh theo chức năng gan</h4>
-                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;'>
-                            {''.join([f"""
-                            <div style='background: {'#d1fae5' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#fef3c7' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#fee2e2' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) or 'không dùng' in str(row['Điều chỉnh']).lower() else 'white'}; padding: 15px; border-radius: 8px; border-left: 4px solid {'#10B981' if 'không' in str(row['Điều chỉnh']).lower() or 'normal' in str(row['Điều chỉnh']).lower() or 'không đổi' in str(row['Điều chỉnh']) else '#F59E0B' if 'giảm' in str(row['Điều chỉnh']).lower() or 'thận trọng' in str(row['Điều chỉnh']).lower() else '#DC2626' if 'chống chỉ định' in str(row['Điều chỉnh']) or 'tránh' in str(row['Điều chỉnh']) or 'không dùng' in str(row['Điều chỉnh']).lower() else '#F59E0B'};'>
-                                <div style='font-weight: bold; color: #1e293b; margin-bottom: 5px; font-size: 0.95em;'>{safe_render_html(row['Mức độ'])}</div>
-                                <div style='color: #475569; font-size: 0.9em; line-height: 1.5;'>{safe_render_html(row['Điều chỉnh'])}</div>
+                    textwrap.dedent(
+                        f"""
+                        <div style='background: #fefce8; border: 1px solid #fde047; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                            <h4 style='color: #713f12; margin: 0 0 15px 0; font-size: 1.1em;'>🔶 Điều chỉnh theo chức năng gan</h4>
+                            <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;'>
+                                {''.join(cards_html)}
                             </div>
-                            """ for row in hepatic_data])}
                         </div>
-                    </div>
-                    """,
+                        """
+                    ),
                     unsafe_allow_html=True
                 )
         is_antibiotic = drug_name in ANTIBIOTICS_DATABASE
@@ -689,22 +745,27 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             monitoring_list = drug_data['monitoring']
             if isinstance(monitoring_list, list) and len(monitoring_list) > 0:
                 # Enhanced monitoring display with categorized items
+                cards_html = []
+                for mon in monitoring_list:
+                    cards_html.append(
+                        "<div style='background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #8B5CF6;'>"
+                        "<div style='color: #1e293b; font-size: 0.95em; line-height: 1.6; display: flex; align-items: start;'>"
+                        "<span style='font-size: 1.2em; margin-right: 8px; color: #8B5CF6;'>✅</span>"
+                        f"<span>{safe_render_html(mon)}</span>"
+                        "</div>"
+                        "</div>"
+                    )
                 st.markdown(
-                    f"""
-                    <div style='background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; margin: 15px 0;'>
-                        <h4 style='color: #1e293b; margin: 0 0 15px 0; font-size: 1.1em;'>📊 Các thông số cần theo dõi</h4>
-                        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
-                            {''.join([f"""
-                            <div style='background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #8B5CF6;'>
-                                <div style='color: #1e293b; font-size: 0.95em; line-height: 1.6; display: flex; align-items: start;'>
-                                    <span style='font-size: 1.2em; margin-right: 8px; color: #8B5CF6;'>✅</span>
-                                    <span>{safe_render_html(mon)}</span>
-                                </div>
+                    textwrap.dedent(
+                        f"""
+                        <div style='background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; margin: 15px 0;'>
+                            <h4 style='color: #1e293b; margin: 0 0 15px 0; font-size: 1.1em;'>📊 Các thông số cần theo dõi</h4>
+                            <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;'>
+                                {''.join(cards_html)}
                             </div>
-                            """ for mon in monitoring_list])}
                         </div>
-                    </div>
-                    """,
+                        """
+                    ),
                     unsafe_allow_html=True
                 )
             else:

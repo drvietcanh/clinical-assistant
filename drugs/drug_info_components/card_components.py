@@ -214,18 +214,6 @@ def _render_quick_facts_box(drug_data):
             </div>
         """)
     
-    # Monitoring summary
-    if 'monitoring' in drug_data:
-        monitoring_list = drug_data['monitoring']
-        if isinstance(monitoring_list, list) and len(monitoring_list) > 0:
-            count = len(monitoring_list)
-            facts_cards.append(f"""
-                <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #8B5CF6; flex: 1; min-width: 150px;'>
-                    <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>📊 Theo dõi</div>
-                    <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{count} mục cần theo dõi</div>
-                </div>
-            """)
-    
     if not facts_cards:
         return
     
