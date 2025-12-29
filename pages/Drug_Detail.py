@@ -150,6 +150,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Get drug name from session state (must be before breadcrumbs)
+drug_name = st.session_state.get('view_drug_name')
+
 # Breadcrumbs (if component available)
 try:
     from components.mobile_page_wrapper import render_breadcrumbs
@@ -160,9 +163,6 @@ try:
     ])
 except ImportError:
     pass
-
-# Get drug name from session state
-drug_name = st.session_state.get('view_drug_name')
 
 # If still no drug name, show error
 if not drug_name:
