@@ -10,7 +10,7 @@ from utils.page_helper import setup_page, render_standard_footer
 from components.ui import render_info_box, render_hero
 
 # Phase 2 imports
-from components.flowchart import render_flowchart
+from components.flowchart import render_flowchart, create_chest_pain_algorithm
 from components.flowcharts.clinical_rules import (
     create_wells_pe_flowchart,
     create_perc_flowchart,
@@ -82,7 +82,9 @@ if selected_feature == feature_options[0]:
         "Sepsis-3 Protocol": create_sepsis_flowchart,
         "Acute Stroke": create_stroke_flowchart,
         "AKI Diagnostic": create_aki_flowchart,
-        "CURB-65": create_curb65_flowchart
+        "CURB-65": create_curb65_flowchart,
+        # Bệnh cấp cứu phổ biến
+        "Acute Chest Pain / ACS": create_chest_pain_algorithm,
     }
     
     selected_algorithm = st.selectbox(
@@ -105,7 +107,8 @@ if selected_feature == feature_options[0]:
             "Sepsis-3 Protocol": (900, 700),
             "Acute Stroke": (900, 700),
             "AKI Diagnostic": (800, 600),
-            "CURB-65": (800, 500)
+            "CURB-65": (800, 500),
+            "Acute Chest Pain / ACS": (900, 600),
         }
         
         width, height = size_map.get(selected_algorithm, (800, 600))
