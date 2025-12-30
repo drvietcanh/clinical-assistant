@@ -13,9 +13,10 @@ def inject_google_analytics():
     """
     Inject Google Analytics (GA4) script once per session.
     Works for all Streamlit pages that call setup_page.
+    Enhanced with SPA navigation tracking for Streamlit.
     """
     ga_id = APP_CONFIG.get("google_analytics_id", "")
-    if not ga_id or ga_id == "G-XXXXXXXXXX":
+    if not ga_id or ga_id == "G-XXXXXXXXXX" or ga_id == "":
         return
 
     # Avoid injecting multiple times in the same session
@@ -23,15 +24,85 @@ def inject_google_analytics():
         return
 
     ga_snippet = f"""
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={ga_id}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){{dataLayer.push(arguments);}}
       gtag('js', new Date());
       gtag('config', '{ga_id}', {{
-        'send_page_view': true,
-        'page_path': window.location.pathname + window.location.search
+        'page_path': window.location.pathname,
+        'page_location': window.location.href,
+        'page_title': document.title,
+        'send_page_view': true
       }});
+      
+      // Track initial page view
+      gtag('event', 'page_view', {{
+        'page_title': document.title,
+        'page_location': window.location.href,
+        'page_path': window.location.pathname
+      }});
+      
+      // Track page views khi navigate trong Streamlit SPA
+      (function() {{
+        let lastPath = window.location.pathname;
+        let lastUrl = window.location.href;
+        let lastTitle = document.title;
+        
+        function trackPageView() {{
+          if (typeof gtag !== 'undefined') {{
+            const currentPath = window.location.pathname;
+            const currentUrl = window.location.href;
+            const currentTitle = document.title;
+            
+            // Only track if path, URL, or title changed
+            if (currentPath !== lastPath || currentUrl !== lastUrl || currentTitle !== lastTitle) {{
+              lastPath = currentPath;
+              lastUrl = currentUrl;
+              lastTitle = currentTitle;
+              
+              gtag('config', '{ga_id}', {{
+                'page_path': currentPath,
+                'page_location': currentUrl,
+                'page_title': currentTitle
+              }});
+              
+              gtag('event', 'page_view', {{
+                'page_title': currentTitle,
+                'page_location': currentUrl,
+                'page_path': currentPath
+              }});
+            }}
+          }}
+        }}
+        
+        // Track khi URL thay đổi (Streamlit SPA navigation)
+        const observer = new MutationObserver(function() {{
+          setTimeout(trackPageView, 300);
+        }});
+        
+        if (document.body) {{
+          observer.observe(document.body, {{
+            childList: true,
+            subtree: true
+          }});
+        }} else {{
+          document.addEventListener('DOMContentLoaded', function() {{
+            observer.observe(document.body, {{
+              childList: true,
+              subtree: true
+            }});
+          }});
+        }}
+        
+        // Track on hash change and popstate (back/forward)
+        window.addEventListener('hashchange', trackPageView);
+        window.addEventListener('popstate', trackPageView);
+        
+        // Track periodically to catch Streamlit navigation (fallback)
+        setInterval(trackPageView, 5000);
+      }})();
     </script>
     """
     st.markdown(ga_snippet, unsafe_allow_html=True)

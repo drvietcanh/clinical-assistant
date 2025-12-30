@@ -41,7 +41,7 @@ APP_CONFIG = {
     # Google Analytics Configuration
     # Có thể set qua environment variable: GOOGLE_ANALYTICS_ID
     # Hoặc thay đổi giá trị mặc định bên dưới
-    "google_analytics_id": os.getenv("GOOGLE_ANALYTICS_ID", "G-JRPOGQLG70"),
+    "google_analytics_id": os.getenv("GOOGLE_ANALYTICS_ID", "G-JRP0GQLG70"),
     
     "pages": {
         "scores": ModuleInfo(
