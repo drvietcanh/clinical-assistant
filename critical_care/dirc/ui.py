@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import math
+from typing import Optional
 import streamlit as st
 
 from .calculator import DIRCCalculator
@@ -14,26 +15,43 @@ from .drug_presets import (
     get_vial_info,
 )
 
+# Mapping từ DIRC preset keys sang cardiovascular_drugs.json names
+DIRC_TO_CV_DRUG_MAP = {
+    "Epinephrine": "Adrenaline",
+    "Norepinephrine": "Noradrenaline",
+    "Dopamine": "Dopamine",
+    "Dobutamine": "Dobutamine",
+    "Phenylephrine": "Phenylephrine",
+    "Milrinone": "Milrinone",
+    "Vasopressin": "Vasopressin",
+}
+
+
+def _is_cardiovascular_drug(dirc_drug_key: str) -> bool:
+    """Check if selected drug is a cardiovascular drug."""
+    return dirc_drug_key in DIRC_TO_CV_DRUG_MAP
+
+
+def _get_cv_drug_name(dirc_drug_key: str) -> Optional[str]:
+    """Get cardiovascular drug name from DIRC preset key."""
+    return DIRC_TO_CV_DRUG_MAP.get(dirc_drug_key)
+
 
 def render_dirc_calculator() -> None:
-    """Render the DIRC calculator UI."""
+    """Render the unified DIRC calculator UI with integrated cardiovascular drugs."""
     st.header("💉 Drug Infusion Rate Conversion (DIRC)")
     st.caption(
         "Chuyển đổi liều truyền giữa (mcg/kg/phút) và (mL/giờ) dựa trên cân nặng, nồng độ thuốc. "
-        "Hỗ trợ bơm tiêm 50 mL / chai 500 mL và preset cho các thuốc cấp cứu thường dùng."
+        "Hỗ trợ bơm tiêm 50 mL / chai 500 mL và preset cho các thuốc cấp cứu thường dùng. "
+        "Khi chọn thuốc tim mạch cấp cứu, sẽ hiển thị đầy đủ thông tin chi tiết."
     )
 
-    # Hiển thị lần lượt: DIRC tổng quát + Thuốc tim mạch cấp cứu (trên cùng một tab)
-    st.markdown("### 📝 Chuyển đổi tổng quát (DIRC)")
-    _render_general_dirc()
-
-    st.markdown("---")
-    st.markdown("### 💉 Thuốc tim mạch cấp cứu")
-    _render_cardiovascular_dirc()
+    # Single unified interface
+    _render_unified_dirc()
 
 
-def _render_general_dirc() -> None:
-    """Render general DIRC calculator (original functionality)."""
+def _render_unified_dirc() -> None:
+    """Render unified DIRC calculator with integrated cardiovascular drug support."""
     calculator = DIRCCalculator()
 
     # Select conversion direction
@@ -96,7 +114,7 @@ def _render_general_dirc() -> None:
 
     with col2:
         # Emergency drug presets (optional)
-        st.markdown("#### Thuốc cấp cứu (tùy chọn)")
+        st.markdown("#### 💊 Thuốc cấp cứu (tùy chọn)")
         drug_display_names = ["Không chọn"] + get_drug_names()
         selected_drug_name = st.selectbox(
             "Chọn thuốc",
@@ -167,7 +185,7 @@ def _render_general_dirc() -> None:
             dose_range = EMERGENCY_DRUG_PRESETS[selected_drug_key].get("dose_range")
             if dose_range:
                 st.info(
-                    f"Gợi ý liều: {dose_range.get('min_mcg_kg_min', 0):.2f} – "
+                    f"💡 Gợi ý liều: {dose_range.get('min_mcg_kg_min', 0):.2f} – "
                     f"{dose_range.get('max_mcg_kg_min', 0):.2f} mcg/kg/phút. "
                     f"{dose_range.get('note', '')}"
                 )
@@ -247,6 +265,10 @@ def _render_general_dirc() -> None:
         reset_dirc()
         st.experimental_rerun()
 
+    # Check if cardiovascular drug is selected
+    is_cv_drug = selected_drug_key and _is_cardiovascular_drug(selected_drug_key)
+    cv_drug_name = _get_cv_drug_name(selected_drug_key) if is_cv_drug else None
+
     if col_run.button("Tính toán", type="primary", use_container_width=True):
         ok, msg = calculator.validate_inputs()
         if not ok:
@@ -261,56 +283,251 @@ def _render_general_dirc() -> None:
 
         result_value = result["value"]
         result_str = f"{result_value:.{precision}f} {result['unit']}"
-        st.success(f"Kết quả: {result_str}")
 
         # Tính thêm thời gian truyền hết bơm/chai theo mL/giờ nếu có tốc độ
         infusion_rate_ml_hr = None
         if result["unit"] == "mL/giờ":
             infusion_rate_ml_hr = float(result["value"])
         elif calculator.conversion_type == "mL/hr to mcg/kg/min":
-            # Trong chiều này, tốc độ mL/giờ là input ban đầu
             infusion_rate_ml_hr = float(calculator.inputs.get("Tốc độ", 0.0))
 
-        if infusion_rate_ml_hr and infusion_rate_ml_hr > 0:
-            time_hours = container_volume_ml / infusion_rate_ml_hr
-            time_minutes = time_hours * 60.0
+        # If cardiovascular drug, use enhanced calculation and display
+        if is_cv_drug and cv_drug_name:
+            _render_cardiovascular_enhanced_results(
+                cv_drug_name,
+                calculator,
+                result,
+                result_str,
+                precision,
+                weight,
+                infusion_rate_ml_hr,
+                container_volume_ml,
+                container_label,
+                selected_drug_key,
+            )
+        else:
+            # Standard DIRC results
+            st.success(f"Kết quả: {result_str}")
 
-            st.info(
-                f"⏱ Thời gian truyền hết {int(container_volume_ml)} mL ở tốc độ hiện tại: "
-                f"~ {time_hours:.2f} giờ (~ {time_minutes:.0f} phút)."
+            if infusion_rate_ml_hr and infusion_rate_ml_hr > 0:
+                time_hours = container_volume_ml / infusion_rate_ml_hr
+                time_minutes = time_hours * 60.0
+
+                st.info(
+                    f"⏱ Thời gian truyền hết {int(container_volume_ml)} mL ở tốc độ hiện tại: "
+                    f"~ {time_hours:.2f} giờ (~ {time_minutes:.0f} phút)."
+                )
+
+            # Cảnh báo nếu vượt khoảng liều gợi ý (khi có preset)
+            if selected_drug_key:
+                dose_range = EMERGENCY_DRUG_PRESETS[selected_drug_key].get("dose_range")
+                if dose_range:
+                    min_dose = dose_range.get("min_mcg_kg_min", 0) or 0
+                    max_dose = dose_range.get("max_mcg_kg_min", 0) or 0
+                    if calculator.conversion_type == "mcg/kg/min to mL/hr":
+                        entered_dose = calculator.inputs.get("Liều", 0)
+                        if max_dose and entered_dose > max_dose:
+                            st.warning("Liều nhập vượt khuyến cáo tối đa, hãy rà soát lại.")
+                        elif min_dose and entered_dose < min_dose:
+                            st.warning("Liều nhập thấp hơn khuyến cáo, hãy cân nhắc hiệu chỉnh.")
+                    else:
+                        mcg_per_kg_min = result_value if result["unit"] == "mcg/kg/phút" else 0
+                        if max_dose and mcg_per_kg_min > max_dose:
+                            st.warning("Tốc độ hiện tại tương đương liều vượt khuyến cáo tối đa.")
+                        elif min_dose and mcg_per_kg_min < min_dose:
+                            st.info("Tốc độ hiện tại tương đương liều thấp hơn khuyến cáo (có thể cần titrate).")
+
+            # Cho phép copy kết quả
+            st.text_input("Copy kết quả", value=result_str, key="dirc_copy_result")
+
+
+def _render_cardiovascular_enhanced_results(
+    cv_drug_name: str,
+    calculator: DIRCCalculator,
+    result: dict,
+    result_str: str,
+    precision: int,
+    weight: float,
+                infusion_rate_ml_hr: Optional[float],
+    container_volume_ml: float,
+    container_label: str,
+    selected_drug_key: str,
+) -> None:
+    """Render enhanced results for cardiovascular drugs with full information."""
+    try:
+        from drugs.cardiovascular_calculator import (
+            get_drug_info,
+            calculate_complete_infusion,
+            validate_dose_range,
+        )
+        from components.ui.results import render_result_card, render_result_box
+        from components.ui.alerts import render_info_alert, render_warning_alert
+
+        # Get drug info
+        drug_info = get_drug_info(cv_drug_name)
+        if not drug_info:
+            # Fallback to standard DIRC display
+            st.success(f"Kết quả: {result_str}")
+            return
+
+        # Determine infusion method from container
+        infusion_method = "syringe_pump_50ml" if "50" in container_label else "iv_bag_500ml"
+
+        # Get dose for calculation
+        if calculator.conversion_type == "mcg/kg/min to mL/hr":
+            dose_mcg_kg_min = calculator.inputs.get("Liều", 0)
+        else:
+            # Reverse calculation: mL/hr → mcg/kg/min
+            dose_mcg_kg_min = result["value"] if result["unit"] == "mcg/kg/phút" else 0
+
+        if dose_mcg_kg_min <= 0:
+            st.success(f"Kết quả: {result_str}")
+            return
+
+        # Calculate complete infusion details
+        try:
+            drop_factor = 20 if infusion_method == "iv_bag_500ml" else None
+            results = calculate_complete_infusion(
+                cv_drug_name,
+                dose_mcg_kg_min,
+                weight,
+                infusion_method,
+                drop_factor,
             )
 
-        # Cảnh báo nếu vượt khoảng liều gợi ý (khi có preset)
-        if selected_drug_key:
-            dose_range = EMERGENCY_DRUG_PRESETS[selected_drug_key].get("dose_range")
-            if dose_range:
-                min_dose = dose_range.get("min_mcg_kg_min", 0) or 0
-                max_dose = dose_range.get("max_mcg_kg_min", 0) or 0
-                if calculator.conversion_type == "mcg/kg/min to mL/hr":
-                    entered_dose = calculator.inputs.get("Liều", 0)
-                    if max_dose and entered_dose > max_dose:
-                        st.warning("Liều nhập vượt khuyến cáo tối đa, hãy rà soát lại.")
-                    elif min_dose and entered_dose < min_dose:
-                        st.warning("Liều nhập thấp hơn khuyến cáo, hãy cân nhắc hiệu chỉnh.")
-                else:
-                    mcg_per_kg_min = result_value if result["unit"] == "mcg/kg/phút" else 0
-                    if max_dose and mcg_per_kg_min > max_dose:
-                        st.warning("Tốc độ hiện tại tương đương liều vượt khuyến cáo tối đa.")
-                    elif min_dose and mcg_per_kg_min < min_dose:
-                        st.info("Tốc độ hiện tại tương đương liều thấp hơn khuyến cáo (có thể cần titrate).")
+            st.markdown("---")
+            st.markdown("### 📊 Kết quả tính toán")
 
-        # Cho phép copy kết quả
-        st.text_input("Copy kết quả", value=result_str, key="dirc_copy_result")
+            # Main results
+            metrics = [
+                {
+                    "label": "Tổng liều/phút",
+                    "value": f"{results['total_dose_mcg_min']:.2f} µg/min",
+                    "icon": "⏱️",
+                },
+                {
+                    "label": "Tổng liều/giờ",
+                    "value": f"{results['total_dose_mcg_hour']:.2f} µg/h",
+                    "icon": "💉",
+                },
+                {
+                    "label": "Tốc độ truyền",
+                    "value": f"{results['infusion_rate_ml_hour']:.2f} ml/h",
+                    "icon": "💧",
+                },
+            ]
 
+            # Add drop rate if applicable
+            if results.get("drop_rate_gtt_min"):
+                metrics.append(
+                    {
+                        "label": "Giọt/phút",
+                        "value": f"{results['drop_rate_gtt_min']:.1f} gtt/min",
+                        "icon": "💧",
+                    }
+                )
 
-def _render_cardiovascular_dirc() -> None:
-    """Render cardiovascular drugs calculator integrated into DIRC."""
-    try:
-        from components.cardiovascular_calculator import render_cardiovascular_calculator
-        render_cardiovascular_calculator()
+            render_result_card("Kết quả tính toán", metrics, color="primary")
+
+            # Infusion time
+            st.markdown("---")
+            st.markdown("### ⏰ Thời gian truyền")
+            col1, col2 = st.columns(2)
+
+            with col1:
+                render_result_box(
+                    "Thời gian",
+                    results["time_formatted"],
+                    color="info",
+                    icon="⏱️",
+                )
+
+            with col2:
+                render_result_box(
+                    "Thể tích",
+                    f"{results['volume_ml']} ml",
+                    color="info",
+                )
+
+            # Preparation instructions
+            st.markdown("---")
+            st.markdown("### 📋 Hướng dẫn pha thuốc")
+            render_info_alert(
+                results.get("preparation_instructions", "Không có hướng dẫn"),
+                title="Cách pha",
+            )
+
+            # Drug information
+            st.markdown("---")
+            st.markdown("### 💊 Thông tin thuốc")
+
+            col1, col2 = st.columns(2)
+
+            with col1:
+                st.markdown("**Chỉ định:**")
+                st.info(drug_info.get("indication", "N/A"))
+
+                st.markdown("**Theo dõi:**")
+                monitoring = drug_info.get("monitoring", "")
+                if monitoring:
+                    for item in monitoring.split(", "):
+                        st.markdown(f"- ✅ {item}")
+
+            with col2:
+                st.markdown("**Liều khuyến nghị:**")
+                st.markdown(f"- **Khởi đầu:** {drug_info.get('initial_dose', 'N/A')}")
+                st.markdown(f"- **Thông thường:** {drug_info.get('dose_range', 'N/A')}")
+                st.markdown(f"- **Tối đa:** {drug_info.get('max_dose', 'N/A')}")
+
+                if drug_info.get("side_effects"):
+                    st.markdown("**Tác dụng phụ:**")
+                    st.warning(drug_info.get("side_effects"))
+
+            # Notes
+            if drug_info.get("notes"):
+                st.markdown("---")
+                st.markdown("### 💡 Lưu ý")
+                render_info_alert(drug_info.get("notes"), title="Thông tin quan trọng")
+
+            # Validate dose range
+            validation = validate_dose_range(cv_drug_name, dose_mcg_kg_min)
+            if not validation["is_valid"]:
+                st.markdown("---")
+                render_warning_alert(validation["warning"], title="Cảnh báo liều dùng")
+
+            # Vial Management (if available)
+            try:
+                from components.vial_selector import render_vial_selector, render_preparation_calculator
+
+                st.markdown("---")
+                st.markdown("### 📦 Quản lý ống thuốc")
+
+                # Calculate total dose needed for 24 hours
+                total_dose_mcg = results["total_dose_mcg_hour"] * 24
+                total_dose_mg = total_dose_mcg / 1000
+
+                # Render vial selector
+                vial_result = render_vial_selector(cv_drug_name, total_dose_mg)
+
+                # Preparation calculator
+                if vial_result:
+                    st.markdown("---")
+                    render_preparation_calculator(
+                        cv_drug_name,
+                        vial_result["total_available_mg"],
+                        vial_result.get("selected_vial"),
+                    )
+            except ImportError:
+                pass
+
+            # Copy result
+            st.markdown("---")
+            st.text_input("Copy kết quả", value=result_str, key="dirc_copy_result_cv")
+
+        except Exception as e:
+            st.error(f"Lỗi tính toán chi tiết: {str(e)}")
+            st.success(f"Kết quả cơ bản: {result_str}")
+
     except ImportError:
-        st.error("Không thể tải cardiovascular calculator. Vui lòng kiểm tra file components/cardiovascular_calculator.py")
-        st.info("Sử dụng tab 'Chuyển đổi tổng quát' để tính toán với thuốc bất kỳ.")
-
-
-
+        # Fallback to standard DIRC display
+        st.success(f"Kết quả: {result_str}")
