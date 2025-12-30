@@ -72,8 +72,8 @@ def inject_text_overlap_fix():
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0 !important;
-        padding: 12px 40px 12px 16px !important;
-        padding-right: 40px !important;
+        padding: 12px 16px 12px 16px !important;
+        padding-right: 16px !important;
         box-sizing: border-box !important;
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
                      'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
@@ -89,24 +89,25 @@ def inject_text_overlap_fix():
         text-overflow: ellipsis !important;
     }
     
-    /* Fix help icon positioning - highest specificity */
+    /* Hide help icon completely to prevent overlap */
     body div[data-testid="stTextInput"] [data-testid="stTooltipIcon"],
     body .stTextInput [data-testid="stTooltipIcon"],
     body div[data-testid="stTextInput"] [class*="help"],
     body .stTextInput [class*="help"],
     body div[data-testid="stTextInput"] [class*="icon"],
-    body .stTextInput [class*="icon"] {
-        position: absolute !important;
-        right: 12px !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        z-index: 2 !important;
-        pointer-events: auto !important;
-        width: 20px !important;
-        height: 20px !important;
+    body .stTextInput [class*="icon"],
+    body div[data-testid="stTextInput"] [data-baseweb="popover"],
+    body .stTextInput [data-baseweb="popover"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
         margin: 0 !important;
         padding: 0 !important;
-        overflow: visible !important;
+        position: absolute !important;
+        left: -9999px !important;
+        pointer-events: none !important;
     }
     
     /* Remove any pseudo-elements that might cause overlap */
@@ -146,7 +147,7 @@ def inject_text_overlap_fix():
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0 !important;
-        padding-right: 40px !important;
+        padding-right: 16px !important;
         box-sizing: border-box !important;
     }
     
@@ -197,29 +198,35 @@ def inject_text_overlap_fix():
                 const input = inputContainer.querySelector('input[type="text"]');
                 if (!input) return;
                 
-                // Find help icon
+                // Find and hide help icon to prevent overlap
                 const helpIcon = inputContainer.querySelector('[data-testid="stTooltipIcon"]');
+                const allHelpIcons = inputContainer.querySelectorAll('[class*="help"], [class*="icon"], [data-baseweb="popover"]');
                 
-                // Ensure input has proper padding
+                // Hide all help icons
+                if (helpIcon) {
+                    helpIcon.style.display = 'none';
+                    helpIcon.style.visibility = 'hidden';
+                    helpIcon.style.opacity = '0';
+                    helpIcon.style.width = '0';
+                    helpIcon.style.height = '0';
+                    helpIcon.style.position = 'absolute';
+                    helpIcon.style.left = '-9999px';
+                    helpIcon.style.pointerEvents = 'none';
+                }
+                
+                allHelpIcons.forEach(function(icon) {
+                    icon.style.display = 'none';
+                    icon.style.visibility = 'hidden';
+                    icon.style.opacity = '0';
+                    icon.style.pointerEvents = 'none';
+                });
+                
+                // Ensure input has proper padding (no need for extra padding since icon is hidden)
                 if (input) {
-                    input.style.paddingRight = '40px';
+                    input.style.paddingRight = '16px';
                     input.style.width = '100%';
                     input.style.maxWidth = '100%';
                     input.style.boxSizing = 'border-box';
-                }
-                
-                // Position help icon absolutely
-                if (helpIcon) {
-                    const inputWrapper = input.closest('div[data-baseweb="input"]') || input.parentElement;
-                    if (inputWrapper) {
-                        inputWrapper.style.position = 'relative';
-                        helpIcon.style.position = 'absolute';
-                        helpIcon.style.right = '12px';
-                        helpIcon.style.top = '50%';
-                        helpIcon.style.transform = 'translateY(-50%)';
-                        helpIcon.style.zIndex = '2';
-                        helpIcon.style.pointerEvents = 'auto';
-                    }
                 }
                 
                 // Remove any pseudo-elements
