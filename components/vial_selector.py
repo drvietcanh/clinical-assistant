@@ -3,6 +3,8 @@ Vial Selector UI Component
 Select vials and calculate preparation details
 """
 
+from typing import Dict, Optional
+
 import streamlit as st
 from drugs.vial_manager import (
     get_drug_vials,
