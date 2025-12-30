@@ -259,6 +259,9 @@ def setup_page(page_title: str, page_icon: str, description: str = "", layout: s
     # Inject global font CSS and DOM cleanup helpers
     inject_global_font_css()
     inject_dom_cleanup_js()
+    
+    # Inject mobile optimizations CSS
+    inject_mobile_optimizations_css()
 
     # Add parent directory to path for imports
     parent_dir = Path(__file__).parent.parent
