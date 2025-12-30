@@ -3542,4 +3542,723 @@ Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng th
         related_drugs=["Isoniazid", "Rifampicin", "Pyrazinamide", "Ethambutol"],
         printable=True
     ),
+    
+    # === PEPTIC ULCER DISEASE ===
+    PatientEducationTopic(
+        id="peptic_ulcer_basics",
+        title="Understanding Peptic Ulcer Disease",
+        title_vn="Hiểu về Viêm loét dạ dày tá tràng",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm loét dạ dày tá tràng
+
+        ## Viêm loét dạ dày tá tràng là gì?
+
+        Viêm loét dạ dày tá tràng là tình trạng có vết loét ở niêm mạc dạ dày hoặc tá tràng (phần đầu ruột non), do axit dạ dày và pepsin làm tổn thương.
+
+        **Vị trí:**
+        - **Loét dạ dày:** Vết loét ở dạ dày
+        - **Loét tá tràng:** Vết loét ở tá tràng (phổ biến hơn, 80%)
+
+        **⚠️ Đặc điểm:**
+        - Có thể gây đau, chảy máu, thủng
+        - Có thể chữa khỏi hoàn toàn
+        - Dễ tái phát nếu không điều trị đúng
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Đau bụng vùng thượng vị:**
+          - Đau rát, cồn cào
+          - Đau khi đói, giảm khi ăn (loét tá tràng)
+          - Đau tăng khi ăn (loét dạ dày)
+          - Đau về đêm
+        - **Ợ hơi, ợ chua**
+        - **Buồn nôn, nôn**
+        - **Đầy bụng, khó tiêu**
+        - **Chán ăn**
+
+        **Triệu chứng biến chứng:**
+        - **Chảy máu:** Nôn ra máu, đi ngoài phân đen
+        - **Thủng:** Đau bụng dữ dội, đột ngột
+        - **Hẹp môn vị:** Nôn nhiều, không ăn được
+
+        **⚠️ Lưu ý:** Nhiều người không có triệu chứng rõ ràng!
+
+        ## Nguyên nhân:
+
+        **1. Nhiễm H. pylori (80%):**
+        - Vi khuẩn Helicobacter pylori
+        - Làm tổn thương niêm mạc dạ dày
+        - Lây qua đường miệng-miệng, phân-miệng
+
+        **2. Thuốc NSAID:**
+        - Aspirin, Ibuprofen, Diclofenac
+        - Làm tổn thương niêm mạc dạ dày
+        - Dùng lâu dài → Tăng nguy cơ
+
+        **3. Yếu tố khác:**
+        - **Stress:** Làm tăng tiết axit
+        - **Hút thuốc lá:** Làm chậm lành vết loét
+        - **Rượu bia:** Kích thích dạ dày
+        - **Thức ăn cay, chua:** Kích thích (không phải nguyên nhân chính)
+
+        ## Chẩn đoán:
+
+        **1. Nội soi dạ dày:**
+        - Xem trực tiếp vết loét
+        - Sinh thiết (tìm H. pylori, loại trừ ung thư)
+        - Chính xác nhất
+
+        **2. Xét nghiệm H. pylori:**
+        - Test thở (Urea breath test)
+        - Xét nghiệm phân
+        - Xét nghiệm máu (kháng thể)
+
+        **3. Xét nghiệm khác:**
+        - Công thức máu (nếu chảy máu)
+        - Test phân tìm máu ẩn
+
+        ## Điều trị:
+
+        **1. Điều trị H. pylori (nếu có):**
+        - **Phác đồ 3 thuốc (14 ngày):**
+          - PPI (Omeprazole, Pantoprazole)
+          - 2 kháng sinh (Amoxicillin + Clarithromycin hoặc Metronidazole)
+        - **⚠️ QUAN TRỌNG:** Uống đủ ngày, đúng giờ
+        - Tỷ lệ thành công: 80-90%
+
+        **2. Thuốc giảm axit:**
+        - **PPI:** Omeprazole, Pantoprazole, Esomeprazole
+          - Uống trước ăn 30 phút
+          - Uống 4-8 tuần
+        - **H2 Blockers:** Ranitidine, Famotidine
+
+        **3. Thuốc bảo vệ niêm mạc:**
+        - Sucralfate
+        - Bismuth
+
+        **4. ⚠️ QUAN TRỌNG:**
+        - Uống thuốc đúng giờ, đủ ngày
+        - Không tự ý ngừng
+        - Tái khám sau điều trị
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI VIÊM LOÉT DẠ DÀY:
+
+        **1. Nguyên tắc:**
+        - **Ăn đúng giờ:** Không bỏ bữa
+        - **Ăn nhiều bữa nhỏ:** 5-6 bữa/ngày
+        - **Ăn chậm, nhai kỹ:** Giúp tiêu hóa tốt
+        - **Tránh thức ăn kích thích:** Đồ cay, chua, nóng, lạnh
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Cháo, súp:** Dễ tiêu, ấm
+          - Cháo gà, cháo thịt bằm
+          - Súp rau củ
+        - **Thức ăn mềm:** Luộc, hấp
+        - **Rau xanh:** Luộc, hấp (rau cải, rau muống)
+        - **Trái cây:** Chuối, táo (không quá chua)
+        - **Sữa:** Sữa ấm, sữa chua (ít chua)
+        - **Thịt nạc:** Thịt gà, cá (luộc, hấp)
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Đồ cay:** Ớt, tiêu, gừng (nhiều)
+        - **Đồ chua:** Chanh, dấm, cam chua
+        - **Đồ nóng, lạnh:** Nước đá, đồ quá nóng
+        - **Đồ chiên, nhiều dầu mỡ:** Khó tiêu
+        - **Rượu bia:** Kích thích dạ dày
+        - **Cà phê, trà đặc:** Tăng tiết axit
+        - **Đồ chế biến sẵn:** Đồ hộp, thức ăn nhanh
+
+        **4. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo gà + sữa ấm
+        - **Bữa phụ (10h):** Bánh mì mềm, sữa chua
+        - **Trưa:** 1 chén cơm mềm + cá hấp + rau luộc + canh rau
+        - **Bữa phụ (15h):** Chuối, bánh quy
+        - **Tối:** 1 chén cơm mềm + thịt gà luộc + rau luộc + canh
+        - **Bữa phụ (21h):** Sữa ấm
+
+        **5. Lưu ý:**
+        - Ăn chậm, nhai kỹ
+        - Không ăn quá no
+        - Không nằm ngay sau ăn (chờ 2-3 giờ)
+        - Uống nước ấm, không uống lạnh
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Thuốc điều trị H. pylori:**
+        - **Uống đủ 14 ngày:** Quan trọng!
+        - **Uống đúng giờ:** 2 lần/ngày
+        - **Không tự ý ngừng:** Ngừng → Không diệt được vi khuẩn
+
+        **2. Thuốc PPI:**
+        - **Uống trước ăn 30 phút:** Quan trọng!
+        - **Uống đủ 4-8 tuần:** Để vết loét lành
+        - **Không tự ý ngừng:** Ngừng sớm → Tái phát
+
+        **3. Tránh NSAID:**
+        - **Không dùng:** Aspirin, Ibuprofen, Diclofenac
+        - **Nếu cần giảm đau:** Dùng Paracetamol
+        - **Nếu bắt buộc dùng NSAID:** Dùng kèm PPI
+
+        **4. Tác dụng phụ:**
+        - **PPI:** Tiêu chảy, đau đầu (thường nhẹ)
+        - **Kháng sinh:** Buồn nôn, tiêu chảy
+        - **Báo bác sĩ nếu:** Tác dụng phụ nghiêm trọng
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Điều trị H. pylori:**
+        - Nếu có H. pylori → Điều trị triệt để
+        - Giảm nguy cơ tái phát
+
+        **2. Tránh NSAID:**
+        - Không tự ý dùng lâu dài
+        - Nếu cần → Dùng kèm PPI
+
+        **3. Lối sống:**
+        - **Bỏ thuốc lá:** Làm chậm lành vết loét
+        - **Hạn chế rượu bia:** Kích thích dạ dày
+        - **Quản lý stress:** Tập thư giãn, yoga
+        - **Ăn đúng giờ:** Không bỏ bữa
+
+        **4. Chế độ ăn:**
+        - Tránh thức ăn kích thích
+        - Ăn nhiều bữa nhỏ
+        - Ăn chậm, nhai kỹ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Chảy máu:**
+        - Nôn ra máu (đỏ hoặc nâu)
+        - Đi ngoài phân đen
+        - Mệt mỏi, da xanh (thiếu máu)
+
+        **2. Thủng:**
+        - Đau bụng dữ dội, đột ngột
+        - Bụng cứng như gỗ
+        - **→ Cấp cứu ngay!**
+
+        **3. Hẹp môn vị:**
+        - Nôn nhiều, không ăn được
+        - Sụt cân
+
+        **4. Không cải thiện:**
+        - Điều trị 4-8 tuần không đỡ
+        - Triệu chứng nặng hơn
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị viêm loét:**
+        - Tuân thủ điều trị
+        - Uống thuốc đúng giờ, đủ ngày
+        - Chế độ ăn phù hợp
+        - Tái khám sau điều trị
+
+        **2. Phòng ngừa tái phát:**
+        - Điều trị H. pylori triệt để
+        - Tránh NSAID
+        - Bỏ thuốc lá, hạn chế rượu bia
+        - Ăn đúng giờ, không bỏ bữa
+
+        **3. Sống tích cực:**
+        - Viêm loét có thể chữa khỏi
+        - Tuân thủ điều trị → Khỏi bệnh
+        - Đừng lo lắng quá mức
+        """,
+        related_disease="peptic_ulcer",
+        related_drugs=["Omeprazole", "Amoxicillin", "Clarithromycin"],
+        printable=True
+    ),
+    
+    # === KIDNEY STONES ===
+    PatientEducationTopic(
+        id="kidney_stones_basics",
+        title="Understanding Kidney Stones",
+        title_vn="Hiểu về Sỏi thận",
+        category="Disease",
+        content="""
+        # Hiểu về Sỏi thận
+
+        ## Sỏi thận là gì?
+
+        Sỏi thận là những tinh thể cứng hình thành trong thận từ các chất trong nước tiểu, có thể di chuyển xuống niệu quản, bàng quang, gây đau và tắc nghẽn.
+
+        **⚠️ Đặc điểm:**
+        - Rất đau (cơn đau quặn thận)
+        - Có thể tái phát
+        - Có thể phòng ngừa bằng chế độ ăn
+
+        **Vị trí:**
+        - Thận
+        - Niệu quản
+        - Bàng quang
+        - Niệu đạo
+
+        ## Triệu chứng:
+
+        **Cơn đau quặn thận:**
+        - **Đau dữ dội:** Đột ngột, ở vùng thắt lưng
+        - **Đau lan:** Xuống bụng dưới, háng, bộ phận sinh dục
+        - **Đau từng cơn:** Đau dữ dội rồi giảm, lặp lại
+        - **Không nằm yên được:** Vật vã, lăn lộn
+        - **Buồn nôn, nôn**
+
+        **Triệu chứng khác:**
+        - **Tiểu máu:** Nước tiểu đỏ hoặc hồng
+        - **Tiểu buốt, tiểu rắt:** Khi sỏi ở bàng quang
+        - **Sốt, ớn lạnh:** Nếu có nhiễm trùng
+        - **Tiểu ít hoặc không tiểu:** Nếu tắc nghẽn nặng
+
+        **⚠️ Lưu ý:** Một số người có sỏi nhưng không có triệu chứng (sỏi im lặng).
+
+        ## Nguyên nhân:
+
+        **1. Uống ít nước:**
+        - Nước tiểu đậm đặc
+        - Tinh thể dễ kết tinh
+
+        **2. Chế độ ăn:**
+        - **Muối nhiều:** Tăng canxi trong nước tiểu
+        - **Protein nhiều:** Tăng acid uric, oxalate
+        - **Oxalate nhiều:** Rau chân vịt, đậu phộng, sô cô la
+
+        **3. Yếu tố khác:**
+        - **Di truyền:** Có người thân bị sỏi
+        - **Bệnh khác:** Cường cận giáp, nhiễm trùng tiểu
+        - **Thuốc:** Một số thuốc tăng nguy cơ
+        - **Ít vận động:** Tăng canxi trong nước tiểu
+
+        ## Chẩn đoán:
+
+        **1. Siêu âm:**
+        - Phát hiện sỏi
+        - Đánh giá kích thước, vị trí
+        - Xem có ứ nước không
+
+        **2. CT scan:**
+        - Chính xác hơn siêu âm
+        - Xem rõ kích thước, vị trí
+
+        **3. Xét nghiệm:**
+        - Nước tiểu: Tìm tinh thể, máu
+        - Máu: Chức năng thận, canxi, acid uric
+
+        **4. Phân tích sỏi:**
+        - Sau khi lấy sỏi ra
+        - Xác định loại sỏi → Điều chỉnh chế độ ăn
+
+        ## Điều trị:
+
+        **1. Sỏi nhỏ (< 5mm):**
+        - **Uống nhiều nước:** 2-3 lít/ngày
+        - **Thuốc giảm đau:** NSAID, Paracetamol
+        - **Thuốc giãn niệu quản:** Tamsulosin
+        - **Tập thể dục:** Đi bộ, nhảy
+        - **Thường tự ra:** 80-90% trong 4-6 tuần
+
+        **2. Sỏi vừa (5-10mm):**
+        - **Tán sỏi ngoài cơ thể (ESWL):** Dùng sóng xung kích
+        - **Nội soi niệu quản:** Lấy sỏi qua ống soi
+        - **Tán sỏi laser:** Qua nội soi
+
+        **3. Sỏi lớn (> 10mm):**
+        - **Tán sỏi qua da (PCNL):** Rạch nhỏ, đưa ống vào thận
+        - **Phẫu thuật mở:** (Hiếm)
+
+        **4. Điều trị cơn đau:**
+        - **NSAID:** Ibuprofen, Diclofenac (tiêm hoặc uống)
+        - **Paracetamol:** Nếu không dùng được NSAID
+        - **Thuốc giảm co thắt:** Buscopan
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI SỎI THẬN:
+
+        **⚠️ QUAN TRỌNG:** Chế độ ăn rất quan trọng trong phòng ngừa sỏi!
+
+        **1. Nguyên tắc:**
+        - **Uống nhiều nước:** Quan trọng nhất!
+        - **Giảm muối:** < 5g/ngày
+        - **Giảm protein động vật:** Thịt đỏ
+        - **Giảm oxalate:** (Nếu sỏi oxalate)
+
+        **2. Uống nước (QUAN TRỌNG NHẤT!):**
+        - **Mục tiêu:** 2.5-3 lít/ngày
+        - **Nước lọc:** Tốt nhất
+        - **Nước chanh:** Citrate giúp ngăn sỏi
+        - **Tránh:** Nước ngọt có đường, nước có nhiều oxalate
+
+        **3. Giảm muối:**
+        - **Mục tiêu:** < 5g muối/ngày
+        - **Tránh:** Dưa muối, cà muối, đồ hộp, thức ăn nhanh
+        - **Đọc nhãn:** Chọn thực phẩm ít natri
+
+        **4. Giảm protein động vật:**
+        - **Hạn chế:** Thịt đỏ (thịt bò, thịt heo)
+        - **Nên ăn:** Thịt trắng (thịt gà, cá) - 100-150g/ngày
+        - **Protein thực vật:** Đậu, đậu phụ (tốt hơn)
+
+        **5. Giảm oxalate (Nếu sỏi oxalate):**
+        - **Hạn chế:** Rau chân vịt, đậu phộng, sô cô la, trà đặc
+        - **Có thể ăn:** Rau xanh khác, trái cây
+
+        **6. Canxi:**
+        - **Có thể ăn:** Sữa, sữa chua (1-2 phần/ngày)
+        - **Không kiêng hoàn toàn:** Canxi từ thức ăn không tăng nguy cơ
+        - **Tránh:** Viên bổ sung canxi (nếu không cần)
+
+        **7. Thực phẩm NÊN ĂN:**
+        - **Rau xanh:** Rau cải, rau muống, bông cải (trừ rau chân vịt nếu sỏi oxalate)
+        - **Trái cây:** Tất cả (đặc biệt cam, chanh - citrate)
+        - **Ngũ cốc:** Gạo, bánh mì
+        - **Thịt trắng:** Thịt gà, cá (ít)
+        - **Đậu, đậu phụ:** Protein thực vật
+        - **Sữa ít béo:** 1-2 ly/ngày
+
+        **8. Thực phẩm CẦN TRÁNH:**
+        - **Muối nhiều:** Dưa muối, đồ hộp, thức ăn nhanh
+        - **Thịt đỏ nhiều:** Thịt bò, thịt heo (ăn ít)
+        - **Oxalate (nếu sỏi oxalate):** Rau chân vịt, đậu phộng, sô cô la
+        - **Nước ngọt có đường:** Tăng nguy cơ
+
+        **9. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo yến mạch + sữa ít béo + nước chanh
+        - **Trưa:** 1 chén cơm + cá hấp + rau luộc + canh rau
+        - **Tối:** 1 chén cơm + thịt gà luộc + rau xào + canh
+        - **Uống nước:** 2.5-3 lít/ngày (nước lọc, nước chanh)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi có sỏi nhỏ:**
+        - **Đi bộ, nhảy:** Giúp sỏi di chuyển, ra ngoài
+        - **Tập thể dục nhẹ nhàng:** 30 phút/ngày
+
+        **2. Phòng ngừa:**
+        - **Tập thể dục đều đặn:** 30 phút/ngày
+        - **Đi bộ, bơi, đạp xe**
+        - **Tránh:** Ngồi lâu, ít vận động
+
+        ## 🛡️ PHÒNG NGỪA TÁI PHÁT:
+
+        **1. Uống nhiều nước:**
+        - **2.5-3 lít/ngày:** Quan trọng nhất!
+        - **Nước tiểu trong:** Dấu hiệu uống đủ
+        - **Uống đều trong ngày:** Không uống dồn
+
+        **2. Chế độ ăn:**
+        - Giảm muối
+        - Giảm protein động vật
+        - Giảm oxalate (nếu sỏi oxalate)
+
+        **3. Tập thể dục:**
+        - Đều đặn, không ngồi lâu
+
+        **4. Khám định kỳ:**
+        - Siêu âm thận 6-12 tháng/lần
+        - Phát hiện sớm sỏi mới
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Cơn đau quặn thận:**
+        - Đau dữ dội, không chịu được
+        - Thuốc giảm đau không hiệu quả
+
+        **2. Tắc nghẽn:**
+        - Tiểu ít hoặc không tiểu
+        - Sốt, ớn lạnh (nhiễm trùng)
+
+        **3. Chảy máu:**
+        - Tiểu máu nhiều
+
+        **4. Sỏi lớn:**
+        - Sỏi > 10mm → Cần can thiệp
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi có sỏi:**
+        - Uống nhiều nước
+        - Thuốc giảm đau
+        - Tập thể dục (nếu sỏi nhỏ)
+        - Theo dõi, tái khám
+
+        **2. Phòng ngừa:**
+        - Uống nhiều nước (quan trọng nhất!)
+        - Chế độ ăn phù hợp
+        - Tập thể dục đều đặn
+        - Khám định kỳ
+
+        **3. Sống tích cực:**
+        - Sỏi thận có thể phòng ngừa
+        - Tuân thủ chế độ ăn → Giảm tái phát
+        """,
+        related_disease="kidney_stones",
+        related_drugs=["Tamsulosin", "Ibuprofen", "Paracetamol"],
+        printable=True
+    ),
+    
+    # === HAND FOOT MOUTH DISEASE ===
+    PatientEducationTopic(
+        id="hand_foot_mouth_basics",
+        title="Understanding Hand Foot Mouth Disease",
+        title_vn="Hiểu về Bệnh Tay chân miệng",
+        category="Disease",
+        content="""
+        # Hiểu về Bệnh Tay chân miệng
+
+        ## Tay chân miệng là gì?
+
+        Tay chân miệng là bệnh truyền nhiễm do virus (chủ yếu Coxsackie A16, Enterovirus 71) gây ra, thường gặp ở trẻ em dưới 5 tuổi, đặc biệt trẻ dưới 3 tuổi.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh theo mùa (tháng 3-5, 9-11)
+        - Thường nhẹ, tự khỏi
+        - Có thể nặng, gây biến chứng (hiếm)
+        - Chưa có vắc xin, thuốc đặc trị
+
+        **Triệu chứng điển hình:**
+        - Sốt
+        - Loét miệng
+        - Phát ban ở tay, chân
+
+        ## Triệu chứng:
+
+        **Giai đoạn ủ bệnh (3-7 ngày):**
+        - Không có triệu chứng
+
+        **Giai đoạn khởi phát (1-2 ngày):**
+        - **Sốt:** 38-39°C
+        - **Mệt mỏi:** Trẻ quấy khóc
+        - **Chán ăn:** Do đau miệng
+        - **Đau họng**
+
+        **Giai đoạn toàn phát (3-10 ngày):**
+        - **Loét miệng:**
+          - Vết loét ở lưỡi, lợi, má trong
+          - Đau, khó ăn, khó uống
+          - Trẻ chảy nước dãi nhiều
+        - **Phát ban:**
+          - **Tay:** Lòng bàn tay, ngón tay
+          - **Chân:** Lòng bàn chân, ngón chân
+          - **Mông, đầu gối:** Có thể có
+          - Ban đỏ, có thể có bọng nước
+          - Không ngứa
+        - **Sốt:** Có thể sốt cao
+
+        **Giai đoạn hồi phục:**
+        - Sốt giảm
+        - Vết loét lành
+        - Phát ban biến mất
+        - Tự khỏi sau 7-10 ngày
+
+        **⚠️ Dấu hiệu cảnh báo (Cần nhập viện):**
+        - Sốt cao > 39°C, không hạ
+        - Giật mình, run tay chân
+        - Quấy khóc liên tục
+        - Khó thở
+        - Da xanh, môi tím
+        - Nôn nhiều
+        - Lú lẫn, hôn mê
+
+        ## Nguyên nhân và đường lây:
+
+        **1. Nguyên nhân:**
+        - Virus Coxsackie A16 (thường nhẹ)
+        - Enterovirus 71 (có thể nặng, biến chứng)
+
+        **2. Đường lây:**
+        - **Tiếp xúc trực tiếp:** Dịch mũi, họng, nước bọt
+        - **Phân:** Virus trong phân (lây qua tay bẩn)
+        - **Đồ dùng:** Dùng chung đồ chơi, bát đĩa
+        - **Giọt bắn:** Ho, hắt hơi
+
+        **3. Yếu tố nguy cơ:**
+        - Trẻ < 5 tuổi (đặc biệt < 3 tuổi)
+        - Mùa dịch (tháng 3-5, 9-11)
+        - Nơi đông người: Nhà trẻ, mẫu giáo
+
+        ## Chẩn đoán:
+
+        **1. Chẩn đoán lâm sàng:**
+        - Dựa vào triệu chứng: Sốt + loét miệng + phát ban tay chân
+        - Không cần xét nghiệm (thường)
+
+        **2. Xét nghiệm (nếu cần):**
+        - PCR: Tìm virus trong dịch họng, phân
+        - Thường chỉ làm khi có biến chứng
+
+        ## Điều trị:
+
+        **⚠️ QUAN TRỌNG:** Không có thuốc đặc trị! Chủ yếu điều trị triệu chứng.
+
+        **1. Hạ sốt:**
+        - **Paracetamol:** 10-15mg/kg/lần, cách 4-6 giờ
+        - **Ibuprofen:** Nếu Paracetamol không đủ (hỏi bác sĩ)
+        - **Lau người:** Nước ấm
+
+        **2. Giảm đau miệng:**
+        - **Gel bôi miệng:** Lidocaine (theo chỉ định bác sĩ)
+        - **Súc miệng:** Nước muối (nếu trẻ lớn)
+        - **Tránh:** Thức ăn cay, nóng, chua
+
+        **3. Hỗ trợ:**
+        - **Uống nhiều nước:** Tránh mất nước
+        - **Nghỉ ngơi:** Nghỉ ở nhà, không đi học
+        - **Theo dõi:** Dấu hiệu cảnh báo
+
+        **4. Không dùng:**
+        - Kháng sinh (không hiệu quả với virus)
+- Aspirin (nguy hiểm ở trẻ em)
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO TRẺ BỊ TAY CHÂN MIỆNG:
+
+        **⚠️ QUAN TRỌNG:** Trẻ đau miệng → Khó ăn → Cần thức ăn mềm, dễ nuốt!
+
+        **1. Nguyên tắc:**
+        - **Thức ăn mềm, lỏng:** Dễ nuốt, không đau
+        - **Mát, không nóng:** Tránh kích thích vết loét
+        - **Không cay, chua:** Tránh đau
+        - **Chia nhỏ bữa:** 5-6 bữa/ngày
+        - **Uống nhiều nước:** Tránh mất nước
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Cháo, súp:** Mềm, dễ nuốt
+          - Cháo gà, cháo thịt bằm
+          - Súp rau củ
+        - **Sữa:** Sữa mát, sữa chua
+        - **Trái cây mềm:** Chuối, đu đủ, xoài chín (xay nhuyễn)
+        - **Kem, sữa chua:** Mát, giảm đau miệng
+        - **Nước trái cây:** Cam, chanh (pha loãng, không quá chua)
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Thức ăn cứng:** Bánh quy, bánh mì cứng
+        - **Thức ăn cay:** Ớt, tiêu
+        - **Thức ăn chua:** Chanh, dấm, cam chua
+        - **Thức ăn nóng:** Nóng → Đau vết loét
+        - **Thức ăn mặn:** Kích thích vết loét
+
+        **4. Cách cho trẻ ăn:**
+        - **Cho ăn bằng thìa:** Nhỏ, mềm
+        - **Cho uống bằng ống hút:** Nếu đau miệng nhiều
+        - **Cho ăn chậm:** Không ép
+        - **Nghỉ giữa các miếng:** Để trẻ đỡ đau
+
+        **5. Uống nước:**
+        - **Nước lọc:** Mát
+        - **Nước trái cây:** Pha loãng
+        - **Sữa:** Mát
+        - **Oresol:** Nếu sốt cao, mất nước
+        - **⚠️ Quan trọng:** Uống nhiều để tránh mất nước!
+
+        **6. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo gà mát + sữa
+        - **Bữa phụ (10h):** Sữa chua, chuối xay
+        - **Trưa:** Súp rau củ mát
+        - **Bữa phụ (15h):** Kem, nước trái cây
+        - **Tối:** Cháo thịt bằm mát + sữa
+        - **Bữa phụ (21h):** Sữa ấm
+
+        ## 💤 CHĂM SÓC TẠI NHÀ:
+
+        **1. Nghỉ ngơi:**
+        - Nghỉ ở nhà, không đi học
+        - Nghỉ ít nhất 7-10 ngày
+        - Tránh tiếp xúc với trẻ khác
+
+        **2. Hạ sốt:**
+        - Paracetamol đúng liều
+        - Lau người bằng nước ấm
+        - Mặc quần áo thoáng
+
+        **3. Vệ sinh:**
+        - **Rửa tay:** Thường xuyên (người chăm sóc và trẻ)
+        - **Vệ sinh răng miệng:** Nhẹ nhàng, không làm đau vết loét
+        - **Tắm:** Tắm nhanh, nhẹ nhàng
+        - **Quần áo:** Sạch, thoáng
+
+        **4. Theo dõi:**
+        - Đo nhiệt độ 3-4 lần/ngày
+        - Theo dõi dấu hiệu cảnh báo
+        - Ghi nhật ký triệu chứng
+
+        **5. Phòng ngừa lây lan:**
+        - Cách ly trẻ (không đi học)
+        - Không dùng chung đồ dùng
+        - Vệ sinh đồ chơi, bát đĩa
+        - Rửa tay thường xuyên
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Vệ sinh cá nhân:**
+        - **Rửa tay:** Thường xuyên với xà phòng
+          - Trước khi ăn
+          - Sau khi đi vệ sinh
+          - Sau khi thay tã
+          - Sau khi chơi
+        - **Vệ sinh răng miệng:** Đánh răng 2 lần/ngày
+
+        **2. Vệ sinh môi trường:**
+        - **Lau sạch:** Bề mặt, đồ chơi, bàn ghế
+        - **Khử trùng:** Dùng dung dịch khử trùng
+        - **Thông thoáng:** Phòng ốc, nhà cửa
+
+        **3. Tránh tiếp xúc:**
+        - Tránh người bệnh
+        - Không dùng chung đồ dùng
+        - Không đến nơi đông người khi có dịch
+
+        **4. Khi có dịch:**
+        - Đóng cửa nhà trẻ, mẫu giáo (nếu cần)
+        - Tăng cường vệ sinh
+        - Phát hiện sớm, cách ly
+
+        **5. Chưa có vắc xin:**
+        - Vắc xin đang nghiên cứu
+        - Phòng ngừa chủ yếu bằng vệ sinh
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Dấu hiệu cảnh báo:**
+        - Sốt cao > 39°C, không hạ
+        - Giật mình, run tay chân
+        - Quấy khóc liên tục
+        - Khó thở
+        - Da xanh, môi tím
+        - Nôn nhiều
+        - Lú lẫn, hôn mê
+
+        **2. Mất nước:**
+        - Không uống được nước
+        - Tiểu ít hoặc không tiểu
+        - Mắt trũng, da khô
+        - Mệt mỏi cực độ
+
+        **3. Biến chứng:**
+        - Viêm não, viêm màng não
+        - Viêm cơ tim
+        - Suy hô hấp
+
+        **⚠️ QUAN TRỌNG:** Đến bệnh viện ngay khi có dấu hiệu cảnh báo!
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi trẻ bị tay chân miệng:**
+        - Nghỉ ở nhà, không đi học
+        - Chế độ ăn mềm, mát
+        - Uống nhiều nước
+        - Hạ sốt, giảm đau
+        - Theo dõi dấu hiệu cảnh báo
+
+        **2. Phòng ngừa:**
+        - Rửa tay thường xuyên
+        - Vệ sinh môi trường
+        - Tránh tiếp xúc người bệnh
+
+        **3. Không lo lắng quá:**
+        - Hầu hết trẻ tự khỏi sau 7-10 ngày
+        - Chỉ một số ít có biến chứng
+        - Theo dõi sát, đến viện khi cần
+        """,
+        related_disease="hand_foot_mouth",
+        related_drugs=["Paracetamol", "Ibuprofen"],
+        printable=True
+    ),
 ]
