@@ -575,7 +575,7 @@ patient_education/
     - Tập thể dục: Nhẹ khi chưa ổn, bình thường khi đã ổn
     - Cơn cường giáp cấp: Sốt cao, nhịp tim > 140, rối loạn ý thức
 
-**Tổng số bệnh:** 36 bệnh (tăng từ 28)
+**Tổng số bệnh:** 51 bệnh (tăng từ 28)
 
 31. **Suy giáp (Hypothyroidism)**
     - Phổ biến ở phụ nữ sau 50 tuổi
@@ -630,6 +630,143 @@ patient_education/
     - Điều trị: Triệu chứng (virus), Amoxicillin 10 ngày (vi khuẩn)
     - Chế độ ăn: Mềm, lỏng khi đau họng (cháo, súp)
     - Phòng ngừa: Rửa tay, tránh tiếp xúc người bệnh, tiêm vắc xin cúm
+
+37. **Viêm tai giữa (Otitis Media)**
+    - Rất phổ biến ở trẻ em tại Việt Nam
+    - Triệu chứng: Đau tai, sốt, chảy dịch tai (trẻ: quấy khóc, kéo tai)
+    - Điều trị: Amoxicillin 7-10 ngày (trẻ < 2 tuổi hoặc nặng)
+    - Chế độ ăn: Bình thường, tránh bú bình nằm
+    - Phòng ngừa: Tiêm vắc xin phế cầu, Hib, cúm; bú mẹ; tránh hút thuốc thụ động
+    - Biến chứng: Thủng màng nhĩ, viêm xương chũm, giảm thính lực
+
+38. **Loãng xương (Osteoporosis)**
+    - Phổ biến ở phụ nữ sau mãn kinh và người cao tuổi
+    - Triệu chứng: Thường không có triệu chứng cho đến khi gãy xương
+    - Chẩn đoán: DEXA scan (T-score ≤ -2.5)
+    - Điều trị: Bisphosphonate (Alendronate), bổ sung Canxi + Vitamin D
+    - Chế độ ăn: Sữa, cá nhỏ (ăn cả xương), rau xanh (canxi)
+    - Tập thể dục: Tập tải trọng (đi bộ, chạy bộ, tập tạ nhẹ) - quan trọng!
+    - Phòng ngã: Loại bỏ vật cản, đủ ánh sáng, tay vịn cầu thang
+
+39. **Viêm kết mạc (Conjunctivitis)**
+    - Rất phổ biến, có thể do virus, vi khuẩn, hoặc dị ứng
+    - Triệu chứng: Đỏ mắt, ngứa, chảy nước mắt, dử mắt
+    - Điều trị: Virus (tự khỏi), vi khuẩn (kháng sinh nhỏ mắt), dị ứng (antihistamine)
+    - Chế độ ăn: Bình thường, tránh thức ăn dị ứng (nếu biết)
+    - Phòng ngừa: Rửa tay, không dụi mắt, không dùng chung khăn/gối
+    - Nhỏ mắt đúng cách: Rửa tay, kéo mí mắt, nhỏ 1-2 giọt, không chạm đầu lọ vào mắt
+
+40. **Đục thủy tinh thể (Cataract)**
+    - Rất phổ biến ở người cao tuổi, nguyên nhân mù lòa hàng đầu
+    - Triệu chứng: Giảm thị lực từ từ, nhìn mờ, nhạy cảm ánh sáng
+    - Điều trị: Phẫu thuật (phương pháp duy nhất) - Phacoemulsification + đặt IOL
+    - Chế độ ăn: Rau xanh, trái cây (chống oxy hóa), cá béo (omega-3)
+    - Phòng ngừa: Đeo kính râm (bảo vệ tia UV), kiểm soát đái tháo đường, bỏ thuốc lá
+    - Khám mắt định kỳ sau 40 tuổi (mỗi 1-2 năm)
+
+41. **Xơ gan (Cirrhosis)**
+    - Rất phổ biến tại Việt Nam, thường do viêm gan B/C hoặc rượu bia
+    - Triệu chứng: Vàng da, phù chân, cổ trướng, lú lẫn (bệnh não gan)
+    - Điều trị: Điều trị nguyên nhân, điều trị biến chứng, bỏ rượu bia HOÀN TOÀN
+    - Chế độ ăn: Đủ protein (nếu không có bệnh não gan), giảm muối (< 2g/ngày nếu cổ trướng)
+    - Tránh rượu bia HOÀN TOÀN (quan trọng nhất!)
+    - Biến chứng: Xuất huyết tiêu hóa, bệnh não gan, ung thư gan
+    - Phòng ngừa: Điều trị viêm gan B/C, bỏ rượu bia, tiêm vắc xin
+
+42. **Hội chứng ruột kích thích (IBS)**
+    - Rất phổ biến (10-15% dân số), rối loạn chức năng đường tiêu hóa
+    - Triệu chứng: Đau bụng (giảm sau đại tiện), thay đổi thói quen đại tiện (tiêu chảy/táo bón)
+    - Phân loại: IBS-D (tiêu chảy), IBS-C (táo bón), IBS-M (hỗn hợp)
+    - Điều trị: Chế độ ăn FODMAP thấp, antispasmodic, quản lý stress
+    - Chế độ ăn: Tránh FODMAP (sữa, lúa mì, hành, tỏi, đậu), ghi nhật ký thức ăn
+    - Quản lý stress: Tập thể dục, yoga, thiền (quan trọng!)
+    - Triệu chứng báo động: Sụt cân, thiếu máu, chảy máu trực tràng (cần khám ngay)
+
+43. **Bệnh Parkinson (Parkinson's Disease)**
+    - Rối loạn thoái hóa thần kinh, phổ biến ở người cao tuổi
+    - Triệu chứng: Run, cứng cơ, chậm vận động, mất thăng bằng
+    - Điều trị: Levodopa/Carbidopa (thuốc đầu tay), Dopamine agonist, vật lý trị liệu
+    - Chế độ ăn: Protein cách xa uống thuốc 1 giờ (tránh giảm hấp thu Levodopa)
+    - Tập thể dục: Quan trọng! Làm chậm tiến triển, tăng cường cơ, cải thiện thăng bằng
+    - An toàn: Loại bỏ vật cản, tay vịn, tránh ngã
+    - Phòng ngừa: Tránh tiếp xúc thuốc trừ sâu, tập thể dục đều đặn
+
+44. **Vẩy nến (Psoriasis)**
+    - Bệnh viêm da mạn tính, đặc trưng bởi mảng đỏ, bong vảy bạc
+    - Triệu chứng: Mảng đỏ, bong vảy bạc (khuỷu tay, đầu gối, da đầu)
+    - Điều trị: Corticosteroid tại chỗ (nhẹ), UVB/PUVA (trung bình), Methotrexate/sinh học (nặng)
+    - Chế độ ăn: Cá béo (omega-3), rau xanh, tránh rượu bia
+    - Yếu tố kích thích: Nhiễm trùng, stress, chấn thương da, thuốc
+    - Phòng ngừa: Giảm stress, bỏ thuốc lá, hạn chế rượu bia, dưỡng ẩm da
+    - Viêm khớp vẩy nến: 30% bệnh nhân (đau, sưng khớp)
+
+45. **Rối loạn lo âu (Anxiety Disorder)**
+    - Rất phổ biến (20% dân số), lo âu, sợ hãi quá mức
+    - Phân loại: GAD, Panic Disorder, Social Anxiety, Phobia
+    - Triệu chứng: Lo âu, bồn chồn, đánh trống ngực, khó thở, đổ mồ hôi, run tay
+    - Điều trị: SSRI (Sertraline, Escitalopram), CBT, Benzodiazepine (ngắn hạn)
+    - Chế độ ăn: Tránh caffeine, rượu bia, đường; ăn thực phẩm giàu tryptophan, omega-3
+    - Tập thể dục: Quan trọng! Giảm lo âu rất hiệu quả (30 phút/ngày)
+    - Kỹ thuật thư giãn: Thở sâu, thiền, yoga
+    - Cơn hoảng sợ: Lo âu dữ dội đột ngột, đánh trống ngực, khó thở (10-30 phút)
+
+46. **Suy thận mạn tính (CKD)**
+    - Rất phổ biến tại Việt Nam, thường do đái tháo đường và tăng huyết áp
+    - Phân loại: G1-G5 theo eGFR (G5: cần lọc máu)
+    - Triệu chứng: Giai đoạn sớm không có triệu chứng, giai đoạn muộn: mệt mỏi, phù, buồn nôn, ngứa
+    - Điều trị: ACE inhibitor/ARB (làm chậm tiến triển), kiểm soát huyết áp, đường huyết
+    - Chế độ ăn: Giảm muối, protein (nếu G4-G5), hạn chế phospho, kali (nếu cao)
+    - Phòng ngừa: Kiểm soát đái tháo đường, tăng huyết áp (quan trọng!), tránh thuốc độc thận
+    - Khám định kỳ: Xét nghiệm chức năng thận mỗi 3-6 tháng nếu có đái tháo đường, tăng huyết áp
+
+47. **Suy dinh dưỡng (Malnutrition)**
+    - Rất phổ biến ở trẻ em vùng nông thôn Việt Nam
+    - Phân loại: Thấp còi (stunting), Gầy mòn (wasting), Thiếu cân (underweight)
+    - Triệu chứng: Sụt cân, chậm tăng cân, thấp còi, mệt mỏi, chậm phát triển
+    - Điều trị: Bổ sung dinh dưỡng, vi chất (sắt, kẽm, vitamin A, D), tẩy giun
+    - Chế độ ăn: Bú mẹ hoàn toàn 6 tháng đầu, ăn dặm đúng cách từ 6 tháng, đủ 4 nhóm thực phẩm
+    - Phòng ngừa: Nuôi con bằng sữa mẹ, chế độ ăn đủ và đa dạng, vệ sinh, tẩy giun định kỳ
+    - Giáo dục gia đình: Chế độ ăn đúng, vệ sinh, theo dõi tăng trưởng
+
+48. **Dị ứng thực phẩm (Food Allergy)**
+    - Rất phổ biến (5-8% trẻ em, 2-4% người lớn), có thể gây phản vệ
+    - Thực phẩm gây dị ứng: Trẻ em (trứng, sữa, đậu phộng, hải sản), người lớn (hải sản, đậu phộng)
+    - Triệu chứng: Mề đay, phù mạch, khó thở, buồn nôn, tiêu chảy
+    - Phản vệ: Khó thở nặng, hạ huyết áp, sốc (cấp cứu ngay!)
+    - Điều trị: Tránh thực phẩm gây dị ứng (quan trọng nhất!), Epinephrine auto-injector (nếu có nguy cơ phản vệ)
+    - Chế độ ăn: Tránh hoàn toàn thực phẩm gây dị ứng, đọc nhãn thực phẩm, hỏi thành phần khi ăn ngoài
+    - Phòng ngừa: Tránh thực phẩm gây dị ứng, mang epinephrine, đeo vòng cảnh báo y tế
+    - Giáo dục: Nhận biết triệu chứng, cách sử dụng epinephrine, thông báo cho nhà trường (trẻ em)
+
+49. **Viêm não Nhật Bản (Japanese Encephalitis)**
+    - Bệnh nguy hiểm, lưu hành ở vùng nông thôn Việt Nam, có thể tử vong (20-30%)
+    - Đường lây: Muỗi Culex truyền (từ lợn, chim)
+    - Triệu chứng: Sốt cao, đau đầu dữ dội, rối loạn ý thức, co giật, cứng gáy, liệt
+    - Điều trị: Hỗ trợ (không có thuốc đặc hiệu), chống co giật, hỗ trợ hô hấp, vật lý trị liệu
+    - Chế độ ăn: Nuôi ăn qua ống nếu hôn mê, ăn đủ dinh dưỡng sau khi khỏi
+    - Phòng ngừa: Tiêm vắc xin JEV (quan trọng nhất! > 95% hiệu quả), ngủ màn, tránh muỗi đốt
+    - Di chứng: Có thể có di chứng thần kinh (liệt, co giật, chậm phát triển), cần vật lý trị liệu lâu dài
+    - Lưu ý: Hầu hết nhiễm không có triệu chứng (99%), chỉ 1% có triệu chứng nhưng rất nặng
+
+50. **Rung nhĩ (Atrial Fibrillation)**
+    - Rối loạn nhịp tim phổ biến nhất, tăng nguy cơ đột quỵ (5 lần)
+    - Triệu chứng: Đánh trống ngực, khó thở, mệt mỏi, có thể không có triệu chứng
+    - Phân loại: Paroxysmal (tự hết), Persistent (> 7 ngày), Permanent
+    - Điều trị: Chống đông (Warfarin/DOAC - quan trọng!), kiểm soát nhịp tim, chuyển nhịp
+    - Chế độ ăn: Bình thường, tránh rượu bia, lưu ý vitamin K nếu dùng Warfarin
+    - Tập thể dục: Bình thường, tránh gắng sức quá mức
+    - Phòng ngừa đột quỵ: CHA2DS2-VASc score đánh giá nguy cơ, chống đông nếu có chỉ định
+    - Biến chứng: Đột quỵ (nguy hiểm nhất!), suy tim
+
+51. **Bệnh mạch vành (Coronary Artery Disease)**
+    - Nguyên nhân tử vong hàng đầu, hẹp/tắc động mạch vành do xơ vữa
+    - Triệu chứng: Đau ngực khi gắng sức (đau thắt ngực ổn định), khó thở, mệt mỏi
+    - Yếu tố nguy cơ: Tăng huyết áp, đái tháo đường, rối loạn lipid máu, hút thuốc, béo phì
+    - Điều trị: Aspirin, Statin, Beta-blocker, ACE inhibitor, PCI (đặt stent), CABG (bắc cầu)
+    - Chế độ ăn: Chế độ ăn tim mạch (giảm chất béo bão hòa, tăng cá béo, rau xanh), giảm muối
+    - Tập thể dục: Quan trọng! 30 phút/ngày, 5 ngày/tuần (cải thiện sức khỏe tim)
+    - Phòng ngừa: Kiểm soát yếu tố nguy cơ, bỏ thuốc lá, chế độ ăn lành mạnh, tập thể dục
+    - Hội chứng vành cấp: Đau ngực dữ dội, không giảm khi nghỉ (cấp cứu ngay!)
 
 ---
 

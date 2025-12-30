@@ -9284,4 +9284,5455 @@ Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng th
         related_drugs=[],
         printable=True
     ),
+    
+    # === CIRRHOSIS (XƠ GAN) ===
+    PatientEducationTopic(
+        id="cirrhosis_basics",
+        title="Understanding Cirrhosis",
+        title_vn="Hiểu về Xơ gan",
+        category="Disease",
+        content="""
+        # Hiểu về Xơ gan
+
+        ## Xơ gan là gì?
+
+        Xơ gan là tình trạng thay thế mô gan bình thường bằng mô xơ, dẫn đến suy giảm chức năng gan. Bệnh rất phổ biến tại Việt Nam, thường do viêm gan B/C mạn tính hoặc rượu bia.
+
+        **⚠️ Đặc điểm:**
+        - Mô gan bị thay thế bằng mô xơ
+        - Suy giảm chức năng gan
+        - Không thể hồi phục (nhưng có thể làm chậm tiến triển)
+        - Phổ biến ở Việt Nam
+
+        **Nguyên nhân chính tại Việt Nam:**
+        - Viêm gan B, C mạn tính (60-70%)
+        - Rượu bia (20-30%)
+        - Viêm gan nhiễm mỡ không do rượu (NAFLD)
+
+        ## Triệu chứng:
+
+        **Giai đoạn sớm (compensated):**
+        - Thường không có triệu chứng
+        - Mệt mỏi nhẹ
+        - Có thể phát hiện khi khám sức khỏe
+
+        **Giai đoạn muộn (decompensated):**
+        - **Vàng da, vàng mắt:** Bilirubin tăng
+        - **Phù chân:** Do giảm albumin
+        - **Cổ trướng:** Bụng to, đầy hơi
+        - **Mệt mỏi, suy nhược**
+        - **Xuất huyết:** Chảy máu cam, chảy máu chân răng
+        - **Lú lẫn:** Bệnh não gan
+        - **Giảm cân**
+
+        **⚠️ Biến chứng:**
+        - Xuất huyết tiêu hóa (giãn tĩnh mạch thực quản)
+        - Bệnh não gan (lú lẫn, hôn mê)
+        - Nhiễm trùng dịch cổ trướng
+        - Ung thư gan
+        - Suy gan
+
+        ## Nguyên nhân:
+
+        **1. Viêm gan B, C mạn:**
+        - Nguyên nhân #1 tại Việt Nam
+        - Không điều trị → Xơ gan
+
+        **2. Rượu bia:**
+        - Uống nhiều, lâu dài
+        - > 40g rượu/ngày (nam), > 20g (nữ)
+
+        **3. Viêm gan nhiễm mỡ:**
+        - Béo phì, đái tháo đường
+        - Không do rượu
+
+        **4. Yếu tố khác:**
+        - Bệnh gan tự miễn
+        - Thuốc
+        - Di truyền
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - Chức năng gan: Giảm albumin, tăng bilirubin, PT kéo dài
+        - Siêu âm gan: Gan nhỏ, bờ không đều
+        - FibroScan: Đánh giá độ xơ hóa
+        - Sinh thiết gan (nếu cần)
+
+        ## Điều trị:
+
+        **1. Điều trị nguyên nhân:**
+        - Diệt virus (nếu viêm gan B/C)
+        - **Bỏ rượu bia HOÀN TOÀN** (quan trọng!)
+
+        **2. Điều trị biến chứng:**
+        - **Cổ trướng:** Lợi tiểu (Furosemide, Spironolactone), giảm muối
+        - **Bệnh não gan:** Lactulose
+        - **Xuất huyết:** Beta-blocker (Propranolol), nội soi
+
+        **3. Ghép gan:**
+        - Nếu nặng, suy gan
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Protein:**
+        - **Đủ protein:** 1-1.2g/kg/ngày (nếu không có bệnh não gan)
+        - **Giảm protein:** 0.8g/kg/ngày (nếu có bệnh não gan)
+        - Protein nạc: Thịt gà, cá, trứng, đậu
+
+        **2. Muối:**
+        - **Giảm muối:** < 2g/ngày (nếu có cổ trướng)
+        - Tránh đồ mặn, chế biến sẵn
+
+        **3. Nước:**
+        - Hạn chế nước (nếu có cổ trướng): 1-1.5L/ngày
+
+        **4. Tránh:**
+        - **Rượu bia HOÀN TOÀN** (quan trọng nhất!)
+        - Đồ cay, nóng
+        - Thực phẩm chế biến sẵn
+
+        **5. Thực đơn mẫu:**
+        - **Sáng:** Cháo thịt, trứng
+        - **Trưa:** Cơm, thịt gà/cá, rau xanh, canh (không mặn)
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi ổn định:**
+        - Tập nhẹ: Đi bộ 15-20 phút/ngày
+        - Tránh gắng sức (mệt mỏi)
+
+        **2. Khi có cổ trướng:**
+        - Nghỉ ngơi, tránh tập thể dục
+
+        **3. Lưu ý:**
+        - Nghỉ ngơi nếu mệt
+        - Không tập quá mệt
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Điều trị nguyên nhân:**
+        - Tenofovir, Entecavir (nếu viêm gan B)
+        - DAA (nếu viêm gan C)
+        - **Bỏ rượu bia HOÀN TOÀN**
+
+        **2. Lợi tiểu:**
+        - Furosemide, Spironolactone (nếu cổ trướng)
+        - Theo dõi cân nặng, điện giải
+
+        **3. Lactulose:**
+        - Nếu bệnh não gan
+        - Uống để đi ngoài 2-3 lần/ngày
+
+        **4. Lưu ý:**
+        - Tránh thuốc gây độc gan
+        - Không tự ý dùng thuốc
+        - Báo bác sĩ tất cả thuốc đang dùng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Xuất huyết:**
+        - Nôn ra máu
+        - Đi ngoài phân đen
+        - **Cấp cứu ngay!**
+
+        **2. Bệnh não gan:**
+        - Lú lẫn, thay đổi tính tình
+        - Buồn ngủ, hôn mê
+        - **Cấp cứu ngay!**
+
+        **3. Nhiễm trùng:**
+        - Sốt, đau bụng
+        - Cổ trướng tăng
+
+        **4. Triệu chứng nặng:**
+        - Vàng da nặng
+        - Cổ trướng nhiều
+        - Khó thở
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Điều trị viêm gan:**
+        - Điều trị viêm gan B, C sớm
+        - Tiêm vắc xin viêm gan B
+
+        **2. Bỏ rượu bia:**
+        - **HOÀN TOÀN** nếu đã xơ gan
+        - Hạn chế nếu chưa xơ gan
+
+        **3. Kiểm soát cân nặng:**
+        - Giảm cân nếu béo phì
+        - Kiểm soát đái tháo đường
+
+        **4. Khám định kỳ:**
+        - Nếu có bệnh gan
+        - Siêu âm gan, AFP (phòng ung thư gan)
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị xơ gan:**
+        - **Bỏ rượu bia HOÀN TOÀN** (quan trọng nhất!)
+        - Điều trị nguyên nhân
+        - Chế độ ăn phù hợp
+        - Khám định kỳ
+
+        **2. Chế độ ăn:**
+        - Đủ protein (nếu không có bệnh não gan)
+        - Giảm muối (nếu có cổ trướng)
+        - Tránh rượu bia HOÀN TOÀN
+
+        **3. Sống tích cực:**
+        - Xơ gan không thể hồi phục
+        - Nhưng có thể làm chậm tiến triển
+        - Điều trị đúng → Sống lâu hơn
+
+        **4. Theo dõi:**
+        - Khám định kỳ 3-6 tháng
+        - Siêu âm gan, AFP (phòng ung thư gan)
+        - Theo dõi biến chứng
+        """,
+        related_disease="cirrhosis",
+        related_drugs=["Furosemide", "Spironolactone", "Lactulose", "Propranolol", "Tenofovir", "Entecavir"],
+        printable=True
+    ),
+    
+    # === IRRITABLE BOWEL SYNDROME (HỘI CHỨNG RUỘT KÍCH THÍCH) ===
+    PatientEducationTopic(
+        id="irritable_bowel_syndrome_basics",
+        title="Understanding Irritable Bowel Syndrome",
+        title_vn="Hiểu về Hội chứng ruột kích thích (IBS)",
+        category="Disease",
+        content="""
+        # Hiểu về Hội chứng ruột kích thích (IBS)
+
+        ## Hội chứng ruột kích thích là gì?
+
+        Hội chứng ruột kích thích (IBS) là rối loạn chức năng đường tiêu hóa mạn tính, đặc trưng bởi đau bụng và thay đổi thói quen đại tiện. Bệnh rất phổ biến tại Việt Nam, ảnh hưởng đến chất lượng cuộc sống.
+
+        **⚠️ Đặc điểm:**
+        - Rối loạn chức năng (không có tổn thương thực thể)
+        - Mạn tính, tái phát
+        - Rất phổ biến (10-15% dân số)
+        - Ảnh hưởng chất lượng cuộc sống
+
+        **Phân loại:**
+        - **IBS-D:** Tiêu chảy (diarrhea)
+        - **IBS-C:** Táo bón (constipation)
+        - **IBS-M:** Hỗn hợp (mixed)
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Đau bụng:** Giảm sau đại tiện
+        - **Thay đổi thói quen đại tiện:**
+          - Tiêu chảy (IBS-D)
+          - Táo bón (IBS-C)
+          - Xen kẽ (IBS-M)
+        - **Đầy bụng, chướng bụng**
+        - **Phân có nhầy**
+        - **Cảm giác đi không hết**
+
+        **Triệu chứng khác:**
+        - Mệt mỏi
+        - Đau lưng
+        - Triệu chứng tăng khi stress
+
+        **⚠️ Triệu chứng báo động (cần khám ngay):**
+        - Sụt cân
+        - Thiếu máu
+        - Chảy máu trực tràng
+        - Sốt
+        - Tiền sử gia đình ung thư đại tràng
+
+        ## Nguyên nhân:
+
+        **1. Nguyên nhân chưa rõ:**
+        - Rối loạn vận động ruột
+        - Tăng nhạy cảm nội tạng
+        - Rối loạn hệ vi sinh đường ruột
+
+        **2. Yếu tố kích thích:**
+        - **Stress, lo âu:** Rất quan trọng
+        - **Thức ăn:** FODMAP, lactose, gluten
+        - **Thay đổi hormone:** Kinh nguyệt
+
+        **3. Yếu tố nguy cơ:**
+        - Nữ giới (gấp 2 lần nam)
+        - Tuổi < 50
+        - Tiền sử gia đình
+        - Nhiễm trùng đường tiêu hóa trước đó
+
+        ## Chẩn đoán:
+
+        **Tiêu chuẩn Rome IV:**
+        - Đau bụng ≥ 1 ngày/tuần trong 3 tháng
+        - Có ≥ 2: liên quan đại tiện, thay đổi tần số, thay đổi hình dạng phân
+
+        **Xét nghiệm:**
+        - Công thức máu (loại trừ thiếu máu)
+        - CRP, ESR (loại trừ viêm)
+        - Test không dung nạp lactose
+        - Nội soi đại tràng (nếu có triệu chứng báo động)
+
+        ## Điều trị:
+
+        **1. Chế độ ăn FODMAP thấp:**
+        - **Tránh:** Sữa, lúa mì, hành, tỏi, đậu, trái cây có nhiều fructose
+        - **Nên ăn:** Gạo, thịt, cá, trứng, rau xanh, chuối
+        - Thử 2-6 tuần, sau đó thêm từng loại
+
+        **2. Thuốc:**
+        - **Antispasmodic:** Hyoscine, Mebeverine (giảm đau bụng)
+        - **Loperamide:** Nếu tiêu chảy
+        - **Laxative:** Nếu táo bón
+        - **Chất xơ:** Psyllium (nếu táo bón)
+        - **Probiotic:** Có thể giúp
+
+        **3. Quản lý stress:**
+        - Tập thể dục
+        - Yoga, thiền
+        - Tư vấn tâm lý (nếu cần)
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. FODMAP thấp (thử 2-6 tuần):**
+        - **Tránh:**
+          - Sữa, phô mai mềm
+          - Lúa mì, bánh mì
+          - Hành, tỏi
+          - Đậu, đậu lăng
+          - Táo, lê, xoài
+        - **Nên ăn:**
+          - Gạo, khoai tây
+          - Thịt, cá, trứng
+          - Rau xanh (rau muống, cải)
+          - Chuối, cam
+
+        **2. Ăn đều đặn:**
+        - Không bỏ bữa
+        - Ăn chậm, nhai kỹ
+        - Uống đủ nước
+
+        **3. Ghi nhật ký:**
+        - Ghi thức ăn và triệu chứng
+        - Tìm thức ăn gây triệu chứng
+
+        **4. Thực đơn mẫu (FODMAP thấp):**
+        - **Sáng:** Cơm, trứng, rau xanh
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Chuối, cam
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Nên tập:**
+        - Tập thể dục đều đặn (giảm stress, cải thiện triệu chứng)
+        - Đi bộ, chạy bộ, yoga
+        - 30 phút/ngày, 5 ngày/tuần
+
+        **2. Lưu ý:**
+        - Tránh tập ngay sau ăn
+        - Nghỉ ngơi nếu mệt
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Antispasmodic:**
+        - Hyoscine, Mebeverine
+        - Uống trước ăn (nếu đau bụng)
+
+        **2. Loperamide:**
+        - Nếu tiêu chảy
+        - Không dùng lâu dài
+
+        **3. Laxative:**
+        - Nếu táo bón
+        - Dùng ngắn hạn
+
+        **4. Probiotic:**
+        - Có thể giúp cải thiện triệu chứng
+        - Thử 4-8 tuần
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng báo động:**
+        - Sụt cân
+        - Thiếu máu
+        - Chảy máu trực tràng
+        - Sốt
+        - > 50 tuổi, triệu chứng mới
+
+        **2. Triệu chứng nặng:**
+        - Đau bụng dữ dội
+        - Tiêu chảy nhiều, mất nước
+        - Táo bón nặng
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Chế độ ăn:**
+        - Tránh thức ăn kích thích
+        - Ăn đều đặn
+        - Ghi nhật ký
+
+        **2. Quản lý stress:**
+        - Tập thể dục
+        - Yoga, thiền
+        - Ngủ đủ giấc
+
+        **3. Tập thể dục:**
+        - Đều đặn
+        - Giảm stress
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị IBS:**
+        - Chế độ ăn FODMAP thấp (thử)
+        - Quản lý stress (quan trọng!)
+        - Tập thể dục đều đặn
+        - Ghi nhật ký thức ăn
+
+        **2. Sống tích cực:**
+        - IBS không nguy hiểm
+        - Có thể kiểm soát
+        - Điều trị đúng → Giảm triệu chứng
+
+        **3. Hỗ trợ:**
+        - Tham gia nhóm hỗ trợ
+        - Tư vấn tâm lý (nếu cần)
+        """,
+        related_disease="irritable_bowel_syndrome",
+        related_drugs=["Hyoscine", "Mebeverine", "Loperamide", "Psyllium", "Probiotic"],
+        printable=True
+    ),
+    
+    # === PARKINSON'S DISEASE (BỆNH PARKINSON) ===
+    PatientEducationTopic(
+        id="parkinson_disease_basics",
+        title="Understanding Parkinson's Disease",
+        title_vn="Hiểu về Bệnh Parkinson",
+        category="Disease",
+        content="""
+        # Hiểu về Bệnh Parkinson
+
+        ## Bệnh Parkinson là gì?
+
+        Bệnh Parkinson là rối loạn thoái hóa thần kinh, đặc trưng bởi run, cứng cơ, chậm vận động, mất thăng bằng. Bệnh phổ biến ở người cao tuổi, ảnh hưởng đến vận động và chất lượng cuộc sống.
+
+        **⚠️ Đặc điểm:**
+        - Thoái hóa tế bào thần kinh sản xuất dopamine
+        - Tiến triển từ từ
+        - Phổ biến ở người cao tuổi (> 60 tuổi)
+        - Không thể chữa khỏi, nhưng có thể kiểm soát
+
+        **Triệu chứng chính (4 triệu chứng):**
+        - Run (tremor)
+        - Cứng cơ (rigidity)
+        - Chậm vận động (bradykinesia)
+        - Mất thăng bằng (postural instability)
+
+        ## Triệu chứng:
+
+        **Triệu chứng vận động:**
+        - **Run:** Khi nghỉ, giảm khi vận động, thường bắt đầu một bên
+        - **Cứng cơ:** Cứng khớp, đau cơ
+        - **Chậm vận động:** Cử động chậm, khó khăn
+        - **Mất thăng bằng:** Dễ ngã
+        - **Dáng đi:** Bước nhỏ, không vung tay, khó quay đầu
+
+        **Triệu chứng khác:**
+        - Giảm biểu cảm mặt (mặt nạ)
+        - Rối loạn giọng nói (nói nhỏ, đơn điệu)
+        - Rối loạn nuốt
+        - Rối loạn viết (chữ nhỏ)
+        - Táo bón
+        - Rối loạn giấc ngủ
+        - Trầm cảm
+
+        **⚠️ Giai đoạn muộn:**
+        - Tàn tật
+        - Suy giảm nhận thức
+        - Rối loạn nuốt, viêm phổi hít
+
+        ## Nguyên nhân:
+
+        **1. Thoái hóa tế bào thần kinh:**
+        - Tế bào sản xuất dopamine bị chết
+        - Nguyên nhân chưa rõ
+
+        **2. Yếu tố nguy cơ:**
+        - Tuổi cao (> 60 tuổi)
+        - Nam giới (tỷ lệ cao hơn nữ)
+        - Tiền sử gia đình
+        - Tiếp xúc thuốc trừ sâu, kim loại nặng
+
+        ## Chẩn đoán:
+
+        **Khám:**
+        - Triệu chứng lâm sàng: ≥ 2 trong 4 triệu chứng chính
+        - Đáp ứng với Levodopa
+        - MRI não (loại trừ bệnh khác)
+
+        ## Điều trị:
+
+        **1. Levodopa/Carbidopa:**
+        - Thuốc đầu tay
+        - Bổ sung dopamine
+        - Uống 3-4 lần/ngày
+
+        **2. Dopamine agonist:**
+        - Pramipexole, Ropinirole
+        - Dùng sớm, trẻ tuổi
+
+        **3. MAO-B inhibitor:**
+        - Selegiline, Rasagiline
+        - Làm chậm tiến triển
+
+        **4. Vật lý trị liệu:**
+        - Tập vận động
+        - Tăng cường cơ
+        - Cải thiện thăng bằng
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Protein:**
+        - **Lưu ý:** Protein có thể giảm hấp thu Levodopa
+        - Ăn protein cách xa uống thuốc 1 giờ
+        - Hoặc ăn protein vào bữa tối
+
+        **2. Chất xơ:**
+        - Rau xanh, trái cây (phòng táo bón)
+        - Uống nhiều nước
+
+        **3. Tránh:**
+        - Rượu bia (ảnh hưởng thuốc)
+        - Caffeine quá nhiều (ảnh hưởng giấc ngủ)
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo/cơm, trứng (sau uống thuốc 1 giờ)
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Quan trọng!**
+        - Tập thể dục đều đặn (làm chậm tiến triển)
+        - Tăng cường cơ, cải thiện thăng bằng
+
+        **2. Loại bài tập:**
+        - **Đi bộ:** 30 phút/ngày
+        - **Tập tăng cường cơ:** Tạ nhẹ
+        - **Tập thăng bằng:** Yoga, thái cực quyền
+        - **Vật lý trị liệu:** Có hướng dẫn
+
+        **3. Lưu ý:**
+        - Tránh ngã (quan trọng!)
+        - Tập nhẹ nhàng, tăng dần
+        - Nghỉ ngơi nếu mệt
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Levodopa/Carbidopa:**
+        - Uống 3-4 lần/ngày
+        - Uống trước ăn 30 phút (hấp thu tốt hơn)
+        - **Không uống với protein** (giảm hấp thu)
+
+        **2. Tác dụng phụ:**
+        - Buồn nôn (uống sau ăn nếu cần)
+        - Rối loạn vận động (dyskinesia) - nếu dùng lâu
+        - Ảo giác (hiếm)
+
+        **3. Lưu ý:**
+        - Uống đều đặn, đúng giờ
+        - Không tự ý ngừng (nguy hiểm!)
+        - Báo bác sĩ nếu có tác dụng phụ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Ngã:**
+        - Ngã, chấn thương
+        - Gãy xương
+
+        **2. Rối loạn nuốt:**
+        - Khó nuốt, sặc
+        - Viêm phổi hít
+
+        **3. Tác dụng phụ nặng:**
+        - Ảo giác
+        - Rối loạn vận động nặng
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Không có cách phòng ngừa:**
+        - Nguyên nhân chưa rõ
+
+        **2. Có thể giảm nguy cơ:**
+        - Tránh tiếp xúc thuốc trừ sâu
+        - Tập thể dục đều đặn
+        - Ăn đủ dinh dưỡng
+
+        **3. Phát hiện sớm:**
+        - Khám khi có triệu chứng
+        - Điều trị sớm → Tốt hơn
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị Parkinson:**
+        - Uống thuốc đều đặn, đúng cách
+        - Tập thể dục đều đặn (quan trọng!)
+        - Vật lý trị liệu
+        - Hỗ trợ gia đình
+
+        **2. An toàn:**
+        - Loại bỏ vật cản trong nhà
+        - Tay vịn cầu thang, phòng tắm
+        - Mang giày chắc chắn
+        - Tránh ngã
+
+        **3. Sống tích cực:**
+        - Parkinson có thể kiểm soát
+        - Điều trị đúng → Cải thiện triệu chứng
+        - Có thể sống lâu, chất lượng cuộc sống tốt
+
+        **4. Hỗ trợ:**
+        - Tham gia nhóm hỗ trợ
+        - Giáo dục gia đình
+        - Tư vấn tâm lý (nếu cần)
+        """,
+        related_disease="parkinson_disease",
+        related_drugs=["Levodopa", "Carbidopa", "Pramipexole", "Ropinirole", "Selegiline"],
+        printable=True
+    ),
+    
+    # === PSORIASIS (VẨY NẾN) ===
+    PatientEducationTopic(
+        id="psoriasis_basics",
+        title="Understanding Psoriasis",
+        title_vn="Hiểu về Vẩy nến",
+        category="Disease",
+        content="""
+        # Hiểu về Vẩy nến
+
+        ## Vẩy nến là gì?
+
+        Vẩy nến là bệnh viêm da mạn tính, đặc trưng bởi các mảng đỏ, bong vảy bạc, tái phát. Bệnh ảnh hưởng đến thẩm mỹ và chất lượng cuộc sống.
+
+        **⚠️ Đặc điểm:**
+        - Viêm da mạn tính, tái phát
+        - Mảng đỏ, bong vảy bạc
+        - Không lây
+        - Có thể ảnh hưởng khớp (viêm khớp vẩy nến)
+
+        **Phân loại:**
+        - **Vẩy nến mảng:** Phổ biến nhất
+        - **Vẩy nến giọt:** Tổn thương nhỏ
+        - **Viêm khớp vẩy nến:** 30% bệnh nhân
+
+        ## Triệu chứng:
+
+        **Triệu chứng da:**
+        - **Mảng đỏ, bong vảy bạc:** Đặc trưng
+        - **Vị trí:** Khuỷu tay, đầu gối, da đầu, thân mình
+        - **Ngứa:** Nhẹ đến trung bình
+        - **Tổn thương móng:** Rỗ, dày, tách móng
+
+        **Triệu chứng khớp (viêm khớp vẩy nến):**
+        - Đau, sưng khớp
+        - Cứng khớp buổi sáng
+        - Thường khớp ngón tay, chân
+
+        **⚠️ Yếu tố kích thích:**
+        - Nhiễm trùng (viêm họng)
+        - Stress
+        - Chấn thương da
+        - Thuốc (beta-blocker, lithium)
+        - Rượu bia, hút thuốc
+
+        ## Nguyên nhân:
+
+        **1. Yếu tố di truyền:**
+        - Có tiền sử gia đình
+
+        **2. Yếu tố miễn dịch:**
+        - Rối loạn hệ miễn dịch
+
+        **3. Yếu tố kích thích:**
+        - Nhiễm trùng
+        - Stress
+        - Chấn thương da
+        - Thuốc
+
+        ## Chẩn đoán:
+
+        **Khám:**
+        - Triệu chứng lâm sàng điển hình
+        - Dấu hiệu Auspitz (chảy máu khi cạo vảy)
+        - Sinh thiết da (nếu không rõ)
+
+        ## Điều trị:
+
+        **1. Nhẹ (< 5% diện tích):**
+        - Corticosteroid tại chỗ
+        - Vitamin D analogues (Calcipotriol)
+        - Dưỡng ẩm
+
+        **2. Trung bình (5-10%):**
+        - Quang trị liệu (UVB, PUVA)
+        - Kết hợp thuốc tại chỗ
+
+        **3. Nặng (> 10%):**
+        - Methotrexate, Cyclosporine
+        - Sinh học: Adalimumab, Etanercept
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Chống viêm:**
+        - Cá béo (omega-3)
+        - Rau xanh, trái cây
+        - Tránh thực phẩm chế biến sẵn
+
+        **2. Tránh:**
+        - Rượu bia (kích thích)
+        - Thực phẩm gây dị ứng (nếu biết)
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Trứng, rau xanh, trái cây
+        - **Trưa:** Cơm, cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, hạt
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Nên tập:**
+        - Tập thể dục đều đặn (giảm stress)
+        - Đi bộ, chạy bộ, bơi lội
+        - 30 phút/ngày, 5 ngày/tuần
+
+        **2. Viêm khớp vẩy nến:**
+        - Tập nhẹ nhàng
+        - Vật lý trị liệu
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Thuốc tại chỗ:**
+        - Corticosteroid: Bôi mỏng, 1-2 lần/ngày
+        - Calcipotriol: Bôi 1-2 lần/ngày
+        - Không dùng lâu dài (teo da)
+
+        **2. Thuốc toàn thân:**
+        - Methotrexate: Uống 1 lần/tuần
+        - Theo dõi chức năng gan, thận
+
+        **3. Lưu ý:**
+        - Bôi đều đặn
+        - Không tự ý ngừng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Tổn thương lan rộng:**
+        - > 10% diện tích da
+        - Không đáp ứng điều trị
+
+        **2. Viêm khớp:**
+        - Đau, sưng khớp
+        - Cần điều trị
+
+        **3. Nhiễm trùng:**
+        - Da đỏ, sưng, đau
+        - Mủ
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tránh yếu tố kích thích:**
+        - Giảm stress
+        - Tránh chấn thương da
+        - Điều trị nhiễm trùng sớm
+
+        **2. Lối sống:**
+        - Bỏ thuốc lá
+        - Hạn chế rượu bia
+        - Dưỡng ẩm da
+
+        **3. Tập thể dục:**
+        - Giảm stress
+        - Cải thiện sức khỏe
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị vẩy nến:**
+        - Dưỡng ẩm da thường xuyên
+        - Bôi thuốc đúng cách
+        - Tránh yếu tố kích thích
+        - Giảm stress
+
+        **2. Sống tích cực:**
+        - Vẩy nến có thể kiểm soát
+        - Điều trị đúng → Giảm tổn thương
+        - Có thể sống bình thường
+
+        **3. Hỗ trợ:**
+        - Tham gia nhóm hỗ trợ
+        - Tư vấn tâm lý (nếu cần)
+        """,
+        related_disease="psoriasis",
+        related_drugs=["Topical Corticosteroid", "Calcipotriol", "Methotrexate", "Cyclosporine", "Adalimumab"],
+        printable=True
+    ),
+    
+    # === ANXIETY DISORDER (RỐI LOẠN LO ÂU) ===
+    PatientEducationTopic(
+        id="anxiety_disorder_basics",
+        title="Understanding Anxiety Disorder",
+        title_vn="Hiểu về Rối loạn lo âu",
+        category="Disease",
+        content="""
+        # Hiểu về Rối loạn lo âu
+
+        ## Rối loạn lo âu là gì?
+
+        Rối loạn lo âu là nhóm bệnh đặc trưng bởi lo âu, sợ hãi quá mức, ảnh hưởng đến cuộc sống hàng ngày. Bệnh rất phổ biến, có thể điều trị hiệu quả.
+
+        **⚠️ Đặc điểm:**
+        - Lo âu, sợ hãi quá mức
+        - Ảnh hưởng cuộc sống hàng ngày
+        - Rất phổ biến (20% dân số)
+        - Có thể điều trị hiệu quả
+
+        **Phân loại:**
+        - **GAD (Generalized Anxiety Disorder):** Lo âu lan tỏa
+        - **Panic Disorder:** Cơn hoảng sợ
+        - **Social Anxiety:** Lo âu xã hội
+        - **Phobia:** Ám ảnh sợ
+
+        ## Triệu chứng:
+
+        **Triệu chứng tâm thần:**
+        - **Lo âu, lo lắng quá mức:** Kéo dài
+        - **Bồn chồn, căng thẳng**
+        - **Khó tập trung**
+        - **Sợ hãi:** Sợ điều tồi tệ sẽ xảy ra
+
+        **Triệu chứng thể chất:**
+        - **Đánh trống ngực:** Tim đập nhanh
+        - **Khó thở:** Cảm giác nghẹt thở
+        - **Đổ mồ hôi:** Lòng bàn tay, nách
+        - **Run tay**
+        - **Chóng mặt**
+        - **Buồn nôn**
+        - **Rối loạn giấc ngủ**
+
+        **Cơn hoảng sợ (Panic Attack):**
+        - Lo âu dữ dội đột ngột
+        - Đánh trống ngực, khó thở
+        - Cảm giác sắp chết
+        - Kéo dài 10-30 phút
+
+        ## Nguyên nhân:
+
+        **1. Yếu tố di truyền:**
+        - Tiền sử gia đình
+
+        **2. Yếu tố môi trường:**
+        - Stress, sang chấn
+        - Căng thẳng công việc, gia đình
+
+        **3. Rối loạn chất dẫn truyền thần kinh:**
+        - Serotonin, norepinephrine
+
+        **4. Bệnh thực thể:**
+        - Cường giáp
+        - Rối loạn nhịp tim
+
+        ## Chẩn đoán:
+
+        **Tiêu chuẩn:**
+        - Triệu chứng lo âu kéo dài ≥ 6 tháng
+        - Ảnh hưởng chức năng hàng ngày
+        - Loại trừ: do chất, bệnh thực thể
+
+        ## Điều trị:
+
+        **1. SSRI (thuốc đầu tay):**
+        - Sertraline, Escitalopram
+        - Bắt đầu liều thấp, tăng dần
+        - Cần 2-4 tuần để thấy hiệu quả
+
+        **2. Liệu pháp tâm lý:**
+        - CBT (Cognitive Behavioral Therapy)
+        - Rất hiệu quả
+
+        **3. Benzodiazepine (ngắn hạn):**
+        - Alprazolam, Lorazepam
+        - Cơn cấp, ngắn hạn
+        - **Không dùng lâu dài** (gây nghiện)
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Tránh:**
+        - **Caffeine:** Cà phê, trà, nước ngọt (kích thích lo âu)
+        - **Rượu bia:** Tạm thời giảm, nhưng tăng lo âu sau
+        - **Đường:** Tăng và giảm đường huyết → Lo âu
+
+        **2. Nên ăn:**
+        - **Thực phẩm giàu tryptophan:** Chuối, sữa, gà tây
+        - **Omega-3:** Cá béo
+        - **Magnesium:** Rau xanh, hạt
+        - **Ăn đều đặn:** Không bỏ bữa
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Cháo yến mạch, sữa, trái cây
+        - **Trưa:** Cơm, cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Hạt, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Quan trọng!**
+        - Tập thể dục đều đặn (giảm lo âu rất hiệu quả)
+        - Giải phóng endorphin
+
+        **2. Loại bài tập:**
+        - **Đi bộ, chạy bộ:** 30 phút/ngày
+        - **Yoga, thiền:** Rất tốt cho lo âu
+        - **Bơi lội:** Thư giãn
+        - **5 ngày/tuần**
+
+        **3. Lưu ý:**
+        - Bắt đầu nhẹ, tăng dần
+        - Tập đều đặn (quan trọng!)
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. SSRI:**
+        - Sertraline, Escitalopram
+        - Uống đều đặn, đúng giờ
+        - Cần 2-4 tuần để thấy hiệu quả
+        - **Không tự ý ngừng** (triệu chứng tái phát)
+
+        **2. Tác dụng phụ:**
+        - Buồn nôn (tạm thời)
+        - Buồn ngủ hoặc mất ngủ
+        - Giảm ham muốn tình dục
+
+        **3. Lưu ý:**
+        - Uống đủ thời gian (6-12 tháng)
+        - Giảm dần liều khi ngừng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Cơn hoảng sợ:**
+        - Lo âu dữ dội
+        - Đánh trống ngực, khó thở
+        - Cảm giác sắp chết
+
+        **2. Ý nghĩ tự tử:**
+        - **Cấp cứu ngay!**
+
+        **3. Triệu chứng nặng:**
+        - Không thể làm việc
+        - Không thể ra khỏi nhà
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Quản lý stress:**
+        - Tập thể dục
+        - Yoga, thiền
+        - Ngủ đủ giấc
+
+        **2. Tránh:**
+        - Caffeine
+        - Rượu bia
+        - Stress quá mức
+
+        **3. Hỗ trợ:**
+        - Nói chuyện với người thân
+        - Tư vấn tâm lý
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị lo âu:**
+        - Uống thuốc đều đặn
+        - Tập thể dục (quan trọng!)
+        - Tránh caffeine, rượu bia
+        - Quản lý stress
+
+        **2. Kỹ thuật thư giãn:**
+        - Thở sâu (4-7-8)
+        - Thiền
+        - Yoga
+
+        **3. Sống tích cực:**
+        - Rối loạn lo âu có thể điều trị hiệu quả
+        - Điều trị đúng → Giảm triệu chứng
+        - Có thể sống bình thường
+
+        **4. Hỗ trợ:**
+        - Tham gia nhóm hỗ trợ
+        - Tư vấn tâm lý
+        - Nói chuyện với người thân
+        """,
+        related_disease="anxiety_disorder",
+        related_drugs=["Sertraline", "Escitalopram", "Alprazolam", "Lorazepam", "Propranolol"],
+        printable=True
+    ),
+    
+    # === CHRONIC KIDNEY DISEASE (SUY THẬN MẠN TÍNH) ===
+    PatientEducationTopic(
+        id="chronic_kidney_disease_basics",
+        title="Understanding Chronic Kidney Disease",
+        title_vn="Hiểu về Suy thận mạn tính (CKD)",
+        category="Disease",
+        content="""
+        # Hiểu về Suy thận mạn tính (CKD)
+
+        ## Suy thận mạn tính là gì?
+
+        Suy thận mạn tính là tình trạng suy giảm chức năng thận mạn tính, kéo dài ≥ 3 tháng. Bệnh rất phổ biến tại Việt Nam, thường do đái tháo đường và tăng huyết áp.
+
+        **⚠️ Đặc điểm:**
+        - Suy giảm chức năng thận mạn tính
+        - Tiến triển từ từ
+        - Phổ biến tại Việt Nam
+        - Có thể dẫn đến lọc máu/ghép thận
+
+        **Phân loại theo KDIGO:**
+        - **G1-G2:** eGFR ≥ 60 (tổn thương thận, chức năng bình thường)
+        - **G3a-G3b:** eGFR 30-59 (suy thận nhẹ-trung bình)
+        - **G4:** eGFR 15-29 (suy thận nặng)
+        - **G5:** eGFR < 15 (suy thận giai đoạn cuối - cần lọc máu)
+
+        ## Triệu chứng:
+
+        **Giai đoạn sớm (G1-G3):**
+        - Thường không có triệu chứng
+        - Có thể phát hiện khi khám sức khỏe
+
+        **Giai đoạn muộn (G4-G5):**
+        - **Mệt mỏi, suy nhược:** Do thiếu máu
+        - **Phù:** Chân, mặt
+        - **Buồn nôn, nôn:** Do ure cao
+        - **Ngứa:** Do tích tụ độc tố
+        - **Thiếu máu:** Da xanh, mệt mỏi
+        - **Tăng huyết áp**
+        - **Xương yếu:** Do rối loạn canxi, phospho
+
+        **⚠️ Giai đoạn cuối (ESRD):**
+        - Cần lọc máu hoặc ghép thận
+        - Nhiều biến chứng
+
+        ## Nguyên nhân:
+
+        **1. Đái tháo đường:**
+        - Nguyên nhân #1 tại Việt Nam
+        - Bệnh thận đái tháo đường
+
+        **2. Tăng huyết áp:**
+        - Nguyên nhân #2
+        - Bệnh thận do tăng huyết áp
+
+        **3. Viêm cầu thận:**
+        - Viêm cầu thận mạn
+
+        **4. Yếu tố khác:**
+        - Bệnh thận đa nang
+        - Thuốc độc thận (NSAID, kháng sinh)
+        - Tắc nghẽn đường tiết niệu
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Creatinine, eGFR:** Đánh giá chức năng thận
+        - **Albumin niệu (UACR):** Đánh giá tổn thương thận
+        - Công thức máu (thiếu máu)
+        - Điện giải, canxi, phospho
+
+        ## Điều trị:
+
+        **1. Làm chậm tiến triển:**
+        - **ACE inhibitor hoặc ARB:** Nếu có protein niệu
+        - **Kiểm soát huyết áp:** < 130/80 mmHg
+        - **Kiểm soát đường huyết:** Nếu đái tháo đường
+        - **Statin:** Giảm cholesterol
+
+        **2. Điều trị biến chứng:**
+        - **Thiếu máu:** Erythropoietin, sắt
+        - **Rối loạn canxi, phospho:** Bổ sung canxi, hạn chế phospho
+        - **Toan máu:** Bicarbonate
+
+        **3. Lọc máu:**
+        - Nếu CKD giai đoạn 5 (eGFR < 15)
+        - Thẩm phân phúc mạc hoặc chạy thận nhân tạo
+
+        **4. Ghép thận:**
+        - Nếu phù hợp
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Protein:**
+        - **Giai đoạn sớm (G1-G3):** Bình thường (0.8-1g/kg/ngày)
+        - **Giai đoạn muộn (G4-G5):** Giảm (0.6-0.8g/kg/ngày)
+        - Protein chất lượng cao: Thịt, cá, trứng, sữa
+
+        **2. Muối:**
+        - **Giảm muối:** < 2g/ngày (nếu tăng huyết áp, phù)
+        - Tránh đồ mặn, chế biến sẵn
+
+        **3. Phospho:**
+        - **Hạn chế:** Nếu phospho cao (G4-G5)
+        - Tránh: Sữa, phô mai, đậu, hạt, đồ uống có ga
+
+        **4. Kali:**
+        - **Hạn chế:** Nếu kali cao (G4-G5)
+        - Tránh: Chuối, cam, khoai tây, cà chua
+
+        **5. Nước:**
+        - Uống đủ nước (nếu không phù)
+        - Hạn chế nếu có phù
+
+        **6. Thực đơn mẫu (G1-G3):**
+        - **Sáng:** Cháo thịt, trứng
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh (không mặn)
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây (tránh chuối, cam nếu G4-G5)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Nên tập:**
+        - Tập thể dục đều đặn (cải thiện chức năng thận)
+        - Đi bộ, chạy bộ, bơi lội
+        - 30 phút/ngày, 5 ngày/tuần
+
+        **2. Lưu ý:**
+        - Tránh gắng sức quá mức
+        - Nghỉ ngơi nếu mệt
+        - Uống đủ nước
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. ACE inhibitor/ARB:**
+        - Làm chậm tiến triển (nếu có protein niệu)
+        - Theo dõi chức năng thận, kali
+
+        **2. Kiểm soát huyết áp:**
+        - < 130/80 mmHg
+        - Dùng thuốc đều đặn
+
+        **3. Tránh thuốc độc thận:**
+        - NSAID (Ibuprofen, Naproxen)
+        - Một số kháng sinh
+        - Báo bác sĩ tất cả thuốc đang dùng
+
+        **4. Lưu ý:**
+        - Không tự ý dùng thuốc
+        - Theo dõi chức năng thận định kỳ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Suy thận nặng:**
+        - eGFR < 15
+        - Cần lọc máu
+
+        **2. Biến chứng:**
+        - Phù phổi (khó thở)
+        - Rối loạn điện giải nặng
+        - Toan máu nặng
+
+        **3. Triệu chứng nặng:**
+        - Buồn nôn, nôn nhiều
+        - Lú lẫn
+        - Co giật
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Kiểm soát đái tháo đường:**
+        - Đường huyết ổn định
+        - HbA1c < 7%
+
+        **2. Kiểm soát huyết áp:**
+        - Huyết áp < 130/80 mmHg
+        - Dùng thuốc đều đặn
+
+        **3. Tránh thuốc độc thận:**
+        - Không tự ý dùng NSAID
+        - Báo bác sĩ tất cả thuốc
+
+        **4. Khám định kỳ:**
+        - Nếu có đái tháo đường, tăng huyết áp
+        - Xét nghiệm chức năng thận mỗi 3-6 tháng
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị suy thận mạn:**
+        - Kiểm soát đái tháo đường, huyết áp (quan trọng!)
+        - Chế độ ăn phù hợp
+        - Tránh thuốc độc thận
+        - Khám định kỳ
+
+        **2. Chế độ ăn:**
+        - Giảm muối, protein (nếu cần)
+        - Hạn chế phospho, kali (nếu G4-G5)
+        - Uống đủ nước
+
+        **3. Sống tích cực:**
+        - Suy thận mạn có thể làm chậm tiến triển
+        - Điều trị đúng → Làm chậm tiến triển
+        - Có thể sống lâu, chất lượng cuộc sống tốt
+
+        **4. Chuẩn bị lọc máu:**
+        - Nếu CKD giai đoạn 4-5
+        - Tạo cầu nối AV fistula sớm
+        - Giáo dục về lọc máu
+        """,
+        related_disease="chronic_kidney_disease",
+        related_drugs=["ACE Inhibitor", "ARB", "Erythropoietin", "Furosemide"],
+        printable=True
+    ),
+    
+    # === MALNUTRITION (SUY DINH DƯỠNG) ===
+    PatientEducationTopic(
+        id="malnutrition_basics",
+        title="Understanding Malnutrition",
+        title_vn="Hiểu về Suy dinh dưỡng",
+        category="Disease",
+        content="""
+        # Hiểu về Suy dinh dưỡng
+
+        ## Suy dinh dưỡng là gì?
+
+        Suy dinh dưỡng là tình trạng thiếu hụt dinh dưỡng, rất phổ biến ở trẻ em vùng nông thôn Việt Nam. Bệnh ảnh hưởng đến phát triển thể chất và trí tuệ của trẻ.
+
+        **⚠️ Đặc điểm:**
+        - Thiếu hụt dinh dưỡng
+        - Rất phổ biến ở trẻ em Việt Nam
+        - Ảnh hưởng phát triển thể chất và trí tuệ
+        - Có thể phòng ngừa và điều trị
+
+        **Phân loại:**
+        - **Thấp còi (Stunting):** Chiều cao thấp so với tuổi
+        - **Gầy mòn (Wasting):** Cân nặng thấp so với chiều cao
+        - **Thiếu cân (Underweight):** Cân nặng thấp so với tuổi
+        - **Thiếu vi chất:** Thiếu sắt, kẽm, vitamin A, D
+
+        ## Triệu chứng:
+
+        **Triệu chứng thể chất:**
+        - **Sụt cân, chậm tăng cân:** Không tăng cân đều
+        - **Thấp còi:** Chiều cao thấp so với tuổi
+        - **Gầy mòn:** Cân nặng thấp so với chiều cao
+        - **Da khô, tóc khô, dễ rụng**
+        - **Mệt mỏi, kém hoạt động**
+
+        **Triệu chứng nặng:**
+        - **Phù:** Nếu thiếu protein nặng (kwashiorkor)
+        - **Teo cơ:** Cơ bắp yếu
+        - **Chậm phát triển tâm thần vận động**
+
+        **Triệu chứng thiếu vi chất:**
+        - **Thiếu sắt:** Thiếu máu, mệt mỏi
+        - **Thiếu kẽm:** Chậm tăng trưởng, nhiễm trùng
+        - **Thiếu vitamin A:** Khô mắt, giảm thị lực
+        - **Thiếu vitamin D:** Còi xương
+
+        ## Nguyên nhân:
+
+        **1. Thiếu cung cấp:**
+        - Nghèo đói, thiếu thức ăn
+        - Chế độ ăn không đủ, không đa dạng
+        - Thiếu kiến thức dinh dưỡng
+
+        **2. Kém hấp thu:**
+        - Bệnh tiêu hóa
+        - Nhiễm ký sinh trùng (giun)
+        - Tiêu chảy mạn tính
+
+        **3. Tăng nhu cầu:**
+        - Bệnh mạn tính
+        - Nhiễm trùng
+        - Trẻ em đang lớn
+
+        **4. Yếu tố xã hội:**
+        - Vệ sinh kém
+        - Nước sạch không đủ
+
+        ## Chẩn đoán:
+
+        **Đánh giá nhân trắc:**
+        - Đo cân nặng, chiều cao
+        - Tính Z-score (WHO growth charts)
+        - **Z-score < -2 SD:** Suy dinh dưỡng
+
+        **Phân loại:**
+        - **Nhẹ:** -2 đến -3 SD
+        - **Trung bình:** -3 đến -4 SD
+        - **Nặng:** < -4 SD
+
+        ## Điều trị:
+
+        **1. Bổ sung dinh dưỡng:**
+        - **Sữa công thức đặc biệt:** Nếu trẻ nhỏ
+        - **Thức ăn bổ sung:** Đủ protein, calo
+        - **Tăng dần:** Từ ít đến nhiều
+
+        **2. Bổ sung vi chất:**
+        - **Sắt:** Nếu thiếu máu
+        - **Kẽm:** Tăng trưởng, miễn dịch
+        - **Vitamin A:** Mắt, miễn dịch
+        - **Vitamin D:** Xương
+
+        **3. Điều trị nguyên nhân:**
+        - Điều trị bệnh tiêu hóa
+        - Tẩy giun
+        - Điều trị nhiễm trùng
+
+        **4. Giáo dục gia đình:**
+        - Chế độ ăn đúng
+        - Vệ sinh
+        - Theo dõi tăng trưởng
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Trẻ < 6 tháng:**
+        - **Bú mẹ hoàn toàn** (quan trọng nhất!)
+        - Không cho ăn dặm sớm
+
+        **2. Trẻ 6-24 tháng:**
+        - **Tiếp tục bú mẹ** + Ăn dặm
+        - **Ăn dặm đúng cách:**
+          - Bắt đầu từ 6 tháng
+          - Đủ 4 nhóm: Tinh bột, protein, chất béo, rau xanh
+          - Ăn đa dạng, đủ lượng
+
+        **3. Trẻ > 2 tuổi:**
+        - **Ăn đủ 3 bữa chính + 2-3 bữa phụ**
+        - **Đủ 4 nhóm thực phẩm:**
+          - Tinh bột: Cơm, bánh mì, mì
+          - Protein: Thịt, cá, trứng, đậu
+          - Chất béo: Dầu, mỡ
+          - Rau xanh, trái cây
+
+        **4. Thực đơn mẫu (trẻ 2-5 tuổi):**
+        - **Sáng:** Cháo thịt/cá, trứng, rau
+        - **Bữa phụ:** Sữa, trái cây
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh, dầu ăn
+        - **Bữa phụ:** Sữa, bánh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh, dầu ăn
+        - **Bữa phụ:** Sữa, trái cây
+
+        **5. Lưu ý:**
+        - Ăn đủ lượng, đủ chất
+        - Đa dạng thực phẩm
+        - Thêm dầu ăn (tăng calo)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Trẻ em:**
+        - Vận động, chơi đùa bình thường
+        - Không hạn chế vận động
+
+        **2. Lưu ý:**
+        - Tránh gắng sức quá mức (nếu suy dinh dưỡng nặng)
+        - Tăng dần khi đã cải thiện
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Bổ sung vi chất:**
+        - **Sắt:** Nếu thiếu máu (theo chỉ định)
+        - **Kẽm:** Tăng trưởng, miễn dịch
+        - **Vitamin A:** Mắt, miễn dịch
+        - **Vitamin D:** Xương
+
+        **2. Tẩy giun:**
+        - Định kỳ 6 tháng/lần (nếu > 2 tuổi)
+        - Albendazole, Mebendazole
+
+        **3. Lưu ý:**
+        - Theo chỉ định bác sĩ
+        - Không tự ý dùng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Suy dinh dưỡng nặng:**
+        - Z-score < -4 SD
+        - Phù (kwashiorkor)
+        - Không ăn được
+
+        **2. Biến chứng:**
+        - Nhiễm trùng nặng
+        - Thiếu máu nặng
+        - Mất nước
+
+        **3. Không cải thiện:**
+        - Sau 2-3 tháng điều trị
+        - Cần đánh giá lại
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Nuôi con bằng sữa mẹ:**
+        - Bú mẹ hoàn toàn 6 tháng đầu
+        - Tiếp tục bú mẹ đến 2 tuổi
+
+        **2. Chế độ ăn:**
+        - Ăn dặm đúng cách từ 6 tháng
+        - Đủ 4 nhóm thực phẩm
+        - Ăn đa dạng, đủ lượng
+
+        **3. Vệ sinh:**
+        - Rửa tay thường xuyên
+        - Nước sạch
+        - Vệ sinh thực phẩm
+
+        **4. Tẩy giun:**
+        - Định kỳ 6 tháng/lần (trẻ > 2 tuổi)
+
+        **5. Theo dõi:**
+        - Đo cân nặng, chiều cao định kỳ
+        - Phát hiện sớm
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi trẻ bị suy dinh dưỡng:**
+        - Bổ sung dinh dưỡng đúng cách
+        - Điều trị nguyên nhân
+        - Theo dõi tăng trưởng
+        - Giáo dục gia đình
+
+        **2. Chế độ ăn:**
+        - Bú mẹ (nếu có thể)
+        - Ăn đủ 4 nhóm thực phẩm
+        - Ăn đa dạng, đủ lượng
+        - Thêm dầu ăn (tăng calo)
+
+        **3. Sống tích cực:**
+        - Suy dinh dưỡng có thể điều trị
+        - Điều trị đúng → Trẻ tăng trưởng tốt
+        - Phòng ngừa tốt → Trẻ phát triển bình thường
+
+        **4. Gia đình:**
+        - Giáo dục dinh dưỡng
+        - Hỗ trợ xã hội (nếu nghèo)
+        - Theo dõi tăng trưởng định kỳ
+        """,
+        related_disease="malnutrition",
+        related_drugs=["Iron", "Zinc", "Vitamin A", "Vitamin D", "Albendazole"],
+        printable=True
+    ),
+    
+    # === FOOD ALLERGY (DỊ ỨNG THỰC PHẨM) ===
+    PatientEducationTopic(
+        id="food_allergy_basics",
+        title="Understanding Food Allergy",
+        title_vn="Hiểu về Dị ứng thực phẩm",
+        category="Disease",
+        content="""
+        # Hiểu về Dị ứng thực phẩm
+
+        ## Dị ứng thực phẩm là gì?
+
+        Dị ứng thực phẩm là phản ứng miễn dịch bất thường với thực phẩm, có thể gây phản ứng từ nhẹ đến nặng, đe dọa tính mạng. Bệnh rất phổ biến, đặc biệt ở trẻ em.
+
+        **⚠️ Đặc điểm:**
+        - Phản ứng miễn dịch bất thường với thực phẩm
+        - Có thể gây phản vệ (nguy hiểm!)
+        - Rất phổ biến (5-8% trẻ em, 2-4% người lớn)
+        - Cần tránh thực phẩm gây dị ứng
+
+        **Thực phẩm gây dị ứng phổ biến:**
+        - **Trẻ em:** Trứng, sữa, đậu phộng, hải sản, lúa mì, đậu nành
+        - **Người lớn:** Hải sản (tôm, cua), đậu phộng, cá
+
+        ## Triệu chứng:
+
+        **Triệu chứng da:**
+        - **Mề đay:** Nổi mẩn đỏ, ngứa
+        - **Phù mạch:** Sưng môi, mí mắt, mặt
+        - **Ngứa:** Toàn thân hoặc cục bộ
+
+        **Triệu chứng tiêu hóa:**
+        - Buồn nôn, nôn
+        - Tiêu chảy
+        - Đau bụng
+
+        **Triệu chứng hô hấp:**
+        - Khó thở
+        - Thở khò khè
+        - Nghẹt mũi
+
+        **⚠️ Phản vệ (Anaphylaxis):**
+        - Khó thở nặng
+        - Hạ huyết áp, sốc
+        - Mất ý thức
+        - **Cấp cứu ngay!**
+
+        **Thời gian:**
+        - Thường xuất hiện trong vài phút đến 2 giờ sau ăn
+        - Có thể chậm hơn (4-6 giờ) nếu không phải IgE-mediated
+
+        ## Nguyên nhân:
+
+        **1. Thực phẩm phổ biến:**
+        - **Trẻ em:** Trứng, sữa, đậu phộng, hải sản, lúa mì, đậu nành
+        - **Người lớn:** Hải sản (tôm, cua), đậu phộng, cá, hạt cây
+
+        **2. Yếu tố nguy cơ:**
+        - Tiền sử gia đình dị ứng
+        - Trẻ em (dễ dị ứng hơn)
+        - Có bệnh dị ứng khác (hen, viêm mũi dị ứng)
+
+        **3. Cơ chế:**
+        - IgE-mediated (phản ứng nhanh, có thể phản vệ)
+        - Non-IgE (phản ứng chậm, thường tiêu hóa)
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Test da (skin prick test):** Nhanh, dễ làm
+        - **IgE đặc hiệu (RAST, ImmunoCAP):** Xét nghiệm máu
+        - **Test thử thách (oral food challenge):** Chuẩn vàng (cần bác sĩ)
+
+        ## Điều trị:
+
+        **1. Tránh thực phẩm gây dị ứng:**
+        - **Quan trọng nhất!**
+        - Đọc nhãn thực phẩm
+        - Hỏi thành phần khi ăn ngoài
+        - Tránh chéo (cross-contamination)
+
+        **2. Phản ứng nhẹ:**
+        - Antihistamine (Cetirizine, Loratadine)
+        - Corticosteroid (nếu cần)
+
+        **3. Phản vệ:**
+        - **Epinephrine auto-injector:** Tiêm ngay!
+        - Gọi cấp cứu
+        - Nằm xuống, nâng chân
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Tránh thực phẩm gây dị ứng:**
+        - **Hoàn toàn** (quan trọng!)
+        - Đọc nhãn thực phẩm
+        - Hỏi thành phần khi ăn ngoài
+
+        **2. Thực phẩm thay thế:**
+        - **Dị ứng sữa:** Sữa đậu nành, sữa dê (nếu không dị ứng)
+        - **Dị ứng trứng:** Thay thế trong nấu ăn
+        - **Dị ứng đậu phộng:** Tránh tất cả hạt cây
+
+        **3. Đọc nhãn:**
+        - Kiểm tra thành phần
+        - Cảnh báo "có thể chứa" (may contain)
+
+        **4. Thực đơn mẫu (nếu dị ứng đậu phộng, hải sản):**
+        - **Sáng:** Cháo thịt, trứng, rau
+        - **Trưa:** Cơm, thịt gà/bò, rau xanh, canh
+        - **Chiều:** Cơm, thịt, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa (nếu không dị ứng sữa)
+
+        **5. Lưu ý:**
+        - Tránh chéo (dùng chung dụng cụ, bề mặt)
+        - Vệ sinh tay, dụng cụ sau khi chế biến
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Nên tập:**
+        - Tập thể dục bình thường
+        - Đi bộ, chạy bộ, bơi lội
+        - 30 phút/ngày, 5 ngày/tuần
+
+        **2. Lưu ý:**
+        - Mang epinephrine auto-injector khi tập
+        - Tránh tập ngay sau ăn (nếu có nguy cơ phản vệ do gắng sức)
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Epinephrine auto-injector:**
+        - **Mang theo mọi lúc** (nếu có nguy cơ phản vệ)
+        - Biết cách sử dụng
+        - Kiểm tra hạn sử dụng
+
+        **2. Antihistamine:**
+        - Dùng khi phản ứng nhẹ
+        - Cetirizine, Loratadine
+
+        **3. Lưu ý:**
+        - Luôn mang epinephrine nếu có nguy cơ phản vệ
+        - Đeo vòng cảnh báo y tế
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Phản vệ:**
+        - Khó thở nặng
+        - Hạ huyết áp, sốc
+        - Mất ý thức
+        - **Tiêm epinephrine ngay, gọi cấp cứu!**
+
+        **2. Phản ứng nặng:**
+        - Phù mạch nặng (sưng mặt, cổ họng)
+        - Khó thở
+        - Nôn nhiều
+
+        **3. Phản ứng lan rộng:**
+        - Mề đay toàn thân
+        - Triệu chứng nặng hơn
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tránh thực phẩm gây dị ứng:**
+        - **Hoàn toàn** (quan trọng nhất!)
+        - Đọc nhãn thực phẩm
+        - Hỏi thành phần
+
+        **2. Giáo dục:**
+        - Giáo dục bệnh nhân và gia đình
+        - Nhận biết triệu chứng
+        - Cách sử dụng epinephrine
+
+        **3. Chuẩn bị:**
+        - Mang epinephrine auto-injector
+        - Đeo vòng cảnh báo y tế
+        - Thông báo cho người xung quanh
+
+        **4. Trẻ em:**
+        - Giáo dục trẻ (nếu đủ tuổi)
+        - Thông báo cho nhà trường
+        - Hướng dẫn giáo viên
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị dị ứng thực phẩm:**
+        - Tránh thực phẩm gây dị ứng hoàn toàn
+        - Đọc nhãn thực phẩm
+        - Mang epinephrine nếu có nguy cơ phản vệ
+        - Đeo vòng cảnh báo y tế
+
+        **2. Khi ăn ngoài:**
+        - Hỏi thành phần
+        - Thông báo dị ứng
+        - Cẩn thận với đồ ăn chế biến sẵn
+
+        **3. Sống tích cực:**
+        - Dị ứng thực phẩm có thể kiểm soát
+        - Tránh tốt → Không có phản ứng
+        - Có thể sống bình thường
+
+        **4. Trẻ em:**
+        - Giáo dục trẻ (nếu đủ tuổi)
+        - Thông báo cho nhà trường
+        - Hướng dẫn cách xử lý phản ứng
+        """,
+        related_disease="food_allergy",
+        related_drugs=["Epinephrine", "Antihistamine", "Corticosteroid"],
+        printable=True
+    ),
+    
+    # === JAPANESE ENCEPHALITIS (VIÊM NÃO NHẬT BẢN) ===
+    PatientEducationTopic(
+        id="japanese_encephalitis_basics",
+        title="Understanding Japanese Encephalitis",
+        title_vn="Hiểu về Viêm não Nhật Bản",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm não Nhật Bản
+
+        ## Viêm não Nhật Bản là gì?
+
+        Viêm não Nhật Bản là bệnh nhiễm virus do muỗi Culex truyền, nguy hiểm, có thể gây tử vong hoặc di chứng thần kinh. Bệnh phổ biến tại Việt Nam, đặc biệt vùng nông thôn.
+
+        **⚠️ Đặc điểm:**
+        - Nhiễm virus do muỗi Culex truyền
+        - Nguy hiểm, có thể tử vong (20-30%)
+        - Di chứng thần kinh nặng
+        - Phổ biến ở vùng nông thôn Việt Nam
+        - Có vắc xin phòng ngừa
+
+        **Đường lây:**
+        - Muỗi Culex đốt lợn/chim nhiễm virus → Đốt người → Lây bệnh
+        - **KHÔNG lây:** Qua tiếp xúc, hô hấp
+
+        ## Triệu chứng:
+
+        **Giai đoạn ủ bệnh (5-15 ngày):**
+        - Không có triệu chứng
+
+        **Giai đoạn cấp:**
+        - **Sốt cao đột ngột:** 39-40°C
+        - **Đau đầu dữ dội**
+        - **Nôn, buồn nôn**
+        - **Rối loạn ý thức:** Lú lẫn, hôn mê
+        - **Co giật:** Có thể có
+        - **Cứng gáy:** Dấu hiệu viêm màng não
+        - **Liệt:** Có thể có
+
+        **⚠️ Giai đoạn nặng:**
+        - Hôn mê
+        - Suy hô hấp
+        - Sốc
+        - Tử vong (20-30%)
+
+        **⚠️ Lưu ý:**
+        - Hầu hết nhiễm không có triệu chứng (99%)
+        - Chỉ 1% có triệu chứng, nhưng rất nặng
+
+        ## Nguyên nhân:
+
+        **1. Virus:**
+        - Japanese Encephalitis Virus (JEV)
+        - Muỗi Culex truyền
+
+        **2. Yếu tố nguy cơ:**
+        - Sống vùng nông thôn
+        - Mùa mưa (tăng muỗi)
+        - Chưa tiêm vắc xin
+        - Trẻ em (dễ mắc hơn)
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **IgM JEV:** Dương tính (CSF hoặc máu)
+        - **PCR:** Nếu có
+        - **CT/MRI não:** Tổn thương thùy thái dương, nhân xám
+
+        ## Điều trị:
+
+        **1. Điều trị hỗ trợ:**
+        - **Không có thuốc kháng virus đặc hiệu**
+        - Hạ sốt: Paracetamol
+        - Chống co giật: Phenobarbital, Phenytoin
+        - Hỗ trợ hô hấp: Thở máy nếu cần
+        - Hỗ trợ tuần hoàn: Truyền dịch, vận mạch
+
+        **2. Corticosteroid:**
+        - Có thể giúp giảm viêm
+        - Dùng ngắn hạn
+
+        **3. Vật lý trị liệu:**
+        - Sau khi ổn định
+        - Phục hồi chức năng
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi đang bệnh:**
+        - Nếu hôn mê: Nuôi ăn qua ống
+        - Nếu tỉnh: Ăn mềm, lỏng
+        - Uống đủ nước
+
+        **2. Sau khi khỏi:**
+        - Ăn đủ dinh dưỡng
+        - Protein: Thịt, cá, trứng
+        - Rau xanh, trái cây
+        - Bổ sung vitamin, khoáng chất
+
+        **3. Thực đơn mẫu (sau khi khỏi):**
+        - **Sáng:** Cháo thịt, trứng, sữa
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Nghỉ ngơi hoàn toàn
+        - Vật lý trị liệu (nếu có liệt)
+
+        **2. Sau khi khỏi:**
+        - Vật lý trị liệu (quan trọng!)
+        - Phục hồi chức năng
+        - Tập vận động từ từ
+
+        **3. Lưu ý:**
+        - Có thể có di chứng
+        - Cần kiên nhẫn, tập luyện lâu dài
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Điều trị hỗ trợ:**
+        - Paracetamol: Hạ sốt
+        - Chống co giật: Phenobarbital, Phenytoin
+        - Corticosteroid: Giảm viêm
+
+        **2. Lưu ý:**
+        - Điều trị tại bệnh viện
+        - Theo dõi sát
+        - Không có thuốc đặc hiệu
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng nặng:**
+        - Sốt cao + đau đầu dữ dội
+        - Rối loạn ý thức
+        - Co giật
+        - Cứng gáy
+        - **Cấp cứu ngay!**
+
+        **2. Di chứng:**
+        - Liệt
+        - Co giật
+        - Chậm phát triển
+        - Cần vật lý trị liệu
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tiêm vắc xin (QUAN TRỌNG NHẤT!):**
+        - **Vắc xin JEV:** 2 mũi (0, 28 ngày), nhắc lại sau 1 năm
+        - **Đối tượng:**
+          - Trẻ em (từ 1 tuổi)
+          - Người sống vùng lưu hành
+          - Người đi du lịch vùng lưu hành
+        - **Hiệu quả:** > 95%
+        - **Bảo vệ:** 3-5 năm (cần nhắc lại)
+
+        **2. Tránh muỗi đốt:**
+        - Ngủ màn (quan trọng!)
+        - Mặc quần áo dài tay, dài chân
+        - Dùng thuốc chống muỗi (DEET 20-30%)
+        - Tránh ra ngoài ban đêm, sáng sớm
+
+        **3. Diệt muỗi:**
+        - Phun thuốc diệt muỗi
+        - Diệt lăng quăng
+        - Vệ sinh môi trường
+
+        **4. Môi trường:**
+        - Tránh vùng có nhiều lợn, chim
+        - Vệ sinh chuồng trại
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Tiêm vắc xin JEV** (quan trọng nhất!)
+        - Ngủ màn
+        - Tránh muỗi đốt
+
+        **2. Khi bị viêm não Nhật Bản:**
+        - Điều trị tại bệnh viện
+        - Hỗ trợ hô hấp, tuần hoàn
+        - Vật lý trị liệu sau khi khỏi
+
+        **3. Di chứng:**
+        - Có thể có di chứng thần kinh
+        - Cần vật lý trị liệu lâu dài
+        - Hỗ trợ gia đình
+
+        **4. Sống tích cực:**
+        - Phòng ngừa tốt → Không mắc bệnh
+        - Tiêm vắc xin → Bảo vệ > 95%
+        - Điều trị sớm → Giảm tử vong, di chứng
+
+        **5. Trẻ em:**
+        - Tiêm vắc xin từ 1 tuổi
+        - Ngủ màn
+        - Tránh muỗi đốt
+        """,
+        related_disease="japanese_encephalitis",
+        related_drugs=["Paracetamol", "Phenobarbital", "Phenytoin", "Corticosteroid"],
+        printable=True
+    ),
+    
+    # === ATRIAL FIBRILLATION (RUNG NHĨ) ===
+    PatientEducationTopic(
+        id="atrial_fibrillation_basics",
+        title="Understanding Atrial Fibrillation",
+        title_vn="Hiểu về Rung nhĩ",
+        category="Disease",
+        content="""
+        # Hiểu về Rung nhĩ
+
+        ## Rung nhĩ là gì?
+
+        Rung nhĩ là rối loạn nhịp tim phổ biến nhất, đặc trưng bởi nhịp tim không đều, nhanh. Bệnh tăng nguy cơ đột quỵ và suy tim, rất phổ biến ở người cao tuổi.
+
+        **⚠️ Đặc điểm:**
+        - Rối loạn nhịp tim phổ biến nhất
+        - Nhịp tim không đều, nhanh
+        - Tăng nguy cơ đột quỵ (5 lần)
+        - Phổ biến ở người cao tuổi (> 65 tuổi)
+
+        **Phân loại:**
+        - **Paroxysmal:** Tự hết trong 7 ngày
+        - **Persistent:** Kéo dài > 7 ngày
+        - **Permanent:** Không thể chuyển nhịp
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Đánh trống ngực:** Cảm giác tim đập nhanh, không đều
+        - **Khó thở:** Khi gắng sức
+        - **Mệt mỏi, suy nhược**
+        - **Chóng mặt, choáng váng**
+        - **Đau ngực:** Có thể có
+
+        **Triệu chứng khác:**
+        - Ngất xỉu (hiếm)
+        - Đi tiểu nhiều (do tăng ANP)
+
+        **⚠️ Không có triệu chứng:**
+        - Nhiều người không có triệu chứng
+        - Phát hiện khi khám sức khỏe
+
+        **⚠️ Biến chứng:**
+        - Đột quỵ (nguy hiểm nhất!)
+        - Suy tim
+        - Rối loạn nhịp tim khác
+
+        ## Nguyên nhân:
+
+        **1. Bệnh tim:**
+        - Bệnh mạch vành
+        - Suy tim
+        - Bệnh van tim
+
+        **2. Tăng huyết áp:**
+        - Nguyên nhân phổ biến
+
+        **3. Yếu tố khác:**
+        - Cường giáp
+        - Bệnh phổi mạn tính
+        - Rượu bia
+        - Tuổi cao
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **ECG:** Nhịp không đều, không có sóng P
+        - **Holter ECG:** Ghi 24-48 giờ
+        - Siêu âm tim
+        - Xét nghiệm chức năng tuyến giáp
+
+        ## Điều trị:
+
+        **1. Chống đông (quan trọng!):**
+        - **Warfarin hoặc DOAC:** Phòng ngừa đột quỵ
+        - **CHADS2-VASc score:** Đánh giá nguy cơ đột quỵ
+        - **Quan trọng:** Uống đều đặn, theo dõi INR (nếu Warfarin)
+
+        **2. Kiểm soát nhịp tim:**
+        - **Beta-blocker:** Metoprolol, Bisoprolol
+        - **Calcium channel blocker:** Diltiazem, Verapamil
+        - **Digoxin:** Nếu suy tim
+
+        **3. Chuyển nhịp:**
+        - **Thuốc:** Amiodarone, Flecainide
+        - **Sốc điện:** Nếu cấp cứu
+        - **Ablation:** Nếu kháng thuốc
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Nên ăn:**
+        - Chế độ ăn bình thường, đủ dinh dưỡng
+        - Protein: Thịt, cá, trứng
+        - Rau xanh, trái cây
+        - Uống đủ nước
+
+        **2. Tránh:**
+        - **Rượu bia:** Kích thích rung nhĩ
+        - **Caffeine quá nhiều:** Có thể kích thích
+        - **Đồ mặn:** Nếu tăng huyết áp
+
+        **3. Lưu ý với Warfarin:**
+        - **Vitamin K:** Tránh thay đổi đột ngột (rau xanh, gan)
+        - Ăn đều đặn, không thay đổi chế độ ăn đột ngột
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo/cơm, thịt/cá, rau
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Nên tập:**
+        - Tập thể dục đều đặn (cải thiện sức khỏe tim)
+        - Đi bộ, chạy bộ, bơi lội
+        - 30 phút/ngày, 5 ngày/tuần
+
+        **2. Lưu ý:**
+        - Tránh gắng sức quá mức (có thể kích thích rung nhĩ)
+        - Nghỉ ngơi nếu đánh trống ngực
+        - Theo dõi nhịp tim khi tập
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Chống đông:**
+        - **Warfarin:** Uống đều đặn, theo dõi INR mỗi 2-4 tuần
+        - **DOAC (Dabigatran, Rivaroxaban, Apixaban):** Uống đều đặn, không cần theo dõi INR
+        - **Quan trọng:** Uống đều đặn, không tự ý ngừng
+
+        **2. Kiểm soát nhịp tim:**
+        - Beta-blocker: Uống đều đặn
+        - Không ngừng đột ngột
+
+        **3. Tác dụng phụ:**
+        - **Warfarin:** Chảy máu (nếu INR cao)
+        - **Beta-blocker:** Mệt mỏi, chóng mặt
+
+        **4. Lưu ý:**
+        - Báo bác sĩ tất cả thuốc đang dùng
+        - Tránh thuốc tương tác
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Đột quỵ:**
+        - Yếu liệt một bên
+        - Nói khó
+        - **Cấp cứu ngay!**
+
+        **2. Rung nhĩ nhanh:**
+        - Nhịp tim > 150 lần/phút
+        - Khó thở nặng
+        - Đau ngực
+
+        **3. Chảy máu:**
+        - Chảy máu nhiều (nếu dùng chống đông)
+        - Nôn ra máu, đi ngoài phân đen
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Kiểm soát yếu tố nguy cơ:**
+        - Kiểm soát huyết áp
+        - Kiểm soát đái tháo đường
+        - Điều trị bệnh tim
+
+        **2. Lối sống:**
+        - Hạn chế rượu bia
+        - Tập thể dục đều đặn
+        - Giảm cân nếu béo phì
+
+        **3. Khám định kỳ:**
+        - Nếu có yếu tố nguy cơ
+        - ECG định kỳ
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị rung nhĩ:**
+        - Uống thuốc chống đông đều đặn (quan trọng!)
+        - Kiểm soát nhịp tim
+        - Khám định kỳ
+
+        **2. Chống đông:**
+        - Uống đều đặn, đúng giờ
+        - Theo dõi INR (nếu Warfarin)
+        - Báo bác sĩ nếu chảy máu
+
+        **3. Sống tích cực:**
+        - Rung nhĩ có thể kiểm soát
+        - Điều trị đúng → Giảm nguy cơ đột quỵ
+        - Có thể sống bình thường
+
+        **4. Theo dõi:**
+        - Khám định kỳ 3-6 tháng
+        - Theo dõi INR (nếu Warfarin)
+        - Siêu âm tim định kỳ
+        """,
+        related_disease="atrial_fibrillation",
+        related_drugs=["Warfarin", "Dabigatran", "Rivaroxaban", "Apixaban", "Metoprolol", "Bisoprolol", "Amiodarone"],
+        printable=True
+    ),
+    
+    # === CORONARY ARTERY DISEASE (BỆNH MẠCH VÀNH) ===
+    PatientEducationTopic(
+        id="coronary_artery_disease_basics",
+        title="Understanding Coronary Artery Disease",
+        title_vn="Hiểu về Bệnh mạch vành",
+        category="Disease",
+        content="""
+        # Hiểu về Bệnh mạch vành
+
+        ## Bệnh mạch vành là gì?
+
+        Bệnh mạch vành là tình trạng hẹp hoặc tắc nghẽn động mạch vành do xơ vữa động mạch, dẫn đến thiếu máu cơ tim. Bệnh rất phổ biến, là nguyên nhân tử vong hàng đầu.
+
+        **⚠️ Đặc điểm:**
+        - Hẹp/tắc động mạch vành
+        - Thiếu máu cơ tim
+        - Nguyên nhân tử vong hàng đầu
+        - Rất phổ biến (đặc biệt nam > 45 tuổi)
+
+        **Phân loại:**
+        - **Đau thắt ngực ổn định:** Đau khi gắng sức, giảm khi nghỉ
+        - **Hội chứng vành cấp:** Đau ngực không ổn định, nhồi máu cơ tim
+
+        ## Triệu chứng:
+
+        **Đau thắt ngực ổn định:**
+        - **Đau ngực:** Đau thắt, đè ép, sau xương ức
+        - **Lan ra:** Cánh tay trái, hàm, lưng
+        - **Khi gắng sức:** Leo cầu thang, đi bộ nhanh
+        - **Giảm khi nghỉ:** Hoặc dùng Nitrate
+        - **Kéo dài:** 2-10 phút
+
+        **Triệu chứng khác:**
+        - Khó thở khi gắng sức
+        - Mệt mỏi
+        - Đổ mồ hôi
+        - Buồn nôn
+
+        **⚠️ Hội chứng vành cấp:**
+        - Đau ngực dữ dội, kéo dài
+        - Không giảm khi nghỉ
+        - **Cấp cứu ngay!**
+
+        **⚠️ Thiếu máu cơ tim thầm lặng:**
+        - Không có triệu chứng
+        - Phát hiện khi khám sức khỏe
+
+        ## Nguyên nhân:
+
+        **1. Xơ vữa động mạch:**
+        - Mảng xơ vữa tích tụ trong động mạch vành
+        - Hẹp dần → Thiếu máu cơ tim
+
+        **2. Yếu tố nguy cơ:**
+        - **Không thay đổi được:** Tuổi cao, nam giới, tiền sử gia đình
+        - **Thay đổi được:**
+          - Tăng huyết áp
+          - Đái tháo đường
+          - Rối loạn lipid máu
+          - Hút thuốc
+          - Béo phì
+          - Ít vận động
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **ECG:** ST chênh xuống khi gắng sức
+        - **Test gắng sức:** Dương tính
+        - **Chụp mạch vành:** Chuẩn vàng (hẹp ≥ 50%)
+        - **CT mạch vành:** Nếu phù hợp
+
+        ## Điều trị:
+
+        **1. Thuốc:**
+        - **Aspirin:** 75-100mg/ngày (phòng ngừa huyết khối)
+        - **Statin:** Atorvastatin 40-80mg (giảm cholesterol)
+        - **Beta-blocker:** Giảm nhịp tim, giảm nhu cầu oxy
+        - **ACE inhibitor:** Nếu có suy tim, đái tháo đường
+        - **Nitrate:** Giảm đau ngực
+
+        **2. Can thiệp:**
+        - **PCI (đặt stent):** Nếu hẹp nặng
+        - **CABG (bắc cầu):** Nếu nhiều nhánh hẹp
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Chế độ ăn tim mạch:**
+        - **Giảm chất béo bão hòa:** Thịt đỏ, mỡ động vật
+        - **Tăng chất béo không bão hòa:** Cá béo, dầu ô liu, hạt
+        - **Giảm muối:** < 5g/ngày
+        - **Tăng chất xơ:** Rau xanh, trái cây, ngũ cốc nguyên hạt
+
+        **2. Thực phẩm tốt:**
+        - **Cá béo:** Cá hồi, cá thu (omega-3)
+        - **Rau xanh, trái cây:** Chống oxy hóa
+        - **Ngũ cốc nguyên hạt:** Yến mạch, gạo lứt
+        - **Hạt:** Hạnh nhân, óc chó
+
+        **3. Tránh:**
+        - Thịt đỏ, mỡ động vật
+        - Đồ chế biến sẵn
+        - Đồ ngọt, nước ngọt
+        - Rượu bia (hạn chế)
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo yến mạch, trứng, trái cây
+        - **Trưa:** Cơm, cá, rau xanh, canh (không mặn)
+        - **Chiều:** Cơm, thịt gà/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, hạt
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Quan trọng!**
+        - Tập thể dục đều đặn (cải thiện sức khỏe tim)
+        - Tăng cường mạch máu phụ
+        - Giảm nguy cơ biến cố
+
+        **2. Loại bài tập:**
+        - **Đi bộ:** 30 phút/ngày, 5 ngày/tuần
+        - **Chạy bộ:** Nếu sức khỏe cho phép
+        - **Bơi lội:** Tốt cho tim
+        - **Đạp xe:** Tăng cường tim
+
+        **3. Lưu ý:**
+        - Khởi động kỹ
+        - Tránh gắng sức quá mức (gây đau ngực)
+        - Nghỉ ngơi nếu đau ngực
+        - Mang Nitrate khi tập (nếu có chỉ định)
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Aspirin:**
+        - 75-100mg/ngày
+        - Uống sau ăn (tránh đau dạ dày)
+        - **Quan trọng:** Uống đều đặn
+
+        **2. Statin:**
+        - Atorvastatin 40-80mg
+        - Uống buổi tối
+        - Theo dõi chức năng gan, cơ
+
+        **3. Beta-blocker:**
+        - Uống đều đặn
+        - Không ngừng đột ngột
+
+        **4. Nitrate:**
+        - Dùng khi đau ngực
+        - Ngậm dưới lưỡi (nhanh)
+        - Hoặc uống (tác dụng kéo dài)
+
+        **5. Lưu ý:**
+        - Uống đều đặn, đúng giờ
+        - Không tự ý ngừng
+        - Báo bác sĩ nếu có tác dụng phụ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Đau ngực không ổn định:**
+        - Đau ngực dữ dội, kéo dài
+        - Không giảm khi nghỉ hoặc dùng Nitrate
+        - **Cấp cứu ngay!**
+
+        **2. Nhồi máu cơ tim:**
+        - Đau ngực dữ dội
+        - Vã mồ hôi
+        - Khó thở
+        - **Gọi 115 ngay!**
+
+        **3. Tác dụng phụ thuốc:**
+        - Đau cơ (Statin)
+        - Chảy máu (Aspirin)
+        - Chóng mặt nặng (Beta-blocker)
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Kiểm soát yếu tố nguy cơ:**
+        - Kiểm soát huyết áp (< 130/80 mmHg)
+        - Kiểm soát đái tháo đường (HbA1c < 7%)
+        - Kiểm soát cholesterol (LDL < 100 mg/dL)
+        - **Bỏ thuốc lá** (quan trọng!)
+
+        **2. Chế độ ăn:**
+        - Chế độ ăn tim mạch
+        - Giảm muối, chất béo bão hòa
+        - Tăng cá béo, rau xanh
+
+        **3. Tập thể dục:**
+        - Đều đặn, 30 phút/ngày
+        - 5 ngày/tuần
+
+        **4. Thuốc:**
+        - Aspirin (nếu có chỉ định)
+        - Statin (nếu có nguy cơ)
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị bệnh mạch vành:**
+        - Uống thuốc đều đặn (quan trọng!)
+        - Chế độ ăn tim mạch
+        - Tập thể dục đều đặn
+        - Kiểm soát yếu tố nguy cơ
+
+        **2. Khi đau ngực:**
+        - Nghỉ ngơi ngay
+        - Dùng Nitrate (nếu có)
+        - Gọi cấp cứu nếu không giảm
+
+        **3. Sống tích cực:**
+        - Bệnh mạch vành có thể kiểm soát
+        - Điều trị đúng → Giảm triệu chứng, biến cố
+        - Có thể sống lâu, chất lượng cuộc sống tốt
+
+        **4. Theo dõi:**
+        - Khám định kỳ 3-6 tháng
+        - Theo dõi cholesterol, huyết áp
+        - Test gắng sức định kỳ
+        """,
+        related_disease="coronary_artery_disease",
+        related_drugs=["Aspirin", "Atorvastatin", "Clopidogrel", "ACE Inhibitor", "Beta-blocker", "Nitrate"],
+        printable=True
+    ),
+    
+    # === TYPHOID FEVER (SỐT THƯƠNG HÀN) ===
+    PatientEducationTopic(
+        id="typhoid_fever_basics",
+        title="Understanding Typhoid Fever",
+        title_vn="Hiểu về Sốt thương hàn",
+        category="Disease",
+        content="""
+        # Hiểu về Sốt thương hàn
+
+        ## Sốt thương hàn là gì?
+
+        Sốt thương hàn là bệnh nhiễm khuẩn do vi khuẩn Salmonella Typhi gây ra, lây qua đường tiêu hóa. Bệnh rất phổ biến ở Việt Nam, đặc biệt ở vùng nông thôn, nơi điều kiện vệ sinh kém.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh nhiễm khuẩn đường tiêu hóa
+        - Lây qua thức ăn, nước uống bị nhiễm khuẩn
+        - Rất phổ biến ở Việt Nam
+        - Có thể gây biến chứng nặng nếu không điều trị
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình (tuần 1-2):**
+        - **Sốt:** Sốt cao liên tục (39-40°C), tăng dần
+        - **Đau đầu:** Đau đầu dữ dội
+        - **Mệt mỏi, suy nhược**
+        - **Đau bụng:** Đau bụng, đầy bụng
+        - **Táo bón hoặc tiêu chảy:** Thường táo bón ở người lớn, tiêu chảy ở trẻ em
+        - **Chán ăn**
+
+        **Triệu chứng tuần 2-3:**
+        - Sốt cao liên tục
+        - **Ban đỏ:** Ban hồng (rose spots) trên ngực, bụng
+        - **Lách to:** Có thể sờ thấy
+        - **Nhịp tim chậm:** So với sốt cao (dấu hiệu đặc trưng)
+        - **Lưỡi bẩn:** Lưỡi có lớp phủ trắng, viền đỏ
+
+        **⚠️ Biến chứng:**
+        - Xuất huyết tiêu hóa
+        - Thủng ruột
+        - Viêm màng não
+        - Viêm xương
+        - Tử vong (nếu không điều trị)
+
+        ## Nguyên nhân:
+
+        **1. Vi khuẩn:**
+        - Salmonella Typhi
+        - Lây qua đường tiêu hóa
+
+        **2. Nguồn lây:**
+        - Người bệnh hoặc người lành mang trùng
+        - Phân, nước tiểu người bệnh
+        - Thức ăn, nước uống bị nhiễm khuẩn
+        - Rau sống, nước đá, hải sản
+
+        **3. Yếu tố nguy cơ:**
+        - Vệ sinh kém
+        - Nước uống không sạch
+        - Thức ăn không nấu chín
+        - Vùng nông thôn, vùng lũ lụt
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Cấy máu:** Dương tính tuần 1-2
+        - **Cấy phân:** Dương tính tuần 2-3
+        - **Cấy tủy xương:** Rất nhạy
+        - **Widal test:** Kháng thể (ít chính xác)
+        - **Xét nghiệm nhanh:** PCR, kháng nguyên
+
+        ## Điều trị:
+
+        **1. Kháng sinh:**
+        - **Ceftriaxone:** 2g/ngày, 7-14 ngày (thuốc đầu tay)
+        - **Azithromycin:** 1g/ngày, 5-7 ngày
+        - **Ciprofloxacin:** 500mg x 2 lần/ngày, 7-14 ngày (nếu nhạy cảm)
+        - **Quan trọng:** Uống đủ liệu trình, không tự ý ngừng
+
+        **2. Hạ sốt:**
+        - Paracetamol: 500-1000mg mỗi 6 giờ
+        - Chườm mát
+
+        **3. Bù dịch:**
+        - Uống nhiều nước
+        - Oresol nếu tiêu chảy
+        - Truyền dịch nếu nặng
+
+        **4. Nghỉ ngơi:**
+        - Nghỉ ngơi tại giường
+        - Tránh gắng sức
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi đang sốt:**
+        - Ăn mềm, lỏng: Cháo, súp
+        - Uống nhiều nước: Nước lọc, nước trái cây
+        - Oresol nếu tiêu chảy
+        - Tránh thức ăn khó tiêu
+
+        **2. Khi hết sốt:**
+        - Ăn đủ dinh dưỡng
+        - Protein: Thịt, cá, trứng (nấu chín)
+        - Rau xanh (nấu chín)
+        - Trái cây
+        - Tránh rau sống, thức ăn tái
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Cháo thịt, trứng
+        - **Trưa:** Cơm, thịt/cá nấu chín, rau xanh nấu chín, canh
+        - **Chiều:** Cơm, thịt/cá nấu chín, rau xanh nấu chín, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        **4. Lưu ý:**
+        - **Nấu chín kỹ:** Tất cả thức ăn phải nấu chín
+        - **Nước sạch:** Chỉ uống nước đun sôi
+        - **Rửa tay:** Rửa tay trước khi ăn, sau khi đi vệ sinh
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Nghỉ ngơi hoàn toàn
+        - Tránh gắng sức
+        - Nghỉ tại giường
+
+        **2. Sau khi khỏi:**
+        - Tập thể dục từ từ
+        - Đi bộ nhẹ nhàng
+        - Tăng dần cường độ
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Kháng sinh:**
+        - Uống đủ liệu trình (7-14 ngày)
+        - Uống đúng giờ, đúng liều
+        - **Quan trọng:** Không tự ý ngừng (gây kháng thuốc, tái phát)
+
+        **2. Hạ sốt:**
+        - Paracetamol: Khi sốt > 38.5°C
+        - Không quá 4g/ngày
+
+        **3. Tác dụng phụ:**
+        - Kháng sinh: Tiêu chảy, buồn nôn
+        - Báo bác sĩ nếu có tác dụng phụ nặng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Sốt cao liên tục:**
+        - Sốt > 39°C, không giảm
+        - Sốt kéo dài > 5 ngày
+
+        **2. Biến chứng:**
+        - Đau bụng dữ dội (thủng ruột)
+        - Nôn ra máu, đi ngoài phân đen (xuất huyết)
+        - Rối loạn ý thức (viêm màng não)
+
+        **3. Mất nước:**
+        - Không uống được
+        - Tiêu chảy nhiều
+        - Mệt mỏi nặng
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Vệ sinh cá nhân:**
+        - **Rửa tay:** Rửa tay bằng xà phòng trước khi ăn, sau khi đi vệ sinh
+        - **Vệ sinh:** Giữ vệ sinh cá nhân sạch sẽ
+
+        **2. Thức ăn, nước uống:**
+        - **Nước sạch:** Chỉ uống nước đun sôi, nước đóng chai
+        - **Nấu chín:** Tất cả thức ăn phải nấu chín kỹ
+        - **Tránh:** Rau sống, thức ăn tái, nước đá không đảm bảo
+        - **Rửa sạch:** Rửa sạch rau, trái cây trước khi ăn
+
+        **3. Vệ sinh môi trường:**
+        - Xử lý phân đúng cách
+        - Vệ sinh nhà vệ sinh
+        - Diệt ruồi, gián
+
+        **4. Tiêm vắc xin:**
+        - **Vắc xin Typhoid:** Có thể tiêm cho người đi du lịch vùng lưu hành
+        - Hiệu quả: 50-80%
+        - Bảo vệ: 2-3 năm
+
+        **5. Khi có người bệnh:**
+        - Cách ly người bệnh
+        - Vệ sinh dụng cụ ăn uống
+        - Rửa tay sau khi tiếp xúc
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Rửa tay** (quan trọng nhất!)
+        - Uống nước sạch
+        - Ăn thức ăn nấu chín
+        - Tránh rau sống, nước đá không đảm bảo
+
+        **2. Khi bị sốt thương hàn:**
+        - Điều trị sớm (quan trọng!)
+        - Uống kháng sinh đủ liệu trình
+        - Nghỉ ngơi, uống nhiều nước
+        - Ăn thức ăn nấu chín
+
+        **3. Sống tích cực:**
+        - Phòng ngừa tốt → Không mắc bệnh
+        - Điều trị sớm → Khỏi hoàn toàn
+        - Uống đủ kháng sinh → Tránh tái phát, kháng thuốc
+
+        **4. Vùng nông thôn:**
+        - Đặc biệt chú ý vệ sinh
+        - Nước uống phải đun sôi
+        - Thức ăn phải nấu chín
+        - Rửa tay thường xuyên
+        """,
+        related_disease="typhoid_fever",
+        related_drugs=["Ceftriaxone", "Azithromycin", "Ciprofloxacin", "Paracetamol", "Oresol"],
+        printable=True
+    ),
+    
+    # === SCABIES (GHẺ) ===
+    PatientEducationTopic(
+        id="scabies_basics",
+        title="Understanding Scabies",
+        title_vn="Hiểu về Ghẻ",
+        category="Disease",
+        content="""
+        # Hiểu về Ghẻ
+
+        ## Ghẻ là gì?
+
+        Ghẻ là bệnh da do ký sinh trùng Sarcoptes scabiei gây ra, đặc trưng bởi ngứa dữ dội, đặc biệt về đêm. Bệnh rất phổ biến ở Việt Nam, lây qua tiếp xúc trực tiếp hoặc gián tiếp.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh da do ký sinh trùng
+        - Ngứa dữ dội, đặc biệt về đêm
+        - Rất phổ biến ở Việt Nam
+        - Lây qua tiếp xúc gần
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Ngứa dữ dội:** Đặc biệt về đêm, khi nóng
+        - **Đường hầm:** Đường ngoằn ngoèo, màu xám, dài 5-15mm (nơi cái ghẻ đào)
+        - **Mụn nước, sẩn:** Ở kẽ ngón tay, cổ tay, khuỷu tay, nách, bẹn
+        - **Vết xước:** Do gãi
+        - **Nhiễm khuẩn thứ phát:** Do gãi
+
+        **Vị trí thường gặp:**
+        - Kẽ ngón tay, ngón chân
+        - Cổ tay, khuỷu tay
+        - Nách, bẹn
+        - Quanh thắt lưng
+        - Bộ phận sinh dục (nam)
+        - Vú, núm vú (nữ)
+        - **Trẻ em:** Có thể ở lòng bàn tay, lòng bàn chân, mặt
+
+        **⚠️ Ghẻ Na Uy (nặng):**
+        - Vảy dày, lan rộng
+        - Ngứa ít hoặc không ngứa
+        - Gặp ở người suy giảm miễn dịch
+
+        ## Nguyên nhân:
+
+        **1. Ký sinh trùng:**
+        - Sarcoptes scabiei (cái ghẻ)
+        - Đào hang dưới da, đẻ trứng
+
+        **2. Lây truyền:**
+        - **Tiếp xúc trực tiếp:** Da kề da, quan hệ tình dục
+        - **Tiếp xúc gián tiếp:** Quần áo, chăn màn, khăn tắm (ít gặp hơn)
+        - **Thời gian:** Cần tiếp xúc lâu (15-20 phút)
+
+        **3. Yếu tố nguy cơ:**
+        - Sống đông đúc
+        - Vệ sinh kém
+        - Tiếp xúc gần với người bệnh
+        - Trẻ em, người cao tuổi
+
+        ## Chẩn đoán:
+
+        **Chẩn đoán lâm sàng:**
+        - Triệu chứng điển hình
+        - Đường hầm
+        - Vị trí đặc trưng
+
+        **Xét nghiệm:**
+        - **Soi da:** Tìm cái ghẻ, trứng
+        - **Test mực:** Bôi mực lên đường hầm, lau sạch, thấy đường hầm
+
+        ## Điều trị:
+
+        **1. Thuốc bôi:**
+        - **Permethrin 5%:** Bôi toàn thân, để 8-12 giờ, rửa sạch (thuốc đầu tay)
+        - **Benzyl benzoate 25%:** Bôi 3 ngày liên tiếp
+        - **Lindane 1%:** Ít dùng (độc)
+        - **Ivermectin bôi:** Nếu có
+
+        **2. Thuốc uống:**
+        - **Ivermectin:** 200mcg/kg, uống 1-2 lần (cách 7-14 ngày)
+        - Dùng cho ghẻ nặng, ghẻ Na Uy
+
+        **3. Điều trị ngứa:**
+        - **Antihistamine:** Cetirizine, Loratadine
+        - **Corticosteroid bôi:** Nếu viêm nhiều
+
+        **4. Điều trị nhiễm khuẩn:**
+        - Kháng sinh bôi hoặc uống nếu nhiễm khuẩn thứ phát
+
+        **5. Quan trọng:**
+        - **Bôi toàn thân:** Từ cổ xuống chân (trừ mặt, trừ trẻ em)
+        - **Điều trị đồng thời:** Tất cả người trong gia đình
+        - **Lặp lại:** Sau 7-14 ngày nếu cần
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Bình thường:**
+        - Ăn uống bình thường
+        - Không cần kiêng khem đặc biệt
+
+        **2. Tránh:**
+        - Thức ăn gây dị ứng (nếu có)
+        - Đồ cay nóng (có thể làm ngứa tăng)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang điều trị:**
+        - Tập thể dục bình thường
+        - Tránh đổ mồ hôi nhiều (có thể làm ngứa tăng)
+
+        **2. Sau khi khỏi:**
+        - Tập thể dục bình thường
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Thuốc bôi:**
+        - **Permethrin:** Bôi toàn thân, để 8-12 giờ, rửa sạch
+        - **Bôi đúng cách:** Từ cổ xuống chân, kể cả kẽ ngón tay, ngón chân
+        - **Lặp lại:** Sau 7-14 ngày nếu cần
+
+        **2. Thuốc uống:**
+        - **Ivermectin:** Uống đúng liều, đúng thời điểm
+        - Có thể cần uống 2 lần (cách 7-14 ngày)
+
+        **3. Điều trị ngứa:**
+        - Antihistamine: Uống buổi tối (giảm ngứa về đêm)
+
+        **4. Lưu ý:**
+        - **Điều trị đồng thời:** Tất cả người trong gia đình
+        - **Vệ sinh:** Giặt quần áo, chăn màn bằng nước nóng
+        - **Phơi nắng:** Quần áo, chăn màn
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Ghẻ nặng:**
+        - Ghẻ lan rộng
+        - Ghẻ Na Uy
+        - Không đáp ứng điều trị
+
+        **2. Nhiễm khuẩn:**
+        - Nhiễm khuẩn da nặng
+        - Sốt, sưng đau
+
+        **3. Tác dụng phụ:**
+        - Dị ứng thuốc bôi
+        - Tác dụng phụ nặng
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Vệ sinh cá nhân:**
+        - **Rửa tay:** Rửa tay thường xuyên
+        - **Tắm rửa:** Tắm rửa sạch sẽ hàng ngày
+        - **Quần áo:** Mặc quần áo sạch
+
+        **2. Tránh tiếp xúc:**
+        - Tránh tiếp xúc gần với người bệnh
+        - Không dùng chung quần áo, khăn tắm
+
+        **3. Khi có người bệnh:**
+        - **Điều trị đồng thời:** Tất cả người trong gia đình
+        - **Vệ sinh:** Giặt quần áo, chăn màn bằng nước nóng (60°C)
+        - **Phơi nắng:** Quần áo, chăn màn
+        - **Cách ly:** Tránh tiếp xúc gần cho đến khi khỏi
+
+        **4. Môi trường:**
+        - Vệ sinh nhà cửa
+        - Phơi nắng chăn màn, gối
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị ghẻ:**
+        - Điều trị sớm (quan trọng!)
+        - Bôi thuốc đúng cách, toàn thân
+        - Điều trị đồng thời tất cả người trong gia đình
+        - Vệ sinh quần áo, chăn màn
+
+        **2. Ngứa:**
+        - Ngứa có thể kéo dài 2-4 tuần sau điều trị (do dị ứng)
+        - Dùng antihistamine để giảm ngứa
+        - Tránh gãi (gây nhiễm khuẩn)
+
+        **3. Sống tích cực:**
+        - Ghẻ có thể điều trị khỏi hoàn toàn
+        - Điều trị đúng → Khỏi trong 1-2 tuần
+        - Phòng ngừa tốt → Không tái phát
+
+        **4. Gia đình:**
+        - Tất cả người trong gia đình cần điều trị đồng thời
+        - Vệ sinh quần áo, chăn màn
+        - Tránh tiếp xúc gần cho đến khi khỏi
+        """,
+        related_disease="scabies",
+        related_drugs=["Permethrin", "Benzyl benzoate", "Ivermectin", "Cetirizine", "Loratadine"],
+        printable=True
+    ),
+    
+    # === GIARDIASIS (NHIỄM GIARDIA) ===
+    PatientEducationTopic(
+        id="giardiasis_basics",
+        title="Understanding Giardiasis",
+        title_vn="Hiểu về Nhiễm Giardia",
+        category="Disease",
+        content="""
+        # Hiểu về Nhiễm Giardia
+
+        ## Nhiễm Giardia là gì?
+
+        Nhiễm Giardia là bệnh ký sinh trùng đường ruột do Giardia lamblia gây ra, đặc trưng bởi tiêu chảy, đau bụng, đầy hơi. Bệnh rất phổ biến ở Việt Nam, lây qua thức ăn, nước uống bị nhiễm ký sinh trùng.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh ký sinh trùng đường ruột
+        - Tiêu chảy, đau bụng, đầy hơi
+        - Rất phổ biến ở Việt Nam
+        - Lây qua thức ăn, nước uống
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Tiêu chảy:** Tiêu chảy nhiều nước, có mùi hôi, phân mỡ (steatorrhea)
+        - **Đau bụng:** Đau bụng âm ỉ, đầy bụng
+        - **Đầy hơi, chướng bụng:** Nhiều hơi
+        - **Buồn nôn, nôn:** Có thể có
+        - **Mệt mỏi, suy nhược**
+        - **Sụt cân:** Do kém hấp thu
+
+        **Triệu chứng khác:**
+        - Sốt nhẹ (hiếm)
+        - Đau đầu
+        - Chán ăn
+
+        **⚠️ Nhiễm mạn tính:**
+        - Tiêu chảy tái phát
+        - Kém hấp thu
+        - Sụt cân
+        - Thiếu vitamin, khoáng chất
+
+        **⚠️ Không có triệu chứng:**
+        - Nhiều người nhiễm không có triệu chứng
+        - Vẫn có thể lây cho người khác
+
+        ## Nguyên nhân:
+
+        **1. Ký sinh trùng:**
+        - Giardia lamblia
+        - Sống ở ruột non
+
+        **2. Lây truyền:**
+        - **Thức ăn, nước uống:** Bị nhiễm ký sinh trùng
+        - **Phân- miệng:** Từ người bệnh hoặc người lành mang trùng
+        - **Nước:** Nước không được xử lý, nước giếng
+        - **Thức ăn:** Rau sống, thức ăn không nấu chín
+
+        **3. Yếu tố nguy cơ:**
+        - Vệ sinh kém
+        - Nước uống không sạch
+        - Rau sống, thức ăn không nấu chín
+        - Vùng nông thôn
+        - Trẻ em, người suy giảm miễn dịch
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Soi phân:** Tìm kén Giardia (cần soi nhiều lần)
+        - **Test nhanh:** Kháng nguyên trong phân
+        - **PCR:** Phát hiện DNA
+
+        ## Điều trị:
+
+        **1. Thuốc:**
+        - **Metronidazole:** 250mg x 3 lần/ngày, 5-7 ngày (thuốc đầu tay)
+        - **Tinidazole:** 2g, uống 1 lần (hiệu quả cao)
+        - **Nitazoxanide:** 500mg x 2 lần/ngày, 3 ngày
+        - **Albendazole:** 400mg/ngày, 5 ngày
+
+        **2. Bù dịch:**
+        - Uống nhiều nước
+        - Oresol nếu tiêu chảy nhiều
+        - Truyền dịch nếu mất nước nặng
+
+        **3. Dinh dưỡng:**
+        - Ăn đủ dinh dưỡng
+        - Bổ sung vitamin, khoáng chất nếu kém hấp thu
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi đang tiêu chảy:**
+        - Ăn mềm, lỏng: Cháo, súp
+        - Uống nhiều nước: Nước lọc, nước trái cây
+        - Oresol nếu tiêu chảy nhiều
+        - Tránh thức ăn khó tiêu, nhiều mỡ
+
+        **2. Sau khi khỏi:**
+        - Ăn đủ dinh dưỡng
+        - Protein: Thịt, cá, trứng (nấu chín)
+        - Rau xanh (nấu chín)
+        - Trái cây
+        - Tránh rau sống, thức ăn tái
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Cháo thịt, trứng
+        - **Trưa:** Cơm, thịt/cá nấu chín, rau xanh nấu chín, canh
+        - **Chiều:** Cơm, thịt/cá nấu chín, rau xanh nấu chín, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        **4. Lưu ý:**
+        - **Nấu chín kỹ:** Tất cả thức ăn phải nấu chín
+        - **Nước sạch:** Chỉ uống nước đun sôi
+        - **Rửa tay:** Rửa tay trước khi ăn, sau khi đi vệ sinh
+        - **Tránh:** Rau sống, thức ăn tái, nước đá không đảm bảo
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Nghỉ ngơi nếu mệt mỏi
+        - Tránh gắng sức
+
+        **2. Sau khi khỏi:**
+        - Tập thể dục bình thường
+        - Tăng dần cường độ
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Thuốc điều trị:**
+        - Uống đủ liệu trình (5-7 ngày)
+        - Uống đúng giờ, đúng liều
+        - **Quan trọng:** Không tự ý ngừng (gây tái phát, kháng thuốc)
+
+        **2. Tác dụng phụ:**
+        - **Metronidazole:** Buồn nôn, đắng miệng, không uống rượu
+        - Báo bác sĩ nếu có tác dụng phụ nặng
+
+        **3. Lưu ý:**
+        - Không uống rượu khi dùng Metronidazole (gây phản ứng)
+        - Uống sau ăn (giảm buồn nôn)
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Tiêu chảy nặng:**
+        - Tiêu chảy nhiều, không giảm
+        - Mất nước nặng
+        - Không uống được
+
+        **2. Kém hấp thu:**
+        - Sụt cân nhiều
+        - Thiếu vitamin, khoáng chất nặng
+
+        **3. Không đáp ứng điều trị:**
+        - Tiêu chảy kéo dài sau điều trị
+        - Tái phát nhiều lần
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Vệ sinh cá nhân:**
+        - **Rửa tay:** Rửa tay bằng xà phòng trước khi ăn, sau khi đi vệ sinh
+        - **Vệ sinh:** Giữ vệ sinh cá nhân sạch sẽ
+
+        **2. Thức ăn, nước uống:**
+        - **Nước sạch:** Chỉ uống nước đun sôi, nước đóng chai
+        - **Nấu chín:** Tất cả thức ăn phải nấu chín kỹ
+        - **Tránh:** Rau sống, thức ăn tái, nước đá không đảm bảo
+        - **Rửa sạch:** Rửa sạch rau, trái cây trước khi ăn
+
+        **3. Vệ sinh môi trường:**
+        - Xử lý phân đúng cách
+        - Vệ sinh nhà vệ sinh
+        - Vệ sinh nguồn nước
+
+        **4. Khi có người bệnh:**
+        - Điều trị người bệnh
+        - Vệ sinh dụng cụ ăn uống
+        - Rửa tay sau khi tiếp xúc
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Rửa tay** (quan trọng nhất!)
+        - Uống nước sạch
+        - Ăn thức ăn nấu chín
+        - Tránh rau sống, nước đá không đảm bảo
+
+        **2. Khi bị nhiễm Giardia:**
+        - Điều trị sớm (quan trọng!)
+        - Uống thuốc đủ liệu trình
+        - Uống nhiều nước nếu tiêu chảy
+        - Ăn thức ăn nấu chín
+
+        **3. Sống tích cực:**
+        - Phòng ngừa tốt → Không mắc bệnh
+        - Điều trị sớm → Khỏi hoàn toàn
+        - Uống đủ thuốc → Tránh tái phát
+
+        **4. Vùng nông thôn:**
+        - Đặc biệt chú ý vệ sinh
+        - Nước uống phải đun sôi
+        - Thức ăn phải nấu chín
+        - Rửa tay thường xuyên
+        """,
+        related_disease="giardiasis",
+        related_drugs=["Metronidazole", "Tinidazole", "Nitazoxanide", "Albendazole", "Oresol"],
+        printable=True
+    ),
+    
+    # === LEPTOSPIROSIS (SỐT VÀNG DA XUẤT HUYẾT) ===
+    PatientEducationTopic(
+        id="leptospirosis_basics",
+        title="Understanding Leptospirosis",
+        title_vn="Hiểu về Sốt vàng da xuất huyết",
+        category="Disease",
+        content="""
+        # Hiểu về Sốt vàng da xuất huyết
+
+        ## Sốt vàng da xuất huyết là gì?
+
+        Sốt vàng da xuất huyết (Leptospirosis) là bệnh nhiễm khuẩn do xoắn khuẩn Leptospira gây ra, lây từ động vật sang người qua nước, đất bị nhiễm nước tiểu động vật. Bệnh phổ biến ở Việt Nam, đặc biệt vùng nông thôn, mùa mưa lũ.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh nhiễm khuẩn từ động vật
+        - Sốt, vàng da, xuất huyết
+        - Phổ biến ở vùng nông thôn, mùa mưa lũ
+        - Có thể gây biến chứng nặng
+
+        ## Triệu chứng:
+
+        **Giai đoạn 1 (tuần 1):**
+        - **Sốt:** Sốt cao đột ngột (39-40°C)
+        - **Đau đầu:** Đau đầu dữ dội
+        - **Đau cơ:** Đau cơ toàn thân, đặc biệt bắp chân
+        - **Đau mắt:** Đau mắt, sợ ánh sáng
+        - **Mệt mỏi, suy nhược**
+        - **Buồn nôn, nôn**
+        - **Đỏ mắt:** Kết mạc đỏ
+
+        **Giai đoạn 2 (tuần 2):**
+        - **Vàng da:** Vàng da, vàng mắt
+        - **Xuất huyết:** Chảy máu cam, xuất huyết da, xuất huyết tiêu hóa
+        - **Suy thận:** Thiểu niệu, vô niệu
+        - **Suy gan:** Men gan tăng
+        - **Viêm màng não:** Đau đầu, cứng gáy
+
+        **⚠️ Biến chứng nặng:**
+        - Suy thận cấp
+        - Suy gan
+        - Xuất huyết phổi
+        - Viêm màng não
+        - Tử vong (nếu không điều trị)
+
+        ## Nguyên nhân:
+
+        **1. Vi khuẩn:**
+        - Leptospira
+        - Lây từ động vật sang người
+
+        **2. Nguồn lây:**
+        - **Động vật:** Chuột, chó, lợn, bò (nước tiểu)
+        - **Nước, đất:** Bị nhiễm nước tiểu động vật
+        - **Tiếp xúc:** Qua da, niêm mạc bị tổn thương
+        - **Nuốt phải:** Nước bị nhiễm
+
+        **3. Yếu tố nguy cơ:**
+        - Làm ruộng, chăn nuôi
+        - Tiếp xúc nước, đất bẩn
+        - Mùa mưa lũ
+        - Vùng nông thôn
+        - Bơi lội ở ao, hồ, sông
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Cấy máu:** Dương tính tuần 1
+        - **Cấy nước tiểu:** Dương tính tuần 2
+        - **MAT (Microscopic Agglutination Test):** Kháng thể
+        - **PCR:** Phát hiện DNA
+        - **Xét nghiệm nhanh:** Kháng thể IgM
+
+        ## Điều trị:
+
+        **1. Kháng sinh:**
+        - **Penicillin G:** 1.5 triệu đơn vị x 4 lần/ngày, 7 ngày (thuốc đầu tay)
+        - **Doxycycline:** 100mg x 2 lần/ngày, 7 ngày
+        - **Ceftriaxone:** 1g/ngày, 7 ngày
+        - **Azithromycin:** 500mg/ngày, 3 ngày
+        - **Quan trọng:** Điều trị sớm (trong 5 ngày đầu)
+
+        **2. Điều trị hỗ trợ:**
+        - Hạ sốt: Paracetamol
+        - Bù dịch: Truyền dịch
+        - Điều trị suy thận: Lọc máu nếu cần
+        - Điều trị xuất huyết: Truyền máu, tiểu cầu nếu cần
+
+        **3. Nghỉ ngơi:**
+        - Nghỉ ngơi tại giường
+        - Tránh gắng sức
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi đang sốt:**
+        - Ăn mềm, lỏng: Cháo, súp
+        - Uống nhiều nước: Nước lọc, nước trái cây
+        - Tránh thức ăn khó tiêu
+
+        **2. Khi có suy gan, suy thận:**
+        - Hạn chế protein nếu suy thận nặng
+        - Hạn chế muối nếu phù
+        - Theo chỉ định bác sĩ
+
+        **3. Sau khi khỏi:**
+        - Ăn đủ dinh dưỡng
+        - Protein: Thịt, cá, trứng (nấu chín)
+        - Rau xanh, trái cây
+        - Bổ sung vitamin, khoáng chất
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo thịt, trứng
+        - **Trưa:** Cơm, thịt/cá nấu chín, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá nấu chín, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Nghỉ ngơi hoàn toàn
+        - Tránh gắng sức
+        - Nghỉ tại giường
+
+        **2. Sau khi khỏi:**
+        - Tập thể dục từ từ
+        - Đi bộ nhẹ nhàng
+        - Tăng dần cường độ
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Kháng sinh:**
+        - Uống đủ liệu trình (7 ngày)
+        - Uống đúng giờ, đúng liều
+        - **Quan trọng:** Điều trị sớm (trong 5 ngày đầu)
+
+        **2. Hạ sốt:**
+        - Paracetamol: Khi sốt > 38.5°C
+        - Không quá 4g/ngày
+
+        **3. Tác dụng phụ:**
+        - **Penicillin:** Dị ứng (cần test trước)
+        - **Doxycycline:** Nhạy cảm ánh sáng, đau dạ dày
+        - Báo bác sĩ nếu có tác dụng phụ nặng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Sốt cao:**
+        - Sốt > 39°C, không giảm
+        - Sốt kéo dài > 5 ngày
+
+        **2. Biến chứng:**
+        - Vàng da, vàng mắt
+        - Xuất huyết
+        - Thiểu niệu, vô niệu (suy thận)
+        - Rối loạn ý thức (viêm màng não)
+
+        **3. Mất nước:**
+        - Không uống được
+        - Mệt mỏi nặng
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tránh tiếp xúc:**
+        - Tránh tiếp xúc nước, đất bẩn
+        - Mang ủng, găng tay khi làm ruộng
+        - Tránh bơi lội ở ao, hồ, sông (đặc biệt mùa mưa)
+
+        **2. Vệ sinh:**
+        - Rửa tay sau khi tiếp xúc đất, nước
+        - Rửa sạch vết thương
+        - Vệ sinh môi trường
+
+        **3. Diệt chuột:**
+        - Diệt chuột (nguồn lây chính)
+        - Vệ sinh chuồng trại
+        - Bảo quản thức ăn
+
+        **4. Dự phòng:**
+        - **Doxycycline:** 200mg/tuần (cho người có nguy cơ cao)
+        - Tiêm vắc xin cho động vật
+
+        **5. Mùa mưa lũ:**
+        - Đặc biệt chú ý
+        - Tránh tiếp xúc nước lũ
+        - Mang ủng, găng tay
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Tránh tiếp xúc nước, đất bẩn** (quan trọng nhất!)
+        - Mang ủng, găng tay khi làm ruộng
+        - Diệt chuột
+        - Tránh bơi lội ở ao, hồ, sông
+
+        **2. Khi bị sốt vàng da xuất huyết:**
+        - Điều trị sớm (quan trọng!)
+        - Uống kháng sinh đủ liệu trình
+        - Nghỉ ngơi, uống nhiều nước
+        - Theo dõi biến chứng
+
+        **3. Sống tích cực:**
+        - Phòng ngừa tốt → Không mắc bệnh
+        - Điều trị sớm → Giảm biến chứng, tử vong
+        - Uống đủ kháng sinh → Khỏi hoàn toàn
+
+        **4. Vùng nông thôn, mùa mưa:**
+        - Đặc biệt chú ý phòng ngừa
+        - Tránh tiếp xúc nước, đất bẩn
+        - Mang ủng, găng tay
+        - Diệt chuột
+        """,
+        related_disease="leptospirosis",
+        related_drugs=["Penicillin G", "Doxycycline", "Ceftriaxone", "Azithromycin", "Paracetamol"],
+        printable=True
+    ),
+    
+    # === CHICKENPOX (THỦY ĐẬU) ===
+    PatientEducationTopic(
+        id="chickenpox_basics",
+        title="Understanding Chickenpox",
+        title_vn="Hiểu về Thủy đậu",
+        category="Disease",
+        content="""
+        # Hiểu về Thủy đậu
+
+        ## Thủy đậu là gì?
+
+        Thủy đậu là bệnh nhiễm virus do Varicella-zoster virus (VZV) gây ra, đặc trưng bởi sốt và phát ban mụn nước toàn thân. Bệnh rất phổ biến ở trẻ em Việt Nam, lây qua đường hô hấp và tiếp xúc trực tiếp.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh nhiễm virus
+        - Sốt, phát ban mụn nước
+        - Rất phổ biến ở trẻ em
+        - Lây qua đường hô hấp
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Sốt:** Sốt nhẹ đến vừa (37.5-39°C)
+        - **Phát ban:** Ban đỏ, sau đó thành mụn nước
+        - **Mụn nước:** Mụn nước trong, sau đó đục, vỡ, đóng vảy
+        - **Ngứa:** Ngứa nhiều
+        - **Mệt mỏi, chán ăn**
+
+        **Đặc điểm phát ban:**
+        - **Giai đoạn 1:** Ban đỏ (1-2 ngày)
+        - **Giai đoạn 2:** Mụn nước trong (2-3 ngày)
+        - **Giai đoạn 3:** Mụn nước đục, vỡ (3-4 ngày)
+        - **Giai đoạn 4:** Đóng vảy (5-7 ngày)
+        - **Nhiều đợt:** Có thể có nhiều đợt phát ban (2-4 ngày)
+        - **Toàn thân:** Mặt, thân, tay chân, cả niêm mạc
+
+        **⚠️ Biến chứng:**
+        - Nhiễm khuẩn da (do gãi)
+        - Viêm phổi (người lớn)
+        - Viêm não
+        - Nhiễm khuẩn huyết
+        - Để lại sẹo
+
+        **⚠️ Người lớn:**
+        - Bệnh nặng hơn trẻ em
+        - Nguy cơ biến chứng cao hơn
+
+        ## Nguyên nhân:
+
+        **1. Virus:**
+        - Varicella-zoster virus (VZV)
+        - Cùng họ với virus gây zona
+
+        **2. Lây truyền:**
+        - **Đường hô hấp:** Ho, hắt hơi, nói chuyện
+        - **Tiếp xúc trực tiếp:** Dịch mụn nước
+        - **Gián tiếp:** Đồ vật bị nhiễm
+
+        **3. Yếu tố nguy cơ:**
+        - Chưa tiêm vắc xin
+        - Chưa từng mắc bệnh
+        - Tiếp xúc với người bệnh
+        - Suy giảm miễn dịch
+
+        ## Chẩn đoán:
+
+        **Chẩn đoán lâm sàng:**
+        - Triệu chứng điển hình
+        - Phát ban đặc trưng
+
+        **Xét nghiệm:**
+        - **PCR:** Phát hiện DNA virus
+        - **Kháng thể:** IgM, IgG
+        - **Cấy virus:** Ít dùng
+
+        ## Điều trị:
+
+        **1. Điều trị triệu chứng:**
+        - **Hạ sốt:** Paracetamol (không dùng Aspirin ở trẻ em!)
+        - **Giảm ngứa:** Antihistamine, Calamine lotion
+        - **Chăm sóc da:** Tắm nước ấm, giữ da sạch
+
+        **2. Thuốc kháng virus:**
+        - **Acyclovir:** 20mg/kg x 4 lần/ngày, 5 ngày (nếu trong 24 giờ đầu)
+        - Dùng cho người lớn, trẻ em có nguy cơ biến chứng
+        - Giảm mức độ bệnh, biến chứng
+
+        **3. Điều trị nhiễm khuẩn:**
+        - Kháng sinh bôi hoặc uống nếu nhiễm khuẩn da
+
+        **4. Nghỉ ngơi:**
+        - Nghỉ ngơi tại nhà
+        - Cách ly cho đến khi khỏi
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi đang sốt:**
+        - Ăn mềm, lỏng: Cháo, súp
+        - Uống nhiều nước: Nước lọc, nước trái cây
+        - Tránh thức ăn cay nóng (có thể làm ngứa tăng)
+
+        **2. Sau khi hết sốt:**
+        - Ăn đủ dinh dưỡng
+        - Protein: Thịt, cá, trứng
+        - Rau xanh, trái cây
+        - Tránh thức ăn gây dị ứng (nếu có)
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Cháo, trứng
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Nghỉ ngơi tại nhà
+        - Tránh gắng sức
+        - Cách ly cho đến khi khỏi
+
+        **2. Sau khi khỏi:**
+        - Tập thể dục bình thường
+        - Tăng dần cường độ
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Hạ sốt:**
+        - **Paracetamol:** Khi sốt > 38.5°C
+        - **Không dùng Aspirin** ở trẻ em (gây hội chứng Reye)
+        - Không quá 4g/ngày (người lớn)
+
+        **2. Giảm ngứa:**
+        - **Antihistamine:** Cetirizine, Loratadine
+        - **Calamine lotion:** Bôi lên mụn nước
+        - Tránh gãi (gây nhiễm khuẩn, sẹo)
+
+        **3. Kháng virus:**
+        - Acyclovir: Nếu có chỉ định
+        - Uống đủ liệu trình
+
+        **4. Lưu ý:**
+        - Không tự ý dùng Corticosteroid (làm bệnh nặng)
+        - Báo bác sĩ nếu có tác dụng phụ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Biến chứng:**
+        - Sốt cao, kéo dài
+        - Khó thở (viêm phổi)
+        - Rối loạn ý thức (viêm não)
+        - Nhiễm khuẩn da nặng
+
+        **2. Người có nguy cơ:**
+        - Trẻ sơ sinh
+        - Người lớn
+        - Phụ nữ mang thai
+        - Suy giảm miễn dịch
+
+        **3. Triệu chứng nặng:**
+        - Sốt > 40°C
+        - Mụn nước nhiều, lan rộng
+        - Mệt mỏi nặng
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tiêm vắc xin (QUAN TRỌNG NHẤT!):**
+        - **Vắc xin Varicella:** 2 mũi (12-15 tháng, 4-6 tuổi)
+        - **Hiệu quả:** > 90%
+        - **Bảo vệ:** Lâu dài
+        - **Đối tượng:** Trẻ em, người chưa mắc bệnh
+
+        **2. Cách ly:**
+        - Cách ly người bệnh cho đến khi khỏi
+        - Tránh tiếp xúc với người chưa mắc bệnh
+        - Trẻ em không đi học cho đến khi khỏi
+
+        **3. Vệ sinh:**
+        - Rửa tay thường xuyên
+        - Vệ sinh đồ vật
+        - Che miệng khi ho, hắt hơi
+
+        **4. Phụ nữ mang thai:**
+        - Tránh tiếp xúc với người bệnh
+        - Tiêm vắc xin trước khi mang thai (nếu chưa mắc)
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Tiêm vắc xin** (quan trọng nhất!)
+        - Cách ly người bệnh
+        - Vệ sinh cá nhân
+
+        **2. Khi bị thủy đậu:**
+        - Nghỉ ngơi tại nhà
+        - Hạ sốt, giảm ngứa
+        - Tránh gãi (gây nhiễm khuẩn, sẹo)
+        - Tắm nước ấm, giữ da sạch
+
+        **3. Sống tích cực:**
+        - Thủy đậu thường tự khỏi
+        - Điều trị triệu chứng → Giảm khó chịu
+        - Phòng ngừa tốt → Không mắc bệnh
+        - Tiêm vắc xin → Bảo vệ > 90%
+
+        **4. Trẻ em:**
+        - Thường nhẹ hơn người lớn
+        - Cần chăm sóc, theo dõi
+        - Tránh gãi (quan trọng!)
+        - Không đi học cho đến khi khỏi
+        """,
+        related_disease="chickenpox",
+        related_drugs=["Paracetamol", "Acyclovir", "Cetirizine", "Loratadine", "Calamine"],
+        printable=True
+    ),
+    
+    # === MEASLES (SỞI) ===
+    PatientEducationTopic(
+        id="measles_basics",
+        title="Understanding Measles",
+        title_vn="Hiểu về Sởi",
+        category="Disease",
+        content="""
+        # Hiểu về Sởi
+
+        ## Sởi là gì?
+
+        Sởi là bệnh nhiễm virus do Measles virus gây ra, đặc trưng bởi sốt, ho, sổ mũi, đỏ mắt và phát ban. Bệnh rất phổ biến ở trẻ em Việt Nam, lây qua đường hô hấp, có thể gây biến chứng nặng.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh nhiễm virus
+        - Sốt, ho, sổ mũi, phát ban
+        - Rất phổ biến ở trẻ em
+        - Có thể gây biến chứng nặng
+
+        ## Triệu chứng:
+
+        **Giai đoạn 1 (ủ bệnh):** 10-14 ngày
+        - Không có triệu chứng
+
+        **Giai đoạn 2 (tiền triệu):** 2-4 ngày
+        - **Sốt:** Sốt cao (38-40°C)
+        - **Ho:** Ho khan
+        - **Sổ mũi:** Chảy nước mũi
+        - **Đỏ mắt:** Viêm kết mạc, sợ ánh sáng
+        - **Đốm Koplik:** Đốm trắng nhỏ trong miệng (dấu hiệu đặc trưng)
+
+        **Giai đoạn 3 (phát ban):** 3-5 ngày
+        - **Phát ban:** Ban đỏ, bắt đầu từ sau tai, lan ra mặt, thân, tay chân
+        - **Ban dạng dát sẩn:** Ban đỏ, nổi gờ, có thể hợp lại
+        - **Sốt cao:** Sốt cao khi phát ban
+        - **Mệt mỏi nặng**
+
+        **Giai đoạn 4 (hồi phục):** 1-2 tuần
+        - Ban nhạt dần, bong vảy
+        - Sốt giảm
+        - Ho có thể kéo dài
+
+        **⚠️ Biến chứng:**
+        - **Viêm phổi:** Nguy hiểm nhất, có thể tử vong
+        - **Viêm não:** Hiếm nhưng nguy hiểm
+        - **Viêm tai giữa:** Phổ biến
+        - **Tiêu chảy:** Phổ biến
+        - **Suy dinh dưỡng:** Do kém ăn
+        - **Mù:** Do thiếu vitamin A
+
+        ## Nguyên nhân:
+
+        **1. Virus:**
+        - Measles virus
+        - Rất dễ lây
+
+        **2. Lây truyền:**
+        - **Đường hô hấp:** Ho, hắt hơi, nói chuyện
+        - **Tiếp xúc trực tiếp:** Dịch mũi, họng
+        - **Gián tiếp:** Đồ vật bị nhiễm (ít gặp)
+
+        **3. Yếu tố nguy cơ:**
+        - Chưa tiêm vắc xin
+        - Chưa từng mắc bệnh
+        - Tiếp xúc với người bệnh
+        - Suy dinh dưỡng
+        - Thiếu vitamin A
+        - Suy giảm miễn dịch
+
+        ## Chẩn đoán:
+
+        **Chẩn đoán lâm sàng:**
+        - Triệu chứng điển hình
+        - Đốm Koplik
+        - Phát ban đặc trưng
+
+        **Xét nghiệm:**
+        - **Kháng thể IgM:** Dương tính
+        - **PCR:** Phát hiện RNA virus
+        - **Cấy virus:** Ít dùng
+
+        ## Điều trị:
+
+        **1. Điều trị triệu chứng:**
+        - **Hạ sốt:** Paracetamol (không dùng Aspirin ở trẻ em!)
+        - **Giảm ho:** Thuốc ho, mật ong
+        - **Nhỏ mũi:** Nước muối sinh lý
+        - **Nhỏ mắt:** Nước muối sinh lý
+
+        **2. Bổ sung vitamin A:**
+        - **Vitamin A:** 200,000 IU (trẻ > 12 tháng), 100,000 IU (trẻ 6-12 tháng), 50,000 IU (trẻ < 6 tháng)
+        - Uống 2 lần (cách 24 giờ)
+        - Giảm nguy cơ mù, tử vong
+
+        **3. Điều trị biến chứng:**
+        - **Viêm phổi:** Kháng sinh
+        - **Viêm tai giữa:** Kháng sinh
+        - **Tiêu chảy:** Bù dịch, Oresol
+
+        **4. Nghỉ ngơi:**
+        - Nghỉ ngơi tại nhà
+        - Cách ly cho đến khi khỏi
+
+        **5. Dinh dưỡng:**
+        - Ăn đủ dinh dưỡng
+        - Uống nhiều nước
+        - Bổ sung vitamin, khoáng chất
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi đang sốt:**
+        - Ăn mềm, lỏng: Cháo, súp
+        - Uống nhiều nước: Nước lọc, nước trái cây
+        - Tránh thức ăn khó tiêu
+
+        **2. Sau khi hết sốt:**
+        - Ăn đủ dinh dưỡng
+        - Protein: Thịt, cá, trứng
+        - Rau xanh, trái cây (bổ sung vitamin A)
+        - Sữa, sữa chua
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Cháo thịt, trứng
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        **4. Lưu ý:**
+        - Bổ sung vitamin A (quan trọng!)
+        - Ăn đủ dinh dưỡng (tránh suy dinh dưỡng)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Nghỉ ngơi tại nhà
+        - Tránh gắng sức
+        - Cách ly cho đến khi khỏi
+
+        **2. Sau khi khỏi:**
+        - Tập thể dục từ từ
+        - Tăng dần cường độ
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Hạ sốt:**
+        - **Paracetamol:** Khi sốt > 38.5°C
+        - **Không dùng Aspirin** ở trẻ em (gây hội chứng Reye)
+        - Không quá 4g/ngày (người lớn)
+
+        **2. Vitamin A:**
+        - Uống đúng liều, đúng thời điểm
+        - Quan trọng để giảm biến chứng
+
+        **3. Điều trị biến chứng:**
+        - Kháng sinh nếu có nhiễm khuẩn
+        - Oresol nếu tiêu chảy
+
+        **4. Lưu ý:**
+        - Không tự ý dùng Corticosteroid
+        - Báo bác sĩ nếu có biến chứng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Biến chứng:**
+        - Sốt cao, kéo dài
+        - Khó thở (viêm phổi)
+        - Rối loạn ý thức (viêm não)
+        - Co giật
+        - Mất nước nặng
+
+        **2. Trẻ nhỏ:**
+        - Trẻ < 12 tháng
+        - Suy dinh dưỡng
+        - Thiếu vitamin A
+
+        **3. Triệu chứng nặng:**
+        - Sốt > 40°C
+        - Ho nhiều, khó thở
+        - Mệt mỏi nặng
+        - Không ăn uống được
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tiêm vắc xin (QUAN TRỌNG NHẤT!):**
+        - **Vắc xin MMR (Sởi-Quai bị-Rubella):** 2 mũi (12-15 tháng, 4-6 tuổi)
+        - **Hiệu quả:** > 95%
+        - **Bảo vệ:** Lâu dài
+        - **Đối tượng:** Tất cả trẻ em
+
+        **2. Cách ly:**
+        - Cách ly người bệnh cho đến khi khỏi
+        - Tránh tiếp xúc với người chưa tiêm vắc xin
+        - Trẻ em không đi học cho đến khi khỏi
+
+        **3. Vệ sinh:**
+        - Rửa tay thường xuyên
+        - Che miệng khi ho, hắt hơi
+        - Vệ sinh đồ vật
+
+        **4. Bổ sung vitamin A:**
+        - Bổ sung vitamin A định kỳ cho trẻ em
+        - Đặc biệt quan trọng khi mắc sởi
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Tiêm vắc xin** (quan trọng nhất!)
+        - Cách ly người bệnh
+        - Vệ sinh cá nhân
+
+        **2. Khi bị sởi:**
+        - Nghỉ ngơi tại nhà
+        - Hạ sốt, giảm ho
+        - Bổ sung vitamin A (quan trọng!)
+        - Ăn đủ dinh dưỡng
+        - Theo dõi biến chứng
+
+        **3. Sống tích cực:**
+        - Sởi có thể gây biến chứng nặng
+        - Điều trị triệu chứng, bổ sung vitamin A → Giảm biến chứng
+        - Phòng ngừa tốt → Không mắc bệnh
+        - Tiêm vắc xin → Bảo vệ > 95%
+
+        **4. Trẻ em:**
+        - Cần chăm sóc, theo dõi sát
+        - Bổ sung vitamin A (quan trọng!)
+        - Ăn đủ dinh dưỡng
+        - Không đi học cho đến khi khỏi
+        - Theo dõi biến chứng (viêm phổi, viêm não)
+        """,
+        related_disease="measles",
+        related_drugs=["Paracetamol", "Vitamin A", "Oresol", "Antibiotic"],
+        printable=True
+    ),
+    
+    # === ROTAVIRUS DIARRHEA (TIÊU CHẢY DO ROTAVIRUS) ===
+    PatientEducationTopic(
+        id="rotavirus_diarrhea_basics",
+        title="Understanding Rotavirus Diarrhea",
+        title_vn="Hiểu về Tiêu chảy do Rotavirus",
+        category="Disease",
+        content="""
+        # Hiểu về Tiêu chảy do Rotavirus
+
+        ## Tiêu chảy do Rotavirus là gì?
+
+        Tiêu chảy do Rotavirus là bệnh nhiễm virus đường ruột do Rotavirus gây ra, đặc trưng bởi tiêu chảy nhiều nước, nôn, sốt. Bệnh rất phổ biến ở trẻ em Việt Nam, đặc biệt trẻ < 2 tuổi, là nguyên nhân hàng đầu gây tiêu chảy nặng ở trẻ em.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh nhiễm virus đường ruột
+        - Tiêu chảy nhiều nước, nôn, sốt
+        - Rất phổ biến ở trẻ em < 2 tuổi
+        - Nguyên nhân hàng đầu gây tiêu chảy nặng
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Tiêu chảy:** Tiêu chảy nhiều nước, không có máu, mùi chua
+        - **Nôn:** Nôn nhiều, có thể nôn liên tục
+        - **Sốt:** Sốt nhẹ đến vừa (37.5-39°C)
+        - **Đau bụng:** Đau bụng, quấy khóc
+        - **Mệt mỏi, suy nhược**
+
+        **Triệu chứng khác:**
+        - Chán ăn
+        - Khát nước
+        - Giảm đi tiểu
+
+        **⚠️ Mất nước:**
+        - **Nhẹ:** Khát nước, môi khô
+        - **Vừa:** Mắt trũng, da nhăn, giảm đi tiểu
+        - **Nặng:** Mệt mỏi nặng, lơ mơ, không uống được, sốc
+
+        **⚠️ Biến chứng:**
+        - Mất nước nặng
+        - Rối loạn điện giải
+        - Sốc
+        - Tử vong (nếu không điều trị)
+
+        ## Nguyên nhân:
+
+        **1. Virus:**
+        - Rotavirus
+        - Có nhiều type (A, B, C...)
+
+        **2. Lây truyền:**
+        - **Phân-miệng:** Từ phân người bệnh
+        - **Tiếp xúc trực tiếp:** Tay, đồ vật bị nhiễm
+        - **Gián tiếp:** Đồ chơi, bề mặt bị nhiễm
+        - **Nước, thức ăn:** Bị nhiễm virus
+
+        **3. Yếu tố nguy cơ:**
+        - Trẻ em < 2 tuổi
+        - Chưa tiêm vắc xin
+        - Vệ sinh kém
+        - Sống đông đúc
+        - Suy dinh dưỡng
+
+        ## Chẩn đoán:
+
+        **Chẩn đoán lâm sàng:**
+        - Triệu chứng điển hình
+        - Trẻ em < 2 tuổi
+
+        **Xét nghiệm:**
+        - **Test nhanh:** Kháng nguyên Rotavirus trong phân
+        - **PCR:** Phát hiện RNA virus
+        - **Cấy virus:** Ít dùng
+
+        ## Điều trị:
+
+        **1. Bù dịch (QUAN TRỌNG NHẤT!):**
+        - **Oresol:** Uống ngay khi bắt đầu tiêu chảy
+        - **Cách uống:** Uống từng ngụm nhỏ, thường xuyên
+        - **Liều lượng:** 50-100ml sau mỗi lần đi ngoài (trẻ em)
+        - **Truyền dịch:** Nếu mất nước nặng, không uống được
+
+        **2. Điều trị triệu chứng:**
+        - **Hạ sốt:** Paracetamol khi sốt > 38.5°C
+        - **Giảm nôn:** Domperidone (nếu cần)
+        - **Kẽm:** 10-20mg/ngày, 10-14 ngày (giảm tiêu chảy)
+
+        **3. Dinh dưỡng:**
+        - **Tiếp tục bú mẹ:** Nếu đang bú mẹ
+        - **Tiếp tục ăn:** Ăn thức ăn mềm, dễ tiêu
+        - **Tránh:** Nhịn ăn (làm bệnh nặng)
+
+        **4. Không dùng:**
+        - **Kháng sinh:** Không có tác dụng (virus)
+        - **Thuốc cầm tiêu chảy:** Loperamide (nguy hiểm ở trẻ em)
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi đang tiêu chảy:**
+        - **Tiếp tục bú mẹ:** Nếu đang bú mẹ (quan trọng!)
+        - **Tiếp tục ăn:** Ăn thức ăn mềm, dễ tiêu
+        - **Uống Oresol:** Uống từng ngụm nhỏ, thường xuyên
+        - **Tránh:** Nhịn ăn, thức ăn khó tiêu, nhiều đường
+
+        **2. Thức ăn phù hợp:**
+        - Cháo, súp
+        - Cơm mềm
+        - Thịt, cá nấu chín (ít)
+        - Trái cây: Chuối, táo
+        - Tránh: Sữa công thức (nếu không dung nạp), nước ngọt
+
+        **3. Sau khi khỏi:**
+        - Ăn đủ dinh dưỡng
+        - Bổ sung vitamin, khoáng chất
+        - Tăng dần lượng thức ăn
+
+        **4. Thực đơn mẫu (trẻ em):**
+        - **Sáng:** Cháo thịt
+        - **Trưa:** Cháo/cơm mềm, thịt/cá (ít), chuối
+        - **Chiều:** Cháo/cơm mềm, thịt/cá (ít), chuối
+        - **Bữa phụ:** Sữa mẹ, sữa công thức (nếu dung nạp)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Nghỉ ngơi tại nhà
+        - Tránh gắng sức
+        - Cách ly cho đến khi khỏi
+
+        **2. Sau khi khỏi:**
+        - Tập thể dục từ từ
+        - Tăng dần cường độ
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Oresol (QUAN TRỌNG!):**
+        - Uống ngay khi bắt đầu tiêu chảy
+        - Uống từng ngụm nhỏ, thường xuyên
+        - Pha đúng liều (theo hướng dẫn)
+        - Uống 50-100ml sau mỗi lần đi ngoài (trẻ em)
+
+        **2. Hạ sốt:**
+        - Paracetamol: Khi sốt > 38.5°C
+        - Không quá 4 lần/ngày (trẻ em)
+
+        **3. Kẽm:**
+        - 10-20mg/ngày, 10-14 ngày
+        - Giảm tiêu chảy, tái phát
+
+        **4. Lưu ý:**
+        - **Không dùng kháng sinh** (virus)
+        - **Không dùng thuốc cầm tiêu chảy** ở trẻ em
+        - Báo bác sĩ nếu mất nước nặng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Mất nước nặng:**
+        - Mắt trũng, da nhăn
+        - Lơ mơ, không uống được
+        - Không đi tiểu > 6 giờ
+        - **Cấp cứu ngay!**
+
+        **2. Trẻ nhỏ:**
+        - Trẻ < 6 tháng
+        - Tiêu chảy nhiều, nôn nhiều
+        - Sốt cao
+
+        **3. Triệu chứng nặng:**
+        - Tiêu chảy > 10 lần/ngày
+        - Nôn liên tục, không uống được
+        - Sốt > 39°C
+        - Có máu trong phân
+
+        **4. Không đáp ứng:**
+        - Tiêu chảy kéo dài > 7 ngày
+        - Mất nước không cải thiện
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tiêm vắc xin (QUAN TRỌNG NHẤT!):**
+        - **Vắc xin Rotavirus:** 2-3 mũi (2, 4, 6 tháng tuổi)
+        - **Hiệu quả:** 70-90%
+        - **Bảo vệ:** Giảm tiêu chảy nặng, nhập viện
+        - **Đối tượng:** Tất cả trẻ em
+
+        **2. Vệ sinh cá nhân:**
+        - **Rửa tay:** Rửa tay bằng xà phòng trước khi ăn, sau khi đi vệ sinh
+        - **Vệ sinh:** Giữ vệ sinh cá nhân sạch sẽ
+
+        **3. Vệ sinh môi trường:**
+        - Vệ sinh nhà vệ sinh
+        - Vệ sinh đồ chơi, bề mặt
+        - Xử lý phân đúng cách
+
+        **4. Khi có người bệnh:**
+        - Cách ly người bệnh
+        - Vệ sinh dụng cụ ăn uống
+        - Rửa tay sau khi tiếp xúc
+
+        **5. Nuôi con bằng sữa mẹ:**
+        - Nuôi con bằng sữa mẹ (giảm nguy cơ)
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Tiêm vắc xin** (quan trọng nhất!)
+        - Rửa tay thường xuyên
+        - Vệ sinh môi trường
+
+        **2. Khi bị tiêu chảy do Rotavirus:**
+        - **Bù dịch ngay** (quan trọng nhất!)
+        - Uống Oresol từng ngụm nhỏ, thường xuyên
+        - Tiếp tục bú mẹ, ăn uống
+        - Theo dõi dấu hiệu mất nước
+
+        **3. Sống tích cực:**
+        - Tiêu chảy do Rotavirus thường tự khỏi
+        - Bù dịch đúng cách → Giảm biến chứng
+        - Phòng ngừa tốt → Không mắc bệnh
+        - Tiêm vắc xin → Bảo vệ 70-90%
+
+        **4. Trẻ em:**
+        - Cần chăm sóc, theo dõi sát
+        - Bù dịch ngay (quan trọng!)
+        - Tiếp tục bú mẹ, ăn uống
+        - Theo dõi dấu hiệu mất nước
+        - Đến bệnh viện nếu mất nước nặng
+        """,
+        related_disease="rotavirus_diarrhea",
+        related_drugs=["Oresol", "Paracetamol", "Zinc", "Domperidone"],
+        printable=True
+    ),
+    
+    # === SEPSIS (NHIỄM KHUẨN HUYẾT) ===
+    PatientEducationTopic(
+        id="sepsis_basics",
+        title="Understanding Sepsis",
+        title_vn="Hiểu về Nhiễm khuẩn huyết",
+        category="Disease",
+        content="""
+        # Hiểu về Nhiễm khuẩn huyết
+
+        ## Nhiễm khuẩn huyết là gì?
+
+        Nhiễm khuẩn huyết (Sepsis) là tình trạng đe dọa tính mạng do phản ứng của cơ thể với nhiễm khuẩn, gây tổn thương các cơ quan. Bệnh rất nguy hiểm, cần điều trị cấp cứu ngay lập tức.
+
+        **⚠️ Đặc điểm:**
+        - Tình trạng đe dọa tính mạng
+        - Phản ứng của cơ thể với nhiễm khuẩn
+        - Gây tổn thương các cơ quan
+        - Tử vong cao nếu không điều trị sớm
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Sốt:** Sốt cao (> 38°C) hoặc hạ thân nhiệt (< 36°C)
+        - **Nhịp tim nhanh:** > 90 lần/phút
+        - **Thở nhanh:** > 20 lần/phút
+        - **Rối loạn ý thức:** Lơ mơ, kích thích, hôn mê
+        - **Huyết áp thấp:** Sốc nhiễm khuẩn
+
+        **Triệu chứng khác:**
+        - Da lạnh, ẩm
+        - Vã mồ hôi
+        - Giảm đi tiểu
+        - Đau cơ, khớp
+        - Buồn nôn, nôn
+
+        **⚠️ Sốc nhiễm khuẩn:**
+        - Huyết áp tụt
+        - Thiểu niệu
+        - Rối loạn ý thức
+        - **Cấp cứu ngay!**
+
+        ## Nguyên nhân:
+
+        **1. Nhiễm khuẩn:**
+        - Vi khuẩn (phổ biến nhất)
+        - Virus, nấm (ít gặp hơn)
+
+        **2. Nguồn nhiễm khuẩn:**
+        - **Viêm phổi:** Phổ biến nhất
+        - **Nhiễm khuẩn tiết niệu**
+        - **Nhiễm khuẩn da, mô mềm**
+        - **Nhiễm khuẩn ổ bụng**
+        - **Nhiễm khuẩn huyết từ catheter**
+
+        **3. Yếu tố nguy cơ:**
+        - Tuổi cao (> 65 tuổi)
+        - Trẻ sơ sinh
+        - Suy giảm miễn dịch
+        - Bệnh mạn tính (đái tháo đường, suy thận)
+        - Phẫu thuật gần đây
+        - Đặt catheter, ống thông
+
+        ## Chẩn đoán:
+
+        **Tiêu chuẩn chẩn đoán (SOFA score):**
+        - Nhiễm khuẩn + Rối loạn chức năng cơ quan
+        - **SOFA ≥ 2:** Sepsis
+        - **Sốc:** Sepsis + Huyết áp thấp
+
+        **Xét nghiệm:**
+        - **Cấy máu:** Tìm vi khuẩn
+        - **Cấy nước tiểu, đờm:** Tìm nguồn nhiễm
+        - **Công thức máu:** Bạch cầu tăng/giảm
+        - **Procalcitonin:** Tăng cao
+        - **Lactate:** Tăng (thiếu oxy mô)
+
+        ## Điều trị:
+
+        **1. Kháng sinh (QUAN TRỌNG!):**
+        - **Bắt đầu ngay:** Trong 1 giờ đầu
+        - **Phổ rộng:** Ceftriaxone + Vancomycin, hoặc Piperacillin-Tazobactam
+        - **Điều chỉnh:** Theo kết quả cấy và kháng sinh đồ
+        - **Liệu trình:** 7-14 ngày
+
+        **2. Bù dịch:**
+        - **Truyền dịch:** 30ml/kg trong 3 giờ đầu
+        - **Dịch tinh thể:** Nước muối sinh lý, Ringer lactate
+        - **Theo dõi:** Đáp ứng dịch
+
+        **3. Vận mạch:**
+        - **Norepinephrine:** Nếu huyết áp thấp sau bù dịch
+        - **Dopamine, Epinephrine:** Nếu cần
+
+        **4. Điều trị hỗ trợ:**
+        - **Thở máy:** Nếu suy hô hấp
+        - **Lọc máu:** Nếu suy thận
+        - **Hạ sốt:** Paracetamol
+        - **Điều chỉnh đường huyết:** Insulin nếu cần
+
+        **5. Điều trị nguồn nhiễm:**
+        - Dẫn lưu ổ áp xe
+        - Loại bỏ catheter nhiễm khuẩn
+        - Phẫu thuật nếu cần
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi đang bệnh nặng:**
+        - Nuôi ăn qua ống (nếu hôn mê)
+        - Nuôi ăn tĩnh mạch (nếu không ăn được)
+        - Theo chỉ định bác sĩ
+
+        **2. Khi ổn định:**
+        - Ăn đủ dinh dưỡng
+        - Protein: Thịt, cá, trứng
+        - Rau xanh, trái cây
+        - Uống nhiều nước
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Cháo thịt, trứng
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Nghỉ ngơi hoàn toàn
+        - Vật lý trị liệu (nếu có chỉ định)
+
+        **2. Sau khi khỏi:**
+        - Tập thể dục từ từ
+        - Phục hồi chức năng
+        - Tăng dần cường độ
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Kháng sinh:**
+        - Uống đủ liệu trình (7-14 ngày)
+        - Uống đúng giờ, đúng liều
+        - **Quan trọng:** Không tự ý ngừng
+
+        **2. Điều trị hỗ trợ:**
+        - Paracetamol: Hạ sốt
+        - Insulin: Điều chỉnh đường huyết (nếu cần)
+
+        **3. Lưu ý:**
+        - Điều trị tại bệnh viện
+        - Theo dõi sát
+        - Báo bác sĩ nếu có tác dụng phụ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng nặng:**
+        - Sốt cao + nhịp tim nhanh + thở nhanh
+        - Rối loạn ý thức
+        - Huyết áp thấp
+        - **Cấp cứu ngay!**
+
+        **2. Nhiễm khuẩn + triệu chứng:**
+        - Nhiễm khuẩn + sốt cao
+        - Nhiễm khuẩn + mệt mỏi nặng
+        - Nhiễm khuẩn + rối loạn ý thức
+
+        **3. Yếu tố nguy cơ:**
+        - Tuổi cao
+        - Suy giảm miễn dịch
+        - Bệnh mạn tính
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Phòng ngừa nhiễm khuẩn:**
+        - **Rửa tay:** Rửa tay thường xuyên
+        - **Vệ sinh:** Giữ vệ sinh cá nhân sạch sẽ
+        - **Vết thương:** Chăm sóc vết thương đúng cách
+        - **Tiêm vắc xin:** Cúm, phế cầu (nếu có chỉ định)
+
+        **2. Điều trị nhiễm khuẩn sớm:**
+        - Điều trị nhiễm khuẩn ngay khi có triệu chứng
+        - Uống kháng sinh đủ liệu trình
+        - Không tự ý ngừng kháng sinh
+
+        **3. Yếu tố nguy cơ:**
+        - Kiểm soát bệnh mạn tính
+        - Tăng cường miễn dịch
+        - Tránh tiếp xúc với người bệnh
+
+        **4. Chăm sóc y tế:**
+        - Vệ sinh catheter, ống thông
+        - Phòng ngừa nhiễm khuẩn bệnh viện
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Rửa tay** (quan trọng nhất!)
+        - Điều trị nhiễm khuẩn sớm
+        - Vệ sinh cá nhân
+
+        **2. Khi có triệu chứng:**
+        - **Đến bệnh viện ngay** (quan trọng nhất!)
+        - Điều trị sớm → Giảm tử vong
+        - Không tự điều trị tại nhà
+
+        **3. Sống tích cực:**
+        - Nhiễm khuẩn huyết rất nguy hiểm
+        - Điều trị sớm → Tỷ lệ sống cao
+        - Phòng ngừa tốt → Không mắc bệnh
+
+        **4. Sau khi khỏi:**
+        - Có thể có di chứng
+        - Cần phục hồi chức năng
+        - Theo dõi định kỳ
+        """,
+        related_disease="sepsis",
+        related_drugs=["Ceftriaxone", "Vancomycin", "Piperacillin-Tazobactam", "Norepinephrine", "Paracetamol"],
+        printable=True
+    ),
+    
+    # === VALVULAR HEART DISEASE (BỆNH VAN TIM) ===
+    PatientEducationTopic(
+        id="valvular_heart_disease_basics",
+        title="Understanding Valvular Heart Disease",
+        title_vn="Hiểu về Bệnh van tim",
+        category="Disease",
+        content="""
+        # Hiểu về Bệnh van tim
+
+        ## Bệnh van tim là gì?
+
+        Bệnh van tim là tình trạng van tim không hoạt động đúng cách, gây hẹp hoặc hở van, ảnh hưởng đến lưu thông máu. Bệnh phổ biến ở Việt Nam, đặc biệt do thấp tim.
+
+        **⚠️ Đặc điểm:**
+        - Van tim không hoạt động đúng
+        - Hẹp hoặc hở van
+        - Ảnh hưởng lưu thông máu
+        - Phổ biến do thấp tim ở Việt Nam
+
+        **Phân loại:**
+        - **Hẹp van:** Van không mở đủ
+        - **Hở van:** Van không đóng kín
+        - **Van tim:** Van 2 lá, van 3 lá, van động mạch chủ, van động mạch phổi
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Khó thở:** Khi gắng sức, nặng hơn khi nằm
+        - **Mệt mỏi:** Mệt mỏi khi gắng sức
+        - **Đau ngực:** Có thể có
+        - **Đánh trống ngực:** Nhịp tim không đều
+        - **Phù:** Phù chân, mắt cá chân
+        - **Ho:** Ho khan, đặc biệt ban đêm
+
+        **Triệu chứng khác:**
+        - Chóng mặt, ngất xỉu
+        - Đau đầu
+        - Tím tái (nếu nặng)
+
+        **⚠️ Biến chứng:**
+        - Suy tim
+        - Rối loạn nhịp tim
+        - Đột quỵ (huyết khối)
+        - Viêm nội tâm mạc
+
+        ## Nguyên nhân:
+
+        **1. Thấp tim (phổ biến ở Việt Nam):**
+        - Biến chứng của viêm họng do liên cầu khuẩn
+        - Gây hẹp/hở van 2 lá, van động mạch chủ
+
+        **2. Nguyên nhân khác:**
+        - **Thoái hóa:** Tuổi cao
+        - **Bẩm sinh:** Dị tật van tim
+        - **Viêm nội tâm mạc:** Nhiễm khuẩn van tim
+        - **Nhồi máu cơ tim:** Tổn thương cơ nhú
+        - **Bệnh mạch vành:** Thiếu máu cơ tim
+
+        **3. Yếu tố nguy cơ:**
+        - Tiền sử thấp tim
+        - Tuổi cao
+        - Bệnh tim mạch
+        - Nhiễm khuẩn
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Siêu âm tim:** Chuẩn vàng (đánh giá van tim)
+        - **ECG:** Rối loạn nhịp tim
+        - **X-quang ngực:** Tim to, phù phổi
+        - **Chụp mạch vành:** Nếu cần phẫu thuật
+
+        ## Điều trị:
+
+        **1. Thuốc:**
+        - **Lợi tiểu:** Furosemide (giảm phù, khó thở)
+        - **ACE inhibitor:** Nếu suy tim
+        - **Beta-blocker:** Giảm nhịp tim
+        - **Chống đông:** Warfarin (nếu rung nhĩ, van cơ học)
+        - **Kháng sinh dự phòng:** Nếu có chỉ định
+
+        **2. Phẫu thuật:**
+        - **Sửa van:** Nếu có thể
+        - **Thay van:** Van cơ học hoặc sinh học
+        - **Chỉ định:** Khi triệu chứng nặng, suy tim
+
+        **3. Can thiệp:**
+        - **Nong van:** Nếu hẹp van 2 lá
+        - **TAVI:** Thay van động mạch chủ qua da
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Chế độ ăn tim mạch:**
+        - **Giảm muối:** < 5g/ngày (giảm phù)
+        - **Giảm chất béo bão hòa:** Thịt đỏ, mỡ động vật
+        - **Tăng chất xơ:** Rau xanh, trái cây
+        - **Uống đủ nước:** Nhưng không quá nhiều (nếu phù)
+
+        **2. Thực phẩm tốt:**
+        - Cá béo (omega-3)
+        - Rau xanh, trái cây
+        - Ngũ cốc nguyên hạt
+        - Hạt
+
+        **3. Tránh:**
+        - Đồ mặn
+        - Thịt đỏ, mỡ động vật
+        - Rượu bia (hạn chế)
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo/cơm, trứng, trái cây
+        - **Trưa:** Cơm, cá, rau xanh, canh (không mặn)
+        - **Chiều:** Cơm, thịt gà/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, hạt
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Nên tập:**
+        - Tập thể dục đều đặn (cải thiện sức khỏe tim)
+        - Đi bộ, chạy bộ nhẹ
+        - 30 phút/ngày, 5 ngày/tuần
+
+        **2. Lưu ý:**
+        - Tránh gắng sức quá mức (gây khó thở)
+        - Nghỉ ngơi nếu khó thở, mệt mỏi
+        - Theo dõi nhịp tim khi tập
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Lợi tiểu:**
+        - Furosemide: Uống buổi sáng
+        - Theo dõi cân nặng (giảm phù)
+
+        **2. Chống đông:**
+        - Warfarin: Uống đều đặn, theo dõi INR
+        - DOAC: Nếu có chỉ định
+
+        **3. ACE inhibitor:**
+        - Uống đều đặn
+        - Theo dõi huyết áp, chức năng thận
+
+        **4. Lưu ý:**
+        - Uống đều đặn, đúng giờ
+        - Không tự ý ngừng
+        - Báo bác sĩ nếu có tác dụng phụ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Suy tim nặng:**
+        - Khó thở nặng
+        - Phù nhiều
+        - Không nằm được
+
+        **2. Rối loạn nhịp tim:**
+        - Đánh trống ngực nhiều
+        - Ngất xỉu
+
+        **3. Đột quỵ:**
+        - Yếu liệt một bên
+        - Nói khó
+        - **Cấp cứu ngay!**
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Phòng ngừa thấp tim:**
+        - **Điều trị viêm họng do liên cầu:** Kháng sinh đủ liệu trình
+        - **Dự phòng thấp tim:** Penicillin dài hạn (nếu có chỉ định)
+        - **Vệ sinh:** Giữ vệ sinh cá nhân
+
+        **2. Kiểm soát yếu tố nguy cơ:**
+        - Kiểm soát huyết áp
+        - Kiểm soát đái tháo đường
+        - Điều trị bệnh tim mạch
+
+        **3. Khám định kỳ:**
+        - Siêu âm tim định kỳ
+        - Theo dõi triệu chứng
+
+        **4. Phòng ngừa viêm nội tâm mạc:**
+        - Kháng sinh dự phòng (nếu có chỉ định)
+        - Vệ sinh răng miệng
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Điều trị viêm họng do liên cầu** (quan trọng!)
+        - Dự phòng thấp tim
+        - Vệ sinh cá nhân
+
+        **2. Khi bị bệnh van tim:**
+        - Uống thuốc đều đặn
+        - Chế độ ăn ít muối
+        - Tập thể dục đều đặn
+        - Khám định kỳ
+
+        **3. Sống tích cực:**
+        - Bệnh van tim có thể kiểm soát
+        - Điều trị đúng → Giảm triệu chứng
+        - Phẫu thuật → Cải thiện chất lượng cuộc sống
+
+        **4. Theo dõi:**
+        - Khám định kỳ 3-6 tháng
+        - Siêu âm tim định kỳ
+        - Theo dõi triệu chứng
+        """,
+        related_disease="valvular_heart_disease",
+        related_drugs=["Furosemide", "ACE Inhibitor", "Beta-blocker", "Warfarin", "Penicillin"],
+        printable=True
+    ),
+    
+    # === PELVIC INFLAMMATORY DISEASE (VIÊM NHIỄM PHỤ KHOA) ===
+    PatientEducationTopic(
+        id="pelvic_inflammatory_disease_basics",
+        title="Understanding Pelvic Inflammatory Disease",
+        title_vn="Hiểu về Viêm nhiễm phụ khoa",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm nhiễm phụ khoa
+
+        ## Viêm nhiễm phụ khoa là gì?
+
+        Viêm nhiễm phụ khoa (PID) là tình trạng viêm nhiễm cơ quan sinh dục nữ (tử cung, vòi trứng, buồng trứng), thường do nhiễm khuẩn lây qua đường tình dục. Bệnh phổ biến ở phụ nữ trẻ, có thể gây vô sinh nếu không điều trị.
+
+        **⚠️ Đặc điểm:**
+        - Viêm nhiễm cơ quan sinh dục nữ
+        - Thường do nhiễm khuẩn lây qua đường tình dục
+        - Phổ biến ở phụ nữ trẻ
+        - Có thể gây vô sinh
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Đau bụng dưới:** Đau âm ỉ, có thể dữ dội
+        - **Sốt:** Sốt nhẹ đến vừa (37.5-39°C)
+        - **Khí hư:** Khí hư nhiều, có mùi hôi, màu vàng/xanh
+        - **Đau khi quan hệ:** Đau khi giao hợp
+        - **Ra máu bất thường:** Ra máu giữa kỳ kinh, sau quan hệ
+        - **Đau khi đi tiểu:** Có thể có
+
+        **Triệu chứng khác:**
+        - Buồn nôn, nôn
+        - Mệt mỏi
+        - Đau lưng
+
+        **⚠️ Không có triệu chứng:**
+        - Nhiều phụ nữ không có triệu chứng rõ ràng
+        - Phát hiện khi khám phụ khoa
+
+        **⚠️ Biến chứng:**
+        - Vô sinh (do tắc vòi trứng)
+        - Thai ngoài tử cung
+        - Áp xe vùng chậu
+        - Đau vùng chậu mạn tính
+
+        ## Nguyên nhân:
+
+        **1. Nhiễm khuẩn:**
+        - **Chlamydia trachomatis:** Phổ biến nhất
+        - **Neisseria gonorrhoeae:** Phổ biến
+        - **Vi khuẩn khác:** Mycoplasma, Ureaplasma
+
+        **2. Lây truyền:**
+        - **Quan hệ tình dục:** Không an toàn
+        - **Nhiều bạn tình:** Tăng nguy cơ
+        - **Tiền sử:** Nhiễm khuẩn lây qua đường tình dục
+
+        **3. Yếu tố nguy cơ:**
+        - Quan hệ tình dục không an toàn
+        - Nhiều bạn tình
+        - Tuổi trẻ (< 25 tuổi)
+        - Đặt dụng cụ tử cung (IUD)
+        - Thụt rửa âm đạo
+
+        ## Chẩn đoán:
+
+        **Chẩn đoán lâm sàng:**
+        - Triệu chứng điển hình
+        - Khám phụ khoa: Đau khi khám, khí hư bất thường
+
+        **Xét nghiệm:**
+        - **Cấy dịch âm đạo:** Tìm vi khuẩn
+        - **Xét nghiệm Chlamydia, Gonorrhea:** PCR
+        - **Siêu âm:** Áp xe, dịch vùng chậu
+        - **Nội soi ổ bụng:** Nếu cần (chuẩn vàng)
+
+        ## Điều trị:
+
+        **1. Kháng sinh (QUAN TRỌNG!):**
+        - **Ceftriaxone 250mg IM + Doxycycline 100mg x 2 lần/ngày + Metronidazole 500mg x 2 lần/ngày:** 14 ngày
+        - **Hoặc:** Ofloxacin 400mg x 2 lần/ngày + Metronidazole 500mg x 2 lần/ngày: 14 ngày
+        - **Quan trọng:** Uống đủ liệu trình, điều trị bạn tình
+
+        **2. Điều trị bạn tình:**
+        - Điều trị đồng thời bạn tình
+        - Tránh tái nhiễm
+
+        **3. Nghỉ ngơi:**
+        - Nghỉ ngơi tại giường
+        - Tránh quan hệ tình dục cho đến khi khỏi
+
+        **4. Phẫu thuật:**
+        - Dẫn lưu áp xe nếu có
+        - Cắt bỏ vòi trứng nếu tắc hoàn toàn
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi đang bệnh:**
+        - Ăn đủ dinh dưỡng
+        - Protein: Thịt, cá, trứng
+        - Rau xanh, trái cây
+        - Uống nhiều nước
+
+        **2. Tránh:**
+        - Đồ cay nóng (có thể làm đau tăng)
+        - Rượu bia (khi dùng Metronidazole)
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Cháo/cơm, thịt/cá, trái cây
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Nghỉ ngơi tại giường
+        - Tránh gắng sức
+
+        **2. Sau khi khỏi:**
+        - Tập thể dục từ từ
+        - Tăng dần cường độ
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Kháng sinh:**
+        - Uống đủ liệu trình (14 ngày)
+        - Uống đúng giờ, đúng liều
+        - **Quan trọng:** Không tự ý ngừng (gây tái phát, biến chứng)
+
+        **2. Tác dụng phụ:**
+        - **Metronidazole:** Buồn nôn, đắng miệng, không uống rượu
+        - **Doxycycline:** Nhạy cảm ánh sáng, đau dạ dày
+        - Báo bác sĩ nếu có tác dụng phụ nặng
+
+        **3. Lưu ý:**
+        - Điều trị bạn tình (quan trọng!)
+        - Tránh quan hệ tình dục cho đến khi khỏi
+        - Không thụt rửa âm đạo
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng nặng:**
+        - Đau bụng dữ dội
+        - Sốt cao (> 39°C)
+        - Nôn nhiều
+
+        **2. Biến chứng:**
+        - Áp xe vùng chậu
+        - Viêm phúc mạc
+        - Sốc nhiễm khuẩn
+
+        **3. Không đáp ứng điều trị:**
+        - Triệu chứng không giảm sau 48-72 giờ
+        - Tái phát
+
+        **4. Mang thai:**
+        - Nếu đang mang thai
+        - Cần điều trị đặc biệt
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Quan hệ tình dục an toàn:**
+        - **Dùng bao cao su:** Quan trọng nhất!
+        - **Một bạn tình:** Giảm nguy cơ
+        - **Xét nghiệm định kỳ:** Nếu có nguy cơ
+
+        **2. Vệ sinh:**
+        - Vệ sinh vùng kín đúng cách
+        - **Không thụt rửa âm đạo** (làm mất cân bằng vi khuẩn)
+        - Mặc quần lót cotton, thoáng
+
+        **3. Điều trị sớm:**
+        - Điều trị nhiễm khuẩn lây qua đường tình dục sớm
+        - Tránh biến chứng
+
+        **4. Khám phụ khoa định kỳ:**
+        - Khám phụ khoa định kỳ
+        - Xét nghiệm Chlamydia, Gonorrhea nếu có nguy cơ
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Dùng bao cao su** (quan trọng nhất!)
+        - Quan hệ tình dục an toàn
+        - Vệ sinh vùng kín đúng cách
+
+        **2. Khi bị viêm nhiễm phụ khoa:**
+        - Điều trị sớm (quan trọng!)
+        - Uống kháng sinh đủ liệu trình
+        - Điều trị bạn tình
+        - Tránh quan hệ tình dục cho đến khi khỏi
+
+        **3. Sống tích cực:**
+        - Viêm nhiễm phụ khoa có thể điều trị khỏi
+        - Điều trị sớm → Tránh biến chứng (vô sinh)
+        - Phòng ngừa tốt → Không mắc bệnh
+
+        **4. Biến chứng:**
+        - Có thể gây vô sinh nếu không điều trị
+        - Cần điều trị sớm, đủ liệu trình
+        - Khám phụ khoa định kỳ
+        """,
+        related_disease="pelvic_inflammatory_disease",
+        related_drugs=["Ceftriaxone", "Doxycycline", "Metronidazole", "Ofloxacin"],
+        printable=True
+    ),
+    
+    # === UTERINE FIBROIDS (U XƠ TỬ CUNG) ===
+    PatientEducationTopic(
+        id="uterine_fibroids_basics",
+        title="Understanding Uterine Fibroids",
+        title_vn="Hiểu về U xơ tử cung",
+        category="Disease",
+        content="""
+        # Hiểu về U xơ tử cung
+
+        ## U xơ tử cung là gì?
+
+        U xơ tử cung là khối u lành tính phát triển từ cơ tử cung, rất phổ biến ở phụ nữ trong độ tuổi sinh sản. Hầu hết u xơ không gây triệu chứng, nhưng một số có thể gây ra máu nhiều, đau bụng.
+
+        **⚠️ Đặc điểm:**
+        - Khối u lành tính (không phải ung thư)
+        - Phát triển từ cơ tử cung
+        - Rất phổ biến (20-50% phụ nữ)
+        - Hầu hết không gây triệu chứng
+
+        **Phân loại:**
+        - **Dưới thanh mạc:** Phát triển ra ngoài tử cung
+        - **Trong cơ:** Phát triển trong cơ tử cung
+        - **Dưới niêm mạc:** Phát triển vào trong tử cung (gây triệu chứng nhiều nhất)
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Ra máu nhiều:** Kinh nguyệt nhiều, kéo dài
+        - **Đau bụng:** Đau bụng dưới, đau lưng
+        - **Đau khi quan hệ:** Có thể có
+        - **Đi tiểu nhiều:** Nếu u lớn chèn ép bàng quang
+        - **Táo bón:** Nếu u lớn chèn ép trực tràng
+
+        **Triệu chứng khác:**
+        - Bụng to (nếu u lớn)
+        - Thiếu máu (do ra máu nhiều)
+        - Vô sinh, sảy thai (hiếm)
+
+        **⚠️ Không có triệu chứng:**
+        - Hầu hết u xơ không gây triệu chứng
+        - Phát hiện khi khám phụ khoa, siêu âm
+
+        ## Nguyên nhân:
+
+        **1. Hormone:**
+        - Estrogen, Progesterone kích thích phát triển
+        - U xơ thường teo sau mãn kinh
+
+        **2. Yếu tố nguy cơ:**
+        - Tuổi: 30-50 tuổi
+        - Tiền sử gia đình
+        - Béo phì
+        - Chủng tộc: Phụ nữ da đen có nguy cơ cao hơn
+        - Chưa sinh con
+
+        **3. Yếu tố bảo vệ:**
+        - Sinh con
+        - Dùng thuốc tránh thai
+        - Mãn kinh
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Siêu âm:** Chuẩn vàng (thấy u xơ, kích thước, vị trí)
+        - **MRI:** Nếu cần đánh giá chi tiết
+        - **Nội soi tử cung:** Nếu u dưới niêm mạc
+        - **Sinh thiết:** Nếu nghi ngờ ung thư (hiếm)
+
+        ## Điều trị:
+
+        **1. Theo dõi:**
+        - Nếu không có triệu chứng, u nhỏ
+        - Siêu âm định kỳ 6-12 tháng
+
+        **2. Thuốc:**
+        - **Thuốc tránh thai:** Giảm ra máu nhiều
+        - **Progestin:** Giảm ra máu
+        - **GnRH agonist:** Làm teo u (tạm thời)
+        - **Tranexamic acid:** Giảm ra máu nhiều
+
+        **3. Phẫu thuật:**
+        - **Bóc u xơ:** Giữ lại tử cung (nếu muốn sinh con)
+        - **Cắt tử cung:** Nếu u lớn, nhiều u, không muốn sinh con
+        - **Nội soi tử cung:** Cắt u dưới niêm mạc
+
+        **4. Can thiệp:**
+        - **Thuyên tắc động mạch tử cung:** Làm teo u
+        - **Sóng siêu âm tập trung:** Phá hủy u
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Bình thường:**
+        - Ăn uống bình thường
+        - Ăn đủ dinh dưỡng
+
+        **2. Nếu thiếu máu:**
+        - Bổ sung sắt: Thịt đỏ, rau xanh
+        - Vitamin C: Giúp hấp thu sắt
+        - Tránh trà, cà phê khi ăn (giảm hấp thu sắt)
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Cháo/cơm, thịt/cá, trái cây
+        - **Trưa:** Cơm, thịt đỏ, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây giàu vitamin C
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Bình thường:**
+        - Tập thể dục bình thường
+        - 30 phút/ngày, 5 ngày/tuần
+
+        **2. Lưu ý:**
+        - Tránh gắng sức quá mức nếu đau bụng
+        - Nghỉ ngơi nếu mệt mỏi
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Thuốc giảm ra máu:**
+        - Thuốc tránh thai: Uống đều đặn
+        - Tranexamic acid: Uống khi ra máu nhiều
+
+        **2. Bổ sung sắt:**
+        - Nếu thiếu máu
+        - Uống sau ăn (giảm đau dạ dày)
+
+        **3. Lưu ý:**
+        - Uống đúng giờ, đúng liều
+        - Báo bác sĩ nếu có tác dụng phụ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Ra máu nhiều:**
+        - Ra máu nhiều, không cầm được
+        - Thiếu máu nặng (mệt mỏi, chóng mặt)
+
+        **2. Đau bụng dữ dội:**
+        - Đau bụng dữ dội, đột ngột
+        - Có thể do xoắn u, hoại tử u
+
+        **3. Triệu chứng nặng:**
+        - Đi tiểu khó, bí tiểu
+        - Táo bón nặng
+
+        **4. Nghi ngờ ung thư:**
+        - U phát triển nhanh
+        - Sau mãn kinh
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Không thể phòng ngừa hoàn toàn:**
+        - U xơ có thể do di truyền, hormone
+        - Không có cách phòng ngừa chắc chắn
+
+        **2. Giảm nguy cơ:**
+        - Duy trì cân nặng hợp lý
+        - Ăn đủ dinh dưỡng
+        - Tập thể dục đều đặn
+
+        **3. Khám phụ khoa định kỳ:**
+        - Khám phụ khoa định kỳ
+        - Siêu âm nếu có triệu chứng
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi có u xơ:**
+        - Hầu hết u xơ không cần điều trị
+        - Theo dõi định kỳ nếu không có triệu chứng
+        - Điều trị nếu có triệu chứng
+
+        **2. Điều trị:**
+        - Thuốc: Giảm triệu chứng
+        - Phẫu thuật: Nếu u lớn, triệu chứng nặng
+        - Có thể giữ lại tử cung (bóc u xơ)
+
+        **3. Sống tích cực:**
+        - U xơ là lành tính (không phải ung thư)
+        - Hầu hết không ảnh hưởng cuộc sống
+        - Điều trị đúng → Giảm triệu chứng
+
+        **4. Phụ nữ trẻ:**
+        - Có thể bóc u xơ, giữ lại tử cung
+        - Vẫn có thể sinh con sau phẫu thuật
+        - Cần theo dõi định kỳ
+        """,
+        related_disease="uterine_fibroids",
+        related_drugs=["Oral Contraceptive", "Progestin", "GnRH Agonist", "Tranexamic Acid", "Iron"],
+        printable=True
+    ),
+    
+    # === POLYCYSTIC OVARY SYNDROME (HỘI CHỨNG BUỒNG TRỨNG ĐA NANG) ===
+    PatientEducationTopic(
+        id="polycystic_ovary_syndrome_basics",
+        title="Understanding Polycystic Ovary Syndrome",
+        title_vn="Hiểu về Hội chứng buồng trứng đa nang",
+        category="Disease",
+        content="""
+        # Hiểu về Hội chứng buồng trứng đa nang (PCOS)
+
+        ## PCOS là gì?
+
+        Hội chứng buồng trứng đa nang (PCOS) là rối loạn nội tiết phổ biến ở phụ nữ, đặc trưng bởi rối loạn kinh nguyệt, tăng androgen, và buồng trứng đa nang. Bệnh ảnh hưởng đến khả năng sinh sản và sức khỏe lâu dài.
+
+        **⚠️ Đặc điểm:**
+        - Rối loạn nội tiết phổ biến (5-10% phụ nữ)
+        - Rối loạn kinh nguyệt, tăng androgen
+        - Buồng trứng đa nang
+        - Ảnh hưởng khả năng sinh sản
+
+        **Tiêu chuẩn chẩn đoán (Rotterdam):**
+        - Rối loạn kinh nguyệt (ít kinh, vô kinh)
+        - Tăng androgen (lâm sàng hoặc xét nghiệm)
+        - Buồng trứng đa nang (siêu âm)
+        - **Cần ≥ 2/3 tiêu chuẩn**
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Rối loạn kinh nguyệt:** Kinh thưa, vô kinh, không đều
+        - **Rậm lông:** Lông mọc nhiều (mặt, ngực, bụng)
+        - **Mụn trứng cá:** Mụn nhiều, dai dẳng
+        - **Rụng tóc:** Rụng tóc kiểu nam (hói)
+        - **Béo phì:** Tăng cân, khó giảm cân
+        - **Vô sinh:** Khó có thai
+
+        **Triệu chứng khác:**
+        - Da sẫm màu (gáy, nách)
+        - Tâm trạng thay đổi
+        - Ngưng thở khi ngủ
+
+        **⚠️ Biến chứng:**
+        - Vô sinh
+        - Đái tháo đường type 2
+        - Tăng huyết áp
+        - Rối loạn lipid máu
+        - Ung thư nội mạc tử cung
+
+        ## Nguyên nhân:
+
+        **1. Rối loạn nội tiết:**
+        - Tăng androgen (testosterone)
+        - Kháng insulin
+        - Rối loạn hormone sinh dục
+
+        **2. Yếu tố nguy cơ:**
+        - Tiền sử gia đình
+        - Béo phì
+        - Lối sống ít vận động
+        - Chế độ ăn không lành mạnh
+
+        **3. Cơ chế:**
+        - Kháng insulin → Tăng insulin → Tăng androgen
+        - Rối loạn hormone → Rối loạn rụng trứng
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Siêu âm:** Buồng trứng đa nang (≥ 12 nang, kích thước 2-9mm)
+        - **Hormone:** Testosterone, LH, FSH, Prolactin
+        - **Đường huyết:** Đường huyết đói, HbA1c
+        - **Lipid máu:** Cholesterol, Triglyceride
+
+        ## Điều trị:
+
+        **1. Giảm cân (QUAN TRỌNG!):**
+        - Giảm 5-10% cân nặng → Cải thiện triệu chứng
+        - Chế độ ăn lành mạnh
+        - Tập thể dục đều đặn
+
+        **2. Thuốc:**
+        - **Thuốc tránh thai:** Điều hòa kinh nguyệt, giảm androgen
+        - **Metformin:** Giảm kháng insulin, giảm cân
+        - **Spironolactone:** Giảm rậm lông
+        - **Clomiphene:** Kích thích rụng trứng (nếu muốn có thai)
+
+        **3. Điều trị vô sinh:**
+        - Clomiphene
+        - Letrozole
+        - IVF nếu cần
+
+        **4. Điều trị rậm lông:**
+        - Thuốc tránh thai
+        - Spironolactone
+        - Điều trị tại chỗ (tẩy lông, laser)
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Chế độ ăn giảm cân:**
+        - **Giảm calo:** Giảm 500-1000 calo/ngày
+        - **Giảm carbohydrate:** Đặc biệt đường, tinh bột tinh chế
+        - **Tăng protein:** Thịt nạc, cá, trứng
+        - **Tăng chất xơ:** Rau xanh, trái cây
+        - **Chất béo tốt:** Dầu ô liu, hạt, cá béo
+
+        **2. Thực phẩm tốt:**
+        - Rau xanh, trái cây
+        - Ngũ cốc nguyên hạt
+        - Protein nạc
+        - Cá béo (omega-3)
+
+        **3. Tránh:**
+        - Đường, đồ ngọt
+        - Tinh bột tinh chế (bánh mì trắng, cơm trắng)
+        - Đồ chế biến sẵn
+        - Nước ngọt
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Trứng, rau, trái cây
+        - **Trưa:** Cơm gạo lứt, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm gạo lứt, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, hạt
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Quan trọng!**
+        - Tập thể dục đều đặn (giảm cân, giảm kháng insulin)
+        - 30-60 phút/ngày, 5 ngày/tuần
+
+        **2. Loại bài tập:**
+        - **Cardio:** Đi bộ, chạy bộ, bơi lội, đạp xe
+        - **Tập sức mạnh:** Tăng cơ, tăng chuyển hóa
+        - **Kết hợp:** Cardio + Tập sức mạnh
+
+        **3. Lưu ý:**
+        - Bắt đầu từ từ
+        - Tăng dần cường độ
+        - Kiên trì (quan trọng!)
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Thuốc tránh thai:**
+        - Uống đều đặn, đúng giờ
+        - Điều hòa kinh nguyệt, giảm androgen
+
+        **2. Metformin:**
+        - Uống sau ăn (giảm đau dạ dày)
+        - Bắt đầu liều thấp, tăng dần
+        - Giảm kháng insulin, giảm cân
+
+        **3. Spironolactone:**
+        - Uống đều đặn
+        - Giảm rậm lông
+
+        **4. Lưu ý:**
+        - Uống đúng giờ, đúng liều
+        - Báo bác sĩ nếu có tác dụng phụ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Rối loạn kinh nguyệt nặng:**
+        - Vô kinh > 6 tháng
+        - Ra máu nhiều, kéo dài
+
+        **2. Vô sinh:**
+        - Không có thai sau 1 năm (nếu < 35 tuổi)
+        - Cần điều trị hỗ trợ sinh sản
+
+        **3. Biến chứng:**
+        - Đái tháo đường
+        - Tăng huyết áp
+        - Rối loạn lipid máu
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Lối sống lành mạnh:**
+        - Duy trì cân nặng hợp lý
+        - Chế độ ăn lành mạnh
+        - Tập thể dục đều đặn
+
+        **2. Khám định kỳ:**
+        - Khám phụ khoa định kỳ
+        - Xét nghiệm đường huyết, lipid máu
+
+        **3. Điều trị sớm:**
+        - Điều trị sớm → Giảm biến chứng
+        - Kiểm soát tốt → Cải thiện chất lượng cuộc sống
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị PCOS:**
+        - **Giảm cân** (quan trọng nhất!)
+        - Chế độ ăn lành mạnh
+        - Tập thể dục đều đặn
+        - Uống thuốc đều đặn
+
+        **2. Giảm cân:**
+        - Giảm 5-10% cân nặng → Cải thiện đáng kể
+        - Kiên trì, không nản lòng
+        - Kết hợp ăn uống + tập thể dục
+
+        **3. Sống tích cực:**
+        - PCOS có thể kiểm soát
+        - Điều trị đúng → Cải thiện triệu chứng, khả năng sinh sản
+        - Có thể có thai (với điều trị)
+
+        **4. Lâu dài:**
+        - Cần kiểm soát lâu dài
+        - Theo dõi biến chứng (đái tháo đường, tăng huyết áp)
+        - Khám định kỳ
+        """,
+        related_disease="polycystic_ovary_syndrome",
+        related_drugs=["Oral Contraceptive", "Metformin", "Spironolactone", "Clomiphene", "Letrozole"],
+        printable=True
+    ),
+    
+    # === CONTACT DERMATITIS (VIÊM DA TIẾP XÚC) ===
+    PatientEducationTopic(
+        id="contact_dermatitis_basics",
+        title="Understanding Contact Dermatitis",
+        title_vn="Hiểu về Viêm da tiếp xúc",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm da tiếp xúc
+
+        ## Viêm da tiếp xúc là gì?
+
+        Viêm da tiếp xúc là tình trạng viêm da do tiếp xúc với chất gây kích ứng hoặc dị ứng. Bệnh rất phổ biến, gây ngứa, đỏ da, có thể ảnh hưởng đến chất lượng cuộc sống.
+
+        **⚠️ Đặc điểm:**
+        - Viêm da do tiếp xúc
+        - Kích ứng hoặc dị ứng
+        - Rất phổ biến
+        - Gây ngứa, đỏ da
+
+        **Phân loại:**
+        - **Viêm da tiếp xúc kích ứng:** Do chất kích ứng (phổ biến hơn)
+        - **Viêm da tiếp xúc dị ứng:** Do dị ứng (phản ứng miễn dịch)
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Ngứa:** Ngứa nhiều
+        - **Đỏ da:** Đỏ da tại vị trí tiếp xúc
+        - **Sẩn, mụn nước:** Có thể có
+        - **Khô da, nứt nẻ:** Nếu mạn tính
+        - **Đau, rát:** Có thể có
+
+        **Vị trí:**
+        - Vị trí tiếp xúc với chất gây kích ứng/dị ứng
+        - Tay, chân, mặt, cổ, thân mình
+
+        **⚠️ Viêm da tiếp xúc kích ứng:**
+        - Ngứa ít hơn
+        - Đau, rát nhiều hơn
+        - Xuất hiện ngay sau tiếp xúc
+
+        **⚠️ Viêm da tiếp xúc dị ứng:**
+        - Ngứa nhiều
+        - Có thể lan ra ngoài vị trí tiếp xúc
+        - Xuất hiện sau 24-48 giờ
+
+        ## Nguyên nhân:
+
+        **1. Chất kích ứng:**
+        - **Hóa chất:** Xà phòng, chất tẩy rửa, dung môi
+        - **Kim loại:** Nikel (trang sức, khóa)
+        - **Mỹ phẩm:** Son, kem, nước hoa
+        - **Thực vật:** Cây thường xuân độc, xoài
+        - **Thuốc bôi:** Neomycin, Bacitracin
+
+        **2. Yếu tố nguy cơ:**
+        - Tiếp xúc với chất kích ứng/dị ứng
+        - Da khô, nhạy cảm
+        - Tiền sử dị ứng
+        - Nghề nghiệp (thợ làm tóc, y tá, thợ xây)
+
+        ## Chẩn đoán:
+
+        **Chẩn đoán lâm sàng:**
+        - Triệu chứng điển hình
+        - Vị trí tiếp xúc
+
+        **Xét nghiệm:**
+        - **Test áp da:** Tìm chất dị ứng (nếu viêm da tiếp xúc dị ứng)
+        - **Sinh thiết da:** Nếu không rõ ràng
+
+        ## Điều trị:
+
+        **1. Tránh tiếp xúc (QUAN TRỌNG NHẤT!):**
+        - Tránh chất gây kích ứng/dị ứng
+        - Mang găng tay, quần áo bảo hộ nếu cần
+
+        **2. Thuốc bôi:**
+        - **Corticosteroid bôi:** Hydrocortisone, Betamethasone (giảm viêm, ngứa)
+        - **Kem dưỡng ẩm:** Giữ da ẩm, giảm khô
+        - **Calamine lotion:** Giảm ngứa
+
+        **3. Thuốc uống:**
+        - **Antihistamine:** Cetirizine, Loratadine (giảm ngứa)
+        - **Corticosteroid uống:** Nếu nặng, lan rộng (Prednisone)
+
+        **4. Chăm sóc da:**
+        - Rửa sạch vùng tiếp xúc
+        - Dưỡng ẩm da
+        - Tránh gãi (gây nhiễm khuẩn)
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Bình thường:**
+        - Ăn uống bình thường
+        - Không cần kiêng khem đặc biệt
+
+        **2. Tránh:**
+        - Thức ăn gây dị ứng (nếu có)
+        - Đồ cay nóng (có thể làm ngứa tăng)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Bình thường:**
+        - Tập thể dục bình thường
+        - Tránh đổ mồ hôi nhiều (có thể làm ngứa tăng)
+
+        **2. Lưu ý:**
+        - Rửa sạch sau khi tập
+        - Dưỡng ẩm da
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Corticosteroid bôi:**
+        - Bôi 1-2 lần/ngày
+        - Bôi mỏng, không bôi quá nhiều
+        - Không bôi quá 2 tuần (trừ khi có chỉ định)
+
+        **2. Antihistamine:**
+        - Uống buổi tối (giảm ngứa về đêm)
+        - Có thể gây buồn ngủ
+
+        **3. Kem dưỡng ẩm:**
+        - Bôi thường xuyên
+        - Sau khi tắm
+
+        **4. Lưu ý:**
+        - Tránh gãi (quan trọng!)
+        - Báo bác sĩ nếu không cải thiện
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Viêm da nặng:**
+        - Viêm da lan rộng
+        - Không đáp ứng điều trị
+
+        **2. Nhiễm khuẩn:**
+        - Nhiễm khuẩn da (mủ, sưng đau)
+        - Sốt
+
+        **3. Phản ứng dị ứng nặng:**
+        - Phù nề
+        - Khó thở
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tránh tiếp xúc:**
+        - **Tránh chất gây kích ứng/dị ứng** (quan trọng nhất!)
+        - Đọc nhãn sản phẩm
+        - Test trước khi dùng sản phẩm mới
+
+        **2. Bảo vệ da:**
+        - Mang găng tay khi tiếp xúc hóa chất
+        - Quần áo bảo hộ nếu cần
+        - Dưỡng ẩm da
+
+        **3. Vệ sinh:**
+        - Rửa sạch sau khi tiếp xúc
+        - Dưỡng ẩm da sau khi rửa
+
+        **4. Mỹ phẩm:**
+        - Chọn sản phẩm không gây dị ứng
+        - Test trước khi dùng
+        - Tránh sản phẩm có chất gây dị ứng đã biết
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Tránh tiếp xúc** (quan trọng nhất!)
+        - Đọc nhãn sản phẩm
+        - Test trước khi dùng sản phẩm mới
+
+        **2. Khi bị viêm da tiếp xúc:**
+        - Tránh tiếp xúc ngay
+        - Rửa sạch vùng tiếp xúc
+        - Bôi thuốc theo chỉ định
+        - Tránh gãi
+
+        **3. Sống tích cực:**
+        - Viêm da tiếp xúc có thể điều trị khỏi
+        - Tránh tiếp xúc → Không tái phát
+        - Điều trị đúng → Giảm triệu chứng
+
+        **4. Nghề nghiệp:**
+        - Nếu do nghề nghiệp, cần bảo vệ da
+        - Mang găng tay, quần áo bảo hộ
+        - Dưỡng ẩm da thường xuyên
+        """,
+        related_disease="contact_dermatitis",
+        related_drugs=["Hydrocortisone", "Betamethasone", "Cetirizine", "Loratadine", "Calamine"],
+        printable=True
+    ),
+    
+    # === THROMBOCYTOPENIA (GIẢM TIỂU CẦU) ===
+    PatientEducationTopic(
+        id="thrombocytopenia_basics",
+        title="Understanding Thrombocytopenia",
+        title_vn="Hiểu về Giảm tiểu cầu",
+        category="Disease",
+        content="""
+        # Hiểu về Giảm tiểu cầu
+
+        ## Giảm tiểu cầu là gì?
+
+        Giảm tiểu cầu là tình trạng số lượng tiểu cầu trong máu thấp (< 150,000/μL), có thể gây chảy máu. Bệnh có thể do nhiều nguyên nhân, từ nhẹ đến nặng.
+
+        **⚠️ Đặc điểm:**
+        - Số lượng tiểu cầu thấp
+        - Có thể gây chảy máu
+        - Nhiều nguyên nhân
+        - Từ nhẹ đến nặng
+
+        **Phân loại:**
+        - **Nhẹ:** 100,000-150,000/μL (thường không có triệu chứng)
+        - **Vừa:** 50,000-100,000/μL (có thể chảy máu khi chấn thương)
+        - **Nặng:** < 50,000/μL (chảy máu tự phát)
+        - **Rất nặng:** < 20,000/μL (chảy máu nặng)
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Chảy máu:** Chảy máu cam, chảy máu lợi
+        - **Xuất huyết da:** Nốt xuất huyết, ban xuất huyết, bầm tím
+        - **Xuất huyết tiêu hóa:** Nôn ra máu, đi ngoài phân đen
+        - **Xuất huyết tiết niệu:** Đi tiểu ra máu
+        - **Kinh nguyệt nhiều:** Ở phụ nữ
+
+        **⚠️ Chảy máu nặng:**
+        - Xuất huyết não (nguy hiểm!)
+        - Xuất huyết tiêu hóa nặng
+        - **Cấp cứu ngay!**
+
+        **⚠️ Không có triệu chứng:**
+        - Nhiều người không có triệu chứng
+        - Phát hiện khi xét nghiệm máu
+
+        ## Nguyên nhân:
+
+        **1. Giảm sản xuất:**
+        - **Bệnh tủy xương:** Ung thư máu, suy tủy
+        - **Thuốc:** Hóa trị, một số thuốc
+        - **Nhiễm virus:** HIV, viêm gan C
+        - **Thiếu vitamin:** B12, Folate
+
+        **2. Tăng phá hủy:**
+        - **ITP (Giảm tiểu cầu miễn dịch):** Tự miễn
+        - **Heparin:** Gây giảm tiểu cầu do heparin
+        - **Nhiễm khuẩn:** Nhiễm khuẩn huyết
+        - **DIC:** Đông máu rải rác trong lòng mạch
+
+        **3. Tăng tiêu thụ:**
+        - **Lách to:** Giữ tiểu cầu
+        - **Huyết khối:** Tiêu thụ tiểu cầu
+
+        **4. Yếu tố nguy cơ:**
+        - Nhiễm virus
+        - Thuốc
+        - Bệnh tự miễn
+        - Ung thư
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Công thức máu:** Số lượng tiểu cầu
+        - **Kính phết máu:** Đánh giá hình dạng tiểu cầu
+        - **Tủy đồ:** Nếu nghi ngờ bệnh tủy xương
+        - **Xét nghiệm đông máu:** PT, PTT, Fibrinogen
+        - **Kháng thể:** Nếu nghi ngờ ITP
+
+        ## Điều trị:
+
+        **1. Điều trị nguyên nhân:**
+        - Điều trị bệnh nền
+        - Ngừng thuốc gây giảm tiểu cầu
+        - Điều trị nhiễm khuẩn
+
+        **2. ITP (Giảm tiểu cầu miễn dịch):**
+        - **Corticosteroid:** Prednisone (tăng tiểu cầu)
+        - **IVIG:** Immunoglobulin tĩnh mạch (nếu nặng)
+        - **Rituximab:** Nếu kháng Corticosteroid
+        - **Cắt lách:** Nếu kháng thuốc
+
+        **3. Truyền tiểu cầu:**
+        - Nếu chảy máu nặng
+        - Trước phẫu thuật nếu tiểu cầu thấp
+
+        **4. Điều trị hỗ trợ:**
+        - Tránh chấn thương
+        - Tránh thuốc chống đông, Aspirin
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Bình thường:**
+        - Ăn uống bình thường
+        - Ăn đủ dinh dưỡng
+
+        **2. Nếu thiếu vitamin:**
+        - Bổ sung B12, Folate (nếu thiếu)
+        - Thịt, cá, trứng, rau xanh
+
+        **3. Tránh:**
+        - Rượu bia (ảnh hưởng tủy xương)
+        - Thức ăn cứng (nếu chảy máu lợi)
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo/cơm, thịt/cá, trái cây
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi tiểu cầu thấp:**
+        - Tránh thể thao va chạm
+        - Tránh gắng sức quá mức
+        - Tập thể dục nhẹ nhàng
+
+        **2. Khi tiểu cầu bình thường:**
+        - Tập thể dục bình thường
+        - 30 phút/ngày, 5 ngày/tuần
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Corticosteroid:**
+        - Prednisone: Uống đều đặn
+        - Giảm liều từ từ (tránh tái phát)
+        - Theo dõi tác dụng phụ
+
+        **2. Tránh:**
+        - **Aspirin:** Làm tăng chảy máu
+        - **Thuốc chống đông:** Nếu không có chỉ định
+        - **NSAID:** Ibuprofen, Naproxen
+
+        **3. Lưu ý:**
+        - Uống đúng giờ, đúng liều
+        - Báo bác sĩ nếu chảy máu
+        - Không tự ý ngừng thuốc
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Chảy máu nặng:**
+        - Chảy máu không cầm được
+        - Nôn ra máu, đi ngoài phân đen
+        - Đi tiểu ra máu
+        - **Cấp cứu ngay!**
+
+        **2. Xuất huyết não:**
+        - Đau đầu dữ dội
+        - Yếu liệt, rối loạn ý thức
+        - **Cấp cứu ngay!**
+
+        **3. Tiểu cầu rất thấp:**
+        - < 20,000/μL
+        - Có nguy cơ chảy máu nặng
+
+        **4. Triệu chứng mới:**
+        - Xuất huyết da mới
+        - Chảy máu mới
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tránh chấn thương:**
+        - Tránh thể thao va chạm
+        - Cẩn thận khi vận động
+        - Mang bảo vệ nếu cần
+
+        **2. Tránh thuốc:**
+        - Tránh Aspirin, NSAID
+        - Báo bác sĩ tất cả thuốc đang dùng
+
+        **3. Điều trị nguyên nhân:**
+        - Điều trị bệnh nền
+        - Ngừng thuốc gây giảm tiểu cầu
+
+        **4. Khám định kỳ:**
+        - Xét nghiệm máu định kỳ
+        - Theo dõi số lượng tiểu cầu
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị giảm tiểu cầu:**
+        - Tránh chấn thương (quan trọng!)
+        - Tránh Aspirin, NSAID
+        - Uống thuốc đều đặn
+        - Theo dõi dấu hiệu chảy máu
+
+        **2. Chảy máu:**
+        - Báo bác sĩ ngay nếu chảy máu
+        - Đến bệnh viện nếu chảy máu nặng
+        - Tránh gãi, va chạm
+
+        **3. Sống tích cực:**
+        - Giảm tiểu cầu có thể điều trị
+        - Điều trị đúng → Tăng tiểu cầu, giảm chảy máu
+        - Có thể sống bình thường
+
+        **4. Theo dõi:**
+        - Xét nghiệm máu định kỳ
+        - Theo dõi triệu chứng
+        - Khám định kỳ
+        """,
+        related_disease="thrombocytopenia",
+        related_drugs=["Prednisone", "IVIG", "Rituximab", "Platelet Transfusion"],
+        printable=True
+    ),
+    
+    # === ANAPHYLAXIS (PHẢN VỆ) ===
+    PatientEducationTopic(
+        id="anaphylaxis_basics",
+        title="Understanding Anaphylaxis",
+        title_vn="Hiểu về Phản vệ",
+        category="Disease",
+        content="""
+        # Hiểu về Phản vệ
+
+        ## Phản vệ là gì?
+
+        Phản vệ là phản ứng dị ứng nghiêm trọng, đe dọa tính mạng, xảy ra nhanh chóng sau khi tiếp xúc với chất gây dị ứng. Bệnh cần điều trị cấp cứu ngay lập tức.
+
+        **⚠️ Đặc điểm:**
+        - Phản ứng dị ứng nghiêm trọng
+        - Đe dọa tính mạng
+        - Xảy ra nhanh chóng (vài phút đến vài giờ)
+        - Cần điều trị cấp cứu ngay
+
+        **⚠️ Nguy hiểm:**
+        - Có thể tử vong nếu không điều trị
+        - Cần tiêm Adrenaline ngay
+        - Gọi cấp cứu 115
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Phù:** Phù mặt, môi, lưỡi, họng
+        - **Khó thở:** Thở khò khè, khó nuốt
+        - **Phát ban:** Nổi mề đay, ngứa
+        - **Huyết áp tụt:** Chóng mặt, ngất xỉu
+        - **Nhịp tim nhanh:** Đánh trống ngực
+        - **Buồn nôn, nôn:** Có thể có
+        - **Đau bụng:** Có thể có
+
+        **⚠️ Dấu hiệu nguy hiểm:**
+        - Khó thở nặng
+        - Phù họng, lưỡi
+        - Huyết áp tụt
+        - Sốc
+        - **Cấp cứu ngay!**
+
+        **⚠️ Phản vệ 2 pha:**
+        - Triệu chứng tái phát sau 4-12 giờ
+        - Cần theo dõi 24 giờ
+
+        ## Nguyên nhân:
+
+        **1. Thực phẩm:**
+        - **Đậu phộng:** Phổ biến nhất
+        - **Hải sản:** Tôm, cua, cá
+        - **Sữa, trứng**
+        - **Hạt:** Hạnh nhân, óc chó
+
+        **2. Thuốc:**
+        - **Penicillin:** Phổ biến
+        - **NSAID:** Aspirin, Ibuprofen
+        - **Thuốc cản quang**
+        - **Vắc xin:** Hiếm
+
+        **3. Côn trùng đốt:**
+        - Ong, ong bắp cày
+        - Kiến lửa
+
+        **4. Latex:**
+        - Găng tay, bao cao su
+
+        **5. Yếu tố nguy cơ:**
+        - Tiền sử dị ứng
+        - Hen phế quản
+        - Bệnh tim mạch
+
+        ## Chẩn đoán:
+
+        **Chẩn đoán lâm sàng:**
+        - Triệu chứng điển hình
+        - Tiếp xúc với chất gây dị ứng
+        - Xảy ra nhanh chóng
+
+        **Xét nghiệm:**
+        - **Tryptase:** Tăng trong phản vệ
+        - **Test dị ứng:** Tìm chất gây dị ứng
+
+        ## Điều trị:
+
+        **1. Adrenaline (QUAN TRỌNG NHẤT!):**
+        - **Tiêm bắp:** 0.3-0.5mg (người lớn), 0.01mg/kg (trẻ em)
+        - **Lặp lại:** Sau 5-15 phút nếu cần
+        - **Tự tiêm:** EpiPen, Auvi-Q (nếu có)
+
+        **2. Gọi cấp cứu:**
+        - **Gọi 115 ngay!**
+        - Đưa đến bệnh viện
+        - Theo dõi 24 giờ
+
+        **3. Điều trị hỗ trợ:**
+        - **Oxy:** Nếu khó thở
+        - **Truyền dịch:** Nếu huyết áp tụt
+        - **Antihistamine:** Cetirizine, Diphenhydramine
+        - **Corticosteroid:** Prednisone (giảm phản vệ 2 pha)
+
+        **4. Tư thế:**
+        - Nằm ngửa, nâng chân
+        - Nếu khó thở: Ngồi dậy
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Tránh chất gây dị ứng:**
+        - **Tránh hoàn toàn** chất gây dị ứng đã biết
+        - Đọc nhãn thực phẩm
+        - Hỏi thành phần khi ăn ngoài
+
+        **2. Thực phẩm an toàn:**
+        - Ăn thực phẩm đã biết an toàn
+        - Tránh thực phẩm nghi ngờ
+
+        **3. Lưu ý:**
+        - Mang EpiPen khi đi ăn ngoài
+        - Báo nhà hàng về dị ứng
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Bình thường:**
+        - Tập thể dục bình thường
+        - Tránh tập sau khi ăn (nếu dị ứng thực phẩm)
+
+        **2. Lưu ý:**
+        - Mang EpiPen khi tập
+        - Tránh tập một mình
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. EpiPen (QUAN TRỌNG!):**
+        - **Mang theo mọi lúc**
+        - Biết cách sử dụng
+        - Kiểm tra hạn sử dụng
+        - Thay mới khi hết hạn
+
+        **2. Antihistamine:**
+        - Mang theo (Cetirizine)
+        - Dùng sau khi tiêm Adrenaline
+
+        **3. Corticosteroid:**
+        - Prednisone: Nếu có chỉ định
+        - Giảm phản vệ 2 pha
+
+        **4. Lưu ý:**
+        - **Mang EpiPen mọi lúc** (quan trọng nhất!)
+        - Báo người xung quanh về dị ứng
+        - Đeo vòng cảnh báo y tế
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Phản vệ:**
+        - **Tiêm Adrenaline ngay**
+        - **Gọi 115 ngay**
+        - Đưa đến bệnh viện
+
+        **2. Triệu chứng nặng:**
+        - Khó thở nặng
+        - Phù họng, lưỡi
+        - Huyết áp tụt
+        - Sốc
+
+        **3. Sau phản vệ:**
+        - Theo dõi 24 giờ (phản vệ 2 pha)
+        - Tái khám nếu cần
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tránh chất gây dị ứng:**
+        - **Tránh hoàn toàn** chất gây dị ứng đã biết
+        - Đọc nhãn thực phẩm
+        - Hỏi thành phần khi ăn ngoài
+
+        **2. Mang EpiPen:**
+        - **Mang theo mọi lúc**
+        - Biết cách sử dụng
+        - Kiểm tra hạn sử dụng
+
+        **3. Báo người xung quanh:**
+        - Báo gia đình, bạn bè về dị ứng
+        - Đeo vòng cảnh báo y tế
+        - Báo nhà hàng, trường học
+
+        **4. Test dị ứng:**
+        - Xác định chất gây dị ứng
+        - Tránh tiếp xúc
+
+        **5. Miễn dịch trị liệu:**
+        - Có thể điều trị một số dị ứng (đậu phộng, ong đốt)
+        - Giảm nguy cơ phản vệ
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - **Tránh chất gây dị ứng** (quan trọng nhất!)
+        - **Mang EpiPen mọi lúc**
+        - Đọc nhãn thực phẩm
+
+        **2. Khi bị phản vệ:**
+        - **Tiêm Adrenaline ngay** (quan trọng nhất!)
+        - **Gọi 115 ngay**
+        - Đưa đến bệnh viện
+        - Theo dõi 24 giờ
+
+        **3. Sống tích cực:**
+        - Phản vệ có thể phòng ngừa
+        - Tránh chất gây dị ứng → Không mắc bệnh
+        - Mang EpiPen → Cứu sống khi phản vệ
+
+        **4. Chuẩn bị:**
+        - **Mang EpiPen mọi lúc**
+        - Biết cách sử dụng
+        - Báo người xung quanh
+        - Đeo vòng cảnh báo y tế
+        - Có kế hoạch hành động khi phản vệ
+        """,
+        related_disease="anaphylaxis",
+        related_drugs=["Adrenaline", "Epinephrine", "Cetirizine", "Diphenhydramine", "Prednisone"],
+        printable=True
+    ),
 ]
