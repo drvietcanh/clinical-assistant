@@ -112,6 +112,85 @@ def inject_global_font_css():
         margin-bottom: 0.5rem !important;
         display: block !important;
     }
+    
+    /* Hide HTML code blocks on mobile - prevent raw HTML from displaying as text */
+    @media (max-width: 768px) {
+        /* Hide code blocks that contain only HTML tags */
+        pre code:contains('</div>'),
+        pre code:contains('<div'),
+        pre code:contains('<button'),
+        pre code:contains('mobile-back-btn'),
+        pre code:contains('mobile-header-title'),
+        pre code:contains('mobile-header-subtitle') {
+            display: none !important;
+        }
+        
+        /* Alternative: Hide empty or minimal code blocks that might be HTML artifacts */
+        pre:has(> code:empty),
+        code:empty,
+        pre code:only-child:empty {
+            display: none !important;
+        }
+        
+        /* Hide code blocks that look like HTML (contain angle brackets) */
+        pre code {
+            display: block;
+        }
+        
+        /* More aggressive: Hide any code block that contains HTML-like content */
+        pre code:has-text('</div>'),
+        pre code:has-text('<div'),
+        pre code:has-text('<button') {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            overflow: hidden !important;
+        }
+    }
+    
+    /* JavaScript fallback to hide stray HTML code blocks */
+    <script>
+    (function() {
+        function hideHtmlCodeBlocks() {
+            // Find all code blocks
+            const codeBlocks = document.querySelectorAll('pre code, code');
+            codeBlocks.forEach(block => {
+                const text = (block.textContent || '').trim();
+                // Hide if it's just HTML tags
+                if (text.match(/^<[^>]+>[\s\S]*<\/[^>]+>$/)) {
+                    const pre = block.closest('pre');
+                    if (pre) {
+                        pre.style.display = 'none';
+                    } else {
+                        block.style.display = 'none';
+                    }
+                }
+                // Hide if it contains mobile header HTML
+                if (text.includes('mobile-back-btn') || 
+                    text.includes('mobile-header-title') ||
+                    text.includes('mobile-header-subtitle')) {
+                    const pre = block.closest('pre');
+                    if (pre) {
+                        pre.style.display = 'none';
+                    } else {
+                        block.style.display = 'none';
+                    }
+                }
+            });
+        }
+        
+        // Run on page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', hideHtmlCodeBlocks);
+        } else {
+            hideHtmlCodeBlocks();
+        }
+        
+        // Run after a delay to catch dynamically loaded content
+        setTimeout(hideHtmlCodeBlocks, 500);
+        setTimeout(hideHtmlCodeBlocks, 1000);
+    })();
+    </script>
     </style>
     """
     st.markdown(font_css, unsafe_allow_html=True)

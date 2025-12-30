@@ -4,6 +4,7 @@ Optimizes page layout for mobile devices with consistent header, breadcrumbs, an
 """
 
 import streamlit as st
+import html
 from typing import Optional, List, Tuple
 
 
@@ -24,6 +25,17 @@ def render_mobile_page_header(
         show_back_button: Show back button
         back_url: URL to navigate back to
     """
+    # Escape title and subtitle to prevent XSS and ensure proper rendering
+    title_escaped = html.escape(title)
+    subtitle_escaped = html.escape(subtitle) if subtitle else None
+    
+    # Build HTML as a single string to avoid markdown code block detection
+    back_button_html = f'''<button class="mobile-back-btn" onclick="window.location.href='{html.escape(back_url)}'" aria-label="Quay lại">←</button>''' if show_back_button else ""
+    
+    subtitle_html = f'<div class="mobile-header-subtitle">{subtitle_escaped}</div>' if subtitle_escaped else ""
+    
+    header_html = f"""<div class="mobile-page-header"><div class="mobile-header-content">{back_button_html}<div class="mobile-header-title"><h1>{icon} {title_escaped}</h1>{subtitle_html}</div></div></div>"""
+    
     st.markdown("""
     <style>
     .mobile-page-header {
@@ -58,6 +70,8 @@ def render_mobile_page_header(
         border-radius: 8px;
         transition: background 0.2s ease;
         -webkit-tap-highlight-color: transparent;
+        color: var(--text-primary);
+        line-height: 1;
     }
     
     .mobile-back-btn:active {
@@ -66,6 +80,7 @@ def render_mobile_page_header(
     
     .mobile-header-title {
         flex: 1;
+        min-width: 0;
     }
     
     .mobile-header-title h1 {
@@ -76,29 +91,28 @@ def render_mobile_page_header(
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .mobile-header-subtitle {
         font-size: 0.85rem;
         color: var(--text-secondary);
         margin-top: 0.25rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    /* Hide any code blocks that might appear from HTML rendering */
+    @media (max-width: 768px) {
+        pre:has-code:empty,
+        code:empty,
+        pre code:empty {
+            display: none !important;
+        }
     }
     </style>
-    
-    <div class="mobile-page-header">
-        <div class="mobile-header-content">
-            """ + (f"""
-            <button class="mobile-back-btn" onclick="window.location.href='{back_url}'" aria-label="Quay lại">
-                ←
-            </button>
-            """ if show_back_button else "") + f"""
-            <div class="mobile-header-title">
-                <h1>{icon} {title}</h1>
-                {f'<div class="mobile-header-subtitle">{subtitle}</div>' if subtitle else ''}
-            </div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    """ + header_html, unsafe_allow_html=True)
 
 
 def render_breadcrumbs(items: List[Tuple[str, Optional[str]]]) -> None:
