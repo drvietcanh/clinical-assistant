@@ -5,6 +5,7 @@ Standardized info, warning, success, and error boxes for consistent UI
 
 import streamlit as st
 import html
+import textwrap
 
 
 def render_info_box(
@@ -82,6 +83,14 @@ def render_info_box(
     _msg_stripped = message.lstrip() if isinstance(message, str) else ""
     is_html = isinstance(message, str) and _msg_stripped.startswith("<")
 
+    # If HTML, also remove leading indentation to avoid Markdown treating it as code
+    processed_message = message
+    if is_html:
+        try:
+            processed_message = textwrap.dedent(message).strip()
+        except Exception:
+            processed_message = message
+
     box_html = f"""
     <div style="background: {bg_style};
                 padding: 1.25rem 1.5rem;
@@ -91,7 +100,7 @@ def render_info_box(
                 box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
         {title_html}
         <div style="color: #424242; font-size: 0.95rem; line-height: 1.6; {margin_top}">
-            {html.escape(message) if not is_html else message}
+            {html.escape(message) if not is_html else processed_message}
         </div>
     </div>
     """
