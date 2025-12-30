@@ -76,6 +76,42 @@ def inject_global_font_css():
                      Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 
                      'Segoe UI Symbol', 'Noto Color Emoji' !important;
     }
+    
+    /* Fix input fields font and prevent text overlap */
+    .stTextInput > div > div > input,
+    .stTextInput label,
+    .stTextInput > div > div > div,
+    input[type="text"],
+    input[type="search"] {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+                     'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                     'Helvetica Neue', sans-serif !important;
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        letter-spacing: normal !important;
+        text-rendering: optimizeLegibility !important;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+    }
+    
+    /* Prevent text overlap in input fields */
+    .stTextInput > div > div > input {
+        padding: 12px 16px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* Fix label positioning */
+    .stTextInput label {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+                     'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                     'Helvetica Neue', sans-serif !important;
+        font-weight: 500 !important;
+        line-height: 1.4 !important;
+        margin-bottom: 0.5rem !important;
+        display: block !important;
+    }
     </style>
     """
     st.markdown(font_css, unsafe_allow_html=True)
