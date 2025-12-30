@@ -235,6 +235,27 @@ def inject_dom_cleanup_js():
     st.session_state["_dom_cleanup_injected"] = True
 
 
+def inject_mobile_optimizations_css():
+    """
+    Inject comprehensive mobile optimizations CSS.
+    Ensures optimal display and UX on mobile devices.
+    """
+    # Avoid injecting multiple times in the same session
+    if st.session_state.get("_mobile_css_injected"):
+        return
+    
+    try:
+        css_file = Path(__file__).parent.parent / "static" / "mobile_optimizations.css"
+        if css_file.exists():
+            with open(css_file, "r", encoding="utf-8") as f:
+                mobile_css = f.read()
+                st.markdown(f"<style>{mobile_css}</style>", unsafe_allow_html=True)
+                st.session_state["_mobile_css_injected"] = True
+    except Exception as e:
+        # Silently fail if CSS file not found
+        pass
+
+
 def setup_page(page_title: str, page_icon: str, description: str = "", layout: str = "wide", mobile_header: bool = True):
     """
     Standard page setup - reduces boilerplate in all page files
