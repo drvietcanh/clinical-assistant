@@ -145,5 +145,5 @@ Disease(
 ---
 
 **Cập nhật lần cuối:** 2025-01-30  
-**Tổng số bệnh:** 64
+**Tổng số bệnh:** 72
 
