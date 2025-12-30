@@ -695,3 +695,119 @@ def create_tbi_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     ]
 
     return nodes, edges
+
+
+def create_meningitis_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create Acute Bacterial Meningitis initial management algorithm (adult)
+
+    Dựa trên:
+    - IDSA Guidelines for Management of Bacterial Meningitis
+    - ESCMID Guidelines on Acute Bacterial Meningitis
+    """
+    nodes = [
+        FlowchartNode("start", "Nghi viêm màng não cấp?", NodeType.START, icon="🧠"),
+        FlowchartNode("clinical", "Sốt, cổ cứng,\nthay đổi ý thức,\nđau đầu dữ dội", NodeType.ACTION, icon="⚠️"),
+        FlowchartNode("red_flags", "Dấu hiệu chèn ép / tăng ALNS?\n(Khuyết thần kinh khu trú,\nco giật mới, GCS↓ nặng)", NodeType.DECISION, icon="🚨"),
+        FlowchartNode("no_red_flags", "Không dấu chèn ép\n/ tăng ALNS rõ", NodeType.DECISION, icon="🟢"),
+        FlowchartNode("ct", "CT Scan não\ntrước chọc dò (nếu cần)", NodeType.TEST, icon="📷"),
+        FlowchartNode("lp", "Chọc dò DNT", NodeType.TEST, icon="💉"),
+        FlowchartNode("abx", "KHÁNG SINH TM SỚM\n+ Dexamethasone", NodeType.ACTION, color="#dc3545", icon="💊"),
+        FlowchartNode("blood_culture", "Cấy máu trước KS nếu có thể", NodeType.ACTION, icon="🧫"),
+        FlowchartNode("icu", "ICU / Theo dõi sát\nhô hấp & huyết động", NodeType.END, color="#dc3545", icon="🏥"),
+        FlowchartNode("ward", "Nhập viện nội nhiễm\nhoặc nội thần kinh", NodeType.END, color="#ffc107", icon="🏥"),
+    ]
+
+    edges = [
+        FlowchartEdge("start", "clinical", ""),
+        FlowchartEdge("clinical", "red_flags", ""),
+        FlowchartEdge("red_flags", "ct", "Có"),
+        FlowchartEdge("red_flags", "no_red_flags", "Không"),
+        FlowchartEdge("no_red_flags", "blood_culture", ""),
+        FlowchartEdge("blood_culture", "abx", ""),
+        FlowchartEdge("abx", "lp", "Chọc dò sớm nhất có thể"),
+        FlowchartEdge("ct", "abx", "KHÔNG trì hoãn KS\nvì chờ CT"),
+        FlowchartEdge("ct", "lp", "An toàn → chọc dò"),
+        FlowchartEdge("lp", "ward", "Ổn định"),
+        FlowchartEdge("lp", "icu", "Bất ổn / biến chứng"),
+    ]
+
+    return nodes, edges
+
+
+def create_febrile_neutropenia_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create Febrile Neutropenia (oncology/hematology) initial management algorithm
+
+    Dựa trên:
+    - IDSA Clinical Practice Guideline for the Use of Antimicrobial Agents in Neutropenic Patients with Cancer
+    - ASCO/ESMO Guidelines on Management of Febrile Neutropenia
+    """
+    nodes = [
+        FlowchartNode("start", "Sốt + Neutrophil thấp?\nANC <500/µL", NodeType.START, icon="🧬"),
+        FlowchartNode("risk", "Đánh giá nguy cơ (MASCC/Risk Index):\nThấp / Cao", NodeType.DECISION, icon="📊"),
+        FlowchartNode("high_risk", "Nguy cơ cao:\nBệnh nặng, tụt HA,\nPNC, suy tạng...", NodeType.DECISION, icon="🔴"),
+        FlowchartNode("low_risk", "Nguy cơ thấp:\nỔn định, ít triệu chứng", NodeType.DECISION, icon="🟢"),
+        FlowchartNode("culture", "Lấy cấy máu, nước tiểu,\nổ khu trú", NodeType.ACTION, icon="🧫"),
+        FlowchartNode("broad_iv", "KHÁNG SINH TM PHỔ RỘNG\n(VD: Piperacillin-Tazobactam,\nCefepime, Meropenem)", NodeType.ACTION, color="#dc3545", icon="💊"),
+        FlowchartNode("oral_abx", "KS đường uống\nnếu nguy cơ thấp", NodeType.ACTION, icon="💊"),
+        FlowchartNode("admit", "Nhập viện\n(đa số bệnh nhân)", NodeType.END, color="#ffc107", icon="🏥"),
+        FlowchartNode("icu", "ICU nếu shock / suy tạng", NodeType.END, color="#dc3545", icon="🏥"),
+        FlowchartNode("outpatient", "Điều trị ngoại trú\nchọn lọc (rất thấp nguy cơ)", NodeType.END, color="#28a745", icon="🏠"),
+    ]
+
+    edges = [
+        FlowchartEdge("start", "risk", ""),
+        FlowchartEdge("risk", "high_risk", "Nguy cơ cao"),
+        FlowchartEdge("risk", "low_risk", "Nguy cơ thấp"),
+        FlowchartEdge("high_risk", "culture", ""),
+        FlowchartEdge("culture", "broad_iv", ""),
+        FlowchartEdge("broad_iv", "admit", ""),
+        FlowchartEdge("broad_iv", "icu", "Shock / suy tạng"),
+        FlowchartEdge("low_risk", "culture", ""),
+        FlowchartEdge("low_risk", "oral_abx", "Chọn lọc"),
+        FlowchartEdge("oral_abx", "outpatient", "Theo dõi sát"),
+    ]
+
+    return nodes, edges
+
+
+def create_acute_pancreatitis_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create Acute Pancreatitis initial evaluation & severity stratification algorithm
+
+    Dựa trên:
+    - IAP/APA Guidelines for Management of Acute Pancreatitis
+    - ACG Clinical Guideline: Management of Acute Pancreatitis
+    """
+    nodes = [
+        FlowchartNode("start", "Nghi viêm tụy cấp?", NodeType.START, icon="🩺"),
+        FlowchartNode("criteria", "3 tiêu chuẩn:\nĐau thượng vị điển hình,\nAmylase/Lipase >3x,\nHình ảnh điển hình", NodeType.ACTION, icon="📊"),
+        FlowchartNode("diagnosed", "Xác định viêm tụy cấp\n(≥2/3 tiêu chuẩn)", NodeType.DECISION, icon="✅"),
+        FlowchartNode("severity", "Phân loại mức độ:\nNhẹ / Trung bình / Nặng\n(Dựa vào suy tạng, biến chứng)", NodeType.ACTION, icon="⚠️"),
+        FlowchartNode("mild", "Nhẹ\n(Không suy tạng,\nKhông biến chứng)", NodeType.DECISION, icon="🟢"),
+        FlowchartNode("moderate", "Trung bình\n(Suy tạng thoáng qua\nhoặc biến chứng tại chỗ nhẹ)", NodeType.DECISION, icon="🟡"),
+        FlowchartNode("severe", "Nặng\n(Suy tạng kéo dài >48h)", NodeType.DECISION, icon="🔴"),
+        FlowchartNode("support", "Bù dịch tích cực,\nGiảm đau, Nhịn ăn", NodeType.ACTION, icon="💧"),
+        FlowchartNode("etiology", "Tìm nguyên nhân:\nSỏi mật, Rượu, Thuốc...", NodeType.ACTION, icon="🧪"),
+        FlowchartNode("ward", "Nhập khoa tiêu hóa\nhoặc nội tổng quát", NodeType.END, color="#ffc107", icon="🏥"),
+        FlowchartNode("icu", "ICU nếu suy tạng,\nhuyết động không ổn", NodeType.END, color="#dc3545", icon="🏥"),
+    ]
+
+    edges = [
+        FlowchartEdge("start", "criteria", ""),
+        FlowchartEdge("criteria", "diagnosed", ""),
+        FlowchartEdge("diagnosed", "support", "Đủ tiêu chuẩn"),
+        FlowchartEdge("support", "severity", ""),
+        FlowchartEdge("severity", "mild", "Nhẹ"),
+        FlowchartEdge("severity", "moderate", "Trung bình"),
+        FlowchartEdge("severity", "severe", "Nặng"),
+        FlowchartEdge("mild", "etiology", ""),
+        FlowchartEdge("moderate", "etiology", ""),
+        FlowchartEdge("severe", "etiology", ""),
+        FlowchartEdge("mild", "ward", ""),
+        FlowchartEdge("moderate", "ward", ""),
+        FlowchartEdge("severe", "icu", ""),
+    ]
+
+    return nodes, edges

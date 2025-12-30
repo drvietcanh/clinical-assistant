@@ -29,6 +29,9 @@ from components.flowcharts.clinical_rules import (
     create_dvt_flowchart,
     create_hyponatremia_flowchart,
     create_tbi_flowchart,
+    create_meningitis_flowchart,
+    create_febrile_neutropenia_flowchart,
+    create_acute_pancreatitis_flowchart,
 )
 from components.pregnancy_lactation_display import render_pregnancy_lactation_section
 from scores.pediatrics.pediatric_dosing import render_pediatric_dosing_calculator
@@ -105,6 +108,9 @@ if selected_feature == feature_options[0]:
         "DVT (Lower Limb) / Wells DVT": create_dvt_flowchart,
         "Hyponatremia": create_hyponatremia_flowchart,
         "Traumatic Brain Injury (TBI)": create_tbi_flowchart,
+        "Acute Bacterial Meningitis": create_meningitis_flowchart,
+        "Febrile Neutropenia": create_febrile_neutropenia_flowchart,
+        "Acute Pancreatitis": create_acute_pancreatitis_flowchart,
     }
     
     selected_algorithm = st.selectbox(
@@ -139,6 +145,9 @@ if selected_feature == feature_options[0]:
             "DVT (Lower Limb) / Wells DVT": (900, 650),
             "Hyponatremia": (900, 700),
             "Traumatic Brain Injury (TBI)": (900, 650),
+            "Acute Bacterial Meningitis": (900, 650),
+            "Febrile Neutropenia": (900, 650),
+            "Acute Pancreatitis": (900, 650),
         }
         
         width, height = size_map.get(selected_algorithm, (800, 600))
@@ -376,6 +385,47 @@ if selected_feature == feature_options[0]:
                 **📚 Dựa trên:**
                 - Brain Trauma Foundation Guidelines for Management of Severe TBI
                 - ATLS Head Injury Protocol
+                """)
+            elif selected_algorithm == "Acute Bacterial Meningitis":
+                st.markdown("""
+                **Acute Bacterial Meningitis Algorithm (Người lớn):**
+
+                1. Nghi viêm màng não (sốt, cổ cứng, đau đầu, thay đổi ý thức)
+                2. Đánh giá dấu hiệu tăng ALNS/chèn ép (khuyết thần kinh khu trú, co giật mới, GCS ↓ nặng)
+                3. Không dấu chèn ép rõ → cấy máu + KS TM sớm + Dexamethasone → chọc dò DNT sớm
+                4. Có dấu chèn ép → CT não, nhưng **KHÔNG trì hoãn** KS TM nếu nghi mạnh
+                5. Điều chỉnh KS theo kết quả DNT/cấy, theo dõi sát tại khoa phù hợp/ICU
+
+                **📚 Dựa trên:**
+                - IDSA Guidelines for Management of Bacterial Meningitis
+                - ESCMID Guidelines on Acute Bacterial Meningitis
+                """)
+            elif selected_algorithm == "Febrile Neutropenia":
+                st.markdown("""
+                **Febrile Neutropenia Algorithm:**
+
+                1. Sốt + ANC <500/µL (hoặc dự kiến <500) ở bệnh nhân ung thư/HST
+                2. Đánh giá nguy cơ (MASCC/Risk Index → thấp / cao)
+                3. Nguy cơ cao → cấy máu/xét nghiệm → KS TM phổ rộng ngay (Pip-Tazo, Cefepime, Meropenem...), nhập viện, ICU nếu shock
+                4. Nguy cơ thấp → cấy máu/xét nghiệm → có thể KS uống chọn lọc + theo dõi sát, chỉ ngoại trú khi rất thấp nguy cơ
+
+                **📚 Dựa trên:**
+                - IDSA Clinical Practice Guideline for Use of Antimicrobial Agents in Neutropenic Patients with Cancer
+                - ASCO/ESMO Guidelines on Management of Febrile Neutropenia
+                """)
+            elif selected_algorithm == "Acute Pancreatitis":
+                st.markdown("""
+                **Acute Pancreatitis Algorithm:**
+
+                1. Nghi viêm tụy cấp: đau thượng vị điển hình, amylase/lipase >3x, hình ảnh phù hợp (≥2/3 tiêu chuẩn)
+                2. Xác định chẩn đoán → bù dịch tích cực, giảm đau, nhịn ăn sớm
+                3. Phân loại mức độ: nhẹ (không suy tạng), trung bình (suy tạng thoáng qua/biến chứng nhẹ), nặng (suy tạng kéo dài >48h)
+                4. Tìm và điều trị nguyên nhân (sỏi mật, rượu, tăng TG, thuốc...)
+                5. Nhập khoa tiêu hóa/nội tổng quát hoặc ICU nếu suy tạng/huyết động không ổn
+
+                **📚 Dựa trên:**
+                - IAP/APA Guidelines for Management of Acute Pancreatitis
+                - ACG Clinical Guideline: Management of Acute Pancreatitis
                 """)
             elif selected_algorithm == "Acute Chest Pain / ACS":
                 st.markdown("""
