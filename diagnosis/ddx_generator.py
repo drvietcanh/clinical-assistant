@@ -180,25 +180,46 @@ def render_ddx_interface():
     st.markdown("---")
     
     # Mode selection
-    # Check if mode was preset from another page (e.g., Symptom Checker redirect)
-    preset_mode = st.session_state.get('ddx_mode', None)
+    # Use separate key for widget to avoid conflicts with preset values from other pages
     mode_options = ["📋 Chế độ tiêu chuẩn (Chọn scenario trước)", "⚡ Chế độ nhanh (Nhập triệu chứng trước)"]
+    
+    # Widget uses its own key to avoid conflicts
+    widget_key = "ddx_mode_selector"
+    
+    # Check if mode was preset from another page (e.g., Symptom Checker redirect)
+    preset_mode = st.session_state.get('ddx_mode_preset', None)
+    has_preset = preset_mode is not None
+    
+    # Get current widget value (if widget already exists)
+    current_widget_value = st.session_state.get(widget_key, None)
     
     # Determine default index
     default_index = 0
-    if preset_mode and preset_mode in mode_options:
+    if has_preset and preset_mode in mode_options:
+        # Use preset value
         default_index = mode_options.index(preset_mode)
-        # Clear preset after using (to avoid conflicts with widget)
-        del st.session_state['ddx_mode']
+        # Clear preset key after reading
+        del st.session_state['ddx_mode_preset']
+    elif current_widget_value and current_widget_value in mode_options:
+        # Use existing widget value
+        default_index = mode_options.index(current_widget_value)
+    elif 'ddx_mode' in st.session_state:
+        # Check old key for backward compatibility (only if no widget value)
+        old_mode = st.session_state.get('ddx_mode')
+        if old_mode and old_mode in mode_options:
+            default_index = mode_options.index(old_mode)
     
-    # Note: st.radio automatically stores value in session_state when key is provided
+    # Create widget with separate key
     mode = st.radio(
         "**Chọn chế độ:**",
         mode_options,
         index=default_index,
-        key="ddx_mode",
+        key=widget_key,
         horizontal=True
     )
+    
+    # Store mode in the expected key for other parts of the code
+    st.session_state['ddx_mode'] = mode
     
     st.markdown("---")
     

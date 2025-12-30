@@ -45,8 +45,8 @@ render_info_box(
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     if st.button("🩺 Chuyển đến Chẩn đoán phân biệt (Quick Mode)", type="primary", use_container_width=True):
-        # Set quick mode in session state before redirecting
-        st.session_state['ddx_mode'] = "⚡ Chế độ nhanh (Nhập triệu chứng trước)"
+        # Set quick mode in session state before redirecting (use preset key to avoid widget conflict)
+        st.session_state['ddx_mode_preset'] = "⚡ Chế độ nhanh (Nhập triệu chứng trước)"
         st.switch_page("pages/06_🩺_Diagnosis.py")
 
 st.markdown("---")
@@ -59,7 +59,8 @@ with st.sidebar:
     st.markdown("---")
     
     if st.button("🩺 Chuyển đến Chẩn đoán phân biệt", use_container_width=True):
-        st.session_state['ddx_mode'] = "⚡ Chế độ nhanh (Nhập triệu chứng trước)"
+        # Set quick mode in session state before redirecting (use preset key to avoid widget conflict)
+        st.session_state['ddx_mode_preset'] = "⚡ Chế độ nhanh (Nhập triệu chứng trước)"
         st.switch_page("pages/06_🩺_Diagnosis.py")
     
     st.markdown("---")
