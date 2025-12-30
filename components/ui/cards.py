@@ -154,3 +154,60 @@ def render_stat_card(
     """
     
     st.markdown(card_html, unsafe_allow_html=True)
+
+
+def render_clickable_dashboard_card(
+    title: str,
+    description: str,
+    icon: Optional[str] = None,
+    gradient: Optional[str] = None,
+    action_key: Optional[str] = None,
+    action_value: Optional[str] = None,
+    tooltip: Optional[str] = None,
+):
+    """
+    Render a dashboard-style card with an attached click action.
+    
+    This is used by the Critical Care dashboard to render nice-looking
+    cards that, when clicked, update a value in `st.session_state`.
+    """
+    # Background style
+    bg_style = gradient or "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+    
+    # Icon HTML
+    icon_html = ""
+    if icon:
+        icon_html = f'<div style="font-size: 2rem; margin-bottom: 8px;">{html.escape(icon)}</div>'
+    
+    # Description HTML
+    desc_html = ""
+    if description:
+        desc_html = f'<div style="font-size: 0.9rem; opacity: 0.95;">{html.escape(description)}</div>'
+    
+    card_html = f"""
+    <div style="background: {bg_style};
+                border-radius: 16px;
+                padding: 16px 18px;
+                color: white;
+                box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                min-height: 120px;">
+        {icon_html}
+        <div style="font-size: 1.1rem; font-weight: 700;">
+            {html.escape(title)}
+        </div>
+        {desc_html}
+    </div>
+    """
+    
+    # Render card
+    st.markdown(card_html, unsafe_allow_html=True)
+    
+    # Render action button just below card
+    if action_key and action_value is not None:
+        button_label = f"▶️ Mở {title}"
+        if st.button(button_label, help=tooltip or "", use_container_width=True, key=f"dash_card_{title}"):
+            st.session_state[action_key] = action_value
+            st.rerun()

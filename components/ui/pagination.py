@@ -29,7 +29,10 @@ def render_pagination(
     if total_pages <= 1:
         return (0, total_items, 1, 1)
     
-    # Get current page from session state
+    # Use a separate widget key to avoid conflicts with manual session_state updates
+    widget_key = f"{page_key}_input"
+    
+    # Get current page from session state (or default to 1)
     current_page = st.session_state.get(page_key, 1)
     
     # Page selector
@@ -37,14 +40,16 @@ def render_pagination(
     
     with col2:
         page_num = st.number_input(
-            f"Trang",
+            "Trang",
             min_value=1,
             max_value=total_pages,
             value=current_page,
-            key=page_key,
+            key=widget_key,
             label_visibility="collapsed"
         )
-        st.session_state[page_key] = page_num
+    
+    # Persist current page separately in session_state
+    st.session_state[page_key] = page_num
     
     # Calculate indices
     start_idx = (page_num - 1) * items_per_page
