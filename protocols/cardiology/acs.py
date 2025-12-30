@@ -6,12 +6,25 @@ STEMI & NSTEMI Management
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Acute Coronary Syndrome Protocol"""
     st.subheader("💔 ACS - Hội Chứng Vành Cấp")
     st.caption("STEMI & NSTEMI Management - ESC/AHA Guidelines")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-12-01",
+        last_updated="2024-12-01",
+        version="2024",
+        guideline_source="ACC/AHA/SCAI 2024"
+    )
     
     st.info("""
     **ACS (Acute Coronary Syndrome)** bao gồm:

@@ -7,12 +7,25 @@ Ischemic & Hemorrhagic Stroke
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Stroke Management Protocol"""
     st.subheader("🧠 Stroke Management Protocol")
     st.caption("AHA/ASA Guidelines 2021 - Ischemic & Hemorrhagic Stroke")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-05-01",
+        last_updated="2024-05-01",
+        version="2024",
+        guideline_source="AHA/ASA 2024"
+    )
     
     st.info("""
     **Triệu chứng Stroke (BE FAST):**

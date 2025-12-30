@@ -17,6 +17,16 @@ from components.export import render_export_section
 from components.risk_color_coding import render_risk_badge, get_risk_level
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ===================================================
 
 from scores.utils.validation import validate_gcs as validate_gcs_score
@@ -199,31 +209,58 @@ def render():
             st.markdown("---")
             st.markdown("### 💊 Ý nghĩa lâm sàng")
             
-            if total_score >= 14:
-                st.success("""
-                **GCS 14-15: Chấn thương sọ não nhẹ**
-                - Theo dõi lâm sàng
-                - CT scan nếu có triệu chứng
-                - Thường hồi phục tốt
-                """)
-            elif total_score >= 9:
-                st.warning("""
-                **GCS 9-13: Chấn thương sọ não trung bình**
-                - Nhập viện theo dõi
-                - CT scan sọ não
-                - Theo dõi sát các dấu hiệu tăng áp lực nội sọ
-                - Có thể cần can thiệp
-                """)
+            # Enhanced interpretation with Phase 1
+            if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+                recommendations = []
+                if total_score >= 14:
+                    recommendations.append("Theo dõi lâm sàng")
+                    recommendations.append("CT scan nếu có triệu chứng")
+                    recommendations.append("Thường hồi phục tốt")
+                elif total_score >= 9:
+                    recommendations.append("Nhập viện theo dõi")
+                    recommendations.append("CT scan sọ não")
+                    recommendations.append("Theo dõi sát các dấu hiệu tăng áp lực nội sọ")
+                    recommendations.append("Có thể cần can thiệp")
+                else:
+                    recommendations.append("**ĐẶT NỘI KHÍ QUẢN NGAY** (GCS ≤8)")
+                    recommendations.append("Nhập ICU")
+                    recommendations.append("CT scan khẩn cấp")
+                    recommendations.append("Theo dõi áp lực nội sọ")
+                    recommendations.append("Có thể cần phẫu thuật")
+                
+                render_result_interpretation(
+                    result=f"{total_score}/15",
+                    interpretation=severity,
+                    recommendations=recommendations,
+                    risk_level=risk_level_code.replace("_", "") if risk_level_code else None
+                )
             else:
-                st.error("""
-                **GCS ≤8: Chấn thương sọ não nặng**
-                - **ĐẶT NỘI KHÍ QUẢN NGAY** (GCS ≤8)
-                - Nhập ICU
-                - CT scan khẩn cấp
-                - Theo dõi áp lực nội sọ
-                - Có thể cần phẫu thuật
-                - Tiên lượng xấu
-                """)
+                # Fallback to original
+                if total_score >= 14:
+                    st.success("""
+                    **GCS 14-15: Chấn thương sọ não nhẹ**
+                    - Theo dõi lâm sàng
+                    - CT scan nếu có triệu chứng
+                    - Thường hồi phục tốt
+                    """)
+                elif total_score >= 9:
+                    st.warning("""
+                    **GCS 9-13: Chấn thương sọ não trung bình**
+                    - Nhập viện theo dõi
+                    - CT scan sọ não
+                    - Theo dõi sát các dấu hiệu tăng áp lực nội sọ
+                    - Có thể cần can thiệp
+                    """)
+                else:
+                    st.error("""
+                    **GCS ≤8: Chấn thương sọ não nặng**
+                    - **ĐẶT NỘI KHÍ QUẢN NGAY** (GCS ≤8)
+                    - Nhập ICU
+                    - CT scan khẩn cấp
+                    - Theo dõi áp lực nội sọ
+                    - Có thể cần phẫu thuật
+                    - Tiên lượng xấu
+                    """)
             
             # Additional warnings
             if total_score <= 8:

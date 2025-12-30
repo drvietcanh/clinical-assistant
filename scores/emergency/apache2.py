@@ -40,6 +40,16 @@ from components.smart_suggestions import render_suggestions
 from components.risk_color_coding import render_risk_badge, get_risk_level
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ===================================================
 
 from .apache2_lookup import (
@@ -210,22 +220,71 @@ def render():
             limit=3
         )
     
-    # Educational information
-    with st.expander("ℹ️ Thông tin & cách sử dụng"):
-        st.markdown("""
-        ### 📋 Giới Thiệu
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về APACHE II Score",
+            content="""
+            **APACHE II (Acute Physiology and Chronic Health Evaluation II)** là thang điểm:
+            
+            - Dự đoán tử vong bệnh viện trong ICU
+            - Đánh giá mức độ nặng bệnh
+            - So sánh chất lượng chăm sóc ICU
+            - Nghiên cứu & phân tầng bệnh nhân
+            
+            **3 thành phần:**
+            1. **Acute Physiology Score (0-60):** 12 biến số sinh lý
+            2. **Age Points (0-6):** Điểm tuổi
+            3. **Chronic Health (0-5):** Bệnh mạn tính
+            
+            **Tổng điểm: 0-71 điểm**
+            """,
+            when_to_use="""
+            **Sử dụng APACHE II khi:**
+            - Bệnh nhân ICU cần đánh giá tiên lượng
+            - So sánh chất lượng chăm sóc giữa các ICU
+            - Nghiên cứu và phân tầng bệnh nhân
+            - Đánh giá mức độ nặng bệnh
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Tính trong 24h đầu vào ICU
+            - Cần có đầy đủ 12 biến số sinh lý
+            - Không áp dụng cho bệnh nhân <16 tuổi
+            - Không áp dụng cho bệnh nhân burn, cardiac surgery
+            - Chỉ dự đoán tử vong bệnh viện, không phải tử vong ICU
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - APACHE II được tính trong 24h đầu vào ICU
+            - Điểm cao (>25) liên quan đến tử vong cao
+            - Sử dụng kết hợp với lâm sàng, không chỉ dựa vào điểm số
+            - APACHE IV là phiên bản mới hơn nhưng APACHE II vẫn được dùng rộng rãi
+            """
+        )
         
-        **APACHE II** là thang điểm ICU:
-        - Dự đoán tử vong bệnh viện
-        - Đánh giá mức độ nặng
-        - So sánh chất lượng chăm sóc ICU
-        - Nghiên cứu & phân tầng bệnh nhân
-        
-        ### 🎯 3 Thành phần
-        
-        1. **Acute Physiology Score (0-60):** 12 biến số sinh lý
-        2. **Age Points (0-6):** Điểm tuổi
-        3. **Chronic Health (0-5):** Bệnh mạn tính
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Knaus WA, et al. APACHE II: a severity of disease classification system. Crit Care Med. 1985;13(10):818-829.",
+            doi="10.1097/00003246-198510000-00009"
+        )
+    else:
+        # Fallback to original expander
+        with st.expander("ℹ️ Thông tin & cách sử dụng"):
+            st.markdown("""
+            ### 📋 Giới Thiệu
+            
+            **APACHE II** là thang điểm ICU:
+            - Dự đoán tử vong bệnh viện
+            - Đánh giá mức độ nặng
+            - So sánh chất lượng chăm sóc ICU
+            - Nghiên cứu & phân tầng bệnh nhân
+            
+            ### 🎯 3 Thành phần
+            
+            1. **Acute Physiology Score (0-60):** 12 biến số sinh lý
+            2. **Age Points (0-6):** Điểm tuổi
+            3. **Chronic Health (0-5):** Bệnh mạn tính
         
         **Tổng điểm:** 0-71
         
@@ -448,15 +507,38 @@ def render():
             for detail in result['details']:
                 st.markdown(f"- {detail}")
         
-        # Interpretation
-        st.info("""
-        **📌 Diễn giải:**
-        
-        - APACHE II dự đoán tử vong BỆNH VIỆN, không phải ICU
-        - Tính 1 LẦN trong 24h đầu nhập ICU (giá trị tệ nhất)
-        - Điểm càng cao → nguy cơ tử vong càng cao
-        - Không nên tính lại trong thời gian nằm ICU
-        """)
+        # Interpretation - Enhanced with Phase 1
+        if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+            # Determine recommendations
+            recommendations = []
+            if result['total_score'] >= 25:
+                recommendations.append("Nguy cơ tử vong >40%, cần hồi sức tích cực")
+                recommendations.append("Xem xét mức độ chăm sóc và tiên lượng")
+                recommendations.append("Thảo luận với gia đình về mục tiêu điều trị")
+            elif result['total_score'] >= 20:
+                recommendations.append("Nguy cơ tử vong cao, theo dõi sát")
+            else:
+                recommendations.append("Tiếp tục điều trị và theo dõi")
+            
+            recommendations.append("APACHE II dự đoán tử vong BỆNH VIỆN, không phải ICU")
+            recommendations.append("Tính 1 LẦN trong 24h đầu nhập ICU (giá trị tệ nhất)")
+            
+            render_result_interpretation(
+                result=f"{result['total_score']}/71",
+                interpretation=f"Nguy cơ tử vong bệnh viện: {result['mortality']}",
+                recommendations=recommendations,
+                risk_level="high" if result['total_score'] >= 25 else "moderate" if result['total_score'] >= 20 else "low"
+            )
+        else:
+            # Fallback to original
+            st.info("""
+            **📌 Diễn giải:**
+            
+            - APACHE II dự đoán tử vong BỆNH VIỆN, không phải ICU
+            - Tính 1 LẦN trong 24h đầu nhập ICU (giá trị tệ nhất)
+            - Điểm càng cao → nguy cơ tử vong càng cao
+            - Không nên tính lại trong thời gian nằm ICU
+            """)
         
         if result['total_score'] >= 25:
             st.error("""

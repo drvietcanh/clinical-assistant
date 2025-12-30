@@ -6,12 +6,25 @@ Acute Decompensated Heart Failure Management
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Acute Heart Failure Protocol"""
     st.subheader("💔 Suy tim Cấp")
     st.caption("Acute Decompensated Heart Failure - ESC/AHA Guidelines")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2023-04-01",
+        last_updated="2023-04-01",
+        version="2023",
+        guideline_source="ACC/AHA/HFSA 2023"
+    )
     
     st.info("""
     **Suy tim cấp** là khởi phát nhanh hoặc xấu đi nhanh của triệu chứng suy tim.
