@@ -115,13 +115,23 @@ def render_protocols_sidebar() -> Tuple[str, str, bool]:
     # Get protocol list for selected specialty
     protocol_list = get_protocol_list(specialty)
     
-    # ========== SEARCH/FILTER PROTOCOL ==========
+    # ========== SEARCH/FILTER PROTOCOL - ENHANCED UI ==========
     if protocol_list:
-        # Search box
+        # Enhanced search box with better styling
+        st.markdown("""
+        <style>
+        div[data-testid="stTextInput"] input[placeholder*="Nhập tên protocol"] {
+            font-size: 14px !important;
+            padding: 10px 14px !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
         search_term = st.text_input(
             "🔍 Tìm protocol...",
             key=f"protocol_search_{specialty}",
-            placeholder="Nhập tên protocol để tìm..."
+            placeholder="Nhập tên protocol để tìm...",
+            help="Tìm kiếm nhanh trong danh sách protocols"
         )
         
         # Filter protocols based on search
@@ -136,22 +146,50 @@ def render_protocols_sidebar() -> Tuple[str, str, bool]:
             
             if filtered_list:
                 protocol_list = filtered_list
-                st.caption(f"📊 Tìm thấy {len(filtered_list)} protocol(s)")
+                st.success(f"✅ Tìm thấy **{len(filtered_list)}** protocol(s)")
             else:
                 st.warning(f"⚠️ Không tìm thấy protocol nào với từ khóa '{search_term}'")
                 protocol_list = []  # Show empty list
         else:
-            # Show protocol count when not searching
-            st.caption(f"📊 Tổng cộng: {len(protocol_list)} protocol(s)")
+            # Show protocol count with better styling
+            st.markdown(f"<div style='padding: 8px; background: #f0f7ff; border-radius: 6px; margin-bottom: 8px;'><strong>📊 Tổng cộng:</strong> <span style='color: #0066CC; font-weight: 600;'>{len(protocol_list)}</span> protocol(s)</div>", unsafe_allow_html=True)
     
     if protocol_list:
+        # Enhanced protocol selector with better visual feedback
+        st.markdown("""
+        <style>
+        /* Style for protocol radio buttons */
+        div[data-testid="stRadio"] label {
+            padding: 10px 12px !important;
+            margin-bottom: 6px !important;
+            border-radius: 8px !important;
+            transition: all 0.2s ease !important;
+            border: 1px solid transparent !important;
+        }
+        div[data-testid="stRadio"] label:hover {
+            background: #f0f7ff !important;
+            border-color: #0066CC !important;
+        }
+        div[data-testid="stRadio"] label[data-baseweb="radio"] {
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
         # Use helper function for consistency
         protocol = render_protocol_selector(protocol_list, use_deep_link, deep_link_protocol)
         
-        # Show favorite button for selected protocol
+        # Show favorite button for selected protocol with better styling
         if protocol and protocol != "Không có protocol nào":
             st.markdown("---")
-            render_favorite_button(protocol, key_suffix=specialty)
+            col_fav1, col_fav2 = st.columns([1, 3])
+            with col_fav1:
+                render_favorite_button(protocol, key_suffix=specialty)
+            with col_fav2:
+                # Show protocol info
+                protocol_display = protocol.split(' ', 1)[-1] if ' ' in protocol else protocol
+                st.caption(f"📋 **{protocol_display}**")
     else:
         # Fallback: show empty selector
         protocol = st.radio(

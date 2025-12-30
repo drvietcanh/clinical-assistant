@@ -4,6 +4,7 @@ Track and monitor clinical practice guidelines updates
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 import html
 from collections import Counter
 from utils.page_helper import setup_page, render_standard_footer
@@ -282,80 +283,75 @@ def render_guideline_card(guideline, index: int):
         year_bg = 'linear-gradient(135deg, #ff5722 0%, #ff7043 100%)'
         year_color = '#ffffff'
     
-    # Build HTML components separately to avoid nested f-string issues
-    url_link_html = ""
+    # Build HTML directly without separate variables to avoid escaping issues
+    # Build HTML using enhanced design - all in one string to avoid escaping problems
+    card_html_parts = []
+    
+    # Start card
+    card_html_parts.append(f'<div class="guideline-card" style="--border-color: {border_color}; border-left-color: {border_color};">')
+    
+    # Title and year section
+    card_html_parts.append('<div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px; gap: 16px;">')
+    card_html_parts.append(f'<h3 class="guideline-title" style="flex: 1; margin: 0;">{html.escape(guideline.title_vn)}</h3>')
+    card_html_parts.append('<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">')
+    card_html_parts.append(f'<span class="year-badge" style="background: {year_bg}; color: {year_color};">{guideline.year}</span>')
+    card_html_parts.append(f'<span class="{status_class}" style="background: {status_color};">{status_text}</span>')
+    card_html_parts.append('</div>')
+    card_html_parts.append('</div>')
+    
+    # Badges section
+    card_html_parts.append('<div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">')
+    card_html_parts.append(f'<span class="org-badge" style="background: {org_color}15; color: {org_color}; border: 2px solid {org_color}40;">🏢 {html.escape(guideline.organization)}</span>')
+    card_html_parts.append(f'<span class="category-badge">🩺 {html.escape(guideline.category)}</span>')
+    if guideline.key_recommendations:
+        card_html_parts.append(f'<span class="evidence-badge" style="background: {border_color}20; color: {border_color}; border: 1px solid {border_color}40;">📊 Evidence-Based</span>')
+    card_html_parts.append('</div>')
+    
+    # Description
+    if guideline.description:
+        card_html_parts.append(f'<p class="guideline-description">{html.escape(guideline.description)}</p>')
+    
+    # Recommendations
+    if guideline.key_recommendations:
+        card_html_parts.append(f'<div class="recommendations-box" style="border-left-color: {border_color};"><div style="font-weight: 700; color: {border_color}; margin-bottom: 10px; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;"><span>⭐</span> <span>Khuyến nghị chính:</span></div><ul style="margin: 0; padding-left: 24px; color: #37474f; font-size: 0.9rem; line-height: 1.8;">')
+        for rec in guideline.key_recommendations[:5]:
+            card_html_parts.append(f'<li style="margin-bottom: 8px; padding-left: 4px;">{html.escape(rec)}</li>')
+        card_html_parts.append('</ul></div>')
+    
+    # Footer section with links
+    card_html_parts.append('<div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e0e0e0; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: space-between;">')
+    card_html_parts.append('<div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">')
+    
+    # URL link
     if guideline.url:
         url_escaped = html.escape(guideline.url)
-        url_link_html = f'''<a href="{url_escaped}" target="_blank" class="quick-action-btn" style="background: {border_color}; color: white; border-color: {border_color};">
-                    🔗 Xem guideline đầy đủ
-                </a>'''
+        card_html_parts.append(f'<a href="{url_escaped}" target="_blank" class="quick-action-btn" style="background: {border_color}; color: white; border-color: {border_color};">🔗 Xem guideline đầy đủ</a>')
     
-    protocol_html = ""
+    # Protocol link
     if guideline.related_protocol:
         protocol_escaped = html.escape(guideline.related_protocol)
-        protocol_html = f'''<span style="color: #616161; font-size: 0.9rem; display: flex; align-items: center; gap: 4px;">
-                    📋 <strong>Protocol:</strong> {protocol_escaped}
-                </span>'''
+        card_html_parts.append(f'<span style="color: #616161; font-size: 0.9rem; display: flex; align-items: center; gap: 4px;">📋 <strong>Protocol:</strong> {protocol_escaped}</span>')
     
-    last_updated_html = ""
+    card_html_parts.append('</div>')
+    
+    # Last updated
     if guideline.last_updated:
         last_updated_escaped = html.escape(guideline.last_updated)
-        last_updated_html = f'''<span style="color: #757575; font-size: 0.85rem; display: flex; align-items: center; gap: 4px;">
-                🔄 <span>Cập nhật: {last_updated_escaped}</span>
-            </span>'''
+        card_html_parts.append(f'<span style="color: #757575; font-size: 0.85rem; display: flex; align-items: center; gap: 4px;">🔄 <span>Cập nhật: {last_updated_escaped}</span></span>')
     
-    # Build HTML using enhanced design
-    card_html = f"""
-    <div class="guideline-card" style="--border-color: {border_color}; border-left-color: {border_color};">
-        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px; gap: 16px;">
-            <h3 class="guideline-title" style="flex: 1; margin: 0;">
-                {html.escape(guideline.title_vn)}
-            </h3>
-            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
-            <span class="year-badge" style="background: {year_bg}; color: {year_color};">
-                {guideline.year}
-            </span>
-                <span class="{status_class}" style="background: {status_color};">
-                    {status_text}
-                </span>
-            </div>
-        </div>
-        
-        <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
-            <span class="org-badge" style="background: {org_color}15; color: {org_color}; border: 2px solid {org_color}40;">
-                🏢 {html.escape(guideline.organization)}
-            </span>
-            <span class="category-badge">
-                🩺 {html.escape(guideline.category)}
-            </span>
-            {f'<span class="evidence-badge" style="background: {border_color}20; color: {border_color}; border: 1px solid {border_color}40;">📊 Evidence-Based</span>' if guideline.key_recommendations else ''}
-        </div>
-        
-        {f'<p class="guideline-description">{html.escape(guideline.description)}</p>' if guideline.description else ''}
-        
-        {"" if not guideline.key_recommendations else f'''
-        <div class="recommendations-box" style="border-left-color: {border_color};">
-            <div style="font-weight: 700; color: {border_color}; margin-bottom: 10px; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;">
-                <span>⭐</span> <span>Khuyến nghị chính:</span>
-            </div>
-            <ul style="margin: 0; padding-left: 24px; color: #37474f; font-size: 0.9rem; line-height: 1.8;">
-                {''.join([f'<li style="margin-bottom: 8px; padding-left: 4px;">{html.escape(rec)}</li>' for rec in guideline.key_recommendations[:5]])}
-            </ul>
-        </div>
-        '''}
-        
-        <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e0e0e0; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
-            <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
-                {url_link_html if guideline.url else ''}
-                {protocol_html if guideline.related_protocol else ''}
-            </div>
-            {last_updated_html if guideline.last_updated else ''}
-        </div>
-    </div>
-    """
+    card_html_parts.append('</div>')
+    card_html_parts.append('</div>')
     
-    # Render HTML directly
-    st.markdown(card_html, unsafe_allow_html=True)
+    # Join all parts into single HTML string
+    card_html = ''.join(card_html_parts)
+    
+    # Render HTML using components.v1.html to bypass markdown escaping
+    # This ensures HTML is rendered directly without being escaped
+    components.html(
+        card_html,
+        height=0,  # Auto height
+        scrolling=False
+    )
     
     # Protocol deep link button
     if guideline.related_protocol:

@@ -4,6 +4,7 @@ Main Router - Uses routing dictionary for protocol rendering
 """
 
 import streamlit as st
+import html
 from pathlib import Path
 from utils.page_helper import setup_page, render_standard_footer
 from components.ui import render_info_box, render_hero
@@ -68,34 +69,78 @@ if use_deep_link and protocol and protocol != "Không có protocol nào":
         if 'protocol_function' in st.session_state:
             del st.session_state['protocol_function']
 
-# Enhanced info display using standard components
+# Enhanced info display with modern card design
 if protocol and protocol != "Không có protocol nào":
     # Extract protocol name (remove emoji if present)
     protocol_display = protocol.split(' ', 1)[1] if ' ' in protocol else protocol
     
-    info_html = f"""
-    <div>
-        <p><strong>📋 Chuyên khoa:</strong> {specialty}</p>
-        <p><strong>🔬 Phác đồ đang xem:</strong> {protocol_display}</p>
-        {f'<p style="margin-top: 8px; font-style: italic; color: #666;">🔗 Đã tự động mở từ bài viết chuyên sâu</p>' if use_deep_link else ''}
+    # Enhanced protocol header card
+    st.markdown("""
+    <style>
+    .protocol-header-card {
+        background: linear-gradient(135deg, #0066CC 0%, #004499 100%);
+        color: white;
+        padding: 20px 24px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+    }
+    .protocol-header-card h2 {
+        color: white !important;
+        border: none !important;
+        margin: 0 0 12px 0 !important;
+        padding: 0 !important;
+        font-size: 24px !important;
+    }
+    .protocol-header-card p {
+        color: rgba(255, 255, 255, 0.95) !important;
+        margin: 6px 0 !important;
+    }
+    .protocol-meta {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .protocol-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    header_html = f"""
+    <div class="protocol-header-card">
+        <h2>📋 {html.escape(protocol_display)}</h2>
+        <div class="protocol-meta">
+            <div class="protocol-meta-item">
+                <span>🏥</span>
+                <span><strong>Chuyên khoa:</strong> {html.escape(specialty)}</span>
+            </div>
+            {f'<div class="protocol-meta-item"><span>🔗</span><span style="font-style: italic;">Đã tự động mở từ bài viết chuyên sâu</span></div>' if use_deep_link else ''}
+        </div>
     </div>
     """
-    
-    render_info_box(
-        info_html,
-        type="info",
-        title="Thông tin Protocol"
-    )
+    st.markdown(header_html, unsafe_allow_html=True)
 else:
-    render_info_box(
-        """
-        Chọn một protocol từ danh sách ở **sidebar bên trái** để xem nội dung chi tiết. 
-        Bạn có thể tìm kiếm protocol bằng từ khóa hoặc lọc theo chuyên khoa.
-        """,
-        type="info",
-        title="💡 Hướng dẫn sử dụng",
-        icon="💡"
-    )
+    # Enhanced welcome message
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%); 
+                padding: 24px; border-radius: 12px; border-left: 4px solid #0066CC; 
+                margin-bottom: 24px;">
+        <h3 style="color: #0066CC; margin-top: 0;">💡 Hướng dẫn sử dụng</h3>
+        <p style="margin-bottom: 8px;">Chọn một protocol từ danh sách ở <strong>sidebar bên trái</strong> để xem nội dung chi tiết.</p>
+        <p style="margin-bottom: 0;">Bạn có thể:</p>
+        <ul style="margin-top: 8px;">
+            <li>🔍 Tìm kiếm protocol bằng từ khóa</li>
+            <li>🏥 Lọc theo chuyên khoa</li>
+            <li>⭐ Đánh dấu yêu thích các protocol thường dùng</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
 
 # ========== TABLE OF CONTENTS ==========
 # Simple TOC for protocol navigation (only show if protocol exists)

@@ -100,9 +100,21 @@ with st.sidebar:
         key="critical_care_tool_selector"
     )
     
-    # Save current selection
+    # If saved_tool exists and was just set by button click (different from selectbox), use it for routing
+    # This ensures buttons work correctly by prioritizing the saved_tool value
+    if saved_tool and saved_tool in tool_options:
+        # Use saved_tool if it's valid - this handles button clicks
+        routing_tool_type = saved_tool
+    else:
+        # Otherwise use selectbox value
+        routing_tool_type = tool_type
+    
+    # Save current selection to session_state
     if tool_type:
         st.session_state['critical_care_tool_selection'] = str(tool_type)
+    
+    # Use routing_tool_type for actual routing (instead of tool_type)
+    tool_type = routing_tool_type
     
     st.markdown("---")
     render_info_box(

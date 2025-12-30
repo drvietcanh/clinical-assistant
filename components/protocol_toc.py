@@ -99,7 +99,45 @@ def render_toc(headers: List[Dict[str, str]] = None, content: str = None):
     toc_html = generate_toc_from_headers(headers)
     
     if toc_html:
-        with st.expander("📋 Mục Lục", expanded=False):
+        # Enhanced TOC with better styling
+        st.markdown("""
+        <style>
+        .protocol-toc {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        .protocol-toc h4 {
+            color: #0066CC;
+            margin: 0 0 12px 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .protocol-toc ul {
+            margin: 0;
+            padding-left: 0;
+        }
+        .protocol-toc li {
+            margin-bottom: 8px;
+        }
+        .protocol-toc a {
+            color: #0066CC;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            display: block;
+            padding: 6px 8px;
+            border-radius: 4px;
+        }
+        .protocol-toc a:hover {
+            color: #004499;
+            background: #e6f2ff;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
+        with st.expander("📋 Mục Lục", expanded=True):
             st.markdown(toc_html, unsafe_allow_html=True)
 
 
@@ -161,12 +199,40 @@ def render_simple_toc(protocol_sections: List[Tuple[str, str]] = None):
             ("📚 References", "references")
         ]
     
-    with st.expander("📋 Mục Lục", expanded=False):
+    # Enhanced TOC styling
+    st.markdown("""
+    <style>
+    .protocol-toc-simple {
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 16px;
+    }
+    .protocol-toc-simple a {
+        color: #0066CC;
+        text-decoration: none;
+        display: block;
+        padding: 8px 12px;
+        margin-bottom: 6px;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+    .protocol-toc-simple a:hover {
+        background: #e6f2ff;
+        color: #004499;
+        transform: translateX(4px);
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    with st.expander("📋 Mục Lục", expanded=True):
+        st.markdown('<div class="protocol-toc-simple">', unsafe_allow_html=True)
         for section_name, anchor in protocol_sections:
             # Sanitize anchor for HTML ID attribute
             safe_anchor = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in str(anchor))
             st.markdown(
-                f'<a href="#{safe_anchor}" style="text-decoration: none; color: var(--protocol-primary-blue); display: block; margin-bottom: 0.5rem;">{html.escape(section_name)}</a>',
+                f'<a href="#{safe_anchor}">{html.escape(section_name)}</a>',
                 unsafe_allow_html=True
             )
+        st.markdown('</div>', unsafe_allow_html=True)
 

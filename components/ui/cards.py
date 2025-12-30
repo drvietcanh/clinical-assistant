@@ -207,7 +207,10 @@ def render_clickable_dashboard_card(
     
     # Render action button just below card
     if action_key and action_value is not None:
+        # Create unique key based on title and action_value to avoid conflicts
+        button_key = f"dash_card_{title}_{action_value}".replace(" ", "_").replace("💧", "fluid").replace("💉", "vaso").replace("🩸", "trans").replace("💤", "sed")
+        
         button_label = f"▶️ Mở {title}"
-        if st.button(button_label, help=tooltip or "", use_container_width=True, key=f"dash_card_{title}"):
+        if st.button(button_label, help=tooltip or "", use_container_width=True, key=button_key):
             st.session_state[action_key] = action_value
             st.rerun()
