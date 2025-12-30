@@ -94,6 +94,11 @@ def render_info_card(
             '''
         actions_html += '</div>'
     
+    content_html = ""
+    if content:
+        content_escaped = content if content.startswith("<") else html.escape(content)
+        content_html = f'<div style="color: #424242; font-size: 0.95rem; line-height: 1.6; margin: 12px 0;">{content_escaped}</div>'
+    
     card_html = f"""
     <div style="background: {config['bg']};
                 border: {config['border']};
@@ -106,7 +111,7 @@ def render_info_card(
             {html.escape(title)}
         </h3>
         {badges_html}
-        {f'<div style="color: #424242; font-size: 0.95rem; line-height: 1.6; margin: 12px 0;">{content if content.startswith("<") else html.escape(content)}</div>' if content else ''}
+        {content_html}
         {actions_html}
     </div>
     """

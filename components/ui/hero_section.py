@@ -44,6 +44,19 @@ def render_hero(
             '''
         badges_html += '</div>'
     
+    subtitle_html = ""
+    if subtitle:
+        subtitle_html = f'''<div style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 0.5rem; font-weight: 500; 
+                        letter-spacing: 0.5px; text-transform: uppercase;">{html.escape(subtitle)}</div>'''
+    
+    icon_html = ""
+    if icon:
+        icon_html = f'<span style="font-size: 2.2rem;">{icon}</span>'
+    
+    description_html = ""
+    if description:
+        description_html = f'<p style="margin: 0; font-size: 1rem; opacity: 0.95; line-height: 1.6; max-width: 800px;">{html.escape(description)}</p>'
+    
     hero_html = f"""
     <div style="background: linear-gradient(135deg, {gradient_colors[0]} 0%, {gradient_colors[1]} 100%);
                 padding: 2rem 2.5rem;
@@ -58,13 +71,12 @@ def render_hero(
         <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; 
                     background: rgba(255,255,255,0.08); border-radius: 50%;"></div>
         <div style="position: relative; z-index: 1;">
-            {f'<div style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 0.5rem; font-weight: 500; 
-                        letter-spacing: 0.5px; text-transform: uppercase;">{html.escape(subtitle)}</div>' if subtitle else ''}
+            {subtitle_html}
             <h2 style="margin: 0 0 0.75rem 0; font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; display: flex; align-items: center; gap: 12px;">
-                {f'<span style="font-size: 2.2rem;">{icon}</span>' if icon else ''}
+                {icon_html}
                 <span>{html.escape(title)}</span>
             </h2>
-            {f'<p style="margin: 0; font-size: 1rem; opacity: 0.95; line-height: 1.6; max-width: 800px;">{html.escape(description)}</p>' if description else ''}
+            {description_html}
             {badges_html}
         </div>
     </div>

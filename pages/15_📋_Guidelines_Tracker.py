@@ -282,6 +282,28 @@ def render_guideline_card(guideline, index: int):
         year_bg = 'linear-gradient(135deg, #ff5722 0%, #ff7043 100%)'
         year_color = '#ffffff'
     
+    # Build HTML components separately to avoid nested f-string issues
+    url_link_html = ""
+    if guideline.url:
+        url_escaped = html.escape(guideline.url)
+        url_link_html = f'''<a href="{url_escaped}" target="_blank" class="quick-action-btn" style="background: {border_color}; color: white; border-color: {border_color};">
+                    🔗 Xem guideline đầy đủ
+                </a>'''
+    
+    protocol_html = ""
+    if guideline.related_protocol:
+        protocol_escaped = html.escape(guideline.related_protocol)
+        protocol_html = f'''<span style="color: #616161; font-size: 0.9rem; display: flex; align-items: center; gap: 4px;">
+                    📋 <strong>Protocol:</strong> {protocol_escaped}
+                </span>'''
+    
+    last_updated_html = ""
+    if guideline.last_updated:
+        last_updated_escaped = html.escape(guideline.last_updated)
+        last_updated_html = f'''<span style="color: #757575; font-size: 0.85rem; display: flex; align-items: center; gap: 4px;">
+                🔄 <span>Cập nhật: {last_updated_escaped}</span>
+            </span>'''
+    
     # Build HTML using enhanced design
     card_html = f"""
     <div class="guideline-card" style="--border-color: {border_color}; border-left-color: {border_color};">
@@ -324,16 +346,10 @@ def render_guideline_card(guideline, index: int):
         
         <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e0e0e0; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
             <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
-                {f'<a href="{html.escape(guideline.url)}" target="_blank" class="quick-action-btn" style="background: {border_color}; color: white; border-color: {border_color};">
-                    🔗 Xem guideline đầy đủ
-                </a>' if guideline.url else ''}
-                {f'<span style="color: #616161; font-size: 0.9rem; display: flex; align-items: center; gap: 4px;">
-                    📋 <strong>Protocol:</strong> {html.escape(guideline.related_protocol)}
-                </span>' if guideline.related_protocol else ''}
+                {url_link_html if guideline.url else ''}
+                {protocol_html if guideline.related_protocol else ''}
             </div>
-            {f'<span style="color: #757575; font-size: 0.85rem; display: flex; align-items: center; gap: 4px;">
-                🔄 <span>Cập nhật: {html.escape(guideline.last_updated)}</span>
-            </span>' if guideline.last_updated else ''}
+            {last_updated_html if guideline.last_updated else ''}
         </div>
     </div>
     """
@@ -566,7 +582,7 @@ else:  # Tìm kiếm
     # Enhanced search with suggestions
     col1, col2 = st.columns([3, 1])
     with col1:
-    search_query = st.text_input(
+        search_query = st.text_input(
             "🔍 Nhập từ khóa tìm kiếm:",
             placeholder="Ví dụ: Heart failure, Sepsis, Diabetes, Hypertension, AHA, ESC...",
             key="guidelines_search_query",
