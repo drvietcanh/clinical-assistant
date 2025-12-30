@@ -180,10 +180,22 @@ def render_ddx_interface():
     st.markdown("---")
     
     # Mode selection
+    # Check if mode was preset from another page (e.g., Symptom Checker redirect)
+    preset_mode = st.session_state.get('ddx_mode', None)
+    mode_options = ["📋 Chế độ tiêu chuẩn (Chọn scenario trước)", "⚡ Chế độ nhanh (Nhập triệu chứng trước)"]
+    
+    # Determine default index
+    default_index = 0
+    if preset_mode and preset_mode in mode_options:
+        default_index = mode_options.index(preset_mode)
+        # Clear preset after using (to avoid conflicts with widget)
+        del st.session_state['ddx_mode']
+    
     # Note: st.radio automatically stores value in session_state when key is provided
     mode = st.radio(
         "**Chọn chế độ:**",
-        ["📋 Chế độ tiêu chuẩn (Chọn scenario trước)", "⚡ Chế độ nhanh (Nhập triệu chứng trước)"],
+        mode_options,
+        index=default_index,
         key="ddx_mode",
         horizontal=True
     )
