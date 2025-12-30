@@ -10,6 +10,11 @@ from components.flowchart import FlowchartNode, FlowchartEdge, NodeType
 def create_wells_pe_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create Wells PE Score flowchart
+    
+    Dựa trên:
+    - Wells PS, et al. Derivation of a simple clinical model to categorize patients probability of pulmonary embolism (1998)
+    - ESC/ERS Guidelines for Diagnosis and Management of Acute Pulmonary Embolism (2019, 2023)
+    - ATS/ERS Clinical Practice Guidelines on Pulmonary Embolism
     """
     nodes = [
         FlowchartNode("start", "Nghi ngờ PE?", NodeType.START, icon="🫁"),
@@ -51,6 +56,10 @@ def create_wells_pe_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge
 def create_perc_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create PERC Rule flowchart
+    
+    Dựa trên:
+    - Kline JA, et al. Clinical criteria to prevent unnecessary diagnostic testing in emergency department patients with suspected pulmonary embolism (2004)
+    - ESC/ERS Guidelines for Diagnosis and Management of Acute Pulmonary Embolism (2019, 2023)
     """
     nodes = [
         FlowchartNode("start", "Nghi ngờ PE?", NodeType.START, icon="🫁"),
@@ -88,6 +97,11 @@ def create_perc_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
 def create_cha2ds2vasc_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create CHA₂DS₂-VASc Score flowchart
+    
+    Dựa trên:
+    - Lip GY, et al. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation (2009)
+    - AHA/ACC/HRS Guideline for Management of Patients with Atrial Fibrillation (2019, 2023)
+    - ESC Guidelines for Management of Atrial Fibrillation (2020, 2023)
     """
     nodes = [
         FlowchartNode("start", "Rung nhĩ?", NodeType.START, icon="❤️"),
@@ -118,6 +132,11 @@ def create_cha2ds2vasc_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartE
 def create_sepsis_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create Sepsis-3 flowchart
+    
+    Dựa trên:
+    - Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3) (2016)
+    - Surviving Sepsis Campaign (SSC) Guidelines 2021 - International Guidelines for Management of Sepsis and Septic Shock
+    - IDSA/SCCM Guidelines
     """
     nodes = [
         FlowchartNode("start", "Nghi ngờ nhiễm trùng?", NodeType.START, icon="🦠"),
@@ -156,6 +175,11 @@ def create_sepsis_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]
 def create_stroke_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create Acute Stroke flowchart
+    
+    Dựa trên:
+    - AHA/ASA Guidelines for Early Management of Patients with Acute Ischemic Stroke (2019, 2023)
+    - AHA/ASA Guidelines for Management of Spontaneous Intracerebral Hemorrhage (2022)
+    - European Stroke Organisation (ESO) Guidelines for Management of Acute Ischemic Stroke (2021)
     """
     nodes = [
         FlowchartNode("start", "Đột quỵ cấp?", NodeType.START, icon="🧠"),
@@ -198,6 +222,11 @@ def create_stroke_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]
 def create_aki_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create AKI diagnostic flowchart
+    
+    Dựa trên:
+    - KDIGO (Kidney Disease: Improving Global Outcomes) Clinical Practice Guideline for Acute Kidney Injury (2012, 2024)
+    - AKI Network (AKIN) Criteria
+    - RIFLE Criteria
     """
     nodes = [
         FlowchartNode("start", "Nghi ngờ AKI?", NodeType.START, icon="🫘"),
@@ -234,6 +263,11 @@ def create_aki_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
 def create_curb65_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create CURB-65 flowchart
+    
+    Dựa trên:
+    - Lim WS, et al. Defining community acquired pneumonia severity on presentation to hospital (2003)
+    - IDSA/ATS Guidelines for Community-Acquired Pneumonia (2019)
+    - BTS (British Thoracic Society) Guidelines for Management of Community Acquired Pneumonia (2009, 2015)
     """
     nodes = [
         FlowchartNode("start", "Viêm phổi cộng đồng?", NodeType.START, icon="🫁"),
@@ -262,6 +296,12 @@ def create_curb65_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]
 def create_shock_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create shock / hypotension resuscitation flowchart (initial ED/ICU approach)
+    
+    Dựa trên:
+    - Surviving Sepsis Campaign (SSC) Guidelines 2021
+    - ACLS (Advanced Cardiac Life Support) Protocol
+    - ATLS (Advanced Trauma Life Support) - Shock Management
+    - ESC/ESICM Guidelines on Shock Management
     """
     nodes = [
         FlowchartNode("start", "SBP <90 mmHg\nhoặc MAP <65?", NodeType.START, icon="📉"),
@@ -294,6 +334,12 @@ def create_shock_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
 def create_gi_bleed_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create upper GI bleeding initial management flowchart
+    
+    Dựa trên:
+    - ACG (American College of Gastroenterology) Clinical Guideline: Management of Acute Upper GI Bleeding 2021
+    - AASLD (American Association for the Study of Liver Diseases) Practice Guidelines
+    - BSG (British Society of Gastroenterology) Guidelines for Management of Upper GI Bleeding
+    - International Consensus Recommendations on Management of Upper GI Bleeding
     """
     nodes = [
         FlowchartNode("start", "Nghi ngờ XHTH trên?", NodeType.START, icon="🩸"),
@@ -327,6 +373,12 @@ def create_gi_bleed_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge
 def create_dka_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create DKA initial management flowchart
+    
+    Dựa trên:
+    - ADA (American Diabetes Association) Standards of Medical Care in Diabetes 2024
+    - ISPAD (International Society for Pediatric and Adolescent Diabetes) Clinical Practice Consensus Guidelines
+    - Joint British Diabetes Societies (JBDS) Guidelines for Management of DKA
+    - Endocrine Society Clinical Practice Guideline on Diabetic Ketoacidosis
     """
     nodes = [
         FlowchartNode("start", "Nghi ngờ DKA?", NodeType.START, icon="🍭"),

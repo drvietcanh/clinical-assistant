@@ -317,7 +317,14 @@ def render_flowchart(
 
 
 def create_chest_pain_algorithm() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
-    """Create chest pain diagnostic algorithm"""
+    """
+    Create chest pain diagnostic algorithm
+    
+    Dựa trên:
+    - AHA/ACC Guidelines for Management of Patients with STEMI (2023)
+    - ESC Guidelines for Management of Acute Coronary Syndromes (2023)
+    - AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for Evaluation and Diagnosis of Chest Pain (2021)
+    """
     nodes = [
         FlowchartNode("start", "Chest Pain Present?", NodeType.START, icon="🚨"),
         FlowchartNode("ecg", "ECG", NodeType.TEST, icon="📊"),

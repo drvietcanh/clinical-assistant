@@ -146,6 +146,11 @@ if selected_feature == feature_options[0]:
                 6. D-dimer (-) → Loại trừ PE
                 7. CTPA (+) → Điều trị PE
                 8. CTPA (-) → Loại trừ PE
+                
+                **📚 Dựa trên:**
+                - Wells PS, et al. Derivation of a simple clinical model to categorize patients probability of pulmonary embolism (1998)
+                - ESC/ERS Guidelines for Diagnosis and Management of Acute Pulmonary Embolism (2019, 2023)
+                - ATS/ERS Clinical Practice Guidelines on Pulmonary Embolism
                 """)
             elif selected_algorithm == "PERC Rule":
                 st.markdown("""
@@ -158,6 +163,10 @@ if selected_feature == feature_options[0]:
                 5. Wells > 4 → CTPA
                 6. D-dimer (+) → CTPA
                 7. D-dimer (-) → Loại trừ PE
+                
+                **📚 Dựa trên:**
+                - Kline JA, et al. Clinical criteria to prevent unnecessary diagnostic testing in emergency department patients with suspected pulmonary embolism (2004)
+                - ESC/ERS Guidelines for Diagnosis and Management of Acute Pulmonary Embolism (2019, 2023)
                 """)
             elif selected_algorithm == "CHA₂DS₂-VASc Score":
                 st.markdown("""
@@ -167,6 +176,11 @@ if selected_feature == feature_options[0]:
                 2. Score = 0 (Nam) → Không kháng đông
                 3. Score = 1 (Nam) → Cân nhắc kháng đông
                 4. Score ≥ 2 → Tính HAS-BLED → Khuyến cáo kháng đông
+                
+                **📚 Dựa trên:**
+                - Lip GY, et al. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation (2009)
+                - AHA/ACC/HRS Guideline for Management of Patients with Atrial Fibrillation (2019, 2023)
+                - ESC Guidelines for Management of Atrial Fibrillation (2020, 2023)
                 """)
             elif selected_algorithm == "Sepsis-3 Protocol":
                 st.markdown("""
@@ -179,6 +193,11 @@ if selected_feature == feature_options[0]:
                 5. SOFA ≥ 2 → SEPSIS
                 6. Septic Shock? → 1-Hour Bundle
                 7. Theo dõi
+                
+                **📚 Dựa trên:**
+                - Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3) (2016)
+                - **Surviving Sepsis Campaign (SSC) Guidelines 2021** - International Guidelines for Management of Sepsis and Septic Shock
+                - IDSA/SCCM Guidelines
                 """)
             elif selected_algorithm == "Acute Stroke":
                 st.markdown("""
@@ -192,6 +211,11 @@ if selected_feature == feature_options[0]:
                 6. CT não → ICH?
                 7. Không ICH → tPA/Thrombectomy
                 8. Có ICH → Điều trị hỗ trợ
+                
+                **📚 Dựa trên:**
+                - AHA/ASA Guidelines for Early Management of Patients with Acute Ischemic Stroke (2019, 2023)
+                - AHA/ASA Guidelines for Management of Spontaneous Intracerebral Hemorrhage (2022)
+                - European Stroke Organisation (ESO) Guidelines for Management of Acute Ischemic Stroke (2021)
                 """)
             elif selected_algorithm == "AKI Diagnostic":
                 st.markdown("""
@@ -204,6 +228,11 @@ if selected_feature == feature_options[0]:
                 5. FENa > 2% → Intrinsic Renal
                 6. Check obstruction → Postrenal
                 7. Điều trị theo nguyên nhân
+                
+                **📚 Dựa trên:**
+                - **KDIGO (Kidney Disease: Improving Global Outcomes)** Clinical Practice Guideline for Acute Kidney Injury (2012, 2024)
+                - AKI Network (AKIN) Criteria
+                - RIFLE Criteria
                 """)
             elif selected_algorithm == "CURB-65":
                 st.markdown("""
@@ -214,6 +243,91 @@ if selected_feature == feature_options[0]:
                 3. Score 0 → Điều trị ngoại trú
                 4. Score 1-2 → Nhập viện
                 5. Score 3-5 → ICU
+                
+                **📚 Dựa trên:**
+                - Lim WS, et al. Defining community acquired pneumonia severity on presentation to hospital (2003)
+                - IDSA/ATS Guidelines for Community-Acquired Pneumonia (2019)
+                - BTS (British Thoracic Society) Guidelines for Management of Community Acquired Pneumonia (2009, 2015)
+                """)
+            elif selected_algorithm == "Acute Chest Pain / ACS":
+                st.markdown("""
+                **Acute Chest Pain / ACS Algorithm:**
+                
+                1. Đau ngực cấp
+                2. ECG ngay lập tức
+                3. STEMI → Cath Lab (PCI)
+                4. Không STEMI → Troponin
+                5. Troponin (+) → Monitor & Reassess
+                6. Troponin (-) → Cân nhắc xuất viện
+                
+                **📚 Dựa trên:**
+                - AHA/ACC Guidelines for Management of Patients with STEMI (2023)
+                - ESC Guidelines for Management of Acute Coronary Syndromes (2023)
+                - AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for Evaluation and Diagnosis of Chest Pain (2021)
+                """)
+            elif selected_algorithm == "Shock / Hypotension":
+                st.markdown("""
+                **Shock / Hypotension Resuscitation Algorithm:**
+                
+                1. SBP <90 hoặc MAP <65
+                2. Airway & Breathing
+                3. 2 đường IV lớn + lấy xét nghiệm
+                4. Bolus dịch 30 ml/kg Crystalloid
+                5. Đáp ứng với dịch?
+                   - Có → Theo dõi & tìm nguyên nhân
+                   - Không / Phù phổi → Bắt đầu Vasopressor (Noradrenaline)
+                6. Phân loại shock: Septic / Cardiogenic / Hypovolemic / Obstructive
+                7. ICU / Theo dõi sát (MAP, Lactate, UO)
+                
+                **📚 Dựa trên:**
+                - **Surviving Sepsis Campaign (SSC) Guidelines 2021** - International Guidelines for Management of Sepsis and Septic Shock
+                - **ACLS (Advanced Cardiac Life Support) Protocol** - AHA Guidelines
+                - **ATLS (Advanced Trauma Life Support)** - Shock Management Module
+                - **ESC/ESICM Guidelines** on Shock Management
+                - **SCCM (Society of Critical Care Medicine)** Guidelines
+                """)
+            elif selected_algorithm == "Upper GI Bleeding":
+                st.markdown("""
+                **Upper GI Bleeding Initial Management Algorithm:**
+                
+                1. Nghi ngờ XHTH trên
+                2. Resuscitation: Airway, 2 đường IV, Bolus dịch
+                3. Đánh giá huyết động & nguy cơ cao
+                4. **Nguy cơ cao:**
+                   - Truyền máu PRBC (đích Hb ≥7-8 g/dL)
+                   - Bolus + truyền PPI (Esomeprazole)
+                   - Nội soi trong 12-24h
+                5. **Nguy cơ thấp:**
+                   - PPI đơn thuần
+                   - Nội soi theo hẹn
+                6. Nhập viện/ICU hoặc điều trị ngoại trú
+                
+                **📚 Dựa trên:**
+                - **ACG (American College of Gastroenterology) Clinical Guideline: Management of Acute Upper GI Bleeding 2021**
+                - **AASLD (American Association for the Study of Liver Diseases)** Practice Guidelines on Management of Variceal Bleeding
+                - **BSG (British Society of Gastroenterology)** Guidelines for Management of Upper GI Bleeding (2021)
+                - **International Consensus Recommendations** on Management of Upper GI Bleeding
+                - **ESGE (European Society of Gastrointestinal Endoscopy)** Guidelines
+                """)
+            elif selected_algorithm == "DKA Initial Management":
+                st.markdown("""
+                **DKA Initial Management Algorithm:**
+                
+                1. Nghi ngờ DKA
+                2. Lấy xét nghiệm: Glucose, ABG/VBG, Điện giải, Ketone
+                3. Chẩn đoán DKA: Glucose >250, pH <7.3, HCO₃⁻ <18, Ketone (+)
+                4. Bolus NS 0.9% 15-20 ml/kg (1-1.5L)
+                5. Bắt đầu Insulin IV 0.1 U/kg/h
+                6. Đánh giá K⁺ và bổ sung nếu cần
+                7. Theo dõi: Glucose, K⁺, pH, Anion gap
+                8. DKA giải quyết (pH >7.3, HCO₃⁻ >18, Anion gap đóng) → Chuyển sang SC Insulin + ăn uống
+                
+                **📚 Dựa trên:**
+                - **ADA (American Diabetes Association) Standards of Medical Care in Diabetes 2024**
+                - **ISPAD (International Society for Pediatric and Adolescent Diabetes)** Clinical Practice Consensus Guidelines 2022
+                - **Joint British Diabetes Societies (JBDS)** Guidelines for Management of DKA (2021)
+                - **Endocrine Society Clinical Practice Guideline** on Diabetic Ketoacidosis and Hyperosmolar Hyperglycemic State
+                - **AACE/ACE Consensus Statement** on Type 1 Diabetes Management
                 """)
 
 elif selected_feature == feature_options[1]:
