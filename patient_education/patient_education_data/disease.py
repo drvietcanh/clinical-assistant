@@ -4261,4 +4261,565 @@ Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng th
         related_drugs=["Paracetamol", "Ibuprofen"],
         printable=True
     ),
+    
+    # === INFLUENZA ===
+    PatientEducationTopic(
+        id="influenza_basics",
+        title="Understanding Influenza",
+        title_vn="Hiểu về Cúm",
+        category="Disease",
+        content="""
+        # Hiểu về Cúm
+
+        ## Cúm là gì?
+
+        Cúm (Influenza) là bệnh nhiễm trùng đường hô hấp do virus cúm gây ra, khác với cảm lạnh thông thường. Cúm thường nặng hơn và có thể gây biến chứng.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh theo mùa (mùa đông, xuân)
+        - Lây lan nhanh, dễ thành dịch
+        - Có thể gây biến chứng nặng (viêm phổi, suy hô hấp)
+        - Có vắc xin phòng ngừa
+
+        **Phân loại:**
+        - **Cúm A:** Phổ biến, có thể gây đại dịch
+        - **Cúm B:** Ít phổ biến hơn
+        - **Cúm C:** Nhẹ, ít gặp
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Sốt:** 38-40°C, đột ngột
+        - **Ớn lạnh, run:** Kèm sốt
+        - **Đau đầu:** Đau dữ dội
+        - **Đau cơ, đau khớp:** Toàn thân
+        - **Mệt mỏi:** Uể oải, không có sức
+        - **Ho:** Ho khan hoặc có đờm
+        - **Đau họng:** Có thể có
+        - **Nghẹt mũi, chảy nước mũi:** Có thể có
+
+        **Triệu chứng khác:**
+        - Buồn nôn, nôn (thường ở trẻ em)
+        - Tiêu chảy (thường ở trẻ em)
+        - Chán ăn
+
+        **⚠️ Phân biệt với cảm lạnh:**
+        - **Cúm:** Sốt cao, đau cơ nhiều, mệt mỏi nặng, khởi phát đột ngột
+        - **Cảm lạnh:** Sốt nhẹ hoặc không sốt, ít đau cơ, mệt mỏi nhẹ, khởi phát từ từ
+
+        **Triệu chứng biến chứng:**
+        - Khó thở, thở nhanh
+        - Đau ngực
+        - Sốt cao không hạ
+        - Lú lẫn
+        - Môi tím
+
+        ## Nguyên nhân và đường lây:
+
+        **1. Nguyên nhân:**
+        - Virus cúm (Influenza virus)
+        - Thay đổi kháng nguyên → Dịch mới mỗi năm
+
+        **2. Đường lây:**
+        - **Giọt bắn:** Ho, hắt hơi, nói chuyện
+        - **Tiếp xúc:** Tay chạm vào bề mặt có virus → Chạm mắt, mũi, miệng
+        - **Không khí:** Virus có thể tồn tại trong không khí
+
+        **3. Yếu tố nguy cơ:**
+        - **Tuổi:** Trẻ < 5 tuổi, người > 65 tuổi
+        - **Bệnh mạn tính:** COPD, đái tháo đường, suy tim
+        - **Suy giảm miễn dịch:** HIV, dùng thuốc ức chế miễn dịch
+        - **Mang thai**
+        - **Béo phì**
+
+        ## Chẩn đoán:
+
+        **1. Chẩn đoán lâm sàng:**
+        - Dựa vào triệu chứng và mùa dịch
+        - Thường không cần xét nghiệm
+
+        **2. Xét nghiệm (nếu cần):**
+        - **Test nhanh:** Phết mũi, họng (kết quả trong 15 phút)
+        - **PCR:** Chính xác hơn
+        - Thường chỉ làm khi có biến chứng hoặc cần xác định
+
+        ## Điều trị:
+
+        **⚠️ QUAN TRỌNG:** Không có thuốc đặc trị! Chủ yếu điều trị triệu chứng.
+
+        **1. Điều trị tại nhà (Cúm nhẹ):**
+        - **Hạ sốt:** Paracetamol 500-1000mg mỗi 4-6 giờ
+        - **Nghỉ ngơi:** Nghỉ hoàn toàn
+        - **Uống nhiều nước:** 2-3 lít/ngày
+        - **Theo dõi:** Triệu chứng
+
+        **2. Thuốc kháng virus (Nếu cần):**
+        - **Oseltamivir (Tamiflu):** Uống trong 48 giờ đầu
+        - **Zanamivir:** Hít
+        - Chỉ dùng khi có chỉ định bác sĩ
+        - Giúp giảm triệu chứng, rút ngắn thời gian bệnh
+
+        **3. Điều trị tại viện (Nếu nặng):**
+        - Kháng virus
+        - Hỗ trợ hô hấp (nếu cần)
+        - Điều trị biến chứng
+
+        **4. Không dùng:**
+        - Kháng sinh (không hiệu quả với virus)
+        - Aspirin ở trẻ em (nguy hiểm - hội chứng Reye)
+
+        ## 🍽️ CHẾ ĐỘ ĂN KHI BỊ CÚM:
+
+        **1. Nguyên tắc:**
+        - **Ăn nhẹ, dễ tiêu:** Tránh đồ khó tiêu
+        - **Uống nhiều nước:** Quan trọng!
+        - **Đủ dinh dưỡng:** Giúp cơ thể chống lại bệnh
+        - **Chia nhỏ bữa:** 5-6 bữa/ngày (nếu chán ăn)
+
+        **2. Uống nước (QUAN TRỌNG!):**
+        - **Nước lọc:** Tốt nhất
+        - **Nước trái cây:** Cam, chanh (vitamin C)
+        - **Súp, canh:** Vừa ăn vừa uống nước
+        - **Trà gừng ấm:** Giảm ho, ấm cổ họng
+        - **Oresol:** Nếu sốt cao, mất nước
+        - **⚠️ Tránh:** Rượu bia, cà phê (làm mất nước)
+
+        **3. Thực phẩm NÊN ĂN:**
+        - **Súp, cháo:** Dễ nuốt, dễ tiêu, có nước
+          - Cháo gà (tốt cho cảm cúm!)
+          - Súp rau củ
+          - Canh nóng
+        - **Trái cây:** Cam, chanh, bưởi (vitamin C)
+        - **Rau xanh:** Luộc, hấp (vitamin, chất xơ)
+        - **Protein:** Thịt nạc, cá (luộc, hấp)
+        - **Sữa ấm:** Dễ uống, có protein
+
+        **4. Thực phẩm CẦN TRÁNH:**
+        - **Đồ chiên, nhiều dầu mỡ:** Khó tiêu
+        - **Đồ lạnh:** Làm ho nhiều hơn
+        - **Đồ cay:** Kích thích ho
+        - **Rượu bia:** Làm mất nước, giảm miễn dịch
+        - **Đồ ngọt nhiều:** Bánh kẹo (giảm miễn dịch)
+
+        **5. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo gà + nước cam
+        - **Bữa phụ (10h):** Súp rau củ, nước chanh ấm
+        - **Trưa:** Cháo thịt bằm + canh rau
+        - **Bữa phụ (15h):** Sữa ấm, trái cây
+        - **Tối:** Súp rau củ + nước trái cây
+        - **Bữa phụ (21h):** Trà gừng ấm, sữa ấm
+
+        **6. Lưu ý:**
+        - Uống nước ngay cả khi không khát
+        - Ăn chậm, nhai kỹ
+        - Nếu không ăn được → Uống sữa, nước trái cây
+
+        ## 💤 CHĂM SÓC TẠI NHÀ:
+
+        **1. Nghỉ ngơi:**
+        - Nghỉ hoàn toàn, không làm việc
+        - Ngủ đủ giấc (8-10 giờ/đêm)
+        - Tránh gắng sức
+
+        **2. Hạ sốt:**
+        - Paracetamol đúng liều
+        - Lau người bằng nước ấm
+        - Mặc quần áo thoáng
+        - **⚠️ KHÔNG dùng Aspirin ở trẻ em!**
+
+        **3. Giảm ho:**
+        - Uống nước ấm
+        - Xông hơi (nước nóng, thêm gừng)
+        - Súc miệng nước muối
+        - Kê gối cao khi ngủ
+
+        **4. Vệ sinh:**
+        - Rửa tay thường xuyên
+        - Che miệng khi ho, hắt hơi (khăn giấy, khuỷu tay)
+        - Vệ sinh răng miệng
+
+        **5. Phòng ngừa lây lan:**
+        - Ở nhà, không đi làm/đi học
+        - Đeo khẩu trang khi ra ngoài
+        - Không dùng chung đồ dùng
+        - Vệ sinh bề mặt thường xuyên
+
+        **6. Theo dõi:**
+        - Đo nhiệt độ 3-4 lần/ngày
+        - Theo dõi triệu chứng
+        - Ghi nhật ký
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Tiêm vắc xin cúm (QUAN TRỌNG NHẤT!):**
+        - **Tiêm hàng năm:** Vì virus thay đổi mỗi năm
+        - **Thời điểm:** Trước mùa cúm (tháng 9-11)
+        - **Đối tượng:**
+          - Trẻ > 6 tháng tuổi
+          - Người > 65 tuổi
+          - Người có bệnh mạn tính
+          - Phụ nữ mang thai
+          - Nhân viên y tế
+        - **Hiệu quả:** 40-60% (giảm nguy cơ mắc, giảm mức độ nặng)
+
+        **2. Vệ sinh cá nhân:**
+        - **Rửa tay:** Thường xuyên với xà phòng, ít nhất 20 giây
+        - **Che miệng:** Khi ho, hắt hơi
+        - **Không chạm:** Mắt, mũi, miệng bằng tay bẩn
+
+        **3. Tránh tiếp xúc:**
+        - Tránh người bị cúm
+        - Tránh nơi đông người khi có dịch
+        - Đeo khẩu trang khi cần
+
+        **4. Vệ sinh môi trường:**
+        - Lau sạch bề mặt (bàn, tay nắm cửa)
+        - Thông thoáng phòng ốc
+        - Dùng dung dịch khử trùng
+
+        **5. Tăng cường miễn dịch:**
+        - Ăn đủ chất
+        - Ngủ đủ giấc
+        - Tập thể dục đều đặn
+        - Quản lý stress
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng nặng:**
+        - Khó thở, thở nhanh
+        - Đau ngực
+        - Sốt cao không hạ (> 39°C)
+        - Lú lẫn
+        - Môi tím
+
+        **2. Yếu tố nguy cơ cao:**
+        - Trẻ < 5 tuổi
+        - Người > 65 tuổi
+        - Có bệnh mạn tính nặng
+        - Mang thai
+
+        **3. Biến chứng:**
+        - Viêm phổi
+        - Suy hô hấp
+        - Nhiễm trùng nặng
+
+        **4. Không cải thiện:**
+        - Sốt > 3 ngày không giảm
+        - Triệu chứng nặng hơn
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị cúm:**
+        - Nghỉ ngơi hoàn toàn
+        - Uống nhiều nước
+        - Hạ sốt đúng cách
+        - Ăn nhẹ, dễ tiêu
+        - Ở nhà, không đi làm/đi học
+
+        **2. Phòng ngừa:**
+        - Tiêm vắc xin cúm hàng năm (quan trọng nhất!)
+        - Rửa tay thường xuyên
+        - Tránh tiếp xúc người bệnh
+        - Tăng cường miễn dịch
+
+        **3. Mùa dịch:**
+        - Mùa đông, xuân là mùa cúm
+        - Cần phòng ngừa tích cực
+        - Tiêm vắc xin trước mùa dịch
+
+        **4. Không tự ý:**
+        - Dùng kháng sinh (không hiệu quả)
+        - Dùng Aspirin ở trẻ em (nguy hiểm)
+        """,
+        related_disease="influenza",
+        related_drugs=["Paracetamol", "Oseltamivir"],
+        printable=True
+    ),
+    
+    # === RHEUMATOID ARTHRITIS ===
+    PatientEducationTopic(
+        id="rheumatoid_arthritis_basics",
+        title="Understanding Rheumatoid Arthritis",
+        title_vn="Hiểu về Viêm khớp dạng thấp",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm khớp dạng thấp
+
+        ## Viêm khớp dạng thấp là gì?
+
+        Viêm khớp dạng thấp (Rheumatoid Arthritis - RA) là bệnh tự miễn mạn tính, gây viêm khớp đối xứng, dẫn đến đau, sưng, cứng khớp và có thể gây biến dạng khớp.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh tự miễn (hệ miễn dịch tấn công khớp)
+        - Mạn tính, tiến triển
+        - Ảnh hưởng nhiều khớp (đối xứng)
+        - Có thể ảnh hưởng các cơ quan khác
+        - Nữ mắc nhiều hơn nam (2-3 lần)
+
+        **Phân biệt với thoái hóa khớp:**
+        - **RA:** Viêm, đau cả khi nghỉ, cứng khớp buổi sáng > 1 giờ, đối xứng
+        - **Thoái hóa khớp:** Không viêm, đau khi vận động, cứng khớp < 30 phút, không đối xứng
+
+        ## Triệu chứng:
+
+        **Triệu chứng khớp:**
+        - **Đau khớp:** Đau cả khi nghỉ, đau nhiều về đêm, sáng sớm
+        - **Sưng khớp:** Sưng, nóng, đỏ
+        - **Cứng khớp buổi sáng:** > 1 giờ (đặc trưng!)
+        - **Vị trí:** Thường khớp nhỏ (bàn tay, bàn chân), đối xứng
+        - **Biến dạng khớp:** Khi bệnh nặng, lâu ngày
+
+        **Triệu chứng toàn thân:**
+        - **Mệt mỏi:** Uể oải, không có sức
+        - **Sốt nhẹ:** Có thể có
+        - **Sụt cân:** Không rõ nguyên nhân
+        - **Chán ăn**
+
+        **Triệu chứng ngoài khớp:**
+        - **Nốt thấp khớp:** Dưới da (khuỷu tay, gót chân)
+        - **Viêm mạch máu:** Có thể có
+        - **Viêm màng phổi, màng tim:** (Hiếm)
+        - **Tổn thương mắt:** (Hiếm)
+
+        **⚠️ Phân độ:**
+        - **Độ 1:** Đau, sưng nhẹ
+        - **Độ 2:** Đau, sưng vừa, hạn chế vận động
+        - **Độ 3:** Đau, sưng nặng, biến dạng khớp
+        - **Độ 4:** Mất chức năng khớp, dính khớp
+
+        ## Nguyên nhân:
+
+        **1. Nguyên nhân:**
+        - **Tự miễn:** Hệ miễn dịch tấn công khớp
+        - **Nguyên nhân chưa rõ:** Có thể do gen + môi trường
+
+        **2. Yếu tố nguy cơ:**
+        - **Giới tính:** Nữ (2-3 lần nam)
+        - **Tuổi:** 40-60 tuổi
+        - **Di truyền:** Có người thân bị RA
+        - **Hút thuốc lá:** Tăng nguy cơ
+        - **Béo phì:** Tăng nguy cơ
+        - **Nhiễm trùng:** Một số virus, vi khuẩn có thể kích hoạt
+
+        ## Chẩn đoán:
+
+        **1. Khám lâm sàng:**
+        - Đánh giá khớp: Đau, sưng, cứng
+        - Số khớp bị ảnh hưởng
+        - Đối xứng
+
+        **2. Xét nghiệm:**
+        - **RF (Rheumatoid Factor):** Dương tính (70-80%)
+        - **Anti-CCP:** Chính xác hơn RF
+        - **CRP, ESR:** Tăng (dấu hiệu viêm)
+        - **Công thức máu:** Thiếu máu (có thể)
+
+        **3. X-quang:**
+        - Tổn thương khớp
+        - Mòn xương, hẹp khe khớp
+
+        ## Điều trị:
+
+        **⚠️ QUAN TRỌNG:** Điều trị sớm → Giảm tổn thương khớp, biến chứng!
+
+        **1. Thuốc giảm đau, chống viêm:**
+        - **NSAID:** Ibuprofen, Naproxen, Diclofenac
+          - Giảm đau, viêm nhanh
+          - Dùng khi có triệu chứng
+        - **Corticosteroid:** Prednisone
+          - Giảm viêm mạnh
+          - Dùng ngắn hạn, liều thấp
+
+        **2. DMARDs (Disease-Modifying Antirheumatic Drugs):**
+        - **Methotrexate:** Thuốc đầu tay
+        - **Sulfasalazine, Hydroxychloroquine**
+        - **Leflunomide**
+        - **⚠️ QUAN TRỌNG:** Uống lâu dài, giúp làm chậm tiến triển bệnh
+
+        **3. Thuốc sinh học:**
+        - **TNF-alpha inhibitors:** Etanercept, Adalimumab
+        - **Rituximab, Tocilizumab**
+        - Dùng khi DMARDs không hiệu quả
+        - Đắt, cần theo dõi sát
+
+        **4. Phục hồi chức năng:**
+        - Vật lý trị liệu
+        - Hoạt động trị liệu
+        - Tập thể dục
+
+        **5. Phẫu thuật:**
+        - Thay khớp (nếu tổn thương nặng)
+        - Hiếm, chỉ khi cần
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI VIÊM KHỚP DẠNG THẤP:
+
+        **1. Nguyên tắc:**
+        - **Chống viêm:** Thực phẩm chống viêm
+        - **Đủ dinh dưỡng:** Giúp cơ thể chống lại bệnh
+        - **Giảm cân:** Nếu thừa cân (giảm áp lực khớp)
+        - **Tránh thực phẩm gây viêm**
+
+        **2. Thực phẩm NÊN ĂN (Chống viêm):**
+        - **Cá béo:** Cá hồi, cá thu, cá trích (omega-3, 2-3 lần/tuần)
+          - Giúp giảm viêm
+        - **Rau xanh:** Nhiều (rau cải, rau muống, bông cải)
+          - Chất chống oxy hóa, chống viêm
+        - **Trái cây:** Tất cả (đặc biệt quả mọng, cam, bưởi)
+          - Vitamin C, chất chống oxy hóa
+        - **Ngũ cốc nguyên hạt:** Gạo lứt, yến mạch, bánh mì đen
+        - **Đậu, đậu phụ:** Protein thực vật
+        - **Dầu ô liu:** Chất béo tốt, chống viêm
+        - **Các loại hạt:** Hạnh nhân, óc chó (nếu có)
+        - **Gia vị:** Nghệ, gừng (chống viêm)
+
+        **3. Thực phẩm CẦN TRÁNH (Gây viêm):**
+        - **Thịt đỏ nhiều:** Thịt bò, thịt heo (ăn ít)
+        - **Thực phẩm chế biến sẵn:** Đồ hộp, thức ăn nhanh
+        - **Đồ chiên, nhiều dầu mỡ:** Chất béo bão hòa
+        - **Đường nhiều:** Bánh kẹo, nước ngọt
+        - **Rượu bia:** Làm tăng viêm
+        - **Gluten:** Một số người nhạy cảm (thử kiêng xem có cải thiện không)
+
+        **4. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo yến mạch + sữa ít béo + trái cây
+        - **Trưa:** 1 chén cơm gạo lứt + cá hồi hấp + rau luộc + canh rau
+        - **Tối:** 1 chén cơm gạo lứt + đậu phụ xào + rau xào (dầu ô liu) + canh
+        - **Bữa phụ:** Trái cây, các loại hạt, sữa chua
+
+        **5. Lưu ý:**
+        - Ăn đủ chất, không kiêng khem quá mức
+        - Thử loại bỏ một số thực phẩm xem có cải thiện không (mỗi người khác nhau)
+        - Ghi nhật ký ăn uống và triệu chứng
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **⚠️ QUAN TRỌNG:** Tập thể dục giúp duy trì chức năng khớp, giảm cứng khớp!
+
+        **1. Khi đang viêm (đau, sưng):**
+        - **Nghỉ ngơi:** Không tập thể dục
+        - **Vận động nhẹ:** Cử động khớp nhẹ nhàng (tránh cứng khớp)
+        - **Chườm lạnh:** Giảm sưng, đau
+
+        **2. Khi không viêm (ổn định):**
+        - **Tập thể dục nhẹ nhàng:** Đi bộ, bơi, đạp xe
+        - **Tập linh hoạt:** Duỗi, gập khớp
+        - **Tập sức mạnh:** Nhẹ, với dây kháng lực
+        - **Yoga, thái cực quyền:** Tốt cho khớp
+
+        **3. Thời gian và tần suất:**
+        - **30 phút/ngày:** Ít nhất 5 ngày/tuần
+        - **Chia nhỏ:** 3 lần x 10 phút/ngày (nếu cần)
+        - **Cường độ:** Vừa phải, không gắng sức
+
+        **4. Lưu ý:**
+        - Khởi động trước tập
+        - Nghỉ khi đau
+        - Dừng ngay nếu: Đau tăng, sưng tăng
+        - Tập đều đặn, không bỏ
+
+        **5. Lợi ích:**
+        - Duy trì chức năng khớp
+        - Giảm cứng khớp
+        - Tăng sức mạnh cơ
+        - Giảm đau
+        - Cải thiện tâm trạng
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **⚠️ QUAN TRỌNG:** Uống thuốc đúng giờ, đủ liều, không tự ý ngừng!
+
+        **1. NSAID:**
+        - **Khi nào dùng:** Khi có đau, viêm
+        - **Uống sau ăn:** Tránh đau dạ dày
+        - **Không dùng lâu dài:** Tăng nguy cơ đau dạ dày, thận
+
+        **2. DMARDs (Methotrexate):**
+        - **Uống hàng ngày/tuần:** Theo chỉ định
+        - **Uống lâu dài:** Để làm chậm tiến triển
+        - **Không tự ý ngừng:** Ngừng → Bệnh nặng hơn
+        - **Tác dụng phụ:** Buồn nôn, rụng tóc, tổn thương gan (theo dõi định kỳ)
+        - **Folic acid:** Uống kèm để giảm tác dụng phụ
+
+        **3. Corticosteroid:**
+        - **Dùng ngắn hạn:** Liều thấp
+        - **Không tự ý ngừng:** Phải giảm liều từ từ
+        - **Tác dụng phụ:** Tăng cân, loãng xương, tăng đường huyết
+
+        **4. Tác dụng phụ:**
+        - Báo bác sĩ nếu: Tác dụng phụ nghiêm trọng
+        - Khám định kỳ: Xét nghiệm máu, chức năng gan, thận
+
+        ## 🛡️ PHÒNG NGỪA VÀ QUẢN LÝ:
+
+        **1. Điều trị sớm:**
+        - Phát hiện sớm → Điều trị sớm → Giảm tổn thương khớp
+        - "Window of opportunity": 3-6 tháng đầu
+
+        **2. Tuân thủ điều trị:**
+        - Uống thuốc đúng giờ, đủ liều
+        - Không tự ý ngừng
+        - Tái khám định kỳ
+
+        **3. Lối sống:**
+        - Bỏ thuốc lá (quan trọng!)
+        - Giảm cân nếu thừa cân
+        - Tập thể dục đều đặn
+        - Quản lý stress
+
+        **4. Bảo vệ khớp:**
+        - Tránh gắng sức quá mức
+        - Dùng dụng cụ hỗ trợ nếu cần
+        - Nghỉ giữa các hoạt động
+
+        **5. Khám định kỳ:**
+        - Mỗi 1-3 tháng: Đánh giá điều trị
+        - Xét nghiệm máu: Chức năng gan, thận
+        - X-quang: Đánh giá tổn thương khớp
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Đợt cấp:**
+        - Đau, sưng khớp nặng
+        - Sốt cao
+        - Không đáp ứng với thuốc
+
+        **2. Biến chứng:**
+        - Nhiễm trùng (do thuốc ức chế miễn dịch)
+        - Tổn thương nội tạng
+
+        **3. Tác dụng phụ thuốc:**
+        - Nghiêm trọng, không chịu được
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi mới chẩn đoán:**
+        - Đừng lo lắng quá mức
+        - RA có thể kiểm soát được
+        - Điều trị sớm → Kết quả tốt
+
+        **2. Tuân thủ điều trị:**
+        - Uống thuốc đúng giờ, đủ liều
+        - Không tự ý ngừng
+        - Tái khám định kỳ
+
+        **3. Lối sống:**
+        - Tập thể dục đều đặn
+        - Chế độ ăn chống viêm
+        - Bỏ thuốc lá
+        - Quản lý stress
+
+        **4. Hỗ trợ:**
+        - Nói với gia đình về bệnh
+        - Tham gia nhóm hỗ trợ (nếu có)
+        - Tâm lý trị liệu nếu cần
+
+        **5. Sống tích cực:**
+        - RA có thể kiểm soát được
+        - Tuân thủ điều trị → Sống bình thường
+        - Đừng để bệnh ảnh hưởng cuộc sống
+        """,
+        related_disease="rheumatoid_arthritis",
+        related_drugs=["Methotrexate", "Ibuprofen", "Prednisone"],
+        printable=True
+    ),
 ]
