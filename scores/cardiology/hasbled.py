@@ -16,6 +16,16 @@ from components.smart_suggestions import render_suggestions
 from components.risk_color_coding import render_risk_badge, get_risk_level
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ===================================================
 
 
@@ -77,6 +87,61 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # Educational information - Enhanced with Phase 1
+        if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+            st.markdown("---")
+            render_calculator_explanation(
+                title="Về HAS-BLED Score",
+                content="""
+                **HAS-BLED Score** đánh giá nguy cơ chảy máu ở bệnh nhân dùng kháng đông:
+                
+                - Sử dụng để cân nhắc lợi ích/nguy cơ khi quyết định kháng đông
+                - Kết hợp với CHA₂DS₂-VASc để đánh giá toàn diện
+                - HAS-BLED ≥3: Nguy cơ chảy máu cao
+                
+                **9 yếu tố nguy cơ:**
+                - H: Tăng huyết áp không kiểm soát
+                - A: Chức năng thận/gan bất thường
+                - S: Tiền sử đột quỵ
+                - B: Tiền sử chảy máu
+                - L: INR không ổn định
+                - E: Tuổi cao (>65)
+                - D: Thuốc chống tiểu cầu/NSAID
+                - (Alcohol: Lạm dụng rượu)
+                
+                **Tổng điểm: 0-9**
+                """,
+                when_to_use="""
+                **Sử dụng HAS-BLED Score khi:**
+                - Bệnh nhân cần đánh giá trước khi dùng kháng đông
+                - Cân nhắc lợi ích/nguy cơ của kháng đông
+                - Kết hợp với CHA₂DS₂-VASc để quyết định điều trị
+                - Theo dõi nguy cơ chảy máu trong quá trình điều trị
+                """,
+                limitations="""
+                **Hạn chế:**
+                - Không phải là chống chỉ định tuyệt đối
+                - HAS-BLED cao không có nghĩa là không được dùng kháng đông
+                - Cần cân nhắc với nguy cơ đột quỵ (CHA₂DS₂-VASc)
+                - Một số yếu tố có thể điều chỉnh được (HTN, INR, thuốc)
+                """,
+                clinical_context="""
+                **Bối cảnh lâm sàng:**
+                - HAS-BLED ≥3: Nguy cơ chảy máu cao, cần theo dõi sát
+                - Nếu CHA₂DS₂-VASc ≥2 (cần kháng đông) nhưng HAS-BLED ≥3:
+                  → Cân nhắc điều chỉnh các yếu tố nguy cơ trước
+                  → Theo dõi sát hơn trong quá trình điều trị
+                - HAS-BLED không phải là lý do để không dùng kháng đông nếu cần thiết
+                """
+            )
+            
+            # Evidence citation
+            render_evidence_citation(
+                citation_text="Pisters R, et al. A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: the Euro Heart Survey. Chest. 2010;138(5):1093-100.",
+                doi="10.1378/chest.10-0134",
+                pmid="20299623"
+            )
         
         if st.button("🧮 Tính Điểm HAS-BLED", type="primary", key="hasbled_calc", use_container_width=True):
             score = 0

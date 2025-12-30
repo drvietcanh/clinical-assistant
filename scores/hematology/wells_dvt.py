@@ -210,23 +210,69 @@ def render():
     st.title("🩸 Wells Score - Deep Vein Thrombosis (DVT)")
     st.markdown("**Đánh giá xác suất tiền test của huyết khối tĩnh mạch sâu**")
     
-    # Educational information
-    with st.expander("ℹ️ Thông tin & cách sử dụng"):
-        st.markdown("""
-        ### 📋 Giới Thiệu
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về Wells DVT Score",
+            content="""
+            **Wells DVT Score** là thang điểm lâm sàng được sử dụng rộng rãi để:
+            
+            - Đánh giá xác suất tiền test của DVT
+            - Hướng dẫn chiến lược xét nghiệm (D-dimer vs siêu âm)
+            - Giảm thiểu các xét nghiệm không cần thiết
+            
+            **9 tiêu chí lâm sàng:**
+            - 8 tiêu chí dương tính (+1 điểm mỗi tiêu chí)
+            - 1 tiêu chí âm tính: Chẩn đoán thay thế có khả năng cao hơn (-2 điểm)
+            
+            **Tổng điểm: -2 đến +8**
+            """,
+            when_to_use="""
+            **Sử dụng Wells DVT Score khi:**
+            - Bệnh nhân có triệu chứng nghi ngờ DVT (đau chân, phù, đỏ)
+            - Cần quyết định chiến lược xét nghiệm
+            - Giảm thiểu xét nghiệm không cần thiết
+            - Kết hợp với D-dimer để tối ưu hóa chẩn đoán
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Cần đánh giá lâm sàng chính xác
+            - Không thay thế xét nghiệm chẩn đoán
+            - Cần kết hợp với D-dimer hoặc siêu âm
+            - Độ nhạy và độ đặc hiệu phụ thuộc vào kinh nghiệm người đánh giá
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - Wells Score ≥2: DVT likely → Siêu âm ngay (bỏ qua D-dimer)
+            - Wells Score <2: DVT unlikely → D-dimer trước, nếu dương tính mới siêu âm
+            - Kết hợp Wells Score + D-dimer giúp giảm 30-50% số lượng siêu âm không cần thiết
+            """
+        )
         
-        **Wells DVT Score** là thang điểm lâm sàng được sử dụng rộng rãi để:
-        - Đánh giá xác suất tiền test của DVT
-        - Hướng dẫn chiến lược xét nghiệm (D-dimer vs siêu âm)
-        - Giảm thiểu các xét nghiệm không cần thiết
-        
-        ### 🎯 Cách Sử dụng
-        
-        1. **Thời Điểm:** Khi bệnh nhân có triệu chứng nghi ngờ DVT (đau chân, phù, đỏ)
-        2. **Đánh giá:** Trả lời 9 câu hỏi lâm sàng
-        3. **Kết quả:**
-           - **≥2 điểm:** DVT likely → Siêu âm ngay
-           - **<2 điểm:** DVT unlikely → D-dimer trước
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Wells PS, et al. Value of assessment of pretest probability of deep-vein thrombosis in clinical management. Lancet. 1997;350(9094):1795-1798.",
+            doi="10.1016/s0140-6736(97)08140-3",
+            pmid="9428249"
+        )
+    else:
+        # Fallback to original expander
+        with st.expander("ℹ️ Thông tin & cách sử dụng"):
+            st.markdown("""
+            ### 📋 Giới Thiệu
+            
+            **Wells DVT Score** là thang điểm lâm sàng được sử dụng rộng rãi để:
+            - Đánh giá xác suất tiền test của DVT
+            - Hướng dẫn chiến lược xét nghiệm (D-dimer vs siêu âm)
+            - Giảm thiểu các xét nghiệm không cần thiết
+            
+            ### 🎯 Cách Sử dụng
+            
+            1. **Thời Điểm:** Khi bệnh nhân có triệu chứng nghi ngờ DVT (đau chân, phù, đỏ)
+            2. **Đánh giá:** Trả lời 9 câu hỏi lâm sàng
+            3. **Kết quả:**
+               - **≥2 điểm:** DVT likely → Siêu âm ngay
+               - **<2 điểm:** DVT unlikely → D-dimer trước
         
         ### 📊 Độ chính xác        
         | Điểm Wells | Tỷ lệ DVT | Chiến Lược |

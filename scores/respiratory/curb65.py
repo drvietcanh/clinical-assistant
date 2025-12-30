@@ -17,6 +17,16 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ======================================
 
 
@@ -135,6 +145,57 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # Educational information - Enhanced with Phase 1
+        if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+            st.markdown("---")
+            render_calculator_explanation(
+                title="Về CURB-65 Score",
+                content="""
+                **CURB-65 Score** đánh giá mức độ nặng của viêm phổi cộng đồng (CAP):
+                
+                - Giúp quyết định nơi điều trị (ngoại trú, nhập viện, ICU)
+                - Dự đoán tử vong 30 ngày
+                - Sử dụng rộng rãi trong thực hành lâm sàng
+                
+                **5 tiêu chí:**
+                - **C:** Confusion** (Lú lẫn) - AMT ≤8
+                - **U:** Urea >7 mmol/L (hoặc >19 mg/dL)
+                - **R:** Respiratory rate ≥30/min
+                - **B:** Blood pressure <90/60 mmHg
+                - **65:** Age ≥65
+                
+                **Tổng điểm: 0-5**
+                """,
+                when_to_use="""
+                **Sử dụng CURB-65 Score khi:**
+                - Bệnh nhân có chẩn đoán viêm phổi cộng đồng
+                - Cần quyết định nơi điều trị (ngoại trú vs nhập viện vs ICU)
+                - Đánh giá mức độ nặng và tiên lượng
+                - Hướng dẫn điều trị kháng sinh
+                """,
+                limitations="""
+                **Hạn chế:**
+                - Không áp dụng cho viêm phổi bệnh viện (HAP/VAP)
+                - Cần có đầy đủ thông tin lâm sàng và xét nghiệm
+                - Không thay thế đánh giá lâm sàng
+                - Một số yếu tố có thể không có sẵn (urea)
+                """,
+                clinical_context="""
+                **Bối cảnh lâm sàng:**
+                - **0-1 điểm:** Ngoại trú, kháng sinh uống
+                - **2 điểm:** Nhập viện, kháng sinh IV
+                - **3-5 điểm:** Nhập viện hoặc ICU, kháng sinh IV, theo dõi sát
+                - CURB-65 ≥3: Nguy cơ tử vong cao (>15%), cần điều trị tích cực
+                """
+            )
+            
+            # Evidence citation
+            render_evidence_citation(
+                citation_text="Lim WS, et al. Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study. Thorax. 2003;58(5):377-82.",
+                doi="10.1136/thorax.58.5.377",
+                pmid="12728155"
+            )
         
         if st.button("🧮 Tính CURB-65", type="primary", use_container_width=True):
             # Validate inputs

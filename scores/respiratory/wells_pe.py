@@ -13,6 +13,17 @@ from components.smart_suggestions import render_suggestions
 # ======================================
 from scores.utils.validation import validate_heart_rate
 from components.ui.scoring import render_score_result, render_score_breakdown
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
+# ===================================================
 
 
 def render():
@@ -28,12 +39,59 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.info("""
-    **Wells PE Score** đánh giá xác suất tiền test của tắc mạch phổi (PE).
-    
-    - Sử dụng kết hợp với D-dimer để quyết định chụp CTPA
-    - Validated rộng rãi trong thực hành lâm sàng
-    """)
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về Wells PE Score",
+            content="""
+            **Wells PE Score** đánh giá xác suất tiền test của tắc mạch phổi (PE):
+            
+            - Sử dụng kết hợp với D-dimer để quyết định chụp CTPA
+            - Validated rộng rãi trong thực hành lâm sàng
+            - Giúp giảm thiểu chụp CTPA không cần thiết
+            
+            **7 tiêu chí lâm sàng:**
+            - 6 tiêu chí dương tính (+1 đến +3 điểm)
+            - 1 tiêu chí âm tính: Chẩn đoán thay thế có khả năng cao hơn (-3 điểm)
+            
+            **Tổng điểm: -3 đến +12.5**
+            """,
+            when_to_use="""
+            **Sử dụng Wells PE Score khi:**
+            - Bệnh nhân có triệu chứng nghi ngờ PE (khó thở, đau ngực, ho ra máu)
+            - Cần quyết định chiến lược xét nghiệm
+            - Giảm thiểu chụp CTPA không cần thiết
+            - Kết hợp với D-dimer để tối ưu hóa chẩn đoán
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Cần đánh giá lâm sàng chính xác
+            - Không thay thế xét nghiệm chẩn đoán
+            - Cần kết hợp với D-dimer hoặc CTPA
+            - Độ nhạy và độ đặc hiệu phụ thuộc vào kinh nghiệm người đánh giá
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - Wells Score >4: PE likely → CTPA ngay (hoặc D-dimer nếu không có CTPA)
+            - Wells Score ≤4: PE unlikely → D-dimer trước, nếu dương tính mới CTPA
+            - Kết hợp Wells Score + D-dimer giúp giảm 20-30% số lượng CTPA không cần thiết
+            """
+        )
+        
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Wells PS, et al. Derivation of a simple clinical model to categorize patients probability of pulmonary embolism: increasing the models utility with the SimpliRED D-dimer. Thromb Haemost. 2000;83(3):416-20.",
+            doi="10.1055/s-0037-1613830",
+            pmid="10744147"
+        )
+    else:
+        # Fallback to original
+        st.info("""
+        **Wells PE Score** đánh giá xác suất tiền test của tắc mạch phổi (PE).
+        
+        - Sử dụng kết hợp với D-dimer để quyết định chụp CTPA
+        - Validated rộng rãi trong thực hành lâm sàng
+        """)
     
     col1, col2 = st.columns([2, 1])
     
