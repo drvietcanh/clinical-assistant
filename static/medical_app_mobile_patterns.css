@@ -1,0 +1,556 @@
+/* ============================================
+   MEDICAL APP MOBILE PATTERNS
+   Dựa trên nghiên cứu các app y học nổi tiếng:
+   - UpToDate: Clean, professional, clear hierarchy
+   - Medscape: Quick access, sticky navigation
+   - Epocrates: Compact, information-dense
+   - WebMD: User-friendly, accessible
+   - Mayo Clinic: Trustworthy, clear typography
+   ============================================ */
+
+/* ========== BOTTOM NAVIGATION BAR (Medscape/Epocrates pattern) ========== */
+@media (max-width: 768px) {
+    /* Bottom navigation bar for quick access */
+    .medical-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        border-top: 1px solid var(--border);
+        padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+        z-index: 1000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .medical-bottom-nav-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 4px;
+        text-decoration: none;
+        color: var(--text-secondary);
+        font-size: 0.75rem;
+        min-height: 56px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .medical-bottom-nav-item.active {
+        color: var(--primary);
+    }
+    
+    .medical-bottom-nav-item-icon {
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+    }
+    
+    /* Add padding to main content to account for bottom nav */
+    .main .block-container {
+        padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important;
+    }
+}
+
+/* ========== STICKY SEARCH BAR (UpToDate/Medscape pattern) ========== */
+@media (max-width: 768px) {
+    .medical-sticky-search {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--card-bg);
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .medical-sticky-search input {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        font-size: 16px;
+        background: var(--background);
+    }
+}
+
+/* ========== QUICK ACTION CHIPS (Epocrates pattern) ========== */
+@media (max-width: 768px) {
+    .medical-quick-chips {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 12px 16px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    
+    .medical-quick-chips::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .medical-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        touch-action: manipulation;
+        min-height: 36px;
+    }
+    
+    .medical-chip.active {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+    }
+}
+
+/* ========== CARD LAYOUTS (UpToDate/Mayo Clinic pattern) ========== */
+@media (max-width: 768px) {
+    .medical-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--border);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .medical-card:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+    
+    .medical-card-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+    
+    .medical-card-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.4;
+        flex: 1;
+    }
+    
+    .medical-card-icon {
+        font-size: 1.5rem;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+    
+    .medical-card-meta {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-top: 8px;
+    }
+    
+    .medical-card-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-left: 8px;
+    }
+    
+    .medical-card-badge.primary {
+        background: rgba(45, 125, 246, 0.1);
+        color: var(--primary);
+    }
+    
+    .medical-card-badge.success {
+        background: rgba(23, 165, 107, 0.1);
+        color: var(--success);
+    }
+}
+
+/* ========== EXPANDABLE SECTIONS (UpToDate pattern) ========== */
+@media (max-width: 768px) {
+    .medical-expandable {
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .medical-expandable-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        cursor: pointer;
+        touch-action: manipulation;
+        min-height: 56px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    .medical-expandable-header:active {
+        background: var(--background);
+    }
+    
+    .medical-expandable-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        flex: 1;
+    }
+    
+    .medical-expandable-icon {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        transition: transform 0.2s ease;
+    }
+    
+    .medical-expandable.expanded .medical-expandable-icon {
+        transform: rotate(180deg);
+    }
+    
+    .medical-expandable-content {
+        padding: 0 16px 16px 16px;
+        display: none;
+    }
+    
+    .medical-expandable.expanded .medical-expandable-content {
+        display: block;
+    }
+}
+
+/* ========== INFORMATION DENSITY (Epocrates pattern) ========== */
+@media (max-width: 768px) {
+    .medical-info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .medical-info-row:last-child {
+        border-bottom: none;
+    }
+    
+    .medical-info-label {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+        flex: 0 0 40%;
+    }
+    
+    .medical-info-value {
+        font-size: 0.95rem;
+        color: var(--text-primary);
+        flex: 1;
+        text-align: right;
+        font-weight: 500;
+    }
+}
+
+/* ========== QUICK ACTIONS (Medscape pattern) ========== */
+@media (max-width: 768px) {
+    .medical-quick-actions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 16px;
+    }
+    
+    .medical-quick-action {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 16px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        touch-action: manipulation;
+        min-height: 100px;
+    }
+    
+    .medical-quick-action:active {
+        background: var(--background);
+        transform: scale(0.97);
+    }
+    
+    .medical-quick-action-icon {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+    
+    .medical-quick-action-label {
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+/* ========== TABLES - CARD VIEW (Mobile-friendly) ========== */
+@media (max-width: 768px) {
+    .medical-table-card-view {
+        display: block;
+    }
+    
+    .medical-table-card-view table {
+        display: none;
+    }
+    
+    .medical-table-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 12px;
+        border: 1px solid var(--border);
+    }
+    
+    .medical-table-card-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .medical-table-card-row:last-child {
+        border-bottom: none;
+    }
+}
+
+/* ========== FLOATING ACTION BUTTON (Material Design pattern) ========== */
+@media (max-width: 768px) {
+    .medical-fab {
+        position: fixed;
+        bottom: calc(80px + env(safe-area-inset-bottom));
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--primary);
+        color: white;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 999;
+        touch-action: manipulation;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .medical-fab:active {
+        transform: scale(0.9);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* ========== BREADCRUMBS - Compact (UpToDate pattern) ========== */
+@media (max-width: 768px) {
+    .medical-breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    
+    .medical-breadcrumb::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .medical-breadcrumb-item {
+        white-space: nowrap;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    
+    .medical-breadcrumb-item.active {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+    
+    .medical-breadcrumb-separator {
+        color: var(--text-secondary);
+        margin: 0 4px;
+    }
+}
+
+/* ========== STATUS INDICATORS (Epocrates pattern) ========== */
+@media (max-width: 768px) {
+    .medical-status-indicator {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .medical-status-indicator.dot::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .medical-status-indicator.success {
+        background: rgba(23, 165, 107, 0.1);
+        color: var(--success);
+    }
+    
+    .medical-status-indicator.success.dot::before {
+        background: var(--success);
+    }
+    
+    .medical-status-indicator.warning {
+        background: rgba(245, 165, 36, 0.1);
+        color: var(--warning);
+    }
+    
+    .medical-status-indicator.warning.dot::before {
+        background: var(--warning);
+    }
+    
+    .medical-status-indicator.error {
+        background: rgba(231, 76, 60, 0.1);
+        color: var(--error);
+    }
+    
+    .medical-status-indicator.error.dot::before {
+        background: var(--error);
+    }
+}
+
+/* ========== LOADING STATES (Skeleton screens) ========== */
+@media (max-width: 768px) {
+    .medical-skeleton {
+        background: linear-gradient(
+            90deg,
+            var(--border) 0%,
+            rgba(255, 255, 255, 0.5) 50%,
+            var(--border) 100%
+        );
+        background-size: 200% 100%;
+        animation: medical-skeleton-loading 1.5s infinite;
+        border-radius: 8px;
+    }
+    
+    @keyframes medical-skeleton-loading {
+        0% {
+            background-position: 200% 0;
+        }
+        100% {
+            background-position: -200% 0;
+        }
+    }
+    
+    .medical-skeleton-card {
+        height: 120px;
+        margin-bottom: 12px;
+    }
+    
+    .medical-skeleton-text {
+        height: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .medical-skeleton-text.short {
+        width: 60%;
+    }
+}
+
+/* ========== EMPTY STATES (User-friendly) ========== */
+@media (max-width: 768px) {
+    .medical-empty-state {
+        text-align: center;
+        padding: 48px 24px;
+    }
+    
+    .medical-empty-state-icon {
+        font-size: 4rem;
+        margin-bottom: 16px;
+        opacity: 0.5;
+    }
+    
+    .medical-empty-state-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 8px;
+    }
+    
+    .medical-empty-state-description {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+    }
+}
+
+/* ========== PULL TO REFRESH INDICATOR ========== */
+@media (max-width: 768px) {
+    .medical-pull-refresh {
+        text-align: center;
+        padding: 16px;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+}
+
+/* ========== SAFE AREA SUPPORT (Notch/Home indicator) ========== */
+@media (max-width: 768px) {
+    /* Support for devices with notches */
+    .medical-safe-top {
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .medical-safe-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    .medical-safe-left {
+        padding-left: env(safe-area-inset-left);
+    }
+    
+    .medical-safe-right {
+        padding-right: env(safe-area-inset-right);
+    }
+}
+
+/* ========== ACCESSIBILITY IMPROVEMENTS ========== */
+@media (max-width: 768px) {
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+        .medical-card {
+            border-width: 2px;
+        }
+        
+        button, .stButton > button {
+            border: 2px solid currentColor;
+        }
+    }
+    
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+

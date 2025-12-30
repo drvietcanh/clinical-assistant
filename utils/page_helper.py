@@ -239,18 +239,28 @@ def inject_mobile_optimizations_css():
     """
     Inject comprehensive mobile optimizations CSS.
     Ensures optimal display and UX on mobile devices.
+    Includes patterns from medical apps: UpToDate, Medscape, Epocrates, WebMD, Mayo Clinic.
     """
     # Avoid injecting multiple times in the same session
     if st.session_state.get("_mobile_css_injected"):
         return
     
     try:
+        # Load base mobile optimizations
         css_file = Path(__file__).parent.parent / "static" / "mobile_optimizations.css"
         if css_file.exists():
             with open(css_file, "r", encoding="utf-8") as f:
                 mobile_css = f.read()
                 st.markdown(f"<style>{mobile_css}</style>", unsafe_allow_html=True)
-                st.session_state["_mobile_css_injected"] = True
+        
+        # Load medical app patterns
+        patterns_file = Path(__file__).parent.parent / "static" / "medical_app_mobile_patterns.css"
+        if patterns_file.exists():
+            with open(patterns_file, "r", encoding="utf-8") as f:
+                patterns_css = f.read()
+                st.markdown(f"<style>{patterns_css}</style>", unsafe_allow_html=True)
+        
+        st.session_state["_mobile_css_injected"] = True
     except Exception as e:
         # Silently fail if CSS file not found
         pass
