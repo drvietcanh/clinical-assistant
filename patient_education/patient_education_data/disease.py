@@ -5567,4 +5567,485 @@ Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng th
         related_drugs=["Amoxicillin", "Budesonide", "Xylometazoline"],
         printable=True
     ),
+    
+    # === BRONCHITIS ===
+    PatientEducationTopic(
+        id="bronchitis_basics",
+        title="Understanding Bronchitis",
+        title_vn="Hiểu về Viêm phế quản",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm phế quản
+
+        ## Viêm phế quản là gì?
+
+        Viêm phế quản là tình trạng viêm đường thở (phế quản), gây ho, khạc đờm. Có thể cấp tính (ngắn hạn) hoặc mạn tính (dài hạn).
+
+        **⚠️ Đặc điểm:**
+        - Rất phổ biến, đặc biệt mùa lạnh
+        - Viêm phế quản cấp thường tự khỏi
+        - Viêm phế quản mạn cần điều trị lâu dài
+
+        **Phân loại:**
+        - **Viêm phế quản cấp:** < 3 tuần, thường do nhiễm trùng
+        - **Viêm phế quản mạn:** Ho, khạc đờm > 3 tháng/năm, > 2 năm liên tiếp
+
+        ## Triệu chứng:
+
+        **Viêm phế quản cấp:**
+        - **Ho:** Ho khan hoặc có đờm
+        - **Khạc đờm:** Đờm trong, vàng, xanh
+        - **Sốt:** Có thể có (nếu nhiễm trùng)
+        - **Mệt mỏi:** Uể oải
+        - **Đau ngực:** Khi ho nhiều
+        - **Nghẹt mũi, chảy nước mũi:** Có thể có
+
+        **Viêm phế quản mạn:**
+        - **Ho mạn tính:** Ho kéo dài, đặc biệt buổi sáng
+        - **Khạc đờm:** Đờm nhiều, thường xuyên
+        - **Khó thở:** Khi gắng sức, tiến triển
+        - **Thở khò khè:** Có thể có
+        - **Mệt mỏi:** Uể oải
+
+        **⚠️ Phân biệt với COPD:**
+        - Viêm phế quản mạn là một phần của COPD
+        - COPD có thêm khí phế thũng
+
+        ## Nguyên nhân:
+
+        **1. Viêm phế quản cấp:**
+        - **Virus:** Cảm lạnh, cúm (90%)
+        - **Vi khuẩn:** (10%)
+        - **Kích thích:** Khói, bụi, hóa chất
+
+        **2. Viêm phế quản mạn:**
+        - **Hút thuốc lá:** Nguyên nhân chính (80-90%)
+        - **Ô nhiễm không khí:** Khói, bụi
+        - **Nhiễm trùng tái phát:** Làm tổn thương phế quản
+        - **Yếu tố nghề nghiệp:** Bụi, hóa chất
+
+        ## Chẩn đoán:
+
+        **1. Khám lâm sàng:**
+        - Nghe phổi (ran rít, ran ẩm)
+        - Đánh giá triệu chứng
+
+        **2. X-quang phổi:**
+        - Loại trừ viêm phổi
+        - Đánh giá tổn thương
+
+        **3. Xét nghiệm:**
+        - Cấy đờm (nếu nhiễm trùng)
+        - Công thức máu
+
+        **4. Đo chức năng phổi:**
+        - Nếu viêm phế quản mạn
+        - Đánh giá mức độ tắc nghẽn
+
+        ## Điều trị:
+
+        **1. Viêm phế quản cấp:**
+        - **Nghỉ ngơi:** Nghỉ hoàn toàn
+        - **Uống nhiều nước:** 2-3 lít/ngày
+        - **Hạ sốt, giảm đau:** Paracetamol, Ibuprofen
+        - **Thuốc ho:** Nếu ho nhiều, khó chịu
+        - **Kháng sinh:** Chỉ khi nhiễm trùng do vi khuẩn (hiếm)
+        - **⚠️ KHÔNG dùng kháng sinh cho virus!**
+
+        **2. Viêm phế quản mạn:**
+        - **Bỏ thuốc lá:** Quan trọng nhất!
+        - **Thuốc giãn phế quản:** Salbutamol, Ipratropium
+        - **Corticosteroid hít:** Nếu viêm nặng
+        - **Kháng sinh:** Khi có đợt cấp
+        - **Oxy:** Nếu thiếu oxy
+
+        **3. Điều trị hỗ trợ:**
+        - Vật lý trị liệu hô hấp
+        - Tập thở
+        - Tiêm vắc xin cúm, phế cầu
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI VIÊM PHẾ QUẢN:
+
+        **1. Nguyên tắc:**
+        - **Uống nhiều nước:** Quan trọng! (giúp loãng đờm)
+        - **Ăn nhẹ, dễ tiêu:** Khi ốm
+        - **Đủ dinh dưỡng:** Giúp cơ thể chống lại bệnh
+        - **Chống viêm:** Thực phẩm chống viêm
+
+        **2. Uống nước (QUAN TRỌNG!):**
+        - **Nước lọc:** Tốt nhất
+        - **Nước ấm:** Giúp loãng đờm
+        - **Trà gừng ấm:** Giảm ho, ấm cổ họng
+        - **Súp, canh nóng:** Vừa ăn vừa uống nước
+        - **⚠️ Tránh:** Rượu bia, cà phê (làm mất nước)
+
+        **3. Thực phẩm NÊN ĂN:**
+        - **Súp, cháo:** Dễ nuốt, có nước
+          - Cháo gà (tốt cho cảm cúm, viêm phế quản!)
+          - Súp rau củ
+        - **Rau xanh:** Nhiều (rau cải, rau muống, bông cải)
+          - Vitamin, chất chống oxy hóa
+        - **Trái cây:** Cam, bưởi, ổi (vitamin C)
+          - Tăng cường miễn dịch
+        - **Tỏi, gừng:** Chống viêm, kháng khuẩn
+        - **Mật ong:** Giảm ho (nếu không có đái tháo đường)
+        - **Protein:** Thịt nạc, cá (luộc, hấp)
+
+        **4. Thực phẩm CẦN TRÁNH:**
+        - **Đồ lạnh:** Nước đá, kem (làm ho nhiều hơn)
+        - **Đồ chiên, nhiều dầu mỡ:** Khó tiêu
+        - **Sữa, sản phẩm sữa:** Một số người nhạy cảm (tăng đờm)
+        - **Rượu bia:** Làm mất nước, giảm miễn dịch
+        - **Đồ ngọt nhiều:** Bánh kẹo (giảm miễn dịch)
+
+        **5. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo gà nóng + nước chanh ấm
+        - **Trưa:** Súp rau củ nóng + trái cây
+        - **Tối:** Cháo thịt bằm nóng + nước trái cây
+        - **Uống:** Nước ấm, trà gừng, súp nóng
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi viêm phế quản cấp:**
+        - **Nghỉ ngơi:** Không tập thể dục
+        - Nghỉ hoàn toàn cho đến khi khỏi
+
+        **2. Khi viêm phế quản mạn (ổn định):**
+        - **Tập thể dục nhẹ nhàng:** Đi bộ, đạp xe
+        - **Tập thở:** Thở môi mím, thở bụng
+        - **Vật lý trị liệu hô hấp:** Có hướng dẫn
+        - **Thời gian:** 20-30 phút/ngày
+        - **Tránh:** Tập quá sức, gắng sức
+
+        **3. Lợi ích:**
+        - Tăng sức khỏe phổi
+        - Giảm triệu chứng
+        - Tăng khả năng hoạt động
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Bỏ thuốc lá (QUAN TRỌNG NHẤT!):**
+        - Hút thuốc → Nguyên nhân chính viêm phế quản mạn
+        - Bỏ thuốc → Giảm triệu chứng, làm chậm tiến triển
+
+        **2. Tránh kích thích:**
+        - **Không hút thuốc:** Bỏ thuốc, tránh khói thuốc
+        - **Tránh ô nhiễm:** Khói, bụi
+        - **Đeo khẩu trang:** Khi ra ngoài, khi cần
+
+        **3. Vệ sinh:**
+        - Rửa tay thường xuyên
+        - Tránh người ốm
+        - Che miệng khi ho, hắt hơi
+
+        **4. Tiêm chủng:**
+        - **Vắc xin cúm:** Hàng năm
+        - **Vắc xin phế cầu:** (Nếu bác sĩ chỉ định)
+
+        **5. Điều trị cảm lạnh, cúm sớm:**
+        - Cảm lạnh, cúm → Viêm phế quản
+        - Điều trị sớm → Giảm nguy cơ
+
+        **6. Tăng cường miễn dịch:**
+        - Ăn đủ chất
+        - Ngủ đủ giấc
+        - Tập thể dục đều đặn
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng nặng:**
+        - Sốt cao > 39°C
+        - Khó thở nặng
+        - Đau ngực dữ dội
+        - Ho ra máu
+
+        **2. Không cải thiện:**
+        - Ho > 3 tuần không đỡ
+        - Triệu chứng nặng hơn
+
+        **3. Viêm phế quản mạn:**
+        - Đợt cấp nặng
+        - Khó thở tăng
+        - Không đáp ứng với thuốc
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị viêm phế quản cấp:**
+        - Nghỉ ngơi hoàn toàn
+        - Uống nhiều nước ấm
+        - Hạ sốt, giảm đau
+        - Ăn nhẹ, dễ tiêu
+        - Không tự ý dùng kháng sinh
+
+        **2. Khi viêm phế quản mạn:**
+        - Bỏ thuốc lá (quan trọng nhất!)
+        - Uống thuốc đúng giờ
+        - Tập thể dục nhẹ nhàng
+        - Tránh kích thích
+
+        **3. Phòng ngừa:**
+        - Bỏ thuốc lá
+        - Tránh ô nhiễm
+        - Tiêm vắc xin
+        - Điều trị cảm lạnh, cúm sớm
+
+        **4. Sống tích cực:**
+        - Viêm phế quản có thể kiểm soát được
+        - Bỏ thuốc lá → Cải thiện đáng kể
+        """,
+        related_disease="bronchitis",
+        related_drugs=["Salbutamol", "Amoxicillin", "Paracetamol"],
+        printable=True
+    ),
+    
+    # === ACUTE DIARRHEA ===
+    PatientEducationTopic(
+        id="acute_diarrhea_basics",
+        title="Understanding Acute Diarrhea",
+        title_vn="Hiểu về Tiêu chảy cấp",
+        category="Disease",
+        content="""
+        # Hiểu về Tiêu chảy cấp
+
+        ## Tiêu chảy cấp là gì?
+
+        Tiêu chảy cấp là tình trạng đi ngoài phân lỏng > 3 lần/ngày, kéo dài < 14 ngày. Có thể gây mất nước nghiêm trọng, đặc biệt nguy hiểm ở trẻ em.
+
+        **⚠️ Đặc điểm:**
+        - Rất phổ biến, đặc biệt ở trẻ em
+        - Nguy hiểm nhất là mất nước
+        - Hầu hết tự khỏi sau vài ngày
+        - Cần bù nước đúng cách
+
+        **Phân loại:**
+        - **Tiêu chảy cấp:** < 14 ngày
+        - **Tiêu chảy mạn:** > 14 ngày
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Đi ngoài phân lỏng:** > 3 lần/ngày
+        - **Phân:** Lỏng, nước, có thể có máu, nhầy
+        - **Đau bụng:** Quặn, từng cơn
+        - **Buồn nôn, nôn:** Có thể có
+        - **Sốt:** Có thể có (nếu nhiễm trùng)
+
+        **Triệu chứng mất nước:**
+        - **Khát nước:** Khát nhiều
+        - **Tiểu ít:** Nước tiểu vàng đậm
+        - **Mắt trũng:** Mắt lõm
+        - **Da khô:** Da nhăn, mất đàn hồi
+        - **Mệt mỏi:** Uể oải, không có sức
+        - **Chóng mặt:** Khi đứng dậy
+
+        **Triệu chứng mất nước nặng (Cần cấp cứu!):**
+        - Không tiểu hoặc tiểu rất ít
+        - Mắt rất trũng
+        - Da rất khô, nhăn
+        - Lú lẫn, buồn ngủ
+        - Mạch nhanh, yếu
+        - Huyết áp tụt
+
+        ## Nguyên nhân:
+
+        **1. Nhiễm trùng:**
+        - **Virus:** Rotavirus, Norovirus (phổ biến nhất)
+        - **Vi khuẩn:** E. coli, Salmonella, Shigella, Campylobacter
+        - **Ký sinh trùng:** Giardia, Cryptosporidium
+
+        **2. Thức ăn, nước uống:**
+        - **Thức ăn nhiễm khuẩn:** Không nấu chín, để lâu
+        - **Nước uống không sạch:** Nước chưa đun sôi
+        - **Vệ sinh kém:** Tay bẩn, dụng cụ bẩn
+
+        **3. Thuốc:**
+        - Kháng sinh (tiêu chảy do kháng sinh)
+        - Một số thuốc khác
+
+        **4. Yếu tố khác:**
+        - Không dung nạp thức ăn
+        - Stress
+
+        ## Chẩn đoán:
+
+        **1. Khám lâm sàng:**
+        - Đánh giá triệu chứng
+        - Đánh giá mất nước
+        - Khám bụng
+
+        **2. Xét nghiệm:**
+        - **Cấy phân:** Tìm vi khuẩn (nếu cần)
+        - **Soi phân:** Tìm ký sinh trùng (nếu cần)
+        - **Xét nghiệm máu:** Đánh giá mất nước, điện giải
+
+        **3. Thường không cần:**
+        - Hầu hết tiêu chảy cấp tự khỏi
+        - Chỉ xét nghiệm khi nặng hoặc kéo dài
+
+        ## Điều trị:
+
+        **⚠️ QUAN TRỌNG:** Bù nước là điều trị chính!
+
+        **1. Bù nước (QUAN TRỌNG NHẤT!):**
+        - **Oresol:** Tốt nhất (bù nước và điện giải)
+          - Pha đúng tỷ lệ (1 gói + 1 lít nước)
+          - Uống từng ngụm nhỏ, thường xuyên
+          - Uống ngay cả khi nôn
+        - **Nước lọc:** Nếu không có Oresol
+        - **Nước trái cây:** Pha loãng
+        - **Súp, canh:** Vừa ăn vừa uống nước
+
+        **2. Điều trị tại nhà (Nhẹ):**
+        - Bù nước (Oresol)
+        - Ăn nhẹ, dễ tiêu
+        - Nghỉ ngơi
+        - Theo dõi triệu chứng
+
+        **3. Điều trị tại viện (Nặng):**
+        - Truyền dịch (nếu mất nước nặng)
+        - Kháng sinh (nếu nhiễm trùng do vi khuẩn)
+        - Điều trị hỗ trợ
+
+        **4. Thuốc:**
+        - **Kháng sinh:** Chỉ khi nhiễm trùng do vi khuẩn (hiếm)
+        - **Thuốc cầm tiêu chảy:** Loperamide (thận trọng, không dùng ở trẻ em)
+        - **⚠️ KHÔNG tự ý dùng kháng sinh!**
+
+        ## 🍽️ CHẾ ĐỘ ĂN KHI BỊ TIÊU CHẢY:
+
+        **⚠️ QUAN TRỌNG:** Vẫn cần ăn để cung cấp năng lượng!
+
+        **1. Nguyên tắc:**
+        - **Bù nước:** Quan trọng nhất!
+        - **Ăn nhẹ, dễ tiêu:** Tránh đồ khó tiêu
+        - **Chia nhỏ bữa:** 5-6 bữa/ngày
+        - **Tránh thức ăn kích thích:** Đồ cay, nhiều dầu mỡ
+
+        **2. Uống nước (QUAN TRỌNG NHẤT!):**
+        - **Oresol:** Tốt nhất
+          - Pha đúng tỷ lệ
+          - Uống từng ngụm nhỏ, thường xuyên
+          - Uống ngay cả khi nôn (uống lại sau 10-15 phút)
+        - **Nước lọc:** Nếu không có Oresol
+        - **Nước trái cây:** Pha loãng (cam, chanh)
+        - **Súp, canh:** Vừa ăn vừa uống nước
+        - **⚠️ Tránh:** Nước ngọt có ga, rượu bia
+
+        **3. Thực phẩm NÊN ĂN:**
+        - **Cháo, súp:** Dễ tiêu, có nước
+          - Cháo gạo, cháo thịt bằm
+          - Súp rau củ
+        - **Cơm mềm:** Ít, với thức ăn nhẹ
+        - **Chuối:** Kali, dễ tiêu
+        - **Táo:** Pectin (giúp cầm tiêu chảy)
+        - **Bánh mì:** Mềm, không bơ
+        - **Khoai tây:** Luộc, nghiền
+
+        **4. Thực phẩm CẦN TRÁNH:**
+        - **Sữa, sản phẩm sữa:** Khó tiêu (trừ sữa mẹ ở trẻ bú mẹ)
+        - **Đồ chiên, nhiều dầu mỡ:** Khó tiêu
+        - **Đồ cay:** Kích thích ruột
+        - **Đồ ngọt nhiều:** Bánh kẹo, nước ngọt
+        - **Rượu bia:** Làm mất nước
+        - **Cà phê:** Làm mất nước
+
+        **5. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo gạo + chuối
+        - **Bữa phụ (10h):** Oresol, bánh mì mềm
+        - **Trưa:** Cháo thịt bằm + táo
+        - **Bữa phụ (15h):** Oresol, chuối
+        - **Tối:** Cơm mềm (ít) + khoai tây luộc
+        - **Uống:** Oresol, nước lọc, súp
+
+        **6. Lưu ý:**
+        - Uống nước ngay cả khi không khát
+        - Uống từng ngụm nhỏ, thường xuyên
+        - Nếu nôn → Uống lại sau 10-15 phút
+        - Ăn chậm, nhai kỹ
+        - Không bỏ ăn hoàn toàn
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Vệ sinh cá nhân:**
+        - **Rửa tay:** Thường xuyên với xà phòng
+          - Trước khi ăn
+          - Sau khi đi vệ sinh
+          - Sau khi thay tã
+          - Sau khi chơi
+        - **Vệ sinh răng miệng:** Đánh răng 2 lần/ngày
+
+        **2. Vệ sinh thực phẩm:**
+        - **Nấu chín:** Thức ăn phải nấu chín kỹ
+        - **Rửa sạch:** Rau, trái cây
+        - **Bảo quản:** Thức ăn trong tủ lạnh
+        - **Tránh:** Thức ăn để lâu, không rõ nguồn gốc
+
+        **3. Nước uống:**
+        - **Đun sôi:** Nước uống phải đun sôi
+        - **Sạch:** Dùng nước sạch
+        - **Tránh:** Nước chưa đun sôi, nước đá không rõ nguồn gốc
+
+        **4. Vệ sinh môi trường:**
+        - Vệ sinh nhà cửa
+        - Xử lý phân đúng cách
+        - Diệt ruồi, gián
+
+        **5. Tiêm chủng:**
+        - **Vắc xin Rotavirus:** Cho trẻ (phòng ngừa tiêu chảy do Rotavirus)
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Mất nước nặng:**
+        - Không tiểu hoặc tiểu rất ít
+        - Mắt rất trũng
+        - Da rất khô, nhăn
+        - Lú lẫn, buồn ngủ
+        - Mạch nhanh, yếu
+        - Huyết áp tụt
+
+        **2. Triệu chứng nặng:**
+        - Sốt cao > 39°C
+        - Đau bụng dữ dội
+        - Đi ngoài ra máu
+        - Nôn nhiều, không uống được
+
+        **3. Trẻ em:**
+        - Trẻ < 6 tháng
+        - Tiêu chảy > 24 giờ
+        - Nôn nhiều
+        - Sốt cao
+        - Có dấu hiệu mất nước
+
+        **4. Không cải thiện:**
+        - Tiêu chảy > 3 ngày không đỡ
+        - Triệu chứng nặng hơn
+
+        **⚠️ QUAN TRỌNG:** Đến bệnh viện ngay khi có dấu hiệu mất nước nặng!
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị tiêu chảy:**
+        - Bù nước ngay (Oresol)
+        - Ăn nhẹ, dễ tiêu
+        - Nghỉ ngơi
+        - Theo dõi triệu chứng
+
+        **2. Phòng ngừa:**
+        - Rửa tay thường xuyên
+        - Vệ sinh thực phẩm
+        - Nước uống sạch
+        - Tiêm vắc xin (nếu có)
+
+        **3. Không tự ý:**
+        - Dùng kháng sinh (hầu hết không cần)
+        - Dùng thuốc cầm tiêu chảy ở trẻ em (nguy hiểm)
+
+        **4. Sống tích cực:**
+        - Hầu hết tiêu chảy cấp tự khỏi
+        - Bù nước đúng cách → Khỏi nhanh
+        """,
+        related_disease="acute_diarrhea",
+        related_drugs=["Oresol", "Loperamide"],
+        printable=True
+    ),
 ]
