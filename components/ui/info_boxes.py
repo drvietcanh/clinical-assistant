@@ -69,6 +69,15 @@ def render_info_box(
     bg_style = colors["gradient"] if gradient else colors["bg_solid"]
     
     # Build HTML
+    title_html = ""
+    if title:
+        title_html = f'''<div style="font-weight: 700; font-size: 1rem; color: {colors["text"]}; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.2rem;">{display_icon}</span>
+            <span>{html.escape(title)}</span>
+        </div>'''
+    
+    margin_top = "margin-top: 8px;" if title else ""
+    
     box_html = f"""
     <div style="background: {bg_style};
                 padding: 1.25rem 1.5rem;
@@ -76,11 +85,8 @@ def render_info_box(
                 border-left: 5px solid {colors['border']};
                 margin-bottom: 1.5rem;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-        {f'<div style="font-weight: 700; font-size: 1rem; color: {colors["text"]}; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 1.2rem;">{display_icon}</span>
-            <span>{html.escape(title)}</span>
-        </div>' if title else ''}
-        <div style="color: #424242; font-size: 0.95rem; line-height: 1.6; {'margin-top: 8px;' if title else ''}">
+        {title_html}
+        <div style="color: #424242; font-size: 0.95rem; line-height: 1.6; {margin_top}">
             {html.escape(message) if not message.startswith('<') else message}
         </div>
     </div>
@@ -113,6 +119,19 @@ def render_hero_section(
     default_gradient = ("#667eea", "#764ba2")
     gradient = gradient_colors or default_gradient
     
+    subtitle_html = ""
+    if subtitle:
+        subtitle_html = f'''<div style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 0.5rem; font-weight: 500; 
+                        letter-spacing: 0.5px; text-transform: uppercase;">{html.escape(subtitle)}</div>'''
+    
+    icon_html = ""
+    if icon:
+        icon_html = f'<span style="font-size: 2.2rem;">{icon}</span>'
+    
+    description_html = ""
+    if description:
+        description_html = f'<p style="margin: 0; font-size: 1rem; opacity: 0.95; line-height: 1.6; max-width: 800px;">{html.escape(description)}</p>'
+    
     hero_html = f"""
     <div style="background: linear-gradient(135deg, {gradient[0]} 0%, {gradient[1]} 100%);
                 padding: 2rem 2.5rem;
@@ -127,13 +146,12 @@ def render_hero_section(
         <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; 
                     background: rgba(255,255,255,0.08); border-radius: 50%;"></div>
         <div style="position: relative; z-index: 1;">
-            {f'<div style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 0.5rem; font-weight: 500; 
-                        letter-spacing: 0.5px; text-transform: uppercase;">{html.escape(subtitle)}</div>' if subtitle else ''}
+            {subtitle_html}
             <h2 style="margin: 0 0 0.75rem 0; font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; display: flex; align-items: center; gap: 12px;">
-                {f'<span style="font-size: 2.2rem;">{icon}</span>' if icon else ''}
+                {icon_html}
                 <span>{html.escape(title)}</span>
             </h2>
-            {f'<p style="margin: 0; font-size: 1rem; opacity: 0.95; line-height: 1.6; max-width: 800px;">{html.escape(description)}</p>' if description else ''}
+            {description_html}
         </div>
     </div>
     """
