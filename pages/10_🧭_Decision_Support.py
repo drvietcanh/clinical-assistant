@@ -18,7 +18,10 @@ from components.flowcharts.clinical_rules import (
     create_sepsis_flowchart,
     create_stroke_flowchart,
     create_aki_flowchart,
-    create_curb65_flowchart
+    create_curb65_flowchart,
+    create_shock_flowchart,
+    create_gi_bleed_flowchart,
+    create_dka_flowchart,
 )
 from components.pregnancy_lactation_display import render_pregnancy_lactation_section
 from scores.pediatrics.pediatric_dosing import render_pediatric_dosing_calculator
@@ -83,8 +86,11 @@ if selected_feature == feature_options[0]:
         "Acute Stroke": create_stroke_flowchart,
         "AKI Diagnostic": create_aki_flowchart,
         "CURB-65": create_curb65_flowchart,
-        # Bệnh cấp cứu phổ biến
+        # Bệnh cấp cứu / bệnh nặng phổ biến
         "Acute Chest Pain / ACS": create_chest_pain_algorithm,
+        "Shock / Hypotension": create_shock_flowchart,
+        "Upper GI Bleeding": create_gi_bleed_flowchart,
+        "DKA Initial Management": create_dka_flowchart,
     }
     
     selected_algorithm = st.selectbox(
@@ -109,6 +115,9 @@ if selected_feature == feature_options[0]:
             "AKI Diagnostic": (800, 600),
             "CURB-65": (800, 500),
             "Acute Chest Pain / ACS": (900, 600),
+            "Shock / Hypotension": (900, 600),
+            "Upper GI Bleeding": (900, 650),
+            "DKA Initial Management": (900, 650),
         }
         
         width, height = size_map.get(selected_algorithm, (800, 600))

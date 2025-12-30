@@ -258,3 +258,99 @@ def create_curb65_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]
     
     return nodes, edges
 
+
+def create_shock_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create shock / hypotension resuscitation flowchart (initial ED/ICU approach)
+    """
+    nodes = [
+        FlowchartNode("start", "SBP <90 mmHg\nhoặc MAP <65?", NodeType.START, icon="📉"),
+        FlowchartNode("airway", "Airway & Breathing", NodeType.ACTION, icon="🫁"),
+        FlowchartNode("iv_access", "2 đường IV lớn\n+ lấy xét nghiệm", NodeType.ACTION, icon="💉"),
+        FlowchartNode("fluid_bolus", "Bolus dịch 30 ml/kg\nCrystalloid", NodeType.ACTION, color="#17a2b8", icon="💧"),
+        FlowchartNode("responsive", "Đáp ứng với dịch?", NodeType.DECISION, icon="❓"),
+        FlowchartNode("reassess", "Theo dõi & tìm nguyên nhân", NodeType.ACTION, icon="👁️"),
+        FlowchartNode("no_response", "Không đáp ứng\nhoặc phù phổi", NodeType.DECISION, icon="⚠️"),
+        FlowchartNode("vasopressor", "Bắt đầu Vasopressor\n(Noradrenaline)", NodeType.ACTION, color="#dc3545", icon="💊"),
+        FlowchartNode("identify_shock", "Phân loại shock:\nSeptic / Cardiogenic /\nHypovolemic / Obstructive", NodeType.ACTION, icon="🧪"),
+        FlowchartNode("monitor", "ICU / Theo dõi sát\nLactate, UO, MAP", NodeType.END, color="#17a2b8", icon="🏥"),
+    ]
+    
+    edges = [
+        FlowchartEdge("start", "airway", "Có"),
+        FlowchartEdge("airway", "iv_access", ""),
+        FlowchartEdge("iv_access", "fluid_bolus", ""),
+        FlowchartEdge("fluid_bolus", "responsive", "Sau 30 ml/kg"),
+        FlowchartEdge("responsive", "reassess", "Có cải thiện"),
+        FlowchartEdge("responsive", "no_response", "Không cải thiện"),
+        FlowchartEdge("no_response", "vasopressor", ""),
+        FlowchartEdge("vasopressor", "identify_shock", ""),
+        FlowchartEdge("identify_shock", "monitor", ""),
+    ]
+    
+    return nodes, edges
+
+
+def create_gi_bleed_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create upper GI bleeding initial management flowchart
+    """
+    nodes = [
+        FlowchartNode("start", "Nghi ngờ XHTH trên?", NodeType.START, icon="🩸"),
+        FlowchartNode("resus", "Resuscitation:\nAirway, 2 đường IV,\nBolus dịch", NodeType.ACTION, icon="🚑"),
+        FlowchartNode("risk", "Đánh giá huyết động\n& nguy cơ cao", NodeType.DECISION, icon="⚠️"),
+        FlowchartNode("high_risk", "Huyết động không ổn\nhoặc Hb rất thấp", NodeType.DECISION, icon="🔴"),
+        FlowchartNode("transfuse", "Truyền máu PRBC\n(đích Hb ≥7-8 g/dL)", NodeType.ACTION, color="#dc3545", icon="💉"),
+        FlowchartNode("ppi", "Bolus + truyền PPI\n(Esomeprazole)", NodeType.ACTION, icon="💊"),
+        FlowchartNode("endoscopy", "Nội soi trong 24h\n(≤12h nếu nguy cơ cao)", NodeType.TEST, icon="📷"),
+        FlowchartNode("low_risk", "Nguy cơ thấp /\nổn định", NodeType.DECISION, icon="🟢"),
+        FlowchartNode("discharge", "Cân nhắc điều trị\nngoại trú / theo dõi\nngắn hạn", NodeType.END, color="#28a745", icon="🏠"),
+        FlowchartNode("admit", "Nhập viện / ICU\nTheo dõi & can thiệp", NodeType.END, color="#17a2b8", icon="🏥"),
+    ]
+    
+    edges = [
+        FlowchartEdge("start", "resus", ""),
+        FlowchartEdge("resus", "risk", ""),
+        FlowchartEdge("risk", "high_risk", "Không ổn định"),
+        FlowchartEdge("risk", "low_risk", "Ổn định"),
+        FlowchartEdge("high_risk", "transfuse", ""),
+        FlowchartEdge("transfuse", "ppi", ""),
+        FlowchartEdge("ppi", "endoscopy", ""),
+        FlowchartEdge("low_risk", "ppi", "Có viêm/loét\nnghi ngờ"),
+        FlowchartEdge("endoscopy", "admit", "Tổn thương\nnguy cơ cao"),
+        FlowchartEdge("endoscopy", "discharge", "Nguy cơ thấp"),
+    ]
+    
+    return nodes, edges
+
+
+def create_dka_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create DKA initial management flowchart
+    """
+    nodes = [
+        FlowchartNode("start", "Nghi ngờ DKA?", NodeType.START, icon="🍭"),
+        FlowchartNode("labs", "Lấy xét nghiệm:\nGlucose, ABG/VBG,\nĐiện giải, Ketone", NodeType.TEST, icon="🧪"),
+        FlowchartNode("confirm", "Glucose >250,\npH <7.3,\nHCO3- <18,\nKetone (+)", NodeType.DECISION, icon="📊"),
+        FlowchartNode("no_dka", "Không DKA\nTìm chẩn đoán khác", NodeType.END, color="#28a745", icon="✅"),
+        FlowchartNode("fluid", "Bolus NS 0.9%\n15-20 ml/kg (1-1.5L)", NodeType.ACTION, color="#17a2b8", icon="💧"),
+        FlowchartNode("insulin", "Bắt đầu Insulin\n0.1 U/kg/h (IV)", NodeType.ACTION, color="#dc3545", icon="💉"),
+        FlowchartNode("potassium", "Đánh giá K+ và\nBổ sung nếu cần", NodeType.ACTION, icon="🧂"),
+        FlowchartNode("monitor", "Theo dõi:\nGlucose, K+, pH,\nAnion gap", NodeType.ACTION, icon="👁️"),
+        FlowchartNode("resolve", "DKA giải quyết:\npH >7.3,\nHCO3- >18,\nAnion gap đóng", NodeType.DECISION, icon="🟢"),
+        FlowchartNode("transition", "Chuyển sang SC\nInsulin & ăn uống", NodeType.END, color="#17a2b8", icon="🍽️"),
+    ]
+    
+    edges = [
+        FlowchartEdge("start", "labs", ""),
+        FlowchartEdge("labs", "confirm", ""),
+        FlowchartEdge("confirm", "no_dka", "Không đủ tiêu chuẩn"),
+        FlowchartEdge("confirm", "fluid", "DKA xác định"),
+        FlowchartEdge("fluid", "insulin", "Sau bolus đầu"),
+        FlowchartEdge("insulin", "potassium", ""),
+        FlowchartEdge("potassium", "monitor", ""),
+        FlowchartEdge("monitor", "resolve", "Đánh giá định kỳ"),
+        FlowchartEdge("resolve", "transition", "Tiêu chuẩn đạt"),
+    ]
+    
+    return nodes, edges
