@@ -75,7 +75,7 @@ def render_protocol_timeline(steps: List[Dict]):
     Args:
         steps: List of step dicts with keys: time_label, title, description, status, icon
     """
-    st.markdown("### ⏱️ Timeline Điều Trị")
+    st.markdown("### ⏱️ Timeline điều trị")
     
     for step in steps:
         render_timeline_item(
@@ -170,7 +170,7 @@ def render_progress_indicator(current_step: int, total_steps: int, step_names: L
     """
     progress = (current_step / total_steps) * 100
     
-    st.markdown("### 📊 Tiến Độ Điều Trị")
+    st.markdown("### 📊 Tiến độ điều trị")
     
     # Progress bar
     st.progress(progress / 100)

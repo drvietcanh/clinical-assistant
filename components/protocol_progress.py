@@ -41,7 +41,7 @@ def save_protocol_progress(protocol_name: str, progress: Dict):
 def render_progress_checklist(
     protocol_name: str,
     steps: List[Dict],
-    title: str = "📊 Tiến Độ Điều Trị"
+    title: str = "📊 Tiến độ điều trị"
 ):
     """
     Render progress checklist for multi-step protocol.

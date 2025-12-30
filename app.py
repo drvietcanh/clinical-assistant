@@ -399,7 +399,7 @@ with tab2:
     render_recently_used()
 
 with tab3:
-    st.markdown("### 📊 Thống Kê & Thông Tin")
+    st.markdown("### 📊 Thống kê & Thông tin")
     st.caption("Thống kê hệ thống, cập nhật mới nhất và mẹo sử dụng")
     
     # Analytics Dashboard Toggle

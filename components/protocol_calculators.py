@@ -98,7 +98,7 @@ def render_calculator_links(protocol_name: str, calculators: Optional[List[Dict]
     if not calculators:
         return
     
-    with st.expander("🧮 Công Cụ Tính Toán Liên Quan", expanded=False):
+    with st.expander("🧮 Công cụ tính toán liên quan", expanded=False):
         st.markdown("**Các công cụ hữu ích cho protocol này:**")
         st.markdown("")
         

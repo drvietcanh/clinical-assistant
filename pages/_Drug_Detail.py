@@ -530,7 +530,7 @@ if top_indications or standard_dose:
             '>
                 <h3 style='margin: 0 0 15px 0; color: #1e293b; font-size: 1.3em; display: flex; align-items: center;'>
                     <span style='font-size: 1.5em; margin-right: 10px;'>⚡</span>
-                    Thông Tin Nhanh
+                    Thông tin nhanh
                 </h3>
                 <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;'>
                     {(

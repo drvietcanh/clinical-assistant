@@ -546,7 +546,7 @@ elif view_mode == "Gần đây":
         st.warning("Không tìm thấy guidelines gần đây.")
 
 elif view_mode == "Cần cập nhật":
-    st.markdown("### ⚠️ Guidelines Cần Cập Nhật")
+    st.markdown("### ⚠️ Guidelines cần cập nhật")
     st.info("Guidelines cũ hơn 2020 có thể cần được cập nhật. Vui lòng kiểm tra phiên bản mới nhất.")
     
     old_guidelines = check_guideline_updates(year_threshold=2020)

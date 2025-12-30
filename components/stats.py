@@ -9,7 +9,7 @@ from config.calculators import ALL_CALCULATORS
 
 def render_stats():
     """Render system statistics"""
-    st.subheader("📈 Thống Kê Hệ Thống")
+    st.subheader("📈 Thống kê hệ thống")
     
     # Calculate real stats
     total_calcs = len(ALL_CALCULATORS)
@@ -29,11 +29,11 @@ def render_stats():
 
 def render_updates():
     """Render recent updates section"""
-    st.subheader("🆕 Cập Nhật Mới Nhất")
+    st.subheader("🆕 Cập nhật mới nhất")
     
     with st.expander("📅 2025-10-29 - Version 2.0.0 🔥 MAJOR UPDATE"):
         st.markdown("""
-        ### 🎉 Tính Năng Mới:
+        ### 🎉 Tính năng mới:
         
         **1. ✅ Tìm kiếm & Điều hướng:**
         - 🔍 Tìm kiếm toàn cục - Tìm calculator nhanh chóng
@@ -91,7 +91,7 @@ def render_tips():
     
     with tip_col1:
         st.info("""
-        **🔍 Tìm Kiếm:**
+        **🔍 Tìm kiếm:**
         - Gõ tên calculator
         - Tìm theo chuyên khoa
         - Ví dụ: "tim mạch", "sepsis"
@@ -99,7 +99,7 @@ def render_tips():
     
     with tip_col2:
         st.success("""
-        **⭐ Yêu Thích:**
+        **⭐ Yêu thích:**
         - Nhấn ⭐ để lưu
         - Truy cập nhanh từ Home
         - Tối đa 8 favorites
