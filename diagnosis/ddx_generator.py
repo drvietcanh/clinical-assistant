@@ -195,19 +195,33 @@ def render_ddx_interface():
     
     # Determine default index
     default_index = 0
-    if has_preset and preset_mode in mode_options:
-        # Use preset value
-        default_index = mode_options.index(preset_mode)
+    if has_preset and preset_mode:
+        # Normalize preset mode for comparison (handle encoding issues)
+        preset_normalized = str(preset_mode).strip()
+        # Try to find matching option (case-insensitive, handle emoji variations)
+        for idx, option in enumerate(mode_options):
+            if preset_normalized == str(option).strip() or preset_normalized in str(option) or str(option) in preset_normalized:
+                default_index = idx
+                break
         # Clear preset key after reading
-        del st.session_state['ddx_mode_preset']
-    elif current_widget_value and current_widget_value in mode_options:
+        if 'ddx_mode_preset' in st.session_state:
+            del st.session_state['ddx_mode_preset']
+    elif current_widget_value:
         # Use existing widget value
-        default_index = mode_options.index(current_widget_value)
+        widget_normalized = str(current_widget_value).strip()
+        for idx, option in enumerate(mode_options):
+            if widget_normalized == str(option).strip():
+                default_index = idx
+                break
     elif 'ddx_mode' in st.session_state:
         # Check old key for backward compatibility (only if no widget value)
         old_mode = st.session_state.get('ddx_mode')
-        if old_mode and old_mode in mode_options:
-            default_index = mode_options.index(old_mode)
+        if old_mode:
+            old_normalized = str(old_mode).strip()
+            for idx, option in enumerate(mode_options):
+                if old_normalized == str(option).strip() or old_normalized in str(option) or str(option) in old_normalized:
+                    default_index = idx
+                    break
     
     # Create widget with separate key
     mode = st.radio(
