@@ -73,7 +73,6 @@ with st.sidebar:
         "🎯 Clinical Scenarios",
         "💧 Fluid Therapy",
         "💉 Vasopressors",
-        "💉 Tính liều thuốc tim mạch",
         "💧 Enhanced Infusion Calculator",
         "💉 Multiple Infusions",
         "⚡ Electrolyte Calculator",
@@ -262,14 +261,6 @@ elif "Vasopressor" in tool_type:
     st.header("💉 Vasopressor Dosing Guide")
     st.caption("Hướng dẫn liều và titration vasopressor")
     render_vasopressor_guide()
-
-elif "Tính liều thuốc tim mạch" in tool_type:
-    try:
-        from components.cardiovascular_calculator import render_cardiovascular_calculator
-        render_cardiovascular_calculator()
-    except ImportError as e:
-        st.error(f"Không thể tải module tính liều thuốc tim mạch: {str(e)}")
-        st.info("Vui lòng kiểm tra file components/cardiovascular_calculator.py")
 
 elif "Enhanced Infusion" in tool_type:
     try:

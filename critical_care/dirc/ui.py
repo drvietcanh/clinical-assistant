@@ -22,7 +22,22 @@ def render_dirc_calculator() -> None:
         "Chuyển đổi liều truyền giữa (mcg/kg/phút) và (mL/giờ) dựa trên cân nặng, nồng độ thuốc. "
         "Hỗ trợ bơm tiêm 50 mL / chai 500 mL và preset cho các thuốc cấp cứu thường dùng."
     )
+    
+    # Tab selection: General DIRC or Cardiovascular Drugs
+    tab1, tab2 = st.tabs([
+        "📝 Chuyển đổi tổng quát",
+        "💉 Thuốc tim mạch cấp cứu"
+    ])
+    
+    with tab1:
+        _render_general_dirc()
+    
+    with tab2:
+        _render_cardiovascular_dirc()
 
+
+def _render_general_dirc() -> None:
+    """Render general DIRC calculator (original functionality)."""
     calculator = DIRCCalculator()
 
     # Select conversion direction
@@ -290,6 +305,16 @@ def render_dirc_calculator() -> None:
 
         # Cho phép copy kết quả
         st.text_input("Copy kết quả", value=result_str, key="dirc_copy_result")
+
+
+def _render_cardiovascular_dirc() -> None:
+    """Render cardiovascular drugs calculator integrated into DIRC."""
+    try:
+        from components.cardiovascular_calculator import render_cardiovascular_calculator
+        render_cardiovascular_calculator()
+    except ImportError:
+        st.error("Không thể tải cardiovascular calculator. Vui lòng kiểm tra file components/cardiovascular_calculator.py")
+        st.info("Sử dụng tab 'Chuyển đổi tổng quát' để tính toán với thuốc bất kỳ.")
 
 
 
