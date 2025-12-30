@@ -6559,4 +6559,255 @@ Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng th
         related_drugs=["Paracetamol", "Ibuprofen", "Diclofenac"],
         printable=True
     ),
+    
+    # === HEPATITIS A ===
+    PatientEducationTopic(
+        id="hepatitis_a_basics",
+        title="Understanding Hepatitis A",
+        title_vn="Hiểu về Viêm gan A",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm gan A
+
+        ## Viêm gan A là gì?
+
+        Viêm gan A là bệnh nhiễm trùng gan do virus viêm gan A (HAV) gây ra, lây truyền qua đường tiêu hóa (phân-miệng). Khác với viêm gan B/C, viêm gan A thường tự khỏi và không gây viêm gan mạn.
+
+        **⚠️ Đặc điểm:**
+        - Lây qua đường tiêu hóa (phân-miệng)
+        - Thường tự khỏi, không gây mạn tính
+        - Có vắc xin phòng ngừa
+        - Phổ biến ở nơi vệ sinh kém
+
+        **So sánh với viêm gan B/C:**
+        - **Viêm gan A:** Lây qua đường tiêu hóa, tự khỏi, có vắc xin
+        - **Viêm gan B/C:** Lây qua máu, có thể mạn tính, B có vắc xin, C chưa có
+
+        ## Triệu chứng:
+
+        **Giai đoạn ủ bệnh (15-50 ngày):**
+        - Không có triệu chứng
+
+        **Giai đoạn tiền vàng da (1-2 tuần):**
+        - **Mệt mỏi:** Uể oải, không có sức
+        - **Chán ăn:** Không muốn ăn
+        - **Buồn nôn, nôn:** Có thể có
+        - **Sốt nhẹ:** Có thể có
+        - **Đau bụng:** Vùng gan (bên phải)
+        - **Đau cơ, đau khớp:** Có thể có
+
+        **Giai đoạn vàng da (1-2 tuần):**
+        - **Vàng da, vàng mắt:** Dấu hiệu điển hình
+        - **Nước tiểu sẫm màu:** Như nước trà đặc
+        - **Phân nhạt màu:** Trắng, xám
+        - **Triệu chứng giảm:** Mệt mỏi, chán ăn giảm
+
+        **Giai đoạn hồi phục (2-4 tuần):**
+        - Vàng da giảm
+        - Ăn uống tốt hơn
+        - Tự khỏi hoàn toàn
+
+        **⚠️ Lưu ý:** Nhiều người (đặc biệt trẻ em) không có triệu chứng hoặc triệu chứng nhẹ!
+
+        ## Nguyên nhân và đường lây:
+
+        **1. Nguyên nhân:**
+        - Virus viêm gan A (HAV)
+        - Lây qua đường tiêu hóa
+
+        **2. Đường lây:**
+        - **Phân-miệng:** Phân người bệnh → Nước, thức ăn → Vào miệng
+        - **Thức ăn, nước uống:** Nhiễm virus (không nấu chín, không đun sôi)
+        - **Tay bẩn:** Tay dính phân → Chạm miệng
+        - **Tiếp xúc gần:** Sống chung, chăm sóc người bệnh
+
+        **3. Yếu tố nguy cơ:**
+        - Vệ sinh kém
+        - Nước uống không sạch
+        - Thức ăn không nấu chín
+        - Sống chung với người bệnh
+        - Đi du lịch vùng có dịch
+
+        **4. KHÔNG lây qua:**
+        - Ôm, hôn
+        - Ho, hắt hơi
+        - Dùng chung bát đĩa (nếu rửa sạch)
+        - Muỗi đốt
+
+        ## Chẩn đoán:
+
+        **1. Xét nghiệm máu:**
+        - **Anti-HAV IgM:** Dương tính (viêm gan A cấp)
+        - **Anti-HAV IgG:** Dương tính (đã từng bị hoặc đã tiêm vắc xin)
+
+        **2. Xét nghiệm chức năng gan:**
+        - AST, ALT: Tăng (men gan)
+        - Bilirubin: Tăng (vàng da)
+
+        **3. Thường không cần:**
+        - Hầu hết chẩn đoán dựa vào triệu chứng và xét nghiệm
+
+        ## Điều trị:
+
+        **⚠️ QUAN TRỌNG:** Không có thuốc đặc trị! Chủ yếu điều trị hỗ trợ.
+
+        **1. Điều trị hỗ trợ:**
+        - **Nghỉ ngơi:** Nghỉ hoàn toàn, không làm việc
+        - **Uống nhiều nước:** 2-3 lít/ngày
+        - **Chế độ ăn:** Nhẹ, dễ tiêu, đủ dinh dưỡng
+        - **Tránh rượu bia:** Hoàn toàn! (làm tổn thương gan nặng hơn)
+
+        **2. Thuốc:**
+        - **Hạ sốt, giảm đau:** Paracetamol (thận trọng, liều thấp)
+        - **Chống nôn:** Nếu nôn nhiều
+        - **⚠️ KHÔNG dùng:** Thuốc không cần thiết (tăng gánh nặng cho gan)
+
+        **3. Theo dõi:**
+        - Xét nghiệm chức năng gan định kỳ
+        - Theo dõi triệu chứng
+        - Phát hiện biến chứng (hiếm)
+
+        **4. Tự khỏi:**
+        - Hầu hết tự khỏi sau 2-4 tuần
+        - Không gây viêm gan mạn
+        - Không cần điều trị đặc biệt
+
+        ## 🍽️ CHẾ ĐỘ ĂN KHI BỊ VIÊM GAN A:
+
+        **1. Nguyên tắc:**
+        - **Bảo vệ gan:** Tránh gánh nặng cho gan
+        - **Đủ dinh dưỡng:** Giúp gan phục hồi
+        - **Dễ tiêu:** Tránh đồ khó tiêu
+        - **Tránh rượu bia:** Hoàn toàn!
+
+        **2. Uống nước:**
+        - **Nước lọc:** Tốt nhất
+        - **Nước trái cây:** Cam, chanh (vitamin C)
+        - **Súp, canh:** Vừa ăn vừa uống nước
+        - **⚠️ Tránh:** Rượu bia, cà phê (làm mất nước)
+
+        **3. Thực phẩm NÊN ĂN:**
+        - **Cháo, súp:** Dễ tiêu, có nước
+          - Cháo gà, cháo thịt bằm
+          - Súp rau củ
+        - **Protein nạc:** Thịt gà (bỏ da), cá, đậu phụ (luộc, hấp)
+          - Giúp phục hồi tế bào gan
+        - **Rau xanh:** Luộc, hấp (rau cải, rau muống, bông cải)
+          - Vitamin, chất xơ
+        - **Trái cây:** Cam, bưởi, táo (vitamin C)
+        - **Sữa ít béo:** Sữa tách béo, sữa chua
+        - **Ngũ cốc:** Gạo, bánh mì, yến mạch
+
+        **4. Thực phẩm CẦN TRÁNH:**
+        - **Rượu bia:** HOÀN TOÀN! (làm tổn thương gan nặng hơn)
+        - **Thực phẩm nhiều chất béo:** Đồ chiên rán, mỡ động vật
+        - **Thực phẩm chế biến sẵn:** Đồ hộp, thức ăn nhanh
+        - **Thực phẩm sống:** Gỏi, sushi (nguy cơ nhiễm khuẩn)
+        - **Đồ cay:** Kích thích dạ dày
+
+        **5. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo gà + sữa ít béo
+        - **Trưa:** 1 chén cơm + cá hấp + rau luộc + canh rau
+        - **Tối:** 1 chén cơm + thịt gà luộc (bỏ da) + rau luộc + canh
+        - **Bữa phụ:** Trái cây, sữa chua
+
+        **6. Lưu ý:**
+        - Ăn đều đặn, không bỏ bữa
+        - Ăn chậm, nhai kỹ
+        - Chia nhỏ bữa nếu chán ăn
+        - Uống đủ nước (2-3 lít/ngày)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang viêm gan A:**
+        - **Nghỉ ngơi:** Không tập thể dục
+        - Nghỉ hoàn toàn cho đến khi hồi phục
+
+        **2. Sau khi khỏi:**
+        - **Tập thể dục dần:** Tăng dần cường độ
+        - **Đi bộ:** 20-30 phút/ngày
+        - **Tập nhẹ nhàng:** Không gắng sức
+        - **Mục tiêu:** Tăng sức khỏe, phục hồi
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Vệ sinh cá nhân:**
+        - **Rửa tay:** Thường xuyên với xà phòng
+          - Trước khi ăn
+          - Sau khi đi vệ sinh
+          - Sau khi thay tã
+          - Sau khi chăm sóc người bệnh
+        - **Vệ sinh răng miệng:** Đánh răng 2 lần/ngày
+
+        **2. Vệ sinh thực phẩm:**
+        - **Nấu chín:** Thức ăn phải nấu chín kỹ
+        - **Rửa sạch:** Rau, trái cây
+        - **Tránh:** Thức ăn sống, không rõ nguồn gốc
+
+        **3. Nước uống:**
+        - **Đun sôi:** Nước uống phải đun sôi
+        - **Sạch:** Dùng nước sạch
+        - **Tránh:** Nước chưa đun sôi, nước đá không rõ nguồn gốc
+
+        **4. Vệ sinh môi trường:**
+        - Vệ sinh nhà cửa
+        - Xử lý phân đúng cách
+        - Diệt ruồi, gián
+
+        **5. Tiêm vắc xin (QUAN TRỌNG!):**
+        - **Vắc xin viêm gan A:** 2 mũi (0, 6-12 tháng)
+        - **Đối tượng:**
+          - Trẻ em (từ 1 tuổi)
+          - Người đi du lịch vùng có dịch
+          - Người có bệnh gan mạn
+          - Nhân viên y tế
+        - **Hiệu quả:** > 95%
+        - **Bảo vệ:** 20-25 năm (có thể suốt đời)
+
+        **6. Khi có người bệnh:**
+        - Cách ly (không dùng chung đồ dùng)
+        - Vệ sinh tay thường xuyên
+        - Vệ sinh bề mặt, dụng cụ
+        - Rửa tay sau khi chăm sóc
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Viêm gan A nặng:**
+        - Vàng da nặng
+        - Nôn nhiều, không ăn được
+        - Lú lẫn, buồn ngủ
+        - Chảy máu
+
+        **2. Biến chứng (Hiếm):**
+        - Suy gan cấp
+        - Viêm gan tối cấp
+
+        **3. Không cải thiện:**
+        - Triệu chứng kéo dài > 4 tuần
+        - Triệu chứng nặng hơn
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị viêm gan A:**
+        - Nghỉ ngơi hoàn toàn
+        - Uống nhiều nước
+        - Chế độ ăn lành mạnh
+        - Tránh rượu bia hoàn toàn
+        - Vệ sinh tay thường xuyên (tránh lây cho người khác)
+
+        **2. Phòng ngừa:**
+        - Tiêm vắc xin viêm gan A (quan trọng!)
+        - Rửa tay thường xuyên
+        - Vệ sinh thực phẩm
+        - Nước uống sạch
+
+        **3. Sống tích cực:**
+        - Viêm gan A thường tự khỏi
+        - Không gây viêm gan mạn
+        - Phục hồi hoàn toàn sau 2-4 tuần
+        """,
+        related_disease="hepatitis_a",
+        related_drugs=["Paracetamol"],
+        printable=True
+    ),
 ]
