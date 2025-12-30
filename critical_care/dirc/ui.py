@@ -22,18 +22,14 @@ def render_dirc_calculator() -> None:
         "Chuyển đổi liều truyền giữa (mcg/kg/phút) và (mL/giờ) dựa trên cân nặng, nồng độ thuốc. "
         "Hỗ trợ bơm tiêm 50 mL / chai 500 mL và preset cho các thuốc cấp cứu thường dùng."
     )
-    
-    # Tab selection: General DIRC or Cardiovascular Drugs
-    tab1, tab2 = st.tabs([
-        "📝 Chuyển đổi tổng quát",
-        "💉 Thuốc tim mạch cấp cứu"
-    ])
-    
-    with tab1:
-        _render_general_dirc()
-    
-    with tab2:
-        _render_cardiovascular_dirc()
+
+    # Hiển thị lần lượt: DIRC tổng quát + Thuốc tim mạch cấp cứu (trên cùng một tab)
+    st.markdown("### 📝 Chuyển đổi tổng quát (DIRC)")
+    _render_general_dirc()
+
+    st.markdown("---")
+    st.markdown("### 💉 Thuốc tim mạch cấp cứu")
+    _render_cardiovascular_dirc()
 
 
 def _render_general_dirc() -> None:
