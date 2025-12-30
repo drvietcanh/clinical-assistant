@@ -257,7 +257,7 @@ patient_education/
 ## 4. THỐNG KÊ
 
 ### Số lượng topics hiện có:
-- **Disease:** 15 topics
+- **Disease:** 28 topics
   1. Đái tháo đường
   2. Tăng huyết áp
   3. Viêm phổi
@@ -268,17 +268,30 @@ patient_education/
   8. UTI
   9. Thoái hóa khớp
   10. Trầm cảm
-  11. Sốt xuất huyết Dengue (MỚI)
-  12. Bệnh Gout (MỚI)
-  13. Đột quỵ (MỚI)
-  14. Viêm gan B/C (MỚI)
-  15. Lao phổi (MỚI)
+  11. Sốt xuất huyết Dengue
+  12. Bệnh Gout
+  13. Đột quỵ
+  14. Viêm gan B/C
+  15. Lao phổi
+  16. Viêm loét dạ dày tá tràng
+  17. Sỏi thận
+  18. Tay chân miệng
+  19. Cúm
+  20. Viêm khớp dạng thấp
+  21. Nhồi máu cơ tim
+  22. Viêm dạ dày
+  23. Viêm xoang
+  24. Viêm phế quản
+  25. Tiêu chảy cấp
+  26. Viêm mũi dị ứng
+  27. Đau lưng
+  28. Viêm gan A
 
 - **Medication:** 6 topics
 - **Lifestyle:** 5 topics
 - **Procedure:** 3 topics
 
-**Tổng:** 29 topics (15 Disease + 6 Medication + 5 Lifestyle + 3 Procedure)
+**Tổng:** 42 topics (28 Disease + 6 Medication + 5 Lifestyle + 3 Procedure)
 
 ### Độ dài nội dung:
 - Mỗi bệnh đã cập nhật: ~300-800 dòng
@@ -326,14 +339,31 @@ patient_education/
 2. ✅ Viêm gan B/C
 3. ✅ Lao phổi
 
+### Đã bổ sung (hoàn thành):
+1. ✅ Viêm loét dạ dày tá tràng
+2. ✅ Sỏi thận
+3. ✅ Viêm khớp dạng thấp
+4. ✅ Tay chân miệng
+5. ✅ Cúm
+6. ✅ Viêm dạ dày
+7. ✅ Viêm xoang
+8. ✅ Viêm phế quản
+9. ✅ Tiêu chảy cấp
+10. ✅ Viêm mũi dị ứng
+11. ✅ Đau lưng
+12. ✅ Viêm gan A
+
 ### Có thể bổ sung thêm:
-1. Viêm loét dạ dày tá tràng
-2. Sỏi thận
-3. Viêm khớp dạng thấp
-4. Tay chân miệng
-5. Cúm
-6. Viêm dạ dày
-7. Viêm khớp dạng thấp
+1. Viêm da cơ địa
+2. Sốt rét
+3. Bệnh dại
+4. Viêm màng não
+5. Viêm ruột thừa
+6. Viêm tụy
+7. Viêm túi mật
+8. Viêm thận
+9. Viêm bàng quang
+10. Viêm tuyến tiền liệt
 
 ---
 
@@ -356,12 +386,25 @@ patient_education/
 
 ### Đã hoàn thành:
 - ✅ Cập nhật chi tiết 7 bệnh chính
-- ✅ Bổ sung 5 bệnh mới phổ biến ở Việt Nam:
+- ✅ Bổ sung 16 bệnh mới phổ biến ở Việt Nam:
   - Sốt xuất huyết Dengue
   - Bệnh Gout
   - Đột quỵ
   - Viêm gan B/C
   - Lao phổi
+  - Viêm loét dạ dày tá tràng
+  - Sỏi thận
+  - Tay chân miệng
+  - Cúm
+  - Viêm khớp dạng thấp
+  - Nhồi máu cơ tim
+  - Viêm dạ dày
+  - Viêm xoang
+  - Viêm phế quản
+  - Tiêu chảy cấp
+  - Viêm mũi dị ứng
+  - Đau lưng
+  - Viêm gan A
 - ✅ Tất cả nội dung đều có chế độ ăn, tập thể dục, sinh hoạt chi tiết
 - ✅ Thông tin thực tế, phù hợp với thực hành lâm sàng tại Việt Nam
 
@@ -392,7 +435,7 @@ patient_education/
 
 **Ngày:** 2024
 
-### Bổ sung 3 bệnh mới:
+### Bổ sung 3 bệnh mới (Lần 1):
 1. **Đột quỵ (Stroke)**
    - Dấu hiệu FAST
    - Chế độ ăn phòng ngừa tái phát
@@ -415,7 +458,98 @@ patient_education/
 
 ---
 
+### Bổ sung 10 bệnh mới (Lần 2):
+4. **Viêm loét dạ dày tá tràng (Peptic Ulcer)**
+   - Nguyên nhân (H. pylori, NSAIDs)
+   - Điều trị diệt H. pylori
+   - Chế độ ăn: Tránh đồ cay, rượu bia
+   - Phòng ngừa tái phát
+
+5. **Sỏi thận (Kidney Stones)**
+   - Triệu chứng: Đau quặn thận
+   - Nguyên nhân: Thiếu nước, chế độ ăn
+   - Điều trị: Uống nhiều nước, thuốc, tán sỏi
+   - Chế độ ăn theo loại sỏi
+
+6. **Tay chân miệng (Hand Foot Mouth Disease)**
+   - Bệnh trẻ em phổ biến
+   - Triệu chứng: Sốt, nổi ban, loét miệng
+   - Chăm sóc tại nhà
+   - Phòng ngừa: Vệ sinh tay, đồ chơi
+
+7. **Cúm (Influenza)**
+   - Phân biệt với cảm lạnh
+   - Triệu chứng: Sốt cao, đau cơ
+   - Điều trị: Nghỉ ngơi, uống nước
+   - Phòng ngừa: Tiêm vắc xin cúm
+
+8. **Viêm khớp dạng thấp (Rheumatoid Arthritis)**
+   - Bệnh tự miễn
+   - Triệu chứng: Đau khớp đối xứng
+   - Điều trị: DMARDs, sinh học
+   - Tập thể dục, vật lý trị liệu
+
+9. **Nhồi máu cơ tim (Myocardial Infarction)**
+   - Dấu hiệu: Đau ngực, khó thở
+   - Cấp cứu: Gọi 115 ngay
+   - Điều trị: Can thiệp mạch vành
+   - Phòng ngừa: Kiểm soát yếu tố nguy cơ
+
+10. **Viêm dạ dày (Gastritis)**
+    - Nguyên nhân: H. pylori, NSAIDs, rượu
+    - Triệu chứng: Đau bụng, buồn nôn
+    - Chế độ ăn: Nhẹ, dễ tiêu
+    - Tránh rượu bia, thuốc lá
+
+11. **Viêm xoang (Sinusitis)**
+    - Triệu chứng: Nghẹt mũi, đau mặt
+    - Điều trị: Kháng sinh (nếu vi khuẩn)
+    - Rửa mũi bằng nước muối
+    - Phòng ngừa: Tránh cảm lạnh
+
+12. **Viêm phế quản (Bronchitis)**
+    - Cấp tính: Do virus, tự khỏi
+    - Mạn tính: Do hút thuốc
+    - Điều trị: Nghỉ ngơi, uống nước
+    - Bỏ thuốc lá (quan trọng!)
+
+13. **Tiêu chảy cấp (Acute Diarrhea)**
+    - Nguyên nhân: Nhiễm khuẩn, virus
+    - Điều trị: Bù nước (Oresol)
+    - Chế độ ăn: BRAT diet
+    - Phòng ngừa: Vệ sinh tay, thực phẩm
+
+**Tổng số bệnh:** 25 bệnh (tăng từ 15)
+
+---
+
+### Bổ sung 3 bệnh mới (Lần 3):
+14. **Viêm mũi dị ứng (Allergic Rhinitis)**
+    - Phân loại: Theo mùa, quanh năm
+    - Triệu chứng: Hắt hơi, chảy nước mũi, nghẹt mũi
+    - Điều trị: Tránh dị nguyên, corticosteroid xịt mũi, antihistamine
+    - Chế độ ăn: Chống viêm (cá béo, rau xanh)
+    - Phòng ngừa: Vệ sinh môi trường, tiêm miễn dịch trị liệu
+
+15. **Đau lưng (Back Pain)**
+    - Nguyên nhân: Căng cơ, thoái hóa, thoát vị đĩa đệm
+    - Điều trị: Nghỉ ngơi, thuốc giảm đau, vật lý trị liệu
+    - Tư thế đúng: Ngồi, đứng, nâng vật
+    - Tập thể dục: Tăng cường cơ lưng, bụng
+    - Phòng ngừa: Tư thế đúng, tập thể dục, giảm cân
+
+16. **Viêm gan A (Hepatitis A)**
+    - Lây qua đường tiêu hóa (phân-miệng)
+    - Triệu chứng: Vàng da, mệt mỏi, chán ăn
+    - Điều trị: Hỗ trợ (nghỉ ngơi, uống nước)
+    - Chế độ ăn: Bảo vệ gan, tránh rượu bia
+    - Phòng ngừa: Vệ sinh, tiêm vắc xin viêm gan A
+
+**Tổng số bệnh:** 28 bệnh (tăng từ 25)
+
+---
+
 **Người thực hiện:** AI Assistant
 **Ngày cập nhật cuối:** 2024
-**Trạng thái:** ✅ Đã bổ sung 5 bệnh mới, còn 3 bệnh cần cập nhật chi tiết
+**Trạng thái:** ✅ Đã bổ sung 16 bệnh mới (từ 12 → 28 bệnh), tất cả đều có nội dung chi tiết
 
