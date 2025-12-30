@@ -2719,4 +2719,827 @@ Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng th
         related_drugs=["Colchicine", "Allopurinol", "Ibuprofen"],
         printable=True
     ),
+    
+    # === STROKE ===
+    PatientEducationTopic(
+        id="stroke_basics",
+        title="Understanding Stroke",
+        title_vn="Hiểu về Đột quỵ",
+        category="Disease",
+        content="""
+        # Hiểu về Đột quỵ
+
+        ## Đột quỵ là gì?
+
+        Đột quỵ (Tai biến mạch máu não) xảy ra khi mạch máu não bị tắc nghẽn hoặc vỡ, làm gián đoạn lưu thông máu đến não, gây tổn thương não.
+
+        **⚠️ Đặc điểm:**
+        - Cấp cứu y tế! Thời gian = Não
+        - Có thể gây tử vong hoặc tàn tật vĩnh viễn
+        - Phát hiện và điều trị sớm → Giảm tổn thương
+
+        **Có 2 loại:**
+        - **Đột quỵ thiếu máu cục bộ (80%):** Tắc mạch máu não
+        - **Đột quỵ xuất huyết (20%):** Vỡ mạch máu não
+
+        ## Triệu chứng (FAST):
+
+        **⚠️ QUAN TRỌNG:** Nhận biết sớm triệu chứng → Cứu sống!
+
+        **F - Face (Mặt):**
+        - Mặt lệch một bên
+        - Miệng méo
+        - Không cười được đều
+
+        **A - Arms (Tay):**
+        - Yếu hoặc tê liệt một bên tay/chân
+        - Không giơ được tay lên
+        - Rơi đồ vật
+
+        **S - Speech (Lời nói):**
+        - Nói khó, nói ngọng
+        - Không hiểu lời nói
+        - Nói lắp, nói không rõ
+
+        **T - Time (Thời gian):**
+        - **Gọi cấp cứu ngay!** (115)
+        - Thời gian = Não
+        - Điều trị trong 4.5 giờ đầu → Hiệu quả tốt nhất
+
+        **Triệu chứng khác:**
+        - Mất thị lực một hoặc cả hai mắt
+        - Chóng mặt, mất thăng bằng
+        - Đau đầu dữ dội, đột ngột
+        - Lú lẫn, mất trí nhớ
+        - Khó nuốt
+
+        ## Nguyên nhân:
+
+        **1. Đột quỵ thiếu máu cục bộ:**
+        - **Cục máu đông:** Hình thành trong mạch máu não
+        - **Cục máu đông từ nơi khác:** Tim, động mạch cảnh → Di chuyển lên não
+        - **Hẹp mạch máu:** Xơ vữa động mạch
+
+        **2. Đột quỵ xuất huyết:**
+        - **Tăng huyết áp:** Vỡ mạch máu nhỏ
+        - **Dị dạng mạch máu:** Phình mạch, dị dạng động-tĩnh mạch
+        - **Chấn thương**
+
+        **3. Yếu tố nguy cơ:**
+        - **Tăng huyết áp:** Nguy cơ cao nhất
+        - **Đái tháo đường**
+        - **Rối loạn mỡ máu:** Cholesterol cao
+        - **Hút thuốc lá**
+        - **Rượu bia:** Uống nhiều
+        - **Béo phì, ít vận động**
+        - **Rung nhĩ:** Tạo cục máu đông
+        - **Tuổi cao:** > 55 tuổi
+        - **Tiền sử gia đình**
+
+        ## Chẩn đoán:
+
+        **1. Khám lâm sàng:**
+        - Đánh giá triệu chứng
+        - Kiểm tra thần kinh
+        - Đo huyết áp, nhịp tim
+
+        **2. Chụp CT/MRI não:**
+        - Xác định loại đột quỵ
+        - Vị trí tổn thương
+        - Mức độ tổn thương
+
+        **3. Xét nghiệm:**
+        - Công thức máu
+        - Đường huyết
+        - Chức năng đông máu
+        - Lipid máu
+
+        **4. Siêu âm:**
+        - Siêu âm động mạch cảnh
+        - Siêu âm tim (tìm cục máu đông)
+
+        ## Điều trị:
+
+        **1. Cấp cứu (Trong 4.5 giờ đầu):**
+        - **Thuốc tiêu sợi huyết (tPA):** Cho đột quỵ thiếu máu
+          - Phải trong 4.5 giờ đầu
+          - Phá vỡ cục máu đông
+          - **⚠️ QUAN TRỌNG:** Càng sớm càng tốt!
+        - **Lấy huyết khối cơ học:** Dùng ống thông lấy cục máu đông
+        - **Phẫu thuật:** Nếu xuất huyết nặng
+
+        **2. Điều trị hỗ trợ:**
+        - Kiểm soát huyết áp
+        - Kiểm soát đường huyết
+        - Chống phù não
+        - Phòng ngừa biến chứng
+
+        **3. Phục hồi chức năng:**
+        - Vật lý trị liệu
+        - Ngôn ngữ trị liệu
+        - Hoạt động trị liệu
+        - Bắt đầu sớm (sau 24-48 giờ)
+
+        ## 🍽️ CHẾ ĐỘ ĂN SAU ĐỘT QUỴ:
+
+        **1. Nguyên tắc:**
+        - **Phòng ngừa tái phát:** Quan trọng nhất!
+        - **Giảm muối:** < 5g/ngày
+        - **Giảm chất béo bão hòa:** Giảm cholesterol
+        - **Tăng rau xanh, trái cây:** Chất xơ, vitamin
+        - **Đủ protein:** Giúp phục hồi
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Rau xanh:** Nhiều (rau cải, rau muống, bông cải)
+        - **Trái cây:** Tất cả (cam, bưởi, táo, chuối)
+        - **Cá:** Cá hồi, cá thu (omega-3, 2-3 lần/tuần)
+        - **Thịt nạc:** Thịt gà (bỏ da), thịt bò nạc
+        - **Ngũ cốc nguyên hạt:** Gạo lứt, yến mạch, bánh mì đen
+        - **Đậu, đậu phụ:** Protein thực vật
+        - **Sữa ít béo:** Sữa tách béo, sữa chua
+        - **Dầu thực vật:** Dầu ô liu, dầu hạt cải
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Muối nhiều:** Dưa muối, cà muối, đồ hộp, thức ăn nhanh
+        - **Chất béo bão hòa:** Mỡ động vật, thịt mỡ, bơ
+        - **Thực phẩm chế biến sẵn:** Xúc xích, thịt nguội, đồ hộp
+        - **Đồ chiên rán:** Nhiều dầu mỡ
+        - **Rượu bia:** Hạn chế tối đa
+        - **Đường nhiều:** Bánh kẹo, nước ngọt
+
+        **4. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo yến mạch + 1 quả trứng luộc + sữa ít béo
+        - **Trưa:** 1 chén cơm gạo lứt + cá hấp + rau luộc + canh rau
+        - **Tối:** 1 chén cơm gạo lứt + thịt gà luộc (bỏ da) + rau xào (ít dầu) + canh
+        - **Bữa phụ:** Trái cây, sữa chua
+
+        **5. Lưu ý khi ăn (Nếu có khó nuốt):**
+        - Ăn thức ăn mềm, dễ nuốt
+        - Ăn chậm, nhai kỹ
+        - Ngồi thẳng khi ăn
+        - Nghỉ giữa các miếng ăn
+        - Uống nước sau ăn (tránh sặc)
+
+        ## 🏃 TẬP THỂ DỤC SAU ĐỘT QUỴ:
+
+        **⚠️ QUAN TRỌNG:** Phục hồi chức năng bắt đầu sớm (sau 24-48 giờ)!
+
+        **1. Vật lý trị liệu:**
+        - **Bắt đầu:** Sau 24-48 giờ (nếu ổn định)
+        - **Tần suất:** Hàng ngày, có hướng dẫn
+        - **Mục tiêu:** Phục hồi vận động, thăng bằng
+
+        **2. Tập vận động:**
+        - **Tập tay/chân yếu:** Cử động thụ động → Chủ động
+        - **Tập đi:** Với nạng, khung tập đi
+        - **Tập thăng bằng:** Ngồi, đứng
+        - **Tập phối hợp:** Tay-mắt, tay-chân
+
+        **3. Tập tại nhà:**
+        - **Đi bộ:** Bắt đầu 5-10 phút, tăng dần
+        - **Tập tay:** Nâng tạ nhẹ, tập với dây kháng lực
+        - **Tập thăng bằng:** Đứng một chân, đi trên đường thẳng
+        - **Yoga, thái cực quyền:** Nhẹ nhàng, thư giãn
+
+        **4. Lưu ý:**
+        - Tập vừa sức, không gắng sức
+        - Nghỉ khi mệt
+        - Có người hỗ trợ khi cần
+        - Dừng ngay nếu: Đau ngực, chóng mặt, khó thở
+
+        **5. Lợi ích:**
+        - Phục hồi chức năng vận động
+        - Giảm co cứng cơ
+        - Tăng sức mạnh
+        - Cải thiện thăng bằng
+        - Phòng ngừa tái phát
+
+        ## 🛡️ PHÒNG NGỪA TÁI PHÁT:
+
+        **1. Kiểm soát huyết áp:**
+        - **Mục tiêu:** < 130/80 mmHg
+        - Đo huyết áp hàng ngày
+        - Uống thuốc đúng giờ
+        - Chế độ ăn ít muối
+
+        **2. Kiểm soát đường huyết:**
+        - Nếu có đái tháo đường
+        - HbA1c < 7%
+        - Chế độ ăn phù hợp
+
+        **3. Kiểm soát cholesterol:**
+        - LDL < 100 mg/dL (hoặc < 70 nếu nguy cơ cao)
+        - Chế độ ăn ít chất béo bão hòa
+        - Uống thuốc statin (nếu cần)
+
+        **4. Bỏ thuốc lá:**
+        - Hút thuốc → Tăng nguy cơ đột quỵ 2-4 lần
+        - Bỏ thuốc → Giảm nguy cơ đáng kể
+
+        **5. Hạn chế rượu bia:**
+        - **Nam:** Tối đa 2 ly/ngày
+        - **Nữ:** Tối đa 1 ly/ngày
+        - Hoặc bỏ hoàn toàn (tốt nhất)
+
+        **6. Tập thể dục:**
+        - 30 phút/ngày, ít nhất 5 ngày/tuần
+        - Đi bộ, bơi, đạp xe
+        - Vừa phải, không gắng sức
+
+        **7. Giảm cân:**
+        - Nếu thừa cân
+        - BMI 18.5-24.9
+        - Giảm từ từ
+
+        **8. Uống thuốc đúng giờ:**
+        - **Aspirin:** Phòng ngừa (nếu bác sĩ chỉ định)
+        - **Thuốc huyết áp:** Hàng ngày
+        - **Statin:** Giảm cholesterol
+        - **Không tự ý ngừng!**
+
+        ## 🚨 KHI NÀO CẦN CẤP CỨU:
+
+        **Dấu hiệu đột quỵ (FAST):**
+        - **F - Face:** Mặt lệch
+        - **A - Arms:** Tay yếu
+        - **S - Speech:** Nói khó
+        - **T - Time:** Gọi cấp cứu ngay!
+
+        **Triệu chứng khác:**
+        - Mất thị lực đột ngột
+        - Chóng mặt, mất thăng bằng
+        - Đau đầu dữ dội, đột ngột
+        - Lú lẫn, mất trí nhớ
+
+        **⚠️ QUAN TRỌNG:**
+        - **Gọi cấp cứu ngay:** 115
+        - **Không tự lái xe:** Nguy hiểm!
+        - **Ghi nhớ thời gian:** Khi nào bắt đầu triệu chứng
+        - **Thời gian = Não:** Càng sớm càng tốt!
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - Kiểm soát các yếu tố nguy cơ
+        - Chế độ ăn lành mạnh
+        - Tập thể dục đều đặn
+        - Không hút thuốc
+        - Khám sức khỏe định kỳ
+
+        **2. Sau đột quỵ:**
+        - Tuân thủ điều trị
+        - Phục hồi chức năng tích cực
+        - Phòng ngừa tái phát
+        - Hỗ trợ từ gia đình
+
+        **3. Hỗ trợ:**
+        - Nói với gia đình về bệnh
+        - Tham gia nhóm hỗ trợ (nếu có)
+        - Tâm lý trị liệu nếu cần
+
+        **4. Sống tích cực:**
+        - Đột quỵ có thể phục hồi
+        - Phục hồi chức năng tích cực → Cải thiện đáng kể
+        - Đừng từ bỏ hy vọng
+        """,
+        related_disease="stroke",
+        related_drugs=["Aspirin", "tPA", "Atorvastatin"],
+        printable=True
+    ),
+    
+    # === HEPATITIS B/C ===
+    PatientEducationTopic(
+        id="hepatitis_bc_basics",
+        title="Understanding Hepatitis B and C",
+        title_vn="Hiểu về Viêm gan B và C",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm gan B và C
+
+        ## Viêm gan B và C là gì?
+
+        Viêm gan B và C là bệnh nhiễm trùng gan do virus, có thể gây viêm gan cấp hoặc mạn tính, dẫn đến xơ gan, ung thư gan.
+
+        **Viêm gan B (HBV):**
+        - Có vắc xin phòng ngừa
+        - Có thể chữa khỏi hoặc kiểm soát
+        - Lây qua máu, quan hệ tình dục, từ mẹ sang con
+
+        **Viêm gan C (HCV):**
+        - Chưa có vắc xin
+        - Có thể chữa khỏi hoàn toàn (90-95%)
+        - Lây chủ yếu qua máu
+
+        **⚠️ Đặc điểm:**
+        - Nhiều người không có triệu chứng
+        - Có thể tiến triển thành xơ gan, ung thư gan
+        - Phát hiện sớm → Điều trị hiệu quả
+
+        ## Triệu chứng:
+
+        **Viêm gan cấp:**
+        - **Mệt mỏi:** Uể oải, không có sức
+        - **Chán ăn:** Không muốn ăn
+        - **Vàng da, vàng mắt:** Dấu hiệu điển hình
+        - **Nước tiểu sẫm màu:** Như nước trà đặc
+        - **Phân nhạt màu:** Trắng, xám
+        - **Đau bụng:** Vùng gan (bên phải)
+        - **Buồn nôn, nôn**
+        - **Sốt nhẹ**
+
+        **Viêm gan mạn:**
+        - **Thường không có triệu chứng** (nguy hiểm!)
+        - Mệt mỏi nhẹ
+        - Đau tức vùng gan
+        - Có thể tiến triển thành xơ gan, ung thư gan
+
+        **⚠️ Lưu ý:** Nhiều người không biết mình bị viêm gan cho đến khi có biến chứng!
+
+        ## Nguyên nhân và đường lây:
+
+        **1. Viêm gan B:**
+        - **Máu:** Dùng chung kim tiêm, dao cạo, bàn chải đánh răng
+        - **Quan hệ tình dục:** Không an toàn
+        - **Từ mẹ sang con:** Khi sinh
+        - **Vết thương:** Tiếp xúc với máu người bệnh
+        - **Dụng cụ y tế:** Không vô trùng
+
+        **2. Viêm gan C:**
+        - **Máu:** Chủ yếu (dùng chung kim tiêm)
+        - **Quan hệ tình dục:** Ít hơn (nhưng vẫn có)
+        - **Từ mẹ sang con:** Hiếm
+        - **Dụng cụ y tế:** Không vô trùng
+
+        **3. KHÔNG lây qua:**
+        - Ôm, hôn
+        - Dùng chung bát đĩa
+        - Ho, hắt hơi
+        - Muỗi đốt
+        - Cho con bú (nếu núm vú không chảy máu)
+
+        ## Chẩn đoán:
+
+        **1. Xét nghiệm máu:**
+        - **Viêm gan B:**
+          - HBsAg: Kháng nguyên bề mặt
+          - Anti-HBc: Kháng thể lõi
+          - HBV DNA: Tải lượng virus
+        - **Viêm gan C:**
+          - Anti-HCV: Kháng thể
+          - HCV RNA: Tải lượng virus
+
+        **2. Đánh giá chức năng gan:**
+        - AST, ALT: Men gan
+        - Bilirubin: Vàng da
+        - Albumin: Chức năng gan
+        - PT/INR: Đông máu
+
+        **3. Đánh giá tổn thương gan:**
+        - **Siêu âm gan:** Xem cấu trúc gan
+        - **FibroScan:** Đo độ xơ hóa gan
+        - **Sinh thiết gan:** (nếu cần)
+
+        ## Điều trị:
+
+        **1. Viêm gan B:**
+        - **Thuốc kháng virus:**
+          - Tenofovir
+          - Entecavir
+          - Lamivudine
+        - **Mục tiêu:** Ức chế virus, giảm tổn thương gan
+        - **Thời gian:** Thường uống lâu dài
+        - **⚠️ QUAN TRỌNG:** Uống đúng giờ, không tự ý ngừng
+
+        **2. Viêm gan C:**
+        - **Thuốc kháng virus trực tiếp (DAA):**
+          - Sofosbuvir + Velpatasvir
+          - Glecaprevir + Pibrentasvir
+        - **Thời gian:** 8-12 tuần
+        - **Tỷ lệ chữa khỏi:** 90-95%
+        - **⚠️ QUAN TRỌNG:** Uống đúng giờ, đủ ngày
+
+        **3. Điều trị hỗ trợ:**
+        - Nghỉ ngơi
+        - Chế độ ăn phù hợp
+        - Tránh rượu bia, thuốc lá
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI VIÊM GAN:
+
+        **1. Nguyên tắc:**
+        - **Bảo vệ gan:** Tránh gánh nặng cho gan
+        - **Đủ dinh dưỡng:** Giúp gan phục hồi
+        - **Dễ tiêu:** Tránh đồ khó tiêu
+        - **Tránh rượu bia:** Hoàn toàn!
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Protein nạc:** Thịt gà (bỏ da), cá, đậu phụ
+          - Giúp phục hồi tế bào gan
+          - 1-1.5g/kg cân nặng/ngày
+        - **Rau xanh:** Nhiều (rau cải, rau muống, bông cải)
+          - Vitamin, chất xơ
+          - Chống oxy hóa
+        - **Trái cây:** Tất cả (cam, bưởi, táo)
+          - Vitamin C
+        - **Ngũ cốc:** Gạo, bánh mì, yến mạch
+          - Năng lượng
+        - **Sữa ít béo:** Sữa tách béo, sữa chua
+        - **Dầu thực vật:** Dầu ô liu, dầu hạt cải (ít)
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Rượu bia:** HOÀN TOÀN! (làm tổn thương gan nặng hơn)
+        - **Thực phẩm nhiều chất béo:** Đồ chiên rán, mỡ động vật
+        - **Thực phẩm chế biến sẵn:** Đồ hộp, thức ăn nhanh
+        - **Thực phẩm sống:** Gỏi, sushi (nguy cơ nhiễm khuẩn)
+        - **Muối nhiều:** Nếu có xơ gan, cổ trướng
+        - **Đường nhiều:** Bánh kẹo, nước ngọt
+
+        **4. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo yến mạch + 1 quả trứng luộc + sữa ít béo
+        - **Trưa:** 1 chén cơm + cá hấp + rau luộc + canh rau
+        - **Tối:** 1 chén cơm + thịt gà luộc (bỏ da) + rau xào (ít dầu) + canh
+        - **Bữa phụ:** Trái cây, sữa chua
+
+        **5. Lưu ý:**
+        - Ăn đều đặn, không bỏ bữa
+        - Ăn chậm, nhai kỹ
+        - Chia nhỏ bữa nếu chán ăn
+        - Uống đủ nước (1.5-2 lít/ngày)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi viêm gan cấp:**
+        - **Nghỉ ngơi:** Không tập thể dục
+        - Nghỉ hoàn toàn cho đến khi hồi phục
+
+        **2. Khi viêm gan mạn (ổn định):**
+        - **Tập thể dục nhẹ nhàng:** Đi bộ, yoga, thái cực quyền
+        - **Thời gian:** 20-30 phút/ngày
+        - **Tần suất:** 3-5 lần/tuần
+        - **Tránh:** Tập quá sức, gắng sức
+
+        **3. Lợi ích:**
+        - Tăng sức khỏe
+        - Giảm mệt mỏi
+        - Cải thiện tâm trạng
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Viêm gan B:**
+        - **Tiêm vắc xin:** Quan trọng nhất!
+          - Trẻ sơ sinh: Tiêm ngay sau sinh
+          - Người lớn: 3 mũi (0, 1, 6 tháng)
+          - Hiệu quả > 95%
+        - **Kiểm tra:** Xét nghiệm trước khi tiêm
+
+        **2. Viêm gan C:**
+        - **Chưa có vắc xin**
+        - Phòng ngừa bằng cách tránh lây nhiễm
+
+        **3. Tránh lây nhiễm:**
+        - **Không dùng chung:** Kim tiêm, dao cạo, bàn chải đánh răng
+        - **Quan hệ tình dục an toàn:** Dùng bao cao su
+        - **Dụng cụ y tế:** Đảm bảo vô trùng
+        - **Kiểm tra máu:** Trước khi truyền
+
+        **4. Nếu đã bị viêm gan:**
+        - **Không cho máu**
+        - **Báo cho người thân:** Để phòng ngừa
+        - **Không dùng chung:** Đồ dùng cá nhân
+        - **Bảo vệ người khác:** Tránh lây lan
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Viêm gan B:**
+        - **Uống đúng giờ:** Hàng ngày
+        - **Không tự ý ngừng:** Ngừng → Virus tái hoạt động
+        - **Theo dõi:** Xét nghiệm định kỳ (3-6 tháng)
+        - **Tác dụng phụ:** Ít, nhưng báo bác sĩ nếu có
+
+        **2. Viêm gan C:**
+        - **Uống đúng giờ:** Hàng ngày
+        - **Uống đủ ngày:** 8-12 tuần (quan trọng!)
+        - **Không tự ý ngừng:** Ngừng → Không chữa khỏi
+        - **Tác dụng phụ:** Mệt mỏi, đau đầu (thường nhẹ)
+
+        **3. Tương tác thuốc:**
+        - Báo bác sĩ TẤT CẢ thuốc đang dùng
+        - Một số thuốc tương tác với thuốc viêm gan
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Viêm gan cấp nặng:**
+        - Vàng da nặng
+        - Nôn nhiều, không ăn được
+        - Lú lẫn, buồn ngủ
+        - Chảy máu
+
+        **2. Biến chứng:**
+        - Xơ gan: Phù chân, cổ trướng
+        - Ung thư gan: Đau bụng, sụt cân
+
+        **3. Tác dụng phụ thuốc:**
+        - Nghiêm trọng, không chịu được
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Nếu chưa bị:**
+        - Tiêm vắc xin viêm gan B
+        - Tránh lây nhiễm
+        - Khám sức khỏe định kỳ
+
+        **2. Nếu đã bị:**
+        - Tuân thủ điều trị
+        - Không uống rượu bia
+        - Chế độ ăn lành mạnh
+        - Khám định kỳ
+        - Bảo vệ người khác
+
+        **3. Sống tích cực:**
+        - Viêm gan có thể kiểm soát/chữa khỏi
+        - Tuân thủ điều trị → Sống khỏe mạnh
+        - Đừng để bệnh ảnh hưởng cuộc sống
+        """,
+        related_disease="hepatitis_bc",
+        related_drugs=["Tenofovir", "Entecavir", "Sofosbuvir"],
+        printable=True
+    ),
+    
+    # === TUBERCULOSIS ===
+    PatientEducationTopic(
+        id="tuberculosis_basics",
+        title="Understanding Tuberculosis",
+        title_vn="Hiểu về Lao phổi",
+        category="Disease",
+        content="""
+        # Hiểu về Lao phổi
+
+        ## Lao phổi là gì?
+
+        Lao phổi là bệnh truyền nhiễm do vi khuẩn Mycobacterium tuberculosis gây ra, chủ yếu ảnh hưởng đến phổi nhưng có thể ảnh hưởng đến các cơ quan khác.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh truyền nhiễm, lây qua đường hô hấp
+        - Có thể chữa khỏi hoàn toàn nếu điều trị đúng
+        - Không điều trị → Nguy hiểm, có thể tử vong
+        - Điều trị lâu dài (ít nhất 6 tháng)
+
+        **Phân loại:**
+        - **Lao phổi:** Ảnh hưởng phổi (phổ biến nhất)
+        - **Lao ngoài phổi:** Ảnh hưởng cơ quan khác (lao màng phổi, lao xương, lao màng não)
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Ho kéo dài:** > 2 tuần (dấu hiệu quan trọng nhất!)
+        - **Ho ra máu:** Có thể có
+        - **Sốt nhẹ về chiều:** 37.5-38°C
+        - **Ra mồ hôi đêm:** Ướt đẫm
+        - **Sụt cân:** Không rõ nguyên nhân
+        - **Mệt mỏi:** Uể oải, không có sức
+        - **Chán ăn**
+        - **Đau ngực:** Có thể có
+        - **Khó thở:** Khi bệnh nặng
+
+        **⚠️ Lưu ý:**
+        - Ho > 2 tuần → Cần nghĩ đến lao
+        - Nhiều người không có triệu chứng rõ ràng
+        - Cần xét nghiệm để chẩn đoán
+
+        ## Nguyên nhân và đường lây:
+
+        **1. Nguyên nhân:**
+        - Vi khuẩn Mycobacterium tuberculosis
+        - Lây qua đường hô hấp
+
+        **2. Đường lây:**
+        - **Ho, hắt hơi:** Người bệnh ho → Giọt bắn chứa vi khuẩn
+        - **Nói chuyện:** Gần, lâu
+        - **Hít phải:** Vi khuẩn vào phổi
+
+        **3. Yếu tố nguy cơ:**
+        - **Tiếp xúc gần:** Sống chung, làm việc chung với người lao
+        - **Suy giảm miễn dịch:** HIV, đái tháo đường, dùng thuốc ức chế miễn dịch
+        - **Điều kiện sống:** Chật chội, thiếu ánh sáng, thiếu thông khí
+        - **Suy dinh dưỡng**
+        - **Hút thuốc lá**
+
+        **4. KHÔNG lây qua:**
+        - Ôm, hôn
+        - Dùng chung bát đĩa
+        - Muỗi đốt
+        - Quần áo
+
+        ## Chẩn đoán:
+
+        **1. Xét nghiệm đờm:**
+        - **AFB (Acid Fast Bacilli):** Tìm vi khuẩn lao trong đờm
+          - Lấy đờm 3 lần (sáng sớm, trước ăn)
+          - Kết quả trong 1-2 ngày
+        - **Xpert MTB/RIF:** Xét nghiệm nhanh, chính xác
+          - Phát hiện vi khuẩn lao và kháng rifampicin
+          - Kết quả trong vài giờ
+
+        **2. Chụp X-quang phổi:**
+        - Tìm tổn thương phổi
+        - Đánh giá mức độ bệnh
+
+        **3. Test Mantoux (Tuberculin skin test):**
+        - Kiểm tra phản ứng với lao
+        - Dương tính → Có thể đã tiếp xúc với lao
+
+        **4. Xét nghiệm máu (IGRA):**
+        - Phát hiện lao tiềm ẩn
+
+        ## Điều trị:
+
+        **⚠️ QUAN TRỌNG:** Lao phải điều trị đúng, đủ thời gian!
+
+        **1. Phác đồ điều trị chuẩn:**
+        - **Giai đoạn tấn công (2 tháng đầu):**
+          - Isoniazid (H)
+          - Rifampicin (R)
+          - Pyrazinamide (Z)
+          - Ethambutol (E)
+        - **Giai đoạn duy trì (4 tháng tiếp):**
+          - Isoniazid (H)
+          - Rifampicin (R)
+        - **Tổng thời gian:** 6 tháng (ít nhất)
+
+        **2. Điều trị dưới sự giám sát (DOT):**
+        - Uống thuốc dưới sự giám sát của nhân viên y tế
+        - Đảm bảo uống đúng, đủ
+        - Phòng ngừa kháng thuốc
+
+        **3. ⚠️ QUAN TRỌNG:**
+        - **Uống đúng giờ:** Hàng ngày
+        - **Uống đủ thời gian:** 6 tháng (ít nhất)
+        - **Không tự ý ngừng:** Ngừng → Kháng thuốc, bệnh nặng hơn
+        - **Uống khi đói:** Trước ăn 1 giờ hoặc sau ăn 2 giờ
+
+        **4. Điều trị lao kháng thuốc:**
+        - Nếu kháng thuốc → Phác đồ đặc biệt
+        - Thời gian điều trị lâu hơn (18-24 tháng)
+        - Thuốc khác, nhiều tác dụng phụ hơn
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI BỊ LAO:
+
+        **1. Nguyên tắc:**
+        - **Đủ dinh dưỡng:** Giúp cơ thể chống lại bệnh
+        - **Tăng calo:** Bù lại sụt cân
+        - **Đủ protein:** Phục hồi tế bào
+        - **Vitamin, khoáng chất:** Tăng miễn dịch
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Protein:** Thịt nạc, cá, trứng, đậu, sữa
+          - Giúp phục hồi, tăng miễn dịch
+          - 1.5-2g/kg cân nặng/ngày
+        - **Carbohydrate:** Gạo, bánh mì, khoai
+          - Năng lượng
+        - **Rau xanh:** Nhiều (rau cải, rau muống, bông cải)
+          - Vitamin, chất xơ
+        - **Trái cây:** Tất cả (cam, bưởi, ổi)
+          - Vitamin C (tăng miễn dịch)
+        - **Sữa, sữa chua:** Protein, canxi
+        - **Các loại hạt:** Hạnh nhân, óc chó (nếu có)
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Rượu bia:** Làm giảm miễn dịch, tăng tác dụng phụ thuốc
+        - **Thuốc lá:** Làm tổn thương phổi nặng hơn
+        - **Thực phẩm chế biến sẵn:** Ít dinh dưỡng
+        - **Đồ chiên, nhiều dầu mỡ:** Khó tiêu
+
+        **4. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo thịt bằm + 1 quả trứng luộc + sữa
+        - **Bữa phụ (10h):** Sữa chua, trái cây
+        - **Trưa:** 1.5 chén cơm + thịt gà kho + rau luộc + canh thịt
+        - **Bữa phụ (15h):** Sữa, bánh mì
+        - **Tối:** 1.5 chén cơm + cá kho + rau xào + canh
+        - **Bữa phụ (21h):** Sữa ấm
+
+        **5. Lưu ý:**
+        - Ăn nhiều bữa nhỏ (5-6 bữa/ngày) nếu chán ăn
+        - Ăn đủ chất, không kiêng khem
+        - Uống đủ nước (2-3 lít/ngày)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang điều trị:**
+        - **Nghỉ ngơi:** Nghỉ nhiều, không gắng sức
+        - **Tập nhẹ nhàng:** Đi bộ nhẹ, 10-15 phút/ngày
+        - **Tránh:** Tập quá sức, gắng sức
+
+        **2. Sau khi khỏi:**
+        - **Tập thể dục dần:** Tăng dần cường độ
+        - **Đi bộ:** 20-30 phút/ngày
+        - **Tập thở:** Phục hồi chức năng phổi
+        - **Mục tiêu:** Tăng sức khỏe, phục hồi
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Tiêm vắc xin BCG:**
+        - Tiêm cho trẻ sơ sinh
+        - Phòng ngừa lao nặng ở trẻ em
+        - Không phòng ngừa lao phổi ở người lớn
+
+        **2. Phát hiện và điều trị sớm:**
+        - Phát hiện sớm → Điều trị sớm → Giảm lây lan
+        - Nếu ho > 2 tuần → Đi khám, xét nghiệm đờm
+
+        **3. Điều trị lao tiềm ẩn:**
+        - Nếu tiếp xúc với người lao → Xét nghiệm
+        - Nếu có lao tiềm ẩn → Điều trị dự phòng
+
+        **4. Tránh lây nhiễm:**
+        - **Người bệnh:**
+          - Đeo khẩu trang khi ra ngoài
+          - Che miệng khi ho, hắt hơi
+          - Ở phòng riêng, thông thoáng
+          - Không khạc nhổ bừa bãi
+        - **Người khỏe:**
+          - Đeo khẩu trang khi tiếp xúc người lao
+          - Tránh nơi đông người, thiếu thông khí
+          - Giữ vệ sinh môi trường
+
+        **5. Cải thiện điều kiện sống:**
+        - Thông thoáng, có ánh sáng
+        - Không chật chội
+        - Vệ sinh môi trường
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **⚠️ QUAN TRỌNG:** Uống thuốc đúng, đủ thời gian!
+
+        **1. Uống đúng giờ:**
+        - Hàng ngày, cùng một giờ
+        - Uống khi đói (trước ăn 1 giờ hoặc sau ăn 2 giờ)
+        - Đặt báo thức nhắc nhở
+
+        **2. Uống đủ thời gian:**
+        - 6 tháng (ít nhất)
+        - Không tự ý ngừng
+        - Ngừng sớm → Kháng thuốc, bệnh nặng hơn
+
+        **3. Tác dụng phụ:**
+        - **Isoniazid:** Tổn thương thần kinh (dùng thêm vitamin B6)
+        - **Rifampicin:** Nước tiểu đỏ (bình thường), đau dạ dày
+        - **Pyrazinamide:** Đau khớp, tăng acid uric
+        - **Ethambutol:** Tổn thương mắt (kiểm tra mắt định kỳ)
+        - **Báo bác sĩ nếu:** Tác dụng phụ nghiêm trọng
+
+        **4. Tương tác thuốc:**
+        - Báo bác sĩ TẤT CẢ thuốc đang dùng
+        - Một số thuốc tương tác với thuốc lao
+
+        **5. Điều trị dưới sự giám sát (DOT):**
+        - Uống thuốc trước mặt nhân viên y tế
+        - Đảm bảo uống đúng, đủ
+        - Phòng ngừa kháng thuốc
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng nặng:**
+        - Ho ra máu nhiều
+        - Khó thở nặng
+        - Sốt cao, không hạ
+        - Đau ngực dữ dội
+
+        **2. Tác dụng phụ thuốc:**
+        - Nghiêm trọng, không chịu được
+        - Tổn thương mắt (nhìn mờ)
+        - Vàng da, vàng mắt
+
+        **3. Không cải thiện:**
+        - Sau 2-3 tháng điều trị
+        - Triệu chứng không giảm
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị lao:**
+        - Tuân thủ điều trị nghiêm ngặt
+        - Uống thuốc đúng, đủ thời gian
+        - Chế độ ăn đủ chất
+        - Nghỉ ngơi nhiều
+        - Bảo vệ người khác (đeo khẩu trang, không khạc nhổ bừa bãi)
+
+        **2. Phòng ngừa:**
+        - Tiêm BCG cho trẻ
+        - Phát hiện sớm (ho > 2 tuần → Khám)
+        - Tránh tiếp xúc với người lao
+        - Cải thiện điều kiện sống
+
+        **3. Sống tích cực:**
+        - Lao có thể chữa khỏi hoàn toàn
+        - Tuân thủ điều trị → Khỏi bệnh
+        - Đừng lo lắng quá mức
+        - Hỗ trợ từ gia đình, xã hội
+
+        **4. Không kỳ thị:**
+        - Lao là bệnh có thể chữa khỏi
+        - Người bệnh cần được hỗ trợ, không kỳ thị
+        - Điều trị đúng → Không còn lây sau 2-3 tuần
+        """,
+        related_disease="tuberculosis",
+        related_drugs=["Isoniazid", "Rifampicin", "Pyrazinamide", "Ethambutol"],
+        printable=True
+    ),
 ]
