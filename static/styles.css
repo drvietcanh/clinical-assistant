@@ -1053,6 +1053,121 @@ html {
     outline-offset: 2px;
 }
 
+/* ========== FIX STREAMLIT WIDGETS RENDERING (Prevent text overlap) ========== */
+/* Fix selectbox dropdown arrow and text rendering */
+.stSelectbox > div > div > div,
+.stSelectbox > div > div > select {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                 'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                 'Helvetica Neue', sans-serif !important;
+    font-size: 16px !important;
+    color: var(--text-primary) !important;
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border) !important;
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+}
+
+/* Hide default select arrow and add custom one */
+.stSelectbox > div > div > div::after,
+.stSelectbox > div > div > select::after {
+    display: none !important;
+}
+
+/* Fix selectbox dropdown arrow icon */
+.stSelectbox > div > div > div[data-baseweb="select"]::before,
+.stSelectbox > div > div > div[data-baseweb="select"]::after {
+    content: none !important;
+}
+
+/* Ensure selectbox value text is visible */
+.stSelectbox > div > div > div > div,
+.stSelectbox > div > div > select > option {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                 'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                 'Helvetica Neue', sans-serif !important;
+    font-size: 16px !important;
+    color: var(--text-primary) !important;
+    background: var(--card-bg) !important;
+    padding: 0 !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+}
+
+/* Fix radio button text rendering */
+.stRadio > label {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                 'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                 'Helvetica Neue', sans-serif !important;
+    font-size: 16px !important;
+    color: var(--text-primary) !important;
+    line-height: 1.5 !important;
+}
+
+.stRadio > label > div {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                 'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                 'Helvetica Neue', sans-serif !important;
+    font-size: 16px !important;
+    color: var(--text-primary) !important;
+    text-overflow: ellipsis !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+}
+
+/* Remove any pseudo-elements that might cause text overlap */
+.stSelectbox *::before,
+.stSelectbox *::after,
+.stTextInput *::before,
+.stTextInput *::after,
+.stRadio *::before,
+.stRadio *::after {
+    content: none !important;
+}
+
+/* Fix BaseWeb select component (Streamlit uses BaseWeb) */
+[data-baseweb="select"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                 'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                 'Helvetica Neue', sans-serif !important;
+}
+
+[data-baseweb="select"] > div {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                 'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                 'Helvetica Neue', sans-serif !important;
+    font-size: 16px !important;
+    color: var(--text-primary) !important;
+}
+
+/* Hide any Material Icons or icon fonts that might interfere */
+.stSelectbox .material-icons,
+.stSelectbox .material-icons-outlined,
+.stSelectbox [class*="icon"],
+.stSelectbox [class*="arrow"],
+.stTextInput .material-icons,
+.stTextInput .material-icons-outlined,
+.stTextInput [class*="icon"],
+.stRadio .material-icons,
+.stRadio .material-icons-outlined,
+.stRadio [class*="icon"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
 .stButton > button:active {
     transform: scale(0.98);
 }
