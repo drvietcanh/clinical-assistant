@@ -636,7 +636,7 @@ if same_group_drugs:
                 # Validate related drug exists before navigation
                 if rel_name in DRUG_DATABASE:
                     st.session_state['view_drug_name'] = rel_name
-                    st.switch_page("pages/Drug_Detail.py")
+                    st.switch_page("pages/_Drug_Detail.py")
                 else:
                     render_info_box(
                         f"❌ Không tìm thấy thuốc '{rel_name}' trong database",
@@ -695,7 +695,7 @@ if alternative_drugs:
                 # Validate alternative drug exists before navigation
                 if alt_name in DRUG_DATABASE:
                     st.session_state['view_drug_name'] = alt_name
-                    st.switch_page("pages/Drug_Detail.py")
+                    st.switch_page("pages/_Drug_Detail.py")
                 else:
                     render_info_box(
                         f"❌ Không tìm thấy thuốc '{alt_name}' trong database",

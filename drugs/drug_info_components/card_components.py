@@ -134,7 +134,7 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
                 
                 # Set session state and navigate
                 st.session_state['view_drug_name'] = drug_name_str
-                st.switch_page("pages/Drug_Detail.py")
+                st.switch_page("pages/_Drug_Detail.py")
             except Exception as e:
                 st.error(f"❌ Lỗi khi mở chi tiết thuốc: {str(e)}")
                 st.info("💡 Vui lòng thử lại hoặc liên hệ admin nếu lỗi tiếp tục xảy ra")
