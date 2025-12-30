@@ -93,6 +93,37 @@ def render():
     """)
     
     st.markdown("---")
+    st.markdown("### 📋 Hướng dẫn Chi tiết: Pha và Sử dụng Insulin (Actrapid) cho Tăng Kali máu")
+    
+    with st.expander("💉 Xem chi tiết pha insulin cho hyperkalemia", expanded=False):
+        st.markdown("""
+        **I. Điều trị Cấp cứu Tăng Kali máu (Hyperkalemia)**
+        
+        **Nguyên lý:**
+        - Insulin kích thích bơm Na+/K+-ATPase, đẩy K+ từ ngoại bào vào nội bào
+        - Glucose được phối hợp để dự phòng hạ đường huyết do Insulin, không nhằm mục đích nuôi dưỡng
+        
+        **Phác đồ chuẩn:** 10 UI Actrapid + 25g - 50g Glucose
+        
+        **Cách pha và đường dùng:**
+        
+        **1. Bolus tĩnh mạch (Tiêm nhanh/Bơm tiêm điện):**
+        - Pha **10 UI Actrapid + 50mL Glucose 50%**
+        - Ưu tiên dùng bơm tiêm điện hoặc tiêm tĩnh mạch chậm
+        - **Thời gian:** Tiêm chậm trong 5-10 phút
+        
+        **2. Truyền tĩnh mạch (IV Drip):**
+        - **10 UI Actrapid** pha trong **500mL Glucose 5%** (Chứa 25g đường)
+        - Hoặc: **10 UI Actrapid** pha trong **250mL Glucose 10%** (Chứa 25g đường)
+        - **Thời gian truyền:** 30 – 60 phút
+        
+        **Lưu ý:**
+        - Tỷ lệ này áp dụng chung cho cả bệnh nhân đái tháo đường (ĐTĐ) và không ĐTĐ
+        - Cần theo dõi sát đường huyết mao mạch (Capillary Blood Glucose - CBG) ở bệnh nhân ĐTĐ do đường huyết nền đã cao
+        - **KHÔNG bổ sung Kali** trong trường hợp này (đang điều trị tăng kali máu!)
+        """)
+    
+    st.markdown("---")
     st.warning("""
     **Phase 3: Remove K⁺ from Body (30 min - hours)**
     
@@ -218,6 +249,161 @@ def render():
     - **Adrenal insufficiency**
     - **K⁺ supplements**
     """)
+    
+    st.markdown("---")
+    st.markdown("### 📊 Nuôi dưỡng và Kiểm soát Đường huyết (Phác đồ GIK)")
+    
+    with st.expander("🍽️ Xem phác đồ GIK cho nuôi dưỡng", expanded=False):
+        st.markdown("""
+        **Nguyên lý:**
+        - Cung cấp năng lượng (Glucose) kèm Insulin ngoại sinh để chuyển hóa
+        - Ngăn ngừa tăng đường huyết phản ứng (đặc biệt trong stress ngoại khoa, nhiễm trùng)
+        
+        **Quy tắc tính toán:**
+        - Tính tổng lượng đường (gam) trong chai dịch
+        - Áp dụng tỷ lệ nhạy cảm Insulin tương ứng
+        
+        **Ví dụ:**
+        - Chai Glucose 5% (500mL) chứa **25g đường**
+        - Chai Glucose 10% (500mL) chứa **50g đường**
+        """)
+        
+        st.markdown("---")
+        st.markdown("#### 📋 Bảng Tỷ lệ Pha Insulin (Actrapid) trong Dịch truyền Glucose")
+        
+        # Create table using HTML for better formatting
+        st.markdown("""
+        <style>
+        .insulin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+        .insulin-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .insulin-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .insulin-table tr:hover {
+            background-color: #f5f5f5;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <table class="insulin-table">
+        <thead>
+        <tr>
+            <th>Phân loại Bệnh nhân</th>
+            <th>Tỷ lệ (Insulin : Glucose)</th>
+            <th>Số lượng Insulin trong chai G5% (25g đường)</th>
+            <th>Số lượng Insulin trong chai G10% (50g đường)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><strong>Người bình thường</strong><br>(Không tiền sử ĐTĐ)</td>
+            <td>1 UI : 4 - 6g đường<br><em>(Thường dùng 1:5)</em></td>
+            <td>4 - 6 UI<br><em>(Trung bình: 5 UI)</em></td>
+            <td>8 - 12 UI<br><em>(Trung bình: 10 UI)</em></td>
+        </tr>
+        <tr>
+            <td><strong>Bệnh nhân ĐTĐ</strong><br>(Tiền sử ĐTĐ)</td>
+            <td>1 UI : 3 - 4g đường<br><em>(Thường dùng 1:3 hoặc 1:4)</em></td>
+            <td>6 - 8 UI<br><em>(Trung bình: 7 UI)</em></td>
+            <td>12 - 16 UI<br><em>(Trung bình: 14 UI)</em></td>
+        </tr>
+        <tr>
+            <td><strong>Kháng Insulin cao</strong><br>(Nhiễm trùng nặng, dùng Corticoid)</td>
+            <td>1 UI : 2 - 3g đường</td>
+            <td>8 - 12 UI</td>
+            <td>16 - 25 UI</td>
+        </tr>
+        </tbody>
+        </table>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("---")
+        st.markdown("#### 🏥 Phác đồ Alberti kinh điển (Nuôi dưỡng)")
+        
+        st.info("""
+        **Phác đồ chuẩn:**
+        - **500mL Glucose 10%** + **10-15 UI Actrapid** + **10-20 mmol KCl**
+        - **Tốc độ truyền:** 100 mL/h
+        
+        **Chỉ định:**
+        - Khi dùng Glucose nồng độ cao (10%, 20%...) để nuôi dưỡng
+        - Stress-induced hyperglycemia (nhiễm trùng, phẫu thuật)
+        - Bệnh nhân không ăn được, cần nuôi dưỡng qua đường tĩnh mạch
+        
+        **Không cần Insulin:**
+        - Không có tiền sử ĐTĐ + đường huyết nền < 10 mmol/L + chỉ dùng Glucose 5%
+        """)
+        
+        st.markdown("---")
+        st.markdown("#### ⚠️ Ba Nguyên tắc An toàn Bắt buộc")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.error("""
+            **1. Kiểm soát Kali máu (Tránh Hạ Kali)**
+            
+            **Nguy cơ:** Insulin gây hạ kali máu
+            
+            **Chỉ định (Nuôi dưỡng):**
+            - **LUÔN BỔ SUNG KALI** nếu chức năng thận tốt và K+ bình thường
+            
+            **Chống chỉ định (Cấp cứu Tăng K+):**
+            - **KHÔNG BỔ SUNG KALI** khi đang điều trị tăng kali máu!
+            """)
+            
+            st.warning("""
+            **2. Hiện tượng Hấp phụ Insulin (Adsorption)**
+            
+            **Nguy cơ:** Mất 20-50% insulin vào đường truyền PVC
+            
+            **Xử trí:**
+            - **Chính xác:** Prime đường truyền / Dùng bơm tiêm riêng
+            - **Thường quy:** Chấp nhận mất / Thêm 1-2 UI để bù
+            """)
+        
+        with col2:
+            st.info("""
+            **3. Theo dõi Đường huyết (Monitoring)**
+            
+            **Không ĐTĐ:**
+            - Test mỗi 6-12 giờ
+            
+            **ĐTĐ / Bệnh nặng:**
+            - Test mỗi 1-3 giờ (giai đoạn đầu)
+            - Theo dõi sát để điều chỉnh liều insulin
+            
+            **Mục tiêu đường huyết:**
+            - **ICU:** 140-180 mg/dL (7.8-10 mmol/L)
+            - **Ward:** 100-180 mg/dL (5.6-10 mmol/L)
+            """)
+        
+        st.markdown("---")
+        st.markdown("#### 💡 Lời khuyên Lâm sàng")
+        
+        st.success("""
+        **Chỉ định dùng Insulin:**
+        - Khi dùng Glucose nồng độ cao (10%, 20%...) để nuôi dưỡng
+        - Stress-induced hyperglycemia (nhiễm trùng, phẫu thuật, chấn thương)
+        - Bệnh nhân ĐTĐ cần nuôi dưỡng qua đường tĩnh mạch
+        
+        **Không cần Insulin:**
+        - Không có tiền sử ĐTĐ + đường huyết nền < 10 mmol/L + chỉ dùng Glucose 5%
+        - Bệnh nhân ăn được bình thường
+        """)
     
     st.markdown("---")
     
