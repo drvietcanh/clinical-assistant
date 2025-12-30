@@ -1165,6 +1165,30 @@ html {
     content: none !important;
 }
 
+/* ========== CRITICAL FIX: Prevent text overlap in input fields ========== */
+/* Hide help/tooltip icons that cause overlap */
+div[data-testid="stTextInput"] [data-testid="stTooltipIcon"],
+div[data-testid="stTextInput"] [class*="help"],
+div[data-testid="stTextInput"] [class*="icon"],
+div[data-testid="stTextInput"] [data-baseweb="popover"],
+div[data-testid="stTextInput"] svg {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Ensure input has proper padding - no extra space for icon */
+div[data-testid="stTextInput"] input[type="text"],
+div[data-testid="stTextInput"] > div > div > input {
+    padding-right: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
 /* Fix text input container to prevent overlap */
 .stTextInput > div {
     position: relative !important;
@@ -1181,26 +1205,23 @@ html {
 .stTextInput > div > div > input {
     position: relative !important;
     z-index: 1 !important;
-    padding-right: 40px !important; /* Space for help icon */
+    padding-right: 16px !important; /* No extra space needed - icon is hidden */
     box-sizing: border-box !important;
     width: 100% !important;
     display: block !important;
 }
 
-/* Fix help icon positioning to not overlap text */
+/* Hide help icon completely to prevent overlap */
 .stTextInput > div > div > div[data-testid="stTooltipIcon"],
 .stTextInput > div > div > div[class*="help"],
-.stTextInput > div > div > div[class*="icon"] {
-    position: absolute !important;
-    right: 12px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    z-index: 2 !important;
-    pointer-events: auto !important;
-    width: auto !important;
-    height: auto !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+.stTextInput > div > div > div[class*="icon"],
+.stTextInput svg {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    pointer-events: none !important;
 }
 
 /* Ensure label doesn't overlap input */

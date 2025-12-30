@@ -10,8 +10,16 @@ def inject_text_overlap_fix():
     """
     Inject CSS + JavaScript to fix text overlap issues in input fields and headers.
     Uses MutationObserver to fix elements after Streamlit renders them dynamically.
+    Only injects once per session to avoid duplicate injection.
     Call this at the beginning of any score page render function.
     """
+    # Check if already injected in this session
+    if st.session_state.get('_text_overlap_fix_injected', False):
+        return
+    
+    # Mark as injected
+    st.session_state['_text_overlap_fix_injected'] = True
+    
     # Inject at the very beginning with highest priority
     st.markdown("""
     <style id="scores-text-overlap-fix">
@@ -236,31 +244,61 @@ def inject_text_overlap_fix():
                     inputWrapper.style.overflow = 'visible';
                 }
                 
-                // Force input element styles
-                input.style.cssText = `
-                    position: relative !important;
-                    z-index: 1 !important;
-                    width: 100% !important;
-                    max-width: 100% !important;
-                    min-width: 0 !important;
-                    padding: 12px 16px !important;
-                    padding-right: 16px !important;
-                    box-sizing: border-box !important;
-                    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
-                    font-size: 16px !important;
-                    line-height: 1.5 !important;
-                    color: rgb(49, 51, 63) !important;
-                    background: white !important;
-                    border: 1px solid rgb(230, 234, 241) !important;
-                    border-radius: 8px !important;
-                    white-space: nowrap !important;
-                    overflow: hidden !important;
-                    text-overflow: ellipsis !important;
-                `;
+                // Find and remove ALL sibling elements that might overlap (including BaseWeb elements)
+                const inputParent = input.parentElement;
+                if (inputParent) {
+                    const siblings = Array.from(inputParent.children);
+                    siblings.forEach(function(sibling) {
+                        if (sibling !== input && sibling.tagName !== 'LABEL') {
+                            // Check if it's an icon or overlay element
+                            if (sibling.querySelector && (
+                                sibling.querySelector('svg') || 
+                                sibling.querySelector('[class*="icon"]') ||
+                                sibling.querySelector('[data-testid="stTooltipIcon"]')
+                            )) {
+                                hideElement(sibling);
+                            }
+                        }
+                    });
+                }
+                
+                // Force input element styles - use setProperty for better compatibility
+                const inputStyles = {
+                    'position': 'relative',
+                    'z-index': '1',
+                    'width': '100%',
+                    'max-width': '100%',
+                    'min-width': '0',
+                    'padding': '12px 16px',
+                    'padding-right': '16px',
+                    'box-sizing': 'border-box',
+                    'font-family': 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+                    'font-size': '16px',
+                    'line-height': '1.5',
+                    'color': 'rgb(49, 51, 63)',
+                    'background': 'white',
+                    'border': '1px solid rgb(230, 234, 241)',
+                    'border-radius': '8px',
+                    'white-space': 'nowrap',
+                    'overflow': 'hidden',
+                    'text-overflow': 'ellipsis'
+                };
+                
+                Object.keys(inputStyles).forEach(function(prop) {
+                    input.style.setProperty(prop, inputStyles[prop], 'important');
+                });
                 
                 // Ensure container doesn't have overflow hidden
-                inputContainer.style.overflow = 'visible';
-                inputContainer.style.position = 'relative';
+                inputContainer.style.setProperty('overflow', 'visible', 'important');
+                inputContainer.style.setProperty('position', 'relative', 'important');
+                
+                // Remove any absolutely positioned elements inside the input container
+                const absoluteElements = inputContainer.querySelectorAll('[style*="absolute"], [style*="fixed"]');
+                absoluteElements.forEach(function(el) {
+                    if (el !== input && !el.contains(input)) {
+                        hideElement(el);
+                    }
+                });
             });
         }
         
