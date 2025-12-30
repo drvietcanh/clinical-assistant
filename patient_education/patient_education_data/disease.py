@@ -6048,4 +6048,515 @@ Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng th
         related_drugs=["Oresol", "Loperamide"],
         printable=True
     ),
+    
+    # === ALLERGIC RHINITIS ===
+    PatientEducationTopic(
+        id="allergic_rhinitis_basics",
+        title="Understanding Allergic Rhinitis",
+        title_vn="Hiểu về Viêm mũi dị ứng",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm mũi dị ứng
+
+        ## Viêm mũi dị ứng là gì?
+
+        Viêm mũi dị ứng là phản ứng dị ứng của niêm mạc mũi với các chất gây dị ứng (dị nguyên), gây nghẹt mũi, chảy nước mũi, hắt hơi.
+
+        **⚠️ Đặc điểm:**
+        - Rất phổ biến (20-30% dân số)
+        - Có thể theo mùa hoặc quanh năm
+        - Không nguy hiểm nhưng ảnh hưởng chất lượng sống
+        - Có thể kiểm soát được
+
+        **Phân loại:**
+        - **Viêm mũi dị ứng theo mùa:** Phấn hoa (mùa xuân, thu)
+        - **Viêm mũi dị ứng quanh năm:** Bụi, lông thú, nấm mốc
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Hắt hơi:** Từng tràng, nhiều lần
+        - **Chảy nước mũi:** Dịch trong, nhiều
+        - **Nghẹt mũi:** Một hoặc cả hai bên
+        - **Ngứa mũi:** Ngứa trong mũi
+        - **Ngứa mắt:** Có thể có
+        - **Chảy nước mắt:** Có thể có
+
+        **Triệu chứng khác:**
+        - Đau đầu (do nghẹt mũi)
+        - Giảm khứu giác
+        - Ho (do chảy mũi sau)
+        - Mệt mỏi (do ngủ kém)
+
+        **⚠️ Phân biệt với cảm lạnh:**
+        - **Viêm mũi dị ứng:** Dịch trong, kéo dài, không sốt
+        - **Cảm lạnh:** Dịch vàng/xanh, 7-10 ngày, có thể sốt
+
+        ## Nguyên nhân:
+
+        **1. Dị nguyên (Chất gây dị ứng):**
+        - **Phấn hoa:** Cây, cỏ, hoa (theo mùa)
+        - **Bụi nhà, mạt bụi:** Quanh năm
+        - **Lông thú:** Chó, mèo, chim
+        - **Nấm mốc:** Nơi ẩm ướt
+        - **Gián:** Phân, nước bọt gián
+
+        **2. Yếu tố nguy cơ:**
+        - **Di truyền:** Có người thân bị dị ứng
+        - **Cơ địa dị ứng:** Dễ dị ứng
+        - **Môi trường:** Ô nhiễm, khói thuốc
+        - **Tuổi:** Trẻ em, thanh thiếu niên
+
+        ## Chẩn đoán:
+
+        **1. Khám lâm sàng:**
+        - Đánh giá triệu chứng
+        - Khám mũi (niêm mạc phù nề, nhợt)
+        - Khám mắt (đỏ, sưng)
+
+        **2. Test dị ứng:**
+        - **Test da:** Chích da với dị nguyên
+        - **Xét nghiệm máu:** IgE đặc hiệu
+        - Xác định dị nguyên gây dị ứng
+
+        **3. Thường không cần:**
+        - Hầu hết chẩn đoán dựa vào triệu chứng
+
+        ## Điều trị:
+
+        **1. Tránh dị nguyên (QUAN TRỌNG NHẤT!):**
+        - Xác định dị nguyên gây dị ứng
+        - Tránh tối đa
+        - Xem chi tiết phần phòng ngừa
+
+        **2. Thuốc:**
+        - **Corticosteroid xịt mũi:** Fluticasone, Budesonide
+          - Hiệu quả nhất
+          - Dùng lâu dài nếu cần
+        - **Antihistamine:** Cetirizine, Loratadine
+          - Giảm hắt hơi, ngứa
+          - Uống khi có triệu chứng
+        - **Thuốc thông mũi:** Xylometazoline (ngắn hạn)
+        - **Thuốc nhỏ mắt:** Nếu ngứa mắt
+
+        **3. Miễn dịch trị liệu:**
+        - Tiêm hoặc ngậm dị nguyên
+        - Giảm phản ứng dị ứng
+        - Thời gian dài (3-5 năm)
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI VIÊM MŨI DỊ ỨNG:
+
+        **1. Nguyên tắc:**
+        - **Chống viêm:** Thực phẩm chống viêm
+        - **Tăng cường miễn dịch:** Giúp giảm phản ứng dị ứng
+        - **Tránh thực phẩm gây dị ứng:** Nếu có dị ứng thực phẩm
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Cá béo:** Cá hồi, cá thu (omega-3, chống viêm, 2-3 lần/tuần)
+        - **Rau xanh:** Nhiều (rau cải, rau muống, bông cải)
+          - Chất chống oxy hóa, chống viêm
+        - **Trái cây:** Cam, bưởi, táo (vitamin C)
+          - Tăng cường miễn dịch
+        - **Tỏi, gừng:** Chống viêm
+        - **Mật ong:** Có thể giúp giảm dị ứng (nếu không dị ứng mật ong)
+        - **Ngũ cốc nguyên hạt:** Gạo lứt, yến mạch
+        - **Các loại hạt:** Hạnh nhân, óc chó (nếu không dị ứng)
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Thực phẩm gây dị ứng:** Nếu có dị ứng (tùy từng người)
+          - Hải sản, đậu phộng, trứng, sữa (nếu dị ứng)
+        - **Thực phẩm chế biến sẵn:** Đồ hộp, thức ăn nhanh
+        - **Đồ ngọt nhiều:** Bánh kẹo, nước ngọt (có thể làm nặng triệu chứng)
+        - **Rượu bia:** Có thể làm nặng triệu chứng
+
+        **4. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo yến mạch + sữa ít béo + trái cây
+        - **Trưa:** 1 chén cơm gạo lứt + cá hồi hấp + rau luộc + canh rau
+        - **Tối:** 1 chén cơm gạo lứt + thịt gà luộc + rau xào + canh
+        - **Bữa phụ:** Trái cây, các loại hạt
+
+        **5. Lưu ý:**
+        - Ghi nhật ký ăn uống: Ghi thức ăn và triệu chứng
+        - Xác định thức ăn gây dị ứng (nếu có)
+        - Tránh thức ăn đó
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi có triệu chứng:**
+        - **Tránh tập ngoài trời:** Khi phấn hoa nhiều
+        - **Tập trong nhà:** Nếu cần
+        - **Đeo khẩu trang:** Khi tập ngoài trời
+
+        **2. Khi không có triệu chứng:**
+        - **Tập thể dục đều đặn:** 30 phút/ngày
+        - **Đi bộ, bơi, đạp xe:** Tốt cho sức khỏe
+        - **Yoga, thái cực quyền:** Thư giãn, giảm stress
+
+        **3. Lợi ích:**
+        - Tăng sức khỏe
+        - Giảm stress (stress có thể làm nặng dị ứng)
+        - Tăng miễn dịch
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **⚠️ QUAN TRỌNG:** Tránh dị nguyên là cách tốt nhất!
+
+        **1. Phấn hoa (Nếu dị ứng):**
+        - **Ở trong nhà:** Khi phấn hoa nhiều (sáng sớm, chiều tối)
+        - **Đóng cửa sổ:** Khi phấn hoa nhiều
+        - **Đeo khẩu trang:** Khi ra ngoài
+        - **Tắm, thay quần áo:** Sau khi ra ngoài
+        - **Kiểm tra mức độ phấn hoa:** Trước khi ra ngoài
+
+        **2. Bụi nhà, mạt bụi:**
+        - **Dọn dẹp thường xuyên:** Lau bụi, hút bụi
+        - **Dùng máy hút bụi có HEPA filter**
+        - **Giặt ga gối:** Thường xuyên (nước nóng > 60°C)
+        - **Dùng bao gối, chăn chống mạt bụi**
+        - **Tránh thảm, rèm cửa:** (Nếu có thể)
+        - **Giữ độ ẩm < 50%:** Dùng máy hút ẩm
+
+        **3. Lông thú:**
+        - **Không nuôi thú trong nhà:** (Tốt nhất)
+        - **Nếu nuôi:** Không cho vào phòng ngủ, tắm thú thường xuyên
+        - **Rửa tay:** Sau khi chơi với thú
+
+        **4. Nấm mốc:**
+        - **Giữ nhà khô ráo:** Sửa chỗ rò rỉ nước
+        - **Dùng máy hút ẩm:** Giữ độ ẩm < 50%
+        - **Lau sạch nấm mốc:** Dùng dung dịch tẩy
+        - **Thông thoáng:** Phòng ốc
+
+        **5. Gián:**
+        - **Vệ sinh nhà cửa:** Sạch sẽ
+        - **Đậy kín thức ăn:** Không để thức ăn thừa
+        - **Diệt gián:** Dùng thuốc diệt gián
+
+        **6. Vệ sinh môi trường:**
+        - Dọn dẹp nhà cửa sạch sẽ
+        - Thông thoáng, có ánh sáng
+        - Tránh ẩm ướt
+
+        **7. Lối sống:**
+        - **Bỏ thuốc lá:** Khói thuốc làm nặng triệu chứng
+        - **Tránh khói, bụi:** Ô nhiễm không khí
+        - **Quản lý stress:** Stress có thể làm nặng dị ứng
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Corticosteroid xịt mũi:**
+        - **Hiệu quả nhất:** Giảm viêm, nghẹt mũi
+        - **Dùng lâu dài:** Nếu cần (an toàn)
+        - **Cách dùng:** Xịt vào mũi, hít nhẹ
+        - **Rửa miệng:** Sau khi dùng (tránh nấm miệng)
+
+        **2. Antihistamine:**
+        - **Khi nào dùng:** Khi có triệu chứng
+        - **Tác dụng:** Giảm hắt hơi, ngứa
+        - **Tác dụng phụ:** Buồn ngủ (một số loại)
+
+        **3. Thuốc thông mũi:**
+        - **Dùng ngắn hạn:** 3-5 ngày
+        - **⚠️ KHÔNG dùng lâu:** > 7 ngày → Phản ứng dội
+
+        **4. Miễn dịch trị liệu:**
+        - Tiêm hoặc ngậm dị nguyên
+        - Thời gian dài (3-5 năm)
+        - Hiệu quả lâu dài
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng nặng:**
+        - Nghẹt mũi nặng, không thở được
+        - Ảnh hưởng giấc ngủ, công việc
+        - Không đáp ứng với thuốc
+
+        **2. Biến chứng:**
+        - **Viêm xoang:** Đau mặt, sốt
+        - **Viêm tai giữa:** Đau tai
+        - **Hen phế quản:** Khó thở, thở khò khè
+
+        **3. Cần test dị ứng:**
+        - Xác định dị nguyên
+        - Điều trị miễn dịch
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị viêm mũi dị ứng:**
+        - Tránh dị nguyên (quan trọng nhất!)
+        - Dùng thuốc đúng cách
+        - Rửa mũi bằng nước muối
+
+        **2. Phòng ngừa:**
+        - Xác định dị nguyên gây dị ứng
+        - Tránh tối đa
+        - Vệ sinh môi trường
+
+        **3. Sống tích cực:**
+        - Viêm mũi dị ứng có thể kiểm soát được
+        - Tránh dị nguyên + thuốc → Sống bình thường
+        - Đừng để dị ứng ảnh hưởng cuộc sống
+        """,
+        related_disease="allergic_rhinitis",
+        related_drugs=["Fluticasone", "Cetirizine", "Loratadine"],
+        printable=True
+    ),
+    
+    # === BACK PAIN ===
+    PatientEducationTopic(
+        id="back_pain_basics",
+        title="Understanding Back Pain",
+        title_vn="Hiểu về Đau lưng",
+        category="Disease",
+        content="""
+        # Hiểu về Đau lưng
+
+        ## Đau lưng là gì?
+
+        Đau lưng là triệu chứng rất phổ biến, có thể do nhiều nguyên nhân khác nhau, từ căng cơ đơn giản đến các bệnh lý nghiêm trọng.
+
+        **⚠️ Đặc điểm:**
+        - Rất phổ biến (80% người từng bị đau lưng)
+        - Hầu hết tự khỏi sau vài ngày đến vài tuần
+        - Một số trường hợp cần điều trị
+        - Phòng ngừa quan trọng
+
+        **Phân loại:**
+        - **Đau lưng cấp:** < 6 tuần
+        - **Đau lưng bán cấp:** 6-12 tuần
+        - **Đau lưng mạn:** > 12 tuần
+
+        **Vị trí:**
+        - Đau lưng dưới (thắt lưng) - Phổ biến nhất
+        - Đau lưng giữa
+        - Đau lưng trên (cổ)
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Đau lưng:** Đau âm ỉ hoặc đau nhói
+        - **Đau tăng:** Khi vận động, cúi, xoay
+        - **Đau giảm:** Khi nghỉ ngơi
+        - **Cứng lưng:** Khó cử động
+        - **Co cứng cơ:** Cơ lưng co cứng
+
+        **Triệu chứng khác:**
+        - Đau lan xuống chân (nếu có chèn ép thần kinh)
+        - Tê bì chân (nếu có chèn ép thần kinh)
+        - Yếu chân (nếu có chèn ép thần kinh)
+
+        **⚠️ Dấu hiệu cảnh báo (Cần đến bệnh viện ngay!):**
+        - Đau sau chấn thương (ngã, tai nạn)
+        - Đau kèm sốt
+        - Đau kèm tiểu không tự chủ, tê vùng sinh dục
+        - Đau kèm sụt cân không rõ nguyên nhân
+        - Đau kèm yếu chân, tê bì
+
+        ## Nguyên nhân:
+
+        **1. Căng cơ, dây chằng:**
+        - Nâng vật nặng sai tư thế
+        - Vận động đột ngột
+        - Ngồi lâu, sai tư thế
+        - Nguyên nhân phổ biến nhất (80%)
+
+        **2. Thoái hóa cột sống:**
+        - Tuổi cao
+        - Thoái hóa đĩa đệm
+        - Thoái hóa khớp cột sống
+
+        **3. Thoát vị đĩa đệm:**
+        - Đĩa đệm lồi ra, chèn ép thần kinh
+        - Gây đau, tê bì chân
+
+        **4. Yếu tố khác:**
+        - **Béo phì:** Tăng áp lực lên cột sống
+        - **Ít vận động:** Yếu cơ lưng
+        - **Hút thuốc lá:** Làm chậm lành
+        - **Stress:** Tăng căng cơ
+        - **Mang thai:** Tăng áp lực lên cột sống
+
+        ## Chẩn đoán:
+
+        **1. Khám lâm sàng:**
+        - Đánh giá triệu chứng
+        - Khám cột sống, cơ
+        - Test thần kinh (nếu có tê bì)
+
+        **2. X-quang:**
+        - Xem cấu trúc xương
+        - Thường không cần (trừ khi có dấu hiệu cảnh báo)
+
+        **3. CT/MRI:**
+        - Chỉ khi có dấu hiệu cảnh báo
+        - Hoặc đau kéo dài, không đáp ứng điều trị
+
+        ## Điều trị:
+
+        **1. Điều trị tại nhà (Đau lưng cấp nhẹ):**
+        - **Nghỉ ngơi:** 1-2 ngày (không quá lâu!)
+        - **Chườm lạnh:** 48 giờ đầu (giảm sưng, đau)
+        - **Chườm ấm:** Sau 48 giờ (giảm căng cơ)
+        - **Thuốc giảm đau:** Paracetamol, Ibuprofen
+        - **Vận động nhẹ:** Đi bộ nhẹ (sau 1-2 ngày)
+
+        **2. Điều trị tại viện (Nếu nặng):**
+        - Vật lý trị liệu
+        - Thuốc giảm đau mạnh hơn
+        - Tiêm corticosteroid (nếu cần)
+        - Phẫu thuật (hiếm, chỉ khi cần)
+
+        **3. ⚠️ QUAN TRỌNG:**
+        - **Không nghỉ quá lâu:** > 2-3 ngày → Yếu cơ, cứng khớp
+        - **Vận động sớm:** Đi bộ nhẹ sau 1-2 ngày
+        - **Tư thế đúng:** Khi ngồi, đứng, nâng vật
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI ĐAU LƯNG:
+
+        **1. Nguyên tắc:**
+        - **Chống viêm:** Thực phẩm chống viêm
+        - **Giảm cân:** Nếu thừa cân (giảm áp lực lên cột sống)
+        - **Đủ canxi, vitamin D:** Tốt cho xương
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Cá béo:** Cá hồi, cá thu (omega-3, chống viêm, 2-3 lần/tuần)
+        - **Rau xanh:** Nhiều (rau cải, rau muống, bông cải)
+          - Chất chống oxy hóa, chống viêm
+        - **Trái cây:** Tất cả (cam, bưởi, táo)
+          - Vitamin C, chất chống oxy hóa
+        - **Sữa, sữa chua:** Canxi, vitamin D (tốt cho xương)
+        - **Các loại hạt:** Hạnh nhân, óc chó (nếu có)
+        - **Ngũ cốc nguyên hạt:** Gạo lứt, yến mạch
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Thực phẩm chế biến sẵn:** Đồ hộp, thức ăn nhanh
+        - **Đồ chiên, nhiều dầu mỡ:** Chất béo bão hòa (gây viêm)
+        - **Đường nhiều:** Bánh kẹo, nước ngọt (gây viêm)
+        - **Rượu bia:** Có thể làm nặng đau
+
+        **4. Giảm cân (Nếu thừa cân):**
+        - Thừa cân → Tăng áp lực lên cột sống → Đau lưng
+        - Giảm cân → Giảm đau lưng
+        - Chế độ ăn giảm calo, tăng vận động
+
+        ## 🏃 TẬP THỂ DỤC VÀ PHÒNG NGỪA:
+
+        **⚠️ QUAN TRỌNG:** Tập thể dục giúp phòng ngừa và điều trị đau lưng!
+
+        **1. Khi đang đau lưng cấp:**
+        - **Nghỉ ngơi:** 1-2 ngày
+        - **Vận động nhẹ:** Đi bộ nhẹ sau 1-2 ngày
+        - **Tránh:** Ngồi lâu, nằm lâu
+
+        **2. Khi không đau (Phòng ngừa):**
+        - **Tập cơ lưng:** Tăng sức mạnh cơ lưng
+          - Tư thế siêu nhân (nằm sấp, nâng tay chân)
+          - Tư thế cây cầu (nằm ngửa, nâng hông)
+        - **Tập cơ bụng:** Tăng sức mạnh cơ bụng (hỗ trợ lưng)
+          - Gập bụng, plank
+        - **Tập linh hoạt:** Duỗi, gập lưng
+        - **Yoga, pilates:** Tốt cho lưng
+        - **Bơi lội:** Tốt cho lưng (ít áp lực)
+
+        **3. Tư thế đúng:**
+        - **Khi ngồi:**
+          - Ngồi thẳng, lưng tựa ghế
+          - Chân chạm đất
+          - Màn hình ngang tầm mắt
+          - Nghỉ 30 phút/lần, đứng dậy đi lại
+        - **Khi đứng:**
+          - Đứng thẳng, cân bằng trọng lượng 2 chân
+          - Tránh đứng lâu một chỗ
+        - **Khi nâng vật:**
+          - Gập đầu gối, không gập lưng
+          - Giữ vật gần người
+          - Không xoay khi nâng
+          - Nhờ người khác nếu vật quá nặng
+
+        **4. Tần suất:**
+        - **Tập cơ lưng, bụng:** 2-3 lần/tuần
+        - **Tập linh hoạt:** Hàng ngày
+        - **Đi bộ, bơi:** 3-5 lần/tuần, 30 phút/lần
+
+        **5. Lợi ích:**
+        - Tăng sức mạnh cơ lưng, bụng
+        - Giảm nguy cơ đau lưng
+        - Cải thiện tư thế
+        - Tăng linh hoạt
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Tư thế đúng:**
+        - Ngồi, đứng, nâng vật đúng tư thế
+        - Tránh ngồi lâu, đứng lâu
+
+        **2. Tập thể dục:**
+        - Tập cơ lưng, bụng
+        - Tập linh hoạt
+        - Đi bộ, bơi
+
+        **3. Giảm cân:**
+        - Nếu thừa cân
+        - Giảm áp lực lên cột sống
+
+        **4. Lối sống:**
+        - **Bỏ thuốc lá:** Làm chậm lành
+        - **Quản lý stress:** Stress tăng căng cơ
+        - **Ngủ đủ giấc:** Nệm phù hợp, không quá mềm
+
+        **5. Nâng vật đúng cách:**
+        - Gập đầu gối, không gập lưng
+        - Giữ vật gần người
+        - Không xoay khi nâng
+        - Nhờ người khác nếu quá nặng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Dấu hiệu cảnh báo:**
+        - Đau sau chấn thương (ngã, tai nạn)
+        - Đau kèm sốt
+        - Đau kèm tiểu không tự chủ, tê vùng sinh dục
+        - Đau kèm sụt cân không rõ nguyên nhân
+        - Đau kèm yếu chân, tê bì
+
+        **2. Đau nặng:**
+        - Đau dữ dội, không chịu được
+        - Thuốc giảm đau không hiệu quả
+
+        **3. Không cải thiện:**
+        - Đau > 6 tuần không đỡ
+        - Triệu chứng nặng hơn
+
+        **4. Có dấu hiệu chèn ép thần kinh:**
+        - Tê bì chân
+        - Yếu chân
+        - Tiểu không tự chủ
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị đau lưng:**
+        - Nghỉ ngơi 1-2 ngày (không quá lâu!)
+        - Chườm lạnh/ấm
+        - Thuốc giảm đau
+        - Vận động nhẹ sau 1-2 ngày
+
+        **2. Phòng ngừa:**
+        - Tư thế đúng
+        - Tập thể dục đều đặn
+        - Giảm cân nếu thừa cân
+        - Nâng vật đúng cách
+
+        **3. Không lo lắng quá:**
+        - Hầu hết đau lưng tự khỏi
+        - Chỉ một số ít cần điều trị đặc biệt
+        - Tập thể dục → Phòng ngừa hiệu quả
+
+        **4. Sống tích cực:**
+        - Đau lưng có thể phòng ngừa
+        - Tư thế đúng + Tập thể dục → Giảm nguy cơ
+        """,
+        related_disease="back_pain",
+        related_drugs=["Paracetamol", "Ibuprofen", "Diclofenac"],
+        printable=True
+    ),
 ]
