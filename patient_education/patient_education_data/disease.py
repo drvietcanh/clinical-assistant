@@ -4822,4 +4822,749 @@ Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng th
         related_drugs=["Methotrexate", "Ibuprofen", "Prednisone"],
         printable=True
     ),
+    
+    # === MYOCARDIAL INFARCTION ===
+    PatientEducationTopic(
+        id="myocardial_infarction_basics",
+        title="Understanding Myocardial Infarction",
+        title_vn="Hiểu về Nhồi máu cơ tim",
+        category="Disease",
+        content="""
+        # Hiểu về Nhồi máu cơ tim
+
+        ## Nhồi máu cơ tim là gì?
+
+        Nhồi máu cơ tim (Heart Attack) xảy ra khi động mạch vành (mạch máu nuôi tim) bị tắc nghẽn hoàn toàn, làm một phần cơ tim bị chết do thiếu máu.
+
+        **⚠️ Đặc điểm:**
+        - Cấp cứu y tế! Thời gian = Cơ tim
+        - Có thể gây tử vong nếu không điều trị kịp thời
+        - Phát hiện và điều trị sớm → Giảm tổn thương cơ tim
+
+        **Cơ chế:**
+        - Mảng xơ vữa vỡ → Hình thành cục máu đông
+        - Cục máu đông tắc động mạch vành
+        - Cơ tim thiếu máu → Chết
+
+        ## Triệu chứng:
+
+        **⚠️ QUAN TRỌNG:** Nhận biết sớm triệu chứng → Cứu sống!
+
+        **Triệu chứng điển hình:**
+        - **Đau ngực:**
+          - Đau sau xương ức, đau dữ dội
+          - Cảm giác bóp nghẹt, đè ép
+          - Đau lan ra tay trái, cổ, hàm, lưng
+          - Đau kéo dài > 20 phút
+          - Không giảm khi nghỉ
+        - **Khó thở:** Thở nhanh, nông
+        - **Vã mồ hôi:** Mồ hôi lạnh
+        - **Buồn nôn, nôn:** Có thể có
+        - **Chóng mặt, choáng váng**
+
+        **Triệu chứng không điển hình (Ở nữ, người già, đái tháo đường):**
+        - Đau ngực nhẹ hoặc không đau
+        - Mệt mỏi cực độ
+        - Khó thở
+        - Đau bụng trên
+        - Lú lẫn
+
+        **⚠️ Lưu ý:** Không phải ai cũng có triệu chứng điển hình! Đặc biệt ở nữ và người đái tháo đường.
+
+        ## Nguyên nhân:
+
+        **1. Nguyên nhân chính:**
+        - **Xơ vữa động mạch vành:**
+          - Mảng xơ vữa tích tụ trong động mạch vành
+          - Mảng xơ vữa vỡ → Hình thành cục máu đông
+          - Cục máu đông tắc động mạch
+
+        **2. Yếu tố nguy cơ:**
+        - **Tăng huyết áp:** Tổn thương mạch máu
+        - **Đái tháo đường:** Tổn thương mạch máu
+        - **Rối loạn mỡ máu:** Cholesterol cao
+        - **Hút thuốc lá:** Tổn thương mạch máu, tăng đông máu
+        - **Béo phì, ít vận động**
+        - **Tuổi cao:** > 55 tuổi (nam), > 65 tuổi (nữ)
+        - **Tiền sử gia đình:** Có người thân bị nhồi máu cơ tim
+        - **Stress:** Làm tăng nguy cơ
+
+        ## Chẩn đoán:
+
+        **1. Điện tâm đồ (ECG):**
+        - Thay đổi sóng ST-T
+        - Phát hiện nhồi máu
+        - Xác định vị trí
+
+        **2. Xét nghiệm máu:**
+        - **Troponin:** Tăng (dấu hiệu tổn thương cơ tim)
+        - **CK-MB:** Tăng
+        - **BNP:** Đánh giá suy tim
+
+        **3. Siêu âm tim:**
+        - Đánh giá chức năng tim
+        - Vùng cơ tim bị tổn thương
+
+        **4. Chụp động mạch vành:**
+        - Xem vị trí tắc nghẽn
+        - Có thể can thiệp ngay
+
+        ## Điều trị:
+
+        **⚠️ CẤP CỨU:** Điều trị càng sớm càng tốt!
+
+        **1. Điều trị cấp cứu (Trong bệnh viện):**
+        - **Thông mạch vành:**
+          - **Nong mạch + đặt stent:** Mở động mạch bị tắc
+          - **Tốt nhất:** Trong 90 phút đầu (golden hour)
+        - **Thuốc tiêu sợi huyết:** Nếu không có can thiệp
+        - **Thuốc chống đông:** Aspirin, Clopidogrel
+        - **Thuốc giảm đau:** Morphine
+        - **Oxy:** Nếu thiếu oxy
+
+        **2. Điều trị sau nhồi máu:**
+        - **Thuốc:**
+          - **Aspirin:** Phòng ngừa tái phát
+          - **Clopidogrel:** Chống đông
+          - **Statin:** Giảm cholesterol
+          - **ACE inhibitors:** Bảo vệ tim
+          - **Beta-blockers:** Giảm nhịp tim, bảo vệ tim
+        - **⚠️ QUAN TRỌNG:** Uống đúng giờ, đủ liều, không tự ý ngừng!
+
+        **3. Phục hồi chức năng tim:**
+        - Bắt đầu sớm (sau 1-2 ngày)
+        - Tập thể dục có hướng dẫn
+        - Giáo dục về bệnh
+        - Tư vấn dinh dưỡng
+
+        ## 🍽️ CHẾ ĐỘ ĂN SAU NHỒI MÁU CƠ TIM:
+
+        **⚠️ QUAN TRỌNG:** Chế độ ăn giúp phòng ngừa tái phát!
+
+        **1. Nguyên tắc:**
+        - **Giảm chất béo bão hòa:** Giảm cholesterol
+        - **Giảm muối:** < 5g/ngày (kiểm soát huyết áp)
+        - **Tăng chất xơ:** Rau xanh, trái cây
+        - **Chất béo tốt:** Omega-3
+        - **Đủ protein:** Thịt nạc, cá
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Cá béo:** Cá hồi, cá thu, cá trích (omega-3, 2-3 lần/tuần)
+        - **Rau xanh:** Nhiều (rau cải, rau muống, bông cải)
+        - **Trái cây:** Tất cả (cam, bưởi, táo, chuối)
+        - **Ngũ cốc nguyên hạt:** Gạo lứt, yến mạch, bánh mì đen
+        - **Thịt nạc:** Thịt gà (bỏ da), thịt bò nạc (ít)
+        - **Đậu, đậu phụ:** Protein thực vật
+        - **Sữa ít béo:** Sữa tách béo, sữa chua
+        - **Dầu thực vật:** Dầu ô liu, dầu hạt cải
+        - **Các loại hạt:** Hạnh nhân, óc chó (nếu có)
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Chất béo bão hòa:** Mỡ động vật, thịt mỡ, bơ
+        - **Chất béo trans:** Đồ chiên rán, bánh kẹo công nghiệp
+        - **Muối nhiều:** Dưa muối, đồ hộp, thức ăn nhanh
+        - **Thực phẩm chế biến sẵn:** Xúc xích, thịt nguội
+        - **Đường nhiều:** Bánh kẹo, nước ngọt
+        - **Rượu bia:** Hạn chế tối đa
+
+        **4. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo yến mạch + 1 quả trứng luộc + sữa ít béo
+        - **Trưa:** 1 chén cơm gạo lứt + cá hồi hấp + rau luộc + canh rau
+        - **Tối:** 1 chén cơm gạo lứt + thịt gà luộc (bỏ da) + rau xào (dầu ô liu) + canh
+        - **Bữa phụ:** Trái cây, các loại hạt, sữa chua
+
+        ## 🏃 TẬP THỂ DỤC SAU NHỒI MÁU CƠ TIM:
+
+        **⚠️ QUAN TRỌNG:** Phục hồi chức năng tim bắt đầu sớm (sau 1-2 ngày)!
+
+        **1. Phục hồi chức năng tim:**
+        - **Bắt đầu:** Sau 1-2 ngày (nếu ổn định)
+        - **Có hướng dẫn:** Nhân viên y tế
+        - **Tăng dần:** Từ nhẹ đến vừa phải
+
+        **2. Tập thể dục:**
+        - **Đi bộ:** Bắt đầu 5-10 phút, tăng dần đến 30-45 phút
+        - **Đạp xe:** Tại chỗ hoặc ngoài trời
+        - **Bơi lội:** (Nếu được phép)
+        - **Tần suất:** Hàng ngày hoặc ít nhất 5 ngày/tuần
+        - **Cường độ:** Vừa phải (có thể nói chuyện)
+
+        **3. Lưu ý:**
+        - Khởi động 5-10 phút
+        - Dừng ngay nếu: Đau ngực, khó thở, chóng mặt
+        - Nghỉ giữa các bài tập
+        - Giãn cơ sau tập
+        - Đo huyết áp, nhịp tim trước và sau
+
+        **4. Tránh:**
+        - Tập quá sức
+        - Tập khi mệt, đau ngực
+        - Tập khi thời tiết quá nóng/lạnh
+        - Tập ngay sau ăn
+
+        **5. Lợi ích:**
+        - Phục hồi chức năng tim
+        - Giảm nguy cơ tái phát
+        - Tăng sức khỏe tim mạch
+        - Cải thiện chất lượng sống
+
+        ## 🛡️ PHÒNG NGỪA TÁI PHÁT:
+
+        **1. Kiểm soát các yếu tố nguy cơ:**
+        - **Huyết áp:** < 130/80 mmHg
+        - **Đường huyết:** HbA1c < 7% (nếu có đái tháo đường)
+        - **Cholesterol:** LDL < 70 mg/dL (hoặc < 100)
+        - **Cân nặng:** BMI 18.5-24.9
+
+        **2. Bỏ thuốc lá:**
+        - Hút thuốc → Tăng nguy cơ tái phát 2-3 lần
+        - Bỏ thuốc → Giảm nguy cơ đáng kể
+
+        **3. Tập thể dục:**
+        - 30 phút/ngày, ít nhất 5 ngày/tuần
+        - Đi bộ, bơi, đạp xe
+        - Vừa phải, không gắng sức
+
+        **4. Chế độ ăn:**
+        - Giảm chất béo bão hòa
+        - Giảm muối
+        - Tăng rau xanh, trái cây
+        - Cá béo 2-3 lần/tuần
+
+        **5. Uống thuốc đúng giờ:**
+        - **Aspirin:** Hàng ngày (phòng ngừa)
+        - **Statin:** Giảm cholesterol
+        - **ACE inhibitors:** Bảo vệ tim
+        - **Beta-blockers:** Bảo vệ tim
+        - **⚠️ KHÔNG tự ý ngừng!**
+
+        **6. Quản lý stress:**
+        - Stress làm tăng nguy cơ
+        - Tập thư giãn: Hít thở sâu, thiền, yoga
+        - Ngủ đủ giấc
+
+        **7. Khám định kỳ:**
+        - Mỗi 1-3 tháng: Đo huyết áp, đánh giá
+        - Mỗi 6 tháng - 1 năm: Xét nghiệm máu, siêu âm tim
+
+        ## 🚨 KHI NÀO CẦN CẤP CỨU:
+
+        **Dấu hiệu nhồi máu cơ tim:**
+        - **Đau ngực:** Đau dữ dội, sau xương ức, lan ra tay, cổ, hàm
+        - **Khó thở:** Thở nhanh, nông
+        - **Vã mồ hôi:** Mồ hôi lạnh
+        - **Buồn nôn, nôn**
+        - **Chóng mặt, choáng váng**
+
+        **⚠️ QUAN TRỌNG:**
+        - **Gọi cấp cứu ngay:** 115
+        - **Không tự lái xe:** Nguy hiểm!
+        - **Ghi nhớ thời gian:** Khi nào bắt đầu đau
+        - **Thời gian = Cơ tim:** Càng sớm càng tốt!
+
+        **⚠️ Lưu ý:** Không phải ai cũng có triệu chứng điển hình! Đặc biệt ở nữ và người đái tháo đường.
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa:**
+        - Kiểm soát các yếu tố nguy cơ
+        - Chế độ ăn lành mạnh
+        - Tập thể dục đều đặn
+        - Không hút thuốc
+        - Khám sức khỏe định kỳ
+
+        **2. Sau nhồi máu cơ tim:**
+        - Tuân thủ điều trị nghiêm ngặt
+        - Phục hồi chức năng tích cực
+        - Phòng ngừa tái phát
+        - Hỗ trợ từ gia đình
+
+        **3. Nhận biết sớm:**
+        - Biết triệu chứng
+        - Gọi cấp cứu ngay khi có dấu hiệu
+        - Không chờ đợi
+
+        **4. Sống tích cực:**
+        - Nhồi máu cơ tim có thể phục hồi
+        - Tuân thủ điều trị → Sống khỏe mạnh
+        - Đừng để bệnh ảnh hưởng cuộc sống
+        """,
+        related_disease="myocardial_infarction",
+        related_drugs=["Aspirin", "Atorvastatin", "Metoprolol"],
+        printable=True
+    ),
+    
+    # === GASTRITIS ===
+    PatientEducationTopic(
+        id="gastritis_basics",
+        title="Understanding Gastritis",
+        title_vn="Hiểu về Viêm dạ dày",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm dạ dày
+
+        ## Viêm dạ dày là gì?
+
+        Viêm dạ dày là tình trạng viêm niêm mạc dạ dày, có thể cấp tính (ngắn hạn) hoặc mạn tính (dài hạn).
+
+        **⚠️ Đặc điểm:**
+        - Có thể do nhiều nguyên nhân
+        - Có thể chữa khỏi nếu điều trị đúng
+        - Dễ tái phát nếu không thay đổi lối sống
+
+        **Phân loại:**
+        - **Viêm dạ dày cấp:** Khởi phát đột ngột, ngắn hạn
+        - **Viêm dạ dày mạn:** Kéo dài, có thể tiến triển
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Đau bụng vùng thượng vị:**
+          - Đau rát, cồn cào
+          - Đau tăng khi đói
+          - Đau giảm khi ăn
+        - **Buồn nôn, nôn:** Có thể có
+        - **Đầy bụng, khó tiêu:** Sau ăn
+        - **Ợ hơi, ợ chua:** Có thể có
+        - **Chán ăn:** Có thể có
+
+        **Triệu chứng khác:**
+        - Cảm giác no sớm
+        - Đắng miệng
+        - Hơi thở hôi
+
+        **⚠️ Lưu ý:** Nhiều người không có triệu chứng rõ ràng!
+
+        ## Nguyên nhân:
+
+        **1. Nhiễm H. pylori:**
+        - Vi khuẩn Helicobacter pylori
+        - Nguyên nhân phổ biến nhất
+        - Lây qua đường miệng-miệng, phân-miệng
+
+        **2. Thuốc:**
+        - **NSAID:** Aspirin, Ibuprofen, Diclofenac
+        - **Corticosteroid:** Khi dùng lâu dài
+        - Làm tổn thương niêm mạc dạ dày
+
+        **3. Rượu bia:**
+        - Kích thích niêm mạc dạ dày
+        - Uống nhiều → Viêm cấp
+
+        **4. Stress:**
+        - Stress nặng → Viêm dạ dày cấp
+        - Stress kéo dài → Viêm mạn
+
+        **5. Yếu tố khác:**
+        - Thức ăn cay, chua (không phải nguyên nhân chính)
+        - Hút thuốc lá
+        - Bệnh tự miễn (hiếm)
+
+        ## Chẩn đoán:
+
+        **1. Nội soi dạ dày:**
+        - Xem trực tiếp niêm mạc dạ dày
+        - Sinh thiết (tìm H. pylori, loại trừ ung thư)
+        - Chính xác nhất
+
+        **2. Xét nghiệm H. pylori:**
+        - Test thở
+        - Xét nghiệm phân
+        - Xét nghiệm máu
+
+        **3. Xét nghiệm khác:**
+        - Công thức máu (nếu chảy máu)
+        - Test phân tìm máu ẩn
+
+        ## Điều trị:
+
+        **1. Điều trị H. pylori (nếu có):**
+        - Phác đồ 3 thuốc (14 ngày)
+        - PPI + 2 kháng sinh
+        - Uống đủ ngày, đúng giờ
+
+        **2. Thuốc giảm axit:**
+        - **PPI:** Omeprazole, Pantoprazole
+          - Uống trước ăn 30 phút
+          - Uống 4-8 tuần
+        - **H2 Blockers:** Ranitidine, Famotidine
+
+        **3. Thuốc bảo vệ niêm mạc:**
+        - Sucralfate
+        - Bismuth
+
+        **4. Tránh thuốc gây tổn thương:**
+        - Không dùng NSAID (nếu có thể)
+        - Nếu cần → Dùng kèm PPI
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI VIÊM DẠ DÀY:
+
+        **1. Nguyên tắc:**
+        - **Ăn đúng giờ:** Không bỏ bữa
+        - **Ăn nhiều bữa nhỏ:** 5-6 bữa/ngày
+        - **Ăn chậm, nhai kỹ:** Giúp tiêu hóa tốt
+        - **Tránh thức ăn kích thích:** Đồ cay, chua, nóng, lạnh
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Cháo, súp:** Dễ tiêu, ấm
+          - Cháo gà, cháo thịt bằm
+          - Súp rau củ
+        - **Thức ăn mềm:** Luộc, hấp
+        - **Rau xanh:** Luộc, hấp (rau cải, rau muống)
+        - **Trái cây:** Chuối, táo (không quá chua)
+        - **Sữa:** Sữa ấm, sữa chua (ít chua)
+        - **Thịt nạc:** Thịt gà, cá (luộc, hấp)
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Đồ cay:** Ớt, tiêu, gừng (nhiều)
+        - **Đồ chua:** Chanh, dấm, cam chua
+        - **Đồ nóng, lạnh:** Nước đá, đồ quá nóng
+        - **Đồ chiên, nhiều dầu mỡ:** Khó tiêu
+        - **Rượu bia:** Kích thích dạ dày
+        - **Cà phê, trà đặc:** Tăng tiết axit
+        - **Đồ chế biến sẵn:** Đồ hộp, thức ăn nhanh
+
+        **4. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo gà + sữa ấm
+        - **Bữa phụ (10h):** Bánh mì mềm, sữa chua
+        - **Trưa:** 1 chén cơm mềm + cá hấp + rau luộc + canh rau
+        - **Bữa phụ (15h):** Chuối, bánh quy
+        - **Tối:** 1 chén cơm mềm + thịt gà luộc + rau luộc + canh
+        - **Bữa phụ (21h):** Sữa ấm
+
+        **5. Lưu ý:**
+        - Ăn chậm, nhai kỹ
+        - Không ăn quá no
+        - Không nằm ngay sau ăn (chờ 2-3 giờ)
+        - Uống nước ấm, không uống lạnh
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Thuốc điều trị H. pylori:**
+        - Uống đủ 14 ngày
+        - Uống đúng giờ
+        - Không tự ý ngừng
+
+        **2. Thuốc PPI:**
+        - Uống trước ăn 30 phút
+        - Uống đủ 4-8 tuần
+        - Không tự ý ngừng
+
+        **3. Tránh NSAID:**
+        - Không dùng Aspirin, Ibuprofen, Diclofenac
+        - Nếu cần giảm đau → Dùng Paracetamol
+        - Nếu bắt buộc dùng NSAID → Dùng kèm PPI
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Điều trị H. pylori:**
+        - Nếu có → Điều trị triệt để
+        - Giảm nguy cơ tái phát
+
+        **2. Tránh thuốc gây tổn thương:**
+        - Không tự ý dùng NSAID lâu dài
+        - Nếu cần → Dùng kèm PPI
+
+        **3. Lối sống:**
+        - **Bỏ thuốc lá:** Làm tổn thương niêm mạc
+        - **Hạn chế rượu bia:** Kích thích dạ dày
+        - **Quản lý stress:** Tập thư giãn, yoga
+        - **Ăn đúng giờ:** Không bỏ bữa
+
+        **4. Chế độ ăn:**
+        - Tránh thức ăn kích thích
+        - Ăn nhiều bữa nhỏ
+        - Ăn chậm, nhai kỹ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Chảy máu:**
+        - Nôn ra máu
+        - Đi ngoài phân đen
+        - Mệt mỏi, da xanh (thiếu máu)
+
+        **2. Triệu chứng nặng:**
+        - Đau bụng dữ dội
+        - Nôn nhiều, không ăn được
+        - Sụt cân
+
+        **3. Không cải thiện:**
+        - Điều trị 4-8 tuần không đỡ
+        - Triệu chứng nặng hơn
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị viêm dạ dày:**
+        - Tuân thủ điều trị
+        - Uống thuốc đúng giờ, đủ ngày
+        - Chế độ ăn phù hợp
+        - Tái khám sau điều trị
+
+        **2. Phòng ngừa tái phát:**
+        - Điều trị H. pylori triệt để
+        - Tránh NSAID
+        - Bỏ thuốc lá, hạn chế rượu bia
+        - Ăn đúng giờ, không bỏ bữa
+        - Quản lý stress
+
+        **3. Sống tích cực:**
+        - Viêm dạ dày có thể chữa khỏi
+        - Tuân thủ điều trị → Khỏi bệnh
+        """,
+        related_disease="gastritis",
+        related_drugs=["Omeprazole", "Amoxicillin", "Clarithromycin"],
+        printable=True
+    ),
+    
+    # === SINUSITIS ===
+    PatientEducationTopic(
+        id="sinusitis_basics",
+        title="Understanding Sinusitis",
+        title_vn="Hiểu về Viêm xoang",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm xoang
+
+        ## Viêm xoang là gì?
+
+        Viêm xoang là tình trạng viêm các xoang (khoang rỗng trong xương mặt), thường do nhiễm trùng, dị ứng hoặc các yếu tố khác.
+
+        **⚠️ Đặc điểm:**
+        - Rất phổ biến ở Việt Nam (khí hậu nóng ẩm)
+        - Có thể cấp tính (< 4 tuần) hoặc mạn tính (> 12 tuần)
+        - Có thể tái phát
+
+        **Vị trí xoang:**
+        - Xoang hàm (2 bên má)
+        - Xoang trán (trán)
+        - Xoang sàng (giữa 2 mắt)
+        - Xoang bướm (sau mũi)
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Nghẹt mũi:** Một hoặc cả hai bên
+        - **Chảy nước mũi:**
+          - Dịch vàng/xanh (nhiễm trùng)
+          - Dịch trong (dị ứng)
+          - Chảy xuống họng (chảy mũi sau)
+        - **Đau mặt:**
+          - Đau vùng má (xoang hàm)
+          - Đau trán (xoang trán)
+          - Đau giữa 2 mắt (xoang sàng)
+          - Đau tăng khi cúi đầu
+        - **Đau đầu:** Có thể có
+        - **Giảm khứu giác:** Không ngửi được mùi
+        - **Ho:** Do chảy mũi sau
+
+        **Triệu chứng khác:**
+        - Sốt (nếu nhiễm trùng)
+        - Mệt mỏi
+        - Hơi thở hôi
+        - Đau răng (xoang hàm)
+
+        **⚠️ Phân loại:**
+        - **Viêm xoang cấp:** < 4 tuần, thường do nhiễm trùng
+        - **Viêm xoang mạn:** > 12 tuần, tái phát nhiều lần
+
+        ## Nguyên nhân:
+
+        **1. Nhiễm trùng:**
+        - **Virus:** Cảm lạnh, cúm → Viêm xoang cấp
+        - **Vi khuẩn:** Nhiễm trùng thứ phát
+        - **Nấm:** (Hiếm)
+
+        **2. Dị ứng:**
+        - Phấn hoa, bụi, lông thú
+        - Gây viêm xoang mạn
+
+        **3. Yếu tố khác:**
+        - **Polyp mũi:** Khối u lành tính trong mũi
+        - **Lệch vách ngăn mũi:** Bẩm sinh hoặc chấn thương
+        - **Khí hậu:** Nóng ẩm, thay đổi thời tiết
+        - **Hút thuốc lá:** Kích thích niêm mạc
+        - **Bơi lội:** Nước vào xoang
+
+        ## Chẩn đoán:
+
+        **1. Khám lâm sàng:**
+        - Khám mũi, họng
+        - Ấn vùng xoang (đau)
+        - Đánh giá triệu chứng
+
+        **2. Nội soi mũi:**
+        - Xem niêm mạc mũi, xoang
+        - Phát hiện polyp, dịch
+
+        **3. Chụp CT xoang:**
+        - Xem rõ xoang
+        - Phát hiện tổn thương
+        - Thường chỉ làm khi mạn tính hoặc có biến chứng
+
+        **4. Xét nghiệm:**
+        - Cấy dịch mũi (nếu nhiễm trùng)
+        - Test dị ứng (nếu nghi ngờ dị ứng)
+
+        ## Điều trị:
+
+        **1. Điều trị viêm xoang cấp:**
+        - **Rửa mũi:** Nước muối sinh lý
+          - Rửa 2-3 lần/ngày
+          - Giúp làm sạch dịch, giảm nghẹt
+        - **Thuốc thông mũi:** Xylometazoline, Oxymetazoline
+          - Dùng ngắn hạn (3-5 ngày)
+          - Không dùng lâu → Phản ứng dội
+        - **Kháng sinh:** Nếu nhiễm trùng do vi khuẩn
+          - Amoxicillin, Amoxicillin-Clavulanate
+          - Uống đủ ngày (7-10 ngày)
+        - **Corticosteroid xịt mũi:** Giảm viêm
+        - **Hạ sốt, giảm đau:** Paracetamol, Ibuprofen
+
+        **2. Điều trị viêm xoang mạn:**
+        - **Rửa mũi:** Hàng ngày
+        - **Corticosteroid xịt mũi:** Lâu dài
+        - **Kháng sinh:** Khi có đợt cấp
+        - **Điều trị dị ứng:** Nếu có
+        - **Phẫu thuật:** Nếu không đáp ứng thuốc
+
+        **3. Điều trị hỗ trợ:**
+        - Xông hơi (nước nóng)
+        - Chườm ấm vùng xoang
+        - Nghỉ ngơi
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI VIÊM XOANG:
+
+        **1. Nguyên tắc:**
+        - **Tăng cường miễn dịch:** Giúp chống lại nhiễm trùng
+        - **Chống viêm:** Thực phẩm chống viêm
+        - **Tránh thực phẩm gây dị ứng:** Nếu có dị ứng
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Rau xanh:** Nhiều (rau cải, rau muống, bông cải)
+          - Vitamin, chất chống oxy hóa
+        - **Trái cây:** Cam, bưởi, ổi (vitamin C)
+          - Tăng cường miễn dịch
+        - **Tỏi, gừng:** Chống viêm, kháng khuẩn
+        - **Cá béo:** Cá hồi, cá thu (omega-3, chống viêm)
+        - **Nước ấm:** Uống nhiều (giúp loãng dịch)
+        - **Súp, canh nóng:** Giúp thông mũi
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Sữa, sản phẩm sữa:** Một số người nhạy cảm (tăng dịch nhầy)
+        - **Đồ lạnh:** Nước đá, kem (kích thích xoang)
+        - **Đồ cay:** Ớt, tiêu (có thể kích thích)
+        - **Rượu bia:** Làm khô niêm mạc
+        - **Thực phẩm gây dị ứng:** Nếu có dị ứng (tùy từng người)
+
+        **4. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo gà nóng + nước chanh ấm
+        - **Trưa:** 1 chén cơm + cá hấp + rau luộc + canh nóng
+        - **Tối:** 1 chén cơm + thịt gà luộc + rau xào + canh nóng
+        - **Uống:** Nước ấm, trà gừng, súp nóng
+
+        **5. Lưu ý:**
+        - Uống nhiều nước ấm (giúp loãng dịch)
+        - Ăn thức ăn nóng (giúp thông mũi)
+        - Tránh đồ lạnh
+        - Thử kiêng sữa xem có cải thiện không
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Rửa mũi:**
+        - **Nước muối sinh lý:** Rửa 2-3 lần/ngày
+        - **Cách rửa:**
+          1. Nghiêng đầu sang một bên
+          2. Đổ nước muối vào lỗ mũi trên
+          3. Nước chảy ra lỗ mũi dưới
+          4. Làm ngược lại bên kia
+        - **Lợi ích:** Làm sạch dịch, giảm nghẹt
+
+        **2. Thuốc thông mũi:**
+        - **Xylometazoline, Oxymetazoline:** Xịt mũi
+        - **Dùng ngắn hạn:** 3-5 ngày
+        - **⚠️ KHÔNG dùng lâu:** > 7 ngày → Phản ứng dội (nghẹt nặng hơn)
+
+        **3. Corticosteroid xịt mũi:**
+        - **Budesonide, Fluticasone:** Xịt mũi
+        - **Dùng lâu dài:** Nếu viêm xoang mạn
+        - **An toàn:** Ít tác dụng phụ toàn thân
+
+        **4. Kháng sinh:**
+        - Chỉ dùng khi nhiễm trùng do vi khuẩn
+        - Uống đủ ngày (7-10 ngày)
+        - Không tự ý ngừng
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Vệ sinh mũi:**
+        - Rửa mũi bằng nước muối hàng ngày
+        - Đặc biệt khi có cảm lạnh, cúm
+
+        **2. Tránh dị ứng:**
+        - Tránh phấn hoa, bụi, lông thú (nếu dị ứng)
+        - Đeo khẩu trang khi cần
+        - Vệ sinh môi trường
+
+        **3. Lối sống:**
+        - **Bỏ thuốc lá:** Kích thích niêm mạc
+        - **Tránh khói, bụi:** Ô nhiễm không khí
+        - **Giữ ấm:** Khi trời lạnh
+        - **Tránh thay đổi nhiệt độ đột ngột**
+
+        **4. Điều trị cảm lạnh, cúm sớm:**
+        - Cảm lạnh, cúm → Viêm xoang
+        - Điều trị sớm → Giảm nguy cơ viêm xoang
+
+        **5. Tăng cường miễn dịch:**
+        - Ăn đủ chất
+        - Ngủ đủ giấc
+        - Tập thể dục đều đặn
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng nặng:**
+        - Sốt cao > 39°C
+        - Đau đầu dữ dội
+        - Sưng mặt, mắt
+
+        **2. Biến chứng:**
+        - **Viêm màng não:** Đau đầu dữ dội, cứng cổ, sốt cao
+        - **Viêm ổ mắt:** Sưng mắt, đau mắt, nhìn mờ
+        - **Áp xe:** Sưng, đau, sốt
+
+        **3. Không cải thiện:**
+        - Điều trị 7-10 ngày không đỡ
+        - Triệu chứng nặng hơn
+
+        **4. Viêm xoang mạn:**
+        - Tái phát nhiều lần
+        - Không đáp ứng với thuốc
+        - Cần đánh giá phẫu thuật
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị viêm xoang:**
+        - Rửa mũi thường xuyên
+        - Uống nhiều nước ấm
+        - Dùng thuốc đúng cách
+        - Nghỉ ngơi
+
+        **2. Phòng ngừa:**
+        - Rửa mũi hàng ngày
+        - Tránh dị ứng
+        - Điều trị cảm lạnh, cúm sớm
+        - Bỏ thuốc lá
+
+        **3. Không tự ý:**
+        - Dùng thuốc thông mũi lâu dài (phản ứng dội)
+        - Dùng kháng sinh không cần thiết
+
+        **4. Sống tích cực:**
+        - Viêm xoang có thể kiểm soát được
+        - Tuân thủ điều trị → Cải thiện
+        """,
+        related_disease="sinusitis",
+        related_drugs=["Amoxicillin", "Budesonide", "Xylometazoline"],
+        printable=True
+    ),
 ]
