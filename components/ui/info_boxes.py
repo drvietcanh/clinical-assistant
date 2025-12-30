@@ -78,6 +78,10 @@ def render_info_box(
     
     margin_top = "margin-top: 8px;" if title else ""
     
+    # Detect if message is raw HTML (ignoring leading whitespace)
+    _msg_stripped = message.lstrip() if isinstance(message, str) else ""
+    is_html = isinstance(message, str) and _msg_stripped.startswith("<")
+
     box_html = f"""
     <div style="background: {bg_style};
                 padding: 1.25rem 1.5rem;
@@ -87,7 +91,7 @@ def render_info_box(
                 box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
         {title_html}
         <div style="color: #424242; font-size: 0.95rem; line-height: 1.6; {margin_top}">
-            {html.escape(message) if not message.startswith('<') else message}
+            {html.escape(message) if not is_html else message}
         </div>
     </div>
     """
