@@ -1,0 +1,2722 @@
+"""
+Patient Education Topics - Disease
+"""
+
+from patient_education.models import PatientEducationTopic
+
+
+DISEASE_TOPICS = [
+    PatientEducationTopic(
+            id="diabetes_basics",
+            title="Understanding Diabetes",
+            title_vn="Hiểu về Đái tháo đường",
+            category="Disease",
+            content="""
+        # Hiểu về Đái tháo đường
+
+        ## Đái tháo đường là gì?
+
+        Đái tháo đường là bệnh mạn tính xảy ra khi cơ thể không thể sử dụng đường (glucose) đúng cách. Đường là nguồn năng lượng chính của cơ thể, được lấy từ thức ăn và được insulin (hormone từ tuyến tụy) giúp đưa vào tế bào để sử dụng.
+
+        **Khi bị đái tháo đường:**
+        - Đường tích tụ trong máu → Đường huyết cao
+        - Tế bào thiếu năng lượng → Mệt mỏi
+        - Gây tổn thương các cơ quan theo thời gian
+
+        ## Có hai loại chính:
+
+        **Đái tháo đường type 1 (10%):**
+        - **Nguyên nhân:** Tuyến tụy không sản xuất insulin (do tự miễn)
+        - **Độ tuổi:** Thường gặp ở trẻ em, thanh niên (< 30 tuổi)
+        - **Triệu chứng:** Khởi phát nhanh, rõ ràng
+        - **Điều trị:** Bắt buộc tiêm insulin hàng ngày
+        - **Không thể phòng ngừa**
+
+        **Đái tháo đường type 2 (90%):**
+        - **Nguyên nhân:** Cơ thể kháng insulin hoặc không sản xuất đủ
+        - **Độ tuổi:** Thường gặp ở người lớn (> 40 tuổi), nhưng ngày càng trẻ hóa
+        - **Yếu tố nguy cơ:** Béo phì, ít vận động, di truyền, tuổi cao
+        - **Triệu chứng:** Khởi phát từ từ, có thể không có triệu chứng
+        - **Điều trị:** Thuốc uống, chế độ ăn, tập thể dục, có thể cần insulin
+        - **Có thể phòng ngừa** bằng lối sống lành mạnh
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình (thường gặp ở type 1 hoặc type 2 nặng):**
+        - **Tiểu nhiều:** Đi tiểu nhiều lần, lượng nhiều (do thận cố gắng thải đường)
+        - **Khát nhiều:** Uống nước liên tục nhưng vẫn khát
+        - **Ăn nhiều nhưng sụt cân:** Cơ thể không sử dụng được đường, đốt mỡ và cơ
+        - **Mệt mỏi:** Thiếu năng lượng, uể oải
+        - **Nhìn mờ:** Đường huyết cao làm thay đổi hình dạng thủy tinh thể
+
+        **Triệu chứng khác:**
+        - Vết thương lâu lành
+        - Nhiễm trùng thường xuyên (nhiễm nấm, nhiễm trùng da)
+        - Tê bì, ngứa ran ở tay chân (tổn thương thần kinh)
+        - Da khô, ngứa
+
+        **⚠️ Lưu ý:** Nhiều người type 2 không có triệu chứng rõ ràng, chỉ phát hiện khi khám sức khỏe định kỳ.
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm đường huyết:**
+        - **Đường huyết đói:** ≥ 126 mg/dL (≥ 7.0 mmol/L) - 2 lần
+        - **Đường huyết bất kỳ:** ≥ 200 mg/dL (≥ 11.1 mmol/L) + có triệu chứng
+        - **HbA1c:** ≥ 6.5% (đường huyết trung bình 3 tháng)
+        - **Nghiệm pháp dung nạp glucose:** ≥ 200 mg/dL sau 2 giờ
+
+        ## Điều trị (3 trụ cột):
+
+        **1. Thuốc:**
+        - **Type 1:** Insulin (bắt buộc)
+        - **Type 2:** 
+          - Metformin (thuốc đầu tay)
+          - Sulfonylurea, DPP-4 inhibitors, SGLT-2 inhibitors
+          - Insulin (nếu thuốc uống không đủ)
+        - **Quan trọng:** Uống đúng giờ, đúng liều, không tự ý ngừng
+
+        **2. Chế độ ăn:**
+        - Ăn đúng giờ, đều đặn
+        - Chọn thực phẩm có chỉ số đường huyết thấp
+        - Kiểm soát khẩu phần
+        - Xem chi tiết trong topic "Chế độ ăn cho người Đái tháo đường"
+
+        **3. Tập thể dục:**
+        - **Loại:** Đi bộ, chạy bộ, bơi lội, đạp xe, yoga
+        - **Thời gian:** 30 phút/ngày, ít nhất 5 ngày/tuần
+        - **Cường độ:** Vừa phải (có thể nói chuyện khi tập)
+        - **Thời điểm:** Sau bữa ăn 1-2 giờ (tránh hạ đường huyết)
+        - **Lưu ý:** Đo đường huyết trước và sau tập, mang đường bên người
+
+        ## 🏃 TẬP THỂ DỤC CHI TIẾT:
+
+        **1. Đi bộ (Dễ nhất, phù hợp mọi người):**
+        - **Bắt đầu:** 10-15 phút/ngày
+        - **Tăng dần:** 30-45 phút/ngày
+        - **Tốc độ:** 4-5 km/giờ (hơi nhanh)
+        - **Tần suất:** Hàng ngày hoặc ít nhất 5 ngày/tuần
+        - **Lợi ích:** Giảm đường huyết, giảm cân, tăng sức khỏe tim mạch
+
+        **2. Chạy bộ (Nếu sức khỏe cho phép):**
+        - **Bắt đầu:** 5-10 phút, xen kẽ đi bộ
+        - **Tăng dần:** 20-30 phút
+        - **Tần suất:** 3-4 lần/tuần
+        - **Lưu ý:** Kiểm tra tim mạch trước, mang giày phù hợp
+
+        **3. Bơi lội:**
+        - **Thời gian:** 20-30 phút
+        - **Tần suất:** 3-4 lần/tuần
+        - **Lợi ích:** Toàn thân, ít chấn thương khớp
+
+        **4. Đạp xe:**
+        - **Thời gian:** 30-45 phút
+        - **Tần suất:** 3-5 lần/tuần
+        - **Lợi ích:** Tăng sức mạnh chân, tim mạch
+
+        **5. Tập sức mạnh (Quan trọng!):**
+        - **Loại:** Nâng tạ nhẹ, tập với dây kháng lực, bodyweight
+        - **Thời gian:** 20-30 phút
+        - **Tần suất:** 2-3 lần/tuần (không liên tiếp)
+        - **Lợi ích:** Tăng cơ, giảm kháng insulin, tăng chuyển hóa
+
+        **6. Yoga, Thái Cực Quyền:**
+        - **Thời gian:** 30-60 phút
+        - **Tần suất:** 3-5 lần/tuần
+        - **Lợi ích:** Giảm stress, tăng linh hoạt, kiểm soát đường huyết
+
+        **⚠️ Lưu ý khi tập thể dục:**
+        - Đo đường huyết trước tập: Nếu < 100 mg/dL → Ăn nhẹ trước
+        - Đo đường huyết sau tập: Nếu < 70 mg/dL → Ăn ngay
+        - Mang đường bên người (kẹo, nước ngọt)
+        - Uống đủ nước
+        - Khởi động trước, giãn cơ sau
+        - Dừng ngay nếu: Đau ngực, chóng mặt, khó thở nặng
+
+        ## 📊 THEO DÕI VÀ QUẢN LÝ:
+
+        **1. Đo đường huyết tại nhà:**
+        - **Type 1:** Trước mỗi bữa ăn, trước khi ngủ, trước/sau tập
+        - **Type 2:** Trước bữa sáng, trước bữa tối (hoặc theo chỉ định bác sĩ)
+        - **Mục tiêu:**
+          - Trước ăn: 80-130 mg/dL (4.4-7.2 mmol/L)
+          - Sau ăn 2 giờ: < 180 mg/dL (< 10 mmol/L)
+          - Trước ngủ: 100-140 mg/dL (5.6-7.8 mmol/L)
+
+        **2. Xét nghiệm HbA1c:**
+        - **Mục tiêu:** < 7% (đường huyết trung bình 3 tháng)
+        - **Tần suất:** Mỗi 3-6 tháng
+        - **Ý nghĩa:** Đánh giá kiểm soát đường huyết dài hạn
+
+        **3. Khám định kỳ:**
+        - **Hàng tháng:** Đo đường huyết, huyết áp, cân nặng
+        - **Mỗi 3 tháng:** HbA1c, đánh giá điều trị
+        - **Mỗi 6 tháng - 1 năm:**
+          - Khám mắt (kiểm tra võng mạc)
+          - Xét nghiệm chức năng thận (creatinine, microalbumin)
+          - Khám bàn chân (kiểm tra tổn thương thần kinh)
+          - Lipid máu, chức năng gan
+
+        **4. Nhật ký quản lý:**
+        - Ghi: Đường huyết, thuốc đã uống, thức ăn, tập thể dục
+        - Giúp bác sĩ điều chỉnh điều trị tốt hơn
+
+        ## ⚠️ BIẾN CHỨNG NẾU KHÔNG ĐIỀU TRỊ:
+
+        **1. Biến chứng mạch máu nhỏ:**
+        - **Mắt (Võng mạc):** Mờ mắt, mù lòa
+        - **Thận:** Suy thận, cần lọc thận
+        - **Thần kinh:** Tê bì, đau, loét bàn chân
+
+        **2. Biến chứng mạch máu lớn:**
+        - **Tim:** Nhồi máu cơ tim, suy tim
+        - **Não:** Đột quỵ
+        - **Chân:** Tắc mạch, hoại tử, có thể phải cắt cụt
+
+        **3. Biến chứng cấp tính:**
+        - **Hạ đường huyết:** Run, đổ mồ hôi, lú lẫn, hôn mê (nguy hiểm!)
+        - **Tăng đường huyết cấp:** Nhiễm toan ceton, hôn mê (nguy hiểm!)
+
+        **⚠️ QUAN TRỌNG:** Kiểm soát đường huyết tốt giúp giảm 40-60% nguy cơ biến chứng!
+
+        ## 💡 SINH HOẠT HÀNG NGÀY:
+
+        **1. Giấc ngủ:**
+        - Ngủ đủ 7-8 giờ/đêm
+        - Giờ ngủ đều đặn
+        - Thiếu ngủ làm tăng đường huyết, tăng kháng insulin
+
+        **2. Quản lý stress:**
+        - Stress làm tăng đường huyết
+        - Tập thư giãn: Hít thở sâu, thiền, yoga
+        - Tránh căng thẳng kéo dài
+
+        **3. Chăm sóc bàn chân:**
+        - Kiểm tra bàn chân mỗi ngày (tìm vết thương, vết loét)
+        - Rửa chân sạch, lau khô (đặc biệt kẽ ngón chân)
+        - Mang giày dép phù hợp, không đi chân đất
+        - Cắt móng chân cẩn thận
+        - **⚠️ Vết thương nhỏ ở chân có thể dẫn đến nhiễm trùng nặng!**
+
+        **4. Vệ sinh răng miệng:**
+        - Đánh răng 2 lần/ngày
+        - Dùng chỉ nha khoa
+        - Khám răng định kỳ (đái tháo đường dễ sâu răng, viêm nướu)
+
+        **5. Tiêm chủng:**
+        - Tiêm vắc xin cúm hàng năm
+        - Tiêm vắc xin phế cầu (nếu bác sĩ chỉ định)
+        - Tiêm vắc xin COVID-19
+
+        **6. Khi ốm:**
+        - Tiếp tục uống thuốc (không tự ý ngừng)
+        - Đo đường huyết thường xuyên hơn
+        - Uống đủ nước
+        - Gọi bác sĩ nếu: Đường huyết > 250 mg/dL, nôn nhiều, không ăn được
+
+        ## 🚨 KHI NÀO CẦN CẤP CỨU:
+
+        **Hạ đường huyết (Đường huyết < 70 mg/dL):**
+        - **Triệu chứng:** Run, đổ mồ hôi, đói, chóng mặt, lú lẫn, tim đập nhanh
+        - **Xử trí ngay:**
+          1. Ăn/uống 15g đường (3 viên kẹo, 1/2 ly nước ngọt, 1 thìa mật ong)
+          2. Đợi 15 phút, đo lại
+          3. Nếu vẫn thấp → Lặp lại
+          4. Sau đó ăn bữa phụ (bánh mì, sữa)
+        - **Nếu hôn mê:** Gọi cấp cứu ngay, không cho uống (sặc)
+
+        **Tăng đường huyết cấp (Đường huyết > 250 mg/dL + triệu chứng):**
+        - **Triệu chứng:** Khát nhiều, tiểu nhiều, mệt mỏi, buồn nôn, thở nhanh, hơi thở có mùi trái cây
+        - **Xử trí:** Gọi cấp cứu ngay, đến bệnh viện
+
+        ## 💊 LỜI KHUYÊN QUAN TRỌNG:
+
+        **1. Tuân thủ điều trị:**
+        - Uống thuốc đúng giờ, đúng liều
+        - Không tự ý ngừng thuốc
+        - Không tự ý thay đổi liều
+        - Báo bác sĩ nếu có tác dụng phụ
+
+        **2. Giáo dục bản thân:**
+        - Học về bệnh, cách quản lý
+        - Tham gia lớp học về đái tháo đường (nếu có)
+        - Đọc tài liệu từ nguồn uy tín
+
+        **3. Hỗ trợ xã hội:**
+        - Nói với gia đình, bạn bè về bệnh
+        - Tham gia nhóm hỗ trợ người đái tháo đường
+        - Không ngại hỏi bác sĩ khi không rõ
+
+        **4. Tích cực, lạc quan:**
+        - Đái tháo đường có thể kiểm soát được
+        - Sống khỏe mạnh, bình thường nếu kiểm soát tốt
+        - Đừng để bệnh chi phối cuộc sống
+
+        **5. Phòng ngừa biến chứng:**
+        - Kiểm soát đường huyết tốt
+        - Kiểm soát huyết áp (< 130/80 mmHg)
+        - Kiểm soát cholesterol
+        - Không hút thuốc
+        - Khám định kỳ đầy đủ
+
+        ## 📞 LIÊN HỆ BÁC SĨ KHI:
+
+        - Đường huyết cao/thấp bất thường
+        - Có triệu chứng mới
+        - Vết thương không lành
+        - Có dấu hiệu nhiễm trùng
+        - Cần điều chỉnh thuốc
+        - Có thắc mắc về điều trị
+            """,
+            related_disease="diabetes_type2",
+            related_drugs=["Metformin", "Insulin"],
+            printable=True
+    ),
+
+    PatientEducationTopic(
+            id="hypertension_basics",
+            title="Understanding High Blood Pressure",
+            title_vn="Hiểu về Tăng huyết áp",
+            category="Disease",
+            content="""
+        # Hiểu về Tăng huyết áp
+
+        ## Tăng huyết áp là gì?
+
+        Tăng huyết áp (cao huyết áp) là khi huyết áp cao hơn bình thường trong thời gian dài. Huyết áp là áp lực của máu lên thành động mạch khi tim bơm máu.
+
+        **Huyết áp gồm 2 số:**
+        - **Số trên (Tâm thu):** Áp lực khi tim co bóp
+        - **Số dưới (Tâm trương):** Áp lực khi tim giãn
+
+        ## Phân loại huyết áp:
+
+        **Bình thường:** < 120/80 mmHg
+        **Tăng huyết áp độ 1:** 130-139/80-89 mmHg
+        **Tăng huyết áp độ 2:** ≥ 140/90 mmHg
+        **Tăng huyết áp cấp cứu:** ≥ 180/120 mmHg (cần cấp cứu ngay!)
+
+        **⚠️ Lưu ý:** Huyết áp thay đổi theo thời gian trong ngày, cần đo nhiều lần để chẩn đoán.
+
+        ## Nguyên nhân:
+
+        **1. Nguyên nhân không thay đổi được:**
+        - **Tuổi cao:** Mạch máu cứng dần theo tuổi
+        - **Di truyền:** Có người thân bị tăng huyết áp
+        - **Giới tính:** Nam > 55 tuổi, Nữ > 65 tuổi dễ mắc hơn
+
+        **2. Nguyên nhân có thể thay đổi:**
+        - **Béo phì:** Tăng cân → Tăng huyết áp
+        - **Ăn mặn:** Muối giữ nước → Tăng thể tích máu → Tăng huyết áp
+        - **Ít vận động:** Tim phải làm việc nhiều hơn
+        - **Hút thuốc lá:** Làm hẹp mạch máu
+        - **Uống rượu bia:** Làm tăng huyết áp
+        - **Stress:** Làm tăng hormone gây tăng huyết áp
+        - **Thiếu ngủ:** Rối loạn hormone
+        - **Bệnh khác:** Đái tháo đường, bệnh thận, bệnh tuyến giáp
+
+        ## Triệu chứng:
+
+        **⚠️ QUAN TRỌNG:** Hầu hết người tăng huyết áp KHÔNG có triệu chứng!
+
+        **Triệu chứng có thể gặp (khi huyết áp rất cao):**
+        - Đau đầu (thường sau gáy, buổi sáng)
+        - Chóng mặt, choáng váng
+        - Mệt mỏi, uể oải
+        - Nhìn mờ
+        - Đau ngực
+        - Khó thở
+        - Tim đập nhanh, không đều
+
+        **⚠️ Lưu ý:** Không nên dựa vào triệu chứng để biết huyết áp cao. Cần đo huyết áp thường xuyên!
+
+        ## Điều trị:
+
+        **1. Thay đổi lối sống (Quan trọng nhất!):**
+        - Chế độ ăn ít muối
+        - Tập thể dục đều đặn
+        - Giảm cân (nếu thừa cân)
+        - Bỏ thuốc lá
+        - Hạn chế rượu bia
+        - Quản lý stress
+        - Ngủ đủ giấc
+
+        **2. Thuốc:**
+        - **ACE inhibitors:** Enalapril, Lisinopril
+        - **ARB:** Losartan, Valsartan
+        - **Calcium channel blockers:** Amlodipine, Nifedipine
+        - **Diuretics:** Hydrochlorothiazide, Furosemide
+        - **Beta-blockers:** Metoprolol, Atenolol
+        - **Quan trọng:** Uống đúng giờ, đúng liều, không tự ý ngừng
+
+        **3. Theo dõi:**
+        - Đo huyết áp tại nhà
+        - Khám định kỳ
+        - Điều chỉnh thuốc nếu cần
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI TĂNG HUYẾT ÁP:
+
+        **1. Giảm muối (QUAN TRỌNG NHẤT!):**
+        - **Mục tiêu:** < 5g muối/ngày (< 2g natri/ngày)
+        - **1 thìa cà phê muối = 5g muối**
+        - **Cách giảm muối:**
+          - Không thêm muối khi nấu (hoặc giảm 1/2)
+          - Không chấm muối, nước mắm khi ăn
+          - Tránh đồ mặn: Dưa muối, cà muối, đồ hộp
+          - Tránh thức ăn nhanh, đồ chế biến sẵn
+          - Đọc nhãn: Chọn thực phẩm < 120mg natri/100g
+          - Dùng gia vị thay thế: Chanh, tỏi, gừng, rau thơm
+
+        **2. Tăng Kali (Giúp giảm huyết áp):**
+        - **Thực phẩm giàu kali:**
+          - Chuối, cam, bơ
+          - Khoai tây, khoai lang
+          - Rau xanh: Rau muống, rau cải, rau ngót
+          - Đậu, đậu phụ
+          - Cá, sữa
+        - **Lưu ý:** Nếu dùng thuốc lợi tiểu giữ kali → Hỏi bác sĩ
+
+        **3. Chế độ ăn DASH (Dietary Approaches to Stop Hypertension):**
+        - **Nhiều rau xanh, trái cây:** 4-5 phần/ngày
+        - **Ngũ cốc nguyên hạt:** 6-8 phần/ngày
+        - **Sữa ít béo:** 2-3 phần/ngày
+        - **Protein nạc:** 2 phần/ngày (cá, thịt nạc, đậu)
+        - **Chất béo tốt:** 2-3 thìa cà phê dầu/ngày
+        - **Hạn chế:** Đường, đồ ngọt (< 5 phần/tuần)
+
+        **4. Thực phẩm nên ăn:**
+        - Rau xanh (nhiều): Rau cải, rau muống, rau ngót, bông cải
+        - Trái cây: Chuối, cam, bưởi, táo
+        - Cá: Cá hồi, cá thu (2-3 lần/tuần)
+        - Thịt nạc: Thịt gà (bỏ da), thịt bò nạc
+        - Đậu, đậu phụ
+        - Sữa ít béo, sữa chua
+        - Ngũ cốc nguyên hạt: Gạo lứt, yến mạch
+
+        **5. Thực phẩm cần tránh:**
+        - **Đồ mặn:** Dưa muối, cà muối, đồ hộp
+        - **Thức ăn nhanh:** Hamburger, pizza, gà rán
+        - **Đồ chế biến sẵn:** Xúc xích, thịt nguội, giò chả
+        - **Đồ khô:** Cá khô, tôm khô, mắm
+        - **Nước mắm, nước tương:** Dùng ít, pha loãng
+        - **Bánh mì, bánh quy:** Có nhiều muối ẩn
+
+        **6. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo yến mạch + 1 quả chuối + sữa ít béo
+        - **Trưa:** 1 chén cơm + cá kho (ít muối) + rau luộc + canh rau
+        - **Tối:** 1 chén cơm + thịt gà luộc + rau xào + canh
+        - **Bữa phụ:** Trái cây, sữa chua
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Loại bài tập:**
+        - **Aerobic:** Đi bộ, chạy bộ, bơi, đạp xe, khiêu vũ
+        - **Sức mạnh:** Nâng tạ nhẹ, tập với dây kháng lực (2-3 lần/tuần)
+        - **Kéo giãn:** Yoga, thái cực quyền
+
+        **2. Thời gian và tần suất:**
+        - **Tối thiểu:** 30 phút/ngày, 5 ngày/tuần
+        - **Lý tưởng:** 45-60 phút/ngày
+        - **Có thể chia nhỏ:** 3 lần x 10 phút/ngày
+
+        **3. Cường độ:**
+        - **Vừa phải:** Có thể nói chuyện khi tập, hơi thở gấp
+        - **Tránh:** Tập quá sức, gắng sức đột ngột
+
+        **4. Lưu ý:**
+        - Khởi động 5-10 phút trước
+        - Giãn cơ 5-10 phút sau
+        - Đo huyết áp trước và sau tập
+        - Dừng ngay nếu: Đau ngực, chóng mặt, khó thở nặng
+        - Uống đủ nước
+
+        **5. Lợi ích:**
+        - Giảm huyết áp 5-10 mmHg
+        - Giảm cân
+        - Tăng sức khỏe tim mạch
+        - Giảm stress
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Uống đúng giờ:**
+        - Một số thuốc uống buổi sáng
+        - Một số thuốc uống buổi tối (giúp giảm huyết áp ban đêm)
+        - Tuân thủ theo chỉ định bác sĩ
+
+        **2. Không tự ý ngừng:**
+        - Tăng huyết áp cần điều trị lâu dài
+        - Ngừng thuốc đột ngột → Huyết áp tăng cao nguy hiểm
+        - Chỉ ngừng khi bác sĩ chỉ định
+
+        **3. Tác dụng phụ:**
+        - Chóng mặt, mệt mỏi (thường gặp khi mới uống)
+        - Ho khan (ACE inhibitors)
+        - Phù chân (một số thuốc)
+        - **Báo bác sĩ nếu:** Tác dụng phụ nghiêm trọng, không chịu được
+
+        **4. Tương tác thuốc:**
+        - Báo bác sĩ TẤT CẢ thuốc đang dùng
+        - Một số thuốc làm tăng huyết áp: Thuốc cảm, thuốc giảm đau NSAID
+
+        ## 📊 THEO DÕI HUYẾT ÁP:
+
+        **1. Đo tại nhà:**
+        - **Thời điểm:** Buổi sáng (sau khi thức dậy, trước uống thuốc), buổi tối
+        - **Tần suất:** Hàng ngày hoặc ít nhất 3-4 lần/tuần
+        - **Cách đo:** Xem topic "Cách đo Huyết áp tại nhà"
+
+        **2. Ghi nhật ký:**
+        - Ghi: Ngày, giờ, số đo, thuốc đã uống, hoạt động
+        - Mang khi khám bác sĩ
+
+        **3. Khám định kỳ:**
+        - **Hàng tháng:** Đo huyết áp, đánh giá điều trị
+        - **Mỗi 3-6 tháng:** Xét nghiệm máu, đánh giá biến chứng
+        - **Mỗi năm:** Khám mắt, đánh giá tổng thể
+
+        ## ⚠️ BIẾN CHỨNG NẾU KHÔNG ĐIỀU TRỊ:
+
+        **1. Tim mạch:**
+        - **Nhồi máu cơ tim:** Huyết áp cao làm tổn thương mạch vành
+        - **Suy tim:** Tim phải làm việc quá sức
+        - **Rối loạn nhịp tim**
+
+        **2. Não:**
+        - **Đột quỵ:** Vỡ hoặc tắc mạch máu não
+        - **Suy giảm trí nhớ:** Tổn thương mạch máu não
+
+        **3. Thận:**
+        - **Suy thận:** Tổn thương mạch máu thận
+        - **Có thể cần lọc thận**
+
+        **4. Mắt:**
+        - **Tổn thương võng mạc:** Mờ mắt, mù lòa
+
+        **5. Mạch máu:**
+        - **Phình động mạch chủ:** Nguy hiểm, có thể vỡ
+        - **Bệnh động mạch ngoại vi:** Đau chân khi đi
+
+        **⚠️ QUAN TRỌNG:** Kiểm soát huyết áp tốt giúp giảm 40-50% nguy cơ đột quỵ và nhồi máu cơ tim!
+
+        ## 🚨 TĂNG HUYẾT ÁP CẤP CỨU:
+
+        **Khi nào cần cấp cứu:**
+        - Huyết áp ≥ 180/120 mmHg
+        - Có triệu chứng: Đau đầu dữ dội, đau ngực, khó thở, nhìn mờ, lú lẫn
+
+        **Xử trí:**
+        - Gọi cấp cứu ngay (115)
+        - Ngồi nghỉ, thư giãn
+        - Uống thuốc hạ huyết áp (nếu bác sĩ đã kê sẵn)
+        - Không tự ý uống thuốc mới
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Giảm cân:**
+        - Giảm 5-10% cân nặng → Giảm 5-10 mmHg huyết áp
+        - Mục tiêu: BMI 18.5-24.9
+
+        **2. Quản lý stress:**
+        - Tập thư giãn: Hít thở sâu, thiền, yoga
+        - Ngủ đủ 7-8 giờ/đêm
+        - Tránh căng thẳng kéo dài
+        - Tìm sở thích, giải trí
+
+        **3. Bỏ thuốc lá:**
+        - Hút thuốc làm tăng huyết áp ngay lập tức
+        - Bỏ thuốc → Giảm nguy cơ tim mạch đáng kể
+
+        **4. Hạn chế rượu bia:**
+        - **Nam:** Tối đa 2 ly/ngày
+        - **Nữ:** Tối đa 1 ly/ngày
+        - 1 ly = 1 lon bia, 1 ly rượu vang, 1 shot rượu mạnh
+
+        **5. Ngủ đủ giấc:**
+        - Thiếu ngủ → Tăng huyết áp
+        - Ngủ 7-8 giờ/đêm
+        - Điều trị ngưng thở khi ngủ nếu có
+
+        **6. Tránh caffeine quá mức:**
+        - Cà phê, trà có thể làm tăng huyết áp tạm thời
+        - Hạn chế: 1-2 ly/ngày
+        - Đo huyết áp trước và sau uống cà phê để xem ảnh hưởng
+
+        **7. Kiểm tra huyết áp thường xuyên:**
+        - Đo tại nhà hàng ngày
+        - Mang máy đo khi khám bác sĩ
+        - Ghi nhật ký
+
+        **8. Tuân thủ điều trị:**
+        - Uống thuốc đúng giờ, đúng liều
+        - Không tự ý ngừng hoặc thay đổi liều
+        - Báo bác sĩ nếu có vấn đề
+            """,
+            related_disease="hypertension",
+            related_drugs=["Amlodipine", "Enalapril", "Losartan"],
+            printable=True
+    ),
+
+    PatientEducationTopic(
+            id="pneumonia_basics",
+            title="Understanding Pneumonia",
+            title_vn="Hiểu về Viêm phổi",
+            category="Disease",
+            content="""
+        # Hiểu về Viêm phổi
+
+        ## Viêm phổi là gì?
+
+        Viêm phổi là tình trạng nhiễm trùng phổi, gây viêm các túi khí (phế nang) trong phổi. Phế nang bị đầy dịch hoặc mủ, làm khó trao đổi oxy.
+
+        **⚠️ Nguy hiểm:** Viêm phổi có thể nặng, đặc biệt ở trẻ em, người già, người có bệnh mạn tính.
+
+        ## Nguyên nhân:
+
+        **1. Vi khuẩn (Phổ biến nhất):**
+        - **Streptococcus pneumoniae (Phế cầu):** Phổ biến nhất
+        - **Haemophilus influenzae**
+        - **Mycoplasma pneumoniae:** Viêm phổi không điển hình
+        - **Legionella:** Từ nước, điều hòa không khí
+        - **Điều trị:** Kháng sinh
+
+        **2. Virus:**
+        - **Cúm (Influenza):** Phổ biến
+        - **COVID-19:** SARS-CoV-2
+        - **RSV:** Ở trẻ em
+        - **Điều trị:** Hỗ trợ, một số có thuốc kháng virus
+
+        **3. Nấm (Hiếm):**
+        - Thường ở người suy giảm miễn dịch
+        - **Điều trị:** Thuốc kháng nấm
+
+        **4. Yếu tố nguy cơ:**
+        - Tuổi: Trẻ < 2 tuổi, người > 65 tuổi
+        - Hút thuốc lá
+        - Bệnh mạn tính: COPD, đái tháo đường, suy tim
+        - Suy giảm miễn dịch
+        - Nằm viện, nằm liệt giường
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình (Viêm phổi do vi khuẩn):**
+        - **Sốt:** 38-40°C, có thể kèm ớn lạnh, run
+        - **Ho:** Ho có đờm vàng/xanh, đặc
+        - **Khó thở:** Thở nhanh, nông
+        - **Đau ngực:** Đau nhói, tăng khi ho, hít sâu
+        - **Mệt mỏi:** Uể oải, không có sức
+
+        **Triệu chứng viêm phổi do virus:**
+        - Sốt, ớn lạnh
+        - Ho khan hoặc ít đờm
+        - Đau cơ, đau đầu
+        - Mệt mỏi
+
+        **Triệu chứng ở người già:**
+        - Có thể không sốt
+        - Lú lẫn, mê sảng
+        - Mệt mỏi, yếu
+        - Ăn kém
+
+        **Triệu chứng ở trẻ em:**
+        - Sốt, ho
+        - Thở nhanh, rút lõm lồng ngực
+        - Bỏ ăn, quấy khóc
+        - Môi tím (nặng)
+
+        ## Điều trị:
+
+        **1. Kháng sinh (Nếu do vi khuẩn):**
+        - **Nhẹ (Điều trị tại nhà):**
+          - Amoxicillin, Amoxicillin-Clavulanate
+          - Azithromycin, Clarithromycin
+        - **Nặng (Điều trị tại viện):**
+          - Ceftriaxone, Levofloxacin
+          - Có thể cần tiêm tĩnh mạch
+        - **⚠️ QUAN TRỌNG:**
+          - Uống đủ liều, đủ ngày (thường 7-14 ngày)
+          - Không tự ý ngừng khi thấy đỡ
+          - Uống đúng giờ
+
+        **2. Hỗ trợ:**
+        - **Nghỉ ngơi:** Nghỉ hoàn toàn, không làm việc
+        - **Uống nhiều nước:** 2-3 lít/ngày (trừ khi bác sĩ hạn chế)
+        - **Hạ sốt:** Paracetamol 500-1000mg mỗi 4-6 giờ (nếu sốt > 38.5°C)
+        - **Giảm ho:** Nếu ho quá nhiều, dùng thuốc giảm ho (hỏi bác sĩ)
+        - **Oxy:** Nếu khó thở nặng, SpO2 < 90%
+
+        **3. Điều trị tại nhà:**
+        - Nghỉ ngơi trên giường
+        - Uống đủ nước (nước lọc, nước cam, súp)
+        - Ăn nhẹ, dễ tiêu
+        - Theo dõi triệu chứng
+        - Tái khám sau 2-3 ngày
+
+        **4. Điều trị tại viện (Nếu nặng):**
+        - Kháng sinh tiêm tĩnh mạch
+        - Oxy liệu pháp
+        - Truyền dịch
+        - Theo dõi sát
+
+        ## 🍽️ CHẾ ĐỘ ĂN KHI BỊ VIÊM PHỔI:
+
+        **1. Nguyên tắc:**
+        - **Ăn nhẹ, dễ tiêu:** Tránh đồ chiên, nhiều dầu mỡ
+        - **Đủ dinh dưỡng:** Giúp cơ thể chống lại nhiễm trùng
+        - **Nhiều bữa nhỏ:** 5-6 bữa/ngày (dễ ăn hơn)
+        - **Uống nhiều nước:** Giúp loãng đờm, dễ khạc
+
+        **2. Thực phẩm nên ăn:**
+        - **Súp, cháo:** Dễ nuốt, dễ tiêu, có nước
+          - Cháo gà, cháo thịt bằm
+          - Súp rau củ
+          - Canh nóng
+        - **Trái cây:** Cam, bưởi (vitamin C), chuối (dễ ăn)
+        - **Rau xanh:** Luộc, hấp (vitamin, chất xơ)
+        - **Protein:** Thịt nạc, cá, trứng (luộc, hấp)
+        - **Sữa ấm:** Dễ uống, có protein
+
+        **3. Thực phẩm nên tránh:**
+        - **Đồ chiên, nhiều dầu mỡ:** Khó tiêu
+        - **Đồ lạnh:** Làm ho nhiều hơn
+        - **Đồ cay:** Kích thích ho
+        - **Rượu bia:** Làm giảm miễn dịch
+        - **Đồ ngọt:** Làm tăng đờm
+
+        **4. Uống nước:**
+        - **Nước lọc:** Tốt nhất
+        - **Nước cam, chanh:** Vitamin C
+        - **Trà gừng ấm:** Giảm ho, ấm cổ họng
+        - **Súp, canh:** Vừa ăn vừa uống nước
+        - **Mục tiêu:** 2-3 lít/ngày (nếu không hạn chế)
+
+        **5. Lưu ý:**
+        - Ăn chậm, nhai kỹ
+        - Nghỉ giữa các bữa
+        - Nếu không ăn được → Uống sữa, nước trái cây
+        - Không bỏ bữa (cơ thể cần năng lượng)
+
+        ## 🏥 CHĂM SÓC TẠI NHÀ:
+
+        **1. Nghỉ ngơi:**
+        - Nghỉ hoàn toàn, không làm việc
+        - Ngủ đủ giấc (8-10 giờ/đêm)
+        - Tránh gắng sức
+        - Nghỉ ít nhất 1 tuần
+
+        **2. Vệ sinh:**
+        - Rửa tay thường xuyên (tránh lây)
+        - Che miệng khi ho, hắt hơi
+        - Dùng khăn giấy, vứt ngay
+        - Không dùng chung đồ dùng
+
+        **3. Theo dõi triệu chứng:**
+        - Đo nhiệt độ 2-3 lần/ngày
+        - Theo dõi ho, đờm
+        - Theo dõi khó thở
+        - Ghi nhật ký
+
+        **4. Giảm ho:**
+        - Uống nước ấm
+        - Xông hơi (nước nóng, thêm gừng)
+        - Súc miệng nước muối
+        - Kê gối cao khi ngủ
+
+        **5. Giảm đau ngực:**
+        - Nằm nghiêng bên đau (nếu được)
+        - Tránh ho mạnh (uống thuốc giảm ho)
+        - Chườm ấm
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN NGAY:
+
+        **1. Khó thở nặng:**
+        - Thở nhanh (> 25 lần/phút ở người lớn)
+        - Khó thở khi nghỉ
+        - Môi, móng tay tím
+        - Không nói được câu dài
+
+        **2. Sốt cao:**
+        - Sốt > 39°C không hạ sau dùng Paracetamol
+        - Sốt kéo dài > 3 ngày
+        - Ớn lạnh, run nhiều
+
+        **3. Triệu chứng nặng:**
+        - Đau ngực dữ dội
+        - Lú lẫn, mê sảng
+        - Mệt mỏi cực độ, không ăn được
+        - Nôn nhiều, không uống được
+
+        **4. Không cải thiện:**
+        - Sau 2-3 ngày điều trị tại nhà
+        - Triệu chứng nặng hơn
+        - Đờm có máu
+
+        **5. Yếu tố nguy cơ cao:**
+        - Trẻ < 2 tuổi
+        - Người > 65 tuổi
+        - Có bệnh mạn tính nặng
+        - Suy giảm miễn dịch
+
+        ## 💊 UỐNG KHÁNG SINH ĐÚNG CÁCH:
+
+        **⚠️ QUAN TRỌNG:** Uống kháng sinh đúng cách để điều trị hiệu quả và tránh kháng kháng sinh!
+
+        **1. Uống đủ liều, đủ ngày:**
+        - Uống đúng liều bác sĩ kê
+        - Uống đủ số ngày (thường 7-14 ngày)
+        - **KHÔNG tự ý ngừng khi thấy đỡ!**
+        - Ngừng sớm → Vi khuẩn chưa chết hết → Tái phát, kháng thuốc
+
+        **2. Uống đúng giờ:**
+        - Cách đều nhau trong ngày
+        - Ví dụ: 3 lần/ngày → Cách 8 giờ (8h, 16h, 24h)
+        - Đặt báo thức nhắc nhở
+
+        **3. Uống đúng cách:**
+        - **Trước/sau ăn:** Theo hướng dẫn bác sĩ
+          - Một số uống trước ăn (hấp thu tốt hơn)
+          - Một số uống sau ăn (tránh đau dạ dày)
+        - Uống với nước lọc (không dùng sữa, nước trái cây - trừ khi bác sĩ nói)
+        - Không nghiền viên thuốc (trừ khi bác sĩ nói)
+
+        **4. Tác dụng phụ:**
+        - **Buồn nôn, nôn:** Uống sau ăn, chia nhỏ liều
+        - **Tiêu chảy:** Uống nhiều nước, ăn sữa chua (probiotic)
+        - **Phát ban:** Báo bác sĩ ngay (có thể dị ứng)
+        - **Đau dạ dày:** Uống sau ăn
+
+        **5. Tương tác:**
+        - Báo bác sĩ TẤT CẢ thuốc đang dùng
+        - Một số kháng sinh tương tác với thuốc khác
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Tiêm chủng (QUAN TRỌNG!):**
+        - **Vắc xin phế cầu:**
+          - Người > 65 tuổi
+          - Người có bệnh mạn tính
+          - Tiêm 1 lần hoặc nhắc lại (hỏi bác sĩ)
+        - **Vắc xin cúm hàng năm:**
+          - Tất cả mọi người
+          - Đặc biệt quan trọng với người có nguy cơ cao
+        - **Vắc xin COVID-19:** Theo khuyến cáo
+
+        **2. Vệ sinh:**
+        - **Rửa tay:** Thường xuyên với xà phòng, ít nhất 20 giây
+        - **Che miệng:** Khi ho, hắt hơi (khăn giấy, khuỷu tay)
+        - **Không dùng chung:** Đồ dùng, khăn, cốc
+        - **Vệ sinh bề mặt:** Lau sạch bàn, tay nắm cửa
+
+        **3. Lối sống:**
+        - **Bỏ thuốc lá:** Hút thuốc làm tăng nguy cơ viêm phổi
+        - **Giữ sức khỏe:** Ăn uống đủ chất, tập thể dục
+        - **Ngủ đủ:** 7-8 giờ/đêm
+        - **Quản lý stress:** Stress làm giảm miễn dịch
+
+        **4. Tránh yếu tố nguy cơ:**
+        - Tránh người ốm (nếu có thể)
+        - Tránh nơi đông người khi có dịch
+        - Đeo khẩu trang khi cần
+        - Giữ ấm khi trời lạnh
+
+        **5. Điều trị bệnh mạn tính:**
+        - Kiểm soát tốt đái tháo đường, COPD, suy tim
+        - Giảm nguy cơ viêm phổi
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bắt đầu điều trị:**
+        - Nghỉ ngơi hoàn toàn
+        - Uống thuốc đúng giờ
+        - Uống nhiều nước
+        - Ăn nhẹ, dễ tiêu
+        - Theo dõi triệu chứng
+
+        **2. Theo dõi tiến triển:**
+        - Triệu chứng nên cải thiện sau 2-3 ngày
+        - Sốt giảm dần
+        - Ho, đờm giảm
+        - Khó thở giảm
+        - **Nếu không cải thiện → Tái khám ngay**
+
+        **3. Tái khám:**
+        - Sau 2-3 ngày điều trị tại nhà
+        - Hoặc ngay nếu triệu chứng nặng hơn
+        - Bác sĩ sẽ đánh giá lại, có thể đổi kháng sinh
+
+        **4. Phòng ngừa tái phát:**
+        - Tiêm chủng đầy đủ
+        - Bỏ thuốc lá
+        - Giữ sức khỏe tốt
+        - Rửa tay thường xuyên
+
+        **5. Hỗ trợ:**
+        - Nghỉ ngơi đầy đủ
+        - Uống đủ nước
+        - Ăn đủ chất
+        - Nhờ người thân giúp đỡ khi cần
+            """,
+            related_disease="pneumonia",
+            related_drugs=["Amoxicillin", "Azithromycin", "Levofloxacin"],
+            printable=True
+    ),
+
+    PatientEducationTopic(
+            id="heart_failure_basics",
+            title="Understanding Heart Failure",
+            title_vn="Hiểu về Suy tim",
+            category="Disease",
+            content="""
+        # Hiểu về Suy tim
+
+        ## Suy tim là gì?
+
+        Suy tim là khi tim không bơm đủ máu để đáp ứng nhu cầu của cơ thể. Tim yếu hoặc cứng, không thể bơm máu hiệu quả, dẫn đến máu ứ lại ở phổi và các cơ quan khác.
+
+        **Có 2 loại:**
+        - **Suy tim tâm thu:** Tim co bóp yếu (EF < 40%)
+        - **Suy tim tâm trương:** Tim cứng, không giãn được (EF bình thường)
+
+        ## Nguyên nhân:
+
+        - **Bệnh mạch vành:** Nhồi máu cơ tim, thiếu máu cơ tim
+        - **Tăng huyết áp:** Tim phải làm việc quá sức
+        - **Bệnh van tim:** Hẹp/hở van tim
+        - **Bệnh cơ tim:** Viêm cơ tim, cơ tim giãn
+        - **Rối loạn nhịp tim:** Rung nhĩ, nhịp nhanh
+        - **Đái tháo đường:** Tổn thương mạch máu
+        - **Bệnh phổi mạn tính:** COPD
+        - **Bệnh tuyến giáp**
+
+        ## Triệu chứng:
+
+        **Triệu chứng chính:**
+        - **Khó thở:**
+          - Khi gắng sức (đi bộ, leo cầu thang)
+          - Khi nằm (phải kê gối cao)
+          - Khó thở về đêm (thức giấc vì khó thở)
+        - **Mệt mỏi:** Dễ mệt, không làm được việc nặng
+        - **Phù:** Chân, mắt cá chân, bụng (cổ trướng)
+        - **Ho khan:** Đặc biệt khi nằm
+        - **Tăng cân:** Do ứ dịch (> 2kg/tuần)
+
+        **Triệu chứng khác:**
+        - Tim đập nhanh, không đều
+        - Đau ngực
+        - Chán ăn, buồn nôn
+        - Tiểu ít
+        - Lú lẫn (ở người già)
+
+        **⚠️ Phân độ suy tim (NYHA):**
+        - **Độ I:** Không có triệu chứng khi hoạt động bình thường
+        - **Độ II:** Triệu chứng khi gắng sức vừa
+        - **Độ III:** Triệu chứng khi gắng sức nhẹ
+        - **Độ IV:** Triệu chứng cả khi nghỉ
+
+        ## Điều trị:
+
+        **1. Thuốc (QUAN TRỌNG!):**
+        - **ACE inhibitors/ARB:** Giảm gánh tim, bảo vệ tim
+        - **Beta-blockers:** Giảm nhịp tim, tăng sức co bóp
+        - **Lợi tiểu:** Giảm ứ dịch (Furosemide, Spironolactone)
+        - **Digoxin:** Tăng sức co bóp tim (nếu cần)
+        - **Quan trọng:** Uống đúng giờ, đúng liều, không tự ý ngừng
+
+        **2. Chế độ ăn:**
+        - Ít muối (< 2g/ngày)
+        - Hạn chế nước (nếu bác sĩ yêu cầu)
+        - Xem chi tiết bên dưới
+
+        **3. Tập thể dục:**
+        - Tập nhẹ nhàng, phù hợp
+        - Phục hồi chức năng tim
+        - Xem chi tiết bên dưới
+
+        **4. Theo dõi:**
+        - Cân nặng hàng ngày
+        - Huyết áp, nhịp tim
+        - Triệu chứng
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI SUY TIM:
+
+        **1. Giảm muối (RẤT QUAN TRỌNG!):**
+        - **Mục tiêu:** < 2g muối/ngày (rất ít!)
+        - **1 thìa cà phê muối = 5g muối**
+        - **Cách giảm muối:**
+          - Không thêm muối khi nấu
+          - Không chấm muối, nước mắm
+          - Tránh hoàn toàn: Dưa muối, cà muối, đồ hộp
+          - Tránh thức ăn nhanh, đồ chế biến sẵn
+          - Dùng gia vị thay thế: Chanh, tỏi, gừng, rau thơm
+          - Đọc nhãn: Chọn thực phẩm < 100mg natri/100g
+
+        **2. Hạn chế nước (Nếu bác sĩ yêu cầu):**
+        - **Mục tiêu:** 1.5-2 lít/ngày (bao gồm cả nước, canh, sữa, trái cây)
+        - **Cách hạn chế:**
+          - Uống từng ngụm nhỏ
+          - Dùng cốc nhỏ
+          - Tránh đồ uống có đường (gây khát)
+          - Ngậm đá viên nếu khát
+          - Tránh đồ mặn (gây khát)
+
+        **3. Thực phẩm nên ăn:**
+        - **Rau xanh:** Nhiều (luộc, hấp, không muối)
+        - **Trái cây:** Táo, lê, cam (ăn tươi, không ép)
+        - **Protein nạc:** Cá, thịt gà (luộc, hấp, không muối)
+        - **Ngũ cốc:** Gạo, bánh mì (ít)
+        - **Sữa ít béo:** 1-2 ly/ngày
+
+        **4. Thực phẩm cần tránh:**
+        - **Đồ mặn:** Dưa muối, cà muối, đồ hộp, thức ăn nhanh
+        - **Đồ nhiều nước:** Canh, súp, chè (nếu hạn chế nước)
+        - **Rượu bia:** Làm suy tim nặng hơn
+        - **Caffeine:** Có thể làm tim đập nhanh
+
+        **5. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo yến mạch (không muối) + 1 quả trứng luộc
+        - **Trưa:** 1/2 chén cơm + cá luộc (không muối) + rau luộc
+        - **Tối:** 1/2 chén cơm + thịt gà luộc + rau xào (ít dầu, không muối)
+        - **Bữa phụ:** Trái cây tươi
+
+        **6. Lưu ý:**
+        - Ăn nhạt hoàn toàn (sẽ quen sau vài tuần)
+        - Chia nhỏ bữa ăn (5-6 bữa/ngày)
+        - Ăn chậm, nhai kỹ
+        - Tránh ăn quá no (gây khó thở)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **⚠️ QUAN TRỌNG:** Tập thể dục giúp cải thiện suy tim, nhưng phải có chỉ định và hướng dẫn của bác sĩ!
+
+        **1. Loại bài tập:**
+        - **Đi bộ:** Dễ nhất, an toàn nhất
+        - **Đạp xe tại chỗ:** Ít gắng sức
+        - **Tập tay:** Với tạ nhẹ, dây kháng lực
+        - **Yoga, thái cực quyền:** Nhẹ nhàng, thư giãn
+
+        **2. Thời gian và tần suất:**
+        - **Bắt đầu:** 5-10 phút/ngày
+        - **Tăng dần:** 20-30 phút/ngày
+        - **Tần suất:** 3-5 lần/tuần
+        - **Cường độ:** Nhẹ, vừa phải (có thể nói chuyện)
+
+        **3. Lưu ý khi tập:**
+        - Khởi động 5-10 phút
+        - Dừng ngay nếu: Khó thở nặng, đau ngực, chóng mặt, mệt mỏi
+        - Nghỉ giữa các bài tập
+        - Giãn cơ sau tập
+        - Đo huyết áp, nhịp tim trước và sau
+
+        **4. Tránh:**
+        - Tập quá sức
+        - Tập khi mệt, khó thở
+        - Tập khi thời tiết quá nóng/lạnh
+        - Tập ngay sau ăn
+
+        **5. Lợi ích:**
+        - Tăng sức khỏe tim
+        - Giảm triệu chứng
+        - Tăng khả năng hoạt động
+        - Cải thiện chất lượng sống
+
+        ## 📊 THEO DÕI:
+
+        **1. Cân nặng (QUAN TRỌNG NHẤT!):**
+        - **Đo mỗi sáng:** Sau khi đi vệ sinh, trước khi ăn, không mặc quần áo
+        - **Ghi nhật ký:** Ngày, cân nặng, triệu chứng
+        - **⚠️ Dấu hiệu báo động:**
+          - Tăng > 1.5kg trong 1 ngày
+          - Tăng > 2kg trong 1 tuần
+          - → Có thể ứ dịch, cần gọi bác sĩ
+
+        **2. Huyết áp và nhịp tim:**
+        - Đo hàng ngày
+        - Ghi nhật ký
+        - Mục tiêu: Theo chỉ định bác sĩ
+
+        **3. Triệu chứng:**
+        - Khó thở: Mức độ, khi nào
+        - Phù: Vị trí, mức độ
+        - Mệt mỏi: Mức độ
+        - Ho: Khi nào, có đờm không
+
+        **4. Khám định kỳ:**
+        - **Hàng tháng:** Đo huyết áp, cân nặng, đánh giá triệu chứng
+        - **Mỗi 3 tháng:** Xét nghiệm máu, đánh giá điều trị
+        - **Mỗi 6 tháng - 1 năm:** Siêu âm tim, đánh giá tổng thể
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN NGAY:
+
+        **1. Khó thở nặng:**
+        - Khó thở khi nghỉ
+        - Không nằm được (phải ngồi)
+        - Thở nhanh, gấp
+
+        **2. Phù nhiều:**
+        - Phù toàn thân
+        - Phù bụng (cổ trướng)
+        - Phù không giảm
+
+        **3. Tăng cân nhanh:**
+        - Tăng > 2kg trong 1 tuần
+        - Tăng > 1.5kg trong 1 ngày
+
+        **4. Triệu chứng khác:**
+        - Đau ngực
+        - Tim đập nhanh, không đều
+        - Lú lẫn, mệt mỏi cực độ
+        - Ho ra máu
+        - Không đi tiểu được
+
+        **5. Không đáp ứng với thuốc:**
+        - Uống thuốc nhưng triệu chứng không giảm
+        - Phải tăng liều thuốc lợi tiểu
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Uống đúng giờ:**
+        - Một số thuốc uống buổi sáng
+        - Một số thuốc uống buổi tối
+        - Lợi tiểu thường uống buổi sáng (tránh đi tiểu đêm)
+
+        **2. Không tự ý ngừng:**
+        - Suy tim cần điều trị suốt đời
+        - Ngừng thuốc → Suy tim nặng hơn, có thể nguy hiểm
+        - Chỉ ngừng khi bác sĩ chỉ định
+
+        **3. Tác dụng phụ:**
+        - **Lợi tiểu:** Đi tiểu nhiều, mất kali (có thể chuột rút)
+        - **ACE inhibitors:** Ho khan, chóng mặt
+        - **Beta-blockers:** Mệt mỏi, chậm nhịp tim
+        - **Báo bác sĩ nếu:** Tác dụng phụ nghiêm trọng
+
+        **4. Tương tác thuốc:**
+        - Báo bác sĩ TẤT CẢ thuốc đang dùng
+        - Một số thuốc làm suy tim nặng: NSAID, một số thuốc cảm
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Nghỉ ngơi:**
+        - Ngủ đủ 7-8 giờ/đêm
+        - Kê gối cao khi ngủ (giảm khó thở)
+        - Nghỉ giữa các hoạt động
+        - Tránh gắng sức
+
+        **2. Quản lý stress:**
+        - Stress làm suy tim nặng hơn
+        - Tập thư giãn: Hít thở sâu, thiền
+        - Tránh căng thẳng
+
+        **3. Tiêm chủng:**
+        - Tiêm vắc xin cúm hàng năm
+        - Tiêm vắc xin phế cầu (nếu bác sĩ chỉ định)
+        - Tiêm vắc xin COVID-19
+
+        **4. Chăm sóc bản thân:**
+        - Không hút thuốc
+        - Hạn chế rượu bia
+        - Giữ ấm (tránh nhiễm trùng)
+        - Vệ sinh răng miệng tốt
+
+        **5. Khi ốm:**
+        - Tiếp tục uống thuốc
+        - Theo dõi cân nặng, triệu chứng
+        - Gọi bác sĩ nếu: Khó thở tăng, tăng cân, không ăn được
+
+        **6. Hỗ trợ:**
+        - Nói với gia đình về bệnh
+        - Tham gia nhóm hỗ trợ (nếu có)
+        - Hỏi bác sĩ khi không rõ
+
+        **7. Sống tích cực:**
+        - Suy tim có thể kiểm soát được
+        - Tuân thủ điều trị → Sống khỏe mạnh
+        - Đừng để bệnh chi phối cuộc sống
+            """,
+            related_disease="heart_failure",
+            related_drugs=["ACE Inhibitor", "Beta-blocker", "Furosemide"],
+            printable=True
+    ),
+
+    PatientEducationTopic(
+            id="copd_basics",
+            title="Understanding COPD",
+            title_vn="Hiểu về COPD",
+            category="Disease",
+            content="""
+        # Hiểu về COPD
+
+        ## COPD là gì?
+
+        COPD (Bệnh phổi tắc nghẽn mạn tính) là bệnh phổi mạn tính gây khó thở do đường thở bị hẹp và phá hủy. Không khí khó vào và ra khỏi phổi.
+
+        **Bao gồm 2 bệnh:**
+        - **Viêm phế quản mạn tính:** Ho, khạc đờm kéo dài
+        - **Khí phế thũng:** Phá hủy phế nang, mất tính đàn hồi phổi
+
+        **⚠️ Đặc điểm:** Bệnh tiến triển, không hồi phục hoàn toàn, nhưng có thể kiểm soát.
+
+        ## Nguyên nhân:
+
+        **1. Hút thuốc lá (80-90%):**
+        - Nguyên nhân chính nhất
+        - Hút càng lâu, càng nhiều → Nguy cơ càng cao
+        - Hút thuốc thụ động cũng nguy hiểm
+
+        **2. Ô nhiễm không khí:**
+        - Khói bụi từ giao thông, nhà máy
+        - Khói từ đốt than, củi
+        - Bụi mịn PM2.5
+
+        **3. Khói, bụi nghề nghiệp:**
+        - Công nhân xây dựng, khai thác mỏ
+        - Tiếp xúc hóa chất, bụi vải, bụi gỗ
+
+        **4. Yếu tố khác:**
+        - Nhiễm trùng phổi tái phát khi nhỏ
+        - Thiếu alpha-1 antitrypsin (hiếm, di truyền)
+        - Tuổi cao
+
+        ## Triệu chứng:
+
+        **Triệu chứng chính:**
+        - **Ho mạn tính:** Ho kéo dài, đặc biệt buổi sáng
+        - **Khạc đờm:** Đờm trắng, vàng, xanh (khi có nhiễm trùng)
+        - **Khó thở:**
+          - Khi gắng sức (đi bộ, leo cầu thang)
+          - Tiến triển: Khó thở cả khi nghỉ
+          - Nặng: Khó thở khi nói, ăn, mặc quần áo
+        - **Thở khò khè:** Tiếng rít khi thở
+        - **Tức ngực:** Cảm giác nặng ngực
+
+        **Triệu chứng khác:**
+        - Mệt mỏi
+        - Sụt cân (do khó thở khi ăn)
+        - Phù chân (khi có suy tim phải)
+        - Đau đầu buổi sáng (do thiếu oxy)
+
+        **⚠️ Phân độ COPD (GOLD):**
+        - **Độ 1 (Nhẹ):** FEV1 ≥ 80% bình thường
+        - **Độ 2 (Trung bình):** FEV1 50-79%
+        - **Độ 3 (Nặng):** FEV1 30-49%
+        - **Độ 4 (Rất nặng):** FEV1 < 30% hoặc có suy hô hấp
+
+        ## Điều trị:
+
+        **1. Bỏ thuốc lá (QUAN TRỌNG NHẤT!):**
+        - Bỏ thuốc → Làm chậm tiến triển bệnh
+        - Không bao giờ quá muộn để bỏ
+        - Xem topic "Bỏ Thuốc lá" để biết cách
+
+        **2. Thuốc:**
+        - **Thuốc giãn phế quản:**
+          - Tác dụng ngắn: Salbutamol (cắt cơn)
+          - Tác dụng dài: Tiotropium, Salmeterol (dự phòng)
+        - **Corticosteroid hít:** Budesonide, Fluticasone (giảm viêm)
+        - **Kháng sinh:** Khi có nhiễm trùng
+        - **Quan trọng:** Dùng thuốc hít đúng cách (xem hướng dẫn)
+
+        **3. Oxy liệu pháp:**
+        - Khi thiếu oxy nặng (SpO2 < 88%)
+        - Dùng ít nhất 15 giờ/ngày
+        - Giúp sống lâu hơn, chất lượng sống tốt hơn
+
+        **4. Phục hồi chức năng phổi:**
+        - Tập thể dục có hướng dẫn
+        - Tập thở
+        - Giáo dục về bệnh
+        - Tư vấn dinh dưỡng
+
+        **5. Tiêm chủng:**
+        - Vắc xin cúm hàng năm
+        - Vắc xin phế cầu (1 lần hoặc nhắc lại)
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Nguyên tắc:**
+        - **Ăn nhiều bữa nhỏ:** 5-6 bữa/ngày (khó thở khi ăn no)
+        - **Thực phẩm dễ tiêu:** Tránh đồ chiên, nhiều dầu mỡ
+        - **Đủ calo:** Tránh sụt cân
+        - **Đủ protein:** Giúp cơ hô hấp khỏe
+
+        **2. Thực phẩm nên ăn:**
+        - **Protein:** Thịt nạc, cá, đậu, trứng, sữa
+        - **Carbohydrate phức tạp:** Gạo, bánh mì, khoai (năng lượng)
+        - **Rau xanh:** Nhiều vitamin, chất xơ
+        - **Trái cây:** Vitamin C (cam, bưởi, ổi)
+        - **Chất béo tốt:** Dầu ô liu, quả bơ, các loại hạt
+
+        **3. Thực phẩm cần tránh:**
+        - **Đồ chiên, nhiều dầu mỡ:** Khó tiêu, gây đầy bụng → Khó thở
+        - **Đồ uống có ga:** Gây đầy bụng
+        - **Muối nhiều:** Giữ nước → Khó thở (nếu có suy tim)
+        - **Rượu bia:** Làm giảm chức năng hô hấp
+
+        **4. Lưu ý khi ăn:**
+        - Ăn chậm, nhai kỹ
+        - Nghỉ giữa các miếng ăn
+        - Ngồi thẳng khi ăn
+        - Uống nước sau ăn (tránh đầy bụng)
+        - Dùng ống hút nếu cần
+
+        **5. Nếu sụt cân:**
+        - Tăng calo: Thêm dầu, bơ vào thức ăn
+        - Uống sữa bổ sung dinh dưỡng
+        - Ăn nhiều bữa nhỏ
+        - Tham khảo bác sĩ dinh dưỡng
+
+        ## 🏃 TẬP THỂ DỤC VÀ PHỤC HỒI CHỨC NĂNG:
+
+        **⚠️ QUAN TRỌNG:** Tập thể dục giúp cải thiện khó thở, tăng khả năng hoạt động!
+
+        **1. Tập thở (Quan trọng!):**
+
+        **Thở môi mím:**
+        - Hít vào bằng mũi (2 giây)
+        - Mím môi, thở ra chậm bằng miệng (4 giây)
+        - Lặp lại 10-15 lần, 3-4 lần/ngày
+        - **Lợi ích:** Giảm khó thở, thở hiệu quả hơn
+
+        **Thở bụng (Cơ hoành):**
+        - Đặt tay lên bụng
+        - Hít vào: Bụng phình ra
+        - Thở ra: Bụng xẹp vào
+        - Tập 10-15 phút/ngày
+        - **Lợi ích:** Tăng sức mạnh cơ hoành
+
+        **2. Tập thể dục:**
+
+        **Đi bộ:**
+        - Bắt đầu: 5-10 phút/ngày
+        - Tăng dần: 20-30 phút/ngày
+        - Tần suất: Hàng ngày
+        - **Lưu ý:** Đi chậm, nghỉ khi mệt, dùng thở môi mím
+
+        **Đạp xe tại chỗ:**
+        - 15-20 phút/ngày
+        - Tần suất: 3-5 lần/tuần
+        - **Lợi ích:** Tăng sức mạnh chân, tim mạch
+
+        **Tập tay:**
+        - Nâng tạ nhẹ, dây kháng lực
+        - 10-15 phút/ngày
+        - **Lợi ích:** Tăng sức mạnh cơ hô hấp phụ
+
+        **3. Lưu ý khi tập:**
+        - Khởi động 5-10 phút
+        - Tập vừa sức (có thể nói được câu ngắn)
+        - Nghỉ khi mệt
+        - Dùng thở môi mím khi khó thở
+        - Dừng ngay nếu: Đau ngực, chóng mặt, khó thở nặng
+
+        **4. Lợi ích:**
+        - Giảm khó thở
+        - Tăng khả năng hoạt động
+        - Giảm số đợt cấp
+        - Cải thiện chất lượng sống
+
+        ## 💨 DÙNG THUỐC HÍT ĐÚNG CÁCH:
+
+        **⚠️ QUAN TRỌNG:** Dùng sai → Thuốc không vào phổi → Không hiệu quả!
+
+        **1. Chuẩn bị:**
+        - Lắc bình xịt (nếu dùng bình xịt)
+        - Tháo nắp
+        - Kiểm tra còn thuốc không
+
+        **2. Kỹ thuật:**
+        - **Thở ra:** Thở hết không khí
+        - **Hít vào:** Đưa ống hít vào miệng, bấm và hít sâu, chậm
+        - **Giữ hơi:** 10 giây (nếu được)
+        - **Thở ra:** Chậm, bằng miệng
+
+        **3. Lưu ý:**
+        - Rửa miệng sau dùng corticosteroid hít (tránh nấm miệng)
+        - Vệ sinh dụng cụ hít thường xuyên
+        - Kiểm tra còn thuốc (đếm số lần dùng)
+        - Mang thuốc cắt cơn bên người
+
+        **4. Khi nào dùng:**
+        - **Thuốc cắt cơn:** Khi có triệu chứng (khó thở, ho)
+        - **Thuốc dự phòng:** Hàng ngày, đúng giờ
+
+        ## 🚨 PHÒNG NGỪA ĐỢT CẤP:
+
+        **Đợt cấp COPD:** Triệu chứng nặng lên đột ngột (khó thở tăng, ho nhiều, đờm vàng/xanh)
+
+        **1. Bỏ thuốc lá:**
+        - Quan trọng nhất!
+        - Hút thuốc → Tăng nguy cơ đợt cấp
+
+        **2. Tránh yếu tố kích thích:**
+        - **Không khí lạnh:** Đeo khẩu trang, quàng khăn
+        - **Khói, bụi:** Tránh nơi có khói, bụi
+        - **Thời tiết xấu:** Ở trong nhà khi ô nhiễm cao
+        - **Nhiễm trùng:** Tránh người ốm, rửa tay thường xuyên
+
+        **3. Tiêm chủng:**
+        - Vắc xin cúm hàng năm (quan trọng!)
+        - Vắc xin phế cầu
+
+        **4. Uống thuốc đúng giờ:**
+        - Thuốc dự phòng giúp giảm đợt cấp
+        - Không tự ý ngừng
+
+        **5. Tập thể dục:**
+        - Tăng sức khỏe phổi
+        - Giảm nguy cơ đợt cấp
+
+        **6. Theo dõi triệu chứng:**
+        - Nhận biết sớm dấu hiệu đợt cấp
+        - Điều trị sớm
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Khó thở nặng:**
+        - Khó thở khi nghỉ
+        - Không nói được câu dài
+        - Phải ngồi, không nằm được
+
+        **2. Triệu chứng đợt cấp:**
+        - Ho nhiều hơn bình thường
+        - Đờm vàng/xanh, đặc
+        - Đờm có máu
+        - Sốt
+
+        **3. Triệu chứng khác:**
+        - Môi, móng tay tím
+        - Lú lẫn, buồn ngủ
+        - Tim đập nhanh
+        - Không đáp ứng với thuốc cắt cơn
+
+        **4. Dấu hiệu suy hô hấp:**
+        - Thở nhanh (> 25 lần/phút)
+        - Không thể hoạt động bình thường
+        - Mệt mỏi cực độ
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Bỏ thuốc lá:**
+        - **QUAN TRỌNG NHẤT!**
+        - Bỏ thuốc → Làm chậm tiến triển bệnh
+        - Không bao giờ quá muộn
+        - Tìm hỗ trợ: Bác sĩ, nhóm bỏ thuốc, thuốc hỗ trợ
+
+        **2. Tránh khói, bụi:**
+        - Ở trong nhà khi ô nhiễm cao
+        - Đeo khẩu trang khi ra ngoài
+        - Dùng máy lọc không khí trong nhà
+        - Tránh nơi có khói thuốc
+
+        **3. Giữ ấm:**
+        - Mặc ấm khi trời lạnh
+        - Đeo khẩu trang, quàng khăn (làm ấm không khí)
+        - Tránh thay đổi nhiệt độ đột ngột
+
+        **4. Tiết kiệm năng lượng:**
+        - Làm việc từ từ, nghỉ giữa chừng
+        - Ngồi khi làm việc (nấu ăn, tắm)
+        - Dùng dụng cụ hỗ trợ nếu cần
+        - Sắp xếp công việc hợp lý
+
+        **5. Ngủ đủ giấc:**
+        - Ngủ 7-8 giờ/đêm
+        - Kê gối cao (giảm khó thở)
+        - Điều trị ngưng thở khi ngủ nếu có
+
+        **6. Quản lý stress:**
+        - Stress làm khó thở nặng hơn
+        - Tập thư giãn: Hít thở sâu, thiền
+        - Tránh căng thẳng
+
+        **7. Khi ốm:**
+        - Nghỉ ngơi nhiều
+        - Uống đủ nước
+        - Dùng thuốc cắt cơn nhiều hơn (nếu cần)
+        - Gọi bác sĩ nếu: Sốt, đờm vàng/xanh, khó thở tăng
+
+        **8. Hỗ trợ:**
+        - Nói với gia đình về bệnh
+        - Tham gia nhóm hỗ trợ COPD (nếu có)
+        - Hỏi bác sĩ khi không rõ
+
+        **9. Sống tích cực:**
+        - COPD có thể kiểm soát được
+        - Tuân thủ điều trị → Sống khỏe mạnh
+        - Đừng để bệnh chi phối cuộc sống
+            """,
+            related_disease="copd",
+            related_drugs=["Salbutamol", "Tiotropium", "Budesonide"],
+            printable=True
+    ),
+    
+    # === ASTHMA ===
+    PatientEducationTopic(
+        id="asthma_basics",
+        title="Understanding Asthma",
+        title_vn="Hiểu về Hen phế quản",
+        category="Disease",
+        content="""
+# Hiểu về Hen phế quản
+
+## Hen phế quản là gì?
+
+Hen phế quản (Asthma) là bệnh mạn tính gây viêm và hẹp đường thở, dẫn đến khó thở. Đường thở bị sưng, tiết nhiều dịch nhầy, và co thắt cơ trơn phế quản.
+
+**⚠️ Đặc điểm:**
+- Bệnh mạn tính, không chữa khỏi hoàn toàn
+- Có thể kiểm soát tốt bằng thuốc và lối sống
+- Triệu chứng có thể thay đổi theo thời gian
+- Có thể có cơn hen (triệu chứng nặng lên đột ngột)
+
+## Nguyên nhân và cơ chế:
+
+**Nguyên nhân:**
+- **Di truyền:** Có người thân bị hen, dị ứng
+- **Dị ứng:** Cơ địa dị ứng (atopy)
+- **Tiếp xúc sớm:** Khói thuốc, ô nhiễm khi nhỏ
+
+**Cơ chế:**
+- Đường thở nhạy cảm quá mức
+- Khi gặp yếu tố kích thích → Viêm, co thắt → Khó thở
+
+## Triệu chứng:
+
+**Triệu chứng điển hình:**
+- **Thở khò khè:** Tiếng rít khi thở ra (đặc trưng)
+- **Ho:** Đặc biệt ban đêm, sáng sớm, khi gắng sức
+- **Khó thở:** Cảm giác thiếu không khí, thở nhanh, nông
+- **Tức ngực:** Cảm giác bó chặt, nặng ngực
+- **Cơn hen:** Triệu chứng nặng lên đột ngột
+
+**Triệu chứng khác:**
+- Mệt mỏi (do khó thở)
+- Khó ngủ (do ho, khó thở về đêm)
+- Giảm khả năng hoạt động
+
+**⚠️ Mức độ nặng:**
+- **Nhẹ:** Triệu chứng < 2 lần/tuần
+- **Trung bình:** Triệu chứng hàng ngày
+- **Nặng:** Triệu chứng liên tục, hạn chế hoạt động
+
+## Yếu tố kích thích (Trigger):
+
+**1. Dị ứng:**
+- **Phấn hoa:** Mùa xuân, mùa thu
+- **Bụi:** Bụi nhà, mạt bụi
+- **Lông thú:** Chó, mèo, chim
+- **Nấm mốc:** Nơi ẩm ướt
+- **Gián:** Phân, nước bọt gián
+
+**2. Nhiễm trùng:**
+- Cảm lạnh, cúm
+- Viêm phế quản
+- Viêm xoang
+
+**3. Môi trường:**
+- **Khói thuốc:** Hút thuốc, khói thuốc thụ động
+- **Ô nhiễm không khí:** Khói bụi, PM2.5
+- **Không khí lạnh:** Thời tiết lạnh, điều hòa
+- **Thay đổi thời tiết:** Nóng lạnh đột ngột
+
+**4. Hoạt động:**
+- **Tập thể dục:** Hen do gắng sức (EIA)
+- **Gắng sức:** Chạy, leo cầu thang
+
+**5. Yếu tố khác:**
+- **Stress, cảm xúc:** Lo âu, cười to, khóc
+- **Thuốc:** Aspirin, NSAID (một số người)
+- **Thức ăn:** Sulfite (rượu vang, trái cây khô), một số người dị ứng thực phẩm
+- **Trào ngược dạ dày (GERD):** Axit kích thích đường thở
+
+## Điều trị:
+
+**1. Thuốc cắt cơn (Reliever):**
+- **Khi nào dùng:** Khi có triệu chứng (khó thở, ho, thở khò khè)
+- **Thuốc:** Salbutamol, Terbutaline
+- **Tác dụng:** Giãn phế quản nhanh (5-15 phút)
+- **⚠️ QUAN TRỌNG:** Mang bên người mọi lúc!
+
+**2. Thuốc dự phòng (Controller):**
+- **Khi nào dùng:** Hàng ngày, đúng giờ (ngay cả khi không có triệu chứng)
+- **Thuốc:**
+  - **Corticosteroid hít:** Budesonide, Fluticasone (giảm viêm)
+  - **Thuốc giãn phế quản tác dụng dài:** Salmeterol, Formoterol
+  - **Thuốc uống:** Montelukast (kháng leukotriene)
+- **Tác dụng:** Giảm viêm, phòng ngừa cơn hen
+- **⚠️ QUAN TRỌNG:** Không tự ý ngừng!
+
+**3. Dùng thuốc hít đúng cách:**
+- Xem hướng dẫn chi tiết bên dưới
+- Dùng sai → Thuốc không vào phổi → Không hiệu quả
+
+**4. Kế hoạch hành động (Action Plan):**
+- Bác sĩ sẽ hướng dẫn kế hoạch cụ thể
+- Biết khi nào dùng thuốc cắt cơn
+- Biết khi nào cần đến bệnh viện
+
+## 💨 DÙNG THUỐC HÍT ĐÚNG CÁCH:
+
+        **⚠️ QUAN TRỌNG:** Dùng sai → Thuốc không vào phổi → Không hiệu quả!
+
+        **1. Bình xịt định liều (MDI):**
+
+        **Kỹ thuật:**
+        1. Lắc bình xịt 5-10 lần
+        2. Tháo nắp
+        3. Thở ra hết (không thở vào bình)
+        4. Đưa bình vào miệng, ngậm chặt
+        5. Bắt đầu hít vào chậm, sâu
+        6. Đồng thời bấm bình xịt
+        7. Tiếp tục hít sâu, chậm (3-5 giây)
+        8. Giữ hơi 10 giây (nếu được)
+        9. Thở ra chậm bằng miệng
+        10. Nghỉ 30-60 giây trước lần xịt tiếp (nếu cần)
+
+        **Lưu ý:**
+        - Dùng buồng đệm (spacer) nếu có → Dễ dùng hơn, hiệu quả hơn
+        - Rửa miệng sau dùng corticosteroid hít (tránh nấm miệng)
+
+        **2. Bột khô (DPI):**
+
+        **Kỹ thuật:**
+        1. Nạp liều thuốc (theo hướng dẫn)
+        2. Thở ra hết (không thở vào dụng cụ)
+        3. Ngậm ống hít, hít mạnh, sâu, nhanh
+        4. Giữ hơi 10 giây
+        5. Thở ra chậm
+
+        **Lưu ý:**
+        - Không thở ra vào dụng cụ (làm ướt bột)
+        - Hít mạnh, nhanh (khác với MDI)
+
+        **3. Phun sương (Nebulizer):**
+
+        **Kỹ thuật:**
+        1. Đổ thuốc vào cốc
+        2. Bật máy
+        3. Đeo mặt nạ hoặc ngậm ống ngậm
+        4. Hít thở bình thường, sâu (10-15 phút)
+        5. Cho đến khi hết thuốc
+
+        **4. Lưu ý chung:**
+        - Đọc kỹ hướng dẫn sử dụng
+        - Kiểm tra còn thuốc (đếm số lần dùng)
+        - Vệ sinh dụng cụ thường xuyên
+        - Bảo quản đúng cách (tránh ẩm, nắng)
+        - Rửa miệng sau dùng corticosteroid hít
+
+        **5. Khi nào dùng:**
+        - **Thuốc cắt cơn:** Khi có triệu chứng, trước tập thể dục (nếu cần)
+        - **Thuốc dự phòng:** Hàng ngày, đúng giờ
+
+## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Nguyên tắc:**
+        - Ăn đủ chất, cân bằng
+        - Tránh thực phẩm gây dị ứng (nếu có)
+        - Tránh thực phẩm có sulfite (nếu nhạy cảm)
+
+        **2. Thực phẩm nên ăn:**
+        - **Rau xanh:** Nhiều (chống viêm)
+        - **Trái cây:** Cam, bưởi, táo (vitamin C, chống oxy hóa)
+        - **Cá béo:** Cá hồi, cá thu (omega-3, chống viêm)
+        - **Ngũ cốc nguyên hạt:** Gạo lứt, yến mạch
+        - **Protein nạc:** Thịt gà, đậu
+
+        **3. Thực phẩm cần tránh (nếu dị ứng/nhạy cảm):**
+        - **Sulfite:** Rượu vang, trái cây khô, đồ chế biến
+        - **Thực phẩm gây dị ứng:** Tùy từng người (sữa, trứng, đậu phộng, hải sản)
+        - **Đồ lạnh:** Có thể kích thích ho
+        - **Đồ chiên, nhiều dầu mỡ:** Khó tiêu, có thể làm nặng triệu chứng
+
+        **4. Lưu ý:**
+        - Ăn chậm, nhai kỹ (tránh nuốt không khí)
+        - Tránh ăn quá no (gây khó thở)
+        - Uống đủ nước (giúp loãng đờm)
+
+## 🏃 TẬP THỂ DỤC:
+
+        **⚠️ QUAN TRỌNG:** Tập thể dục tốt cho hen, nhưng cần chuẩn bị!
+
+        **1. Hen do gắng sức (EIA):**
+        - Một số người hen có triệu chứng khi tập thể dục
+        - Không có nghĩa là không được tập
+        - Cần chuẩn bị và quản lý đúng cách
+
+        **2. Chuẩn bị trước tập:**
+        - **Khởi động:** 10-15 phút (làm ấm cơ thể)
+        - **Dùng thuốc cắt cơn:** 15-30 phút trước tập (nếu bác sĩ chỉ định)
+        - **Kiểm tra triệu chứng:** Nếu có triệu chứng → Không tập
+
+        **3. Loại bài tập phù hợp:**
+        - **Đi bộ:** Dễ nhất, ít gây hen
+        - **Bơi lội:** Tốt (không khí ấm, ẩm)
+        - **Đạp xe:** Vừa phải
+        - **Yoga, thái cực quyền:** Nhẹ nhàng, thư giãn
+        - **Tránh:** Chạy nhanh, tập nặng đột ngột
+
+        **4. Khi tập:**
+        - Tập vừa sức
+        - Nghỉ khi mệt
+        - Dừng ngay nếu: Khó thở, ho, thở khò khè
+        - Dùng thuốc cắt cơn nếu cần
+
+        **5. Sau tập:**
+        - Giãn cơ 10-15 phút
+        - Theo dõi triệu chứng
+        - Dùng thuốc cắt cơn nếu có triệu chứng
+
+        **6. Lợi ích:**
+        - Tăng sức khỏe phổi
+        - Giảm triệu chứng
+        - Tăng khả năng hoạt động
+        - Giảm cần dùng thuốc cắt cơn
+
+## 🛡️ TRÁNH YẾU TỐ KÍCH THÍCH:
+
+        **1. Dị ứng:**
+        - **Bụi nhà, mạt bụi:**
+          - Dọn dẹp thường xuyên
+          - Dùng máy hút bụi có HEPA filter
+          - Giặt ga gối thường xuyên (nước nóng > 60°C)
+          - Dùng bao gối, chăn chống mạt bụi
+          - Tránh thảm, rèm cửa (nếu có thể)
+        - **Lông thú:**
+          - Không nuôi thú trong nhà (tốt nhất)
+          - Nếu nuôi: Không cho vào phòng ngủ, tắm thú thường xuyên
+        - **Phấn hoa:**
+          - Ở trong nhà khi phấn hoa nhiều
+          - Đóng cửa sổ
+          - Đeo khẩu trang khi ra ngoài
+          - Tắm, thay quần áo sau khi ra ngoài
+        - **Nấm mốc:**
+          - Giữ nhà khô ráo
+          - Sửa chỗ rò rỉ nước
+          - Dùng máy hút ẩm
+          - Lau sạch nấm mốc
+
+        **2. Nhiễm trùng:**
+        - Rửa tay thường xuyên
+        - Tránh người ốm
+        - Tiêm vắc xin cúm hàng năm
+        - Điều trị viêm xoang, cảm lạnh sớm
+
+        **3. Môi trường:**
+        - **Không hút thuốc:** Bỏ thuốc, tránh khói thuốc
+        - **Ô nhiễm không khí:**
+          - Ở trong nhà khi ô nhiễm cao
+          - Đeo khẩu trang khi ra ngoài
+          - Dùng máy lọc không khí trong nhà
+        - **Không khí lạnh:**
+          - Đeo khẩu trang, quàng khăn (làm ấm không khí)
+          - Tránh tập thể dục ngoài trời khi lạnh
+          - Tập trong nhà khi trời lạnh
+
+        **4. Stress:**
+        - Tập thư giãn: Hít thở sâu, thiền, yoga
+        - Ngủ đủ giấc
+        - Tránh căng thẳng
+
+## 📊 THEO DÕI VÀ QUẢN LÝ:
+
+        **1. Peak Flow Meter (Đo lưu lượng đỉnh):**
+        - Dụng cụ đo chức năng phổi tại nhà
+        - Đo hàng ngày, ghi nhật ký
+        - Giúp phát hiện sớm cơn hen
+        - **Cách dùng:**
+          1. Đứng thẳng
+          2. Hít vào sâu
+          3. Ngậm ống, thổi mạnh, nhanh
+          4. Ghi số đo
+          5. Làm 3 lần, lấy số cao nhất
+
+        **2. Phân vùng (Zone System):**
+        - **Vùng xanh (80-100%):** Ổn định, tiếp tục điều trị
+        - **Vùng vàng (50-80%):** Cảnh báo, tăng thuốc dự phòng
+        - **Vùng đỏ (< 50%):** Nguy hiểm, dùng thuốc cắt cơn, gọi bác sĩ
+
+        **3. Nhật ký hen:**
+        - Ghi: Triệu chứng, thuốc đã dùng, yếu tố kích thích
+        - Giúp bác sĩ điều chỉnh điều trị tốt hơn
+
+        **4. Khám định kỳ:**
+        - **Mỗi 1-3 tháng:** Đánh giá điều trị, điều chỉnh thuốc
+        - **Mỗi 6 tháng - 1 năm:** Đo chức năng phổi (spirometry)
+
+        **5. Đánh giá kiểm soát:**
+        - **Kiểm soát tốt:**
+          - Triệu chứng < 2 lần/tuần
+          - Không thức giấc vì hen
+          - Không cần thuốc cắt cơn
+          - Hoạt động bình thường
+        - **Chưa kiểm soát tốt:** Cần điều chỉnh điều trị
+
+## 🚨 KẾ HOẠCH HÀNH ĐỘNG KHI LÊN CƠN:
+
+        **⚠️ QUAN TRỌNG:** Mỗi người cần có kế hoạch hành động riêng với bác sĩ!
+
+        **1. Vùng xanh (Ổn định):**
+        - Tiếp tục thuốc dự phòng hàng ngày
+        - Tránh yếu tố kích thích
+        - Tập thể dục bình thường
+
+        **2. Vùng vàng (Cảnh báo):**
+        - **Triệu chứng:** Ho, thở khò khè, khó thở nhẹ
+        - **Hành động:**
+          1. Dùng thuốc cắt cơn (1-2 lần xịt)
+          2. Đợi 15-20 phút
+          3. Nếu cải thiện → Tiếp tục theo dõi
+          4. Nếu không cải thiện → Dùng thêm thuốc cắt cơn, gọi bác sĩ
+          5. Có thể tăng thuốc dự phòng (theo chỉ định bác sĩ)
+
+        **3. Vùng đỏ (Nguy hiểm):**
+        - **Triệu chứng:** Khó thở nặng, không nói được câu dài, môi tím
+        - **Hành động:**
+          1. Dùng thuốc cắt cơn ngay (2-4 lần xịt)
+          2. Đợi 15-20 phút
+          3. Nếu không cải thiện → Dùng lại, gọi cấp cứu ngay
+          4. Đến bệnh viện ngay
+
+        **4. Dấu hiệu cần cấp cứu:**
+        - Khó thở nặng, không nói được
+        - Môi, móng tay tím
+        - Thuốc cắt cơn không hiệu quả
+        - Tim đập nhanh, loạn nhịp
+        - Lú lẫn, buồn ngủ
+        - **→ Gọi cấp cứu ngay (115), đến bệnh viện ngay!**
+
+## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Luôn mang thuốc cắt cơn:**
+        - Mang bên người mọi lúc
+        - Để ở nhà, nơi làm việc, trong xe
+        - Kiểm tra còn thuốc, hạn sử dụng
+
+        **2. Nhận biết sớm triệu chứng:**
+        - Ho, thở khò khè nhẹ
+        - Khó thở khi gắng sức
+        - Tức ngực
+        - **→ Dùng thuốc cắt cơn sớm, tránh cơn nặng**
+
+        **3. Tránh yếu tố kích thích:**
+        - Biết yếu tố kích thích của mình
+        - Tránh tối đa
+        - Chuẩn bị trước (ví dụ: Dùng thuốc trước tập thể dục)
+
+        **4. Uống thuốc dự phòng đúng giờ:**
+        - Không tự ý ngừng
+        - Ngay cả khi không có triệu chứng
+        - Giúp kiểm soát hen tốt hơn
+
+        **5. Khi ốm:**
+        - Cảm lạnh, cúm có thể làm hen nặng hơn
+        - Dùng thuốc cắt cơn nhiều hơn nếu cần
+        - Gọi bác sĩ nếu: Triệu chứng nặng, không cải thiện
+
+        **6. Khi mang thai:**
+        - Hen không kiểm soát → Nguy hiểm cho mẹ và con
+        - Tiếp tục dùng thuốc (hỏi bác sĩ loại an toàn)
+        - Khám thường xuyên hơn
+
+        **7. Ở trẻ em:**
+        - Dùng thuốc hít với buồng đệm
+        - Giáo dục trẻ về bệnh (tùy độ tuổi)
+        - Thông báo cho giáo viên, nhà trường
+        - Có kế hoạch hành động ở trường
+
+        **8. Sống tích cực:**
+        - Hen có thể kiểm soát được
+        - Tuân thủ điều trị → Sống bình thường
+        - Không để hen hạn chế cuộc sống
+        - Tập thể dục, hoạt động bình thường (với chuẩn bị)
+        """,
+        related_disease="asthma",
+        related_drugs=["Salbutamol", "Budesonide", "Montelukast"],
+        printable=True
+    ),
+    
+    # === GERD ===
+    PatientEducationTopic(
+        id="gerd_basics",
+        title="Understanding GERD",
+        title_vn="Hiểu về Trào ngược dạ dày thực quản",
+        category="Disease",
+        content="""
+        # Hiểu về Trào ngược dạ dày thực quản (GERD)
+
+        ## GERD là gì?
+
+        GERD (Gastroesophageal Reflux Disease) xảy ra khi axit dạ dày trào ngược lên thực quản, gây viêm và tổn thương niêm mạc thực quản.
+
+        **Cơ chế:**
+        - Cơ vòng thực quản dưới (LES) yếu hoặc giãn không đúng lúc
+        - Axit dạ dày trào lên thực quản
+        - Gây viêm, tổn thương niêm mạc
+
+        **⚠️ Phân biệt:**
+        - **Trào ngược sinh lý:** Thỉnh thoảng, không có triệu chứng (bình thường)
+        - **GERD:** Thường xuyên (> 2 lần/tuần), có triệu chứng, cần điều trị
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Ợ nóng (Heartburn):** Nóng rát ngực, lan lên cổ họng (sau ăn, khi nằm)
+        - **Ợ chua:** Cảm giác axit trào lên miệng
+        - **Đau ngực:** Đau sau xương ức, có thể nhầm với đau tim
+        - **Khó nuốt:** Cảm giác thức ăn mắc ở cổ
+        - **Nuốt đau:** Đau khi nuốt
+
+        **Triệu chứng không điển hình:**
+        - **Ho mạn tính:** Đặc biệt ban đêm, khi nằm
+        - **Khàn giọng:** Do axit kích thích thanh quản
+        - **Đau họng:** Viêm họng do axit
+        - **Cảm giác vướng cổ:** Cảm giác có gì đó ở cổ
+        - **Hen phế quản:** GERD có thể làm hen nặng hơn
+        - **Đau răng:** Axit làm mòn men răng
+
+        **⚠️ Lưu ý:** Đau ngực do GERD có thể giống đau tim. Nếu đau ngực dữ dội, lan ra tay, kèm khó thở → Cần loại trừ đau tim trước!
+
+        ## Nguyên nhân:
+
+        **1. Yếu tố cơ học:**
+        - **Thoát vị hoành:** Dạ dày trượt lên ngực qua cơ hoành
+        - **Cơ vòng thực quản yếu:** Do tuổi, bệnh lý
+        - **Tăng áp lực ổ bụng:** Béo phì, mang thai, ho mạn tính
+
+        **2. Yếu tố lối sống:**
+        - **Ăn quá no:** Làm tăng áp lực dạ dày
+        - **Nằm sau ăn:** Trọng lực không giúp giữ axit
+        - **Thức ăn kích thích:** Đồ cay, chua, béo, cà phê, rượu
+        - **Hút thuốc:** Làm yếu cơ vòng thực quản
+        - **Stress:** Làm tăng tiết axit
+
+        **3. Thuốc:**
+        - Một số thuốc làm yếu cơ vòng: Theophylline, một số thuốc huyết áp
+        - NSAID: Làm tổn thương niêm mạc dạ dày
+
+        **4. Bệnh khác:**
+        - Béo phì
+        - Mang thai
+        - Đái tháo đường (gây liệt dạ dày)
+        - Xơ cứng bì
+
+        ## Điều trị:
+
+        **1. Thay đổi lối sống (QUAN TRỌNG NHẤT!):**
+        - Chế độ ăn phù hợp
+        - Thay đổi thói quen sinh hoạt
+        - Xem chi tiết bên dưới
+
+        **2. Thuốc:**
+        - **PPI (Proton Pump Inhibitors):** Omeprazole, Pantoprazole, Esomeprazole
+          - Uống trước ăn 30 phút
+          - Uống lâu dài nếu cần
+        - **H2 Blockers:** Ranitidine, Famotidine
+        - **Antacid:** Trung hòa axit tạm thời (không dùng lâu dài)
+
+        **3. Phẫu thuật:**
+        - Hiếm, chỉ khi thuốc không hiệu quả
+        - Thắt cơ vòng thực quản
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI GERD:
+
+        **1. Nguyên tắc:**
+        - **Ăn nhiều bữa nhỏ:** 5-6 bữa/ngày (thay vì 3 bữa lớn)
+        - **Không ăn quá no:** Ăn vừa đủ, dừng khi no 70-80%
+        - **Ăn chậm, nhai kỹ:** Giúp tiêu hóa tốt hơn
+        - **Tránh thức ăn kích thích:** Xem danh sách bên dưới
+
+        **2. Thực phẩm NÊN ĂN:**
+        - **Rau xanh:** Rau cải, rau muống, bông cải, cà rốt (luộc, hấp)
+        - **Trái cây ít axit:** Chuối, táo, lê, dưa hấu
+        - **Protein nạc:** Thịt gà (bỏ da), cá, đậu phụ (luộc, hấp, nướng)
+        - **Ngũ cốc:** Gạo, bánh mì, yến mạch
+        - **Sữa ít béo:** Sữa tách béo, sữa chua (không quá chua)
+        - **Chất béo tốt:** Dầu ô liu, quả bơ (ít)
+
+        **3. Thực phẩm CẦN TRÁNH:**
+        - **Đồ cay:** Ớt, tiêu, gừng (nhiều), tỏi (một số người)
+        - **Đồ chua:** Chanh, cam, bưởi, dứa, cà chua (nhiều)
+        - **Đồ béo:** Đồ chiên rán, thịt mỡ, bơ, phô mai béo
+        - **Cà phê, trà:** Làm yếu cơ vòng thực quản, tăng axit
+        - **Rượu bia:** Làm tăng trào ngược
+        - **Đồ uống có ga:** Gây đầy bụng, tăng áp lực
+        - **Sô cô la:** Làm yếu cơ vòng thực quản
+        - **Bạc hà:** Làm giãn cơ vòng thực quản
+        - **Hành, tỏi:** Một số người nhạy cảm
+
+        **4. Cách chế biến:**
+        - **Nên:** Luộc, hấp, nướng, xào ít dầu
+        - **Tránh:** Chiên rán, nướng nhiều dầu mỡ
+
+        **5. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo yến mạch + chuối + sữa ít béo
+        - **Bữa phụ (10h):** Táo, bánh quy giòn
+        - **Trưa:** 1 chén cơm + cá luộc + rau luộc + canh rau
+        - **Bữa phụ (15h):** Sữa chua, bánh mì
+        - **Tối:** 1 chén cơm + thịt gà luộc + rau xào (ít dầu) + canh
+        - **Bữa phụ (21h - nếu cần):** Sữa ấm
+
+        **6. Lưu ý:**
+        - Ghi nhật ký ăn uống: Ghi thức ăn và triệu chứng
+        - Xác định thức ăn gây triệu chứng (mỗi người khác nhau)
+        - Tránh thức ăn đó
+
+        ## 💤 THAY ĐỔI THÓI QUEN SINH HOẠT:
+
+        **1. Sau khi ăn:**
+        - **Không nằm ngay:** Chờ ít nhất 2-3 giờ sau ăn
+        - **Ngồi thẳng:** Hoặc đi bộ nhẹ nhàng
+        - **Tránh cúi gập:** Không cúi, gập người sau ăn
+
+        **2. Khi ngủ:**
+        - **Kê đầu cao:** Kê gối cao 15-20cm, hoặc nâng đầu giường
+        - **Nằm nghiêng trái:** Giúp giảm trào ngược (dạ dày ở bên trái)
+        - **Tránh nằm ngửa:** Dễ trào ngược hơn
+
+        **3. Quần áo:**
+        - **Mặc rộng rãi:** Tránh quần áo chật, thắt lưng chặt
+        - **Giảm áp lực ổ bụng**
+
+        **4. Thời gian ăn:**
+        - **Bữa tối:** Ăn trước 7 giờ tối (ít nhất 3 giờ trước khi ngủ)
+        - **Bữa sáng:** Ăn đúng giờ, không bỏ bữa
+        - **Bữa trưa:** Ăn vừa đủ, không quá no
+
+        **5. Uống nước:**
+        - Uống giữa các bữa ăn (không uống nhiều trong bữa ăn)
+        - Uống nước ấm (tốt hơn nước lạnh)
+        - Tránh đồ uống có ga
+
+        **6. Giảm cân (nếu thừa cân):**
+        - Béo phì làm tăng áp lực ổ bụng
+        - Giảm 5-10% cân nặng → Giảm triệu chứng đáng kể
+
+        **7. Bỏ thuốc lá:**
+        - Hút thuốc làm yếu cơ vòng thực quản
+        - Tăng tiết axit
+        - Bỏ thuốc → Giảm triệu chứng
+
+        **8. Quản lý stress:**
+        - Stress làm tăng tiết axit, tăng trào ngược
+        - Tập thư giãn: Hít thở sâu, thiền, yoga
+        - Ngủ đủ giấc
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. PPI (Proton Pump Inhibitors):**
+        - **Khi nào dùng:** Khi thay đổi lối sống không đủ
+        - **Cách dùng:** Uống trước ăn 30 phút (quan trọng!)
+        - **Thời gian:** Thường 4-8 tuần, có thể lâu hơn
+        - **Không tự ý ngừng:** Ngừng đột ngột → Trào ngược nặng hơn
+
+        **2. H2 Blockers:**
+        - Dùng trước khi ngủ (nếu triệu chứng về đêm)
+        - Hoặc khi cần giảm axit nhanh
+
+        **3. Antacid:**
+        - Dùng khi có triệu chứng (không dùng lâu dài)
+        - Trung hòa axit tạm thời
+
+        **4. Tác dụng phụ:**
+        - **PPI:** Tiêu chảy, đau đầu, thiếu B12 (nếu dùng lâu)
+        - **Báo bác sĩ nếu:** Tác dụng phụ nghiêm trọng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng báo động:**
+        - **Khó nuốt:** Cảm giác thức ăn mắc ở cổ, nuốt đau
+        - **Nuốt đau:** Đau khi nuốt
+        - **Nôn ra máu:** Máu đỏ hoặc nâu
+        - **Phân đen:** Có thể chảy máu dạ dày
+        - **Sụt cân:** Không rõ nguyên nhân
+        - **Thiếu máu:** Mệt mỏi, da xanh
+
+        **2. Triệu chứng nặng:**
+        - Đau ngực dữ dội (cần loại trừ đau tim!)
+        - Nôn nhiều
+        - Không ăn được
+
+        **3. Không đáp ứng điều trị:**
+        - Thay đổi lối sống + thuốc không hiệu quả
+        - Triệu chứng không giảm sau 4-8 tuần
+
+        **⚠️ Lưu ý:** Các triệu chứng báo động có thể là dấu hiệu của bệnh nặng hơn (ung thư thực quản, loét dạ dày). Cần nội soi để chẩn đoán!
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Thay đổi lối sống trước:**
+        - Thử thay đổi lối sống 2-4 tuần trước khi dùng thuốc
+        - Nhiều người cải thiện chỉ bằng thay đổi lối sống
+
+        **2. Nhận biết thức ăn kích thích:**
+        - Ghi nhật ký: Thức ăn + triệu chứng
+        - Mỗi người khác nhau
+        - Tránh thức ăn gây triệu chứng
+
+        **3. Khi đi ăn ngoài:**
+        - Chọn món luộc, hấp
+        - Tránh đồ chiên, cay, chua
+        - Ăn vừa đủ, không quá no
+        - Không nằm ngay sau ăn
+
+        **4. Khi mang thai:**
+        - GERD thường gặp khi mang thai (do hormone, tăng áp lực)
+        - Thay đổi lối sống trước
+        - Dùng thuốc an toàn (hỏi bác sĩ)
+        - Thường tự khỏi sau sinh
+
+        **5. Ở trẻ em:**
+        - GERD thường gặp ở trẻ sơ sinh
+        - Thường tự khỏi khi lớn
+        - Nếu nặng: Cần điều trị
+
+        **6. Phòng ngừa:**
+        - Duy trì cân nặng hợp lý
+        - Ăn đúng giờ, không bỏ bữa
+        - Tránh thức ăn kích thích
+        - Không nằm sau ăn
+        - Bỏ thuốc lá
+        - Quản lý stress
+
+        **7. Sống tích cực:**
+        - GERD có thể kiểm soát được
+        - Thay đổi lối sống + thuốc → Sống bình thường
+        - Đừng để GERD ảnh hưởng cuộc sống
+        """,
+        related_disease="gerd",
+        related_drugs=["Omeprazole", "Pantoprazole", "Ranitidine"],
+        printable=True
+    ),
+    
+    # === UTI ===
+    PatientEducationTopic(
+        id="uti_basics",
+        title="Understanding Urinary Tract Infection",
+        title_vn="Hiểu về Nhiễm trùng đường tiểu",
+        category="Disease",
+        content="""
+# Hiểu về Nhiễm trùng đường tiểu (UTI)
+
+## Nhiễm trùng đường tiểu là gì?
+
+UTI là nhiễm trùng ở bàng quang, niệu đạo, hoặc thận.
+
+## Triệu chứng:
+- Tiểu buốt, tiểu rắt
+- Tiểu nhiều lần
+- Nước tiểu đục, có mùi
+- Đau bụng dưới
+- Sốt (nếu nhiễm thận)
+- Đau lưng (nếu nhiễm thận)
+
+## Nguyên nhân:
+- Vi khuẩn từ đường tiêu hóa
+- Phụ nữ dễ mắc hơn (niệu đạo ngắn)
+- Quan hệ tình dục
+- Vệ sinh không đúng cách
+
+## Điều trị:
+- Uống kháng sinh đủ liều, đủ ngày
+- Uống nhiều nước
+- Nghỉ ngơi
+- Giảm đau nếu cần
+
+## Phòng ngừa:
+- Uống đủ nước (1.5-2 lít/ngày)
+- Đi tiểu thường xuyên, không nhịn
+- Vệ sinh đúng cách (lau từ trước ra sau)
+- Đi tiểu sau quan hệ
+- Mặc quần lót cotton, rộng rãi
+
+## Khi nào cần đến bệnh viện:
+- Sốt cao
+- Đau lưng dữ dội
+- Nôn, không uống được
+- Không cải thiện sau 2-3 ngày
+
+## Lời khuyên:
+- Uống nhiều nước
+- Uống kháng sinh đủ ngày
+- Vệ sinh đúng cách
+- Đi tiểu thường xuyên
+- Tái khám nếu không đỡ
+        """,
+        related_disease="uti",
+        related_drugs=["Ciprofloxacin", "Trimethoprim", "Nitrofurantoin"],
+        printable=True
+    ),
+    
+    # === OSTEOARTHRITIS ===
+    PatientEducationTopic(
+        id="osteoarthritis_basics",
+        title="Understanding Osteoarthritis",
+        title_vn="Hiểu về Thoái hóa khớp",
+        category="Disease",
+        content="""
+# Hiểu về Thoái hóa khớp
+
+## Thoái hóa khớp là gì?
+
+Thoái hóa khớp là tình trạng sụn khớp bị mòn, gây đau và cứng khớp.
+
+## Triệu chứng:
+- Đau khớp (tăng khi vận động)
+- Cứng khớp (đặc biệt buổi sáng)
+- Sưng khớp
+- Giảm vận động
+- Có tiếng kêu trong khớp
+
+## Khớp thường bị:
+- Gối
+- Hông
+- Cột sống
+- Ngón tay
+- Cổ tay
+
+## Nguyên nhân:
+- Tuổi cao
+- Chấn thương cũ
+- Béo phì
+- Di truyền
+- Vận động quá mức
+
+## Điều trị:
+- **Giảm đau:** Paracetamol, NSAID
+- **Vật lý trị liệu:** Tập thể dục, kéo giãn
+- **Giảm cân** (nếu thừa cân)
+- **Tiêm khớp** (nếu cần)
+- **Phẫu thuật** (nếu nặng)
+
+## Tập thể dục:
+- **Quan trọng!** Giúp giảm đau, tăng vận động
+- Đi bộ, bơi, đạp xe
+- Tập kéo giãn
+- Tránh vận động mạnh, chấn thương
+
+## Lời khuyên:
+- Tập thể dục đều đặn
+- Giảm cân nếu thừa cân
+- Dùng thuốc giảm đau khi cần
+- Tránh vận động quá mức
+- Vật lý trị liệu
+- Khám định kỳ
+        """,
+        related_disease="osteoarthritis",
+        related_drugs=["Paracetamol", "Ibuprofen", "Diclofenac"],
+        printable=True
+    ),
+    
+    # === DEPRESSION ===
+    PatientEducationTopic(
+        id="depression_basics",
+        title="Understanding Depression",
+        title_vn="Hiểu về Trầm cảm",
+        category="Disease",
+        content="""
+# Hiểu về Trầm cảm
+
+## Trầm cảm là gì?
+
+Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng thú kéo dài.
+
+## Triệu chứng:
+- Buồn bã, chán nản kéo dài
+- Mất hứng thú với mọi thứ
+- Mệt mỏi, thiếu năng lượng
+- Khó tập trung
+- Thay đổi giấc ngủ (mất ngủ hoặc ngủ nhiều)
+- Thay đổi ăn uống
+- Cảm giác vô giá trị, tội lỗi
+- Ý nghĩ tự tử
+
+## Nguyên nhân:
+- Di truyền
+- Mất cân bằng hóa chất não
+- Stress, sang chấn tâm lý
+- Bệnh mạn tính
+- Một số thuốc
+
+## Điều trị:
+- **Thuốc chống trầm cảm:** Uống đúng giờ, đủ thời gian
+- **Tâm lý trị liệu:** Nói chuyện với chuyên gia
+- **Thay đổi lối sống:** Tập thể dục, ngủ đủ
+- **Hỗ trợ:** Gia đình, bạn bè
+
+## ⚠️ QUAN TRỌNG:
+- Trầm cảm là BỆNH, không phải yếu đuối
+- Cần điều trị, không tự khỏi
+- Thuốc cần thời gian mới có tác dụng (2-4 tuần)
+- Không tự ý ngừng thuốc
+
+## Khi nào cần cấp cứu:
+- Ý nghĩ tự tử
+- Có kế hoạch tự tử
+- Không thể chăm sóc bản thân
+- Hoang tưởng, ảo giác
+
+## Lời khuyên:
+- Điều trị sớm
+- Uống thuốc đúng giờ
+- Tâm lý trị liệu
+- Tập thể dục
+- Ngủ đủ giấc
+- Nói chuyện với người thân
+- Không tự ý ngừng thuốc
+        """,
+        related_disease="depression",
+        related_drugs=["Sertraline", "Fluoxetine", "Escitalopram"],
+        printable=True
+    ),
+    
+    # === DENGUE FEVER ===
+    PatientEducationTopic(
+        id="dengue_fever_basics",
+        title="Understanding Dengue Fever",
+        title_vn="Hiểu về Sốt xuất huyết Dengue",
+        category="Disease",
+        content="""
+        # Hiểu về Sốt xuất huyết Dengue
+
+        ## Sốt xuất huyết Dengue là gì?
+
+        Sốt xuất huyết Dengue là bệnh truyền nhiễm do virus Dengue, lây truyền qua muỗi vằn (Aedes aegypti). Bệnh phổ biến ở vùng nhiệt đới, đặc biệt là Việt Nam.
+
+        **⚠️ Đặc điểm:**
+        - Bệnh theo mùa (mùa mưa, nóng ẩm)
+        - Có thể nặng, gây sốt xuất huyết Dengue nặng (DSS)
+        - Chưa có thuốc đặc trị, chủ yếu điều trị triệu chứng
+
+        ## Triệu chứng:
+
+        **Giai đoạn sốt (1-3 ngày đầu):**
+        - **Sốt cao đột ngột:** 39-40°C, liên tục
+        - **Đau đầu:** Đau dữ dội, đặc biệt vùng trán
+        - **Đau mắt:** Đau sau hốc mắt
+        - **Đau cơ, đau khớp:** Đau toàn thân
+        - **Mệt mỏi:** Uể oải, không có sức
+        - **Buồn nôn, nôn**
+        - **Phát ban:** Ban đỏ trên da (có thể có)
+
+        **Giai đoạn nguy hiểm (Ngày 4-7):**
+        - **Sốt giảm:** Có thể hạ sốt (nhưng đây là giai đoạn nguy hiểm!)
+        - **Xuất huyết:**
+          - Chấm xuất huyết dưới da
+          - Chảy máu cam, chảy máu chân răng
+          - Nôn ra máu, đi ngoài phân đen
+          - Kinh nguyệt kéo dài (ở nữ)
+        - **Dấu hiệu cảnh báo:**
+          - Đau bụng, nôn nhiều
+          - Vật vã, lú lẫn
+          - Chảy máu niêm mạc
+          - Tiểu ít
+          - **→ Cần đến bệnh viện ngay!**
+
+        **Giai đoạn hồi phục (Sau ngày 7):**
+        - Sốt giảm
+        - Ăn uống tốt hơn
+        - Phát ban, ngứa da (có thể)
+
+        ## 🚨 DẤU HIỆU CẢNH BÁO (Cần nhập viện ngay!):
+
+        **1. Dấu hiệu sốc:**
+        - Vật vã, lú lẫn
+        - Tay chân lạnh, ẩm
+        - Mạch nhanh, yếu
+        - Huyết áp tụt
+        - Tiểu ít hoặc không tiểu
+
+        **2. Xuất huyết nặng:**
+        - Nôn ra máu
+        - Đi ngoài phân đen
+        - Chảy máu cam nhiều
+        - Chảy máu không cầm được
+
+        **3. Đau bụng:**
+        - Đau bụng dữ dội
+        - Nôn nhiều
+
+        **4. Dấu hiệu khác:**
+        - Khó thở
+        - Co giật
+        - Hôn mê
+
+        **⚠️ QUAN TRỌNG:** Giai đoạn nguy hiểm thường xảy ra khi sốt giảm (ngày 4-7). Đừng chủ quan khi hạ sốt!
+
+        ## Điều trị:
+
+        **1. Điều trị tại nhà (Sốt xuất huyết nhẹ):**
+        - **Hạ sốt:** Paracetamol 10-15mg/kg/lần, cách 4-6 giờ
+        - **⚠️ KHÔNG dùng:** Aspirin, Ibuprofen (gây xuất huyết nặng!)
+        - **Uống nhiều nước:** Nước lọc, oresol, nước trái cây
+        - **Nghỉ ngơi:** Nghỉ hoàn toàn
+        - **Theo dõi:** Đo nhiệt độ, theo dõi triệu chứng
+
+        **2. Điều trị tại viện (Sốt xuất huyết nặng):**
+        - Truyền dịch
+        - Theo dõi tiểu cầu, hematocrit
+        - Điều trị xuất huyết
+        - Điều trị sốc nếu có
+
+        **3. Không có thuốc đặc trị:**
+        - Chủ yếu điều trị triệu chứng
+        - Hỗ trợ, theo dõi
+
+        ## 🍽️ CHẾ ĐỘ ĂN KHI BỊ SỐT XUẤT HUYẾT:
+
+        **1. Nguyên tắc:**
+        - **Uống nhiều nước:** Quan trọng nhất! (2-3 lít/ngày)
+        - **Ăn nhẹ, dễ tiêu:** Tránh đồ khó tiêu
+        - **Chia nhỏ bữa:** 5-6 bữa/ngày
+        - **Đủ dinh dưỡng:** Giúp cơ thể chống lại bệnh
+
+        **2. Uống nước (QUAN TRỌNG!):**
+        - **Oresol:** Tốt nhất (bù nước và điện giải)
+          - Pha đúng tỷ lệ (1 gói + 1 lít nước)
+          - Uống từng ngụm nhỏ, thường xuyên
+        - **Nước lọc:** Uống nhiều
+        - **Nước trái cây:** Cam, chanh, dừa (vitamin C, kali)
+        - **Súp, canh:** Vừa ăn vừa uống nước
+        - **⚠️ Tránh:** Nước ngọt có ga, đồ uống có cồn
+
+        **3. Thực phẩm nên ăn:**
+        - **Cháo, súp:** Dễ nuốt, dễ tiêu, có nước
+          - Cháo gà, cháo thịt bằm
+          - Súp rau củ
+        - **Trái cây:** Cam, chanh, bưởi (vitamin C), chuối (kali)
+        - **Rau xanh:** Luộc, hấp (vitamin, chất xơ)
+        - **Protein:** Thịt nạc, cá (luộc, hấp)
+        - **Sữa:** Sữa ấm, sữa chua
+
+        **4. Thực phẩm cần tránh:**
+        - **Thực phẩm màu đỏ, nâu:** Dưa hấu, củ dền, cà phê, coca
+          - **Lý do:** Khó phân biệt với máu khi nôn/đi ngoài
+        - **Đồ chiên, nhiều dầu mỡ:** Khó tiêu
+        - **Đồ cay:** Kích thích dạ dày
+        - **Đồ lạnh:** Có thể làm sốt nặng hơn
+        - **Rượu bia:** Làm mất nước, giảm miễn dịch
+
+        **5. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo gà + nước cam
+        - **Bữa phụ (10h):** Oresol, chuối
+        - **Trưa:** Cháo thịt bằm + canh rau
+        - **Bữa phụ (15h):** Nước dừa, sữa chua
+        - **Tối:** Súp rau củ + nước trái cây
+        - **Bữa phụ (21h):** Sữa ấm, oresol
+
+        **6. Lưu ý:**
+        - Uống nước ngay cả khi không khát
+        - Uống từng ngụm nhỏ, thường xuyên
+        - Nếu nôn → Uống lại sau 10-15 phút
+        - Ăn chậm, nhai kỹ
+        - Nếu không ăn được → Uống sữa, nước trái cây
+
+        ## 💤 CHĂM SÓC TẠI NHÀ:
+
+        **1. Nghỉ ngơi:**
+        - Nghỉ hoàn toàn, không làm việc
+        - Ngủ đủ giấc
+        - Tránh gắng sức
+
+        **2. Hạ sốt:**
+        - **Paracetamol:** 10-15mg/kg/lần, cách 4-6 giờ
+        - **Lau người:** Nước ấm (không dùng nước lạnh)
+        - **Mặc quần áo thoáng:** Không đắp chăn quá dày
+        - **⚠️ KHÔNG dùng:** Aspirin, Ibuprofen, Diclofenac
+
+        **3. Theo dõi:**
+        - **Nhiệt độ:** Đo 3-4 lần/ngày
+        - **Triệu chứng:** Ghi nhật ký
+        - **Dấu hiệu cảnh báo:** Kiểm tra thường xuyên
+        - **Tiểu:** Theo dõi số lần, lượng nước tiểu
+
+        **4. Vệ sinh:**
+        - Rửa tay thường xuyên
+        - Vệ sinh răng miệng (nhẹ nhàng, tránh chảy máu)
+        - Tắm nhanh bằng nước ấm (nếu sốt không quá cao)
+
+        **5. Phòng ngừa lây lan:**
+        - Nằm màn (tránh muỗi đốt, lây cho người khác)
+        - Diệt muỗi, lăng quăng trong nhà
+        - Không để nước đọng
+
+        ## 🛡️ PHÒNG NGỪA:
+
+        **1. Diệt muỗi, lăng quăng:**
+        - **Loại bỏ nước đọng:**
+          - Đậy kín lu, vại, bể chứa nước
+          - Thả cá vào bể nước
+          - Thay nước bình hoa, chậu cây thường xuyên
+          - Lật úp các vật chứa nước không dùng
+        - **Diệt lăng quăng:** Dùng hóa chất, cá
+        - **Phun thuốc diệt muỗi:** Khi có dịch
+
+        **2. Tránh muỗi đốt:**
+        - **Nằm màn:** Khi ngủ (ngày và đêm)
+        - **Mặc quần áo dài:** Khi ra ngoài
+        - **Dùng kem chống muỗi:** DEET, Picaridin
+        - **Dùng nhang muỗi, vợt muỗi**
+
+        **3. Vệ sinh môi trường:**
+        - Dọn dẹp nhà cửa sạch sẽ
+        - Không để rác, nước đọng
+        - Thông thoáng nhà cửa
+
+        **4. Tiêm chủng:**
+        - Vắc xin Dengue đã có (Dengvaxia)
+        - Chỉ dùng cho người đã từng bị sốt xuất huyết
+        - Tham khảo bác sĩ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN NGAY:
+
+        **1. Dấu hiệu cảnh báo:**
+        - Vật vã, lú lẫn
+        - Đau bụng dữ dội
+        - Nôn nhiều
+        - Chảy máu (cam, chân răng, dưới da)
+        - Tay chân lạnh, ẩm
+        - Tiểu ít hoặc không tiểu
+
+        **2. Sốt xuất huyết nặng:**
+        - Sốc (tụt huyết áp, mạch nhanh)
+        - Xuất huyết nặng
+        - Suy tạng
+
+        **3. Không cải thiện:**
+        - Sốt > 3 ngày không giảm
+        - Triệu chứng nặng hơn
+        - Không uống được nước
+
+        **⚠️ QUAN TRỌNG:** Đến bệnh viện ngay khi có dấu hiệu cảnh báo! Sốt xuất huyết có thể diễn biến nhanh, nguy hiểm.
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị sốt xuất huyết:**
+        - Nghỉ ngơi hoàn toàn
+        - Uống nhiều nước (quan trọng nhất!)
+        - Hạ sốt đúng cách (chỉ dùng Paracetamol)
+        - Theo dõi dấu hiệu cảnh báo
+        - Đến bệnh viện khi cần
+
+        **2. Không tự ý:**
+        - Dùng Aspirin, Ibuprofen
+        - Truyền dịch tại nhà (nguy hiểm!)
+        - Dùng thuốc không rõ nguồn gốc
+
+        **3. Phòng ngừa:**
+        - Diệt muỗi, lăng quăng
+        - Nằm màn
+        - Vệ sinh môi trường
+
+        **4. Mùa dịch:**
+        - Mùa mưa (tháng 6-11) là mùa sốt xuất huyết
+        - Cần phòng ngừa tích cực
+        - Khi có dịch → Tránh nơi có nhiều muỗi
+        """,
+        related_disease="dengue_fever",
+        related_drugs=["Paracetamol", "Oresol"],
+        printable=True
+    ),
+    
+    # === GOUT ===
+    PatientEducationTopic(
+        id="gout_basics",
+        title="Understanding Gout",
+        title_vn="Hiểu về Bệnh Gout",
+        category="Disease",
+        content="""
+        # Hiểu về Bệnh Gout
+
+        ## Bệnh Gout là gì?
+
+        Bệnh Gout là bệnh viêm khớp do tăng acid uric trong máu, tạo thành tinh thể urat lắng đọng ở khớp, gây viêm đau dữ dội.
+
+        **Cơ chế:**
+        - Tăng acid uric máu (do sản xuất nhiều hoặc đào thải ít)
+        - Tinh thể urat lắng đọng ở khớp
+        - Gây viêm, sưng, đau dữ dội
+
+        **⚠️ Đặc điểm:**
+        - Đau khớp đột ngột, dữ dội
+        - Thường gặp ở nam > 40 tuổi
+        - Có thể tái phát nếu không điều trị
+
+        ## Triệu chứng:
+
+        **Cơn Gout cấp:**
+        - **Đau khớp dữ dội:** Đột ngột, thường về đêm
+        - **Sưng, nóng, đỏ:** Khớp sưng to, đỏ, nóng
+        - **Vị trí:** Thường khớp ngón chân cái (50%), khớp cổ chân, gối, khuỷu tay
+        - **Đau tăng:** Khi chạm vào, cử động
+        - **Sốt:** Có thể có sốt nhẹ
+        - **Tự khỏi:** Sau 3-10 ngày (nhưng sẽ tái phát)
+
+        **Gout mạn tính:**
+        - Đau khớp tái phát nhiều lần
+        - Hạt tophi (tinh thể urat dưới da): Ở vành tai, khuỷu tay, ngón tay
+        - Tổn thương khớp vĩnh viễn
+        - Sỏi thận (do acid uric)
+
+        ## Nguyên nhân:
+
+        **1. Tăng acid uric:**
+        - **Sản xuất nhiều:** Do gen, bệnh máu
+        - **Đào thải ít:** Do thận, thuốc
+
+        **2. Yếu tố nguy cơ:**
+        - **Nam giới:** > 40 tuổi
+        - **Béo phì:** Tăng sản xuất acid uric
+        - **Ăn nhiều purin:** Thịt đỏ, hải sản, nội tạng
+        - **Uống nhiều rượu bia:** Đặc biệt bia
+        - **Thuốc:** Lợi tiểu, Aspirin liều thấp
+        - **Bệnh khác:** Đái tháo đường, tăng huyết áp, suy thận
+
+        ## Điều trị:
+
+        **1. Điều trị cơn Gout cấp:**
+        - **Colchicine:** Thuốc đặc trị (uống sớm, trong 24 giờ đầu)
+        - **NSAID:** Ibuprofen, Naproxen (giảm đau, viêm)
+        - **Corticosteroid:** Nếu không dùng được NSAID
+        - **Nghỉ ngơi:** Nâng cao chân, chườm lạnh
+
+        **2. Điều trị dự phòng:**
+        - **Allopurinol:** Giảm sản xuất acid uric
+        - **Probenecid:** Tăng đào thải acid uric
+        - **Uống lâu dài:** Để phòng ngừa cơn tái phát
+
+        **3. Mục tiêu điều trị:**
+        - Acid uric máu < 6 mg/dL (360 μmol/L)
+        - Giảm cơn tái phát
+        - Phòng ngừa biến chứng
+
+        ## 🍽️ CHẾ ĐỘ ĂN CHO NGƯỜI BỊ GOUT:
+
+        **⚠️ QUAN TRỌNG:** Chế độ ăn rất quan trọng trong điều trị Gout!
+
+        **1. Nguyên tắc:**
+        - **Giảm purin:** Thực phẩm giàu purin → Tăng acid uric
+        - **Uống nhiều nước:** Giúp đào thải acid uric
+        - **Giảm rượu bia:** Đặc biệt bia
+        - **Giảm cân:** Nếu thừa cân
+
+        **2. Thực phẩm CẦN TRÁNH (Giàu purin):**
+        - **Nội tạng:** Gan, thận, tim, lòng (rất nhiều purin)
+        - **Thịt đỏ:** Thịt bò, thịt heo, thịt dê (nhiều)
+        - **Hải sản:** Tôm, cua, cá mòi, cá trích, cá cơm (nhiều)
+        - **Đồ uống có cồn:** 
+          - **Bia:** Rất nhiều purin (tránh hoàn toàn!)
+          - Rượu (hạn chế)
+        - **Nước ngọt có đường:** Fructose → Tăng acid uric
+        - **Thịt chế biến sẵn:** Xúc xích, thịt nguội
+
+        **3. Thực phẩm HẠN CHẾ (Trung bình purin):**
+        - **Thịt trắng:** Thịt gà, thịt vịt (ăn ít, 100-150g/ngày)
+        - **Cá:** Cá nước ngọt (ăn ít)
+        - **Đậu:** Đậu phụ, đậu nành (ăn ít)
+        - **Rau:** Măng tây, nấm, rau chân vịt (ăn ít)
+
+        **4. Thực phẩm NÊN ĂN (Ít purin):**
+        - **Rau xanh:** Hầu hết rau (trừ măng tây, nấm, rau chân vịt)
+          - Rau cải, rau muống, bông cải, cà rốt
+        - **Trái cây:** Tất cả (đặc biệt cherry - giúp giảm acid uric)
+        - **Ngũ cốc:** Gạo, bánh mì, yến mạch
+        - **Sữa ít béo:** Sữa tách béo, sữa chua (giúp giảm acid uric)
+        - **Trứng:** 3-4 quả/tuần
+        - **Dầu thực vật:** Dầu ô liu, dầu hạt cải
+
+        **5. Uống nước:**
+        - **Mục tiêu:** 2-3 lít/ngày
+        - **Nước lọc:** Tốt nhất
+        - **Cà phê:** Có thể uống (giúp giảm acid uric)
+        - **Trà:** Có thể uống
+        - **⚠️ Tránh:** Bia, rượu, nước ngọt có đường
+
+        **6. Thực đơn mẫu (1 ngày):**
+        - **Sáng:** Cháo yến mạch + trứng luộc + sữa ít béo
+        - **Trưa:** 1 chén cơm + đậu phụ luộc + rau luộc + canh rau
+        - **Tối:** 1 chén cơm + cá nước ngọt (ít) + rau xào + canh
+        - **Bữa phụ:** Trái cây (cherry nếu có), sữa chua
+
+        **7. Lưu ý:**
+        - Ghi nhật ký ăn uống: Ghi thức ăn và cơn Gout
+        - Xác định thức ăn gây cơn (mỗi người khác nhau)
+        - Tránh thức ăn đó
+        - Ăn đều đặn, không bỏ bữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi có cơn Gout cấp:**
+        - **Nghỉ ngơi:** Không tập thể dục
+        - **Nâng cao chân:** Giảm sưng
+        - **Chườm lạnh:** Giảm đau, sưng
+
+        **2. Khi không có cơn:**
+        - **Tập thể dục nhẹ nhàng:** Đi bộ, bơi, đạp xe
+        - **Tránh:** Chạy, nhảy (gây áp lực khớp)
+        - **Mục tiêu:** Giảm cân, tăng sức khỏe
+
+        **3. Lưu ý:**
+        - Tập vừa sức
+        - Uống đủ nước
+        - Nghỉ nếu đau khớp
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Khi có cơn cấp:**
+        - **Dùng thuốc sớm:** Trong 24 giờ đầu (hiệu quả tốt nhất)
+        - **Colchicine:** Uống theo chỉ định (không tự ý tăng liều)
+        - **NSAID:** Uống sau ăn (tránh đau dạ dày)
+
+        **2. Thuốc dự phòng:**
+        - **Uống hàng ngày:** Đúng giờ
+        - **Không tự ý ngừng:** Ngừng → Cơn tái phát
+        - **Theo dõi:** Acid uric máu định kỳ
+
+        **3. Tác dụng phụ:**
+        - **Colchicine:** Tiêu chảy, buồn nôn
+        - **Allopurinol:** Phát ban (báo bác sĩ ngay!)
+        - **Báo bác sĩ nếu:** Tác dụng phụ nghiêm trọng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Cơn Gout cấp:**
+        - Đau dữ dội, không chịu được
+        - Thuốc không hiệu quả
+        - Sốt cao
+
+        **2. Biến chứng:**
+        - Hạt tophi vỡ, nhiễm trùng
+        - Sỏi thận (đau lưng, tiểu máu)
+        - Tổn thương khớp nặng
+
+        **3. Tác dụng phụ thuốc:**
+        - Phát ban (có thể dị ứng Allopurinol)
+        - Đau dạ dày nặng
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Phòng ngừa cơn:**
+        - Tránh thức ăn giàu purin
+        - Không uống bia, rượu
+        - Uống nhiều nước
+        - Uống thuốc dự phòng đúng giờ
+
+        **2. Khi có cơn:**
+        - Nghỉ ngơi, nâng cao chân
+        - Dùng thuốc sớm
+        - Chườm lạnh
+        - Đến bệnh viện nếu nặng
+
+        **3. Giảm cân:**
+        - Nếu thừa cân → Giảm cân từ từ
+        - Giảm cân nhanh → Tăng acid uric → Cơn Gout
+
+        **4. Sống tích cực:**
+        - Gout có thể kiểm soát được
+        - Tuân thủ điều trị → Không còn cơn
+        - Đừng để Gout ảnh hưởng cuộc sống
+        """,
+        related_disease="gout",
+        related_drugs=["Colchicine", "Allopurinol", "Ibuprofen"],
+        printable=True
+    ),
+]
