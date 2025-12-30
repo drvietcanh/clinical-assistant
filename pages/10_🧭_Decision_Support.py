@@ -66,16 +66,15 @@ with st.sidebar:
     st.markdown("---")
     render_info_box(
         """
-        **📚 Nhóm 🧭 Hỗ trợ quyết định:**
-        
-        **🔄 Flowcharts quyết định lâm sàng**
-        - Quy trình ra quyết định từng bước, dựa trên clinical rules (Wells, PERC, CHA₂DS₂-VASc, Sepsis-3, CURB-65...)  
-        
-        **🤰 Thai kỳ & cho con bú**
-        - Thông tin an toàn thuốc theo từng giai đoạn thai kỳ và cho con bú (tóm tắt thực hành)
-        
-        **👶 Liều Nhi khoa**
-        - Tính liều theo cân nặng/BSA, gợi ý liều thường dùng cho Nhi khoa
+        <div>
+            <p><strong>📚 Nhóm 🧭 Hỗ trợ quyết định:</strong></p>
+            <p><strong>🔄 Flowcharts quyết định lâm sàng</strong><br>
+            - Quy trình ra quyết định từng bước, dựa trên clinical rules (Wells, PERC, CHA₂DS₂-VASc, Sepsis-3, CURB-65...)</p>
+            <p><strong>🤰 Thai kỳ & cho con bú</strong><br>
+            - Thông tin an toàn thuốc theo từng giai đoạn thai kỳ và cho con bú (tóm tắt thực hành)</p>
+            <p><strong>👶 Liều Nhi khoa</strong><br>
+            - Tính liều theo cân nặng/BSA, gợi ý liều thường dùng cho Nhi khoa</p>
+        </div>
         """,
         type="info",
         title="Thông tin Module"
