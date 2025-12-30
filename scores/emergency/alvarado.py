@@ -158,6 +158,10 @@ def calculate_alvarado_score(
 def render():
     """Render Alvarado Score calculator"""
     
+    # Inject CSS fix for text overlap
+    from components.scores_css_fix import inject_text_overlap_fix
+    inject_text_overlap_fix()
+    
     st.title("🔪 Alvarado Score")
     st.markdown("**Dự đoán nguy cơ viêm ruột thừa cấp (DÙNG HÀNG NGÀY)**")
     

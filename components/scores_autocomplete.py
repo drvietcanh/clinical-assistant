@@ -192,16 +192,22 @@ def render_search_with_autocomplete(
     Returns:
         Search query string
     """
+    # Inject CSS fix for text overlap
+    from components.scores_css_fix import inject_text_overlap_fix
+    inject_text_overlap_fix()
+    
     # Get initial value from session state if exists
     initial_value = st.session_state.get(key, "")
     
-    # Search input
-    query = st.text_input(
-        label,
-        value=initial_value,
-        placeholder=placeholder,
-        key=key
-    ).strip()
+    # Wrap in container for better control
+    with st.container():
+        # Search input
+        query = st.text_input(
+            label,
+            value=initial_value,
+            placeholder=placeholder,
+            key=key
+        ).strip()
     
     # Show suggestions below
     if query:

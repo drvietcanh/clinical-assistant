@@ -186,6 +186,10 @@ with st.sidebar:
     # Display scores for selected specialty
     scores_in_specialty = SCORES_BY_SPECIALTY[specialty]
 
+    # Inject CSS fix for text overlap
+    from components.scores_css_fix import inject_text_overlap_fix
+    inject_text_overlap_fix()
+    
     # Local search trong chuyên khoa hiện tại
     local_search_query = st.text_input(
         "Tìm trong chuyên khoa:",
