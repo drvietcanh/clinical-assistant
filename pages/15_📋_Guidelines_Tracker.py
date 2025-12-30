@@ -591,7 +591,9 @@ else:  # Tìm kiếm
     with col2:
         st.markdown("<br>", unsafe_allow_html=True)  # Spacing
         if st.button("🔄 Xóa", use_container_width=True, help="Xóa từ khóa tìm kiếm"):
-            st.session_state['guidelines_search_query'] = ""
+            # Delete the key to reset widget value (can't set directly when widget uses the key)
+            if 'guidelines_search_query' in st.session_state:
+                del st.session_state['guidelines_search_query']
             st.rerun()
     
     # Quick search suggestions

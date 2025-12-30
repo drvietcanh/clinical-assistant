@@ -59,8 +59,7 @@ with st.sidebar:
     # Khi user click "Mở Fluid Therapy" / "Mở Vasopressors"..., hàm render_clickable_dashboard_card
     # sẽ set st.session_state['critical_care_tool_selection'] và st.rerun().
     # Ở đây ta đảm bảo selectbox dùng cùng giá trị đó để hiển thị đúng và route tới công cụ tương ứng.
-    if "critical_care_tool_selection" in st.session_state:
-        st.session_state["critical_care_tool_selector"] = st.session_state["critical_care_tool_selection"]
+    # Note: Don't set widget key directly - use index parameter instead (see below)
     
     # Tool options with consistent naming
     tool_options = [
