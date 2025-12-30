@@ -138,3 +138,54 @@ def get_symptom_matches(user_symptoms, diagnosis_symptoms):
     
     return matches
 
+
+def suggest_scenarios_from_symptoms(user_symptoms: list) -> list:
+    """
+    Suggest most relevant scenarios based on user symptoms
+    Returns list of (scenario_name, match_score) tuples sorted by score
+    
+    Args:
+        user_symptoms: List of symptom strings (can be Vietnamese or English)
+    
+    Returns:
+        List of tuples (scenario_name, score) sorted by score descending
+    """
+    if not user_symptoms:
+        return []
+    
+    scenario_scores = {}
+    
+    for scenario_name, scenario_data in ALL_SCENARIOS.items():
+        total_matches = 0
+        total_required = 0
+        total_supporting = 0
+        
+        for diagnosis_name, diagnosis_data in scenario_data.items():
+            dx_symptoms = diagnosis_data.get("symptoms", {})
+            required_symptoms = dx_symptoms.get("required", [])
+            supporting_symptoms = dx_symptoms.get("supporting", [])
+            
+            total_required += len(required_symptoms)
+            total_supporting += len(supporting_symptoms)
+            
+            # Count matches
+            matches = get_symptom_matches(user_symptoms, dx_symptoms)
+            total_matches += matches["required"] * 3 + matches["supporting"]  # Weight required higher
+        
+        # Calculate score: ratio of matched symptoms to total symptoms
+        total_possible = total_required * 3 + total_supporting
+        if total_possible > 0:
+            score = (total_matches / total_possible) * 100
+            # Also consider number of diagnoses in scenario (more diagnoses = more relevant)
+            score *= (1 + len(scenario_data) * 0.1)  # Slight boost for scenarios with more diagnoses
+            scenario_scores[scenario_name] = score
+    
+    # Sort by score descending
+    sorted_scenarios = sorted(
+        scenario_scores.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )
+    
+    # Return top scenarios with score > 0
+    return [(name, score) for name, score in sorted_scenarios if score > 0]

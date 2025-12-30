@@ -228,15 +228,56 @@ st.markdown("### 📚 Thông tin về Database")
 st.markdown("""
 **Database hiện tại bao gồm:**
 
-- **Infectious Diseases:** Pneumonia, Sepsis
-- **Cardiology:** Heart Failure, Myocardial Infarction
-- **Respiratory:** COPD
-- **Endocrinology:** Type 2 Diabetes
-- **Nephrology:** AKI
-- **Neurology:** Stroke
+- **Infectious Diseases (Nhiễm khuẩn):** 
+  - Pneumonia (Viêm phổi)
+  - Sepsis (Nhiễm khuẩn huyết)
+  - Tuberculosis (Lao phổi)
+  - Dengue Fever (Sốt xuất huyết Dengue)
+- **Cardiology (Tim mạch):** 
+  - Heart Failure (Suy tim)
+  - Myocardial Infarction (Nhồi máu cơ tim)
+  - Hypertension (Tăng huyết áp)
+  - Atrial Fibrillation (Rung nhĩ)
+  - Coronary Artery Disease (Bệnh mạch vành)
+  - Valvular Heart Disease (Bệnh van tim)
+  - Myocarditis (Viêm cơ tim)
+  - Pericarditis (Viêm màng ngoài tim)
+  - Dilated Cardiomyopathy (Bệnh cơ tim giãn)
+- **Respiratory (Hô hấp):** 
+  - COPD (Bệnh phổi tắc nghẽn mạn tính)
+  - Asthma (Hen phế quản)
+- **Gastroenterology (Tiêu hóa):**
+  - Peptic Ulcer Disease (Loét dạ dày tá tràng)
+  - GERD (Trào ngược dạ dày thực quản)
+  - Hepatitis B (Viêm gan B)
+  - Cirrhosis (Xơ gan)
+- **Endocrinology (Nội tiết):** 
+  - Type 2 Diabetes (Đái tháo đường type 2)
+  - Hyperthyroidism (Cường giáp)
+  - Hypothyroidism (Suy giáp)
+- **Nephrology (Thận):** 
+  - AKI (Tổn thương thận cấp)
+  - Chronic Kidney Disease (Suy thận mạn)
+- **Neurology (Thần kinh):** 
+  - Stroke (Đột quỵ)
+  - Epilepsy (Động kinh)
+- **Rheumatology (Khớp):**
+  - Gout (Bệnh gút)
+- **Hematology (Huyết học):**
+  - Iron Deficiency Anemia (Thiếu máu thiếu sắt)
+  - Thrombocytopenia (Giảm tiểu cầu)
+- **Dermatology (Da liễu):**
+  - Atopic Dermatitis (Viêm da cơ địa)
+  - Psoriasis (Vẩy nến)
+- **Psychiatry (Tâm thần):**
+  - Major Depression (Trầm cảm)
+  - Anxiety Disorder (Rối loạn lo âu)
+- **Emergency (Cấp cứu):**
+  - Anaphylaxis (Phản vệ)
+  - Acute Poisoning (Ngộ độc cấp)
 
 **Tính năng:**
-- Tìm kiếm theo tên bệnh
+- Tìm kiếm theo tên bệnh (tiếng Việt hoặc tiếng Anh)
 - Lọc theo chuyên khoa
 - Tìm kiếm theo triệu chứng
 - Thông tin chi tiết: định nghĩa, nguyên nhân, triệu chứng, chẩn đoán, điều trị

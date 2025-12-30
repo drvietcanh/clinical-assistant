@@ -7,7 +7,8 @@ from .ddx_generator import generate_ddx, render_ddx_interface
 from .ddx_data import (
     get_scenario_data,
     get_all_scenarios,
-    get_symptom_matches
+    get_symptom_matches,
+    suggest_scenarios_from_symptoms
 )
 
 __all__ = [
@@ -16,5 +17,6 @@ __all__ = [
     'get_scenario_data',
     'get_all_scenarios',
     'get_symptom_matches',
+    'suggest_scenarios_from_symptoms',
 ]
 

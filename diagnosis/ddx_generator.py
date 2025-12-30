@@ -162,11 +162,11 @@ def generate_ddx(
 
 
 def render_ddx_interface():
-    """Render the DDx generator interface"""
+    """Render the DDx generator interface with Standard and Quick modes"""
     
     st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🩺 Differential Diagnosis Generator</h2>
-    <p style='text-align: center;'><em>Clinical Decision Support Tool</em></p>
+    <h2 style='text-align: center; color: #0EA5E9;'>🩺 Chẩn đoán phân biệt</h2>
+    <p style='text-align: center;'><em>Công cụ hỗ trợ quyết định lâm sàng</em></p>
     """, unsafe_allow_html=True)
     
     st.warning("""
@@ -179,15 +179,101 @@ def render_ddx_interface():
     
     st.markdown("---")
     
-    # Scenario selection
-    from .ddx_data import get_all_scenarios
+    # Mode selection
+    mode = st.radio(
+        "**Chọn chế độ:**",
+        ["📋 Chế độ tiêu chuẩn (Chọn scenario trước)", "⚡ Chế độ nhanh (Nhập triệu chứng trước)"],
+        key="ddx_mode",
+        horizontal=True
+    )
+    # Store mode in session state
+    st.session_state['ddx_mode'] = mode
+    
+    st.markdown("---")
+    
+    from .ddx_data import get_all_scenarios, suggest_scenarios_from_symptoms
     scenarios = get_all_scenarios()
     
-    scenario = st.selectbox(
-        "**Chọn clinical scenario:**",
-        scenarios,
-        key="ddx_scenario"
-    )
+    # Quick Mode: Symptom-first approach
+    if "nhanh" in mode.lower() or "quick" in mode.lower():
+        st.markdown("### ⚡ Chế độ nhanh: Nhập triệu chứng")
+        st.info("💡 Nhập các triệu chứng chính, hệ thống sẽ gợi ý scenario phù hợp nhất")
+        
+        # Symptom input (quick mode)
+        quick_symptoms_text = st.text_input(
+            "Nhập các triệu chứng (phân cách bằng dấu phẩy):",
+            placeholder="Ví dụ: Đau ngực, Khó thở, Vã mồ hôi...",
+            key="ddx_quick_symptoms",
+            help="Nhập triệu chứng bằng tiếng Việt hoặc tiếng Anh"
+        )
+        
+        if quick_symptoms_text:
+            quick_symptoms_list = [s.strip() for s in quick_symptoms_text.split(',') if s.strip()]
+            
+            if st.button("🔍 Tìm scenario phù hợp", type="primary", use_container_width=True):
+                suggested_scenarios = suggest_scenarios_from_symptoms(quick_symptoms_list)
+                
+                if suggested_scenarios:
+                    st.success(f"✅ Tìm thấy {len(suggested_scenarios)} scenario phù hợp:")
+                    
+                    # Show top suggestions
+                    top_3 = suggested_scenarios[:3]
+                    cols = st.columns(min(len(top_3), 3))
+                    for idx, (scenario_name, score) in enumerate(top_3):
+                        with cols[idx]:
+                            st.metric(
+                                scenario_name,
+                                f"{score:.1f}%",
+                                help=f"Độ phù hợp: {score:.1f}%"
+                            )
+                    
+                    # Let user select from suggestions or all scenarios
+                    scenario_options = [f"{name} (Phù hợp: {score:.1f}%)" for name, score in suggested_scenarios[:5]]
+                    scenario_options.extend([name for name in scenarios if name not in [s[0] for s in suggested_scenarios[:5]]])
+                    
+                    selected_idx = st.selectbox(
+                        "Chọn scenario để tiếp tục:",
+                        range(len(scenario_options)),
+                        format_func=lambda x: scenario_options[x],
+                        key="ddx_quick_scenario_select"
+                    )
+                    
+                    # Extract scenario name (remove score suffix if present)
+                    selected_option = scenario_options[selected_idx]
+                    scenario = selected_option.split(" (")[0]
+                    
+                    # Store for later use
+                    st.session_state['ddx_selected_scenario'] = scenario
+                    st.session_state['ddx_quick_symptoms'] = quick_symptoms_list
+                else:
+                    st.warning("Không tìm thấy scenario phù hợp. Vui lòng chọn scenario thủ công:")
+                    scenario = st.selectbox(
+                        "Chọn clinical scenario:",
+                        scenarios,
+                        key="ddx_scenario_manual"
+                    )
+                    st.session_state['ddx_selected_scenario'] = scenario
+            else:
+                scenario = None
+        else:
+            scenario = None
+            
+        # Use selected scenario from session state if available
+        if 'ddx_selected_scenario' in st.session_state:
+            scenario = st.session_state['ddx_selected_scenario']
+    
+    # Standard Mode: Scenario-first approach
+    else:
+        scenario = st.selectbox(
+            "**Chọn clinical scenario:**",
+            scenarios,
+            key="ddx_scenario"
+        )
+        st.session_state['ddx_selected_scenario'] = scenario
+    
+    if not scenario:
+        st.info("👆 Vui lòng chọn scenario hoặc nhập triệu chứng để bắt đầu")
+        return
     
     st.markdown("---")
     
@@ -232,6 +318,19 @@ def render_ddx_interface():
     # Group symptoms by category
     symptom_list = sorted(list(all_symptoms))
     
+    # Pre-populate from quick mode if available
+    pre_selected_symptoms = []
+    if 'ddx_quick_symptoms' in st.session_state and st.session_state.get('ddx_mode', '').lower().find('nhanh') >= 0:
+        quick_symptoms = st.session_state['ddx_quick_symptoms']
+        # Try to match quick symptoms with scenario symptoms
+        from .ddx_data import symptoms_match
+        for quick_sym in quick_symptoms:
+            for scenario_sym in symptom_list:
+                if symptoms_match(quick_sym, scenario_sym):
+                    if scenario_sym not in pre_selected_symptoms:
+                        pre_selected_symptoms.append(scenario_sym)
+                    break
+    
     selected_symptoms = []
     
     # Display as checkboxes in columns
@@ -243,9 +342,12 @@ def render_ddx_interface():
         with cols[col_idx]:
             # Translate symptom to Vietnamese
             symptom_display = translate_symptom(symptom)
+            # Pre-check if in quick mode and matched
+            default_value = symptom in pre_selected_symptoms
             if st.checkbox(
                 symptom_display,
-                key=f"ddx_symptom_{i}",
+                value=default_value,
+                key=f"ddx_symptom_{i}_{scenario}",  # Include scenario in key to avoid conflicts
                 help=f"Triệu chứng: {symptom_display}"
             ):
                 selected_symptoms.append(symptom)
