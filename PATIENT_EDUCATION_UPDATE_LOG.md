@@ -575,7 +575,7 @@ patient_education/
     - Tập thể dục: Nhẹ khi chưa ổn, bình thường khi đã ổn
     - Cơn cường giáp cấp: Sốt cao, nhịp tim > 140, rối loạn ý thức
 
-**Tổng số bệnh:** 31 bệnh (tăng từ 28)
+**Tổng số bệnh:** 36 bệnh (tăng từ 28)
 
 31. **Suy giáp (Hypothyroidism)**
     - Phổ biến ở phụ nữ sau 50 tuổi
@@ -586,6 +586,50 @@ patient_education/
     - Tập thể dục: Nhẹ khi chưa ổn, bình thường khi đã ổn
     - Uống thuốc: Buổi sáng, trước ăn 30-60 phút, không với sữa/canxi/sắt
     - Hôn mê phù niêm: Hạ thân nhiệt, hôn mê (cấp cứu ngay!)
+
+32. **Động kinh (Epilepsy)**
+    - Rối loạn thần kinh với cơn co giật tái phát
+    - Triệu chứng: Co giật toàn thể/cục bộ, mất ý thức
+    - Điều trị: AED (Carbamazepine, Valproate, Lamotrigine, Levetiracetam)
+    - Chế độ ăn: Bình thường, tránh rượu bia, không bỏ bữa
+    - Tập thể dục: Bình thường nếu cơn đã kiểm soát, tránh bơi một mình
+    - Quản lý thuốc: Uống đều đặn, đúng giờ (quan trọng nhất!)
+    - Status epilepticus: Cơn > 5 phút (cấp cứu ngay!)
+    - Phòng ngừa: Ngủ đủ giấc, tránh rượu bia, stress
+
+33. **Đau nửa đầu (Migraine)**
+    - Bệnh đau đầu nguyên phát, rất phổ biến
+    - Triệu chứng: Đau một bên, nhói, kèm buồn nôn, nhạy cảm ánh sáng/tiếng động
+    - Điều trị: Triptan (cắt cơn), Propranolol/Topiramate (phòng ngừa)
+    - Chế độ ăn: Tránh rượu, phô mai, chocolate, thực phẩm chế biến
+    - Tập thể dục: Đều đặn (giảm tần suất cơn)
+    - Yếu tố kích thích: Stress, thiếu ngủ, hormone, thức ăn
+    - Ghi nhật ký đau đầu để tìm yếu tố kích thích
+
+34. **Thiếu máu thiếu sắt (Iron Deficiency Anemia)**
+    - Nguyên nhân thiếu máu #1 tại Việt Nam
+    - Triệu chứng: Mệt mỏi, da xanh, khó thở khi gắng sức, đánh trống ngực
+    - Nguyên nhân: Mất máu mạn (xuất huyết tiêu hóa, kinh nguyệt nhiều, giun móc)
+    - Điều trị: Sắt uống (Ferrous sulfate), điều trị nguyên nhân
+    - Chế độ ăn: Thịt đỏ, gan, rau xanh, với vitamin C (tăng hấp thu)
+    - Tránh: Trà, cà phê trong bữa ăn (giảm hấp thu)
+    - Tập thể dục: Nhẹ khi thiếu máu nặng, bình thường khi đã cải thiện
+
+35. **Viêm da cơ địa (Atopic Dermatitis)**
+    - Bệnh viêm da mạn tính, phổ biến ở trẻ em
+    - Triệu chứng: Ngứa dữ dội, da đỏ, khô, bong vảy
+    - Điều trị: Dưỡng ẩm (quan trọng nhất!), Corticosteroid tại chỗ, Tacrolimus
+    - Chế độ ăn: Bình thường, tránh thức ăn dị ứng (nếu biết)
+    - Chăm sóc da: Dưỡng ẩm 2-3 lần/ngày, sau tắm, mặc quần áo cotton
+    - Phòng ngừa: Dưỡng ẩm thường xuyên, tránh yếu tố kích thích
+
+36. **Viêm họng cấp (Acute Pharyngitis)**
+    - Rất phổ biến, đặc biệt khi thay đổi thời tiết
+    - 80-90% do virus (tự khỏi), 10-20% do vi khuẩn (cần kháng sinh)
+    - Triệu chứng: Đau họng, khó nuốt, sốt
+    - Điều trị: Triệu chứng (virus), Amoxicillin 10 ngày (vi khuẩn)
+    - Chế độ ăn: Mềm, lỏng khi đau họng (cháo, súp)
+    - Phòng ngừa: Rửa tay, tránh tiếp xúc người bệnh, tiêm vắc xin cúm
 
 ---
 

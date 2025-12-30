@@ -7944,4 +7944,1344 @@ Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng th
         related_drugs=["Sumatriptan", "Rizatriptan", "Ibuprofen", "Naproxen", "Propranolol", "Topiramate"],
         printable=True
     ),
+    
+    # === IRON DEFICIENCY ANEMIA (THIẾU MÁU THIẾU SẮT) ===
+    PatientEducationTopic(
+        id="iron_deficiency_anemia_basics",
+        title="Understanding Iron Deficiency Anemia",
+        title_vn="Hiểu về Thiếu máu thiếu sắt",
+        category="Disease",
+        content="""
+        # Hiểu về Thiếu máu thiếu sắt
+
+        ## Thiếu máu thiếu sắt là gì?
+
+        Thiếu máu thiếu sắt là tình trạng giảm hemoglobin do thiếu sắt, nguyên nhân phổ biến nhất của thiếu máu tại Việt Nam. Bệnh ảnh hưởng đến mọi lứa tuổi, đặc biệt phụ nữ và trẻ em.
+
+        **⚠️ Đặc điểm:**
+        - Giảm hemoglobin do thiếu sắt
+        - Nguyên nhân thiếu máu #1 tại Việt Nam
+        - Có thể điều trị khỏi
+        - Cần tìm và điều trị nguyên nhân
+
+        **Phân loại:**
+        - **Thiếu sắt không thiếu máu:** Ferritin giảm, Hb bình thường
+        - **Thiếu máu thiếu sắt:** Ferritin giảm, Hb giảm
+
+        ## Triệu chứng:
+
+        **Triệu chứng thiếu máu:**
+        - **Mệt mỏi, suy nhược:** Uể oải, không có sức
+        - **Da xanh, niêm mạc nhợt:** Môi, lưỡi, kết mạc nhợt
+        - **Khó thở khi gắng sức:** Leo cầu thang, đi bộ
+        - **Đánh trống ngực:** Tim đập nhanh
+        - **Đau đầu, chóng mặt:** Đặc biệt khi đứng dậy
+        - **Tóc rụng, móng tay dễ gãy:** Móng tay lõm (koilonychia)
+
+        **Triệu chứng thiếu sắt:**
+        - **Viêm lưỡi:** Lưỡi đỏ, đau
+        - **Khó nuốt:** Plummer-Vinson syndrome (hiếm)
+        - **Thèm ăn lạ:** Pica (thèm đất, đá, đá lạnh)
+
+        **⚠️ Thiếu máu nặng:**
+        - Khó thở ngay cả khi nghỉ
+        - Đau ngực
+        - Suy tim (nếu kéo dài)
+
+        ## Nguyên nhân:
+
+        **1. Mất máu mạn tính (nguyên nhân chính):**
+        - **Xuất huyết tiêu hóa:** Loét dạ dày, ung thư đại tràng, trĩ
+        - **Kinh nguyệt nhiều:** Phụ nữ
+        - **Giun móc:** Vùng nông thôn
+        - **Xuất huyết tiết niệu:** Ung thư bàng quang, thận
+
+        **2. Thiếu cung cấp:**
+        - Chế độ ăn thiếu sắt
+        - Ăn chay
+        - Kém hấp thu
+
+        **3. Tăng nhu cầu:**
+        - Mang thai
+        - Trẻ em đang lớn
+        - Cho con bú
+
+        **4. Rối loạn hấp thu:**
+        - Bệnh celiac
+        - Cắt dạ dày
+        - Viêm ruột
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Hemoglobin giảm:** Nam < 13 g/dL, nữ < 12 g/dL
+        - **MCV giảm:** < 80 fL (microcytic anemia)
+        - **Ferritin giảm:** < 15 ng/mL (tiêu chuẩn vàng)
+        - **Sắt huyết thanh giảm**
+        - **TIBC tăng**
+        - **Transferrin saturation < 15%**
+
+        **Tìm nguyên nhân:**
+        - Nội soi dạ dày tá tràng (nếu nghi ngờ xuất huyết tiêu hóa)
+        - Xét nghiệm phân (tìm máu ẩn, giun móc)
+        - Nội soi đại tràng (nếu cần)
+
+        ## Điều trị:
+
+        **1. Điều trị nguyên nhân:**
+        - Cầm máu (nếu xuất huyết)
+        - Tẩy giun (nếu giun móc)
+        - Điều trị bệnh tiêu hóa
+
+        **2. Bổ sung sắt:**
+        - **Sắt uống:** Ferrous sulfate 325mg x 1-2 lần/ngày
+        - **Uống sau ăn:** Giảm tác dụng phụ
+        - **Với vitamin C:** Tăng hấp thu (nước cam, viên C)
+        - **Thời gian:** 3-6 tháng (đến khi ferritin bình thường)
+
+        **3. Sắt tiêm tĩnh mạch:**
+        - Nếu không dung nạp sắt uống
+        - Nếu cần tăng nhanh
+        - Nếu kém hấp thu
+
+        **4. Truyền máu:**
+        - Nếu thiếu máu nặng, có triệu chứng
+        - Hb < 7 g/dL hoặc có triệu chứng nặng
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Thực phẩm giàu sắt:**
+        - **Sắt heme (hấp thu tốt):** Thịt đỏ, gan, thịt gà, cá, hải sản
+        - **Sắt non-heme:** Rau xanh (rau muống, cải xoong), đậu, hạt, ngũ cốc
+
+        **2. Tăng hấp thu sắt:**
+        - **Vitamin C:** Nước cam, ớt chuông, cà chua, bông cải xanh
+        - **Thịt, cá:** Ăn cùng rau xanh (tăng hấp thu sắt non-heme)
+
+        **3. Giảm hấp thu sắt (tránh):**
+        - **Trà, cà phê:** Uống cách xa bữa ăn 1-2 giờ
+        - **Canxi:** Uống cách xa bữa ăn
+        - **Phytate:** Ngũ cốc nguyên hạt (ngâm, nấu chín giảm tác dụng)
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo thịt bằm, trứng, nước cam
+        - **Trưa:** Cơm, thịt bò/cá, rau muống xào, canh chua, trái cây
+        - **Chiều:** Cơm, gan xào, rau xanh, canh, trái cây
+        - **Bữa phụ:** Hạt, sữa
+
+        **5. Lưu ý:**
+        - Ăn đủ protein (tạo hemoglobin)
+        - Bổ sung acid folic, B12 (nếu thiếu)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi thiếu máu nặng:**
+        - Nghỉ ngơi, tránh gắng sức
+        - Tập nhẹ: Đi bộ 10-15 phút/ngày
+
+        **2. Khi đã cải thiện:**
+        - Tập bình thường
+        - Đi bộ, chạy bộ, bơi lội
+        - 30 phút/ngày, 5 ngày/tuần
+        - **Lợi ích:** Tăng sức khỏe, cải thiện tuần hoàn
+
+        **3. Lưu ý:**
+        - Nghỉ ngơi nếu mệt
+        - Uống đủ nước
+        - Tăng dần cường độ
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Sắt uống:**
+        - **Ferrous sulfate:** 325mg x 1-2 lần/ngày
+        - **Uống sau ăn:** Giảm tác dụng phụ
+        - **Với vitamin C:** Tăng hấp thu
+        - **Không uống với:** Trà, cà phê, canxi, sữa
+
+        **2. Tác dụng phụ:**
+        - **Táo bón:** Uống nhiều nước, ăn nhiều chất xơ
+        - **Buồn nôn:** Uống sau ăn, giảm liều
+        - **Phân đen:** Bình thường (không phải xuất huyết)
+        - **Đau bụng:** Uống sau ăn, giảm liều
+
+        **3. Theo dõi:**
+        - Hb, ferritin sau 4-6 tuần
+        - Tiếp tục đến khi ferritin bình thường (3-6 tháng)
+
+        **4. Lưu ý:**
+        - Không tự ý ngừng (thiếu máu tái phát)
+        - Uống đều đặn
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Thiếu máu nặng:**
+        - Khó thở ngay cả khi nghỉ
+        - Đau ngực
+        - Ngất xỉu
+        - **Cần truyền máu**
+
+        **2. Xuất huyết:**
+        - Nôn ra máu
+        - Đi ngoài phân đen
+        - Chảy máu nhiều
+
+        **3. Không cải thiện:**
+        - Sau 4-6 tuần điều trị
+        - Cần tìm nguyên nhân khác
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Chế độ ăn:**
+        - Ăn đủ thực phẩm giàu sắt
+        - Bổ sung vitamin C
+        - Tránh trà, cà phê trong bữa ăn
+
+        **2. Phụ nữ:**
+        - Bổ sung sắt khi mang thai
+        - Điều trị kinh nguyệt nhiều
+
+        **3. Trẻ em:**
+        - Ăn đủ thực phẩm giàu sắt
+        - Tẩy giun định kỳ
+
+        **4. Tìm nguyên nhân:**
+        - Khám định kỳ
+        - Xét nghiệm phân (tìm giun móc)
+        - Nội soi (nếu nghi ngờ xuất huyết tiêu hóa)
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị thiếu máu:**
+        - Uống sắt đều đặn
+        - Ăn đủ thực phẩm giàu sắt
+        - Tìm và điều trị nguyên nhân
+
+        **2. Uống sắt đúng cách:**
+        - Sau ăn, với vitamin C
+        - Không với trà, cà phê, canxi
+        - Uống đều đặn, đủ thời gian
+
+        **3. Sống tích cực:**
+        - Thiếu máu thiếu sắt có thể chữa khỏi
+        - Điều trị đúng → Hb, ferritin bình thường
+        - Có thể sống bình thường
+
+        **4. Mang thai:**
+        - Bổ sung sắt (30-60mg/ngày)
+        - Bổ sung acid folic
+        - Theo dõi Hb định kỳ
+        """,
+        related_disease="iron_deficiency_anemia",
+        related_drugs=["Ferrous Sulfate", "Iron IV"],
+        printable=True
+    ),
+    
+    # === ATOPIC DERMATITIS (VIÊM DA CƠ ĐỊA) ===
+    PatientEducationTopic(
+        id="atopic_dermatitis_basics",
+        title="Understanding Atopic Dermatitis",
+        title_vn="Hiểu về Viêm da cơ địa",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm da cơ địa
+
+        ## Viêm da cơ địa là gì?
+
+        Viêm da cơ địa là bệnh viêm da mạn tính, tái phát, thường gặp ở trẻ em, đặc trưng bởi ngứa và tổn thương da. Bệnh có thể kéo dài đến tuổi trưởng thành.
+
+        **⚠️ Đặc điểm:**
+        - Viêm da mạn tính, tái phát
+        - Ngứa dữ dội
+        - Thường gặp ở trẻ em (20% trẻ em)
+        - Có thể kéo dài đến tuổi trưởng thành
+        - Liên quan đến hen, viêm mũi dị ứng
+
+        **Phân loại:**
+        - **Trẻ em:** Mặt, tay chân
+        - **Người lớn:** Nếp gấp (khuỷu tay, đầu gối)
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Ngứa dữ dội:** Đặc biệt ban đêm
+        - **Tổn thương da:**
+          - Đỏ, khô, bong vảy
+          - Mụn nước (có thể vỡ, chảy dịch)
+          - Da dày lên, nứt nẻ (lichenification)
+        - **Vị trí:**
+          - Trẻ em: Mặt, tay chân, thân mình
+          - Người lớn: Nếp gấp (khuỷu tay, đầu gối, cổ)
+
+        **Triệu chứng khác:**
+        - Da khô toàn thân
+        - Nhiễm trùng da thứ phát (gãi → nhiễm khuẩn)
+        - Rối loạn giấc ngủ (do ngứa)
+
+        **⚠️ Bội nhiễm:**
+        - Da đỏ, sưng, đau
+        - Mủ, vảy vàng
+        - Sốt (nếu nặng)
+
+        ## Nguyên nhân:
+
+        **1. Yếu tố di truyền:**
+        - Tiền sử gia đình (hen, viêm mũi dị ứng, viêm da cơ địa)
+        - Rối loạn hàng rào da
+
+        **2. Dị ứng:**
+        - Bụi, phấn hoa
+        - Thức ăn (trẻ em: trứng, sữa, đậu phộng)
+        - Lông động vật
+
+        **3. Yếu tố môi trường:**
+        - Khô, lạnh
+        - Hóa chất (xà phòng, chất tẩy rửa)
+        - Mồ hôi
+        - Stress
+
+        ## Chẩn đoán:
+
+        **Tiêu chuẩn:**
+        - Triệu chứng lâm sàng điển hình
+        - Tiền sử dị ứng (hen, viêm mũi dị ứng)
+        - Test dị ứng (nếu cần)
+
+        ## Điều trị:
+
+        **1. Dưỡng ẩm:**
+        - **Quan trọng nhất!**
+        - Dưỡng ẩm 2-3 lần/ngày
+        - Sau tắm (trong vòng 3 phút)
+        - Dùng kem dưỡng ẩm không mùi, không màu
+
+        **2. Corticosteroid tại chỗ:**
+        - Mức độ nhẹ-trung bình
+        - Hydrocortisone (nhẹ), Betamethasone (trung bình)
+        - Bôi 1-2 lần/ngày, 7-14 ngày
+        - **Không dùng lâu dài** (teo da)
+
+        **3. Calcineurin inhibitor:**
+        - Tacrolimus, Pimecrolimus
+        - Nếu kháng corticosteroid
+        - Dùng lâu dài được
+
+        **4. Kháng histamine:**
+        - Nếu ngứa nhiều
+        - Cetirizine, Loratadine
+
+        **5. Kháng sinh:**
+        - Nếu nhiễm trùng
+        - Mupirocin tại chỗ, kháng sinh uống
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Trẻ em (nếu dị ứng thức ăn):**
+        - Tránh: Trứng, sữa, đậu phộng, cá, tôm (nếu dị ứng)
+        - Test dị ứng trước khi loại bỏ
+
+        **2. Người lớn:**
+        - Chế độ ăn bình thường
+        - Tránh thức ăn gây dị ứng (nếu biết)
+
+        **3. Thực phẩm chống viêm:**
+        - Cá béo (omega-3)
+        - Rau xanh, trái cây
+        - Tránh thực phẩm chế biến
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo/cơm, thịt/cá, rau
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa (nếu không dị ứng)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Nên tập:**
+        - Tập thể dục bình thường
+        - Đi bộ, chạy bộ, bơi lội
+        - 30 phút/ngày, 5 ngày/tuần
+
+        **2. Lưu ý:**
+        - Tắm ngay sau tập (tránh mồ hôi kích thích)
+        - Dưỡng ẩm sau tắm
+        - Mặc quần áo cotton, thoáng mát
+
+        **3. Tránh:**
+        - Tập quá mệt (mồ hôi nhiều)
+        - Quần áo bó sát, không thấm mồ hôi
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Dưỡng ẩm:**
+        - Dùng 2-3 lần/ngày
+        - Sau tắm (trong vòng 3 phút)
+        - Dùng đều đặn, kể cả khi da tốt
+
+        **2. Corticosteroid tại chỗ:**
+        - Bôi mỏng, 1-2 lần/ngày
+        - Chỉ bôi vùng tổn thương
+        - Không dùng > 2 tuần liên tiếp
+        - Giảm dần liều
+
+        **3. Tác dụng phụ:**
+        - **Corticosteroid:** Teo da, giãn mạch (nếu dùng lâu)
+        - **Tacrolimus:** Nóng rát, ngứa (tạm thời)
+
+        **4. Lưu ý:**
+        - Không tự ý tăng liều
+        - Báo bác sĩ nếu có tác dụng phụ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Bội nhiễm:**
+        - Da đỏ, sưng, đau
+        - Mủ, vảy vàng
+        - Sốt
+
+        **2. Tổn thương lan rộng:**
+        - > 30% diện tích da
+        - Không đáp ứng điều trị
+
+        **3. Tác dụng phụ thuốc:**
+        - Teo da nặng
+        - Nhiễm trùng nặng
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Dưỡng ẩm:**
+        - Dưỡng ẩm thường xuyên (quan trọng nhất!)
+        - Sau tắm, trước khi ngủ
+
+        **2. Tránh yếu tố kích thích:**
+        - Tránh dị nguyên (nếu biết)
+        - Tránh hóa chất mạnh
+        - Mặc quần áo cotton, tránh len
+
+        **3. Chăm sóc da:**
+        - Tắm nước ấm, không quá nóng
+        - Dùng xà phòng nhẹ, không mùi
+        - Không chà xát mạnh
+        - Cắt móng tay (tránh gãi)
+
+        **4. Môi trường:**
+        - Giữ ẩm không khí (nếu khô)
+        - Tránh thay đổi nhiệt độ đột ngột
+        - Vệ sinh nhà cửa (giảm bụi)
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị viêm da cơ địa:**
+        - Dưỡng ẩm thường xuyên (quan trọng!)
+        - Tránh gãi (cắt móng, đeo găng tay khi ngủ)
+        - Dùng thuốc đúng cách
+        - Tránh yếu tố kích thích
+
+        **2. Chăm sóc da:**
+        - Tắm nước ấm, ngắn (10-15 phút)
+        - Dưỡng ẩm ngay sau tắm
+        - Mặc quần áo cotton, thoáng mát
+
+        **3. Sống tích cực:**
+        - Viêm da cơ địa có thể kiểm soát
+        - Điều trị đúng → Giảm triệu chứng
+        - Nhiều trẻ em tự khỏi khi lớn
+
+        **4. Hỗ trợ:**
+        - Giáo dục gia đình
+        - Tư vấn tâm lý (nếu cần)
+        - Tham gia nhóm hỗ trợ
+        """,
+        related_disease="atopic_dermatitis",
+        related_drugs=["Hydrocortisone", "Betamethasone", "Tacrolimus", "Pimecrolimus", "Cetirizine"],
+        printable=True
+    ),
+    
+    # === ACUTE PHARYNGITIS (VIÊM HỌNG CẤP) ===
+    PatientEducationTopic(
+        id="acute_pharyngitis_basics",
+        title="Understanding Acute Pharyngitis",
+        title_vn="Hiểu về Viêm họng cấp",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm họng cấp
+
+        ## Viêm họng cấp là gì?
+
+        Viêm họng cấp là tình trạng viêm nhiễm cấp tính vùng họng, rất phổ biến tại Việt Nam, đặc biệt khi thay đổi thời tiết. Hầu hết do virus, tự khỏi.
+
+        **⚠️ Đặc điểm:**
+        - Viêm nhiễm cấp tính vùng họng
+        - Rất phổ biến (đặc biệt trẻ em)
+        - 80-90% do virus (tự khỏi)
+        - 10-20% do vi khuẩn (cần kháng sinh)
+
+        ## Triệu chứng:
+
+        **Triệu chứng chung:**
+        - Đau họng, rát họng (đặc biệt khi nuốt)
+        - Khó nuốt
+        - Sốt (nhẹ nếu virus, cao nếu vi khuẩn)
+        - Ho, sổ mũi (nếu virus)
+        - Sưng hạch cổ
+
+        **Triệu chứng vi khuẩn (Strep):**
+        - Sốt cao (> 38.5°C)
+        - Họng đỏ, có mủ
+        - Không ho, không sổ mũi
+
+        ## Điều trị:
+
+        **1. Virus (hầu hết):**
+        - Điều trị triệu chứng: Paracetamol, Ibuprofen
+        - Súc họng nước muối
+        - Tự khỏi 3-7 ngày
+
+        **2. Vi khuẩn (Strep):**
+        - Kháng sinh: Amoxicillin 10 ngày
+        - Uống đủ 10 ngày (quan trọng!)
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **Khi đau họng:**
+        - Ăn mềm, lỏng: Cháo, súp, sữa
+        - Uống nhiều nước ấm
+        - Tránh đồ cay, nóng, cứng
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        - Paracetamol: Hạ sốt, giảm đau
+        - Amoxicillin: Nếu vi khuẩn, uống đủ 10 ngày
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        - Khó thở, khó nuốt
+        - Sốt cao > 39°C
+        - Đau họng > 7 ngày
+        - Áp xe quanh amidan
+
+        ## 💡 PHÒNG NGỪA:
+
+        - Rửa tay thường xuyên
+        - Tránh tiếp xúc người bệnh
+        - Tiêm vắc xin cúm
+        """,
+        related_disease="acute_pharyngitis",
+        related_drugs=["Amoxicillin", "Penicillin V", "Azithromycin", "Paracetamol", "Ibuprofen"],
+        printable=True
+    ),
+    
+    # === OTITIS MEDIA (VIÊM TAI GIỮA) ===
+    PatientEducationTopic(
+        id="otitis_media_basics",
+        title="Understanding Otitis Media",
+        title_vn="Hiểu về Viêm tai giữa",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm tai giữa
+
+        ## Viêm tai giữa là gì?
+
+        Viêm tai giữa là tình trạng viêm nhiễm tai giữa, rất phổ biến ở trẻ em tại Việt Nam. Bệnh có thể cấp tính hoặc mạn tính, ảnh hưởng đến thính lực nếu không điều trị đúng.
+
+        **⚠️ Đặc điểm:**
+        - Viêm nhiễm tai giữa
+        - Rất phổ biến ở trẻ em (80% trẻ < 3 tuổi)
+        - Có thể ảnh hưởng thính lực
+        - Cần điều trị đúng để tránh biến chứng
+
+        **Phân loại:**
+        - **Viêm tai giữa cấp (AOM):** Nhiễm trùng cấp tính
+        - **Viêm tai giữa có tràn dịch (OME):** Dịch trong tai giữa, không nhiễm trùng
+
+        ## Triệu chứng:
+
+        **Trẻ em:**
+        - **Quấy khóc:** Đặc biệt ban đêm
+        - **Kéo tai:** Dấu hiệu điển hình
+        - **Sốt:** Có thể cao
+        - **Chảy dịch tai:** Nếu thủng màng nhĩ
+        - **Giảm thính lực:** Có thể có
+        - **Mệt mỏi, chán ăn**
+
+        **Người lớn:**
+        - **Đau tai:** Đau nhói, đau vừa đến nặng
+        - **Sốt**
+        - **Chảy dịch tai:** Nếu thủng màng nhĩ
+        - **Giảm thính lực**
+        - **Ù tai**
+
+        **⚠️ Biến chứng:**
+        - Thủng màng nhĩ
+        - Viêm xương chũm
+        - Giảm thính lực vĩnh viễn
+        - Viêm màng não (hiếm)
+
+        ## Nguyên nhân:
+
+        **1. Vi khuẩn:**
+        - Streptococcus pneumoniae
+        - Haemophilus influenzae
+        - Moraxella catarrhalis
+
+        **2. Virus:**
+        - RSV, Rhinovirus
+
+        **3. Yếu tố nguy cơ:**
+        - Trẻ em (vòi nhĩ ngắn, nằm ngang)
+        - Viêm đường hô hấp trên
+        - Hút thuốc thụ động
+        - Bú bình nằm
+        - Đi nhà trẻ
+
+        ## Chẩn đoán:
+
+        **Khám:**
+        - Soi tai: Màng nhĩ đỏ, phồng, có dịch
+        - Đo nhĩ lượng (nếu có)
+
+        ## Điều trị:
+
+        **1. Trẻ > 2 tuổi, nhẹ:**
+        - Có thể theo dõi 48-72 giờ
+        - Điều trị triệu chứng: Paracetamol, Ibuprofen
+
+        **2. Trẻ < 2 tuổi hoặc nặng:**
+        - **Kháng sinh:** Amoxicillin (80-90 mg/kg/ngày)
+        - **Nếu dị ứng Penicillin:** Azithromycin, Cefdinir
+        - **Nếu kháng Amoxicillin:** Amoxicillin-clavulanate
+        - **Thời gian:** 7-10 ngày
+
+        **3. Điều trị triệu chứng:**
+        - Paracetamol, Ibuprofen (giảm đau, hạ sốt)
+        - Nhỏ tai (nếu thủng màng nhĩ, có chỉ định)
+
+        **4. Phẫu thuật:**
+        - Đặt ống thông khí (nếu tái phát nhiều lần)
+        - Chọc màng nhĩ (nếu áp lực cao)
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi đang bệnh:**
+        - Ăn bình thường, đủ dinh dưỡng
+        - Uống nhiều nước
+        - Tránh đồ cay, nóng (có thể làm đau họng → đau tai)
+
+        **2. Trẻ em:**
+        - Cho bú mẹ (nếu có thể)
+        - Tránh bú bình nằm (tăng nguy cơ)
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Cháo/cơm, thịt/cá, rau
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Nghỉ ngơi, tránh tập thể dục
+        - Tránh bơi lội (nước vào tai)
+
+        **2. Khi đã khỏi:**
+        - Tập bình thường
+        - Đi bộ, chạy bộ
+        - 30 phút/ngày, 5 ngày/tuần
+
+        **3. Lưu ý:**
+        - Tránh bơi lội nếu có thủng màng nhĩ
+        - Đeo nút tai khi bơi (nếu cần)
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Kháng sinh:**
+        - **Amoxicillin:** 80-90 mg/kg/ngày (trẻ em)
+        - **Uống đủ 7-10 ngày** (quan trọng!)
+        - Uống sau ăn
+
+        **2. Giảm đau, hạ sốt:**
+        - **Paracetamol:** 10-15 mg/kg x 3-4 lần/ngày
+        - **Ibuprofen:** 10 mg/kg x 3 lần/ngày (sau ăn)
+
+        **3. Tác dụng phụ:**
+        - **Amoxicillin:** Tiêu chảy, phát ban (dị ứng)
+        - **Ibuprofen:** Đau dạ dày (uống sau ăn)
+
+        **4. Lưu ý:**
+        - Uống đủ liều, đủ thời gian
+        - Không tự ý ngừng
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng nặng:**
+        - Đau tai dữ dội
+        - Sốt cao > 39°C
+        - Chảy dịch tai nhiều
+        - Giảm thính lực rõ rệt
+
+        **2. Biến chứng:**
+        - Viêm xương chũm (đau sau tai, sưng)
+        - Viêm màng não (sốt cao, cổ cứng, lú lẫn)
+        - Thủng màng nhĩ không lành
+
+        **3. Tái phát nhiều lần:**
+        - ≥ 3 lần trong 6 tháng
+        - Cần đánh giá đặt ống thông khí
+
+        **4. Trẻ em:**
+        - < 6 tháng tuổi
+        - Sốt cao, không uống được
+        - Quấy khóc nhiều
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tiêm chủng:**
+        - Vắc xin phế cầu (PCV)
+        - Vắc xin Hib
+        - Vắc xin cúm
+
+        **2. Cho con bú:**
+        - Bú mẹ (giảm nguy cơ)
+        - Tránh bú bình nằm
+
+        **3. Môi trường:**
+        - Tránh hút thuốc thụ động
+        - Vệ sinh tay
+        - Điều trị viêm đường hô hấp trên sớm
+
+        **4. Trẻ em:**
+        - Tránh đi nhà trẻ quá sớm (nếu có thể)
+        - Vệ sinh mũi họng
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị viêm tai giữa:**
+        - Nghỉ ngơi, uống nhiều nước
+        - Dùng thuốc giảm đau, hạ sốt
+        - Uống kháng sinh đủ liều, đủ thời gian
+        - Không nhỏ bất kỳ gì vào tai (trừ khi có chỉ định)
+
+        **2. Trẻ em:**
+        - Theo dõi sát
+        - Giảm đau (quan trọng!)
+        - Không tự ý nhỏ thuốc vào tai
+
+        **3. Sống tích cực:**
+        - Hầu hết khỏi hoàn toàn
+        - Điều trị đúng → Khỏi nhanh
+        - Phòng ngừa tốt → Ít tái phát
+
+        **4. Theo dõi:**
+        - Khám lại sau 2-3 tuần (kiểm tra màng nhĩ)
+        - Đo thính lực nếu tái phát nhiều lần
+        """,
+        related_disease="otitis_media",
+        related_drugs=["Amoxicillin", "Amoxicillin-clavulanate", "Azithromycin", "Cefdinir", "Paracetamol", "Ibuprofen"],
+        printable=True
+    ),
+    
+    # === OSTEOPOROSIS (LOÃNG XƯƠNG) ===
+    PatientEducationTopic(
+        id="osteoporosis_basics",
+        title="Understanding Osteoporosis",
+        title_vn="Hiểu về Loãng xương",
+        category="Disease",
+        content="""
+        # Hiểu về Loãng xương
+
+        ## Loãng xương là gì?
+
+        Loãng xương là tình trạng giảm mật độ xương, tăng nguy cơ gãy xương, phổ biến ở phụ nữ sau mãn kinh và người cao tuổi. Bệnh thường không có triệu chứng cho đến khi gãy xương.
+
+        **⚠️ Đặc điểm:**
+        - Giảm mật độ xương
+        - Tăng nguy cơ gãy xương
+        - Phổ biến ở phụ nữ sau mãn kinh
+        - Thường không có triệu chứng (cho đến khi gãy xương)
+
+        **Phân loại:**
+        - **Giảm mật độ xương (Osteopenia):** T-score -1.0 đến -2.5
+        - **Loãng xương:** T-score ≤ -2.5
+
+        ## Triệu chứng:
+
+        **Giai đoạn sớm:**
+        - Thường không có triệu chứng
+
+        **Giai đoạn muộn:**
+        - **Đau lưng:** Nếu gãy đốt sống
+        - **Giảm chiều cao:** Do gãy đốt sống
+        - **Gù lưng:** Do gãy nhiều đốt sống
+        - **Gãy xương sau chấn thương nhẹ:**
+          - Cổ xương đùi (nguy hiểm nhất)
+          - Đốt sống
+          - Cổ tay
+
+        **⚠️ Gãy xương:**
+        - Đau dữ dội
+        - Biến dạng
+        - Mất chức năng
+
+        ## Nguyên nhân:
+
+        **1. Tuổi cao:**
+        - Mất xương tự nhiên theo tuổi
+
+        **2. Mãn kinh (phụ nữ):**
+        - Giảm estrogen → Mất xương nhanh
+
+        **3. Thiếu canxi, vitamin D:**
+        - Chế độ ăn thiếu
+        - Ít tiếp xúc ánh nắng
+
+        **4. Ít vận động:**
+        - Xương cần tải trọng để chắc khỏe
+
+        **5. Yếu tố khác:**
+        - Hút thuốc, rượu bia
+        - Thuốc: Corticosteroid
+        - Bệnh: Cường giáp, suy thận
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **DEXA scan:** Đo mật độ xương (chuẩn vàng)
+        - **T-score:** ≤ -2.5 (loãng xương)
+        - Canxi, vitamin D, PTH
+        - **FRAX score:** Đánh giá nguy cơ gãy xương
+
+        ## Điều trị:
+
+        **1. Bổ sung:**
+        - **Canxi:** 1000-1200 mg/ngày
+        - **Vitamin D:** 800-1000 IU/ngày
+
+        **2. Thuốc:**
+        - **Bisphosphonate:** Alendronate, Risedronate, Zoledronic acid
+        - **Denosumab:** Kháng RANKL
+        - **Teriparatide:** PTH (nếu nặng)
+
+        **3. Tập thể dục:**
+        - Tăng cường cơ, xương
+        - Đi bộ, chạy bộ, tập tạ nhẹ
+
+        **4. Phòng ngã:**
+        - Loại bỏ vật cản trong nhà
+        - Đủ ánh sáng
+        - Tay vịn cầu thang
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Thực phẩm giàu canxi:**
+        - **Sữa, sữa chua, phô mai:** Nguồn tốt nhất
+        - **Cá nhỏ (ăn cả xương):** Cá cơm, cá mòi
+        - **Rau xanh:** Rau muống, cải xoong, bông cải xanh
+        - **Đậu, hạt:** Đậu phụ, hạnh nhân
+
+        **2. Thực phẩm giàu vitamin D:**
+        - **Cá béo:** Cá hồi, cá thu
+        - **Trứng:** Lòng đỏ
+        - **Sữa tăng cường vitamin D**
+
+        **3. Tránh:**
+        - Rượu bia (giảm hấp thu canxi)
+        - Caffeine quá nhiều (tăng thải canxi)
+        - Muối quá nhiều (tăng thải canxi)
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Sữa, trứng, bánh mì
+        - **Trưa:** Cơm, cá (ăn cả xương), rau xanh, canh, sữa chua
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh, sữa
+        - **Bữa phụ:** Sữa, hạt, trái cây
+
+        **5. Lưu ý:**
+        - Ăn đủ protein (tạo xương)
+        - Bổ sung canxi, vitamin D nếu thiếu
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Tập tải trọng (quan trọng!):**
+        - **Đi bộ:** 30 phút/ngày, 5 ngày/tuần
+        - **Chạy bộ:** Nếu sức khỏe cho phép
+        - **Tập tạ nhẹ:** Tăng cường cơ, xương
+        - **Leo cầu thang:** Tải trọng tốt
+
+        **2. Tập thăng bằng:**
+        - Yoga, thái cực quyền
+        - Giảm nguy cơ ngã
+
+        **3. Tránh:**
+        - Tập quá mệt (tăng nguy cơ ngã)
+        - Tập có nguy cơ ngã cao
+
+        **4. Lưu ý:**
+        - Khởi động kỹ
+        - Tăng dần cường độ
+        - Nghỉ ngơi nếu mệt
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Bổ sung:**
+        - **Canxi:** 1000-1200 mg/ngày (chia 2 lần)
+        - **Vitamin D:** 800-1000 IU/ngày
+        - Uống với nước, sau ăn
+
+        **2. Bisphosphonate:**
+        - **Alendronate:** 70mg/tuần (uống buổi sáng, trước ăn 30 phút, với nước lọc)
+        - **Risedronate:** 35mg/tuần
+        - **Quan trọng:** Uống đúng cách (tránh viêm thực quản)
+
+        **3. Tác dụng phụ:**
+        - **Bisphosphonate:** Đau cơ, xương, viêm thực quản (nếu uống sai)
+        - **Denosumab:** Đau cơ, xương
+
+        **4. Lưu ý:**
+        - Uống đều đặn
+        - Theo dõi định kỳ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Gãy xương:**
+        - Đau dữ dội sau chấn thương nhẹ
+        - Biến dạng
+        - Không vận động được
+
+        **2. Gãy đốt sống:**
+        - Đau lưng dữ dội
+        - Giảm chiều cao đột ngột
+        - Gù lưng
+
+        **3. Tác dụng phụ thuốc:**
+        - Đau cơ, xương nặng
+        - Khó nuốt (viêm thực quản)
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Chế độ ăn:**
+        - Ăn đủ canxi, vitamin D từ nhỏ
+        - Duy trì suốt đời
+
+        **2. Tập thể dục:**
+        - Tập tải trọng đều đặn
+        - Tăng cường cơ, xương
+
+        **3. Phòng ngã:**
+        - Loại bỏ vật cản
+        - Đủ ánh sáng
+        - Tay vịn cầu thang
+        - Mang giày chắc chắn
+
+        **4. Khám định kỳ:**
+        - DEXA scan sau 50 tuổi (phụ nữ)
+        - Sau 65 tuổi (nam)
+        - Mỗi 2-3 năm
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị loãng xương:**
+        - Bổ sung canxi, vitamin D
+        - Uống thuốc đúng cách
+        - Tập thể dục đều đặn
+        - Phòng ngã
+
+        **2. Uống thuốc đúng cách:**
+        - Bisphosphonate: Buổi sáng, trước ăn 30 phút, với nước lọc
+        - Đứng hoặc ngồi thẳng 30 phút sau uống
+
+        **3. Sống tích cực:**
+        - Loãng xương có thể kiểm soát
+        - Điều trị đúng → Giảm nguy cơ gãy xương
+        - Có thể sống bình thường
+
+        **4. Phụ nữ sau mãn kinh:**
+        - Bổ sung canxi, vitamin D
+        - Tập thể dục
+        - Khám định kỳ
+        """,
+        related_disease="osteoporosis",
+        related_drugs=["Alendronate", "Risedronate", "Zoledronic Acid", "Denosumab", "Calcium", "Vitamin D"],
+        printable=True
+    ),
+    
+    # === CONJUNCTIVITIS (VIÊM KẾT MẠC) ===
+    PatientEducationTopic(
+        id="conjunctivitis_basics",
+        title="Understanding Conjunctivitis",
+        title_vn="Hiểu về Viêm kết mạc",
+        category="Disease",
+        content="""
+        # Hiểu về Viêm kết mạc
+
+        ## Viêm kết mạc là gì?
+
+        Viêm kết mạc là tình trạng viêm màng kết mạc, rất phổ biến, có thể do virus, vi khuẩn, hoặc dị ứng. Bệnh thường tự khỏi (virus) hoặc cần điều trị (vi khuẩn, dị ứng).
+
+        **⚠️ Đặc điểm:**
+        - Viêm màng kết mạc
+        - Rất phổ biến
+        - Có thể lây (virus, vi khuẩn)
+        - Thường tự khỏi (virus)
+
+        **Phân loại:**
+        - **Virus:** Adenovirus (phổ biến nhất)
+        - **Vi khuẩn:** Staphylococcus, Streptococcus
+        - **Dị ứng:** Phấn hoa, bụi, hóa chất
+
+        ## Triệu chứng:
+
+        **Triệu chứng chung:**
+        - **Đỏ mắt:** Một hoặc hai mắt
+        - **Ngứa mắt:** Đặc biệt dị ứng
+        - **Chảy nước mắt**
+        - **Dử mắt (ghèn):** Vàng/xanh nếu vi khuẩn
+        - **Cảm giác cộm, rát**
+        - **Sưng mí mắt**
+
+        **Triệu chứng virus:**
+        - Dử mắt ít, trong
+        - Thường hai mắt
+        - Có thể kèm cảm lạnh
+
+        **Triệu chứng vi khuẩn:**
+        - Dử mắt nhiều, vàng/xanh
+        - Dính mắt khi thức dậy
+        - Có thể một hoặc hai mắt
+
+        **Triệu chứng dị ứng:**
+        - Ngứa nhiều
+        - Chảy nước mắt
+        - Thường hai mắt
+        - Kèm hắt hơi, sổ mũi
+
+        **⚠️ Biến chứng:**
+        - Viêm giác mạc (nếu nặng)
+        - Giảm thị lực (hiếm)
+
+        ## Nguyên nhân:
+
+        **1. Virus:**
+        - Adenovirus (phổ biến nhất)
+        - Herpes
+
+        **2. Vi khuẩn:**
+        - Staphylococcus
+        - Streptococcus
+        - Haemophilus
+
+        **3. Dị ứng:**
+        - Phấn hoa
+        - Bụi
+        - Hóa chất
+
+        **4. Yếu tố nguy cơ:**
+        - Tiếp xúc người bệnh
+        - Vệ sinh kém
+        - Dị ứng
+
+        ## Chẩn đoán:
+
+        **Khám:**
+        - Kết mạc đỏ, phù
+        - Dử mắt
+        - Phân loại: virus, vi khuẩn, dị ứng
+
+        ## Điều trị:
+
+        **1. Virus:**
+        - Điều trị triệu chứng
+        - Nước mắt nhân tạo
+        - Chườm lạnh
+        - Tự khỏi 1-2 tuần
+
+        **2. Vi khuẩn:**
+        - Kháng sinh nhỏ mắt: Chloramphenicol, Ofloxacin, Tobramycin
+        - 4-6 lần/ngày, 5-7 ngày
+
+        **3. Dị ứng:**
+        - Antihistamine nhỏ mắt
+        - Corticosteroid nhỏ mắt (nếu nặng)
+        - Tránh dị nguyên
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Bình thường:**
+        - Ăn đủ dinh dưỡng
+        - Uống nhiều nước
+
+        **2. Dị ứng:**
+        - Tránh thức ăn gây dị ứng (nếu biết)
+        - Thực phẩm chống viêm: Cá béo, rau xanh
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang bệnh:**
+        - Tránh bơi lội (nước vào mắt)
+        - Tập nhẹ nếu không khó chịu
+
+        **2. Khi đã khỏi:**
+        - Tập bình thường
+        - Đi bộ, chạy bộ, bơi lội
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Nhỏ mắt đúng cách:**
+        - Rửa tay trước
+        - Kéo mí mắt dưới
+        - Nhỏ 1-2 giọt
+        - Nhắm mắt 1-2 phút
+        - Không chạm đầu lọ vào mắt
+
+        **2. Kháng sinh nhỏ mắt:**
+        - 4-6 lần/ngày
+        - 5-7 ngày
+        - Không tự ý ngừng
+
+        **3. Lưu ý:**
+        - Không dùng chung thuốc nhỏ mắt
+        - Vứt thuốc sau khi hết bệnh
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Triệu chứng nặng:**
+        - Đau mắt dữ dội
+        - Giảm thị lực
+        - Nhạy cảm ánh sáng nặng
+        - Sưng mắt nhiều
+
+        **2. Không cải thiện:**
+        - Sau 5-7 ngày điều trị
+        - Triệu chứng nặng hơn
+
+        **3. Biến chứng:**
+        - Viêm giác mạc
+        - Giảm thị lực
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Vệ sinh:**
+        - Rửa tay thường xuyên
+        - Không dụi mắt
+        - Không dùng chung khăn, gối
+
+        **2. Dị ứng:**
+        - Tránh dị nguyên
+        - Đeo kính râm
+        - Vệ sinh môi trường
+
+        **3. Khi có người bệnh:**
+        - Cách ly
+        - Vệ sinh tay
+        - Không dùng chung đồ
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị viêm kết mạc:**
+        - Vệ sinh mắt
+        - Nhỏ thuốc đúng cách
+        - Không dụi mắt
+        - Tránh lây cho người khác
+
+        **2. Sống tích cực:**
+        - Hầu hết tự khỏi (virus)
+        - Điều trị đúng → Khỏi nhanh
+        - Phòng ngừa tốt → Ít mắc bệnh
+
+        **3. Trẻ em:**
+        - Theo dõi sát
+        - Không cho dụi mắt
+        - Vệ sinh tay thường xuyên
+        """,
+        related_disease="conjunctivitis",
+        related_drugs=["Chloramphenicol", "Ofloxacin", "Tobramycin", "Antihistamine"],
+        printable=True
+    ),
+    
+    # === CATARACT (ĐỤC THỦY TINH THỂ) ===
+    PatientEducationTopic(
+        id="cataract_basics",
+        title="Understanding Cataract",
+        title_vn="Hiểu về Đục thủy tinh thể",
+        category="Disease",
+        content="""
+        # Hiểu về Đục thủy tinh thể
+
+        ## Đục thủy tinh thể là gì?
+
+        Đục thủy tinh thể là tình trạng thủy tinh thể bị đục, gây giảm thị lực, rất phổ biến ở người cao tuổi tại Việt Nam. Phẫu thuật là phương pháp điều trị duy nhất.
+
+        **⚠️ Đặc điểm:**
+        - Thủy tinh thể bị đục
+        - Gây giảm thị lực
+        - Rất phổ biến ở người cao tuổi
+        - Phẫu thuật có thể phục hồi thị lực
+
+        **Phân loại:**
+        - **Theo tuổi:** Tuổi già (phổ biến nhất)
+        - **Theo nguyên nhân:** Đái tháo đường, chấn thương, thuốc
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Giảm thị lực từ từ:** Mờ mắt dần
+        - **Nhìn mờ:** Như có màng che
+        - **Nhìn đôi:** Nếu một mắt
+        - **Nhạy cảm với ánh sáng:** Chói mắt
+        - **Nhìn màu kém:** Màu sắc nhạt
+        - **Thay đổi độ kính thường xuyên**
+
+        **Triệu chứng khác:**
+        - Nhìn thấy hào quang quanh đèn
+        - Khó nhìn ban đêm
+        - Đọc sách khó
+
+        **⚠️ Giai đoạn muộn:**
+        - Thị lực giảm nhiều
+        - Ảnh hưởng sinh hoạt hàng ngày
+        - Có thể dẫn đến mù
+
+        ## Nguyên nhân:
+
+        **1. Tuổi già:**
+        - Nguyên nhân chính
+        - Thủy tinh thể đục tự nhiên theo tuổi
+
+        **2. Đái tháo đường:**
+        - Tăng nguy cơ
+        - Đục sớm hơn
+
+        **3. Chấn thương mắt:**
+        - Chấn thương trực tiếp
+        - Tia cực tím
+
+        **4. Thuốc:**
+        - Corticosteroid (uống, nhỏ mắt)
+
+        **5. Yếu tố khác:**
+        - Hút thuốc
+        - Rượu bia
+        - Di truyền
+
+        ## Chẩn đoán:
+
+        **Khám:**
+        - Đo thị lực
+        - Khám mắt bằng đèn khe: Thủy tinh thể đục
+        - Soi đáy mắt: Giảm ánh đồng tử đỏ
+
+        ## Điều trị:
+
+        **1. Phẫu thuật:**
+        - **Phương pháp duy nhất**
+        - **Phacoemulsification:** Phẫu thuật nội soi
+        - **Đặt thủy tinh thể nhân tạo (IOL)**
+        - Phẫu thuật ngoại trú, phục hồi nhanh
+
+        **2. Khi nào phẫu thuật:**
+        - Thị lực giảm ảnh hưởng sinh hoạt
+        - Thường khi thị lực < 20/40
+
+        **3. Kính mắt:**
+        - Tạm thời, nếu nhẹ
+        - Không điều trị được
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Chống oxy hóa:**
+        - **Rau xanh:** Rau bina, cải xoong
+        - **Trái cây:** Cam, dâu tây
+        - **Cá béo:** Omega-3
+
+        **2. Vitamin:**
+        - Vitamin C, E
+        - Lutein, Zeaxanthin
+
+        **3. Tránh:**
+        - Rượu bia (tăng nguy cơ)
+        - Đồ chế biến sẵn
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Trứng, rau xanh, trái cây
+        - **Trưa:** Cơm, cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, hạt
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Nên tập:**
+        - Tập thể dục bình thường
+        - Đi bộ, chạy bộ
+        - 30 phút/ngày, 5 ngày/tuần
+
+        **2. Lưu ý:**
+        - Đeo kính râm khi ra nắng (bảo vệ mắt)
+        - Tránh chấn thương mắt
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Không có thuốc điều trị:**
+        - Chỉ có phẫu thuật
+
+        **2. Sau phẫu thuật:**
+        - Kháng sinh nhỏ mắt
+        - Corticosteroid nhỏ mắt
+        - Theo dõi định kỳ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Thị lực giảm nhanh:**
+        - Giảm đột ngột
+        - Ảnh hưởng sinh hoạt
+
+        **2. Sau phẫu thuật:**
+        - Đau mắt nhiều
+        - Giảm thị lực
+        - Đỏ mắt nhiều
+
+        **3. Biến chứng:**
+        - Tăng nhãn áp
+        - Viêm màng bồ đào
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Đeo kính râm:**
+        - Bảo vệ khỏi tia UV
+        - Khi ra nắng
+
+        **2. Kiểm soát đái tháo đường:**
+        - Đường huyết ổn định
+        - Giảm nguy cơ
+
+        **3. Bỏ thuốc lá:**
+        - Giảm nguy cơ
+
+        **4. Khám mắt định kỳ:**
+        - Sau 40 tuổi
+        - Mỗi 1-2 năm
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị đục thủy tinh thể:**
+        - Khám mắt định kỳ
+        - Đeo kính (nếu cần)
+        - Phẫu thuật khi có chỉ định
+
+        **2. Sau phẫu thuật:**
+        - Nhỏ thuốc đúng cách
+        - Tránh dụi mắt
+        - Khám lại định kỳ
+
+        **3. Sống tích cực:**
+        - Phẫu thuật an toàn, hiệu quả
+        - Phục hồi thị lực tốt
+        - Có thể sống bình thường
+
+        **4. Phòng ngừa:**
+        - Đeo kính râm
+        - Kiểm soát đái tháo đường
+        - Bỏ thuốc lá
+        - Khám mắt định kỳ
+        """,
+        related_disease="cataract",
+        related_drugs=[],
+        printable=True
+    ),
 ]
