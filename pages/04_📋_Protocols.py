@@ -73,16 +73,16 @@ if protocol and protocol != "Không có protocol nào":
     # Extract protocol name (remove emoji if present)
     protocol_display = protocol.split(' ', 1)[1] if ' ' in protocol else protocol
     
-    info_text = f"""
-    **📋 Chuyên khoa:** {specialty}
-    
-    **🔬 Phác đồ đang xem:** {protocol_display}
+    info_html = f"""
+    <div>
+        <p><strong>📋 Chuyên khoa:</strong> {specialty}</p>
+        <p><strong>🔬 Phác đồ đang xem:</strong> {protocol_display}</p>
+        {f'<p style="margin-top: 8px; font-style: italic; color: #666;">🔗 Đã tự động mở từ bài viết chuyên sâu</p>' if use_deep_link else ''}
+    </div>
     """
-    if use_deep_link:
-        info_text += "\n\n*🔗 Đã tự động mở từ bài viết chuyên sâu*"
     
     render_info_box(
-        info_text,
+        info_html,
         type="info",
         title="Thông tin Protocol"
     )
