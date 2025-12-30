@@ -31,8 +31,11 @@
 }
 
 /* ========== TYPOGRAPHY ========== */
+/* Đồng bộ font với toàn bộ app (Inter + hệ thống), tối ưu tiếng Việt */
 .stApp {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                 'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                 'Helvetica Neue', sans-serif;
 }
 
 /* Headers - Medical Professional Style */
@@ -62,9 +65,11 @@ h3 {
     color: var(--protocol-primary-blue-dark);
 }
 
-/* Body Text - Optimized for Reading */
+/* Body Text - Optimized for Reading (ưu tiên sans-serif hỗ trợ Unicode tốt) */
 p, li, div[data-testid="stMarkdownContainer"] {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                 'Noto Sans', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                 'Helvetica Neue', sans-serif;
     font-size: 15px;
     line-height: 1.7;
     color: var(--protocol-text-primary);
