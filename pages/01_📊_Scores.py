@@ -298,13 +298,12 @@ with col_header1:
     if selected_score_id:
         render_info_box(
             f"""
-            **📊 Chuyên khoa:** {specialty}
-            
-            **🔢 Số lượng calculators:** {len(scores_in_specialty)}
-            
-            **🔬 Đang xem:** {current_name}
-            
-            **💡 Dùng khi:** {current_desc if current_desc else 'Chọn calculator để xem mô tả chi tiết.'}
+            <div>
+                <p><strong>📊 Chuyên khoa:</strong> {specialty}</p>
+                <p><strong>🔢 Số lượng calculators:</strong> {len(scores_in_specialty)}</p>
+                <p><strong>🔬 Đang xem:</strong> {current_name}</p>
+                <p><strong>💡 Dùng khi:</strong> {current_desc if current_desc else 'Chọn calculator để xem mô tả chi tiết.'}</p>
+            </div>
             """,
             type="info",
             title="Thông tin Calculator"
@@ -312,11 +311,11 @@ with col_header1:
     else:
         render_info_box(
             f"""
-            **📊 Chuyên khoa:** {specialty}
-            
-            **🔢 Số lượng calculators:** {len(scores_in_specialty)}
-            
-            **💡 Hướng dẫn:** Chọn một calculator từ danh sách ở sidebar bên trái để bắt đầu.
+            <div>
+                <p><strong>📊 Chuyên khoa:</strong> {specialty}</p>
+                <p><strong>🔢 Số lượng calculators:</strong> {len(scores_in_specialty)}</p>
+                <p><strong>💡 Hướng dẫn:</strong> Chọn một calculator từ danh sách ở sidebar bên trái để bắt đầu.</p>
+            </div>
             """,
             type="info",
             title="Chọn Calculator"
