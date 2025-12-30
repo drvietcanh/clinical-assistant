@@ -6810,4 +6810,1138 @@ Trầm cảm là bệnh tâm thần gây cảm giác buồn bã, mất hứng th
         related_drugs=["Paracetamol"],
         printable=True
     ),
+    
+    # === MALARIA (SỐT RÉT) ===
+    PatientEducationTopic(
+        id="malaria_basics",
+        title="Understanding Malaria",
+        title_vn="Hiểu về Sốt rét",
+        category="Disease",
+        content="""
+        # Hiểu về Sốt rét
+
+        ## Sốt rét là gì?
+
+        Sốt rét là bệnh nhiễm ký sinh trùng do muỗi Anopheles truyền, vẫn còn lưu hành tại một số vùng miền núi Việt Nam. Bệnh có thể nặng và nguy hiểm nếu không điều trị kịp thời.
+
+        **⚠️ Đặc điểm:**
+        - Lây qua muỗi Anopheles đốt
+        - Có thể gây sốt rét nặng (P. falciparum)
+        - Phổ biến ở vùng miền núi, rừng
+        - Có thể tái phát (P. vivax)
+
+        **Các loại ký sinh trùng:**
+        - **P. falciparum:** Nguy hiểm nhất, có thể gây sốt rét nặng
+        - **P. vivax:** Có thể tái phát (thể ngủ trong gan)
+        - **P. malariae:** Ít gặp
+        - **P. ovale:** Rất hiếm
+
+        ## Triệu chứng:
+
+        **Sốt rét điển hình:**
+        - **Sốt cao đột ngột:** 39-40°C
+        - **Ớn lạnh, rét run:** Dữ dội, kéo dài 15-60 phút
+        - **Vã mồ hôi:** Sau sốt, kéo dài 2-4 giờ
+        - **Chu kỳ sốt:** 
+          - P. falciparum: Không đều (mỗi ngày)
+          - P. vivax: 48 giờ (cách ngày)
+          - P. malariae: 72 giờ (cách 2 ngày)
+
+        **Triệu chứng khác:**
+        - Đau đầu dữ dội
+        - Đau cơ, đau khớp
+        - Mệt mỏi, suy nhược
+        - Buồn nôn, nôn
+        - Thiếu máu (nếu kéo dài)
+        - Lách to (nếu mạn tính)
+
+        **⚠️ Sốt rét nặng (P. falciparum):**
+        - Rối loạn ý thức, hôn mê
+        - Co giật
+        - Suy thận cấp
+        - Sốc
+        - Thiếu máu nặng
+        - Suy hô hấp
+        - **Cần cấp cứu ngay!**
+
+        ## Nguyên nhân và đường lây:
+
+        **1. Nguyên nhân:**
+        - Ký sinh trùng Plasmodium
+        - Muỗi Anopheles truyền
+
+        **2. Đường lây:**
+        - Muỗi Anopheles đốt người bệnh → Hút ký sinh trùng → Đốt người lành → Lây bệnh
+        - **KHÔNG lây:** Qua tiếp xúc, hô hấp, nước bọt
+
+        **3. Yếu tố nguy cơ:**
+        - Sống/đi du lịch vùng lưu hành sốt rét
+        - Không có biện pháp phòng ngừa
+        - Làm việc trong rừng, ban đêm
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **Thick/thin smear (phết máu):** Tìm ký sinh trùng - chuẩn vàng
+        - **Test nhanh (RDT):** Phát hiện kháng nguyên
+        - **PCR:** Xác định loài (nếu cần)
+        - **Công thức máu:** Thiếu máu, giảm tiểu cầu
+
+        **⚠️ Quan trọng:**
+        - Nếu có sốt + tiền sử vùng lưu hành → Nghĩ đến sốt rét
+        - Xét nghiệm ngay để chẩn đoán sớm
+
+        ## Điều trị:
+
+        **1. Sốt rét thường (P. falciparum):**
+        - **Artesunate + Mefloquine** (3 ngày)
+        - Hoặc **Artemether-Lumefantrine** (3 ngày)
+        - **Quan trọng:** Uống đủ liều, đúng giờ
+
+        **2. Sốt rét thường (P. vivax):**
+        - **Chloroquine** (3 ngày) + **Primaquine** (14 ngày)
+        - Primaquine: Diệt thể ngủ trong gan (tránh tái phát)
+        - **⚠️ Lưu ý:** Kiểm tra G6PD trước khi dùng Primaquine
+
+        **3. Sốt rét nặng:**
+        - **Artesunate IV** (tại bệnh viện)
+        - Theo dõi sát, điều trị biến chứng
+
+        **4. Phòng ngừa tái phát (P. vivax):**
+        - Primaquine 14 ngày (nếu G6PD bình thường)
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Khi sốt:**
+        - Uống nhiều nước (quan trọng!)
+        - Ăn nhẹ, dễ tiêu
+        - Súp, cháo
+        - Trái cây, nước trái cây
+
+        **2. Khi hết sốt:**
+        - Ăn đủ dinh dưỡng
+        - Bổ sung sắt (nếu thiếu máu)
+        - Thịt nạc, cá, trứng
+        - Rau xanh, trái cây
+
+        **3. Thực đơn mẫu (khi hết sốt):**
+        - **Sáng:** Cháo thịt, trứng
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Sữa, trái cây
+
+        **4. Tránh:**
+        - Rượu bia (khi đang điều trị)
+        - Đồ cay, nóng (khi sốt)
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi đang sốt:**
+        - Nghỉ ngơi hoàn toàn
+        - Không tập thể dục
+
+        **2. Sau khi hết sốt:**
+        - Nghỉ ngơi thêm 1-2 tuần
+        - Tập nhẹ: Đi bộ 10-15 phút/ngày
+        - Tăng dần khi sức khỏe tốt hơn
+
+        **3. Khi đã khỏi:**
+        - Tập thể dục bình thường
+        - Đi bộ, chạy bộ, bơi lội
+        - 30 phút/ngày, 5 ngày/tuần
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Uống đúng cách:**
+        - Uống đủ liều, đúng giờ
+        - Không tự ý ngừng thuốc
+        - Uống với nước, sau ăn
+
+        **2. Thuốc phòng ngừa (nếu đi vùng lưu hành):**
+        - **Doxycycline:** 100mg/ngày (bắt đầu 1-2 ngày trước, tiếp tục 4 tuần sau khi rời)
+        - **Mefloquine:** 250mg/tuần (bắt đầu 1-2 tuần trước, tiếp tục 4 tuần sau)
+        - **Atovaquone-Proguanil:** 1 viên/ngày (bắt đầu 1-2 ngày trước, tiếp tục 1 tuần sau)
+
+        **3. Tác dụng phụ:**
+        - **Mefloquine:** Chóng mặt, buồn nôn, rối loạn tâm thần (hiếm)
+        - **Primaquine:** Thiếu máu tan máu (nếu thiếu G6PD)
+        - **Artesunate:** Ít tác dụng phụ
+
+        **4. Lưu ý:**
+        - Báo bác sĩ nếu có tác dụng phụ
+        - Không tự ý đổi thuốc
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Sốt rét nặng:**
+        - Sốt cao + rối loạn ý thức
+        - Co giật
+        - Khó thở
+        - Nôn nhiều, không uống được
+        - Vàng da
+        - Tiểu ít hoặc không tiểu
+
+        **2. Sốt rét thường nhưng:**
+        - Sốt cao kéo dài > 3 ngày
+        - Không đáp ứng điều trị
+        - Thiếu máu nặng
+        - Có biến chứng
+
+        **3. Tái phát:**
+        - Sốt lại sau khi đã điều trị
+        - Cần điều trị lại
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tránh muỗi đốt:**
+        - Ngủ màn (quan trọng nhất!)
+        - Mặc quần áo dài tay, dài chân
+        - Dùng thuốc chống muỗi (DEET 20-30%)
+        - Tránh ra ngoài ban đêm, sáng sớm
+
+        **2. Diệt muỗi:**
+        - Phun thuốc diệt muỗi
+        - Diệt lăng quăng
+        - Vệ sinh môi trường
+
+        **3. Thuốc phòng ngừa:**
+        - Nếu đi vùng lưu hành: Uống thuốc phòng
+        - Bắt đầu trước khi đi, tiếp tục sau khi về
+
+        **4. Phát hiện sớm:**
+        - Nếu sốt sau khi đi vùng lưu hành → Nghĩ đến sốt rét
+        - Đến cơ sở y tế ngay
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị sốt rét:**
+        - Nghỉ ngơi hoàn toàn
+        - Uống nhiều nước
+        - Uống thuốc đúng, đủ liều
+        - Theo dõi triệu chứng
+
+        **2. Phòng ngừa:**
+        - Ngủ màn (quan trọng nhất!)
+        - Dùng thuốc phòng nếu đi vùng lưu hành
+        - Vệ sinh môi trường
+
+        **3. Sau khi khỏi:**
+        - Tiếp tục phòng ngừa (có thể tái nhiễm)
+        - Theo dõi tái phát (P. vivax)
+
+        **4. Sống tích cực:**
+        - Sốt rét có thể chữa khỏi
+        - Điều trị sớm, đúng cách → Khỏi hoàn toàn
+        - Phòng ngừa tốt → Không mắc bệnh
+        """,
+        related_disease="malaria",
+        related_drugs=["Artesunate", "Mefloquine", "Chloroquine", "Primaquine", "Doxycycline"],
+        printable=True
+    ),
+    
+    # === HYPERTHYROIDISM (CƯỜNG GIÁP) ===
+    PatientEducationTopic(
+        id="hyperthyroidism_basics",
+        title="Understanding Hyperthyroidism",
+        title_vn="Hiểu về Cường giáp",
+        category="Disease",
+        content="""
+        # Hiểu về Cường giáp
+
+        ## Cường giáp là gì?
+
+        Cường giáp là tình trạng tuyến giáp sản xuất quá nhiều hormone tuyến giáp (T3, T4), dẫn đến tăng chuyển hóa. Bệnh phổ biến ở phụ nữ, đặc biệt độ tuổi 20-40.
+
+        **⚠️ Đặc điểm:**
+        - Tuyến giáp hoạt động quá mức
+        - Tăng chuyển hóa toàn thân
+        - Phổ biến ở phụ nữ (gấp 5-10 lần nam)
+        - Có thể điều trị khỏi
+
+        **Nguyên nhân chính:**
+        - **Basedow (Graves' disease):** 70-80% (bệnh tự miễn)
+        - Bướu giáp đa nhân độc
+        - Viêm giáp (thyroiditis)
+        - U tuyến giáp độc
+        - Quá liều hormone tuyến giáp
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Nhịp tim nhanh:** > 100 lần/phút, đánh trống ngực
+        - **Sụt cân:** Dù ăn nhiều
+        - **Ra mồ hôi nhiều:** Không do nóng
+        - **Run tay:** Rõ ràng, không kiểm soát được
+        - **Mệt mỏi, yếu cơ:** Đặc biệt cơ đùi
+        - **Khó ngủ:** Mất ngủ, ngủ không sâu
+        - **Tiêu chảy:** Tăng nhu động ruột
+        - **Tính tình thay đổi:** Dễ cáu, lo âu, bồn chồn
+
+        **Triệu chứng Basedow:**
+        - **Mắt lồi:** Nhìn chằm chằm, mắt to
+        - **Phù quanh mắt:** Sưng mí mắt
+        - **Bướu giáp:** Tuyến giáp to, có thể thấy, sờ được
+
+        **Triệu chứng khác:**
+        - Rụng tóc
+        - Da ẩm, nóng
+        - Kinh nguyệt không đều (nữ)
+        - Giảm ham muốn tình dục
+
+        **⚠️ Cơn cường giáp cấp (Thyroid storm):**
+        - Sốt cao > 38.5°C
+        - Nhịp tim rất nhanh > 140 lần/phút
+        - Rối loạn ý thức, lú lẫn
+        - **Cần cấp cứu ngay!**
+
+        ## Nguyên nhân:
+
+        **1. Basedow (Graves' disease):**
+        - Bệnh tự miễn
+        - Cơ thể tạo kháng thể kích thích tuyến giáp
+        - Có yếu tố di truyền
+
+        **2. Bướu giáp đa nhân độc:**
+        - Nhiều nhân trong tuyến giáp tự sản xuất hormone
+
+        **3. Viêm giáp:**
+        - Viêm tuyến giáp → Giải phóng hormone
+
+        **4. Yếu tố nguy cơ:**
+        - Nữ giới
+        - Tuổi 20-40
+        - Tiền sử gia đình
+        - Stress
+        - Hút thuốc (tăng nguy cơ mắt lồi)
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **TSH giảm:** < 0.1 mIU/L
+        - **T3, T4 tăng:** Tăng rõ ràng
+        - **TRAb (Thyroid Receptor Antibody):** Dương tính nếu Basedow
+        - **Anti-TPO, Anti-Tg:** Có thể dương tính
+
+        **Khám:**
+        - Siêu âm tuyến giáp
+        - Xạ hình tuyến giáp (nếu cần)
+
+        ## Điều trị:
+
+        **1. Thuốc kháng giáp:**
+        - **Methimazole:** Thuốc đầu tay (10-40mg/ngày)
+        - **Propylthiouracil (PTU):** Nếu mang thai 3 tháng đầu
+        - **Thời gian:** 12-18 tháng
+        - **Theo dõi:** Chức năng gan, bạch cầu
+
+        **2. Beta-blocker:**
+        - **Propranolol:** Giảm nhịp tim, run tay (20-40mg x 3-4 lần/ngày)
+        - Dùng ngắn hạn, giảm triệu chứng
+
+        **3. I-131 (Radioactive Iodine):**
+        - Điều trị dứt điểm
+        - Uống 1 lần
+        - **⚠️ Lưu ý:** Không dùng khi mang thai, cho con bú
+
+        **4. Phẫu thuật:**
+        - Cắt một phần hoặc toàn bộ tuyến giáp
+        - Nếu bướu to, kháng thuốc
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Nên ăn:**
+        - **Thực phẩm giàu canxi:** Sữa, phô mai, cá nhỏ (ăn cả xương), rau xanh
+        - **Thực phẩm giàu vitamin D:** Cá béo, trứng, sữa
+        - **Protein nạc:** Thịt gà, cá, đậu
+        - **Rau xanh, trái cây:** Đủ vitamin, khoáng chất
+        - **Uống nhiều nước:** Bù mồ hôi
+
+        **2. Hạn chế:**
+        - **I-ốt:** Không bổ sung quá nhiều (rong biển, muối i-ốt quá nhiều)
+        - **Caffeine:** Có thể làm tăng nhịp tim
+        - **Đồ cay, nóng:** Có thể làm tăng mồ hôi
+
+        **3. Tránh:**
+        - Rượu bia (ảnh hưởng thuốc)
+        - Thuốc lá (tăng nguy cơ mắt lồi)
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo yến mạch, sữa, trứng
+        - **Trưa:** Cơm, thịt gà/cá, rau xanh, canh, sữa chua
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh, trái cây
+        - **Bữa phụ:** Sữa, trái cây, hạt
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi chưa điều trị ổn:**
+        - Tránh tập gắng sức (nhịp tim đã nhanh)
+        - Tập nhẹ: Đi bộ 15-20 phút/ngày
+        - Yoga, thiền (giảm stress)
+
+        **2. Khi đã điều trị ổn:**
+        - Tập bình thường
+        - Đi bộ, chạy bộ, bơi lội
+        - 30 phút/ngày, 5 ngày/tuần
+        - Tăng cường cơ (phòng loãng xương)
+
+        **3. Lưu ý:**
+        - Theo dõi nhịp tim khi tập
+        - Nghỉ ngơi nếu mệt
+        - Uống đủ nước
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Methimazole:**
+        - Uống sau ăn
+        - Uống đều đặn, đúng giờ
+        - Không tự ý ngừng
+        - **Tác dụng phụ:** Phát ban, giảm bạch cầu, tổn thương gan (hiếm)
+
+        **2. Propranolol:**
+        - Uống với nước
+        - Có thể gây mệt mỏi, chóng mặt
+        - Không ngừng đột ngột
+
+        **3. Theo dõi:**
+        - Xét nghiệm TSH, T3, T4 mỗi 4-6 tuần
+        - Chức năng gan, bạch cầu mỗi 3 tháng
+        - Điều chỉnh liều theo kết quả
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Cơn cường giáp cấp:**
+        - Sốt cao > 38.5°C
+        - Nhịp tim > 140 lần/phút
+        - Rối loạn ý thức
+        - **Cấp cứu ngay!**
+
+        **2. Tác dụng phụ thuốc:**
+        - Sốt, đau họng (giảm bạch cầu)
+        - Vàng da (tổn thương gan)
+        - Phát ban nặng
+
+        **3. Triệu chứng nặng:**
+        - Khó thở
+        - Đau ngực
+        - Rối loạn nhịp tim
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Không thể phòng ngừa hoàn toàn:**
+        - Basedow là bệnh tự miễn
+        - Có yếu tố di truyền
+
+        **2. Có thể giảm nguy cơ:**
+        - Bỏ thuốc lá (giảm mắt lồi)
+        - Quản lý stress
+        - Khám định kỳ nếu có tiền sử gia đình
+
+        **3. Phát hiện sớm:**
+        - Khám khi có triệu chứng
+        - Xét nghiệm TSH định kỳ (nếu có nguy cơ)
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị cường giáp:**
+        - Uống thuốc đều đặn
+        - Theo dõi triệu chứng
+        - Khám định kỳ
+        - Nghỉ ngơi đủ
+
+        **2. Chăm sóc mắt (nếu Basedow):**
+        - Đeo kính râm (nhạy cảm ánh sáng)
+        - Nhỏ mắt nhân tạo (khô mắt)
+        - Nằm cao đầu khi ngủ (giảm phù)
+        - Bỏ thuốc lá (quan trọng!)
+
+        **3. Sống tích cực:**
+        - Cường giáp có thể điều trị khỏi
+        - Điều trị đúng → Bình thường hóa hormone
+        - Có thể sống bình thường
+
+        **4. Mang thai:**
+        - Cần điều trị (ảnh hưởng thai nhi)
+        - Dùng PTU 3 tháng đầu
+        - Theo dõi sát
+        """,
+        related_disease="hyperthyroidism",
+        related_drugs=["Methimazole", "Propylthiouracil", "Propranolol", "I-131"],
+        printable=True
+    ),
+    
+    # === HYPOTHYROIDISM (SUY GIÁP) ===
+    PatientEducationTopic(
+        id="hypothyroidism_basics",
+        title="Understanding Hypothyroidism",
+        title_vn="Hiểu về Suy giáp",
+        category="Disease",
+        content="""
+        # Hiểu về Suy giáp
+
+        ## Suy giáp là gì?
+
+        Suy giáp là tình trạng tuyến giáp sản xuất không đủ hormone tuyến giáp (T3, T4), dẫn đến giảm chuyển hóa. Bệnh phổ biến ở phụ nữ, đặc biệt sau 50 tuổi.
+
+        **⚠️ Đặc điểm:**
+        - Tuyến giáp hoạt động kém
+        - Giảm chuyển hóa toàn thân
+        - Phổ biến ở phụ nữ (gấp 5-10 lần nam)
+        - Cần điều trị suốt đời
+
+        **Nguyên nhân chính:**
+        - **Hashimoto (viêm giáp tự miễn):** 90% (nguyên nhân #1)
+        - Sau phẫu thuật cắt tuyến giáp
+        - Sau điều trị I-131
+        - Thiếu i-ốt (hiếm ở Việt Nam)
+        - Thuốc: Lithium, Amiodarone
+
+        ## Triệu chứng:
+
+        **Triệu chứng điển hình:**
+        - **Mệt mỏi, suy nhược:** Uể oải, không có sức
+        - **Tăng cân:** Dù ăn ít
+        - **Lạnh:** Không chịu được lạnh
+        - **Da khô, tóc rụng:** Da thô, tóc dễ gãy
+        - **Táo bón:** Giảm nhu động ruột
+        - **Trầm cảm:** Buồn, chán nản
+        - **Nhịp tim chậm:** < 60 lần/phút
+        - **Phù niêm:** Mặt phù, mí mắt sưng
+
+        **Triệu chứng khác:**
+        - Giọng khàn
+        - Khó tập trung, trí nhớ kém
+        - Đau cơ, cứng khớp
+        - Kinh nguyệt nhiều (nữ)
+        - Giảm ham muốn tình dục
+
+        **⚠️ Hôn mê phù niêm (Myxedema coma):**
+        - Hạ thân nhiệt < 35°C
+        - Hôn mê
+        - Suy hô hấp
+        - **Cấp cứu ngay!**
+
+        ## Nguyên nhân:
+
+        **1. Hashimoto:**
+        - Bệnh tự miễn
+        - Cơ thể tấn công tuyến giáp
+        - Có yếu tố di truyền
+
+        **2. Sau phẫu thuật/điều trị:**
+        - Cắt tuyến giáp
+        - Điều trị I-131 (cường giáp)
+
+        **3. Yếu tố nguy cơ:**
+        - Nữ giới
+        - Tuổi > 50
+        - Tiền sử gia đình
+        - Bệnh tự miễn khác
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **TSH tăng:** > 4.5 mIU/L
+        - **T4 giảm:** < 0.8 ng/dL
+        - **Anti-TPO, Anti-Tg:** Dương tính nếu Hashimoto
+
+        **Khám:**
+        - Siêu âm tuyến giáp
+
+        ## Điều trị:
+
+        **1. Levothyroxine (T4):**
+        - Thuốc đầu tay
+        - Bắt đầu liều thấp: 25-50 mcg/ngày
+        - Tăng dần mỗi 4-6 tuần
+        - **Dùng suốt đời**
+
+        **2. Liều duy trì:**
+        - 1.6-1.8 mcg/kg/ngày
+        - Uống buổi sáng, trước ăn 30-60 phút
+        - Không uống với sữa, canxi, sắt
+
+        **3. Theo dõi:**
+        - Xét nghiệm TSH sau 4-6 tuần
+        - Điều chỉnh liều theo TSH
+        - Mục tiêu: TSH 0.5-2.5 mIU/L
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Nên ăn:**
+        - **I-ốt (vừa phải):** Muối i-ốt, cá biển, rong biển (không quá nhiều)
+        - **Selen:** Cá, trứng, hạt (giúp chuyển đổi T4 → T3)
+        - **Kẽm:** Thịt, hải sản, hạt
+        - **Protein nạc:** Thịt, cá, đậu
+        - **Rau xanh, trái cây:** Đủ vitamin
+
+        **2. Hạn chế:**
+        - **Goitrogens (nếu thiếu i-ốt):** Bắp cải, súp lơ (nấu chín giảm tác dụng)
+        - **Đồ chế biến sẵn:** Ít dinh dưỡng
+
+        **3. Lưu ý:**
+        - **Canxi, sắt:** Uống cách xa Levothyroxine 4 giờ
+        - **Cà phê:** Uống cách xa Levothyroxine 1 giờ
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo yến mạch, trứng, sữa (sau khi uống thuốc 1 giờ)
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, hạt
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Khi chưa điều trị ổn:**
+        - Tập nhẹ: Đi bộ 15-20 phút/ngày
+        - Tránh gắng sức (mệt mỏi, nhịp tim chậm)
+
+        **2. Khi đã điều trị ổn:**
+        - Tập bình thường
+        - Đi bộ, chạy bộ, bơi lội
+        - 30 phút/ngày, 5 ngày/tuần
+        - Tăng cường cơ (phòng loãng xương)
+
+        **3. Lưu ý:**
+        - Khởi động kỹ (nhịp tim chậm)
+        - Nghỉ ngơi nếu mệt
+        - Uống đủ nước
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Levothyroxine:**
+        - **Uống buổi sáng, trước ăn 30-60 phút**
+        - Uống với nước lọc
+        - **Không uống với:** Sữa, canxi, sắt, cà phê
+        - Uống đều đặn, đúng giờ
+        - **Dùng suốt đời**
+
+        **2. Tác dụng phụ:**
+        - Quá liều: Nhịp tim nhanh, mất ngủ, run tay (như cường giáp)
+        - Thiếu liều: Triệu chứng suy giáp
+
+        **3. Theo dõi:**
+        - TSH mỗi 4-6 tuần (khi điều chỉnh liều)
+        - TSH mỗi 6-12 tháng (khi ổn định)
+        - Mục tiêu: TSH 0.5-2.5 mIU/L
+
+        **4. Lưu ý:**
+        - Không tự ý ngừng thuốc
+        - Không tự ý đổi liều
+        - Báo bác sĩ nếu có triệu chứng bất thường
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Hôn mê phù niêm:**
+        - Hạ thân nhiệt < 35°C
+        - Hôn mê
+        - Khó thở
+        - **Cấp cứu ngay!**
+
+        **2. Triệu chứng nặng:**
+        - Mệt mỏi quá mức
+        - Khó thở
+        - Đau ngực
+        - Rối loạn nhịp tim
+
+        **3. Quá liều thuốc:**
+        - Nhịp tim nhanh
+        - Mất ngủ
+        - Run tay
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Không thể phòng ngừa hoàn toàn:**
+        - Hashimoto là bệnh tự miễn
+        - Có yếu tố di truyền
+
+        **2. Có thể giảm nguy cơ:**
+        - Bổ sung i-ốt đủ (nếu thiếu)
+        - Khám định kỳ nếu có nguy cơ
+
+        **3. Phát hiện sớm:**
+        - Khám khi có triệu chứng
+        - Xét nghiệm TSH định kỳ (nếu có nguy cơ)
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi bị suy giáp:**
+        - Uống thuốc đều đặn, đúng cách
+        - Theo dõi triệu chứng
+        - Khám định kỳ
+        - Kiên nhẫn (cải thiện từ từ)
+
+        **2. Uống thuốc đúng cách:**
+        - Buổi sáng, trước ăn 30-60 phút
+        - Không uống với sữa, canxi, sắt
+        - Uống đều đặn, không quên
+
+        **3. Sống tích cực:**
+        - Suy giáp có thể kiểm soát tốt
+        - Điều trị đúng → Bình thường hóa hormone
+        - Có thể sống bình thường
+
+        **4. Mang thai:**
+        - Cần tăng liều (nhu cầu tăng)
+        - Theo dõi sát TSH
+        - Quan trọng cho sự phát triển thai nhi
+        """,
+        related_disease="hypothyroidism",
+        related_drugs=["Levothyroxine"],
+        printable=True
+    ),
+    
+    # === EPILEPSY (ĐỘNG KINH) ===
+    PatientEducationTopic(
+        id="epilepsy_basics",
+        title="Understanding Epilepsy",
+        title_vn="Hiểu về Động kinh",
+        category="Disease",
+        content="""
+        # Hiểu về Động kinh
+
+        ## Động kinh là gì?
+
+        Động kinh là rối loạn thần kinh đặc trưng bởi các cơn co giật tái phát do hoạt động điện bất thường của não. Bệnh có thể ảnh hưởng đến mọi lứa tuổi.
+
+        **⚠️ Đặc điểm:**
+        - Cơn co giật tái phát
+        - Do hoạt động điện bất thường của não
+        - Có thể kiểm soát bằng thuốc
+        - Cần điều trị lâu dài
+
+        **Phân loại:**
+        - **Focal (cục bộ):** Bắt đầu từ một vùng não
+        - **Generalized (toàn thể):** Ảnh hưởng toàn bộ não
+        - **Unknown:** Không xác định được
+
+        ## Triệu chứng:
+
+        **Cơn co giật toàn thể (Generalized):**
+        - **Co cứng-co giật:** Co cứng → Co giật toàn thân
+        - **Mất ý thức:** Không nhớ gì sau cơn
+        - **Cắn lưỡi:** Có thể xảy ra
+        - **Tiểu không tự chủ:** Có thể xảy ra
+        - **Sau cơn:** Mệt mỏi, lú lẫn, đau đầu
+
+        **Cơn co giật cục bộ (Focal):**
+        - **Có ý thức:** Vẫn tỉnh táo
+        - **Triệu chứng:** Phụ thuộc vùng não
+          - Vận động: Co giật một bên
+          - Cảm giác: Tê, ngứa ran
+          - Thị giác: Nhìn thấy ánh sáng, hình ảnh
+          - Tâm thần: Sợ hãi, déjà vu
+
+        **Cơn vắng (Absence):**
+        - Nhìn chằm chằm, mất ý thức ngắn (5-10 giây)
+        - Thường gặp ở trẻ em
+        - Không có co giật
+
+        **⚠️ Status epilepticus:**
+        - Cơn co giật kéo dài > 5 phút
+        - Hoặc nhiều cơn liên tiếp không hồi phục
+        - **Cấp cứu ngay!**
+
+        ## Nguyên nhân:
+
+        **1. Vô căn (không rõ nguyên nhân):**
+        - 50-60% trường hợp
+        - Có thể do di truyền
+
+        **2. Thứ phát:**
+        - Sau chấn thương đầu
+        - Sau đột quỵ
+        - U não
+        - Nhiễm trùng não (viêm màng não, viêm não)
+        - Rối loạn chuyển hóa
+        - Sốt cao (trẻ em)
+
+        **3. Yếu tố kích thích:**
+        - Thiếu ngủ
+        - Rượu bia
+        - Stress
+        - Ánh sáng nhấp nháy
+        - Quên uống thuốc
+
+        ## Chẩn đoán:
+
+        **Xét nghiệm:**
+        - **EEG (Điện não đồ):** Phát hiện sóng bất thường
+        - **MRI não:** Tìm nguyên nhân
+        - **CT não:** Nếu không có MRI
+        - **Xét nghiệm máu:** Điện giải, đường huyết, chức năng gan
+
+        ## Điều trị:
+
+        **1. Thuốc chống động kinh (AED):**
+        - **Carbamazepine:** Focal seizures
+        - **Valproate:** Generalized seizures
+        - **Lamotrigine:** Focal và generalized
+        - **Levetiracetam:** Focal và generalized
+        - **Topiramate:** Focal và generalized
+        - **Bắt đầu một thuốc, tăng dần liều**
+        - **Kết hợp 2-3 thuốc nếu cần**
+
+        **2. Phẫu thuật:**
+        - Nếu kháng thuốc
+        - Có tổn thương rõ trên MRI
+
+        **3. Kích thích dây thần kinh phế vị (VNS):**
+        - Nếu kháng thuốc, không phẫu thuật được
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Nên ăn:**
+        - **Chế độ ăn bình thường, đủ dinh dưỡng**
+        - Protein: Thịt, cá, trứng, đậu
+        - Carbohydrate: Cơm, bánh mì, mì
+        - Rau xanh, trái cây
+        - Uống đủ nước
+
+        **2. Ketogenic diet (nếu có chỉ định):**
+        - Chế độ ăn nhiều chất béo, ít carbohydrate
+        - Chỉ dùng khi có chỉ định bác sĩ
+        - Cần theo dõi sát
+
+        **3. Tránh:**
+        - Rượu bia (kích thích cơn)
+        - Caffeine quá nhiều (có thể kích thích)
+        - Bỏ bữa (hạ đường huyết → cơn)
+
+        **4. Thực đơn mẫu:**
+        - **Sáng:** Cháo/cơm, thịt/cá, rau
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, sữa
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Nên tập:**
+        - Tập thể dục bình thường (nếu cơn đã kiểm soát)
+        - Đi bộ, chạy bộ, bơi lội
+        - 30 phút/ngày, 5 ngày/tuần
+        - **Lợi ích:** Giảm stress, cải thiện giấc ngủ
+
+        **2. Tránh:**
+        - Bơi một mình (cần người giám sát)
+        - Leo núi, nhảy dù (nguy hiểm nếu có cơn)
+        - Tập quá mệt (thiếu ngủ → cơn)
+
+        **3. Lưu ý:**
+        - Ngủ đủ giấc (quan trọng!)
+        - Uống đủ nước khi tập
+        - Mang theo thông tin y tế
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Uống đúng cách:**
+        - **Uống đều đặn, đúng giờ** (quan trọng nhất!)
+        - Không tự ý ngừng thuốc
+        - Không tự ý đổi liều
+        - Uống với nước, sau ăn
+
+        **2. Tác dụng phụ:**
+        - **Carbamazepine:** Chóng mặt, buồn nôn, phát ban
+        - **Valproate:** Tăng cân, rụng tóc, tổn thương gan
+        - **Lamotrigine:** Phát ban (nguy hiểm nếu nặng)
+        - **Levetiracetam:** Buồn ngủ, cáu gắt
+        - **Topiramate:** Sỏi thận, giảm cân
+
+        **3. Theo dõi:**
+        - Nồng độ thuốc trong máu (nếu cần)
+        - Chức năng gan, thận định kỳ
+        - Đếm số cơn co giật
+
+        **4. Lưu ý:**
+        - Báo bác sĩ nếu có tác dụng phụ
+        - Không ngừng thuốc đột ngột (nguy hiểm!)
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Status epilepticus:**
+        - Cơn co giật > 5 phút
+        - Nhiều cơn liên tiếp
+        - **Cấp cứu ngay!**
+
+        **2. Chấn thương do cơn:**
+        - Ngã, đập đầu
+        - Gãy xương
+        - Chảy máu
+
+        **3. Tác dụng phụ nặng:**
+        - Phát ban nặng (Lamotrigine)
+        - Vàng da (tổn thương gan)
+        - Rối loạn tâm thần
+
+        **4. Cơn mới:**
+        - Cơn đầu tiên
+        - Cơn thay đổi tính chất
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tránh yếu tố kích thích:**
+        - **Ngủ đủ giấc** (quan trọng nhất!)
+        - Tránh rượu bia
+        - Quản lý stress
+        - Tránh ánh sáng nhấp nháy (nếu nhạy cảm)
+
+        **2. Uống thuốc đều đặn:**
+        - Không quên uống thuốc
+        - Đặt báo thức nhắc uống thuốc
+        - Mang thuốc khi đi xa
+
+        **3. An toàn:**
+        - Đeo vòng cảnh báo y tế
+        - Thông báo cho người xung quanh
+        - Tránh hoạt động nguy hiểm
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi có cơn co giật:**
+        - **KHÔNG:** Đưa vật vào miệng, giữ chặt, đổ nước
+        - **NÊN:** Đặt nằm nghiêng, bảo vệ đầu, gọi cấp cứu nếu > 5 phút
+
+        **2. Sống tích cực:**
+        - Động kinh có thể kiểm soát bằng thuốc
+        - 70% bệnh nhân không còn cơn với điều trị đúng
+        - Có thể sống bình thường, làm việc, học tập
+
+        **3. Hỗ trợ:**
+        - Tham gia nhóm hỗ trợ
+        - Giáo dục gia đình, bạn bè
+        - Tư vấn tâm lý (nếu cần)
+
+        **4. Mang thai:**
+        - Cần điều chỉnh thuốc (một số thuốc ảnh hưởng thai nhi)
+        - Bổ sung acid folic
+        - Theo dõi sát
+        """,
+        related_disease="epilepsy",
+        related_drugs=["Carbamazepine", "Valproate", "Lamotrigine", "Levetiracetam", "Topiramate"],
+        printable=True
+    ),
+    
+    # === MIGRAINE (ĐAU NỬA ĐẦU) ===
+    PatientEducationTopic(
+        id="migraine_basics",
+        title="Understanding Migraine",
+        title_vn="Hiểu về Đau nửa đầu (Migraine)",
+        category="Disease",
+        content="""
+        # Hiểu về Đau nửa đầu (Migraine)
+
+        ## Migraine là gì?
+
+        Migraine là bệnh đau đầu nguyên phát, đặc trưng bởi cơn đau đầu một bên, đau nhói, kèm buồn nôn, nhạy cảm ánh sáng/tiếng động. Bệnh rất phổ biến, ảnh hưởng đến chất lượng cuộc sống.
+
+        **⚠️ Đặc điểm:**
+        - Đau đầu một bên (có thể hai bên)
+        - Đau nhói, đau vừa đến nặng
+        - Kèm buồn nôn, nhạy cảm ánh sáng/tiếng động
+        - Tăng khi vận động
+        - Kéo dài 4-72 giờ
+
+        **Phân loại:**
+        - **Migraine không aura:** 80% (không có dấu hiệu báo trước)
+        - **Migraine có aura:** 20% (có dấu hiệu báo trước: rối loạn thị giác, cảm giác)
+
+        ## Triệu chứng:
+
+        **Giai đoạn tiền triệu (Prodrome):** 1-2 ngày trước cơn
+        - Thay đổi tâm trạng
+        - Cổ cứng
+        - Thèm ăn
+        - Táo bón hoặc tiêu chảy
+
+        **Giai đoạn aura (nếu có):** 5-60 phút trước cơn
+        - **Rối loạn thị giác:** Nhìn thấy ánh sáng, đường zigzag, mất thị trường
+        - **Rối loạn cảm giác:** Tê, ngứa ran một bên
+        - **Rối loạn ngôn ngữ:** Nói khó
+
+        **Giai đoạn đau đầu:**
+        - **Đau một bên:** Có thể hai bên
+        - **Đau nhói:** Như đập, đau vừa đến nặng
+        - **Tăng khi vận động:** Đi lại, cúi xuống
+        - **Kéo dài:** 4-72 giờ (không điều trị)
+        - **Buồn nôn, nôn**
+        - **Nhạy cảm ánh sáng (photophobia)**
+        - **Nhạy cảm tiếng động (phonophobia)**
+
+        **Giai đoạn hồi phục (Postdrome):** Sau cơn
+        - Mệt mỏi
+        - Lú lẫn
+        - Có thể kéo dài 1-2 ngày
+
+        ## Nguyên nhân:
+
+        **1. Yếu tố di truyền:**
+        - Có tiền sử gia đình
+
+        **2. Yếu tố kích thích:**
+        - **Thức ăn:** Rượu (đặc biệt rượu vang đỏ), phô mai, chocolate, thực phẩm chế biến
+        - **Hormone:** Kinh nguyệt, mãn kinh, thuốc tránh thai
+        - **Stress:** Căng thẳng, lo âu
+        - **Thiếu ngủ hoặc ngủ quá nhiều**
+        - **Thay đổi thời tiết**
+        - **Mùi hương mạnh**
+        - **Ánh sáng chói**
+
+        **3. Yếu tố nguy cơ:**
+        - Nữ giới (gấp 3 lần nam)
+        - Tuổi 30-40
+        - Tiền sử gia đình
+
+        ## Chẩn đoán:
+
+        **Tiêu chuẩn ICHD-3:**
+        - ≥ 5 cơn đau đầu với đặc điểm migraine
+        - Đau đầu kéo dài 4-72 giờ
+        - Có ≥ 2: một bên, nhói, vừa-nặng, tăng khi vận động
+        - Có ≥ 1: buồn nôn/vom, nhạy cảm ánh sáng/tiếng động
+
+        **Xét nghiệm:**
+        - Không cần xét nghiệm đặc biệt
+        - CT/MRI não (nếu có triệu chứng báo động)
+
+        ## Điều trị:
+
+        **1. Cắt cơn:**
+        - **Triptan:** Sumatriptan, Rizatriptan (nếu đau vừa-nặng)
+        - **NSAID:** Ibuprofen, Naproxen (nếu đau nhẹ-vừa)
+        - **Paracetamol:** Nếu đau nhẹ
+        - **Uống sớm:** Khi mới bắt đầu đau (hiệu quả hơn)
+
+        **2. Chống nôn:**
+        - Metoclopramide, Ondansetron
+
+        **3. Phòng ngừa (nếu ≥ 4 cơn/tháng):**
+        - **Beta-blocker:** Propranolol
+        - **Topiramate**
+        - **Amitriptyline**
+        - **CGRP antagonist:** Erenumab (nếu nặng)
+
+        ## 🍽️ CHẾ ĐỘ ĂN:
+
+        **1. Tránh yếu tố kích thích:**
+        - **Rượu:** Đặc biệt rượu vang đỏ
+        - **Phô mai già:** Cheddar, Swiss
+        - **Chocolate**
+        - **Thực phẩm chế biến:** Thịt xông khói, xúc xích
+        - **Mùi hương mạnh:** Hành, tỏi (một số người)
+
+        **2. Nên ăn:**
+        - **Ăn đều đặn:** Không bỏ bữa (hạ đường huyết → cơn)
+        - **Thực phẩm tươi:** Rau xanh, trái cây
+        - **Protein nạc:** Thịt, cá
+        - **Uống đủ nước**
+
+        **3. Thực đơn mẫu:**
+        - **Sáng:** Cháo/cơm, trứng, sữa
+        - **Trưa:** Cơm, thịt/cá, rau xanh, canh
+        - **Chiều:** Cơm, thịt/cá, rau xanh, canh
+        - **Bữa phụ:** Trái cây, hạt
+
+        **4. Lưu ý:**
+        - Ghi nhật ký đau đầu (tìm yếu tố kích thích)
+        - Tránh thức ăn gây cơn
+
+        ## 🏃 TẬP THỂ DỤC:
+
+        **1. Nên tập:**
+        - Tập thể dục đều đặn (giảm tần suất cơn)
+        - Đi bộ, chạy bộ, bơi lội, yoga
+        - 30 phút/ngày, 5 ngày/tuần
+        - **Lợi ích:** Giảm stress, cải thiện giấc ngủ
+
+        **2. Tránh:**
+        - Tập quá mệt (có thể kích thích cơn)
+        - Tập khi đang đau đầu
+
+        **3. Lưu ý:**
+        - Khởi động kỹ
+        - Uống đủ nước
+        - Nghỉ ngơi nếu mệt
+
+        ## 💊 QUẢN LÝ THUỐC:
+
+        **1. Cắt cơn:**
+        - **Uống sớm:** Khi mới bắt đầu đau
+        - Triptan: Không dùng quá 2-3 lần/tuần (tránh lạm dụng)
+        - NSAID: Uống sau ăn (tránh đau dạ dày)
+
+        **2. Phòng ngừa:**
+        - Uống đều đặn, đúng giờ
+        - Cần 2-3 tháng để thấy hiệu quả
+        - Không tự ý ngừng
+
+        **3. Tác dụng phụ:**
+        - **Triptan:** Đau ngực, chóng mặt (hiếm)
+        - **Propranolol:** Mệt mỏi, chóng mặt
+        - **Topiramate:** Tê tay chân, giảm cân
+
+        **4. Lưu ý:**
+        - Tránh lạm dụng thuốc (có thể gây đau đầu do thuốc)
+        - Báo bác sĩ nếu có tác dụng phụ
+
+        ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+        **1. Đau đầu báo động:**
+        - Đau đầu đột ngột, dữ dội ("thunderclap")
+        - Đau đầu kèm sốt, cổ cứng
+        - Đau đầu sau chấn thương
+        - Đau đầu kèm yếu liệt, rối loạn thị giác mới
+        - Đau đầu ở người > 50 tuổi lần đầu
+
+        **2. Migraine nặng:**
+        - Đau > 72 giờ (status migrainosus)
+        - Nôn nhiều, mất nước
+        - Không đáp ứng điều trị
+
+        **3. Tác dụng phụ thuốc:**
+        - Đau ngực (Triptan)
+        - Tác dụng phụ nặng
+
+        ## 💡 PHÒNG NGỪA:
+
+        **1. Tránh yếu tố kích thích:**
+        - Ghi nhật ký đau đầu (tìm yếu tố kích thích)
+        - Tránh thức ăn, mùi hương gây cơn
+        - Quản lý stress
+
+        **2. Lối sống:**
+        - **Ngủ đủ giấc** (quan trọng!)
+        - Ăn đều đặn, không bỏ bữa
+        - Tập thể dục đều đặn
+        - Uống đủ nước
+
+        **3. Thuốc phòng ngừa:**
+        - Nếu ≥ 4 cơn/tháng
+        - Nếu cơn ảnh hưởng nhiều đến cuộc sống
+
+        ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+        **1. Khi có cơn đau:**
+        - Nghỉ ngơi trong phòng tối, yên tĩnh
+        - Uống thuốc sớm
+        - Chườm lạnh trán
+        - Ngủ (nếu có thể)
+
+        **2. Sống tích cực:**
+        - Migraine có thể kiểm soát
+        - Điều trị đúng → Giảm tần suất, mức độ
+        - Có thể sống bình thường
+
+        **3. Hỗ trợ:**
+        - Ghi nhật ký đau đầu
+        - Tham gia nhóm hỗ trợ
+        - Tư vấn tâm lý (nếu cần)
+
+        **4. Mang thai:**
+        - Một số thuốc không dùng được
+        - Paracetamol an toàn
+        - Triptan: Cần thận trọng
+        - Tư vấn bác sĩ
+        """,
+        related_disease="migraine",
+        related_drugs=["Sumatriptan", "Rizatriptan", "Ibuprofen", "Naproxen", "Propranolol", "Topiramate"],
+        printable=True
+    ),
 ]

@@ -118,44 +118,87 @@ def render_guideline_card(guideline, index: int):
     # Xác định năm có cần cập nhật không
     current_year = 2025
     is_old = guideline.year < 2020
-    year_badge_class = "year-badge-old" if is_old else "year-badge"
+    year_bg = '#ffebee' if is_old else '#e3f2fd'
+    year_color = '#c62828' if is_old else '#1976d2'
     
+    # Build HTML parts separately to avoid f-string nesting issues
+    title_html = html.escape(guideline.title_vn)
+    org_html = html.escape(guideline.organization)
+    category_html = html.escape(guideline.category)
+    
+    # Description section
+    description_html = ''
+    if guideline.description:
+        desc_escaped = html.escape(guideline.description)
+        description_html = f'<p style="color: #616161; margin: 8px 0; font-size: 0.9rem;">{desc_escaped}</p>'
+    
+    # Key recommendations section
+    recommendations_html = ''
+    if guideline.key_recommendations:
+        rec_items = ''.join([
+            f'<li style="margin-bottom: 4px;">{html.escape(rec)}</li>' 
+            for rec in guideline.key_recommendations[:5]
+        ])
+        recommendations_html = f'''
+        <div style="margin: 12px 0; padding: 10px; background: #f3f6ff; border-left: 3px solid {border_color}; border-radius: 6px;">
+            <div style="font-weight: 600; color: #2a3f6b; margin-bottom: 6px; font-size: 0.85rem;">⭐ Khuyến nghị chính:</div>
+            <ul style="margin: 0; padding-left: 20px; color: #455a64; font-size: 0.85rem; line-height: 1.6;">
+                {rec_items}
+            </ul>
+        </div>
+        '''
+    
+    # Update warning
+    update_warning = ''
+    if is_old:
+        update_warning = '<span style="font-size: 0.8rem; color: #c62828; margin-left: 8px;">⚠️ Cần cập nhật</span>'
+    
+    # Links and metadata section
+    links_html = ''
+    if guideline.url:
+        url_escaped = html.escape(guideline.url)
+        links_html += f'<a href="{url_escaped}" target="_blank" style="color: #1976d2; text-decoration: none; font-size: 0.9rem; font-weight: 500;">🔗 Xem guideline đầy đủ</a>'
+    
+    if guideline.related_protocol:
+        protocol_escaped = html.escape(guideline.related_protocol)
+        if links_html:
+            links_html += ' '
+        links_html += f'<span style="color: #616161; font-size: 0.9rem;">📋 Protocol: <strong>{protocol_escaped}</strong></span>'
+    
+    if guideline.last_updated:
+        updated_escaped = html.escape(guideline.last_updated)
+        if links_html:
+            links_html += ' '
+        links_html += f'<span style="color: #757575; font-size: 0.85rem;">🔄 Cập nhật: {updated_escaped}</span>'
+    
+    # Build final HTML
     card_html = f"""
     <div class="guideline-card" style="border-left-color: {border_color};">
         <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
             <h3 style="margin: 0; font-size: 1.2rem; font-weight: 600; color: #1a1a1a; flex: 1;">
-                {html.escape(guideline.title_vn)}
+                {title_html}
             </h3>
-            <span class="year-badge" style="background: {'#ffebee' if is_old else '#e3f2fd'}; color: {'#c62828' if is_old else '#1976d2'};">
+            <span class="year-badge" style="background: {year_bg}; color: {year_color};">
                 {guideline.year}
             </span>
         </div>
         
         <div style="margin-bottom: 12px;">
             <span class="org-badge" style="background: {org_color}20; color: {org_color}; border: 1px solid {org_color}40;">
-                {html.escape(guideline.organization)}
+                {org_html}
             </span>
             <span class="category-badge">
-                {html.escape(guideline.category)}
+                {category_html}
             </span>
-            {f'<span style="font-size: 0.8rem; color: #c62828; margin-left: 8px;">⚠️ Cần cập nhật</span>' if is_old else ''}
+            {update_warning}
         </div>
         
-        {f'<p style="color: #616161; margin: 8px 0; font-size: 0.9rem;">{html.escape(guideline.description)}</p>' if guideline.description else ''}
+        {description_html}
         
-        {f'''
-        <div style="margin: 12px 0; padding: 10px; background: #f3f6ff; border-left: 3px solid {border_color}; border-radius: 6px;">
-            <div style="font-weight: 600; color: #2a3f6b; margin-bottom: 6px; font-size: 0.85rem;">⭐ Khuyến nghị chính:</div>
-            <ul style="margin: 0; padding-left: 20px; color: #455a64; font-size: 0.85rem; line-height: 1.6;">
-                {''.join([f'<li style="margin-bottom: 4px;">{html.escape(rec)}</li>' for rec in guideline.key_recommendations[:5]])}
-            </ul>
-        </div>
-        ''' if guideline.key_recommendations else ''}
+        {recommendations_html}
         
         <div style="margin-top: 12px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
-            {f'<a href="{guideline.url}" target="_blank" style="color: #1976d2; text-decoration: none; font-size: 0.9rem; font-weight: 500;">🔗 Xem guideline đầy đủ</a>' if guideline.url else ''}
-            {f'<span style="color: #616161; font-size: 0.9rem;">📋 Protocol: <strong>{html.escape(guideline.related_protocol)}</strong></span>' if guideline.related_protocol else ''}
-            {f'<span style="color: #757575; font-size: 0.85rem;">🔄 Cập nhật: {html.escape(guideline.last_updated)}</span>' if guideline.last_updated else ''}
+            {links_html}
         </div>
     </div>
     """

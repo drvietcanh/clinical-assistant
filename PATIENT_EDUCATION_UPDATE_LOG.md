@@ -550,6 +550,127 @@ patient_education/
 ---
 
 **Người thực hiện:** AI Assistant
-**Ngày cập nhật cuối:** 2024
-**Trạng thái:** ✅ Đã bổ sung 16 bệnh mới (từ 12 → 28 bệnh), tất cả đều có nội dung chi tiết
+**Ngày cập nhật cuối:** 2025-02-18
+**Trạng thái:** ✅ Đã bổ sung 30 bệnh (từ 12 → 30 bệnh), tất cả đều có nội dung chi tiết
+
+---
+
+## 12. CẬP NHẬT MỚI NHẤT - 2025-02-18 (Tiếp tục)
+
+### Bổ sung 2 bệnh mới (Lần 4):
+29. **Sốt rét (Malaria)**
+    - Bệnh lưu hành ở vùng miền núi Việt Nam
+    - Triệu chứng: Sốt cao, ớn lạnh, vã mồ hôi (chu kỳ)
+    - Điều trị: Artesunate + Mefloquine (P. falciparum), Chloroquine + Primaquine (P. vivax)
+    - Chế độ ăn: Uống nhiều nước, ăn đủ dinh dưỡng
+    - Phòng ngừa: Ngủ màn, thuốc phòng khi đi vùng lưu hành
+    - Dấu hiệu sốt rét nặng: Rối loạn ý thức, co giật, suy thận
+
+30. **Cường giáp (Hyperthyroidism)**
+    - Phổ biến ở phụ nữ (20-40 tuổi)
+    - Triệu chứng: Nhịp tim nhanh, sụt cân, run tay, ra mồ hôi nhiều
+    - Nguyên nhân: Basedow (70-80%), bướu giáp đa nhân độc
+    - Điều trị: Methimazole, I-131, phẫu thuật
+    - Chế độ ăn: Bổ sung canxi, vitamin D (phòng loãng xương)
+    - Tập thể dục: Nhẹ khi chưa ổn, bình thường khi đã ổn
+    - Cơn cường giáp cấp: Sốt cao, nhịp tim > 140, rối loạn ý thức
+
+**Tổng số bệnh:** 31 bệnh (tăng từ 28)
+
+31. **Suy giáp (Hypothyroidism)**
+    - Phổ biến ở phụ nữ sau 50 tuổi
+    - Triệu chứng: Mệt mỏi, tăng cân, lạnh, da khô, táo bón, trầm cảm
+    - Nguyên nhân: Hashimoto (90%), sau phẫu thuật/điều trị I-131
+    - Điều trị: Levothyroxine (dùng suốt đời)
+    - Chế độ ăn: Bổ sung i-ốt, selen, kẽm (vừa phải)
+    - Tập thể dục: Nhẹ khi chưa ổn, bình thường khi đã ổn
+    - Uống thuốc: Buổi sáng, trước ăn 30-60 phút, không với sữa/canxi/sắt
+    - Hôn mê phù niêm: Hạ thân nhiệt, hôn mê (cấp cứu ngay!)
+
+---
+
+## 11. CẬP NHẬT MỚI NHẤT - 2025-02-18
+
+### Tiến trình trang 👥 Giáo dục Bệnh nhân:
+
+**Tổng số bệnh hiện có:** 28 bệnh
+
+**Danh sách đầy đủ:**
+1. ✅ Đái tháo đường
+2. ✅ Tăng huyết áp
+3. ✅ Viêm phổi
+4. ✅ Suy tim
+5. ✅ COPD
+6. ✅ Hen phế quản
+7. ✅ GERD
+8. ✅ UTI
+9. ✅ Thoái hóa khớp
+10. ✅ Trầm cảm
+11. ✅ Sốt xuất huyết Dengue
+12. ✅ Bệnh Gout
+13. ✅ Đột quỵ
+14. ✅ Viêm gan B/C
+15. ✅ Lao phổi
+16. ✅ Viêm loét dạ dày tá tràng
+17. ✅ Sỏi thận
+18. ✅ Tay chân miệng
+19. ✅ Cúm
+20. ✅ Viêm khớp dạng thấp
+21. ✅ Nhồi máu cơ tim
+22. ✅ Viêm dạ dày
+23. ✅ Viêm xoang
+24. ✅ Viêm phế quản
+25. ✅ Tiêu chảy cấp
+26. ✅ Viêm mũi dị ứng
+27. ✅ Đau lưng
+28. ✅ Viêm gan A
+
+### Các bệnh thường gặp ở Việt Nam cần bổ sung tiếp:
+
+**Ưu tiên cao:**
+- Sốt rét (Malaria) - Bệnh lưu hành ở vùng miền núi
+- Cường giáp (Hyperthyroidism) - Phổ biến ở phụ nữ
+- Suy giáp (Hypothyroidism) - Tăng dần ở người cao tuổi
+- Động kinh (Epilepsy) - Bệnh thần kinh phổ biến
+- Đau nửa đầu (Migraine) - Rất phổ biến
+- Thiếu máu thiếu sắt (Iron Deficiency Anemia) - Nguyên nhân thiếu máu #1
+- Viêm da cơ địa (Atopic Dermatitis) - Bệnh da liễu phổ biến
+- Viêm họng cấp (Acute Pharyngitis) - Nhiễm trùng đường hô hấp trên
+- Viêm tai giữa (Otitis Media) - Phổ biến ở trẻ em
+- Loãng xương (Osteoporosis) - Tăng ở phụ nữ sau mãn kinh
+- Viêm kết mạc (Conjunctivitis) - Bệnh mắt phổ biến
+- Đục thủy tinh thể (Cataract) - Nguyên nhân mù lòa hàng đầu
+
+**Ưu tiên trung bình:**
+- Xơ gan (Cirrhosis)
+- Hội chứng ruột kích thích (IBS)
+- Bệnh Parkinson
+- Vẩy nến (Psoriasis)
+- Rối loạn lo âu (Anxiety Disorder)
+- Viêm não Nhật Bản (Japanese Encephalitis)
+
+### Đặc điểm nội dung hiện tại:
+
+✅ **Mỗi bệnh đều có:**
+- Định nghĩa và cơ chế bệnh
+- Triệu chứng chi tiết
+- Nguyên nhân và yếu tố nguy cơ
+- Chẩn đoán và xét nghiệm
+- Điều trị (thuốc, thủ thuật)
+- **Chế độ ăn:** Thực phẩm nên ăn/tránh, thực đơn mẫu
+- **Tập thể dục:** Loại, thời gian, cường độ
+- **Theo dõi và quản lý:** Cách theo dõi tại nhà
+- **Quản lý thuốc:** Cách uống đúng, tác dụng phụ
+- **Dấu hiệu cần cấp cứu**
+- **Phòng ngừa**
+- **Lời khuyên thực tế**
+
+### Chất lượng nội dung:
+
+- ✅ Nội dung chi tiết, đầy đủ (300-800 dòng/bệnh)
+- ✅ Dễ hiểu, dễ áp dụng
+- ✅ Có thực đơn mẫu, lời khuyên thực tế
+- ✅ Có dấu hiệu cảnh báo, hướng dẫn cấp cứu
+- ✅ Phù hợp với thực hành lâm sàng tại Việt Nam
+- ✅ Sử dụng emoji để dễ đọc (🍽️, 🏃, 💊, 🚨, 💡)
 

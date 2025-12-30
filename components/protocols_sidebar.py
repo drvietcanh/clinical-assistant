@@ -4,7 +4,7 @@ Helper functions for rendering protocol sidebar
 """
 
 import streamlit as st
-from typing import Optional
+from typing import Optional, Tuple
 from config.protocol_lists import SPECIALTY_LIST, get_protocol_list
 from components.protocol_favorites import (
     render_favorites_section,
@@ -66,7 +66,7 @@ def render_protocol_selector(
     )
 
 
-def render_protocols_sidebar() -> tuple[str, str, bool]:
+def render_protocols_sidebar() -> Tuple[str, str, bool]:
     """
     Render the complete protocols sidebar.
     
