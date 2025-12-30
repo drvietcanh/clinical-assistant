@@ -406,3 +406,163 @@ def create_dka_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     ]
     
     return nodes, edges
+
+
+def create_copd_exacerbation_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create COPD Exacerbation initial management flowchart
+
+    Dựa trên:
+    - GOLD (Global Initiative for Chronic Obstructive Lung Disease) Report 2024
+    - ERS/ATS Guidelines on COPD Exacerbations
+    """
+    nodes = [
+        FlowchartNode("start", "Nghi đợt cấp COPD?", NodeType.START, icon="🫁"),
+        FlowchartNode("severity", "Đánh giá mức độ nặng:\nKhó thở, SpO₂, RR, Huyết động", NodeType.DECISION, icon="⚠️"),
+        FlowchartNode("mild_mod", "Nhẹ / Trung bình", NodeType.DECISION, icon="🟡"),
+        FlowchartNode("severe", "Nặng / Đe dọa suy hô hấp", NodeType.DECISION, icon="🔴"),
+        FlowchartNode("bronchodilator", "Khí dung SABA ± SAMA\n(VD: Salbutamol + Ipratropium)", NodeType.ACTION, icon="🌬️"),
+        FlowchartNode("steroid", "Corticosteroid toàn thân\n(VD: Prednisone 40mg x 5 ngày)", NodeType.ACTION, icon="💊"),
+        FlowchartNode("antibiotic", "Cân nhắc kháng sinh nếu:\nĐờm mủ / Tăng lượng đờm / Nhiễm trùng", NodeType.ACTION, icon="🧫"),
+        FlowchartNode("oxygen", "Oxy mục tiêu SpO₂ 88-92%", NodeType.ACTION, icon="🧷"),
+        FlowchartNode("niv", "Cân nhắc NIPPV (BiPAP)\nNếu PaCO₂ tăng / Toan hô hấp", NodeType.ACTION, icon="💨"),
+        FlowchartNode("admit", "Nhập viện / ICU\nNếu nặng", NodeType.END, color="#dc3545", icon="🏥"),
+        FlowchartNode("discharge", "Điều trị ngoại trú\nTheo dõi sát", NodeType.END, color="#28a745", icon="🏠"),
+    ]
+
+    edges = [
+        FlowchartEdge("start", "severity", ""),
+        FlowchartEdge("severity", "mild_mod", "Nhẹ / Trung bình"),
+        FlowchartEdge("severity", "severe", "Nặng / Nguy kịch"),
+        FlowchartEdge("mild_mod", "bronchodilator", ""),
+        FlowchartEdge("bronchodilator", "steroid", ""),
+        FlowchartEdge("steroid", "antibiotic", "Có chỉ định"),
+        FlowchartEdge("steroid", "discharge", "Không chỉ định KS\nỔn định"),
+        FlowchartEdge("antibiotic", "discharge", "Ổn định"),
+        FlowchartEdge("severe", "oxygen", ""),
+        FlowchartEdge("oxygen", "niv", "PaCO₂↑ / Toan hô hấp"),
+        FlowchartEdge("niv", "admit", "Cần ICU / NIPPV"),
+        FlowchartEdge("oxygen", "admit", "Không đáp ứng / Bệnh nền nặng"),
+    ]
+
+    return nodes, edges
+
+
+def create_asthma_exacerbation_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create Acute Asthma Exacerbation management flowchart
+
+    Dựa trên:
+    - GINA (Global Initiative for Asthma) Strategy 2024
+    - ERS/ATS Guidelines on Severe Asthma Exacerbations
+    """
+    nodes = [
+        FlowchartNode("start", "Cơn hen cấp?", NodeType.START, icon="🌬️"),
+        FlowchartNode("severity", "Đánh giá mức độ:\nSpO₂, RR, Nói câu / từ", NodeType.DECISION, icon="⚠️"),
+        FlowchartNode("mild", "Nhẹ / Trung bình", NodeType.DECISION, icon="🟡"),
+        FlowchartNode("severe", "Nặng / Đe dọa\nngừng thở", NodeType.DECISION, icon="🔴"),
+        FlowchartNode("saba", "SABA khí dung lặp lại\n(VD: Salbutamol mỗi 20 phút x 3)", NodeType.ACTION, icon="💨"),
+        FlowchartNode("steroid_po", "Corticosteroid uống\n(VD: Prednisone 1-2 mg/kg)", NodeType.ACTION, icon="💊"),
+        FlowchartNode("ipratropium", "Thêm Ipratropium\nnếu cơn nặng", NodeType.ACTION, icon="🧪"),
+        FlowchartNode("oxygen", "Oxy mục tiêu SpO₂ ≥94%", NodeType.ACTION, icon="🧷"),
+        FlowchartNode("iv_therapy", "Magnesium sulfate IV ±\nCorticosteroid IV", NodeType.ACTION, icon="💉"),
+        FlowchartNode("icu", "ICU / Đặt NKQ\nNếu đe dọa ngừng thở", NodeType.END, color="#dc3545", icon="🏥"),
+        FlowchartNode("discharge", "Xuất viện + Kế hoạch\nphòng ngừa lâu dài", NodeType.END, color="#28a745", icon="🏠"),
+    ]
+
+    edges = [
+        FlowchartEdge("start", "severity", ""),
+        FlowchartEdge("severity", "mild", "Nhẹ / Trung bình"),
+        FlowchartEdge("severity", "severe", "Nặng / Nguy kịch"),
+        FlowchartEdge("mild", "saba", ""),
+        FlowchartEdge("saba", "steroid_po", "Đáp ứng chưa đầy đủ"),
+        FlowchartEdge("steroid_po", "discharge", "Cải thiện"),
+        FlowchartEdge("severe", "oxygen", ""),
+        FlowchartEdge("oxygen", "ipratropium", ""),
+        FlowchartEdge("ipratropium", "iv_therapy", "Không cải thiện"),
+        FlowchartEdge("iv_therapy", "icu", "Xấu đi / CO₂↑"),
+        FlowchartEdge("iv_therapy", "discharge", "Cải thiện rõ"),
+    ]
+
+    return nodes, edges
+
+
+def create_acute_hf_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create Acute Decompensated Heart Failure / Pulmonary Edema flowchart
+
+    Dựa trên:
+    - ESC Guidelines for the Diagnosis and Treatment of Acute and Chronic Heart Failure (2021)
+    - AHA/ACC/HFSA Guidelines for the Management of Heart Failure (2022)
+    """
+    nodes = [
+        FlowchartNode("start", "Khó thở cấp / Phù phổi?", NodeType.START, icon="❤️"),
+        FlowchartNode("abcs", "ABC + Oxy + Monitor", NodeType.ACTION, icon="🧷"),
+        FlowchartNode("bp_check", "Đánh giá HA:\nHuyết áp cao / thấp", NodeType.DECISION, icon="⚖️"),
+        FlowchartNode("htn", "HA tăng (SBP ≥140)", NodeType.DECISION, icon="🟥"),
+        FlowchartNode("normotensive", "HA bình thường\n(SBP 100-140)", NodeType.DECISION, icon="🟨"),
+        FlowchartNode("hypotensive", "HA thấp (SBP <100)", NodeType.DECISION, icon="🟦"),
+        FlowchartNode("diuretic", "Furosemide IV\n(20-40 mg hoặc hơn nếu dùng trước đó)", NodeType.ACTION, icon="💊"),
+        FlowchartNode("vasodilator", "Vasodilator IV\n(VD: Nitroglycerin)", NodeType.ACTION, icon="💉"),
+        FlowchartNode("inotrope", "Inotrope ± Vasopressor\n(Noradrenaline / Dobutamine)", NodeType.ACTION, icon="💊"),
+        FlowchartNode("niv", "NIV (CPAP/BiPAP)\nNếu phù phổi nặng", NodeType.ACTION, icon="💨"),
+        FlowchartNode("icu", "ICU / Coronary Care Unit", NodeType.END, color="#dc3545", icon="🏥"),
+        FlowchartNode("ward", "Nhập viện nội tim mạch", NodeType.END, color="#ffc107", icon="🏥"),
+    ]
+
+    edges = [
+        FlowchartEdge("start", "abcs", ""),
+        FlowchartEdge("abcs", "bp_check", ""),
+        FlowchartEdge("bp_check", "htn", "SBP ≥140"),
+        FlowchartEdge("bp_check", "normotensive", "SBP 100-140"),
+        FlowchartEdge("bp_check", "hypotensive", "SBP <100"),
+        FlowchartEdge("htn", "vasodilator", ""),
+        FlowchartEdge("vasodilator", "diuretic", ""),
+        FlowchartEdge("normotensive", "diuretic", ""),
+        FlowchartEdge("hypotensive", "inotrope", ""),
+        FlowchartEdge("diuretic", "niv", "Phù phổi nặng"),
+        FlowchartEdge("niv", "icu", "Không cải thiện"),
+        FlowchartEdge("niv", "ward", "Cải thiện"),
+        FlowchartEdge("diuretic", "ward", "Ổn định"),
+        FlowchartEdge("inotrope", "icu", ""),
+    ]
+
+    return nodes, edges
+
+
+def create_anaphylaxis_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create Anaphylaxis emergency management flowchart
+
+    Dựa trên:
+    - WAO (World Allergy Organization) Anaphylaxis Guidelines
+    - EAACI (European Academy of Allergy and Clinical Immunology) Anaphylaxis Guidelines
+    - Resuscitation Council (UK) Anaphylaxis Guidelines
+    """
+    nodes = [
+        FlowchartNode("start", "Nghi sốc phản vệ?", NodeType.START, icon="⚡"),
+        FlowchartNode("abc", "ABC + Gọi hỗ trợ + Nằm ngửa\nNâng chân (trừ khó thở)", NodeType.ACTION, icon="🆘"),
+        FlowchartNode("im_adrenaline", "Tiêm Adrenaline IM\n0.3-0.5 mg (1:1000) đùi ngoài", NodeType.ACTION, color="#dc3545", icon="💉"),
+        FlowchartNode("oxygen", "Oxy lưu lượng cao\nMonitor SpO₂, HA, ECG", NodeType.ACTION, icon="🧷"),
+        FlowchartNode("fluids", "Bolus dịch nhanh\nCrystalloid 20 ml/kg", NodeType.ACTION, icon="💧"),
+        FlowchartNode("reassess", "Đánh giá lại sau mỗi\n5-10 phút", NodeType.DECISION, icon="👁️"),
+        FlowchartNode("repeat_im", "Lặp lại Adrenaline IM\nmỗi 5-10 phút nếu cần", NodeType.ACTION, icon="💉"),
+        FlowchartNode("adjunct", "Adjuncts:\nKháng Histamine, Corticoid", NodeType.ACTION, icon="💊"),
+        FlowchartNode("observe", "Theo dõi ≥4-6 giờ\n(24h nếu nặng)", NodeType.END, color="#ffc107", icon="👁️"),
+        FlowchartNode("icu", "ICU / Đặt NKQ\nNếu suy hô hấp / shock dai dẳng", NodeType.END, color="#dc3545", icon="🏥"),
+    ]
+
+    edges = [
+        FlowchartEdge("start", "abc", ""),
+        FlowchartEdge("abc", "im_adrenaline", ""),
+        FlowchartEdge("im_adrenaline", "oxygen", ""),
+        FlowchartEdge("oxygen", "fluids", ""),
+        FlowchartEdge("fluids", "reassess", ""),
+        FlowchartEdge("reassess", "repeat_im", "Không cải thiện"),
+        FlowchartEdge("reassess", "adjunct", "Cải thiện"),
+        FlowchartEdge("repeat_im", "fluids", "Vẫn không ổn"),
+        FlowchartEdge("repeat_im", "icu", "Shock / Suy hô hấp"),
+        FlowchartEdge("adjunct", "observe", ""),
+    ]
+
+    return nodes, edges

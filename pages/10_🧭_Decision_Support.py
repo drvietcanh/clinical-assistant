@@ -22,6 +22,10 @@ from components.flowcharts.clinical_rules import (
     create_shock_flowchart,
     create_gi_bleed_flowchart,
     create_dka_flowchart,
+    create_copd_exacerbation_flowchart,
+    create_asthma_exacerbation_flowchart,
+    create_acute_hf_flowchart,
+    create_anaphylaxis_flowchart,
 )
 from components.pregnancy_lactation_display import render_pregnancy_lactation_section
 from scores.pediatrics.pediatric_dosing import render_pediatric_dosing_calculator
@@ -91,6 +95,10 @@ if selected_feature == feature_options[0]:
         "Shock / Hypotension": create_shock_flowchart,
         "Upper GI Bleeding": create_gi_bleed_flowchart,
         "DKA Initial Management": create_dka_flowchart,
+        "COPD Exacerbation": create_copd_exacerbation_flowchart,
+        "Acute Asthma Exacerbation": create_asthma_exacerbation_flowchart,
+        "Acute Heart Failure / Pulmonary Edema": create_acute_hf_flowchart,
+        "Anaphylaxis": create_anaphylaxis_flowchart,
     }
     
     selected_algorithm = st.selectbox(
@@ -118,6 +126,10 @@ if selected_feature == feature_options[0]:
             "Shock / Hypotension": (900, 600),
             "Upper GI Bleeding": (900, 650),
             "DKA Initial Management": (900, 650),
+            "COPD Exacerbation": (900, 650),
+            "Acute Asthma Exacerbation": (900, 650),
+            "Acute Heart Failure / Pulmonary Edema": (900, 650),
+            "Anaphylaxis": (900, 600),
         }
         
         width, height = size_map.get(selected_algorithm, (800, 600))
@@ -248,6 +260,65 @@ if selected_feature == feature_options[0]:
                 - Lim WS, et al. Defining community acquired pneumonia severity on presentation to hospital (2003)
                 - IDSA/ATS Guidelines for Community-Acquired Pneumonia (2019)
                 - BTS (British Thoracic Society) Guidelines for Management of Community Acquired Pneumonia (2009, 2015)
+                """)
+            elif selected_algorithm == "COPD Exacerbation":
+                st.markdown("""
+                **COPD Exacerbation Algorithm:**
+
+                1. Nghi đợt cấp COPD
+                2. Đánh giá mức độ nặng (khó thở, SpO₂, RR, huyết động)
+                3. Nhẹ / Trung bình → SABA ± SAMA, Corticosteroid uống, Cân nhắc kháng sinh nếu có chỉ định
+                4. Nặng / Nguy kịch → Oxy 88-92%, NIPPV (BiPAP), Nhập viện / ICU
+
+                **📚 Dựa trên:**
+                - GOLD (Global Initiative for Chronic Obstructive Lung Disease) Report 2024
+                - ERS/ATS Guidelines on COPD Exacerbations
+                """)
+            elif selected_algorithm == "Acute Asthma Exacerbation":
+                st.markdown("""
+                **Acute Asthma Exacerbation Algorithm:**
+
+                1. Cơn hen cấp
+                2. Đánh giá mức độ (SpO₂, RR, nói câu/từ)
+                3. Nhẹ/Trung bình → SABA khí dung lặp lại, Corticosteroid uống
+                4. Nặng/Nguy kịch → Oxy, SABA + Ipratropium, Corticosteroid IV, Magnesium sulfate IV, ICU nếu đe dọa ngừng thở
+
+                **📚 Dựa trên:**
+                - GINA (Global Initiative for Asthma) Strategy 2024
+                - ERS/ATS Guidelines on Severe Asthma Exacerbations
+                """)
+            elif selected_algorithm == "Acute Heart Failure / Pulmonary Edema":
+                st.markdown("""
+                **Acute Heart Failure / Pulmonary Edema Algorithm:**
+
+                1. Khó thở cấp / phù phổi
+                2. ABC + Oxy + Monitor
+                3. Phân tầng theo huyết áp (HA cao / bình thường / thấp)
+                4. HA cao → Vasodilator IV + Furosemide
+                5. HA bình thường → Furosemide ± Vasodilator
+                6. HA thấp → Inotrope ± Vasopressor, ICU
+                7. Cân nhắc NIV (CPAP/BiPAP) nếu phù phổi nặng
+
+                **📚 Dựa trên:**
+                - ESC Guidelines for the Diagnosis and Treatment of Acute and Chronic Heart Failure (2021)
+                - AHA/ACC/HFSA Guidelines for the Management of Heart Failure (2022)
+                """)
+            elif selected_algorithm == "Anaphylaxis":
+                st.markdown("""
+                **Anaphylaxis Emergency Management Algorithm:**
+
+                1. Nghi sốc phản vệ
+                2. ABC + gọi hỗ trợ + nằm ngửa, nâng chân
+                3. Tiêm Adrenaline IM 0.3-0.5 mg (1:1000) mặt ngoài đùi, lặp lại mỗi 5-10 phút nếu cần
+                4. Oxy lưu lượng cao, Monitor SpO₂, HA, ECG
+                5. Bolus dịch nhanh Crystalloid 20 ml/kg
+                6. Adjuncts: Kháng Histamine, Corticoid
+                7. Theo dõi ≥4-6 giờ (24h nếu nặng), ICU nếu suy hô hấp/shock dai dẳng
+
+                **📚 Dựa trên:**
+                - WAO (World Allergy Organization) Anaphylaxis Guidelines
+                - EAACI (European Academy of Allergy and Clinical Immunology) Anaphylaxis Guidelines
+                - Resuscitation Council (UK) Anaphylaxis Guidelines
                 """)
             elif selected_algorithm == "Acute Chest Pain / ACS":
                 st.markdown("""
