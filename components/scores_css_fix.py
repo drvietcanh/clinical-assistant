@@ -188,94 +188,119 @@ def inject_text_overlap_fix():
     
     <script>
     (function() {
-        // Function to fix text input overlap
+        // Aggressive function to fix text input overlap
         function fixTextInputOverlap() {
-            // Find all text inputs
-            const textInputs = document.querySelectorAll('div[data-testid="stTextInput"]');
+            // Find all text inputs using multiple selectors
+            const textInputs = document.querySelectorAll('div[data-testid="stTextInput"], .stTextInput');
             
             textInputs.forEach(function(inputContainer) {
-                // Find the actual input element
-                const input = inputContainer.querySelector('input[type="text"]');
+                // Find the actual input element - try multiple ways
+                let input = inputContainer.querySelector('input[type="text"]');
+                if (!input) {
+                    input = inputContainer.querySelector('input');
+                }
                 if (!input) return;
                 
-                // Find and hide help icon to prevent overlap
+                // Find ALL possible overlapping elements
                 const helpIcon = inputContainer.querySelector('[data-testid="stTooltipIcon"]');
-                const allHelpIcons = inputContainer.querySelectorAll('[class*="help"], [class*="icon"], [data-baseweb="popover"]');
+                const allIcons = inputContainer.querySelectorAll('svg, [class*="icon"], [class*="help"], [data-baseweb="popover"], button[aria-label*="help"], button[aria-label*="tooltip"]');
+                const allOverlays = inputContainer.querySelectorAll('[style*="absolute"], [style*="fixed"], [class*="overlay"], [class*="tooltip"]');
                 
-                // Hide all help icons
-                if (helpIcon) {
-                    helpIcon.style.display = 'none';
-                    helpIcon.style.visibility = 'hidden';
-                    helpIcon.style.opacity = '0';
-                    helpIcon.style.width = '0';
-                    helpIcon.style.height = '0';
-                    helpIcon.style.position = 'absolute';
-                    helpIcon.style.left = '-9999px';
-                    helpIcon.style.pointerEvents = 'none';
-                }
-                
-                allHelpIcons.forEach(function(icon) {
-                    icon.style.display = 'none';
-                    icon.style.visibility = 'hidden';
-                    icon.style.opacity = '0';
-                    icon.style.pointerEvents = 'none';
-                });
-                
-                // Ensure input has proper padding (no need for extra padding since icon is hidden)
-                if (input) {
-                    input.style.paddingRight = '16px';
-                    input.style.width = '100%';
-                    input.style.maxWidth = '100%';
-                    input.style.boxSizing = 'border-box';
-                }
-                
-                // Remove any pseudo-elements
-                const style = document.createElement('style');
-                style.textContent = `
-                    div[data-testid="stTextInput"] *::before,
-                    div[data-testid="stTextInput"] *::after {
-                        content: none !important;
-                        display: none !important;
+                // Aggressively hide/remove ALL overlapping elements
+                function hideElement(el) {
+                    if (!el) return;
+                    el.style.display = 'none';
+                    el.style.visibility = 'hidden';
+                    el.style.opacity = '0';
+                    el.style.width = '0';
+                    el.style.height = '0';
+                    el.style.position = 'absolute';
+                    el.style.left = '-9999px';
+                    el.style.top = '-9999px';
+                    el.style.pointerEvents = 'none';
+                    el.style.zIndex = '-1';
+                    if (el.parentNode) {
+                        el.parentNode.style.position = 'relative';
                     }
+                }
+                
+                if (helpIcon) hideElement(helpIcon);
+                allIcons.forEach(hideElement);
+                allOverlays.forEach(hideElement);
+                
+                // Force input styles directly - override everything
+                const inputWrapper = input.closest('[data-baseweb="input"]') || input.parentElement;
+                if (inputWrapper) {
+                    inputWrapper.style.position = 'relative';
+                    inputWrapper.style.width = '100%';
+                    inputWrapper.style.overflow = 'visible';
+                }
+                
+                // Force input element styles
+                input.style.cssText = `
+                    position: relative !important;
+                    z-index: 1 !important;
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    min-width: 0 !important;
+                    padding: 12px 16px !important;
+                    padding-right: 16px !important;
+                    box-sizing: border-box !important;
+                    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+                    font-size: 16px !important;
+                    line-height: 1.5 !important;
+                    color: rgb(49, 51, 63) !important;
+                    background: white !important;
+                    border: 1px solid rgb(230, 234, 241) !important;
+                    border-radius: 8px !important;
+                    white-space: nowrap !important;
+                    overflow: hidden !important;
+                    text-overflow: ellipsis !important;
                 `;
-                document.head.appendChild(style);
+                
+                // Ensure container doesn't have overflow hidden
+                inputContainer.style.overflow = 'visible';
+                inputContainer.style.position = 'relative';
             });
         }
         
-        // Fix immediately
-        fixTextInputOverlap();
+        // Run immediately
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', fixTextInputOverlap);
+        } else {
+            fixTextInputOverlap();
+        }
         
-        // Fix after DOM changes (Streamlit renders dynamically)
-        const observer = new MutationObserver(function(mutations) {
-            let shouldFix = false;
-            mutations.forEach(function(mutation) {
-                if (mutation.addedNodes.length > 0) {
-                    mutation.addedNodes.forEach(function(node) {
-                        if (node.nodeType === 1 && (
-                            node.querySelector && node.querySelector('div[data-testid="stTextInput"]') ||
-                            node.matches && node.matches('div[data-testid="stTextInput"]')
-                        )) {
-                            shouldFix = true;
-                        }
-                    });
-                }
+        // Aggressive MutationObserver - check more frequently
+        const observer = new MutationObserver(function() {
+            fixTextInputOverlap();
+        });
+        
+        // Start observing immediately
+        if (document.body) {
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+                attributeFilter: ['style', 'class']
             });
-            if (shouldFix) {
-                setTimeout(fixTextInputOverlap, 100);
-            }
-        });
+        } else {
+            document.addEventListener('DOMContentLoaded', function() {
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true,
+                    attributes: true,
+                    attributeFilter: ['style', 'class']
+                });
+            });
+        }
         
-        // Start observing
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-        
-        // Also fix on window load
+        // Multiple event listeners
         window.addEventListener('load', fixTextInputOverlap);
+        window.addEventListener('resize', fixTextInputOverlap);
         
-        // Fix periodically as fallback
-        setInterval(fixTextInputOverlap, 1000);
+        // More frequent interval check
+        setInterval(fixTextInputOverlap, 200);
     })();
     </script>
     """, unsafe_allow_html=True)
