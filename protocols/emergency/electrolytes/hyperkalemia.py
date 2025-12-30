@@ -271,7 +271,7 @@ def render():
         st.markdown("---")
         st.markdown("#### 📋 Bảng Tỷ lệ Pha Insulin (Actrapid) trong Dịch truyền Glucose")
         
-        # Create table using HTML for better formatting
+        # Create table using HTML for better formatting with proper font support
         st.markdown("""
         <style>
         .insulin-table {
@@ -279,6 +279,8 @@ def render():
             border-collapse: collapse;
             margin: 20px 0;
             font-size: 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            font-encoding: utf-8;
         }
         .insulin-table th {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

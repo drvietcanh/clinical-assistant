@@ -38,6 +38,50 @@ def inject_google_analytics():
     st.session_state["_ga_injected"] = True
 
 
+def inject_global_font_css():
+    """
+    Inject global CSS for proper font rendering across all pages.
+    Ensures Vietnamese characters and special characters display correctly.
+    """
+    # Avoid injecting multiple times in the same session
+    if st.session_state.get("_font_css_injected"):
+        return
+    
+    font_css = """
+    <style>
+    /* Global font settings for proper Vietnamese character display */
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 
+                     Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 
+                     'Segoe UI Symbol', 'Noto Color Emoji' !important;
+    }
+    
+    /* Ensure HTML tables have proper font */
+    table, .insulin-table, .guideline-card, .dashboard-card {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 
+                     Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 
+                     'Segoe UI Symbol', 'Noto Color Emoji' !important;
+    }
+    
+    /* Ensure proper encoding for all text elements */
+    body, p, div, span, td, th, li, h1, h2, h3, h4, h5, h6 {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 
+                     Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 
+                     'Segoe UI Symbol', 'Noto Color Emoji' !important;
+    }
+    
+    /* Ensure Streamlit components use proper font */
+    .stMarkdown, .stText, .stDataFrame, .stTable {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 
+                     Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 
+                     'Segoe UI Symbol', 'Noto Color Emoji' !important;
+    }
+    </style>
+    """
+    st.markdown(font_css, unsafe_allow_html=True)
+    st.session_state["_font_css_injected"] = True
+
+
 def setup_page(page_title: str, page_icon: str, description: str = "", layout: str = "wide", mobile_header: bool = True):
     """
     Standard page setup - reduces boilerplate in all page files
@@ -58,6 +102,9 @@ def setup_page(page_title: str, page_icon: str, description: str = "", layout: s
     """
     # Inject GA as early as possible on every page
     inject_google_analytics()
+    
+    # Inject global font CSS for proper Vietnamese character display
+    inject_global_font_css()
 
     # Add parent directory to path for imports
     parent_dir = Path(__file__).parent.parent
