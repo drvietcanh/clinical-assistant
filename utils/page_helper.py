@@ -127,7 +127,6 @@ def render_standard_footer(disclaimer: bool = True):
     
     st.caption("📚 Dữ liệu dựa trên hướng dẫn quốc tế và các nghiên cứu lâm sàng")
     st.caption("⚠️ Chỉ mục đích tham khảo - Luôn xác minh với hướng dẫn của Bộ Y tế, Bệnh viện")
-    st.caption("🗂️ Kiến trúc module - Dễ bảo trì và mở rộng")
 
 
 def render_category_selection(categories: list, default_index: int = 0, key: str = "category"):
