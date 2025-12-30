@@ -180,14 +180,13 @@ def render_ddx_interface():
     st.markdown("---")
     
     # Mode selection
+    # Note: st.radio automatically stores value in session_state when key is provided
     mode = st.radio(
         "**Chọn chế độ:**",
         ["📋 Chế độ tiêu chuẩn (Chọn scenario trước)", "⚡ Chế độ nhanh (Nhập triệu chứng trước)"],
         key="ddx_mode",
         horizontal=True
     )
-    # Store mode in session state
-    st.session_state['ddx_mode'] = mode
     
     st.markdown("---")
     
