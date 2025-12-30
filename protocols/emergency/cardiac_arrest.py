@@ -32,33 +32,52 @@ def render():
     st.markdown("### ⚡ BLS (Basic Life Support)")
     
     with st.expander("🔄 Xem quy trình BLS", expanded=True):
-        st.markdown("""
-        **1. Kiểm tra an toàn:**
-        - Đảm bảo môi trường an toàn cho người cứu hộ và bệnh nhân
-        
-        **2. Kiểm tra phản ứng:**
-        - Lay người, gọi to: "Bạn có ổn không?"
-        - Nếu không phản ứng → Gọi cấp cứu (115) và lấy AED
-        
-        **3. Kiểm tra thở:**
-        - Mở đường thở (head-tilt chin-lift hoặc jaw-thrust nếu chấn thương)
-        - Nhìn, nghe, cảm nhận thở (5-10 giây)
-        - Nếu không thở bình thường → Bắt đầu CPR
-        
-        **4. CPR (Cardiopulmonary Resuscitation):**
-        - **Tần số:** 100-120 lần/phút
-        - **Độ sâu:** 5-6 cm (Người lớn), 1/3 chiều sâu ngực (Trẻ em)
-        - **Tỷ lệ:** 30 ép : 2 thổi (1 người), 15 ép : 2 thổi (2 người)
-        - **Vị trí:** Giữa ngực, trên xương ức
-        - **Cho phép nở ngực hoàn toàn** giữa các lần ép
-        
-        **5. AED (Automated External Defibrillator):**
-        - Bật AED ngay khi có
-        - Dán pad theo hướng dẫn
-        - Để AED phân tích nhịp
-        - Sốc nếu được khuyến nghị
-        - Tiếp tục CPR sau sốc
-        """)
+        # Dùng HTML với font chuẩn để tránh lỗi hiển thị dấu tiếng Việt
+        st.markdown(
+            """
+            <div style="font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 0.95rem; line-height: 1.6;">
+              <ol style="margin: 0; padding-left: 20px;">
+                <li><strong>Kiểm tra an toàn:</strong>
+                  <ul style="margin-top: 4px;">
+                    <li>Đảm bảo môi trường an toàn cho người cứu hộ và bệnh nhân</li>
+                  </ul>
+                </li>
+                <li><strong>Kiểm tra phản ứng:</strong>
+                  <ul style="margin-top: 4px;">
+                    <li>Lay người, gọi to: "Bạn có ổn không?"</li>
+                    <li>Nếu không phản ứng → Gọi cấp cứu (115) và lấy AED</li>
+                  </ul>
+                </li>
+                <li><strong>Kiểm tra thở:</strong>
+                  <ul style="margin-top: 4px;">
+                    <li>Mở đường thở (head-tilt chin-lift hoặc jaw-thrust nếu chấn thương)</li>
+                    <li>Nhìn, nghe, cảm nhận thở (5-10 giây)</li>
+                    <li>Nếu không thở bình thường → Bắt đầu CPR</li>
+                  </ul>
+                </li>
+                <li><strong>CPR (Cardiopulmonary Resuscitation):</strong>
+                  <ul style="margin-top: 4px;">
+                    <li><strong>Tần số:</strong> 100-120 lần/phút</li>
+                    <li><strong>Độ sâu:</strong> 5-6 cm (Người lớn), 1/3 chiều sâu ngực (Trẻ em)</li>
+                    <li><strong>Tỷ lệ:</strong> 30 ép : 2 thổi (1 người), 15 ép : 2 thổi (2 người)</li>
+                    <li><strong>Vị trí:</strong> Giữa ngực, trên xương ức</li>
+                    <li><strong>Cho phép nở ngực hoàn toàn</strong> giữa các lần ép</li>
+                  </ul>
+                </li>
+                <li><strong>AED (Automated External Defibrillator):</strong>
+                  <ul style="margin-top: 4px;">
+                    <li>Bật AED ngay khi có</li>
+                    <li>Dán pad theo hướng dẫn</li>
+                    <li>Để AED phân tích nhịp</li>
+                    <li>Sốc nếu được khuyến nghị</li>
+                    <li>Tiếp tục CPR sau sốc</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
     
     st.markdown("---")
     
