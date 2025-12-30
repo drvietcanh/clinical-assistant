@@ -6,6 +6,7 @@ Dedicated module for TDM calculators - Optimized with category grouping
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 from drugs.tdm.tdm_config import get_drugs_by_category, get_all_drugs, TDM_DRUGS
 
 # Import existing TDM modules
@@ -148,26 +149,34 @@ with st.sidebar:
         drug_id = category_map[tdm_drug]
         drug_info = TDM_DRUGS[drug_id]
         
-        st.info(f"""
-        **{drug_info['name']} TDM:**
-        - **Khoảng điều trị:** {drug_info['therapeutic_range']}
-        - **Thời điểm lấy mẫu:** {drug_info['sampling_time']}
-        - **Half-life:** {drug_info.get('half_life_hours', 'N/A')} giờ
-        """)
+        render_info_box(
+            f"""
+            **{drug_info['name']} TDM:**
+            - **Khoảng điều trị:** {drug_info['therapeutic_range']}
+            - **Thời điểm lấy mẫu:** {drug_info['sampling_time']}
+            - **Half-life:** {drug_info.get('half_life_hours', 'N/A')} giờ
+            """,
+            type="info",
+            title="Thông tin TDM"
+        )
     else:
-        st.info("""
-        **📚 Về TDM:**
-        
-        **Therapeutic Drug Monitoring (TDM)** là việc đo nồng độ thuốc trong máu để:
-        - Đảm bảo nồng độ trong khoảng điều trị
-        - Tránh độc tính
-        - Điều chỉnh liều chính xác
-        
-        **Chỉ định TDM:**
-        - Thuốc có phạm vi điều trị hẹp
-        - Độc tính cao nếu quá liều
-        - Thay đổi dược động học lớn giữa các cá nhân
-        """)
+        render_info_box(
+            """
+            **📚 Về TDM:**
+            
+            **Therapeutic Drug Monitoring (TDM)** là việc đo nồng độ thuốc trong máu để:
+            - Đảm bảo nồng độ trong khoảng điều trị
+            - Tránh độc tính
+            - Điều chỉnh liều chính xác
+            
+            **Chỉ định TDM:**
+            - Thuốc có phạm vi điều trị hẹp
+            - Độc tính cao nếu quá liều
+            - Thay đổi dược động học lớn giữa các cá nhân
+            """,
+            type="info",
+            title="Thông tin TDM"
+        )
     
     st.markdown("---")
     

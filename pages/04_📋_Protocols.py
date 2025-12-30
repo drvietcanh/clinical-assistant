@@ -6,6 +6,7 @@ Main Router - Uses routing dictionary for protocol rendering
 import streamlit as st
 from pathlib import Path
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 from config.protocol_routing import render_protocol_by_name
 from components.protocols_sidebar import render_protocols_sidebar
 from components.protocols_article_link import render_article_link
@@ -54,24 +55,47 @@ with st.sidebar:
 # ========== MAIN CONTENT ==========
 
 # Clear deep link state after using it (to prevent re-triggering on refresh)
-if use_deep_link:
-    if 'protocol_specialty' in st.session_state:
-        del st.session_state['protocol_specialty']
-    if 'protocol_to_open' in st.session_state:
-        del st.session_state['protocol_to_open']
-    if 'protocol_function' in st.session_state:
-        del st.session_state['protocol_function']
+# Only clear if we've successfully rendered the protocol
+if use_deep_link and protocol and protocol != "Không có protocol nào":
+    # Mark that we've processed the deep link
+    if 'protocol_deep_link_processed' not in st.session_state:
+        st.session_state['protocol_deep_link_processed'] = True
+        # Clear deep link state after first use
+        if 'protocol_specialty' in st.session_state:
+            del st.session_state['protocol_specialty']
+        if 'protocol_to_open' in st.session_state:
+            del st.session_state['protocol_to_open']
+        if 'protocol_function' in st.session_state:
+            del st.session_state['protocol_function']
 
-# Show info with deep link indicator if applicable
-info_text = f"""
-**Chuyên khoa:** {specialty}
-
-**Phác đồ đang xem:** {protocol.split(' ', 1)[1] if ' ' in protocol else protocol}
-"""
-if use_deep_link:
-    info_text += "\n\n*🔗 Đã tự động mở từ bài viết chuyên sâu*"
-
-st.info(info_text)
+# Enhanced info display using standard components
+if protocol and protocol != "Không có protocol nào":
+    # Extract protocol name (remove emoji if present)
+    protocol_display = protocol.split(' ', 1)[1] if ' ' in protocol else protocol
+    
+    info_text = f"""
+    **📋 Chuyên khoa:** {specialty}
+    
+    **🔬 Phác đồ đang xem:** {protocol_display}
+    """
+    if use_deep_link:
+        info_text += "\n\n*🔗 Đã tự động mở từ bài viết chuyên sâu*"
+    
+    render_info_box(
+        info_text,
+        type="info",
+        title="Thông tin Protocol"
+    )
+else:
+    render_info_box(
+        """
+        Chọn một protocol từ danh sách ở **sidebar bên trái** để xem nội dung chi tiết. 
+        Bạn có thể tìm kiếm protocol bằng từ khóa hoặc lọc theo chuyên khoa.
+        """,
+        type="info",
+        title="💡 Hướng dẫn sử dụng",
+        icon="💡"
+    )
 
 # ========== TABLE OF CONTENTS ==========
 # Simple TOC for protocol navigation (only show if protocol exists)
@@ -99,17 +123,25 @@ if protocol_rendered and protocol and protocol != "Không có protocol nào":
 
 if not protocol_rendered:
     # Default case: Protocol not found
-    st.warning(f"""
-    ⚠️ **Không tìm thấy protocol tương ứng**
-    
-    Protocol được chọn: **{protocol}**
-    
-    Vui lòng:
-    - Kiểm tra lại tên protocol
-    - Chọn protocol khác từ danh sách
-    - Liên hệ admin nếu protocol này nên có trong hệ thống
-    """)
-    st.info("💡 **Gợi ý:** Hãy chọn một protocol từ danh sách ở sidebar bên trái.")
+    render_info_box(
+        f"""
+        **Không tìm thấy protocol tương ứng**
+        
+        Protocol được chọn: **{protocol}**
+        
+        Vui lòng:
+        - Kiểm tra lại tên protocol
+        - Chọn protocol khác từ danh sách
+        - Liên hệ admin nếu protocol này nên có trong hệ thống
+        """,
+        type="warning",
+        title="⚠️ Lỗi"
+    )
+    render_info_box(
+        "Hãy chọn một protocol từ danh sách ở sidebar bên trái.",
+        type="info",
+        icon="💡"
+    )
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

@@ -5,6 +5,7 @@ Fluid Therapy, Vasopressors, Transfusion, Sedation
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 
 from critical_care import (
     render_fluid_calculator,
@@ -106,7 +107,8 @@ with st.sidebar:
         st.session_state['critical_care_tool_selection'] = str(tool_type)
     
     st.markdown("---")
-    st.info("""
+    render_info_box(
+        """
     **📚 Nhóm 🫁 Hồi sức & Quy trình:**
     - **Hồi sức (trang hiện tại):** dịch, vasopressor, transfusion, sedation, ventilator, RRT, scenarios...
     - **Phác đồ điều trị:** sepsis, shock, COPD, đột quỵ, AKI, ADRS, sản khoa, da liễu...
@@ -115,7 +117,10 @@ with st.sidebar:
     - Surviving Sepsis Guidelines
     - Hướng dẫn ICU và chuyên khoa quốc tế
     - Thực hành dựa trên bằng chứng
-    """)
+        """,
+        type="info",
+        title="Thông tin Module"
+    )
     
     with st.expander("Liên kết tới Phác đồ điều trị", expanded=False):
         if st.button("📋 Mở Phác đồ điều trị", use_container_width=True):

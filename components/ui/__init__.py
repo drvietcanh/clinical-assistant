@@ -1,58 +1,19 @@
 """
-UI Component Library
-Reusable UI components for consistent design across the app
+UI Components Package
+Standardized UI components for consistent design
 """
 
-from .cards import (
-    render_module_card,
-    render_calculator_card,
-    render_info_card,
-)
-from .alerts import (
-    render_info_alert,
-    render_success_alert,
-    render_warning_alert,
-    render_error_alert,
-)
-from .inputs import (
-    render_number_input_with_unit,
-    render_select_with_icon,
-    render_multi_select,
-)
-from .results import (
-    render_result_box,
-    render_result_card,
-    render_metric_display,
-)
-from .scoring import (
-    get_risk_color,
-    render_score_result,
-    render_score_breakdown,
-    render_quick_reference_table,
-)
+from .info_boxes import render_info_box, render_compact_info
+from .hero_section import render_hero
+from .cards import render_info_card, render_stat_card
+from .pagination import render_pagination, get_paginated_items
 
 __all__ = [
-    # Cards
-    'render_module_card',
-    'render_calculator_card',
+    'render_info_box',
+    'render_compact_info',
+    'render_hero',
     'render_info_card',
-    # Alerts
-    'render_info_alert',
-    'render_success_alert',
-    'render_warning_alert',
-    'render_error_alert',
-    # Inputs
-    'render_number_input_with_unit',
-    'render_select_with_icon',
-    'render_multi_select',
-    # Results
-    'render_result_box',
-    'render_result_card',
-    'render_metric_display',
-    # Scoring
-    'get_risk_color',
-    'render_score_result',
-    'render_score_breakdown',
-    'render_quick_reference_table',
+    'render_stat_card',
+    'render_pagination',
+    'get_paginated_items'
 ]
-

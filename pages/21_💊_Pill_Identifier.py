@@ -5,6 +5,7 @@ Identify medications by physical characteristics
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 from pill_identifier.search import search_pills_by_attributes
 from pill_identifier.data import (
     get_color_list,
@@ -24,27 +25,33 @@ with st.sidebar:
     st.caption("Module **Nhận diện Thuốc** – xác định thuốc qua đặc điểm vật lý.")
     
     st.markdown("---")
-    st.info("""
-    **💊 Pill Identifier:**
-    - Nhập **màu sắc, hình dạng, ký hiệu** của viên thuốc
-    - Tìm kiếm và xác định thuốc
-    - Xem thông tin chi tiết về thuốc
-    
-    **💡 Lưu ý:**
-    - Cần quan sát kỹ viên thuốc
-    - Ký hiệu trên thuốc rất quan trọng
-    - Kết quả chỉ mang tính tham khảo
-    - Luôn xác nhận với bác sĩ/dược sĩ
-    """)
+    render_info_box(
+        """
+        **💊 Pill Identifier:**
+        - Nhập **màu sắc, hình dạng, ký hiệu** của viên thuốc
+        - Tìm kiếm và xác định thuốc
+        - Xem thông tin chi tiết về thuốc
+        
+        **💡 Lưu ý:**
+        - Cần quan sát kỹ viên thuốc
+        - Ký hiệu trên thuốc rất quan trọng
+        - Kết quả chỉ mang tính tham khảo
+        - Luôn xác nhận với bác sĩ/dược sĩ
+        """,
+        type="info",
+        title="Thông tin Module"
+    )
 
 # ========== MAIN CONTENT ==========
 
-st.markdown("## 💊 Nhận diện Thuốc")
-st.markdown("""
-**Xác định thuốc qua đặc điểm vật lý**
-
-Nhập thông tin về viên thuốc để tìm kiếm và xác định thuốc.
-""")
+# Use standard hero section
+render_hero(
+    title="Nhận diện Thuốc",
+    subtitle="Pill Identifier",
+    description="Xác định thuốc qua đặc điểm vật lý: màu sắc, hình dạng, ký hiệu. Nhập thông tin về viên thuốc để tìm kiếm và xác định thuốc.",
+    icon="💊",
+    gradient=("#667eea", "#764ba2")
+)
 
 # Input form
 st.markdown("### 📝 Thông tin Viên thuốc")
@@ -125,10 +132,17 @@ if 'pill_identifier_results' in st.session_state:
         params_display.append(f"Kích thước: {search_params['size']}")
     
     if params_display:
-        st.info("**Tìm kiếm theo:** " + ", ".join(params_display))
+        render_info_box(
+            "**Tìm kiếm theo:** " + ", ".join(params_display),
+            type="info"
+        )
     
     if results:
-        st.success(f"✅ Tìm thấy {len(results)} kết quả")
+        render_info_box(
+            f"Tìm thấy {len(results)} kết quả",
+            type="success",
+            title="Kết quả tìm kiếm"
+        )
         
         for pill in results:
             with st.expander(f"**{pill.drug_name}** ({pill.generic_name})", expanded=False):
@@ -148,20 +162,31 @@ if 'pill_identifier_results' in st.session_state:
                         st.markdown(f"**Ký hiệu:** {pill.imprint}")
                 
                 if pill.notes:
-                    st.info(f"**Ghi chú:** {pill.notes}")
+                    render_info_box(
+                        pill.notes,
+                        type="info",
+                        title="Ghi chú"
+                    )
                 
                 # Link to Drug Database
                 st.markdown("---")
                 st.markdown(f"💡 Xem thêm thông tin về **{pill.drug_name}** trong [Cơ sở dữ liệu thuốc](?page=07_💊_Drug_Database)")
     else:
-        st.warning("Không tìm thấy thuốc phù hợp. Vui lòng thử lại với thông tin khác.")
-        st.info("💡 **Gợi ý:**")
-        st.markdown("""
-        - Kiểm tra lại màu sắc và hình dạng
-        - Đọc kỹ ký hiệu trên thuốc (có thể cần kính lúp)
-        - Thử tìm kiếm chỉ với màu sắc và hình dạng (bỏ qua ký hiệu)
-        - Tham khảo dược sĩ nếu không tìm thấy
-        """)
+        render_info_box(
+            "Không tìm thấy thuốc phù hợp. Vui lòng thử lại với thông tin khác.",
+            type="warning"
+        )
+        render_info_box(
+            """
+            **💡 Gợi ý:**
+            - Kiểm tra lại màu sắc và hình dạng
+            - Đọc kỹ ký hiệu trên thuốc (có thể cần kính lúp)
+            - Thử tìm kiếm chỉ với màu sắc và hình dạng (bỏ qua ký hiệu)
+            - Tham khảo dược sĩ nếu không tìm thấy
+            """,
+            type="info",
+            icon="💡"
+        )
     
     # Clear button
     if st.button("🗑️ Xóa kết quả", use_container_width=True):

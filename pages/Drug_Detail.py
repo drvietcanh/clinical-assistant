@@ -8,6 +8,7 @@ import html
 import re
 import textwrap
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box
 from drugs.drug_database import DRUG_DATABASE
 from drugs.drug_info_components.detail_view import display_drug_info
 
@@ -165,13 +166,31 @@ try:
         if not drug_name:  # Empty string after strip
             drug_name = None
 except Exception as e:
-    st.error(f"❌ Lỗi khi đọc thông tin thuốc: {str(e)}")
+    render_info_box(
+        f"❌ Lỗi khi đọc thông tin thuốc: {str(e)}",
+        type="error",
+        title="Lỗi",
+        icon="❌"
+    )
     drug_name = None
 
 # Validate drug_name early - show error page if invalid
 if not drug_name:
-    st.error("❌ Không tìm thấy thông tin thuốc. Vui lòng quay lại trang tra cứu thuốc.")
-    st.info("💡 **Hướng dẫn:** Chọn một thuốc từ danh sách để xem chi tiết")
+    render_info_box(
+        """
+        **❌ Không tìm thấy thông tin thuốc**
+        
+        Vui lòng quay lại trang tra cứu thuốc và chọn một thuốc từ danh sách để xem chi tiết.
+        """,
+        type="error",
+        title="Lỗi",
+        icon="❌"
+    )
+    render_info_box(
+        "💡 **Hướng dẫn:** Chọn một thuốc từ danh sách để xem chi tiết",
+        type="info",
+        icon="💡"
+    )
     col1, col2 = st.columns([1, 1])
     with col1:
         if st.button("🔙 Quay lại trang tra cứu thuốc", use_container_width=True, type="primary"):
@@ -183,8 +202,21 @@ if not drug_name:
 
 # Validate drug exists in database
 if drug_name not in DRUG_DATABASE:
-    st.error(f"❌ Không tìm thấy thông tin cho thuốc: **{drug_name}**")
-    st.info(f"💡 Thuốc '{drug_name}' không có trong database. Có thể tên thuốc đã thay đổi hoặc bị xóa.")
+    render_info_box(
+        f"""
+        **❌ Không tìm thấy thông tin cho thuốc: {drug_name}**
+        
+        Thuốc này không có trong database. Có thể tên thuốc đã thay đổi hoặc bị xóa.
+        """,
+        type="error",
+        title="Lỗi",
+        icon="❌"
+    )
+    render_info_box(
+        f"💡 Thuốc '{drug_name}' không có trong database. Có thể tên thuốc đã thay đổi hoặc bị xóa.",
+        type="info",
+        icon="💡"
+    )
     col1, col2 = st.columns([1, 1])
     with col1:
         if st.button("🔙 Quay lại trang tra cứu thuốc", use_container_width=True, type="primary"):
@@ -197,7 +229,16 @@ if drug_name not in DRUG_DATABASE:
 # Get drug data - drug_name is now validated
 drug_data = DRUG_DATABASE.get(drug_name)
 if not drug_data:
-    st.error(f"❌ Dữ liệu thuốc '{drug_name}' không hợp lệ")
+    render_info_box(
+        f"""
+        **❌ Dữ liệu thuốc '{drug_name}' không hợp lệ**
+        
+        Vui lòng quay lại trang tra cứu thuốc và thử lại.
+        """,
+        type="error",
+        title="Lỗi",
+        icon="❌"
+    )
     col1, col2 = st.columns([1, 1])
     with col1:
         if st.button("🔙 Quay lại trang tra cứu thuốc", use_container_width=True, type="primary"):
@@ -588,7 +629,11 @@ if same_group_drugs:
                     st.session_state['view_drug_name'] = rel_name
                     st.switch_page("pages/Drug_Detail.py")
                 else:
-                    st.error(f"❌ Không tìm thấy thuốc '{rel_name}' trong database")
+                    render_info_box(
+                        f"❌ Không tìm thấy thuốc '{rel_name}' trong database",
+                        type="error",
+                        icon="❌"
+                    )
 
 # Display alternative drugs (same indication, different group)
 if alternative_drugs:
@@ -643,7 +688,11 @@ if alternative_drugs:
                     st.session_state['view_drug_name'] = alt_name
                     st.switch_page("pages/Drug_Detail.py")
                 else:
-                    st.error(f"❌ Không tìm thấy thuốc '{alt_name}' trong database")
+                    render_info_box(
+                        f"❌ Không tìm thấy thuốc '{alt_name}' trong database",
+                        type="error",
+                        icon="❌"
+                    )
 
 # Sticky Footer Navigation (inspired by medical reference sites)
 st.markdown("---")

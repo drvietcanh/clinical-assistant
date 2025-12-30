@@ -179,15 +179,6 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
         ),
-        "symptom_checker": ModuleInfo(
-            id="symptom_checker",
-            title="Kiểm tra Triệu chứng",
-            icon="🩺",
-            page_path="pages/17_🩺_Symptom_Checker.py",
-            description="Phân tích triệu chứng và gợi ý chẩn đoán có thể với xác suất, đánh giá mức độ nghiêm trọng",
-            color="linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)",
-            border="#f44336"
-        ),
         "patient_education": ModuleInfo(
             id="patient_education",
             title="Giáo dục Bệnh nhân",

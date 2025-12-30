@@ -5,6 +5,7 @@ Comprehensive vaccine information for Vietnam
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 
 from vaccination import (
     render_vaccination_home,
@@ -40,20 +41,24 @@ with st.sidebar:
     )
     
     st.markdown("---")
-    st.info("""
-    **💉 Module Tiêm chủng & Vắc xin:**
-    - Vắc xin cho **trẻ em** và **người lớn**
-    - Lịch tiêm chủng & phác đồ tiêm
-    - Giá tham khảo, so sánh giữa các cơ sở
-    
-    **📋 Phân loại:**
-    - Chương trình **TCMR (bắt buộc)**
-    - Vắc xin **khuyến nghị** thêm
-    
-    **💡 Lưu ý:**
-    - Giá chỉ mang tính tham khảo – cần xác nhận với cơ sở tiêm chủng
-    - Tham khảo thêm thông tin thuốc trong module **\"💊 Cơ sở dữ liệu thuốc\"** khi cần
-    """)
+    render_info_box(
+        """
+        **💉 Module Tiêm chủng & Vắc xin:**
+        - Vắc xin cho **trẻ em** và **người lớn**
+        - Lịch tiêm chủng & phác đồ tiêm
+        - Giá tham khảo, so sánh giữa các cơ sở
+        
+        **📋 Phân loại:**
+        - Chương trình **TCMR (bắt buộc)**
+        - Vắc xin **khuyến nghị** thêm
+        
+        **💡 Lưu ý:**
+        - Giá chỉ mang tính tham khảo – cần xác nhận với cơ sở tiêm chủng
+        - Tham khảo thêm thông tin thuốc trong module **\"💊 Cơ sở dữ liệu thuốc\"** khi cần
+        """,
+        type="info",
+        title="Thông tin Module"
+    )
 
 # ========== MAIN CONTENT ==========
 

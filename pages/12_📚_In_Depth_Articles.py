@@ -12,6 +12,7 @@ import streamlit.components.v1 as components
 from collections import Counter, defaultdict
 
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 from config.article_protocol_mapping import (
     get_protocol_for_article,
     has_protocol as check_has_protocol,
@@ -1461,14 +1462,18 @@ def main():
         
         st.markdown("---")
         
-        st.info("""
-        **📚 Thông tin:**
-        
-        - Nội dung cập nhật theo guideline quốc tế mới nhất
-        - ESC/ESH, ACC/AHA, ACG/AGA, ASHP, IDSA, SSC...
-        - Tích hợp với calculators và protocols trong app
-        - Được mở rộng và cập nhật định kỳ
-        """)
+        render_info_box(
+            """
+            **📚 Thông tin:**
+            
+            - Nội dung cập nhật theo guideline quốc tế mới nhất
+            - ESC/ESH, ACC/AHA, ACG/AGA, ASHP, IDSA, SSC...
+            - Tích hợp với calculators và protocols trong app
+            - Được mở rộng và cập nhật định kỳ
+            """,
+            type="info",
+            title="Thông tin Module"
+        )
         
         st.markdown("---")
         
@@ -1482,12 +1487,20 @@ def main():
         # Find and highlight the article
         target_article = next((a for a in articles if a['id'] == article_to_open), None)
         if target_article:
-            st.success(f"📚 **Đang hiển thị bài viết:** {html.escape(target_article['title'])}")
+            render_info_box(
+                f"**Đang hiển thị bài viết:** {html.escape(target_article['title'])}",
+                type="success",
+                title="📚 Bài viết",
+                icon="📚"
+            )
             st.caption("💡 Bài viết sẽ tự động mở rộng bên dưới")
             # Auto-expand the article
             st.session_state[f"expand_article_{article_to_open}"] = True
         else:
-            st.warning(f"⚠️ Không tìm thấy bài viết với ID: `{html.escape(article_to_open)}`")
+            render_info_box(
+                f"Không tìm thấy bài viết với ID: `{html.escape(article_to_open)}`",
+                type="warning"
+            )
         # Clear deep link state
         if 'article_to_open' in st.session_state:
             del st.session_state['article_to_open']
@@ -1497,14 +1510,17 @@ def main():
     
     # Display results
     if not filtered:
-        st.warning("""
-        **Không tìm thấy bài viết phù hợp.**
-        
-        Thử:
-        - Xóa bộ lọc chuyên khoa
-        - Thay đổi từ khóa tìm kiếm
-        - Chọn từ khóa khác
-        """)
+        render_info_box(
+            """
+            **Không tìm thấy bài viết phù hợp.**
+            
+            Thử:
+            - Xóa bộ lọc chuyên khoa
+            - Thay đổi từ khóa tìm kiếm
+            - Chọn từ khóa khác
+            """,
+            type="warning"
+        )
     else:
         # Tóm tắt nhanh bộ lọc đang dùng giống thanh "active filters" trên các trang y khoa hiện đại
         active_filters = []
@@ -1515,7 +1531,11 @@ def main():
         if selected_keywords:
             active_filters.append("🏷️ " + ", ".join(selected_keywords))
 
-        st.success(f"Tìm thấy **{len(filtered)}** bài viết phù hợp")
+        render_info_box(
+            f"Tìm thấy **{len(filtered)}** bài viết phù hợp",
+            type="success",
+            title="Kết quả tìm kiếm"
+        )
         if active_filters:
             chips = " ".join(
                 f"<span class='filter-chip' style='background:#eef2ff;color:#3730a3;padding:4px 10px;border-radius:999px;font-size:0.8rem;margin-right:6px;margin-bottom:4px;display:inline-block;'>{html.escape(f)}</span>"

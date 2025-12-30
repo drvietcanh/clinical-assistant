@@ -5,6 +5,7 @@ Main Router - Lab panels, reference ranges, and clinical calculators
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 
 # Import lab panels
 from labs import (
@@ -93,23 +94,27 @@ with st.sidebar:
         
         st.markdown("---")
         
-        st.info("""
-        **💡 Các calculator thông dụng:**
-        
-        **Cơ thể:**
-        - BMI, IBW, BSA
-        
-        **Chức năng thận:**
-        - eGFR (chẩn đoán CKD)
-        
-        **Xét nghiệm:**
-        - Osmolality, Anion Gap
-        - Corrected Ca, FENa
-        - HbA1c, T4 Index
-        - Lipid Panel (LDL, tỉ lệ lipid)
-        
-        **💊 Liên quan:** Các calculator này cần thiết cho điều chỉnh liều thuốc
-        """)
+        render_info_box(
+            """
+            **💡 Các calculator thông dụng:**
+            
+            **Cơ thể:**
+            - BMI, IBW, BSA
+            
+            **Chức năng thận:**
+            - eGFR (chẩn đoán CKD)
+            
+            **Xét nghiệm:**
+            - Osmolality, Anion Gap
+            - Corrected Ca, FENa
+            - HbA1c, T4 Index
+            - Lipid Panel (LDL, tỉ lệ lipid)
+            
+            **💊 Liên quan:** Các calculator này cần thiết cho điều chỉnh liều thuốc
+            """,
+            type="info",
+            title="Calculator Thông Dụng"
+        )
     
     elif category == "🔬 Lab Panels":
         st.subheader("📋 Chọn Panel")

@@ -5,6 +5,7 @@ Main Router - Imports from diagnosis module
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 
 from diagnosis import render_ddx_interface
 
@@ -30,13 +31,17 @@ with st.sidebar:
                 st.switch_page("pages/01_📊_Scores.py")
     
     st.markdown("---")
-    st.info("""
-    **Chức năng chính:**
-    - Gợi ý danh sách chẩn đoán phân biệt theo triệu chứng và hệ cơ quan
-    - Liên kết trực tiếp với calculators và phác đồ điều trị liên quan
-    
-    **Lưu ý:** Công cụ chỉ hỗ trợ, **không thay thế đánh giá lâm sàng**.
-    """)
+    render_info_box(
+        """
+        **Chức năng chính:**
+        - Gợi ý danh sách chẩn đoán phân biệt theo triệu chứng và hệ cơ quan
+        - Liên kết trực tiếp với calculators và phác đồ điều trị liên quan
+        
+        **Lưu ý:** Công cụ chỉ hỗ trợ, **không thay thế đánh giá lâm sàng**.
+        """,
+        type="info",
+        title="Thông tin Module"
+    )
 
 # ========== MAIN CONTENT ==========
 

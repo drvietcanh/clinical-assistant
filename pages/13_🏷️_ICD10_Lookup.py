@@ -5,6 +5,8 @@ International Classification of Diseases, 10th Revision
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero, get_paginated_items
+from components.page_sidebar import render_standard_sidebar
 from icd10.search import (
     search_by_name,
     search_by_code,
@@ -21,18 +23,21 @@ setup_page(
 )
 
 # ========== SIDEBAR ==========
-with st.sidebar:
-    st.header("🏷️ Tra cứu ICD-10")
-    st.caption("Module **Tra cứu mã ICD-10** – công cụ tra cứu mã phân loại bệnh tật quốc tế.")
-    
-    search_type = st.radio(
-        "Tìm kiếm theo:",
-        ["Tên bệnh", "Mã ICD-10", "Chuyên khoa"],
-        key="icd10_search_type"
-    )
-    
-    st.markdown("---")
-    st.info("""
+filters = render_standard_sidebar(
+    title="Tra cứu ICD-10",
+    icon="🏷️",
+    description="Công cụ tra cứu mã phân loại bệnh tật quốc tế",
+    module_group="🏷️ Thông tin Y học",
+    filters={
+        "search_type": {
+            "type": "radio",
+            "label": "Tìm kiếm theo:",
+            "options": ["Tên bệnh", "Mã ICD-10", "Chuyên khoa"],
+            "default": "Tên bệnh",
+            "key": "icd10_search_type"
+        }
+    },
+    info_text="""
     **🏷️ ICD-10 Code Lookup:**
     - Tra cứu mã ICD-10 theo **tên bệnh** (tiếng Việt hoặc tiếng Anh)
     - Tra cứu **mã ICD-10** → Tên bệnh
@@ -42,16 +47,21 @@ with st.sidebar:
     - ICD-10 là hệ thống phân loại bệnh tật quốc tế
     - Sử dụng cho mục đích tham khảo và coding
     - Cần xác nhận với guidelines chính thức khi sử dụng
-    """)
+    """
+)
+
+search_type = filters.get("search_type", "Tên bệnh")
 
 # ========== MAIN CONTENT ==========
 
-st.markdown("## 🏷️ Tra cứu mã ICD-10")
-st.markdown("""
-**International Classification of Diseases, 10th Revision**
-
-Tra cứu mã ICD-10 để hỗ trợ coding và billing trong y tế.
-""")
+# Use standard hero section
+render_hero(
+    title="Tra cứu mã ICD-10",
+    subtitle="ICD-10 Code Lookup",
+    description="International Classification of Diseases, 10th Revision. Tra cứu mã ICD-10 để hỗ trợ coding và billing trong y tế.",
+    icon="🏷️",
+    gradient=("#667eea", "#764ba2")
+)
 
 # Search interface
 if search_type == "Tên bệnh":
@@ -76,10 +86,17 @@ if search_type == "Tên bệnh":
         results = search_by_name(query, category)
         
         if results:
-            st.success(f"Tìm thấy {len(results)} kết quả")
+            # Use pagination
+            paginated_results = get_paginated_items(results, items_per_page=10, page_key="icd10_name_page")
+            
+            render_info_box(
+                f"Tìm thấy {len(results)} kết quả",
+                type="success",
+                title="Kết quả tìm kiếm"
+            )
             
             # Display results in a table
-            for code in results:
+            for code in paginated_results:
                 with st.expander(f"**{code.code}** - {code.name_vn}", expanded=False):
                     col1, col2 = st.columns(2)
                     with col1:
@@ -92,9 +109,16 @@ if search_type == "Tên bệnh":
                         if code.block:
                             st.markdown(f"**Block:** {code.block}")
                     if code.notes:
-                        st.info(f"**Ghi chú:** {code.notes}")
+                        render_info_box(
+                            code.notes,
+                            type="info",
+                            title="Ghi chú"
+                        )
         else:
-            st.warning("Không tìm thấy kết quả. Vui lòng thử lại với từ khóa khác.")
+            render_info_box(
+                "Không tìm thấy kết quả. Vui lòng thử lại với từ khóa khác.",
+                type="warning"
+            )
 
 elif search_type == "Mã ICD-10":
     st.markdown("### 🔍 Tìm kiếm theo mã ICD-10")
@@ -109,7 +133,11 @@ elif search_type == "Mã ICD-10":
         result = search_by_code(code_query)
         
         if result:
-            st.success("✅ Tìm thấy mã ICD-10")
+            render_info_box(
+                "Tìm thấy mã ICD-10",
+                type="success",
+                title="Kết quả"
+            )
             
             # Display code information
             col1, col2 = st.columns(2)
@@ -124,10 +152,21 @@ elif search_type == "Mã ICD-10":
                     st.markdown(f"**Block:** {result.block}")
             
             if result.notes:
-                st.info(f"**Ghi chú:** {result.notes}")
+                render_info_box(
+                    result.notes,
+                    type="info",
+                    title="Ghi chú"
+                )
         else:
-            st.warning(f"Không tìm thấy mã ICD-10: {code_query}")
-            st.info("💡 Thử tìm kiếm theo tên bệnh nếu không biết mã chính xác.")
+            render_info_box(
+                f"Không tìm thấy mã ICD-10: {code_query}",
+                type="warning"
+            )
+            render_info_box(
+                "Thử tìm kiếm theo tên bệnh nếu không biết mã chính xác.",
+                type="info",
+                icon="💡"
+            )
 
 else:  # Chuyên khoa
     st.markdown("### 🔍 Tìm kiếm theo chuyên khoa")
@@ -142,10 +181,17 @@ else:  # Chuyên khoa
         results = search_by_category(selected_category)
         
         if results:
-            st.success(f"Tìm thấy {len(results)} mã ICD-10 trong chuyên khoa **{selected_category}**")
+            # Use pagination
+            paginated_results = get_paginated_items(results, items_per_page=10, page_key="icd10_category_page")
+            
+            render_info_box(
+                f"Tìm thấy {len(results)} mã ICD-10 trong chuyên khoa **{selected_category}**",
+                type="success",
+                title="Kết quả"
+            )
             
             # Display results
-            for code in results:
+            for code in paginated_results:
                 with st.expander(f"**{code.code}** - {code.name_vn}", expanded=False):
                     col1, col2 = st.columns(2)
                     with col1:
@@ -156,9 +202,16 @@ else:  # Chuyên khoa
                         st.markdown(f"**Chuyên khoa:** {code.category}")
                         st.markdown(f"**Chương:** {code.chapter}")
                     if code.notes:
-                        st.info(f"**Ghi chú:** {code.notes}")
+                        render_info_box(
+                            code.notes,
+                            type="info",
+                            title="Ghi chú"
+                        )
         else:
-            st.warning(f"Không tìm thấy mã ICD-10 nào trong chuyên khoa {selected_category}")
+            render_info_box(
+                f"Không tìm thấy mã ICD-10 nào trong chuyên khoa {selected_category}",
+                type="warning"
+            )
 
 # Additional information
 st.markdown("---")

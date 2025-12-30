@@ -5,6 +5,8 @@ Comprehensive information about diseases and conditions
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero, render_info_card, get_paginated_items
+from components.page_sidebar import render_standard_sidebar
 from diseases.search import (
     search_diseases,
     get_disease_info,
@@ -24,25 +26,30 @@ setup_page(
 )
 
 # ========== SIDEBAR ==========
-with st.sidebar:
-    st.header("📖 Bách khoa Bệnh lý")
-    st.caption("Module **Bách khoa Bệnh lý** – thông tin chi tiết về các bệnh lý.")
-    
-    view_mode = st.radio(
-        "Chế độ xem:",
-        ["Tìm kiếm", "Theo chuyên khoa", "Theo triệu chứng"],
-        key="disease_view_mode"
-    )
-    
-    if view_mode == "Theo chuyên khoa":
-        category_filter = st.selectbox(
-            "Chọn chuyên khoa:",
-            ["Tất cả"] + get_category_list(),
-            key="disease_category_filter"
-        )
-    
-    st.markdown("---")
-    st.info("""
+# Use standard sidebar component
+filters = render_standard_sidebar(
+    title="Bách khoa Bệnh lý",
+    icon="📖",
+    description="Thông tin chi tiết về các bệnh lý",
+    module_group="📖 Thông tin Y học",
+    filters={
+        "view_mode": {
+            "type": "radio",
+            "label": "Chế độ xem:",
+            "options": ["Tìm kiếm", "Theo chuyên khoa", "Theo triệu chứng"],
+            "default": "Tìm kiếm",
+            "key": "disease_view_mode"
+        },
+        "category": {
+            "type": "selectbox",
+            "label": "Chọn chuyên khoa:",
+            "options": ["Tất cả"] + get_category_list(),
+            "default": "Tất cả",
+            "key": "disease_category_filter",
+            "conditional": "view_mode == 'Theo chuyên khoa'"
+        }
+    },
+    info_text="""
     **📖 Disease Encyclopedia:**
     - Thông tin chi tiết về **bệnh lý phổ biến**
     - **Định nghĩa, nguyên nhân, triệu chứng**
@@ -53,16 +60,22 @@ with st.sidebar:
     - Database hiện tại bao gồm các bệnh phổ biến nhất
     - Thông tin chỉ mang tính tham khảo
     - Luôn tham khảo guidelines mới nhất
-    """)
+    """
+)
+
+view_mode = filters.get("view_mode", "Tìm kiếm")
+category_filter = filters.get("category", "Tất cả") if view_mode == "Theo chuyên khoa" else None
 
 # ========== MAIN CONTENT ==========
 
-st.markdown("## 📖 Bách khoa Bệnh lý")
-st.markdown("""
-**Thông tin toàn diện về các bệnh lý phổ biến**
-
-Bao gồm: định nghĩa, nguyên nhân, triệu chứng, chẩn đoán, điều trị, và phòng ngừa
-""")
+# Use standard hero section
+render_hero(
+    title="Bách khoa Bệnh lý",
+    subtitle="Disease Encyclopedia",
+    description="Thông tin toàn diện về các bệnh lý phổ biến: định nghĩa, nguyên nhân, triệu chứng, chẩn đoán, điều trị, và phòng ngừa",
+    icon="📖",
+    gradient=("#667eea", "#764ba2")
+)
 
 
 def render_disease_detail(disease):
@@ -176,13 +189,24 @@ if view_mode == "Tìm kiếm":
         results = search_diseases(search_query)
         
         if results:
-            st.success(f"✅ Tìm thấy {len(results)} bệnh lý")
+            # Use pagination
+            paginated_results = get_paginated_items(results, items_per_page=10, page_key="disease_search_page")
             
-            for disease in results:
+            render_info_box(
+                f"Tìm thấy {len(results)} bệnh lý",
+                type="success",
+                title="Kết quả tìm kiếm"
+            )
+            
+            for disease in paginated_results:
                 with st.expander(f"**{disease.name_vn}** ({disease.name})", expanded=False):
                     render_disease_detail(disease)
         else:
-            st.warning("Không tìm thấy bệnh lý. Vui lòng thử lại với từ khóa khác.")
+            render_info_box(
+                "Không tìm thấy bệnh lý. Vui lòng thử lại với từ khóa khác.",
+                type="warning",
+                title="Không có kết quả"
+            )
 
 elif view_mode == "Theo chuyên khoa":
     st.markdown("### 📚 Bệnh lý theo Chuyên khoa")
@@ -192,13 +216,23 @@ elif view_mode == "Theo chuyên khoa":
     diseases = get_diseases_by_category(category) if category else get_all_diseases()
     
     if diseases:
-        st.success(f"✅ Tìm thấy {len(diseases)} bệnh lý")
+        # Use pagination
+        paginated_diseases = get_paginated_items(diseases, items_per_page=10, page_key="disease_category_page")
         
-        for disease in diseases:
+        render_info_box(
+            f"Tìm thấy {len(diseases)} bệnh lý",
+            type="success",
+            title="Kết quả"
+        )
+        
+        for disease in paginated_diseases:
             with st.expander(f"**{disease.name_vn}** ({disease.name})", expanded=False):
                 render_disease_detail(disease)
     else:
-        st.warning("Không tìm thấy bệnh lý trong chuyên khoa này.")
+        render_info_box(
+            "Không tìm thấy bệnh lý trong chuyên khoa này.",
+            type="warning"
+        )
 
 else:  # Theo triệu chứng
     st.markdown("### 🩺 Tìm kiếm theo Triệu chứng")
@@ -213,13 +247,23 @@ else:  # Theo triệu chứng
         results = get_diseases_by_symptom(symptom_query)
         
         if results:
-            st.success(f"✅ Tìm thấy {len(results)} bệnh lý có triệu chứng này")
+            # Use pagination
+            paginated_results = get_paginated_items(results, items_per_page=10, page_key="disease_symptom_page")
             
-            for disease in results:
+            render_info_box(
+                f"Tìm thấy {len(results)} bệnh lý có triệu chứng này",
+                type="success",
+                title="Kết quả"
+            )
+            
+            for disease in paginated_results:
                 with st.expander(f"**{disease.name_vn}** ({disease.name})", expanded=False):
                     render_disease_detail(disease)
         else:
-            st.warning("Không tìm thấy bệnh lý với triệu chứng này.")
+            render_info_box(
+                "Không tìm thấy bệnh lý với triệu chứng này.",
+                type="warning"
+            )
 
 
 # Additional information

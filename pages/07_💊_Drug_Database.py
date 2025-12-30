@@ -6,6 +6,7 @@ Independent module for all drug lookups (not just antibiotics)
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 
 from drugs import (
     render_drug_database,
@@ -91,19 +92,23 @@ with st.sidebar:
         st.session_state['drug_db_function_type'] = str(function_type)
     
     st.markdown("---")
-    st.info("""
-    **📚 Cơ sở dữ liệu thuốc (entry chính):**
-    - Tra cứu toàn bộ thuốc (tên, nhóm, dược động, lưu ý lâm sàng)
-    - Tính liều theo chức năng thận (CrCl/eGFR) cho kháng sinh
-    - So sánh thuốc, lịch trình liều dùng, tương tác & tương thích IV
-    
-    **💊 Nhóm Thuốc & Liều dùng:**
-    - **Cơ sở dữ liệu thuốc (trang hiện tại)**
-    - **Kháng sinh (chuyên sâu)**: so sánh, phác đồ, stewardship
-    - **TDM - Theo dõi nồng độ thuốc**: vancomycin, aminoglycoside, thuốc độc hẹp
-    
-    **💉 Vắc xin & lịch tiêm:** xem module **\"💉 Tiêm chủng và Vắc xin\"** trong nhóm Tiêm chủng.
-    """)
+    render_info_box(
+        """
+        **📚 Cơ sở dữ liệu thuốc (entry chính):**
+        - Tra cứu toàn bộ thuốc (tên, nhóm, dược động, lưu ý lâm sàng)
+        - Tính liều theo chức năng thận (CrCl/eGFR) cho kháng sinh
+        - So sánh thuốc, lịch trình liều dùng, tương tác & tương thích IV
+        
+        **💊 Nhóm Thuốc & Liều dùng:**
+        - **Cơ sở dữ liệu thuốc (trang hiện tại)**
+        - **Kháng sinh (chuyên sâu)**: so sánh, phác đồ, stewardship
+        - **TDM - Theo dõi nồng độ thuốc**: vancomycin, aminoglycoside, thuốc độc hẹp
+        
+        **💉 Vắc xin & lịch tiêm:** xem module **\"💉 Tiêm chủng và Vắc xin\"** trong nhóm Tiêm chủng.
+        """,
+        type="info",
+        title="Thông tin Module"
+    )
 
 # ========== MAIN CONTENT ==========
 

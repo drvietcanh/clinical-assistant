@@ -7,6 +7,7 @@ Hỗ trợ quyết định (Decision Support)
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 
 # Phase 2 imports
 from components.flowchart import render_flowchart
@@ -50,18 +51,22 @@ with st.sidebar:
     )
     
     st.markdown("---")
-    st.info("""
-    **📚 Nhóm 🧭 Hỗ trợ quyết định:**
-    
-    **🔄 Flowcharts quyết định lâm sàng**
-    - Quy trình ra quyết định từng bước, dựa trên clinical rules (Wells, PERC, CHA₂DS₂-VASc, Sepsis-3, CURB-65...)  
-    
-    **🤰 Thai kỳ & cho con bú**
-    - Thông tin an toàn thuốc theo từng giai đoạn thai kỳ và cho con bú (tóm tắt thực hành)
-    
-    **👶 Liều Nhi khoa**
-    - Tính liều theo cân nặng/BSA, gợi ý liều thường dùng cho Nhi khoa
-    """)
+    render_info_box(
+        """
+        **📚 Nhóm 🧭 Hỗ trợ quyết định:**
+        
+        **🔄 Flowcharts quyết định lâm sàng**
+        - Quy trình ra quyết định từng bước, dựa trên clinical rules (Wells, PERC, CHA₂DS₂-VASc, Sepsis-3, CURB-65...)  
+        
+        **🤰 Thai kỳ & cho con bú**
+        - Thông tin an toàn thuốc theo từng giai đoạn thai kỳ và cho con bú (tóm tắt thực hành)
+        
+        **👶 Liều Nhi khoa**
+        - Tính liều theo cân nặng/BSA, gợi ý liều thường dùng cho Nhi khoa
+        """,
+        type="info",
+        title="Thông tin Module"
+    )
 
 # ========== MAIN CONTENT ==========
 

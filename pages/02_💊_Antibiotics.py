@@ -6,6 +6,7 @@ Note: Module package name remains 'antibiotics' for backward compatibility
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 
 from antibiotics import (
     render_antibiotic_lookup,
@@ -51,7 +52,8 @@ with st.sidebar:
     )
     
     st.markdown("---")
-    st.info("""
+    render_info_box(
+        """
     **📚 Căn cứ khoa học:**
     - FDA Drug Labels (Mỹ)
     - IDSA/ATS Guidelines
@@ -62,7 +64,10 @@ with st.sidebar:
     - Đây là **module chuyên sâu về kháng sinh**: dữ liệu chi tiết, so sánh, phác đồ điều trị.
     - **Tra cứu & tính liều cơ bản**: dùng module **\"💊 Cơ sở dữ liệu thuốc\"** (entry chính).
     - **TDM kháng sinh (vancomycin, aminoglycoside...)**: dùng module **\"📊 TDM - Theo dõi nồng độ thuốc\"**.
-    """)
+        """,
+        type="info",
+        title="Thông tin Module"
+    )
 
 # ========== MAIN CONTENT ==========
 

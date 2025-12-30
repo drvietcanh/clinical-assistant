@@ -7,6 +7,7 @@ Imports calculators from individual specialty modules
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box, render_hero
 
 from scores.config import SCORES_BY_SPECIALTY
 from scores import cardiology, emergency, respiratory, neurology, gi, metabolism, hematology, nephrology, trauma, psychiatry, oncology, surgery, pediatrics, infectious, ent, obstetrics, dermatology, rheumatology, ophthalmology, pain, nursing
@@ -118,14 +119,21 @@ with st.sidebar:
     if global_search_query:
         global_results = global_search(global_search_query)
         if global_results:
-            st.success(f"Tìm thấy {len(global_results)} kết quả")
+            render_info_box(
+                f"Tìm thấy {len(global_results)} kết quả",
+                type="success",
+                title="Kết quả tìm kiếm"
+            )
             # Show first few results
             with st.expander(f"Kết quả tìm kiếm ({len(global_results)})", expanded=True):
                 for spec, sid, sinfo in global_results[:10]:  # Show first 10
                     st.markdown(f"**{sinfo['name']}**")
                     st.caption(f"{spec} • {sinfo.get('desc', '')[:60]}...")
         else:
-            st.warning("Không tìm thấy kết quả")
+            render_info_box(
+                "Không tìm thấy kết quả. Vui lòng thử lại với từ khóa khác.",
+                type="warning"
+            )
     
     st.markdown("---")
     
@@ -215,7 +223,10 @@ with st.sidebar:
 
     # Nếu không có kết quả, hiển thị thông báo và dùng toàn bộ danh sách để tránh lỗi widget
     if not filtered_items and (local_search_query or filter_status or filter_daily_use):
-        st.warning("Không tìm thấy thang điểm phù hợp với bộ lọc. Hiển thị tất cả thang điểm trong chuyên khoa.")
+        render_info_box(
+            "Không tìm thấy thang điểm phù hợp với bộ lọc. Hiển thị tất cả thang điểm trong chuyên khoa.",
+            type="warning"
+        )
         filtered_items = list(scores_in_specialty.items())
 
     # Sort: daily use first, then alphabetically
@@ -260,12 +271,16 @@ with st.sidebar:
     # ========== FAVORITES SECTION ==========
     render_favorites_section_in_sidebar(SCORES_BY_SPECIALTY)
     
-    st.info("""
-    **Chú thích trạng thái calculator:**
-    - ✅ Hoàn thành, có thể dùng lâm sàng
-    - 🚧 Đang cập nhật/hoàn thiện
-    - 📋 Đang trong kế hoạch
-    """)
+    render_info_box(
+        """
+        **Chú thích trạng thái calculator:**
+        - ✅ Hoàn thành, có thể dùng lâm sàng
+        - 🚧 Đang cập nhật/hoàn thiện
+        - 📋 Đang trong kế hoạch
+        """,
+        type="info",
+        title="Trạng thái Calculator"
+    )
     
     st.markdown("---")
     st.caption(f"**{len([s for specialty_scores in SCORES_BY_SPECIALTY.values() for s in specialty_scores])}** calculators")
@@ -273,22 +288,39 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
-# Display specialty overview
+# Display specialty overview with enhanced UI
 current_name = SCORES_BY_SPECIALTY[specialty][selected_score_id]['name'] if selected_score_id else "Chọn calculator bên trái"
 current_desc = SCORES_BY_SPECIALTY[specialty][selected_score_id].get('desc', '') if selected_score_id else ""
 
-# Header with favorite button
+# Enhanced header with favorite button
 col_header1, col_header2 = st.columns([4, 1])
 with col_header1:
-    st.info(f"""
-    **Chuyên khoa:** {specialty}
-    
-    **Số lượng calculators:** {len(scores_in_specialty)}
-    
-    **Đang xem:** {current_name}
-    
-    **Dùng khi:** {current_desc if current_desc else 'Chọn calculator để xem mô tả chi tiết.'}
-    """)
+    if selected_score_id:
+        render_info_box(
+            f"""
+            **📊 Chuyên khoa:** {specialty}
+            
+            **🔢 Số lượng calculators:** {len(scores_in_specialty)}
+            
+            **🔬 Đang xem:** {current_name}
+            
+            **💡 Dùng khi:** {current_desc if current_desc else 'Chọn calculator để xem mô tả chi tiết.'}
+            """,
+            type="info",
+            title="Thông tin Calculator"
+        )
+    else:
+        render_info_box(
+            f"""
+            **📊 Chuyên khoa:** {specialty}
+            
+            **🔢 Số lượng calculators:** {len(scores_in_specialty)}
+            
+            **💡 Hướng dẫn:** Chọn một calculator từ danh sách ở sidebar bên trái để bắt đầu.
+            """,
+            type="info",
+            title="Chọn Calculator"
+        )
 
 with col_header2:
     if selected_score_id:

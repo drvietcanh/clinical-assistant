@@ -131,7 +131,7 @@ def render_protocols_sidebar() -> Tuple[str, str, bool]:
             filtered_list = [
                 p for p in protocol_list
                 if search_lower in p.lower() or 
-                   search_lower in p.split(' ', 1)[-1].lower() if ' ' in p else False
+                   (search_lower in p.split(' ', 1)[-1].lower() if ' ' in p else False)
             ]
             
             if filtered_list:
