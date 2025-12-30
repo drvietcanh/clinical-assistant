@@ -118,6 +118,44 @@ def inject_global_font_css():
     st.session_state["_font_css_injected"] = True
 
 
+def inject_dom_cleanup_js():
+    """
+    Inject small JS snippet to clean stray raw HTML closing tags (e.g., lone '</div>')
+    that may appear in the rendered UI due to markdown/HTML edge cases.
+    """
+    if st.session_state.get("_dom_cleanup_injected"):
+        return
+
+    cleanup_js = """
+    <script>
+    function cleanStrayHtmlClosers() {
+        try {
+            const selectors = ['p', 'div', 'span', 'code', 'pre', 'li'];
+            selectors.forEach(sel => {
+                document.querySelectorAll(sel).forEach(el => {
+                    const text = (el.textContent || '').trim();
+                    if (text === '</div>' || text === '<div>' ||
+                        text === '&lt;/div&gt;' || text === '&lt;div&gt;') {
+                        el.style.display = 'none';
+                    }
+                });
+            });
+        } catch (e) {
+            // fail silently
+        }
+    }
+    if (document.readyState === 'complete') {
+        cleanStrayHtmlClosers();
+    } else {
+        window.addEventListener('load', cleanStrayHtmlClosers);
+    }
+    setTimeout(cleanStrayHtmlClosers, 1000);
+    </script>
+    """
+    st.markdown(cleanup_js, unsafe_allow_html=True)
+    st.session_state["_dom_cleanup_injected"] = True
+
+
 def setup_page(page_title: str, page_icon: str, description: str = "", layout: str = "wide", mobile_header: bool = True):
     """
     Standard page setup - reduces boilerplate in all page files
@@ -139,8 +177,9 @@ def setup_page(page_title: str, page_icon: str, description: str = "", layout: s
     # Inject GA as early as possible on every page
     inject_google_analytics()
     
-    # Inject global font CSS for proper Vietnamese character display
+    # Inject global font CSS and DOM cleanup helpers
     inject_global_font_css()
+    inject_dom_cleanup_js()
 
     # Add parent directory to path for imports
     parent_dir = Path(__file__).parent.parent
