@@ -9,6 +9,12 @@ from components.references import render_references_section
 from components.protocol_timeline import render_sepsis_1hour_timeline
 from components.protocol_progress import render_sepsis_progress
 from components.protocol_version import render_version_badge, render_version_history
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_section,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
@@ -35,32 +41,40 @@ def render():
     
     st.markdown("---")
     
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-10-01",
+        last_updated="2024-10-01",
+        version="2024",
+        guideline_source="Surviving Sepsis Campaign 2021"
+    )
+    
     st.error("""
     **Thực hiện NGAY trong vòng 1 GIỜ:**
     
-    1. ✅ **Đo Lactate**
+    1. ✅ **Đo Lactate** <span style="background: #4caf50; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Level A</span>
        - Lactate >2 mmol/L = septic shock
        - Đo lại sau 2-4h nếu tăng
     
-    2. ✅ **Cấy máu trước khi kháng sinh**
+    2. ✅ **Cấy máu trước khi kháng sinh** <span style="background: #4caf50; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Level A</span>
        - 2 bộ cấy máu (từ 2 vị trí khác nhau)
        - Cấy dịch từ ổ nhiễm (nếu có)
     
-    3. ✅ **Kháng sinh phổ rộng**
+    3. ✅ **Kháng sinh phổ rộng** <span style="background: #4caf50; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Level A</span>
        - Trong vòng 1 giờ
        - Theo guideline địa phương
        - Liều đủ, đường IV
     
-    4. ✅ **Truyền dịch nhanh**
+    4. ✅ **Truyền dịch nhanh** <span style="background: #2196f3; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Level B</span>
        - 30 mL/kg crystalloid
        - Trong 3 giờ đầu
        - Ringer Lactate hoặc Normal Saline
     
-    5. ✅ **Vasopressor nếu hạ huyết áp**
+    5. ✅ **Vasopressor nếu hạ huyết áp** <span style="background: #4caf50; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Level A</span>
        - Nếu MAP <65 mmHg sau truyền dịch
        - Norepinephrine là thuốc đầu tay
        - Mục tiêu MAP ≥65 mmHg
-    """)
+    """, unsafe_allow_html=True)
     
     st.markdown("---")
     

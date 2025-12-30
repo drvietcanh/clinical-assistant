@@ -52,6 +52,16 @@ from components.smart_suggestions import render_suggestions
 from components.risk_color_coding import render_risk_badge, get_risk_level
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ===================================================
 
 from scores.utils.validation import (
@@ -227,16 +237,65 @@ def render():
             limit=3
         )
     
-    # Educational information
-    with st.expander("ℹ️ Thông tin & cách sử dụng"):
-        st.markdown("""
-        ### 📋 Giới Thiệu
+    # Educational information - Enhanced with Phase 1 features
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về SOFA Score",
+            content="""
+            **SOFA (Sequential Organ Failure Assessment)** là thang điểm đánh giá suy đa cơ quan:
+            
+            - Đánh giá mức độ suy cơ quan ở bệnh nhân ICU
+            - Dự đoán tử vong
+            - Theo dõi diễn tiến bệnh
+            - **Sepsis-3 definition:** SOFA ≥2 = Sepsis
+            
+            **6 hệ cơ quan được đánh giá:**
+            1. Hô hấp (PaO₂/FiO₂)
+            2. Đông máu (Tiểu cầu)
+            3. Gan (Bilirubin)
+            4. Tim mạch (MAP/Vasopressor)
+            5. Thần kinh (GCS)
+            6. Thận (Creatinine/Urine output)
+            """,
+            when_to_use="""
+            **Sử dụng SOFA Score khi:**
+            - Bệnh nhân ICU cần đánh giá suy đa cơ quan
+            - Nghi ngờ sepsis (SOFA ≥2)
+            - Theo dõi diễn tiến bệnh hàng ngày
+            - Đánh giá đáp ứng điều trị
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Cần có kết quả xét nghiệm đầy đủ
+            - Không áp dụng cho bệnh nhân ngoại trú
+            - Cần đánh giá lại hàng ngày
+            - Kết hợp với lâm sàng, không chỉ dựa vào điểm số
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - SOFA score được tính hàng ngày trong ICU
+            - Tăng điểm SOFA = suy cơ quan nặng hơn
+            - SOFA ≥2 là tiêu chuẩn chẩn đoán sepsis (Sepsis-3)
+            - SOFA cao (>15) liên quan đến tử vong cao
+            """
+        )
         
-        **SOFA (Sequential Organ Failure Assessment)** là thang điểm:
-        - Đánh giá mức độ suy cơ quan ở bệnh nhân ICU
-        - Dự đoán tử vong
-        - Theo dõi diễn tiến bệnh
-        - **Sepsis-3 definition:** SOFA ≥2 = Sepsis
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Vincent JL, et al. The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. Intensive Care Med. 1996;22(7):707-710.",
+            doi="10.1007/BF01709751"
+        )
+    else:
+        # Fallback to original expander
+        with st.expander("ℹ️ Thông tin & cách sử dụng"):
+            st.markdown("""
+            ### 📋 Giới Thiệu
+            
+            **SOFA (Sequential Organ Failure Assessment)** là thang điểm:
+            - Đánh giá mức độ suy cơ quan ở bệnh nhân ICU
+            - Dự đoán tử vong
+            - Theo dõi diễn tiến bệnh
+            - **Sepsis-3 definition:** SOFA ≥2 = Sepsis
         
         ### 🎯 6 hệ cơ quan
         
@@ -453,18 +512,40 @@ def render():
         if result['sepsis_note']:
             st.warning(result['sepsis_note'])
         
-        # Interpretation & Management
-        st.info("""
-        **📌 Diễn giải SOFA:**
-        
-        - **Tăng SOFA ≥2 điểm** trong 24-48h → xấu đi, nguy cơ tử vong tăng
-        - **SOFA cao liên tục** → tiên lượng xấu
-        - **SOFA giảm** → đáp ứng điều trị tốt
-        
-        **Theo dõi:**
-        - Tính SOFA hàng ngày để đánh giá diễn tiến
-        - So sánh với baseline để xác định Sepsis (Sepsis-3)
-        """)
+        # Interpretation & Management - Enhanced with Phase 1
+        if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+            # Determine recommendations based on score
+            recommendations = []
+            if result['total_score'] >= 2:
+                recommendations.append("Xem xét chẩn đoán Sepsis (Sepsis-3 definition)")
+            if result['total_score'] >= 11:
+                recommendations.append("Cần hồi sức tích cực, theo dõi sát")
+                recommendations.append("Thảo luận với gia đình về mục tiêu điều trị")
+            if result['total_score'] <= 6:
+                recommendations.append("Tiếp tục theo dõi, đánh giá lại hàng ngày")
+            
+            recommendations.append("Tính SOFA hàng ngày để đánh giá diễn tiến")
+            recommendations.append("So sánh với baseline để xác định cải thiện/xấu đi")
+            
+            render_result_interpretation(
+                result=f"{result['total_score']}/24",
+                interpretation=result['interpretation'],
+                recommendations=recommendations,
+                risk_level=risk_level_code.replace("_", "") if risk_level_code else None
+            )
+        else:
+            # Fallback to original
+            st.info("""
+            **📌 Diễn giải SOFA:**
+            
+            - **Tăng SOFA ≥2 điểm** trong 24-48h → xấu đi, nguy cơ tử vong tăng
+            - **SOFA cao liên tục** → tiên lượng xấu
+            - **SOFA giảm** → đáp ứng điều trị tốt
+            
+            **Theo dõi:**
+            - Tính SOFA hàng ngày để đánh giá diễn tiến
+            - So sánh với baseline để xác định Sepsis (Sepsis-3)
+            """)
         
         if result['total_score'] >= 11:
             st.error("""
