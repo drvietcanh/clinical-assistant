@@ -566,3 +566,132 @@ def create_anaphylaxis_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartE
     ]
 
     return nodes, edges
+
+
+def create_dvt_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create DVT suspected lower limb algorithm (Wells DVT + imaging)
+
+    Dựa trên:
+    - Wells DVT score original derivation and validation studies
+    - ACCP (American College of Chest Physicians) Guidelines on Venous Thromboembolism
+    - ESC Guidelines on Diagnosis and Management of Acute Pulmonary Embolism (phần DVT)
+    """
+    nodes = [
+        FlowchartNode("start", "Nghi DVT chi dưới?", NodeType.START, icon="🦵"),
+        FlowchartNode("wells_dvt", "Tính Wells DVT Score", NodeType.ACTION, icon="📊"),
+        FlowchartNode("low", "Nguy cơ thấp\n(Wells ≤0)", NodeType.DECISION, icon="🟢"),
+        FlowchartNode("moderate", "Nguy cơ trung bình\n(Wells 1-2)", NodeType.DECISION, icon="🟡"),
+        FlowchartNode("high", "Nguy cơ cao\n(Wells ≥3)", NodeType.DECISION, icon="🔴"),
+        FlowchartNode("dimer", "D-dimer", NodeType.TEST, icon="🧪"),
+        FlowchartNode("neg", "D-dimer (-)\nLoại trừ DVT", NodeType.END, color="#28a745", icon="✅"),
+        FlowchartNode("pos", "D-dimer (+)", NodeType.ACTION, icon="⚠️"),
+        FlowchartNode("us", "Siêu âm doppler TM chi dưới", NodeType.TEST, icon="📷"),
+        FlowchartNode("dvt_yes", "DVT (+)", NodeType.END, color="#dc3545", icon="💊"),
+        FlowchartNode("dvt_no", "DVT (-)", NodeType.END, color="#28a745", icon="🏠"),
+    ]
+
+    edges = [
+        FlowchartEdge("start", "wells_dvt", ""),
+        FlowchartEdge("wells_dvt", "low", "≤0"),
+        FlowchartEdge("wells_dvt", "moderate", "1-2"),
+        FlowchartEdge("wells_dvt", "high", "≥3"),
+        FlowchartEdge("low", "dimer", ""),
+        FlowchartEdge("moderate", "dimer", ""),
+        FlowchartEdge("high", "us", "Có thể bỏ qua D-dimer"),
+        FlowchartEdge("dimer", "neg", "Âm tính"),
+        FlowchartEdge("dimer", "pos", "Dương tính"),
+        FlowchartEdge("pos", "us", ""),
+        FlowchartEdge("us", "dvt_yes", "Có DVT"),
+        FlowchartEdge("us", "dvt_no", "Không DVT"),
+    ]
+
+    return nodes, edges
+
+
+def create_hyponatremia_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create Hyponatremia initial evaluation & management algorithm
+
+    Dựa trên:
+    - European Clinical Practice Guidelines on Diagnosis and Treatment of Hyponatraemia (2014, updates)
+    - US expert consensus on hyponatremia management
+    """
+    nodes = [
+        FlowchartNode("start", "Na+ <135 mmol/L?", NodeType.START, icon="🧂"),
+        FlowchartNode("severity", "Đánh giá triệu chứng:\nCo giật / Lơ mơ / Hôn mê?", NodeType.DECISION, icon="⚠️"),
+        FlowchartNode("severe", "Triệu chứng nặng\n(nguy kịch)", NodeType.DECISION, icon="🔴"),
+        FlowchartNode("mild", "Không triệu chứng nặng", NodeType.DECISION, icon="🟡"),
+        FlowchartNode("tonicity", "Đánh giá độ thẩm thấu:\nHypo / Iso / Hypertonic", NodeType.ACTION, icon="🧪"),
+        FlowchartNode("hypotonic", "Hyponatremia giảm thẩm thấu\n(Thường gặp nhất)", NodeType.DECISION, icon="🟦"),
+        FlowchartNode("volume", "Đánh giá thể tích:\nGiảm / Bình thường / Tăng", NodeType.ACTION, icon="💧"),
+        FlowchartNode("hypovolemic", "Giảm thể tích", NodeType.ACTION, icon="📉"),
+        FlowchartNode("euvolemic", "Thể tích bình thường\n(SIADH, suy giáp...)", NodeType.ACTION, icon="⚖️"),
+        FlowchartNode("hypervolemic", "Tăng thể tích\n(Suy tim, xơ gan...)", NodeType.ACTION, icon="📈"),
+        FlowchartNode("hypertonic", "Giả hyponatremia /\nTăng đường huyết", NodeType.ACTION, icon="🍭"),
+        FlowchartNode("severe_tx", "Bolus NaCl 3%\n1.5-2 ml/kg trong 20 phút\n(hoặc 100 mL 3 lần)", NodeType.ACTION, color="#dc3545", icon="💉"),
+        FlowchartNode("monitor", "Theo dõi Na+ mỗi 2-4h\nTăng không quá 8-10 mmol/L/24h", NodeType.ACTION, icon="👁️"),
+        FlowchartNode("treat_cause", "Điều trị nguyên nhân\n+ hạn chế nước / thuốc", NodeType.END, color="#28a745", icon="💊"),
+    ]
+
+    edges = [
+        FlowchartEdge("start", "severity", ""),
+        FlowchartEdge("severity", "severe", "Có co giật / lơ mơ\nhôn mê"),
+        FlowchartEdge("severity", "mild", "Không"),
+        FlowchartEdge("severe", "severe_tx", ""),
+        FlowchartEdge("severe_tx", "monitor", ""),
+        FlowchartEdge("mild", "tonicity", ""),
+        FlowchartEdge("tonicity", "hypotonic", "Giảm thẩm thấu"),
+        FlowchartEdge("tonicity", "hypertonic", "Tăng thẩm thấu"),
+        FlowchartEdge("hypotonic", "volume", ""),
+        FlowchartEdge("volume", "hypovolemic", "Giảm thể tích"),
+        FlowchartEdge("volume", "euvolemic", "Bình thường"),
+        FlowchartEdge("volume", "hypervolemic", "Tăng"),
+        FlowchartEdge("hypovolemic", "treat_cause", "NaCl 0.9% + ngưng lợi tiểu"),
+        FlowchartEdge("euvolemic", "treat_cause", "Hạn chế nước, điều trị SIADH"),
+        FlowchartEdge("hypervolemic", "treat_cause", "Hạn chế nước + lợi tiểu"),
+        FlowchartEdge("hypertonic", "treat_cause", "Điều chỉnh đường huyết"),
+        FlowchartEdge("monitor", "treat_cause", ""),
+    ]
+
+    return nodes, edges
+
+
+def create_tbi_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create Traumatic Brain Injury (TBI) initial ED management algorithm
+
+    Dựa trên:
+    - Brain Trauma Foundation Guidelines for Management of Severe TBI
+    - ATLS Head Injury Protocol
+    """
+    nodes = [
+        FlowchartNode("start", "Chấn thương sọ não?", NodeType.START, icon="🧠"),
+        FlowchartNode("abcs", "ABC + Cố định cột sống cổ", NodeType.ACTION, icon="🦴"),
+        FlowchartNode("gcs", "Đánh giá GCS", NodeType.ACTION, icon="📊"),
+        FlowchartNode("mild", "GCS 13-15\n(Nhẹ)", NodeType.DECISION, icon="🟢"),
+        FlowchartNode("moderate", "GCS 9-12\n(Trung bình)", NodeType.DECISION, icon="🟡"),
+        FlowchartNode("severe", "GCS ≤8\n(Nặng)", NodeType.DECISION, icon="🔴"),
+        FlowchartNode("ct", "CT Scan não khẩn", NodeType.TEST, icon="📷"),
+        FlowchartNode("neurosurg", "Tham vấn Ngoại TK\n/ chuyển tuyến", NodeType.ACTION, icon="🏥"),
+        FlowchartNode("icu", "ICU / Theo dõi ICP", NodeType.END, color="#dc3545", icon="🏥"),
+        FlowchartNode("observe", "Theo dõi tại khoa\nCấp cứu / nội trú", NodeType.END, color="#ffc107", icon="👁️"),
+        FlowchartNode("discharge", "Xuất viện + dặn dò\ntriệu chứng cảnh báo", NodeType.END, color="#28a745", icon="🏠"),
+    ]
+
+    edges = [
+        FlowchartEdge("start", "abcs", ""),
+        FlowchartEdge("abcs", "gcs", ""),
+        FlowchartEdge("gcs", "mild", "13-15"),
+        FlowchartEdge("gcs", "moderate", "9-12"),
+        FlowchartEdge("gcs", "severe", "≤8"),
+        FlowchartEdge("mild", "ct", "Có nguy cơ cao\n(ngất, nôn nhiều, dùng kháng đông)"),
+        FlowchartEdge("mild", "discharge", "Không yếu tố nguy cơ"),
+        FlowchartEdge("moderate", "ct", ""),
+        FlowchartEdge("severe", "ct", "Sau khi ABC ổn"),
+        FlowchartEdge("ct", "neurosurg", "Tổn thương cần\ncan thiệp"),
+        FlowchartEdge("ct", "observe", "Không chỉ định\nphẫu thuật ngay"),
+        FlowchartEdge("neurosurg", "icu", ""),
+    ]
+
+    return nodes, edges

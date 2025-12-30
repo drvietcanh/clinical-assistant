@@ -26,6 +26,9 @@ from components.flowcharts.clinical_rules import (
     create_asthma_exacerbation_flowchart,
     create_acute_hf_flowchart,
     create_anaphylaxis_flowchart,
+    create_dvt_flowchart,
+    create_hyponatremia_flowchart,
+    create_tbi_flowchart,
 )
 from components.pregnancy_lactation_display import render_pregnancy_lactation_section
 from scores.pediatrics.pediatric_dosing import render_pediatric_dosing_calculator
@@ -99,6 +102,9 @@ if selected_feature == feature_options[0]:
         "Acute Asthma Exacerbation": create_asthma_exacerbation_flowchart,
         "Acute Heart Failure / Pulmonary Edema": create_acute_hf_flowchart,
         "Anaphylaxis": create_anaphylaxis_flowchart,
+        "DVT (Lower Limb) / Wells DVT": create_dvt_flowchart,
+        "Hyponatremia": create_hyponatremia_flowchart,
+        "Traumatic Brain Injury (TBI)": create_tbi_flowchart,
     }
     
     selected_algorithm = st.selectbox(
@@ -130,6 +136,9 @@ if selected_feature == feature_options[0]:
             "Acute Asthma Exacerbation": (900, 650),
             "Acute Heart Failure / Pulmonary Edema": (900, 650),
             "Anaphylaxis": (900, 600),
+            "DVT (Lower Limb) / Wells DVT": (900, 650),
+            "Hyponatremia": (900, 700),
+            "Traumatic Brain Injury (TBI)": (900, 650),
         }
         
         width, height = size_map.get(selected_algorithm, (800, 600))
@@ -319,6 +328,54 @@ if selected_feature == feature_options[0]:
                 - WAO (World Allergy Organization) Anaphylaxis Guidelines
                 - EAACI (European Academy of Allergy and Clinical Immunology) Anaphylaxis Guidelines
                 - Resuscitation Council (UK) Anaphylaxis Guidelines
+                """)
+            elif selected_algorithm == "DVT (Lower Limb) / Wells DVT":
+                st.markdown("""
+                **DVT (Lower Limb) / Wells DVT Algorithm:**
+
+                1. Nghi ngờ DVT chi dưới
+                2. Tính Wells DVT Score → phân tầng nguy cơ (thấp / trung bình / cao)
+                3. Nguy cơ thấp/trung bình → D-dimer
+                4. Nguy cơ cao → Siêu âm doppler TM chi dưới (có thể bỏ qua D-dimer)
+                5. D-dimer (-) → Loại trừ DVT
+                6. D-dimer (+) hoặc nguy cơ cao → Siêu âm
+                7. Siêu âm (+) → Điều trị DVT; Siêu âm (-) → Loại trừ DVT
+
+                **📚 Dựa trên:**
+                - Wells DVT score derivation and validation studies
+                - ACCP Guidelines on Venous Thromboembolism
+                - ESC Guidelines on Diagnosis and Management of Acute Pulmonary Embolism (mục DVT)
+                """)
+            elif selected_algorithm == "Hyponatremia":
+                st.markdown("""
+                **Hyponatremia Algorithm:**
+
+                1. Na+ <135 mmol/L → đánh giá triệu chứng (co giật, lơ mơ, hôn mê)
+                2. Nếu triệu chứng nặng → Bolus NaCl 3% 1.5–2 ml/kg (hoặc 100 mL x3), theo dõi Na+ sát
+                3. Nếu không nặng → đánh giá độ thẩm thấu (hypo/iso/hypertonic)
+                4. Hyponatremia giảm thẩm thấu → đánh giá thể tích (giảm / bình thường / tăng)
+                5. Giảm thể tích → NaCl 0.9% + ngưng lợi tiểu
+                6. Thể tích bình thường (SIADH...) → hạn chế nước, điều trị nguyên nhân
+                7. Tăng thể tích (suy tim, xơ gan...) → hạn chế nước + lợi tiểu
+                8. Luôn giới hạn tốc độ tăng Na+ ≤8–10 mmol/L/24h
+
+                **📚 Dựa trên:**
+                - European Clinical Practice Guidelines on Diagnosis and Treatment of Hyponatraemia (2014, updates)
+                - US expert consensus on hyponatremia management
+                """)
+            elif selected_algorithm == "Traumatic Brain Injury (TBI)":
+                st.markdown("""
+                **Traumatic Brain Injury (TBI) Algorithm:**
+
+                1. Chấn thương sọ não → ABC + cố định cột sống cổ
+                2. Đánh giá GCS (13–15 nhẹ, 9–12 trung bình, ≤8 nặng)
+                3. GCS nhẹ: xem xét CT nếu có yếu tố nguy cơ (ngất, nôn, dùng kháng đông...) hoặc theo dõi/xuất viện có dặn dò
+                4. GCS trung bình: CT não khẩn, thường nhập viện theo dõi
+                5. GCS nặng: ABC ưu tiên, sau đó CT khi ổn định, tham vấn Ngoại TK, ICU theo dõi ICP
+
+                **📚 Dựa trên:**
+                - Brain Trauma Foundation Guidelines for Management of Severe TBI
+                - ATLS Head Injury Protocol
                 """)
             elif selected_algorithm == "Acute Chest Pain / ACS":
                 st.markdown("""
