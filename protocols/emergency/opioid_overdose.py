@@ -7,12 +7,25 @@ Life-threatening opioid overdose requiring immediate reversal
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Opioid Overdose / Naloxone Protocol"""
     st.subheader("💉 Ngộ Độc Opioid / Naloxone")
     st.caption("AHA 2020, SAMHSA - Opioid overdose reversal protocol")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2023-12-01",
+        last_updated="2023-12-01",
+        version="2023",
+        guideline_source="AHA 2020, SAMHSA"
+    )
     
     st.error("""
     **⚠️ NGỘ ĐỘC OPIOID = CẤP CỨU Y TẾ**

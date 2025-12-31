@@ -8,12 +8,25 @@ import streamlit as st
 from scores.gi.glasgow_blatchford import calculate_gbs
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """GI Bleeding Protocol"""
     st.subheader("🩸 GI Bleeding Protocol")
     st.caption("Upper & Lower GI Bleeding - Risk Stratification & Management")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-08-01",
+        last_updated="2024-08-01",
+        version="2024",
+        guideline_source="ACG 2024, BSG 2021"
+    )
     
     st.info("""
     **GI Bleeding phân loại:**

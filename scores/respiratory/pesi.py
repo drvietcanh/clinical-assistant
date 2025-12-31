@@ -19,6 +19,16 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ======================================
 
 
@@ -36,24 +46,81 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    with st.expander("ℹ️ Giới thiệu"):
-        st.markdown("""
-        **PESI (Pulmonary Embolism Severity Index)** đánh giá mức độ nặng và tiên lượng 30 ngày của bệnh nhân thuyên tắc phổi.
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về PESI Score",
+            content="""
+            **PESI (Pulmonary Embolism Severity Index)** đánh giá mức độ nặng và tiên lượng 30 ngày của bệnh nhân thuyên tắc phổi:
+            
+            - Sử dụng sau khi đã chẩn đoán PE
+            - Quyết định điều trị ngoại trú hay nội trú
+            - Dự đoán tử vong 30 ngày
+            
+            **11 tiêu chí:**
+            1. Tuổi (1 điểm/năm)
+            2. Giới tính nam (+10)
+            3. Ung thư (+30)
+            4. Suy tim (+10)
+            5. Bệnh phổi mạn (+10)
+            6. Mạch ≥110/min (+20)
+            7. Huyết áp tâm thu <100 mmHg (+30)
+            8. Nhịp thở >30/min (+20)
+            9. Nhiệt độ <36°C (+20)
+            10. Lú lẫn (+60)
+            11. SpO₂ <90% (+20)
+            
+            **Tổng điểm: 0-400+**
+            """,
+            when_to_use="""
+            **Sử dụng PESI Score khi:**
+            - Bệnh nhân đã được chẩn đoán thuyên tắc phổi (PE)
+            - Cần quyết định điều trị ngoại trú hay nội trú
+            - Đánh giá tiên lượng và mức độ nặng
+            - Hướng dẫn điều trị và theo dõi
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Chỉ áp dụng sau khi đã chẩn đoán PE
+            - Cần có đầy đủ thông tin lâm sàng
+            - Không thay thế đánh giá lâm sàng cá thể hóa
+            - Một số thông số có thể không có sẵn ngay
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - **Class I-II (≤85):** Nguy cơ thấp → Có thể điều trị ngoại trú
+            - **Class III (86-105):** Nguy cơ trung bình → Cân nhắc nhập viện
+            - **Class IV-V (>105):** Nguy cơ cao → Nhập viện, có thể ICU
+            - PESI Class I-II có tỷ lệ tử vong thấp (<3.5%), có thể an toàn điều trị ngoại trú
+            """
+        )
         
-        **Chỉ định:**
-        - Bệnh nhân đã được chẩn đoán thuyên tắc phổi (PE)
-        - Quyết định điều trị ngoại trú hay nội trú
-        - Đánh giá tiên lượng
-        
-        **11 Tiêu chí (tổng điểm 0-400+):**
-        
-        **Phân loại nguy cơ:**
-        - **Class I (≤ 65 điểm):** Nguy cơ thấp - Tỷ lệ tử vong 30 ngày: 0-1.6%
-        - **Class II (66-85 điểm):** Nguy cơ thấp - Tỷ lệ tử vong 30 ngày: 1.7-3.5%
-        - **Class III (86-105 điểm):** Nguy cơ trung bình - Tỷ lệ tử vong 30 ngày: 3.2-7.1%
-        - **Class IV (106-125 điểm):** Nguy cơ cao - Tỷ lệ tử vong 30 ngày: 4.0-11.4%
-        - **Class V (> 125 điểm):** Nguy cơ rất cao - Tỷ lệ tử vong 30 ngày: 10.0-24.5%
-        """)
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Aujesky D, et al. Derivation and validation of a prognostic model for pulmonary embolism. Am J Respir Crit Care Med. 2005;172(8):1041-6.",
+            doi="10.1164/rccm.200506-862OC",
+            pmid="16020800"
+        )
+    else:
+        # Fallback to original expander
+        with st.expander("ℹ️ Giới thiệu"):
+            st.markdown("""
+            **PESI (Pulmonary Embolism Severity Index)** đánh giá mức độ nặng và tiên lượng 30 ngày của bệnh nhân thuyên tắc phổi.
+            
+            **Chỉ định:**
+            - Bệnh nhân đã được chẩn đoán thuyên tắc phổi (PE)
+            - Quyết định điều trị ngoại trú hay nội trú
+            - Đánh giá tiên lượng
+            
+            **11 Tiêu chí (tổng điểm 0-400+):**
+            
+            **Phân loại nguy cơ:**
+            - **Class I (≤ 65 điểm):** Nguy cơ thấp - Tỷ lệ tử vong 30 ngày: 0-1.6%
+            - **Class II (66-85 điểm):** Nguy cơ thấp - Tỷ lệ tử vong 30 ngày: 1.7-3.5%
+            - **Class III (86-105 điểm):** Nguy cơ trung bình - Tỷ lệ tử vong 30 ngày: 3.2-7.1%
+            - **Class IV (106-125 điểm):** Nguy cơ cao - Tỷ lệ tử vong 30 ngày: 4.0-11.4%
+            - **Class V (> 125 điểm):** Nguy cơ rất cao - Tỷ lệ tử vong 30 ngày: 10.0-24.5%
+            """)
     
     st.markdown("---")
     

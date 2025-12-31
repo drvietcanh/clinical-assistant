@@ -21,6 +21,16 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ======================================
 
 
@@ -36,12 +46,64 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.info("""
-    **PSI/PORT Score** đánh giá nguy cơ tử vong 30 ngày ở bệnh nhân viêm phổi cộng đồng.
-    
-    - Phức tạp hơn CURB-65 nhưng chính xác hơn
-    - Dựa trên 20 biến số lâm sàng, xét nghiệm, X-quang
-    """)
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về PSI/PORT Score",
+            content="""
+            **PSI/PORT (Pneumonia Severity Index)** đánh giá nguy cơ tử vong 30 ngày ở bệnh nhân viêm phổi cộng đồng:
+            
+            - Phức tạp hơn CURB-65 nhưng chính xác hơn
+            - Dựa trên 20 biến số lâm sàng, xét nghiệm, X-quang
+            - Hướng dẫn quyết định nơi điều trị (ngoại trú, nhập viện, ICU)
+            
+            **20 biến số:**
+            - Demographics: Tuổi, giới tính, nhà dưỡng lão
+            - Bệnh lý nền: Ung thư, bệnh gan/thận/tim, đột quỵ
+            - Dấu hiệu sống: Nhiệt độ, nhịp tim, nhịp thở, huyết áp
+            - Xét nghiệm: pH, BUN, Na, Glucose, Hct, PaO₂
+            - X-quang: Tràn dịch màng phổi
+            
+            **Tổng điểm: 0-400+**
+            """,
+            when_to_use="""
+            **Sử dụng PSI/PORT Score khi:**
+            - Bệnh nhân có chẩn đoán viêm phổi cộng đồng
+            - Cần quyết định nơi điều trị (ngoại trú vs nhập viện vs ICU)
+            - Đánh giá tiên lượng và mức độ nặng
+            - Hướng dẫn điều trị kháng sinh
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Phức tạp hơn CURB-65, cần nhiều thông tin
+            - Không áp dụng cho viêm phổi bệnh viện (HAP/VAP)
+            - Cần có đầy đủ thông tin lâm sàng và xét nghiệm
+            - Một số thông số có thể không có sẵn ngay
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - **Class I-II (≤70):** Nguy cơ thấp → Điều trị ngoại trú
+            - **Class III (71-90):** Nguy cơ trung bình → Nhập viện ngắn ngày
+            - **Class IV (91-130):** Nguy cơ cao → Nhập viện
+            - **Class V (>130):** Nguy cơ rất cao → ICU
+            - PSI chính xác hơn CURB-65 nhưng phức tạp hơn
+            """
+        )
+        
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Fine MJ, et al. A prediction rule to identify low-risk patients with community-acquired pneumonia. N Engl J Med. 1997;336(4):243-50.",
+            doi="10.1056/NEJM199701233360402",
+            pmid="8995086"
+        )
+    else:
+        # Fallback to original
+        st.info("""
+        **PSI/PORT Score** đánh giá nguy cơ tử vong 30 ngày ở bệnh nhân viêm phổi cộng đồng.
+        
+        - Phức tạp hơn CURB-65 nhưng chính xác hơn
+        - Dựa trên 20 biến số lâm sàng, xét nghiệm, X-quang
+        """)
     
     col1, col2 = st.columns([2, 1])
     
